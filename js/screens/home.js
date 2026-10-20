@@ -2,7 +2,7 @@
 // Subject pages show each subject as a journey of topics.
 
 import { h, s, mount } from '../ui/dom.js';
-import { capybaraEl } from '../ui/capybara.js';
+import { capybaraEl, COMPANION_FACTS, speciesOf, companionNoun } from '../ui/capybara.js';
 import { icon, iconPath, SUBJECT_ICON } from '../ui/icons.js';
 import { SUBJECTS, SUBJECT_BY_ID, COURSE, isStretch } from '../core/subjects.js';
 import { paperSpec } from '../gen/paper.js';
@@ -13,15 +13,6 @@ import { formatDay } from '../core/dates.js';
 import { restTime } from './util.js';
 import { pieceDue, currentPiece, unseenFeedback, currentBooks, readingThisWeek } from '../core/writing.js';
 
-const CAPY_FACTS = [
-  'Capybaras are the largest rodents in the world.',
-  'Capybaras can stay underwater for up to five minutes.',
-  'Capybaras have slightly webbed feet, which makes them great swimmers.',
-  'Capybaras live in groups, often of 10 to 20.',
-  'A capybara’s front teeth never stop growing.',
-  'Capybaras come from South America and love living near water.',
-  'The name “capybara” comes from a Tupi word meaning “grass eater”.',
-];
 
 export function subjectProgress(state, db, subject) {
   const st = subjectStats(state, db, subject);
@@ -131,7 +122,9 @@ function todayCard(app) {
   if (!plan && !rest) { state.plan = planDay(state, db, today); plan = state.plan; app.save(); }
   const finished = !!plan?.finished;
   const inProgress = plan && plan.started && !finished;
-  const fact = CAPY_FACTS[today % CAPY_FACTS.length];
+  const species = speciesOf(c, COURSE.young);
+  const facts = COMPANION_FACTS[species];
+  const fact = facts[today % facts.length];
 
   let cls = 'today', eyebrow, title, sub, tags = [], btn = null, mood = 'neutral';
   if (finished) {
@@ -139,7 +132,7 @@ function todayCard(app) {
     const days = daysPractisedThisMonth(state, today);
     const right = plan.results.filter((r) => r.correct).length;
     eyebrow = 'Today'; title = 'Finished for today!';
-    sub = `${c.name || 'Your capybara'} is impressed. See you tomorrow.`;
+    sub = `${c.name || `Your ${companionNoun(species)}`} is impressed. See you tomorrow.`;
     tags = [`${days} day${days === 1 ? '' : 's'} this month`, `${right} answers right today`];
   } else if (rest) {
     cls += ' rest'; mood = 'thinking';
@@ -163,7 +156,7 @@ function todayCard(app) {
       h('p', { style: { margin: 0 } }, sub),
       tags.length ? h('div', { class: 'tags' }, tags.map((t) => h('span', {}, t))) : h('div', { style: { height: '14px' } }),
       btn,
-      h('p', { class: 'small', style: { margin: btn ? '14px 0 0' : '0', opacity: 0.85 } }, h('strong', {}, `${c.name || 'Capy'}’s fact: `), fact))));
+      h('p', { class: 'small', style: { margin: btn ? '14px 0 0' : '0', opacity: 0.85 } }, h('strong', {}, `${c.name || 'Your companion'}’s fact: `), fact))));
 }
 
 function statStrip(app) {

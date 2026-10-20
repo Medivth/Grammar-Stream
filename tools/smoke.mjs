@@ -31,7 +31,7 @@ try {
     await page.fill('#ob-name', 'Ada');
     await page.fill('#ob-pin', '1234');
     await page.fill('#ob-pin2', '1234');
-    await page.click('text=Next: meet the capybara');
+    await page.click('text=Next: meet your companion');
     await page.waitForSelector('#capy-name');
     await page.click('button:has-text("Flower")');
     await page.fill('#capy-name', 'Mochi');
@@ -177,15 +177,15 @@ try {
     await page.selectOption('#ob-pron', 'he');
     await page.selectOption('#ob-course', 'ks1');
     await page.screenshot({ path: `${OUT}/${label}-20-add-child.png`, fullPage: true });
-    await page.click('text=Next: meet the capybara');
+    await page.click('text=Next: meet your companion');
     await page.waitForSelector('#capy-name');
     await page.fill('#capy-name', 'Zoom');
     await page.fill('#hero-name', 'Captain Thunder');
     await page.click('text=Let’s go!');
     await page.waitForSelector('.btn-start');
     await page.screenshot({ path: `${OUT}/${label}-21-ks1-home.png`, fullPage: true });
-    const course = await page.evaluate(() => window.__app.state.course);
-    if (course !== 'ks1') throw new Error(`second child course is ${course}`);
+    const course = await page.evaluate(() => [window.__app.state.course, window.__app.state.profile.companion.species]);
+    if (course[0] !== 'ks1' || course[1] !== 'lion') throw new Error(`second child course and companion: ${course}`);
     await page.evaluate(() => { const a = window.__app; a.state.sessions.push({ day: Math.floor(Date.now() / 864e5) - 1, start: 1, end: 2, answered: 5, correct: 5, completed: true }); a.state.plan = null; a.save(); });
     const playYoung = async (tag) => {
     await page.click('.btn-start');
