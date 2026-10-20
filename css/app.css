@@ -161,6 +161,10 @@ label { display: block; font-weight: 700; margin-bottom: 6px; }
 .map-marker { fill: var(--ink); stroke: var(--card); stroke-width: 1.5; }
 .map-marker.hi { fill: #d2492a; }
 .map-grat { fill: none; stroke: #ffffff; stroke-opacity: 0.35; stroke-width: 0.4; }
+.dg-part { stroke: #5a4a3a; stroke-width: 1.5; }
+.dg-part.map-hi { fill: #ff5f3d; stroke: #9e1f12; stroke-width: 4; }
+.dg-part.map-tap:hover { filter: brightness(0.92); }
+.map-box:has(.dg-part) { background: var(--card); }
 .map-right { fill: var(--good) !important; }
 .map-wrong { fill: var(--warn) !important; }
 

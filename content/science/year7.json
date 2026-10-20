@@ -1,0 +1,2006 @@
+{
+ "subject": "science",
+ "deck": "year7",
+ "topics": [
+  {
+   "id": "science.particles",
+   "title": "The particle model",
+   "kind": "facts",
+   "prereqs": [
+    "science.materials"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "science.pt.d1",
+    "science.pt.d2"
+   ],
+   "intro": "Everything is made of tiny particles. The way they are arranged and move explains solids, liquids, gases, smells spreading and balloons bursting.",
+   "teach": "Explain why you can smell perfume from across a room.",
+   "talk": "Ask her why a balloon gets bigger in the sun."
+  },
+  {
+   "id": "science.cells",
+   "title": "Cells and the microscope",
+   "kind": "facts",
+   "prereqs": [
+    "science.living"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "science.cl.d1",
+    "science.cl.d2"
+   ],
+   "intro": "All living things are made of cells, the building blocks of life. Most are far too small to see without a microscope.",
+   "teach": "Explain three differences between a plant cell and an animal cell.",
+   "talk": "Ask her what mitochondria do."
+  },
+  {
+   "id": "science.atoms",
+   "title": "Atoms, elements and compounds",
+   "kind": "facts",
+   "prereqs": [
+    "science.particles"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "science.at.d1"
+   ],
+   "intro": "There are only about 118 elements, but they combine to make everything in the universe.",
+   "teach": "Explain the difference between an element and a compound.",
+   "talk": "Ask her what H₂O means."
+  },
+  {
+   "id": "science.separating",
+   "title": "Mixtures and separating them",
+   "kind": "facts",
+   "prereqs": [
+    "science.atoms"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "science.sp7.d1"
+   ],
+   "intro": "Sea water, ink and air are all mixtures. Scientists have clever ways to separate them.",
+   "teach": "Explain how you could get pure water from sea water.",
+   "talk": "Ask her what “pure” means to a scientist."
+  },
+  {
+   "id": "science.acids",
+   "title": "Acids and alkalis",
+   "kind": "mixed",
+   "prereqs": [
+    "science.separating"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "science.ac.d1"
+   ],
+   "intro": "Lemon juice, soap, vinegar and toothpaste: some are acids and some are alkalis. Indicators tell them apart.",
+   "teach": "Explain what happens when an acid and an alkali are mixed.",
+   "talk": "Ask her why indigestion tablets help with heartburn."
+  },
+  {
+   "id": "science.forces7",
+   "title": "Forces and motion",
+   "kind": "mixed",
+   "prereqs": [
+    "science.forces"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "science.f7.d1"
+   ],
+   "intro": "Forces change how things move. Now we’ll calculate speed and weight, and read distance–time graphs.",
+   "teach": "Explain what balanced forces do to a moving object.",
+   "talk": "Ask her what your speed is if you drive 120 km in 2 hours."
+  },
+  {
+   "id": "science.energy",
+   "title": "Energy stores and resources",
+   "kind": "facts",
+   "prereqs": [
+    "science.forces7"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "science.en.d1"
+   ],
+   "intro": "Energy is never used up. It moves between stores: kinetic, thermal, chemical and more.",
+   "teach": "Explain the energy changes when you throw a ball up in the air.",
+   "talk": "Ask her which energy resources are renewable."
+  },
+  {
+   "id": "science.universe",
+   "title": "Stars, galaxies and the solar system",
+   "kind": "facts",
+   "prereqs": [
+    "science.space"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "science.un.d1",
+    "science.un.d2"
+   ],
+   "intro": "Our Sun is one of hundreds of billions of stars in the Milky Way, and the Milky Way is one of billions of galaxies.",
+   "teach": "Explain what a light-year is.",
+   "talk": "Ask her what causes a solar eclipse."
+  },
+  {
+   "id": "science.ecosystems",
+   "title": "Food webs and photosynthesis",
+   "kind": "facts",
+   "prereqs": [
+    "science.living"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "science.ec.d1",
+    "science.ec.d2"
+   ],
+   "intro": "Every living thing depends on others. Energy flows from the Sun through plants to animals.",
+   "teach": "Explain what would happen to a food web if all the bees disappeared.",
+   "talk": "Ask her where a tree gets the stuff to build its trunk."
+  },
+  {
+   "id": "science.reproduction",
+   "title": "Reproduction in plants and animals",
+   "kind": "facts",
+   "prereqs": [
+    "science.body"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "science.rp.d1"
+   ],
+   "intro": "All living things reproduce. Flowers are a plant’s way of making seeds.",
+   "teach": "Explain the difference between pollination and fertilisation.",
+   "talk": "Ask her how a sycamore seed travels."
+  },
+  {
+   "id": "science.working",
+   "title": "Investigations: fair tests and results",
+   "kind": "skill",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Scientists test ideas with fair tests: change one thing, measure another, and keep everything else the same.",
+   "teach": "Explain how to make an investigation a fair test.",
+   "talk": "Plan a kitchen experiment together: which variable will you change?"
+  }
+ ],
+ "items": [
+  {
+   "id": "science.pt.d1",
+   "topic": "science.particles",
+   "kind": "mcq",
+   "prompt": "When a metal bar is heated it expands (gets slightly longer). Why?",
+   "options": [
+    {
+     "text": "The particles vibrate more and move slightly further apart",
+     "correct": true
+    },
+    {
+     "text": "Each particle gets bigger",
+     "correct": false,
+     "feedback": "A very common idea! The particles themselves stay the same size. They take up more room because they move more."
+    },
+    {
+     "text": "New particles are made by the heat",
+     "correct": false,
+     "feedback": "Heating doesn’t create particles; the number stays the same."
+    }
+   ],
+   "explain": "Heating gives particles more energy, so they vibrate more and need more space. The particles do not grow."
+  },
+  {
+   "id": "science.pt.d2",
+   "topic": "science.particles",
+   "kind": "mcq",
+   "prompt": "What is in the space between the particles of a gas?",
+   "options": [
+    {
+     "text": "Nothing: it is empty space",
+     "correct": true
+    },
+    {
+     "text": "Air",
+     "correct": false,
+     "feedback": "Air IS a gas, made of particles. Between the particles there is nothing at all."
+    },
+    {
+     "text": "Water vapour",
+     "correct": false,
+     "feedback": "Water vapour is itself made of particles."
+    }
+   ],
+   "explain": "Gas particles are far apart with empty space (a vacuum) between them, which is why gases can be squashed."
+  },
+  {
+   "id": "science.pt.solid",
+   "topic": "science.particles",
+   "kind": "mapfact",
+   "map": "particles",
+   "layer": "features",
+   "feature": "solid",
+   "answer": "solid",
+   "explain": "In a solid, particles are packed in a regular pattern and vibrate on the spot.",
+   "choosePrompt": "Which state of matter is highlighted?",
+   "locatePrompt": "Tap the box showing a solid.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.pt.liquid",
+   "topic": "science.particles",
+   "kind": "mapfact",
+   "map": "particles",
+   "layer": "features",
+   "feature": "liquid",
+   "answer": "liquid",
+   "explain": "In a liquid, particles touch but are jumbled and can slide past each other, so liquids flow.",
+   "choosePrompt": "Which state of matter is highlighted?",
+   "locatePrompt": "Tap the box showing a liquid.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.pt.gas",
+   "topic": "science.particles",
+   "kind": "mapfact",
+   "map": "particles",
+   "layer": "features",
+   "feature": "gas",
+   "answer": "gas",
+   "explain": "In a gas, particles are far apart and move quickly in all directions.",
+   "choosePrompt": "Which state of matter is highlighted?",
+   "locatePrompt": "Tap the box showing a gas.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.pt.diffusion",
+   "topic": "science.particles",
+   "kind": "fact",
+   "prompt": "What is the spreading out of particles from where there are lots to where there are fewer called?",
+   "answer": "diffusion",
+   "distractors": [
+    "condensation",
+    "evaporation",
+    "dissolving"
+   ],
+   "explain": "Diffusion is why you can smell food cooking from another room. It happens faster in warm gases."
+  },
+  {
+   "id": "science.pt.compress",
+   "topic": "science.particles",
+   "kind": "fact",
+   "prompt": "Why can a gas be squashed (compressed) but a liquid hardly at all?",
+   "answer": "gas particles have big spaces between them",
+   "distractors": [
+    "gas particles are smaller",
+    "liquids are heavier",
+    "gas particles are softer"
+   ],
+   "explain": "In a liquid the particles already touch, so there is no room to squash them closer.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.pt.pressure",
+   "topic": "science.particles",
+   "kind": "fact",
+   "prompt": "What causes the pressure of a gas inside a balloon?",
+   "answer": "gas particles hitting the inside walls",
+   "distractors": [
+    "the rubber pulling inwards only",
+    "the gas particles growing",
+    "heat escaping"
+   ],
+   "explain": "Billions of collisions every second push the balloon outwards. Heating makes them move faster and hit harder.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.pt.sublimation",
+   "topic": "science.particles",
+   "kind": "fact",
+   "prompt": "When a solid turns straight into a gas without melting, it is called…",
+   "answer": "sublimation",
+   "distractors": [
+    "condensation",
+    "evaporation",
+    "diffusion"
+   ],
+   "explain": "Dry ice (solid carbon dioxide) sublimes, making the “smoke” used on stage."
+  },
+  {
+   "id": "science.pt.flow",
+   "topic": "science.particles",
+   "kind": "fact",
+   "prompt": "Which state of matter has a fixed volume but takes the shape of its container?",
+   "answer": "liquid",
+   "distractors": [
+    "solid",
+    "gas",
+    "none of them"
+   ],
+   "explain": "Liquids keep their volume but flow to fill the bottom of a container. Gases fill the whole container."
+  },
+  {
+   "id": "science.pt.ice",
+   "topic": "science.particles",
+   "kind": "fact",
+   "prompt": "Why does ice float on water?",
+   "answer": "ice is less dense than liquid water",
+   "distractors": [
+    "ice is lighter because it is cold",
+    "ice contains air bubbles only",
+    "water pushes all solids up"
+   ],
+   "explain": "Water is unusual: as it freezes, its particles form an open pattern that takes up more space, so ice is less dense.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.cl.d1",
+   "topic": "science.cells",
+   "kind": "mcq",
+   "prompt": "Do plant cells have mitochondria?",
+   "options": [
+    {
+     "text": "Yes: plants respire to release energy, just like animals",
+     "correct": true
+    },
+    {
+     "text": "No: plants get energy by photosynthesis instead",
+     "correct": false,
+     "feedback": "Plants photosynthesise to make food (glucose), but they still need mitochondria to release the energy from it by respiration, day and night."
+    },
+    {
+     "text": "Only plants that live in the dark",
+     "correct": false,
+     "feedback": "All plant cells that are alive respire."
+    }
+   ],
+   "explain": "Photosynthesis makes glucose; respiration in the mitochondria releases its energy. Plants do both."
+  },
+  {
+   "id": "science.cl.d2",
+   "topic": "science.cells",
+   "kind": "mcq",
+   "prompt": "Which of these is made of cells?",
+   "options": [
+    {
+     "text": "All of them: a mushroom, a tree, a bacterium and you",
+     "correct": true
+    },
+    {
+     "text": "Only animals",
+     "correct": false,
+     "feedback": "Plants, fungi and bacteria are all made of cells too."
+    },
+    {
+     "text": "Only things you can see moving",
+     "correct": false,
+     "feedback": "Trees don’t move about but are made of billions of cells."
+    }
+   ],
+   "explain": "Every living thing is made of one or more cells. That is one of the big ideas of biology."
+  },
+  {
+   "id": "science.cl.nucleus",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-animal",
+   "layer": "features",
+   "feature": "nucleus",
+   "answer": "nucleus",
+   "explain": "The nucleus controls the cell and contains genetic material (DNA).",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the nucleus.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.cl.cytoplasm",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-animal",
+   "layer": "features",
+   "feature": "cytoplasm",
+   "answer": "cytoplasm",
+   "explain": "Cytoplasm is the jelly where most of the cell’s chemical reactions happen.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the cytoplasm.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.cl.membrane",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-animal",
+   "layer": "features",
+   "feature": "membrane",
+   "answer": "cell membrane",
+   "explain": "The cell membrane controls what goes in and out of the cell.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the cell membrane.",
+   "namePrompt": "Name the highlighted part.",
+   "accept": [
+    "membrane"
+   ]
+  },
+  {
+   "id": "science.cl.mito",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-animal",
+   "layer": "features",
+   "feature": "mitochondria",
+   "answer": "mitochondria",
+   "explain": "Mitochondria are where respiration happens, releasing energy.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the mitochondria.",
+   "namePrompt": "Name the highlighted part.",
+   "accept": [
+    "mitochondrion"
+   ]
+  },
+  {
+   "id": "science.cl.wall",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-plant",
+   "layer": "features",
+   "feature": "wall",
+   "answer": "cell wall",
+   "explain": "The cell wall is made of cellulose. It is strong and supports the plant cell. Animal cells don’t have one.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the cell wall.",
+   "namePrompt": "Name the highlighted part.",
+   "accept": [
+    "wall"
+   ]
+  },
+  {
+   "id": "science.cl.chloro",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-plant",
+   "layer": "features",
+   "feature": "chloroplasts",
+   "answer": "chloroplasts",
+   "explain": "Chloroplasts contain green chlorophyll and are where photosynthesis happens.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the chloroplasts.",
+   "namePrompt": "Name the highlighted part.",
+   "accept": [
+    "chloroplast"
+   ]
+  },
+  {
+   "id": "science.cl.vacuole",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-plant",
+   "layer": "features",
+   "feature": "vacuole",
+   "answer": "vacuole",
+   "explain": "The vacuole is filled with cell sap and keeps the cell firm.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the vacuole.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.cl.ribosome-job",
+   "topic": "science.cells",
+   "kind": "fact",
+   "prompt": "What do ribosomes do?",
+   "answer": "make proteins",
+   "distractors": [
+    "release energy",
+    "control the cell",
+    "make glucose"
+   ],
+   "explain": "Ribosomes are tiny structures that build proteins."
+  },
+  {
+   "id": "science.cl.plant-only",
+   "topic": "science.cells",
+   "kind": "fact",
+   "prompt": "Which three parts do plant cells have that animal cells do not?",
+   "answer": "cell wall, chloroplasts and a permanent vacuole",
+   "distractors": [
+    "nucleus, membrane and cytoplasm",
+    "mitochondria, ribosomes and a nucleus",
+    "cell wall, nucleus and mitochondria"
+   ],
+   "explain": "Both have a nucleus, cytoplasm, membrane, mitochondria and ribosomes.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.cl.hooke",
+   "topic": "science.cells",
+   "kind": "fact",
+   "prompt": "Who first used the word “cell” after looking at cork through a microscope in 1665?",
+   "answer": "Robert Hooke",
+   "distractors": [
+    "Charles Darwin",
+    "Isaac Newton",
+    "Louis Pasteur"
+   ],
+   "explain": "Hooke thought the tiny boxes in cork looked like the small rooms (cells) monks lived in."
+  },
+  {
+   "id": "science.cl.mag",
+   "topic": "science.cells",
+   "kind": "fact",
+   "prompt": "A microscope has a ×10 eyepiece and a ×40 objective lens. What is the total magnification?",
+   "answer": "×400",
+   "distractors": [
+    "×50",
+    "×4",
+    "×30"
+   ],
+   "explain": "Total magnification = eyepiece × objective = 10 × 40 = 400.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.cl.levels",
+   "topic": "science.cells",
+   "kind": "order",
+   "prompt": "Put these in order, from smallest to largest.",
+   "items": [
+    "cell",
+    "tissue",
+    "organ",
+    "organ system",
+    "organism"
+   ],
+   "labels": [
+    "e.g. muscle cell",
+    "muscle tissue",
+    "the heart",
+    "circulatory system",
+    "you"
+   ],
+   "explain": "Cells group into tissues, tissues into organs, organs into organ systems, and systems make an organism."
+  },
+  {
+   "id": "science.cl.rbc",
+   "topic": "science.cells",
+   "kind": "fact",
+   "prompt": "Which specialised cell has no nucleus, leaving more room to carry oxygen?",
+   "answer": "red blood cell",
+   "distractors": [
+    "nerve cell",
+    "root hair cell",
+    "sperm cell"
+   ],
+   "explain": "Red blood cells are packed with haemoglobin, which carries oxygen."
+  },
+  {
+   "id": "science.cl.roothair",
+   "topic": "science.cells",
+   "kind": "fact",
+   "prompt": "Which plant cell has a long thin extension to absorb water from the soil?",
+   "answer": "root hair cell",
+   "distractors": [
+    "palisade cell",
+    "guard cell",
+    "red blood cell"
+   ],
+   "explain": "The long “hair” gives a large surface area for absorbing water and minerals."
+  },
+  {
+   "id": "science.cl.nerve",
+   "topic": "science.cells",
+   "kind": "fact",
+   "prompt": "Which cell is long and thin to carry electrical signals around the body?",
+   "answer": "nerve cell",
+   "distractors": [
+    "red blood cell",
+    "muscle cell",
+    "sperm cell"
+   ],
+   "explain": "Some nerve cells are over a metre long, running from your spine to your toes.",
+   "accept": [
+    "neurone",
+    "neuron",
+    "nerve cell"
+   ]
+  },
+  {
+   "id": "science.at.d1",
+   "topic": "science.atoms",
+   "kind": "mcq",
+   "prompt": "Is a compound the same as a mixture?",
+   "options": [
+    {
+     "text": "No: in a compound the elements are chemically joined; in a mixture they are just mixed",
+     "correct": true
+    },
+    {
+     "text": "Yes, they are two words for the same thing",
+     "correct": false,
+     "feedback": "They are very different. Iron and sulfur mixed can be separated with a magnet; iron sulfide, a compound, cannot."
+    },
+    {
+     "text": "Only if it is a liquid",
+     "correct": false,
+     "feedback": "The difference is about chemical bonds, not the state."
+    }
+   ],
+   "explain": "Water (H₂O) is a compound: hydrogen and oxygen are chemically bonded. Air is a mixture of different gases."
+  },
+  {
+   "id": "science.at.element",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "A substance made of only one type of atom is called…",
+   "answer": "an element",
+   "distractors": [
+    "a compound",
+    "a mixture",
+    "a molecule only"
+   ],
+   "explain": "Gold, oxygen and carbon are elements.",
+   "accept": [
+    "element"
+   ]
+  },
+  {
+   "id": "science.at.compound",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "A substance made of two or more elements chemically joined is called…",
+   "answer": "a compound",
+   "distractors": [
+    "an element",
+    "a mixture",
+    "a solution"
+   ],
+   "explain": "Water, carbon dioxide and salt are compounds.",
+   "accept": [
+    "compound"
+   ]
+  },
+  {
+   "id": "science.at.count",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "Roughly how many elements are known?",
+   "answer": "about 118",
+   "distractors": [
+    "about 12",
+    "about 1000",
+    "exactly 100"
+   ],
+   "explain": "About 118, of which around 90 occur naturally.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.at.mendeleev",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "Which scientist arranged the elements into the first periodic table in 1869, leaving gaps for undiscovered ones?",
+   "answer": "Dmitri Mendeleev",
+   "distractors": [
+    "Marie Curie",
+    "John Dalton",
+    "Isaac Newton"
+   ],
+   "explain": "Mendeleev’s gaps were later filled by elements with the properties he predicted.",
+   "accept": [
+    "mendeleev"
+   ]
+  },
+  {
+   "id": "science.at.o",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for oxygen?",
+   "answer": "O",
+   "distractors": [
+    "Ox",
+    "Og",
+    "X"
+   ],
+   "explain": "Oxygen is O. H is hydrogen, C is carbon, N is nitrogen.",
+   "strict": true
+  },
+  {
+   "id": "science.at.na",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "Which element has the symbol Na?",
+   "answer": "sodium",
+   "distractors": [
+    "nitrogen",
+    "neon",
+    "nickel"
+   ],
+   "explain": "Na comes from its Latin name, natrium."
+  },
+  {
+   "id": "science.at.fe",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "Which element has the symbol Fe?",
+   "answer": "iron",
+   "distractors": [
+    "fluorine",
+    "lead",
+    "fermium"
+   ],
+   "explain": "Fe comes from the Latin ferrum. “Ferrous” metals contain iron."
+  },
+  {
+   "id": "science.at.au",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "Which element has the symbol Au?",
+   "answer": "gold",
+   "distractors": [
+    "silver",
+    "aluminium",
+    "argon"
+   ],
+   "explain": "Au from aurum, Latin for gold. Silver is Ag (argentum)."
+  },
+  {
+   "id": "science.at.h2o",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "What does the formula H₂O tell you about a water molecule?",
+   "answer": "it has 2 hydrogen atoms and 1 oxygen atom",
+   "distractors": [
+    "it has 2 oxygen atoms and 1 hydrogen atom",
+    "it is made of 20 atoms",
+    "it has 2 hydrogen molecules and an oxygen gas"
+   ],
+   "explain": "The small 2 belongs to the H in front of it.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.at.co2",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "What is the formula of carbon dioxide?",
+   "answer": "CO₂",
+   "distractors": [
+    "C₂O",
+    "CO",
+    "CaO"
+   ],
+   "explain": "One carbon atom and two oxygen atoms (di- means two).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.at.air",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "Which gas makes up about 78% of the air?",
+   "answer": "nitrogen",
+   "distractors": [
+    "oxygen",
+    "carbon dioxide",
+    "hydrogen"
+   ],
+   "explain": "Air is about 78% nitrogen, 21% oxygen and 1% other gases including carbon dioxide."
+  },
+  {
+   "id": "science.at.metals",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "On the periodic table, where are most metals found?",
+   "answer": "on the left and in the middle",
+   "distractors": [
+    "on the far right",
+    "only at the top",
+    "only at the bottom"
+   ],
+   "explain": "Non-metals are on the right. The staircase line separates them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.sp7.d1",
+   "topic": "science.separating",
+   "kind": "mcq",
+   "prompt": "A carton says “100% pure orange juice”. To a scientist, is it a pure substance?",
+   "options": [
+    {
+     "text": "No: it is a mixture of water, sugars, acids and more",
+     "correct": true
+    },
+    {
+     "text": "Yes, because nothing has been added",
+     "correct": false,
+     "feedback": "In everyday language “pure” means nothing added. In science a pure substance contains only one substance."
+    },
+    {
+     "text": "Yes, if it is freshly squeezed",
+     "correct": false,
+     "feedback": "Fresh juice is still a mixture of many substances."
+    }
+   ],
+   "explain": "A pure substance contains only one element or compound, and melts and boils at fixed temperatures."
+  },
+  {
+   "id": "science.sp7.solute",
+   "topic": "science.separating",
+   "kind": "fact",
+   "prompt": "In salt water, the salt is the solute. What is the water?",
+   "answer": "the solvent",
+   "distractors": [
+    "the solution",
+    "the residue",
+    "the filtrate"
+   ],
+   "explain": "Solute + solvent = solution.",
+   "accept": [
+    "solvent"
+   ]
+  },
+  {
+   "id": "science.sp7.saturated",
+   "topic": "science.separating",
+   "kind": "fact",
+   "prompt": "A solution in which no more solute can dissolve is called…",
+   "answer": "saturated",
+   "distractors": [
+    "concentrated",
+    "pure",
+    "diluted"
+   ],
+   "explain": "Warming the solvent usually lets more solid dissolve."
+  },
+  {
+   "id": "science.sp7.distil",
+   "topic": "science.separating",
+   "kind": "fact",
+   "prompt": "Which method could get pure drinking water from sea water?",
+   "answer": "distillation",
+   "distractors": [
+    "filtration",
+    "chromatography",
+    "sieving"
+   ],
+   "explain": "Distillation boils the water off and condenses the steam, leaving the salt behind."
+  },
+  {
+   "id": "science.sp7.chrom",
+   "topic": "science.separating",
+   "kind": "fact",
+   "prompt": "Which method separates the different coloured dyes in an ink?",
+   "answer": "chromatography",
+   "distractors": [
+    "distillation",
+    "filtration",
+    "evaporation"
+   ],
+   "explain": "The dyes travel up the paper at different speeds, so they separate."
+  },
+  {
+   "id": "science.sp7.crystal",
+   "topic": "science.separating",
+   "kind": "fact",
+   "prompt": "How can you get large crystals of salt from salt solution?",
+   "answer": "evaporate the water slowly (crystallisation)",
+   "distractors": [
+    "filter it",
+    "freeze it quickly",
+    "shake it"
+   ],
+   "explain": "Slow evaporation gives the crystals time to grow.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.sp7.mp",
+   "topic": "science.separating",
+   "kind": "fact",
+   "prompt": "How can a scientist test whether a substance is pure?",
+   "answer": "check that it melts or boils at one exact temperature",
+   "distractors": [
+    "taste it",
+    "see if it is see-through",
+    "weigh it"
+   ],
+   "explain": "Pure water boils at exactly 100°C; impurities change and spread out the boiling and melting points.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.sp7.order",
+   "topic": "science.separating",
+   "kind": "order",
+   "prompt": "To get pure salt from rock salt (salt mixed with sand), put the steps in order.",
+   "items": [
+    "crush the rock salt",
+    "stir it into warm water",
+    "filter out the sand",
+    "evaporate the water"
+   ],
+   "labels": null,
+   "explain": "The salt dissolves but the sand does not. Filter, then evaporate the filtrate to get the salt back."
+  },
+  {
+   "id": "science.ac.d1",
+   "topic": "science.acids",
+   "kind": "mcq",
+   "prompt": "Are all acids dangerous?",
+   "options": [
+    {
+     "text": "No: some are weak and safe to eat, like lemon juice and vinegar",
+     "correct": true
+    },
+    {
+     "text": "Yes, all acids burn your skin",
+     "correct": false,
+     "feedback": "Strong acids are dangerous, but weak acids are in lots of foods."
+    },
+    {
+     "text": "Only acids that are green",
+     "correct": false,
+     "feedback": "Colour has nothing to do with it."
+    }
+   ],
+   "explain": "Strong acids (like concentrated hydrochloric acid) are corrosive. Weak acids give food a sour taste."
+  },
+  {
+   "id": "science.ac.ph",
+   "topic": "science.acids",
+   "kind": "template",
+   "gen": "phScale",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    0.8
+   ]
+  },
+  {
+   "id": "science.ac.range",
+   "topic": "science.acids",
+   "kind": "fact",
+   "prompt": "The pH scale runs from 0 to…",
+   "answer": "14",
+   "distractors": [
+    "7",
+    "10",
+    "100"
+   ],
+   "explain": "pH 0 to 14: below 7 acid, 7 neutral, above 7 alkali."
+  },
+  {
+   "id": "science.ac.litmus",
+   "topic": "science.acids",
+   "kind": "fact",
+   "prompt": "What colour does an acid turn blue litmus paper?",
+   "answer": "red",
+   "distractors": [
+    "blue",
+    "green",
+    "purple"
+   ],
+   "explain": "Acids turn blue litmus red; alkalis turn red litmus blue."
+  },
+  {
+   "id": "science.ac.neutral",
+   "topic": "science.acids",
+   "kind": "fact",
+   "prompt": "Acid + alkali → ? + water",
+   "answer": "salt",
+   "distractors": [
+    "sugar",
+    "oxygen",
+    "more acid"
+   ],
+   "explain": "Neutralisation makes a salt and water. Hydrochloric acid + sodium hydroxide → sodium chloride (table salt) + water."
+  },
+  {
+   "id": "science.ac.stomach",
+   "topic": "science.acids",
+   "kind": "fact",
+   "prompt": "Which acid does your stomach make to help digest food and kill bacteria?",
+   "answer": "hydrochloric acid",
+   "distractors": [
+    "sulfuric acid",
+    "citric acid",
+    "carbonic acid"
+   ],
+   "explain": "Stomach acid has a pH of about 1 to 2.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ac.indigestion",
+   "topic": "science.acids",
+   "kind": "fact",
+   "prompt": "Why do indigestion tablets work?",
+   "answer": "they contain an alkali (base) that neutralises excess stomach acid",
+   "distractors": [
+    "they add more acid",
+    "they cool the stomach",
+    "they contain sugar"
+   ],
+   "explain": "Neutralisation in everyday life!",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ac.corrosive",
+   "topic": "science.acids",
+   "kind": "fact",
+   "prompt": "A hazard symbol showing liquid eating through a hand and a surface means…",
+   "answer": "corrosive",
+   "distractors": [
+    "flammable",
+    "toxic",
+    "explosive"
+   ],
+   "explain": "Corrosive substances destroy living tissue and materials. Wear goggles!"
+  },
+  {
+   "id": "science.f7.d1",
+   "topic": "science.forces7",
+   "kind": "mcq",
+   "prompt": "A car moves along a straight road at a steady 30 mph. What can you say about the forces on it?",
+   "options": [
+    {
+     "text": "They are balanced: the driving force equals the resistive forces",
+     "correct": true
+    },
+    {
+     "text": "The forward force must be bigger, or it would stop",
+     "correct": false,
+     "feedback": "If the forward force were bigger the car would speed up. Steady speed means balanced forces."
+    },
+    {
+     "text": "There are no forces on it",
+     "correct": false,
+     "feedback": "There are forces (engine, friction, air resistance); they just cancel out."
+    }
+   ],
+   "explain": "Balanced forces mean no change in motion: stay still, or keep moving at the same speed in the same direction."
+  },
+  {
+   "id": "science.f7.speed",
+   "topic": "science.forces7",
+   "kind": "template",
+   "gen": "speed",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.f7.weight",
+   "topic": "science.forces7",
+   "kind": "template",
+   "gen": "weight",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.8,
+    0.2,
+    0.5
+   ]
+  },
+  {
+   "id": "science.f7.resultant",
+   "topic": "science.forces7",
+   "kind": "fact",
+   "prompt": "A box has 10 N pushing it right and 4 N friction pulling left. What is the resultant force?",
+   "answer": "6 N to the right",
+   "distractors": [
+    "14 N to the right",
+    "6 N to the left",
+    "0 N"
+   ],
+   "explain": "Opposite forces subtract: 10 − 4 = 6 N, in the direction of the bigger force.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.f7.flat",
+   "topic": "science.forces7",
+   "kind": "fact",
+   "prompt": "On a distance–time graph, what does a flat (horizontal) line mean?",
+   "answer": "the object is stationary (not moving)",
+   "distractors": [
+    "it is moving very fast",
+    "it is speeding up",
+    "it is going backwards"
+   ],
+   "explain": "Distance isn’t changing, so it has stopped. A steeper line means faster.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.f7.steep",
+   "topic": "science.forces7",
+   "kind": "fact",
+   "prompt": "On a distance–time graph, a steeper straight line means…",
+   "answer": "a faster speed",
+   "distractors": [
+    "a slower speed",
+    "stopping",
+    "going uphill"
+   ],
+   "explain": "More distance in the same time = faster.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.f7.hooke",
+   "topic": "science.forces7",
+   "kind": "fact",
+   "prompt": "If you double the force on a spring (without overstretching it), its extension…",
+   "answer": "doubles",
+   "distractors": [
+    "halves",
+    "stays the same",
+    "goes up four times"
+   ],
+   "explain": "Hooke’s law: extension is proportional to force, up to the limit of proportionality.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.f7.mass",
+   "topic": "science.forces7",
+   "kind": "fact",
+   "prompt": "An astronaut goes from Earth to the Moon. What happens to her mass?",
+   "answer": "it stays the same",
+   "distractors": [
+    "it gets smaller",
+    "it gets bigger",
+    "it becomes zero"
+   ],
+   "explain": "Mass is the amount of matter and doesn’t change. Her weight is about one-sixth.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.en.d1",
+   "topic": "science.energy",
+   "kind": "mcq",
+   "prompt": "When a phone battery goes flat, what has happened to the energy?",
+   "options": [
+    {
+     "text": "It has been transferred to other stores, mostly heating the surroundings",
+     "correct": true
+    },
+    {
+     "text": "It has been used up and no longer exists",
+     "correct": false,
+     "feedback": "Energy is never destroyed. It is transferred, and much of it ends up as thermal energy in the surroundings (dissipated)."
+    },
+    {
+     "text": "It has turned into electricity and gone back into the plug",
+     "correct": false,
+     "feedback": "It doesn’t go back to the plug."
+    }
+   ],
+   "explain": "The law of conservation of energy: energy cannot be created or destroyed, only transferred between stores."
+  },
+  {
+   "id": "science.en.unit",
+   "topic": "science.energy",
+   "kind": "fact",
+   "prompt": "What unit is energy measured in?",
+   "answer": "joules",
+   "distractors": [
+    "watts",
+    "newtons",
+    "volts"
+   ],
+   "explain": "Energy in joules (J). Power, the rate of energy transfer, is in watts (W).",
+   "accept": [
+    "joule",
+    "j"
+   ]
+  },
+  {
+   "id": "science.en.kinetic",
+   "topic": "science.energy",
+   "kind": "fact",
+   "prompt": "A moving object has energy in which store?",
+   "answer": "kinetic",
+   "distractors": [
+    "gravitational potential",
+    "elastic",
+    "nuclear"
+   ],
+   "explain": "The faster it moves, the more energy in its kinetic store."
+  },
+  {
+   "id": "science.en.gpe",
+   "topic": "science.energy",
+   "kind": "fact",
+   "prompt": "A book lifted onto a high shelf gains energy in which store?",
+   "answer": "gravitational potential",
+   "distractors": [
+    "kinetic",
+    "elastic",
+    "chemical"
+   ],
+   "explain": "The higher it is raised, the more energy in its gravitational potential store.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.en.chem",
+   "topic": "science.energy",
+   "kind": "fact",
+   "prompt": "Food, fuels and batteries all store energy in which store?",
+   "answer": "chemical",
+   "distractors": [
+    "thermal",
+    "kinetic",
+    "magnetic"
+   ],
+   "explain": "Chemical reactions transfer this energy, for example respiration in your cells."
+  },
+  {
+   "id": "science.en.elastic",
+   "topic": "science.energy",
+   "kind": "fact",
+   "prompt": "A stretched catapult elastic stores energy in which store?",
+   "answer": "elastic potential",
+   "distractors": [
+    "kinetic",
+    "chemical",
+    "nuclear"
+   ],
+   "explain": "When released, the energy is transferred to the kinetic store of the stone.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.en.renewable",
+   "topic": "science.energy",
+   "kind": "fact",
+   "prompt": "Which of these energy resources is renewable?",
+   "answer": "wind",
+   "distractors": [
+    "coal",
+    "natural gas",
+    "oil"
+   ],
+   "explain": "Renewables (wind, solar, hydroelectric, tidal, geothermal, biomass) won’t run out."
+  },
+  {
+   "id": "science.en.fossil",
+   "topic": "science.energy",
+   "kind": "fact",
+   "prompt": "Burning fossil fuels releases which gas that contributes to climate change?",
+   "answer": "carbon dioxide",
+   "distractors": [
+    "oxygen",
+    "nitrogen",
+    "helium"
+   ],
+   "explain": "Coal, oil and gas formed from ancient living things. Burning them releases carbon dioxide."
+  },
+  {
+   "id": "science.en.power",
+   "topic": "science.energy",
+   "kind": "fact",
+   "prompt": "What unit is power measured in?",
+   "answer": "watts",
+   "distractors": [
+    "joules",
+    "newtons",
+    "amps"
+   ],
+   "explain": "A 60 W bulb transfers 60 joules every second.",
+   "accept": [
+    "watt",
+    "w"
+   ]
+  },
+  {
+   "id": "science.en.ball",
+   "topic": "science.energy",
+   "kind": "order",
+   "prompt": "A ball is thrown straight up and caught. Put the main energy stores in order.",
+   "items": [
+    "chemical (in your muscles)",
+    "kinetic (ball moving up)",
+    "gravitational potential (ball at the top)",
+    "kinetic (ball falling)"
+   ],
+   "labels": null,
+   "explain": "Chemical → kinetic → gravitational potential → kinetic. Some energy is dissipated to the surroundings by air resistance."
+  },
+  {
+   "id": "science.un.d1",
+   "topic": "science.universe",
+   "kind": "mcq",
+   "prompt": "Is the Sun the biggest star in the universe?",
+   "options": [
+    {
+     "text": "No: it is an average-sized star; many are far bigger",
+     "correct": true
+    },
+    {
+     "text": "Yes, that is why it looks so bright",
+     "correct": false,
+     "feedback": "It looks bright because it is close. Some stars are over 1000 times wider than the Sun."
+    },
+    {
+     "text": "The Sun is not a star",
+     "correct": false,
+     "feedback": "The Sun is a star, the closest one to us."
+    }
+   ],
+   "explain": "The Sun looks biggest and brightest only because it is about 150 million km away; the next nearest star is about 40 trillion km away."
+  },
+  {
+   "id": "science.un.d2",
+   "topic": "science.universe",
+   "kind": "mcq",
+   "prompt": "A light-year is a measure of…",
+   "options": [
+    {
+     "text": "distance: how far light travels in a year",
+     "correct": true
+    },
+    {
+     "text": "time: one year in space",
+     "correct": false,
+     "feedback": "Despite the name, it is a distance, about 9.5 trillion km."
+    },
+    {
+     "text": "brightness",
+     "correct": false,
+     "feedback": "It measures distance, not brightness."
+    }
+   ],
+   "explain": "Light travels about 300 000 km every second, so in a year it goes about 9.5 trillion km."
+  },
+  {
+   "id": "science.un.galaxy",
+   "topic": "science.universe",
+   "kind": "fact",
+   "prompt": "What is the name of our galaxy?",
+   "answer": "the Milky Way",
+   "distractors": [
+    "Andromeda",
+    "the Solar System",
+    "Orion"
+   ],
+   "explain": "The Milky Way contains hundreds of billions of stars. Andromeda is our nearest large neighbouring galaxy.",
+   "accept": [
+    "milky way"
+   ]
+  },
+  {
+   "id": "science.un.nearest",
+   "topic": "science.universe",
+   "kind": "fact",
+   "prompt": "After the Sun, which is the nearest star to Earth?",
+   "answer": "Proxima Centauri",
+   "distractors": [
+    "Sirius",
+    "the Pole Star",
+    "Betelgeuse"
+   ],
+   "explain": "Proxima Centauri is about 4.2 light-years away."
+  },
+  {
+   "id": "science.un.sunlight",
+   "topic": "science.universe",
+   "kind": "fact",
+   "prompt": "About how long does light from the Sun take to reach Earth?",
+   "answer": "about 8 minutes",
+   "distractors": [
+    "about 1 second",
+    "about 8 days",
+    "about a year"
+   ],
+   "explain": "So when you see the Sun, you see it as it was about 8 minutes ago. (Never look straight at it!)",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.un.orbit",
+   "topic": "science.universe",
+   "kind": "fact",
+   "prompt": "What keeps the planets in orbit around the Sun?",
+   "answer": "gravity",
+   "distractors": [
+    "magnetism",
+    "the solar wind",
+    "friction"
+   ],
+   "explain": "The Sun’s gravity pulls on the planets, bending their paths into orbits."
+  },
+  {
+   "id": "science.un.solar-eclipse",
+   "topic": "science.universe",
+   "kind": "fact",
+   "prompt": "A solar eclipse happens when…",
+   "answer": "the Moon passes between the Sun and the Earth",
+   "distractors": [
+    "the Earth passes between the Sun and the Moon",
+    "the Sun passes behind a planet",
+    "clouds cover the Sun"
+   ],
+   "explain": "In a lunar eclipse, the Earth is between the Sun and the Moon.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.un.belt",
+   "topic": "science.universe",
+   "kind": "fact",
+   "prompt": "The asteroid belt lies between which two planets?",
+   "answer": "Mars and Jupiter",
+   "distractors": [
+    "Earth and Mars",
+    "Jupiter and Saturn",
+    "Venus and Earth"
+   ],
+   "explain": "Millions of rocky asteroids orbit there.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.un.gas-giants",
+   "topic": "science.universe",
+   "kind": "fact",
+   "prompt": "Which two planets are “gas giants”?",
+   "answer": "Jupiter and Saturn",
+   "distractors": [
+    "Mercury and Venus",
+    "Earth and Mars",
+    "Venus and Mars"
+   ],
+   "explain": "Jupiter and Saturn are mostly hydrogen and helium. Uranus and Neptune are “ice giants”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ec.d1",
+   "topic": "science.ecosystems",
+   "kind": "mcq",
+   "prompt": "Where does a tree get most of the material to build its trunk and leaves?",
+   "options": [
+    {
+     "text": "From carbon dioxide in the air, using energy from light (photosynthesis)",
+     "correct": true
+    },
+    {
+     "text": "From the soil",
+     "correct": false,
+     "feedback": "A common idea! In the 1600s van Helmont grew a willow tree for 5 years: it gained about 74 kg, but the soil lost only about 60 g."
+    },
+    {
+     "text": "From water alone",
+     "correct": false,
+     "feedback": "Water matters, but most of the dry mass comes from carbon in carbon dioxide."
+    }
+   ],
+   "explain": "Photosynthesis: carbon dioxide + water → glucose + oxygen, using light energy. The plant builds itself from that glucose."
+  },
+  {
+   "id": "science.ec.d2",
+   "topic": "science.ecosystems",
+   "kind": "mcq",
+   "prompt": "In the food chain grass → rabbit → fox, what do the arrows show?",
+   "options": [
+    {
+     "text": "The direction energy flows: from the food to the animal that eats it",
+     "correct": true
+    },
+    {
+     "text": "Which animal eats which, pointing at the food",
+     "correct": false,
+     "feedback": "The arrow points TO the eater, showing where the energy goes."
+    },
+    {
+     "text": "Which is biggest",
+     "correct": false,
+     "feedback": "Arrows are about energy transfer, not size."
+    }
+   ],
+   "explain": "Arrows always point from the thing eaten to the eater."
+  },
+  {
+   "id": "science.ec.producer",
+   "topic": "science.ecosystems",
+   "kind": "fact",
+   "prompt": "In a food chain, what is a green plant called?",
+   "answer": "a producer",
+   "distractors": [
+    "a consumer",
+    "a predator",
+    "a decomposer"
+   ],
+   "explain": "Producers make their own food by photosynthesis. Every food chain starts with one.",
+   "accept": [
+    "producer"
+   ]
+  },
+  {
+   "id": "science.ec.photosynthesis",
+   "topic": "science.ecosystems",
+   "kind": "fact",
+   "prompt": "Complete the word equation: carbon dioxide + water → glucose + ?",
+   "answer": "oxygen",
+   "distractors": [
+    "carbon dioxide",
+    "nitrogen",
+    "salt"
+   ],
+   "explain": "Photosynthesis releases the oxygen we breathe."
+  },
+  {
+   "id": "science.ec.chlorophyll",
+   "topic": "science.ecosystems",
+   "kind": "fact",
+   "prompt": "Which green chemical in leaves absorbs light for photosynthesis?",
+   "answer": "chlorophyll",
+   "distractors": [
+    "chloroplast",
+    "haemoglobin",
+    "cellulose"
+   ],
+   "explain": "Chlorophyll is found inside chloroplasts."
+  },
+  {
+   "id": "science.ec.herbivore",
+   "topic": "science.ecosystems",
+   "kind": "fact",
+   "prompt": "An animal that eats only plants is called a…",
+   "answer": "herbivore",
+   "distractors": [
+    "carnivore",
+    "omnivore",
+    "predator"
+   ],
+   "explain": "Rabbits, deer and cows are herbivores."
+  },
+  {
+   "id": "science.ec.decomposer",
+   "topic": "science.ecosystems",
+   "kind": "fact",
+   "prompt": "Fungi and bacteria that break down dead material are called…",
+   "answer": "decomposers",
+   "distractors": [
+    "producers",
+    "predators",
+    "herbivores"
+   ],
+   "explain": "Decomposers return nutrients to the soil for plants to use again.",
+   "accept": [
+    "decomposer"
+   ]
+  },
+  {
+   "id": "science.ec.web",
+   "topic": "science.ecosystems",
+   "kind": "mcq",
+   "prompt": "In a woodland food web, a disease kills most of the owls, which eat mice. What happens to the mice first?",
+   "options": [
+    {
+     "text": "Their numbers increase, because fewer are eaten",
+     "correct": true
+    },
+    {
+     "text": "They all die too",
+     "correct": false,
+     "feedback": "The mice don’t catch the owls’ disease; they lose a predator."
+    },
+    {
+     "text": "Nothing at all",
+     "correct": false,
+     "feedback": "Living things in a food web depend on each other (interdependence)."
+    }
+   ],
+   "explain": "Then, with more mice, the plants and seeds they eat may decrease. Changes ripple through the web."
+  },
+  {
+   "id": "science.ec.bees",
+   "topic": "science.ecosystems",
+   "kind": "fact",
+   "prompt": "Why are bees so important to many food crops?",
+   "answer": "they pollinate the flowers so fruits and seeds form",
+   "distractors": [
+    "they eat pests",
+    "they make the soil richer",
+    "they water the plants"
+   ],
+   "explain": "About a third of the food we eat depends on pollinators.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ec.chain",
+   "topic": "science.ecosystems",
+   "kind": "order",
+   "prompt": "Put this food chain in order, starting with the producer.",
+   "items": [
+    "seaweed",
+    "periwinkle (sea snail)",
+    "crab",
+    "gull"
+   ],
+   "labels": [
+    "producer",
+    "primary consumer",
+    "secondary consumer",
+    "tertiary consumer"
+   ],
+   "explain": "Energy flows from the producer through each consumer in turn."
+  },
+  {
+   "id": "science.rp.d1",
+   "topic": "science.reproduction",
+   "kind": "mcq",
+   "prompt": "Why do many flowers have brightly coloured petals and a sweet scent?",
+   "options": [
+    {
+     "text": "To attract insects, which carry pollen between flowers",
+     "correct": true
+    },
+    {
+     "text": "To scare away animals",
+     "correct": false,
+     "feedback": "The colours and scents attract animals; they don’t scare them."
+    },
+    {
+     "text": "Just to look pretty for people",
+     "correct": false,
+     "feedback": "Flowers evolved long before people. The colours attract pollinators."
+    }
+   ],
+   "explain": "Insect-pollinated flowers offer nectar as a reward. Wind-pollinated flowers, like grasses, are small and dull."
+  },
+  {
+   "id": "science.rp.petal",
+   "topic": "science.reproduction",
+   "kind": "mapfact",
+   "map": "flower",
+   "layer": "features",
+   "feature": "petal",
+   "answer": "petal",
+   "explain": "Petals are often brightly coloured to attract insects.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the petal.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.rp.sepal",
+   "topic": "science.reproduction",
+   "kind": "mapfact",
+   "map": "flower",
+   "layer": "features",
+   "feature": "sepal",
+   "answer": "sepal",
+   "explain": "Sepals protect the flower when it is a bud.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the sepal.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.rp.anther",
+   "topic": "science.reproduction",
+   "kind": "mapfact",
+   "map": "flower",
+   "layer": "features",
+   "feature": "anther",
+   "answer": "anther",
+   "explain": "The anther makes pollen (the male sex cells). Anther + filament = stamen.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the anther.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.rp.filament",
+   "topic": "science.reproduction",
+   "kind": "mapfact",
+   "map": "flower",
+   "layer": "features",
+   "feature": "filament",
+   "answer": "filament",
+   "explain": "The filament is the stalk that holds up the anther.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the filament.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.rp.stigma",
+   "topic": "science.reproduction",
+   "kind": "mapfact",
+   "map": "flower",
+   "layer": "features",
+   "feature": "stigma",
+   "answer": "stigma",
+   "explain": "The sticky stigma catches pollen.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the stigma.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.rp.style",
+   "topic": "science.reproduction",
+   "kind": "mapfact",
+   "map": "flower",
+   "layer": "features",
+   "feature": "style",
+   "answer": "style",
+   "explain": "The style connects the stigma to the ovary.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the style.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.rp.ovary",
+   "topic": "science.reproduction",
+   "kind": "mapfact",
+   "map": "flower",
+   "layer": "features",
+   "feature": "ovary",
+   "answer": "ovary",
+   "explain": "The ovary contains ovules (the female sex cells). Stigma + style + ovary = carpel.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the ovary.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.rp.pollination",
+   "topic": "science.reproduction",
+   "kind": "fact",
+   "prompt": "The transfer of pollen from an anther to a stigma is called…",
+   "answer": "pollination",
+   "distractors": [
+    "fertilisation",
+    "germination",
+    "dispersal"
+   ],
+   "explain": "Pollination comes first; fertilisation happens later, when the pollen nucleus joins the ovule nucleus."
+  },
+  {
+   "id": "science.rp.sycamore",
+   "topic": "science.reproduction",
+   "kind": "fact",
+   "prompt": "Sycamore seeds have “wings” that spin. How are they dispersed?",
+   "answer": "by the wind",
+   "distractors": [
+    "by animals eating them",
+    "by water",
+    "by exploding pods"
+   ],
+   "explain": "Spinning slows their fall, so the wind carries them further from the parent tree."
+  },
+  {
+   "id": "science.rp.burdock",
+   "topic": "science.reproduction",
+   "kind": "fact",
+   "prompt": "Burdock seeds have tiny hooks. How are they dispersed?",
+   "answer": "by sticking to animals’ fur",
+   "distractors": [
+    "by the wind",
+    "by floating",
+    "by exploding"
+   ],
+   "explain": "Velcro was invented after an engineer studied burdock burrs!",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.rp.gametes",
+   "topic": "science.reproduction",
+   "kind": "fact",
+   "prompt": "In humans, what are the male and female sex cells (gametes) called?",
+   "answer": "sperm and egg",
+   "distractors": [
+    "pollen and ovule",
+    "cell and nucleus",
+    "embryo and fetus"
+   ],
+   "explain": "Fertilisation happens when a sperm cell joins with an egg cell.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.rp.gestation",
+   "topic": "science.reproduction",
+   "kind": "fact",
+   "prompt": "About how long does a human baby develop in the uterus before birth?",
+   "answer": "about 9 months (40 weeks)",
+   "distractors": [
+    "about 3 months",
+    "about 2 years",
+    "about 4 weeks"
+   ],
+   "explain": "This time is called gestation.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.rp.placenta",
+   "topic": "science.reproduction",
+   "kind": "fact",
+   "prompt": "Which organ passes oxygen and nutrients from the mother to the developing baby?",
+   "answer": "the placenta",
+   "distractors": [
+    "the ovary",
+    "the lungs",
+    "the stomach"
+   ],
+   "explain": "The placenta is joined to the baby by the umbilical cord.",
+   "accept": [
+    "placenta"
+   ]
+  },
+  {
+   "id": "science.wk.variables",
+   "topic": "science.working",
+   "kind": "template",
+   "gen": "variables",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.8,
+    -0.3,
+    0.3
+   ]
+  },
+  {
+   "id": "science.wk.mean",
+   "topic": "science.working",
+   "kind": "template",
+   "gen": "meanResults",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.6,
+    0.2,
+    0.6
+   ]
+  },
+  {
+   "id": "science.wk.accurate",
+   "topic": "science.working",
+   "kind": "fact",
+   "prompt": "A measurement that is very close to the true value is…",
+   "answer": "accurate",
+   "distractors": [
+    "precise",
+    "anomalous",
+    "repeatable only"
+   ],
+   "explain": "Accurate = close to the true value. Precise = repeat readings are close to each other."
+  },
+  {
+   "id": "science.wk.precise",
+   "topic": "science.working",
+   "kind": "fact",
+   "prompt": "Repeat readings that are all very close to each other are…",
+   "answer": "precise",
+   "distractors": [
+    "accurate",
+    "anomalous",
+    "biased"
+   ],
+   "explain": "Readings can be precise but not accurate, for example if a scale always reads 2 g too high."
+  },
+  {
+   "id": "science.wk.anomaly",
+   "topic": "science.working",
+   "kind": "fact",
+   "prompt": "A result that doesn’t fit the pattern of the others is called…",
+   "answer": "anomalous",
+   "distractors": [
+    "accurate",
+    "controlled",
+    "dependent"
+   ],
+   "explain": "Check for mistakes, repeat it, and leave it out of the mean if there is a good reason.",
+   "accept": [
+    "an anomaly",
+    "anomaly",
+    "an anomalous result"
+   ]
+  },
+  {
+   "id": "science.wk.linegraph",
+   "topic": "science.working",
+   "kind": "fact",
+   "prompt": "If both variables are numbers that can take any value (like temperature and time), which graph should you draw?",
+   "answer": "a line graph",
+   "distractors": [
+    "a bar chart",
+    "a pie chart",
+    "a pictogram"
+   ],
+   "explain": "Use a bar chart when the independent variable is in categories, such as types of material.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.wk.repeat",
+   "topic": "science.working",
+   "kind": "fact",
+   "prompt": "Why do scientists repeat measurements?",
+   "answer": "to spot anomalies and calculate a more reliable mean",
+   "distractors": [
+    "to make the experiment take longer",
+    "to change the independent variable",
+    "because the first one is always wrong"
+   ],
+   "explain": "Repeats show whether results are consistent.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.wk.hypothesis",
+   "topic": "science.working",
+   "kind": "fact",
+   "prompt": "An idea that can be tested by an experiment is called a…",
+   "answer": "hypothesis",
+   "distractors": [
+    "conclusion",
+    "variable",
+    "method"
+   ],
+   "explain": "For example: “Sugar dissolves faster in warmer water because the particles move faster.”"
+  }
+ ]
+}

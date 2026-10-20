@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = '019e8b4f2fc5';
+const VERSION = 'ac09d7277daf';
 const FILES = [
  "./",
  "./index.html",
@@ -24,6 +24,7 @@ const FILES = [
  "./js/gen/history.js",
  "./js/gen/index.js",
  "./js/gen/maths.js",
+ "./js/gen/science.js",
  "./js/main.js",
  "./js/platform/storage.js",
  "./js/platform/tts.js",
@@ -48,11 +49,16 @@ const FILES = [
  "./content/history/core.json",
  "./content/history/year7.json",
  "./content/index.json",
+ "./content/maps/cell-animal.json",
+ "./content/maps/cell-plant.json",
  "./content/maps/europe.json",
+ "./content/maps/flower.json",
+ "./content/maps/particles.json",
  "./content/maps/uk.json",
  "./content/maps/world.json",
  "./content/maths/core.json",
  "./content/science/core.json",
+ "./content/science/year7.json",
  "./fonts/atkinson-hyperlegible-latin-400-normal.woff2",
  "./fonts/atkinson-hyperlegible-latin-700-normal.woff2",
  "./fonts/opendyslexic-latin-400-normal.woff2",

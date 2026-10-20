@@ -28,11 +28,20 @@ export function mapSVG(map, opts) {
   const add = (el, id) => { if (id) (byId[id] ||= []).push(el); return el; };
   const tapAttrs = (id) => (locate ? { class: 'map-tap', tabindex: '0', role: 'button', 'data-id': id } : {});
 
-  if (map.sphere) svg.append(s('path', { d: map.sphere, fill: 'var(--map-sea)' }));
+  if (map.kind === 'diagram') {
+    for (const dc of (map.decor || []).filter((x) => x.under)) svg.append(s('path', { d: dc.d, fill: dc.fill, 'pointer-events': 'none' }));
+    for (const f of map.features) {
+      const cls = `dg-part${f.id === highlight ? ' map-hi' : ''}${locate ? ' map-tap' : ''}`;
+      svg.append(add(s('path', { d: f.d, fill: f.fill, 'fill-rule': f.rule || 'nonzero', class: cls, 'data-id': f.id, ...(locate ? { tabindex: '0', role: 'button' } : {}) }), f.id));
+    }
+    for (const dc of (map.decor || []).filter((x) => !x.under)) svg.append(s('path', { d: dc.d, fill: dc.fill, 'pointer-events': 'none' }));
+  } else if (map.sphere) svg.append(s('path', { d: map.sphere, fill: 'var(--map-sea)' }));
   if (map.sea) svg.append(s('path', { d: map.sea, fill: 'var(--map-sea)' }));
   if (map.graticule) svg.append(s('path', { d: map.graticule, class: 'map-grat' }));
 
-  if (map.id === 'world') {
+  if (map.kind === 'diagram') {
+    // drawn above
+  } else if (map.id === 'world') {
     if (layer === 'oceans') {
       for (const o of map.oceans) svg.append(add(s('path', { d: o.d, class: `map-ocean${locate ? ' tap' : ''}${o.id === highlight ? ' hi' : ''}`, 'data-id': o.id, ...(locate ? { tabindex: '0', role: 'button' } : {}) }), o.id));
     }

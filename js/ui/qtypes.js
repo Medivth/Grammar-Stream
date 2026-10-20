@@ -42,7 +42,7 @@ export async function renderQuestion(q, { onChange = () => {}, settings = {} } =
 function layerFor(q, map) {
   if (q.layer) return q.layer;
   if (map.id === 'europe') return 'countries';
-  if (map.id === 'uk') return 'features';
+  if (map.id === 'uk' || map.kind === 'diagram') return 'features';
   return 'continents';
 }
 function markerTypeFor(q) {
@@ -141,7 +141,7 @@ async function mapLocateView(q, onChange) {
   const names = featureNames(map, q.layer || layerFor(q, map));
   q.featureNames = names;
   const view = mapSVG(map, { layer: q.layer || layerFor(q, map), locate: true, markerType: markerTypeFor(q), zoom: q.map.zoom, onPick: (id) => { picked = id; label.textContent = `You picked: ${names[id] ?? 'a place'}`; onChange(true); } });
-  const label = h('p', { class: 'muted', 'aria-live': 'polite' }, 'Tap the map.');
+  const label = h('p', { class: 'muted', 'aria-live': 'polite' }, map.kind === 'diagram' ? 'Tap the diagram.' : 'Tap the map.');
   return {
     el: h('div', {}, view.el, label),
     getResponse: () => picked,

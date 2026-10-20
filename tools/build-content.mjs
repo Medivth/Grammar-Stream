@@ -4,8 +4,9 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 
-const SOURCES = ['english', 'maths', 'history', 'history-y7', 'geography', 'geography-y7', 'science', 'reading-writing'];
+const SOURCES = ['english', 'maths', 'history', 'history-y7', 'geography', 'geography-y7', 'science', 'science-y7', 'reading-writing'];
 const MAPS = { world: 'maps/world.json', europe: 'maps/europe.json', uk: 'maps/uk.json' };
+const { DIAGRAMS } = await import(new URL('./content-src/diagrams.mjs', import.meta.url));
 
 export async function buildAll() {
   const files = {};
@@ -18,7 +19,12 @@ export async function buildAll() {
       decks.push(path);
     }
   }
-  files['index.json'] = JSON.stringify({ version: 1, decks, maps: MAPS }, null, 1) + '\n';
+  const maps = { ...MAPS };
+  for (const d of DIAGRAMS) {
+    files[`maps/${d.id}.json`] = JSON.stringify(d) + '\n';
+    maps[d.id] = `maps/${d.id}.json`;
+  }
+  files['index.json'] = JSON.stringify({ version: 1, decks, maps }, null, 1) + '\n';
   return files;
 }
 
