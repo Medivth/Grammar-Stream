@@ -119,7 +119,7 @@ export function applyPlacement(probe, state, db, today) {
   for (const tid of probe.passed) {
     state.topics[tid] = { ema: 0.8, n: 0, state: 'proficient', profDay: today, delayed: 0, started: today, assumed: true };
     for (const id of db.itemsByTopic[tid] || []) {
-      if (state.cards[id]) continue;
+      if (state.cards[id] || db.items[id].kind === 'written') continue; // written answers are marked by a grown-up, never reviewed
       // low stability, due dates spread over the next two weeks
       state.cards[id] = { state: 'review', s: 2 + rng.next() * 2, d: 5, lastDay: today, due: today + rng.int(2, 14), ivl: 0, reps: 0, lapses: 0, assumed: true };
     }

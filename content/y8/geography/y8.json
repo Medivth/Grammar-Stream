@@ -1,0 +1,4808 @@
+{
+ "subject": "geography",
+ "deck": "y8",
+ "topics": [
+  {
+   "id": "geography.maps",
+   "title": "Map skills: six-figure grid references, contours and bearings",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Ordnance Survey maps reward precision. A six-figure grid reference pins a place to within 100 metres; contours show the shape of the land; bearings give an exact direction.",
+   "teach": "Explain how to give a six-figure grid reference, and why eastings come first.",
+   "talk": "Plan a walk together on an OS map (or the OS app) and ask {her} to read the contours along the route."
+  },
+  {
+   "id": "geography.tectonics",
+   "title": "Plate tectonics",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "The Earth’s crust is broken into plates that move a few centimetres a year. What happens at their edges builds mountains, opens oceans and shakes cities. The Greeks blamed Poseidon, the Earth-shaker; we have better evidence.",
+   "teach": "Explain the difference between a destructive and a constructive plate boundary, with an example of each.",
+   "talk": "Ask {her} why Iceland is getting wider every year."
+  },
+  {
+   "id": "geography.hazards",
+   "title": "Earthquakes and volcanoes: case studies",
+   "kind": "facts",
+   "prereqs": [
+    "geography.tectonics"
+   ],
+   "batch": 5,
+   "intro": "The same size of earthquake can kill a hundred people in one country and a hundred thousand in another. Case studies show why: wealth, buildings, planning and luck.",
+   "teach": "Explain why the 2010 Haiti earthquake killed far more people than many larger earthquakes in richer countries.",
+   "talk": "Ask {her} what happened to the island of Thera (Santorini) about 3,600 years ago."
+  },
+  {
+   "id": "geography.weather",
+   "title": "Weather, pressure and rainfall",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Weather is what is happening in the sky today; climate is the pattern over thirty years or more. Air pressure, the ocean and the shape of the land explain most of what the UK gets.",
+   "teach": "Explain the three types of rainfall, with a place where each is common.",
+   "talk": "Watch a weather forecast together and ask {her} to spot a depression (a low) and a high."
+  },
+  {
+   "id": "geography.climate",
+   "title": "Climate change: causes, effects and responses",
+   "kind": "facts",
+   "prereqs": [
+    "geography.weather"
+   ],
+   "batch": 5,
+   "intro": "The climate has always changed, but never this fast in human history. Separate the evidence, the natural causes, the human causes and the choices we can still make.",
+   "teach": "Explain the enhanced greenhouse effect in four steps.",
+   "talk": "Ask {her} which response to climate change {she} thinks matters most: changing energy, food, transport or something else."
+  },
+  {
+   "id": "geography.rivers",
+   "title": "Rivers and flooding",
+   "kind": "facts",
+   "prereqs": [
+    "geography.weather"
+   ],
+   "batch": 5,
+   "intro": "A river shapes its valley from source to mouth: erosion in the hills, meanders in the middle course, floodplains and deltas near the sea. Floods are natural; the damage depends on what we build.",
+   "teach": "Explain how an oxbow lake forms, in four steps.",
+   "talk": "On a walk by a river, ask {her} to find the fastest-flowing side of a bend."
+  },
+  {
+   "id": "geography.coasts",
+   "title": "Coasts: erosion, landforms and management",
+   "kind": "facts",
+   "prereqs": [
+    "geography.rivers"
+   ],
+   "batch": 5,
+   "intro": "Waves attack the coast with hydraulic action and abrasion, carry sand along it by longshore drift, and build it back as beaches and spits. Deciding what to protect is a hard choice.",
+   "teach": "Explain how a headland becomes a stack and then a stump.",
+   "talk": "Ask {her} whether the government should protect every stretch of eroding coast, and why."
+  },
+  {
+   "id": "geography.ice",
+   "title": "Glaciers and the shape of upland Britain",
+   "kind": "facts",
+   "prereqs": [
+    "geography.rivers"
+   ],
+   "batch": 5,
+   "intro": "Twenty thousand years ago ice covered most of Britain. The Lake District, Snowdonia and the Highlands are still shaped by it: corries, arêtes, U-shaped valleys and ribbon lakes.",
+   "teach": "Explain how a corrie forms.",
+   "talk": "Look at a photo of Striding Edge or Windermere together and ask {her} to name the glacial landform."
+  },
+  {
+   "id": "geography.biomes",
+   "title": "Ecosystems and biomes",
+   "kind": "facts",
+   "prereqs": [
+    "geography.weather"
+   ],
+   "batch": 5,
+   "intro": "A biome is a huge ecosystem shaped by climate: rainforest, hot desert, tundra. Each has plants and animals adapted to it, and each faces its own threats.",
+   "teach": "Explain why tropical rainforest soils are poor even though the forest is so lush.",
+   "talk": "Ask {her} for three ways a camel or a cactus is adapted to the desert."
+  },
+  {
+   "id": "geography.population",
+   "title": "Population and migration",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "There are now about 8 billion people. Why do some countries grow fast while others shrink? And why do people move?",
+   "teach": "Explain the five stages of the demographic transition model.",
+   "talk": "Ask {her} for one push factor and one pull factor in a family or local migration story you know."
+  },
+  {
+   "id": "geography.cities",
+   "title": "Urbanisation and megacities",
+   "kind": "facts",
+   "prereqs": [
+    "geography.population"
+   ],
+   "batch": 5,
+   "intro": "Since about 2007 more people have lived in towns and cities than in the countryside. Megacities such as Lagos and Mumbai grow by millions in a decade; London grew the same way 150 years ago.",
+   "teach": "Explain the opportunities and challenges of living in a fast-growing city such as Lagos.",
+   "talk": "Ask {her} what an informal settlement is, and why it is a mistake to call it just a slum."
+  },
+  {
+   "id": "geography.development",
+   "title": "Development and inequality",
+   "kind": "facts",
+   "prereqs": [
+    "geography.population"
+   ],
+   "batch": 5,
+   "intro": "How do we compare countries fairly? Income alone hides too much, so geographers use measures like the Human Development Index, and ask why gaps open and how they close.",
+   "teach": "Explain why HDI is a better measure of development than GNI per head alone.",
+   "talk": "Ask {her} what the Brandt line was, and whether it still works today."
+  },
+  {
+   "id": "geography.global",
+   "title": "Globalisation and trade",
+   "kind": "facts",
+   "prereqs": [
+    "geography.development"
+   ],
+   "batch": 5,
+   "intro": "Your phone was designed in one country, assembled in another from parts made in a dozen more. Containers, the internet and transnational companies tie the world together, for better and worse.",
+   "teach": "Explain two advantages and two disadvantages of a transnational company opening a factory in a lower-income country.",
+   "talk": "Check the labels on three things at home and ask {her} to map where they were made."
+  },
+  {
+   "id": "geography.energy",
+   "title": "Resources and energy",
+   "kind": "facts",
+   "prereqs": [
+    "geography.climate"
+   ],
+   "batch": 5,
+   "intro": "Food, water and energy are unevenly shared. The big question for this generation: how to power the world without wrecking the climate.",
+   "teach": "Explain the difference between renewable and non-renewable energy, with two examples of each.",
+   "talk": "Ask {her} which renewable source suits your area best, and why."
+  },
+  {
+   "id": "geography.russia",
+   "title": "Regional study: Russia",
+   "kind": "facts",
+   "prereqs": [
+    "geography.biomes"
+   ],
+   "batch": 5,
+   "intro": "The largest country on Earth spans two continents, eleven time zones and every cold biome from steppe to tundra. Its geography explains much of its history.",
+   "teach": "Explain how permafrost affects building and living in Siberia.",
+   "talk": "Ask {her} how long the Trans-Siberian Railway is, and how long the journey takes."
+  },
+  {
+   "id": "geography.places",
+   "title": "World places: countries and capitals",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 6,
+   "intro": "Beyond the obvious: thirty countries every well-informed person should be able to find, and their capitals (several of which are not the biggest city).",
+   "teach": "Name three countries whose capital is not their largest city.",
+   "talk": "When a country is in the news, ask {her} to find it on a map and name its capital."
+  },
+  {
+   "id": "geography.aegean",
+   "title": "Greece and the Mediterranean",
+   "kind": "facts",
+   "prereqs": [
+    "geography.tectonics"
+   ],
+   "batch": 6,
+   "intro": "The world of the Greek myths is a real landscape: mountains, thousands of islands, earthquakes and volcanoes, and a climate of hot, dry summers. Mira and Theo are island-hopping across the Aegean.",
+   "teach": "Explain why Greece has so many earthquakes.",
+   "talk": "Ask {her} which Greek island {she} would visit first, and what landform {she} would see there."
+  },
+  {
+   "id": "geography.hazard-management",
+   "title": "Managing hazards (GCSE taster)",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "geography.hazards"
+   ],
+   "batch": 5,
+   "intro": "We cannot stop earthquakes or eruptions, but we can predict, protect and prepare. GCSE questions ask you to compare how places at different levels of development respond.",
+   "teach": "Explain the three Ps of hazard management with an example of each.",
+   "talk": "Ask {her} what is in an earthquake kit in Japan, and why schools practise drills."
+  },
+  {
+   "id": "geography.numbers",
+   "title": "Numbers in geography (GCSE taster)",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "geography.population"
+   ],
+   "batch": 5,
+   "intro": "GCSE geography expects real statistics: mean, median, mode, range and interquartile range, plus reading graphs and spotting correlation.",
+   "teach": "Explain why the median can describe rainfall data better than the mean.",
+   "talk": "Give {her} five daily temperatures and ask for the median and the range."
+  },
+  {
+   "id": "geography.basins",
+   "title": "The water cycle and drainage basins (GCSE taster)",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "geography.rivers"
+   ],
+   "batch": 5,
+   "intro": "A drainage basin is a system of inputs, stores, flows and outputs. Storm hydrographs show how quickly rain reaches the river, which is the key to understanding floods.",
+   "teach": "Explain why an urban drainage basin floods faster than a forested one.",
+   "talk": "Ask {her} what “lag time” means on a storm hydrograph."
+  }
+ ],
+ "items": [
+  {
+   "id": "geography.mp.order",
+   "topic": "geography.maps",
+   "kind": "mcq",
+   "prompt": "In a grid reference, which comes first?",
+   "options": [
+    {
+     "text": "Eastings (the numbers along the bottom, read left to right)",
+     "correct": true
+    },
+    {
+     "text": "Northings (the numbers up the side)",
+     "correct": false,
+     "feedback": "“Along the corridor, then up the stairs”: eastings first."
+    },
+    {
+     "text": "It doesn’t matter",
+     "correct": false,
+     "feedback": "It matters: swap them and you are somewhere else entirely."
+    }
+   ],
+   "explain": "Along the corridor (eastings), then up the stairs (northings)."
+  },
+  {
+   "id": "geography.mp.six",
+   "topic": "geography.maps",
+   "kind": "mcq",
+   "prompt": "A church is in the square with easting 34 and northing 56. It is 7 tenths of the way across and 2 tenths of the way up. What is its six-figure grid reference?",
+   "options": [
+    {
+     "text": "347562",
+     "correct": true
+    },
+    {
+     "text": "345672",
+     "correct": false,
+     "feedback": "Write the easting with its tenth (347), then the northing with its tenth (562)."
+    },
+    {
+     "text": "562347",
+     "correct": false,
+     "feedback": "Eastings first."
+    },
+    {
+     "text": "3456",
+     "correct": false,
+     "feedback": "That is the four-figure reference for the square; six figures add the tenths."
+    }
+   ],
+   "explain": "Easting 34 + 7 tenths = 347; northing 56 + 2 tenths = 562. So 347562."
+  },
+  {
+   "id": "geography.mp.accuracy",
+   "topic": "geography.maps",
+   "kind": "fact",
+   "prompt": "On a 1:25 000 or 1:50 000 OS map, a six-figure grid reference locates a point to within how many metres?",
+   "answer": "100 metres",
+   "distractors": [
+    "1 metre",
+    "10 kilometres",
+    "1 kilometre"
+   ],
+   "explain": "Grid squares are 1 km; tenths of a square are 100 m.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.mp.contours",
+   "topic": "geography.maps",
+   "kind": "mcq",
+   "prompt": "Contour lines on a map are very close together. What does that tell you?",
+   "options": [
+    {
+     "text": "The slope is steep",
+     "correct": true
+    },
+    {
+     "text": "The land is flat",
+     "correct": false,
+     "feedback": "Flat land has contours far apart, or none at all."
+    },
+    {
+     "text": "There is a river",
+     "correct": false,
+     "feedback": "Rivers are blue lines. Close contours show steepness."
+    },
+    {
+     "text": "It is a forest",
+     "correct": false,
+     "feedback": "Woodland has its own green symbol."
+    }
+   ],
+   "explain": "Each contour joins points of equal height. Close together means the height changes quickly over a short distance."
+  },
+  {
+   "id": "geography.mp.scale",
+   "topic": "geography.maps",
+   "kind": "fact",
+   "prompt": "On a 1:50 000 map, how many centimetres represent 1 kilometre?",
+   "answer": "2",
+   "distractors": [
+    "4",
+    "5",
+    "50"
+   ],
+   "explain": "1 km = 100 000 cm. 100 000 ÷ 50 000 = 2 cm. (On a 1:25 000 map it is 4 cm.)"
+  },
+  {
+   "id": "geography.mp.bearing-e",
+   "topic": "geography.maps",
+   "kind": "fact",
+   "prompt": "What is the bearing of due east?",
+   "answer": "090°",
+   "distractors": [
+    "045°",
+    "180°",
+    "270°"
+   ],
+   "explain": "Bearings are measured clockwise from north, always with three figures: north 000°, east 090°, south 180°, west 270°.",
+   "accept": [
+    "090",
+    "90",
+    "90°"
+   ]
+  },
+  {
+   "id": "geography.mp.bearing-sw",
+   "topic": "geography.maps",
+   "kind": "fact",
+   "prompt": "What is the bearing of south-west?",
+   "answer": "225°",
+   "distractors": [
+    "135°",
+    "315°",
+    "250°"
+   ],
+   "explain": "South is 180°; south-west is halfway on to west (270°): 225°.",
+   "accept": [
+    "225"
+   ]
+  },
+  {
+   "id": "geography.mp.trig",
+   "topic": "geography.maps",
+   "kind": "mcq",
+   "prompt": "On an OS map, what does a small blue triangle with a dot in the middle show?",
+   "options": [
+    {
+     "text": "A triangulation pillar (trig point)",
+     "correct": true
+    },
+    {
+     "text": "A campsite",
+     "correct": false,
+     "feedback": "Campsites have a tent symbol."
+    },
+    {
+     "text": "A church with a tower",
+     "correct": false,
+     "feedback": "Churches are shown by a black square or circle with a cross."
+    },
+    {
+     "text": "A youth hostel",
+     "correct": false,
+     "feedback": "Hostels have a red triangle symbol."
+    }
+   ],
+   "explain": "Trig points are concrete pillars on hilltops, once used to survey Britain."
+  },
+  {
+   "id": "geography.mp.spot",
+   "topic": "geography.maps",
+   "kind": "mcq",
+   "prompt": "What is a spot height?",
+   "options": [
+    {
+     "text": "A dot with a number giving the exact height of that point in metres",
+     "correct": true
+    },
+    {
+     "text": "The highest point in the country",
+     "correct": false,
+     "feedback": "Spot heights appear all over a map."
+    },
+    {
+     "text": "A place to spot birds",
+     "correct": false,
+     "feedback": "Nice idea, but no."
+    }
+   ],
+   "explain": "Spot heights fill in detail between contour lines."
+  },
+  {
+   "id": "geography.tc.layers",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "What is the thin, rocky outer layer of the Earth called?",
+   "answer": "the crust",
+   "distractors": [
+    "the mantle",
+    "the outer core",
+    "the inner core"
+   ],
+   "explain": "Continental crust is about 30–50 km thick; oceanic crust only about 7 km.",
+   "accept": [
+    "crust"
+   ]
+  },
+  {
+   "id": "geography.tc.core",
+   "topic": "geography.tectonics",
+   "kind": "mcq",
+   "prompt": "Which layer of the Earth is liquid metal?",
+   "options": [
+    {
+     "text": "The outer core",
+     "correct": true
+    },
+    {
+     "text": "The inner core",
+     "correct": false,
+     "feedback": "The inner core is solid, despite the heat, because of the enormous pressure."
+    },
+    {
+     "text": "The mantle",
+     "correct": false,
+     "feedback": "The mantle is solid rock that flows extremely slowly."
+    },
+    {
+     "text": "The crust",
+     "correct": false,
+     "feedback": "The crust is solid rock."
+    }
+   ],
+   "explain": "The liquid iron and nickel of the outer core create the Earth’s magnetic field."
+  },
+  {
+   "id": "geography.tc.move",
+   "topic": "geography.tectonics",
+   "kind": "mcq",
+   "prompt": "What do most geologists now think mainly drives the plates?",
+   "options": [
+    {
+     "text": "Slab pull and ridge push, helped by heat moving in the mantle",
+     "correct": true
+    },
+    {
+     "text": "The Moon’s gravity",
+     "correct": false,
+     "feedback": "Tides move water, not plates."
+    },
+    {
+     "text": "The wind",
+     "correct": false,
+     "feedback": "Wind is far too weak."
+    },
+    {
+     "text": "Earthquakes",
+     "correct": false,
+     "feedback": "Earthquakes are a result of plate movement, not the cause."
+    }
+   ],
+   "explain": "Older textbooks say convection currents; current thinking puts more weight on dense oceanic plates sinking (slab pull) and new rock pushing out from ridges (ridge push)."
+  },
+  {
+   "id": "geography.tc.destructive",
+   "topic": "geography.tectonics",
+   "kind": "mcq",
+   "prompt": "At a destructive plate boundary such as the west coast of South America, what happens?",
+   "options": [
+    {
+     "text": "The denser oceanic plate sinks beneath the continental plate, causing earthquakes and volcanoes",
+     "correct": true
+    },
+    {
+     "text": "Two plates move apart and new crust forms",
+     "correct": false,
+     "feedback": "That is a constructive boundary."
+    },
+    {
+     "text": "Two plates slide past each other",
+     "correct": false,
+     "feedback": "That is a conservative boundary."
+    },
+    {
+     "text": "Nothing: it is stable",
+     "correct": false,
+     "feedback": "The Andes and Chile’s huge earthquakes say otherwise."
+    }
+   ],
+   "explain": "The Nazca Plate subducts beneath the South American Plate, building the Andes."
+  },
+  {
+   "id": "geography.tc.constructive",
+   "topic": "geography.tectonics",
+   "kind": "mcq",
+   "prompt": "Why is Iceland slowly getting wider?",
+   "options": [
+    {
+     "text": "It sits on a constructive boundary where the plates pull apart",
+     "correct": true
+    },
+    {
+     "text": "Lava from Hawaii reaches it",
+     "correct": false,
+     "feedback": "Hawaii is a hotspot in the Pacific."
+    },
+    {
+     "text": "Sea levels are falling",
+     "correct": false,
+     "feedback": "The plates are moving apart, about 2 cm a year."
+    },
+    {
+     "text": "Glaciers push it outwards",
+     "correct": false,
+     "feedback": "It is plate movement."
+    }
+   ],
+   "explain": "The Mid-Atlantic Ridge runs through Iceland: the North American and Eurasian plates move apart and magma fills the gap."
+  },
+  {
+   "id": "geography.tc.conservative",
+   "topic": "geography.tectonics",
+   "kind": "mcq",
+   "prompt": "The San Andreas Fault in California is a famous example of which kind of boundary?",
+   "options": [
+    {
+     "text": "Conservative: plates slide past each other",
+     "correct": true
+    },
+    {
+     "text": "Constructive",
+     "correct": false,
+     "feedback": "No new crust forms there."
+    },
+    {
+     "text": "Destructive",
+     "correct": false,
+     "feedback": "No plate sinks there."
+    },
+    {
+     "text": "Collision",
+     "correct": false,
+     "feedback": "Collision boundaries build mountain ranges like the Himalayas."
+    }
+   ],
+   "explain": "No volcanoes, but powerful earthquakes when the stuck plates jerk past each other."
+  },
+  {
+   "id": "geography.tc.himalayas",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "The Himalayas formed where which two plates collide?",
+   "answer": "the Indian and Eurasian plates",
+   "distractors": [
+    "the Pacific and Nazca plates",
+    "the African and South American plates",
+    "the North American and Eurasian plates"
+   ],
+   "explain": "India is still pushing north, so Everest is still rising by a few millimetres a year.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.tc.ring",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "What is the name for the belt of volcanoes and earthquakes around the Pacific Ocean?",
+   "answer": "the Ring of Fire",
+   "distractors": [
+    "the Rim of Ash",
+    "the Pacific Ridge",
+    "the Hot Spot"
+   ],
+   "explain": "About three-quarters of the world’s active volcanoes are in this belt.",
+   "accept": [
+    "ring of fire",
+    "pacific ring of fire"
+   ]
+  },
+  {
+   "id": "geography.tc.magnitude",
+   "topic": "geography.tectonics",
+   "kind": "mcq",
+   "prompt": "On the magnitude scale, how much more energy does a magnitude 7 earthquake release than a magnitude 6?",
+   "options": [
+    {
+     "text": "About 32 times as much",
+     "correct": true
+    },
+    {
+     "text": "Only a little more: it is one step up",
+     "correct": false,
+     "feedback": "The scale is logarithmic."
+    },
+    {
+     "text": "Twice as much",
+     "correct": false,
+     "feedback": "Much more than twice."
+    },
+    {
+     "text": "A million times as much",
+     "correct": false,
+     "feedback": "Far too many."
+    }
+   ],
+   "explain": "Each whole step is about 10 times the ground shaking and about 32 times the energy."
+  },
+  {
+   "id": "geography.hz.nepal",
+   "topic": "geography.hazards",
+   "kind": "fact",
+   "prompt": "In which year did the Gorkha earthquake (magnitude 7.8) strike Nepal, killing about 9,000 people?",
+   "answer": "2015",
+   "distractors": [
+    "2004",
+    "2010",
+    "2023"
+   ],
+   "explain": "It struck on 25 April 2015 and set off avalanches on Everest."
+  },
+  {
+   "id": "geography.hz.haiti",
+   "topic": "geography.hazards",
+   "kind": "mcq",
+   "prompt": "The 2010 Haiti earthquake (magnitude 7.0) killed well over 100,000 people. What was the MAIN reason the death toll was so high?",
+   "options": [
+    {
+     "text": "Poorly built, crowded buildings in one of the world’s poorest countries, close to the epicentre",
+     "correct": true
+    },
+    {
+     "text": "It was the strongest earthquake ever recorded",
+     "correct": false,
+     "feedback": "Magnitude 7.0 is strong but far from the largest: Chile 1960 was 9.5."
+    },
+    {
+     "text": "It happened far out at sea",
+     "correct": false,
+     "feedback": "The epicentre was on land, near Port-au-Prince."
+    },
+    {
+     "text": "Haiti never normally has earthquakes",
+     "correct": false,
+     "feedback": "Haiti sits near a plate boundary; the issue was vulnerability."
+    }
+   ],
+   "explain": "The same magnitude kills very different numbers of people depending on buildings, wealth and preparation."
+  },
+  {
+   "id": "geography.hz.iceland",
+   "topic": "geography.hazards",
+   "kind": "mcq",
+   "prompt": "The 2010 eruption of Eyjafjallajökull in Iceland killed no one. What problem did it cause across Europe?",
+   "options": [
+    {
+     "text": "Its ash cloud closed much of Europe’s airspace for about a week",
+     "correct": true
+    },
+    {
+     "text": "A tsunami flooded Britain",
+     "correct": false,
+     "feedback": "There was no tsunami."
+    },
+    {
+     "text": "Lava reached Scotland",
+     "correct": false,
+     "feedback": "Lava stayed in Iceland."
+    },
+    {
+     "text": "It caused the 2010 Haiti earthquake",
+     "correct": false,
+     "feedback": "They are thousands of kilometres apart and unconnected."
+    }
+   ],
+   "explain": "About 100,000 flights were cancelled: a reminder that hazards have global, economic effects."
+  },
+  {
+   "id": "geography.hz.thera",
+   "topic": "geography.hazards",
+   "kind": "mcq",
+   "prompt": "About 3,600 years ago, the volcano on Thera (Santorini) erupted. What does the island look like today because of it?",
+   "options": [
+    {
+     "text": "A ring of islands around a flooded caldera (a giant collapsed crater)",
+     "correct": true
+    },
+    {
+     "text": "A tall cone-shaped mountain",
+     "correct": false,
+     "feedback": "The middle of the volcano collapsed into the sea."
+    },
+    {
+     "text": "A flat sandy island",
+     "correct": false,
+     "feedback": "Its famous cliffs are the caldera walls."
+    },
+    {
+     "text": "It disappeared completely",
+     "correct": false,
+     "feedback": "Much of it survives as a crescent of islands."
+    }
+   ],
+   "explain": "The Minoan eruption buried the Bronze Age town of Akrotiri. Some people link it to the legend of Atlantis."
+  },
+  {
+   "id": "geography.hz.primary",
+   "topic": "geography.hazards",
+   "kind": "mcq",
+   "prompt": "Which of these is a SECONDARY effect of an earthquake?",
+   "options": [
+    {
+     "text": "Disease spreading because clean water supplies were damaged",
+     "correct": true
+    },
+    {
+     "text": "Buildings collapsing",
+     "correct": false,
+     "feedback": "That happens straight away: a primary effect."
+    },
+    {
+     "text": "The ground shaking",
+     "correct": false,
+     "feedback": "That is the earthquake itself."
+    },
+    {
+     "text": "Roads cracking",
+     "correct": false,
+     "feedback": "Direct damage is primary."
+    }
+   ],
+   "explain": "Primary effects happen at once; secondary effects follow later as a result: fires, disease, homelessness, lost jobs."
+  },
+  {
+   "id": "geography.hz.japan",
+   "topic": "geography.hazards",
+   "kind": "mcq",
+   "prompt": "In 2011, a magnitude 9.0 earthquake struck off Japan. What caused most of the deaths?",
+   "options": [
+    {
+     "text": "The tsunami that followed it",
+     "correct": true
+    },
+    {
+     "text": "Buildings falling in Tokyo",
+     "correct": false,
+     "feedback": "Japan’s strict building rules meant most buildings survived the shaking."
+    },
+    {
+     "text": "Volcanic eruptions",
+     "correct": false,
+     "feedback": "No eruption was involved."
+    },
+    {
+     "text": "A heatwave",
+     "correct": false,
+     "feedback": "It was March."
+    }
+   ],
+   "explain": "The tsunami swept up to 10 km inland and damaged the Fukushima nuclear power station."
+  },
+  {
+   "id": "geography.hz.live",
+   "topic": "geography.hazards",
+   "kind": "mcq",
+   "prompt": "Why do millions of people live near active volcanoes such as Vesuvius?",
+   "options": [
+    {
+     "text": "Fertile volcanic soils, tourism, geothermal energy, and family ties to the land",
+     "correct": true
+    },
+    {
+     "text": "They do not know the volcano is there",
+     "correct": false,
+     "feedback": "Most know very well."
+    },
+    {
+     "text": "Volcanoes never erupt twice",
+     "correct": false,
+     "feedback": "Vesuvius erupted in AD 79 and many times since, most recently in 1944."
+    },
+    {
+     "text": "It is required by law",
+     "correct": false,
+     "feedback": "It is a choice, often for good reasons."
+    }
+   ],
+   "explain": "Benefits and risks are weighed every day by people living with hazards."
+  },
+  {
+   "id": "geography.wx.low",
+   "topic": "geography.weather",
+   "kind": "mcq",
+   "prompt": "What kind of weather does a low-pressure system (a depression) usually bring to the UK?",
+   "options": [
+    {
+     "text": "Cloud, wind and rain, as air rises and cools",
+     "correct": true
+    },
+    {
+     "text": "Clear skies and calm air",
+     "correct": false,
+     "feedback": "That is high pressure."
+    },
+    {
+     "text": "Snow every time",
+     "correct": false,
+     "feedback": "Only if it is cold enough."
+    },
+    {
+     "text": "Fog only",
+     "correct": false,
+     "feedback": "Fog is more common with high pressure in winter."
+    }
+   ],
+   "explain": "Rising air cools, water vapour condenses into clouds, and rain follows."
+  },
+  {
+   "id": "geography.wx.high",
+   "topic": "geography.weather",
+   "kind": "mcq",
+   "prompt": "Why does high pressure often bring clear skies?",
+   "options": [
+    {
+     "text": "Air is sinking and warming, so clouds do not form",
+     "correct": true
+    },
+    {
+     "text": "High pressure pushes clouds away like a broom",
+     "correct": false,
+     "feedback": "It is about sinking air, not pushing."
+    },
+    {
+     "text": "The Sun is closer",
+     "correct": false,
+     "feedback": "The Sun’s distance has nothing to do with it."
+    }
+   ],
+   "explain": "Anticyclones bring sunny summer days and cold, frosty or foggy winter nights."
+  },
+  {
+   "id": "geography.wx.relief",
+   "topic": "geography.weather",
+   "kind": "mcq",
+   "prompt": "Why is the west of Britain (e.g. the Lake District) much wetter than the east?",
+   "options": [
+    {
+     "text": "Relief rainfall: moist south-westerly winds rise over the hills, cool and drop their rain",
+     "correct": true
+    },
+    {
+     "text": "The west is nearer the Equator",
+     "correct": false,
+     "feedback": "They are at similar latitudes."
+    },
+    {
+     "text": "The east has no clouds",
+     "correct": false,
+     "feedback": "The east is in a rain shadow, but it still has clouds."
+    },
+    {
+     "text": "Rivers flow west",
+     "correct": false,
+     "feedback": "Rivers do not cause rain."
+    }
+   ],
+   "explain": "The prevailing wind comes from the south-west, across the warm Atlantic."
+  },
+  {
+   "id": "geography.wx.convection",
+   "topic": "geography.weather",
+   "kind": "fact",
+   "prompt": "Heavy afternoon thunderstorms in the tropics, caused by strong sunshine heating the ground, are an example of which type of rainfall?",
+   "answer": "convectional",
+   "distractors": [
+    "relief",
+    "frontal",
+    "acid"
+   ],
+   "explain": "Hot ground heats the air, which rises fast, cools and forms towering clouds.",
+   "accept": [
+    "convectional rainfall",
+    "convection"
+   ]
+  },
+  {
+   "id": "geography.wx.frontal",
+   "topic": "geography.weather",
+   "kind": "fact",
+   "prompt": "Rain caused when warm air rises over a wedge of colder air is called…",
+   "answer": "frontal rainfall",
+   "distractors": [
+    "relief rainfall",
+    "convectional rainfall",
+    "acid rain"
+   ],
+   "explain": "This happens at the fronts of a depression, which is why UK forecasts show warm and cold fronts.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.wx.drift",
+   "topic": "geography.weather",
+   "kind": "mcq",
+   "prompt": "Why are UK winters much milder than those of places at the same latitude in Canada?",
+   "options": [
+    {
+     "text": "The North Atlantic Drift (part of the Gulf Stream) brings warm water across the ocean",
+     "correct": true
+    },
+    {
+     "text": "The UK is closer to the Sun",
+     "correct": false,
+     "feedback": "Same latitude, same sunlight."
+    },
+    {
+     "text": "The UK is lower down",
+     "correct": false,
+     "feedback": "Height is not the reason."
+    },
+    {
+     "text": "Canada has more snow ploughs",
+     "correct": false,
+     "feedback": "That deals with cold; it does not cause it."
+    }
+   ],
+   "explain": "This is one reason the UK has a mild, wet maritime climate."
+  },
+  {
+   "id": "geography.wx.med",
+   "topic": "geography.weather",
+   "kind": "mcq",
+   "prompt": "What is a Mediterranean climate like?",
+   "options": [
+    {
+     "text": "Hot, dry summers and mild, wet winters",
+     "correct": true
+    },
+    {
+     "text": "Cold all year",
+     "correct": false,
+     "feedback": "That is polar."
+    },
+    {
+     "text": "Hot and wet all year",
+     "correct": false,
+     "feedback": "That is equatorial."
+    },
+    {
+     "text": "Rain only in summer",
+     "correct": false,
+     "feedback": "It is the other way round: summers are dry."
+    }
+   ],
+   "explain": "Greece, southern Italy and southern Spain have it, which is why olives and vines grow so well there."
+  },
+  {
+   "id": "geography.wx.graph",
+   "topic": "geography.weather",
+   "kind": "mcq",
+   "prompt": "On a climate graph, how are temperature and rainfall usually shown?",
+   "options": [
+    {
+     "text": "Temperature as a line, rainfall as bars, for each month",
+     "correct": true
+    },
+    {
+     "text": "Both as pie charts",
+     "correct": false,
+     "feedback": "Pie charts show proportions, not monthly change."
+    },
+    {
+     "text": "Temperature as bars, rainfall as a map",
+     "correct": false,
+     "feedback": "Bars are for rainfall."
+    },
+    {
+     "text": "Only rainfall is shown",
+     "correct": false,
+     "feedback": "Both are shown, on two axes."
+    }
+   ],
+   "explain": "One axis is temperature (°C), the other rainfall (mm)."
+  },
+  {
+   "id": "geography.cc.green",
+   "topic": "geography.climate",
+   "kind": "mcq",
+   "prompt": "What is the enhanced greenhouse effect?",
+   "options": [
+    {
+     "text": "Extra greenhouse gases from human activity trap more heat, warming the planet",
+     "correct": true
+    },
+    {
+     "text": "A hole in the ozone layer lets in more heat",
+     "correct": false,
+     "feedback": "The ozone hole is a separate problem (about ultraviolet light)."
+    },
+    {
+     "text": "Greenhouses heating the air",
+     "correct": false,
+     "feedback": "Real greenhouses are only an analogy."
+    },
+    {
+     "text": "The Sun getting brighter",
+     "correct": false,
+     "feedback": "The Sun’s output has not risen enough to explain recent warming."
+    }
+   ],
+   "explain": "The natural greenhouse effect keeps Earth habitable; burning fossil fuels has strengthened it."
+  },
+  {
+   "id": "geography.cc.co2",
+   "topic": "geography.climate",
+   "kind": "fact",
+   "prompt": "About how much carbon dioxide was in the air before the Industrial Revolution, in parts per million?",
+   "answer": "about 280",
+   "distractors": [
+    "about 28",
+    "about 2,800",
+    "about 28,000"
+   ],
+   "explain": "Today it is over 420 parts per million: higher than at any time in at least 800,000 years, as ice cores show.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.cc.evidence",
+   "topic": "geography.climate",
+   "kind": "mcq",
+   "prompt": "Which of these is EVIDENCE that the climate is changing?",
+   "options": [
+    {
+     "text": "Ice cores, retreating glaciers, rising sea levels and temperature records",
+     "correct": true
+    },
+    {
+     "text": "One very cold winter",
+     "correct": false,
+     "feedback": "A single season is weather, not climate."
+    },
+    {
+     "text": "Weather forecasts being wrong",
+     "correct": false,
+     "feedback": "Forecast accuracy is not evidence of climate change."
+    },
+    {
+     "text": "More people using umbrellas",
+     "correct": false,
+     "feedback": "Not a scientific measure!"
+    }
+   ],
+   "explain": "Climate is measured over decades; many independent kinds of evidence agree."
+  },
+  {
+   "id": "geography.cc.natural",
+   "topic": "geography.climate",
+   "kind": "mcq",
+   "prompt": "Which is a NATURAL cause of climate change?",
+   "options": [
+    {
+     "text": "Changes in the Earth’s orbit (Milankovitch cycles)",
+     "correct": true
+    },
+    {
+     "text": "Burning coal",
+     "correct": false,
+     "feedback": "Human cause."
+    },
+    {
+     "text": "Cattle farming",
+     "correct": false,
+     "feedback": "Human cause (methane)."
+    },
+    {
+     "text": "Cutting down rainforest",
+     "correct": false,
+     "feedback": "Human cause."
+    }
+   ],
+   "explain": "Orbital cycles, volcanic eruptions and changes in the Sun’s output have changed climate in the past."
+  },
+  {
+   "id": "geography.cc.methane",
+   "topic": "geography.climate",
+   "kind": "mcq",
+   "prompt": "Which greenhouse gas comes especially from cattle, rice paddies and landfill sites?",
+   "options": [
+    {
+     "text": "Methane",
+     "correct": true
+    },
+    {
+     "text": "Oxygen",
+     "correct": false,
+     "feedback": "Oxygen is not a greenhouse gas."
+    },
+    {
+     "text": "Nitrogen",
+     "correct": false,
+     "feedback": "Nitrogen is not a greenhouse gas."
+    },
+    {
+     "text": "Helium",
+     "correct": false,
+     "feedback": "Helium is not a greenhouse gas."
+    }
+   ],
+   "explain": "Methane traps far more heat per molecule than carbon dioxide, though it lasts less time in the air."
+  },
+  {
+   "id": "geography.cc.paris",
+   "topic": "geography.climate",
+   "kind": "mcq",
+   "prompt": "What did countries agree in the 2015 Paris Agreement?",
+   "options": [
+    {
+     "text": "To keep warming well below 2 °C and try to limit it to 1.5 °C",
+     "correct": true
+    },
+    {
+     "text": "To ban all cars by 2020",
+     "correct": false,
+     "feedback": "No such ban was agreed."
+    },
+    {
+     "text": "To stop all warming immediately",
+     "correct": false,
+     "feedback": "Some warming is already locked in."
+    },
+    {
+     "text": "To move to Mars",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "Each country sets its own targets and updates them every five years."
+  },
+  {
+   "id": "geography.cc.mitigate",
+   "topic": "geography.climate",
+   "kind": "mcq",
+   "prompt": "What is the difference between mitigation and adaptation?",
+   "options": [
+    {
+     "text": "Mitigation reduces the causes (e.g. less carbon); adaptation copes with the effects (e.g. flood defences)",
+     "correct": true
+    },
+    {
+     "text": "They mean the same",
+     "correct": false,
+     "feedback": "They are two different responses."
+    },
+    {
+     "text": "Mitigation is building sea walls",
+     "correct": false,
+     "feedback": "Sea walls are adaptation."
+    },
+    {
+     "text": "Adaptation is planting trees to absorb CO₂",
+     "correct": false,
+     "feedback": "That reduces the cause: mitigation."
+    }
+   ],
+   "explain": "Good policy needs both."
+  },
+  {
+   "id": "geography.cc.effects",
+   "topic": "geography.climate",
+   "kind": "mcq",
+   "prompt": "Which is a likely effect of climate change on the UK?",
+   "options": [
+    {
+     "text": "Hotter, drier summers, wetter winters and more coastal flooding",
+     "correct": true
+    },
+    {
+     "text": "A new ice age next year",
+     "correct": false,
+     "feedback": "Not supported by evidence."
+    },
+    {
+     "text": "No change at all",
+     "correct": false,
+     "feedback": "Changes are already measured."
+    },
+    {
+     "text": "The end of all rain",
+     "correct": false,
+     "feedback": "Winters are expected to get wetter."
+    }
+   ],
+   "explain": "The UK’s record of 40.3 °C was set at Coningsby, Lincolnshire, in July 2022."
+  },
+  {
+   "id": "geography.rv.course",
+   "topic": "geography.rivers",
+   "kind": "order",
+   "prompt": "Put these river features in order from source to mouth.",
+   "items": [
+    "V-shaped valley and waterfall",
+    "meanders",
+    "floodplain and levees",
+    "estuary"
+   ],
+   "labels": [
+    "upper course",
+    "middle course",
+    "lower course",
+    "mouth"
+   ],
+   "explain": "Erosion dominates high up; deposition dominates near the sea."
+  },
+  {
+   "id": "geography.rv.hydraulic",
+   "topic": "geography.rivers",
+   "kind": "mcq",
+   "prompt": "What is hydraulic action?",
+   "options": [
+    {
+     "text": "The force of water hitting the bed and banks, forcing air into cracks",
+     "correct": true
+    },
+    {
+     "text": "Rocks carried by the river scraping the bed",
+     "correct": false,
+     "feedback": "That is abrasion."
+    },
+    {
+     "text": "Rocks knocking into each other and breaking",
+     "correct": false,
+     "feedback": "That is attrition."
+    },
+    {
+     "text": "Rock dissolving in the water",
+     "correct": false,
+     "feedback": "That is solution."
+    }
+   ],
+   "explain": "The four erosion processes: hydraulic action, abrasion, attrition and solution."
+  },
+  {
+   "id": "geography.rv.saltation",
+   "topic": "geography.rivers",
+   "kind": "mcq",
+   "prompt": "Small pebbles bouncing along a river bed are being transported by…",
+   "options": [
+    {
+     "text": "saltation",
+     "correct": true
+    },
+    {
+     "text": "traction",
+     "correct": false,
+     "feedback": "Traction is large boulders rolled along the bed."
+    },
+    {
+     "text": "suspension",
+     "correct": false,
+     "feedback": "Suspension is fine particles carried in the water."
+    },
+    {
+     "text": "solution",
+     "correct": false,
+     "feedback": "Solution is dissolved minerals."
+    }
+   ],
+   "explain": "Traction, saltation, suspension and solution: from the heaviest load to the lightest."
+  },
+  {
+   "id": "geography.rv.oxbow",
+   "topic": "geography.rivers",
+   "kind": "order",
+   "prompt": "Put the formation of an oxbow lake in order.",
+   "items": [
+    "Erosion on the outside of bends makes the meander loop tighter",
+    "The neck of the meander narrows",
+    "In a flood the river cuts through the neck",
+    "Deposition seals off the old loop as an oxbow lake"
+   ],
+   "labels": null,
+   "explain": "Erosion on the outer bank and deposition on the inner bank make meanders migrate until the neck is breached."
+  },
+  {
+   "id": "geography.rv.waterfall",
+   "topic": "geography.rivers",
+   "kind": "mcq",
+   "prompt": "Why do waterfalls such as High Force on the River Tees form?",
+   "options": [
+    {
+     "text": "Hard rock lies on top of softer rock, which erodes faster and undercuts it",
+     "correct": true
+    },
+    {
+     "text": "The river is pushed up by a volcano",
+     "correct": false,
+     "feedback": "No volcano involved."
+    },
+    {
+     "text": "People dug them for power",
+     "correct": false,
+     "feedback": "They are natural."
+    },
+    {
+     "text": "The sea level dropped suddenly",
+     "correct": false,
+     "feedback": "It is about differences in rock hardness."
+    }
+   ],
+   "explain": "The hard rock overhang collapses and the waterfall retreats upstream, leaving a gorge."
+  },
+  {
+   "id": "geography.rv.levee",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "Raised banks of sediment along a river in its lower course, built up by repeated floods, are called…",
+   "answer": "levees",
+   "distractors": [
+    "groynes",
+    "spits",
+    "meanders"
+   ],
+   "explain": "When the river floods, it drops its heaviest sediment first, right beside the channel.",
+   "accept": [
+    "levee"
+   ]
+  },
+  {
+   "id": "geography.rv.hard",
+   "topic": "geography.rivers",
+   "kind": "mcq",
+   "prompt": "Which of these is SOFT engineering for flood management?",
+   "options": [
+    {
+     "text": "Planting trees and letting some fields flood",
+     "correct": true
+    },
+    {
+     "text": "Building a concrete flood wall",
+     "correct": false,
+     "feedback": "Hard engineering."
+    },
+    {
+     "text": "Straightening the river channel",
+     "correct": false,
+     "feedback": "Hard engineering."
+    },
+    {
+     "text": "Building a dam",
+     "correct": false,
+     "feedback": "Hard engineering."
+    }
+   ],
+   "explain": "Soft engineering works with natural processes; it is usually cheaper and better for wildlife, but protects less in extreme floods."
+  },
+  {
+   "id": "geography.rv.barrier",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "Which barrier, completed in 1982, protects London from tidal surges up the Thames?",
+   "answer": "the Thames Barrier",
+   "distractors": [
+    "the Severn Barrage",
+    "the Humber Bridge",
+    "the Hoover Dam"
+   ],
+   "explain": "It is closed when a high tide and a storm surge from the North Sea arrive together.",
+   "accept": [
+    "thames barrier"
+   ]
+  },
+  {
+   "id": "geography.rv.nile",
+   "topic": "geography.rivers",
+   "kind": "mcq",
+   "prompt": "Which statement about the world’s great rivers is correct?",
+   "options": [
+    {
+     "text": "The Nile is usually listed as the longest; the Amazon carries by far the most water",
+     "correct": true
+    },
+    {
+     "text": "The Thames is the longest in the world",
+     "correct": false,
+     "feedback": "The Thames is about 346 km; the Nile is over 6,600 km."
+    },
+    {
+     "text": "The Amazon is in Africa",
+     "correct": false,
+     "feedback": "It is in South America."
+    },
+    {
+     "text": "The Nile flows south into the Indian Ocean",
+     "correct": false,
+     "feedback": "It flows north into the Mediterranean."
+    }
+   ],
+   "explain": "Some measurements make the Amazon longer: geographers still argue."
+  },
+  {
+   "id": "geography.cs.waves",
+   "topic": "geography.coasts",
+   "kind": "mcq",
+   "prompt": "What are destructive waves like?",
+   "options": [
+    {
+     "text": "Tall and frequent, with a strong backwash that drags material away",
+     "correct": true
+    },
+    {
+     "text": "Low and gentle, with a strong swash that builds beaches",
+     "correct": false,
+     "feedback": "That describes constructive waves."
+    },
+    {
+     "text": "Only found in harbours",
+     "correct": false,
+     "feedback": "They are common in storms everywhere."
+    }
+   ],
+   "explain": "Destructive waves erode; constructive waves deposit."
+  },
+  {
+   "id": "geography.cs.stack",
+   "topic": "geography.coasts",
+   "kind": "order",
+   "prompt": "Put the erosion of a headland in order.",
+   "items": [
+    "crack",
+    "cave",
+    "arch",
+    "stack",
+    "stump"
+   ],
+   "labels": null,
+   "explain": "Hydraulic action and abrasion widen a crack into a cave; the cave breaks through as an arch; the arch collapses leaving a stack, which wears down to a stump. Old Harry Rocks in Dorset are famous chalk stacks."
+  },
+  {
+   "id": "geography.cs.drift",
+   "topic": "geography.coasts",
+   "kind": "mcq",
+   "prompt": "What is longshore drift?",
+   "options": [
+    {
+     "text": "Waves moving sand and shingle along the coast in a zigzag",
+     "correct": true
+    },
+    {
+     "text": "The tide coming in and out",
+     "correct": false,
+     "feedback": "Tides are caused mainly by the Moon."
+    },
+    {
+     "text": "Cliffs falling into the sea",
+     "correct": false,
+     "feedback": "That is mass movement."
+    },
+    {
+     "text": "Ships drifting off course",
+     "correct": false,
+     "feedback": "Not this time."
+    }
+   ],
+   "explain": "Swash moves material up the beach at an angle with the prevailing wind; backwash pulls it straight back down."
+  },
+  {
+   "id": "geography.cs.spit",
+   "topic": "geography.coasts",
+   "kind": "fact",
+   "prompt": "A long ridge of sand or shingle built out into the sea by longshore drift, such as Spurn Head, is called a…",
+   "answer": "spit",
+   "distractors": [
+    "stack",
+    "groyne",
+    "stump"
+   ],
+   "explain": "Spits form where the coastline changes direction, for example at a river mouth.",
+   "accept": [
+    "a spit"
+   ]
+  },
+  {
+   "id": "geography.cs.holderness",
+   "topic": "geography.coasts",
+   "kind": "mcq",
+   "prompt": "The Holderness coast in Yorkshire is eroding by about 2 metres a year. Why so fast?",
+   "options": [
+    {
+     "text": "Its cliffs are made of soft boulder clay, battered by powerful North Sea waves",
+     "correct": true
+    },
+    {
+     "text": "It is made of granite",
+     "correct": false,
+     "feedback": "Granite is very resistant."
+    },
+    {
+     "text": "People dig it away",
+     "correct": false,
+     "feedback": "It is natural erosion."
+    },
+    {
+     "text": "There are no waves there",
+     "correct": false,
+     "feedback": "The North Sea waves are strong."
+    }
+   ],
+   "explain": "It is one of the fastest-eroding coastlines in Europe; villages recorded in the Domesday Book are now under the sea."
+  },
+  {
+   "id": "geography.cs.groyne",
+   "topic": "geography.coasts",
+   "kind": "mcq",
+   "prompt": "What do groynes do?",
+   "options": [
+    {
+     "text": "Trap sand moving by longshore drift, keeping the beach wide",
+     "correct": true
+    },
+    {
+     "text": "Stop the tide coming in",
+     "correct": false,
+     "feedback": "Nothing stops the tide."
+    },
+    {
+     "text": "Make waves bigger",
+     "correct": false,
+     "feedback": "They reduce erosion."
+    },
+    {
+     "text": "Hold up the pier",
+     "correct": false,
+     "feedback": "They are fences down the beach."
+    }
+   ],
+   "explain": "But they can starve beaches further along the coast of sand, increasing erosion there."
+  },
+  {
+   "id": "geography.cs.retreat",
+   "topic": "geography.coasts",
+   "kind": "mcq",
+   "prompt": "What is managed retreat?",
+   "options": [
+    {
+     "text": "Letting the sea flood some low-lying land in a controlled way, creating salt marsh",
+     "correct": true
+    },
+    {
+     "text": "Building a new sea wall further out",
+     "correct": false,
+     "feedback": "That is advancing the line."
+    },
+    {
+     "text": "Evacuating a city",
+     "correct": false,
+     "feedback": "It is planned, gradual change to the coastline."
+    },
+    {
+     "text": "Removing the beach",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "Salt marshes absorb wave energy and are excellent habitats, so managed retreat can be cheaper and greener."
+  },
+  {
+   "id": "geography.cs.choice",
+   "topic": "geography.coasts",
+   "kind": "mcq",
+   "prompt": "Why might a council decide NOT to protect an eroding stretch of coast?",
+   "options": [
+    {
+     "text": "The cost of defences is greater than the value of the land and buildings protected",
+     "correct": true
+    },
+    {
+     "text": "Erosion is impossible to measure",
+     "correct": false,
+     "feedback": "It can be measured precisely."
+    },
+    {
+     "text": "The law forbids sea walls",
+     "correct": false,
+     "feedback": "Sea walls are allowed."
+    },
+    {
+     "text": "Erosion always stops by itself",
+     "correct": false,
+     "feedback": "It does not."
+    }
+   ],
+   "explain": "Cost–benefit analysis is central to shoreline management plans, though it is hard on the people affected."
+  },
+  {
+   "id": "geography.ic.corrie",
+   "topic": "geography.ice",
+   "kind": "mcq",
+   "prompt": "How does a corrie (also called a cirque or cwm) form?",
+   "options": [
+    {
+     "text": "Snow collects in a hollow on a mountainside, turns to ice, and plucking and abrasion deepen it into an armchair shape",
+     "correct": true
+    },
+    {
+     "text": "A meteorite hits a mountain",
+     "correct": false,
+     "feedback": "Glaciers, not meteorites."
+    },
+    {
+     "text": "A river carves it",
+     "correct": false,
+     "feedback": "Rivers make V-shaped valleys."
+    },
+    {
+     "text": "Wind blows it out",
+     "correct": false,
+     "feedback": "Ice is the cause."
+    }
+   ],
+   "explain": "When the ice melts, many corries hold a small lake called a tarn."
+  },
+  {
+   "id": "geography.ic.arete",
+   "topic": "geography.ice",
+   "kind": "fact",
+   "prompt": "A sharp knife-edge ridge between two corries, such as Striding Edge on Helvellyn, is called an…",
+   "answer": "arête",
+   "distractors": [
+    "esker",
+    "erratic",
+    "estuary"
+   ],
+   "explain": "Where three or more corries meet, a pyramidal peak can form.",
+   "accept": [
+    "arete"
+   ]
+  },
+  {
+   "id": "geography.ic.ushape",
+   "topic": "geography.ice",
+   "kind": "mcq",
+   "prompt": "How can you tell a valley was carved by a glacier?",
+   "options": [
+    {
+     "text": "It is U-shaped, with a flat floor and steep sides",
+     "correct": true
+    },
+    {
+     "text": "It is V-shaped with interlocking spurs",
+     "correct": false,
+     "feedback": "That is a river valley."
+    },
+    {
+     "text": "It has a river delta",
+     "correct": false,
+     "feedback": "Deltas form at river mouths."
+    },
+    {
+     "text": "It is full of sand dunes",
+     "correct": false,
+     "feedback": "Dunes are coastal or desert landforms."
+    }
+   ],
+   "explain": "Glaciers fill the whole valley and grind it into a U shape, cutting off spurs."
+  },
+  {
+   "id": "geography.ic.ribbon",
+   "topic": "geography.ice",
+   "kind": "fact",
+   "prompt": "Long, thin lakes in glacial valleys, such as Windermere, are called…",
+   "answer": "ribbon lakes",
+   "distractors": [
+    "oxbow lakes",
+    "tarns",
+    "lagoons"
+   ],
+   "explain": "Ice eroded the softer rock of the valley floor more deeply, leaving a long basin.",
+   "accept": [
+    "ribbon lake"
+   ]
+  },
+  {
+   "id": "geography.ic.erratic",
+   "topic": "geography.ice",
+   "kind": "fact",
+   "prompt": "A boulder carried by ice and dropped far from where it came from is called an…",
+   "answer": "erratic",
+   "distractors": [
+    "arête",
+    "esker",
+    "oxbow"
+   ],
+   "explain": "Erratics help geologists track how ice moved.",
+   "accept": [
+    "glacial erratic",
+    "an erratic"
+   ]
+  },
+  {
+   "id": "geography.ic.when",
+   "topic": "geography.ice",
+   "kind": "fact",
+   "prompt": "About how long ago was the last glacial maximum, when ice sheets were largest in Britain?",
+   "answer": "about 20,000 years ago",
+   "distractors": [
+    "about 2,000 years ago",
+    "about 2 million years ago",
+    "about 200 years ago"
+   ],
+   "explain": "The ice had melted from Britain by about 11,700 years ago.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.bm.layers",
+   "topic": "geography.biomes",
+   "kind": "order",
+   "prompt": "Put the layers of a tropical rainforest in order, from the top down.",
+   "items": [
+    "emergent layer",
+    "canopy",
+    "understorey",
+    "forest floor"
+   ],
+   "labels": null,
+   "explain": "Emergents tower above the canopy, which captures most of the light."
+  },
+  {
+   "id": "geography.bm.soil",
+   "topic": "geography.biomes",
+   "kind": "mcq",
+   "prompt": "Why are tropical rainforest soils surprisingly poor in nutrients?",
+   "options": [
+    {
+     "text": "Nutrients are recycled so fast that most are held in the plants, and heavy rain washes the rest away",
+     "correct": true
+    },
+    {
+     "text": "There are no dead leaves",
+     "correct": false,
+     "feedback": "There are plenty, but they decompose very quickly."
+    },
+    {
+     "text": "It is too cold for decomposition",
+     "correct": false,
+     "feedback": "It is hot, so decomposition is fast."
+    },
+    {
+     "text": "Rainforests have no soil",
+     "correct": false,
+     "feedback": "They have soil, just thin and poor."
+    }
+   ],
+   "explain": "This is why cleared rainforest land often becomes infertile within a few years."
+  },
+  {
+   "id": "geography.bm.amazon",
+   "topic": "geography.biomes",
+   "kind": "mcq",
+   "prompt": "What is the biggest single cause of deforestation in the Amazon?",
+   "options": [
+    {
+     "text": "Clearing land for cattle ranching",
+     "correct": true
+    },
+    {
+     "text": "Building theme parks",
+     "correct": false,
+     "feedback": "Not a significant cause."
+    },
+    {
+     "text": "Volcanic eruptions",
+     "correct": false,
+     "feedback": "There are no active volcanoes in the Amazon basin."
+    },
+    {
+     "text": "Forest fires started by lightning",
+     "correct": false,
+     "feedback": "Most fires there are set by people to clear land."
+    }
+   ],
+   "explain": "Soya farming, logging, mining and roads matter too."
+  },
+  {
+   "id": "geography.bm.desert",
+   "topic": "geography.biomes",
+   "kind": "fact",
+   "prompt": "A hot desert receives less than about how much rain a year?",
+   "answer": "250 mm",
+   "distractors": [
+    "2,500 mm",
+    "25 cm of snow",
+    "1,000 mm"
+   ],
+   "explain": "The Sahara is the largest hot desert; some parts get almost no rain for years.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.bm.cactus",
+   "topic": "geography.biomes",
+   "kind": "mcq",
+   "prompt": "Which is an adaptation of a cactus to the desert?",
+   "options": [
+    {
+     "text": "Spines instead of leaves, reducing water loss",
+     "correct": true
+    },
+    {
+     "text": "Huge flat leaves to catch sunlight",
+     "correct": false,
+     "feedback": "Big leaves lose too much water."
+    },
+    {
+     "text": "Deep roots used only in winter",
+     "correct": false,
+     "feedback": "Many cactus roots spread widely and shallowly to catch brief rain."
+    },
+    {
+     "text": "Bright flowers all year",
+     "correct": false,
+     "feedback": "Flowering is brief."
+    }
+   ],
+   "explain": "Spines also shade the plant and protect its stored water from animals."
+  },
+  {
+   "id": "geography.bm.permafrost",
+   "topic": "geography.biomes",
+   "kind": "fact",
+   "prompt": "Ground in the tundra that stays frozen all year round is called…",
+   "answer": "permafrost",
+   "distractors": [
+    "tarmac",
+    "ice cap",
+    "glacier"
+   ],
+   "explain": "As it thaws with climate change, it releases methane.",
+   "accept": [
+    "permafrost"
+   ]
+  },
+  {
+   "id": "geography.bm.foodweb",
+   "topic": "geography.biomes",
+   "kind": "mcq",
+   "prompt": "In an ecosystem, what is a producer?",
+   "options": [
+    {
+     "text": "A plant (or alga) that makes its own food by photosynthesis",
+     "correct": true
+    },
+    {
+     "text": "An animal that eats plants",
+     "correct": false,
+     "feedback": "That is a primary consumer."
+    },
+    {
+     "text": "A decomposer such as fungi",
+     "correct": false,
+     "feedback": "Decomposers break down dead matter."
+    },
+    {
+     "text": "The top predator",
+     "correct": false,
+     "feedback": "Top predators are consumers."
+    }
+   ],
+   "explain": "All food chains start with producers capturing the Sun’s energy."
+  },
+  {
+   "id": "geography.pp.eight",
+   "topic": "geography.population",
+   "kind": "fact",
+   "prompt": "Roughly how many people live on Earth today?",
+   "answer": "about 8 billion",
+   "distractors": [
+    "about 8 million",
+    "about 800 million",
+    "about 80 billion"
+   ],
+   "explain": "The world passed 8 billion in 2022, according to the UN.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.pp.dtm",
+   "topic": "geography.population",
+   "kind": "order",
+   "prompt": "Put the stages of the demographic transition model in order.",
+   "items": [
+    "high birth rate, high death rate, slow growth",
+    "death rate falls, rapid growth",
+    "birth rate falls, growth slows",
+    "low birth and death rates, stable",
+    "death rate higher than birth rate, decline"
+   ],
+   "labels": [
+    "stage 1",
+    "stage 2",
+    "stage 3",
+    "stage 4",
+    "stage 5"
+   ],
+   "explain": "Medicine and clean water cut deaths first; birth rates fall later, as education, contraception and urban living spread."
+  },
+  {
+   "id": "geography.pp.japan",
+   "topic": "geography.population",
+   "kind": "mcq",
+   "prompt": "Japan has an ageing, shrinking population. Which stage of the demographic transition model is it in?",
+   "options": [
+    {
+     "text": "Stage 5",
+     "correct": true
+    },
+    {
+     "text": "Stage 1",
+     "correct": false,
+     "feedback": "Stage 1 has very high birth and death rates."
+    },
+    {
+     "text": "Stage 2",
+     "correct": false,
+     "feedback": "Stage 2 has rapid growth."
+    },
+    {
+     "text": "Stage 3",
+     "correct": false,
+     "feedback": "Japan’s population is now falling, not just slowing."
+    }
+   ],
+   "explain": "Fewer workers must support more pensioners: a big challenge for health care and the economy."
+  },
+  {
+   "id": "geography.pp.india",
+   "topic": "geography.population",
+   "kind": "mcq",
+   "prompt": "Which country became the most populous in the world in 2023, according to UN estimates?",
+   "options": [
+    {
+     "text": "India",
+     "correct": true
+    },
+    {
+     "text": "China",
+     "correct": false,
+     "feedback": "China was first for decades, but its population is now falling."
+    },
+    {
+     "text": "the USA",
+     "correct": false,
+     "feedback": "The USA is third, with about 340 million."
+    },
+    {
+     "text": "Nigeria",
+     "correct": false,
+     "feedback": "Nigeria is growing fast but has about 230 million people."
+    }
+   ],
+   "explain": "Both India and China have more than 1.4 billion people."
+  },
+  {
+   "id": "geography.pp.push",
+   "topic": "geography.population",
+   "kind": "mcq",
+   "prompt": "Which of these is a PUSH factor for migration?",
+   "options": [
+    {
+     "text": "War or persecution at home",
+     "correct": true
+    },
+    {
+     "text": "Better-paid jobs abroad",
+     "correct": false,
+     "feedback": "That pulls people towards a place."
+    },
+    {
+     "text": "Good schools in another country",
+     "correct": false,
+     "feedback": "A pull factor."
+    },
+    {
+     "text": "Family already living abroad",
+     "correct": false,
+     "feedback": "Usually a pull factor."
+    }
+   ],
+   "explain": "Push factors drive people away; pull factors attract them."
+  },
+  {
+   "id": "geography.pp.refugee",
+   "topic": "geography.population",
+   "kind": "mcq",
+   "prompt": "What is the difference between a refugee and an economic migrant?",
+   "options": [
+    {
+     "text": "A refugee has fled war or persecution; an economic migrant moves mainly for work or a better income",
+     "correct": true
+    },
+    {
+     "text": "There is no difference",
+     "correct": false,
+     "feedback": "International law treats them differently."
+    },
+    {
+     "text": "Refugees always move to a richer country",
+     "correct": false,
+     "feedback": "Most refugees live in neighbouring, often poorer, countries."
+    },
+    {
+     "text": "Economic migrants are not allowed to move",
+     "correct": false,
+     "feedback": "Many move legally for work."
+    }
+   ],
+   "explain": "Under the 1951 Refugee Convention, refugees have a right to protection."
+  },
+  {
+   "id": "geography.pp.density",
+   "topic": "geography.population",
+   "kind": "fact",
+   "prompt": "The number of people per square kilometre is called the population…",
+   "answer": "density",
+   "distractors": [
+    "distribution",
+    "pyramid",
+    "structure"
+   ],
+   "explain": "Distribution is where people live; density is how crowded it is.",
+   "accept": [
+    "population density"
+   ]
+  },
+  {
+   "id": "geography.pp.pyramid",
+   "topic": "geography.population",
+   "kind": "mcq",
+   "prompt": "A population pyramid has a very wide base and narrow top. What does it suggest?",
+   "options": [
+    {
+     "text": "A high birth rate and a young population, as in many lower-income countries",
+     "correct": true
+    },
+    {
+     "text": "An ageing population",
+     "correct": false,
+     "feedback": "An ageing population has a narrow base and wide top."
+    },
+    {
+     "text": "A shrinking population",
+     "correct": false,
+     "feedback": "A wide base shows many births."
+    },
+    {
+     "text": "Nobody lives past 30",
+     "correct": false,
+     "feedback": "It shows fewer older people, not none."
+    }
+   ],
+   "explain": "Niger’s pyramid looks like this; Japan’s looks almost like an upside-down pyramid."
+  },
+  {
+   "id": "geography.ct.mega",
+   "topic": "geography.cities",
+   "kind": "fact",
+   "prompt": "A city with more than 10 million people is called a…",
+   "answer": "megacity",
+   "distractors": [
+    "village",
+    "capital",
+    "market town"
+   ],
+   "explain": "In 1950 there were two megacities; today there are more than thirty.",
+   "accept": [
+    "mega city",
+    "mega-city"
+   ]
+  },
+  {
+   "id": "geography.ct.half",
+   "topic": "geography.cities",
+   "kind": "fact",
+   "prompt": "In about which year did more of the world’s people start living in towns and cities than in the countryside?",
+   "answer": "2007",
+   "distractors": [
+    "1907",
+    "1950",
+    "2050"
+   ],
+   "explain": "The UN expects about two-thirds of people to live in urban areas by 2050."
+  },
+  {
+   "id": "geography.ct.lagos",
+   "topic": "geography.cities",
+   "kind": "mcq",
+   "prompt": "Lagos, in Nigeria, is one of Africa’s largest cities. What drives its rapid growth?",
+   "options": [
+    {
+     "text": "Rural–urban migration and a high birth rate",
+     "correct": true
+    },
+    {
+     "text": "People leaving to live in the countryside",
+     "correct": false,
+     "feedback": "That would shrink it."
+    },
+    {
+     "text": "It became the capital in 2010",
+     "correct": false,
+     "feedback": "Abuja has been the capital since 1991."
+    },
+    {
+     "text": "It has no jobs",
+     "correct": false,
+     "feedback": "It is Nigeria’s business and tech hub, which attracts people."
+    }
+   ],
+   "explain": "Its growth brings opportunity (jobs, tech start-ups, ports) and challenges (housing, traffic, water, waste)."
+  },
+  {
+   "id": "geography.ct.informal",
+   "topic": "geography.cities",
+   "kind": "mcq",
+   "prompt": "Dharavi in Mumbai and Makoko in Lagos are informal settlements. What does “informal” mean here?",
+   "options": [
+    {
+     "text": "Homes built without official permission, often lacking services, but full of businesses and community life",
+     "correct": true
+    },
+    {
+     "text": "A relaxed holiday resort",
+     "correct": false,
+     "feedback": "No."
+    },
+    {
+     "text": "Government-built tower blocks",
+     "correct": false,
+     "feedback": "Those are formal housing."
+    },
+    {
+     "text": "Empty land",
+     "correct": false,
+     "feedback": "Hundreds of thousands of people live in each."
+    }
+   ],
+   "explain": "Dharavi has a huge recycling industry and thousands of small businesses: seeing only poverty misses half the story."
+  },
+  {
+   "id": "geography.ct.london",
+   "topic": "geography.cities",
+   "kind": "mcq",
+   "prompt": "London grew enormously in the 1800s. Why?",
+   "options": [
+    {
+     "text": "Industrial jobs and trade drew people from the countryside and abroad",
+     "correct": true
+    },
+    {
+     "text": "The climate improved",
+     "correct": false,
+     "feedback": "Climate was not the reason."
+    },
+    {
+     "text": "The Romans built it then",
+     "correct": false,
+     "feedback": "The Romans founded it in about AD 47–50."
+    },
+    {
+     "text": "Farming became more popular",
+     "correct": false,
+     "feedback": "People left farming for city jobs."
+    }
+   ],
+   "explain": "London had about 1 million people in 1801 and over 6 million by 1901: the same story megacities tell today."
+  },
+  {
+   "id": "geography.ct.sustainable",
+   "topic": "geography.cities",
+   "kind": "mcq",
+   "prompt": "Which feature makes a city more sustainable?",
+   "options": [
+    {
+     "text": "Good public transport, green spaces and energy-efficient buildings",
+     "correct": true
+    },
+    {
+     "text": "More motorways into the centre",
+     "correct": false,
+     "feedback": "More traffic usually means more pollution."
+    },
+    {
+     "text": "Building on all its parks",
+     "correct": false,
+     "feedback": "Green spaces cool cities and reduce flooding."
+    },
+    {
+     "text": "Sending all waste to landfill",
+     "correct": false,
+     "feedback": "Recycling is more sustainable."
+    }
+   ],
+   "explain": "Freiburg in Germany and Curitiba in Brazil are famous examples."
+  },
+  {
+   "id": "geography.dv.hdi",
+   "topic": "geography.development",
+   "kind": "mcq",
+   "prompt": "What does the Human Development Index (HDI) combine?",
+   "options": [
+    {
+     "text": "Life expectancy, education and income per person",
+     "correct": true
+    },
+    {
+     "text": "Only GDP",
+     "correct": false,
+     "feedback": "HDI was designed to go beyond income alone."
+    },
+    {
+     "text": "Population and land area",
+     "correct": false,
+     "feedback": "Those are not development measures."
+    },
+    {
+     "text": "Number of cars and phones",
+     "correct": false,
+     "feedback": "Not part of the HDI."
+    }
+   ],
+   "explain": "It runs from 0 to 1; Norway, Switzerland and Iceland are usually near the top."
+  },
+  {
+   "id": "geography.dv.gni",
+   "topic": "geography.development",
+   "kind": "fact",
+   "prompt": "GNI per head means a country’s total income divided by…",
+   "answer": "its population",
+   "distractors": [
+    "its area",
+    "the number of cities",
+    "its exports"
+   ],
+   "explain": "It is usually given in US dollars so that countries can be compared.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.dv.brandt",
+   "topic": "geography.development",
+   "kind": "mcq",
+   "prompt": "What was the Brandt line (1980)?",
+   "options": [
+    {
+     "text": "A line dividing the richer “global North” from the poorer “global South”",
+     "correct": true
+    },
+    {
+     "text": "The Equator",
+     "correct": false,
+     "feedback": "It wiggled: Australia and New Zealand were in the North."
+    },
+    {
+     "text": "A railway in Germany",
+     "correct": false,
+     "feedback": "Willy Brandt led the report that drew it."
+    },
+    {
+     "text": "The Greenwich Meridian",
+     "correct": false,
+     "feedback": "That is the Prime Meridian."
+    }
+   ],
+   "explain": "Today countries such as China, Brazil and the Gulf states have grown so much that the line is far too simple."
+  },
+  {
+   "id": "geography.dv.infant",
+   "topic": "geography.development",
+   "kind": "mcq",
+   "prompt": "Why is the infant mortality rate a useful measure of development?",
+   "options": [
+    {
+     "text": "It reflects health care, clean water, food and education for mothers all at once",
+     "correct": true
+    },
+    {
+     "text": "It shows how many children go to school",
+     "correct": false,
+     "feedback": "That is the school enrolment rate."
+    },
+    {
+     "text": "It measures wealth directly",
+     "correct": false,
+     "feedback": "It is a social measure."
+    },
+    {
+     "text": "It counts babies born each year",
+     "correct": false,
+     "feedback": "That is the birth rate."
+    }
+   ],
+   "explain": "It is the number of babies per 1,000 born who die before their first birthday."
+  },
+  {
+   "id": "geography.dv.gap",
+   "topic": "geography.development",
+   "kind": "mcq",
+   "prompt": "Which is a PHYSICAL factor that can slow a country’s development?",
+   "options": [
+    {
+     "text": "Frequent natural hazards or being landlocked",
+     "correct": true
+    },
+    {
+     "text": "Corruption",
+     "correct": false,
+     "feedback": "That is a political factor."
+    },
+    {
+     "text": "Debt",
+     "correct": false,
+     "feedback": "An economic factor."
+    },
+    {
+     "text": "A history of colonialism",
+     "correct": false,
+     "feedback": "A historical factor."
+    }
+   ],
+   "explain": "Most uneven development has several causes: physical, economic, political and historical."
+  },
+  {
+   "id": "geography.dv.aid",
+   "topic": "geography.development",
+   "kind": "mcq",
+   "prompt": "Which type of aid is often thought to do most good in the long term?",
+   "options": [
+    {
+     "text": "Small-scale projects run with local people, such as wells or training (bottom-up)",
+     "correct": true
+    },
+    {
+     "text": "Only emergency food, forever",
+     "correct": false,
+     "feedback": "Emergency aid saves lives but does not build long-term change."
+    },
+    {
+     "text": "Loans that must be paid back with high interest",
+     "correct": false,
+     "feedback": "Debt can hold development back."
+    },
+    {
+     "text": "Gifts of weapons",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "Bottom-up projects use appropriate technology that local people can maintain."
+  },
+  {
+   "id": "geography.gb.what",
+   "topic": "geography.global",
+   "kind": "mcq",
+   "prompt": "What is globalisation?",
+   "options": [
+    {
+     "text": "The growing connection of the world’s countries through trade, communication, travel and culture",
+     "correct": true
+    },
+    {
+     "text": "Making maps of the globe",
+     "correct": false,
+     "feedback": "That is cartography."
+    },
+    {
+     "text": "Every country becoming the same size",
+     "correct": false,
+     "feedback": "No."
+    },
+    {
+     "text": "Climate change",
+     "correct": false,
+     "feedback": "Related, but not the definition."
+    }
+   ],
+   "explain": "Containers, cheap flights and the internet have sped it up enormously since the 1970s."
+  },
+  {
+   "id": "geography.gb.tnc",
+   "topic": "geography.global",
+   "kind": "fact",
+   "prompt": "A company that operates in many countries, such as Apple or Toyota, is called a…",
+   "answer": "transnational corporation",
+   "distractors": [
+    "charity",
+    "cooperative",
+    "local business"
+   ],
+   "explain": "TNCs often design products in one country and make them in others where costs are lower.",
+   "accept": [
+    "tnc",
+    "multinational",
+    "multinational company",
+    "transnational company"
+   ]
+  },
+  {
+   "id": "geography.gb.container",
+   "topic": "geography.global",
+   "kind": "mcq",
+   "prompt": "Why did the shipping container (from the 1950s) transform world trade?",
+   "options": [
+    {
+     "text": "Standard boxes can move between ships, trains and lorries without unpacking, making transport cheap",
+     "correct": true
+    },
+    {
+     "text": "They made ships faster than planes",
+     "correct": false,
+     "feedback": "Ships are still slower than planes."
+    },
+    {
+     "text": "They replaced money",
+     "correct": false,
+     "feedback": "No."
+    },
+    {
+     "text": "They are made of gold",
+     "correct": false,
+     "feedback": "Steel!"
+    }
+   ],
+   "explain": "About 90% of the world’s goods travel by sea; Shanghai is the busiest container port."
+  },
+  {
+   "id": "geography.gb.tnc-pros",
+   "topic": "geography.global",
+   "kind": "mcq",
+   "prompt": "Which is a DISADVANTAGE when a TNC builds a factory in a lower-income country?",
+   "options": [
+    {
+     "text": "Profits may flow back to the home country, and wages and safety can be poor",
+     "correct": true
+    },
+    {
+     "text": "It creates jobs",
+     "correct": false,
+     "feedback": "That is an advantage."
+    },
+    {
+     "text": "Local people learn new skills",
+     "correct": false,
+     "feedback": "An advantage."
+    },
+    {
+     "text": "Roads and power may be improved",
+     "correct": false,
+     "feedback": "Usually an advantage."
+    }
+   ],
+   "explain": "The 2013 Rana Plaza factory collapse in Bangladesh led to stronger safety campaigns."
+  },
+  {
+   "id": "geography.gb.fair",
+   "topic": "geography.global",
+   "kind": "mcq",
+   "prompt": "What is Fairtrade?",
+   "options": [
+    {
+     "text": "A scheme that guarantees farmers a minimum price and extra money for community projects",
+     "correct": true
+    },
+    {
+     "text": "Trade with no taxes at all",
+     "correct": false,
+     "feedback": "That is free trade."
+    },
+    {
+     "text": "Only buying from neighbours",
+     "correct": false,
+     "feedback": "No."
+    },
+    {
+     "text": "A type of market stall",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "It helps producers of coffee, cocoa and bananas, among others."
+  },
+  {
+   "id": "geography.gb.suez",
+   "topic": "geography.global",
+   "kind": "mcq",
+   "prompt": "In 2021 a container ship, the Ever Given, blocked the Suez Canal for six days. Why did it matter worldwide?",
+   "options": [
+    {
+     "text": "About 12% of world trade passes through the canal, so goods were delayed around the globe",
+     "correct": true
+    },
+    {
+     "text": "It flooded Egypt",
+     "correct": false,
+     "feedback": "No flooding."
+    },
+    {
+     "text": "It closed the internet",
+     "correct": false,
+     "feedback": "Undersea cables were not affected."
+    },
+    {
+     "text": "It mattered only to Egypt",
+     "correct": false,
+     "feedback": "Supply chains are global."
+    }
+   ],
+   "explain": "Globalised supply chains are efficient, but fragile."
+  },
+  {
+   "id": "geography.en.renew",
+   "topic": "geography.energy",
+   "kind": "mcq",
+   "prompt": "Which of these is a renewable energy source?",
+   "options": [
+    {
+     "text": "Wind",
+     "correct": true
+    },
+    {
+     "text": "Coal",
+     "correct": false,
+     "feedback": "Fossil fuel: non-renewable."
+    },
+    {
+     "text": "Natural gas",
+     "correct": false,
+     "feedback": "Fossil fuel."
+    },
+    {
+     "text": "Uranium (nuclear)",
+     "correct": false,
+     "feedback": "Nuclear is low-carbon but uranium is not renewable."
+    }
+   ],
+   "explain": "Renewables: wind, solar, hydroelectric, tidal, wave, geothermal and biomass."
+  },
+  {
+   "id": "geography.en.geo",
+   "topic": "geography.energy",
+   "kind": "mcq",
+   "prompt": "Iceland gets most of its electricity and heating from which two sources?",
+   "options": [
+    {
+     "text": "Hydroelectric and geothermal power",
+     "correct": true
+    },
+    {
+     "text": "Coal and oil",
+     "correct": false,
+     "feedback": "Iceland uses very little fossil fuel for electricity."
+    },
+    {
+     "text": "Nuclear and solar",
+     "correct": false,
+     "feedback": "It has no nuclear power stations."
+    },
+    {
+     "text": "Wind and tidal only",
+     "correct": false,
+     "feedback": "Its rivers and volcanic heat do most of the work."
+    }
+   ],
+   "explain": "Its position on the Mid-Atlantic Ridge gives it abundant volcanic heat."
+  },
+  {
+   "id": "geography.en.wind",
+   "topic": "geography.energy",
+   "kind": "mcq",
+   "prompt": "What is one disadvantage of wind power?",
+   "options": [
+    {
+     "text": "It is intermittent: no wind, no power, so storage or back-up is needed",
+     "correct": true
+    },
+    {
+     "text": "It produces lots of carbon dioxide while running",
+     "correct": false,
+     "feedback": "It produces almost none while running."
+    },
+    {
+     "text": "It will run out",
+     "correct": false,
+     "feedback": "Wind is renewable."
+    },
+    {
+     "text": "It only works in deserts",
+     "correct": false,
+     "feedback": "The UK has some of Europe’s best wind."
+    }
+   ],
+   "explain": "Batteries, pumped storage and links between countries help balance supply."
+  },
+  {
+   "id": "geography.en.water",
+   "topic": "geography.energy",
+   "kind": "mcq",
+   "prompt": "What is water stress?",
+   "options": [
+    {
+     "text": "When demand for water is greater than the supply available, or its quality is poor",
+     "correct": true
+    },
+    {
+     "text": "Having too much rain",
+     "correct": false,
+     "feedback": "That is flooding."
+    },
+    {
+     "text": "A swimming exam",
+     "correct": false,
+     "feedback": "No."
+    },
+    {
+     "text": "Water being too cold",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "Parts of the Middle East use desalination plants to turn seawater into drinking water."
+  },
+  {
+   "id": "geography.en.food",
+   "topic": "geography.energy",
+   "kind": "mcq",
+   "prompt": "Why do some people try to buy food with fewer “food miles”?",
+   "options": [
+    {
+     "text": "To cut the fuel and emissions used transporting food long distances",
+     "correct": true
+    },
+    {
+     "text": "Local food is always cheaper",
+     "correct": false,
+     "feedback": "Not always."
+    },
+    {
+     "text": "Imported food is illegal",
+     "correct": false,
+     "feedback": "No."
+    },
+    {
+     "text": "Miles make food heavier",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "It is not the whole story: food grown in heated greenhouses nearby can have a bigger footprint than food shipped in."
+  },
+  {
+   "id": "geography.en.mix",
+   "topic": "geography.energy",
+   "kind": "mcq",
+   "prompt": "What is a country’s “energy mix”?",
+   "options": [
+    {
+     "text": "The combination of sources it uses to produce its energy",
+     "correct": true
+    },
+    {
+     "text": "A recipe",
+     "correct": false,
+     "feedback": "Not this time."
+    },
+    {
+     "text": "Only its oil",
+     "correct": false,
+     "feedback": "It includes every source."
+    },
+    {
+     "text": "Its weather",
+     "correct": false,
+     "feedback": "Weather affects some sources, but the mix is the sources themselves."
+    }
+   ],
+   "explain": "The UK’s mix has shifted from coal to gas, wind and other sources; its last coal power station closed in 2024."
+  },
+  {
+   "id": "geography.ru.size",
+   "topic": "geography.russia",
+   "kind": "fact",
+   "prompt": "Russia is the largest country in the world. About how many time zones does it span?",
+   "answer": "11",
+   "distractors": [
+    "3",
+    "24",
+    "6"
+   ],
+   "explain": "When it is morning in Kaliningrad, it is already evening in Kamchatka."
+  },
+  {
+   "id": "geography.ru.urals",
+   "topic": "geography.russia",
+   "kind": "fact",
+   "prompt": "Which mountain range is traditionally used as the boundary between Europe and Asia in Russia?",
+   "answer": "the Ural Mountains",
+   "distractors": [
+    "the Alps",
+    "the Andes",
+    "the Pennines"
+   ],
+   "explain": "Most Russians live west of the Urals, in European Russia.",
+   "accept": [
+    "urals",
+    "ural mountains"
+   ]
+  },
+  {
+   "id": "geography.ru.baikal",
+   "topic": "geography.russia",
+   "kind": "fact",
+   "prompt": "Lake Baikal in Siberia is the deepest lake in the world. About how deep is it?",
+   "answer": "about 1,600 metres",
+   "distractors": [
+    "about 16 metres",
+    "about 160 metres",
+    "about 16 kilometres"
+   ],
+   "explain": "It holds about a fifth of the world’s unfrozen fresh surface water.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.ru.permafrost",
+   "topic": "geography.russia",
+   "kind": "mcq",
+   "prompt": "How does permafrost affect building in Siberia?",
+   "options": [
+    {
+     "text": "Buildings stand on stilts or piles so their heat does not melt the ground beneath",
+     "correct": true
+    },
+    {
+     "text": "Buildings must be made of ice",
+     "correct": false,
+     "feedback": "No."
+    },
+    {
+     "text": "Nothing can be built there",
+     "correct": false,
+     "feedback": "Cities such as Yakutsk are built on permafrost."
+    },
+    {
+     "text": "Buildings float",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "As the climate warms, thawing permafrost is cracking roads and buildings."
+  },
+  {
+   "id": "geography.ru.rail",
+   "topic": "geography.russia",
+   "kind": "fact",
+   "prompt": "The Trans-Siberian Railway from Moscow to Vladivostok is about how long?",
+   "answer": "about 9,300 km",
+   "distractors": [
+    "about 930 km",
+    "about 93,000 km",
+    "about 300 km"
+   ],
+   "explain": "The journey takes about a week.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.ru.volga",
+   "topic": "geography.russia",
+   "kind": "fact",
+   "prompt": "Which is the longest river in Europe, flowing through Russia into the Caspian Sea?",
+   "answer": "the Volga",
+   "distractors": [
+    "the Danube",
+    "the Thames",
+    "the Rhine"
+   ],
+   "explain": "About 3,500 km long.",
+   "accept": [
+    "volga",
+    "river volga"
+   ]
+  },
+  {
+   "id": "geography.ru.biomes",
+   "topic": "geography.russia",
+   "kind": "mcq",
+   "prompt": "Travelling north through Russia, which order of biomes would you pass through?",
+   "options": [
+    {
+     "text": "Steppe grassland, then taiga (coniferous forest), then tundra",
+     "correct": true
+    },
+    {
+     "text": "Rainforest, then desert, then tundra",
+     "correct": false,
+     "feedback": "Russia has no rainforest."
+    },
+    {
+     "text": "Tundra, then taiga, then steppe",
+     "correct": false,
+     "feedback": "That is travelling south."
+    },
+    {
+     "text": "Desert, then savanna, then ice",
+     "correct": false,
+     "feedback": "No savanna in Russia."
+    }
+   ],
+   "explain": "The taiga is the largest forest on Earth."
+  },
+  {
+   "id": "geography.ru.resources",
+   "topic": "geography.russia",
+   "kind": "mcq",
+   "prompt": "Why is Russia important in world energy?",
+   "options": [
+    {
+     "text": "It has huge reserves of natural gas and oil, much of it in Siberia",
+     "correct": true
+    },
+    {
+     "text": "It makes most of the world’s solar panels",
+     "correct": false,
+     "feedback": "That is China."
+    },
+    {
+     "text": "It has no energy resources",
+     "correct": false,
+     "feedback": "It has vast reserves."
+    },
+    {
+     "text": "It runs entirely on wind",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "Pipelines carry Siberian gas thousands of kilometres to customers."
+  },
+  {
+   "id": "geography.ae.capital",
+   "topic": "geography.aegean",
+   "kind": "fact",
+   "prompt": "What is the capital of Greece?",
+   "answer": "Athens",
+   "distractors": [
+    "Sparta",
+    "Thessaloniki",
+    "Corinth"
+   ],
+   "explain": "Athens is named after the goddess Athena; the Parthenon on its Acropolis has stood for about 2,500 years.",
+   "accept": [
+    "athens"
+   ]
+  },
+  {
+   "id": "geography.ae.olympus",
+   "topic": "geography.aegean",
+   "kind": "fact",
+   "prompt": "What is the highest mountain in Greece, home of the gods in myth?",
+   "answer": "Mount Olympus",
+   "distractors": [
+    "Mount Etna",
+    "Mount Parnassus",
+    "Mount Ida"
+   ],
+   "explain": "Olympus is about 2,918 m high, on the border of Thessaly and Macedonia.",
+   "accept": [
+    "olympus"
+   ]
+  },
+  {
+   "id": "geography.ae.sea",
+   "topic": "geography.aegean",
+   "kind": "fact",
+   "prompt": "Which sea lies between Greece and Turkey, scattered with islands?",
+   "answer": "the Aegean Sea",
+   "distractors": [
+    "the Black Sea",
+    "the Red Sea",
+    "the North Sea"
+   ],
+   "explain": "In myth it is named after King Aegeus, who threw himself into it when he saw black sails on Theseus’s ship.",
+   "accept": [
+    "aegean",
+    "aegean sea"
+   ]
+  },
+  {
+   "id": "geography.ae.crete",
+   "topic": "geography.aegean",
+   "kind": "fact",
+   "prompt": "Which is the largest Greek island, home of the Minoans and the legend of the Minotaur?",
+   "answer": "Crete",
+   "distractors": [
+    "Rhodes",
+    "Corfu",
+    "Santorini"
+   ],
+   "explain": "The palace of Knossos on Crete was excavated by Arthur Evans from 1900.",
+   "accept": [
+    "crete"
+   ]
+  },
+  {
+   "id": "geography.ae.quakes",
+   "topic": "geography.aegean",
+   "kind": "mcq",
+   "prompt": "Why does Greece have so many earthquakes?",
+   "options": [
+    {
+     "text": "The African Plate is sinking beneath the plate Greece sits on, south of Crete",
+     "correct": true
+    },
+    {
+     "text": "Poseidon strikes the ground with his trident",
+     "correct": false,
+     "feedback": "That was the ancient explanation; the evidence points to plate tectonics."
+    },
+    {
+     "text": "Greece is on the Mid-Atlantic Ridge",
+     "correct": false,
+     "feedback": "That runs through Iceland."
+    },
+    {
+     "text": "Heavy traffic in Athens",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "This subduction zone (the Hellenic arc) also feeds the volcanoes of the southern Aegean, including Santorini."
+  },
+  {
+   "id": "geography.ae.olives",
+   "topic": "geography.aegean",
+   "kind": "mcq",
+   "prompt": "Why do olive trees grow so well in Greece?",
+   "options": [
+    {
+     "text": "They are adapted to the Mediterranean climate of hot, dry summers and mild, wet winters",
+     "correct": true
+    },
+    {
+     "text": "Greece is a rainforest",
+     "correct": false,
+     "feedback": "Far too dry in summer."
+    },
+    {
+     "text": "They need snow all year",
+     "correct": false,
+     "feedback": "Olives hate long frosts."
+    },
+    {
+     "text": "They are watered by volcanoes",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "Small leathery leaves and deep roots help them survive summer drought. In myth, Athena gave the olive tree to Athens."
+  },
+  {
+   "id": "geography.ae.tourism",
+   "topic": "geography.aegean",
+   "kind": "mcq",
+   "prompt": "Mira notices that Santorini is packed with cruise passengers in summer. Which is a NEGATIVE impact of mass tourism on small islands?",
+   "options": [
+    {
+     "text": "Pressure on water supplies, crowding and rising house prices for locals",
+     "correct": true
+    },
+    {
+     "text": "More jobs in hotels",
+     "correct": false,
+     "feedback": "That is a benefit, though often seasonal."
+    },
+    {
+     "text": "Money for restaurants",
+     "correct": false,
+     "feedback": "A benefit."
+    },
+    {
+     "text": "Better ferry links",
+     "correct": false,
+     "feedback": "Usually a benefit."
+    }
+   ],
+   "explain": "Santorini has introduced limits on cruise ship visitors to manage the pressure."
+  },
+  {
+   "id": "geography.med.grc",
+   "topic": "geography.aegean",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "GRC",
+   "answer": "Greece",
+   "accept": [],
+   "choosePrompt": "Which Mediterranean country is highlighted?",
+   "explain": "This is Greece. Greece has about 6,000 islands, of which around 200 are lived on."
+  },
+  {
+   "id": "geography.med.ita",
+   "topic": "geography.aegean",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "ITA",
+   "answer": "Italy",
+   "accept": [],
+   "choosePrompt": "Which Mediterranean country is highlighted?",
+   "explain": "This is Italy. Italy has Europe’s most active volcanoes: Etna, Stromboli and Vesuvius."
+  },
+  {
+   "id": "geography.med.mlt",
+   "topic": "geography.aegean",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "MLT",
+   "answer": "Malta",
+   "accept": [],
+   "choosePrompt": "Which Mediterranean country is highlighted?",
+   "explain": "This is Malta. A tiny island nation south of Sicily."
+  },
+  {
+   "id": "geography.med.cyp",
+   "topic": "geography.aegean",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "CYP",
+   "answer": "Cyprus",
+   "accept": [],
+   "choosePrompt": "Which Mediterranean country is highlighted?",
+   "explain": "This is Cyprus. In myth, Aphrodite rose from the sea off Cyprus."
+  },
+  {
+   "id": "geography.med.hrv",
+   "topic": "geography.aegean",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "HRV",
+   "answer": "Croatia",
+   "accept": [],
+   "choosePrompt": "Which Mediterranean country is highlighted?",
+   "explain": "This is Croatia. Its Adriatic coast has more than a thousand islands."
+  },
+  {
+   "id": "geography.med.alb",
+   "topic": "geography.aegean",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "ALB",
+   "answer": "Albania",
+   "accept": [],
+   "choosePrompt": "Which Mediterranean country is highlighted?",
+   "explain": "This is Albania. Albania lies across the Strait of Otranto from the heel of Italy."
+  },
+  {
+   "id": "geography.med.mkd",
+   "topic": "geography.aegean",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "MKD",
+   "answer": "North Macedonia",
+   "accept": [],
+   "choosePrompt": "Which Mediterranean country is highlighted?",
+   "explain": "This is North Macedonia. North Macedonia is landlocked; the ancient kingdom of Macedon, home of Alexander the Great, lies mostly in modern northern Greece."
+  },
+  {
+   "id": "geography.med.bgr",
+   "topic": "geography.aegean",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "BGR",
+   "answer": "Bulgaria",
+   "accept": [],
+   "choosePrompt": "Which Mediterranean country is highlighted?",
+   "explain": "This is Bulgaria. Bulgaria has a Black Sea coast."
+  },
+  {
+   "id": "geography.med.mne",
+   "topic": "geography.aegean",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "MNE",
+   "answer": "Montenegro",
+   "accept": [],
+   "choosePrompt": "Which Mediterranean country is highlighted?",
+   "explain": "This is Montenegro. Its name means “black mountain”."
+  },
+  {
+   "id": "geography.med.esp",
+   "topic": "geography.aegean",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "ESP",
+   "answer": "Spain",
+   "accept": [],
+   "choosePrompt": "Which Mediterranean country is highlighted?",
+   "explain": "This is Spain. Spain and Portugal share the Iberian Peninsula."
+  },
+  {
+   "id": "geography.pl.idn",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IDN",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Indonesia",
+   "accept": [
+    "Indonesia"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Indonesia. Indonesia is building a new capital, Nusantara, on Borneo, partly because Jakarta is sinking and crowded."
+  },
+  {
+   "id": "geography.plc.idn",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Indonesia?",
+   "answer": "Jakarta",
+   "distractors": [
+    "Bali",
+    "Surabaya"
+   ],
+   "explain": "The capital of Indonesia is Jakarta. Indonesia is building a new capital, Nusantara, on Borneo, partly because Jakarta is sinking and crowded.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IDN",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Indonesia** is **Jakarta**. Indonesia is building a new capital, Nusantara, on Borneo, partly because Jakarta is sinking and crowded."
+  },
+  {
+   "id": "geography.pl.phl",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "PHL",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Philippines",
+   "accept": [
+    "the Philippines",
+    "Philippines"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is the Philippines. More than 7,000 islands on the Pacific Ring of Fire."
+  },
+  {
+   "id": "geography.plc.phl",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of the Philippines?",
+   "answer": "Manila",
+   "distractors": [
+    "Cebu",
+    "Davao"
+   ],
+   "explain": "The capital of the Philippines is Manila. More than 7,000 islands on the Pacific Ring of Fire.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "PHL",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **the Philippines** is **Manila**. More than 7,000 islands on the Pacific Ring of Fire."
+  },
+  {
+   "id": "geography.pl.kaz",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KAZ",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Kazakhstan",
+   "accept": [
+    "Kazakhstan"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Kazakhstan. The largest landlocked country in the world. Almaty was the capital until 1997."
+  },
+  {
+   "id": "geography.plc.kaz",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Kazakhstan?",
+   "answer": "Astana",
+   "distractors": [
+    "Almaty",
+    "Tashkent"
+   ],
+   "explain": "The capital of Kazakhstan is Astana. The largest landlocked country in the world. Almaty was the capital until 1997.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KAZ",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Kazakhstan** is **Astana**. The largest landlocked country in the world. Almaty was the capital until 1997."
+  },
+  {
+   "id": "geography.pl.mng",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MNG",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Mongolia",
+   "accept": [
+    "Mongolia"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Mongolia. Ulaanbaatar is often called the coldest capital city in the world."
+  },
+  {
+   "id": "geography.plc.mng",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Mongolia?",
+   "answer": "Ulaanbaatar",
+   "distractors": [
+    "Beijing",
+    "Astana"
+   ],
+   "explain": "The capital of Mongolia is Ulaanbaatar. Ulaanbaatar is often called the coldest capital city in the world.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MNG",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [
+    "Ulan Bator"
+   ],
+   "learn": "The capital of **Mongolia** is **Ulaanbaatar**. Ulaanbaatar is often called the coldest capital city in the world."
+  },
+  {
+   "id": "geography.pl.nga",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NGA",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Nigeria",
+   "accept": [
+    "Nigeria"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Nigeria. Abuja replaced Lagos as capital in 1991; Lagos is still far bigger."
+  },
+  {
+   "id": "geography.plc.nga",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Nigeria?",
+   "answer": "Abuja",
+   "distractors": [
+    "Lagos",
+    "Kano"
+   ],
+   "explain": "The capital of Nigeria is Abuja. Abuja replaced Lagos as capital in 1991; Lagos is still far bigger.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NGA",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Nigeria** is **Abuja**. Abuja replaced Lagos as capital in 1991; Lagos is still far bigger."
+  },
+  {
+   "id": "geography.pl.eth",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ETH",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Ethiopia",
+   "accept": [
+    "Ethiopia"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Ethiopia. Addis Ababa is home to the African Union."
+  },
+  {
+   "id": "geography.plc.eth",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Ethiopia?",
+   "answer": "Addis Ababa",
+   "distractors": [
+    "Nairobi",
+    "Khartoum"
+   ],
+   "explain": "The capital of Ethiopia is Addis Ababa. Addis Ababa is home to the African Union.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ETH",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Ethiopia** is **Addis Ababa**. Addis Ababa is home to the African Union."
+  },
+  {
+   "id": "geography.pl.gha",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "GHA",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Ghana",
+   "accept": [
+    "Ghana"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Ghana. In 1957 Ghana became one of the first African countries to win independence."
+  },
+  {
+   "id": "geography.plc.gha",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Ghana?",
+   "answer": "Accra",
+   "distractors": [
+    "Lagos",
+    "Kumasi"
+   ],
+   "explain": "The capital of Ghana is Accra. In 1957 Ghana became one of the first African countries to win independence.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "GHA",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Ghana** is **Accra**. In 1957 Ghana became one of the first African countries to win independence."
+  },
+  {
+   "id": "geography.pl.tza",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "TZA",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Tanzania",
+   "accept": [
+    "Tanzania"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Tanzania. Dodoma is the official capital; Dar es Salaam is the largest city and main port."
+  },
+  {
+   "id": "geography.plc.tza",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Tanzania?",
+   "answer": "Dodoma",
+   "distractors": [
+    "Dar es Salaam",
+    "Zanzibar"
+   ],
+   "explain": "The capital of Tanzania is Dodoma. Dodoma is the official capital; Dar es Salaam is the largest city and main port.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "TZA",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Tanzania** is **Dodoma**. Dodoma is the official capital; Dar es Salaam is the largest city and main port."
+  },
+  {
+   "id": "geography.pl.mar",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MAR",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Morocco",
+   "accept": [
+    "Morocco"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Morocco. Rabat, not Casablanca."
+  },
+  {
+   "id": "geography.plc.mar",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Morocco?",
+   "answer": "Rabat",
+   "distractors": [
+    "Casablanca",
+    "Marrakesh"
+   ],
+   "explain": "The capital of Morocco is Rabat. Rabat, not Casablanca.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MAR",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Morocco** is **Rabat**. Rabat, not Casablanca."
+  },
+  {
+   "id": "geography.pl.dza",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "DZA",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Algeria",
+   "accept": [
+    "Algeria"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Algeria. Africa’s largest country by area."
+  },
+  {
+   "id": "geography.plc.dza",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Algeria?",
+   "answer": "Algiers",
+   "distractors": [
+    "Tunis",
+    "Oran"
+   ],
+   "explain": "The capital of Algeria is Algiers. Africa’s largest country by area.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "DZA",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Algeria** is **Algiers**. Africa’s largest country by area."
+  },
+  {
+   "id": "geography.pl.cod",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "COD",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Democratic Republic of the Congo",
+   "accept": [
+    "the Democratic Republic of the Congo",
+    "DR Congo",
+    "DRC",
+    "Congo",
+    "Democratic Republic of the Congo"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is the Democratic Republic of the Congo. Kinshasa and Brazzaville (capital of the Republic of the Congo) face each other across the Congo River."
+  },
+  {
+   "id": "geography.plc.cod",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of the Democratic Republic of the Congo?",
+   "answer": "Kinshasa",
+   "distractors": [
+    "Brazzaville",
+    "Lubumbashi"
+   ],
+   "explain": "The capital of the Democratic Republic of the Congo is Kinshasa. Kinshasa and Brazzaville (capital of the Republic of the Congo) face each other across the Congo River.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "COD",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **the Democratic Republic of the Congo** is **Kinshasa**. Kinshasa and Brazzaville (capital of the Republic of the Congo) face each other across the Congo River."
+  },
+  {
+   "id": "geography.pl.mdg",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MDG",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Madagascar",
+   "accept": [
+    "Madagascar"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Madagascar. Most of its wildlife, such as lemurs, lives nowhere else on Earth."
+  },
+  {
+   "id": "geography.plc.mdg",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Madagascar?",
+   "answer": "Antananarivo",
+   "distractors": [
+    "Mombasa",
+    "Port Louis"
+   ],
+   "explain": "The capital of Madagascar is Antananarivo. Most of its wildlife, such as lemurs, lives nowhere else on Earth.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MDG",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Madagascar** is **Antananarivo**. Most of its wildlife, such as lemurs, lives nowhere else on Earth."
+  },
+  {
+   "id": "geography.pl.sdn",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "SDN",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Sudan",
+   "accept": [
+    "Sudan"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Sudan. The Blue Nile and White Nile meet at Khartoum."
+  },
+  {
+   "id": "geography.plc.sdn",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Sudan?",
+   "answer": "Khartoum",
+   "distractors": [
+    "Cairo",
+    "Juba"
+   ],
+   "explain": "The capital of Sudan is Khartoum. The Blue Nile and White Nile meet at Khartoum.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "SDN",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Sudan** is **Khartoum**. The Blue Nile and White Nile meet at Khartoum."
+  },
+  {
+   "id": "geography.pl.egy",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "EGY",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Egypt",
+   "accept": [
+    "Egypt"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Egypt. Alexandria was founded by Alexander the Great and became a centre of Greek learning."
+  },
+  {
+   "id": "geography.plc.egy",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Egypt?",
+   "answer": "Cairo",
+   "distractors": [
+    "Alexandria",
+    "Luxor"
+   ],
+   "explain": "The capital of Egypt is Cairo. Alexandria was founded by Alexander the Great and became a centre of Greek learning.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "EGY",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Egypt** is **Cairo**. Alexandria was founded by Alexander the Great and became a centre of Greek learning."
+  },
+  {
+   "id": "geography.pl.chl",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CHL",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Chile",
+   "accept": [
+    "Chile"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Chile. Chile is about 4,300 km long but on average under 200 km wide."
+  },
+  {
+   "id": "geography.plc.chl",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Chile?",
+   "answer": "Santiago",
+   "distractors": [
+    "Valparaíso",
+    "Lima"
+   ],
+   "explain": "The capital of Chile is Santiago. Chile is about 4,300 km long but on average under 200 km wide.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CHL",
+   "zoom": [
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Chile** is **Santiago**. Chile is about 4,300 km long but on average under 200 km wide."
+  },
+  {
+   "id": "geography.pl.per",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "PER",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Peru",
+   "accept": [
+    "Peru"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Peru. Cusco was the capital of the Inca empire."
+  },
+  {
+   "id": "geography.plc.per",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Peru?",
+   "answer": "Lima",
+   "distractors": [
+    "Cusco",
+    "Quito"
+   ],
+   "explain": "The capital of Peru is Lima. Cusco was the capital of the Inca empire.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "PER",
+   "zoom": [
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Peru** is **Lima**. Cusco was the capital of the Inca empire."
+  },
+  {
+   "id": "geography.pl.col",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "COL",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Colombia",
+   "accept": [
+    "Colombia"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Colombia. Bogotá sits about 2,600 m up in the Andes."
+  },
+  {
+   "id": "geography.plc.col",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Colombia?",
+   "answer": "Bogotá",
+   "distractors": [
+    "Medellín",
+    "Caracas"
+   ],
+   "explain": "The capital of Colombia is Bogotá. Bogotá sits about 2,600 m up in the Andes.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "COL",
+   "zoom": [
+    "South America"
+   ],
+   "fill": true,
+   "accept": [
+    "Bogota"
+   ],
+   "learn": "The capital of **Colombia** is **Bogotá**. Bogotá sits about 2,600 m up in the Andes."
+  },
+  {
+   "id": "geography.pl.ecu",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ECU",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Ecuador",
+   "accept": [
+    "Ecuador"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Ecuador. Named after the Equator, which runs through it."
+  },
+  {
+   "id": "geography.plc.ecu",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Ecuador?",
+   "answer": "Quito",
+   "distractors": [
+    "Guayaquil",
+    "Lima"
+   ],
+   "explain": "The capital of Ecuador is Quito. Named after the Equator, which runs through it.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ECU",
+   "zoom": [
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Ecuador** is **Quito**. Named after the Equator, which runs through it."
+  },
+  {
+   "id": "geography.pl.bol",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BOL",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Bolivia",
+   "accept": [
+    "Bolivia"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Bolivia. Sucre is the constitutional capital; the government sits in La Paz, the highest seat of government in the world."
+  },
+  {
+   "id": "geography.plc.bol",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Bolivia?",
+   "answer": "Sucre (with La Paz as the seat of government)",
+   "distractors": [
+    "Santa Cruz",
+    "Lima"
+   ],
+   "explain": "The capital of Bolivia is Sucre (with La Paz as the seat of government). Sucre is the constitutional capital; the government sits in La Paz, the highest seat of government in the world.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BOL",
+   "zoom": [
+    "South America"
+   ],
+   "fill": true,
+   "accept": [
+    "Sucre",
+    "La Paz"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "learn": "The capital of **Bolivia** is **Sucre (with La Paz as the seat of government)**. Sucre is the constitutional capital; the government sits in La Paz, the highest seat of government in the world."
+  },
+  {
+   "id": "geography.pl.cub",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CUB",
+   "zoom": [
+    "North America"
+   ],
+   "answer": "Cuba",
+   "accept": [
+    "Cuba"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Cuba. The largest island in the Caribbean."
+  },
+  {
+   "id": "geography.plc.cub",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Cuba?",
+   "answer": "Havana",
+   "distractors": [
+    "Santiago de Cuba",
+    "Kingston"
+   ],
+   "explain": "The capital of Cuba is Havana. The largest island in the Caribbean.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CUB",
+   "zoom": [
+    "North America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Cuba** is **Havana**. The largest island in the Caribbean."
+  },
+  {
+   "id": "geography.pl.hti",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "HTI",
+   "zoom": [
+    "North America"
+   ],
+   "answer": "Haiti",
+   "accept": [
+    "Haiti"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Haiti. Haiti shares the island of Hispaniola with the Dominican Republic."
+  },
+  {
+   "id": "geography.plc.hti",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Haiti?",
+   "answer": "Port-au-Prince",
+   "distractors": [
+    "Santo Domingo",
+    "Havana"
+   ],
+   "explain": "The capital of Haiti is Port-au-Prince. Haiti shares the island of Hispaniola with the Dominican Republic.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "HTI",
+   "zoom": [
+    "North America"
+   ],
+   "fill": true,
+   "accept": [
+    "Port au Prince"
+   ],
+   "learn": "The capital of **Haiti** is **Port-au-Prince**. Haiti shares the island of Hispaniola with the Dominican Republic."
+  },
+  {
+   "id": "geography.pl.npl",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NPL",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Nepal",
+   "accept": [
+    "Nepal"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Nepal. Eight of the world’s ten highest mountains are in Nepal or on its borders."
+  },
+  {
+   "id": "geography.plc.npl",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Nepal?",
+   "answer": "Kathmandu",
+   "distractors": [
+    "Delhi",
+    "Thimphu"
+   ],
+   "explain": "The capital of Nepal is Kathmandu. Eight of the world’s ten highest mountains are in Nepal or on its borders.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NPL",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Nepal** is **Kathmandu**. Eight of the world’s ten highest mountains are in Nepal or on its borders."
+  },
+  {
+   "id": "geography.pl.irq",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IRQ",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Iraq",
+   "accept": [
+    "Iraq"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Iraq. Mesopotamia, “the land between the rivers” Tigris and Euphrates, is mostly in Iraq."
+  },
+  {
+   "id": "geography.plc.irq",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Iraq?",
+   "answer": "Baghdad",
+   "distractors": [
+    "Basra",
+    "Tehran"
+   ],
+   "explain": "The capital of Iraq is Baghdad. Mesopotamia, “the land between the rivers” Tigris and Euphrates, is mostly in Iraq.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IRQ",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Iraq** is **Baghdad**. Mesopotamia, “the land between the rivers” Tigris and Euphrates, is mostly in Iraq."
+  },
+  {
+   "id": "geography.pl.jor",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "JOR",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Jordan",
+   "accept": [
+    "Jordan"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Jordan. Petra, the city carved from rock, is in Jordan."
+  },
+  {
+   "id": "geography.plc.jor",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Jordan?",
+   "answer": "Amman",
+   "distractors": [
+    "Petra",
+    "Damascus"
+   ],
+   "explain": "The capital of Jordan is Amman. Petra, the city carved from rock, is in Jordan.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "JOR",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Jordan** is **Amman**. Petra, the city carved from rock, is in Jordan."
+  },
+  {
+   "id": "geography.pl.qat",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "QAT",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Qatar",
+   "accept": [
+    "Qatar"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Qatar. A small, very wealthy country built on oil and gas."
+  },
+  {
+   "id": "geography.plc.qat",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Qatar?",
+   "answer": "Doha",
+   "distractors": [
+    "Dubai",
+    "Riyadh"
+   ],
+   "explain": "The capital of Qatar is Doha. A small, very wealthy country built on oil and gas.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "QAT",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Qatar** is **Doha**. A small, very wealthy country built on oil and gas."
+  },
+  {
+   "id": "geography.pl.are",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ARE",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "United Arab Emirates",
+   "accept": [
+    "the United Arab Emirates",
+    "UAE",
+    "United Arab Emirates"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is the United Arab Emirates. Abu Dhabi, not Dubai."
+  },
+  {
+   "id": "geography.plc.are",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of the United Arab Emirates?",
+   "answer": "Abu Dhabi",
+   "distractors": [
+    "Dubai",
+    "Doha"
+   ],
+   "explain": "The capital of the United Arab Emirates is Abu Dhabi. Abu Dhabi, not Dubai.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ARE",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **the United Arab Emirates** is **Abu Dhabi**. Abu Dhabi, not Dubai."
+  },
+  {
+   "id": "geography.pl.mys",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MYS",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Malaysia",
+   "accept": [
+    "Malaysia"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Malaysia. The Petronas Towers in Kuala Lumpur were the tallest buildings in the world from 1998 to 2004."
+  },
+  {
+   "id": "geography.plc.mys",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Malaysia?",
+   "answer": "Kuala Lumpur",
+   "distractors": [
+    "Singapore",
+    "Jakarta"
+   ],
+   "explain": "The capital of Malaysia is Kuala Lumpur. The Petronas Towers in Kuala Lumpur were the tallest buildings in the world from 1998 to 2004.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MYS",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Malaysia** is **Kuala Lumpur**. The Petronas Towers in Kuala Lumpur were the tallest buildings in the world from 1998 to 2004."
+  },
+  {
+   "id": "geography.pl.tur",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "TUR",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Turkey",
+   "accept": [
+    "Turkey",
+    "Türkiye"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Turkey. Ankara, not Istanbul. Ancient Troy was in north-west Turkey."
+  },
+  {
+   "id": "geography.plc.tur",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Turkey?",
+   "answer": "Ankara",
+   "distractors": [
+    "Istanbul",
+    "Izmir"
+   ],
+   "explain": "The capital of Turkey is Ankara. Ankara, not Istanbul. Ancient Troy was in north-west Turkey.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "TUR",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Turkey** is **Ankara**. Ankara, not Istanbul. Ancient Troy was in north-west Turkey."
+  },
+  {
+   "id": "geography.pl.ukr",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "UKR",
+   "zoom": [
+    "Europe"
+   ],
+   "answer": "Ukraine",
+   "accept": [
+    "Ukraine"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Ukraine. The largest country entirely in Europe."
+  },
+  {
+   "id": "geography.plc.ukr",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Ukraine?",
+   "answer": "Kyiv",
+   "distractors": [
+    "Odesa",
+    "Kharkiv"
+   ],
+   "explain": "The capital of Ukraine is Kyiv. The largest country entirely in Europe.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "UKR",
+   "zoom": [
+    "Europe"
+   ],
+   "fill": true,
+   "accept": [
+    "Kiev"
+   ],
+   "learn": "The capital of **Ukraine** is **Kyiv**. The largest country entirely in Europe."
+  },
+  {
+   "id": "geography.pl.isl",
+   "topic": "geography.places",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ISL",
+   "zoom": [
+    "Europe"
+   ],
+   "answer": "Iceland",
+   "accept": [
+    "Iceland"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Iceland. Iceland sits on the Mid-Atlantic Ridge."
+  },
+  {
+   "id": "geography.plc.isl",
+   "topic": "geography.places",
+   "kind": "fact",
+   "prompt": "What is the capital of Iceland?",
+   "answer": "Reykjavík",
+   "distractors": [
+    "Oslo",
+    "Akureyri"
+   ],
+   "explain": "The capital of Iceland is Reykjavík. Iceland sits on the Mid-Atlantic Ridge.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ISL",
+   "zoom": [
+    "Europe"
+   ],
+   "fill": true,
+   "accept": [
+    "Reykjavik"
+   ],
+   "learn": "The capital of **Iceland** is **Reykjavík**. Iceland sits on the Mid-Atlantic Ridge."
+  },
+  {
+   "id": "geography.hm.ps",
+   "topic": "geography.hazard-management",
+   "kind": "mcq",
+   "prompt": "What are the “three Ps” of hazard management?",
+   "options": [
+    {
+     "text": "Prediction, protection and preparation",
+     "correct": true
+    },
+    {
+     "text": "Plates, pressure and power",
+     "correct": false,
+     "feedback": "Not a framework."
+    },
+    {
+     "text": "Planning, panic and payment",
+     "correct": false,
+     "feedback": "Panic is what preparation tries to prevent."
+    },
+    {
+     "text": "People, places and plans",
+     "correct": false,
+     "feedback": "Not the standard terms."
+    }
+   ],
+   "explain": "Predict (monitor), protect (build to resist), prepare (drills, kits, plans)."
+  },
+  {
+   "id": "geography.hm.predict",
+   "topic": "geography.hazard-management",
+   "kind": "mcq",
+   "prompt": "Which can scientists use to help PREDICT a volcanic eruption?",
+   "options": [
+    {
+     "text": "Tiny earthquakes, the ground swelling, and gases escaping",
+     "correct": true
+    },
+    {
+     "text": "Animal horoscopes",
+     "correct": false,
+     "feedback": "Not science."
+    },
+    {
+     "text": "The phase of the Moon",
+     "correct": false,
+     "feedback": "No reliable link."
+    },
+    {
+     "text": "Nothing: eruptions give no warning",
+     "correct": false,
+     "feedback": "Many eruptions give warning signs."
+    }
+   ],
+   "explain": "Earthquakes still cannot be predicted precisely, but many eruptions can."
+  },
+  {
+   "id": "geography.hm.protect",
+   "topic": "geography.hazard-management",
+   "kind": "mcq",
+   "prompt": "Which is an example of PROTECTION against earthquakes?",
+   "options": [
+    {
+     "text": "Buildings with rubber shock absorbers and cross-bracing",
+     "correct": true
+    },
+    {
+     "text": "An evacuation drill",
+     "correct": false,
+     "feedback": "That is preparation."
+    },
+    {
+     "text": "A seismometer network",
+     "correct": false,
+     "feedback": "That is monitoring (prediction)."
+    },
+    {
+     "text": "Moving away from the coast",
+     "correct": false,
+     "feedback": "That is avoidance, not protection."
+    }
+   ],
+   "explain": "Tokyo’s tall buildings are designed to sway rather than snap."
+  },
+  {
+   "id": "geography.hm.compare",
+   "topic": "geography.hazard-management",
+   "kind": "mcq",
+   "prompt": "Why do lower-income countries often suffer more deaths from similar hazards?",
+   "options": [
+    {
+     "text": "Less money for strong buildings, monitoring, emergency services and recovery",
+     "correct": true
+    },
+    {
+     "text": "Their earthquakes are always bigger",
+     "correct": false,
+     "feedback": "Magnitude does not depend on wealth."
+    },
+    {
+     "text": "People there do not care",
+     "correct": false,
+     "feedback": "This is untrue and unfair."
+    },
+    {
+     "text": "They have more plate boundaries",
+     "correct": false,
+     "feedback": "Wealth, not geology, is the key difference here."
+    }
+   ],
+   "explain": "Higher-income countries often suffer greater economic losses but fewer deaths."
+  },
+  {
+   "id": "geography.hm.japan-drill",
+   "topic": "geography.hazard-management",
+   "kind": "mcq",
+   "prompt": "Every year on 1 September, Japan holds Disaster Prevention Day with drills. This is an example of…",
+   "options": [
+    {
+     "text": "preparation",
+     "correct": true
+    },
+    {
+     "text": "prediction",
+     "correct": false,
+     "feedback": "Drills prepare people; they do not predict."
+    },
+    {
+     "text": "protection",
+     "correct": false,
+     "feedback": "Protection is about structures."
+    },
+    {
+     "text": "mitigation of climate change",
+     "correct": false,
+     "feedback": "Different topic."
+    }
+   ],
+   "explain": "The date marks the 1923 Great Kantō earthquake."
+  },
+  {
+   "id": "geography.hm.risk",
+   "topic": "geography.hazard-management",
+   "kind": "mcq",
+   "prompt": "Hazard risk is often described as hazard × vulnerability ÷ capacity to cope. What does “vulnerability” mean?",
+   "options": [
+    {
+     "text": "How likely people are to be harmed, because of poor housing, poverty or location",
+     "correct": true
+    },
+    {
+     "text": "How big the earthquake is",
+     "correct": false,
+     "feedback": "That is the hazard."
+    },
+    {
+     "text": "How fast help arrives",
+     "correct": false,
+     "feedback": "That is capacity to cope."
+    },
+    {
+     "text": "How old the volcano is",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "Reducing vulnerability is often the most effective way to reduce deaths."
+  },
+  {
+   "id": "geography.nm.median",
+   "topic": "geography.numbers",
+   "kind": "fact",
+   "prompt": "Rainfall (mm) for five days: 2, 0, 15, 3, 1. What is the median?",
+   "answer": "2",
+   "distractors": [
+    "4.2",
+    "15",
+    "3"
+   ],
+   "explain": "Order them: 0, 1, 2, 3, 15. The middle value is 2. (The mean, 4.2, is dragged up by the one wet day.)"
+  },
+  {
+   "id": "geography.nm.mean",
+   "topic": "geography.numbers",
+   "kind": "fact",
+   "prompt": "Temperatures (°C) on five days: 12, 15, 14, 11, 13. What is the mean?",
+   "answer": "13",
+   "distractors": [
+    "14",
+    "12",
+    "65"
+   ],
+   "explain": "Total 65 ÷ 5 = 13."
+  },
+  {
+   "id": "geography.nm.range",
+   "topic": "geography.numbers",
+   "kind": "fact",
+   "prompt": "Populations of four villages: 340, 1,200, 560, 890. What is the range?",
+   "answer": "860",
+   "distractors": [
+    "1200",
+    "1540",
+    "730"
+   ],
+   "explain": "Range = largest − smallest = 1,200 − 340 = 860."
+  },
+  {
+   "id": "geography.nm.iqr",
+   "topic": "geography.numbers",
+   "kind": "mcq",
+   "prompt": "Why is the interquartile range (IQR) often better than the range?",
+   "options": [
+    {
+     "text": "It ignores extreme values, measuring the spread of the middle half of the data",
+     "correct": true
+    },
+    {
+     "text": "It is always bigger",
+     "correct": false,
+     "feedback": "It is usually smaller."
+    },
+    {
+     "text": "It includes every value equally",
+     "correct": false,
+     "feedback": "It deliberately ignores the top and bottom quarters."
+    },
+    {
+     "text": "It is easier to spell",
+     "correct": false,
+     "feedback": "Not a statistical reason."
+    }
+   ],
+   "explain": "IQR = upper quartile − lower quartile."
+  },
+  {
+   "id": "geography.nm.scatter",
+   "topic": "geography.numbers",
+   "kind": "mcq",
+   "prompt": "A scatter graph shows that countries with higher GNI per head tend to have higher life expectancy. This is…",
+   "options": [
+    {
+     "text": "a positive correlation",
+     "correct": true
+    },
+    {
+     "text": "a negative correlation",
+     "correct": false,
+     "feedback": "Both go up together, so it is positive."
+    },
+    {
+     "text": "no correlation",
+     "correct": false,
+     "feedback": "There is a clear pattern."
+    },
+    {
+     "text": "proof that money causes long life",
+     "correct": false,
+     "feedback": "Correlation does not prove causation."
+    }
+   ],
+   "explain": "Correlation shows a relationship; explaining the cause needs more evidence."
+  },
+  {
+   "id": "geography.nm.choropleth",
+   "topic": "geography.numbers",
+   "kind": "mcq",
+   "prompt": "What is a choropleth map?",
+   "options": [
+    {
+     "text": "A map where areas are shaded darker or lighter to show a value, such as population density",
+     "correct": true
+    },
+    {
+     "text": "A map with contour lines",
+     "correct": false,
+     "feedback": "That is a relief map."
+    },
+    {
+     "text": "A map of the ocean floor",
+     "correct": false,
+     "feedback": "That is a bathymetric map."
+    },
+    {
+     "text": "A map drawn by hand",
+     "correct": false,
+     "feedback": "It is about shading by value."
+    }
+   ],
+   "explain": "Use darker shades for higher values, and always include a key."
+  },
+  {
+   "id": "geography.nm.mode",
+   "topic": "geography.numbers",
+   "kind": "mcq",
+   "prompt": "Kit records the weather on ten days: sun, rain, rain, cloud, rain, sun, cloud, rain, sun, rain. What is the mode?",
+   "options": [
+    {
+     "text": "rain",
+     "correct": true
+    },
+    {
+     "text": "sun",
+     "correct": false,
+     "feedback": "Sun appears 3 times; rain 5 times."
+    },
+    {
+     "text": "cloud",
+     "correct": false,
+     "feedback": "Cloud appears only twice."
+    },
+    {
+     "text": "There is no mode",
+     "correct": false,
+     "feedback": "The most frequent value is rain."
+    }
+   ],
+   "explain": "The mode is the most common value: the only average that works for categories like this."
+  },
+  {
+   "id": "geography.db.watershed",
+   "topic": "geography.basins",
+   "kind": "fact",
+   "prompt": "The boundary of a drainage basin, usually along high ground, is called the…",
+   "answer": "watershed",
+   "distractors": [
+    "confluence",
+    "source",
+    "floodplain"
+   ],
+   "explain": "Rain falling on either side of the watershed ends up in different rivers.",
+   "accept": [
+    "the watershed"
+   ]
+  },
+  {
+   "id": "geography.db.confluence",
+   "topic": "geography.basins",
+   "kind": "fact",
+   "prompt": "The point where two rivers meet is called a…",
+   "answer": "confluence",
+   "distractors": [
+    "watershed",
+    "tributary",
+    "meander"
+   ],
+   "explain": "A tributary is a smaller river that joins the main river at a confluence.",
+   "accept": [
+    "a confluence"
+   ]
+  },
+  {
+   "id": "geography.db.infiltration",
+   "topic": "geography.basins",
+   "kind": "mcq",
+   "prompt": "What is infiltration?",
+   "options": [
+    {
+     "text": "Water soaking into the soil",
+     "correct": true
+    },
+    {
+     "text": "Water moving through rock deep underground",
+     "correct": false,
+     "feedback": "That is percolation and groundwater flow."
+    },
+    {
+     "text": "Water flowing over the surface",
+     "correct": false,
+     "feedback": "That is surface runoff (overland flow)."
+    },
+    {
+     "text": "Water evaporating",
+     "correct": false,
+     "feedback": "That is an output."
+    }
+   ],
+   "explain": "Flows: infiltration, percolation, throughflow, surface runoff, groundwater flow."
+  },
+  {
+   "id": "geography.db.system",
+   "topic": "geography.basins",
+   "kind": "order",
+   "prompt": "Match each part of the drainage basin system to its role: precipitation, interception by trees, surface runoff, river discharge into the sea.",
+   "items": [
+    "precipitation",
+    "interception by trees",
+    "surface runoff",
+    "river discharge into the sea"
+   ],
+   "labels": [
+    "input",
+    "store",
+    "flow",
+    "output"
+   ],
+   "explain": "Inputs enter, stores hold water for a while, flows move it, outputs leave the basin."
+  },
+  {
+   "id": "geography.db.lag",
+   "topic": "geography.basins",
+   "kind": "mcq",
+   "prompt": "On a storm hydrograph, what is the lag time?",
+   "options": [
+    {
+     "text": "The time between peak rainfall and peak river discharge",
+     "correct": true
+    },
+    {
+     "text": "How long it rains",
+     "correct": false,
+     "feedback": "That is the storm’s duration."
+    },
+    {
+     "text": "How long the river stays in flood",
+     "correct": false,
+     "feedback": "Not quite."
+    },
+    {
+     "text": "The time for the river to freeze",
+     "correct": false,
+     "feedback": "No."
+    }
+   ],
+   "explain": "A short lag time means the river rises quickly: a higher flood risk."
+  },
+  {
+   "id": "geography.db.urban",
+   "topic": "geography.basins",
+   "kind": "mcq",
+   "prompt": "Why does an urban area usually have a shorter lag time than a forested area?",
+   "options": [
+    {
+     "text": "Concrete and drains send rain to the river quickly instead of letting it soak in",
+     "correct": true
+    },
+    {
+     "text": "Cities get less rain",
+     "correct": false,
+     "feedback": "They get similar or more."
+    },
+    {
+     "text": "Trees make rain fall faster",
+     "correct": false,
+     "feedback": "Trees slow water down by interception."
+    },
+    {
+     "text": "Rivers in cities are longer",
+     "correct": false,
+     "feedback": "Length is not the reason."
+    }
+   ],
+   "explain": "Impermeable surfaces increase runoff; that is why sustainable drainage (SuDS) uses ponds and green roofs."
+  }
+ ]
+}

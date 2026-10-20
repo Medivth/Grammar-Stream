@@ -116,7 +116,7 @@ const SPRINT_Y8 = [
     (r) => { const a = r.int(12, 25), b = r.int(3, 9); return { prompt: `${a} × ${b}`, value: a * b }; },
   ],
   [
-    (r) => { const a = r.int(2, 9) * 10, p = r.pick([10, 20, 25, 50]); return { prompt: `Increase ${a * 2} by ${p}%`, value: a * 2 * (1 + p / 100) }; },
+    (r) => { const a = r.int(2, 9) * 10, p = r.pick([10, 20, 25, 50]); return { prompt: `Increase ${a * 2} by ${p}%`, value: (a * 2 * (100 + p)) / 100 }; },
     (r) => { const a = r.int(2, 12) * 6; return { prompt: `Share ${a} in the ratio 1 : 2. The larger share is`, value: (a / 3) * 2 }; },
     (r) => { const n = r.int(1, 20), a = r.int(2, 7), b = r.int(-5, 9); return { prompt: `The nth term is ${a}n ${b < 0 ? '−' : '+'} ${Math.abs(b)}. Term ${n} =`, value: a * n + b, keypad: false }; },
     (r) => { const a = r.int(2, 12), b = r.int(2, 12); return { prompt: `HCF of ${a * 2} and ${b * 2 === a * 2 ? b * 2 + 2 : b * 2}`, value: gcd(a * 2, b * 2 === a * 2 ? b * 2 + 2 : b * 2) }; },
@@ -124,7 +124,7 @@ const SPRINT_Y8 = [
   ],
   [
     (r) => { const a = r.int(2, 9), e = r.int(2, 6); return { prompt: `${a} × 10^{${e}} ÷ 10^{${e - 1}}`, value: a * 10 }; },
-    (r) => { const orig = r.int(2, 20) * 10, p = r.pick([10, 20, 25, 50]); return { prompt: `After a ${p}% increase a price is £${orig * (1 + p / 100)}. The original price was £`, value: orig }; },
+    (r) => { const orig = r.int(2, 20) * 10, p = r.pick([10, 20, 25, 50]); return { prompt: `After a ${p}% increase a price is £${(orig * (100 + p)) / 100}. The original price was £`, value: orig }; },
     (r) => { const a = r.int(3, 12), b = r.int(3, 12); return { prompt: `Angles in a triangle: ${a * 5}° and ${b * 5}°. The third angle is`, value: 180 - (a + b) * 5 }; },
     (r) => { const n = r.pick([5, 6, 8, 9, 10, 12]); return { prompt: `Each interior angle of a regular ${n}-sided shape is`, value: 180 - 360 / n }; },
     (r) => { const a = r.int(3, 9), b = r.int(3, 9); return { prompt: `(x + ${a})(x + ${b}) = x² + ?x + ${a * b}. ? =`, value: a + b }; },

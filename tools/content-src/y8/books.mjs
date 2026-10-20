@@ -32,9 +32,9 @@ const LADDER = [
   B(5, 'The Odyssey (translated by Emily Wilson)', 'Homer', 2017, 'The real thing, in a clear, fast modern verse translation.'),
   B(5, 'Oedipus the King', 'Sophocles', 'about 429 BC', 'The greatest Greek tragedy: a detective story where the detective is the culprit.', { free: true }),
   B(5, 'The King Must Die', 'Mary Renault', 1958, 'Theseus, the labyrinth and the bull-leapers of Crete, told as if it really happened.'),
-  B(5, 'Circe', 'Madeline Miller', 2018, 'The witch from the Odyssey tells her own story. For older readers: best around 14+.'),
-  B(5, 'The Song of Achilles', 'Madeline Miller', 2011, 'The Iliad through the eyes of Patroclus. For older readers: best around 14+.'),
-  B(5, 'A Thousand Ships', 'Natalie Haynes', 2019, 'The Trojan War told by its women. For later: grown-up themes.'),
+  B(5, 'Medusa', 'Jessie Burton', 2021, 'The Gorgon tells her own story: a beautifully illustrated retelling for teenage readers.'),
+  B(5, 'Percy Jackson’s Greek Gods', 'Rick Riordan', 2014, 'The Olympians’ own stories, told with Percy’s jokes: a great companion to her Greek.'),
+  B(5, 'The Odyssey', 'Gillian Cross', 2012, 'A gripping retelling of the whole journey home, with striking illustrations by Neil Packer.'),
 ];
 
 const RUNGS = ['Myths and adventures', 'Retellings and modern classics', 'Quests and detectives', 'Gothic and the classics', 'The ancient world and beyond'];

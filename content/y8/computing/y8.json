@@ -1,0 +1,3639 @@
+{
+ "subject": "computing",
+ "deck": "y8",
+ "topics": [
+  {
+   "id": "computing.thinking",
+   "title": "Computational thinking",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Before any code is written, a computer scientist thinks: break the problem down, ignore what doesn’t matter, spot patterns, and write precise steps. Daedalus didn’t build the labyrinth by guessing.",
+   "teach": "Explain decomposition and abstraction using planning a school trip as the example.",
+   "talk": "Ask {him} to “decompose” a family task (cooking dinner, packing for a holiday) into smaller steps."
+  },
+  {
+   "id": "computing.flowcharts",
+   "title": "Flowcharts and pseudocode",
+   "kind": "facts",
+   "prereqs": [
+    "computing.thinking"
+   ],
+   "batch": 5,
+   "intro": "Algorithms can be drawn as flowcharts or written in pseudocode: structured English that is easy to turn into any programming language. Every algorithm is built from sequence, selection and iteration.",
+   "teach": "Explain what each flowchart shape means.",
+   "talk": "Ask {him} to describe the algorithm {she} uses to get ready in the morning, including one decision."
+  },
+  {
+   "id": "computing.python",
+   "title": "Python: variables, data types and operators",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.flowcharts"
+   ],
+   "batch": 5,
+   "intro": "A variable is a named box in memory. Python knows the difference between whole numbers (int), decimals (float), text (str) and True/False (bool), and the type changes what operators do: \"3\" + \"4\" is \"34\"!",
+   "teach": "Explain why input() needs int() around it before you can do maths with the answer.",
+   "talk": "Ask {him} what 17 // 5 and 17 % 5 give, and why both are useful."
+  },
+  {
+   "id": "computing.selection",
+   "title": "Selection: if, elif and else",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.python"
+   ],
+   "batch": 5,
+   "intro": "Selection lets a program make decisions, like the Oracle answering differently depending on the question. Python checks conditions in order and runs the first one that is True.",
+   "teach": "Explain the difference between using elif and using several separate if statements.",
+   "talk": "Ask {him} to write (on paper) an if/elif/else that turns a test score into a grade."
+  },
+  {
+   "id": "computing.loops",
+   "title": "Iteration: for and while loops",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.selection"
+   ],
+   "batch": 5,
+   "intro": "Loops repeat code. A for loop repeats a set number of times (count-controlled); a while loop repeats until a condition becomes False (condition-controlled). Forget to change the condition and it loops for ever, like Sisyphus and his boulder.",
+   "teach": "Explain when you would choose a while loop instead of a for loop.",
+   "talk": "Ask {him} what range(2, 10, 3) produces."
+  },
+  {
+   "id": "computing.lists",
+   "title": "Lists, strings and functions",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.loops"
+   ],
+   "batch": 5,
+   "intro": "Lists store many values under one name, and strings are really sequences of characters. Both count positions from 0. Functions package up code so it can be reused, which is decomposition in action.",
+   "teach": "Explain the difference between a parameter and a return value.",
+   "talk": "Ask {him} what \"ODYSSEY\"[1:4] would give, and why."
+  },
+  {
+   "id": "computing.debugging",
+   "title": "Errors, testing and debugging",
+   "kind": "facts",
+   "prereqs": [
+    "computing.lists"
+   ],
+   "batch": 5,
+   "intro": "Every programmer makes errors. Syntax errors stop the code running at all; runtime errors crash it part-way; logic errors are the sneakiest: the program runs but gives the wrong answer. Good testing finds them.",
+   "teach": "Explain the difference between a syntax error and a logic error, with an example of each.",
+   "talk": "Ask {him} what “boundary” test data would be for a program that accepts ages 11 to 18."
+  },
+  {
+   "id": "computing.searching",
+   "title": "Searching algorithms",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.loops"
+   ],
+   "batch": 5,
+   "intro": "Linear search checks every item in turn. Binary search keeps halving a SORTED list, so it can find one item among a million in about 20 checks. Choosing the right algorithm matters.",
+   "teach": "Explain why binary search only works on a sorted list.",
+   "talk": "Play “I’m thinking of a number from 1 to 100” and count how many guesses halving takes."
+  },
+  {
+   "id": "computing.sorting",
+   "title": "Sorting algorithms",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.searching"
+   ],
+   "batch": 5,
+   "intro": "Bubble sort swaps neighbours until nothing moves; insertion sort builds a sorted section one item at a time; merge sort splits the list in half again and again, then merges the pieces: divide and conquer.",
+   "teach": "Explain how one pass of a bubble sort works.",
+   "talk": "Ask {him} to sort a hand of playing cards using insertion sort, then explain each step."
+  },
+  {
+   "id": "computing.binary",
+   "title": "Binary and hexadecimal",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.thinking"
+   ],
+   "batch": 5,
+   "intro": "Inside a computer, everything is binary: billions of tiny switches that are on (1) or off (0). Hexadecimal is a shorthand programmers use, because one hex digit stands for exactly four bits.",
+   "teach": "Explain why programmers use hexadecimal instead of long binary numbers.",
+   "talk": "Ask {him} to count to 15 in binary on {her} fingers."
+  },
+  {
+   "id": "computing.binarymaths",
+   "title": "Binary addition, overflow and shifts",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.binary"
+   ],
+   "batch": 5,
+   "intro": "Binary addition works like column addition, but 1 + 1 = 10. When an answer is too big for the bits available, an overflow error happens. Shifting the bits left or right multiplies or divides by 2.",
+   "teach": "Explain what causes an overflow error.",
+   "talk": "Ask {him} why shifting 00000101 two places left gives 20."
+  },
+  {
+   "id": "computing.media",
+   "title": "Representing text, images and sound",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.binary"
+   ],
+   "batch": 5,
+   "intro": "Text, pictures and music all become binary. Characters use codes like ASCII and Unicode; images are grids of pixels; sound is sampled thousands of times a second. More bits mean better quality, and bigger files.",
+   "teach": "Explain how colour depth and resolution affect an image’s file size.",
+   "talk": "Look at the size of a photo on a phone together and work out why it is so big."
+  },
+  {
+   "id": "computing.logic",
+   "title": "Boolean logic and logic gates",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.binary"
+   ],
+   "batch": 5,
+   "intro": "Every decision a computer makes comes down to logic gates: AND, OR, NOT and XOR, built from transistors. A truth table lists every possible input and the output it gives.",
+   "teach": "Explain the difference between OR and XOR with a real-life example.",
+   "talk": "Ask {him} to make up a rule for opening a door that needs an AND and a NOT."
+  },
+  {
+   "id": "computing.hardware",
+   "title": "Hardware: the CPU, memory and storage",
+   "kind": "facts",
+   "prereqs": [
+    "computing.binary"
+   ],
+   "batch": 5,
+   "intro": "The CPU is the brain: it fetches, decodes and executes billions of instructions a second. RAM holds what is running now and forgets it when the power goes; storage keeps files safe.",
+   "teach": "Explain the fetch–decode–execute cycle.",
+   "talk": "Ask {him} to find out how much RAM and storage the family computer or phone has."
+  },
+  {
+   "id": "computing.software",
+   "title": "Software, operating systems and languages",
+   "kind": "facts",
+   "prereqs": [
+    "computing.hardware"
+   ],
+   "batch": 5,
+   "intro": "Software tells the hardware what to do. The operating system manages everything; applications do jobs for us; translators turn the code we write into the machine code the CPU understands.",
+   "teach": "Explain the difference between a compiler and an interpreter.",
+   "talk": "Ask {him} to name three jobs the operating system does while {she} is using a laptop."
+  },
+  {
+   "id": "computing.networks",
+   "title": "Networks and the internet",
+   "kind": "facts",
+   "prereqs": [
+    "computing.hardware"
+   ],
+   "batch": 5,
+   "intro": "A network connects devices so they can share. The internet is a network of networks; the World Wide Web is just one service that runs on it. Data travels in small packets that can take different routes.",
+   "teach": "Explain the difference between the internet and the World Wide Web.",
+   "talk": "Ask {him} what happens, step by step, when {she} types a website address."
+  },
+  {
+   "id": "computing.security",
+   "title": "Cybersecurity and staying safe",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.networks"
+   ],
+   "batch": 5,
+   "intro": "Criminals attack people as much as computers: phishing emails, guessed passwords and malware. Strong passwords, two-factor authentication, encryption and a healthy suspicion keep data safe.",
+   "teach": "Explain how to spot a phishing email.",
+   "talk": "Check together that {her} important accounts use strong, different passwords and two-factor authentication."
+  },
+  {
+   "id": "computing.history",
+   "title": "The story of computing",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "From an ancient Greek bronze gearbox that predicted eclipses, to Babbage, Lovelace and Turing, to the phone in your pocket: computing has a surprisingly long history.",
+   "teach": "Explain why Ada Lovelace is sometimes called the first computer programmer.",
+   "talk": "Look up a photo of the Antikythera mechanism together."
+  },
+  {
+   "id": "computing.ethics",
+   "title": "Computing, ethics and the law",
+   "kind": "facts",
+   "prereqs": [
+    "computing.security"
+   ],
+   "batch": 5,
+   "intro": "Computers raise big questions: who owns your data, is it fair when an algorithm decides, and what happens to old phones? UK law protects data, punishes hacking and covers copying.",
+   "teach": "Explain one way an AI system could be unfair, and how to make it fairer.",
+   "talk": "Discuss with {him}: should a computer ever decide who gets a job interview?"
+  },
+  {
+   "id": "computing.trace",
+   "title": "Trace tables",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.lists"
+   ],
+   "batch": 5,
+   "intro": "A trace table follows a program line by line, writing down every variable as it changes. It is how GCSE students (and professional programmers) find out exactly what code does.",
+   "teach": "Explain how to fill in a trace table for a loop.",
+   "talk": "Ask {him} to trace a Fibonacci loop on paper.",
+   "tier": "stretch"
+  },
+  {
+   "id": "computing.twos",
+   "title": "Negative numbers in binary",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.binarymaths"
+   ],
+   "batch": 5,
+   "intro": "How can 0s and 1s show −5? In two’s complement, the leftmost bit is worth a negative amount (−128 in a byte). It makes subtraction just a kind of addition.",
+   "teach": "Explain how to turn −20 into 8-bit two’s complement.",
+   "talk": "Ask {him} what the smallest number in 8-bit two’s complement is.",
+   "tier": "stretch"
+  },
+  {
+   "id": "computing.sql",
+   "title": "Databases and SQL",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.lists"
+   ],
+   "batch": 5,
+   "intro": "Databases store huge amounts of data in tables of records and fields. SQL is the language for asking questions of them: SELECT these fields FROM this table WHERE this is true.",
+   "teach": "Explain what a primary key is and why every table needs one.",
+   "talk": "Ask {him} to design a table of the Olympian gods: what fields would it need?",
+   "tier": "stretch"
+  },
+  {
+   "id": "computing.topologies",
+   "title": "Network topologies and protocols",
+   "kind": "facts",
+   "prereqs": [
+    "computing.networks"
+   ],
+   "batch": 5,
+   "intro": "Networks can be wired as a star, a mesh or a bus, each with strengths and weaknesses. Protocols are agreed rules, organised in layers, so devices from any maker can talk to each other.",
+   "teach": "Explain one advantage and one disadvantage of a star network.",
+   "talk": "Ask {him} to draw the home network: is it a star?",
+   "tier": "stretch"
+  }
+ ],
+ "items": [
+  {
+   "id": "computing.ct.decomp",
+   "topic": "computing.thinking",
+   "kind": "fact",
+   "prompt": "Breaking a big problem into smaller, more manageable parts is called…",
+   "answer": "decomposition",
+   "distractors": [
+    "abstraction",
+    "pattern recognition",
+    "iteration"
+   ],
+   "explain": "Decomposition: Daedalus planning the labyrinth as walls, corridors and traps, one part at a time."
+  },
+  {
+   "id": "computing.ct.abstract",
+   "topic": "computing.thinking",
+   "kind": "fact",
+   "prompt": "Removing unnecessary detail so you can focus on what matters is called…",
+   "answer": "abstraction",
+   "distractors": [
+    "decomposition",
+    "compression",
+    "selection"
+   ],
+   "explain": "A London Underground map is a famous abstraction: it ignores real distances and shows only the stops and connections."
+  },
+  {
+   "id": "computing.ct.pattern",
+   "topic": "computing.thinking",
+   "kind": "fact",
+   "prompt": "Spotting things that problems have in common, so one solution can be reused, is called…",
+   "answer": "pattern recognition",
+   "distractors": [
+    "abstraction",
+    "debugging",
+    "decomposition"
+   ],
+   "explain": "Once you can sort one list, the same pattern sorts any list.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.ct.algorithm",
+   "topic": "computing.thinking",
+   "kind": "fact",
+   "prompt": "What is an algorithm?",
+   "answer": "a precise sequence of steps to solve a problem",
+   "distractors": [
+    "a computer program written in Python",
+    "a type of computer",
+    "a mistake in a program"
+   ],
+   "explain": "An algorithm can be written in English, pseudocode or a flowchart. A program is an algorithm written in a programming language.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.ct.map",
+   "topic": "computing.thinking",
+   "kind": "mcq",
+   "prompt": "Mira draws a map of Odysseus’s voyage showing only the islands and the order he visited them, not the real distances or coastlines. Which technique is she using?",
+   "options": [
+    {
+     "text": "Abstraction",
+     "correct": true
+    },
+    {
+     "text": "Decomposition",
+     "correct": false,
+     "feedback": "Decomposition splits a problem into parts. Leaving out detail is abstraction."
+    },
+    {
+     "text": "Iteration",
+     "correct": false,
+     "feedback": "Iteration means repeating."
+    }
+   ],
+   "explain": "Leaving out details that don’t matter for the job is abstraction."
+  },
+  {
+   "id": "computing.ct.good",
+   "topic": "computing.thinking",
+   "kind": "mcq",
+   "prompt": "Which instruction is too vague to be part of an algorithm?",
+   "options": [
+    {
+     "text": "“Walk until you are near the temple.”",
+     "correct": true
+    },
+    {
+     "text": "“Walk 200 steps north.”",
+     "correct": false,
+     "feedback": "This is precise: a number and a direction."
+    },
+    {
+     "text": "“If the gate is locked, turn left.”",
+     "correct": false,
+     "feedback": "This is a precise decision."
+    }
+   ],
+   "explain": "Algorithms must be unambiguous: “near” means different things to different people. A computer cannot guess."
+  },
+  {
+   "id": "computing.ct.decompose",
+   "topic": "computing.thinking",
+   "kind": "mcq",
+   "prompt": "Theo is writing a quiz game about the Greek gods. Which list is the best decomposition?",
+   "options": [
+    {
+     "text": "Store the questions; ask a question; check the answer; keep score; show the result",
+     "correct": true
+    },
+    {
+     "text": "Write the whole game in one go",
+     "correct": false,
+     "feedback": "That is the opposite of decomposition."
+    },
+    {
+     "text": "Make it look nice",
+     "correct": false,
+     "feedback": "That is only one small part, and not the most important."
+    }
+   ],
+   "explain": "Each smaller part can be designed, written and tested on its own."
+  },
+  {
+   "id": "computing.ct.process",
+   "topic": "computing.thinking",
+   "kind": "order",
+   "prompt": "Put the stages of solving a problem with a computer in a sensible order.",
+   "items": [
+    "understand the problem",
+    "decompose and design an algorithm",
+    "write the code",
+    "test and fix it"
+   ],
+   "labels": null,
+   "explain": "Programmers who start typing before they understand the problem usually have to start again."
+  },
+  {
+   "id": "computing.fc.diamond",
+   "topic": "computing.flowcharts",
+   "kind": "fact",
+   "prompt": "In a flowchart, which shape shows a decision (a question with Yes/No answers)?",
+   "answer": "a diamond",
+   "distractors": [
+    "a rectangle",
+    "an oval",
+    "a parallelogram"
+   ],
+   "explain": "Diamond = decision. It has one way in and two ways out.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.fc.para",
+   "topic": "computing.flowcharts",
+   "kind": "fact",
+   "prompt": "In a flowchart, which shape is used for input and output (like “Ask for a name”)?",
+   "answer": "a parallelogram",
+   "distractors": [
+    "a diamond",
+    "a rectangle",
+    "a circle"
+   ],
+   "explain": "Parallelogram = input or output.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.fc.rect",
+   "topic": "computing.flowcharts",
+   "kind": "fact",
+   "prompt": "In a flowchart, which shape shows a process (like “add 1 to score”)?",
+   "answer": "a rectangle",
+   "distractors": [
+    "a diamond",
+    "a parallelogram",
+    "an oval"
+   ],
+   "explain": "Rectangle = process.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.fc.oval",
+   "topic": "computing.flowcharts",
+   "kind": "fact",
+   "prompt": "In a flowchart, which shape is used for Start and Stop?",
+   "answer": "an oval (rounded rectangle)",
+   "distractors": [
+    "a diamond",
+    "a parallelogram",
+    "a square"
+   ],
+   "explain": "The terminator shape marks where the algorithm begins and ends.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.fc.three",
+   "topic": "computing.flowcharts",
+   "kind": "fact",
+   "prompt": "Every algorithm is built from three constructs: sequence, selection and…",
+   "answer": "iteration",
+   "distractors": [
+    "decomposition",
+    "compilation",
+    "abstraction"
+   ],
+   "explain": "Sequence (one step after another), selection (decisions) and iteration (repetition).",
+   "accept": [
+    "repetition",
+    "loops"
+   ]
+  },
+  {
+   "id": "computing.fc.pseudo",
+   "topic": "computing.flowcharts",
+   "kind": "fact",
+   "prompt": "What is pseudocode?",
+   "answer": "a way of writing an algorithm in structured English, not a real programming language",
+   "distractors": [
+    "code that has a bug in it",
+    "a fake password",
+    "the machine code a CPU runs"
+   ],
+   "explain": "Pseudocode lets you plan the logic without worrying about the exact rules of one language.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.fc.loop",
+   "topic": "computing.flowcharts",
+   "kind": "mcq",
+   "prompt": "In a flowchart, an arrow goes from a decision back UP to an earlier box. What does this show?",
+   "options": [
+    {
+     "text": "Iteration: a loop",
+     "correct": true
+    },
+    {
+     "text": "Selection with no loop",
+     "correct": false,
+     "feedback": "Going back to an earlier step makes the algorithm repeat."
+    },
+    {
+     "text": "An error in the flowchart",
+     "correct": false,
+     "feedback": "It is a normal way to draw a loop."
+    }
+   ],
+   "explain": "An arrow looping back means those steps repeat until the decision sends the flow onwards."
+  },
+  {
+   "id": "computing.fc.trace",
+   "topic": "computing.flowcharts",
+   "kind": "mcq",
+   "prompt": "This pseudocode runs with heads = 9:\n```\nIF heads > 7 THEN\n    OUTPUT \"Hydra!\"\nELSE\n    OUTPUT \"Just a snake\"\nENDIF\n```\nWhat is output?",
+   "options": [
+    {
+     "text": "Hydra!",
+     "correct": true
+    },
+    {
+     "text": "Just a snake",
+     "correct": false,
+     "feedback": "9 > 7 is true, so the THEN part runs."
+    },
+    {
+     "text": "Both lines",
+     "correct": false,
+     "feedback": "Only one branch of an IF runs."
+    }
+   ],
+   "explain": "9 is greater than 7, so the first branch runs."
+  },
+  {
+   "id": "computing.py.tmpl",
+   "topic": "computing.python",
+   "kind": "template",
+   "gen": "y8cVars",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.py.str",
+   "topic": "computing.python",
+   "kind": "fact",
+   "prompt": "In Python, what data type is \"Athena\"?",
+   "answer": "string",
+   "distractors": [
+    "integer",
+    "float",
+    "Boolean"
+   ],
+   "explain": "Text in quotation marks is a string (str).",
+   "accept": [
+    "str"
+   ]
+  },
+  {
+   "id": "computing.py.float",
+   "topic": "computing.python",
+   "kind": "fact",
+   "prompt": "What data type is 3.14 in Python?",
+   "answer": "float",
+   "distractors": [
+    "integer",
+    "string",
+    "Boolean"
+   ],
+   "explain": "A float is a number with a decimal point.",
+   "accept": [
+    "floating point",
+    "real"
+   ]
+  },
+  {
+   "id": "computing.py.bool",
+   "topic": "computing.python",
+   "kind": "fact",
+   "prompt": "A data type that can only be True or False is called…",
+   "answer": "Boolean",
+   "distractors": [
+    "integer",
+    "string",
+    "float"
+   ],
+   "explain": "Named after George Boole, a 19th-century mathematician. In Python: bool.",
+   "accept": [
+    "bool"
+   ]
+  },
+  {
+   "id": "computing.py.input",
+   "topic": "computing.python",
+   "kind": "mcq",
+   "prompt": "Kit runs this program and types 5:\n```\nn = input(\"How many heads? \")\nprint(n * 2)\n```\nWhat is printed?",
+   "options": [
+    {
+     "text": "55",
+     "correct": true
+    },
+    {
+     "text": "10",
+     "correct": false,
+     "feedback": "input() always gives a string. \"5\" * 2 repeats it: 55."
+    },
+    {
+     "text": "An error",
+     "correct": false,
+     "feedback": "Multiplying a string by a whole number is allowed: it repeats the string."
+    }
+   ],
+   "explain": "input() always returns a string. To do maths, convert it: int(input(...))."
+  },
+  {
+   "id": "computing.py.equals",
+   "topic": "computing.python",
+   "kind": "mcq",
+   "prompt": "What is the difference between = and == in Python?",
+   "options": [
+    {
+     "text": "= stores a value in a variable; == compares two values",
+     "correct": true
+    },
+    {
+     "text": "They mean the same thing",
+     "correct": false,
+     "feedback": "x = 5 sets x; x == 5 asks “is x 5?”"
+    },
+    {
+     "text": "== stores a value; = compares",
+     "correct": false,
+     "feedback": "It is the other way round."
+    }
+   ],
+   "explain": "One equals assigns; two equals compares and gives True or False."
+  },
+  {
+   "id": "computing.py.divide",
+   "topic": "computing.python",
+   "kind": "mcq",
+   "prompt": "In Python 3, what does 7 / 2 give?",
+   "options": [
+    {
+     "text": "3.5",
+     "correct": true
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "7 // 2 gives 3. A single / always gives a float."
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "7 % 2 gives the remainder, 1."
+    }
+   ],
+   "explain": "/ is true division, // is whole-number (floor) division, % is the remainder."
+  },
+  {
+   "id": "computing.py.name",
+   "topic": "computing.python",
+   "kind": "mcq",
+   "prompt": "Which is NOT a valid Python variable name?",
+   "options": [
+    {
+     "text": "2heroes",
+     "correct": true
+    },
+    {
+     "text": "hero_2",
+     "correct": false,
+     "feedback": "Underscores and digits are fine, as long as the name doesn’t start with a digit."
+    },
+    {
+     "text": "heroCount",
+     "correct": false,
+     "feedback": "This is valid."
+    }
+   ],
+   "explain": "Variable names cannot start with a digit or contain spaces."
+  },
+  {
+   "id": "computing.py.comment",
+   "topic": "computing.python",
+   "kind": "fact",
+   "prompt": "In Python, which symbol starts a comment (a note the computer ignores)?",
+   "answer": "#",
+   "distractors": [
+    "//",
+    "--",
+    "%"
+   ],
+   "explain": "Comments explain code to humans: # this line works out the score.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.py.cast",
+   "topic": "computing.python",
+   "kind": "mcq",
+   "prompt": "Which line correctly asks for a number and stores it as an integer?",
+   "options": [
+    {
+     "text": "age = int(input(\"Age? \"))",
+     "correct": true
+    },
+    {
+     "text": "age = input(int(\"Age? \"))",
+     "correct": false,
+     "feedback": "int() must go around the input, converting the answer."
+    },
+    {
+     "text": "age = int(\"Age? \")",
+     "correct": false,
+     "feedback": "This tries to convert the question text itself, which fails."
+    }
+   ],
+   "explain": "input() gets text; int() converts that text to a whole number."
+  },
+  {
+   "id": "computing.sel.tmpl",
+   "topic": "computing.selection",
+   "kind": "template",
+   "gen": "y8cSelection",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.sel.ne",
+   "topic": "computing.selection",
+   "kind": "fact",
+   "prompt": "Which Python operator means “is not equal to”?",
+   "answer": "!=",
+   "distractors": [
+    "<>",
+    "=!",
+    "=/="
+   ],
+   "explain": "a != b is True when a and b are different.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.sel.indent",
+   "topic": "computing.selection",
+   "kind": "mcq",
+   "prompt": "How does Python know which lines belong inside an if statement?",
+   "options": [
+    {
+     "text": "They are indented (usually 4 spaces)",
+     "correct": true
+    },
+    {
+     "text": "They are inside curly brackets",
+     "correct": false,
+     "feedback": "Many languages use { }, but Python uses indentation."
+    },
+    {
+     "text": "They end with a semicolon",
+     "correct": false,
+     "feedback": "Python does not need semicolons."
+    }
+   ],
+   "explain": "Indentation is part of Python’s grammar: get it wrong and you get an error, or a logic error."
+  },
+  {
+   "id": "computing.sel.elif",
+   "topic": "computing.selection",
+   "kind": "mcq",
+   "prompt": "Why use elif instead of a second if?",
+   "options": [
+    {
+     "text": "elif is only checked if the earlier conditions were False, so only one branch runs",
+     "correct": true
+    },
+    {
+     "text": "elif runs faster",
+     "correct": false,
+     "feedback": "The point is the logic: only one branch of an if/elif/else chain runs."
+    },
+    {
+     "text": "There is no difference",
+     "correct": false,
+     "feedback": "Two separate ifs can BOTH run; an elif cannot run if the if before it did."
+    }
+   ],
+   "explain": "In an if/elif/else chain, exactly one branch runs: the first whose condition is True."
+  },
+  {
+   "id": "computing.sel.and",
+   "topic": "computing.selection",
+   "kind": "mcq",
+   "prompt": "What is True and False?",
+   "options": [
+    {
+     "text": "False",
+     "correct": true
+    },
+    {
+     "text": "True",
+     "correct": false,
+     "feedback": "and needs BOTH sides to be True."
+    },
+    {
+     "text": "An error",
+     "correct": false,
+     "feedback": "and works on any two Booleans."
+    }
+   ],
+   "explain": "and is True only if both are True; or is True if at least one is."
+  },
+  {
+   "id": "computing.sel.boundary",
+   "topic": "computing.selection",
+   "kind": "mcq",
+   "prompt": "Ages 13 and over can enter the Hall of Heroes:\n```\nif age > 13:\n    print(\"Enter\")\n```\nA 13-year-old is refused. What should the condition be?",
+   "options": [
+    {
+     "text": "age >= 13",
+     "correct": true
+    },
+    {
+     "text": "age < 13",
+     "correct": false,
+     "feedback": "That would let in only those under 13."
+    },
+    {
+     "text": "age == 13",
+     "correct": false,
+     "feedback": "That would refuse everyone over 13."
+    }
+   ],
+   "explain": "This is a classic boundary error: > leaves out 13 itself, >= includes it."
+  },
+  {
+   "id": "computing.lp.tmpl",
+   "topic": "computing.loops",
+   "kind": "template",
+   "gen": "y8cLoops",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.lp.range",
+   "topic": "computing.loops",
+   "kind": "fact",
+   "prompt": "Which numbers does range(5) produce?",
+   "answer": "0, 1, 2, 3, 4",
+   "distractors": [
+    "1, 2, 3, 4, 5",
+    "0, 1, 2, 3, 4, 5",
+    "5"
+   ],
+   "explain": "range(n) starts at 0 and stops BEFORE n, so it gives n values.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.lp.kinds",
+   "topic": "computing.loops",
+   "kind": "mcq",
+   "prompt": "Which loop is condition-controlled?",
+   "options": [
+    {
+     "text": "while",
+     "correct": true
+    },
+    {
+     "text": "for i in range(10)",
+     "correct": false,
+     "feedback": "A for loop over range repeats a fixed number of times: count-controlled."
+    },
+    {
+     "text": "if",
+     "correct": false,
+     "feedback": "if is selection, not a loop."
+    }
+   ],
+   "explain": "while keeps going as long as its condition is True."
+  },
+  {
+   "id": "computing.lp.infinite",
+   "topic": "computing.loops",
+   "kind": "mcq",
+   "prompt": "What is wrong with this program?\n```\nlives = 3\nwhile lives > 0:\n    print(\"Fight on!\")\n```",
+   "options": [
+    {
+     "text": "lives never changes, so the loop never ends",
+     "correct": true
+    },
+    {
+     "text": "It is missing a colon",
+     "correct": false,
+     "feedback": "The colon is there."
+    },
+    {
+     "text": "while cannot use >",
+     "correct": false,
+     "feedback": "Any comparison is fine."
+    }
+   ],
+   "explain": "An infinite loop. The loop body needs lives = lives - 1 (or another way to make the condition False)."
+  },
+  {
+   "id": "computing.lp.choose",
+   "topic": "computing.loops",
+   "kind": "mcq",
+   "prompt": "Theo wants to keep asking for the password until it is right. Which loop fits best?",
+   "options": [
+    {
+     "text": "a while loop",
+     "correct": true
+    },
+    {
+     "text": "a for loop with range(3)",
+     "correct": false,
+     "feedback": "That asks exactly 3 times, even if the password was right first time, or still wrong."
+    },
+    {
+     "text": "no loop",
+     "correct": false,
+     "feedback": "He needs to repeat the question."
+    }
+   ],
+   "explain": "When you don’t know in advance how many repeats you need, use a condition-controlled while loop."
+  },
+  {
+   "id": "computing.lp.break",
+   "topic": "computing.loops",
+   "kind": "mcq",
+   "prompt": "What does the keyword break do inside a loop?",
+   "options": [
+    {
+     "text": "Stops the loop immediately",
+     "correct": true
+    },
+    {
+     "text": "Skips to the next item",
+     "correct": false,
+     "feedback": "That is continue."
+    },
+    {
+     "text": "Crashes the program on purpose",
+     "correct": false,
+     "feedback": "break exits the loop neatly and carries on after it."
+    }
+   ],
+   "explain": "break jumps straight out of the loop."
+  },
+  {
+   "id": "computing.ls.tmpl",
+   "topic": "computing.lists",
+   "kind": "template",
+   "gen": "y8cLists",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.ls.zero",
+   "topic": "computing.lists",
+   "kind": "mcq",
+   "prompt": "In the list muses = [\"Clio\", \"Calliope\", \"Urania\"], what is muses[0]?",
+   "options": [
+    {
+     "text": "\"Clio\"",
+     "correct": true
+    },
+    {
+     "text": "\"Calliope\"",
+     "correct": false,
+     "feedback": "Python counts from 0, so index 1 is the second item."
+    },
+    {
+     "text": "An error",
+     "correct": false,
+     "feedback": "Index 0 is the first item."
+    }
+   ],
+   "explain": "Lists are zero-indexed: the first item is at index 0."
+  },
+  {
+   "id": "computing.ls.range",
+   "topic": "computing.lists",
+   "kind": "mcq",
+   "prompt": "muses = [\"Clio\", \"Calliope\", \"Urania\"]. What happens with print(muses[3])?",
+   "options": [
+    {
+     "text": "IndexError: there is no item at index 3",
+     "correct": true
+    },
+    {
+     "text": "It prints \"Urania\"",
+     "correct": false,
+     "feedback": "Urania is at index 2. Three items have indexes 0, 1, 2."
+    },
+    {
+     "text": "It prints nothing",
+     "correct": false,
+     "feedback": "Python raises an error."
+    }
+   ],
+   "explain": "A list of 3 items has indexes 0 to 2. Asking for index 3 is a runtime error."
+  },
+  {
+   "id": "computing.ls.append",
+   "topic": "computing.lists",
+   "kind": "fact",
+   "prompt": "Which list method adds an item to the end of a list?",
+   "answer": "append",
+   "distractors": [
+    "add",
+    "insert",
+    "push"
+   ],
+   "explain": "heroes.append(\"Atalanta\") adds her to the end.",
+   "accept": [
+    ".append",
+    "append()",
+    ".append()"
+   ]
+  },
+  {
+   "id": "computing.ls.param",
+   "topic": "computing.lists",
+   "kind": "mcq",
+   "prompt": "In this function, what is power?\n```\ndef charge(power):\n    return power * 2\n```",
+   "options": [
+    {
+     "text": "A parameter: the name for the value passed in",
+     "correct": true
+    },
+    {
+     "text": "The return value",
+     "correct": false,
+     "feedback": "The return value is power * 2."
+    },
+    {
+     "text": "The name of the function",
+     "correct": false,
+     "feedback": "The function is called charge."
+    }
+   ],
+   "explain": "Parameters are the inputs a function expects. The value you pass in when calling it is the argument."
+  },
+  {
+   "id": "computing.ls.return",
+   "topic": "computing.lists",
+   "kind": "mcq",
+   "prompt": "What is the difference between return and print inside a function?",
+   "options": [
+    {
+     "text": "return sends a value back to the code that called it; print only shows it on screen",
+     "correct": true
+    },
+    {
+     "text": "They are the same",
+     "correct": false,
+     "feedback": "A printed value cannot be stored or used again; a returned one can."
+    },
+    {
+     "text": "return shows it on screen twice",
+     "correct": false,
+     "feedback": "return doesn’t show anything by itself."
+    }
+   ],
+   "explain": "Use return when the result is needed by the rest of the program."
+  },
+  {
+   "id": "computing.ls.why",
+   "topic": "computing.lists",
+   "kind": "mcq",
+   "prompt": "Which is the best reason for writing functions?",
+   "options": [
+    {
+     "text": "Code can be reused and each part tested on its own",
+     "correct": true
+    },
+    {
+     "text": "Programs with functions always run faster",
+     "correct": false,
+     "feedback": "Speed isn’t the main reason: organisation and reuse are."
+    },
+    {
+     "text": "Python requires everything to be in a function",
+     "correct": false,
+     "feedback": "It doesn’t."
+    }
+   ],
+   "explain": "Functions are decomposition in code: name a job once, use it many times."
+  },
+  {
+   "id": "computing.ls.len",
+   "topic": "computing.lists",
+   "kind": "fact",
+   "prompt": "What does len(\"MEDUSA\") give?",
+   "answer": "6",
+   "distractors": [
+    "5",
+    "7",
+    "0"
+   ],
+   "explain": "len() counts the characters: M, E, D, U, S, A."
+  },
+  {
+   "id": "computing.db.syntax",
+   "topic": "computing.debugging",
+   "kind": "mcq",
+   "prompt": "What kind of error is this?\n```\nprint(\"Hello, Olympus\"\n```",
+   "options": [
+    {
+     "text": "A syntax error: the bracket is never closed",
+     "correct": true
+    },
+    {
+     "text": "A logic error",
+     "correct": false,
+     "feedback": "The code can’t even run, so it is a syntax error."
+    },
+    {
+     "text": "A runtime error",
+     "correct": false,
+     "feedback": "Python spots this before running anything."
+    }
+   ],
+   "explain": "Syntax errors break the rules of the language: missing brackets, colons or quotes."
+  },
+  {
+   "id": "computing.db.logic",
+   "topic": "computing.debugging",
+   "kind": "mcq",
+   "prompt": "This should find the average of two scores, but gives the wrong answer. What kind of error?\n```\na = 8\nb = 6\naverage = a + b / 2\nprint(average)\n```",
+   "options": [
+    {
+     "text": "A logic error: it should be (a + b) / 2",
+     "correct": true
+    },
+    {
+     "text": "A syntax error",
+     "correct": false,
+     "feedback": "It runs without complaint, so it is not a syntax error."
+    },
+    {
+     "text": "A runtime error",
+     "correct": false,
+     "feedback": "It doesn’t crash: it just prints 11.0 instead of 7.0."
+    }
+   ],
+   "explain": "Division happens before addition, so it works out 8 + 3. Brackets fix it."
+  },
+  {
+   "id": "computing.db.runtime",
+   "topic": "computing.debugging",
+   "kind": "mcq",
+   "prompt": "What kind of error happens here?\n```\nships = 0\nprint(100 / ships)\n```",
+   "options": [
+    {
+     "text": "A runtime error: dividing by zero",
+     "correct": true
+    },
+    {
+     "text": "A syntax error",
+     "correct": false,
+     "feedback": "The code is written correctly; the problem only appears when it runs."
+    },
+    {
+     "text": "No error",
+     "correct": false,
+     "feedback": "Dividing by zero is impossible, so Python stops with ZeroDivisionError."
+    }
+   ],
+   "explain": "Runtime errors happen while the program is running, often because of unexpected values."
+  },
+  {
+   "id": "computing.db.boundary",
+   "topic": "computing.debugging",
+   "kind": "fact",
+   "prompt": "A program accepts ages 11 to 18. Testing it with 11 and 18 is called using … test data.",
+   "answer": "boundary",
+   "distractors": [
+    "normal",
+    "erroneous",
+    "random"
+   ],
+   "explain": "Boundary data sits on the edges of the valid range, where mistakes like > instead of >= hide.",
+   "accept": [
+    "extreme",
+    "boundary test"
+   ]
+  },
+  {
+   "id": "computing.db.erroneous",
+   "topic": "computing.debugging",
+   "kind": "fact",
+   "prompt": "Typing “banana” into a program that expects an age is … test data.",
+   "answer": "erroneous",
+   "distractors": [
+    "boundary",
+    "normal",
+    "valid"
+   ],
+   "explain": "Erroneous (invalid) data should be rejected politely, not crash the program.",
+   "accept": [
+    "invalid"
+   ]
+  },
+  {
+   "id": "computing.db.dryrun",
+   "topic": "computing.debugging",
+   "kind": "mcq",
+   "prompt": "What is a “dry run”?",
+   "options": [
+    {
+     "text": "Working through code by hand, line by line, to see what it does",
+     "correct": true
+    },
+    {
+     "text": "Running a program with no data",
+     "correct": false,
+     "feedback": "It is done on paper, often with a trace table."
+    },
+    {
+     "text": "Deleting the code and starting again",
+     "correct": false,
+     "feedback": "A dry run is a careful reading, not deletion."
+    }
+   ],
+   "explain": "Dry runs find logic errors that the computer can’t point out for you."
+  },
+  {
+   "id": "computing.db.hopper",
+   "topic": "computing.debugging",
+   "kind": "mcq",
+   "prompt": "Why is fixing errors called “debugging”?",
+   "options": [
+    {
+     "text": "A famous story: a moth was found stuck in an early computer, and the team taped it in their logbook",
+     "correct": true
+    },
+    {
+     "text": "Programmers used to keep bugs as pets",
+     "correct": false,
+     "feedback": "It comes from a moth found in a computer in 1947."
+    },
+    {
+     "text": "It is short for “de-buggy-ing” a car",
+     "correct": false,
+     "feedback": "The word “bug” for a fault is older, but the moth story made it famous."
+    }
+   ],
+   "explain": "Grace Hopper’s team found a moth in the Harvard Mark II in 1947. Engineers had called faults “bugs” before, but the logbook made it famous."
+  },
+  {
+   "id": "computing.se.tmpl",
+   "topic": "computing.searching",
+   "kind": "template",
+   "gen": "y8cSearch",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.se.sorted",
+   "topic": "computing.searching",
+   "kind": "mcq",
+   "prompt": "What does a binary search need before it can start?",
+   "options": [
+    {
+     "text": "The data must be sorted",
+     "correct": true
+    },
+    {
+     "text": "The data must be in binary",
+     "correct": false,
+     "feedback": "“Binary” refers to splitting in two, not to 0s and 1s."
+    },
+    {
+     "text": "The data must be numbers",
+     "correct": false,
+     "feedback": "It works on sorted words too."
+    }
+   ],
+   "explain": "Binary search compares with the middle and throws away half. That only makes sense if the list is in order."
+  },
+  {
+   "id": "computing.se.when",
+   "topic": "computing.searching",
+   "kind": "mcq",
+   "prompt": "When is a linear search a better choice than a binary search?",
+   "options": [
+    {
+     "text": "When the list is small or not sorted",
+     "correct": true
+    },
+    {
+     "text": "When the list is huge and sorted",
+     "correct": false,
+     "feedback": "That is exactly when binary search shines."
+    },
+    {
+     "text": "Never",
+     "correct": false,
+     "feedback": "Linear search works on unsorted lists, and is simple for small ones."
+    }
+   ],
+   "explain": "Sorting a list just to search it once can take longer than a linear search."
+  },
+  {
+   "id": "computing.se.million",
+   "topic": "computing.searching",
+   "kind": "fact",
+   "prompt": "About how many checks does a binary search need, at most, to find an item among a million sorted items?",
+   "answer": "20",
+   "distractors": [
+    "1000",
+    "500000",
+    "1000000"
+   ],
+   "explain": "2^{20} is just over a million, and each check halves the list.",
+   "accept": [
+    "about 20",
+    "twenty"
+   ]
+  },
+  {
+   "id": "computing.se.linear",
+   "topic": "computing.searching",
+   "kind": "mcq",
+   "prompt": "In the WORST case, how many items does a linear search check in a list of n items?",
+   "options": [
+    {
+     "text": "n: every item",
+     "correct": true
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "That is the best case (found first time)."
+    },
+    {
+     "text": "n ÷ 2",
+     "correct": false,
+     "feedback": "That is roughly the average, not the worst."
+    }
+   ],
+   "explain": "The worst case is when the item is last, or not there at all."
+  },
+  {
+   "id": "computing.so.tmpl",
+   "topic": "computing.sorting",
+   "kind": "template",
+   "gen": "y8cSort",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.so.bubble",
+   "topic": "computing.sorting",
+   "kind": "mcq",
+   "prompt": "How does a bubble sort know the list is sorted?",
+   "options": [
+    {
+     "text": "A whole pass happens with no swaps",
+     "correct": true
+    },
+    {
+     "text": "It counts the items",
+     "correct": false,
+     "feedback": "It needs to check the order, not the number of items."
+    },
+    {
+     "text": "After exactly one pass",
+     "correct": false,
+     "feedback": "One pass only guarantees the largest item is at the end."
+    }
+   ],
+   "explain": "If no neighbours needed swapping, everything is in order."
+  },
+  {
+   "id": "computing.so.merge",
+   "topic": "computing.sorting",
+   "kind": "mcq",
+   "prompt": "Merge sort is an example of which strategy?",
+   "options": [
+    {
+     "text": "Divide and conquer",
+     "correct": true
+    },
+    {
+     "text": "Brute force",
+     "correct": false,
+     "feedback": "Brute force tries every possibility."
+    },
+    {
+     "text": "Trial and error",
+     "correct": false,
+     "feedback": "Merge sort is a precise algorithm."
+    }
+   ],
+   "explain": "It splits the list into halves until each piece has one item, then merges the pieces in order."
+  },
+  {
+   "id": "computing.so.big",
+   "topic": "computing.sorting",
+   "kind": "mcq",
+   "prompt": "Which is usually fastest for sorting a very large list?",
+   "options": [
+    {
+     "text": "Merge sort",
+     "correct": true
+    },
+    {
+     "text": "Bubble sort",
+     "correct": false,
+     "feedback": "Bubble sort is simple but very slow on large lists."
+    },
+    {
+     "text": "Insertion sort",
+     "correct": false,
+     "feedback": "Insertion sort is good for small or nearly sorted lists, slow for huge ones."
+    }
+   ],
+   "explain": "For a million items, bubble sort could need around half a trillion comparisons; merge sort needs about 20 million."
+  },
+  {
+   "id": "computing.so.insertion",
+   "topic": "computing.sorting",
+   "kind": "mcq",
+   "prompt": "Which everyday activity is most like an insertion sort?",
+   "options": [
+    {
+     "text": "Sorting a hand of cards by picking each card up and sliding it into place",
+     "correct": true
+    },
+    {
+     "text": "Splitting a pile in half again and again",
+     "correct": false,
+     "feedback": "That is more like merge sort."
+    },
+    {
+     "text": "Swapping neighbouring books until none are out of order",
+     "correct": false,
+     "feedback": "That is bubble sort."
+    }
+   ],
+   "explain": "Insertion sort grows a sorted section one item at a time."
+  },
+  {
+   "id": "computing.bn.tmpl",
+   "topic": "computing.binary",
+   "kind": "template",
+   "gen": "y8cBinary",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.bn.tmpl2",
+   "topic": "computing.binary",
+   "kind": "template",
+   "gen": "y8cHex",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.bn.why",
+   "topic": "computing.binary",
+   "kind": "mcq",
+   "prompt": "Why do computers use binary?",
+   "options": [
+    {
+     "text": "Their circuits are made of transistors that are either on or off",
+     "correct": true
+    },
+    {
+     "text": "Binary is easier for humans to read",
+     "correct": false,
+     "feedback": "Humans find binary hard. That’s why we use hex!"
+    },
+    {
+     "text": "It uses less electricity than denary",
+     "correct": false,
+     "feedback": "The reason is that switches have two states."
+    }
+   ],
+   "explain": "Two states (on/off, 1/0) are easy to build reliably with billions of tiny switches."
+  },
+  {
+   "id": "computing.bn.byte",
+   "topic": "computing.binary",
+   "kind": "fact",
+   "prompt": "How many bits are in a byte?",
+   "answer": "8",
+   "distractors": [
+    "4",
+    "10",
+    "16"
+   ],
+   "explain": "A byte is 8 bits; half a byte (4 bits) is a nibble."
+  },
+  {
+   "id": "computing.bn.nibble",
+   "topic": "computing.binary",
+   "kind": "fact",
+   "prompt": "What is 4 bits called?",
+   "answer": "a nibble",
+   "distractors": [
+    "a byte",
+    "a word",
+    "a kilobit"
+   ],
+   "explain": "A nibble is half a byte, and it matches exactly one hexadecimal digit.",
+   "accept": [
+    "nibble",
+    "nybble"
+   ]
+  },
+  {
+   "id": "computing.bn.hexwhy",
+   "topic": "computing.binary",
+   "kind": "mcq",
+   "prompt": "Why do programmers often use hexadecimal?",
+   "options": [
+    {
+     "text": "It is shorter and easier to read than binary, and converts to it easily",
+     "correct": true
+    },
+    {
+     "text": "Computers store data in hexadecimal",
+     "correct": false,
+     "feedback": "Computers store binary. Hex is only for humans."
+    },
+    {
+     "text": "It uses less memory",
+     "correct": false,
+     "feedback": "It makes no difference to memory."
+    }
+   ],
+   "explain": "One hex digit is exactly 4 bits, so FF is far easier to read and type than 11111111."
+  },
+  {
+   "id": "computing.bn.colour",
+   "topic": "computing.binary",
+   "kind": "mcq",
+   "prompt": "On the web, the colour #FF0000 means full red, no green, no blue. What is FF in denary?",
+   "options": [
+    {
+     "text": "255",
+     "correct": true
+    },
+    {
+     "text": "15",
+     "correct": false,
+     "feedback": "F is 15, but FF is 15 × 16 + 15."
+    },
+    {
+     "text": "100",
+     "correct": false,
+     "feedback": "FF = 255, the biggest value one byte can hold."
+    }
+   ],
+   "explain": "Each pair of hex digits is one byte: 0 to 255 for red, green and blue."
+  },
+  {
+   "id": "computing.bm.tmpl",
+   "topic": "computing.binarymaths",
+   "kind": "template",
+   "gen": "y8cBinAdd",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.bm.tmpl2",
+   "topic": "computing.binarymaths",
+   "kind": "template",
+   "gen": "y8cShift",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.bm.onePlusOne",
+   "topic": "computing.binarymaths",
+   "kind": "fact",
+   "prompt": "In binary, what is 1 + 1?",
+   "answer": "10",
+   "distractors": [
+    "2",
+    "11",
+    "0"
+   ],
+   "explain": "1 + 1 = 2, and 2 in binary is 10: write 0, carry 1.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.bm.three",
+   "topic": "computing.binarymaths",
+   "kind": "fact",
+   "prompt": "In binary, what is 1 + 1 + 1?",
+   "answer": "11",
+   "distractors": [
+    "3",
+    "10",
+    "111"
+   ],
+   "explain": "3 in binary is 11: write 1, carry 1.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.bm.overflow",
+   "topic": "computing.binarymaths",
+   "kind": "mcq",
+   "prompt": "What is an overflow error?",
+   "options": [
+    {
+     "text": "The result of a calculation is too big to fit in the bits available",
+     "correct": true
+    },
+    {
+     "text": "Too many programs are open at once",
+     "correct": false,
+     "feedback": "That is about memory, not overflow."
+    },
+    {
+     "text": "Water damage to a computer",
+     "correct": false,
+     "feedback": "Not this kind of overflow!"
+    }
+   ],
+   "explain": "With 8 bits, anything over 255 overflows: the extra carry is lost."
+  },
+  {
+   "id": "computing.bm.right",
+   "topic": "computing.binarymaths",
+   "kind": "mcq",
+   "prompt": "What does a right shift of 1 place do to a binary number?",
+   "options": [
+    {
+     "text": "Halves it (dropping any remainder)",
+     "correct": true
+    },
+    {
+     "text": "Doubles it",
+     "correct": false,
+     "feedback": "That is a left shift."
+    },
+    {
+     "text": "Makes it negative",
+     "correct": false,
+     "feedback": "Shifts move the bits; they don’t change the sign in simple binary."
+    }
+   ],
+   "explain": "Each place to the right is worth half as much."
+  },
+  {
+   "id": "computing.md.tmpl",
+   "topic": "computing.media",
+   "kind": "template",
+   "gen": "y8cAscii",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.md.tmpl2",
+   "topic": "computing.media",
+   "kind": "template",
+   "gen": "y8cUnits",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.md.tmpl3",
+   "topic": "computing.media",
+   "kind": "template",
+   "gen": "y8cFileSize",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.md.unicode",
+   "topic": "computing.media",
+   "kind": "mcq",
+   "prompt": "Why was Unicode invented when ASCII already existed?",
+   "options": [
+    {
+     "text": "ASCII has only 128 characters, not enough for every language, such as Greek, Chinese or Arabic",
+     "correct": true
+    },
+    {
+     "text": "ASCII was too slow",
+     "correct": false,
+     "feedback": "The problem was the number of characters."
+    },
+    {
+     "text": "ASCII could not store capital letters",
+     "correct": false,
+     "feedback": "It can: A is 65."
+    }
+   ],
+   "explain": "Unicode can represent over a million characters, including α β γ and emoji."
+  },
+  {
+   "id": "computing.md.pixel",
+   "topic": "computing.media",
+   "kind": "fact",
+   "prompt": "The smallest single dot of colour in a digital image is called a…",
+   "answer": "pixel",
+   "distractors": [
+    "bit",
+    "byte",
+    "sample"
+   ],
+   "explain": "Short for “picture element”."
+  },
+  {
+   "id": "computing.md.depth",
+   "topic": "computing.media",
+   "kind": "fact",
+   "prompt": "The number of bits used to store the colour of each pixel is called the…",
+   "answer": "colour depth",
+   "distractors": [
+    "resolution",
+    "sample rate",
+    "bit rate"
+   ],
+   "explain": "More bits per pixel mean more possible colours: 24-bit colour gives over 16 million.",
+   "accept": [
+    "color depth",
+    "bit depth"
+   ]
+  },
+  {
+   "id": "computing.md.resolution",
+   "topic": "computing.media",
+   "kind": "fact",
+   "prompt": "The number of pixels in an image (for example 1920 × 1080) is its…",
+   "answer": "resolution",
+   "distractors": [
+    "colour depth",
+    "file type",
+    "metadata"
+   ],
+   "explain": "Higher resolution means more detail and a bigger file."
+  },
+  {
+   "id": "computing.md.sample",
+   "topic": "computing.media",
+   "kind": "fact",
+   "prompt": "The number of times per second a sound is measured when it is recorded is the…",
+   "answer": "sample rate",
+   "distractors": [
+    "bit depth",
+    "resolution",
+    "volume"
+   ],
+   "explain": "CD audio uses 44,100 samples per second.",
+   "accept": [
+    "sampling rate",
+    "sample frequency"
+   ]
+  },
+  {
+   "id": "computing.md.lossy",
+   "topic": "computing.media",
+   "kind": "mcq",
+   "prompt": "Which kind of compression permanently removes some data to make a file smaller?",
+   "options": [
+    {
+     "text": "Lossy compression",
+     "correct": true
+    },
+    {
+     "text": "Lossless compression",
+     "correct": false,
+     "feedback": "Lossless can be undone exactly."
+    },
+    {
+     "text": "Encryption",
+     "correct": false,
+     "feedback": "Encryption scrambles data; it doesn’t make it smaller."
+    }
+   ],
+   "explain": "JPEG photos and MP3 music use lossy compression; the removed detail is hard for people to notice."
+  },
+  {
+   "id": "computing.md.lossless",
+   "topic": "computing.media",
+   "kind": "mcq",
+   "prompt": "Which file needs LOSSLESS compression?",
+   "options": [
+    {
+     "text": "A Python program",
+     "correct": true
+    },
+    {
+     "text": "A holiday photo",
+     "correct": false,
+     "feedback": "Tiny changes to a photo are invisible, so lossy is fine."
+    },
+    {
+     "text": "A song for a phone",
+     "correct": false,
+     "feedback": "MP3s use lossy compression happily."
+    }
+   ],
+   "explain": "Losing even one character could break a program, so text and code must be compressed losslessly (like ZIP)."
+  },
+  {
+   "id": "computing.md.rle",
+   "topic": "computing.media",
+   "kind": "mcq",
+   "prompt": "Run-length encoding stores AAAAABBB as 5A3B. What is the original of 3Z2E4U?",
+   "options": [
+    {
+     "text": "ZZZEEUUUU",
+     "correct": true
+    },
+    {
+     "text": "ZEU",
+     "correct": false,
+     "feedback": "The numbers say how many of each letter."
+    },
+    {
+     "text": "3Z2E4U",
+     "correct": false,
+     "feedback": "That is the compressed version."
+    }
+   ],
+   "explain": "RLE replaces runs of the same value with a count and the value: a simple lossless method."
+  },
+  {
+   "id": "computing.md.meta",
+   "topic": "computing.media",
+   "kind": "mcq",
+   "prompt": "Data stored with a photo about the photo itself (date, camera, location) is called…",
+   "options": [
+    {
+     "text": "metadata",
+     "correct": true
+    },
+    {
+     "text": "pixels",
+     "correct": false,
+     "feedback": "Pixels are the picture itself."
+    },
+    {
+     "text": "a virus",
+     "correct": false,
+     "feedback": "Metadata is normal, though it can reveal where you were."
+    }
+   ],
+   "explain": "Metadata is “data about data”. Location metadata on a photo can show where you live, so check it before sharing."
+  },
+  {
+   "id": "computing.lg.tmpl",
+   "topic": "computing.logic",
+   "kind": "template",
+   "gen": "y8cLogic",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.lg.and",
+   "topic": "computing.logic",
+   "kind": "fact",
+   "prompt": "Which logic gate gives 1 only when BOTH inputs are 1?",
+   "answer": "AND",
+   "distractors": [
+    "OR",
+    "NOT",
+    "XOR"
+   ],
+   "explain": "AND: both must be true."
+  },
+  {
+   "id": "computing.lg.or",
+   "topic": "computing.logic",
+   "kind": "fact",
+   "prompt": "Which logic gate gives 1 when at least one input is 1?",
+   "answer": "OR",
+   "distractors": [
+    "AND",
+    "NOT",
+    "XOR"
+   ],
+   "explain": "OR: either or both."
+  },
+  {
+   "id": "computing.lg.not",
+   "topic": "computing.logic",
+   "kind": "fact",
+   "prompt": "Which logic gate has one input and flips it?",
+   "answer": "NOT",
+   "distractors": [
+    "AND",
+    "OR",
+    "XOR"
+   ],
+   "explain": "NOT 1 = 0 and NOT 0 = 1. It is also called an inverter."
+  },
+  {
+   "id": "computing.lg.xor",
+   "topic": "computing.logic",
+   "kind": "fact",
+   "prompt": "Which gate gives 1 when exactly one input is 1, but not both?",
+   "answer": "XOR",
+   "distractors": [
+    "OR",
+    "AND",
+    "NOT"
+   ],
+   "explain": "XOR means “exclusive or”. Computers use XOR gates when adding binary numbers.",
+   "accept": [
+    "exclusive or"
+   ]
+  },
+  {
+   "id": "computing.lg.real",
+   "topic": "computing.logic",
+   "kind": "mcq",
+   "prompt": "A lamp in the temple can be switched on from the door OR the altar, but turns off if both switches are on. Which gate is this?",
+   "options": [
+    {
+     "text": "XOR",
+     "correct": true
+    },
+    {
+     "text": "OR",
+     "correct": false,
+     "feedback": "OR would stay on when both are on."
+    },
+    {
+     "text": "AND",
+     "correct": false,
+     "feedback": "AND would need both on."
+    }
+   ],
+   "explain": "Exactly one switch on: that is XOR. Landing lights with a switch at each end of the stairs work this way."
+  },
+  {
+   "id": "computing.lg.table",
+   "topic": "computing.logic",
+   "kind": "mcq",
+   "prompt": "In a truth table for A AND B, how many rows give an output of 1?",
+   "options": [
+    {
+     "text": "1",
+     "correct": true
+    },
+    {
+     "text": "2",
+     "correct": false,
+     "feedback": "Only A = 1, B = 1 gives 1."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "That would be OR."
+    }
+   ],
+   "explain": "Of the four rows (00, 01, 10, 11), only 11 gives 1."
+  },
+  {
+   "id": "computing.lg.transistor",
+   "topic": "computing.logic",
+   "kind": "mcq",
+   "prompt": "What are logic gates built from inside a processor?",
+   "options": [
+    {
+     "text": "Transistors: tiny electronic switches",
+     "correct": true
+    },
+    {
+     "text": "Tiny light bulbs",
+     "correct": false,
+     "feedback": "Early computers used valves; modern ones use transistors."
+    },
+    {
+     "text": "Magnets",
+     "correct": false,
+     "feedback": "Transistors, billions of them."
+    }
+   ],
+   "explain": "A modern processor contains billions of transistors, each smaller than a virus."
+  },
+  {
+   "id": "computing.hw.cpu",
+   "topic": "computing.hardware",
+   "kind": "fact",
+   "prompt": "Which part of a computer fetches, decodes and executes instructions?",
+   "answer": "the CPU",
+   "distractors": [
+    "the hard drive",
+    "the RAM",
+    "the monitor"
+   ],
+   "explain": "The Central Processing Unit is the computer’s brain.",
+   "accept": [
+    "cpu",
+    "processor",
+    "central processing unit"
+   ]
+  },
+  {
+   "id": "computing.hw.cycle",
+   "topic": "computing.hardware",
+   "kind": "order",
+   "prompt": "Put the CPU’s cycle in order.",
+   "items": [
+    "fetch",
+    "decode",
+    "execute"
+   ],
+   "labels": null,
+   "explain": "Fetch the instruction from memory, decode what it means, execute it. Then repeat, billions of times a second."
+  },
+  {
+   "id": "computing.hw.ram",
+   "topic": "computing.hardware",
+   "kind": "fact",
+   "prompt": "Which memory holds the programs and data in use right now, but loses everything when the power goes off?",
+   "answer": "RAM",
+   "distractors": [
+    "ROM",
+    "an SSD",
+    "a USB stick"
+   ],
+   "explain": "RAM is volatile: it forgets when switched off.",
+   "accept": [
+    "random access memory",
+    "main memory"
+   ]
+  },
+  {
+   "id": "computing.hw.rom",
+   "topic": "computing.hardware",
+   "kind": "fact",
+   "prompt": "Which memory keeps the start-up instructions even when the power is off, and normally cannot be changed?",
+   "answer": "ROM",
+   "distractors": [
+    "RAM",
+    "cache",
+    "a register"
+   ],
+   "explain": "Read-Only Memory is non-volatile. It holds the instructions to boot the computer.",
+   "accept": [
+    "read only memory",
+    "read-only memory"
+   ]
+  },
+  {
+   "id": "computing.hw.cache",
+   "topic": "computing.hardware",
+   "kind": "fact",
+   "prompt": "A small amount of very fast memory inside or next to the CPU, holding instructions it uses often, is called…",
+   "answer": "cache",
+   "distractors": [
+    "ROM",
+    "virtual memory",
+    "a hard disk"
+   ],
+   "explain": "Cache is much faster than RAM, but much smaller and more expensive.",
+   "accept": [
+    "cache memory"
+   ]
+  },
+  {
+   "id": "computing.hw.ghz",
+   "topic": "computing.hardware",
+   "kind": "fact",
+   "prompt": "Clock speed is measured in gigahertz. What does 3 GHz mean?",
+   "answer": "about 3 billion cycles per second",
+   "distractors": [
+    "3 thousand cycles per second",
+    "3 programs at once",
+    "3 gigabytes of memory"
+   ],
+   "explain": "Giga means a billion. Each tick of the clock is a chance to carry out an instruction.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.hw.cores",
+   "topic": "computing.hardware",
+   "kind": "mcq",
+   "prompt": "What is the main benefit of a quad-core processor?",
+   "options": [
+    {
+     "text": "It can work on up to four instructions at the same time",
+     "correct": true
+    },
+    {
+     "text": "It has four times as much storage",
+     "correct": false,
+     "feedback": "Cores are about processing, not storage."
+    },
+    {
+     "text": "It never overheats",
+     "correct": false,
+     "feedback": "More cores can actually produce more heat."
+    }
+   ],
+   "explain": "Each core is like a separate processor, but software must be written to use them all."
+  },
+  {
+   "id": "computing.hw.ssd",
+   "topic": "computing.hardware",
+   "kind": "mcq",
+   "prompt": "Why do most laptops now use an SSD instead of a hard disk drive?",
+   "options": [
+    {
+     "text": "It has no moving parts, so it is faster, quieter and tougher",
+     "correct": true
+    },
+    {
+     "text": "It holds more data for the money",
+     "correct": false,
+     "feedback": "Hard disks are usually cheaper per gigabyte."
+    },
+    {
+     "text": "It never runs out of space",
+     "correct": false,
+     "feedback": "SSDs fill up too."
+    }
+   ],
+   "explain": "SSDs use flash memory; hard disks have spinning magnetic platters and a moving read/write head."
+  },
+  {
+   "id": "computing.hw.storage",
+   "topic": "computing.hardware",
+   "kind": "mcq",
+   "prompt": "Which type of storage uses spinning magnetic platters?",
+   "options": [
+    {
+     "text": "A hard disk drive (HDD)",
+     "correct": true
+    },
+    {
+     "text": "A solid-state drive (SSD)",
+     "correct": false,
+     "feedback": "SSDs use flash memory with no moving parts."
+    },
+    {
+     "text": "A Blu-ray disc",
+     "correct": false,
+     "feedback": "Blu-ray is optical: read with a laser."
+    }
+   ],
+   "explain": "Magnetic (HDD), solid-state (SSD, USB sticks), optical (CD, DVD, Blu-ray)."
+  },
+  {
+   "id": "computing.hw.embedded",
+   "topic": "computing.hardware",
+   "kind": "mcq",
+   "prompt": "A washing machine has a tiny computer that does just one job. This is called…",
+   "options": [
+    {
+     "text": "an embedded system",
+     "correct": true
+    },
+    {
+     "text": "a supercomputer",
+     "correct": false,
+     "feedback": "Supercomputers are huge general-purpose machines."
+    },
+    {
+     "text": "a server",
+     "correct": false,
+     "feedback": "A server provides services to other computers."
+    }
+   ],
+   "explain": "Embedded systems are everywhere: cars, microwaves, traffic lights, fitness watches."
+  },
+  {
+   "id": "computing.hw.vonneumann",
+   "topic": "computing.hardware",
+   "kind": "mcq",
+   "prompt": "In the von Neumann architecture used by most computers, where are programs stored?",
+   "options": [
+    {
+     "text": "In the same memory as the data",
+     "correct": true
+    },
+    {
+     "text": "Only inside the CPU",
+     "correct": false,
+     "feedback": "The CPU fetches them from memory."
+    },
+    {
+     "text": "On paper cards",
+     "correct": false,
+     "feedback": "Very old machines did that; von Neumann’s idea was to store them in memory."
+    }
+   ],
+   "explain": "The stored-program idea means a computer can switch jobs just by loading a different program."
+  },
+  {
+   "id": "computing.sw.os",
+   "topic": "computing.software",
+   "kind": "fact",
+   "prompt": "Windows, macOS, Android and Linux are all examples of…",
+   "answer": "operating systems",
+   "distractors": [
+    "applications",
+    "utility software",
+    "programming languages"
+   ],
+   "explain": "The operating system manages the hardware and runs all the other software.",
+   "accept": [
+    "operating system",
+    "os",
+    "oses"
+   ]
+  },
+  {
+   "id": "computing.sw.jobs",
+   "topic": "computing.software",
+   "kind": "mcq",
+   "prompt": "Which of these is a job of the operating system?",
+   "options": [
+    {
+     "text": "Managing memory and sharing the CPU between programs",
+     "correct": true
+    },
+    {
+     "text": "Writing your essays",
+     "correct": false,
+     "feedback": "That is application software, like a word processor."
+    },
+    {
+     "text": "Designing websites",
+     "correct": false,
+     "feedback": "That is done with applications."
+    }
+   ],
+   "explain": "OS jobs: memory management, multitasking, file management, the user interface, drivers for hardware, and security."
+  },
+  {
+   "id": "computing.sw.utility",
+   "topic": "computing.software",
+   "kind": "fact",
+   "prompt": "Antivirus, backup and disk defragmentation programs are examples of … software.",
+   "answer": "utility",
+   "distractors": [
+    "application",
+    "operating system",
+    "open-source"
+   ],
+   "explain": "Utility software helps keep the computer running well.",
+   "accept": [
+    "utilities",
+    "system utility"
+   ]
+  },
+  {
+   "id": "computing.sw.high",
+   "topic": "computing.software",
+   "kind": "mcq",
+   "prompt": "What is a high-level language?",
+   "options": [
+    {
+     "text": "A language like Python that is close to English and must be translated for the CPU",
+     "correct": true
+    },
+    {
+     "text": "The machine code the CPU runs directly",
+     "correct": false,
+     "feedback": "That is the lowest level."
+    },
+    {
+     "text": "A language only for advanced programmers",
+     "correct": false,
+     "feedback": "High-level means far from the hardware, not difficult."
+    }
+   ],
+   "explain": "High-level languages are easy for people; low-level languages (assembly, machine code) are close to the hardware."
+  },
+  {
+   "id": "computing.sw.compiler",
+   "topic": "computing.software",
+   "kind": "mcq",
+   "prompt": "What does a compiler do?",
+   "options": [
+    {
+     "text": "Translates the whole program into machine code before it runs",
+     "correct": true
+    },
+    {
+     "text": "Translates and runs one line at a time",
+     "correct": false,
+     "feedback": "That is an interpreter."
+    },
+    {
+     "text": "Finds viruses",
+     "correct": false,
+     "feedback": "That is antivirus software."
+    }
+   ],
+   "explain": "Compiled programs run fast and can be shared without the source code; interpreters are handy while developing."
+  },
+  {
+   "id": "computing.sw.interpreter",
+   "topic": "computing.software",
+   "kind": "mcq",
+   "prompt": "Python is usually run by an interpreter. What does that mean?",
+   "options": [
+    {
+     "text": "Each line is translated and run in turn, stopping at the first error it reaches",
+     "correct": true
+    },
+    {
+     "text": "The whole program is translated before any of it runs",
+     "correct": false,
+     "feedback": "That is a compiler."
+    },
+    {
+     "text": "It is translated into another human language",
+     "correct": false,
+     "feedback": "It is translated into instructions the CPU can carry out."
+    }
+   ],
+   "explain": "That’s why a Python program can run its first part and then stop with an error on a later line."
+  },
+  {
+   "id": "computing.sw.open",
+   "topic": "computing.software",
+   "kind": "mcq",
+   "prompt": "What is open-source software?",
+   "options": [
+    {
+     "text": "Software whose code anyone can read, change and share",
+     "correct": true
+    },
+    {
+     "text": "Software that is always free of bugs",
+     "correct": false,
+     "feedback": "Open source can still have bugs, but anyone can fix them."
+    },
+    {
+     "text": "Software that can only be used online",
+     "correct": false,
+     "feedback": "It is about the source code being open."
+    }
+   ],
+   "explain": "Linux, Firefox and Python itself are open source. Proprietary software keeps its code secret."
+  },
+  {
+   "id": "computing.sw.machine",
+   "topic": "computing.software",
+   "kind": "fact",
+   "prompt": "The binary instructions a CPU can carry out directly are called…",
+   "answer": "machine code",
+   "distractors": [
+    "pseudocode",
+    "HTML",
+    "source code"
+   ],
+   "explain": "Every program must end up as machine code before the CPU can run it.",
+   "accept": [
+    "machine language"
+   ]
+  },
+  {
+   "id": "computing.nw.lan",
+   "topic": "computing.networks",
+   "kind": "mcq",
+   "prompt": "What is the difference between a LAN and a WAN?",
+   "options": [
+    {
+     "text": "A LAN covers a small area like a school; a WAN covers a large area like a country",
+     "correct": true
+    },
+    {
+     "text": "A LAN is wireless; a WAN uses cables",
+     "correct": false,
+     "feedback": "Both can use cables or wireless. The difference is the area."
+    },
+    {
+     "text": "They are the same",
+     "correct": false,
+     "feedback": "Local Area Network vs Wide Area Network."
+    }
+   ],
+   "explain": "The internet is the biggest WAN of all."
+  },
+  {
+   "id": "computing.nw.web",
+   "topic": "computing.networks",
+   "kind": "mcq",
+   "prompt": "What is the difference between the internet and the World Wide Web?",
+   "options": [
+    {
+     "text": "The internet is the worldwide network of computers; the web is the pages and links you visit using it",
+     "correct": true
+    },
+    {
+     "text": "They are two names for the same thing",
+     "correct": false,
+     "feedback": "Email and online games use the internet but are not the web."
+    },
+    {
+     "text": "The web came first",
+     "correct": false,
+     "feedback": "The internet existed before Tim Berners-Lee invented the web in 1989."
+    }
+   ],
+   "explain": "The web is one service that runs on the internet, like email or video calls."
+  },
+  {
+   "id": "computing.nw.packet",
+   "topic": "computing.networks",
+   "kind": "fact",
+   "prompt": "Data sent over the internet is split into small pieces called…",
+   "answer": "packets",
+   "distractors": [
+    "bytes",
+    "pixels",
+    "frames"
+   ],
+   "explain": "Each packet has the destination address and a number, so it can be reassembled in order.",
+   "accept": [
+    "packet",
+    "data packets"
+   ]
+  },
+  {
+   "id": "computing.nw.route",
+   "topic": "computing.networks",
+   "kind": "mcq",
+   "prompt": "Why can packets from the same email take different routes across the internet?",
+   "options": [
+    {
+     "text": "Each is sent the quickest way at that moment, then they are put back in order",
+     "correct": true
+    },
+    {
+     "text": "Because the email was sent by mistake",
+     "correct": false,
+     "feedback": "This is normal: it is called packet switching."
+    },
+    {
+     "text": "To confuse hackers",
+     "correct": false,
+     "feedback": "Packets take different routes to avoid busy or broken links."
+    }
+   ],
+   "explain": "Packet switching makes the internet fast and reliable: if one route fails, packets go another way."
+  },
+  {
+   "id": "computing.nw.dns",
+   "topic": "computing.networks",
+   "kind": "fact",
+   "prompt": "Which system converts a web address like bbc.co.uk into an IP address?",
+   "answer": "DNS",
+   "distractors": [
+    "HTTP",
+    "Wi-Fi",
+    "USB"
+   ],
+   "explain": "The Domain Name System is like the internet’s phone book.",
+   "accept": [
+    "domain name system",
+    "domain name server"
+   ]
+  },
+  {
+   "id": "computing.nw.ip",
+   "topic": "computing.networks",
+   "kind": "fact",
+   "prompt": "Every device on the internet has a number like 192.168.1.10 that identifies it. What is it called?",
+   "answer": "an IP address",
+   "distractors": [
+    "a MAC address",
+    "a web address",
+    "a password"
+   ],
+   "explain": "Internet Protocol address. IPv4 addresses are four numbers from 0 to 255.",
+   "accept": [
+    "ip address",
+    "ip"
+   ]
+  },
+  {
+   "id": "computing.nw.router",
+   "topic": "computing.networks",
+   "kind": "mcq",
+   "prompt": "What does a router do?",
+   "options": [
+    {
+     "text": "Sends packets between different networks, such as your home and the internet",
+     "correct": true
+    },
+    {
+     "text": "Stores websites",
+     "correct": false,
+     "feedback": "Servers store websites."
+    },
+    {
+     "text": "Makes the internet faster than your plan allows",
+     "correct": false,
+     "feedback": "A router forwards data; it can’t add bandwidth."
+    }
+   ],
+   "explain": "A switch connects devices within one network; a router connects networks to each other."
+  },
+  {
+   "id": "computing.nw.https",
+   "topic": "computing.networks",
+   "kind": "mcq",
+   "prompt": "What does the S in HTTPS mean, and why does it matter?",
+   "options": [
+    {
+     "text": "Secure: the data is encrypted between your device and the website",
+     "correct": true
+    },
+    {
+     "text": "Speedy: pages load faster",
+     "correct": false,
+     "feedback": "It means secure."
+    },
+    {
+     "text": "Simple: an easier version of HTTP",
+     "correct": false,
+     "feedback": "It adds encryption, which is more complex, not simpler."
+    }
+   ],
+   "explain": "With HTTPS, anyone intercepting the packets sees scrambled data, not your password."
+  },
+  {
+   "id": "computing.nw.protocol",
+   "topic": "computing.networks",
+   "kind": "fact",
+   "prompt": "An agreed set of rules for how data is sent between devices is called a…",
+   "answer": "protocol",
+   "distractors": [
+    "program",
+    "router",
+    "firewall"
+   ],
+   "explain": "HTTP, HTTPS, TCP/IP and SMTP (email) are all protocols."
+  },
+  {
+   "id": "computing.nw.bandwidth",
+   "topic": "computing.networks",
+   "kind": "fact",
+   "prompt": "The amount of data that can be sent across a connection per second is called…",
+   "answer": "bandwidth",
+   "distractors": [
+    "latency",
+    "resolution",
+    "packet size"
+   ],
+   "explain": "Measured in megabits per second (Mbps)."
+  },
+  {
+   "id": "computing.sc.tmpl",
+   "topic": "computing.security",
+   "kind": "template",
+   "gen": "y8cCaesar",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.sc.phishing",
+   "topic": "computing.security",
+   "kind": "fact",
+   "prompt": "An email pretending to be from your bank, asking you to “confirm your password”, is called…",
+   "answer": "phishing",
+   "distractors": [
+    "hacking",
+    "spam filtering",
+    "encryption"
+   ],
+   "explain": "Phishing tricks people into giving away details. Real banks never ask for your password by email."
+  },
+  {
+   "id": "computing.sc.spot",
+   "topic": "computing.security",
+   "kind": "mcq",
+   "prompt": "Which is the strongest clue that an email is a phishing attempt?",
+   "options": [
+    {
+     "text": "It urgently demands you click a link and log in, from an address that doesn’t match the company",
+     "correct": true
+    },
+    {
+     "text": "It arrives in the morning",
+     "correct": false,
+     "feedback": "Timing tells you nothing."
+    },
+    {
+     "text": "It has the company logo",
+     "correct": false,
+     "feedback": "Logos are easy to copy. Look at the sender address and the link."
+    }
+   ],
+   "explain": "Urgency, threats, odd addresses and links that go somewhere unexpected are classic signs."
+  },
+  {
+   "id": "computing.sc.password",
+   "topic": "computing.security",
+   "kind": "mcq",
+   "prompt": "Which is the strongest password?",
+   "options": [
+    {
+     "text": "Purple-Hydra-Sails-42!",
+     "correct": true
+    },
+    {
+     "text": "athena123",
+     "correct": false,
+     "feedback": "A common word plus simple numbers can be cracked in seconds."
+    },
+    {
+     "text": "Password",
+     "correct": false,
+     "feedback": "One of the most common passwords in the world."
+    }
+   ],
+   "explain": "Long passwords made of random words, with symbols and numbers, are strong and memorable."
+  },
+  {
+   "id": "computing.sc.2fa",
+   "topic": "computing.security",
+   "kind": "mcq",
+   "prompt": "What is two-factor authentication?",
+   "options": [
+    {
+     "text": "Proving it’s you in two different ways, like a password and a code sent to your phone",
+     "correct": true
+    },
+    {
+     "text": "Typing your password twice",
+     "correct": false,
+     "feedback": "That is still just one factor."
+    },
+    {
+     "text": "Having two different passwords",
+     "correct": false,
+     "feedback": "Both are things you know: still one kind of factor."
+    }
+   ],
+   "explain": "Even if a criminal steals your password, they still need your phone."
+  },
+  {
+   "id": "computing.sc.ransomware",
+   "topic": "computing.security",
+   "kind": "fact",
+   "prompt": "Malware that locks or encrypts your files and demands payment to unlock them is called…",
+   "answer": "ransomware",
+   "distractors": [
+    "a worm",
+    "spyware",
+    "adware"
+   ],
+   "explain": "Backups are the best defence: you can restore your files without paying."
+  },
+  {
+   "id": "computing.sc.trojan",
+   "topic": "computing.security",
+   "kind": "mcq",
+   "prompt": "Why is a Trojan horse a good name for a type of malware?",
+   "options": [
+    {
+     "text": "It pretends to be useful software but hides something harmful inside",
+     "correct": true
+    },
+    {
+     "text": "It spreads by itself across networks",
+     "correct": false,
+     "feedback": "That is a worm."
+    },
+    {
+     "text": "It only attacks Greek computers",
+     "correct": false,
+     "feedback": "It is named after the wooden horse that hid Greek soldiers at Troy."
+    }
+   ],
+   "explain": "Just like the wooden horse, the user welcomes it in."
+  },
+  {
+   "id": "computing.sc.worm",
+   "topic": "computing.security",
+   "kind": "mcq",
+   "prompt": "What makes a worm different from a virus?",
+   "options": [
+    {
+     "text": "A worm spreads across networks by itself; a virus attaches to files and needs them to be opened",
+     "correct": true
+    },
+    {
+     "text": "Worms are harmless",
+     "correct": false,
+     "feedback": "Worms can do serious damage and spread very fast."
+    },
+    {
+     "text": "A virus can only infect phones",
+     "correct": false,
+     "feedback": "Viruses can infect any computer."
+    }
+   ],
+   "explain": "Both are malware (malicious software)."
+  },
+  {
+   "id": "computing.sc.encrypt",
+   "topic": "computing.security",
+   "kind": "mcq",
+   "prompt": "What is encryption?",
+   "options": [
+    {
+     "text": "Scrambling data so only someone with the key can read it",
+     "correct": true
+    },
+    {
+     "text": "Deleting data safely",
+     "correct": false,
+     "feedback": "Encryption keeps data, but makes it unreadable without the key."
+    },
+    {
+     "text": "Making a backup",
+     "correct": false,
+     "feedback": "Backups copy data; encryption protects it."
+    }
+   ],
+   "explain": "Julius Caesar used a simple shift cipher; modern encryption uses keys with hundreds of digits."
+  },
+  {
+   "id": "computing.sc.social",
+   "topic": "computing.security",
+   "kind": "mcq",
+   "prompt": "Someone phones Kit pretending to be from the school IT team and asks for a password “to fix the account”. This is…",
+   "options": [
+    {
+     "text": "social engineering",
+     "correct": true
+    },
+    {
+     "text": "a firewall",
+     "correct": false,
+     "feedback": "A firewall blocks network traffic."
+    },
+    {
+     "text": "a software update",
+     "correct": false,
+     "feedback": "It is a trick aimed at the person, not the computer."
+    }
+   ],
+   "explain": "Social engineering attacks people rather than machines. IT staff never need your password."
+  },
+  {
+   "id": "computing.sc.firewall",
+   "topic": "computing.security",
+   "kind": "mcq",
+   "prompt": "What does a firewall do?",
+   "options": [
+    {
+     "text": "Checks data coming in and out of a network and blocks anything not allowed",
+     "correct": true
+    },
+    {
+     "text": "Stops the computer overheating",
+     "correct": false,
+     "feedback": "It is about network traffic."
+    },
+    {
+     "text": "Removes viruses already on the computer",
+     "correct": false,
+     "feedback": "That is antivirus software."
+    }
+   ],
+   "explain": "Think of it as the guard at the city gate."
+  },
+  {
+   "id": "computing.sc.footprint",
+   "topic": "computing.security",
+   "kind": "mcq",
+   "prompt": "Mira posts a photo outside her school, in uniform, with her full name. What is the main risk?",
+   "options": [
+    {
+     "text": "Strangers could work out where she is every day",
+     "correct": true
+    },
+    {
+     "text": "The photo might be blurry",
+     "correct": false,
+     "feedback": "The worry is what it reveals."
+    },
+    {
+     "text": "No risk, if her account is private",
+     "correct": false,
+     "feedback": "Followers can share or screenshot posts, and accounts can be hacked."
+    }
+   ],
+   "explain": "Your digital footprint can last for ever. Think before sharing your location, school or routine."
+  },
+  {
+   "id": "computing.hi.antikythera",
+   "topic": "computing.history",
+   "kind": "mcq",
+   "prompt": "What is the Antikythera mechanism?",
+   "options": [
+    {
+     "text": "An ancient Greek geared device, over 2,000 years old, that predicted the positions of the Sun and Moon, and eclipses",
+     "correct": true
+    },
+    {
+     "text": "The first electronic computer",
+     "correct": false,
+     "feedback": "It is bronze gears, not electronics, but it was an analogue computer."
+    },
+    {
+     "text": "A Roman siege weapon",
+     "correct": false,
+     "feedback": "It was found in a Greek shipwreck and is a calculating device."
+    }
+   ],
+   "explain": "Found in a shipwreck off the Greek island of Antikythera in 1901, it is often called the oldest known analogue computer."
+  },
+  {
+   "id": "computing.hi.babbage",
+   "topic": "computing.history",
+   "kind": "fact",
+   "prompt": "Which Victorian mathematician designed the Analytical Engine, a mechanical general-purpose computer?",
+   "answer": "Charles Babbage",
+   "distractors": [
+    "Alan Turing",
+    "Tim Berners-Lee",
+    "Isaac Newton"
+   ],
+   "explain": "It was never finished in his lifetime, but its design had memory and a processor, like a modern computer.",
+   "accept": [
+    "babbage"
+   ]
+  },
+  {
+   "id": "computing.hi.lovelace",
+   "topic": "computing.history",
+   "kind": "fact",
+   "prompt": "Who wrote notes in 1843 including an algorithm for the Analytical Engine, often called the first computer program?",
+   "answer": "Ada Lovelace",
+   "distractors": [
+    "Grace Hopper",
+    "Florence Nightingale",
+    "Mary Anning"
+   ],
+   "explain": "She also saw that computers could one day work with music and pictures, not just numbers.",
+   "accept": [
+    "lovelace",
+    "ada"
+   ]
+  },
+  {
+   "id": "computing.hi.turing",
+   "topic": "computing.history",
+   "kind": "fact",
+   "prompt": "Which mathematician worked at Bletchley Park breaking German codes and is called a father of computer science?",
+   "answer": "Alan Turing",
+   "distractors": [
+    "Charles Babbage",
+    "Tommy Flowers",
+    "Bill Gates"
+   ],
+   "explain": "He described the “Turing machine” in 1936 and the Turing test for artificial intelligence in 1950.",
+   "accept": [
+    "turing"
+   ]
+  },
+  {
+   "id": "computing.hi.colossus",
+   "topic": "computing.history",
+   "kind": "mcq",
+   "prompt": "Colossus (1944) is famous because it was…",
+   "options": [
+    {
+     "text": "one of the first programmable electronic digital computers, built to break German codes",
+     "correct": true
+    },
+    {
+     "text": "the first smartphone",
+     "correct": false,
+     "feedback": "It filled a room!"
+    },
+    {
+     "text": "a Greek statue",
+     "correct": false,
+     "feedback": "The Colossus of Rhodes was a statue; this Colossus was a computer at Bletchley Park."
+    }
+   ],
+   "explain": "It was designed by the engineer Tommy Flowers and used about 2,500 valves."
+  },
+  {
+   "id": "computing.hi.transistor",
+   "topic": "computing.history",
+   "kind": "mcq",
+   "prompt": "Why was the invention of the transistor in 1947 so important?",
+   "options": [
+    {
+     "text": "It replaced big, hot valves with tiny, reliable switches, so computers could shrink",
+     "correct": true
+    },
+    {
+     "text": "It invented the internet",
+     "correct": false,
+     "feedback": "The internet came decades later."
+    },
+    {
+     "text": "It made computers mechanical",
+     "correct": false,
+     "feedback": "It made them smaller electronic machines."
+    }
+   ],
+   "explain": "A modern phone chip has billions of transistors."
+  },
+  {
+   "id": "computing.hi.web",
+   "topic": "computing.history",
+   "kind": "fact",
+   "prompt": "Who invented the World Wide Web in 1989?",
+   "answer": "Tim Berners-Lee",
+   "distractors": [
+    "Alan Turing",
+    "Steve Jobs",
+    "Ada Lovelace"
+   ],
+   "explain": "He was working at CERN in Switzerland, and the web was given to the world free.",
+   "accept": [
+    "berners-lee",
+    "tim berners lee",
+    "sir tim berners-lee"
+   ]
+  },
+  {
+   "id": "computing.hi.timeline",
+   "topic": "computing.history",
+   "kind": "order",
+   "prompt": "Put these in order, earliest first.",
+   "items": [
+    "the Antikythera mechanism",
+    "Babbage’s Analytical Engine",
+    "Colossus at Bletchley Park",
+    "the World Wide Web"
+   ],
+   "labels": [
+    "over 2,000 years ago",
+    "1830s",
+    "1944",
+    "1989"
+   ],
+   "explain": "Computing ideas are very old; electronic computers are less than 100 years old."
+  },
+  {
+   "id": "computing.et.cma",
+   "topic": "computing.ethics",
+   "kind": "fact",
+   "prompt": "Which UK law makes it illegal to hack into a computer without permission?",
+   "answer": "the Computer Misuse Act",
+   "distractors": [
+    "the Data Protection Act",
+    "the Copyright Act",
+    "the Highway Code"
+   ],
+   "explain": "The Computer Misuse Act 1990 covers unauthorised access and spreading malware.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.et.dpa",
+   "topic": "computing.ethics",
+   "kind": "fact",
+   "prompt": "Which UK law controls how organisations collect, store and use people’s personal data?",
+   "answer": "the Data Protection Act",
+   "distractors": [
+    "the Computer Misuse Act",
+    "the Highway Code",
+    "the Copyright Act"
+   ],
+   "explain": "The Data Protection Act 2018 (with the UK GDPR): data must be kept safe, accurate and only used for its stated purpose.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.et.copy",
+   "topic": "computing.ethics",
+   "kind": "mcq",
+   "prompt": "Theo downloads a film from an illegal site and shares it with friends. Which law does this break?",
+   "options": [
+    {
+     "text": "The Copyright, Designs and Patents Act",
+     "correct": true
+    },
+    {
+     "text": "The Computer Misuse Act",
+     "correct": false,
+     "feedback": "He didn’t hack anything; he copied someone else’s work."
+    },
+    {
+     "text": "No law: it was online",
+     "correct": false,
+     "feedback": "Copyright law applies online too."
+    }
+   ],
+   "explain": "Creators own the right to copy and share their work."
+  },
+  {
+   "id": "computing.et.bias",
+   "topic": "computing.ethics",
+   "kind": "mcq",
+   "prompt": "An AI that helps choose job applicants was trained mostly on data about past male employees. What is the risk?",
+   "options": [
+    {
+     "text": "It may unfairly favour men: bias in the data becomes bias in the decisions",
+     "correct": true
+    },
+    {
+     "text": "None: computers are always fair",
+     "correct": false,
+     "feedback": "Computers learn patterns from data, including unfair ones."
+    },
+    {
+     "text": "It will refuse to work",
+     "correct": false,
+     "feedback": "It will work, but unfairly."
+    }
+   ],
+   "explain": "AI is only as fair as the data it learns from. That’s why people must check its decisions."
+  },
+  {
+   "id": "computing.et.ewaste",
+   "topic": "computing.ethics",
+   "kind": "mcq",
+   "prompt": "What is the biggest environmental problem with throwing away old phones?",
+   "options": [
+    {
+     "text": "They contain toxic chemicals and valuable metals that should be recycled",
+     "correct": true
+    },
+    {
+     "text": "They take up a lot of space in the bin",
+     "correct": false,
+     "feedback": "The real problem is toxic materials and wasted metals."
+    },
+    {
+     "text": "There is no problem",
+     "correct": false,
+     "feedback": "E-waste is one of the fastest-growing kinds of rubbish."
+    }
+   ],
+   "explain": "Recycling recovers gold, copper and rare metals, and keeps poisons out of landfill."
+  },
+  {
+   "id": "computing.et.divide",
+   "topic": "computing.ethics",
+   "kind": "mcq",
+   "prompt": "What is the “digital divide”?",
+   "options": [
+    {
+     "text": "The gap between people who have good access to technology and the internet and those who don’t",
+     "correct": true
+    },
+    {
+     "text": "A kind of division in binary",
+     "correct": false,
+     "feedback": "It is a social issue."
+    },
+    {
+     "text": "The space between two computer screens",
+     "correct": false,
+     "feedback": "It means unequal access to technology."
+    }
+   ],
+   "explain": "It affects school work, job applications and even seeing a doctor."
+  },
+  {
+   "id": "computing.et.deepfake",
+   "topic": "computing.ethics",
+   "kind": "mcq",
+   "prompt": "Why are “deepfake” videos a problem?",
+   "options": [
+    {
+     "text": "AI can make someone appear to say or do things they never did",
+     "correct": true
+    },
+    {
+     "text": "They are too large to download",
+     "correct": false,
+     "feedback": "The problem is trust, not file size."
+    },
+    {
+     "text": "They are always obviously fake",
+     "correct": false,
+     "feedback": "Many are very convincing."
+    }
+   ],
+   "explain": "Check the source before believing or sharing a shocking video."
+  },
+  {
+   "id": "computing.tr.tmpl",
+   "topic": "computing.trace",
+   "kind": "template",
+   "gen": "y8cTraceTable",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.tr.what",
+   "topic": "computing.trace",
+   "kind": "mcq",
+   "prompt": "What is a trace table for?",
+   "options": [
+    {
+     "text": "Recording the value of each variable as a program runs, line by line",
+     "correct": true
+    },
+    {
+     "text": "Drawing a flowchart",
+     "correct": false,
+     "feedback": "Flowcharts show the design; trace tables follow it running."
+    },
+    {
+     "text": "Storing data in a database",
+     "correct": false,
+     "feedback": "That is a database table."
+    }
+   ],
+   "explain": "Trace tables are used in GCSE exams and to find logic errors."
+  },
+  {
+   "id": "computing.tr.row",
+   "topic": "computing.trace",
+   "kind": "mcq",
+   "prompt": "In a trace table for a loop, when do you add a new row?",
+   "options": [
+    {
+     "text": "Each time a variable changes (often once per time round the loop)",
+     "correct": true
+    },
+    {
+     "text": "Only at the very end",
+     "correct": false,
+     "feedback": "Then you would miss the steps in between."
+    },
+    {
+     "text": "Only when something is printed",
+     "correct": false,
+     "feedback": "Track every change, not just output."
+    }
+   ],
+   "explain": "Following every change is what makes a trace table reliable."
+  },
+  {
+   "id": "computing.tw.tmpl",
+   "topic": "computing.twos",
+   "kind": "template",
+   "gen": "y8cTwos",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.tw.sign",
+   "topic": "computing.twos",
+   "kind": "mcq",
+   "prompt": "In sign and magnitude, the first bit shows the sign (1 = negative). What problem does this cause?",
+   "options": [
+    {
+     "text": "There are two zeros (+0 and −0), and ordinary binary addition gives wrong answers",
+     "correct": true
+    },
+    {
+     "text": "It cannot show positive numbers",
+     "correct": false,
+     "feedback": "A leading 0 means positive."
+    },
+    {
+     "text": "It needs 16 bits for every number",
+     "correct": false,
+     "feedback": "It can use any number of bits."
+    }
+   ],
+   "explain": "Two’s complement fixes both problems, which is why computers use it."
+  },
+  {
+   "id": "computing.tw.msb",
+   "topic": "computing.twos",
+   "kind": "fact",
+   "prompt": "In 8-bit two’s complement, what is the leftmost bit worth?",
+   "answer": "−128",
+   "distractors": [
+    "128",
+    "−1",
+    "1"
+   ],
+   "explain": "Place values: −128, 64, 32, 16, 8, 4, 2, 1.",
+   "accept": [
+    "-128",
+    "minus 128",
+    "negative 128"
+   ]
+  },
+  {
+   "id": "computing.tw.flip",
+   "topic": "computing.twos",
+   "kind": "mcq",
+   "prompt": "One quick way to find −n in two’s complement is…",
+   "options": [
+    {
+     "text": "write n in binary, flip all the bits, then add 1",
+     "correct": true
+    },
+    {
+     "text": "write n in binary and put a 1 at the front",
+     "correct": false,
+     "feedback": "That is sign and magnitude."
+    },
+    {
+     "text": "write n in binary backwards",
+     "correct": false,
+     "feedback": "Reversing bits changes the number completely."
+    }
+   ],
+   "explain": "Example: 5 = 00000101 → 11111010 → 11111011 = −5."
+  },
+  {
+   "id": "computing.sq.tmpl",
+   "topic": "computing.sql",
+   "kind": "template",
+   "gen": "y8cSQL",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.sq.record",
+   "topic": "computing.sql",
+   "kind": "fact",
+   "prompt": "In a database table, one row (all the data about one thing) is called a…",
+   "answer": "record",
+   "distractors": [
+    "field",
+    "key",
+    "query"
+   ],
+   "explain": "Each record is one hero; each field is one piece of information, like strength."
+  },
+  {
+   "id": "computing.sq.field",
+   "topic": "computing.sql",
+   "kind": "fact",
+   "prompt": "In a database table, one column (like “name” or “home”) is called a…",
+   "answer": "field",
+   "distractors": [
+    "record",
+    "file",
+    "row"
+   ],
+   "explain": "Fields have a data type, such as text or integer."
+  },
+  {
+   "id": "computing.sq.pk",
+   "topic": "computing.sql",
+   "kind": "mcq",
+   "prompt": "What is a primary key?",
+   "options": [
+    {
+     "text": "A field that is different for every record, so each one can be identified",
+     "correct": true
+    },
+    {
+     "text": "The password to the database",
+     "correct": false,
+     "feedback": "It is a field, not a password."
+    },
+    {
+     "text": "The first record in the table",
+     "correct": false,
+     "feedback": "It is a field that uniquely identifies records."
+    }
+   ],
+   "explain": "Names aren’t safe as keys (two people can share a name), so tables often use an ID number."
+  },
+  {
+   "id": "computing.sq.select",
+   "topic": "computing.sql",
+   "kind": "mcq",
+   "prompt": "Which SQL query lists the names of heroes from Athens?",
+   "options": [
+    {
+     "text": "SELECT name FROM Heroes WHERE home = 'Athens';",
+     "correct": true
+    },
+    {
+     "text": "SELECT Heroes FROM name WHERE Athens;",
+     "correct": false,
+     "feedback": "SELECT the field FROM the table WHERE a condition."
+    },
+    {
+     "text": "FIND name IN Heroes = Athens;",
+     "correct": false,
+     "feedback": "SQL uses SELECT … FROM … WHERE."
+    }
+   ],
+   "explain": "SELECT fields FROM table WHERE condition;"
+  },
+  {
+   "id": "computing.sq.star",
+   "topic": "computing.sql",
+   "kind": "mcq",
+   "prompt": "What does SELECT * mean?",
+   "options": [
+    {
+     "text": "Select every field",
+     "correct": true
+    },
+    {
+     "text": "Select only starred records",
+     "correct": false,
+     "feedback": "* is a wildcard meaning all fields."
+    },
+    {
+     "text": "Multiply the fields",
+     "correct": false,
+     "feedback": "In SQL SELECT, * means all."
+    }
+   ],
+   "explain": "SELECT * FROM Heroes; shows the whole table."
+  },
+  {
+   "id": "computing.tp.star",
+   "topic": "computing.topologies",
+   "kind": "mcq",
+   "prompt": "In a star network, every device connects to a central switch. What is the main disadvantage?",
+   "options": [
+    {
+     "text": "If the central switch fails, the whole network goes down",
+     "correct": true
+    },
+    {
+     "text": "If one cable breaks, every device stops working",
+     "correct": false,
+     "feedback": "Only the device on that cable is affected."
+    },
+    {
+     "text": "Data collisions are constant",
+     "correct": false,
+     "feedback": "Switches send data only to the right device, so collisions are rare."
+    }
+   ],
+   "explain": "Advantage: one broken cable affects only one device, and it is easy to add devices."
+  },
+  {
+   "id": "computing.tp.mesh",
+   "topic": "computing.topologies",
+   "kind": "mcq",
+   "prompt": "Why is a mesh network very reliable?",
+   "options": [
+    {
+     "text": "There are many routes between devices, so data can go around a broken link",
+     "correct": true
+    },
+    {
+     "text": "It has only one cable",
+     "correct": false,
+     "feedback": "It has many connections."
+    },
+    {
+     "text": "It doesn’t need electricity",
+     "correct": false,
+     "feedback": "Every network needs power."
+    }
+   ],
+   "explain": "The internet itself is a giant partial mesh."
+  },
+  {
+   "id": "computing.tp.client",
+   "topic": "computing.topologies",
+   "kind": "mcq",
+   "prompt": "In a client–server network…",
+   "options": [
+    {
+     "text": "clients request services (like web pages) and servers provide them",
+     "correct": true
+    },
+    {
+     "text": "every computer is equal and shares directly",
+     "correct": false,
+     "feedback": "That is peer-to-peer."
+    },
+    {
+     "text": "there are no servers",
+     "correct": false,
+     "feedback": "Servers are the whole point."
+    }
+   ],
+   "explain": "Most websites, email and school networks are client–server."
+  },
+  {
+   "id": "computing.tp.mac",
+   "topic": "computing.topologies",
+   "kind": "mcq",
+   "prompt": "What is a MAC address?",
+   "options": [
+    {
+     "text": "A unique number built into a device’s network hardware",
+     "correct": true
+    },
+    {
+     "text": "The address of an Apple shop",
+     "correct": false,
+     "feedback": "It stands for Media Access Control."
+    },
+    {
+     "text": "A website address",
+     "correct": false,
+     "feedback": "Web addresses are URLs."
+    }
+   ],
+   "explain": "IP addresses can change when you move network; the MAC address stays with the hardware."
+  },
+  {
+   "id": "computing.tp.layers",
+   "topic": "computing.topologies",
+   "kind": "order",
+   "prompt": "Put the four layers of the TCP/IP model in order, from the top (nearest the user) down.",
+   "items": [
+    "application",
+    "transport",
+    "internet",
+    "link"
+   ],
+   "labels": null,
+   "explain": "Application (HTTP, email), transport (TCP: splits data into packets and checks they arrive), internet (IP: addressing and routing), link (the physical network: Wi-Fi, Ethernet)."
+  },
+  {
+   "id": "computing.tp.layerwhy",
+   "topic": "computing.topologies",
+   "kind": "mcq",
+   "prompt": "Why are network protocols organised in layers?",
+   "options": [
+    {
+     "text": "Each layer does one job, so one can be changed without redesigning the others",
+     "correct": true
+    },
+    {
+     "text": "To make the internet slower but safer",
+     "correct": false,
+     "feedback": "Layers are about organisation, not speed."
+    },
+    {
+     "text": "Because of a law",
+     "correct": false,
+     "feedback": "It is a design choice that makes networks easier to build."
+    }
+   ],
+   "explain": "You can switch from Wi-Fi to cable (link layer) and websites (application layer) still work."
+  }
+ ]
+}

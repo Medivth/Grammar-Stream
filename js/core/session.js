@@ -38,7 +38,7 @@ export function dueItems(state, db, today) {
   const out = [];
   for (const [id, c] of Object.entries(state.cards)) {
     const item = db.items[id];
-    if (!item || c.state === 'new' || c.due > today) continue;
+    if (!item || item.kind === 'written' || c.state === 'new' || c.due > today) continue;
     out.push({ id, subject: item.subject, topic: item.topic, r: fsrsFor(item.subject).retrievability(c.s, today - c.lastDay) });
   }
   return out.sort((a, b) => a.r - b.r);
