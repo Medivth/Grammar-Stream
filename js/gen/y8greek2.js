@@ -58,7 +58,7 @@ function decl3Drill(list, level, rng) {
   const entry = `${lemma}, ${gen} (${GENDER[g]}): ${meaning}`;
   if (level === 3) {
     const num = noun[5] && rng.chance(0.5) ? 'plural' : 'singular';
-    const c = rng.int(0, 3);
+    const c = num === 'singular' ? rng.int(1, 3) : rng.int(0, 3); // the nominative singular is the word itself
     const right = (num === 'singular' ? noun[4] : noun[5])[c];
     const wrongs = rng.shuffle([...noun[4], ...(noun[5] || [])].filter((f) => f !== right));
     return choice(`Which is the **${CASES[c]} ${num}** of **${lemma}** (genitive ${gen}, “${meaning}”)?`, right, wrongs, rng, {
@@ -118,7 +118,7 @@ function aoristDrill(list, level, rng, kind) {
   };
   if (level === 1) {
     const tense = rng.pick(['present', 'imperfect', 'aorist', 'aorist']);
-    const form = tables[tense][rng.int(0, 5)];
+    const form = tables[tense][tense === 'present' ? rng.int(1, 5) : rng.int(0, 5)]; // λύω itself would give the answer away
     return choice(`Which tense is **${form}** (from ${vv[0]}, “I ${v.base}”)?`, tense, ['present', 'imperfect', 'aorist'].filter((t) => t !== tense), rng, {
       explain: `${form} is ${tense}: it has ${clue[tense]}.`,
       steps: ['An augment at the front (ἐ-, or a lengthened first vowel) means a past tense.', kind === 'weak' ? 'Then look before the ending: -σα- (ψα, ξα) marks the weak aorist; the imperfect has none.' : `Then look at the stem: the imperfect keeps the present stem; the strong aorist has its own stem (${vv[5][0]}).`, `${form}: ${tense}.`],
@@ -207,6 +207,17 @@ const TIMING = [
 ];
 const MAIN = [['φεύγει', 'flees'], ['μένει', 'stays'], ['βοᾷ', 'shouts']];
 const cap = (s) => s[0].toUpperCase() + s.slice(1);
+/** In running text an acute on the last syllable turns grave when another word follows (θεά → θεὰ ...). */
+function inText(sentence) {
+  const words = sentence.split(' ');
+  return words.map((w, i) => {
+    if (i === words.length - 1) return w;
+    const d = w.normalize('NFD');
+    const at = d.lastIndexOf('\u0301');
+    if (at < 0 || /[αεηιουω]/.test(d.slice(at + 1))) return w;
+    return (d.slice(0, at) + '\u0300' + d.slice(at + 1)).normalize('NFC');
+  }).join(' ');
+}
 
 export const Y8_GREEK2_GENERATORS = {
   y8hDecl3(level, rng) { return decl3Drill(DECL3, level, rng); },
@@ -294,7 +305,7 @@ export const Y8_GREEK2_GENERATORS = {
       const withSubj = rng.chance(0.5);
       const part = withSubj ? forms[`n${s[2]}`] : forms[`a${o[2]}`];
       const right = withSubj ? s[1] : o[1];
-      const sentence = `${s[0]} ${o[0]} ${part} ὁρᾷ.`;
+      const sentence = inText(`${s[0]} ${o[0]} ${part} ὁρᾷ.`);
       return choice(`**${sentence}** (ὁρᾷ = sees; ${part} is from ${lemma}). Who is ${ing}?`, right, [withSubj ? o[1] : s[1], 'both of them'], rng, {
         explain: `${part} is ${withSubj ? 'nominative' : 'accusative'} ${s[2] === 'm' && withSubj || o[2] === 'm' && !withSubj ? 'masculine' : 'feminine'} singular, so it agrees with ${withSubj ? s[0] : o[0]}: ${right} is ${ing}.`,
         steps: ['A participle agrees with its noun in gender, case and number.', `${part} is ${withSubj ? 'nominative, like the subject' : 'accusative, like the object'}.`, `So ${right} is ${ing}.`],
@@ -304,7 +315,7 @@ export const Y8_GREEK2_GENERATORS = {
     const [mainG, mainE] = rng.pick(MAIN);
     const useAor = rng.chance(0.6);
     const part = useAor ? aor : pres;
-    const sentence = `ὁ στρατηγὸς ${objG} ${part} ${mainG}.`;
+    const sentence = inText(`ὁ στρατηγός ${objG} ${part} ${mainG}.`);
     const having = `Having ${pp} ${objE}, the general ${mainE}.`;
     const whileing = `While ${ing} ${objE}, the general ${mainE}.`;
     const swapped = `Having ${pp} the general, ${objE} ${mainE.replace(/s$/, '')}${objE === 'the enemy' ? '' : 's'}.`;

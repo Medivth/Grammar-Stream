@@ -1,0 +1,5406 @@
+{
+ "subject": "history",
+ "deck": "y8-more",
+ "topics": [
+  {
+   "id": "history.rome",
+   "title": "Rome: from Republic to Empire",
+   "kind": "facts",
+   "prereqs": [
+    "history.athens"
+   ],
+   "batch": 5,
+   "intro": "Rome began, legend says, in 753 BC. Its people threw out their kings and ran a republic for nearly 500 years, until ambitious generals with loyal armies turned it into an empire.",
+   "teach": "Explain why the Roman Republic became an empire.",
+   "talk": "Ask {him} which Greek gods the Romans renamed, and what they called Athena."
+  },
+  {
+   "id": "history.crusades",
+   "title": "The Crusades",
+   "kind": "facts",
+   "prereqs": [
+    "history.normans"
+   ],
+   "batch": 5,
+   "intro": "In 1095 the Pope called on Christians to march to the Holy Land and take Jerusalem. For two centuries crusades brought war, faith, trade and terrible violence to the Middle East and to Europe.",
+   "teach": "Explain two different reasons why people joined the First Crusade.",
+   "talk": "Ask {him} what {she} thinks of Saladin and Richard the Lionheart, and why."
+  },
+  {
+   "id": "history.roses",
+   "title": "The Wars of the Roses",
+   "kind": "facts",
+   "prereqs": [
+    "history.magna-carta"
+   ],
+   "batch": 5,
+   "intro": "From 1455 to 1487 the royal families of Lancaster and York fought for the English crown. It ended at Bosworth in 1485 with a new dynasty: the Tudors.",
+   "teach": "Explain why Henry Tudor won the Battle of Bosworth.",
+   "talk": "Ask {him} what {she} thinks happened to the Princes in the Tower, and what evidence {she} would want."
+  },
+  {
+   "id": "history.renaissance",
+   "title": "The Renaissance and the printing press",
+   "kind": "facts",
+   "prereqs": [
+    "history.black-death"
+   ],
+   "batch": 5,
+   "intro": "In fifteenth-century Italy, artists and scholars rediscovered Greek and Roman learning. Meanwhile a German goldsmith’s printing press let ideas spread faster than ever before.",
+   "teach": "Explain how the printing press helped new ideas spread.",
+   "talk": "Look at a Renaissance painting together and ask {him} how it differs from medieval art."
+  },
+  {
+   "id": "history.exploration",
+   "title": "The age of exploration",
+   "kind": "facts",
+   "prereqs": [
+    "history.renaissance"
+   ],
+   "batch": 5,
+   "intro": "From the 1490s European sailors crossed oceans to the Americas, round Africa to India and right round the world. It brought new knowledge and trade, and conquest, disease and enslavement for millions.",
+   "teach": "Explain one positive and one terrible consequence of European exploration.",
+   "talk": "Ask {him} whether “discovery” is the right word for Columbus reaching the Caribbean."
+  },
+  {
+   "id": "history.elizabeth",
+   "title": "Elizabeth I: a golden age?",
+   "kind": "facts",
+   "prereqs": [
+    "history.reformation"
+   ],
+   "batch": 5,
+   "intro": "Elizabeth I reigned for 45 years, survived plots and a Spanish invasion fleet, and presided over Shakespeare’s England. But was it really a golden age, and for whom?",
+   "teach": "Explain why Mary, Queen of Scots, was such a danger to Elizabeth.",
+   "talk": "Ask {him} why Elizabeth never married, in {her} opinion."
+  },
+  {
+   "id": "history.science-rev",
+   "title": "The Scientific Revolution",
+   "kind": "facts",
+   "prereqs": [
+    "history.renaissance"
+   ],
+   "batch": 5,
+   "intro": "Between Copernicus in 1543 and Newton in 1687, thinkers replaced ancient authority with observation and experiment, and changed how we see the universe and our own bodies.",
+   "teach": "Explain why Galileo’s ideas alarmed the Church.",
+   "talk": "Ask {him} which scientist {she} would most like to meet, and what {she} would ask."
+  },
+  {
+   "id": "history.restoration",
+   "title": "Restoration London: plague and fire",
+   "kind": "facts",
+   "prereqs": [
+    "history.civil-war"
+   ],
+   "batch": 5,
+   "intro": "In 1660 the monarchy returned. Within six years London had suffered its last great plague and a fire that destroyed most of the old city, and began to rebuild in brick and stone.",
+   "teach": "Explain why the Great Fire spread so far.",
+   "talk": "Ask {him} what {she} would have buried in the garden, like Samuel Pepys."
+  },
+  {
+   "id": "history.american-rev",
+   "title": "The American Revolution",
+   "kind": "facts",
+   "prereqs": [
+    "history.revolutions"
+   ],
+   "batch": 5,
+   "intro": "Thirteen British colonies in North America objected to taxes set by a Parliament they had no vote in. By 1783 they had won a war and their independence as the United States.",
+   "teach": "Explain what “no taxation without representation” meant.",
+   "talk": "Ask {him} whether the Declaration’s words “all men are created equal” were true in 1776."
+  },
+  {
+   "id": "history.napoleon",
+   "title": "Napoleon and Georgian Britain",
+   "kind": "facts",
+   "prereqs": [
+    "history.revolutions"
+   ],
+   "batch": 5,
+   "intro": "Out of the French Revolution came a brilliant general who made himself emperor and conquered much of Europe. Britain fought him at sea and on land for over a decade, while facing unrest at home.",
+   "teach": "Explain why Napoleon was eventually defeated.",
+   "talk": "Ask {him} why Nelson is on top of a column in Trafalgar Square."
+  },
+  {
+   "id": "history.famine",
+   "title": "The Great Irish Famine",
+   "kind": "facts",
+   "prereqs": [
+    "history.industrial"
+   ],
+   "batch": 5,
+   "intro": "From 1845 a plant disease destroyed Ireland’s potato crop year after year. About a million people died and another million or more emigrated. How the government responded is still argued about today.",
+   "teach": "Explain why the potato blight caused a famine on such a scale.",
+   "talk": "Ask {him} why so many Americans and British people have Irish ancestors."
+  },
+  {
+   "id": "history.public-health",
+   "title": "Victorian cities and public health",
+   "kind": "facts",
+   "prereqs": [
+    "history.industrial"
+   ],
+   "batch": 5,
+   "intro": "Fast-growing industrial towns were crowded, filthy and deadly. Cholera, a doctor with a map, a summer stink and the germ theory finally pushed Parliament into cleaning them up.",
+   "teach": "Explain how John Snow showed that cholera spread through water.",
+   "talk": "Ask {him} what {she} would do first if {she} were in charge of a Victorian town."
+  },
+  {
+   "id": "history.suffrage",
+   "title": "Votes for women: the tactics",
+   "kind": "facts",
+   "prereqs": [
+    "history.vote"
+   ],
+   "batch": 5,
+   "intro": "Suffragists and suffragettes wanted the same thing but argued fiercely about how to get it. Hunger strikes, window-smashing, a census boycott and war work all played a part, but which mattered most?",
+   "teach": "Explain the arguments for and against militant tactics.",
+   "talk": "Ask {him} whether breaking the law can ever be right to win a vote."
+  },
+  {
+   "id": "history.home-front",
+   "title": "Britain’s Home Front, 1939–45",
+   "kind": "facts",
+   "prereqs": [
+    "history.ww2"
+   ],
+   "batch": 5,
+   "intro": "The Second World War was fought in Britain’s towns and kitchens as well as on battlefields: evacuation, rationing, the Blitz and women’s war work changed everyday life.",
+   "teach": "Explain how rationing worked and why it was needed.",
+   "talk": "Ask a grandparent what their family remembered about rationing or evacuation."
+  },
+  {
+   "id": "history.civil-rights",
+   "title": "Civil rights in the USA and Britain",
+   "kind": "facts",
+   "prereqs": [
+    "history.ww2"
+   ],
+   "batch": 5,
+   "intro": "After 1945 Black Americans and Black Britons campaigned against segregation and discrimination. Boycotts, marches and court cases won new laws, though the struggle for equality went on.",
+   "teach": "Explain why the Montgomery Bus Boycott was significant.",
+   "talk": "Ask {him} why Rosa Parks’ decision on one bus mattered so much."
+  },
+  {
+   "id": "history.end-empire",
+   "title": "The end of empire",
+   "kind": "facts",
+   "prereqs": [
+    "history.empire"
+   ],
+   "batch": 5,
+   "intro": "Within twenty-five years of 1945 most of Britain’s empire had become independent, beginning with India and Pakistan in 1947. Independence movements, war and money all played a part.",
+   "teach": "Explain why Gandhi’s methods were effective.",
+   "talk": "Ask {him} which countries in the Commonwealth {she} can name."
+  },
+  {
+   "id": "history.byzantium",
+   "title": "Byzantium: the Roman Empire that spoke Greek",
+   "kind": "facts",
+   "prereqs": [
+    "history.rome"
+   ],
+   "batch": 5,
+   "intro": "When the western Roman Empire fell in AD 476, the eastern half carried on for nearly a thousand years from Constantinople, speaking Greek and preserving ancient learning.",
+   "teach": "Explain how Byzantium helped to preserve Greek learning.",
+   "talk": "Ask {him} what Constantinople is called today.",
+   "tier": "stretch"
+  },
+  {
+   "id": "history.russia",
+   "title": "The Russian Revolutions of 1917",
+   "kind": "facts",
+   "prereqs": [
+    "history.ww1"
+   ],
+   "batch": 5,
+   "intro": "In 1917 Russia had two revolutions in a single year: first the Tsar fell, then Lenin’s Bolsheviks seized power. The world’s first communist state was born.",
+   "teach": "Explain why the Tsar lost power in February 1917.",
+   "talk": "Ask {him} why the “October” Revolution happened in November.",
+   "tier": "stretch"
+  },
+  {
+   "id": "history.dictators",
+   "title": "The road to the Second World War",
+   "kind": "facts",
+   "prereqs": [
+    "history.ww1"
+   ],
+   "batch": 5,
+   "intro": "Between 1919 and 1939 a harsh peace treaty, a world economic depression and the rise of dictators in Italy, Germany and the USSR led the world back to war.",
+   "teach": "Explain what appeasement was and why Chamberlain chose it.",
+   "talk": "Ask {him} whether {she} thinks appeasement was cowardly or sensible.",
+   "tier": "stretch"
+  }
+ ],
+ "items": [
+  {
+   "id": "history.m.rr.founding",
+   "topic": "history.rome",
+   "kind": "fact",
+   "prompt": "According to legend, which twin founded Rome in 753 BC?",
+   "answer": "Romulus",
+   "distractors": [
+    "Remus",
+    "Aeneas",
+    "Augustus"
+   ],
+   "explain": "Legend says Romulus killed his brother Remus and named the city after himself. Historians treat the story as myth.",
+   "accept": [
+    "romulus"
+   ]
+  },
+  {
+   "id": "history.m.rr.republic",
+   "topic": "history.rome",
+   "kind": "mcq",
+   "prompt": "What did the Romans do in about 509 BC?",
+   "options": [
+    {
+     "text": "They expelled their last king and set up a republic",
+     "correct": true
+    },
+    {
+     "text": "They crowned their first emperor",
+     "correct": false,
+     "feedback": "That was Augustus, nearly 500 years later."
+    },
+    {
+     "text": "They conquered Greece",
+     "correct": false,
+     "feedback": "Greece came under Roman control in the 100s BC."
+    }
+   ],
+   "explain": "The last king, Tarquin the Proud, was driven out. “Res publica” means “the public thing”: the state belonged to the people."
+  },
+  {
+   "id": "history.m.rr.consuls",
+   "topic": "history.rome",
+   "kind": "fact",
+   "prompt": "How many consuls were elected each year to lead the Roman Republic?",
+   "answer": "2",
+   "distractors": [
+    "1",
+    "3",
+    "10"
+   ],
+   "explain": "Two consuls, each able to block the other, so no single man could become a king again.",
+   "accept": [
+    "two"
+   ]
+  },
+  {
+   "id": "history.m.rr.spqr",
+   "topic": "history.rome",
+   "kind": "fact",
+   "prompt": "What did the letters SPQR, carried on Roman standards, stand for?",
+   "answer": "the Senate and People of Rome",
+   "distractors": [
+    "Soldiers Protect Quiet Rome",
+    "the Supreme Power of Quirinus",
+    "Strength, Peace, Quality, Rule"
+   ],
+   "explain": "Senatus Populusque Romanus: power came from the Senate and the people together.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.rr.patricians",
+   "topic": "history.rome",
+   "kind": "mcq",
+   "prompt": "Who were the plebeians?",
+   "options": [
+    {
+     "text": "Ordinary Roman citizens, as opposed to the noble patrician families",
+     "correct": true
+    },
+    {
+     "text": "Slaves who worked in the mines",
+     "correct": false,
+     "feedback": "Plebeians were free citizens."
+    },
+    {
+     "text": "Priests of Jupiter",
+     "correct": false,
+     "feedback": "Plebeians were the ordinary citizens."
+    }
+   ],
+   "explain": "The long “Conflict of the Orders” won plebeians more rights, including their own officials, the tribunes."
+  },
+  {
+   "id": "history.m.rr.hannibal",
+   "topic": "history.rome",
+   "kind": "fact",
+   "prompt": "Which Carthaginian general crossed the Alps with war elephants in 218 BC?",
+   "answer": "Hannibal",
+   "distractors": [
+    "Spartacus",
+    "Pericles",
+    "Leonidas"
+   ],
+   "explain": "Hannibal won great victories in Italy, but Rome finally defeated Carthage in the Punic Wars.",
+   "accept": [
+    "hannibal barca"
+   ]
+  },
+  {
+   "id": "history.m.rr.rubicon",
+   "topic": "history.rome",
+   "kind": "mcq",
+   "prompt": "In 49 BC Julius Caesar led his army across the River Rubicon into Italy, breaking Roman law. Why do we still say “crossing the Rubicon”?",
+   "options": [
+    {
+     "text": "It means passing a point of no return",
+     "correct": true
+    },
+    {
+     "text": "It means winning a battle easily",
+     "correct": false,
+     "feedback": "Caesar knew there was no going back: it meant civil war."
+    },
+    {
+     "text": "It means making peace",
+     "correct": false,
+     "feedback": "It started a civil war."
+    }
+   ],
+   "explain": "Bringing an army into Italy was treason, so Caesar had to win or be destroyed."
+  },
+  {
+   "id": "history.m.rr.ides",
+   "topic": "history.rome",
+   "kind": "fact",
+   "prompt": "On which date was Julius Caesar assassinated by senators?",
+   "answer": "15 March 44 BC (the Ides of March)",
+   "distractors": [
+    "1 January 27 BC",
+    "4 July 44 BC",
+    "25 December AD 1"
+   ],
+   "explain": "About sixty senators, led by Brutus and Cassius, stabbed him in the Senate, claiming to save the Republic.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.rr.augustus",
+   "topic": "history.rome",
+   "kind": "fact",
+   "prompt": "Caesar’s great-nephew Octavian became Rome’s first emperor in 27 BC. Which name did he take?",
+   "answer": "Augustus",
+   "distractors": [
+    "Nero",
+    "Hadrian",
+    "Constantine"
+   ],
+   "explain": "He kept the Senate but held the real power: the Republic had become an empire.",
+   "accept": [
+    "caesar augustus",
+    "octavian"
+   ]
+  },
+  {
+   "id": "history.m.rr.minerva",
+   "topic": "history.rome",
+   "kind": "fact",
+   "prompt": "The Romans worshipped Greek gods under new names. What did they call Athena?",
+   "answer": "Minerva",
+   "distractors": [
+    "Juno",
+    "Venus",
+    "Diana"
+   ],
+   "explain": "Zeus became Jupiter, Hera Juno, Aphrodite Venus, Artemis Diana, Ares Mars and Athena Minerva.",
+   "accept": [
+    "minerva"
+   ]
+  },
+  {
+   "id": "history.m.rr.fall",
+   "topic": "history.rome",
+   "kind": "mcq",
+   "prompt": "What was the main reason the Roman Republic collapsed in the first century BC?",
+   "options": [
+    {
+     "text": "Powerful generals with armies loyal to them, not to Rome, fought each other for control",
+     "correct": true
+    },
+    {
+     "text": "Rome was conquered by Carthage",
+     "correct": false,
+     "feedback": "Carthage had been destroyed in 146 BC."
+    },
+    {
+     "text": "The people voted to have a king",
+     "correct": false,
+     "feedback": "Romans hated the word “king”; Augustus avoided it."
+    }
+   ],
+   "explain": "Marius, Sulla, Pompey and Caesar showed that whoever had the loyal army had the power."
+  },
+  {
+   "id": "history.m.rr.w",
+   "topic": "history.rome",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Explain why the Roman Republic became an empire. Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear opening answer to the question",
+    "Generals with personal armies (Marius, Sulla, Caesar)",
+    "Civil wars and Caesar crossing the Rubicon",
+    "How Augustus kept the look of the Republic but held the power",
+    "A conclusion naming the most important reason"
+   ],
+   "model": "The Republic became an empire mainly because generals gained armies that were loyal to them rather than to Rome. Soldiers depended on their general for pay and land, so men like Sulla and Caesar could march on Rome itself. When Caesar crossed the Rubicon in 49 BC, the result was civil war, and the Senate could not stop him becoming dictator. His murder in 44 BC did not save the Republic: it led to more civil war. Octavian won it, and in 27 BC, as Augustus, he kept the Senate and the old titles but held the real power. The most important reason was the private armies, because without them no single man could have overpowered the Republic’s system of two consuls and a Senate. So the interpretation is too simple: Caesar finished the Republic off, but the system of private armies had already broken it.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Rome’s Republic did not die of old age. It was murdered by one man’s ambition. Julius Caesar wanted absolute power, crossed the Rubicon to seize it and made himself dictator for life. Without Caesar, the Republic would have survived.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.cr.urban",
+   "topic": "history.crusades",
+   "kind": "fact",
+   "prompt": "Which pope called for the First Crusade at Clermont in 1095?",
+   "answer": "Urban II",
+   "distractors": [
+    "Gregory I",
+    "John Paul II",
+    "Leo X"
+   ],
+   "explain": "He promised that crusaders’ sins would be forgiven.",
+   "accept": [
+    "pope urban ii",
+    "urban",
+    "pope urban"
+   ]
+  },
+  {
+   "id": "history.m.cr.1099",
+   "topic": "history.crusades",
+   "kind": "fact",
+   "prompt": "In which year did the First Crusade capture Jerusalem?",
+   "answer": "1099",
+   "distractors": [
+    "1066",
+    "1187",
+    "1215"
+   ],
+   "explain": "The crusaders took the city after a siege and massacred many of its Muslim and Jewish inhabitants."
+  },
+  {
+   "id": "history.m.cr.motives",
+   "topic": "history.crusades",
+   "kind": "mcq",
+   "prompt": "Which was NOT a reason people joined the First Crusade?",
+   "options": [
+    {
+     "text": "To find a sea route to India",
+     "correct": true
+    },
+    {
+     "text": "Faith, and the promise that their sins would be forgiven",
+     "correct": false,
+     "feedback": "This was a powerful motive."
+    },
+    {
+     "text": "The chance of land, wealth and adventure",
+     "correct": false,
+     "feedback": "Many younger sons hoped for land."
+    }
+   ],
+   "explain": "Religion, penance, land, wealth and adventure all mattered. Sea routes to India came 400 years later."
+  },
+  {
+   "id": "history.m.cr.saladin",
+   "topic": "history.crusades",
+   "kind": "fact",
+   "prompt": "Which Muslim leader recaptured Jerusalem in 1187 after the Battle of Hattin?",
+   "answer": "Saladin",
+   "distractors": [
+    "Suleiman",
+    "Mehmed II",
+    "Genghis Khan"
+   ],
+   "explain": "Saladin (Salah ad-Din) was admired even by his enemies for his mercy when he took the city.",
+   "accept": [
+    "salah ad-din",
+    "salah al-din",
+    "salahuddin"
+   ]
+  },
+  {
+   "id": "history.m.cr.richard",
+   "topic": "history.crusades",
+   "kind": "mcq",
+   "prompt": "How did the Third Crusade (1189–92), led by Richard I, end?",
+   "options": [
+    {
+     "text": "With a truce: Jerusalem stayed in Muslim hands, but Christian pilgrims could visit",
+     "correct": true
+    },
+    {
+     "text": "Richard captured Jerusalem",
+     "correct": false,
+     "feedback": "He came close but never took it."
+    },
+    {
+     "text": "Saladin was killed in battle",
+     "correct": false,
+     "feedback": "Saladin died of illness in 1193."
+    }
+   ],
+   "explain": "Richard the Lionheart and Saladin never met, but they agreed a truce in 1192."
+  },
+  {
+   "id": "history.m.cr.fourth",
+   "topic": "history.crusades",
+   "kind": "mcq",
+   "prompt": "What did the Fourth Crusade do in 1204?",
+   "options": [
+    {
+     "text": "It attacked and looted Constantinople, a Christian city",
+     "correct": true
+    },
+    {
+     "text": "It recaptured Jerusalem",
+     "correct": false,
+     "feedback": "It never reached the Holy Land."
+    },
+    {
+     "text": "It made peace with Saladin",
+     "correct": false,
+     "feedback": "Saladin had died in 1193."
+    }
+   ],
+   "explain": "The sack of Constantinople deeply damaged the Byzantine Empire and relations between Catholic and Orthodox Christians."
+  },
+  {
+   "id": "history.m.cr.orders",
+   "topic": "history.crusades",
+   "kind": "fact",
+   "prompt": "The Knights Templar and the Knights Hospitaller were what kind of group?",
+   "answer": "military religious orders: monks who were also knights",
+   "distractors": [
+    "tax collectors for the king",
+    "merchant guilds from Venice",
+    "Muslim armies"
+   ],
+   "explain": "They protected pilgrims and fought in the Holy Land, and grew rich and powerful.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.cr.rhineland",
+   "topic": "history.crusades",
+   "kind": "mcq",
+   "prompt": "What happened to many Jewish communities in the Rhineland in 1096?",
+   "options": [
+    {
+     "text": "They were attacked and massacred by crusaders on their way east",
+     "correct": true
+    },
+    {
+     "text": "They led the crusade",
+     "correct": false,
+     "feedback": "They were victims of it."
+    },
+    {
+     "text": "They were invited to Jerusalem",
+     "correct": false,
+     "feedback": "Crusaders attacked them in Germany."
+    }
+   ],
+   "explain": "Crusading armies killed thousands of Jews in towns such as Mainz and Worms: a reminder that the crusades brought violence to Europe too."
+  },
+  {
+   "id": "history.m.cr.legacy",
+   "topic": "history.crusades",
+   "kind": "mcq",
+   "prompt": "Which is a long-term consequence of the Crusades?",
+   "options": [
+    {
+     "text": "More trade and contact between Europe and the Middle East",
+     "correct": true
+    },
+    {
+     "text": "Christianity disappeared from Europe",
+     "correct": false,
+     "feedback": "It did not."
+    },
+    {
+     "text": "The end of all wars about religion",
+     "correct": false,
+     "feedback": "Sadly not."
+    }
+   ],
+   "explain": "Spices, sugar, silk and ideas travelled west, and Italian trading cities like Venice grew rich."
+  },
+  {
+   "id": "history.m.cr.w",
+   "topic": "history.crusades",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Explain why so many people went on the First Crusade. Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear opening sentence",
+    "Religious reasons: faith, Jerusalem, forgiveness of sins",
+    "Other reasons: land, wealth, adventure",
+    "The role of Pope Urban II’s speech",
+    "A judgement on which reason mattered most"
+   ],
+   "model": "Tens of thousands joined the First Crusade, mainly for religious reasons. Pope Urban II promised in 1095 that crusaders’ sins would be forgiven, which mattered enormously to people who feared hell. Jerusalem was the holiest place in Christianity, and many believed it was their duty to free it. However, other reasons mattered too. Younger sons of nobles, who would not inherit land, hoped to win estates in the East, and some hoped for wealth or adventure. Urban’s speech was so powerful because it combined these: faith and reward. Overall, religion was the most important reason, because the journey was so dangerous and expensive that only a strong belief would make most people risk it. So I disagree with the interpretation: greed played a part, but faith was the main motive.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The crusaders were not really driven by faith. They were land-hungry younger sons and adventurers looking for riches, who used religion as an excuse.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.wr.houses",
+   "topic": "history.roses",
+   "kind": "mcq",
+   "prompt": "Which two families fought the Wars of the Roses?",
+   "options": [
+    {
+     "text": "The houses of Lancaster (red rose) and York (white rose)",
+     "correct": true
+    },
+    {
+     "text": "The Tudors and the Stuarts",
+     "correct": false,
+     "feedback": "The Tudors came out of the wars; the Stuarts came later."
+    },
+    {
+     "text": "The Normans and the Saxons",
+     "correct": false,
+     "feedback": "That was 1066."
+    }
+   ],
+   "explain": "Both were branches of the royal Plantagenet family."
+  },
+  {
+   "id": "history.m.wr.cause",
+   "topic": "history.roses",
+   "kind": "mcq",
+   "prompt": "Why did the wars begin in the 1450s?",
+   "options": [
+    {
+     "text": "Henry VI was a weak king who suffered mental illness, and nobles fought for control",
+     "correct": true
+    },
+    {
+     "text": "England was invaded by France",
+     "correct": false,
+     "feedback": "England had just LOST its French lands."
+    },
+    {
+     "text": "The Pope declared war",
+     "correct": false,
+     "feedback": "It was a struggle within the English nobility."
+    }
+   ],
+   "explain": "Henry VI’s breakdown in 1453 left a power vacuum that Richard, Duke of York, tried to fill."
+  },
+  {
+   "id": "history.m.wr.edward4",
+   "topic": "history.roses",
+   "kind": "fact",
+   "prompt": "Which Yorkist became king in 1461 after defeating the Lancastrians?",
+   "answer": "Edward IV",
+   "distractors": [
+    "Henry VII",
+    "Richard I",
+    "Edward I"
+   ],
+   "explain": "Edward IV won the bloody battle of Towton in 1461, perhaps the largest battle ever fought in England.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.wr.princes",
+   "topic": "history.roses",
+   "kind": "mcq",
+   "prompt": "What do we know for certain about the “Princes in the Tower”, Edward V and his brother, who disappeared in 1483?",
+   "options": [
+    {
+     "text": "Nothing certain: they vanished, and historians still argue about what happened to them",
+     "correct": true
+    },
+    {
+     "text": "They escaped to France and lived happily",
+     "correct": false,
+     "feedback": "There is no reliable evidence for that."
+    },
+    {
+     "text": "Richard III confessed to killing them",
+     "correct": false,
+     "feedback": "There was no confession."
+    }
+   ],
+   "explain": "Richard III took the crown in 1483 and the boys were never seen again. Many suspect Richard, but the evidence is not conclusive."
+  },
+  {
+   "id": "history.m.wr.bosworth",
+   "topic": "history.roses",
+   "kind": "fact",
+   "prompt": "In which year did Henry Tudor defeat Richard III at the Battle of Bosworth?",
+   "answer": "1485",
+   "distractors": [
+    "1455",
+    "1415",
+    "1509"
+   ],
+   "explain": "Richard III was killed, the last English king to die in battle."
+  },
+  {
+   "id": "history.m.wr.stanley",
+   "topic": "history.roses",
+   "kind": "mcq",
+   "prompt": "What helped Henry Tudor win at Bosworth?",
+   "options": [
+    {
+     "text": "Sir William Stanley’s men joined the battle on Henry’s side at the crucial moment",
+     "correct": true
+    },
+    {
+     "text": "Henry had cannons and Richard had none",
+     "correct": false,
+     "feedback": "Both sides had some artillery."
+    },
+    {
+     "text": "Richard surrendered before the battle",
+     "correct": false,
+     "feedback": "He died fighting."
+    }
+   ],
+   "explain": "The Stanleys waited to see who was winning; their intervention was decisive when Richard charged at Henry."
+  },
+  {
+   "id": "history.m.wr.leicester",
+   "topic": "history.roses",
+   "kind": "fact",
+   "prompt": "In 2012, Richard III’s skeleton was found under a car park in which city?",
+   "answer": "Leicester",
+   "distractors": [
+    "York",
+    "London",
+    "Bosworth"
+   ],
+   "explain": "DNA from his sister’s living descendants confirmed it. He was reburied in Leicester Cathedral in 2015.",
+   "accept": [
+    "leicester"
+   ]
+  },
+  {
+   "id": "history.m.wr.rose",
+   "topic": "history.roses",
+   "kind": "mcq",
+   "prompt": "Why did Henry VII marry Elizabeth of York in 1486?",
+   "options": [
+    {
+     "text": "To unite the two houses and make his claim to the throne stronger",
+     "correct": true
+    },
+    {
+     "text": "Because the Pope ordered it",
+     "correct": false,
+     "feedback": "It was Henry’s own political choice."
+    },
+    {
+     "text": "To gain land in France",
+     "correct": false,
+     "feedback": "It was about the English crown."
+    }
+   ],
+   "explain": "The Tudor rose, red and white together, was his symbol of the united houses."
+  },
+  {
+   "id": "history.m.wr.order",
+   "topic": "history.roses",
+   "kind": "order",
+   "prompt": "Put these events in order.",
+   "items": [
+    "Henry VI’s breakdown",
+    "Edward IV becomes king",
+    "The Princes in the Tower disappear",
+    "Battle of Bosworth"
+   ],
+   "labels": [
+    "1453",
+    "1461",
+    "1483",
+    "1485"
+   ],
+   "explain": "From a weak king to a new dynasty in about thirty years.",
+   "axis": "time"
+  },
+  {
+   "id": "history.m.wr.w",
+   "topic": "history.roses",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Why did Henry Tudor win the Battle of Bosworth in 1485? Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear opening answer",
+    "Richard III’s unpopularity, including the Princes in the Tower",
+    "Help from France and from the Stanleys",
+    "Richard’s charge and death",
+    "Which reason was most important, and why"
+   ],
+   "model": "Henry Tudor won mainly because Richard III had lost the trust of powerful nobles. Many suspected Richard of murdering the Princes in the Tower, so some lords would not fight hard for him, and the Earl of Northumberland held his men back. Henry also had French support, which gave him an army to land in Wales. The decisive moment came when Richard charged at Henry himself: Sir William Stanley’s men, who had been watching, attacked Richard, and he was killed. Luck and timing mattered, but the most important reason was Richard’s unpopularity, because it explains why the Stanleys changed sides and why so many of his army did not fight. The interpretation is right that the Stanleys were decisive, but wrong to call it pure luck: their choice reflected Richard’s unpopularity.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Henry Tudor won at Bosworth through pure luck. If the Stanleys had stayed out of the battle, Richard III would have won and there would never have been a Tudor dynasty.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.rn.meaning",
+   "topic": "history.renaissance",
+   "kind": "fact",
+   "prompt": "What does the French word “Renaissance” mean?",
+   "answer": "rebirth",
+   "distractors": [
+    "revolution",
+    "discovery",
+    "reform"
+   ],
+   "explain": "People believed they were reviving the learning and art of ancient Greece and Rome.",
+   "accept": [
+    "re-birth",
+    "rebirth"
+   ]
+  },
+  {
+   "id": "history.m.rn.florence",
+   "topic": "history.renaissance",
+   "kind": "fact",
+   "prompt": "In which Italian city did the Renaissance first flourish?",
+   "answer": "Florence",
+   "distractors": [
+    "Rome",
+    "Milan",
+    "Naples"
+   ],
+   "explain": "Rich, competitive Florence, ruled by the Medici, paid for artists and scholars.",
+   "accept": [
+    "firenze"
+   ]
+  },
+  {
+   "id": "history.m.rn.medici",
+   "topic": "history.renaissance",
+   "kind": "fact",
+   "prompt": "Which rich banking family were the great patrons of Florentine art?",
+   "answer": "the Medici",
+   "distractors": [
+    "the Borgias",
+    "the Tudors",
+    "the Habsburgs"
+   ],
+   "explain": "Patrons paid artists; the Medici funded Botticelli, Michelangelo and many more.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.rn.leonardo",
+   "topic": "history.renaissance",
+   "kind": "fact",
+   "prompt": "Who painted the Mona Lisa and filled notebooks with designs for flying machines?",
+   "answer": "Leonardo da Vinci",
+   "distractors": [
+    "Michelangelo",
+    "Raphael",
+    "Botticelli"
+   ],
+   "explain": "Leonardo was painter, engineer, anatomist and inventor: the “Renaissance man”.",
+   "accept": [
+    "leonardo",
+    "da vinci"
+   ]
+  },
+  {
+   "id": "history.m.rn.sistine",
+   "topic": "history.renaissance",
+   "kind": "fact",
+   "prompt": "Who painted the ceiling of the Sistine Chapel in Rome (1508–12)?",
+   "answer": "Michelangelo",
+   "distractors": [
+    "Leonardo da Vinci",
+    "Titian",
+    "Donatello"
+   ],
+   "explain": "Contrary to legend, he did not lie on his back: he stood on scaffolding, bending backwards, for four years.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.rn.gutenberg",
+   "topic": "history.renaissance",
+   "kind": "fact",
+   "prompt": "Who developed the printing press with movable metal type in Mainz in about 1450?",
+   "answer": "Johannes Gutenberg",
+   "distractors": [
+    "William Caxton",
+    "Galileo",
+    "Martin Luther"
+   ],
+   "explain": "His Bible of about 1455 was the first major book printed in Europe with movable type.",
+   "accept": [
+    "gutenberg"
+   ]
+  },
+  {
+   "id": "history.m.rn.caxton",
+   "topic": "history.renaissance",
+   "kind": "fact",
+   "prompt": "In 1476, William Caxton set up England’s first printing press. Where?",
+   "answer": "Westminster",
+   "distractors": [
+    "Oxford",
+    "York",
+    "Canterbury"
+   ],
+   "explain": "Among the first books he printed was Chaucer’s Canterbury Tales.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.rn.effect",
+   "topic": "history.renaissance",
+   "kind": "mcq",
+   "prompt": "Which was a result of printing?",
+   "options": [
+    {
+     "text": "Books became cheaper and ideas spread far faster, helping the Reformation",
+     "correct": true
+    },
+    {
+     "text": "Fewer people learned to read",
+     "correct": false,
+     "feedback": "Literacy rose as books became cheaper."
+    },
+    {
+     "text": "Monks copied more books by hand",
+     "correct": false,
+     "feedback": "Printing replaced hand copying."
+    }
+   ],
+   "explain": "Luther’s pamphlets were printed in their hundreds of thousands: the Reformation spread on paper."
+  },
+  {
+   "id": "history.m.rn.humanism",
+   "topic": "history.renaissance",
+   "kind": "mcq",
+   "prompt": "What was Renaissance humanism?",
+   "options": [
+    {
+     "text": "Studying Greek and Roman texts and believing in human talent and achievement",
+     "correct": true
+    },
+    {
+     "text": "A belief that humans are evil",
+     "correct": false,
+     "feedback": "Humanists celebrated human potential."
+    },
+    {
+     "text": "A new religion that replaced Christianity",
+     "correct": false,
+     "feedback": "Most humanists were Christians."
+    }
+   ],
+   "explain": "Humanists like Erasmus read ancient texts in the original Greek and Latin."
+  },
+  {
+   "id": "history.m.rn.perspective",
+   "topic": "history.renaissance",
+   "kind": "mcq",
+   "prompt": "Which technique made Renaissance paintings look three-dimensional?",
+   "options": [
+    {
+     "text": "Linear perspective, where parallel lines meet at a vanishing point",
+     "correct": true
+    },
+    {
+     "text": "Gold leaf backgrounds",
+     "correct": false,
+     "feedback": "That was typical of medieval art."
+    },
+    {
+     "text": "Painting everyone the same size",
+     "correct": false,
+     "feedback": "Perspective made distant things smaller."
+    }
+   ],
+   "explain": "Brunelleschi worked out the rules in Florence in the early 1400s."
+  },
+  {
+   "id": "history.m.rn.w",
+   "topic": "history.renaissance",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: “The printing press was the most important change of the Renaissance.” How far do you agree? Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear judgement in your first sentence",
+    "What printing changed (speed, cost, spread of ideas)",
+    "An example, such as the Reformation or science",
+    "Another important change to compare (art, humanism, rediscovery of Greek texts)",
+    "A conclusion that weighs them"
+   ],
+   "model": "I largely agree, because printing changed how all the other Renaissance ideas spread. Before Gutenberg, books were copied by hand, so they were rare and expensive. After about 1450, thousands of identical copies could be made quickly, so ideas reached many more people and could not easily be destroyed. Luther’s ideas spread across Germany in printed pamphlets, and scientists could share accurate diagrams. However, the rediscovery of Greek and Roman learning was also hugely important, because it gave people the new ideas in the first place, and Renaissance art changed how Europeans saw the world. Overall, printing was the most important change because it multiplied the effect of everything else. So I agree with the interpretation that printing was vital, though the new ideas themselves came first.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Printing was the single invention that made the modern world. Without it, the Renaissance, the Reformation and the Scientific Revolution would have remained the private ideas of a few scholars.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ex.columbus",
+   "topic": "history.exploration",
+   "kind": "mcq",
+   "prompt": "Where did Christopher Columbus land in 1492?",
+   "options": [
+    {
+     "text": "Islands in the Caribbean, though he thought he had reached Asia",
+     "correct": true
+    },
+    {
+     "text": "India",
+     "correct": false,
+     "feedback": "He believed he was near Asia, which is why the islands were called the “West Indies”."
+    },
+    {
+     "text": "England",
+     "correct": false,
+     "feedback": "He sailed from Spain westwards."
+    }
+   ],
+   "explain": "Columbus sailed for Spain and died believing he had reached Asia."
+  },
+  {
+   "id": "history.m.ex.gama",
+   "topic": "history.exploration",
+   "kind": "fact",
+   "prompt": "Which Portuguese explorer was the first European to reach India by sailing round Africa, in 1498?",
+   "answer": "Vasco da Gama",
+   "distractors": [
+    "Ferdinand Magellan",
+    "Francis Drake",
+    "Christopher Columbus"
+   ],
+   "explain": "It opened a sea route for the spice trade that bypassed the Middle East.",
+   "accept": [
+    "da gama"
+   ]
+  },
+  {
+   "id": "history.m.ex.magellan",
+   "topic": "history.exploration",
+   "kind": "mcq",
+   "prompt": "Why is it misleading to say “Magellan sailed round the world”?",
+   "options": [
+    {
+     "text": "He was killed in the Philippines in 1521; Juan Sebastián Elcano finished the voyage in 1522",
+     "correct": true
+    },
+    {
+     "text": "He never left Spain",
+     "correct": false,
+     "feedback": "He led the expedition from 1519."
+    },
+    {
+     "text": "The voyage went round Africa only",
+     "correct": false,
+     "feedback": "It crossed the Atlantic and Pacific."
+    }
+   ],
+   "explain": "Of about 270 men who set out, only 18 returned on the one surviving ship."
+  },
+  {
+   "id": "history.m.ex.tordesillas",
+   "topic": "history.exploration",
+   "kind": "fact",
+   "prompt": "Which 1494 treaty divided newly found lands outside Europe between Spain and Portugal?",
+   "answer": "the Treaty of Tordesillas",
+   "distractors": [
+    "the Treaty of Versailles",
+    "the Treaty of Paris",
+    "Magna Carta"
+   ],
+   "explain": "This is why Brazil speaks Portuguese while most of South America speaks Spanish.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.ex.cortes",
+   "topic": "history.exploration",
+   "kind": "fact",
+   "prompt": "Which Spanish conquistador conquered the Aztec Empire in 1519–21?",
+   "answer": "Hernán Cortés",
+   "distractors": [
+    "Francisco Pizarro",
+    "Amerigo Vespucci",
+    "Walter Raleigh"
+   ],
+   "explain": "Cortés was helped by thousands of Indigenous allies who hated Aztec rule, and by smallpox.",
+   "accept": [
+    "cortes",
+    "hernan cortes",
+    "cortez"
+   ]
+  },
+  {
+   "id": "history.m.ex.disease",
+   "topic": "history.exploration",
+   "kind": "mcq",
+   "prompt": "What caused most of the catastrophic fall in the Indigenous population of the Americas after 1492?",
+   "options": [
+    {
+     "text": "Diseases such as smallpox that Europeans brought, to which people had no immunity",
+     "correct": true
+    },
+    {
+     "text": "Volcanic eruptions",
+     "correct": false,
+     "feedback": "Disease, war and forced labour were the causes."
+    },
+    {
+     "text": "Emigration to Europe",
+     "correct": false,
+     "feedback": "Very few Indigenous people went to Europe."
+    }
+   ],
+   "explain": "Historians estimate that tens of millions died in the century after contact, most from disease, alongside war and forced labour."
+  },
+  {
+   "id": "history.m.ex.exchange",
+   "topic": "history.exploration",
+   "kind": "mcq",
+   "prompt": "In the “Columbian Exchange”, which crop travelled from the Americas to Europe?",
+   "options": [
+    {
+     "text": "Potatoes",
+     "correct": true
+    },
+    {
+     "text": "Wheat",
+     "correct": false,
+     "feedback": "Wheat went the other way, to the Americas."
+    },
+    {
+     "text": "Sugar cane",
+     "correct": false,
+     "feedback": "Sugar cane was taken TO the Americas, where enslaved Africans were forced to grow it."
+    }
+   ],
+   "explain": "Potatoes, tomatoes, maize, chocolate and tobacco came to Europe; horses, wheat and diseases went to the Americas."
+  },
+  {
+   "id": "history.m.ex.caravel",
+   "topic": "history.exploration",
+   "kind": "fact",
+   "prompt": "What was the name of the small, fast, manoeuvrable ship developed by the Portuguese for exploring?",
+   "answer": "the caravel",
+   "distractors": [
+    "the trireme",
+    "the longship",
+    "the galleon"
+   ],
+   "explain": "Its triangular sails let it sail closer to the wind. Columbus’s Niña and Pinta were caravels.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.ex.slavery",
+   "topic": "history.exploration",
+   "kind": "mcq",
+   "prompt": "How did exploration lead to the transatlantic slave trade?",
+   "options": [
+    {
+     "text": "Europeans set up plantations in the Americas and forcibly transported enslaved Africans to work them",
+     "correct": true
+    },
+    {
+     "text": "Explorers abolished slavery in Africa",
+     "correct": false,
+     "feedback": "The opposite: the trade grew enormously."
+    },
+    {
+     "text": "It had no connection",
+     "correct": false,
+     "feedback": "Colonies in the Americas created the demand for enslaved labour."
+    }
+   ],
+   "explain": "The plantation economies of the Caribbean and Brazil depended on enslaved people."
+  },
+  {
+   "id": "history.m.ex.w",
+   "topic": "history.exploration",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Was the age of exploration a time of discovery or of conquest? Explain your view. Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear judgement",
+    "Evidence of discovery and new knowledge (routes, maps, trade)",
+    "Evidence of conquest and its human cost (Aztecs, disease, slavery)",
+    "Whose point of view the word “discovery” reflects",
+    "A balanced conclusion"
+   ],
+   "model": "It was both, but for the people of the Americas it was above all a time of conquest. Europeans did gain new knowledge: da Gama found a sea route to India, Elcano’s crew proved the world could be sailed round, and maps and trade were transformed. However, the lands Columbus “discovered” already had millions of inhabitants, so the word reflects a European view. Cortés destroyed the Aztec Empire, diseases killed tens of millions, and the new colonies led to the enslavement of millions of Africans. Calling it only discovery ignores those who suffered, so I think “conquest” describes it more truthfully, even though it also changed knowledge of the world. The interpretation describes the explorers’ courage fairly, but it leaves out the people who paid the price.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The voyages of Columbus, da Gama and Magellan were triumphs of courage and science. These explorers opened up the world and laid the foundations of the modern age.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.el.year",
+   "topic": "history.elizabeth",
+   "kind": "fact",
+   "prompt": "In which year did Elizabeth I become queen?",
+   "answer": "1558",
+   "distractors": [
+    "1547",
+    "1588",
+    "1603"
+   ],
+   "explain": "She reigned from 1558 until her death in 1603."
+  },
+  {
+   "id": "history.m.el.mother",
+   "topic": "history.elizabeth",
+   "kind": "fact",
+   "prompt": "Who was Elizabeth I’s mother, executed when Elizabeth was two?",
+   "answer": "Anne Boleyn",
+   "distractors": [
+    "Catherine of Aragon",
+    "Jane Seymour",
+    "Mary, Queen of Scots"
+   ],
+   "explain": "Henry VIII had Anne executed in 1536.",
+   "accept": [
+    "boleyn"
+   ]
+  },
+  {
+   "id": "history.m.el.marry",
+   "topic": "history.elizabeth",
+   "kind": "mcq",
+   "prompt": "Why might Elizabeth have chosen never to marry?",
+   "options": [
+    {
+     "text": "A husband might take power from her, and a foreign husband could drag England into his country’s wars",
+     "correct": true
+    },
+    {
+     "text": "Women were not allowed to marry in Tudor times",
+     "correct": false,
+     "feedback": "They certainly were."
+    },
+    {
+     "text": "Parliament banned her from marrying",
+     "correct": false,
+     "feedback": "Parliament BEGGED her to marry and have an heir."
+    }
+   ],
+   "explain": "She used possible marriages as a diplomatic tool for years, and was celebrated as the “Virgin Queen”."
+  },
+  {
+   "id": "history.m.el.babington",
+   "topic": "history.elizabeth",
+   "kind": "fact",
+   "prompt": "Which 1586 plot to kill Elizabeth and crown Mary, Queen of Scots, led to Mary’s execution?",
+   "answer": "the Babington Plot",
+   "distractors": [
+    "the Gunpowder Plot",
+    "the Ridolfi Plot",
+    "the Rye House Plot"
+   ],
+   "explain": "Elizabeth’s spymaster, Francis Walsingham, intercepted coded letters in which Mary approved the plan.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.el.mary",
+   "topic": "history.elizabeth",
+   "kind": "mcq",
+   "prompt": "Why was Mary, Queen of Scots, such a danger to Elizabeth?",
+   "options": [
+    {
+     "text": "She was Catholic and had a strong claim to the English throne, so Catholic plotters wanted to replace Elizabeth with her",
+     "correct": true
+    },
+    {
+     "text": "She commanded the Spanish Armada",
+     "correct": false,
+     "feedback": "The Armada came after her death."
+    },
+    {
+     "text": "She was Elizabeth’s daughter",
+     "correct": false,
+     "feedback": "She was her cousin."
+    }
+   ],
+   "explain": "Mary was executed in 1587, which helped persuade Philip II of Spain to send the Armada."
+  },
+  {
+   "id": "history.m.el.tilbury",
+   "topic": "history.elizabeth",
+   "kind": "fact",
+   "prompt": "Where did Elizabeth make her famous 1588 speech to troops waiting for a Spanish invasion?",
+   "answer": "Tilbury",
+   "distractors": [
+    "Hastings",
+    "Dover",
+    "Westminster"
+   ],
+   "explain": "“I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too.”",
+   "accept": [
+    "tilbury"
+   ]
+  },
+  {
+   "id": "history.m.el.portrait",
+   "topic": "history.elizabeth",
+   "kind": "mcq",
+   "prompt": "Why did Elizabeth control how artists painted her?",
+   "options": [
+    {
+     "text": "Portraits were propaganda: they showed her as powerful, ageless and chosen by God",
+     "correct": true
+    },
+    {
+     "text": "She disliked paintings",
+     "correct": false,
+     "feedback": "She used them cleverly."
+    },
+    {
+     "text": "Paint was too expensive",
+     "correct": false,
+     "feedback": "The reason was political."
+    }
+   ],
+   "explain": "The “Armada Portrait” shows her hand on a globe, with the Spanish fleet wrecked behind her."
+  },
+  {
+   "id": "history.m.el.poor",
+   "topic": "history.elizabeth",
+   "kind": "mcq",
+   "prompt": "What did the 1601 Poor Law do?",
+   "options": [
+    {
+     "text": "Made each parish collect a tax to support its poor, with work for the able-bodied",
+     "correct": true
+    },
+    {
+     "text": "Abolished poverty",
+     "correct": false,
+     "feedback": "Nothing could do that."
+    },
+    {
+     "text": "Sent all poor people to America",
+     "correct": false,
+     "feedback": "Colonies were barely beginning."
+    }
+   ],
+   "explain": "It shaped how England treated poverty for over 200 years."
+  },
+  {
+   "id": "history.m.el.globe",
+   "topic": "history.elizabeth",
+   "kind": "fact",
+   "prompt": "Which theatre, built in 1599 on London’s South Bank, staged many of Shakespeare’s plays?",
+   "answer": "the Globe",
+   "distractors": [
+    "the Rose",
+    "the Palladium",
+    "the Old Vic"
+   ],
+   "explain": "A modern reconstruction opened near the original site in 1997.",
+   "accept": [
+    "globe",
+    "the globe theatre",
+    "globe theatre"
+   ]
+  },
+  {
+   "id": "history.m.el.w",
+   "topic": "history.elizabeth",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: “Elizabeth I’s reign was a golden age.” How far do you agree? Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear judgement",
+    "Evidence for (the Armada, Shakespeare, exploration, stability)",
+    "Evidence against (poverty, plots, persecution of Catholics, war costs)",
+    "Who it was “golden” for",
+    "A balanced conclusion"
+   ],
+   "model": "It was a golden age in some ways, but not for everyone. England survived the Spanish Armada in 1588, Shakespeare’s plays filled the Globe, and Drake sailed round the world, so for the queen and the educated it was a time of glory. Elizabeth also gave the country a long period of relative stability after the religious upheavals of her father and siblings. However, poverty grew so serious that Parliament passed the Poor Law of 1601, Catholics could be fined, imprisoned or executed for their faith, and the long war with Spain was expensive. Much of the “golden” image comes from Elizabeth’s own propaganda. So I partly agree: it was golden for England’s reputation and culture, but much less so for the poor and for Catholics.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Elizabeth’s reign was England’s golden age. The Armada was defeated, Shakespeare wrote his greatest plays, and the country was united and prosperous under a wise and popular queen.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.sr.copernicus",
+   "topic": "history.science-rev",
+   "kind": "fact",
+   "prompt": "Who published the theory in 1543 that the Earth goes round the Sun?",
+   "answer": "Nicolaus Copernicus",
+   "distractors": [
+    "Isaac Newton",
+    "Aristotle",
+    "William Harvey"
+   ],
+   "explain": "It challenged the ancient view, taught by Ptolemy, that the Earth was at the centre.",
+   "accept": [
+    "copernicus"
+   ]
+  },
+  {
+   "id": "history.m.sr.galileo",
+   "topic": "history.science-rev",
+   "kind": "mcq",
+   "prompt": "What happened to Galileo in 1633?",
+   "options": [
+    {
+     "text": "The Catholic Church put him on trial and he spent his last years under house arrest",
+     "correct": true
+    },
+    {
+     "text": "He was made Pope",
+     "correct": false,
+     "feedback": "He was condemned by the Church."
+    },
+    {
+     "text": "He was burned at the stake",
+     "correct": false,
+     "feedback": "He was forced to recant and kept under house arrest."
+    }
+   ],
+   "explain": "His telescope observations, like the moons of Jupiter, supported Copernicus."
+  },
+  {
+   "id": "history.m.sr.vesalius",
+   "topic": "history.science-rev",
+   "kind": "fact",
+   "prompt": "Which anatomist’s book of 1543 corrected many mistakes made by the ancient Greek doctor Galen?",
+   "answer": "Andreas Vesalius",
+   "distractors": [
+    "William Harvey",
+    "Hippocrates",
+    "Louis Pasteur"
+   ],
+   "explain": "Vesalius dissected human bodies himself; Galen had mostly dissected animals.",
+   "accept": [
+    "vesalius"
+   ]
+  },
+  {
+   "id": "history.m.sr.harvey",
+   "topic": "history.science-rev",
+   "kind": "fact",
+   "prompt": "Which English doctor showed in 1628 that the heart pumps blood round the body in a circuit?",
+   "answer": "William Harvey",
+   "distractors": [
+    "Edward Jenner",
+    "John Snow",
+    "Isaac Newton"
+   ],
+   "explain": "Galen had taught that blood was made in the liver and used up.",
+   "accept": [
+    "harvey"
+   ]
+  },
+  {
+   "id": "history.m.sr.newton",
+   "topic": "history.science-rev",
+   "kind": "fact",
+   "prompt": "Who published the laws of motion and universal gravitation in 1687?",
+   "answer": "Isaac Newton",
+   "distractors": [
+    "Galileo Galilei",
+    "Robert Hooke",
+    "Charles Darwin"
+   ],
+   "explain": "His book, the Principia, explained both a falling apple and the orbits of the planets.",
+   "accept": [
+    "newton",
+    "sir isaac newton"
+   ]
+  },
+  {
+   "id": "history.m.sr.royal",
+   "topic": "history.science-rev",
+   "kind": "fact",
+   "prompt": "Which society for science was founded in London in 1660 and still exists?",
+   "answer": "the Royal Society",
+   "distractors": [
+    "the British Museum",
+    "the Royal Navy",
+    "the BBC"
+   ],
+   "explain": "Its motto, “Nullius in verba”, means roughly “take nobody’s word for it”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.sr.method",
+   "topic": "history.science-rev",
+   "kind": "mcq",
+   "prompt": "What was new about the scientific method championed by Francis Bacon?",
+   "options": [
+    {
+     "text": "Testing ideas by observation and experiment, rather than trusting ancient authorities",
+     "correct": true
+    },
+    {
+     "text": "Reading Aristotle more carefully",
+     "correct": false,
+     "feedback": "The point was to check, not just read."
+    },
+    {
+     "text": "Relying on dreams and visions",
+     "correct": false,
+     "feedback": "It relied on evidence."
+    }
+   ],
+   "explain": "This is the heart of the Scientific Revolution: evidence over authority."
+  },
+  {
+   "id": "history.m.sr.galen",
+   "topic": "history.science-rev",
+   "kind": "mcq",
+   "prompt": "Why had the Greek doctor Galen’s ideas lasted about 1,400 years?",
+   "options": [
+    {
+     "text": "The Church approved of them and doctors trusted ancient authorities rather than testing them",
+     "correct": true
+    },
+    {
+     "text": "They were all correct",
+     "correct": false,
+     "feedback": "Many were wrong, as Vesalius and Harvey showed."
+    },
+    {
+     "text": "Nobody could read Greek",
+     "correct": false,
+     "feedback": "His works were translated and widely taught."
+    }
+   ],
+   "explain": "Galen (AD 129–c.216) was brilliant, but medicine needed people willing to check him."
+  },
+  {
+   "id": "history.m.sr.order",
+   "topic": "history.science-rev",
+   "kind": "order",
+   "prompt": "Put these in order.",
+   "items": [
+    "Copernicus publishes his theory",
+    "Harvey explains circulation",
+    "Galileo’s trial",
+    "Newton’s Principia"
+   ],
+   "labels": [
+    "1543",
+    "1628",
+    "1633",
+    "1687"
+   ],
+   "explain": "A century and a half that changed science.",
+   "axis": "time"
+  },
+  {
+   "id": "history.m.sr.w",
+   "topic": "history.science-rev",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Explain why Galileo’s ideas alarmed the Catholic Church. Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "What Galileo claimed (the Earth moves round the Sun)",
+    "Why this clashed with Church teaching and the Bible",
+    "Why the Church was especially worried after the Reformation",
+    "How Galileo was treated",
+    "A concluding sentence"
+   ],
+   "model": "Galileo’s ideas alarmed the Church because they challenged its authority to explain the world. Using his telescope, he found evidence that the Earth moves round the Sun, as Copernicus had argued. The Church taught that the Earth was at the centre of God’s creation, and some Bible passages seemed to say the Sun moved. After the Reformation, the Catholic Church was already under attack from Protestants, so it feared that if people could question it about the heavens, they might question its teaching on everything else. In 1633 Galileo was tried, forced to deny his ideas and kept under house arrest. The real issue was not just astronomy but who had the right to decide what was true. So the interpretation goes too far: the Church feared losing authority, but it was not against all learning.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The Church was the enemy of science. It silenced Galileo because it hated new ideas, and science only advanced when people escaped its control.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.rs.theatre",
+   "topic": "history.restoration",
+   "kind": "mcq",
+   "prompt": "What changed when Charles II returned in 1660?",
+   "options": [
+    {
+     "text": "Theatres reopened, and women were allowed to act on stage for the first time",
+     "correct": true
+    },
+    {
+     "text": "Parliament was abolished for good",
+     "correct": false,
+     "feedback": "Parliament remained powerful."
+    },
+    {
+     "text": "England became a republic",
+     "correct": false,
+     "feedback": "The opposite: the monarchy was restored."
+    }
+   ],
+   "explain": "The Puritans had closed the theatres; the “Merry Monarch” brought them back."
+  },
+  {
+   "id": "history.m.rs.plague",
+   "topic": "history.restoration",
+   "kind": "fact",
+   "prompt": "About how many Londoners died in the Great Plague of 1665?",
+   "answer": "about 100,000",
+   "distractors": [
+    "about 1,000",
+    "about 10,000",
+    "about a million"
+   ],
+   "explain": "Perhaps a quarter of London’s population. Official records counted about 70,000, but many deaths went unrecorded.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.rs.cause",
+   "topic": "history.restoration",
+   "kind": "mcq",
+   "prompt": "What do we now know spread the plague?",
+   "options": [
+    {
+     "text": "Fleas carried by rats, which passed the bacterium to people",
+     "correct": true
+    },
+    {
+     "text": "Bad air from rotting rubbish",
+     "correct": false,
+     "feedback": "That was the “miasma” idea people believed then."
+    },
+    {
+     "text": "Cats and dogs",
+     "correct": false,
+     "feedback": "Londoners killed thousands of cats and dogs, which probably made things worse by leaving the rats alone."
+    }
+   ],
+   "explain": "The bacterium Yersinia pestis was only identified in 1894."
+  },
+  {
+   "id": "history.m.rs.eyam",
+   "topic": "history.restoration",
+   "kind": "fact",
+   "prompt": "Which Derbyshire village quarantined itself in 1665–66 to stop the plague spreading?",
+   "answer": "Eyam",
+   "distractors": [
+    "Pudding Lane",
+    "Bosworth",
+    "Tilbury"
+   ],
+   "explain": "Led by their rector, William Mompesson, the villagers stayed put; a large share of them died, but the disease did not spread to nearby towns.",
+   "accept": [
+    "eyam"
+   ]
+  },
+  {
+   "id": "history.m.rs.fire",
+   "topic": "history.restoration",
+   "kind": "fact",
+   "prompt": "In which street did the Great Fire of London start, in September 1666?",
+   "answer": "Pudding Lane",
+   "distractors": [
+    "Fleet Street",
+    "Downing Street",
+    "Baker Street"
+   ],
+   "explain": "It began in Thomas Farriner’s bakery in the early hours of 2 September.",
+   "accept": [
+    "pudding lane"
+   ]
+  },
+  {
+   "id": "history.m.rs.spread",
+   "topic": "history.restoration",
+   "kind": "mcq",
+   "prompt": "Why did the fire spread so far?",
+   "options": [
+    {
+     "text": "Wooden houses built close together, a dry summer and a strong east wind",
+     "correct": true
+    },
+    {
+     "text": "Firefighters refused to help",
+     "correct": false,
+     "feedback": "People fought it, but with buckets and hooks."
+    },
+    {
+     "text": "It was started deliberately in many places",
+     "correct": false,
+     "feedback": "It started by accident in one bakery."
+    }
+   ],
+   "explain": "It burned for four days and destroyed about 13,000 houses and old St Paul’s Cathedral."
+  },
+  {
+   "id": "history.m.rs.deaths",
+   "topic": "history.restoration",
+   "kind": "mcq",
+   "prompt": "Only a handful of deaths were recorded in the Great Fire. Why do historians think the real number was higher?",
+   "options": [
+    {
+     "text": "Poor people’s deaths were often not recorded, and the heat may have left no remains",
+     "correct": true
+    },
+    {
+     "text": "Everyone escaped by boat",
+     "correct": false,
+     "feedback": "Many did escape, but some must have died."
+    },
+    {
+     "text": "Records were perfect in 1666",
+     "correct": false,
+     "feedback": "They were far from perfect."
+    }
+   ],
+   "explain": "A good example of asking what a source leaves out."
+  },
+  {
+   "id": "history.m.rs.wren",
+   "topic": "history.restoration",
+   "kind": "fact",
+   "prompt": "Which architect designed the new St Paul’s Cathedral after the fire?",
+   "answer": "Christopher Wren",
+   "distractors": [
+    "Inigo Jones",
+    "Isambard Kingdom Brunel",
+    "Samuel Pepys"
+   ],
+   "explain": "He also designed over fifty new City churches and the Monument to the fire.",
+   "accept": [
+    "wren",
+    "sir christopher wren"
+   ]
+  },
+  {
+   "id": "history.m.rs.pepys",
+   "topic": "history.restoration",
+   "kind": "fact",
+   "prompt": "Which diarist described the fire and buried his parmesan cheese and wine in his garden to save them?",
+   "answer": "Samuel Pepys",
+   "distractors": [
+    "John Evelyn",
+    "William Shakespeare",
+    "Isaac Newton"
+   ],
+   "explain": "Pepys’ diary is one of our best sources for both the plague and the fire.",
+   "accept": [
+    "pepys"
+   ]
+  },
+  {
+   "id": "history.m.rs.w",
+   "topic": "history.restoration",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Which changed London more: the Great Plague of 1665 or the Great Fire of 1666? Explain your answer. Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear judgement",
+    "The plague’s effects (deaths, fear, how quickly the population recovered)",
+    "The fire’s effects (destruction, rebuilding in brick and stone, new St Paul’s)",
+    "Long-term versus short-term change",
+    "A conclusion"
+   ],
+   "model": "The Great Fire changed London more, even though the plague killed far more people. The plague killed perhaps 100,000 Londoners, a terrible loss, but people kept moving to the city, so the population recovered within a few years and London looked the same. The fire, by contrast, destroyed about 13,000 houses and old St Paul’s. The city was rebuilt with brick and stone instead of timber, with new building rules, and Wren’s St Paul’s and churches still shape the skyline today. So the plague caused greater suffering, but the fire caused the longer-lasting change. The interpretation is right about the fresh start, but the idea that the fire wiped out the plague is a myth.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The Great Fire was a disaster with a silver lining. By burning the old wooden city it wiped out the plague and gave London a fresh start.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.am.slogan",
+   "topic": "history.american-rev",
+   "kind": "mcq",
+   "prompt": "What did the colonists mean by “No taxation without representation”?",
+   "options": [
+    {
+     "text": "Parliament should not tax them because they had no MPs to vote for",
+     "correct": true
+    },
+    {
+     "text": "They refused to pay any taxes at all, ever",
+     "correct": false,
+     "feedback": "They objected to taxes they had no say in."
+    },
+    {
+     "text": "They wanted the king to pay their taxes",
+     "correct": false,
+     "feedback": "The issue was who had the right to tax them."
+    }
+   ],
+   "explain": "Taxes like the Stamp Act (1765) and duties on tea were set in London without colonial consent."
+  },
+  {
+   "id": "history.m.am.tea",
+   "topic": "history.american-rev",
+   "kind": "fact",
+   "prompt": "In 1773, colonists protesting against a tax dumped crates of tea into a harbour. Where?",
+   "answer": "Boston",
+   "distractors": [
+    "New York",
+    "Philadelphia",
+    "Liverpool"
+   ],
+   "explain": "The Boston Tea Party led Britain to punish Massachusetts, which pushed the colonies closer to war.",
+   "accept": [
+    "boston"
+   ]
+  },
+  {
+   "id": "history.m.am.declaration",
+   "topic": "history.american-rev",
+   "kind": "fact",
+   "prompt": "On which date was the Declaration of Independence adopted?",
+   "answer": "4 July 1776",
+   "distractors": [
+    "25 December 1773",
+    "14 July 1789",
+    "1 January 1800"
+   ],
+   "explain": "Americans celebrate it as Independence Day.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.am.jefferson",
+   "topic": "history.american-rev",
+   "kind": "fact",
+   "prompt": "Who was the main author of the Declaration of Independence?",
+   "answer": "Thomas Jefferson",
+   "distractors": [
+    "George Washington",
+    "Benjamin Franklin",
+    "Abraham Lincoln"
+   ],
+   "explain": "Jefferson later became the third president.",
+   "accept": [
+    "jefferson"
+   ]
+  },
+  {
+   "id": "history.m.am.washington",
+   "topic": "history.american-rev",
+   "kind": "fact",
+   "prompt": "Who commanded the American army and became the first president?",
+   "answer": "George Washington",
+   "distractors": [
+    "Thomas Jefferson",
+    "John Adams",
+    "Paul Revere"
+   ],
+   "explain": "He was president from 1789 to 1797.",
+   "accept": [
+    "washington"
+   ]
+  },
+  {
+   "id": "history.m.am.france",
+   "topic": "history.american-rev",
+   "kind": "mcq",
+   "prompt": "Which country’s help was vital to the American victory?",
+   "options": [
+    {
+     "text": "France, which sent troops and a fleet",
+     "correct": true
+    },
+    {
+     "text": "Russia",
+     "correct": false,
+     "feedback": "Russia stayed out of the war."
+    },
+    {
+     "text": "Prussia",
+     "correct": false,
+     "feedback": "France was the key ally."
+    }
+   ],
+   "explain": "France wanted revenge on Britain for the Seven Years War. The cost of helping helped bankrupt France, a cause of its own revolution in 1789."
+  },
+  {
+   "id": "history.m.am.yorktown",
+   "topic": "history.american-rev",
+   "kind": "fact",
+   "prompt": "At which town did the main British army surrender in 1781?",
+   "answer": "Yorktown",
+   "distractors": [
+    "Boston",
+    "Waterloo",
+    "Saratoga"
+   ],
+   "explain": "A French fleet trapped the British by sea while American and French troops attacked by land.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.am.paradox",
+   "topic": "history.american-rev",
+   "kind": "mcq",
+   "prompt": "The Declaration says “all men are created equal”. Why do historians call this a paradox?",
+   "options": [
+    {
+     "text": "Slavery remained legal, and Jefferson himself enslaved people",
+     "correct": true
+    },
+    {
+     "text": "Everyone in America was already equal",
+     "correct": false,
+     "feedback": "Enslaved people, women and Indigenous Americans were not treated as equal."
+    },
+    {
+     "text": "The words were added in 1900",
+     "correct": false,
+     "feedback": "They are in the original 1776 text."
+    }
+   ],
+   "explain": "Slavery was not abolished across the USA until 1865."
+  },
+  {
+   "id": "history.m.am.paris",
+   "topic": "history.american-rev",
+   "kind": "fact",
+   "prompt": "Which 1783 treaty recognised American independence?",
+   "answer": "the Treaty of Paris",
+   "distractors": [
+    "the Treaty of Versailles",
+    "the Treaty of Tordesillas",
+    "the Act of Union"
+   ],
+   "explain": "Britain recognised the United States as independent.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.am.w",
+   "topic": "history.american-rev",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Explain why the American colonists rebelled against Britain. Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear opening sentence",
+    "Taxes without representation (Stamp Act, tea duties)",
+    "Events that raised tension (Boston Tea Party, British punishments, Lexington)",
+    "Enlightenment ideas about rights",
+    "Which reason mattered most"
+   ],
+   "model": "The colonists rebelled mainly because they believed Britain was taking away their rights. After 1763 Parliament taxed them through laws like the Stamp Act and duties on tea, even though they had no MPs, so they argued “no taxation without representation”. Each protest made things worse: after the Boston Tea Party in 1773, Britain closed Boston’s harbour, and in 1775 fighting broke out at Lexington. Enlightenment ideas, like Locke’s natural rights, gave them a way to justify independence, which Jefferson used in 1776. The most important reason was the argument over taxes, because it turned a quarrel about money into a quarrel about freedom. So the revolution won liberty for some colonists, but not the liberty for all that the interpretation claims.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The American Revolution was a fight for liberty for all. Its leaders declared that all men are created equal and built a nation on that promise.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.np.crowned",
+   "topic": "history.napoleon",
+   "kind": "fact",
+   "prompt": "In which year did Napoleon crown himself Emperor of the French?",
+   "answer": "1804",
+   "distractors": [
+    "1789",
+    "1815",
+    "1793"
+   ],
+   "explain": "In Notre-Dame, he took the crown from the Pope and placed it on his own head."
+  },
+  {
+   "id": "history.m.np.trafalgar",
+   "topic": "history.napoleon",
+   "kind": "fact",
+   "prompt": "At which sea battle in 1805 did Nelson defeat the French and Spanish fleets?",
+   "answer": "Trafalgar",
+   "distractors": [
+    "the Nile",
+    "Waterloo",
+    "Jutland"
+   ],
+   "explain": "Nelson was killed, but the victory ended Napoleon’s hopes of invading Britain.",
+   "accept": [
+    "battle of trafalgar",
+    "trafalgar"
+   ]
+  },
+  {
+   "id": "history.m.np.victory",
+   "topic": "history.napoleon",
+   "kind": "fact",
+   "prompt": "What was the name of Nelson’s flagship at Trafalgar, now in Portsmouth?",
+   "answer": "HMS Victory",
+   "distractors": [
+    "the Mary Rose",
+    "the Golden Hind",
+    "HMS Beagle"
+   ],
+   "explain": "Nelson’s signal was “England expects that every man will do his duty”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.np.code",
+   "topic": "history.napoleon",
+   "kind": "mcq",
+   "prompt": "What was the Napoleonic Code?",
+   "options": [
+    {
+     "text": "A single set of laws for France that influenced legal systems across Europe and beyond",
+     "correct": true
+    },
+    {
+     "text": "A secret army cipher",
+     "correct": false,
+     "feedback": "It was a code of LAWS."
+    },
+    {
+     "text": "Rules for fighting at sea",
+     "correct": false,
+     "feedback": "It covered property, family and civil law."
+    }
+   ],
+   "explain": "It gave equality before the law to men, though it gave women few rights."
+  },
+  {
+   "id": "history.m.np.russia",
+   "topic": "history.napoleon",
+   "kind": "mcq",
+   "prompt": "What happened when Napoleon invaded Russia in 1812?",
+   "options": [
+    {
+     "text": "His huge army had to retreat through the winter, and most of it died or deserted",
+     "correct": true
+    },
+    {
+     "text": "He conquered Russia",
+     "correct": false,
+     "feedback": "He reached Moscow but had to retreat."
+    },
+    {
+     "text": "Russia surrendered at once",
+     "correct": false,
+     "feedback": "The Russians retreated and burned Moscow."
+    }
+   ],
+   "explain": "Of over half a million men, only a fraction returned. It was the beginning of his downfall."
+  },
+  {
+   "id": "history.m.np.wellington",
+   "topic": "history.napoleon",
+   "kind": "fact",
+   "prompt": "Which British general fought Napoleon’s armies in Spain and Portugal and then at Waterloo?",
+   "answer": "the Duke of Wellington",
+   "distractors": [
+    "Lord Nelson",
+    "Oliver Cromwell",
+    "Winston Churchill"
+   ],
+   "explain": "Arthur Wellesley later became prime minister.",
+   "accept": [
+    "wellington",
+    "arthur wellesley"
+   ]
+  },
+  {
+   "id": "history.m.np.helena",
+   "topic": "history.napoleon",
+   "kind": "fact",
+   "prompt": "After Waterloo, Napoleon was exiled to which remote island, where he died in 1821?",
+   "answer": "St Helena",
+   "distractors": [
+    "Elba",
+    "Corsica",
+    "Malta"
+   ],
+   "explain": "He had already escaped from his first exile on Elba in 1815.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.np.peterloo",
+   "topic": "history.napoleon",
+   "kind": "mcq",
+   "prompt": "What happened at “Peterloo” in Manchester in 1819?",
+   "options": [
+    {
+     "text": "Cavalry charged a peaceful crowd demanding parliamentary reform; about 18 people were killed",
+     "correct": true
+    },
+    {
+     "text": "Napoleon was finally defeated",
+     "correct": false,
+     "feedback": "The name mocks Waterloo, four years earlier."
+    },
+    {
+     "text": "The first railway opened",
+     "correct": false,
+     "feedback": "That was 1830."
+    }
+   ],
+   "explain": "The name was a bitter joke: soldiers who had fought at Waterloo now attacked their own people."
+  },
+  {
+   "id": "history.m.np.w",
+   "topic": "history.napoleon",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Explain why Napoleon was eventually defeated. Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear opening sentence",
+    "British sea power (Trafalgar, the blockade)",
+    "The disaster in Russia in 1812",
+    "The alliance of his enemies and Waterloo",
+    "Which reason mattered most"
+   ],
+   "model": "Napoleon was defeated mainly because he took on too many enemies at once. Britain’s victory at Trafalgar in 1805 meant he could never invade Britain, and the Royal Navy blockaded French trade for years. His invasion of Russia in 1812 was a disaster: his army was destroyed by the winter, disease and the long retreat, and this encouraged Prussia, Austria and others to join Britain against him. Even after he escaped from Elba, the combined British and Prussian armies beat him at Waterloo in 1815. The most important reason was the Russian campaign, because it destroyed the army that had made him seem unbeatable. So the interpretation is half right: the winter destroyed his army, but it was his enemies, working together, who finished him.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Napoleon was not beaten by his enemies. He was beaten by the Russian winter, which destroyed the greatest army Europe had ever seen.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.if.blight",
+   "topic": "history.famine",
+   "kind": "mcq",
+   "prompt": "What caused the potato crop to fail in Ireland from 1845?",
+   "options": [
+    {
+     "text": "Potato blight, a plant disease that rotted the potatoes in the ground",
+     "correct": true
+    },
+    {
+     "text": "A long drought",
+     "correct": false,
+     "feedback": "It was a disease, spread in damp weather."
+    },
+    {
+     "text": "A plague of locusts",
+     "correct": false,
+     "feedback": "It was blight."
+    }
+   ],
+   "explain": "The blight returned year after year, worst in 1846 and 1848."
+  },
+  {
+   "id": "history.m.if.why",
+   "topic": "history.famine",
+   "kind": "mcq",
+   "prompt": "Why did the failure of one crop cause a famine?",
+   "options": [
+    {
+     "text": "About a third of the people depended almost entirely on potatoes for food",
+     "correct": true
+    },
+    {
+     "text": "Irish people refused to eat other food",
+     "correct": false,
+     "feedback": "Many simply could not afford anything else."
+    },
+    {
+     "text": "There were no other crops in Ireland",
+     "correct": false,
+     "feedback": "Other crops were grown, but much was sold or exported."
+    }
+   ],
+   "explain": "Poor labourers grew potatoes on tiny plots because potatoes produce a lot of food from little land."
+  },
+  {
+   "id": "history.m.if.deaths",
+   "topic": "history.famine",
+   "kind": "fact",
+   "prompt": "About how many people died in the Great Irish Famine?",
+   "answer": "about a million",
+   "distractors": [
+    "about ten thousand",
+    "about a hundred thousand",
+    "about ten million"
+   ],
+   "explain": "Most died of disease and hunger between 1846 and 1851.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.if.emigration",
+   "topic": "history.famine",
+   "kind": "mcq",
+   "prompt": "What did over a million people do to escape the famine?",
+   "options": [
+    {
+     "text": "Emigrated, especially to the USA, Britain, Canada and Australia",
+     "correct": true
+    },
+    {
+     "text": "Moved to France",
+     "correct": false,
+     "feedback": "Most went to America and Britain."
+    },
+    {
+     "text": "Joined the army in India",
+     "correct": false,
+     "feedback": "Emigration across the Atlantic was the main escape."
+    }
+   ],
+   "explain": "Ireland’s population fell by about a quarter between 1845 and 1851 and kept falling for decades."
+  },
+  {
+   "id": "history.m.if.exports",
+   "topic": "history.famine",
+   "kind": "mcq",
+   "prompt": "Why has the government’s response been so heavily criticised?",
+   "options": [
+    {
+     "text": "Food such as grain and cattle continued to be exported from Ireland while people starved, and relief was cut back",
+     "correct": true
+    },
+    {
+     "text": "The government gave too much food away",
+     "correct": false,
+     "feedback": "Relief was limited and stopped too soon."
+    },
+    {
+     "text": "Ireland was not part of the United Kingdom",
+     "correct": false,
+     "feedback": "Ireland was part of the UK from 1801."
+    }
+   ],
+   "explain": "Some relief was given, but many historians argue that the scale of the deaths was a result of government choices."
+  },
+  {
+   "id": "history.m.if.cornlaws",
+   "topic": "history.famine",
+   "kind": "fact",
+   "prompt": "Which prime minister repealed the Corn Laws in 1846, partly because of the famine?",
+   "answer": "Robert Peel",
+   "distractors": [
+    "William Gladstone",
+    "Benjamin Disraeli",
+    "Lord Liverpool"
+   ],
+   "explain": "Peel also bought maize from America for Ireland, though it was not enough.",
+   "accept": [
+    "peel",
+    "sir robert peel"
+   ]
+  },
+  {
+   "id": "history.m.if.laissez",
+   "topic": "history.famine",
+   "kind": "mcq",
+   "prompt": "Officials such as Charles Trevelyan believed in “laissez-faire”. What does that mean?",
+   "options": [
+    {
+     "text": "The government should interfere as little as possible in the economy",
+     "correct": true
+    },
+    {
+     "text": "The government should feed everyone for free",
+     "correct": false,
+     "feedback": "The opposite."
+    },
+    {
+     "text": "Free trade should be banned",
+     "correct": false,
+     "feedback": "Laissez-faire supporters wanted free trade."
+    }
+   ],
+   "explain": "This belief made the government reluctant to give food directly or stop exports."
+  },
+  {
+   "id": "history.m.if.soup",
+   "topic": "history.famine",
+   "kind": "mcq",
+   "prompt": "What happened in 1847 when the government opened soup kitchens?",
+   "options": [
+    {
+     "text": "Millions of people were fed each day, showing that relief could work, but the kitchens were closed after a few months",
+     "correct": true
+    },
+    {
+     "text": "Nobody used them",
+     "correct": false,
+     "feedback": "They fed millions."
+    },
+    {
+     "text": "They ended the famine",
+     "correct": false,
+     "feedback": "Famine and disease continued for years."
+    }
+   ],
+   "explain": "After the soup kitchens closed, the cost of relief was placed on local taxes and workhouses."
+  },
+  {
+   "id": "history.m.if.w",
+   "topic": "history.famine",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: “The British government was to blame for the scale of the Irish Famine.” How far do you agree? Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear judgement",
+    "Natural causes (blight, dependence on potatoes)",
+    "Government choices (exports, laissez-faire, closing relief)",
+    "Evidence that some help was given",
+    "A balanced conclusion"
+   ],
+   "model": "I largely agree that the government was responsible for the SCALE of the famine, though not its cause. The blight was natural, and so many poor people depended on potatoes that any crop failure would cause hunger. However, the government made choices that turned hunger into catastrophe. Food continued to be exported while people starved, and officials like Trevelyan believed in laissez-faire, so relief was limited. The soup kitchens of 1847 fed millions, showing what was possible, yet they were closed after a few months. Peel did buy maize and repeal the Corn Laws, so some help was given. Overall, nature caused the crisis, but government decisions explain why a million people died. So I disagree with the interpretation: the blight was natural, but the death toll was not inevitable.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The Great Famine was a natural disaster. Potato blight struck without warning, and no government of the time could have prevented the suffering that followed.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ph.chadwick",
+   "topic": "history.public-health",
+   "kind": "fact",
+   "prompt": "Whose 1842 report showed that people in dirty, crowded areas died much younger?",
+   "answer": "Edwin Chadwick",
+   "distractors": [
+    "John Snow",
+    "Joseph Bazalgette",
+    "Louis Pasteur"
+   ],
+   "explain": "He found that labourers in Liverpool lived, on average, only about 15 years, largely because so many children died.",
+   "accept": [
+    "chadwick"
+   ]
+  },
+  {
+   "id": "history.m.ph.miasma",
+   "topic": "history.public-health",
+   "kind": "fact",
+   "prompt": "What was the old belief that diseases were spread by bad-smelling air called?",
+   "answer": "miasma",
+   "distractors": [
+    "germ theory",
+    "vaccination",
+    "contagion"
+   ],
+   "explain": "It was wrong, but it did encourage people to clean up rubbish and sewage.",
+   "accept": [
+    "miasma theory"
+   ]
+  },
+  {
+   "id": "history.m.ph.snow",
+   "topic": "history.public-health",
+   "kind": "fact",
+   "prompt": "Who mapped cholera deaths in Soho in 1854 and traced them to the Broad Street water pump?",
+   "answer": "John Snow",
+   "distractors": [
+    "Edwin Chadwick",
+    "Florence Nightingale",
+    "Edward Jenner"
+   ],
+   "explain": "He persuaded officials to remove the pump handle, and cases fell.",
+   "accept": [
+    "snow",
+    "dr john snow"
+   ]
+  },
+  {
+   "id": "history.m.ph.cholera",
+   "topic": "history.public-health",
+   "kind": "mcq",
+   "prompt": "How was cholera actually spread?",
+   "options": [
+    {
+     "text": "Through water contaminated with sewage",
+     "correct": true
+    },
+    {
+     "text": "Through bad smells",
+     "correct": false,
+     "feedback": "That was the miasma theory."
+    },
+    {
+     "text": "Through mosquito bites",
+     "correct": false,
+     "feedback": "That is malaria."
+    }
+   ],
+   "explain": "Cholera epidemics struck Britain in 1832, 1848–49, 1854 and 1866."
+  },
+  {
+   "id": "history.m.ph.stink",
+   "topic": "history.public-health",
+   "kind": "fact",
+   "prompt": "What was the hot summer of 1858, when the smell of the Thames forced MPs to act, called?",
+   "answer": "the Great Stink",
+   "distractors": [
+    "the Great Fire",
+    "the Great Exhibition",
+    "the Great Smog"
+   ],
+   "explain": "Parliament quickly approved money for a new sewer system.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.ph.bazalgette",
+   "topic": "history.public-health",
+   "kind": "fact",
+   "prompt": "Which engineer built London’s great sewer system, still in use today?",
+   "answer": "Joseph Bazalgette",
+   "distractors": [
+    "Isambard Kingdom Brunel",
+    "George Stephenson",
+    "Christopher Wren"
+   ],
+   "explain": "Over 1,000 miles of street sewers fed into great intercepting sewers that carried waste away from the city.",
+   "accept": [
+    "bazalgette"
+   ]
+  },
+  {
+   "id": "history.m.ph.acts",
+   "topic": "history.public-health",
+   "kind": "mcq",
+   "prompt": "What was the key difference between the Public Health Acts of 1848 and 1875?",
+   "options": [
+    {
+     "text": "The 1848 Act was voluntary for towns; the 1875 Act made councils provide clean water, drains and sewers",
+     "correct": true
+    },
+    {
+     "text": "The 1848 Act was much stronger",
+     "correct": false,
+     "feedback": "It was weaker: councils could choose to ignore it."
+    },
+    {
+     "text": "There was no difference",
+     "correct": false,
+     "feedback": "The 1875 Act was compulsory."
+    }
+   ],
+   "explain": "Governments slowly accepted that public health was their responsibility."
+  },
+  {
+   "id": "history.m.ph.pasteur",
+   "topic": "history.public-health",
+   "kind": "fact",
+   "prompt": "Which French scientist’s germ theory (1861) proved that microbes cause disease?",
+   "answer": "Louis Pasteur",
+   "distractors": [
+    "Marie Curie",
+    "Isaac Newton",
+    "Charles Darwin"
+   ],
+   "explain": "Germ theory explained WHY clean water and sewers worked.",
+   "accept": [
+    "pasteur"
+   ]
+  },
+  {
+   "id": "history.m.ph.w",
+   "topic": "history.public-health",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Explain why public health in Britain improved in the second half of the 1800s. Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear opening sentence",
+    "Evidence and science (Chadwick, Snow, germ theory)",
+    "Events that forced action (cholera, the Great Stink)",
+    "Government action (Public Health Act 1875) and engineering (Bazalgette)",
+    "Which factor mattered most"
+   ],
+   "model": "Public health improved because evidence, crisis and government action came together. Chadwick’s report of 1842 showed how dirt shortened lives, and in 1854 John Snow proved that cholera spread through water. Repeated cholera epidemics and the Great Stink of 1858 made the problem impossible for MPs to ignore, so they paid for Bazalgette’s sewers. Pasteur’s germ theory then explained why cleanliness worked. Finally, the Public Health Act of 1875 forced councils to provide clean water and drains. The most important factor was government action, because scientific ideas only saved lives once councils were made to act on them. So Snow was important, but the interpretation ignores the government action that turned his discovery into change.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "John Snow was the hero who saved Victorian Britain from disease. His map of the Broad Street pump changed everything.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.sf.deeds",
+   "topic": "history.suffrage",
+   "kind": "fact",
+   "prompt": "What was the motto of the suffragettes’ WSPU?",
+   "answer": "Deeds not words",
+   "distractors": [
+    "Votes for all",
+    "Keep calm and carry on",
+    "Liberty, equality, sisterhood"
+   ],
+   "explain": "The WSPU believed peaceful persuasion had failed for forty years.",
+   "accept": [
+    "deeds, not words"
+   ]
+  },
+  {
+   "id": "history.m.sf.hunger",
+   "topic": "history.suffrage",
+   "kind": "mcq",
+   "prompt": "From 1909 imprisoned suffragettes went on hunger strike. How did the government first respond?",
+   "options": [
+    {
+     "text": "By force-feeding them through tubes, which caused public outrage",
+     "correct": true
+    },
+    {
+     "text": "By giving them the vote",
+     "correct": false,
+     "feedback": "Not until 1918."
+    },
+    {
+     "text": "By ignoring them completely",
+     "correct": false,
+     "feedback": "The government feared they would die and become martyrs."
+    }
+   ],
+   "explain": "Force-feeding was painful and dangerous, and won the suffragettes sympathy."
+  },
+  {
+   "id": "history.m.sf.catmouse",
+   "topic": "history.suffrage",
+   "kind": "mcq",
+   "prompt": "What did the 1913 “Cat and Mouse Act” allow?",
+   "options": [
+    {
+     "text": "Hunger strikers could be released when weak, then re-arrested once they recovered",
+     "correct": true
+    },
+    {
+     "text": "Suffragettes could vote in local elections",
+     "correct": false,
+     "feedback": "It was about prisoners."
+    },
+    {
+     "text": "Police could use dogs at protests",
+     "correct": false,
+     "feedback": "The name compares the government to a cat playing with a mouse."
+    }
+   ],
+   "explain": "Its official name was the Prisoners (Temporary Discharge for Ill-Health) Act."
+  },
+  {
+   "id": "history.m.sf.blackfriday",
+   "topic": "history.suffrage",
+   "kind": "fact",
+   "prompt": "On which day in November 1910 were suffragettes protesting outside Parliament violently treated by police and onlookers?",
+   "answer": "Black Friday",
+   "distractors": [
+    "Bloody Sunday",
+    "Boxing Day",
+    "Ash Wednesday"
+   ],
+   "explain": "Many women reported assaults; it pushed the WSPU towards more militant tactics.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.sf.windows",
+   "topic": "history.suffrage",
+   "kind": "mcq",
+   "prompt": "What happened in March 1912 in London’s West End?",
+   "options": [
+    {
+     "text": "Suffragettes smashed hundreds of shop windows with hammers at an agreed time",
+     "correct": true
+    },
+    {
+     "text": "A peaceful march of a million women",
+     "correct": false,
+     "feedback": "That was not it: this was a planned attack on property."
+    },
+    {
+     "text": "The first woman MP was elected",
+     "correct": false,
+     "feedback": "That was 1918–19."
+    }
+   ],
+   "explain": "The WSPU targeted property, not people, but it made many MPs more hostile."
+  },
+  {
+   "id": "history.m.sf.census",
+   "topic": "history.suffrage",
+   "kind": "fact",
+   "prompt": "In 1911 many women protested by refusing to fill in which government document?",
+   "answer": "the census",
+   "distractors": [
+    "their tax returns",
+    "their passports",
+    "their marriage certificates"
+   ],
+   "explain": "“If women don’t count, neither shall they be counted.” Some hid all night to avoid it.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.sf.war",
+   "topic": "history.suffrage",
+   "kind": "mcq",
+   "prompt": "What did the WSPU do when war broke out in 1914?",
+   "options": [
+    {
+     "text": "It stopped its militant campaign and supported the war effort",
+     "correct": true
+    },
+    {
+     "text": "It increased the bombings",
+     "correct": false,
+     "feedback": "It suspended militancy."
+    },
+    {
+     "text": "It joined the enemy",
+     "correct": false,
+     "feedback": "It strongly supported Britain."
+    }
+   ],
+   "explain": "Women’s war work changed many people’s views, contributing to the 1918 Act."
+  },
+  {
+   "id": "history.m.sf.colours",
+   "topic": "history.suffrage",
+   "kind": "fact",
+   "prompt": "What were the suffragette colours?",
+   "answer": "purple, white and green",
+   "distractors": [
+    "red, white and blue",
+    "black and gold",
+    "pink and yellow"
+   ],
+   "explain": "Purple for dignity, white for purity, green for hope.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.sf.debate",
+   "topic": "history.suffrage",
+   "kind": "mcq",
+   "prompt": "Why do historians disagree about whether militancy helped?",
+   "options": [
+    {
+     "text": "It won huge publicity, but it also let opponents argue women were too irrational to vote",
+     "correct": true
+    },
+    {
+     "text": "Because there was no militancy",
+     "correct": false,
+     "feedback": "There was a great deal."
+    },
+    {
+     "text": "Because women won the vote in 1900",
+     "correct": false,
+     "feedback": "Some women won it in 1918."
+    }
+   ],
+   "explain": "Many historians give the peaceful suffragists and women’s war work as much credit as the suffragettes."
+  },
+  {
+   "id": "history.m.sf.w",
+   "topic": "history.suffrage",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: “Militant tactics were the main reason some women won the vote in 1918.” How far do you agree? Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear judgement",
+    "What militancy achieved (publicity, pressure)",
+    "How it may have harmed the cause",
+    "Other reasons: the suffragists, war work, a new electoral law needed for soldiers",
+    "A balanced conclusion"
+   ],
+   "model": "I partly agree, but I think militancy was not the main reason. The suffragettes made votes for women impossible to ignore: hunger strikes and force-feeding won sympathy and newspaper coverage. However, window-smashing and arson let opponents argue that women could not be trusted with the vote, so some MPs became more hostile. The peaceful suffragists, led by Millicent Fawcett, had a far larger membership and kept up steady pressure. During the war, women’s work in factories and on the land changed many minds, and the government needed a new law anyway so that soldiers could vote. Overall, militancy raised the issue, but women’s war work and the need for a new electoral law were the main reasons for 1918. This means the interpretation is largely right, although many young war workers were still too young to vote under the 1918 Act.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Women won the vote in 1918 because of their war work. The suffragettes’ violence had only hardened opinion against them.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.hf.evacuation",
+   "topic": "history.home-front",
+   "kind": "fact",
+   "prompt": "About how many people, mostly children, were evacuated from British cities in the first days of September 1939?",
+   "answer": "about 1.5 million",
+   "distractors": [
+    "about 15,000",
+    "about 150,000",
+    "about 15 million"
+   ],
+   "explain": "The plan was called Operation Pied Piper. Many children drifted home during the quiet months that followed.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.hf.rationing",
+   "topic": "history.home-front",
+   "kind": "fact",
+   "prompt": "In which year did food rationing begin in Britain, starting with bacon, butter and sugar?",
+   "answer": "1940",
+   "distractors": [
+    "1939",
+    "1943",
+    "1945"
+   ],
+   "explain": "It began in January 1940; each person had a ration book."
+  },
+  {
+   "id": "history.m.hf.end",
+   "topic": "history.home-front",
+   "kind": "fact",
+   "prompt": "When did food rationing finally end in Britain?",
+   "answer": "1954",
+   "distractors": [
+    "1945",
+    "1946",
+    "1960"
+   ],
+   "explain": "It lasted nine years after the war because Britain was nearly bankrupt."
+  },
+  {
+   "id": "history.m.hf.blitz",
+   "topic": "history.home-front",
+   "kind": "mcq",
+   "prompt": "What was the Blitz?",
+   "options": [
+    {
+     "text": "German bombing of British cities, especially from September 1940 to May 1941",
+     "correct": true
+    },
+    {
+     "text": "A British invasion of France",
+     "correct": false,
+     "feedback": "That was D-Day in 1944."
+    },
+    {
+     "text": "A rationing scheme",
+     "correct": false,
+     "feedback": "It was a bombing campaign."
+    }
+   ],
+   "explain": "About 43,000 civilians were killed. The word comes from “Blitzkrieg”, lightning war."
+  },
+  {
+   "id": "history.m.hf.shelters",
+   "topic": "history.home-front",
+   "kind": "mcq",
+   "prompt": "What was the difference between an Anderson shelter and a Morrison shelter?",
+   "options": [
+    {
+     "text": "An Anderson was buried in the garden; a Morrison was a steel cage that doubled as a table indoors",
+     "correct": true
+    },
+    {
+     "text": "They were the same thing",
+     "correct": false,
+     "feedback": "One was outdoor, one indoor."
+    },
+    {
+     "text": "A Morrison was a London Underground station",
+     "correct": false,
+     "feedback": "People did shelter in the Tube, but a Morrison was a home shelter."
+    }
+   ],
+   "explain": "Families without gardens often used Morrison shelters or public shelters and Tube stations."
+  },
+  {
+   "id": "history.m.hf.coventry",
+   "topic": "history.home-front",
+   "kind": "fact",
+   "prompt": "Which city’s medieval cathedral was destroyed in a huge air raid on 14 November 1940?",
+   "answer": "Coventry",
+   "distractors": [
+    "York",
+    "Canterbury",
+    "Durham"
+   ],
+   "explain": "The ruins stand beside the new cathedral as a symbol of peace and reconciliation.",
+   "accept": [
+    "coventry"
+   ]
+  },
+  {
+   "id": "history.m.hf.landarmy",
+   "topic": "history.home-front",
+   "kind": "fact",
+   "prompt": "Which organisation sent women to work on farms?",
+   "answer": "the Women’s Land Army",
+   "distractors": [
+    "the Home Guard",
+    "the Royal Air Force",
+    "the Observer Corps"
+   ],
+   "explain": "At its peak about 80,000 “Land Girls” worked on farms.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.hf.dig",
+   "topic": "history.home-front",
+   "kind": "fact",
+   "prompt": "Which campaign encouraged people to grow vegetables in gardens and parks?",
+   "answer": "Dig for Victory",
+   "distractors": [
+    "Make Do and Mend",
+    "Keep Calm and Carry On",
+    "Careless Talk Costs Lives"
+   ],
+   "explain": "Even the moat of the Tower of London became allotments.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.hf.conscription",
+   "topic": "history.home-front",
+   "kind": "mcq",
+   "prompt": "What happened in December 1941?",
+   "options": [
+    {
+     "text": "Britain began conscripting unmarried women aged 20 to 30 into war work or the services",
+     "correct": true
+    },
+    {
+     "text": "Rationing ended",
+     "correct": false,
+     "feedback": "It went on until 1954."
+    },
+    {
+     "text": "The Blitz began",
+     "correct": false,
+     "feedback": "That was September 1940."
+    }
+   ],
+   "explain": "Britain was the first country to conscript women."
+  },
+  {
+   "id": "history.m.hf.keepcalm",
+   "topic": "history.home-front",
+   "kind": "mcq",
+   "prompt": "The famous “Keep Calm and Carry On” poster was printed in 1939. What actually happened to it?",
+   "options": [
+    {
+     "text": "It was hardly ever displayed during the war and only became famous after a copy was found in 2000",
+     "correct": true
+    },
+    {
+     "text": "It was on every wall in Britain",
+     "correct": false,
+     "feedback": "Almost all copies were pulped."
+    },
+    {
+     "text": "It was designed by Churchill",
+     "correct": false,
+     "feedback": "It was a Ministry of Information design."
+    }
+   ],
+   "explain": "A good warning: our picture of the past is shaped by what survives and becomes popular later."
+  },
+  {
+   "id": "history.m.hf.w",
+   "topic": "history.home-front",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: How far did the Second World War change the lives of women in Britain? Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear judgement",
+    "New work and responsibilities (factories, Land Army, services, conscription from 1941)",
+    "Everyday changes (rationing, managing alone, the Blitz)",
+    "What did not change (lower pay, many returned home after 1945)",
+    "A conclusion"
+   ],
+   "model": "The war changed women’s lives a great deal, though many changes did not last. From December 1941 unmarried women were conscripted, and millions worked in factories, on farms in the Land Army or in the armed services, doing jobs that had been men’s. At home, women managed rationing, evacuation and the Blitz, often alone. However, women were usually paid less than men for the same work, and after 1945 many were expected to give up their jobs to returning soldiers. So the war changed what women did and showed what they could do, but full equality took decades longer. So the interpretation exaggerates: the war opened doors, but many closed again after 1945.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The war liberated British women. After 1945, nothing was ever the same again.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ci.parks",
+   "topic": "history.civil-rights",
+   "kind": "fact",
+   "prompt": "Who was arrested in Montgomery, Alabama, in 1955 for refusing to give up her bus seat to a white passenger?",
+   "answer": "Rosa Parks",
+   "distractors": [
+    "Ruby Bridges",
+    "Harriet Tubman",
+    "Maya Angelou"
+   ],
+   "explain": "Parks was an experienced campaigner with the NAACP.",
+   "accept": [
+    "parks"
+   ]
+  },
+  {
+   "id": "history.m.ci.boycott",
+   "topic": "history.civil-rights",
+   "kind": "fact",
+   "prompt": "How long did the Montgomery Bus Boycott last?",
+   "answer": "just over a year (381 days)",
+   "distractors": [
+    "one week",
+    "one month",
+    "ten years"
+   ],
+   "explain": "Black residents walked or shared cars until the Supreme Court ruled bus segregation unconstitutional.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.ci.brown",
+   "topic": "history.civil-rights",
+   "kind": "mcq",
+   "prompt": "What did the US Supreme Court decide in Brown v Board of Education (1954)?",
+   "options": [
+    {
+     "text": "That segregated schools were unconstitutional",
+     "correct": true
+    },
+    {
+     "text": "That buses must be segregated",
+     "correct": false,
+     "feedback": "The opposite kind of ruling, and about schools."
+    },
+    {
+     "text": "That Black Americans could vote",
+     "correct": false,
+     "feedback": "Voting rights came with the 1965 Act."
+    }
+   ],
+   "explain": "Many Southern states resisted for years."
+  },
+  {
+   "id": "history.m.ci.littlerock",
+   "topic": "history.civil-rights",
+   "kind": "fact",
+   "prompt": "In 1957, nine Black students needed soldiers to protect them so they could attend a high school in which city?",
+   "answer": "Little Rock",
+   "distractors": [
+    "Montgomery",
+    "Chicago",
+    "Washington"
+   ],
+   "explain": "President Eisenhower sent troops to escort the “Little Rock Nine”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.ci.king",
+   "topic": "history.civil-rights",
+   "kind": "fact",
+   "prompt": "Who gave the “I have a dream” speech at the March on Washington in 1963?",
+   "answer": "Martin Luther King Jr",
+   "distractors": [
+    "Malcolm X",
+    "John F. Kennedy",
+    "Barack Obama"
+   ],
+   "explain": "About 250,000 people gathered at the Lincoln Memorial.",
+   "accept": [
+    "martin luther king",
+    "mlk",
+    "king",
+    "dr king"
+   ]
+  },
+  {
+   "id": "history.m.ci.acts",
+   "topic": "history.civil-rights",
+   "kind": "mcq",
+   "prompt": "What did the Civil Rights Act (1964) and Voting Rights Act (1965) do?",
+   "options": [
+    {
+     "text": "Banned segregation in public places and discrimination, and protected Black Americans’ right to vote",
+     "correct": true
+    },
+    {
+     "text": "Ended slavery",
+     "correct": false,
+     "feedback": "Slavery was abolished in 1865."
+    },
+    {
+     "text": "Created segregation",
+     "correct": false,
+     "feedback": "They outlawed it."
+    }
+   ],
+   "explain": "They were the great legal victories of the movement, though inequality continued."
+  },
+  {
+   "id": "history.m.ci.nonviolence",
+   "topic": "history.civil-rights",
+   "kind": "mcq",
+   "prompt": "Whose ideas about non-violent protest strongly influenced Martin Luther King?",
+   "options": [
+    {
+     "text": "Mahatma Gandhi’s",
+     "correct": true
+    },
+    {
+     "text": "Napoleon’s",
+     "correct": false,
+     "feedback": "King admired Gandhi’s non-violence."
+    },
+    {
+     "text": "Lenin’s",
+     "correct": false,
+     "feedback": "King rejected violent revolution."
+    }
+   ],
+   "explain": "Non-violence made the violence of segregationists visible to the world on television."
+  },
+  {
+   "id": "history.m.ci.windrush",
+   "topic": "history.civil-rights",
+   "kind": "mcq",
+   "prompt": "Why is the ship Empire Windrush remembered?",
+   "options": [
+    {
+     "text": "It brought hundreds of passengers from the Caribbean to Britain in June 1948, a symbol of post-war migration",
+     "correct": true
+    },
+    {
+     "text": "It sank in the Second World War",
+     "correct": false,
+     "feedback": "It arrived at Tilbury in 1948."
+    },
+    {
+     "text": "It carried Rosa Parks to Britain",
+     "correct": false,
+     "feedback": "It is about Caribbean migration to Britain."
+    }
+   ],
+   "explain": "Many people from the Caribbean came to help rebuild Britain, and often faced discrimination."
+  },
+  {
+   "id": "history.m.ci.bristol",
+   "topic": "history.civil-rights",
+   "kind": "mcq",
+   "prompt": "What was the Bristol Bus Boycott of 1963?",
+   "options": [
+    {
+     "text": "A campaign against a bus company that refused to employ Black and Asian crews",
+     "correct": true
+    },
+    {
+     "text": "A protest about bus fares",
+     "correct": false,
+     "feedback": "It was about racial discrimination."
+    },
+    {
+     "text": "A strike by bus drivers for more pay",
+     "correct": false,
+     "feedback": "It was a boycott against a colour bar."
+    }
+   ],
+   "explain": "Led by Paul Stephenson and others, it ended the colour bar and helped bring the Race Relations Act of 1965."
+  },
+  {
+   "id": "history.m.ci.raceact",
+   "topic": "history.civil-rights",
+   "kind": "fact",
+   "prompt": "Which 1965 law was the first in Britain to outlaw racial discrimination in public places?",
+   "answer": "the Race Relations Act",
+   "distractors": [
+    "the Equality Act",
+    "the Reform Act",
+    "the Human Rights Act"
+   ],
+   "explain": "Later Acts, in 1968 and 1976, extended it to housing and jobs.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.ci.w",
+   "topic": "history.civil-rights",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Explain why the Montgomery Bus Boycott was significant. Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "What happened (Rosa Parks, the boycott, its length)",
+    "What it achieved (the Supreme Court ruling)",
+    "How it showed the power of non-violent mass protest",
+    "Martin Luther King’s rise as a leader",
+    "A concluding judgement"
+   ],
+   "model": "The Montgomery Bus Boycott was significant because it showed that ordinary people acting together could defeat segregation. After Rosa Parks was arrested in 1955, Black residents refused to use the buses for 381 days, walking or sharing cars, which cost the bus company a great deal. In 1956 the Supreme Court ruled that segregation on buses was unconstitutional. The boycott also proved that non-violent mass protest worked, and it made Martin Luther King a national leader. Its greatest significance was as a model for the protests that followed and helped win the Civil Rights Act of 1964. That is why the interpretation is too narrow: King became a great leader, but the boycott’s success came from thousands of ordinary people.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The civil rights movement succeeded because of one great leader: Martin Luther King.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.de.gandhi",
+   "topic": "history.end-empire",
+   "kind": "fact",
+   "prompt": "Which leader of the Indian independence movement championed non-violent resistance?",
+   "answer": "Mahatma Gandhi",
+   "distractors": [
+    "Jawaharlal Nehru",
+    "Muhammad Ali Jinnah",
+    "Kwame Nkrumah"
+   ],
+   "explain": "He called his method satyagraha, “truth-force”.",
+   "accept": [
+    "gandhi",
+    "mohandas gandhi"
+   ]
+  },
+  {
+   "id": "history.m.de.salt",
+   "topic": "history.end-empire",
+   "kind": "mcq",
+   "prompt": "Why did Gandhi lead the Salt March to the sea in 1930?",
+   "options": [
+    {
+     "text": "To protest against the British tax on salt by making salt himself",
+     "correct": true
+    },
+    {
+     "text": "To open a new salt factory",
+     "correct": false,
+     "feedback": "It was an act of peaceful law-breaking."
+    },
+    {
+     "text": "To leave India for good",
+     "correct": false,
+     "feedback": "It was a protest within India."
+    }
+   ],
+   "explain": "Thousands joined him and around 60,000 people were arrested: a brilliant symbol everyone could understand."
+  },
+  {
+   "id": "history.m.de.amritsar",
+   "topic": "history.end-empire",
+   "kind": "mcq",
+   "prompt": "What happened at Amritsar in 1919?",
+   "options": [
+    {
+     "text": "British troops fired on an unarmed crowd, killing hundreds",
+     "correct": true
+    },
+    {
+     "text": "India became independent",
+     "correct": false,
+     "feedback": "That was 1947."
+    },
+    {
+     "text": "Gandhi was born",
+     "correct": false,
+     "feedback": "He was born in 1869."
+    }
+   ],
+   "explain": "The official count was 379 dead; Indian estimates were higher. The massacre turned many Indians against British rule."
+  },
+  {
+   "id": "history.m.de.partition",
+   "topic": "history.end-empire",
+   "kind": "mcq",
+   "prompt": "What was Partition in 1947?",
+   "options": [
+    {
+     "text": "The division of British India into India and Pakistan, which caused enormous migration and violence",
+     "correct": true
+    },
+    {
+     "text": "The division of Ireland",
+     "correct": false,
+     "feedback": "Ireland was partitioned in 1921."
+    },
+    {
+     "text": "The division of Germany",
+     "correct": false,
+     "feedback": "That followed the Second World War in Europe."
+    }
+   ],
+   "explain": "Perhaps 10 to 20 million people were displaced, and hundreds of thousands, possibly far more, were killed."
+  },
+  {
+   "id": "history.m.de.nehru",
+   "topic": "history.end-empire",
+   "kind": "fact",
+   "prompt": "Who became India’s first prime minister in 1947?",
+   "answer": "Jawaharlal Nehru",
+   "distractors": [
+    "Mahatma Gandhi",
+    "Muhammad Ali Jinnah",
+    "Indira Gandhi"
+   ],
+   "explain": "Nehru led India until 1964.",
+   "accept": [
+    "nehru"
+   ]
+  },
+  {
+   "id": "history.m.de.jinnah",
+   "topic": "history.end-empire",
+   "kind": "fact",
+   "prompt": "Who led the campaign for Pakistan and became its first leader?",
+   "answer": "Muhammad Ali Jinnah",
+   "distractors": [
+    "Jawaharlal Nehru",
+    "Mahatma Gandhi",
+    "Lord Mountbatten"
+   ],
+   "explain": "Jinnah led the Muslim League.",
+   "accept": [
+    "jinnah"
+   ]
+  },
+  {
+   "id": "history.m.de.ww2",
+   "topic": "history.end-empire",
+   "kind": "mcq",
+   "prompt": "How did the Second World War help bring about the end of empire?",
+   "options": [
+    {
+     "text": "It left Britain nearly bankrupt and weakened, while independence movements grew stronger",
+     "correct": true
+    },
+    {
+     "text": "Britain won so easily it no longer needed colonies",
+     "correct": false,
+     "feedback": "Victory came at a huge cost."
+    },
+    {
+     "text": "It had no effect",
+     "correct": false,
+     "feedback": "It was a major factor."
+    }
+   ],
+   "explain": "Britain could no longer afford to hold an empire against the will of its peoples."
+  },
+  {
+   "id": "history.m.de.ghana",
+   "topic": "history.end-empire",
+   "kind": "fact",
+   "prompt": "In 1957, which country became the first in sub-Saharan Africa to win independence from Britain?",
+   "answer": "Ghana",
+   "distractors": [
+    "Nigeria",
+    "Kenya",
+    "South Africa"
+   ],
+   "explain": "Its first leader was Kwame Nkrumah.",
+   "accept": [
+    "ghana",
+    "the gold coast"
+   ]
+  },
+  {
+   "id": "history.m.de.suez",
+   "topic": "history.end-empire",
+   "kind": "mcq",
+   "prompt": "What did the Suez Crisis of 1956 show?",
+   "options": [
+    {
+     "text": "Britain could no longer act as a world power without the support of the USA",
+     "correct": true
+    },
+    {
+     "text": "Britain was stronger than ever",
+     "correct": false,
+     "feedback": "Britain had to withdraw in humiliation."
+    },
+    {
+     "text": "Egypt wanted to rejoin the empire",
+     "correct": false,
+     "feedback": "Egypt had taken control of the canal."
+    }
+   ],
+   "explain": "Under American pressure, British and French troops withdrew from Egypt."
+  },
+  {
+   "id": "history.m.de.w",
+   "topic": "history.end-empire",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Explain why Britain gave up most of its empire after 1945. Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear opening sentence",
+    "The cost and weakness of Britain after the Second World War",
+    "Strong independence movements (Gandhi, Nkrumah)",
+    "International pressure (the USA, the Suez Crisis)",
+    "Which reason mattered most"
+   ],
+   "model": "Britain gave up most of its empire because it could no longer afford, or justify, holding it. The Second World War had left Britain nearly bankrupt, so keeping control by force was too expensive. At the same time, independence movements had grown powerful: Gandhi’s campaigns made British rule in India impossible, and India and Pakistan became independent in 1947, followed by Ghana in 1957 and many others. The USA, now the strongest power, did not support empires, and the Suez Crisis of 1956 showed that Britain could not act alone. The most important reason was the strength of the independence movements, because without them Britain would have had no reason to leave. So I disagree with the interpretation: Britain did not leave out of generosity, but because it was too weak to stay.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Britain gave up its empire generously, granting freedom to its colonies when they were ready for it.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.bz.capital",
+   "topic": "history.byzantium",
+   "kind": "fact",
+   "prompt": "Which city did Emperor Constantine make the new capital of the Roman Empire in AD 330?",
+   "answer": "Constantinople",
+   "distractors": [
+    "Rome",
+    "Athens",
+    "Alexandria"
+   ],
+   "explain": "He rebuilt the Greek city of Byzantium and named it after himself.",
+   "accept": [
+    "byzantium",
+    "istanbul"
+   ]
+  },
+  {
+   "id": "history.m.bz.istanbul",
+   "topic": "history.byzantium",
+   "kind": "fact",
+   "prompt": "What is Constantinople called today?",
+   "answer": "Istanbul",
+   "distractors": [
+    "Athens",
+    "Ankara",
+    "Cairo"
+   ],
+   "explain": "It is the largest city in Turkey.",
+   "accept": [
+    "istanbul"
+   ]
+  },
+  {
+   "id": "history.m.bz.west",
+   "topic": "history.byzantium",
+   "kind": "fact",
+   "prompt": "In which year is the western Roman Empire usually said to have ended?",
+   "answer": "AD 476",
+   "distractors": [
+    "AD 43",
+    "AD 330",
+    "AD 1453"
+   ],
+   "explain": "The last western emperor, Romulus Augustulus, was deposed. The eastern empire carried on.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.bz.language",
+   "topic": "history.byzantium",
+   "kind": "fact",
+   "prompt": "Which language did most Byzantines speak?",
+   "answer": "Greek",
+   "distractors": [
+    "Latin",
+    "Arabic",
+    "Turkish"
+   ],
+   "explain": "They called themselves Romans (Rhomaioi), but spoke and wrote Greek: the language she is learning.",
+   "accept": [
+    "greek"
+   ]
+  },
+  {
+   "id": "history.m.bz.hagia",
+   "topic": "history.byzantium",
+   "kind": "mcq",
+   "prompt": "What is the Hagia Sophia?",
+   "options": [
+    {
+     "text": "A vast domed church built by Emperor Justinian in Constantinople, finished in 537",
+     "correct": true
+    },
+    {
+     "text": "A Greek goddess",
+     "correct": false,
+     "feedback": "The name means “Holy Wisdom”."
+    },
+    {
+     "text": "A Byzantine warship",
+     "correct": false,
+     "feedback": "It is a building."
+    }
+   ],
+   "explain": "For nearly a thousand years it was the largest cathedral in the world."
+  },
+  {
+   "id": "history.m.bz.justinian",
+   "topic": "history.byzantium",
+   "kind": "mcq",
+   "prompt": "Why is Emperor Justinian’s law code important?",
+   "options": [
+    {
+     "text": "It collected Roman law, and it became the basis of legal systems across much of Europe",
+     "correct": true
+    },
+    {
+     "text": "It banned all writing",
+     "correct": false,
+     "feedback": "It preserved centuries of law."
+    },
+    {
+     "text": "It was the first constitution of the USA",
+     "correct": false,
+     "feedback": "It was written in the 500s."
+    }
+   ],
+   "explain": "Lawyers in many countries still study Roman law because of it."
+  },
+  {
+   "id": "history.m.bz.fire",
+   "topic": "history.byzantium",
+   "kind": "fact",
+   "prompt": "What was the Byzantines’ secret weapon, a liquid that kept burning even on water?",
+   "answer": "Greek fire",
+   "distractors": [
+    "gunpowder",
+    "Damascus steel",
+    "the trebuchet"
+   ],
+   "explain": "Its exact recipe is still unknown.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.bz.fall",
+   "topic": "history.byzantium",
+   "kind": "fact",
+   "prompt": "In which year did Constantinople fall to the Ottoman Turks under Mehmed II?",
+   "answer": "1453",
+   "distractors": [
+    "1066",
+    "1204",
+    "1492"
+   ],
+   "explain": "Huge cannons breached walls that had stood for a thousand years."
+  },
+  {
+   "id": "history.m.bz.scholars",
+   "topic": "history.byzantium",
+   "kind": "mcq",
+   "prompt": "How did the fall of Constantinople help the Renaissance?",
+   "options": [
+    {
+     "text": "Greek scholars fled to Italy, bringing ancient Greek manuscripts and knowledge of the language",
+     "correct": true
+    },
+    {
+     "text": "It ended all trade with Asia",
+     "correct": false,
+     "feedback": "Trade continued, though routes changed."
+    },
+    {
+     "text": "It destroyed every Greek book",
+     "correct": false,
+     "feedback": "Many were saved and taken west."
+    }
+   ],
+   "explain": "Byzantium had preserved Plato, Homer and Greek science for a thousand years."
+  },
+  {
+   "id": "history.m.bz.w",
+   "topic": "history.byzantium",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: “The Byzantine Empire was simply the Roman Empire continued.” How far do you agree? Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear judgement",
+    "Continuity (they called themselves Romans, Roman law, emperors)",
+    "Change (Greek language, Christianity, Constantinople)",
+    "Its role in preserving Greek learning",
+    "A balanced conclusion"
+   ],
+   "model": "I partly agree. The Byzantines called themselves Romans, were ruled by emperors in an unbroken line from Augustus, and preserved Roman law in Justinian’s code. In that sense it was the Roman Empire continued. However, it changed greatly: its capital was Constantinople, not Rome; its people spoke Greek rather than Latin; and it was a deeply Christian empire, built around churches like the Hagia Sophia. Its greatest legacy, preserving ancient Greek learning until scholars carried it to Italy, was more Greek than Roman. So it was the Roman Empire continued in name and law, but a new Greek Christian civilisation in culture. So I disagree that it was a weak shadow: surviving a thousand years is hardly weakness.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Byzantium was a thousand-year decline: a weak shadow of the real Roman Empire, forever losing land until it finally fell.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ru.tsar",
+   "topic": "history.russia",
+   "kind": "fact",
+   "prompt": "Who was the last Tsar of Russia?",
+   "answer": "Nicholas II",
+   "distractors": [
+    "Peter the Great",
+    "Ivan the Terrible",
+    "Alexander I"
+   ],
+   "explain": "He ruled from 1894 until he abdicated in 1917.",
+   "accept": [
+    "nicholas",
+    "tsar nicholas ii",
+    "nicholas 2"
+   ]
+  },
+  {
+   "id": "history.m.ru.bloody",
+   "topic": "history.russia",
+   "kind": "mcq",
+   "prompt": "What happened on “Bloody Sunday” in January 1905?",
+   "options": [
+    {
+     "text": "Troops fired on peaceful marchers bringing a petition to the Tsar in St Petersburg",
+     "correct": true
+    },
+    {
+     "text": "The Tsar was killed",
+     "correct": false,
+     "feedback": "He survived until 1918."
+    },
+    {
+     "text": "Russia won a war against Japan",
+     "correct": false,
+     "feedback": "Russia lost that war in 1905."
+    }
+   ],
+   "explain": "Hundreds were killed, and many Russians stopped seeing the Tsar as their protector."
+  },
+  {
+   "id": "history.m.ru.ww1",
+   "topic": "history.russia",
+   "kind": "mcq",
+   "prompt": "How did the First World War help bring down the Tsar?",
+   "options": [
+    {
+     "text": "Huge defeats and shortages of food and fuel at home, and the Tsar took personal command, so he was blamed",
+     "correct": true
+    },
+    {
+     "text": "Russia won easily, so people wanted change",
+     "correct": false,
+     "feedback": "Russia suffered terrible losses."
+    },
+    {
+     "text": "It had no effect",
+     "correct": false,
+     "feedback": "It was the key trigger."
+    }
+   ],
+   "explain": "Nicholas took command of the army in 1915, leaving the government to the unpopular Tsarina and Rasputin."
+  },
+  {
+   "id": "history.m.ru.feb",
+   "topic": "history.russia",
+   "kind": "mcq",
+   "prompt": "What happened in the February Revolution of 1917?",
+   "options": [
+    {
+     "text": "Strikes and mutinies in Petrograd forced the Tsar to abdicate, and a Provisional Government took over",
+     "correct": true
+    },
+    {
+     "text": "Lenin seized power",
+     "correct": false,
+     "feedback": "That was October."
+    },
+    {
+     "text": "The Romanov family were executed",
+     "correct": false,
+     "feedback": "That was July 1918."
+    }
+   ],
+   "explain": "The new government kept fighting the war, which made it unpopular too."
+  },
+  {
+   "id": "history.m.ru.lenin",
+   "topic": "history.russia",
+   "kind": "fact",
+   "prompt": "Who led the Bolsheviks in the October Revolution of 1917?",
+   "answer": "Lenin",
+   "distractors": [
+    "Stalin",
+    "Trotsky",
+    "Kerensky"
+   ],
+   "explain": "Trotsky organised the seizure of power; Lenin was the leader.",
+   "accept": [
+    "vladimir lenin"
+   ]
+  },
+  {
+   "id": "history.m.ru.slogan",
+   "topic": "history.russia",
+   "kind": "fact",
+   "prompt": "What was the Bolsheviks’ famous slogan?",
+   "answer": "Peace, Land and Bread",
+   "distractors": [
+    "Liberty, Equality, Fraternity",
+    "Deeds not Words",
+    "Workers Unite"
+   ],
+   "explain": "It promised exactly what war-weary, hungry Russians wanted.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.ru.calendar",
+   "topic": "history.russia",
+   "kind": "mcq",
+   "prompt": "Why did the “October” Revolution happen on 7 November by our calendar?",
+   "options": [
+    {
+     "text": "Russia still used the old Julian calendar, which was 13 days behind",
+     "correct": true
+    },
+    {
+     "text": "The news took two weeks to arrive",
+     "correct": false,
+     "feedback": "It is a calendar difference."
+    },
+    {
+     "text": "It lasted from October to November",
+     "correct": false,
+     "feedback": "The seizure of power took about a day."
+    }
+   ],
+   "explain": "The Bolsheviks switched Russia to the Western calendar in 1918."
+  },
+  {
+   "id": "history.m.ru.romanovs",
+   "topic": "history.russia",
+   "kind": "mcq",
+   "prompt": "What happened to the Tsar and his family in July 1918?",
+   "options": [
+    {
+     "text": "They were executed by the Bolsheviks at Yekaterinburg",
+     "correct": true
+    },
+    {
+     "text": "They escaped to Britain",
+     "correct": false,
+     "feedback": "Britain declined to take them in."
+    },
+    {
+     "text": "They ruled again",
+     "correct": false,
+     "feedback": "The monarchy was never restored."
+    }
+   ],
+   "explain": "The Bolsheviks feared the White armies might rescue them."
+  },
+  {
+   "id": "history.m.ru.civil",
+   "topic": "history.russia",
+   "kind": "fact",
+   "prompt": "Between 1918 and 1921 the Bolshevik “Reds” fought a civil war against whom?",
+   "answer": "the Whites",
+   "distractors": [
+    "the Greens",
+    "the Blues",
+    "the Tsar’s army in Germany"
+   ],
+   "explain": "The Reds won, and the USSR was created in 1922.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.ru.w",
+   "topic": "history.russia",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: Explain why the Tsar lost power in February 1917. Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear opening sentence",
+    "Long-term problems (autocracy, poverty, Bloody Sunday)",
+    "The First World War (defeats, shortages, the Tsar in command)",
+    "The immediate trigger (strikes and the army mutiny in Petrograd)",
+    "Which reason mattered most"
+   ],
+   "model": "The Tsar lost power because long-term anger was turned into revolution by the First World War. Nicholas II ruled as an autocrat and many Russians were desperately poor; after troops fired on peaceful marchers on Bloody Sunday in 1905, many no longer trusted him. The war made everything worse: millions of soldiers were killed or wounded, and food and fuel ran short in the cities. Because Nicholas had taken personal command of the army in 1915, he was blamed for the defeats. In February 1917 strikes broke out in Petrograd, and when soldiers refused to fire on the crowds and joined them instead, he had to abdicate. The war mattered most, because it made the old problems unbearable and turned the army against him. So the interpretation is partly right: Nicholas made poor choices, but the war made the crisis far bigger than one man.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The Tsar fell because he was a weak and foolish man who could not rule.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.dc.versailles",
+   "topic": "history.dictators",
+   "kind": "mcq",
+   "prompt": "Which was a term of the Treaty of Versailles (1919)?",
+   "options": [
+    {
+     "text": "Germany had to accept blame for the war, pay reparations and limit its army to 100,000 men",
+     "correct": true
+    },
+    {
+     "text": "Germany gained new colonies",
+     "correct": false,
+     "feedback": "Germany LOST all its colonies."
+    },
+    {
+     "text": "Germany could keep its air force",
+     "correct": false,
+     "feedback": "Germany was banned from having an air force."
+    }
+   ],
+   "explain": "Many Germans called it a “Diktat”: a dictated peace."
+  },
+  {
+   "id": "history.m.dc.reparations",
+   "topic": "history.dictators",
+   "kind": "fact",
+   "prompt": "In 1921 Germany’s reparations were set at about how much?",
+   "answer": "£6.6 billion",
+   "distractors": [
+    "£6.6 million",
+    "£66 billion",
+    "nothing"
+   ],
+   "explain": "An enormous sum: Germany finished paying the last interest on its war debts only in 2010.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.dc.league",
+   "topic": "history.dictators",
+   "kind": "mcq",
+   "prompt": "Why did the League of Nations fail to stop aggression in the 1930s?",
+   "options": [
+    {
+     "text": "It had no army of its own, key powers like the USA were not members, and it failed to stop Japan in Manchuria and Italy in Abyssinia",
+     "correct": true
+    },
+    {
+     "text": "It started the Second World War",
+     "correct": false,
+     "feedback": "It failed to prevent it."
+    },
+    {
+     "text": "Every country obeyed it",
+     "correct": false,
+     "feedback": "Aggressors ignored it."
+    }
+   ],
+   "explain": "Its failures encouraged dictators to think they could act without consequences."
+  },
+  {
+   "id": "history.m.dc.crash",
+   "topic": "history.dictators",
+   "kind": "fact",
+   "prompt": "Which 1929 event began the Great Depression?",
+   "answer": "the Wall Street Crash",
+   "distractors": [
+    "the General Strike",
+    "the Munich Agreement",
+    "the Russian Revolution"
+   ],
+   "explain": "Mass unemployment helped extremist parties win support, including the Nazis in Germany.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.dc.mussolini",
+   "topic": "history.dictators",
+   "kind": "fact",
+   "prompt": "Which fascist leader took power in Italy after the “March on Rome” in 1922?",
+   "answer": "Benito Mussolini",
+   "distractors": [
+    "Adolf Hitler",
+    "Francisco Franco",
+    "Joseph Stalin"
+   ],
+   "explain": "He was the first fascist dictator in Europe.",
+   "accept": [
+    "mussolini"
+   ]
+  },
+  {
+   "id": "history.m.dc.hitler",
+   "topic": "history.dictators",
+   "kind": "fact",
+   "prompt": "In which year did Hitler become Chancellor of Germany?",
+   "answer": "1933",
+   "distractors": [
+    "1919",
+    "1929",
+    "1939"
+   ],
+   "explain": "He was appointed in January 1933 and soon made himself dictator."
+  },
+  {
+   "id": "history.m.dc.enabling",
+   "topic": "history.dictators",
+   "kind": "mcq",
+   "prompt": "What did the Enabling Act of March 1933 do?",
+   "options": [
+    {
+     "text": "It let Hitler make laws without the Reichstag (parliament), making him a dictator",
+     "correct": true
+    },
+    {
+     "text": "It enabled women to vote",
+     "correct": false,
+     "feedback": "It destroyed German democracy."
+    },
+    {
+     "text": "It started the war",
+     "correct": false,
+     "feedback": "War came in 1939."
+    }
+   ],
+   "explain": "Within months other parties were banned and trade unions abolished."
+  },
+  {
+   "id": "history.m.dc.appeasement",
+   "topic": "history.dictators",
+   "kind": "mcq",
+   "prompt": "What was appeasement?",
+   "options": [
+    {
+     "text": "Giving in to Hitler’s demands to try to avoid another war",
+     "correct": true
+    },
+    {
+     "text": "Attacking Germany first",
+     "correct": false,
+     "feedback": "The opposite."
+    },
+    {
+     "text": "A peace treaty with Japan",
+     "correct": false,
+     "feedback": "It was Britain and France’s policy towards Hitler."
+    }
+   ],
+   "explain": "At Munich in 1938 Chamberlain agreed that Germany could take the Sudetenland from Czechoslovakia."
+  },
+  {
+   "id": "history.m.dc.rhineland",
+   "topic": "history.dictators",
+   "kind": "fact",
+   "prompt": "In 1936 Hitler sent troops into which German region that the Treaty of Versailles had made a demilitarised zone?",
+   "answer": "the Rhineland",
+   "distractors": [
+    "the Sudetenland",
+    "Danzig",
+    "Alsace"
+   ],
+   "explain": "Britain and France did nothing, which encouraged him.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.m.dc.order",
+   "topic": "history.dictators",
+   "kind": "order",
+   "prompt": "Put these in order.",
+   "items": [
+    "Treaty of Versailles",
+    "Wall Street Crash",
+    "Hitler becomes Chancellor",
+    "Munich Agreement"
+   ],
+   "labels": [
+    "1919",
+    "1929",
+    "1933",
+    "1938"
+   ],
+   "explain": "Twenty years from one war to the next.",
+   "axis": "time"
+  },
+  {
+   "id": "history.m.dc.w",
+   "topic": "history.dictators",
+   "kind": "written",
+   "prompt": "Read the interpretation, then answer: “The Treaty of Versailles was the main cause of the Second World War.” How far do you agree? Use the interpretation and your own knowledge.",
+   "hints": [
+    "Say whether you agree with the interpretation, and why",
+    "A clear judgement",
+    "How Versailles created German anger that Hitler used",
+    "Other causes: the Depression, the failure of the League, appeasement",
+    "Hitler’s own aims",
+    "A balanced conclusion"
+   ],
+   "model": "I partly agree. Versailles left many Germans angry about the war guilt clause, reparations and lost land, and Hitler promised to overturn it, which helped him win support. However, the treaty alone did not cause war. The Great Depression after 1929 created the mass unemployment that brought the Nazis to power. The League of Nations failed to stop aggression in Manchuria and Abyssinia, and Britain and France’s appeasement let Hitler rearm, take the Rhineland and the Sudetenland. Finally, Hitler himself wanted to conquer land in the east. So Versailles was an important long-term cause, but Hitler’s aims, made possible by the Depression and appeasement, were the main cause.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The Treaty of Versailles made the Second World War inevitable. From 1919 onwards, another war was only a matter of time.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.rr.i1",
+   "topic": "history.rome",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "One man, Julius Caesar, destroyed the Republic",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: One man, Julius Caesar, destroyed the Republic. Look for the sentence that sums up its view.",
+   "passage": "Rome’s Republic did not die of old age. It was murdered by one man’s ambition. Julius Caesar wanted absolute power, crossed the Rubicon to seize it and made himself dictator for life. Without Caesar, the Republic would have survived.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.rr.i2",
+   "topic": "history.rome",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Caesar crossed the Rubicon and made himself dictator for life",
+     "correct": true
+    },
+    {
+     "text": "Generals such as Marius and Sulla had already marched on Rome, and the Republic did not return after Caesar’s murder",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "Rome’s Republic did not die of old age. It was murdered by one man’s ambition. Julius Caesar wanted absolute power, crossed the Rubicon to seize it and made himself dictator for life. Without Caesar, the Republic would have survived.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.rr.i3",
+   "topic": "history.rome",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "Generals such as Marius and Sulla had already marched on Rome, and the Republic did not return after Caesar’s murder",
+     "correct": true
+    },
+    {
+     "text": "Caesar crossed the Rubicon and made himself dictator for life",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "Rome’s Republic did not die of old age. It was murdered by one man’s ambition. Julius Caesar wanted absolute power, crossed the Rubicon to seize it and made himself dictator for life. Without Caesar, the Republic would have survived.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.cr.i1",
+   "topic": "history.crusades",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "Greed for land and wealth, not faith, drove the crusaders",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: Greed for land and wealth, not faith, drove the crusaders. Look for the sentence that sums up its view.",
+   "passage": "The crusaders were not really driven by faith. They were land-hungry younger sons and adventurers looking for riches, who used religion as an excuse.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.cr.i2",
+   "topic": "history.crusades",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Some crusader lords seized land and set up their own states in the East",
+     "correct": true
+    },
+    {
+     "text": "The journey was so dangerous and costly that many crusaders sold their own land to go and gained nothing",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "The crusaders were not really driven by faith. They were land-hungry younger sons and adventurers looking for riches, who used religion as an excuse.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.cr.i3",
+   "topic": "history.crusades",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "The journey was so dangerous and costly that many crusaders sold their own land to go and gained nothing",
+     "correct": true
+    },
+    {
+     "text": "Some crusader lords seized land and set up their own states in the East",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "The crusaders were not really driven by faith. They were land-hungry younger sons and adventurers looking for riches, who used religion as an excuse.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.wr.i1",
+   "topic": "history.roses",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "Luck and the Stanleys’ last-minute intervention decided the battle",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: Luck and the Stanleys’ last-minute intervention decided the battle. Look for the sentence that sums up its view.",
+   "passage": "Henry Tudor won at Bosworth through pure luck. If the Stanleys had stayed out of the battle, Richard III would have won and there would never have been a Tudor dynasty.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.wr.i2",
+   "topic": "history.roses",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "The Stanleys watched the battle and only attacked Richard at the crucial moment",
+     "correct": true
+    },
+    {
+     "text": "Richard was so distrusted that some of his own army, like the Earl of Northumberland’s men, did not fight",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "Henry Tudor won at Bosworth through pure luck. If the Stanleys had stayed out of the battle, Richard III would have won and there would never have been a Tudor dynasty.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.wr.i3",
+   "topic": "history.roses",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "Richard was so distrusted that some of his own army, like the Earl of Northumberland’s men, did not fight",
+     "correct": true
+    },
+    {
+     "text": "The Stanleys watched the battle and only attacked Richard at the crucial moment",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "Henry Tudor won at Bosworth through pure luck. If the Stanleys had stayed out of the battle, Richard III would have won and there would never have been a Tudor dynasty.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.rn.i1",
+   "topic": "history.renaissance",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "Printing spread ideas that would otherwise have stayed with a few scholars",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: Printing spread ideas that would otherwise have stayed with a few scholars. Look for the sentence that sums up its view.",
+   "passage": "Printing was the single invention that made the modern world. Without it, the Renaissance, the Reformation and the Scientific Revolution would have remained the private ideas of a few scholars.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.rn.i2",
+   "topic": "history.renaissance",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Luther’s pamphlets were printed in hundreds of thousands of copies",
+     "correct": true
+    },
+    {
+     "text": "The Renaissance had already begun in Italy before printing was invented",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "Printing was the single invention that made the modern world. Without it, the Renaissance, the Reformation and the Scientific Revolution would have remained the private ideas of a few scholars.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.rn.i3",
+   "topic": "history.renaissance",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "The Renaissance had already begun in Italy before printing was invented",
+     "correct": true
+    },
+    {
+     "text": "Luther’s pamphlets were printed in hundreds of thousands of copies",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "Printing was the single invention that made the modern world. Without it, the Renaissance, the Reformation and the Scientific Revolution would have remained the private ideas of a few scholars.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ex.i1",
+   "topic": "history.exploration",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "Exploration was a heroic achievement",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: Exploration was a heroic achievement. Look for the sentence that sums up its view.",
+   "passage": "The voyages of Columbus, da Gama and Magellan were triumphs of courage and science. These explorers opened up the world and laid the foundations of the modern age.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ex.i2",
+   "topic": "history.exploration",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Elcano’s crew completed the first voyage round the world",
+     "correct": true
+    },
+    {
+     "text": "The conquest of the Aztecs, the deaths from disease and the enslavement of Africans",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "The voyages of Columbus, da Gama and Magellan were triumphs of courage and science. These explorers opened up the world and laid the foundations of the modern age.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ex.i3",
+   "topic": "history.exploration",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "The conquest of the Aztecs, the deaths from disease and the enslavement of Africans",
+     "correct": true
+    },
+    {
+     "text": "Elcano’s crew completed the first voyage round the world",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "The voyages of Columbus, da Gama and Magellan were triumphs of courage and science. These explorers opened up the world and laid the foundations of the modern age.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.el.i1",
+   "topic": "history.elizabeth",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "The reign was a time of glory, unity and prosperity",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: The reign was a time of glory, unity and prosperity. Look for the sentence that sums up its view.",
+   "passage": "Elizabeth’s reign was England’s golden age. The Armada was defeated, Shakespeare wrote his greatest plays, and the country was united and prosperous under a wise and popular queen.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.el.i2",
+   "topic": "history.elizabeth",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "The defeat of the Spanish Armada in 1588",
+     "correct": true
+    },
+    {
+     "text": "Poverty was so serious that Parliament had to pass the Poor Law of 1601",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "Elizabeth’s reign was England’s golden age. The Armada was defeated, Shakespeare wrote his greatest plays, and the country was united and prosperous under a wise and popular queen.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.el.i3",
+   "topic": "history.elizabeth",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "Poverty was so serious that Parliament had to pass the Poor Law of 1601",
+     "correct": true
+    },
+    {
+     "text": "The defeat of the Spanish Armada in 1588",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "Elizabeth’s reign was England’s golden age. The Armada was defeated, Shakespeare wrote his greatest plays, and the country was united and prosperous under a wise and popular queen.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.sr.i1",
+   "topic": "history.science-rev",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "The Church opposed science because it hated new ideas",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: The Church opposed science because it hated new ideas. Look for the sentence that sums up its view.",
+   "passage": "The Church was the enemy of science. It silenced Galileo because it hated new ideas, and science only advanced when people escaped its control.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.sr.i2",
+   "topic": "history.science-rev",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Galileo was tried and kept under house arrest in 1633",
+     "correct": true
+    },
+    {
+     "text": "Copernicus was himself a Church official, and many priests and monks studied science",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "The Church was the enemy of science. It silenced Galileo because it hated new ideas, and science only advanced when people escaped its control.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.sr.i3",
+   "topic": "history.science-rev",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "Copernicus was himself a Church official, and many priests and monks studied science",
+     "correct": true
+    },
+    {
+     "text": "Galileo was tried and kept under house arrest in 1633",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "The Church was the enemy of science. It silenced Galileo because it hated new ideas, and science only advanced when people escaped its control.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.rs.i1",
+   "topic": "history.restoration",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "The fire had good results as well as bad ones",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: The fire had good results as well as bad ones. Look for the sentence that sums up its view.",
+   "passage": "The Great Fire was a disaster with a silver lining. By burning the old wooden city it wiped out the plague and gave London a fresh start.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.rs.i2",
+   "topic": "history.restoration",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "London was rebuilt in brick and stone, with Wren’s new St Paul’s",
+     "correct": true
+    },
+    {
+     "text": "The plague was already dying down, and the poor districts outside the walls, where it had been worst, did not burn",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "The Great Fire was a disaster with a silver lining. By burning the old wooden city it wiped out the plague and gave London a fresh start.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.rs.i3",
+   "topic": "history.restoration",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "The plague was already dying down, and the poor districts outside the walls, where it had been worst, did not burn",
+     "correct": true
+    },
+    {
+     "text": "London was rebuilt in brick and stone, with Wren’s new St Paul’s",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "The Great Fire was a disaster with a silver lining. By burning the old wooden city it wiped out the plague and gave London a fresh start.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.am.i1",
+   "topic": "history.american-rev",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "The revolution fought for everyone’s freedom",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: The revolution fought for everyone’s freedom. Look for the sentence that sums up its view.",
+   "passage": "The American Revolution was a fight for liberty for all. Its leaders declared that all men are created equal and built a nation on that promise.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.am.i2",
+   "topic": "history.american-rev",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "The Declaration of Independence said that “all men are created equal”",
+     "correct": true
+    },
+    {
+     "text": "Slavery stayed legal, and Jefferson himself enslaved people",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "The American Revolution was a fight for liberty for all. Its leaders declared that all men are created equal and built a nation on that promise.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.am.i3",
+   "topic": "history.american-rev",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "Slavery stayed legal, and Jefferson himself enslaved people",
+     "correct": true
+    },
+    {
+     "text": "The Declaration of Independence said that “all men are created equal”",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "The American Revolution was a fight for liberty for all. Its leaders declared that all men are created equal and built a nation on that promise.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.np.i1",
+   "topic": "history.napoleon",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "The Russian winter, not his enemies, defeated Napoleon",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: The Russian winter, not his enemies, defeated Napoleon. Look for the sentence that sums up its view.",
+   "passage": "Napoleon was not beaten by his enemies. He was beaten by the Russian winter, which destroyed the greatest army Europe had ever seen.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.np.i2",
+   "topic": "history.napoleon",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Most of his army of over half a million men died or deserted in the retreat from Moscow in 1812",
+     "correct": true
+    },
+    {
+     "text": "Britain had already stopped him invading at Trafalgar, and Wellington and the Prussians beat him at Waterloo in 1815",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "Napoleon was not beaten by his enemies. He was beaten by the Russian winter, which destroyed the greatest army Europe had ever seen.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.np.i3",
+   "topic": "history.napoleon",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "Britain had already stopped him invading at Trafalgar, and Wellington and the Prussians beat him at Waterloo in 1815",
+     "correct": true
+    },
+    {
+     "text": "Most of his army of over half a million men died or deserted in the retreat from Moscow in 1812",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "Napoleon was not beaten by his enemies. He was beaten by the Russian winter, which destroyed the greatest army Europe had ever seen.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.if.i1",
+   "topic": "history.famine",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "Nobody could have prevented the Famine",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: Nobody could have prevented the Famine. Look for the sentence that sums up its view.",
+   "passage": "The Great Famine was a natural disaster. Potato blight struck without warning, and no government of the time could have prevented the suffering that followed.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.if.i2",
+   "topic": "history.famine",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Potato blight was a plant disease that nobody at the time understood",
+     "correct": true
+    },
+    {
+     "text": "Food continued to be exported while people starved, and the soup kitchens were closed after a few months",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "The Great Famine was a natural disaster. Potato blight struck without warning, and no government of the time could have prevented the suffering that followed.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.if.i3",
+   "topic": "history.famine",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "Food continued to be exported while people starved, and the soup kitchens were closed after a few months",
+     "correct": true
+    },
+    {
+     "text": "Potato blight was a plant disease that nobody at the time understood",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "The Great Famine was a natural disaster. Potato blight struck without warning, and no government of the time could have prevented the suffering that followed.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ph.i1",
+   "topic": "history.public-health",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "One man, John Snow, was responsible for better public health",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: One man, John Snow, was responsible for better public health. Look for the sentence that sums up its view.",
+   "passage": "John Snow was the hero who saved Victorian Britain from disease. His map of the Broad Street pump changed everything.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ph.i2",
+   "topic": "history.public-health",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Snow traced cholera to the Broad Street pump in 1854",
+     "correct": true
+    },
+    {
+     "text": "Few people accepted Snow’s ideas at first; it took the Great Stink, Bazalgette’s sewers and the 1875 Act to change things",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "John Snow was the hero who saved Victorian Britain from disease. His map of the Broad Street pump changed everything.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ph.i3",
+   "topic": "history.public-health",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "Few people accepted Snow’s ideas at first; it took the Great Stink, Bazalgette’s sewers and the 1875 Act to change things",
+     "correct": true
+    },
+    {
+     "text": "Snow traced cholera to the Broad Street pump in 1854",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "John Snow was the hero who saved Victorian Britain from disease. His map of the Broad Street pump changed everything.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.sf.i1",
+   "topic": "history.suffrage",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "Women’s war work, not militancy, won the vote",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: Women’s war work, not militancy, won the vote. Look for the sentence that sums up its view.",
+   "passage": "Women won the vote in 1918 because of their war work. The suffragettes’ violence had only hardened opinion against them.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.sf.i2",
+   "topic": "history.suffrage",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Women worked in munitions factories and on the land during the war",
+     "correct": true
+    },
+    {
+     "text": "The 1918 Act only gave the vote to women over 30, so many young war workers still could not vote",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "Women won the vote in 1918 because of their war work. The suffragettes’ violence had only hardened opinion against them.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.sf.i3",
+   "topic": "history.suffrage",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "The 1918 Act only gave the vote to women over 30, so many young war workers still could not vote",
+     "correct": true
+    },
+    {
+     "text": "Women worked in munitions factories and on the land during the war",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "Women won the vote in 1918 because of their war work. The suffragettes’ violence had only hardened opinion against them.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.hf.i1",
+   "topic": "history.home-front",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "The war permanently changed women’s lives",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: The war permanently changed women’s lives. Look for the sentence that sums up its view.",
+   "passage": "The war liberated British women. After 1945, nothing was ever the same again.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.hf.i2",
+   "topic": "history.home-front",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "From 1941 women were conscripted into war work and the services",
+     "correct": true
+    },
+    {
+     "text": "After 1945 many women were expected to give up their jobs, and they were still paid less than men",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "The war liberated British women. After 1945, nothing was ever the same again.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.hf.i3",
+   "topic": "history.home-front",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "After 1945 many women were expected to give up their jobs, and they were still paid less than men",
+     "correct": true
+    },
+    {
+     "text": "From 1941 women were conscripted into war work and the services",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "The war liberated British women. After 1945, nothing was ever the same again.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ci.i1",
+   "topic": "history.civil-rights",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "King’s leadership was the reason the movement succeeded",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: King’s leadership was the reason the movement succeeded. Look for the sentence that sums up its view.",
+   "passage": "The civil rights movement succeeded because of one great leader: Martin Luther King.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ci.i2",
+   "topic": "history.civil-rights",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "King’s “I have a dream” speech in 1963 won huge support",
+     "correct": true
+    },
+    {
+     "text": "The Montgomery Bus Boycott was organised by local activists, and thousands of ordinary people walked for over a year",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "The civil rights movement succeeded because of one great leader: Martin Luther King.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ci.i3",
+   "topic": "history.civil-rights",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "The Montgomery Bus Boycott was organised by local activists, and thousands of ordinary people walked for over a year",
+     "correct": true
+    },
+    {
+     "text": "King’s “I have a dream” speech in 1963 won huge support",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "The civil rights movement succeeded because of one great leader: Martin Luther King.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.de.i1",
+   "topic": "history.end-empire",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "Britain gave independence willingly and generously",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: Britain gave independence willingly and generously. Look for the sentence that sums up its view.",
+   "passage": "Britain gave up its empire generously, granting freedom to its colonies when they were ready for it.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.de.i2",
+   "topic": "history.end-empire",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Many former colonies chose to join the Commonwealth",
+     "correct": true
+    },
+    {
+     "text": "Britain resisted independence movements for decades, as at Amritsar in 1919, and left mainly because it could no longer afford to stay",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "Britain gave up its empire generously, granting freedom to its colonies when they were ready for it.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.de.i3",
+   "topic": "history.end-empire",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "Britain resisted independence movements for decades, as at Amritsar in 1919, and left mainly because it could no longer afford to stay",
+     "correct": true
+    },
+    {
+     "text": "Many former colonies chose to join the Commonwealth",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "Britain gave up its empire generously, granting freedom to its colonies when they were ready for it.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.bz.i1",
+   "topic": "history.byzantium",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "Byzantium was weak and always in decline",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: Byzantium was weak and always in decline. Look for the sentence that sums up its view.",
+   "passage": "Byzantium was a thousand-year decline: a weak shadow of the real Roman Empire, forever losing land until it finally fell.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.bz.i2",
+   "topic": "history.byzantium",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Constantinople was sacked in 1204 and finally fell in 1453",
+     "correct": true
+    },
+    {
+     "text": "It survived for nearly a thousand years after the West fell, built the Hagia Sophia and preserved Roman law and Greek learning",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "Byzantium was a thousand-year decline: a weak shadow of the real Roman Empire, forever losing land until it finally fell.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.bz.i3",
+   "topic": "history.byzantium",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "It survived for nearly a thousand years after the West fell, built the Hagia Sophia and preserved Roman law and Greek learning",
+     "correct": true
+    },
+    {
+     "text": "Constantinople was sacked in 1204 and finally fell in 1453",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "Byzantium was a thousand-year decline: a weak shadow of the real Roman Empire, forever losing land until it finally fell.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ru.i1",
+   "topic": "history.russia",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "Nicholas II’s personal failings caused his downfall",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: Nicholas II’s personal failings caused his downfall. Look for the sentence that sums up its view.",
+   "passage": "The Tsar fell because he was a weak and foolish man who could not rule.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ru.i2",
+   "topic": "history.russia",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "He took personal command of the army in 1915 and was blamed for its defeats",
+     "correct": true
+    },
+    {
+     "text": "Deep problems such as poverty and the huge losses of the war would have tested any ruler",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "The Tsar fell because he was a weak and foolish man who could not rule.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.ru.i3",
+   "topic": "history.russia",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "Deep problems such as poverty and the huge losses of the war would have tested any ruler",
+     "correct": true
+    },
+    {
+     "text": "He took personal command of the army in 1915 and was blamed for its defeats",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "The Tsar fell because he was a weak and foolish man who could not rule.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.dc.i1",
+   "topic": "history.dictators",
+   "kind": "mcq",
+   "prompt": "What is the main argument of this interpretation?",
+   "options": [
+    {
+     "text": "Versailles made another war certain",
+     "correct": true
+    },
+    {
+     "text": "That the period was peaceful and uneventful",
+     "correct": false,
+     "feedback": "Read it again: it makes a clear claim about causes or significance."
+    },
+    {
+     "text": "That historians cannot know anything about it",
+     "correct": false,
+     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+    }
+   ],
+   "explain": "Its main claim: Versailles made another war certain. Look for the sentence that sums up its view.",
+   "passage": "The Treaty of Versailles made the Second World War inevitable. From 1919 onwards, another war was only a matter of time.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.dc.i2",
+   "topic": "history.dictators",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
+   "options": [
+    {
+     "text": "Hitler won support by promising to overturn the treaty",
+     "correct": true
+    },
+    {
+     "text": "In the 1920s Germany recovered and joined the League of Nations; it took the Depression to bring Hitler to power",
+     "correct": false,
+     "feedback": "This evidence actually challenges the interpretation."
+    },
+    {
+     "text": "An opinion with no evidence",
+     "correct": false,
+     "feedback": "Support needs evidence, not just an opinion."
+    }
+   ],
+   "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
+   "passage": "The Treaty of Versailles made the Second World War inevitable. From 1919 onwards, another war was only a matter of time.",
+   "passageSource": "An interpretation written for this app"
+  },
+  {
+   "id": "history.m.dc.i3",
+   "topic": "history.dictators",
+   "kind": "mcq",
+   "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
+   "options": [
+    {
+     "text": "In the 1920s Germany recovered and joined the League of Nations; it took the Depression to bring Hitler to power",
+     "correct": true
+    },
+    {
+     "text": "Hitler won support by promising to overturn the treaty",
+     "correct": false,
+     "feedback": "This evidence supports the interpretation."
+    },
+    {
+     "text": "A fact from a different century",
+     "correct": false,
+     "feedback": "Evidence must be about the right period to challenge it."
+    }
+   ],
+   "explain": "An interpretation is only convincing if it survives the evidence against it.",
+   "passage": "The Treaty of Versailles made the Second World War inevitable. From 1919 onwards, another war was only a matter of time.",
+   "passageSource": "An interpretation written for this app"
+  }
+ ]
+}

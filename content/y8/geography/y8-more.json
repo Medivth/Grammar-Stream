@@ -1,0 +1,5109 @@
+{
+ "subject": "geography",
+ "deck": "y8-more",
+ "topics": [
+  {
+   "id": "geography.storms",
+   "title": "Tropical storms",
+   "kind": "facts",
+   "prereqs": [
+    "geography.weather"
+   ],
+   "batch": 5,
+   "intro": "Hurricanes, typhoons and cyclones are the same thing in different oceans: giant spinning storms fed by warm seas. Poseidon got the blame for storms at sea; today satellites track them days in advance.",
+   "teach": "Explain the conditions a tropical storm needs to form.",
+   "talk": "Ask {him} why tropical storms never form right on the Equator."
+  },
+  {
+   "id": "geography.uk-extremes",
+   "title": "Extreme weather in the UK",
+   "kind": "facts",
+   "prereqs": [
+    "geography.weather"
+   ],
+   "batch": 5,
+   "intro": "The UK’s weather is usually mild, but it has extremes: snow from Siberia, droughts, named storms and record heat. Each one tests how ready we are.",
+   "teach": "Explain what caused the “Beast from the East” in 2018.",
+   "talk": "Ask {him} which UK storm names {she} remembers, and how they are chosen."
+  },
+  {
+   "id": "geography.uk-landscapes",
+   "title": "The UK’s physical landscapes",
+   "kind": "facts",
+   "prereqs": [
+    "geography.ice"
+   ],
+   "batch": 5,
+   "intro": "Under every British landscape is its rock. Hard, old rocks make the uplands of the north and west; younger, softer rocks make the lowlands of the south and east.",
+   "teach": "Explain the Tees–Exe line and what it divides.",
+   "talk": "Next time you are on a walk, ask {him} what rock might be underneath and how {she} could tell."
+  },
+  {
+   "id": "geography.farming",
+   "title": "Soils and farming",
+   "kind": "facts",
+   "prereqs": [
+    "geography.uk-landscapes"
+   ],
+   "batch": 5,
+   "intro": "Farming depends on soil, climate and relief. That is why eastern England grows wheat and the wet hills of the west raise sheep.",
+   "teach": "Explain why arable farming is common in East Anglia.",
+   "talk": "Look at where the food in your fridge comes from and ask {him} about food miles."
+  },
+  {
+   "id": "geography.water-food",
+   "title": "Water and food security",
+   "kind": "facts",
+   "prereqs": [
+    "geography.development"
+   ],
+   "batch": 5,
+   "intro": "Water and food are unevenly shared. Rivers that cross borders, like the Nile and the Euphrates, can bring countries together or push them apart.",
+   "teach": "Explain what “virtual water” means, with an example.",
+   "talk": "Ask {him} how much water {she} thinks is used to make one burger."
+  },
+  {
+   "id": "geography.tourism",
+   "title": "Tourism and its impacts",
+   "kind": "facts",
+   "prereqs": [
+    "geography.global"
+   ],
+   "batch": 5,
+   "intro": "Tourism is one of the world’s biggest industries. It brings jobs and money, but too many visitors can damage the very places they come to see, from Venice to the Acropolis.",
+   "teach": "Explain the stages of Butler’s tourism life cycle.",
+   "talk": "Ask {him} whether {she} thinks famous places should limit visitors."
+  },
+  {
+   "id": "geography.deserts",
+   "title": "Deserts and desertification",
+   "kind": "facts",
+   "prereqs": [
+    "geography.biomes"
+   ],
+   "batch": 5,
+   "intro": "Deserts are defined by dryness, not heat: Antarctica is the biggest of all. On the edges of the Sahara, the Sahel shows how land can slowly turn to desert, and how people are fighting back.",
+   "teach": "Explain three causes of desertification in the Sahel.",
+   "talk": "Ask {him} why the Great Green Wall is being planted."
+  },
+  {
+   "id": "geography.polar",
+   "title": "The polar regions",
+   "kind": "facts",
+   "prereqs": [
+    "geography.biomes"
+   ],
+   "batch": 5,
+   "intro": "The Arctic is an ocean surrounded by land; Antarctica is a continent surrounded by ocean. Both are warming fast, and what happens there affects everyone.",
+   "teach": "Explain how Antarctica is protected by international agreement.",
+   "talk": "Ask {him} why melting Arctic sea ice does not raise sea levels much but melting Antarctic ice does."
+  },
+  {
+   "id": "geography.oceans",
+   "title": "Oceans under pressure",
+   "kind": "facts",
+   "prereqs": [
+    "geography.climate"
+   ],
+   "batch": 5,
+   "intro": "Oceans cover about 71% of the Earth. They feed billions, steady the climate and hold most of its life, but plastic, overfishing and warming are taking their toll.",
+   "teach": "Explain how plastic ends up in the middle of the Pacific.",
+   "talk": "Count the single-use plastics in your bin this week with {him}."
+  },
+  {
+   "id": "geography.africa",
+   "title": "Africa: a continent of 54 countries",
+   "kind": "facts",
+   "prereqs": [
+    "geography.places"
+   ],
+   "batch": 5,
+   "intro": "Africa is not a country. It has 54 of them, well over a thousand languages, the world’s youngest population and some of its fastest-growing cities and tech industries.",
+   "teach": "Explain two common stereotypes about Africa and why they are misleading.",
+   "talk": "Ask {him} to name five African countries and one fact about each."
+  },
+  {
+   "id": "geography.nigeria",
+   "title": "Nigeria in depth",
+   "kind": "facts",
+   "prereqs": [
+    "geography.africa"
+   ],
+   "batch": 5,
+   "intro": "Nigeria is Africa’s most populous country and one of its biggest economies. Oil, film, farming and the megacity of Lagos make it a classic GCSE case study of a newly emerging economy.",
+   "teach": "Explain the advantages and problems oil has brought to Nigeria.",
+   "talk": "Ask {him} what Nollywood is."
+  },
+  {
+   "id": "geography.china",
+   "title": "China’s rise",
+   "kind": "facts",
+   "prereqs": [
+    "geography.global"
+   ],
+   "batch": 5,
+   "intro": "In forty years China went from a mostly rural country to the world’s workshop. Its choices on population, energy and cities affect the whole planet.",
+   "teach": "Explain one benefit and one problem of the Three Gorges Dam.",
+   "talk": "Look at how many things in your house were made in China and ask {him} why."
+  },
+  {
+   "id": "geography.india",
+   "title": "India: monsoon, rivers and change",
+   "kind": "facts",
+   "prereqs": [
+    "geography.weather"
+   ],
+   "batch": 5,
+   "intro": "India is now the world’s most populous country. Its farming depends on the monsoon, its rivers are sacred, and its cities are hubs of the global economy.",
+   "teach": "Explain why the monsoon matters so much to India.",
+   "talk": "Ask {him} what causes the monsoon."
+  },
+  {
+   "id": "geography.brazil",
+   "title": "Brazil and the Amazon",
+   "kind": "facts",
+   "prereqs": [
+    "geography.biomes"
+   ],
+   "batch": 5,
+   "intro": "Brazil holds most of the Amazon, the largest rainforest on Earth. Who gets to decide its future: farmers, miners, indigenous peoples, the government, or the world?",
+   "teach": "Explain why the Amazon matters beyond Brazil.",
+   "talk": "Ask {him} whether {she} thinks other countries should pay Brazil to protect the rainforest."
+  },
+  {
+   "id": "geography.eu",
+   "title": "Europe, the EU and borders",
+   "kind": "facts",
+   "prereqs": [
+    "geography.places"
+   ],
+   "batch": 5,
+   "intro": "Borders are drawn by people. The European Union removed many of them for trade and travel; Brexit put some back. Borders shape trade, migration and identity.",
+   "teach": "Explain the difference between the EU, the euro area and the Schengen area.",
+   "talk": "Ask {him} what changed for travellers after the UK left the EU."
+  },
+  {
+   "id": "geography.regeneration",
+   "title": "UK cities and regeneration",
+   "kind": "facts",
+   "prereqs": [
+    "geography.cities"
+   ],
+   "batch": 5,
+   "intro": "When old industries closed, whole districts of British cities emptied. Regeneration brings them back to life, but who benefits?",
+   "teach": "Explain the difference between brownfield and greenfield sites.",
+   "talk": "Ask {him} about a part of your nearest city that has been rebuilt."
+  },
+  {
+   "id": "geography.fieldwork",
+   "title": "Fieldwork, enquiry and GIS",
+   "kind": "facts",
+   "prereqs": [
+    "geography.maps"
+   ],
+   "batch": 5,
+   "intro": "Geographers go out and measure. Good fieldwork starts with a question, uses fair sampling and ends by asking how reliable the results are. GIS layers data on maps to reveal patterns.",
+   "teach": "Explain the difference between random, systematic and stratified sampling.",
+   "talk": "Plan a mini fieldwork question with {him}: is our street busier at 8 am or 11 am?"
+  },
+  {
+   "id": "geography.sustainability",
+   "title": "Sustainability and the global goals",
+   "kind": "facts",
+   "prereqs": [
+    "geography.development"
+   ],
+   "batch": 5,
+   "intro": "Sustainable development meets today’s needs without stealing from the future. In 2015 every UN member agreed 17 Sustainable Development Goals for 2030.",
+   "teach": "Explain what sustainable development means, using an example.",
+   "talk": "Ask {him} which of the 17 global goals {she} thinks matters most."
+  },
+  {
+   "id": "geography.places-2",
+   "title": "World places: more countries and capitals",
+   "kind": "facts",
+   "prereqs": [
+    "geography.places"
+   ],
+   "batch": 6,
+   "intro": "Twenty-six more countries to find, from Argentina to New Zealand, and their capitals. Several capitals are not the biggest city: Canberra, Ottawa, Brasília and Pretoria were chosen or built on purpose.",
+   "teach": "Name three capitals that are not their country’s largest city.",
+   "talk": "Quiz each other on capitals during a car journey."
+  },
+  {
+   "id": "geography.decisions",
+   "title": "Making decisions: issue evaluation (GCSE taster)",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "geography.sustainability"
+   ],
+   "batch": 5,
+   "intro": "GCSE geography ends with an issue to judge: a new dam, a coastal defence, a tourist resort. You weigh stakeholders, costs, benefits and sustainability, then make and defend a decision.",
+   "teach": "Explain how to structure a decision-making answer.",
+   "talk": "Pick a local issue (a new housing estate, a bypass) and ask {him} who would be for and against it."
+  },
+  {
+   "id": "geography.urban-models",
+   "title": "Inside the city: urban models (GCSE taster)",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "geography.regeneration"
+   ],
+   "batch": 5,
+   "intro": "Cities are not random. Models like Burgess’s rings show how land use, building age and wealth change as you travel out from the centre.",
+   "teach": "Explain the zones of the Burgess model.",
+   "talk": "On a drive into town, ask {him} to spot when you move from suburbs to inner city to the CBD."
+  },
+  {
+   "id": "geography.resources-conflict",
+   "title": "Resources and conflict (GCSE taster)",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "geography.water-food",
+    "geography.polar"
+   ],
+   "batch": 5,
+   "intro": "When resources are scarce or newly reachable, countries compete for them: shared rivers, Arctic seabed, rare metals for phones. Geography helps explain where tensions arise.",
+   "teach": "Explain why the Arctic is becoming more contested.",
+   "talk": "Ask {him} which resources {her} phone needs, and where they might come from."
+  }
+ ],
+ "items": [
+  {
+   "id": "geography.m.ts.conditions",
+   "topic": "geography.storms",
+   "kind": "mcq",
+   "prompt": "Which set of conditions does a tropical storm need to form?",
+   "options": [
+    {
+     "text": "Ocean water of at least about 26–27 °C, a location roughly 5–30° from the Equator, and low wind shear",
+     "correct": true
+    },
+    {
+     "text": "Cold water and strong winds from the poles",
+     "correct": false,
+     "feedback": "They are fed by warm water: heat and moisture are their fuel."
+    },
+    {
+     "text": "Any sea, as long as it is windy",
+     "correct": false,
+     "feedback": "They need very warm water and the spin from the Earth’s rotation."
+    },
+    {
+     "text": "Land with high mountains",
+     "correct": false,
+     "feedback": "They form over the ocean and weaken over land."
+    }
+   ],
+   "explain": "Warm water evaporates into rising air; the Coriolis effect, from the Earth’s spin, sets the storm turning."
+  },
+  {
+   "id": "geography.m.ts.equator",
+   "topic": "geography.storms",
+   "kind": "mcq",
+   "prompt": "Why do tropical storms not form right on the Equator?",
+   "options": [
+    {
+     "text": "The Coriolis effect (the spin from the Earth’s rotation) is too weak there to set them turning",
+     "correct": true
+    },
+    {
+     "text": "The water is too cold",
+     "correct": false,
+     "feedback": "The water at the Equator is very warm."
+    },
+    {
+     "text": "There is no wind at the Equator",
+     "correct": false,
+     "feedback": "There is wind; the problem is the lack of spin."
+    },
+    {
+     "text": "They do, all the time",
+     "correct": false,
+     "feedback": "They almost never form within about 5° of the Equator."
+    }
+   ],
+   "explain": "The Coriolis effect is zero at the Equator and grows towards the poles."
+  },
+  {
+   "id": "geography.m.ts.names",
+   "topic": "geography.storms",
+   "kind": "fact",
+   "prompt": "In the north-west Pacific, near Japan and the Philippines, a tropical storm is called a…",
+   "answer": "typhoon",
+   "distractors": [
+    "hurricane",
+    "cyclone",
+    "tornado"
+   ],
+   "explain": "Hurricane (Atlantic and north-east Pacific), typhoon (north-west Pacific), cyclone (Indian Ocean and South Pacific). Same storm, different names.",
+   "accept": [
+    "a typhoon"
+   ]
+  },
+  {
+   "id": "geography.m.ts.eye",
+   "topic": "geography.storms",
+   "kind": "mcq",
+   "prompt": "What is the eye of a tropical storm like?",
+   "options": [
+    {
+     "text": "Calm, with light winds and often clear skies, surrounded by the strongest winds in the eyewall",
+     "correct": true
+    },
+    {
+     "text": "The windiest part of the storm",
+     "correct": false,
+     "feedback": "The strongest winds are in the eyewall around it."
+    },
+    {
+     "text": "Full of hail",
+     "correct": false,
+     "feedback": "The eye is calm, as sinking air clears the cloud."
+    },
+    {
+     "text": "Freezing cold",
+     "correct": false,
+     "feedback": "It is not especially cold."
+    }
+   ],
+   "explain": "People caught in the eye sometimes think the storm is over, then the other side of the eyewall arrives."
+  },
+  {
+   "id": "geography.m.ts.scale",
+   "topic": "geography.storms",
+   "kind": "fact",
+   "prompt": "Which scale rates hurricanes from category 1 to 5 by wind speed?",
+   "answer": "the Saffir–Simpson scale",
+   "distractors": [
+    "the Richter scale",
+    "the Beaufort scale",
+    "the Mercalli scale"
+   ],
+   "explain": "Category 5 means sustained winds over about 250 km/h. (The Beaufort scale is for ordinary winds; Richter and Mercalli are for earthquakes.)",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.ts.surge",
+   "topic": "geography.storms",
+   "kind": "mcq",
+   "prompt": "Typhoon Haiyan hit the Philippines in 2013 and killed more than 6,000 people. What caused most of the deaths?",
+   "options": [
+    {
+     "text": "A storm surge: a wall of seawater pushed onto low coasts such as Tacloban",
+     "correct": true
+    },
+    {
+     "text": "Hailstones",
+     "correct": false,
+     "feedback": "Hail is rare in tropical storms."
+    },
+    {
+     "text": "Lightning",
+     "correct": false,
+     "feedback": "Lightning was not the main killer."
+    },
+    {
+     "text": "Volcanic eruptions",
+     "correct": false,
+     "feedback": "No eruption was involved."
+    }
+   ],
+   "explain": "Low pressure and fierce winds raise the sea by several metres, flooding coastal towns."
+  },
+  {
+   "id": "geography.m.ts.katrina",
+   "topic": "geography.storms",
+   "kind": "mcq",
+   "prompt": "Hurricane Katrina (2005) flooded about 80% of New Orleans. Why was a rich country hit so hard?",
+   "options": [
+    {
+     "text": "The city lies largely below sea level and its flood walls (levees) failed",
+     "correct": true
+    },
+    {
+     "text": "The USA had no warning",
+     "correct": false,
+     "feedback": "Forecasters warned days in advance."
+    },
+    {
+     "text": "It was the strongest hurricane ever recorded",
+     "correct": false,
+     "feedback": "It was category 3 at landfall."
+    },
+    {
+     "text": "Nobody lived there",
+     "correct": false,
+     "feedback": "Hundreds of thousands lived there."
+    }
+   ],
+   "explain": "About 1,800 people died. Poorer residents without cars found it hardest to evacuate."
+  },
+  {
+   "id": "geography.m.ts.land",
+   "topic": "geography.storms",
+   "kind": "mcq",
+   "prompt": "Why do tropical storms weaken when they move over land?",
+   "options": [
+    {
+     "text": "They lose their supply of warm, moist air from the ocean, and friction slows them",
+     "correct": true
+    },
+    {
+     "text": "Land is magnetic",
+     "correct": false,
+     "feedback": "Magnetism has nothing to do with it."
+    },
+    {
+     "text": "Trees absorb the wind",
+     "correct": false,
+     "feedback": "Friction helps, but the main reason is losing their fuel."
+    },
+    {
+     "text": "They do not weaken",
+     "correct": false,
+     "feedback": "They weaken quickly, though their rain can still cause floods far inland."
+    }
+   ],
+   "explain": "Their fuel is warm water. Over land they run out of it."
+  },
+  {
+   "id": "geography.m.ts.w",
+   "topic": "geography.storms",
+   "kind": "written",
+   "prompt": "Explain why the effects of a tropical storm can be greater in a poorer country than in a richer one. Use examples.",
+   "hints": [
+    "A clear point about wealth and preparation",
+    "Warnings, evacuation and building quality",
+    "An example from a poorer country (e.g. Haiyan, Philippines 2013)",
+    "An example from a richer country, including any exceptions (e.g. Katrina, 2005)",
+    "A short conclusion"
+   ],
+   "model": "Poorer countries usually suffer more deaths because they have less money to prepare and respond. Warning systems may not reach everyone, and many people live in lightweight homes on low coasts, so a storm surge can sweep them away. When Typhoon Haiyan hit the Philippines in 2013, the surge flooded Tacloban and more than 6,000 people died. Richer countries can afford satellites, strong buildings, evacuation plans and emergency services, so deaths are usually lower, although damage costs are higher because property is worth more. However, wealth does not guarantee safety: Hurricane Katrina killed about 1,800 people in New Orleans in 2005 because the levees failed and poorer residents could not evacuate. So wealth reduces risk, but only if it is used to protect everyone.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Typhoon Haiyan, Philippines, November 2013: storm surge of several metres at Tacloban; more than 6,000 deaths; about 4 million people displaced.\nHurricane Katrina, USA, August 2005: category 3 at landfall; levees failed and about 80% of New Orleans flooded; about 1,800 deaths; damage over $100 billion.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.uk.beast",
+   "topic": "geography.uk-extremes",
+   "kind": "mcq",
+   "prompt": "What caused the “Beast from the East” in February and March 2018?",
+   "options": [
+    {
+     "text": "Bitterly cold air flowing from Siberia on easterly winds, after the polar vortex was disrupted",
+     "correct": true
+    },
+    {
+     "text": "A volcanic eruption in Iceland",
+     "correct": false,
+     "feedback": "No eruption was involved."
+    },
+    {
+     "text": "A tropical storm",
+     "correct": false,
+     "feedback": "It was extreme cold, not a tropical storm."
+    },
+    {
+     "text": "The Gulf Stream stopping",
+     "correct": false,
+     "feedback": "The North Atlantic Drift did not stop."
+    }
+   ],
+   "explain": "Usually our weather comes from the mild Atlantic. When the wind swings round to the east in winter, it brings continental cold. Storm Emma added heavy snow."
+  },
+  {
+   "id": "geography.m.uk.names",
+   "topic": "geography.uk-extremes",
+   "kind": "mcq",
+   "prompt": "Why have UK storms been given names since 2015?",
+   "options": [
+    {
+     "text": "Named storms grab attention, so people take warnings more seriously",
+     "correct": true
+    },
+    {
+     "text": "To honour famous scientists",
+     "correct": false,
+     "feedback": "Names are chosen from public suggestions, not to honour anyone."
+    },
+    {
+     "text": "Only hurricanes can be named",
+     "correct": false,
+     "feedback": "Ordinary deep depressions are named when they are likely to cause severe impacts."
+    },
+    {
+     "text": "It is a tradition from Roman times",
+     "correct": false,
+     "feedback": "It started in 2015."
+    }
+   ],
+   "explain": "The Met Office and Met Éireann (and now the Dutch weather service) name storms likely to bring amber or red warnings."
+  },
+  {
+   "id": "geography.m.uk.cold",
+   "topic": "geography.uk-extremes",
+   "kind": "fact",
+   "prompt": "The UK’s lowest recorded temperature, −27.2 °C, was measured in which country of the UK?",
+   "answer": "Scotland",
+   "distractors": [
+    "Wales",
+    "England",
+    "Northern Ireland"
+   ],
+   "explain": "It has been reached three times in the Scottish Highlands: at Braemar (1895 and 1982) and Altnaharra (1995).",
+   "accept": [
+    "scotland"
+   ]
+  },
+  {
+   "id": "geography.m.uk.drought",
+   "topic": "geography.uk-extremes",
+   "kind": "mcq",
+   "prompt": "Which of these is a typical response to drought in the UK?",
+   "options": [
+    {
+     "text": "A hosepipe ban, to save water for essential uses",
+     "correct": true
+    },
+    {
+     "text": "Cloud seeding over every city",
+     "correct": false,
+     "feedback": "The UK does not routinely seed clouds."
+    },
+    {
+     "text": "Closing all schools",
+     "correct": false,
+     "feedback": "Drought does not close schools."
+    },
+    {
+     "text": "Building sea walls",
+     "correct": false,
+     "feedback": "Sea walls protect against coastal flooding, not drought."
+    }
+   ],
+   "explain": "The long, hot summer of 1976 brought standpipes in streets; 2022 brought hosepipe bans across much of England."
+  },
+  {
+   "id": "geography.m.uk.why-floods",
+   "topic": "geography.uk-extremes",
+   "kind": "mcq",
+   "prompt": "Why might extreme rainfall in the UK become more common as the climate warms?",
+   "options": [
+    {
+     "text": "Warmer air can hold more water vapour, so heavy downpours can be heavier",
+     "correct": true
+    },
+    {
+     "text": "Warmer air holds less water",
+     "correct": false,
+     "feedback": "It is the opposite: about 7% more water vapour per °C."
+    },
+    {
+     "text": "The UK is moving towards the Equator",
+     "correct": false,
+     "feedback": "Plates move only a few centimetres a year."
+    },
+    {
+     "text": "It will not change at all",
+     "correct": false,
+     "feedback": "Scientists expect wetter winters and more intense downpours."
+    }
+   ],
+   "explain": "This is why wetter winters and more intense summer storms are both expected."
+  },
+  {
+   "id": "geography.m.uk.warning",
+   "topic": "geography.uk-extremes",
+   "kind": "mcq",
+   "prompt": "What does a Met Office RED weather warning mean?",
+   "options": [
+    {
+     "text": "Dangerous weather is expected: take action to keep yourself and others safe",
+     "correct": true
+    },
+    {
+     "text": "Be aware: weather could cause minor problems",
+     "correct": false,
+     "feedback": "That is yellow."
+    },
+    {
+     "text": "Be prepared: there could be travel delays and power cuts",
+     "correct": false,
+     "feedback": "That is amber."
+    },
+    {
+     "text": "The weather will be sunny",
+     "correct": false,
+     "feedback": "Red is the most serious level."
+    }
+   ],
+   "explain": "Yellow, amber, red: from “be aware” to “take action”."
+  },
+  {
+   "id": "geography.m.uk.w",
+   "topic": "geography.uk-extremes",
+   "kind": "written",
+   "prompt": "Explain how one extreme weather event affected people in the UK and how they responded.",
+   "hints": [
+    "Name the event and when it happened",
+    "What caused it (briefly)",
+    "At least two effects on people (travel, schools, health, economy)",
+    "How people and authorities responded",
+    "A judgement on how well the UK coped"
+   ],
+   "model": "The “Beast from the East” in late February and early March 2018 brought bitterly cold easterly winds from Siberia, and when it met Storm Emma heavy snow fell across much of the UK. Roads and railways closed, thousands of schools shut, and some drivers were stranded overnight on motorways. Supermarkets ran short of bread and milk, and burst pipes left homes without water when the thaw came. The Met Office issued rare red warnings, councils gritted main roads and the army helped to rescue stranded people. The UK coped reasonably well with warnings and emergency help, but the disruption showed that a country used to mild winters is not well equipped for heavy snow.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The “Beast from the East”, late February to early March 2018: easterly winds from Siberia, then Storm Emma from the south. Heavy snow and temperatures below −10 °C in places. Red weather warnings issued; schools, roads and railways closed; the army helped stranded drivers.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.ul.tees",
+   "topic": "geography.uk-landscapes",
+   "kind": "mcq",
+   "prompt": "What does the Tees–Exe line roughly divide?",
+   "options": [
+    {
+     "text": "Upland Britain of older, harder rocks (north and west) from lowland Britain of younger, softer rocks (south and east)",
+     "correct": true
+    },
+    {
+     "text": "England from Scotland",
+     "correct": false,
+     "feedback": "It runs from the River Tees in the north-east to the River Exe in Devon."
+    },
+    {
+     "text": "Wet from dry farmland only",
+     "correct": false,
+     "feedback": "Rainfall differs too, but the line is mainly about rock and height."
+    },
+    {
+     "text": "Cities from countryside",
+     "correct": false,
+     "feedback": "Both sides have cities and countryside."
+    }
+   ],
+   "explain": "Draw a line from the mouth of the Tees to the mouth of the Exe: hills and mountains mostly lie to the north-west."
+  },
+  {
+   "id": "geography.m.ul.granite",
+   "topic": "geography.uk-landscapes",
+   "kind": "fact",
+   "prompt": "Dartmoor’s tors are made of which hard igneous rock?",
+   "answer": "granite",
+   "distractors": [
+    "chalk",
+    "limestone",
+    "clay"
+   ],
+   "explain": "Granite formed from magma cooling slowly underground. Weathering along its joints leaves the blocky tors.",
+   "accept": [
+    "granite"
+   ]
+  },
+  {
+   "id": "geography.m.ul.chalk",
+   "topic": "geography.uk-landscapes",
+   "kind": "mcq",
+   "prompt": "The White Cliffs of Dover and the South Downs are made of which rock?",
+   "options": [
+    {
+     "text": "Chalk",
+     "correct": true
+    },
+    {
+     "text": "Granite",
+     "correct": false,
+     "feedback": "Granite is hard and grey, found in places like Dartmoor and the Cairngorms."
+    },
+    {
+     "text": "Slate",
+     "correct": false,
+     "feedback": "Slate is in North Wales and the Lake District."
+    },
+    {
+     "text": "Basalt",
+     "correct": false,
+     "feedback": "Basalt forms the Giant’s Causeway in Northern Ireland."
+    }
+   ],
+   "explain": "Chalk is a soft, white limestone made from the skeletons of tiny sea creatures."
+  },
+  {
+   "id": "geography.m.ul.karst",
+   "topic": "geography.uk-landscapes",
+   "kind": "mcq",
+   "prompt": "Clints and grikes (blocks and cracks) at Malham Cove form a limestone pavement. How did the grikes form?",
+   "options": [
+    {
+     "text": "Slightly acidic rainwater dissolved the limestone along its joints",
+     "correct": true
+    },
+    {
+     "text": "Earthquakes cracked the rock",
+     "correct": false,
+     "feedback": "Weathering, not earthquakes."
+    },
+    {
+     "text": "Farmers dug them",
+     "correct": false,
+     "feedback": "They are natural."
+    },
+    {
+     "text": "Lava cooled into blocks",
+     "correct": false,
+     "feedback": "Limestone is sedimentary, not volcanic."
+    }
+   ],
+   "explain": "This dissolving is called carbonation, a kind of chemical weathering."
+  },
+  {
+   "id": "geography.m.ul.ben",
+   "topic": "geography.uk-landscapes",
+   "kind": "fact",
+   "prompt": "What is the highest mountain in the UK?",
+   "answer": "Ben Nevis",
+   "distractors": [
+    "Snowdon",
+    "Scafell Pike",
+    "Slieve Donard"
+   ],
+   "explain": "Ben Nevis is 1,345 m high, in the Scottish Highlands near Fort William.",
+   "accept": [
+    "ben nevis"
+   ]
+  },
+  {
+   "id": "geography.m.ul.lough",
+   "topic": "geography.uk-landscapes",
+   "kind": "fact",
+   "prompt": "What is the largest lake in the UK by area?",
+   "answer": "Lough Neagh",
+   "distractors": [
+    "Loch Ness",
+    "Windermere",
+    "Loch Lomond"
+   ],
+   "explain": "Lough Neagh in Northern Ireland covers about 390 km². Loch Ness holds more water because it is so deep.",
+   "accept": [
+    "lough neagh"
+   ]
+  },
+  {
+   "id": "geography.m.ul.park",
+   "topic": "geography.uk-landscapes",
+   "kind": "fact",
+   "prompt": "Which was the UK’s first national park, created in 1951?",
+   "answer": "the Peak District",
+   "distractors": [
+    "Snowdonia (Eryri)",
+    "the Lake District",
+    "Dartmoor"
+   ],
+   "explain": "The Peak District, between Manchester and Sheffield, is within an hour of millions of people.",
+   "accept": [
+    "peak district"
+   ]
+  },
+  {
+   "id": "geography.m.ul.weathering",
+   "topic": "geography.uk-landscapes",
+   "kind": "mcq",
+   "prompt": "Freeze–thaw weathering is common on British mountains. How does it work?",
+   "options": [
+    {
+     "text": "Water in cracks freezes and expands, widening the crack; repeated many times, rock breaks off",
+     "correct": true
+    },
+    {
+     "text": "The Sun melts the rock",
+     "correct": false,
+     "feedback": "Rock does not melt in sunshine."
+    },
+    {
+     "text": "Plants dissolve the rock",
+     "correct": false,
+     "feedback": "Roots can widen cracks, but that is biological weathering."
+    },
+    {
+     "text": "Waves crash on it",
+     "correct": false,
+     "feedback": "That is erosion at the coast."
+    }
+   ],
+   "explain": "Water expands by about 9% when it freezes. The broken rock collects as scree below."
+  },
+  {
+   "id": "geography.m.ul.w",
+   "topic": "geography.uk-landscapes",
+   "kind": "written",
+   "prompt": "Explain how rock type affects the landscape of the UK. Use two contrasting examples.",
+   "hints": [
+    "A point linking rock hardness to relief",
+    "A first example (e.g. granite on Dartmoor: tors, moorland)",
+    "A second, contrasting example (e.g. chalk downs or limestone at Malham)",
+    "Mention of weathering or erosion processes",
+    "Link to the upland–lowland divide"
+   ],
+   "model": "Rock type strongly shapes the UK’s landscape because hard rocks resist erosion and soft rocks wear away. On Dartmoor, hard granite forms high, boggy moorland, and freeze–thaw and other weathering along its joints have left blocky tors standing above the land. In contrast, chalk in south-east England is softer and porous, so it forms gentle rolling hills such as the South Downs, with few streams because rain soaks straight in; where chalk meets the sea, it forms white cliffs like Dover. Overall, older, harder rocks in the north and west make upland Britain, while younger, softer rocks in the south and east make lowland Britain, which is roughly the Tees–Exe line.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Dartmoor: granite (igneous, hard, impermeable): high moorland, bogs, tors.\nSouth Downs and Dover: chalk (sedimentary, soft, porous): rolling hills, dry valleys, white cliffs.\nMalham, Yorkshire Dales: Carboniferous limestone: limestone pavement, caves, gorges.\nThe Tees–Exe line divides upland from lowland Britain.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.fm.east",
+   "topic": "geography.farming",
+   "kind": "mcq",
+   "prompt": "Why is arable farming (growing crops) common in East Anglia?",
+   "options": [
+    {
+     "text": "Flat land, fertile soils, warm summers and lower rainfall suit cereals",
+     "correct": true
+    },
+    {
+     "text": "It is very mountainous",
+     "correct": false,
+     "feedback": "East Anglia is one of the flattest parts of the UK."
+    },
+    {
+     "text": "It rains every day",
+     "correct": false,
+     "feedback": "It is one of the driest parts of the UK."
+    },
+    {
+     "text": "Sheep cannot live there",
+     "correct": false,
+     "feedback": "Sheep could, but crops make better use of the land."
+    }
+   ],
+   "explain": "Wheat, barley and sugar beet are major crops there."
+  },
+  {
+   "id": "geography.m.fm.west",
+   "topic": "geography.farming",
+   "kind": "mcq",
+   "prompt": "Why is pastoral farming (raising animals) common in Wales and the Lake District?",
+   "options": [
+    {
+     "text": "High rainfall, steep slopes and thin soils suit grass for sheep and cattle better than crops",
+     "correct": true
+    },
+    {
+     "text": "The land is too flat",
+     "correct": false,
+     "feedback": "It is hilly."
+    },
+    {
+     "text": "It is too dry for grass",
+     "correct": false,
+     "feedback": "It is wet: grass grows well."
+    },
+    {
+     "text": "Crops grow best there",
+     "correct": false,
+     "feedback": "Machinery struggles on steep, wet land."
+    }
+   ],
+   "explain": "Hill sheep farming is typical of the uplands."
+  },
+  {
+   "id": "geography.m.fm.intensive",
+   "topic": "geography.farming",
+   "kind": "fact",
+   "prompt": "Farming that uses lots of money, machinery, fertiliser or labour on a small area to get high yields is called…",
+   "answer": "intensive farming",
+   "distractors": [
+    "extensive farming",
+    "subsistence farming",
+    "nomadic herding"
+   ],
+   "explain": "Extensive farming uses large areas with low inputs, like hill sheep farming.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.fm.subsistence",
+   "topic": "geography.farming",
+   "kind": "fact",
+   "prompt": "Farming to feed your own family, with little or nothing left to sell, is called…",
+   "answer": "subsistence farming",
+   "distractors": [
+    "commercial farming",
+    "agribusiness",
+    "arable farming"
+   ],
+   "explain": "Commercial farming produces food to sell for profit.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.fm.humus",
+   "topic": "geography.farming",
+   "kind": "mcq",
+   "prompt": "What is humus?",
+   "options": [
+    {
+     "text": "Dark, rotted plant and animal matter that makes soil fertile",
+     "correct": true
+    },
+    {
+     "text": "A type of rock",
+     "correct": false,
+     "feedback": "It is organic matter, not rock."
+    },
+    {
+     "text": "The layer of rock under soil",
+     "correct": false,
+     "feedback": "That is bedrock."
+    },
+    {
+     "text": "A farm chemical",
+     "correct": false,
+     "feedback": "It forms naturally."
+    }
+   ],
+   "explain": "Humus holds water and nutrients. (The dip is spelled hummus.)"
+  },
+  {
+   "id": "geography.m.fm.erosion",
+   "topic": "geography.farming",
+   "kind": "mcq",
+   "prompt": "Which practice best protects soil from being washed or blown away?",
+   "options": [
+    {
+     "text": "Planting hedgerows and cover crops, and ploughing along the contours of a slope",
+     "correct": true
+    },
+    {
+     "text": "Ploughing straight up and down slopes",
+     "correct": false,
+     "feedback": "Furrows down a slope channel rainwater and soil downhill."
+    },
+    {
+     "text": "Removing all hedges",
+     "correct": false,
+     "feedback": "Hedges break the wind and hold soil."
+    },
+    {
+     "text": "Leaving fields bare all winter",
+     "correct": false,
+     "feedback": "Bare soil erodes easily."
+    }
+   ],
+   "explain": "In the 1930s Dust Bowl in the USA, bare, over-ploughed soil blew away in huge storms."
+  },
+  {
+   "id": "geography.m.fm.green",
+   "topic": "geography.farming",
+   "kind": "mcq",
+   "prompt": "What was the Green Revolution of the 1960s and 1970s?",
+   "options": [
+    {
+     "text": "The spread of high-yield crops, fertilisers and irrigation that greatly increased food production, especially in Asia",
+     "correct": true
+    },
+    {
+     "text": "A campaign to paint farms green",
+     "correct": false,
+     "feedback": "It was about crop yields."
+    },
+    {
+     "text": "The first organic farming movement",
+     "correct": false,
+     "feedback": "It relied heavily on fertilisers and pesticides."
+    },
+    {
+     "text": "A war over farmland",
+     "correct": false,
+     "feedback": "It was a change in farming methods."
+    }
+   ],
+   "explain": "India became largely self-sufficient in grain, but the costs included water use, chemical pollution and debt for poorer farmers."
+  },
+  {
+   "id": "geography.m.fm.miles",
+   "topic": "geography.farming",
+   "kind": "mcq",
+   "prompt": "What are food miles?",
+   "options": [
+    {
+     "text": "The distance food travels from where it is produced to where it is eaten",
+     "correct": true
+    },
+    {
+     "text": "How many miles a farmer drives a year",
+     "correct": false,
+     "feedback": "It is about the food’s journey."
+    },
+    {
+     "text": "The length of a field",
+     "correct": false,
+     "feedback": "It is about transport."
+    },
+    {
+     "text": "A supermarket loyalty scheme",
+     "correct": false,
+     "feedback": "It is a measure of transport."
+    }
+   ],
+   "explain": "Lower food miles can mean less transport pollution, but not always: tomatoes grown in heated UK greenhouses can have a bigger carbon footprint than ones trucked from sunny Spain."
+  },
+  {
+   "id": "geography.m.fm.w",
+   "topic": "geography.farming",
+   "kind": "written",
+   "prompt": "Explain how physical factors affect the type of farming in different parts of the UK.",
+   "hints": [
+    "Physical factors: climate (rainfall, temperature), relief, soil",
+    "An arable example and why it suits the area",
+    "A pastoral example and why it suits the area",
+    "A mention of how humans can change things (e.g. machinery, markets)"
+   ],
+   "model": "Physical factors largely decide whether land is used for crops or animals. In East Anglia the land is flat, the soils are fertile and summers are warm and fairly dry, so arable farming of wheat, barley and sugar beet is common and large machines work easily. In upland areas such as Wales and the Lake District, rainfall is high, slopes are steep and soils are thin and acidic, so crops struggle; grass grows well, though, so pastoral farming of sheep and cattle dominates. In between, many lowland farms in the wetter west keep dairy cattle on rich grass. Human factors matter too, such as nearness to markets and subsidies, but climate, relief and soil set the basic pattern.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "East Anglia: flat; fertile soils; about 600 mm of rain a year; warm summers. Main farming: cereals and sugar beet.\nWales and the Lake District uplands: steep slopes; over 1,500 mm of rain a year in places; thin, acidic soils. Main farming: sheep, some cattle.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.wf.stress",
+   "topic": "geography.water-food",
+   "kind": "fact",
+   "prompt": "A country is said to face water STRESS when each person has less than about how much water per year?",
+   "answer": "1,700 cubic metres",
+   "distractors": [
+    "17 cubic metres",
+    "17,000 litres",
+    "1 million cubic metres"
+   ],
+   "explain": "Below about 1,000 m³ per person a year it is called water scarcity. This is a widely used measure, the Falkenmark indicator.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.wf.virtual",
+   "topic": "geography.water-food",
+   "kind": "mcq",
+   "prompt": "What is “virtual water”?",
+   "options": [
+    {
+     "text": "The water used to produce goods and food, hidden in what we buy",
+     "correct": true
+    },
+    {
+     "text": "Water shown in computer games",
+     "correct": false,
+     "feedback": "It is real water: the water used in production."
+    },
+    {
+     "text": "Rainwater that evaporates before landing",
+     "correct": false,
+     "feedback": "That is not the term."
+    },
+    {
+     "text": "Bottled water",
+     "correct": false,
+     "feedback": "It is the water hidden in products."
+    }
+   ],
+   "explain": "One kilogram of beef needs roughly 15,000 litres of water, mostly to grow the animals’ feed."
+  },
+  {
+   "id": "geography.m.wf.desal",
+   "topic": "geography.water-food",
+   "kind": "mcq",
+   "prompt": "Why do Saudi Arabia and the United Arab Emirates rely on desalination?",
+   "options": [
+    {
+     "text": "They have almost no rivers and very little rain, but plenty of seawater and energy",
+     "correct": true
+    },
+    {
+     "text": "Seawater is healthier than fresh water",
+     "correct": false,
+     "feedback": "Seawater must have the salt removed before it can be drunk."
+    },
+    {
+     "text": "It is the cheapest way to get water everywhere",
+     "correct": false,
+     "feedback": "It uses a lot of energy, so it is expensive."
+    },
+    {
+     "text": "Their rivers are too salty",
+     "correct": false,
+     "feedback": "They have very few rivers at all."
+    }
+   ],
+   "explain": "Desalination removes salt from seawater. It is energy-hungry and leaves very salty brine to dispose of."
+  },
+  {
+   "id": "geography.m.wf.euphrates",
+   "topic": "geography.water-food",
+   "kind": "mcq",
+   "prompt": "Turkey has built large dams on the Tigris and Euphrates, such as the Atatürk Dam. Why does this worry Syria and Iraq?",
+   "options": [
+    {
+     "text": "They are downstream, so less water may reach their farms and cities",
+     "correct": true
+    },
+    {
+     "text": "The dams make the rivers flow backwards",
+     "correct": false,
+     "feedback": "Rivers cannot flow uphill."
+    },
+    {
+     "text": "The dams flood their cities",
+     "correct": false,
+     "feedback": "The reservoirs are in Turkey."
+    },
+    {
+     "text": "They have plenty of other water",
+     "correct": false,
+     "feedback": "They depend heavily on these rivers."
+    }
+   ],
+   "explain": "Rivers that cross borders can cause tension when the upstream country takes more water."
+  },
+  {
+   "id": "geography.m.wf.nile",
+   "topic": "geography.water-food",
+   "kind": "mcq",
+   "prompt": "Why has the Grand Ethiopian Renaissance Dam on the Blue Nile caused tension with Egypt?",
+   "options": [
+    {
+     "text": "Egypt gets almost all its fresh water from the Nile and fears less will reach it",
+     "correct": true
+    },
+    {
+     "text": "The dam is in Egypt",
+     "correct": false,
+     "feedback": "It is in Ethiopia, upstream."
+    },
+    {
+     "text": "Ethiopia wants to stop all fishing",
+     "correct": false,
+     "feedback": "The dispute is about water flow."
+    },
+    {
+     "text": "The Nile flows from Egypt to Ethiopia",
+     "correct": false,
+     "feedback": "It flows north, from Ethiopia and Uganda towards Egypt."
+    }
+   ],
+   "explain": "Ethiopia sees the dam as vital for electricity and development; Egypt sees the Nile as its lifeline."
+  },
+  {
+   "id": "geography.m.wf.kielder",
+   "topic": "geography.water-food",
+   "kind": "fact",
+   "prompt": "Which reservoir in Northumberland is the largest artificial lake in the UK by capacity?",
+   "answer": "Kielder Water",
+   "distractors": [
+    "Lake Windermere",
+    "Loch Lomond",
+    "Lough Neagh"
+   ],
+   "explain": "Kielder Water opened in 1982 to supply water to north-east England.",
+   "accept": [
+    "kielder",
+    "kielder water"
+   ]
+  },
+  {
+   "id": "geography.m.wf.food",
+   "topic": "geography.water-food",
+   "kind": "mcq",
+   "prompt": "What does food security mean?",
+   "options": [
+    {
+     "text": "Everyone always having access to enough safe, nutritious food for a healthy life",
+     "correct": true
+    },
+    {
+     "text": "Guards protecting supermarkets",
+     "correct": false,
+     "feedback": "It is about access to food, not guards."
+    },
+    {
+     "text": "Growing all your own food",
+     "correct": false,
+     "feedback": "Countries can be food-secure by importing, too."
+    },
+    {
+     "text": "Having a freezer",
+     "correct": false,
+     "feedback": "It is about whole populations."
+    }
+   ],
+   "explain": "This is the United Nations’ definition. Hundreds of millions of people around the world are still hungry."
+  },
+  {
+   "id": "geography.m.wf.increase",
+   "topic": "geography.water-food",
+   "kind": "mcq",
+   "prompt": "Which is a SUSTAINABLE way to increase water supply in a dry region?",
+   "options": [
+    {
+     "text": "Rainwater harvesting and fixing leaking pipes",
+     "correct": true
+    },
+    {
+     "text": "Pumping groundwater faster than it refills",
+     "correct": false,
+     "feedback": "That uses up the supply, so it is not sustainable."
+    },
+    {
+     "text": "Draining wetlands",
+     "correct": false,
+     "feedback": "That destroys natural water stores."
+    },
+    {
+     "text": "Watering crops at midday in the sun",
+     "correct": false,
+     "feedback": "Much of the water would evaporate."
+    }
+   ],
+   "explain": "Saving water and collecting rain are cheaper and greener than huge new schemes."
+  },
+  {
+   "id": "geography.m.wf.w",
+   "topic": "geography.water-food",
+   "kind": "written",
+   "prompt": "Assess the advantages and disadvantages of building large dams to improve water supply.",
+   "hints": [
+    "Advantages: reliable water, irrigation, hydroelectricity, flood control",
+    "Disadvantages: people displaced, ecosystems, silt, tension with downstream countries",
+    "At least one named example (e.g. Atatürk Dam, Grand Ethiopian Renaissance Dam, Three Gorges)",
+    "A judgement: do the benefits outweigh the costs?"
+   ],
+   "model": "Large dams can transform water supply. Their reservoirs store water for dry seasons, supply cities, irrigate farmland and can generate hydroelectric power, as the Grand Ethiopian Renaissance Dam on the Blue Nile is designed to do for Ethiopia. They can also control floods downstream. However, they have serious costs. Building a reservoir floods land, forcing people from their homes and destroying habitats, and the dam traps silt that used to fertilise farmland downstream. They can also cause tension between countries: Egypt fears the Ethiopian dam will reduce the Nile’s flow, and Syria and Iraq worry about Turkey’s dams on the Euphrates. On balance, large dams can bring major benefits, but only if the costs to people, ecosystems and neighbouring countries are shared fairly and planned for.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Grand Ethiopian Renaissance Dam, Blue Nile, Ethiopia: one of Africa’s largest hydroelectric dams; Egypt depends on the Nile for almost all its fresh water.\nAtatürk Dam, Euphrates, Turkey: irrigation and power; Syria and Iraq downstream.\nThree Gorges Dam, Yangtze, China: more than a million people relocated.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.tr.butler",
+   "topic": "geography.tourism",
+   "kind": "order",
+   "prompt": "Put the stages of Butler’s tourism area life cycle in order.",
+   "items": [
+    "Exploration",
+    "Involvement",
+    "Development",
+    "Consolidation",
+    "Stagnation",
+    "Decline or rejuvenation"
+   ],
+   "labels": null,
+   "explain": "A resort is discovered by a few visitors, locals get involved, outside companies build it up, growth slows, it stagnates, and then it either declines or reinvents itself."
+  },
+  {
+   "id": "geography.m.tr.multiplier",
+   "topic": "geography.tourism",
+   "kind": "mcq",
+   "prompt": "What is the multiplier effect in tourism?",
+   "options": [
+    {
+     "text": "Money spent by tourists is spent again by local people and businesses, spreading the benefit",
+     "correct": true
+    },
+    {
+     "text": "Tourists multiply the number of photos taken",
+     "correct": false,
+     "feedback": "It is about money circulating."
+    },
+    {
+     "text": "Hotels double their prices",
+     "correct": false,
+     "feedback": "It is about money spreading through the economy."
+    },
+    {
+     "text": "The number of tourists doubles every year",
+     "correct": false,
+     "feedback": "It is about how money spreads."
+    }
+   ],
+   "explain": "A tourist pays a hotel, the hotel pays its cleaners, they spend wages in local shops, and so on."
+  },
+  {
+   "id": "geography.m.tr.leakage",
+   "topic": "geography.tourism",
+   "kind": "mcq",
+   "prompt": "What is “leakage” in tourism?",
+   "options": [
+    {
+     "text": "When tourist money flows out of the country, for example to foreign-owned hotels and airlines",
+     "correct": true
+    },
+    {
+     "text": "A leaking hotel roof",
+     "correct": false,
+     "feedback": "It is about money, not roofs."
+    },
+    {
+     "text": "Tourists losing their luggage",
+     "correct": false,
+     "feedback": "It is an economic term."
+    },
+    {
+     "text": "Water pollution from beaches",
+     "correct": false,
+     "feedback": "It is about profits leaving the country."
+    }
+   ],
+   "explain": "In some all-inclusive resorts, most of what a tourist pays never reaches local people."
+  },
+  {
+   "id": "geography.m.tr.eco",
+   "topic": "geography.tourism",
+   "kind": "mcq",
+   "prompt": "Which is the best example of ecotourism?",
+   "options": [
+    {
+     "text": "Small groups visiting a rainforest with local guides, with profits helping to protect the forest",
+     "correct": true
+    },
+    {
+     "text": "A huge new resort built on a coral reef",
+     "correct": false,
+     "feedback": "That damages the very environment people come to see."
+    },
+    {
+     "text": "A cruise ship visiting ten ports in ten days",
+     "correct": false,
+     "feedback": "Mass cruise tourism has a big environmental footprint."
+    },
+    {
+     "text": "A theme park in a desert",
+     "correct": false,
+     "feedback": "Ecotourism is about protecting nature and benefiting local people."
+    }
+   ],
+   "explain": "Ecotourism aims to protect the environment, respect local culture and benefit local people."
+  },
+  {
+   "id": "geography.m.tr.venice",
+   "topic": "geography.tourism",
+   "kind": "mcq",
+   "prompt": "Venice has trialled an entry fee for day visitors. Why?",
+   "options": [
+    {
+     "text": "Too many day-trippers crowd the city while spending little, and residents are leaving",
+     "correct": true
+    },
+    {
+     "text": "To pay for the canals to be filled in",
+     "correct": false,
+     "feedback": "The canals are part of what makes Venice special."
+    },
+    {
+     "text": "Because no one visits any more",
+     "correct": false,
+     "feedback": "It is the opposite: it is overcrowded."
+    },
+    {
+     "text": "To stop residents leaving home",
+     "correct": false,
+     "feedback": "Residents do not pay the fee."
+    }
+   ],
+   "explain": "This is called overtourism. Athens has also introduced timed tickets for the Acropolis to spread the crowds."
+  },
+  {
+   "id": "geography.m.tr.kenya",
+   "topic": "geography.tourism",
+   "kind": "mcq",
+   "prompt": "Safaris in Kenya’s Maasai Mara bring money and jobs. Which is a possible NEGATIVE impact?",
+   "options": [
+    {
+     "text": "Minibuses crowding around animals and wearing tracks across the grassland",
+     "correct": true
+    },
+    {
+     "text": "More money for wildlife protection",
+     "correct": false,
+     "feedback": "That is a positive impact."
+    },
+    {
+     "text": "Jobs for local guides",
+     "correct": false,
+     "feedback": "That is a positive impact."
+    },
+    {
+     "text": "People learning about Maasai culture",
+     "correct": false,
+     "feedback": "That can be positive if done respectfully."
+    }
+   ],
+   "explain": "Careful management, such as limits on vehicles, helps tourism support conservation."
+  },
+  {
+   "id": "geography.m.tr.share",
+   "topic": "geography.tourism",
+   "kind": "fact",
+   "prompt": "An all-inclusive holiday where tourists rarely leave the resort tends to give local businesses…",
+   "answer": "less benefit",
+   "distractors": [
+    "more benefit",
+    "the same benefit",
+    "all the profit"
+   ],
+   "explain": "Tourists pay for almost everything in advance, so little money reaches local cafés, guides and shops.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.tr.w",
+   "topic": "geography.tourism",
+   "kind": "written",
+   "prompt": "To what extent is tourism good for a popular destination? Use a named example such as Greece, Venice or Kenya.",
+   "hints": [
+    "Economic benefits: jobs, income, the multiplier effect",
+    "Problems: overcrowding, pollution, leakage, seasonal jobs, rising house prices",
+    "A named example with specific details",
+    "How the problems can be managed (e.g. caps, fees, ecotourism)",
+    "A judgement that answers “to what extent”"
+   ],
+   "model": "Tourism brings large benefits to places like Greece. It creates jobs in hotels, restaurants and transport, earns foreign money, and through the multiplier effect wages are spent again in local shops. It also pays to protect historic sites such as the Acropolis. However, too many visitors can damage the very things they come to see. Popular islands face water shortages in summer, crowded streets and rubbish, and many jobs are seasonal and low-paid. When hotels and cruise lines are foreign-owned, some of the profit leaks out of the country. Places are now managing this: Athens uses timed tickets at the Acropolis and Venice has trialled a fee for day visitors. Overall, tourism is good for a destination to a large extent, but only if numbers are managed so that local people and the environment share the benefits.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Greece: tens of millions of international visitors a year; tourism is one of the largest parts of the economy. Many jobs are seasonal. Popular islands face summer water shortages. The Acropolis now uses timed tickets to limit crowds. Venice has trialled an entry fee for day visitors.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.ds.define",
+   "topic": "geography.deserts",
+   "kind": "mcq",
+   "prompt": "What makes somewhere a desert?",
+   "options": [
+    {
+     "text": "Very low rainfall: usually less than about 250 mm a year",
+     "correct": true
+    },
+    {
+     "text": "Being hot all year",
+     "correct": false,
+     "feedback": "Antarctica is a desert, and it is freezing."
+    },
+    {
+     "text": "Being covered in sand dunes",
+     "correct": false,
+     "feedback": "Only a small part of most deserts is sand dunes; much is rock and gravel."
+    },
+    {
+     "text": "Having no animals",
+     "correct": false,
+     "feedback": "Many animals live in deserts."
+    }
+   ],
+   "explain": "By this definition, the largest desert on Earth is Antarctica."
+  },
+  {
+   "id": "geography.m.ds.sahara",
+   "topic": "geography.deserts",
+   "kind": "fact",
+   "prompt": "What is the largest hot desert in the world?",
+   "answer": "the Sahara",
+   "distractors": [
+    "the Gobi",
+    "the Kalahari",
+    "the Atacama"
+   ],
+   "explain": "The Sahara covers about 9 million km², roughly the size of the USA.",
+   "accept": [
+    "sahara",
+    "the sahara desert"
+   ]
+  },
+  {
+   "id": "geography.m.ds.atacama",
+   "topic": "geography.deserts",
+   "kind": "fact",
+   "prompt": "Which desert in Chile is the driest non-polar place on Earth?",
+   "answer": "the Atacama",
+   "distractors": [
+    "the Sahara",
+    "the Namib",
+    "the Gobi"
+   ],
+   "explain": "Some weather stations in the Atacama have recorded almost no rain for years.",
+   "accept": [
+    "atacama"
+   ]
+  },
+  {
+   "id": "geography.m.ds.sahel",
+   "topic": "geography.deserts",
+   "kind": "fact",
+   "prompt": "What is the name of the semi-arid belt along the southern edge of the Sahara?",
+   "answer": "the Sahel",
+   "distractors": [
+    "the Savanna Line",
+    "the Rift",
+    "the Maghreb"
+   ],
+   "explain": "Sahel comes from the Arabic for “shore”: the shore of the great sea of sand.",
+   "accept": [
+    "sahel"
+   ]
+  },
+  {
+   "id": "geography.m.ds.causes",
+   "topic": "geography.deserts",
+   "kind": "mcq",
+   "prompt": "Which is a HUMAN cause of desertification in the Sahel?",
+   "options": [
+    {
+     "text": "Overgrazing by too many animals, which strips plants and exposes soil",
+     "correct": true
+    },
+    {
+     "text": "Long-term changes in the Earth’s orbit",
+     "correct": false,
+     "feedback": "That is natural, and acts over thousands of years."
+    },
+    {
+     "text": "More rain falling",
+     "correct": false,
+     "feedback": "More rain would help."
+    },
+    {
+     "text": "Volcanic eruptions",
+     "correct": false,
+     "feedback": "Not a cause in the Sahel."
+    }
+   ],
+   "explain": "Other human causes are over-cultivation and cutting trees for fuelwood; drought and climate change make things worse."
+  },
+  {
+   "id": "geography.m.ds.wall",
+   "topic": "geography.deserts",
+   "kind": "mcq",
+   "prompt": "What is the Great Green Wall?",
+   "options": [
+    {
+     "text": "An African-led project to restore a belt of land across the Sahel with trees, crops and better farming",
+     "correct": true
+    },
+    {
+     "text": "A wall to keep sand out of Europe",
+     "correct": false,
+     "feedback": "It is living vegetation and land restoration, not a wall."
+    },
+    {
+     "text": "The Great Wall of China painted green",
+     "correct": false,
+     "feedback": "It is in Africa."
+    },
+    {
+     "text": "A row of solar panels",
+     "correct": false,
+     "feedback": "It is mainly about plants and farming."
+    }
+   ],
+   "explain": "Launched in 2007, it aims to restore about 100 million hectares by 2030, though progress has been uneven."
+  },
+  {
+   "id": "geography.m.ds.cactus",
+   "topic": "geography.deserts",
+   "kind": "mcq",
+   "prompt": "How is a cactus adapted to the desert?",
+   "options": [
+    {
+     "text": "Spines instead of leaves lose less water, and a thick stem stores water",
+     "correct": true
+    },
+    {
+     "text": "Huge thin leaves catch sunlight",
+     "correct": false,
+     "feedback": "Big thin leaves would lose too much water."
+    },
+    {
+     "text": "It needs rain every day",
+     "correct": false,
+     "feedback": "It survives long droughts."
+    },
+    {
+     "text": "It grows only in water",
+     "correct": false,
+     "feedback": "It grows in dry ground."
+    }
+   ],
+   "explain": "Many cacti also have shallow, widespread roots to catch rain quickly."
+  },
+  {
+   "id": "geography.m.ds.w",
+   "topic": "geography.deserts",
+   "kind": "written",
+   "prompt": "Explain the causes of desertification in the Sahel, and how people are trying to reduce it.",
+   "hints": [
+    "A definition of desertification",
+    "At least two human causes (overgrazing, over-cultivation, deforestation)",
+    "Physical causes (drought, climate change)",
+    "At least two responses (Great Green Wall, stone lines, better farming)"
+   ],
+   "model": "Desertification is when land in dry areas becomes desert-like and loses its ability to grow plants. In the Sahel, a growing population has put pressure on the land: overgrazing by large herds strips vegetation, over-cultivation exhausts the soil, and trees are cut down for fuelwood, so bare soil is blown or washed away. Natural droughts, made worse by climate change, add to the problem. People are fighting back. The Great Green Wall, launched in 2007, aims to restore a belt of land across Africa by planting trees and improving farming. On a smaller scale, farmers build low stone lines along slopes to trap rainwater and soil, and protect young trees growing from old roots. Progress is uneven, but these methods show that desertification can be slowed when local people are involved.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The Sahel: a semi-arid belt south of the Sahara, about 200–600 mm of rain a year, falling unreliably. Rapidly growing population. Many families depend on herding and farming, and on wood for cooking. The Great Green Wall began in 2007.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.pl.difference",
+   "topic": "geography.polar",
+   "kind": "mcq",
+   "prompt": "What is the main difference between the Arctic and Antarctica?",
+   "options": [
+    {
+     "text": "The Arctic is mostly frozen ocean surrounded by land; Antarctica is a continent surrounded by ocean",
+     "correct": true
+    },
+    {
+     "text": "The Arctic is in the south",
+     "correct": false,
+     "feedback": "The Arctic is around the North Pole."
+    },
+    {
+     "text": "Antarctica has polar bears",
+     "correct": false,
+     "feedback": "Polar bears live only in the Arctic."
+    },
+    {
+     "text": "They are the same thing",
+     "correct": false,
+     "feedback": "They are at opposite ends of the Earth."
+    }
+   ],
+   "explain": "Penguins live in the south, polar bears in the north: they never meet in the wild."
+  },
+  {
+   "id": "geography.m.pl.ice",
+   "topic": "geography.polar",
+   "kind": "fact",
+   "prompt": "Roughly what share of the world’s ice is in Antarctica?",
+   "answer": "about 90%",
+   "distractors": [
+    "about 10%",
+    "about 50%",
+    "about 25%"
+   ],
+   "explain": "Antarctica’s ice sheet is up to about 4 km thick and holds most of the world’s fresh water.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.pl.treaty",
+   "topic": "geography.polar",
+   "kind": "mcq",
+   "prompt": "What does the Antarctic Treaty (signed in 1959) do?",
+   "options": [
+    {
+     "text": "Keeps Antarctica for peaceful science, banning military activity; a later agreement bans mining",
+     "correct": true
+    },
+    {
+     "text": "Divides Antarctica between Britain and Norway",
+     "correct": false,
+     "feedback": "Territorial claims were frozen, not settled."
+    },
+    {
+     "text": "Allows oil drilling everywhere",
+     "correct": false,
+     "feedback": "Mining and drilling are banned."
+    },
+    {
+     "text": "Makes Antarctica part of Chile",
+     "correct": false,
+     "feedback": "No country owns it under the treaty."
+    }
+   ],
+   "explain": "The 1991 Madrid Protocol added a ban on mining. It has kept the continent peaceful for over 60 years."
+  },
+  {
+   "id": "geography.m.pl.sea-level",
+   "topic": "geography.polar",
+   "kind": "mcq",
+   "prompt": "Why does melting Arctic SEA ice raise sea levels much less than melting ice on Antarctica?",
+   "options": [
+    {
+     "text": "Sea ice already floats in the ocean, displacing its own weight of water; land ice adds new water to the sea",
+     "correct": true
+    },
+    {
+     "text": "Arctic ice is not real ice",
+     "correct": false,
+     "feedback": "It is real frozen seawater."
+    },
+    {
+     "text": "Antarctica is warmer",
+     "correct": false,
+     "feedback": "Antarctica is colder."
+    },
+    {
+     "text": "The Arctic has no water",
+     "correct": false,
+     "feedback": "The Arctic is an ocean."
+    }
+   ],
+   "explain": "Like an ice cube melting in a glass of water: the level hardly changes. Ice sliding off land into the sea does raise it."
+  },
+  {
+   "id": "geography.m.pl.albedo",
+   "topic": "geography.polar",
+   "kind": "mcq",
+   "prompt": "As Arctic sea ice melts, the dark ocean absorbs more sunlight. What does this cause?",
+   "options": [
+    {
+     "text": "More warming and more melting: a positive feedback loop",
+     "correct": true
+    },
+    {
+     "text": "Cooling, because water is cold",
+     "correct": false,
+     "feedback": "Dark water absorbs more heat than white ice reflects."
+    },
+    {
+     "text": "No change",
+     "correct": false,
+     "feedback": "It speeds up warming."
+    },
+    {
+     "text": "More sea ice next year",
+     "correct": false,
+     "feedback": "It makes the problem worse."
+    }
+   ],
+   "explain": "White ice reflects most sunlight; this reflectiveness is called albedo."
+  },
+  {
+   "id": "geography.m.pl.daylight",
+   "topic": "geography.polar",
+   "kind": "mcq",
+   "prompt": "Why does the Antarctic have months of continuous daylight in December?",
+   "options": [
+    {
+     "text": "The Earth’s tilt points the South Pole towards the Sun in December",
+     "correct": true
+    },
+    {
+     "text": "The Sun is closer in December",
+     "correct": false,
+     "feedback": "The Earth is actually slightly closer to the Sun in early January, but that is not the reason."
+    },
+    {
+     "text": "Ice reflects the light all night",
+     "correct": false,
+     "feedback": "The Sun does not set at all."
+    },
+    {
+     "text": "It is always daylight there",
+     "correct": false,
+     "feedback": "In June there are months of darkness."
+    }
+   ],
+   "explain": "In June it is the North Pole’s turn for the midnight sun."
+  },
+  {
+   "id": "geography.m.pl.vault",
+   "topic": "geography.polar",
+   "kind": "fact",
+   "prompt": "On which Arctic island group is the Global Seed Vault, storing seeds of the world’s crops?",
+   "answer": "Svalbard",
+   "distractors": [
+    "Greenland",
+    "Iceland",
+    "the Falklands"
+   ],
+   "explain": "It is dug into a frozen mountain on Svalbard, part of Norway, as a back-up against disasters.",
+   "accept": [
+    "svalbard"
+   ]
+  },
+  {
+   "id": "geography.m.pl.amundsen",
+   "topic": "geography.polar",
+   "kind": "fact",
+   "prompt": "Which explorer led the first team to reach the South Pole, in December 1911?",
+   "answer": "Roald Amundsen",
+   "distractors": [
+    "Robert Falcon Scott",
+    "Ernest Shackleton",
+    "Edmund Hillary"
+   ],
+   "explain": "Amundsen’s Norwegian team used dogs; Scott’s British party arrived about five weeks later and died on the return journey.",
+   "accept": [
+    "amundsen"
+   ]
+  },
+  {
+   "id": "geography.m.pl.w",
+   "topic": "geography.polar",
+   "kind": "written",
+   "prompt": "Explain why changes in the polar regions matter to people living far away from them.",
+   "hints": [
+    "Sea-level rise from melting land ice",
+    "Feedback loops and faster warming (albedo)",
+    "Effects on weather, wildlife or shipping",
+    "A concluding sentence about global connections"
+   ],
+   "model": "Changes in the polar regions affect the whole planet. When ice on land in Antarctica and Greenland melts, it adds water to the oceans and raises sea levels, which threatens low-lying cities and countries such as Bangladesh. As Arctic sea ice shrinks, darker ocean water absorbs more sunlight than white ice reflects, so warming speeds up in a positive feedback loop that affects the global climate. Some scientists think a warmer Arctic may also change the paths of weather systems that reach Europe. There are economic effects too, as new shipping routes and resources open up in the Arctic, which could cause tension between countries. So what happens at the poles does not stay at the poles.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Antarctica holds about 90% of the world’s ice. If its ice and Greenland’s melted, sea levels would rise by tens of metres (over centuries). Arctic summer sea ice has shrunk sharply since satellite records began in 1979. White ice reflects most sunlight; dark ocean absorbs most of it.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.oc.share",
+   "topic": "geography.oceans",
+   "kind": "fact",
+   "prompt": "About what percentage of the Earth’s surface is covered by ocean?",
+   "answer": "about 71%",
+   "distractors": [
+    "about 30%",
+    "about 50%",
+    "about 90%"
+   ],
+   "explain": "That is why Earth looks blue from space.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.oc.deep",
+   "topic": "geography.oceans",
+   "kind": "fact",
+   "prompt": "What is the deepest known point in the ocean?",
+   "answer": "the Challenger Deep in the Mariana Trench",
+   "distractors": [
+    "the Grand Canyon",
+    "the Dead Sea",
+    "the Mid-Atlantic Ridge"
+   ],
+   "explain": "It is about 11 km deep, in the western Pacific: deeper than Everest is high.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.oc.patch",
+   "topic": "geography.oceans",
+   "kind": "mcq",
+   "prompt": "What is the Great Pacific Garbage Patch?",
+   "options": [
+    {
+     "text": "A huge area of the North Pacific where ocean currents collect floating plastic",
+     "correct": true
+    },
+    {
+     "text": "A solid island of rubbish you can walk on",
+     "correct": false,
+     "feedback": "Most of it is small pieces and tiny microplastics spread through the water."
+    },
+    {
+     "text": "A rubbish dump in California",
+     "correct": false,
+     "feedback": "It is in the open ocean."
+    },
+    {
+     "text": "A seaweed farm",
+     "correct": false,
+     "feedback": "It is plastic pollution."
+    }
+   ],
+   "explain": "Circular currents called gyres sweep floating rubbish into the middle, between Hawaii and California."
+  },
+  {
+   "id": "geography.m.oc.micro",
+   "topic": "geography.oceans",
+   "kind": "fact",
+   "prompt": "Plastic pieces smaller than 5 mm are called…",
+   "answer": "microplastics",
+   "distractors": [
+    "nanobeads",
+    "plankton",
+    "silt"
+   ],
+   "explain": "They come from broken-down bottles, bags and clothing fibres, and are now found from the deep sea to Arctic ice.",
+   "accept": [
+    "microplastic"
+   ]
+  },
+  {
+   "id": "geography.m.oc.coral",
+   "topic": "geography.oceans",
+   "kind": "mcq",
+   "prompt": "What causes coral bleaching?",
+   "options": [
+    {
+     "text": "Water that is too warm makes corals expel the tiny algae that live in them and give them colour and food",
+     "correct": true
+    },
+    {
+     "text": "Too much sunlight on cold water",
+     "correct": false,
+     "feedback": "Heat is the main cause."
+    },
+    {
+     "text": "Fish eating the coral",
+     "correct": false,
+     "feedback": "Some fish nibble coral, but bleaching is caused by heat stress."
+    },
+    {
+     "text": "Bleach from ships",
+     "correct": false,
+     "feedback": "It is not chemical bleach."
+    }
+   ],
+   "explain": "The Great Barrier Reef has suffered several mass bleaching events since the late 1990s."
+  },
+  {
+   "id": "geography.m.oc.acid",
+   "topic": "geography.oceans",
+   "kind": "mcq",
+   "prompt": "Why are the oceans becoming more acidic?",
+   "options": [
+    {
+     "text": "They absorb carbon dioxide from the air, which forms a weak acid in seawater",
+     "correct": true
+    },
+    {
+     "text": "Acid rain from volcanoes only",
+     "correct": false,
+     "feedback": "Carbon dioxide from burning fossil fuels is the main cause."
+    },
+    {
+     "text": "Rivers are full of lemon juice",
+     "correct": false,
+     "feedback": "Ha! No."
+    },
+    {
+     "text": "Plastic dissolving",
+     "correct": false,
+     "feedback": "Plastic does not make seawater acidic."
+    }
+   ],
+   "explain": "More acidic water makes it harder for shellfish and corals to build their shells and skeletons."
+  },
+  {
+   "id": "geography.m.oc.cod",
+   "topic": "geography.oceans",
+   "kind": "mcq",
+   "prompt": "In 1992 Canada closed the Grand Banks cod fishery. Why?",
+   "options": [
+    {
+     "text": "Overfishing had made cod stocks collapse",
+     "correct": true
+    },
+    {
+     "text": "The fish moved to Africa",
+     "correct": false,
+     "feedback": "They were fished out."
+    },
+    {
+     "text": "A volcano erupted",
+     "correct": false,
+     "feedback": "It was overfishing."
+    },
+    {
+     "text": "People stopped eating fish",
+     "correct": false,
+     "feedback": "Demand stayed high."
+    }
+   ],
+   "explain": "About 30,000 people lost their jobs. Decades later, stocks have only partly recovered: a warning about fishing quotas."
+  },
+  {
+   "id": "geography.m.oc.w",
+   "topic": "geography.oceans",
+   "kind": "written",
+   "prompt": "Explain two threats to the world’s oceans and suggest how each could be reduced.",
+   "hints": [
+    "A first threat explained (e.g. plastic pollution)",
+    "A realistic way to reduce it",
+    "A second threat explained (e.g. overfishing, warming, acidification)",
+    "A realistic way to reduce it"
+   ],
+   "model": "One major threat is plastic pollution. Plastic washes off land and from ships, and ocean currents collect it in gyres such as the Great Pacific Garbage Patch; it breaks into microplastics that animals eat. This could be reduced by cutting single-use plastics, charging for bags and bottles with deposit return schemes, and improving rubbish collection in coastal cities. A second threat is overfishing. When fish are caught faster than they breed, stocks collapse, as cod did on the Grand Banks in 1992. Strict catch quotas, marine protected areas where fishing is banned, and choosing sustainably caught fish can allow stocks to recover.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "About 8 million tonnes of plastic are estimated to reach the oceans each year. Microplastics have been found from the deepest trenches to Arctic ice.\nThe Grand Banks cod fishery off Canada collapsed and was closed in 1992; about 30,000 people lost their jobs.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.af.count",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "How many countries are there in Africa?",
+   "answer": "54",
+   "distractors": [
+    "14",
+    "25",
+    "100"
+   ],
+   "explain": "Africa has 54 countries recognised by the United Nations. Nigeria has the most people; Algeria is the biggest by area."
+  },
+  {
+   "id": "geography.m.af.kili",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "What is the highest mountain in Africa?",
+   "answer": "Kilimanjaro",
+   "distractors": [
+    "Mount Kenya",
+    "the Atlas Mountains",
+    "Table Mountain"
+   ],
+   "explain": "Kilimanjaro in Tanzania is about 5,895 m high: a volcano with snow near the Equator.",
+   "accept": [
+    "mount kilimanjaro",
+    "kilimanjaro"
+   ]
+  },
+  {
+   "id": "geography.m.af.victoria",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "What is the largest lake in Africa?",
+   "answer": "Lake Victoria",
+   "distractors": [
+    "Lake Chad",
+    "Lake Malawi",
+    "Lake Tanganyika"
+   ],
+   "explain": "It is shared by Uganda, Kenya and Tanzania, and is a source of the White Nile.",
+   "accept": [
+    "victoria",
+    "lake victoria"
+   ]
+  },
+  {
+   "id": "geography.m.af.young",
+   "topic": "geography.africa",
+   "kind": "mcq",
+   "prompt": "Which statement about Africa’s population is TRUE?",
+   "options": [
+    {
+     "text": "It is the youngest continent: the average age is under 20",
+     "correct": true
+    },
+    {
+     "text": "It is the oldest continent: most people are over 60",
+     "correct": false,
+     "feedback": "That describes parts of Europe and Japan."
+    },
+    {
+     "text": "Its population is shrinking fast",
+     "correct": false,
+     "feedback": "It is growing fast."
+    },
+    {
+     "text": "Almost nobody lives in cities",
+     "correct": false,
+     "feedback": "Cities like Lagos, Cairo and Kinshasa have many millions."
+    }
+   ],
+   "explain": "A young, fast-growing population could be a huge strength if there are jobs and education."
+  },
+  {
+   "id": "geography.m.af.mpesa",
+   "topic": "geography.africa",
+   "kind": "mcq",
+   "prompt": "M-Pesa, launched in Kenya in 2007, is famous for…",
+   "options": [
+    {
+     "text": "Letting millions of people send and save money using basic mobile phones",
+     "correct": true
+    },
+    {
+     "text": "Being Africa’s first railway",
+     "correct": false,
+     "feedback": "It is a mobile money service."
+    },
+    {
+     "text": "A safari park",
+     "correct": false,
+     "feedback": "It is mobile banking."
+    },
+    {
+     "text": "A football club",
+     "correct": false,
+     "feedback": "It is mobile money."
+    }
+   ],
+   "explain": "It reached people without bank accounts and is copied around the world."
+  },
+  {
+   "id": "geography.m.af.rift",
+   "topic": "geography.africa",
+   "kind": "mcq",
+   "prompt": "What is the Great Rift Valley?",
+   "options": [
+    {
+     "text": "A long valley in East Africa where the land is slowly being pulled apart by plate movement",
+     "correct": true
+    },
+    {
+     "text": "A river in West Africa",
+     "correct": false,
+     "feedback": "It is a valley system, mainly in East Africa."
+    },
+    {
+     "text": "A man-made canal",
+     "correct": false,
+     "feedback": "It formed naturally."
+    },
+    {
+     "text": "A desert in South Africa",
+     "correct": false,
+     "feedback": "It runs through Ethiopia, Kenya and Tanzania."
+    }
+   ],
+   "explain": "Some of the oldest human fossils have been found along it."
+  },
+  {
+   "id": "geography.m.af.stereotype",
+   "topic": "geography.africa",
+   "kind": "mcq",
+   "prompt": "Which is a MISLEADING stereotype about Africa?",
+   "options": [
+    {
+     "text": "That it is one poor country with the same culture everywhere",
+     "correct": true
+    },
+    {
+     "text": "That it has 54 countries",
+     "correct": false,
+     "feedback": "That is a fact."
+    },
+    {
+     "text": "That it has big cities",
+     "correct": false,
+     "feedback": "Lagos, Cairo, Kinshasa and Johannesburg are huge."
+    },
+    {
+     "text": "That it has deserts, rainforests and mountains",
+     "correct": false,
+     "feedback": "All true: it is hugely varied."
+    }
+   ],
+   "explain": "Africa has some of the world’s fastest-growing economies alongside very poor regions: like any continent, it is varied."
+  },
+  {
+   "id": "geography.m.af.languages",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "Roughly how many languages are spoken in Africa?",
+   "answer": "well over a thousand",
+   "distractors": [
+    "about ten",
+    "just one",
+    "about fifty"
+   ],
+   "explain": "Estimates range from about 1,500 to over 2,000, including Swahili, Hausa, Yoruba, Amharic, Zulu and Arabic.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.af.w",
+   "topic": "geography.africa",
+   "kind": "written",
+   "prompt": "Using examples, explain why it is misleading to describe Africa as if it were one place.",
+   "hints": [
+    "The size and number of countries",
+    "Physical variety (deserts, rainforest, mountains, rift valley)",
+    "Economic variety, with at least one example of growth or innovation",
+    "Cultural variety (languages, religions)",
+    "A conclusion"
+   ],
+   "model": "Describing Africa as one place is misleading because it is a vast and varied continent of 54 countries. Physically it ranges from the Sahara, the largest hot desert, to the rainforests of the Congo basin and the snow-capped volcano of Kilimanjaro. Economies vary too: some countries remain very poor, but others are growing fast, and Kenya’s M-Pesa mobile money service, launched in 2007, was a world first. Culturally there are well over a thousand languages and many religions. Lagos and Johannesburg are huge modern cities, while millions still farm the land. Treating Africa as one place hides this variety and repeats stereotypes about poverty and conflict that do not fit most people’s lives.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "54 countries; over 1.4 billion people; median age under 20.\nPhysical: Sahara, Congo rainforest, Great Rift Valley, Kilimanjaro (5,895 m), the Nile.\nEconomy: some of the world’s fastest-growing economies; M-Pesa mobile money launched in Kenya in 2007.\nWell over 1,000 languages.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.ng.pop",
+   "topic": "geography.nigeria",
+   "kind": "fact",
+   "prompt": "Nigeria is the African country with the most…",
+   "answer": "people",
+   "distractors": [
+    "land area",
+    "snow",
+    "coastline"
+   ],
+   "explain": "With over 200 million people, Nigeria has the largest population in Africa.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.ng.nee",
+   "topic": "geography.nigeria",
+   "kind": "mcq",
+   "prompt": "Nigeria is often described as a newly emerging economy (NEE). What does that mean?",
+   "options": [
+    {
+     "text": "Its economy is growing fast and changing from farming towards industry and services",
+     "correct": true
+    },
+    {
+     "text": "It has only just become a country",
+     "correct": false,
+     "feedback": "It became independent from Britain in 1960."
+    },
+    {
+     "text": "It is the richest country in the world",
+     "correct": false,
+     "feedback": "Many Nigerians are still poor."
+    },
+    {
+     "text": "It has no economy",
+     "correct": false,
+     "feedback": "It has one of Africa’s largest economies."
+    }
+   ],
+   "explain": "Other NEEs include India, Brazil and China."
+  },
+  {
+   "id": "geography.m.ng.oil",
+   "topic": "geography.nigeria",
+   "kind": "mcq",
+   "prompt": "Which is a PROBLEM linked to oil in the Niger Delta?",
+   "options": [
+    {
+     "text": "Oil spills polluting farmland, rivers and mangroves, harming fishing and farming",
+     "correct": true
+    },
+    {
+     "text": "Oil providing government income",
+     "correct": false,
+     "feedback": "That is a benefit, though it has also encouraged corruption."
+    },
+    {
+     "text": "Jobs in the oil industry",
+     "correct": false,
+     "feedback": "That is a benefit, though many jobs go to skilled outsiders."
+    },
+    {
+     "text": "Cheap fuel",
+     "correct": false,
+     "feedback": "That is not the main problem."
+    }
+   ],
+   "explain": "Oil makes up most of Nigeria’s exports, but relying on one product is risky when world prices fall."
+  },
+  {
+   "id": "geography.m.ng.nollywood",
+   "topic": "geography.nigeria",
+   "kind": "fact",
+   "prompt": "What is the nickname of Nigeria’s huge film industry?",
+   "answer": "Nollywood",
+   "distractors": [
+    "Bollywood",
+    "Lagowood",
+    "Afrowood"
+   ],
+   "explain": "By number of films made each year, Nollywood is one of the largest film industries in the world.",
+   "accept": [
+    "nollywood"
+   ]
+  },
+  {
+   "id": "geography.m.ng.indep",
+   "topic": "geography.nigeria",
+   "kind": "fact",
+   "prompt": "In which year did Nigeria become independent from Britain?",
+   "answer": "1960",
+   "distractors": [
+    "1914",
+    "1947",
+    "1990"
+   ],
+   "explain": "Britain had joined the north and south together as one colony in 1914."
+  },
+  {
+   "id": "geography.m.ng.lagos",
+   "topic": "geography.nigeria",
+   "kind": "mcq",
+   "prompt": "Why has Lagos grown so fast?",
+   "options": [
+    {
+     "text": "People move from the countryside for jobs and opportunities, and its population is young with a high birth rate",
+     "correct": true
+    },
+    {
+     "text": "It is the capital, so everyone must live there",
+     "correct": false,
+     "feedback": "Abuja is the capital."
+    },
+    {
+     "text": "It has the coolest climate in Nigeria",
+     "correct": false,
+     "feedback": "It is hot and humid."
+    },
+    {
+     "text": "Nobody leaves the countryside",
+     "correct": false,
+     "feedback": "Rural–urban migration is a key reason."
+    }
+   ],
+   "explain": "Lagos is one of Africa’s largest cities, with many millions of people."
+  },
+  {
+   "id": "geography.m.ng.groups",
+   "topic": "geography.nigeria",
+   "kind": "fact",
+   "prompt": "Nigeria’s three largest ethnic groups are the Hausa-Fulani, the Yoruba and the…",
+   "answer": "Igbo",
+   "distractors": [
+    "Zulu",
+    "Maasai",
+    "Ashanti"
+   ],
+   "explain": "Nigeria has hundreds of ethnic groups and languages; English is the official language.",
+   "accept": [
+    "igbo",
+    "ibo"
+   ]
+  },
+  {
+   "id": "geography.m.ng.w",
+   "topic": "geography.nigeria",
+   "kind": "written",
+   "prompt": "Assess how far oil has helped Nigeria to develop.",
+   "hints": [
+    "How oil has helped (income, exports, jobs, infrastructure)",
+    "Problems: pollution in the Niger Delta, reliance on one export, inequality, corruption",
+    "Evidence of diversification (e.g. Nollywood, services, farming)",
+    "A judgement: “how far”"
+   ],
+   "model": "Oil has helped Nigeria’s development in some ways. It brings in most of the country’s export earnings and a large share of government income, which has paid for roads, schools and the new capital, Abuja, and it has created jobs and attracted foreign investment. However, the benefits have been uneven. Oil spills in the Niger Delta have polluted farmland, rivers and mangroves, harming the fishing and farming that local people depend on. Relying on one export makes the economy vulnerable when world oil prices fall, and oil wealth has been linked to corruption and inequality. Nigeria is now diversifying into services, telecommunications, farming and film, through Nollywood. Overall, oil has helped Nigeria develop to some extent, but it has not shared its wealth fairly, and other industries will be needed for lasting development.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Nigeria: over 200 million people, the most in Africa. Oil provides most export earnings. Oil spills in the Niger Delta have damaged farmland, fishing grounds and mangroves. Growing sectors: telecommunications, services, farming and film (Nollywood). Independence from Britain in 1960.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.cn.onechild",
+   "topic": "geography.china",
+   "kind": "mcq",
+   "prompt": "China’s one-child policy ran from about 1980 to 2015. What is one long-term effect?",
+   "options": [
+    {
+     "text": "An ageing population with fewer young workers to support older people",
+     "correct": true
+    },
+    {
+     "text": "A population explosion",
+     "correct": false,
+     "feedback": "It slowed growth sharply."
+    },
+    {
+     "text": "More girls than boys being born",
+     "correct": false,
+     "feedback": "The opposite: a preference for sons led to more boys."
+    },
+    {
+     "text": "No effect at all",
+     "correct": false,
+     "feedback": "Its effects will last for decades."
+    }
+   ],
+   "explain": "China now encourages families to have up to three children, but many choose to have one or none."
+  },
+  {
+   "id": "geography.m.cn.gorges",
+   "topic": "geography.china",
+   "kind": "mcq",
+   "prompt": "What is a benefit of the Three Gorges Dam on the Yangtze River?",
+   "options": [
+    {
+     "text": "It generates huge amounts of hydroelectric power and helps control floods",
+     "correct": true
+    },
+    {
+     "text": "It needed no one to move home",
+     "correct": false,
+     "feedback": "More than a million people were relocated."
+    },
+    {
+     "text": "It increased the silt reaching the sea",
+     "correct": false,
+     "feedback": "It traps silt behind the dam."
+    },
+    {
+     "text": "It is a small dam",
+     "correct": false,
+     "feedback": "It is one of the largest power stations in the world."
+    }
+   ],
+   "explain": "Costs included lost farmland, flooded towns and historic sites, and changes to river ecosystems."
+  },
+  {
+   "id": "geography.m.cn.shenzhen",
+   "topic": "geography.china",
+   "kind": "mcq",
+   "prompt": "Shenzhen grew from a small town to a city of over 10 million people in about 40 years. Why?",
+   "options": [
+    {
+     "text": "It was made a Special Economic Zone in 1980, attracting foreign companies and factories",
+     "correct": true
+    },
+    {
+     "text": "Gold was discovered there",
+     "correct": false,
+     "feedback": "It was government economic policy."
+    },
+    {
+     "text": "It is China’s capital",
+     "correct": false,
+     "feedback": "Beijing is the capital."
+    },
+    {
+     "text": "It has a cool mountain climate",
+     "correct": false,
+     "feedback": "It is in the warm south, next to Hong Kong."
+    }
+   ],
+   "explain": "Special Economic Zones offered low taxes and cheap labour to foreign investors."
+  },
+  {
+   "id": "geography.m.cn.emit",
+   "topic": "geography.china",
+   "kind": "mcq",
+   "prompt": "Which statement about China and carbon dioxide is correct?",
+   "options": [
+    {
+     "text": "It is now the world’s largest emitter in total, but emits less per person than the USA",
+     "correct": true
+    },
+    {
+     "text": "It emits almost none",
+     "correct": false,
+     "feedback": "It burns a great deal of coal."
+    },
+    {
+     "text": "It emits the most per person in the world",
+     "correct": false,
+     "feedback": "Some smaller, richer countries emit more per person."
+    },
+    {
+     "text": "It has no renewable energy",
+     "correct": false,
+     "feedback": "It builds more solar and wind power than any other country."
+    }
+   ],
+   "explain": "Total and per-person figures tell different stories: both matter."
+  },
+  {
+   "id": "geography.m.cn.yellow",
+   "topic": "geography.china",
+   "kind": "fact",
+   "prompt": "Which Chinese river has been called “China’s Sorrow” because of its deadly floods?",
+   "answer": "the Yellow River (Huang He)",
+   "distractors": [
+    "the Yangtze",
+    "the Mekong",
+    "the Ganges"
+   ],
+   "explain": "Its yellow silt raises the riverbed, so floods can break through embankments across the flat plain.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.cn.hukou",
+   "topic": "geography.china",
+   "kind": "mcq",
+   "prompt": "What is China’s hukou system?",
+   "options": [
+    {
+     "text": "A household registration system that has limited rural migrants’ access to services in cities",
+     "correct": true
+    },
+    {
+     "text": "A type of noodle",
+     "correct": false,
+     "feedback": "It is a government system."
+    },
+    {
+     "text": "A railway network",
+     "correct": false,
+     "feedback": "It is about registration."
+    },
+    {
+     "text": "A national park",
+     "correct": false,
+     "feedback": "It is about where people are registered to live."
+    }
+   ],
+   "explain": "Millions of migrant workers built China’s cities without full rights to schools or healthcare there, though rules have been relaxed."
+  },
+  {
+   "id": "geography.m.cn.belt",
+   "topic": "geography.china",
+   "kind": "fact",
+   "prompt": "China’s programme, begun in 2013, to fund ports, railways and roads in dozens of countries is called…",
+   "answer": "the Belt and Road Initiative",
+   "distractors": [
+    "the Great Leap Forward",
+    "the Silk Road Act",
+    "the Marshall Plan"
+   ],
+   "explain": "It is named after the ancient Silk Road trade routes. Critics worry about some countries’ debts.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.cn.w",
+   "topic": "geography.china",
+   "kind": "written",
+   "prompt": "Assess the advantages and disadvantages of the Three Gorges Dam.",
+   "hints": [
+    "What and where it is",
+    "Advantages: hydroelectric power, flood control, river navigation",
+    "Disadvantages: people relocated, lost heritage and farmland, silt, ecosystems, landslides",
+    "A balanced judgement"
+   ],
+   "model": "The Three Gorges Dam on the Yangtze River in China is one of the largest power stations in the world. Its main advantage is clean hydroelectric power, which reduces China’s reliance on coal and cuts air pollution. It also helps control the floods that have killed many thousands of people along the Yangtze, and the reservoir lets large ships travel further inland. However, the costs were huge. More than a million people were moved from their homes, and towns, farmland and archaeological sites were flooded. The dam traps silt, so less reaches the farmland and delta downstream, and the reservoir has been linked to landslides and harm to river wildlife. On balance, the dam has brought major national benefits, but they came at a heavy cost to the people and ecosystems of the valley.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Three Gorges Dam, Yangtze River, completed in the 2000s: one of the world’s largest power stations. Reservoir about 600 km long. More than a million people relocated; towns, farmland and archaeological sites flooded. Reduces flood risk downstream and allows large ships further inland.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.in.monsoon",
+   "topic": "geography.india",
+   "kind": "mcq",
+   "prompt": "What is the Indian monsoon?",
+   "options": [
+    {
+     "text": "A seasonal change of wind that brings heavy rain to most of India from about June to September",
+     "correct": true
+    },
+    {
+     "text": "A type of earthquake",
+     "correct": false,
+     "feedback": "It is a seasonal wind and rain pattern."
+    },
+    {
+     "text": "A winter snowstorm",
+     "correct": false,
+     "feedback": "It brings summer rain."
+    },
+    {
+     "text": "A river in India",
+     "correct": false,
+     "feedback": "It is a weather pattern."
+    }
+   ],
+   "explain": "The land heats faster than the sea, drawing in moist ocean air that rises and drops its rain."
+  },
+  {
+   "id": "geography.m.in.depend",
+   "topic": "geography.india",
+   "kind": "mcq",
+   "prompt": "Why does the monsoon matter so much to India?",
+   "options": [
+    {
+     "text": "Most farmland depends on its rain; a weak monsoon can mean poor harvests, while a very strong one can cause floods",
+     "correct": true
+    },
+    {
+     "text": "It only affects tourists",
+     "correct": false,
+     "feedback": "It affects hundreds of millions of farmers."
+    },
+    {
+     "text": "It brings snow for skiing",
+     "correct": false,
+     "feedback": "It brings rain."
+    },
+    {
+     "text": "It has no effect on food",
+     "correct": false,
+     "feedback": "Food prices rise when it fails."
+    }
+   ],
+   "explain": "Much of the year’s rain falls in a few months, so storing water matters."
+  },
+  {
+   "id": "geography.m.in.ganges",
+   "topic": "geography.india",
+   "kind": "fact",
+   "prompt": "Which river is sacred to Hindus and flows from the Himalayas across northern India?",
+   "answer": "the Ganges (Ganga)",
+   "distractors": [
+    "the Indus",
+    "the Mekong",
+    "the Thames"
+   ],
+   "explain": "Millions bathe in it at Varanasi; it is also heavily polluted, and big clean-up schemes are under way.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.in.bengaluru",
+   "topic": "geography.india",
+   "kind": "fact",
+   "prompt": "Which Indian city is known as the centre of its IT industry, sometimes called “India’s Silicon Valley”?",
+   "answer": "Bengaluru (Bangalore)",
+   "distractors": [
+    "Delhi",
+    "Kolkata",
+    "Varanasi"
+   ],
+   "explain": "Many global technology companies have offices there.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.in.wet",
+   "topic": "geography.india",
+   "kind": "mcq",
+   "prompt": "Some of the wettest places on Earth are in north-east India, near Mawsynram and Cherrapunji. Why?",
+   "options": [
+    {
+     "text": "Monsoon winds rise steeply over the hills and drop huge amounts of relief rainfall",
+     "correct": true
+    },
+    {
+     "text": "They are below sea level",
+     "correct": false,
+     "feedback": "They are high in the hills."
+    },
+    {
+     "text": "It rains there because of volcanoes",
+     "correct": false,
+     "feedback": "It is relief rainfall."
+    },
+    {
+     "text": "They are in a desert",
+     "correct": false,
+     "feedback": "They are in the wettest part of India."
+    }
+   ],
+   "explain": "Some years they get over 11 metres of rain."
+  },
+  {
+   "id": "geography.m.in.moon",
+   "topic": "geography.india",
+   "kind": "mcq",
+   "prompt": "In 2023 India’s Chandrayaan-3 mission became the first to land near the Moon’s…",
+   "options": [
+    {
+     "text": "south pole",
+     "correct": true
+    },
+    {
+     "text": "far side for the first time ever",
+     "correct": false,
+     "feedback": "China landed on the far side first, in 2019."
+    },
+    {
+     "text": "Sea of Tranquillity",
+     "correct": false,
+     "feedback": "That was where Apollo 11 landed in 1969."
+    },
+    {
+     "text": "north pole",
+     "correct": false,
+     "feedback": "It landed near the south pole."
+    }
+   ],
+   "explain": "Scientists want to study ice that may be hidden in craters there."
+  },
+  {
+   "id": "geography.m.in.w",
+   "topic": "geography.india",
+   "kind": "written",
+   "prompt": "Explain how India’s physical geography affects the lives of people who live there.",
+   "hints": [
+    "The monsoon and farming",
+    "Rivers such as the Ganges (water, farming, religion, flooding)",
+    "Mountains (the Himalayas: water source, barrier, hazards)",
+    "At least one specific example or fact"
+   ],
+   "model": "India’s physical geography shapes daily life. The monsoon brings most of the year’s rain between about June and September, and hundreds of millions of farmers depend on it: a weak monsoon can mean poor harvests and higher food prices, while a very strong one can cause floods. The great rivers, especially the Ganges, flowing from the Himalayas, provide water for farming and cities and are sacred to Hindus, though they can also flood. The Himalayas themselves are a source of water from melting snow and glaciers, a barrier to the north, and a hazard area for earthquakes and landslides. In the north-east, relief rainfall makes places like Mawsynram among the wettest on Earth.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Monsoon: most rain falls June–September. Over half of India’s workers depend on farming.\nThe Ganges: rises in the Himalayas; sacred to Hindus; supplies hundreds of millions of people.\nThe Himalayas: snow and glacier meltwater; earthquakes and landslides.\nMawsynram, north-east India: over 11 m of rain in a year.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.bz.share",
+   "topic": "geography.brazil",
+   "kind": "mcq",
+   "prompt": "About how much of the Amazon rainforest is in Brazil?",
+   "options": [
+    {
+     "text": "About 60%",
+     "correct": true
+    },
+    {
+     "text": "All of it",
+     "correct": false,
+     "feedback": "It spreads across nine countries, including Peru and Colombia."
+    },
+    {
+     "text": "About 5%",
+     "correct": false,
+     "feedback": "Brazil has the largest share by far."
+    },
+    {
+     "text": "None",
+     "correct": false,
+     "feedback": "Brazil has most of it."
+    }
+   ],
+   "explain": "The Amazon covers about 5.5 million km²."
+  },
+  {
+   "id": "geography.m.bz.lungs",
+   "topic": "geography.brazil",
+   "kind": "mcq",
+   "prompt": "The Amazon is often called “the lungs of the planet”. Why do scientists say this is misleading?",
+   "options": [
+    {
+     "text": "The forest uses most of the oxygen it makes; its real global value is storing carbon, recycling rain and holding biodiversity",
+     "correct": true
+    },
+    {
+     "text": "The Amazon makes no oxygen",
+     "correct": false,
+     "feedback": "It makes plenty, but uses most of it itself."
+    },
+    {
+     "text": "The Amazon breathes like an animal",
+     "correct": false,
+     "feedback": "It is a metaphor."
+    },
+    {
+     "text": "It is actually a desert",
+     "correct": false,
+     "feedback": "It is the largest rainforest on Earth."
+    }
+   ],
+   "explain": "Burning it releases stored carbon, which speeds up climate change."
+  },
+  {
+   "id": "geography.m.bz.road",
+   "topic": "geography.brazil",
+   "kind": "mcq",
+   "prompt": "How did the Trans-Amazonian Highway, begun in the 1970s, speed up deforestation?",
+   "options": [
+    {
+     "text": "It opened the forest to settlers, loggers, farmers and miners, with clearing spreading out along the roads",
+     "correct": true
+    },
+    {
+     "text": "Cars cut down the trees",
+     "correct": false,
+     "feedback": "It was the access it gave, not the cars."
+    },
+    {
+     "text": "It flooded the forest",
+     "correct": false,
+     "feedback": "Roads do not flood forests; dams can."
+    },
+    {
+     "text": "It had no effect",
+     "correct": false,
+     "feedback": "Deforestation often follows new roads."
+    }
+   ],
+   "explain": "Satellite images show a “fishbone” pattern of clearing along side roads."
+  },
+  {
+   "id": "geography.m.bz.soy",
+   "topic": "geography.brazil",
+   "kind": "fact",
+   "prompt": "Apart from cattle ranching, which crop, grown largely for animal feed, has driven forest clearing in Brazil?",
+   "answer": "soya",
+   "distractors": [
+    "coffee",
+    "tea",
+    "cotton"
+   ],
+   "explain": "Much of it is exported to feed pigs and chickens in China and Europe.",
+   "accept": [
+    "soy",
+    "soybeans",
+    "soya beans"
+   ]
+  },
+  {
+   "id": "geography.m.bz.indigenous",
+   "topic": "geography.brazil",
+   "kind": "mcq",
+   "prompt": "Why do many scientists argue that protecting indigenous peoples’ land rights helps protect the rainforest?",
+   "options": [
+    {
+     "text": "Forest in indigenous territories is often cleared much less than land around it",
+     "correct": true
+    },
+    {
+     "text": "Indigenous peoples do not live in the Amazon",
+     "correct": false,
+     "feedback": "Hundreds of indigenous groups live there."
+    },
+    {
+     "text": "It is cheaper to cut the forest down",
+     "correct": false,
+     "feedback": "The question is about protection."
+    },
+    {
+     "text": "Indigenous people want all the trees removed",
+     "correct": false,
+     "feedback": "Most depend on the forest."
+    }
+   ],
+   "explain": "Satellite maps show forest boundaries that match territory boundaries."
+  },
+  {
+   "id": "geography.m.bz.manaus",
+   "topic": "geography.brazil",
+   "kind": "mcq",
+   "prompt": "Why does the city of Manaus, in the middle of the Amazon, have so many factories?",
+   "options": [
+    {
+     "text": "It is a free trade zone with tax breaks to attract industry to the region",
+     "correct": true
+    },
+    {
+     "text": "It is on the coast",
+     "correct": false,
+     "feedback": "It is about 1,500 km inland."
+    },
+    {
+     "text": "It is Brazil’s capital",
+     "correct": false,
+     "feedback": "Brasília is the capital."
+    },
+    {
+     "text": "Factories need rainforest wood",
+     "correct": false,
+     "feedback": "It is about tax incentives."
+    }
+   ],
+   "explain": "Goods such as motorbikes and electronics are made there and shipped down the Amazon."
+  },
+  {
+   "id": "geography.m.bz.river",
+   "topic": "geography.brazil",
+   "kind": "fact",
+   "prompt": "The Amazon river carries more water than any other river. What is this volume of flowing water called?",
+   "answer": "discharge",
+   "distractors": [
+    "erosion",
+    "velocity",
+    "precipitation"
+   ],
+   "explain": "Its discharge is greater than the next several largest rivers combined.",
+   "accept": [
+    "its discharge"
+   ]
+  },
+  {
+   "id": "geography.m.bz.w",
+   "topic": "geography.brazil",
+   "kind": "written",
+   "prompt": "“Protecting the Amazon is the responsibility of the whole world, not just Brazil.” How far do you agree?",
+   "hints": [
+    "Why the Amazon matters globally (carbon, climate, biodiversity, rainfall)",
+    "Brazil’s point of view: development, jobs, sovereignty, poverty",
+    "Ideas for shared responsibility (funding, buying choices, supply chains)",
+    "A clear judgement"
+   ],
+   "model": "I largely agree, because the Amazon matters to everyone. It stores enormous amounts of carbon, so clearing and burning it speeds up climate change worldwide; it recycles rainfall that farms far beyond the forest depend on; and it holds a huge share of the world’s species. However, it is mostly Brazilian territory, and Brazil has the right to make its own decisions and to develop. Farming, mining and roads bring jobs and income, and many Brazilians are poor. So responsibility should be shared. Richer countries can fund protection, for example by paying to keep forests standing, and consumers and companies can refuse beef and soya grown on newly cleared land. Brazil, in turn, can enforce its laws and protect indigenous territories. The world should share the cost, but Brazil must lead.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "About 60% of the Amazon is in Brazil. Main causes of clearing: cattle ranching, soya, logging, mining, roads and dams. The forest stores huge amounts of carbon and recycles rainfall that falls far away. Indigenous territories are generally cleared much less than surrounding land.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.eu.members",
+   "topic": "geography.eu",
+   "kind": "fact",
+   "prompt": "How many member countries has the European Union had since the UK left in 2020?",
+   "answer": "27",
+   "distractors": [
+    "15",
+    "28",
+    "50"
+   ],
+   "explain": "The UK left on 31 January 2020, four years after the 2016 referendum."
+  },
+  {
+   "id": "geography.m.eu.three",
+   "topic": "geography.eu",
+   "kind": "mcq",
+   "prompt": "Which statement is TRUE?",
+   "options": [
+    {
+     "text": "The EU, the euro area and the Schengen area are different groups: not every EU country uses the euro or is in Schengen",
+     "correct": true
+    },
+    {
+     "text": "Every EU country uses the euro",
+     "correct": false,
+     "feedback": "Several, such as Poland, Sweden and Denmark, still use their own currencies."
+    },
+    {
+     "text": "Schengen and the EU are exactly the same",
+     "correct": false,
+     "feedback": "Some non-EU countries such as Norway and Switzerland are in Schengen."
+    },
+    {
+     "text": "The UK uses the euro",
+     "correct": false,
+     "feedback": "The UK never joined the euro."
+    }
+   ],
+   "explain": "The euro is shared by 20 EU countries; Schengen removes routine passport checks at most internal borders."
+  },
+  {
+   "id": "geography.m.eu.schengen",
+   "topic": "geography.eu",
+   "kind": "fact",
+   "prompt": "The agreement that removed routine passport checks between most European countries is named after a village in…",
+   "answer": "Luxembourg",
+   "distractors": [
+    "France",
+    "Belgium",
+    "Germany"
+   ],
+   "explain": "Schengen is a small village where the agreement was signed in 1985, near where Luxembourg, France and Germany meet.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.eu.rome",
+   "topic": "geography.eu",
+   "kind": "fact",
+   "prompt": "The European Economic Community, which grew into the EU, was set up by the Treaty of Rome in which year?",
+   "answer": "1957",
+   "distractors": [
+    "1918",
+    "1945",
+    "1992"
+   ],
+   "explain": "Six countries started it, partly to make another war between France and Germany impossible."
+  },
+  {
+   "id": "geography.m.eu.movement",
+   "topic": "geography.eu",
+   "kind": "mcq",
+   "prompt": "What does “freedom of movement” in the EU mean?",
+   "options": [
+    {
+     "text": "Citizens of EU countries can live and work in any other EU country",
+     "correct": true
+    },
+    {
+     "text": "Anyone in the world can move to the EU",
+     "correct": false,
+     "feedback": "It applies to EU citizens."
+    },
+    {
+     "text": "Cars can drive without licences",
+     "correct": false,
+     "feedback": "It is about living and working."
+    },
+    {
+     "text": "Borders can move",
+     "correct": false,
+     "feedback": "It is about people."
+    }
+   ],
+   "explain": "UK citizens lost this right in the EU when Brexit took effect."
+  },
+  {
+   "id": "geography.m.eu.ireland",
+   "topic": "geography.eu",
+   "kind": "mcq",
+   "prompt": "Why was the border between Northern Ireland and the Republic of Ireland such a difficult issue in the Brexit talks?",
+   "options": [
+    {
+     "text": "The 1998 Good Friday Agreement helped keep the peace with an open border, and nobody wanted checkpoints to return",
+     "correct": true
+    },
+    {
+     "text": "There is no border there",
+     "correct": false,
+     "feedback": "There is a border, but it has been open with no checks."
+    },
+    {
+     "text": "Ireland wanted to leave the EU too",
+     "correct": false,
+     "feedback": "Ireland stayed in the EU."
+    },
+    {
+     "text": "It is a sea border",
+     "correct": false,
+     "feedback": "It is a land border about 500 km long."
+    }
+   ],
+   "explain": "Checks on some goods were moved to ports between Great Britain and Northern Ireland instead."
+  },
+  {
+   "id": "geography.m.eu.capital",
+   "topic": "geography.eu",
+   "kind": "fact",
+   "prompt": "Which city is home to the European Commission, the EU’s main executive body?",
+   "answer": "Brussels",
+   "distractors": [
+    "Strasbourg",
+    "Paris",
+    "Luxembourg"
+   ],
+   "explain": "The European Parliament meets in both Strasbourg and Brussels.",
+   "accept": [
+    "brussels"
+   ]
+  },
+  {
+   "id": "geography.m.eu.w",
+   "topic": "geography.eu",
+   "kind": "written",
+   "prompt": "Explain how borders can affect people’s lives, using examples from Europe.",
+   "hints": [
+    "What borders can control (people, goods, money)",
+    "An example of open borders (Schengen, freedom of movement)",
+    "An example where borders became harder (Brexit) or were sensitive (Irish border)",
+    "Effects on trade, work, travel or identity"
+   ],
+   "model": "Borders control how people, goods and money move, so they shape everyday life. Inside the Schengen area, most European countries have no routine passport checks, so people can commute, shop and travel across borders easily, and freedom of movement lets EU citizens live and work in any member country. When the UK left the EU in 2020, borders became harder again: British citizens now need to meet extra rules to work in the EU, and businesses face paperwork and checks when trading. The border in Ireland shows how sensitive borders can be: an open border helped support peace after the 1998 Good Friday Agreement, so finding a way to avoid checkpoints was a major issue in the Brexit talks.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "EU: 27 members since the UK left on 31 January 2020. Euro: used by 20 EU countries. Schengen area: no routine passport checks at most internal borders; includes some non-EU countries. Good Friday Agreement (1998): supported peace in Northern Ireland with an open border.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.rg.brownfield",
+   "topic": "geography.regeneration",
+   "kind": "mcq",
+   "prompt": "What is a brownfield site?",
+   "options": [
+    {
+     "text": "Land that has been built on before, such as an old factory site, and can be redeveloped",
+     "correct": true
+    },
+    {
+     "text": "A field of brown crops",
+     "correct": false,
+     "feedback": "It is previously developed land."
+    },
+    {
+     "text": "Countryside that has never been built on",
+     "correct": false,
+     "feedback": "That is a greenfield site."
+    },
+    {
+     "text": "A polluted river",
+     "correct": false,
+     "feedback": "It is about land."
+    }
+   ],
+   "explain": "Building on brownfield land protects the countryside, though cleaning up old industrial land can be expensive."
+  },
+  {
+   "id": "geography.m.rg.docklands",
+   "topic": "geography.regeneration",
+   "kind": "mcq",
+   "prompt": "Why did London’s Docklands decline in the 1960s and 1970s?",
+   "options": [
+    {
+     "text": "Large container ships could not reach the old docks, so trade moved downstream to ports like Tilbury",
+     "correct": true
+    },
+    {
+     "text": "The River Thames dried up",
+     "correct": false,
+     "feedback": "It was about changing technology in shipping."
+    },
+    {
+     "text": "A flood destroyed them",
+     "correct": false,
+     "feedback": "They closed as trade moved."
+    },
+    {
+     "text": "They were too far from London",
+     "correct": false,
+     "feedback": "They were in the heart of East London."
+    }
+   ],
+   "explain": "Thousands of jobs were lost and the area became run-down."
+  },
+  {
+   "id": "geography.m.rg.canary",
+   "topic": "geography.regeneration",
+   "kind": "mcq",
+   "prompt": "Which was a criticism of how London’s Docklands were regenerated from the 1980s?",
+   "options": [
+    {
+     "text": "Many new jobs, such as in finance, went to commuters, while house prices rose beyond many local people",
+     "correct": true
+    },
+    {
+     "text": "Nothing was built",
+     "correct": false,
+     "feedback": "Canary Wharf, the DLR and City Airport were built."
+    },
+    {
+     "text": "It became farmland",
+     "correct": false,
+     "feedback": "It became offices and homes."
+    },
+    {
+     "text": "It was too cheap",
+     "correct": false,
+     "feedback": "Prices rose sharply."
+    }
+   ],
+   "explain": "This is called gentrification. Regeneration helps an area, but not always the people who lived there."
+  },
+  {
+   "id": "geography.m.rg.olympic",
+   "topic": "geography.regeneration",
+   "kind": "fact",
+   "prompt": "Which part of East London was regenerated for the 2012 Olympic and Paralympic Games?",
+   "answer": "Stratford",
+   "distractors": [
+    "Kensington",
+    "Wembley",
+    "Wimbledon"
+   ],
+   "explain": "Polluted former industrial land became the Queen Elizabeth Olympic Park, with new homes, parkland and transport.",
+   "accept": [
+    "stratford"
+   ]
+  },
+  {
+   "id": "geography.m.rg.greenbelt",
+   "topic": "geography.regeneration",
+   "kind": "mcq",
+   "prompt": "What is a green belt?",
+   "options": [
+    {
+     "text": "A ring of protected countryside around a city where building is tightly controlled",
+     "correct": true
+    },
+    {
+     "text": "A row of trees down a motorway",
+     "correct": false,
+     "feedback": "It is much bigger: a protected zone around a city."
+    },
+    {
+     "text": "A type of recycling bin",
+     "correct": false,
+     "feedback": "It is planning land."
+    },
+    {
+     "text": "A judo grade",
+     "correct": false,
+     "feedback": "Not in geography!"
+    }
+   ],
+   "explain": "Green belts stop cities sprawling, but they also make it harder to build enough homes."
+  },
+  {
+   "id": "geography.m.rg.counter",
+   "topic": "geography.regeneration",
+   "kind": "mcq",
+   "prompt": "Counter-urbanisation is when…",
+   "options": [
+    {
+     "text": "people move out of big cities to towns and villages in the countryside",
+     "correct": true
+    },
+    {
+     "text": "people move from the countryside into cities",
+     "correct": false,
+     "feedback": "That is urbanisation."
+    },
+    {
+     "text": "cities are knocked down",
+     "correct": false,
+     "feedback": "It is about people moving."
+    },
+    {
+     "text": "people move back into city centres",
+     "correct": false,
+     "feedback": "That is re-urbanisation."
+    }
+   ],
+   "explain": "Better transport and working from home have helped some people move further out."
+  },
+  {
+   "id": "geography.m.rg.dlr",
+   "topic": "geography.regeneration",
+   "kind": "fact",
+   "prompt": "Which light railway opened in 1987 to link the regenerated Docklands to the City of London?",
+   "answer": "the Docklands Light Railway (DLR)",
+   "distractors": [
+    "the Elizabeth line",
+    "the Jubilee line",
+    "Eurostar"
+   ],
+   "explain": "Its driverless trains were part of making Docklands attractive to businesses.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.rg.w",
+   "topic": "geography.regeneration",
+   "kind": "written",
+   "prompt": "To what extent has the regeneration of an urban area in the UK benefited local people? Use a named example.",
+   "hints": [
+    "Why the area needed regenerating",
+    "What was done (named projects)",
+    "Benefits: jobs, transport, environment, homes",
+    "Problems: gentrification, house prices, who got the jobs",
+    "A judgement"
+   ],
+   "model": "London’s Docklands declined in the 1960s and 1970s when container ships moved to deeper ports, leaving derelict docks and high unemployment. From 1981 a development corporation attracted investment: offices at Canary Wharf, the Docklands Light Railway, City Airport and thousands of new homes. This brought tens of thousands of jobs and transformed the environment. However, many of the new jobs were in finance and went to skilled commuters rather than former dockworkers, and rising house prices pushed some local families out, an example of gentrification. Later projects, such as the 2012 Olympic Park at Stratford, tried harder to include affordable housing and local training. Overall, regeneration benefited the area a great deal, but local people only partly shared in those benefits.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "London Docklands: docks closed between the 1960s and 1981. London Docklands Development Corporation from 1981. Canary Wharf offices, the Docklands Light Railway (1987), London City Airport. Tens of thousands of new jobs, many in finance. House prices rose sharply. Queen Elizabeth Olympic Park, Stratford, for 2012.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.fw.enquiry",
+   "topic": "geography.fieldwork",
+   "kind": "order",
+   "prompt": "Put the stages of a geographical enquiry in order.",
+   "items": [
+    "Ask a question or hypothesis",
+    "Collect data",
+    "Present the data",
+    "Analyse the results",
+    "Draw a conclusion",
+    "Evaluate how reliable it was"
+   ],
+   "labels": null,
+   "explain": "Every GCSE fieldwork project follows these steps, and examiners love the last one."
+  },
+  {
+   "id": "geography.m.fw.systematic",
+   "topic": "geography.fieldwork",
+   "kind": "mcq",
+   "prompt": "Measuring a river’s depth every 50 cm across its width is an example of which kind of sampling?",
+   "options": [
+    {
+     "text": "Systematic sampling",
+     "correct": true
+    },
+    {
+     "text": "Random sampling",
+     "correct": false,
+     "feedback": "Random sampling would choose points by chance, e.g. with random numbers."
+    },
+    {
+     "text": "Stratified sampling",
+     "correct": false,
+     "feedback": "Stratified sampling takes samples in proportion to sub-groups."
+    },
+    {
+     "text": "No sampling at all",
+     "correct": false,
+     "feedback": "It is a sample of points, not every point."
+    }
+   ],
+   "explain": "Systematic: at regular intervals. Random: chosen by chance. Stratified: in proportion to groups."
+  },
+  {
+   "id": "geography.m.fw.stratified",
+   "topic": "geography.fieldwork",
+   "kind": "mcq",
+   "prompt": "A village is 70% houses and 30% flats. You interview 70 people from houses and 30 from flats. This is…",
+   "options": [
+    {
+     "text": "stratified sampling",
+     "correct": true
+    },
+    {
+     "text": "random sampling",
+     "correct": false,
+     "feedback": "You chose numbers to match the groups."
+    },
+    {
+     "text": "systematic sampling",
+     "correct": false,
+     "feedback": "You did not pick every nth home."
+    },
+    {
+     "text": "secondary data",
+     "correct": false,
+     "feedback": "You collected it yourself: primary data."
+    }
+   ],
+   "explain": "Stratified samples make sure every group is fairly represented."
+  },
+  {
+   "id": "geography.m.fw.primary",
+   "topic": "geography.fieldwork",
+   "kind": "mcq",
+   "prompt": "Which of these is PRIMARY data?",
+   "options": [
+    {
+     "text": "A traffic count you did yourself",
+     "correct": true
+    },
+    {
+     "text": "Census statistics from a government website",
+     "correct": false,
+     "feedback": "Data collected by someone else is secondary."
+    },
+    {
+     "text": "A newspaper article",
+     "correct": false,
+     "feedback": "Secondary."
+    },
+    {
+     "text": "A textbook map",
+     "correct": false,
+     "feedback": "Secondary."
+    }
+   ],
+   "explain": "Primary data: you collected it. Secondary data: someone else did."
+  },
+  {
+   "id": "geography.m.fw.qual",
+   "topic": "geography.fieldwork",
+   "kind": "fact",
+   "prompt": "Interview answers, sketches and photographs are examples of which type of data?",
+   "answer": "qualitative data",
+   "distractors": [
+    "quantitative data",
+    "secondary data",
+    "continuous data"
+   ],
+   "explain": "Qualitative data is descriptive; quantitative data is numbers you can measure or count.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.fw.gis",
+   "topic": "geography.fieldwork",
+   "kind": "mcq",
+   "prompt": "What is a GIS?",
+   "options": [
+    {
+     "text": "A computer system that layers different data on digital maps to show and analyse patterns",
+     "correct": true
+    },
+    {
+     "text": "A type of compass",
+     "correct": false,
+     "feedback": "It is software."
+    },
+    {
+     "text": "A satellite that takes photos",
+     "correct": false,
+     "feedback": "Satellites can provide data, but a GIS is the system that maps and analyses it."
+    },
+    {
+     "text": "A rock-testing kit",
+     "correct": false,
+     "feedback": "It is about digital maps."
+    }
+   ],
+   "explain": "For example, layering flood risk, housing and school locations helps planners decide where to build."
+  },
+  {
+   "id": "geography.m.fw.remote",
+   "topic": "geography.fieldwork",
+   "kind": "mcq",
+   "prompt": "Why are satellite images useful for studying the Amazon?",
+   "options": [
+    {
+     "text": "They can show how much forest is cleared, quickly and over huge, remote areas",
+     "correct": true
+    },
+    {
+     "text": "They can count every individual insect",
+     "correct": false,
+     "feedback": "They are not that detailed."
+    },
+    {
+     "text": "They replace all fieldwork",
+     "correct": false,
+     "feedback": "Ground checks are still needed."
+    },
+    {
+     "text": "They only work at night",
+     "correct": false,
+     "feedback": "Most images need daylight, though radar can see through cloud."
+    }
+   ],
+   "explain": "Collecting data from a distance like this is called remote sensing."
+  },
+  {
+   "id": "geography.m.fw.reliable",
+   "topic": "geography.fieldwork",
+   "kind": "mcq",
+   "prompt": "How could you make a traffic survey more reliable?",
+   "options": [
+    {
+     "text": "Repeat the counts on several days and times, and take an average",
+     "correct": true
+    },
+    {
+     "text": "Count for one minute only",
+     "correct": false,
+     "feedback": "A tiny sample is unreliable."
+    },
+    {
+     "text": "Guess the numbers",
+     "correct": false,
+     "feedback": "Data must be measured."
+    },
+    {
+     "text": "Only count red cars",
+     "correct": false,
+     "feedback": "That would give a biased sample."
+    }
+   ],
+   "explain": "Bigger, repeated samples reduce the effect of unusual results."
+  },
+  {
+   "id": "geography.m.fw.w",
+   "topic": "geography.fieldwork",
+   "kind": "written",
+   "prompt": "Plan a fieldwork enquiry to test this hypothesis: “The environmental quality of a town gets better further from the centre.”",
+   "hints": [
+    "How you would sample sites (e.g. systematic along a transect)",
+    "What you would measure (e.g. an environmental quality survey, litter, noise, traffic)",
+    "At least one source of secondary data",
+    "How you would present and analyse the results",
+    "One way to make it reliable, and one risk to manage"
+   ],
+   "model": "I would draw a transect from the town centre outwards and use systematic sampling, stopping every 200 metres. At each site I would complete an environmental quality survey, scoring things like litter, noise, traffic and green space from −2 to +2, and take a photograph. I would also count the number of cars passing in two minutes. For secondary data I would use crime or house-price maps from the internet. I would present the scores on a line graph against distance from the centre and test the pattern with a scatter graph. To make it reliable, two people would score each site and I would repeat it on a second day. I would carry out a risk assessment, for example for busy roads, and work in a group.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Hypothesis: environmental quality improves with distance from the town centre.\nUseful methods: a transect; systematic sampling every 200 m; an environmental quality survey (scores from −2 to +2); traffic counts; photographs.\nUseful secondary data: maps of crime, house prices or air quality.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.su.goals",
+   "topic": "geography.sustainability",
+   "kind": "fact",
+   "prompt": "How many Sustainable Development Goals did the United Nations agree in 2015?",
+   "answer": "17",
+   "distractors": [
+    "8",
+    "10",
+    "50"
+   ],
+   "explain": "They run to 2030 and include ending poverty, zero hunger, clean water, climate action and quality education."
+  },
+  {
+   "id": "geography.m.su.define",
+   "topic": "geography.sustainability",
+   "kind": "mcq",
+   "prompt": "Which is the best definition of sustainable development?",
+   "options": [
+    {
+     "text": "Development that meets the needs of today without stopping future generations from meeting theirs",
+     "correct": true
+    },
+    {
+     "text": "Making as much money as possible as fast as possible",
+     "correct": false,
+     "feedback": "That may not be sustainable."
+    },
+    {
+     "text": "Stopping all development",
+     "correct": false,
+     "feedback": "Sustainability is about how we develop, not stopping."
+    },
+    {
+     "text": "Only using solar power",
+     "correct": false,
+     "feedback": "Energy is one part, but the idea is much wider."
+    }
+   ],
+   "explain": "This definition comes from the 1987 Brundtland Report."
+  },
+  {
+   "id": "geography.m.su.mdg",
+   "topic": "geography.sustainability",
+   "kind": "fact",
+   "prompt": "The Sustainable Development Goals replaced which earlier set of eight goals (2000–2015)?",
+   "answer": "the Millennium Development Goals",
+   "distractors": [
+    "the Paris Agreement",
+    "the Kyoto Protocol",
+    "the Olympic Charter"
+   ],
+   "explain": "The Millennium Goals halved extreme poverty, but missed many targets.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.m.su.three",
+   "topic": "geography.sustainability",
+   "kind": "mcq",
+   "prompt": "Sustainability is often described as having three parts. What are they?",
+   "options": [
+    {
+     "text": "Environmental, social and economic",
+     "correct": true
+    },
+    {
+     "text": "Water, food and air",
+     "correct": false,
+     "feedback": "Those are resources, not the three parts."
+    },
+    {
+     "text": "Past, present and future",
+     "correct": false,
+     "feedback": "Sustainability is about the future, but the three parts are different."
+    },
+    {
+     "text": "Local, national and global",
+     "correct": false,
+     "feedback": "Those are scales."
+    }
+   ],
+   "explain": "A truly sustainable project protects the environment, treats people fairly and pays its way."
+  },
+  {
+   "id": "geography.m.su.circular",
+   "topic": "geography.sustainability",
+   "kind": "mcq",
+   "prompt": "What is a circular economy?",
+   "options": [
+    {
+     "text": "One where products are designed to be reused, repaired and recycled instead of thrown away",
+     "correct": true
+    },
+    {
+     "text": "An economy based on round objects",
+     "correct": false,
+     "feedback": "It is about loops of materials."
+    },
+    {
+     "text": "Trading only with neighbouring countries",
+     "correct": false,
+     "feedback": "It is about materials, not trade partners."
+    },
+    {
+     "text": "Spending money in a circle of friends",
+     "correct": false,
+     "feedback": "It is about resources."
+    }
+   ],
+   "explain": "It replaces “take, make, throw away” with loops of reuse."
+  },
+  {
+   "id": "geography.m.su.fairtrade",
+   "topic": "geography.sustainability",
+   "kind": "mcq",
+   "prompt": "How does the Fairtrade mark aim to help farmers in poorer countries?",
+   "options": [
+    {
+     "text": "It guarantees a minimum price and an extra premium for community projects",
+     "correct": true
+    },
+    {
+     "text": "It makes products free",
+     "correct": false,
+     "feedback": "Shoppers still pay."
+    },
+    {
+     "text": "It bans exports",
+     "correct": false,
+     "feedback": "It supports exports on fairer terms."
+    },
+    {
+     "text": "It only applies to UK farmers",
+     "correct": false,
+     "feedback": "It is for producers in poorer countries."
+    }
+   ],
+   "explain": "Coffee, cocoa and bananas are common Fairtrade products."
+  },
+  {
+   "id": "geography.m.su.footprint",
+   "topic": "geography.sustainability",
+   "kind": "fact",
+   "prompt": "The total amount of greenhouse gases caused by a person, product or activity is its…",
+   "answer": "carbon footprint",
+   "distractors": [
+    "water table",
+    "albedo",
+    "GNI"
+   ],
+   "explain": "Flying, heating and diet make up much of a typical UK carbon footprint.",
+   "accept": [
+    "its carbon footprint"
+   ]
+  },
+  {
+   "id": "geography.m.su.w",
+   "topic": "geography.sustainability",
+   "kind": "written",
+   "prompt": "Using one example, explain how a project can be environmentally, socially and economically sustainable.",
+   "hints": [
+    "Name and describe a project (e.g. an eco-town, a rainforest ecotourism lodge, a solar scheme)",
+    "How it is environmentally sustainable",
+    "How it is socially sustainable",
+    "How it is economically sustainable",
+    "Any weakness"
+   ],
+   "model": "An ecotourism lodge in the rainforest, run with a local community, can be sustainable in all three ways. Environmentally, it uses solar power, collects rainwater and treats its waste, and visitor numbers are limited so the forest and wildlife are protected; some profits fund rangers. Socially, local people are employed as guides and cooks, their culture is respected, and they have a say in decisions. Economically, it earns steady income that stays in the community instead of leaking to foreign companies, which gives people a reason to keep the forest standing rather than sell it for logging. A weakness is that guests still fly long distances, so its carbon footprint is not zero.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Sustainable development (Brundtland Report, 1987): meeting the needs of the present without compromising the ability of future generations to meet their own needs.\nThree parts: environmental, social and economic.\nThe UN agreed 17 Sustainable Development Goals in 2015, for 2030.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.pl.arg",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ARG",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Argentina",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Argentina. Aconcagua in the Argentine Andes is the highest mountain outside Asia."
+  },
+  {
+   "id": "geography.m.plc.arg",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Argentina?",
+   "answer": "Buenos Aires",
+   "distractors": [
+    "Montevideo",
+    "Córdoba"
+   ],
+   "explain": "The capital of Argentina is Buenos Aires. Aconcagua in the Argentine Andes is the highest mountain outside Asia.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ARG",
+   "zoom": [
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Argentina** is **Buenos Aires**. Aconcagua in the Argentine Andes is the highest mountain outside Asia."
+  },
+  {
+   "id": "geography.m.pl.ven",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "VEN",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Venezuela",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Venezuela. Angel Falls in Venezuela is the world’s highest uninterrupted waterfall."
+  },
+  {
+   "id": "geography.m.plc.ven",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Venezuela?",
+   "answer": "Caracas",
+   "distractors": [
+    "Bogotá",
+    "Maracaibo"
+   ],
+   "explain": "The capital of Venezuela is Caracas. Angel Falls in Venezuela is the world’s highest uninterrupted waterfall.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "VEN",
+   "zoom": [
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Venezuela** is **Caracas**. Angel Falls in Venezuela is the world’s highest uninterrupted waterfall."
+  },
+  {
+   "id": "geography.m.pl.ury",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "URY",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Uruguay",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Uruguay. Uruguay hosted and won the first football World Cup in 1930."
+  },
+  {
+   "id": "geography.m.plc.ury",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Uruguay?",
+   "answer": "Montevideo",
+   "distractors": [
+    "Buenos Aires",
+    "Asunción"
+   ],
+   "explain": "The capital of Uruguay is Montevideo. Uruguay hosted and won the first football World Cup in 1930.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "URY",
+   "zoom": [
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Uruguay** is **Montevideo**. Uruguay hosted and won the first football World Cup in 1930."
+  },
+  {
+   "id": "geography.m.pl.bra",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BRA",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Brazil",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Brazil. Brasília was built from scratch and became the capital in 1960."
+  },
+  {
+   "id": "geography.m.plc.bra",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Brazil?",
+   "answer": "Brasília",
+   "distractors": [
+    "Rio de Janeiro",
+    "São Paulo"
+   ],
+   "explain": "The capital of Brazil is Brasília. Brasília was built from scratch and became the capital in 1960.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BRA",
+   "zoom": [
+    "South America"
+   ],
+   "fill": true,
+   "accept": [
+    "Brasilia"
+   ],
+   "learn": "The capital of **Brazil** is **Brasília**. Brasília was built from scratch and became the capital in 1960."
+  },
+  {
+   "id": "geography.m.pl.mex",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MEX",
+   "zoom": [
+    "North America"
+   ],
+   "answer": "Mexico",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Mexico. Mexico City stands on the drained lake where the Aztec capital Tenochtitlan once stood."
+  },
+  {
+   "id": "geography.m.plc.mex",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Mexico?",
+   "answer": "Mexico City",
+   "distractors": [
+    "Guadalajara",
+    "Cancún"
+   ],
+   "explain": "The capital of Mexico is Mexico City. Mexico City stands on the drained lake where the Aztec capital Tenochtitlan once stood.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MEX",
+   "zoom": [
+    "North America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Mexico** is **Mexico City**. Mexico City stands on the drained lake where the Aztec capital Tenochtitlan once stood."
+  },
+  {
+   "id": "geography.m.pl.can",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CAN",
+   "zoom": [
+    "North America"
+   ],
+   "answer": "Canada",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Canada. Ottawa, not Toronto. Canada is the second-largest country in the world."
+  },
+  {
+   "id": "geography.m.plc.can",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Canada?",
+   "answer": "Ottawa",
+   "distractors": [
+    "Toronto",
+    "Montreal"
+   ],
+   "explain": "The capital of Canada is Ottawa. Ottawa, not Toronto. Canada is the second-largest country in the world.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CAN",
+   "zoom": [
+    "North America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Canada** is **Ottawa**. Ottawa, not Toronto. Canada is the second-largest country in the world."
+  },
+  {
+   "id": "geography.m.pl.ken",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KEN",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Kenya",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Kenya. Kenya lies on the Equator and the Great Rift Valley runs through it."
+  },
+  {
+   "id": "geography.m.plc.ken",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Kenya?",
+   "answer": "Nairobi",
+   "distractors": [
+    "Mombasa",
+    "Kampala"
+   ],
+   "explain": "The capital of Kenya is Nairobi. Kenya lies on the Equator and the Great Rift Valley runs through it.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KEN",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Kenya** is **Nairobi**. Kenya lies on the Equator and the Great Rift Valley runs through it."
+  },
+  {
+   "id": "geography.m.pl.uga",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "UGA",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Uganda",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Uganda. The White Nile flows out of Lake Victoria at Jinja in Uganda."
+  },
+  {
+   "id": "geography.m.plc.uga",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Uganda?",
+   "answer": "Kampala",
+   "distractors": [
+    "Nairobi",
+    "Kigali"
+   ],
+   "explain": "The capital of Uganda is Kampala. The White Nile flows out of Lake Victoria at Jinja in Uganda.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "UGA",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Uganda** is **Kampala**. The White Nile flows out of Lake Victoria at Jinja in Uganda."
+  },
+  {
+   "id": "geography.m.pl.rwa",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "RWA",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Rwanda",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Rwanda. Rwanda is called “the land of a thousand hills”."
+  },
+  {
+   "id": "geography.m.plc.rwa",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Rwanda?",
+   "answer": "Kigali",
+   "distractors": [
+    "Kampala",
+    "Bujumbura"
+   ],
+   "explain": "The capital of Rwanda is Kigali. Rwanda is called “the land of a thousand hills”.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "RWA",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Rwanda** is **Kigali**. Rwanda is called “the land of a thousand hills”."
+  },
+  {
+   "id": "geography.m.pl.zaf",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ZAF",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "South Africa",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is South Africa. South Africa has three capitals: Pretoria (government), Cape Town (parliament) and Bloemfontein (courts)."
+  },
+  {
+   "id": "geography.m.plc.zaf",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of South Africa?",
+   "answer": "Pretoria",
+   "distractors": [
+    "Johannesburg",
+    "Durban"
+   ],
+   "explain": "The capital of South Africa is Pretoria. South Africa has three capitals: Pretoria (government), Cape Town (parliament) and Bloemfontein (courts).",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ZAF",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [
+    "Cape Town",
+    "Bloemfontein"
+   ],
+   "learn": "The capital of **South Africa** is **Pretoria**. South Africa has three capitals: Pretoria (government), Cape Town (parliament) and Bloemfontein (courts)."
+  },
+  {
+   "id": "geography.m.pl.zwe",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ZWE",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Zimbabwe",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Zimbabwe. Victoria Falls lies on Zimbabwe’s border with Zambia."
+  },
+  {
+   "id": "geography.m.plc.zwe",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Zimbabwe?",
+   "answer": "Harare",
+   "distractors": [
+    "Lusaka",
+    "Bulawayo"
+   ],
+   "explain": "The capital of Zimbabwe is Harare. Victoria Falls lies on Zimbabwe’s border with Zambia.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ZWE",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Zimbabwe** is **Harare**. Victoria Falls lies on Zimbabwe’s border with Zambia."
+  },
+  {
+   "id": "geography.m.pl.sen",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "SEN",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Senegal",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Senegal. Dakar is close to the westernmost point of mainland Africa."
+  },
+  {
+   "id": "geography.m.plc.sen",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Senegal?",
+   "answer": "Dakar",
+   "distractors": [
+    "Bamako",
+    "Banjul"
+   ],
+   "explain": "The capital of Senegal is Dakar. Dakar is close to the westernmost point of mainland Africa.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "SEN",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Senegal** is **Dakar**. Dakar is close to the westernmost point of mainland Africa."
+  },
+  {
+   "id": "geography.m.pl.cmr",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CMR",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Cameroon",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Cameroon. Cameroon is nicknamed “Africa in miniature” for its range of landscapes."
+  },
+  {
+   "id": "geography.m.plc.cmr",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Cameroon?",
+   "answer": "Yaoundé",
+   "distractors": [
+    "Douala",
+    "Lagos"
+   ],
+   "explain": "The capital of Cameroon is Yaoundé. Cameroon is nicknamed “Africa in miniature” for its range of landscapes.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CMR",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [
+    "Yaounde"
+   ],
+   "learn": "The capital of **Cameroon** is **Yaoundé**. Cameroon is nicknamed “Africa in miniature” for its range of landscapes."
+  },
+  {
+   "id": "geography.m.pl.ago",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "AGO",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Angola",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Angola. Angola is one of Africa’s biggest oil producers."
+  },
+  {
+   "id": "geography.m.plc.ago",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Angola?",
+   "answer": "Luanda",
+   "distractors": [
+    "Kinshasa",
+    "Windhoek"
+   ],
+   "explain": "The capital of Angola is Luanda. Angola is one of Africa’s biggest oil producers.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "AGO",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Angola** is **Luanda**. Angola is one of Africa’s biggest oil producers."
+  },
+  {
+   "id": "geography.m.pl.bwa",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BWA",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Botswana",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Botswana. The Okavango Delta is a river that flows into the Kalahari and never reaches the sea."
+  },
+  {
+   "id": "geography.m.plc.bwa",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Botswana?",
+   "answer": "Gaborone",
+   "distractors": [
+    "Windhoek",
+    "Harare"
+   ],
+   "explain": "The capital of Botswana is Gaborone. The Okavango Delta is a river that flows into the Kalahari and never reaches the sea.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BWA",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Botswana** is **Gaborone**. The Okavango Delta is a river that flows into the Kalahari and never reaches the sea."
+  },
+  {
+   "id": "geography.m.pl.nam",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NAM",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Namibia",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Namibia. The Namib is thought to be the oldest desert on Earth."
+  },
+  {
+   "id": "geography.m.plc.nam",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Namibia?",
+   "answer": "Windhoek",
+   "distractors": [
+    "Gaborone",
+    "Luanda"
+   ],
+   "explain": "The capital of Namibia is Windhoek. The Namib is thought to be the oldest desert on Earth.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NAM",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Namibia** is **Windhoek**. The Namib is thought to be the oldest desert on Earth."
+  },
+  {
+   "id": "geography.m.pl.mli",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MLI",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Mali",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Mali. Timbuktu in Mali was a great centre of Islamic learning in the 1400s and 1500s."
+  },
+  {
+   "id": "geography.m.plc.mli",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Mali?",
+   "answer": "Bamako",
+   "distractors": [
+    "Timbuktu",
+    "Dakar"
+   ],
+   "explain": "The capital of Mali is Bamako. Timbuktu in Mali was a great centre of Islamic learning in the 1400s and 1500s.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MLI",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Mali** is **Bamako**. Timbuktu in Mali was a great centre of Islamic learning in the 1400s and 1500s."
+  },
+  {
+   "id": "geography.m.pl.irn",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IRN",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Iran",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Iran. Iran was the heart of ancient Persia, the empire the Greeks fought at Marathon and Salamis."
+  },
+  {
+   "id": "geography.m.plc.irn",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Iran?",
+   "answer": "Tehran",
+   "distractors": [
+    "Baghdad",
+    "Isfahan"
+   ],
+   "explain": "The capital of Iran is Tehran. Iran was the heart of ancient Persia, the empire the Greeks fought at Marathon and Salamis.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IRN",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Iran** is **Tehran**. Iran was the heart of ancient Persia, the empire the Greeks fought at Marathon and Salamis."
+  },
+  {
+   "id": "geography.m.pl.sau",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "SAU",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Saudi Arabia",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Saudi Arabia. Saudi Arabia has no permanent rivers and gets much of its drinking water from desalination."
+  },
+  {
+   "id": "geography.m.plc.sau",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Saudi Arabia?",
+   "answer": "Riyadh",
+   "distractors": [
+    "Jeddah",
+    "Mecca"
+   ],
+   "explain": "The capital of Saudi Arabia is Riyadh. Saudi Arabia has no permanent rivers and gets much of its drinking water from desalination.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "SAU",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Saudi Arabia** is **Riyadh**. Saudi Arabia has no permanent rivers and gets much of its drinking water from desalination."
+  },
+  {
+   "id": "geography.m.pl.pak",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "PAK",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Pakistan",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Pakistan. K2, the world’s second-highest mountain, is on Pakistan’s border with China."
+  },
+  {
+   "id": "geography.m.plc.pak",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Pakistan?",
+   "answer": "Islamabad",
+   "distractors": [
+    "Karachi",
+    "Lahore"
+   ],
+   "explain": "The capital of Pakistan is Islamabad. K2, the world’s second-highest mountain, is on Pakistan’s border with China.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "PAK",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Pakistan** is **Islamabad**. K2, the world’s second-highest mountain, is on Pakistan’s border with China."
+  },
+  {
+   "id": "geography.m.pl.bgd",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BGD",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Bangladesh",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Bangladesh. Most of Bangladesh is a huge, low delta of the Ganges and Brahmaputra rivers."
+  },
+  {
+   "id": "geography.m.plc.bgd",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Bangladesh?",
+   "answer": "Dhaka",
+   "distractors": [
+    "Kolkata",
+    "Chittagong"
+   ],
+   "explain": "The capital of Bangladesh is Dhaka. Most of Bangladesh is a huge, low delta of the Ganges and Brahmaputra rivers.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BGD",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Bangladesh** is **Dhaka**. Most of Bangladesh is a huge, low delta of the Ganges and Brahmaputra rivers."
+  },
+  {
+   "id": "geography.m.pl.vnm",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "VNM",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Vietnam",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Vietnam. The Mekong River ends in a vast rice-growing delta in southern Vietnam."
+  },
+  {
+   "id": "geography.m.plc.vnm",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Vietnam?",
+   "answer": "Hanoi",
+   "distractors": [
+    "Ho Chi Minh City",
+    "Bangkok"
+   ],
+   "explain": "The capital of Vietnam is Hanoi. The Mekong River ends in a vast rice-growing delta in southern Vietnam.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "VNM",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Vietnam** is **Hanoi**. The Mekong River ends in a vast rice-growing delta in southern Vietnam."
+  },
+  {
+   "id": "geography.m.pl.tha",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "THA",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Thailand",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Thailand. Thailand is one of the world’s biggest rice exporters."
+  },
+  {
+   "id": "geography.m.plc.tha",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Thailand?",
+   "answer": "Bangkok",
+   "distractors": [
+    "Phuket",
+    "Hanoi"
+   ],
+   "explain": "The capital of Thailand is Bangkok. Thailand is one of the world’s biggest rice exporters.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "THA",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Thailand** is **Bangkok**. Thailand is one of the world’s biggest rice exporters."
+  },
+  {
+   "id": "geography.m.pl.kor",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KOR",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "South Korea",
+   "accept": [
+    "Korea"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is South Korea. South Korea went from one of the poorest countries in the 1950s to one of the richest."
+  },
+  {
+   "id": "geography.m.plc.kor",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of South Korea?",
+   "answer": "Seoul",
+   "distractors": [
+    "Busan",
+    "Pyongyang"
+   ],
+   "explain": "The capital of South Korea is Seoul. South Korea went from one of the poorest countries in the 1950s to one of the richest.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KOR",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **South Korea** is **Seoul**. South Korea went from one of the poorest countries in the 1950s to one of the richest."
+  },
+  {
+   "id": "geography.m.pl.aus",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "AUS",
+   "zoom": [
+    "Oceania",
+    "Asia"
+   ],
+   "answer": "Australia",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Australia. Canberra was built as a compromise between rivals Sydney and Melbourne."
+  },
+  {
+   "id": "geography.m.plc.aus",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Australia?",
+   "answer": "Canberra",
+   "distractors": [
+    "Sydney",
+    "Melbourne"
+   ],
+   "explain": "The capital of Australia is Canberra. Canberra was built as a compromise between rivals Sydney and Melbourne.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "AUS",
+   "zoom": [
+    "Oceania",
+    "Asia"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Australia** is **Canberra**. Canberra was built as a compromise between rivals Sydney and Melbourne."
+  },
+  {
+   "id": "geography.m.pl.nzl",
+   "topic": "geography.places-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NZL",
+   "zoom": [
+    "Oceania",
+    "Asia"
+   ],
+   "answer": "New Zealand",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is New Zealand. Wellington is the southernmost capital city of any country."
+  },
+  {
+   "id": "geography.m.plc.nzl",
+   "topic": "geography.places-2",
+   "kind": "fact",
+   "prompt": "What is the capital of New Zealand?",
+   "answer": "Wellington",
+   "distractors": [
+    "Auckland",
+    "Christchurch"
+   ],
+   "explain": "The capital of New Zealand is Wellington. Wellington is the southernmost capital city of any country.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NZL",
+   "zoom": [
+    "Oceania",
+    "Asia"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **New Zealand** is **Wellington**. Wellington is the southernmost capital city of any country."
+  },
+  {
+   "id": "geography.m.dc.steps",
+   "topic": "geography.decisions",
+   "kind": "order",
+   "prompt": "Put the steps of a good decision-making answer in order.",
+   "items": [
+    "Identify the options",
+    "Identify the stakeholders and their views",
+    "Weigh the costs and benefits of each option",
+    "Choose one option",
+    "Justify it and say why you rejected the others"
+   ],
+   "labels": null,
+   "explain": "GCSE mark schemes reward a clear choice, backed by evidence, that also explains the drawbacks."
+  },
+  {
+   "id": "geography.m.dc.stakeholder",
+   "topic": "geography.decisions",
+   "kind": "mcq",
+   "prompt": "In geography, what is a stakeholder?",
+   "options": [
+    {
+     "text": "A person or group affected by, or interested in, a decision",
+     "correct": true
+    },
+    {
+     "text": "Someone who holds a wooden stake",
+     "correct": false,
+     "feedback": "It means someone with a “stake” (an interest) in an issue."
+    },
+    {
+     "text": "Only the government",
+     "correct": false,
+     "feedback": "Residents, businesses, charities and others are stakeholders too."
+    },
+    {
+     "text": "A type of bank account",
+     "correct": false,
+     "feedback": "It is about people with an interest."
+    }
+   ],
+   "explain": "For a new coastal defence: residents, farmers, the council, tourists and wildlife groups."
+  },
+  {
+   "id": "geography.m.dc.coast",
+   "topic": "geography.decisions",
+   "kind": "mcq",
+   "prompt": "A council can protect only one of these with its coastal defence budget. Which choice is easiest to justify on cost–benefit grounds?",
+   "options": [
+    {
+     "text": "A town of 10,000 people with a railway line",
+     "correct": true
+    },
+    {
+     "text": "An empty field worth very little",
+     "correct": false,
+     "feedback": "The cost would far outweigh what is protected."
+    },
+    {
+     "text": "A single disused barn",
+     "correct": false,
+     "feedback": "Very little would be gained."
+    },
+    {
+     "text": "A cliff with nothing on it",
+     "correct": false,
+     "feedback": "Nothing valuable is at risk."
+    }
+   ],
+   "explain": "Cost–benefit analysis compares what protection costs with the value of what it saves. It is not the only factor: fairness and the environment matter too."
+  },
+  {
+   "id": "geography.m.dc.sustain",
+   "topic": "geography.decisions",
+   "kind": "mcq",
+   "prompt": "Which phrase from an answer shows the strongest evaluation?",
+   "options": [
+    {
+     "text": "“Although the dam is the most expensive option, it is the most sustainable because…”",
+     "correct": true
+    },
+    {
+     "text": "“The dam is good.”",
+     "correct": false,
+     "feedback": "There is no reason or comparison."
+    },
+    {
+     "text": "“I like option B best.”",
+     "correct": false,
+     "feedback": "A choice needs justifying with evidence."
+    },
+    {
+     "text": "“All the options are the same.”",
+     "correct": false,
+     "feedback": "You must weigh them."
+    }
+   ],
+   "explain": "Words like “although”, “however” and “on balance” show you are weighing the options."
+  },
+  {
+   "id": "geography.m.dc.conflict",
+   "topic": "geography.decisions",
+   "kind": "mcq",
+   "prompt": "A new holiday resort is planned on an unspoilt Greek island. Which stakeholders are most likely to DISAGREE?",
+   "options": [
+    {
+     "text": "A hotel developer and a local conservation group",
+     "correct": true
+    },
+    {
+     "text": "A hotel developer and a construction company",
+     "correct": false,
+     "feedback": "Both would probably welcome the project."
+    },
+    {
+     "text": "Two conservation charities",
+     "correct": false,
+     "feedback": "They would probably agree."
+    },
+    {
+     "text": "Tourists and the travel company selling holidays there",
+     "correct": false,
+     "feedback": "Both might welcome it."
+    }
+   ],
+   "explain": "Identifying conflicting views is the first step to a fair decision."
+  },
+  {
+   "id": "geography.m.dc.w",
+   "topic": "geography.decisions",
+   "kind": "written",
+   "prompt": "A coastal town is eroding. The options are: (A) build a sea wall, (B) put rock armour at the base of the cliffs, (C) do nothing and help people move away (managed retreat). Choose one option and justify your choice.",
+   "hints": [
+    "State your choice clearly",
+    "Use costs and benefits of your option",
+    "Consider at least two stakeholders",
+    "Explain why you rejected the other options",
+    "Mention sustainability"
+   ],
+   "model": "I would choose option B, rock armour. It is much cheaper than a sea wall and it absorbs wave energy, so the cliffs erode more slowly, protecting homes and businesses for several decades. Residents and local businesses would welcome this, although some tourists might find the rocks less attractive than a sandy beach. A sea wall would protect the town more strongly, but it is very expensive, reflects wave energy that can scour away the beach, and may simply move the problem along the coast. Managed retreat is the most sustainable in the long term, but it would mean many families losing their homes now, which is unfair while cheaper protection is still possible. Rock armour therefore balances cost, fairness and the environment best, while the council plans for retreat in the future.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Cliffs retreating about 1–2 m a year; about 300 homes at risk within 50 years.\nOption A, sea wall: very expensive per metre; reflects waves; may increase erosion further along the coast.\nOption B, rock armour: cheaper; absorbs wave energy; lasts a few decades.\nOption C, managed retreat: cheapest now; homes and businesses lost; most natural.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.um.burgess",
+   "topic": "geography.urban-models",
+   "kind": "order",
+   "prompt": "Put the zones of the Burgess model in order, from the centre outwards.",
+   "items": [
+    "Central business district (CBD)",
+    "Inner city (factories and older terraced housing)",
+    "Inner suburbs",
+    "Outer suburbs",
+    "Rural–urban fringe"
+   ],
+   "labels": null,
+   "explain": "Ernest Burgess described these rings around Chicago in the 1920s. Real cities fit it only roughly."
+  },
+  {
+   "id": "geography.m.um.cbd",
+   "topic": "geography.urban-models",
+   "kind": "mcq",
+   "prompt": "Why are buildings in the central business district (CBD) usually tall?",
+   "options": [
+    {
+     "text": "Land there is the most expensive, so businesses build upwards",
+     "correct": true
+    },
+    {
+     "text": "The ground is softer",
+     "correct": false,
+     "feedback": "It is about land value."
+    },
+    {
+     "text": "Tall buildings are required by law",
+     "correct": false,
+     "feedback": "It is about cost."
+    },
+    {
+     "text": "People like climbing stairs",
+     "correct": false,
+     "feedback": "Lifts help with that."
+    }
+   ],
+   "explain": "Shops and offices compete for the most accessible land, which drives prices up."
+  },
+  {
+   "id": "geography.m.um.terrace",
+   "topic": "geography.urban-models",
+   "kind": "mcq",
+   "prompt": "In many British cities, rows of terraced houses near the centre were built mainly…",
+   "options": [
+    {
+     "text": "in the 1800s, close to factories, for workers",
+     "correct": true
+    },
+    {
+     "text": "in the 1990s for commuters",
+     "correct": false,
+     "feedback": "Modern estates are usually further out."
+    },
+    {
+     "text": "by the Romans",
+     "correct": false,
+     "feedback": "Roman towns were much smaller."
+    },
+    {
+     "text": "in the countryside",
+     "correct": false,
+     "feedback": "They were built in the inner city."
+    }
+   ],
+   "explain": "Workers had to walk to the factories, so housing was packed in close by."
+  },
+  {
+   "id": "geography.m.um.fringe",
+   "topic": "geography.urban-models",
+   "kind": "mcq",
+   "prompt": "Which land use is typical of the rural–urban fringe?",
+   "options": [
+    {
+     "text": "Out-of-town retail parks, business parks and golf courses",
+     "correct": true
+    },
+    {
+     "text": "Skyscraper offices",
+     "correct": false,
+     "feedback": "Those are in the CBD."
+    },
+    {
+     "text": "Old Victorian factories",
+     "correct": false,
+     "feedback": "Those are in the inner city."
+    },
+    {
+     "text": "City-centre shopping streets",
+     "correct": false,
+     "feedback": "Those are in the CBD."
+    }
+   ],
+   "explain": "Cheap, flat land and easy motorway access attract big developments to the edge of cities."
+  },
+  {
+   "id": "geography.m.um.hoyt",
+   "topic": "geography.urban-models",
+   "kind": "mcq",
+   "prompt": "How does the Hoyt sector model differ from the Burgess model?",
+   "options": [
+    {
+     "text": "It shows wedge-shaped sectors following transport routes, not just rings",
+     "correct": true
+    },
+    {
+     "text": "It only shows the countryside",
+     "correct": false,
+     "feedback": "It is a city model too."
+    },
+    {
+     "text": "It puts factories in the outer suburbs",
+     "correct": false,
+     "feedback": "It shows industry along routes like railways and rivers."
+    },
+    {
+     "text": "There is no difference",
+     "correct": false,
+     "feedback": "Hoyt added sectors."
+    }
+   ],
+   "explain": "Homer Hoyt suggested in 1939 that cities grow outward along roads, railways and rivers."
+  },
+  {
+   "id": "geography.m.um.w",
+   "topic": "geography.urban-models",
+   "kind": "written",
+   "prompt": "How well does the Burgess model describe a UK city you know or have studied?",
+   "hints": [
+    "Briefly describe the model",
+    "Where the city fits (CBD, inner city, suburbs, fringe)",
+    "Where it does not fit (regeneration, out-of-town shopping, social housing on the edge)",
+    "A judgement"
+   ],
+   "model": "The Burgess model shows a city as rings: a central business district, then an inner city of old housing and industry, inner and outer suburbs, and the rural–urban fringe. London fits this broadly. Its CBD in the City and West End has the tallest, most expensive buildings, many inner areas such as Hackney have dense 1800s terraces, and wealthier, lower-density suburbs spread outwards to the green belt. However, it does not fit perfectly. Regeneration has turned former inner-city docks into the skyscrapers of Canary Wharf, some large council estates were built on the edge of the city, and out-of-town retail parks have drawn shops away from the centre. The model is a useful starting point, but real cities are shaped by transport, planning and history as well as distance from the centre.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "Burgess model (1920s): rings from the centre: CBD; inner city (factories, 1800s terraces); inner suburbs; outer suburbs; rural–urban fringe.\nLondon examples: the City (CBD); Hackney (Victorian terraces); outer boroughs such as Bromley (suburbs); Canary Wharf (regenerated docks with skyscrapers).",
+   "passageSource": "Key facts: briefing notes written for this app"
+  },
+  {
+   "id": "geography.m.rc.arctic",
+   "topic": "geography.resources-conflict",
+   "kind": "mcq",
+   "prompt": "Why is the Arctic becoming more contested?",
+   "options": [
+    {
+     "text": "Melting sea ice is opening shipping routes and access to oil, gas and minerals that several countries claim",
+     "correct": true
+    },
+    {
+     "text": "It is getting colder",
+     "correct": false,
+     "feedback": "It is warming faster than almost anywhere."
+    },
+    {
+     "text": "Nobody lives near it",
+     "correct": false,
+     "feedback": "Several countries border it, including Russia, Canada and Norway."
+    },
+    {
+     "text": "It is protected like Antarctica",
+     "correct": false,
+     "feedback": "There is no treaty for the Arctic like the Antarctic Treaty."
+    }
+   ],
+   "explain": "Routes such as the Northern Sea Route along Russia’s coast are becoming usable in summer."
+  },
+  {
+   "id": "geography.m.rc.rare",
+   "topic": "geography.resources-conflict",
+   "kind": "mcq",
+   "prompt": "Rare earth elements and cobalt are vital for phones, batteries and wind turbines. Why does this matter geographically?",
+   "options": [
+    {
+     "text": "They are mined in only a few countries, so supply can be disrupted and mining can harm local people and environments",
+     "correct": true
+    },
+    {
+     "text": "They are found in every garden",
+     "correct": false,
+     "feedback": "They are concentrated in a few places."
+    },
+    {
+     "text": "They are not used in technology",
+     "correct": false,
+     "feedback": "They are essential to it."
+    },
+    {
+     "text": "They never run out",
+     "correct": false,
+     "feedback": "They are finite."
+    }
+   ],
+   "explain": "Much of the world’s cobalt comes from the Democratic Republic of the Congo, sometimes in dangerous conditions."
+  },
+  {
+   "id": "geography.m.rc.water",
+   "topic": "geography.resources-conflict",
+   "kind": "mcq",
+   "prompt": "Which is the best example of countries COOPERATING over a shared river?",
+   "options": [
+    {
+     "text": "A treaty that agrees how much water each country takes and shares data on floods",
+     "correct": true
+    },
+    {
+     "text": "One country building a dam without telling its neighbours",
+     "correct": false,
+     "feedback": "That can cause tension."
+    },
+    {
+     "text": "Polluting the river upstream",
+     "correct": false,
+     "feedback": "That harms neighbours downstream."
+    },
+    {
+     "text": "Closing the river to boats",
+     "correct": false,
+     "feedback": "That is not cooperation."
+    }
+   ],
+   "explain": "The Indus Waters Treaty of 1960 between India and Pakistan lasted for decades despite their rivalry."
+  },
+  {
+   "id": "geography.m.rc.finite",
+   "topic": "geography.resources-conflict",
+   "kind": "mcq",
+   "prompt": "Which of these is a NON-RENEWABLE resource?",
+   "options": [
+    {
+     "text": "Oil",
+     "correct": true
+    },
+    {
+     "text": "Wind",
+     "correct": false,
+     "feedback": "Wind is renewable."
+    },
+    {
+     "text": "Sunlight",
+     "correct": false,
+     "feedback": "Renewable."
+    },
+    {
+     "text": "Timber from a well-managed forest",
+     "correct": false,
+     "feedback": "Managed forests can be renewable."
+    }
+   ],
+   "explain": "Non-renewable resources such as oil, coal and gas will eventually run out."
+  },
+  {
+   "id": "geography.m.rc.w",
+   "topic": "geography.resources-conflict",
+   "kind": "written",
+   "prompt": "Explain why shared or scarce resources can lead to tension between countries. Use at least one example.",
+   "hints": [
+    "Why scarcity or sharing causes tension (upstream–downstream, competing claims)",
+    "A named example (e.g. the Nile, the Euphrates, the Arctic)",
+    "How tension could be reduced (treaties, data sharing)",
+    "A brief conclusion"
+   ],
+   "model": "Resources cause tension when they are scarce or when more than one country depends on them. Rivers are a clear example, because the country upstream can control how much water flows downstream. Ethiopia’s Grand Ethiopian Renaissance Dam on the Blue Nile will provide electricity for development, but Egypt, which depends almost entirely on the Nile, fears its water supply will fall. Similarly, as Arctic sea ice melts, countries such as Russia, Canada and Norway are competing to claim newly reachable seabed resources and shipping routes. Tension can be reduced through treaties that share resources fairly, such as the 1960 Indus Waters Treaty between India and Pakistan, and by sharing data and benefits. Cooperation is possible, but it needs trust and agreed rules.",
+   "words": [
+    60,
+    250
+   ],
+   "passage": "The Nile: Ethiopia’s Grand Ethiopian Renaissance Dam is upstream of Sudan and Egypt.\nThe Arctic: shrinking sea ice is opening routes and seabed resources; Russia, Canada, Norway, Denmark (Greenland) and the USA border it.\nIndus Waters Treaty, 1960: shares the rivers of the Indus basin between India and Pakistan.",
+   "passageSource": "Key facts: briefing notes written for this app"
+  }
+ ]
+}
