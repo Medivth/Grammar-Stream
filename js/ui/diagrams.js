@@ -40,6 +40,11 @@ export function mathsDiagram(d) {
     case 'venn': return venn(d);
     case 'righttri': return rightTri(d);
     case 'trap': return trap(d);
+    case 'curve': return curve(d);
+    case 'sector': return sector(d);
+    case 'colvec': return colvec(d);
+    case 'tree': return tree(d);
+    case 'boxplot': return boxplot(d);
     default: return null;
   }
 }
@@ -416,5 +421,105 @@ function trap(d) {
   el.append(s('path', { d: `M${x0} ${y0} L${x0 + b} ${y0} L${x0 + off + a} ${y0 - h} L${x0 + off} ${y0 - h} Z`, fill: 'none', stroke: INK, 'stroke-width': 2.5, 'stroke-linejoin': 'round' }),
     dash(x0 + off, y0 - h, x0 + off, y0), rightAngle(x0 + off, y0, 10, -10),
     text(x0 + off + a / 2, y0 - h - 10, unit(d.a)), text(x0 + b / 2, y0 + 26, unit(d.b)), text(x0 + off + 10, y0 - h / 2 + 6, unit(d.h), { 'text-anchor': 'start' }));
+  return el;
+}
+
+// --- Year 8 diagrams, part 2 -------------------------------------------------------------------
+
+// a curve on a square grid: { range: [lo, hi], paths: [[[x, y], …], …] } (points outside are clipped)
+function curve(d) {
+  const [lo, hi] = d.range, n = hi - lo;
+  const cell = n > 10 ? 22 : 28, m = 30;
+  const W = n * cell + 2 * m, H = n * cell + 2 * m;
+  const X = (x) => m + (x - lo) * cell, Y = (y) => m + (hi - y) * cell;
+  const el = svg(W, H, 'Graph of a curve', 400);
+  for (let k = lo; k <= hi; k++) {
+    el.append(line(X(k), Y(lo), X(k), Y(hi), { 'stroke-width': 0.6, opacity: 0.45 }), line(X(lo), Y(k), X(hi), Y(k), { 'stroke-width': 0.6, opacity: 0.45 }));
+  }
+  el.append(line(X(lo), Y(0), X(hi), Y(0), { 'stroke-width': 2 }), line(X(0), Y(lo), X(0), Y(hi), { 'stroke-width': 2 }));
+  for (let k = lo; k <= hi; k++) {
+    if (k === 0 || (n > 10 && k % 2 !== 0)) continue;
+    el.append(small(X(k), Y(0) + 16, k < 0 ? `−${-k}` : String(k)), small(X(0) - 8, Y(k) + 4, k < 0 ? `−${-k}` : String(k), { 'text-anchor': 'end' }));
+  }
+  el.append(text(X(hi) + 10, Y(0) + 5, 'x', { 'font-size': 14, 'text-anchor': 'start', 'font-style': 'italic' }), text(X(0), Y(hi) - 10, 'y', { 'font-size': 14, 'font-style': 'italic' }));
+  for (const path of d.paths || []) {
+    let seg = [];
+    const flush = () => { if (seg.length > 1) el.append(s('polyline', { points: seg.join(' '), fill: 'none', stroke: BLUE, 'stroke-width': 3, 'stroke-linejoin': 'round' })); seg = []; };
+    for (const [x, y] of path) {
+      if (y < lo - 0.5 || y > hi + 0.5 || x < lo || x > hi) { flush(); continue; }
+      seg.push(`${X(x).toFixed(1)},${Y(y).toFixed(1)}`);
+    }
+    flush();
+  }
+  return el;
+}
+
+// a sector of a circle: { r, deg } with the radius and angle labelled
+function sector(d) {
+  const W = 300, H = 240, cx = 120, cy = 140, R = 95;
+  const a = (d.deg * Math.PI) / 180;
+  const ex = cx + R * Math.cos(a), ey = cy - R * Math.sin(a);
+  const el = svg(W, H, `Sector with angle ${d.deg} degrees`, 320);
+  el.append(s('circle', { cx, cy, r: R, fill: 'none', stroke: INK, 'stroke-width': 1, 'stroke-dasharray': '4 5', opacity: 0.5 }),
+    s('path', { d: `M${cx} ${cy} L${cx + R} ${cy} A${R} ${R} 0 ${d.deg > 180 ? 1 : 0} 0 ${ex.toFixed(1)} ${ey.toFixed(1)} Z`, fill: BLUE, 'fill-opacity': 0.18, stroke: INK, 'stroke-width': 2.5, 'stroke-linejoin': 'round' }),
+    s('circle', { cx, cy, r: 3, fill: INK }));
+  const ar = 26;
+  el.append(s('path', { d: `M${cx + ar} ${cy} A${ar} ${ar} 0 ${d.deg > 180 ? 1 : 0} 0 ${(cx + ar * Math.cos(a)).toFixed(1)} ${(cy - ar * Math.sin(a)).toFixed(1)}`, fill: 'none', stroke: '#d62f3a', 'stroke-width': 2 }));
+  const mid = a / 2;
+  const lr = d.deg < 60 ? R + 34 : 46; // narrow sectors: label outside the arc
+  el.append(text(cx + lr * Math.cos(mid), cy - lr * Math.sin(mid) + 6, `${d.deg}°`, { fill: '#d62f3a', 'font-size': 15 }),
+    text(cx + R / 2, cy + 22, `${d.r} cm`));
+  return el;
+}
+
+// column vectors side by side: { vectors: [[name, x, y], …] }
+function colvec(d) {
+  const per = 130, W = per * d.vectors.length + 10, H = 110;
+  const el = svg(W, H, 'Column vectors', Math.min(420, W * 1.2));
+  const neg = (v) => (v < 0 ? `−${-v}` : String(v));
+  d.vectors.forEach(([name, x, y], i) => {
+    const x0 = 10 + i * per;
+    el.append(text(x0 + 20, 62, `${name} =`, { 'font-size': 20, 'font-style': 'italic', 'text-anchor': 'start' }));
+    const bx = x0 + 62;
+    el.append(s('path', { d: `M${bx + 8} 18 Q${bx - 6} 55 ${bx + 8} 92`, fill: 'none', stroke: INK, 'stroke-width': 2.5 }),
+      s('path', { d: `M${bx + 46} 18 Q${bx + 60} 55 ${bx + 46} 92`, fill: 'none', stroke: INK, 'stroke-width': 2.5 }),
+      text(bx + 27, 46, neg(x), { 'font-size': 20 }), text(bx + 27, 82, neg(y), { 'font-size': 20 }));
+  });
+  return el;
+}
+
+// two-stage probability tree: { a: [[label, p], [label, p]], b: [[label, p], [label, p]] }
+// or b2: [[…second-stage pair after the first branch], […after the second]] when they differ
+function tree(d) {
+  const W = 380, H = 250, x0 = 18, x1 = 150, x2 = 300, ys = [70, 180], leaf = [[30, 110], [140, 220]];
+  const el = svg(W, H, 'Probability tree', 420);
+  const branch = (xa, ya, xb, yb, label, p, above) => {
+    el.append(line(xa, ya, xb, yb, { 'stroke-width': 2 }));
+    const mx = (xa + xb) / 2, my = (ya + yb) / 2;
+    el.append(small(mx - 4, my + (above ? -8 : 18), p, { 'font-size': 14, 'font-weight': 700, fill: BLUE }));
+    el.append(small(xb + 6, yb + 5, label, { 'text-anchor': 'start', 'font-size': 14 }));
+  };
+  d.a.forEach(([label, p], i) => {
+    branch(x0, H / 2, x1, ys[i], label, p, i === 0);
+    const second = d.b2 ? d.b2[i] : d.b;
+    second.forEach(([l2, p2], j) => branch(x1 + 62, ys[i], x2, leaf[i][j], l2, p2, j === 0));
+  });
+  return el;
+}
+
+// box plot on a scale: { min, q1, med, q3, max, lo, hi, label }
+function boxplot(d) {
+  const W = 400, H = 150, L = 30, R = 370, y = 60;
+  const X = (v) => L + ((v - d.lo) / (d.hi - d.lo)) * (R - L);
+  const el = svg(W, H, 'Box plot', 440);
+  el.append(line(X(d.min), y, X(d.q1), y, { 'stroke-width': 2 }), line(X(d.q3), y, X(d.max), y, { 'stroke-width': 2 }),
+    line(X(d.min), y - 14, X(d.min), y + 14, { 'stroke-width': 2 }), line(X(d.max), y - 14, X(d.max), y + 14, { 'stroke-width': 2 }),
+    s('rect', { x: X(d.q1), y: y - 24, width: X(d.q3) - X(d.q1), height: 48, fill: BLUE, 'fill-opacity': 0.15, stroke: INK, 'stroke-width': 2.5 }),
+    line(X(d.med), y - 24, X(d.med), y + 24, { 'stroke-width': 3 }));
+  const ay = 112;
+  el.append(line(L, ay, R, ay, { 'stroke-width': 1.5 }));
+  const step = d.hi - d.lo > 60 ? 10 : 5;
+  for (let v = d.lo; v <= d.hi; v += step) el.append(line(X(v), ay, X(v), ay + 6, { 'stroke-width': 1.2 }), small(X(v), ay + 22, String(v), { 'font-size': 12 }));
+  if (d.label) el.append(small(R, ay - 8, d.label, { 'text-anchor': 'end', 'font-size': 12 }));
   return el;
 }

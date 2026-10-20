@@ -14,7 +14,7 @@ const KS1_SOURCES = ['maths', 'maths2', 'reading', 'reading2', 'spelling', 'spel
 // tools/content-src/y3/*.mjs -> content/y3/...; its own reading ladder and the merged timeline come last.
 const Y3_SOURCES = ['maths', 'reading', 'spelling', 'science', 'history', 'books'];
 // the Year 8 course (its own content only): tools/content-src/y8/*.mjs -> content/y8/..., content/index-y8.json
-const Y8_SOURCES = ['english', 'english2', 'english-lang', 'english-lang2', 'maths', 'science', 'science2', 'history', 'history2', 'geography', 'geography2', 'computing', 'greek', 'greek2', 'greek3', 'books'];
+const Y8_SOURCES = ['english', 'english2', 'english-lang', 'english-lang2', 'maths', 'maths2', 'maths3', 'science', 'science2', 'history', 'history2', 'geography', 'geography2', 'computing', 'computing2', 'greek', 'greek2', 'greek3', 'books'];
 
 export async function buildAll() {
   const files = {};
