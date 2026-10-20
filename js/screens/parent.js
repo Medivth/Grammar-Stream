@@ -152,7 +152,7 @@ function courseCard(app) {
 function childrenCard(app) {
   const list = app.profiles();
   return h('div', { class: 'card stack' }, h('h2', {}, 'Children on this device'),
-    h('p', { class: 'muted' }, 'Each child has their own course, capybara, progress and backup file. When there is more than one, the app asks “Who’s learning?” when it opens.'),
+    h('p', { class: 'muted' }, 'Each child has their own course, companion, progress and backup file. When there is more than one, the app asks “Who’s learning?” when it opens.'),
     h('ul', { class: 'plain-list' }, list.map((p) => h('li', { class: 'row', style: { justifyContent: 'space-between', alignItems: 'center' } },
       h('span', {}, h('strong', {}, p.name || '(not set up)'), h('span', { class: 'muted small' }, ` · ${COURSES[p.course]?.title || ''}${p.id === app.profileId ? ' · showing now' : ''}`)),
       p.id === app.profileId ? null : h('button', { class: 'btn-ghost', onclick: async () => { await app.useProfile(p.id); unlockedUntil = Date.now() + 10 * 60 * 1000; dashboard(app); } }, 'Switch to')))),
@@ -264,7 +264,7 @@ function settingsForm(app) {
   const rung = h('select', { id: 'set-rung' }, (app.db.rungs || []).map((r, i) => h('option', { value: i + 1, selected: i + 1 === (st.settings.readingRung || 1) }, `${i + 1}. ${r} (e.g. ${app.db.ladder.find((b) => b.rung === i + 1)?.title})`)));
   return h('div', { class: 'card stack' }, h('h2', {}, 'Settings'),
     h('div', { class: 'field' }, h('label', { for: 'set-name' }, '{Her} first name'), name),
-    h('div', { class: 'field' }, h('label', { for: 'set-comp' }, 'Capybara’s name'), comp),
+    h('div', { class: 'field' }, h('label', { for: 'set-comp' }, 'Companion’s name'), comp),
     h('div', { class: 'grid two' },
       h('div', { class: 'field' }, h('label', { for: 'set-bed' }, 'Bedtime (app rests 1 hour before)'), bed),
       h('div', { class: 'field' }, h('label', { for: 'set-early' }, 'Earliest start'), early)),

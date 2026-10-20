@@ -48,7 +48,7 @@ export function placesStatus(state, db) {
   return { known: out, totals };
 }
 
-// Milestones are fixed rewards for real achievement (never random). Some unlock capybara accessories.
+// Milestones are fixed rewards for real achievement (never random). Some unlock companion accessories.
 export const MILESTONES = [
   { id: 'first-session', title: 'First steps', desc: 'Finish your first session', goal: 1, measure: (s) => s.sessions.filter((x) => x.completed).length },
   { id: 'first-mastered', title: 'Topic tamer', desc: 'Master your first topic', goal: 1, measure: (s) => Object.values(s.topics).filter((t) => t.state === 'mastered').length, unlock: 'sunglasses' },

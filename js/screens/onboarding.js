@@ -1,7 +1,7 @@
-// First run: a grown-up sets up, then the child creates their capybara. Also: who's learning?
+// First run: a grown-up sets up, then the child creates their companion (a capybara or a lion). Also: who's learning?
 
 import { h, mount, toast } from '../ui/dom.js';
-import { capybaraSVG, FURS, ACCESSORIES } from '../ui/capybara.js';
+import { capybaraSVG, FURS, LION_FURS, ACCESSORIES, SPECIES, speciesOf, companionNoun } from '../ui/capybara.js';
 import { requestPersistence } from '../platform/storage.js';
 import { COURSES } from '../core/subjects.js';
 import { setPronoun } from '../core/pronoun.js';
@@ -53,11 +53,11 @@ export function welcomeScreen(app) {
         app.save();
         requestPersistence();
         app.go('#/companion');
-      } }, 'Next: meet the capybara')))));
+      } }, 'Next: meet your companion')))));
   name.focus();
 }
 
-/** More than one child on this device: tap your capybara to start. */
+/** More than one child on this device: tap your companion to start. */
 export function whoScreen(app) {
   const list = app.profiles();
   mount(app.root, h('div', { class: 'narrow stack center' },
@@ -66,7 +66,7 @@ export function whoScreen(app) {
       let comp = null;
       try { comp = JSON.parse(localStorage.getItem(p.id === 'main' ? 'grammar-stream.save' : `grammar-stream.save.${p.id}`) || 'null')?.data?.profile?.companion; } catch { /* unreadable */ }
       const card = h('button', { class: 'who-card card', type: 'button', onclick: async () => { await app.useProfile(p.id); app.go('#/home'); } });
-      card.innerHTML = capybaraSVG({ ...(comp || {}), mood: 'happy', title: comp?.name || 'Capybara' });
+      card.innerHTML = capybaraSVG({ ...(comp || {}), species: speciesOf(comp, COURSES[p.course]?.young), mood: 'happy', title: comp?.name || 'Companion' });
       card.append(h('strong', {}, p.name || 'Me'), h('span', { class: 'muted small' }, COURSES[p.course]?.short || ''));
       return card;
     })),
@@ -74,30 +74,38 @@ export function whoScreen(app) {
 }
 
 export function companionScreen(app) {
-  const c = { fur: 'caramel', accessory: 'yuzu', name: '', ...(app.state.profile?.companion || {}) };
+  const young = !!COURSES[app.state.course]?.young;
+  const c = { fur: 'caramel', accessory: young ? 'racehelmet' : 'yuzu', name: '', ...(app.state.profile?.companion || {}) };
+  c.species = speciesOf(c, young);
+  const noun = () => companionNoun(c.species);
   const preview = h('div', { class: 'capy', style: { maxWidth: '260px', margin: '0 auto' } });
-  const draw = () => { preview.innerHTML = capybaraSVG({ ...c, mood: 'happy', title: c.name || 'Your capybara' }); };
+  const title = h('h1', { class: 'center' });
+  const draw = () => { preview.innerHTML = capybaraSVG({ ...c, mood: 'happy', title: c.name || `Your ${noun()}` }); title.textContent = `Hi ${app.state.profile?.childName || ''}! Meet your ${noun()}`; name.placeholder = `Give your ${noun()} a name`; };
+  const kindRow = h('div', { class: 'capy-pick', role: 'group', 'aria-label': 'Animal' });
   const furRow = h('div', { class: 'capy-pick', role: 'group', 'aria-label': 'Fur colour' });
   const accRow = h('div', { class: 'capy-pick', role: 'group', 'aria-label': 'Accessory' });
   const drawPickers = () => {
-    furRow.replaceChildren(...Object.entries(FURS).map(([k, f]) => h('button', { type: 'button', 'aria-pressed': String(c.fur === k), 'aria-label': k, onclick: () => { c.fur = k; draw(); drawPickers(); } }, h('span', { class: 'swatch', style: { background: f.body } }))));
-    accRow.replaceChildren(...Object.entries(ACCESSORIES).filter(([k]) => starterAccessories().includes(k)).map(([k, label]) => h('button', { type: 'button', 'aria-pressed': String(c.accessory === k), onclick: () => { c.accessory = k; draw(); drawPickers(); } }, label)));
+    kindRow.replaceChildren(...Object.entries(SPECIES).map(([k, label]) => h('button', { type: 'button', 'aria-pressed': String(c.species === k), onclick: () => { c.species = k; draw(); drawPickers(); } }, label)));
+    const furs = c.species === 'lion' ? LION_FURS : FURS;
+    furRow.replaceChildren(...Object.entries(furs).map(([k, f]) => h('button', { type: 'button', 'aria-pressed': String(c.fur === k), 'aria-label': k, onclick: () => { c.fur = k; draw(); drawPickers(); } }, h('span', { class: 'swatch', style: { background: f.mane ? `linear-gradient(135deg, ${f.mane} 50%, ${f.body} 50%)` : f.body } }))));
+    accRow.replaceChildren(...Object.entries(ACCESSORIES).filter(([k]) => starterAccessories().includes(k)).map(([k, label]) => h('button', { type: 'button', 'aria-pressed': String(c.accessory === k), onclick: () => { c.accessory = k; delete c.wear; draw(); drawPickers(); } }, label)));
   };
-  const name = h('input', { type: 'text', id: 'capy-name', placeholder: 'Give your capybara a name', maxlength: 20, value: c.name, oninput: () => { c.name = name.value; draw(); } });
+  const name = h('input', { type: 'text', id: 'capy-name', maxlength: 20, value: c.name, oninput: () => { c.name = name.value; draw(); } });
   const heroIn = h('input', { type: 'text', id: 'hero-name', placeholder: 'e.g. Captain Thunder', maxlength: 24, value: app.state.profile?.hero || '' });
   draw();
   drawPickers();
   mount(app.root, h('div', { class: 'narrow stack' },
-    h('h1', { class: 'center' }, `Hi ${app.state.profile?.childName || ''}! Meet your capybara`),
-    h('p', { class: 'center muted' }, 'Your capybara will learn alongside you. Sometimes you’ll teach it, and sometimes it will get things wrong for you to fix. You’ll unlock more outfits as you hit milestones.'),
-    COURSES[app.state.course]?.young ? h('div', { class: 'card stack' }, h('div', { class: 'field' }, h('label', { for: 'hero-name' }, 'And your superhero name? (it will appear in your maths adventures)'), heroIn)) : null,
+    title,
+    h('p', { class: 'center muted' }, 'Your companion will learn alongside you. Sometimes you’ll teach it, and sometimes it will get things wrong for you to fix. You’ll unlock more outfits as you hit milestones.'),
+    young ? h('div', { class: 'card stack' }, h('div', { class: 'field' }, h('label', { for: 'hero-name' }, 'And your superhero name? (it will appear in your maths adventures)'), heroIn)) : null,
     h('div', { class: 'card stack' }, preview,
+      h('div', { class: 'field' }, h('label', {}, 'Animal'), kindRow),
       h('div', { class: 'field' }, h('label', {}, 'Fur'), furRow),
       h('div', { class: 'field' }, h('label', {}, 'Something special'), accRow),
       h('div', { class: 'field' }, h('label', { for: 'capy-name' }, 'Name'), name),
       h('button', { class: 'btn-primary btn-big', onclick: () => {
-        if (!c.name.trim()) return toast('Your capybara needs a name!');
-        app.state.profile.companion = { name: c.name.trim(), fur: c.fur, accessory: c.accessory };
+        if (!c.name.trim()) return toast(`Your ${noun()} needs a name!`);
+        app.state.profile.companion = { ...(app.state.profile.companion || {}), name: c.name.trim(), species: c.species, fur: c.fur, accessory: c.accessory, ...(c.wear ? { wear: c.wear } : {}) };
         if (heroIn.value.trim()) app.state.profile.hero = heroIn.value.trim();
         app.save();
         app.go('#/home');

@@ -108,7 +108,7 @@ function checkStage(app, piece, prompt) {
       mount(app.root, h('div', { class: 'narrow stack center' }, capybaraEl({ ...c, mood: 'happy' }, 'capy bob'),
         h('h1', {}, 'Handed in!'),
         h('p', { class: 'learn' }, piece.mode === 'paper' ? 'Give your paper to your grown-up. They’ll leave you some feedback in the app.' : 'Your grown-up will read it and leave you some feedback.'),
-        h('p', { class: 'muted' }, `That was a big piece of work. ${c.name || 'Your capybara'} is impressed.`),
+        h('p', { class: 'muted' }, `That was a big piece of work. ${c.name || 'Your companion'} is impressed.`),
         h('button', { class: 'btn-primary btn-big', onclick: () => app.go('#/home') }, 'Back home')));
     } }, 'Hand it in')));
 }

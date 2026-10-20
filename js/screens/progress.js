@@ -2,7 +2,7 @@
 
 import { h, s, mount, toast } from '../ui/dom.js';
 import { icon } from '../ui/icons.js';
-import { capybaraEl, ACCESSORIES } from '../ui/capybara.js';
+import { capybaraEl, ACCESSORIES, wornList, toggleWear } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
 import { SUBJECTS } from '../core/subjects.js';
 import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, unlockedAccessories, milestoneDefs, wardrobeAccessories } from '../core/progress.js';
@@ -140,19 +140,22 @@ function badgesTab(app, body) {
   const c = state.profile?.companion || {};
   const lockedBy = Object.fromEntries(milestoneDefs().filter((m) => m.unlock).map((m) => [m.unlock, m]));
   const shown = wardrobeAccessories();
+  const worn = new Set(wornList(c));
   const wardrobe = h('div', { class: 'wardrobe' }, Object.entries(ACCESSORIES).filter(([id]) => shown.has(id)).map(([id, label]) => {
     const open = unlocked.has(id);
-    return h('button', { type: 'button', class: open ? '' : 'locked', 'aria-pressed': String(c.accessory === id), 'aria-label': open ? `Wear ${label}` : `${label}: locked`, onclick: () => {
+    const on = id === 'none' ? worn.size === 0 : worn.has(id);
+    return h('button', { type: 'button', class: open ? '' : 'locked', 'aria-pressed': String(on), 'aria-label': open ? `${on && id !== 'none' ? 'Take off' : 'Wear'} ${label}` : `${label}: locked`, onclick: () => {
       if (!open) return toast(`Earn “${lockedBy[id]?.title}” to unlock the ${label.toLowerCase()}.`);
-      state.profile.companion.accessory = id;
+      state.profile.companion = toggleWear(c, id);
       app.save();
       badgesTab(app, body.replaceChildren() || body);
-    } }, capybaraEl({ ...c, accessory: id, mood: open ? 'happy' : 'neutral' }), h('span', {}, open ? label : '🔒 ' + label));
+    } }, capybaraEl({ ...c, wear: undefined, accessory: id, mood: open ? 'happy' : 'neutral' }), h('span', {}, open ? label : '🔒 ' + label));
   }));
   body.append(
     h('div', { class: 'section-title' }, h('h2', {}, 'Badges'), h('span', { class: 'muted small' }, `${ms.filter((m) => m.done).length} of ${ms.length} earned`)),
     h('div', { class: 'badge-grid' }, ms.map(badge)),
-    h('div', { class: 'section-title' }, h('h2', {}, `${c.name || 'Capy'}’s wardrobe`)),
-    h('p', { class: 'muted' }, 'Tap an outfit to wear it. Locked ones are earned with badges.'),
+    h('div', { class: 'section-title' }, h('h2', {}, `${c.name || 'Your companion'}’s wardrobe`)),
+    h('div', { style: { maxWidth: '240px', margin: '0 auto 8px' } }, capybaraEl({ ...c, mood: 'happy' })),
+    h('p', { class: 'muted center' }, 'Tap to put something on, and tap again to take it off. You can wear one thing on your head, one on your face, one on your back and ride a skateboard, all at once. Locked ones are earned with badges.'),
     wardrobe);
 }

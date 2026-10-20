@@ -42,7 +42,7 @@ export function typingScreen(app) {
           return h('li', {}, h('span', { class: `node ${locked ? 'locked' : r?.passed ? 'proficient' : 'available'}` }, icon(locked ? 'lock' : r?.passed ? 'check' : 'play')),
             h('button', { class: `jcard${locked ? ' locked' : ''}`, disabled: locked, onclick: () => lesson(app, i) }, h('h3', {}, l.title), h('div', { class: 'meta' }, r ? `${r.wpm} wpm · ${Math.round(r.acc * 100)}% accuracy` : locked ? 'finish the lesson before with 90% accuracy' : l.keys ? `new keys: ${l.keys.toUpperCase().split('').join(' ')}` : 'everything you’ve learned')));
         }))),
-      h('div', { class: 'card stack' }, h('h2', {}, 'River race'), h('p', { class: 'muted' }, `Words float down the river towards your capybara. Type each one and press space before it arrives. One minute.${typing.game ? ` Best: ${typing.game.score} words.` : ''}`),
+      h('div', { class: 'card stack' }, h('h2', {}, 'River race'), h('p', { class: 'muted' }, `Words float down the river towards your companion. Type each one and press space before it arrives. One minute.${typing.game ? ` Best: ${typing.game.score} words.` : ''}`),
         h('button', { class: 'btn-primary', disabled: unlocked < 4, onclick: () => race(app) }, unlocked < 4 ? 'Unlocks after lesson 3' : 'Play'))));
 }
 
@@ -163,7 +163,7 @@ function race(app) {
     app.save();
     mount(app.root, h('div', { class: 'topbar' }, h('h1', {}, 'Time!'), h('span', { class: 'spacer' })),
       h('div', { class: 'narrow stack center' },
-        h('div', { class: 'sprint-result' }, h('span', { class: 'big' }, String(score)), h('span', {}, `words cleared · ${missed} reached the capybara`)),
+        h('div', { class: 'sprint-result' }, h('span', { class: 'big' }, String(score)), h('span', {}, `words cleared · ${missed} reached your companion`)),
         h('p', {}, score >= (state.typing.game?.score || 0) && score > 0 ? 'A new best!' : `Best so far: ${state.typing.game?.score || 0}.`),
         h('div', { class: 'row', style: { justifyContent: 'center' } }, h('button', { class: 'btn-primary btn-big', onclick: () => race(app) }, 'Again'), h('button', { class: 'btn-ghost btn-big', onclick: () => typingScreen(app) }, 'Back'))));
   };

@@ -43,7 +43,7 @@ export const COURSES = {
     writing: false,
     readAloud: true,
     young: true, sprintUp: 12, next: 'y3',
-    starter: ['none', 'racehelmet', 'cape', 'mask', 'glasses', 'yuzu', 'bird'],
+    starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird'],
   },
   // Year 3 includes all of Year 2 (same subjects and item ids), so moving up keeps every card.
   // Year 2's stretch topics are core here (they carry coreIn: ['y3']); Year 4 tasters are the stretch.
@@ -66,7 +66,7 @@ export const COURSES = {
     writing: false,
     readAloud: true,
     young: true, sprintUp: 14, prev: 'ks1',
-    starter: ['none', 'racehelmet', 'cape', 'mask', 'glasses', 'yuzu', 'bird'],
+    starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird'],
   },
   // Year 8 at a selective school, aiming above the top fifth: KS3 at depth with GCSE tasters,
   // Ancient Greek towards GCSE, and Greek myth as the theme (original characters, not Riordan's).
