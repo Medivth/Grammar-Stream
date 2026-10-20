@@ -7,6 +7,7 @@ import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement, 
 import { planDay, topicChoices, PLACEMENT_ORDER } from '../js/core/session.js';
 import { correctResponse } from '../js/core/checkers.js';
 import { makeRng } from '../js/core/rng.js';
+import { topicStatus } from '../js/core/mastery.js';
 
 const root = new URL('../content/', import.meta.url);
 const read = (p) => JSON.parse(readFileSync(new URL(p, root)));
@@ -97,4 +98,15 @@ test('the plan schedules one placement a day until every subject is placed', () 
   }
   assert.deepEqual(seen, PLACEMENT_ORDER);
   assert.equal(planDay(state, db, TODAY + 9).steps.filter((s) => s.t === 'placement').length, 0);
+});
+
+test('placement stays inside one subject; joined-up topics unlock from both subjects', () => {
+  for (const s of PLACEMENT_ORDER) for (const id of topoOrder(db, s)) assert.equal(db.topics[id].subject, s, `${id} in ${s} placement`);
+  assert.ok(!topoOrder(db, 'geography').includes('geography.by-numbers'));
+  const st = emptyState(TODAY);
+  const secure = { ema: 0.9, n: 6, state: 'proficient', profDay: TODAY, delayed: 0, started: TODAY };
+  st.topics['geography.people'] = secure;
+  assert.equal(topicStatus(db.topics['geography.by-numbers'], st.topics), 'locked', 'locked until the maths is secure');
+  st.topics['maths.averages'] = secure;
+  assert.equal(topicStatus(db.topics['geography.by-numbers'], st.topics), 'available');
 });

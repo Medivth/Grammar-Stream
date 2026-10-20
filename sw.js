@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = 'e96afad312fa';
+const VERSION = 'e2110e90310f';
 const FILES = [
  "./",
  "./index.html",
@@ -27,6 +27,7 @@ const FILES = [
  "./js/gen/index.js",
  "./js/gen/maths.js",
  "./js/gen/science.js",
+ "./js/gen/synoptic.js",
  "./js/main.js",
  "./js/platform/storage.js",
  "./js/platform/tts.js",
@@ -49,9 +50,11 @@ const FILES = [
  "./content/english/vocabulary.json",
  "./content/english/writing.json",
  "./content/english/year7.json",
+ "./content/geography/by-numbers.json",
  "./content/geography/core.json",
  "./content/geography/year7.json",
  "./content/history/core.json",
+ "./content/history/joined-up.json",
  "./content/history/timeline.json",
  "./content/history/year7.json",
  "./content/index.json",
@@ -62,8 +65,10 @@ const FILES = [
  "./content/maps/particles.json",
  "./content/maps/uk.json",
  "./content/maps/world.json",
+ "./content/maths/averages.json",
  "./content/maths/core.json",
  "./content/science/core.json",
+ "./content/science/joined-up.json",
  "./content/science/year7.json",
  "./fonts/atkinson-hyperlegible-latin-400-normal.woff2",
  "./fonts/atkinson-hyperlegible-latin-700-normal.woff2",

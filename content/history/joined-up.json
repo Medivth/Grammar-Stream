@@ -1,0 +1,307 @@
+{
+ "subject": "history",
+ "deck": "joined-up",
+ "topics": [
+  {
+   "id": "history.by-numbers",
+   "title": "History by numbers",
+   "kind": "mixed",
+   "prereqs": [
+    "history.timeline",
+    "maths.negatives"
+   ],
+   "links": [
+    "maths"
+   ],
+   "batch": 5,
+   "intro": "How long ago? How many died? Historians need maths to measure time and change, including the tricky jump from BC to AD.",
+   "teach": "Explain why there is no year 0, and what that does to BC–AD sums.",
+   "talk": "Ask her how many years ago the Battle of Hastings was."
+  },
+  {
+   "id": "history.sources",
+   "title": "Reading historical sources",
+   "kind": "facts",
+   "prereqs": [
+    "history.1066",
+    "english.unseen"
+   ],
+   "links": [
+    "english"
+   ],
+   "batch": 4,
+   "intro": "A source is evidence from the past. Reading one well uses your English skills: tone, word choice and the writer’s purpose. Then historians ask: who wrote it, when, and why?",
+   "teach": "Explain why a biased source can still be useful to a historian.",
+   "talk": "Ask her who wrote the Anglo-Saxon Chronicle and how that might affect what it says about the Vikings."
+  }
+ ],
+ "items": [
+  {
+   "id": "history.hn.dates",
+   "topic": "history.by-numbers",
+   "kind": "template",
+   "gen": "historyMaths",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.8,
+    0,
+    0.6
+   ],
+   "credits": [
+    "maths.negatives",
+    "maths.frac-amount"
+   ]
+  },
+  {
+   "id": "history.hn.henry",
+   "topic": "history.by-numbers",
+   "kind": "fact",
+   "prompt": "Henry VIII reigned from 1509 to 1547. For about how many years was he king?",
+   "answer": "38 years",
+   "distractors": [
+    "48 years",
+    "28 years",
+    "36 years"
+   ],
+   "explain": "1547 − 1509 = 38.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.hn.elizabeth",
+   "topic": "history.by-numbers",
+   "kind": "fact",
+   "prompt": "Elizabeth I was born in 1533 and became queen in 1558. How old was she?",
+   "answer": "25",
+   "distractors": [
+    "35",
+    "15",
+    "23"
+   ],
+   "explain": "1558 − 1533 = 25. She then reigned for 44 years, until 1603.",
+   "accept": [
+    "25 years old",
+    "25 years"
+   ]
+  },
+  {
+   "id": "history.hn.halved",
+   "topic": "history.by-numbers",
+   "kind": "fact",
+   "prompt": "Suppose England’s population fell from about 5 million in 1300 to about 2.5 million in 1400. Roughly what fraction was left?",
+   "answer": "about a half",
+   "distractors": [
+    "about a quarter",
+    "about a third",
+    "about three quarters"
+   ],
+   "explain": "2.5 is half of 5. Plague returned again and again after 1348, so the population stayed low for a long time.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.src.ch1",
+   "topic": "history.sources",
+   "kind": "mcq",
+   "prompt": "Which words show how the writer felt about the raiders?",
+   "options": [
+    {
+     "text": "“heathen men” and “lamentable havoc”",
+     "correct": true
+    },
+    {
+     "text": "“immense sheets of light”",
+     "correct": false,
+     "feedback": "That describes the warning signs in the sky, not the raiders."
+    },
+    {
+     "text": "“the land of the Northumbrians”",
+     "correct": false,
+     "feedback": "That just names the place."
+    }
+   ],
+   "explain": "“Heathen” (not Christian) and “lamentable havoc” (terrible destruction) show the monks saw the Vikings as godless and the raid as a disaster.",
+   "passage": "This year came dreadful fore-warnings over the land of the Northumbrians, terrifying the people most woefully: these were immense sheets of light rushing through the air, and whirlwinds, and fiery dragons flying across the firmament. These tremendous tokens were soon followed by a great famine: and not long after, … the harrowing inroads of heathen men made lamentable havoc in the church of God in Holy-island, by rapine and slaughter.",
+   "passageSource": "The Anglo-Saxon Chronicle, entry for AD 793, written by monks (translated by James Ingram, 1823). Holy-island is Lindisfarne."
+  },
+  {
+   "id": "history.src.ch2",
+   "topic": "history.sources",
+   "kind": "mcq",
+   "prompt": "Why might the writer begin with the “fiery dragons” in the sky?",
+   "options": [
+    {
+     "text": "To suggest the raid was a sign from God that people had been warned about",
+     "correct": true
+    },
+    {
+     "text": "Because dragons really attacked Northumbria",
+     "correct": false,
+     "feedback": "People at the time saw strange lights or storms as omens. Historians think these may have been the northern lights."
+    },
+    {
+     "text": "To make the story funny",
+     "correct": false,
+     "feedback": "Look at the tone: “dreadful”, “terrifying”, “woefully”. It is meant to be frightening."
+    }
+   ],
+   "explain": "Monks believed God sent signs before disasters. Opening with omens makes the raid feel like a punishment that had been foretold.",
+   "passage": "This year came dreadful fore-warnings over the land of the Northumbrians, terrifying the people most woefully: these were immense sheets of light rushing through the air, and whirlwinds, and fiery dragons flying across the firmament. These tremendous tokens were soon followed by a great famine: and not long after, … the harrowing inroads of heathen men made lamentable havoc in the church of God in Holy-island, by rapine and slaughter.",
+   "passageSource": "The Anglo-Saxon Chronicle, entry for AD 793, written by monks (translated by James Ingram, 1823). Holy-island is Lindisfarne."
+  },
+  {
+   "id": "history.src.ch3",
+   "topic": "history.sources",
+   "kind": "mcq",
+   "prompt": "The Chronicle was written by monks. How might that affect what it says about the Vikings?",
+   "options": [
+    {
+     "text": "They were Christians who suffered the raids, so they show the Vikings as cruel heathens",
+     "correct": true
+    },
+    {
+     "text": "It means the source is useless",
+     "correct": false,
+     "feedback": "A one-sided source is still useful: it shows how people at the time felt and what they believed."
+    },
+    {
+     "text": "It makes no difference to what they wrote",
+     "correct": false,
+     "feedback": "Who writes a source always matters. Monks were the victims here."
+    }
+   ],
+   "explain": "The source is biased, but useful: it tells us how terrifying the raids felt to Christians. Historians compare it with other evidence, such as archaeology.",
+   "passage": "This year came dreadful fore-warnings over the land of the Northumbrians, terrifying the people most woefully: these were immense sheets of light rushing through the air, and whirlwinds, and fiery dragons flying across the firmament. These tremendous tokens were soon followed by a great famine: and not long after, … the harrowing inroads of heathen men made lamentable havoc in the church of God in Holy-island, by rapine and slaughter.",
+   "passageSource": "The Anglo-Saxon Chronicle, entry for AD 793, written by monks (translated by James Ingram, 1823). Holy-island is Lindisfarne."
+  },
+  {
+   "id": "history.src.tb1",
+   "topic": "history.sources",
+   "kind": "mcq",
+   "prompt": "Why does Elizabeth call herself “a weak and feeble woman”?",
+   "options": [
+    {
+     "text": "To say what some people thought, then overturn it with “the heart and stomach of a king”",
+     "correct": true
+    },
+    {
+     "text": "Because she was ill that day",
+     "correct": false,
+     "feedback": "The word “but” tells you she is about to turn the idea around."
+    },
+    {
+     "text": "To ask the soldiers to fight because she could not lead",
+     "correct": false,
+     "feedback": "She is doing the opposite: showing she is a strong leader."
+    }
+   ],
+   "explain": "This is a contrast. She admits the doubts some people had about a female ruler, then answers them with a powerful image of courage.",
+   "passage": "I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too, and think foul scorn that Parma or Spain, or any prince of Europe, should dare to invade the borders of my realm.",
+   "passageSource": "Elizabeth I, speech to her army at Tilbury as the Spanish Armada approached (1588), as written down years later by Leonel Sharp, a chaplain who was there"
+  },
+  {
+   "id": "history.src.tb2",
+   "topic": "history.sources",
+   "kind": "mcq",
+   "prompt": "Which technique is “of a king, and of a king of England too”?",
+   "options": [
+    {
+     "text": "Repetition, building to a proud climax",
+     "correct": true
+    },
+    {
+     "text": "A simile",
+     "correct": false,
+     "feedback": "There is no comparison using “like” or “as”."
+    },
+    {
+     "text": "Onomatopoeia",
+     "correct": false,
+     "feedback": "None of these words imitate a sound."
+    }
+   ],
+   "explain": "Repeating “of a king” and then adding “of England too” builds up the idea, stirring national pride in her soldiers.",
+   "passage": "I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too, and think foul scorn that Parma or Spain, or any prince of Europe, should dare to invade the borders of my realm.",
+   "passageSource": "Elizabeth I, speech to her army at Tilbury as the Spanish Armada approached (1588), as written down years later by Leonel Sharp, a chaplain who was there"
+  },
+  {
+   "id": "history.src.tb3",
+   "topic": "history.sources",
+   "kind": "mcq",
+   "prompt": "This version of the speech was written down by someone who heard it, but many years later. What does that mean for historians?",
+   "options": [
+    {
+     "text": "We can’t be sure these were her exact words, so we compare it with other evidence",
+     "correct": true
+    },
+    {
+     "text": "It must be completely made up",
+     "correct": false,
+     "feedback": "He was there, so it is probably close to what she said. It just may not be word for word."
+    },
+    {
+     "text": "It is more reliable because he had time to think",
+     "correct": false,
+     "feedback": "Memories fade and change over time, so a later account is usually less exact."
+    }
+   ],
+   "explain": "When a source was made, and by whom, affects how far we can trust it. Historians call this its provenance.",
+   "passage": "I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too, and think foul scorn that Parma or Spain, or any prince of Europe, should dare to invade the borders of my realm.",
+   "passageSource": "Elizabeth I, speech to her army at Tilbury as the Spanish Armada approached (1588), as written down years later by Leonel Sharp, a chaplain who was there"
+  },
+  {
+   "id": "history.src.bias",
+   "topic": "history.sources",
+   "kind": "fact",
+   "prompt": "A source that gives only one side of the story is…",
+   "answer": "biased",
+   "distractors": [
+    "reliable",
+    "primary",
+    "accurate"
+   ],
+   "explain": "Biased sources are still useful: they show what people believed, and why.",
+   "accept": [
+    "one-sided"
+   ]
+  },
+  {
+   "id": "history.src.provenance",
+   "topic": "history.sources",
+   "kind": "fact",
+   "prompt": "A source’s provenance is…",
+   "answer": "who made it, when, and why",
+   "distractors": [
+    "how old the paper is",
+    "what it is about",
+    "where it is kept today"
+   ],
+   "explain": "Asking about provenance helps a historian judge how reliable a source is.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.src.corroborate",
+   "topic": "history.sources",
+   "kind": "fact",
+   "prompt": "When historians check one source against others to see if they agree, they are trying to…",
+   "answer": "corroborate it",
+   "distractors": [
+    "translate it",
+    "date it",
+    "publish it"
+   ],
+   "explain": "If several independent sources agree, we can be more confident about what happened.",
+   "formats": [
+    "choice"
+   ]
+  }
+ ]
+}

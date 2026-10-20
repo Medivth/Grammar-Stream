@@ -32,7 +32,12 @@ export async function playScreen(app) {
   await renderStep(app);
 }
 
-function header(app, label) {
+/** " + Maths" pieces for a joined-up topic, each in its own subject colour. */
+function linkBits(links) {
+  return (links || []).map((l) => h('span', { class: 'link-subj', style: { color: SUBJECT_BY_ID[l].colour } }, ` + ${SUBJECT_BY_ID[l].name}`));
+}
+
+function header(app, label, links = null) {
   const plan = app.state.plan;
   const pct = Math.round((100 * plan.pos) / Math.max(1, plan.steps.length - 1));
   const step = plan.steps[plan.pos] || {};
@@ -41,7 +46,7 @@ function header(app, label) {
   return h('div', { class: 'q-head q-wrap', style: colour ? { '--bar': colour } : {} },
     h('button', { class: 'btn-icon', type: 'button', 'aria-label': 'Pause and go home', title: 'Pause', onclick: () => app.go('#/home') }, icon('pause')),
     h('div', { class: 'progress', role: 'progressbar', 'aria-valuenow': pct, 'aria-valuemin': 0, 'aria-valuemax': 100 }, h('div', { style: { width: `${pct}%` } })),
-    label ? h('span', { class: 'chip', style: colour ? { background: `color-mix(in srgb, ${colour} 14%, var(--card))`, color: colour } : {} }, label) : null);
+    label ? h('span', { class: 'chip', style: colour ? { background: `color-mix(in srgb, ${colour} 14%, var(--card))`, color: colour } : {} }, label, linkBits(links)) : null);
 }
 
 async function next(app) {
@@ -121,7 +126,7 @@ function chooseStep(app, root, step) {
       const started = !!state.topics[id];
       return h('button', { class: 'choice-card home-card', type: 'button', style: { '--tint': `color-mix(in srgb, ${subj.colour} 14%, var(--card))`, '--tint-ink': subj.colour }, onclick: async () => { chooseTopic(state, db, id, app.today()); await next(app); } },
         h('span', { class: 'ico' }, icon(SUBJECT_ICON[subj.id])),
-        h('span', { class: 'txt' }, h('div', { class: 'subj', style: { color: subj.colour } }, started ? `Continue · ${subj.name}` : `New · ${subj.name}`),
+        h('span', { class: 'txt' }, h('div', { class: 'subj', style: { color: subj.colour } }, started ? `Continue · ${subj.name}` : `New · ${subj.name}`, linkBits(t.links)),
           h('h3', { style: { margin: '2px 0 0' } }, t.title)));
     })));
 }
@@ -129,9 +134,10 @@ function chooseStep(app, root, step) {
 function introTopicStep(app, root, step) {
   const t = app.db.topics[step.topic];
   const subj = SUBJECT_BY_ID[t.subject];
-  mount(root, header(app, subj.name), h('div', { class: 'q-wrap stack' },
-    h('div', { class: 'chip', style: { color: subj.colour } }, subj.name),
+  mount(root, header(app, subj.name, t.links), h('div', { class: 'q-wrap stack' },
+    h('div', { class: 'chip', style: { color: subj.colour } }, subj.name, linkBits(t.links)),
     h('h2', {}, t.title),
+    t.links ? h('p', { class: 'joined' }, icon('link'), ` A joined-up topic: it uses your ${t.links.map((l) => SUBJECT_BY_ID[l].name).join(' and ')} skills too.`) : null,
     t.intro ? rich('p', t.intro, { class: 'learn' }) : null,
     t.diagnostic?.length ? h('p', { class: 'muted' }, 'First, a few questions to see what you think already. Just answer honestly: it’s fine not to know yet.') : null,
     h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'Let’s go')));
@@ -242,7 +248,7 @@ async function questionStep(app, root, step) {
   document.onkeydown = onKey;
   if (view.input) view.input.addEventListener('keydown', (e) => { if (e.key === 'Enter' && view.hasResponse()) { e.preventDefault(); confBtns[1].focus(); } });
 
-  mount(root, header(app, label), h('div', { class: 'q-wrap' }, fadedBox, view.el, conf, feedback));
+  mount(root, header(app, label, label === subj.name ? db.topics[q.topicId]?.links : null), h('div', { class: 'q-wrap' }, fadedBox, view.el, conf, feedback));
   view.focus();
 }
 

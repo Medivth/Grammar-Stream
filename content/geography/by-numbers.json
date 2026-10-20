@@ -1,0 +1,176 @@
+{
+ "subject": "geography",
+ "deck": "by-numbers",
+ "topics": [
+  {
+   "id": "geography.by-numbers",
+   "title": "Geography by numbers",
+   "kind": "mixed",
+   "prereqs": [
+    "geography.people",
+    "maths.averages"
+   ],
+   "links": [
+    "maths"
+   ],
+   "batch": 5,
+   "intro": "Geographers use maths to compare places: average earnings, rainfall, population density and growth. Your maths skills do the work here.",
+   "teach": "Explain what population density means and how to work it out.",
+   "talk": "Ask her whether a village or a city has a higher population density, and why."
+  }
+ ],
+ "items": [
+  {
+   "id": "geography.gn.stats",
+   "topic": "geography.by-numbers",
+   "kind": "template",
+   "gen": "geoStats",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.8,
+    0,
+    0.8
+   ],
+   "credits": [
+    "maths.averages",
+    "maths.percent"
+   ]
+  },
+  {
+   "id": "geography.gn.median",
+   "topic": "geography.by-numbers",
+   "kind": "mcq",
+   "prompt": "The mean of these earnings is £800 but the median is £450. Which average better describes a typical household?",
+   "options": [
+    {
+     "text": "The median: one very high earner pulls the mean up",
+     "correct": true
+    },
+    {
+     "text": "The mean, because it uses every number",
+     "correct": false,
+     "feedback": "Using every number is usually a strength, but here one household (£2,250) drags the mean far above what four of the five households earn."
+    },
+    {
+     "text": "Neither: you can’t average money",
+     "correct": false,
+     "feedback": "You can! Geographers and governments average earnings all the time."
+    }
+   ],
+   "explain": "When one value is far bigger than the rest, the median gives a fairer picture of a typical household. That is why average earnings in a country are usually reported as a median.",
+   "passage": "Weekly earnings of five households on one street:\n£400   £420   £450   £480   £2,250",
+   "passageSource": "Invented data"
+  },
+  {
+   "id": "geography.gn.density",
+   "topic": "geography.by-numbers",
+   "kind": "mcq",
+   "prompt": "Which island is more densely populated?",
+   "options": [
+    {
+     "text": "Island B",
+     "correct": true
+    },
+    {
+     "text": "Island A",
+     "correct": false,
+     "feedback": "A has more people, but they are spread over four times the area. A: 1,200 ÷ 40 = 30 people per km²."
+    },
+    {
+     "text": "They are the same",
+     "correct": false,
+     "feedback": "Work out people ÷ area for each one."
+    }
+   ],
+   "explain": "Population density = people ÷ area. A: 1,200 ÷ 40 = 30 per km². B: 900 ÷ 10 = 90 per km², three times as crowded.",
+   "passage": "Island A: 1,200 people, area 40 km²\nIsland B: 900 people, area 10 km²",
+   "passageSource": "Invented data"
+  },
+  {
+   "id": "geography.gn.climate",
+   "topic": "geography.by-numbers",
+   "kind": "mcq",
+   "prompt": "What pattern does this rainfall data show?",
+   "options": [
+    {
+     "text": "Wet winters and very dry summers",
+     "correct": true
+    },
+    {
+     "text": "Rain spread evenly through the year",
+     "correct": false,
+     "feedback": "Look at the numbers: 120 mm in December but only 2 mm in July."
+    },
+    {
+     "text": "Dry winters and wet summers",
+     "correct": false,
+     "feedback": "Check which months are which: the big numbers are November to February."
+    }
+   ],
+   "explain": "This pattern is typical of a Mediterranean climate, like southern Spain or Greece: hot, dry summers and mild, wet winters.",
+   "passage": "Rainfall (mm) in a coastal town\nJan 110 · Feb 95 · Mar 70 · Apr 40 · May 20 · Jun 5\nJul 2 · Aug 5 · Sep 25 · Oct 70 · Nov 100 · Dec 120",
+   "passageSource": "Invented data"
+  },
+  {
+   "id": "geography.gn.anomaly",
+   "topic": "geography.by-numbers",
+   "kind": "mcq",
+   "prompt": "Which reading is most likely a mistake?",
+   "options": [
+    {
+     "text": "Thursday’s 4°C",
+     "correct": true
+    },
+    {
+     "text": "Friday’s 24°C, the highest",
+     "correct": false,
+     "feedback": "The highest value isn’t automatically wrong: 24°C is normal for July."
+    },
+    {
+     "text": "None: all weather data is correct",
+     "correct": false,
+     "feedback": "Instruments and people make mistakes. Results that don’t fit the pattern should be checked."
+    }
+   ],
+   "explain": "4°C at midday in a UK July is almost impossible. Like an anomaly in a science experiment, it should be checked, and left out of the mean if it was a mistake.",
+   "passage": "Midday temperature (°C) in a UK town, one week in July\nMon 21 · Tue 23 · Wed 22 · Thu 4 · Fri 24 · Sat 22 · Sun 23",
+   "passageSource": "Invented data"
+  },
+  {
+   "id": "geography.gn.survey",
+   "topic": "geography.by-numbers",
+   "kind": "fact",
+   "prompt": "In a survey of 200 people in a town, 50 travel to work by bus. What percentage is that?",
+   "answer": "25%",
+   "distractors": [
+    "50%",
+    "20%",
+    "40%"
+   ],
+   "explain": "50 out of 200 = 50 ÷ 200 = 0.25 = 25%.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.gn.urban",
+   "topic": "geography.by-numbers",
+   "kind": "fact",
+   "prompt": "In a country, 4 out of every 5 people live in towns and cities. What fraction live in the countryside?",
+   "answer": "1/5",
+   "distractors": [
+    "4/5",
+    "1/4",
+    "5/4"
+   ],
+   "explain": "The fractions must add up to one whole: 1 − 4/5 = 1/5. The UK is a bit more urban than this: over 80% of people live in towns and cities.",
+   "formats": [
+    "choice"
+   ]
+  }
+ ]
+}

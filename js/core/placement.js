@@ -12,12 +12,14 @@ import { makeRng } from './rng.js';
 export const PLACEMENT_CAP = 24;
 const PROBE_LEVEL = 2; // greater-depth Year 6 for generated skills
 
-/** Topics in an order where prerequisites come first. */
+/** A subject's topics in an order where prerequisites come first. Topics that build on another
+ * subject (joined-up topics) are left out: they unlock through that subject's own progress. */
 export function topoOrder(db, subject) {
   const ids = db.topicOrder[subject] || [];
   const out = [], seen = new Set();
   const visit = (id) => {
-    if (seen.has(id) || !db.topics[id]) return;
+    const t = db.topics[id];
+    if (seen.has(id) || !t || t.subject !== subject || t.prereqs.some((p) => db.topics[p]?.subject !== subject)) return;
     seen.add(id);
     for (const p of db.topics[id].prereqs) visit(p);
     out.push(id);

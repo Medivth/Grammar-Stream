@@ -222,6 +222,11 @@ label { display: block; font-weight: 700; margin-bottom: 6px; }
 .chip.proficient { background: var(--accent-soft); color: var(--accent); }
 .chip.mastered { background: var(--good-soft); color: var(--good); }
 .chip.available { background: var(--accent); color: var(--accent-ink); }
+.chip svg { width: 14px; height: 14px; flex: none; }
+.chip.uses { background: var(--accent-soft); color: var(--accent); }
+.link-subj { font-weight: 700; }
+.joined { display: flex; align-items: center; gap: 8px; margin: 0; padding: 10px 14px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+.joined svg { width: 20px; height: 20px; flex: none; }
 
 /* home */
 .today { position: relative; overflow: hidden; border-radius: 26px; padding: 22px; color: #fff; background: radial-gradient(120% 140% at 100% 0%, #8f6bff 0%, #5143d9 45%, #2f2596 100%); box-shadow: 0 14px 34px rgba(58, 45, 182, 0.35); }

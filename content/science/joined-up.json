@@ -1,0 +1,199 @@
+{
+ "subject": "science",
+ "deck": "joined-up",
+ "topics": [
+  {
+   "id": "science.by-numbers",
+   "title": "Science by numbers",
+   "kind": "skill",
+   "prereqs": [
+    "science.working",
+    "maths.ratio"
+   ],
+   "links": [
+    "maths"
+   ],
+   "batch": 5,
+   "intro": "Scientists use percentages, ratios and rates all the time: how much oxygen is in the air, how to mix a solution, how fast something cools.",
+   "teach": "Explain how you would mix squash and water in the ratio 1 : 4.",
+   "talk": "Ask her what 21% of a 500-litre room’s air would be oxygen."
+  },
+  {
+   "id": "science.words",
+   "title": "Science words: spelling and meaning",
+   "kind": "facts",
+   "prereqs": [
+    "english.spell-1",
+    "science.cells"
+   ],
+   "links": [
+    "english"
+   ],
+   "batch": 5,
+   "intro": "Science words are built from Greek and Latin parts. Knowing the parts helps you spell them and work out what they mean.",
+   "teach": "Pick a science word and explain what each part of it means.",
+   "talk": "Ask her what “photo” means in photosynthesis and photograph."
+  }
+ ],
+ "items": [
+  {
+   "id": "science.sn.calc",
+   "topic": "science.by-numbers",
+   "kind": "template",
+   "gen": "scienceMaths",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.8,
+    0,
+    0.6
+   ],
+   "credits": [
+    "maths.percent",
+    "maths.ratio"
+   ]
+  },
+  {
+   "id": "science.sw.photosynthesis",
+   "topic": "science.words",
+   "kind": "spell",
+   "word": "photosynthesis",
+   "sentence": "Green plants make their food by ___.",
+   "clue": "how plants make glucose using light",
+   "explain": "photo (light) + synthesis (putting together). The “f” sounds are spelt ph.",
+   "learn": "**photosynthesis**: photo (light) + synthesis (putting together). The “f” sounds are spelt ph."
+  },
+  {
+   "id": "science.sw.respiration",
+   "topic": "science.words",
+   "kind": "spell",
+   "word": "respiration",
+   "sentence": "Every living cell releases energy by ___.",
+   "clue": "releasing energy from glucose",
+   "explain": "re + spir (breathe) + ation: it is “spir”, not “sper”.",
+   "learn": "**respiration**: re + spir (breathe) + ation: it is “spir”, not “sper”."
+  },
+  {
+   "id": "science.sw.chlorophyll",
+   "topic": "science.words",
+   "kind": "spell",
+   "word": "chlorophyll",
+   "sentence": "Leaves are green because they contain ___.",
+   "clue": "the green substance that absorbs light",
+   "explain": "chloro (green, with a hard “ch” as in chorus) + phyll (leaf): ph and a double l.",
+   "learn": "**chlorophyll**: chloro (green, with a hard “ch” as in chorus) + phyll (leaf): ph and a double l."
+  },
+  {
+   "id": "science.sw.hypothesis",
+   "topic": "science.words",
+   "kind": "spell",
+   "word": "hypothesis",
+   "sentence": "My ___ is that sugar dissolves faster in warm water.",
+   "clue": "an idea that can be tested",
+   "explain": "hypo + thesis: y not i, then th in the middle.",
+   "learn": "**hypothesis**: hypo + thesis: y not i, then th in the middle."
+  },
+  {
+   "id": "science.sw.evaporation",
+   "topic": "science.words",
+   "kind": "spell",
+   "word": "evaporation",
+   "sentence": "Puddles disappear on a sunny day because of ___.",
+   "clue": "a liquid turning into a gas",
+   "explain": "e + vapor + ation: “vapour” loses its u here.",
+   "learn": "**evaporation**: e + vapor + ation: “vapour” loses its u here."
+  },
+  {
+   "id": "science.sw.condensation",
+   "topic": "science.words",
+   "kind": "spell",
+   "word": "condensation",
+   "sentence": "The water droplets on a cold window are called ___.",
+   "clue": "a gas turning back into a liquid",
+   "explain": "con + dense + ation: drop the e from dense.",
+   "learn": "**condensation**: con + dense + ation: drop the e from dense."
+  },
+  {
+   "id": "science.sw.apparatus",
+   "topic": "science.words",
+   "kind": "spell",
+   "word": "apparatus",
+   "sentence": "Put the ___ away carefully after the experiment.",
+   "clue": "the equipment used in an experiment",
+   "explain": "Double p, single r: ap-par-a-tus.",
+   "learn": "**apparatus**: Double p, single r: ap-par-a-tus."
+  },
+  {
+   "id": "science.sw.independent",
+   "topic": "science.words",
+   "kind": "spell",
+   "word": "independent",
+   "sentence": "The ___ variable is the one you change.",
+   "clue": "not controlled by something else",
+   "explain": "Ends in -ent, not -ant: in-de-pend-ent.",
+   "learn": "**independent**: Ends in -ent, not -ant: in-de-pend-ent."
+  },
+  {
+   "id": "science.sw.thermometer",
+   "topic": "science.words",
+   "kind": "spell",
+   "word": "thermometer",
+   "sentence": "Read the ___ at eye level.",
+   "clue": "an instrument that measures temperature",
+   "explain": "therm (heat) + o + meter (measure).",
+   "learn": "**thermometer**: therm (heat) + o + meter (measure)."
+  },
+  {
+   "id": "science.sw.nucleus",
+   "topic": "science.words",
+   "kind": "spell",
+   "word": "nucleus",
+   "sentence": "The ___ controls what happens in a cell.",
+   "clue": "the control centre of a cell",
+   "explain": "It ends -cleus: nu-cle-us.",
+   "learn": "**nucleus**: It ends -cleus: nu-cle-us."
+  },
+  {
+   "id": "science.sw.photo",
+   "topic": "science.words",
+   "kind": "fact",
+   "prompt": "In “photosynthesis”, what does “photo” mean?",
+   "answer": "light",
+   "distractors": [
+    "plant",
+    "green",
+    "food"
+   ],
+   "explain": "Photo = light, as in photograph (“light drawing”)."
+  },
+  {
+   "id": "science.sw.chloro",
+   "topic": "science.words",
+   "kind": "fact",
+   "prompt": "In “chlorophyll” and “chlorine”, what does “chloro” mean?",
+   "answer": "green",
+   "distractors": [
+    "water",
+    "leaf",
+    "gas"
+   ],
+   "explain": "Chlorine gas is a pale yellow-green. Chlorophyll is the green in leaves."
+  },
+  {
+   "id": "science.sw.therm",
+   "topic": "science.words",
+   "kind": "fact",
+   "prompt": "In “thermometer” and “thermal”, what does “therm” mean?",
+   "answer": "heat",
+   "distractors": [
+    "measure",
+    "cold",
+    "water"
+   ],
+   "explain": "Therm = heat. A thermal store is energy stored as heat."
+  }
+ ]
+}

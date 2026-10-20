@@ -150,3 +150,19 @@ test('yesterday’s answers appear the next day', () => {
   assert.equal(next.steps[0].t, 'yesterday');
   assert.ok(next.yesterday.length > 0 && next.yesterday.length <= 8);
 });
+
+test('a joined-up question also counts towards the maths topic it uses', () => {
+  const today = 20800;
+  const state = emptyState(today);
+  state.plan = { steps: [{ t: 'review', id: 'geography.gn.stats' }], pos: 0, results: [], reasks: 0 };
+  const step = state.plan.steps[0];
+  const q = questionFor(state, db, step, 0);
+  submit(state, db, step, q, correctResponse(q), { ms: 4000, conf: CONF.sure, today });
+  assert.equal(state.topics['geography.by-numbers'].n, 1);
+  assert.equal(state.topics['maths.averages'], undefined, 'not started yet, so nothing is credited');
+  state.topics['maths.averages'] = { ema: 0.5, n: 3, state: 'learning', profDay: null, delayed: 0, started: today - 5 };
+  state.plan.pos = 0;
+  submit(state, db, step, q, correctResponse(q), { ms: 4000, conf: CONF.sure, today });
+  assert.equal(state.topics['maths.averages'].n, 4);
+  assert.ok(state.topics['maths.averages'].ema > 0.5);
+});

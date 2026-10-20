@@ -100,3 +100,28 @@ test('grid references and compass directions match the drawn diagram', () => {
     assert.ok(q3.prompt.includes(b.label) && q3.prompt.indexOf(b.label) < q3.prompt.indexOf(a.label), 'asks direction OF b FROM a');
   }
 });
+
+test('joined-up maths answers are right (independent recomputation)', () => {
+  const nums = (s) => (s.match(/−?\d[\d,]*(\.\d+)?/g) || []).map((x) => +x.replace(/,/g, '').replace('−', '-'));
+  const rng = makeRng('synoptic-verify');
+  for (let i = 0; i < N; i++) {
+    for (const level of [1, 2, 3]) {
+      const q = GENERATORS.averages(level, rng);
+      const xs = nums(q.prompt.split(' of ')[1]);
+      const sorted = [...xs].sort((a, b) => a - b);
+      const want = level === 1 ? xs.reduce((a, b) => a + b, 0) / xs.length : level === 2 ? sorted[(xs.length - 1) / 2] : sorted.at(-1) - sorted[0];
+      assert.equal(+q.numeric.value, want, q.prompt);
+      if (level === 3) assert.ok(sorted[0] < 0, `range includes a negative: ${q.prompt}`);
+    }
+    const g1 = GENERATORS.geoStats(1, rng);
+    const data = g1.prompt.includes('£') ? nums(g1.prompt).filter((x) => x >= 100) : nums(g1.prompt.split(':')[1]);
+    assert.equal(+g1.numeric.value, data.reduce((a, b) => a + b, 0) / data.length, g1.prompt);
+    assert.ok(Number.isInteger(+g1.numeric.value));
+    const g3 = GENERATORS.geoStats(3, rng);
+    const [a, b] = nums(g3.prompt);
+    assert.equal(+g3.numeric.value, g3.prompt.includes('density') ? a / b : ((b - a) / a) * 100, g3.prompt);
+    const h2 = GENERATORS.historyMaths(2, rng);
+    const bc = [...h2.prompt.matchAll(/(\d+) BC/g)].map((m) => +m[1]), ad = [...h2.prompt.matchAll(/AD (\d+)/g)].map((m) => +m[1]);
+    assert.equal(+h2.numeric.value, ad.length ? bc[0] + ad[0] - 1 : Math.abs(bc[0] - bc[1]), h2.prompt);
+  }
+});

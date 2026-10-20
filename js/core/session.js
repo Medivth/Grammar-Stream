@@ -265,6 +265,10 @@ export function submit(state, db, step, q, response, { ms = null, conf = null, n
   // topic mastery (diagnostics measure prior knowledge, so they do not count)
   if (step.t !== 'diag') {
     state.topics[item.topic] = recordTopicAttempt(state.topics[item.topic], res.correct, today, { mixed: step.t === 'review' });
+    // a skill used in another subject is evidence for that skill too (only once she has started it)
+    for (const tid of item.credits || []) {
+      if (state.topics[tid]) state.topics[tid] = recordTopicAttempt(state.topics[tid], res.correct, today, { mixed: true });
+    }
   }
 
   // ability rating for procedural templates

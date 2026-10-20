@@ -45,6 +45,7 @@ export function validateDB(db, generators) {
   for (const t of Object.values(db.topics)) {
     if (!t.title) errs.push(`topic ${t.id}: missing title`);
     for (const p of t.prereqs) if (!db.topics[p]) errs.push(`topic ${t.id}: unknown prereq ${p}`);
+    for (const l of t.links || []) if (l === t.subject || !db.topicOrder[l]) errs.push(`topic ${t.id}: bad link ${l}`);
     if (!t.id.startsWith(t.subject + '.')) errs.push(`topic ${t.id}: id must start with "${t.subject}."`);
     for (const d of t.diagnostic || []) if (db.items[d]?.topic !== t.id) errs.push(`topic ${t.id}: diagnostic ${d} is not an item of this topic`);
     if (!(db.itemsByTopic[t.id] || []).length) errs.push(`topic ${t.id}: has no items`);
@@ -65,6 +66,7 @@ export function validateDB(db, generators) {
     if (seen.has(it.id)) errs.push(`${where}: duplicate id`);
     seen.add(it.id);
     if (!db.topics[it.topic]) errs.push(`${where}: unknown topic ${it.topic}`);
+    for (const c of it.credits || []) if (!db.topics[c] || c === it.topic) errs.push(`${where}: bad credit ${c}`);
     if (!KINDS.includes(it.kind)) { errs.push(`${where}: unknown kind ${it.kind}`); continue; }
     switch (it.kind) {
       case 'fact':

@@ -16,7 +16,7 @@ Plain HTML, CSS and JavaScript modules: no framework, no build step for the app 
 index.html, manifest.webmanifest, sw.js   app shell, install manifest, offline service worker (generated)
 css/app.css                               design tokens, light and dark themes
 js/core/        pure logic, tested in Node: FSRS-6 scheduler, Elo, mastery, checkers, session planner, save format
-js/gen/         parametric question generators (maths, history)
+js/gen/         parametric question generators (every subject, plus joined-up ones)
 js/ui/          DOM helpers, question renderers, maps, the capybara
 js/screens/     onboarding, home, session player, grown-ups area
 content/        built JSON decks and projected maps (do not edit by hand)
@@ -32,9 +32,13 @@ tests/          node:test suites
 - **Mastery**: exponential moving average per topic; *mastered* only after delayed success in mixed review.
 - **Sessions**: yesterday's answers, interleaved reviews (max 40% per subject), a break, new learning she chooses, a sentence task, then explaining an idea to her capybara and correcting its deliberate mistake. Hard stop, and the app rests in the hour before bedtime.
 
+### Joined-up topics
+
+Some topics draw on another subject: *Geography by numbers* (averages, density, percentage change), *History by numbers* (BC/AD intervals, fractions of a population), *Science by numbers* (percentages, ratios, rates), *Reading historical sources* (English analysis of the Anglo-Saxon Chronicle and Elizabeth I's Tilbury speech) and *Science words* (spelling and word roots). A topic's `links` shows as "Geography + Maths"; its prerequisites include the other subject's topic, so it unlocks only once that skill is secure. Generated questions name the maths topics they use in `credits`, and her answers count towards those topics' mastery too.
+
 ### Visible progress
 
-The home screen's island map lights up topic by topic (white ring segments for secure, gold for mastered). *My progress* has a history timeline whose events light up as she learns them, maps that colour in the places she knows, and twelve milestones. Milestones are fixed rewards for real achievement (never random); six of them unlock outfits for her capybara.
+The home screen's island map lights up topic by topic (white ring segments for secure, gold for mastered). *My progress* has a history timeline whose events light up as she learns them, maps that colour in the places she knows, and thirteen milestones. Milestones are fixed rewards for real achievement (never random); six of them unlock outfits for her capybara.
 
 ### Commands
 

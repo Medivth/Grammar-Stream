@@ -231,6 +231,7 @@ export function subjectScreen(app, subjectId) {
         h('h3', {}, t.title),
         h('div', { class: 'meta' },
           h('span', { class: `chip ${status}` }, LABEL[status]),
+          t.links ? h('span', { class: 'chip uses' }, icon('link'), ` uses ${t.links.map((l) => SUBJECT_BY_ID[l].name).join(' & ')}`) : null,
           status === 'locked' ? h('span', {}, `after ${t.prereqs.map((p) => db.topics[p]?.title).join(' and ')}`)
             : items.length ? [h('span', { class: 'mini-bar', 'aria-hidden': 'true' }, h('i', { style: { width: `${Math.round((100 * known) / items.length)}%` } })), h('span', {}, `${known} / ${items.length} known`)]
               : h('span', {}, 'a skill you practise'))));

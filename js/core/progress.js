@@ -57,6 +57,7 @@ export const MILESTONES = [
   { id: 'globetrotter', title: 'Globetrotter', desc: 'Know 25 countries', goal: 25, measure: (s, db) => { const p = placesStatus(s, db); return p.known.world.size + [...p.known.europe].filter((x) => !p.known.world.has(x)).length; }, unlock: 'explorer' },
   { id: 'time-traveller', title: 'Time traveller', desc: 'Light up 12 events on the timeline', goal: 12, measure: (s, db) => timelineStatus(s, db).events.filter((e) => e.known).length },
   { id: 'lab-ready', title: 'Lab ready', desc: 'Secure 5 science topics', goal: 5, measure: (s, db) => Object.entries(s.topics).filter(([id, t]) => db.topics[id]?.subject === 'science' && ['proficient', 'mastered'].includes(t.state)).length, unlock: 'goggles' },
+  { id: 'joined-up', title: 'Joined-up thinker', desc: 'Get 30 right in topics that mix subjects', goal: 30, measure: (s, db) => s.log.filter((x) => x[3] && db.topics[db.items[x[2]]?.topic]?.links).length },
   { id: 'wordsmith', title: 'Wordsmith', desc: 'Hand in 3 weekly writing pieces', goal: 3, measure: (s) => (s.pieces || []).filter((p) => p.submittedDay).length },
   { id: 'bookworm', title: 'Bookworm', desc: 'Finish 3 books', goal: 3, measure: (s) => (s.books || []).filter((b) => b.endDay).length, unlock: 'backpack' },
   { id: 'calibrated', title: 'Know what you know', desc: 'Be right on 20 of your last 25 “Sure” answers', goal: 20, measure: (s) => { const r = s.log.filter((x) => x[7] === 2).slice(-25); return r.filter((x) => x[3]).length; } },

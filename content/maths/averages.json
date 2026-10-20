@@ -1,0 +1,126 @@
+{
+ "subject": "maths",
+ "deck": "averages",
+ "topics": [
+  {
+   "id": "maths.averages",
+   "title": "Averages and range",
+   "kind": "mixed",
+   "prereqs": [
+    "maths.negatives"
+   ],
+   "batch": 5,
+   "intro": "An average is one number that sums up a whole set of data. Geographers, scientists and historians all use them, so this skill turns up everywhere.",
+   "teach": "Explain the difference between the mean and the median.",
+   "talk": "Ask her the mean of everyone’s ages at the table."
+  }
+ ],
+ "items": [
+  {
+   "id": "maths.av.calc",
+   "topic": "maths.averages",
+   "kind": "template",
+   "gen": "averages",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.av.median",
+   "topic": "maths.averages",
+   "kind": "fact",
+   "prompt": "Which average is the middle value when the data is put in order?",
+   "answer": "the median",
+   "distractors": [
+    "the mean",
+    "the mode",
+    "the range"
+   ],
+   "explain": "Median sounds like “medium”: the middle one.",
+   "accept": [
+    "median"
+   ]
+  },
+  {
+   "id": "maths.av.mode",
+   "topic": "maths.averages",
+   "kind": "fact",
+   "prompt": "Which average is the value that appears most often?",
+   "answer": "the mode",
+   "distractors": [
+    "the mean",
+    "the median",
+    "the range"
+   ],
+   "explain": "Mode sounds like “most”: the most common value.",
+   "accept": [
+    "mode"
+   ]
+  },
+  {
+   "id": "maths.av.mean",
+   "topic": "maths.averages",
+   "kind": "fact",
+   "prompt": "To find the mean, you add up all the values and then…",
+   "answer": "divide by how many values there are",
+   "distractors": [
+    "take away the smallest",
+    "pick the middle one",
+    "multiply by 2"
+   ],
+   "explain": "Mean = total ÷ number of values. It shares the total out equally.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.av.range",
+   "topic": "maths.averages",
+   "kind": "fact",
+   "prompt": "What does the range of a set of data tell you?",
+   "answer": "how spread out the data is",
+   "distractors": [
+    "the typical value",
+    "the most common value",
+    "the total of the data"
+   ],
+   "explain": "Range = largest − smallest. A big range means the data is spread out.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.av.mode-q",
+   "topic": "maths.averages",
+   "kind": "fact",
+   "prompt": "What is the mode of 3, 7, 7, 2, 9?",
+   "answer": "7",
+   "distractors": [
+    "5.6",
+    "2",
+    "9"
+   ],
+   "explain": "7 appears twice; every other number appears once. (5.6 is the mean.)"
+  },
+  {
+   "id": "maths.av.even",
+   "topic": "maths.averages",
+   "kind": "fact",
+   "prompt": "What is the median of 4, 6, 8, 10?",
+   "answer": "7",
+   "distractors": [
+    "6",
+    "8",
+    "28"
+   ],
+   "explain": "With an even number of values there are two middle ones (6 and 8). The median is halfway between them: 7."
+  }
+ ]
+}

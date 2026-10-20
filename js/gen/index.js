@@ -4,5 +4,6 @@ import { HISTORY_GENERATORS } from './history.js';
 import { GEOGRAPHY_GENERATORS } from './geography.js';
 import { SCIENCE_GENERATORS } from './science.js';
 import { ENGLISH_GENERATORS } from './english.js';
+import { SYNOPTIC_GENERATORS } from './synoptic.js';
 
-export const GENERATORS = { ...MATHS, ...HISTORY_GENERATORS, ...GEOGRAPHY_GENERATORS, ...SCIENCE_GENERATORS, ...ENGLISH_GENERATORS };
+export const GENERATORS = { ...MATHS, ...HISTORY_GENERATORS, ...GEOGRAPHY_GENERATORS, ...SCIENCE_GENERATORS, ...ENGLISH_GENERATORS, ...SYNOPTIC_GENERATORS };
