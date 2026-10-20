@@ -1,0 +1,2492 @@
+{
+ "subject": "english",
+ "deck": "year7",
+ "topics": [
+  {
+   "id": "english.grammar7",
+   "title": "Grammar toolkit: word classes and clauses",
+   "kind": "mixed",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "In Year 7 your teachers will expect you to name word classes and sentence types so you can talk about how writers build sentences.",
+   "teach": "Explain the difference between an adjective and an adverb.",
+   "talk": "Pick a sentence from a book and ask her to find the verb."
+  },
+  {
+   "id": "english.lit-words",
+   "title": "Words for talking about stories",
+   "kind": "facts",
+   "prereqs": [
+    "english.vocab-1"
+   ],
+   "batch": 6,
+   "teach": "Explain what foreshadowing is, with an example from a film or book.",
+   "talk": "Ask her who the protagonist of the book she is reading is."
+  },
+  {
+   "id": "english.roots-3",
+   "title": "Word parts: suffixes and more roots",
+   "kind": "facts",
+   "prereqs": [
+    "english.morph-2"
+   ],
+   "batch": 6,
+   "teach": "Explain how “-ology” helps you understand new subjects at secondary school.",
+   "talk": "Ask her what a “phobia” is, and what “arachnophobia” might mean."
+  },
+  {
+   "id": "english.poetry-terms",
+   "title": "Poetry toolkit",
+   "kind": "facts",
+   "prereqs": [
+    "english.techniques"
+   ],
+   "batch": 6,
+   "intro": "Poets choose form, sound and structure as carefully as words. Knowing the terms lets you explain how a poem works.",
+   "teach": "Explain the difference between enjambment and a caesura.",
+   "talk": "Ask her what makes a sonnet a sonnet."
+  },
+  {
+   "id": "english.poems",
+   "title": "Classic poems",
+   "kind": "facts",
+   "prereqs": [
+    "english.poetry-terms"
+   ],
+   "batch": 5,
+   "intro": "Read each extract aloud. Then think: what technique is used, and what effect does it have on the reader?",
+   "teach": "Explain the effect of the repeated “faster than” in Stevenson’s poem.",
+   "talk": "Read “The Tyger” aloud together and ask what she thinks the poet is asking."
+  },
+  {
+   "id": "english.shakespeare",
+   "title": "Shakespeare and his theatre",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 6,
+   "intro": "William Shakespeare wrote over 400 years ago, yet his plays are still performed every day. Most grammar schools study a whole play in Year 7.",
+   "teach": "Explain what a soliloquy is and why playwrights use them.",
+   "talk": "Ask her what the groundlings were."
+  },
+  {
+   "id": "english.dream",
+   "title": "A Midsummer Night’s Dream",
+   "kind": "facts",
+   "prereqs": [
+    "english.shakespeare"
+   ],
+   "batch": 5,
+   "intro": "Four young lovers run away into an enchanted forest, where fairies are quarrelling and a group of workmen are rehearsing a play. What could possibly go wrong?",
+   "teach": "Explain how Puck’s mistake causes chaos for the lovers.",
+   "talk": "Ask her who gets turned into a donkey, and why."
+  },
+  {
+   "id": "english.tempest",
+   "title": "The Tempest",
+   "kind": "facts",
+   "prereqs": [
+    "english.shakespeare"
+   ],
+   "batch": 5,
+   "intro": "Prospero, a magician and the rightful Duke of Milan, has lived on an island for twelve years. When his enemies sail past, he raises a storm.",
+   "teach": "Explain why Prospero creates the storm.",
+   "talk": "Ask her whether she thinks Caliban is a villain or a victim."
+  },
+  {
+   "id": "english.victorian",
+   "title": "Victorian fiction: Dickens, Gothic and Sherlock Holmes",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "19th-century writing can look hard at first: long sentences and old words. Knowing the context and the genre makes it much easier.",
+   "teach": "Explain what Dickens wanted readers to learn from Scrooge.",
+   "talk": "Ask her what pathetic fallacy is, and to spot some in a film."
+  },
+  {
+   "id": "english.unseen",
+   "title": "Reading unseen extracts",
+   "kind": "facts",
+   "prereqs": [
+    "english.vocab-1"
+   ],
+   "batch": 4,
+   "intro": "In Year 7 you will often read an extract you have never seen and answer questions about it. Read the whole thing first, then look for clues.",
+   "teach": "Explain how you work out what a character is like from just a few lines.",
+   "talk": "Read the first paragraph of a book together and ask her what she can infer."
+  },
+  {
+   "id": "english.analysis",
+   "title": "Writing about writing: analysis",
+   "kind": "facts",
+   "prereqs": [
+    "english.techniques",
+    "english.vocab-1"
+   ],
+   "batch": 5,
+   "intro": "The big step in Year 7 English: not just spotting a technique, but explaining its effect on the reader, using a short quotation.",
+   "teach": "Explain what makes a quotation “embedded”.",
+   "talk": "Ask her to explain the effect of one word in a song lyric or advert."
+  },
+  {
+   "id": "english.rhetoric",
+   "title": "Speeches and persuasion",
+   "kind": "facts",
+   "prereqs": [
+    "english.techniques"
+   ],
+   "batch": 5,
+   "teach": "Explain three ways a speaker can persuade an audience.",
+   "talk": "Watch a short speech or advert together and spot the persuasive techniques."
+  }
+ ],
+ "items": [
+  {
+   "id": "english.gr7.wordclass",
+   "topic": "english.grammar7",
+   "kind": "template",
+   "gen": "wordClass",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    0.6
+   ]
+  },
+  {
+   "id": "english.gr7.simple",
+   "topic": "english.grammar7",
+   "kind": "mcq",
+   "prompt": "Which of these is a simple sentence (one main clause)?",
+   "options": [
+    {
+     "text": "The dog barked.",
+     "correct": true
+    },
+    {
+     "text": "The dog barked and the cat ran away.",
+     "correct": false,
+     "feedback": "Two main clauses joined by “and”: a compound sentence."
+    },
+    {
+     "text": "When the dog barked, the cat ran away.",
+     "correct": false,
+     "feedback": "A subordinate clause plus a main clause: a complex sentence."
+    }
+   ],
+   "explain": "A simple sentence has one main clause: one subject and one main verb."
+  },
+  {
+   "id": "english.gr7.complex",
+   "topic": "english.grammar7",
+   "kind": "mcq",
+   "prompt": "Which of these is a complex sentence?",
+   "options": [
+    {
+     "text": "Because it was late, we took a taxi.",
+     "correct": true
+    },
+    {
+     "text": "It was late, so we took a taxi.",
+     "correct": false,
+     "feedback": "Two main clauses joined by “so”: a compound sentence."
+    },
+    {
+     "text": "It was late.",
+     "correct": false,
+     "feedback": "One main clause: a simple sentence."
+    }
+   ],
+   "explain": "A complex sentence has a main clause and at least one subordinate clause (starting with because, when, although, if…)."
+  },
+  {
+   "id": "english.gr7.subordinate",
+   "topic": "english.grammar7",
+   "kind": "mcq",
+   "prompt": "In “Although she was tired, Maya finished the race”, which part is the subordinate clause?",
+   "options": [
+    {
+     "text": "Although she was tired",
+     "correct": true
+    },
+    {
+     "text": "Maya finished the race",
+     "correct": false,
+     "feedback": "This is the main clause: it makes sense on its own."
+    },
+    {
+     "text": "the race",
+     "correct": false,
+     "feedback": "That is a noun phrase, not a clause (it has no verb)."
+    }
+   ],
+   "explain": "A subordinate clause adds information but can’t stand on its own as a sentence."
+  },
+  {
+   "id": "english.gr7.clause",
+   "topic": "english.grammar7",
+   "kind": "fact",
+   "prompt": "A group of words that contains a verb (and usually a subject) is called a…",
+   "answer": "clause",
+   "distractors": [
+    "phrase",
+    "paragraph",
+    "stanza"
+   ],
+   "explain": "A phrase has no main verb; a clause does."
+  },
+  {
+   "id": "english.gr7.compound",
+   "topic": "english.grammar7",
+   "kind": "fact",
+   "prompt": "Two main clauses joined by and, but or so make a…",
+   "answer": "compound sentence",
+   "distractors": [
+    "simple sentence",
+    "complex sentence",
+    "fragment"
+   ],
+   "explain": "Compound sentences use coordinating conjunctions (for, and, nor, but, or, yet, so: FANBOYS).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.gr7.fragment",
+   "topic": "english.grammar7",
+   "kind": "fact",
+   "prompt": "Writers sometimes use “Silence.” or “Nothing.” as a sentence for impact. What is a sentence without a main verb called?",
+   "answer": "a minor sentence (fragment)",
+   "distractors": [
+    "a compound sentence",
+    "a complex sentence",
+    "a run-on sentence"
+   ],
+   "explain": "Used on purpose, minor sentences create tension or emphasis. Used by accident, they are mistakes.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.lw.protagonist",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “the main character in a story”?",
+   "answer": "protagonist",
+   "explain": "**protagonist**: the main character in a story. Example: Harry is the protagonist of the Harry Potter books.",
+   "strict": true,
+   "learn": "**protagonist** means the main character in a story.\n\n_Harry is the protagonist of the Harry Potter books._"
+  },
+  {
+   "id": "english.lw.antagonist",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “the character who works against the main character”?",
+   "answer": "antagonist",
+   "explain": "**antagonist**: the character who works against the main character. Example: The Wicked Witch is the antagonist in The Wizard of Oz.",
+   "strict": true,
+   "learn": "**antagonist** means the character who works against the main character.\n\n_The Wicked Witch is the antagonist in The Wizard of Oz._"
+  },
+  {
+   "id": "english.lw.narrator",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “the voice telling the story”?",
+   "answer": "narrator",
+   "explain": "**narrator**: the voice telling the story. Example: In Treasure Island the narrator is Jim Hawkins.",
+   "strict": true,
+   "learn": "**narrator** means the voice telling the story.\n\n_In Treasure Island the narrator is Jim Hawkins._"
+  },
+  {
+   "id": "english.lw.foreshadowing",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “hints about what will happen later in a story”?",
+   "answer": "foreshadowing",
+   "explain": "**foreshadowing**: hints about what will happen later in a story. Example: The broken mirror in chapter one is foreshadowing.",
+   "strict": true,
+   "learn": "**foreshadowing** means hints about what will happen later in a story.\n\n_The broken mirror in chapter one is foreshadowing._"
+  },
+  {
+   "id": "english.lw.symbolism",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “using an object or colour to stand for a bigger idea”?",
+   "answer": "symbolism",
+   "explain": "**symbolism**: using an object or colour to stand for a bigger idea. Example: The dove is a symbol of peace.",
+   "strict": true,
+   "learn": "**symbolism** means using an object or colour to stand for a bigger idea.\n\n_The dove is a symbol of peace._"
+  },
+  {
+   "id": "english.lw.connotation",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “the ideas or feelings a word suggests beyond its basic meaning”?",
+   "answer": "connotation",
+   "explain": "**connotation**: the ideas or feelings a word suggests beyond its basic meaning. Example: “Home” has connotations of warmth and safety.",
+   "strict": true,
+   "learn": "**connotation** means the ideas or feelings a word suggests beyond its basic meaning.\n\n_“Home” has connotations of warmth and safety._"
+  },
+  {
+   "id": "english.lw.juxtaposition",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “placing two contrasting things side by side for effect”?",
+   "answer": "juxtaposition",
+   "explain": "**juxtaposition**: placing two contrasting things side by side for effect. Example: The juxtaposition of the bright party and the cold street shows inequality.",
+   "strict": true,
+   "learn": "**juxtaposition** means placing two contrasting things side by side for effect.\n\n_The juxtaposition of the bright party and the cold street shows inequality._"
+  },
+  {
+   "id": "english.lw.characterisation",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “how a writer creates and develops a character”?",
+   "answer": "characterisation",
+   "explain": "**characterisation**: how a writer creates and develops a character. Example: Dickens’ characterisation of Scrooge uses a list of harsh verbs.",
+   "strict": true,
+   "learn": "**characterisation** means how a writer creates and develops a character.\n\n_Dickens’ characterisation of Scrooge uses a list of harsh verbs._"
+  },
+  {
+   "id": "english.lw.pathetic-fallacy",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “weather or setting that reflects a character’s mood”?",
+   "answer": "pathetic fallacy",
+   "explain": "**pathetic fallacy**: weather or setting that reflects a character’s mood. Example: The storm raged as the hero despaired.",
+   "strict": true,
+   "learn": "**pathetic fallacy** means weather or setting that reflects a character’s mood.\n\n_The storm raged as the hero despaired._"
+  },
+  {
+   "id": "english.lw.genre",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “a type or category of story, such as Gothic, adventure or mystery”?",
+   "answer": "genre",
+   "explain": "**genre**: a type or category of story, such as Gothic, adventure or mystery. Example: Sherlock Holmes stories belong to the detective genre.",
+   "strict": true,
+   "learn": "**genre** means a type or category of story, such as Gothic, adventure or mystery.\n\n_Sherlock Holmes stories belong to the detective genre._"
+  },
+  {
+   "id": "english.lw.context",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “the time, place and situation in which a text was written”?",
+   "answer": "context",
+   "explain": "**context**: the time, place and situation in which a text was written. Example: The Victorian context helps explain Dickens’ anger about poverty.",
+   "strict": true,
+   "learn": "**context** means the time, place and situation in which a text was written.\n\n_The Victorian context helps explain Dickens’ anger about poverty._"
+  },
+  {
+   "id": "english.lw.first-person",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “narration using “I”, told by a character in the story”?",
+   "answer": "first person",
+   "explain": "**first person**: narration using “I”, told by a character in the story. Example: “I remember him as if it were yesterday” is first person.",
+   "strict": true,
+   "learn": "**first person** means narration using “I”, told by a character in the story.\n\n_“I remember him as if it were yesterday” is first person._"
+  },
+  {
+   "id": "english.lw.dialogue",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “the words characters speak to each other”?",
+   "answer": "dialogue",
+   "explain": "**dialogue**: the words characters speak to each other. Example: Short lines of dialogue can speed up a scene.",
+   "strict": true,
+   "learn": "**dialogue** means the words characters speak to each other.\n\n_Short lines of dialogue can speed up a scene._"
+  },
+  {
+   "id": "english.lw.climax",
+   "topic": "english.lit-words",
+   "kind": "fact",
+   "prompt": "Which literary term means “the most exciting or tense point of a story”?",
+   "answer": "climax",
+   "explain": "**climax**: the most exciting or tense point of a story. Example: The climax comes when the hero finally faces the dragon.",
+   "strict": true,
+   "learn": "**climax** means the most exciting or tense point of a story.\n\n_The climax comes when the hero finally faces the dragon._"
+  },
+  {
+   "id": "english.rt3.ology",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “-ology” mean (as in biology, geology)?",
+   "answer": "the study of",
+   "distractors": [
+    "fear of",
+    "full of",
+    "without"
+   ],
+   "explain": "“-ology” means the study of: biology, geology.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**-ology** means **the study of**. Examples: biology, geology."
+  },
+  {
+   "id": "english.rt3.phobia",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “-phobia” mean (as in arachnophobia, claustrophobia)?",
+   "answer": "fear of",
+   "distractors": [
+    "love of",
+    "study of",
+    "rule by"
+   ],
+   "explain": "“-phobia” means fear of: arachnophobia, claustrophobia.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**-phobia** means **fear of**. Examples: arachnophobia, claustrophobia."
+  },
+  {
+   "id": "english.rt3.less",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “-less” mean (as in fearless, careless)?",
+   "answer": "without",
+   "distractors": [
+    "full of",
+    "more",
+    "again"
+   ],
+   "explain": "“-less” means without: fearless, careless.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**-less** means **without**. Examples: fearless, careless."
+  },
+  {
+   "id": "english.rt3.ous",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “-ous” mean (as in dangerous, courageous)?",
+   "answer": "full of or having",
+   "distractors": [
+    "without",
+    "study of",
+    "fear of"
+   ],
+   "explain": "“-ous” means full of or having: dangerous, courageous.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**-ous** means **full of or having**. Examples: dangerous, courageous."
+  },
+  {
+   "id": "english.rt3.cracy",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “-cracy” mean (as in democracy, autocracy)?",
+   "answer": "rule or government by",
+   "distractors": [
+    "study of",
+    "writing",
+    "measure"
+   ],
+   "explain": "“-cracy” means rule or government by: democracy, autocracy.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**-cracy** means **rule or government by**. Examples: democracy, autocracy."
+  },
+  {
+   "id": "english.rt3.meter",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “-meter” mean (as in thermometer, speedometer)?",
+   "answer": "a measuring instrument",
+   "distractors": [
+    "a picture",
+    "a fear",
+    "a sound"
+   ],
+   "explain": "“-meter” means a measuring instrument: thermometer, speedometer.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**-meter** means **a measuring instrument**. Examples: thermometer, speedometer."
+  },
+  {
+   "id": "english.rt3.scope",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “-scope” mean (as in telescope, periscope)?",
+   "answer": "an instrument for looking",
+   "distractors": [
+    "for measuring",
+    "for hearing",
+    "for writing"
+   ],
+   "explain": "“-scope” means an instrument for looking: telescope, periscope.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**-scope** means **an instrument for looking**. Examples: telescope, periscope."
+  },
+  {
+   "id": "english.rt3.philphile",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “phil / -phile” mean (as in philosophy, bibliophile)?",
+   "answer": "love of",
+   "distractors": [
+    "fear of",
+    "study of",
+    "hate of"
+   ],
+   "explain": "“phil / -phile” means love of: philosophy, bibliophile.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**phil / -phile** means **love of**. Examples: philosophy, bibliophile."
+  },
+  {
+   "id": "english.rt3.ped",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “ped” mean (as in pedal, pedestrian)?",
+   "answer": "foot",
+   "distractors": [
+    "hand",
+    "head",
+    "water"
+   ],
+   "explain": "“ped” means foot: pedal, pedestrian.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ped** means **foot**. Examples: pedal, pedestrian."
+  },
+  {
+   "id": "english.rt3.manu",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “manu” mean (as in manual, manuscript)?",
+   "answer": "hand",
+   "distractors": [
+    "foot",
+    "sea",
+    "many"
+   ],
+   "explain": "“manu” means hand: manual, manuscript.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**manu** means **hand**. Examples: manual, manuscript."
+  },
+  {
+   "id": "english.rt3.mal",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “mal-” mean (as in malfunction, malicious)?",
+   "answer": "bad or badly",
+   "distractors": [
+    "good",
+    "many",
+    "small"
+   ],
+   "explain": "“mal-” means bad or badly: malfunction, malicious.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**mal-** means **bad or badly**. Examples: malfunction, malicious."
+  },
+  {
+   "id": "english.rt3.bene",
+   "topic": "english.roots-3",
+   "kind": "fact",
+   "prompt": "What does “bene-” mean (as in benefit, benevolent)?",
+   "answer": "good or well",
+   "distractors": [
+    "bad",
+    "two",
+    "under"
+   ],
+   "explain": "“bene-” means good or well: benefit, benevolent.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**bene-** means **good or well**. Examples: benefit, benevolent."
+  },
+  {
+   "id": "english.pt7.stanza",
+   "topic": "english.poetry-terms",
+   "kind": "fact",
+   "prompt": "What is a group of lines in a poem, like a paragraph, called?",
+   "answer": "a stanza",
+   "distractors": [
+    "a verse line",
+    "a chapter",
+    "a couplet only"
+   ],
+   "explain": "A stanza is a “paragraph” of a poem. Two rhyming lines together are a couplet.",
+   "accept": [
+    "stanza",
+    "verse"
+   ]
+  },
+  {
+   "id": "english.pt7.couplet",
+   "topic": "english.poetry-terms",
+   "kind": "fact",
+   "prompt": "Two lines in a row that rhyme are called a…",
+   "answer": "couplet",
+   "distractors": [
+    "stanza",
+    "refrain",
+    "sonnet"
+   ],
+   "explain": "Shakespeare often ends a scene or sonnet with a rhyming couplet."
+  },
+  {
+   "id": "english.pt7.enjambment",
+   "topic": "english.poetry-terms",
+   "kind": "fact",
+   "prompt": "When a sentence runs on from one line of poetry to the next without a pause, it is called…",
+   "answer": "enjambment",
+   "distractors": [
+    "caesura",
+    "rhyme",
+    "refrain"
+   ],
+   "explain": "Enjambment can create a sense of speed, flow or surprise."
+  },
+  {
+   "id": "english.pt7.caesura",
+   "topic": "english.poetry-terms",
+   "kind": "fact",
+   "prompt": "A pause in the middle of a line of poetry, often shown by punctuation, is called a…",
+   "answer": "caesura",
+   "distractors": [
+    "enjambment",
+    "couplet",
+    "stanza"
+   ],
+   "explain": "A caesura slows the reader down and can emphasise the words around it."
+  },
+  {
+   "id": "english.pt7.sonnet",
+   "topic": "english.poetry-terms",
+   "kind": "fact",
+   "prompt": "How many lines does a sonnet have?",
+   "answer": "14",
+   "distractors": [
+    "10",
+    "12",
+    "16"
+   ],
+   "explain": "Sonnets have 14 lines and are often love poems. Shakespeare wrote 154 of them."
+  },
+  {
+   "id": "english.pt7.haiku",
+   "topic": "english.poetry-terms",
+   "kind": "fact",
+   "prompt": "A haiku has three lines. How many syllables do they usually have?",
+   "answer": "5, 7, 5",
+   "distractors": [
+    "3, 5, 3",
+    "7, 5, 7",
+    "5, 5, 5"
+   ],
+   "explain": "Haiku come from Japan and often capture a moment in nature.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.pt7.freeverse",
+   "topic": "english.poetry-terms",
+   "kind": "fact",
+   "prompt": "Poetry with no regular rhyme or rhythm is called…",
+   "answer": "free verse",
+   "distractors": [
+    "a sonnet",
+    "a ballad",
+    "blank verse"
+   ],
+   "explain": "Free verse can sound like natural speech.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.pt7.refrain",
+   "topic": "english.poetry-terms",
+   "kind": "fact",
+   "prompt": "A line or group of lines repeated through a poem or song is a…",
+   "answer": "refrain",
+   "distractors": [
+    "caesura",
+    "couplet",
+    "metaphor"
+   ],
+   "explain": "Refrains, like a chorus, make a poem memorable and emphasise its key idea."
+  },
+  {
+   "id": "english.pt7.rhyme",
+   "topic": "english.poetry-terms",
+   "kind": "fact",
+   "prompt": "A poem’s lines end in the pattern cat / dog / hat / log. What is its rhyme scheme?",
+   "answer": "ABAB",
+   "distractors": [
+    "AABB",
+    "ABBA",
+    "ABCD"
+   ],
+   "explain": "Give each new end sound a new letter: cat (A), dog (B), hat (A), log (B).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.pt7.speaker",
+   "topic": "english.poetry-terms",
+   "kind": "fact",
+   "prompt": "The “voice” in a poem, which may not be the poet, is called the…",
+   "answer": "speaker",
+   "distractors": [
+    "narrator only",
+    "author",
+    "audience"
+   ],
+   "explain": "Write “the speaker” rather than assuming the poem is about the poet’s own life.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.pt7.ballad",
+   "topic": "english.poetry-terms",
+   "kind": "fact",
+   "prompt": "A poem that tells a story, often in four-line stanzas with a strong rhythm, is a…",
+   "answer": "ballad",
+   "distractors": [
+    "sonnet",
+    "haiku",
+    "limerick"
+   ],
+   "explain": "“The Highwayman” by Alfred Noyes is a famous ballad.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.pm.tyger1",
+   "topic": "english.poems",
+   "kind": "mcq",
+   "prompt": "Which technique is used in “Tyger Tyger, burning bright”?",
+   "options": [
+    {
+     "text": "Repetition and alliteration (the repeated “Tyger” and the “b” sounds)",
+     "correct": true
+    },
+    {
+     "text": "A simile",
+     "correct": false,
+     "feedback": "There is no “like” or “as” comparison here."
+    },
+    {
+     "text": "Onomatopoeia",
+     "correct": false,
+     "feedback": "None of these words imitate a sound."
+    }
+   ],
+   "explain": "The repeated “Tyger” and the “burning bright” alliteration give the opening a powerful, chant-like rhythm.",
+   "passage": "Tyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?",
+   "passageSource": "William Blake, “The Tyger” (1794)"
+  },
+  {
+   "id": "english.pm.tyger2",
+   "topic": "english.poems",
+   "kind": "mcq",
+   "prompt": "What is the speaker asking in this stanza?",
+   "options": [
+    {
+     "text": "Who or what could have created such a powerful, frightening creature?",
+     "correct": true
+    },
+    {
+     "text": "Where the tiger lives",
+     "correct": false,
+     "feedback": "The forest is mentioned, but the question is “what immortal hand… could frame” it: who made it?"
+    },
+    {
+     "text": "Why the tiger is hungry",
+     "correct": false,
+     "feedback": "Hunger isn’t mentioned."
+    }
+   ],
+   "explain": "“What immortal hand or eye / Could frame thy fearful symmetry?” is a rhetorical question about creation: what god could make something so beautiful and so dangerous?",
+   "passage": "Tyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?",
+   "passageSource": "William Blake, “The Tyger” (1794)"
+  },
+  {
+   "id": "english.pm.daff1",
+   "topic": "english.poems",
+   "kind": "mcq",
+   "prompt": "What technique is used in the first line?",
+   "options": [
+    {
+     "text": "A simile: the speaker compares himself to a cloud",
+     "correct": true
+    },
+    {
+     "text": "A metaphor",
+     "correct": false,
+     "feedback": "It uses “as”, so it is a simile, not a metaphor."
+    },
+    {
+     "text": "Onomatopoeia",
+     "correct": false,
+     "feedback": "No sound words here."
+    }
+   ],
+   "explain": "“Lonely as a cloud” suggests the speaker is drifting alone, apart from the world below.",
+   "passage": "I wandered lonely as a cloud\nThat floats on high o’er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;",
+   "passageSource": "William Wordsworth, “I Wandered Lonely as a Cloud” (1807)"
+  },
+  {
+   "id": "english.pm.daff2",
+   "topic": "english.poems",
+   "kind": "weighted",
+   "prompt": "Which is the strongest comment on “a crowd, / A host, of golden daffodils”?",
+   "options": [
+    {
+     "text": "The daffodils are described like a crowd of people, which contrasts with the lonely speaker and suggests nature is good company",
+     "weight": 3,
+     "feedback": "Excellent: names the personification, links it to “lonely”, and explains the effect."
+    },
+    {
+     "text": "The poet uses personification because the daffodils are like people",
+     "weight": 2,
+     "feedback": "Good, but explain the effect: why does it matter that they are like people?"
+    },
+    {
+     "text": "There are lots of daffodils",
+     "weight": 1,
+     "feedback": "True, but this only retells the poem; it doesn’t analyse it."
+    },
+    {
+     "text": "The daffodils are yellow",
+     "weight": 0,
+     "feedback": "This just repeats “golden” without any analysis."
+    }
+   ],
+   "explain": "Strong analysis names the technique, quotes precisely and explains the effect, ideally linking to another part of the poem.",
+   "passage": "I wandered lonely as a cloud\nThat floats on high o’er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;",
+   "passageSource": "William Wordsworth, “I Wandered Lonely as a Cloud” (1807)"
+  },
+  {
+   "id": "english.pm.wind",
+   "topic": "english.poems",
+   "kind": "mcq",
+   "prompt": "How does Rossetti show that the wind is real, even though no one can see it?",
+   "options": [
+    {
+     "text": "Through its effects: “the leaves hang trembling”",
+     "correct": true
+    },
+    {
+     "text": "By describing the colour of the wind",
+     "correct": false,
+     "feedback": "The poem says “Neither I nor you” have seen it; it has no colour."
+    },
+    {
+     "text": "By saying it is a cloud",
+     "correct": false,
+     "feedback": "Clouds aren’t mentioned."
+    }
+   ],
+   "explain": "The poem’s question-and-answer structure leads to the idea that we know some things are real by their effects.",
+   "passage": "Who has seen the wind?\nNeither I nor you:\nBut when the leaves hang trembling,\nThe wind is passing through.",
+   "passageSource": "Christina Rossetti, “Who Has Seen the Wind?” (1872)"
+  },
+  {
+   "id": "english.pm.ozy1",
+   "topic": "english.poems",
+   "kind": "mcq",
+   "prompt": "What is the irony in Ozymandias’s boast, “Look on my Works, ye Mighty, and despair!”?",
+   "options": [
+    {
+     "text": "Nothing of his great works is left: only sand, so his power has not lasted",
+     "correct": true
+    },
+    {
+     "text": "He really was the greatest king who ever lived",
+     "correct": false,
+     "feedback": "The poem shows the opposite: his statue lies broken in the desert."
+    },
+    {
+     "text": "The travellers are afraid of the statue",
+     "correct": false,
+     "feedback": "There is no one there to be afraid; the sands are “lone and level”."
+    }
+   ],
+   "explain": "Irony: the words meant to show eternal power now show how power fades. Shelley’s message is that no ruler lasts forever.",
+   "passage": "“My name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!”\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.",
+   "passageSource": "Percy Bysshe Shelley, “Ozymandias” (1818)"
+  },
+  {
+   "id": "english.pm.ozy2",
+   "topic": "english.poems",
+   "kind": "mcq",
+   "prompt": "What is the effect of the alliteration in “lone and level sands”?",
+   "options": [
+    {
+     "text": "The smooth “l” sounds emphasise the empty, endless desert where the empire used to be",
+     "correct": true
+    },
+    {
+     "text": "It makes the poem sound like an exciting battle",
+     "correct": false,
+     "feedback": "The “l” sounds are soft and slow, not exciting."
+    },
+    {
+     "text": "It shows the sand is wet",
+     "correct": false,
+     "feedback": "Nothing suggests the sand is wet."
+    }
+   ],
+   "explain": "Sound choices support meaning: the flat, gentle sounds echo the flat, empty desert.",
+   "passage": "“My name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!”\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.",
+   "passageSource": "Percy Bysshe Shelley, “Ozymandias” (1818)"
+  },
+  {
+   "id": "english.pm.railway",
+   "topic": "english.poems",
+   "kind": "mcq",
+   "prompt": "How does Stevenson create a sense of speed?",
+   "options": [
+    {
+     "text": "A fast, regular rhythm, rhyming couplets and quick lists of things flashing past",
+     "correct": true
+    },
+    {
+     "text": "Long, slow sentences with lots of pauses",
+     "correct": false,
+     "feedback": "The lines rush by with few pauses."
+    },
+    {
+     "text": "By describing the train stopping at each station",
+     "correct": false,
+     "feedback": "The train never stops in this extract."
+    }
+   ],
+   "explain": "The rhythm imitates the “clickety-clack” of a train, and the lists (“bridges and houses, hedges and ditches”) are like glimpses from a window.",
+   "passage": "Faster than fairies, faster than witches,\nBridges and houses, hedges and ditches;\nAnd charging along like troops in a battle,\nAll through the meadows the horses and cattle:",
+   "passageSource": "Robert Louis Stevenson, “From a Railway Carriage” (1885)"
+  },
+  {
+   "id": "english.pm.compare",
+   "topic": "english.poems",
+   "kind": "mcq",
+   "prompt": "You are comparing two poems. Which sentence makes the best comparison?",
+   "options": [
+    {
+     "text": "Both poets use nature, but whereas Wordsworth finds comfort in the daffodils, Blake finds the tiger frightening.",
+     "correct": true
+    },
+    {
+     "text": "Wordsworth wrote about daffodils. Blake wrote about a tiger.",
+     "correct": false,
+     "feedback": "This describes each poem but doesn’t compare them."
+    },
+    {
+     "text": "I liked the daffodils poem more than the tiger poem.",
+     "correct": false,
+     "feedback": "A personal opinion, not a comparison of how the poems work."
+    }
+   ],
+   "explain": "Good comparisons use connectives such as “whereas”, “similarly”, “in contrast” and “both”, and compare ideas or methods."
+  },
+  {
+   "id": "english.sh.born",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "In which town was Shakespeare born, in 1564?",
+   "answer": "Stratford-upon-Avon",
+   "distractors": [
+    "London",
+    "Oxford",
+    "Windsor"
+   ],
+   "explain": "Shakespeare was born in Stratford-upon-Avon in 1564 and died there in 1616.",
+   "accept": [
+    "stratford"
+   ]
+  },
+  {
+   "id": "english.sh.globe",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "What was the name of the London theatre where many of Shakespeare’s plays were first performed?",
+   "answer": "the Globe",
+   "distractors": [
+    "the Palladium",
+    "the Rose and Crown",
+    "the Old Vic"
+   ],
+   "explain": "The Globe was built in 1599. A reconstruction stands near the original site today.",
+   "accept": [
+    "globe",
+    "the globe theatre",
+    "globe theatre"
+   ]
+  },
+  {
+   "id": "english.sh.groundlings",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "What were the poorer audience members who paid a penny to stand in the yard called?",
+   "answer": "groundlings",
+   "distractors": [
+    "nobles",
+    "apprentices",
+    "gallants"
+   ],
+   "explain": "Groundlings stood around the stage in the open air, and could be noisy!"
+  },
+  {
+   "id": "english.sh.actors",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "Who played the female roles in Shakespeare’s time?",
+   "answer": "boys and young men",
+   "distractors": [
+    "women",
+    "children of either sex",
+    "puppets"
+   ],
+   "explain": "Women were not allowed to act on the public stage in England until 1660.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.sh.soliloquy",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "A speech where a character alone on stage speaks their thoughts aloud is called a…",
+   "answer": "soliloquy",
+   "distractors": [
+    "monologue to the king",
+    "aside",
+    "chorus"
+   ],
+   "explain": "Soliloquies let the audience into a character’s mind."
+  },
+  {
+   "id": "english.sh.aside",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "A short remark a character makes to the audience, which other characters on stage can’t hear, is an…",
+   "answer": "aside",
+   "distractors": [
+    "soliloquy",
+    "epilogue",
+    "echo"
+   ],
+   "explain": "Asides share secrets with the audience, creating dramatic irony."
+  },
+  {
+   "id": "english.sh.irony",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "When the audience knows something a character doesn’t, it is called…",
+   "answer": "dramatic irony",
+   "distractors": [
+    "foreshadowing",
+    "pathetic fallacy",
+    "a soliloquy"
+   ],
+   "explain": "Dramatic irony creates tension or comedy: we want to shout a warning!",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.sh.pentameter",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "Shakespeare’s noble characters often speak in lines of ten syllables with a da-DUM rhythm. What is this called?",
+   "answer": "iambic pentameter",
+   "distractors": [
+    "free verse",
+    "a haiku",
+    "a ballad"
+   ],
+   "explain": "Five pairs of syllables, each with the stress on the second: “But SOFT, what LIGHT through YONder WINdow BREAKS?”",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.sh.prose",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "Comic and lower-class characters, like the workmen in A Midsummer Night’s Dream, usually speak in…",
+   "answer": "prose (ordinary sentences)",
+   "distractors": [
+    "iambic pentameter",
+    "rhyming couplets only",
+    "song"
+   ],
+   "explain": "The switch between verse and prose tells the audience about status and mood.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.sh.thou",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "In Shakespeare, what does “thou” mean?",
+   "answer": "you",
+   "distractors": [
+    "they",
+    "me",
+    "them"
+   ],
+   "explain": "“Thou” was used for friends, family and inferiors; “you” was more formal. “Thy” means your."
+  },
+  {
+   "id": "english.sh.wherefore",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "When Juliet asks “Wherefore art thou Romeo?”, what does “wherefore” mean?",
+   "answer": "why",
+   "distractors": [
+    "where",
+    "when",
+    "how"
+   ],
+   "explain": "She is asking why he has to be Romeo (a Montague, her family’s enemy), not where he is!",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.sh.genres",
+   "topic": "english.shakespeare",
+   "kind": "fact",
+   "prompt": "Shakespeare’s plays are usually grouped into comedies, histories and…",
+   "answer": "tragedies",
+   "distractors": [
+    "musicals",
+    "mysteries",
+    "romances only"
+   ],
+   "explain": "Comedies usually end in marriage; tragedies end in death."
+  },
+  {
+   "id": "english.dr.setting",
+   "topic": "english.dream",
+   "kind": "fact",
+   "prompt": "Where is A Midsummer Night’s Dream set?",
+   "answer": "Athens and a nearby forest",
+   "distractors": [
+    "Rome and the sea",
+    "London and Windsor",
+    "a desert island"
+   ],
+   "explain": "The lovers flee from strict Athens into the magical forest, where the rules of ordinary life break down.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.dr.hermia",
+   "topic": "english.dream",
+   "kind": "fact",
+   "prompt": "Hermia’s father wants her to marry Demetrius. Whom does Hermia love?",
+   "answer": "Lysander",
+   "distractors": [
+    "Theseus",
+    "Oberon",
+    "Bottom"
+   ],
+   "explain": "Hermia and Lysander run away to the forest to escape Athenian law."
+  },
+  {
+   "id": "english.dr.helena",
+   "topic": "english.dream",
+   "kind": "fact",
+   "prompt": "Who loves Demetrius, although he has rejected her?",
+   "answer": "Helena",
+   "distractors": [
+    "Hermia",
+    "Titania",
+    "Hippolyta"
+   ],
+   "explain": "Helena follows Demetrius into the forest."
+  },
+  {
+   "id": "english.dr.oberon",
+   "topic": "english.dream",
+   "kind": "fact",
+   "prompt": "Who is the King of the Fairies?",
+   "answer": "Oberon",
+   "distractors": [
+    "Puck",
+    "Theseus",
+    "Egeus"
+   ],
+   "explain": "Oberon quarrels with his queen, Titania, over a changeling boy."
+  },
+  {
+   "id": "english.dr.titania",
+   "topic": "english.dream",
+   "kind": "fact",
+   "prompt": "Who is Queen of the Fairies, and falls in love with Bottom?",
+   "answer": "Titania",
+   "distractors": [
+    "Hippolyta",
+    "Helena",
+    "Hermia"
+   ],
+   "explain": "Oberon puts love-juice on her eyes so she falls for the first creature she sees."
+  },
+  {
+   "id": "english.dr.puck",
+   "topic": "english.dream",
+   "kind": "fact",
+   "prompt": "Which mischievous fairy servant puts the love-juice on the wrong Athenian’s eyes?",
+   "answer": "Puck",
+   "distractors": [
+    "Oberon",
+    "Bottom",
+    "Peaseblossom"
+   ],
+   "explain": "Puck, also called Robin Goodfellow, causes chaos by mistaking Lysander for Demetrius.",
+   "accept": [
+    "robin goodfellow"
+   ]
+  },
+  {
+   "id": "english.dr.bottom",
+   "topic": "english.dream",
+   "kind": "fact",
+   "prompt": "Which workman does Puck give a donkey’s head?",
+   "answer": "Bottom",
+   "distractors": [
+    "Quince",
+    "Flute",
+    "Snout"
+   ],
+   "explain": "Nick Bottom, a weaver, is the most enthusiastic (and least talented) actor of the “rude mechanicals”."
+  },
+  {
+   "id": "english.dr.course",
+   "topic": "english.dream",
+   "kind": "fact",
+   "prompt": "Who says “The course of true love never did run smooth”?",
+   "answer": "Lysander",
+   "distractors": [
+    "Puck",
+    "Theseus",
+    "Helena"
+   ],
+   "explain": "Lysander says it to Hermia near the start: a hint of all the trouble to come.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.dr.fools",
+   "topic": "english.dream",
+   "kind": "fact",
+   "prompt": "Who says “Lord, what fools these mortals be!”?",
+   "answer": "Puck",
+   "distractors": [
+    "Oberon",
+    "Bottom",
+    "Hermia"
+   ],
+   "explain": "Puck enjoys watching the humans’ love-tangled chaos.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.dr.fierce",
+   "topic": "english.dream",
+   "kind": "fact",
+   "prompt": "“Though she be but little, she is fierce.” Who is being described?",
+   "answer": "Hermia",
+   "distractors": [
+    "Helena",
+    "Titania",
+    "Puck"
+   ],
+   "explain": "Helena says it about Hermia during their furious quarrel in the forest.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.dr.theme",
+   "topic": "english.dream",
+   "kind": "mcq",
+   "prompt": "Which idea is most important in A Midsummer Night’s Dream?",
+   "options": [
+    {
+     "text": "Love is irrational and can make people behave foolishly",
+     "correct": true
+    },
+    {
+     "text": "War is glorious",
+     "correct": false,
+     "feedback": "There is no war in the play."
+    },
+    {
+     "text": "Money brings happiness",
+     "correct": false,
+     "feedback": "Money is hardly mentioned."
+    }
+   ],
+   "explain": "The love potion literally makes love blind and changeable, showing how love can seem to make no sense."
+  },
+  {
+   "id": "english.dr.puck-speech",
+   "topic": "english.dream",
+   "kind": "mcq",
+   "prompt": "What does this speech suggest about Puck?",
+   "options": [
+    {
+     "text": "He loves playing tricks and making Oberon laugh",
+     "correct": true
+    },
+    {
+     "text": "He is serious and obeys every rule",
+     "correct": false,
+     "feedback": "“Merry” and “jest” show he is playful, not serious."
+    },
+    {
+     "text": "He is frightened of horses",
+     "correct": false,
+     "feedback": "He tricks a horse; he isn’t afraid of it."
+    }
+   ],
+   "explain": "“Merry wanderer”, “jest” and “beguile” all suggest a playful trickster.",
+   "passage": "I am that merry wanderer of the night.\nI jest to Oberon and make him smile\nWhen I a fat and bean-fed horse beguile,\nNeighing in likeness of a filly foal;",
+   "passageSource": "William Shakespeare, A Midsummer Night’s Dream, Act 2 Scene 1"
+  },
+  {
+   "id": "english.tp.prospero",
+   "topic": "english.tempest",
+   "kind": "fact",
+   "prompt": "Who is the magician who rules the island in The Tempest?",
+   "answer": "Prospero",
+   "distractors": [
+    "Caliban",
+    "Antonio",
+    "Alonso"
+   ],
+   "explain": "Prospero was Duke of Milan until his brother Antonio stole his title."
+  },
+  {
+   "id": "english.tp.miranda",
+   "topic": "english.tempest",
+   "kind": "fact",
+   "prompt": "Who is Prospero’s daughter?",
+   "answer": "Miranda",
+   "distractors": [
+    "Ariel",
+    "Titania",
+    "Juliet"
+   ],
+   "explain": "Miranda arrived on the island as a small child and has hardly seen any other humans."
+  },
+  {
+   "id": "english.tp.ariel",
+   "topic": "english.tempest",
+   "kind": "fact",
+   "prompt": "Which spirit serves Prospero, hoping to be set free?",
+   "answer": "Ariel",
+   "distractors": [
+    "Caliban",
+    "Puck",
+    "Ferdinand"
+   ],
+   "explain": "Prospero freed Ariel from a tree where the witch Sycorax had trapped it."
+  },
+  {
+   "id": "english.tp.caliban",
+   "topic": "english.tempest",
+   "kind": "fact",
+   "prompt": "Who is the son of the witch Sycorax, and claims the island belongs to him?",
+   "answer": "Caliban",
+   "distractors": [
+    "Ariel",
+    "Ferdinand",
+    "Gonzalo"
+   ],
+   "explain": "“This island’s mine,” Caliban says. Modern audiences often see him as a victim of colonisation."
+  },
+  {
+   "id": "english.tp.antonio",
+   "topic": "english.tempest",
+   "kind": "fact",
+   "prompt": "Who stole Prospero’s title as Duke of Milan?",
+   "answer": "his brother Antonio",
+   "distractors": [
+    "Ferdinand",
+    "Caliban",
+    "King Lear"
+   ],
+   "explain": "Antonio and Alonso, King of Naples, set Prospero and Miranda adrift at sea.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.tp.storm",
+   "topic": "english.tempest",
+   "kind": "fact",
+   "prompt": "Why does Prospero raise the storm at the start of the play?",
+   "answer": "to bring his enemies to the island",
+   "distractors": [
+    "to sink the ship and drown everyone",
+    "to water his crops",
+    "because he lost his temper by accident"
+   ],
+   "explain": "Ariel brings everyone safely ashore. Prospero wants justice, and in the end chooses forgiveness.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.tp.brave",
+   "topic": "english.tempest",
+   "kind": "fact",
+   "prompt": "Who says “O brave new world, / That has such people in’t!” on seeing a group of men for the first time?",
+   "answer": "Miranda",
+   "distractors": [
+    "Prospero",
+    "Ariel",
+    "Caliban"
+   ],
+   "explain": "It is ironic: some of the men she admires are traitors.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.tp.dreams",
+   "topic": "english.tempest",
+   "kind": "fact",
+   "prompt": "Who says “We are such stuff / As dreams are made on, and our little life / Is rounded with a sleep”?",
+   "answer": "Prospero",
+   "distractors": [
+    "Miranda",
+    "Caliban",
+    "Ferdinand"
+   ],
+   "explain": "Prospero reflects that life is brief and dreamlike, like a play.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.tp.isle",
+   "topic": "english.tempest",
+   "kind": "mcq",
+   "prompt": "Caliban says: “Be not afeard; the isle is full of noises, / Sounds and sweet airs, that give delight and hurt not.” What does this reveal about him?",
+   "options": [
+    {
+     "text": "He has a sensitive, poetic side and loves the island",
+     "correct": true
+    },
+    {
+     "text": "He is only a violent monster",
+     "correct": false,
+     "feedback": "This beautiful speech shows there is more to Caliban than violence."
+    },
+    {
+     "text": "He wants to leave the island as soon as possible",
+     "correct": false,
+     "feedback": "He describes the island with love."
+    }
+   ],
+   "explain": "Shakespeare gives Caliban some of the most beautiful lines in the play, which complicates the idea that he is simply a monster."
+  },
+  {
+   "id": "english.tp.theme",
+   "topic": "english.tempest",
+   "kind": "mcq",
+   "prompt": "How does The Tempest end?",
+   "options": [
+    {
+     "text": "Prospero forgives his enemies, frees Ariel and gives up his magic",
+     "correct": true
+    },
+    {
+     "text": "Prospero drowns his enemies in revenge",
+     "correct": false,
+     "feedback": "He chooses mercy instead: “The rarer action is / In virtue than in vengeance.”"
+    },
+    {
+     "text": "Caliban becomes King of Naples",
+     "correct": false,
+     "feedback": "Caliban stays on the island."
+    }
+   ],
+   "explain": "Themes of forgiveness, freedom and power come together at the end."
+  },
+  {
+   "id": "english.vc.carol-scrooge",
+   "topic": "english.victorian",
+   "kind": "fact",
+   "prompt": "In A Christmas Carol, what does Scrooge say about Christmas at the start?",
+   "answer": "“Bah! Humbug!”",
+   "distractors": [
+    "“God bless us, every one!”",
+    "“Merry Christmas to all!”",
+    "“I love the snow!”"
+   ],
+   "explain": "“Humbug” means nonsense or a fraud.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.vc.carol-ghosts",
+   "topic": "english.victorian",
+   "kind": "fact",
+   "prompt": "How many spirits visit Scrooge after Marley’s ghost?",
+   "answer": "3",
+   "distractors": [
+    "2",
+    "4",
+    "5"
+   ],
+   "explain": "The Ghosts of Christmas Past, Present and Yet to Come."
+  },
+  {
+   "id": "english.vc.carol-tim",
+   "topic": "english.victorian",
+   "kind": "fact",
+   "prompt": "Which character says “God bless Us, Every One!”?",
+   "answer": "Tiny Tim",
+   "distractors": [
+    "Scrooge",
+    "Bob Cratchit",
+    "Fred"
+   ],
+   "explain": "Tiny Tim, Bob Cratchit’s ill son, represents the innocent poor whom Scrooge could help.",
+   "accept": [
+    "tim"
+   ]
+  },
+  {
+   "id": "english.vc.carol-message",
+   "topic": "english.victorian",
+   "kind": "mcq",
+   "prompt": "Scrooge asks, “Are there no prisons? … And the Union workhouses?” What was Dickens trying to show?",
+   "options": [
+    {
+     "text": "That cold, uncaring attitudes to the poor were wrong; rich people should help",
+     "correct": true
+    },
+    {
+     "text": "That prisons were a good solution to poverty",
+     "correct": false,
+     "feedback": "Dickens is criticising Scrooge here; by the end, Scrooge has changed his mind."
+    },
+    {
+     "text": "That Victorian workhouses were pleasant",
+     "correct": false,
+     "feedback": "Workhouses were deliberately harsh. Dickens wanted readers to feel uncomfortable."
+    }
+   ],
+   "explain": "Dickens wrote A Christmas Carol (1843) partly as a protest about poverty and the 1834 Poor Law, which sent the poor to workhouses."
+  },
+  {
+   "id": "english.vc.marley",
+   "topic": "english.victorian",
+   "kind": "fact",
+   "prompt": "Complete the first line of A Christmas Carol: “Marley was dead: to begin…”",
+   "answer": "with",
+   "distractors": [
+    "again",
+    "tonight",
+    "forever"
+   ],
+   "explain": "“Marley was dead: to begin with.” A gripping, darkly funny opening.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.vc.workhouse",
+   "topic": "english.victorian",
+   "kind": "fact",
+   "prompt": "In Victorian England, where were very poor people sent to live and work in harsh conditions?",
+   "answer": "the workhouse",
+   "distractors": [
+    "the almshouse only",
+    "the factory dormitory",
+    "the countryside"
+   ],
+   "explain": "Families were split up and the work was hard, to discourage people from asking for help.",
+   "accept": [
+    "workhouse",
+    "workhouses"
+   ]
+  },
+  {
+   "id": "english.vc.gothic",
+   "topic": "english.victorian",
+   "kind": "fact",
+   "prompt": "Ghosts, gloomy old houses, storms and mystery are features of which genre?",
+   "answer": "Gothic",
+   "distractors": [
+    "romance",
+    "science fiction",
+    "comedy"
+   ],
+   "explain": "Famous Gothic novels include Frankenstein (1818) and Dracula (1897)."
+  },
+  {
+   "id": "english.vc.gothic-setting",
+   "topic": "english.victorian",
+   "kind": "mcq",
+   "prompt": "Which of these openings is most typical of the Gothic genre?",
+   "options": [
+    {
+     "text": "The ruined abbey loomed against a sky of bruised clouds, and somewhere a door creaked.",
+     "correct": true
+    },
+    {
+     "text": "The sun shone brightly on the busy market as children played.",
+     "correct": false,
+     "feedback": "Too cheerful for Gothic!"
+    },
+    {
+     "text": "The spaceship landed gently on the red planet.",
+     "correct": false,
+     "feedback": "That sounds like science fiction."
+    }
+   ],
+   "explain": "Gothic settings use darkness, decay, isolation and sounds that create suspense."
+  },
+  {
+   "id": "english.vc.holmes",
+   "topic": "english.victorian",
+   "kind": "fact",
+   "prompt": "Who is Sherlock Holmes’s friend and the narrator of most of his adventures?",
+   "answer": "Dr Watson",
+   "distractors": [
+    "Professor Moriarty",
+    "Inspector Lestrade",
+    "Mrs Hudson"
+   ],
+   "explain": "Watson’s first-person narration lets readers share his amazement at Holmes’s deductions.",
+   "accept": [
+    "watson",
+    "doctor watson",
+    "dr. watson",
+    "john watson"
+   ]
+  },
+  {
+   "id": "english.vc.baker",
+   "topic": "english.victorian",
+   "kind": "fact",
+   "prompt": "At which London address does Sherlock Holmes live?",
+   "answer": "221B Baker Street",
+   "distractors": [
+    "10 Downing Street",
+    "4 Privet Drive",
+    "12 Grimmauld Place"
+   ],
+   "explain": "Holmes and Watson share rooms there; their landlady is Mrs Hudson.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.vc.countenance",
+   "topic": "english.victorian",
+   "kind": "fact",
+   "prompt": "In 19th-century novels, what does “countenance” mean?",
+   "answer": "face or expression",
+   "distractors": [
+    "country",
+    "money",
+    "a type of carriage"
+   ],
+   "explain": "“His countenance was grim” means he had a grim expression."
+  },
+  {
+   "id": "english.vc.melancholy",
+   "topic": "english.victorian",
+   "kind": "fact",
+   "prompt": "What does “melancholy” mean?",
+   "answer": "deep, lasting sadness",
+   "distractors": [
+    "great anger",
+    "excitement",
+    "hunger"
+   ],
+   "explain": "A word Victorian writers loved. It suits Gothic stories."
+  },
+  {
+   "id": "english.un7.ti1",
+   "topic": "english.unseen",
+   "kind": "mcq",
+   "prompt": "What impression does the narrator give of the man arriving at the inn?",
+   "options": [
+    {
+     "text": "He is rough, tough and probably dangerous",
+     "correct": true
+    },
+    {
+     "text": "He is a rich, elegant gentleman",
+     "correct": false,
+     "feedback": "His coat is “soiled” and his nails “black, broken”: not a gentleman."
+    },
+    {
+     "text": "He is a frightened young boy",
+     "correct": false,
+     "feedback": "He is “tall, strong, heavy”."
+    }
+   ],
+   "explain": "The list of adjectives and details like the “sabre cut across one cheek” build a picture of a violent past.",
+   "passage": "I remember him as if it were yesterday, as he came plodding to the inn door, his sea-chest following behind him in a hand-barrow—a tall, strong, heavy, nut-brown man, his tarry pigtail falling over the shoulder of his soiled blue coat, his hands ragged and scarred, with black, broken nails, and the sabre cut across one cheek, a dirty, livid white.",
+   "passageSource": "Robert Louis Stevenson, Treasure Island (1883)"
+  },
+  {
+   "id": "english.un7.ti2",
+   "topic": "english.unseen",
+   "kind": "mcq",
+   "prompt": "Why does the writer use such a long list of details in one sentence?",
+   "options": [
+    {
+     "text": "To build up a vivid, overwhelming picture, as if we are seeing him through the boy’s eyes",
+     "correct": true
+    },
+    {
+     "text": "Because Victorian writers had to make sentences long",
+     "correct": false,
+     "feedback": "Writers choose sentence length for effect."
+    },
+    {
+     "text": "To make the man seem boring",
+     "correct": false,
+     "feedback": "The details make him fascinating and threatening, not boring."
+    }
+   ],
+   "explain": "Long, listing sentences can pile up detail and create a strong first impression.",
+   "passage": "I remember him as if it were yesterday, as he came plodding to the inn door, his sea-chest following behind him in a hand-barrow—a tall, strong, heavy, nut-brown man, his tarry pigtail falling over the shoulder of his soiled blue coat, his hands ragged and scarred, with black, broken nails, and the sabre cut across one cheek, a dirty, livid white.",
+   "passageSource": "Robert Louis Stevenson, Treasure Island (1883)"
+  },
+  {
+   "id": "english.un7.ti3",
+   "topic": "english.unseen",
+   "kind": "mcq",
+   "prompt": "What does “as if it were yesterday” suggest?",
+   "options": [
+    {
+     "text": "The memory is so powerful that the narrator still remembers it clearly",
+     "correct": true
+    },
+    {
+     "text": "It actually happened yesterday",
+     "correct": false,
+     "feedback": "“As if” means it didn’t; it just feels that recent."
+    },
+    {
+     "text": "The narrator has forgotten most of it",
+     "correct": false,
+     "feedback": "The opposite: the details are vivid."
+    }
+   ],
+   "explain": "This phrase also tells us the narrator is looking back from later in life.",
+   "passage": "I remember him as if it were yesterday, as he came plodding to the inn door, his sea-chest following behind him in a hand-barrow—a tall, strong, heavy, nut-brown man, his tarry pigtail falling over the shoulder of his soiled blue coat, his hands ragged and scarred, with black, broken nails, and the sabre cut across one cheek, a dirty, livid white.",
+   "passageSource": "Robert Louis Stevenson, Treasure Island (1883)"
+  },
+  {
+   "id": "english.un7.sg1",
+   "topic": "english.unseen",
+   "kind": "mcq",
+   "prompt": "What can you infer about Mary from the opening?",
+   "options": [
+    {
+     "text": "She is unhappy and unpleasant to be around, at least at first",
+     "correct": true
+    },
+    {
+     "text": "She is popular and cheerful",
+     "correct": false,
+     "feedback": "“Disagreeable” and “sour expression” suggest the opposite."
+    },
+    {
+     "text": "She is very rich and spoiled",
+     "correct": false,
+     "feedback": "The extract doesn’t tell us about money."
+    }
+   ],
+   "explain": "Writers often begin with an unlikeable protagonist so we can watch them change.",
+   "passage": "When Mary Lennox was sent to Misselthwaite Manor to live with her uncle everybody said she was the most disagreeable-looking child ever seen. It was true, too. She had a little thin face and a little thin body, thin light hair and a sour expression.",
+   "passageSource": "Frances Hodgson Burnett, The Secret Garden (1911)"
+  },
+  {
+   "id": "english.un7.sg2",
+   "topic": "english.unseen",
+   "kind": "mcq",
+   "prompt": "What is the effect of repeating the word “thin”?",
+   "options": [
+    {
+     "text": "It emphasises how unhealthy and unloved Mary seems",
+     "correct": true
+    },
+    {
+     "text": "It shows she is good at running",
+     "correct": false,
+     "feedback": "Nothing here is about running."
+    },
+    {
+     "text": "It is a spelling mistake",
+     "correct": false,
+     "feedback": "The repetition is deliberate."
+    }
+   ],
+   "explain": "Repetition makes a detail stick in the reader’s mind.",
+   "passage": "When Mary Lennox was sent to Misselthwaite Manor to live with her uncle everybody said she was the most disagreeable-looking child ever seen. It was true, too. She had a little thin face and a little thin body, thin light hair and a sour expression.",
+   "passageSource": "Frances Hodgson Burnett, The Secret Garden (1911)"
+  },
+  {
+   "id": "english.un7.sg3",
+   "topic": "english.unseen",
+   "kind": "mcq",
+   "prompt": "The narrator agrees: “It was true, too.” What does this short sentence do?",
+   "options": [
+    {
+     "text": "It confirms everyone’s harsh opinion, which surprises and slightly shocks the reader",
+     "correct": true
+    },
+    {
+     "text": "It shows the narrator disagrees with everybody",
+     "correct": false,
+     "feedback": "“It was true” means the narrator agrees."
+    },
+    {
+     "text": "It describes the manor",
+     "correct": false,
+     "feedback": "It refers to Mary."
+    }
+   ],
+   "explain": "A short sentence after a long one adds punch and a touch of humour.",
+   "passage": "When Mary Lennox was sent to Misselthwaite Manor to live with her uncle everybody said she was the most disagreeable-looking child ever seen. It was true, too. She had a little thin face and a little thin body, thin light hair and a sour expression.",
+   "passageSource": "Frances Hodgson Burnett, The Secret Garden (1911)"
+  },
+  {
+   "id": "english.un7.sh1",
+   "topic": "english.unseen",
+   "kind": "mcq",
+   "prompt": "What point is Holmes making to Watson?",
+   "options": [
+    {
+     "text": "Looking at something is not the same as noticing details about it",
+     "correct": true
+    },
+    {
+     "text": "Watson should count the stairs every day",
+     "correct": false,
+     "feedback": "The stairs are just an example of a bigger idea."
+    },
+    {
+     "text": "Watson has bad eyesight",
+     "correct": false,
+     "feedback": "Watson can see; he just doesn’t observe."
+    }
+   ],
+   "explain": "Holmes’s distinction between seeing and observing is the secret of his detective method.",
+   "passage": "“You see, but you do not observe. The distinction is clear. For example, you have frequently seen the steps which lead up from the hall to this room.”\n“Frequently.”\n“How often?”\n“Well, some hundreds of times.”\n“Then how many are there?”\n“How many? I don’t know.”\n“Quite so! You have not observed. And yet you have seen.”",
+   "passageSource": "Arthur Conan Doyle, “A Scandal in Bohemia” (1891)"
+  },
+  {
+   "id": "english.un7.sh2",
+   "topic": "english.unseen",
+   "kind": "mcq",
+   "prompt": "How does the writer make Holmes seem clever through the dialogue?",
+   "options": [
+    {
+     "text": "Holmes asks short, quick questions that lead Watson to realise he hasn’t noticed",
+     "correct": true
+    },
+    {
+     "text": "Holmes gives a long speech about science",
+     "correct": false,
+     "feedback": "His questions are short and sharp."
+    },
+    {
+     "text": "Watson explains everything to Holmes",
+     "correct": false,
+     "feedback": "It is the other way round."
+    }
+   ],
+   "explain": "The question-and-answer pattern builds to Holmes’s triumphant “Quite so!”.",
+   "passage": "“You see, but you do not observe. The distinction is clear. For example, you have frequently seen the steps which lead up from the hall to this room.”\n“Frequently.”\n“How often?”\n“Well, some hundreds of times.”\n“Then how many are there?”\n“How many? I don’t know.”\n“Quite so! You have not observed. And yet you have seen.”",
+   "passageSource": "Arthur Conan Doyle, “A Scandal in Bohemia” (1891)"
+  },
+  {
+   "id": "english.an.petal",
+   "topic": "english.analysis",
+   "kind": "order",
+   "prompt": "Put the parts of an analytical paragraph in order.",
+   "items": [
+    "Point",
+    "Evidence",
+    "Technique",
+    "Analysis",
+    "Link"
+   ],
+   "labels": [
+    "what you are arguing",
+    "a short quotation",
+    "the method used",
+    "the effect on the reader",
+    "back to the question"
+   ],
+   "explain": "PETAL: Point, Evidence, Technique, Analysis, Link."
+  },
+  {
+   "id": "english.an.embed",
+   "topic": "english.analysis",
+   "kind": "mcq",
+   "prompt": "Which sentence embeds a quotation best?",
+   "options": [
+    {
+     "text": "Scrooge is “solitary as an oyster”, suggesting he has shut himself off from everyone.",
+     "correct": true
+    },
+    {
+     "text": "Scrooge is lonely. “Solitary as an oyster.” This shows he is lonely.",
+     "correct": false,
+     "feedback": "The quotation is dropped in on its own, and “this shows he is lonely” just repeats the point."
+    },
+    {
+     "text": "The quote that shows Scrooge is lonely is the one about the oyster.",
+     "correct": false,
+     "feedback": "Quote the exact words, and keep them short."
+    }
+   ],
+   "explain": "An embedded quotation fits smoothly into your own sentence and is followed by analysis."
+  },
+  {
+   "id": "english.an.best",
+   "topic": "english.analysis",
+   "kind": "weighted",
+   "prompt": "Question: How does Dickens present Scrooge? Which is the strongest analysis of “Hard and sharp as flint”?",
+   "options": [
+    {
+     "text": "The simile compares Scrooge to flint, a hard stone, suggesting he is cold and unfeeling; “sharp” also hints he could hurt people.",
+     "weight": 3,
+     "feedback": "Excellent: technique named, connotations of specific words explored, effect explained."
+    },
+    {
+     "text": "Dickens uses a simile to show Scrooge is hard.",
+     "weight": 1,
+     "feedback": "Correct technique, but it just repeats the quotation. Explore the words: what do flint and sharp suggest?"
+    },
+    {
+     "text": "This quote shows that Scrooge is a bad person.",
+     "weight": 1,
+     "feedback": "Too vague: name the technique and zoom in on specific words."
+    },
+    {
+     "text": "Flint is a type of rock found in chalk.",
+     "weight": 0,
+     "feedback": "True, but not analysis of the effect on the reader."
+    }
+   ],
+   "explain": "Strong analysis zooms in on individual words and their connotations, and explains the effect."
+  },
+  {
+   "id": "english.an.verbs",
+   "topic": "english.analysis",
+   "kind": "fact",
+   "prompt": "Which of these is a good verb for writing about a writer’s effect?",
+   "answer": "suggests",
+   "distractors": [
+    "says",
+    "tells",
+    "is"
+   ],
+   "explain": "Analysis verbs: suggests, implies, conveys, emphasises, highlights, reveals, creates.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.an.tentative",
+   "topic": "english.analysis",
+   "kind": "fact",
+   "prompt": "Which phrase shows a thoughtful, tentative interpretation?",
+   "answer": "this could suggest",
+   "distractors": [
+    "this definitely proves",
+    "this is",
+    "everyone knows"
+   ],
+   "explain": "Good analysts offer possible meanings: “perhaps”, “this could suggest”, “alternatively”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.an.zoom",
+   "topic": "english.analysis",
+   "kind": "mcq",
+   "prompt": "“The wind howled.” Which comment zooms in best on a single word?",
+   "options": [
+    {
+     "text": "“Howled” suggests the wind is like a wild animal, making it sound threatening and alive.",
+     "correct": true
+    },
+    {
+     "text": "The writer describes the weather.",
+     "correct": false,
+     "feedback": "This doesn’t analyse any particular word."
+    },
+    {
+     "text": "The sentence is short.",
+     "correct": false,
+     "feedback": "A true observation, but not about word choice."
+    }
+   ],
+   "explain": "Zooming in means picking one word and exploring what it makes us think and feel."
+  },
+  {
+   "id": "english.an.effect",
+   "topic": "english.analysis",
+   "kind": "fact",
+   "prompt": "In analysis, “the effect on the reader” means…",
+   "answer": "what the reader thinks, feels or imagines because of the writer’s choice",
+   "distractors": [
+    "whether the reader enjoyed the book",
+    "how long it takes to read",
+    "what the reader does next"
+   ],
+   "explain": "Always ask: why did the writer choose this, and what does it make us think or feel?",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.an.short",
+   "topic": "english.analysis",
+   "kind": "fact",
+   "prompt": "How long should a quotation in an analytical paragraph usually be?",
+   "answer": "a few precise words",
+   "distractors": [
+    "a whole paragraph",
+    "at least three sentences",
+    "the entire poem"
+   ],
+   "explain": "Short quotations let you focus on exactly the words you want to analyse.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.rh.ethos",
+   "topic": "english.rhetoric",
+   "kind": "fact",
+   "prompt": "A speaker who says “As a doctor for twenty years, I have seen…” is persuading by showing their…",
+   "answer": "expertise (credibility)",
+   "distractors": [
+    "anger",
+    "humour",
+    "age only"
+   ],
+   "explain": "The Ancient Greeks called this ethos: persuading through trust in the speaker.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.rh.stats",
+   "topic": "english.rhetoric",
+   "kind": "fact",
+   "prompt": "“Nine out of ten pupils agree.” Which persuasive technique is this?",
+   "answer": "statistics",
+   "distractors": [
+    "a simile",
+    "personification",
+    "a rhetorical question"
+   ],
+   "explain": "Facts and statistics make an argument sound reliable. Always ask where they come from!"
+  },
+  {
+   "id": "english.rh.direct",
+   "topic": "english.rhetoric",
+   "kind": "fact",
+   "prompt": "“You can make a difference today.” Which technique is this?",
+   "answer": "direct address",
+   "distractors": [
+    "alliteration",
+    "hyperbole",
+    "onomatopoeia"
+   ],
+   "explain": "Speaking directly to the audience with “you” makes them feel involved.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.rh.counter",
+   "topic": "english.rhetoric",
+   "kind": "fact",
+   "prompt": "“Some people say homework helps us learn. However…” What is the speaker doing?",
+   "answer": "answering a counter-argument",
+   "distractors": [
+    "agreeing completely",
+    "telling a story",
+    "using a simile"
+   ],
+   "explain": "Raising and then rebutting the other side makes an argument look stronger and fairer.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "english.rh.purpose",
+   "topic": "english.rhetoric",
+   "kind": "mcq",
+   "prompt": "A charity leaflet asking for donations has which main purpose?",
+   "options": [
+    {
+     "text": "To persuade",
+     "correct": true
+    },
+    {
+     "text": "To entertain",
+     "correct": false,
+     "feedback": "It might be engaging, but its aim is to get donations."
+    },
+    {
+     "text": "To instruct",
+     "correct": false,
+     "feedback": "Instructions tell you how to do something step by step."
+    }
+   ],
+   "explain": "Purpose, audience and form shape every choice a writer makes."
+  },
+  {
+   "id": "english.rh.churchill",
+   "topic": "english.rhetoric",
+   "kind": "mcq",
+   "prompt": "Churchill said: “We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets.” What technique is used?",
+   "options": [
+    {
+     "text": "Repetition (anaphora) of “we shall fight”",
+     "correct": true
+    },
+    {
+     "text": "A simile",
+     "correct": false,
+     "feedback": "Nothing is compared using “like” or “as”."
+    },
+    {
+     "text": "A rhetorical question",
+     "correct": false,
+     "feedback": "It is a statement, not a question."
+    }
+   ],
+   "explain": "Repetition at the start of clauses builds rhythm, determination and emotion."
+  },
+  {
+   "id": "english.rh.triple",
+   "topic": "english.rhetoric",
+   "kind": "fact",
+   "prompt": "“Our school must be safer, greener and fairer.” Which technique is this?",
+   "answer": "rule of three",
+   "distractors": [
+    "statistics",
+    "personification",
+    "onomatopoeia"
+   ],
+   "explain": "Ideas in threes sound complete and memorable.",
+   "accept": [
+    "triplet",
+    "tricolon"
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "id": "sent.embed-quote",
+   "title": "Embed a quotation",
+   "prompt": "Write ONE sentence about Scrooge that embeds the quotation “solitary as an oyster” and explains what it suggests.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "[“\"]solitary as an oyster[”\"]",
+     "flags": "i",
+     "msg": "Include the exact words in quotation marks: “solitary as an oyster”."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "suggests",
+      "implies",
+      "conveys",
+      "shows",
+      "emphasises",
+      "highlights"
+     ],
+     "msg": "Explain it with an analysis verb (suggests, implies, conveys…)."
+    },
+    {
+     "type": "maxSentences",
+     "n": 1
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "Dickens describes Scrooge as “solitary as an oyster”, which suggests he has shut himself away from other people like a creature in a hard shell.",
+   "tip": "Make the quotation part of your own sentence, then explain the effect."
+  },
+  {
+   "id": "sent.compare",
+   "title": "Compare two texts",
+   "prompt": "Write ONE sentence comparing two characters, books or poems you know, using “whereas” or “in contrast”.",
+   "checks": [
+    {
+     "type": "includesAny",
+     "words": [
+      "whereas",
+      "in contrast",
+      "while",
+      "however"
+     ],
+     "msg": "Use a comparative connective such as “whereas” or “in contrast”."
+    },
+    {
+     "type": "minWords",
+     "n": 12
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "Whereas Mary Lennox begins The Secret Garden sour and lonely, Jim Hawkins in Treasure Island is curious and brave from the start.",
+   "tip": "Comparisons point out a similarity or difference AND explain it."
+  },
+  {
+   "id": "sent.tentative",
+   "title": "Offer two interpretations",
+   "prompt": "Write about “the wind howled” giving TWO possible meanings, using “perhaps” or “alternatively”.",
+   "checks": [
+    {
+     "type": "includesAny",
+     "words": [
+      "perhaps",
+      "alternatively",
+      "could",
+      "might"
+     ],
+     "msg": "Show you are offering possibilities: perhaps, could, might, alternatively."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "howled",
+      "howl"
+     ],
+     "msg": "Zoom in on the word “howled”."
+    },
+    {
+     "type": "minWords",
+     "n": 15
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "“Howled” perhaps makes the wind sound like a wolf, which is threatening; alternatively, it could suggest the wind is in pain, mirroring a character’s sadness.",
+   "tip": "Top answers explore more than one interpretation."
+  },
+  {
+   "id": "sent.speech-open",
+   "title": "Open a speech",
+   "prompt": "Write the first two sentences of a speech persuading your class to read more books. Use a rhetorical question and direct address.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "\\?",
+     "flags": "",
+     "msg": "Include a rhetorical question."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "you",
+      "your",
+      "we",
+      "us"
+     ],
+     "msg": "Speak directly to the audience (you, we)."
+    },
+    {
+     "type": "minWords",
+     "n": 15
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "Have you ever wished you could travel to another world? Every time you open a book, you can.",
+   "tip": "Hook your audience in the very first line."
+  }
+ ],
+ "pieces": [
+  {
+   "id": "piece.puck",
+   "type": "analytical",
+   "title": "How does Shakespeare present Puck?",
+   "task": "Read Puck’s speech from A Midsummer Night’s Dream. How does Shakespeare present Puck as mischievous? Write two analytical paragraphs.",
+   "plan": [
+    "Point 1: what Puck is like",
+    "Evidence 1",
+    "Analysis 1: zoom in on one word",
+    "Point 2",
+    "Evidence 2",
+    "Analysis 2, and what the audience thinks of him"
+   ],
+   "criteria": [
+    "Clear points about Puck’s character",
+    "Short embedded quotations",
+    "Zooms in on single words (merry, jest, beguile)",
+    "Comments on the effect on the audience",
+    "Uses analysis verbs",
+    "Links back to “mischievous”"
+   ],
+   "words": [
+    200,
+    400
+   ],
+   "starter": "From his very first words, Shakespeare presents Puck as a playful trickster who enjoys causing chaos.",
+   "passage": "I am that merry wanderer of the night.\nI jest to Oberon and make him smile\nWhen I a fat and bean-fed horse beguile,\nNeighing in likeness of a filly foal;",
+   "passageSource": "William Shakespeare, A Midsummer Night’s Dream, Act 2 Scene 1",
+   "rubric": [
+    {
+     "name": "Point answers the question",
+     "levels": [
+      "No clear point",
+      "A point, loosely linked to the question",
+      "A clear point that answers the question directly"
+     ]
+    },
+    {
+     "name": "Evidence",
+     "levels": [
+      "No quotation",
+      "A quotation, but long or not embedded",
+      "Short, precise quotations embedded in sentences"
+     ]
+    },
+    {
+     "name": "Analysis of effect",
+     "levels": [
+      "Retells what happens",
+      "Names a technique or says what words mean",
+      "Explains the effect of specific words on the reader, naming the technique"
+     ]
+    },
+    {
+     "name": "Link and accuracy",
+     "levels": [
+      "No link back",
+      "Some link back",
+      "Links back to the question; accurate and formal"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "piece.compare-poems",
+   "type": "analytical",
+   "title": "Compare two poems about nature",
+   "task": "Compare how nature is presented in “I Wandered Lonely as a Cloud” and “The Tyger”. Write three paragraphs: one on each poem and one comparing them.",
+   "plan": [
+    "What nature is like in Wordsworth’s poem, with a quotation",
+    "What nature is like in Blake’s poem, with a quotation",
+    "One similarity",
+    "One difference",
+    "Which poem’s view of nature do you find more powerful, and why?"
+   ],
+   "criteria": [
+    "Writes about both poems",
+    "Uses comparative connectives (whereas, similarly, in contrast)",
+    "Short embedded quotations from each",
+    "Names techniques (simile, personification, repetition)",
+    "Explains effects on the reader",
+    "A personal response with reasons"
+   ],
+   "words": [
+    250,
+    450
+   ],
+   "starter": "Both Wordsworth and Blake write about nature, but whereas Wordsworth finds comfort in it, Blake seems awed and even frightened.",
+   "passage": "I wandered lonely as a cloud\nThat floats on high o’er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;\n\n…\n\nTyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?",
+   "passageSource": "William Wordsworth (1807) and William Blake (1794)",
+   "rubric": [
+    {
+     "name": "Point answers the question",
+     "levels": [
+      "No clear point",
+      "A point, loosely linked to the question",
+      "A clear point that answers the question directly"
+     ]
+    },
+    {
+     "name": "Evidence",
+     "levels": [
+      "No quotation",
+      "A quotation, but long or not embedded",
+      "Short, precise quotations embedded in sentences"
+     ]
+    },
+    {
+     "name": "Analysis of effect",
+     "levels": [
+      "Retells what happens",
+      "Names a technique or says what words mean",
+      "Explains the effect of specific words on the reader, naming the technique"
+     ]
+    },
+    {
+     "name": "Link and accuracy",
+     "levels": [
+      "No link back",
+      "Some link back",
+      "Links back to the question; accurate and formal"
+     ]
+    }
+   ]
+  }
+ ]
+}

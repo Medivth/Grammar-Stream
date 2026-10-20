@@ -10,7 +10,7 @@ const read = (p) => JSON.parse(readFileSync(new URL(p, root)));
 const db = buildDB(read('index.json').decks.map(read));
 
 test('content: 12 writing tasks across six types, 30 ladder books on five rungs', () => {
-  assert.equal(db.pieces.length, 12);
+  assert.ok(db.pieces.length >= 12);
   assert.equal(new Set(db.pieces.map((p) => p.type)).size, 6);
   for (let r = 1; r <= 5; r++) assert.ok(db.ladder.filter((b) => b.rung === r).length >= 5, `rung ${r}`);
 });

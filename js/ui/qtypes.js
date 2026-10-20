@@ -7,6 +7,9 @@ import { speak, ttsAvailable } from '../platform/tts.js';
 
 export async function renderQuestion(q, { onChange = () => {}, settings = {} } = {}) {
   const parts = [];
+  if (q.passage) {
+    parts.push(h('blockquote', { class: 'passage' }, q.passage, q.passageSource ? h('cite', {}, q.passageSource) : null));
+  }
   if (q.kind !== 'cloze') {
     const prompt = rich('div', q.prompt, { class: 'q-prompt', id: 'q-prompt' });
     if (q.say && settings.tts !== false && ttsAvailable()) {

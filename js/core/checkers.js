@@ -123,8 +123,8 @@ export function checkSentence(q, text) {
       case 'excludes': ok = !c.words.some((w) => wordIn(lower, w)); break;
       case 'regex': ok = new RegExp(c.pattern, c.flags ?? '').test(t); break;
       case 'notRegex': ok = !new RegExp(c.pattern, c.flags ?? '').test(t); break;
-      case 'capital': ok = /^["'(]?[A-Z]/.test(t); break;
-      case 'endPunct': ok = /[.!?]["')]?$/.test(t); break;
+      case 'capital': ok = /^["'(“‘]?[A-Z]/.test(t); break;
+      case 'endPunct': ok = /[.!?]["')”’]?$/.test(t); break;
       case 'minWords': ok = t.split(/\s+/).filter(Boolean).length >= c.n; break;
       case 'maxSentences': ok = (t.match(/[.!?](\s|$)/g) || []).length <= c.n; break;
       default: throw new Error('unknown check ' + c.type);
