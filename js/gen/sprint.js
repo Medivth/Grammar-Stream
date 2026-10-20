@@ -5,14 +5,16 @@
 import { COURSE } from '../core/subjects.js';
 
 const neg = (n) => (n < 0 ? `−${-n}` : String(n));
+const gcd = (a, b) => (b ? gcd(b, a % b) : a);
 
 export const SPRINT_LEVELS = 5;
 
 export function sprintQuestion(level, rng, course = COURSE.sprint) {
   const L = Math.max(1, Math.min(SPRINT_LEVELS, level));
-  const table = course === 'ks1' ? SPRINT_KS1 : course === 'y3' ? SPRINT_Y3 : SPRINT;
+  const table = { ks1: SPRINT_KS1, y3: SPRINT_Y3, y8: SPRINT_Y8 }[course] || SPRINT;
   const pick = rng.pick(table[L - 1]);
-  return { ...pick(rng), keypad: course !== 'y6' || L !== 4 };
+  const q = pick(rng);
+  return { ...q, keypad: q.keypad ?? (course === 'ks1' || course === 'y3' || (course === 'y6' && L !== 4)) };
 }
 
 // Year 2 greater depth: bonds, doubles, tens, and the 2, 5, 10 (then 3, 4) tables
@@ -86,6 +88,46 @@ const SPRINT_Y3 = [
     (r) => { const a = r.int(11, 29), b = r.int(3, 5); return { prompt: `${a} × ${b}`, value: a * b }; },
     (r) => { const a = r.int(501, 999), b = r.int(101, 499); return { prompt: `${a} − ${b}`, value: a - b }; },
     (r) => { const d = r.pick([3, 4, 5]), n = r.int(2, d - 1), q = r.int(2, 10); return { prompt: `{{${n}/${d}}} of ${d * q}`, value: n * q }; },
+  ],
+];
+
+// Year 8: fluency a strong grammar-school Year 8 should have, up to GCSE-style mental work.
+// Answers with a minus sign or letters need the full keyboard (keypad: false).
+const SPRINT_Y8 = [
+  [
+    (r) => { const a = r.int(6, 15), b = r.int(6, 15); return { prompt: `${a} × ${b}`, value: a * b }; },
+    (r) => { const a = r.int(-12, 12), b = r.int(2, 12); return { prompt: `${neg(a)} − ${b}`, value: a - b, keypad: false }; },
+    (r) => { const a = r.int(-9, -2), b = r.int(-9, -2); return { prompt: `${neg(a)} × ${neg(b)}`, value: a * b }; },
+    (r) => { const a = r.int(2, 15); return { prompt: `${a}²`, value: a * a }; },
+    (r) => { const a = r.int(2, 12) * 5, p = r.pick([10, 20, 25, 50]); return { prompt: `${p}% of ${a * 4}`, value: (p * a * 4) / 100 }; },
+  ],
+  [
+    (r) => { const a = r.int(2, 9) / 10, b = r.int(2, 9); return { prompt: `${a} × ${b}`, value: Math.round(a * b * 10) / 10 }; },
+    (r) => { const a = r.int(2, 5); return { prompt: `${a}³`, value: a ** 3 }; },
+    (r) => { const a = r.int(2, 15); return { prompt: `√${a * a}`, value: a }; },
+    (r) => { const d = r.pick([3, 4, 5, 6, 8]), n = r.int(1, d - 1), k = r.int(2, 12); return { prompt: `{{${n}/${d}}} of ${d * k}`, value: n * k }; },
+    (r) => { const a = r.int(2, 9), b = r.int(2, 9), c = r.int(2, 9); return { prompt: `${a} + ${b} × ${c}`, value: a + b * c }; },
+  ],
+  [
+    (r) => { const x = r.int(-5, 9), a = r.int(2, 6), b = r.int(1, 12); return { prompt: `If x = ${neg(x)}, ${a}x + ${b} =`, value: a * x + b, keypad: false }; },
+    (r) => { const x = r.int(2, 12), a = r.int(2, 9), b = r.int(1, 20); return { prompt: `${a}x + ${b} = ${a * x + b}. x =`, value: x }; },
+    (r) => { const a = r.int(2, 9), b = r.int(2, 4); return { prompt: `${a}^{${b}} ÷ ${a}^{${b - 1}}`, value: a }; },
+    (r) => { const p = r.pick([5, 15, 35, 45, 65]), a = r.int(2, 9) * 20; return { prompt: `${p}% of ${a}`, value: (p * a) / 100 }; },
+    (r) => { const a = r.int(12, 25), b = r.int(3, 9); return { prompt: `${a} × ${b}`, value: a * b }; },
+  ],
+  [
+    (r) => { const a = r.int(2, 9) * 10, p = r.pick([10, 20, 25, 50]); return { prompt: `Increase ${a * 2} by ${p}%`, value: a * 2 * (1 + p / 100) }; },
+    (r) => { const a = r.int(2, 12) * 6; return { prompt: `Share ${a} in the ratio 1 : 2. The larger share is`, value: (a / 3) * 2 }; },
+    (r) => { const n = r.int(1, 20), a = r.int(2, 7), b = r.int(-5, 9); return { prompt: `The nth term is ${a}n ${b < 0 ? '−' : '+'} ${Math.abs(b)}. Term ${n} =`, value: a * n + b, keypad: false }; },
+    (r) => { const a = r.int(2, 12), b = r.int(2, 12); return { prompt: `HCF of ${a * 2} and ${b * 2 === a * 2 ? b * 2 + 2 : b * 2}`, value: gcd(a * 2, b * 2 === a * 2 ? b * 2 + 2 : b * 2) }; },
+    (r) => { const x = r.int(-6, 6), y = r.int(-6, 6); return { prompt: `(${neg(x)})² + (${neg(y)})²`, value: x * x + y * y }; },
+  ],
+  [
+    (r) => { const a = r.int(2, 9), e = r.int(2, 6); return { prompt: `${a} × 10^{${e}} ÷ 10^{${e - 1}}`, value: a * 10 }; },
+    (r) => { const orig = r.int(2, 20) * 10, p = r.pick([10, 20, 25, 50]); return { prompt: `After a ${p}% increase a price is £${orig * (1 + p / 100)}. The original price was £`, value: orig }; },
+    (r) => { const a = r.int(3, 12), b = r.int(3, 12); return { prompt: `Angles in a triangle: ${a * 5}° and ${b * 5}°. The third angle is`, value: 180 - (a + b) * 5 }; },
+    (r) => { const n = r.pick([5, 6, 8, 9, 10, 12]); return { prompt: `Each interior angle of a regular ${n}-sided shape is`, value: 180 - 360 / n }; },
+    (r) => { const a = r.int(3, 9), b = r.int(3, 9); return { prompt: `(x + ${a})(x + ${b}) = x² + ?x + ${a * b}. ? =`, value: a + b }; },
   ],
 ];
 

@@ -99,7 +99,7 @@ export const Y3_MILESTONES = [
   { id: 'three-hundred', title: 'Three hundred', desc: 'Know 300 things', goal: 300, measure: (s) => learnedCount(s), unlock: 'scarf' },
 ];
 
-export const milestoneDefs = () => (COURSE.id === 'y3' ? Y3_MILESTONES : COURSE.young ? KS1_MILESTONES : MILESTONES);
+export const milestoneDefs = () => (COURSE.id === 'y3' ? Y3_MILESTONES : COURSE.young ? KS1_MILESTONES : MILESTONES.filter((m) => m.id !== 'paper' || COURSE.tools.includes('paper')));
 
 export function milestones(state, db) {
   return milestoneDefs().map((m) => {
