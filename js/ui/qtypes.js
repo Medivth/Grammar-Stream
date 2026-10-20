@@ -20,7 +20,7 @@ export async function renderQuestion(q, { onChange = () => {}, settings = {} } =
   if (q.map && q.kind !== 'map') {
     const map = await loadMap(q.map.id);
     const item = q;
-    mapView = mapSVG(map, { layer: item.layerName || layerFor(q, map), highlight: q.map.highlight, markerType: markerTypeFor(q) });
+    mapView = mapSVG(map, { layer: item.layerName || layerFor(q, map), highlight: q.map.highlight, markerType: markerTypeFor(q), zoom: q.map.zoom });
     parts.push(mapView.el);
   }
   if (q.diagram) parts.push(diagram(q.diagram));
@@ -140,7 +140,7 @@ async function mapLocateView(q, onChange) {
   let picked = null;
   const names = featureNames(map, q.layer || layerFor(q, map));
   q.featureNames = names;
-  const view = mapSVG(map, { layer: q.layer || layerFor(q, map), locate: true, markerType: markerTypeFor(q), onPick: (id) => { picked = id; label.textContent = `You picked: ${names[id] ?? 'a place'}`; onChange(true); } });
+  const view = mapSVG(map, { layer: q.layer || layerFor(q, map), locate: true, markerType: markerTypeFor(q), zoom: q.map.zoom, onPick: (id) => { picked = id; label.textContent = `You picked: ${names[id] ?? 'a place'}`; onChange(true); } });
   const label = h('p', { class: 'muted', 'aria-live': 'polite' }, 'Tap the map.');
   return {
     el: h('div', {}, view.el, label),
@@ -239,12 +239,61 @@ function diagram(d) {
     svg.append(s('path', { d: 'M40 140 L260 140 L150 24 Z', ...st }));
     if (d.type === 'triangle') svg.append(txt(70, 132, `${d.known[0]}°`), txt(230, 132, `${d.known[1]}°`), txt(150, 60, '?'));
     else svg.append(txt(150, 64, `${d.known[0]}°`), txt(70, 132, '?'), txt(230, 132, '?'));
+  } else if (d.type === 'grid') {
+    return gridDiagram(d);
   } else if (d.type === 'point') {
     const cx = 150, cy = 80;
     const [a, b] = d.known;
     const ray = (deg) => s('line', { x1: cx, y1: cy, x2: cx + 70 * Math.cos(deg * Math.PI / 180), y2: cy - 70 * Math.sin(deg * Math.PI / 180), ...st });
     const lab = (deg, t) => txt(cx + 34 * Math.cos(deg * Math.PI / 180), cy - 34 * Math.sin(deg * Math.PI / 180) + 6, t);
     svg.append(ray(0), ray(a), ray(a + b), lab(a / 2, `${a}°`), lab(a + b / 2, `${b}°`), lab(a + b + (360 - a - b) / 2, '?'));
+  }
+  return svg;
+}
+
+// Ordnance-Survey-style grid for grid-reference and compass questions
+function gridDiagram(d) {
+  const cell = 70, m = 40, n = d.size;
+  const W = m + n * cell + 20, H = n * cell + m + 20;
+  const X = (x) => m + x * cell, Y = (y) => 10 + (n - y) * cell;
+  const svg = s('svg', { viewBox: `0 0 ${W + (d.compass ? 60 : 0)} ${H}`, style: 'max-width:420px;display:block;margin:0 auto 12px', role: 'img', 'aria-label': 'Grid map' });
+  svg.append(s('rect', { x: X(0), y: Y(n), width: n * cell, height: n * cell, fill: 'var(--map-land)' }));
+  for (let k = 0; k <= n; k++) {
+    svg.append(s('line', { x1: X(k), y1: Y(0), x2: X(k), y2: Y(n), stroke: '#4f8fc0', 'stroke-width': 1.5 }),
+      s('line', { x1: X(0), y1: Y(k), x2: X(n), y2: Y(k), stroke: '#4f8fc0', 'stroke-width': 1.5 }));
+    {
+      svg.append(s('text', { x: X(k), y: Y(0) + 22, 'text-anchor': 'middle', 'font-size': 15, fill: 'currentColor', 'font-family': 'inherit' }, String(d.e0 + k).padStart(2, '0')),
+        s('text', { x: X(0) - 8, y: Y(k) + 5, 'text-anchor': 'end', 'font-size': 15, fill: 'currentColor', 'font-family': 'inherit' }, String(d.n0 + k).padStart(2, '0')));
+    }
+  }
+  for (const mk of d.markers) {
+    if (mk.exact) {
+      // tenths marks round the square the place is in, as you would imagine them on a real map
+      const sx = Math.floor(mk.x), sy = Math.floor(mk.y);
+      for (let k = 1; k < 10; k++) {
+        const len = k === 5 ? 7 : 4;
+        svg.append(s('line', { x1: X(sx + k / 10), y1: Y(sy), x2: X(sx + k / 10), y2: Y(sy) - len, stroke: 'currentColor', 'stroke-width': 1 }),
+          s('line', { x1: X(sx), y1: Y(sy + k / 10), x2: X(sx) + len, y2: Y(sy + k / 10), stroke: 'currentColor', 'stroke-width': 1 }));
+      }
+    }
+    const cx = X(mk.x), cy = Y(mk.y), r = mk.exact ? 5 : 10;
+    const fill = '#c0392b';
+    let shape;
+    if (mk.shape === 'square') shape = s('rect', { x: cx - r, y: cy - r, width: 2 * r, height: 2 * r, fill });
+    else if (mk.shape === 'triangle') shape = s('path', { d: `M${cx} ${cy - r} L${cx + r} ${cy + r} L${cx - r} ${cy + r} Z`, fill });
+    else if (mk.shape === 'diamond') shape = s('path', { d: `M${cx} ${cy - r} L${cx + r} ${cy} L${cx} ${cy + r} L${cx - r} ${cy} Z`, fill });
+    else if (mk.shape === 'star') shape = s('path', { d: `M${cx} ${cy - r} L${cx + r * 0.3} ${cy - r * 0.3} L${cx + r} ${cy} L${cx + r * 0.3} ${cy + r * 0.3} L${cx} ${cy + r} L${cx - r * 0.3} ${cy + r * 0.3} L${cx - r} ${cy} L${cx - r * 0.3} ${cy - r * 0.3} Z`, fill });
+    else shape = s('circle', { cx, cy, r, fill });
+    svg.append(shape);
+    if (mk.exact) svg.append(s('circle', { cx, cy, r: 1.8, fill: '#fff' }));
+    const nearTop = mk.y > d.size - 0.35, nearRight = mk.x > d.size - 0.9;
+    svg.append(s('text', { x: nearRight ? cx - r - 4 : cx + r + 4, y: nearTop ? cy + r + 14 : cy - r + 2, 'text-anchor': nearRight ? 'end' : 'start', 'font-size': 13, fill: 'currentColor', 'font-family': 'inherit', 'font-weight': 700 }, mk.label));
+  }
+  if (d.compass) {
+    const cx = W + 25, cy = 50;
+    svg.append(s('path', { d: `M${cx} ${cy - 28} L${cx + 7} ${cy} L${cx - 7} ${cy} Z`, fill: 'currentColor' }),
+      s('line', { x1: cx, y1: cy, x2: cx, y2: cy + 24, stroke: 'currentColor', 'stroke-width': 2 }),
+      s('text', { x: cx, y: cy - 34, 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 700, fill: 'currentColor', 'font-family': 'inherit' }, 'N'));
   }
   return svg;
 }

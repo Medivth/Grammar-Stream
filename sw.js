@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = '0dde19789e3d';
+const VERSION = '019e8b4f2fc5';
 const FILES = [
  "./",
  "./index.html",
@@ -20,6 +20,7 @@ const FILES = [
  "./js/core/store.js",
  "./js/core/subjects.js",
  "./js/core/writing.js",
+ "./js/gen/geography.js",
  "./js/gen/history.js",
  "./js/gen/index.js",
  "./js/gen/maths.js",
@@ -43,7 +44,9 @@ const FILES = [
  "./content/english/vocabulary.json",
  "./content/english/writing.json",
  "./content/geography/core.json",
+ "./content/geography/year7.json",
  "./content/history/core.json",
+ "./content/history/year7.json",
  "./content/index.json",
  "./content/maps/europe.json",
  "./content/maps/uk.json",

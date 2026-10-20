@@ -148,13 +148,13 @@ async function introStep(app, root, step) {
     parts.push(h('p', { class: 'muted small center' }, 'Look at it, say it, then cover it in your head and picture the letters.'));
   } else if (item.kind === 'mapfact') {
     const map = await loadMap(item.map);
-    parts.push(mapSVG(map, { layer: item.layer, highlight: item.feature, markerType: item.group === 'peak' ? 'peak' : item.group === 'capital' ? 'capital' : undefined }).el);
+    parts.push(mapSVG(map, { layer: item.layer, highlight: item.feature, zoom: item.zoom, markerType: item.group === 'peak' ? 'peak' : item.group === 'capital' ? 'capital' : undefined }).el);
     parts.push(h('div', { class: 'big-word' }, item.answer));
     parts.push(rich('p', item.explain, { class: 'learn' }));
   } else {
     if (item.map) {
       const map = await loadMap(item.map);
-      parts.push(mapSVG(map, { layer: item.map === 'europe' ? 'countries' : 'features', highlight: item.feature }).el);
+      parts.push(mapSVG(map, { layer: item.layer || (item.map === 'europe' ? 'countries' : 'features'), highlight: item.feature, zoom: item.zoom }).el);
     }
     parts.push(rich('div', learnText(item), { class: 'learn' }));
     if (item.explain && !item.learn) parts.push(rich('p', item.explain, { class: 'muted' }));

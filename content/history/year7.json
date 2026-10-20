@@ -1,0 +1,1169 @@
+{
+ "subject": "history",
+ "deck": "year7",
+ "topics": [
+  {
+   "id": "history.church",
+   "title": "The medieval Church and the Crusades",
+   "kind": "facts",
+   "prereqs": [
+    "history.normans"
+   ],
+   "batch": 5,
+   "intro": "In medieval Europe almost everyone was Christian, and the Church shaped every part of life, from birth to death. In 1095 the Pope called on Christians to fight for Jerusalem.",
+   "teach": "Explain why the Church was so powerful in medieval England.",
+   "talk": "Ask her why ordinary people went on pilgrimages."
+  },
+  {
+   "id": "history.becket",
+   "title": "Henry II and Thomas Becket",
+   "kind": "facts",
+   "prereqs": [
+    "history.church"
+   ],
+   "batch": 5,
+   "intro": "Henry II made his friend Thomas Becket Archbishop of Canterbury, expecting him to do as he was told. It ended in murder in a cathedral.",
+   "teach": "Explain why Henry II and Becket fell out.",
+   "talk": "Ask her who was more to blame for Becket’s murder: Henry or Becket himself?"
+  },
+  {
+   "id": "history.magna-carta",
+   "title": "King John and Magna Carta",
+   "kind": "facts",
+   "prereqs": [
+    "history.becket"
+   ],
+   "batch": 5,
+   "intro": "King John lost wars, quarrelled with the Pope and taxed his barons heavily. In 1215 they forced him to agree to a charter: Magna Carta.",
+   "teach": "Explain why Magna Carta still matters today.",
+   "talk": "Ask her what “nobody is above the law” has to do with 1215."
+  },
+  {
+   "id": "history.village",
+   "title": "Life in a medieval village",
+   "kind": "facts",
+   "prereqs": [
+    "history.normans"
+   ],
+   "batch": 5,
+   "intro": "Most people in medieval England were peasants who lived in villages, farmed strips of land and owed work to their lord.",
+   "teach": "Describe a day in the life of a medieval peasant.",
+   "talk": "Ask her what a villein had to do for the lord of the manor."
+  },
+  {
+   "id": "history.black-death",
+   "title": "The Black Death",
+   "kind": "facts",
+   "prereqs": [
+    "history.village"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "history.bd.d1"
+   ],
+   "intro": "In 1348 a terrible disease reached England. Within two years it had killed between a third and a half of the population.",
+   "teach": "Explain what people at the time thought caused the Black Death, and what really caused it.",
+   "talk": "Ask her how the Black Death made life better for some peasants who survived."
+  },
+  {
+   "id": "history.peasants-revolt",
+   "title": "The Peasants’ Revolt, 1381",
+   "kind": "facts",
+   "prereqs": [
+    "history.black-death"
+   ],
+   "batch": 5,
+   "intro": "In 1381 thousands of peasants marched on London, captured the Tower and met the 14-year-old king. Why did they rebel?",
+   "teach": "Explain the difference between a long-term cause and a trigger, using the Peasants’ Revolt.",
+   "talk": "Ask her what the poll tax was and why it made people so angry."
+  },
+  {
+   "id": "history.war-france",
+   "title": "The Hundred Years War and the Wars of the Roses",
+   "kind": "facts",
+   "prereqs": [
+    "history.magna-carta"
+   ],
+   "batch": 5,
+   "intro": "For over a century English kings fought to rule France. Then the great families of England fought each other for the crown.",
+   "teach": "Explain how the Wars of the Roses ended and who became king.",
+   "talk": "Ask her what the Tudor rose stands for."
+  },
+  {
+   "id": "history.tudors",
+   "title": "The Tudors: Henry VIII to Elizabeth I",
+   "kind": "facts",
+   "prereqs": [
+    "history.war-france"
+   ],
+   "batch": 5,
+   "intro": "Henry VIII broke with the Pope so he could remarry. His three children each changed England’s religion again. Was Elizabeth’s reign a “golden age”?",
+   "teach": "Explain why Henry VIII broke with the Church in Rome.",
+   "talk": "Ask her the order of Henry VIII’s six wives, using “divorced, beheaded, died…”."
+  }
+ ],
+ "items": [
+  {
+   "id": "history.ch.pope",
+   "topic": "history.church",
+   "kind": "fact",
+   "prompt": "Who was the head of the Church across western Europe in the Middle Ages?",
+   "answer": "the Pope",
+   "distractors": [
+    "the King",
+    "the Archbishop of Canterbury",
+    "the Emperor"
+   ],
+   "explain": "The Pope, in Rome, led the Catholic Church across western Europe.",
+   "accept": [
+    "pope"
+   ]
+  },
+  {
+   "id": "history.ch.tithe",
+   "topic": "history.church",
+   "kind": "fact",
+   "prompt": "What was the tax of one tenth of everything a peasant produced, paid to the Church?",
+   "answer": "the tithe",
+   "distractors": [
+    "the poll tax",
+    "the geld",
+    "the toll"
+   ],
+   "explain": "Peasants paid a tithe (one tenth) of their crops and animals to the Church.",
+   "accept": [
+    "tithe",
+    "a tithe"
+   ]
+  },
+  {
+   "id": "history.ch.purgatory",
+   "topic": "history.church",
+   "kind": "fact",
+   "prompt": "Where did medieval Christians believe souls went to be cleansed of sins before Heaven?",
+   "answer": "Purgatory",
+   "distractors": [
+    "Hell",
+    "Limbo only",
+    "Valhalla"
+   ],
+   "explain": "Fear of Purgatory made people pray, give money and go on pilgrimages to shorten their time there.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.ch.pilgrimage",
+   "topic": "history.church",
+   "kind": "fact",
+   "prompt": "What is a journey to a holy place called?",
+   "answer": "a pilgrimage",
+   "distractors": [
+    "a crusade",
+    "a quest",
+    "a procession"
+   ],
+   "explain": "Pilgrims travelled to shrines such as Canterbury, Rome, Santiago de Compostela or Jerusalem.",
+   "accept": [
+    "pilgrimage"
+   ]
+  },
+  {
+   "id": "history.ch.monks",
+   "topic": "history.church",
+   "kind": "fact",
+   "prompt": "Men who lived in a monastery, following a strict rule of prayer and work, were called…",
+   "answer": "monks",
+   "distractors": [
+    "knights",
+    "friars only",
+    "barons"
+   ],
+   "explain": "Monks (and nuns, in nunneries) prayed, copied books by hand and cared for the sick and poor."
+  },
+  {
+   "id": "history.ch.urban",
+   "topic": "history.church",
+   "kind": "fact",
+   "prompt": "Which Pope called the First Crusade in 1095?",
+   "answer": "Urban II",
+   "distractors": [
+    "Gregory I",
+    "Innocent III",
+    "Leo X"
+   ],
+   "explain": "At Clermont in 1095, Pope Urban II urged knights to recapture Jerusalem, promising forgiveness of their sins.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.ch.jerusalem",
+   "topic": "history.church",
+   "kind": "fact",
+   "prompt": "In which year did the First Crusaders capture Jerusalem?",
+   "answer": "1099",
+   "distractors": [
+    "1066",
+    "1187",
+    "1215"
+   ],
+   "explain": "The crusaders took Jerusalem in 1099 and killed many of its Muslim and Jewish inhabitants."
+  },
+  {
+   "id": "history.ch.saladin",
+   "topic": "history.church",
+   "kind": "fact",
+   "prompt": "Which Muslim leader recaptured Jerusalem in 1187?",
+   "answer": "Saladin",
+   "distractors": [
+    "Suleiman",
+    "Harun al-Rashid",
+    "Genghis Khan"
+   ],
+   "explain": "Saladin, Sultan of Egypt and Syria, defeated the crusaders at Hattin and took Jerusalem in 1187. He was respected even by his enemies."
+  },
+  {
+   "id": "history.ch.richard",
+   "topic": "history.church",
+   "kind": "fact",
+   "prompt": "Which English king led the Third Crusade (1189–92)?",
+   "answer": "Richard I",
+   "distractors": [
+    "Henry II",
+    "King John",
+    "Edward I"
+   ],
+   "explain": "Richard I, “the Lionheart”, won battles but never recaptured Jerusalem. He spent only about six months of his reign in England.",
+   "accept": [
+    "richard the lionheart",
+    "richard"
+   ]
+  },
+  {
+   "id": "history.ch.why-crusade",
+   "topic": "history.church",
+   "kind": "mcq",
+   "prompt": "Why did many knights join the First Crusade?",
+   "options": [
+    {
+     "text": "A mix of religious faith, the promise of forgiveness, and the hope of land and riches",
+     "correct": true
+    },
+    {
+     "text": "Only because the king forced them to",
+     "correct": false,
+     "feedback": "Kings did not force most crusaders. Many went because of their faith and the Pope’s promise."
+    },
+    {
+     "text": "To spread the English language",
+     "correct": false,
+     "feedback": "Crusaders came from all over western Europe; language had nothing to do with it."
+    }
+   ],
+   "explain": "Historians stress mixed motives: genuine faith, the Pope’s promise of forgiveness, adventure, and for some, land and wealth."
+  },
+  {
+   "id": "history.bk.henry",
+   "topic": "history.becket",
+   "kind": "fact",
+   "prompt": "In which year did Henry II become king?",
+   "answer": "1154",
+   "distractors": [
+    "1066",
+    "1100",
+    "1189"
+   ],
+   "explain": "Henry II ruled from 1154 to 1189, over England and much of France (the Angevin Empire)."
+  },
+  {
+   "id": "history.bk.archbishop",
+   "topic": "history.becket",
+   "kind": "fact",
+   "prompt": "Which job did Henry II give Thomas Becket in 1162?",
+   "answer": "Archbishop of Canterbury",
+   "distractors": [
+    "Lord Mayor of London",
+    "Pope",
+    "Earl of Kent"
+   ],
+   "explain": "Henry expected his friend and chancellor to support him as head of the English Church. Instead Becket defended the Church against the king.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.bk.courts",
+   "topic": "history.becket",
+   "kind": "fact",
+   "prompt": "What did Henry and Becket quarrel about most?",
+   "answer": "whether priests who committed crimes should be tried in royal courts or Church courts",
+   "distractors": [
+    "who should marry Henry’s daughter",
+    "where to build a new cathedral",
+    "whether England should go on crusade"
+   ],
+   "explain": "Church courts gave lighter punishments. Henry wanted “criminous clerks” punished in royal courts (Constitutions of Clarendon, 1164).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.bk.date",
+   "topic": "history.becket",
+   "kind": "fact",
+   "prompt": "In which year was Thomas Becket murdered in Canterbury Cathedral?",
+   "answer": "1170",
+   "distractors": [
+    "1154",
+    "1215",
+    "1066"
+   ],
+   "explain": "Four knights killed Becket on 29 December 1170 after Henry reportedly raged against him."
+  },
+  {
+   "id": "history.bk.saint",
+   "topic": "history.becket",
+   "kind": "fact",
+   "prompt": "What happened to Becket’s reputation after his murder?",
+   "answer": "he was made a saint and Canterbury became a famous place of pilgrimage",
+   "distractors": [
+    "he was forgotten",
+    "he was declared a traitor",
+    "his tomb was destroyed straight away"
+   ],
+   "explain": "Becket was made a saint in 1173. Henry did public penance at his tomb in 1174. Chaucer’s Canterbury Tales are about pilgrims going to his shrine.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.bk.source",
+   "topic": "history.becket",
+   "kind": "mcq",
+   "prompt": "Edward Grim, a monk who was injured trying to protect Becket, wrote an account of the murder. What makes it especially useful to historians?",
+   "options": [
+    {
+     "text": "He was an eyewitness who was there in the cathedral",
+     "correct": true
+    },
+    {
+     "text": "He was the king’s official historian",
+     "correct": false,
+     "feedback": "He was a monk, not working for the king."
+    },
+    {
+     "text": "It was written hundreds of years later with more information",
+     "correct": false,
+     "feedback": "He wrote soon after the event, which is part of its value."
+    }
+   ],
+   "explain": "Eyewitness accounts give vivid detail, though historians remember Grim admired Becket, which may shape how he told the story."
+  },
+  {
+   "id": "history.mc.john",
+   "topic": "history.magna-carta",
+   "kind": "fact",
+   "prompt": "Which king agreed to Magna Carta?",
+   "answer": "King John",
+   "distractors": [
+    "Henry II",
+    "Richard I",
+    "Edward I"
+   ],
+   "explain": "King John (ruled 1199–1216) agreed to Magna Carta in 1215.",
+   "accept": [
+    "john"
+   ]
+  },
+  {
+   "id": "history.mc.where",
+   "topic": "history.magna-carta",
+   "kind": "fact",
+   "prompt": "Where was Magna Carta agreed in 1215?",
+   "answer": "Runnymede",
+   "distractors": [
+    "Westminster",
+    "Hastings",
+    "Windsor Castle"
+   ],
+   "explain": "John met the rebel barons in a meadow at Runnymede, by the Thames near Windsor, in June 1215."
+  },
+  {
+   "id": "history.mc.who",
+   "topic": "history.magna-carta",
+   "kind": "fact",
+   "prompt": "Which group forced John to agree to Magna Carta?",
+   "answer": "the barons",
+   "distractors": [
+    "the peasants",
+    "the Pope",
+    "the French king"
+   ],
+   "explain": "Rebel barons, angry at heavy taxes and failed wars, captured London and forced John to negotiate."
+  },
+  {
+   "id": "history.mc.normandy",
+   "topic": "history.magna-carta",
+   "kind": "fact",
+   "prompt": "Which part of France did King John lose in 1204, earning him the nickname “Softsword”?",
+   "answer": "Normandy",
+   "distractors": [
+    "Aquitaine",
+    "Brittany",
+    "Calais"
+   ],
+   "explain": "Losing Normandy, the homeland of the Norman kings, was a huge blow to John’s reputation."
+  },
+  {
+   "id": "history.mc.clause",
+   "topic": "history.magna-carta",
+   "kind": "mcq",
+   "prompt": "Magna Carta said no free man could be imprisoned except by “the lawful judgement of his equals or by the law of the land”. Why does this matter today?",
+   "options": [
+    {
+     "text": "It is an early statement that even the ruler must obey the law",
+     "correct": true
+    },
+    {
+     "text": "It gave everyone the vote",
+     "correct": false,
+     "feedback": "Voting rights came centuries later."
+    },
+    {
+     "text": "It freed all the peasants",
+     "correct": false,
+     "feedback": "It protected “free men”, mainly barons. Most peasants were not free."
+    }
+   ],
+   "explain": "Magna Carta mostly protected the barons, but its idea that the king is under the law inspired later rights, including the US Constitution."
+  },
+  {
+   "id": "history.mc.montfort",
+   "topic": "history.magna-carta",
+   "kind": "fact",
+   "prompt": "In 1265, whose parliament first included ordinary townsmen (burgesses) as well as nobles?",
+   "answer": "Simon de Montfort",
+   "distractors": [
+    "King John",
+    "Thomas Becket",
+    "Richard II"
+   ],
+   "explain": "Simon de Montfort, rebelling against Henry III, called a parliament with knights and burgesses: an important step towards today’s Parliament."
+  },
+  {
+   "id": "history.v.manor",
+   "topic": "history.village",
+   "kind": "fact",
+   "prompt": "The land and village owned by a lord was called a…",
+   "answer": "manor",
+   "distractors": [
+    "parish",
+    "county",
+    "castle"
+   ],
+   "explain": "A manor included the lord’s house, his land (the demesne) and the villagers’ strips."
+  },
+  {
+   "id": "history.v.villein",
+   "topic": "history.village",
+   "kind": "fact",
+   "prompt": "What was a peasant called who was not free and had to work on the lord’s land?",
+   "answer": "a villein",
+   "distractors": [
+    "a baron",
+    "a knight",
+    "a burgess"
+   ],
+   "explain": "Villeins (serfs) could not leave the manor without permission and owed the lord several days’ work a week.",
+   "accept": [
+    "villein",
+    "a serf",
+    "serf"
+   ]
+  },
+  {
+   "id": "history.v.strips",
+   "topic": "history.village",
+   "kind": "fact",
+   "prompt": "How was farmland usually divided in a medieval village?",
+   "answer": "into strips in large open fields",
+   "distractors": [
+    "into small walled gardens",
+    "into equal squares for each family",
+    "it was not divided at all"
+   ],
+   "explain": "Each family farmed scattered strips in two or three huge open fields, with one field left fallow (resting) each year.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.v.reeve",
+   "topic": "history.village",
+   "kind": "fact",
+   "prompt": "Which villager made sure everyone did their work for the lord?",
+   "answer": "the reeve",
+   "distractors": [
+    "the sheriff",
+    "the abbot",
+    "the knight"
+   ],
+   "explain": "The reeve was a peasant chosen to organise work on the lord’s land."
+  },
+  {
+   "id": "history.v.wool",
+   "topic": "history.village",
+   "kind": "fact",
+   "prompt": "What was medieval England’s most valuable export?",
+   "answer": "wool",
+   "distractors": [
+    "tin",
+    "wine",
+    "silk"
+   ],
+   "explain": "English wool was sold across Europe. The Lord Speaker still sits on a “Woolsack” in the House of Lords."
+  },
+  {
+   "id": "history.v.diet",
+   "topic": "history.village",
+   "kind": "fact",
+   "prompt": "What was the main food of medieval peasants?",
+   "answer": "bread and pottage (a thick vegetable stew)",
+   "distractors": [
+    "roast beef",
+    "potatoes",
+    "rice"
+   ],
+   "explain": "Peasants ate bread, pottage and ale. Potatoes did not arrive in Europe until after 1500.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.bd.d1",
+   "topic": "history.black-death",
+   "kind": "mcq",
+   "prompt": "What do scientists now know caused the Black Death?",
+   "options": [
+    {
+     "text": "A bacterium carried by fleas living on rats (and spread between people)",
+     "correct": true
+    },
+    {
+     "text": "Bad smells in the air",
+     "correct": false,
+     "feedback": "Many people at the time believed in “miasma”, but smells don’t cause plague."
+    },
+    {
+     "text": "The position of the planets",
+     "correct": false,
+     "feedback": "Medieval doctors blamed the planets, but it was a bacterium."
+    },
+    {
+     "text": "God punishing sinners",
+     "correct": false,
+     "feedback": "This was a common belief at the time, but the cause was a disease."
+    }
+   ],
+   "explain": "The plague bacterium (Yersinia pestis) was spread by flea bites, and the pneumonic form passed from person to person through coughing."
+  },
+  {
+   "id": "history.bd.year",
+   "topic": "history.black-death",
+   "kind": "fact",
+   "prompt": "In which year did the Black Death reach England?",
+   "answer": "1348",
+   "distractors": [
+    "1066",
+    "1381",
+    "1666"
+   ],
+   "explain": "It arrived at Melcombe (now part of Weymouth) in Dorset in 1348."
+  },
+  {
+   "id": "history.bd.toll",
+   "topic": "history.black-death",
+   "kind": "fact",
+   "prompt": "Roughly how much of England’s population died in the Black Death?",
+   "answer": "a third to a half",
+   "distractors": [
+    "about one in a hundred",
+    "everyone except the nobles",
+    "about a tenth"
+   ],
+   "explain": "Historians estimate 30 to 50% of the population died in 1348–50.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.bd.flagellants",
+   "topic": "history.black-death",
+   "kind": "fact",
+   "prompt": "What were people called who whipped themselves in public, hoping God would end the plague?",
+   "answer": "flagellants",
+   "distractors": [
+    "pilgrims",
+    "crusaders",
+    "friars"
+   ],
+   "explain": "Flagellants believed that punishing themselves might win God’s forgiveness."
+  },
+  {
+   "id": "history.bd.miasma",
+   "topic": "history.black-death",
+   "kind": "fact",
+   "prompt": "Many medieval people believed disease was spread by “bad air”. What was this idea called?",
+   "answer": "miasma",
+   "distractors": [
+    "germ theory",
+    "humours",
+    "contagion"
+   ],
+   "explain": "Miasma theory lasted until germ theory in the 1860s. People carried sweet-smelling herbs to protect themselves."
+  },
+  {
+   "id": "history.bd.consequence",
+   "topic": "history.black-death",
+   "kind": "mcq",
+   "prompt": "Why did wages rise after the Black Death?",
+   "options": [
+    {
+     "text": "So many workers had died that the survivors were in short supply and could demand more",
+     "correct": true
+    },
+    {
+     "text": "The king ordered higher wages to help peasants",
+     "correct": false,
+     "feedback": "In fact the government tried to stop wages rising, with the Statute of Labourers (1351)."
+    },
+    {
+     "text": "Lords became generous after the plague",
+     "correct": false,
+     "feedback": "Lords paid more because they had to, not out of kindness."
+    }
+   ],
+   "explain": "A labour shortage gave peasants bargaining power. The Statute of Labourers (1351) tried to cap wages, which caused deep resentment."
+  },
+  {
+   "id": "history.bd.statute",
+   "topic": "history.black-death",
+   "kind": "fact",
+   "prompt": "Which 1351 law tried to stop peasants demanding higher wages?",
+   "answer": "the Statute of Labourers",
+   "distractors": [
+    "Magna Carta",
+    "the Domesday Book",
+    "the Poll Tax"
+   ],
+   "explain": "The Statute of Labourers fixed wages at pre-plague levels: a long-term cause of the Peasants’ Revolt.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.pr.year",
+   "topic": "history.peasants-revolt",
+   "kind": "fact",
+   "prompt": "In which year was the Peasants’ Revolt?",
+   "answer": "1381",
+   "distractors": [
+    "1348",
+    "1215",
+    "1415"
+   ],
+   "explain": "The revolt began in Essex and Kent in May and June 1381."
+  },
+  {
+   "id": "history.pr.tax",
+   "topic": "history.peasants-revolt",
+   "kind": "fact",
+   "prompt": "Which tax, charged on every adult, triggered the revolt?",
+   "answer": "the poll tax",
+   "distractors": [
+    "the tithe",
+    "income tax",
+    "the window tax"
+   ],
+   "explain": "A third poll tax in 1380 charged everyone the same, rich or poor. Tax collectors in Essex were attacked in 1381.",
+   "accept": [
+    "poll tax"
+   ]
+  },
+  {
+   "id": "history.pr.tyler",
+   "topic": "history.peasants-revolt",
+   "kind": "fact",
+   "prompt": "Who led the rebels from Kent?",
+   "answer": "Wat Tyler",
+   "distractors": [
+    "John Ball",
+    "Robin Hood",
+    "Jack Cade"
+   ],
+   "explain": "Wat Tyler led the rebels into London. He was killed at Smithfield by the Lord Mayor, William Walworth.",
+   "accept": [
+    "tyler"
+   ]
+  },
+  {
+   "id": "history.pr.ball",
+   "topic": "history.peasants-revolt",
+   "kind": "fact",
+   "prompt": "Which preacher asked, “When Adam delved and Eve span, who was then the gentleman?”",
+   "answer": "John Ball",
+   "distractors": [
+    "Wat Tyler",
+    "Thomas Becket",
+    "John Wycliffe"
+   ],
+   "explain": "John Ball preached that God made everyone equal, so no one should be a serf.",
+   "accept": [
+    "ball"
+   ]
+  },
+  {
+   "id": "history.pr.richard",
+   "topic": "history.peasants-revolt",
+   "kind": "fact",
+   "prompt": "How old was King Richard II when he met the rebels?",
+   "answer": "14",
+   "distractors": [
+    "8",
+    "21",
+    "40"
+   ],
+   "explain": "Richard II was only 14. He met the rebels at Mile End and Smithfield."
+  },
+  {
+   "id": "history.pr.trigger",
+   "topic": "history.peasants-revolt",
+   "kind": "mcq",
+   "prompt": "Which of these was the TRIGGER of the Peasants’ Revolt (the spark), rather than a long-term cause?",
+   "options": [
+    {
+     "text": "Tax collectors arriving in Essex villages in 1381 to collect the poll tax",
+     "correct": true
+    },
+    {
+     "text": "Villeins having to work for their lords for centuries",
+     "correct": false,
+     "feedback": "This is a long-term cause: it had built up resentment over many years."
+    },
+    {
+     "text": "The Statute of Labourers of 1351",
+     "correct": false,
+     "feedback": "This is a long-term cause, 30 years earlier."
+    },
+    {
+     "text": "John Ball’s preaching about equality",
+     "correct": false,
+     "feedback": "Ball had preached for years. His ideas were a long-term cause."
+    }
+   ],
+   "explain": "Long-term causes build up pressure; a trigger is the event that sets it off."
+  },
+  {
+   "id": "history.pr.why",
+   "topic": "history.peasants-revolt",
+   "kind": "weighted",
+   "prompt": "Historians disagree about the MAIN cause of the revolt. Which is the strongest argument?",
+   "options": [
+    {
+     "text": "Anger at serfdom: peasants wanted freedom, and the poll tax was just the last straw",
+     "weight": 3,
+     "feedback": "Strong: the rebels’ demands at Mile End were mainly about ending serfdom, not just the tax."
+    },
+    {
+     "text": "The poll tax: it was unfair and had already been charged three times",
+     "weight": 2,
+     "feedback": "A good argument, but the demands went much further than the tax, which suggests deeper causes."
+    },
+    {
+     "text": "Richard II was a weak king",
+     "weight": 1,
+     "feedback": "The king’s youth mattered, but the rebels said they were loyal to him and blamed his advisers."
+    },
+    {
+     "text": "Bad weather that summer",
+     "weight": 0,
+     "feedback": "There is no evidence weather caused the revolt."
+    }
+   ],
+   "explain": "Strong history answers weigh causes. The rebels’ demands (an end to serfdom, cheap land rent) show what they really wanted."
+  },
+  {
+   "id": "history.pr.outcome",
+   "topic": "history.peasants-revolt",
+   "kind": "fact",
+   "prompt": "What happened after the rebels went home?",
+   "answer": "the king broke his promises and many leaders were executed",
+   "distractors": [
+    "serfdom was ended immediately",
+    "Wat Tyler became an adviser to the king",
+    "the poll tax was doubled"
+   ],
+   "explain": "Richard’s promises were cancelled and John Ball was executed. But in the long run lords found it harder to control peasants, and serfdom faded away over the next century.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.wf.dates",
+   "topic": "history.war-france",
+   "kind": "fact",
+   "prompt": "The Hundred Years War actually lasted from 1337 until…",
+   "answer": "1453",
+   "distractors": [
+    "1437",
+    "1485",
+    "1360"
+   ],
+   "explain": "It lasted 116 years, on and off."
+  },
+  {
+   "id": "history.wf.longbow",
+   "topic": "history.war-france",
+   "kind": "fact",
+   "prompt": "Which weapon helped the English win at Crécy (1346) and Agincourt?",
+   "answer": "the longbow",
+   "distractors": [
+    "the cannon",
+    "the crossbow",
+    "the musket"
+   ],
+   "explain": "English and Welsh archers could shoot about 10 arrows a minute.",
+   "accept": [
+    "longbow",
+    "longbows"
+   ]
+  },
+  {
+   "id": "history.wf.agincourt",
+   "topic": "history.war-france",
+   "kind": "fact",
+   "prompt": "Which king won the Battle of Agincourt in 1415?",
+   "answer": "Henry V",
+   "distractors": [
+    "Henry VIII",
+    "Edward III",
+    "Richard III"
+   ],
+   "explain": "Henry V’s smaller, exhausted army defeated the French on 25 October 1415."
+  },
+  {
+   "id": "history.wf.joan",
+   "topic": "history.war-france",
+   "kind": "fact",
+   "prompt": "Which teenage French girl led an army to relieve the siege of Orléans in 1429?",
+   "answer": "Joan of Arc",
+   "distractors": [
+    "Eleanor of Aquitaine",
+    "Marie Curie",
+    "Catherine de’ Medici"
+   ],
+   "explain": "Joan said she heard voices from God. She was captured, tried by the English and burned at Rouen in 1431.",
+   "accept": [
+    "joan",
+    "jeanne d’arc",
+    "jeanne d'arc"
+   ]
+  },
+  {
+   "id": "history.wf.calais",
+   "topic": "history.war-france",
+   "kind": "fact",
+   "prompt": "Which was the only part of France still held by England when the war ended in 1453?",
+   "answer": "Calais",
+   "distractors": [
+    "Normandy",
+    "Paris",
+    "Bordeaux"
+   ],
+   "explain": "England kept Calais until 1558."
+  },
+  {
+   "id": "history.wf.roses",
+   "topic": "history.war-france",
+   "kind": "fact",
+   "prompt": "The Wars of the Roses were fought between which two families?",
+   "answer": "Lancaster and York",
+   "distractors": [
+    "Tudor and Stuart",
+    "Norman and Saxon",
+    "Windsor and Hanover"
+   ],
+   "explain": "The House of Lancaster (red rose) fought the House of York (white rose) from 1455 to 1487.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.wf.princes",
+   "topic": "history.war-france",
+   "kind": "fact",
+   "prompt": "Which king is suspected of having his nephews, the “Princes in the Tower”, killed?",
+   "answer": "Richard III",
+   "distractors": [
+    "Henry VII",
+    "Edward IV",
+    "Henry VI"
+   ],
+   "explain": "The boys disappeared in 1483 after their uncle Richard took the throne. Historians still argue about what happened."
+  },
+  {
+   "id": "history.wf.bosworth",
+   "topic": "history.war-france",
+   "kind": "fact",
+   "prompt": "Who won the Battle of Bosworth in 1485 and became the first Tudor king?",
+   "answer": "Henry Tudor (Henry VII)",
+   "distractors": [
+    "Richard III",
+    "Henry VIII",
+    "Edward IV"
+   ],
+   "explain": "Richard III was killed at Bosworth. His skeleton was found under a Leicester car park in 2012.",
+   "accept": [
+    "henry vii",
+    "henry tudor",
+    "henry 7"
+   ],
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "history.wf.tudor-rose",
+   "topic": "history.war-france",
+   "kind": "fact",
+   "prompt": "What did the Tudor rose (red and white together) symbolise?",
+   "answer": "the joining of Lancaster and York through Henry VII’s marriage",
+   "distractors": [
+    "England’s victory over France",
+    "the Church of England",
+    "the union of England and Scotland"
+   ],
+   "explain": "Henry VII (Lancaster) married Elizabeth of York in 1486, uniting the two families.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.td.henry8",
+   "topic": "history.tudors",
+   "kind": "fact",
+   "prompt": "How many times did Henry VIII marry?",
+   "answer": "6",
+   "distractors": [
+    "3",
+    "4",
+    "8"
+   ],
+   "explain": "Divorced, beheaded, died; divorced, beheaded, survived."
+  },
+  {
+   "id": "history.td.wives",
+   "topic": "history.tudors",
+   "kind": "order",
+   "prompt": "Put Henry VIII’s wives in order.",
+   "items": [
+    "Catherine of Aragon",
+    "Anne Boleyn",
+    "Jane Seymour",
+    "Anne of Cleves",
+    "Catherine Howard",
+    "Catherine Parr"
+   ],
+   "labels": [
+    "divorced (annulled)",
+    "beheaded 1536",
+    "died 1537",
+    "divorced (annulled)",
+    "beheaded 1542",
+    "survived"
+   ],
+   "explain": "“Divorced, beheaded, died; divorced, beheaded, survived.”",
+   "axis": "time"
+  },
+  {
+   "id": "history.td.break",
+   "topic": "history.tudors",
+   "kind": "mcq",
+   "prompt": "Why did Henry VIII break with the Catholic Church in Rome?",
+   "options": [
+    {
+     "text": "The Pope would not annul his marriage to Catherine of Aragon, and Henry wanted a son and to marry Anne Boleyn",
+     "correct": true
+    },
+    {
+     "text": "He had become a Protestant after reading Martin Luther",
+     "correct": false,
+     "feedback": "Henry had actually written against Luther and was called “Defender of the Faith” by the Pope."
+    },
+    {
+     "text": "The Pope invaded England",
+     "correct": false,
+     "feedback": "There was no papal invasion."
+    }
+   ],
+   "explain": "Henry needed a male heir. When the Pope refused an annulment, Henry made himself head of the English Church (Act of Supremacy, 1534). Money and power mattered too."
+  },
+  {
+   "id": "history.td.supremacy",
+   "topic": "history.tudors",
+   "kind": "fact",
+   "prompt": "Which 1534 law made Henry VIII Supreme Head of the Church of England?",
+   "answer": "the Act of Supremacy",
+   "distractors": [
+    "Magna Carta",
+    "the Poor Law",
+    "the Statute of Labourers"
+   ],
+   "explain": "The Act of Supremacy (1534) cut England off from the Pope’s authority.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.td.dissolution",
+   "topic": "history.tudors",
+   "kind": "fact",
+   "prompt": "Between 1536 and 1541 Henry closed every monastery in England and took their wealth. What is this called?",
+   "answer": "the Dissolution of the Monasteries",
+   "distractors": [
+    "the Reformation Parliament",
+    "the Pilgrimage of Grace",
+    "the Enclosure Acts"
+   ],
+   "explain": "Henry gained huge wealth. The ruins of abbeys such as Fountains and Tintern date from this time.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.td.edward",
+   "topic": "history.tudors",
+   "kind": "fact",
+   "prompt": "Which of Henry VIII’s children became king in 1547, aged 9?",
+   "answer": "Edward VI",
+   "distractors": [
+    "Henry IX",
+    "Richard IV",
+    "James I"
+   ],
+   "explain": "Edward VI, son of Jane Seymour, made England more Protestant but died aged 15 in 1553.",
+   "accept": [
+    "edward",
+    "edward 6"
+   ]
+  },
+  {
+   "id": "history.td.mary",
+   "topic": "history.tudors",
+   "kind": "fact",
+   "prompt": "Which Tudor queen tried to bring back Catholicism and had about 280 Protestants burned?",
+   "answer": "Mary I",
+   "distractors": [
+    "Elizabeth I",
+    "Lady Jane Grey",
+    "Mary, Queen of Scots"
+   ],
+   "explain": "Mary I (1553–58) was later nicknamed “Bloody Mary” by Protestant writers.",
+   "accept": [
+    "mary",
+    "mary 1",
+    "mary tudor"
+   ]
+  },
+  {
+   "id": "history.td.elizabeth",
+   "topic": "history.tudors",
+   "kind": "fact",
+   "prompt": "Elizabeth I reigned from 1558 until which year?",
+   "answer": "1603",
+   "distractors": [
+    "1588",
+    "1600",
+    "1625"
+   ],
+   "explain": "Elizabeth reigned for 44 years and never married. The crown passed to James VI of Scotland."
+  },
+  {
+   "id": "history.td.armada",
+   "topic": "history.tudors",
+   "kind": "fact",
+   "prompt": "In 1588 which country sent a huge fleet, the Armada, to invade England?",
+   "answer": "Spain",
+   "distractors": [
+    "France",
+    "Portugal",
+    "the Netherlands"
+   ],
+   "explain": "Philip II of Spain’s Armada was scattered by English fire ships and storms."
+  },
+  {
+   "id": "history.td.drake",
+   "topic": "history.tudors",
+   "kind": "fact",
+   "prompt": "Which Elizabethan sailor sailed all the way around the world (1577–80)?",
+   "answer": "Francis Drake",
+   "distractors": [
+    "Walter Raleigh",
+    "Christopher Columbus",
+    "James Cook"
+   ],
+   "explain": "Drake was the first Englishman to circumnavigate the globe. To the Spanish he was a pirate.",
+   "accept": [
+    "drake",
+    "sir francis drake"
+   ]
+  },
+  {
+   "id": "history.td.golden",
+   "topic": "history.tudors",
+   "kind": "mcq",
+   "prompt": "Why do historians disagree about whether Elizabeth’s reign was a “golden age”?",
+   "options": [
+    {
+     "text": "They look at different groups: it was glorious for some (Shakespeare, explorers), but hard for many poor people and for Catholics",
+     "correct": true
+    },
+    {
+     "text": "Some historians haven’t read about it",
+     "correct": false,
+     "feedback": "Historians disagree because they ask different questions and look at different evidence."
+    },
+    {
+     "text": "Because nobody wrote anything down in Elizabeth’s time",
+     "correct": false,
+     "feedback": "There is lots of evidence from Elizabeth’s reign."
+    }
+   ],
+   "explain": "Interpretations depend on whose experience you focus on and what you count as success. That is why a good answer weighs both sides."
+  },
+  {
+   "id": "history.td.order",
+   "topic": "history.tudors",
+   "kind": "order",
+   "prompt": "Put these Tudor monarchs in order.",
+   "items": [
+    "Henry VII",
+    "Henry VIII",
+    "Edward VI",
+    "Mary I",
+    "Elizabeth I"
+   ],
+   "labels": [
+    "1485–1509",
+    "1509–1547",
+    "1547–1553",
+    "1553–1558",
+    "1558–1603"
+   ],
+   "explain": "Five Tudor monarchs ruled from 1485 to 1603.",
+   "axis": "time"
+  }
+ ]
+}

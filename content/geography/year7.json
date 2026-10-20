@@ -1,0 +1,2271 @@
+{
+ "subject": "geography",
+ "deck": "year7",
+ "topics": [
+  {
+   "id": "geography.map-skills",
+   "title": "Map skills: grid references and compass points",
+   "kind": "mixed",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Ordnance Survey maps use a grid of numbered lines. Remember: along the corridor, then up the stairs.",
+   "teach": "Explain how to give a 4-figure grid reference.",
+   "talk": "On a walk, ask her which direction you’re heading using the 8 compass points."
+  },
+  {
+   "id": "geography.scale",
+   "title": "Map scale and symbols",
+   "kind": "mixed",
+   "prereqs": [
+    "geography.map-skills"
+   ],
+   "batch": 5,
+   "intro": "A map’s scale tells you how much smaller it is than real life. On a 1:25 000 map, 4 cm is 1 km.",
+   "teach": "Explain what 1:25 000 means.",
+   "talk": "Look at an OS map together and find a pub, a school and a church."
+  },
+  {
+   "id": "geography.rivers",
+   "title": "Rivers: processes and landforms",
+   "kind": "facts",
+   "prereqs": [
+    "geography.weather"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "geography.rv.d1"
+   ],
+   "intro": "Rivers carve valleys, carry rocks to the sea and build new land. We’ll follow a river from its source to its mouth.",
+   "teach": "Explain how a meander turns into an ox-bow lake.",
+   "talk": "Next time you cross a river, ask her which course it might be in: upper, middle or lower."
+  },
+  {
+   "id": "geography.tectonics",
+   "title": "Earth’s structure, earthquakes and volcanoes",
+   "kind": "facts",
+   "prereqs": [
+    "geography.continents"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "geography.tc.d1",
+    "geography.tc.d2"
+   ],
+   "intro": "The ground beneath us is moving, very slowly. Let’s find out what is inside the Earth and why volcanoes and earthquakes happen where they do.",
+   "teach": "Explain what happens at a destructive plate boundary.",
+   "talk": "Ask her why Iceland has so many volcanoes."
+  },
+  {
+   "id": "geography.biomes",
+   "title": "Climate zones and biomes",
+   "kind": "facts",
+   "prereqs": [
+    "geography.lines"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "geography.bi.d1"
+   ],
+   "intro": "Why are there rainforests near the Equator and deserts a little further away? Climate decides which plants and animals live where.",
+   "teach": "Explain why tropical rainforests are near the Equator.",
+   "talk": "Ask her which biome the UK is in."
+  },
+  {
+   "id": "geography.people",
+   "title": "Population, settlement and development",
+   "kind": "facts",
+   "prereqs": [
+    "geography.uk"
+   ],
+   "batch": 5,
+   "intro": "Where do people live, and why? Why do people move? And how do we measure whether a country is rich or poor?",
+   "teach": "Explain the difference between a push factor and a pull factor.",
+   "talk": "Ask her why your town grew where it did."
+  },
+  {
+   "id": "geography.americas",
+   "title": "The Americas: countries and capitals",
+   "kind": "facts",
+   "prereqs": [
+    "geography.continents"
+   ],
+   "batch": 6,
+   "teach": "Name three countries in South America and their capitals.",
+   "talk": "Ask her the capital of Canada (it isn’t Toronto)."
+  },
+  {
+   "id": "geography.africa",
+   "title": "Africa: countries and capitals",
+   "kind": "facts",
+   "prereqs": [
+    "geography.continents"
+   ],
+   "batch": 6,
+   "intro": "Africa is a continent of 54 countries, not one country! Let’s learn some of the biggest.",
+   "teach": "Explain why “Africa is a country” is a mistake.",
+   "talk": "Ask her the capital of Nigeria (it isn’t Lagos)."
+  },
+  {
+   "id": "geography.asia",
+   "title": "Asia and Oceania: countries and capitals",
+   "kind": "facts",
+   "prereqs": [
+    "geography.continents"
+   ],
+   "batch": 6,
+   "teach": "Name the capitals of China, India and Japan.",
+   "talk": "Ask her the capital of Australia (it isn’t Sydney)."
+  }
+ ],
+ "items": [
+  {
+   "id": "geography.ms.grid",
+   "topic": "geography.map-skills",
+   "kind": "template",
+   "gen": "gridRef",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0.3,
+    0
+   ]
+  },
+  {
+   "id": "geography.ms.compass",
+   "topic": "geography.map-skills",
+   "kind": "order",
+   "prompt": "Put these compass points in order, going clockwise from north.",
+   "items": [
+    "north",
+    "north-east",
+    "east",
+    "south-east",
+    "south",
+    "south-west",
+    "west",
+    "north-west"
+   ],
+   "labels": null,
+   "explain": "Clockwise: N, NE, E, SE, S, SW, W, NW. “Never Eat Shredded Wheat” helps with N, E, S, W."
+  },
+  {
+   "id": "geography.ms.nnw",
+   "topic": "geography.map-skills",
+   "kind": "fact",
+   "prompt": "Which compass point is halfway between north and north-west?",
+   "answer": "north-north-west",
+   "distractors": [
+    "west-north-west",
+    "north-north-east",
+    "north-west"
+   ],
+   "explain": "With 16 points, the in-between points take the name of the nearest main point first: north-north-west (NNW).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.ms.corridor",
+   "topic": "geography.map-skills",
+   "kind": "fact",
+   "prompt": "When giving a grid reference, which do you read first?",
+   "answer": "eastings (along the corridor)",
+   "distractors": [
+    "northings (up the stairs)",
+    "whichever is bigger",
+    "the square’s top-right corner"
+   ],
+   "explain": "Along the corridor (eastings), then up the stairs (northings).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.ms.easting",
+   "topic": "geography.map-skills",
+   "kind": "fact",
+   "prompt": "What are the vertical grid lines, numbered along the bottom of an OS map, called?",
+   "answer": "eastings",
+   "distractors": [
+    "northings",
+    "contours",
+    "latitudes"
+   ],
+   "explain": "Eastings increase as you go east. Northings increase as you go north."
+  },
+  {
+   "id": "geography.sc.scale",
+   "topic": "geography.scale",
+   "kind": "template",
+   "gen": "mapScale",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.5,
+    0,
+    0.8
+   ]
+  },
+  {
+   "id": "geography.sc.contour",
+   "topic": "geography.scale",
+   "kind": "fact",
+   "prompt": "What do contour lines on a map join together?",
+   "answer": "places of the same height",
+   "distractors": [
+    "places with the same rainfall",
+    "roads of the same size",
+    "towns of the same population"
+   ],
+   "explain": "Contour lines join points at the same height above sea level. Close together = steep slope.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.sc.steep",
+   "topic": "geography.scale",
+   "kind": "mcq",
+   "prompt": "On a map, contour lines are very close together. What does that tell you?",
+   "options": [
+    {
+     "text": "The land is steep",
+     "correct": true
+    },
+    {
+     "text": "The land is flat",
+     "correct": false,
+     "feedback": "Flat land has contours far apart, or none at all."
+    },
+    {
+     "text": "There is a river",
+     "correct": false,
+     "feedback": "Rivers are shown by blue lines, not contours."
+    }
+   ],
+   "explain": "Close contours mean the height changes quickly over a short distance: a steep slope."
+  },
+  {
+   "id": "geography.sc.ph",
+   "topic": "geography.scale",
+   "kind": "fact",
+   "prompt": "On an Ordnance Survey map, what does “PH” stand for?",
+   "answer": "public house (pub)",
+   "distractors": [
+    "public hospital",
+    "phone",
+    "park and hike"
+   ],
+   "explain": "PH marks a pub. “Sch” is a school.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.sc.spot",
+   "topic": "geography.scale",
+   "kind": "fact",
+   "prompt": "A black dot with a number next to it on an OS map is a…",
+   "answer": "spot height",
+   "distractors": [
+    "bus stop",
+    "lighthouse",
+    "well"
+   ],
+   "explain": "A spot height shows the exact height in metres at that point.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.sc.trig",
+   "topic": "geography.scale",
+   "kind": "fact",
+   "prompt": "A blue triangle with a dot in the middle on an OS map marks a…",
+   "answer": "triangulation pillar (trig point)",
+   "distractors": [
+    "campsite",
+    "youth hostel",
+    "viewpoint"
+   ],
+   "explain": "Trig points are concrete pillars on hilltops once used for surveying.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.sc.os",
+   "topic": "geography.scale",
+   "kind": "fact",
+   "prompt": "Which organisation makes Britain’s official maps?",
+   "answer": "Ordnance Survey",
+   "distractors": [
+    "the Met Office",
+    "the National Trust",
+    "English Heritage"
+   ],
+   "explain": "Ordnance Survey (OS) began in 1791, mapping the south coast in case of invasion."
+  },
+  {
+   "id": "geography.rv.d1",
+   "topic": "geography.rivers",
+   "kind": "mcq",
+   "prompt": "Where does a river usually flow fastest on average: near its source in the hills, or near its mouth?",
+   "options": [
+    {
+     "text": "Often nearer the mouth: it is deeper and smoother, so less energy is lost to friction",
+     "correct": true
+    },
+    {
+     "text": "Always near the source, because it is steep",
+     "correct": false,
+     "feedback": "Mountain streams look fast because they splash over rocks, but friction slows them. Lower down, rivers are deeper and smoother, so the average speed is often higher."
+    },
+    {
+     "text": "Rivers flow at the same speed everywhere",
+     "correct": false,
+     "feedback": "Speed changes along the course."
+    }
+   ],
+   "explain": "This surprises most people! Steep upland streams lose lots of energy to friction. Downstream the channel is wider, deeper and smoother."
+  },
+  {
+   "id": "geography.rv.source",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "What is the start of a river called?",
+   "answer": "the source",
+   "distractors": [
+    "the mouth",
+    "the confluence",
+    "the estuary"
+   ],
+   "explain": "The source is often a spring or a bog in the hills.",
+   "accept": [
+    "source"
+   ]
+  },
+  {
+   "id": "geography.rv.mouth",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "Where a river meets the sea is called its…",
+   "answer": "mouth",
+   "distractors": [
+    "source",
+    "tributary",
+    "watershed"
+   ],
+   "explain": "The mouth is where the river ends, at the sea or a lake."
+  },
+  {
+   "id": "geography.rv.tributary",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "A smaller river that joins a bigger one is called a…",
+   "answer": "tributary",
+   "distractors": [
+    "confluence",
+    "meander",
+    "delta"
+   ],
+   "explain": "Tributaries join the main river at a confluence."
+  },
+  {
+   "id": "geography.rv.confluence",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "The place where two rivers meet is called a…",
+   "answer": "confluence",
+   "distractors": [
+    "tributary",
+    "source",
+    "levee"
+   ],
+   "explain": "Many towns grew at confluences, such as Pittsburgh, or Koblenz on the Rhine and Moselle."
+  },
+  {
+   "id": "geography.rv.basin",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "The area of land drained by a river and its tributaries is called a…",
+   "answer": "drainage basin",
+   "distractors": [
+    "floodplain",
+    "watershed",
+    "valley"
+   ],
+   "explain": "The edge of a drainage basin, usually high ground, is the watershed."
+  },
+  {
+   "id": "geography.rv.hydraulic",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "Which type of erosion is the sheer force of water forcing air into cracks in the riverbank?",
+   "answer": "hydraulic action",
+   "distractors": [
+    "abrasion",
+    "attrition",
+    "solution"
+   ],
+   "explain": "Hydraulic action: the force of water. Abrasion: rocks scraping the bed. Attrition: rocks knocking each other smaller. Solution: dissolving rock."
+  },
+  {
+   "id": "geography.rv.attrition",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "Which process makes stones smaller and rounder as they knock into each other?",
+   "answer": "attrition",
+   "distractors": [
+    "abrasion",
+    "hydraulic action",
+    "deposition"
+   ],
+   "explain": "That is why stones near a river’s mouth are small and smooth."
+  },
+  {
+   "id": "geography.rv.saltation",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "Pebbles bouncing along a river bed are being transported by…",
+   "answer": "saltation",
+   "distractors": [
+    "traction",
+    "suspension",
+    "solution"
+   ],
+   "explain": "Traction: big boulders rolled. Saltation: pebbles bounced. Suspension: fine silt carried in the water. Solution: dissolved minerals."
+  },
+  {
+   "id": "geography.rv.vvalley",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "What shape of valley does a river make in its upper course?",
+   "answer": "V-shaped",
+   "distractors": [
+    "U-shaped",
+    "flat and wide",
+    "circular"
+   ],
+   "explain": "In the upper course the river cuts downwards, making steep V-shaped valleys with interlocking spurs. (U-shaped valleys are made by glaciers.)",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.rv.oxbow",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "A meander that has been cut off from the river forms…",
+   "answer": "an ox-bow lake",
+   "distractors": [
+    "a waterfall",
+    "a delta",
+    "a gorge"
+   ],
+   "explain": "Erosion narrows the neck of a meander until the river cuts through, and deposition seals off the old loop.",
+   "accept": [
+    "ox-bow lake",
+    "oxbow lake",
+    "an oxbow lake"
+   ]
+  },
+  {
+   "id": "geography.rv.waterfall",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "A waterfall forms where a river flows over hard rock lying on top of…",
+   "answer": "softer rock",
+   "distractors": [
+    "ice",
+    "sand only",
+    "harder rock"
+   ],
+   "explain": "The soft rock erodes faster, undercutting the hard rock, which collapses. The waterfall moves upstream, leaving a gorge.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.rv.floodplain",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "The flat land beside a river in its lower course, which floods, is called the…",
+   "answer": "floodplain",
+   "distractors": [
+    "watershed",
+    "source",
+    "interlocking spur"
+   ],
+   "explain": "Each flood deposits silt, making floodplains very fertile."
+  },
+  {
+   "id": "geography.rv.nile",
+   "topic": "geography.rivers",
+   "kind": "fact",
+   "prompt": "Which is usually called the longest river in the world?",
+   "answer": "the Nile",
+   "distractors": [
+    "the Amazon",
+    "the Thames",
+    "the Mississippi"
+   ],
+   "explain": "The Nile (about 6650 km) is usually listed as longest; some measurements give the Amazon. The Amazon carries far more water than any other river.",
+   "accept": [
+    "nile"
+   ]
+  },
+  {
+   "id": "geography.rv.course",
+   "topic": "geography.rivers",
+   "kind": "order",
+   "prompt": "Put these river features in the order you would usually meet them, from source to mouth.",
+   "items": [
+    "waterfall",
+    "meander",
+    "ox-bow lake",
+    "estuary"
+   ],
+   "labels": null,
+   "explain": "Waterfalls in the upper course; meanders in the middle course; ox-bow lakes on the floodplain; the estuary at the mouth."
+  },
+  {
+   "id": "geography.tc.d1",
+   "topic": "geography.tectonics",
+   "kind": "mcq",
+   "prompt": "What is the Earth’s mantle mostly made of?",
+   "options": [
+    {
+     "text": "Solid rock that flows very, very slowly",
+     "correct": true
+    },
+    {
+     "text": "A sea of liquid lava",
+     "correct": false,
+     "feedback": "A very common idea! The mantle is mostly solid, but hot enough to flow like extremely thick toffee over millions of years."
+    },
+    {
+     "text": "Water",
+     "correct": false,
+     "feedback": "The mantle is rock, not water."
+    }
+   ],
+   "explain": "Magma forms only where rock partly melts, for example where plates move apart or one sinks under another."
+  },
+  {
+   "id": "geography.tc.d2",
+   "topic": "geography.tectonics",
+   "kind": "mcq",
+   "prompt": "How fast do tectonic plates move?",
+   "options": [
+    {
+     "text": "A few centimetres a year, about as fast as your fingernails grow",
+     "correct": true
+    },
+    {
+     "text": "Several metres a day",
+     "correct": false,
+     "feedback": "Much slower than that: centimetres per year."
+    },
+    {
+     "text": "They don’t move at all",
+     "correct": false,
+     "feedback": "They do move, and GPS can measure it."
+    }
+   ],
+   "explain": "A few cm a year adds up: over 200 million years the Atlantic Ocean opened up."
+  },
+  {
+   "id": "geography.tc.layers",
+   "topic": "geography.tectonics",
+   "kind": "order",
+   "prompt": "Put the layers of the Earth in order, from the outside in.",
+   "items": [
+    "crust",
+    "mantle",
+    "outer core",
+    "inner core"
+   ],
+   "labels": [
+    "thin, rocky",
+    "hot, slowly flowing rock",
+    "liquid iron and nickel",
+    "solid iron and nickel"
+   ],
+   "explain": "Crust, mantle, outer core (liquid), inner core (solid, about 5400°C)."
+  },
+  {
+   "id": "geography.tc.core",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "Which layer of the Earth is solid iron and nickel, as hot as the surface of the Sun?",
+   "answer": "the inner core",
+   "distractors": [
+    "the crust",
+    "the mantle",
+    "the outer core"
+   ],
+   "explain": "The inner core is solid because the pressure is so great, even though it is around 5400°C.",
+   "accept": [
+    "inner core"
+   ]
+  },
+  {
+   "id": "geography.tc.constructive",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "At what kind of plate boundary do plates move APART, letting magma rise?",
+   "answer": "constructive",
+   "distractors": [
+    "destructive",
+    "conservative",
+    "collision"
+   ],
+   "explain": "Constructive boundaries make new crust, as at the Mid-Atlantic Ridge through Iceland."
+  },
+  {
+   "id": "geography.tc.destructive",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "At what kind of boundary does an ocean plate sink beneath a continental plate?",
+   "answer": "destructive",
+   "distractors": [
+    "constructive",
+    "conservative",
+    "stationary"
+   ],
+   "explain": "Destructive boundaries cause violent volcanoes and earthquakes, as in the Andes and Japan."
+  },
+  {
+   "id": "geography.tc.conservative",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "At which kind of boundary do plates slide past each other, causing earthquakes but no volcanoes?",
+   "answer": "conservative",
+   "distractors": [
+    "constructive",
+    "destructive",
+    "divergent"
+   ],
+   "explain": "The San Andreas Fault in California is a conservative boundary."
+  },
+  {
+   "id": "geography.tc.epicentre",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "The point on the Earth’s surface directly above where an earthquake starts is the…",
+   "answer": "epicentre",
+   "distractors": [
+    "focus",
+    "crater",
+    "fault"
+   ],
+   "explain": "The focus is underground, where the rocks slip. The epicentre is the point on the surface above it."
+  },
+  {
+   "id": "geography.tc.seismometer",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "Which instrument measures earthquakes?",
+   "answer": "a seismometer",
+   "distractors": [
+    "a barometer",
+    "a thermometer",
+    "an anemometer"
+   ],
+   "explain": "Seismometers record ground shaking. A barometer measures air pressure; an anemometer measures wind speed.",
+   "accept": [
+    "seismometer",
+    "seismograph",
+    "a seismograph"
+   ]
+  },
+  {
+   "id": "geography.tc.lava",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "Molten rock underground is called magma. What is it called when it reaches the surface?",
+   "answer": "lava",
+   "distractors": [
+    "ash",
+    "pumice",
+    "crust"
+   ],
+   "explain": "Magma underground; lava above ground."
+  },
+  {
+   "id": "geography.tc.ring",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "What is the name for the zone of volcanoes and earthquakes around the edge of the Pacific Ocean?",
+   "answer": "the Ring of Fire",
+   "distractors": [
+    "the Mid-Atlantic Ridge",
+    "the Great Rift Valley",
+    "the Pacific Belt"
+   ],
+   "explain": "About three-quarters of the world’s active volcanoes lie around the Pacific.",
+   "accept": [
+    "ring of fire"
+   ]
+  },
+  {
+   "id": "geography.tc.pangaea",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "What was the name of the supercontinent that existed about 300 million years ago?",
+   "answer": "Pangaea",
+   "distractors": [
+    "Atlantis",
+    "Gondwana only",
+    "Laurasia only"
+   ],
+   "explain": "Alfred Wegener proposed in 1912 that the continents had once been joined in Pangaea. Few believed him until the 1960s.",
+   "accept": [
+    "pangea"
+   ]
+  },
+  {
+   "id": "geography.tc.pompeii",
+   "topic": "geography.tectonics",
+   "kind": "fact",
+   "prompt": "Which Roman town was buried by the eruption of Vesuvius in AD 79?",
+   "answer": "Pompeii",
+   "distractors": [
+    "Rome",
+    "Athens",
+    "Carthage"
+   ],
+   "explain": "Ash preserved Pompeii so well that we can still walk its streets."
+  },
+  {
+   "id": "geography.bi.d1",
+   "topic": "geography.biomes",
+   "kind": "mcq",
+   "prompt": "Which of these is the largest desert in the world?",
+   "options": [
+    {
+     "text": "Antarctica",
+     "correct": true
+    },
+    {
+     "text": "The Sahara",
+     "correct": false,
+     "feedback": "The Sahara is the largest HOT desert. A desert is defined by low rainfall, not heat, and Antarctica gets very little."
+    },
+    {
+     "text": "The Gobi",
+     "correct": false,
+     "feedback": "The Gobi is large, but smaller than both Antarctica and the Sahara."
+    }
+   ],
+   "explain": "Deserts get less than about 250 mm of precipitation a year. Antarctica qualifies, and it is huge."
+  },
+  {
+   "id": "geography.bi.rainforest",
+   "topic": "geography.biomes",
+   "kind": "fact",
+   "prompt": "Which biome, near the Equator, is hot and wet all year with the most species on land?",
+   "answer": "tropical rainforest",
+   "distractors": [
+    "desert",
+    "tundra",
+    "savanna"
+   ],
+   "explain": "Tropical rainforests like the Amazon get over 2000 mm of rain a year and stay hot because the Sun is high all year.",
+   "accept": [
+    "rainforest",
+    "tropical rainforest"
+   ]
+  },
+  {
+   "id": "geography.bi.layers",
+   "topic": "geography.biomes",
+   "kind": "order",
+   "prompt": "Put the layers of a rainforest in order, from the top down.",
+   "items": [
+    "emergent",
+    "canopy",
+    "understorey",
+    "forest floor"
+   ],
+   "labels": null,
+   "explain": "Emergent trees poke above the canopy; the canopy is a thick roof of leaves; the understorey is dim; the forest floor gets only about 2% of the sunlight."
+  },
+  {
+   "id": "geography.bi.sahara",
+   "topic": "geography.biomes",
+   "kind": "fact",
+   "prompt": "What is the largest hot desert in the world?",
+   "answer": "the Sahara",
+   "distractors": [
+    "the Kalahari",
+    "the Atacama",
+    "the Gobi"
+   ],
+   "explain": "The Sahara covers much of North Africa, about the size of the USA.",
+   "accept": [
+    "sahara"
+   ]
+  },
+  {
+   "id": "geography.bi.why-desert",
+   "topic": "geography.biomes",
+   "kind": "fact",
+   "prompt": "Hot deserts are found about 30° north and south of the Equator. Why?",
+   "answer": "dry air sinks there, so clouds rarely form",
+   "distractors": [
+    "they are closest to the Sun",
+    "the oceans are colder there",
+    "there are no rivers"
+   ],
+   "explain": "Air rises at the Equator, drops its rain, then sinks around 30°, warming and drying as it falls.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.bi.tundra",
+   "topic": "geography.biomes",
+   "kind": "fact",
+   "prompt": "Which cold, treeless biome near the Arctic has ground frozen all year beneath the surface?",
+   "answer": "tundra",
+   "distractors": [
+    "taiga",
+    "savanna",
+    "steppe"
+   ],
+   "explain": "The frozen ground in the tundra is called permafrost."
+  },
+  {
+   "id": "geography.bi.taiga",
+   "topic": "geography.biomes",
+   "kind": "fact",
+   "prompt": "Which biome of evergreen conifer forests stretches across Canada, Scandinavia and Russia?",
+   "answer": "taiga (boreal forest)",
+   "distractors": [
+    "tundra",
+    "temperate deciduous forest",
+    "savanna"
+   ],
+   "explain": "The taiga is the largest land biome in the world.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.bi.savanna",
+   "topic": "geography.biomes",
+   "kind": "fact",
+   "prompt": "Which tropical grassland with scattered trees, wet and dry seasons, is home to lions and zebras?",
+   "answer": "savanna",
+   "distractors": [
+    "tundra",
+    "rainforest",
+    "taiga"
+   ],
+   "explain": "Savannas lie between rainforests and deserts, as in East Africa.",
+   "accept": [
+    "savannah"
+   ]
+  },
+  {
+   "id": "geography.bi.uk",
+   "topic": "geography.biomes",
+   "kind": "fact",
+   "prompt": "The UK’s natural biome, before people cleared most of it, is…",
+   "answer": "temperate deciduous forest",
+   "distractors": [
+    "tropical rainforest",
+    "taiga",
+    "savanna"
+   ],
+   "explain": "Deciduous trees like oak and beech lose their leaves in winter.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.bi.drift",
+   "topic": "geography.biomes",
+   "kind": "fact",
+   "prompt": "Which warm ocean current keeps the UK milder than other places as far north?",
+   "answer": "the North Atlantic Drift (Gulf Stream)",
+   "distractors": [
+    "the Humboldt Current",
+    "the Agulhas Current",
+    "the Labrador Current"
+   ],
+   "explain": "Without it, UK winters would be much colder, more like Canada’s at the same latitude.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.bi.wind",
+   "topic": "geography.biomes",
+   "kind": "fact",
+   "prompt": "From which direction does the UK’s most common (prevailing) wind blow?",
+   "answer": "south-west",
+   "distractors": [
+    "north-east",
+    "south-east",
+    "north"
+   ],
+   "explain": "South-westerly winds bring mild, wet air from the Atlantic, which is why the west of the UK is wetter."
+  },
+  {
+   "id": "geography.pp.hierarchy",
+   "topic": "geography.people",
+   "kind": "order",
+   "prompt": "Put these settlements in order, smallest first.",
+   "items": [
+    "hamlet",
+    "village",
+    "town",
+    "city",
+    "conurbation"
+   ],
+   "labels": null,
+   "explain": "A conurbation is where towns and cities have grown together, like Greater Manchester."
+  },
+  {
+   "id": "geography.pp.megacity",
+   "topic": "geography.people",
+   "kind": "fact",
+   "prompt": "A city with more than 10 million people is called a…",
+   "answer": "megacity",
+   "distractors": [
+    "conurbation",
+    "capital",
+    "metropolis only"
+   ],
+   "explain": "Tokyo, Delhi and Shanghai are megacities. London has about 9 million people.",
+   "accept": [
+    "megacity",
+    "mega city"
+   ]
+  },
+  {
+   "id": "geography.pp.bridging",
+   "topic": "geography.people",
+   "kind": "fact",
+   "prompt": "A settlement that grew up where a river could be crossed has what kind of site?",
+   "answer": "a bridging point",
+   "distractors": [
+    "a wet point",
+    "a defensive site",
+    "a gap town"
+   ],
+   "explain": "Many towns ending in “-ford” grew at river crossings, such as Oxford.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.pp.wetpoint",
+   "topic": "geography.people",
+   "kind": "fact",
+   "prompt": "A settlement built near a reliable water supply such as a spring has a…",
+   "answer": "wet point site",
+   "distractors": [
+    "dry point site",
+    "bridging point",
+    "route centre"
+   ],
+   "explain": "Before taps, water was vital. A dry point site, on the other hand, avoids flooding.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.pp.push",
+   "topic": "geography.people",
+   "kind": "fact",
+   "prompt": "A reason that makes people want to LEAVE a place is called a…",
+   "answer": "push factor",
+   "distractors": [
+    "pull factor",
+    "migration",
+    "development"
+   ],
+   "explain": "Push factors: war, few jobs, drought. Pull factors attract people: jobs, safety, family.",
+   "accept": [
+    "push factor",
+    "a push factor",
+    "push"
+   ]
+  },
+  {
+   "id": "geography.pp.urban",
+   "topic": "geography.people",
+   "kind": "fact",
+   "prompt": "The growth in the proportion of people living in towns and cities is called…",
+   "answer": "urbanisation",
+   "distractors": [
+    "migration",
+    "counter-urbanisation",
+    "globalisation"
+   ],
+   "explain": "Over half the world’s people now live in urban areas.",
+   "accept": [
+    "urbanization"
+   ]
+  },
+  {
+   "id": "geography.pp.population",
+   "topic": "geography.people",
+   "kind": "fact",
+   "prompt": "Roughly how many people live in the world (2020s)?",
+   "answer": "about 8 billion",
+   "distractors": [
+    "about 800 million",
+    "about 80 billion",
+    "about 2 billion"
+   ],
+   "explain": "World population passed 8 billion in November 2022.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.pp.populous",
+   "topic": "geography.people",
+   "kind": "fact",
+   "prompt": "Which country has the most people (since 2023)?",
+   "answer": "India",
+   "distractors": [
+    "China",
+    "USA",
+    "Indonesia"
+   ],
+   "explain": "India overtook China in 2023, with over 1.4 billion people."
+  },
+  {
+   "id": "geography.pp.development",
+   "topic": "geography.people",
+   "kind": "mcq",
+   "prompt": "Which of these is the best single measure of how developed a country is?",
+   "options": [
+    {
+     "text": "None is perfect: geographers combine several, such as life expectancy, income and literacy",
+     "correct": true
+    },
+    {
+     "text": "How many tall buildings it has",
+     "correct": false,
+     "feedback": "Buildings don’t tell you about most people’s lives."
+    },
+    {
+     "text": "How big the country is",
+     "correct": false,
+     "feedback": "Size has little to do with development."
+    }
+   ],
+   "explain": "Measures like GDP per person, life expectancy and literacy are combined in the Human Development Index (HDI)."
+  },
+  {
+   "id": "geography.pp.life",
+   "topic": "geography.people",
+   "kind": "fact",
+   "prompt": "The average number of years a person in a country can expect to live is called…",
+   "answer": "life expectancy",
+   "distractors": [
+    "birth rate",
+    "literacy rate",
+    "GDP"
+   ],
+   "explain": "Life expectancy is around 81 years in the UK."
+  },
+  {
+   "id": "geography.w.usa",
+   "topic": "geography.americas",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "USA",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "answer": "United States",
+   "accept": [
+    "USA",
+    "United States of America",
+    "America",
+    "the US"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is United States."
+  },
+  {
+   "id": "geography.wc.usa",
+   "topic": "geography.americas",
+   "kind": "fact",
+   "prompt": "What is the capital of United States?",
+   "answer": "Washington, D.C.",
+   "distractors": [
+    "New York",
+    "Los Angeles"
+   ],
+   "explain": "The capital of United States is Washington, D.C.. Not New York!",
+   "map": "world",
+   "layer": "countries",
+   "feature": "USA",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "fill": true,
+   "accept": [
+    "Washington",
+    "Washington DC"
+   ],
+   "learn": "The capital of **United States** is **Washington, D.C.**. Not New York!"
+  },
+  {
+   "id": "geography.w.can",
+   "topic": "geography.americas",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CAN",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "answer": "Canada",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Canada."
+  },
+  {
+   "id": "geography.wc.can",
+   "topic": "geography.americas",
+   "kind": "fact",
+   "prompt": "What is the capital of Canada?",
+   "answer": "Ottawa",
+   "distractors": [
+    "Toronto",
+    "Vancouver"
+   ],
+   "explain": "The capital of Canada is Ottawa. Ottawa, not Toronto or Vancouver.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CAN",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Canada** is **Ottawa**. Ottawa, not Toronto or Vancouver."
+  },
+  {
+   "id": "geography.w.mex",
+   "topic": "geography.americas",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MEX",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "answer": "Mexico",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Mexico."
+  },
+  {
+   "id": "geography.wc.mex",
+   "topic": "geography.americas",
+   "kind": "fact",
+   "prompt": "What is the capital of Mexico?",
+   "answer": "Mexico City",
+   "distractors": [
+    "Cancún",
+    "Guadalajara"
+   ],
+   "explain": "The capital of Mexico is Mexico City.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MEX",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Mexico** is **Mexico City**."
+  },
+  {
+   "id": "geography.w.bra",
+   "topic": "geography.americas",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BRA",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "answer": "Brazil",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Brazil."
+  },
+  {
+   "id": "geography.wc.bra",
+   "topic": "geography.americas",
+   "kind": "fact",
+   "prompt": "What is the capital of Brazil?",
+   "answer": "Brasília",
+   "distractors": [
+    "Rio de Janeiro",
+    "São Paulo"
+   ],
+   "explain": "The capital of Brazil is Brasília. Brasília was built as a new capital in 1960.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BRA",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "fill": true,
+   "accept": [
+    "Brasilia"
+   ],
+   "learn": "The capital of **Brazil** is **Brasília**. Brasília was built as a new capital in 1960."
+  },
+  {
+   "id": "geography.w.arg",
+   "topic": "geography.americas",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ARG",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "answer": "Argentina",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Argentina."
+  },
+  {
+   "id": "geography.wc.arg",
+   "topic": "geography.americas",
+   "kind": "fact",
+   "prompt": "What is the capital of Argentina?",
+   "answer": "Buenos Aires",
+   "distractors": [
+    "Santiago",
+    "Montevideo"
+   ],
+   "explain": "The capital of Argentina is Buenos Aires.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ARG",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Argentina** is **Buenos Aires**."
+  },
+  {
+   "id": "geography.w.chl",
+   "topic": "geography.americas",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CHL",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "answer": "Chile",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Chile."
+  },
+  {
+   "id": "geography.wc.chl",
+   "topic": "geography.americas",
+   "kind": "fact",
+   "prompt": "What is the capital of Chile?",
+   "answer": "Santiago",
+   "distractors": [
+    "Buenos Aires",
+    "Lima"
+   ],
+   "explain": "The capital of Chile is Santiago.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CHL",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Chile** is **Santiago**."
+  },
+  {
+   "id": "geography.w.per",
+   "topic": "geography.americas",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "PER",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "answer": "Peru",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Peru."
+  },
+  {
+   "id": "geography.wc.per",
+   "topic": "geography.americas",
+   "kind": "fact",
+   "prompt": "What is the capital of Peru?",
+   "answer": "Lima",
+   "distractors": [
+    "Cusco",
+    "Quito"
+   ],
+   "explain": "The capital of Peru is Lima.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "PER",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Peru** is **Lima**."
+  },
+  {
+   "id": "geography.w.col",
+   "topic": "geography.americas",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "COL",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "answer": "Colombia",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Colombia."
+  },
+  {
+   "id": "geography.wc.col",
+   "topic": "geography.americas",
+   "kind": "fact",
+   "prompt": "What is the capital of Colombia?",
+   "answer": "Bogotá",
+   "distractors": [
+    "Medellín",
+    "Caracas"
+   ],
+   "explain": "The capital of Colombia is Bogotá.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "COL",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "fill": true,
+   "accept": [
+    "Bogota"
+   ],
+   "learn": "The capital of **Colombia** is **Bogotá**."
+  },
+  {
+   "id": "geography.w.ven",
+   "topic": "geography.americas",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "VEN",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "answer": "Venezuela",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Venezuela."
+  },
+  {
+   "id": "geography.wc.ven",
+   "topic": "geography.americas",
+   "kind": "fact",
+   "prompt": "What is the capital of Venezuela?",
+   "answer": "Caracas",
+   "distractors": [
+    "Bogotá",
+    "Quito"
+   ],
+   "explain": "The capital of Venezuela is Caracas.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "VEN",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Venezuela** is **Caracas**."
+  },
+  {
+   "id": "geography.w.cub",
+   "topic": "geography.americas",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CUB",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "answer": "Cuba",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Cuba."
+  },
+  {
+   "id": "geography.wc.cub",
+   "topic": "geography.americas",
+   "kind": "fact",
+   "prompt": "What is the capital of Cuba?",
+   "answer": "Havana",
+   "distractors": [
+    "Kingston",
+    "Santo Domingo"
+   ],
+   "explain": "The capital of Cuba is Havana.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CUB",
+   "zoom": [
+    "North America",
+    "South America"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Cuba** is **Havana**."
+  },
+  {
+   "id": "geography.w.egy",
+   "topic": "geography.africa",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "EGY",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Egypt",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Egypt."
+  },
+  {
+   "id": "geography.wc.egy",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "What is the capital of Egypt?",
+   "answer": "Cairo",
+   "distractors": [
+    "Alexandria",
+    "Luxor"
+   ],
+   "explain": "The capital of Egypt is Cairo.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "EGY",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Egypt** is **Cairo**."
+  },
+  {
+   "id": "geography.w.nga",
+   "topic": "geography.africa",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NGA",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Nigeria",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Nigeria."
+  },
+  {
+   "id": "geography.wc.nga",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "What is the capital of Nigeria?",
+   "answer": "Abuja",
+   "distractors": [
+    "Lagos",
+    "Accra"
+   ],
+   "explain": "The capital of Nigeria is Abuja. Abuja, not Lagos, which is the biggest city.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NGA",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Nigeria** is **Abuja**. Abuja, not Lagos, which is the biggest city."
+  },
+  {
+   "id": "geography.w.ken",
+   "topic": "geography.africa",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KEN",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Kenya",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Kenya."
+  },
+  {
+   "id": "geography.wc.ken",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "What is the capital of Kenya?",
+   "answer": "Nairobi",
+   "distractors": [
+    "Mombasa",
+    "Addis Ababa"
+   ],
+   "explain": "The capital of Kenya is Nairobi.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KEN",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Kenya** is **Nairobi**."
+  },
+  {
+   "id": "geography.w.eth",
+   "topic": "geography.africa",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ETH",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Ethiopia",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Ethiopia."
+  },
+  {
+   "id": "geography.wc.eth",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "What is the capital of Ethiopia?",
+   "answer": "Addis Ababa",
+   "distractors": [
+    "Nairobi",
+    "Khartoum"
+   ],
+   "explain": "The capital of Ethiopia is Addis Ababa.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ETH",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Ethiopia** is **Addis Ababa**."
+  },
+  {
+   "id": "geography.w.mar",
+   "topic": "geography.africa",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MAR",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Morocco",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Morocco."
+  },
+  {
+   "id": "geography.wc.mar",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "What is the capital of Morocco?",
+   "answer": "Rabat",
+   "distractors": [
+    "Casablanca",
+    "Marrakesh"
+   ],
+   "explain": "The capital of Morocco is Rabat. Rabat, not Casablanca or Marrakesh.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MAR",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Morocco** is **Rabat**. Rabat, not Casablanca or Marrakesh."
+  },
+  {
+   "id": "geography.w.gha",
+   "topic": "geography.africa",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "GHA",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Ghana",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Ghana."
+  },
+  {
+   "id": "geography.wc.gha",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "What is the capital of Ghana?",
+   "answer": "Accra",
+   "distractors": [
+    "Lagos",
+    "Kumasi"
+   ],
+   "explain": "The capital of Ghana is Accra.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "GHA",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Ghana** is **Accra**."
+  },
+  {
+   "id": "geography.w.cod",
+   "topic": "geography.africa",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "COD",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Democratic Republic of the Congo",
+   "accept": [
+    "DR Congo",
+    "DRC",
+    "Congo"
+   ],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Democratic Republic of the Congo."
+  },
+  {
+   "id": "geography.wc.cod",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "What is the capital of Democratic Republic of the Congo?",
+   "answer": "Kinshasa",
+   "distractors": [
+    "Brazzaville",
+    "Lagos"
+   ],
+   "explain": "The capital of Democratic Republic of the Congo is Kinshasa.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "COD",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Democratic Republic of the Congo** is **Kinshasa**."
+  },
+  {
+   "id": "geography.w.zaf",
+   "topic": "geography.africa",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ZAF",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "South Africa",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is South Africa."
+  },
+  {
+   "id": "geography.wc.zaf",
+   "topic": "geography.africa",
+   "kind": "fact",
+   "prompt": "What is the capital of South Africa?",
+   "answer": "Pretoria",
+   "distractors": [
+    "Johannesburg",
+    "Durban"
+   ],
+   "explain": "The capital of South Africa is Pretoria. South Africa has three capitals: Pretoria (government), Cape Town (parliament) and Bloemfontein (courts).",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ZAF",
+   "zoom": [
+    "Africa"
+   ],
+   "fill": true,
+   "accept": [
+    "Cape Town",
+    "Bloemfontein"
+   ],
+   "learn": "The capital of **South Africa** is **Pretoria**. South Africa has three capitals: Pretoria (government), Cape Town (parliament) and Bloemfontein (courts)."
+  },
+  {
+   "id": "geography.w.chn",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CHN",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "China",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is China."
+  },
+  {
+   "id": "geography.wc.chn",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of China?",
+   "answer": "Beijing",
+   "distractors": [
+    "Shanghai",
+    "Hong Kong"
+   ],
+   "explain": "The capital of China is Beijing.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CHN",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **China** is **Beijing**."
+  },
+  {
+   "id": "geography.w.ind",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IND",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "India",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is India."
+  },
+  {
+   "id": "geography.wc.ind",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of India?",
+   "answer": "New Delhi",
+   "distractors": [
+    "Mumbai",
+    "Kolkata"
+   ],
+   "explain": "The capital of India is New Delhi.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IND",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [
+    "Delhi"
+   ],
+   "learn": "The capital of **India** is **New Delhi**."
+  },
+  {
+   "id": "geography.w.jpn",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "JPN",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Japan",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Japan."
+  },
+  {
+   "id": "geography.wc.jpn",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of Japan?",
+   "answer": "Tokyo",
+   "distractors": [
+    "Kyoto",
+    "Osaka"
+   ],
+   "explain": "The capital of Japan is Tokyo.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "JPN",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Japan** is **Tokyo**."
+  },
+  {
+   "id": "geography.w.kor",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KOR",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "South Korea",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is South Korea."
+  },
+  {
+   "id": "geography.wc.kor",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of South Korea?",
+   "answer": "Seoul",
+   "distractors": [
+    "Busan",
+    "Pyongyang"
+   ],
+   "explain": "The capital of South Korea is Seoul.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KOR",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **South Korea** is **Seoul**."
+  },
+  {
+   "id": "geography.w.pak",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "PAK",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Pakistan",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Pakistan."
+  },
+  {
+   "id": "geography.wc.pak",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of Pakistan?",
+   "answer": "Islamabad",
+   "distractors": [
+    "Karachi",
+    "Lahore"
+   ],
+   "explain": "The capital of Pakistan is Islamabad. Islamabad, not Karachi.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "PAK",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Pakistan** is **Islamabad**. Islamabad, not Karachi."
+  },
+  {
+   "id": "geography.w.bgd",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BGD",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Bangladesh",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Bangladesh."
+  },
+  {
+   "id": "geography.wc.bgd",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of Bangladesh?",
+   "answer": "Dhaka",
+   "distractors": [
+    "Kolkata",
+    "Chittagong"
+   ],
+   "explain": "The capital of Bangladesh is Dhaka.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BGD",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Bangladesh** is **Dhaka**."
+  },
+  {
+   "id": "geography.w.sau",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "SAU",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Saudi Arabia",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Saudi Arabia."
+  },
+  {
+   "id": "geography.wc.sau",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of Saudi Arabia?",
+   "answer": "Riyadh",
+   "distractors": [
+    "Mecca",
+    "Jeddah"
+   ],
+   "explain": "The capital of Saudi Arabia is Riyadh.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "SAU",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Saudi Arabia** is **Riyadh**."
+  },
+  {
+   "id": "geography.w.tur",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "TUR",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Turkey",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Turkey."
+  },
+  {
+   "id": "geography.wc.tur",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of Turkey?",
+   "answer": "Ankara",
+   "distractors": [
+    "Istanbul",
+    "Izmir"
+   ],
+   "explain": "The capital of Turkey is Ankara. Ankara, not Istanbul.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "TUR",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Turkey** is **Ankara**. Ankara, not Istanbul."
+  },
+  {
+   "id": "geography.w.irn",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IRN",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Iran",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Iran."
+  },
+  {
+   "id": "geography.wc.irn",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of Iran?",
+   "answer": "Tehran",
+   "distractors": [
+    "Baghdad",
+    "Isfahan"
+   ],
+   "explain": "The capital of Iran is Tehran.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IRN",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Iran** is **Tehran**."
+  },
+  {
+   "id": "geography.w.vnm",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "VNM",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Vietnam",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Vietnam."
+  },
+  {
+   "id": "geography.wc.vnm",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of Vietnam?",
+   "answer": "Hanoi",
+   "distractors": [
+    "Ho Chi Minh City",
+    "Bangkok"
+   ],
+   "explain": "The capital of Vietnam is Hanoi.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "VNM",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Vietnam** is **Hanoi**."
+  },
+  {
+   "id": "geography.w.tha",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "THA",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Thailand",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Thailand."
+  },
+  {
+   "id": "geography.wc.tha",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of Thailand?",
+   "answer": "Bangkok",
+   "distractors": [
+    "Phuket",
+    "Hanoi"
+   ],
+   "explain": "The capital of Thailand is Bangkok.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "THA",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Thailand** is **Bangkok**."
+  },
+  {
+   "id": "geography.w.aus",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "AUS",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Australia",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Australia."
+  },
+  {
+   "id": "geography.wc.aus",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of Australia?",
+   "answer": "Canberra",
+   "distractors": [
+    "Sydney",
+    "Melbourne"
+   ],
+   "explain": "The capital of Australia is Canberra. Canberra, not Sydney: it was built as a compromise between Sydney and Melbourne.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "AUS",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **Australia** is **Canberra**. Canberra, not Sydney: it was built as a compromise between Sydney and Melbourne."
+  },
+  {
+   "id": "geography.w.nzl",
+   "topic": "geography.asia",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NZL",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "New Zealand",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is New Zealand."
+  },
+  {
+   "id": "geography.wc.nzl",
+   "topic": "geography.asia",
+   "kind": "fact",
+   "prompt": "What is the capital of New Zealand?",
+   "answer": "Wellington",
+   "distractors": [
+    "Auckland",
+    "Christchurch"
+   ],
+   "explain": "The capital of New Zealand is Wellington. Wellington, not Auckland.",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NZL",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "fill": true,
+   "accept": [],
+   "learn": "The capital of **New Zealand** is **Wellington**. Wellington, not Auckland."
+  }
+ ]
+}

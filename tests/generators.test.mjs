@@ -82,3 +82,21 @@ test('which-century logic, including the 1900 edge case and BC', () => {
   assert.equal(ordinal(13), '13th');
   assert.equal(ordinal(3), '3rd');
 });
+
+test('grid references and compass directions match the drawn diagram', () => {
+  const rng = makeRng('grid-verify');
+  const NAMES = { '0,1': 'north', '1,1': 'north-east', '1,0': 'east', '1,-1': 'south-east', '0,-1': 'south', '-1,-1': 'south-west', '-1,0': 'west', '-1,1': 'north-west' };
+  for (let i = 0; i < 300; i++) {
+    const q1 = GENERATORS.gridRef(1, rng);
+    const m = q1.diagram.markers[0];
+    assert.equal(q1.answer, `${String(q1.diagram.e0 + Math.floor(m.x)).padStart(2, '0')}${String(q1.diagram.n0 + Math.floor(m.y)).padStart(2, '0')}`);
+    const q2 = GENERATORS.gridRef(2, rng);
+    const p = q2.diagram.markers[0];
+    const e = Math.round((q2.diagram.e0 + p.x) * 10), n = Math.round((q2.diagram.n0 + p.y) * 10);
+    assert.equal(q2.answer, `${String(e).padStart(3, '0')}${String(n).padStart(3, '0')}`);
+    const q3 = GENERATORS.gridRef(3, rng);
+    const [a, b] = q3.diagram.markers;
+    assert.equal(q3.answer, NAMES[`${Math.sign(b.x - a.x)},${Math.sign(b.y - a.y)}`], q3.prompt);
+    assert.ok(q3.prompt.includes(b.label) && q3.prompt.indexOf(b.label) < q3.prompt.indexOf(a.label), 'asks direction OF b FROM a');
+  }
+});

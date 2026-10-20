@@ -68,14 +68,14 @@ export function present(item, card, { db, state, rng, level, format }) {
   switch (item.kind) {
     case 'fact': {
       const fmt = format || formatFor(card?.s, item.formats || RANK, RANK);
-      const b = { ...base, fmt, prompt: item.prompt, image: item.image, answer: item.answer, accept: item.accept, strict: item.strict, map: item.map ? { id: item.map, highlight: item.feature } : undefined };
+      const b = { ...base, fmt, prompt: item.prompt, image: item.image, answer: item.answer, accept: item.accept, strict: item.strict, map: item.map ? { id: item.map, highlight: item.feature, zoom: item.zoom } : undefined };
       if (fmt === 'choice') q = asChoice(b, item, db, rng);
       else q = { ...b, kind: 'typed', cue: fmt === 'cued' ? cueFor(item.answer) : undefined };
       break;
     }
     case 'mapfact': {
       const fmt = format || formatFor(card?.s, item.formats || MAP_RANK, MAP_RANK);
-      const map = { id: item.map, highlight: fmt === 'locate' ? null : item.feature, focus: item.focus };
+      const map = { id: item.map, highlight: fmt === 'locate' ? null : item.feature, zoom: item.zoom };
       const b = { ...base, fmt, map, answer: item.answer, accept: item.accept };
       if (fmt === 'choose') q = asChoice({ ...b, prompt: item.choosePrompt || 'Which place is highlighted?' }, item, db, rng);
       else if (fmt === 'locate') q = { ...b, kind: 'map', mode: 'locate', feature: item.feature, prompt: item.locatePrompt || `Tap ${item.answer}.` };

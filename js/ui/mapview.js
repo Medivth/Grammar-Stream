@@ -22,9 +22,8 @@ export function featureNames(map, layer) {
  * Returns { el, mark(id, cls) } so the caller can colour right and wrong answers.
  */
 export function mapSVG(map, opts) {
-  const { layer, highlight, locate, onPick, markerType } = opts;
-  const [x0, y0, w, hgt] = map.viewBox;
-  const svg = s('svg', { viewBox: `${x0} ${y0} ${w} ${hgt}`, role: 'img', 'aria-label': 'Map' });
+  const { layer, highlight, locate, onPick, markerType, zoom } = opts;
+  const svg = s('svg', { viewBox: viewBoxFor(map, zoom).join(' '), role: 'img', 'aria-label': 'Map' });
   const byId = {};
   const add = (el, id) => { if (id) (byId[id] ||= []).push(el); return el; };
   const tapAttrs = (id) => (locate ? { class: 'map-tap', tabindex: '0', role: 'button', 'data-id': id } : {});
@@ -41,6 +40,11 @@ export function mapSVG(map, opts) {
       for (const c of map.continents) {
         const cls = `map-land${c.id === highlight ? ' map-hi' : ''}`;
         svg.append(add(s('path', { d: c.d, class: cls, ...tapAttrs(c.id), ...(locate ? { class: cls + ' map-tap' } : {}) }), c.id));
+      }
+    } else if (layer === 'countries') {
+      for (const f of map.features) {
+        const cls = `map-land${f.id === highlight ? ' map-hi' : ''}${locate ? ' map-tap' : ''}`;
+        svg.append(add(s('path', { d: f.d, class: cls, 'data-id': f.id, ...(locate ? { tabindex: '0', role: 'button' } : {}) }), f.id));
       }
     } else {
       for (const f of map.features) svg.append(s('path', { d: f.d, class: 'map-land', style: 'pointer-events:none' }));
@@ -85,6 +89,11 @@ export function mapSVG(map, opts) {
   }
 
   let selected = null;
+  // keep the highlighted country visible even if it is small: ring it
+  if (highlight && layer === 'countries' && map.id === 'world') {
+    const f = map.features.find((x) => x.id === highlight);
+    if (f?.c) svg.append(s('circle', { cx: f.c[0], cy: f.c[1], r: 14, fill: 'none', stroke: 'var(--map-hi)', 'stroke-width': 2.5, 'pointer-events': 'none' }));
+  }
   if (locate) {
     const pick = (id) => {
       for (const el of byId[selected] || []) el.classList.remove('map-hi');
@@ -113,4 +122,19 @@ export function mapSVG(map, opts) {
       }
     },
   };
+}
+
+/** Zoom to the countries of the given continents (by their centroids), with some padding. */
+export function viewBoxFor(map, zoom) {
+  const full = map.viewBox;
+  if (!zoom?.length || !map.features) return full;
+  const pts = map.features.filter((f) => zoom.includes(f.continent) && f.c).map((f) => f.c);
+  if (!pts.length) return full;
+  const xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1]);
+  const pad = 45;
+  let x0 = Math.min(...xs) - pad, x1 = Math.max(...xs) + pad, y0 = Math.min(...ys) - pad, y1 = Math.max(...ys) + pad;
+  // keep a landscape-ish shape so the map isn't a thin strip
+  const w = x1 - x0, hh = y1 - y0;
+  if (w < hh * 1.2) { const extra = (hh * 1.2 - w) / 2; x0 -= extra; x1 += extra; }
+  return [Math.max(full[0], x0), Math.max(full[1], y0), Math.min(full[2], x1 - x0), Math.min(full[3], y1 - y0)].map((v) => Math.round(v));
 }
