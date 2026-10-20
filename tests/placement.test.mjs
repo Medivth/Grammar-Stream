@@ -110,3 +110,17 @@ test('placement stays inside one subject; joined-up topics unlock from both subj
   st.topics['maths.averages'] = secure;
   assert.equal(topicStatus(db.topics['geography.by-numbers'], st.topics), 'available');
 });
+
+test('she can choose which subject to check; the first new topic follows her choice', () => {
+  const st = emptyState(TODAY);
+  const plan = planDay(st, db, TODAY);
+  const pl = plan.steps.find((s) => s.t === 'placement');
+  assert.deepEqual(pl.options, PLACEMENT_ORDER);
+  assert.equal(pl.subject, 'maths', 'default stands if she does not pick');
+  const ch = plan.steps.find((s) => s.t === 'choose');
+  assert.equal(ch.afterPlacement, true);
+  assert.equal(ch.subject, 'maths');
+  // after geography is placed, it is no longer offered
+  st.subjects.geography = { ability: 0, attempts: 0, lastNew: null, placed: TODAY };
+  assert.ok(!planDay(st, db, TODAY + 1).steps.find((s) => s.t === 'placement').options.includes('geography'));
+});

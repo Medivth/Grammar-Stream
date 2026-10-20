@@ -57,11 +57,11 @@ try {
       const sprintIn = await page.$('.sprint-in');
       if (sprintIn) {
         const v = await page.evaluate(() => window.__app.sprintCurrent?.value);
-        await sprintIn.fill(String(v ?? 7));
-        await sprintIn.press('Enter');
+        try { await sprintIn.fill(String(v ?? 7)); await sprintIn.press('Enter'); } catch { /* the 6-second sprint ended mid-keystroke */ }
         continue;
       }
       if (!reloaded && steps === 12) { reloaded = true; await page.goto(`http://127.0.0.1:${PORT}/#/home`); await page.reload(); await page.waitForSelector('.btn-start'); await page.click('.btn-start'); continue; }
+      if (await page.$('text=Which subject shall we look at today?')) { await page.click('.choice-card >> nth=2'); await page.waitForTimeout(100); continue; }
       // placement: answer some, skip others
       const skip = await page.$('button:has-text("I haven’t learned this yet")');
       if (skip) {

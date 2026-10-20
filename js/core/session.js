@@ -172,7 +172,8 @@ export function planDay(state, db, today) {
   if (yesterday.length) steps.push({ t: 'yesterday' });
   if ((state.answers || []).some((a) => a.mark && !a.seen)) steps.push({ t: 'marked' });
   if (sprint) steps.push({ t: 'sprint' });
-  if (placeSubject) steps.push({ t: 'placement', subject: placeSubject });
+  // she picks which subject to check; the default (first in order) stands if she doesn't
+  if (placeSubject) steps.push({ t: 'placement', subject: placeSubject, options: PLACEMENT_ORDER.filter((s) => needsPlacement(state, db, s)) });
   const split = reviews.length >= 10 ? Math.ceil(reviews.length * 0.6) : reviews.length;
   reviews.slice(0, split).forEach((r) => steps.push({ t: 'review', id: r.id }));
   if (split < reviews.length) {
@@ -180,7 +181,7 @@ export function planDay(state, db, today) {
     reviews.slice(split).forEach((r) => steps.push({ t: 'review', id: r.id }));
   }
   if (written) steps.push({ t: 'written', id: written });
-  if (subject) steps.push({ t: 'choose', subject, options: topicChoices(state, db, subject) });
+  if (subject) steps.push({ t: 'choose', subject, options: topicChoices(state, db, subject), afterPlacement: !!placeSubject });
   if (second) steps.push({ t: 'choose', subject: second, options: topicChoices(state, db, second) });
   const sOpts = sentenceOptions(state, db);
   if (sOpts.length) steps.push({ t: 'sentence', options: sOpts });

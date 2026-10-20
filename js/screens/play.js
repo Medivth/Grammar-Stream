@@ -575,6 +575,24 @@ function doneStep(app, root) {
 // ---------------------------------------------------------------- placement
 async function placementStep(app, root, step) {
   const { state, db } = app;
+  if (!step.probe && !step.picked && (step.options || []).length > 1) {
+    // her choice of which subject to check today; the first new topic follows the same subject
+    mount(root, header(app, 'Finding your level'), h('div', { class: 'q-wrap stack' },
+      h('h2', {}, 'Which subject shall we look at today?'),
+      h('p', { class: 'muted' }, 'Each one starts with a short check so we can skip what you already know. Pick any; the others will have their turn on the next days.'),
+      step.options.map((id) => {
+        const s = SUBJECT_BY_ID[id];
+        return h('button', { class: 'choice-card home-card', type: 'button', style: { '--tint': `color-mix(in srgb, ${s.colour} 14%, var(--card))`, '--tint-ink': s.colour }, onclick: () => {
+          step.subject = id;
+          step.picked = true;
+          const next = state.plan.steps.find((x) => x.t === 'choose' && x.afterPlacement);
+          if (next) next.subject = id;
+          app.save();
+          placementStep(app, root, step);
+        } }, h('span', { class: 'ico' }, icon(SUBJECT_ICON[id])), h('span', { class: 'txt' }, h('h3', { style: { margin: 0 } }, s.name), h('p', {}, s.region)));
+      })));
+    return;
+  }
   const subj = SUBJECT_BY_ID[step.subject];
   if (!step.probe) {
     step.probe = startPlacement(state, db, step.subject);
