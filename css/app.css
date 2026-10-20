@@ -421,3 +421,8 @@ label { display: block; font-weight: 700; margin-bottom: 6px; }
 @keyframes pop { from { transform: scale(0.96); opacity: 0.4; } to { transform: scale(1); opacity: 1; } }
 .bob { animation: bob 3s ease-in-out infinite; transform-origin: 50% 90%; }
 @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+
+/* code in Computing questions: `inline` and ```blocks``` (see richHTML) */
+code { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 0.92em; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 0 5px; }
+pre.code { margin: 8px 0; padding: 12px 14px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; overflow-x: auto; white-space: pre; text-align: left; line-height: 1.5; }
+pre.code code { border: 0; padding: 0; background: none; font-size: 0.95rem; }

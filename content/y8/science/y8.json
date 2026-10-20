@@ -1,0 +1,3875 @@
+{
+ "subject": "science",
+ "deck": "y8",
+ "topics": [
+  {
+   "id": "science.cells",
+   "title": "Cells and microscopes",
+   "kind": "mixed",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Every living thing is built from cells. With a light microscope you can see the nucleus and the cell wall; an electron microscope shows far smaller parts, like ribosomes.",
+   "teach": "Explain three differences between a plant cell and an animal cell, and what each extra part does.",
+   "talk": "Ask {him} to explain how a microscope’s magnification is worked out."
+  },
+  {
+   "id": "science.organs",
+   "title": "Specialised cells, organs and digestion",
+   "kind": "facts",
+   "prereqs": [
+    "science.cells"
+   ],
+   "batch": 5,
+   "intro": "Cells → tissues → organs → organ systems. In digestion, enzymes act like molecular scissors, breaking big food molecules into small ones the blood can absorb.",
+   "teach": "Explain the job of an enzyme, using amylase as an example, and why boiling stops it working.",
+   "talk": "At dinner, ask {her} which nutrients in the meal will be broken down by which enzymes."
+  },
+  {
+   "id": "science.respiration",
+   "title": "Breathing and respiration",
+   "kind": "facts",
+   "prereqs": [
+    "science.organs"
+   ],
+   "batch": 5,
+   "intro": "Breathing moves air in and out; respiration is the chemical reaction in every cell that releases energy from glucose. They are not the same thing!",
+   "teach": "Explain the difference between breathing and respiration, and write the word equation for aerobic respiration.",
+   "talk": "After a sprint, ask {him} why {she} is panting even after stopping (oxygen debt)."
+  },
+  {
+   "id": "science.photosynthesis",
+   "title": "Photosynthesis and plants",
+   "kind": "facts",
+   "prereqs": [
+    "science.cells"
+   ],
+   "batch": 5,
+   "intro": "Plants make their own food: in chloroplasts, light energy turns carbon dioxide and water into glucose and oxygen. Almost every food chain on Earth starts here.",
+   "teach": "Explain the word equation for photosynthesis and three things that could limit its rate.",
+   "talk": "Ask {him} why a plant left in a dark cupboard turns yellow and dies."
+  },
+  {
+   "id": "science.ecosystems",
+   "title": "Ecosystems and food webs",
+   "kind": "facts",
+   "prereqs": [
+    "science.photosynthesis"
+   ],
+   "batch": 5,
+   "intro": "In an ecosystem every organism depends on others. Energy flows along food chains, but most is lost at each step, which is why there are few top predators.",
+   "teach": "Explain what would happen to a food web if one species disappeared, using a real example.",
+   "talk": "On a walk, ask {her} to build a food chain from what you can see."
+  },
+  {
+   "id": "science.inheritance",
+   "title": "DNA, variation and evolution",
+   "kind": "facts",
+   "prereqs": [
+    "science.cells"
+   ],
+   "batch": 5,
+   "intro": "DNA in the nucleus carries the genetic code, arranged in genes on chromosomes. Variation, plus natural selection over many generations, explains how species evolve.",
+   "teach": "Explain natural selection using the peppered moth or antibiotic-resistant bacteria.",
+   "talk": "Ask {him} which of {her} features are inherited, which are environmental, and which are both."
+  },
+  {
+   "id": "science.health",
+   "title": "Health, microbes and disease",
+   "kind": "facts",
+   "prereqs": [
+    "science.organs"
+   ],
+   "batch": 5,
+   "intro": "Bacteria, viruses and fungi can cause disease. Our bodies fight back with white blood cells; vaccines train the immune system in advance. Hippocrates, the Greek “father of medicine”, insisted that diseases have natural causes.",
+   "teach": "Explain how a vaccine protects you without making you ill.",
+   "talk": "Ask {her} why antibiotics do not work against a cold."
+  },
+  {
+   "id": "science.particles",
+   "title": "Particles, states and density",
+   "kind": "mixed",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Democritus, in ancient Greece, guessed that everything is made of tiny uncuttable pieces: atomos. The particle model explains solids, liquids and gases, diffusion and density.",
+   "teach": "Explain, using particles, why a gas fills its container and a solid keeps its shape.",
+   "talk": "Ask {him} why you can smell perfume across a room (diffusion)."
+  },
+  {
+   "id": "science.atoms",
+   "title": "Elements, compounds and separating mixtures",
+   "kind": "facts",
+   "prereqs": [
+    "science.particles"
+   ],
+   "batch": 5,
+   "intro": "An element has one type of atom; a compound has different atoms chemically bonded; a mixture is not chemically joined, so it can be separated by filtering, evaporating, distilling or chromatography.",
+   "teach": "Explain how you would get pure water and pure salt back from salty water.",
+   "talk": "Ask {her} whether air, water and gold are elements, compounds or mixtures."
+  },
+  {
+   "id": "science.periodic",
+   "title": "The periodic table",
+   "kind": "facts",
+   "prereqs": [
+    "science.atoms"
+   ],
+   "batch": 5,
+   "intro": "Mendeleev arranged the elements so that ones with similar properties line up in columns called groups. He left gaps for elements nobody had found yet, and was proved right.",
+   "teach": "Explain why the elements in Group 1 react in similar ways, and why reactivity increases down the group.",
+   "talk": "Ask {him} to name a metal and a non-metal and give one property of each."
+  },
+  {
+   "id": "science.reactions",
+   "title": "Chemical reactions and equations",
+   "kind": "mixed",
+   "prereqs": [
+    "science.atoms"
+   ],
+   "batch": 5,
+   "intro": "In a chemical reaction atoms are rearranged into new substances: no atoms are made or destroyed, so mass is conserved. Combustion, oxidation and thermal decomposition are common types.",
+   "teach": "Explain how you can tell a chemical change from a physical change, with two signs of a reaction.",
+   "talk": "Light a candle together and ask {her} what is being made as the wax burns."
+  },
+  {
+   "id": "science.acids",
+   "title": "Acids, alkalis and metals",
+   "kind": "facts",
+   "prereqs": [
+    "science.reactions"
+   ],
+   "batch": 5,
+   "intro": "Acids have a pH below 7, alkalis above 7. Acid + alkali → salt + water (neutralisation). Metals react with acids to make a salt and hydrogen, and the reactivity series ranks how readily they react.",
+   "teach": "Explain the reactivity series and how it explains why gold is found pure in the ground but iron is not.",
+   "talk": "Ask {him} why indigestion tablets work."
+  },
+  {
+   "id": "science.earth",
+   "title": "The Earth and its atmosphere",
+   "kind": "facts",
+   "prereqs": [
+    "science.reactions"
+   ],
+   "batch": 5,
+   "intro": "Rocks are recycled over millions of years in the rock cycle; carbon is recycled between air, living things, oceans and rocks. Burning fossil fuels adds carbon dioxide faster than it is removed.",
+   "teach": "Explain how burning fossil fuels contributes to climate change, using the carbon cycle.",
+   "talk": "Ask {her} which rock type a fossil is most likely to be found in, and why."
+  },
+  {
+   "id": "science.forces",
+   "title": "Forces, motion and pressure",
+   "kind": "mixed",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Forces change an object’s speed, direction or shape. Balanced forces mean constant speed; unbalanced forces mean acceleration. Pressure is force spread over an area; a moment is a turning effect.",
+   "teach": "Explain why a skydiver reaches a terminal velocity.",
+   "talk": "Ask {him} why snowshoes stop you sinking into snow."
+  },
+  {
+   "id": "science.energy",
+   "title": "Energy, power and efficiency",
+   "kind": "mixed",
+   "prereqs": [
+    "science.forces"
+   ],
+   "batch": 5,
+   "intro": "Energy is stored (kinetic, gravitational, elastic, thermal, chemical, nuclear…) and transferred by forces, heating, electricity and waves. It is never used up, but some is always wasted, usually as heat.",
+   "teach": "Explain the energy transfers when a ball is dropped and bounces lower each time.",
+   "talk": "Check the power rating on the kettle and ask {her} how much a boil costs."
+  },
+  {
+   "id": "science.electricity",
+   "title": "Electricity and magnetism",
+   "kind": "mixed",
+   "prereqs": [
+    "science.energy"
+   ],
+   "batch": 5,
+   "intro": "Current is the flow of charge; potential difference is the push; resistance opposes the flow. In series, current is the same everywhere; in parallel, current splits. A current also makes a magnetic field.",
+   "teach": "Explain what happens to the brightness of bulbs when you add more in series, and why.",
+   "talk": "Ask {him} why lights in a house are wired in parallel, not series."
+  },
+  {
+   "id": "science.waves",
+   "title": "Sound and light",
+   "kind": "mixed",
+   "prereqs": [
+    "science.energy"
+   ],
+   "batch": 5,
+   "intro": "Sound is a longitudinal wave that needs a medium; light is a transverse wave that can cross empty space at 300 000 km per second. Both reflect and refract.",
+   "teach": "Explain why you see lightning before you hear thunder.",
+   "talk": "Put a pencil in a glass of water and ask {her} to explain why it looks bent."
+  },
+  {
+   "id": "science.space",
+   "title": "Space, gravity and the seasons",
+   "kind": "facts",
+   "prereqs": [
+    "science.forces"
+   ],
+   "batch": 5,
+   "intro": "Gravity holds moons around planets and planets around the Sun. The seasons happen because the Earth’s axis is tilted, not because we are nearer the Sun. Eratosthenes measured the Earth’s size more than 2000 years ago using shadows.",
+   "teach": "Explain why it is summer in Britain when the Earth is actually furthest from the Sun.",
+   "talk": "Look for the Moon together and ask {him} what phase it is in and why."
+  },
+  {
+   "id": "science.working",
+   "title": "Working scientifically",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Good science is about fair tests, careful measurement and honest conclusions. Know your variables, and the difference between accurate, precise and repeatable results.",
+   "teach": "Explain the independent, dependent and control variables in an experiment of your choice.",
+   "talk": "Ask {her} to design a fair test to find the best paper for a paper aeroplane."
+  },
+  {
+   "id": "science.atomic",
+   "title": "Inside the atom: isotopes and bonding",
+   "kind": "facts",
+   "prereqs": [
+    "science.periodic"
+   ],
+   "batch": 5,
+   "intro": "Atoms have a tiny nucleus of protons and neutrons, with electrons in shells around it. Atoms bond by transferring electrons (ionic) or sharing them (covalent).",
+   "teach": "Explain the difference between ionic and covalent bonding with an example of each.",
+   "talk": "Ask {him} what carbon-12 and carbon-14 have in common, and what is different.",
+   "tier": "stretch"
+  },
+  {
+   "id": "science.spectrum",
+   "title": "The electromagnetic spectrum",
+   "kind": "facts",
+   "prereqs": [
+    "science.waves"
+   ],
+   "batch": 5,
+   "intro": "Visible light is only a small part of a family of waves, from radio to gamma rays, all travelling at the speed of light. Shorter wavelengths carry more energy.",
+   "teach": "Explain why X-rays are useful but dangerous.",
+   "talk": "Ask {her} which electromagnetic waves {she} used today (radio, microwaves, visible light…).",
+   "tier": "stretch"
+  },
+  {
+   "id": "science.genetics",
+   "title": "Genetics and Punnett squares",
+   "kind": "mixed",
+   "prereqs": [
+    "science.inheritance"
+   ],
+   "batch": 5,
+   "intro": "Genes come in different versions called alleles. Dominant alleles show up even with just one copy; recessive ones only when both copies match. Punnett squares predict the chances.",
+   "teach": "Explain why two brown-eyed parents can have a blue-eyed child (using a simplified model).",
+   "talk": "Ask {him} to draw a Punnett square for two parents who are both Bb.",
+   "tier": "stretch"
+  }
+ ],
+ "items": [
+  {
+   "id": "science.cl.nucleus",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-animal",
+   "layer": "features",
+   "feature": "nucleus",
+   "answer": "nucleus",
+   "explain": "The nucleus contains DNA and controls the cell.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the nucleus.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.cl.membrane",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-animal",
+   "layer": "features",
+   "feature": "membrane",
+   "answer": "cell membrane",
+   "explain": "The membrane controls what enters and leaves the cell.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the cell membrane.",
+   "namePrompt": "Name the highlighted part.",
+   "accept": [
+    "membrane"
+   ]
+  },
+  {
+   "id": "science.cl.mito",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-animal",
+   "layer": "features",
+   "feature": "mitochondria",
+   "answer": "mitochondria",
+   "explain": "Mitochondria are where aerobic respiration releases energy.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the mitochondria.",
+   "namePrompt": "Name the highlighted part.",
+   "accept": [
+    "mitochondrion"
+   ]
+  },
+  {
+   "id": "science.cl.ribo",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-animal",
+   "layer": "features",
+   "feature": "ribosomes",
+   "answer": "ribosomes",
+   "explain": "Ribosomes make proteins. They are too small to see with a light microscope.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the ribosomes.",
+   "namePrompt": "Name the highlighted part.",
+   "accept": [
+    "ribosome"
+   ]
+  },
+  {
+   "id": "science.cl.wall",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-plant",
+   "layer": "features",
+   "feature": "wall",
+   "answer": "cell wall",
+   "explain": "The cellulose cell wall supports and strengthens a plant cell.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the cell wall.",
+   "namePrompt": "Name the highlighted part.",
+   "accept": [
+    "wall"
+   ]
+  },
+  {
+   "id": "science.cl.vacuole",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-plant",
+   "layer": "features",
+   "feature": "vacuole",
+   "answer": "vacuole",
+   "explain": "The permanent vacuole is filled with cell sap and keeps the cell firm.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the vacuole.",
+   "namePrompt": "Name the highlighted part.",
+   "accept": [
+    "permanent vacuole"
+   ]
+  },
+  {
+   "id": "science.cl.chloro",
+   "topic": "science.cells",
+   "kind": "mapfact",
+   "map": "cell-plant",
+   "layer": "features",
+   "feature": "chloroplasts",
+   "answer": "chloroplasts",
+   "explain": "Chloroplasts contain green chlorophyll, which absorbs light for photosynthesis.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the chloroplasts.",
+   "namePrompt": "Name the highlighted part.",
+   "accept": [
+    "chloroplast"
+   ]
+  },
+  {
+   "id": "science.cl.which",
+   "topic": "science.cells",
+   "kind": "mcq",
+   "prompt": "Which part is found in plant cells but NEVER in animal cells?",
+   "options": [
+    {
+     "text": "Chloroplasts",
+     "correct": true
+    },
+    {
+     "text": "Mitochondria",
+     "correct": false,
+     "feedback": "Both plant and animal cells have mitochondria: both respire."
+    },
+    {
+     "text": "Nucleus",
+     "correct": false,
+     "feedback": "Both have a nucleus."
+    },
+    {
+     "text": "Cell membrane",
+     "correct": false,
+     "feedback": "Both have a membrane; plants have a wall as well."
+    }
+   ],
+   "explain": "Plant cells have three extras: a cell wall, a permanent vacuole and chloroplasts."
+  },
+  {
+   "id": "science.cl.bact",
+   "topic": "science.cells",
+   "kind": "mcq",
+   "prompt": "How is a bacterial cell different from an animal cell?",
+   "options": [
+    {
+     "text": "It has no nucleus: its DNA floats in the cytoplasm",
+     "correct": true
+    },
+    {
+     "text": "It is much bigger",
+     "correct": false,
+     "feedback": "Bacteria are usually much smaller than animal cells."
+    },
+    {
+     "text": "It has chloroplasts",
+     "correct": false,
+     "feedback": "Most bacteria have no chloroplasts."
+    }
+   ],
+   "explain": "Bacteria are prokaryotes: no nucleus, and often a loop of DNA plus small rings called plasmids."
+  },
+  {
+   "id": "science.cl.stain",
+   "topic": "science.cells",
+   "kind": "mcq",
+   "prompt": "Why do you add a stain such as iodine when preparing an onion cell slide?",
+   "options": [
+    {
+     "text": "To make the parts of the cell easier to see",
+     "correct": true
+    },
+    {
+     "text": "To kill the cells",
+     "correct": false,
+     "feedback": "The point is contrast: cell parts are almost transparent."
+    },
+    {
+     "text": "To make the cells bigger",
+     "correct": false,
+     "feedback": "Stains don’t change size."
+    }
+   ],
+   "explain": "Most cell parts are colourless; stains colour them so they show up."
+  },
+  {
+   "id": "science.cl.em",
+   "topic": "science.cells",
+   "kind": "fact",
+   "prompt": "Which kind of microscope can show ribosomes and the inside of mitochondria?",
+   "answer": "an electron microscope",
+   "distractors": [
+    "a light microscope",
+    "a magnifying glass",
+    "a telescope"
+   ],
+   "explain": "Electron microscopes have far higher magnification and resolution than light microscopes.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.cl.mag",
+   "topic": "science.cells",
+   "kind": "template",
+   "gen": "y8sMagnify",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.or.levels",
+   "topic": "science.organs",
+   "kind": "order",
+   "prompt": "Put these in order, from smallest to largest.",
+   "items": [
+    "cell",
+    "tissue",
+    "organ",
+    "organ system",
+    "organism"
+   ],
+   "labels": null,
+   "explain": "Cells form tissues, tissues form organs, organs work together in organ systems, and those make up the organism."
+  },
+  {
+   "id": "science.or.sperm",
+   "topic": "science.organs",
+   "kind": "mcq",
+   "prompt": "Why does a sperm cell have lots of mitochondria?",
+   "options": [
+    {
+     "text": "To release energy for swimming with its tail",
+     "correct": true
+    },
+    {
+     "text": "To make the egg grow",
+     "correct": false,
+     "feedback": "The mitochondria power the sperm itself."
+    },
+    {
+     "text": "To store food for the baby",
+     "correct": false,
+     "feedback": "That is the egg’s job, which is why eggs are large."
+    }
+   ],
+   "explain": "Specialised cells have features suited to their job: sperm need energy to swim."
+  },
+  {
+   "id": "science.or.rbc",
+   "topic": "science.organs",
+   "kind": "mcq",
+   "prompt": "Why do red blood cells have no nucleus?",
+   "options": [
+    {
+     "text": "To make more room for haemoglobin to carry oxygen",
+     "correct": true
+    },
+    {
+     "text": "So they can divide faster",
+     "correct": false,
+     "feedback": "Without a nucleus they cannot divide at all."
+    },
+    {
+     "text": "Because they are dead",
+     "correct": false,
+     "feedback": "They are living, specialised cells."
+    }
+   ],
+   "explain": "Their biconcave shape and lack of nucleus help them carry as much oxygen as possible."
+  },
+  {
+   "id": "science.or.enzyme",
+   "topic": "science.organs",
+   "kind": "mcq",
+   "prompt": "What does an enzyme do in digestion?",
+   "options": [
+    {
+     "text": "Speeds up the breakdown of large food molecules into small ones",
+     "correct": true
+    },
+    {
+     "text": "Absorbs food into the blood",
+     "correct": false,
+     "feedback": "Absorption happens through the small intestine wall."
+    },
+    {
+     "text": "Makes food bigger so it lasts longer",
+     "correct": false,
+     "feedback": "The opposite: digestion makes molecules small enough to absorb."
+    }
+   ],
+   "explain": "Enzymes are biological catalysts: they speed up reactions without being used up."
+  },
+  {
+   "id": "science.or.amylase",
+   "topic": "science.organs",
+   "kind": "fact",
+   "prompt": "Which enzyme, found in saliva, breaks starch into sugars?",
+   "answer": "amylase",
+   "distractors": [
+    "protease",
+    "lipase",
+    "haemoglobin"
+   ],
+   "explain": "Chew bread for a long time and it starts to taste sweet: amylase at work."
+  },
+  {
+   "id": "science.or.protease",
+   "topic": "science.organs",
+   "kind": "fact",
+   "prompt": "Which type of enzyme breaks proteins into amino acids?",
+   "answer": "protease",
+   "distractors": [
+    "amylase",
+    "lipase",
+    "bile"
+   ],
+   "explain": "Proteases work in the stomach (pepsin) and small intestine.",
+   "accept": [
+    "proteases",
+    "pepsin"
+   ]
+  },
+  {
+   "id": "science.or.lipase",
+   "topic": "science.organs",
+   "kind": "fact",
+   "prompt": "Which type of enzyme breaks fats into fatty acids and glycerol?",
+   "answer": "lipase",
+   "distractors": [
+    "amylase",
+    "protease",
+    "insulin"
+   ],
+   "explain": "Bile from the liver breaks fat into droplets so lipase can work faster.",
+   "accept": [
+    "lipases"
+   ]
+  },
+  {
+   "id": "science.or.villi",
+   "topic": "science.organs",
+   "kind": "mcq",
+   "prompt": "Why is the small intestine lined with millions of tiny villi?",
+   "options": [
+    {
+     "text": "They give a huge surface area for absorbing digested food",
+     "correct": true
+    },
+    {
+     "text": "They chew the food",
+     "correct": false,
+     "feedback": "Teeth do the chewing."
+    },
+    {
+     "text": "They make stomach acid",
+     "correct": false,
+     "feedback": "Acid is made in the stomach."
+    }
+   ],
+   "explain": "Villi have thin walls and a good blood supply, so small molecules diffuse into the blood quickly."
+  },
+  {
+   "id": "science.or.boil",
+   "topic": "science.organs",
+   "kind": "mcq",
+   "prompt": "Why does boiling stop an enzyme working?",
+   "options": [
+    {
+     "text": "The heat changes the shape of its active site, so it is denatured",
+     "correct": true
+    },
+    {
+     "text": "It kills the enzyme, because enzymes are alive",
+     "correct": false,
+     "feedback": "Enzymes are proteins, not living things."
+    },
+    {
+     "text": "It dissolves the enzyme",
+     "correct": false,
+     "feedback": "The enzyme is still there, but its shape is ruined."
+    }
+   ],
+   "explain": "Enzymes work by shape: the substrate fits the active site like a key in a lock. Too much heat and the lock is bent."
+  },
+  {
+   "id": "science.or.acid",
+   "topic": "science.organs",
+   "kind": "fact",
+   "prompt": "Why is there hydrochloric acid in the stomach?",
+   "answer": "it kills microbes and helps stomach enzymes work",
+   "distractors": [
+    "it digests fat",
+    "it absorbs water",
+    "it makes bile"
+   ],
+   "explain": "Stomach protease (pepsin) works best in acid conditions.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.rs.eq",
+   "topic": "science.respiration",
+   "kind": "fact",
+   "prompt": "Complete the word equation for aerobic respiration: glucose + oxygen → … + water (+ energy released)",
+   "answer": "carbon dioxide",
+   "distractors": [
+    "oxygen",
+    "starch",
+    "nitrogen"
+   ],
+   "explain": "glucose + oxygen → carbon dioxide + water. It happens in the mitochondria.",
+   "accept": [
+    "co2",
+    "CO₂"
+   ]
+  },
+  {
+   "id": "science.rs.diff",
+   "topic": "science.respiration",
+   "kind": "mcq",
+   "prompt": "What is the difference between breathing and respiration?",
+   "options": [
+    {
+     "text": "Breathing moves air in and out of the lungs; respiration is a chemical reaction in cells",
+     "correct": true
+    },
+    {
+     "text": "They are the same thing",
+     "correct": false,
+     "feedback": "A common mix-up: respiration happens in every cell, even in plants."
+    },
+    {
+     "text": "Respiration only happens in the lungs",
+     "correct": false,
+     "feedback": "It happens in every living cell."
+    }
+   ],
+   "explain": "Plants respire too, day and night, even though they don’t breathe."
+  },
+  {
+   "id": "science.rs.anaer",
+   "topic": "science.respiration",
+   "kind": "fact",
+   "prompt": "In muscles short of oxygen, glucose is turned into… (anaerobic respiration)",
+   "answer": "lactic acid",
+   "distractors": [
+    "carbon dioxide and water",
+    "ethanol",
+    "starch"
+   ],
+   "explain": "Lactic acid builds up during hard exercise; you pay back the “oxygen debt” by panting afterwards.",
+   "accept": [
+    "lactate"
+   ]
+  },
+  {
+   "id": "science.rs.yeast",
+   "topic": "science.respiration",
+   "kind": "fact",
+   "prompt": "When yeast respires anaerobically it makes ethanol and which gas, which makes bread rise?",
+   "answer": "carbon dioxide",
+   "distractors": [
+    "oxygen",
+    "hydrogen",
+    "nitrogen"
+   ],
+   "explain": "This is fermentation, used in baking and brewing.",
+   "accept": [
+    "co2",
+    "CO₂"
+   ]
+  },
+  {
+   "id": "science.rs.alveoli",
+   "topic": "science.respiration",
+   "kind": "mcq",
+   "prompt": "How are the alveoli in the lungs suited to gas exchange?",
+   "options": [
+    {
+     "text": "Huge surface area, walls one cell thick, and a rich blood supply",
+     "correct": true
+    },
+    {
+     "text": "Thick walls to stop them bursting",
+     "correct": false,
+     "feedback": "Thin walls give a short distance for diffusion."
+    },
+    {
+     "text": "They are filled with mucus to trap oxygen",
+     "correct": false,
+     "feedback": "Mucus is in the airways to trap dust and microbes."
+    }
+   ],
+   "explain": "Oxygen diffuses into the blood, and carbon dioxide out, across very thin walls."
+  },
+  {
+   "id": "science.rs.smoke",
+   "topic": "science.respiration",
+   "kind": "mcq",
+   "prompt": "Why do smokers often get breathless?",
+   "options": [
+    {
+     "text": "Tar and smoke damage the alveoli and cilia, and carbon monoxide reduces the oxygen blood can carry",
+     "correct": true
+    },
+    {
+     "text": "Smoke makes the lungs bigger",
+     "correct": false,
+     "feedback": "Smoking damages the lungs; it does not enlarge them usefully."
+    },
+    {
+     "text": "Nicotine is a source of oxygen",
+     "correct": false,
+     "feedback": "Nicotine is an addictive drug, not oxygen."
+    }
+   ],
+   "explain": "Carbon monoxide binds to haemoglobin more strongly than oxygen does."
+  },
+  {
+   "id": "science.rs.air",
+   "topic": "science.respiration",
+   "kind": "order",
+   "prompt": "Put the route of air into the body in order.",
+   "items": [
+    "nose or mouth",
+    "trachea",
+    "bronchus",
+    "bronchiole",
+    "alveolus"
+   ],
+   "labels": null,
+   "explain": "Air goes down the trachea (windpipe), into a bronchus, through ever smaller bronchioles, to the alveoli."
+  },
+  {
+   "id": "science.rs.mito",
+   "topic": "science.respiration",
+   "kind": "mcq",
+   "prompt": "Where in the cell does aerobic respiration take place?",
+   "options": [
+    {
+     "text": "Mitochondria",
+     "correct": true
+    },
+    {
+     "text": "Nucleus",
+     "correct": false,
+     "feedback": "The nucleus holds DNA."
+    },
+    {
+     "text": "Chloroplasts",
+     "correct": false,
+     "feedback": "Chloroplasts do photosynthesis."
+    }
+   ],
+   "explain": "Muscle cells have lots of mitochondria because they need lots of energy."
+  },
+  {
+   "id": "science.ps.eq",
+   "topic": "science.photosynthesis",
+   "kind": "fact",
+   "prompt": "Complete the word equation: carbon dioxide + water → glucose + … (using light energy)",
+   "answer": "oxygen",
+   "distractors": [
+    "carbon dioxide",
+    "starch",
+    "nitrogen"
+   ],
+   "explain": "Photosynthesis happens in chloroplasts, using light absorbed by chlorophyll."
+  },
+  {
+   "id": "science.ps.limit",
+   "topic": "science.photosynthesis",
+   "kind": "mcq",
+   "prompt": "Which of these does NOT limit the rate of photosynthesis?",
+   "options": [
+    {
+     "text": "The amount of oxygen in the air",
+     "correct": true
+    },
+    {
+     "text": "Light intensity",
+     "correct": false,
+     "feedback": "More light means faster photosynthesis, up to a point."
+    },
+    {
+     "text": "Carbon dioxide concentration",
+     "correct": false,
+     "feedback": "CO₂ is a raw material, so it can limit the rate."
+    },
+    {
+     "text": "Temperature",
+     "correct": false,
+     "feedback": "Enzymes control photosynthesis, so temperature matters."
+    }
+   ],
+   "explain": "Light, CO₂ and temperature are the limiting factors. Oxygen is a product."
+  },
+  {
+   "id": "science.ps.iodine",
+   "topic": "science.photosynthesis",
+   "kind": "mcq",
+   "prompt": "A leaf is tested with iodine and turns blue-black. What does that show?",
+   "options": [
+    {
+     "text": "Starch is present, so the leaf has been photosynthesising",
+     "correct": true
+    },
+    {
+     "text": "The leaf contains protein",
+     "correct": false,
+     "feedback": "Biuret tests for protein; iodine tests for starch."
+    },
+    {
+     "text": "The leaf is dead",
+     "correct": false,
+     "feedback": "It shows starch, made from the glucose of photosynthesis."
+    }
+   ],
+   "explain": "Plants store glucose as starch. Variegated leaves only go blue-black in the green parts."
+  },
+  {
+   "id": "science.ps.stomata",
+   "topic": "science.photosynthesis",
+   "kind": "mcq",
+   "prompt": "What are stomata?",
+   "options": [
+    {
+     "text": "Tiny holes, mostly under the leaf, that let gases in and out",
+     "correct": true
+    },
+    {
+     "text": "The roots’ water pipes",
+     "correct": false,
+     "feedback": "Those are xylem vessels."
+    },
+    {
+     "text": "Green parts of the cell",
+     "correct": false,
+     "feedback": "Those are chloroplasts."
+    }
+   ],
+   "explain": "Guard cells open and close the stomata; carbon dioxide enters and water vapour escapes."
+  },
+  {
+   "id": "science.ps.xylem",
+   "topic": "science.photosynthesis",
+   "kind": "fact",
+   "prompt": "Which tubes carry water up from the roots to the leaves?",
+   "answer": "xylem",
+   "distractors": [
+    "phloem",
+    "stomata",
+    "veins of chlorophyll"
+   ],
+   "explain": "Xylem carries water up; phloem carries dissolved sugars around the plant."
+  },
+  {
+   "id": "science.ps.roothair",
+   "topic": "science.photosynthesis",
+   "kind": "fact",
+   "prompt": "Root hair cells take in water by osmosis. What else do they absorb from the soil?",
+   "answer": "mineral ions",
+   "distractors": [
+    "glucose",
+    "oxygen only",
+    "starch"
+   ],
+   "explain": "Plants need minerals such as nitrates (for proteins) and magnesium (for chlorophyll).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ps.stigma",
+   "topic": "science.photosynthesis",
+   "kind": "mapfact",
+   "map": "flower",
+   "layer": "features",
+   "feature": "stigma",
+   "answer": "stigma",
+   "explain": "The sticky stigma catches pollen.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the stigma.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.ps.anther",
+   "topic": "science.photosynthesis",
+   "kind": "mapfact",
+   "map": "flower",
+   "layer": "features",
+   "feature": "anther",
+   "answer": "anther",
+   "explain": "The anther makes pollen, the male sex cell.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the anther.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.ps.ovary",
+   "topic": "science.photosynthesis",
+   "kind": "mapfact",
+   "map": "flower",
+   "layer": "features",
+   "feature": "ovary",
+   "answer": "ovary",
+   "explain": "The ovary contains ovules; after fertilisation it becomes the fruit.",
+   "choosePrompt": "Which part is highlighted?",
+   "locatePrompt": "Tap the ovary.",
+   "namePrompt": "Name the highlighted part."
+  },
+  {
+   "id": "science.ps.helmont",
+   "topic": "science.photosynthesis",
+   "kind": "mcq",
+   "prompt": "In the 1600s van Helmont grew a willow tree for five years. It gained 74 kg but the soil lost only a few grams. Where did most of the tree’s mass come from?",
+   "options": [
+    {
+     "text": "Carbon dioxide from the air (and water)",
+     "correct": true
+    },
+    {
+     "text": "The soil",
+     "correct": false,
+     "feedback": "The soil lost almost nothing: that was the surprise."
+    },
+    {
+     "text": "Sunlight",
+     "correct": false,
+     "feedback": "Light gives energy, not mass."
+    }
+   ],
+   "explain": "Van Helmont thought it was water. We now know the carbon comes from CO₂ in the air."
+  },
+  {
+   "id": "science.ec.arrow",
+   "topic": "science.ecosystems",
+   "kind": "mcq",
+   "prompt": "In a food chain, what do the arrows show?",
+   "options": [
+    {
+     "text": "The direction energy flows: from the eaten to the eater",
+     "correct": true
+    },
+    {
+     "text": "Who eats whom, pointing at the food",
+     "correct": false,
+     "feedback": "The arrow points TO the animal doing the eating."
+    },
+    {
+     "text": "Which animal is bigger",
+     "correct": false,
+     "feedback": "Size does not matter here."
+    }
+   ],
+   "explain": "grass → rabbit → fox: energy passes from grass to rabbit to fox."
+  },
+  {
+   "id": "science.ec.producer",
+   "topic": "science.ecosystems",
+   "kind": "fact",
+   "prompt": "What is the name for an organism that makes its own food, at the start of a food chain?",
+   "answer": "producer",
+   "distractors": [
+    "consumer",
+    "decomposer",
+    "predator"
+   ],
+   "explain": "Producers (plants and algae) photosynthesise.",
+   "accept": [
+    "a producer"
+   ]
+  },
+  {
+   "id": "science.ec.loss",
+   "topic": "science.ecosystems",
+   "kind": "mcq",
+   "prompt": "Why are food chains rarely longer than four or five steps?",
+   "options": [
+    {
+     "text": "Energy is lost at each step, through movement, heat and waste",
+     "correct": true
+    },
+    {
+     "text": "Predators get bored",
+     "correct": false,
+     "feedback": "The reason is energy."
+    },
+    {
+     "text": "There aren’t enough species",
+     "correct": false,
+     "feedback": "There are millions of species; energy is the limit."
+    }
+   ],
+   "explain": "Only about 10% of the energy passes to the next level, so there is little left for top predators."
+  },
+  {
+   "id": "science.ec.decomp",
+   "topic": "science.ecosystems",
+   "kind": "fact",
+   "prompt": "Which organisms break down dead material and recycle nutrients into the soil?",
+   "answer": "decomposers",
+   "distractors": [
+    "producers",
+    "herbivores",
+    "pollinators"
+   ],
+   "explain": "Bacteria and fungi are decomposers.",
+   "accept": [
+    "decomposer",
+    "bacteria and fungi"
+   ]
+  },
+  {
+   "id": "science.ec.bees",
+   "topic": "science.ecosystems",
+   "kind": "mcq",
+   "prompt": "Why would a fall in bee numbers worry farmers?",
+   "options": [
+    {
+     "text": "Many crops need insects to pollinate them",
+     "correct": true
+    },
+    {
+     "text": "Bees eat crop pests",
+     "correct": false,
+     "feedback": "Bees mainly matter as pollinators."
+    },
+    {
+     "text": "Bees make the soil fertile",
+     "correct": false,
+     "feedback": "Worms and decomposers do that."
+    }
+   ],
+   "explain": "Without pollination, many fruits and seeds never form."
+  },
+  {
+   "id": "science.ec.bioacc",
+   "topic": "science.ecosystems",
+   "kind": "mcq",
+   "prompt": "A pesticide sprayed on plants ends up most concentrated in birds of prey. Why?",
+   "options": [
+    {
+     "text": "It builds up at each step because animals eat many organisms below them",
+     "correct": true
+    },
+    {
+     "text": "Birds of prey eat the plants directly",
+     "correct": false,
+     "feedback": "They are at the top of the chain."
+    },
+    {
+     "text": "It is made inside the birds",
+     "correct": false,
+     "feedback": "It comes from the spray."
+    }
+   ],
+   "explain": "This is bioaccumulation; DDT harmed eagles and falcons this way."
+  },
+  {
+   "id": "science.ec.web",
+   "topic": "science.ecosystems",
+   "kind": "mcq",
+   "prompt": "In a pond, fish eat water fleas, and water fleas eat algae. If the fish all died, what would most likely happen first?",
+   "options": [
+    {
+     "text": "Water flea numbers would rise, and algae would fall",
+     "correct": true
+    },
+    {
+     "text": "Algae would increase",
+     "correct": false,
+     "feedback": "More water fleas would eat more algae."
+    },
+    {
+     "text": "Nothing would change",
+     "correct": false,
+     "feedback": "Every link affects the others."
+    }
+   ],
+   "explain": "With no predator, the fleas multiply and eat more algae."
+  },
+  {
+   "id": "science.ec.niche",
+   "topic": "science.ecosystems",
+   "kind": "fact",
+   "prompt": "Animals of the same species competing for food, mates and territory is called…",
+   "answer": "competition",
+   "distractors": [
+    "predation",
+    "pollination",
+    "photosynthesis"
+   ],
+   "explain": "Organisms compete within and between species; plants compete for light, water and minerals.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.in.dna",
+   "topic": "science.inheritance",
+   "kind": "order",
+   "prompt": "Put these in order from largest to smallest.",
+   "items": [
+    "nucleus",
+    "chromosome",
+    "gene",
+    "DNA base"
+   ],
+   "labels": null,
+   "explain": "The nucleus holds chromosomes; each chromosome is a long DNA molecule containing many genes; genes are made of sequences of bases."
+  },
+  {
+   "id": "science.in.number",
+   "topic": "science.inheritance",
+   "kind": "fact",
+   "prompt": "How many chromosomes are there in a normal human body cell?",
+   "answer": "46",
+   "distractors": [
+    "23",
+    "48",
+    "92"
+   ],
+   "explain": "23 pairs: one of each pair from each parent. Sperm and eggs have 23."
+  },
+  {
+   "id": "science.in.helix",
+   "topic": "science.inheritance",
+   "kind": "fact",
+   "prompt": "Who used Rosalind Franklin’s X-ray images to build the double helix model of DNA in 1953?",
+   "answer": "Watson and Crick",
+   "distractors": [
+    "Darwin and Wallace",
+    "Mendel and Pasteur",
+    "Newton and Hooke"
+   ],
+   "explain": "Franklin’s “Photo 51” was vital evidence; Maurice Wilkins also worked on it.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.in.var",
+   "topic": "science.inheritance",
+   "kind": "mcq",
+   "prompt": "Which of these is caused ONLY by the environment?",
+   "options": [
+    {
+     "text": "A scar",
+     "correct": true
+    },
+    {
+     "text": "Natural eye colour",
+     "correct": false,
+     "feedback": "Eye colour is inherited."
+    },
+    {
+     "text": "Height",
+     "correct": false,
+     "feedback": "Height depends on genes AND environment (such as diet)."
+    }
+   ],
+   "explain": "Scars, language and haircuts are environmental. Many features, like height and weight, depend on both."
+  },
+  {
+   "id": "science.in.ns",
+   "topic": "science.inheritance",
+   "kind": "mcq",
+   "prompt": "In industrial Britain, dark peppered moths became more common than pale ones. Why?",
+   "options": [
+    {
+     "text": "On soot-covered trees, dark moths were better hidden from birds, so more survived to breed",
+     "correct": true
+    },
+    {
+     "text": "The moths turned dark from the soot",
+     "correct": false,
+     "feedback": "Individuals cannot change their genes; the dark ones survived more often."
+    },
+    {
+     "text": "Pale moths moved away",
+     "correct": false,
+     "feedback": "They were eaten more often."
+    }
+   ],
+   "explain": "Natural selection: variation, a survival advantage, and passing the useful gene on."
+  },
+  {
+   "id": "science.in.darwin",
+   "topic": "science.inheritance",
+   "kind": "fact",
+   "prompt": "Which naturalist published On the Origin of Species in 1859?",
+   "answer": "Charles Darwin",
+   "distractors": [
+    "Gregor Mendel",
+    "Isaac Newton",
+    "Aristotle"
+   ],
+   "explain": "Darwin’s ideas were shaped by his voyage on HMS Beagle, including the Galápagos Islands.",
+   "accept": [
+    "darwin"
+   ]
+  },
+  {
+   "id": "science.in.resist",
+   "topic": "science.inheritance",
+   "kind": "mcq",
+   "prompt": "Why is it important to finish a course of antibiotics?",
+   "options": [
+    {
+     "text": "So no partly resistant bacteria survive to multiply",
+     "correct": true
+    },
+    {
+     "text": "To kill viruses as well",
+     "correct": false,
+     "feedback": "Antibiotics don’t work on viruses."
+    },
+    {
+     "text": "Because the tablets are expensive",
+     "correct": false,
+     "feedback": "The reason is resistance."
+    }
+   ],
+   "explain": "Resistant bacteria are natural selection happening fast: a big problem for modern medicine."
+  },
+  {
+   "id": "science.in.extinct",
+   "topic": "science.inheritance",
+   "kind": "fact",
+   "prompt": "Which word means a species has no living members left?",
+   "answer": "extinct",
+   "distractors": [
+    "endangered",
+    "evolved",
+    "adapted"
+   ],
+   "explain": "The dodo has been extinct since the late 1600s.",
+   "accept": [
+    "extinction"
+   ]
+  },
+  {
+   "id": "science.in.fossil",
+   "topic": "science.inheritance",
+   "kind": "mcq",
+   "prompt": "How do fossils support the theory of evolution?",
+   "options": [
+    {
+     "text": "Rock layers show simpler forms in older rock, changing gradually over time",
+     "correct": true
+    },
+    {
+     "text": "Fossils show animals never change",
+     "correct": false,
+     "feedback": "They show change over very long times."
+    },
+    {
+     "text": "Every fossil is of a species alive today",
+     "correct": false,
+     "feedback": "Most fossil species are extinct."
+    }
+   ],
+   "explain": "The fossil record shows how organisms have changed over millions of years."
+  },
+  {
+   "id": "science.hd.virus",
+   "topic": "science.health",
+   "kind": "mcq",
+   "prompt": "Why don’t antibiotics cure a cold?",
+   "options": [
+    {
+     "text": "Colds are caused by viruses, and antibiotics only kill bacteria",
+     "correct": true
+    },
+    {
+     "text": "Colds are too mild",
+     "correct": false,
+     "feedback": "It is about the type of microbe."
+    },
+    {
+     "text": "Colds are caused by fungi",
+     "correct": false,
+     "feedback": "Colds are viruses."
+    }
+   ],
+   "explain": "Viruses live inside our own cells, so antibiotics can’t reach them."
+  },
+  {
+   "id": "science.hd.vaccine",
+   "topic": "science.health",
+   "kind": "mcq",
+   "prompt": "How does a vaccine protect you?",
+   "options": [
+    {
+     "text": "It contains a harmless form of the microbe, so white blood cells learn to make the right antibodies",
+     "correct": true
+    },
+    {
+     "text": "It kills every microbe in your body",
+     "correct": false,
+     "feedback": "It trains the immune system for one particular disease."
+    },
+    {
+     "text": "It is an antibiotic",
+     "correct": false,
+     "feedback": "Vaccines prevent disease; they are not a cure."
+    }
+   ],
+   "explain": "Memory cells mean that next time, antibodies are made so fast you don’t fall ill."
+  },
+  {
+   "id": "science.hd.jenner",
+   "topic": "science.health",
+   "kind": "fact",
+   "prompt": "Who developed the first vaccine, against smallpox, in 1796?",
+   "answer": "Edward Jenner",
+   "distractors": [
+    "Louis Pasteur",
+    "Alexander Fleming",
+    "Florence Nightingale"
+   ],
+   "explain": "He used cowpox; “vaccine” comes from vacca, Latin for cow.",
+   "accept": [
+    "jenner"
+   ]
+  },
+  {
+   "id": "science.hd.fleming",
+   "topic": "science.health",
+   "kind": "fact",
+   "prompt": "Who discovered penicillin, the first antibiotic, in 1928?",
+   "answer": "Alexander Fleming",
+   "distractors": [
+    "Edward Jenner",
+    "Marie Curie",
+    "Joseph Lister"
+   ],
+   "explain": "He noticed mould killing bacteria on a dish he had left out.",
+   "accept": [
+    "fleming"
+   ]
+  },
+  {
+   "id": "science.hd.hippocrates",
+   "topic": "science.health",
+   "kind": "fact",
+   "prompt": "Which ancient Greek doctor, “the father of medicine”, taught that illness has natural causes, not punishment by the gods?",
+   "answer": "Hippocrates",
+   "distractors": [
+    "Archimedes",
+    "Pythagoras",
+    "Homer"
+   ],
+   "explain": "Doctors once swore the Hippocratic Oath, promising to do no harm."
+  },
+  {
+   "id": "science.hd.defence",
+   "topic": "science.health",
+   "kind": "mcq",
+   "prompt": "Which is part of the body’s FIRST line of defence against microbes?",
+   "options": [
+    {
+     "text": "Skin and stomach acid",
+     "correct": true
+    },
+    {
+     "text": "Antibodies",
+     "correct": false,
+     "feedback": "Antibodies come later, from white blood cells."
+    },
+    {
+     "text": "Vaccines",
+     "correct": false,
+     "feedback": "Vaccines are medicine, not a natural barrier."
+    }
+   ],
+   "explain": "Skin, mucus, cilia and stomach acid stop most microbes getting in at all."
+  },
+  {
+   "id": "science.hd.diet",
+   "topic": "science.health",
+   "kind": "mcq",
+   "prompt": "A diet lacking vitamin C causes which disease, once common among sailors?",
+   "options": [
+    {
+     "text": "Scurvy",
+     "correct": true
+    },
+    {
+     "text": "Rickets",
+     "correct": false,
+     "feedback": "Rickets is caused by too little vitamin D or calcium."
+    },
+    {
+     "text": "Malaria",
+     "correct": false,
+     "feedback": "Malaria is caused by a parasite spread by mosquitoes."
+    }
+   ],
+   "explain": "Sailors ate citrus fruit (limes) to prevent scurvy."
+  },
+  {
+   "id": "science.hd.drug",
+   "topic": "science.health",
+   "kind": "fact",
+   "prompt": "Which drug in cigarettes is addictive?",
+   "answer": "nicotine",
+   "distractors": [
+    "tar",
+    "carbon monoxide",
+    "caffeine"
+   ],
+   "explain": "Tar causes cancer; carbon monoxide reduces oxygen carried in the blood."
+  },
+  {
+   "id": "science.pt.solid",
+   "topic": "science.particles",
+   "kind": "mapfact",
+   "map": "particles",
+   "layer": "features",
+   "feature": "solid",
+   "answer": "solid",
+   "explain": "Particles packed in a regular pattern, vibrating in fixed positions.",
+   "choosePrompt": "Which state is highlighted?",
+   "locatePrompt": "Tap the solid.",
+   "namePrompt": "Name the state highlighted."
+  },
+  {
+   "id": "science.pt.gas",
+   "topic": "science.particles",
+   "kind": "mapfact",
+   "map": "particles",
+   "layer": "features",
+   "feature": "gas",
+   "answer": "gas",
+   "explain": "Particles far apart, moving fast in all directions.",
+   "choosePrompt": "Which state is highlighted?",
+   "locatePrompt": "Tap the gas.",
+   "namePrompt": "Name the state highlighted."
+  },
+  {
+   "id": "science.pt.democritus",
+   "topic": "science.particles",
+   "kind": "fact",
+   "prompt": "Which Greek thinker first suggested that matter is made of tiny pieces that cannot be cut, called atomos?",
+   "answer": "Democritus",
+   "distractors": [
+    "Aristotle",
+    "Plato",
+    "Homer"
+   ],
+   "explain": "Aristotle disagreed, preferring four elements (earth, water, air, fire), and his idea won for 2000 years."
+  },
+  {
+   "id": "science.pt.diffusion",
+   "topic": "science.particles",
+   "kind": "mcq",
+   "prompt": "Why does diffusion happen faster in a gas than in a liquid?",
+   "options": [
+    {
+     "text": "Gas particles move faster and have more space between them",
+     "correct": true
+    },
+    {
+     "text": "Gas particles are bigger",
+     "correct": false,
+     "feedback": "The particles are the same; their spacing and speed differ."
+    },
+    {
+     "text": "Liquids don’t have particles",
+     "correct": false,
+     "feedback": "Everything is made of particles."
+    }
+   ],
+   "explain": "Diffusion is the net movement of particles from high to low concentration."
+  },
+  {
+   "id": "science.pt.melt",
+   "topic": "science.particles",
+   "kind": "mcq",
+   "prompt": "When ice melts, what happens to its particles?",
+   "options": [
+    {
+     "text": "They gain energy and can move past each other, but stay close together",
+     "correct": true
+    },
+    {
+     "text": "They get bigger",
+     "correct": false,
+     "feedback": "Particles don’t change size; their arrangement changes."
+    },
+    {
+     "text": "They become water molecules",
+     "correct": false,
+     "feedback": "They were water molecules all along."
+    }
+   ],
+   "explain": "A change of state is a physical change: the substance is still water."
+  },
+  {
+   "id": "science.pt.temp",
+   "topic": "science.particles",
+   "kind": "mcq",
+   "prompt": "While pure water is boiling, what happens to its temperature?",
+   "options": [
+    {
+     "text": "It stays at 100 °C until all the water has boiled",
+     "correct": true
+    },
+    {
+     "text": "It keeps rising",
+     "correct": false,
+     "feedback": "The energy goes into separating the particles, not raising the temperature."
+    },
+    {
+     "text": "It falls",
+     "correct": false,
+     "feedback": "It stays steady."
+    }
+   ],
+   "explain": "This flat part of a heating curve is why pure substances have sharp boiling points."
+  },
+  {
+   "id": "science.pt.icarus",
+   "topic": "science.particles",
+   "kind": "mcq",
+   "prompt": "In the myth, Icarus flew too close to the Sun and the wax holding his wings melted. Which change of state is that?",
+   "options": [
+    {
+     "text": "Solid to liquid",
+     "correct": true
+    },
+    {
+     "text": "Liquid to gas",
+     "correct": false,
+     "feedback": "That is evaporating or boiling."
+    },
+    {
+     "text": "Gas to solid",
+     "correct": false,
+     "feedback": "That is deposition."
+    }
+   ],
+   "explain": "Melting: the wax particles gained enough energy to slide past each other. (In reality, air gets colder as you climb!)"
+  },
+  {
+   "id": "science.pt.sublime",
+   "topic": "science.particles",
+   "kind": "fact",
+   "prompt": "What is it called when a solid turns straight into a gas, like dry ice?",
+   "answer": "sublimation",
+   "distractors": [
+    "evaporation",
+    "condensation",
+    "melting"
+   ],
+   "explain": "Solid carbon dioxide (dry ice) sublimes at −78 °C.",
+   "accept": [
+    "subliming"
+   ]
+  },
+  {
+   "id": "science.pt.gaspress",
+   "topic": "science.particles",
+   "kind": "fact",
+   "prompt": "What causes the pressure of a gas inside a balloon?",
+   "answer": "particles hitting the walls",
+   "distractors": [
+    "particles getting hotter",
+    "the rubber pushing out",
+    "particles sticking together"
+   ],
+   "explain": "Heat it and the particles move faster, hitting harder and more often, so pressure rises.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.pt.density",
+   "topic": "science.particles",
+   "kind": "template",
+   "gen": "y8sDensity",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.at.which",
+   "topic": "science.atoms",
+   "kind": "mcq",
+   "prompt": "Which of these is a compound?",
+   "options": [
+    {
+     "text": "Water (H₂O)",
+     "correct": true
+    },
+    {
+     "text": "Oxygen (O₂)",
+     "correct": false,
+     "feedback": "Only one type of atom: an element."
+    },
+    {
+     "text": "Air",
+     "correct": false,
+     "feedback": "Air is a mixture of gases, not chemically joined."
+    },
+    {
+     "text": "Gold (Au)",
+     "correct": false,
+     "feedback": "Gold is an element."
+    }
+   ],
+   "explain": "A compound contains two or more different elements chemically bonded."
+  },
+  {
+   "id": "science.at.mixture",
+   "topic": "science.atoms",
+   "kind": "mcq",
+   "prompt": "How is a mixture different from a compound?",
+   "options": [
+    {
+     "text": "A mixture’s parts are not chemically joined and can be separated physically",
+     "correct": true
+    },
+    {
+     "text": "A mixture always has a fixed recipe",
+     "correct": false,
+     "feedback": "Compounds have fixed proportions; mixtures can vary."
+    },
+    {
+     "text": "A mixture contains only one element",
+     "correct": false,
+     "feedback": "That would be an element."
+    }
+   ],
+   "explain": "Iron and sulfur mixed: a magnet can separate them. Heated together: iron sulfide, a new compound."
+  },
+  {
+   "id": "science.at.distil",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "Which separation method gets pure water from sea water, by boiling and condensing?",
+   "answer": "distillation",
+   "distractors": [
+    "filtration",
+    "chromatography",
+    "magnetism"
+   ],
+   "explain": "The water evaporates and condenses in a cooled tube; the salt stays behind.",
+   "accept": [
+    "distilling",
+    "simple distillation"
+   ]
+  },
+  {
+   "id": "science.at.chrom",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "Which method separates the different coloured dyes in an ink?",
+   "answer": "chromatography",
+   "distractors": [
+    "filtration",
+    "distillation",
+    "sieving"
+   ],
+   "explain": "The dyes travel different distances up the paper.",
+   "accept": [
+    "paper chromatography"
+   ]
+  },
+  {
+   "id": "science.at.filter",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "Which method separates sand from water?",
+   "answer": "filtration",
+   "distractors": [
+    "distillation",
+    "chromatography",
+    "evaporation"
+   ],
+   "explain": "Insoluble sand stays on the filter paper.",
+   "accept": [
+    "filtering"
+   ]
+  },
+  {
+   "id": "science.at.salt",
+   "topic": "science.atoms",
+   "kind": "order",
+   "prompt": "Put the steps for getting salt from rock salt in order.",
+   "items": [
+    "crush the rock salt",
+    "dissolve it in warm water",
+    "filter out the sand",
+    "evaporate the water"
+   ],
+   "labels": null,
+   "explain": "Salt dissolves; sand doesn’t. Filter, then evaporate the water from the solution to leave crystals."
+  },
+  {
+   "id": "science.at.formula",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "How many atoms are in one molecule of carbon dioxide, CO₂?",
+   "answer": "3",
+   "distractors": [
+    "2",
+    "1",
+    "4"
+   ],
+   "explain": "One carbon and two oxygens."
+  },
+  {
+   "id": "science.at.symbol",
+   "topic": "science.atoms",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for sodium?",
+   "answer": "Na",
+   "distractors": [
+    "S",
+    "So",
+    "Sd"
+   ],
+   "explain": "Na comes from natrium, its Latin name. Iron is Fe (ferrum), lead Pb (plumbum).",
+   "accept": [
+    "na"
+   ]
+  },
+  {
+   "id": "science.at.pure",
+   "topic": "science.atoms",
+   "kind": "mcq",
+   "prompt": "How can you tell if water is pure?",
+   "options": [
+    {
+     "text": "It boils at exactly 100 °C and freezes at exactly 0 °C",
+     "correct": true
+    },
+    {
+     "text": "It looks clear",
+     "correct": false,
+     "feedback": "Salt water looks clear too."
+    },
+    {
+     "text": "It tastes of nothing",
+     "correct": false,
+     "feedback": "Never taste-test in a lab!"
+    }
+   ],
+   "explain": "Impurities change the melting and boiling points."
+  },
+  {
+   "id": "science.pd.mendeleev",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "Which Russian chemist published a periodic table in 1869, leaving gaps for undiscovered elements?",
+   "answer": "Dmitri Mendeleev",
+   "distractors": [
+    "John Dalton",
+    "Marie Curie",
+    "Antoine Lavoisier"
+   ],
+   "explain": "He predicted the properties of gallium and germanium before they were found.",
+   "accept": [
+    "mendeleev"
+   ]
+  },
+  {
+   "id": "science.pd.group",
+   "topic": "science.periodic",
+   "kind": "mcq",
+   "prompt": "What do elements in the same group (column) have in common?",
+   "options": [
+    {
+     "text": "Similar chemical properties",
+     "correct": true
+    },
+    {
+     "text": "The same mass",
+     "correct": false,
+     "feedback": "Mass increases down a group."
+    },
+    {
+     "text": "They are all gases",
+     "correct": false,
+     "feedback": "Most groups contain solids."
+    }
+   ],
+   "explain": "Elements in a group have the same number of electrons in their outer shell."
+  },
+  {
+   "id": "science.pd.g1",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "Group 1 metals, such as sodium and potassium, are called the…",
+   "answer": "alkali metals",
+   "distractors": [
+    "noble gases",
+    "halogens",
+    "transition metals"
+   ],
+   "explain": "They react with water to make an alkaline solution and hydrogen gas.",
+   "accept": [
+    "alkali metal"
+   ]
+  },
+  {
+   "id": "science.pd.g1trend",
+   "topic": "science.periodic",
+   "kind": "mcq",
+   "prompt": "How does reactivity change going DOWN Group 1?",
+   "options": [
+    {
+     "text": "It increases: potassium reacts more violently than sodium",
+     "correct": true
+    },
+    {
+     "text": "It decreases",
+     "correct": false,
+     "feedback": "Lithium fizzes; caesium explodes."
+    },
+    {
+     "text": "It stays the same",
+     "correct": false,
+     "feedback": "There is a clear trend."
+    }
+   ],
+   "explain": "The outer electron is further from the nucleus, so it is lost more easily."
+  },
+  {
+   "id": "science.pd.g7",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "Group 7, including chlorine and iodine, are called the…",
+   "answer": "halogens",
+   "distractors": [
+    "noble gases",
+    "alkali metals",
+    "metalloids"
+   ],
+   "explain": "Halogens are reactive non-metals; reactivity DEcreases down the group.",
+   "accept": [
+    "halogen"
+   ]
+  },
+  {
+   "id": "science.pd.g0",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "Group 0, including helium and neon, are called the…",
+   "answer": "noble gases",
+   "distractors": [
+    "halogens",
+    "alkali metals",
+    "rare earths"
+   ],
+   "explain": "They are very unreactive because their outer shells are full.",
+   "accept": [
+    "noble gas",
+    "inert gases"
+   ]
+  },
+  {
+   "id": "science.pd.metal",
+   "topic": "science.periodic",
+   "kind": "mcq",
+   "prompt": "Which property belongs to most NON-metals?",
+   "options": [
+    {
+     "text": "Poor conductors of heat and electricity",
+     "correct": true
+    },
+    {
+     "text": "Shiny",
+     "correct": false,
+     "feedback": "Most metals are shiny."
+    },
+    {
+     "text": "Malleable (can be hammered into shape)",
+     "correct": false,
+     "feedback": "That is a metal property."
+    }
+   ],
+   "explain": "Graphite (a form of carbon) is a rare non-metal that conducts electricity."
+  },
+  {
+   "id": "science.pd.where",
+   "topic": "science.periodic",
+   "kind": "mcq",
+   "prompt": "Where are the metals in the periodic table?",
+   "options": [
+    {
+     "text": "On the left and in the middle",
+     "correct": true
+    },
+    {
+     "text": "Only on the right",
+     "correct": false,
+     "feedback": "Non-metals are mostly top right."
+    },
+    {
+     "text": "Only in the bottom row",
+     "correct": false,
+     "feedback": "Most elements are metals."
+    }
+   ],
+   "explain": "A zig-zag staircase line separates metals from non-metals."
+  },
+  {
+   "id": "science.rx.chem",
+   "topic": "science.reactions",
+   "kind": "mcq",
+   "prompt": "Which is a CHEMICAL change?",
+   "options": [
+    {
+     "text": "Burning magnesium",
+     "correct": true
+    },
+    {
+     "text": "Melting chocolate",
+     "correct": false,
+     "feedback": "That is a physical change of state."
+    },
+    {
+     "text": "Dissolving sugar",
+     "correct": false,
+     "feedback": "Dissolving is physical: evaporate the water and the sugar is back."
+    }
+   ],
+   "explain": "A chemical change makes a new substance and is usually hard to reverse."
+  },
+  {
+   "id": "science.rx.combust",
+   "topic": "science.reactions",
+   "kind": "fact",
+   "prompt": "When a fuel such as methane burns completely in oxygen, it makes water and…",
+   "answer": "carbon dioxide",
+   "distractors": [
+    "carbon monoxide",
+    "hydrogen",
+    "oxygen"
+   ],
+   "explain": "Combustion is a reaction with oxygen that releases energy. Without enough oxygen, toxic carbon monoxide and soot form.",
+   "accept": [
+    "co2",
+    "CO₂"
+   ]
+  },
+  {
+   "id": "science.rx.triangle",
+   "topic": "science.reactions",
+   "kind": "mcq",
+   "prompt": "The fire triangle shows a fire needs fuel, oxygen and…",
+   "options": [
+    {
+     "text": "Heat",
+     "correct": true
+    },
+    {
+     "text": "Water",
+     "correct": false,
+     "feedback": "Water puts fires out by removing heat."
+    },
+    {
+     "text": "Carbon dioxide",
+     "correct": false,
+     "feedback": "CO₂ extinguishers smother fires."
+    }
+   ],
+   "explain": "Remove any side of the triangle and the fire goes out."
+  },
+  {
+   "id": "science.rx.mass",
+   "topic": "science.reactions",
+   "kind": "mcq",
+   "prompt": "Magnesium ribbon is burned in a crucible. Its mass INCREASES. Why?",
+   "options": [
+    {
+     "text": "It has combined with oxygen from the air to make magnesium oxide",
+     "correct": true
+    },
+    {
+     "text": "Mass was created",
+     "correct": false,
+     "feedback": "Mass is never created; the extra came from the air."
+    },
+    {
+     "text": "The crucible got heavier",
+     "correct": false,
+     "feedback": "You weigh the crucible before and after."
+    }
+   ],
+   "explain": "Oxidation adds oxygen, so the product is heavier than the metal."
+  },
+  {
+   "id": "science.rx.exo",
+   "topic": "science.reactions",
+   "kind": "mcq",
+   "prompt": "A reaction that gives out heat, like combustion, is called…",
+   "options": [
+    {
+     "text": "exothermic",
+     "correct": true
+    },
+    {
+     "text": "endothermic",
+     "correct": false,
+     "feedback": "Endothermic reactions take in heat and feel cold."
+    },
+    {
+     "text": "neutral",
+     "correct": false,
+     "feedback": "That is not a type of energy change."
+    }
+   ],
+   "explain": "Hand warmers are exothermic; sports cold packs are endothermic."
+  },
+  {
+   "id": "science.rx.decomp",
+   "topic": "science.reactions",
+   "kind": "fact",
+   "prompt": "Heating copper carbonate breaks it into copper oxide and carbon dioxide. What type of reaction is this?",
+   "answer": "thermal decomposition",
+   "distractors": [
+    "combustion",
+    "neutralisation",
+    "displacement"
+   ],
+   "explain": "Thermal decomposition: one substance broken down by heat into two or more.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.rx.test",
+   "topic": "science.reactions",
+   "kind": "fact",
+   "prompt": "Which gas gives a squeaky pop with a lighted splint?",
+   "answer": "hydrogen",
+   "distractors": [
+    "oxygen",
+    "carbon dioxide",
+    "chlorine"
+   ],
+   "explain": "Oxygen relights a glowing splint; carbon dioxide turns limewater milky."
+  },
+  {
+   "id": "science.rx.balance",
+   "topic": "science.reactions",
+   "kind": "template",
+   "gen": "y8sBalance",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.ac.ph7",
+   "topic": "science.acids",
+   "kind": "fact",
+   "prompt": "What is the pH of a neutral solution, such as pure water?",
+   "answer": "7",
+   "distractors": [
+    "0",
+    "14",
+    "1"
+   ],
+   "explain": "Below 7: acid. Above 7: alkali."
+  },
+  {
+   "id": "science.ac.neut",
+   "topic": "science.acids",
+   "kind": "mcq",
+   "prompt": "What does an acid react with an alkali to make?",
+   "options": [
+    {
+     "text": "A salt and water",
+     "correct": true
+    },
+    {
+     "text": "Hydrogen and oxygen",
+     "correct": false,
+     "feedback": "That is not neutralisation."
+    },
+    {
+     "text": "Carbon dioxide only",
+     "correct": false,
+     "feedback": "Carbonates make CO₂ with acids."
+    }
+   ],
+   "explain": "Neutralisation: acid + alkali → salt + water."
+  },
+  {
+   "id": "science.ac.salt",
+   "topic": "science.acids",
+   "kind": "fact",
+   "prompt": "Hydrochloric acid + sodium hydroxide → water + which salt?",
+   "answer": "sodium chloride",
+   "distractors": [
+    "sodium sulfate",
+    "sodium nitrate",
+    "chlorine"
+   ],
+   "explain": "Hydrochloric acid makes chlorides, sulfuric acid makes sulfates, nitric acid makes nitrates.",
+   "accept": [
+    "nacl",
+    "salt"
+   ]
+  },
+  {
+   "id": "science.ac.metal",
+   "topic": "science.acids",
+   "kind": "mcq",
+   "prompt": "What gas is made when magnesium reacts with an acid?",
+   "options": [
+    {
+     "text": "Hydrogen",
+     "correct": true
+    },
+    {
+     "text": "Oxygen",
+     "correct": false,
+     "feedback": "Test: a squeaky pop means hydrogen."
+    },
+    {
+     "text": "Carbon dioxide",
+     "correct": false,
+     "feedback": "That comes from carbonates."
+    }
+   ],
+   "explain": "metal + acid → salt + hydrogen."
+  },
+  {
+   "id": "science.ac.series",
+   "topic": "science.acids",
+   "kind": "order",
+   "prompt": "Put these metals in order of reactivity, most reactive first.",
+   "items": [
+    "potassium",
+    "magnesium",
+    "iron",
+    "copper",
+    "gold"
+   ],
+   "labels": null,
+   "explain": "Potassium reacts violently with water; gold doesn’t even react with most acids."
+  },
+  {
+   "id": "science.ac.gold",
+   "topic": "science.acids",
+   "kind": "mcq",
+   "prompt": "Why is gold found as a pure metal in the ground, while iron must be extracted from ore?",
+   "options": [
+    {
+     "text": "Gold is so unreactive it doesn’t combine with other elements",
+     "correct": true
+    },
+    {
+     "text": "Gold is heavier",
+     "correct": false,
+     "feedback": "It is about reactivity, not mass."
+    },
+    {
+     "text": "Iron is rarer",
+     "correct": false,
+     "feedback": "Iron is far more common than gold."
+    }
+   ],
+   "explain": "The least reactive metals (gold, platinum) are found native; even Hephaestus would need a furnace for iron."
+  },
+  {
+   "id": "science.ac.displace",
+   "topic": "science.acids",
+   "kind": "mcq",
+   "prompt": "An iron nail is dipped in blue copper sulfate solution. It becomes coated in copper. Why?",
+   "options": [
+    {
+     "text": "Iron is more reactive than copper, so it displaces copper from the compound",
+     "correct": true
+    },
+    {
+     "text": "Copper is more reactive",
+     "correct": false,
+     "feedback": "Then nothing would happen."
+    },
+    {
+     "text": "The nail is painted",
+     "correct": false,
+     "feedback": "It is a displacement reaction."
+    }
+   ],
+   "explain": "A more reactive metal pushes a less reactive one out of its compound."
+  },
+  {
+   "id": "science.ac.indig",
+   "topic": "science.acids",
+   "kind": "fact",
+   "prompt": "Indigestion tablets neutralise excess stomach acid. Are they acids or bases?",
+   "answer": "bases",
+   "distractors": [
+    "acids",
+    "neutral salts",
+    "enzymes"
+   ],
+   "explain": "They contain bases such as calcium carbonate or magnesium hydroxide.",
+   "accept": [
+    "base",
+    "alkalis",
+    "alkali"
+   ]
+  },
+  {
+   "id": "science.ac.uip",
+   "topic": "science.acids",
+   "kind": "fact",
+   "prompt": "Universal indicator turns which colour in a strong acid?",
+   "answer": "red",
+   "distractors": [
+    "purple",
+    "green",
+    "blue"
+   ],
+   "explain": "Red/orange for acids, green for neutral, blue/purple for alkalis."
+  },
+  {
+   "id": "science.er.igneous",
+   "topic": "science.earth",
+   "kind": "mcq",
+   "prompt": "How is igneous rock formed?",
+   "options": [
+    {
+     "text": "When molten rock (magma or lava) cools and solidifies",
+     "correct": true
+    },
+    {
+     "text": "From layers of sediment pressed together",
+     "correct": false,
+     "feedback": "That is sedimentary rock."
+    },
+    {
+     "text": "By heat and pressure changing other rocks",
+     "correct": false,
+     "feedback": "That is metamorphic rock."
+    }
+   ],
+   "explain": "Granite cools slowly underground (big crystals); basalt cools fast at the surface (small crystals)."
+  },
+  {
+   "id": "science.er.fossil",
+   "topic": "science.earth",
+   "kind": "fact",
+   "prompt": "In which type of rock are fossils usually found?",
+   "answer": "sedimentary",
+   "distractors": [
+    "igneous",
+    "metamorphic",
+    "volcanic glass"
+   ],
+   "explain": "Sediment buries remains gently; heat and melting destroy fossils.",
+   "accept": [
+    "sedimentary rock"
+   ]
+  },
+  {
+   "id": "science.er.marble",
+   "topic": "science.earth",
+   "kind": "fact",
+   "prompt": "Marble is metamorphic rock formed from which sedimentary rock?",
+   "answer": "limestone",
+   "distractors": [
+    "granite",
+    "sandstone",
+    "basalt"
+   ],
+   "explain": "Heat and pressure recrystallise limestone into marble; the Parthenon in Athens is built of marble.",
+   "accept": [
+    "chalk"
+   ]
+  },
+  {
+   "id": "science.er.air",
+   "topic": "science.earth",
+   "kind": "mcq",
+   "prompt": "About how much of today’s air is nitrogen?",
+   "options": [
+    {
+     "text": "About 78%",
+     "correct": true
+    },
+    {
+     "text": "About 21%",
+     "correct": false,
+     "feedback": "That is oxygen."
+    },
+    {
+     "text": "About 1%",
+     "correct": false,
+     "feedback": "That is roughly argon."
+    }
+   ],
+   "explain": "Nitrogen 78%, oxygen 21%, argon about 0.9%, carbon dioxide about 0.04%."
+  },
+  {
+   "id": "science.er.co2",
+   "topic": "science.earth",
+   "kind": "mcq",
+   "prompt": "Which of these REMOVES carbon dioxide from the atmosphere?",
+   "options": [
+    {
+     "text": "Photosynthesis",
+     "correct": true
+    },
+    {
+     "text": "Burning fossil fuels",
+     "correct": false,
+     "feedback": "That adds CO₂."
+    },
+    {
+     "text": "Respiration",
+     "correct": false,
+     "feedback": "Respiration releases CO₂."
+    }
+   ],
+   "explain": "Plants, algae and the oceans absorb carbon dioxide."
+  },
+  {
+   "id": "science.er.greenhouse",
+   "topic": "science.earth",
+   "kind": "mcq",
+   "prompt": "How do greenhouse gases warm the Earth?",
+   "options": [
+    {
+     "text": "They absorb heat radiated from the Earth’s surface and re-emit it, trapping it in the atmosphere",
+     "correct": true
+    },
+    {
+     "text": "They make a hole in the ozone layer",
+     "correct": false,
+     "feedback": "The ozone hole is a different problem."
+    },
+    {
+     "text": "They reflect sunlight back to space",
+     "correct": false,
+     "feedback": "That would cool the Earth."
+    }
+   ],
+   "explain": "More CO₂ and methane mean more heat trapped: the enhanced greenhouse effect."
+  },
+  {
+   "id": "science.er.carbon",
+   "topic": "science.earth",
+   "kind": "order",
+   "prompt": "Put this route of a carbon atom in order.",
+   "items": [
+    "CO₂ in the air",
+    "absorbed by a plant (photosynthesis)",
+    "eaten by an animal",
+    "released by respiration"
+   ],
+   "labels": null,
+   "explain": "Carbon cycles between the air, living things, oceans and rocks."
+  },
+  {
+   "id": "science.er.weather",
+   "topic": "science.earth",
+   "kind": "fact",
+   "prompt": "The breaking down of rocks by rain, ice and plants without them moving is called…",
+   "answer": "weathering",
+   "distractors": [
+    "erosion",
+    "deposition",
+    "compaction"
+   ],
+   "explain": "Erosion is when the bits are carried away; freeze–thaw weathering splits rocks as water freezes and expands.",
+   "accept": [
+    "weather"
+   ]
+  },
+  {
+   "id": "science.fo.balanced",
+   "topic": "science.forces",
+   "kind": "mcq",
+   "prompt": "A car travels at a steady 30 mph in a straight line. What can you say about the forces on it?",
+   "options": [
+    {
+     "text": "They are balanced: driving force equals resistive forces",
+     "correct": true
+    },
+    {
+     "text": "The driving force is bigger",
+     "correct": false,
+     "feedback": "Then it would speed up."
+    },
+    {
+     "text": "There are no forces",
+     "correct": false,
+     "feedback": "Friction and air resistance act all the time."
+    }
+   ],
+   "explain": "Balanced forces mean no change in motion: steady speed or stationary (Newton’s first law)."
+  },
+  {
+   "id": "science.fo.terminal",
+   "topic": "science.forces",
+   "kind": "mcq",
+   "prompt": "Why does a skydiver reach a terminal velocity?",
+   "options": [
+    {
+     "text": "Air resistance grows with speed until it equals weight, so forces balance",
+     "correct": true
+    },
+    {
+     "text": "Gravity switches off",
+     "correct": false,
+     "feedback": "Gravity keeps pulling."
+    },
+    {
+     "text": "The parachute is always open",
+     "correct": false,
+     "feedback": "Terminal velocity happens with or without a parachute."
+    }
+   ],
+   "explain": "With the parachute open, a much bigger air resistance gives a slower terminal velocity."
+  },
+  {
+   "id": "science.fo.weight",
+   "topic": "science.forces",
+   "kind": "fact",
+   "prompt": "Weight = mass × gravitational field strength. On Earth g ≈ 10 N/kg. What does a 50 kg person weigh, in newtons?",
+   "answer": "500",
+   "distractors": [
+    "50",
+    "5",
+    "5000"
+   ],
+   "explain": "50 × 10 = 500 N. On the Moon (g ≈ 1.6 N/kg) the same person would weigh only about 80 N."
+  },
+  {
+   "id": "science.fo.mass",
+   "topic": "science.forces",
+   "kind": "mcq",
+   "prompt": "What happens to your MASS if you travel to the Moon?",
+   "options": [
+    {
+     "text": "It stays the same; only your weight changes",
+     "correct": true
+    },
+    {
+     "text": "It falls to about a sixth",
+     "correct": false,
+     "feedback": "That is your weight."
+    },
+    {
+     "text": "It becomes zero",
+     "correct": false,
+     "feedback": "Mass is the amount of matter in you."
+    }
+   ],
+   "explain": "Mass is measured in kg; weight is a force, in newtons."
+  },
+  {
+   "id": "science.fo.dt",
+   "topic": "science.forces",
+   "kind": "mcq",
+   "prompt": "On a distance–time graph, what does a horizontal line mean?",
+   "options": [
+    {
+     "text": "The object is stationary",
+     "correct": true
+    },
+    {
+     "text": "It is moving at a steady speed",
+     "correct": false,
+     "feedback": "A steady speed is a straight sloping line."
+    },
+    {
+     "text": "It is accelerating",
+     "correct": false,
+     "feedback": "Accelerating gives a curve getting steeper."
+    }
+   ],
+   "explain": "The gradient of a distance–time graph is the speed."
+  },
+  {
+   "id": "science.fo.newton3",
+   "topic": "science.forces",
+   "kind": "mcq",
+   "prompt": "Atlas holds up the sky. The sky pushes down on Atlas. By Newton’s third law, how do these two forces compare?",
+   "options": [
+    {
+     "text": "They are equal in size and opposite in direction",
+     "correct": true
+    },
+    {
+     "text": "The sky’s push is bigger",
+     "correct": false,
+     "feedback": "Interaction pairs are always equal."
+    },
+    {
+     "text": "Atlas’s push is bigger",
+     "correct": false,
+     "feedback": "Interaction pairs are always equal, whatever is happening."
+    }
+   ],
+   "explain": "For every action there is an equal and opposite reaction; the pair acts on different objects."
+  },
+  {
+   "id": "science.fo.speed",
+   "topic": "science.forces",
+   "kind": "template",
+   "gen": "y8sSpeed",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.fo.pressure",
+   "topic": "science.forces",
+   "kind": "template",
+   "gen": "y8sPressure",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.fo.moments",
+   "topic": "science.forces",
+   "kind": "template",
+   "gen": "y8sMoments",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.fo.hooke",
+   "topic": "science.forces",
+   "kind": "fact",
+   "prompt": "Hooke’s law says the extension of a spring is proportional to the…",
+   "answer": "force applied",
+   "distractors": [
+    "spring’s colour",
+    "time taken",
+    "temperature"
+   ],
+   "explain": "Double the force, double the stretch, until the limit of proportionality.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.en.store",
+   "topic": "science.energy",
+   "kind": "mcq",
+   "prompt": "A drawn bow is about to fire an arrow. Which energy store is full?",
+   "options": [
+    {
+     "text": "Elastic potential",
+     "correct": true
+    },
+    {
+     "text": "Gravitational potential",
+     "correct": false,
+     "feedback": "That is for height."
+    },
+    {
+     "text": "Nuclear",
+     "correct": false,
+     "feedback": "Nuclear energy is stored in atomic nuclei."
+    }
+   ],
+   "explain": "Released, the elastic store empties into the arrow’s kinetic store."
+  },
+  {
+   "id": "science.en.conserve",
+   "topic": "science.energy",
+   "kind": "mcq",
+   "prompt": "What does the law of conservation of energy say?",
+   "options": [
+    {
+     "text": "Energy cannot be created or destroyed, only transferred between stores",
+     "correct": true
+    },
+    {
+     "text": "We should switch lights off",
+     "correct": false,
+     "feedback": "That is energy saving, not the law."
+    },
+    {
+     "text": "Energy is used up when things move",
+     "correct": false,
+     "feedback": "It is transferred, often to thermal energy."
+    }
+   ],
+   "explain": "The total is always the same; wasted energy usually ends up warming the surroundings."
+  },
+  {
+   "id": "science.en.bounce",
+   "topic": "science.energy",
+   "kind": "mcq",
+   "prompt": "Why does a dropped ball bounce lower each time?",
+   "options": [
+    {
+     "text": "Some energy is transferred to the surroundings as heat and sound at each bounce",
+     "correct": true
+    },
+    {
+     "text": "Energy is destroyed",
+     "correct": false,
+     "feedback": "Energy is never destroyed."
+    },
+    {
+     "text": "Gravity gets stronger",
+     "correct": false,
+     "feedback": "g stays the same."
+    }
+   ],
+   "explain": "Less energy remains in the ball’s gravitational store at the top of each bounce."
+  },
+  {
+   "id": "science.en.renew",
+   "topic": "science.energy",
+   "kind": "mcq",
+   "prompt": "Which is a RENEWABLE energy resource?",
+   "options": [
+    {
+     "text": "Wind",
+     "correct": true
+    },
+    {
+     "text": "Coal",
+     "correct": false,
+     "feedback": "Fossil fuels took millions of years to form."
+    },
+    {
+     "text": "Natural gas",
+     "correct": false,
+     "feedback": "A fossil fuel."
+    },
+    {
+     "text": "Uranium",
+     "correct": false,
+     "feedback": "Nuclear fuel will run out."
+    }
+   ],
+   "explain": "Renewables (wind, solar, hydro, tidal, geothermal, biofuel) will not run out."
+  },
+  {
+   "id": "science.en.conduct",
+   "topic": "science.energy",
+   "kind": "mcq",
+   "prompt": "Why do saucepans have metal bases but plastic handles?",
+   "options": [
+    {
+     "text": "Metal is a good thermal conductor; plastic is an insulator",
+     "correct": true
+    },
+    {
+     "text": "Plastic is stronger",
+     "correct": false,
+     "feedback": "It is about conducting heat."
+    },
+    {
+     "text": "Metal is cheaper",
+     "correct": false,
+     "feedback": "The reason is conduction."
+    }
+   ],
+   "explain": "Thermal energy is transferred by conduction, convection and radiation."
+  },
+  {
+   "id": "science.en.convect",
+   "topic": "science.energy",
+   "kind": "fact",
+   "prompt": "Warm air rises above a radiator and cool air sinks to replace it. What is this transfer called?",
+   "answer": "convection",
+   "distractors": [
+    "conduction",
+    "radiation",
+    "evaporation"
+   ],
+   "explain": "Convection currents happen in liquids and gases, because warm fluid is less dense."
+  },
+  {
+   "id": "science.en.power",
+   "topic": "science.energy",
+   "kind": "template",
+   "gen": "y8sPower",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.el.series",
+   "topic": "science.electricity",
+   "kind": "mcq",
+   "prompt": "You add a second bulb in SERIES. What happens to the brightness?",
+   "options": [
+    {
+     "text": "Both bulbs are dimmer than one bulb alone",
+     "correct": true
+    },
+    {
+     "text": "Both are brighter",
+     "correct": false,
+     "feedback": "More resistance means less current."
+    },
+    {
+     "text": "No change",
+     "correct": false,
+     "feedback": "The current falls."
+    }
+   ],
+   "explain": "Total resistance goes up, so current goes down. In parallel, each bulb stays as bright as one alone."
+  },
+  {
+   "id": "science.el.parallel",
+   "topic": "science.electricity",
+   "kind": "mcq",
+   "prompt": "Why are house lights wired in PARALLEL?",
+   "options": [
+    {
+     "text": "Each light gets the full voltage and can be switched on or off separately",
+     "correct": true
+    },
+    {
+     "text": "It uses less wire",
+     "correct": false,
+     "feedback": "The reason is independence and full voltage."
+    },
+    {
+     "text": "It makes bulbs last longer",
+     "correct": false,
+     "feedback": "Not the main reason."
+    }
+   ],
+   "explain": "If one bulb fails in parallel, the others stay on."
+  },
+  {
+   "id": "science.el.ammeter",
+   "topic": "science.electricity",
+   "kind": "fact",
+   "prompt": "Which meter measures current, and how is it connected?",
+   "answer": "an ammeter, in series",
+   "distractors": [
+    "a voltmeter, in parallel",
+    "an ammeter, in parallel",
+    "a voltmeter, in series"
+   ],
+   "explain": "Voltmeters go in parallel across a component.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.el.unit",
+   "topic": "science.electricity",
+   "kind": "fact",
+   "prompt": "What is the unit of resistance?",
+   "answer": "ohm",
+   "distractors": [
+    "volt",
+    "amp",
+    "watt"
+   ],
+   "explain": "Symbol Ω. Named after Georg Ohm.",
+   "accept": [
+    "ohms",
+    "Ω"
+   ]
+  },
+  {
+   "id": "science.el.static",
+   "topic": "science.electricity",
+   "kind": "mcq",
+   "prompt": "A balloon rubbed on hair sticks to a wall. Why?",
+   "options": [
+    {
+     "text": "Friction transfers electrons, leaving the balloon charged",
+     "correct": true
+    },
+    {
+     "text": "It is magnetic",
+     "correct": false,
+     "feedback": "It is static electricity, not magnetism."
+    },
+    {
+     "text": "It is sticky",
+     "correct": false,
+     "feedback": "It is electric charge."
+    }
+   ],
+   "explain": "Like charges repel; unlike charges attract. The Greeks noticed amber (ēlektron) does this when rubbed!"
+  },
+  {
+   "id": "science.el.electromag",
+   "topic": "science.electricity",
+   "kind": "mcq",
+   "prompt": "How can you make an electromagnet stronger?",
+   "options": [
+    {
+     "text": "More turns of wire, more current, and an iron core",
+     "correct": true
+    },
+    {
+     "text": "Use a plastic core",
+     "correct": false,
+     "feedback": "An iron core concentrates the field."
+    },
+    {
+     "text": "Use less current",
+     "correct": false,
+     "feedback": "More current makes a stronger field."
+    }
+   ],
+   "explain": "Electromagnets can be switched off, which is why scrapyard cranes use them."
+  },
+  {
+   "id": "science.el.field",
+   "topic": "science.electricity",
+   "kind": "mcq",
+   "prompt": "Outside a bar magnet, field lines go from…",
+   "options": [
+    {
+     "text": "the north pole to the south pole",
+     "correct": true
+    },
+    {
+     "text": "south to north",
+     "correct": false,
+     "feedback": "The convention is north to south outside the magnet."
+    },
+    {
+     "text": "the middle outwards",
+     "correct": false,
+     "feedback": "They start at N and end at S."
+    }
+   ],
+   "explain": "The closer the lines, the stronger the field."
+  },
+  {
+   "id": "science.el.ohm",
+   "topic": "science.electricity",
+   "kind": "template",
+   "gen": "y8sOhm",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.wv.sound",
+   "topic": "science.waves",
+   "kind": "mcq",
+   "prompt": "Why can’t sound travel through space?",
+   "options": [
+    {
+     "text": "There are no particles to pass on the vibrations",
+     "correct": true
+    },
+    {
+     "text": "It is too cold",
+     "correct": false,
+     "feedback": "Temperature isn’t the reason."
+    },
+    {
+     "text": "Space is too big",
+     "correct": false,
+     "feedback": "Sound needs a medium; space is a vacuum."
+    }
+   ],
+   "explain": "Sound is a longitudinal wave of vibrating particles."
+  },
+  {
+   "id": "science.wv.pitch",
+   "topic": "science.waves",
+   "kind": "mcq",
+   "prompt": "A higher pitched note has a…",
+   "options": [
+    {
+     "text": "higher frequency",
+     "correct": true
+    },
+    {
+     "text": "larger amplitude",
+     "correct": false,
+     "feedback": "Amplitude affects loudness."
+    },
+    {
+     "text": "lower frequency",
+     "correct": false,
+     "feedback": "Lower frequency gives a lower pitch."
+    }
+   ],
+   "explain": "Frequency (Hz) is the number of waves per second."
+  },
+  {
+   "id": "science.wv.reflect",
+   "topic": "science.waves",
+   "kind": "mcq",
+   "prompt": "When light reflects off a mirror, how do the angles compare?",
+   "options": [
+    {
+     "text": "Angle of incidence equals angle of reflection",
+     "correct": true
+    },
+    {
+     "text": "Angle of reflection is always 90°",
+     "correct": false,
+     "feedback": "Only if the light hits at 90° does it bounce straight back."
+    },
+    {
+     "text": "The reflected angle is double",
+     "correct": false,
+     "feedback": "They are equal."
+    }
+   ],
+   "explain": "Both angles are measured from the normal, a line at 90° to the mirror."
+  },
+  {
+   "id": "science.wv.refract",
+   "topic": "science.waves",
+   "kind": "mcq",
+   "prompt": "A straw in water looks bent. Why?",
+   "options": [
+    {
+     "text": "Light changes speed and direction as it passes from water to air (refraction)",
+     "correct": true
+    },
+    {
+     "text": "The water bends the straw",
+     "correct": false,
+     "feedback": "The straw is straight."
+    },
+    {
+     "text": "Light reflects off the water",
+     "correct": false,
+     "feedback": "It is refraction."
+    }
+   ],
+   "explain": "Light slows down in denser materials like water and glass."
+  },
+  {
+   "id": "science.wv.prism",
+   "topic": "science.waves",
+   "kind": "mcq",
+   "prompt": "White light passes through a prism and splits into a spectrum. What does this show?",
+   "options": [
+    {
+     "text": "White light is a mixture of colours",
+     "correct": true
+    },
+    {
+     "text": "The prism adds colour",
+     "correct": false,
+     "feedback": "Newton showed a second prism can recombine the colours."
+    },
+    {
+     "text": "Light is a sound wave",
+     "correct": false,
+     "feedback": "Light and sound are very different waves."
+    }
+   ],
+   "explain": "This is dispersion: each colour refracts by a different amount."
+  },
+  {
+   "id": "science.wv.red",
+   "topic": "science.waves",
+   "kind": "mcq",
+   "prompt": "Why does a red apple look red in white light?",
+   "options": [
+    {
+     "text": "It reflects red light and absorbs the other colours",
+     "correct": true
+    },
+    {
+     "text": "It makes red light",
+     "correct": false,
+     "feedback": "It is not a light source."
+    },
+    {
+     "text": "It absorbs red light",
+     "correct": false,
+     "feedback": "It reflects red."
+    }
+   ],
+   "explain": "In blue light, the same apple would look black."
+  },
+  {
+   "id": "science.wv.speed",
+   "topic": "science.waves",
+   "kind": "fact",
+   "prompt": "Which travels faster: light or sound?",
+   "answer": "light",
+   "distractors": [
+    "sound",
+    "they are the same",
+    "it depends on the weather"
+   ],
+   "explain": "Light: about 300 000 km/s. Sound in air: about 340 m/s."
+  },
+  {
+   "id": "science.wv.calc",
+   "topic": "science.waves",
+   "kind": "template",
+   "gen": "y8sWave",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.sp.seasons",
+   "topic": "science.space",
+   "kind": "mcq",
+   "prompt": "What causes the seasons?",
+   "options": [
+    {
+     "text": "The Earth’s tilted axis, so each hemisphere leans towards the Sun for part of the year",
+     "correct": true
+    },
+    {
+     "text": "The Earth getting closer to the Sun in summer",
+     "correct": false,
+     "feedback": "The Earth is actually closest to the Sun in January."
+    },
+    {
+     "text": "The Sun getting hotter",
+     "correct": false,
+     "feedback": "The Sun’s output is almost constant."
+    }
+   ],
+   "explain": "When the northern hemisphere tilts towards the Sun, days are longer and sunlight is more direct: summer."
+  },
+  {
+   "id": "science.sp.gravity",
+   "topic": "science.space",
+   "kind": "mcq",
+   "prompt": "What keeps the Moon in orbit around the Earth?",
+   "options": [
+    {
+     "text": "Gravity",
+     "correct": true
+    },
+    {
+     "text": "Magnetism",
+     "correct": false,
+     "feedback": "Gravity holds orbits together."
+    },
+    {
+     "text": "The Sun’s light",
+     "correct": false,
+     "feedback": "Light does not hold things in orbit."
+    }
+   ],
+   "explain": "Gravity pulls the Moon towards the Earth, constantly curving its path into an orbit."
+  },
+  {
+   "id": "science.sp.phases",
+   "topic": "science.space",
+   "kind": "mcq",
+   "prompt": "Why does the Moon have phases?",
+   "options": [
+    {
+     "text": "We see different amounts of its sunlit half as it orbits the Earth",
+     "correct": true
+    },
+    {
+     "text": "The Earth’s shadow covers it",
+     "correct": false,
+     "feedback": "That is an eclipse, which is rare."
+    },
+    {
+     "text": "It changes size",
+     "correct": false,
+     "feedback": "It stays the same size."
+    }
+   ],
+   "explain": "A full cycle of phases takes about 29.5 days."
+  },
+  {
+   "id": "science.sp.year",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "How long does the Earth take to orbit the Sun?",
+   "answer": "about 365¼ days",
+   "distractors": [
+    "24 hours",
+    "about 29½ days",
+    "7 days"
+   ],
+   "explain": "That extra quarter day is why we have leap years.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.sp.erat",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "Which Greek scholar estimated the Earth’s circumference in about 240 BC by comparing shadows in two cities?",
+   "answer": "Eratosthenes",
+   "distractors": [
+    "Archimedes",
+    "Ptolemy",
+    "Pythagoras"
+   ],
+   "explain": "He compared noon shadows in Syene and Alexandria, and his answer was remarkably close."
+  },
+  {
+   "id": "science.sp.lightyear",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "A light year is a measure of…",
+   "answer": "distance",
+   "distractors": [
+    "time",
+    "brightness",
+    "speed"
+   ],
+   "explain": "It is the distance light travels in a year: about 9.5 million million km.",
+   "accept": [
+    "a distance"
+   ]
+  },
+  {
+   "id": "science.sp.size",
+   "topic": "science.space",
+   "kind": "order",
+   "prompt": "Put these in order of size, smallest first.",
+   "items": [
+    "the Moon",
+    "the Earth",
+    "the Sun",
+    "the Milky Way"
+   ],
+   "labels": null,
+   "explain": "The Sun is about 100 times the Earth’s width; the Milky Way contains hundreds of billions of stars."
+  },
+  {
+   "id": "science.sp.weight",
+   "topic": "science.space",
+   "kind": "mcq",
+   "prompt": "Why would Theo weigh less on Mars than on Earth?",
+   "options": [
+    {
+     "text": "Mars has less mass, so its gravitational field is weaker",
+     "correct": true
+    },
+    {
+     "text": "Mars is further from the Sun",
+     "correct": false,
+     "feedback": "Weight on a planet depends on that planet’s gravity."
+    },
+    {
+     "text": "There is no air on Mars",
+     "correct": false,
+     "feedback": "Air has nothing to do with weight."
+    }
+   ],
+   "explain": "On Mars g ≈ 3.7 N/kg, compared with about 10 N/kg on Earth."
+  },
+  {
+   "id": "science.wk.iv",
+   "topic": "science.working",
+   "kind": "mcq",
+   "prompt": "Mira tests how the height of a ramp affects how far a toy car rolls. What is the independent variable?",
+   "options": [
+    {
+     "text": "The height of the ramp",
+     "correct": true
+    },
+    {
+     "text": "The distance the car rolls",
+     "correct": false,
+     "feedback": "That is what she measures: the dependent variable."
+    },
+    {
+     "text": "The type of car",
+     "correct": false,
+     "feedback": "That should be a control variable, kept the same."
+    }
+   ],
+   "explain": "Independent: what you change. Dependent: what you measure. Control: what you keep the same."
+  },
+  {
+   "id": "science.wk.control",
+   "topic": "science.working",
+   "kind": "mcq",
+   "prompt": "In the same investigation, which is a control variable?",
+   "options": [
+    {
+     "text": "Using the same car each time",
+     "correct": true
+    },
+    {
+     "text": "The ramp height",
+     "correct": false,
+     "feedback": "That is what she changes."
+    },
+    {
+     "text": "The distance rolled",
+     "correct": false,
+     "feedback": "That is what she measures."
+    }
+   ],
+   "explain": "Keeping everything else the same makes it a fair test."
+  },
+  {
+   "id": "science.wk.precise",
+   "topic": "science.working",
+   "kind": "mcq",
+   "prompt": "Results that are very close to each other are described as…",
+   "options": [
+    {
+     "text": "precise",
+     "correct": true
+    },
+    {
+     "text": "accurate",
+     "correct": false,
+     "feedback": "Accurate means close to the true value."
+    },
+    {
+     "text": "valid",
+     "correct": false,
+     "feedback": "Valid means the test answers the question."
+    }
+   ],
+   "explain": "You can be precise but not accurate: all the arrows clustered, but far from the bullseye."
+  },
+  {
+   "id": "science.wk.repeat",
+   "topic": "science.working",
+   "kind": "mcq",
+   "prompt": "Why repeat an experiment and calculate a mean?",
+   "options": [
+    {
+     "text": "To reduce the effect of random errors and spot anomalies",
+     "correct": true
+    },
+    {
+     "text": "To make it take longer",
+     "correct": false,
+     "feedback": "Repeats make results more reliable."
+    },
+    {
+     "text": "To change the independent variable",
+     "correct": false,
+     "feedback": "Repeats use the same conditions."
+    }
+   ],
+   "explain": "An anomalous result is one that doesn’t fit the pattern; check it, and leave it out of the mean if it is a mistake."
+  },
+  {
+   "id": "science.wk.graph",
+   "topic": "science.working",
+   "kind": "mcq",
+   "prompt": "You measure temperature every minute as water heats. Which graph should you draw?",
+   "options": [
+    {
+     "text": "A line graph, because both variables are continuous",
+     "correct": true
+    },
+    {
+     "text": "A bar chart",
+     "correct": false,
+     "feedback": "Bar charts are for categories, like types of fuel."
+    },
+    {
+     "text": "A pie chart",
+     "correct": false,
+     "feedback": "Pie charts show proportions of a whole."
+    }
+   ],
+   "explain": "Continuous data: line graph (or scatter graph with a line of best fit)."
+  },
+  {
+   "id": "science.wk.hypo",
+   "topic": "science.working",
+   "kind": "mcq",
+   "prompt": "Which is a good scientific hypothesis?",
+   "options": [
+    {
+     "text": "If the temperature increases, the rate of reaction will increase, because particles collide more often",
+     "correct": true
+    },
+    {
+     "text": "Reactions are interesting",
+     "correct": false,
+     "feedback": "A hypothesis must be testable."
+    },
+    {
+     "text": "I will do the experiment carefully",
+     "correct": false,
+     "feedback": "That is a plan, not a hypothesis."
+    }
+   ],
+   "explain": "A hypothesis predicts a relationship and explains why, and it can be tested."
+  },
+  {
+   "id": "science.wk.sys",
+   "topic": "science.working",
+   "kind": "mcq",
+   "prompt": "A balance always reads 0.2 g even with nothing on it. What kind of error is this?",
+   "options": [
+    {
+     "text": "A systematic (zero) error",
+     "correct": true
+    },
+    {
+     "text": "A random error",
+     "correct": false,
+     "feedback": "Random errors vary unpredictably; this is the same every time."
+    },
+    {
+     "text": "No error",
+     "correct": false,
+     "feedback": "Every reading will be 0.2 g too high."
+    }
+   ],
+   "explain": "Fix it by zeroing (taring) the balance, or subtracting 0.2 g from every reading."
+  },
+  {
+   "id": "science.wk.correl",
+   "topic": "science.working",
+   "kind": "mcq",
+   "prompt": "Ice cream sales and sunburn both rise in summer. Does ice cream cause sunburn?",
+   "options": [
+    {
+     "text": "No: both are caused by a third factor, sunny weather",
+     "correct": true
+    },
+    {
+     "text": "Yes: the graph proves it",
+     "correct": false,
+     "feedback": "Correlation is not causation."
+    },
+    {
+     "text": "Yes, because sugar weakens skin",
+     "correct": false,
+     "feedback": "There is no evidence for that."
+    }
+   ],
+   "explain": "A correlation shows a link, not that one thing causes the other."
+  },
+  {
+   "id": "science.am.parts",
+   "topic": "science.atomic",
+   "kind": "mcq",
+   "prompt": "Which particles are found in the nucleus of an atom?",
+   "options": [
+    {
+     "text": "Protons and neutrons",
+     "correct": true
+    },
+    {
+     "text": "Electrons and protons",
+     "correct": false,
+     "feedback": "Electrons are in shells around the nucleus."
+    },
+    {
+     "text": "Only electrons",
+     "correct": false,
+     "feedback": "Electrons orbit outside the nucleus."
+    }
+   ],
+   "explain": "Protons +1, neutrons 0, electrons −1. The nucleus is tiny but holds almost all the mass."
+  },
+  {
+   "id": "science.am.number",
+   "topic": "science.atomic",
+   "kind": "fact",
+   "prompt": "The atomic number of an element tells you the number of…",
+   "answer": "protons",
+   "distractors": [
+    "neutrons",
+    "shells",
+    "isotopes"
+   ],
+   "explain": "In a neutral atom, it also equals the number of electrons.",
+   "accept": [
+    "protons in the nucleus"
+   ]
+  },
+  {
+   "id": "science.am.isotope",
+   "topic": "science.atomic",
+   "kind": "mcq",
+   "prompt": "What is different between carbon-12 and carbon-14?",
+   "options": [
+    {
+     "text": "The number of neutrons",
+     "correct": true
+    },
+    {
+     "text": "The number of protons",
+     "correct": false,
+     "feedback": "Then they would be different elements."
+    },
+    {
+     "text": "The number of electrons",
+     "correct": false,
+     "feedback": "Both neutral atoms have 6 electrons."
+    }
+   ],
+   "explain": "Isotopes: same protons, different neutrons. Carbon-14 is radioactive and is used to date ancient remains."
+  },
+  {
+   "id": "science.am.neutrons",
+   "topic": "science.atomic",
+   "kind": "fact",
+   "prompt": "Sodium has atomic number 11 and mass number 23. How many neutrons does it have?",
+   "answer": "12",
+   "distractors": [
+    "11",
+    "23",
+    "34"
+   ],
+   "explain": "23 − 11 = 12 neutrons."
+  },
+  {
+   "id": "science.am.rutherford",
+   "topic": "science.atomic",
+   "kind": "mcq",
+   "prompt": "In Rutherford’s gold foil experiment, a few alpha particles bounced back. What did this show?",
+   "options": [
+    {
+     "text": "Atoms have a tiny, dense, positive nucleus",
+     "correct": true
+    },
+    {
+     "text": "Atoms are solid all the way through",
+     "correct": false,
+     "feedback": "Most particles went straight through: atoms are mostly empty space."
+    },
+    {
+     "text": "Gold is magnetic",
+     "correct": false,
+     "feedback": "It shows the structure of atoms."
+    }
+   ],
+   "explain": "This replaced the “plum pudding” model in 1911."
+  },
+  {
+   "id": "science.am.ionic",
+   "topic": "science.atomic",
+   "kind": "mcq",
+   "prompt": "Sodium chloride forms when sodium gives an electron to chlorine. What type of bonding is this?",
+   "options": [
+    {
+     "text": "Ionic",
+     "correct": true
+    },
+    {
+     "text": "Covalent",
+     "correct": false,
+     "feedback": "Covalent bonds share electrons, usually between non-metals."
+    },
+    {
+     "text": "Metallic",
+     "correct": false,
+     "feedback": "Metallic bonding holds metal atoms together."
+    }
+   ],
+   "explain": "Na⁺ and Cl⁻ ions attract strongly, giving a high melting point."
+  },
+  {
+   "id": "science.am.covalent",
+   "topic": "science.atomic",
+   "kind": "mcq",
+   "prompt": "In a water molecule, hydrogen and oxygen atoms share pairs of electrons. What type of bond is this?",
+   "options": [
+    {
+     "text": "Covalent",
+     "correct": true
+    },
+    {
+     "text": "Ionic",
+     "correct": false,
+     "feedback": "Ionic bonds transfer electrons, metal to non-metal."
+    },
+    {
+     "text": "Magnetic",
+     "correct": false,
+     "feedback": "Not a type of chemical bond."
+    }
+   ],
+   "explain": "Covalent bonds form between non-metal atoms."
+  },
+  {
+   "id": "science.am.shell",
+   "topic": "science.atomic",
+   "kind": "fact",
+   "prompt": "How many electrons can the first shell of an atom hold?",
+   "answer": "2",
+   "distractors": [
+    "8",
+    "18",
+    "1"
+   ],
+   "explain": "The first shell holds 2; the next ones hold 8 (for the first 20 elements)."
+  },
+  {
+   "id": "science.em.order",
+   "topic": "science.spectrum",
+   "kind": "order",
+   "prompt": "Put the electromagnetic spectrum in order, longest wavelength first.",
+   "items": [
+    "radio",
+    "microwaves",
+    "infrared",
+    "visible light",
+    "ultraviolet",
+    "X-rays",
+    "gamma rays"
+   ],
+   "labels": null,
+   "explain": "Wavelength gets shorter (and frequency and energy higher) from radio to gamma."
+  },
+  {
+   "id": "science.em.speed",
+   "topic": "science.spectrum",
+   "kind": "mcq",
+   "prompt": "How fast do all electromagnetic waves travel in a vacuum?",
+   "options": [
+    {
+     "text": "At the speed of light, about 300 000 km/s",
+     "correct": true
+    },
+    {
+     "text": "At the speed of sound",
+     "correct": false,
+     "feedback": "EM waves are much faster."
+    },
+    {
+     "text": "Radio waves are fastest",
+     "correct": false,
+     "feedback": "They all travel at the same speed in a vacuum."
+    }
+   ],
+   "explain": "They differ in wavelength and frequency, not speed."
+  },
+  {
+   "id": "science.em.uv",
+   "topic": "science.spectrum",
+   "kind": "mcq",
+   "prompt": "Which EM wave causes sunburn and can damage skin cells?",
+   "options": [
+    {
+     "text": "Ultraviolet",
+     "correct": true
+    },
+    {
+     "text": "Infrared",
+     "correct": false,
+     "feedback": "Infrared is felt as heat."
+    },
+    {
+     "text": "Radio",
+     "correct": false,
+     "feedback": "Radio waves are low energy."
+    }
+   ],
+   "explain": "Suncream blocks UV."
+  },
+  {
+   "id": "science.em.xray",
+   "topic": "science.spectrum",
+   "kind": "mcq",
+   "prompt": "Why are X-rays useful for seeing broken bones?",
+   "options": [
+    {
+     "text": "They pass through soft tissue but are absorbed by bone",
+     "correct": true
+    },
+    {
+     "text": "They bounce off skin",
+     "correct": false,
+     "feedback": "They pass through skin and muscle."
+    },
+    {
+     "text": "They make bones glow",
+     "correct": false,
+     "feedback": "Bones absorb them, leaving a shadow."
+    }
+   ],
+   "explain": "Radiographers stand behind a screen because X-rays can damage cells."
+  },
+  {
+   "id": "science.em.ir",
+   "topic": "science.spectrum",
+   "kind": "fact",
+   "prompt": "Which EM wave does a TV remote control use?",
+   "answer": "infrared",
+   "distractors": [
+    "ultraviolet",
+    "gamma rays",
+    "X-rays"
+   ],
+   "explain": "Thermal imaging cameras also detect infrared.",
+   "accept": [
+    "infra-red",
+    "ir"
+   ]
+  },
+  {
+   "id": "science.em.gamma",
+   "topic": "science.spectrum",
+   "kind": "mcq",
+   "prompt": "Gamma rays can kill cells. How is this useful?",
+   "options": [
+    {
+     "text": "To kill cancer cells and sterilise medical equipment",
+     "correct": true
+    },
+    {
+     "text": "To cook food",
+     "correct": false,
+     "feedback": "Microwaves cook food."
+    },
+    {
+     "text": "To send TV signals",
+     "correct": false,
+     "feedback": "That is radio."
+    }
+   ],
+   "explain": "High-energy waves are useful but must be carefully controlled."
+  },
+  {
+   "id": "science.gn.allele",
+   "topic": "science.genetics",
+   "kind": "mcq",
+   "prompt": "What is an allele?",
+   "options": [
+    {
+     "text": "A different version of the same gene",
+     "correct": true
+    },
+    {
+     "text": "A type of chromosome",
+     "correct": false,
+     "feedback": "Alleles are versions of genes on chromosomes."
+    },
+    {
+     "text": "A sex cell",
+     "correct": false,
+     "feedback": "Sex cells are gametes."
+    }
+   ],
+   "explain": "For example, in a simple model of eye colour, a gene may have a brown allele and a blue allele."
+  },
+  {
+   "id": "science.gn.dominant",
+   "topic": "science.genetics",
+   "kind": "mcq",
+   "prompt": "What does it mean that an allele is DOMINANT?",
+   "options": [
+    {
+     "text": "It shows its effect even if only one copy is present",
+     "correct": true
+    },
+    {
+     "text": "It is always the most common",
+     "correct": false,
+     "feedback": "Dominant alleles can be rare."
+    },
+    {
+     "text": "It needs two copies to show",
+     "correct": false,
+     "feedback": "That describes a recessive allele."
+    }
+   ],
+   "explain": "Use a capital letter for dominant (B) and a lower case letter for recessive (b)."
+  },
+  {
+   "id": "science.gn.homo",
+   "topic": "science.genetics",
+   "kind": "fact",
+   "prompt": "A person with two identical alleles, such as bb, is described as…",
+   "answer": "homozygous",
+   "distractors": [
+    "heterozygous",
+    "dominant",
+    "mutated"
+   ],
+   "explain": "Bb is heterozygous.",
+   "accept": [
+    "homozygote"
+   ]
+  },
+  {
+   "id": "science.gn.mendel",
+   "topic": "science.genetics",
+   "kind": "fact",
+   "prompt": "Which monk worked out the basic rules of inheritance by breeding pea plants in the 1860s?",
+   "answer": "Gregor Mendel",
+   "distractors": [
+    "Charles Darwin",
+    "Louis Pasteur",
+    "Robert Hooke"
+   ],
+   "explain": "His work was largely ignored until 1900.",
+   "accept": [
+    "mendel"
+   ]
+  },
+  {
+   "id": "science.gn.sex",
+   "topic": "science.genetics",
+   "kind": "mcq",
+   "prompt": "What decides whether a baby is a boy or a girl?",
+   "options": [
+    {
+     "text": "Whether the sperm carries an X or a Y chromosome",
+     "correct": true
+    },
+    {
+     "text": "The egg’s chromosome",
+     "correct": false,
+     "feedback": "All eggs carry an X."
+    },
+    {
+     "text": "The time of year",
+     "correct": false,
+     "feedback": "It is genetic."
+    }
+   ],
+   "explain": "XX: female; XY: male. The chance is 50:50."
+  },
+  {
+   "id": "science.gn.punnett",
+   "topic": "science.genetics",
+   "kind": "template",
+   "gen": "y8sPunnett",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  }
+ ]
+}

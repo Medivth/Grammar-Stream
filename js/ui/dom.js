@@ -42,13 +42,19 @@ export function escapeHTML(t) {
 
 /** Escape, then render {{a/b}} fractions, **bold**, _italic_, x^{2} and newlines. */
 export function richHTML(text) {
-  return escapeHTML(text)
+  const blocks = [];
+  // code first, so nothing inside it is treated as formatting: ```lines``` and `inline`
+  const src = escapeHTML(text)
+    .replace(/```\n?([\s\S]*?)```/g, (_, c) => `\u0000${blocks.push(`<pre class="code"><code>${c.replace(/\n$/, '')}</code></pre>`) - 1}\u0000`)
+    .replace(/`([^`\n]+)`/g, (_, c) => `\u0000${blocks.push(`<code>${c}</code>`) - 1}\u0000`);
+  return src
     .replace(/\{\{([^/{}]+)\/([^/{}]+)\}\}/g, '<span class="frac"><span>$1</span><span>$2</span></span>')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|\s)_(.+?)_(?=\s|$|[.,!?])/g, '$1<em>$2</em>')
     .replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>')
     .replace(/\n\n/g, '</p><p>')
-    .replace(/\n/g, '<br>');
+    .replace(/\n/g, '<br>')
+    .replace(/\u0000(\d+)\u0000/g, (_, i) => blocks[+i]);
 }
 
 export function rich(tag, text, attrs = {}) {

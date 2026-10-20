@@ -68,6 +68,30 @@ export const COURSES = {
     young: true, sprintUp: 14, prev: 'ks1',
     starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird'],
   },
+  // Year 8 at a selective school, aiming above the top fifth: KS3 at depth with GCSE tasters,
+  // Ancient Greek towards GCSE, and Greek myth as the theme (original characters, not Riordan's).
+  y8: {
+    id: 'y8', title: 'Year 8 grammar stretch', short: 'Year 8+',
+    index: 'content/index-y8.json',
+    subjects: [
+      { id: 'english', name: 'English', region: 'Library of the Muses', colour: '#d63d74', retention: 0.9 },
+      { id: 'maths', name: 'Maths', region: 'Pythagoras Peaks', colour: '#2f74e8', retention: 0.85 },
+      { id: 'science', name: 'Science', region: 'Forge of Hephaestus', colour: '#9a48d6', retention: 0.9 },
+      { id: 'history', name: 'History', region: 'Hall of Clio', colour: '#d97a12', retention: 0.9 },
+      { id: 'geography', name: 'Geography', region: 'Atlas Range', colour: '#0f9a6e', retention: 0.9 },
+      { id: 'computing', name: 'Computing', region: 'Daedalus Workshop', colour: '#0e7490', retention: 0.9 },
+      { id: 'greek', name: 'Ancient Greek', region: 'Oracle of Delphi', colour: '#a16207', retention: 0.9 },
+    ],
+    placement: ['maths', 'english', 'science', 'history', 'geography', 'computing'],
+    placementCap: 24,
+    minutes: 30,
+    sprint: 'y8', sprintSeconds: 90,
+    paper: null,
+    tools: ['typing', 'speed'],
+    writing: true,
+    readAloud: false,
+    starter: ['none', 'glasses', 'scarf', 'bird', 'yuzu', 'flower', 'bow'],
+  },
 };
 
 export const SUBJECTS = [];

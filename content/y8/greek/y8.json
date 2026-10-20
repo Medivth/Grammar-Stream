@@ -1,0 +1,6568 @@
+{
+ "subject": "greek",
+ "deck": "y8",
+ "topics": [
+  {
+   "id": "greek.alphabet-1",
+   "title": "The alphabet, part 1: α to μ",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 6,
+   "intro": "Ancient Greek uses its own alphabet: 24 letters, many of which you already know from maths and science (π, θ, Δ). Our word “alphabet” is just its first two letters, alpha and beta. Learn twelve now: say each name aloud.",
+   "teach": "Write your initials in Greek letters and explain which letters you used.",
+   "talk": "Ask {her} to read the Greek letters in a maths or science textbook."
+  },
+  {
+   "id": "greek.alphabet-2",
+   "title": "The alphabet, part 2: ν to ω",
+   "kind": "facts",
+   "prereqs": [
+    "greek.alphabet-1"
+   ],
+   "batch": 6,
+   "intro": "The second twelve letters, ending with omega, “big o”. Watch for false friends: ρ is r, ν is n, η is e, χ is ch and ω is o. They look like our letters but they are not.",
+   "teach": "Explain which Greek letters look like English ones but make a different sound.",
+   "talk": "Ask {her} to write your name in Greek letters."
+  },
+  {
+   "id": "greek.reading",
+   "title": "Reading Greek aloud: breathings, diphthongs, accents",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.alphabet-2"
+   ],
+   "batch": 6,
+   "intro": "Now put the letters together. Every word that starts with a vowel has a breathing: the rough one (ʽ) adds an h, the smooth one (ʼ) adds nothing. Pairs of vowels (diphthongs) make one sound, and the accents show which syllable to stress.",
+   "teach": "Explain what a rough breathing is, using ἵππος as an example.",
+   "talk": "Ask {her} to read the names of the Olympian gods aloud in Greek."
+  },
+  {
+   "id": "greek.words-1",
+   "title": "Words 1: people, gods and war",
+   "kind": "facts",
+   "prereqs": [
+    "greek.reading"
+   ],
+   "batch": 6,
+   "intro": "Fourteen nouns, all from the GCSE vocabulary list, and all masculine words ending -ος. Most have English relatives: knowing λόγος unlocks every “-ology”.",
+   "teach": "Teach three words and an English word that comes from each.",
+   "talk": "Play “spot the Greek”: ask {her} to find a Greek root in a science or maths word."
+  },
+  {
+   "id": "greek.words-2",
+   "title": "Words 2: girls, gifts, battles and days",
+   "kind": "facts",
+   "prereqs": [
+    "greek.words-1"
+   ],
+   "batch": 6,
+   "intro": "Fourteen more nouns: feminine words ending -η or -α, and neuter words ending -ον. Nike, the goddess of victory, is hiding in this set.",
+   "teach": "Explain how you can often tell a noun’s gender from its ending.",
+   "talk": "Ask {her} what the brand name Nike means in Greek."
+  },
+  {
+   "id": "greek.words-3",
+   "title": "Words 3: verbs",
+   "kind": "facts",
+   "prereqs": [
+    "greek.words-1"
+   ],
+   "batch": 6,
+   "intro": "Fourteen verbs. Greek dictionaries list verbs in the “I” form, so λύω means “I free”. The endings change to show who is doing it.",
+   "teach": "Teach five verbs and act each one out.",
+   "talk": "Ask {her} the Greek for “I write” and “I flee”."
+  },
+  {
+   "id": "greek.article",
+   "title": "The article: ὁ, ἡ, τό",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.words-2"
+   ],
+   "batch": 5,
+   "intro": "Greek has a word for “the” (the article), but none for “a”. The article changes to match its noun in gender, case and number, so it is a great clue to what a noun is doing in the sentence.",
+   "teach": "Recite the singular article in all three genders.",
+   "talk": "Ask {her} to chant the article table: ὁ, τόν, τοῦ, τῷ…"
+  },
+  {
+   "id": "greek.nouns-2",
+   "title": "Nouns: the second declension (λόγος, δῶρον)",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.article"
+   ],
+   "batch": 5,
+   "intro": "In Greek the ending of a noun tells you its job. Nominative: the subject. Accusative: the object. Genitive: “of”. Dative: “to” or “for”. λόγος, λόγον, λόγου, λόγῳ…",
+   "teach": "Explain the four cases using ὁ ἵππος as the example.",
+   "talk": "Ask {her} which case the words for “of the god” would be in."
+  },
+  {
+   "id": "greek.nouns-1",
+   "title": "Nouns: the first declension (τιμή, χώρα)",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.nouns-2"
+   ],
+   "batch": 5,
+   "intro": "Feminine nouns ending -η or -α. The same four cases, different endings: τιμή, τιμήν, τιμῆς, τιμῇ. Words ending -α after ε, ι or ρ keep the α all the way through the singular.",
+   "teach": "Explain the difference between the τιμή and χώρα patterns.",
+   "talk": "Ask {her} to decline “the voice” (ἡ φωνή) in the singular."
+  },
+  {
+   "id": "greek.verbs-1",
+   "title": "Verbs: the present tense and εἰμί",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.words-3"
+   ],
+   "batch": 5,
+   "intro": "The ending of a verb tells you who is doing it: λύω (I free), λύεις (you free), λύει (he/she frees), λύομεν, λύετε, λύουσι(ν). “To be” is irregular, as in English: εἰμί, εἶ, ἐστί(ν)…",
+   "teach": "Chant the present tense of λύω and explain each ending.",
+   "talk": "Ask {her} the Greek for “we are” and “they are”."
+  },
+  {
+   "id": "greek.sentences",
+   "title": "Reading sentences",
+   "kind": "facts",
+   "prereqs": [
+    "greek.nouns-2",
+    "greek.verbs-1"
+   ],
+   "batch": 5,
+   "intro": "Now read whole sentences. Find the verb first, then the nominative (who does it), then the accusative (to whom). Greek word order is flexible: the endings carry the meaning.",
+   "teach": "Translate a sentence and explain how you found the subject.",
+   "talk": "Ask {her} to translate a Greek sentence aloud for you."
+  },
+  {
+   "id": "greek.prepositions",
+   "title": "Prepositions and their cases",
+   "kind": "facts",
+   "prereqs": [
+    "greek.sentences"
+   ],
+   "batch": 5,
+   "intro": "Prepositions (in, into, out of, from, towards…) each take a particular case. ἐν takes the dative, εἰς the accusative, ἐκ the genitive. Some change meaning with the case.",
+   "teach": "Explain the difference between ἐν τῷ οἴκῳ and εἰς τὸν οἶκον.",
+   "talk": "Ask {her}: which case follows ἐκ, and what does it mean?"
+  },
+  {
+   "id": "greek.adjectives",
+   "title": "Adjectives",
+   "kind": "facts",
+   "prereqs": [
+    "greek.nouns-1"
+   ],
+   "batch": 5,
+   "intro": "Adjectives agree with their nouns: καλός, καλή, καλόν. The position of the article matters too: ὁ καλὸς ἵππος is “the beautiful horse”, but ὁ ἵππος καλός is “the horse is beautiful”.",
+   "teach": "Explain the difference between ὁ σοφὸς στρατηγός and ὁ στρατηγὸς σοφός.",
+   "talk": "Ask {her} which English words come from καλός and μικρός."
+  },
+  {
+   "id": "greek.tenses",
+   "title": "The past and the future: imperfect and future tenses",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.verbs-1"
+   ],
+   "batch": 5,
+   "intro": "The imperfect (“I was freeing”) adds an augment, ἐ-, to the front: ἔλυον. The future (“I will free”) adds a σ before the ending: λύσω. Spot the clue, then read the ending for the person.",
+   "teach": "Explain how to tell ἔλυον from λύσω at a glance.",
+   "talk": "Ask {her} what the augment is."
+  },
+  {
+   "id": "greek.particles",
+   "title": "Little words that matter: particles and word order",
+   "kind": "facts",
+   "prereqs": [
+    "greek.sentences"
+   ],
+   "batch": 5,
+   "intro": "Greek loves small connecting words: καί, ἀλλά, γάρ, οὖν, μέν… δέ. Some can never come first in a sentence. Spotting them shows how the ideas link.",
+   "teach": "Explain what μέν… δέ does in a sentence.",
+   "talk": "Ask {her} to find γάρ in the Theseus story and translate the sentence."
+  },
+  {
+   "id": "greek.roots",
+   "title": "Greek inside English",
+   "kind": "facts",
+   "prereqs": [
+    "greek.words-2"
+   ],
+   "links": [
+    "english",
+    "science"
+   ],
+   "batch": 6,
+   "intro": "Science, medicine and technology speak Greek: telephone, biology, democracy, dinosaur. Knowing the roots lets you work out words you have never seen before.",
+   "teach": "Take a long scientific word and break it into its Greek parts.",
+   "talk": "Pick a word from the news and ask {her} whether it has Greek inside it."
+  },
+  {
+   "id": "greek.culture",
+   "title": "Gods, games, theatre and Homer",
+   "kind": "facts",
+   "prereqs": [
+    "greek.alphabet-1"
+   ],
+   "links": [
+    "history"
+   ],
+   "batch": 6,
+   "intro": "The language comes with a world: twelve Olympian gods, the first Olympic Games, theatres seating thousands, and Homer’s two great poems, the Iliad and the Odyssey.",
+   "teach": "Explain the difference between the Iliad and the Odyssey.",
+   "talk": "Ask {her} which Olympian god {she} would most like to meet, and why."
+  },
+  {
+   "id": "greek.myth-1",
+   "title": "Story: Theseus and the Minotaur",
+   "kind": "reading",
+   "prereqs": [
+    "greek.sentences",
+    "greek.prepositions"
+   ],
+   "batch": 6,
+   "intro": "A whole story in Greek, using words you know plus a glossary. Read it twice, aloud if you can. Theseus, prince of Athens, goes into the labyrinth.",
+   "teach": "Retell the story in English, then translate your favourite sentence.",
+   "talk": "Ask {her} to read a sentence of the story aloud in Greek and translate it."
+  },
+  {
+   "id": "greek.myth-2",
+   "title": "Stories: Odysseus and the Cyclops, Perseus and Medusa",
+   "kind": "reading",
+   "prereqs": [
+    "greek.myth-1",
+    "greek.particles"
+   ],
+   "batch": 6,
+   "intro": "Two more adapted myths: Odysseus tricks the Cyclops with a famous pun, and Perseus faces Medusa with help from two gods.",
+   "teach": "Explain the joke in Odysseus’ false name.",
+   "talk": "Ask {her} why the other Cyclopes did not come to help."
+  },
+  {
+   "id": "greek.aorist",
+   "title": "The aorist: “I freed”",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "greek.tenses"
+   ],
+   "batch": 5,
+   "intro": "The aorist is the most common past tense in stories: a single completed action. The weak aorist adds an augment and -σα: ἔλυσα, “I freed”. Some common verbs have strong aorists you just learn: ἔφυγον, “I fled”.",
+   "teach": "Explain the difference between ἔλυον and ἔλυσα.",
+   "talk": "Ask {her} the aorist of λύω and what it means."
+  },
+  {
+   "id": "greek.third-decl",
+   "title": "The third declension: a taster",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "greek.nouns-1"
+   ],
+   "batch": 5,
+   "intro": "The third declension is the big, varied family: φύλαξ (guard), ὄνομα (name), ἀνήρ (man), πόλις (city). Find the stem from the genitive, then add the endings.",
+   "teach": "Explain why you need the genitive to decline φύλαξ.",
+   "talk": "Ask {her} which English words come from πόλις and ὄνομα."
+  },
+  {
+   "id": "greek.participles",
+   "title": "Participles: a taster",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "greek.aorist",
+    "greek.adjectives"
+   ],
+   "batch": 5,
+   "intro": "A participle is a verb used as an adjective: λύων means “freeing”. Greek uses them everywhere, often where English would use “who”, “while” or “after”.",
+   "teach": "Translate ὁ φεύγων στρατηγός two different ways.",
+   "talk": "Ask {her} what ὁ λύων means."
+  }
+ ],
+ "items": [
+  {
+   "id": "greek.a1.name.alpha",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **α**?",
+   "answer": "alpha",
+   "distractors": [
+    "gamma",
+    "zeta",
+    "iota"
+   ],
+   "explain": "α (capital Α) is alpha: it sounds like “a”, as in “cat” (or longer, as in “father”).",
+   "accept": [],
+   "learn": "**α  Α**  alpha: “a”, as in “cat” (or longer, as in “father”)"
+  },
+  {
+   "id": "greek.a1.sound.alpha",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **α** make?",
+   "answer": "“a”, as in “cat” (or longer, as in “father”)",
+   "distractors": [
+    "“d”, as in “dog”",
+    "a long “e”, like the “ai” in “fair”",
+    "“k”, as in “king”"
+   ],
+   "explain": "α is alpha: “a”, as in “cat” (or longer, as in “father”). In English letters it is written a.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.name.beta",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **β**?",
+   "answer": "beta",
+   "distractors": [
+    "delta",
+    "eta",
+    "kappa"
+   ],
+   "explain": "β (capital Β) is beta: it sounds like “b”, as in “bat”.",
+   "accept": [],
+   "learn": "**β  Β**  beta: “b”, as in “bat”"
+  },
+  {
+   "id": "greek.a1.sound.beta",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **β** make?",
+   "answer": "“b”, as in “bat”",
+   "distractors": [
+    "a short “e”, as in “pet”",
+    "“th”, as in “thin”",
+    "“l”, as in “lion”"
+   ],
+   "explain": "β is beta: “b”, as in “bat”. In English letters it is written b.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.name.gamma",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **γ**?",
+   "answer": "gamma",
+   "distractors": [
+    "epsilon",
+    "theta",
+    "lambda"
+   ],
+   "explain": "γ (capital Γ) is gamma: it sounds like a hard “g”, as in “go”.",
+   "accept": [],
+   "learn": "**γ  Γ**  gamma: a hard “g”, as in “go”"
+  },
+  {
+   "id": "greek.a1.sound.gamma",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **γ** make?",
+   "answer": "a hard “g”, as in “go”",
+   "distractors": [
+    "“zd” or “dz”, as in “adze”",
+    "“i”, as in “pit” (or long, as in “machine”)",
+    "“m”, as in “mother”"
+   ],
+   "explain": "γ is gamma: a hard “g”, as in “go”. In English letters it is written g.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.name.delta",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **δ**?",
+   "answer": "delta",
+   "distractors": [
+    "zeta",
+    "iota",
+    "mu"
+   ],
+   "explain": "δ (capital Δ) is delta: it sounds like “d”, as in “dog”.",
+   "accept": [],
+   "learn": "**δ  Δ**  delta: “d”, as in “dog”"
+  },
+  {
+   "id": "greek.a1.sound.delta",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **δ** make?",
+   "answer": "“d”, as in “dog”",
+   "distractors": [
+    "a long “e”, like the “ai” in “fair”",
+    "“k”, as in “king”",
+    "“a”, as in “cat” (or longer, as in “father”)"
+   ],
+   "explain": "δ is delta: “d”, as in “dog”. In English letters it is written d.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.name.epsilon",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **ε**?",
+   "answer": "epsilon",
+   "distractors": [
+    "eta",
+    "kappa",
+    "alpha"
+   ],
+   "explain": "ε (capital Ε) is epsilon: it sounds like a short “e”, as in “pet”.",
+   "accept": [],
+   "learn": "**ε  Ε**  epsilon: a short “e”, as in “pet”"
+  },
+  {
+   "id": "greek.a1.sound.epsilon",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **ε** make?",
+   "answer": "a short “e”, as in “pet”",
+   "distractors": [
+    "“th”, as in “thin”",
+    "“l”, as in “lion”",
+    "“b”, as in “bat”"
+   ],
+   "explain": "ε is epsilon: a short “e”, as in “pet”. In English letters it is written e.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.name.zeta",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **ζ**?",
+   "answer": "zeta",
+   "distractors": [
+    "theta",
+    "lambda",
+    "beta"
+   ],
+   "explain": "ζ (capital Ζ) is zeta: it sounds like “zd” or “dz”, as in “adze”.",
+   "accept": [],
+   "learn": "**ζ  Ζ**  zeta: “zd” or “dz”, as in “adze”"
+  },
+  {
+   "id": "greek.a1.sound.zeta",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **ζ** make?",
+   "answer": "“zd” or “dz”, as in “adze”",
+   "distractors": [
+    "“i”, as in “pit” (or long, as in “machine”)",
+    "“m”, as in “mother”",
+    "a hard “g”, as in “go”"
+   ],
+   "explain": "ζ is zeta: “zd” or “dz”, as in “adze”. In English letters it is written z.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.name.eta",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **η**?",
+   "answer": "eta",
+   "distractors": [
+    "iota",
+    "mu",
+    "gamma"
+   ],
+   "explain": "η (capital Η) is eta: it sounds like a long “e”, like the “ai” in “fair”.",
+   "accept": [],
+   "learn": "**η  Η**  eta: a long “e”, like the “ai” in “fair”"
+  },
+  {
+   "id": "greek.a1.sound.eta",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **η** make?",
+   "answer": "a long “e”, like the “ai” in “fair”",
+   "distractors": [
+    "“k”, as in “king”",
+    "“a”, as in “cat” (or longer, as in “father”)",
+    "“d”, as in “dog”"
+   ],
+   "explain": "η is eta: a long “e”, like the “ai” in “fair”. In English letters it is written e (or ē).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.name.theta",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **θ**?",
+   "answer": "theta",
+   "distractors": [
+    "kappa",
+    "alpha",
+    "delta"
+   ],
+   "explain": "θ (capital Θ) is theta: it sounds like “th”, as in “thin”.",
+   "accept": [],
+   "learn": "**θ  Θ**  theta: “th”, as in “thin”"
+  },
+  {
+   "id": "greek.a1.sound.theta",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **θ** make?",
+   "answer": "“th”, as in “thin”",
+   "distractors": [
+    "“l”, as in “lion”",
+    "“b”, as in “bat”",
+    "a short “e”, as in “pet”"
+   ],
+   "explain": "θ is theta: “th”, as in “thin”. In English letters it is written th.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.name.iota",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **ι**?",
+   "answer": "iota",
+   "distractors": [
+    "lambda",
+    "beta",
+    "epsilon"
+   ],
+   "explain": "ι (capital Ι) is iota: it sounds like “i”, as in “pit” (or long, as in “machine”).",
+   "accept": [],
+   "learn": "**ι  Ι**  iota: “i”, as in “pit” (or long, as in “machine”)"
+  },
+  {
+   "id": "greek.a1.sound.iota",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **ι** make?",
+   "answer": "“i”, as in “pit” (or long, as in “machine”)",
+   "distractors": [
+    "“m”, as in “mother”",
+    "a hard “g”, as in “go”",
+    "“zd” or “dz”, as in “adze”"
+   ],
+   "explain": "ι is iota: “i”, as in “pit” (or long, as in “machine”). In English letters it is written i.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.name.kappa",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **κ**?",
+   "answer": "kappa",
+   "distractors": [
+    "mu",
+    "gamma",
+    "zeta"
+   ],
+   "explain": "κ (capital Κ) is kappa: it sounds like “k”, as in “king”.",
+   "accept": [],
+   "learn": "**κ  Κ**  kappa: “k”, as in “king”"
+  },
+  {
+   "id": "greek.a1.sound.kappa",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **κ** make?",
+   "answer": "“k”, as in “king”",
+   "distractors": [
+    "“a”, as in “cat” (or longer, as in “father”)",
+    "“d”, as in “dog”",
+    "a long “e”, like the “ai” in “fair”"
+   ],
+   "explain": "κ is kappa: “k”, as in “king”. In English letters it is written k (or c).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.name.lambda",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **λ**?",
+   "answer": "lambda",
+   "distractors": [
+    "alpha",
+    "delta",
+    "eta"
+   ],
+   "explain": "λ (capital Λ) is lambda: it sounds like “l”, as in “lion”.",
+   "accept": [
+    "lamda",
+    "labda"
+   ],
+   "learn": "**λ  Λ**  lambda: “l”, as in “lion”"
+  },
+  {
+   "id": "greek.a1.sound.lambda",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **λ** make?",
+   "answer": "“l”, as in “lion”",
+   "distractors": [
+    "“b”, as in “bat”",
+    "a short “e”, as in “pet”",
+    "“th”, as in “thin”"
+   ],
+   "explain": "λ is lambda: “l”, as in “lion”. In English letters it is written l.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.name.mu",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **μ**?",
+   "answer": "mu",
+   "distractors": [
+    "beta",
+    "epsilon",
+    "theta"
+   ],
+   "explain": "μ (capital Μ) is mu: it sounds like “m”, as in “mother”.",
+   "accept": [
+    "mew"
+   ],
+   "learn": "**μ  Μ**  mu: “m”, as in “mother”"
+  },
+  {
+   "id": "greek.a1.sound.mu",
+   "topic": "greek.alphabet-1",
+   "kind": "fact",
+   "prompt": "What sound does **μ** make?",
+   "answer": "“m”, as in “mother”",
+   "distractors": [
+    "a hard “g”, as in “go”",
+    "“zd” or “dz”, as in “adze”",
+    "“i”, as in “pit” (or long, as in “machine”)"
+   ],
+   "explain": "μ is mu: “m”, as in “mother”. In English letters it is written m.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.nu",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **ν**?",
+   "answer": "nu",
+   "distractors": [
+    "omicron",
+    "sigma",
+    "phi"
+   ],
+   "explain": "ν (capital Ν) is nu: it sounds like “n”, as in “net”.",
+   "accept": [
+    "new"
+   ],
+   "learn": "**ν  Ν**  nu: “n”, as in “net”"
+  },
+  {
+   "id": "greek.a2.sound.nu",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **ν** make?",
+   "answer": "“n”, as in “net”",
+   "distractors": [
+    "“p”, as in “pen”",
+    "“t”, as in “top”",
+    "“ch”, as in Scottish “loch”"
+   ],
+   "explain": "ν is nu: “n”, as in “net”. In English letters it is written n.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.xi",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **ξ**?",
+   "answer": "xi",
+   "distractors": [
+    "pi",
+    "tau",
+    "chi"
+   ],
+   "explain": "ξ (capital Ξ) is xi: it sounds like “x”, as in “box” (ks).",
+   "accept": [
+    "ksi"
+   ],
+   "learn": "**ξ  Ξ**  xi: “x”, as in “box” (ks)"
+  },
+  {
+   "id": "greek.a2.sound.xi",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **ξ** make?",
+   "answer": "“x”, as in “box” (ks)",
+   "distractors": [
+    "“r”, slightly rolled",
+    "like French “u” in “tu” (lips rounded, saying “ee”)",
+    "“ps”, as in “lapse”"
+   ],
+   "explain": "ξ is xi: “x”, as in “box” (ks). In English letters it is written x.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.omicron",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **ο**?",
+   "answer": "omicron",
+   "distractors": [
+    "rho",
+    "upsilon",
+    "psi"
+   ],
+   "explain": "ο (capital Ο) is omicron: it sounds like a short “o”, as in “pot”.",
+   "accept": [
+    "omikron"
+   ],
+   "learn": "**ο  Ο**  omicron: a short “o”, as in “pot”"
+  },
+  {
+   "id": "greek.a2.sound.omicron",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **ο** make?",
+   "answer": "a short “o”, as in “pot”",
+   "distractors": [
+    "“s”, as in “sun” (written ς at the end of a word)",
+    "“ph”: “p” with a puff of air (today usually said “f”)",
+    "a long “o”, as in “saw”"
+   ],
+   "explain": "ο is omicron: a short “o”, as in “pot”. In English letters it is written o.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.pi",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **π**?",
+   "answer": "pi",
+   "distractors": [
+    "sigma",
+    "phi",
+    "omega"
+   ],
+   "explain": "π (capital Π) is pi: it sounds like “p”, as in “pen”.",
+   "accept": [],
+   "learn": "**π  Π**  pi: “p”, as in “pen”"
+  },
+  {
+   "id": "greek.a2.sound.pi",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **π** make?",
+   "answer": "“p”, as in “pen”",
+   "distractors": [
+    "“t”, as in “top”",
+    "“ch”, as in Scottish “loch”",
+    "“n”, as in “net”"
+   ],
+   "explain": "π is pi: “p”, as in “pen”. In English letters it is written p.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.rho",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **ρ**?",
+   "answer": "rho",
+   "distractors": [
+    "tau",
+    "chi",
+    "nu"
+   ],
+   "explain": "ρ (capital Ρ) is rho: it sounds like “r”, slightly rolled.",
+   "accept": [],
+   "learn": "**ρ  Ρ**  rho: “r”, slightly rolled"
+  },
+  {
+   "id": "greek.a2.sound.rho",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **ρ** make?",
+   "answer": "“r”, slightly rolled",
+   "distractors": [
+    "like French “u” in “tu” (lips rounded, saying “ee”)",
+    "“ps”, as in “lapse”",
+    "“x”, as in “box” (ks)"
+   ],
+   "explain": "ρ is rho: “r”, slightly rolled. In English letters it is written r.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.sigma",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **σ**?",
+   "answer": "sigma",
+   "distractors": [
+    "upsilon",
+    "psi",
+    "xi"
+   ],
+   "explain": "σ (capital Σ) is sigma: it sounds like “s”, as in “sun” (written ς at the end of a word).",
+   "accept": [],
+   "learn": "**σ  Σ**  sigma: “s”, as in “sun” (written ς at the end of a word)"
+  },
+  {
+   "id": "greek.a2.sound.sigma",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **σ** make?",
+   "answer": "“s”, as in “sun” (written ς at the end of a word)",
+   "distractors": [
+    "“ph”: “p” with a puff of air (today usually said “f”)",
+    "a long “o”, as in “saw”",
+    "a short “o”, as in “pot”"
+   ],
+   "explain": "σ is sigma: “s”, as in “sun” (written ς at the end of a word). In English letters it is written s.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.tau",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **τ**?",
+   "answer": "tau",
+   "distractors": [
+    "phi",
+    "omega",
+    "omicron"
+   ],
+   "explain": "τ (capital Τ) is tau: it sounds like “t”, as in “top”.",
+   "accept": [],
+   "learn": "**τ  Τ**  tau: “t”, as in “top”"
+  },
+  {
+   "id": "greek.a2.sound.tau",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **τ** make?",
+   "answer": "“t”, as in “top”",
+   "distractors": [
+    "“ch”, as in Scottish “loch”",
+    "“n”, as in “net”",
+    "“p”, as in “pen”"
+   ],
+   "explain": "τ is tau: “t”, as in “top”. In English letters it is written t.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.upsilon",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **υ**?",
+   "answer": "upsilon",
+   "distractors": [
+    "chi",
+    "nu",
+    "pi"
+   ],
+   "explain": "υ (capital Υ) is upsilon: it sounds like like French “u” in “tu” (lips rounded, saying “ee”).",
+   "accept": [
+    "ypsilon"
+   ],
+   "learn": "**υ  Υ**  upsilon: like French “u” in “tu” (lips rounded, saying “ee”)"
+  },
+  {
+   "id": "greek.a2.sound.upsilon",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **υ** make?",
+   "answer": "like French “u” in “tu” (lips rounded, saying “ee”)",
+   "distractors": [
+    "“ps”, as in “lapse”",
+    "“x”, as in “box” (ks)",
+    "“r”, slightly rolled"
+   ],
+   "explain": "υ is upsilon: like French “u” in “tu” (lips rounded, saying “ee”). In English letters it is written u (or y).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.phi",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **φ**?",
+   "answer": "phi",
+   "distractors": [
+    "psi",
+    "xi",
+    "rho"
+   ],
+   "explain": "φ (capital Φ) is phi: it sounds like “ph”: “p” with a puff of air (today usually said “f”).",
+   "accept": [],
+   "learn": "**φ  Φ**  phi: “ph”: “p” with a puff of air (today usually said “f”)"
+  },
+  {
+   "id": "greek.a2.sound.phi",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **φ** make?",
+   "answer": "“ph”: “p” with a puff of air (today usually said “f”)",
+   "distractors": [
+    "a long “o”, as in “saw”",
+    "a short “o”, as in “pot”",
+    "“s”, as in “sun” (written ς at the end of a word)"
+   ],
+   "explain": "φ is phi: “ph”: “p” with a puff of air (today usually said “f”). In English letters it is written ph.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.chi",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **χ**?",
+   "answer": "chi",
+   "distractors": [
+    "omega",
+    "omicron",
+    "sigma"
+   ],
+   "explain": "χ (capital Χ) is chi: it sounds like “ch”, as in Scottish “loch”.",
+   "accept": [
+    "khi"
+   ],
+   "learn": "**χ  Χ**  chi: “ch”, as in Scottish “loch”"
+  },
+  {
+   "id": "greek.a2.sound.chi",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **χ** make?",
+   "answer": "“ch”, as in Scottish “loch”",
+   "distractors": [
+    "“n”, as in “net”",
+    "“p”, as in “pen”",
+    "“t”, as in “top”"
+   ],
+   "explain": "χ is chi: “ch”, as in Scottish “loch”. In English letters it is written ch (or kh).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.psi",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **ψ**?",
+   "answer": "psi",
+   "distractors": [
+    "nu",
+    "pi",
+    "tau"
+   ],
+   "explain": "ψ (capital Ψ) is psi: it sounds like “ps”, as in “lapse”.",
+   "accept": [],
+   "learn": "**ψ  Ψ**  psi: “ps”, as in “lapse”"
+  },
+  {
+   "id": "greek.a2.sound.psi",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **ψ** make?",
+   "answer": "“ps”, as in “lapse”",
+   "distractors": [
+    "“x”, as in “box” (ks)",
+    "“r”, slightly rolled",
+    "like French “u” in “tu” (lips rounded, saying “ee”)"
+   ],
+   "explain": "ψ is psi: “ps”, as in “lapse”. In English letters it is written ps.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a2.name.omega",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What is the name of the Greek letter **ω**?",
+   "answer": "omega",
+   "distractors": [
+    "xi",
+    "rho",
+    "upsilon"
+   ],
+   "explain": "ω (capital Ω) is omega: it sounds like a long “o”, as in “saw”.",
+   "accept": [],
+   "learn": "**ω  Ω**  omega: a long “o”, as in “saw”"
+  },
+  {
+   "id": "greek.a2.sound.omega",
+   "topic": "greek.alphabet-2",
+   "kind": "fact",
+   "prompt": "What sound does **ω** make?",
+   "answer": "a long “o”, as in “saw”",
+   "distractors": [
+    "a short “o”, as in “pot”",
+    "“s”, as in “sun” (written ς at the end of a word)",
+    "“ph”: “p” with a puff of air (today usually said “f”)"
+   ],
+   "explain": "ω is omega: a long “o”, as in “saw”. In English letters it is written o (or ō).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.a1.cap.g",
+   "topic": "greek.alphabet-1",
+   "kind": "mcq",
+   "prompt": "Which capital letter goes with **γ** (gamma)?",
+   "options": [
+    {
+     "text": "Γ",
+     "correct": true
+    },
+    {
+     "text": "Λ",
+     "correct": false,
+     "feedback": "Λ is capital lambda (λ)."
+    },
+    {
+     "text": "Π",
+     "correct": false,
+     "feedback": "Π is capital pi (π)."
+    },
+    {
+     "text": "Δ",
+     "correct": false,
+     "feedback": "Δ is capital delta (δ)."
+    }
+   ],
+   "explain": "Capital gamma is Γ, like an upside-down L."
+  },
+  {
+   "id": "greek.a1.cap.d",
+   "topic": "greek.alphabet-1",
+   "kind": "mcq",
+   "prompt": "Which capital letter goes with **δ** (delta)?",
+   "options": [
+    {
+     "text": "Δ",
+     "correct": true
+    },
+    {
+     "text": "Λ",
+     "correct": false,
+     "feedback": "Λ is capital lambda."
+    },
+    {
+     "text": "Α",
+     "correct": false,
+     "feedback": "Α is capital alpha."
+    },
+    {
+     "text": "Θ",
+     "correct": false,
+     "feedback": "Θ is capital theta."
+    }
+   ],
+   "explain": "Capital delta is Δ, the triangle you use in maths for “change in”."
+  },
+  {
+   "id": "greek.a1.cap.l",
+   "topic": "greek.alphabet-1",
+   "kind": "mcq",
+   "prompt": "Which capital letter goes with **λ** (lambda)?",
+   "options": [
+    {
+     "text": "Λ",
+     "correct": true
+    },
+    {
+     "text": "Δ",
+     "correct": false,
+     "feedback": "Δ is capital delta."
+    },
+    {
+     "text": "Γ",
+     "correct": false,
+     "feedback": "Γ is capital gamma."
+    },
+    {
+     "text": "Μ",
+     "correct": false,
+     "feedback": "Μ is capital mu."
+    }
+   ],
+   "explain": "Capital lambda is Λ: a triangle with no bottom."
+  },
+  {
+   "id": "greek.a1.cap.h",
+   "topic": "greek.alphabet-1",
+   "kind": "mcq",
+   "prompt": "The capital letter **Η** looks like an English H. Which Greek letter is it?",
+   "options": [
+    {
+     "text": "eta (η), a long e",
+     "correct": true
+    },
+    {
+     "text": "a letter for the h sound",
+     "correct": false,
+     "feedback": "Ancient Greek has no letter for h: a rough breathing does that job. Η is capital eta."
+    },
+    {
+     "text": "nu (ν)",
+     "correct": false,
+     "feedback": "Capital nu is Ν."
+    }
+   ],
+   "explain": "Η is capital eta. Greek shows the h sound with a rough breathing instead."
+  },
+  {
+   "id": "greek.a1.cap.th",
+   "topic": "greek.alphabet-1",
+   "kind": "mcq",
+   "prompt": "Which capital letter goes with **θ** (theta)?",
+   "options": [
+    {
+     "text": "Θ",
+     "correct": true
+    },
+    {
+     "text": "Ο",
+     "correct": false,
+     "feedback": "Ο is capital omicron."
+    },
+    {
+     "text": "Φ",
+     "correct": false,
+     "feedback": "Φ is capital phi."
+    },
+    {
+     "text": "Ε",
+     "correct": false,
+     "feedback": "Ε is capital epsilon."
+    }
+   ],
+   "explain": "Θ: an O with a bar across it."
+  },
+  {
+   "id": "greek.a1.maths",
+   "topic": "greek.alphabet-1",
+   "kind": "mcq",
+   "prompt": "Which Greek letter do mathematicians usually use for an unknown angle?",
+   "options": [
+    {
+     "text": "θ (theta)",
+     "correct": true
+    },
+    {
+     "text": "μ (mu)",
+     "correct": false,
+     "feedback": "μ is used for “micro” (a millionth) and for the mean."
+    },
+    {
+     "text": "δ (delta)",
+     "correct": false,
+     "feedback": "δ and Δ usually mean a small change."
+    }
+   ],
+   "explain": "θ is the classic angle letter: sin θ, cos θ."
+  },
+  {
+   "id": "greek.a1.alpha",
+   "topic": "greek.alphabet-1",
+   "kind": "mcq",
+   "prompt": "Our word “alphabet” comes from…",
+   "options": [
+    {
+     "text": "the first two Greek letters, alpha and beta",
+     "correct": true
+    },
+    {
+     "text": "a Latin word for “letters”",
+     "correct": false,
+     "feedback": "The Romans borrowed it from the Greek: alpha + beta."
+    },
+    {
+     "text": "the name of the man who invented writing",
+     "correct": false,
+     "feedback": "It is just the first two letters, like saying “the ABC”."
+    }
+   ],
+   "explain": "alpha + beta = alphabet."
+  },
+  {
+   "id": "greek.a2.cap.s",
+   "topic": "greek.alphabet-2",
+   "kind": "mcq",
+   "prompt": "Which capital letter goes with **σ** (sigma)?",
+   "options": [
+    {
+     "text": "Σ",
+     "correct": true
+    },
+    {
+     "text": "Ξ",
+     "correct": false,
+     "feedback": "Ξ is capital xi."
+    },
+    {
+     "text": "Ε",
+     "correct": false,
+     "feedback": "Ε is capital epsilon."
+    },
+    {
+     "text": "Ζ",
+     "correct": false,
+     "feedback": "Ζ is capital zeta."
+    }
+   ],
+   "explain": "Capital sigma is Σ, the sign mathematicians use for “add them all up”."
+  },
+  {
+   "id": "greek.a2.cap.w",
+   "topic": "greek.alphabet-2",
+   "kind": "mcq",
+   "prompt": "Which capital letter goes with **ω** (omega)?",
+   "options": [
+    {
+     "text": "Ω",
+     "correct": true
+    },
+    {
+     "text": "Ο",
+     "correct": false,
+     "feedback": "Ο is capital omicron, the short o."
+    },
+    {
+     "text": "Ψ",
+     "correct": false,
+     "feedback": "Ψ is capital psi."
+    },
+    {
+     "text": "Υ",
+     "correct": false,
+     "feedback": "Υ is capital upsilon."
+    }
+   ],
+   "explain": "Ω, capital omega: “the Alpha and the Omega” means the beginning and the end. Physicists use Ω for ohms."
+  },
+  {
+   "id": "greek.a2.cap.p",
+   "topic": "greek.alphabet-2",
+   "kind": "mcq",
+   "prompt": "Which capital letter goes with **π** (pi)?",
+   "options": [
+    {
+     "text": "Π",
+     "correct": true
+    },
+    {
+     "text": "Ρ",
+     "correct": false,
+     "feedback": "Ρ is capital rho, an r."
+    },
+    {
+     "text": "Τ",
+     "correct": false,
+     "feedback": "Τ is capital tau."
+    },
+    {
+     "text": "Φ",
+     "correct": false,
+     "feedback": "Φ is capital phi."
+    }
+   ],
+   "explain": "Capital pi is Π. Lower-case π is the famous 3.14159…"
+  },
+  {
+   "id": "greek.a2.cap.r",
+   "topic": "greek.alphabet-2",
+   "kind": "mcq",
+   "prompt": "The capital letter **Ρ** looks like an English P. What sound does it make?",
+   "options": [
+    {
+     "text": "r (it is rho)",
+     "correct": true
+    },
+    {
+     "text": "p",
+     "correct": false,
+     "feedback": "Capital pi is Π. Ρ is rho, an r."
+    },
+    {
+     "text": "ph",
+     "correct": false,
+     "feedback": "ph is φ, phi."
+    }
+   ],
+   "explain": "Ρ, ρ is rho: an r. A false friend!"
+  },
+  {
+   "id": "greek.a2.ff.v",
+   "topic": "greek.alphabet-2",
+   "kind": "mcq",
+   "prompt": "The letter **ν** looks like an English v. What sound does it make?",
+   "options": [
+    {
+     "text": "n (it is nu)",
+     "correct": true
+    },
+    {
+     "text": "v",
+     "correct": false,
+     "feedback": "Ancient Greek has no v. ν is nu."
+    },
+    {
+     "text": "u",
+     "correct": false,
+     "feedback": "u is υ, upsilon."
+    }
+   ],
+   "explain": "ν is nu, an n: another false friend."
+  },
+  {
+   "id": "greek.a2.ff.x",
+   "topic": "greek.alphabet-2",
+   "kind": "mcq",
+   "prompt": "The letter **χ** looks like an English x. What sound does it make?",
+   "options": [
+    {
+     "text": "ch, as in “loch” (it is chi)",
+     "correct": true
+    },
+    {
+     "text": "x, as in “box”",
+     "correct": false,
+     "feedback": "x is ξ, xi."
+    },
+    {
+     "text": "k",
+     "correct": false,
+     "feedback": "k is κ, kappa."
+    }
+   ],
+   "explain": "χ is chi. The x sound is ξ, xi."
+  },
+  {
+   "id": "greek.a2.ff.w",
+   "topic": "greek.alphabet-2",
+   "kind": "mcq",
+   "prompt": "The letter **ω** looks like an English w. What sound does it make?",
+   "options": [
+    {
+     "text": "a long o (it is omega)",
+     "correct": true
+    },
+    {
+     "text": "w",
+     "correct": false,
+     "feedback": "Ancient Greek has no w. ω is omega."
+    },
+    {
+     "text": "m",
+     "correct": false,
+     "feedback": "m is μ."
+    }
+   ],
+   "explain": "ω is omega, “big o”: a long o. ο, omicron, is “little o”: a short o."
+  },
+  {
+   "id": "greek.a2.sigma",
+   "topic": "greek.alphabet-2",
+   "kind": "mcq",
+   "prompt": "Sigma has two lower-case shapes, σ and ς. When do you use ς?",
+   "options": [
+    {
+     "text": "At the end of a word",
+     "correct": true
+    },
+    {
+     "text": "At the start of a word",
+     "correct": false,
+     "feedback": "σ is used at the start and in the middle."
+    },
+    {
+     "text": "For a double s",
+     "correct": false,
+     "feedback": "A double s is σσ, as in θάλασσα."
+    }
+   ],
+   "explain": "ς is final sigma: λόγος, but σοφός."
+  },
+  {
+   "id": "greek.a2.double",
+   "topic": "greek.alphabet-2",
+   "kind": "mcq",
+   "prompt": "Which letters stand for two sounds at once?",
+   "options": [
+    {
+     "text": "ζ (zd), ξ (ks) and ψ (ps)",
+     "correct": true
+    },
+    {
+     "text": "α, ε and ο",
+     "correct": false,
+     "feedback": "Those are single vowels."
+    },
+    {
+     "text": "θ, φ and χ",
+     "correct": false,
+     "feedback": "These are single sounds that we happen to write with two English letters (th, ph, ch)."
+    }
+   ],
+   "explain": "ζ, ξ and ψ each stand for two sounds: “zd”, “ks”, “ps”."
+  },
+  {
+   "id": "greek.a2.order",
+   "topic": "greek.alphabet-2",
+   "kind": "order",
+   "prompt": "Put these letters in alphabetical order.",
+   "items": [
+    "ν",
+    "ξ",
+    "ο",
+    "π",
+    "ρ",
+    "σ"
+   ],
+   "labels": null,
+   "explain": "nu, xi, omicron, pi, rho, sigma."
+  },
+  {
+   "id": "greek.reading.tmpl",
+   "topic": "greek.reading",
+   "kind": "template",
+   "gen": "y8gTranslit",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.rd.rough",
+   "topic": "greek.reading",
+   "kind": "mcq",
+   "prompt": "What does the rough breathing (the reversed comma ʽ on ἵ in ἵππος) do?",
+   "options": [
+    {
+     "text": "Adds an h sound before the vowel: hippos",
+     "correct": true
+    },
+    {
+     "text": "Makes the vowel long",
+     "correct": false,
+     "feedback": "Breathings are about h, not length."
+    },
+    {
+     "text": "Shows the word is a name",
+     "correct": false,
+     "feedback": "Every word starting with a vowel has a breathing."
+    }
+   ],
+   "explain": "ἵππος = hippos. The smooth breathing (ʼ), as in ἄνθρωπος, adds nothing."
+  },
+  {
+   "id": "greek.rd.smooth",
+   "topic": "greek.reading",
+   "kind": "mcq",
+   "prompt": "How do you say **ἀδελφός**?",
+   "options": [
+    {
+     "text": "adelphos (no h)",
+     "correct": true
+    },
+    {
+     "text": "hadelphos",
+     "correct": false,
+     "feedback": "The breathing is smooth (ʼ), so no h."
+    },
+    {
+     "text": "adelfus",
+     "correct": false,
+     "feedback": "ο is a short o: -os."
+    }
+   ],
+   "explain": "A smooth breathing (ʼ) means no h."
+  },
+  {
+   "id": "greek.rd.rho",
+   "topic": "greek.reading",
+   "kind": "mcq",
+   "prompt": "A word starting with ρ always has a rough breathing: ῥήτωρ (speaker). How is it written in English letters?",
+   "options": [
+    {
+     "text": "rhetor (the root of “rhetoric”)",
+     "correct": true
+    },
+    {
+     "text": "retor",
+     "correct": false,
+     "feedback": "The rough breathing on ρ becomes rh in English spelling."
+    },
+    {
+     "text": "hretor",
+     "correct": false,
+     "feedback": "With ρ, the h goes after the r: rh."
+    }
+   ],
+   "explain": "Initial ῥ becomes rh: rhetoric, rhinoceros (nose-horn), rhododendron."
+  },
+  {
+   "id": "greek.rd.ou",
+   "topic": "greek.reading",
+   "kind": "fact",
+   "prompt": "What sound does the diphthong **ου** make?",
+   "answer": "oo, as in “food”",
+   "distractors": [
+    "ow, as in “cow”",
+    "oh, as in “go”",
+    "oi, as in “oil”"
+   ],
+   "explain": "ου says “oo”: Μέδουσα is Medousa (Medusa). αυ says “ow”, οι says “oi”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.rd.ai",
+   "topic": "greek.reading",
+   "kind": "fact",
+   "prompt": "What sound does the diphthong **αι** make?",
+   "answer": "ai, as in “aisle”",
+   "distractors": [
+    "ay, as in “day”",
+    "ah, as in “father”",
+    "ee, as in “see”"
+   ],
+   "explain": "αι says “eye”: καί (and) sounds like “kai”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.rd.au",
+   "topic": "greek.reading",
+   "kind": "fact",
+   "prompt": "What sound does the diphthong **αυ** make?",
+   "answer": "ow, as in “cow”",
+   "distractors": [
+    "oo, as in “food”",
+    "aw, as in “saw”",
+    "ay, as in “day”"
+   ],
+   "explain": "αυ says “ow”: ναύτης (sailor) gives us “nautical”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.rd.gg",
+   "topic": "greek.reading",
+   "kind": "fact",
+   "prompt": "In **ἄγγελος** (messenger), how is the γγ pronounced?",
+   "answer": "ng, as in “angle”",
+   "distractors": [
+    "gg, as in “egg”",
+    "j, as in “jam”",
+    "g, as in “go”"
+   ],
+   "explain": "Before γ, κ, χ or ξ, a γ says “n”: ἄγγελος = angelos, the root of “angel”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.rd.isub",
+   "topic": "greek.reading",
+   "kind": "mcq",
+   "prompt": "What is the small mark under the ω in **λόγῳ**?",
+   "options": [
+    {
+     "text": "An iota subscript: an ι written underneath, usually not pronounced",
+     "correct": true
+    },
+    {
+     "text": "A comma",
+     "correct": false,
+     "feedback": "It is part of the word: a little ι."
+    },
+    {
+     "text": "A sign that the word is plural",
+     "correct": false,
+     "feedback": "λόγῳ is the dative singular."
+    }
+   ],
+   "explain": "ᾳ, ῃ, ῳ: an iota written underneath. You will see it in the dative singular a lot."
+  },
+  {
+   "id": "greek.rd.question",
+   "topic": "greek.reading",
+   "kind": "mcq",
+   "prompt": "What does a **;** mean at the end of a Greek sentence?",
+   "options": [
+    {
+     "text": "It is a question mark",
+     "correct": true
+    },
+    {
+     "text": "It is a semicolon, as in English",
+     "correct": false,
+     "feedback": "In Greek, ; is the question mark. The raised dot · is like a semicolon or colon."
+    },
+    {
+     "text": "It means the sentence continues",
+     "correct": false,
+     "feedback": "It marks a question."
+    }
+   ],
+   "explain": "Greek ; = English ?. The raised dot · = English ; or :."
+  },
+  {
+   "id": "greek.rd.accent",
+   "topic": "greek.reading",
+   "kind": "mcq",
+   "prompt": "What do the accents (ά, ὰ, ᾶ) on Greek words show?",
+   "options": [
+    {
+     "text": "Which syllable to stress (originally the pitch of the voice)",
+     "correct": true
+    },
+    {
+     "text": "That the vowel is long",
+     "correct": false,
+     "feedback": "Accents are about pitch and stress, not length."
+    },
+    {
+     "text": "That the word is important",
+     "correct": false,
+     "feedback": "Almost every word has one."
+    }
+   ],
+   "explain": "Ancient Greek accents showed a rise and fall in pitch. Today we usually just stress the accented syllable. The grave (ὰ) replaces an acute on the last syllable when another word follows."
+  },
+  {
+   "id": "greek.rd.loan.1",
+   "topic": "greek.reading",
+   "kind": "fact",
+   "prompt": "This Greek word came into English almost unchanged. Write it in English letters: **κόσμος**",
+   "answer": "kosmos",
+   "distractors": [],
+   "explain": "κόσμος = kosmos: order, the universe: cosmos, cosmetic.",
+   "accept": [
+    "cosmos"
+   ],
+   "formats": [
+    "typed"
+   ]
+  },
+  {
+   "id": "greek.rd.loan.2",
+   "topic": "greek.reading",
+   "kind": "fact",
+   "prompt": "This Greek word came into English almost unchanged. Write it in English letters: **χάος**",
+   "answer": "chaos",
+   "distractors": [],
+   "explain": "χάος = chaos: the empty void before creation.",
+   "accept": [
+    "khaos"
+   ],
+   "formats": [
+    "typed"
+   ]
+  },
+  {
+   "id": "greek.rd.loan.3",
+   "topic": "greek.reading",
+   "kind": "fact",
+   "prompt": "This Greek word came into English almost unchanged. Write it in English letters: **δρᾶμα**",
+   "answer": "drama",
+   "distractors": [],
+   "explain": "δρᾶμα = drama: a deed, an action on stage.",
+   "accept": [],
+   "formats": [
+    "typed"
+   ]
+  },
+  {
+   "id": "greek.rd.loan.4",
+   "topic": "greek.reading",
+   "kind": "fact",
+   "prompt": "This Greek word came into English almost unchanged. Write it in English letters: **κρίσις**",
+   "answer": "krisis",
+   "distractors": [],
+   "explain": "κρίσις = krisis: a decision, a turning point.",
+   "accept": [
+    "crisis"
+   ],
+   "formats": [
+    "typed"
+   ]
+  },
+  {
+   "id": "greek.rd.loan.5",
+   "topic": "greek.reading",
+   "kind": "fact",
+   "prompt": "This Greek word came into English almost unchanged. Write it in English letters: **ἰδέα**",
+   "answer": "idea",
+   "distractors": [],
+   "explain": "ἰδέα = idea: a form, an appearance.",
+   "accept": [],
+   "formats": [
+    "typed"
+   ]
+  },
+  {
+   "id": "greek.rd.loan.6",
+   "topic": "greek.reading",
+   "kind": "fact",
+   "prompt": "This Greek word came into English almost unchanged. Write it in English letters: **μῦθος**",
+   "answer": "muthos",
+   "distractors": [],
+   "explain": "μῦθος = muthos: a story: myth.",
+   "accept": [
+    "mythos"
+   ],
+   "formats": [
+    "typed"
+   ]
+  },
+  {
+   "id": "greek.w1.1",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **ἄνθρωπος** mean?",
+   "answer": "man, person",
+   "distractors": [
+    "word",
+    "house, home",
+    "brother"
+   ],
+   "explain": "ἄνθρωπος = man, person. English relatives: anthropology, philanthropist.",
+   "accept": [
+    "man",
+    "person",
+    "human",
+    "human being",
+    "mankind",
+    "a man",
+    "the man"
+   ],
+   "learn": "**ἄνθρωπος** = man, person\n_anthropology, philanthropist_"
+  },
+  {
+   "id": "greek.w1.en.1",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **man, person**?",
+   "answer": "ἄνθρωπος",
+   "distractors": [
+    "ἵππος",
+    "ποταμός",
+    "ἥλιος"
+   ],
+   "explain": "man, person = ἄνθρωπος.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.2",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **θεός** mean?",
+   "answer": "god",
+   "distractors": [
+    "horse",
+    "river",
+    "sun"
+   ],
+   "explain": "θεός = god. English relatives: theology, atheist.",
+   "accept": [
+    "a god",
+    "deity",
+    "a god",
+    "the god"
+   ],
+   "learn": "**θεός** = god\n_theology, atheist_"
+  },
+  {
+   "id": "greek.w1.en.2",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **god**?",
+   "answer": "θεός",
+   "distractors": [
+    "δοῦλος",
+    "φίλος",
+    "νόμος"
+   ],
+   "explain": "god = θεός.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.3",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **λόγος** mean?",
+   "answer": "word",
+   "distractors": [
+    "slave",
+    "friend",
+    "law, custom"
+   ],
+   "explain": "λόγος = word. English relatives: logic, and every “-ology” (the study of).",
+   "accept": [
+    "speech",
+    "story",
+    "reason",
+    "account",
+    "a word",
+    "the word"
+   ],
+   "learn": "**λόγος** = word\n_logic, and every “-ology” (the study of)_"
+  },
+  {
+   "id": "greek.w1.en.3",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **word**?",
+   "answer": "λόγος",
+   "distractors": [
+    "οἶκος",
+    "ἀδελφός",
+    "πόλεμος"
+   ],
+   "explain": "word = λόγος.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.4",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **ἵππος** mean?",
+   "answer": "horse",
+   "distractors": [
+    "house, home",
+    "brother",
+    "war"
+   ],
+   "explain": "ἵππος = horse. English relatives: hippodrome, hippopotamus (“river horse”).",
+   "accept": [
+    "a horse",
+    "the horse"
+   ],
+   "learn": "**ἵππος** = horse\n_hippodrome, hippopotamus (“river horse”)_"
+  },
+  {
+   "id": "greek.w1.en.4",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **horse**?",
+   "answer": "ἵππος",
+   "distractors": [
+    "ποταμός",
+    "ἥλιος",
+    "στρατηγός"
+   ],
+   "explain": "horse = ἵππος.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.5",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **δοῦλος** mean?",
+   "answer": "slave",
+   "distractors": [
+    "river",
+    "sun",
+    "general"
+   ],
+   "explain": "δοῦλος = slave. English relatives: no common English word.",
+   "accept": [
+    "servant",
+    "a slave",
+    "the slave"
+   ],
+   "learn": "**δοῦλος** = slave\n_no common English word_"
+  },
+  {
+   "id": "greek.w1.en.5",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **slave**?",
+   "answer": "δοῦλος",
+   "distractors": [
+    "φίλος",
+    "νόμος",
+    "χρόνος"
+   ],
+   "explain": "slave = δοῦλος.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.6",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **οἶκος** mean?",
+   "answer": "house, home",
+   "distractors": [
+    "friend",
+    "law, custom",
+    "time"
+   ],
+   "explain": "οἶκος = house, home. English relatives: economy (managing a household), ecology.",
+   "accept": [
+    "house",
+    "home",
+    "household",
+    "a house",
+    "the house"
+   ],
+   "learn": "**οἶκος** = house, home\n_economy (managing a household), ecology_"
+  },
+  {
+   "id": "greek.w1.en.6",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **house, home**?",
+   "answer": "οἶκος",
+   "distractors": [
+    "ἀδελφός",
+    "πόλεμος",
+    "ἄνθρωπος"
+   ],
+   "explain": "house, home = οἶκος.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.7",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **ποταμός** mean?",
+   "answer": "river",
+   "distractors": [
+    "brother",
+    "war",
+    "man, person"
+   ],
+   "explain": "ποταμός = river. English relatives: hippopotamus, Mesopotamia (“between the rivers”).",
+   "accept": [
+    "stream",
+    "a river",
+    "the river"
+   ],
+   "learn": "**ποταμός** = river\n_hippopotamus, Mesopotamia (“between the rivers”)_"
+  },
+  {
+   "id": "greek.w1.en.7",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **river**?",
+   "answer": "ποταμός",
+   "distractors": [
+    "ἥλιος",
+    "στρατηγός",
+    "θεός"
+   ],
+   "explain": "river = ποταμός.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.8",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **φίλος** mean?",
+   "answer": "friend",
+   "distractors": [
+    "sun",
+    "general",
+    "god"
+   ],
+   "explain": "φίλος = friend. English relatives: philosophy (love of wisdom), Philadelphia.",
+   "accept": [
+    "dear",
+    "loved one",
+    "a friend",
+    "the friend"
+   ],
+   "learn": "**φίλος** = friend\n_philosophy (love of wisdom), Philadelphia_"
+  },
+  {
+   "id": "greek.w1.en.8",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **friend**?",
+   "answer": "φίλος",
+   "distractors": [
+    "νόμος",
+    "χρόνος",
+    "λόγος"
+   ],
+   "explain": "friend = φίλος.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.9",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **ἀδελφός** mean?",
+   "answer": "brother",
+   "distractors": [
+    "law, custom",
+    "time",
+    "word"
+   ],
+   "explain": "ἀδελφός = brother. English relatives: Philadelphia (“brotherly love”).",
+   "accept": [
+    "a brother",
+    "the brother"
+   ],
+   "learn": "**ἀδελφός** = brother\n_Philadelphia (“brotherly love”)_"
+  },
+  {
+   "id": "greek.w1.en.9",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **brother**?",
+   "answer": "ἀδελφός",
+   "distractors": [
+    "πόλεμος",
+    "ἄνθρωπος",
+    "ἵππος"
+   ],
+   "explain": "brother = ἀδελφός.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.10",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **ἥλιος** mean?",
+   "answer": "sun",
+   "distractors": [
+    "war",
+    "man, person",
+    "horse"
+   ],
+   "explain": "ἥλιος = sun. English relatives: helium (first found in the Sun’s light), heliocentric.",
+   "accept": [
+    "a sun",
+    "the sun"
+   ],
+   "learn": "**ἥλιος** = sun\n_helium (first found in the Sun’s light), heliocentric_"
+  },
+  {
+   "id": "greek.w1.en.10",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **sun**?",
+   "answer": "ἥλιος",
+   "distractors": [
+    "στρατηγός",
+    "θεός",
+    "δοῦλος"
+   ],
+   "explain": "sun = ἥλιος.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.11",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **νόμος** mean?",
+   "answer": "law, custom",
+   "distractors": [
+    "general",
+    "god",
+    "slave"
+   ],
+   "explain": "νόμος = law, custom. English relatives: astronomy (the laws of the stars), autonomy.",
+   "accept": [
+    "law",
+    "custom",
+    "rule",
+    "a law",
+    "the law"
+   ],
+   "learn": "**νόμος** = law, custom\n_astronomy (the laws of the stars), autonomy_"
+  },
+  {
+   "id": "greek.w1.en.11",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **law, custom**?",
+   "answer": "νόμος",
+   "distractors": [
+    "χρόνος",
+    "λόγος",
+    "οἶκος"
+   ],
+   "explain": "law, custom = νόμος.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.12",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **πόλεμος** mean?",
+   "answer": "war",
+   "distractors": [
+    "time",
+    "word",
+    "house, home"
+   ],
+   "explain": "πόλεμος = war. English relatives: polemic (a fierce written attack).",
+   "accept": [
+    "battle",
+    "fighting",
+    "a war",
+    "the war"
+   ],
+   "learn": "**πόλεμος** = war\n_polemic (a fierce written attack)_"
+  },
+  {
+   "id": "greek.w1.en.12",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **war**?",
+   "answer": "πόλεμος",
+   "distractors": [
+    "ἄνθρωπος",
+    "ἵππος",
+    "ποταμός"
+   ],
+   "explain": "war = πόλεμος.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.13",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **στρατηγός** mean?",
+   "answer": "general",
+   "distractors": [
+    "man, person",
+    "horse",
+    "river"
+   ],
+   "explain": "στρατηγός = general. English relatives: strategy, strategic.",
+   "accept": [
+    "commander",
+    "leader",
+    "a general",
+    "the general"
+   ],
+   "learn": "**στρατηγός** = general\n_strategy, strategic_"
+  },
+  {
+   "id": "greek.w1.en.13",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **general**?",
+   "answer": "στρατηγός",
+   "distractors": [
+    "θεός",
+    "δοῦλος",
+    "φίλος"
+   ],
+   "explain": "general = στρατηγός.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w1.14",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "What does **χρόνος** mean?",
+   "answer": "time",
+   "distractors": [
+    "god",
+    "slave",
+    "friend"
+   ],
+   "explain": "χρόνος = time. English relatives: chronology, chronic, synchronise.",
+   "accept": [
+    "a time",
+    "the time"
+   ],
+   "learn": "**χρόνος** = time\n_chronology, chronic, synchronise_"
+  },
+  {
+   "id": "greek.w1.en.14",
+   "topic": "greek.words-1",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **time**?",
+   "answer": "χρόνος",
+   "distractors": [
+    "λόγος",
+    "οἶκος",
+    "ἀδελφός"
+   ],
+   "explain": "time = χρόνος.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.1",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **κόρη** mean?",
+   "answer": "girl",
+   "distractors": [
+    "honour",
+    "victory",
+    "house"
+   ],
+   "explain": "κόρη = girl. English relatives: Kore (“the Maiden”) was a name for Persephone.",
+   "accept": [
+    "maiden",
+    "daughter",
+    "a girl",
+    "the girl"
+   ],
+   "learn": "**κόρη** = girl\n_Kore (“the Maiden”) was a name for Persephone_"
+  },
+  {
+   "id": "greek.w2.en.1",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **girl**?",
+   "answer": "κόρη",
+   "distractors": [
+    "φωνή",
+    "ἀγορά",
+    "χώρα"
+   ],
+   "explain": "girl = κόρη.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.2",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **ψυχή** mean?",
+   "answer": "soul",
+   "distractors": [
+    "voice",
+    "market place",
+    "land, country"
+   ],
+   "explain": "ψυχή = soul. English relatives: psychology, psychic.",
+   "accept": [
+    "spirit",
+    "life",
+    "mind",
+    "a soul",
+    "the soul"
+   ],
+   "learn": "**ψυχή** = soul\n_psychology, psychic_"
+  },
+  {
+   "id": "greek.w2.en.2",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **soul**?",
+   "answer": "ψυχή",
+   "distractors": [
+    "μάχη",
+    "ἡμέρα",
+    "θεά"
+   ],
+   "explain": "soul = ψυχή.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.3",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **τιμή** mean?",
+   "answer": "honour",
+   "distractors": [
+    "battle",
+    "day",
+    "goddess"
+   ],
+   "explain": "τιμή = honour. English relatives: timocracy (rule by the honoured, in Plato).",
+   "accept": [
+    "respect",
+    "value",
+    "price",
+    "a honour",
+    "the honour"
+   ],
+   "learn": "**τιμή** = honour\n_timocracy (rule by the honoured, in Plato)_"
+  },
+  {
+   "id": "greek.w2.en.3",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **honour**?",
+   "answer": "τιμή",
+   "distractors": [
+    "νίκη",
+    "οἰκία",
+    "δῶρον"
+   ],
+   "explain": "honour = τιμή.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.4",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **φωνή** mean?",
+   "answer": "voice",
+   "distractors": [
+    "victory",
+    "house",
+    "gift"
+   ],
+   "explain": "φωνή = voice. English relatives: telephone, phonics, symphony.",
+   "accept": [
+    "sound",
+    "a voice",
+    "the voice"
+   ],
+   "learn": "**φωνή** = voice\n_telephone, phonics, symphony_"
+  },
+  {
+   "id": "greek.w2.en.4",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **voice**?",
+   "answer": "φωνή",
+   "distractors": [
+    "ἀγορά",
+    "χώρα",
+    "ἔργον"
+   ],
+   "explain": "voice = φωνή.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.5",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **μάχη** mean?",
+   "answer": "battle",
+   "distractors": [
+    "market place",
+    "land, country",
+    "work, deed"
+   ],
+   "explain": "μάχη = battle. English relatives: logomachy (a battle of words).",
+   "accept": [
+    "fight",
+    "a battle",
+    "the battle"
+   ],
+   "learn": "**μάχη** = battle\n_logomachy (a battle of words)_"
+  },
+  {
+   "id": "greek.w2.en.5",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **battle**?",
+   "answer": "μάχη",
+   "distractors": [
+    "ἡμέρα",
+    "θεά",
+    "δένδρον"
+   ],
+   "explain": "battle = μάχη.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.6",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **νίκη** mean?",
+   "answer": "victory",
+   "distractors": [
+    "day",
+    "goddess",
+    "tree"
+   ],
+   "explain": "νίκη = victory. English relatives: Nike, the winged goddess of victory.",
+   "accept": [
+    "win",
+    "a victory",
+    "the victory"
+   ],
+   "learn": "**νίκη** = victory\n_Nike, the winged goddess of victory_"
+  },
+  {
+   "id": "greek.w2.en.6",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **victory**?",
+   "answer": "νίκη",
+   "distractors": [
+    "οἰκία",
+    "δῶρον",
+    "κόρη"
+   ],
+   "explain": "victory = νίκη.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.7",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **ἀγορά** mean?",
+   "answer": "market place",
+   "distractors": [
+    "house",
+    "gift",
+    "girl"
+   ],
+   "explain": "ἀγορά = market place. English relatives: agoraphobia (fear of open spaces).",
+   "accept": [
+    "agora",
+    "marketplace",
+    "market",
+    "market-place",
+    "meeting place",
+    "a market place",
+    "the market place"
+   ],
+   "learn": "**ἀγορά** = market place\n_agoraphobia (fear of open spaces)_"
+  },
+  {
+   "id": "greek.w2.en.7",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **market place**?",
+   "answer": "ἀγορά",
+   "distractors": [
+    "χώρα",
+    "ἔργον",
+    "ψυχή"
+   ],
+   "explain": "market place = ἀγορά.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.8",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **ἡμέρα** mean?",
+   "answer": "day",
+   "distractors": [
+    "land, country",
+    "work, deed",
+    "soul"
+   ],
+   "explain": "ἡμέρα = day. English relatives: ephemeral (lasting only a day).",
+   "accept": [
+    "a day",
+    "the day"
+   ],
+   "learn": "**ἡμέρα** = day\n_ephemeral (lasting only a day)_"
+  },
+  {
+   "id": "greek.w2.en.8",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **day**?",
+   "answer": "ἡμέρα",
+   "distractors": [
+    "θεά",
+    "δένδρον",
+    "τιμή"
+   ],
+   "explain": "day = ἡμέρα.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.9",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **οἰκία** mean?",
+   "answer": "house",
+   "distractors": [
+    "goddess",
+    "tree",
+    "honour"
+   ],
+   "explain": "οἰκία = house. English relatives: related to οἶκος: economy, ecology.",
+   "accept": [
+    "home",
+    "a house",
+    "the house"
+   ],
+   "learn": "**οἰκία** = house\n_related to οἶκος: economy, ecology_"
+  },
+  {
+   "id": "greek.w2.en.9",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **house**?",
+   "answer": "οἰκία",
+   "distractors": [
+    "δῶρον",
+    "κόρη",
+    "φωνή"
+   ],
+   "explain": "house = οἰκία.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.10",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **χώρα** mean?",
+   "answer": "land, country",
+   "distractors": [
+    "gift",
+    "girl",
+    "voice"
+   ],
+   "explain": "χώρα = land, country. English relatives: chorography (describing regions).",
+   "accept": [
+    "land",
+    "country",
+    "territory",
+    "region",
+    "a land",
+    "the land"
+   ],
+   "learn": "**χώρα** = land, country\n_chorography (describing regions)_"
+  },
+  {
+   "id": "greek.w2.en.10",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **land, country**?",
+   "answer": "χώρα",
+   "distractors": [
+    "ἔργον",
+    "ψυχή",
+    "μάχη"
+   ],
+   "explain": "land, country = χώρα.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.11",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **θεά** mean?",
+   "answer": "goddess",
+   "distractors": [
+    "work, deed",
+    "soul",
+    "battle"
+   ],
+   "explain": "θεά = goddess. English relatives: related to θεός: theology.",
+   "accept": [
+    "a goddess",
+    "the goddess"
+   ],
+   "learn": "**θεά** = goddess\n_related to θεός: theology_"
+  },
+  {
+   "id": "greek.w2.en.11",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **goddess**?",
+   "answer": "θεά",
+   "distractors": [
+    "δένδρον",
+    "τιμή",
+    "νίκη"
+   ],
+   "explain": "goddess = θεά.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.12",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **δῶρον** mean?",
+   "answer": "gift",
+   "distractors": [
+    "tree",
+    "honour",
+    "victory"
+   ],
+   "explain": "δῶρον = gift. English relatives: Theodore and Dorothy both mean “gift of god”.",
+   "accept": [
+    "present",
+    "a gift",
+    "the gift"
+   ],
+   "learn": "**δῶρον** = gift\n_Theodore and Dorothy both mean “gift of god”_"
+  },
+  {
+   "id": "greek.w2.en.12",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **gift**?",
+   "answer": "δῶρον",
+   "distractors": [
+    "κόρη",
+    "φωνή",
+    "ἀγορά"
+   ],
+   "explain": "gift = δῶρον.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.13",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **ἔργον** mean?",
+   "answer": "work, deed",
+   "distractors": [
+    "girl",
+    "voice",
+    "market place"
+   ],
+   "explain": "ἔργον = work, deed. English relatives: energy, ergonomics.",
+   "accept": [
+    "work",
+    "deed",
+    "task",
+    "job",
+    "action",
+    "a work",
+    "the work"
+   ],
+   "learn": "**ἔργον** = work, deed\n_energy, ergonomics_"
+  },
+  {
+   "id": "greek.w2.en.13",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **work, deed**?",
+   "answer": "ἔργον",
+   "distractors": [
+    "ψυχή",
+    "μάχη",
+    "ἡμέρα"
+   ],
+   "explain": "work, deed = ἔργον.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.14",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "What does **δένδρον** mean?",
+   "answer": "tree",
+   "distractors": [
+    "soul",
+    "battle",
+    "day"
+   ],
+   "explain": "δένδρον = tree. English relatives: rhododendron (“rose tree”), dendrochronology.",
+   "accept": [
+    "a tree",
+    "the tree"
+   ],
+   "learn": "**δένδρον** = tree\n_rhododendron (“rose tree”), dendrochronology_"
+  },
+  {
+   "id": "greek.w2.en.14",
+   "topic": "greek.words-2",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **tree**?",
+   "answer": "δένδρον",
+   "distractors": [
+    "τιμή",
+    "νίκη",
+    "οἰκία"
+   ],
+   "explain": "tree = δένδρον.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.1",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **λύω** mean?",
+   "answer": "I free",
+   "distractors": [
+    "I hear",
+    "I wish",
+    "I stay"
+   ],
+   "explain": "λύω = I free. English relatives: analysis (loosening up), paralysis.",
+   "accept": [
+    "free",
+    "release",
+    "I release",
+    "loosen",
+    "I loosen",
+    "set free",
+    "I set free",
+    "untie",
+    "I untie"
+   ],
+   "learn": "**λύω** = I free\n_analysis (loosening up), paralysis_"
+  },
+  {
+   "id": "greek.w3.en.1",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I free**?",
+   "answer": "λύω",
+   "distractors": [
+    "γράφω",
+    "ἔχω",
+    "πέμπω"
+   ],
+   "explain": "I free = λύω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.2",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **ἄγω** mean?",
+   "answer": "I lead",
+   "distractors": [
+    "I write",
+    "I have",
+    "I send"
+   ],
+   "explain": "ἄγω = I lead. English relatives: pedagogue (a child-leader), demagogue.",
+   "accept": [
+    "lead",
+    "bring",
+    "I bring",
+    "take",
+    "I take"
+   ],
+   "learn": "**ἄγω** = I lead\n_pedagogue (a child-leader), demagogue_"
+  },
+  {
+   "id": "greek.w3.en.2",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I lead**?",
+   "answer": "ἄγω",
+   "distractors": [
+    "διώκω",
+    "λέγω",
+    "φέρω"
+   ],
+   "explain": "I lead = ἄγω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.3",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **ἀκούω** mean?",
+   "answer": "I hear",
+   "distractors": [
+    "I chase",
+    "I say",
+    "I carry"
+   ],
+   "explain": "ἀκούω = I hear. English relatives: acoustic.",
+   "accept": [
+    "hear",
+    "listen",
+    "I listen",
+    "I listen to",
+    "listen to"
+   ],
+   "learn": "**ἀκούω** = I hear\n_acoustic_"
+  },
+  {
+   "id": "greek.w3.en.3",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I hear**?",
+   "answer": "ἀκούω",
+   "distractors": [
+    "ἐθέλω",
+    "μένω",
+    "φεύγω"
+   ],
+   "explain": "I hear = ἀκούω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.4",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **γράφω** mean?",
+   "answer": "I write",
+   "distractors": [
+    "I wish",
+    "I stay",
+    "I flee"
+   ],
+   "explain": "γράφω = I write. English relatives: graphic, autograph, photograph.",
+   "accept": [
+    "write",
+    "draw",
+    "I draw"
+   ],
+   "learn": "**γράφω** = I write\n_graphic, autograph, photograph_"
+  },
+  {
+   "id": "greek.w3.en.4",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I write**?",
+   "answer": "γράφω",
+   "distractors": [
+    "ἔχω",
+    "πέμπω",
+    "παιδεύω"
+   ],
+   "explain": "I write = γράφω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.5",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **διώκω** mean?",
+   "answer": "I chase",
+   "distractors": [
+    "I have",
+    "I send",
+    "I teach"
+   ],
+   "explain": "διώκω = I chase. English relatives: no common English word.",
+   "accept": [
+    "chase",
+    "pursue",
+    "I pursue",
+    "hunt",
+    "I hunt"
+   ],
+   "learn": "**διώκω** = I chase\n_no common English word_"
+  },
+  {
+   "id": "greek.w3.en.5",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I chase**?",
+   "answer": "διώκω",
+   "distractors": [
+    "λέγω",
+    "φέρω",
+    "πιστεύω"
+   ],
+   "explain": "I chase = διώκω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.6",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **ἐθέλω** mean?",
+   "answer": "I wish",
+   "distractors": [
+    "I say",
+    "I carry",
+    "I trust"
+   ],
+   "explain": "ἐθέλω = I wish. English relatives: no common English word.",
+   "accept": [
+    "wish",
+    "want",
+    "I want",
+    "I am willing",
+    "am willing",
+    "be willing"
+   ],
+   "learn": "**ἐθέλω** = I wish\n_no common English word_"
+  },
+  {
+   "id": "greek.w3.en.6",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I wish**?",
+   "answer": "ἐθέλω",
+   "distractors": [
+    "μένω",
+    "φεύγω",
+    "λύω"
+   ],
+   "explain": "I wish = ἐθέλω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.7",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **ἔχω** mean?",
+   "answer": "I have",
+   "distractors": [
+    "I stay",
+    "I flee",
+    "I free"
+   ],
+   "explain": "ἔχω = I have. English relatives: hectic (from ἑκτικός, “habitual”, first used of a lingering fever).",
+   "accept": [
+    "have",
+    "hold",
+    "I hold"
+   ],
+   "learn": "**ἔχω** = I have\n_hectic (from ἑκτικός, “habitual”, first used of a lingering fever)_"
+  },
+  {
+   "id": "greek.w3.en.7",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I have**?",
+   "answer": "ἔχω",
+   "distractors": [
+    "πέμπω",
+    "παιδεύω",
+    "ἄγω"
+   ],
+   "explain": "I have = ἔχω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.8",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **λέγω** mean?",
+   "answer": "I say",
+   "distractors": [
+    "I send",
+    "I teach",
+    "I lead"
+   ],
+   "explain": "λέγω = I say. English relatives: related to λόγος: dialogue, lexicon.",
+   "accept": [
+    "say",
+    "speak",
+    "I speak",
+    "tell",
+    "I tell"
+   ],
+   "learn": "**λέγω** = I say\n_related to λόγος: dialogue, lexicon_"
+  },
+  {
+   "id": "greek.w3.en.8",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I say**?",
+   "answer": "λέγω",
+   "distractors": [
+    "φέρω",
+    "πιστεύω",
+    "ἀκούω"
+   ],
+   "explain": "I say = λέγω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.9",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **μένω** mean?",
+   "answer": "I stay",
+   "distractors": [
+    "I carry",
+    "I trust",
+    "I hear"
+   ],
+   "explain": "μένω = I stay. English relatives: no common English word.",
+   "accept": [
+    "stay",
+    "remain",
+    "I remain",
+    "wait",
+    "I wait",
+    "wait for",
+    "I wait for"
+   ],
+   "learn": "**μένω** = I stay\n_no common English word_"
+  },
+  {
+   "id": "greek.w3.en.9",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I stay**?",
+   "answer": "μένω",
+   "distractors": [
+    "φεύγω",
+    "λύω",
+    "γράφω"
+   ],
+   "explain": "I stay = μένω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.10",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **πέμπω** mean?",
+   "answer": "I send",
+   "distractors": [
+    "I flee",
+    "I free",
+    "I write"
+   ],
+   "explain": "πέμπω = I send. English relatives: pomp (from πομπή, a procession “sent” on its way).",
+   "accept": [
+    "send"
+   ],
+   "learn": "**πέμπω** = I send\n_pomp (from πομπή, a procession “sent” on its way)_"
+  },
+  {
+   "id": "greek.w3.en.10",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I send**?",
+   "answer": "πέμπω",
+   "distractors": [
+    "παιδεύω",
+    "ἄγω",
+    "διώκω"
+   ],
+   "explain": "I send = πέμπω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.11",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **φέρω** mean?",
+   "answer": "I carry",
+   "distractors": [
+    "I teach",
+    "I lead",
+    "I chase"
+   ],
+   "explain": "φέρω = I carry. English relatives: Christopher (“Christ-carrier”), metaphor (carrying across).",
+   "accept": [
+    "carry",
+    "bring",
+    "I bring",
+    "bear",
+    "I bear"
+   ],
+   "learn": "**φέρω** = I carry\n_Christopher (“Christ-carrier”), metaphor (carrying across)_"
+  },
+  {
+   "id": "greek.w3.en.11",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I carry**?",
+   "answer": "φέρω",
+   "distractors": [
+    "πιστεύω",
+    "ἀκούω",
+    "ἐθέλω"
+   ],
+   "explain": "I carry = φέρω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.12",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **φεύγω** mean?",
+   "answer": "I flee",
+   "distractors": [
+    "I trust",
+    "I hear",
+    "I wish"
+   ],
+   "explain": "φεύγω = I flee. English relatives: no direct English word (Latin fugio, as in “fugitive”, is a cousin).",
+   "accept": [
+    "flee",
+    "run away",
+    "I run away",
+    "escape",
+    "I escape"
+   ],
+   "learn": "**φεύγω** = I flee\n_no direct English word (Latin fugio, as in “fugitive”, is a cousin)_"
+  },
+  {
+   "id": "greek.w3.en.12",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I flee**?",
+   "answer": "φεύγω",
+   "distractors": [
+    "λύω",
+    "γράφω",
+    "ἔχω"
+   ],
+   "explain": "I flee = φεύγω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.13",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **παιδεύω** mean?",
+   "answer": "I teach",
+   "distractors": [
+    "I free",
+    "I write",
+    "I have"
+   ],
+   "explain": "παιδεύω = I teach. English relatives: pedagogy, encyclopaedia (all-round education).",
+   "accept": [
+    "teach",
+    "educate",
+    "I educate",
+    "train",
+    "I train"
+   ],
+   "learn": "**παιδεύω** = I teach\n_pedagogy, encyclopaedia (all-round education)_"
+  },
+  {
+   "id": "greek.w3.en.13",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I teach**?",
+   "answer": "παιδεύω",
+   "distractors": [
+    "ἄγω",
+    "διώκω",
+    "λέγω"
+   ],
+   "explain": "I teach = παιδεύω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w3.14",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "What does **πιστεύω** mean?",
+   "answer": "I trust",
+   "distractors": [
+    "I lead",
+    "I chase",
+    "I say"
+   ],
+   "explain": "πιστεύω = I trust. English relatives: no common English word.",
+   "accept": [
+    "trust",
+    "believe",
+    "I believe",
+    "I trust in",
+    "believe in"
+   ],
+   "learn": "**πιστεύω** = I trust\n_no common English word_"
+  },
+  {
+   "id": "greek.w3.en.14",
+   "topic": "greek.words-3",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **I trust**?",
+   "answer": "πιστεύω",
+   "distractors": [
+    "ἀκούω",
+    "ἐθέλω",
+    "μένω"
+   ],
+   "explain": "I trust = πιστεύω.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.w2.gender",
+   "topic": "greek.words-2",
+   "kind": "mcq",
+   "prompt": "Nouns ending -ος are usually masculine and nouns ending -ον are neuter. What gender are nouns ending -η, like τιμή?",
+   "options": [
+    {
+     "text": "feminine",
+     "correct": true
+    },
+    {
+     "text": "masculine",
+     "correct": false,
+     "feedback": "-η and -α nouns like τιμή and χώρα are feminine."
+    },
+    {
+     "text": "neuter",
+     "correct": false,
+     "feedback": "Neuter nouns usually end -ον."
+    }
+   ],
+   "explain": "τιμή, ψυχή, φωνή, χώρα, ἡμέρα: all feminine (ἡ τιμή)."
+  },
+  {
+   "id": "greek.w3.dict",
+   "topic": "greek.words-3",
+   "kind": "mcq",
+   "prompt": "Why does a Greek dictionary say λύω means “I free”, not “to free”?",
+   "options": [
+    {
+     "text": "Greek dictionaries list verbs in the first person singular of the present",
+     "correct": true
+    },
+    {
+     "text": "Greek has no word for “to”",
+     "correct": false,
+     "feedback": "Greek does have infinitives (λύειν = to free). Dictionaries just use the “I” form."
+    },
+    {
+     "text": "λύω is a noun",
+     "correct": false,
+     "feedback": "λύω is a verb."
+    }
+   ],
+   "explain": "Latin and Greek dictionaries both use the “I” form: λύω, amo."
+  },
+  {
+   "id": "greek.article.tmpl",
+   "topic": "greek.article",
+   "kind": "template",
+   "gen": "y8gArticle",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.ar.a",
+   "topic": "greek.article",
+   "kind": "mcq",
+   "prompt": "How do you say “a” (as in “a horse”) in Greek?",
+   "options": [
+    {
+     "text": "You don’t: Greek has no word for “a”",
+     "correct": true
+    },
+    {
+     "text": "ὁ",
+     "correct": false,
+     "feedback": "ὁ means “the”."
+    },
+    {
+     "text": "ἕν",
+     "correct": false,
+     "feedback": "ἕν is the number one; it isn’t used as “a”."
+    }
+   ],
+   "explain": "ἵππος can mean “a horse”; ὁ ἵππος is “the horse”."
+  },
+  {
+   "id": "greek.ar.sg",
+   "topic": "greek.article",
+   "kind": "mcq",
+   "prompt": "What are the three nominative singular forms of the article (“the”)?",
+   "options": [
+    {
+     "text": "ὁ (masculine), ἡ (feminine), τό (neuter)",
+     "correct": true
+    },
+    {
+     "text": "ὁ, ἡ, οἱ",
+     "correct": false,
+     "feedback": "οἱ is the masculine plural."
+    },
+    {
+     "text": "τόν, τήν, τό",
+     "correct": false,
+     "feedback": "Those are accusative."
+    }
+   ],
+   "explain": "ὁ λόγος, ἡ τιμή, τὸ δῶρον."
+  },
+  {
+   "id": "greek.ar.gen",
+   "topic": "greek.article",
+   "kind": "mcq",
+   "prompt": "Which form of the article means “of the” for a feminine singular noun?",
+   "options": [
+    {
+     "text": "τῆς",
+     "correct": true
+    },
+    {
+     "text": "τοῦ",
+     "correct": false,
+     "feedback": "τοῦ is the masculine or neuter genitive singular."
+    },
+    {
+     "text": "τῇ",
+     "correct": false,
+     "feedback": "τῇ is the dative: “to” or “for the”."
+    }
+   ],
+   "explain": "τῆς τιμῆς = of the honour."
+  },
+  {
+   "id": "greek.ar.tow",
+   "topic": "greek.article",
+   "kind": "mcq",
+   "prompt": "Which form of the article is the same in the genitive plural for all three genders?",
+   "options": [
+    {
+     "text": "τῶν",
+     "correct": true
+    },
+    {
+     "text": "τοῖς",
+     "correct": false,
+     "feedback": "τοῖς is the masculine and neuter dative plural; the feminine is ταῖς."
+    },
+    {
+     "text": "τά",
+     "correct": false,
+     "feedback": "τά is neuter only."
+    }
+   ],
+   "explain": "τῶν θεῶν, τῶν τιμῶν, τῶν δώρων: “of the”."
+  },
+  {
+   "id": "greek.ar.grave",
+   "topic": "greek.article",
+   "kind": "mcq",
+   "prompt": "Why is the article written τὸν (grave accent) in “τὸν ἵππον” but τόν in the table?",
+   "options": [
+    {
+     "text": "An acute on the last syllable turns grave when another word follows",
+     "correct": true
+    },
+    {
+     "text": "It is a different word",
+     "correct": false,
+     "feedback": "Same word, same meaning: just a different accent inside a sentence."
+    },
+    {
+     "text": "Grave accents mean the accusative",
+     "correct": false,
+     "feedback": "Accents don’t show case."
+    }
+   ],
+   "explain": "Rule: an acute on the final syllable becomes grave unless punctuation follows: καλὸς ἵππος."
+  },
+  {
+   "id": "greek.ar.clue",
+   "topic": "greek.article",
+   "kind": "mcq",
+   "prompt": "In **τοὺς ἵππους ὁ δοῦλος ἄγει**, which word tells you most quickly who is doing the action?",
+   "options": [
+    {
+     "text": "ὁ (nominative article)",
+     "correct": true
+    },
+    {
+     "text": "τούς",
+     "correct": false,
+     "feedback": "τούς is accusative: it marks the object."
+    },
+    {
+     "text": "ἄγει",
+     "correct": false,
+     "feedback": "The verb tells you there is one person, but not which noun."
+    }
+   ],
+   "explain": "ὁ δοῦλος is nominative: the slave leads the horses, even though the horses come first."
+  },
+  {
+   "id": "greek.nouns-2.tmpl",
+   "topic": "greek.nouns-2",
+   "kind": "template",
+   "gen": "y8gNoun2",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.n2.uses",
+   "topic": "greek.nouns-2",
+   "kind": "mcq",
+   "prompt": "Which case would you use for “of the horse”?",
+   "options": [
+    {
+     "text": "genitive: τοῦ ἵππου",
+     "correct": true
+    },
+    {
+     "text": "dative: τῷ ἵππῳ",
+     "correct": false,
+     "feedback": "The dative means “to” or “for”."
+    },
+    {
+     "text": "accusative: τὸν ἵππον",
+     "correct": false,
+     "feedback": "The accusative is the object."
+    }
+   ],
+   "explain": "Genitive = “of”: τοῦ ἵππου."
+  },
+  {
+   "id": "greek.n2.dat",
+   "topic": "greek.nouns-2",
+   "kind": "mcq",
+   "prompt": "What does **τῷ θεῷ** mean?",
+   "options": [
+    {
+     "text": "to (or for) the god",
+     "correct": true
+    },
+    {
+     "text": "of the god",
+     "correct": false,
+     "feedback": "That is the genitive, τοῦ θεοῦ."
+    },
+    {
+     "text": "the gods",
+     "correct": false,
+     "feedback": "The plural would be οἱ θεοί."
+    }
+   ],
+   "explain": "Dative = “to” or “for”: “he gives a gift to the god”."
+  },
+  {
+   "id": "greek.n2.neut",
+   "topic": "greek.nouns-2",
+   "kind": "mcq",
+   "prompt": "Why can **τὰ δῶρα** be either the subject or the object?",
+   "options": [
+    {
+     "text": "Neuter nouns have the same form in the nominative and accusative",
+     "correct": true
+    },
+    {
+     "text": "δῶρα is a verb",
+     "correct": false,
+     "feedback": "δῶρα is the plural of δῶρον, a noun."
+    },
+    {
+     "text": "Greek has no subjects",
+     "correct": false,
+     "feedback": "It does: you just need the context for neuters."
+    }
+   ],
+   "explain": "For neuters, nominative = accusative: δῶρον / δῶρον, δῶρα / δῶρα. Use the sense and the verb to decide."
+  },
+  {
+   "id": "greek.n2.plural",
+   "topic": "greek.nouns-2",
+   "kind": "mcq",
+   "prompt": "What is the nominative plural of **ὁ ἄνθρωπος**?",
+   "options": [
+    {
+     "text": "οἱ ἄνθρωποι",
+     "correct": true
+    },
+    {
+     "text": "τοὺς ἀνθρώπους",
+     "correct": false,
+     "feedback": "That is the accusative plural."
+    },
+    {
+     "text": "τῶν ἀνθρώπων",
+     "correct": false,
+     "feedback": "That is the genitive plural: of the men."
+    }
+   ],
+   "explain": "οἱ ἄνθρωποι = the men, the people (subject)."
+  },
+  {
+   "id": "greek.n2.decl",
+   "topic": "greek.nouns-2",
+   "kind": "fact",
+   "prompt": "What do we call the set of all the case endings of a noun?",
+   "answer": "a declension",
+   "distractors": [
+    "a conjugation",
+    "a tense",
+    "a mood"
+   ],
+   "explain": "Nouns decline (λόγος, λόγον, λόγου…); verbs conjugate (λύω, λύεις, λύει…).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.nouns-1.tmpl",
+   "topic": "greek.nouns-1",
+   "kind": "template",
+   "gen": "y8gNoun1",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.n1.alpha",
+   "topic": "greek.nouns-1",
+   "kind": "mcq",
+   "prompt": "Why does **χώρα** keep its α in the genitive singular (χώρας), when τιμή has τιμῆς?",
+   "options": [
+    {
+     "text": "After ε, ι or ρ, first-declension nouns keep α in the singular",
+     "correct": true
+    },
+    {
+     "text": "It is a mistake",
+     "correct": false,
+     "feedback": "It is a regular pattern, called “alpha pure”."
+    },
+    {
+     "text": "χώρα is masculine",
+     "correct": false,
+     "feedback": "χώρα is feminine."
+    }
+   ],
+   "explain": "ἡμέρα, οἰκία, χώρα: α after ε, ι or ρ stays α (χώρας, ἡμέρας). After other letters, η (τιμῆς, φωνῆς)."
+  },
+  {
+   "id": "greek.n1.pl",
+   "topic": "greek.nouns-1",
+   "kind": "mcq",
+   "prompt": "All first-declension nouns share the same plural endings. What is the nominative plural of **ἡ ψυχή**?",
+   "options": [
+    {
+     "text": "αἱ ψυχαί",
+     "correct": true
+    },
+    {
+     "text": "αἱ ψυχοί",
+     "correct": false,
+     "feedback": "-οι is the second declension."
+    },
+    {
+     "text": "τὰς ψυχάς",
+     "correct": false,
+     "feedback": "That is the accusative plural."
+    }
+   ],
+   "explain": "Plural: -αι, -ας, -ῶν, -αις, for τιμή and χώρα alike."
+  },
+  {
+   "id": "greek.n1.genpl",
+   "topic": "greek.nouns-1",
+   "kind": "mcq",
+   "prompt": "What is special about the genitive plural of every first-declension noun?",
+   "options": [
+    {
+     "text": "It always ends -ῶν, with a circumflex on the last syllable",
+     "correct": true
+    },
+    {
+     "text": "It is the same as the nominative singular",
+     "correct": false,
+     "feedback": "No: χώρα but χωρῶν."
+    },
+    {
+     "text": "It ends -ους",
+     "correct": false,
+     "feedback": "-ους is the second-declension accusative plural."
+    }
+   ],
+   "explain": "τιμῶν, χωρῶν, ἡμερῶν, κορῶν: always -ῶν."
+  },
+  {
+   "id": "greek.verbs-1.tmpl",
+   "topic": "greek.verbs-1",
+   "kind": "template",
+   "gen": "y8gVerb",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.v.endings",
+   "topic": "greek.verbs-1",
+   "kind": "mcq",
+   "prompt": "Which ending means “we” in the present tense?",
+   "options": [
+    {
+     "text": "-ομεν (λύομεν)",
+     "correct": true
+    },
+    {
+     "text": "-ετε (λύετε)",
+     "correct": false,
+     "feedback": "-ετε is “you” (plural)."
+    },
+    {
+     "text": "-ουσι(ν) (λύουσι)",
+     "correct": false,
+     "feedback": "-ουσι(ν) is “they”."
+    }
+   ],
+   "explain": "-ω, -εις, -ει, -ομεν, -ετε, -ουσι(ν): I, you, he/she, we, you (pl), they."
+  },
+  {
+   "id": "greek.v.nu",
+   "topic": "greek.verbs-1",
+   "kind": "mcq",
+   "prompt": "Why is it sometimes λύουσι and sometimes λύουσιν?",
+   "options": [
+    {
+     "text": "The ν is added before a vowel or at the end of a sentence",
+     "correct": true
+    },
+    {
+     "text": "λύουσιν is plural and λύουσι singular",
+     "correct": false,
+     "feedback": "Both mean “they free”."
+    },
+    {
+     "text": "They are different tenses",
+     "correct": false,
+     "feedback": "Same tense, same meaning."
+    }
+   ],
+   "explain": "This is the “movable nu”: it smooths the sound before a vowel, like “a” and “an” in English."
+  },
+  {
+   "id": "greek.v.inf",
+   "topic": "greek.verbs-1",
+   "kind": "mcq",
+   "prompt": "What does **λύειν** mean?",
+   "options": [
+    {
+     "text": "to free (the infinitive)",
+     "correct": true
+    },
+    {
+     "text": "they free",
+     "correct": false,
+     "feedback": "They free is λύουσι(ν)."
+    },
+    {
+     "text": "he frees",
+     "correct": false,
+     "feedback": "He frees is λύει."
+    }
+   ],
+   "explain": "The present infinitive ends -ειν: λύειν, γράφειν. ἐθέλει φεύγειν = “he wants to flee”."
+  },
+  {
+   "id": "greek.v.eimi",
+   "topic": "greek.verbs-1",
+   "kind": "fact",
+   "prompt": "Which verb is irregular and means “I am”?",
+   "answer": "εἰμί",
+   "distractors": [
+    "ἔχω",
+    "μένω",
+    "εἶ"
+   ],
+   "explain": "εἰμί, εἶ, ἐστί(ν), ἐσμέν, ἐστέ, εἰσί(ν).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.v.esti",
+   "topic": "greek.verbs-1",
+   "kind": "mcq",
+   "prompt": "What does **ἐστί(ν)** mean?",
+   "options": [
+    {
+     "text": "he, she or it is",
+     "correct": true
+    },
+    {
+     "text": "they are",
+     "correct": false,
+     "feedback": "They are is εἰσί(ν)."
+    },
+    {
+     "text": "you are",
+     "correct": false,
+     "feedback": "You (singular) are is εἶ."
+    }
+   ],
+   "explain": "ἐστί(ν) = is. English “is” is a distant cousin: they go back to the same ancient root."
+  },
+  {
+   "id": "greek.v.eisi",
+   "topic": "greek.verbs-1",
+   "kind": "mcq",
+   "prompt": "What does **εἰσί(ν)** mean?",
+   "options": [
+    {
+     "text": "they are",
+     "correct": true
+    },
+    {
+     "text": "we are",
+     "correct": false,
+     "feedback": "We are is ἐσμέν."
+    },
+    {
+     "text": "into",
+     "correct": false,
+     "feedback": "Careful: εἰς (into) looks similar, but εἰσί(ν) is “they are”."
+    }
+   ],
+   "explain": "εἰσί(ν) = they are."
+  },
+  {
+   "id": "greek.s.1",
+   "topic": "greek.sentences",
+   "kind": "fact",
+   "prompt": "Translate: **ὁ δοῦλος τὸν ἵππον ἄγει.**",
+   "answer": "The slave leads the horse.",
+   "distractors": [
+    "The horse leads the slave.",
+    "The slave leads the horses."
+   ],
+   "explain": "ὁ δοῦλος τὸν ἵππον ἄγει. → “The slave leads the horse.” Find the verb, then the nominative (the subject), then the accusative (the object).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.s.2",
+   "topic": "greek.sentences",
+   "kind": "fact",
+   "prompt": "Translate: **ὁ θεὸς τοὺς ἀνθρώπους παιδεύει.**",
+   "answer": "The god teaches the people.",
+   "distractors": [
+    "The people teach the god.",
+    "The gods teach the person."
+   ],
+   "explain": "ὁ θεὸς τοὺς ἀνθρώπους παιδεύει. → “The god teaches the people.” Find the verb, then the nominative (the subject), then the accusative (the object).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.s.3",
+   "topic": "greek.sentences",
+   "kind": "fact",
+   "prompt": "Translate: **ἡ κόρη τὴν φωνὴν ἀκούει.**",
+   "answer": "The girl hears the voice.",
+   "distractors": [
+    "The girls hear the voice.",
+    "The voice hears the girl."
+   ],
+   "explain": "ἡ κόρη τὴν φωνὴν ἀκούει. → “The girl hears the voice.” Find the verb, then the nominative (the subject), then the accusative (the object).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.s.4",
+   "topic": "greek.sentences",
+   "kind": "fact",
+   "prompt": "Translate: **ὁ στρατηγὸς τοὺς πολεμίους διώκει.**",
+   "answer": "The general chases the enemy.",
+   "distractors": [
+    "The enemy chase the general.",
+    "The general flees from the enemy."
+   ],
+   "explain": "ὁ στρατηγὸς τοὺς πολεμίους διώκει. → “The general chases the enemy.” Find the verb, then the nominative (the subject), then the accusative (the object). οἱ πολέμιοι (from πολέμιος, hostile) means “the enemy”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.s.5",
+   "topic": "greek.sentences",
+   "kind": "fact",
+   "prompt": "Translate: **οἱ δοῦλοι τὰ δῶρα φέρουσιν.**",
+   "answer": "The slaves carry the gifts.",
+   "distractors": [
+    "The slave carries the gift.",
+    "The slaves send the gifts."
+   ],
+   "explain": "οἱ δοῦλοι τὰ δῶρα φέρουσιν. → “The slaves carry the gifts.” Find the verb, then the nominative (the subject), then the accusative (the object).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.s.6",
+   "topic": "greek.sentences",
+   "kind": "fact",
+   "prompt": "Translate: **τὸν φίλον ὁ ἀδελφὸς λύει.**",
+   "answer": "The brother frees the friend.",
+   "distractors": [
+    "The friend frees the brother.",
+    "The brothers free the friend."
+   ],
+   "explain": "τὸν φίλον ὁ ἀδελφὸς λύει. → “The brother frees the friend.” Find the verb, then the nominative (the subject), then the accusative (the object).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.s.7",
+   "topic": "greek.sentences",
+   "kind": "fact",
+   "prompt": "Translate: **ὁ ἄνθρωπος λόγον γράφει.**",
+   "answer": "The man writes a speech.",
+   "distractors": [
+    "The man hears a speech.",
+    "The men write speeches."
+   ],
+   "explain": "ὁ ἄνθρωπος λόγον γράφει. → “The man writes a speech.” Find the verb, then the nominative (the subject), then the accusative (the object).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.s.8",
+   "topic": "greek.sentences",
+   "kind": "fact",
+   "prompt": "Translate: **οἱ φίλοι τῷ στρατηγῷ πιστεύουσιν.**",
+   "answer": "The friends trust the general.",
+   "distractors": [
+    "The general trusts the friends.",
+    "The friend trusts the generals."
+   ],
+   "explain": "οἱ φίλοι τῷ στρατηγῷ πιστεύουσιν. → “The friends trust the general.” Find the verb, then the nominative (the subject), then the accusative (the object).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.s.9",
+   "topic": "greek.sentences",
+   "kind": "fact",
+   "prompt": "Translate: **ὁ δοῦλος οὐ φεύγει.**",
+   "answer": "The slave does not flee.",
+   "distractors": [
+    "The slave flees.",
+    "The slaves do not flee."
+   ],
+   "explain": "ὁ δοῦλος οὐ φεύγει. → “The slave does not flee.” Find the verb, then the nominative (the subject), then the accusative (the object).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.s.10",
+   "topic": "greek.sentences",
+   "kind": "fact",
+   "prompt": "Translate: **οἱ θεοὶ σοφοί εἰσιν.**",
+   "answer": "The gods are wise.",
+   "distractors": [
+    "The god is wise.",
+    "The wise gods are here."
+   ],
+   "explain": "οἱ θεοὶ σοφοί εἰσιν. → “The gods are wise.” Find the verb, then the nominative (the subject), then the accusative (the object).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.s.first",
+   "topic": "greek.sentences",
+   "kind": "mcq",
+   "prompt": "What is the best first step when translating a Greek sentence?",
+   "options": [
+    {
+     "text": "Find the verb and see from its ending who is doing it",
+     "correct": true
+    },
+    {
+     "text": "Translate the words left to right",
+     "correct": false,
+     "feedback": "Greek word order is flexible, so left to right can mislead you."
+    },
+    {
+     "text": "Look for the longest word",
+     "correct": false,
+     "feedback": "Length doesn’t tell you the structure."
+    }
+   ],
+   "explain": "Verb first, then the nominative subject, then the accusative object, then the rest."
+  },
+  {
+   "id": "greek.s.not",
+   "topic": "greek.sentences",
+   "kind": "mcq",
+   "prompt": "Greek “not” is οὐ. Why do you also see οὐκ and οὐχ?",
+   "options": [
+    {
+     "text": "οὐκ goes before a smooth breathing, οὐχ before a rough breathing",
+     "correct": true
+    },
+    {
+     "text": "They mean “never” and “nobody”",
+     "correct": false,
+     "feedback": "All three just mean “not”."
+    },
+    {
+     "text": "They are used with different tenses",
+     "correct": false,
+     "feedback": "The choice depends on the next sound."
+    }
+   ],
+   "explain": "οὐ φεύγει, οὐκ ἀκούει, οὐχ ἕξει."
+  },
+  {
+   "id": "greek.p.1",
+   "topic": "greek.prepositions",
+   "kind": "fact",
+   "prompt": "What does **ἐν τῷ οἴκῳ** mean?",
+   "answer": "in the house",
+   "distractors": [
+    "into the house",
+    "out of the house",
+    "towards the house"
+   ],
+   "explain": "ἐν + dative = in, on: ἐν τῷ οἴκῳ = in the house.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.p.2",
+   "topic": "greek.prepositions",
+   "kind": "fact",
+   "prompt": "What does **εἰς τὸν ποταμόν** mean?",
+   "answer": "into the river",
+   "distractors": [
+    "in the river",
+    "out of the river",
+    "from the river"
+   ],
+   "explain": "εἰς + accusative = into, to: εἰς τὸν ποταμόν = into the river.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.p.3",
+   "topic": "greek.prepositions",
+   "kind": "fact",
+   "prompt": "What does **ἐκ τῆς χώρας** mean?",
+   "answer": "out of the land",
+   "distractors": [
+    "into the land",
+    "in the land",
+    "towards the land"
+   ],
+   "explain": "ἐκ (ἐξ before a vowel) + genitive = out of: ἐκ τῆς χώρας = out of the land.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.p.4",
+   "topic": "greek.prepositions",
+   "kind": "fact",
+   "prompt": "What does **ἀπὸ τῆς ἀγορᾶς** mean?",
+   "answer": "from the market place",
+   "distractors": [
+    "into the market place",
+    "in the market place",
+    "through the market place"
+   ],
+   "explain": "ἀπό + genitive = from, away from: ἀπὸ τῆς ἀγορᾶς = from the market place.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.p.5",
+   "topic": "greek.prepositions",
+   "kind": "fact",
+   "prompt": "What does **πρὸς τὸν στρατηγόν** mean?",
+   "answer": "towards the general",
+   "distractors": [
+    "away from the general",
+    "with the general",
+    "because of the general"
+   ],
+   "explain": "πρός + accusative = towards, to: πρὸς τὸν στρατηγόν = towards the general.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.p.6",
+   "topic": "greek.prepositions",
+   "kind": "fact",
+   "prompt": "What does **μετὰ τῶν φίλων** mean?",
+   "answer": "with the friends",
+   "distractors": [
+    "after the friends",
+    "into the friends",
+    "without the friends"
+   ],
+   "explain": "μετά + genitive = with: μετὰ τῶν φίλων = with the friends.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.p.7",
+   "topic": "greek.prepositions",
+   "kind": "fact",
+   "prompt": "What does **μετὰ τὴν μάχην** mean?",
+   "answer": "after the battle",
+   "distractors": [
+    "with the battle",
+    "before the battle",
+    "in the battle"
+   ],
+   "explain": "μετά + accusative = after: μετὰ τὴν μάχην = after the battle.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.p.8",
+   "topic": "greek.prepositions",
+   "kind": "fact",
+   "prompt": "What does **διὰ τὸν πόλεμον** mean?",
+   "answer": "because of the war",
+   "distractors": [
+    "through the war",
+    "into the war",
+    "out of the war"
+   ],
+   "explain": "διά + accusative = because of: διὰ τὸν πόλεμον = because of the war.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.p.9",
+   "topic": "greek.prepositions",
+   "kind": "fact",
+   "prompt": "What does **διὰ τῆς χώρας** mean?",
+   "answer": "through the land",
+   "distractors": [
+    "because of the land",
+    "into the land",
+    "from the land"
+   ],
+   "explain": "διά + genitive = through: διὰ τῆς χώρας = through the land.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.p.case-en",
+   "topic": "greek.prepositions",
+   "kind": "mcq",
+   "prompt": "Which case follows **ἐν** (in)?",
+   "options": [
+    {
+     "text": "dative",
+     "correct": true
+    },
+    {
+     "text": "accusative",
+     "correct": false,
+     "feedback": "εἰς (into) takes the accusative."
+    },
+    {
+     "text": "genitive",
+     "correct": false,
+     "feedback": "ἐκ (out of) takes the genitive."
+    }
+   ],
+   "explain": "A neat pattern: being IN a place = dative; motion INTO = accusative; motion OUT OF = genitive."
+  },
+  {
+   "id": "greek.p.case-eis",
+   "topic": "greek.prepositions",
+   "kind": "mcq",
+   "prompt": "Which case follows **εἰς** (into)?",
+   "options": [
+    {
+     "text": "accusative",
+     "correct": true
+    },
+    {
+     "text": "dative",
+     "correct": false,
+     "feedback": "ἐν takes the dative."
+    },
+    {
+     "text": "nominative",
+     "correct": false,
+     "feedback": "Prepositions never take the nominative."
+    }
+   ],
+   "explain": "εἰς τὴν Κρήτην = into Crete, to Crete."
+  },
+  {
+   "id": "greek.p.ex",
+   "topic": "greek.prepositions",
+   "kind": "mcq",
+   "prompt": "Why is it ἐξ ἀγορᾶς but ἐκ τῆς ἀγορᾶς?",
+   "options": [
+    {
+     "text": "ἐκ becomes ἐξ before a vowel",
+     "correct": true
+    },
+    {
+     "text": "ἐξ means something different",
+     "correct": false,
+     "feedback": "Same word, same meaning: “out of”."
+    },
+    {
+     "text": "ἐξ is used with feminine nouns",
+     "correct": false,
+     "feedback": "It depends on the next sound, not on gender."
+    }
+   ],
+   "explain": "ἐξ before a vowel (ἐξ ἀγορᾶς); ἐκ before a consonant (ἐκ τῆς ἀγορᾶς). Like οὐ and οὐκ, it smooths the sound."
+  },
+  {
+   "id": "greek.adj.1",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "What does **καλός, καλή, καλόν** mean?",
+   "answer": "beautiful",
+   "distractors": [
+    "good",
+    "small",
+    "just"
+   ],
+   "explain": "καλός = beautiful. English relatives: kaleidoscope (“seeing beautiful shapes”), calligraphy.",
+   "accept": [
+    "fine",
+    "good",
+    "noble",
+    "handsome"
+   ],
+   "learn": "**καλός, καλή, καλόν** = beautiful\n_kaleidoscope (“seeing beautiful shapes”), calligraphy_"
+  },
+  {
+   "id": "greek.adj.en.1",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **beautiful**?",
+   "answer": "καλός",
+   "distractors": [
+    "σοφός",
+    "δεινός",
+    "χαλεπός"
+   ],
+   "explain": "beautiful = καλός, καλή, καλόν.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.adj.2",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "What does **κακός, κακή, κακόν** mean?",
+   "answer": "bad",
+   "distractors": [
+    "wise",
+    "terrible",
+    "difficult"
+   ],
+   "explain": "κακός = bad. English relatives: cacophony (a bad sound).",
+   "accept": [
+    "evil",
+    "cowardly",
+    "wicked"
+   ],
+   "learn": "**κακός, κακή, κακόν** = bad\n_cacophony (a bad sound)_"
+  },
+  {
+   "id": "greek.adj.en.2",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **bad**?",
+   "answer": "κακός",
+   "distractors": [
+    "μικρός",
+    "ἀνδρεῖος",
+    "νέος"
+   ],
+   "explain": "bad = κακός, κακή, κακόν.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.adj.3",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "What does **ἀγαθός, ἀγαθή, ἀγαθόν** mean?",
+   "answer": "good",
+   "distractors": [
+    "small",
+    "brave",
+    "new"
+   ],
+   "explain": "ἀγαθός = good. English relatives: Agatha (“good woman”).",
+   "accept": [
+    "brave",
+    "noble"
+   ],
+   "learn": "**ἀγαθός, ἀγαθή, ἀγαθόν** = good\n_Agatha (“good woman”)_"
+  },
+  {
+   "id": "greek.adj.en.3",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **good**?",
+   "answer": "ἀγαθός",
+   "distractors": [
+    "δεινός",
+    "δίκαιος",
+    "καλός"
+   ],
+   "explain": "good = ἀγαθός, ἀγαθή, ἀγαθόν.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.adj.4",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "What does **σοφός, σοφή, σοφόν** mean?",
+   "answer": "wise",
+   "distractors": [
+    "terrible",
+    "just",
+    "beautiful"
+   ],
+   "explain": "σοφός = wise. English relatives: philosophy, sophisticated.",
+   "accept": [
+    "clever",
+    "skilled"
+   ],
+   "learn": "**σοφός, σοφή, σοφόν** = wise\n_philosophy, sophisticated_"
+  },
+  {
+   "id": "greek.adj.en.4",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **wise**?",
+   "answer": "σοφός",
+   "distractors": [
+    "ἀνδρεῖος",
+    "χαλεπός",
+    "κακός"
+   ],
+   "explain": "wise = σοφός, σοφή, σοφόν.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.adj.5",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "What does **μικρός, μικρά, μικρόν** mean?",
+   "answer": "small",
+   "distractors": [
+    "brave",
+    "difficult",
+    "bad"
+   ],
+   "explain": "μικρός = small. English relatives: microscope, microchip.",
+   "accept": [
+    "little"
+   ],
+   "learn": "**μικρός, μικρά, μικρόν** = small\n_microscope, microchip_"
+  },
+  {
+   "id": "greek.adj.en.5",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **small**?",
+   "answer": "μικρός",
+   "distractors": [
+    "δίκαιος",
+    "νέος",
+    "ἀγαθός"
+   ],
+   "explain": "small = μικρός, μικρά, μικρόν.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.adj.6",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "What does **δεινός, δεινή, δεινόν** mean?",
+   "answer": "terrible",
+   "distractors": [
+    "just",
+    "new",
+    "good"
+   ],
+   "explain": "δεινός = terrible. English relatives: dinosaur (“terrible lizard”).",
+   "accept": [
+    "dreadful",
+    "clever",
+    "skilful",
+    "strange",
+    "awful"
+   ],
+   "learn": "**δεινός, δεινή, δεινόν** = terrible\n_dinosaur (“terrible lizard”)_"
+  },
+  {
+   "id": "greek.adj.en.6",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **terrible**?",
+   "answer": "δεινός",
+   "distractors": [
+    "χαλεπός",
+    "καλός",
+    "σοφός"
+   ],
+   "explain": "terrible = δεινός, δεινή, δεινόν.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.adj.7",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "What does **ἀνδρεῖος, ἀνδρεία, ἀνδρεῖον** mean?",
+   "answer": "brave",
+   "distractors": [
+    "difficult",
+    "beautiful",
+    "wise"
+   ],
+   "explain": "ἀνδρεῖος = brave. English relatives: Andrew (“manly”).",
+   "accept": [
+    "courageous",
+    "manly"
+   ],
+   "learn": "**ἀνδρεῖος, ἀνδρεία, ἀνδρεῖον** = brave\n_Andrew (“manly”)_"
+  },
+  {
+   "id": "greek.adj.en.7",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **brave**?",
+   "answer": "ἀνδρεῖος",
+   "distractors": [
+    "νέος",
+    "κακός",
+    "μικρός"
+   ],
+   "explain": "brave = ἀνδρεῖος, ἀνδρεία, ἀνδρεῖον.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.adj.8",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "What does **δίκαιος, δικαία, δίκαιον** mean?",
+   "answer": "just",
+   "distractors": [
+    "new",
+    "bad",
+    "small"
+   ],
+   "explain": "δίκαιος = just. English relatives: no common English word.",
+   "accept": [
+    "fair",
+    "right",
+    "honest"
+   ],
+   "learn": "**δίκαιος, δικαία, δίκαιον** = just\n_no common English word_"
+  },
+  {
+   "id": "greek.adj.en.8",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **just**?",
+   "answer": "δίκαιος",
+   "distractors": [
+    "καλός",
+    "ἀγαθός",
+    "δεινός"
+   ],
+   "explain": "just = δίκαιος, δικαία, δίκαιον.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.adj.9",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "What does **χαλεπός, χαλεπή, χαλεπόν** mean?",
+   "answer": "difficult",
+   "distractors": [
+    "beautiful",
+    "good",
+    "terrible"
+   ],
+   "explain": "χαλεπός = difficult. English relatives: no common English word.",
+   "accept": [
+    "hard",
+    "dangerous",
+    "harsh"
+   ],
+   "learn": "**χαλεπός, χαλεπή, χαλεπόν** = difficult\n_no common English word_"
+  },
+  {
+   "id": "greek.adj.en.9",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **difficult**?",
+   "answer": "χαλεπός",
+   "distractors": [
+    "κακός",
+    "σοφός",
+    "ἀνδρεῖος"
+   ],
+   "explain": "difficult = χαλεπός, χαλεπή, χαλεπόν.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.adj.10",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "What does **νέος, νέα, νέον** mean?",
+   "answer": "new",
+   "distractors": [
+    "bad",
+    "wise",
+    "brave"
+   ],
+   "explain": "νέος = new. English relatives: neon (the “new” gas), neolithic.",
+   "accept": [
+    "young"
+   ],
+   "learn": "**νέος, νέα, νέον** = new\n_neon (the “new” gas), neolithic_"
+  },
+  {
+   "id": "greek.adj.en.10",
+   "topic": "greek.adjectives",
+   "kind": "fact",
+   "prompt": "Which is the Greek for **new**?",
+   "answer": "νέος",
+   "distractors": [
+    "ἀγαθός",
+    "μικρός",
+    "δίκαιος"
+   ],
+   "explain": "new = νέος, νέα, νέον.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.adj.agree",
+   "topic": "greek.adjectives",
+   "kind": "mcq",
+   "prompt": "Which phrase means “the beautiful girl”?",
+   "options": [
+    {
+     "text": "ἡ καλὴ κόρη",
+     "correct": true
+    },
+    {
+     "text": "ἡ καλὸς κόρη",
+     "correct": false,
+     "feedback": "κόρη is feminine, so the adjective must be feminine: καλή."
+    },
+    {
+     "text": "ὁ καλὸς κόρη",
+     "correct": false,
+     "feedback": "Both the article and the adjective must be feminine."
+    }
+   ],
+   "explain": "Adjectives agree with their noun in gender, case and number: ἡ καλὴ κόρη."
+  },
+  {
+   "id": "greek.adj.attr",
+   "topic": "greek.adjectives",
+   "kind": "mcq",
+   "prompt": "What does **ὁ σοφὸς στρατηγός** mean?",
+   "options": [
+    {
+     "text": "the wise general",
+     "correct": true
+    },
+    {
+     "text": "the general is wise",
+     "correct": false,
+     "feedback": "That would be ὁ στρατηγὸς σοφός, with the adjective outside the article and noun."
+    },
+    {
+     "text": "the generals are wise",
+     "correct": false,
+     "feedback": "Everything here is singular."
+    }
+   ],
+   "explain": "When the adjective sits between the article and the noun (attributive position), it describes: “the wise general”."
+  },
+  {
+   "id": "greek.adj.pred",
+   "topic": "greek.adjectives",
+   "kind": "mcq",
+   "prompt": "What does **ὁ στρατηγὸς σοφός** mean?",
+   "options": [
+    {
+     "text": "the general is wise",
+     "correct": true
+    },
+    {
+     "text": "the wise general",
+     "correct": false,
+     "feedback": "With the adjective outside the article and noun (predicative position), you add “is”."
+    },
+    {
+     "text": "wise generals",
+     "correct": false,
+     "feedback": "It is singular, with the article."
+    }
+   ],
+   "explain": "Greek often leaves out “is”: ὁ στρατηγὸς σοφός = the general (is) wise."
+  },
+  {
+   "id": "greek.adj.alpha",
+   "topic": "greek.adjectives",
+   "kind": "mcq",
+   "prompt": "Why is “small” μικρός, μικρά, μικρόν, but “beautiful” καλός, καλή, καλόν?",
+   "options": [
+    {
+     "text": "After ρ (or ε, ι) the feminine keeps α",
+     "correct": true
+    },
+    {
+     "text": "μικρός is irregular",
+     "correct": false,
+     "feedback": "It is regular: the same rule as χώρα."
+    },
+    {
+     "text": "μικρά is neuter",
+     "correct": false,
+     "feedback": "μικρά is feminine singular here."
+    }
+   ],
+   "explain": "The same “alpha pure” rule as the nouns: δικαία, νέα, μικρά, but καλή, σοφή."
+  },
+  {
+   "id": "greek.adj.neut",
+   "topic": "greek.adjectives",
+   "kind": "mcq",
+   "prompt": "Which adjective form goes with **τὸ δῶρον**?",
+   "options": [
+    {
+     "text": "καλόν",
+     "correct": true
+    },
+    {
+     "text": "καλός",
+     "correct": false,
+     "feedback": "καλός is masculine. δῶρον is neuter."
+    },
+    {
+     "text": "καλή",
+     "correct": false,
+     "feedback": "καλή is feminine."
+    }
+   ],
+   "explain": "τὸ καλὸν δῶρον = the beautiful gift."
+  },
+  {
+   "id": "greek.tenses.tmpl",
+   "topic": "greek.tenses",
+   "kind": "template",
+   "gen": "y8gTense",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.t.augment",
+   "topic": "greek.tenses",
+   "kind": "mcq",
+   "prompt": "What is the augment?",
+   "options": [
+    {
+     "text": "An ἐ- added to the front of a verb to show a past tense",
+     "correct": true
+    },
+    {
+     "text": "A σ added before the ending",
+     "correct": false,
+     "feedback": "That marks the future."
+    },
+    {
+     "text": "The ending that shows the person",
+     "correct": false,
+     "feedback": "The augment is at the front."
+    }
+   ],
+   "explain": "λύω → ἔλυον (imperfect). Verbs starting with a vowel lengthen it instead: ἄγω → ἦγον."
+  },
+  {
+   "id": "greek.t.vowel",
+   "topic": "greek.tenses",
+   "kind": "mcq",
+   "prompt": "What is the imperfect of **ἄγω** (I lead), “I was leading”?",
+   "options": [
+    {
+     "text": "ἦγον",
+     "correct": true
+    },
+    {
+     "text": "ἐάγον",
+     "correct": false,
+     "feedback": "A verb starting with a vowel lengthens it instead of adding ἐ-: α → η."
+    },
+    {
+     "text": "ἄξω",
+     "correct": false,
+     "feedback": "ἄξω is the future, “I will lead”."
+    }
+   ],
+   "explain": "α lengthens to η: ἄγω → ἦγον. Likewise ἀκούω → ἤκουον, ἐθέλω → ἤθελον."
+  },
+  {
+   "id": "greek.t.fut",
+   "topic": "greek.tenses",
+   "kind": "mcq",
+   "prompt": "Why is the future of πέμπω written πέμψω, not πέμπσω?",
+   "options": [
+    {
+     "text": "π + σ is written ψ",
+     "correct": true
+    },
+    {
+     "text": "It is irregular",
+     "correct": false,
+     "feedback": "It follows a regular spelling rule."
+    },
+    {
+     "text": "ψ means future",
+     "correct": false,
+     "feedback": "The σ means future; π + σ just looks like ψ."
+    }
+   ],
+   "explain": "π, β, φ + σ → ψ (πέμψω, γράψω). κ, γ, χ + σ → ξ (ἄξω)."
+  },
+  {
+   "id": "greek.t.impf",
+   "topic": "greek.tenses",
+   "kind": "mcq",
+   "prompt": "What does the imperfect describe?",
+   "options": [
+    {
+     "text": "An action that was going on, or kept happening, in the past",
+     "correct": true
+    },
+    {
+     "text": "A single finished action",
+     "correct": false,
+     "feedback": "That is the aorist (a stretch topic)."
+    },
+    {
+     "text": "An action in the future",
+     "correct": false,
+     "feedback": "That is the future."
+    }
+   ],
+   "explain": "ἔλυον = I was freeing, I used to free, I kept freeing."
+  },
+  {
+   "id": "greek.t.amb",
+   "topic": "greek.tenses",
+   "kind": "mcq",
+   "prompt": "**ἔλυον** can mean two things. Which?",
+   "options": [
+    {
+     "text": "I was freeing, or they were freeing",
+     "correct": true
+    },
+    {
+     "text": "I free, or I will free",
+     "correct": false,
+     "feedback": "The augment shows a past tense."
+    },
+    {
+     "text": "he freed, or she freed",
+     "correct": false,
+     "feedback": "The -ον ending is first person singular or third person plural."
+    }
+   ],
+   "explain": "In the imperfect, -ον is both “I” and “they”: use the context (or a plural subject) to decide."
+  },
+  {
+   "id": "greek.pt.1",
+   "topic": "greek.particles",
+   "kind": "fact",
+   "prompt": "What does **καί** mean?",
+   "answer": "and",
+   "distractors": [
+    "but",
+    "for",
+    "therefore"
+   ],
+   "explain": "καί = and. It can also mean “also” or “even”: καὶ ὁ στρατηγός, “the general too”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.pt.2",
+   "topic": "greek.particles",
+   "kind": "fact",
+   "prompt": "What does **ἀλλά** mean?",
+   "answer": "but",
+   "distractors": [
+    "and",
+    "therefore",
+    "for"
+   ],
+   "explain": "ἀλλά = but, a strong contrast.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.pt.3",
+   "topic": "greek.particles",
+   "kind": "fact",
+   "prompt": "What does **γάρ** mean?",
+   "answer": "for (because)",
+   "distractors": [
+    "but",
+    "and",
+    "not"
+   ],
+   "explain": "γάρ = for (giving a reason). It never comes first in its clause.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.pt.4",
+   "topic": "greek.particles",
+   "kind": "fact",
+   "prompt": "What does **οὖν** mean?",
+   "answer": "therefore, so",
+   "distractors": [
+    "and",
+    "but",
+    "because"
+   ],
+   "explain": "οὖν = therefore, so. It never comes first in its clause.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.pt.5",
+   "topic": "greek.particles",
+   "kind": "fact",
+   "prompt": "What does **οὐ** mean?",
+   "answer": "not",
+   "distractors": [
+    "and",
+    "for",
+    "so"
+   ],
+   "explain": "οὐ = not (οὐκ before a smooth breathing, οὐχ before a rough breathing).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.pt.post",
+   "topic": "greek.particles",
+   "kind": "mcq",
+   "prompt": "γάρ, οὖν and δέ are “postpositive”. What does that mean?",
+   "options": [
+    {
+     "text": "They can never come first: they go second in their clause",
+     "correct": true
+    },
+    {
+     "text": "They always come at the end of the sentence",
+     "correct": false,
+     "feedback": "They go second, not last."
+    },
+    {
+     "text": "They only go after verbs",
+     "correct": false,
+     "feedback": "They go after the first word, whatever it is."
+    }
+   ],
+   "explain": "δεινὸς γάρ ἐστιν = “for it is terrible”. In English “for” comes first; in Greek, γάρ comes second."
+  },
+  {
+   "id": "greek.pt.mende",
+   "topic": "greek.particles",
+   "kind": "mcq",
+   "prompt": "How would you translate **ὁ μὲν Θησεὺς ἀνδρεῖος, ὁ δὲ Μινώταυρος δεινός**?",
+   "options": [
+    {
+     "text": "Theseus is brave, but (whereas) the Minotaur is terrible",
+     "correct": true
+    },
+    {
+     "text": "Theseus and the Minotaur are brave and terrible",
+     "correct": false,
+     "feedback": "μέν… δέ contrasts the two halves."
+    },
+    {
+     "text": "Theseus is not brave",
+     "correct": false,
+     "feedback": "There is no οὐ."
+    }
+   ],
+   "explain": "μέν… δέ: “on the one hand… on the other”. Often μέν is left untranslated and δέ becomes “but” or “while”."
+  },
+  {
+   "id": "greek.pt.de",
+   "topic": "greek.particles",
+   "kind": "mcq",
+   "prompt": "What does **δέ** usually mean when it appears without μέν?",
+   "options": [
+    {
+     "text": "and, or but (it links to what came before)",
+     "correct": true
+    },
+    {
+     "text": "not",
+     "correct": false,
+     "feedback": "Not is οὐ."
+    },
+    {
+     "text": "therefore",
+     "correct": false,
+     "feedback": "Therefore is οὖν."
+    }
+   ],
+   "explain": "δέ is the commonest linking word in stories: ὁ δὲ Ὀδυσσεύς… “And Odysseus…” or “But Odysseus…”."
+  },
+  {
+   "id": "greek.pt.gar-en",
+   "topic": "greek.particles",
+   "kind": "fact",
+   "prompt": "In the Theseus story, how would you translate **δεινὸς γάρ ἐστιν**?",
+   "answer": "for he is terrible",
+   "distractors": [
+    "but he is terrible",
+    "therefore he is terrible",
+    "he is not terrible"
+   ],
+   "explain": "γάρ = for (because). “He” is the Minotaur: “for he is terrible”.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Θησεὺς καὶ ὁ Μινώταυρος\n\nἐν τῇ Κρήτῃ ὁ Μίνως βασιλεύει. ἐν δὲ τῷ λαβυρίνθῳ μένει ὁ Μινώταυρος· δεινὸς γάρ ἐστιν. οἱ Ἀθηναῖοι ἑπτὰ νεανίας καὶ ἑπτὰ κόρας εἰς τὴν Κρήτην πέμπουσιν. ὁ δὲ Θησεὺς ἀνδρεῖός ἐστιν· ἐθέλει οὖν τοὺς φίλους λύειν.\n\nἡ Ἀριάδνη, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Θησέα φιλεῖ καὶ λίνον αὐτῷ δίδωσιν. ὁ Θησεὺς εἰς τὸν λαβύρινθον βαίνει καὶ τὸν Μινώταυρον ἀποκτείνει. ἔπειτα τῷ λίνῳ τὴν ὁδὸν εὑρίσκει καὶ ἐκ τοῦ λαβυρίνθου φεύγει. οἱ οὖν Ἀθηναῖοι μάλα χαίρουσιν.\n\nGlossary: βασιλεύει = is king; λαβύρινθος = labyrinth, maze; νεανίας (accusative plural νεανίας) = young man; θυγάτηρ = daughter; φιλεῖ = loves; λίνον = thread; αὐτῷ = to him; δίδωσιν = gives; βαίνει = goes; ἀποκτείνει = kills; ἔπειτα = then; ὁδός (accusative ὁδόν) = way, road; εὑρίσκει = finds; μάλα = very much; χαίρουσιν = rejoice.",
+   "passageSource": "Adapted for this app from the myth of Theseus"
+  },
+  {
+   "id": "greek.ro.1",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **τῆλε (far) + φωνή (voice)**?",
+   "answer": "telephone",
+   "distractors": [
+    "television",
+    "phonics",
+    "symphony"
+   ],
+   "explain": "τῆλε (far) + φωνή (voice) → telephone.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.2",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **βίος (life) + λόγος (study)**?",
+   "answer": "biology",
+   "distractors": [
+    "geology",
+    "biography",
+    "theology"
+   ],
+   "explain": "βίος (life) + λόγος (study) → biology.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.3",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **δῆμος (people) + κράτος (power)**?",
+   "answer": "democracy",
+   "distractors": [
+    "aristocracy",
+    "demagogue",
+    "dynamo"
+   ],
+   "explain": "δῆμος (people) + κράτος (power) → democracy.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.4",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **δεινός (terrible) + σαῦρος (lizard)**?",
+   "answer": "dinosaur",
+   "distractors": [
+    "thesaurus",
+    "pterosaur",
+    "dynamo"
+   ],
+   "explain": "δεινός (terrible) + σαῦρος (lizard) → dinosaur.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.5",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **ἵππος (horse) + ποταμός (river)**?",
+   "answer": "hippopotamus",
+   "distractors": [
+    "hippodrome",
+    "Mesopotamia",
+    "potamology"
+   ],
+   "explain": "ἵππος (horse) + ποταμός (river) → hippopotamus.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.6",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **φίλος (loving) + σοφία (wisdom)**?",
+   "answer": "philosophy",
+   "distractors": [
+    "philanthropy",
+    "sophisticated",
+    "Philadelphia"
+   ],
+   "explain": "φίλος (loving) + σοφία (wisdom) → philosophy.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.7",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **χρόνος (time) + λόγος (study)**?",
+   "answer": "chronology",
+   "distractors": [
+    "chronic",
+    "astrology",
+    "synchronise"
+   ],
+   "explain": "χρόνος (time) + λόγος (study) → chronology.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.8",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **ψυχή (mind) + λόγος (study)**?",
+   "answer": "psychology",
+   "distractors": [
+    "psychic",
+    "physiology",
+    "mythology"
+   ],
+   "explain": "ψυχή (mind) + λόγος (study) → psychology.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.9",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **αὐτός (self) + γράφω (write)**?",
+   "answer": "autograph",
+   "distractors": [
+    "automatic",
+    "photograph",
+    "graphic"
+   ],
+   "explain": "αὐτός (self) + γράφω (write) → autograph.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.10",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **μικρός (small) + σκοπέω (look at)**?",
+   "answer": "microscope",
+   "distractors": [
+    "telescope",
+    "microchip",
+    "horoscope"
+   ],
+   "explain": "μικρός (small) + σκοπέω (look at) → microscope.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.11",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **γῆ (earth) + γράφω (write, draw)**?",
+   "answer": "geography",
+   "distractors": [
+    "geometry",
+    "graphic",
+    "geology"
+   ],
+   "explain": "γῆ (earth) + γράφω (write, draw) → geography.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.12",
+   "topic": "greek.roots",
+   "kind": "fact",
+   "prompt": "Which English word is built from **ἄστρον (star) + ναύτης (sailor)**?",
+   "answer": "astronaut",
+   "distractors": [
+    "astronomy",
+    "nautical",
+    "asteroid"
+   ],
+   "explain": "ἄστρον (star) + ναύτης (sailor) → astronaut.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.ro.ology",
+   "topic": "greek.roots",
+   "kind": "mcq",
+   "prompt": "Using λόγος (word, study), what does “-ology” at the end of a subject mean?",
+   "options": [
+    {
+     "text": "the study of",
+     "correct": true
+    },
+    {
+     "text": "the fear of",
+     "correct": false,
+     "feedback": "That is -phobia, from φόβος."
+    },
+    {
+     "text": "the love of",
+     "correct": false,
+     "feedback": "That is philo-, from φίλος."
+    }
+   ],
+   "explain": "Biology, geology, theology, psychology: the study of life, the earth, god, the mind."
+  },
+  {
+   "id": "greek.ro.phobia",
+   "topic": "greek.roots",
+   "kind": "mcq",
+   "prompt": "φόβος means fear. What is **arachnophobia**, if ἀράχνη means spider?",
+   "options": [
+    {
+     "text": "fear of spiders",
+     "correct": true
+    },
+    {
+     "text": "love of spiders",
+     "correct": false,
+     "feedback": "Love would be -philia."
+    },
+    {
+     "text": "study of spiders",
+     "correct": false,
+     "feedback": "Study would be -ology: arachnology."
+    }
+   ],
+   "explain": "ἀράχνη (spider) + φόβος (fear)."
+  },
+  {
+   "id": "greek.ro.poly",
+   "topic": "greek.roots",
+   "kind": "mcq",
+   "prompt": "πολύς means many and γωνία means angle. What is a **polygon**?",
+   "options": [
+    {
+     "text": "a shape with many angles",
+     "correct": true
+    },
+    {
+     "text": "a shape with one angle",
+     "correct": false,
+     "feedback": "πολύς is many."
+    },
+    {
+     "text": "a type of circle",
+     "correct": false,
+     "feedback": "A circle has no angles."
+    }
+   ],
+   "explain": "polygon = many angles. Pentagon (πέντε, five), hexagon (ἕξ, six) and octagon (ὀκτώ, eight) work the same way."
+  },
+  {
+   "id": "greek.ro.thermo",
+   "topic": "greek.roots",
+   "kind": "mcq",
+   "prompt": "θερμός means hot and μέτρον means measure. What is a **thermometer**?",
+   "options": [
+    {
+     "text": "something that measures heat",
+     "correct": true
+    },
+    {
+     "text": "something that makes heat",
+     "correct": false,
+     "feedback": "μέτρον is measure."
+    },
+    {
+     "text": "a cold store",
+     "correct": false,
+     "feedback": "θερμός is hot."
+    }
+   ],
+   "explain": "θερμός + μέτρον. Also: thermal, thermos flask."
+  },
+  {
+   "id": "greek.cu.god.zeus",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which god is the king of the gods, god of the sky and thunder?",
+   "answer": "Zeus",
+   "distractors": [
+    "Poseidon",
+    "Artemis",
+    "Demeter"
+   ],
+   "explain": "Zeus: king of the gods, god of the sky and thunder. Symbol: a thunderbolt.",
+   "accept": [],
+   "learn": "**Zeus**: king of the gods, god of the sky and thunder. Symbol: a thunderbolt."
+  },
+  {
+   "id": "greek.cu.sym.zeus",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which symbol belongs to **Zeus**?",
+   "answer": "a thunderbolt",
+   "distractors": [
+    "an owl",
+    "winged sandals",
+    "a vine"
+   ],
+   "explain": "Zeus (king of the gods, god of the sky and thunder): a thunderbolt.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.god.hera",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which god is the queen of the gods, goddess of marriage?",
+   "answer": "Hera",
+   "distractors": [
+    "Athena",
+    "Hermes",
+    "Dionysus"
+   ],
+   "explain": "Hera: queen of the gods, goddess of marriage. Symbol: a peacock.",
+   "accept": [],
+   "learn": "**Hera**: queen of the gods, goddess of marriage. Symbol: a peacock."
+  },
+  {
+   "id": "greek.cu.sym.hera",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which symbol belongs to **Hera**?",
+   "answer": "a peacock",
+   "distractors": [
+    "a lyre",
+    "a hammer and anvil",
+    "a thunderbolt"
+   ],
+   "explain": "Hera (queen of the gods, goddess of marriage): a peacock.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.god.poseidon",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which god is the god of the sea and earthquakes?",
+   "answer": "Poseidon",
+   "distractors": [
+    "Apollo",
+    "Hephaestus",
+    "Zeus"
+   ],
+   "explain": "Poseidon: god of the sea and earthquakes. Symbol: a trident.",
+   "accept": [],
+   "learn": "**Poseidon**: god of the sea and earthquakes. Symbol: a trident."
+  },
+  {
+   "id": "greek.cu.sym.poseidon",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which symbol belongs to **Poseidon**?",
+   "answer": "a trident",
+   "distractors": [
+    "a bow and arrows",
+    "a sheaf of wheat",
+    "a peacock"
+   ],
+   "explain": "Poseidon (god of the sea and earthquakes): a trident.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.god.athena",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which god is the goddess of wisdom, crafts and war strategy?",
+   "answer": "Athena",
+   "distractors": [
+    "Artemis",
+    "Demeter",
+    "Hera"
+   ],
+   "explain": "Athena: goddess of wisdom, crafts and war strategy. Symbol: an owl.",
+   "accept": [],
+   "learn": "**Athena**: goddess of wisdom, crafts and war strategy. Symbol: an owl."
+  },
+  {
+   "id": "greek.cu.sym.athena",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which symbol belongs to **Athena**?",
+   "answer": "an owl",
+   "distractors": [
+    "winged sandals",
+    "a vine",
+    "a trident"
+   ],
+   "explain": "Athena (goddess of wisdom, crafts and war strategy): an owl.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.god.apollo",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which god is the god of music, poetry, healing and prophecy?",
+   "answer": "Apollo",
+   "distractors": [
+    "Hermes",
+    "Dionysus",
+    "Poseidon"
+   ],
+   "explain": "Apollo: god of music, poetry, healing and prophecy. Symbol: a lyre.",
+   "accept": [
+    "Apollon"
+   ],
+   "learn": "**Apollo**: god of music, poetry, healing and prophecy. Symbol: a lyre."
+  },
+  {
+   "id": "greek.cu.sym.apollo",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which symbol belongs to **Apollo**?",
+   "answer": "a lyre",
+   "distractors": [
+    "a hammer and anvil",
+    "a thunderbolt",
+    "an owl"
+   ],
+   "explain": "Apollo (god of music, poetry, healing and prophecy): a lyre.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.god.artemis",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which god is the goddess of hunting and the wild?",
+   "answer": "Artemis",
+   "distractors": [
+    "Hephaestus",
+    "Zeus",
+    "Athena"
+   ],
+   "explain": "Artemis: goddess of hunting and the wild. Symbol: a bow and arrows.",
+   "accept": [],
+   "learn": "**Artemis**: goddess of hunting and the wild. Symbol: a bow and arrows."
+  },
+  {
+   "id": "greek.cu.sym.artemis",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which symbol belongs to **Artemis**?",
+   "answer": "a bow and arrows",
+   "distractors": [
+    "a sheaf of wheat",
+    "a peacock",
+    "a lyre"
+   ],
+   "explain": "Artemis (goddess of hunting and the wild): a bow and arrows.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.god.hermes",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which god is the messenger of the gods, god of travellers and thieves?",
+   "answer": "Hermes",
+   "distractors": [
+    "Demeter",
+    "Hera",
+    "Apollo"
+   ],
+   "explain": "Hermes: messenger of the gods, god of travellers and thieves. Symbol: winged sandals.",
+   "accept": [],
+   "learn": "**Hermes**: messenger of the gods, god of travellers and thieves. Symbol: winged sandals."
+  },
+  {
+   "id": "greek.cu.sym.hermes",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which symbol belongs to **Hermes**?",
+   "answer": "winged sandals",
+   "distractors": [
+    "a vine",
+    "a trident",
+    "a bow and arrows"
+   ],
+   "explain": "Hermes (messenger of the gods, god of travellers and thieves): winged sandals.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.god.hephaestus",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which god is the god of fire and the forge, the smith of the gods?",
+   "answer": "Hephaestus",
+   "distractors": [
+    "Dionysus",
+    "Poseidon",
+    "Artemis"
+   ],
+   "explain": "Hephaestus: god of fire and the forge, the smith of the gods. Symbol: a hammer and anvil.",
+   "accept": [
+    "Hephaistos",
+    "Hephestus"
+   ],
+   "learn": "**Hephaestus**: god of fire and the forge, the smith of the gods. Symbol: a hammer and anvil."
+  },
+  {
+   "id": "greek.cu.sym.hephaestus",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which symbol belongs to **Hephaestus**?",
+   "answer": "a hammer and anvil",
+   "distractors": [
+    "a thunderbolt",
+    "an owl",
+    "winged sandals"
+   ],
+   "explain": "Hephaestus (god of fire and the forge, the smith of the gods): a hammer and anvil.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.god.demeter",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which god is the goddess of the harvest and grain?",
+   "answer": "Demeter",
+   "distractors": [
+    "Zeus",
+    "Athena",
+    "Hermes"
+   ],
+   "explain": "Demeter: goddess of the harvest and grain. Symbol: a sheaf of wheat.",
+   "accept": [],
+   "learn": "**Demeter**: goddess of the harvest and grain. Symbol: a sheaf of wheat."
+  },
+  {
+   "id": "greek.cu.sym.demeter",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which symbol belongs to **Demeter**?",
+   "answer": "a sheaf of wheat",
+   "distractors": [
+    "a peacock",
+    "a lyre",
+    "a hammer and anvil"
+   ],
+   "explain": "Demeter (goddess of the harvest and grain): a sheaf of wheat.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.god.dionysus",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which god is the god of wine and the theatre?",
+   "answer": "Dionysus",
+   "distractors": [
+    "Hera",
+    "Apollo",
+    "Hephaestus"
+   ],
+   "explain": "Dionysus: god of wine and the theatre. Symbol: a vine.",
+   "accept": [
+    "Dionysos"
+   ],
+   "learn": "**Dionysus**: god of wine and the theatre. Symbol: a vine."
+  },
+  {
+   "id": "greek.cu.sym.dionysus",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Which symbol belongs to **Dionysus**?",
+   "answer": "a vine",
+   "distractors": [
+    "a trident",
+    "a bow and arrows",
+    "a sheaf of wheat"
+   ],
+   "explain": "Dionysus (god of wine and the theatre): a vine.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.olympia",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "Where were the ancient Olympic Games held, in honour of Zeus?",
+   "answer": "Olympia",
+   "distractors": [
+    "Mount Olympus",
+    "Athens",
+    "Sparta"
+   ],
+   "explain": "Olympia, in the western Peloponnese. Mount Olympus, home of the gods, is far to the north.",
+   "accept": [
+    "at olympia"
+   ]
+  },
+  {
+   "id": "greek.cu.776",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "In which year do the Greeks date the first Olympic Games?",
+   "answer": "776 BC",
+   "distractors": [
+    "490 BC",
+    "AD 1896",
+    "1066 BC"
+   ],
+   "explain": "Traditionally 776 BC. The Greeks even counted years in Olympiads, four-year periods.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.prize",
+   "topic": "greek.culture",
+   "kind": "fact",
+   "prompt": "What did an ancient Olympic winner receive at the games themselves?",
+   "answer": "a wreath of olive leaves",
+   "distractors": [
+    "a gold medal",
+    "a bag of silver",
+    "a bronze statue of Zeus"
+   ],
+   "explain": "Just an olive wreath, though home cities often gave winners free meals for life.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.cu.theatre",
+   "topic": "greek.culture",
+   "kind": "mcq",
+   "prompt": "Athenian plays were performed at festivals in honour of which god?",
+   "options": [
+    {
+     "text": "Dionysus",
+     "correct": true
+    },
+    {
+     "text": "Apollo",
+     "correct": false,
+     "feedback": "Apollo was god of music, but the drama festivals honoured Dionysus."
+    },
+    {
+     "text": "Ares",
+     "correct": false,
+     "feedback": "Ares was the god of war."
+    }
+   ],
+   "explain": "The City Dionysia, each spring: tragedies and comedies in the Theatre of Dionysus."
+  },
+  {
+   "id": "greek.cu.chorus",
+   "topic": "greek.culture",
+   "kind": "mcq",
+   "prompt": "In Greek tragedy, what was the **chorus**?",
+   "options": [
+    {
+     "text": "A group who sang, danced and commented on the action",
+     "correct": true
+    },
+    {
+     "text": "The main actor",
+     "correct": false,
+     "feedback": "Actors played the main parts, wearing masks."
+    },
+    {
+     "text": "The audience",
+     "correct": false,
+     "feedback": "The audience watched; the chorus performed."
+    }
+   ],
+   "explain": "χορός = a dance, a band of dancers. It gives us “chorus” and “choreography”."
+  },
+  {
+   "id": "greek.cu.masks",
+   "topic": "greek.culture",
+   "kind": "mcq",
+   "prompt": "Why did Greek actors wear masks?",
+   "options": [
+    {
+     "text": "So a few actors could play many characters, men and women, and be recognised from far away",
+     "correct": true
+    },
+    {
+     "text": "To hide from the gods",
+     "correct": false,
+     "feedback": "It was a practical tradition."
+    },
+    {
+     "text": "Because acting was against the law",
+     "correct": false,
+     "feedback": "Theatre was a public, religious festival."
+    }
+   ],
+   "explain": "Three actors could play every speaking part. Theatres were huge: Epidaurus seats over 12,000."
+  },
+  {
+   "id": "greek.cu.iliad",
+   "topic": "greek.culture",
+   "kind": "mcq",
+   "prompt": "What is Homer’s **Iliad** about?",
+   "options": [
+    {
+     "text": "A few weeks in the Trojan War, and the anger of Achilles",
+     "correct": true
+    },
+    {
+     "text": "Odysseus’ ten-year journey home",
+     "correct": false,
+     "feedback": "That is the Odyssey."
+    },
+    {
+     "text": "The founding of Athens",
+     "correct": false,
+     "feedback": "The Iliad is set at Troy."
+    }
+   ],
+   "explain": "The Iliad: the anger of Achilles at Troy. The Odyssey: Odysseus’ voyage home to Ithaca."
+  },
+  {
+   "id": "greek.cu.odyssey",
+   "topic": "greek.culture",
+   "kind": "mcq",
+   "prompt": "Where was Odysseus trying to get home to?",
+   "options": [
+    {
+     "text": "Ithaca",
+     "correct": true
+    },
+    {
+     "text": "Troy",
+     "correct": false,
+     "feedback": "He was leaving Troy, after the war."
+    },
+    {
+     "text": "Sparta",
+     "correct": false,
+     "feedback": "Sparta was Menelaus’ city."
+    }
+   ],
+   "explain": "Ithaca, an island off western Greece, where Penelope and Telemachus waited."
+  },
+  {
+   "id": "greek.cu.athens",
+   "topic": "greek.culture",
+   "kind": "mcq",
+   "prompt": "What did Athens become famous for, from about 508 BC?",
+   "options": [
+    {
+     "text": "democracy: rule by the citizens",
+     "correct": true
+    },
+    {
+     "text": "the Olympic Games",
+     "correct": false,
+     "feedback": "They began at Olympia, much earlier."
+    },
+    {
+     "text": "inventing the alphabet",
+     "correct": false,
+     "feedback": "The Greeks adapted the Phoenician alphabet centuries earlier."
+    }
+   ],
+   "explain": "After the reforms of Cleisthenes, adult male citizens voted directly in the Assembly. Women, slaves and foreigners could not vote."
+  },
+  {
+   "id": "greek.cu.sparta",
+   "topic": "greek.culture",
+   "kind": "mcq",
+   "prompt": "What was a Spartan boy’s life like from the age of about seven?",
+   "options": [
+    {
+     "text": "Tough military training in the agoge",
+     "correct": true
+    },
+    {
+     "text": "Studying philosophy in Athens",
+     "correct": false,
+     "feedback": "Spartans valued military skill above all."
+    },
+    {
+     "text": "Working on the family farm",
+     "correct": false,
+     "feedback": "Spartan citizens did not farm: the helots did that."
+    }
+   ],
+   "explain": "The agoge trained boys in endurance, obedience and fighting. Spartan girls also exercised and competed, unusually for Greece."
+  },
+  {
+   "id": "greek.my.th.1",
+   "topic": "greek.myth-1",
+   "kind": "fact",
+   "prompt": "Who is king in Crete?",
+   "answer": "Minos",
+   "distractors": [
+    "Theseus",
+    "the Minotaur",
+    "Ariadne"
+   ],
+   "explain": "“ἐν τῇ Κρήτῃ ὁ Μίνως βασιλεύει.”",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Θησεὺς καὶ ὁ Μινώταυρος\n\nἐν τῇ Κρήτῃ ὁ Μίνως βασιλεύει. ἐν δὲ τῷ λαβυρίνθῳ μένει ὁ Μινώταυρος· δεινὸς γάρ ἐστιν. οἱ Ἀθηναῖοι ἑπτὰ νεανίας καὶ ἑπτὰ κόρας εἰς τὴν Κρήτην πέμπουσιν. ὁ δὲ Θησεὺς ἀνδρεῖός ἐστιν· ἐθέλει οὖν τοὺς φίλους λύειν.\n\nἡ Ἀριάδνη, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Θησέα φιλεῖ καὶ λίνον αὐτῷ δίδωσιν. ὁ Θησεὺς εἰς τὸν λαβύρινθον βαίνει καὶ τὸν Μινώταυρον ἀποκτείνει. ἔπειτα τῷ λίνῳ τὴν ὁδὸν εὑρίσκει καὶ ἐκ τοῦ λαβυρίνθου φεύγει. οἱ οὖν Ἀθηναῖοι μάλα χαίρουσιν.\n\nGlossary: βασιλεύει = is king; λαβύρινθος = labyrinth, maze; νεανίας (accusative plural νεανίας) = young man; θυγάτηρ = daughter; φιλεῖ = loves; λίνον = thread; αὐτῷ = to him; δίδωσιν = gives; βαίνει = goes; ἀποκτείνει = kills; ἔπειτα = then; ὁδός (accusative ὁδόν) = way, road; εὑρίσκει = finds; μάλα = very much; χαίρουσιν = rejoice.",
+   "passageSource": "Adapted for this app from the myth of Theseus"
+  },
+  {
+   "id": "greek.my.th.2",
+   "topic": "greek.myth-1",
+   "kind": "fact",
+   "prompt": "Translate: **ἐν δὲ τῷ λαβυρίνθῳ μένει ὁ Μινώταυρος.**",
+   "answer": "And in the labyrinth the Minotaur stays.",
+   "distractors": [
+    "And the Minotaur flees into the labyrinth.",
+    "The Minotaur stays out of the labyrinth.",
+    "And in the labyrinth the Minotaurs wait."
+   ],
+   "explain": "ἐν + dative = in; μένει = stays, waits; ὁ Μινώταυρος is the subject.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Θησεὺς καὶ ὁ Μινώταυρος\n\nἐν τῇ Κρήτῃ ὁ Μίνως βασιλεύει. ἐν δὲ τῷ λαβυρίνθῳ μένει ὁ Μινώταυρος· δεινὸς γάρ ἐστιν. οἱ Ἀθηναῖοι ἑπτὰ νεανίας καὶ ἑπτὰ κόρας εἰς τὴν Κρήτην πέμπουσιν. ὁ δὲ Θησεὺς ἀνδρεῖός ἐστιν· ἐθέλει οὖν τοὺς φίλους λύειν.\n\nἡ Ἀριάδνη, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Θησέα φιλεῖ καὶ λίνον αὐτῷ δίδωσιν. ὁ Θησεὺς εἰς τὸν λαβύρινθον βαίνει καὶ τὸν Μινώταυρον ἀποκτείνει. ἔπειτα τῷ λίνῳ τὴν ὁδὸν εὑρίσκει καὶ ἐκ τοῦ λαβυρίνθου φεύγει. οἱ οὖν Ἀθηναῖοι μάλα χαίρουσιν.\n\nGlossary: βασιλεύει = is king; λαβύρινθος = labyrinth, maze; νεανίας (accusative plural νεανίας) = young man; θυγάτηρ = daughter; φιλεῖ = loves; λίνον = thread; αὐτῷ = to him; δίδωσιν = gives; βαίνει = goes; ἀποκτείνει = kills; ἔπειτα = then; ὁδός (accusative ὁδόν) = way, road; εὑρίσκει = finds; μάλα = very much; χαίρουσιν = rejoice.",
+   "passageSource": "Adapted for this app from the myth of Theseus"
+  },
+  {
+   "id": "greek.my.th.3",
+   "topic": "greek.myth-1",
+   "kind": "fact",
+   "prompt": "Whom do the Athenians send to Crete?",
+   "answer": "seven young men and seven girls",
+   "distractors": [
+    "seven soldiers",
+    "Theseus alone",
+    "fourteen slaves"
+   ],
+   "explain": "“ἑπτὰ νεανίας καὶ ἑπτὰ κόρας”: seven young men and seven girls.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Θησεὺς καὶ ὁ Μινώταυρος\n\nἐν τῇ Κρήτῃ ὁ Μίνως βασιλεύει. ἐν δὲ τῷ λαβυρίνθῳ μένει ὁ Μινώταυρος· δεινὸς γάρ ἐστιν. οἱ Ἀθηναῖοι ἑπτὰ νεανίας καὶ ἑπτὰ κόρας εἰς τὴν Κρήτην πέμπουσιν. ὁ δὲ Θησεὺς ἀνδρεῖός ἐστιν· ἐθέλει οὖν τοὺς φίλους λύειν.\n\nἡ Ἀριάδνη, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Θησέα φιλεῖ καὶ λίνον αὐτῷ δίδωσιν. ὁ Θησεὺς εἰς τὸν λαβύρινθον βαίνει καὶ τὸν Μινώταυρον ἀποκτείνει. ἔπειτα τῷ λίνῳ τὴν ὁδὸν εὑρίσκει καὶ ἐκ τοῦ λαβυρίνθου φεύγει. οἱ οὖν Ἀθηναῖοι μάλα χαίρουσιν.\n\nGlossary: βασιλεύει = is king; λαβύρινθος = labyrinth, maze; νεανίας (accusative plural νεανίας) = young man; θυγάτηρ = daughter; φιλεῖ = loves; λίνον = thread; αὐτῷ = to him; δίδωσιν = gives; βαίνει = goes; ἀποκτείνει = kills; ἔπειτα = then; ὁδός (accusative ὁδόν) = way, road; εὑρίσκει = finds; μάλα = very much; χαίρουσιν = rejoice.",
+   "passageSource": "Adapted for this app from the myth of Theseus"
+  },
+  {
+   "id": "greek.my.th.4",
+   "topic": "greek.myth-1",
+   "kind": "fact",
+   "prompt": "Why does Theseus want to go?",
+   "answer": "he is brave and wants to free his friends",
+   "distractors": [
+    "he wants to become king of Crete",
+    "Ariadne asks him to",
+    "he is a slave"
+   ],
+   "explain": "“ἀνδρεῖός ἐστιν· ἐθέλει οὖν τοὺς φίλους λύειν.” He is brave, so he wants to free his friends.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Θησεὺς καὶ ὁ Μινώταυρος\n\nἐν τῇ Κρήτῃ ὁ Μίνως βασιλεύει. ἐν δὲ τῷ λαβυρίνθῳ μένει ὁ Μινώταυρος· δεινὸς γάρ ἐστιν. οἱ Ἀθηναῖοι ἑπτὰ νεανίας καὶ ἑπτὰ κόρας εἰς τὴν Κρήτην πέμπουσιν. ὁ δὲ Θησεὺς ἀνδρεῖός ἐστιν· ἐθέλει οὖν τοὺς φίλους λύειν.\n\nἡ Ἀριάδνη, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Θησέα φιλεῖ καὶ λίνον αὐτῷ δίδωσιν. ὁ Θησεὺς εἰς τὸν λαβύρινθον βαίνει καὶ τὸν Μινώταυρον ἀποκτείνει. ἔπειτα τῷ λίνῳ τὴν ὁδὸν εὑρίσκει καὶ ἐκ τοῦ λαβυρίνθου φεύγει. οἱ οὖν Ἀθηναῖοι μάλα χαίρουσιν.\n\nGlossary: βασιλεύει = is king; λαβύρινθος = labyrinth, maze; νεανίας (accusative plural νεανίας) = young man; θυγάτηρ = daughter; φιλεῖ = loves; λίνον = thread; αὐτῷ = to him; δίδωσιν = gives; βαίνει = goes; ἀποκτείνει = kills; ἔπειτα = then; ὁδός (accusative ὁδόν) = way, road; εὑρίσκει = finds; μάλα = very much; χαίρουσιν = rejoice.",
+   "passageSource": "Adapted for this app from the myth of Theseus"
+  },
+  {
+   "id": "greek.my.th.5",
+   "topic": "greek.myth-1",
+   "kind": "fact",
+   "prompt": "In “ἡ τοῦ βασιλέως θυγάτηρ”, what does τοῦ βασιλέως mean?",
+   "answer": "of the king",
+   "distractors": [
+    "to the king",
+    "the king",
+    "the kings"
+   ],
+   "explain": "τοῦ is genitive: “the daughter of the king”.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Θησεὺς καὶ ὁ Μινώταυρος\n\nἐν τῇ Κρήτῃ ὁ Μίνως βασιλεύει. ἐν δὲ τῷ λαβυρίνθῳ μένει ὁ Μινώταυρος· δεινὸς γάρ ἐστιν. οἱ Ἀθηναῖοι ἑπτὰ νεανίας καὶ ἑπτὰ κόρας εἰς τὴν Κρήτην πέμπουσιν. ὁ δὲ Θησεὺς ἀνδρεῖός ἐστιν· ἐθέλει οὖν τοὺς φίλους λύειν.\n\nἡ Ἀριάδνη, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Θησέα φιλεῖ καὶ λίνον αὐτῷ δίδωσιν. ὁ Θησεὺς εἰς τὸν λαβύρινθον βαίνει καὶ τὸν Μινώταυρον ἀποκτείνει. ἔπειτα τῷ λίνῳ τὴν ὁδὸν εὑρίσκει καὶ ἐκ τοῦ λαβυρίνθου φεύγει. οἱ οὖν Ἀθηναῖοι μάλα χαίρουσιν.\n\nGlossary: βασιλεύει = is king; λαβύρινθος = labyrinth, maze; νεανίας (accusative plural νεανίας) = young man; θυγάτηρ = daughter; φιλεῖ = loves; λίνον = thread; αὐτῷ = to him; δίδωσιν = gives; βαίνει = goes; ἀποκτείνει = kills; ἔπειτα = then; ὁδός (accusative ὁδόν) = way, road; εὑρίσκει = finds; μάλα = very much; χαίρουσιν = rejoice.",
+   "passageSource": "Adapted for this app from the myth of Theseus"
+  },
+  {
+   "id": "greek.my.th.6",
+   "topic": "greek.myth-1",
+   "kind": "fact",
+   "prompt": "What does Ariadne give Theseus?",
+   "answer": "a thread",
+   "distractors": [
+    "a sword",
+    "a shield",
+    "a map"
+   ],
+   "explain": "“λίνον αὐτῷ δίδωσιν”: she gives him a thread.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Θησεὺς καὶ ὁ Μινώταυρος\n\nἐν τῇ Κρήτῃ ὁ Μίνως βασιλεύει. ἐν δὲ τῷ λαβυρίνθῳ μένει ὁ Μινώταυρος· δεινὸς γάρ ἐστιν. οἱ Ἀθηναῖοι ἑπτὰ νεανίας καὶ ἑπτὰ κόρας εἰς τὴν Κρήτην πέμπουσιν. ὁ δὲ Θησεὺς ἀνδρεῖός ἐστιν· ἐθέλει οὖν τοὺς φίλους λύειν.\n\nἡ Ἀριάδνη, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Θησέα φιλεῖ καὶ λίνον αὐτῷ δίδωσιν. ὁ Θησεὺς εἰς τὸν λαβύρινθον βαίνει καὶ τὸν Μινώταυρον ἀποκτείνει. ἔπειτα τῷ λίνῳ τὴν ὁδὸν εὑρίσκει καὶ ἐκ τοῦ λαβυρίνθου φεύγει. οἱ οὖν Ἀθηναῖοι μάλα χαίρουσιν.\n\nGlossary: βασιλεύει = is king; λαβύρινθος = labyrinth, maze; νεανίας (accusative plural νεανίας) = young man; θυγάτηρ = daughter; φιλεῖ = loves; λίνον = thread; αὐτῷ = to him; δίδωσιν = gives; βαίνει = goes; ἀποκτείνει = kills; ἔπειτα = then; ὁδός (accusative ὁδόν) = way, road; εὑρίσκει = finds; μάλα = very much; χαίρουσιν = rejoice.",
+   "passageSource": "Adapted for this app from the myth of Theseus"
+  },
+  {
+   "id": "greek.my.th.7",
+   "topic": "greek.myth-1",
+   "kind": "fact",
+   "prompt": "What case is **τῷ λίνῳ** (“with the thread”), and why?",
+   "answer": "dative, because it is the thing he uses",
+   "distractors": [
+    "genitive, because it means “of”",
+    "accusative, because it is the object",
+    "nominative, because it is the subject"
+   ],
+   "explain": "The dative can mean “with” or “by means of”: τῷ λίνῳ τὴν ὁδὸν εὑρίσκει, he finds the way with the thread.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Θησεὺς καὶ ὁ Μινώταυρος\n\nἐν τῇ Κρήτῃ ὁ Μίνως βασιλεύει. ἐν δὲ τῷ λαβυρίνθῳ μένει ὁ Μινώταυρος· δεινὸς γάρ ἐστιν. οἱ Ἀθηναῖοι ἑπτὰ νεανίας καὶ ἑπτὰ κόρας εἰς τὴν Κρήτην πέμπουσιν. ὁ δὲ Θησεὺς ἀνδρεῖός ἐστιν· ἐθέλει οὖν τοὺς φίλους λύειν.\n\nἡ Ἀριάδνη, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Θησέα φιλεῖ καὶ λίνον αὐτῷ δίδωσιν. ὁ Θησεὺς εἰς τὸν λαβύρινθον βαίνει καὶ τὸν Μινώταυρον ἀποκτείνει. ἔπειτα τῷ λίνῳ τὴν ὁδὸν εὑρίσκει καὶ ἐκ τοῦ λαβυρίνθου φεύγει. οἱ οὖν Ἀθηναῖοι μάλα χαίρουσιν.\n\nGlossary: βασιλεύει = is king; λαβύρινθος = labyrinth, maze; νεανίας (accusative plural νεανίας) = young man; θυγάτηρ = daughter; φιλεῖ = loves; λίνον = thread; αὐτῷ = to him; δίδωσιν = gives; βαίνει = goes; ἀποκτείνει = kills; ἔπειτα = then; ὁδός (accusative ὁδόν) = way, road; εὑρίσκει = finds; μάλα = very much; χαίρουσιν = rejoice.",
+   "passageSource": "Adapted for this app from the myth of Theseus"
+  },
+  {
+   "id": "greek.my.th.8",
+   "topic": "greek.myth-1",
+   "kind": "order",
+   "prompt": "Put the events of the story in order.",
+   "items": [
+    "The Athenians send young people to Crete",
+    "Ariadne gives Theseus a thread",
+    "Theseus kills the Minotaur",
+    "Theseus finds his way out",
+    "The Athenians rejoice"
+   ],
+   "labels": null,
+   "explain": "Sent, helped, kills, escapes, rejoicing.",
+   "passage": "ὁ Θησεὺς καὶ ὁ Μινώταυρος\n\nἐν τῇ Κρήτῃ ὁ Μίνως βασιλεύει. ἐν δὲ τῷ λαβυρίνθῳ μένει ὁ Μινώταυρος· δεινὸς γάρ ἐστιν. οἱ Ἀθηναῖοι ἑπτὰ νεανίας καὶ ἑπτὰ κόρας εἰς τὴν Κρήτην πέμπουσιν. ὁ δὲ Θησεὺς ἀνδρεῖός ἐστιν· ἐθέλει οὖν τοὺς φίλους λύειν.\n\nἡ Ἀριάδνη, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Θησέα φιλεῖ καὶ λίνον αὐτῷ δίδωσιν. ὁ Θησεὺς εἰς τὸν λαβύρινθον βαίνει καὶ τὸν Μινώταυρον ἀποκτείνει. ἔπειτα τῷ λίνῳ τὴν ὁδὸν εὑρίσκει καὶ ἐκ τοῦ λαβυρίνθου φεύγει. οἱ οὖν Ἀθηναῖοι μάλα χαίρουσιν.\n\nGlossary: βασιλεύει = is king; λαβύρινθος = labyrinth, maze; νεανίας (accusative plural νεανίας) = young man; θυγάτηρ = daughter; φιλεῖ = loves; λίνον = thread; αὐτῷ = to him; δίδωσιν = gives; βαίνει = goes; ἀποκτείνει = kills; ἔπειτα = then; ὁδός (accusative ὁδόν) = way, road; εὑρίσκει = finds; μάλα = very much; χαίρουσιν = rejoice.",
+   "passageSource": "Adapted for this app from the myth of Theseus"
+  },
+  {
+   "id": "greek.my.cy.1",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "Where are Odysseus and his friends sailing?",
+   "answer": "home from Troy",
+   "distractors": [
+    "to Troy",
+    "to Crete",
+    "to Mount Olympus"
+   ],
+   "explain": "“ἐκ τῆς Τροίας οἴκαδε πλέουσιν”: out of Troy, homewards.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ὀδυσσεὺς καὶ ὁ Κύκλωψ\n\nὁ Ὀδυσσεὺς καὶ οἱ φίλοι ἐκ τῆς Τροίας οἴκαδε πλέουσιν. ἐν νήσῳ ἄντρον εὑρίσκουσιν. ἐν δὲ τῷ ἄντρῳ μένει ὁ Πολύφημος, Κύκλωψ δεινὸς καὶ μέγιστος. ὁ Κύκλωψ τοὺς φίλους ἐσθίει.\n\nὁ δὲ Ὀδυσσεὺς σοφός ἐστιν. τῷ Κύκλωπι οἶνον δίδωσι καὶ λέγει· «Οὖτις ὄνομά μοί ἐστιν.» ὁ Κύκλωψ τὸν οἶνον πίνει καὶ καθεύδει. ἔπειτα ὁ Ὀδυσσεὺς καὶ οἱ φίλοι τὸν Κύκλωπα τυφλοῦσιν.\n\nὁ Πολύφημος βοᾷ· «Οὖτίς με ἀποκτείνει.» οἱ οὖν ἄλλοι Κύκλωπες οὐ βοηθοῦσιν. ὁ δὲ Ὀδυσσεὺς καὶ οἱ φίλοι ὑπὸ τοῖς προβάτοις ἐκ τοῦ ἄντρου φεύγουσιν.\n\nGlossary: Τροία = Troy; οἴκαδε = homewards; πλέουσιν = sail; νῆσος (dative νήσῳ) = island; ἄντρον = cave; μέγιστος = very big; ἐσθίει = eats; Κύκλωψ (accusative Κύκλωπα, dative Κύκλωπι) = Cyclops; οἶνος = wine; Οὖτις = Nobody; ὄνομα = name; μοι = to me (“my name is”); πίνει = drinks; καθεύδει = sleeps; τυφλοῦσιν = blind; βοᾷ = shouts; με = me; ἀποκτείνει = is killing; ἄλλοι = other; βοηθοῦσιν = help; πρόβατα (dative προβάτοις) = sheep.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 9"
+  },
+  {
+   "id": "greek.my.cy.2",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "Translate: **ἐν νήσῳ ἄντρον εὑρίσκουσιν.**",
+   "answer": "They find a cave on an island.",
+   "distractors": [
+    "They flee from a cave on an island.",
+    "They find an island in a cave.",
+    "He finds a cave on an island."
+   ],
+   "explain": "ἐν νήσῳ = on an island; ἄντρον is the object; εὑρίσκουσιν = they find.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ὀδυσσεὺς καὶ ὁ Κύκλωψ\n\nὁ Ὀδυσσεὺς καὶ οἱ φίλοι ἐκ τῆς Τροίας οἴκαδε πλέουσιν. ἐν νήσῳ ἄντρον εὑρίσκουσιν. ἐν δὲ τῷ ἄντρῳ μένει ὁ Πολύφημος, Κύκλωψ δεινὸς καὶ μέγιστος. ὁ Κύκλωψ τοὺς φίλους ἐσθίει.\n\nὁ δὲ Ὀδυσσεὺς σοφός ἐστιν. τῷ Κύκλωπι οἶνον δίδωσι καὶ λέγει· «Οὖτις ὄνομά μοί ἐστιν.» ὁ Κύκλωψ τὸν οἶνον πίνει καὶ καθεύδει. ἔπειτα ὁ Ὀδυσσεὺς καὶ οἱ φίλοι τὸν Κύκλωπα τυφλοῦσιν.\n\nὁ Πολύφημος βοᾷ· «Οὖτίς με ἀποκτείνει.» οἱ οὖν ἄλλοι Κύκλωπες οὐ βοηθοῦσιν. ὁ δὲ Ὀδυσσεὺς καὶ οἱ φίλοι ὑπὸ τοῖς προβάτοις ἐκ τοῦ ἄντρου φεύγουσιν.\n\nGlossary: Τροία = Troy; οἴκαδε = homewards; πλέουσιν = sail; νῆσος (dative νήσῳ) = island; ἄντρον = cave; μέγιστος = very big; ἐσθίει = eats; Κύκλωψ (accusative Κύκλωπα, dative Κύκλωπι) = Cyclops; οἶνος = wine; Οὖτις = Nobody; ὄνομα = name; μοι = to me (“my name is”); πίνει = drinks; καθεύδει = sleeps; τυφλοῦσιν = blind; βοᾷ = shouts; με = me; ἀποκτείνει = is killing; ἄλλοι = other; βοηθοῦσιν = help; πρόβατα (dative προβάτοις) = sheep.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 9"
+  },
+  {
+   "id": "greek.my.cy.3",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "How does Odysseus get the Cyclops to fall asleep?",
+   "answer": "he gives him wine",
+   "distractors": [
+    "he sings to him",
+    "he gives him gold",
+    "he asks Athena for help"
+   ],
+   "explain": "“τῷ Κύκλωπι οἶνον δίδωσι… ὁ Κύκλωψ τὸν οἶνον πίνει καὶ καθεύδει.”",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ὀδυσσεὺς καὶ ὁ Κύκλωψ\n\nὁ Ὀδυσσεὺς καὶ οἱ φίλοι ἐκ τῆς Τροίας οἴκαδε πλέουσιν. ἐν νήσῳ ἄντρον εὑρίσκουσιν. ἐν δὲ τῷ ἄντρῳ μένει ὁ Πολύφημος, Κύκλωψ δεινὸς καὶ μέγιστος. ὁ Κύκλωψ τοὺς φίλους ἐσθίει.\n\nὁ δὲ Ὀδυσσεὺς σοφός ἐστιν. τῷ Κύκλωπι οἶνον δίδωσι καὶ λέγει· «Οὖτις ὄνομά μοί ἐστιν.» ὁ Κύκλωψ τὸν οἶνον πίνει καὶ καθεύδει. ἔπειτα ὁ Ὀδυσσεὺς καὶ οἱ φίλοι τὸν Κύκλωπα τυφλοῦσιν.\n\nὁ Πολύφημος βοᾷ· «Οὖτίς με ἀποκτείνει.» οἱ οὖν ἄλλοι Κύκλωπες οὐ βοηθοῦσιν. ὁ δὲ Ὀδυσσεὺς καὶ οἱ φίλοι ὑπὸ τοῖς προβάτοις ἐκ τοῦ ἄντρου φεύγουσιν.\n\nGlossary: Τροία = Troy; οἴκαδε = homewards; πλέουσιν = sail; νῆσος (dative νήσῳ) = island; ἄντρον = cave; μέγιστος = very big; ἐσθίει = eats; Κύκλωψ (accusative Κύκλωπα, dative Κύκλωπι) = Cyclops; οἶνος = wine; Οὖτις = Nobody; ὄνομα = name; μοι = to me (“my name is”); πίνει = drinks; καθεύδει = sleeps; τυφλοῦσιν = blind; βοᾷ = shouts; με = me; ἀποκτείνει = is killing; ἄλλοι = other; βοηθοῦσιν = help; πρόβατα (dative προβάτοις) = sheep.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 9"
+  },
+  {
+   "id": "greek.my.cy.4",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "What name does Odysseus give?",
+   "answer": "Nobody",
+   "distractors": [
+    "Odysseus",
+    "Zeus",
+    "Polyphemus"
+   ],
+   "explain": "«Οὖτις ὄνομά μοί ἐστιν»: “My name is Nobody”.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ὀδυσσεὺς καὶ ὁ Κύκλωψ\n\nὁ Ὀδυσσεὺς καὶ οἱ φίλοι ἐκ τῆς Τροίας οἴκαδε πλέουσιν. ἐν νήσῳ ἄντρον εὑρίσκουσιν. ἐν δὲ τῷ ἄντρῳ μένει ὁ Πολύφημος, Κύκλωψ δεινὸς καὶ μέγιστος. ὁ Κύκλωψ τοὺς φίλους ἐσθίει.\n\nὁ δὲ Ὀδυσσεὺς σοφός ἐστιν. τῷ Κύκλωπι οἶνον δίδωσι καὶ λέγει· «Οὖτις ὄνομά μοί ἐστιν.» ὁ Κύκλωψ τὸν οἶνον πίνει καὶ καθεύδει. ἔπειτα ὁ Ὀδυσσεὺς καὶ οἱ φίλοι τὸν Κύκλωπα τυφλοῦσιν.\n\nὁ Πολύφημος βοᾷ· «Οὖτίς με ἀποκτείνει.» οἱ οὖν ἄλλοι Κύκλωπες οὐ βοηθοῦσιν. ὁ δὲ Ὀδυσσεὺς καὶ οἱ φίλοι ὑπὸ τοῖς προβάτοις ἐκ τοῦ ἄντρου φεύγουσιν.\n\nGlossary: Τροία = Troy; οἴκαδε = homewards; πλέουσιν = sail; νῆσος (dative νήσῳ) = island; ἄντρον = cave; μέγιστος = very big; ἐσθίει = eats; Κύκλωψ (accusative Κύκλωπα, dative Κύκλωπι) = Cyclops; οἶνος = wine; Οὖτις = Nobody; ὄνομα = name; μοι = to me (“my name is”); πίνει = drinks; καθεύδει = sleeps; τυφλοῦσιν = blind; βοᾷ = shouts; με = me; ἀποκτείνει = is killing; ἄλλοι = other; βοηθοῦσιν = help; πρόβατα (dative προβάτοις) = sheep.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 9"
+  },
+  {
+   "id": "greek.my.cy.5",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "Why do the other Cyclopes not come to help Polyphemus?",
+   "answer": "he shouts that Nobody is killing him",
+   "distractors": [
+    "they are asleep",
+    "they are afraid of Odysseus",
+    "they cannot hear him"
+   ],
+   "explain": "«Οὖτίς με ἀποκτείνει»: “Nobody is killing me!” So, they think, nothing is wrong.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ὀδυσσεὺς καὶ ὁ Κύκλωψ\n\nὁ Ὀδυσσεὺς καὶ οἱ φίλοι ἐκ τῆς Τροίας οἴκαδε πλέουσιν. ἐν νήσῳ ἄντρον εὑρίσκουσιν. ἐν δὲ τῷ ἄντρῳ μένει ὁ Πολύφημος, Κύκλωψ δεινὸς καὶ μέγιστος. ὁ Κύκλωψ τοὺς φίλους ἐσθίει.\n\nὁ δὲ Ὀδυσσεὺς σοφός ἐστιν. τῷ Κύκλωπι οἶνον δίδωσι καὶ λέγει· «Οὖτις ὄνομά μοί ἐστιν.» ὁ Κύκλωψ τὸν οἶνον πίνει καὶ καθεύδει. ἔπειτα ὁ Ὀδυσσεὺς καὶ οἱ φίλοι τὸν Κύκλωπα τυφλοῦσιν.\n\nὁ Πολύφημος βοᾷ· «Οὖτίς με ἀποκτείνει.» οἱ οὖν ἄλλοι Κύκλωπες οὐ βοηθοῦσιν. ὁ δὲ Ὀδυσσεὺς καὶ οἱ φίλοι ὑπὸ τοῖς προβάτοις ἐκ τοῦ ἄντρου φεύγουσιν.\n\nGlossary: Τροία = Troy; οἴκαδε = homewards; πλέουσιν = sail; νῆσος (dative νήσῳ) = island; ἄντρον = cave; μέγιστος = very big; ἐσθίει = eats; Κύκλωψ (accusative Κύκλωπα, dative Κύκλωπι) = Cyclops; οἶνος = wine; Οὖτις = Nobody; ὄνομα = name; μοι = to me (“my name is”); πίνει = drinks; καθεύδει = sleeps; τυφλοῦσιν = blind; βοᾷ = shouts; με = me; ἀποκτείνει = is killing; ἄλλοι = other; βοηθοῦσιν = help; πρόβατα (dative προβάτοις) = sheep.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 9"
+  },
+  {
+   "id": "greek.my.cy.6",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "How do the Greeks escape from the cave?",
+   "answer": "under the sheep",
+   "distractors": [
+    "through a hole in the roof",
+    "by fighting the Cyclops",
+    "on a ship"
+   ],
+   "explain": "“ὑπὸ τοῖς προβάτοις”: under the sheep, clinging to their bellies.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ὀδυσσεὺς καὶ ὁ Κύκλωψ\n\nὁ Ὀδυσσεὺς καὶ οἱ φίλοι ἐκ τῆς Τροίας οἴκαδε πλέουσιν. ἐν νήσῳ ἄντρον εὑρίσκουσιν. ἐν δὲ τῷ ἄντρῳ μένει ὁ Πολύφημος, Κύκλωψ δεινὸς καὶ μέγιστος. ὁ Κύκλωψ τοὺς φίλους ἐσθίει.\n\nὁ δὲ Ὀδυσσεὺς σοφός ἐστιν. τῷ Κύκλωπι οἶνον δίδωσι καὶ λέγει· «Οὖτις ὄνομά μοί ἐστιν.» ὁ Κύκλωψ τὸν οἶνον πίνει καὶ καθεύδει. ἔπειτα ὁ Ὀδυσσεὺς καὶ οἱ φίλοι τὸν Κύκλωπα τυφλοῦσιν.\n\nὁ Πολύφημος βοᾷ· «Οὖτίς με ἀποκτείνει.» οἱ οὖν ἄλλοι Κύκλωπες οὐ βοηθοῦσιν. ὁ δὲ Ὀδυσσεὺς καὶ οἱ φίλοι ὑπὸ τοῖς προβάτοις ἐκ τοῦ ἄντρου φεύγουσιν.\n\nGlossary: Τροία = Troy; οἴκαδε = homewards; πλέουσιν = sail; νῆσος (dative νήσῳ) = island; ἄντρον = cave; μέγιστος = very big; ἐσθίει = eats; Κύκλωψ (accusative Κύκλωπα, dative Κύκλωπι) = Cyclops; οἶνος = wine; Οὖτις = Nobody; ὄνομα = name; μοι = to me (“my name is”); πίνει = drinks; καθεύδει = sleeps; τυφλοῦσιν = blind; βοᾷ = shouts; με = me; ἀποκτείνει = is killing; ἄλλοι = other; βοηθοῦσιν = help; πρόβατα (dative προβάτοις) = sheep.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 9"
+  },
+  {
+   "id": "greek.my.cy.7",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "In “ὁ δὲ Ὀδυσσεὺς σοφός ἐστιν”, what does δέ do?",
+   "answer": "it contrasts wise Odysseus with the terrible Cyclops",
+   "distractors": [
+    "it means “not”",
+    "it asks a question",
+    "it means “therefore”"
+   ],
+   "explain": "δέ: “But Odysseus is wise.” The story turns on this word.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ὀδυσσεὺς καὶ ὁ Κύκλωψ\n\nὁ Ὀδυσσεὺς καὶ οἱ φίλοι ἐκ τῆς Τροίας οἴκαδε πλέουσιν. ἐν νήσῳ ἄντρον εὑρίσκουσιν. ἐν δὲ τῷ ἄντρῳ μένει ὁ Πολύφημος, Κύκλωψ δεινὸς καὶ μέγιστος. ὁ Κύκλωψ τοὺς φίλους ἐσθίει.\n\nὁ δὲ Ὀδυσσεὺς σοφός ἐστιν. τῷ Κύκλωπι οἶνον δίδωσι καὶ λέγει· «Οὖτις ὄνομά μοί ἐστιν.» ὁ Κύκλωψ τὸν οἶνον πίνει καὶ καθεύδει. ἔπειτα ὁ Ὀδυσσεὺς καὶ οἱ φίλοι τὸν Κύκλωπα τυφλοῦσιν.\n\nὁ Πολύφημος βοᾷ· «Οὖτίς με ἀποκτείνει.» οἱ οὖν ἄλλοι Κύκλωπες οὐ βοηθοῦσιν. ὁ δὲ Ὀδυσσεὺς καὶ οἱ φίλοι ὑπὸ τοῖς προβάτοις ἐκ τοῦ ἄντρου φεύγουσιν.\n\nGlossary: Τροία = Troy; οἴκαδε = homewards; πλέουσιν = sail; νῆσος (dative νήσῳ) = island; ἄντρον = cave; μέγιστος = very big; ἐσθίει = eats; Κύκλωψ (accusative Κύκλωπα, dative Κύκλωπι) = Cyclops; οἶνος = wine; Οὖτις = Nobody; ὄνομα = name; μοι = to me (“my name is”); πίνει = drinks; καθεύδει = sleeps; τυφλοῦσιν = blind; βοᾷ = shouts; με = me; ἀποκτείνει = is killing; ἄλλοι = other; βοηθοῦσιν = help; πρόβατα (dative προβάτοις) = sheep.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 9"
+  },
+  {
+   "id": "greek.my.pe.1",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "What happens to people who look at Medusa?",
+   "answer": "they turn to stone",
+   "distractors": [
+    "they fall asleep",
+    "they go blind",
+    "they fly away"
+   ],
+   "explain": "“λίθοι γίγνονται”: they become stones.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Περσεὺς καὶ ἡ Μέδουσα\n\nἡ Μέδουσα Γοργώ ἐστιν· οἱ ἄνθρωποι, εἰ αὐτὴν βλέπουσιν, λίθοι γίγνονται. ὁ δὲ Περσεὺς τὴν Μέδουσαν ἀποκτείνειν ἐθέλει.\n\nἡ Ἀθηνᾶ τῷ Περσεῖ ἀσπίδα λαμπρὰν δίδωσιν, ὁ δὲ Ἑρμῆς πτερωτὰ πέδιλα. ὁ Περσεὺς οὐ βλέπει τὴν Μέδουσαν, ἀλλὰ τὴν εἰκόνα ἐν τῇ ἀσπίδι. οὕτω τὴν κεφαλὴν ἀποτέμνει καὶ ἐκ τῆς χώρας φεύγει.\n\nGlossary: Γοργώ = a Gorgon; εἰ = if; αὐτήν = her; βλέπουσιν = look at; λίθοι = stones; γίγνονται = become; ἀποκτείνειν = to kill; ἀσπίς (accusative ἀσπίδα, dative ἀσπίδι) = shield; λαμπρός = bright, shining; πτερωτὰ πέδιλα = winged sandals; εἰκών (accusative εἰκόνα) = image, reflection; οὕτω = in this way; κεφαλή = head; ἀποτέμνει = cuts off.",
+   "passageSource": "Adapted for this app from the myth of Perseus"
+  },
+  {
+   "id": "greek.my.pe.2",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "Who gives Perseus the shining shield?",
+   "answer": "Athena",
+   "distractors": [
+    "Hermes",
+    "Zeus",
+    "Medusa"
+   ],
+   "explain": "“ἡ Ἀθηνᾶ τῷ Περσεῖ ἀσπίδα λαμπρὰν δίδωσιν.” Hermes gives the winged sandals.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Περσεὺς καὶ ἡ Μέδουσα\n\nἡ Μέδουσα Γοργώ ἐστιν· οἱ ἄνθρωποι, εἰ αὐτὴν βλέπουσιν, λίθοι γίγνονται. ὁ δὲ Περσεὺς τὴν Μέδουσαν ἀποκτείνειν ἐθέλει.\n\nἡ Ἀθηνᾶ τῷ Περσεῖ ἀσπίδα λαμπρὰν δίδωσιν, ὁ δὲ Ἑρμῆς πτερωτὰ πέδιλα. ὁ Περσεὺς οὐ βλέπει τὴν Μέδουσαν, ἀλλὰ τὴν εἰκόνα ἐν τῇ ἀσπίδι. οὕτω τὴν κεφαλὴν ἀποτέμνει καὶ ἐκ τῆς χώρας φεύγει.\n\nGlossary: Γοργώ = a Gorgon; εἰ = if; αὐτήν = her; βλέπουσιν = look at; λίθοι = stones; γίγνονται = become; ἀποκτείνειν = to kill; ἀσπίς (accusative ἀσπίδα, dative ἀσπίδι) = shield; λαμπρός = bright, shining; πτερωτὰ πέδιλα = winged sandals; εἰκών (accusative εἰκόνα) = image, reflection; οὕτω = in this way; κεφαλή = head; ἀποτέμνει = cuts off.",
+   "passageSource": "Adapted for this app from the myth of Perseus"
+  },
+  {
+   "id": "greek.my.pe.3",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "What case is **τῷ Περσεῖ**, and what does it mean here?",
+   "answer": "dative: to Perseus",
+   "distractors": [
+    "genitive: of Perseus",
+    "accusative: Perseus (object)",
+    "nominative: Perseus (subject)"
+   ],
+   "explain": "She gives the shield TO Perseus: dative. (Περσεύς is third declension, so the ending is -εῖ.)",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Περσεὺς καὶ ἡ Μέδουσα\n\nἡ Μέδουσα Γοργώ ἐστιν· οἱ ἄνθρωποι, εἰ αὐτὴν βλέπουσιν, λίθοι γίγνονται. ὁ δὲ Περσεὺς τὴν Μέδουσαν ἀποκτείνειν ἐθέλει.\n\nἡ Ἀθηνᾶ τῷ Περσεῖ ἀσπίδα λαμπρὰν δίδωσιν, ὁ δὲ Ἑρμῆς πτερωτὰ πέδιλα. ὁ Περσεὺς οὐ βλέπει τὴν Μέδουσαν, ἀλλὰ τὴν εἰκόνα ἐν τῇ ἀσπίδι. οὕτω τὴν κεφαλὴν ἀποτέμνει καὶ ἐκ τῆς χώρας φεύγει.\n\nGlossary: Γοργώ = a Gorgon; εἰ = if; αὐτήν = her; βλέπουσιν = look at; λίθοι = stones; γίγνονται = become; ἀποκτείνειν = to kill; ἀσπίς (accusative ἀσπίδα, dative ἀσπίδι) = shield; λαμπρός = bright, shining; πτερωτὰ πέδιλα = winged sandals; εἰκών (accusative εἰκόνα) = image, reflection; οὕτω = in this way; κεφαλή = head; ἀποτέμνει = cuts off.",
+   "passageSource": "Adapted for this app from the myth of Perseus"
+  },
+  {
+   "id": "greek.my.pe.4",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "How does Perseus avoid looking at Medusa?",
+   "answer": "he looks at her reflection in the shield",
+   "distractors": [
+    "he closes his eyes",
+    "he wears a helmet",
+    "he attacks at night"
+   ],
+   "explain": "“οὐ βλέπει τὴν Μέδουσαν, ἀλλὰ τὴν εἰκόνα ἐν τῇ ἀσπίδι.”",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Περσεὺς καὶ ἡ Μέδουσα\n\nἡ Μέδουσα Γοργώ ἐστιν· οἱ ἄνθρωποι, εἰ αὐτὴν βλέπουσιν, λίθοι γίγνονται. ὁ δὲ Περσεὺς τὴν Μέδουσαν ἀποκτείνειν ἐθέλει.\n\nἡ Ἀθηνᾶ τῷ Περσεῖ ἀσπίδα λαμπρὰν δίδωσιν, ὁ δὲ Ἑρμῆς πτερωτὰ πέδιλα. ὁ Περσεὺς οὐ βλέπει τὴν Μέδουσαν, ἀλλὰ τὴν εἰκόνα ἐν τῇ ἀσπίδι. οὕτω τὴν κεφαλὴν ἀποτέμνει καὶ ἐκ τῆς χώρας φεύγει.\n\nGlossary: Γοργώ = a Gorgon; εἰ = if; αὐτήν = her; βλέπουσιν = look at; λίθοι = stones; γίγνονται = become; ἀποκτείνειν = to kill; ἀσπίς (accusative ἀσπίδα, dative ἀσπίδι) = shield; λαμπρός = bright, shining; πτερωτὰ πέδιλα = winged sandals; εἰκών (accusative εἰκόνα) = image, reflection; οὕτω = in this way; κεφαλή = head; ἀποτέμνει = cuts off.",
+   "passageSource": "Adapted for this app from the myth of Perseus"
+  },
+  {
+   "id": "greek.my.pe.5",
+   "topic": "greek.myth-2",
+   "kind": "fact",
+   "prompt": "Translate: **ὁ δὲ Περσεὺς τὴν Μέδουσαν ἀποκτείνειν ἐθέλει.**",
+   "answer": "And Perseus wants to kill Medusa.",
+   "distractors": [
+    "And Medusa wants to kill Perseus.",
+    "Perseus does not want to kill Medusa.",
+    "And Perseus kills Medusa."
+   ],
+   "explain": "ἀποκτείνειν is an infinitive (“to kill”) after ἐθέλει (“wants”). τὴν Μέδουσαν is accusative: the object.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Περσεὺς καὶ ἡ Μέδουσα\n\nἡ Μέδουσα Γοργώ ἐστιν· οἱ ἄνθρωποι, εἰ αὐτὴν βλέπουσιν, λίθοι γίγνονται. ὁ δὲ Περσεὺς τὴν Μέδουσαν ἀποκτείνειν ἐθέλει.\n\nἡ Ἀθηνᾶ τῷ Περσεῖ ἀσπίδα λαμπρὰν δίδωσιν, ὁ δὲ Ἑρμῆς πτερωτὰ πέδιλα. ὁ Περσεὺς οὐ βλέπει τὴν Μέδουσαν, ἀλλὰ τὴν εἰκόνα ἐν τῇ ἀσπίδι. οὕτω τὴν κεφαλὴν ἀποτέμνει καὶ ἐκ τῆς χώρας φεύγει.\n\nGlossary: Γοργώ = a Gorgon; εἰ = if; αὐτήν = her; βλέπουσιν = look at; λίθοι = stones; γίγνονται = become; ἀποκτείνειν = to kill; ἀσπίς (accusative ἀσπίδα, dative ἀσπίδι) = shield; λαμπρός = bright, shining; πτερωτὰ πέδιλα = winged sandals; εἰκών (accusative εἰκόνα) = image, reflection; οὕτω = in this way; κεφαλή = head; ἀποτέμνει = cuts off.",
+   "passageSource": "Adapted for this app from the myth of Perseus"
+  },
+  {
+   "id": "greek.ao.what",
+   "topic": "greek.aorist",
+   "kind": "mcq",
+   "prompt": "What does the aorist usually describe?",
+   "options": [
+    {
+     "text": "A single, completed action in the past",
+     "correct": true
+    },
+    {
+     "text": "An action that kept going on in the past",
+     "correct": false,
+     "feedback": "That is the imperfect."
+    },
+    {
+     "text": "An action happening now",
+     "correct": false,
+     "feedback": "That is the present."
+    }
+   ],
+   "explain": "ἔλυον = I was freeing; ἔλυσα = I freed (once, done)."
+  },
+  {
+   "id": "greek.ao.lusa",
+   "topic": "greek.aorist",
+   "kind": "fact",
+   "prompt": "What does **ἔλυσα** mean?",
+   "answer": "I freed",
+   "distractors": [
+    "I was freeing",
+    "I will free",
+    "I free"
+   ],
+   "explain": "Augment ἐ- + stem λυ + σα: the weak aorist, “I freed”.",
+   "accept": [
+    "freed",
+    "i released",
+    "released",
+    "i set free",
+    "i loosened"
+   ]
+  },
+  {
+   "id": "greek.ao.forms",
+   "topic": "greek.aorist",
+   "kind": "mcq",
+   "prompt": "Which is the aorist of λύω for “they freed”?",
+   "options": [
+    {
+     "text": "ἔλυσαν",
+     "correct": true
+    },
+    {
+     "text": "ἔλυον",
+     "correct": false,
+     "feedback": "ἔλυον is imperfect: they were freeing."
+    },
+    {
+     "text": "λύσουσι(ν)",
+     "correct": false,
+     "feedback": "λύσουσι(ν) is future: they will free."
+    }
+   ],
+   "explain": "ἔλυσα, ἔλυσας, ἔλυσε(ν), ἐλύσαμεν, ἐλύσατε, ἔλυσαν."
+  },
+  {
+   "id": "greek.ao.3sg",
+   "topic": "greek.aorist",
+   "kind": "mcq",
+   "prompt": "What does **ἐπαίδευσε(ν)** mean?",
+   "options": [
+    {
+     "text": "he or she taught",
+     "correct": true
+    },
+    {
+     "text": "he or she was teaching",
+     "correct": false,
+     "feedback": "The σε shows the aorist, not the imperfect (ἐπαίδευε)."
+    },
+    {
+     "text": "they taught",
+     "correct": false,
+     "feedback": "They taught is ἐπαίδευσαν."
+    }
+   ],
+   "explain": "ἐ- (augment) + παιδευ + σε: he/she taught."
+  },
+  {
+   "id": "greek.ao.pemp",
+   "topic": "greek.aorist",
+   "kind": "mcq",
+   "prompt": "The aorist of πέμπω is ἔπεμψα. What does it mean?",
+   "options": [
+    {
+     "text": "I sent",
+     "correct": true
+    },
+    {
+     "text": "I will send",
+     "correct": false,
+     "feedback": "The augment shows it is past."
+    },
+    {
+     "text": "I was sending",
+     "correct": false,
+     "feedback": "That is ἔπεμπον, the imperfect."
+    }
+   ],
+   "explain": "π + σ → ψ, just like the future πέμψω, but with the augment: ἔπεμψα."
+  },
+  {
+   "id": "greek.ao.strong",
+   "topic": "greek.aorist",
+   "kind": "mcq",
+   "prompt": "Some verbs have a “strong” aorist with a different stem. The aorist of φεύγω (I flee) is ἔφυγον. What does it mean?",
+   "options": [
+    {
+     "text": "I fled",
+     "correct": true
+    },
+    {
+     "text": "I was fleeing",
+     "correct": false,
+     "feedback": "That is ἔφευγον, the imperfect. Note the stem change: φευγ → φυγ."
+    },
+    {
+     "text": "I will flee",
+     "correct": false,
+     "feedback": "The augment shows it is past."
+    }
+   ],
+   "explain": "Strong aorists have imperfect-style endings on a different stem: ἔφυγον, ἔλαβον (I took), εἶπον (I said)."
+  },
+  {
+   "id": "greek.ao.eipon",
+   "topic": "greek.aorist",
+   "kind": "mcq",
+   "prompt": "εἶπον is the aorist of which verb?",
+   "options": [
+    {
+     "text": "λέγω (I say): εἶπον = I said",
+     "correct": true
+    },
+    {
+     "text": "ἔχω (I have)",
+     "correct": false,
+     "feedback": "The aorist of ἔχω is ἔσχον."
+    },
+    {
+     "text": "πέμπω (I send)",
+     "correct": false,
+     "feedback": "The aorist of πέμπω is ἔπεμψα."
+    }
+   ],
+   "explain": "Some aorists have to be learned as new words: λέγω → εἶπον."
+  },
+  {
+   "id": "greek.d3.stem",
+   "topic": "greek.third-decl",
+   "kind": "mcq",
+   "prompt": "The genitive of φύλαξ (guard) is φύλακος. What is its stem?",
+   "options": [
+    {
+     "text": "φυλακ-",
+     "correct": true
+    },
+    {
+     "text": "φυλαξ-",
+     "correct": false,
+     "feedback": "The ξ in the nominative hides κ + σ. The genitive shows the true stem."
+    },
+    {
+     "text": "φυλ-",
+     "correct": false,
+     "feedback": "Take the genitive and remove -ος: φυλακ-."
+    }
+   ],
+   "explain": "Third-declension rule: find the stem by removing -ος from the genitive. φύλαξ, φύλακα, φύλακος, φύλακι."
+  },
+  {
+   "id": "greek.d3.acc",
+   "topic": "greek.third-decl",
+   "kind": "mcq",
+   "prompt": "What is the accusative singular of **φύλαξ**?",
+   "options": [
+    {
+     "text": "φύλακα",
+     "correct": true
+    },
+    {
+     "text": "φύλακον",
+     "correct": false,
+     "feedback": "-ον is second declension. Third-declension accusatives end -α."
+    },
+    {
+     "text": "φύλακος",
+     "correct": false,
+     "feedback": "φύλακος is the genitive."
+    }
+   ],
+   "explain": "φύλαξ, φύλακα, φύλακος, φύλακι."
+  },
+  {
+   "id": "greek.d3.onoma",
+   "topic": "greek.third-decl",
+   "kind": "mcq",
+   "prompt": "ὄνομα (name) has genitive ὀνόματος. Which English words come from it?",
+   "options": [
+    {
+     "text": "onomatopoeia, anonymous, synonym",
+     "correct": true
+    },
+    {
+     "text": "onion, only, open",
+     "correct": false,
+     "feedback": "Those have nothing to do with ὄνομα."
+    },
+    {
+     "text": "honour, honest",
+     "correct": false,
+     "feedback": "Those come from Latin honor."
+    }
+   ],
+   "explain": "ἀν- (without) + ὄνομα = anonymous; ὀνοματοποιία = “name-making”."
+  },
+  {
+   "id": "greek.d3.aner",
+   "topic": "greek.third-decl",
+   "kind": "mcq",
+   "prompt": "What does **ὁ ἀνήρ** (genitive ἀνδρός) mean?",
+   "options": [
+    {
+     "text": "the man (a grown man, or a husband)",
+     "correct": true
+    },
+    {
+     "text": "the human being",
+     "correct": false,
+     "feedback": "That is ὁ ἄνθρωπος. ἀνήρ is a man, a husband."
+    },
+    {
+     "text": "the star",
+     "correct": false,
+     "feedback": "A star is ἀστήρ."
+    }
+   ],
+   "explain": "ἀνήρ, ἄνδρα, ἀνδρός, ἀνδρί: gives us Andrew and android (“man-like”)."
+  },
+  {
+   "id": "greek.d3.polis",
+   "topic": "greek.third-decl",
+   "kind": "mcq",
+   "prompt": "What does **ἡ πόλις** mean, and which English words come from it?",
+   "options": [
+    {
+     "text": "the city: politics, police, metropolis",
+     "correct": true
+    },
+    {
+     "text": "the axis: polar, pole",
+     "correct": false,
+     "feedback": "Pole comes from a different Greek word, πόλος (axis)."
+    },
+    {
+     "text": "the war: polemic",
+     "correct": false,
+     "feedback": "Polemic comes from πόλεμος, war."
+    }
+   ],
+   "explain": "πόλις, πόλιν, πόλεως, πόλει. μητρόπολις = “mother city”."
+  },
+  {
+   "id": "greek.d3.dat",
+   "topic": "greek.third-decl",
+   "kind": "mcq",
+   "prompt": "Which ending marks the dative singular in the third declension?",
+   "options": [
+    {
+     "text": "-ι (φύλακι, ἀνδρί)",
+     "correct": true
+    },
+    {
+     "text": "-ῳ",
+     "correct": false,
+     "feedback": "-ῳ is second declension."
+    },
+    {
+     "text": "-ος",
+     "correct": false,
+     "feedback": "-ος is the third-declension genitive."
+    }
+   ],
+   "explain": "Third declension singular: (nominative varies), -α, -ος, -ι."
+  },
+  {
+   "id": "greek.pc.luon",
+   "topic": "greek.participles",
+   "kind": "mcq",
+   "prompt": "What does **ὁ λύων** mean?",
+   "options": [
+    {
+     "text": "the one who frees, the man freeing",
+     "correct": true
+    },
+    {
+     "text": "the free man",
+     "correct": false,
+     "feedback": "λύων is a verb form (freeing), not the adjective “free”."
+    },
+    {
+     "text": "he frees",
+     "correct": false,
+     "feedback": "He frees is λύει."
+    }
+   ],
+   "explain": "A participle with the article = “the one who…”: ὁ λύων, ὁ γράφων, ὁ φεύγων."
+  },
+  {
+   "id": "greek.pc.while",
+   "topic": "greek.participles",
+   "kind": "mcq",
+   "prompt": "Best translation of **ὁ στρατηγὸς φεύγων τὸν ποταμὸν ὁρᾷ**?",
+   "options": [
+    {
+     "text": "While fleeing, the general sees the river",
+     "correct": true
+    },
+    {
+     "text": "The general flees the river",
+     "correct": false,
+     "feedback": "φεύγων is a participle (fleeing); the main verb is ὁρᾷ, sees."
+    },
+    {
+     "text": "The general sees the fleeing river",
+     "correct": false,
+     "feedback": "φεύγων agrees with ὁ στρατηγός (nominative), not with the river."
+    }
+   ],
+   "explain": "A present participle often becomes “while…” or “as…” in English."
+  },
+  {
+   "id": "greek.pc.forms",
+   "topic": "greek.participles",
+   "kind": "mcq",
+   "prompt": "λύων, λύουσα, λῦον are the masculine, feminine and neuter of the present participle. Which goes with ἡ κόρη?",
+   "options": [
+    {
+     "text": "λύουσα",
+     "correct": true
+    },
+    {
+     "text": "λύων",
+     "correct": false,
+     "feedback": "λύων is masculine."
+    },
+    {
+     "text": "λῦον",
+     "correct": false,
+     "feedback": "λῦον is neuter."
+    }
+   ],
+   "explain": "Participles agree like adjectives: ἡ κόρη ἡ λύουσα = the girl who is freeing."
+  },
+  {
+   "id": "greek.pc.lusas",
+   "topic": "greek.participles",
+   "kind": "mcq",
+   "prompt": "λύσας is the aorist participle of λύω. What does **ὁ Θησεὺς τοὺς φίλους λύσας φεύγει** mean?",
+   "options": [
+    {
+     "text": "Having freed his friends, Theseus flees",
+     "correct": true
+    },
+    {
+     "text": "While freeing his friends, Theseus flees",
+     "correct": false,
+     "feedback": "The aorist participle usually means “having…” or “after…”."
+    },
+    {
+     "text": "Theseus flees from his friends",
+     "correct": false,
+     "feedback": "λύσας (having freed) is the participle; φεύγει is the main verb."
+    }
+   ],
+   "explain": "Aorist participle = an action completed before the main verb: “having freed”, “after freeing”."
+  }
+ ]
+}

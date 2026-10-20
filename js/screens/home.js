@@ -58,11 +58,13 @@ const LAYOUTS = {
   tall6: { w: 380, h: 990, r: 70, pos: [[112, 110], [268, 262], [112, 414], [268, 566], [112, 718], [268, 870]], route: [0, 1, 2, 3, 4, 5] },
   wide5: { w: 800, h: 470, r: 78, pos: [[165, 135], [635, 125], [400, 245], [175, 360], [625, 360]], route: [0, 2, 1, 4, 3] },
   tall5: { w: 380, h: 840, r: 72, pos: [[112, 112], [268, 272], [112, 432], [268, 592], [112, 750]], route: [0, 1, 2, 3, 4] },
+  wide7: { w: 800, h: 570, r: 66, pos: [[140, 112], [400, 96], [660, 112], [530, 285], [270, 285], [140, 458], [660, 458]], route: [0, 1, 2, 3, 4, 5, 6] },
+  tall7: { w: 380, h: 1140, r: 70, pos: [[112, 110], [268, 262], [112, 414], [268, 566], [112, 718], [268, 870], [112, 1022]], route: [0, 1, 2, 3, 4, 5, 6] },
 };
 
 function islandMap(app) {
   const { state, db } = app;
-  const L = LAYOUTS[`${window.matchMedia('(min-width: 640px)').matches ? 'wide' : 'tall'}${SUBJECTS.length > 5 ? 6 : 5}`];
+  const L = LAYOUTS[`${window.matchMedia('(min-width: 640px)').matches ? 'wide' : 'tall'}${Math.min(7, Math.max(5, SUBJECTS.length))}`];
   const posOf = (id) => L.pos[SUBJECTS.findIndex((x) => x.id === id)];
   const svg = s('svg', { viewBox: `0 0 ${L.w} ${L.h}`, role: 'group', 'aria-label': `Your world: ${SUBJECTS.length} subject islands` });
   const defs = s('defs', {},

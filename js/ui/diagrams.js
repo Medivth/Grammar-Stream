@@ -36,6 +36,10 @@ export function mathsDiagram(d) {
     case 'numline': return numLine(d);
     case 'angle': return angle(d);
     case 'squares': return squares(d);
+    case 'graph': return graph(d);
+    case 'venn': return venn(d);
+    case 'righttri': return rightTri(d);
+    case 'trap': return trap(d);
     default: return null;
   }
 }
@@ -339,5 +343,78 @@ function squares(d) {
   for (const [r, c] of d.cells) el.append(s('rect', { x: 10 + c * size, y: 10 + r * size, width: size, height: size, fill: BLUE, opacity: 0.75 }));
   for (let r = 0; r <= d.rows; r++) el.append(line(10, 10 + r * size, 10 + d.cols * size, 10 + r * size, { 'stroke-width': 1, opacity: 0.45 }));
   for (let c = 0; c <= d.cols; c++) el.append(line(10 + c * size, 10, 10 + c * size, 10 + d.rows * size, { 'stroke-width': 1, opacity: 0.45 }));
+  return el;
+}
+
+// ---- Year 8 ------------------------------------------------------------------------------
+
+// coordinate grid with straight lines y = mx + c drawn across it: { range: [lo, hi], lines: [{ m, c }] }
+function graph(d) {
+  const [lo, hi] = d.range, n = hi - lo;
+  const cell = n > 10 ? 22 : 28, m = 30;
+  const W = n * cell + 2 * m, H = n * cell + 2 * m;
+  const X = (x) => m + (x - lo) * cell, Y = (y) => m + (hi - y) * cell;
+  const el = svg(W, H, 'Graph of a straight line', 400);
+  for (let k = lo; k <= hi; k++) {
+    el.append(line(X(k), Y(lo), X(k), Y(hi), { 'stroke-width': 0.6, opacity: 0.45 }), line(X(lo), Y(k), X(hi), Y(k), { 'stroke-width': 0.6, opacity: 0.45 }));
+  }
+  el.append(line(X(lo), Y(0), X(hi), Y(0), { 'stroke-width': 2 }), line(X(0), Y(lo), X(0), Y(hi), { 'stroke-width': 2 }));
+  for (let k = lo; k <= hi; k++) {
+    if (k === 0 || (n > 10 && k % 2 !== 0)) continue;
+    el.append(small(X(k), Y(0) + 16, k < 0 ? `−${-k}` : String(k)), small(X(0) - 8, Y(k) + 4, k < 0 ? `−${-k}` : String(k), { 'text-anchor': 'end' }));
+  }
+  el.append(text(X(hi) + 10, Y(0) + 5, 'x', { 'font-size': 14, 'text-anchor': 'start', 'font-style': 'italic' }), text(X(0), Y(hi) - 10, 'y', { 'font-size': 14, 'font-style': 'italic' }));
+  for (const L of d.lines || []) {
+    // clip y = mx + c to the square [lo, hi] x [lo, hi]
+    let x1 = lo, x2 = hi;
+    if (L.m !== 0) {
+      const a = (lo - L.c) / L.m, b = (hi - L.c) / L.m;
+      x1 = Math.max(lo, Math.min(a, b)); x2 = Math.min(hi, Math.max(a, b));
+    }
+    el.append(line(X(x1), Y(L.m * x1 + L.c), X(x2), Y(L.m * x2 + L.c), { stroke: BLUE, 'stroke-width': 3 }));
+  }
+  return el;
+}
+
+// two-set Venn diagram: { labels: [A, B], only: [a, b], both, out }
+function venn(d) {
+  const W = 340, H = 210, cy = 108, r = 72, c1 = 128, c2 = 212;
+  const el = svg(W, H, 'Venn diagram', 380);
+  el.append(s('rect', { x: 8, y: 8, width: W - 16, height: H - 16, rx: 10, fill: 'none', stroke: INK, 'stroke-width': 2 }),
+    s('circle', { cx: c1, cy, r, fill: BLUE, 'fill-opacity': 0.12, stroke: INK, 'stroke-width': 2.5 }),
+    s('circle', { cx: c2, cy, r, fill: '#d97a12', 'fill-opacity': 0.12, stroke: INK, 'stroke-width': 2.5 }),
+    text(c1 - r + 6, cy - r + 8, d.labels[0], { 'text-anchor': 'start' }), text(c2 + r - 6, cy - r + 8, d.labels[1], { 'text-anchor': 'end' }),
+    text(c1 - 34, cy + 6, String(d.only[0]), { 'font-size': 18 }), text((c1 + c2) / 2, cy + 6, String(d.both), { 'font-size': 18 }),
+    text(c2 + 34, cy + 6, String(d.only[1]), { 'font-size': 18 }), text(W - 30, H - 22, String(d.out), { 'font-size': 18 }));
+  return el;
+}
+
+// right-angled triangle, right angle bottom-left; labels on the left side, the bottom and the
+// hypotenuse ('' for none); angle: true marks θ at the bottom-right corner
+function rightTri(d) {
+  const W = 320, H = 220, x0 = 70, y0 = 180, bw = 190, h = 140;
+  const el = svg(W, H, 'Right-angled triangle', 340);
+  el.append(s('path', { d: `M${x0} ${y0} L${x0 + bw} ${y0} L${x0} ${y0 - h} Z`, fill: 'none', stroke: INK, 'stroke-width': 2.5, 'stroke-linejoin': 'round' }),
+    rightAngle(x0, y0, 14, -14));
+  if (d.left) el.append(text(x0 - 10, y0 - h / 2 + 6, d.left, { 'text-anchor': 'end' }));
+  if (d.bottom) el.append(text(x0 + bw / 2, y0 + 26, d.bottom));
+  if (d.hyp) el.append(text(x0 + bw / 2 + 14, y0 - h / 2 - 8, d.hyp, { 'text-anchor': 'start' }));
+  if (d.angle) {
+    const r = 36, a = Math.atan2(h, bw);
+    el.append(s('path', { d: `M${x0 + bw - r} ${y0} A${r} ${r} 0 0 1 ${x0 + bw - r * Math.cos(a)} ${y0 - r * Math.sin(a)}`, fill: 'none', stroke: '#d62f3a', 'stroke-width': 2.5 }),
+      text(x0 + bw - r - 16, y0 - 8, 'θ', { fill: '#d62f3a', 'font-style': 'italic' }));
+  }
+  return el;
+}
+
+// trapezium with parallel sides a (top) and b (bottom) and perpendicular height h
+function trap(d) {
+  const W = 360, H = 230;
+  const k = Math.min(240 / d.b, 130 / d.h);
+  const b = d.b * k, a = d.a * k, h = d.h * k, x0 = (W - b) / 2, y0 = 185, off = (b - a) * 0.35;
+  const el = svg(W, H, 'Trapezium');
+  el.append(s('path', { d: `M${x0} ${y0} L${x0 + b} ${y0} L${x0 + off + a} ${y0 - h} L${x0 + off} ${y0 - h} Z`, fill: 'none', stroke: INK, 'stroke-width': 2.5, 'stroke-linejoin': 'round' }),
+    dash(x0 + off, y0 - h, x0 + off, y0), rightAngle(x0 + off, y0, 10, -10),
+    text(x0 + off + a / 2, y0 - h - 10, unit(d.a)), text(x0 + b / 2, y0 + 26, unit(d.b)), text(x0 + off + 10, y0 - h / 2 + 6, unit(d.h), { 'text-anchor': 'start' }));
   return el;
 }

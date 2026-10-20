@@ -13,14 +13,17 @@ const KS1_SOURCES = ['maths', 'maths2', 'reading', 'reading2', 'spelling', 'spel
 // the Year 3 course: every Year 2 deck (Year 2 stretch topics count as core there) plus
 // tools/content-src/y3/*.mjs -> content/y3/...; its own reading ladder and the merged timeline come last.
 const Y3_SOURCES = ['maths', 'reading', 'spelling', 'science', 'history', 'books'];
+// the Year 8 course (its own content only): tools/content-src/y8/*.mjs -> content/y8/..., content/index-y8.json
+const Y8_SOURCES = ['english', 'english-lang', 'maths', 'science', 'history', 'geography', 'computing', 'greek', 'books'];
 
 export async function buildAll() {
   const files = {};
   const decks = [];
   const ks1Decks = [];
   const y3Decks = [];
+  const y8Decks = [];
   let y3Ladder = false;
-  for (const [list, dir, out] of [[SOURCES, '', decks], [KS1_SOURCES, 'ks1/', ks1Decks], [Y3_SOURCES, 'y3/', y3Decks]]) {
+  for (const [list, dir, out] of [[SOURCES, '', decks], [KS1_SOURCES, 'ks1/', ks1Decks], [Y3_SOURCES, 'y3/', y3Decks], [Y8_SOURCES, 'y8/', y8Decks]]) {
     for (const s of list) {
       const mod = await import(new URL(`./content-src/${dir}${s}.mjs`, import.meta.url));
       for (const deck of mod.default) {
@@ -41,6 +44,7 @@ export async function buildAll() {
   files['index-ks1.json'] = JSON.stringify({ version: 1, course: 'ks1', decks: ks1Decks, maps }, null, 1) + '\n';
   const y3All = [...ks1Decks.filter((p) => !(y3Ladder && p === 'ks1/reading/books.json')), ...y3Decks];
   files['index-y3.json'] = JSON.stringify({ version: 1, course: 'y3', decks: y3All, maps }, null, 1) + '\n';
+  files['index-y8.json'] = JSON.stringify({ version: 1, course: 'y8', decks: y8Decks, maps }, null, 1) + '\n';
   return files;
 }
 
