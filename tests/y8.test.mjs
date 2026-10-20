@@ -41,7 +41,8 @@ test('Year 8 content is valid and substantial in every subject', () => {
     const ids = db.topicOrder[s.id] || [];
     assert.ok(ids.length >= 14, `${s.id}: ${ids.length} topics`);
     assert.ok(ids.some((id) => isStretch(db.topics[id])), `${s.id}: a stretch topic`);
-    assert.ok(Object.values(db.items).filter((i) => i.subject === s.id).length >= 50, `${s.id}: items`);
+    const its = Object.values(db.items).filter((i) => i.subject === s.id);
+    assert.ok(its.length >= 50 || its.filter((i) => i.kind === 'template').length >= 15, `${s.id}: items`); // generators never run out
   }
   const ids = index.decks.flatMap((p) => (read(p).items || []).map((i) => i.id));
   assert.deepEqual(ids.filter((id, i) => ids.indexOf(id) !== i), [], 'item ids are unique across decks');

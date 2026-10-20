@@ -1,0 +1,1152 @@
+{
+ "subject": "maths",
+ "deck": "y8",
+ "topics": [
+  {
+   "id": "maths.primes",
+   "title": "Primes, HCF and LCM",
+   "kind": "skill",
+   "prereqs": [],
+   "intro": "Every whole number above 1 is built from primes in exactly one way: its prime factorisation. Once you have it, HCFs and LCMs fall out almost for free.",
+   "teach": "Explain how prime factorisation helps you find the LCM of 84 and 90.",
+   "talk": "Ask {her} why 1 is not counted as a prime number."
+  },
+  {
+   "id": "maths.indices",
+   "title": "Powers, roots and the order of operations",
+   "kind": "skill",
+   "prereqs": [
+    "maths.primes"
+   ],
+   "intro": "Powers are repeated multiplication, and the index laws (add, subtract, multiply the little numbers) follow from that. Negative and fractional indices are the same idea pushed further.",
+   "teach": "Explain why 5⁰ = 1 using the division law.",
+   "talk": "Ask {her} what 2⁻¹ means, and why."
+  },
+  {
+   "id": "maths.standard-form",
+   "title": "Standard form",
+   "kind": "skill",
+   "prereqs": [
+    "maths.indices"
+   ],
+   "intro": "Astronomers and atom-scientists both need standard form: A × 10ⁿ with A at least 1 and less than 10. Big numbers have positive powers; tiny ones negative.",
+   "teach": "Explain how to multiply two numbers written in standard form.",
+   "talk": "The Sun is about 1.5 × 10⁸ km away. Ask {her} to write it out in full."
+  },
+  {
+   "id": "maths.fractions",
+   "title": "Fractions: all four operations",
+   "kind": "skill",
+   "prereqs": [],
+   "intro": "Adding needs a common denominator; multiplying doesn’t; dividing means multiplying by the reciprocal. Mixed numbers become improper fractions first.",
+   "teach": "Explain why dividing by {{2/3}} is the same as multiplying by {{3/2}}.",
+   "talk": "Ask {her} how many {{3/4}}-hour lessons fit into 4½ hours."
+  },
+  {
+   "id": "maths.percentages",
+   "title": "Percentage change, reverse and compound",
+   "kind": "skill",
+   "prereqs": [
+    "maths.fractions"
+   ],
+   "intro": "Multipliers make percentages quick: a 15% increase is × 1.15. Reverse percentages divide by the multiplier; compound interest multiplies again and again.",
+   "teach": "Explain why a 20% rise followed by a 20% fall leaves you worse off.",
+   "talk": "Find a sale price in a shop and ask {her} for the original price."
+  },
+  {
+   "id": "maths.ratio",
+   "title": "Ratio and proportion",
+   "kind": "skill",
+   "prereqs": [
+    "maths.fractions"
+   ],
+   "intro": "Ratio compares parts; proportion scales them. Direct proportion goes up together, inverse proportion trades off: more workers, fewer days.",
+   "teach": "Explain how to tell whether a problem is direct or inverse proportion.",
+   "talk": "Ask {her} which pack of something in the cupboard is the better value per 100 g."
+  },
+  {
+   "id": "maths.algebra",
+   "title": "Algebra: simplify, expand and factorise",
+   "kind": "skill",
+   "prereqs": [],
+   "intro": "Algebra is arithmetic with the numbers left unknown. Expanding multiplies out brackets; factorising puts them back. Each undoes the other.",
+   "teach": "Explain how you know you have factorised fully.",
+   "talk": "Ask {her} to factorise 12x + 18 and check by expanding."
+  },
+  {
+   "id": "maths.formulae",
+   "title": "Substitution and rearranging formulae",
+   "kind": "skill",
+   "prereqs": [
+    "maths.algebra",
+    "maths.indices"
+   ],
+   "intro": "Physics, finance and engineering run on formulae. Substitute carefully (brackets round negatives!), and rearrange by undoing the operations in reverse order.",
+   "teach": "Explain how to make r the subject of A = πr².",
+   "talk": "Ask {her} to convert today’s temperature to Fahrenheit using F = {{9/5}}C + 32."
+  },
+  {
+   "id": "maths.equations",
+   "title": "Linear equations",
+   "kind": "skill",
+   "prereqs": [
+    "maths.algebra"
+   ],
+   "intro": "An equation is a balance: do the same to both sides. With unknowns on both sides, gather the x terms first; with fractions, multiply them away.",
+   "teach": "Explain how to solve 5(x − 2) = 3(x + 4).",
+   "talk": "I think of a number, multiply by 4 and subtract 7. I get the same as doubling it and adding 9. Ask {her} for the number."
+  },
+  {
+   "id": "maths.inequalities",
+   "title": "Inequalities",
+   "kind": "skill",
+   "prereqs": [
+    "maths.equations"
+   ],
+   "intro": "Inequalities are solved like equations, with one twist: multiplying or dividing by a negative number flips the sign.",
+   "teach": "Explain why −2x > 6 gives x < −3, not x > −3.",
+   "talk": "Ask {her} for all the integers that satisfy −2 < n ≤ 3."
+  },
+  {
+   "id": "maths.sequences",
+   "title": "Sequences and the nth term",
+   "kind": "skill",
+   "prereqs": [
+    "maths.algebra"
+   ],
+   "intro": "A linear sequence goes up by the same amount each time, so its nth term is dn + c. If the differences themselves go up steadily, it is quadratic.",
+   "teach": "Explain how to decide whether 100 is in the sequence 4, 11, 18, …",
+   "talk": "Ask {her} for the nth term of 5, 8, 11, 14, … and its 100th term."
+  },
+  {
+   "id": "maths.graphs",
+   "title": "Straight-line graphs",
+   "kind": "skill",
+   "prereqs": [
+    "maths.equations"
+   ],
+   "intro": "In y = mx + c, m is the gradient (steepness) and c is where the line crosses the y-axis. Parallel lines share a gradient; perpendicular gradients multiply to −1.",
+   "teach": "Explain how to find the equation of a line from its graph.",
+   "talk": "Ask {her} which is steeper: y = 3x − 1 or y = −4x + 2."
+  },
+  {
+   "id": "maths.angles",
+   "title": "Angles in polygons and parallel lines",
+   "kind": "skill",
+   "prereqs": [],
+   "intro": "Exterior angles of any polygon add to 360°; interior angles add to (n − 2) × 180°. Between parallel lines, F angles and Z angles are equal and C angles add to 180°.",
+   "teach": "Explain why the interior angles of a hexagon add up to 720°.",
+   "talk": "Count the sides of a 50p coin and ask {her} for its exterior angle."
+  },
+  {
+   "id": "maths.area",
+   "title": "Area: trapezia and circles",
+   "kind": "skill",
+   "prereqs": [],
+   "intro": "A trapezium’s area is the average of the parallel sides times the height. For circles, Archimedes showed that π links the radius to both the circumference and the area.",
+   "teach": "Explain why the area of a trapezium is ½(a + b)h.",
+   "talk": "Measure round a plate and across it: ask {her} to estimate π."
+  },
+  {
+   "id": "maths.volume",
+   "title": "Volume and surface area of prisms",
+   "kind": "skill",
+   "prereqs": [
+    "maths.area"
+   ],
+   "intro": "Every prism has volume = cross-section × length; a cylinder is a prism with a circle for its cross-section. Surface area means unfolding the solid into a net.",
+   "teach": "Explain how to find the surface area of a cylinder.",
+   "talk": "Ask {her} to estimate how many litres a bath holds by measuring it."
+  },
+  {
+   "id": "maths.transformations",
+   "title": "Transformations, bearings and scale",
+   "kind": "skill",
+   "prereqs": [
+    "maths.graphs"
+   ],
+   "intro": "Reflections, rotations, translations and enlargements move shapes on a grid. Bearings measure direction clockwise from north; scales turn maps into real distances.",
+   "teach": "Explain what happens to the area of a shape enlarged by scale factor 3.",
+   "talk": "Use a map app together: ask {her} for the bearing from home to school."
+  },
+  {
+   "id": "maths.probability",
+   "title": "Probability",
+   "kind": "skill",
+   "prereqs": [
+    "maths.fractions"
+   ],
+   "intro": "Probabilities run from 0 to 1. Sample spaces list every outcome; Venn diagrams sort overlapping groups; for independent events, multiply.",
+   "teach": "Explain why the probability of “at least one” is 1 − P(none).",
+   "talk": "Roll two dice 36 times and compare how often you get a total of 7 with the theory."
+  },
+  {
+   "id": "maths.statistics",
+   "title": "Statistics: averages and grouped data",
+   "kind": "skill",
+   "prereqs": [
+    "maths.fractions"
+   ],
+   "intro": "Mean, median and mode each answer “what is typical?” differently. From frequency tables, multiply before you add; for grouped data, midpoints give an estimate.",
+   "teach": "Explain when the median is a better average than the mean.",
+   "talk": "Ask {her} to find the mean and median of the family’s shoe sizes."
+  },
+  {
+   "id": "maths.reasoning",
+   "title": "Proof and mathematical reasoning",
+   "kind": "facts",
+   "prereqs": [
+    "maths.algebra"
+   ],
+   "batch": 4,
+   "intro": "Mathematicians since Euclid have not been content with examples: they want proof. Algebra lets you prove something for EVERY number at once.",
+   "teach": "Prove that the sum of three consecutive integers is a multiple of 3.",
+   "talk": "Ask {her} for a counterexample to “all prime numbers are odd”."
+  },
+  {
+   "id": "maths.language",
+   "title": "The language of maths",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Precise words matter: an expression is not an equation, a factor is not a multiple, and an identity is true for every value.",
+   "teach": "Explain the difference between an equation, an expression, a formula and an identity.",
+   "talk": "Ask {her} to give an example of each: expression, equation, formula."
+  },
+  {
+   "id": "maths.pythagoras",
+   "title": "Pythagoras’ theorem",
+   "kind": "skill",
+   "prereqs": [
+    "maths.indices",
+    "maths.area"
+   ],
+   "tier": "stretch",
+   "intro": "In a right-angled triangle, a² + b² = c², where c is the hypotenuse. Pythagoras’ followers in ancient Croton treated numbers almost as sacred.",
+   "teach": "Explain how to tell whether you add or subtract the squares.",
+   "talk": "Ask {her} whether a 6, 8, 10 triangle is right-angled, and why."
+  },
+  {
+   "id": "maths.simultaneous",
+   "title": "Simultaneous equations",
+   "kind": "skill",
+   "prereqs": [
+    "maths.equations"
+   ],
+   "tier": "stretch",
+   "intro": "Two equations, two unknowns: add or subtract the equations to eliminate one letter, solve for the other, then substitute back.",
+   "teach": "Explain why you might multiply one equation before eliminating.",
+   "talk": "Two lyres and an owl cost 17 drachmae; one lyre and an owl cost 11. Ask {her} the price of each."
+  },
+  {
+   "id": "maths.quadratics",
+   "title": "Quadratics: double brackets and factorising",
+   "kind": "skill",
+   "prereqs": [
+    "maths.algebra"
+   ],
+   "tier": "stretch",
+   "intro": "Multiplying (x + a)(x + b) gives x² + (a + b)x + ab. Factorising runs this backwards: find two numbers that multiply to the constant and add to the middle number.",
+   "teach": "Explain how to factorise x² + 7x + 12.",
+   "talk": "Ask {her} to expand (x + 3)² and spot why it is not x² + 9."
+  },
+  {
+   "id": "maths.trigonometry",
+   "title": "Trigonometry: SOH CAH TOA",
+   "kind": "skill",
+   "prereqs": [
+    "maths.pythagoras"
+   ],
+   "tier": "stretch",
+   "intro": "In a right-angled triangle the ratios of the sides depend only on the angle. Hipparchus of Nicaea built the first trigonometric tables over 2,000 years ago to track the stars.",
+   "teach": "Explain how to choose between sin, cos and tan.",
+   "talk": "Ask {her} what tan 45° must be, and why."
+  },
+  {
+   "id": "maths.recurring",
+   "title": "Recurring decimals and fractions",
+   "kind": "skill",
+   "prereqs": [
+    "maths.fractions",
+    "maths.equations"
+   ],
+   "tier": "stretch",
+   "intro": "Every fraction is a terminating or a recurring decimal, and every recurring decimal is a fraction. A neat algebra trick (10x − x) proves it.",
+   "teach": "Explain how to write 0.7̇ as a fraction.",
+   "talk": "Ask {her} to prove that 0.9̇ = 1."
+  }
+ ],
+ "items": [
+  {
+   "id": "maths.primes.tmpl",
+   "topic": "maths.primes",
+   "kind": "template",
+   "gen": "y8mPrimes",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.indices.tmpl",
+   "topic": "maths.indices",
+   "kind": "template",
+   "gen": "y8mIndices",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.standard-form.tmpl",
+   "topic": "maths.standard-form",
+   "kind": "template",
+   "gen": "y8mStandardForm",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.fractions.tmpl",
+   "topic": "maths.fractions",
+   "kind": "template",
+   "gen": "y8mFractions",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.percentages.tmpl",
+   "topic": "maths.percentages",
+   "kind": "template",
+   "gen": "y8mPercent",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.ratio.tmpl",
+   "topic": "maths.ratio",
+   "kind": "template",
+   "gen": "y8mRatio",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.algebra.tmpl",
+   "topic": "maths.algebra",
+   "kind": "template",
+   "gen": "y8mAlgebra",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.formulae.tmpl",
+   "topic": "maths.formulae",
+   "kind": "template",
+   "gen": "y8mFormulae",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.equations.tmpl",
+   "topic": "maths.equations",
+   "kind": "template",
+   "gen": "y8mEquations",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.inequalities.tmpl",
+   "topic": "maths.inequalities",
+   "kind": "template",
+   "gen": "y8mInequalities",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.sequences.tmpl",
+   "topic": "maths.sequences",
+   "kind": "template",
+   "gen": "y8mSequences",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.graphs.tmpl",
+   "topic": "maths.graphs",
+   "kind": "template",
+   "gen": "y8mGraphs",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.angles.tmpl",
+   "topic": "maths.angles",
+   "kind": "template",
+   "gen": "y8mAngles",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.area.tmpl",
+   "topic": "maths.area",
+   "kind": "template",
+   "gen": "y8mArea",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.volume.tmpl",
+   "topic": "maths.volume",
+   "kind": "template",
+   "gen": "y8mVolume",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.transformations.tmpl",
+   "topic": "maths.transformations",
+   "kind": "template",
+   "gen": "y8mTransform",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.probability.tmpl",
+   "topic": "maths.probability",
+   "kind": "template",
+   "gen": "y8mProbability",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.statistics.tmpl",
+   "topic": "maths.statistics",
+   "kind": "template",
+   "gen": "y8mStats",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.pythagoras.tmpl",
+   "topic": "maths.pythagoras",
+   "kind": "template",
+   "gen": "y8mPythag",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.simultaneous.tmpl",
+   "topic": "maths.simultaneous",
+   "kind": "template",
+   "gen": "y8mSimultaneous",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.quadratics.tmpl",
+   "topic": "maths.quadratics",
+   "kind": "template",
+   "gen": "y8mQuadratics",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.trigonometry.tmpl",
+   "topic": "maths.trigonometry",
+   "kind": "template",
+   "gen": "y8mTrig",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.recurring.tmpl",
+   "topic": "maths.recurring",
+   "kind": "template",
+   "gen": "y8mRecurring",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.rs.consecutive",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Which is a proof that the sum of three consecutive integers is always a multiple of 3?",
+   "options": [
+    {
+     "text": "n + (n + 1) + (n + 2) = 3n + 3 = 3(n + 1)",
+     "correct": true
+    },
+    {
+     "text": "1 + 2 + 3 = 6 and 4 + 5 + 6 = 15, both multiples of 3",
+     "correct": false,
+     "feedback": "Examples are evidence, not proof: they don’t cover every case."
+    },
+    {
+     "text": "Every third number is a multiple of 3",
+     "correct": false,
+     "feedback": "True, but it doesn’t show the SUM is a multiple of 3."
+    }
+   ],
+   "explain": "Writing the integers as n, n + 1, n + 2 covers every case at once, and 3(n + 1) is clearly a multiple of 3."
+  },
+  {
+   "id": "maths.rs.oddodd",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Odd numbers can be written 2n + 1. What is (2a + 1)(2b + 1), and what does it prove?",
+   "options": [
+    {
+     "text": "4ab + 2a + 2b + 1 = 2(2ab + a + b) + 1, so odd × odd is always odd",
+     "correct": true
+    },
+    {
+     "text": "4ab + 1, so it is one more than a multiple of 4",
+     "correct": false,
+     "feedback": "Expand all four terms: you also get 2a and 2b."
+    },
+    {
+     "text": "2ab + 1, so it is odd",
+     "correct": false,
+     "feedback": "2a × 2b = 4ab, and there are two more terms."
+    }
+   ],
+   "explain": "Anything of the form 2(…) + 1 is odd, so the product of two odd numbers is always odd."
+  },
+  {
+   "id": "maths.rs.prime",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Which is a counterexample to “all prime numbers are odd”?",
+   "options": [
+    {
+     "text": "2",
+     "correct": true
+    },
+    {
+     "text": "9",
+     "correct": false,
+     "feedback": "9 is odd and not prime: it doesn’t contradict the claim."
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "1 is not a prime number."
+    }
+   ],
+   "explain": "2 is prime and even, so one example is enough to disprove the claim."
+  },
+  {
+   "id": "maths.rs.neg",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Kit says −3² = 9. Theo says −3² = −9. Who is right?",
+   "options": [
+    {
+     "text": "Theo: the square applies only to the 3, so −3² = −(3²) = −9",
+     "correct": true
+    },
+    {
+     "text": "Kit: a negative squared is positive",
+     "correct": false,
+     "feedback": "That is true of (−3)², with brackets. Without brackets the minus waits until after the square."
+    },
+    {
+     "text": "Both, depending on the calculator",
+     "correct": false,
+     "feedback": "The convention is fixed: indices before the minus sign."
+    }
+   ],
+   "explain": "Without brackets, indices come first: −3² = −9. With brackets, (−3)² = 9."
+  },
+  {
+   "id": "maths.rs.square",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Is (a + b)² the same as a² + b²?",
+   "options": [
+    {
+     "text": "No: (a + b)² = a² + 2ab + b²",
+     "correct": true
+    },
+    {
+     "text": "Yes, always",
+     "correct": false,
+     "feedback": "Try a = 1, b = 2: (1 + 2)² = 9 but 1² + 2² = 5."
+    },
+    {
+     "text": "Only for negative numbers",
+     "correct": false,
+     "feedback": "It fails for almost every pair, e.g. 1 and 2."
+    }
+   ],
+   "explain": "Expanding (a + b)(a + b) gives four terms: a² + ab + ab + b²."
+  },
+  {
+   "id": "maths.rs.percent",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "A price goes up 10% and then down 10%. What happens overall?",
+   "options": [
+    {
+     "text": "It ends 1% lower than it started",
+     "correct": true
+    },
+    {
+     "text": "It ends where it started",
+     "correct": false,
+     "feedback": "The 10% fall is of a BIGGER amount: 1.1 × 0.9 = 0.99."
+    },
+    {
+     "text": "It ends 1% higher",
+     "correct": false,
+     "feedback": "1.1 × 0.9 = 0.99, which is a decrease."
+    }
+   ],
+   "explain": "Multipliers: 1.10 × 0.90 = 0.99, a 1% decrease overall."
+  },
+  {
+   "id": "maths.rs.divide",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "“Dividing always makes a number smaller.” Always, sometimes or never true?",
+   "options": [
+    {
+     "text": "Sometimes: dividing by a number between 0 and 1 makes it bigger",
+     "correct": true
+    },
+    {
+     "text": "Always true",
+     "correct": false,
+     "feedback": "Try 6 ÷ ½ = 12."
+    },
+    {
+     "text": "Never true",
+     "correct": false,
+     "feedback": "6 ÷ 2 = 3 is smaller."
+    }
+   ],
+   "explain": "Dividing by a number less than 1 (but more than 0) increases the answer: 6 ÷ 0.5 = 12."
+  },
+  {
+   "id": "maths.rs.averages",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Eight athletes run a race in 12, 12, 13, 13, 14, 14, 15 and 41 seconds (one fell). Which average best describes a typical time?",
+   "options": [
+    {
+     "text": "The median (13.5 s): the outlier barely affects it",
+     "correct": true
+    },
+    {
+     "text": "The mean (16.75 s)",
+     "correct": false,
+     "feedback": "The 41-second fall drags the mean far above every other time."
+    },
+    {
+     "text": "The range (29 s)",
+     "correct": false,
+     "feedback": "The range measures spread, not a typical value."
+    }
+   ],
+   "explain": "The median ignores how extreme the outlier is, so it represents the typical runner better."
+  },
+  {
+   "id": "maths.rs.correlation",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "A scatter graph shows that towns with more ice-cream sales have more sunburn cases. What can you conclude?",
+   "options": [
+    {
+     "text": "They are correlated, but ice cream does not cause sunburn: hot weather drives both",
+     "correct": true
+    },
+    {
+     "text": "Ice cream causes sunburn",
+     "correct": false,
+     "feedback": "Correlation is not causation: a third factor (sunshine) explains both."
+    },
+    {
+     "text": "There is no relationship",
+     "correct": false,
+     "feedback": "There is a relationship (a positive correlation), just not a causal one."
+    }
+   ],
+   "explain": "Correlation shows the two move together; it does not prove that one causes the other."
+  },
+  {
+   "id": "maths.rs.irrational",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "The Pythagoreans discovered that √2 cannot be written as a fraction. What is such a number called?",
+   "options": [
+    {
+     "text": "irrational",
+     "correct": true
+    },
+    {
+     "text": "recurring",
+     "correct": false,
+     "feedback": "Recurring decimals CAN be written as fractions."
+    },
+    {
+     "text": "prime",
+     "correct": false,
+     "feedback": "Primes are whole numbers with exactly two factors."
+    }
+   ],
+   "explain": "Irrational numbers (√2, π) have decimals that never end and never repeat. Legend says the discovery shocked the Pythagoreans."
+  },
+  {
+   "id": "maths.rs.eratosthenes",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Eratosthenes measured the Earth around 240 BC. At noon the Sun was overhead at Syene but 7.2° from overhead at Alexandria, about 800 km north. Why does that give the Earth’s circumference?",
+   "options": [
+    {
+     "text": "7.2° is {{1/50}} of 360°, so the Earth is about 50 × 800 = 40,000 km round",
+     "correct": true
+    },
+    {
+     "text": "800 × 7.2 = 5,760 km",
+     "correct": false,
+     "feedback": "The angle tells you what FRACTION of a full circle the distance is."
+    },
+    {
+     "text": "360 − 7.2 = 352.8, so 352.8 × 800",
+     "correct": false,
+     "feedback": "Compare 7.2° with the full 360°: it is one fiftieth."
+    }
+   ],
+   "explain": "The distance between the cities is the same fraction of the circumference as 7.2° is of 360°: {{1/50}}. 50 × 800 km = 40,000 km, remarkably close to the true value."
+  },
+  {
+   "id": "maths.rs.always",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "n² + n is always even, for any whole number n. Why?",
+   "options": [
+    {
+     "text": "n² + n = n(n + 1), and one of two consecutive numbers is always even",
+     "correct": true
+    },
+    {
+     "text": "Because n² is always even",
+     "correct": false,
+     "feedback": "n² is odd when n is odd: 3² = 9."
+    },
+    {
+     "text": "Because squares end in 0, 4 or 6",
+     "correct": false,
+     "feedback": "Squares can end in 1, 5 or 9 too."
+    }
+   ],
+   "explain": "Factorising gives n(n + 1): two consecutive whole numbers, one of which must be even, so the product is even."
+  },
+  {
+   "id": "maths.lg.expression",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "What is 3x + 2 called (it has no equals sign)?",
+   "answer": "an expression",
+   "distractors": [
+    "an equation",
+    "a formula",
+    "an identity"
+   ],
+   "explain": "An expression is a collection of terms with no equals sign.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.lg.equation",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "What is 3x + 2 = 11 called?",
+   "answer": "an equation",
+   "distractors": [
+    "an expression",
+    "an identity",
+    "an inequality"
+   ],
+   "explain": "An equation is true only for particular values (here x = 3).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.lg.identity",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "2(x + 3) ≡ 2x + 6 is true for every value of x. What is it called?",
+   "answer": "an identity",
+   "distractors": [
+    "an equation",
+    "a formula",
+    "a coefficient"
+   ],
+   "explain": "An identity (≡) is true whatever the value of the letter.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.lg.formula",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "A = πr² connects different quantities. What is it called?",
+   "answer": "a formula",
+   "distractors": [
+    "an identity",
+    "an expression",
+    "a term"
+   ],
+   "explain": "A formula is a rule linking two or more quantities.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.lg.coefficient",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "In 7x² − 3x, what is the number −3 called?",
+   "answer": "the coefficient of x",
+   "distractors": [
+    "the constant",
+    "the index",
+    "the gradient"
+   ],
+   "explain": "A coefficient is the number multiplying a letter.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.lg.reciprocal",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "What is the reciprocal of {{4/7}}?",
+   "answer": "7/4",
+   "distractors": [
+    "−4/7",
+    "3/7",
+    "7/11"
+   ],
+   "explain": "The reciprocal is 1 divided by the number: flip the fraction. A number times its reciprocal is 1.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "accept": [
+    "1 3/4",
+    "1.75"
+   ]
+  },
+  {
+   "id": "maths.lg.integer",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "Which word means a whole number that can be positive, negative or zero?",
+   "answer": "integer",
+   "distractors": [
+    "natural number",
+    "rational",
+    "digit"
+   ],
+   "explain": "…, −2, −1, 0, 1, 2, … are the integers.",
+   "accept": [
+    "an integer",
+    "integers"
+   ]
+  },
+  {
+   "id": "maths.lg.rational",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "A number that can be written as a fraction of two integers is called…",
+   "answer": "rational",
+   "distractors": [
+    "irrational",
+    "prime",
+    "imaginary"
+   ],
+   "explain": "Rational comes from “ratio”: 0.75 = 3/4 and 0.3̇ = 1/3 are rational; √2 and π are not.",
+   "accept": [
+    "a rational number"
+   ]
+  },
+  {
+   "id": "maths.lg.product",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "What does “product” mean in maths?",
+   "answer": "the result of multiplying",
+   "distractors": [
+    "the result of adding",
+    "the result of dividing",
+    "the result of subtracting"
+   ],
+   "explain": "Sum: add. Difference: subtract. Product: multiply. Quotient: divide.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.lg.quotient",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "What is the quotient of 36 and 4?",
+   "answer": "9",
+   "distractors": [
+    "144",
+    "40",
+    "32"
+   ],
+   "explain": "The quotient is the result of division: 36 ÷ 4 = 9."
+  },
+  {
+   "id": "maths.lg.hypotenuse",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "What is the longest side of a right-angled triangle called?",
+   "answer": "the hypotenuse",
+   "distractors": [
+    "the adjacent",
+    "the radius",
+    "the diagonal"
+   ],
+   "explain": "From the Greek hypoteinousa, “stretching under” the right angle.",
+   "accept": [
+    "hypotenuse"
+   ]
+  },
+  {
+   "id": "maths.lg.polygon",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "What is a 10-sided polygon called? (deka is Greek for ten)",
+   "answer": "a decagon",
+   "distractors": [
+    "a dodecagon",
+    "an octagon",
+    "a nonagon"
+   ],
+   "explain": "Polygon names are Greek: pente (5) pentagon, hex (6) hexagon, okto (8) octagon, deka (10) decagon, dodeka (12) dodecagon.",
+   "accept": [
+    "decagon"
+   ]
+  },
+  {
+   "id": "maths.lg.isosceles",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "Isosceles comes from Greek isos (equal) + skelos (leg). What does an isosceles triangle have?",
+   "answer": "two equal sides",
+   "distractors": [
+    "three equal sides",
+    "a right angle",
+    "no equal sides"
+   ],
+   "explain": "Two equal “legs”, and so two equal base angles.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.lg.perpendicular",
+   "topic": "maths.language",
+   "kind": "fact",
+   "prompt": "Lines that meet at right angles are called…",
+   "answer": "perpendicular",
+   "distractors": [
+    "parallel",
+    "tangential",
+    "congruent"
+   ],
+   "explain": "Perpendicular lines meet at 90°; parallel lines never meet.",
+   "accept": [
+    "perpendicular lines"
+   ]
+  }
+ ]
+}

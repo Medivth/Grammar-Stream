@@ -28,6 +28,7 @@ const P = {
   compass: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM15.5 8.5l-2 5-5 2 2-5z',
   hourglass: 'M7 3h10M7 21h10M8 3c0 5 8 6 8 9s-8 4-8 9M16 3c0 5-8 6-8 9s8 4 8 9',
   column: 'M4 21h16M6 21v-3h12v3M7 18V8h10v10M4 8h16l-2-3H6zM10 10v8M14 10v8',
+  code: 'M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16',
   keyboard: 'M3 6h18v12H3zM6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10',
   eye: 'M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z',
   paper: 'M6 3h9l4 4v14H6zM15 3v4h4M9 12h6M9 16h6',
@@ -35,7 +36,7 @@ const P = {
   speaker: 'M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11',
 };
 
-export const SUBJECT_ICON = { english: 'quill', maths: 'calc', history: 'hourglass', geography: 'compass', science: 'flask', latin: 'column' };
+export const SUBJECT_ICON = { english: 'quill', maths: 'calc', history: 'hourglass', geography: 'compass', science: 'flask', latin: 'column', greek: 'column', computing: 'code', reading: 'book', spelling: 'pen' };
 
 export function icon(name, cls = 'icon') {
   const ns = 'http://www.w3.org/2000/svg';

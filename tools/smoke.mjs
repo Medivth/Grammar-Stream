@@ -207,7 +207,7 @@ try {
         if (opt) await opt.click();
         else if (typed) { const ans = await page.evaluate(() => { const a = window.__app; const st = a.state.plan.steps[a.state.plan.pos]; return a.db.items[st.id]?.answer || a.db.items[st.id]?.word || '7'; }); for (const i of await page.$$('.q-body input[type=text]:not([disabled])')) await i.fill(String(ans)); }
         else { const tap = await page.$('.map-box [data-id]'); if (tap) await tap.click({ force: true }); }
-        if (!seen2.has('say')) { seen2.add('say'); if (!(await page.$('.say-btn'))) throw new Error('no read-aloud button on a Year 2 question'); }
+        if (tag !== 'y8' && !seen2.has('say')) { seen2.add('say'); if (!(await page.$('.say-btn'))) throw new Error(`no read-aloud button on a ${tag} question`); }
         await page.click('.confidence button:has-text("Think so")');
         await page.waitForSelector('.feedback');
         await page.click('button:has-text("Next")');
@@ -246,6 +246,30 @@ try {
     await page.screenshot({ path: `${OUT}/${label}-25-y3-home.png`, fullPage: true });
     const seen3 = await playYoung('y3');
     console.log(`${label}: Year 3 session step types: ${[...seen3].join(', ')}`);
+    // a third child on the Year 8 course: set up, then a full 30-minute session
+    await page.goto(`http://127.0.0.1:${PORT}/#/parent`);
+    await page.waitForSelector('.pin-pad, button:has-text("Add another child")');
+    if (await page.$('.pin-pad')) for (const d of '1234') await page.click(`.pin-pad button[aria-label="${d}"]`);
+    await page.click('text=Add another child');
+    await page.waitForSelector('#ob-name');
+    await page.fill('#ob-name', 'Thea');
+    await page.selectOption('#ob-pron', 'she');
+    await page.selectOption('#ob-course', 'y8');
+    await page.click('text=Next: meet your companion');
+    await page.waitForSelector('#capy-name');
+    if (await page.$('#hero-name')) throw new Error('Year 8 should not ask for a superhero name');
+    await page.fill('#capy-name', 'Glaukos');
+    await page.click('text=Let’s go!');
+    await page.waitForSelector('.btn-start');
+    const y8 = await page.evaluate(() => [window.__app.state.course, window.__app.state.settings.sessionMinutes, window.__app.profiles().length]);
+    if (y8[0] !== 'y8' || y8[1] !== 30 || y8[2] !== 3) throw new Error(`Year 8 child: ${y8}`);
+    await page.evaluate(() => { const a = window.__app; a.state.sessions.push({ day: Math.floor(Date.now() / 864e5) - 1, start: 1, end: 2, answered: 5, correct: 5, completed: true }); a.state.plan = null; a.save(); });
+    await page.goto(`http://127.0.0.1:${PORT}/#/home`);
+    await page.waitForSelector('.btn-start');
+    await page.screenshot({ path: `${OUT}/${label}-30-y8-home.png`, fullPage: true });
+    const seen8 = await playYoung('y8');
+    console.log(`${label}: Year 8 session step types: ${[...seen8].join(', ')}`);
+    for (const tool of ['typing', 'speed']) { await page.goto(`http://127.0.0.1:${PORT}/#/${tool}`); await page.waitForTimeout(300); await page.screenshot({ path: `${OUT}/${label}-31-y8-${tool}.png`, fullPage: true }); }
     await page.screenshot({ path: `${OUT}/${label}-22-ks1-done.png`, fullPage: true });
     // reload: with two children the app asks who is learning
     await page.evaluate(() => sessionStorage.removeItem('gs.profile'));
