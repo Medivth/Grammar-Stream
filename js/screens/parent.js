@@ -3,7 +3,7 @@
 
 import { h, mount, toast, rich } from '../ui/dom.js';
 import { weekStart, formatDay } from '../core/dates.js';
-import { calibration, daysPractisedThisMonth } from '../core/session.js';
+import { calibration, daysPractisedThisMonth, PLACEMENT_ORDER } from '../core/session.js';
 import { exportFile, pickBackupFile, saveState, wipe } from '../platform/storage.js';
 import { emptyState } from '../core/store.js';
 import { SUBJECTS, SUBJECT_BY_ID } from '../core/subjects.js';
@@ -88,7 +88,8 @@ function dashboard(app) {
         h('p', { style: { marginTop: '12px' } }, `${w.answered} questions answered. Started ${w.started.length} topic${w.started.length === 1 ? '' : 's'}; ${w.secured.length} became secure.`),
         w.started.length ? h('p', { class: 'muted' }, 'New this week: ', w.started.map((id) => db.topics[id]?.title).filter(Boolean).join(', ')) : null,
         h('p', { class: 'muted small' }, SUBJECTS.map((s) => `${s.name} ${w.bySubject[s.id] || 0}`).join(' · ')),
-        w.sprintBest ? h('p', { class: 'muted small' }, `Arithmetic sprint: best this week ${w.sprintBest.correct} right in 90 seconds (level ${w.sprintBest.level} of 5).`) : null),
+        w.sprintBest ? h('p', { class: 'muted small' }, `Arithmetic sprint: best this week ${w.sprintBest.correct} right in 90 seconds (level ${w.sprintBest.level} of 5).`) : null,
+        (state.papers || []).length ? h('p', { class: 'muted small' }, `Arithmetic papers: ${state.papers.length} done, best ${Math.max(...state.papers.map((p) => p.score))} / 40, latest ${state.papers.at(-1).score} / 40.`) : null),
 
       prompts.length ? h('div', { class: 'card' }, h('h2', {}, 'Things to talk about'), h('p', { class: 'muted' }, 'Interest helps more than checking. Try one of these at dinner or in the car:'), h('ul', {}, prompts.map((p) => h('li', {}, p)))) : null,
 
@@ -198,7 +199,7 @@ function levelsCard(app) {
       const placed = state.subjects[s.id]?.placed;
       const secure = Object.entries(state.topics).filter(([id, t]) => db.topics[id]?.subject === s.id && t.assumed).length;
       return h('div', { class: 'topic-row' },
-        h('div', { class: 'title' }, h('strong', {}, s.name), h('div', { class: 'muted small' }, placed ? `Checked ${formatDay(placed, { day: 'numeric', month: 'short' })}; ${secure} topic${secure === 1 ? '' : 's'} already known` : needsPlacement(state, db, s.id) ? 'Check coming up in a session soon' : 'All topics started')),
+        h('div', { class: 'title' }, h('strong', {}, s.name), h('div', { class: 'muted small' }, placed ? `Checked ${formatDay(placed, { day: 'numeric', month: 'short' })}; ${secure} topic${secure === 1 ? '' : 's'} already known` : !PLACEMENT_ORDER.includes(s.id) ? 'No check: everyone starts from the beginning' : needsPlacement(state, db, s.id) ? 'Check coming up in a session soon' : 'All topics started')),
         placed ? h('button', { class: 'btn-ghost', onclick: () => { state.subjects[s.id].placed = false; if (state.plan?.day === app.today() && !state.plan.started) state.plan = null; app.save(); toast(`${s.name} will be checked again in her next session.`); dashboard(app); } }, 'Check again') : null);
     }));
 }

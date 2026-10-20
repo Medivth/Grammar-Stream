@@ -1,6 +1,6 @@
 # Grammar Stream
 
-A daily, offline learning course for the step from Year 6 to Year 7 (grammar school readiness) across English, maths, history, geography and science. It runs in the browser as an installable web app on a Windows PC and an Android tablet. Progress stays on the device; nothing is sent anywhere.
+A daily, offline learning course for the step from Year 6 to Year 7 (grammar school readiness) across English, maths, history, geography, science and Latin. It runs in the browser as an installable web app on a Windows PC and an Android tablet. Progress stays on the device; nothing is sent anywhere.
 
 ## Using it
 
@@ -40,6 +40,16 @@ Twenty-nine maths topics, each backed by a question generator with three levels 
 
 Six reading topics built on twelve full-page extracts (150–400 words, verbatim from public-domain texts: Burnett, Grahame, Stevenson, Wells, Montgomery, Nesbit, Sewell, Jerome, Dickens, Darwin and Carroll). Each extract has six questions (retrieval, inference, word meaning in context, find-and-copy, the writer's technique and its effect) answered straight from the text, then a short written answer. The written answer cannot be auto-marked: it goes to the grown-ups page with a model answer and a three-level verdict, and her feedback appears at the start of her next session. A "Yes!" counts towards the topic's mastery. Twenty-six weekly writing prompts rotate through story, viewpoint, analysis, history, science and geography.
 
+### Latin
+
+Eleven topics for a Year 7 head start: vocabulary both ways (Latin→English and English→Latin, with the English words that descend from each), verbs ending -t, word order, nominative and accusative, the -o/-s/-t endings, plurals, numbers and greetings, Latin inside English, Roman life, and an original short story read like a comprehension passage. No level check: everyone starts at the beginning.
+
+### Practice tools
+
+- **Arithmetic paper**: a KS2-style test of 36 questions and 40 marks in 30 minutes, generated fresh each time, marked instantly with corrections; results and best score are kept.
+- **Touch typing**: ten lessons from the home row to whole sentences, with an on-screen keyboard showing the next key and finger; a lesson passes at 90% accuracy. Then *River race*, a one-minute word game. Needs a real keyboard.
+- **Speed reading**: a passage lights up word by word at a set pace, followed by four comprehension questions from the reading topics; the pace rises only when she still understands.
+
 ### Stretch tier
 
 Each subject has four to ten `tier: 'stretch'` topics (end of Year 7 into Year 8): algebra with brackets and unknowns on both sides, percentage change, angles in polygons and parallel lines, index laws, straight-line graphs, circles; advanced grammar, ambitious vocabulary, poetic form, Dickens and Brontë; the Reformation, the Armada, the Civil War and historical interpretations; coasts, development, weather systems and harder countries; the periodic table, reactions and conservation of mass, digestion, light and V = I × R. They unlock only when 70% of a subject's ordinary topics are secure (and their own prerequisites are), are never part of the placement check, and show a “stretch” tag on the subject page. Securing five earns the crown.
@@ -50,7 +60,7 @@ Some topics draw on another subject: *Geography by numbers* (averages, density, 
 
 ### Visible progress
 
-The home screen's island map lights up topic by topic (white ring segments for secure, gold for mastered). *My progress* has a history timeline whose events light up as she learns them, maps that colour in the places she knows, and fifteen milestones. Milestones are fixed rewards for real achievement (never random); six of them unlock outfits for her capybara.
+The home screen's island map lights up topic by topic (white ring segments for secure, gold for mastered). *My progress* has a history timeline whose events light up as she learns them, maps that colour in the places she knows, and nineteen milestones. Milestones are fixed rewards for real achievement (never random); six of them unlock outfits for her capybara.
 
 ### Commands
 

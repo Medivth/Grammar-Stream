@@ -11,6 +11,9 @@ import { welcomeScreen, companionScreen, displayScreen } from './screens/onboard
 import { writingScreen, feedbackScreen } from './screens/writing.js';
 import { readingScreen } from './screens/reading.js';
 import { progressScreen } from './screens/progress.js';
+import { paperScreen } from './screens/paper.js';
+import { typingScreen } from './screens/typing.js';
+import { speedScreen } from './screens/speed.js';
 
 const root = document.getElementById('app');
 
@@ -54,6 +57,9 @@ async function route() {
     case 'feedback': return feedbackScreen(app, arg);
     case 'reading': return readingScreen(app);
     case 'progress': return progressScreen(app, arg);
+    case 'paper': return paperScreen(app);
+    case 'typing': return typingScreen(app);
+    case 'speed': return speedScreen(app);
     default: return homeScreen(app);
   }
 }

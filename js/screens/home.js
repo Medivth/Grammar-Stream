@@ -61,14 +61,14 @@ function arc(cx, cy, r, a0, a1) {
 }
 
 const LAYOUTS = {
-  wide: { w: 800, h: 470, r: 78, pos: { english: [165, 135], maths: [635, 125], science: [400, 245], history: [175, 360], geography: [625, 360] } },
-  tall: { w: 380, h: 840, r: 72, pos: { english: [112, 112], maths: [268, 272], science: [112, 432], history: [268, 592], geography: [112, 750] } },
+  wide: { w: 800, h: 520, r: 74, pos: { english: [150, 120], maths: [400, 100], history: [650, 120], geography: [150, 390], science: [400, 410], latin: [650, 390] } },
+  tall: { w: 380, h: 990, r: 70, pos: { english: [112, 110], maths: [268, 262], science: [112, 414], history: [268, 566], geography: [112, 718], latin: [268, 870] } },
 };
 
 function islandMap(app) {
   const { state, db } = app;
   const L = window.matchMedia('(min-width: 640px)').matches ? LAYOUTS.wide : LAYOUTS.tall;
-  const svg = s('svg', { viewBox: `0 0 ${L.w} ${L.h}`, role: 'group', 'aria-label': 'Your world: five subject islands' });
+  const svg = s('svg', { viewBox: `0 0 ${L.w} ${L.h}`, role: 'group', 'aria-label': 'Your world: six subject islands' });
   const defs = s('defs', {},
     s('linearGradient', { id: 'sea', x1: 0, y1: 0, x2: 0, y2: 1 }, s('stop', { offset: 0, 'stop-color': '#bfe0f7' }), s('stop', { offset: 1, 'stop-color': '#8fc4ee' })),
     ...SUBJECTS.map((sub) => s('radialGradient', { id: `g-${sub.id}`, cx: 0.35, cy: 0.3, r: 0.85 }, s('stop', { offset: 0, 'stop-color': mix(sub.colour, '#ffffff', 0.45) }), s('stop', { offset: 1, 'stop-color': sub.colour }))));
@@ -79,7 +79,7 @@ function islandMap(app) {
     svg.append(s('path', { d: `M${x},${y} q8,-6 16,0 t16,0`, stroke: '#ffffff', 'stroke-opacity': 0.55, 'stroke-width': 2, fill: 'none', 'stroke-linecap': 'round' }));
   }
   // sea routes between islands
-  const order = ['english', 'maths', 'science', 'history', 'geography'];
+  const order = ['english', 'maths', 'history', 'latin', 'science', 'geography'];
   const route = order.map((id) => L.pos[id]);
   svg.append(s('path', { d: 'M' + route.map((p) => p.join(',')).join(' L'), stroke: '#ffffff', 'stroke-width': 3, 'stroke-dasharray': '2 11', 'stroke-linecap': 'round', fill: 'none', opacity: 0.9 }));
 
@@ -188,7 +188,13 @@ function homeCards(app, rest) {
   const book = currentBooks(state)[0];
   cards.push(card('book', '#c84a14', book ? book.title : 'Choose a book', `${readingThisWeek(state, today)} minutes read this week`, '#/reading'));
   cards.push(card('chart', '#5143d9', 'My progress', 'Timeline, places and badges', '#/progress'));
-  return h('div', { class: 'home-cards' }, cards);
+  const best = Math.max(0, ...(state.papers || []).map((p) => p.score));
+  const tools = [
+    card('paper', SUBJECT_BY_ID.maths.colour, 'Arithmetic paper', best ? `36 questions in 30 minutes · best ${best}/40` : '36 questions in 30 minutes, like the real test', '#/paper'),
+    card('keyboard', '#5143d9', 'Touch typing', state.typing?.best ? `best ${state.typing.best.wpm} words a minute` : 'Ten lessons, then race the river', '#/typing'),
+    card('eye', SUBJECT_BY_ID.english.colour, 'Speed reading', (state.speed || []).length ? `last read at ${state.speed.at(-1).wpm} words a minute` : 'Read faster without losing the thread', '#/speed'),
+  ];
+  return h('div', {}, h('div', { class: 'home-cards' }, cards), h('div', { class: 'section-title' }, h('h2', {}, 'Practice tools')), h('div', { class: 'home-cards' }, tools));
 }
 
 export function homeScreen(app) {
@@ -239,7 +245,8 @@ export function subjectScreen(app, subjectId) {
               : h('span', {}, 'a skill you practise'))));
   });
   const extra = subjectId === 'history' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/progress/timeline') }, icon('clock'), ' Open my timeline')
-    : subjectId === 'geography' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/progress/places') }, icon('globe'), ' Places I know') : null;
+    : subjectId === 'geography' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/progress/places') }, icon('globe'), ' Places I know')
+    : subjectId === 'maths' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/paper') }, icon('paper'), ' Arithmetic paper') : null;
   mount(app.root,
     h('div', { class: 'topbar' }, h('button', { class: 'btn-icon', 'aria-label': 'Back', onclick: () => app.go('#/home') }, icon('back')), h('span', { class: 'spacer' }), extra),
     h('div', { class: 'narrow', style: { '--subj': subj.colour } },

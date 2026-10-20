@@ -21,7 +21,7 @@ test('every reading passage is a real extract: 150-420 words, with a source, sha
   }
   const reading = Object.values(db.items).filter((i) => db.topics[i.topic]?.kind === 'reading');
   assert.ok(reading.length >= 80);
-  for (const t of Object.values(db.topics).filter((t) => t.kind === 'reading')) {
+  for (const t of Object.values(db.topics).filter((t) => t.kind === 'reading' && t.subject === 'english')) {
     const items = db.itemsByTopic[t.id].map((id) => db.items[id]);
     assert.equal(items.filter((i) => i.kind === 'written').length, 2, `${t.id}: two written answers`);
     for (const w of items.filter((i) => i.kind === 'written')) assert.ok(items.filter((i) => i.passage === w.passage && i.kind !== 'written').length >= 5, `${w.id}: questions on its passage`);

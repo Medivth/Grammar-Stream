@@ -5,7 +5,7 @@
 import { hashString } from './rng.js';
 
 export const APP_ID = 'grammar-stream';
-export const SCHEMA_VERSION = 4;
+export const SCHEMA_VERSION = 5;
 
 /** MIGRATIONS[n] upgrades data from schema n to n + 1. */
 export const MIGRATIONS = {
@@ -15,6 +15,8 @@ export const MIGRATIONS = {
   2: (d) => ({ ...d, sprints: d.sprints || [] }),
   // v4: written reading answers marked by a grown-up
   3: (d) => ({ ...d, answers: d.answers || [] }),
+  // v5: arithmetic papers, typing and speed-reading records
+  4: (d) => ({ ...d, papers: d.papers || [], typing: d.typing || { lessons: {}, best: null }, speed: d.speed || [] }),
 };
 
 export function emptyState(today) {
@@ -45,6 +47,9 @@ export function emptyState(today) {
     books: [], // { bookId | title, author, startDay, endDay }
     sprints: [], // arithmetic sprints: { day, level, answered, correct }
     answers: [], // written reading answers: { day, itemId, text, mark: null | { score 0-2, note, day }, seen }
+    papers: [], // arithmetic papers: { day, score, max, seconds, wrong }
+    typing: { lessons: {}, best: null }, // touch typing: lessons[id] = { wpm, acc }, best = { wpm, acc, day }
+    speed: [], // speed reading: { day, passage, wpm, correct, total }
     plan: null, // the in-progress day plan
     lastBackup: null,
   };

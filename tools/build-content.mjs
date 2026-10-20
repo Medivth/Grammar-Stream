@@ -4,7 +4,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 
-const SOURCES = ['english', 'english-y7', 'maths', 'history', 'history-y7', 'geography', 'geography-y7', 'science', 'science-y7', 'reading-writing', 'timeline', 'synoptic', 'reading', 'stretch-maths', 'stretch-english', 'stretch-history', 'stretch-geography', 'stretch-science'];
+const SOURCES = ['english', 'english-y7', 'maths', 'history', 'history-y7', 'geography', 'geography-y7', 'science', 'science-y7', 'reading-writing', 'timeline', 'synoptic', 'reading', 'stretch-maths', 'stretch-english', 'stretch-history', 'stretch-geography', 'stretch-science', 'latin'];
 const MAPS = { world: 'maps/world.json', europe: 'maps/europe.json', uk: 'maps/uk.json' };
 const { DIAGRAMS } = await import(new URL('./content-src/diagrams.mjs', import.meta.url));
 

@@ -1,0 +1,3329 @@
+{
+ "subject": "latin",
+ "deck": "core",
+ "topics": [
+  {
+   "id": "latin.words-1",
+   "title": "First words: people and places",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 6,
+   "intro": "Latin was the language of the Romans, and it is hiding inside half the words you already know. Start with fourteen words for people and places. Say each one aloud: Latin is pronounced as it is spelt, with “c” always hard as in “cat” and “v” said like “w”.",
+   "teach": "Teach three Latin words and the English words that come from them.",
+   "talk": "Ask her for the Latin for dog, and what “canine” means."
+  },
+  {
+   "id": "latin.verbs-1",
+   "title": "Verbs: what people are doing",
+   "kind": "facts",
+   "prereqs": [
+    "latin.words-1"
+   ],
+   "batch": 6,
+   "intro": "Latin verbs end in -t when they mean “he”, “she” or “it” does something: laborat means “he works” or “she works”. No separate word for “he” is needed.",
+   "teach": "Explain how you can tell a Latin verb means “he” or “she” does something.",
+   "talk": "Ask her what ambulat, dormit and clamat mean, then where “ambulance” comes from."
+  },
+  {
+   "id": "latin.sentences-1",
+   "title": "Reading simple sentences",
+   "kind": "facts",
+   "prereqs": [
+    "latin.verbs-1"
+   ],
+   "batch": 5,
+   "intro": "Latin usually puts the verb LAST: “servus laborat” is “the slave works”. Latin has no words for “the” or “a”, so you add them in English.",
+   "teach": "Translate “puella in horto sedet” and explain the word order.",
+   "talk": "Make up a three-word Latin sentence together."
+  },
+  {
+   "id": "latin.cases",
+   "title": "Who does what: nominative and accusative",
+   "kind": "facts",
+   "prereqs": [
+    "latin.sentences-1"
+   ],
+   "batch": 5,
+   "intro": "In Latin the ENDING tells you who is doing the action and who it is done to. “servus puellam videt”: the slave (servus) sees the girl (puellam). Swap the endings and the girl sees the slave, whatever the word order.",
+   "teach": "Explain the difference between puella and puellam.",
+   "talk": "“canis puerum videt” or “canem puer videt”: who sees whom? (Same answer both times!)"
+  },
+  {
+   "id": "latin.verbs-2",
+   "title": "I, you, he: verb endings",
+   "kind": "facts",
+   "prereqs": [
+    "latin.verbs-1"
+   ],
+   "batch": 6,
+   "intro": "Change the ending, change the person: ambulo (I walk), ambulas (you walk), ambulat (he or she walks). The verb “to be” is irregular, just like in English: sum, es, est.",
+   "teach": "Explain what -o, -s and -t tell you at the end of a Latin verb.",
+   "talk": "Ask her to say “I sleep”, “you sleep” and “she sleeps” in Latin."
+  },
+  {
+   "id": "latin.plurals",
+   "title": "More than one: -ae, -i, -nt",
+   "kind": "facts",
+   "prereqs": [
+    "latin.cases"
+   ],
+   "batch": 5,
+   "intro": "One girl is puella; two girls are puellae. One slave is servus; several are servi. When the subject is plural, the verb ends -nt: servi laborant.",
+   "teach": "Explain how to make puella and servus plural, and what happens to the verb.",
+   "talk": "Ask her the Latin for “the dogs are sleeping” (canes dormiunt is 3rd declension; try “servi dormiunt”)."
+  },
+  {
+   "id": "latin.words-2",
+   "title": "More words: food, home and the city",
+   "kind": "facts",
+   "prereqs": [
+    "latin.words-1"
+   ],
+   "batch": 6,
+   "intro": "Fourteen more words, this time for food, the home and the city. Watch for the English words hiding inside them.",
+   "teach": "Teach three words from this set with their English relatives.",
+   "talk": "At dinner: ask her the Latin for food, water and table."
+  },
+  {
+   "id": "latin.numbers",
+   "title": "Numbers and greetings",
+   "kind": "facts",
+   "prereqs": [
+    "latin.words-1"
+   ],
+   "batch": 5,
+   "intro": "Counting to ten in Latin explains the names of four months and dozens of English words. Plus five phrases to greet a Roman politely.",
+   "teach": "Count to ten in Latin and explain why September is not the seventh month.",
+   "talk": "Greet each other in Latin for a day: salve in the morning, vale at bedtime."
+  },
+  {
+   "id": "latin.roots",
+   "title": "Latin inside English",
+   "kind": "facts",
+   "prereqs": [
+    "latin.words-2",
+    "latin.verbs-1"
+   ],
+   "links": [
+    "english"
+   ],
+   "batch": 6,
+   "intro": "About half of English vocabulary comes from Latin, often through French. Knowing the Latin root lets you work out words you have never seen.",
+   "teach": "Pick an English word, find the Latin inside it, and explain how the meaning connects.",
+   "talk": "Spot three Latin-rooted words on a cereal box or in the news."
+  },
+  {
+   "id": "latin.romans",
+   "title": "Roman life",
+   "kind": "facts",
+   "prereqs": [
+    "latin.words-2"
+   ],
+   "links": [
+    "history"
+   ],
+   "batch": 6,
+   "intro": "The words tell you how the Romans lived: a house with an open-roofed hall, dinner lying down, school with a wax tablet, and numbers you still see on clock faces.",
+   "teach": "Describe a Roman house using the Latin names of its rooms.",
+   "talk": "Find Roman numerals on a clock, a film’s end credits or a building."
+  },
+  {
+   "id": "latin.story",
+   "title": "A short story: the family at home",
+   "kind": "reading",
+   "prereqs": [
+    "latin.plurals",
+    "latin.words-2"
+   ],
+   "batch": 8,
+   "intro": "A whole story in Latin, using only words you know. Read it twice, aloud if you can, then answer the questions.",
+   "teach": "Retell the story in English.",
+   "talk": "Ask her to read the story aloud to you, then translate a sentence of your choice."
+  }
+ ],
+ "items": [
+  {
+   "id": "latin.w1.puella",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **puella** mean?",
+   "answer": "girl",
+   "distractors": [
+    "slave",
+    "garden",
+    "mother"
+   ],
+   "explain": "puella = girl. puerile (childish) shares its root with puer, puella’s brother word.",
+   "accept": [
+    "a girl",
+    "the girl"
+   ],
+   "learn": "**puella** = girl\n_puerile (childish) shares its root with puer, puella’s brother word._"
+  },
+  {
+   "id": "latin.w1.en.puella",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **girl**?",
+   "answer": "puella",
+   "distractors": [
+    "dominus",
+    "canis",
+    "pater"
+   ],
+   "explain": "girl = puella. puerile (childish) shares its root with puer, puella’s brother word.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.puer",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **puer** mean?",
+   "answer": "boy",
+   "distractors": [
+    "master",
+    "dog",
+    "father"
+   ],
+   "explain": "puer = boy. puerile means childish.",
+   "accept": [
+    "a boy",
+    "the boy"
+   ],
+   "learn": "**puer** = boy\n_puerile means childish._"
+  },
+  {
+   "id": "latin.w1.en.puer",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **boy**?",
+   "answer": "puer",
+   "distractors": [
+    "villa",
+    "amicus",
+    "filius"
+   ],
+   "explain": "boy = puer. puerile means childish.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.servus",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **servus** mean?",
+   "answer": "slave",
+   "distractors": [
+    "house",
+    "friend",
+    "son"
+   ],
+   "explain": "servus = slave. servant, service, serve.",
+   "accept": [
+    "servant",
+    "a slave",
+    "the slave"
+   ],
+   "learn": "**servus** = slave\n_servant, service, serve._"
+  },
+  {
+   "id": "latin.w1.en.servus",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **slave**?",
+   "answer": "servus",
+   "distractors": [
+    "hortus",
+    "mater",
+    "filia"
+   ],
+   "explain": "slave = servus. servant, service, serve.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.dominus",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **dominus** mean?",
+   "answer": "master",
+   "distractors": [
+    "garden",
+    "mother",
+    "daughter"
+   ],
+   "explain": "dominus = master. dominate, dominant, domino.",
+   "accept": [
+    "lord",
+    "owner",
+    "a master",
+    "the master"
+   ],
+   "learn": "**dominus** = master\n_dominate, dominant, domino._"
+  },
+  {
+   "id": "latin.w1.en.dominus",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **master**?",
+   "answer": "dominus",
+   "distractors": [
+    "canis",
+    "pater",
+    "femina"
+   ],
+   "explain": "master = dominus. dominate, dominant, domino.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.villa",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **villa** mean?",
+   "answer": "house",
+   "distractors": [
+    "dog",
+    "father",
+    "woman"
+   ],
+   "explain": "villa = house. village grew out of villa: a country house and the settlement around it.",
+   "accept": [
+    "country house",
+    "home",
+    "a house",
+    "the house"
+   ],
+   "learn": "**villa** = house\n_village grew out of villa: a country house and the settlement around it._"
+  },
+  {
+   "id": "latin.w1.en.villa",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **house**?",
+   "answer": "villa",
+   "distractors": [
+    "amicus",
+    "filius",
+    "vir"
+   ],
+   "explain": "house = villa. village grew out of villa: a country house and the settlement around it.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.hortus",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **hortus** mean?",
+   "answer": "garden",
+   "distractors": [
+    "friend",
+    "son",
+    "man"
+   ],
+   "explain": "hortus = garden. horticulture is the art of gardening.",
+   "accept": [
+    "a garden",
+    "the garden"
+   ],
+   "learn": "**hortus** = garden\n_horticulture is the art of gardening._"
+  },
+  {
+   "id": "latin.w1.en.hortus",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **garden**?",
+   "answer": "hortus",
+   "distractors": [
+    "mater",
+    "filia",
+    "puella"
+   ],
+   "explain": "garden = hortus. horticulture is the art of gardening.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.canis",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **canis** mean?",
+   "answer": "dog",
+   "distractors": [
+    "mother",
+    "daughter",
+    "girl"
+   ],
+   "explain": "canis = dog. canine teeth are the pointed “dog teeth”.",
+   "accept": [
+    "a dog",
+    "the dog"
+   ],
+   "learn": "**canis** = dog\n_canine teeth are the pointed “dog teeth”._"
+  },
+  {
+   "id": "latin.w1.en.canis",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **dog**?",
+   "answer": "canis",
+   "distractors": [
+    "pater",
+    "femina",
+    "puer"
+   ],
+   "explain": "dog = canis. canine teeth are the pointed “dog teeth”.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.amicus",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **amicus** mean?",
+   "answer": "friend",
+   "distractors": [
+    "father",
+    "woman",
+    "boy"
+   ],
+   "explain": "amicus = friend. amicable means friendly.",
+   "accept": [
+    "a friend",
+    "the friend"
+   ],
+   "learn": "**amicus** = friend\n_amicable means friendly._"
+  },
+  {
+   "id": "latin.w1.en.amicus",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **friend**?",
+   "answer": "amicus",
+   "distractors": [
+    "filius",
+    "vir",
+    "servus"
+   ],
+   "explain": "friend = amicus. amicable means friendly.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.mater",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **mater** mean?",
+   "answer": "mother",
+   "distractors": [
+    "son",
+    "man",
+    "slave"
+   ],
+   "explain": "mater = mother. maternal, maternity.",
+   "accept": [
+    "mum",
+    "mom",
+    "a mother",
+    "the mother"
+   ],
+   "learn": "**mater** = mother\n_maternal, maternity._"
+  },
+  {
+   "id": "latin.w1.en.mater",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **mother**?",
+   "answer": "mater",
+   "distractors": [
+    "filia",
+    "puella",
+    "dominus"
+   ],
+   "explain": "mother = mater. maternal, maternity.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.pater",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **pater** mean?",
+   "answer": "father",
+   "distractors": [
+    "daughter",
+    "girl",
+    "master"
+   ],
+   "explain": "pater = father. paternal, paternity, patriot (father-land).",
+   "accept": [
+    "dad",
+    "a father",
+    "the father"
+   ],
+   "learn": "**pater** = father\n_paternal, paternity, patriot (father-land)._"
+  },
+  {
+   "id": "latin.w1.en.pater",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **father**?",
+   "answer": "pater",
+   "distractors": [
+    "femina",
+    "puer",
+    "villa"
+   ],
+   "explain": "father = pater. paternal, paternity, patriot (father-land).",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.filius",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **filius** mean?",
+   "answer": "son",
+   "distractors": [
+    "woman",
+    "boy",
+    "house"
+   ],
+   "explain": "filius = son. filial means to do with a son or daughter.",
+   "accept": [
+    "a son",
+    "the son"
+   ],
+   "learn": "**filius** = son\n_filial means to do with a son or daughter._"
+  },
+  {
+   "id": "latin.w1.en.filius",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **son**?",
+   "answer": "filius",
+   "distractors": [
+    "vir",
+    "servus",
+    "hortus"
+   ],
+   "explain": "son = filius. filial means to do with a son or daughter.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.filia",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **filia** mean?",
+   "answer": "daughter",
+   "distractors": [
+    "man",
+    "slave",
+    "garden"
+   ],
+   "explain": "filia = daughter. affiliate: to join as a “daughter” organisation.",
+   "accept": [
+    "a daughter",
+    "the daughter"
+   ],
+   "learn": "**filia** = daughter\n_affiliate: to join as a “daughter” organisation._"
+  },
+  {
+   "id": "latin.w1.en.filia",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **daughter**?",
+   "answer": "filia",
+   "distractors": [
+    "puella",
+    "dominus",
+    "canis"
+   ],
+   "explain": "daughter = filia. affiliate: to join as a “daughter” organisation.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.femina",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **femina** mean?",
+   "answer": "woman",
+   "distractors": [
+    "girl",
+    "master",
+    "dog"
+   ],
+   "explain": "femina = woman. feminine.",
+   "accept": [
+    "lady",
+    "a woman",
+    "the woman"
+   ],
+   "learn": "**femina** = woman\n_feminine._"
+  },
+  {
+   "id": "latin.w1.en.femina",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **woman**?",
+   "answer": "femina",
+   "distractors": [
+    "puer",
+    "villa",
+    "amicus"
+   ],
+   "explain": "woman = femina. feminine.",
+   "strict": true
+  },
+  {
+   "id": "latin.w1.vir",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What does **vir** mean?",
+   "answer": "man",
+   "distractors": [
+    "boy",
+    "house",
+    "friend"
+   ],
+   "explain": "vir = man. virtue originally meant manliness, then goodness.",
+   "accept": [
+    "a man",
+    "the man"
+   ],
+   "learn": "**vir** = man\n_virtue originally meant manliness, then goodness._"
+  },
+  {
+   "id": "latin.w1.en.vir",
+   "topic": "latin.words-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **man**?",
+   "answer": "vir",
+   "distractors": [
+    "servus",
+    "hortus",
+    "mater"
+   ],
+   "explain": "man = vir. virtue originally meant manliness, then goodness.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.cibus",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **cibus** mean?",
+   "answer": "food",
+   "distractors": [
+    "road",
+    "table",
+    "slave-girl"
+   ],
+   "explain": "cibus = food. no common English word, but ciborium is a food vessel in churches.",
+   "accept": [
+    "a food",
+    "the food"
+   ],
+   "learn": "**cibus** = food\n_no common English word, but ciborium is a food vessel in churches._"
+  },
+  {
+   "id": "latin.w2.en.cibus",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **food**?",
+   "answer": "cibus",
+   "distractors": [
+    "cena",
+    "liber",
+    "coquus"
+   ],
+   "explain": "food = cibus. no common English word, but ciborium is a food vessel in churches.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.aqua",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **aqua** mean?",
+   "answer": "water",
+   "distractors": [
+    "dinner",
+    "book",
+    "cook"
+   ],
+   "explain": "aqua = water. aquarium, aqueduct, aquatic.",
+   "accept": [
+    "a water",
+    "the water"
+   ],
+   "learn": "**aqua** = water\n_aquarium, aqueduct, aquatic._"
+  },
+  {
+   "id": "latin.w2.en.aqua",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **water**?",
+   "answer": "aqua",
+   "distractors": [
+    "culina",
+    "equus",
+    "mercator"
+   ],
+   "explain": "water = aqua. aquarium, aqueduct, aquatic.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.via",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **via** mean?",
+   "answer": "road",
+   "distractors": [
+    "kitchen",
+    "horse",
+    "merchant"
+   ],
+   "explain": "via = road. via (by way of), viaduct.",
+   "accept": [
+    "street",
+    "way",
+    "a road",
+    "the road"
+   ],
+   "learn": "**via** = road\n_via (by way of), viaduct._"
+  },
+  {
+   "id": "latin.w2.en.via",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **road**?",
+   "answer": "via",
+   "distractors": [
+    "mensa",
+    "ancilla",
+    "urbs"
+   ],
+   "explain": "road = via. via (by way of), viaduct.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.cena",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **cena** mean?",
+   "answer": "dinner",
+   "distractors": [
+    "table",
+    "slave-girl",
+    "city"
+   ],
+   "explain": "cena = dinner. the Romans’ main meal, eaten in the late afternoon.",
+   "accept": [
+    "meal",
+    "supper",
+    "a dinner",
+    "the dinner"
+   ],
+   "learn": "**cena** = dinner\n_the Romans’ main meal, eaten in the late afternoon._"
+  },
+  {
+   "id": "latin.w2.en.cena",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **dinner**?",
+   "answer": "cena",
+   "distractors": [
+    "liber",
+    "coquus",
+    "templum"
+   ],
+   "explain": "dinner = cena. the Romans’ main meal, eaten in the late afternoon.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.culina",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **culina** mean?",
+   "answer": "kitchen",
+   "distractors": [
+    "book",
+    "cook",
+    "temple"
+   ],
+   "explain": "culina = kitchen. culinary means to do with cooking.",
+   "accept": [
+    "a kitchen",
+    "the kitchen"
+   ],
+   "learn": "**culina** = kitchen\n_culinary means to do with cooking._"
+  },
+  {
+   "id": "latin.w2.en.culina",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **kitchen**?",
+   "answer": "culina",
+   "distractors": [
+    "equus",
+    "mercator",
+    "forum"
+   ],
+   "explain": "kitchen = culina. culinary means to do with cooking.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.mensa",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **mensa** mean?",
+   "answer": "table",
+   "distractors": [
+    "horse",
+    "merchant",
+    "market-place"
+   ],
+   "explain": "mensa = table. Mensa, the high-IQ society, means “table” (a round table of equals).",
+   "accept": [
+    "a table",
+    "the table"
+   ],
+   "learn": "**mensa** = table\n_Mensa, the high-IQ society, means “table” (a round table of equals)._"
+  },
+  {
+   "id": "latin.w2.en.mensa",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **table**?",
+   "answer": "mensa",
+   "distractors": [
+    "ancilla",
+    "urbs",
+    "cibus"
+   ],
+   "explain": "table = mensa. Mensa, the high-IQ society, means “table” (a round table of equals).",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.liber",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **liber** mean?",
+   "answer": "book",
+   "distractors": [
+    "slave-girl",
+    "city",
+    "food"
+   ],
+   "explain": "liber = book. library, libretto.",
+   "accept": [
+    "a book",
+    "the book"
+   ],
+   "learn": "**liber** = book\n_library, libretto._"
+  },
+  {
+   "id": "latin.w2.en.liber",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **book**?",
+   "answer": "liber",
+   "distractors": [
+    "coquus",
+    "templum",
+    "aqua"
+   ],
+   "explain": "book = liber. library, libretto.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.equus",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **equus** mean?",
+   "answer": "horse",
+   "distractors": [
+    "cook",
+    "temple",
+    "water"
+   ],
+   "explain": "equus = horse. equestrian, equine.",
+   "accept": [
+    "a horse",
+    "the horse"
+   ],
+   "learn": "**equus** = horse\n_equestrian, equine._"
+  },
+  {
+   "id": "latin.w2.en.equus",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **horse**?",
+   "answer": "equus",
+   "distractors": [
+    "mercator",
+    "forum",
+    "via"
+   ],
+   "explain": "horse = equus. equestrian, equine.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.ancilla",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **ancilla** mean?",
+   "answer": "slave-girl",
+   "distractors": [
+    "merchant",
+    "market-place",
+    "road"
+   ],
+   "explain": "ancilla = slave-girl. ancillary means helping or supporting.",
+   "accept": [
+    "slave girl",
+    "maid",
+    "female slave",
+    "a slave-girl",
+    "the slave-girl"
+   ],
+   "learn": "**ancilla** = slave-girl\n_ancillary means helping or supporting._"
+  },
+  {
+   "id": "latin.w2.en.ancilla",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **slave-girl**?",
+   "answer": "ancilla",
+   "distractors": [
+    "urbs",
+    "cibus",
+    "cena"
+   ],
+   "explain": "slave-girl = ancilla. ancillary means helping or supporting.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.coquus",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **coquus** mean?",
+   "answer": "cook",
+   "distractors": [
+    "city",
+    "food",
+    "dinner"
+   ],
+   "explain": "coquus = cook. cook, cuisine, biscuit (twice-cooked).",
+   "accept": [
+    "a cook",
+    "the cook"
+   ],
+   "learn": "**coquus** = cook\n_cook, cuisine, biscuit (twice-cooked)._"
+  },
+  {
+   "id": "latin.w2.en.coquus",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **cook**?",
+   "answer": "coquus",
+   "distractors": [
+    "templum",
+    "aqua",
+    "culina"
+   ],
+   "explain": "cook = coquus. cook, cuisine, biscuit (twice-cooked).",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.mercator",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **mercator** mean?",
+   "answer": "merchant",
+   "distractors": [
+    "temple",
+    "water",
+    "kitchen"
+   ],
+   "explain": "mercator = merchant. merchant, mercantile, market.",
+   "accept": [
+    "trader",
+    "a merchant",
+    "the merchant"
+   ],
+   "learn": "**mercator** = merchant\n_merchant, mercantile, market._"
+  },
+  {
+   "id": "latin.w2.en.mercator",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **merchant**?",
+   "answer": "mercator",
+   "distractors": [
+    "forum",
+    "via",
+    "mensa"
+   ],
+   "explain": "merchant = mercator. merchant, mercantile, market.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.urbs",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **urbs** mean?",
+   "answer": "city",
+   "distractors": [
+    "market-place",
+    "road",
+    "table"
+   ],
+   "explain": "urbs = city. urban, suburb.",
+   "accept": [
+    "town",
+    "a city",
+    "the city"
+   ],
+   "learn": "**urbs** = city\n_urban, suburb._"
+  },
+  {
+   "id": "latin.w2.en.urbs",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **city**?",
+   "answer": "urbs",
+   "distractors": [
+    "cibus",
+    "cena",
+    "liber"
+   ],
+   "explain": "city = urbs. urban, suburb.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.templum",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **templum** mean?",
+   "answer": "temple",
+   "distractors": [
+    "food",
+    "dinner",
+    "book"
+   ],
+   "explain": "templum = temple. temple.",
+   "accept": [
+    "a temple",
+    "the temple"
+   ],
+   "learn": "**templum** = temple\n_temple._"
+  },
+  {
+   "id": "latin.w2.en.templum",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **temple**?",
+   "answer": "templum",
+   "distractors": [
+    "aqua",
+    "culina",
+    "equus"
+   ],
+   "explain": "temple = templum. temple.",
+   "strict": true
+  },
+  {
+   "id": "latin.w2.forum",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What does **forum** mean?",
+   "answer": "market-place",
+   "distractors": [
+    "water",
+    "kitchen",
+    "horse"
+   ],
+   "explain": "forum = market-place. a forum is still a place for public discussion.",
+   "accept": [
+    "market place",
+    "marketplace",
+    "town square",
+    "public square",
+    "forum",
+    "a market-place",
+    "the market-place"
+   ],
+   "learn": "**forum** = market-place\n_a forum is still a place for public discussion._"
+  },
+  {
+   "id": "latin.w2.en.forum",
+   "topic": "latin.words-2",
+   "kind": "fact",
+   "prompt": "What is the Latin for **market-place**?",
+   "answer": "forum",
+   "distractors": [
+    "via",
+    "mensa",
+    "ancilla"
+   ],
+   "explain": "market-place = forum. a forum is still a place for public discussion.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.laborat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **laborat** mean?",
+   "answer": "he or she works",
+   "distractors": [
+    "he or she sits",
+    "he or she sees",
+    "he or she runs"
+   ],
+   "explain": "laborat = he/she works. English relatives: laboratory, labour.",
+   "accept": [
+    "works",
+    "he works",
+    "she works",
+    "it works",
+    "is working",
+    "he is working",
+    "she is working",
+    "he/she works"
+   ],
+   "learn": "**laborat** = he or she works\n_laboratory, labour._"
+  },
+  {
+   "id": "latin.v1.en.laborat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he works**?",
+   "answer": "laborat",
+   "distractors": [
+    "dormit",
+    "audit",
+    "salutat"
+   ],
+   "explain": "he works = laborat.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.ambulat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **ambulat** mean?",
+   "answer": "he or she walks",
+   "distractors": [
+    "he or she sleeps",
+    "he or she hears",
+    "he or she greets"
+   ],
+   "explain": "ambulat = he/she walks. English relatives: ambulance (originally a walking hospital), amble.",
+   "accept": [
+    "walks",
+    "he walks",
+    "she walks",
+    "it walks",
+    "is walking",
+    "he is walking",
+    "she is walking",
+    "he/she walks"
+   ],
+   "learn": "**ambulat** = he or she walks\n_ambulance (originally a walking hospital), amble._"
+  },
+  {
+   "id": "latin.v1.en.ambulat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he walks**?",
+   "answer": "ambulat",
+   "distractors": [
+    "clamat",
+    "amat",
+    "bibit"
+   ],
+   "explain": "he walks = ambulat.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.sedet",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **sedet** mean?",
+   "answer": "he or she sits",
+   "distractors": [
+    "he or she shouts",
+    "he or she loves",
+    "he or she drinks"
+   ],
+   "explain": "sedet = he/she sits. English relatives: sedentary, sediment.",
+   "accept": [
+    "sits",
+    "he sits",
+    "she sits",
+    "it sits",
+    "is siting",
+    "he is siting",
+    "she is siting",
+    "he/she sits"
+   ],
+   "learn": "**sedet** = he or she sits\n_sedentary, sediment._"
+  },
+  {
+   "id": "latin.v1.en.sedet",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he sits**?",
+   "answer": "sedet",
+   "distractors": [
+    "portat",
+    "intrat",
+    "parat"
+   ],
+   "explain": "he sits = sedet.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.dormit",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **dormit** mean?",
+   "answer": "he or she sleeps",
+   "distractors": [
+    "he or she carries",
+    "he or she enters",
+    "he or she prepares"
+   ],
+   "explain": "dormit = he/she sleeps. English relatives: dormitory, dormant.",
+   "accept": [
+    "sleeps",
+    "he sleeps",
+    "she sleeps",
+    "it sleeps",
+    "is sleeping",
+    "he is sleeping",
+    "she is sleeping",
+    "he/she sleeps"
+   ],
+   "learn": "**dormit** = he or she sleeps\n_dormitory, dormant._"
+  },
+  {
+   "id": "latin.v1.en.dormit",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he sleeps**?",
+   "answer": "dormit",
+   "distractors": [
+    "videt",
+    "currit",
+    "laborat"
+   ],
+   "explain": "he sleeps = dormit.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.clamat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **clamat** mean?",
+   "answer": "he or she shouts",
+   "distractors": [
+    "he or she sees",
+    "he or she runs",
+    "he or she works"
+   ],
+   "explain": "clamat = he/she shouts. English relatives: exclaim, clamour.",
+   "accept": [
+    "shouts",
+    "he shouts",
+    "she shouts",
+    "it shouts",
+    "is shouting",
+    "he is shouting",
+    "she is shouting",
+    "he/she shouts"
+   ],
+   "learn": "**clamat** = he or she shouts\n_exclaim, clamour._"
+  },
+  {
+   "id": "latin.v1.en.clamat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he shouts**?",
+   "answer": "clamat",
+   "distractors": [
+    "audit",
+    "salutat",
+    "ambulat"
+   ],
+   "explain": "he shouts = clamat.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.portat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **portat** mean?",
+   "answer": "he or she carries",
+   "distractors": [
+    "he or she hears",
+    "he or she greets",
+    "he or she walks"
+   ],
+   "explain": "portat = he/she carries. English relatives: portable, transport, porter.",
+   "accept": [
+    "carries",
+    "he carries",
+    "she carries",
+    "it carries",
+    "is carrying",
+    "he is carriing",
+    "she is carriing",
+    "he/she carries"
+   ],
+   "learn": "**portat** = he or she carries\n_portable, transport, porter._"
+  },
+  {
+   "id": "latin.v1.en.portat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he carries**?",
+   "answer": "portat",
+   "distractors": [
+    "amat",
+    "bibit",
+    "sedet"
+   ],
+   "explain": "he carries = portat.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.videt",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **videt** mean?",
+   "answer": "he or she sees",
+   "distractors": [
+    "he or she loves",
+    "he or she drinks",
+    "he or she sits"
+   ],
+   "explain": "videt = he/she sees. English relatives: video, evident, visible.",
+   "accept": [
+    "sees",
+    "he sees",
+    "she sees",
+    "it sees",
+    "is seing",
+    "he is seing",
+    "she is seing",
+    "he/she sees"
+   ],
+   "learn": "**videt** = he or she sees\n_video, evident, visible._"
+  },
+  {
+   "id": "latin.v1.en.videt",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he sees**?",
+   "answer": "videt",
+   "distractors": [
+    "intrat",
+    "parat",
+    "dormit"
+   ],
+   "explain": "he sees = videt.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.audit",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **audit** mean?",
+   "answer": "he or she hears",
+   "distractors": [
+    "he or she enters",
+    "he or she prepares",
+    "he or she sleeps"
+   ],
+   "explain": "audit = he/she hears. English relatives: audio, audience, audit.",
+   "accept": [
+    "hears",
+    "he hears",
+    "she hears",
+    "it hears",
+    "is hearing",
+    "he is hearing",
+    "she is hearing",
+    "he/she hears"
+   ],
+   "learn": "**audit** = he or she hears\n_audio, audience, audit._"
+  },
+  {
+   "id": "latin.v1.en.audit",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he hears**?",
+   "answer": "audit",
+   "distractors": [
+    "currit",
+    "laborat",
+    "clamat"
+   ],
+   "explain": "he hears = audit.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.amat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **amat** mean?",
+   "answer": "he or she loves",
+   "distractors": [
+    "he or she runs",
+    "he or she works",
+    "he or she shouts"
+   ],
+   "explain": "amat = he/she loves. English relatives: amateur (someone who does it for love), amiable.",
+   "accept": [
+    "loves",
+    "he loves",
+    "she loves",
+    "it loves",
+    "is loving",
+    "he is loving",
+    "she is loving",
+    "he/she loves"
+   ],
+   "learn": "**amat** = he or she loves\n_amateur (someone who does it for love), amiable._"
+  },
+  {
+   "id": "latin.v1.en.amat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he loves**?",
+   "answer": "amat",
+   "distractors": [
+    "salutat",
+    "ambulat",
+    "portat"
+   ],
+   "explain": "he loves = amat.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.intrat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **intrat** mean?",
+   "answer": "he or she enters",
+   "distractors": [
+    "he or she greets",
+    "he or she walks",
+    "he or she carries"
+   ],
+   "explain": "intrat = he/she enters. English relatives: entrance, enter.",
+   "accept": [
+    "enters",
+    "he enters",
+    "she enters",
+    "it enters",
+    "is entering",
+    "he is entering",
+    "she is entering",
+    "he/she enters"
+   ],
+   "learn": "**intrat** = he or she enters\n_entrance, enter._"
+  },
+  {
+   "id": "latin.v1.en.intrat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he enters**?",
+   "answer": "intrat",
+   "distractors": [
+    "bibit",
+    "sedet",
+    "videt"
+   ],
+   "explain": "he enters = intrat.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.currit",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **currit** mean?",
+   "answer": "he or she runs",
+   "distractors": [
+    "he or she drinks",
+    "he or she sits",
+    "he or she sees"
+   ],
+   "explain": "currit = he/she runs. English relatives: current, courier, curriculum (a running course).",
+   "accept": [
+    "runs",
+    "he runs",
+    "she runs",
+    "it runs",
+    "is runing",
+    "he is runing",
+    "she is runing",
+    "he/she runs"
+   ],
+   "learn": "**currit** = he or she runs\n_current, courier, curriculum (a running course)._"
+  },
+  {
+   "id": "latin.v1.en.currit",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he runs**?",
+   "answer": "currit",
+   "distractors": [
+    "parat",
+    "dormit",
+    "audit"
+   ],
+   "explain": "he runs = currit.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.salutat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **salutat** mean?",
+   "answer": "he or she greets",
+   "distractors": [
+    "he or she prepares",
+    "he or she sleeps",
+    "he or she hears"
+   ],
+   "explain": "salutat = he/she greets. English relatives: salute, salutation.",
+   "accept": [
+    "greets",
+    "he greets",
+    "she greets",
+    "it greets",
+    "is greeting",
+    "he is greeting",
+    "she is greeting",
+    "he/she greets"
+   ],
+   "learn": "**salutat** = he or she greets\n_salute, salutation._"
+  },
+  {
+   "id": "latin.v1.en.salutat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he greets**?",
+   "answer": "salutat",
+   "distractors": [
+    "laborat",
+    "clamat",
+    "amat"
+   ],
+   "explain": "he greets = salutat.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.bibit",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **bibit** mean?",
+   "answer": "he or she drinks",
+   "distractors": [
+    "he or she works",
+    "he or she shouts",
+    "he or she loves"
+   ],
+   "explain": "bibit = he/she drinks. English relatives: imbibe, beverage.",
+   "accept": [
+    "drinks",
+    "he drinks",
+    "she drinks",
+    "it drinks",
+    "is drinking",
+    "he is drinking",
+    "she is drinking",
+    "he/she drinks"
+   ],
+   "learn": "**bibit** = he or she drinks\n_imbibe, beverage._"
+  },
+  {
+   "id": "latin.v1.en.bibit",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he drinks**?",
+   "answer": "bibit",
+   "distractors": [
+    "ambulat",
+    "portat",
+    "intrat"
+   ],
+   "explain": "he drinks = bibit.",
+   "strict": true
+  },
+  {
+   "id": "latin.v1.parat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What does **parat** mean?",
+   "answer": "he or she prepares",
+   "distractors": [
+    "he or she walks",
+    "he or she carries",
+    "he or she enters"
+   ],
+   "explain": "parat = he/she prepares. English relatives: prepare, apparatus.",
+   "accept": [
+    "prepares",
+    "he prepares",
+    "she prepares",
+    "it prepares",
+    "is preparing",
+    "he is preparing",
+    "she is preparing",
+    "he/she prepares"
+   ],
+   "learn": "**parat** = he or she prepares\n_prepare, apparatus._"
+  },
+  {
+   "id": "latin.v1.en.parat",
+   "topic": "latin.verbs-1",
+   "kind": "fact",
+   "prompt": "What is the Latin for **he prepares**?",
+   "answer": "parat",
+   "distractors": [
+    "sedet",
+    "videt",
+    "currit"
+   ],
+   "explain": "he prepares = parat.",
+   "strict": true
+  },
+  {
+   "id": "latin.s1.1",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "Translate: **servus laborat.**",
+   "answer": "The slave works.",
+   "distractors": [
+    "The slave sleeps.",
+    "The master works."
+   ],
+   "explain": "servus laborat. → “The slave works.”. Remember: the verb usually comes last, and English adds “the”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.2",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "Translate: **puella in horto sedet.**",
+   "answer": "The girl sits in the garden.",
+   "distractors": [
+    "The girl sits in the house.",
+    "The boy sits in the garden."
+   ],
+   "explain": "puella in horto sedet. → “The girl sits in the garden.”. Remember: the verb usually comes last, and English adds “the”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.3",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "Translate: **canis dormit.**",
+   "answer": "The dog sleeps.",
+   "distractors": [
+    "The dog runs.",
+    "The cook sleeps."
+   ],
+   "explain": "canis dormit. → “The dog sleeps.”. Remember: the verb usually comes last, and English adds “the”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.4",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "Translate: **dominus in villa est.**",
+   "answer": "The master is in the house.",
+   "distractors": [
+    "The master is in the garden.",
+    "The slave is in the house."
+   ],
+   "explain": "dominus in villa est. → “The master is in the house.”. Remember: the verb usually comes last, and English adds “the”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.5",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "Translate: **mater clamat.**",
+   "answer": "The mother shouts.",
+   "distractors": [
+    "The mother walks.",
+    "The daughter shouts."
+   ],
+   "explain": "mater clamat. → “The mother shouts.”. Remember: the verb usually comes last, and English adds “the”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.6",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "Translate: **amicus intrat.**",
+   "answer": "The friend enters.",
+   "distractors": [
+    "The friend leaves.",
+    "The father enters."
+   ],
+   "explain": "amicus intrat. → “The friend enters.”. Remember: the verb usually comes last, and English adds “the”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.7",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "Translate: **pater in via ambulat.**",
+   "answer": "The father walks in the street.",
+   "distractors": [
+    "The father runs in the street.",
+    "The father walks in the garden."
+   ],
+   "explain": "pater in via ambulat. → “The father walks in the street.”. Remember: the verb usually comes last, and English adds “the”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.8",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "Translate: **puer aquam portat.**",
+   "answer": "The boy carries water.",
+   "distractors": [
+    "The boy drinks water.",
+    "The girl carries water."
+   ],
+   "explain": "puer aquam portat. → “The boy carries water.”. Remember: the verb usually comes last, and English adds “the”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.9",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "Translate: **filia cibum parat.**",
+   "answer": "The daughter prepares food.",
+   "distractors": [
+    "The daughter eats food.",
+    "The son prepares food."
+   ],
+   "explain": "filia cibum parat. → “The daughter prepares food.”. Remember: the verb usually comes last, and English adds “the”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.10",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "Translate: **femina canem audit.**",
+   "answer": "The woman hears the dog.",
+   "distractors": [
+    "The woman sees the dog.",
+    "The dog hears the woman."
+   ],
+   "explain": "femina canem audit. → “The woman hears the dog.”. Remember: the verb usually comes last, and English adds “the”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.order",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "Where does the verb usually go in a Latin sentence?",
+   "answer": "at the end",
+   "distractors": [
+    "at the start",
+    "in the middle",
+    "anywhere; it doesn’t matter"
+   ],
+   "explain": "“puella in horto sedet”: the verb sedet comes last. Latin can move words around for emphasis, but the end is normal.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.the",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "How do you say “the” or “a” in Latin?",
+   "answer": "you don’t: Latin has no words for “the” or “a”",
+   "distractors": [
+    "ille",
+    "unus",
+    "et"
+   ],
+   "explain": "servus can mean “slave”, “a slave” or “the slave”. You choose when you translate.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.s1.est",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "What does **est** mean?",
+   "answer": "is",
+   "distractors": [
+    "and",
+    "he",
+    "the"
+   ],
+   "explain": "est = is. “Marcus est pater” = Marcus is the father.",
+   "accept": [
+    "he is",
+    "she is",
+    "it is"
+   ]
+  },
+  {
+   "id": "latin.s1.in",
+   "topic": "latin.sentences-1",
+   "kind": "fact",
+   "prompt": "What does **in** mean in “in horto”?",
+   "answer": "in",
+   "distractors": [
+    "into",
+    "on top of",
+    "near"
+   ],
+   "explain": "in + horto = in the garden. (With a different ending, in can also mean “into”, but not yet!)",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.c.1",
+   "topic": "latin.cases",
+   "kind": "mcq",
+   "prompt": "**servus puellam videt.** Who is doing the action, and to whom?",
+   "options": [
+    {
+     "text": "the slave → the girl",
+     "correct": true
+    },
+    {
+     "text": "the girl → the slave",
+     "correct": false,
+     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+    }
+   ],
+   "explain": "servus puellam videt.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So the slave does it to the girl."
+  },
+  {
+   "id": "latin.c.2",
+   "topic": "latin.cases",
+   "kind": "mcq",
+   "prompt": "**puella servum videt.** Who is doing the action, and to whom?",
+   "options": [
+    {
+     "text": "the girl → the slave",
+     "correct": true
+    },
+    {
+     "text": "the slave → the girl",
+     "correct": false,
+     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+    }
+   ],
+   "explain": "puella servum videt.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So the girl does it to the slave."
+  },
+  {
+   "id": "latin.c.3",
+   "topic": "latin.cases",
+   "kind": "mcq",
+   "prompt": "**dominus canem audit.** Who is doing the action, and to whom?",
+   "options": [
+    {
+     "text": "the master → the dog",
+     "correct": true
+    },
+    {
+     "text": "the dog → the master",
+     "correct": false,
+     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+    }
+   ],
+   "explain": "dominus canem audit.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So the master does it to the dog."
+  },
+  {
+   "id": "latin.c.4",
+   "topic": "latin.cases",
+   "kind": "mcq",
+   "prompt": "**canis dominum audit.** Who is doing the action, and to whom?",
+   "options": [
+    {
+     "text": "the dog → the master",
+     "correct": true
+    },
+    {
+     "text": "the master → the dog",
+     "correct": false,
+     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+    }
+   ],
+   "explain": "canis dominum audit.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So the dog does it to the master."
+  },
+  {
+   "id": "latin.c.5",
+   "topic": "latin.cases",
+   "kind": "mcq",
+   "prompt": "**Marcus Iuliam salutat.** Who is doing the action, and to whom?",
+   "options": [
+    {
+     "text": "Marcus → Iulia",
+     "correct": true
+    },
+    {
+     "text": "Iulia → Marcus",
+     "correct": false,
+     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+    }
+   ],
+   "explain": "Marcus Iuliam salutat.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So Marcus does it to Iulia."
+  },
+  {
+   "id": "latin.c.6",
+   "topic": "latin.cases",
+   "kind": "mcq",
+   "prompt": "**puer puellam amat.** Who is doing the action, and to whom?",
+   "options": [
+    {
+     "text": "the boy → the girl",
+     "correct": true
+    },
+    {
+     "text": "the girl → the boy",
+     "correct": false,
+     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+    }
+   ],
+   "explain": "puer puellam amat.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So the boy does it to the girl."
+  },
+  {
+   "id": "latin.c.nom",
+   "topic": "latin.cases",
+   "kind": "fact",
+   "prompt": "The form of a noun used for the person DOING the action (puella, servus) is called the…",
+   "answer": "nominative",
+   "distractors": [
+    "accusative",
+    "genitive",
+    "plural"
+   ],
+   "explain": "Nominative = the subject. puella sedet: the girl is doing the sitting."
+  },
+  {
+   "id": "latin.c.acc",
+   "topic": "latin.cases",
+   "kind": "fact",
+   "prompt": "The form of a noun used for the person the action is done TO (puellam, servum) is called the…",
+   "answer": "accusative",
+   "distractors": [
+    "nominative",
+    "ablative",
+    "vocative"
+   ],
+   "explain": "Accusative = the object. servus puellam videt: the girl is seen."
+  },
+  {
+   "id": "latin.c.am",
+   "topic": "latin.cases",
+   "kind": "fact",
+   "prompt": "What is the accusative (object) form of **puella**?",
+   "answer": "puellam",
+   "distractors": [
+    "puellae",
+    "puellus",
+    "puello"
+   ],
+   "explain": "Words like puella change -a to -am: puella → puellam.",
+   "strict": true
+  },
+  {
+   "id": "latin.c.um",
+   "topic": "latin.cases",
+   "kind": "fact",
+   "prompt": "What is the accusative (object) form of **servus**?",
+   "answer": "servum",
+   "distractors": [
+    "servi",
+    "serva",
+    "servo"
+   ],
+   "explain": "Words like servus change -us to -um: servus → servum.",
+   "strict": true
+  },
+  {
+   "id": "latin.c.order",
+   "topic": "latin.cases",
+   "kind": "mcq",
+   "prompt": "**canem puer videt.** Who sees whom?",
+   "options": [
+    {
+     "text": "The boy sees the dog",
+     "correct": true
+    },
+    {
+     "text": "The dog sees the boy",
+     "correct": false,
+     "feedback": "canem ends in -em (accusative): the dog is the object even though it comes first. Latin word order is flexible; endings are not."
+    }
+   ],
+   "explain": "puer is nominative (subject), canem is accusative (object). Putting canem first just emphasises the dog."
+  },
+  {
+   "id": "latin.v2.ambulo",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **ambulo** mean?",
+   "answer": "I walk",
+   "distractors": [
+    "he or she walks",
+    "you sleep",
+    "I shout"
+   ],
+   "explain": "ambulo = I walk. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "I am walking"
+   ]
+  },
+  {
+   "id": "latin.v2.ambulas",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **ambulas** mean?",
+   "answer": "you walk",
+   "distractors": [
+    "I work",
+    "I see",
+    "I am"
+   ],
+   "explain": "ambulas = you walk. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "you am walking"
+   ]
+  },
+  {
+   "id": "latin.v2.ambulat",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **ambulat** mean?",
+   "answer": "he or she walks",
+   "distractors": [
+    "you sit",
+    "you hear",
+    "you are"
+   ],
+   "explain": "ambulat = he or she walks. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "he walks",
+    "she walks"
+   ]
+  },
+  {
+   "id": "latin.v2.laboro",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **laboro** mean?",
+   "answer": "I work",
+   "distractors": [
+    "you sleep",
+    "I shout",
+    "he, she or it is"
+   ],
+   "explain": "laboro = I work. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "I am work"
+   ]
+  },
+  {
+   "id": "latin.v2.sedes",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **sedes** mean?",
+   "answer": "you sit",
+   "distractors": [
+    "I see",
+    "I am",
+    "I walk"
+   ],
+   "explain": "sedes = you sit. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "you am sit"
+   ]
+  },
+  {
+   "id": "latin.v2.dormis",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **dormis** mean?",
+   "answer": "you sleep",
+   "distractors": [
+    "you hear",
+    "you are",
+    "you walk"
+   ],
+   "explain": "dormis = you sleep. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "you am sleep"
+   ]
+  },
+  {
+   "id": "latin.v2.video",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **video** mean?",
+   "answer": "I see",
+   "distractors": [
+    "I shout",
+    "he, she or it is",
+    "he or she walks"
+   ],
+   "explain": "video = I see. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "I am see"
+   ]
+  },
+  {
+   "id": "latin.v2.audis",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **audis** mean?",
+   "answer": "you hear",
+   "distractors": [
+    "I am",
+    "I walk",
+    "I work"
+   ],
+   "explain": "audis = you hear. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "you am hear"
+   ]
+  },
+  {
+   "id": "latin.v2.clamo",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **clamo** mean?",
+   "answer": "I shout",
+   "distractors": [
+    "you are",
+    "you walk",
+    "you sit"
+   ],
+   "explain": "clamo = I shout. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "I am shout"
+   ]
+  },
+  {
+   "id": "latin.v2.sum",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **sum** mean?",
+   "answer": "I am",
+   "distractors": [
+    "he, she or it is",
+    "he or she walks",
+    "you sleep"
+   ],
+   "explain": "sum = I am. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "I am am"
+   ]
+  },
+  {
+   "id": "latin.v2.es",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **es** mean?",
+   "answer": "you are",
+   "distractors": [
+    "I walk",
+    "I work",
+    "I see"
+   ],
+   "explain": "es = you are. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "you am are"
+   ]
+  },
+  {
+   "id": "latin.v2.est",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "What does **est** mean?",
+   "answer": "he, she or it is",
+   "distractors": [
+    "you walk",
+    "you sit",
+    "you hear"
+   ],
+   "explain": "est = he, she or it is. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "accept": [
+    "he is",
+    "she is",
+    "it is",
+    "is"
+   ]
+  },
+  {
+   "id": "latin.v2.o",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "Which ending means “I” on a Latin verb?",
+   "answer": "-o",
+   "distractors": [
+    "-s",
+    "-t",
+    "-nt"
+   ],
+   "explain": "amo = I love, laboro = I work.",
+   "accept": [
+    "o"
+   ]
+  },
+  {
+   "id": "latin.v2.s",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "Which ending means “you” (one person) on a Latin verb?",
+   "answer": "-s",
+   "distractors": [
+    "-o",
+    "-t",
+    "-mus"
+   ],
+   "explain": "amas = you love, sedes = you sit.",
+   "accept": [
+    "s"
+   ]
+  },
+  {
+   "id": "latin.v2.t",
+   "topic": "latin.verbs-2",
+   "kind": "fact",
+   "prompt": "Which ending means “he, she or it” on a Latin verb?",
+   "answer": "-t",
+   "distractors": [
+    "-s",
+    "-o",
+    "-nt"
+   ],
+   "explain": "amat = he/she loves. Add n before it (-nt) for “they”.",
+   "accept": [
+    "t"
+   ]
+  },
+  {
+   "id": "latin.pl.puellae",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "What does **puellae** mean?",
+   "answer": "girls",
+   "distractors": [
+    "boys",
+    "houses",
+    "masters"
+   ],
+   "explain": "puellae = girls. -a words go to -ae; -us words go to -i.",
+   "accept": [
+    "the girls"
+   ]
+  },
+  {
+   "id": "latin.pl.servi",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "What does **servi** mean?",
+   "answer": "slaves",
+   "distractors": [
+    "friends",
+    "gardens",
+    "girls"
+   ],
+   "explain": "servi = slaves. -a words go to -ae; -us words go to -i.",
+   "accept": [
+    "the slaves"
+   ]
+  },
+  {
+   "id": "latin.pl.pueri",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "What does **pueri** mean?",
+   "answer": "boys",
+   "distractors": [
+    "houses",
+    "masters",
+    "slaves"
+   ],
+   "explain": "pueri = boys. -a words go to -ae; -us words go to -i.",
+   "accept": [
+    "the boys"
+   ]
+  },
+  {
+   "id": "latin.pl.amici",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "What does **amici** mean?",
+   "answer": "friends",
+   "distractors": [
+    "gardens",
+    "girls",
+    "boys"
+   ],
+   "explain": "amici = friends. -a words go to -ae; -us words go to -i.",
+   "accept": [
+    "the friends"
+   ]
+  },
+  {
+   "id": "latin.pl.villae",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "What does **villae** mean?",
+   "answer": "houses",
+   "distractors": [
+    "masters",
+    "slaves",
+    "friends"
+   ],
+   "explain": "villae = houses. -a words go to -ae; -us words go to -i.",
+   "accept": [
+    "the houses"
+   ]
+  },
+  {
+   "id": "latin.pl.horti",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "What does **horti** mean?",
+   "answer": "gardens",
+   "distractors": [
+    "girls",
+    "boys",
+    "houses"
+   ],
+   "explain": "horti = gardens. -a words go to -ae; -us words go to -i.",
+   "accept": [
+    "the gardens"
+   ]
+  },
+  {
+   "id": "latin.pl.domini",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "What does **domini** mean?",
+   "answer": "masters",
+   "distractors": [
+    "slaves",
+    "friends",
+    "gardens"
+   ],
+   "explain": "domini = masters. -a words go to -ae; -us words go to -i.",
+   "accept": [
+    "the masters"
+   ]
+  },
+  {
+   "id": "latin.pl.sunt",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "What does **sunt** mean?",
+   "answer": "they are",
+   "distractors": [
+    "he is",
+    "you are",
+    "we are"
+   ],
+   "explain": "est = is (one); sunt = are (more than one). “servi in horto sunt” = the slaves are in the garden.",
+   "accept": [
+    "are"
+   ]
+  },
+  {
+   "id": "latin.pl.ant",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "Translate: **servi laborant.**",
+   "answer": "The slaves work.",
+   "distractors": [
+    "The slave works.",
+    "The slaves sleep.",
+    "The masters work."
+   ],
+   "explain": "servi (plural) + laborant (-nt = they): the slaves work.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.pl.ending",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "When the subject is plural, what does the verb end in?",
+   "answer": "-nt",
+   "distractors": [
+    "-t",
+    "-s",
+    "-ae"
+   ],
+   "explain": "servus laborat → servi laborant. puella clamat → puellae clamant.",
+   "accept": [
+    "nt"
+   ]
+  },
+  {
+   "id": "latin.pl.make",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of **puella**?",
+   "answer": "puellae",
+   "distractors": [
+    "puellam",
+    "puelli",
+    "puellas"
+   ],
+   "explain": "-a becomes -ae: puella → puellae.",
+   "strict": true
+  },
+  {
+   "id": "latin.pl.make2",
+   "topic": "latin.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of **amicus**?",
+   "answer": "amici",
+   "distractors": [
+    "amicae",
+    "amicum",
+    "amicos"
+   ],
+   "explain": "-us becomes -i: amicus → amici.",
+   "strict": true
+  },
+  {
+   "id": "latin.n.unus",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What number is **unus**?",
+   "answer": "one",
+   "distractors": [
+    "three",
+    "six",
+    "nine"
+   ],
+   "explain": "unus = one. unicorn, unit, unique.",
+   "accept": [
+    "1"
+   ],
+   "learn": "**unus** = one\n_unicorn, unit, unique._"
+  },
+  {
+   "id": "latin.n.duo",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What number is **duo**?",
+   "answer": "two",
+   "distractors": [
+    "four",
+    "seven",
+    "ten"
+   ],
+   "explain": "duo = two. duet, duo, dual.",
+   "accept": [
+    "2"
+   ],
+   "learn": "**duo** = two\n_duet, duo, dual._"
+  },
+  {
+   "id": "latin.n.tres",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What number is **tres**?",
+   "answer": "three",
+   "distractors": [
+    "five",
+    "eight",
+    "one"
+   ],
+   "explain": "tres = three. trio, tripod, triangle.",
+   "accept": [
+    "3"
+   ],
+   "learn": "**tres** = three\n_trio, tripod, triangle._"
+  },
+  {
+   "id": "latin.n.quattuor",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What number is **quattuor**?",
+   "answer": "four",
+   "distractors": [
+    "six",
+    "nine",
+    "two"
+   ],
+   "explain": "quattuor = four. quartet, quadrilateral.",
+   "accept": [
+    "4"
+   ],
+   "learn": "**quattuor** = four\n_quartet, quadrilateral._"
+  },
+  {
+   "id": "latin.n.quinque",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What number is **quinque**?",
+   "answer": "five",
+   "distractors": [
+    "seven",
+    "ten",
+    "three"
+   ],
+   "explain": "quinque = five. quintet, quintuplets.",
+   "accept": [
+    "5"
+   ],
+   "learn": "**quinque** = five\n_quintet, quintuplets._"
+  },
+  {
+   "id": "latin.n.sex",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What number is **sex**?",
+   "answer": "six",
+   "distractors": [
+    "eight",
+    "one",
+    "four"
+   ],
+   "explain": "sex = six. sextet, sextuplets.",
+   "accept": [
+    "6"
+   ],
+   "learn": "**sex** = six\n_sextet, sextuplets._"
+  },
+  {
+   "id": "latin.n.septem",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What number is **septem**?",
+   "answer": "seven",
+   "distractors": [
+    "nine",
+    "two",
+    "five"
+   ],
+   "explain": "septem = seven. September was the seventh month of the old Roman year.",
+   "accept": [
+    "7"
+   ],
+   "learn": "**septem** = seven\n_September was the seventh month of the old Roman year._"
+  },
+  {
+   "id": "latin.n.octo",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What number is **octo**?",
+   "answer": "eight",
+   "distractors": [
+    "ten",
+    "three",
+    "six"
+   ],
+   "explain": "octo = eight. octopus, octagon, October (the eighth month).",
+   "accept": [
+    "8"
+   ],
+   "learn": "**octo** = eight\n_octopus, octagon, October (the eighth month)._"
+  },
+  {
+   "id": "latin.n.novem",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What number is **novem**?",
+   "answer": "nine",
+   "distractors": [
+    "one",
+    "four",
+    "seven"
+   ],
+   "explain": "novem = nine. November (the ninth month).",
+   "accept": [
+    "9"
+   ],
+   "learn": "**novem** = nine\n_November (the ninth month)._"
+  },
+  {
+   "id": "latin.n.decem",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What number is **decem**?",
+   "answer": "ten",
+   "distractors": [
+    "two",
+    "five",
+    "eight"
+   ],
+   "explain": "decem = ten. December (the tenth month), decimal, decade.",
+   "accept": [
+    "10"
+   ],
+   "learn": "**decem** = ten\n_December (the tenth month), decimal, decade._"
+  },
+  {
+   "id": "latin.ph.1",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What does **salve** mean?",
+   "answer": "hello",
+   "distractors": [
+    "thank you",
+    "yes",
+    "no"
+   ],
+   "explain": "salve = hello: literally “be well”; to more than one person, salvete.",
+   "accept": [
+    "hi",
+    "greetings"
+   ],
+   "learn": "**salve** = hello\n_literally “be well”; to more than one person, salvete._"
+  },
+  {
+   "id": "latin.ph.en.1",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "How do you say **hello** in Latin?",
+   "answer": "salve",
+   "distractors": [
+    "gratias tibi ago",
+    "ita vero",
+    "minime"
+   ],
+   "explain": "hello = salve: literally “be well”; to more than one person, salvete.",
+   "accept": []
+  },
+  {
+   "id": "latin.ph.2",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What does **vale** mean?",
+   "answer": "goodbye",
+   "distractors": [
+    "yes",
+    "no",
+    "hello"
+   ],
+   "explain": "vale = goodbye: literally “be strong”; to more than one person, valete.",
+   "accept": [
+    "farewell",
+    "bye"
+   ],
+   "learn": "**vale** = goodbye\n_literally “be strong”; to more than one person, valete._"
+  },
+  {
+   "id": "latin.ph.en.2",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "How do you say **goodbye** in Latin?",
+   "answer": "vale",
+   "distractors": [
+    "ita vero",
+    "minime",
+    "salve"
+   ],
+   "explain": "goodbye = vale: literally “be strong”; to more than one person, valete.",
+   "accept": []
+  },
+  {
+   "id": "latin.ph.3",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What does **gratias tibi ago** mean?",
+   "answer": "thank you",
+   "distractors": [
+    "no",
+    "hello",
+    "goodbye"
+   ],
+   "explain": "gratias tibi ago = thank you: literally “I give thanks to you”; gratias on its own works too.",
+   "accept": [
+    "thanks",
+    "thank you very much"
+   ],
+   "learn": "**gratias tibi ago** = thank you\n_literally “I give thanks to you”; gratias on its own works too._"
+  },
+  {
+   "id": "latin.ph.en.3",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "How do you say **thank you** in Latin?",
+   "answer": "gratias tibi ago",
+   "distractors": [
+    "minime",
+    "salve",
+    "vale"
+   ],
+   "explain": "thank you = gratias tibi ago: literally “I give thanks to you”; gratias on its own works too.",
+   "accept": [
+    "gratias",
+    "gratias ago"
+   ]
+  },
+  {
+   "id": "latin.ph.4",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What does **ita vero** mean?",
+   "answer": "yes",
+   "distractors": [
+    "hello",
+    "goodbye",
+    "thank you"
+   ],
+   "explain": "ita vero = yes: literally “thus truly”.",
+   "accept": [
+    "yes indeed",
+    "indeed"
+   ],
+   "learn": "**ita vero** = yes\n_literally “thus truly”._"
+  },
+  {
+   "id": "latin.ph.en.4",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "How do you say **yes** in Latin?",
+   "answer": "ita vero",
+   "distractors": [
+    "salve",
+    "vale",
+    "gratias tibi ago"
+   ],
+   "explain": "yes = ita vero: literally “thus truly”.",
+   "accept": []
+  },
+  {
+   "id": "latin.ph.5",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "What does **minime** mean?",
+   "answer": "no",
+   "distractors": [
+    "goodbye",
+    "thank you",
+    "yes"
+   ],
+   "explain": "minime = no: literally “least of all”.",
+   "accept": [
+    "not at all",
+    "no way"
+   ],
+   "learn": "**minime** = no\n_literally “least of all”._"
+  },
+  {
+   "id": "latin.ph.en.5",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "How do you say **no** in Latin?",
+   "answer": "minime",
+   "distractors": [
+    "vale",
+    "gratias tibi ago",
+    "ita vero"
+   ],
+   "explain": "no = minime: literally “least of all”.",
+   "accept": []
+  },
+  {
+   "id": "latin.n.months",
+   "topic": "latin.numbers",
+   "kind": "fact",
+   "prompt": "September, October, November and December are named after the numbers seven, eight, nine and ten. Why do the names not match our calendar?",
+   "answer": "the Roman year originally began in March",
+   "distractors": [
+    "the Romans could not count",
+    "the names were chosen at random",
+    "the months were renamed by the Normans"
+   ],
+   "explain": "Starting from March, September really was the seventh month. Two months were later added at the start, and the names stayed.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.1",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**aqua** means “water”. Which English word comes from it?",
+   "answer": "aquarium",
+   "distractors": [
+    "acrobat",
+    "square",
+    "liquorice"
+   ],
+   "explain": "aquarium comes from aqua (water).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.2",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**liber** means “book”. Which English word comes from it?",
+   "answer": "library",
+   "distractors": [
+    "liberty",
+    "label",
+    "lever"
+   ],
+   "explain": "library comes from liber (book).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.3",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**porto** means “I carry”. Which English word comes from it?",
+   "answer": "portable",
+   "distractors": [
+    "portion",
+    "potato",
+    "porch"
+   ],
+   "explain": "portable comes from porto (I carry).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.4",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**video** means “I see”. Which English word comes from it?",
+   "answer": "evidence",
+   "distractors": [
+    "divide",
+    "vivid",
+    "velvet"
+   ],
+   "explain": "evidence comes from video (I see). Evidence is what can be seen.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.5",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**audio** means “I hear”. Which English word comes from it?",
+   "answer": "audience",
+   "distractors": [
+    "odour",
+    "auburn",
+    "autumn"
+   ],
+   "explain": "audience comes from audio (I hear).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.6",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**manus** means “hand”. Which English word comes from it?",
+   "answer": "manual",
+   "distractors": [
+    "mansion",
+    "mandarin",
+    "many"
+   ],
+   "explain": "manual comes from manus (hand). A manual is a handbook; manual work is done by hand.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.7",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**pes, pedis** means “foot”. Which English word comes from it?",
+   "answer": "pedal",
+   "distractors": [
+    "pest",
+    "pedigree",
+    "petal"
+   ],
+   "explain": "pedal comes from pes, pedis (foot).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.8",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**caput** means “head”. Which English word comes from it?",
+   "answer": "capital",
+   "distractors": [
+    "cap",
+    "carpet",
+    "capsule"
+   ],
+   "explain": "capital comes from caput (head). A capital city is the “head” city; a capital letter heads a sentence.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.9",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**scribo** means “I write”. Which English word comes from it?",
+   "answer": "scribble",
+   "distractors": [
+    "scrub",
+    "script-free",
+    "crisp"
+   ],
+   "explain": "scribble comes from scribo (I write).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.10",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**dico** means “I say”. Which English word comes from it?",
+   "answer": "dictionary",
+   "distractors": [
+    "dice",
+    "ditch",
+    "dinosaur"
+   ],
+   "explain": "dictionary comes from dico (I say).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.11",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**magnus** means “great”. Which English word comes from it?",
+   "answer": "magnify",
+   "distractors": [
+    "magnet",
+    "magpie",
+    "mango"
+   ],
+   "explain": "magnify comes from magnus (great).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.12",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**terra** means “land, earth”. Which English word comes from it?",
+   "answer": "terrain",
+   "distractors": [
+    "terror",
+    "terrier",
+    "tear"
+   ],
+   "explain": "terrain comes from terra (land, earth).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.13",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**annus** means “year”. Which English word comes from it?",
+   "answer": "annual",
+   "distractors": [
+    "annoy",
+    "anchor",
+    "anthem"
+   ],
+   "explain": "annual comes from annus (year). Annual means yearly; an anniversary is the turning of a year.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.r.14",
+   "topic": "latin.roots",
+   "kind": "fact",
+   "prompt": "**corpus** means “body”. Which English word comes from it?",
+   "answer": "corpse",
+   "distractors": [
+    "corn",
+    "corner",
+    "copper"
+   ],
+   "explain": "corpse comes from corpus (body).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.ro.forum",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "What was the **forum**?",
+   "answer": "the public square and market-place at the centre of a Roman town",
+   "distractors": [
+    "the public baths",
+    "the dining room",
+    "the army camp"
+   ],
+   "explain": "Business, politics, shopping and gossip all happened in the forum. Rome’s Forum Romanum is still there.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.ro.thermae",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "What were the **thermae**?",
+   "answer": "the public baths",
+   "distractors": [
+    "the temples",
+    "the shops",
+    "the kitchens"
+   ],
+   "explain": "Thermae (from the Greek for heat): hot rooms, cold plunges, exercise yards. Bath in England is named after its Roman baths.",
+   "accept": [
+    "baths",
+    "public baths",
+    "the baths"
+   ]
+  },
+  {
+   "id": "latin.ro.atrium",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "What was the **atrium** of a Roman house?",
+   "answer": "the entrance hall, with an opening in the roof and a pool to catch rainwater",
+   "distractors": [
+    "the kitchen",
+    "the garden",
+    "the bedroom"
+   ],
+   "explain": "The pool was the impluvium. Modern hotel atriums borrow the name.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.ro.triclinium",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "What happened in the **triclinium**?",
+   "answer": "dinner, eaten lying on couches",
+   "distractors": [
+    "bathing",
+    "sleeping",
+    "lessons"
+   ],
+   "explain": "Tri-clinium = three couches, arranged round a low table. Guests reclined on their left elbow and ate with their right hand.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.ro.toga",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "Who wore the **toga**?",
+   "answer": "adult male Roman citizens, on formal occasions",
+   "distractors": [
+    "slaves",
+    "all women",
+    "soldiers in battle"
+   ],
+   "explain": "A huge semicircle of wool, hard to put on without help. Everyday wear was the simpler tunica.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.ro.stilus",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "Roman schoolchildren wrote with a **stilus** on a…",
+   "answer": "wax tablet (tabula)",
+   "distractors": [
+    "sheet of paper",
+    "slate",
+    "computer"
+   ],
+   "explain": "Scratch letters in the wax with the point; smooth them out with the flat end. “Stylus” and “style” come from stilus.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.ro.ludus",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "**ludus** means both “school” and…",
+   "answer": "game",
+   "distractors": [
+    "dinner",
+    "temple",
+    "war"
+   ],
+   "explain": "The same word for school and play. Gladiators trained in a ludus too.",
+   "accept": [
+    "games",
+    "play"
+   ]
+  },
+  {
+   "id": "latin.ro.amph",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "What kind of building was the **amphitheatrum**?",
+   "answer": "an oval arena for gladiator fights and wild-beast shows",
+   "distractors": [
+    "a semicircular theatre for plays",
+    "a temple",
+    "a race-track for chariots"
+   ],
+   "explain": "Amphi = all round: seats on every side. The Colosseum in Rome held about 50,000 people. Chariots raced in the circus.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.ro.spqr",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "What do the letters **SPQR**, seen on Roman standards and still on Rome’s drain covers, stand for?",
+   "answer": "Senatus Populusque Romanus: the Senate and People of Rome",
+   "distractors": [
+    "Super Potens Quattuor Reges",
+    "Sic Parvis Quid Roma",
+    "Semper Paratus Quis Regit"
+   ],
+   "explain": "The -que on Populusque means “and”: “the Senate and-People of-Rome”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.ro.num1",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "What number is **XIV** in Roman numerals?",
+   "answer": "14",
+   "distractors": [
+    "16",
+    "9",
+    "24"
+   ],
+   "explain": "X = 10, IV = 4 (one before five). 10 + 4 = 14."
+  },
+  {
+   "id": "latin.ro.num2",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "What number is **XLII**?",
+   "answer": "42",
+   "distractors": [
+    "62",
+    "38",
+    "92"
+   ],
+   "explain": "XL = 40 (ten before fifty), II = 2."
+  },
+  {
+   "id": "latin.ro.num3",
+   "topic": "latin.romans",
+   "kind": "fact",
+   "prompt": "Write **2026** in Roman numerals.",
+   "answer": "MMXXVI",
+   "distractors": [
+    "MMXVI",
+    "MXXVI",
+    "MMXXIV"
+   ],
+   "explain": "M = 1000, so MM = 2000; XX = 20; VI = 6.",
+   "strict": true
+  },
+  {
+   "id": "latin.st.1",
+   "topic": "latin.story",
+   "kind": "fact",
+   "prompt": "Who is the mother?",
+   "answer": "Iulia",
+   "distractors": [
+    "Flavia",
+    "Marcus",
+    "Felix"
+   ],
+   "explain": "“Iulia est mater.”",
+   "passage": "Marcus est pater. Iulia est mater. Lucius est filius. Flavia est filia.\nMarcus in horto sedet. Iulia in atrio laborat. Felix est servus. Felix in culina cenam parat.\nRufus est canis. Rufus in via dormit. Lucius canem videt. Lucius clamat: “Rufe!” Rufus ad Lucium currit.\nFlavia aquam portat. Felix cenam portat. familia in triclinio cenat. Rufus sub mensa dormit.",
+   "passageSource": "A short story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.st.2",
+   "topic": "latin.story",
+   "kind": "fact",
+   "prompt": "Where is Marcus?",
+   "answer": "in the garden",
+   "distractors": [
+    "in the kitchen",
+    "in the street",
+    "in the dining room"
+   ],
+   "explain": "“Marcus in horto sedet”: he sits in the garden.",
+   "passage": "Marcus est pater. Iulia est mater. Lucius est filius. Flavia est filia.\nMarcus in horto sedet. Iulia in atrio laborat. Felix est servus. Felix in culina cenam parat.\nRufus est canis. Rufus in via dormit. Lucius canem videt. Lucius clamat: “Rufe!” Rufus ad Lucium currit.\nFlavia aquam portat. Felix cenam portat. familia in triclinio cenat. Rufus sub mensa dormit.",
+   "passageSource": "A short story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.st.3",
+   "topic": "latin.story",
+   "kind": "fact",
+   "prompt": "What is Felix doing?",
+   "answer": "preparing dinner in the kitchen",
+   "distractors": [
+    "sleeping in the street",
+    "working in the atrium",
+    "carrying water"
+   ],
+   "explain": "“Felix in culina cenam parat.” Felix is the servus (slave) and the cook.",
+   "passage": "Marcus est pater. Iulia est mater. Lucius est filius. Flavia est filia.\nMarcus in horto sedet. Iulia in atrio laborat. Felix est servus. Felix in culina cenam parat.\nRufus est canis. Rufus in via dormit. Lucius canem videt. Lucius clamat: “Rufe!” Rufus ad Lucium currit.\nFlavia aquam portat. Felix cenam portat. familia in triclinio cenat. Rufus sub mensa dormit.",
+   "passageSource": "A short story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.st.4",
+   "topic": "latin.story",
+   "kind": "fact",
+   "prompt": "Who is Rufus?",
+   "answer": "the dog",
+   "distractors": [
+    "the son",
+    "the slave",
+    "a friend"
+   ],
+   "explain": "“Rufus est canis.”",
+   "passage": "Marcus est pater. Iulia est mater. Lucius est filius. Flavia est filia.\nMarcus in horto sedet. Iulia in atrio laborat. Felix est servus. Felix in culina cenam parat.\nRufus est canis. Rufus in via dormit. Lucius canem videt. Lucius clamat: “Rufe!” Rufus ad Lucium currit.\nFlavia aquam portat. Felix cenam portat. familia in triclinio cenat. Rufus sub mensa dormit.",
+   "passageSource": "A short story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.st.5",
+   "topic": "latin.story",
+   "kind": "fact",
+   "prompt": "What does Lucius do when he sees the dog?",
+   "answer": "he shouts its name",
+   "distractors": [
+    "he carries it",
+    "he runs away",
+    "he feeds it"
+   ],
+   "explain": "“Lucius clamat: ‘Rufe!’” Rufe is the form of Rufus used when calling someone: the vocative.",
+   "passage": "Marcus est pater. Iulia est mater. Lucius est filius. Flavia est filia.\nMarcus in horto sedet. Iulia in atrio laborat. Felix est servus. Felix in culina cenam parat.\nRufus est canis. Rufus in via dormit. Lucius canem videt. Lucius clamat: “Rufe!” Rufus ad Lucium currit.\nFlavia aquam portat. Felix cenam portat. familia in triclinio cenat. Rufus sub mensa dormit.",
+   "passageSource": "A short story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.st.6",
+   "topic": "latin.story",
+   "kind": "fact",
+   "prompt": "What does Flavia carry?",
+   "answer": "water",
+   "distractors": [
+    "dinner",
+    "a book",
+    "the dog"
+   ],
+   "explain": "“Flavia aquam portat.” aquam is the accusative of aqua.",
+   "passage": "Marcus est pater. Iulia est mater. Lucius est filius. Flavia est filia.\nMarcus in horto sedet. Iulia in atrio laborat. Felix est servus. Felix in culina cenam parat.\nRufus est canis. Rufus in via dormit. Lucius canem videt. Lucius clamat: “Rufe!” Rufus ad Lucium currit.\nFlavia aquam portat. Felix cenam portat. familia in triclinio cenat. Rufus sub mensa dormit.",
+   "passageSource": "A short story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.st.7",
+   "topic": "latin.story",
+   "kind": "fact",
+   "prompt": "Where does the family eat?",
+   "answer": "in the triclinium (dining room)",
+   "distractors": [
+    "in the atrium",
+    "in the garden",
+    "in the kitchen"
+   ],
+   "explain": "“familia in triclinio cenat.” cenat = dines, from cena.",
+   "passage": "Marcus est pater. Iulia est mater. Lucius est filius. Flavia est filia.\nMarcus in horto sedet. Iulia in atrio laborat. Felix est servus. Felix in culina cenam parat.\nRufus est canis. Rufus in via dormit. Lucius canem videt. Lucius clamat: “Rufe!” Rufus ad Lucium currit.\nFlavia aquam portat. Felix cenam portat. familia in triclinio cenat. Rufus sub mensa dormit.",
+   "passageSource": "A short story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "latin.st.8",
+   "topic": "latin.story",
+   "kind": "fact",
+   "prompt": "Where does Rufus sleep at the end?",
+   "answer": "under the table",
+   "distractors": [
+    "in the street",
+    "in the garden",
+    "on a couch"
+   ],
+   "explain": "“Rufus sub mensa dormit.” sub = under.",
+   "passage": "Marcus est pater. Iulia est mater. Lucius est filius. Flavia est filia.\nMarcus in horto sedet. Iulia in atrio laborat. Felix est servus. Felix in culina cenam parat.\nRufus est canis. Rufus in via dormit. Lucius canem videt. Lucius clamat: “Rufe!” Rufus ad Lucium currit.\nFlavia aquam portat. Felix cenam portat. familia in triclinio cenat. Rufus sub mensa dormit.",
+   "passageSource": "A short story written for this app",
+   "formats": [
+    "choice"
+   ]
+  }
+ ]
+}

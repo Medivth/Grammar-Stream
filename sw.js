@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = '2b54cdf36cb8';
+const VERSION = '6e3ab564d250';
 const FILES = [
  "./",
  "./index.html",
@@ -14,6 +14,7 @@ const FILES = [
  "./js/core/fsrs.js",
  "./js/core/mastery.js",
  "./js/core/placement.js",
+ "./js/core/practice.js",
  "./js/core/present.js",
  "./js/core/progress.js",
  "./js/core/rng.js",
@@ -29,6 +30,7 @@ const FILES = [
  "./js/gen/maths.js",
  "./js/gen/maths2.js",
  "./js/gen/maths3.js",
+ "./js/gen/paper.js",
  "./js/gen/science.js",
  "./js/gen/science2.js",
  "./js/gen/sprint.js",
@@ -38,10 +40,13 @@ const FILES = [
  "./js/platform/tts.js",
  "./js/screens/home.js",
  "./js/screens/onboarding.js",
+ "./js/screens/paper.js",
  "./js/screens/parent.js",
  "./js/screens/play.js",
  "./js/screens/progress.js",
  "./js/screens/reading.js",
+ "./js/screens/speed.js",
+ "./js/screens/typing.js",
  "./js/screens/util.js",
  "./js/screens/writing.js",
  "./js/ui/capybara.js",
@@ -68,6 +73,7 @@ const FILES = [
  "./content/history/timeline.json",
  "./content/history/year7.json",
  "./content/index.json",
+ "./content/latin/core.json",
  "./content/maps/cell-animal.json",
  "./content/maps/cell-plant.json",
  "./content/maps/europe.json",

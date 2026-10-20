@@ -87,7 +87,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const server = spawn('python3', ['-m', 'http.server', String(PORT), '--bind', '127.0.0.1'], { cwd: ROOT, stdio: 'ignore' });
   await new Promise((r) => setTimeout(r, 700));
   const browser = await chromium.launch();
-  const routes = (process.env.ROUTES || 'home,subject/history,subject/geography,progress,progress/timeline,progress/places,reading,parent,play').split(',');
+  const routes = (process.env.ROUTES || 'home,subject/history,subject/geography,subject/latin,progress,progress/timeline,progress/places,reading,parent,paper,typing,speed,play').split(',');
   try {
     for (const [label, viewport] of [['tablet', { width: 1024, height: 768 }], ['phone', { width: 390, height: 844 }]]) {
       const ctx = await browser.newContext({ viewport, deviceScaleFactor: 1, colorScheme: process.env.DARK ? 'dark' : 'light' });
