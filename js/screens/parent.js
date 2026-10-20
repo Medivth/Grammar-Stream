@@ -104,7 +104,7 @@ function dashboard(app) {
 
       h('div', { class: 'card' }, h('h2', {}, '{Her} sentences'),
         recentWriting.length ? recentWriting.map((wr) => h('div', { class: 'topic-row' }, h('div', { class: 'title' }, h('div', { class: 'muted small' }, `${db.sentenceById[wr.taskId]?.title || 'Sentence'} · ${formatDay(wr.day, { weekday: 'short', day: 'numeric', month: 'short' })}`), h('div', {}, wr.text || '(blank)')))) : h('p', { class: 'muted' }, 'Nothing yet.'),
-        h('p', { class: 'muted small' }, 'Read these with {him} and ask what {she} was trying to do. The weekly extended-writing task comes in the next update.')),
+        h('p', { class: 'muted small' }, 'Read these with {him} and ask what {she} was trying to do.')),
 
       course.ready ? null : course.el,
       levelsCard(app),
@@ -169,6 +169,7 @@ function markingCard(app) {
   const todo = piecesToMark(state);
   const marked = state.pieces.filter((p) => p.mark).slice(-3).reverse();
   if (!todo.length && !marked.length) {
+    if (!COURSES[state.course]?.writing) return null;
     return h('div', { class: 'card' }, h('h2', {}, 'Weekly writing'), h('p', { class: 'muted' }, 'Once a week {she} writes a longer piece (a story, a speech, a history essay…). When {she} hands it in, you mark it here with a four-line guide. It takes about 10 minutes, and your interest in it matters more than the marks.'));
   }
   return h('div', { class: 'card stack' }, h('h2', {}, todo.length ? `Writing to read (${todo.length})` : 'Weekly writing'),

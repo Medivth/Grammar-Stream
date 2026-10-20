@@ -1,0 +1,2904 @@
+{
+ "subject": "history",
+ "deck": "y3",
+ "topics": [
+  {
+   "id": "history.y3-stoneage",
+   "title": "The Stone Age and Bronze Age",
+   "kind": "facts",
+   "prereqs": [
+    "history.stoneage"
+   ],
+   "batch": 5,
+   "intro": "The Stone Age lasted for hundreds of thousands of years. People went from hunting mammoths with flint spears to farming, building villages like Skara Brae and raising Stonehenge. Then they learned to make bronze.",
+   "teach": "Explain the difference between the Old Stone Age and the New Stone Age.",
+   "talk": "Ask {him} what {she} would miss most if {she} lived in the Stone Age."
+  },
+  {
+   "id": "history.y3-ironage",
+   "title": "The Iron Age and the Celts",
+   "kind": "facts",
+   "prereqs": [
+    "history.y3-stoneage"
+   ],
+   "batch": 5,
+   "intro": "From about 800 BC, people in Britain learned to make iron, which is harder than bronze. Iron Age tribes built hill forts, drove chariots and followed priests called druids.",
+   "teach": "Explain why a hill fort was a good place to defend.",
+   "talk": "Ask {him} to design an Iron Age hill fort with ditches and a gate."
+  },
+  {
+   "id": "history.y3-legion",
+   "title": "Inside the Roman army",
+   "kind": "facts",
+   "prereqs": [
+    "history.romans"
+   ],
+   "batch": 5,
+   "intro": "The Roman army was one of the best-trained armies in history. Soldiers called legionaries trained every day, marched in step and fought as a team.",
+   "teach": "Explain what a legionary carried and what each thing was for.",
+   "talk": "Ask {him} which would be harder: marching 20 miles in armour, or building a fort at the end of it."
+  },
+  {
+   "id": "history.y3-boudica",
+   "title": "Boudica, the warrior queen",
+   "kind": "facts",
+   "prereqs": [
+    "history.y3-legion"
+   ],
+   "batch": 5,
+   "intro": "In about AD 60 or 61, Boudica, queen of the Iceni tribe, led a huge rebellion against the Romans. Her army destroyed three Roman towns before the Romans finally defeated her.",
+   "teach": "Explain why Boudica rebelled against the Romans.",
+   "talk": "Ask {him} whether {she} thinks Boudica was a hero, and why."
+  },
+  {
+   "id": "history.y3-roman-life",
+   "title": "Roman life and what the Romans left us",
+   "kind": "facts",
+   "prereqs": [
+    "history.y3-legion"
+   ],
+   "batch": 5,
+   "intro": "The Romans ruled Britain for nearly 400 years. They built towns, villas, baths and straight roads, and left behind words, numbers and even letters written on wood.",
+   "teach": "Explain three things the Romans left behind that we still use.",
+   "talk": "Look for a Roman road, a Roman numeral or a Latin word together this week."
+  },
+  {
+   "id": "history.y3-saxons",
+   "title": "Anglo-Saxons and Scots",
+   "kind": "facts",
+   "prereqs": [
+    "history.y3-roman-life"
+   ],
+   "batch": 5,
+   "intro": "After the Romans left, Angles, Saxons and Jutes sailed over from northern Europe and set up kingdoms. In the north, the Scots and Picts lived. England gets its name from the Angles!",
+   "teach": "Explain what was found at Sutton Hoo and why it matters.",
+   "talk": "Ask {him} which day of the week is named after an Anglo-Saxon god."
+  },
+  {
+   "id": "history.y3-vikings",
+   "title": "Vikings and Anglo-Saxons: the struggle for England",
+   "kind": "facts",
+   "prereqs": [
+    "history.vikings",
+    "history.y3-saxons"
+   ],
+   "batch": 5,
+   "intro": "For about 250 years, Vikings and Anglo-Saxons raided, fought, made peace and traded. In the end, England became one kingdom.",
+   "teach": "Explain how Alfred the Great defended Wessex from the Vikings.",
+   "talk": "Ask {him} to write {her} name in Viking runes (find a rune alphabet in a library book)."
+  },
+  {
+   "id": "history.y3-greece",
+   "title": "Ancient Greece",
+   "kind": "facts",
+   "prereqs": [
+    "history.past"
+   ],
+   "batch": 5,
+   "intro": "About 2,500 years ago, the cities of Ancient Greece gave the world the Olympic Games, democracy, theatre and many great thinkers. Athens and Sparta were very different cities.",
+   "teach": "Explain the difference between Athens and Sparta.",
+   "talk": "Ask {him} which Greek god or goddess {she} would like to be, and why."
+  },
+  {
+   "id": "history.y3-civilisations",
+   "title": "The first great civilisations",
+   "kind": "facts",
+   "prereqs": [
+    "history.egypt"
+   ],
+   "batch": 5,
+   "intro": "More than 4,000 years ago, the first great civilisations grew up beside rivers: in Sumer, in the Indus Valley and in Egypt. They built cities and invented writing.",
+   "teach": "Explain why the first cities were built beside rivers.",
+   "talk": "Ask {him} what {she} would need to build a city from nothing."
+  },
+  {
+   "id": "history.y3-sieges",
+   "title": "Castles under attack",
+   "kind": "facts",
+   "prereqs": [
+    "history.castles"
+   ],
+   "batch": 5,
+   "intro": "Attacking a castle was very hard. Attackers used giant catapults, siege towers, battering rams and tunnels, and defenders kept making castles stronger.",
+   "teach": "Explain why a concentric castle was so hard to attack.",
+   "talk": "Build a castle from cushions or blocks and ask {him} how {she} would defend it."
+  },
+  {
+   "id": "history.y3-britain1940",
+   "title": "The Battle of Britain",
+   "kind": "facts",
+   "prereqs": [
+    "history.ww2"
+   ],
+   "batch": 5,
+   "intro": "In the summer of 1940, the German air force tried to defeat Britain’s Royal Air Force. Radar, brave pilots from many countries and a clever control system helped Britain hold on.",
+   "teach": "Explain how radar helped the RAF.",
+   "talk": "Ask {him} why Churchill called the pilots “the Few”."
+  },
+  {
+   "id": "history.y3-homefront",
+   "title": "The Home Front",
+   "kind": "facts",
+   "prereqs": [
+    "history.y3-britain1940"
+   ],
+   "batch": 5,
+   "intro": "During the Second World War, ordinary people helped too: they kept the blackout, grew vegetables, worked on farms and in factories, and sheltered from air raids.",
+   "teach": "Explain how families kept safe during an air raid.",
+   "talk": "Ask an older relative if their family had an Anderson shelter or grew vegetables for victory."
+  },
+  {
+   "id": "history.y3-skills",
+   "title": "Thinking like a historian",
+   "kind": "facts",
+   "prereqs": [
+    "history.past"
+   ],
+   "batch": 5,
+   "intro": "Historians use dates, put events in order, and look at evidence from the past. Some evidence was made at the time; some was made much later.",
+   "teach": "Explain the difference between a primary source and a secondary source.",
+   "talk": "Find something old at home (a photo, a coin) and ask {him} what it tells you about the past."
+  },
+  {
+   "id": "history.y3-normans",
+   "title": "The Normans in charge",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "history.1066",
+    "history.y3-sieges"
+   ],
+   "batch": 5,
+   "intro": "After 1066, William the Conqueror and the Normans took control of England. They built castles everywhere, counted everything in the Domesday Book, and set up the feudal system.",
+   "teach": "Explain how the feudal system worked, from the king down to the peasants.",
+   "talk": "Ask {him} what the Domesday Book might have said about your town."
+  },
+  {
+   "id": "history.y3-shang",
+   "title": "Shang China",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "history.y3-civilisations"
+   ],
+   "batch": 5,
+   "intro": "About 3,500 years ago, the Shang dynasty ruled part of China beside the Yellow River. They made beautiful bronze and wrote questions to their ancestors on bones.",
+   "teach": "Explain what oracle bones were.",
+   "talk": "Ask {him} what question {she} would write on an oracle bone."
+  }
+ ],
+ "items": [
+  {
+   "id": "history.y3.sa.periods",
+   "topic": "history.y3-stoneage",
+   "kind": "order",
+   "prompt": "Put the three parts of the Stone Age in order, earliest first.",
+   "items": [
+    "Palaeolithic (Old Stone Age)",
+    "Mesolithic (Middle Stone Age)",
+    "Neolithic (New Stone Age)"
+   ],
+   "labels": null,
+   "explain": "Palaeo means old, meso means middle and neo means new. “Lithic” means stone."
+  },
+  {
+   "id": "history.y3.sa.neolithic",
+   "topic": "history.y3-stoneage",
+   "kind": "mcq",
+   "prompt": "What big change happened in the Neolithic (New Stone Age)?",
+   "options": [
+    {
+     "text": "People began farming and living in villages",
+     "correct": true
+    },
+    {
+     "text": "People began driving carts with engines",
+     "correct": false,
+     "feedback": "Engines came thousands of years later."
+    },
+    {
+     "text": "People first used iron",
+     "correct": false,
+     "feedback": "Iron came much later, in the Iron Age."
+    }
+   ],
+   "explain": "Farming reached Britain about 6,000 years ago. People settled down to grow crops and keep animals."
+  },
+  {
+   "id": "history.y3.sa.hunter",
+   "topic": "history.y3-stoneage",
+   "kind": "fact",
+   "prompt": "Early Stone Age people moved around to hunt animals and collect plants. What are they called?",
+   "answer": "hunter-gatherers",
+   "distractors": [
+    "farmers",
+    "knights",
+    "merchants"
+   ],
+   "explain": "They hunted animals and gathered berries, nuts and roots.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.sa.skara",
+   "topic": "history.y3-stoneage",
+   "kind": "fact",
+   "prompt": "Which Stone Age village in Orkney was uncovered by a great storm in 1850?",
+   "answer": "Skara Brae",
+   "distractors": [
+    "Stonehenge",
+    "Jorvik",
+    "Sutton Hoo"
+   ],
+   "explain": "A storm blew the sand away and revealed stone houses about 5,000 years old, with stone beds and dressers.",
+   "accept": [
+    "skara brae"
+   ]
+  },
+  {
+   "id": "history.y3.sa.bluestones",
+   "topic": "history.y3-stoneage",
+   "kind": "fact",
+   "prompt": "Some of the smaller stones at Stonehenge, the bluestones, came from far away. Where from?",
+   "answer": "the Preseli Hills in Wales",
+   "distractors": [
+    "the Moon",
+    "the Alps",
+    "London"
+   ],
+   "explain": "They were moved about 150 miles, probably by people pulling them on sledges and rollers.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.sa.cheddar",
+   "topic": "history.y3-stoneage",
+   "kind": "fact",
+   "prompt": "Cheddar Man is Britain’s oldest almost complete skeleton. About how long ago did he live?",
+   "answer": "about 10,000 years ago",
+   "distractors": [
+    "about 100 years ago",
+    "about 1,000 years ago",
+    "about a million years ago"
+   ],
+   "explain": "He was found in Gough’s Cave in Cheddar Gorge, Somerset, in 1903. He lived in the Middle Stone Age.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.sa.amesbury",
+   "topic": "history.y3-stoneage",
+   "kind": "fact",
+   "prompt": "A rich grave found near Stonehenge in 2002 belonged to a man buried about 4,300 years ago with arrowheads, copper knives and gold. What do we call him?",
+   "answer": "the Amesbury Archer",
+   "distractors": [
+    "the Iceni King",
+    "Cheddar Man",
+    "the Lindow Man"
+   ],
+   "explain": "Tests on his teeth show he grew up in the Alps area of central Europe, so he had travelled a very long way.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.sa.bronze",
+   "topic": "history.y3-stoneage",
+   "kind": "mcq",
+   "prompt": "Bronze is made by mixing which two metals?",
+   "options": [
+    {
+     "text": "copper and tin",
+     "correct": true
+    },
+    {
+     "text": "gold and silver",
+     "correct": false,
+     "feedback": "Gold and silver were used for jewellery. Bronze is copper and tin."
+    },
+    {
+     "text": "iron and steel",
+     "correct": false,
+     "feedback": "Steel is made from iron. Bronze is copper and tin."
+    }
+   ],
+   "explain": "Tin was mined in Cornwall. Bronze tools and weapons were harder than copper ones."
+  },
+  {
+   "id": "history.y3.sa.flint",
+   "topic": "history.y3-stoneage",
+   "kind": "fact",
+   "prompt": "At Grimes Graves in Norfolk, Stone Age people dug deep mines to find which stone for tools?",
+   "answer": "flint",
+   "distractors": [
+    "coal",
+    "gold",
+    "chalk"
+   ],
+   "explain": "Flint can be chipped into a very sharp edge for axes and arrowheads."
+  },
+  {
+   "id": "history.y3.sa.evidence",
+   "topic": "history.y3-stoneage",
+   "kind": "mcq",
+   "prompt": "Stone Age people did not write. How do we know about them?",
+   "options": [
+    {
+     "text": "From things they left behind, like tools, bones and buildings",
+     "correct": true
+    },
+    {
+     "text": "From their diaries",
+     "correct": false,
+     "feedback": "There was no writing in Stone Age Britain."
+    },
+    {
+     "text": "From old photographs",
+     "correct": false,
+     "feedback": "Cameras were invented less than 200 years ago."
+    }
+   ],
+   "explain": "Archaeologists study objects and remains to work out how people lived."
+  },
+  {
+   "id": "history.y3.ia.when",
+   "topic": "history.y3-ironage",
+   "kind": "fact",
+   "prompt": "About when did the Iron Age begin in Britain?",
+   "answer": "about 800 BC",
+   "distractors": [
+    "about AD 800",
+    "about 1800",
+    "about 10,000 BC"
+   ],
+   "explain": "It lasted until the Romans arrived in AD 43.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.ia.better",
+   "topic": "history.y3-ironage",
+   "kind": "mcq",
+   "prompt": "Why was iron better than bronze for tools and weapons?",
+   "options": [
+    {
+     "text": "Iron is harder, and iron ore was easier to find",
+     "correct": true
+    },
+    {
+     "text": "Iron is shinier",
+     "correct": false,
+     "feedback": "Bronze is actually shinier. Iron was harder and easier to find."
+    },
+    {
+     "text": "Iron never rusts",
+     "correct": false,
+     "feedback": "Iron does rust!"
+    }
+   ],
+   "explain": "Iron ore was found in lots of places, so more people could have strong tools."
+  },
+  {
+   "id": "history.y3.ia.maiden",
+   "topic": "history.y3-ironage",
+   "kind": "fact",
+   "prompt": "Which huge Iron Age hill fort in Dorset has enormous banks and ditches?",
+   "answer": "Maiden Castle",
+   "distractors": [
+    "Hadrian’s Wall",
+    "the Tower of London",
+    "Skara Brae"
+   ],
+   "explain": "It is one of the largest hill forts in Europe. It was not a castle with stone walls, but earth banks.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.ia.hillfort",
+   "topic": "history.y3-ironage",
+   "kind": "mcq",
+   "prompt": "Why did Iron Age people build forts on hilltops?",
+   "options": [
+    {
+     "text": "They could see enemies coming and were hard to attack",
+     "correct": true
+    },
+    {
+     "text": "It was warmer at the top",
+     "correct": false,
+     "feedback": "Hills are usually colder and windier!"
+    },
+    {
+     "text": "There was more water up there",
+     "correct": false,
+     "feedback": "Water was usually easier to find lower down."
+    }
+   ],
+   "explain": "Ditches and banks around the top made attackers climb uphill."
+  },
+  {
+   "id": "history.y3.ia.druids",
+   "topic": "history.y3-ironage",
+   "kind": "fact",
+   "prompt": "What were Celtic priests and wise people called?",
+   "answer": "druids",
+   "distractors": [
+    "monks",
+    "centurions",
+    "pharaohs"
+   ],
+   "explain": "Druids led ceremonies and were also judges and teachers.",
+   "accept": [
+    "druid"
+   ]
+  },
+  {
+   "id": "history.y3.ia.chariot",
+   "topic": "history.y3-ironage",
+   "kind": "fact",
+   "prompt": "Iron Age warriors rode into battle on a light, two-wheeled cart pulled by ponies. What was it called?",
+   "answer": "a chariot",
+   "distractors": [
+    "a carriage",
+    "a longship",
+    "a tank"
+   ],
+   "explain": "Julius Caesar wrote about how skilfully British warriors drove their chariots.",
+   "accept": [
+    "chariot"
+   ]
+  },
+  {
+   "id": "history.y3.ia.torc",
+   "topic": "history.y3-ironage",
+   "kind": "fact",
+   "prompt": "What was a torc?",
+   "answer": "a metal neck ring worn by important people",
+   "distractors": [
+    "a type of sword",
+    "a kind of house",
+    "a war cry"
+   ],
+   "explain": "The Great Torc from Snettisham in Norfolk is made of gold and is in the British Museum.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.ia.coins",
+   "topic": "history.y3-ironage",
+   "kind": "mcq",
+   "prompt": "What did some Iron Age tribes make for the first time in Britain, near the end of the Iron Age?",
+   "options": [
+    {
+     "text": "their own coins",
+     "correct": true
+    },
+    {
+     "text": "paper books",
+     "correct": false,
+     "feedback": "Books came much later."
+    },
+    {
+     "text": "bicycles",
+     "correct": false,
+     "feedback": "Bicycles were invented in the 1800s."
+    }
+   ],
+   "explain": "Some coins show the names of tribal leaders, which helps historians."
+  },
+  {
+   "id": "history.y3.ia.roundhouse",
+   "topic": "history.y3-ironage",
+   "kind": "fact",
+   "prompt": "Where was the fire in an Iron Age roundhouse?",
+   "answer": "in the middle",
+   "distractors": [
+    "outside the door",
+    "on the roof",
+    "there was no fire"
+   ],
+   "explain": "The smoke drifted up through the thatched roof. Families cooked, ate and slept around it.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.ia.tribes",
+   "topic": "history.y3-ironage",
+   "kind": "mcq",
+   "prompt": "Iron Age Britain was not one country. How was it organised?",
+   "options": [
+    {
+     "text": "Into many tribes, each with its own leader",
+     "correct": true
+    },
+    {
+     "text": "Ruled by one king in London",
+     "correct": false,
+     "feedback": "There was no London yet! The Romans founded it."
+    },
+    {
+     "text": "Ruled by the Romans",
+     "correct": false,
+     "feedback": "The Romans came at the END of the Iron Age."
+    }
+   ],
+   "explain": "Tribes included the Iceni, the Brigantes and the Catuvellauni."
+  },
+  {
+   "id": "history.y3.leg.caesar",
+   "topic": "history.y3-legion",
+   "kind": "fact",
+   "prompt": "Which famous Roman general visited Britain with his army in 55 and 54 BC, but did not stay?",
+   "answer": "Julius Caesar",
+   "distractors": [
+    "Claudius",
+    "Hadrian",
+    "Boudica"
+   ],
+   "explain": "Caesar won some battles but went back to Gaul (France). The real invasion came almost 100 years later.",
+   "accept": [
+    "caesar"
+   ]
+  },
+  {
+   "id": "history.y3.leg.claudius",
+   "topic": "history.y3-legion",
+   "kind": "fact",
+   "prompt": "Which Roman emperor sent the army that invaded Britain in AD 43?",
+   "answer": "Claudius",
+   "distractors": [
+    "Julius Caesar",
+    "Nero",
+    "Hadrian"
+   ],
+   "explain": "Claudius even came to Britain himself, and is said to have brought elephants!",
+   "accept": [
+    "emperor claudius"
+   ]
+  },
+  {
+   "id": "history.y3.leg.legionary",
+   "topic": "history.y3-legion",
+   "kind": "fact",
+   "prompt": "What was an ordinary Roman foot soldier called?",
+   "answer": "a legionary",
+   "distractors": [
+    "a centurion",
+    "a gladiator",
+    "a druid"
+   ],
+   "explain": "Legionaries had to be Roman citizens and served for about 25 years.",
+   "accept": [
+    "legionary",
+    "legionnaire"
+   ]
+  },
+  {
+   "id": "history.y3.leg.centurion",
+   "topic": "history.y3-legion",
+   "kind": "fact",
+   "prompt": "Who commanded a group of about 80 legionaries?",
+   "answer": "a centurion",
+   "distractors": [
+    "an emperor",
+    "a senator",
+    "a squire"
+   ],
+   "explain": "The name comes from the Latin for a hundred, though a century usually had 80 men.",
+   "accept": [
+    "centurion"
+   ]
+  },
+  {
+   "id": "history.y3.leg.kit",
+   "topic": "history.y3-legion",
+   "kind": "mcq",
+   "prompt": "Which of these did a legionary NOT carry?",
+   "options": [
+    {
+     "text": "a longbow",
+     "correct": true
+    },
+    {
+     "text": "a short sword (gladius)",
+     "correct": false,
+     "feedback": "The gladius was his main weapon."
+    },
+    {
+     "text": "a curved shield (scutum)",
+     "correct": false,
+     "feedback": "The scutum protected him and his friends."
+    },
+    {
+     "text": "a throwing spear (pilum)",
+     "correct": false,
+     "feedback": "He threw his pilum before the armies met."
+    }
+   ],
+   "explain": "Longbows were used by English archers more than a thousand years later."
+  },
+  {
+   "id": "history.y3.leg.testudo",
+   "topic": "history.y3-legion",
+   "kind": "mcq",
+   "prompt": "In the “testudo” (tortoise) formation, how did soldiers use their shields?",
+   "options": [
+    {
+     "text": "They locked them together at the sides and over their heads, like a shell",
+     "correct": true
+    },
+    {
+     "text": "They threw them at the enemy",
+     "correct": false,
+     "feedback": "Shields were for protection."
+    },
+    {
+     "text": "They used them as boats",
+     "correct": false,
+     "feedback": "Not in battle!"
+    }
+   ],
+   "explain": "The shell of shields protected them from arrows and stones as they moved forward."
+  },
+  {
+   "id": "history.y3.leg.camp",
+   "topic": "history.y3-legion",
+   "kind": "mcq",
+   "prompt": "At the end of a long day’s march, what did Roman soldiers build?",
+   "options": [
+    {
+     "text": "A camp with a ditch and a fence around it",
+     "correct": true
+    },
+    {
+     "text": "A castle made of stone",
+     "correct": false,
+     "feedback": "Stone castles came much later. They built a quick camp every night."
+    },
+    {
+     "text": "Nothing: they slept anywhere",
+     "correct": false,
+     "feedback": "They always protected their camp."
+    }
+   ],
+   "explain": "Every soldier carried tools for digging, so they could build a safe camp in a few hours."
+  },
+  {
+   "id": "history.y3.leg.caratacus",
+   "topic": "history.y3-legion",
+   "kind": "fact",
+   "prompt": "Which British leader fought the Romans for years, was captured, and was spared by Emperor Claudius after a brave speech in Rome?",
+   "answer": "Caratacus",
+   "distractors": [
+    "Boudica",
+    "Alfred",
+    "Arthur"
+   ],
+   "explain": "He was handed over to the Romans in AD 51. Claudius was so impressed by his speech that he let him live.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.leg.auxiliary",
+   "topic": "history.y3-legion",
+   "kind": "fact",
+   "prompt": "Soldiers in the Roman army who were not Roman citizens were called…",
+   "answer": "auxiliaries",
+   "distractors": [
+    "legionaries",
+    "senators",
+    "gladiators"
+   ],
+   "explain": "Auxiliaries came from all over the empire. After 25 years they could become citizens.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.leg.caligae",
+   "topic": "history.y3-legion",
+   "kind": "fact",
+   "prompt": "Roman soldiers wore tough leather sandals with iron nails in the soles. What were they called?",
+   "answer": "caligae",
+   "distractors": [
+    "trainers",
+    "wellies",
+    "togas"
+   ],
+   "explain": "The nails gave grip, a bit like football boots.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.bo.tribe",
+   "topic": "history.y3-boudica",
+   "kind": "fact",
+   "prompt": "Boudica was queen of which tribe?",
+   "answer": "the Iceni",
+   "distractors": [
+    "the Brigantes",
+    "the Romans",
+    "the Saxons"
+   ],
+   "explain": "The Iceni lived in what is now Norfolk and Suffolk.",
+   "accept": [
+    "iceni"
+   ]
+  },
+  {
+   "id": "history.y3.bo.why",
+   "topic": "history.y3-boudica",
+   "kind": "mcq",
+   "prompt": "Why did Boudica rebel?",
+   "options": [
+    {
+     "text": "After her husband died, the Romans took the Iceni lands and treated her family very cruelly",
+     "correct": true
+    },
+    {
+     "text": "She wanted to become a Roman",
+     "correct": false,
+     "feedback": "She was fighting AGAINST Roman rule."
+    },
+    {
+     "text": "The Romans stole her chariot",
+     "correct": false,
+     "feedback": "It was much more serious: they took the tribe’s lands."
+    }
+   ],
+   "explain": "Her husband, King Prasutagus, had wanted to share his kingdom with the emperor. Instead, the Romans took everything."
+  },
+  {
+   "id": "history.y3.bo.towns",
+   "topic": "history.y3-boudica",
+   "kind": "mcq",
+   "prompt": "Which three Roman towns did Boudica’s army destroy?",
+   "options": [
+    {
+     "text": "Colchester, London and St Albans",
+     "correct": true
+    },
+    {
+     "text": "York, Bath and Chester",
+     "correct": false,
+     "feedback": "Those were Roman towns, but not the ones Boudica attacked."
+    },
+    {
+     "text": "Rome, Paris and Madrid",
+     "correct": false,
+     "feedback": "She fought in Britain."
+    }
+   ],
+   "explain": "In Roman times they were called Camulodunum, Londinium and Verulamium."
+  },
+  {
+   "id": "history.y3.bo.when",
+   "topic": "history.y3-boudica",
+   "kind": "fact",
+   "prompt": "About when was Boudica’s revolt?",
+   "answer": "AD 60 or 61",
+   "distractors": [
+    "AD 43",
+    "1066",
+    "55 BC"
+   ],
+   "explain": "Historians are not sure which of the two years it was.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.bo.end",
+   "topic": "history.y3-boudica",
+   "kind": "mcq",
+   "prompt": "How did the revolt end?",
+   "options": [
+    {
+     "text": "The Roman army, though much smaller, defeated her in a great battle",
+     "correct": true
+    },
+    {
+     "text": "Boudica became Emperor of Rome",
+     "correct": false,
+     "feedback": "She was defeated."
+    },
+    {
+     "text": "The Romans left Britain for ever",
+     "correct": false,
+     "feedback": "They stayed for another 350 years."
+    }
+   ],
+   "explain": "The Roman governor, Suetonius Paulinus, chose a narrow battlefield where the Romans’ training mattered most."
+  },
+  {
+   "id": "history.y3.bo.tacitus",
+   "topic": "history.y3-boudica",
+   "kind": "mcq",
+   "prompt": "Most of what we know about Boudica comes from Roman writers like Tacitus. Why should we be careful with their stories?",
+   "options": [
+    {
+     "text": "They were on the Roman side, and wrote years later",
+     "correct": true
+    },
+    {
+     "text": "Romans could not write",
+     "correct": false,
+     "feedback": "Romans wrote a lot! The problem is whose side they were on."
+    },
+    {
+     "text": "They were written in English",
+     "correct": false,
+     "feedback": "They wrote in Latin."
+    }
+   ],
+   "explain": "The Iceni left no written records, so we only hear the Roman side."
+  },
+  {
+   "id": "history.y3.bo.statue",
+   "topic": "history.y3-boudica",
+   "kind": "fact",
+   "prompt": "A famous statue of Boudica stands near the Houses of Parliament in London. What is she riding?",
+   "answer": "a chariot",
+   "distractors": [
+    "a horse",
+    "an elephant",
+    "a ship"
+   ],
+   "explain": "The bronze statue was put up in 1902.",
+   "accept": [
+    "chariot"
+   ]
+  },
+  {
+   "id": "history.y3.bo.governor",
+   "topic": "history.y3-boudica",
+   "kind": "fact",
+   "prompt": "Where was the Roman governor when Boudica’s revolt began?",
+   "answer": "attacking the druids on the island of Anglesey",
+   "distractors": [
+    "in Rome",
+    "on holiday in Spain",
+    "in London"
+   ],
+   "explain": "He hurried back with his army, but could not save London.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.rl.wall",
+   "topic": "history.y3-roman-life",
+   "kind": "fact",
+   "prompt": "In about AD 122, which emperor ordered a great wall to be built across the north of England?",
+   "answer": "Hadrian",
+   "distractors": [
+    "Claudius",
+    "Nero",
+    "Augustus"
+   ],
+   "explain": "Hadrian’s Wall ran about 73 miles from coast to coast.",
+   "accept": [
+    "emperor hadrian"
+   ]
+  },
+  {
+   "id": "history.y3.rl.vindolanda",
+   "topic": "history.y3-roman-life",
+   "kind": "mcq",
+   "prompt": "What are the Vindolanda tablets, found near Hadrian’s Wall?",
+   "options": [
+    {
+     "text": "Thin wooden letters written by Romans living there",
+     "correct": true
+    },
+    {
+     "text": "Roman medicine pills",
+     "correct": false,
+     "feedback": "They are writing tablets, not medicine."
+    },
+    {
+     "text": "Stone tablets with laws on them",
+     "correct": false,
+     "feedback": "They are thin slices of wood with ink writing."
+    }
+   ],
+   "explain": "One is a birthday party invitation from a lady called Claudia Severa. Another mentions socks and underpants sent to a soldier!"
+  },
+  {
+   "id": "history.y3.rl.hypocaust",
+   "topic": "history.y3-roman-life",
+   "kind": "fact",
+   "prompt": "What was a hypocaust?",
+   "answer": "underfloor heating",
+   "distractors": [
+    "a Roman toilet",
+    "a type of shield",
+    "a chariot race"
+   ],
+   "explain": "Hot air from a fire flowed under the floor, which rested on little pillars of tiles.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.rl.bath",
+   "topic": "history.y3-roman-life",
+   "kind": "fact",
+   "prompt": "Which English city is named after the Roman baths built around its hot springs?",
+   "answer": "Bath",
+   "distractors": [
+    "York",
+    "Chester",
+    "Colchester"
+   ],
+   "explain": "The Romans called it Aquae Sulis. You can still see the Great Bath today.",
+   "accept": [
+    "bath"
+   ]
+  },
+  {
+   "id": "history.y3.rl.fishbourne",
+   "topic": "history.y3-roman-life",
+   "kind": "fact",
+   "prompt": "Which huge Roman palace in West Sussex has amazing mosaic floors?",
+   "answer": "Fishbourne",
+   "distractors": [
+    "Buckingham Palace",
+    "Hampton Court",
+    "Skara Brae"
+   ],
+   "explain": "A mosaic is a picture made from thousands of tiny coloured tiles.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.rl.roads",
+   "topic": "history.y3-roman-life",
+   "kind": "mcq",
+   "prompt": "Why did the Romans build long, straight roads?",
+   "options": [
+    {
+     "text": "So soldiers and supplies could travel quickly",
+     "correct": true
+    },
+    {
+     "text": "Because they did not know how to make bends",
+     "correct": false,
+     "feedback": "They could make bends, but straight was quickest."
+    },
+    {
+     "text": "For chariot races",
+     "correct": false,
+     "feedback": "Races were held in arenas."
+    }
+   ],
+   "explain": "A straight road is the shortest route. Watling Street and the Fosse Way are famous Roman roads."
+  },
+  {
+   "id": "history.y3.rl.july",
+   "topic": "history.y3-roman-life",
+   "kind": "mcq",
+   "prompt": "Which month is named after Julius Caesar?",
+   "options": [
+    {
+     "text": "July",
+     "correct": true
+    },
+    {
+     "text": "June",
+     "correct": false,
+     "feedback": "June is named after the goddess Juno."
+    },
+    {
+     "text": "January",
+     "correct": false,
+     "feedback": "January is named after the god Janus."
+    }
+   ],
+   "explain": "And August is named after the Emperor Augustus."
+  },
+  {
+   "id": "history.y3.rl.london",
+   "topic": "history.y3-roman-life",
+   "kind": "fact",
+   "prompt": "Which great city was founded by the Romans and called Londinium?",
+   "answer": "London",
+   "distractors": [
+    "Paris",
+    "Edinburgh",
+    "Dublin"
+   ],
+   "explain": "The Romans built a bridge over the Thames, and a town grew up beside it.",
+   "accept": [
+    "london"
+   ]
+  },
+  {
+   "id": "history.y3.rl.leave",
+   "topic": "history.y3-roman-life",
+   "kind": "fact",
+   "prompt": "About when did the Roman army leave Britain?",
+   "answer": "about AD 410",
+   "distractors": [
+    "about AD 43",
+    "1066",
+    "about 55 BC"
+   ],
+   "explain": "Rome itself was under attack, so the soldiers were needed at home.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.rl.latin",
+   "topic": "history.y3-roman-life",
+   "kind": "mcq",
+   "prompt": "Which of these do we still use from the Romans?",
+   "options": [
+    {
+     "text": "Roman numerals and many words from Latin",
+     "correct": true
+    },
+    {
+     "text": "Their gods for the days of the week",
+     "correct": false,
+     "feedback": "Most of our day names come from Anglo-Saxon gods."
+    },
+    {
+     "text": "Their money",
+     "correct": false,
+     "feedback": "We use pounds and pence now."
+    }
+   ],
+   "explain": "Words like “aquarium” (aqua = water) and “century” (centum = a hundred) come from Latin."
+  },
+  {
+   "id": "history.y3.sx.where",
+   "topic": "history.y3-saxons",
+   "kind": "mcq",
+   "prompt": "Where did the Angles, Saxons and Jutes come from?",
+   "options": [
+    {
+     "text": "Northern Europe: what is now Germany, Denmark and the Netherlands",
+     "correct": true
+    },
+    {
+     "text": "Italy",
+     "correct": false,
+     "feedback": "That is where the Romans came from."
+    },
+    {
+     "text": "America",
+     "correct": false,
+     "feedback": "Nobody in Europe knew about America then."
+    }
+   ],
+   "explain": "They began to arrive from about AD 450, after the Romans left."
+  },
+  {
+   "id": "history.y3.sx.england",
+   "topic": "history.y3-saxons",
+   "kind": "fact",
+   "prompt": "The word “England” comes from “Angle-land”. Which people is it named after?",
+   "answer": "the Angles",
+   "distractors": [
+    "the Romans",
+    "the Vikings",
+    "the Normans"
+   ],
+   "explain": "Angle-land became England.",
+   "accept": [
+    "angles"
+   ]
+  },
+  {
+   "id": "history.y3.sx.kingdoms",
+   "topic": "history.y3-saxons",
+   "kind": "mcq",
+   "prompt": "Which of these was an Anglo-Saxon kingdom?",
+   "options": [
+    {
+     "text": "Wessex",
+     "correct": true
+    },
+    {
+     "text": "Wakanda",
+     "correct": false,
+     "feedback": "That is from a film!"
+    },
+    {
+     "text": "Rome",
+     "correct": false,
+     "feedback": "Rome was in Italy."
+    }
+   ],
+   "explain": "The big kingdoms included Wessex, Mercia, Northumbria, East Anglia and Kent."
+  },
+  {
+   "id": "history.y3.sx.suttonhoo",
+   "topic": "history.y3-saxons",
+   "kind": "fact",
+   "prompt": "In 1939, a buried ship full of treasure, including a famous helmet, was found in Suffolk. Where?",
+   "answer": "Sutton Hoo",
+   "distractors": [
+    "Skara Brae",
+    "Stonehenge",
+    "Lindisfarne"
+   ],
+   "explain": "It was probably the grave of King Rædwald of East Anglia, who died about AD 624. The helmet is in the British Museum.",
+   "accept": [
+    "sutton hoo"
+   ]
+  },
+  {
+   "id": "history.y3.sx.augustine",
+   "topic": "history.y3-saxons",
+   "kind": "fact",
+   "prompt": "In AD 597, a monk was sent from Rome to Kent to spread Christianity. Who was he?",
+   "answer": "Augustine",
+   "distractors": [
+    "Bede",
+    "Alfred",
+    "Offa"
+   ],
+   "explain": "He became the first Archbishop of Canterbury.",
+   "accept": [
+    "st augustine",
+    "saint augustine"
+   ]
+  },
+  {
+   "id": "history.y3.sx.bede",
+   "topic": "history.y3-saxons",
+   "kind": "fact",
+   "prompt": "Which Anglo-Saxon monk at Jarrow wrote a famous history of the English people?",
+   "answer": "Bede",
+   "distractors": [
+    "Augustine",
+    "Beowulf",
+    "Cnut"
+   ],
+   "explain": "Bede finished his history in AD 731. He helped make AD dates popular.",
+   "accept": [
+    "the venerable bede",
+    "venerable bede"
+   ]
+  },
+  {
+   "id": "history.y3.sx.offa",
+   "topic": "history.y3-saxons",
+   "kind": "fact",
+   "prompt": "Which king of Mercia built a giant earth bank along the border with Wales?",
+   "answer": "Offa",
+   "distractors": [
+    "Alfred",
+    "Arthur",
+    "Athelstan"
+   ],
+   "explain": "Offa’s Dyke is still there, and you can walk along it.",
+   "accept": [
+    "king offa"
+   ]
+  },
+  {
+   "id": "history.y3.sx.days",
+   "topic": "history.y3-saxons",
+   "kind": "mcq",
+   "prompt": "Which day of the week is named after the Anglo-Saxon god Woden?",
+   "options": [
+    {
+     "text": "Wednesday",
+     "correct": true
+    },
+    {
+     "text": "Thursday",
+     "correct": false,
+     "feedback": "Thursday is named after Thunor (Thor), the thunder god."
+    },
+    {
+     "text": "Friday",
+     "correct": false,
+     "feedback": "Friday is named after the goddess Frigg."
+    }
+   ],
+   "explain": "Woden’s day became Wednesday. That is why there is a silent d in it!"
+  },
+  {
+   "id": "history.y3.sx.village",
+   "topic": "history.y3-saxons",
+   "kind": "mcq",
+   "prompt": "What were most Anglo-Saxon houses made of?",
+   "options": [
+    {
+     "text": "Wood, with thatched roofs",
+     "correct": true
+    },
+    {
+     "text": "Stone and glass",
+     "correct": false,
+     "feedback": "Most Anglo-Saxons built with wood."
+    },
+    {
+     "text": "Bricks and concrete",
+     "correct": false,
+     "feedback": "That is modern!"
+    }
+   ],
+   "explain": "The most important building in a village was the lord’s great hall, where feasts were held."
+  },
+  {
+   "id": "history.y3.sx.scots",
+   "topic": "history.y3-saxons",
+   "kind": "mcq",
+   "prompt": "In early Scotland, which two peoples were later joined together under one king?",
+   "options": [
+    {
+     "text": "The Scots and the Picts",
+     "correct": true
+    },
+    {
+     "text": "The Romans and the Greeks",
+     "correct": false,
+     "feedback": "They were never in Scotland together like that."
+    },
+    {
+     "text": "The Iceni and the Vikings",
+     "correct": false,
+     "feedback": "The Iceni lived in the east of England."
+    }
+   ],
+   "explain": "The Scots came over from Ireland; the Picts lived in the north and east. They were united in about AD 843."
+  },
+  {
+   "id": "history.y3.vk.lindisfarne",
+   "topic": "history.y3-vikings",
+   "kind": "fact",
+   "prompt": "In AD 793, Vikings attacked a famous monastery on a holy island off the coast of Northumberland. What was it called?",
+   "answer": "Lindisfarne",
+   "distractors": [
+    "Iona",
+    "Jarrow",
+    "Canterbury"
+   ],
+   "explain": "This raid shocked everyone and is often seen as the start of the Viking Age in Britain.",
+   "accept": [
+    "holy island"
+   ]
+  },
+  {
+   "id": "history.y3.vk.edington",
+   "topic": "history.y3-vikings",
+   "kind": "fact",
+   "prompt": "In 878, Alfred the Great defeated the Viking leader Guthrum at which battle?",
+   "answer": "the Battle of Edington",
+   "distractors": [
+    "the Battle of Hastings",
+    "the Battle of Britain",
+    "the Battle of Bosworth"
+   ],
+   "explain": "Afterwards Guthrum agreed to become a Christian, and England was divided between them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.vk.danelaw",
+   "topic": "history.y3-vikings",
+   "kind": "mcq",
+   "prompt": "What was the Danelaw?",
+   "options": [
+    {
+     "text": "The part of England ruled by the Vikings",
+     "correct": true
+    },
+    {
+     "text": "A law against Danish pastries",
+     "correct": false,
+     "feedback": "Ha! It was land ruled by the Danes (Vikings)."
+    },
+    {
+     "text": "A Viking ship",
+     "correct": false,
+     "feedback": "It was an area of land."
+    }
+   ],
+   "explain": "After Edington, the north and east of England became the Danelaw. Alfred kept Wessex."
+  },
+  {
+   "id": "history.y3.vk.burhs",
+   "topic": "history.y3-vikings",
+   "kind": "mcq",
+   "prompt": "How did Alfred protect Wessex from more Viking attacks?",
+   "options": [
+    {
+     "text": "He built burhs: towns with strong walls, never more than a day’s march apart",
+     "correct": true
+    },
+    {
+     "text": "He moved everyone to France",
+     "correct": false,
+     "feedback": "He stayed and defended Wessex."
+    },
+    {
+     "text": "He gave the Vikings all his gold every year",
+     "correct": false,
+     "feedback": "He built defences instead."
+    }
+   ],
+   "explain": "If the Vikings attacked, people could reach a burh quickly. Many burhs became towns we know today."
+  },
+  {
+   "id": "history.y3.vk.cakes",
+   "topic": "history.y3-vikings",
+   "kind": "mcq",
+   "prompt": "There is a famous legend about Alfred hiding from the Vikings. What did he do?",
+   "options": [
+    {
+     "text": "He let some cakes burn while he was thinking",
+     "correct": true
+    },
+    {
+     "text": "He disguised himself as a Viking",
+     "correct": false,
+     "feedback": "That is not the famous legend."
+    },
+    {
+     "text": "He hid inside a whale",
+     "correct": false,
+     "feedback": "No whales in this story!"
+    }
+   ],
+   "explain": "It is a legend, so we cannot be sure it happened, but it shows how hard times were for Alfred."
+  },
+  {
+   "id": "history.y3.vk.athelstan",
+   "topic": "history.y3-vikings",
+   "kind": "fact",
+   "prompt": "Who became the first king of all England, in 927?",
+   "answer": "Athelstan",
+   "distractors": [
+    "Alfred",
+    "Cnut",
+    "William"
+   ],
+   "explain": "Athelstan was Alfred’s grandson.",
+   "accept": [
+    "aethelstan",
+    "æthelstan"
+   ]
+  },
+  {
+   "id": "history.y3.vk.jorvik",
+   "topic": "history.y3-vikings",
+   "kind": "fact",
+   "prompt": "The Vikings called the city of York…",
+   "answer": "Jorvik",
+   "distractors": [
+    "Londinium",
+    "Camulodunum",
+    "Valhalla"
+   ],
+   "explain": "Jorvik was a busy trading town. Archaeologists found Viking houses, shoes and even poo there!",
+   "accept": [
+    "jorvík"
+   ]
+  },
+  {
+   "id": "history.y3.vk.runes",
+   "topic": "history.y3-vikings",
+   "kind": "fact",
+   "prompt": "What were the letters of the Viking alphabet called?",
+   "answer": "runes",
+   "distractors": [
+    "hieroglyphs",
+    "numerals",
+    "emojis"
+   ],
+   "explain": "Runes were made of straight lines, which are easy to carve into wood and stone.",
+   "accept": [
+    "rune"
+   ]
+  },
+  {
+   "id": "history.y3.vk.thor",
+   "topic": "history.y3-vikings",
+   "kind": "mcq",
+   "prompt": "Which Viking god carried a mighty hammer?",
+   "options": [
+    {
+     "text": "Thor",
+     "correct": true
+    },
+    {
+     "text": "Odin",
+     "correct": false,
+     "feedback": "Odin was the chief god, with one eye and two ravens."
+    },
+    {
+     "text": "Loki",
+     "correct": false,
+     "feedback": "Loki was the trickster god."
+    }
+   ],
+   "explain": "Viking warriors hoped to go to Valhalla, Odin’s great hall, when they died."
+  },
+  {
+   "id": "history.y3.vk.cnut",
+   "topic": "history.y3-vikings",
+   "kind": "fact",
+   "prompt": "Which Viking king ruled England from 1016, and also Denmark and Norway?",
+   "answer": "Cnut",
+   "distractors": [
+    "Alfred",
+    "Harold",
+    "Offa"
+   ],
+   "explain": "A famous story says he sat on the beach and showed that even a king cannot stop the tide.",
+   "accept": [
+    "canute",
+    "king cnut",
+    "knut"
+   ]
+  },
+  {
+   "id": "history.y3.gr.olympics",
+   "topic": "history.y3-greece",
+   "kind": "fact",
+   "prompt": "In which year did the first recorded Olympic Games take place, in Olympia?",
+   "answer": "776 BC",
+   "distractors": [
+    "AD 776",
+    "1066",
+    "AD 2012"
+   ],
+   "explain": "The games honoured Zeus. Only men could compete, and winners got a crown of olive leaves.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.gr.democracy",
+   "topic": "history.y3-greece",
+   "kind": "mcq",
+   "prompt": "Athens is famous for inventing democracy. What does democracy mean?",
+   "options": [
+    {
+     "text": "Rule by the people: citizens vote on decisions",
+     "correct": true
+    },
+    {
+     "text": "Rule by one king",
+     "correct": false,
+     "feedback": "That is a monarchy."
+    },
+    {
+     "text": "Rule by the army",
+     "correct": false,
+     "feedback": "Democracy means the people decide."
+    }
+   ],
+   "explain": "In Athens only free men could vote, but the idea spread across the world."
+  },
+  {
+   "id": "history.y3.gr.sparta",
+   "topic": "history.y3-greece",
+   "kind": "mcq",
+   "prompt": "What was Sparta famous for?",
+   "options": [
+    {
+     "text": "Its tough warriors: boys began training at about seven",
+     "correct": true
+    },
+    {
+     "text": "Its theatres and plays",
+     "correct": false,
+     "feedback": "Athens was more famous for theatre."
+    },
+    {
+     "text": "Its pyramids",
+     "correct": false,
+     "feedback": "Pyramids were in Egypt."
+    }
+   ],
+   "explain": "Spartan soldiers were some of the best-trained in Greece."
+  },
+  {
+   "id": "history.y3.gr.trojan",
+   "topic": "history.y3-greece",
+   "kind": "mcq",
+   "prompt": "In the legend of Troy, how did the Greeks get inside the city?",
+   "options": [
+    {
+     "text": "They hid soldiers inside a giant wooden horse",
+     "correct": true
+    },
+    {
+     "text": "They dug a tunnel",
+     "correct": false,
+     "feedback": "The trick was a wooden horse."
+    },
+    {
+     "text": "They flew over the walls",
+     "correct": false,
+     "feedback": "No flying in this legend!"
+    }
+   ],
+   "explain": "The Trojans pulled the horse inside as a prize. At night, the soldiers climbed out."
+  },
+  {
+   "id": "history.y3.gr.marathon",
+   "topic": "history.y3-greece",
+   "kind": "fact",
+   "prompt": "The marathon race is named after a battle in 490 BC. Who won the Battle of Marathon?",
+   "answer": "the Athenians (Greeks)",
+   "distractors": [
+    "the Persians",
+    "the Romans",
+    "the Vikings"
+   ],
+   "explain": "A legend says a messenger ran all the way to Athens with the news. Today’s marathon is 26.2 miles.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.gr.zeus",
+   "topic": "history.y3-greece",
+   "kind": "fact",
+   "prompt": "Who was the king of the Greek gods?",
+   "answer": "Zeus",
+   "distractors": [
+    "Thor",
+    "Jupiter",
+    "Ra"
+   ],
+   "explain": "Zeus ruled from Mount Olympus and threw thunderbolts. (Jupiter was his Roman name.)",
+   "accept": [
+    "zeus"
+   ]
+  },
+  {
+   "id": "history.y3.gr.athena",
+   "topic": "history.y3-greece",
+   "kind": "fact",
+   "prompt": "The city of Athens was named after which goddess of wisdom?",
+   "answer": "Athena",
+   "distractors": [
+    "Aphrodite",
+    "Hera",
+    "Freya"
+   ],
+   "explain": "Her great temple, the Parthenon, still stands on a hill called the Acropolis.",
+   "accept": [
+    "athene"
+   ]
+  },
+  {
+   "id": "history.y3.gr.alphabet",
+   "topic": "history.y3-greece",
+   "kind": "mcq",
+   "prompt": "The word “alphabet” comes from the first two Greek letters. What are they?",
+   "options": [
+    {
+     "text": "alpha and beta",
+     "correct": true
+    },
+    {
+     "text": "A and B",
+     "correct": false,
+     "feedback": "Close, but in Greek they are called alpha and beta."
+    },
+    {
+     "text": "alpha and omega",
+     "correct": false,
+     "feedback": "Omega is the LAST Greek letter."
+    }
+   ],
+   "explain": "Alpha + beta = alphabet."
+  },
+  {
+   "id": "history.y3.gr.hoplite",
+   "topic": "history.y3-greece",
+   "kind": "mcq",
+   "prompt": "Greek foot soldiers, called hoplites, fought in a tight block with overlapping shields. What was it called?",
+   "options": [
+    {
+     "text": "a phalanx",
+     "correct": true
+    },
+    {
+     "text": "a testudo",
+     "correct": false,
+     "feedback": "The testudo was the Roman tortoise."
+    },
+    {
+     "text": "a longship",
+     "correct": false,
+     "feedback": "That was a Viking ship."
+    }
+   ],
+   "explain": "Each soldier’s shield also helped protect the man beside him, so they had to stick together."
+  },
+  {
+   "id": "history.y3.gr.theatre",
+   "topic": "history.y3-greece",
+   "kind": "mcq",
+   "prompt": "What did the ancient Greeks give us that we still enjoy today?",
+   "options": [
+    {
+     "text": "Theatre, with comedies and tragedies",
+     "correct": true
+    },
+    {
+     "text": "Television",
+     "correct": false,
+     "feedback": "Television was invented in 1926."
+    },
+    {
+     "text": "Football",
+     "correct": false,
+     "feedback": "Modern football came from England much later."
+    }
+   ],
+   "explain": "Greek actors wore masks and performed in huge open-air theatres."
+  },
+  {
+   "id": "history.y3.civ.rivers",
+   "topic": "history.y3-civilisations",
+   "kind": "mcq",
+   "prompt": "Why were the first cities built beside rivers?",
+   "options": [
+    {
+     "text": "Rivers gave water, rich soil for crops, and a way to travel",
+     "correct": true
+    },
+    {
+     "text": "People liked the noise",
+     "correct": false,
+     "feedback": "It was about water, food and transport."
+    },
+    {
+     "text": "Rivers kept away the Romans",
+     "correct": false,
+     "feedback": "The Romans came much later."
+    }
+   ],
+   "explain": "Rivers flooded and left rich mud. Farmers grew extra food, so cities could grow."
+  },
+  {
+   "id": "history.y3.civ.cuneiform",
+   "topic": "history.y3-civilisations",
+   "kind": "fact",
+   "prompt": "About 5,200 years ago, people in Sumer invented one of the first kinds of writing, pressed into clay with a reed. What is it called?",
+   "answer": "cuneiform",
+   "distractors": [
+    "hieroglyphs",
+    "runes",
+    "Latin"
+   ],
+   "explain": "Cuneiform means wedge-shaped, because of the shapes the reed made.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.civ.mesopotamia",
+   "topic": "history.y3-civilisations",
+   "kind": "fact",
+   "prompt": "Sumer was in Mesopotamia, which means “the land between the rivers”. Which modern country is it in?",
+   "answer": "Iraq",
+   "distractors": [
+    "Egypt",
+    "China",
+    "Greece"
+   ],
+   "explain": "The two rivers are the Tigris and the Euphrates.",
+   "accept": [
+    "iraq"
+   ]
+  },
+  {
+   "id": "history.y3.civ.wheel",
+   "topic": "history.y3-civilisations",
+   "kind": "mcq",
+   "prompt": "Which very important invention were the Sumerians among the first to use, about 5,500 years ago?",
+   "options": [
+    {
+     "text": "the wheel",
+     "correct": true
+    },
+    {
+     "text": "the telephone",
+     "correct": false,
+     "feedback": "That was 1876!"
+    },
+    {
+     "text": "the aeroplane",
+     "correct": false,
+     "feedback": "That was 1903."
+    }
+   ],
+   "explain": "First for making pots, then for carts."
+  },
+  {
+   "id": "history.y3.civ.indus",
+   "topic": "history.y3-civilisations",
+   "kind": "fact",
+   "prompt": "Which ancient civilisation built the cities of Mohenjo-daro and Harappa, with neat streets and drains?",
+   "answer": "the Indus Valley civilisation",
+   "distractors": [
+    "the Romans",
+    "the Vikings",
+    "the Shang"
+   ],
+   "explain": "They lived about 4,500 years ago in what is now Pakistan and north-west India.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.civ.drains",
+   "topic": "history.y3-civilisations",
+   "kind": "mcq",
+   "prompt": "What was amazing about Indus Valley cities?",
+   "options": [
+    {
+     "text": "They were carefully planned, with drains and covered sewers",
+     "correct": true
+    },
+    {
+     "text": "They were built on the Moon",
+     "correct": false,
+     "feedback": "They were beside the River Indus."
+    },
+    {
+     "text": "They had electric lights",
+     "correct": false,
+     "feedback": "Electricity came thousands of years later."
+    }
+   ],
+   "explain": "Many houses had their own bathroom, connected to drains under the streets."
+  },
+  {
+   "id": "history.y3.civ.order",
+   "topic": "history.y3-civilisations",
+   "kind": "order",
+   "prompt": "Put these in order, earliest first.",
+   "items": [
+    "Writing begins in Sumer",
+    "The Great Pyramid is built",
+    "The first Olympic Games",
+    "The Romans invade Britain"
+   ],
+   "labels": [
+    "about 3200 BC",
+    "about 2560 BC",
+    "776 BC",
+    "AD 43"
+   ],
+   "explain": "About 3200 BC, about 2560 BC, 776 BC, AD 43."
+  },
+  {
+   "id": "history.y3.civ.surplus",
+   "topic": "history.y3-civilisations",
+   "kind": "mcq",
+   "prompt": "Once farmers grew more food than they needed, what could other people do?",
+   "options": [
+    {
+     "text": "Have other jobs, like making pots, building or writing",
+     "correct": true
+    },
+    {
+     "text": "Stop eating",
+     "correct": false,
+     "feedback": "Everyone still needs food!"
+    },
+    {
+     "text": "Leave the city for ever",
+     "correct": false,
+     "feedback": "Extra food let cities grow."
+    }
+   ],
+   "explain": "Spare food meant some people could become potters, builders, priests and scribes."
+  },
+  {
+   "id": "history.y3.civ.ziggurat",
+   "topic": "history.y3-civilisations",
+   "kind": "fact",
+   "prompt": "The Sumerians built huge stepped temples. What were they called?",
+   "answer": "ziggurats",
+   "distractors": [
+    "pyramids",
+    "castles",
+    "igloos"
+   ],
+   "explain": "A ziggurat looks like a pyramid made of giant steps, with a temple at the top.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.sg.trebuchet",
+   "topic": "history.y3-sieges",
+   "kind": "fact",
+   "prompt": "Which giant siege machine used a heavy counterweight to fling huge stones at castle walls?",
+   "answer": "a trebuchet",
+   "distractors": [
+    "a battering ram",
+    "a drawbridge",
+    "a portcullis"
+   ],
+   "explain": "King Edward I had an enormous trebuchet called the “Warwolf” built to attack Stirling Castle in 1304.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.sg.tower",
+   "topic": "history.y3-sieges",
+   "kind": "fact",
+   "prompt": "What did attackers push up to the castle walls so soldiers could climb across the top?",
+   "answer": "a siege tower",
+   "distractors": [
+    "a trebuchet",
+    "a moat",
+    "a keep"
+   ],
+   "explain": "Siege towers were tall wooden towers on wheels, often covered in wet animal skins so they would not burn.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.sg.ram",
+   "topic": "history.y3-sieges",
+   "kind": "fact",
+   "prompt": "What was used to smash down a castle gate?",
+   "answer": "a battering ram",
+   "distractors": [
+    "a catapult",
+    "a crossbow",
+    "a portcullis"
+   ],
+   "explain": "Soldiers swung a huge tree trunk, often under a roof to protect them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.sg.mine",
+   "topic": "history.y3-sieges",
+   "kind": "mcq",
+   "prompt": "In 1215, how did King John’s army bring down a tower of Rochester Castle?",
+   "options": [
+    {
+     "text": "They dug a tunnel under it and burned the wooden props, using the fat of 40 pigs",
+     "correct": true
+    },
+    {
+     "text": "They flew over it in a balloon",
+     "correct": false,
+     "feedback": "Balloons came hundreds of years later."
+    },
+    {
+     "text": "They asked nicely",
+     "correct": false,
+     "feedback": "It was a siege!"
+    }
+   ],
+   "explain": "When the props burned away, the tunnel collapsed and the tower fell in."
+  },
+  {
+   "id": "history.y3.sg.concentric",
+   "topic": "history.y3-sieges",
+   "kind": "mcq",
+   "prompt": "What is a concentric castle?",
+   "options": [
+    {
+     "text": "A castle with rings of walls, one inside another",
+     "correct": true
+    },
+    {
+     "text": "A castle made of concrete",
+     "correct": false,
+     "feedback": "Concentric means circles with the same centre."
+    },
+    {
+     "text": "A castle with no walls",
+     "correct": false,
+     "feedback": "It has MORE walls, not fewer."
+    }
+   ],
+   "explain": "If attackers got over the outer wall, they were trapped between two walls. Beaumaris in Wales is a famous example."
+  },
+  {
+   "id": "history.y3.sg.edward",
+   "topic": "history.y3-sieges",
+   "kind": "fact",
+   "prompt": "Which king built a ring of mighty castles in Wales, such as Conwy, Caernarfon, Harlech and Beaumaris?",
+   "answer": "Edward I",
+   "distractors": [
+    "Henry VIII",
+    "Alfred",
+    "Charles III"
+   ],
+   "explain": "He built them after conquering Wales in the 1280s.",
+   "accept": [
+    "edward the first",
+    "edward 1",
+    "king edward i"
+   ]
+  },
+  {
+   "id": "history.y3.sg.starve",
+   "topic": "history.y3-sieges",
+   "kind": "mcq",
+   "prompt": "If attackers could not break in, what else could they do?",
+   "options": [
+    {
+     "text": "Surround the castle and wait until the defenders ran out of food",
+     "correct": true
+    },
+    {
+     "text": "Give up and go home at once",
+     "correct": false,
+     "feedback": "Sometimes they did, but often they waited."
+    },
+    {
+     "text": "Ring the doorbell",
+     "correct": false,
+     "feedback": "Castles did not have doorbells!"
+    }
+   ],
+   "explain": "A siege could last for months. Castles had wells and food stores to hold out."
+  },
+  {
+   "id": "history.y3.sg.murder",
+   "topic": "history.y3-sieges",
+   "kind": "fact",
+   "prompt": "Defenders could drop stones through holes in the ceiling of the gateway. What were these holes called?",
+   "answer": "murder holes",
+   "distractors": [
+    "arrow slits",
+    "battlements",
+    "windows"
+   ],
+   "explain": "Attackers who got through the gate were still not safe.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.sg.slit",
+   "topic": "history.y3-sieges",
+   "kind": "fact",
+   "prompt": "Narrow openings in castle walls let archers shoot out but were hard to hit from outside. What were they called?",
+   "answer": "arrow slits",
+   "distractors": [
+    "murder holes",
+    "chimneys",
+    "drains"
+   ],
+   "explain": "They were wide on the inside and very narrow on the outside.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.bb.year",
+   "topic": "history.y3-britain1940",
+   "kind": "fact",
+   "prompt": "In which year was the Battle of Britain fought?",
+   "answer": "1940",
+   "distractors": [
+    "1914",
+    "1945",
+    "1066"
+   ],
+   "explain": "It lasted from July to October 1940."
+  },
+  {
+   "id": "history.y3.bb.what",
+   "topic": "history.y3-britain1940",
+   "kind": "mcq",
+   "prompt": "What was the Battle of Britain?",
+   "options": [
+    {
+     "text": "A battle in the skies between the RAF and the German air force",
+     "correct": true
+    },
+    {
+     "text": "A battle at sea",
+     "correct": false,
+     "feedback": "It was fought in the air."
+    },
+    {
+     "text": "A battle between knights",
+     "correct": false,
+     "feedback": "It was in 1940, with aeroplanes."
+    }
+   ],
+   "explain": "Germany wanted to control the skies before trying to invade. The RAF stopped them."
+  },
+  {
+   "id": "history.y3.bb.radar",
+   "topic": "history.y3-britain1940",
+   "kind": "mcq",
+   "prompt": "How did radar help the RAF?",
+   "options": [
+    {
+     "text": "It spotted enemy planes far away, so fighters could take off in time",
+     "correct": true
+    },
+    {
+     "text": "It made planes invisible",
+     "correct": false,
+     "feedback": "Radar finds planes; it does not hide them."
+    },
+    {
+     "text": "It fired the guns",
+     "correct": false,
+     "feedback": "Radar is for seeing far away."
+    }
+   ],
+   "explain": "A chain of radar stations along the coast, called Chain Home, sent out radio waves that bounced back off planes."
+  },
+  {
+   "id": "history.y3.bb.observer",
+   "topic": "history.y3-britain1940",
+   "kind": "fact",
+   "prompt": "Radar could not see planes once they had crossed the coast. Who tracked them over land, with binoculars?",
+   "answer": "the Observer Corps",
+   "distractors": [
+    "the Home Guard",
+    "the Land Girls",
+    "the Navy"
+   ],
+   "explain": "Thousands of volunteers watched the skies from posts all over the country.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.bb.hurricane",
+   "topic": "history.y3-britain1940",
+   "kind": "mcq",
+   "prompt": "The Spitfire is the most famous fighter. Which other RAF fighter shot down even more enemy planes in the battle?",
+   "options": [
+    {
+     "text": "the Hurricane",
+     "correct": true
+    },
+    {
+     "text": "the Concorde",
+     "correct": false,
+     "feedback": "Concorde was a passenger jet, first flown in 1969."
+    },
+    {
+     "text": "the Wright Flyer",
+     "correct": false,
+     "feedback": "That was the first aeroplane, in 1903."
+    }
+   ],
+   "explain": "There were more Hurricanes than Spitfires in 1940, and they were tough and steady."
+  },
+  {
+   "id": "history.y3.bb.few",
+   "topic": "history.y3-britain1940",
+   "kind": "mcq",
+   "prompt": "Winston Churchill said, “Never was so much owed by so many to so few.” Who were “the Few”?",
+   "options": [
+    {
+     "text": "The RAF fighter pilots",
+     "correct": true
+    },
+    {
+     "text": "The king and queen",
+     "correct": false,
+     "feedback": "He meant the pilots."
+    },
+    {
+     "text": "The German pilots",
+     "correct": false,
+     "feedback": "He was thanking the RAF pilots."
+    }
+   ],
+   "explain": "There were only about 3,000 RAF aircrew in the battle, protecting millions of people."
+  },
+  {
+   "id": "history.y3.bb.countries",
+   "topic": "history.y3-britain1940",
+   "kind": "mcq",
+   "prompt": "Where did the RAF pilots in the Battle of Britain come from?",
+   "options": [
+    {
+     "text": "From Britain and many other countries, including Poland, Czechoslovakia, Canada and New Zealand",
+     "correct": true
+    },
+    {
+     "text": "Only from London",
+     "correct": false,
+     "feedback": "Pilots came from all over the world."
+    },
+    {
+     "text": "Only from the USA",
+     "correct": false,
+     "feedback": "There were a few Americans, but pilots came from many countries."
+    }
+   ],
+   "explain": "The Polish 303 Squadron was one of the most successful of all."
+  },
+  {
+   "id": "history.y3.bb.plotters",
+   "topic": "history.y3-britain1940",
+   "kind": "mcq",
+   "prompt": "In the operations rooms, what did members of the Women’s Auxiliary Air Force (WAAF) do?",
+   "options": [
+    {
+     "text": "Moved markers on giant map tables to show where planes were",
+     "correct": true
+    },
+    {
+     "text": "Flew the fighter planes",
+     "correct": false,
+     "feedback": "Women did not fly in combat in 1940, but some flew planes between airfields."
+    },
+    {
+     "text": "Cooked all the meals",
+     "correct": false,
+     "feedback": "Their job was tracking the battle."
+    }
+   ],
+   "explain": "Commanders looked down at the table and decided which squadrons to send."
+  },
+  {
+   "id": "history.y3.bb.dowding",
+   "topic": "history.y3-britain1940",
+   "kind": "fact",
+   "prompt": "Who was in charge of RAF Fighter Command and built its warning and control system?",
+   "answer": "Hugh Dowding",
+   "distractors": [
+    "Winston Churchill",
+    "Alan Turing",
+    "Neil Armstrong"
+   ],
+   "explain": "His system joined radar, observers, map rooms and squadrons together.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.bb.day",
+   "topic": "history.y3-britain1940",
+   "kind": "fact",
+   "prompt": "Which day is remembered as Battle of Britain Day?",
+   "answer": "15 September",
+   "distractors": [
+    "5 November",
+    "11 November",
+    "25 December"
+   ],
+   "explain": "On 15 September 1940 the RAF beat off two huge attacks. Soon afterwards the invasion plan was put off.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.hf.blitz",
+   "topic": "history.y3-homefront",
+   "kind": "mcq",
+   "prompt": "What was the Blitz?",
+   "options": [
+    {
+     "text": "The bombing of British cities, mostly at night, in 1940 and 1941",
+     "correct": true
+    },
+    {
+     "text": "A famous football match",
+     "correct": false,
+     "feedback": "It was the bombing of cities."
+    },
+    {
+     "text": "A type of fighter plane",
+     "correct": false,
+     "feedback": "It was a long period of air raids."
+    }
+   ],
+   "explain": "Blitz is short for the German word “Blitzkrieg”, meaning lightning war. London was bombed for 57 nights in a row."
+  },
+  {
+   "id": "history.y3.hf.anderson",
+   "topic": "history.y3-homefront",
+   "kind": "fact",
+   "prompt": "Which air-raid shelter was half-buried in the garden and made of curved steel sheets?",
+   "answer": "an Anderson shelter",
+   "distractors": [
+    "a Morrison shelter",
+    "a castle",
+    "a bunker on the Moon"
+   ],
+   "explain": "Families covered them with earth, and some grew vegetables on top!",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.hf.morrison",
+   "topic": "history.y3-homefront",
+   "kind": "fact",
+   "prompt": "Which shelter was a strong steel cage that went indoors and could be used as a table?",
+   "answer": "a Morrison shelter",
+   "distractors": [
+    "an Anderson shelter",
+    "a tube station",
+    "a tent"
+   ],
+   "explain": "Families crawled inside it during a raid.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.hf.underground",
+   "topic": "history.y3-homefront",
+   "kind": "mcq",
+   "prompt": "Where did many Londoners shelter during air raids?",
+   "options": [
+    {
+     "text": "In Underground stations",
+     "correct": true
+    },
+    {
+     "text": "On the roofs",
+     "correct": false,
+     "feedback": "Roofs were the most dangerous place!"
+    },
+    {
+     "text": "In the River Thames",
+     "correct": false,
+     "feedback": "They went underground."
+    }
+   ],
+   "explain": "Thousands of people slept on the platforms of the Tube."
+  },
+  {
+   "id": "history.y3.hf.blackout",
+   "topic": "history.y3-homefront",
+   "kind": "mcq",
+   "prompt": "Why did everyone have to keep a “blackout” at night?",
+   "options": [
+    {
+     "text": "So enemy bombers could not see the towns from the air",
+     "correct": true
+    },
+    {
+     "text": "To save money on electricity",
+     "correct": false,
+     "feedback": "The main reason was to hide towns from bombers."
+    },
+    {
+     "text": "So children would go to sleep",
+     "correct": false,
+     "feedback": "Nice idea, but it was to hide from bombers."
+    }
+   ],
+   "explain": "Thick curtains covered every window, and street lights were turned off. Wardens shouted, “Put that light out!”"
+  },
+  {
+   "id": "history.y3.hf.landgirls",
+   "topic": "history.y3-homefront",
+   "kind": "fact",
+   "prompt": "Women who did farm work during the war were part of the Women’s Land Army. What were they nicknamed?",
+   "answer": "Land Girls",
+   "distractors": [
+    "Spitfire Girls",
+    "Wrens",
+    "the Few"
+   ],
+   "explain": "They ploughed fields, milked cows and drove tractors, so Britain had enough food.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.hf.dig",
+   "topic": "history.y3-homefront",
+   "kind": "mcq",
+   "prompt": "What did the “Dig for Victory” campaign ask people to do?",
+   "options": [
+    {
+     "text": "Grow their own vegetables in gardens and parks",
+     "correct": true
+    },
+    {
+     "text": "Dig tunnels under Germany",
+     "correct": false,
+     "feedback": "It was about growing food at home."
+    },
+    {
+     "text": "Dig for buried treasure",
+     "correct": false,
+     "feedback": "It was about vegetables!"
+    }
+   ],
+   "explain": "Ships bringing food were being attacked, so growing your own helped everyone."
+  },
+  {
+   "id": "history.y3.hf.gasmask",
+   "topic": "history.y3-homefront",
+   "kind": "fact",
+   "prompt": "What did every child carry in a cardboard box, just in case?",
+   "answer": "a gas mask",
+   "distractors": [
+    "a sandwich",
+    "a toy",
+    "a torch"
+   ],
+   "explain": "Luckily, gas was never used on Britain’s towns.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.hf.homeguard",
+   "topic": "history.y3-homefront",
+   "kind": "fact",
+   "prompt": "Men who were too old or young to join the army, or did vital jobs, could volunteer to defend their town. What was this group called?",
+   "answer": "the Home Guard",
+   "distractors": [
+    "the Observer Corps",
+    "the Land Army",
+    "the Roman legion"
+   ],
+   "explain": "The TV comedy “Dad’s Army” is about the Home Guard.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.hf.ration",
+   "topic": "history.y3-homefront",
+   "kind": "mcq",
+   "prompt": "Why was food rationed during the war?",
+   "options": [
+    {
+     "text": "Ships bringing food were attacked, so there had to be fair shares for everyone",
+     "correct": true
+    },
+    {
+     "text": "People wanted to lose weight",
+     "correct": false,
+     "feedback": "It was about fair shares when food was scarce."
+    },
+    {
+     "text": "Shops were closed",
+     "correct": false,
+     "feedback": "Shops were open, but food was limited."
+    }
+   ],
+   "explain": "Rationing began in January 1940. Everyone had a ration book."
+  },
+  {
+   "id": "history.y3.hf.ve",
+   "topic": "history.y3-homefront",
+   "kind": "fact",
+   "prompt": "People had street parties when the war in Europe ended. What was that day called?",
+   "answer": "VE Day",
+   "distractors": [
+    "D-Day",
+    "Boxing Day",
+    "Remembrance Day"
+   ],
+   "explain": "VE means Victory in Europe. It was 8 May 1945.",
+   "accept": [
+    "victory in europe day",
+    "ve"
+   ]
+  },
+  {
+   "id": "history.y3.sk.bc",
+   "topic": "history.y3-skills",
+   "kind": "mcq",
+   "prompt": "Which happened earlier: 500 BC or 200 BC?",
+   "options": [
+    {
+     "text": "500 BC",
+     "correct": true
+    },
+    {
+     "text": "200 BC",
+     "correct": false,
+     "feedback": "BC years count DOWN towards AD 1, so 500 BC is further back in time."
+    },
+    {
+     "text": "They are the same time",
+     "correct": false,
+     "feedback": "They are 300 years apart."
+    }
+   ],
+   "explain": "BC years count backwards: the bigger the number, the longer ago."
+  },
+  {
+   "id": "history.y3.sk.ad",
+   "topic": "history.y3-skills",
+   "kind": "mcq",
+   "prompt": "What does AD stand for?",
+   "options": [
+    {
+     "text": "Anno Domini: “in the year of the Lord”",
+     "correct": true
+    },
+    {
+     "text": "After Dinosaurs",
+     "correct": false,
+     "feedback": "Ha! It is Latin: Anno Domini."
+    },
+    {
+     "text": "Ancient Days",
+     "correct": false,
+     "feedback": "It is Latin: Anno Domini."
+    }
+   ],
+   "explain": "AD years count up from the year Christians believed Jesus was born. Some people write CE and BCE instead."
+  },
+  {
+   "id": "history.y3.sk.century",
+   "topic": "history.y3-skills",
+   "kind": "fact",
+   "prompt": "How many years are in a century?",
+   "answer": "100",
+   "distractors": [
+    "10",
+    "1000",
+    "50"
+   ],
+   "explain": "Cent means a hundred, like a centipede with (supposedly) 100 legs."
+  },
+  {
+   "id": "history.y3.sk.decade",
+   "topic": "history.y3-skills",
+   "kind": "fact",
+   "prompt": "How many years are in a decade?",
+   "answer": "10",
+   "distractors": [
+    "100",
+    "12",
+    "1000"
+   ],
+   "explain": "Dec means ten."
+  },
+  {
+   "id": "history.y3.sk.primary",
+   "topic": "history.y3-skills",
+   "kind": "mcq",
+   "prompt": "Which of these is a PRIMARY source about the Romans?",
+   "options": [
+    {
+     "text": "A letter written by a Roman soldier at Vindolanda",
+     "correct": true
+    },
+    {
+     "text": "A history book written last year",
+     "correct": false,
+     "feedback": "That was made long afterwards: a secondary source."
+    },
+    {
+     "text": "A film about gladiators",
+     "correct": false,
+     "feedback": "Films are made much later: secondary sources."
+    }
+   ],
+   "explain": "A primary source comes from the time itself. A secondary source is made later by someone studying the past."
+  },
+  {
+   "id": "history.y3.sk.secondary",
+   "topic": "history.y3-skills",
+   "kind": "mcq",
+   "prompt": "Which of these is a SECONDARY source about the Vikings?",
+   "options": [
+    {
+     "text": "A modern book about Viking life",
+     "correct": true
+    },
+    {
+     "text": "A Viking sword found in a river",
+     "correct": false,
+     "feedback": "That object comes from the time: a primary source."
+    },
+    {
+     "text": "Runes carved by a Viking",
+     "correct": false,
+     "feedback": "They were carved at the time: primary."
+    }
+   ],
+   "explain": "Secondary sources are useful too, because historians bring lots of evidence together."
+  },
+  {
+   "id": "history.y3.sk.archaeologist",
+   "topic": "history.y3-skills",
+   "kind": "fact",
+   "prompt": "Who digs carefully in the ground to find things from the past?",
+   "answer": "an archaeologist",
+   "distractors": [
+    "an astronaut",
+    "a vet",
+    "a pharaoh"
+   ],
+   "explain": "Archaeologists use trowels and brushes and record exactly where everything is found.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.sk.artefact",
+   "topic": "history.y3-skills",
+   "kind": "fact",
+   "prompt": "An object made by people in the past, like a coin or a pot, is called an…",
+   "answer": "artefact",
+   "distractors": [
+    "ancestor",
+    "anagram",
+    "antelope"
+   ],
+   "explain": "Artefacts are clues to how people lived.",
+   "accept": [
+    "artifact",
+    "an artefact"
+   ]
+  },
+  {
+   "id": "history.y3.sk.1066",
+   "topic": "history.y3-skills",
+   "kind": "mcq",
+   "prompt": "In which century was 1066?",
+   "options": [
+    {
+     "text": "the 11th century",
+     "correct": true
+    },
+    {
+     "text": "the 10th century",
+     "correct": false,
+     "feedback": "The 1000s are the 11th century, just as the 1900s were the 20th century."
+    },
+    {
+     "text": "the 16th century",
+     "correct": false,
+     "feedback": "The 1500s were the 16th century."
+    }
+   ],
+   "explain": "Years 1001 to 1100 make the 11th century. The century number is one more than the hundreds."
+  },
+  {
+   "id": "history.y3.sk.zero",
+   "topic": "history.y3-skills",
+   "kind": "mcq",
+   "prompt": "Which year came straight after 1 BC?",
+   "options": [
+    {
+     "text": "AD 1",
+     "correct": true
+    },
+    {
+     "text": "year 0",
+     "correct": false,
+     "feedback": "There was no year 0! It goes 1 BC, then AD 1."
+    },
+    {
+     "text": "2 BC",
+     "correct": false,
+     "feedback": "2 BC came BEFORE 1 BC."
+    }
+   ],
+   "explain": "The calendar jumps from 1 BC to AD 1."
+  },
+  {
+   "id": "history.y3.no.domesday",
+   "topic": "history.y3-normans",
+   "kind": "fact",
+   "prompt": "In 1086, William the Conqueror sent people all over England to record who owned what land and animals. What is this record called?",
+   "answer": "the Domesday Book",
+   "distractors": [
+    "the Bayeux Tapestry",
+    "the Magna Carta",
+    "the Doomsday Diary"
+   ],
+   "explain": "It still exists and you can look up almost any old village in it.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.no.motte",
+   "topic": "history.y3-normans",
+   "kind": "mcq",
+   "prompt": "What was a motte and bailey castle?",
+   "options": [
+    {
+     "text": "A wooden tower on a mound of earth, with a fenced yard below",
+     "correct": true
+    },
+    {
+     "text": "A castle made of ice",
+     "correct": false,
+     "feedback": "They were earth and wood at first."
+    },
+    {
+     "text": "A ship",
+     "correct": false,
+     "feedback": "It was a castle."
+    }
+   ],
+   "explain": "They could be built in a few weeks. Later many were rebuilt in stone."
+  },
+  {
+   "id": "history.y3.no.feudal",
+   "topic": "history.y3-normans",
+   "kind": "order",
+   "prompt": "Put the feudal system in order, from most powerful to least.",
+   "items": [
+    "the king",
+    "barons",
+    "knights",
+    "peasants"
+   ],
+   "labels": null,
+   "explain": "The king gave land to barons, barons gave land to knights, and peasants worked the land."
+  },
+  {
+   "id": "history.y3.no.tower",
+   "topic": "history.y3-normans",
+   "kind": "fact",
+   "prompt": "Which great stone tower did William build in London?",
+   "answer": "the White Tower (Tower of London)",
+   "distractors": [
+    "Big Ben",
+    "the Shard",
+    "Nelson’s Column"
+   ],
+   "explain": "It was built to show Londoners who was in charge.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.no.french",
+   "topic": "history.y3-normans",
+   "kind": "mcq",
+   "prompt": "The Normans spoke French. Which English words come from Norman French?",
+   "options": [
+    {
+     "text": "beef and pork",
+     "correct": true
+    },
+    {
+     "text": "cow and pig",
+     "correct": false,
+     "feedback": "Those are older English words. Peasants raised cows and pigs; the Normans ate “boeuf” and “porc”."
+    },
+    {
+     "text": "cat and dog",
+     "correct": false,
+     "feedback": "Those are Old English words."
+    }
+   ],
+   "explain": "English took thousands of words from Norman French."
+  },
+  {
+   "id": "history.y3.no.why",
+   "topic": "history.y3-normans",
+   "kind": "mcq",
+   "prompt": "Why did William want the Domesday Book made?",
+   "options": [
+    {
+     "text": "To know what everyone owned, so he could collect taxes",
+     "correct": true
+    },
+    {
+     "text": "To write down bedtime stories",
+     "correct": false,
+     "feedback": "It is a record of land and animals."
+    },
+    {
+     "text": "To plan a holiday",
+     "correct": false,
+     "feedback": "It was about land and taxes."
+    }
+   ],
+   "explain": "People said it was like Judgement Day (“Doomsday”): there was no escaping it!"
+  },
+  {
+   "id": "history.y3.no.stone",
+   "topic": "history.y3-normans",
+   "kind": "mcq",
+   "prompt": "Why did the Normans later rebuild many wooden castles in stone?",
+   "options": [
+    {
+     "text": "Stone could not be burned and was much stronger",
+     "correct": true
+    },
+    {
+     "text": "Wood was too expensive",
+     "correct": false,
+     "feedback": "Stone was actually more work. It was about strength and fire."
+    },
+    {
+     "text": "Stone was warmer",
+     "correct": false,
+     "feedback": "Stone castles were cold! It was about strength."
+    }
+   ],
+   "explain": "A wooden tower could be set on fire by attackers."
+  },
+  {
+   "id": "history.y3.no.villein",
+   "topic": "history.y3-normans",
+   "kind": "mcq",
+   "prompt": "What did most peasants (villeins) have to do?",
+   "options": [
+    {
+     "text": "Work on their lord’s land as well as their own",
+     "correct": true
+    },
+    {
+     "text": "Fight in tournaments",
+     "correct": false,
+     "feedback": "That was for knights."
+    },
+    {
+     "text": "Nothing at all",
+     "correct": false,
+     "feedback": "They worked very hard."
+    }
+   ],
+   "explain": "They could not leave the village without the lord’s permission."
+  },
+  {
+   "id": "history.y3.shang.when",
+   "topic": "history.y3-shang",
+   "kind": "fact",
+   "prompt": "About how long ago did the Shang dynasty begin in China?",
+   "answer": "about 3,600 years ago",
+   "distractors": [
+    "about 360 years ago",
+    "about 36 years ago",
+    "about 36,000 years ago"
+   ],
+   "explain": "The Shang ruled from about 1600 BC to about 1046 BC.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.shang.river",
+   "topic": "history.y3-shang",
+   "kind": "fact",
+   "prompt": "Which river did the Shang live beside?",
+   "answer": "the Yellow River",
+   "distractors": [
+    "the Nile",
+    "the Thames",
+    "the Indus"
+   ],
+   "explain": "Its mud is yellow, which gives the river its name.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.y3.shang.oracle",
+   "topic": "history.y3-shang",
+   "kind": "mcq",
+   "prompt": "What were oracle bones?",
+   "options": [
+    {
+     "text": "Bones with questions to the ancestors carved on them, cracked with heat to find answers",
+     "correct": true
+    },
+    {
+     "text": "Dinosaur fossils",
+     "correct": false,
+     "feedback": "They were animal bones used to ask questions."
+    },
+    {
+     "text": "Musical instruments",
+     "correct": false,
+     "feedback": "They were used to ask the ancestors questions."
+    }
+   ],
+   "explain": "They are the oldest Chinese writing we have, and many Chinese characters come from them."
+  },
+  {
+   "id": "history.y3.shang.bronze",
+   "topic": "history.y3-shang",
+   "kind": "mcq",
+   "prompt": "What were the Shang especially skilled at making?",
+   "options": [
+    {
+     "text": "Beautiful bronze vessels and weapons",
+     "correct": true
+    },
+    {
+     "text": "Steam engines",
+     "correct": false,
+     "feedback": "Those came about 3,000 years later."
+    },
+    {
+     "text": "Plastic toys",
+     "correct": false,
+     "feedback": "Plastic is very modern."
+    }
+   ],
+   "explain": "Their bronze pots were used in ceremonies for the ancestors."
+  },
+  {
+   "id": "history.y3.shang.writing",
+   "topic": "history.y3-shang",
+   "kind": "mcq",
+   "prompt": "Why are oracle bones so important to historians today?",
+   "options": [
+    {
+     "text": "They are the oldest Chinese writing ever found",
+     "correct": true
+    },
+    {
+     "text": "They show what dinosaurs ate",
+     "correct": false,
+     "feedback": "They are from people, not dinosaurs."
+    },
+    {
+     "text": "They were used as money",
+     "correct": false,
+     "feedback": "They were for asking questions, and now they are evidence."
+    }
+   ],
+   "explain": "They tell us about Shang kings, battles, weather and harvests."
+  },
+  {
+   "id": "history.y3.shang.fuhao",
+   "topic": "history.y3-shang",
+   "kind": "fact",
+   "prompt": "Which Shang queen was also a general who led armies? Her tomb was found in 1976.",
+   "answer": "Fu Hao",
+   "distractors": [
+    "Boudica",
+    "Cleopatra",
+    "Elizabeth I"
+   ],
+   "explain": "Her tomb was full of bronze, jade and weapons.",
+   "formats": [
+    "choice"
+   ]
+  }
+ ]
+}

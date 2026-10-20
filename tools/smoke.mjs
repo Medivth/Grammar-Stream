@@ -229,7 +229,8 @@ try {
     console.log(`${label}: Year 2 session step types: ${[...seen2].join(', ')}`);
     // a grown-up moves him up to Year 3: everything is kept, and a Year 3 session runs
     await page.goto(`http://127.0.0.1:${PORT}/#/parent`);
-    for (const d of '1234') await page.click(`.pin-pad button[aria-label="${d}"]`);
+    await page.waitForSelector('.pin-pad, button:has-text("Move up to Year 3")');
+    if (await page.$('.pin-pad')) for (const d of '1234') await page.click(`.pin-pad button[aria-label="${d}"]`);
     page.once('dialog', (d) => d.accept());
     const cardsBefore = await page.evaluate(() => Object.keys(window.__app.state.cards).length);
     await page.click('button:has-text("Move up to Year 3")');

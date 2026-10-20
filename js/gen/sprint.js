@@ -64,13 +64,13 @@ const SPRINT_Y3 = [
   [
     (r) => { const a = r.pick([3, 4, 8]), b = r.int(1, 12); return { prompt: `${a} × ${b}`, value: a * b }; },
     (r) => { const a = r.pick([3, 4, 8]), b = r.int(1, 12); return { prompt: `${a * b} ÷ ${a}`, value: b }; },
-    (r) => { const a = r.int(101, 899), b = r.pick([1, 10, 100]) * r.int(1, 9); return { prompt: `${a} + ${b}`, value: a + b }; },
+    (r) => { const b = r.pick([1, 10, 100]) * r.int(1, 9), a = r.int(101, 999 - b); return { prompt: `${a} + ${b}`, value: a + b }; },
     (r) => { const a = r.int(51, 99), b = r.int(12, 49); return { prompt: `${a} − ${b}`, value: a - b }; },
   ],
   [
     (r) => { const a = r.pick([3, 4, 8]), b = r.int(2, 9); return { prompt: `${a} × ${b * 10}`, value: a * b * 10 }; },
     (r) => { const a = r.int(2, 9) * 100; return { prompt: `${a} + ? = 1000`, value: 1000 - a }; },
-    (r) => { const a = r.int(200, 999), b = r.pick([10, 100]) * r.int(1, 9); return { prompt: `${a} − ${b}`, value: a - b }; },
+    (r) => { const b = r.pick([10, 100]) * r.int(1, 9), a = r.int(b + 1, 999); return { prompt: `${a} − ${b}`, value: a - b }; },
     (r) => { const d = r.pick([2, 3, 4, 5, 10]), q = r.int(2, 12); return { prompt: `{{1/${d}}} of ${d * q}`, value: q }; },
     (r) => { const a = r.int(2, 12); return { prompt: `${a} × 10`, value: a * 10 }; },
   ],

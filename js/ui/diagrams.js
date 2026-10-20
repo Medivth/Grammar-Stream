@@ -321,8 +321,9 @@ function numLine(d) {
 
 // an angle between two arms (degrees, measured anticlockwise from the bottom arm); no right-angle mark, so it is a fair question
 function angle(d) {
-  const W = 300, H = 200, vx = 70, vy = 165, L = 170;
+  const W = 300, H = 200, vy = 165, L = 130;
   const a = (d.deg * Math.PI) / 180;
+  const vx = Math.max(40, 24 - Math.cos(a) * L * 0.85); // room on the left for an obtuse arm
   const el = svg(W, H, 'An angle', 320);
   el.append(line(vx, vy, vx + L, vy, { 'stroke-width': 4 }), line(vx, vy, vx + Math.cos(a) * L * 0.85, vy - Math.sin(a) * L * 0.85, { 'stroke-width': 4 }));
   const r = 34;

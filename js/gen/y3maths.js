@@ -364,7 +364,7 @@ export const Y3_GENERATORS = {
   },
 
   y3Stats(level, rng) {
-    const sets = [[['Mars', 'Jupiter', 'Saturn', 'Venus'], 'Favourite planet', 'votes', 'get'], [['Turbo', 'Blaze', 'Rosa', 'Zoom'], 'Race points', 'points', 'score'], [['Bleep', 'Zip', 'Bolt', 'Pixel'], 'Crystals collected', 'crystals', 'collect']];
+    const sets = [[['Mars', 'Jupiter', 'Saturn', 'Venus'], 'Favourite planet', 'votes', 'get'], [['Turbo', 'Blaze', 'Rosa', 'Zoom'], 'Race points', 'points', 'score'], [['Bleep', 'Zip', 'Zap', 'Pixel'], 'Crystals collected', 'crystals', 'collect']];
     const [cats, title, unit, verb] = rng.pick(sets);
     const ask = (c) => `How many ${unit} did ${c} ${verb}?`;
     if (level < 3 || rng.chance(0.5)) {
