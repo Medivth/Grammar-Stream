@@ -70,7 +70,7 @@ export function validateDB(db, generators) {
     if (!KINDS.includes(it.kind)) { errs.push(`${where}: unknown kind ${it.kind}`); continue; }
     switch (it.kind) {
       case 'written':
-        if (!it.prompt || !it.model || !it.passage || !Array.isArray(it.hints) || it.hints.length < 2) errs.push(`${where}: written answer needs prompt, passage, hints and a model answer`);
+        if (!it.prompt || !it.model || !Array.isArray(it.hints) || it.hints.length < 2) errs.push(`${where}: written answer needs a prompt, hints and a model answer`);
         break;
       case 'fact':
       case 'mapfact':
