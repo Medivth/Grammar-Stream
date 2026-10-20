@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = 'dacb0bfcd2d7';
+const VERSION = '858cb61f768c';
 const FILES = [
  "./",
  "./index.html",
@@ -40,9 +40,11 @@ const FILES = [
  "./js/gen/synoptic.js",
  "./js/gen/y3maths.js",
  "./js/gen/y8computing.js",
+ "./js/gen/y8computing2.js",
  "./js/gen/y8greek.js",
  "./js/gen/y8greek2.js",
  "./js/gen/y8maths.js",
+ "./js/gen/y8maths2.js",
  "./js/gen/y8science.js",
  "./js/gen/y8science2.js",
  "./js/main.js",
@@ -120,6 +122,7 @@ const FILES = [
  "./content/y3/reading/y3.json",
  "./content/y3/science/y3.json",
  "./content/y3/spelling/y3.json",
+ "./content/y8/computing/y8-more.json",
  "./content/y8/computing/y8.json",
  "./content/y8/english/y8-books.json",
  "./content/y8/english/y8-lang.json",
@@ -135,6 +138,8 @@ const FILES = [
  "./content/y8/history/y8-timeline.json",
  "./content/y8/history/y8-timeline2.json",
  "./content/y8/history/y8.json",
+ "./content/y8/maths/y8-more.json",
+ "./content/y8/maths/y8-problems.json",
  "./content/y8/maths/y8.json",
  "./content/y8/science/y8-more.json",
  "./content/y8/science/y8.json",

@@ -466,7 +466,8 @@ function sector(d) {
   const ar = 26;
   el.append(s('path', { d: `M${cx + ar} ${cy} A${ar} ${ar} 0 ${d.deg > 180 ? 1 : 0} 0 ${(cx + ar * Math.cos(a)).toFixed(1)} ${(cy - ar * Math.sin(a)).toFixed(1)}`, fill: 'none', stroke: '#d62f3a', 'stroke-width': 2 }));
   const mid = a / 2;
-  el.append(text(cx + 46 * Math.cos(mid), cy - 46 * Math.sin(mid) + 6, `${d.deg}°`, { fill: '#d62f3a', 'font-size': 15 }),
+  const lr = d.deg < 60 ? R + 34 : 46; // narrow sectors: label outside the arc
+  el.append(text(cx + lr * Math.cos(mid), cy - lr * Math.sin(mid) + 6, `${d.deg}°`, { fill: '#d62f3a', 'font-size': 15 }),
     text(cx + R / 2, cy + 22, `${d.r} cm`));
   return el;
 }

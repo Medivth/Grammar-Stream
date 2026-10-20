@@ -1,0 +1,3185 @@
+{
+ "subject": "computing",
+ "deck": "y8-more",
+ "topics": [
+  {
+   "id": "computing.functions",
+   "title": "Functions: parameters, return and scope",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.lists"
+   ],
+   "batch": 5,
+   "intro": "A function is a named, reusable block of code. You pass values in through parameters and get a result back with return. Variables made inside a function are local: they vanish when it ends, which stops one part of a program accidentally breaking another.",
+   "teach": "Explain the difference between a parameter and an argument.",
+   "talk": "Ask {him} which jobs in a game {she} would turn into functions."
+  },
+  {
+   "id": "computing.dicts",
+   "title": "Dictionaries",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.lists"
+   ],
+   "batch": 5,
+   "intro": "A dictionary stores pairs: a key and its value, like a word and its meaning, or a god and their symbol. Instead of remembering a position, you look things up by name.",
+   "teach": "Explain when a dictionary is better than a list.",
+   "talk": "Ask {him} how {she} would store everyone’s phone numbers in Python."
+  },
+  {
+   "id": "computing.strings",
+   "title": "Strings: methods, slicing and f-strings",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.lists"
+   ],
+   "batch": 5,
+   "intro": "Strings come with built-in methods: count, find, replace, split, join. Slicing picks out parts, and f-strings drop values neatly into text. Most real programs spend a lot of time handling text.",
+   "teach": "Explain what split() and join() do.",
+   "talk": "Ask {her} to reverse a word in Python in one line."
+  },
+  {
+   "id": "computing.grids",
+   "title": "Nested loops and 2D lists",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.loops",
+    "computing.lists"
+   ],
+   "batch": 5,
+   "intro": "A list of lists makes a grid: a game board, a seating plan, Daedalus’s labyrinth or the pixels of an image. A loop inside a loop visits every square, row by row.",
+   "teach": "Explain how grid[2][3] finds one square.",
+   "talk": "Draw a 3 × 3 noughts-and-crosses board as a Python list of lists together."
+  },
+  {
+   "id": "computing.robust",
+   "title": "Validation and robust programs",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.debugging"
+   ],
+   "batch": 5,
+   "intro": "Users type the strangest things. Robust programs check input (validation), confirm it was entered correctly (verification), and are tested with normal, boundary and erroneous data so they never crash.",
+   "teach": "Explain the difference between validation and verification.",
+   "talk": "Ask {him} what checks a sign-up form should make."
+  },
+  {
+   "id": "computing.files",
+   "title": "Files: saving and loading data",
+   "kind": "facts",
+   "prereqs": [
+    "computing.strings"
+   ],
+   "batch": 5,
+   "intro": "Variables disappear when a program ends. To keep high scores or settings, programs write data to files and read it back next time. Opening a file the wrong way can wipe it, so the mode matters.",
+   "teach": "Explain the difference between opening a file with \"w\" and with \"a\".",
+   "talk": "Ask {her} which apps on {her} phone must save data to files."
+  },
+  {
+   "id": "computing.random",
+   "title": "Random numbers and simulations",
+   "kind": "facts",
+   "prereqs": [
+    "computing.loops"
+   ],
+   "batch": 5,
+   "intro": "Games, simulations and encryption all need randomness. Python’s random module can roll dice, shuffle cards or pick a hero, and a simulation can repeat an experiment thousands of times in a second.",
+   "teach": "Explain why computer “random” numbers are really pseudo-random.",
+   "talk": "Ask {him} how a simulation could estimate the chance of rolling a double six."
+  },
+  {
+   "id": "computing.bughunt",
+   "title": "Bug hunting: harder debugging",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.debugging",
+    "computing.functions"
+   ],
+   "batch": 5,
+   "intro": "Logic errors are the hardest bugs: the program runs, but the answer is wrong. Good debuggers compare what the program does with what it should do, then find the exact line where they part ways.",
+   "teach": "Explain what an off-by-one error is.",
+   "talk": "Show {him} a bug from your own work and ask how {she} would find it."
+  },
+  {
+   "id": "computing.algotrace",
+   "title": "Tracing algorithms step by step",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.searching",
+    "computing.sorting"
+   ],
+   "batch": 5,
+   "intro": "Knowing the name of an algorithm is not enough: you need to be able to follow it step by step, like a computer would. Trace tables and careful notes make it reliable.",
+   "teach": "Explain the steps of a binary search for one number.",
+   "talk": "Ask {her} to sort a shuffled hand of cards using insertion sort and narrate it."
+  },
+  {
+   "id": "computing.efficiency",
+   "title": "Algorithm efficiency",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.algotrace"
+   ],
+   "batch": 5,
+   "intro": "Two algorithms can give the same answer but take wildly different times. Computer scientists count steps and describe how the work grows as the data grows, using Big-O notation: O(n), O(n²), O(log n).",
+   "teach": "Explain why an O(n²) algorithm gets slow on big lists.",
+   "talk": "Ask {him} how many handshakes there are if everyone in a class shakes hands once."
+  },
+  {
+   "id": "computing.structures",
+   "title": "Stacks, queues and arrays",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.lists"
+   ],
+   "batch": 5,
+   "intro": "A stack is last in, first out, like a pile of plates. A queue is first in, first out, like the line at a ticket office. These simple structures power undo buttons, printers and even how a program calls functions.",
+   "teach": "Explain the difference between a stack and a queue, with an example of each.",
+   "talk": "Ask {her} whether the “back” button in a web browser is a stack or a queue."
+  },
+  {
+   "id": "computing.compression",
+   "title": "Compression",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.media"
+   ],
+   "batch": 5,
+   "intro": "Compression makes files smaller so they download faster and take less space. Lossless compression gives back exactly the original; lossy compression throws away detail people will not notice.",
+   "teach": "Explain the difference between lossy and lossless compression.",
+   "talk": "Compare the file size of a photo and a screenshot on your phone together."
+  },
+  {
+   "id": "computing.encryption",
+   "title": "Encryption: Vigenère and public keys",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.security"
+   ],
+   "batch": 5,
+   "intro": "The Caesar cipher has only 25 keys, so it is easy to crack. The Vigenère cipher uses a key word, so each letter is shifted by a different amount. Modern public-key encryption lets strangers send secrets without ever meeting to share a key.",
+   "teach": "Explain why the Vigenère cipher is harder to crack than the Caesar cipher.",
+   "talk": "Send each other a Vigenère message at dinner."
+  },
+  {
+   "id": "computing.internet",
+   "title": "How the internet works",
+   "kind": "facts",
+   "prereqs": [
+    "computing.networks"
+   ],
+   "batch": 5,
+   "intro": "When you visit a website, your device asks a DNS server for the site’s IP address, then sends a request in packets that hop between routers across the world. The answer comes back the same way, often in under a second.",
+   "teach": "Explain what happens, step by step, when you type a web address.",
+   "talk": "Ask {him} how a message gets from your house to a server in another country."
+  },
+  {
+   "id": "computing.web",
+   "title": "The web: HTML and CSS",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.internet"
+   ],
+   "batch": 5,
+   "intro": "Every web page is made of HTML (the structure and content), CSS (the style) and often JavaScript (the behaviour). Reading markup is like reading the scaffolding behind the page.",
+   "teach": "Explain the jobs of HTML and CSS.",
+   "talk": "Open “view source” on a simple web page together and find the <h1>."
+  },
+  {
+   "id": "computing.databases",
+   "title": "Databases in depth",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.lists"
+   ],
+   "batch": 5,
+   "intro": "Databases answer questions about huge amounts of data in moments. SQL can count, total, sort and search, and a primary key makes sure every record can be found exactly.",
+   "teach": "Explain what COUNT(*) and ORDER BY do.",
+   "talk": "Ask {her} what tables a school database would need."
+  },
+  {
+   "id": "computing.ai",
+   "title": "Artificial intelligence and machine learning",
+   "kind": "facts",
+   "prereqs": [
+    "computing.ethics"
+   ],
+   "batch": 5,
+   "intro": "Machine learning systems are not programmed with rules: they learn patterns from huge amounts of training data. That makes them powerful, and also means they can copy the mistakes and biases in the data.",
+   "teach": "Explain how bias can get into an AI system.",
+   "talk": "Ask {him} where {she} has met AI today, and whether it was always right."
+  },
+  {
+   "id": "computing.architecture",
+   "title": "Inside the CPU",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.hardware"
+   ],
+   "batch": 5,
+   "intro": "Inside the CPU, a clock ticks billions of times a second, registers hold the values being worked on, and fast cache memory keeps useful data close. More cores let a CPU work on several things at once.",
+   "teach": "Explain three things that affect how fast a CPU is.",
+   "talk": "Look up the clock speed and number of cores of a device at home."
+  },
+  {
+   "id": "computing.os",
+   "title": "Operating systems and utilities",
+   "kind": "facts",
+   "prereqs": [
+    "computing.software"
+   ],
+   "batch": 5,
+   "intro": "The operating system is the manager: it shares out memory and processor time, talks to devices through drivers, keeps files organised and keeps users apart. Utilities are small programs that look after the computer.",
+   "teach": "Explain three jobs an operating system does.",
+   "talk": "Ask {her} which operating systems are on the devices in your home."
+  },
+  {
+   "id": "computing.law",
+   "title": "Law, ethics and the environment in depth",
+   "kind": "facts",
+   "prereqs": [
+    "computing.ethics",
+    "computing.ai"
+   ],
+   "batch": 5,
+   "intro": "Technology changes lives, so laws and ethics matter: who may use your data, what counts as hacking, who owns a piece of music, and what happens to the millions of devices thrown away every year.",
+   "teach": "Explain one principle of the Data Protection Act.",
+   "talk": "Ask {him} what {she} would put in a law about AI."
+  },
+  {
+   "id": "computing.recursion",
+   "title": "Recursion",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.functions"
+   ],
+   "batch": 5,
+   "intro": "A recursive function calls itself, each time on a smaller problem, until it reaches a base case it can answer directly. Like Russian dolls, or a hall of mirrors.",
+   "teach": "Explain why every recursive function needs a base case.",
+   "talk": "Ask {her} to explain recursion using a recursive explanation.",
+   "tier": "stretch"
+  },
+  {
+   "id": "computing.paths",
+   "title": "Graphs and shortest paths",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.algotrace"
+   ],
+   "batch": 5,
+   "intro": "A graph is a set of places (nodes) joined by routes (edges), sometimes with distances. Breadth-first search finds the fewest steps through a labyrinth; Dijkstra’s algorithm finds the shortest weighted route, as a sat nav does.",
+   "teach": "Explain how breadth-first search finds the shortest route out of a maze.",
+   "talk": "Plan the quickest route between three places in town, as a graph.",
+   "tier": "stretch"
+  },
+  {
+   "id": "computing.circuits",
+   "title": "Logic circuits and Boolean expressions",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.logic"
+   ],
+   "batch": 5,
+   "intro": "Logic gates combine into circuits, and circuits can be written as Boolean expressions like (A AND B) OR C. A truth table proves exactly what a circuit does for every possible input.",
+   "teach": "Explain how to build a truth table for a three-input expression.",
+   "talk": "Ask {him} to design a circuit for a door alarm.",
+   "tier": "stretch"
+  },
+  {
+   "id": "computing.huffman",
+   "title": "Huffman coding",
+   "kind": "mixed",
+   "prereqs": [
+    "computing.compression"
+   ],
+   "batch": 5,
+   "intro": "Huffman coding gives the most common characters the shortest codes, so text takes fewer bits. No code is the start of another, so a stream of bits can be read without gaps.",
+   "teach": "Explain why common letters get short Huffman codes.",
+   "talk": "Count the commonest letter in a page of a book together.",
+   "tier": "stretch"
+  }
+ ],
+ "items": [
+  {
+   "id": "computing.m.fn.tmpl",
+   "topic": "computing.functions",
+   "kind": "template",
+   "gen": "y8dFunctions",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.fn.param",
+   "topic": "computing.functions",
+   "kind": "mcq",
+   "prompt": "In this code, what is `ships`?\n```\ndef launch(ships):\n    return ships * 2\n\nprint(launch(50))\n```",
+   "options": [
+    {
+     "text": "A parameter: the name the function uses for the value passed in",
+     "correct": true
+    },
+    {
+     "text": "An argument: the actual value passed in",
+     "correct": false,
+     "feedback": "The argument is 50; ships is the parameter that receives it."
+    },
+    {
+     "text": "A global variable",
+     "correct": false,
+     "feedback": "It only exists inside the function."
+    }
+   ],
+   "explain": "Parameters are the names in the def line; arguments are the values you pass when you call the function."
+  },
+  {
+   "id": "computing.m.fn.return",
+   "topic": "computing.functions",
+   "kind": "mcq",
+   "prompt": "What does return do?",
+   "options": [
+    {
+     "text": "Ends the function and sends a value back to where it was called",
+     "correct": true
+    },
+    {
+     "text": "Prints the value on the screen",
+     "correct": false,
+     "feedback": "return does not print; the caller decides what to do with the value."
+    },
+    {
+     "text": "Restarts the function",
+     "correct": false,
+     "feedback": "It ends the function."
+    }
+   ],
+   "explain": "A function can calculate something and hand it back, so the result can be used in further calculations."
+  },
+  {
+   "id": "computing.m.fn.local",
+   "topic": "computing.functions",
+   "kind": "mcq",
+   "prompt": "Why are variables inside a function local?",
+   "options": [
+    {
+     "text": "So a function cannot accidentally change variables in other parts of the program",
+     "correct": true
+    },
+    {
+     "text": "To save electricity",
+     "correct": false,
+     "feedback": "It is about keeping parts of a program separate and safe."
+    },
+    {
+     "text": "Because Python cannot store more than one variable",
+     "correct": false,
+     "feedback": "Python can store millions."
+    }
+   ],
+   "explain": "Local variables keep functions self-contained, so each one can be written and tested on its own."
+  },
+  {
+   "id": "computing.m.fn.keyword",
+   "topic": "computing.functions",
+   "kind": "fact",
+   "prompt": "Which Python keyword starts the definition of a function?",
+   "answer": "def",
+   "distractors": [
+    "func",
+    "function",
+    "define"
+   ],
+   "explain": "def is short for define: def name(parameters):",
+   "accept": [
+    "def"
+   ]
+  },
+  {
+   "id": "computing.m.fn.why",
+   "topic": "computing.functions",
+   "kind": "mcq",
+   "prompt": "Theo writes the same twelve lines to check an answer in five different places. What is the best improvement?",
+   "options": [
+    {
+     "text": "Put the twelve lines in a function and call it five times",
+     "correct": true
+    },
+    {
+     "text": "Copy and paste them more carefully",
+     "correct": false,
+     "feedback": "If there is a bug, he would have to fix it in five places."
+    },
+    {
+     "text": "Delete four of the checks",
+     "correct": false,
+     "feedback": "The checks are needed; they just should not be repeated."
+    }
+   ],
+   "explain": "Functions avoid repetition: write once, fix once, reuse many times."
+  },
+  {
+   "id": "computing.m.fn.builtin",
+   "topic": "computing.functions",
+   "kind": "fact",
+   "prompt": "print(), len() and input() are functions that come with Python. What are they called?",
+   "answer": "built-in functions",
+   "distractors": [
+    "user-defined functions",
+    "local functions",
+    "recursive functions"
+   ],
+   "explain": "Built-in functions are always available; user-defined ones are those you write with def.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.m.fn.w",
+   "topic": "computing.functions",
+   "kind": "written",
+   "prompt": "Mira is writing a quiz game about Greek heroes. Explain two advantages of breaking her program into functions such as ask_question() and update_score().",
+   "hints": [
+    "Name at least two advantages (reuse, easier testing, easier to read, teamwork, fixing bugs in one place)",
+    "Link each advantage to her quiz game",
+    "Use the words parameter or return if you can"
+   ],
+   "model": "Breaking the quiz into functions means code is written once and reused: ask_question() can be called for every question, with the question passed in as a parameter, instead of copying the same lines again and again. If there is a bug, she fixes it in one place. Functions also make the program easier to test and read: she can check that update_score() returns the right total on its own before joining everything together, and anyone reading the code can see the structure from the function names.",
+   "words": [
+    40,
+    200
+   ]
+  },
+  {
+   "id": "computing.m.dc.tmpl",
+   "topic": "computing.dicts",
+   "kind": "template",
+   "gen": "y8dDicts",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.dc.best",
+   "topic": "computing.dicts",
+   "kind": "mcq",
+   "prompt": "Which job suits a dictionary best?",
+   "options": [
+    {
+     "text": "Looking up each god’s symbol by the god’s name",
+     "correct": true
+    },
+    {
+     "text": "Storing the order in which heroes finished a race",
+     "correct": false,
+     "feedback": "Order matters there, so a list is better."
+    },
+    {
+     "text": "Counting from 1 to 100",
+     "correct": false,
+     "feedback": "That is a job for a loop."
+    }
+   ],
+   "explain": "Dictionaries are for looking things up by a key, like a real dictionary looks up words."
+  },
+  {
+   "id": "computing.m.dc.key",
+   "topic": "computing.dicts",
+   "kind": "fact",
+   "prompt": "In {\"Zeus\": \"thunderbolt\"}, what is \"Zeus\" called?",
+   "answer": "the key",
+   "distractors": [
+    "the value",
+    "the index",
+    "the parameter"
+   ],
+   "explain": "Each pair is key: value. \"thunderbolt\" is the value.",
+   "accept": [
+    "key",
+    "a key"
+   ]
+  },
+  {
+   "id": "computing.m.dc.unique",
+   "topic": "computing.dicts",
+   "kind": "mcq",
+   "prompt": "A dictionary already has the key \"Hera\". What happens after power[\"Hera\"] = 50?",
+   "options": [
+    {
+     "text": "Hera’s old value is replaced with 50",
+     "correct": true
+    },
+    {
+     "text": "A second \"Hera\" key is added",
+     "correct": false,
+     "feedback": "Keys are unique: there can only be one \"Hera\"."
+    },
+    {
+     "text": "An error happens",
+     "correct": false,
+     "feedback": "Assigning to an existing key just updates it."
+    }
+   ],
+   "explain": "Keys in a dictionary are unique, so assigning to an existing key overwrites its value."
+  },
+  {
+   "id": "computing.m.dc.missing",
+   "topic": "computing.dicts",
+   "kind": "mcq",
+   "prompt": "What happens when this runs?\n```\nsymbols = {\"Athena\": \"owl\"}\nprint(symbols[\"Ares\"])\n```",
+   "options": [
+    {
+     "text": "An error (KeyError), because \"Ares\" is not a key",
+     "correct": true
+    },
+    {
+     "text": "It prints owl",
+     "correct": false,
+     "feedback": "Only Athena is in the dictionary."
+    },
+    {
+     "text": "It prints nothing",
+     "correct": false,
+     "feedback": "Python raises a KeyError for a missing key."
+    }
+   ],
+   "explain": "Check with \"Ares\" in symbols first, or use symbols.get(\"Ares\")."
+  },
+  {
+   "id": "computing.m.dc.braces",
+   "topic": "computing.dicts",
+   "kind": "fact",
+   "prompt": "Which brackets does Python use to create a dictionary?",
+   "answer": "curly brackets { }",
+   "distractors": [
+    "square brackets [ ]",
+    "round brackets ( )",
+    "angle brackets < >"
+   ],
+   "explain": "Lists use [ ], tuples use ( ), dictionaries use { }.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.m.st.tmpl",
+   "topic": "computing.strings",
+   "kind": "template",
+   "gen": "y8dStrings",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.st.immut",
+   "topic": "computing.strings",
+   "kind": "mcq",
+   "prompt": "Why does this cause an error?\n```\nname = \"Medusa\"\nname[0] = \"J\"\n```",
+   "options": [
+    {
+     "text": "Strings cannot be changed in place; you have to make a new string",
+     "correct": true
+    },
+    {
+     "text": "Medusa is a protected name",
+     "correct": false,
+     "feedback": "Python does not know about Gorgons!"
+    },
+    {
+     "text": "The index should be 1",
+     "correct": false,
+     "feedback": "Index 0 is the first letter; the problem is changing it."
+    }
+   ],
+   "explain": "Strings are immutable. Make a new one instead: name = \"J\" + name[1:]."
+  },
+  {
+   "id": "computing.m.st.cast",
+   "topic": "computing.strings",
+   "kind": "mcq",
+   "prompt": "What does this print?\n```\nage = 13\nprint(\"Mira is \" + str(age))\n```",
+   "options": [
+    {
+     "text": "Mira is 13",
+     "correct": true
+    },
+    {
+     "text": "An error",
+     "correct": false,
+     "feedback": "str(age) turns 13 into the text \"13\", so + can join them."
+    },
+    {
+     "text": "Mira is age",
+     "correct": false,
+     "feedback": "The variable is used, not its name."
+    }
+   ],
+   "explain": "You cannot join a string and a number with +, so str() converts the number first."
+  },
+  {
+   "id": "computing.m.st.len",
+   "topic": "computing.strings",
+   "kind": "fact",
+   "prompt": "Which function gives the number of characters in a string?",
+   "answer": "len()",
+   "distractors": [
+    "count()",
+    "size()",
+    "length()"
+   ],
+   "explain": "len(\"Hermes\") is 6.",
+   "accept": [
+    "len"
+   ]
+  },
+  {
+   "id": "computing.m.st.split",
+   "topic": "computing.strings",
+   "kind": "mcq",
+   "prompt": "What does \"Zeus,Hera,Ares\".split(\",\") give?",
+   "options": [
+    {
+     "text": "[\"Zeus\", \"Hera\", \"Ares\"]",
+     "correct": true
+    },
+    {
+     "text": "\"Zeus Hera Ares\"",
+     "correct": false,
+     "feedback": "split gives a list, not a string."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "That would be the length of the list."
+    }
+   ],
+   "explain": "split(\",\") breaks the string at each comma into a list: handy for reading CSV files."
+  },
+  {
+   "id": "computing.m.gr.tmpl",
+   "topic": "computing.grids",
+   "kind": "template",
+   "gen": "y8dGrids",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.gr.order",
+   "topic": "computing.grids",
+   "kind": "mcq",
+   "prompt": "In grid[r][c], what do r and c choose?",
+   "options": [
+    {
+     "text": "r chooses the row (which inner list), then c the column (which item in it)",
+     "correct": true
+    },
+    {
+     "text": "r chooses the column, then c the row",
+     "correct": false,
+     "feedback": "The first index picks a whole inner list: a row."
+    },
+    {
+     "text": "They are added together",
+     "correct": false,
+     "feedback": "They are two separate indexes."
+    }
+   ],
+   "explain": "grid[r] is one row (a list); grid[r][c] is one item in that row."
+  },
+  {
+   "id": "computing.m.gr.inner",
+   "topic": "computing.grids",
+   "kind": "mcq",
+   "prompt": "An outer loop runs 4 times and an inner loop runs 6 times for each. How many times does the code inside the inner loop run?",
+   "options": [
+    {
+     "text": "24",
+     "correct": true
+    },
+    {
+     "text": "10",
+     "correct": false,
+     "feedback": "The inner loop runs completely for EVERY outer loop: 4 × 6."
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "That is for one outer loop."
+    }
+   ],
+   "explain": "Nested loops multiply: 4 × 6 = 24."
+  },
+  {
+   "id": "computing.m.gr.image",
+   "topic": "computing.grids",
+   "kind": "mcq",
+   "prompt": "Why is a 2D list a good way to store a black-and-white image?",
+   "options": [
+    {
+     "text": "Each item can hold one pixel, in rows and columns just like the picture",
+     "correct": true
+    },
+    {
+     "text": "Images can only be stored as dictionaries",
+     "correct": false,
+     "feedback": "Grids map naturally onto rows and columns of pixels."
+    },
+    {
+     "text": "It makes the image lossy",
+     "correct": false,
+     "feedback": "Storing it in a grid does not throw away detail."
+    }
+   ],
+   "explain": "Images are grids of pixels, so a list of lists fits them exactly."
+  },
+  {
+   "id": "computing.m.gr.count",
+   "topic": "computing.grids",
+   "kind": "fact",
+   "prompt": "How many items are in a grid with 8 rows of 8 squares, like a chessboard?",
+   "answer": "64",
+   "distractors": [
+    "16",
+    "32",
+    "88"
+   ],
+   "explain": "8 × 8 = 64."
+  },
+  {
+   "id": "computing.m.rb.tmpl",
+   "topic": "computing.robust",
+   "kind": "template",
+   "gen": "y8dValidate",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.rb.valver",
+   "topic": "computing.robust",
+   "kind": "mcq",
+   "prompt": "What is the difference between validation and verification?",
+   "options": [
+    {
+     "text": "Validation checks data is sensible; verification checks it was entered correctly",
+     "correct": true
+    },
+    {
+     "text": "They mean the same thing",
+     "correct": false,
+     "feedback": "Validation: is it reasonable? Verification: is it what was meant?"
+    },
+    {
+     "text": "Verification checks data is sensible; validation checks it was typed twice",
+     "correct": false,
+     "feedback": "It is the other way round."
+    }
+   ],
+   "explain": "A date of 31/02 fails validation. Typing your email twice to make sure it matches is verification."
+  },
+  {
+   "id": "computing.m.rb.checks",
+   "topic": "computing.robust",
+   "kind": "mcq",
+   "prompt": "Which validation check makes sure a field is not left empty?",
+   "options": [
+    {
+     "text": "A presence check",
+     "correct": true
+    },
+    {
+     "text": "A range check",
+     "correct": false,
+     "feedback": "A range check tests the value is between two limits."
+    },
+    {
+     "text": "A length check",
+     "correct": false,
+     "feedback": "A length check tests how many characters there are."
+    }
+   ],
+   "explain": "Presence, range, length, type and format checks are the main kinds of validation."
+  },
+  {
+   "id": "computing.m.rb.format",
+   "topic": "computing.robust",
+   "kind": "mcq",
+   "prompt": "A postcode must look like letters, then digits, then a space, then a digit and two letters. Which check is this?",
+   "options": [
+    {
+     "text": "A format check",
+     "correct": true
+    },
+    {
+     "text": "A presence check",
+     "correct": false,
+     "feedback": "That only checks something was entered."
+    },
+    {
+     "text": "A range check",
+     "correct": false,
+     "feedback": "Postcodes are not numbers in a range."
+    }
+   ],
+   "explain": "A format check compares input with a pattern."
+  },
+  {
+   "id": "computing.m.rb.valid",
+   "topic": "computing.robust",
+   "kind": "mcq",
+   "prompt": "A form refuses a birth year of 2079 but accepts 2011 when the user meant 2012. What does this show?",
+   "options": [
+    {
+     "text": "Validation can stop impossible data, but it cannot prove the data is TRUE",
+     "correct": true
+    },
+    {
+     "text": "Validation guarantees all data is correct",
+     "correct": false,
+     "feedback": "A sensible but wrong year still passes."
+    },
+    {
+     "text": "Validation slows programs down too much to use",
+     "correct": false,
+     "feedback": "Checks are tiny compared with the cost of bad data."
+    }
+   ],
+   "explain": "Validation reduces errors; it cannot know what is true."
+  },
+  {
+   "id": "computing.m.rb.auth",
+   "topic": "computing.robust",
+   "kind": "mcq",
+   "prompt": "Asking for a password before letting someone see their account is an example of…",
+   "options": [
+    {
+     "text": "authentication",
+     "correct": true
+    },
+    {
+     "text": "validation",
+     "correct": false,
+     "feedback": "Validation checks data is sensible."
+    },
+    {
+     "text": "compression",
+     "correct": false,
+     "feedback": "Compression makes files smaller."
+    }
+   ],
+   "explain": "Authentication checks who a user is, using passwords, codes or fingerprints."
+  },
+  {
+   "id": "computing.m.rb.w",
+   "topic": "computing.robust",
+   "kind": "written",
+   "prompt": "Evaluate this password policy for a school website: “Passwords must be 6 letters long. Users must change their password every week, and may write it on a sticky note.”",
+   "hints": [
+    "Judge each part of the policy, not just one",
+    "Explain why length and variety matter (brute-force and guessing attacks)",
+    "Explain the human problem with weekly changes and sticky notes",
+    "Suggest a better policy"
+   ],
+   "model": "The policy is weak. Six letters is far too short: a computer can try every combination quickly in a brute-force attack, and letters only gives fewer possibilities than mixing letters, digits and symbols. Weekly changes sound secure but make people choose simple, predictable passwords, and allowing sticky notes means anyone walking past can read them. A better policy would require long passphrases (for example three random words and a number), no forced weekly changes, a lock-out after several wrong attempts, and two-factor authentication, while never writing the password down where others can see it.",
+   "words": [
+    40,
+    200
+   ]
+  },
+  {
+   "id": "computing.m.fl.why",
+   "topic": "computing.files",
+   "kind": "mcq",
+   "prompt": "Why do programs save data to files?",
+   "options": [
+    {
+     "text": "Variables are lost when the program ends; files keep data for next time",
+     "correct": true
+    },
+    {
+     "text": "Files make programs run faster",
+     "correct": false,
+     "feedback": "Reading files is actually slower than using variables."
+    },
+    {
+     "text": "Python cannot store numbers in variables",
+     "correct": false,
+     "feedback": "It can; they just do not last after the program closes."
+    }
+   ],
+   "explain": "Saving to a file (or database) is how high scores, documents and settings survive."
+  },
+  {
+   "id": "computing.m.fl.w",
+   "topic": "computing.files",
+   "kind": "mcq",
+   "prompt": "Theo opens his high-score file with open(\"scores.txt\", \"w\") and writes one new score. What happens to the old scores?",
+   "options": [
+    {
+     "text": "They are wiped: \"w\" mode creates a fresh, empty file",
+     "correct": true
+    },
+    {
+     "text": "The new score is added to the end",
+     "correct": false,
+     "feedback": "That is \"a\" (append) mode."
+    },
+    {
+     "text": "Nothing is written",
+     "correct": false,
+     "feedback": "The new score is written, but the old ones are gone."
+    }
+   ],
+   "explain": "\"r\" reads, \"w\" overwrites, \"a\" appends. Choosing the wrong mode is a classic bug."
+  },
+  {
+   "id": "computing.m.fl.a",
+   "topic": "computing.files",
+   "kind": "fact",
+   "prompt": "Which file mode adds new data to the END of an existing file?",
+   "answer": "a (append)",
+   "distractors": [
+    "w (write)",
+    "r (read)",
+    "x (extra)"
+   ],
+   "explain": "Append keeps what is there and adds to it.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.m.fl.close",
+   "topic": "computing.files",
+   "kind": "mcq",
+   "prompt": "Why should a program close a file (or use with open(...) as f:)?",
+   "options": [
+    {
+     "text": "So the data is properly saved and the file is released for other programs",
+     "correct": true
+    },
+    {
+     "text": "To delete the file",
+     "correct": false,
+     "feedback": "Closing does not delete anything."
+    },
+    {
+     "text": "To compress the file",
+     "correct": false,
+     "feedback": "Closing is not compression."
+    }
+   ],
+   "explain": "The with statement closes the file automatically, even if an error happens."
+  },
+  {
+   "id": "computing.m.fl.csv",
+   "topic": "computing.files",
+   "kind": "mcq",
+   "prompt": "A CSV file stores “Perseus,Medusa,3” on one line. What does CSV stand for?",
+   "options": [
+    {
+     "text": "Comma-separated values",
+     "correct": true
+    },
+    {
+     "text": "Computer stored values",
+     "correct": false,
+     "feedback": "The C is for comma."
+    },
+    {
+     "text": "Coded secret values",
+     "correct": false,
+     "feedback": "CSV files are plain text, not secret."
+    }
+   ],
+   "explain": "Each line is a record and the commas separate the fields. Spreadsheets can open CSV files."
+  },
+  {
+   "id": "computing.m.fl.loop",
+   "topic": "computing.files",
+   "kind": "mcq",
+   "prompt": "A file oracle.txt has 5 lines. What does this program print?\n```\ncount = 0\nwith open(\"oracle.txt\") as f:\n    for line in f:\n        count = count + 1\nprint(count)\n```",
+   "options": [
+    {
+     "text": "5",
+     "correct": true
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "The loop runs once for each line."
+    },
+    {
+     "text": "0",
+     "correct": false,
+     "feedback": "The file is opened for reading, so its lines are read."
+    }
+   ],
+   "explain": "Looping over a file object gives one line at a time."
+  },
+  {
+   "id": "computing.m.rd.randint",
+   "topic": "computing.random",
+   "kind": "mcq",
+   "prompt": "Which values can random.randint(1, 6) give?",
+   "options": [
+    {
+     "text": "1, 2, 3, 4, 5 or 6",
+     "correct": true
+    },
+    {
+     "text": "1 to 5 only",
+     "correct": false,
+     "feedback": "randint includes BOTH ends, unlike range."
+    },
+    {
+     "text": "0 to 6",
+     "correct": false,
+     "feedback": "It starts at 1 here."
+    }
+   ],
+   "explain": "randint(a, b) includes a and b, which is why it is perfect for dice."
+  },
+  {
+   "id": "computing.m.rd.choice",
+   "topic": "computing.random",
+   "kind": "mcq",
+   "prompt": "What does random.choice([\"Zeus\", \"Hera\", \"Ares\"]) do?",
+   "options": [
+    {
+     "text": "Picks one of the three names at random",
+     "correct": true
+    },
+    {
+     "text": "Picks all three",
+     "correct": false,
+     "feedback": "It picks one."
+    },
+    {
+     "text": "Always picks the first",
+     "correct": false,
+     "feedback": "That would not be random!"
+    }
+   ],
+   "explain": "random.choice picks one item from a list at random."
+  },
+  {
+   "id": "computing.m.rd.pseudo",
+   "topic": "computing.random",
+   "kind": "mcq",
+   "prompt": "Why are computer “random” numbers called pseudo-random?",
+   "options": [
+    {
+     "text": "They come from a formula, so with the same starting seed they repeat exactly",
+     "correct": true
+    },
+    {
+     "text": "They are always even",
+     "correct": false,
+     "feedback": "They can be any value in the range."
+    },
+    {
+     "text": "They are typed in by a person",
+     "correct": false,
+     "feedback": "A formula produces them."
+    }
+   ],
+   "explain": "A pseudo-random generator is deterministic but looks random. For encryption, computers mix in real-world noise as well."
+  },
+  {
+   "id": "computing.m.rd.sim",
+   "topic": "computing.random",
+   "kind": "mcq",
+   "prompt": "Kit simulates 10,000 dice rolls and counts the sixes. About how many should he expect?",
+   "options": [
+    {
+     "text": "About 1,667",
+     "correct": true
+    },
+    {
+     "text": "Exactly 1,000",
+     "correct": false,
+     "feedback": "One in six of 10,000 is about 1,667."
+    },
+    {
+     "text": "About 6,000",
+     "correct": false,
+     "feedback": "Each roll has only a 1 in 6 chance of a six."
+    }
+   ],
+   "explain": "10,000 ÷ 6 ≈ 1,667. The result will vary a little each run, and more rolls make it closer to the true probability."
+  },
+  {
+   "id": "computing.m.rd.import",
+   "topic": "computing.random",
+   "kind": "mcq",
+   "prompt": "What must a Python program do before using random.randint?",
+   "options": [
+    {
+     "text": "import random",
+     "correct": true
+    },
+    {
+     "text": "install a dice",
+     "correct": false,
+     "feedback": "It is a built-in module."
+    },
+    {
+     "text": "define randint itself",
+     "correct": false,
+     "feedback": "The random module already provides it."
+    }
+   ],
+   "explain": "Modules like random and math are libraries of ready-made functions; import makes them available."
+  },
+  {
+   "id": "computing.m.bh.tmpl",
+   "topic": "computing.bughunt",
+   "kind": "template",
+   "gen": "y8dBug",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.bh.eq",
+   "topic": "computing.bughunt",
+   "kind": "mcq",
+   "prompt": "What is wrong with this line?\n```\nif answer = \"Athena\":\n```",
+   "options": [
+    {
+     "text": "It uses = (assignment) instead of == (comparison)",
+     "correct": true
+    },
+    {
+     "text": "Athena should not have quotes",
+     "correct": false,
+     "feedback": "Text values need quotes."
+    },
+    {
+     "text": "if should be in capitals",
+     "correct": false,
+     "feedback": "Python keywords are lower case."
+    }
+   ],
+   "explain": "= stores a value; == compares two values. Python gives a syntax error here."
+  },
+  {
+   "id": "computing.m.bh.infinite",
+   "topic": "computing.bughunt",
+   "kind": "mcq",
+   "prompt": "Why does this loop never end?\n```\nn = 10\nwhile n > 0:\n    print(n)\n```",
+   "options": [
+    {
+     "text": "n never changes, so n > 0 stays True for ever",
+     "correct": true
+    },
+    {
+     "text": "print cannot be used in a loop",
+     "correct": false,
+     "feedback": "It can."
+    },
+    {
+     "text": "10 is too big",
+     "correct": false,
+     "feedback": "Any positive start would loop for ever."
+    }
+   ],
+   "explain": "Add n = n - 1 inside the loop so the condition eventually becomes False."
+  },
+  {
+   "id": "computing.m.bh.index",
+   "topic": "computing.bughunt",
+   "kind": "mcq",
+   "prompt": "What error does this give?\n```\nheroes = [\"Jason\", \"Medea\", \"Orpheus\"]\nprint(heroes[3])\n```",
+   "options": [
+    {
+     "text": "IndexError: the indexes only go 0, 1, 2",
+     "correct": true
+    },
+    {
+     "text": "It prints Orpheus",
+     "correct": false,
+     "feedback": "Orpheus is heroes[2]."
+    },
+    {
+     "text": "SyntaxError",
+     "correct": false,
+     "feedback": "The syntax is fine; the problem appears when it runs."
+    }
+   ],
+   "explain": "A list of 3 items has indexes 0 to 2. heroes[-1] or heroes[len(heroes) - 1] gives the last one."
+  },
+  {
+   "id": "computing.m.bh.indent",
+   "topic": "computing.bughunt",
+   "kind": "mcq",
+   "prompt": "Mira wants to print “Done” once, after the loop. What is wrong?\n```\nfor i in range(3):\n    print(i)\n    print(\"Done\")\n```",
+   "options": [
+    {
+     "text": "print(\"Done\") is indented, so it is inside the loop and runs 3 times",
+     "correct": true
+    },
+    {
+     "text": "range(3) should be range(4)",
+     "correct": false,
+     "feedback": "The range is fine."
+    },
+    {
+     "text": "print cannot print text",
+     "correct": false,
+     "feedback": "It can."
+    }
+   ],
+   "explain": "In Python, indentation decides what is inside a loop. Unindent the last line."
+  },
+  {
+   "id": "computing.m.bh.type",
+   "topic": "computing.bughunt",
+   "kind": "mcq",
+   "prompt": "Why does this crash when Theo types 12?\n```\nage = input(\"Age? \")\nprint(age + 1)\n```",
+   "options": [
+    {
+     "text": "input() gives a string, and you cannot add 1 to a string",
+     "correct": true
+    },
+    {
+     "text": "12 is too old",
+     "correct": false,
+     "feedback": "Any number would crash it."
+    },
+    {
+     "text": "print needs two lines",
+     "correct": false,
+     "feedback": "The problem is the data type."
+    }
+   ],
+   "explain": "Use age = int(input(\"Age? \")) to turn the text into a number."
+  },
+  {
+   "id": "computing.m.bh.method",
+   "topic": "computing.bughunt",
+   "kind": "mcq",
+   "prompt": "A program gives the wrong total. Which is the most reliable way to find the bug?",
+   "options": [
+    {
+     "text": "Trace the program with a small test case, comparing each variable with what it should be",
+     "correct": true
+    },
+    {
+     "text": "Change lines at random until it works",
+     "correct": false,
+     "feedback": "That can create new bugs and teaches nothing."
+    },
+    {
+     "text": "Delete the program and start again",
+     "correct": false,
+     "feedback": "Usually the bug is one line; tracing finds it."
+    }
+   ],
+   "explain": "Tracing (or adding temporary print statements) shows exactly where the program goes wrong."
+  },
+  {
+   "id": "computing.m.at.tmpl",
+   "topic": "computing.algotrace",
+   "kind": "template",
+   "gen": "y8dAlgoTrace",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.at.sorted",
+   "topic": "computing.algotrace",
+   "kind": "mcq",
+   "prompt": "Why must the list be sorted before a binary search?",
+   "options": [
+    {
+     "text": "Binary search throws away half the list by assuming smaller items are on one side",
+     "correct": true
+    },
+    {
+     "text": "Unsorted lists are too long",
+     "correct": false,
+     "feedback": "Length is not the issue."
+    },
+    {
+     "text": "Python cannot search unsorted lists",
+     "correct": false,
+     "feedback": "Linear search works on any list."
+    }
+   ],
+   "explain": "If the list is not in order, the half that is thrown away might contain the target."
+  },
+  {
+   "id": "computing.m.at.insertion",
+   "topic": "computing.algotrace",
+   "kind": "mcq",
+   "prompt": "Which sort is often fastest when a list is ALMOST sorted already?",
+   "options": [
+    {
+     "text": "Insertion sort",
+     "correct": true
+    },
+    {
+     "text": "Bubble sort with no early stop",
+     "correct": false,
+     "feedback": "Without stopping early it still does every pass."
+    },
+    {
+     "text": "Random shuffling until sorted",
+     "correct": false,
+     "feedback": "That is famously awful (bogosort)!"
+    }
+   ],
+   "explain": "Insertion sort only moves items that are out of place, so a nearly sorted list needs very little work."
+  },
+  {
+   "id": "computing.m.at.merge",
+   "topic": "computing.algotrace",
+   "kind": "mcq",
+   "prompt": "Merge sort splits a list of 8 items in half again and again. How many items are in each piece at the bottom?",
+   "options": [
+    {
+     "text": "1",
+     "correct": true
+    },
+    {
+     "text": "2",
+     "correct": false,
+     "feedback": "It keeps splitting until each piece has 1 item, which is already sorted."
+    },
+    {
+     "text": "4",
+     "correct": false,
+     "feedback": "That is after only one split."
+    }
+   ],
+   "explain": "Single items are sorted by definition; merge sort then merges them back in order: divide and conquer."
+  },
+  {
+   "id": "computing.m.at.binary",
+   "topic": "computing.algotrace",
+   "kind": "order",
+   "prompt": "Put the steps of a binary search in order.",
+   "items": [
+    "find the middle item",
+    "compare it with the target",
+    "if it matches, stop",
+    "otherwise discard the half that cannot contain the target and repeat"
+   ],
+   "labels": null,
+   "explain": "Middle, compare, stop if found, otherwise halve and repeat."
+  },
+  {
+   "id": "computing.m.ef.tmpl",
+   "topic": "computing.efficiency",
+   "kind": "template",
+   "gen": "y8dEfficiency",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.ef.bigo",
+   "topic": "computing.efficiency",
+   "kind": "mcq",
+   "prompt": "What does Big-O notation describe?",
+   "options": [
+    {
+     "text": "How the time (or memory) an algorithm needs grows as the input gets bigger",
+     "correct": true
+    },
+    {
+     "text": "The exact number of seconds a program takes",
+     "correct": false,
+     "feedback": "It describes growth, not exact time on one computer."
+    },
+    {
+     "text": "How big the program file is",
+     "correct": false,
+     "feedback": "It is about the algorithm’s work."
+    }
+   ],
+   "explain": "O(n) grows in step with n; O(n²) grows with its square; O(log n) grows very slowly."
+  },
+  {
+   "id": "computing.m.ef.which",
+   "topic": "computing.efficiency",
+   "kind": "mcq",
+   "prompt": "Which grows SLOWEST as the list gets bigger?",
+   "options": [
+    {
+     "text": "O(log n): binary search",
+     "correct": true
+    },
+    {
+     "text": "O(n): linear search",
+     "correct": false,
+     "feedback": "Doubling the list doubles the work."
+    },
+    {
+     "text": "O(n²): bubble sort",
+     "correct": false,
+     "feedback": "Doubling the list quadruples the work."
+    }
+   ],
+   "explain": "Binary search on a million items needs about 20 checks; on two million, about 21."
+  },
+  {
+   "id": "computing.m.ef.handshake",
+   "topic": "computing.efficiency",
+   "kind": "mcq",
+   "prompt": "In a class of 30, everyone shakes hands with everyone else once. Why is this like an O(n²) algorithm?",
+   "options": [
+    {
+     "text": "The number of handshakes grows roughly with the square of the class size",
+     "correct": true
+    },
+    {
+     "text": "It takes exactly 30 seconds",
+     "correct": false,
+     "feedback": "Big-O is about growth, not seconds."
+    },
+    {
+     "text": "Each person shakes one hand",
+     "correct": false,
+     "feedback": "Each shakes hands with everyone else."
+    }
+   ],
+   "explain": "30 people make 30 × 29 ÷ 2 = 435 handshakes; 60 people make 1,770, about four times as many."
+  },
+  {
+   "id": "computing.m.ef.tradeoff",
+   "topic": "computing.efficiency",
+   "kind": "mcq",
+   "prompt": "Sorting a list first makes searching it much faster. When is it NOT worth sorting?",
+   "options": [
+    {
+     "text": "When you only search the list once",
+     "correct": true
+    },
+    {
+     "text": "When the list is used millions of times",
+     "correct": false,
+     "feedback": "Then sorting once pays off enormously."
+    },
+    {
+     "text": "When the list contains numbers",
+     "correct": false,
+     "feedback": "Numbers sort perfectly well."
+    }
+   ],
+   "explain": "Sorting costs time. If you search just once, a single linear search is quicker than sorting then binary searching."
+  },
+  {
+   "id": "computing.m.ef.w",
+   "topic": "computing.efficiency",
+   "kind": "written",
+   "prompt": "Explain why binary search is so much faster than linear search for large lists, and give one situation where linear search is the better choice.",
+   "hints": [
+    "Explain that binary search halves the list each time",
+    "Use numbers, for example a million items",
+    "Give a case for linear search (unsorted list, very small list, or one search only)"
+   ],
+   "model": "Linear search may have to check every item, so a list of a million names could take a million comparisons. Binary search checks the middle item and throws away half of the list each time, so a million items need only about 20 checks, and doubling the list adds just one more. However, binary search only works on a sorted list. If the list is unsorted and you only need to search it once, or it is very small, linear search is better, because sorting it first would take longer than simply checking each item.",
+   "words": [
+    40,
+    200
+   ]
+  },
+  {
+   "id": "computing.m.sk.tmpl",
+   "topic": "computing.structures",
+   "kind": "template",
+   "gen": "y8dStack",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.sk.lifo",
+   "topic": "computing.structures",
+   "kind": "fact",
+   "prompt": "A stack is LIFO. What does LIFO stand for?",
+   "answer": "last in, first out",
+   "distractors": [
+    "last in, final out",
+    "list in, file out",
+    "least important, first out"
+   ],
+   "explain": "Like a pile of plates: the last one added is the first one taken.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.m.sk.undo",
+   "topic": "computing.structures",
+   "kind": "mcq",
+   "prompt": "The undo button in a drawing app removes your most recent change first. Which data structure does it use?",
+   "options": [
+    {
+     "text": "A stack",
+     "correct": true
+    },
+    {
+     "text": "A queue",
+     "correct": false,
+     "feedback": "A queue would undo your FIRST change first."
+    },
+    {
+     "text": "A dictionary",
+     "correct": false,
+     "feedback": "Order matters here; a stack keeps it."
+    }
+   ],
+   "explain": "Each action is pushed onto a stack; undo pops the most recent."
+  },
+  {
+   "id": "computing.m.sk.printer",
+   "topic": "computing.structures",
+   "kind": "mcq",
+   "prompt": "A school printer prints documents in the order they were sent. Which structure is this?",
+   "options": [
+    {
+     "text": "A queue (first in, first out)",
+     "correct": true
+    },
+    {
+     "text": "A stack",
+     "correct": false,
+     "feedback": "A stack would print the newest document first."
+    },
+    {
+     "text": "A 2D list",
+     "correct": false,
+     "feedback": "A queue models waiting in line."
+    }
+   ],
+   "explain": "Queues are fair: first come, first served."
+  },
+  {
+   "id": "computing.m.sk.array",
+   "topic": "computing.structures",
+   "kind": "mcq",
+   "prompt": "How is a traditional array different from a Python list?",
+   "options": [
+    {
+     "text": "An array has a fixed size and every item is the same type",
+     "correct": true
+    },
+    {
+     "text": "An array can only store text",
+     "correct": false,
+     "feedback": "Arrays can store numbers too, just all of one type."
+    },
+    {
+     "text": "There is no difference at all",
+     "correct": false,
+     "feedback": "Many languages make arrays fixed-size and single-type."
+    }
+   ],
+   "explain": "Python lists can grow and mix types; arrays in languages like C are fixed and uniform, which makes them very fast."
+  },
+  {
+   "id": "computing.m.sk.push",
+   "topic": "computing.structures",
+   "kind": "fact",
+   "prompt": "Adding an item to the top of a stack is called…",
+   "answer": "push",
+   "distractors": [
+    "pop",
+    "peek",
+    "enqueue"
+   ],
+   "explain": "push adds to the top; pop removes from the top; peek looks without removing.",
+   "accept": [
+    "pushing",
+    "a push"
+   ]
+  },
+  {
+   "id": "computing.m.cm.tmpl",
+   "topic": "computing.compression",
+   "kind": "template",
+   "gen": "y8dRLE",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.cm.lossy",
+   "topic": "computing.compression",
+   "kind": "mcq",
+   "prompt": "Which is true of LOSSY compression?",
+   "options": [
+    {
+     "text": "It permanently removes some data that people are unlikely to notice",
+     "correct": true
+    },
+    {
+     "text": "It gives back exactly the original file",
+     "correct": false,
+     "feedback": "That is lossless compression."
+    },
+    {
+     "text": "It always makes files bigger",
+     "correct": false,
+     "feedback": "It makes them smaller, often much smaller."
+    }
+   ],
+   "explain": "JPEG photos and MP3 or AAC music use lossy compression."
+  },
+  {
+   "id": "computing.m.cm.text",
+   "topic": "computing.compression",
+   "kind": "mcq",
+   "prompt": "Why must a text document or a program be compressed LOSSLESSLY?",
+   "options": [
+    {
+     "text": "Losing even one character could change the meaning or break the program",
+     "correct": true
+    },
+    {
+     "text": "Text is too small to compress",
+     "correct": false,
+     "feedback": "Text compresses very well."
+    },
+    {
+     "text": "Lossy compression only works on text",
+     "correct": false,
+     "feedback": "Lossy compression is for images, sound and video."
+    }
+   ],
+   "explain": "ZIP and PNG are lossless: every bit comes back."
+  },
+  {
+   "id": "computing.m.cm.rlebad",
+   "topic": "computing.compression",
+   "kind": "mcq",
+   "prompt": "Run-length encoding would make which of these BIGGER?",
+   "options": [
+    {
+     "text": "ABCDEFG",
+     "correct": true
+    },
+    {
+     "text": "AAAAAAAA",
+     "correct": false,
+     "feedback": "That becomes 8A: much smaller."
+    },
+    {
+     "text": "WWWWBBBB",
+     "correct": false,
+     "feedback": "That becomes 4W4B."
+    }
+   ],
+   "explain": "With no repeated runs, ABCDEFG becomes 1A1B1C1D1E1F1G: twice as long."
+  },
+  {
+   "id": "computing.m.cm.why",
+   "topic": "computing.compression",
+   "kind": "mcq",
+   "prompt": "What is the main reason for compressing a video before uploading it?",
+   "options": [
+    {
+     "text": "A smaller file uploads faster and uses less storage and data",
+     "correct": true
+    },
+    {
+     "text": "It improves the picture quality",
+     "correct": false,
+     "feedback": "Compression never improves quality."
+    },
+    {
+     "text": "It adds subtitles",
+     "correct": false,
+     "feedback": "Compression has nothing to do with subtitles."
+    }
+   ],
+   "explain": "Streaming services compress video so it plays smoothly over ordinary internet connections."
+  },
+  {
+   "id": "computing.m.cm.lossless",
+   "topic": "computing.compression",
+   "kind": "fact",
+   "prompt": "Which type of compression lets you recreate the original file exactly?",
+   "answer": "lossless",
+   "distractors": [
+    "lossy",
+    "run-off",
+    "leaky"
+   ],
+   "explain": "Lossless: nothing is lost."
+  },
+  {
+   "id": "computing.m.en.tmpl",
+   "topic": "computing.encryption",
+   "kind": "template",
+   "gen": "y8dVigenere",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.en.caesar",
+   "topic": "computing.encryption",
+   "kind": "mcq",
+   "prompt": "Why is the Caesar cipher easy to crack?",
+   "options": [
+    {
+     "text": "There are only 25 possible shifts, so you can try them all",
+     "correct": true
+    },
+    {
+     "text": "It uses numbers",
+     "correct": false,
+     "feedback": "It shifts letters."
+    },
+    {
+     "text": "It is only used in Latin",
+     "correct": false,
+     "feedback": "It works with any alphabet."
+    }
+   ],
+   "explain": "Trying every key is called a brute-force attack."
+  },
+  {
+   "id": "computing.m.en.vig",
+   "topic": "computing.encryption",
+   "kind": "mcq",
+   "prompt": "Why is the Vigenère cipher harder to crack than the Caesar cipher?",
+   "options": [
+    {
+     "text": "The same letter is shifted by different amounts, which disguises letter frequencies",
+     "correct": true
+    },
+    {
+     "text": "It uses a longer alphabet",
+     "correct": false,
+     "feedback": "It uses the same 26 letters."
+    },
+    {
+     "text": "It cannot be cracked at all",
+     "correct": false,
+     "feedback": "Charles Babbage and Friedrich Kasiski worked out how to crack it in the 1800s."
+    }
+   ],
+   "explain": "In a Caesar cipher, the most common letter (often E) stays the most common; Vigenère smears the pattern across the key."
+  },
+  {
+   "id": "computing.m.en.public",
+   "topic": "computing.encryption",
+   "kind": "mcq",
+   "prompt": "In public-key encryption, Kit publishes his public key. What can people do with it?",
+   "options": [
+    {
+     "text": "Encrypt messages that only Kit’s private key can decrypt",
+     "correct": true
+    },
+    {
+     "text": "Decrypt all of Kit’s messages",
+     "correct": false,
+     "feedback": "Only the private key decrypts them."
+    },
+    {
+     "text": "Read Kit’s private key",
+     "correct": false,
+     "feedback": "The private key stays secret."
+    }
+   ],
+   "explain": "Anyone can lock the padlock; only Kit has the key to open it."
+  },
+  {
+   "id": "computing.m.en.plain",
+   "topic": "computing.encryption",
+   "kind": "fact",
+   "prompt": "The original, readable message before encryption is called the…",
+   "answer": "plaintext",
+   "distractors": [
+    "ciphertext",
+    "keytext",
+    "hashtext"
+   ],
+   "explain": "Plaintext + key → ciphertext.",
+   "accept": [
+    "plain text",
+    "the plaintext"
+   ]
+  },
+  {
+   "id": "computing.m.en.https",
+   "topic": "computing.encryption",
+   "kind": "mcq",
+   "prompt": "What does the padlock and https:// in a browser tell you?",
+   "options": [
+    {
+     "text": "Data between you and the site is encrypted",
+     "correct": true
+    },
+    {
+     "text": "The website is definitely honest",
+     "correct": false,
+     "feedback": "A scam site can have HTTPS too: it only means the connection is encrypted."
+    },
+    {
+     "text": "The website is free",
+     "correct": false,
+     "feedback": "It is about encryption, not cost."
+    }
+   ],
+   "explain": "HTTPS stops people on the network reading your data, but you still need to check who you are talking to."
+  },
+  {
+   "id": "computing.m.en.w",
+   "topic": "computing.encryption",
+   "kind": "written",
+   "prompt": "Explain how public-key encryption solves the problem of sharing a secret key with someone you have never met.",
+   "hints": [
+    "Explain the problem: with one shared key, the key itself has to be sent safely",
+    "Explain public and private keys",
+    "Use an example, such as a padlock or buying something online"
+   ],
+   "model": "With a symmetric cipher such as Vigenère, both people need the same key, but sending the key is risky: anyone who intercepts it can read every message. Public-key encryption uses a pair of keys. The public key can be shared with everyone and is used to encrypt, but only the matching private key, which never leaves its owner, can decrypt. It is like handing out open padlocks: anyone can lock a box, but only you can open it. When you buy something online, your browser uses the shop’s public key to agree a secret session key safely, so strangers can communicate securely.",
+   "words": [
+    40,
+    200
+   ]
+  },
+  {
+   "id": "computing.m.in.dns",
+   "topic": "computing.internet",
+   "kind": "mcq",
+   "prompt": "What does a DNS server do?",
+   "options": [
+    {
+     "text": "Translates a web address like example.org into an IP address",
+     "correct": true
+    },
+    {
+     "text": "Stores every website in the world",
+     "correct": false,
+     "feedback": "Websites are stored on their own servers."
+    },
+    {
+     "text": "Speeds up your Wi-Fi",
+     "correct": false,
+     "feedback": "DNS is about names and addresses."
+    }
+   ],
+   "explain": "DNS is the internet’s phone book: names for people, numbers for computers."
+  },
+  {
+   "id": "computing.m.in.packet",
+   "topic": "computing.internet",
+   "kind": "mcq",
+   "prompt": "Why is data split into packets?",
+   "options": [
+    {
+     "text": "Packets can take different routes and be resent individually if lost",
+     "correct": true
+    },
+    {
+     "text": "Packets are prettier",
+     "correct": false,
+     "feedback": "It is about reliability and sharing the network."
+    },
+    {
+     "text": "Only one computer can use the internet at once",
+     "correct": false,
+     "feedback": "Packets let millions share it."
+    }
+   ],
+   "explain": "Each packet has the destination address and a sequence number so the message can be put back together."
+  },
+  {
+   "id": "computing.m.in.http",
+   "topic": "computing.internet",
+   "kind": "mcq",
+   "prompt": "What is HTTP?",
+   "options": [
+    {
+     "text": "The protocol (set of rules) browsers and web servers use to request and send web pages",
+     "correct": true
+    },
+    {
+     "text": "A type of cable",
+     "correct": false,
+     "feedback": "It is a set of rules, not hardware."
+    },
+    {
+     "text": "A programming language",
+     "correct": false,
+     "feedback": "HTML is the markup language; HTTP is the protocol."
+    }
+   ],
+   "explain": "HyperText Transfer Protocol. HTTPS is the secure, encrypted version."
+  },
+  {
+   "id": "computing.m.in.ipmac",
+   "topic": "computing.internet",
+   "kind": "mcq",
+   "prompt": "What is the difference between an IP address and a MAC address?",
+   "options": [
+    {
+     "text": "An IP address can change as a device moves between networks; a MAC address is fixed in the hardware",
+     "correct": true
+    },
+    {
+     "text": "They are the same",
+     "correct": false,
+     "feedback": "They are used at different layers."
+    },
+    {
+     "text": "MAC addresses are only for Apple computers",
+     "correct": false,
+     "feedback": "Every network card has one."
+    }
+   ],
+   "explain": "IP addresses route data across the internet; MAC addresses identify devices on the local network."
+  },
+  {
+   "id": "computing.m.in.router",
+   "topic": "computing.internet",
+   "kind": "mcq",
+   "prompt": "What does a router do?",
+   "options": [
+    {
+     "text": "Forwards packets between networks towards their destination",
+     "correct": true
+    },
+    {
+     "text": "Stores web pages",
+     "correct": false,
+     "feedback": "Servers do that."
+    },
+    {
+     "text": "Turns digital data into sound",
+     "correct": false,
+     "feedback": "That was what old modems did."
+    }
+   ],
+   "explain": "Routers read each packet’s destination and send it on its next hop."
+  },
+  {
+   "id": "computing.m.in.ipv4",
+   "topic": "computing.internet",
+   "kind": "fact",
+   "prompt": "An IPv4 address is made of how many bits?",
+   "answer": "32",
+   "distractors": [
+    "8",
+    "16",
+    "128"
+   ],
+   "explain": "Written as four numbers from 0 to 255, like 192.168.1.10. IPv6 uses 128 bits because we ran out of IPv4 addresses."
+  },
+  {
+   "id": "computing.m.in.visit",
+   "topic": "computing.internet",
+   "kind": "order",
+   "prompt": "Put what happens when you visit a website in order.",
+   "items": [
+    "you type the web address",
+    "DNS finds the IP address",
+    "your browser sends an HTTP request in packets",
+    "the server sends the page back",
+    "the browser displays the page"
+   ],
+   "labels": null,
+   "explain": "Name → address → request → response → display."
+  },
+  {
+   "id": "computing.m.in.w",
+   "topic": "computing.internet",
+   "kind": "written",
+   "prompt": "Describe what happens, step by step, from typing www.example.org into a browser to seeing the page.",
+   "hints": [
+    "Mention DNS and IP addresses",
+    "Mention packets and routers",
+    "Mention the request (HTTP/HTTPS) and the response",
+    "Finish with the browser displaying the page"
+   ],
+   "model": "First the browser asks a DNS server to translate www.example.org into the server’s IP address. It then sends an HTTP (or HTTPS, encrypted) request for the page. The request is split into packets, each labelled with the destination address, and routers pass them from network to network until they reach the server. The server sends the page back, also in packets, which may take different routes and are reassembled in order. Finally the browser reads the HTML, CSS and any JavaScript and draws the page on the screen.",
+   "words": [
+    40,
+    200
+   ]
+  },
+  {
+   "id": "computing.m.wb.tmpl",
+   "topic": "computing.web",
+   "kind": "template",
+   "gen": "y8dHTML",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.wb.jobs",
+   "topic": "computing.web",
+   "kind": "mcq",
+   "prompt": "Which language controls how a web page LOOKS: colours, fonts, layout?",
+   "options": [
+    {
+     "text": "CSS",
+     "correct": true
+    },
+    {
+     "text": "HTML",
+     "correct": false,
+     "feedback": "HTML gives structure and content."
+    },
+    {
+     "text": "HTTP",
+     "correct": false,
+     "feedback": "HTTP is how the page is delivered."
+    }
+   ],
+   "explain": "HTML: what is on the page. CSS: how it looks. JavaScript: how it behaves."
+  },
+  {
+   "id": "computing.m.wb.alt",
+   "topic": "computing.web",
+   "kind": "mcq",
+   "prompt": "Why does this image tag include alt text?\n```\n<img src=\"parthenon.jpg\" alt=\"The Parthenon on the Acropolis\">\n```",
+   "options": [
+    {
+     "text": "Screen readers read it aloud, and it shows if the image fails to load",
+     "correct": true
+    },
+    {
+     "text": "It makes the image bigger",
+     "correct": false,
+     "feedback": "alt is a text description."
+    },
+    {
+     "text": "It is the image’s file name",
+     "correct": false,
+     "feedback": "src is the file; alt is the description."
+    }
+   ],
+   "explain": "Alt text makes pages accessible to blind and partially sighted users."
+  },
+  {
+   "id": "computing.m.wb.h1",
+   "topic": "computing.web",
+   "kind": "fact",
+   "prompt": "Which HTML tag makes the main heading of a page?",
+   "answer": "<h1>",
+   "distractors": [
+    "<head>",
+    "<p>",
+    "<title>"
+   ],
+   "explain": "<h1> to <h6> are headings, from biggest to smallest. <head> holds information about the page, not the heading.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.m.wb.js",
+   "topic": "computing.web",
+   "kind": "mcq",
+   "prompt": "A button that shows a hidden answer when clicked is usually made with…",
+   "options": [
+    {
+     "text": "JavaScript",
+     "correct": true
+    },
+    {
+     "text": "CSS only",
+     "correct": false,
+     "feedback": "CSS styles things; reacting to a click is behaviour: JavaScript."
+    },
+    {
+     "text": "DNS",
+     "correct": false,
+     "feedback": "DNS finds IP addresses."
+    }
+   ],
+   "explain": "JavaScript runs in the browser and makes pages interactive."
+  },
+  {
+   "id": "computing.m.dbx.tmpl",
+   "topic": "computing.databases",
+   "kind": "template",
+   "gen": "y8dSQL",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.dbx.pk",
+   "topic": "computing.databases",
+   "kind": "mcq",
+   "prompt": "Why is “name” a poor choice of primary key for a table of students?",
+   "options": [
+    {
+     "text": "Two students might have the same name, but a primary key must be unique",
+     "correct": true
+    },
+    {
+     "text": "Names are too short",
+     "correct": false,
+     "feedback": "The problem is that names can repeat."
+    },
+    {
+     "text": "Names cannot be stored in databases",
+     "correct": false,
+     "feedback": "They can; they just are not unique."
+    }
+   ],
+   "explain": "Schools use a student ID number as the primary key instead."
+  },
+  {
+   "id": "computing.m.dbx.count",
+   "topic": "computing.databases",
+   "kind": "mcq",
+   "prompt": "What does SELECT COUNT(*) FROM Heroes; return?",
+   "options": [
+    {
+     "text": "The number of records in the table",
+     "correct": true
+    },
+    {
+     "text": "Every field of every record",
+     "correct": false,
+     "feedback": "That is SELECT *."
+    },
+    {
+     "text": "The largest value",
+     "correct": false,
+     "feedback": "That would be MAX."
+    }
+   ],
+   "explain": "COUNT, SUM, MAX, MIN and AVG are aggregate functions: they summarise many rows into one answer."
+  },
+  {
+   "id": "computing.m.dbx.desc",
+   "topic": "computing.databases",
+   "kind": "mcq",
+   "prompt": "Which query lists heroes from strongest to weakest?",
+   "options": [
+    {
+     "text": "SELECT name FROM Heroes ORDER BY strength DESC;",
+     "correct": true
+    },
+    {
+     "text": "SELECT name FROM Heroes ORDER BY strength ASC;",
+     "correct": false,
+     "feedback": "ASC is weakest first."
+    },
+    {
+     "text": "SELECT name FROM Heroes WHERE strength;",
+     "correct": false,
+     "feedback": "WHERE filters rows; it does not sort."
+    }
+   ],
+   "explain": "DESC = descending, biggest first."
+  },
+  {
+   "id": "computing.m.dbx.why",
+   "topic": "computing.databases",
+   "kind": "mcq",
+   "prompt": "Why do big organisations use databases rather than spreadsheets?",
+   "options": [
+    {
+     "text": "Many users can safely use huge amounts of data at once, with rules that keep it consistent",
+     "correct": true
+    },
+    {
+     "text": "Databases cannot be searched",
+     "correct": false,
+     "feedback": "They are designed for searching."
+    },
+    {
+     "text": "Spreadsheets cannot store numbers",
+     "correct": false,
+     "feedback": "They can, but they struggle with millions of records and many users."
+    }
+   ],
+   "explain": "Databases enforce data types, keys and permissions, and answer queries very fast."
+  },
+  {
+   "id": "computing.m.dbx.like",
+   "topic": "computing.databases",
+   "kind": "fact",
+   "prompt": "In SQL, which wildcard in LIKE means “any number of characters”?",
+   "answer": "%",
+   "distractors": [
+    "*",
+    "#",
+    "?"
+   ],
+   "explain": "LIKE 'A%' matches anything starting with A.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.m.dbx.w",
+   "topic": "computing.databases",
+   "kind": "written",
+   "prompt": "A museum keeps a database of Greek vases. Explain why each vase record needs a primary key, and suggest a good field to use.",
+   "hints": [
+    "Say what a primary key is (unique for every record)",
+    "Explain a problem without one (duplicates, finding or updating the wrong record)",
+    "Suggest a suitable field and say why other fields would not work"
+   ],
+   "model": "A primary key is a field whose value is different for every record, so each vase can be identified exactly. Without one, two vases with the same description, painter or date would be impossible to tell apart, and updating or deleting “the red-figure amphora” might change the wrong record. A good primary key is a catalogue number such as VASE-0451, given to each vase when it arrives. Fields like painter or date are poor choices because many vases share them.",
+   "words": [
+    40,
+    200
+   ]
+  },
+  {
+   "id": "computing.m.ai.ml",
+   "topic": "computing.ai",
+   "kind": "mcq",
+   "prompt": "How does a machine-learning system learn to recognise owls in photos?",
+   "options": [
+    {
+     "text": "It is trained on many labelled photos and adjusts itself to spot the patterns",
+     "correct": true
+    },
+    {
+     "text": "A programmer writes a rule for every possible owl",
+     "correct": false,
+     "feedback": "That is impossible; it learns from examples."
+    },
+    {
+     "text": "It looks up the answer on the internet each time",
+     "correct": false,
+     "feedback": "It uses the patterns it learned in training."
+    }
+   ],
+   "explain": "Machine learning finds patterns in training data rather than following hand-written rules."
+  },
+  {
+   "id": "computing.m.ai.bias",
+   "topic": "computing.ai",
+   "kind": "mcq",
+   "prompt": "A face-recognition system was trained mostly on photos of one group of people. What is the likely problem?",
+   "options": [
+    {
+     "text": "It will be less accurate for people who were under-represented in the training data",
+     "correct": true
+    },
+    {
+     "text": "It will work perfectly for everyone",
+     "correct": false,
+     "feedback": "A system is only as good as its training data."
+    },
+    {
+     "text": "It will refuse to start",
+     "correct": false,
+     "feedback": "It will run, but unfairly."
+    }
+   ],
+   "explain": "Biased training data leads to biased results, which can have serious real-world effects."
+  },
+  {
+   "id": "computing.m.ai.turing",
+   "topic": "computing.ai",
+   "kind": "mcq",
+   "prompt": "What is the Turing test?",
+   "options": [
+    {
+     "text": "A test of whether a machine’s conversation can be told apart from a human’s",
+     "correct": true
+    },
+    {
+     "text": "A test of how fast a computer is",
+     "correct": false,
+     "feedback": "It is about intelligent behaviour."
+    },
+    {
+     "text": "An exam to become a programmer",
+     "correct": false,
+     "feedback": "Alan Turing proposed it in 1950 as a thought experiment."
+    }
+   ],
+   "explain": "Turing called it the “imitation game”."
+  },
+  {
+   "id": "computing.m.ai.gen",
+   "topic": "computing.ai",
+   "kind": "mcq",
+   "prompt": "A chatbot confidently gives a wrong date for the Battle of Marathon. What does this show?",
+   "options": [
+    {
+     "text": "AI systems can produce fluent but false answers, so important facts need checking",
+     "correct": true
+    },
+    {
+     "text": "The battle date has changed",
+     "correct": false,
+     "feedback": "Marathon was in 490 BC; the chatbot was wrong."
+    },
+    {
+     "text": "Chatbots are never useful",
+     "correct": false,
+     "feedback": "They can be very useful, but need checking."
+    }
+   ],
+   "explain": "Generative AI predicts likely text; it does not always know what is true."
+  },
+  {
+   "id": "computing.m.ai.data",
+   "topic": "computing.ai",
+   "kind": "fact",
+   "prompt": "The examples a machine-learning system learns from are called its…",
+   "answer": "training data",
+   "distractors": [
+    "source code",
+    "firewall",
+    "cache"
+   ],
+   "explain": "Good, varied, fairly collected training data is vital.",
+   "accept": [
+    "training set"
+   ]
+  },
+  {
+   "id": "computing.m.ai.w",
+   "topic": "computing.ai",
+   "kind": "written",
+   "prompt": "A company wants to use AI to sort job applications. Discuss how the system could become biased and what the company should do about it.",
+   "hints": [
+    "Explain that AI learns from past data",
+    "Give an example of how past decisions could be unfair",
+    "Suggest at least two ways to reduce the risk",
+    "Reach a judgement"
+   ],
+   "model": "The AI would learn from the company’s past hiring decisions. If those decisions were unfair, for example if fewer women were hired for engineering jobs, the system would learn to rate similar applicants lower and repeat the unfairness at speed, while looking objective. To reduce the risk, the company should check its training data for imbalances, test the system’s results for different groups before using it, explain how decisions are made, and keep a human reviewing the final choices. AI can save time, but only if it is checked and used responsibly.",
+   "words": [
+    40,
+    200
+   ]
+  },
+  {
+   "id": "computing.m.ar.tmpl",
+   "topic": "computing.architecture",
+   "kind": "template",
+   "gen": "y8dClock",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.ar.cache",
+   "topic": "computing.architecture",
+   "kind": "mcq",
+   "prompt": "What is cache memory?",
+   "options": [
+    {
+     "text": "A small amount of very fast memory inside or near the CPU that holds frequently used data",
+     "correct": true
+    },
+    {
+     "text": "Extra hard-disk space",
+     "correct": false,
+     "feedback": "Cache is much faster and much smaller than storage."
+    },
+    {
+     "text": "Money saved for upgrades",
+     "correct": false,
+     "feedback": "That is cash!"
+    }
+   ],
+   "explain": "Fetching from cache is many times faster than fetching from RAM."
+  },
+  {
+   "id": "computing.m.ar.cores",
+   "topic": "computing.architecture",
+   "kind": "mcq",
+   "prompt": "A quad-core CPU has four cores. Why might a program NOT run four times faster than on one core?",
+   "options": [
+    {
+     "text": "Some tasks have to happen one after another and cannot be split between cores",
+     "correct": true
+    },
+    {
+     "text": "Cores only work at night",
+     "correct": false,
+     "feedback": "They all run together, all the time."
+    },
+    {
+     "text": "Four cores share one clock tick",
+     "correct": false,
+     "feedback": "Each core runs at the clock speed."
+    }
+   ],
+   "explain": "Software has to be written to use several cores, and some steps depend on earlier ones."
+  },
+  {
+   "id": "computing.m.ar.register",
+   "topic": "computing.architecture",
+   "kind": "mcq",
+   "prompt": "What is a register?",
+   "options": [
+    {
+     "text": "A tiny, extremely fast storage location inside the CPU",
+     "correct": true
+    },
+    {
+     "text": "A list of students",
+     "correct": false,
+     "feedback": "In a CPU it is a storage location."
+    },
+    {
+     "text": "A type of hard drive",
+     "correct": false,
+     "feedback": "Registers are inside the CPU itself."
+    }
+   ],
+   "explain": "The program counter register, for example, holds the address of the next instruction."
+  },
+  {
+   "id": "computing.m.ar.vonneumann",
+   "topic": "computing.architecture",
+   "kind": "mcq",
+   "prompt": "In the von Neumann architecture, what is stored together in memory?",
+   "options": [
+    {
+     "text": "Both the program instructions and the data",
+     "correct": true
+    },
+    {
+     "text": "Only the data",
+     "correct": false,
+     "feedback": "The key idea is that programs are stored like data."
+    },
+    {
+     "text": "Only the graphics",
+     "correct": false,
+     "feedback": "Instructions and data share memory."
+    }
+   ],
+   "explain": "The stored-program idea means a computer can run any program just by loading it into memory."
+  },
+  {
+   "id": "computing.m.ar.embedded",
+   "topic": "computing.architecture",
+   "kind": "mcq",
+   "prompt": "Which is an embedded system?",
+   "options": [
+    {
+     "text": "The computer that controls a washing machine",
+     "correct": true
+    },
+    {
+     "text": "A laptop",
+     "correct": false,
+     "feedback": "Laptops are general-purpose computers."
+    },
+    {
+     "text": "A web browser",
+     "correct": false,
+     "feedback": "That is software, not a system inside a device."
+    }
+   ],
+   "explain": "Embedded systems do one dedicated job inside a bigger device: cars, microwaves, traffic lights."
+  },
+  {
+   "id": "computing.m.ar.w",
+   "topic": "computing.architecture",
+   "kind": "written",
+   "prompt": "Theo says: “A computer with twice as many cores will always run my game twice as fast.” Explain whether he is right.",
+   "hints": [
+    "Explain what a core is",
+    "Explain why some tasks cannot be shared between cores",
+    "Mention at least one other factor (clock speed, cache, the graphics card, RAM)",
+    "Reach a judgement"
+   ],
+   "model": "Theo is not right. Each core can run instructions at the same time as the others, so more cores help when work can be split into independent parts. But many parts of a game depend on each other and must happen in order, and the game has to be written to use several cores at all, so the extra cores may sit idle. Speed also depends on clock speed, the size of the cache, the amount of RAM and, for games, especially the graphics card. Twice the cores may help, but it will rarely double the speed.",
+   "words": [
+    40,
+    200
+   ]
+  },
+  {
+   "id": "computing.m.os.jobs",
+   "topic": "computing.os",
+   "kind": "mcq",
+   "prompt": "Which is NOT a job of the operating system?",
+   "options": [
+    {
+     "text": "Writing your history essay for you",
+     "correct": true
+    },
+    {
+     "text": "Managing memory",
+     "correct": false,
+     "feedback": "The OS shares memory between programs."
+    },
+    {
+     "text": "Controlling devices through drivers",
+     "correct": false,
+     "feedback": "That is an OS job."
+    }
+   ],
+   "explain": "The OS manages memory, the processor, devices, files, users and security, and provides the user interface."
+  },
+  {
+   "id": "computing.m.os.multi",
+   "topic": "computing.os",
+   "kind": "mcq",
+   "prompt": "How can a single-core computer seem to run music, a browser and a game at the same time?",
+   "options": [
+    {
+     "text": "The OS switches between them so fast that they all appear to run at once",
+     "correct": true
+    },
+    {
+     "text": "Each program has its own CPU",
+     "correct": false,
+     "feedback": "There is only one core."
+    },
+    {
+     "text": "The programs take turns once a day",
+     "correct": false,
+     "feedback": "Switching happens thousands of times a second."
+    }
+   ],
+   "explain": "This is called multitasking, and scheduling the processor is a key OS job."
+  },
+  {
+   "id": "computing.m.os.driver",
+   "topic": "computing.os",
+   "kind": "mcq",
+   "prompt": "What does a device driver do?",
+   "options": [
+    {
+     "text": "Lets the operating system communicate with a piece of hardware, like a printer",
+     "correct": true
+    },
+    {
+     "text": "Drives the computer to a repair shop",
+     "correct": false,
+     "feedback": "It is software!"
+    },
+    {
+     "text": "Speeds up the internet",
+     "correct": false,
+     "feedback": "It is about controlling hardware."
+    }
+   ],
+   "explain": "Each printer, graphics card or controller needs a driver so the OS knows how to talk to it."
+  },
+  {
+   "id": "computing.m.os.defrag",
+   "topic": "computing.os",
+   "kind": "mcq",
+   "prompt": "Why should you not defragment a solid-state drive (SSD)?",
+   "options": [
+    {
+     "text": "SSDs read any location equally fast, so it does not help and adds wear",
+     "correct": true
+    },
+    {
+     "text": "SSDs cannot store files",
+     "correct": false,
+     "feedback": "They store files very well."
+    },
+    {
+     "text": "Defragmenting deletes files",
+     "correct": false,
+     "feedback": "It rearranges them; on an SSD there is no benefit."
+    }
+   ],
+   "explain": "Defragmenting helps spinning hard disks, where scattered pieces of a file slow reading down."
+  },
+  {
+   "id": "computing.m.os.open",
+   "topic": "computing.os",
+   "kind": "mcq",
+   "prompt": "What is open-source software?",
+   "options": [
+    {
+     "text": "Software whose source code anyone can read, change and share",
+     "correct": true
+    },
+    {
+     "text": "Software that is always open on screen",
+     "correct": false,
+     "feedback": "It is about the source code."
+    },
+    {
+     "text": "Software that has no bugs",
+     "correct": false,
+     "feedback": "Open-source software has bugs like any other."
+    }
+   ],
+   "explain": "Linux and Firefox are open source; Windows is proprietary (closed source)."
+  },
+  {
+   "id": "computing.m.os.backup",
+   "topic": "computing.os",
+   "kind": "fact",
+   "prompt": "Which utility copies files to another place so they can be recovered if lost?",
+   "answer": "backup software",
+   "distractors": [
+    "defragmenter",
+    "compressor",
+    "firewall"
+   ],
+   "explain": "A good habit is the 3-2-1 rule: three copies, on two kinds of storage, one kept somewhere else.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "computing.m.lw.dpa",
+   "topic": "computing.law",
+   "kind": "mcq",
+   "prompt": "Under the Data Protection Act (UK GDPR), which is a principle organisations must follow?",
+   "options": [
+    {
+     "text": "Personal data must be kept no longer than necessary",
+     "correct": true
+    },
+    {
+     "text": "Personal data may be sold to anyone",
+     "correct": false,
+     "feedback": "That would break the law."
+    },
+    {
+     "text": "People have no right to see their own data",
+     "correct": false,
+     "feedback": "People have the right to access their data."
+    }
+   ],
+   "explain": "Data must be used fairly and lawfully, for stated purposes, kept accurate and secure, and not kept longer than needed."
+  },
+  {
+   "id": "computing.m.lw.cma",
+   "topic": "computing.law",
+   "kind": "mcq",
+   "prompt": "Kit guesses his friend’s password and logs into her account “just to look”. Which law has he broken?",
+   "options": [
+    {
+     "text": "The Computer Misuse Act 1990",
+     "correct": true
+    },
+    {
+     "text": "The Copyright, Designs and Patents Act",
+     "correct": false,
+     "feedback": "That is about copying creative work."
+    },
+    {
+     "text": "No law, because he only looked",
+     "correct": false,
+     "feedback": "Unauthorised access is an offence even if nothing is changed."
+    }
+   ],
+   "explain": "Unauthorised access is the first offence under the Computer Misuse Act; doing it to commit further crimes, or to damage data, are more serious offences."
+  },
+  {
+   "id": "computing.m.lw.copy",
+   "topic": "computing.law",
+   "kind": "mcq",
+   "prompt": "Mira uploads a whole film she did not make to her own website. Which law covers this?",
+   "options": [
+    {
+     "text": "The Copyright, Designs and Patents Act 1988",
+     "correct": true
+    },
+    {
+     "text": "The Data Protection Act",
+     "correct": false,
+     "feedback": "That is about personal data."
+    },
+    {
+     "text": "The Computer Misuse Act",
+     "correct": false,
+     "feedback": "That is about hacking."
+    }
+   ],
+   "explain": "Copyright protects films, music, books and software from being copied and shared without permission."
+  },
+  {
+   "id": "computing.m.lw.ewaste",
+   "topic": "computing.law",
+   "kind": "mcq",
+   "prompt": "Why is e-waste (old phones and laptops) an environmental problem?",
+   "options": [
+    {
+     "text": "Devices contain toxic materials and valuable metals that are often dumped instead of recycled",
+     "correct": true
+    },
+    {
+     "text": "Phones are made of paper",
+     "correct": false,
+     "feedback": "They contain metals, plastics and chemicals."
+    },
+    {
+     "text": "E-waste is always recycled perfectly",
+     "correct": false,
+     "feedback": "Much of it is not."
+    }
+   ],
+   "explain": "Recycling recovers metals like gold and copper and stops toxic chemicals leaking into soil and water."
+  },
+  {
+   "id": "computing.m.lw.datacentre",
+   "topic": "computing.law",
+   "kind": "mcq",
+   "prompt": "Why do data centres affect the environment?",
+   "options": [
+    {
+     "text": "They use huge amounts of electricity to run and cool thousands of servers",
+     "correct": true
+    },
+    {
+     "text": "They are all underwater",
+     "correct": false,
+     "feedback": "Almost all are on land."
+    },
+    {
+     "text": "They have no effect at all",
+     "correct": false,
+     "feedback": "Their electricity and water use is significant."
+    }
+   ],
+   "explain": "Streaming, cloud storage and AI all run in data centres, so their energy use is growing fast."
+  },
+  {
+   "id": "computing.m.lw.divide",
+   "topic": "computing.law",
+   "kind": "mcq",
+   "prompt": "What is the digital divide?",
+   "options": [
+    {
+     "text": "The gap between people who have good access to technology and the internet and those who do not",
+     "correct": true
+    },
+    {
+     "text": "The line between two computer screens",
+     "correct": false,
+     "feedback": "It is a social idea."
+    },
+    {
+     "text": "Dividing a file into packets",
+     "correct": false,
+     "feedback": "That is packet switching."
+    }
+   ],
+   "explain": "Cost, location, age and skills can all leave people behind as more services move online."
+  },
+  {
+   "id": "computing.m.rc.tmpl",
+   "topic": "computing.recursion",
+   "kind": "template",
+   "gen": "y8dRecursion",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.rc.base",
+   "topic": "computing.recursion",
+   "kind": "mcq",
+   "prompt": "What happens if a recursive function has no base case?",
+   "options": [
+    {
+     "text": "It keeps calling itself until the program runs out of memory and crashes",
+     "correct": true
+    },
+    {
+     "text": "It returns 0",
+     "correct": false,
+     "feedback": "Without a base case nothing stops the calls."
+    },
+    {
+     "text": "It runs once",
+     "correct": false,
+     "feedback": "It never stops calling itself."
+    }
+   ],
+   "explain": "Python stops it with a RecursionError when the call stack gets too deep."
+  },
+  {
+   "id": "computing.m.rc.vs",
+   "topic": "computing.recursion",
+   "kind": "mcq",
+   "prompt": "Any recursive function could also be written with…",
+   "options": [
+    {
+     "text": "a loop (iteration)",
+     "correct": true
+    },
+    {
+     "text": "only a dictionary",
+     "correct": false,
+     "feedback": "A loop can do the same job."
+    },
+    {
+     "text": "nothing else",
+     "correct": false,
+     "feedback": "Recursion and iteration are interchangeable, though one is often clearer."
+    }
+   ],
+   "explain": "Recursion is elegant for problems that contain smaller copies of themselves, like trees and mazes."
+  },
+  {
+   "id": "computing.m.rc.def",
+   "topic": "computing.recursion",
+   "kind": "fact",
+   "prompt": "A function that calls itself is called…",
+   "answer": "recursive",
+   "distractors": [
+    "iterative",
+    "global",
+    "boolean"
+   ],
+   "explain": "Each call works on a smaller version of the problem.",
+   "accept": [
+    "recursion",
+    "a recursive function"
+   ]
+  },
+  {
+   "id": "computing.m.pt.tmpl",
+   "topic": "computing.paths",
+   "kind": "template",
+   "gen": "y8dPaths",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.pt.graph",
+   "topic": "computing.paths",
+   "kind": "mcq",
+   "prompt": "In a graph of islands and sea routes, what are the islands called?",
+   "options": [
+    {
+     "text": "Nodes (or vertices)",
+     "correct": true
+    },
+    {
+     "text": "Edges",
+     "correct": false,
+     "feedback": "The routes are the edges."
+    },
+    {
+     "text": "Weights",
+     "correct": false,
+     "feedback": "Weights are the distances on the edges."
+    }
+   ],
+   "explain": "Graphs model maps, networks, friendships and much more."
+  },
+  {
+   "id": "computing.m.pt.bfs",
+   "topic": "computing.paths",
+   "kind": "mcq",
+   "prompt": "Why does breadth-first search find the route with the fewest steps?",
+   "options": [
+    {
+     "text": "It explores every square 1 step away, then every square 2 steps away, and so on",
+     "correct": true
+    },
+    {
+     "text": "It always turns left",
+     "correct": false,
+     "feedback": "That is a maze-walking trick, not BFS."
+    },
+    {
+     "text": "It guesses",
+     "correct": false,
+     "feedback": "BFS is systematic."
+    }
+   ],
+   "explain": "The first time BFS reaches the exit, no shorter route can exist."
+  },
+  {
+   "id": "computing.m.pt.satnav",
+   "topic": "computing.paths",
+   "kind": "mcq",
+   "prompt": "Which everyday technology uses shortest-path algorithms like Dijkstra’s?",
+   "options": [
+    {
+     "text": "Sat navs and map apps",
+     "correct": true
+    },
+    {
+     "text": "Calculators",
+     "correct": false,
+     "feedback": "Calculators do arithmetic, not routes."
+    },
+    {
+     "text": "Spell-checkers",
+     "correct": false,
+     "feedback": "They compare words, not routes."
+    }
+   ],
+   "explain": "Internet routers use similar algorithms to choose paths for packets."
+  },
+  {
+   "id": "computing.m.lc.tmpl",
+   "topic": "computing.circuits",
+   "kind": "template",
+   "gen": "y8dCircuit",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.lc.rows",
+   "topic": "computing.circuits",
+   "kind": "fact",
+   "prompt": "How many rows does a truth table with 3 inputs need?",
+   "answer": "8",
+   "distractors": [
+    "3",
+    "6",
+    "9"
+   ],
+   "explain": "2 × 2 × 2 = 2^{3} = 8 combinations."
+  },
+  {
+   "id": "computing.m.lc.half",
+   "topic": "computing.circuits",
+   "kind": "mcq",
+   "prompt": "A half adder adds two bits. Which gates give its sum and carry outputs?",
+   "options": [
+    {
+     "text": "Sum: XOR; carry: AND",
+     "correct": true
+    },
+    {
+     "text": "Sum: AND; carry: OR",
+     "correct": false,
+     "feedback": "1 + 1 gives sum 0, carry 1: that is XOR and AND."
+    },
+    {
+     "text": "Sum: NOT; carry: NOT",
+     "correct": false,
+     "feedback": "NOT has only one input."
+    }
+   ],
+   "explain": "0+0 = 00, 0+1 = 01, 1+1 = 10: the sum bit is XOR and the carry bit is AND."
+  },
+  {
+   "id": "computing.m.lc.nand",
+   "topic": "computing.circuits",
+   "kind": "mcq",
+   "prompt": "Why are NAND gates special?",
+   "options": [
+    {
+     "text": "Any logic circuit can be built from NAND gates alone",
+     "correct": true
+    },
+    {
+     "text": "They are the only gate with no output",
+     "correct": false,
+     "feedback": "Every gate has an output."
+    },
+    {
+     "text": "They only work in pairs",
+     "correct": false,
+     "feedback": "They work alone, but combinations make every other gate."
+    }
+   ],
+   "explain": "NAND (NOT AND) is “universal”, which is why chips can be built from huge numbers of one simple gate."
+  },
+  {
+   "id": "computing.m.hf.tmpl",
+   "topic": "computing.huffman",
+   "kind": "template",
+   "gen": "y8dHuffman",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "computing.m.hf.why",
+   "topic": "computing.huffman",
+   "kind": "mcq",
+   "prompt": "Why does Huffman coding give E a short code in English text?",
+   "options": [
+    {
+     "text": "E is the most common letter, so a short code saves the most bits overall",
+     "correct": true
+    },
+    {
+     "text": "E comes first in the alphabet",
+     "correct": false,
+     "feedback": "A comes first; it is about frequency."
+    },
+    {
+     "text": "E is a vowel",
+     "correct": false,
+     "feedback": "Frequency matters, not whether it is a vowel."
+    }
+   ],
+   "explain": "Common symbols get short codes; rare symbols get long ones."
+  },
+  {
+   "id": "computing.m.hf.prefix",
+   "topic": "computing.huffman",
+   "kind": "mcq",
+   "prompt": "Why must no Huffman code be the start of another code?",
+   "options": [
+    {
+     "text": "So a stream of bits can be decoded without any gaps or separators",
+     "correct": true
+    },
+    {
+     "text": "To make every code the same length",
+     "correct": false,
+     "feedback": "Huffman codes have different lengths."
+    },
+    {
+     "text": "So it becomes lossy",
+     "correct": false,
+     "feedback": "Huffman coding is lossless."
+    }
+   ],
+   "explain": "If A were 1 and B 10, the bits 10 could mean B or “A then something”."
+  },
+  {
+   "id": "computing.m.hf.type",
+   "topic": "computing.huffman",
+   "kind": "fact",
+   "prompt": "Is Huffman coding lossy or lossless?",
+   "answer": "lossless",
+   "distractors": [
+    "lossy",
+    "neither",
+    "both"
+   ],
+   "explain": "The original text comes back exactly."
+  }
+ ]
+}

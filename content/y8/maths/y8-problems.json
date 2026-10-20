@@ -1,0 +1,4641 @@
+{
+ "subject": "maths",
+ "deck": "y8-problems",
+ "topics": [
+  {
+   "id": "maths.ps-strategies",
+   "title": "Problem solving: strategies",
+   "kind": "facts",
+   "prereqs": [
+    "maths.equations"
+   ],
+   "batch": 4,
+   "intro": "Hard problems rarely yield to the first idea. Try working backwards, solving a smaller version, drawing a diagram or listing systematically. Choosing the strategy is half the problem.",
+   "teach": "Explain how working backwards solves “I doubled my money, spent 7, doubled again, spent 7 and had 11 left.”",
+   "talk": "Ask {her} which strategy {she} used on the hardest problem today, and why it worked."
+  },
+  {
+   "id": "maths.ps-digits",
+   "title": "Digit puzzles",
+   "kind": "facts",
+   "prereqs": [
+    "maths.ps-strategies"
+   ],
+   "batch": 4,
+   "intro": "Digits behave like little building blocks: place value, digit sums and last digits each follow patterns you can exploit instead of writing out every number.",
+   "teach": "Explain how to count the three-digit numbers whose digits add up to 5 without listing them all.",
+   "talk": "Give {her} a number and ask for its digit sum and the last digit of its square."
+  },
+  {
+   "id": "maths.ps-divisibility",
+   "title": "Divisibility and remainders",
+   "kind": "facts",
+   "prereqs": [
+    "maths.primes",
+    "maths.ps-digits"
+   ],
+   "batch": 4,
+   "intro": "Remainders repeat in cycles, digit sums reveal multiples of 3 and 9, and inclusion–exclusion stops you counting anything twice.",
+   "teach": "Explain why 3A7 is divisible by 9 only when A is 8.",
+   "talk": "Ask {her} what day of the week it will be in 100 days, and how {she} knows."
+  },
+  {
+   "id": "maths.ps-primes",
+   "title": "Primes and factors puzzles",
+   "kind": "facts",
+   "prereqs": [
+    "maths.primes"
+   ],
+   "batch": 4,
+   "intro": "Primes are the atoms of arithmetic. Factor counts, perfect numbers and HCF × LCM tricks all come from prime factorisations.",
+   "teach": "Explain why only square numbers have an odd number of factors.",
+   "talk": "Ask {her} to find a perfect number and explain what makes it perfect."
+  },
+  {
+   "id": "maths.ps-fractions",
+   "title": "Fraction and ratio puzzles",
+   "kind": "facts",
+   "prereqs": [
+    "maths.fractions",
+    "maths.ratio"
+   ],
+   "batch": 4,
+   "intro": "Many fraction puzzles hide a simple whole: find what one part is worth, or notice that a long sum collapses (telescopes) to almost nothing.",
+   "teach": "Explain how ½ + 1/6 + 1/12 + 1/20 + 1/30 telescopes.",
+   "talk": "Ask {her} to share a bill in a tricky ratio at dinner."
+  },
+  {
+   "id": "maths.ps-mental",
+   "title": "Clever calculation",
+   "kind": "facts",
+   "prereqs": [
+    "maths.ps-strategies"
+   ],
+   "batch": 4,
+   "intro": "The quickest calculators are not faster at arithmetic; they spot structure: 99 × 101 = (100 − 1)(100 + 1), and long sums pair up.",
+   "teach": "Explain how Gauss could add 1 to 100 in his head.",
+   "talk": "Ask {her} to work out 2026² − 2025² without a calculator, and explain the trick."
+  },
+  {
+   "id": "maths.ps-patterns",
+   "title": "Patterns and generalising",
+   "kind": "facts",
+   "prereqs": [
+    "maths.sequences",
+    "maths.ps-strategies"
+   ],
+   "batch": 4,
+   "intro": "Mathematicians generalise: spot the rule for a few cases, write it in algebra, then use it for the hundredth case without drawing it.",
+   "teach": "Explain why the sum of row n of the odd-number triangle is n³.",
+   "talk": "Ask {her} for the 20th triangular number and how {she} found it without listing them."
+  },
+  {
+   "id": "maths.ps-logic",
+   "title": "Logic: knights, knaves and the Oracle",
+   "kind": "facts",
+   "prereqs": [
+    "maths.ps-strategies"
+   ],
+   "batch": 4,
+   "intro": "Logic puzzles reward patience: suppose one person is truthful, follow the consequences, and throw out any case that contradicts itself.",
+   "teach": "Explain why nobody on the island of knights and knaves can say “I am a knave”.",
+   "talk": "Set {her} a knights-and-knaves puzzle in the car, or ask {her} to invent one."
+  },
+  {
+   "id": "maths.ps-counting",
+   "title": "Counting and arrangements",
+   "kind": "facts",
+   "prereqs": [
+    "maths.ps-strategies"
+   ],
+   "batch": 4,
+   "intro": "Counting cleverly beats counting one by one: multiply the choices at each stage, divide when order does not matter, and count the complement when that is easier.",
+   "teach": "Explain why choosing 2 heroes from 8 gives 28, not 56.",
+   "talk": "Ask {her} how many ways the family could sit along one side of a table."
+  },
+  {
+   "id": "maths.ps-probability",
+   "title": "Probability puzzles",
+   "kind": "facts",
+   "prereqs": [
+    "maths.probability",
+    "maths.ps-counting"
+   ],
+   "batch": 4,
+   "intro": "Probability puzzles are counting puzzles in disguise: count the outcomes you want, count all the equally likely outcomes, and divide.",
+   "teach": "Explain why the chance of at least one head in three tosses is 7/8.",
+   "talk": "Play a dice game and ask {her} which total is most likely, and why."
+  },
+  {
+   "id": "maths.ps-geometry",
+   "title": "Angle, area and shape puzzles",
+   "kind": "facts",
+   "prereqs": [
+    "maths.angles",
+    "maths.area"
+   ],
+   "batch": 4,
+   "intro": "Geometry puzzles often turn on one fact used cleverly: exterior angles add to 360°, a shape can be cut and rearranged, or a grid hides more squares than you think.",
+   "teach": "Explain how to find the number of sides of a regular polygon from its exterior angle.",
+   "talk": "Ask {her} what angle the clock hands make right now."
+  },
+  {
+   "id": "maths.ps-time",
+   "title": "Time, speed and calendars",
+   "kind": "facts",
+   "prereqs": [
+    "maths.ratio"
+   ],
+   "batch": 4,
+   "intro": "Average speed is total distance ÷ total time, never the average of the speeds. Calendars cycle in sevens, and clock hands move at steady rates you can calculate.",
+   "teach": "Explain why going at 15 km/h and returning at 10 km/h does not average 12.5 km/h.",
+   "talk": "On a journey, ask {her} to estimate the arrival time from the speed and the distance left."
+  },
+  {
+   "id": "maths.ps-algebra",
+   "title": "Algebra in disguise",
+   "kind": "facts",
+   "prereqs": [
+    "maths.equations",
+    "maths.ps-strategies"
+   ],
+   "batch": 4,
+   "intro": "Word puzzles become easy once you name the unknown: let x be the thing you want, write the facts as equations, and the algebra does the rest.",
+   "teach": "Explain the brick puzzle: a brick weighs 1 kg plus half a brick.",
+   "talk": "Ask {her} the bat-and-ball puzzle, and why the quick answer is wrong."
+  },
+  {
+   "id": "maths.ps-invariants",
+   "title": "Parity and invariants",
+   "kind": "facts",
+   "prereqs": [
+    "maths.ps-logic",
+    "maths.ps-patterns"
+   ],
+   "batch": 4,
+   "intro": "Some puzzles are solved by finding something that never changes, an invariant, such as whether a total is odd or even. If the start and the target differ in it, the target is impossible.",
+   "teach": "Explain why a chessboard with two opposite corners removed cannot be covered by dominoes.",
+   "talk": "Ask {her} to explain why seven upturned cups cannot all be turned up two at a time.",
+   "tier": "stretch"
+  },
+  {
+   "id": "maths.ps-olympiad",
+   "title": "Harder challenges",
+   "kind": "facts",
+   "prereqs": [
+    "maths.ps-algebra",
+    "maths.ps-counting",
+    "maths.ps-divisibility"
+   ],
+   "batch": 4,
+   "intro": "These are Olympiad-style: each needs an idea, not a long calculation. Expect to be stuck for a while, then try a small case.",
+   "teach": "Explain why (x − 6)(y − 6) = 36 helps solve 1/x + 1/y = 1/6.",
+   "talk": "Ask {her} which problem today needed the cleverest idea.",
+   "tier": "stretch"
+  },
+  {
+   "id": "maths.ps-proof",
+   "title": "Proof: explain it for every number",
+   "kind": "facts",
+   "prereqs": [
+    "maths.reasoning",
+    "maths.ps-algebra"
+   ],
+   "batch": 4,
+   "intro": "Checking examples is not proof. A proof explains why something is true for EVERY case, usually with algebra or a careful argument a sceptical reader cannot fault.",
+   "teach": "Prove that the sum of three consecutive whole numbers is a multiple of 3.",
+   "talk": "Ask {her} to read you one of {her} proofs and convince you there is no gap.",
+   "tier": "stretch"
+  }
+ ],
+ "items": [
+  {
+   "id": "maths.ps.st.hermes",
+   "topic": "maths.ps-strategies",
+   "kind": "mcq",
+   "prompt": "Hermes doubles the drachmas in his purse, then spends 7. He doubles what is left, then spends 7 again, and now has 11 drachmas. How many did he start with?",
+   "options": [
+    {
+     "text": "8",
+     "correct": true
+    },
+    {
+     "text": "11",
+     "correct": false,
+     "feedback": "That is what he ends with. Work backwards from 11."
+    },
+    {
+     "text": "9",
+     "correct": false,
+     "feedback": "Check: 9 → 18 → 11 → 22 → 15, not 11."
+    },
+    {
+     "text": "16",
+     "correct": false,
+     "feedback": "Working backwards, undo “spend 7” by adding 7 first, then halve."
+    },
+    {
+     "text": "4",
+     "correct": false,
+     "feedback": "Check forwards: 4 → 8 → 1, and he cannot then spend 7 again."
+    }
+   ],
+   "explain": "Work backwards, undoing each step: 11 + 7 = 18, halve → 9; 9 + 7 = 16, halve → 8. Check: 8 → 16 → 9 → 18 → 11."
+  },
+  {
+   "id": "maths.ps.st.handshakes",
+   "topic": "maths.ps-strategies",
+   "kind": "fact",
+   "prompt": "The 12 heroes of a quest each shake hands once with every other hero. How many handshakes are there?",
+   "answer": "66",
+   "distractors": [
+    "132",
+    "144",
+    "78"
+   ],
+   "explain": "Each of 12 shakes 11 hands, giving 12 × 11 = 132, but that counts every handshake twice: 132 ÷ 2 = 66. Try a simpler case first: 3 people make 3 handshakes.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.st.coins",
+   "topic": "maths.ps-strategies",
+   "kind": "mcq",
+   "prompt": "In how many different ways can Theo pay exactly 20 obols using only 2-obol and 5-obol coins? (The order of the coins does not matter.)",
+   "options": [
+    {
+     "text": "3",
+     "correct": true
+    },
+    {
+     "text": "2",
+     "correct": false,
+     "feedback": "List systematically by the number of 5s: 0, 2 or 4 fives all work."
+    },
+    {
+     "text": "4",
+     "correct": false,
+     "feedback": "An odd number of 5-obol coins leaves an odd amount, which 2s cannot make."
+    },
+    {
+     "text": "5",
+     "correct": false,
+     "feedback": "Only 0, 2 and 4 fives leave an even remainder for the 2s."
+    },
+    {
+     "text": "10",
+     "correct": false,
+     "feedback": "That is the number of 2s in one of the ways, not the number of ways."
+    }
+   ],
+   "explain": "List by the number of 5-obol coins: 0 fives + 10 twos, 2 fives + 5 twos, 4 fives + 0 twos. An odd number of fives leaves an odd remainder, so 3 ways."
+  },
+  {
+   "id": "maths.ps.st.snail",
+   "topic": "maths.ps-strategies",
+   "kind": "fact",
+   "prompt": "A snail is at the bottom of a 10 m well. Each day it climbs 3 m and each night it slips back 2 m. On which day does it first reach the top?",
+   "answer": "8",
+   "distractors": [
+    "10",
+    "9",
+    "7"
+   ],
+   "explain": "After 7 days and nights it is at 7 m. On day 8 it climbs 3 m to reach 10 m before it can slip back. Watch the last day: it does not slip once it is out.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.st.figs",
+   "topic": "maths.ps-strategies",
+   "kind": "mcq",
+   "prompt": "Theo eats half the figs in a basket and then one more. Mira then eats half of what is left and one more. One fig remains. How many figs were there at the start?",
+   "options": [
+    {
+     "text": "10",
+     "correct": true
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "Check forwards: 6 → Theo eats 4 → 2 → Mira eats 2 → 0."
+    },
+    {
+     "text": "8",
+     "correct": false,
+     "feedback": "Check forwards: 8 → Theo eats 5 → 3 → Mira would eat 2.5. Not a whole fig."
+    },
+    {
+     "text": "12",
+     "correct": false,
+     "feedback": "Check forwards: 12 → Theo eats 7 → 5 → Mira would eat 3.5."
+    },
+    {
+     "text": "4",
+     "correct": false,
+     "feedback": "That is how many there were before Mira ate. Go back one more step."
+    }
+   ],
+   "explain": "Work backwards. Before Mira: (1 + 1) × 2 = 4. Before Theo: (4 + 1) × 2 = 10. Check: 10 → eats 6 → 4 → eats 3 → 1."
+  },
+  {
+   "id": "maths.ps.st.squares",
+   "topic": "maths.ps-strategies",
+   "kind": "fact",
+   "prompt": "How many squares of any size are there on a 4 × 4 grid of small squares?",
+   "answer": "30",
+   "distractors": [
+    "16",
+    "25",
+    "20"
+   ],
+   "explain": "Count by size: 16 of 1 × 1, 9 of 2 × 2, 4 of 3 × 3 and 1 of 4 × 4. 16 + 9 + 4 + 1 = 30. A smaller grid (2 × 2 has 5) shows the pattern of square numbers.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.st.race",
+   "topic": "maths.ps-strategies",
+   "kind": "mcq",
+   "prompt": "Five athletes race at Olympia. Kit beats Theo. Mira beats Kit but loses to Iris. Theo beats Leon. Who comes third?",
+   "options": [
+    {
+     "text": "Kit",
+     "correct": true
+    },
+    {
+     "text": "Mira",
+     "correct": false,
+     "feedback": "Iris beats Mira, so Mira is second."
+    },
+    {
+     "text": "Theo",
+     "correct": false,
+     "feedback": "Theo is behind Kit, Mira and Iris: fourth."
+    },
+    {
+     "text": "Iris",
+     "correct": false,
+     "feedback": "Iris beats Mira, who beats Kit: Iris is first."
+    },
+    {
+     "text": "It cannot be decided",
+     "correct": false,
+     "feedback": "The facts link all five into one chain: Iris, Mira, Kit, Theo, Leon."
+    }
+   ],
+   "explain": "Draw the chain: Iris > Mira > Kit > Theo > Leon. Every athlete is placed, so Kit is third."
+  },
+  {
+   "id": "maths.ps.st.cake",
+   "topic": "maths.ps-strategies",
+   "kind": "mcq",
+   "prompt": "Three straight cuts are made across the top of a round honey cake (no moving the pieces). What is the greatest number of pieces possible?",
+   "options": [
+    {
+     "text": "7",
+     "correct": true
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "Three cuts through the centre make 6, but cuts that do not all meet at one point do better."
+    },
+    {
+     "text": "8",
+     "correct": false,
+     "feedback": "Eight needs a cut through the cake’s thickness. Straight cuts down from the top give at most 7."
+    },
+    {
+     "text": "9",
+     "correct": false,
+     "feedback": "Each new cut can cross each earlier cut at most once, so the 3rd cut adds at most 3 pieces."
+    },
+    {
+     "text": "4",
+     "correct": false,
+     "feedback": "Parallel cuts give only 4. Make the cuts cross."
+    }
+   ],
+   "explain": "Each new cut can cross every earlier cut once, adding one more piece than the number of cuts it crosses: 1 + 1 + 2 + 3 = 7."
+  },
+  {
+   "id": "maths.ps.st.sumprod",
+   "topic": "maths.ps-strategies",
+   "kind": "mcq",
+   "prompt": "Two whole numbers add up to 23 and multiply to 132. What is their difference?",
+   "options": [
+    {
+     "text": "1",
+     "correct": true
+    },
+    {
+     "text": "2",
+     "correct": false,
+     "feedback": "Try factor pairs of 132: 11 × 12 adds to 23."
+    },
+    {
+     "text": "11",
+     "correct": false,
+     "feedback": "That is one of the numbers."
+    },
+    {
+     "text": "12",
+     "correct": false,
+     "feedback": "That is the other number."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "132 = 11 × 12, which differ by 1."
+    }
+   ],
+   "explain": "List factor pairs of 132 until the sum is 23: 11 × 12 = 132 and 11 + 12 = 23. The difference is 1."
+  },
+  {
+   "id": "maths.ps.st.amphora",
+   "topic": "maths.ps-strategies",
+   "kind": "fact",
+   "prompt": "An amphora leaks so that it loses half its water every hour. After 5 hours it holds 3 litres. How many litres did it hold at the start?",
+   "answer": "96",
+   "distractors": [
+    "48",
+    "15",
+    "192"
+   ],
+   "explain": "Work backwards by doubling 5 times: 3 → 6 → 12 → 24 → 48 → 96.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.dg.sum5",
+   "topic": "maths.ps-digits",
+   "kind": "fact",
+   "prompt": "How many three-digit numbers have digits that add up to 5?",
+   "answer": "15",
+   "distractors": [
+    "10",
+    "21",
+    "12"
+   ],
+   "explain": "The hundreds digit is at least 1. List by the hundreds digit: 1 → 5 ways (04, 13, 22, 31, 40), 2 → 4, 3 → 3, 4 → 2, 5 → 1. Total 15.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.dg.nines",
+   "topic": "maths.ps-digits",
+   "kind": "mcq",
+   "prompt": "What is the sum of the digits of 10²⁰ − 1?",
+   "options": [
+    {
+     "text": "180",
+     "correct": true
+    },
+    {
+     "text": "20",
+     "correct": false,
+     "feedback": "10²⁰ − 1 is twenty 9s, not twenty 1s."
+    },
+    {
+     "text": "181",
+     "correct": false,
+     "feedback": "10²⁰ − 1 has no 1 at the front: it is 999…9."
+    },
+    {
+     "text": "171",
+     "correct": false,
+     "feedback": "There are 20 nines, not 19."
+    },
+    {
+     "text": "200",
+     "correct": false,
+     "feedback": "Each digit is 9, not 10."
+    }
+   ],
+   "explain": "10²⁰ − 1 is written as twenty 9s (like 1000 − 1 = 999). Digit sum: 20 × 9 = 180."
+  },
+  {
+   "id": "maths.ps.dg.bigsum",
+   "topic": "maths.ps-digits",
+   "kind": "mcq",
+   "prompt": "Using each of the digits 1, 2, 3, 4, 5 and 6 exactly once, Mira makes two three-digit numbers. What is the largest possible sum?",
+   "options": [
+    {
+     "text": "1173",
+     "correct": true
+    },
+    {
+     "text": "1155",
+     "correct": false,
+     "feedback": "Put the biggest digits in the hundreds places, the next in the tens."
+    },
+    {
+     "text": "1263",
+     "correct": false,
+     "feedback": "Try it: no arrangement of 1–6 reaches 1263."
+    },
+    {
+     "text": "1083",
+     "correct": false,
+     "feedback": "The 6 and 5 should both be hundreds digits."
+    },
+    {
+     "text": "1197",
+     "correct": false,
+     "feedback": "Only one of each digit: 6 and 5 hundreds, 4 and 3 tens, 2 and 1 units give 1173."
+    }
+   ],
+   "explain": "Hundreds count most: 6 and 5 there (1100), 4 and 3 in the tens (70), 2 and 1 in the units (3). 1100 + 70 + 3 = 1173, for example 642 + 531."
+  },
+  {
+   "id": "maths.ps.dg.sevens",
+   "topic": "maths.ps-digits",
+   "kind": "fact",
+   "prompt": "How many times is the digit 7 written when you write every whole number from 1 to 100?",
+   "answer": "20",
+   "distractors": [
+    "10",
+    "11",
+    "19"
+   ],
+   "explain": "Units digit 7: 7, 17, …, 97 (10 times). Tens digit 7: 70 to 79 (10 times). 77 is counted in both, correctly, because it has two 7s. 20 in all.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.dg.abba",
+   "topic": "maths.ps-digits",
+   "kind": "mcq",
+   "prompt": "AB is a two-digit number with two different digits, and BA is the number with its digits reversed. AB + BA = 121. How many possible numbers AB are there?",
+   "options": [
+    {
+     "text": "8",
+     "correct": true
+    },
+    {
+     "text": "4",
+     "correct": false,
+     "feedback": "AB and BA are counted separately: 29 and 92 are both possible."
+    },
+    {
+     "text": "9",
+     "correct": false,
+     "feedback": "A + B = 11 with different digits: 29, 38, 47, 56, 65, 74, 83, 92."
+    },
+    {
+     "text": "10",
+     "correct": false,
+     "feedback": "Neither digit can be 0, since 11 − 0 = 11 is not a digit."
+    },
+    {
+     "text": "11",
+     "correct": false,
+     "feedback": "A + B must be 11, but that is not the number of solutions."
+    }
+   ],
+   "explain": "AB + BA = 10A + B + 10B + A = 11(A + B), so A + B = 11. The numbers are 29, 38, 47, 56, 65, 74, 83, 92: eight."
+  },
+  {
+   "id": "maths.ps.dg.last7",
+   "topic": "maths.ps-digits",
+   "kind": "mcq",
+   "prompt": "What is the last digit of 7¹⁰⁰?",
+   "options": [
+    {
+     "text": "1",
+     "correct": true
+    },
+    {
+     "text": "7",
+     "correct": false,
+     "feedback": "The last digits cycle 7, 9, 3, 1. 100 is a multiple of 4."
+    },
+    {
+     "text": "9",
+     "correct": false,
+     "feedback": "That is the last digit of 7² (and 7⁶, 7¹⁰…)."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "That is the last digit of 7³, 7⁷…"
+    },
+    {
+     "text": "0",
+     "correct": false,
+     "feedback": "Powers of 7 are never multiples of 10."
+    }
+   ],
+   "explain": "Last digits of 7, 7², 7³, 7⁴ are 7, 9, 3, 1, then the cycle repeats every 4. 100 is a multiple of 4, so the last digit is 1."
+  },
+  {
+   "id": "maths.ps.dg.prod120",
+   "topic": "maths.ps-digits",
+   "kind": "mcq",
+   "prompt": "What is the smallest whole number whose digits multiply to give 120?",
+   "options": [
+    {
+     "text": "358",
+     "correct": true
+    },
+    {
+     "text": "456",
+     "correct": false,
+     "feedback": "4 × 5 × 6 = 120, but 358 is smaller."
+    },
+    {
+     "text": "2345",
+     "correct": false,
+     "feedback": "Four digits make a bigger number than three."
+    },
+    {
+     "text": "385",
+     "correct": false,
+     "feedback": "Same digits, but put the smallest first."
+    },
+    {
+     "text": "538",
+     "correct": false,
+     "feedback": "Put the digits in increasing order."
+    }
+   ],
+   "explain": "Two digits can multiply to at most 81, so we need three: 120 = 3 × 5 × 8 or 4 × 5 × 6. The smallest arrangement is 358."
+  },
+  {
+   "id": "maths.ps.dg.pal",
+   "topic": "maths.ps-digits",
+   "kind": "fact",
+   "prompt": "A palindrome reads the same forwards and backwards, like 4334. How many four-digit palindromes are there?",
+   "answer": "90",
+   "distractors": [
+    "81",
+    "100",
+    "900"
+   ],
+   "explain": "A four-digit palindrome is abba: a is 1–9 (9 choices), b is 0–9 (10 choices), and the last two digits are then fixed. 9 × 10 = 90.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.dg.count",
+   "topic": "maths.ps-digits",
+   "kind": "fact",
+   "prompt": "Kit writes the numbers 1 to 30 in a row: 123456789101112…2930. How many digits does she write?",
+   "answer": "51",
+   "distractors": [
+    "30",
+    "60",
+    "50"
+   ],
+   "explain": "Nine one-digit numbers (1–9) and 21 two-digit numbers (10–30): 9 + 21 × 2 = 51.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.dg.25th",
+   "topic": "maths.ps-digits",
+   "kind": "mcq",
+   "prompt": "The numbers 1, 2, 3, … are written in a row without spaces: 1234567891011121314… What is the 25th digit?",
+   "options": [
+    {
+     "text": "7",
+     "correct": true
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "After the 9 one-digit numbers, each number uses two digits."
+    },
+    {
+     "text": "2",
+     "correct": false,
+     "feedback": "Digits 10 to 25 are 16 digits: the numbers 10 to 17."
+    },
+    {
+     "text": "8",
+     "correct": false,
+     "feedback": "Digit 25 is the last digit of 17, not of 18."
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "Count again: 9 digits, then 10, 11, …, 17 use 16 more."
+    }
+   ],
+   "explain": "Digits 1–9 are the numbers 1 to 9. The next 16 digits (10th to 25th) come from the eight numbers 10 to 17, so the 25th digit is the last digit of 17: 7."
+  },
+  {
+   "id": "maths.ps.dg.no1",
+   "topic": "maths.ps-digits",
+   "kind": "fact",
+   "prompt": "How many of the whole numbers from 1 to 999 contain no digit 1?",
+   "answer": "728",
+   "distractors": [
+    "729",
+    "648",
+    "810"
+   ],
+   "explain": "Think of each as three digits with leading zeros (001 to 999). Each digit can be any of 9 values (0, 2–9): 9 × 9 × 9 = 729, minus 000, which is not in the range. 728.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.dv.nine",
+   "topic": "maths.ps-divisibility",
+   "kind": "fact",
+   "prompt": "The three-digit number 3A7 is a multiple of 9. What is the digit A?",
+   "answer": "8",
+   "distractors": [
+    "2",
+    "0",
+    "9"
+   ],
+   "explain": "A number is a multiple of 9 when its digit sum is. 3 + A + 7 = 10 + A must be 18, so A = 8 (378 = 9 × 42).",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.dv.pow2",
+   "topic": "maths.ps-divisibility",
+   "kind": "mcq",
+   "prompt": "What is the remainder when 2¹⁰ is divided by 7?",
+   "options": [
+    {
+     "text": "2",
+     "correct": true
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "2³ = 8 leaves 1, so 2⁹ leaves 1 and 2¹⁰ leaves 2."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "Remainders of powers of 2 cycle 2, 4, 1."
+    },
+    {
+     "text": "4",
+     "correct": false,
+     "feedback": "That is the remainder of 2², 2⁵, 2⁸…"
+    },
+    {
+     "text": "0",
+     "correct": false,
+     "feedback": "2¹⁰ = 1024 is not a multiple of 7."
+    }
+   ],
+   "explain": "Remainders of 2, 4, 8, 16, … on division by 7 cycle 2, 4, 1. 10 = 3 × 3 + 1, so 2¹⁰ leaves the same remainder as 2¹: 2. (1024 = 7 × 146 + 2.)"
+  },
+  {
+   "id": "maths.ps.dv.piles",
+   "topic": "maths.ps-divisibility",
+   "kind": "mcq",
+   "prompt": "Kit has more than one drachma. In piles of 3, 4 or 5 there is always exactly 1 left over. What is the smallest number she could have?",
+   "options": [
+    {
+     "text": "61",
+     "correct": true
+    },
+    {
+     "text": "13",
+     "correct": false,
+     "feedback": "13 leaves 1 in piles of 3 and 4, but 3 in piles of 5."
+    },
+    {
+     "text": "21",
+     "correct": false,
+     "feedback": "21 is a multiple of 3, leaving 0."
+    },
+    {
+     "text": "31",
+     "correct": false,
+     "feedback": "31 leaves 3 in piles of 4."
+    },
+    {
+     "text": "121",
+     "correct": false,
+     "feedback": "121 works, but 61 is smaller."
+    }
+   ],
+   "explain": "One fewer than the number is a multiple of 3, 4 and 5, so of their LCM, 60. The smallest above 1 is 60 + 1 = 61."
+  },
+  {
+   "id": "maths.ps.dv.or",
+   "topic": "maths.ps-divisibility",
+   "kind": "fact",
+   "prompt": "How many whole numbers from 1 to 100 are multiples of 3 or of 5 (or both)?",
+   "answer": "47",
+   "distractors": [
+    "53",
+    "50",
+    "41"
+   ],
+   "explain": "Multiples of 3: 33. Multiples of 5: 20. Multiples of both (15): 6, counted twice. 33 + 20 − 6 = 47.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.dv.gauss7",
+   "topic": "maths.ps-divisibility",
+   "kind": "mcq",
+   "prompt": "What is the remainder when 1 + 2 + 3 + … + 100 is divided by 7?",
+   "options": [
+    {
+     "text": "3",
+     "correct": true
+    },
+    {
+     "text": "0",
+     "correct": false,
+     "feedback": "5050 is not a multiple of 7."
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "7 × 721 = 5047; 5050 − 5047 = 3."
+    },
+    {
+     "text": "2",
+     "correct": false,
+     "feedback": "Check: 7 × 721 = 5047."
+    },
+    {
+     "text": "5",
+     "correct": false,
+     "feedback": "The sum is 5050, and 5050 − 5047 = 3."
+    }
+   ],
+   "explain": "1 + 2 + … + 100 = 100 × 101 ÷ 2 = 5050. 7 × 721 = 5047, so the remainder is 3."
+  },
+  {
+   "id": "maths.ps.dv.triple",
+   "topic": "maths.ps-divisibility",
+   "kind": "mcq",
+   "prompt": "A number leaves remainder 2 when divided by 5. What is the remainder when three times the number is divided by 5?",
+   "options": [
+    {
+     "text": "1",
+     "correct": true
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "A remainder on division by 5 must be less than 5."
+    },
+    {
+     "text": "2",
+     "correct": false,
+     "feedback": "Tripling triples the remainder: 3 × 2 = 6, which leaves 1."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "Multiply the remainder by 3, then take the remainder again."
+    },
+    {
+     "text": "It depends on the number",
+     "correct": false,
+     "feedback": "Try 7 (21 leaves 1) and 12 (36 leaves 1): it is always 1."
+    }
+   ],
+   "explain": "Write the number as 5k + 2. Three times it is 15k + 6 = 5(3k + 1) + 1, which leaves remainder 1."
+  },
+  {
+   "id": "maths.ps.dv.eleven",
+   "topic": "maths.ps-divisibility",
+   "kind": "mcq",
+   "prompt": "Which of these is a multiple of 11?",
+   "options": [
+    {
+     "text": "4851",
+     "correct": true
+    },
+    {
+     "text": "4815",
+     "correct": false,
+     "feedback": "Alternating sum 4 − 8 + 1 − 5 = −8, not a multiple of 11."
+    },
+    {
+     "text": "4581",
+     "correct": false,
+     "feedback": "Alternating sum 4 − 5 + 8 − 1 = 6."
+    },
+    {
+     "text": "4518",
+     "correct": false,
+     "feedback": "Alternating sum 4 − 5 + 1 − 8 = −8."
+    },
+    {
+     "text": "4185",
+     "correct": false,
+     "feedback": "Alternating sum 4 − 1 + 8 − 5 = 6."
+    }
+   ],
+   "explain": "Test for 11: alternately add and subtract the digits. For 4851: 4 − 8 + 5 − 1 = 0, a multiple of 11, so 4851 is too (4851 = 11 × 441)."
+  },
+  {
+   "id": "maths.ps.dv.zeros10",
+   "topic": "maths.ps-divisibility",
+   "kind": "fact",
+   "prompt": "The product 1 × 2 × 3 × … × 10 (written 10!) ends in how many zeros?",
+   "answer": "2",
+   "distractors": [
+    "1",
+    "3",
+    "10"
+   ],
+   "explain": "Each zero needs a factor 10 = 2 × 5. There are plenty of 2s, but only two 5s (from 5 and 10). So 10! = 3 628 800 ends in 2 zeros.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.dv.zeros25",
+   "topic": "maths.ps-divisibility",
+   "kind": "mcq",
+   "prompt": "How many zeros does 25! (1 × 2 × 3 × … × 25) end in?",
+   "options": [
+    {
+     "text": "6",
+     "correct": true
+    },
+    {
+     "text": "5",
+     "correct": false,
+     "feedback": "25 = 5 × 5 contributes two 5s, not one."
+    },
+    {
+     "text": "2",
+     "correct": false,
+     "feedback": "Count the 5s in 5, 10, 15, 20 and 25."
+    },
+    {
+     "text": "25",
+     "correct": false,
+     "feedback": "Only factors of 5 (paired with 2s) make zeros."
+    },
+    {
+     "text": "7",
+     "correct": false,
+     "feedback": "There are only six factors of 5: one each from 5, 10, 15, 20 and two from 25."
+    }
+   ],
+   "explain": "Count factors of 5: 5, 10, 15, 20 give one each and 25 gives two: 6. There are more than enough 2s, so 6 zeros."
+  },
+  {
+   "id": "maths.ps.dv.days",
+   "topic": "maths.ps-divisibility",
+   "kind": "mcq",
+   "prompt": "Today is Tuesday. What day of the week will it be in 100 days’ time?",
+   "options": [
+    {
+     "text": "Thursday",
+     "correct": true
+    },
+    {
+     "text": "Wednesday",
+     "correct": false,
+     "feedback": "100 = 14 weeks + 2 days, so move on 2 days, not 1."
+    },
+    {
+     "text": "Friday",
+     "correct": false,
+     "feedback": "100 ÷ 7 leaves 2, not 3."
+    },
+    {
+     "text": "Monday",
+     "correct": false,
+     "feedback": "Count forwards, not back."
+    },
+    {
+     "text": "Tuesday",
+     "correct": false,
+     "feedback": "100 is not a multiple of 7."
+    }
+   ],
+   "explain": "Days repeat every 7. 100 = 7 × 14 + 2, so it is the same as 2 days on: Thursday."
+  },
+  {
+   "id": "maths.ps.dv.lcm10",
+   "topic": "maths.ps-divisibility",
+   "kind": "mcq",
+   "prompt": "What is the smallest positive number divisible by every whole number from 1 to 10?",
+   "options": [
+    {
+     "text": "2520",
+     "correct": true
+    },
+    {
+     "text": "3628800",
+     "correct": false,
+     "feedback": "That is 10!, which works but is far from the smallest."
+    },
+    {
+     "text": "5040",
+     "correct": false,
+     "feedback": "5040 = 2 × 2520: divisible, but not the smallest."
+    },
+    {
+     "text": "1260",
+     "correct": false,
+     "feedback": "1260 is not divisible by 8."
+    },
+    {
+     "text": "720",
+     "correct": false,
+     "feedback": "720 is not divisible by 7."
+    }
+   ],
+   "explain": "Take the highest power of each prime up to 10: 2³ = 8, 3² = 9, 5 and 7. 8 × 9 × 5 × 7 = 2520."
+  },
+  {
+   "id": "maths.ps.pr.f36",
+   "topic": "maths.ps-primes",
+   "kind": "fact",
+   "prompt": "How many factors does 36 have?",
+   "answer": "9",
+   "distractors": [
+    "8",
+    "6",
+    "12"
+   ],
+   "explain": "Pairs: 1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6. The pair 6 × 6 gives only one factor, so 4 × 2 + 1 = 9. (Or: 36 = 2² × 3², so (2 + 1)(2 + 1) = 9.)",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pr.three",
+   "topic": "maths.ps-primes",
+   "kind": "mcq",
+   "prompt": "In how many ways can 20 be written as the sum of three different primes (order does not matter)?",
+   "options": [
+    {
+     "text": "2",
+     "correct": true
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "Both 2 + 5 + 13 and 2 + 7 + 11 work."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "Three odd primes add to an odd total, so 2 must be one of them."
+    },
+    {
+     "text": "4",
+     "correct": false,
+     "feedback": "With 2 fixed, the other two primes must add to 18: only 5 + 13 and 7 + 11."
+    },
+    {
+     "text": "0",
+     "correct": false,
+     "feedback": "Try including the even prime, 2."
+    }
+   ],
+   "explain": "Three odd primes give an odd sum, so one prime is 2 and the other two add to 18: 5 + 13 or 7 + 11 (not 9 + 9, which repeats and is not prime, and not 1 + 17). So 2 ways."
+  },
+  {
+   "id": "maths.ps.pr.2026",
+   "topic": "maths.ps-primes",
+   "kind": "mcq",
+   "prompt": "What is the largest prime factor of 2026?",
+   "options": [
+    {
+     "text": "1013",
+     "correct": true
+    },
+    {
+     "text": "2",
+     "correct": false,
+     "feedback": "2026 = 2 × 1013, and 1013 is bigger."
+    },
+    {
+     "text": "103",
+     "correct": false,
+     "feedback": "103 does not divide 2026."
+    },
+    {
+     "text": "1001",
+     "correct": false,
+     "feedback": "1001 = 7 × 11 × 13 is not prime, and does not divide 2026."
+    },
+    {
+     "text": "506",
+     "correct": false,
+     "feedback": "506 is not a factor of 2026, and is not prime."
+    }
+   ],
+   "explain": "2026 = 2 × 1013. To check 1013 is prime, test the primes up to √1013 ≈ 31.8: none of 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 divides it."
+  },
+  {
+   "id": "maths.ps.pr.most",
+   "topic": "maths.ps-primes",
+   "kind": "mcq",
+   "prompt": "Which whole number less than 50 has the most factors?",
+   "options": [
+    {
+     "text": "48",
+     "correct": true
+    },
+    {
+     "text": "36",
+     "correct": false,
+     "feedback": "36 has 9 factors; 48 has 10."
+    },
+    {
+     "text": "40",
+     "correct": false,
+     "feedback": "40 has 8 factors."
+    },
+    {
+     "text": "49",
+     "correct": false,
+     "feedback": "49 = 7² has only 3 factors."
+    },
+    {
+     "text": "30",
+     "correct": false,
+     "feedback": "30 has 8 factors."
+    }
+   ],
+   "explain": "48 = 2⁴ × 3 has (4 + 1)(1 + 1) = 10 factors: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48. No number below 50 has more."
+  },
+  {
+   "id": "maths.ps.pr.perfect",
+   "topic": "maths.ps-primes",
+   "kind": "mcq",
+   "prompt": "A perfect number equals the sum of its factors other than itself, like 6 = 1 + 2 + 3. Which of these is perfect?",
+   "options": [
+    {
+     "text": "28",
+     "correct": true
+    },
+    {
+     "text": "12",
+     "correct": false,
+     "feedback": "1 + 2 + 3 + 4 + 6 = 16, too much."
+    },
+    {
+     "text": "18",
+     "correct": false,
+     "feedback": "1 + 2 + 3 + 6 + 9 = 21."
+    },
+    {
+     "text": "24",
+     "correct": false,
+     "feedback": "1 + 2 + 3 + 4 + 6 + 8 + 12 = 36."
+    },
+    {
+     "text": "30",
+     "correct": false,
+     "feedback": "1 + 2 + 3 + 5 + 6 + 10 + 15 = 42."
+    }
+   ],
+   "explain": "28 = 1 + 2 + 4 + 7 + 14. The Greeks knew the first four perfect numbers: 6, 28, 496 and 8128."
+  },
+  {
+   "id": "maths.ps.pr.below50",
+   "topic": "maths.ps-primes",
+   "kind": "fact",
+   "prompt": "Euclid proved there are infinitely many primes. How many primes are there below 50?",
+   "answer": "15",
+   "distractors": [
+    "14",
+    "16",
+    "25"
+   ],
+   "explain": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47: fifteen.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pr.euler",
+   "topic": "maths.ps-primes",
+   "kind": "mcq",
+   "prompt": "n² + n + 41 is prime for n = 0, 1, 2, …, 39. What happens when n = 40?",
+   "options": [
+    {
+     "text": "It equals 1681 = 41², so it is not prime",
+     "correct": true
+    },
+    {
+     "text": "It equals 1681, which is prime",
+     "correct": false,
+     "feedback": "1681 = 41 × 41."
+    },
+    {
+     "text": "It equals 1641, which is prime",
+     "correct": false,
+     "feedback": "40² + 40 + 41 = 1600 + 81 = 1681."
+    },
+    {
+     "text": "It is prime, because the pattern always works",
+     "correct": false,
+     "feedback": "Forty examples are not a proof: n = 40 breaks it."
+    },
+    {
+     "text": "It equals 1721 = 41 × 42",
+     "correct": false,
+     "feedback": "Check the arithmetic: 1600 + 40 + 41 = 1681."
+    }
+   ],
+   "explain": "40² + 40 + 41 = 40 × 41 + 41 = 41 × 41 = 1681. Lots of examples never prove a pattern; one counterexample destroys it."
+  },
+  {
+   "id": "maths.ps.pr.hcflcm",
+   "topic": "maths.ps-primes",
+   "kind": "fact",
+   "prompt": "Two numbers have HCF 6 and LCM 72. One of them is 18. What is the other?",
+   "answer": "24",
+   "distractors": [
+    "4",
+    "12",
+    "36"
+   ],
+   "explain": "For any two numbers, HCF × LCM = the product of the numbers. So the other is 6 × 72 ÷ 18 = 24. Check: HCF(18, 24) = 6 and LCM = 72.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pr.odd",
+   "topic": "maths.ps-primes",
+   "kind": "mcq",
+   "prompt": "How many of the whole numbers from 1 to 30 have an odd number of factors?",
+   "options": [
+    {
+     "text": "5",
+     "correct": true
+    },
+    {
+     "text": "15",
+     "correct": false,
+     "feedback": "Odd numbers can have an even number of factors: 15 has 1, 3, 5, 15."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "Count the squares up to 30: 1, 4, 9, 16, 25."
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "36 is more than 30."
+    },
+    {
+     "text": "10",
+     "correct": false,
+     "feedback": "Factors come in pairs, except for square numbers."
+    }
+   ],
+   "explain": "Factors pair up (a × b), except when a = b, which only happens for square numbers. The squares up to 30 are 1, 4, 9, 16, 25: five."
+  },
+  {
+   "id": "maths.ps.pr.twins",
+   "topic": "maths.ps-primes",
+   "kind": "fact",
+   "prompt": "Twin primes differ by 2, like 11 and 13. How many pairs of twin primes are there with both primes below 50?",
+   "answer": "6",
+   "distractors": [
+    "5",
+    "7",
+    "8"
+   ],
+   "explain": "(3, 5), (5, 7), (11, 13), (17, 19), (29, 31), (41, 43): six pairs.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pr.six",
+   "topic": "maths.ps-primes",
+   "kind": "mcq",
+   "prompt": "What is the smallest number with exactly 6 factors?",
+   "options": [
+    {
+     "text": "12",
+     "correct": true
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "6 has only 4 factors: 1, 2, 3, 6."
+    },
+    {
+     "text": "18",
+     "correct": false,
+     "feedback": "18 has 6 factors, but 12 is smaller."
+    },
+    {
+     "text": "20",
+     "correct": false,
+     "feedback": "20 has 6 factors, but 12 is smaller."
+    },
+    {
+     "text": "32",
+     "correct": false,
+     "feedback": "32 = 2⁵ has 6 factors, but it is much bigger."
+    }
+   ],
+   "explain": "12 = 2² × 3 has (2 + 1)(1 + 1) = 6 factors: 1, 2, 3, 4, 6, 12. Checking 1 to 11, none has 6."
+  },
+  {
+   "id": "maths.ps.fr.half",
+   "topic": "maths.ps-fractions",
+   "kind": "fact",
+   "prompt": "Half of a number is a third of 30. What is the number?",
+   "answer": "20",
+   "distractors": [
+    "15",
+    "10",
+    "45"
+   ],
+   "explain": "A third of 30 is 10, so half the number is 10 and the number is 20.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.fr.day",
+   "topic": "maths.ps-fractions",
+   "kind": "mcq",
+   "prompt": "What fraction of a day is 20 minutes?",
+   "options": [
+    {
+     "text": "{{1/72}}",
+     "correct": true
+    },
+    {
+     "text": "{{1/60}}",
+     "correct": false,
+     "feedback": "There are 1440 minutes in a day, not 1200."
+    },
+    {
+     "text": "{{1/3}}",
+     "correct": false,
+     "feedback": "20 minutes is a third of an hour, not of a day."
+    },
+    {
+     "text": "{{1/48}}",
+     "correct": false,
+     "feedback": "1/48 of a day is 30 minutes."
+    },
+    {
+     "text": "{{1/24}}",
+     "correct": false,
+     "feedback": "1/24 of a day is an hour."
+    }
+   ],
+   "explain": "A day has 24 × 60 = 1440 minutes. 20/1440 = 1/72."
+  },
+  {
+   "id": "maths.ps.fr.class",
+   "topic": "maths.ps-fractions",
+   "kind": "fact",
+   "prompt": "The ratio of boys to girls in a class is 3 : 5. There are 6 more girls than boys. How many pupils are in the class?",
+   "answer": "24",
+   "distractors": [
+    "8",
+    "30",
+    "16"
+   ],
+   "explain": "The difference is 5 − 3 = 2 parts = 6 pupils, so 1 part = 3. Total 8 parts = 24 pupils.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.fr.telescope",
+   "topic": "maths.ps-fractions",
+   "kind": "mcq",
+   "prompt": "{{1/2}} + {{1/6}} + {{1/12}} + {{1/20}} + {{1/30}} = ?",
+   "options": [
+    {
+     "text": "{{5/6}}",
+     "correct": true
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "Close, but it falls short of 1 by 1/6."
+    },
+    {
+     "text": "{{5/70}}",
+     "correct": false,
+     "feedback": "Adding tops and bottoms is not how fractions add."
+    },
+    {
+     "text": "{{6/7}}",
+     "correct": false,
+     "feedback": "Each term is 1/n − 1/(n + 1); the last is 1/5 − 1/6."
+    },
+    {
+     "text": "{{1/2}}",
+     "correct": false,
+     "feedback": "The other four fractions add a third more."
+    }
+   ],
+   "explain": "Each term splits: 1/2 = 1 − 1/2, 1/6 = 1/2 − 1/3, 1/12 = 1/3 − 1/4, 1/20 = 1/4 − 1/5, 1/30 = 1/5 − 1/6. Almost everything cancels (it telescopes), leaving 1 − 1/6 = 5/6."
+  },
+  {
+   "id": "maths.ps.fr.jar",
+   "topic": "maths.ps-fractions",
+   "kind": "fact",
+   "prompt": "A water jar is three-quarters full. After 15 litres are poured out, it is half full. How many litres does it hold when full?",
+   "answer": "60",
+   "distractors": [
+    "30",
+    "45",
+    "20"
+   ],
+   "explain": "Three-quarters minus a half is a quarter. A quarter of the jar is 15 litres, so it holds 4 × 15 = 60 litres.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.fr.spend",
+   "topic": "maths.ps-fractions",
+   "kind": "fact",
+   "prompt": "Mira spends a third of her drachmas, then a quarter of what is left. She has 12 drachmas left. How many did she start with?",
+   "answer": "24",
+   "distractors": [
+    "36",
+    "48",
+    "18"
+   ],
+   "explain": "After spending a third, 2/3 is left; after spending a quarter of that, 3/4 × 2/3 = 1/2 is left. So half her money is 12: she started with 24.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.fr.largest",
+   "topic": "maths.ps-fractions",
+   "kind": "mcq",
+   "prompt": "Which of these fractions is the largest?",
+   "options": [
+    {
+     "text": "{{11/17}}",
+     "correct": true
+    },
+    {
+     "text": "{{5/8}}",
+     "correct": false,
+     "feedback": "5/8 = 0.625; 11/17 ≈ 0.647."
+    },
+    {
+     "text": "{{7/11}}",
+     "correct": false,
+     "feedback": "7/11 ≈ 0.636."
+    },
+    {
+     "text": "{{3/5}}",
+     "correct": false,
+     "feedback": "3/5 = 0.6."
+    },
+    {
+     "text": "{{9/14}}",
+     "correct": false,
+     "feedback": "9/14 ≈ 0.643, just smaller than 11/17."
+    }
+   ],
+   "explain": "As decimals: 5/8 = 0.625, 7/11 ≈ 0.636, 3/5 = 0.6, 9/14 ≈ 0.643, 11/17 ≈ 0.647. Each is a little less than 2/3; 11/17 is closest."
+  },
+  {
+   "id": "maths.ps.fr.crown",
+   "topic": "maths.ps-fractions",
+   "kind": "fact",
+   "prompt": "A crown of mass 350 g is made of gold, silver and bronze in the ratio 1 : 2 : 4 by mass. What is the mass of the silver, in grams?",
+   "answer": "100",
+   "distractors": [
+    "50",
+    "200",
+    "175"
+   ],
+   "explain": "1 + 2 + 4 = 7 parts, so 1 part = 350 ÷ 7 = 50 g. Silver is 2 parts = 100 g.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.fr.wall",
+   "topic": "maths.ps-fractions",
+   "kind": "mcq",
+   "prompt": "Three builders take 8 days to build a wall. How long would four builders take, working at the same rate?",
+   "options": [
+    {
+     "text": "6 days",
+     "correct": true
+    },
+    {
+     "text": "9 days",
+     "correct": false,
+     "feedback": "More builders take less time, not more."
+    },
+    {
+     "text": "10⅔ days",
+     "correct": false,
+     "feedback": "That is what direct proportion would give; this is inverse proportion."
+    },
+    {
+     "text": "7 days",
+     "correct": false,
+     "feedback": "Total work is 3 × 8 = 24 builder-days; 24 ÷ 4 = 6."
+    },
+    {
+     "text": "4 days",
+     "correct": false,
+     "feedback": "Four builders is a third more, not twice as many."
+    }
+   ],
+   "explain": "The wall needs 3 × 8 = 24 builder-days of work. Four builders take 24 ÷ 4 = 6 days (inverse proportion)."
+  },
+  {
+   "id": "maths.ps.fr.chain",
+   "topic": "maths.ps-fractions",
+   "kind": "fact",
+   "prompt": "What is a third of a quarter of a fifth of 1200?",
+   "answer": "20",
+   "distractors": [
+    "60",
+    "80",
+    "240"
+   ],
+   "explain": "A fifth of 1200 is 240, a quarter of 240 is 60, and a third of 60 is 20. (Or: 1200 ÷ 60.)",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.fr.honey",
+   "topic": "maths.ps-fractions",
+   "kind": "fact",
+   "prompt": "A recipe uses flour and honey in the ratio 5 : 2. Theo uses 350 g of flour. How many grams of honey does he need?",
+   "answer": "140",
+   "distractors": [
+    "70",
+    "175",
+    "875"
+   ],
+   "explain": "5 parts = 350 g, so 1 part = 70 g and honey is 2 parts = 140 g.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.mn.99",
+   "topic": "maths.ps-mental",
+   "kind": "fact",
+   "prompt": "99 × 101 = ?",
+   "answer": "9999",
+   "distractors": [
+    "9899",
+    "10099",
+    "9990"
+   ],
+   "explain": "(100 − 1)(100 + 1) = 100² − 1² = 10000 − 1 = 9999.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.mn.alt",
+   "topic": "maths.ps-mental",
+   "kind": "mcq",
+   "prompt": "1 − 2 + 3 − 4 + 5 − 6 + … + 99 − 100 = ?",
+   "options": [
+    {
+     "text": "−50",
+     "correct": true
+    },
+    {
+     "text": "50",
+     "correct": false,
+     "feedback": "Each pair (1 − 2), (3 − 4), … is −1, not +1."
+    },
+    {
+     "text": "0",
+     "correct": false,
+     "feedback": "The pairs do not cancel to 0: each gives −1."
+    },
+    {
+     "text": "−100",
+     "correct": false,
+     "feedback": "There are 50 pairs, not 100."
+    },
+    {
+     "text": "−1",
+     "correct": false,
+     "feedback": "That is just one pair; there are 50."
+    }
+   ],
+   "explain": "Pair the terms: (1 − 2) + (3 − 4) + … + (99 − 100). Each of the 50 pairs is −1, so the total is −50."
+  },
+  {
+   "id": "maths.ps.mn.sq",
+   "topic": "maths.ps-mental",
+   "kind": "fact",
+   "prompt": "2026² − 2025² = ?",
+   "answer": "4051",
+   "distractors": [
+    "1",
+    "4050",
+    "4052"
+   ],
+   "explain": "a² − b² = (a + b)(a − b) = 4051 × 1 = 4051.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.mn.gauss",
+   "topic": "maths.ps-mental",
+   "kind": "fact",
+   "prompt": "1 + 2 + 3 + … + 50 = ?",
+   "answer": "1275",
+   "distractors": [
+    "1250",
+    "1300",
+    "2550"
+   ],
+   "explain": "Pair the first and last: 1 + 50, 2 + 49, … gives 25 pairs of 51. 25 × 51 = 1275.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.mn.25",
+   "topic": "maths.ps-mental",
+   "kind": "fact",
+   "prompt": "25 × 32 × 125 = ?",
+   "answer": "100000",
+   "distractors": [
+    "10000",
+    "1000000",
+    "80000"
+   ],
+   "explain": "Split 32 = 4 × 8: (25 × 4) × (125 × 8) = 100 × 1000 = 100000.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.mn.dec",
+   "topic": "maths.ps-mental",
+   "kind": "fact",
+   "prompt": "0.5 × 0.2 × 0.25 × 400 = ?",
+   "answer": "10",
+   "distractors": [
+    "1",
+    "100",
+    "40"
+   ],
+   "explain": "0.5 × 0.2 = 0.1, and 0.25 × 400 = 100. 0.1 × 100 = 10.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.mn.999",
+   "topic": "maths.ps-mental",
+   "kind": "fact",
+   "prompt": "7 × 999 = ?",
+   "answer": "6993",
+   "distractors": [
+    "6999",
+    "7993",
+    "6293"
+   ],
+   "explain": "7 × 999 = 7 × 1000 − 7 = 7000 − 7 = 6993.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.mn.prod",
+   "topic": "maths.ps-mental",
+   "kind": "mcq",
+   "prompt": "(1 − {{1/2}})(1 − {{1/3}})(1 − {{1/4}}) … (1 − {{1/10}}) = ?",
+   "options": [
+    {
+     "text": "{{1/10}}",
+     "correct": true
+    },
+    {
+     "text": "{{1/9}}",
+     "correct": false,
+     "feedback": "The last bracket is 9/10, so the bottom ends at 10."
+    },
+    {
+     "text": "{{9/10}}",
+     "correct": false,
+     "feedback": "That is just the last bracket."
+    },
+    {
+     "text": "0",
+     "correct": false,
+     "feedback": "No bracket is zero."
+    },
+    {
+     "text": "{{1/100}}",
+     "correct": false,
+     "feedback": "Write the brackets as 1/2 × 2/3 × 3/4 × … × 9/10 and cancel."
+    }
+   ],
+   "explain": "Each bracket is a fraction: 1/2 × 2/3 × 3/4 × … × 9/10. Every top cancels the bottom before it, leaving 1/10."
+  },
+  {
+   "id": "maths.ps.mn.37",
+   "topic": "maths.ps-mental",
+   "kind": "fact",
+   "prompt": "37 × 3 = 111. What is 37 × 18?",
+   "answer": "666",
+   "distractors": [
+    "555",
+    "777",
+    "636"
+   ],
+   "explain": "37 × 18 = 37 × 3 × 6 = 111 × 6 = 666.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.mn.odds",
+   "topic": "maths.ps-mental",
+   "kind": "fact",
+   "prompt": "1 + 3 + 5 + 7 + … + 99 = ?",
+   "answer": "2500",
+   "distractors": [
+    "2550",
+    "5000",
+    "2450"
+   ],
+   "explain": "There are 50 odd numbers from 1 to 99, and the sum of the first n odd numbers is n². 50² = 2500.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.mn.pct",
+   "topic": "maths.ps-mental",
+   "kind": "fact",
+   "prompt": "What is 12.5% of 64, plus 64% of 12.5?",
+   "answer": "16",
+   "distractors": [
+    "8",
+    "32",
+    "76.5"
+   ],
+   "explain": "x% of y always equals y% of x. So both parts are 12.5% of 64 = 64 ÷ 8 = 8, and 8 + 8 = 16.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pt.tri",
+   "topic": "maths.ps-patterns",
+   "kind": "fact",
+   "prompt": "The triangular numbers are 1, 3, 6, 10, … What is the 20th triangular number?",
+   "answer": "210",
+   "distractors": [
+    "200",
+    "190",
+    "231"
+   ],
+   "explain": "The nth triangular number is n(n + 1)/2. 20 × 21 ÷ 2 = 210.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pt.match",
+   "topic": "maths.ps-patterns",
+   "kind": "fact",
+   "prompt": "A row of n squares made from matchsticks uses 3n + 1 matchsticks. Theo uses exactly 100 matchsticks. How many squares are in his row?",
+   "answer": "33",
+   "distractors": [
+    "25",
+    "34",
+    "32"
+   ],
+   "explain": "3n + 1 = 100 gives 3n = 99, n = 33.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pt.pow2",
+   "topic": "maths.ps-patterns",
+   "kind": "mcq",
+   "prompt": "What is the units digit of 1 + 2 + 2² + 2³ + … + 2⁹?",
+   "options": [
+    {
+     "text": "3",
+     "correct": true
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "The sum is 2¹⁰ − 1 = 1023."
+    },
+    {
+     "text": "2",
+     "correct": false,
+     "feedback": "Add the 1 at the start to the powers."
+    },
+    {
+     "text": "7",
+     "correct": false,
+     "feedback": "The sum is 1023, ending in 3."
+    },
+    {
+     "text": "5",
+     "correct": false,
+     "feedback": "The sum is 1023."
+    }
+   ],
+   "explain": "1 + 2 + … + 2⁹ = 2¹⁰ − 1 = 1023 (each power of 2 is one more than the sum of all the smaller ones). Its units digit is 3."
+  },
+  {
+   "id": "maths.ps.pt.sq1",
+   "topic": "maths.ps-patterns",
+   "kind": "fact",
+   "prompt": "In the sequence 2, 5, 10, 17, 26, …, what is the 10th term?",
+   "answer": "101",
+   "distractors": [
+    "82",
+    "100",
+    "122"
+   ],
+   "explain": "Each term is one more than a square: n² + 1. The 10th is 100 + 1 = 101.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pt.diag",
+   "topic": "maths.ps-patterns",
+   "kind": "fact",
+   "prompt": "How many diagonals does a decagon (10 sides) have?",
+   "answer": "35",
+   "distractors": [
+    "45",
+    "70",
+    "10"
+   ],
+   "explain": "Each of the 10 vertices joins to 7 others by a diagonal (not itself or its 2 neighbours). 10 × 7 = 70 counts each diagonal twice: 35.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pt.fib",
+   "topic": "maths.ps-patterns",
+   "kind": "mcq",
+   "prompt": "In the sequence 1, 1, 2, 3, 5, 8, 13, … each term is the sum of the two before. How many of the first 30 terms are even?",
+   "options": [
+    {
+     "text": "10",
+     "correct": true
+    },
+    {
+     "text": "15",
+     "correct": false,
+     "feedback": "Evens are not every other term: the pattern is odd, odd, even."
+    },
+    {
+     "text": "9",
+     "correct": false,
+     "feedback": "Every third term is even: the 3rd, 6th, …, 30th. That is 10."
+    },
+    {
+     "text": "12",
+     "correct": false,
+     "feedback": "Only every third term is even."
+    },
+    {
+     "text": "0",
+     "correct": false,
+     "feedback": "2, 8 and 34 are even."
+    }
+   ],
+   "explain": "Odd + odd = even, then odd + even = odd, then even + odd = odd: the pattern odd, odd, even repeats. Every third term is even: 30 ÷ 3 = 10."
+  },
+  {
+   "id": "maths.ps.pt.stars",
+   "topic": "maths.ps-patterns",
+   "kind": "fact",
+   "prompt": "Pattern number n has n² + n stars. Which pattern has 132 stars?",
+   "answer": "11",
+   "distractors": [
+    "12",
+    "10",
+    "66"
+   ],
+   "explain": "n² + n = n(n + 1) = 132 = 11 × 12, so n = 11.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pt.cubes",
+   "topic": "maths.ps-patterns",
+   "kind": "mcq",
+   "prompt": "The odd numbers are written in rows: 1 / 3 5 / 7 9 11 / 13 15 17 19 / … What is the sum of the 10th row?",
+   "options": [
+    {
+     "text": "1000",
+     "correct": true
+    },
+    {
+     "text": "100",
+     "correct": false,
+     "feedback": "Row sums are 1, 8, 27, 64: cubes, not squares."
+    },
+    {
+     "text": "190",
+     "correct": false,
+     "feedback": "Check the first rows: 1, 8, 27, 64."
+    },
+    {
+     "text": "550",
+     "correct": false,
+     "feedback": "The rows add to 1, 8, 27, 64, …"
+    },
+    {
+     "text": "1100",
+     "correct": false,
+     "feedback": "Row n adds to exactly n³."
+    }
+   ],
+   "explain": "Row sums are 1, 8, 27, 64, …: the cubes. Row 10 adds to 10³ = 1000. (Its middle is 100 and there are 10 numbers.)"
+  },
+  {
+   "id": "maths.ps.pt.403",
+   "topic": "maths.ps-patterns",
+   "kind": "fact",
+   "prompt": "A sequence starts at 3 and goes up by 4 each time: 3, 7, 11, … Which term is 403?",
+   "answer": "101",
+   "distractors": [
+    "100",
+    "102",
+    "400"
+   ],
+   "explain": "The nth term is 4n − 1. 4n − 1 = 403 gives n = 101.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pt.100th",
+   "topic": "maths.ps-patterns",
+   "kind": "mcq",
+   "prompt": "What is the 100th term of 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, …?",
+   "options": [
+    {
+     "text": "14",
+     "correct": true
+    },
+    {
+     "text": "10",
+     "correct": false,
+     "feedback": "By the end of the 10s you have only written 55 terms."
+    },
+    {
+     "text": "13",
+     "correct": false,
+     "feedback": "The 13s end at term 91; terms 92 to 105 are 14."
+    },
+    {
+     "text": "15",
+     "correct": false,
+     "feedback": "The 14s run from term 92 to term 105."
+    },
+    {
+     "text": "50",
+     "correct": false,
+     "feedback": "Each number n is written n times."
+    }
+   ],
+   "explain": "The last n appears at term 1 + 2 + … + n = n(n + 1)/2. 13 × 14 ÷ 2 = 91 and 14 × 15 ÷ 2 = 105, so term 100 is a 14."
+  },
+  {
+   "id": "maths.ps.pt.dbl",
+   "topic": "maths.ps-patterns",
+   "kind": "fact",
+   "prompt": "Start at 1 and repeatedly double and add 1: 1, 3, 7, 15, … What is the 10th term?",
+   "answer": "1023",
+   "distractors": [
+    "1024",
+    "511",
+    "2047"
+   ],
+   "explain": "Each term is one less than a power of 2: 2ⁿ − 1. The 10th is 2¹⁰ − 1 = 1023.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.lg.ab",
+   "topic": "maths.ps-logic",
+   "kind": "mcq",
+   "prompt": "On Delos, knights always tell the truth and knaves always lie. A says: “B is a knave.” B says: “A and I are the same kind.” What are A and B?",
+   "options": [
+    {
+     "text": "A is a knight and B is a knave",
+     "correct": true
+    },
+    {
+     "text": "Both are knights",
+     "correct": false,
+     "feedback": "Then A’s statement “B is a knave” would be false."
+    },
+    {
+     "text": "Both are knaves",
+     "correct": false,
+     "feedback": "Then B’s statement “we are the same kind” would be true, which a knave cannot say."
+    },
+    {
+     "text": "A is a knave and B is a knight",
+     "correct": false,
+     "feedback": "Then B, a knight, says they are the same kind, which is false."
+    },
+    {
+     "text": "It cannot be decided",
+     "correct": false,
+     "feedback": "Only one of the four cases is consistent."
+    }
+   ],
+   "explain": "Try each case. If A is a knight, B is a knave, and B’s claim “same kind” is false, as a knave’s must be. Every other case contradicts itself."
+  },
+  {
+   "id": "maths.ps.lg.oracles",
+   "topic": "maths.ps-logic",
+   "kind": "mcq",
+   "prompt": "Three oracles speak, and exactly one tells the truth. Pythia: “Delphi is the oldest oracle.” Sibyl: “Pythia is lying.” Manto: “Sibyl is lying.” Who is telling the truth?",
+   "options": [
+    {
+     "text": "Sibyl",
+     "correct": true
+    },
+    {
+     "text": "Pythia",
+     "correct": false,
+     "feedback": "If Pythia is truthful, Manto (who agrees with her) is too: two truths."
+    },
+    {
+     "text": "Manto",
+     "correct": false,
+     "feedback": "Manto’s statement is true exactly when Pythia’s is, so they stand or fall together."
+    },
+    {
+     "text": "Nobody",
+     "correct": false,
+     "feedback": "Exactly one is truthful, we are told."
+    },
+    {
+     "text": "It cannot be decided",
+     "correct": false,
+     "feedback": "Only one case gives exactly one truth."
+    }
+   ],
+   "explain": "Sibyl says the opposite of Pythia, and Manto says the opposite of Sibyl (so the same as Pythia). If Pythia were true, Manto would be true too. So Pythia and Manto are false and Sibyl is true."
+  },
+  {
+   "id": "maths.ps.lg.pets",
+   "topic": "maths.ps-logic",
+   "kind": "mcq",
+   "prompt": "Kit, Mira and Theo each have a different pet: an owl, a snake and a dog. Kit does not have the owl. The snake belongs to Mira or Kit. Theo is allergic to dogs. Who has the owl?",
+   "options": [
+    {
+     "text": "Theo",
+     "correct": true
+    },
+    {
+     "text": "Kit",
+     "correct": false,
+     "feedback": "We are told Kit does not have the owl."
+    },
+    {
+     "text": "Mira",
+     "correct": false,
+     "feedback": "Theo cannot have the dog or the snake, so he must have the owl."
+    },
+    {
+     "text": "It cannot be decided",
+     "correct": false,
+     "feedback": "Theo’s pet is forced, even if Kit’s and Mira’s are not."
+    },
+    {
+     "text": "Nobody",
+     "correct": false,
+     "feedback": "Each of them has a pet."
+    }
+   ],
+   "explain": "Theo cannot have the dog (allergic) or the snake (it is Mira’s or Kit’s), so Theo has the owl."
+  },
+  {
+   "id": "maths.ps.lg.knave",
+   "topic": "maths.ps-logic",
+   "kind": "mcq",
+   "prompt": "On the island of knights (always truthful) and knaves (always lying), what can you conclude if someone says, “I am a knave”?",
+   "options": [
+    {
+     "text": "Nobody on the island can say it: the speaker must be a visitor",
+     "correct": true
+    },
+    {
+     "text": "The speaker is a knave",
+     "correct": false,
+     "feedback": "A knave saying “I am a knave” would be telling the truth."
+    },
+    {
+     "text": "The speaker is a knight",
+     "correct": false,
+     "feedback": "A knight would not falsely call himself a knave."
+    },
+    {
+     "text": "The speaker is joking",
+     "correct": false,
+     "feedback": "Knights and knaves cannot joke their way out of the rule."
+    },
+    {
+     "text": "Nothing at all",
+     "correct": false,
+     "feedback": "You can conclude something strong: neither a knight nor a knave can say it."
+    }
+   ],
+   "explain": "A knight cannot say it (it would be false) and a knave cannot say it (it would be true). So whoever says it is neither."
+  },
+  {
+   "id": "maths.ps.lg.apple",
+   "topic": "maths.ps-logic",
+   "kind": "mcq",
+   "prompt": "One god stole the golden apple, and exactly one of these statements is true. Ares: “Eris did it.” Eris: “Hermes did it.” Hermes: “Eris is lying.” Apollo: “I didn’t do it.” Who stole the apple?",
+   "options": [
+    {
+     "text": "Apollo",
+     "correct": true
+    },
+    {
+     "text": "Ares",
+     "correct": false,
+     "feedback": "Then Hermes and Apollo both tell the truth."
+    },
+    {
+     "text": "Eris",
+     "correct": false,
+     "feedback": "Then Ares, Hermes and Apollo all tell the truth."
+    },
+    {
+     "text": "Hermes",
+     "correct": false,
+     "feedback": "Then Eris and Apollo both tell the truth."
+    },
+    {
+     "text": "It cannot be decided",
+     "correct": false,
+     "feedback": "Exactly one suspect gives exactly one true statement."
+    }
+   ],
+   "explain": "Try each thief. If Apollo did it, Ares and Eris are wrong, Apollo is lying, and only Hermes (“Eris is lying”) is true: exactly one. Every other suspect makes two or more statements true."
+  },
+  {
+   "id": "maths.ps.lg.count",
+   "topic": "maths.ps-logic",
+   "kind": "mcq",
+   "prompt": "Statement 1: “Exactly one of these statements is false.” Statement 2: “Exactly two of these statements are false.” Statement 3: “Exactly three of these statements are false.” How many of the statements are true?",
+   "options": [
+    {
+     "text": "1",
+     "correct": true
+    },
+    {
+     "text": "0",
+     "correct": false,
+     "feedback": "If none were true, all three would be false, making statement 3 true."
+    },
+    {
+     "text": "2",
+     "correct": false,
+     "feedback": "The statements contradict each other, so at most one can be true."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "They cannot all be true: they disagree."
+    },
+    {
+     "text": "It is impossible to say",
+     "correct": false,
+     "feedback": "Exactly one consistent answer exists: statement 2 alone is true."
+    }
+   ],
+   "explain": "At most one can be true, since they disagree. If none were true, statement 3 would be true: a contradiction. So exactly one is true and two are false, and the true one is statement 2."
+  },
+  {
+   "id": "maths.ps.lg.oneof",
+   "topic": "maths.ps-logic",
+   "kind": "mcq",
+   "prompt": "A says: “At least one of us two is a knave.” What are A and B? (Knights always tell the truth; knaves always lie.)",
+   "options": [
+    {
+     "text": "A is a knight and B is a knave",
+     "correct": true
+    },
+    {
+     "text": "Both are knaves",
+     "correct": false,
+     "feedback": "Then A’s statement would be true, which a knave cannot say."
+    },
+    {
+     "text": "Both are knights",
+     "correct": false,
+     "feedback": "Then A’s statement “at least one is a knave” would be false."
+    },
+    {
+     "text": "A is a knave and B is a knight",
+     "correct": false,
+     "feedback": "A knave’s statement must be false, but here it would be true."
+    },
+    {
+     "text": "It cannot be decided",
+     "correct": false,
+     "feedback": "There is only one consistent case."
+    }
+   ],
+   "explain": "If A were a knave, the statement would be true (A himself is a knave), which is impossible. So A is a knight, the statement is true, and B must be the knave."
+  },
+  {
+   "id": "maths.ps.lg.muses",
+   "topic": "maths.ps-logic",
+   "kind": "mcq",
+   "prompt": "Five Muses race. Clio finishes ahead of Euterpe but behind Urania. Calliope finishes immediately after Urania. Erato finishes last. Who finishes third?",
+   "options": [
+    {
+     "text": "Clio",
+     "correct": true
+    },
+    {
+     "text": "Calliope",
+     "correct": false,
+     "feedback": "Calliope is straight after Urania, who must be first: Calliope is second."
+    },
+    {
+     "text": "Euterpe",
+     "correct": false,
+     "feedback": "Euterpe is behind Clio."
+    },
+    {
+     "text": "Urania",
+     "correct": false,
+     "feedback": "Urania beats Calliope, Clio and Euterpe, and Erato is last: Urania wins."
+    },
+    {
+     "text": "It cannot be decided",
+     "correct": false,
+     "feedback": "The clues fix the whole order: Urania, Calliope, Clio, Euterpe, Erato."
+    }
+   ],
+   "explain": "Erato is last. Urania beats Clio, who beats Euterpe, and Calliope comes straight after Urania, so the order is Urania, Calliope, Clio, Euterpe, Erato."
+  },
+  {
+   "id": "maths.ps.lg.boxes",
+   "topic": "maths.ps-logic",
+   "kind": "mcq",
+   "prompt": "Three boxes are labelled “gold”, “silver” and “gold and silver”, and ALL three labels are wrong. You may take one coin from one box without looking inside. Which box should you choose so that you can then label all three correctly?",
+   "options": [
+    {
+     "text": "The one labelled “gold and silver”",
+     "correct": true
+    },
+    {
+     "text": "The one labelled “gold”",
+     "correct": false,
+     "feedback": "It could hold silver or the mixture, and one silver coin would not tell them apart."
+    },
+    {
+     "text": "The one labelled “silver”",
+     "correct": false,
+     "feedback": "It could hold gold or the mixture, so one gold coin would not settle it."
+    },
+    {
+     "text": "Any box works",
+     "correct": false,
+     "feedback": "Only one choice is guaranteed to work."
+    },
+    {
+     "text": "It cannot be done with one coin",
+     "correct": false,
+     "feedback": "It can, from the right box."
+    }
+   ],
+   "explain": "The “gold and silver” box is wrongly labelled, so it holds only gold or only silver, and one coin tells you which. The other two labels are also wrong, which then fixes everything."
+  },
+  {
+   "id": "maths.ps.lg.guards",
+   "topic": "maths.ps-logic",
+   "kind": "mcq",
+   "prompt": "Two guards stand where the road forks; one road leads to Delphi. One guard always tells the truth and one always lies, but you do not know which is which. You may ask one guard one question. Which plan always works?",
+   "options": [
+    {
+     "text": "Ask either guard “Which road would the other guard say leads to Delphi?” and take the other road",
+     "correct": true
+    },
+    {
+     "text": "Ask “Which road leads to Delphi?” and take it",
+     "correct": false,
+     "feedback": "The liar would send you the wrong way."
+    },
+    {
+     "text": "Ask “Are you the liar?”",
+     "correct": false,
+     "feedback": "Both would say “no”, which tells you nothing."
+    },
+    {
+     "text": "Ask either guard which road leads to Delphi and take the other road",
+     "correct": false,
+     "feedback": "The truthful guard would then send you the wrong way."
+    },
+    {
+     "text": "It cannot be done with one question",
+     "correct": false,
+     "feedback": "The double question works."
+    }
+   ],
+   "explain": "Either way, the answer passes through one lie exactly once, so it always points to the wrong road. Take the other one."
+  },
+  {
+   "id": "maths.ps.lg.chain",
+   "topic": "maths.ps-logic",
+   "kind": "mcq",
+   "prompt": "Kit says: “Mira is lying.” Mira says: “Theo is lying.” Theo says: “Kit and Mira are both lying.” Who is telling the truth?",
+   "options": [
+    {
+     "text": "Mira only",
+     "correct": true
+    },
+    {
+     "text": "Kit only",
+     "correct": false,
+     "feedback": "If Kit tells the truth, Mira lies, so Theo tells the truth, but Theo says Kit lies."
+    },
+    {
+     "text": "Theo only",
+     "correct": false,
+     "feedback": "If Theo tells the truth, Kit and Mira both lie; but then Kit’s claim “Mira is lying” would be true."
+    },
+    {
+     "text": "Kit and Theo",
+     "correct": false,
+     "feedback": "Theo says Kit is lying, so they cannot both be truthful."
+    },
+    {
+     "text": "Nobody",
+     "correct": false,
+     "feedback": "If everyone lied, Kit’s statement “Mira is lying” would be true."
+    }
+   ],
+   "explain": "Suppose Theo is lying. Then Mira (“Theo is lying”) tells the truth, and Kit (“Mira is lying”) lies. Theo’s statement “both lie” is then false, as assumed. Supposing Theo tells the truth leads to a contradiction."
+  },
+  {
+   "id": "maths.ps.ct.line",
+   "topic": "maths.ps-counting",
+   "kind": "fact",
+   "prompt": "In how many different orders can 4 heroes stand in a line?",
+   "answer": "24",
+   "distractors": [
+    "16",
+    "12",
+    "4"
+   ],
+   "explain": "4 choices for the first place, 3 for the second, 2 for the third, 1 for the last: 4 × 3 × 2 × 1 = 24.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ct.meal",
+   "topic": "maths.ps-counting",
+   "kind": "fact",
+   "prompt": "A taverna offers 3 starters, 5 main courses and 2 desserts. How many different three-course meals (one of each) are possible?",
+   "answer": "30",
+   "distractors": [
+    "10",
+    "15",
+    "60"
+   ],
+   "explain": "Multiply the choices: 3 × 5 × 2 = 30.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ct.digits",
+   "topic": "maths.ps-counting",
+   "kind": "fact",
+   "prompt": "How many three-digit numbers can be made from the digits 1, 2, 3, 4, 5 if no digit is used twice?",
+   "answer": "60",
+   "distractors": [
+    "125",
+    "120",
+    "10"
+   ],
+   "explain": "5 choices for the hundreds, 4 for the tens, 3 for the units: 5 × 4 × 3 = 60.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ct.choose",
+   "topic": "maths.ps-counting",
+   "kind": "mcq",
+   "prompt": "In how many ways can 2 heroes be chosen from 8 for a quest (the order does not matter)?",
+   "options": [
+    {
+     "text": "28",
+     "correct": true
+    },
+    {
+     "text": "56",
+     "correct": false,
+     "feedback": "8 × 7 counts each pair twice: Kit-then-Mira and Mira-then-Kit."
+    },
+    {
+     "text": "16",
+     "correct": false,
+     "feedback": "Multiplying 8 by 2 is not how choices combine."
+    },
+    {
+     "text": "64",
+     "correct": false,
+     "feedback": "A hero cannot be chosen twice."
+    },
+    {
+     "text": "36",
+     "correct": false,
+     "feedback": "That would be choosing 2 from 9."
+    }
+   ],
+   "explain": "8 × 7 = 56 ordered choices, but each pair is counted twice, so 56 ÷ 2 = 28."
+  },
+  {
+   "id": "maths.ps.ct.paths",
+   "topic": "maths.ps-counting",
+   "kind": "mcq",
+   "prompt": "Kit walks from one corner of a 3 × 3 grid of blocks to the opposite corner, moving only right or up along the streets (3 steps right and 3 steps up). How many different routes are there?",
+   "options": [
+    {
+     "text": "20",
+     "correct": true
+    },
+    {
+     "text": "9",
+     "correct": false,
+     "feedback": "That is the number of blocks, not routes."
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "That is the number of steps in one route."
+    },
+    {
+     "text": "36",
+     "correct": false,
+     "feedback": "Count the arrangements of RRRUUU: 6! ÷ (3! × 3!) = 20."
+    },
+    {
+     "text": "64",
+     "correct": false,
+     "feedback": "2⁶ includes routes with the wrong number of rights and ups."
+    }
+   ],
+   "explain": "Every route is an arrangement of R, R, R, U, U, U. Choose which 3 of the 6 steps are R: 6 × 5 × 4 ÷ (3 × 2 × 1) = 20."
+  },
+  {
+   "id": "maths.ps.ct.rect",
+   "topic": "maths.ps-counting",
+   "kind": "fact",
+   "prompt": "How many rectangles (of any size, including squares) are there in a grid of 2 rows and 3 columns of small squares?",
+   "answer": "18",
+   "distractors": [
+    "6",
+    "12",
+    "9"
+   ],
+   "explain": "A rectangle is fixed by choosing 2 of the 3 horizontal lines (3 ways) and 2 of the 4 vertical lines (6 ways): 3 × 6 = 18.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ct.apollo",
+   "topic": "maths.ps-counting",
+   "kind": "mcq",
+   "prompt": "How many different arrangements are there of the letters of APOLLO?",
+   "options": [
+    {
+     "text": "180",
+     "correct": true
+    },
+    {
+     "text": "720",
+     "correct": false,
+     "feedback": "6! = 720 counts the two Ls and two Os as different."
+    },
+    {
+     "text": "360",
+     "correct": false,
+     "feedback": "Divide by 2 for the Ls AND by 2 for the Os."
+    },
+    {
+     "text": "120",
+     "correct": false,
+     "feedback": "There are 6 letters, not 5."
+    },
+    {
+     "text": "90",
+     "correct": false,
+     "feedback": "Only divide by 2 × 2 = 4."
+    }
+   ],
+   "explain": "6! = 720 arrangements if every letter were different. Swapping the two Ls or the two Os changes nothing, so divide by 2 × 2: 720 ÷ 4 = 180."
+  },
+  {
+   "id": "maths.ps.ct.not235",
+   "topic": "maths.ps-counting",
+   "kind": "fact",
+   "prompt": "How many whole numbers from 1 to 100 are not multiples of 2, 3 or 5?",
+   "answer": "26",
+   "distractors": [
+    "24",
+    "30",
+    "74"
+   ],
+   "explain": "Multiples of 2, 3 or 5 by inclusion–exclusion: 50 + 33 + 20 − 16 − 10 − 6 + 3 = 74. So 100 − 74 = 26 are left.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ct.cube",
+   "topic": "maths.ps-counting",
+   "kind": "mcq",
+   "prompt": "A large cube is painted red and then cut into 27 equal small cubes. How many small cubes have exactly two red faces?",
+   "options": [
+    {
+     "text": "12",
+     "correct": true
+    },
+    {
+     "text": "8",
+     "correct": false,
+     "feedback": "The 8 corner cubes have three red faces."
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "The 6 face-centre cubes have one red face."
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "The centre cube has no red faces."
+    },
+    {
+     "text": "24",
+     "correct": false,
+     "feedback": "Each of the 12 edges has just one middle cube."
+    }
+   ],
+   "explain": "Cubes with exactly two red faces sit in the middle of each edge. A cube has 12 edges, so 12."
+  },
+  {
+   "id": "maths.ps.ct.hex",
+   "topic": "maths.ps-counting",
+   "kind": "fact",
+   "prompt": "How many different triangles can be made using three of the six corners of a regular hexagon?",
+   "answer": "20",
+   "distractors": [
+    "18",
+    "6",
+    "120"
+   ],
+   "explain": "Choose 3 corners from 6: 6 × 5 × 4 ÷ (3 × 2 × 1) = 20. No three corners of a hexagon lie on a straight line.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ct.league",
+   "topic": "maths.ps-counting",
+   "kind": "fact",
+   "prompt": "Six teams play in a tournament in which each team plays every other team once. How many matches are played?",
+   "answer": "15",
+   "distractors": [
+    "30",
+    "36",
+    "12"
+   ],
+   "explain": "Each team plays 5 matches: 6 × 5 = 30, but that counts every match twice. 15.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ct.medals",
+   "topic": "maths.ps-counting",
+   "kind": "fact",
+   "prompt": "Seven athletes run a race. In how many ways can the gold, silver and bronze medals be awarded?",
+   "answer": "210",
+   "distractors": [
+    "35",
+    "343",
+    "21"
+   ],
+   "explain": "7 choices for gold, then 6 for silver, then 5 for bronze: 7 × 6 × 5 = 210. Order matters here, so do not divide.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pb.even",
+   "topic": "maths.ps-probability",
+   "kind": "mcq",
+   "prompt": "Two fair dice are rolled and the numbers multiplied. What is the probability that the product is even?",
+   "options": [
+    {
+     "text": "{{3/4}}",
+     "correct": true
+    },
+    {
+     "text": "{{1/2}}",
+     "correct": false,
+     "feedback": "The product is odd only if BOTH dice are odd."
+    },
+    {
+     "text": "{{1/4}}",
+     "correct": false,
+     "feedback": "That is the probability of an odd product."
+    },
+    {
+     "text": "{{2/3}}",
+     "correct": false,
+     "feedback": "Count: 27 of the 36 outcomes are even."
+    },
+    {
+     "text": "{{5/6}}",
+     "correct": false,
+     "feedback": "P(odd product) = 1/2 × 1/2 = 1/4, so P(even) = 3/4."
+    }
+   ],
+   "explain": "The product is odd only when both dice are odd: 1/2 × 1/2 = 1/4. So P(even) = 1 − 1/4 = 3/4."
+  },
+  {
+   "id": "maths.ps.pb.head",
+   "topic": "maths.ps-probability",
+   "kind": "mcq",
+   "prompt": "Three fair coins are tossed. What is the probability of getting at least one head?",
+   "options": [
+    {
+     "text": "{{7/8}}",
+     "correct": true
+    },
+    {
+     "text": "{{1/2}}",
+     "correct": false,
+     "feedback": "“At least one” is far more likely than a half."
+    },
+    {
+     "text": "{{3/8}}",
+     "correct": false,
+     "feedback": "That is the probability of exactly one head."
+    },
+    {
+     "text": "{{1/3}}",
+     "correct": false,
+     "feedback": "There are 8 equally likely outcomes, not 3."
+    },
+    {
+     "text": "{{2/3}}",
+     "correct": false,
+     "feedback": "Use the complement: only TTT has no heads."
+    }
+   ],
+   "explain": "Use the complement: no heads means TTT, probability 1/8. So at least one head is 1 − 1/8 = 7/8."
+  },
+  {
+   "id": "maths.ps.pb.bag",
+   "topic": "maths.ps-probability",
+   "kind": "mcq",
+   "prompt": "A bag has 3 red and 2 blue marbles. Two are taken out without replacement. What is the probability that both are red?",
+   "options": [
+    {
+     "text": "{{3/10}}",
+     "correct": true
+    },
+    {
+     "text": "{{9/25}}",
+     "correct": false,
+     "feedback": "That would be with replacement; here the first marble is not put back."
+    },
+    {
+     "text": "{{3/5}}",
+     "correct": false,
+     "feedback": "That is just the first marble."
+    },
+    {
+     "text": "{{1/2}}",
+     "correct": false,
+     "feedback": "After one red, 2 of the 4 left are red: 3/5 × 2/4."
+    },
+    {
+     "text": "{{2/5}}",
+     "correct": false,
+     "feedback": "Multiply the two probabilities: 3/5 × 2/4."
+    }
+   ],
+   "explain": "P(first red) = 3/5. Then 2 of the 4 left are red: 2/4. 3/5 × 2/4 = 6/20 = 3/10."
+  },
+  {
+   "id": "maths.ps.pb.bigger",
+   "topic": "maths.ps-probability",
+   "kind": "mcq",
+   "prompt": "A fair dice is rolled twice. What is the probability that the second number is bigger than the first?",
+   "options": [
+    {
+     "text": "{{5/12}}",
+     "correct": true
+    },
+    {
+     "text": "{{1/2}}",
+     "correct": false,
+     "feedback": "Equal rolls (6 of the 36) make it less than a half."
+    },
+    {
+     "text": "{{1/6}}",
+     "correct": false,
+     "feedback": "That is the probability of the two being equal."
+    },
+    {
+     "text": "{{5/6}}",
+     "correct": false,
+     "feedback": "That is the probability they are different."
+    },
+    {
+     "text": "{{7/12}}",
+     "correct": false,
+     "feedback": "That is “bigger or equal”."
+    }
+   ],
+   "explain": "Of the 36 outcomes, 6 are equal. The other 30 split evenly into “bigger” and “smaller”, so 15/36 = 5/12."
+  },
+  {
+   "id": "maths.ps.pb.prime",
+   "topic": "maths.ps-probability",
+   "kind": "mcq",
+   "prompt": "A whole number from 1 to 20 is chosen at random. What is the probability that it is prime?",
+   "options": [
+    {
+     "text": "{{2/5}}",
+     "correct": true
+    },
+    {
+     "text": "{{1/2}}",
+     "correct": false,
+     "feedback": "There are 8 primes up to 20, not 10."
+    },
+    {
+     "text": "{{9/20}}",
+     "correct": false,
+     "feedback": "1 is not prime."
+    },
+    {
+     "text": "{{7/20}}",
+     "correct": false,
+     "feedback": "2 is prime: 2, 3, 5, 7, 11, 13, 17, 19 make 8."
+    },
+    {
+     "text": "{{1/4}}",
+     "correct": false,
+     "feedback": "Count the primes: there are 8."
+    }
+   ],
+   "explain": "The primes up to 20 are 2, 3, 5, 7, 11, 13, 17, 19: 8 of the 20. 8/20 = 2/5."
+  },
+  {
+   "id": "maths.ps.pb.total",
+   "topic": "maths.ps-probability",
+   "kind": "mcq",
+   "prompt": "Two fair dice are rolled and the numbers added. Which total is most likely?",
+   "options": [
+    {
+     "text": "7",
+     "correct": true
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "6 can be made 5 ways; 7 can be made 6 ways."
+    },
+    {
+     "text": "12",
+     "correct": false,
+     "feedback": "12 needs a double 6: only 1 way."
+    },
+    {
+     "text": "8",
+     "correct": false,
+     "feedback": "8 can be made 5 ways."
+    },
+    {
+     "text": "All totals are equally likely",
+     "correct": false,
+     "feedback": "Totals near the middle can be made in more ways."
+    }
+   ],
+   "explain": "7 can be made 6 ways (1+6, 2+5, 3+4, 4+3, 5+2, 6+1), more than any other total."
+  },
+  {
+   "id": "maths.ps.pb.sign",
+   "topic": "maths.ps-probability",
+   "kind": "mcq",
+   "prompt": "Assume the 12 star signs are equally likely. Mira and Theo are chosen at random. What is the probability they share a star sign?",
+   "options": [
+    {
+     "text": "{{1/12}}",
+     "correct": true
+    },
+    {
+     "text": "{{1/144}}",
+     "correct": false,
+     "feedback": "That is the chance of both being one particular sign."
+    },
+    {
+     "text": "{{1/6}}",
+     "correct": false,
+     "feedback": "Whatever Mira’s sign, Theo has a 1 in 12 chance of matching."
+    },
+    {
+     "text": "{{11/12}}",
+     "correct": false,
+     "feedback": "That is the chance they are different."
+    },
+    {
+     "text": "{{1/2}}",
+     "correct": false,
+     "feedback": "There are 12 signs, not 2."
+    }
+   ],
+   "explain": "Mira can be any sign; Theo then matches with probability 1/12."
+  },
+  {
+   "id": "maths.ps.pb.tf",
+   "topic": "maths.ps-probability",
+   "kind": "mcq",
+   "prompt": "Kit guesses all four answers on a true-or-false quiz at random. What is the probability that she gets all four right?",
+   "options": [
+    {
+     "text": "{{1/16}}",
+     "correct": true
+    },
+    {
+     "text": "{{1/4}}",
+     "correct": false,
+     "feedback": "Four guesses, each 1/2: multiply, do not add."
+    },
+    {
+     "text": "{{1/8}}",
+     "correct": false,
+     "feedback": "1/2 × 1/2 × 1/2 × 1/2 = 1/16."
+    },
+    {
+     "text": "{{1/2}}",
+     "correct": false,
+     "feedback": "That is for one question."
+    },
+    {
+     "text": "{{3/16}}",
+     "correct": false,
+     "feedback": "Multiply the four halves: 1/16."
+    }
+   ],
+   "explain": "Each guess is right with probability 1/2, independently: (1/2)⁴ = 1/16."
+  },
+  {
+   "id": "maths.ps.pb.spin",
+   "topic": "maths.ps-probability",
+   "kind": "fact",
+   "prompt": "A spinner lands on red with probability 0.35. It is spun 200 times. How many reds would you expect?",
+   "answer": "70",
+   "distractors": [
+    "35",
+    "65",
+    "130"
+   ],
+   "explain": "Expected number = probability × number of trials: 0.35 × 200 = 70.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pb.athena",
+   "topic": "maths.ps-probability",
+   "kind": "mcq",
+   "prompt": "A letter is chosen at random from the word ATHENA. What is the probability that it is a vowel?",
+   "options": [
+    {
+     "text": "{{1/2}}",
+     "correct": true
+    },
+    {
+     "text": "{{1/3}}",
+     "correct": false,
+     "feedback": "Count both As: A, E, A are 3 vowels."
+    },
+    {
+     "text": "{{2/5}}",
+     "correct": false,
+     "feedback": "There are 6 letters, not 5."
+    },
+    {
+     "text": "{{2/3}}",
+     "correct": false,
+     "feedback": "Only 3 of the 6 letters are vowels."
+    },
+    {
+     "text": "{{1/6}}",
+     "correct": false,
+     "feedback": "There are three vowels."
+    }
+   ],
+   "explain": "ATHENA has 6 letters, of which A, E, A are vowels: 3/6 = 1/2."
+  },
+  {
+   "id": "maths.ps.pb.cards",
+   "topic": "maths.ps-probability",
+   "kind": "mcq",
+   "prompt": "Two different cards are drawn from five cards numbered 1 to 5. What is the probability that their total is even?",
+   "options": [
+    {
+     "text": "{{2/5}}",
+     "correct": true
+    },
+    {
+     "text": "{{1/2}}",
+     "correct": false,
+     "feedback": "Count the 10 pairs: only 4 give an even total."
+    },
+    {
+     "text": "{{3/5}}",
+     "correct": false,
+     "feedback": "That is the probability of an odd total."
+    },
+    {
+     "text": "{{3/10}}",
+     "correct": false,
+     "feedback": "Do not forget the two even cards: 2 + 4."
+    },
+    {
+     "text": "{{1/5}}",
+     "correct": false,
+     "feedback": "There are 4 good pairs out of 10."
+    }
+   ],
+   "explain": "There are 10 pairs. An even total needs both odd ({1,3}, {1,5}, {3,5}) or both even ({2,4}): 4 pairs. 4/10 = 2/5."
+  },
+  {
+   "id": "maths.ps.gm.ext",
+   "topic": "maths.ps-geometry",
+   "kind": "fact",
+   "prompt": "Each exterior angle of a regular polygon is 24°. How many sides does it have?",
+   "answer": "15",
+   "distractors": [
+    "24",
+    "12",
+    "18"
+   ],
+   "explain": "The exterior angles of any polygon add to 360°, so 360 ÷ 24 = 15 sides.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.gm.iso",
+   "topic": "maths.ps-geometry",
+   "kind": "mcq",
+   "prompt": "One angle of an isosceles triangle is 40°. What could the largest angle be?",
+   "options": [
+    {
+     "text": "100° or 70°",
+     "correct": true
+    },
+    {
+     "text": "100° only",
+     "correct": false,
+     "feedback": "If the two equal angles are 70° each, 70° is the largest."
+    },
+    {
+     "text": "70° only",
+     "correct": false,
+     "feedback": "If 40° is one of the equal angles, the third is 100°."
+    },
+    {
+     "text": "140°",
+     "correct": false,
+     "feedback": "The angles must add to 180°."
+    },
+    {
+     "text": "80°",
+     "correct": false,
+     "feedback": "The other angles are 40° and 100°, or 70° and 70°: 80° is not possible."
+    }
+   ],
+   "explain": "Either 40° is one of the two equal angles (40, 40, 100) or it is the odd one (40, 70, 70). So the largest is 100° or 70°."
+  },
+  {
+   "id": "maths.ps.gm.circle",
+   "topic": "maths.ps-geometry",
+   "kind": "mcq",
+   "prompt": "A circle fits exactly inside a square of side 10 cm, touching all four sides. What is the area inside the square but outside the circle, to the nearest square centimetre?",
+   "options": [
+    {
+     "text": "21 cm²",
+     "correct": true
+    },
+    {
+     "text": "79 cm²",
+     "correct": false,
+     "feedback": "That is the area of the circle."
+    },
+    {
+     "text": "69 cm²",
+     "correct": false,
+     "feedback": "The radius is 5, so the circle’s area is 25π ≈ 78.5."
+    },
+    {
+     "text": "14 cm²",
+     "correct": false,
+     "feedback": "100 − 25π ≈ 21.5."
+    },
+    {
+     "text": "31 cm²",
+     "correct": false,
+     "feedback": "Use π ≈ 3.14: 100 − 78.5 = 21.5."
+    }
+   ],
+   "explain": "The radius is 5 cm, so the circle’s area is 25π ≈ 78.5 cm². 100 − 78.5 ≈ 21 cm² (21.46)."
+  },
+  {
+   "id": "maths.ps.gm.quad",
+   "topic": "maths.ps-geometry",
+   "kind": "fact",
+   "prompt": "The angles of a quadrilateral are in the ratio 1 : 2 : 3 : 4. What is the largest angle, in degrees?",
+   "answer": "144",
+   "distractors": [
+    "120",
+    "160",
+    "108"
+   ],
+   "explain": "The angles add to 360°: 10 parts, so 1 part = 36°. The largest is 4 × 36 = 144°.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.gm.rect",
+   "topic": "maths.ps-geometry",
+   "kind": "fact",
+   "prompt": "A rectangle has a perimeter of 30 cm and whole-number sides. What is the largest possible area, in cm²?",
+   "answer": "56",
+   "distractors": [
+    "225",
+    "50",
+    "54"
+   ],
+   "explain": "The sides add to 15: try 7 and 8 (56), 6 and 9 (54), … The closer to a square, the bigger the area, so 7 × 8 = 56.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.gm.clock",
+   "topic": "maths.ps-geometry",
+   "kind": "fact",
+   "prompt": "What is the angle, in degrees, between the hands of a clock at 3:30?",
+   "answer": "75",
+   "distractors": [
+    "90",
+    "60",
+    "105"
+   ],
+   "explain": "The minute hand points at 6 (180°). The hour hand is halfway between 3 and 4: 90 + 15 = 105°. 180 − 105 = 75°.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.gm.tri",
+   "topic": "maths.ps-geometry",
+   "kind": "fact",
+   "prompt": "What is the area of the triangle with corners at (0, 0), (6, 0) and (2, 5)?",
+   "answer": "15",
+   "distractors": [
+    "30",
+    "12",
+    "18"
+   ],
+   "explain": "The base along the x-axis is 6 and the height is 5 (the y-coordinate of the top). Area = ½ × 6 × 5 = 15.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.gm.oct",
+   "topic": "maths.ps-geometry",
+   "kind": "fact",
+   "prompt": "What do the interior angles of an octagon add up to, in degrees?",
+   "answer": "1080",
+   "distractors": [
+    "1440",
+    "900",
+    "1260"
+   ],
+   "explain": "Split the octagon into 6 triangles from one corner: (8 − 2) × 180 = 1080°.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.gm.sq10",
+   "topic": "maths.ps-geometry",
+   "kind": "mcq",
+   "prompt": "The sides of a square are increased by 10%. By what percentage does its area increase?",
+   "options": [
+    {
+     "text": "21%",
+     "correct": true
+    },
+    {
+     "text": "10%",
+     "correct": false,
+     "feedback": "Both length and width grow, so the area grows by more."
+    },
+    {
+     "text": "20%",
+     "correct": false,
+     "feedback": "1.1 × 1.1 = 1.21, not 1.2."
+    },
+    {
+     "text": "100%",
+     "correct": false,
+     "feedback": "That would need the sides to grow by about 41%."
+    },
+    {
+     "text": "11%",
+     "correct": false,
+     "feedback": "1.1² = 1.21: a 21% increase."
+    }
+   ],
+   "explain": "The area scales by 1.1 × 1.1 = 1.21, an increase of 21%. Try it with a square of side 10: area 100 becomes 121."
+  },
+  {
+   "id": "maths.ps.gm.prism",
+   "topic": "maths.ps-geometry",
+   "kind": "fact",
+   "prompt": "How many edges does an octagonal prism have?",
+   "answer": "24",
+   "distractors": [
+    "16",
+    "18",
+    "26"
+   ],
+   "explain": "Two octagonal ends have 8 edges each (16), and 8 edges join them: 24. Any n-sided prism has 3n edges.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.gm.hex",
+   "topic": "maths.ps-geometry",
+   "kind": "fact",
+   "prompt": "A regular hexagon with sides of 2 cm is cut into equilateral triangles with sides of 1 cm. How many small triangles are there?",
+   "answer": "24",
+   "distractors": [
+    "6",
+    "12",
+    "18"
+   ],
+   "explain": "The hexagon is 6 equilateral triangles of side 2. Each of those splits into 4 triangles of side 1: 6 × 4 = 24.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.gm.line",
+   "topic": "maths.ps-geometry",
+   "kind": "fact",
+   "prompt": "Two angles on a straight line differ by 30°. What is the smaller angle, in degrees?",
+   "answer": "75",
+   "distractors": [
+    "60",
+    "90",
+    "105"
+   ],
+   "explain": "They add to 180° and differ by 30°: the smaller is (180 − 30) ÷ 2 = 75°, the larger 105°.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.tm.run",
+   "topic": "maths.ps-time",
+   "kind": "mcq",
+   "prompt": "A messenger runs 42 km at a steady 12 km/h. How long does the run take?",
+   "options": [
+    {
+     "text": "3 hours 30 minutes",
+     "correct": true
+    },
+    {
+     "text": "3 hours 50 minutes",
+     "correct": false,
+     "feedback": "42 ÷ 12 = 3.5 hours, and 0.5 hours is 30 minutes."
+    },
+    {
+     "text": "4 hours 2 minutes",
+     "correct": false,
+     "feedback": "Time = distance ÷ speed = 42 ÷ 12."
+    },
+    {
+     "text": "3 hours 5 minutes",
+     "correct": false,
+     "feedback": "0.5 of an hour is 30 minutes, not 5."
+    },
+    {
+     "text": "5 hours 4 minutes",
+     "correct": false,
+     "feedback": "Divide 42 by 12."
+    }
+   ],
+   "explain": "Time = distance ÷ speed = 42 ÷ 12 = 3.5 hours = 3 hours 30 minutes."
+  },
+  {
+   "id": "maths.ps.tm.tunnel",
+   "topic": "maths.ps-time",
+   "kind": "fact",
+   "prompt": "A train 200 m long travels at 20 m/s through a tunnel 400 m long. How many seconds pass from the front entering to the back leaving?",
+   "answer": "30",
+   "distractors": [
+    "20",
+    "10",
+    "40"
+   ],
+   "explain": "The front must travel the tunnel’s length plus the train’s length: 400 + 200 = 600 m. 600 ÷ 20 = 30 seconds.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.tm.cycle",
+   "topic": "maths.ps-time",
+   "kind": "mcq",
+   "prompt": "Kit cycles to the temple at 15 km/h and back by the same road at 10 km/h. What is her average speed for the whole journey?",
+   "options": [
+    {
+     "text": "12 km/h",
+     "correct": true
+    },
+    {
+     "text": "12.5 km/h",
+     "correct": false,
+     "feedback": "She spends longer at the slower speed, so the average is below 12.5."
+    },
+    {
+     "text": "13 km/h",
+     "correct": false,
+     "feedback": "Average speed = total distance ÷ total time."
+    },
+    {
+     "text": "25 km/h",
+     "correct": false,
+     "feedback": "Do not add the speeds."
+    },
+    {
+     "text": "11 km/h",
+     "correct": false,
+     "feedback": "Try a distance of 30 km each way: 60 km in 5 hours."
+    }
+   ],
+   "explain": "Pick a distance, say 30 km each way: 2 hours there and 3 hours back. 60 km ÷ 5 hours = 12 km/h."
+  },
+  {
+   "id": "maths.ps.tm.2028",
+   "topic": "maths.ps-time",
+   "kind": "mcq",
+   "prompt": "1 January 2027 is a Friday. What day of the week is 1 January 2028?",
+   "options": [
+    {
+     "text": "Saturday",
+     "correct": true
+    },
+    {
+     "text": "Friday",
+     "correct": false,
+     "feedback": "365 days is 52 weeks and 1 day."
+    },
+    {
+     "text": "Sunday",
+     "correct": false,
+     "feedback": "2027 is not a leap year, so move on 1 day, not 2."
+    },
+    {
+     "text": "Thursday",
+     "correct": false,
+     "feedback": "The day moves forward, not back."
+    },
+    {
+     "text": "Monday",
+     "correct": false,
+     "feedback": "365 = 7 × 52 + 1."
+    }
+   ],
+   "explain": "2027 has 365 days = 52 weeks + 1 day, so the day moves on by one: Saturday."
+  },
+  {
+   "id": "maths.ps.tm.week",
+   "topic": "maths.ps-time",
+   "kind": "fact",
+   "prompt": "How many seconds are there in a week?",
+   "answer": "604800",
+   "distractors": [
+    "86400",
+    "10080",
+    "6048000"
+   ],
+   "explain": "7 × 24 × 60 × 60 = 604 800.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.tm.gain",
+   "topic": "maths.ps-time",
+   "kind": "mcq",
+   "prompt": "A clock gains 3 minutes every hour. It is set right at noon. What does it show when the real time is 8 pm?",
+   "options": [
+    {
+     "text": "8:24 pm",
+     "correct": true
+    },
+    {
+     "text": "8:03 pm",
+     "correct": false,
+     "feedback": "It gains 3 minutes EVERY hour, for 8 hours."
+    },
+    {
+     "text": "8:21 pm",
+     "correct": false,
+     "feedback": "3 × 8 = 24."
+    },
+    {
+     "text": "7:36 pm",
+     "correct": false,
+     "feedback": "A clock that gains runs ahead, not behind."
+    },
+    {
+     "text": "8:30 pm",
+     "correct": false,
+     "feedback": "8 hours × 3 minutes is 24 minutes."
+    }
+   ],
+   "explain": "In 8 hours it gains 8 × 3 = 24 minutes, so it shows 8:24 pm."
+  },
+  {
+   "id": "maths.ps.tm.track",
+   "topic": "maths.ps-time",
+   "kind": "fact",
+   "prompt": "Two runners start together on a 400 m circular track and run in opposite directions at 3 m/s and 5 m/s. After how many seconds do they first meet?",
+   "answer": "50",
+   "distractors": [
+    "200",
+    "80",
+    "133"
+   ],
+   "explain": "Running towards each other, they close the gap at 3 + 5 = 8 m/s. Together they cover 400 m in 400 ÷ 8 = 50 s.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.tm.day100",
+   "topic": "maths.ps-time",
+   "kind": "mcq",
+   "prompt": "What date is the 100th day of a year that is not a leap year?",
+   "options": [
+    {
+     "text": "10 April",
+     "correct": true
+    },
+    {
+     "text": "9 April",
+     "correct": false,
+     "feedback": "January, February and March have 31 + 28 + 31 = 90 days."
+    },
+    {
+     "text": "11 April",
+     "correct": false,
+     "feedback": "Day 91 is 1 April, so day 100 is 10 April."
+    },
+    {
+     "text": "10 March",
+     "correct": false,
+     "feedback": "March ends on day 90."
+    },
+    {
+     "text": "1 April",
+     "correct": false,
+     "feedback": "That is day 91."
+    }
+   ],
+   "explain": "January (31), February (28) and March (31) make 90 days, so day 91 is 1 April and day 100 is 10 April."
+  },
+  {
+   "id": "maths.ps.tm.hermes",
+   "topic": "maths.ps-time",
+   "kind": "fact",
+   "prompt": "Hermes flies 120 km at 40 km/h, then another 120 km at 60 km/h. What is his average speed for the whole flight, in km/h?",
+   "answer": "48",
+   "distractors": [
+    "50",
+    "45",
+    "100"
+   ],
+   "explain": "Times: 120 ÷ 40 = 3 h and 120 ÷ 60 = 2 h. 240 km in 5 h = 48 km/h.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.tm.overlap",
+   "topic": "maths.ps-time",
+   "kind": "mcq",
+   "prompt": "How many times in a 24-hour day do the hour hand and minute hand of a clock point in exactly the same direction?",
+   "options": [
+    {
+     "text": "22",
+     "correct": true
+    },
+    {
+     "text": "24",
+     "correct": false,
+     "feedback": "The minute hand laps the hour hand 11 times in 12 hours, not 12."
+    },
+    {
+     "text": "12",
+     "correct": false,
+     "feedback": "That is too few: it happens about every 65 minutes."
+    },
+    {
+     "text": "23",
+     "correct": false,
+     "feedback": "In 24 hours the minute hand gains exactly 22 laps."
+    },
+    {
+     "text": "48",
+     "correct": false,
+     "feedback": "They overlap roughly once an hour, not twice."
+    }
+   ],
+   "explain": "In 12 hours the minute hand goes round 12 times and the hour hand once, so the minute hand gains 11 laps and passes it 11 times. In 24 hours: 22."
+  },
+  {
+   "id": "maths.ps.tm.late",
+   "topic": "maths.ps-time",
+   "kind": "mcq",
+   "prompt": "A journey starts at 21:45 and lasts 3 hours 40 minutes. When does it end?",
+   "options": [
+    {
+     "text": "01:25",
+     "correct": true
+    },
+    {
+     "text": "00:25",
+     "correct": false,
+     "feedback": "21:45 + 3 h = 00:45, then 40 more minutes is 01:25."
+    },
+    {
+     "text": "01:85",
+     "correct": false,
+     "feedback": "There are only 60 minutes in an hour."
+    },
+    {
+     "text": "25:25",
+     "correct": false,
+     "feedback": "Clock times start again after 24:00."
+    },
+    {
+     "text": "02:25",
+     "correct": false,
+     "feedback": "Count again: 00:45 plus 40 minutes is 01:25."
+    }
+   ],
+   "explain": "21:45 + 3 hours = 00:45. 00:45 + 40 minutes = 01:25."
+  },
+  {
+   "id": "maths.ps.al.trick",
+   "topic": "maths.ps-algebra",
+   "kind": "fact",
+   "prompt": "Think of a number. Double it, add 10, halve the result, then subtract the number you first thought of. What is the answer, whatever number you choose?",
+   "answer": "5",
+   "distractors": [
+    "10",
+    "0",
+    "20"
+   ],
+   "explain": "With n: 2n → 2n + 10 → n + 5 → 5. The n always cancels.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.al.brick",
+   "topic": "maths.ps-algebra",
+   "kind": "mcq",
+   "prompt": "A brick weighs 1 kg plus half a brick. How much does a whole brick weigh?",
+   "options": [
+    {
+     "text": "2 kg",
+     "correct": true
+    },
+    {
+     "text": "1.5 kg",
+     "correct": false,
+     "feedback": "Then half a brick is 0.75 kg, and 1 + 0.75 is not 1.5."
+    },
+    {
+     "text": "1 kg",
+     "correct": false,
+     "feedback": "It weighs 1 kg PLUS half a brick."
+    },
+    {
+     "text": "3 kg",
+     "correct": false,
+     "feedback": "Then half is 1.5 kg, and 1 + 1.5 = 2.5, not 3."
+    },
+    {
+     "text": "0.5 kg",
+     "correct": false,
+     "feedback": "It weighs more than 1 kg."
+    }
+   ],
+   "explain": "Let the brick be b: b = 1 + b/2, so b/2 = 1 and b = 2 kg."
+  },
+  {
+   "id": "maths.ps.al.bat",
+   "topic": "maths.ps-algebra",
+   "kind": "mcq",
+   "prompt": "A bat and a ball cost £1.10 together. The bat costs £1 more than the ball. How much is the ball?",
+   "options": [
+    {
+     "text": "5p",
+     "correct": true
+    },
+    {
+     "text": "10p",
+     "correct": false,
+     "feedback": "Then the bat is £1.10 and the total £1.20."
+    },
+    {
+     "text": "£1",
+     "correct": false,
+     "feedback": "That is the difference, not the ball."
+    },
+    {
+     "text": "1p",
+     "correct": false,
+     "feedback": "Then the bat is £1.01 and the total £1.02."
+    },
+    {
+     "text": "55p",
+     "correct": false,
+     "feedback": "That splits it equally; the bat is £1 more."
+    }
+   ],
+   "explain": "Let the ball cost b: b + (b + 1) = 1.10, so 2b = 0.10 and b = 5p. The quick answer, 10p, makes the total £1.20."
+  },
+  {
+   "id": "maths.ps.al.consec",
+   "topic": "maths.ps-algebra",
+   "kind": "fact",
+   "prompt": "Three consecutive whole numbers add up to 72. What is the largest of them?",
+   "answer": "25",
+   "distractors": [
+    "24",
+    "26",
+    "23"
+   ],
+   "explain": "n + (n + 1) + (n + 2) = 3n + 3 = 72, so n = 23 and the largest is 25. (Or: the middle one is 72 ÷ 3 = 24.)",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.al.ages",
+   "topic": "maths.ps-algebra",
+   "kind": "fact",
+   "prompt": "Kit’s age and her mother’s age add up to 50. In 5 years’ time her mother will be three times as old as Kit. How old is Kit now?",
+   "answer": "10",
+   "distractors": [
+    "15",
+    "12",
+    "5"
+   ],
+   "explain": "Let Kit be k, so her mother is 50 − k. In 5 years: 55 − k = 3(k + 5), so 55 − k = 3k + 15 and 4k = 40: k = 10.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.al.xy",
+   "topic": "maths.ps-algebra",
+   "kind": "fact",
+   "prompt": "x + y = 10 and x − y = 4. What is xy?",
+   "answer": "21",
+   "distractors": [
+    "24",
+    "40",
+    "14"
+   ],
+   "explain": "Adding the equations: 2x = 14, so x = 7 and y = 3. xy = 21.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.al.abc",
+   "topic": "maths.ps-algebra",
+   "kind": "fact",
+   "prompt": "a + b = 7, b + c = 9 and a + c = 8. What is a + b + c?",
+   "answer": "12",
+   "distractors": [
+    "24",
+    "7.5",
+    "16"
+   ],
+   "explain": "Adding all three: 2a + 2b + 2c = 24, so a + b + c = 12. No need to find each letter.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.al.cube",
+   "topic": "maths.ps-algebra",
+   "kind": "mcq",
+   "prompt": "x² = 49 and x³ = −343. What is x?",
+   "options": [
+    {
+     "text": "−7",
+     "correct": true
+    },
+    {
+     "text": "7",
+     "correct": false,
+     "feedback": "7³ = 343, not −343."
+    },
+    {
+     "text": "7 or −7",
+     "correct": false,
+     "feedback": "Only −7 also satisfies x³ = −343."
+    },
+    {
+     "text": "49",
+     "correct": false,
+     "feedback": "49² is not 49."
+    },
+    {
+     "text": "There is no such number",
+     "correct": false,
+     "feedback": "(−7)² = 49 and (−7)³ = −343."
+    }
+   ],
+   "explain": "x² = 49 allows 7 or −7, but x³ is negative, so x = −7."
+  },
+  {
+   "id": "maths.ps.al.coins",
+   "topic": "maths.ps-algebra",
+   "kind": "fact",
+   "prompt": "Mira has twice as many coins as Theo. If she gives him 6 coins, they will have the same number. How many coins do they have altogether?",
+   "answer": "36",
+   "distractors": [
+    "18",
+    "24",
+    "12"
+   ],
+   "explain": "Let Theo have t, so Mira has 2t. 2t − 6 = t + 6 gives t = 12. Together: 12 + 24 = 36.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.al.mean",
+   "topic": "maths.ps-algebra",
+   "kind": "fact",
+   "prompt": "The mean of four numbers is 15. When a fifth number is added, the mean becomes 17. What is the fifth number?",
+   "answer": "25",
+   "distractors": [
+    "17",
+    "2",
+    "32"
+   ],
+   "explain": "The four numbers total 4 × 15 = 60. Five numbers total 5 × 17 = 85. The fifth is 85 − 60 = 25.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.al.legs",
+   "topic": "maths.ps-algebra",
+   "kind": "fact",
+   "prompt": "A herd of centaurs (4 legs each) and nymphs (2 legs each) has 20 heads and 56 legs. How many centaurs are there?",
+   "answer": "8",
+   "distractors": [
+    "12",
+    "14",
+    "6"
+   ],
+   "explain": "If all 20 were nymphs there would be 40 legs. Each centaur adds 2 more legs: (56 − 40) ÷ 2 = 8 centaurs.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.iv.chess",
+   "topic": "maths.ps-invariants",
+   "kind": "mcq",
+   "prompt": "Two opposite corner squares are removed from a chessboard, leaving 62 squares. Can the board be exactly covered by 31 dominoes, each covering two neighbouring squares?",
+   "options": [
+    {
+     "text": "No: the two removed squares are the same colour, but every domino covers one black and one white",
+     "correct": true
+    },
+    {
+     "text": "Yes, if you start from the middle",
+     "correct": false,
+     "feedback": "However you place them, the colours do not balance."
+    },
+    {
+     "text": "Yes: 62 is even",
+     "correct": false,
+     "feedback": "An even number of squares is needed, but it is not enough."
+    },
+    {
+     "text": "No: 31 is odd",
+     "correct": false,
+     "feedback": "The odd number of dominoes is not the reason."
+    },
+    {
+     "text": "Only a computer search could tell",
+     "correct": false,
+     "feedback": "A colouring argument settles it without searching."
+    }
+   ],
+   "explain": "Opposite corners are the same colour, so 30 squares of one colour and 32 of the other remain. Each domino covers one of each colour, so 31 dominoes would cover 31 of each. Impossible."
+  },
+  {
+   "id": "maths.ps.iv.diff",
+   "topic": "maths.ps-invariants",
+   "kind": "mcq",
+   "prompt": "The numbers 1 to 10 are written on a board. Repeatedly, Theo erases two numbers and writes their difference. When only one number is left, can it be 0?",
+   "options": [
+    {
+     "text": "No: the total stays odd, so the last number is odd",
+     "correct": true
+    },
+    {
+     "text": "Yes, by pairing equal numbers",
+     "correct": false,
+     "feedback": "There are no equal numbers to start with, and parity blocks it anyway."
+    },
+    {
+     "text": "Yes, always",
+     "correct": false,
+     "feedback": "Try it: the last number is always odd."
+    },
+    {
+     "text": "It depends on the order",
+     "correct": false,
+     "feedback": "The parity of the total never changes, whatever the order."
+    },
+    {
+     "text": "No: the last number is always 1",
+     "correct": false,
+     "feedback": "It is always odd, but not always 1."
+    }
+   ],
+   "explain": "Replacing a and b by a − b changes the total by 2b, an even amount, so the total stays odd (it starts at 55). One number left means that number is odd, never 0."
+  },
+  {
+   "id": "maths.ps.iv.cups",
+   "topic": "maths.ps-invariants",
+   "kind": "mcq",
+   "prompt": "Seven cups stand upside down. A move turns over exactly two cups. Can all seven be made the right way up?",
+   "options": [
+    {
+     "text": "No: each cup must be turned an odd number of times, so the total number of turns is odd, but every move adds 2",
+     "correct": true
+    },
+    {
+     "text": "Yes, in 4 moves",
+     "correct": false,
+     "feedback": "Four moves turn over 8 cups in total, an even number."
+    },
+    {
+     "text": "Yes, in 7 moves",
+     "correct": false,
+     "feedback": "Seven moves make 14 turns, still even."
+    },
+    {
+     "text": "Only if you may turn one cup",
+     "correct": false,
+     "feedback": "That changes the rules; with pairs it is impossible."
+    },
+    {
+     "text": "Yes, by turning the same pair twice",
+     "correct": false,
+     "feedback": "That undoes itself."
+    }
+   ],
+   "explain": "Each cup needs an odd number of turns, and 7 odd numbers add to an odd total. Every move adds exactly 2 turns, so the total is always even. Impossible."
+  },
+  {
+   "id": "maths.ps.iv.knight",
+   "topic": "maths.ps-invariants",
+   "kind": "mcq",
+   "prompt": "A knight starts on a white square and makes 7 moves. What colour square is it on?",
+   "options": [
+    {
+     "text": "Black",
+     "correct": true
+    },
+    {
+     "text": "White",
+     "correct": false,
+     "feedback": "Every knight move changes colour, and 7 is odd."
+    },
+    {
+     "text": "It depends on the moves",
+     "correct": false,
+     "feedback": "Every single knight move switches colour."
+    },
+    {
+     "text": "It could be either",
+     "correct": false,
+     "feedback": "Each move flips the colour: after an odd number, it has flipped."
+    },
+    {
+     "text": "Neither: it has left the board",
+     "correct": false,
+     "feedback": "Knights stay on the board!"
+    }
+   ],
+   "explain": "A knight’s move always lands on the opposite colour. After 7 moves (odd) it has changed colour: black."
+  },
+  {
+   "id": "maths.ps.iv.graph",
+   "topic": "maths.ps-invariants",
+   "kind": "mcq",
+   "prompt": "In a network of paths, call a junction odd if an odd number of path-ends meet there. Can a network have exactly 5 odd junctions?",
+   "options": [
+    {
+     "text": "No: the number of odd junctions is always even",
+     "correct": true
+    },
+    {
+     "text": "Yes, with enough paths",
+     "correct": false,
+     "feedback": "Each path adds 2 to the total count of path-ends, so that total is always even."
+    },
+    {
+     "text": "Only if it is drawn in one stroke",
+     "correct": false,
+     "feedback": "Even then the count of odd junctions is even."
+    },
+    {
+     "text": "Yes, in a star shape",
+     "correct": false,
+     "feedback": "A star with 5 arms has 6 odd junctions (5 tips and a centre with 5)."
+    },
+    {
+     "text": "It depends on the lengths of the paths",
+     "correct": false,
+     "feedback": "Lengths do not matter, only the counting."
+    }
+   ],
+   "explain": "Each path has 2 ends, so adding up the path-ends at every junction gives an even total. A sum of whole numbers can only be even if an even number of them are odd."
+  },
+  {
+   "id": "maths.ps.iv.signs",
+   "topic": "maths.ps-invariants",
+   "kind": "mcq",
+   "prompt": "A + or − sign is put in front of each of the numbers 1, 2, 3, …, 10, and the signed numbers are added. Can the total be 0?",
+   "options": [
+    {
+     "text": "No: the total is always odd",
+     "correct": true
+    },
+    {
+     "text": "Yes, by choosing carefully",
+     "correct": false,
+     "feedback": "The total always has the same parity as 1 + 2 + … + 10 = 55."
+    },
+    {
+     "text": "Yes: + 1 − 2 + 3 − 4 …",
+     "correct": false,
+     "feedback": "That gives −5."
+    },
+    {
+     "text": "Only with the signs alternating",
+     "correct": false,
+     "feedback": "No choice of signs works."
+    },
+    {
+     "text": "Yes, the total can be anything",
+     "correct": false,
+     "feedback": "Changing a + to a − changes the total by an even amount."
+    }
+   ],
+   "explain": "With all + signs the total is 55. Changing any +n to −n subtracts 2n, an even number, so the total is always odd. 0 is even."
+  },
+  {
+   "id": "maths.ps.iv.ab1",
+   "topic": "maths.ps-invariants",
+   "kind": "fact",
+   "prompt": "The numbers 1, 2, 3, …, 20 are on a board. Repeatedly, two numbers a and b are erased and a + b − 1 is written. After 19 such steps one number is left. What is it?",
+   "answer": "191",
+   "distractors": [
+    "210",
+    "190",
+    "189"
+   ],
+   "explain": "Each step lowers the total by exactly 1. The total starts at 210, so after 19 steps it is 210 − 19 = 191, and that is the last number.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.iv.ab2",
+   "topic": "maths.ps-invariants",
+   "kind": "fact",
+   "prompt": "The numbers 1, 2, 3, 4 and 5 are on a board. Repeatedly, two numbers a and b are erased and ab + a + b is written. When one number is left, what is it?",
+   "answer": "719",
+   "distractors": [
+    "720",
+    "120",
+    "119"
+   ],
+   "explain": "Notice ab + a + b + 1 = (a + 1)(b + 1). So the product of all the (number + 1)s never changes: 2 × 3 × 4 × 5 × 6 = 720. The last number is 720 − 1 = 719.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ol.fact1000",
+   "topic": "maths.ps-olympiad",
+   "kind": "fact",
+   "prompt": "What is the smallest positive whole number n for which n! (1 × 2 × … × n) is a multiple of 1000?",
+   "answer": "15",
+   "distractors": [
+    "10",
+    "20",
+    "25"
+   ],
+   "explain": "1000 = 2³ × 5³ needs three factors of 5 (2s are plentiful). They come from 5, 10 and 15, so n = 15.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ol.unit",
+   "topic": "maths.ps-olympiad",
+   "kind": "mcq",
+   "prompt": "How many ordered pairs of positive whole numbers (x, y) satisfy 1/x + 1/y = 1/6?",
+   "options": [
+    {
+     "text": "9",
+     "correct": true
+    },
+    {
+     "text": "5",
+     "correct": false,
+     "feedback": "Count ordered pairs: (7, 42) and (42, 7) are different."
+    },
+    {
+     "text": "8",
+     "correct": false,
+     "feedback": "Do not forget (12, 12)."
+    },
+    {
+     "text": "36",
+     "correct": false,
+     "feedback": "36 is the product, not the number of pairs."
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "Rearrange to (x − 6)(y − 6) = 36, which has 9 positive factor pairs."
+    }
+   ],
+   "explain": "Multiply out: 6y + 6x = xy, so xy − 6x − 6y + 36 = 36, i.e. (x − 6)(y − 6) = 36. Each of the 9 ordered positive factor pairs of 36 gives a solution, e.g. (7, 42), (8, 24), (12, 12)."
+  },
+  {
+   "id": "maths.ps.ol.last3",
+   "topic": "maths.ps-olympiad",
+   "kind": "mcq",
+   "prompt": "What is the last digit of 3²⁰²⁶?",
+   "options": [
+    {
+     "text": "9",
+     "correct": true
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "The cycle 3, 9, 7, 1 has length 4, and 2026 leaves remainder 2."
+    },
+    {
+     "text": "7",
+     "correct": false,
+     "feedback": "That is the last digit when the power leaves remainder 3 on division by 4."
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "2026 is not a multiple of 4."
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "Powers of 3 are odd."
+    }
+   ],
+   "explain": "Last digits of powers of 3 cycle 3, 9, 7, 1. 2026 = 4 × 506 + 2, so it matches 3²: 9."
+  },
+  {
+   "id": "maths.ps.ol.sqcube",
+   "topic": "maths.ps-olympiad",
+   "kind": "fact",
+   "prompt": "How many whole numbers from 1 to 1000 are perfect squares or perfect cubes (or both)?",
+   "answer": "38",
+   "distractors": [
+    "41",
+    "31",
+    "35"
+   ],
+   "explain": "Squares: 1² to 31² (31). Cubes: 1³ to 10³ (10). Both (sixth powers): 1, 64, 729 (3). 31 + 10 − 3 = 38.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ol.magic",
+   "topic": "maths.ps-olympiad",
+   "kind": "mcq",
+   "prompt": "The numbers 1 to 9 are placed in a 3 × 3 grid so that every row, column and diagonal has the same total. Which number must be in the centre?",
+   "options": [
+    {
+     "text": "5",
+     "correct": true
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "Four lines pass through the centre, so it must balance them."
+    },
+    {
+     "text": "9",
+     "correct": false,
+     "feedback": "With 9 in the centre, each of the four lines through it needs two other numbers adding to 6, but only 1 + 5 and 2 + 4 do."
+    },
+    {
+     "text": "It could be any odd number",
+     "correct": false,
+     "feedback": "Only 5 works."
+    },
+    {
+     "text": "4",
+     "correct": false,
+     "feedback": "The four lines through the centre force it to be 5."
+    }
+   ],
+   "explain": "Each line totals 45 ÷ 3 = 15. The four lines through the centre use every number once plus the centre three extra times: 4 × 15 = 45 + 3c, so c = 5."
+  },
+  {
+   "id": "maths.ps.ol.digsum",
+   "topic": "maths.ps-olympiad",
+   "kind": "fact",
+   "prompt": "What is the sum of all the digits of all the whole numbers from 1 to 100?",
+   "answer": "901",
+   "distractors": [
+    "900",
+    "5050",
+    "1000"
+   ],
+   "explain": "From 00 to 99 each digit 0–9 appears 10 times in the units and 10 times in the tens: 20 × 45 = 900. Add 1 for the number 100: 901.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ol.stairs",
+   "topic": "maths.ps-olympiad",
+   "kind": "fact",
+   "prompt": "In how many ways can Kit climb a staircase of 10 steps if she takes 1 or 2 steps at a time?",
+   "answer": "89",
+   "distractors": [
+    "55",
+    "144",
+    "100"
+   ],
+   "explain": "The last move is a 1-step or a 2-step, so ways(n) = ways(n − 1) + ways(n − 2): 1, 2, 3, 5, 8, 13, 21, 34, 55, 89. The Fibonacci numbers again.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ol.twos",
+   "topic": "maths.ps-olympiad",
+   "kind": "fact",
+   "prompt": "What is the largest whole number n such that 2ⁿ divides 20! (= 1 × 2 × … × 20)?",
+   "answer": "18",
+   "distractors": [
+    "10",
+    "16",
+    "19"
+   ],
+   "explain": "Count factors of 2: multiples of 2 give 10, multiples of 4 another 5, of 8 another 2, of 16 another 1. 10 + 5 + 2 + 1 = 18.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ol.recip",
+   "topic": "maths.ps-olympiad",
+   "kind": "fact",
+   "prompt": "x + 1/x = 3. What is x² + 1/x²?",
+   "answer": "7",
+   "distractors": [
+    "9",
+    "11",
+    "6"
+   ],
+   "explain": "Square both sides: x² + 2 + 1/x² = 9, so x² + 1/x² = 7.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ol.dig10",
+   "topic": "maths.ps-olympiad",
+   "kind": "fact",
+   "prompt": "How many whole numbers from 1 to 999 have digits that add up to 10?",
+   "answer": "63",
+   "distractors": [
+    "66",
+    "54",
+    "72"
+   ],
+   "explain": "Write each as three digits a, b, c (with leading zeros) adding to 10. Without limits there are 12 × 11 ÷ 2 = 66 ways, but 3 of them use a “digit” of 10 (10, 0, 0 in some order). 66 − 3 = 63.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.ol.cons3",
+   "topic": "maths.ps-olympiad",
+   "kind": "fact",
+   "prompt": "The product of three consecutive whole numbers is 2730. What is their sum?",
+   "answer": "42",
+   "distractors": [
+    "39",
+    "45",
+    "30"
+   ],
+   "explain": "The cube root of 2730 is about 14, so try 13 × 14 × 15 = 2730. Their sum is 42.",
+   "formats": [
+    "typed",
+    "choice"
+   ],
+   "strict": true
+  },
+  {
+   "id": "maths.ps.pf.odd",
+   "topic": "maths.ps-proof",
+   "kind": "mcq",
+   "prompt": "Which of these PROVES that the sum of any two odd numbers is even?",
+   "options": [
+    {
+     "text": "Any odd numbers are 2a + 1 and 2b + 1, and (2a + 1) + (2b + 1) = 2(a + b + 1), which is a multiple of 2",
+     "correct": true
+    },
+    {
+     "text": "3 + 5 = 8 and 7 + 9 = 16 are even",
+     "correct": false,
+     "feedback": "Examples, however many, are not a proof for every odd number."
+    },
+    {
+     "text": "Odd numbers end in 1, 3, 5, 7 or 9, and so do their sums",
+     "correct": false,
+     "feedback": "Sums of two odd numbers do not end in those digits: 3 + 5 = 8."
+    },
+    {
+     "text": "Because even + even is even",
+     "correct": false,
+     "feedback": "That is about even numbers, not odd ones."
+    },
+    {
+     "text": "It is true for the first 100 odd numbers",
+     "correct": false,
+     "feedback": "Still only examples."
+    }
+   ],
+   "explain": "A proof must cover EVERY case. Writing the odd numbers as 2a + 1 and 2b + 1 does that, and the sum 2(a + b + 1) is clearly even."
+  },
+  {
+   "id": "maths.ps.pf.counter",
+   "topic": "maths.ps-proof",
+   "kind": "mcq",
+   "prompt": "Which is a counterexample to the claim “every prime number is odd”?",
+   "options": [
+    {
+     "text": "2",
+     "correct": true
+    },
+    {
+     "text": "9",
+     "correct": false,
+     "feedback": "9 is odd but not prime, so it says nothing about the claim."
+    },
+    {
+     "text": "1",
+     "correct": false,
+     "feedback": "1 is not a prime number."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "3 is prime and odd: it agrees with the claim."
+    },
+    {
+     "text": "There is none",
+     "correct": false,
+     "feedback": "2 is prime and even."
+    }
+   ],
+   "explain": "A counterexample must satisfy the condition (prime) but break the conclusion (odd). 2 is prime and even."
+  },
+  {
+   "id": "maths.ps.pf.nn1",
+   "topic": "maths.ps-proof",
+   "kind": "mcq",
+   "prompt": "Why is n² + n always even, for every whole number n?",
+   "options": [
+    {
+     "text": "n² + n = n(n + 1), and one of two consecutive numbers is always even",
+     "correct": true
+    },
+    {
+     "text": "Because n² is always even",
+     "correct": false,
+     "feedback": "n² is odd when n is odd."
+    },
+    {
+     "text": "Because n is always even",
+     "correct": false,
+     "feedback": "n can be odd."
+    },
+    {
+     "text": "It is only even when n is even",
+     "correct": false,
+     "feedback": "Try n = 3: 9 + 3 = 12, even too."
+    },
+    {
+     "text": "Because squares end in 0, 4 or 6",
+     "correct": false,
+     "feedback": "Squares can end in 1, 5 or 9 too."
+    }
+   ],
+   "explain": "Factorise: n² + n = n(n + 1). Of any two consecutive whole numbers, one is even, so the product is even."
+  },
+  {
+   "id": "maths.ps.pf.root2",
+   "topic": "maths.ps-proof",
+   "kind": "mcq",
+   "prompt": "The classic proof that √2 is irrational is a proof by contradiction. What does it assume at the start?",
+   "options": [
+    {
+     "text": "That √2 = a/b, a fraction in its lowest terms",
+     "correct": true
+    },
+    {
+     "text": "That √2 is irrational",
+     "correct": false,
+     "feedback": "That is what it is trying to prove, so it cannot assume it."
+    },
+    {
+     "text": "That √2 ≈ 1.414",
+     "correct": false,
+     "feedback": "A decimal approximation proves nothing either way."
+    },
+    {
+     "text": "That a² = b²",
+     "correct": false,
+     "feedback": "It assumes √2 = a/b, from which a² = 2b² follows."
+    },
+    {
+     "text": "That every number is a fraction",
+     "correct": false,
+     "feedback": "It assumes only that √2 is."
+    }
+   ],
+   "explain": "Assume the opposite of what you want: √2 = a/b in lowest terms. Then a² = 2b², which forces a and b both to be even, contradicting “lowest terms”."
+  },
+  {
+   "id": "maths.ps.pf.w1",
+   "topic": "maths.ps-proof",
+   "kind": "written",
+   "prompt": "Prove that the sum of any three consecutive whole numbers is a multiple of 3.",
+   "hints": [
+    "Call the numbers n, n + 1 and n + 2",
+    "Add them and simplify",
+    "Factorise to show a factor of 3",
+    "Say why this works for every n, not just examples"
+   ],
+   "model": "Let the three consecutive whole numbers be n, n + 1 and n + 2. Their sum is n + (n + 1) + (n + 2) = 3n + 3 = 3(n + 1). Since n + 1 is a whole number, 3(n + 1) is a multiple of 3. This holds whatever n is, so the sum of ANY three consecutive whole numbers is a multiple of 3. (It is also exactly 3 times the middle number.)",
+   "words": [
+    40,
+    250
+   ]
+  },
+  {
+   "id": "maths.ps.pf.w2",
+   "topic": "maths.ps-proof",
+   "kind": "written",
+   "prompt": "Prove that the difference between the squares of two consecutive whole numbers is always odd.",
+   "hints": [
+    "Call the numbers n and n + 1",
+    "Expand (n + 1)² carefully",
+    "Subtract n² and simplify",
+    "Explain why 2n + 1 is always odd"
+   ],
+   "model": "Let the numbers be n and n + 1. Then (n + 1)² − n² = n² + 2n + 1 − n² = 2n + 1. 2n is even for every whole number n, so 2n + 1 is one more than an even number: always odd. In fact it equals n + (n + 1), the sum of the two numbers.",
+   "words": [
+    40,
+    250
+   ]
+  },
+  {
+   "id": "maths.ps.pf.w3",
+   "topic": "maths.ps-proof",
+   "kind": "written",
+   "prompt": "Explain Euclid’s proof that there are infinitely many prime numbers.",
+   "hints": [
+    "Suppose there were only finitely many primes, p₁, p₂, …, pₖ",
+    "Multiply them all together and add 1",
+    "Explain why none of the primes divides this new number",
+    "Explain why this contradicts the supposition"
+   ],
+   "model": "Suppose there were only finitely many primes: p₁, p₂, …, pₖ. Make N = p₁ × p₂ × … × pₖ + 1. Dividing N by any of the primes leaves remainder 1, so none of them divides N. But every whole number greater than 1 has a prime factor, so N has a prime factor that is not on our list. That contradicts the idea that the list contained every prime. So there must be infinitely many.",
+   "words": [
+    40,
+    250
+   ]
+  },
+  {
+   "id": "maths.ps.pf.w4",
+   "topic": "maths.ps-proof",
+   "kind": "written",
+   "prompt": "Prove that the angles of any triangle add up to 180°, using a line parallel to one side.",
+   "hints": [
+    "Draw the triangle ABC and a line through A parallel to BC",
+    "Mark the alternate (Z) angles",
+    "Use angles on a straight line",
+    "Conclude for any triangle"
+   ],
+   "model": "Draw triangle ABC and a straight line through A parallel to BC. The angle between this line and AB equals angle B (alternate angles between parallel lines), and the angle between the line and AC equals angle C (alternate angles). Together with angle A, these three angles make a straight line at A, so they add to 180°. Hence A + B + C = 180°, and since the triangle was any triangle, this is true for all triangles.",
+   "words": [
+    40,
+    250
+   ]
+  },
+  {
+   "id": "maths.ps.pf.w5",
+   "topic": "maths.ps-proof",
+   "kind": "written",
+   "prompt": "Explain why a three-digit number is divisible by 9 exactly when the sum of its digits is divisible by 9.",
+   "hints": [
+    "Write the number as 100a + 10b + c",
+    "Split 100a + 10b + c as (99a + 9b) + (a + b + c)",
+    "Explain why 99a + 9b is always a multiple of 9",
+    "Conclude both directions"
+   ],
+   "model": "A three-digit number with digits a, b, c is 100a + 10b + c = (99a + 9b) + (a + b + c). The first part, 9(11a + b), is always a multiple of 9. So the whole number is a multiple of 9 exactly when a + b + c is: if the digit sum is a multiple of 9, adding a multiple of 9 keeps it one; and if the number is, subtracting 9(11a + b) leaves the digit sum as a multiple of 9.",
+   "words": [
+    40,
+    250
+   ]
+  },
+  {
+   "id": "maths.ps.pf.w6",
+   "topic": "maths.ps-proof",
+   "kind": "written",
+   "prompt": "Prove that the product of any two odd numbers is odd.",
+   "hints": [
+    "Write the odd numbers as 2a + 1 and 2b + 1",
+    "Multiply out the brackets",
+    "Show the result is 2 × (something) + 1",
+    "Explain why that is odd"
+   ],
+   "model": "Any odd numbers can be written 2a + 1 and 2b + 1 for whole numbers a and b. Their product is (2a + 1)(2b + 1) = 4ab + 2a + 2b + 1 = 2(2ab + a + b) + 1. That is one more than a multiple of 2, so it is odd, whatever a and b are.",
+   "words": [
+    40,
+    250
+   ]
+  }
+ ]
+}
