@@ -4,6 +4,7 @@
 import { h, s, rich, richHTML, plain } from './dom.js';
 import { mapSVG, loadMap, featureNames } from './mapview.js';
 import { speak, ttsAvailable } from '../platform/tts.js';
+import { mathsDiagram } from './diagrams.js';
 
 export async function renderQuestion(q, { onChange = () => {}, settings = {} } = {}) {
   const parts = [];
@@ -228,6 +229,8 @@ function clozeView(q, onChange) {
 }
 
 function diagram(d) {
+  const m = mathsDiagram(d);
+  if (m) return m;
   // simple angle diagrams; labels show known angles and "?" for the unknown
   const W = 300, H = 160;
   const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, style: 'max-width:320px;display:block;margin:0 auto 12px', role: 'img', 'aria-label': 'Angle diagram' });

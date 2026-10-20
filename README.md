@@ -30,7 +30,11 @@ tests/          node:test suites
 - **Formats**: facts move from multiple choice, to a first-letter cue, to free recall as they stabilise.
 - **Difficulty**: Elo per subject and per generator level, targeting about 77% success.
 - **Mastery**: exponential moving average per topic; *mastered* only after delayed success in mixed review.
-- **Sessions**: yesterday's answers, interleaved reviews (max 40% per subject), a break, new learning she chooses, a sentence task, then explaining an idea to her capybara and correcting its deliberate mistake. Hard stop, and the app rests in the hour before bedtime.
+- **Sessions**: yesterday's answers, a 90-second arithmetic sprint against her own best (five levels, from times tables to percentages), interleaved reviews (max 40% per subject), a break, new learning she chooses, a sentence task, then explaining an idea to her capybara and correcting its deliberate mistake. Hard stop, and the app rests in the hour before bedtime.
+
+### Maths coverage
+
+Twenty-nine maths topics, each backed by a question generator with three levels (secure Year 6, greater depth, Year 7 stretch): place value and decimals, negatives, six fraction topics, percentages, order of operations, algebra (substitution, sequences, equations), ratio, primes, angles, long multiplication and division (including interpreting remainders), area and perimeter (triangles, parallelograms, compound shapes), volume, coordinates in four quadrants (reflection and translation), converting units, time and timetables, multi-step money problems, probability, and reading bar charts, pie charts and line graphs; plus key facts and shape vocabulary. Diagrams are drawn from the generated numbers, so they are always consistent with the question.
 
 ### Joined-up topics
 
@@ -38,7 +42,7 @@ Some topics draw on another subject: *Geography by numbers* (averages, density, 
 
 ### Visible progress
 
-The home screen's island map lights up topic by topic (white ring segments for secure, gold for mastered). *My progress* has a history timeline whose events light up as she learns them, maps that colour in the places she knows, and thirteen milestones. Milestones are fixed rewards for real achievement (never random); six of them unlock outfits for her capybara.
+The home screen's island map lights up topic by topic (white ring segments for secure, gold for mastered). *My progress* has a history timeline whose events light up as she learns them, maps that colour in the places she knows, and fourteen milestones. Milestones are fixed rewards for real achievement (never random); six of them unlock outfits for her capybara.
 
 ### Commands
 

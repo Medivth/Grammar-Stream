@@ -12,6 +12,9 @@ import { learnText, present } from '../core/present.js';
 import { makeRng } from '../core/rng.js';
 import { currentBooks, logReading } from '../core/writing.js';
 import { milestones } from '../core/progress.js';
+import { sprintLevel, sprintBest, recordSprint, SPRINT_SECONDS } from '../core/sprint.js';
+import { sprintQuestion, SPRINT_LEVELS } from '../gen/sprint.js';
+import { parseNumber } from '../core/fraction.js';
 import { icon, SUBJECT_ICON } from '../ui/icons.js';
 import { ACCESSORIES } from '../ui/capybara.js';
 import { SUBJECT_BY_ID } from '../core/subjects.js';
@@ -64,6 +67,7 @@ async function renderStep(app) {
     switch (step.t) {
       case 'yesterday': return yesterdayStep(app, root);
       case 'break': return breakStep(app, root);
+      case 'sprint': return sprintStep(app, root);
       case 'choose': return chooseStep(app, root, step);
       case 'placement': return placementStep(app, root, step);
       case 'intro-topic': return introTopicStep(app, root, step);
@@ -109,6 +113,70 @@ function breakStep(app, root) {
     h('div', { class: 'row', style: { justifyContent: 'center' } },
       h('button', { class: 'btn-primary btn-big', onclick: () => next(app) }, 'Keep going'),
       h('button', { class: 'btn-ghost btn-big', onclick: () => { app.state.plan.pos += 1; app.save(); app.go('#/home'); } }, 'Finish later today'))));
+}
+
+// ---------------------------------------------------------------- arithmetic sprint
+// 90 seconds of quick mental maths. Fluency is what makes the harder maths feel easy,
+// and a short daily burst against her own best is the least painful way to build it.
+function sprintStep(app, root) {
+  const { state } = app;
+  const level = sprintLevel(state);
+  const best = sprintBest(state, level);
+  const rng = makeRng(`sprint:${app.today()}:${state.created}:${(state.sprints || []).length}`);
+  mount(root, header(app, 'Sprint'), h('div', { class: 'q-wrap stack center sprint-intro' },
+    h('div', { class: 'eyebrow' }, `Level ${level} of ${SPRINT_LEVELS}`),
+    h('h2', {}, 'Arithmetic sprint'),
+    h('p', {}, `${SPRINT_SECONDS} seconds. Answer as many as you can; press Enter after each one. ${best != null ? `Your best at this level is ${best}.` : 'Your first go at this level sets your score to beat.'}`),
+    h('button', { class: 'btn-primary btn-big sprint-go', onclick: run, autofocus: true }, 'Go!')));
+
+  function run() {
+    const secs = app.sprintSeconds ?? SPRINT_SECONDS; // tests shorten it
+    let answered = 0, correct = 0, q = null, done = false;
+    const t0 = performance.now();
+    const bar = h('div', { style: { width: '100%' } });
+    const prompt = h('div', { class: 'sprint-q', 'aria-live': 'polite' });
+    const input = h('input', { type: 'text', class: 'sprint-in', autocomplete: 'off', 'aria-label': 'Your answer', inputmode: 'text' });
+    const score = h('div', { class: 'sprint-score' }, '0');
+    const card = h('div', { class: 'sprint card' }, h('div', { class: 'progress sprint-timer' }, bar), prompt, h('div', { class: 'typed-row' }, input), h('p', { class: 'muted small center' }, 'Right so far: ', score));
+    const nextQ = () => { q = sprintQuestion(level, rng); app.sprintCurrent = q; prompt.innerHTML = richHTML(q.prompt); input.value = ''; input.setAttribute('inputmode', q.keypad ? 'decimal' : 'text'); };
+    const flash = (ok) => { card.classList.remove('ok', 'no'); void card.offsetWidth; card.classList.add(ok ? 'ok' : 'no'); };
+    const submitQ = () => {
+      if (done || !input.value.trim()) return;
+      answered++;
+      const p = parseNumber(input.value);
+      const ok = !!p && p.value.eq(parseNumber(String(q.value)).value);
+      if (ok) correct++;
+      score.textContent = String(correct);
+      flash(ok);
+      nextQ();
+    };
+    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); submitQ(); } });
+    const tick = setInterval(() => {
+      const left = Math.max(0, secs * 1000 - (performance.now() - t0));
+      bar.style.width = `${(100 * left) / (secs * 1000)}%`;
+      if (left <= 0) finish();
+    }, 100);
+    const finish = () => {
+      if (done) return;
+      done = true;
+      clearInterval(tick);
+      app.sprintCurrent = null;
+      recordSprint(state, { day: app.today(), level, answered, correct });
+      app.save();
+      const newLevel = sprintLevel(state);
+      const beat = best != null && correct > best;
+      mount(root, header(app, 'Sprint'), h('div', { class: 'q-wrap stack center' },
+        h('h2', {}, 'Time!'),
+        h('div', { class: 'sprint-result' }, h('span', { class: 'big' }, String(correct)), h('span', {}, `right out of ${answered}`)),
+        h('p', {}, beat ? `New best at level ${level}! You beat your ${best}.` : best != null ? `Your best at this level is ${Math.max(best, correct)}.` : 'That’s your score to beat next time.'),
+        newLevel > level ? h('p', { class: 'joined' }, icon('spark'), ` Level ${newLevel} unlocked for tomorrow’s sprint.`) : null,
+        h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'Next')));
+    };
+    mount(root, header(app, 'Sprint'), h('div', { class: 'q-wrap stack' }, card,
+      h('div', { class: 'center' }, h('button', { class: 'btn-ghost', type: 'button', onclick: finish }, 'Stop early'))));
+    nextQ();
+    input.focus();
+  }
 }
 
 // ---------------------------------------------------------------- choose

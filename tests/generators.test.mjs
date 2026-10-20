@@ -125,3 +125,51 @@ test('joined-up maths answers are right (independent recomputation)', () => {
     assert.equal(+h2.numeric.value, ad.length ? bc[0] + ad[0] - 1 : Math.abs(bc[0] - bc[1]), h2.prompt);
   }
 });
+
+test('written methods, measures and probability answers are right (independent recomputation)', () => {
+  const nums = (s) => (s.match(/−?\d[\d,]*(\.\d+)?/g) || []).map((x) => +x.replace(/,/g, '').replace('−', '-'));
+  const rng = makeRng('maths2-verify');
+  for (let i = 0; i < N; i++) {
+    for (const level of [1, 2, 3]) {
+      const m = GENERATORS.longMult(level, rng);
+      const [a, b] = nums(m.prompt);
+      assert.ok(Math.abs(a * b - +m.numeric.value) < 1e-9, m.prompt);
+      const d = GENERATORS.longDiv(level, rng);
+      const [n, dv] = nums(d.prompt);
+      if (d.prompt.includes('coach')) assert.equal(+d.numeric.value, Math.ceil(n / dv), d.prompt);
+      else if (d.prompt.includes('left over')) assert.equal(+d.numeric.value, n % dv, d.prompt);
+      else if (d.prompt.includes('mixed')) assert.ok(Math.abs(parseNumber(d.numeric.value).value.valueOf() - n / dv) < 1e-9, d.prompt);
+      else assert.equal(+d.numeric.value, n / dv, d.prompt);
+      const u = GENERATORS.units(level, rng);
+      assert.ok(Number.isFinite(+u.numeric.value) && +u.numeric.value > 0, u.prompt);
+      const t = GENERATORS.time(level, rng);
+      if (t.answer) assert.match(t.answer, /^\d\d:\d\d$/, t.prompt);
+    }
+    const a1 = GENERATORS.areaPerimeter(1, rng);
+    assert.equal(+a1.numeric.value, a1.prompt.includes('area') ? a1.diagram.w * a1.diagram.h : 2 * (a1.diagram.w + a1.diagram.h));
+    const a2 = GENERATORS.areaPerimeter(2, rng);
+    assert.equal(+a2.numeric.value, a2.diagram.type === 'tri' ? (a2.diagram.b * a2.diagram.h) / 2 : a2.diagram.b * a2.diagram.h);
+    const v1 = GENERATORS.volume(1, rng);
+    assert.equal(+v1.numeric.value, v1.diagram.l * v1.diagram.w * v1.diagram.h);
+    const c = GENERATORS.coordinates(rng.int(1, 3), rng);
+    assert.equal(check(c, `(${c.pair[0]}, ${c.pair[1]})`).correct, true, c.prompt);
+    assert.equal(check(c, `${c.pair[0]},${c.pair[1]}`).correct, true);
+    assert.equal(check(c, `(${c.pair[0] + 1}, ${c.pair[1]})`).correct, false);
+    if (c.prompt.startsWith('What are the coordinates')) { const p = c.diagram.points.find((p) => p.label === c.prompt.match(/point (\w)/)[1]); assert.deepEqual([p.x, p.y], c.pair); }
+    const p1 = GENERATORS.probability(1, rng);
+    const counts = nums(p1.prompt).slice(0, 3), total = counts.reduce((x, y) => x + y, 0);
+    const colour = p1.prompt.match(/it is (\w+)\?/)[1], idx = ['red', 'blue', 'green'].indexOf(colour);
+    assert.ok(Math.abs(parseNumber(p1.numeric.value).value.valueOf() - counts[idx] / total) < 1e-9, p1.prompt);
+    assert.ok(parseNumber(p1.numeric.value).raw.isSimplest(), `simplest: ${p1.numeric.value}`);
+    const ch = GENERATORS.charts(1, rng);
+    const vals = ch.diagram.cats.map((x) => x.v);
+    if (ch.prompt.includes('altogether')) assert.equal(+ch.numeric.value, vals.reduce((x, y) => x + y, 0));
+    const pie = GENERATORS.charts(2, rng);
+    assert.equal(pie.diagram.sectors.reduce((x, s) => x + s.deg, 0), 360);
+    assert.ok(Number.isInteger(+pie.numeric.value));
+  }
+  // times: accepted spellings all check, a wrong one does not
+  const t2 = GENERATORS.time(2, makeRng('t2'));
+  for (const alt of t2.accept) assert.equal(check(t2, alt).correct, true, alt);
+  assert.equal(check(t2, '00:01').correct, false);
+});

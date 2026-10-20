@@ -227,6 +227,18 @@ label { display: block; font-weight: 700; margin-bottom: 6px; }
 .link-subj { font-weight: 700; }
 .joined { display: flex; align-items: center; gap: 8px; margin: 0; padding: 10px 14px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 0.95rem; }
 .joined svg { width: 20px; height: 20px; flex: none; }
+.sprint { padding: 20px; transition: box-shadow 0.15s; }
+.sprint.ok { animation: sprint-ok 0.45s; }
+.sprint.no { animation: sprint-no 0.45s; }
+@keyframes sprint-ok { 0% { box-shadow: 0 0 0 4px var(--good); } 100% { box-shadow: 0 0 0 0 transparent; } }
+@keyframes sprint-no { 0% { box-shadow: 0 0 0 4px var(--warn); } 100% { box-shadow: 0 0 0 0 transparent; } }
+.sprint-timer { --bar: var(--accent); margin-bottom: 18px; }
+.sprint-timer > div { transition: width 0.1s linear; }
+.sprint-q { font-family: var(--display); font-size: 2.6rem; font-weight: 800; text-align: center; margin: 8px 0 18px; min-height: 1.3em; }
+.sprint-in { font-size: 1.6rem; text-align: center; font-weight: 700; }
+.sprint-score { display: inline; font-weight: 800; color: var(--accent); }
+.sprint-result { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 8px 0; }
+.sprint-result .big { font-family: var(--display); font-size: 4rem; font-weight: 800; line-height: 1; color: var(--accent); }
 
 /* home */
 .today { position: relative; overflow: hidden; border-radius: 26px; padding: 22px; color: #fff; background: radial-gradient(120% 140% at 100% 0%, #8f6bff 0%, #5143d9 45%, #2f2596 100%); box-shadow: 0 14px 34px rgba(58, 45, 182, 0.35); }

@@ -39,6 +39,8 @@ try {
     await page.click('text=Let’s go!');
     await page.waitForSelector('.btn-start');
     await page.screenshot({ path: `${OUT}/${label}-03-home.png`, fullPage: true });
+    // pretend yesterday's session happened, so today's plan includes the arithmetic sprint; keep it short
+    await page.evaluate(() => { const a = window.__app; a.state.sessions.push({ day: Math.floor(Date.now() / 864e5) - 1, start: 1, end: 2, answered: 5, correct: 5, completed: true }); a.state.plan = null; a.save(); });
     await page.click('.btn-start');
 
     const seen = new Set();
@@ -50,6 +52,14 @@ try {
       if (stepType && !seen.has(stepType)) {
         seen.add(stepType);
         await page.screenshot({ path: `${OUT}/${label}-step-${stepType}.png`, fullPage: true });
+      }
+      await page.evaluate(() => { window.__app.sprintSeconds = 6; });
+      const sprintIn = await page.$('.sprint-in');
+      if (sprintIn) {
+        const v = await page.evaluate(() => window.__app.sprintCurrent?.value);
+        await sprintIn.fill(String(v ?? 7));
+        await sprintIn.press('Enter');
+        continue;
       }
       if (!reloaded && steps === 12) { reloaded = true; await page.goto(`http://127.0.0.1:${PORT}/#/home`); await page.reload(); await page.waitForSelector('.btn-start'); await page.click('.btn-start'); continue; }
       // placement: answer some, skip others

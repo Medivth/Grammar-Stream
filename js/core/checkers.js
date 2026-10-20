@@ -34,6 +34,13 @@ function checkTyped(q, response) {
   const r = normalise(response);
   if (!r) return { correct: false, score: 0, message: 'No answer given.' };
   if (q.numeric) return checkNumeric(q, response);
+  if (q.pair) {
+    // "(3, -2)", "3,-2" and "3 -2" all mean the same point
+    const nums = (r.match(/-?\d+(\.\d+)?/g) || []).map(Number);
+    if (nums.length !== 2) return { correct: false, score: 0, message: 'Write both coordinates, like (3, −2).' };
+    const ok = nums[0] === q.pair[0] && nums[1] === q.pair[1];
+    return { correct: ok, score: ok ? 1 : nums[0] === q.pair[1] && nums[1] === q.pair[0] ? 0.5 : 0, message: !ok && nums[0] === q.pair[1] && nums[1] === q.pair[0] ? 'Right numbers, wrong way round: x comes first.' : undefined };
+  }
   const answers = [q.answer, ...(q.accept || [])].map(normalise);
   if (answers.includes(r)) return { correct: true, score: 1 };
   // "the Nile" and "Nile" are both fine

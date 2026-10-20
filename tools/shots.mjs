@@ -11,6 +11,7 @@ import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement }
 import { correctResponse } from '../js/core/checkers.js';
 import { makeRng } from '../js/core/rng.js';
 import { dayNumber } from '../js/core/dates.js';
+import { sprintLevel, recordSprint } from '../js/core/sprint.js';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PW || 'playwright');
@@ -56,6 +57,9 @@ export function simulate(days, today = dayNumber()) {
         const c = state.cards[st.id];
         const pr = c && c.state !== 'new' ? fsrsFor(db.items[st.id].subject).retrievability(c.s, day - c.lastDay) : 0.75;
         submit(state, db, st, q, rng.chance(pr) ? correctResponse(q) : wrong(q), { ms: 5000, conf: rng.pick([0, 1, 2, 2]), now: day * 864e5 + plan.pos, today: day });
+      } else if (st.t === 'sprint') {
+        const level = sprintLevel(state), answered = rng.int(8, 26);
+        recordSprint(state, { day, level, answered, correct: Math.round(answered * rng.pick([0.6, 0.8, 0.95])) });
       } else if (st.t === 'sentence') {
         state.writing.push({ day, taskId: st.options[0], text: db.sentenceById[st.options[0]].model, ok: true, tries: 1 });
       }

@@ -53,7 +53,9 @@ function weekStats(state, db, today) {
     const s = db.items[r[2]]?.subject;
     if (s) bySubject[s] = (bySubject[s] || 0) + 1;
   }
-  return { ws, days: new Set(sessions.map((s) => s.day)).size, minutes, answered: log.length, topicsTouched, started, secured, reading, old: old.length, oldRate, bySubject };
+  const sprints = (state.sprints || []).filter((s) => s.day >= ws);
+  const sprintBest = sprints.length ? sprints.reduce((a, b) => (b.correct > a.correct ? b : a)) : null;
+  return { ws, days: new Set(sessions.map((s) => s.day)).size, minutes, answered: log.length, topicsTouched, started, secured, reading, old: old.length, oldRate, bySubject, sprintBest };
 }
 
 function dashboard(app) {
@@ -84,7 +86,8 @@ function dashboard(app) {
           stat(w.days, 'days practised'), stat(w.minutes, 'minutes on the app'), stat(w.reading, 'minutes reading')),
         h('p', { style: { marginTop: '12px' } }, `${w.answered} questions answered. Started ${w.started.length} topic${w.started.length === 1 ? '' : 's'}; ${w.secured.length} became secure.`),
         w.started.length ? h('p', { class: 'muted' }, 'New this week: ', w.started.map((id) => db.topics[id]?.title).filter(Boolean).join(', ')) : null,
-        h('p', { class: 'muted small' }, SUBJECTS.map((s) => `${s.name} ${w.bySubject[s.id] || 0}`).join(' · '))),
+        h('p', { class: 'muted small' }, SUBJECTS.map((s) => `${s.name} ${w.bySubject[s.id] || 0}`).join(' · ')),
+        w.sprintBest ? h('p', { class: 'muted small' }, `Arithmetic sprint: best this week ${w.sprintBest.correct} right in 90 seconds (level ${w.sprintBest.level} of 5).`) : null),
 
       prompts.length ? h('div', { class: 'card' }, h('h2', {}, 'Things to talk about'), h('p', { class: 'muted' }, 'Interest helps more than checking. Try one of these at dinner or in the car:'), h('ul', {}, prompts.map((p) => h('li', {}, p)))) : null,
 

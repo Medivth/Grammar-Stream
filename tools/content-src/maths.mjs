@@ -22,6 +22,38 @@ const TOPICS = [
   T('ratio', 'Ratio and sharing', 'ratioShare', ['frac-amount'], { teach: 'Explain how to share £40 in the ratio 3 : 5.', talk: 'Share 12 sweets between you in the ratio 1 : 2.' }),
   T('primes', 'Factors, multiples and primes', 'factorsPrimes', [], { teach: 'Explain why 51 is not a prime number.', talk: 'Is 91 prime? (Try 7.)' }),
   T('angles', 'Angle facts', 'angles', [], { teach: 'Explain how you find a missing angle in a triangle.', talk: 'Ask her what the angles in a triangle add up to.' }),
+  // written methods, measures, geometry and data (Year 6 statutory, stretching into Year 7)
+  T('long-mult', 'Long multiplication', 'longMult', ['place-value'], { teach: 'Explain how you work out 34 × 26 by splitting one of the numbers.', talk: 'Ask her for 23 × 4 in her head, then 23 × 40.' }),
+  T('long-div', 'Long division and remainders', 'longDiv', ['long-mult'], { teach: 'Explain when a remainder means you round UP and when it means you round down.', talk: '7 friends share 50 sweets. How many each, and how many left?' }),
+  T('area', 'Area and perimeter', 'areaPerimeter', [], { teach: 'Explain the difference between area and perimeter, and why a triangle’s area is half base times height.', talk: 'Guess the area of the kitchen table, then measure it.' }),
+  T('volume', 'Volume of cuboids', 'volume', ['area'], { teach: 'Explain how to find the volume of a shoebox.', talk: 'How many 1 cm cubes would fit in a 10 cm cube?' }),
+  T('coordinates', 'Coordinates in four quadrants', 'coordinates', ['negatives'], { teach: 'Explain what happens to a point’s coordinates when you reflect it in the x-axis.', talk: 'Play a quick game of Battleships with negative coordinates.' }),
+  T('units', 'Converting units', 'units', ['place-value'], { teach: 'Explain how you change 2.3 km into metres, and why you multiply.', talk: 'How many millilitres in the bottle in the fridge? How many litres is that?' }),
+  T('time', 'Time and timetables', 'time', [], { teach: 'Explain how you work out how long it is from 09:45 to 11:20.', talk: 'Next time you catch a bus or train, ask her to plan it from the timetable.' }),
+  T('word-problems', 'Multi-step money problems', 'wordProblems', ['long-div', 'frac-amount'], { teach: 'Explain how you decide what to work out first in a two-step problem.', talk: 'At the shop: three of these and a £10 note, what’s the change?' }),
+  T('probability', 'Probability', 'probability', ['frac-equiv'], { teach: 'Explain why the probability of an event and its opposite add up to 1.', talk: 'Roll a dice 30 times together and compare the number of 6s with what she expected.' }),
+  T('charts', 'Bar charts, pie charts and line graphs', 'charts', ['frac-amount', 'angles'], { teach: 'Explain why a pie chart sector of 90° is a quarter of the data.', talk: 'Find a chart in the news and ask her what it shows.' }),
+];
+
+const SHAPES = [
+  ['Which quadrilateral has two pairs of parallel sides and all sides equal, but no right angles?', 'a rhombus', ['a rectangle', 'a trapezium', 'a kite'], 'A rhombus is a “pushed-over square”: four equal sides, opposite angles equal.'],
+  ['Which quadrilateral has exactly one pair of parallel sides?', 'a trapezium', ['a parallelogram', 'a rhombus', 'a rectangle'], 'Trapezium: one pair of parallel sides. Parallelogram: two pairs.'],
+  ['Which quadrilateral has two pairs of equal sides that are next to each other, like a diamond on a string?', 'a kite', ['a rhombus', 'a parallelogram', 'a trapezium'], 'A kite’s equal sides are adjacent (touching), not opposite.'],
+  ['What is a triangle with all three sides equal called?', 'equilateral', ['isosceles', 'scalene', 'right-angled'], 'Equilateral: all sides equal, all angles 60°.'],
+  ['What is a triangle with exactly two equal sides called?', 'isosceles', ['equilateral', 'scalene', 'obtuse'], 'Isosceles: two equal sides and two equal base angles.'],
+  ['What is a triangle with no equal sides called?', 'scalene', ['isosceles', 'equilateral', 'regular'], 'Scalene: all sides and all angles different.'],
+  ['What is the distance from the centre of a circle to its edge called?', 'the radius', ['the diameter', 'the circumference', 'the chord'], 'Radius: centre to edge. Diameter: edge to edge through the centre, twice the radius.', ['radius']],
+  ['What is the distance all the way round a circle called?', 'the circumference', ['the diameter', 'the radius', 'the perimeter'], 'The circumference is a circle’s perimeter. It is about 3.14 (π) times the diameter.', ['circumference']],
+  ['A circle has a radius of 7 cm. What is its diameter?', '14 cm', ['3.5 cm', '7 cm', '21 cm'], 'The diameter is twice the radius: 2 × 7 = 14 cm.', ['14']],
+  ['What is a 2D shape with all sides equal and all angles equal called?', 'a regular polygon', ['a quadrilateral', 'a congruent shape', 'a symmetrical shape'], 'A square is a regular quadrilateral; an equilateral triangle is a regular triangle.'],
+  ['What is the flat pattern that folds up to make a 3D shape called?', 'a net', ['a face', 'a plan', 'a cross-section'], 'A cube’s net is six squares joined so they fold into a box.', ['net']],
+  ['How many faces, edges and vertices does a cube have?', '6 faces, 12 edges, 8 vertices', ['6 faces, 8 edges, 12 vertices', '8 faces, 12 edges, 6 vertices', '6 faces, 6 edges, 6 vertices'], 'Count them on a dice: 6 faces, 12 edges where faces meet, 8 corners (vertices).'],
+  ['Which 3D shape has two circular faces and one curved surface?', 'a cylinder', ['a cone', 'a sphere', 'a triangular prism'], 'A cylinder is like a tin of beans: two flat circles and a curved side.', ['cylinder']],
+  ['Which 3D shape has a square base and four triangular faces meeting at a point?', 'a square-based pyramid', ['a triangular prism', 'a cuboid', 'a tetrahedron'], 'The pyramids of Giza are square-based pyramids.'],
+  ['Two shapes are exactly the same shape and size. What word describes them?', 'congruent', ['similar', 'symmetrical', 'parallel'], 'Congruent shapes fit exactly on top of each other, even if one is turned or flipped.'],
+  ['What is the name for lines that are always the same distance apart and never meet?', 'parallel', ['perpendicular', 'horizontal', 'diagonal'], 'Parallel lines, like railway tracks. Perpendicular lines meet at a right angle.'],
+  ['What is the name for two lines that meet at a right angle?', 'perpendicular', ['parallel', 'adjacent', 'opposite'], 'Perpendicular: at 90° to each other, like the corner of a page.'],
+  ['How many lines of symmetry does a regular hexagon have?', '6', ['3', '2', '12'], 'A regular polygon has as many lines of symmetry as it has sides.'],
 ];
 
 const FACTS = [
@@ -39,6 +71,11 @@ const FACTS = [
   ['What is the formula for the area of a triangle?', '½ × base × height', ['base × height', 'base + height', '2 × base × height']],
 ];
 
+const shapeItems = SHAPES.map(([prompt, answer, distractors, explain, accept], i) => ({
+  id: `maths.shape.${i + 1}`, topic: 'maths.shapes', kind: 'fact', prompt, answer, distractors, explain,
+  ...(accept ? { accept } : { formats: ['choice'] }),
+}));
+
 const items = TOPICS.map((t) => ({ id: `${t.id}.tmpl`, topic: t.id, kind: 'template', gen: t.gen, levels: [1, 2, 3], seed: [-1, 0, 1] }));
 const factItems = FACTS.map(([prompt, answer, distractors], i) => ({
   id: `maths.fact.${i + 1}`, topic: 'maths.key-facts', kind: 'fact', prompt, answer, distractors, explain: `${prompt.replace(/\?$/, '')}: ${answer}.`,
@@ -51,6 +88,7 @@ export default [{
   topics: [
     ...TOPICS.map(({ gen, ...t }) => ({ kind: 'skill', ...t })),
     { id: 'maths.key-facts', title: 'Key facts', kind: 'facts', prereqs: [], batch: 6, teach: 'Explain how you remember what the angles in a triangle add up to.', talk: 'Quick-fire: what is 12 squared?' },
+    { id: 'maths.shapes', title: 'Shapes and their properties', kind: 'facts', prereqs: ['maths.angles'], batch: 5, intro: 'Mathematicians have exact names for shapes and their parts. Knowing them means you can describe any shape precisely.', teach: 'Explain the difference between a rhombus and a parallelogram.', talk: 'Spot three different quadrilaterals around the house.' },
   ],
-  items: [...items, ...factItems],
+  items: [...items, ...factItems, ...shapeItems],
 }];

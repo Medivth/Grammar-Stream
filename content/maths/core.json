@@ -162,6 +162,104 @@
    "talk": "Ask her what the angles in a triangle add up to."
   },
   {
+   "kind": "skill",
+   "id": "maths.long-mult",
+   "title": "Long multiplication",
+   "prereqs": [
+    "maths.place-value"
+   ],
+   "teach": "Explain how you work out 34 × 26 by splitting one of the numbers.",
+   "talk": "Ask her for 23 × 4 in her head, then 23 × 40."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.long-div",
+   "title": "Long division and remainders",
+   "prereqs": [
+    "maths.long-mult"
+   ],
+   "teach": "Explain when a remainder means you round UP and when it means you round down.",
+   "talk": "7 friends share 50 sweets. How many each, and how many left?"
+  },
+  {
+   "kind": "skill",
+   "id": "maths.area",
+   "title": "Area and perimeter",
+   "prereqs": [],
+   "teach": "Explain the difference between area and perimeter, and why a triangle’s area is half base times height.",
+   "talk": "Guess the area of the kitchen table, then measure it."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.volume",
+   "title": "Volume of cuboids",
+   "prereqs": [
+    "maths.area"
+   ],
+   "teach": "Explain how to find the volume of a shoebox.",
+   "talk": "How many 1 cm cubes would fit in a 10 cm cube?"
+  },
+  {
+   "kind": "skill",
+   "id": "maths.coordinates",
+   "title": "Coordinates in four quadrants",
+   "prereqs": [
+    "maths.negatives"
+   ],
+   "teach": "Explain what happens to a point’s coordinates when you reflect it in the x-axis.",
+   "talk": "Play a quick game of Battleships with negative coordinates."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.units",
+   "title": "Converting units",
+   "prereqs": [
+    "maths.place-value"
+   ],
+   "teach": "Explain how you change 2.3 km into metres, and why you multiply.",
+   "talk": "How many millilitres in the bottle in the fridge? How many litres is that?"
+  },
+  {
+   "kind": "skill",
+   "id": "maths.time",
+   "title": "Time and timetables",
+   "prereqs": [],
+   "teach": "Explain how you work out how long it is from 09:45 to 11:20.",
+   "talk": "Next time you catch a bus or train, ask her to plan it from the timetable."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.word-problems",
+   "title": "Multi-step money problems",
+   "prereqs": [
+    "maths.long-div",
+    "maths.frac-amount"
+   ],
+   "teach": "Explain how you decide what to work out first in a two-step problem.",
+   "talk": "At the shop: three of these and a £10 note, what’s the change?"
+  },
+  {
+   "kind": "skill",
+   "id": "maths.probability",
+   "title": "Probability",
+   "prereqs": [
+    "maths.frac-equiv"
+   ],
+   "teach": "Explain why the probability of an event and its opposite add up to 1.",
+   "talk": "Roll a dice 30 times together and compare the number of 6s with what she expected."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.charts",
+   "title": "Bar charts, pie charts and line graphs",
+   "prereqs": [
+    "maths.frac-amount",
+    "maths.angles"
+   ],
+   "teach": "Explain why a pie chart sector of 90° is a quarter of the data.",
+   "talk": "Find a chart in the news and ask her what it shows."
+  },
+  {
    "id": "maths.key-facts",
    "title": "Key facts",
    "kind": "facts",
@@ -169,6 +267,18 @@
    "batch": 6,
    "teach": "Explain how you remember what the angles in a triangle add up to.",
    "talk": "Quick-fire: what is 12 squared?"
+  },
+  {
+   "id": "maths.shapes",
+   "title": "Shapes and their properties",
+   "kind": "facts",
+   "prereqs": [
+    "maths.angles"
+   ],
+   "batch": 5,
+   "intro": "Mathematicians have exact names for shapes and their parts. Knowing them means you can describe any shape precisely.",
+   "teach": "Explain the difference between a rhombus and a parallelogram.",
+   "talk": "Spot three different quadrilaterals around the house."
   }
  ],
  "items": [
@@ -433,6 +543,166 @@
    "topic": "maths.angles",
    "kind": "template",
    "gen": "angles",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.long-mult.tmpl",
+   "topic": "maths.long-mult",
+   "kind": "template",
+   "gen": "longMult",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.long-div.tmpl",
+   "topic": "maths.long-div",
+   "kind": "template",
+   "gen": "longDiv",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.area.tmpl",
+   "topic": "maths.area",
+   "kind": "template",
+   "gen": "areaPerimeter",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.volume.tmpl",
+   "topic": "maths.volume",
+   "kind": "template",
+   "gen": "volume",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.coordinates.tmpl",
+   "topic": "maths.coordinates",
+   "kind": "template",
+   "gen": "coordinates",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.units.tmpl",
+   "topic": "maths.units",
+   "kind": "template",
+   "gen": "units",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.time.tmpl",
+   "topic": "maths.time",
+   "kind": "template",
+   "gen": "time",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.word-problems.tmpl",
+   "topic": "maths.word-problems",
+   "kind": "template",
+   "gen": "wordProblems",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.probability.tmpl",
+   "topic": "maths.probability",
+   "kind": "template",
+   "gen": "probability",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.charts.tmpl",
+   "topic": "maths.charts",
+   "kind": "template",
+   "gen": "charts",
    "levels": [
     1,
     2,
@@ -779,6 +1049,294 @@
     "2 × base × height"
    ],
    "explain": "What is the formula for the area of a triangle: ½ × base × height.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.1",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "Which quadrilateral has two pairs of parallel sides and all sides equal, but no right angles?",
+   "answer": "a rhombus",
+   "distractors": [
+    "a rectangle",
+    "a trapezium",
+    "a kite"
+   ],
+   "explain": "A rhombus is a “pushed-over square”: four equal sides, opposite angles equal.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.2",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "Which quadrilateral has exactly one pair of parallel sides?",
+   "answer": "a trapezium",
+   "distractors": [
+    "a parallelogram",
+    "a rhombus",
+    "a rectangle"
+   ],
+   "explain": "Trapezium: one pair of parallel sides. Parallelogram: two pairs.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.3",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "Which quadrilateral has two pairs of equal sides that are next to each other, like a diamond on a string?",
+   "answer": "a kite",
+   "distractors": [
+    "a rhombus",
+    "a parallelogram",
+    "a trapezium"
+   ],
+   "explain": "A kite’s equal sides are adjacent (touching), not opposite.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.4",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "What is a triangle with all three sides equal called?",
+   "answer": "equilateral",
+   "distractors": [
+    "isosceles",
+    "scalene",
+    "right-angled"
+   ],
+   "explain": "Equilateral: all sides equal, all angles 60°.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.5",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "What is a triangle with exactly two equal sides called?",
+   "answer": "isosceles",
+   "distractors": [
+    "equilateral",
+    "scalene",
+    "obtuse"
+   ],
+   "explain": "Isosceles: two equal sides and two equal base angles.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.6",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "What is a triangle with no equal sides called?",
+   "answer": "scalene",
+   "distractors": [
+    "isosceles",
+    "equilateral",
+    "regular"
+   ],
+   "explain": "Scalene: all sides and all angles different.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.7",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "What is the distance from the centre of a circle to its edge called?",
+   "answer": "the radius",
+   "distractors": [
+    "the diameter",
+    "the circumference",
+    "the chord"
+   ],
+   "explain": "Radius: centre to edge. Diameter: edge to edge through the centre, twice the radius.",
+   "accept": [
+    "radius"
+   ]
+  },
+  {
+   "id": "maths.shape.8",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "What is the distance all the way round a circle called?",
+   "answer": "the circumference",
+   "distractors": [
+    "the diameter",
+    "the radius",
+    "the perimeter"
+   ],
+   "explain": "The circumference is a circle’s perimeter. It is about 3.14 (π) times the diameter.",
+   "accept": [
+    "circumference"
+   ]
+  },
+  {
+   "id": "maths.shape.9",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "A circle has a radius of 7 cm. What is its diameter?",
+   "answer": "14 cm",
+   "distractors": [
+    "3.5 cm",
+    "7 cm",
+    "21 cm"
+   ],
+   "explain": "The diameter is twice the radius: 2 × 7 = 14 cm.",
+   "accept": [
+    "14"
+   ]
+  },
+  {
+   "id": "maths.shape.10",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "What is a 2D shape with all sides equal and all angles equal called?",
+   "answer": "a regular polygon",
+   "distractors": [
+    "a quadrilateral",
+    "a congruent shape",
+    "a symmetrical shape"
+   ],
+   "explain": "A square is a regular quadrilateral; an equilateral triangle is a regular triangle.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.11",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "What is the flat pattern that folds up to make a 3D shape called?",
+   "answer": "a net",
+   "distractors": [
+    "a face",
+    "a plan",
+    "a cross-section"
+   ],
+   "explain": "A cube’s net is six squares joined so they fold into a box.",
+   "accept": [
+    "net"
+   ]
+  },
+  {
+   "id": "maths.shape.12",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "How many faces, edges and vertices does a cube have?",
+   "answer": "6 faces, 12 edges, 8 vertices",
+   "distractors": [
+    "6 faces, 8 edges, 12 vertices",
+    "8 faces, 12 edges, 6 vertices",
+    "6 faces, 6 edges, 6 vertices"
+   ],
+   "explain": "Count them on a dice: 6 faces, 12 edges where faces meet, 8 corners (vertices).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.13",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "Which 3D shape has two circular faces and one curved surface?",
+   "answer": "a cylinder",
+   "distractors": [
+    "a cone",
+    "a sphere",
+    "a triangular prism"
+   ],
+   "explain": "A cylinder is like a tin of beans: two flat circles and a curved side.",
+   "accept": [
+    "cylinder"
+   ]
+  },
+  {
+   "id": "maths.shape.14",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "Which 3D shape has a square base and four triangular faces meeting at a point?",
+   "answer": "a square-based pyramid",
+   "distractors": [
+    "a triangular prism",
+    "a cuboid",
+    "a tetrahedron"
+   ],
+   "explain": "The pyramids of Giza are square-based pyramids.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.15",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "Two shapes are exactly the same shape and size. What word describes them?",
+   "answer": "congruent",
+   "distractors": [
+    "similar",
+    "symmetrical",
+    "parallel"
+   ],
+   "explain": "Congruent shapes fit exactly on top of each other, even if one is turned or flipped.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.16",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "What is the name for lines that are always the same distance apart and never meet?",
+   "answer": "parallel",
+   "distractors": [
+    "perpendicular",
+    "horizontal",
+    "diagonal"
+   ],
+   "explain": "Parallel lines, like railway tracks. Perpendicular lines meet at a right angle.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.17",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "What is the name for two lines that meet at a right angle?",
+   "answer": "perpendicular",
+   "distractors": [
+    "parallel",
+    "adjacent",
+    "opposite"
+   ],
+   "explain": "Perpendicular: at 90° to each other, like the corner of a page.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.shape.18",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "How many lines of symmetry does a regular hexagon have?",
+   "answer": "6",
+   "distractors": [
+    "3",
+    "2",
+    "12"
+   ],
+   "explain": "A regular polygon has as many lines of symmetry as it has sides.",
    "formats": [
     "choice"
    ]

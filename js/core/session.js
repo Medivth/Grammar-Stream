@@ -7,6 +7,7 @@ import { recordTopicAttempt, topicStatus } from './mastery.js';
 import { check } from './checkers.js';
 import { present } from './present.js';
 import { makeRng } from './rng.js';
+import { sprintDue } from './sprint.js';
 import { SUBJECTS, SUBJECT_BY_ID } from './subjects.js';
 import { monthKey } from './dates.js';
 import { needsPlacement } from './placement.js';
@@ -140,7 +141,8 @@ export function planDay(state, db, today) {
   const due = dueItems(state, db, today);
   const dueBy = {};
   for (const d of due) dueBy[d.subject] = (dueBy[d.subject] || 0) + 1;
-  const reviews = interleave(selectReviews(due, b.reviews), rng);
+  const sprint = sprintDue(state);
+  const reviews = interleave(selectReviews(due, b.reviews - (sprint ? 2 : 0)), rng);
   const cap = Math.ceil(b.reviews * 0.4);
   const placeSubject = PLACEMENT_ORDER.find((s) => needsPlacement(state, db, s)) || null;
   // after placing a subject, start its next topic straight away
@@ -156,6 +158,7 @@ export function planDay(state, db, today) {
   const steps = [];
   const yesterday = state.lastFeedback && state.lastFeedback.day < today ? yesterdayEntries(state.lastFeedback) : [];
   if (yesterday.length) steps.push({ t: 'yesterday' });
+  if (sprint) steps.push({ t: 'sprint' });
   if (placeSubject) steps.push({ t: 'placement', subject: placeSubject });
   const split = reviews.length >= 10 ? Math.ceil(reviews.length * 0.6) : reviews.length;
   reviews.slice(0, split).forEach((r) => steps.push({ t: 'review', id: r.id }));
