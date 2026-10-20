@@ -63,7 +63,7 @@ export function templateLevel(item, state, rng) {
  * @param ctx { db, state, rng, level? (template override), format? (override) }
  */
 export function present(item, card, { db, state, rng, level, format }) {
-  const base = { itemId: item.id, topicId: item.topic, subject: item.subject, explain: item.explain, source: item.source };
+  const base = { itemId: item.id, topicId: item.topic, subject: item.subject, explain: item.explain, source: item.source, layer: item.layer || (item.map === 'europe' ? 'countries' : item.map === 'uk' ? 'features' : undefined), group: item.group };
   let q;
   switch (item.kind) {
     case 'fact': {

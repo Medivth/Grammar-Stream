@@ -45,9 +45,9 @@ export const GENERATORS = {
       const b2 = rng.int(1, 9);
       const A = a1 * 100, B = b1 * 100 + b2 * 10;
       const [x, y] = rng.chance(0.5) ? [A, B] : [B, A];
-      return choice(`Which is larger: ${dec(x)} or ${dec(y)}?`, dec(A), [{ text: dec(B), feedback: `${dec(B)} has more digits, but more digits doesn’t mean bigger. Compare tenths first: ${a1} tenths beats ${b1} tenths.` }], rng, {
-        explain: `Compare the tenths digit first. ${dec(A)} has ${a1} tenths and ${dec(B)} has only ${b1} tenths, so ${dec(A)} is larger.`,
-        steps: [`I line up the decimal points.`, `I compare the tenths: ${a1} tenths against ${b1} tenths.`, `${a1} is more, so ${dec(A)} is larger, even though ${dec(B)} has more digits.`],
+      return choice(`Which is larger: ${dec(x)} or ${dec(y)}?`, dec(A), [{ text: dec(B), feedback: `${dec(B)} has more digits, but more digits doesn’t mean bigger. Compare tenths first: ${a1} tenths beats ${b1} tenth${b1 === 1 ? '' : 's'}.` }], rng, {
+        explain: `Compare the tenths digit first. ${dec(A)} has ${a1} tenths and ${dec(B)} has only ${b1} tenth${b1 === 1 ? '' : 's'}, so ${dec(A)} is larger.`,
+        steps: [`I line up the decimal points.`, `I compare the tenths: ${a1} tenths against ${b1} tenth${b1 === 1 ? '' : 's'}.`, `${a1} is more, so ${dec(A)} is larger, even though ${dec(B)} has more digits.`],
       });
     }
     if (level === 2) {

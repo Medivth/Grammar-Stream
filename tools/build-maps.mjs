@@ -132,6 +132,8 @@ function write(name, data) {
 }
 
 const C = countries();
+// sovereign European states: the only ones tappable on the Europe map (no Crown dependencies etc.)
+const SOVEREIGN_EUROPE = new Set('GBR IRL FRA ESP PRT DEU ITA NLD BEL CHE AUT NOR SWE FIN DNK ISL GRC LUX POL CZE SVK HUN ROU BGR HRV SVN SRB BIH MNE ALB MKD UKR BLR MDA LTU LVA EST RUS MLT CYP AND MCO SMR VAT LIE KOS'.split(' '));
 
 // ---------- world ----------
 {
@@ -171,18 +173,19 @@ const C = countries();
 
 // ---------- Europe ----------
 {
-  const W = 800, H = 760;
-  const bbox = { type: 'Polygon', coordinates: [[[-24, 34], [-24, 71.5], [45, 71.5], [45, 34], [-24, 34]]] };
-  const proj = geoAzimuthalEqualArea().rotate([-12, -53]).fitExtent([[0, 0], [W, H]], { type: 'MultiPoint', coordinates: [[-24, 36], [-10, 71], [40, 71], [42, 38], [-9, 35], [30, 34]] });
+  const W = 800, H = 720;
+  const proj = geoAzimuthalEqualArea().rotate([-12, -53]).fitExtent([[6, 6], [W - 6, H - 6]], { type: 'MultiPoint', coordinates: [[-10, 36], [-23, 64], [25, 71], [44, 48], [34, 34.3], [14.4, 35.4]] });
   proj.clipExtent([[0, 0], [W, H]]);
   const features = [];
   const markers = [];
   for (const c of C.values()) {
-    const p = toPath(proj, multi(c.polys), { tol: 0.35, minArea: 0.8 });
+    // only European Russia here: the Asian part is far off the edge and clips badly
+    const polys = c.id === 'RUS' ? c.parts.filter((p) => p.continent === 'Europe').flatMap((p) => p.polys) : c.polys;
+    const p = toPath(proj, multi(polys), { tol: 0.35, minArea: 0.8 });
     if (!p.d || !p.rings.length) continue;
     const cen = centroidOf(p.rings);
     if (!cen || cen[0] < -50 || cen[0] > W + 50 || cen[1] < -50 || cen[1] > H + 50) continue;
-    const europe = c.continent === 'Europe' || c.id === 'CYP';
+    const europe = SOVEREIGN_EUROPE.has(c.id);
     features.push({ id: c.id, name: c.name, continent: c.continent, europe, d: p.d, c: cen });
     if (europe && p.area < 60) markers.push({ id: c.id, x: cen[0], y: cen[1] });
   }
@@ -193,7 +196,7 @@ const C = countries();
 // ---------- UK and Ireland ----------
 {
   const W = 600, H = 820;
-  const proj = geoTransverseMercator().rotate([2, -54.5]).fitExtent([[10, 10], [W - 10, H - 10]], { type: 'MultiPoint', coordinates: [[-10.6, 51.4], [-8.2, 58.6], [1.8, 52.5], [-5.7, 49.95], [-1.0, 60.85]] });
+  const proj = geoTransverseMercator().rotate([3.5, -54.5]).fitExtent([[8, 8], [W - 8, H - 8]], { type: 'MultiPoint', coordinates: [[-10.5, 51.5], [-7.6, 58.4], [1.8, 52.6], [-5.7, 49.95], [-0.8, 60.8], [-6.2, 55.4]] });
   proj.clipExtent([[0, 0], [W, H]]);
   const KEEP = { ENG: 'England', SCT: 'Scotland', WLS: 'Wales', NIR: 'Northern Ireland', IRL: 'Ireland', IMN: 'Isle of Man', JEY: 'Jersey', GGY: 'Guernsey' };
   const features = [];

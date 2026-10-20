@@ -1,0 +1,68 @@
+// Tiny DOM helpers. All content text goes through rich(), which escapes HTML first.
+
+export function h(tag, attrs = {}, ...children) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v == null || v === false) continue;
+    if (k === 'class') el.className = v;
+    else if (k === 'html') el.innerHTML = v;
+    else if (k.startsWith('on') && typeof v === 'function') el.addEventListener(k.slice(2), v);
+    else if (k === 'style' && typeof v === 'object') Object.assign(el.style, v);
+    else el.setAttribute(k, v === true ? '' : v);
+  }
+  for (const c of children.flat(Infinity)) {
+    if (c == null || c === false) continue;
+    el.append(c instanceof Node ? c : document.createTextNode(String(c)));
+  }
+  return el;
+}
+
+const NS = 'http://www.w3.org/2000/svg';
+export function s(tag, attrs = {}, ...children) {
+  const el = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v == null || v === false) continue;
+    if (k.startsWith('on') && typeof v === 'function') el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v);
+  }
+  for (const c of children.flat(Infinity)) if (c != null && c !== false) el.append(c instanceof Node ? c : document.createTextNode(String(c)));
+  return el;
+}
+
+export function escapeHTML(t) {
+  return String(t ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+}
+
+/** Escape, then render {{a/b}} fractions, **bold**, _italic_, x^{2} and newlines. */
+export function richHTML(text) {
+  return escapeHTML(text)
+    .replace(/\{\{([^/{}]+)\/([^/{}]+)\}\}/g, '<span class="frac"><span>$1</span><span>$2</span></span>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|\s)_(.+?)_(?=\s|$|[.,!?])/g, '$1<em>$2</em>')
+    .replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>')
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/\n/g, '<br>');
+}
+
+export function rich(tag, text, attrs = {}) {
+  return h(tag, { ...attrs, html: richHTML(text) });
+}
+
+/** Plain text version for speech and summaries. */
+export function plain(text) {
+  return String(text ?? '').replace(/\{\{([^/{}]+)\/([^/{}]+)\}\}/g, '$1 over $2').replace(/\*\*|_/g, '');
+}
+
+export function mount(root, ...nodes) {
+  root.replaceChildren(...nodes);
+  window.scrollTo(0, 0);
+}
+
+let toastTimer;
+export function toast(msg) {
+  document.querySelector('.toast')?.remove();
+  const t = h('div', { class: 'toast', role: 'status' }, msg);
+  document.body.append(t);
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.remove(), 3500);
+}
