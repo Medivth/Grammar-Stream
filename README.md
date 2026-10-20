@@ -40,13 +40,17 @@ Twenty-nine maths topics, each backed by a question generator with three levels 
 
 Six reading topics built on twelve full-page extracts (150–400 words, verbatim from public-domain texts: Burnett, Grahame, Stevenson, Wells, Montgomery, Nesbit, Sewell, Jerome, Dickens, Darwin and Carroll). Each extract has six questions (retrieval, inference, word meaning in context, find-and-copy, the writer's technique and its effect) answered straight from the text, then a short written answer. The written answer cannot be auto-marked: it goes to the grown-ups page with a model answer and a three-level verdict, and her feedback appears at the start of her next session. A "Yes!" counts towards the topic's mastery. Twenty-six weekly writing prompts rotate through story, viewpoint, analysis, history, science and geography.
 
+### Stretch tier
+
+Each subject has four to ten `tier: 'stretch'` topics (end of Year 7 into Year 8): algebra with brackets and unknowns on both sides, percentage change, angles in polygons and parallel lines, index laws, straight-line graphs, circles; advanced grammar, ambitious vocabulary, poetic form, Dickens and Brontë; the Reformation, the Armada, the Civil War and historical interpretations; coasts, development, weather systems and harder countries; the periodic table, reactions and conservation of mass, digestion, light and V = I × R. They unlock only when 70% of a subject's ordinary topics are secure (and their own prerequisites are), are never part of the placement check, and show a “stretch” tag on the subject page. Securing five earns the crown.
+
 ### Joined-up topics
 
 Some topics draw on another subject: *Geography by numbers* (averages, density, percentage change), *History by numbers* (BC/AD intervals, fractions of a population), *Science by numbers* (percentages, ratios, rates), *Reading historical sources* (English analysis of the Anglo-Saxon Chronicle and Elizabeth I's Tilbury speech) and *Science words* (spelling and word roots). A topic's `links` shows as "Geography + Maths"; its prerequisites include the other subject's topic, so it unlocks only once that skill is secure. Generated questions name the maths topics they use in `credits`, and her answers count towards those topics' mastery too.
 
 ### Visible progress
 
-The home screen's island map lights up topic by topic (white ring segments for secure, gold for mastered). *My progress* has a history timeline whose events light up as she learns them, maps that colour in the places she knows, and fourteen milestones. Milestones are fixed rewards for real achievement (never random); six of them unlock outfits for her capybara.
+The home screen's island map lights up topic by topic (white ring segments for secure, gold for mastered). *My progress* has a history timeline whose events light up as she learns them, maps that colour in the places she knows, and fifteen milestones. Milestones are fixed rewards for real achievement (never random); six of them unlock outfits for her capybara.
 
 ### Commands
 

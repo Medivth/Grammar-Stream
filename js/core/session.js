@@ -107,7 +107,7 @@ export function topicChoices(state, db, subject) {
   const continuing = [], fresh = [];
   for (const tid of db.topicOrder[subject] || []) {
     const t = db.topics[tid];
-    const st = topicStatus(t, state.topics);
+    const st = topicStatus(t, state.topics, db);
     if (st === 'locked') continue;
     const hasNewFacts = unintroduced(state, db, tid).length > 0;
     const hasTemplates = templatesOf(db, tid).length > 0;

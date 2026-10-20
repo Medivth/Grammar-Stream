@@ -26,6 +26,7 @@ export function mathsDiagram(d) {
     case 'bar': return bar(d);
     case 'pie': return pie(d);
     case 'line': return lineGraph(d);
+    case 'parallel': return parallel(d);
     default: return null;
   }
 }
@@ -114,6 +115,26 @@ function axes(d) {
     el.append(s('circle', { cx: X(p.x), cy: Y(p.y), r: 6, fill: BLUE, stroke: 'var(--card, #fff)', 'stroke-width': 2 }),
       text(X(p.x) + 9, Y(p.y) - 8, p.label, { 'text-anchor': 'start', 'font-size': 15 }));
   }
+  return el;
+}
+
+// two parallel lines cut by a transversal; one angle known, one marked ?
+function parallel(d) {
+  const W = 320, H = 210, y0 = 60, y1 = 150;
+  const el = svg(W, H, 'Parallel lines and a transversal');
+  // transversal from bottom-left to top-right; crossings at the two lines
+  const slope = 0.9, xAt = (y) => 160 + (105 - y) * slope;
+  el.append(line(20, y0, 300, y0), line(20, y1, 300, y1), line(xAt(190), 190, xAt(20), 20));
+  const arrow = (y) => s('path', { d: `M250 ${y - 6} l10 6 l-10 6`, fill: 'none', stroke: INK, 'stroke-width': 2 });
+  el.append(arrow(y0), arrow(y1));
+  const OFF = { rt: [22, -12], lt: [-22, -12], lb: [-22, 20], rb: [22, 20] };
+  const place = (pos, label) => {
+    const cy = pos.line === 0 ? y0 : y1, cx = xAt(cy);
+    const [dx, dy] = OFF[pos.r];
+    el.append(text(cx + dx * 1.3, cy + dy, label, { 'text-anchor': dx < 0 ? 'end' : 'start' }));
+  };
+  place(d.known, `${d.a}°`);
+  place(d.ask, '?');
   return el;
 }
 

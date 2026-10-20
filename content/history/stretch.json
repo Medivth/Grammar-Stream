@@ -1,0 +1,760 @@
+{
+ "subject": "history",
+ "deck": "stretch",
+ "topics": [
+  {
+   "id": "history.reformation",
+   "title": "Henry VIII and the Reformation",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "history.tudors"
+   ],
+   "batch": 6,
+   "intro": "A king who wanted a son, a Pope who said no, and a country that changed its religion. The Reformation reshaped England’s churches, monasteries and politics for centuries.",
+   "teach": "Explain why Henry VIII broke with Rome. Was it really about religion?",
+   "talk": "Ask her the rhyme for the six wives: divorced, beheaded, died…"
+  },
+  {
+   "id": "history.armada",
+   "title": "Elizabeth I and the Spanish Armada",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "history.reformation"
+   ],
+   "batch": 6,
+   "intro": "In 1588 the most powerful country in Europe sent 130 ships to invade England. It failed, thanks to fireships, fast English ships and the weather.",
+   "teach": "Explain three reasons the Armada failed.",
+   "talk": "Ask her why Philip II wanted to invade England in the first place."
+  },
+  {
+   "id": "history.civil-war",
+   "title": "The Stuarts and the Civil War",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "history.armada"
+   ],
+   "batch": 6,
+   "intro": "Within fifty years of Elizabeth’s death, England executed its king. The argument was about who ruled: the king alone, or the king with Parliament.",
+   "teach": "Explain the main causes of the English Civil War.",
+   "talk": "Ask her whether a country can put its own king on trial. What happened in 1649?"
+  },
+  {
+   "id": "history.interpretations",
+   "title": "Interpretations: why historians disagree",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "history.sources",
+    "history.tudors"
+   ],
+   "batch": 5,
+   "intro": "An interpretation is a historian’s view of the past, built from the evidence they have, for the audience they write for. Richard III has been a monster, a victim and a mystery, depending on who is telling the story.",
+   "teach": "Explain why two historians can look at the same evidence and disagree.",
+   "talk": "Ask her how a Tudor writer and a modern one might describe Richard III differently, and why."
+  }
+ ],
+ "items": [
+  {
+   "id": "history.rf.d1",
+   "topic": "history.reformation",
+   "kind": "mcq",
+   "prompt": "Why did Henry VIII want to end his marriage to Catherine of Aragon?",
+   "options": [
+    {
+     "text": "She had not given him a son, and he wanted to marry Anne Boleyn",
+     "correct": true
+    },
+    {
+     "text": "She was a Protestant",
+     "correct": false,
+     "feedback": "Catherine was a devout Catholic. The problem was the lack of a male heir."
+    },
+    {
+     "text": "She had left England",
+     "correct": false,
+     "feedback": "She stayed, and refused to accept the annulment."
+    }
+   ],
+   "explain": "Henry believed England needed a male heir to avoid another civil war. Catherine had one surviving child, Mary."
+  },
+  {
+   "id": "history.rf.pope",
+   "topic": "history.reformation",
+   "kind": "fact",
+   "prompt": "Who refused to grant Henry VIII an annulment of his first marriage?",
+   "answer": "the Pope",
+   "distractors": [
+    "the Archbishop of Canterbury",
+    "Parliament",
+    "the King of France"
+   ],
+   "explain": "Pope Clement VII refused, partly because Catherine’s nephew, Emperor Charles V, controlled Rome.",
+   "accept": [
+    "pope clement",
+    "pope clement vii",
+    "clement vii"
+   ]
+  },
+  {
+   "id": "history.rf.supremacy",
+   "topic": "history.reformation",
+   "kind": "fact",
+   "prompt": "The Act of Supremacy (1534) made Henry VIII the…",
+   "answer": "Supreme Head of the Church of England",
+   "distractors": [
+    "Holy Roman Emperor",
+    "Pope of England",
+    "Defender of the Catholic Faith"
+   ],
+   "explain": "From 1534 the king, not the Pope, was head of the Church in England. Refusing to accept this was treason.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.rf.year",
+   "topic": "history.reformation",
+   "kind": "fact",
+   "prompt": "In which year was the Act of Supremacy passed?",
+   "answer": "1534",
+   "distractors": [
+    "1485",
+    "1558",
+    "1509"
+   ],
+   "explain": "1534: the formal break with Rome."
+  },
+  {
+   "id": "history.rf.cromwell",
+   "topic": "history.reformation",
+   "kind": "fact",
+   "prompt": "Which minister organised the closing (dissolution) of the monasteries for Henry VIII?",
+   "answer": "Thomas Cromwell",
+   "distractors": [
+    "Thomas More",
+    "Thomas Wolsey",
+    "Thomas Cranmer"
+   ],
+   "explain": "Cromwell’s commissioners valued, closed and sold off about 800 monasteries between 1536 and 1540. The Crown took the land and wealth.",
+   "accept": [
+    "cromwell"
+   ]
+  },
+  {
+   "id": "history.rf.why-monast",
+   "topic": "history.reformation",
+   "kind": "mcq",
+   "prompt": "Why did Henry close the monasteries?",
+   "options": [
+    {
+     "text": "For their wealth and land, and because they were loyal to the Pope",
+     "correct": true
+    },
+    {
+     "text": "Because nobody lived in them any more",
+     "correct": false,
+     "feedback": "Thousands of monks and nuns lived in them. They were turned out."
+    },
+    {
+     "text": "To build hospitals",
+     "correct": false,
+     "feedback": "A few became schools or cathedrals, but most of the money went to the Crown and its supporters."
+    }
+   ],
+   "explain": "The dissolution made Henry rich and bought him the loyalty of the gentry who got the land. It also destroyed libraries, charity and ancient buildings.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.rf.more",
+   "topic": "history.reformation",
+   "kind": "fact",
+   "prompt": "Which former chancellor was executed in 1535 for refusing to accept Henry as head of the Church?",
+   "answer": "Thomas More",
+   "distractors": [
+    "Thomas Cromwell",
+    "Thomas Wolsey",
+    "Thomas Becket"
+   ],
+   "explain": "More would not swear the oath. He was beheaded in 1535 and is now a Catholic saint.",
+   "accept": [
+    "more",
+    "sir thomas more"
+   ]
+  },
+  {
+   "id": "history.rf.wives",
+   "topic": "history.reformation",
+   "kind": "order",
+   "prompt": "Put Henry VIII’s six wives in order.",
+   "items": [
+    "Catherine of Aragon",
+    "Anne Boleyn",
+    "Jane Seymour",
+    "Anne of Cleves",
+    "Catherine Howard",
+    "Catherine Parr"
+   ],
+   "labels": [
+    "divorced",
+    "beheaded",
+    "died",
+    "divorced",
+    "beheaded",
+    "survived"
+   ],
+   "explain": "Divorced, beheaded, died; divorced, beheaded, survived. Jane Seymour gave him his son, Edward."
+  },
+  {
+   "id": "history.rf.children",
+   "topic": "history.reformation",
+   "kind": "mcq",
+   "prompt": "Which of Henry’s three children made England most firmly Protestant?",
+   "options": [
+    {
+     "text": "Edward VI",
+     "correct": true
+    },
+    {
+     "text": "Mary I",
+     "correct": false,
+     "feedback": "Mary restored Catholicism and burned about 280 Protestants, earning the name “Bloody Mary”."
+    },
+    {
+     "text": "Elizabeth I",
+     "correct": false,
+     "feedback": "Elizabeth found a middle way (the Religious Settlement of 1559). Edward’s reign was the most strongly Protestant."
+    }
+   ],
+   "explain": "Edward VI (1547–53) brought in an English prayer book and plain churches. Mary swung back to Rome; Elizabeth settled on a Protestant church with some old ceremony.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.rf.settlement",
+   "topic": "history.reformation",
+   "kind": "fact",
+   "prompt": "Elizabeth I’s Religious Settlement of 1559 made her the “Supreme ___” of the Church of England.",
+   "answer": "Governor",
+   "distractors": [
+    "Head",
+    "Bishop",
+    "Defender"
+   ],
+   "explain": "Not “Head”: Elizabeth chose the softer title Supreme Governor to reassure Catholics and those who objected to a woman heading the Church.",
+   "accept": [
+    "supreme governor"
+   ]
+  },
+  {
+   "id": "history.ar.year",
+   "topic": "history.armada",
+   "kind": "fact",
+   "prompt": "In which year did the Spanish Armada sail against England?",
+   "answer": "1588",
+   "distractors": [
+    "1558",
+    "1603",
+    "1577"
+   ],
+   "explain": "1588. Elizabeth had been queen for thirty years."
+  },
+  {
+   "id": "history.ar.philip",
+   "topic": "history.armada",
+   "kind": "fact",
+   "prompt": "Which king of Spain sent the Armada?",
+   "answer": "Philip II",
+   "distractors": [
+    "Charles V",
+    "Ferdinand",
+    "Philip IV"
+   ],
+   "explain": "Philip II had been married to Mary I of England. He saw Protestant Elizabeth as a heretic and a threat.",
+   "accept": [
+    "philip",
+    "philip the second"
+   ]
+  },
+  {
+   "id": "history.ar.why",
+   "topic": "history.armada",
+   "kind": "mcq",
+   "prompt": "Which of these was NOT a reason Philip II attacked England?",
+   "options": [
+    {
+     "text": "England had invaded Spain",
+     "correct": true
+    },
+    {
+     "text": "English sailors like Drake were raiding Spanish treasure ships",
+     "correct": false,
+     "feedback": "This was a real reason: Elizabeth quietly profited from Drake’s piracy."
+    },
+    {
+     "text": "Elizabeth had executed the Catholic Mary, Queen of Scots in 1587",
+     "correct": false,
+     "feedback": "A real reason: Mary’s death removed the Catholic heir and enraged Philip."
+    }
+   ],
+   "explain": "Religion (Catholic Spain against Protestant England), piracy, English help for Dutch rebels, and Mary’s execution all pushed Philip to invade. England had not invaded Spain, though Drake had raided Cadiz in 1587.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.ar.drake",
+   "topic": "history.armada",
+   "kind": "fact",
+   "prompt": "Which English sea captain “singed the King of Spain’s beard” by raiding Cadiz in 1587?",
+   "answer": "Francis Drake",
+   "distractors": [
+    "Walter Raleigh",
+    "John Hawkins",
+    "Martin Frobisher"
+   ],
+   "explain": "Drake destroyed ships and supplies at Cadiz, delaying the Armada by a year.",
+   "accept": [
+    "drake",
+    "sir francis drake"
+   ]
+  },
+  {
+   "id": "history.ar.fireships",
+   "topic": "history.armada",
+   "kind": "fact",
+   "prompt": "What did the English send into the anchored Armada at Calais at night?",
+   "answer": "fireships",
+   "distractors": [
+    "cannon barges",
+    "swimmers",
+    "a peace envoy"
+   ],
+   "explain": "Eight burning ships drifted into the Spanish fleet. The Spanish cut their anchors and scattered, breaking their defensive crescent."
+  },
+  {
+   "id": "history.ar.gravelines",
+   "topic": "history.armada",
+   "kind": "fact",
+   "prompt": "Where did the English fleet fight the scattered Armada the day after the fireships?",
+   "answer": "Gravelines",
+   "distractors": [
+    "Trafalgar",
+    "Plymouth",
+    "Dover"
+   ],
+   "explain": "At the Battle of Gravelines (8 August 1588) the faster English ships and longer-range guns did real damage.",
+   "accept": [
+    "battle of gravelines"
+   ]
+  },
+  {
+   "id": "history.ar.weather",
+   "topic": "history.armada",
+   "kind": "mcq",
+   "prompt": "Why did so many Spanish ships sink on the way home?",
+   "options": [
+    {
+     "text": "The Armada had to sail north round Scotland and Ireland, into Atlantic storms",
+     "correct": true
+    },
+    {
+     "text": "The English chased them all the way to Spain",
+     "correct": false,
+     "feedback": "The English ran low on ammunition and turned back. The storms did the rest."
+    },
+    {
+     "text": "They ran out of food and gave up",
+     "correct": false,
+     "feedback": "Food and water were short, but the ships were wrecked by weather on the Irish coast."
+    }
+   ],
+   "explain": "The wind blew the Armada into the North Sea. Going home the long way, perhaps a third of the ships were lost. The English struck a medal: “God blew and they were scattered.”",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.ar.beacons",
+   "topic": "history.armada",
+   "kind": "fact",
+   "prompt": "How was news of the Armada’s approach spread quickly along the English coast?",
+   "answer": "beacons (bonfires on hilltops)",
+   "distractors": [
+    "church bells only",
+    "messengers on horseback only",
+    "carrier pigeons"
+   ],
+   "explain": "A chain of hilltop bonfires carried the warning from Cornwall to London in hours.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.ar.sidonia",
+   "topic": "history.armada",
+   "kind": "fact",
+   "prompt": "Who commanded the Armada?",
+   "answer": "the Duke of Medina Sidonia",
+   "distractors": [
+    "Philip II in person",
+    "the Duke of Parma",
+    "Christopher Columbus"
+   ],
+   "explain": "Medina Sidonia was a nobleman with little experience at sea; he had begged Philip not to appoint him. Parma commanded the army waiting in the Netherlands that the Armada was supposed to collect.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.cw.james",
+   "topic": "history.civil-war",
+   "kind": "fact",
+   "prompt": "Who became king of England when Elizabeth I died in 1603?",
+   "answer": "James I",
+   "distractors": [
+    "Charles I",
+    "Henry IX",
+    "William III"
+   ],
+   "explain": "James VI of Scotland became James I of England, uniting the two crowns.",
+   "accept": [
+    "james",
+    "james vi",
+    "james vi and i",
+    "james the first"
+   ]
+  },
+  {
+   "id": "history.cw.gunpowder",
+   "topic": "history.civil-war",
+   "kind": "fact",
+   "prompt": "In which year did Guy Fawkes and the plotters try to blow up Parliament?",
+   "answer": "1605",
+   "distractors": [
+    "1588",
+    "1642",
+    "1666"
+   ],
+   "explain": "The Gunpowder Plot, 5 November 1605: a group of Catholics planned to kill James I at the opening of Parliament."
+  },
+  {
+   "id": "history.cw.causes",
+   "topic": "history.civil-war",
+   "kind": "mcq",
+   "prompt": "Which was a cause of the Civil War?",
+   "options": [
+    {
+     "text": "Charles I ruled for eleven years without calling Parliament and raised taxes such as Ship Money on his own",
+     "correct": true
+    },
+    {
+     "text": "Parliament wanted to make England Catholic",
+     "correct": false,
+     "feedback": "Many MPs feared the opposite: that Charles and his Catholic queen were steering England back to Rome."
+    },
+    {
+     "text": "Charles I refused to collect any taxes",
+     "correct": false,
+     "feedback": "He collected them without Parliament’s permission, which was the problem."
+    }
+   ],
+   "explain": "Money, religion and power: Charles believed in the Divine Right of Kings; Parliament believed the king must rule with it.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.cw.divine",
+   "topic": "history.civil-war",
+   "kind": "fact",
+   "prompt": "Charles I believed God had chosen him to rule and he answered to no one on earth. What is this idea called?",
+   "answer": "the Divine Right of Kings",
+   "distractors": [
+    "Magna Carta",
+    "the Commonwealth",
+    "Parliamentary sovereignty"
+   ],
+   "explain": "Divine Right: the king is appointed by God, so opposing him is a sin. Parliament disagreed.",
+   "accept": [
+    "divine right",
+    "divine right of kings"
+   ]
+  },
+  {
+   "id": "history.cw.start",
+   "topic": "history.civil-war",
+   "kind": "fact",
+   "prompt": "In which year did the English Civil War begin?",
+   "answer": "1642",
+   "distractors": [
+    "1649",
+    "1605",
+    "1660"
+   ],
+   "explain": "August 1642: Charles raised his standard at Nottingham after trying and failing to arrest five MPs in January."
+  },
+  {
+   "id": "history.cw.sides",
+   "topic": "history.civil-war",
+   "kind": "fact",
+   "prompt": "What nickname was given to the supporters of Parliament?",
+   "answer": "Roundheads",
+   "distractors": [
+    "Cavaliers",
+    "Levellers",
+    "Puritans"
+   ],
+   "explain": "Roundheads, from the short haircuts of London apprentices. The king’s supporters were Cavaliers."
+  },
+  {
+   "id": "history.cw.naseby",
+   "topic": "history.civil-war",
+   "kind": "fact",
+   "prompt": "At which 1645 battle did Parliament’s New Model Army decisively defeat the king?",
+   "answer": "Naseby",
+   "distractors": [
+    "Edgehill",
+    "Hastings",
+    "Bosworth"
+   ],
+   "explain": "Naseby, June 1645. The New Model Army was professional, well paid and led by ability rather than birth.",
+   "accept": [
+    "battle of naseby"
+   ]
+  },
+  {
+   "id": "history.cw.cromwell",
+   "topic": "history.civil-war",
+   "kind": "fact",
+   "prompt": "Which Parliamentary commander later ruled England as Lord Protector?",
+   "answer": "Oliver Cromwell",
+   "distractors": [
+    "Thomas Fairfax",
+    "John Pym",
+    "Charles II"
+   ],
+   "explain": "Cromwell was Lord Protector from 1653 until his death in 1658. England had no king for eleven years.",
+   "accept": [
+    "cromwell"
+   ]
+  },
+  {
+   "id": "history.cw.execution",
+   "topic": "history.civil-war",
+   "kind": "fact",
+   "prompt": "In which year was Charles I executed?",
+   "answer": "1649",
+   "distractors": [
+    "1642",
+    "1660",
+    "1645"
+   ],
+   "explain": "30 January 1649, outside the Banqueting House in Whitehall. The only English king ever tried and executed by his own people."
+  },
+  {
+   "id": "history.cw.restoration",
+   "topic": "history.civil-war",
+   "kind": "fact",
+   "prompt": "Which event in 1660 brought Charles II to the throne?",
+   "answer": "the Restoration",
+   "distractors": [
+    "the Reformation",
+    "the Glorious Revolution",
+    "the Commonwealth"
+   ],
+   "explain": "After Cromwell died, Parliament invited Charles I’s son back. The monarchy was restored, but it never again ruled without Parliament for long.",
+   "accept": [
+    "restoration"
+   ]
+  },
+  {
+   "id": "history.cw.order",
+   "topic": "history.civil-war",
+   "kind": "order",
+   "prompt": "Put these Stuart events in order.",
+   "items": [
+    "Gunpowder Plot",
+    "Civil War begins",
+    "Battle of Naseby",
+    "Execution of Charles I",
+    "Restoration of Charles II"
+   ],
+   "labels": [
+    "1605",
+    "1642",
+    "1645",
+    "1649",
+    "1660"
+   ],
+   "explain": "Plot 1605, war 1642, Naseby 1645, execution 1649, Restoration 1660."
+  },
+  {
+   "id": "history.in.d1",
+   "topic": "history.interpretations",
+   "kind": "mcq",
+   "prompt": "What is the difference between a source and an interpretation?",
+   "options": [
+    {
+     "text": "A source is evidence from the time; an interpretation is a later view built from the evidence",
+     "correct": true
+    },
+    {
+     "text": "They are the same thing",
+     "correct": false,
+     "feedback": "A Tudor portrait is a source; a modern biography that uses it is an interpretation."
+    },
+    {
+     "text": "An interpretation is always more reliable",
+     "correct": false,
+     "feedback": "Interpretations can be biased or outdated too. They depend on the evidence and the historian."
+    }
+   ],
+   "explain": "Sources are raw material; interpretations are what historians, film-makers and textbook writers make from them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.in.why",
+   "topic": "history.interpretations",
+   "kind": "mcq",
+   "prompt": "Two historians disagree about the same king. Which is the LEAST likely reason?",
+   "options": [
+    {
+     "text": "One of them is lying",
+     "correct": true
+    },
+    {
+     "text": "They are writing for different audiences (a children’s book and an academic study)",
+     "correct": false,
+     "feedback": "A very common reason: purpose and audience shape what is emphasised."
+    },
+    {
+     "text": "New evidence has been found since the older one wrote",
+     "correct": false,
+     "feedback": "Also common: interpretations change as evidence changes."
+    }
+   ],
+   "explain": "Historians usually differ because of evidence, purpose, audience and the times they live in, not dishonesty.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.in.richard",
+   "topic": "history.interpretations",
+   "kind": "mcq",
+   "prompt": "Shakespeare’s Richard III (about 1593) shows the king as a scheming, hunchbacked murderer. Why should a historian be cautious about this interpretation?",
+   "options": [
+    {
+     "text": "It was written under the Tudors, who had taken Richard’s throne, so making him a villain flattered the ruling family",
+     "correct": true
+    },
+    {
+     "text": "Shakespeare never wrote about real people",
+     "correct": false,
+     "feedback": "He wrote many history plays, but as drama, not record."
+    },
+    {
+     "text": "Plays cannot contain any truth",
+     "correct": false,
+     "feedback": "They can. The point is to ask who wrote it, when, and for whom."
+    }
+   ],
+   "explain": "Shakespeare drew on Tudor writers such as Thomas More. Under Elizabeth I, Henry VII’s granddaughter, there was every reason to blacken Richard.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.in.bones",
+   "topic": "history.interpretations",
+   "kind": "mcq",
+   "prompt": "In 2012 Richard III’s skeleton was found under a car park in Leicester. It showed a curved spine (scoliosis) but no withered arm. How does this affect interpretations?",
+   "options": [
+    {
+     "text": "It supports part of the Tudor picture and contradicts another part, so historians must weigh old sources against new evidence",
+     "correct": true
+    },
+    {
+     "text": "It proves Shakespeare was right about everything",
+     "correct": false,
+     "feedback": "The curved spine matches; the withered arm and “hunchback” do not."
+    },
+    {
+     "text": "It proves Richard was a good king",
+     "correct": false,
+     "feedback": "Bones cannot tell us about his character or whether he killed the princes."
+    }
+   ],
+   "explain": "New evidence rarely settles everything. It changes the balance, and interpretations shift with it.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.in.provenance",
+   "topic": "history.interpretations",
+   "kind": "fact",
+   "prompt": "When judging an interpretation, which three questions about its author matter most?",
+   "answer": "who, when, and why they wrote it",
+   "distractors": [
+    "how long it is, how old it is, how much it cost",
+    "whether it has pictures, maps and a glossary",
+    "whether it agrees with your own view"
+   ],
+   "explain": "Who made it (expertise and loyalties), when (what evidence existed) and why (purpose and audience) explain most disagreements.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.in.textbook",
+   "topic": "history.interpretations",
+   "kind": "mcq",
+   "prompt": "A 1950s school textbook calls the British Empire “a great gift to the world”. A 2020 textbook stresses the harm it did. Which statement is fairest?",
+   "options": [
+    {
+     "text": "Both are interpretations shaped by their times; a historian compares them with the evidence",
+     "correct": true
+    },
+    {
+     "text": "The newer one must be right because it is newer",
+     "correct": false,
+     "feedback": "Newer interpretations use more evidence and new perspectives, but they are still interpretations."
+    },
+    {
+     "text": "The older one must be right because it is closer to the events",
+     "correct": false,
+     "feedback": "Being closer in time does not make a view neutral. Each generation sees the past through its own concerns."
+    }
+   ],
+   "explain": "Interpretations tell you about the past AND about the time they were written in.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.in.anachronism",
+   "topic": "history.interpretations",
+   "kind": "fact",
+   "prompt": "A film shows a Roman soldier wearing a wristwatch. What is this mistake called?",
+   "answer": "an anachronism",
+   "distractors": [
+    "an interpretation",
+    "a primary source",
+    "a bias"
+   ],
+   "explain": "An anachronism is something placed in the wrong time period. Historians look out for them in films, novels and even in old history books.",
+   "accept": [
+    "anachronism"
+   ]
+  }
+ ]
+}

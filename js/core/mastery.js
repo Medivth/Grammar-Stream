@@ -43,8 +43,18 @@ export function isAvailable(topic, topicStates) {
   });
 }
 
-export function topicStatus(topic, topicStates) {
+export const STRETCH_READY_AT = 0.7;
+
+/** Stretch topics open once most of the subject's ordinary topics are secure (and prerequisites too). */
+export function stretchReady(db, topicStates, subject) {
+  const ids = (db.topicOrder[subject] || []).filter((id) => db.topics[id].tier !== 'stretch');
+  const secure = ids.filter((id) => ['proficient', 'mastered', 'assumed'].includes(topicStates[id]?.state)).length;
+  return ids.length > 0 && secure / ids.length >= STRETCH_READY_AT;
+}
+
+export function topicStatus(topic, topicStates, db = null) {
   const st = topicStates[topic.id];
   if (st) return st.state;
+  if (topic.tier === 'stretch' && db && !stretchReady(db, topicStates, topic.subject)) return 'locked';
   return isAvailable(topic, topicStates) ? 'available' : 'locked';
 }

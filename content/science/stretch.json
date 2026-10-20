@@ -1,0 +1,1116 @@
+{
+ "subject": "science",
+ "deck": "stretch",
+ "topics": [
+  {
+   "id": "science.periodic",
+   "title": "The periodic table",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "science.atoms"
+   ],
+   "batch": 6,
+   "intro": "Every element in the universe, arranged so that similar ones line up in columns. Learn to read the table and you can predict how an element you have never met will behave.",
+   "teach": "Explain what a group and a period are on the periodic table.",
+   "talk": "Ask her why gold’s symbol is Au and not Go."
+  },
+  {
+   "id": "science.reactions",
+   "title": "Chemical reactions and conservation of mass",
+   "kind": "mixed",
+   "tier": "stretch",
+   "prereqs": [
+    "science.periodic",
+    "science.acids"
+   ],
+   "links": [
+    "maths"
+   ],
+   "batch": 6,
+   "intro": "In a chemical reaction atoms are rearranged into new substances, but none are made or lost. That one idea lets you predict masses, write word equations and explain why a burnt match weighs less.",
+   "teach": "Explain why magnesium gets heavier when it burns.",
+   "talk": "Ask her where the mass of a burning candle goes."
+  },
+  {
+   "id": "science.digestion",
+   "title": "Digestion and nutrition",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "science.cells",
+    "science.body"
+   ],
+   "batch": 6,
+   "intro": "Food is broken down by enzymes into molecules small enough to pass into the blood. Each nutrient has a job, and each organ has a role.",
+   "teach": "Explain what enzymes do in digestion.",
+   "talk": "Ask her which food test would show whether bread contains starch."
+  },
+  {
+   "id": "science.light-2",
+   "title": "Light: reflection, refraction and colour",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "science.light"
+   ],
+   "batch": 6,
+   "intro": "Light travels in straight lines at 300,000 km per second, bounces off mirrors at the same angle it arrives, bends when it enters glass or water, and is made of all the colours of the rainbow.",
+   "teach": "Explain why a straw in a glass of water looks bent.",
+   "talk": "Shine a torch through a glass of water onto a wall and look for colours at the edge."
+  },
+  {
+   "id": "science.circuits",
+   "title": "Circuits: current, voltage and resistance",
+   "kind": "mixed",
+   "tier": "stretch",
+   "prereqs": [
+    "science.electricity",
+    "science.forces7"
+   ],
+   "links": [
+    "maths"
+   ],
+   "batch": 6,
+   "intro": "Current is the flow of charge; voltage is the push; resistance is what slows it down. The three are linked by one equation, V = I × R, and series and parallel circuits follow different rules.",
+   "teach": "Explain the difference between current and voltage.",
+   "talk": "Ask her why the lights at home do not all go out when one bulb fails."
+  }
+ ],
+ "items": [
+  {
+   "id": "science.pe.d1",
+   "topic": "science.periodic",
+   "kind": "mcq",
+   "prompt": "About how many different elements are there?",
+   "options": [
+    {
+     "text": "About 118",
+     "correct": true
+    },
+    {
+     "text": "About 1,000",
+     "correct": false,
+     "feedback": "Far fewer: 118 known elements make up everything."
+    },
+    {
+     "text": "About 20",
+     "correct": false,
+     "feedback": "There are 118, though about 90 occur naturally."
+    }
+   ],
+   "explain": "Everything from stars to spiders is built from these 118 elements, mostly combined into compounds.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.pe.mendeleev",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "Which Russian chemist arranged the elements into the first periodic table in 1869, leaving gaps for elements not yet discovered?",
+   "answer": "Dmitri Mendeleev",
+   "distractors": [
+    "Marie Curie",
+    "John Dalton",
+    "Antoine Lavoisier"
+   ],
+   "explain": "Mendeleev predicted the properties of the missing elements, such as gallium and germanium, and was proved right.",
+   "accept": [
+    "mendeleev"
+   ]
+  },
+  {
+   "id": "science.pe.group",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "On the periodic table, what is a vertical column called?",
+   "answer": "a group",
+   "distractors": [
+    "a period",
+    "a row",
+    "a block"
+   ],
+   "explain": "Elements in the same group have similar properties because they have the same number of electrons in their outer shell.",
+   "accept": [
+    "group"
+   ]
+  },
+  {
+   "id": "science.pe.period",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "On the periodic table, what is a horizontal row called?",
+   "answer": "a period",
+   "distractors": [
+    "a group",
+    "a column",
+    "a series"
+   ],
+   "explain": "Across a period, elements change from metals on the left to non-metals on the right.",
+   "accept": [
+    "period"
+   ]
+  },
+  {
+   "id": "science.pe.metals",
+   "topic": "science.periodic",
+   "kind": "mcq",
+   "prompt": "Where are the metals on the periodic table?",
+   "options": [
+    {
+     "text": "On the left and in the middle; non-metals are on the right",
+     "correct": true
+    },
+    {
+     "text": "On the right",
+     "correct": false,
+     "feedback": "The right-hand side is non-metals: oxygen, nitrogen, the halogens and noble gases."
+    },
+    {
+     "text": "Only along the bottom",
+     "correct": false,
+     "feedback": "The bottom rows are metals, but so is most of the table: about three quarters of elements are metals."
+    }
+   ],
+   "explain": "A staircase line near the right separates metals from non-metals.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.pe.alkali",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "Lithium, sodium and potassium belong to which group of very reactive metals that fizz on water?",
+   "answer": "group 1, the alkali metals",
+   "distractors": [
+    "group 7, the halogens",
+    "group 0, the noble gases",
+    "the transition metals"
+   ],
+   "explain": "Alkali metals are soft, stored under oil, and react more violently the further down the group you go: potassium bursts into lilac flame on water.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.pe.noble",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "Helium, neon and argon are unreactive gases in which group?",
+   "answer": "group 0, the noble gases",
+   "distractors": [
+    "group 1",
+    "group 7",
+    "group 2"
+   ],
+   "explain": "Noble gases have full outer electron shells, so they do not need to react. Argon fills light bulbs; helium lifts balloons.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.pe.halogen",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "Fluorine, chlorine, bromine and iodine are the…",
+   "answer": "halogens (group 7)",
+   "distractors": [
+    "alkali metals (group 1)",
+    "noble gases (group 0)",
+    "transition metals"
+   ],
+   "explain": "Halogens are reactive non-metals. Unlike group 1, they get LESS reactive down the group.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.pe.sym.na",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for sodium?",
+   "answer": "Na",
+   "distractors": [
+    "K",
+    "Fe",
+    "Cu"
+   ],
+   "explain": "Na is sodium. The symbol comes from its Latin name (natrium).",
+   "strict": true
+  },
+  {
+   "id": "science.pe.sym.k",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for potassium?",
+   "answer": "K",
+   "distractors": [
+    "Fe",
+    "Cu",
+    "Pb"
+   ],
+   "explain": "K is potassium. The symbol comes from its Latin name (kalium).",
+   "strict": true
+  },
+  {
+   "id": "science.pe.sym.fe",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for iron?",
+   "answer": "Fe",
+   "distractors": [
+    "Cu",
+    "Pb",
+    "Ag"
+   ],
+   "explain": "Fe is iron. The symbol comes from its Latin name (ferrum).",
+   "strict": true
+  },
+  {
+   "id": "science.pe.sym.cu",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for copper?",
+   "answer": "Cu",
+   "distractors": [
+    "Na",
+    "K",
+    "Fe"
+   ],
+   "explain": "Cu is copper.",
+   "strict": true
+  },
+  {
+   "id": "science.pe.sym.pb",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for lead?",
+   "answer": "Pb",
+   "distractors": [
+    "K",
+    "Fe",
+    "Cu"
+   ],
+   "explain": "Pb is lead. The symbol comes from its Latin name (plumbum).",
+   "strict": true
+  },
+  {
+   "id": "science.pe.sym.ag",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for silver?",
+   "answer": "Ag",
+   "distractors": [
+    "Fe",
+    "Cu",
+    "Pb"
+   ],
+   "explain": "Ag is silver. The symbol comes from its Latin name (argentum).",
+   "strict": true
+  },
+  {
+   "id": "science.pe.sym.au",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for gold?",
+   "answer": "Au",
+   "distractors": [
+    "Na",
+    "K",
+    "Fe"
+   ],
+   "explain": "Au is gold. The symbol comes from its Latin name (aurum).",
+   "strict": true
+  },
+  {
+   "id": "science.pe.sym.sn",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for tin?",
+   "answer": "Sn",
+   "distractors": [
+    "K",
+    "Fe",
+    "Cu"
+   ],
+   "explain": "Sn is tin. The symbol comes from its Latin name (stannum).",
+   "strict": true
+  },
+  {
+   "id": "science.pe.sym.hg",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for mercury?",
+   "answer": "Hg",
+   "distractors": [
+    "Fe",
+    "Cu",
+    "Pb"
+   ],
+   "explain": "Hg is mercury. The symbol comes from its Latin name (hydrargyrum).",
+   "strict": true
+  },
+  {
+   "id": "science.pe.sym.w",
+   "topic": "science.periodic",
+   "kind": "fact",
+   "prompt": "What is the chemical symbol for tungsten?",
+   "answer": "W",
+   "distractors": [
+    "Na",
+    "K",
+    "Fe"
+   ],
+   "explain": "W is tungsten. The symbol comes from its Latin name (wolfram).",
+   "strict": true
+  },
+  {
+   "id": "science.rx.mass",
+   "topic": "science.reactions",
+   "kind": "template",
+   "gen": "massConserve",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.5,
+    0.3,
+    0.9
+   ],
+   "credits": [
+    "maths.ratio"
+   ]
+  },
+  {
+   "id": "science.rx.d1",
+   "topic": "science.reactions",
+   "kind": "mcq",
+   "prompt": "A match burns and the ash weighs less than the match. Has mass been destroyed?",
+   "options": [
+    {
+     "text": "No: the missing mass left as gases (carbon dioxide and water vapour)",
+     "correct": true
+    },
+    {
+     "text": "Yes: burning destroys matter",
+     "correct": false,
+     "feedback": "Weigh the gases too and the total is unchanged. Mass is conserved."
+    },
+    {
+     "text": "No: the ash is just squashed",
+     "correct": false,
+     "feedback": "The ash is lighter because atoms have left as gas, not because it is compressed."
+    }
+   ],
+   "explain": "Lavoisier showed in the 1770s that in a sealed container, mass never changes in a reaction.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.rx.reactants",
+   "topic": "science.reactions",
+   "kind": "fact",
+   "prompt": "In a word equation, what are the substances on the left of the arrow called?",
+   "answer": "reactants",
+   "distractors": [
+    "products",
+    "catalysts",
+    "elements"
+   ],
+   "explain": "Reactants → products. The arrow means “react to make”."
+  },
+  {
+   "id": "science.rx.combustion",
+   "topic": "science.reactions",
+   "kind": "fact",
+   "prompt": "Complete the word equation: methane + oxygen → carbon dioxide + ___",
+   "answer": "water",
+   "distractors": [
+    "hydrogen",
+    "carbon",
+    "oxygen"
+   ],
+   "explain": "Burning a hydrocarbon in plenty of oxygen always makes carbon dioxide and water. That is why car exhausts drip on cold mornings."
+  },
+  {
+   "id": "science.rx.exo",
+   "topic": "science.reactions",
+   "kind": "fact",
+   "prompt": "A reaction that gives out heat (like burning or hand warmers) is called…",
+   "answer": "exothermic",
+   "distractors": [
+    "endothermic",
+    "reversible",
+    "neutral"
+   ],
+   "explain": "Exo = out. Endothermic reactions take heat IN and feel cold, like the sherbet fizzing on your tongue."
+  },
+  {
+   "id": "science.rx.endo",
+   "topic": "science.reactions",
+   "kind": "fact",
+   "prompt": "Photosynthesis and the reaction in a cold pack take energy IN from their surroundings. They are…",
+   "answer": "endothermic",
+   "distractors": [
+    "exothermic",
+    "explosive",
+    "catalytic"
+   ],
+   "explain": "Endo = in. The surroundings get colder."
+  },
+  {
+   "id": "science.rx.signs",
+   "topic": "science.reactions",
+   "kind": "mcq",
+   "prompt": "Which is NOT a sign that a chemical reaction has happened?",
+   "options": [
+    {
+     "text": "Ice melting into water",
+     "correct": true
+    },
+    {
+     "text": "A colour change when two clear liquids are mixed",
+     "correct": false,
+     "feedback": "A colour change usually means a new substance has formed."
+    },
+    {
+     "text": "Fizzing as a gas is made",
+     "correct": false,
+     "feedback": "Bubbles of a new gas are a classic sign."
+    }
+   ],
+   "explain": "Melting is a physical change: water is still water. Chemical reactions make NEW substances: look for colour change, gas, a precipitate or a temperature change.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.rx.oxidation",
+   "topic": "science.reactions",
+   "kind": "fact",
+   "prompt": "When magnesium burns it gains oxygen to make magnesium oxide. Gaining oxygen is called…",
+   "answer": "oxidation",
+   "distractors": [
+    "reduction",
+    "neutralisation",
+    "distillation"
+   ],
+   "explain": "Rusting is slow oxidation of iron. Burning is fast oxidation."
+  },
+  {
+   "id": "science.rx.acid-metal",
+   "topic": "science.reactions",
+   "kind": "fact",
+   "prompt": "Complete: acid + metal → salt + ___",
+   "answer": "hydrogen",
+   "distractors": [
+    "water",
+    "carbon dioxide",
+    "oxygen"
+   ],
+   "explain": "Test for hydrogen: a lit splint gives a squeaky pop."
+  },
+  {
+   "id": "science.rx.acid-carb",
+   "topic": "science.reactions",
+   "kind": "fact",
+   "prompt": "Complete: acid + carbonate → salt + water + ___",
+   "answer": "carbon dioxide",
+   "distractors": [
+    "hydrogen",
+    "oxygen",
+    "nitrogen"
+   ],
+   "explain": "Test for carbon dioxide: it turns limewater cloudy.",
+   "accept": [
+    "co2"
+   ]
+  },
+  {
+   "id": "science.rx.decomp",
+   "topic": "science.reactions",
+   "kind": "fact",
+   "prompt": "Heating green copper carbonate turns it into black copper oxide and a gas. What is this kind of reaction called?",
+   "answer": "thermal decomposition",
+   "distractors": [
+    "combustion",
+    "neutralisation",
+    "oxidation"
+   ],
+   "explain": "Thermal = heat; decomposition = breaking down. One substance becomes two.",
+   "accept": [
+    "decomposition"
+   ]
+  },
+  {
+   "id": "science.dg.order",
+   "topic": "science.digestion",
+   "kind": "order",
+   "prompt": "Put the parts of the digestive system in the order food passes through them.",
+   "items": [
+    "mouth",
+    "oesophagus",
+    "stomach",
+    "small intestine",
+    "large intestine",
+    "rectum"
+   ],
+   "labels": null,
+   "explain": "Mouth → oesophagus (gullet) → stomach → small intestine (where most digestion and absorption happens) → large intestine (water absorbed) → rectum."
+  },
+  {
+   "id": "science.dg.enzyme",
+   "topic": "science.digestion",
+   "kind": "fact",
+   "prompt": "What do we call the biological catalysts that break large food molecules into small ones?",
+   "answer": "enzymes",
+   "distractors": [
+    "hormones",
+    "vitamins",
+    "antibodies"
+   ],
+   "explain": "Enzymes speed up digestion without being used up. Each works on one kind of food."
+  },
+  {
+   "id": "science.dg.amylase",
+   "topic": "science.digestion",
+   "kind": "fact",
+   "prompt": "Which enzyme, found in saliva, breaks starch down into sugars?",
+   "answer": "amylase",
+   "distractors": [
+    "protease",
+    "lipase",
+    "bile"
+   ],
+   "explain": "Chew bread for a minute and it starts to taste sweet: amylase at work."
+  },
+  {
+   "id": "science.dg.protease",
+   "topic": "science.digestion",
+   "kind": "fact",
+   "prompt": "Which enzyme breaks proteins down into amino acids?",
+   "answer": "protease",
+   "distractors": [
+    "amylase",
+    "lipase",
+    "cellulase"
+   ],
+   "explain": "Protease works in the stomach (where acid helps) and the small intestine."
+  },
+  {
+   "id": "science.dg.lipase",
+   "topic": "science.digestion",
+   "kind": "fact",
+   "prompt": "Which enzyme breaks fats down into fatty acids and glycerol?",
+   "answer": "lipase",
+   "distractors": [
+    "amylase",
+    "protease",
+    "insulin"
+   ],
+   "explain": "Lipids = fats. Bile from the liver breaks fat into droplets first so lipase can work faster."
+  },
+  {
+   "id": "science.dg.small",
+   "topic": "science.digestion",
+   "kind": "mcq",
+   "prompt": "Why is the small intestine lined with millions of tiny finger-like villi?",
+   "options": [
+    {
+     "text": "To give a huge surface area for absorbing digested food into the blood",
+     "correct": true
+    },
+    {
+     "text": "To grind food up",
+     "correct": false,
+     "feedback": "Grinding happens in the mouth and stomach. Villi absorb."
+    },
+    {
+     "text": "To store food",
+     "correct": false,
+     "feedback": "Food is not stored there; it is absorbed."
+    }
+   ],
+   "explain": "Flattened out, the villi would cover a tennis court. More surface means faster absorption.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.dg.large",
+   "topic": "science.digestion",
+   "kind": "fact",
+   "prompt": "What is absorbed in the large intestine?",
+   "answer": "water",
+   "distractors": [
+    "protein",
+    "sugar",
+    "fat"
+   ],
+   "explain": "By the time food reaches the large intestine the nutrients are gone; water is reabsorbed and the rest becomes faeces."
+  },
+  {
+   "id": "science.dg.iodine",
+   "topic": "science.digestion",
+   "kind": "fact",
+   "prompt": "Which food test turns from orange-brown to blue-black if starch is present?",
+   "answer": "the iodine test",
+   "distractors": [
+    "Benedict’s test",
+    "the biuret test",
+    "the limewater test"
+   ],
+   "explain": "A drop of iodine on bread or potato goes blue-black.",
+   "accept": [
+    "iodine"
+   ]
+  },
+  {
+   "id": "science.dg.benedict",
+   "topic": "science.digestion",
+   "kind": "fact",
+   "prompt": "Which food test, heated, turns from blue to brick red if sugar is present?",
+   "answer": "Benedict’s test",
+   "distractors": [
+    "the iodine test",
+    "the biuret test",
+    "the flame test"
+   ],
+   "explain": "Benedict’s solution needs heating in a water bath. Green, yellow, orange, brick red: more colour means more sugar.",
+   "accept": [
+    "benedicts",
+    "benedict’s",
+    "benedict"
+   ]
+  },
+  {
+   "id": "science.dg.biuret",
+   "topic": "science.digestion",
+   "kind": "fact",
+   "prompt": "Which food test turns from blue to purple (lilac) if protein is present?",
+   "answer": "the biuret test",
+   "distractors": [
+    "the iodine test",
+    "Benedict’s test",
+    "the starch test"
+   ],
+   "explain": "Biuret solution on egg white goes lilac.",
+   "accept": [
+    "biuret"
+   ]
+  },
+  {
+   "id": "science.dg.nutrients",
+   "topic": "science.digestion",
+   "kind": "mcq",
+   "prompt": "Which nutrient is mainly for growth and repair?",
+   "options": [
+    {
+     "text": "Protein",
+     "correct": true
+    },
+    {
+     "text": "Carbohydrate",
+     "correct": false,
+     "feedback": "Carbohydrates are the main energy source."
+    },
+    {
+     "text": "Fibre",
+     "correct": false,
+     "feedback": "Fibre keeps food moving through the gut; it is not digested."
+    }
+   ],
+   "explain": "Carbohydrates and fats for energy; protein for growth and repair; vitamins and minerals in small amounts; fibre and water to keep everything working.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.dg.scurvy",
+   "topic": "science.digestion",
+   "kind": "fact",
+   "prompt": "Sailors who went months without fruit or vegetables got bleeding gums and loose teeth. Which vitamin were they missing?",
+   "answer": "vitamin C",
+   "distractors": [
+    "vitamin A",
+    "vitamin D",
+    "iron"
+   ],
+   "explain": "Scurvy. The Royal Navy eventually issued lime juice, which is why British sailors were called “limeys”.",
+   "accept": [
+    "c"
+   ]
+  },
+  {
+   "id": "science.li.speed",
+   "topic": "science.light-2",
+   "kind": "fact",
+   "prompt": "About how fast does light travel?",
+   "answer": "300,000 km per second",
+   "distractors": [
+    "300 km per second",
+    "300,000 km per hour",
+    "340 m per second"
+   ],
+   "explain": "Light from the Sun takes about 8 minutes to reach us. Sound travels at only 340 m/s, which is why you see lightning before you hear thunder.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.li.law",
+   "topic": "science.light-2",
+   "kind": "fact",
+   "prompt": "The law of reflection says the angle of incidence equals the angle of…",
+   "answer": "reflection",
+   "distractors": [
+    "refraction",
+    "incidence",
+    "diffraction"
+   ],
+   "explain": "Both angles are measured from the normal, an imaginary line at 90° to the mirror."
+  },
+  {
+   "id": "science.li.normal",
+   "topic": "science.light-2",
+   "kind": "fact",
+   "prompt": "In ray diagrams, what is the imaginary line drawn at right angles to a mirror’s surface called?",
+   "answer": "the normal",
+   "distractors": [
+    "the axis",
+    "the ray",
+    "the tangent"
+   ],
+   "explain": "Angles of incidence and reflection are always measured from the normal, not from the mirror.",
+   "accept": [
+    "normal"
+   ]
+  },
+  {
+   "id": "science.li.refract",
+   "topic": "science.light-2",
+   "kind": "fact",
+   "prompt": "Light bending as it passes from air into water or glass is called…",
+   "answer": "refraction",
+   "distractors": [
+    "reflection",
+    "dispersion",
+    "absorption"
+   ],
+   "explain": "Light slows down in glass and water, which bends it. That is why a straw looks broken in a glass of water and why lenses work."
+  },
+  {
+   "id": "science.li.prism",
+   "topic": "science.light-2",
+   "kind": "mcq",
+   "prompt": "Why does a prism split white light into a spectrum?",
+   "options": [
+    {
+     "text": "Each colour is refracted by a slightly different amount; violet bends most, red least",
+     "correct": true
+    },
+    {
+     "text": "The glass adds colours",
+     "correct": false,
+     "feedback": "The colours were already there. White light is a mixture of all of them."
+    },
+    {
+     "text": "The prism reflects different colours in different directions",
+     "correct": false,
+     "feedback": "It is refraction, not reflection, that separates them."
+    }
+   ],
+   "explain": "Newton showed this in 1666 and recombined the colours into white with a second prism. Rainbows are raindrops doing the same job.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.li.spectrum",
+   "topic": "science.light-2",
+   "kind": "fact",
+   "prompt": "Put the colours of the visible spectrum in order from the one that bends LEAST to the one that bends MOST.",
+   "answer": "red, orange, yellow, green, blue, indigo, violet",
+   "distractors": [
+    "violet, indigo, blue, green, yellow, orange, red",
+    "red, yellow, orange, green, blue, violet, indigo",
+    "blue, green, red, yellow, orange, violet, indigo"
+   ],
+   "explain": "ROY G BIV. Red bends least and violet most.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.li.red",
+   "topic": "science.light-2",
+   "kind": "mcq",
+   "prompt": "Why does a red jumper look red in white light?",
+   "options": [
+    {
+     "text": "It reflects red light and absorbs the other colours",
+     "correct": true
+    },
+    {
+     "text": "It gives out red light",
+     "correct": false,
+     "feedback": "Jumpers are not luminous. They reflect some colours and absorb others."
+    },
+    {
+     "text": "It absorbs red light",
+     "correct": false,
+     "feedback": "The opposite: what is absorbed is what you do NOT see."
+    }
+   ],
+   "explain": "A white object reflects every colour; a black one absorbs them all. Under pure blue light, a red jumper looks black because there is no red to reflect.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.li.filter",
+   "topic": "science.light-2",
+   "kind": "fact",
+   "prompt": "A green filter is placed in front of a torch. Which colours pass through?",
+   "answer": "only green",
+   "distractors": [
+    "all colours except green",
+    "red and blue",
+    "white light"
+   ],
+   "explain": "Filters work by absorbing: a green filter absorbs every colour except green, which it transmits.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.li.retina",
+   "topic": "science.light-2",
+   "kind": "fact",
+   "prompt": "Which part of the eye detects light and sends signals to the brain?",
+   "answer": "the retina",
+   "distractors": [
+    "the pupil",
+    "the iris",
+    "the lens"
+   ],
+   "explain": "The lens focuses an upside-down image onto the retina at the back of the eye. The brain turns it the right way up.",
+   "accept": [
+    "retina"
+   ]
+  },
+  {
+   "id": "science.li.pupil",
+   "topic": "science.light-2",
+   "kind": "fact",
+   "prompt": "Which part of the eye is the hole that lets light in, and gets smaller in bright light?",
+   "answer": "the pupil",
+   "distractors": [
+    "the iris",
+    "the retina",
+    "the cornea"
+   ],
+   "explain": "The iris is the coloured muscle that changes the pupil’s size.",
+   "accept": [
+    "pupil"
+   ]
+  },
+  {
+   "id": "science.ci.ohm",
+   "topic": "science.circuits",
+   "kind": "template",
+   "gen": "ohm",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.4,
+    0.4,
+    1
+   ],
+   "credits": [
+    "maths.equations"
+   ]
+  },
+  {
+   "id": "science.ci.current",
+   "topic": "science.circuits",
+   "kind": "fact",
+   "prompt": "What is measured in amps (A)?",
+   "answer": "current",
+   "distractors": [
+    "voltage",
+    "resistance",
+    "power"
+   ],
+   "explain": "Current is the rate of flow of charge: how much charge passes a point each second."
+  },
+  {
+   "id": "science.ci.voltage",
+   "topic": "science.circuits",
+   "kind": "fact",
+   "prompt": "Potential difference (voltage) is measured in…",
+   "answer": "volts (V)",
+   "distractors": [
+    "amps (A)",
+    "ohms (Ω)",
+    "watts (W)"
+   ],
+   "explain": "Voltage is the “push” that drives current round the circuit, and how much energy each bit of charge carries.",
+   "accept": [
+    "volts",
+    "v"
+   ]
+  },
+  {
+   "id": "science.ci.resistance",
+   "topic": "science.circuits",
+   "kind": "fact",
+   "prompt": "Resistance is measured in…",
+   "answer": "ohms (Ω)",
+   "distractors": [
+    "volts (V)",
+    "amps (A)",
+    "joules (J)"
+   ],
+   "explain": "Resistance opposes current. A thin, long wire has more resistance than a short, thick one.",
+   "accept": [
+    "ohms",
+    "ohm"
+   ]
+  },
+  {
+   "id": "science.ci.series",
+   "topic": "science.circuits",
+   "kind": "mcq",
+   "prompt": "In a series circuit with two bulbs, which statement is true?",
+   "options": [
+    {
+     "text": "The current is the same through both bulbs, and the battery’s voltage is shared between them",
+     "correct": true
+    },
+    {
+     "text": "Each bulb gets the full battery voltage",
+     "correct": false,
+     "feedback": "That is parallel. In series the voltage is shared."
+    },
+    {
+     "text": "The current is used up by the first bulb",
+     "correct": false,
+     "feedback": "Current is never used up: the same current flows all the way round."
+    }
+   ],
+   "explain": "One loop: same current everywhere, voltages add up to the supply. Remove one bulb and the other goes out.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ci.parallel",
+   "topic": "science.circuits",
+   "kind": "mcq",
+   "prompt": "In a parallel circuit with two bulbs, which statement is true?",
+   "options": [
+    {
+     "text": "Each bulb gets the full battery voltage, and the current splits between the branches",
+     "correct": true
+    },
+    {
+     "text": "The bulbs share the voltage",
+     "correct": false,
+     "feedback": "That is series. In parallel each branch gets the full voltage."
+    },
+    {
+     "text": "If one bulb breaks the other goes out",
+     "correct": false,
+     "feedback": "Each branch is its own loop, so the other keeps working. That is why homes are wired in parallel."
+    }
+   ],
+   "explain": "Parallel: same voltage across each branch, currents add up at the junctions.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ci.ammeter",
+   "topic": "science.circuits",
+   "kind": "fact",
+   "prompt": "How should an ammeter be connected to measure the current through a bulb?",
+   "answer": "in series with the bulb",
+   "distractors": [
+    "in parallel across the bulb",
+    "across the battery",
+    "anywhere; it does not matter"
+   ],
+   "explain": "Current must flow THROUGH an ammeter. A voltmeter goes in parallel, ACROSS the component.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ci.voltmeter",
+   "topic": "science.circuits",
+   "kind": "fact",
+   "prompt": "How should a voltmeter be connected to measure the potential difference across a bulb?",
+   "answer": "in parallel across the bulb",
+   "distractors": [
+    "in series with the bulb",
+    "in series with the battery",
+    "inside the bulb"
+   ],
+   "explain": "A voltmeter compares the two sides of a component, so it connects across it.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ci.wire",
+   "topic": "science.circuits",
+   "kind": "mcq",
+   "prompt": "Which change would INCREASE the resistance of a wire?",
+   "options": [
+    {
+     "text": "Making it longer and thinner",
+     "correct": true
+    },
+    {
+     "text": "Making it shorter and thicker",
+     "correct": false,
+     "feedback": "That decreases resistance."
+    },
+    {
+     "text": "Painting it red",
+     "correct": false,
+     "feedback": "Colour makes no difference."
+    }
+   ],
+   "explain": "Longer wire: electrons collide with more atoms. Thinner wire: less room to flow. Heating a wire also raises its resistance.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ci.fuse",
+   "topic": "science.circuits",
+   "kind": "fact",
+   "prompt": "Which safety device melts and breaks the circuit if the current gets too high?",
+   "answer": "a fuse",
+   "distractors": [
+    "a resistor",
+    "a switch",
+    "a cell"
+   ],
+   "explain": "A fuse is a thin wire that melts at a set current. Circuit breakers do the same job but can be reset.",
+   "accept": [
+    "fuse"
+   ]
+  }
+ ]
+}

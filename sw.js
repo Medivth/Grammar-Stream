@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = '5d8020403329';
+const VERSION = '2b54cdf36cb8';
 const FILES = [
  "./",
  "./index.html",
@@ -28,7 +28,9 @@ const FILES = [
  "./js/gen/index.js",
  "./js/gen/maths.js",
  "./js/gen/maths2.js",
+ "./js/gen/maths3.js",
  "./js/gen/science.js",
+ "./js/gen/science2.js",
  "./js/gen/sprint.js",
  "./js/gen/synoptic.js",
  "./js/main.js",
@@ -52,14 +54,17 @@ const FILES = [
  "./content/english/reading-writing.json",
  "./content/english/reading.json",
  "./content/english/spelling.json",
+ "./content/english/stretch.json",
  "./content/english/vocabulary.json",
  "./content/english/writing.json",
  "./content/english/year7.json",
  "./content/geography/by-numbers.json",
  "./content/geography/core.json",
+ "./content/geography/stretch.json",
  "./content/geography/year7.json",
  "./content/history/core.json",
  "./content/history/joined-up.json",
+ "./content/history/stretch.json",
  "./content/history/timeline.json",
  "./content/history/year7.json",
  "./content/index.json",
@@ -72,8 +77,10 @@ const FILES = [
  "./content/maps/world.json",
  "./content/maths/averages.json",
  "./content/maths/core.json",
+ "./content/maths/stretch.json",
  "./content/science/core.json",
  "./content/science/joined-up.json",
+ "./content/science/stretch.json",
  "./content/science/year7.json",
  "./fonts/atkinson-hyperlegible-latin-400-normal.woff2",
  "./fonts/atkinson-hyperlegible-latin-700-normal.woff2",

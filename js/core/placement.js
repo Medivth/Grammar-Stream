@@ -19,7 +19,7 @@ export function topoOrder(db, subject) {
   const out = [], seen = new Set();
   const visit = (id) => {
     const t = db.topics[id];
-    if (seen.has(id) || !t || t.subject !== subject || t.prereqs.some((p) => db.topics[p]?.subject !== subject)) return;
+    if (seen.has(id) || !t || t.subject !== subject || t.tier === 'stretch' || t.prereqs.some((p) => db.topics[p]?.subject !== subject)) return;
     seen.add(id);
     for (const p of db.topics[id].prereqs) visit(p);
     out.push(id);

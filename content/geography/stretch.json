@@ -1,0 +1,1060 @@
+{
+ "subject": "geography",
+ "deck": "stretch",
+ "topics": [
+  {
+   "id": "geography.coasts",
+   "title": "Coasts: erosion and landforms",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "geography.rivers"
+   ],
+   "batch": 6,
+   "intro": "The sea is a sculptor. Waves attack cliffs in four ways, carve caves into arches and stacks, and carry sand along the beach grain by grain.",
+   "teach": "Explain how a cave becomes a stack.",
+   "talk": "Next time you are at a beach, ask her which way the groynes show the sand is moving."
+  },
+  {
+   "id": "geography.development",
+   "title": "Development: measuring how countries differ",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "geography.people",
+    "geography.by-numbers"
+   ],
+   "links": [
+    "maths"
+   ],
+   "batch": 6,
+   "intro": "How do we compare rich and poor countries fairly? Geographers use indicators: income, life expectancy, literacy, infant mortality. Each tells part of the story.",
+   "teach": "Explain why income alone is not a good measure of development.",
+   "talk": "Ask her which single number she would use to decide how well a country looks after its people."
+  },
+  {
+   "id": "geography.weather-2",
+   "title": "Weather systems: pressure, fronts and forecasts",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "geography.weather",
+    "geography.biomes"
+   ],
+   "batch": 6,
+   "intro": "Why does the UK get so much changeable weather? Low pressure brings cloud and rain; high pressure brings clear skies. Fronts are the battle lines between warm and cold air.",
+   "teach": "Explain the difference between high and low pressure weather.",
+   "talk": "Look at tonight’s weather map together and find the fronts."
+  },
+  {
+   "id": "geography.world-2",
+   "title": "World: harder countries and capitals",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "geography.asia",
+    "geography.africa",
+    "geography.americas"
+   ],
+   "batch": 6,
+   "intro": "Beyond the famous names: eighteen more countries that a well-travelled mind should be able to place on a map.",
+   "teach": "Point to three countries on a world map that most people could not find.",
+   "talk": "Ask her the capital of Mongolia (it is a tongue-twister)."
+  }
+ ],
+ "items": [
+  {
+   "id": "geography.co.d1",
+   "topic": "geography.coasts",
+   "kind": "mcq",
+   "prompt": "Which statement about waves is true?",
+   "options": [
+    {
+     "text": "Waves are made by wind blowing across the sea; the further it blows, the bigger the waves",
+     "correct": true
+    },
+    {
+     "text": "Waves are caused by the Moon",
+     "correct": false,
+     "feedback": "The Moon causes tides, not waves."
+    },
+    {
+     "text": "Waves move water across the ocean",
+     "correct": false,
+     "feedback": "Energy moves across; the water mostly goes round in circles."
+    }
+   ],
+   "explain": "The distance wind blows over open water is called the fetch. A long fetch (the Atlantic hitting Cornwall) means big waves.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.co.hydraulic",
+   "topic": "geography.coasts",
+   "kind": "fact",
+   "prompt": "Which type of erosion is the sheer force of waves smashing into cracks and compressing the air inside?",
+   "answer": "hydraulic action",
+   "distractors": [
+    "abrasion",
+    "attrition",
+    "solution"
+   ],
+   "explain": "Hydraulic action: water and trapped air are forced into cracks, which widen until the rock breaks."
+  },
+  {
+   "id": "geography.co.abrasion",
+   "topic": "geography.coasts",
+   "kind": "fact",
+   "prompt": "Waves hurling sand and pebbles against a cliff, wearing it away like sandpaper, is called…",
+   "answer": "abrasion",
+   "distractors": [
+    "attrition",
+    "hydraulic action",
+    "deposition"
+   ],
+   "explain": "Abrasion (also called corrasion) is the sandpaper effect."
+  },
+  {
+   "id": "geography.co.attrition",
+   "topic": "geography.coasts",
+   "kind": "fact",
+   "prompt": "Pebbles knocking against each other and becoming smaller and rounder is called…",
+   "answer": "attrition",
+   "distractors": [
+    "abrasion",
+    "solution",
+    "traction"
+   ],
+   "explain": "Attrition is why beach pebbles are smooth: they wear each other down."
+  },
+  {
+   "id": "geography.co.stack",
+   "topic": "geography.coasts",
+   "kind": "order",
+   "prompt": "Put the stages of headland erosion in order.",
+   "items": [
+    "crack",
+    "cave",
+    "arch",
+    "stack",
+    "stump"
+   ],
+   "labels": null,
+   "explain": "Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack is worn down to a stump."
+  },
+  {
+   "id": "geography.co.headland",
+   "topic": "geography.coasts",
+   "kind": "mcq",
+   "prompt": "Why do headlands and bays form along some coasts?",
+   "options": [
+    {
+     "text": "Bands of hard and soft rock: the soft rock erodes faster into bays, leaving hard rock as headlands",
+     "correct": true
+    },
+    {
+     "text": "Rivers cut the bays",
+     "correct": false,
+     "feedback": "It is the sea eroding softer rock faster."
+    },
+    {
+     "text": "People dig out the bays for harbours",
+     "correct": false,
+     "feedback": "Harbours use natural bays; they do not create them."
+    }
+   ],
+   "explain": "Where rock types alternate along the coast, the sea picks out the soft rock. Swanage Bay and Durlston Head in Dorset are a classic example.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.co.longshore",
+   "topic": "geography.coasts",
+   "kind": "fact",
+   "prompt": "What is the zigzag movement of sand along a beach, driven by waves hitting at an angle, called?",
+   "answer": "longshore drift",
+   "distractors": [
+    "attrition",
+    "the fetch",
+    "a spit"
+   ],
+   "explain": "Waves swash up the beach at an angle and drain straight back; each wave moves sand a little further along.",
+   "accept": [
+    "long shore drift"
+   ]
+  },
+  {
+   "id": "geography.co.spit",
+   "topic": "geography.coasts",
+   "kind": "fact",
+   "prompt": "A long, narrow ridge of sand built out from the coast by longshore drift is called a…",
+   "answer": "spit",
+   "distractors": [
+    "stack",
+    "bay",
+    "groyne"
+   ],
+   "explain": "Spurn Head in Yorkshire is a spit 5 km long."
+  },
+  {
+   "id": "geography.co.groyne",
+   "topic": "geography.coasts",
+   "kind": "fact",
+   "prompt": "What are the wooden or stone walls built across a beach to trap sand called?",
+   "answer": "groynes",
+   "distractors": [
+    "piers",
+    "stacks",
+    "sea walls"
+   ],
+   "explain": "Groynes stop longshore drift carrying the beach away. The sand piles up on one side, showing the direction of drift."
+  },
+  {
+   "id": "geography.co.manage",
+   "topic": "geography.coasts",
+   "kind": "mcq",
+   "prompt": "A village on a crumbling clay cliff asks for a sea wall. Which is a GOOD reason to say no?",
+   "options": [
+    {
+     "text": "A wall would stop sand reaching the beach further along, so another place would erode faster",
+     "correct": true
+    },
+    {
+     "text": "Sea walls never work",
+     "correct": false,
+     "feedback": "They work, at a cost. The issue is knock-on effects."
+    },
+    {
+     "text": "Villages are not worth protecting",
+     "correct": false,
+     "feedback": "That is a value judgement, not a geographical reason. Decisions weigh costs against the value of what is protected."
+    }
+   ],
+   "explain": "Protecting one stretch of coast often starves another of sediment. Some places now choose “managed retreat”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.dv.d1",
+   "topic": "geography.development",
+   "kind": "mcq",
+   "prompt": "Which country is most developed, and which indicator tells you LEAST on its own?",
+   "options": [
+    {
+     "text": "Country A is most developed; income alone can hide inequality and how money is spent",
+     "correct": true
+    },
+    {
+     "text": "Country C, because low income means people are closer to nature",
+     "correct": false,
+     "feedback": "Development measures how long and healthy lives are. Country C has the shortest lives and highest infant deaths."
+    },
+    {
+     "text": "It is impossible to tell",
+     "correct": false,
+     "feedback": "Every indicator points the same way here: A, then B, then C."
+    }
+   ],
+   "explain": "Geographers combine indicators (the Human Development Index uses income, life expectancy and education) because any one number can mislead.",
+   "passage": "Development data for three countries (rounded)\n\nCountry A: income per person $65,000 · life expectancy 81 · 99% of adults can read · 6 babies in 1,000 die before age 1\nCountry B: income per person $9,000 · life expectancy 73 · 92% of adults can read · 22 babies in 1,000 die before age 1\nCountry C: income per person $800 · life expectancy 59 · 44% of adults can read · 70 babies in 1,000 die before age 1",
+   "passageSource": "Invented but realistic figures"
+  },
+  {
+   "id": "geography.dv.infant",
+   "topic": "geography.development",
+   "kind": "fact",
+   "prompt": "In Country C, 70 babies in every 1,000 die before their first birthday. What percentage is that?",
+   "answer": "7%",
+   "distractors": [
+    "70%",
+    "0.7%",
+    "7.7%"
+   ],
+   "explain": "70 ÷ 1000 × 100 = 7%. Infant mortality is one of the most sensitive measures of development.",
+   "passage": "Development data for three countries (rounded)\n\nCountry A: income per person $65,000 · life expectancy 81 · 99% of adults can read · 6 babies in 1,000 die before age 1\nCountry B: income per person $9,000 · life expectancy 73 · 92% of adults can read · 22 babies in 1,000 die before age 1\nCountry C: income per person $800 · life expectancy 59 · 44% of adults can read · 70 babies in 1,000 die before age 1",
+   "passageSource": "Invented but realistic figures",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.dv.life",
+   "topic": "geography.development",
+   "kind": "mcq",
+   "prompt": "Why is life expectancy such a useful development indicator?",
+   "options": [
+    {
+     "text": "It sums up health care, food, clean water and safety in one number",
+     "correct": true
+    },
+    {
+     "text": "Because it is easy to guess",
+     "correct": false,
+     "feedback": "It is calculated from careful records of births and deaths."
+    },
+    {
+     "text": "Because rich people live for ever",
+     "correct": false,
+     "feedback": "Nobody does, but people in richer countries live about twenty years longer on average."
+    }
+   ],
+   "explain": "A long average life needs clean water, enough food, vaccinations, doctors and peace. It captures a lot at once.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.dv.hdi",
+   "topic": "geography.development",
+   "kind": "fact",
+   "prompt": "Which UN measure combines income, life expectancy and years of schooling into one number between 0 and 1?",
+   "answer": "the Human Development Index (HDI)",
+   "distractors": [
+    "GDP",
+    "the birth rate",
+    "the Richter scale"
+   ],
+   "explain": "HDI: Norway and Switzerland are near 0.96; the lowest countries are below 0.4.",
+   "accept": [
+    "hdi",
+    "human development index"
+   ]
+  },
+  {
+   "id": "geography.dv.gdp",
+   "topic": "geography.development",
+   "kind": "fact",
+   "prompt": "What does GDP per capita measure?",
+   "answer": "the value of everything a country produces in a year, divided by its population",
+   "distractors": [
+    "the number of cars per family",
+    "the average height of adults",
+    "the amount of gold a country owns"
+   ],
+   "explain": "Per capita means per head. It is the most common measure of wealth, but it says nothing about how equally the wealth is shared.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.dv.lic",
+   "topic": "geography.development",
+   "kind": "fact",
+   "prompt": "What do the letters LIC stand for in geography?",
+   "answer": "low-income country",
+   "distractors": [
+    "large island country",
+    "local industry centre",
+    "low-inland coast"
+   ],
+   "explain": "LICs, NEEs (newly emerging economies such as Brazil and India) and HICs (high-income countries) replaced the old “third world” labels.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.dv.birth",
+   "topic": "geography.development",
+   "kind": "mcq",
+   "prompt": "As countries develop, birth rates usually fall. Why?",
+   "options": [
+    {
+     "text": "Children are more likely to survive, more girls are educated, and families no longer need many children to work the land",
+     "correct": true
+    },
+    {
+     "text": "Governments ban large families",
+     "correct": false,
+     "feedback": "A few have tried, but the fall happens everywhere development happens."
+    },
+    {
+     "text": "People stop wanting children",
+     "correct": false,
+     "feedback": "Families get smaller, not childless. Education of girls is the strongest single factor."
+    }
+   ],
+   "explain": "The demographic transition: high birth and death rates, then death rates fall, then birth rates follow.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.dv.trade",
+   "topic": "geography.development",
+   "kind": "mcq",
+   "prompt": "A country sells raw cocoa beans for $2 a kilo. The chocolate made from them sells for $20 a kilo abroad. What does this show about development?",
+   "options": [
+    {
+     "text": "Countries that export raw materials earn far less than those that process them",
+     "correct": true
+    },
+    {
+     "text": "Cocoa is worthless",
+     "correct": false,
+     "feedback": "It is valuable, but most of the value is added later by processing and branding."
+    },
+    {
+     "text": "Chocolate is overpriced",
+     "correct": false,
+     "feedback": "The point is where the value and jobs end up."
+    }
+   ],
+   "explain": "Many LICs export raw materials cheaply and import manufactured goods dearly, which makes it hard to grow richer. Fair trade schemes try to shift the balance.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.ws.low",
+   "topic": "geography.weather-2",
+   "kind": "fact",
+   "prompt": "Which kind of pressure system brings cloud, wind and rain to the UK?",
+   "answer": "low pressure (a depression)",
+   "distractors": [
+    "high pressure (an anticyclone)",
+    "a monsoon",
+    "a tornado"
+   ],
+   "explain": "Air rises in a low, cools, and its water vapour condenses into cloud and rain.",
+   "accept": [
+    "low pressure",
+    "a depression",
+    "depression",
+    "low"
+   ]
+  },
+  {
+   "id": "geography.ws.high",
+   "topic": "geography.weather-2",
+   "kind": "fact",
+   "prompt": "Which kind of pressure system brings clear skies, light winds, hot summer days and frosty winter nights?",
+   "answer": "high pressure (an anticyclone)",
+   "distractors": [
+    "low pressure (a depression)",
+    "a front",
+    "a hurricane"
+   ],
+   "explain": "In a high, air sinks and warms, so clouds cannot form. Clear nights lose heat quickly: frost in winter.",
+   "accept": [
+    "high pressure",
+    "an anticyclone",
+    "anticyclone",
+    "high"
+   ]
+  },
+  {
+   "id": "geography.ws.front",
+   "topic": "geography.weather-2",
+   "kind": "fact",
+   "prompt": "What is the boundary between a mass of warm air and a mass of cold air called?",
+   "answer": "a front",
+   "distractors": [
+    "a trough",
+    "an isobar",
+    "a jet"
+   ],
+   "explain": "Warm fronts bring steady rain as warm air slides up over cold; cold fronts bring short heavy showers as cold air undercuts warm.",
+   "accept": [
+    "front",
+    "a weather front",
+    "weather front"
+   ]
+  },
+  {
+   "id": "geography.ws.isobar",
+   "topic": "geography.weather-2",
+   "kind": "fact",
+   "prompt": "On a weather map, what are the lines joining places with the same air pressure called?",
+   "answer": "isobars",
+   "distractors": [
+    "contours",
+    "fronts",
+    "latitudes"
+   ],
+   "explain": "Close isobars mean a big pressure difference over a short distance, which means strong winds."
+  },
+  {
+   "id": "geography.ws.wind",
+   "topic": "geography.weather-2",
+   "kind": "mcq",
+   "prompt": "Where are winds strongest on a weather map?",
+   "options": [
+    {
+     "text": "Where the isobars are closest together",
+     "correct": true
+    },
+    {
+     "text": "Where the isobars are far apart",
+     "correct": false,
+     "feedback": "Widely spaced isobars mean a gentle pressure gradient and light winds."
+    },
+    {
+     "text": "At the centre of a high",
+     "correct": false,
+     "feedback": "The centre of a high is usually calm."
+    }
+   ],
+   "explain": "Wind is air moving from high to low pressure. The steeper the pressure change, the faster the wind.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.ws.uk",
+   "topic": "geography.weather-2",
+   "kind": "mcq",
+   "prompt": "Why is UK weather so changeable?",
+   "options": [
+    {
+     "text": "It sits where warm tropical air and cold polar air meet, under a belt of westerly winds that bring one depression after another from the Atlantic",
+     "correct": true
+    },
+    {
+     "text": "Because it is an island",
+     "correct": false,
+     "feedback": "Being an island matters (mild, wet), but the changeability comes from the fronts and depressions passing over."
+    },
+    {
+     "text": "Because of the Gulf Stream only",
+     "correct": false,
+     "feedback": "The Gulf Stream keeps the UK mild, not changeable."
+    }
+   ],
+   "explain": "The polar front runs near the UK. Depressions form along it and are steered east by the jet stream.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.ws.prevailing",
+   "topic": "geography.weather-2",
+   "kind": "fact",
+   "prompt": "From which direction does the UK’s prevailing wind blow?",
+   "answer": "the south-west",
+   "distractors": [
+    "the north-east",
+    "the east",
+    "the north"
+   ],
+   "explain": "South-westerlies off the Atlantic: mild and moist, which is why the west is wetter than the east.",
+   "accept": [
+    "south-west",
+    "southwest",
+    "sw",
+    "south west"
+   ]
+  },
+  {
+   "id": "geography.ws.forecast",
+   "topic": "geography.weather-2",
+   "kind": "mcq",
+   "prompt": "A forecaster sees a deep low approaching from the Atlantic with tightly packed isobars. What should she expect?",
+   "options": [
+    {
+     "text": "Strong winds and heavy rain, possibly a named storm",
+     "correct": true
+    },
+    {
+     "text": "A heatwave",
+     "correct": false,
+     "feedback": "Heatwaves come with high pressure."
+    },
+    {
+     "text": "Fog and frost",
+     "correct": false,
+     "feedback": "Those need calm, clear conditions: a high."
+    }
+   ],
+   "explain": "The Met Office names storms when a deep depression is likely to cause damage. The deeper the low, the tighter the isobars, the stronger the wind.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.w2.idn",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IDN",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Indonesia",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Indonesia. Over 17,000 islands and 270 million people: the world’s fourth most populous country."
+  },
+  {
+   "id": "geography.w2.cap.idn",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Indonesia?",
+   "answer": "Jakarta",
+   "distractors": [
+    "Manila",
+    "Kuala Lumpur",
+    "Ulaanbaatar"
+   ],
+   "explain": "Jakarta is the capital of Indonesia. Over 17,000 islands and 270 million people: the world’s fourth most populous country.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.phl",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "PHL",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Philippines",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Philippines. More than 7,000 islands in the western Pacific."
+  },
+  {
+   "id": "geography.w2.cap.phl",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Philippines?",
+   "answer": "Manila",
+   "distractors": [
+    "Kuala Lumpur",
+    "Ulaanbaatar",
+    "Astana"
+   ],
+   "explain": "Manila is the capital of Philippines. More than 7,000 islands in the western Pacific.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.mys",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MYS",
+   "zoom": [
+    "Asia",
+    "Oceania"
+   ],
+   "answer": "Malaysia",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Malaysia. Split between the Malay Peninsula and the island of Borneo."
+  },
+  {
+   "id": "geography.w2.cap.mys",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Malaysia?",
+   "answer": "Kuala Lumpur",
+   "distractors": [
+    "Ulaanbaatar",
+    "Astana",
+    "Kabul"
+   ],
+   "explain": "Kuala Lumpur is the capital of Malaysia. Split between the Malay Peninsula and the island of Borneo.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.mng",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MNG",
+   "zoom": [
+    "Asia"
+   ],
+   "answer": "Mongolia",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Mongolia. The most sparsely populated country on Earth: about 2 people per km²."
+  },
+  {
+   "id": "geography.w2.cap.mng",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Mongolia?",
+   "answer": "Ulaanbaatar",
+   "distractors": [
+    "Astana",
+    "Kabul",
+    "Baghdad"
+   ],
+   "explain": "Ulaanbaatar is the capital of Mongolia. The most sparsely populated country on Earth: about 2 people per km².",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.kaz",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KAZ",
+   "zoom": [
+    "Asia"
+   ],
+   "answer": "Kazakhstan",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Kazakhstan. The largest landlocked country in the world."
+  },
+  {
+   "id": "geography.w2.cap.kaz",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Kazakhstan?",
+   "answer": "Astana",
+   "distractors": [
+    "Kabul",
+    "Baghdad",
+    "Kathmandu"
+   ],
+   "explain": "Astana is the capital of Kazakhstan. The largest landlocked country in the world.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.afg",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "AFG",
+   "zoom": [
+    "Asia"
+   ],
+   "answer": "Afghanistan",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Afghanistan. A mountainous, landlocked country between Iran and Pakistan."
+  },
+  {
+   "id": "geography.w2.cap.afg",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Afghanistan?",
+   "answer": "Kabul",
+   "distractors": [
+    "Baghdad",
+    "Kathmandu",
+    "Khartoum"
+   ],
+   "explain": "Kabul is the capital of Afghanistan. A mountainous, landlocked country between Iran and Pakistan.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.irq",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IRQ",
+   "zoom": [
+    "Asia"
+   ],
+   "answer": "Iraq",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Iraq. Mesopotamia, between the Tigris and Euphrates: home of some of the first cities."
+  },
+  {
+   "id": "geography.w2.cap.irq",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Iraq?",
+   "answer": "Baghdad",
+   "distractors": [
+    "Kathmandu",
+    "Khartoum",
+    "Algiers"
+   ],
+   "explain": "Baghdad is the capital of Iraq. Mesopotamia, between the Tigris and Euphrates: home of some of the first cities.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.npl",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "NPL",
+   "zoom": [
+    "Asia"
+   ],
+   "answer": "Nepal",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Nepal. Home to Mount Everest, on its border with China."
+  },
+  {
+   "id": "geography.w2.cap.npl",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Nepal?",
+   "answer": "Kathmandu",
+   "distractors": [
+    "Khartoum",
+    "Algiers",
+    "Tripoli"
+   ],
+   "explain": "Kathmandu is the capital of Nepal. Home to Mount Everest, on its border with China.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.lka",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "LKA",
+   "zoom": [
+    "Asia"
+   ],
+   "answer": "Sri Lanka",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Sri Lanka. A teardrop-shaped island off the southern tip of India."
+  },
+  {
+   "id": "geography.w2.tza",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "TZA",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Tanzania",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Tanzania. Home to Kilimanjaro, Africa’s highest mountain, and the Serengeti."
+  },
+  {
+   "id": "geography.w2.sdn",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "SDN",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Sudan",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Sudan. The Blue and White Niles meet at Khartoum."
+  },
+  {
+   "id": "geography.w2.cap.sdn",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Sudan?",
+   "answer": "Khartoum",
+   "distractors": [
+    "Manila",
+    "Kuala Lumpur",
+    "Ulaanbaatar"
+   ],
+   "explain": "Khartoum is the capital of Sudan. The Blue and White Niles meet at Khartoum.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.dza",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "DZA",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Algeria",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Algeria. Africa’s largest country by area, mostly Sahara."
+  },
+  {
+   "id": "geography.w2.cap.dza",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Algeria?",
+   "answer": "Algiers",
+   "distractors": [
+    "Kuala Lumpur",
+    "Ulaanbaatar",
+    "Astana"
+   ],
+   "explain": "Algiers is the capital of Algeria. Africa’s largest country by area, mostly Sahara.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.lby",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "LBY",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Libya",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Libya. Mediterranean coast, Saharan interior; rich in oil."
+  },
+  {
+   "id": "geography.w2.cap.lby",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Libya?",
+   "answer": "Tripoli",
+   "distractors": [
+    "Ulaanbaatar",
+    "Astana",
+    "Kabul"
+   ],
+   "explain": "Tripoli is the capital of Libya. Mediterranean coast, Saharan interior; rich in oil.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.mdg",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "MDG",
+   "zoom": [
+    "Africa"
+   ],
+   "answer": "Madagascar",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Madagascar. The world’s fourth largest island; most of its wildlife, including lemurs, lives nowhere else."
+  },
+  {
+   "id": "geography.w2.cap.mdg",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Madagascar?",
+   "answer": "Antananarivo",
+   "distractors": [
+    "Astana",
+    "Kabul",
+    "Baghdad"
+   ],
+   "explain": "Antananarivo is the capital of Madagascar. The world’s fourth largest island; most of its wildlife, including lemurs, lives nowhere else.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.bol",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BOL",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Bolivia",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Bolivia. Landlocked, high in the Andes; La Paz is the world’s highest capital city."
+  },
+  {
+   "id": "geography.w2.ecu",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ECU",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Ecuador",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Ecuador. Named after the equator, which runs through it; the Galapagos Islands belong to it."
+  },
+  {
+   "id": "geography.w2.cap.ecu",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Ecuador?",
+   "answer": "Quito",
+   "distractors": [
+    "Baghdad",
+    "Kathmandu",
+    "Khartoum"
+   ],
+   "explain": "Quito is the capital of Ecuador. Named after the equator, which runs through it; the Galapagos Islands belong to it.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.ury",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "URY",
+   "zoom": [
+    "South America"
+   ],
+   "answer": "Uruguay",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Uruguay. A small country between Brazil and Argentina."
+  },
+  {
+   "id": "geography.w2.cap.ury",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Uruguay?",
+   "answer": "Montevideo",
+   "distractors": [
+    "Kathmandu",
+    "Khartoum",
+    "Algiers"
+   ],
+   "explain": "Montevideo is the capital of Uruguay. A small country between Brazil and Argentina.",
+   "fill": true
+  },
+  {
+   "id": "geography.w2.gtm",
+   "topic": "geography.world-2",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "GTM",
+   "zoom": [
+    "North America"
+   ],
+   "answer": "Guatemala",
+   "accept": [],
+   "choosePrompt": "Which country is highlighted?",
+   "explain": "This is Guatemala. Heart of the ancient Maya civilisation."
+  },
+  {
+   "id": "geography.w2.cap.gtm",
+   "topic": "geography.world-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Guatemala?",
+   "answer": "Guatemala City",
+   "distractors": [
+    "Khartoum",
+    "Algiers",
+    "Tripoli"
+   ],
+   "explain": "Guatemala City is the capital of Guatemala. Heart of the ancient Maya civilisation.",
+   "fill": true
+  }
+ ]
+}

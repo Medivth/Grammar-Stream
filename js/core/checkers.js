@@ -41,8 +41,12 @@ function checkTyped(q, response) {
     const ok = nums[0] === q.pair[0] && nums[1] === q.pair[1];
     return { correct: ok, score: ok ? 1 : nums[0] === q.pair[1] && nums[1] === q.pair[0] ? 0.5 : 0, message: !ok && nums[0] === q.pair[1] && nums[1] === q.pair[0] ? 'Right numbers, wrong way round: x comes first.' : undefined };
   }
-  const answers = [q.answer, ...(q.accept || [])].map(normalise);
+  const answers = [q.answer, ...(q.accept || [])].filter((a) => a !== '').map(normalise);
   if (answers.includes(r)) return { correct: true, score: 1 };
+  if (q.algebra) {
+    const tight = (s) => s.replace(/\s+/g, '').replace(/\*/g, '');
+    return { correct: answers.some((a) => tight(a) === tight(r)), score: answers.some((a) => tight(a) === tight(r)) ? 1 : 0 };
+  }
   // "the Nile" and "Nile" are both fine
   const noThe = (x) => x.replace(/^the /, '');
   if (!q.strict && answers.map(noThe).includes(noThe(r))) return { correct: true, score: 1 };

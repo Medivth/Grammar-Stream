@@ -5,7 +5,7 @@ import { h, s, mount } from '../ui/dom.js';
 import { capybaraEl } from '../ui/capybara.js';
 import { icon, iconPath, SUBJECT_ICON } from '../ui/icons.js';
 import { SUBJECTS, SUBJECT_BY_ID } from '../core/subjects.js';
-import { topicStatus } from '../core/mastery.js';
+import { topicStatus, stretchReady } from '../core/mastery.js';
 import { daysPractisedThisMonth, planDay } from '../core/session.js';
 import { learnedCount, subjectStats, planSummary, isKnown } from '../core/progress.js';
 import { formatDay } from '../core/dates.js';
@@ -87,7 +87,7 @@ function islandMap(app) {
     const [cx, cy] = L.pos[sub.id];
     const r = L.r;
     const ids = db.topicOrder[sub.id] || [];
-    const states = ids.map((id) => topicStatus(db.topics[id], state.topics));
+    const states = ids.map((id) => topicStatus(db.topics[id], state.topics, db));
     const done = states.filter((x) => x === 'proficient' || x === 'mastered').length;
     const g = s('g', { class: 'region', tabindex: '0', role: 'link', 'aria-label': `${sub.name}: ${done} of ${ids.length} topics secure`, onclick: () => app.go(`#/subject/${sub.id}`), onkeydown: (e) => { if (e.key === 'Enter') app.go(`#/subject/${sub.id}`); } });
     g.append(
@@ -222,7 +222,7 @@ export function subjectScreen(app, subjectId) {
   const ICON = { locked: 'lock', available: 'spark', learning: 'play', proficient: 'check', mastered: 'star' };
   const rows = ids.map((id) => {
     const t = db.topics[id];
-    const status = topicStatus(t, state.topics);
+    const status = topicStatus(t, state.topics, db);
     const items = (db.itemsByTopic[id] || []).filter((i) => !['template', 'written'].includes(db.items[i].kind));
     const known = items.filter((i) => isKnown(state.cards[i])).length;
     return h('li', {},
@@ -232,7 +232,9 @@ export function subjectScreen(app, subjectId) {
         h('div', { class: 'meta' },
           h('span', { class: `chip ${status}` }, LABEL[status]),
           t.links ? h('span', { class: 'chip uses' }, icon('link'), ` uses ${t.links.map((l) => SUBJECT_BY_ID[l].name).join(' & ')}`) : null,
-          status === 'locked' ? h('span', {}, `after ${t.prereqs.map((p) => db.topics[p]?.title).join(' and ')}`)
+          t.tier === 'stretch' ? h('span', { class: 'chip stretch' }, icon('spark'), ' stretch') : null,
+          status === 'locked' && t.tier === 'stretch' && !stretchReady(db, state.topics, subjectId) ? h('span', {}, `when most of ${subj.name} is secure`)
+            : status === 'locked' ? h('span', {}, `after ${t.prereqs.map((p) => db.topics[p]?.title).join(' and ')}`)
             : items.length ? [h('span', { class: 'mini-bar', 'aria-hidden': 'true' }, h('i', { style: { width: `${Math.round((100 * known) / items.length)}%` } })), h('span', {}, `${known} / ${items.length} known`)]
               : h('span', {}, 'a skill you practise'))));
   });

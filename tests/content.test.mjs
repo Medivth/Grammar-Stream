@@ -84,7 +84,7 @@ test('every map item points at a real feature on its map layer', () => {
 
 test('the English spelling deck is exactly the statutory Year 5/6 list', () => {
   const OFFICIAL = 'accommodate accompany according achieve aggressive amateur ancient apparent appreciate attached available average awkward bargain bruise category cemetery committee communicate community competition conscience conscious controversy convenience correspond criticise curiosity definite desperate determined develop dictionary disastrous embarrass environment equipment especially exaggerate excellent existence explanation familiar foreign forty frequently government guarantee harass hindrance identity immediately individual interfere interrupt language leisure lightning marvellous mischievous muscle necessary neighbour nuisance occupy occur opportunity parliament persuade physical prejudice privilege profession programme pronunciation queue recognise recommend relevant restaurant rhyme rhythm sacrifice secretary shoulder signature sincere soldier stomach sufficient suggest symbol system temperature thorough twelfth variety vegetable vehicle yacht'.split(' ');
-  const words = Object.values(db.items).filter((i) => i.kind === 'spell' && i.subject === 'english').map((i) => i.word).sort();
+  const words = Object.values(db.items).filter((i) => i.kind === 'spell' && db.topics[i.topic]?.deck === 'spelling').map((i) => i.word).sort();
   assert.equal(OFFICIAL.length, 100);
   assert.deepEqual(words, [...OFFICIAL].sort());
 });
