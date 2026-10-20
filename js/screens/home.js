@@ -6,6 +6,7 @@ import { SUBJECTS, SUBJECT_BY_ID } from '../core/subjects.js';
 import { topicStatus } from '../core/mastery.js';
 import { daysPractisedThisMonth } from '../core/session.js';
 import { restTime } from './util.js';
+import { pieceDue, currentPiece, unseenFeedback, currentBooks, readingThisWeek } from '../core/writing.js';
 
 const ISLANDS = {
   english: { d: 'M60 70 q40 -50 120 -30 q70 10 80 60 q10 60 -50 80 q-60 20 -120 -5 q-60 -30 -30 -105z', lx: 155, ly: 120 },
@@ -79,8 +80,32 @@ export function homeScreen(app) {
         h('div', { class: 'speech' }, h('strong', {}, `${c.name || 'Capy'}: `), msg),
         btn,
         finished ? h('p', { class: 'record' }, h('b', {}, String(days)), ` day${days === 1 ? '' : 's'} practised this month`) : null)),
+    extras(app, rest),
     worldMap(app),
     h('p', { class: 'muted small center', style: { marginTop: '12px' } }, 'Tap a region to see your topics. Read a real book every day too!'));
+}
+
+function extras(app, rest) {
+  const { state, db } = app;
+  const today = app.today();
+  const cards = [];
+  for (const p of unseenFeedback(state)) {
+    cards.push(h('button', { class: 'choice-card', onclick: () => app.go(`#/feedback/${encodeURIComponent(p.id)}`) },
+      h('div', { class: 'subj', style: { color: 'var(--good)' } }, 'New!'), h('h3', { style: { margin: '4px 0 0' } }, `Feedback on “${db.pieceById[p.promptId]?.title}”`)));
+  }
+  if (!rest && pieceDue(state, today)) {
+    const cur = currentPiece(state);
+    cards.push(h('button', { class: 'choice-card', onclick: () => app.go('#/writing') },
+      h('div', { class: 'subj', style: { color: SUBJECT_BY_ID.english.colour } }, cur ? 'Carry on' : 'This week'),
+      h('h3', { style: { margin: '4px 0 0' } }, cur ? `Writing: ${db.pieceById[cur.promptId]?.title}` : 'Your weekly writing piece'),
+      h('p', { class: 'muted small', style: { margin: '4px 0 0' } }, 'A longer piece, about 30 minutes. Do it on a different day from your session if you like.')));
+  }
+  const book = currentBooks(state)[0];
+  cards.push(h('button', { class: 'choice-card', onclick: () => app.go('#/reading') },
+    h('div', { class: 'subj', style: { color: 'var(--accent)' } }, '📚 My reading'),
+    h('h3', { style: { margin: '4px 0 0' } }, book ? book.title : 'Choose a book'),
+    h('p', { class: 'muted small', style: { margin: '4px 0 0' } }, `${readingThisWeek(state, today)} minutes in the last 7 days`)));
+  return h('div', { class: 'grid two', style: { marginBottom: '16px' } }, cards);
 }
 
 export function subjectScreen(app, subjectId) {

@@ -43,7 +43,7 @@ try {
 
     const seen = new Set();
     let steps = 0, reloaded = false;
-    while (steps++ < 200) {
+    while (steps++ < 300) {
       await page.waitForTimeout(80);
       if (await page.$('text=Finished for today!')) break;
       const stepType = await page.evaluate(() => window.__app.state.plan?.steps[window.__app.state.plan.pos]?.t);
@@ -52,6 +52,17 @@ try {
         await page.screenshot({ path: `${OUT}/${label}-step-${stepType}.png`, fullPage: true });
       }
       if (!reloaded && steps === 12) { reloaded = true; await page.goto(`http://127.0.0.1:${PORT}/#/home`); await page.reload(); await page.waitForSelector('text=Continue today’s session'); await page.click('text=Continue today’s session'); continue; }
+      // placement: answer some, skip others
+      const skip = await page.$('button:has-text("I haven’t learned this yet")');
+      if (skip) {
+        const opt = await page.$('.option:not([disabled])');
+        const typed = await page.$('.q-body input[type=text]');
+        if (steps % 3 === 0 && (opt || typed)) {
+          if (opt) await opt.click(); else await typed.fill('7');
+          await page.click('button.btn-primary:has-text("Next")');
+        } else await skip.click();
+        continue;
+      }
       // questions
       if (await page.$('.confidence')) {
         const opt = await page.$('.option:not([disabled])');
@@ -99,8 +110,40 @@ try {
     await page.screenshot({ path: `${OUT}/${label}-06-parent.png`, fullPage: true });
     const [download] = await Promise.all([page.waitForEvent('download'), page.click('text=Save a backup file >> nth=0')]);
     console.log(`${label}: backup downloaded as ${download.suggestedFilename()}`);
-    // a subject page
+    // weekly writing: do a piece, then mark it as the grown-up
     await page.click('[aria-label="Back"]');
+    await page.click('text=Your weekly writing piece');
+    await page.click('text=Start this piece');
+    await page.click('text=Type it here');
+    await page.fill('textarea >> nth=0', 'A note for the first box');
+    await page.screenshot({ path: `${OUT}/${label}-08-writing-plan.png`, fullPage: true });
+    await page.click('text=Start writing');
+    await page.fill('textarea', 'The door was green. '.repeat(40));
+    await page.screenshot({ path: `${OUT}/${label}-09-writing.png`, fullPage: true });
+    await page.click('text=I’ve finished: check it');
+    await page.click('#crit-0');
+    await page.click('text=Hand it in');
+    await page.click('text=Back home');
+    await page.click('[aria-label="Grown-ups"]');
+    for (const d of '1234') await page.click(`.pin-pad button[aria-label="${d}"]`);
+    await page.waitForSelector('text=Writing to read');
+    for (let i = 0; i < 4; i++) await page.click(`.field:has(label:has-text("${i + 1}.")) .option >> nth=2`);
+    await page.click('button:has-text("Your opening really hooked me.")');
+    await page.click('button:has-text("Vary your sentence lengths")');
+    await page.screenshot({ path: `${OUT}/${label}-10-marking.png`, fullPage: true });
+    await page.click('text=Save feedback');
+    await page.click('[aria-label="Back"]');
+    await page.click('text=Feedback on');
+    await page.waitForSelector('text=What worked');
+    await page.screenshot({ path: `${OUT}/${label}-11-feedback.png`, fullPage: true });
+    await page.click('text=Back home');
+    // reading
+    await page.click('text=My reading');
+    await page.click('text=I’m reading this >> nth=0');
+    await page.click('text=+20 min');
+    await page.screenshot({ path: `${OUT}/${label}-12-reading.png`, fullPage: true });
+    await page.click('[aria-label="Back"]');
+    // a subject page
     await page.click('.region >> nth=3');
     await page.waitForSelector('.topic-row');
     await page.screenshot({ path: `${OUT}/${label}-07-subject.png`, fullPage: true });

@@ -3,9 +3,10 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { buildDB } from '../js/core/content.js';
 import { emptyState, serialize, deserialize } from '../js/core/store.js';
-import { planDay, chooseTopic, questionFor, submit, startSession, finishSession, daysPractisedThisMonth, budgets, interleave, fsrsFor, calibration, CONF } from '../js/core/session.js';
+import { planDay, topicChoices, chooseTopic, questionFor, submit, startSession, finishSession, daysPractisedThisMonth, budgets, interleave, fsrsFor, calibration, CONF } from '../js/core/session.js';
 import { correctResponse } from '../js/core/checkers.js';
 import { makeRng } from '../js/core/rng.js';
+import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement } from '../js/core/placement.js';
 
 const root = new URL('../content/', import.meta.url);
 const read = (p) => JSON.parse(readFileSync(new URL(p, root)));
@@ -31,8 +32,17 @@ function runDay(state, today, rng, { pRight = null } = {}) {
   let prevTopic = null, consecutive = 0, graded = 0;
   while (plan.pos < plan.steps.length) {
     const step = plan.steps[plan.pos];
-    if (step.t === 'choose') {
-      if (step.options.length) chooseTopic(state, db, rng.pick(step.options), today);
+    if (step.t === 'placement') {
+      const probe = startPlacement(state, db, step.subject);
+      let pr;
+      while ((pr = nextProbe(probe, state, db))) {
+        const q = probeQuestion(state, db, pr);
+        answerProbe(probe, state, db, q, rng.chance(0.6) ? correctResponse(q) : null, today);
+      }
+      applyPlacement(probe, state, db, today);
+    } else if (step.t === 'choose') {
+      const opts = topicChoices(state, db, step.subject);
+      if (opts.length) chooseTopic(state, db, rng.pick(opts), today);
     } else if (!['review', 'quiz', 'diag', 'practice', 'faded'].includes(step.t)) {
       prevTopic = null;
     }
@@ -94,7 +104,11 @@ test('60 simulated days: load stays bounded, subjects rotate, no repeats in a ro
   // every subject got new learning, none hogged it
   const counts = {};
   for (const s of newSubjects) counts[s] = (counts[s] || 0) + 1;
-  for (const s of ['english', 'maths', 'history', 'geography', 'science']) assert.ok(counts[s] >= 5, `${s} new-learning days: ${counts[s]}`);
+  // a subject may run out of new topics (placement skips known ones); otherwise none is starved
+  for (const s of ['english', 'maths', 'history', 'geography', 'science']) {
+    if (topicChoices(state, db, s).length) assert.ok(counts[s] >= 5, `${s} new-learning days: ${counts[s]}`);
+    else assert.ok(counts[s] >= 1, `${s} never got new learning`);
+  }
   // progress happened
   const cards = Object.keys(state.cards).length;
   assert.ok(cards > 150, `cards introduced: ${cards}`);

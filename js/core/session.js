@@ -9,6 +9,10 @@ import { present } from './present.js';
 import { makeRng } from './rng.js';
 import { SUBJECTS, SUBJECT_BY_ID } from './subjects.js';
 import { monthKey } from './dates.js';
+import { needsPlacement } from './placement.js';
+
+// placement runs for one subject a day, in this order, until all are placed
+export const PLACEMENT_ORDER = ['maths', 'english', 'geography', 'history', 'science'];
 
 export const FAST_MS = { choice: 4000, typed: 8000, map: 5000, order: 12000, numberline: 6000, cloze: 10000 };
 export const CONF = { guess: 0, think: 1, sure: 2 };
@@ -138,10 +142,12 @@ export function planDay(state, db, today) {
   for (const d of due) dueBy[d.subject] = (dueBy[d.subject] || 0) + 1;
   const reviews = interleave(selectReviews(due, b.reviews), rng);
   const cap = Math.ceil(b.reviews * 0.4);
-  const subject = pickNewSubject(state, db, today, dueBy, cap);
+  const placeSubject = PLACEMENT_ORDER.find((s) => needsPlacement(state, db, s)) || null;
+  // after placing a subject, start its next topic straight away
+  const subject = placeSubject || pickNewSubject(state, db, today, dueBy, cap);
   // light review days (early on, or after a quiet spell) get a second new topic from another subject
   let second = null;
-  if (subject && reviews.length < b.reviews * 0.6) {
+  if (subject && !placeSubject && reviews.length < b.reviews * 0.6) {
     const others = { ...state, subjects: { ...state.subjects, [subject]: { ...(state.subjects[subject] || {}), lastNew: today } } };
     second = pickNewSubject(others, db, today, dueBy, cap);
     if (second === subject) second = null;
@@ -150,6 +156,7 @@ export function planDay(state, db, today) {
   const steps = [];
   const yesterday = state.lastFeedback && state.lastFeedback.day < today ? yesterdayEntries(state.lastFeedback) : [];
   if (yesterday.length) steps.push({ t: 'yesterday' });
+  if (placeSubject) steps.push({ t: 'placement', subject: placeSubject });
   const split = reviews.length >= 10 ? Math.ceil(reviews.length * 0.6) : reviews.length;
   reviews.slice(0, split).forEach((r) => steps.push({ t: 'review', id: r.id }));
   if (split < reviews.length) {

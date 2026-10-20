@@ -8,6 +8,8 @@ import { homeScreen, subjectScreen } from './screens/home.js';
 import { playScreen } from './screens/play.js';
 import { parentScreen } from './screens/parent.js';
 import { welcomeScreen, companionScreen, displayScreen } from './screens/onboarding.js';
+import { writingScreen, feedbackScreen } from './screens/writing.js';
+import { readingScreen } from './screens/reading.js';
 
 const root = document.getElementById('app');
 
@@ -47,6 +49,9 @@ async function route() {
     case 'subject': return subjectScreen(app, arg);
     case 'parent': return parentScreen(app);
     case 'display': return displayScreen(app);
+    case 'writing': return writingScreen(app);
+    case 'feedback': return feedbackScreen(app, arg);
+    case 'reading': return readingScreen(app);
     default: return homeScreen(app);
   }
 }

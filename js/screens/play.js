@@ -5,10 +5,12 @@ import { renderQuestion } from '../ui/qtypes.js';
 import { capybaraEl } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
 import { speak } from '../platform/tts.js';
-import { planDay, chooseTopic, questionFor, submit, startSession, finishSession, daysPractisedThisMonth, CONF } from '../core/session.js';
+import { planDay, chooseTopic, topicChoices, questionFor, submit, startSession, finishSession, daysPractisedThisMonth, CONF } from '../core/session.js';
+import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement } from '../core/placement.js';
 import { checkSentence } from '../core/checkers.js';
 import { learnText, present } from '../core/present.js';
 import { makeRng } from '../core/rng.js';
+import { currentBooks, logReading } from '../core/writing.js';
 import { SUBJECT_BY_ID } from '../core/subjects.js';
 
 const GRADED = new Set(['review', 'quiz', 'diag', 'practice', 'faded']);
@@ -50,6 +52,7 @@ async function renderStep(app) {
       case 'yesterday': return yesterdayStep(app, root);
       case 'break': return breakStep(app, root);
       case 'choose': return chooseStep(app, root, step);
+      case 'placement': return placementStep(app, root, step);
       case 'intro-topic': return introTopicStep(app, root, step);
       case 'diag-summary': return diagSummaryStep(app, root, step);
       case 'intro': return introStep(app, root, step);
@@ -98,7 +101,8 @@ function breakStep(app, root) {
 // ---------------------------------------------------------------- choose
 function chooseStep(app, root, step) {
   const { db, state } = app;
-  const opts = step.options.filter((id) => db.topics[id]);
+  // worked out now, not when the day was planned, so placement results count
+  const opts = topicChoices(state, db, step.subject);
   if (!opts.length) return next(app);
   const subj = SUBJECT_BY_ID[step.subject];
   mount(root, header(app, 'Choose'), h('div', { class: 'q-wrap stack' },
@@ -394,13 +398,14 @@ function doneStep(app, root) {
   const learned = (plan.topics || []).map((t) => db.topics[t]?.title).filter(Boolean);
   const days = daysPractisedThisMonth(state, app.today());
   const readBox = h('div', {});
+  const book = currentBooks(state)[0] || null;
   const logRead = (mins) => {
-    state.reading.push({ day: app.today(), minutes: mins });
+    logReading(state, mins, app.today(), book);
     app.save();
     readBox.replaceChildren(h('p', {}, `📚 ${mins} minutes of reading logged. Brilliant.`));
   };
   const alreadyRead = state.reading.some((r) => r.day === app.today());
-  readBox.append(alreadyRead ? h('p', {}, '📚 Reading logged for today.') : h('div', {}, h('p', { style: { fontWeight: 700 } }, 'Did you read a book today?'),
+  readBox.append(alreadyRead ? h('p', {}, '📚 Reading logged for today.') : h('div', {}, h('p', { style: { fontWeight: 700 } }, book ? `Did you read ${book.title} today?` : 'Did you read a book today?'),
     h('div', { class: 'row' }, [10, 20, 30, 45].map((m) => h('button', { class: 'btn-ghost', onclick: () => logRead(m) }, `${m}${m === 45 ? '+' : ''} min`)), h('button', { class: 'btn-ghost', onclick: () => readBox.replaceChildren(h('p', { class: 'muted' }, 'Maybe tonight, then!')) }, 'Not yet'))));
 
   mount(root, h('div', { class: 'q-wrap stack' },
@@ -417,4 +422,55 @@ function doneStep(app, root) {
       sure.length ? h('p', { class: 'muted' }, `When you said “Sure”, you were right ${sureRight} out of ${sure.length} times.${sure.length >= 4 && sureRight / sure.length > 0.9 ? ' You know what you know!' : ''}`) : null),
     h('div', { class: 'card' }, readBox),
     h('button', { class: 'btn-primary btn-big', onclick: () => app.go('#/home') }, 'Back home')));
+}
+
+// ---------------------------------------------------------------- placement
+async function placementStep(app, root, step) {
+  const { state, db } = app;
+  const subj = SUBJECT_BY_ID[step.subject];
+  if (!step.probe) {
+    step.probe = startPlacement(state, db, step.subject);
+    app.save();
+    mount(root, header(app, 'Finding your level'), h('div', { class: 'q-wrap stack' },
+      h('h2', {}, `Let’s find your level in ${subj.name}`),
+      h('p', { class: 'learn' }, 'I’ll ask some questions that get harder as you go, so I can skip what you already know.'),
+      h('p', {}, 'Some will be things you haven’t learned yet. That’s the point! Just tap “I haven’t learned this yet” and we’ll move on.'),
+      h('p', { class: 'muted' }, 'There are no marks for this part, and it takes about 10 minutes.'),
+      h('button', { class: 'btn-primary btn-big', onclick: () => placementStep(app, root, step), autofocus: true }, 'Start')));
+    return;
+  }
+  const probe = step.probe;
+  const p = nextProbe(probe, state, db);
+  app.save();
+  if (!p) {
+    const summary = applyPlacement(probe, state, db, app.today());
+    app.save();
+    const known = summary.passed.map((t) => db.topics[t].title);
+    const nextUp = topicChoices(state, db, step.subject).map((t) => db.topics[t].title);
+    mount(root, header(app, 'Finding your level'), h('div', { class: 'q-wrap stack' },
+      h('h2', {}, 'Thank you!'),
+      known.length ? h('div', { class: 'card' }, h('p', {}, h('strong', {}, `You already know ${known.length} topic${known.length === 1 ? '' : 's'}:`)), h('ul', {}, known.map((k) => h('li', {}, k))),
+        h('p', { class: 'muted small' }, 'We’ll check these now and then in your reviews, so they stay strong.'))
+        : h('p', { class: 'learn' }, `Now I know where to start. Everything in ${subj.name} will be new and interesting!`),
+      nextUp.length ? h('p', {}, 'Ready to learn next: ', nextUp.slice(0, 3).join(', '), '.') : null,
+      h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'Carry on')));
+    return;
+  }
+  const q = probeQuestion(state, db, p);
+  const nextBtn = h('button', { class: 'btn-primary btn-big', type: 'button', disabled: true }, 'Next');
+  const view = await renderQuestion(q, { onChange: (ok) => (nextBtn.disabled = !ok), settings: state.settings });
+  const go = (response) => {
+    answerProbe(probe, state, db, q, response, app.today());
+    app.save();
+    placementStep(app, root, step);
+  };
+  nextBtn.onclick = () => view.hasResponse() && go(view.getResponse());
+  if (view.input) view.input.addEventListener('keydown', (e) => { if (e.key === 'Enter' && view.hasResponse()) { e.preventDefault(); go(view.getResponse()); } });
+  const topic = db.topics[probe.current?.topic];
+  mount(root, header(app, 'Finding your level'), h('div', { class: 'q-wrap' },
+    h('p', { class: 'muted small' }, `${subj.name}${topic ? ' · ' + topic.title : ''} · question ${probe.asked + 1}`),
+    view.el,
+    h('div', { class: 'row', style: { marginTop: '18px' } }, nextBtn,
+      h('button', { class: 'btn-ghost btn-big', type: 'button', onclick: () => go(null) }, 'I haven’t learned this yet'))));
+  view.focus();
 }

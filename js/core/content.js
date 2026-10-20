@@ -1,7 +1,7 @@
 // Content database: topics and items from every deck, indexed for the scheduler.
 
 export function buildDB(decks) {
-  const db = { topics: {}, items: {}, topicOrder: {}, itemsByTopic: {}, sentences: [], sentenceById: {}, maps: {} };
+  const db = { topics: {}, items: {}, topicOrder: {}, itemsByTopic: {}, sentences: [], sentenceById: {}, maps: {}, pieces: [], pieceById: {}, ladder: [], bookById: {}, rungs: [] };
   for (const deck of decks) {
     const subject = deck.subject;
     db.topicOrder[subject] ||= [];
@@ -16,6 +16,9 @@ export function buildDB(decks) {
       db.items[item.id] = item;
       (db.itemsByTopic[item.topic] ||= []).push(item.id);
     }
+    for (const p of deck.pieces || []) { db.pieces.push(p); db.pieceById[p.id] = p; }
+    for (const b of deck.ladder || []) { db.ladder.push(b); db.bookById[b.id] = b; }
+    if (deck.rungs) db.rungs = deck.rungs;
     for (const s of deck.sentences || []) {
       db.sentences.push(s);
       db.sentenceById[s.id] = s;
@@ -96,5 +99,12 @@ export function validateDB(db, generators) {
   for (const s of db.sentences) {
     if (!s.model || !s.checks?.length) errs.push(`sentence ${s.id}: needs model and checks`);
   }
+  for (const p of db.pieces) {
+    if (p.rubric?.length !== 4 || !p.rubric.every((r) => r.name && r.levels?.length === 3)) errs.push(`piece ${p.id}: rubric needs 4 lines of 3 levels`);
+    if (!p.plan?.length || !p.criteria?.length || !p.task || !p.starter) errs.push(`piece ${p.id}: needs task, plan, criteria and starter`);
+    for (const t of p.needsTopics || []) if (!db.topics[t]) errs.push(`piece ${p.id}: unknown topic ${t}`);
+  }
+  for (const b of db.ladder) if (!(b.rung >= 1 && b.rung <= 5) || !b.title || !b.author) errs.push(`book ${b.id}: needs rung 1-5, title, author`);
+  if (db.ladder.length && db.rungs.length !== 5) errs.push('reading ladder needs 5 rung names');
   return errs;
 }

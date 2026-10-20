@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = '24792f5020b1';
+const VERSION = '0dde19789e3d';
 const FILES = [
  "./",
  "./index.html",
@@ -13,11 +13,13 @@ const FILES = [
  "./js/core/fraction.js",
  "./js/core/fsrs.js",
  "./js/core/mastery.js",
+ "./js/core/placement.js",
  "./js/core/present.js",
  "./js/core/rng.js",
  "./js/core/session.js",
  "./js/core/store.js",
  "./js/core/subjects.js",
+ "./js/core/writing.js",
  "./js/gen/history.js",
  "./js/gen/index.js",
  "./js/gen/maths.js",
@@ -28,12 +30,15 @@ const FILES = [
  "./js/screens/onboarding.js",
  "./js/screens/parent.js",
  "./js/screens/play.js",
+ "./js/screens/reading.js",
  "./js/screens/util.js",
+ "./js/screens/writing.js",
  "./js/ui/capybara.js",
  "./js/ui/dom.js",
  "./js/ui/mapview.js",
  "./js/ui/qtypes.js",
  "./content/english/morphology.json",
+ "./content/english/reading-writing.json",
  "./content/english/spelling.json",
  "./content/english/vocabulary.json",
  "./content/english/writing.json",

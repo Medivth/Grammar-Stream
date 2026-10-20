@@ -5,10 +5,13 @@
 import { hashString } from './rng.js';
 
 export const APP_ID = 'grammar-stream';
-export const SCHEMA_VERSION = 1;
+export const SCHEMA_VERSION = 2;
 
 /** MIGRATIONS[n] upgrades data from schema n to n + 1. */
-export const MIGRATIONS = {};
+export const MIGRATIONS = {
+  // v2: weekly writing pieces, the reading ladder, placement
+  1: (d) => ({ ...d, pieces: d.pieces || [], books: d.books || [], settings: { readingRung: 1, ...d.settings } }),
+};
 
 export function emptyState(today) {
   return {
@@ -22,6 +25,7 @@ export function emptyState(today) {
       textScale: 1,
       tts: true,
       reduceMotion: false,
+      readingRung: 1,
     },
     cards: {}, // itemId -> FSRS card
     templates: {}, // "templateId@level" -> { difficulty, attempts }
@@ -33,6 +37,8 @@ export function emptyState(today) {
     reading: [], // { day, minutes, title }
     writing: [], // { day, taskId, text }
     taught: [], // { day, topicId, text }
+    pieces: [], // weekly writing: { id, promptId, startDay, mode, plan, text, checked, submittedDay, mark, seen }
+    books: [], // { bookId | title, author, startDay, endDay }
     plan: null, // the in-progress day plan
     lastBackup: null,
   };

@@ -4,7 +4,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 
-const SOURCES = ['english', 'maths', 'history', 'geography', 'science'];
+const SOURCES = ['english', 'maths', 'history', 'geography', 'science', 'reading-writing'];
 const MAPS = { world: 'maps/world.json', europe: 'maps/europe.json', uk: 'maps/uk.json' };
 
 export async function buildAll() {

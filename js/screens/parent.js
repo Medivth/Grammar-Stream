@@ -6,7 +6,9 @@ import { weekStart, formatDay } from '../core/dates.js';
 import { calibration, daysPractisedThisMonth } from '../core/session.js';
 import { exportFile, pickBackupFile, saveState, wipe } from '../platform/storage.js';
 import { emptyState } from '../core/store.js';
-import { SUBJECTS } from '../core/subjects.js';
+import { SUBJECTS, SUBJECT_BY_ID } from '../core/subjects.js';
+import { piecesToMark, markPiece, wordCount } from '../core/writing.js';
+import { needsPlacement } from '../core/placement.js';
 
 let unlockedUntil = 0;
 
@@ -74,6 +76,8 @@ function dashboard(app) {
         h('h3', {}, 'Back up her progress'), h('p', {}, backupAge == null ? 'You haven’t made a backup yet. Progress lives only in this browser, so save a copy now and then.' : `Last backup was ${backupAge} days ago.`),
         h('button', { class: 'btn-primary', onclick: () => doExport(app) }, 'Save a backup file')) : null,
 
+      markingCard(app),
+
       h('div', { class: 'card' },
         h('h2', {}, `This week (from ${formatDay(w.ws, { weekday: 'short', day: 'numeric', month: 'short' })})`),
         h('div', { class: 'grid three' },
@@ -93,6 +97,7 @@ function dashboard(app) {
         recentWriting.length ? recentWriting.map((wr) => h('div', { class: 'topic-row' }, h('div', { class: 'title' }, h('div', { class: 'muted small' }, `${db.sentenceById[wr.taskId]?.title || 'Sentence'} · ${formatDay(wr.day, { weekday: 'short', day: 'numeric', month: 'short' })}`), h('div', {}, wr.text || '(blank)')))) : h('p', { class: 'muted' }, 'Nothing yet.'),
         h('p', { class: 'muted small' }, 'Read these with her and ask what she was trying to do. The weekly extended-writing task comes in the next update.')),
 
+      levelsCard(app),
       settings,
 
       h('div', { class: 'card stack' }, h('h2', {}, 'Backup and moving devices'),
@@ -104,6 +109,65 @@ function dashboard(app) {
       h('div', { class: 'card stack' }, h('h2', {}, 'Start again'),
         h('p', { class: 'muted' }, 'This deletes all progress on this device. Save a backup first.'),
         h('button', { class: 'btn-ghost', onclick: () => doReset(app) }, 'Delete all progress…'))));
+}
+
+const PHRASES = {
+  worked: ['Your opening really hooked me.', 'Your paragraphs flowed well.', 'You used precise evidence.', 'You explained WHY, not just what.', 'Brilliant word choices.', 'You kept going on a hard task.'],
+  next: ['Vary your sentence lengths: add one very short sentence for impact.', 'Use a quotation in every paragraph.', 'Start each paragraph with a clear point.', 'Explain the effect on the reader of one specific word.', 'Use linking words like “As a result” and “However”.', 'Check capital letters and full stops.'],
+};
+
+function markingCard(app) {
+  const { state, db } = app;
+  const todo = piecesToMark(state);
+  const marked = state.pieces.filter((p) => p.mark).slice(-3).reverse();
+  if (!todo.length && !marked.length) {
+    return h('div', { class: 'card' }, h('h2', {}, 'Weekly writing'), h('p', { class: 'muted' }, 'Once a week she writes a longer piece (a story, a speech, a history essay…). When she hands it in, you mark it here with a four-line guide. It takes about 10 minutes, and your interest in it matters more than the marks.'));
+  }
+  return h('div', { class: 'card stack' }, h('h2', {}, todo.length ? `Writing to read (${todo.length})` : 'Weekly writing'),
+    todo.map((p) => markForm(app, p, db.pieceById[p.promptId])),
+    marked.length ? h('div', {}, h('h3', {}, 'Recently marked'), marked.map((p) => h('p', { class: 'muted small' }, `${db.pieceById[p.promptId]?.title}: ${p.mark.scores.reduce((a, b) => a + b, 0)}/8 · next step: ${p.mark.next || '–'}`))) : null);
+}
+
+function markForm(app, piece, prompt) {
+  const scores = prompt.rubric.map(() => null);
+  const worked = h('textarea', { placeholder: 'One thing that worked well', style: { minHeight: '70px' } });
+  const next = h('textarea', { placeholder: 'One next step (just one!)', style: { minHeight: '70px' } });
+  const chips = (list, ta) => h('div', { class: 'row', style: { gap: '6px' } }, list.map((t) => h('button', { type: 'button', class: 'btn-ghost small', style: { minHeight: '40px', padding: '6px 12px' }, onclick: () => { ta.value = t; } }, t)));
+  const lines = prompt.rubric.map((r, i) => {
+    const btns = r.levels.map((desc, lv) => h('button', { type: 'button', class: 'option', 'aria-pressed': 'false', style: { minHeight: '48px', padding: '8px 12px' }, onclick: () => {
+      scores[i] = lv;
+      btns.forEach((b, j) => b.setAttribute('aria-pressed', String(j === lv)));
+    } }, h('strong', {}, `${lv} `), desc));
+    return h('div', { class: 'field' }, h('label', {}, `${i + 1}. ${r.name}`), h('div', { class: 'options' }, btns));
+  });
+  return h('div', { class: 'card stack', style: { background: 'var(--bg)' } },
+    h('h3', {}, prompt.title), h('p', { class: 'muted small' }, prompt.task),
+    piece.mode === 'paper' ? h('p', { class: 'chip' }, 'Written on paper: ask her for it') : h('div', {}, h('p', { class: 'muted small' }, `${wordCount(piece.text)} words`), h('div', { class: 'card', style: { whiteSpace: 'pre-wrap', maxHeight: '50vh', overflow: 'auto' } }, piece.text)),
+    h('details', {}, h('summary', { style: { cursor: 'pointer' } }, 'What she was aiming for'), h('ul', {}, prompt.criteria.map((c, i) => h('li', {}, `${piece.checked.includes(i) ? '✓' : '○'} ${c}`))), h('p', { class: 'muted small' }, '✓ = she ticked it in her self-check.')),
+    lines,
+    h('div', { class: 'field' }, h('label', {}, 'What worked'), worked, chips(PHRASES.worked, worked)),
+    h('div', { class: 'field' }, h('label', {}, 'One next step'), next, chips(PHRASES.next, next)),
+    h('button', { class: 'btn-primary', onclick: () => {
+      if (scores.some((s) => s == null)) return toast('Choose a level for all four lines.');
+      if (!worked.value.trim()) return toast('Write one thing that worked. It is the most important part!');
+      markPiece(piece, { scores, worked: worked.value, next: next.value }, app.today());
+      app.save();
+      toast('Feedback saved. She’ll see it next time she opens the app.');
+      dashboard(app);
+    } }, 'Save feedback'));
+}
+
+function levelsCard(app) {
+  const { state, db } = app;
+  return h('div', { class: 'card stack' }, h('h2', {}, 'Starting levels'),
+    h('p', { class: 'muted' }, 'In her first week, each subject begins with a 10-minute check so she skips what she already knows. Run it again after a long break, or if things look too easy.'),
+    SUBJECTS.map((s) => {
+      const placed = state.subjects[s.id]?.placed;
+      const secure = Object.entries(state.topics).filter(([id, t]) => db.topics[id]?.subject === s.id && t.assumed).length;
+      return h('div', { class: 'topic-row' },
+        h('div', { class: 'title' }, h('strong', {}, s.name), h('div', { class: 'muted small' }, placed ? `Checked ${formatDay(placed, { day: 'numeric', month: 'short' })}; ${secure} topic${secure === 1 ? '' : 's'} already known` : needsPlacement(state, db, s.id) ? 'Check coming up in a session soon' : 'All topics started')),
+        placed ? h('button', { class: 'btn-ghost', onclick: () => { state.subjects[s.id].placed = false; if (state.plan?.day === app.today() && !state.plan.started) state.plan = null; app.save(); toast(`${s.name} will be checked again in her next session.`); dashboard(app); } }, 'Check again') : null);
+    }));
 }
 
 function stat(n, label) {
@@ -119,6 +183,7 @@ function settingsForm(app) {
   const mins = h('select', { id: 'set-mins' }, [15, 20, 25, 30, 40].map((m) => h('option', { value: m, selected: m === st.settings.sessionMinutes }, `${m} minutes`)));
   const pin = h('input', { type: 'password', inputmode: 'numeric', maxlength: 4, placeholder: 'Leave blank to keep', id: 'set-pin' });
   const tts = h('input', { type: 'checkbox', id: 'set-tts', checked: st.settings.tts !== false, style: { width: '28px', height: '28px' } });
+  const rung = h('select', { id: 'set-rung' }, (app.db.rungs || []).map((r, i) => h('option', { value: i + 1, selected: i + 1 === (st.settings.readingRung || 1) }, `${i + 1}. ${r} (e.g. ${app.db.ladder.find((b) => b.rung === i + 1)?.title})`)));
   return h('div', { class: 'card stack' }, h('h2', {}, 'Settings'),
     h('div', { class: 'field' }, h('label', { for: 'set-name' }, 'Her first name'), name),
     h('div', { class: 'field' }, h('label', { for: 'set-comp' }, 'Capybara’s name'), comp),
@@ -127,6 +192,7 @@ function settingsForm(app) {
       h('div', { class: 'field' }, h('label', { for: 'set-early' }, 'Earliest start'), early)),
     h('div', { class: 'field' }, h('label', { for: 'set-mins' }, 'Daily session length'), mins),
     h('div', { class: 'field row' }, tts, h('label', { for: 'set-tts', style: { margin: 0 } }, 'Read-aloud buttons (spelling)')),
+    h('div', { class: 'field' }, h('label', { for: 'set-rung' }, 'Reading ladder: what she reads comfortably now'), rung),
     h('div', { class: 'field' }, h('label', { for: 'set-pin' }, 'New 4-digit PIN'), pin),
     h('button', { class: 'btn-primary', onclick: () => {
       if (pin.value && !/^\d{4}$/.test(pin.value)) return toast('The PIN must be 4 digits.');
@@ -136,6 +202,7 @@ function settingsForm(app) {
       st.settings.earliest = early.value || st.settings.earliest;
       st.settings.sessionMinutes = +mins.value;
       st.settings.tts = tts.checked;
+      st.settings.readingRung = +rung.value;
       if (pin.value) st.profile.parentPin = pin.value;
       app.save();
       toast('Settings saved.');
