@@ -1,40 +1,76 @@
-// First run: a grown-up sets up, then she creates her capybara.
+// First run: a grown-up sets up, then the child creates their capybara. Also: who's learning?
 
 import { h, mount, toast } from '../ui/dom.js';
 import { capybaraSVG, FURS, ACCESSORIES } from '../ui/capybara.js';
 import { requestPersistence } from '../platform/storage.js';
-import { STARTER_ACCESSORIES } from '../core/progress.js';
+import { COURSES } from '../core/subjects.js';
+import { setPronoun } from '../core/pronoun.js';
+import { starterAccessories } from '../core/progress.js';
 
 export function welcomeScreen(app) {
+  const adding = app.profiles().length > 0 && !app.state.profile;
+  const knownPin = app.state.pendingPin;
   const name = h('input', { type: 'text', id: 'ob-name', autocomplete: 'off', placeholder: 'First name' });
+  const course = h('select', { id: 'ob-course' }, Object.values(COURSES).map((c) => h('option', { value: c.id, selected: c.id === 'y6' && !adding }, c.title)));
+  if (adding) course.value = 'ks1';
+  const pron = h('select', { id: 'ob-pron' }, [['she', 'she / her'], ['he', 'he / him'], ['they', 'they / them']].map(([v, t]) => h('option', { value: v }, t)));
   const bed = h('input', { type: 'time', id: 'ob-bed', value: '20:30' });
-  const mins = h('select', { id: 'ob-mins' }, [15, 20, 25, 30, 40].map((m) => h('option', { value: m, selected: m === 25 }, `${m} minutes`)));
+  const mins = h('select', { id: 'ob-mins' }, [8, 10, 12, 15, 20, 25, 30, 40].map((m) => h('option', { value: m }, `${m} minutes`)));
+  const syncMins = () => { mins.value = String(COURSES[course.value].minutes); bed.value = course.value === 'ks1' ? '19:00' : '20:30'; };
+  course.onchange = syncMins;
+  syncMins();
   const pin = h('input', { type: 'password', id: 'ob-pin', inputmode: 'numeric', maxlength: 4, placeholder: '4 digits' });
   const pin2 = h('input', { type: 'password', id: 'ob-pin2', inputmode: 'numeric', maxlength: 4, placeholder: 'Same again' });
+  const cancel = adding ? h('button', { class: 'btn-ghost', onclick: async () => { await app.useProfile(app.profiles()[0].id); app.go('#/home'); } }, 'Cancel') : null;
   mount(app.root, h('div', { class: 'narrow stack' },
-    h('h1', {}, 'Welcome to Grammar Stream'),
+    h('h1', {}, adding ? 'Add another child' : 'Welcome to Grammar Stream'),
     h('div', { class: 'card stack' },
       h('p', {}, 'This part is for a grown-up. It takes a minute.'),
       h('p', { class: 'muted' }, 'Everything stays on this device. Nothing is sent anywhere, there are no accounts, adverts or tracking.'),
-      h('div', { class: 'field' }, h('label', { for: 'ob-name' }, 'Your child’s first name'), name),
+      h('div', { class: 'grid two' },
+        h('div', { class: 'field' }, h('label', { for: 'ob-name' }, 'Child’s first name'), name),
+        h('div', { class: 'field' }, h('label', { for: 'ob-pron' }, 'Refer to them as'), pron)),
+      h('div', { class: 'field' }, h('label', { for: 'ob-course' }, 'Course'), course,
+        h('p', { class: 'muted small' }, 'Year 6 to grammar school: ages 10–11. Year 2 greater depth: ages 6–7, with everything read aloud and shorter sessions.')),
       h('div', { class: 'grid two' },
         h('div', { class: 'field' }, h('label', { for: 'ob-bed' }, 'Bedtime'), bed, h('p', { class: 'muted small' }, 'The app rests in the hour before bed.')),
         h('div', { class: 'field' }, h('label', { for: 'ob-mins' }, 'Daily session'), mins)),
-      h('div', { class: 'grid two' },
+      knownPin ? h('p', { class: 'muted small' }, 'The grown-ups’ PIN is the same one you already use.') : h('div', { class: 'grid two' },
         h('div', { class: 'field' }, h('label', { for: 'ob-pin' }, 'Grown-ups’ PIN'), pin),
         h('div', { class: 'field' }, h('label', { for: 'ob-pin2' }, 'Confirm PIN'), pin2)),
-      h('button', { class: 'btn-primary btn-big', onclick: () => {
+      h('div', { class: 'row' }, cancel, h('button', { class: 'btn-primary btn-big', onclick: async () => {
         if (!name.value.trim()) return toast('Please enter a first name.');
-        if (!/^\d{4}$/.test(pin.value)) return toast('The PIN must be 4 digits.');
-        if (pin.value !== pin2.value) return toast('The two PINs don’t match.');
-        app.state.profile = { childName: name.value.trim(), parentPin: pin.value, companion: { name: '', fur: 'caramel', accessory: 'yuzu' } };
+        if (!knownPin && !/^\d{4}$/.test(pin.value)) return toast('The PIN must be 4 digits.');
+        if (!knownPin && pin.value !== pin2.value) return toast('The two PINs don’t match.');
+        app.state.profile = { childName: name.value.trim(), pronoun: pron.value, parentPin: knownPin || pin.value, companion: { name: '', fur: 'caramel', accessory: course.value === 'ks1' ? 'racehelmet' : 'yuzu' } };
+        delete app.state.pendingPin;
         app.state.settings.bedtime = bed.value || '20:30';
         app.state.settings.sessionMinutes = +mins.value;
+        if (course.value === 'ks1') app.state.settings.textScale = 1.15;
+        setPronoun(pron.value);
+        await app.useCourse(course.value);
+        app.applySettings();
         app.save();
         requestPersistence();
         app.go('#/companion');
-      } }, 'Next: hand over to her'))));
+      } }, 'Next: meet the capybara')))));
   name.focus();
+}
+
+/** More than one child on this device: tap your capybara to start. */
+export function whoScreen(app) {
+  const list = app.profiles();
+  mount(app.root, h('div', { class: 'narrow stack center' },
+    h('h1', {}, 'Who’s learning?'),
+    h('div', { class: 'who-grid' }, list.map((p) => {
+      let comp = null;
+      try { comp = JSON.parse(localStorage.getItem(p.id === 'main' ? 'grammar-stream.save' : `grammar-stream.save.${p.id}`) || 'null')?.data?.profile?.companion; } catch { /* unreadable */ }
+      const card = h('button', { class: 'who-card card', type: 'button', onclick: async () => { await app.useProfile(p.id); app.go('#/home'); } });
+      card.innerHTML = capybaraSVG({ ...(comp || {}), mood: 'happy', title: comp?.name || 'Capybara' });
+      card.append(h('strong', {}, p.name || 'Me'), h('span', { class: 'muted small' }, COURSES[p.course]?.short || ''));
+      return card;
+    })),
+    h('p', { class: 'muted small' }, 'Grown-ups can add or remove a child in the Grown-ups area.')));
 }
 
 export function companionScreen(app) {
@@ -45,14 +81,16 @@ export function companionScreen(app) {
   const accRow = h('div', { class: 'capy-pick', role: 'group', 'aria-label': 'Accessory' });
   const drawPickers = () => {
     furRow.replaceChildren(...Object.entries(FURS).map(([k, f]) => h('button', { type: 'button', 'aria-pressed': String(c.fur === k), 'aria-label': k, onclick: () => { c.fur = k; draw(); drawPickers(); } }, h('span', { class: 'swatch', style: { background: f.body } }))));
-    accRow.replaceChildren(...Object.entries(ACCESSORIES).filter(([k]) => STARTER_ACCESSORIES.includes(k)).map(([k, label]) => h('button', { type: 'button', 'aria-pressed': String(c.accessory === k), onclick: () => { c.accessory = k; draw(); drawPickers(); } }, label)));
+    accRow.replaceChildren(...Object.entries(ACCESSORIES).filter(([k]) => starterAccessories().includes(k)).map(([k, label]) => h('button', { type: 'button', 'aria-pressed': String(c.accessory === k), onclick: () => { c.accessory = k; draw(); drawPickers(); } }, label)));
   };
   const name = h('input', { type: 'text', id: 'capy-name', placeholder: 'Give your capybara a name', maxlength: 20, value: c.name, oninput: () => { c.name = name.value; draw(); } });
+  const heroIn = h('input', { type: 'text', id: 'hero-name', placeholder: 'e.g. Captain Thunder', maxlength: 24, value: app.state.profile?.hero || '' });
   draw();
   drawPickers();
   mount(app.root, h('div', { class: 'narrow stack' },
     h('h1', { class: 'center' }, `Hi ${app.state.profile?.childName || ''}! Meet your capybara`),
     h('p', { class: 'center muted' }, 'Your capybara will learn alongside you. Sometimes you’ll teach it, and sometimes it will get things wrong for you to fix. You’ll unlock more outfits as you hit milestones.'),
+    app.state.course === 'ks1' ? h('div', { class: 'card stack' }, h('div', { class: 'field' }, h('label', { for: 'hero-name' }, 'And your superhero name? (it will appear in your maths adventures)'), heroIn)) : null,
     h('div', { class: 'card stack' }, preview,
       h('div', { class: 'field' }, h('label', {}, 'Fur'), furRow),
       h('div', { class: 'field' }, h('label', {}, 'Something special'), accRow),
@@ -60,6 +98,7 @@ export function companionScreen(app) {
       h('button', { class: 'btn-primary btn-big', onclick: () => {
         if (!c.name.trim()) return toast('Your capybara needs a name!');
         app.state.profile.companion = { name: c.name.trim(), fur: c.fur, accessory: c.accessory };
+        if (heroIn.value.trim()) app.state.profile.hero = heroIn.value.trim();
         app.save();
         app.go('#/home');
       } }, 'Let’s go!'))));

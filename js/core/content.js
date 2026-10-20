@@ -28,8 +28,8 @@ export function buildDB(decks) {
   return db;
 }
 
-export async function loadContent(fetchJSON) {
-  const index = await fetchJSON('content/index.json');
+export async function loadContent(fetchJSON, indexPath = 'content/index.json') {
+  const index = await fetchJSON(indexPath);
   const decks = await Promise.all(index.decks.map((p) => fetchJSON('content/' + p)));
   const db = buildDB(decks);
   for (const [id, path] of Object.entries(index.maps || {})) db.maps[id] = { path, data: null };

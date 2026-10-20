@@ -8,12 +8,12 @@ import { check } from './checkers.js';
 import { present } from './present.js';
 import { makeRng } from './rng.js';
 import { sprintDue } from './sprint.js';
-import { SUBJECTS, SUBJECT_BY_ID } from './subjects.js';
+import { SUBJECTS, SUBJECT_BY_ID, PLACEMENT_ORDER } from './subjects.js';
 import { monthKey } from './dates.js';
 import { needsPlacement } from './placement.js';
 
 // placement runs for one subject a day, in this order, until all are placed
-export const PLACEMENT_ORDER = ['maths', 'english', 'geography', 'history', 'science'];
+export { PLACEMENT_ORDER } from './subjects.js';
 
 export const FAST_MS = { choice: 4000, typed: 8000, map: 5000, order: 12000, numberline: 6000, cloze: 10000 };
 export const CONF = { guess: 0, think: 1, sure: 2 };

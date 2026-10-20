@@ -5,11 +5,11 @@ import { icon } from '../ui/icons.js';
 import { capybaraEl, ACCESSORIES } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
 import { SUBJECTS } from '../core/subjects.js';
-import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, unlockedAccessories, MILESTONES } from '../core/progress.js';
+import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, unlockedAccessories, milestoneDefs, wardrobeAccessories } from '../core/progress.js';
 import { daysPractisedThisMonth } from '../core/session.js';
 
 const TABS = [['overview', 'Stats'], ['timeline', 'Timeline'], ['places', 'Places'], ['badges', 'Badges']];
-const BADGE_ICON = { 'first-session': 'flag', 'first-mastered': 'star', hundred: 'bolt', 'all-rounder': 'target', globetrotter: 'globe', 'time-traveller': 'clock', 'lab-ready': 'flask', 'joined-up': 'link', sprinter: 'hourglass', paper: 'paper', typist: 'keyboard', 'speed-reader': 'eye', stretch: 'spark', wordsmith: 'pen', bookworm: 'book', calibrated: 'target', regular: 'check', 'five-hundred': 'trophy' };
+const BADGE_ICON = { 'speed-racer': 'bolt', fifty: 'star', explorer: 'globe', scientist: 'flask', 'first-session': 'flag', 'first-mastered': 'star', hundred: 'bolt', 'all-rounder': 'target', globetrotter: 'globe', 'time-traveller': 'clock', 'lab-ready': 'flask', 'joined-up': 'link', sprinter: 'hourglass', paper: 'paper', typist: 'keyboard', 'speed-reader': 'eye', stretch: 'spark', wordsmith: 'pen', bookworm: 'book', calibrated: 'target', regular: 'check', 'five-hundred': 'trophy' };
 
 export async function progressScreen(app, tab = 'overview') {
   const body = h('div', {});
@@ -109,23 +109,26 @@ function timelineTab(app, body) {
 async function placesTab(app, body) {
   const { state, db } = app;
   const p = placesStatus(state, db);
-  const choice = sessionStorage.getItem('places-map') || 'europe';
+  const maps = ['world', 'europe', 'uk'].filter((k) => p.totals[k].size > 0);
+  const stored = sessionStorage.getItem('places-map');
+  const choice = maps.includes(stored) ? stored : maps.includes('europe') ? 'europe' : maps[0] || 'world';
+  const continents = Object.values(db.items).some((i) => i.map === 'world' && i.layer === 'continents');
   const holder = h('div', {});
   const LABEL = { world: 'World', europe: 'Europe', uk: 'UK' };
   const draw = async (which) => {
     try { sessionStorage.setItem('places-map', which); } catch { /* private mode */ }
     const map = await loadMap(which);
-    const layer = which === 'world' ? 'countries' : which === 'europe' ? 'countries' : 'features';
+    const layer = which === 'world' ? (continents ? 'continents' : 'countries') : which === 'europe' ? 'countries' : 'features';
     const view = mapSVG(map, { layer, markerType: which === 'uk' ? undefined : undefined });
     for (const id of p.known[which]) view.mark(id, 'map-known');
     holder.replaceChildren(
-      h('div', { class: 'tabs', role: 'tablist', style: { marginBottom: '10px' } }, Object.keys(LABEL).map((k) => h('button', { role: 'tab', 'aria-selected': String(k === which), onclick: () => draw(k) }, `${LABEL[k]} ${p.known[k].size}/${p.totals[k].size}`))),
+      h('div', { class: 'tabs', role: 'tablist', style: { marginBottom: '10px' } }, maps.map((k) => h('button', { role: 'tab', 'aria-selected': String(k === which), onclick: () => draw(k) }, `${LABEL[k]} ${p.known[k].size}/${p.totals[k].size}`))),
       view.el,
-      h('p', { class: 'muted small', style: { marginTop: '8px' } }, which === 'uk' ? 'Green shows the parts of the UK, rivers and places you know.' : 'Green countries are ones you can find on a map or know the capital of.'));
+      h('p', { class: 'muted small', style: { marginTop: '8px' } }, which === 'uk' ? 'Green shows the parts of the UK, rivers and places you know.' : continents ? 'Green continents are ones you can find on the map.' : 'Green countries are ones you can find on a map or know the capital of.'));
   };
-  const total = p.known.world.size + p.known.europe.size;
-  body.append(h('div', { class: 'card', style: { marginBottom: '14px' } }, h('h2', { style: { marginBottom: '4px' } }, `You know ${total} countr${total === 1 ? 'y' : 'ies'}`),
-    h('p', { class: 'muted', style: { margin: 0 } }, 'Every country you learn turns green. Can you colour in the whole of Europe?')), holder);
+  const total = continents ? p.known.world.size + p.known.uk.size : p.known.world.size + p.known.europe.size;
+  body.append(h('div', { class: 'card', style: { marginBottom: '14px' } }, h('h2', { style: { marginBottom: '4px' } }, continents ? `You know ${total} place${total === 1 ? '' : 's'}` : `You know ${total} countr${total === 1 ? 'y' : 'ies'}`),
+    h('p', { class: 'muted', style: { margin: 0 } }, continents ? 'Every continent, ocean and part of the UK you learn turns green. Can you find them all?' : 'Every country you learn turns green. Can you colour in the whole of Europe?')), holder);
   await draw(choice);
 }
 
@@ -135,8 +138,9 @@ function badgesTab(app, body) {
   const ms = milestones(state, db);
   const unlocked = unlockedAccessories(state, db);
   const c = state.profile?.companion || {};
-  const lockedBy = Object.fromEntries(MILESTONES.filter((m) => m.unlock).map((m) => [m.unlock, m]));
-  const wardrobe = h('div', { class: 'wardrobe' }, Object.entries(ACCESSORIES).map(([id, label]) => {
+  const lockedBy = Object.fromEntries(milestoneDefs().filter((m) => m.unlock).map((m) => [m.unlock, m]));
+  const shown = wardrobeAccessories();
+  const wardrobe = h('div', { class: 'wardrobe' }, Object.entries(ACCESSORIES).filter(([id]) => shown.has(id)).map(([id, label]) => {
     const open = unlocked.has(id);
     return h('button', { type: 'button', class: open ? '' : 'locked', 'aria-pressed': String(c.accessory === id), 'aria-label': open ? `Wear ${label}` : `${label}: locked`, onclick: () => {
       if (!open) return toast(`Earn “${lockedBy[id]?.title}” to unlock the ${label.toLowerCase()}.`);

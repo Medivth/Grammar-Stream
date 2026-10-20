@@ -1,0 +1,2291 @@
+{
+ "subject": "spelling",
+ "deck": "core",
+ "topics": [
+  {
+   "id": "spelling.cew-1",
+   "title": "Spelling: Tricky Year 1 words",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Tricky words don’t follow the usual rules, so we learn the tricky part. Look, say, cover, write, check!",
+   "teach": "Pick one word and explain its tricky part.",
+   "talk": "Ask {him} to spell one of this week’s words out loud."
+  },
+  {
+   "id": "spelling.cew-2",
+   "title": "Spelling: Year 2 words: oor, ind, ild, old",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.cew-1"
+   ],
+   "batch": 5,
+   "intro": "Tricky words don’t follow the usual rules, so we learn the tricky part. Look, say, cover, write, check!",
+   "teach": "Pick one word and explain its tricky part.",
+   "talk": "Ask {him} to spell one of this week’s words out loud."
+  },
+  {
+   "id": "spelling.cew-3",
+   "title": "Spelling: Year 2 words: long vowels and odd ones out",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.cew-2"
+   ],
+   "batch": 5,
+   "intro": "Tricky words don’t follow the usual rules, so we learn the tricky part. Look, say, cover, write, check!",
+   "teach": "Pick one word and explain its tricky part.",
+   "talk": "Ask {him} to spell one of this week’s words out loud."
+  },
+  {
+   "id": "spelling.cew-4",
+   "title": "Spelling: Year 2 words: tricky sounds",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.cew-3"
+   ],
+   "batch": 5,
+   "intro": "Tricky words don’t follow the usual rules, so we learn the tricky part. Look, say, cover, write, check!",
+   "teach": "Pick one word and explain its tricky part.",
+   "talk": "Ask {him} to spell one of this week’s words out loud."
+  },
+  {
+   "id": "spelling.cew-5",
+   "title": "Spelling: Year 2 words: last batch",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.cew-4"
+   ],
+   "batch": 5,
+   "intro": "Tricky words don’t follow the usual rules, so we learn the tricky part. Look, say, cover, write, check!",
+   "teach": "Pick one word and explain its tricky part.",
+   "talk": "Ask {him} to spell one of this week’s words out loud."
+  },
+  {
+   "id": "spelling.year3",
+   "title": "Spelling: Year 3 and 4 words",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "spelling.cew-5"
+   ],
+   "batch": 5,
+   "intro": "Words from the Year 3 and 4 list. These are real challenges for a Year 2 speller!",
+   "teach": "Explain the trick for spelling “believe”.",
+   "talk": "Ask {him} to spell “island” and spot the silent letter."
+  },
+  {
+   "id": "spelling.suffixes",
+   "title": "Adding endings: -ing, -ed, -er, -est",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.cew-1"
+   ],
+   "batch": 5,
+   "intro": "When you add an ending, sometimes the word changes: hop → hopping (double the p), happy → happier (y becomes i).",
+   "teach": "Explain why “hopping” has two p’s.",
+   "talk": "Ask {him}: what is the -ing word for “run”? For “smile”?"
+  },
+  {
+   "id": "spelling.suffixes-2",
+   "title": "Endings: -ful, -less, -ness, -ment, -ly",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.suffixes"
+   ],
+   "batch": 5,
+   "intro": "Suffixes change what a word means: help → helpful → helpless. Watch out: -ful has only one l!",
+   "teach": "Explain the difference between “careful” and “careless”.",
+   "talk": "Make as many words as you can from “play” (playful, player, playing…)."
+  },
+  {
+   "id": "spelling.homophones",
+   "title": "Words that sound the same",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.cew-2"
+   ],
+   "batch": 5,
+   "intro": "Homophones sound the same but are spelt differently and mean different things: sea and see, knight and night.",
+   "teach": "Explain the difference between “there” and “their”.",
+   "talk": "Ask {him} to spell “night” and “knight” and explain which is which."
+  },
+  {
+   "id": "spelling.word-classes",
+   "title": "Nouns, verbs, adjectives and adverbs",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Words have jobs. Nouns name things. Verbs are doing words. Adjectives describe nouns. Adverbs describe how something is done.",
+   "teach": "Find a noun, a verb and an adjective in: “The red car zoomed.”",
+   "talk": "Ask {him} for three adjectives to describe a superhero."
+  },
+  {
+   "id": "spelling.punctuation",
+   "title": "Full stops, question marks and exclamation marks",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.word-classes"
+   ],
+   "batch": 5,
+   "intro": "Every sentence starts with a capital letter. A statement ends with a full stop, a question with a question mark, and an exclamation with an exclamation mark!",
+   "teach": "Explain the difference between a statement, a question and a command.",
+   "talk": "Ask {him} to make up a question about space."
+  },
+  {
+   "id": "spelling.apostrophes",
+   "title": "Apostrophes",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.punctuation"
+   ],
+   "batch": 5,
+   "intro": "An apostrophe can show missing letters (do not → don’t) or that something belongs to someone (the dog’s bone).",
+   "teach": "Explain why “can’t” has an apostrophe.",
+   "talk": "Find an apostrophe on a shop sign and ask what it is doing."
+  },
+  {
+   "id": "spelling.joining",
+   "title": "Joining words and tenses",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.punctuation"
+   ],
+   "batch": 5,
+   "intro": "Joining words (conjunctions) like and, but, because and when make longer, better sentences. Tense tells us when something happens: past, present or future.",
+   "teach": "Make a sentence using “because”.",
+   "talk": "Start a sentence and ask {him} to finish it: “I was happy because…”"
+  }
+ ],
+ "items": [
+  {
+   "id": "spelling.sp.said",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "said",
+   "sentence": "“Ready, steady, go!” ___ the starter.",
+   "clue": "spoke",
+   "explain": "It sounds like “sed” but is spelt s-a-i-d.",
+   "learn": "**said**: It sounds like “sed” but is spelt s-a-i-d."
+  },
+  {
+   "id": "spelling.sp.says",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "says",
+   "sentence": "Mum ___ it is time for bed.",
+   "clue": "speaks (now)",
+   "explain": "Sounds like “sez”: s-a-y-s.",
+   "learn": "**says**: Sounds like “sez”: s-a-y-s."
+  },
+  {
+   "id": "spelling.sp.were",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "were",
+   "sentence": "The cars ___ very fast.",
+   "clue": "past of “are”",
+   "explain": "w-e-r-e: it rhymes with “her”.",
+   "learn": "**were**: w-e-r-e: it rhymes with “her”."
+  },
+  {
+   "id": "spelling.sp.was",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "was",
+   "sentence": "The rocket ___ ready to launch.",
+   "clue": "past of “is”",
+   "explain": "Sounds like “woz” but spelt w-a-s.",
+   "learn": "**was**: Sounds like “woz” but spelt w-a-s."
+  },
+  {
+   "id": "spelling.sp.they",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "they",
+   "sentence": "___ zoomed round the track.",
+   "clue": "those people",
+   "explain": "Ends in -ey, not -ay.",
+   "learn": "**they**: Ends in -ey, not -ay."
+  },
+  {
+   "id": "spelling.sp.there",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "there",
+   "sentence": "The trophy is over ___.",
+   "clue": "in that place",
+   "explain": "There has “here” inside it: a place word.",
+   "learn": "**there**: There has “here” inside it: a place word."
+  },
+  {
+   "id": "spelling.sp.where",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "where",
+   "sentence": "___ is my helmet?",
+   "clue": "which place",
+   "explain": "Starts with wh-, and has “here” inside: a place word.",
+   "learn": "**where**: Starts with wh-, and has “here” inside: a place word."
+  },
+  {
+   "id": "spelling.sp.love",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "love",
+   "sentence": "I ___ space adventures.",
+   "clue": "like very much",
+   "explain": "The “uh” sound is spelt with o, and it ends in e.",
+   "learn": "**love**: The “uh” sound is spelt with o, and it ends in e."
+  },
+  {
+   "id": "spelling.sp.come",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "come",
+   "sentence": "Please ___ to my party.",
+   "clue": "move towards",
+   "explain": "o makes an “uh” sound; silent e on the end.",
+   "learn": "**come**: o makes an “uh” sound; silent e on the end."
+  },
+  {
+   "id": "spelling.sp.some",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "some",
+   "sentence": "Can I have ___ juice?",
+   "clue": "a few, a bit",
+   "explain": "Like come: o then m, with an e.",
+   "learn": "**some**: Like come: o then m, with an e."
+  },
+  {
+   "id": "spelling.sp.one",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "one",
+   "sentence": "Turbo came first: number ___.",
+   "clue": "the number 1",
+   "explain": "Sounds like “won” but spelt o-n-e.",
+   "learn": "**one**: Sounds like “won” but spelt o-n-e."
+  },
+  {
+   "id": "spelling.sp.once",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "once",
+   "sentence": "___ upon a time…",
+   "clue": "one time",
+   "explain": "o-n-c-e: “one” with a c.",
+   "learn": "**once**: o-n-c-e: “one” with a c."
+  },
+  {
+   "id": "spelling.sp.friend",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "friend",
+   "sentence": "My best ___ is coming to play.",
+   "clue": "someone you like",
+   "explain": "I before e here: fr-i-e-n-d. “A friend to the end.”",
+   "learn": "**friend**: I before e here: fr-i-e-n-d. “A friend to the end.”"
+  },
+  {
+   "id": "spelling.sp.school",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "school",
+   "sentence": "We go to ___ on Monday.",
+   "clue": "where you learn",
+   "explain": "sch- makes a “sk” sound.",
+   "learn": "**school**: sch- makes a “sk” sound."
+  },
+  {
+   "id": "spelling.sp.push",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "push",
+   "sentence": "___ the button to start the engine.",
+   "clue": "press away from you",
+   "explain": "u says “oo” as in book.",
+   "learn": "**push**: u says “oo” as in book."
+  },
+  {
+   "id": "spelling.sp.house",
+   "topic": "spelling.cew-1",
+   "kind": "spell",
+   "word": "house",
+   "sentence": "The hero flew over the ___.",
+   "clue": "a home",
+   "explain": "ou-se: the e is silent.",
+   "learn": "**house**: ou-se: the e is silent."
+  },
+  {
+   "id": "spelling.sp.door",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "door",
+   "sentence": "Knock on the ___.",
+   "clue": "you open it to go in",
+   "explain": "Two o’s then r: d-o-o-r.",
+   "learn": "**door**: Two o’s then r: d-o-o-r."
+  },
+  {
+   "id": "spelling.sp.floor",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "floor",
+   "sentence": "The toy car rolled across the ___.",
+   "clue": "what you walk on",
+   "explain": "Like door: f-l-o-o-r.",
+   "learn": "**floor**: Like door: f-l-o-o-r."
+  },
+  {
+   "id": "spelling.sp.poor",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "poor",
+   "sentence": "The ___ puppy was lost in the rain.",
+   "clue": "not lucky; with little money",
+   "explain": "p-o-o-r: same “oor” as door.",
+   "learn": "**poor**: p-o-o-r: same “oor” as door."
+  },
+  {
+   "id": "spelling.sp.because",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "because",
+   "sentence": "I wore a coat ___ it was cold.",
+   "clue": "for the reason that",
+   "explain": "Big Elephants Can Always Understand Small Elephants.",
+   "learn": "**because**: Big Elephants Can Always Understand Small Elephants."
+  },
+  {
+   "id": "spelling.sp.find",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "find",
+   "sentence": "Can you ___ the hidden robot?",
+   "clue": "discover",
+   "explain": "i says its name before nd.",
+   "learn": "**find**: i says its name before nd."
+  },
+  {
+   "id": "spelling.sp.kind",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "kind",
+   "sentence": "The hero was ___ to everyone.",
+   "clue": "friendly and helpful",
+   "explain": "k-i-n-d: i says its name.",
+   "learn": "**kind**: k-i-n-d: i says its name."
+  },
+  {
+   "id": "spelling.sp.mind",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "mind",
+   "sentence": "Use your ___ to solve the puzzle.",
+   "clue": "your thinking",
+   "explain": "m-i-n-d.",
+   "learn": "**mind**: m-i-n-d."
+  },
+  {
+   "id": "spelling.sp.behind",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "behind",
+   "sentence": "The cat hid ___ the sofa.",
+   "clue": "at the back of",
+   "explain": "be + hind.",
+   "learn": "**behind**: be + hind."
+  },
+  {
+   "id": "spelling.sp.child",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "child",
+   "sentence": "Every ___ got a medal.",
+   "clue": "a young person",
+   "explain": "i says its name before ld.",
+   "learn": "**child**: i says its name before ld."
+  },
+  {
+   "id": "spelling.sp.children",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "children",
+   "sentence": "The ___ cheered at the race.",
+   "clue": "more than one child",
+   "explain": "child + ren: the i changes sound.",
+   "learn": "**children**: child + ren: the i changes sound."
+  },
+  {
+   "id": "spelling.sp.wild",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "wild",
+   "sentence": "Lions are ___ animals.",
+   "clue": "not tame",
+   "explain": "w-i-l-d.",
+   "learn": "**wild**: w-i-l-d."
+  },
+  {
+   "id": "spelling.sp.climb",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "climb",
+   "sentence": "Let’s ___ to the top of the tower.",
+   "clue": "go up using hands and feet",
+   "explain": "Silent b at the end!",
+   "learn": "**climb**: Silent b at the end!"
+  },
+  {
+   "id": "spelling.sp.most",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "most",
+   "sentence": "Turbo won the ___ races.",
+   "clue": "the biggest number",
+   "explain": "o says its name before st.",
+   "learn": "**most**: o says its name before st."
+  },
+  {
+   "id": "spelling.sp.only",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "only",
+   "sentence": "There is ___ one cake left.",
+   "clue": "just",
+   "explain": "o says its name: o-n-l-y.",
+   "learn": "**only**: o says its name: o-n-l-y."
+  },
+  {
+   "id": "spelling.sp.both",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "both",
+   "sentence": "I like ___ racing cars.",
+   "clue": "the two of them",
+   "explain": "b-o-t-h.",
+   "learn": "**both**: b-o-t-h."
+  },
+  {
+   "id": "spelling.sp.cold",
+   "topic": "spelling.cew-2",
+   "kind": "spell",
+   "word": "cold",
+   "sentence": "Space is very, very ___.",
+   "clue": "not hot",
+   "explain": "o says its name before ld: cold, gold, old, hold, told.",
+   "learn": "**cold**: o says its name before ld: cold, gold, old, hold, told."
+  },
+  {
+   "id": "spelling.sp.every",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "every",
+   "sentence": "I practise ___ day.",
+   "clue": "each one",
+   "explain": "e-v-e-r-y: three syllables, ev-er-y.",
+   "learn": "**every**: e-v-e-r-y: three syllables, ev-er-y."
+  },
+  {
+   "id": "spelling.sp.everybody",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "everybody",
+   "sentence": "___ clapped for the winner.",
+   "clue": "all the people",
+   "explain": "every + body.",
+   "learn": "**everybody**: every + body."
+  },
+  {
+   "id": "spelling.sp.even",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "even",
+   "sentence": "Is 8 an odd or ___ number?",
+   "clue": "can be shared into 2 equal groups",
+   "explain": "e says its name: e-v-e-n.",
+   "learn": "**even**: e says its name: e-v-e-n."
+  },
+  {
+   "id": "spelling.sp.great",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "great",
+   "sentence": "That was a ___ race!",
+   "clue": "very good",
+   "explain": "Sounds like “grate” but spelt g-r-e-a-t.",
+   "learn": "**great**: Sounds like “grate” but spelt g-r-e-a-t."
+  },
+  {
+   "id": "spelling.sp.break",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "break",
+   "sentence": "Be careful not to ___ the window.",
+   "clue": "smash into pieces",
+   "explain": "Like great: ea says “ay”.",
+   "learn": "**break**: Like great: ea says “ay”."
+  },
+  {
+   "id": "spelling.sp.steak",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "steak",
+   "sentence": "Dad cooked ___ for tea.",
+   "clue": "a thick slice of meat",
+   "explain": "ea says “ay” again.",
+   "learn": "**steak**: ea says “ay” again."
+  },
+  {
+   "id": "spelling.sp.pretty",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "pretty",
+   "sentence": "What a ___ flower.",
+   "clue": "lovely to look at",
+   "explain": "Starts “pre-” but says “prit”; double t.",
+   "learn": "**pretty**: Starts “pre-” but says “prit”; double t."
+  },
+  {
+   "id": "spelling.sp.beautiful",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "beautiful",
+   "sentence": "The sunset was ___.",
+   "clue": "very lovely",
+   "explain": "beau-ti-ful: b-e-a-u. Ends -ful with one l.",
+   "learn": "**beautiful**: beau-ti-ful: b-e-a-u. Ends -ful with one l."
+  },
+  {
+   "id": "spelling.sp.after",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "after",
+   "sentence": "We had pudding ___ dinner.",
+   "clue": "later than",
+   "explain": "a says “ar” in many words: after, fast, last.",
+   "learn": "**after**: a says “ar” in many words: after, fast, last."
+  },
+  {
+   "id": "spelling.sp.fast",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "fast",
+   "sentence": "The racing car is very ___.",
+   "clue": "quick",
+   "explain": "f-a-s-t.",
+   "learn": "**fast**: f-a-s-t."
+  },
+  {
+   "id": "spelling.sp.last",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "last",
+   "sentence": "Blaze came ___ in the race.",
+   "clue": "at the end",
+   "explain": "l-a-s-t.",
+   "learn": "**last**: l-a-s-t."
+  },
+  {
+   "id": "spelling.sp.past",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "past",
+   "sentence": "We walked ___ the castle.",
+   "clue": "beyond; going by",
+   "explain": "p-a-s-t.",
+   "learn": "**past**: p-a-s-t."
+  },
+  {
+   "id": "spelling.sp.father",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "father",
+   "sentence": "My ___ drives a red car.",
+   "clue": "dad",
+   "explain": "a says “ar”: f-a-t-h-e-r.",
+   "learn": "**father**: a says “ar”: f-a-t-h-e-r."
+  },
+  {
+   "id": "spelling.sp.class",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "class",
+   "sentence": "Our ___ went to the museum.",
+   "clue": "a group at school",
+   "explain": "Double s at the end.",
+   "learn": "**class**: Double s at the end."
+  },
+  {
+   "id": "spelling.sp.grass",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "grass",
+   "sentence": "The football is on the ___.",
+   "clue": "green plants on the ground",
+   "explain": "Double s.",
+   "learn": "**grass**: Double s."
+  },
+  {
+   "id": "spelling.sp.pass",
+   "topic": "spelling.cew-3",
+   "kind": "spell",
+   "word": "pass",
+   "sentence": "Please ___ the ball.",
+   "clue": "give or throw to someone",
+   "explain": "Double s.",
+   "learn": "**pass**: Double s."
+  },
+  {
+   "id": "spelling.sp.plant",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "plant",
+   "sentence": "We watered the ___.",
+   "clue": "something green that grows",
+   "explain": "a says “ar” in the south of England: p-l-a-n-t.",
+   "learn": "**plant**: a says “ar” in the south of England: p-l-a-n-t."
+  },
+  {
+   "id": "spelling.sp.path",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "path",
+   "sentence": "Follow the ___ through the woods.",
+   "clue": "a little track to walk on",
+   "explain": "p-a-t-h.",
+   "learn": "**path**: p-a-t-h."
+  },
+  {
+   "id": "spelling.sp.bath",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "bath",
+   "sentence": "I splash in the ___.",
+   "clue": "where you wash",
+   "explain": "b-a-t-h.",
+   "learn": "**bath**: b-a-t-h."
+  },
+  {
+   "id": "spelling.sp.hour",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "hour",
+   "sentence": "The race lasted an ___.",
+   "clue": "60 minutes",
+   "explain": "Silent h: h-o-u-r.",
+   "learn": "**hour**: Silent h: h-o-u-r."
+  },
+  {
+   "id": "spelling.sp.move",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "move",
+   "sentence": "Don’t ___ until I say go!",
+   "clue": "change position",
+   "explain": "o says “oo”: m-o-v-e.",
+   "learn": "**move**: o says “oo”: m-o-v-e."
+  },
+  {
+   "id": "spelling.sp.prove",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "prove",
+   "sentence": "Can you ___ your answer is right?",
+   "clue": "show that it is true",
+   "explain": "Like move: p-r-o-v-e.",
+   "learn": "**prove**: Like move: p-r-o-v-e."
+  },
+  {
+   "id": "spelling.sp.improve",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "improve",
+   "sentence": "Practice helps you ___.",
+   "clue": "get better",
+   "explain": "im + prove.",
+   "learn": "**improve**: im + prove."
+  },
+  {
+   "id": "spelling.sp.sure",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "sure",
+   "sentence": "Are you ___ it is right?",
+   "clue": "certain",
+   "explain": "s says “sh”: s-u-r-e.",
+   "learn": "**sure**: s says “sh”: s-u-r-e."
+  },
+  {
+   "id": "spelling.sp.sugar",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "sugar",
+   "sentence": "Too much ___ is bad for your teeth.",
+   "clue": "sweet stuff",
+   "explain": "s says “sh” again: s-u-g-a-r.",
+   "learn": "**sugar**: s says “sh” again: s-u-g-a-r."
+  },
+  {
+   "id": "spelling.sp.eye",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "eye",
+   "sentence": "The pirate had a patch over one ___.",
+   "clue": "you see with it",
+   "explain": "e-y-e: it looks like a face!",
+   "learn": "**eye**: e-y-e: it looks like a face!"
+  },
+  {
+   "id": "spelling.sp.could",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "could",
+   "sentence": "___ you help me, please?",
+   "clue": "was able to",
+   "explain": "O U Lucky Duck: c-ould.",
+   "learn": "**could**: O U Lucky Duck: c-ould."
+  },
+  {
+   "id": "spelling.sp.should",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "should",
+   "sentence": "You ___ wear a helmet.",
+   "clue": "ought to",
+   "explain": "Same pattern: sh-ould.",
+   "learn": "**should**: Same pattern: sh-ould."
+  },
+  {
+   "id": "spelling.sp.would",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "would",
+   "sentence": "I ___ love to fly in space.",
+   "clue": "if I could, I…",
+   "explain": "Same pattern: w-ould.",
+   "learn": "**would**: Same pattern: w-ould."
+  },
+  {
+   "id": "spelling.sp.who",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "who",
+   "sentence": "___ won the race?",
+   "clue": "which person",
+   "explain": "w-h-o: the w is silent-ish.",
+   "learn": "**who**: w-h-o: the w is silent-ish."
+  },
+  {
+   "id": "spelling.sp.whole",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "whole",
+   "sentence": "He ate the ___ pizza!",
+   "clue": "all of it",
+   "explain": "Silent w: w-h-o-l-e. Not “hole”!",
+   "learn": "**whole**: Silent w: w-h-o-l-e. Not “hole”!"
+  },
+  {
+   "id": "spelling.sp.water",
+   "topic": "spelling.cew-4",
+   "kind": "spell",
+   "word": "water",
+   "sentence": "Drink plenty of ___.",
+   "clue": "you drink it",
+   "explain": "a says “or”: w-a-t-e-r.",
+   "learn": "**water**: a says “or”: w-a-t-e-r."
+  },
+  {
+   "id": "spelling.sp.any",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "any",
+   "sentence": "Have you got ___ sweets?",
+   "clue": "some, even one",
+   "explain": "a says “e”: a-n-y.",
+   "learn": "**any**: a says “e”: a-n-y."
+  },
+  {
+   "id": "spelling.sp.many",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "many",
+   "sentence": "How ___ laps are left?",
+   "clue": "a lot",
+   "explain": "Like any: m-a-n-y.",
+   "learn": "**many**: Like any: m-a-n-y."
+  },
+  {
+   "id": "spelling.sp.clothes",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "clothes",
+   "sentence": "Put your ___ away.",
+   "clue": "what you wear",
+   "explain": "cloth + es: c-l-o-t-h-e-s.",
+   "learn": "**clothes**: cloth + es: c-l-o-t-h-e-s."
+  },
+  {
+   "id": "spelling.sp.busy",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "busy",
+   "sentence": "The race track was ___.",
+   "clue": "full of things happening",
+   "explain": "u says “i”: b-u-s-y.",
+   "learn": "**busy**: u says “i”: b-u-s-y."
+  },
+  {
+   "id": "spelling.sp.people",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "people",
+   "sentence": "Lots of ___ came to watch.",
+   "clue": "more than one person",
+   "explain": "peo-ple: e-o in the middle.",
+   "learn": "**people**: peo-ple: e-o in the middle."
+  },
+  {
+   "id": "spelling.sp.again",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "again",
+   "sentence": "Let’s race ___!",
+   "clue": "one more time",
+   "explain": "a-g-a-i-n.",
+   "learn": "**again**: a-g-a-i-n."
+  },
+  {
+   "id": "spelling.sp.half",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "half",
+   "sentence": "Cut the cake in ___.",
+   "clue": "one of two equal parts",
+   "explain": "Silent l: h-a-l-f.",
+   "learn": "**half**: Silent l: h-a-l-f."
+  },
+  {
+   "id": "spelling.sp.money",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "money",
+   "sentence": "I saved my ___ in a jar.",
+   "clue": "coins and notes",
+   "explain": "o says “uh”: m-o-n-e-y.",
+   "learn": "**money**: o says “uh”: m-o-n-e-y."
+  },
+  {
+   "id": "spelling.sp.parents",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "parents",
+   "sentence": "My ___ came to watch.",
+   "clue": "mum and dad",
+   "explain": "par-ents.",
+   "learn": "**parents**: par-ents."
+  },
+  {
+   "id": "spelling.sp.christmas",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "Christmas",
+   "sentence": "We open presents at ___.",
+   "clue": "a winter festival",
+   "explain": "Capital C, silent h, and a t you don’t hear: Christ-mas.",
+   "learn": "**Christmas**: Capital C, silent h, and a t you don’t hear: Christ-mas."
+  },
+  {
+   "id": "spelling.sp.old",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "old",
+   "sentence": "The castle is very ___.",
+   "clue": "not new",
+   "explain": "o-l-d.",
+   "learn": "**old**: o-l-d."
+  },
+  {
+   "id": "spelling.sp.gold",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "gold",
+   "sentence": "The winner gets a ___ medal.",
+   "clue": "a shiny yellow metal",
+   "explain": "g-o-l-d.",
+   "learn": "**gold**: g-o-l-d."
+  },
+  {
+   "id": "spelling.sp.hold",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "hold",
+   "sentence": "___ on tight!",
+   "clue": "keep in your hands",
+   "explain": "h-o-l-d.",
+   "learn": "**hold**: h-o-l-d."
+  },
+  {
+   "id": "spelling.sp.told",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "told",
+   "sentence": "She ___ us a story.",
+   "clue": "past of tell",
+   "explain": "t-o-l-d.",
+   "learn": "**told**: t-o-l-d."
+  },
+  {
+   "id": "spelling.sp.pull",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "pull",
+   "sentence": "___ the rope!",
+   "clue": "tug towards you",
+   "explain": "Double l: p-u-l-l.",
+   "learn": "**pull**: Double l: p-u-l-l."
+  },
+  {
+   "id": "spelling.sp.full",
+   "topic": "spelling.cew-5",
+   "kind": "spell",
+   "word": "full",
+   "sentence": "The rocket’s tank is ___.",
+   "clue": "cannot fit any more",
+   "explain": "Double l at the end, but -ful has one l.",
+   "learn": "**full**: Double l at the end, but -ful has one l."
+  },
+  {
+   "id": "spelling.sp3.answer",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "answer",
+   "sentence": "Write your ___ here.",
+   "clue": "what you say back",
+   "explain": "Silent w: ans-wer.",
+   "learn": "**answer**: Silent w: ans-wer."
+  },
+  {
+   "id": "spelling.sp3.believe",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "believe",
+   "sentence": "I ___ in you!",
+   "clue": "think it is true",
+   "explain": "There is a “lie” in believe.",
+   "learn": "**believe**: There is a “lie” in believe."
+  },
+  {
+   "id": "spelling.sp3.bicycle",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "bicycle",
+   "sentence": "I rode my ___ to the park.",
+   "clue": "a bike",
+   "explain": "bi (two) + cycle (wheel): bi-cy-cle.",
+   "learn": "**bicycle**: bi (two) + cycle (wheel): bi-cy-cle."
+  },
+  {
+   "id": "spelling.sp3.build",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "build",
+   "sentence": "Let’s ___ a den.",
+   "clue": "make something",
+   "explain": "u then i: b-u-i-l-d.",
+   "learn": "**build**: u then i: b-u-i-l-d."
+  },
+  {
+   "id": "spelling.sp3.caught",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "caught",
+   "sentence": "The goalkeeper ___ the ball.",
+   "clue": "past of catch",
+   "explain": "-aught says “ort”.",
+   "learn": "**caught**: -aught says “ort”."
+  },
+  {
+   "id": "spelling.sp3.centre",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "centre",
+   "sentence": "Stand in the ___ of the circle.",
+   "clue": "the middle",
+   "explain": "Ends -re in British English.",
+   "learn": "**centre**: Ends -re in British English."
+  },
+  {
+   "id": "spelling.sp3.different",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "different",
+   "sentence": "Every snowflake is ___.",
+   "clue": "not the same",
+   "explain": "dif-fer-ent: double f.",
+   "learn": "**different**: dif-fer-ent: double f."
+  },
+  {
+   "id": "spelling.sp3.difficult",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "difficult",
+   "sentence": "The puzzle was ___.",
+   "clue": "hard",
+   "explain": "dif-fi-cult: double f.",
+   "learn": "**difficult**: dif-fi-cult: double f."
+  },
+  {
+   "id": "spelling.sp3.early",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "early",
+   "sentence": "We got up ___ for the race.",
+   "clue": "before the usual time",
+   "explain": "ear-ly.",
+   "learn": "**early**: ear-ly."
+  },
+  {
+   "id": "spelling.sp3.eight",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "eight",
+   "sentence": "A spider has ___ legs.",
+   "clue": "the number 8",
+   "explain": "e-i-g-h-t: silent gh.",
+   "learn": "**eight**: e-i-g-h-t: silent gh."
+  },
+  {
+   "id": "spelling.sp3.enough",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "enough",
+   "sentence": "Have you had ___ to eat?",
+   "clue": "as much as needed",
+   "explain": "-ough says “uff”.",
+   "learn": "**enough**: -ough says “uff”."
+  },
+  {
+   "id": "spelling.sp3.february",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "February",
+   "sentence": "My birthday is in ___.",
+   "clue": "the second month",
+   "explain": "Feb-ru-ary: don’t forget the first r!",
+   "learn": "**February**: Feb-ru-ary: don’t forget the first r!"
+  },
+  {
+   "id": "spelling.sp3.heard",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "heard",
+   "sentence": "I ___ a strange noise.",
+   "clue": "past of hear",
+   "explain": "There is an “ear” in heard.",
+   "learn": "**heard**: There is an “ear” in heard."
+  },
+  {
+   "id": "spelling.sp3.island",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "island",
+   "sentence": "The pirates sailed to an ___.",
+   "clue": "land with water all round",
+   "explain": "Silent s: is-land.",
+   "learn": "**island**: Silent s: is-land."
+  },
+  {
+   "id": "spelling.sp3.often",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "often",
+   "sentence": "I ___ play football.",
+   "clue": "many times",
+   "explain": "Some people say the t, some don’t: o-f-t-e-n.",
+   "learn": "**often**: Some people say the t, some don’t: o-f-t-e-n."
+  },
+  {
+   "id": "spelling.sp3.strength",
+   "topic": "spelling.year3",
+   "kind": "spell",
+   "word": "strength",
+   "sentence": "Superheroes have great ___.",
+   "clue": "being strong",
+   "explain": "strong → strength: e and ngth.",
+   "learn": "**strength**: strong → strength: e and ngth."
+  },
+  {
+   "id": "spelling.sx.hop",
+   "topic": "spelling.suffixes",
+   "kind": "fact",
+   "prompt": "Add -ing to “hop”.",
+   "answer": "hopping",
+   "distractors": [
+    "hoping",
+    "hoppeing",
+    "hopeing"
+   ],
+   "explain": "Short vowel + one consonant: double the consonant. hop → hopping.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx.run",
+   "topic": "spelling.suffixes",
+   "kind": "fact",
+   "prompt": "Add -ing to “run”.",
+   "answer": "running",
+   "distractors": [
+    "runing",
+    "runeing",
+    "runnning"
+   ],
+   "explain": "Short vowel u + n: double the n.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx.smile",
+   "topic": "spelling.suffixes",
+   "kind": "fact",
+   "prompt": "Add -ing to “smile”.",
+   "answer": "smiling",
+   "distractors": [
+    "smileing",
+    "smilling",
+    "smilin"
+   ],
+   "explain": "Drop the e before adding -ing.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx.race",
+   "topic": "spelling.suffixes",
+   "kind": "fact",
+   "prompt": "Add -ed to “race”.",
+   "answer": "raced",
+   "distractors": [
+    "raceed",
+    "racced",
+    "racd"
+   ],
+   "explain": "It already ends in e, so just add -d.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx.cry",
+   "topic": "spelling.suffixes",
+   "kind": "fact",
+   "prompt": "Add -ed to “cry”.",
+   "answer": "cried",
+   "distractors": [
+    "cryed",
+    "cride",
+    "cryd"
+   ],
+   "explain": "Consonant + y: change y to i, then add -ed.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx.happy",
+   "topic": "spelling.suffixes",
+   "kind": "fact",
+   "prompt": "Add -er to “happy”.",
+   "answer": "happier",
+   "distractors": [
+    "happyer",
+    "happer",
+    "happyier"
+   ],
+   "explain": "Consonant + y: change y to i, then add -er.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx.big",
+   "topic": "spelling.suffixes",
+   "kind": "fact",
+   "prompt": "Add -est to “big”.",
+   "answer": "biggest",
+   "distractors": [
+    "bigest",
+    "bigeest",
+    "biggst"
+   ],
+   "explain": "Short vowel + g: double the g.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx.fast",
+   "topic": "spelling.suffixes",
+   "kind": "fact",
+   "prompt": "Add -est to “fast”.",
+   "answer": "fastest",
+   "distractors": [
+    "fasttest",
+    "fastst",
+    "fastist"
+   ],
+   "explain": "Two consonants at the end already: just add -est.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx2.help",
+   "topic": "spelling.suffixes-2",
+   "kind": "fact",
+   "prompt": "Add -ful to “help”.",
+   "answer": "helpful",
+   "distractors": [
+    "helpfull",
+    "helpfel",
+    "helful"
+   ],
+   "explain": "-ful has only one l!",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx2.care",
+   "topic": "spelling.suffixes-2",
+   "kind": "fact",
+   "prompt": "What does “careless” mean?",
+   "answer": "without care",
+   "distractors": [
+    "full of care",
+    "very caring",
+    "caring again"
+   ],
+   "explain": "-less means without: careless = without care.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "spelling.sx2.kind",
+   "topic": "spelling.suffixes-2",
+   "kind": "fact",
+   "prompt": "Add -ness to “kind”.",
+   "answer": "kindness",
+   "distractors": [
+    "kindnes",
+    "kindniss",
+    "kindeness"
+   ],
+   "explain": "kind + ness = kindness.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx2.happy",
+   "topic": "spelling.suffixes-2",
+   "kind": "fact",
+   "prompt": "Add -ness to “happy”.",
+   "answer": "happiness",
+   "distractors": [
+    "happyness",
+    "hapiness",
+    "happines"
+   ],
+   "explain": "Consonant + y: y becomes i. happy → happiness.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx2.enjoy",
+   "topic": "spelling.suffixes-2",
+   "kind": "fact",
+   "prompt": "Add -ment to “enjoy”.",
+   "answer": "enjoyment",
+   "distractors": [
+    "enjoiment",
+    "enjoyement",
+    "enjoymant"
+   ],
+   "explain": "Vowel + y keeps the y: enjoy → enjoyment.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx2.slow",
+   "topic": "spelling.suffixes-2",
+   "kind": "fact",
+   "prompt": "Turn “slow” into a word that tells HOW something is done.",
+   "answer": "slowly",
+   "distractors": [
+    "slowley",
+    "slowy",
+    "slowful"
+   ],
+   "explain": "Adding -ly makes an adverb: slow → slowly.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sx2.hope",
+   "topic": "spelling.suffixes-2",
+   "kind": "fact",
+   "prompt": "Which word means “without hope”?",
+   "answer": "hopeless",
+   "distractors": [
+    "hopeful",
+    "hoping",
+    "hopes"
+   ],
+   "explain": "-less means without.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "spelling.hp.sea",
+   "topic": "spelling.homophones",
+   "kind": "mcq",
+   "prompt": "Which word fits? “The pirate ship sailed across the ___.”",
+   "options": [
+    {
+     "text": "sea",
+     "correct": true
+    },
+    {
+     "text": "see",
+     "correct": false,
+     "feedback": "“see” is what you do with your eyes."
+    }
+   ],
+   "explain": "sea (the ocean) and see (with your eyes) sound the same."
+  },
+  {
+   "id": "spelling.hp.knight",
+   "topic": "spelling.homophones",
+   "kind": "mcq",
+   "prompt": "Which word fits? “The ___ wore shining armour.”",
+   "options": [
+    {
+     "text": "knight",
+     "correct": true
+    },
+    {
+     "text": "night",
+     "correct": false,
+     "feedback": "“night” is when it is dark. A knight with a silent k is a soldier on a horse."
+    }
+   ],
+   "explain": "knight (a soldier) and night (dark time) sound the same."
+  },
+  {
+   "id": "spelling.hp.two",
+   "topic": "spelling.homophones",
+   "kind": "mcq",
+   "prompt": "Which word fits? “I have ___ racing cars.”",
+   "options": [
+    {
+     "text": "two",
+     "correct": true
+    },
+    {
+     "text": "to",
+     "correct": false,
+     "feedback": "“to” is for going somewhere: to the shop."
+    },
+    {
+     "text": "too",
+     "correct": false,
+     "feedback": "“too” means also, or too much."
+    }
+   ],
+   "explain": "two (2), to (towards) and too (also / too much)."
+  },
+  {
+   "id": "spelling.hp.their",
+   "topic": "spelling.homophones",
+   "kind": "mcq",
+   "prompt": "Which word fits? “The children put on ___ helmets.”",
+   "options": [
+    {
+     "text": "their",
+     "correct": true
+    },
+    {
+     "text": "there",
+     "correct": false,
+     "feedback": "“there” is a place: over there."
+    },
+    {
+     "text": "they’re",
+     "correct": false,
+     "feedback": "“they’re” means they are."
+    }
+   ],
+   "explain": "their = belonging to them. Their has “heir” inside it, someone who gets things."
+  },
+  {
+   "id": "spelling.hp.blew",
+   "topic": "spelling.homophones",
+   "kind": "mcq",
+   "prompt": "Which word fits? “The wind ___ the leaves away.”",
+   "options": [
+    {
+     "text": "blew",
+     "correct": true
+    },
+    {
+     "text": "blue",
+     "correct": false,
+     "feedback": "“blue” is a colour."
+    }
+   ],
+   "explain": "blew (past of blow) and blue (colour) sound the same."
+  },
+  {
+   "id": "spelling.hp.sun",
+   "topic": "spelling.homophones",
+   "kind": "mcq",
+   "prompt": "Which word fits? “The ___ shone brightly in the sky.”",
+   "options": [
+    {
+     "text": "sun",
+     "correct": true
+    },
+    {
+     "text": "son",
+     "correct": false,
+     "feedback": "A son is a boy in a family."
+    }
+   ],
+   "explain": "sun (in the sky) and son (a boy) sound the same."
+  },
+  {
+   "id": "spelling.hp.won",
+   "topic": "spelling.homophones",
+   "kind": "mcq",
+   "prompt": "Which word fits? “Turbo ___ the race!”",
+   "options": [
+    {
+     "text": "won",
+     "correct": true
+    },
+    {
+     "text": "one",
+     "correct": false,
+     "feedback": "“one” is the number 1."
+    }
+   ],
+   "explain": "won (past of win) and one (1) sound the same."
+  },
+  {
+   "id": "spelling.hp.hear",
+   "topic": "spelling.homophones",
+   "kind": "mcq",
+   "prompt": "Which word fits? “Can you ___ the rocket engines?”",
+   "options": [
+    {
+     "text": "hear",
+     "correct": true
+    },
+    {
+     "text": "here",
+     "correct": false,
+     "feedback": "“here” is a place. You hear with your ear: there is an “ear” in hear!"
+    }
+   ],
+   "explain": "hear has “ear” in it."
+  },
+  {
+   "id": "spelling.hp.bear",
+   "topic": "spelling.homophones",
+   "kind": "mcq",
+   "prompt": "Which word fits? “A brown ___ lives in the forest.”",
+   "options": [
+    {
+     "text": "bear",
+     "correct": true
+    },
+    {
+     "text": "bare",
+     "correct": false,
+     "feedback": "“bare” means with nothing on: bare feet."
+    }
+   ],
+   "explain": "bear (the animal) and bare (uncovered) sound the same."
+  },
+  {
+   "id": "spelling.wc.noun",
+   "topic": "spelling.word-classes",
+   "kind": "mcq",
+   "prompt": "Which word is a noun (a naming word)?",
+   "options": [
+    {
+     "text": "rocket",
+     "correct": true
+    },
+    {
+     "text": "quickly",
+     "correct": false,
+     "feedback": "quickly tells you how: it is an adverb."
+    },
+    {
+     "text": "shiny",
+     "correct": false,
+     "feedback": "shiny describes something: it is an adjective."
+    },
+    {
+     "text": "zoom",
+     "correct": false,
+     "feedback": "zoom is something you do: a verb."
+    }
+   ],
+   "explain": "A noun names a person, place or thing: rocket, castle, hero."
+  },
+  {
+   "id": "spelling.wc.verb",
+   "topic": "spelling.word-classes",
+   "kind": "mcq",
+   "prompt": "Which word is a verb (a doing word)?",
+   "options": [
+    {
+     "text": "jumped",
+     "correct": true
+    },
+    {
+     "text": "happy",
+     "correct": false,
+     "feedback": "happy describes: adjective."
+    },
+    {
+     "text": "table",
+     "correct": false,
+     "feedback": "table is a thing: noun."
+    },
+    {
+     "text": "slowly",
+     "correct": false,
+     "feedback": "slowly is an adverb."
+    }
+   ],
+   "explain": "Verbs are actions: jumped, flies, races."
+  },
+  {
+   "id": "spelling.wc.adj",
+   "topic": "spelling.word-classes",
+   "kind": "mcq",
+   "prompt": "Which word is an adjective (a describing word)?",
+   "options": [
+    {
+     "text": "enormous",
+     "correct": true
+    },
+    {
+     "text": "ran",
+     "correct": false,
+     "feedback": "ran is a verb."
+    },
+    {
+     "text": "robot",
+     "correct": false,
+     "feedback": "robot is a noun."
+    },
+    {
+     "text": "loudly",
+     "correct": false,
+     "feedback": "loudly is an adverb."
+    }
+   ],
+   "explain": "Adjectives describe nouns: an enormous robot."
+  },
+  {
+   "id": "spelling.wc.adv",
+   "topic": "spelling.word-classes",
+   "kind": "mcq",
+   "prompt": "Which word is an adverb (it tells you HOW)?",
+   "options": [
+    {
+     "text": "quietly",
+     "correct": true
+    },
+    {
+     "text": "quiet",
+     "correct": false,
+     "feedback": "quiet is an adjective. Add -ly to make the adverb: quietly."
+    },
+    {
+     "text": "mouse",
+     "correct": false,
+     "feedback": "mouse is a noun."
+    },
+    {
+     "text": "tiptoed",
+     "correct": false,
+     "feedback": "tiptoed is a verb."
+    }
+   ],
+   "explain": "Many adverbs end in -ly: quietly, quickly, bravely."
+  },
+  {
+   "id": "spelling.wc.find-adj",
+   "topic": "spelling.word-classes",
+   "kind": "mcq",
+   "prompt": "In “The brave hero rescued the tiny kitten”, which two words are adjectives?",
+   "options": [
+    {
+     "text": "brave and tiny",
+     "correct": true
+    },
+    {
+     "text": "hero and kitten",
+     "correct": false,
+     "feedback": "Those are nouns."
+    },
+    {
+     "text": "rescued and the",
+     "correct": false,
+     "feedback": "rescued is a verb."
+    }
+   ],
+   "explain": "brave describes the hero; tiny describes the kitten."
+  },
+  {
+   "id": "spelling.wc.find-verb",
+   "topic": "spelling.word-classes",
+   "kind": "mcq",
+   "prompt": "Find the verb: “Turbo zoomed past the finish line.”",
+   "options": [
+    {
+     "text": "zoomed",
+     "correct": true
+    },
+    {
+     "text": "Turbo",
+     "correct": false,
+     "feedback": "Turbo is a name: a noun."
+    },
+    {
+     "text": "past",
+     "correct": false,
+     "feedback": "past is not the action."
+    },
+    {
+     "text": "line",
+     "correct": false,
+     "feedback": "line is a noun."
+    }
+   ],
+   "explain": "zoomed is the doing word."
+  },
+  {
+   "id": "spelling.wc.noun-phrase",
+   "topic": "spelling.word-classes",
+   "kind": "fact",
+   "prompt": "Which is the best expanded noun phrase?",
+   "answer": "the shiny silver rocket",
+   "distractors": [
+    "the rocket",
+    "rocket",
+    "a it"
+   ],
+   "explain": "An expanded noun phrase adds describing words: the shiny silver rocket.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "spelling.pu.q",
+   "topic": "spelling.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence needs a question mark?",
+   "options": [
+    {
+     "text": "What is the biggest planet",
+     "correct": true
+    },
+    {
+     "text": "The biggest planet is Jupiter",
+     "correct": false,
+     "feedback": "That tells you something: it is a statement."
+    },
+    {
+     "text": "Look at Jupiter",
+     "correct": false,
+     "feedback": "That is a command."
+    }
+   ],
+   "explain": "Questions ask something and end with ?."
+  },
+  {
+   "id": "spelling.pu.ex",
+   "topic": "spelling.punctuation",
+   "kind": "mcq",
+   "prompt": "Which is an exclamation?",
+   "options": [
+    {
+     "text": "What a fast car that is!",
+     "correct": true
+    },
+    {
+     "text": "Is that car fast?",
+     "correct": false,
+     "feedback": "That is a question."
+    },
+    {
+     "text": "The car is fast.",
+     "correct": false,
+     "feedback": "That is a statement."
+    }
+   ],
+   "explain": "Exclamations often start with “What” or “How” and show strong feeling: What a fast car that is!"
+  },
+  {
+   "id": "spelling.pu.cmd",
+   "topic": "spelling.punctuation",
+   "kind": "mcq",
+   "prompt": "Which is a command (it tells you to do something)?",
+   "options": [
+    {
+     "text": "Put on your helmet.",
+     "correct": true
+    },
+    {
+     "text": "I like my helmet.",
+     "correct": false,
+     "feedback": "That is a statement."
+    },
+    {
+     "text": "Where is my helmet?",
+     "correct": false,
+     "feedback": "That is a question."
+    }
+   ],
+   "explain": "Commands start with a bossy verb: Put, Go, Stop, Look."
+  },
+  {
+   "id": "spelling.pu.cap",
+   "topic": "spelling.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence uses capital letters correctly?",
+   "options": [
+    {
+     "text": "On Monday, Sam went to London.",
+     "correct": true
+    },
+    {
+     "text": "on monday, sam went to london.",
+     "correct": false,
+     "feedback": "Sentences, days, names and places all need capitals."
+    },
+    {
+     "text": "On monday, Sam went to london.",
+     "correct": false,
+     "feedback": "Monday and London are names, so they need capitals too."
+    }
+   ],
+   "explain": "Capitals for the start of a sentence, names, days, months and places, and the word I."
+  },
+  {
+   "id": "spelling.pu.comma",
+   "topic": "spelling.punctuation",
+   "kind": "mcq",
+   "prompt": "Where do the commas go in this list? “I saw a rocket a planet a star and a moon.”",
+   "options": [
+    {
+     "text": "I saw a rocket, a planet, a star and a moon.",
+     "correct": true
+    },
+    {
+     "text": "I saw a rocket a planet, a star, and, a moon.",
+     "correct": false,
+     "feedback": "Commas go between the items, but not before “and” in a simple list."
+    },
+    {
+     "text": "I saw, a rocket a planet a star and a moon.",
+     "correct": false,
+     "feedback": "The commas separate the items in the list."
+    }
+   ],
+   "explain": "Use commas between items in a list, and “and” before the last one."
+  },
+  {
+   "id": "spelling.pu.i",
+   "topic": "spelling.punctuation",
+   "kind": "fact",
+   "prompt": "Which word always needs a capital letter, wherever it is in a sentence?",
+   "answer": "I (when you mean yourself)",
+   "distractors": [
+    "and",
+    "the",
+    "is"
+   ],
+   "explain": "“I” is always a capital: Ben and I raced. Names, days, months and places need capitals too.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "spelling.ap.dont",
+   "topic": "spelling.apostrophes",
+   "kind": "fact",
+   "prompt": "What is the short form of “do not”?",
+   "answer": "don’t",
+   "distractors": [
+    "dont",
+    "do’nt",
+    "dont’"
+   ],
+   "explain": "The apostrophe goes where the missing letter was: do n(o)t → don’t.",
+   "accept": [
+    "don't"
+   ]
+  },
+  {
+   "id": "spelling.ap.cant",
+   "topic": "spelling.apostrophes",
+   "kind": "fact",
+   "prompt": "What is the short form of “cannot”?",
+   "answer": "can’t",
+   "distractors": [
+    "cant",
+    "ca’nt",
+    "can’not"
+   ],
+   "explain": "can(no)t → can’t.",
+   "accept": [
+    "can't"
+   ]
+  },
+  {
+   "id": "spelling.ap.its",
+   "topic": "spelling.apostrophes",
+   "kind": "fact",
+   "prompt": "What is the short form of “it is”?",
+   "answer": "it’s",
+   "distractors": [
+    "its",
+    "it’is",
+    "i’ts"
+   ],
+   "explain": "it (i)s → it’s.",
+   "accept": [
+    "it's"
+   ]
+  },
+  {
+   "id": "spelling.ap.ill",
+   "topic": "spelling.apostrophes",
+   "kind": "fact",
+   "prompt": "What is the short form of “I will”?",
+   "answer": "I’ll",
+   "distractors": [
+    "Ill",
+    "I’wll",
+    "Iw’ll"
+   ],
+   "explain": "I (wi)ll → I’ll.",
+   "accept": [
+    "i'll",
+    "I’ll"
+   ]
+  },
+  {
+   "id": "spelling.ap.own",
+   "topic": "spelling.apostrophes",
+   "kind": "mcq",
+   "prompt": "Which shows that the helmet belongs to the driver?",
+   "options": [
+    {
+     "text": "the driver’s helmet",
+     "correct": true
+    },
+    {
+     "text": "the drivers helmet",
+     "correct": false,
+     "feedback": "You need an apostrophe to show it belongs."
+    },
+    {
+     "text": "the driver’s’ helmet",
+     "correct": false,
+     "feedback": "Just one apostrophe, before the s."
+    }
+   ],
+   "explain": "Add ’s to show something belongs to someone: the driver’s helmet."
+  },
+  {
+   "id": "spelling.ap.plural",
+   "topic": "spelling.apostrophes",
+   "kind": "mcq",
+   "prompt": "Which sentence is correct?",
+   "options": [
+    {
+     "text": "I have three cars.",
+     "correct": true
+    },
+    {
+     "text": "I have three car’s.",
+     "correct": false,
+     "feedback": "Plurals do NOT need an apostrophe."
+    },
+    {
+     "text": "I have three cars’.",
+     "correct": false,
+     "feedback": "No apostrophe for a simple plural."
+    }
+   ],
+   "explain": "Only use an apostrophe for missing letters or belonging, never just to make a plural."
+  },
+  {
+   "id": "spelling.jn.because",
+   "topic": "spelling.joining",
+   "kind": "mcq",
+   "prompt": "Choose the best joining word: “The hero was tired ___ he had flown all night.”",
+   "options": [
+    {
+     "text": "because",
+     "correct": true
+    },
+    {
+     "text": "but",
+     "correct": false,
+     "feedback": "“but” shows a surprise or contrast."
+    },
+    {
+     "text": "or",
+     "correct": false,
+     "feedback": "“or” gives a choice."
+    }
+   ],
+   "explain": "“because” gives a reason."
+  },
+  {
+   "id": "spelling.jn.but",
+   "topic": "spelling.joining",
+   "kind": "mcq",
+   "prompt": "Choose the best joining word: “Blaze was fast ___ Turbo was faster.”",
+   "options": [
+    {
+     "text": "but",
+     "correct": true
+    },
+    {
+     "text": "because",
+     "correct": false,
+     "feedback": "There is no reason here: it is a contrast."
+    },
+    {
+     "text": "so",
+     "correct": false,
+     "feedback": "“so” shows a result."
+    }
+   ],
+   "explain": "“but” shows a contrast between two ideas."
+  },
+  {
+   "id": "spelling.jn.when",
+   "topic": "spelling.joining",
+   "kind": "mcq",
+   "prompt": "Choose the best joining word: “The crowd cheered ___ Turbo won.”",
+   "options": [
+    {
+     "text": "when",
+     "correct": true
+    },
+    {
+     "text": "or",
+     "correct": false,
+     "feedback": "“or” gives a choice."
+    },
+    {
+     "text": "but",
+     "correct": false,
+     "feedback": "Nothing contrasts here."
+    }
+   ],
+   "explain": "“when” tells you the time something happened."
+  },
+  {
+   "id": "spelling.jn.if",
+   "topic": "spelling.joining",
+   "kind": "mcq",
+   "prompt": "Choose the best joining word: “You can play ___ you finish your tea.”",
+   "options": [
+    {
+     "text": "if",
+     "correct": true
+    },
+    {
+     "text": "because",
+     "correct": false,
+     "feedback": "This is a condition, not a reason."
+    },
+    {
+     "text": "and",
+     "correct": false,
+     "feedback": "“and” does not show the condition."
+    }
+   ],
+   "explain": "“if” sets a condition."
+  },
+  {
+   "id": "spelling.jn.past",
+   "topic": "spelling.joining",
+   "kind": "mcq",
+   "prompt": "Which sentence is in the past tense?",
+   "options": [
+    {
+     "text": "The rocket landed on Mars.",
+     "correct": true
+    },
+    {
+     "text": "The rocket lands on Mars.",
+     "correct": false,
+     "feedback": "That is the present tense."
+    },
+    {
+     "text": "The rocket will land on Mars.",
+     "correct": false,
+     "feedback": "That is the future."
+    }
+   ],
+   "explain": "Past tense verbs often end in -ed: landed."
+  },
+  {
+   "id": "spelling.jn.prog",
+   "topic": "spelling.joining",
+   "kind": "mcq",
+   "prompt": "Which sentence shows something happening right now?",
+   "options": [
+    {
+     "text": "The robot is dancing.",
+     "correct": true
+    },
+    {
+     "text": "The robot danced.",
+     "correct": false,
+     "feedback": "That is past."
+    },
+    {
+     "text": "The robot will dance.",
+     "correct": false,
+     "feedback": "That is future."
+    }
+   ],
+   "explain": "“is dancing” is the present progressive: happening now."
+  },
+  {
+   "id": "spelling.jn.ran",
+   "topic": "spelling.joining",
+   "kind": "fact",
+   "prompt": "What is the past tense of “run”?",
+   "answer": "ran",
+   "distractors": [
+    "runned",
+    "runs",
+    "running"
+   ],
+   "explain": "run is irregular: today I run, yesterday I ran.",
+   "strict": true
+  },
+  {
+   "id": "spelling.jn.flew",
+   "topic": "spelling.joining",
+   "kind": "fact",
+   "prompt": "What is the past tense of “fly”?",
+   "answer": "flew",
+   "distractors": [
+    "flyed",
+    "flied",
+    "flown"
+   ],
+   "explain": "fly → flew. (“I have flown” uses a helper word.)",
+   "strict": true
+  }
+ ],
+ "sentences": [
+  {
+   "id": "k1s.question",
+   "title": "Ask a question",
+   "prompt": "Write a question you would ask an astronaut.",
+   "checks": [
+    {
+     "type": "capital"
+    },
+    {
+     "type": "regex",
+     "pattern": "\\?[\"”’]?$",
+     "msg": "A question ends with a question mark (?)."
+    },
+    {
+     "type": "minWords",
+     "n": 4,
+     "msg": "Write at least 4 words."
+    }
+   ],
+   "model": "What does Earth look like from space?",
+   "tip": "Questions often start with What, Where, When, Why, How or Who."
+  },
+  {
+   "id": "k1s.because",
+   "title": "Use “because”",
+   "prompt": "Finish this sentence with a reason: “I love racing cars because…”",
+   "checks": [
+    {
+     "type": "includesAll",
+     "words": [
+      "because"
+     ],
+     "msg": "Keep the word “because”."
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    },
+    {
+     "type": "minWords",
+     "n": 7,
+     "msg": "Add a reason after “because”."
+    }
+   ],
+   "model": "I love racing cars because they are fast and colourful.",
+   "tip": "“because” is always followed by a reason."
+  },
+  {
+   "id": "k1s.adjectives",
+   "title": "Two describing words",
+   "prompt": "Write a sentence about a superhero using TWO adjectives (describing words), like “brave” and “strong”.",
+   "checks": [
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    },
+    {
+     "type": "minWords",
+     "n": 6,
+     "msg": "Write at least 6 words."
+    }
+   ],
+   "model": "The brave, strong hero flew over the city.",
+   "tip": "Put adjectives before the noun: the brave hero."
+  },
+  {
+   "id": "k1s.exclaim",
+   "title": "An exclamation",
+   "prompt": "Write an exclamation that starts with “What” about a rocket. End it with an exclamation mark.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "^[\"“]?What ",
+     "msg": "Start with “What”."
+    },
+    {
+     "type": "regex",
+     "pattern": "![\"”’]?$",
+     "msg": "End with an exclamation mark (!)."
+    }
+   ],
+   "model": "What a gigantic rocket that is!",
+   "tip": "Exclamations show strong feelings: What a…! How…!"
+  },
+  {
+   "id": "k1s.list",
+   "title": "A list with commas",
+   "prompt": "Write a sentence listing three things you would take to space. Use commas and “and”.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": ",",
+     "msg": "Use a comma between the first items in your list."
+    },
+    {
+     "type": "includesAll",
+     "words": [
+      "and"
+     ],
+     "msg": "Use “and” before the last item."
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "I would take a torch, a teddy and a sandwich.",
+   "tip": "Commas between items, then “and” before the last one."
+  },
+  {
+   "id": "k1s.when",
+   "title": "Use “when”",
+   "prompt": "Write a sentence using “when”, like “I smile when…”",
+   "checks": [
+    {
+     "type": "includesAll",
+     "words": [
+      "when"
+     ],
+     "msg": "Use the word “when”."
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    },
+    {
+     "type": "minWords",
+     "n": 5,
+     "msg": "Write a bit more."
+    }
+   ],
+   "model": "I smile when I win a race.",
+   "tip": "“when” joins two ideas and tells you the time."
+  },
+  {
+   "id": "k1s.past",
+   "title": "Past tense",
+   "prompt": "Write a sentence about something you did yesterday. Use the past tense (like “played” or “went”).",
+   "checks": [
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    },
+    {
+     "type": "minWords",
+     "n": 5,
+     "msg": "Write at least 5 words."
+    },
+    {
+     "type": "regex",
+     "pattern": "\\b(\\w+ed|went|ran|saw|had|was|were|ate|made|came|got|did|swam|rode|built|flew|found|won|read)\\b",
+     "flags": "i",
+     "msg": "Use a past tense verb, like played, went or saw."
+    }
+   ],
+   "model": "Yesterday I played football in the park.",
+   "tip": "Past tense verbs often end in -ed, but some are special: went, saw, ran."
+  },
+  {
+   "id": "k1s.but",
+   "title": "Use “but”",
+   "prompt": "Write a sentence using “but”: “The robot was small but…”",
+   "checks": [
+    {
+     "type": "includesAll",
+     "words": [
+      "but"
+     ],
+     "msg": "Use the word “but”."
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    },
+    {
+     "type": "minWords",
+     "n": 6,
+     "msg": "Finish the idea after “but”."
+    }
+   ],
+   "model": "The robot was small but very clever.",
+   "tip": "“but” shows a surprise: two ideas that don’t usually go together."
+  }
+ ]
+}

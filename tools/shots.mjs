@@ -11,6 +11,7 @@ import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement }
 import { correctResponse } from '../js/core/checkers.js';
 import { makeRng } from '../js/core/rng.js';
 import { dayNumber } from '../js/core/dates.js';
+import { setCourse, COURSES } from '../js/core/subjects.js';
 import { sprintLevel, recordSprint } from '../js/core/sprint.js';
 import { submitAnswer, markAnswer, unseenMarks } from '../js/core/writing.js';
 
@@ -22,7 +23,9 @@ const DAYS = +(process.argv[3] || 35);
 mkdirSync(OUT, { recursive: true });
 
 const read = (p) => JSON.parse(readFileSync(new URL('../content/' + p, import.meta.url)));
-const db = buildDB(read('index.json').decks.map(read));
+const COURSE_ID = process.env.COURSE || 'y6';
+setCourse(COURSE_ID);
+const db = buildDB(read(COURSES[COURSE_ID].index.replace('content/', '')).decks.map(read));
 
 function wrong(q) {
   if (q.kind === 'choice') return q.options.findIndex((o) => !o.correct && !(o.weight > 0));
@@ -35,7 +38,9 @@ function wrong(q) {
 export function simulate(days, today = dayNumber()) {
   const start = today - days;
   const state = emptyState(start);
-  state.profile = { childName: 'Ada', parentPin: '1234', companion: { name: 'Mochi', fur: 'caramel', accessory: 'yuzu' } };
+  state.course = COURSE_ID;
+  if (COURSE_ID === 'ks1') state.settings.sessionMinutes = 12;
+  state.profile = COURSE_ID === 'ks1' ? { childName: 'Leo', pronoun: 'he', hero: 'Captain Thunder', parentPin: '1234', companion: { name: 'Zoom', fur: 'chestnut', accessory: 'racehelmet' } } : { childName: 'Ada', parentPin: '1234', companion: { name: 'Mochi', fur: 'caramel', accessory: 'yuzu' } };
   const rng = makeRng('audit');
   for (let d = 0; d < days; d++) {
     const day = start + d;
@@ -75,7 +80,7 @@ export function simulate(days, today = dayNumber()) {
     finishSession(state, day * 864e5 + 25 * 60000);
     if (rng.chance(0.7)) state.reading.push({ day, minutes: rng.pick([15, 20, 30]), title: 'Holes' });
   }
-  state.books.push({ bookId: 'book.holes', title: 'Holes', author: 'Louis Sachar', startDay: today - 10, endDay: null });
+  if (COURSE_ID === 'y6') state.books.push({ bookId: 'book.holes', title: 'Holes', author: 'Louis Sachar', startDay: today - 10, endDay: null });
   state.plan = null;
   return state;
 }

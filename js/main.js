@@ -1,13 +1,16 @@
 // App bootstrap and routing.
 
-import { loadState, saveState } from './platform/storage.js';
+import { loadState, saveState, listProfiles, upsertProfile, newProfileId } from './platform/storage.js';
+import { emptyState } from './core/store.js';
+import { setCourse, COURSE } from './core/subjects.js';
+import { setPronoun } from './core/pronoun.js';
 import { loadContent } from './core/content.js';
 import { dayNumber } from './core/dates.js';
 import { h, mount, toast } from './ui/dom.js';
 import { homeScreen, subjectScreen } from './screens/home.js';
 import { playScreen } from './screens/play.js';
 import { parentScreen } from './screens/parent.js';
-import { welcomeScreen, companionScreen, displayScreen } from './screens/onboarding.js';
+import { welcomeScreen, companionScreen, displayScreen, whoScreen } from './screens/onboarding.js';
 import { writingScreen, feedbackScreen } from './screens/writing.js';
 import { readingScreen } from './screens/reading.js';
 import { progressScreen } from './screens/progress.js';
@@ -17,13 +20,47 @@ import { speedScreen } from './screens/speed.js';
 
 const root = document.getElementById('app');
 
+const dbCache = {};
+const fetchJSON = (p) => fetch(p).then((r) => {
+  if (!r.ok) throw new Error(`${p}: ${r.status}`);
+  return r.json();
+});
+
 const app = {
   root,
   state: null,
   db: null,
+  profileId: 'main',
   today: () => dayNumber(new Date()),
   save() {
-    if (!saveState(app.state)) toast('Could not save progress on this device.');
+    if (!saveState(app.state, app.profileId)) toast('Could not save progress on this device.');
+    if (app.state.profile) upsertProfile(app.profileId, app.state);
+  },
+  profiles: () => listProfiles(),
+  /** Switch to a child's save: course, pronouns, content and settings follow. */
+  async useProfile(id) {
+    const { state, warning } = loadState(app.today(), id);
+    app.profileId = id;
+    app.state = state;
+    await app.useCourse(state.course || 'y6');
+    setPronoun(state.profile?.pronoun || 'she');
+    app.applySettings();
+    try { sessionStorage.setItem('gs.profile', id); } catch { /* private mode */ }
+    if (warning) toast(warning);
+  },
+  async useCourse(courseId) {
+    setCourse(courseId);
+    app.state.course = COURSE.id;
+    app.db = dbCache[COURSE.id] ||= await loadContent(fetchJSON, COURSE.index);
+  },
+  /** Start setting up another child (a fresh save slot). */
+  async addChild() {
+    const pin = app.state?.profile?.parentPin;
+    app.profileId = newProfileId();
+    app.state = emptyState(app.today());
+    app.state.pendingPin = pin || null;
+    try { sessionStorage.setItem('gs.profile', app.profileId); } catch { /* private mode */ }
+    app.go('#/welcome');
   },
   go(hash) {
     if (location.hash === hash) route();
@@ -43,6 +80,7 @@ async function route() {
   document.onkeydown = null;
   const hash = location.hash || '#/home';
   const p = app.state.profile;
+  if (hash === '#/who') return whoScreen(app);
   if (!p && hash !== '#/welcome') return app.go('#/welcome');
   if (p && !p.companion?.name && hash !== '#/companion' && hash !== '#/welcome') return app.go('#/companion');
   const [, page, arg] = hash.split('/');
@@ -65,14 +103,17 @@ async function route() {
 }
 
 async function boot() {
-  const { state, warning } = loadState(app.today());
-  app.state = state;
-  app.applySettings();
+  const profiles = listProfiles();
+  let chosen = null;
+  try { chosen = sessionStorage.getItem('gs.profile'); } catch { /* private mode */ }
   try {
-    app.db = await loadContent((p) => fetch(p).then((r) => {
-      if (!r.ok) throw new Error(`${p}: ${r.status}`);
-      return r.json();
-    }));
+    if (profiles.length > 1 && !profiles.some((p) => p.id === chosen)) {
+      // more than one child on this device: ask who is learning (the main slot loads behind it)
+      await app.useProfile(profiles[0].id);
+      if (location.hash !== '#/who') history.replaceState(null, '', '#/who');
+    } else {
+      await app.useProfile(profiles.some((p) => p.id === chosen) ? chosen : profiles[0]?.id || 'main');
+    }
   } catch (e) {
     mount(root, h('div', { class: 'narrow card' }, h('h1', {}, 'The lessons could not load'), h('p', {}, 'Check the internet connection the first time you open the app. After that it works offline.'), h('p', { class: 'muted small' }, String(e.message || e))));
     return;
@@ -80,7 +121,6 @@ async function boot() {
   window.addEventListener('hashchange', route);
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') app.save(); });
   await route();
-  if (warning) toast(warning);
   if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
     navigator.serviceWorker.register('sw.js').catch((e) => console.warn('service worker', e));
   }

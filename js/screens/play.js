@@ -1,7 +1,7 @@
 // The daily session player: walks through the plan one step at a time.
 
-import { h, rich, richHTML, mount, plain } from '../ui/dom.js';
-import { renderQuestion } from '../ui/qtypes.js';
+import { h, rich, richHTML, mount, plain, spoken } from '../ui/dom.js';
+import { renderQuestion, sayButton, diagram } from '../ui/qtypes.js';
 import { capybaraEl } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
 import { speak } from '../platform/tts.js';
@@ -12,12 +12,12 @@ import { learnText, present } from '../core/present.js';
 import { makeRng } from '../core/rng.js';
 import { currentBooks, logReading, submitAnswer, unseenMarks, ANSWER_LEVELS, wordCount } from '../core/writing.js';
 import { milestones } from '../core/progress.js';
-import { sprintLevel, sprintBest, recordSprint, SPRINT_SECONDS } from '../core/sprint.js';
+import { sprintLevel, sprintBest, recordSprint, sprintSeconds } from '../core/sprint.js';
 import { sprintQuestion, SPRINT_LEVELS } from '../gen/sprint.js';
 import { parseNumber } from '../core/fraction.js';
 import { icon, SUBJECT_ICON } from '../ui/icons.js';
 import { ACCESSORIES } from '../ui/capybara.js';
-import { SUBJECT_BY_ID } from '../core/subjects.js';
+import { SUBJECT_BY_ID, COURSE } from '../core/subjects.js';
 
 const GRADED = new Set(['review', 'quiz', 'diag', 'practice', 'faded']);
 
@@ -128,11 +128,11 @@ function sprintStep(app, root) {
   mount(root, header(app, 'Sprint'), h('div', { class: 'q-wrap stack center sprint-intro' },
     h('div', { class: 'eyebrow' }, `Level ${level} of ${SPRINT_LEVELS}`),
     h('h2', {}, 'Arithmetic sprint'),
-    h('p', {}, `${SPRINT_SECONDS} seconds. Answer as many as you can; press Enter after each one. ${best != null ? `Your best at this level is ${best}.` : 'Your first go at this level sets your score to beat.'}`),
+    h('p', {}, `${sprintSeconds()} seconds. Answer as many as you can; press Enter after each one. ${best != null ? `Your best at this level is ${best}.` : 'Your first go at this level sets your score to beat.'}`),
     h('button', { class: 'btn-primary btn-big sprint-go', onclick: run, autofocus: true }, 'Go!')));
 
   function run() {
-    const secs = app.sprintSeconds ?? SPRINT_SECONDS; // tests shorten it
+    const secs = app.sprintSeconds ?? sprintSeconds(); // tests shorten it
     let answered = 0, correct = 0, q = null, done = false;
     const t0 = performance.now();
     const bar = h('div', { style: { width: '100%' } });
@@ -208,7 +208,7 @@ function introTopicStep(app, root, step) {
     h('div', { class: 'chip', style: { color: subj.colour } }, subj.name, linkBits(t.links)),
     h('h2', {}, t.title),
     t.links ? h('p', { class: 'joined' }, icon('link'), ` A joined-up topic: it uses your ${t.links.map((l) => SUBJECT_BY_ID[l].name).join(' and ')} skills too.`) : null,
-    t.intro ? rich('p', t.intro, { class: 'learn' }) : null,
+    t.intro ? (COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(t.intro), rich('p', t.intro, { class: 'learn' })) : rich('p', t.intro, { class: 'learn' })) : null,
     t.diagnostic?.length ? h('p', { class: 'muted' }, 'First, a few questions to see what you think already. Just answer honestly: it’s fine not to know yet.') : null,
     h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'Let’s go')));
 }
@@ -241,7 +241,7 @@ async function introStep(app, root, step) {
       const map = await loadMap(item.map);
       parts.push(mapSVG(map, { layer: item.layer || (item.map === 'europe' ? 'countries' : 'features'), highlight: item.feature, zoom: item.zoom }).el);
     }
-    parts.push(rich('div', learnText(item), { class: 'learn' }));
+    parts.push(COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(`${learnText(item)} ${item.explain && !item.learn ? item.explain : ''}`), rich('div', learnText(item), { class: 'learn' })) : rich('div', learnText(item), { class: 'learn' }));
     if (item.explain && !item.learn) parts.push(rich('p', item.explain, { class: 'muted' }));
   }
   mount(root, header(app, subj.name), h('div', { class: 'q-wrap stack card pop' }, parts,
@@ -263,8 +263,11 @@ function workedStep(app, root, step) {
   draw();
   mount(root, header(app, 'Worked example'), h('div', { class: 'q-wrap stack' },
     h('p', { class: 'muted' }, 'Watch how I solve this one. Read each step.'),
-    rich('div', q.prompt, { class: 'q-prompt' }),
-    list, btn));
+    COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(q.prompt), rich('div', q.prompt, { class: 'q-prompt' })) : rich('div', q.prompt, { class: 'q-prompt' }),
+    q.diagram ? diagram(q.diagram) : null,
+    list,
+    COURSE.readAloud ? h('div', {}, h('button', { class: 'btn-ghost', type: 'button', onclick: () => speak(spoken(steps.slice(0, shown).at(-1) || '')) }, icon('speaker'), ' Read this step')) : null,
+    btn));
   btn.focus();
 }
 
@@ -278,7 +281,7 @@ async function questionStep(app, root, step) {
   const t0 = performance.now();
 
   const confBtns = [];
-  const view = await renderQuestion(q, { onChange: (ok) => confBtns.forEach((b) => (b.disabled = !ok)), settings: state.settings });
+  const view = await renderQuestion(q, { onChange: (ok) => confBtns.forEach((b) => (b.disabled = !ok)), settings: { ...state.settings, readAloud: COURSE.readAloud } });
 
   let fadedBox = null;
   if (step.t === 'faded' && q.steps) {
@@ -354,6 +357,7 @@ function feedbackPanel(q, res, step, conf) {
     if (q.explain) parts.push(rich('p', q.explain, { class: 'muted' }));
     if (q.steps && (step.t === 'practice' || step.t === 'faded')) parts.push(h('ol', { class: 'steps' }, q.steps.map((t) => rich('li', t))));
   }
+  if (COURSE.readAloud) parts.splice(1, 0, h('div', {}, sayButton(`The answer is ${answerText}. ${q.explain || ''}`, 'Read it to me')));
   parts.push(h('p', { class: 'small muted' }, step.t === 'diag' ? 'Now you know!' : step.reask ? 'This one will come back tomorrow.' : 'You’ll see this again in a few minutes.'));
   return h('div', { class: 'feedback warn pop' }, parts);
 }
@@ -624,7 +628,7 @@ async function placementStep(app, root, step) {
   }
   const q = probeQuestion(state, db, p);
   const nextBtn = h('button', { class: 'btn-primary btn-big', type: 'button', disabled: true }, 'Next');
-  const view = await renderQuestion(q, { onChange: (ok) => (nextBtn.disabled = !ok), settings: state.settings });
+  const view = await renderQuestion(q, { onChange: (ok) => (nextBtn.disabled = !ok), settings: { ...state.settings, readAloud: COURSE.readAloud } });
   const go = (response) => {
     answerProbe(probe, state, db, q, response, app.today());
     app.save();

@@ -27,6 +27,13 @@ export function mathsDiagram(d) {
     case 'pie': return pie(d);
     case 'line': return lineGraph(d);
     case 'parallel': return parallel(d);
+    case 'clock': return clock(d);
+    case 'tens': return tens(d);
+    case 'fracshape': return fracShape(d);
+    case 'coins': return coins(d);
+    case 'array': return arrayDots(d);
+    case 'pictogram': return pictogram(d);
+    case 'numline': return numLine(d);
     default: return null;
   }
 }
@@ -189,5 +196,123 @@ function lineGraph(d) {
   el.append(s('polyline', { points: d.ys.map((v, i) => `${X(i)},${Y(v)}`).join(' '), fill: 'none', stroke: BLUE, 'stroke-width': 2.5, 'stroke-linejoin': 'round' }));
   d.ys.forEach((v, i) => el.append(s('circle', { cx: X(i), cy: Y(v), r: 4.5, fill: BLUE, stroke: 'var(--card, #fff)', 'stroke-width': 2 })));
   el.append(small(m.l - 6, m.t - 8, d.ylabel, { 'text-anchor': 'end', 'font-size': 12 }));
+  return el;
+}
+
+// --- Year 2 diagrams ---------------------------------------------------------------------
+
+function clock(d) {
+  const el = svg(220, 220, `Clock showing ${d.h}:${String(d.m).padStart(2, '0')}`, 240);
+  const c = 110, R = 96;
+  el.append(s('circle', { cx: c, cy: c, r: R, fill: 'var(--card, #fff)', stroke: INK, 'stroke-width': 4 }));
+  for (let i = 0; i < 60; i++) {
+    const a = (i / 60) * Math.PI * 2, big = i % 5 === 0;
+    el.append(line(c + Math.sin(a) * (R - (big ? 12 : 6)), c - Math.cos(a) * (R - (big ? 12 : 6)), c + Math.sin(a) * (R - 2), c - Math.cos(a) * (R - 2), { 'stroke-width': big ? 3 : 1.2 }));
+  }
+  for (let n = 1; n <= 12; n++) {
+    const a = (n / 12) * Math.PI * 2;
+    el.append(text(c + Math.sin(a) * (R - 28), c - Math.cos(a) * (R - 28) + 6, String(n), { 'font-size': 18 }));
+  }
+  const ma = (d.m / 60) * Math.PI * 2, ha = (((d.h % 12) + d.m / 60) / 12) * Math.PI * 2;
+  el.append(line(c, c, c + Math.sin(ha) * 50, c - Math.cos(ha) * 50, { 'stroke-width': 7 }),
+    line(c, c, c + Math.sin(ma) * 76, c - Math.cos(ma) * 76, { 'stroke-width': 4, stroke: BLUE }),
+    s('circle', { cx: c, cy: c, r: 6, fill: INK }));
+  return el;
+}
+
+// base-ten blocks: tall rods of ten and small cubes
+function tens(d) {
+  const n = d.tens, o = d.ones, hundreds = d.hundreds || 0;
+  const W = Math.max(200, hundreds * 74 + n * 20 + Math.ceil(o / 5) * 20 + 60), H = 170;
+  const el = svg(W, H, `${hundreds ? `${hundreds} hundreds, ` : ''}${n} tens and ${o} ones`, 420);
+  let x = 16;
+  for (let i = 0; i < hundreds; i++) {
+    for (let r = 0; r < 10; r++) for (let k = 0; k < 10; k++) el.append(s('rect', { x: x + k * 6.4, y: 18 + r * 13, width: 6.4, height: 13, fill: '#ffd166', stroke: '#b98a1b', 'stroke-width': 0.6 }));
+    x += 74;
+  }
+  for (let i = 0; i < n; i++) {
+    for (let k = 0; k < 10; k++) el.append(s('rect', { x, y: 18 + k * 13, width: 14, height: 13, fill: BLUE, stroke: '#1f5cc4', 'stroke-width': 1 }));
+    x += 20;
+  }
+  x += 14;
+  for (let i = 0; i < o; i++) el.append(s('rect', { x: x + Math.floor(i / 5) * 20, y: 18 + (i % 5) * 20, width: 14, height: 14, rx: 2, fill: '#d97a12', stroke: '#a85c0c', 'stroke-width': 1 }));
+  return el;
+}
+
+function fracShape(d) {
+  const el = svg(200, 200, `A shape split into ${d.parts} equal parts with ${d.shaded} shaded`, 220);
+  const fill = (i) => (i < d.shaded ? BLUE : 'var(--card, #fff)');
+  if (d.shape === 'circle') {
+    const c = 100, R = 80;
+    for (let i = 0; i < d.parts; i++) {
+      const a0 = (i / d.parts) * Math.PI * 2 - Math.PI / 2, a1 = ((i + 1) / d.parts) * Math.PI * 2 - Math.PI / 2;
+      const large = 1 / d.parts > 0.5 ? 1 : 0;
+      el.append(s('path', { d: `M${c} ${c} L${c + R * Math.cos(a0)} ${c + R * Math.sin(a0)} A${R} ${R} 0 ${large} 1 ${c + R * Math.cos(a1)} ${c + R * Math.sin(a1)} Z`, fill: fill(i), stroke: INK, 'stroke-width': 3 }));
+    }
+  } else {
+    const cols = d.parts <= 4 ? d.parts : d.parts / 2, rows = d.parts / cols, w = 160 / cols, hh = (d.parts <= 4 ? 90 : 140) / rows;
+    for (let i = 0; i < d.parts; i++) el.append(s('rect', { x: 20 + (i % cols) * w, y: 30 + Math.floor(i / cols) * hh, width: w, height: hh, fill: fill(i), stroke: INK, 'stroke-width': 3 }));
+  }
+  return el;
+}
+
+const COIN = { 1: ['#c47a3a', 26], 2: ['#c47a3a', 32], 5: ['#c9ccd2', 24], 10: ['#c9ccd2', 32], 20: ['#c9ccd2', 28], 50: ['#c9ccd2', 34], 100: ['#e2c044', 32], 200: ['#e2c044', 38] };
+function coins(d) {
+  const W = Math.max(220, d.coins.length * 80 + 20);
+  const el = svg(W, 100, 'Coins', Math.min(560, W + 40));
+  d.coins.forEach((v, i) => {
+    const [col, r] = COIN[v];
+    const cx = 50 + i * 80, cy = 50;
+    const label = v >= 100 ? `£${v / 100}` : `${v}p`;
+    if (v === 20 || v === 50) {
+      const pts = Array.from({ length: 7 }, (_, k) => { const a = (k / 7) * Math.PI * 2 - Math.PI / 2; return `${cx + r * Math.cos(a)},${cy + r * Math.sin(a)}`; }).join(' ');
+      el.append(s('polygon', { points: pts, fill: col, stroke: '#7b7f88', 'stroke-width': 2 }));
+    } else {
+      el.append(s('circle', { cx, cy, r, fill: col, stroke: v >= 100 ? '#a88419' : v <= 2 ? '#8a5226' : '#7b7f88', 'stroke-width': 2 }));
+      if (v === 200) el.append(s('circle', { cx, cy, r: r - 10, fill: '#c9ccd2' }));
+    }
+    el.append(text(cx, cy + 6, label, { 'font-size': 15, fill: '#1f1d2e' }));
+  });
+  return el;
+}
+
+function arrayDots(d) {
+  const W = d.cols * 34 + 30, H = d.rows * 34 + 30;
+  const el = svg(W, H, `An array of ${d.rows} rows of ${d.cols}`, Math.min(360, W * 1.4));
+  for (let r = 0; r < d.rows; r++) for (let c = 0; c < d.cols; c++) el.append(s('circle', { cx: 30 + c * 34, cy: 30 + r * 34, r: 12, fill: d.colour || '#d62f3a' }));
+  return el;
+}
+
+// pictogram: one picture stands for `key` things; a half picture for half of that
+function pictogram(d) {
+  const W = 360, rowH = 40, H = d.rows.length * rowH + 50;
+  const el = svg(W, H, d.title, 400);
+  el.append(text(W / 2, 18, d.title, { 'font-size': 14, 'font-weight': 600 }));
+  d.rows.forEach((row, i) => {
+    const y = 34 + i * rowH;
+    el.append(small(70, y + 22, row.label, { 'text-anchor': 'end', 'font-weight': 700 }));
+    const whole = Math.floor(row.n / d.key), half = row.n % d.key !== 0;
+    for (let k = 0; k < whole + (half ? 1 : 0); k++) {
+      const x = 84 + k * 32;
+      const g = s('g', {});
+      g.append(s('circle', { cx: x + 13, cy: y + 16, r: 13, fill: '#ffd166', stroke: '#b98a1b', 'stroke-width': 1.5 }), s('path', { d: `M${x + 13} ${y + 6} l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1z`, fill: '#d97a12' }));
+      if (half && k === whole) { const clip = s('rect', { x: x + 13, y: y, width: 16, height: 32, fill: 'var(--card, #fff)' }); g.append(clip); }
+      el.append(g);
+    }
+  });
+  el.append(small(W / 2, H - 6, `Key: one star = ${d.key} ${d.unit}`, { 'font-weight': 700 }));
+  return el;
+}
+
+function numLine(d) {
+  const W = 400, H = 90, x0 = 30, x1 = 370;
+  const X = (v) => x0 + ((v - d.min) / (d.max - d.min)) * (x1 - x0);
+  const el = svg(W, H, 'Number line', 440);
+  el.append(line(x0, 50, x1, 50));
+  for (let v = d.min; v <= d.max; v += d.step) {
+    el.append(line(X(v), 42, X(v), 58, { 'stroke-width': 2 }));
+    if (d.labels?.includes(v) || v === d.min || v === d.max) el.append(small(X(v), 78, String(v)));
+  }
+  if (d.mark != null) el.append(s('path', { d: `M${X(d.mark)} 38 l-8 -14 h16 z`, fill: '#d62f3a' }), text(X(d.mark), 18, '?', { fill: '#d62f3a' }));
   return el;
 }

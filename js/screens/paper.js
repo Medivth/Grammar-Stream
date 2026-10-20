@@ -4,7 +4,7 @@
 import { h, rich, mount } from '../ui/dom.js';
 import { icon } from '../ui/icons.js';
 import { parseNumber } from '../core/fraction.js';
-import { arithmeticPaper, PAPER_QUESTIONS, PAPER_MARKS, PAPER_MINUTES } from '../gen/paper.js';
+import { makePaper, paperSpec } from '../gen/paper.js';
 import { formatDay } from '../core/dates.js';
 
 function markPaper(questions, answers) {
@@ -18,14 +18,15 @@ function markPaper(questions, answers) {
 
 export function paperScreen(app) {
   const { state } = app;
+  const { questions: PAPER_QUESTIONS, marks: PAPER_MARKS, minutes: PAPER_MINUTES, label } = paperSpec();
   const past = state.papers || [];
   const best = past.length ? Math.max(...past.map((p) => p.score)) : null;
   const back = () => app.go('#/subject/maths');
   mount(app.root,
-    h('div', { class: 'topbar' }, h('button', { class: 'btn-icon', 'aria-label': 'Back', onclick: back }, icon('back')), h('h1', {}, 'Arithmetic paper'), h('span', { class: 'spacer' })),
+    h('div', { class: 'topbar' }, h('button', { class: 'btn-icon', 'aria-label': 'Back', onclick: back }, icon('back')), h('h1', {}, PAPER_QUESTIONS < 30 ? 'Maths test' : 'Arithmetic paper'), h('span', { class: 'spacer' })),
     h('div', { class: 'narrow stack' },
       h('div', { class: 'card stack' },
-        h('p', {}, `${PAPER_QUESTIONS} questions, ${PAPER_MARKS} marks, ${PAPER_MINUTES} minutes: the same shape as the Year 6 arithmetic test. Have paper and a pencil ready for the long ones. Fractions can be typed like 3/4 or 1 1/2.`),
+        h('p', {}, `${PAPER_QUESTIONS} questions, ${PAPER_MARKS} marks, ${PAPER_MINUTES} minutes: the same shape as ${label}. Have paper and a pencil ready for working out.${paperSpec().questions > 30 ? ' Fractions can be typed like 3/4 or 1 1/2.' : ''}`),
         h('p', { class: 'muted small' }, 'Every paper is different. Skip anything you’re stuck on and come back to it at the end if there is time.'),
         h('button', { class: 'btn-primary btn-big', onclick: () => run(app) }, 'Start a paper')),
       past.length ? h('div', { class: 'card' }, h('h2', {}, 'Your papers'), h('p', { class: 'muted small' }, `Best so far: ${best} / ${PAPER_MARKS}`),
@@ -34,8 +35,9 @@ export function paperScreen(app) {
 
 function run(app) {
   const { state } = app;
+  const { marks: PAPER_MARKS, minutes: PAPER_MINUTES, good } = paperSpec();
   const seed = `${app.today()}:${(state.papers || []).length}:${state.created}`;
-  const questions = arithmeticPaper(seed);
+  const questions = makePaper(seed);
   const answers = Array(questions.length).fill('');
   let i = 0, done = false;
   const t0 = performance.now();
@@ -85,7 +87,7 @@ function run(app) {
       h('div', { class: 'narrow stack' },
         h('div', { class: 'card center' },
           h('div', { class: 'sprint-result' }, h('span', { class: 'big' }, `${score}`), h('span', {}, `out of ${PAPER_MARKS} · ${Math.round(seconds / 60)} minutes`)),
-          h('p', {}, score > prevBest && state.papers.length > 1 ? 'A new best!' : score === PAPER_MARKS ? 'Full marks!' : score >= 32 ? 'Strong. Check the ones below and you’re there.' : 'Every paper you do makes the next one feel easier. Look at the corrections below.')),
+          h('p', {}, score > prevBest && state.papers.length > 1 ? 'A new best!' : score === PAPER_MARKS ? 'Full marks!' : score >= good ? 'Strong. Check the ones below and you’re there.' : 'Every paper you do makes the next one feel easier. Look at the corrections below.')),
         h('div', { class: 'card' }, h('h2', {}, 'Answers'),
           h('ol', { class: 'paper-review' }, marked.map((m) => h('li', { class: m.ok ? 'ok' : 'no' }, rich('span', m.prompt), ' ', h('strong', {}, m.value), !m.ok && m.given ? h('span', { class: 'muted' }, ` (you put ${m.given})`) : !m.ok ? h('span', { class: 'muted' }, ' (skipped)') : null)))),
         h('button', { class: 'btn-primary btn-big', onclick: () => paperScreen(app) }, 'Done')));

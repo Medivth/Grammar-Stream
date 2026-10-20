@@ -1,0 +1,1665 @@
+{
+ "subject": "history",
+ "deck": "core",
+ "topics": [
+  {
+   "id": "history.past",
+   "title": "Long ago and now",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "History is the story of what happened before we were born. Things were very different long ago: no electricity, no cars, no phones!",
+   "teach": "Explain three ways life was different 100 years ago.",
+   "talk": "Ask a grandparent what toys they played with, and tell {him} about yours."
+  },
+  {
+   "id": "history.romans",
+   "title": "Roman soldiers in Britain",
+   "kind": "facts",
+   "prereqs": [
+    "history.past"
+   ],
+   "batch": 5,
+   "intro": "About 2,000 years ago, the Roman army marched into Britain. Roman soldiers had shields, helmets and clever battle tricks. They built roads, towns and a giant wall.",
+   "teach": "Explain how the Roman “tortoise” formation worked.",
+   "talk": "Ask {him} why Roman roads are so straight."
+  },
+  {
+   "id": "history.vikings",
+   "title": "Viking raiders",
+   "kind": "facts",
+   "prereqs": [
+    "history.romans"
+   ],
+   "batch": 5,
+   "intro": "Vikings sailed from Norway, Denmark and Sweden in fast longships. They raided, then many settled down as farmers and traders.",
+   "teach": "Explain what a longship was like.",
+   "talk": "Ask {him} which king fought the Vikings (Alfred the Great)."
+  },
+  {
+   "id": "history.1066",
+   "title": "1066: the Battle of Hastings",
+   "kind": "facts",
+   "prereqs": [
+    "history.vikings"
+   ],
+   "batch": 5,
+   "intro": "In 1066 three men wanted to be King of England. It ended with a famous battle near Hastings, and a new king: William the Conqueror.",
+   "teach": "Explain who won the Battle of Hastings.",
+   "talk": "Look at pictures of the Bayeux Tapestry together. What can {she} spot?"
+  },
+  {
+   "id": "history.castles",
+   "title": "Castles and knights",
+   "kind": "facts",
+   "prereqs": [
+    "history.1066"
+   ],
+   "batch": 5,
+   "intro": "After 1066, castles were built all over England. Knights in armour protected them. A castle had clever ways to keep enemies out.",
+   "teach": "Explain three ways a castle kept enemies out.",
+   "talk": "Visit a castle, or design one together on paper with a moat and drawbridge."
+  },
+  {
+   "id": "history.fire",
+   "title": "The Great Fire of London",
+   "kind": "facts",
+   "prereqs": [
+    "history.past"
+   ],
+   "batch": 5,
+   "intro": "In 1666 a fire started in a bakery in London. It spread for four days because the houses were made of wood and built close together.",
+   "teach": "Explain why the fire spread so quickly.",
+   "talk": "Ask {him} what Samuel Pepys buried in his garden."
+  },
+  {
+   "id": "history.armada",
+   "title": "Queen Elizabeth I and the Armada",
+   "kind": "facts",
+   "prereqs": [
+    "history.castles"
+   ],
+   "batch": 5,
+   "intro": "In 1588 a huge Spanish fleet called the Armada sailed to attack England. Queen Elizabeth I’s ships, a clever trick with fire, and stormy weather saved England.",
+   "teach": "Explain how fireships helped beat the Armada.",
+   "talk": "Ask {him} how beacons sent a warning across England."
+  },
+  {
+   "id": "history.nurses",
+   "title": "Brave nurses: Florence Nightingale and Mary Seacole",
+   "kind": "facts",
+   "prereqs": [
+    "history.past"
+   ],
+   "batch": 5,
+   "intro": "About 170 years ago, two brave women cared for soldiers in the Crimean War. They changed nursing for ever.",
+   "teach": "Explain why Florence Nightingale was called “The Lady with the Lamp”.",
+   "talk": "Ask {him} why keeping hospitals clean saves lives."
+  },
+  {
+   "id": "history.ww1",
+   "title": "The First World War and Remembrance",
+   "kind": "facts",
+   "prereqs": [
+    "history.nurses"
+   ],
+   "batch": 5,
+   "intro": "From 1914 to 1918, many countries fought the First World War. Every year on 11 November we wear poppies and stay silent for two minutes to remember the soldiers.",
+   "teach": "Explain why we wear poppies.",
+   "talk": "On Remembrance Sunday, talk with {him} about why people are quiet for two minutes."
+  },
+  {
+   "id": "history.ww2",
+   "title": "The Second World War at home",
+   "kind": "facts",
+   "prereqs": [
+    "history.ww1"
+   ],
+   "batch": 5,
+   "intro": "From 1939 to 1945, Britain fought in the Second World War. Children were evacuated to the countryside, families had ration books, and Spitfires flew to protect the skies.",
+   "teach": "Explain what an evacuee was.",
+   "talk": "Ask an older relative whether their family remembered rationing."
+  },
+  {
+   "id": "history.firsts",
+   "title": "Great firsts: flight and the Moon",
+   "kind": "facts",
+   "prereqs": [
+    "history.past"
+   ],
+   "batch": 5,
+   "intro": "People have always dreamed of flying. In just 66 years we went from the first aeroplane to walking on the Moon!",
+   "teach": "Explain what the Wright brothers did.",
+   "talk": "Ask {him} who was first to walk on the Moon."
+  },
+  {
+   "id": "history.ww2-heroes",
+   "title": "Wartime heroes: codebreakers, D-Day and brave animals",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "history.ww2"
+   ],
+   "batch": 5,
+   "intro": "Some Second World War heroes used their brains, some their boats, and some were even animals! Here are their amazing stories.",
+   "teach": "Explain how the little ships helped at Dunkirk.",
+   "talk": "Ask {him} what a codebreaker does."
+  },
+  {
+   "id": "history.monarchs",
+   "title": "Kings and queens",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "history.armada"
+   ],
+   "batch": 5,
+   "intro": "Britain has had kings and queens for more than a thousand years. Some were brave, some were clever, and one reigned for 70 years!",
+   "teach": "Explain what a monarch is.",
+   "talk": "Ask {him} who is king now, and who was queen before."
+  }
+ ],
+ "items": [
+  {
+   "id": "history.pa.past",
+   "topic": "history.past",
+   "kind": "fact",
+   "prompt": "Things that have already happened are in the…",
+   "answer": "past",
+   "distractors": [
+    "future",
+    "present",
+    "tomorrow"
+   ],
+   "explain": "Past = already happened. Present = now. Future = still to come."
+  },
+  {
+   "id": "history.pa.future",
+   "topic": "history.past",
+   "kind": "fact",
+   "prompt": "Things that have not happened yet are in the…",
+   "answer": "future",
+   "distractors": [
+    "past",
+    "present",
+    "history"
+   ],
+   "explain": "Your next birthday is in the future."
+  },
+  {
+   "id": "history.pa.light",
+   "topic": "history.past",
+   "kind": "mcq",
+   "prompt": "Long ago, before electricity, how did people light their homes at night?",
+   "options": [
+    {
+     "text": "with candles and oil lamps",
+     "correct": true
+    },
+    {
+     "text": "with light bulbs",
+     "correct": false,
+     "feedback": "Light bulbs need electricity."
+    },
+    {
+     "text": "with phone torches",
+     "correct": false,
+     "feedback": "There were no phones long ago!"
+    }
+   ],
+   "explain": "Candles, oil lamps and later gas lamps lit homes before electricity."
+  },
+  {
+   "id": "history.pa.toys",
+   "topic": "history.past",
+   "kind": "mcq",
+   "prompt": "Which toy would a child 100 years ago most likely have played with?",
+   "options": [
+    {
+     "text": "a wooden spinning top",
+     "correct": true
+    },
+    {
+     "text": "a games console",
+     "correct": false,
+     "feedback": "Games consoles are very recent."
+    },
+    {
+     "text": "a remote-control car",
+     "correct": false,
+     "feedback": "These need batteries and electronics, invented much later."
+    }
+   ],
+   "explain": "Old toys were often made of wood, tin or cloth: spinning tops, skipping ropes, marbles, dolls."
+  },
+  {
+   "id": "history.pa.wash",
+   "topic": "history.past",
+   "kind": "mcq",
+   "prompt": "How did people wash clothes before washing machines?",
+   "options": [
+    {
+     "text": "by hand, with a washboard, a tub and a mangle",
+     "correct": true
+    },
+    {
+     "text": "they never washed clothes",
+     "correct": false,
+     "feedback": "They did, but it took a whole day!"
+    },
+    {
+     "text": "in a dishwasher",
+     "correct": false,
+     "feedback": "Dishwashers are modern too."
+    }
+   ],
+   "explain": "Washing day was hard work: scrubbing, rinsing and squeezing clothes through a mangle."
+  },
+  {
+   "id": "history.pa.order",
+   "topic": "history.past",
+   "kind": "order",
+   "prompt": "Put these in order, longest ago first.",
+   "items": [
+    "Romans in Britain",
+    "Battle of Hastings",
+    "Great Fire of London",
+    "First World War",
+    "First people on the Moon"
+   ],
+   "labels": null,
+   "explain": "Romans (about 2,000 years ago), 1066, 1666, 1914, 1969."
+  },
+  {
+   "id": "history.pa.century",
+   "topic": "history.past",
+   "kind": "fact",
+   "prompt": "How many years are in a century?",
+   "answer": "100",
+   "distractors": [
+    "10",
+    "1000",
+    "50"
+   ],
+   "explain": "A century is 100 years. A decade is 10."
+  },
+  {
+   "id": "history.ro.when",
+   "topic": "history.romans",
+   "kind": "fact",
+   "prompt": "About how long ago did the Romans invade Britain?",
+   "answer": "about 2,000 years ago",
+   "distractors": [
+    "about 20 years ago",
+    "about 200 years ago",
+    "about 20,000 years ago"
+   ],
+   "explain": "The Romans invaded in AD 43, nearly 2,000 years ago.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.ro.from",
+   "topic": "history.romans",
+   "kind": "fact",
+   "prompt": "Which city did the Romans come from?",
+   "answer": "Rome",
+   "distractors": [
+    "London",
+    "Paris",
+    "Athens"
+   ],
+   "explain": "The Roman Empire was ruled from Rome, in Italy.",
+   "accept": [
+    "rome"
+   ]
+  },
+  {
+   "id": "history.ro.soldier",
+   "topic": "history.romans",
+   "kind": "fact",
+   "prompt": "What was a Roman foot soldier called?",
+   "answer": "a legionary",
+   "distractors": [
+    "a knight",
+    "a Viking",
+    "a Tommy"
+   ],
+   "explain": "Legionaries were tough, trained soldiers who marched about 30 km a day.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.ro.tortoise",
+   "topic": "history.romans",
+   "kind": "mcq",
+   "prompt": "Roman soldiers made a “tortoise” (testudo) formation. What was it?",
+   "options": [
+    {
+     "text": "They held their shields together on all sides and over their heads, like a shell",
+     "correct": true
+    },
+    {
+     "text": "They walked very slowly",
+     "correct": false,
+     "feedback": "It was named after the tortoise’s shell, not its speed!"
+    },
+    {
+     "text": "They rode on giant tortoises",
+     "correct": false,
+     "feedback": "That would be fun, but no!"
+    }
+   ],
+   "explain": "Locked shields made a shell that arrows and stones bounced off."
+  },
+  {
+   "id": "history.ro.wall",
+   "topic": "history.romans",
+   "kind": "fact",
+   "prompt": "Which Roman emperor built a giant wall across the north of England?",
+   "answer": "Hadrian",
+   "distractors": [
+    "Julius Caesar",
+    "Boudica",
+    "William"
+   ],
+   "explain": "Hadrian’s Wall is about 117 km long. You can still walk along it today.",
+   "accept": [
+    "hadrian",
+    "emperor hadrian"
+   ]
+  },
+  {
+   "id": "history.ro.boudica",
+   "topic": "history.romans",
+   "kind": "fact",
+   "prompt": "Which British warrior queen led a rebellion against the Romans?",
+   "answer": "Boudica",
+   "distractors": [
+    "Elizabeth",
+    "Victoria",
+    "Florence"
+   ],
+   "explain": "Boudica was queen of the Iceni tribe. Her army attacked Roman towns, including London, before the Romans defeated her.",
+   "accept": [
+    "boudicca",
+    "boadicea"
+   ]
+  },
+  {
+   "id": "history.ro.roads",
+   "topic": "history.romans",
+   "kind": "mcq",
+   "prompt": "Why were Roman roads so straight?",
+   "options": [
+    {
+     "text": "So soldiers could march quickly from place to place",
+     "correct": true
+    },
+    {
+     "text": "Romans couldn’t turn corners",
+     "correct": false,
+     "feedback": "They could! Straight roads were just the fastest route."
+    },
+    {
+     "text": "To make them prettier",
+     "correct": false,
+     "feedback": "Speed was the reason."
+    }
+   ],
+   "explain": "Straight, well-built roads let the army move fast. Some modern roads follow them."
+  },
+  {
+   "id": "history.ro.bath",
+   "topic": "history.romans",
+   "kind": "fact",
+   "prompt": "Which English city is named after its Roman baths?",
+   "answer": "Bath",
+   "distractors": [
+    "London",
+    "York",
+    "Hastings"
+   ],
+   "explain": "The Romans built baths around the hot springs there. You can still visit them.",
+   "accept": [
+    "bath"
+   ]
+  },
+  {
+   "id": "history.vk.ship",
+   "topic": "history.vikings",
+   "kind": "fact",
+   "prompt": "What were the Vikings’ fast wooden ships called?",
+   "answer": "longships",
+   "distractors": [
+    "spaceships",
+    "galleons",
+    "steamships"
+   ],
+   "explain": "Longships had sails and oars and could sail up rivers.",
+   "accept": [
+    "longship",
+    "long ships"
+   ]
+  },
+  {
+   "id": "history.vk.from",
+   "topic": "history.vikings",
+   "kind": "fact",
+   "prompt": "Where did the Vikings come from?",
+   "answer": "Norway, Denmark and Sweden",
+   "distractors": [
+    "Italy and Spain",
+    "America",
+    "Australia"
+   ],
+   "explain": "Vikings came from Scandinavia, across the North Sea.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.vk.alfred",
+   "topic": "history.vikings",
+   "kind": "fact",
+   "prompt": "Which English king fought the Vikings and is called “the Great”?",
+   "answer": "Alfred",
+   "distractors": [
+    "William",
+    "Harold",
+    "Henry"
+   ],
+   "explain": "Alfred the Great was king of Wessex. A story says he once burned some cakes while hiding from the Vikings!",
+   "accept": [
+    "alfred the great",
+    "king alfred"
+   ]
+  },
+  {
+   "id": "history.vk.raid",
+   "topic": "history.vikings",
+   "kind": "mcq",
+   "prompt": "Did all Vikings just raid and fight?",
+   "options": [
+    {
+     "text": "No: many were farmers, traders and craftspeople who settled here",
+     "correct": true
+    },
+    {
+     "text": "Yes, they only fought",
+     "correct": false,
+     "feedback": "Many Vikings settled down and farmed. York was a big Viking town called Jorvik."
+    },
+    {
+     "text": "They only fished",
+     "correct": false,
+     "feedback": "They did lots of things."
+    }
+   ],
+   "explain": "Vikings were raiders, but also traders, farmers and explorers."
+  },
+  {
+   "id": "history.vk.horns",
+   "topic": "history.vikings",
+   "kind": "fact",
+   "prompt": "Did Vikings wear helmets with horns?",
+   "answer": "no, that is a myth",
+   "distractors": [
+    "yes, always",
+    "only on Sundays",
+    "only the kings"
+   ],
+   "explain": "Real Viking helmets were plain and rounded. The horns came from costumes in the 1800s.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.h66.year",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "In which year was the Battle of Hastings?",
+   "answer": "1066",
+   "distractors": [
+    "1666",
+    "1966",
+    "1006"
+   ],
+   "explain": "1066: one of the most famous dates in English history."
+  },
+  {
+   "id": "history.h66.winner",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "Who won the Battle of Hastings?",
+   "answer": "William of Normandy",
+   "distractors": [
+    "King Harold",
+    "Alfred the Great",
+    "Hadrian"
+   ],
+   "explain": "William became known as William the Conqueror.",
+   "accept": [
+    "william",
+    "william the conqueror"
+   ]
+  },
+  {
+   "id": "history.h66.harold",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "Which English king was killed at the Battle of Hastings?",
+   "answer": "Harold",
+   "distractors": [
+    "William",
+    "Alfred",
+    "Henry"
+   ],
+   "explain": "King Harold died in the battle. The Bayeux Tapestry shows a soldier with an arrow in his eye, which may be Harold.",
+   "accept": [
+    "king harold",
+    "harold godwinson"
+   ]
+  },
+  {
+   "id": "history.h66.tapestry",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "What is the Bayeux Tapestry?",
+   "answer": "a very long embroidery telling the story of 1066",
+   "distractors": [
+    "a castle in France",
+    "a type of sword",
+    "a Viking ship"
+   ],
+   "explain": "It is about 70 metres long, like a giant comic strip made with wool.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.h66.crowned",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "William was crowned king on a special day in 1066. Which day?",
+   "answer": "Christmas Day",
+   "distractors": [
+    "his birthday",
+    "Bonfire Night",
+    "New Year’s Day"
+   ],
+   "explain": "He was crowned in Westminster Abbey on Christmas Day 1066.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.h66.horses",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "William’s army had soldiers on horseback. What were they called?",
+   "answer": "knights",
+   "distractors": [
+    "legionaries",
+    "Tommies",
+    "pilots"
+   ],
+   "explain": "Norman knights charged on horses. Harold’s army fought on foot behind a wall of shields.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.ca.moat",
+   "topic": "history.castles",
+   "kind": "fact",
+   "prompt": "What is the ditch of water around a castle called?",
+   "answer": "a moat",
+   "distractors": [
+    "a drawbridge",
+    "a tower",
+    "a keep"
+   ],
+   "explain": "A moat made it hard for attackers to reach the walls.",
+   "accept": [
+    "moat"
+   ]
+  },
+  {
+   "id": "history.ca.drawbridge",
+   "topic": "history.castles",
+   "kind": "fact",
+   "prompt": "What is the bridge that could be lifted up to keep enemies out?",
+   "answer": "a drawbridge",
+   "distractors": [
+    "a moat",
+    "a portcullis",
+    "a dungeon"
+   ],
+   "explain": "Pulled up by chains, the drawbridge became an extra wall.",
+   "accept": [
+    "drawbridge"
+   ]
+  },
+  {
+   "id": "history.ca.portcullis",
+   "topic": "history.castles",
+   "kind": "fact",
+   "prompt": "What is the heavy gate of wood and iron that slides down?",
+   "answer": "a portcullis",
+   "distractors": [
+    "a drawbridge",
+    "a moat",
+    "a keep"
+   ],
+   "explain": "The portcullis dropped down to block the entrance.",
+   "accept": [
+    "portcullis"
+   ]
+  },
+  {
+   "id": "history.ca.keep",
+   "topic": "history.castles",
+   "kind": "fact",
+   "prompt": "What is the strongest tower in the middle of a castle called?",
+   "answer": "the keep",
+   "distractors": [
+    "the moat",
+    "the bailey",
+    "the dungeon"
+   ],
+   "explain": "The keep was the safest place, where the lord lived.",
+   "accept": [
+    "keep"
+   ]
+  },
+  {
+   "id": "history.ca.motte",
+   "topic": "history.castles",
+   "kind": "mcq",
+   "prompt": "The first Norman castles were “motte and bailey” castles. What were they made of?",
+   "options": [
+    {
+     "text": "wood, on top of a big mound of earth",
+     "correct": true
+    },
+    {
+     "text": "glass",
+     "correct": false,
+     "feedback": "Glass would not keep anyone out!"
+    },
+    {
+     "text": "ice",
+     "correct": false,
+     "feedback": "They would melt!"
+    }
+   ],
+   "explain": "They were quick to build from wood and earth. Later, stronger castles were made of stone."
+  },
+  {
+   "id": "history.ca.armour",
+   "topic": "history.castles",
+   "kind": "fact",
+   "prompt": "Early knights wore armour made of tiny metal rings joined together. What was it called?",
+   "answer": "chainmail",
+   "distractors": [
+    "plate armour",
+    "leather",
+    "cardboard"
+   ],
+   "explain": "Chainmail was flexible. Later knights wore solid plate armour.",
+   "accept": [
+    "chain mail"
+   ]
+  },
+  {
+   "id": "history.ca.squire",
+   "topic": "history.castles",
+   "kind": "fact",
+   "prompt": "A boy training to become a knight was called a…",
+   "answer": "squire",
+   "distractors": [
+    "page of a book",
+    "lord",
+    "peasant"
+   ],
+   "explain": "Boys started as pages, then became squires, then knights.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.ca.arms",
+   "topic": "history.castles",
+   "kind": "fact",
+   "prompt": "Knights painted a special design on their shield so people knew who they were. What was it called?",
+   "answer": "a coat of arms",
+   "distractors": [
+    "a flag pole",
+    "a crown",
+    "a moat"
+   ],
+   "explain": "In battle, helmets hid faces, so a coat of arms showed who was who.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.gf.year",
+   "topic": "history.fire",
+   "kind": "fact",
+   "prompt": "In which year was the Great Fire of London?",
+   "answer": "1666",
+   "distractors": [
+    "1066",
+    "1966",
+    "1606"
+   ],
+   "explain": "1666, six hundred years after 1066."
+  },
+  {
+   "id": "history.gf.where",
+   "topic": "history.fire",
+   "kind": "fact",
+   "prompt": "Where did the Great Fire start?",
+   "answer": "in a bakery on Pudding Lane",
+   "distractors": [
+    "in a castle",
+    "in a school",
+    "on a ship"
+   ],
+   "explain": "It started in Thomas Farriner’s bakery on Pudding Lane.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.gf.why",
+   "topic": "history.fire",
+   "kind": "mcq",
+   "prompt": "Why did the fire spread so quickly?",
+   "options": [
+    {
+     "text": "The houses were made of wood and built very close together, and it was windy",
+     "correct": true
+    },
+    {
+     "text": "The fire brigade was on holiday",
+     "correct": false,
+     "feedback": "There was no proper fire brigade in 1666."
+    },
+    {
+     "text": "It was raining",
+     "correct": false,
+     "feedback": "Rain would have helped! It had been a dry summer."
+    }
+   ],
+   "explain": "Wooden houses, a dry summer and a strong wind helped the fire spread."
+  },
+  {
+   "id": "history.gf.days",
+   "topic": "history.fire",
+   "kind": "fact",
+   "prompt": "For about how many days did the Great Fire burn?",
+   "answer": "4",
+   "distractors": [
+    "1",
+    "14",
+    "40"
+   ],
+   "explain": "It burned from 2 to 6 September 1666."
+  },
+  {
+   "id": "history.gf.pepys",
+   "topic": "history.fire",
+   "kind": "fact",
+   "prompt": "Samuel Pepys wrote about the fire in his diary. What did he bury in his garden to keep it safe?",
+   "answer": "his Parmesan cheese",
+   "distractors": [
+    "his dog",
+    "his diary",
+    "his bicycle"
+   ],
+   "explain": "He buried his cheese and his wine! His diary tells us a lot about the fire.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.gf.stop",
+   "topic": "history.fire",
+   "kind": "mcq",
+   "prompt": "How did people finally stop the fire?",
+   "options": [
+    {
+     "text": "They pulled down and blew up houses to make gaps the fire could not cross",
+     "correct": true
+    },
+    {
+     "text": "They used fire engines with hoses",
+     "correct": false,
+     "feedback": "There were no hoses like ours. They had leather buckets and hand squirts."
+    },
+    {
+     "text": "They waited for snow",
+     "correct": false,
+     "feedback": "It was September."
+    }
+   ],
+   "explain": "Gaps called firebreaks stopped the flames, and the wind dropped."
+  },
+  {
+   "id": "history.gf.stpauls",
+   "topic": "history.fire",
+   "kind": "fact",
+   "prompt": "Which famous cathedral burned down and was rebuilt by Christopher Wren?",
+   "answer": "St Paul’s Cathedral",
+   "distractors": [
+    "Westminster Abbey",
+    "Canterbury Cathedral",
+    "York Minster"
+   ],
+   "explain": "Wren’s new St Paul’s has a giant dome.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.am.queen",
+   "topic": "history.armada",
+   "kind": "fact",
+   "prompt": "Who was Queen of England when the Spanish Armada came?",
+   "answer": "Elizabeth I",
+   "distractors": [
+    "Victoria",
+    "Elizabeth II",
+    "Boudica"
+   ],
+   "explain": "Queen Elizabeth I reigned for 44 years.",
+   "accept": [
+    "elizabeth",
+    "elizabeth the first",
+    "queen elizabeth"
+   ]
+  },
+  {
+   "id": "history.am.year",
+   "topic": "history.armada",
+   "kind": "fact",
+   "prompt": "In which year did the Armada sail?",
+   "answer": "1588",
+   "distractors": [
+    "1066",
+    "1666",
+    "1914"
+   ],
+   "explain": "1588."
+  },
+  {
+   "id": "history.am.what",
+   "topic": "history.armada",
+   "kind": "fact",
+   "prompt": "What was the Armada?",
+   "answer": "a huge fleet of Spanish warships",
+   "distractors": [
+    "a castle",
+    "a Roman road",
+    "a type of armour"
+   ],
+   "explain": "About 130 ships sailed from Spain.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.am.beacons",
+   "topic": "history.armada",
+   "kind": "mcq",
+   "prompt": "How did people warn the country that the Armada was coming?",
+   "options": [
+    {
+     "text": "They lit beacons (bonfires) on hilltops, one after another",
+     "correct": true
+    },
+    {
+     "text": "They sent text messages",
+     "correct": false,
+     "feedback": "No phones in 1588!"
+    },
+    {
+     "text": "They rang one bell in London",
+     "correct": false,
+     "feedback": "Beacons could be seen for miles."
+    }
+   ],
+   "explain": "Each beacon was seen from the next hill, so the warning raced across England."
+  },
+  {
+   "id": "history.am.drake",
+   "topic": "history.armada",
+   "kind": "fact",
+   "prompt": "Which famous sailor helped to beat the Armada?",
+   "answer": "Francis Drake",
+   "distractors": [
+    "Neil Armstrong",
+    "Samuel Pepys",
+    "Alfred"
+   ],
+   "explain": "A story says Drake finished his game of bowls before setting sail!",
+   "accept": [
+    "drake",
+    "sir francis drake"
+   ]
+  },
+  {
+   "id": "history.am.fireships",
+   "topic": "history.armada",
+   "kind": "mcq",
+   "prompt": "What were fireships?",
+   "options": [
+    {
+     "text": "Old ships set on fire and sent towards the enemy ships at night",
+     "correct": true
+    },
+    {
+     "text": "Ships that put out fires",
+     "correct": false,
+     "feedback": "They did the opposite!"
+    },
+    {
+     "text": "Ships made of fire",
+     "correct": false,
+     "feedback": "They were wooden ships set alight."
+    }
+   ],
+   "explain": "The Spanish ships scattered to escape, and then storms wrecked many of them."
+  },
+  {
+   "id": "history.nu.lamp",
+   "topic": "history.nurses",
+   "kind": "fact",
+   "prompt": "Who was known as “The Lady with the Lamp”?",
+   "answer": "Florence Nightingale",
+   "distractors": [
+    "Mary Seacole",
+    "Queen Victoria",
+    "Grace Darling"
+   ],
+   "explain": "She checked on wounded soldiers at night, carrying a lamp.",
+   "accept": [
+    "nightingale",
+    "florence"
+   ]
+  },
+  {
+   "id": "history.nu.war",
+   "topic": "history.nurses",
+   "kind": "fact",
+   "prompt": "In which war did Florence Nightingale and Mary Seacole care for soldiers?",
+   "answer": "the Crimean War",
+   "distractors": [
+    "the First World War",
+    "the Battle of Hastings",
+    "the Second World War"
+   ],
+   "explain": "The Crimean War was in the 1850s.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.nu.clean",
+   "topic": "history.nurses",
+   "kind": "mcq",
+   "prompt": "How did Florence Nightingale save lives?",
+   "options": [
+    {
+     "text": "She made the hospital clean, with fresh air, good food and clean water",
+     "correct": true
+    },
+    {
+     "text": "She invented medicines",
+     "correct": false,
+     "feedback": "Her great idea was cleanliness."
+    },
+    {
+     "text": "She fought in battles",
+     "correct": false,
+     "feedback": "She was a nurse, not a soldier."
+    }
+   ],
+   "explain": "Dirty hospitals spread germs. Making them clean saved many lives."
+  },
+  {
+   "id": "history.nu.seacole",
+   "topic": "history.nurses",
+   "kind": "fact",
+   "prompt": "Mary Seacole travelled from Jamaica and set up a place to care for soldiers near the battlefield. What did she call it?",
+   "answer": "the British Hotel",
+   "distractors": [
+    "the Lamp House",
+    "St Paul’s",
+    "the Tower"
+   ],
+   "explain": "She gave soldiers food, comfort and medicine, sometimes right on the battlefield.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.nu.school",
+   "topic": "history.nurses",
+   "kind": "fact",
+   "prompt": "What did Florence Nightingale set up in London to train nurses?",
+   "answer": "a nursing school",
+   "distractors": [
+    "a castle",
+    "a zoo",
+    "a bakery"
+   ],
+   "explain": "Her nursing school opened in 1860 at St Thomas’ Hospital.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w1.years",
+   "topic": "history.ww1",
+   "kind": "fact",
+   "prompt": "When was the First World War?",
+   "answer": "1914 to 1918",
+   "distractors": [
+    "1939 to 1945",
+    "1066 to 1070",
+    "1666 to 1670"
+   ],
+   "explain": "It lasted just over four years.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w1.end",
+   "topic": "history.ww1",
+   "kind": "fact",
+   "prompt": "The fighting stopped at 11 o’clock on which day?",
+   "answer": "11 November 1918",
+   "distractors": [
+    "25 December 1918",
+    "1 January 1918",
+    "5 November 1918"
+   ],
+   "explain": "The eleventh hour of the eleventh day of the eleventh month. This is called the Armistice.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w1.poppy",
+   "topic": "history.ww1",
+   "kind": "mcq",
+   "prompt": "Why do we wear red poppies in November?",
+   "options": [
+    {
+     "text": "To remember soldiers who died in wars. Poppies grew on the battlefields",
+     "correct": true
+    },
+    {
+     "text": "Because poppies smell nice",
+     "correct": false,
+     "feedback": "Poppies are a symbol of remembering."
+    },
+    {
+     "text": "To celebrate Bonfire Night",
+     "correct": false,
+     "feedback": "That is 5 November. Poppies are for Remembrance."
+    }
+   ],
+   "explain": "After the war, red poppies grew on the churned-up fields in Flanders, where many soldiers had fought."
+  },
+  {
+   "id": "history.w1.silence",
+   "topic": "history.ww1",
+   "kind": "fact",
+   "prompt": "On Remembrance Day, for how long do people stay silent?",
+   "answer": "two minutes",
+   "distractors": [
+    "two hours",
+    "two seconds",
+    "two days"
+   ],
+   "explain": "At 11 o’clock on 11 November, many people stop for two minutes’ silence.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w1.trench",
+   "topic": "history.ww1",
+   "kind": "fact",
+   "prompt": "Soldiers on the Western Front lived and fought in long ditches dug in the ground. What were they called?",
+   "answer": "trenches",
+   "distractors": [
+    "moats",
+    "tunnels for trains",
+    "bunk beds"
+   ],
+   "explain": "Trenches were muddy and cold. Soldiers took turns resting behind the front line.",
+   "accept": [
+    "trench"
+   ]
+  },
+  {
+   "id": "history.w1.truce",
+   "topic": "history.ww1",
+   "kind": "mcq",
+   "prompt": "What happened in some places at Christmas 1914?",
+   "options": [
+    {
+     "text": "Soldiers from both sides stopped fighting, swapped gifts and some played football",
+     "correct": true
+    },
+    {
+     "text": "The war ended",
+     "correct": false,
+     "feedback": "It went on until 1918."
+    },
+    {
+     "text": "Everyone went home for Christmas",
+     "correct": false,
+     "feedback": "They stayed at the front, but some had a short truce."
+    }
+   ],
+   "explain": "This is called the Christmas Truce: a moment of friendship between enemies."
+  },
+  {
+   "id": "history.w1.tank",
+   "topic": "history.ww1",
+   "kind": "fact",
+   "prompt": "Which new machine was first used in battle in 1916?",
+   "answer": "the tank",
+   "distractors": [
+    "the aeroplane",
+    "the racing car",
+    "the rocket"
+   ],
+   "explain": "Tanks could roll over trenches and barbed wire. The first ones were slow and very hot inside.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w1.horses",
+   "topic": "history.ww1",
+   "kind": "fact",
+   "prompt": "Which animals carried soldiers and pulled heavy guns in the First World War?",
+   "answer": "horses",
+   "distractors": [
+    "elephants",
+    "camels only",
+    "dogs only"
+   ],
+   "explain": "Millions of horses worked in the war. Dogs and pigeons carried messages too.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w2.years",
+   "topic": "history.ww2",
+   "kind": "fact",
+   "prompt": "When was the Second World War?",
+   "answer": "1939 to 1945",
+   "distractors": [
+    "1914 to 1918",
+    "1666 to 1670",
+    "1969 to 1975"
+   ],
+   "explain": "It lasted six years.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w2.churchill",
+   "topic": "history.ww2",
+   "kind": "fact",
+   "prompt": "Who was the British Prime Minister for most of the Second World War?",
+   "answer": "Winston Churchill",
+   "distractors": [
+    "Queen Victoria",
+    "Neil Armstrong",
+    "Henry VIII"
+   ],
+   "explain": "Churchill gave famous speeches to keep people brave.",
+   "accept": [
+    "churchill",
+    "winston"
+   ]
+  },
+  {
+   "id": "history.w2.evacuee",
+   "topic": "history.ww2",
+   "kind": "mcq",
+   "prompt": "What was an evacuee?",
+   "options": [
+    {
+     "text": "A child sent from a city to the countryside to keep safe",
+     "correct": true
+    },
+    {
+     "text": "A soldier",
+     "correct": false,
+     "feedback": "Evacuees were mostly children."
+    },
+    {
+     "text": "A type of aeroplane",
+     "correct": false,
+     "feedback": "Evacuees were people."
+    }
+   ],
+   "explain": "Children travelled by train with a label, a gas mask and a small suitcase, to live with families in safer places."
+  },
+  {
+   "id": "history.w2.blitz",
+   "topic": "history.ww2",
+   "kind": "fact",
+   "prompt": "What was the Blitz?",
+   "answer": "when German planes bombed British cities",
+   "distractors": [
+    "a type of sweet",
+    "a football match",
+    "a castle"
+   ],
+   "explain": "The Blitz was in 1940 and 1941. People sheltered when the air-raid siren sounded.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w2.shelter",
+   "topic": "history.ww2",
+   "kind": "fact",
+   "prompt": "What were the small metal shelters people built in their gardens called?",
+   "answer": "Anderson shelters",
+   "distractors": [
+    "trenches",
+    "castles",
+    "longships"
+   ],
+   "explain": "They were half buried in the ground and covered with earth to protect families.",
+   "accept": [
+    "anderson shelter",
+    "anderson"
+   ]
+  },
+  {
+   "id": "history.w2.ration",
+   "topic": "history.ww2",
+   "kind": "mcq",
+   "prompt": "Why did families have ration books?",
+   "options": [
+    {
+     "text": "Food was scarce, so everyone was allowed a fair, small share",
+     "correct": true
+    },
+    {
+     "text": "To collect stickers",
+     "correct": false,
+     "feedback": "They were for sharing food fairly."
+    },
+    {
+     "text": "To borrow library books",
+     "correct": false,
+     "feedback": "Ration books were for food."
+    }
+   ],
+   "explain": "Ships bringing food were attacked, so food like sugar, butter and meat was rationed."
+  },
+  {
+   "id": "history.w2.victory",
+   "topic": "history.ww2",
+   "kind": "fact",
+   "prompt": "People were asked to grow their own vegetables. What was the slogan?",
+   "answer": "Dig for Victory",
+   "distractors": [
+    "Eat More Sweets",
+    "Keep Calm and Race On",
+    "Grow a Castle"
+   ],
+   "explain": "Parks and gardens were turned into vegetable patches.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w2.spitfire",
+   "topic": "history.ww2",
+   "kind": "fact",
+   "prompt": "Which famous British fighter plane flew in the Battle of Britain?",
+   "answer": "the Spitfire",
+   "distractors": [
+    "the Concorde",
+    "the longship",
+    "the Rocket"
+   ],
+   "explain": "Spitfires and Hurricanes of the RAF defended Britain’s skies in 1940.",
+   "accept": [
+    "spitfire"
+   ]
+  },
+  {
+   "id": "history.w2.blackout",
+   "topic": "history.ww2",
+   "kind": "fact",
+   "prompt": "Why did people cover their windows at night during the “blackout”?",
+   "answer": "so enemy planes could not see the towns",
+   "distractors": [
+    "to sleep better",
+    "to save paint",
+    "to keep warm"
+   ],
+   "explain": "With no lights showing, it was harder for bombers to find their targets.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w2.ve",
+   "topic": "history.ww2",
+   "kind": "fact",
+   "prompt": "VE Day was when the war in Europe ended. How did people celebrate?",
+   "answer": "with street parties",
+   "distractors": [
+    "by going to school",
+    "by building castles",
+    "by rationing more"
+   ],
+   "explain": "VE Day was 8 May 1945. People danced, sang and shared food in the streets.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fi.wright",
+   "topic": "history.firsts",
+   "kind": "fact",
+   "prompt": "Which two brothers made the first powered aeroplane flight in 1903?",
+   "answer": "the Wright brothers",
+   "distractors": [
+    "the Grimm brothers",
+    "the Mario brothers",
+    "the Romans"
+   ],
+   "explain": "Orville Wright flew for 12 seconds. The plane was called the Flyer.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fi.amy",
+   "topic": "history.firsts",
+   "kind": "fact",
+   "prompt": "Which brave British pilot was the first woman to fly alone from England to Australia, in 1930?",
+   "answer": "Amy Johnson",
+   "distractors": [
+    "Florence Nightingale",
+    "Mary Anning",
+    "Grace Darling"
+   ],
+   "explain": "She flew in a small plane called Jason. The trip took 19 days.",
+   "accept": [
+    "amy"
+   ]
+  },
+  {
+   "id": "history.fi.moon",
+   "topic": "history.firsts",
+   "kind": "fact",
+   "prompt": "Who was the first person to walk on the Moon?",
+   "answer": "Neil Armstrong",
+   "distractors": [
+    "Buzz Aldrin",
+    "Amy Johnson",
+    "Orville Wright"
+   ],
+   "explain": "On 20 July 1969. Buzz Aldrin stepped out next.",
+   "accept": [
+    "armstrong"
+   ]
+  },
+  {
+   "id": "history.fi.rocket",
+   "topic": "history.firsts",
+   "kind": "fact",
+   "prompt": "What was the name of a famous early steam train, built by George and Robert Stephenson in 1829?",
+   "answer": "Rocket",
+   "distractors": [
+    "Spitfire",
+    "Flyer",
+    "Thunderbolt"
+   ],
+   "explain": "Stephenson’s Rocket won a race to find the best locomotive, at nearly 30 miles per hour!",
+   "accept": [
+    "the rocket",
+    "stephenson's rocket",
+    "stephenson’s rocket"
+   ]
+  },
+  {
+   "id": "history.fi.order",
+   "topic": "history.firsts",
+   "kind": "order",
+   "prompt": "Put these firsts in order, earliest first.",
+   "items": [
+    "Stephenson’s Rocket (steam train)",
+    "Wright brothers’ first flight",
+    "Amy Johnson flies to Australia",
+    "First person on the Moon"
+   ],
+   "labels": null,
+   "explain": "1829, 1903, 1930, 1969."
+  },
+  {
+   "id": "history.wh.dunkirk",
+   "topic": "history.ww2-heroes",
+   "kind": "fact",
+   "prompt": "In 1940, hundreds of “little ships” (fishing boats and pleasure boats) sailed across the Channel to rescue soldiers. Where from?",
+   "answer": "Dunkirk",
+   "distractors": [
+    "Hastings",
+    "London",
+    "Mars"
+   ],
+   "explain": "More than 300,000 soldiers were brought home from the beaches of Dunkirk in France.",
+   "accept": [
+    "dunkirk beach",
+    "france"
+   ]
+  },
+  {
+   "id": "history.wh.bletchley",
+   "topic": "history.ww2-heroes",
+   "kind": "fact",
+   "prompt": "Where did codebreakers work in secret to crack enemy messages?",
+   "answer": "Bletchley Park",
+   "distractors": [
+    "the Tower of London",
+    "Hadrian’s Wall",
+    "Pudding Lane"
+   ],
+   "explain": "Clever people there, including Alan Turing, built machines to help crack codes.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.wh.turing",
+   "topic": "history.ww2-heroes",
+   "kind": "fact",
+   "prompt": "Which brilliant mathematician helped crack enemy codes and is now called a father of the computer?",
+   "answer": "Alan Turing",
+   "distractors": [
+    "Winston Churchill",
+    "Samuel Pepys",
+    "Francis Drake"
+   ],
+   "explain": "Turing is on the £50 note.",
+   "accept": [
+    "turing"
+   ]
+  },
+  {
+   "id": "history.wh.dday",
+   "topic": "history.ww2-heroes",
+   "kind": "fact",
+   "prompt": "On D-Day, 6 June 1944, soldiers landed on the beaches of which country?",
+   "answer": "France",
+   "distractors": [
+    "Spain",
+    "Italy",
+    "Scotland"
+   ],
+   "explain": "Soldiers from Britain, America, Canada and other countries landed in Normandy to begin freeing Europe.",
+   "accept": [
+    "normandy"
+   ]
+  },
+  {
+   "id": "history.wh.pigeons",
+   "topic": "history.ww2-heroes",
+   "kind": "fact",
+   "prompt": "Which animals carried secret messages and some even won medals for bravery?",
+   "answer": "pigeons",
+   "distractors": [
+    "penguins",
+    "cats",
+    "goldfish"
+   ],
+   "explain": "Pigeons and dogs received the Dickin Medal, a medal for brave animals.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.wh.queen",
+   "topic": "history.ww2-heroes",
+   "kind": "fact",
+   "prompt": "Which princess, who later became queen, trained as a mechanic and army lorry driver in the war?",
+   "answer": "Princess Elizabeth (later Queen Elizabeth II)",
+   "distractors": [
+    "Queen Victoria",
+    "Elizabeth I",
+    "Boudica"
+   ],
+   "explain": "She joined the Auxiliary Territorial Service in 1945 and learned to fix engines.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.mo.monarch",
+   "topic": "history.monarchs",
+   "kind": "fact",
+   "prompt": "What is a king or queen called?",
+   "answer": "a monarch",
+   "distractors": [
+    "a knight",
+    "a prime minister",
+    "a mayor"
+   ],
+   "explain": "Monarch means one ruler.",
+   "accept": [
+    "monarch"
+   ]
+  },
+  {
+   "id": "history.mo.e2",
+   "topic": "history.monarchs",
+   "kind": "fact",
+   "prompt": "Which queen reigned for 70 years, longer than any other British monarch?",
+   "answer": "Elizabeth II",
+   "distractors": [
+    "Victoria",
+    "Elizabeth I",
+    "Boudica"
+   ],
+   "explain": "Queen Elizabeth II reigned from 1952 to 2022.",
+   "accept": [
+    "queen elizabeth ii",
+    "elizabeth the second",
+    "queen elizabeth"
+   ]
+  },
+  {
+   "id": "history.mo.now",
+   "topic": "history.monarchs",
+   "kind": "fact",
+   "prompt": "Who became king in 2022?",
+   "answer": "Charles III",
+   "distractors": [
+    "William I",
+    "Henry VIII",
+    "Alfred"
+   ],
+   "explain": "King Charles III is Queen Elizabeth II’s eldest son.",
+   "accept": [
+    "king charles",
+    "charles",
+    "charles the third"
+   ]
+  },
+  {
+   "id": "history.mo.victoria",
+   "topic": "history.monarchs",
+   "kind": "fact",
+   "prompt": "Which queen reigned for 63 years in the 1800s and gave her name to a whole period of history?",
+   "answer": "Victoria",
+   "distractors": [
+    "Elizabeth I",
+    "Mary",
+    "Anne"
+   ],
+   "explain": "The Victorian age had steam trains, factories and big changes.",
+   "accept": [
+    "queen victoria"
+   ]
+  },
+  {
+   "id": "history.mo.henry",
+   "topic": "history.monarchs",
+   "kind": "fact",
+   "prompt": "Which Tudor king had six wives?",
+   "answer": "Henry VIII",
+   "distractors": [
+    "William I",
+    "Charles III",
+    "Alfred"
+   ],
+   "explain": "“Divorced, beheaded, died; divorced, beheaded, survived.”",
+   "accept": [
+    "henry the eighth",
+    "henry 8",
+    "henry viii"
+   ]
+  },
+  {
+   "id": "history.mo.jewels",
+   "topic": "history.monarchs",
+   "kind": "fact",
+   "prompt": "Where are the Crown Jewels kept?",
+   "answer": "the Tower of London",
+   "distractors": [
+    "Buckingham Palace kitchen",
+    "Hadrian’s Wall",
+    "a bank in Paris"
+   ],
+   "explain": "The Tower of London is a castle built by William the Conqueror.",
+   "formats": [
+    "choice"
+   ]
+  }
+ ]
+}

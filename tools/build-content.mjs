@@ -8,15 +8,21 @@ const SOURCES = ['english', 'english-y7', 'maths', 'history', 'history-y7', 'geo
 const MAPS = { world: 'maps/world.json', europe: 'maps/europe.json', uk: 'maps/uk.json' };
 const { DIAGRAMS } = await import(new URL('./content-src/diagrams.mjs', import.meta.url));
 
+// the Year 2 course: tools/content-src/ks1/*.mjs -> content/ks1/<subject>/<deck>.json, content/index-ks1.json
+const KS1_SOURCES = ['maths', 'reading', 'spelling', 'science', 'history', 'books'];
+
 export async function buildAll() {
   const files = {};
   const decks = [];
-  for (const s of SOURCES) {
-    const mod = await import(new URL(`./content-src/${s}.mjs`, import.meta.url));
-    for (const deck of mod.default) {
-      const path = `${deck.subject}/${deck.deck}.json`;
-      files[path] = JSON.stringify(deck, null, 1) + '\n';
-      decks.push(path);
+  const ks1Decks = [];
+  for (const [list, dir, out] of [[SOURCES, '', decks], [KS1_SOURCES, 'ks1/', ks1Decks]]) {
+    for (const s of list) {
+      const mod = await import(new URL(`./content-src/${dir}${s}.mjs`, import.meta.url));
+      for (const deck of mod.default) {
+        const path = `${dir}${deck.subject}/${deck.deck}.json`;
+        files[path] = JSON.stringify(deck, null, 1) + '\n';
+        out.push(path);
+      }
     }
   }
   const maps = { ...MAPS };
@@ -25,6 +31,7 @@ export async function buildAll() {
     maps[d.id] = `maps/${d.id}.json`;
   }
   files['index.json'] = JSON.stringify({ version: 1, decks, maps }, null, 1) + '\n';
+  files['index-ks1.json'] = JSON.stringify({ version: 1, course: 'ks1', decks: ks1Decks, maps }, null, 1) + '\n';
   return files;
 }
 

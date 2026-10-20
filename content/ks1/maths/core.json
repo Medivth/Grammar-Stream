@@ -1,0 +1,953 @@
+{
+ "subject": "maths",
+ "deck": "core",
+ "topics": [
+  {
+   "kind": "skill",
+   "id": "maths.place",
+   "title": "Tens and ones",
+   "prereqs": [],
+   "intro": "Every number is built from tens and ones, like a race car is built from parts. 47 is 4 tens and 7 ones.",
+   "teach": "Explain why 52 is bigger than 25.",
+   "talk": "Ask {him} what the 3 is worth in 35, and in 53."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.bonds",
+   "title": "Number bonds",
+   "prereqs": [],
+   "intro": "Number bonds are pairs that make a total. If you know 7 + 3 = 10, you also know 70 + 30 = 100!",
+   "teach": "Explain how 6 + 4 = 10 helps you work out 60 + 40.",
+   "talk": "Quick-fire in the car: “I say 7, you say the number that makes 10.”"
+  },
+  {
+   "kind": "skill",
+   "id": "maths.addsub",
+   "title": "Adding and taking away",
+   "prereqs": [
+    "maths.place",
+    "maths.bonds"
+   ],
+   "intro": "Adding and subtracting with bigger numbers: split numbers into tens and ones, and use one fact to check the other.",
+   "teach": "Explain how you would work out 45 + 27.",
+   "talk": "Ask {him} to check 36 + 17 = 53 by taking away."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.count",
+   "title": "Counting patterns, odd and even",
+   "prereqs": [],
+   "intro": "Counting in 2s, 3s, 5s and 10s is a superpower for times tables. Spot the rule and you can find any number in a pattern.",
+   "teach": "Explain how you can tell if a number is odd or even.",
+   "talk": "Count in 3s together up the stairs."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.times",
+   "title": "Times tables: 2, 5 and 10",
+   "prereqs": [
+    "maths.count"
+   ],
+   "intro": "Multiplying is adding equal groups quickly. Dividing is sharing equally, or finding how many groups.",
+   "teach": "Explain why 3 × 5 is the same as 5 × 3, using an array.",
+   "talk": "Ask {him} how many wheels on 6 racing cars."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.fractions",
+   "title": "Halves, quarters and thirds",
+   "prereqs": [
+    "maths.times"
+   ],
+   "intro": "A fraction is an EQUAL part of something. Two quarters make a half. Three quarters is almost the whole thing.",
+   "teach": "Explain why a shape cut into 4 unequal pieces is not in quarters.",
+   "talk": "Cut a sandwich into quarters. How many quarters make a half?"
+  },
+  {
+   "kind": "skill",
+   "id": "maths.money",
+   "title": "Money",
+   "prereqs": [
+    "maths.addsub"
+   ],
+   "intro": "Pounds and pence: 100p makes £1. Counting coins is quickest if you start with the biggest.",
+   "teach": "Explain how to make 75p using the fewest coins.",
+   "talk": "At the shop, let {him} work out the change from £1."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.time",
+   "title": "Telling the time",
+   "prereqs": [
+    "maths.count"
+   ],
+   "intro": "The long hand shows the minutes and the short hand shows the hour. Count in 5s round the clock to read the minutes.",
+   "teach": "Explain how you know a clock shows quarter to 3.",
+   "talk": "Ask {him} what time it is on the kitchen clock, then what time it will be in half an hour."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.measure",
+   "title": "Length, mass and capacity",
+   "prereqs": [
+    "maths.addsub"
+   ],
+   "intro": "We measure length in centimetres and metres, mass in grams and kilograms, and capacity in millilitres and litres.",
+   "teach": "Explain which unit you would use to measure a race track, and why.",
+   "talk": "Guess how many centimetres long a toy car is, then measure it."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.data",
+   "title": "Pictograms and charts",
+   "prereqs": [
+    "maths.times"
+   ],
+   "intro": "A pictogram uses pictures to show numbers. Always check the key: sometimes one picture stands for 2!",
+   "teach": "Explain what half a picture means when one picture stands for 2.",
+   "talk": "Make a tally of car colours you pass on a walk."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.problems",
+   "title": "Racing, space and hero problems",
+   "prereqs": [
+    "maths.addsub",
+    "maths.times"
+   ],
+   "intro": "Word problems hide the maths inside a story. Read carefully, decide what to do first, then check your answer makes sense.",
+   "teach": "Explain the two steps you would use to solve a problem about racing laps.",
+   "talk": "Make up a word problem about superheroes for each other."
+  },
+  {
+   "kind": "facts",
+   "id": "maths.shapes",
+   "title": "Shapes",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Every shape has properties: sides and corners (vertices) for flat shapes, faces, edges and vertices for solid ones.",
+   "teach": "Explain the difference between a cube and a square.",
+   "talk": "Find a cylinder, a cuboid and a sphere in the kitchen."
+  },
+  {
+   "kind": "facts",
+   "id": "maths.facts",
+   "title": "Time and number facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Some facts are worth knowing by heart, like how many minutes are in an hour.",
+   "teach": "Explain how many days are in a week and which day comes after Friday.",
+   "talk": "Ask {him} how many months until {her} birthday."
+  },
+  {
+   "kind": "facts",
+   "id": "maths.reasoning",
+   "title": "Thinking like a mathematician",
+   "prereqs": [
+    "maths.addsub",
+    "maths.times"
+   ],
+   "batch": 4,
+   "intro": "Mathematicians ask: is it always true, sometimes true, or never true? Can I prove it? These questions are the real greater-depth challenge.",
+   "teach": "Explain whether adding two odd numbers ALWAYS gives an even number.",
+   "talk": "Ask {him}: “Is it always, sometimes or never true that a bigger number has more digits?”"
+  },
+  {
+   "kind": "skill",
+   "id": "maths.times-8",
+   "title": "Times tables: 3, 4 and 8",
+   "prereqs": [
+    "maths.times"
+   ],
+   "tier": "stretch",
+   "intro": "The 4 times table is double the 2s, and the 8 times table is double the 4s!",
+   "teach": "Explain how the 4 times table helps you with the 8 times table.",
+   "talk": "Ask {him} for 6 × 4, then 6 × 8."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.hundreds",
+   "title": "Numbers to 1000",
+   "prereqs": [
+    "maths.place"
+   ],
+   "tier": "stretch",
+   "intro": "Three-digit numbers have hundreds, tens and ones. 365 is 3 hundreds, 6 tens and 5 ones.",
+   "teach": "Explain what happens to 299 when you add 1.",
+   "talk": "Find a three-digit number on a sign and ask what each digit is worth."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.column",
+   "title": "Adding and subtracting 3-digit numbers",
+   "prereqs": [
+    "maths.hundreds",
+    "maths.addsub"
+   ],
+   "tier": "stretch",
+   "intro": "For big numbers, line them up in columns: hundreds, tens, ones. Add or take away one column at a time.",
+   "teach": "Explain what “carrying” means when you add.",
+   "talk": "Ask {him} to add two house numbers on your street."
+  }
+ ],
+ "items": [
+  {
+   "id": "maths.place.tmpl",
+   "topic": "maths.place",
+   "kind": "template",
+   "gen": "k1Place",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.bonds.tmpl",
+   "topic": "maths.bonds",
+   "kind": "template",
+   "gen": "k1Bonds",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.addsub.tmpl",
+   "topic": "maths.addsub",
+   "kind": "template",
+   "gen": "k1AddSub",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.count.tmpl",
+   "topic": "maths.count",
+   "kind": "template",
+   "gen": "k1Count",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.times.tmpl",
+   "topic": "maths.times",
+   "kind": "template",
+   "gen": "k1Times",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.fractions.tmpl",
+   "topic": "maths.fractions",
+   "kind": "template",
+   "gen": "k1Frac",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.money.tmpl",
+   "topic": "maths.money",
+   "kind": "template",
+   "gen": "k1Money",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.time.tmpl",
+   "topic": "maths.time",
+   "kind": "template",
+   "gen": "k1Time",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.measure.tmpl",
+   "topic": "maths.measure",
+   "kind": "template",
+   "gen": "k1Measure",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.data.tmpl",
+   "topic": "maths.data",
+   "kind": "template",
+   "gen": "k1Data",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.problems.tmpl",
+   "topic": "maths.problems",
+   "kind": "template",
+   "gen": "k1Problems",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.times-8.tmpl",
+   "topic": "maths.times-8",
+   "kind": "template",
+   "gen": "k1Times8",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.hundreds.tmpl",
+   "topic": "maths.hundreds",
+   "kind": "template",
+   "gen": "k1Hundreds",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.column.tmpl",
+   "topic": "maths.column",
+   "kind": "template",
+   "gen": "k1Column",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.sh.1",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "How many sides does a triangle have?",
+   "answer": "3",
+   "distractors": [
+    "4",
+    "5",
+    "6"
+   ],
+   "explain": "Tri means three: 3 sides and 3 corners."
+  },
+  {
+   "id": "maths.sh.2",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "How many sides does a pentagon have?",
+   "answer": "5",
+   "distractors": [
+    "4",
+    "6",
+    "8"
+   ],
+   "explain": "Pent means five."
+  },
+  {
+   "id": "maths.sh.3",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "How many sides does a hexagon have?",
+   "answer": "6",
+   "distractors": [
+    "5",
+    "8",
+    "4"
+   ],
+   "explain": "Hex means six. Bees build hexagons in their honeycomb."
+  },
+  {
+   "id": "maths.sh.4",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "How many sides does an octagon have?",
+   "answer": "8",
+   "distractors": [
+    "6",
+    "10",
+    "7"
+   ],
+   "explain": "Oct means eight, like an octopus with 8 legs."
+  },
+  {
+   "id": "maths.sh.5",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "What is the name of a corner on a shape?",
+   "answer": "a vertex",
+   "distractors": [
+    "an edge",
+    "a face",
+    "a side"
+   ],
+   "explain": "A corner is a vertex. More than one are vertices.",
+   "accept": [
+    "vertex"
+   ]
+  },
+  {
+   "id": "maths.sh.6",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "How many faces does a cube have?",
+   "answer": "6",
+   "distractors": [
+    "4",
+    "8",
+    "12"
+   ],
+   "explain": "A dice is a cube: 6 square faces."
+  },
+  {
+   "id": "maths.sh.7",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "How many vertices (corners) does a cube have?",
+   "answer": "8",
+   "distractors": [
+    "6",
+    "12",
+    "4"
+   ],
+   "explain": "4 on the top and 4 on the bottom: 8."
+  },
+  {
+   "id": "maths.sh.8",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "Which 3D shape is like a ball?",
+   "answer": "a sphere",
+   "distractors": [
+    "a cube",
+    "a cone",
+    "a cylinder"
+   ],
+   "explain": "A sphere is perfectly round with one curved surface.",
+   "accept": [
+    "sphere"
+   ]
+  },
+  {
+   "id": "maths.sh.9",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "Which 3D shape is like a tin of beans?",
+   "answer": "a cylinder",
+   "distractors": [
+    "a cone",
+    "a cuboid",
+    "a sphere"
+   ],
+   "explain": "Two circle faces and a curved surface.",
+   "accept": [
+    "cylinder"
+   ]
+  },
+  {
+   "id": "maths.sh.10",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "Which 3D shape is like a traffic cone?",
+   "answer": "a cone",
+   "distractors": [
+    "a pyramid",
+    "a cylinder",
+    "a sphere"
+   ],
+   "explain": "A circle face and a point at the top.",
+   "accept": [
+    "cone"
+   ]
+  },
+  {
+   "id": "maths.sh.11",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "A shape has 4 equal sides and 4 right angles. What is it?",
+   "answer": "a square",
+   "distractors": [
+    "a rectangle",
+    "a triangle",
+    "a pentagon"
+   ],
+   "explain": "A rectangle also has 4 right angles, but its sides are not all equal.",
+   "accept": [
+    "square"
+   ]
+  },
+  {
+   "id": "maths.sh.12",
+   "topic": "maths.shapes",
+   "kind": "fact",
+   "prompt": "How many lines of symmetry does a square have?",
+   "answer": "4",
+   "distractors": [
+    "2",
+    "1",
+    "0"
+   ],
+   "explain": "Up and down, across, and both diagonals."
+  },
+  {
+   "id": "maths.f.1",
+   "topic": "maths.facts",
+   "kind": "fact",
+   "prompt": "How many minutes are in an hour?",
+   "answer": "60",
+   "distractors": [
+    "100",
+    "30",
+    "24"
+   ],
+   "explain": "The long hand goes all the way round in 60 minutes."
+  },
+  {
+   "id": "maths.f.2",
+   "topic": "maths.facts",
+   "kind": "fact",
+   "prompt": "How many hours are in a day?",
+   "answer": "24",
+   "distractors": [
+    "12",
+    "60",
+    "7"
+   ],
+   "explain": "The short hand goes round the clock twice in a day: 2 × 12 = 24."
+  },
+  {
+   "id": "maths.f.3",
+   "topic": "maths.facts",
+   "kind": "fact",
+   "prompt": "How many days are in a week?",
+   "answer": "7",
+   "distractors": [
+    "5",
+    "10",
+    "12"
+   ],
+   "explain": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday."
+  },
+  {
+   "id": "maths.f.4",
+   "topic": "maths.facts",
+   "kind": "fact",
+   "prompt": "How many months are in a year?",
+   "answer": "12",
+   "distractors": [
+    "10",
+    "7",
+    "52"
+   ],
+   "explain": "January to December."
+  },
+  {
+   "id": "maths.f.5",
+   "topic": "maths.facts",
+   "kind": "fact",
+   "prompt": "How many minutes are in half an hour?",
+   "answer": "30",
+   "distractors": [
+    "50",
+    "15",
+    "20"
+   ],
+   "explain": "Half of 60 is 30."
+  },
+  {
+   "id": "maths.f.6",
+   "topic": "maths.facts",
+   "kind": "fact",
+   "prompt": "How many minutes are in a quarter of an hour?",
+   "answer": "15",
+   "distractors": [
+    "25",
+    "4",
+    "45"
+   ],
+   "explain": "A quarter of 60 is 15."
+  },
+  {
+   "id": "maths.f.7",
+   "topic": "maths.facts",
+   "kind": "fact",
+   "prompt": "How many pence are in £1?",
+   "answer": "100",
+   "distractors": [
+    "10",
+    "50",
+    "1000"
+   ],
+   "explain": "100p = £1."
+  },
+  {
+   "id": "maths.f.8",
+   "topic": "maths.facts",
+   "kind": "fact",
+   "prompt": "How many centimetres are in 1 metre?",
+   "answer": "100",
+   "distractors": [
+    "10",
+    "1000",
+    "60"
+   ],
+   "explain": "A metre stick has 100 centimetres."
+  },
+  {
+   "id": "maths.f.9",
+   "topic": "maths.facts",
+   "kind": "fact",
+   "prompt": "Which month comes after June?",
+   "answer": "July",
+   "distractors": [
+    "May",
+    "August",
+    "September"
+   ],
+   "explain": "…May, June, July, August…",
+   "accept": [
+    "july"
+   ]
+  },
+  {
+   "id": "maths.f.10",
+   "topic": "maths.facts",
+   "kind": "fact",
+   "prompt": "How many seconds are in a minute?",
+   "answer": "60",
+   "distractors": [
+    "100",
+    "10",
+    "30"
+   ],
+   "explain": "Count to 60 slowly: that is about a minute."
+  },
+  {
+   "id": "maths.r.odd",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Odd + odd = even. Is that always, sometimes or never true?",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": true
+    },
+    {
+     "text": "Sometimes true",
+     "correct": false,
+     "feedback": "Try lots: 1 + 3 = 4, 5 + 7 = 12, 9 + 9 = 18. It works every time."
+    },
+    {
+     "text": "Never true",
+     "correct": false,
+     "feedback": "Try 3 + 5 = 8. That is even!"
+    }
+   ],
+   "explain": "Two odd numbers each have one left over when you pair them up. The two left-overs make a pair, so the total is always even."
+  },
+  {
+   "id": "maths.r.digits",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "A number with more digits is bigger. Always, sometimes or never true (for whole numbers)?",
+   "options": [
+    {
+     "text": "Always true",
+     "correct": true
+    },
+    {
+     "text": "Sometimes true",
+     "correct": false,
+     "feedback": "For whole numbers it always works: even the smallest 3-digit number (100) beats the biggest 2-digit number (99)."
+    },
+    {
+     "text": "Never true",
+     "correct": false,
+     "feedback": "100 has more digits than 99, and it is bigger."
+    }
+   ],
+   "explain": "The smallest 3-digit number, 100, is bigger than the biggest 2-digit number, 99."
+  },
+  {
+   "id": "maths.r.order",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "You can add two numbers in any order and get the same answer. Is the same true for taking away?",
+   "options": [
+    {
+     "text": "No: 10 − 3 is not the same as 3 − 10",
+     "correct": true
+    },
+    {
+     "text": "Yes, always",
+     "correct": false,
+     "feedback": "10 − 3 = 7, but 3 − 10 would go below zero. Order matters for take away."
+    },
+    {
+     "text": "Only for even numbers",
+     "correct": false,
+     "feedback": "It does not depend on odd or even: order matters for subtraction."
+    }
+   ],
+   "explain": "Adding and multiplying can be done in any order. Taking away and dividing cannot."
+  },
+  {
+   "id": "maths.r.mistake1",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Turbo says: “34 + 25 = 95.” What mistake did Turbo make?",
+   "options": [
+    {
+     "text": "Added the tens to the ones in the wrong places: it should be 59",
+     "correct": true
+    },
+    {
+     "text": "No mistake",
+     "correct": false,
+     "feedback": "34 + 25: 3 tens + 2 tens = 5 tens; 4 + 5 = 9 ones. 59."
+    },
+    {
+     "text": "Should have taken away",
+     "correct": false,
+     "feedback": "The question is an addition. The mistake is mixing up tens and ones."
+    }
+   ],
+   "explain": "3 tens + 2 tens = 5 tens. 4 ones + 5 ones = 9 ones. 5 tens and 9 ones is 59, not 95."
+  },
+  {
+   "id": "maths.r.mistake2",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "{hero} says: “Half of 30 is 13.” How can you prove this is wrong?",
+   "options": [
+    {
+     "text": "13 + 13 = 26, not 30. Half of 30 is 15, because 15 + 15 = 30",
+     "correct": true
+    },
+    {
+     "text": "Half of 30 is 60",
+     "correct": false,
+     "feedback": "Halving makes things smaller. Doubling 30 gives 60."
+    },
+    {
+     "text": "You can’t halve 30",
+     "correct": false,
+     "feedback": "30 is even, so it halves exactly: 15."
+    }
+   ],
+   "explain": "To check a half, double it: if it does not give the whole, it is wrong."
+  },
+  {
+   "id": "maths.r.bigger",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Which is greater: {{1/2}} of 20 or {{1/4}} of 48?",
+   "options": [
+    {
+     "text": "{{1/4}} of 48 (12 is more than 10)",
+     "correct": true
+    },
+    {
+     "text": "{{1/2}} of 20",
+     "correct": false,
+     "feedback": "Half of 20 is 10. A quarter of 48 is 12. 12 is more."
+    },
+    {
+     "text": "They are the same",
+     "correct": false,
+     "feedback": "10 and 12 are not the same."
+    }
+   ],
+   "explain": "{{1/2}} of 20 = 10. {{1/4}} of 48 = 12. A quarter of a big number can beat a half of a small one."
+  },
+  {
+   "id": "maths.r.groups",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Which is NOT the same as 4 × 5?",
+   "options": [
+    {
+     "text": "4 + 5",
+     "correct": true
+    },
+    {
+     "text": "5 × 4",
+     "correct": false,
+     "feedback": "5 × 4 is the same as 4 × 5: both make 20."
+    },
+    {
+     "text": "5 + 5 + 5 + 5",
+     "correct": false,
+     "feedback": "Four fives: 20. This IS the same."
+    }
+   ],
+   "explain": "4 + 5 = 9, but 4 × 5 means 4 groups of 5 = 20."
+  },
+  {
+   "id": "maths.r.even",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Sparky thinks of a number. When it is shared equally between 2, nothing is left over. What do we know?",
+   "options": [
+    {
+     "text": "It is an even number",
+     "correct": true
+    },
+    {
+     "text": "It is an odd number",
+     "correct": false,
+     "feedback": "Odd numbers always have 1 left over when shared between 2."
+    },
+    {
+     "text": "It must be 10",
+     "correct": false,
+     "feedback": "Lots of numbers share equally between 2: 2, 4, 6, 8, 10…"
+    }
+   ],
+   "explain": "Even numbers share equally into 2 with nothing left."
+  },
+  {
+   "id": "maths.r.estimate",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "Without working it out exactly: is 48 + 39 closer to 70, 90 or 110?",
+   "options": [
+    {
+     "text": "90",
+     "correct": true
+    },
+    {
+     "text": "70",
+     "correct": false,
+     "feedback": "48 is nearly 50 and 39 is nearly 40: about 50 + 40 = 90."
+    },
+    {
+     "text": "110",
+     "correct": false,
+     "feedback": "Round each number: 50 + 40 = 90."
+    }
+   ],
+   "explain": "Rounding to the nearest ten gives a quick estimate: 50 + 40 = 90. (The exact answer is 87.)"
+  },
+  {
+   "id": "maths.r.both",
+   "topic": "maths.reasoning",
+   "kind": "mcq",
+   "prompt": "I am a number between 20 and 30. I am in the 2 times table AND the 5 times table. What am I?",
+   "options": [
+    {
+     "text": "20",
+     "correct": false,
+     "feedback": "20 is in both tables, but it is not BETWEEN 20 and 30."
+    },
+    {
+     "text": "25",
+     "correct": false,
+     "feedback": "25 is in the 5 times table but it is odd, so not in the 2 times table."
+    },
+    {
+     "text": "There is no such number between 20 and 30",
+     "correct": true
+    }
+   ],
+   "explain": "Numbers in both the 2 and 5 times tables are in the 10 times table: 10, 20, 30… None is strictly between 20 and 30!"
+  }
+ ]
+}

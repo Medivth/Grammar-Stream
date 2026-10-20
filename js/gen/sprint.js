@@ -2,15 +2,56 @@
 // Five levels, from times tables to percentages. Each question is { prompt, value, keypad }.
 // `keypad` is true when every answer at that level is a plain positive number (numeric keyboard).
 
+import { COURSE } from '../core/subjects.js';
+
 const neg = (n) => (n < 0 ? `−${-n}` : String(n));
 
 export const SPRINT_LEVELS = 5;
 
-export function sprintQuestion(level, rng) {
+export function sprintQuestion(level, rng, course = COURSE.sprint) {
   const L = Math.max(1, Math.min(SPRINT_LEVELS, level));
-  const pick = rng.pick(SPRINT[L - 1]);
-  return { ...pick(rng), keypad: L !== 4 };
+  const table = course === 'ks1' ? SPRINT_KS1 : SPRINT;
+  const pick = rng.pick(table[L - 1]);
+  return { ...pick(rng), keypad: course === 'ks1' || L !== 4 };
 }
+
+// Year 2 greater depth: bonds, doubles, tens, and the 2, 5, 10 (then 3, 4) tables
+const SPRINT_KS1 = [
+  [
+    (r) => { const a = r.int(0, 10); return { prompt: `${a} + ? = 10`, value: 10 - a }; },
+    (r) => { const a = r.int(1, 6), b = r.int(1, 4); return { prompt: `${a} + ${b}`, value: a + b }; },
+    (r) => { const a = r.int(4, 10), b = r.int(1, a); return { prompt: `${a} − ${b}`, value: a - b }; },
+    (r) => { const a = r.int(1, 5); return { prompt: `Double ${a}`, value: 2 * a }; },
+  ],
+  [
+    (r) => { const a = r.int(0, 20); return { prompt: `${a} + ? = 20`, value: 20 - a }; },
+    (r) => { const a = r.int(1, 10); return { prompt: `Double ${a}`, value: 2 * a }; },
+    (r) => { const a = r.int(1, 10) * 2; return { prompt: `Half of ${a}`, value: a / 2 }; },
+    (r) => { const a = r.int(5, 12), b = r.int(2, 8); return { prompt: `${a} + ${b}`, value: a + b }; },
+    (r) => { const a = r.int(11, 20), b = r.int(2, 9); return { prompt: `${a} − ${b}`, value: a - b }; },
+  ],
+  [
+    (r) => { const a = r.int(11, 89); return { prompt: `10 more than ${a}`, value: a + 10 }; },
+    (r) => { const a = r.int(11, 99); return { prompt: `10 less than ${a}`, value: a - 10 }; },
+    (r) => { const a = r.pick([2, 5, 10]), b = r.int(1, 10); return { prompt: `${b} × ${a}`, value: a * b }; },
+    (r) => { const a = r.int(1, 9) * 10; return { prompt: `${a} + ? = 100`, value: 100 - a }; },
+    (r) => { const a = r.int(6, 15), b = r.int(4, 9); return { prompt: `${a} + ${b}`, value: a + b }; },
+  ],
+  [
+    (r) => { const a = r.pick([2, 5, 10]), b = r.int(1, 12); return { prompt: `${a * b} ÷ ${a}`, value: b }; },
+    (r) => { const a = r.pick([2, 5, 10]), b = r.int(2, 12); return { prompt: `${a} × ${b}`, value: a * b }; },
+    (r) => { const a = r.int(21, 89), b = r.int(2, 9); return { prompt: `${a} + ${b}`, value: a + b }; },
+    (r) => { const a = r.int(41, 99), t = r.int(1, 4) * 10; return { prompt: `${a} − ${t}`, value: a - t }; },
+    (r) => { const a = r.int(5, 25); return { prompt: `Double ${a}`, value: 2 * a }; },
+  ],
+  [
+    (r) => { const a = r.pick([3, 4]), b = r.int(1, 12); return { prompt: `${a} × ${b}`, value: a * b }; },
+    (r) => { const a = r.pick([3, 4]), b = r.int(1, 12); return { prompt: `${a * b} ÷ ${a}`, value: b }; },
+    (r) => { const a = r.int(11, 44), b = r.int(11, 44); return { prompt: `${a} + ${b}`, value: a + b }; },
+    (r) => { const a = r.int(51, 99), b = r.int(11, 49); return { prompt: `${a} − ${b}`, value: a - b }; },
+    (r) => { const a = r.int(1, 99) * 2; return { prompt: `Half of ${a}`, value: a / 2 }; },
+  ],
+];
 
 const SPRINT = [
   // 1: tables and number bonds

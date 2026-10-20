@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = '39a4355509a3';
+const VERSION = '2f1ec226839a';
 const FILES = [
  "./",
  "./index.html",
@@ -17,6 +17,7 @@ const FILES = [
  "./js/core/practice.js",
  "./js/core/present.js",
  "./js/core/progress.js",
+ "./js/core/pronoun.js",
  "./js/core/rng.js",
  "./js/core/session.js",
  "./js/core/sprint.js",
@@ -27,6 +28,7 @@ const FILES = [
  "./js/gen/geography.js",
  "./js/gen/history.js",
  "./js/gen/index.js",
+ "./js/gen/ks1maths.js",
  "./js/gen/maths.js",
  "./js/gen/maths2.js",
  "./js/gen/maths3.js",
@@ -72,7 +74,15 @@ const FILES = [
  "./content/history/stretch.json",
  "./content/history/timeline.json",
  "./content/history/year7.json",
+ "./content/index-ks1.json",
  "./content/index.json",
+ "./content/ks1/history/core.json",
+ "./content/ks1/history/timeline.json",
+ "./content/ks1/maths/core.json",
+ "./content/ks1/reading/books.json",
+ "./content/ks1/reading/core.json",
+ "./content/ks1/science/core.json",
+ "./content/ks1/spelling/core.json",
  "./content/latin/core.json",
  "./content/maps/cell-animal.json",
  "./content/maps/cell-plant.json",

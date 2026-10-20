@@ -22,6 +22,7 @@ export const MIGRATIONS = {
 export function emptyState(today) {
   return {
     created: today,
+    course: 'y6', // which course this child follows (see js/core/subjects.js)
     profile: null, // { childName, companion: { name, fur, accessory }, parentPin }
     settings: {
       sessionMinutes: 25,

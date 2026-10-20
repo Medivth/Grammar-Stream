@@ -112,6 +112,13 @@ export function present(item, card, { db, state, rng, level, format }) {
       throw new Error('cannot present ' + item.kind);
   }
   q.guess = q.kind === 'choice' ? 1 / q.options.length : 0;
+  // his own superhero can star in the word problems
+  const hero = state?.profile?.hero || 'Captain Comet';
+  const fill = (t) => (typeof t === 'string' && t.includes('{hero}') ? t.replaceAll('{hero}', hero) : t);
+  q.prompt = fill(q.prompt); q.explain = fill(q.explain);
+  if (q.steps) q.steps = q.steps.map(fill);
+  if (q.diagram?.title) q.diagram = { ...q.diagram, title: fill(q.diagram.title) };
+  if (q.options) q.options = q.options.map((o) => ({ ...o, text: fill(o.text), feedback: fill(o.feedback) }));
   return q;
 }
 

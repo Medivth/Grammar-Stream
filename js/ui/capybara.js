@@ -15,6 +15,9 @@ export const ACCESSORIES = {
   glasses: 'Glasses',
   scarf: 'Scarf',
   bird: 'Bird friend',
+  racehelmet: 'Racing helmet',
+  cape: 'Hero cape',
+  mask: 'Hero mask',
   // earned through milestones (see js/core/progress.js)
   sunglasses: 'Sunglasses',
   headphones: 'Headphones',
@@ -52,6 +55,12 @@ function accessory(kind, f) {
       return `<g><ellipse cx="64" cy="52" rx="48" ry="9" fill="#b98f52"/><path d="M38 52 Q40 26 64 26 Q88 26 90 52 Z" fill="#d6b06e"/><rect x="39" y="44" width="50" height="6" fill="#6e4f25"/></g>`;
     case 'gradcap':
       return `<g><path d="M44 40 L44 54 Q64 62 84 54 L84 40 Z" fill="#2b2a3a"/><path d="M64 22 L106 37 L64 52 L22 37 Z" fill="#1c1a33"/><path d="M64 37 L100 41 L100 60" stroke="#ffd166" stroke-width="3" fill="none"/><circle cx="100" cy="62" r="3.5" fill="#ffd166"/></g>`;
+    case 'racehelmet':
+      return `<g><path d="M22 70 Q22 26 64 26 Q106 26 106 70 Q96 62 64 60 Q32 62 22 70 Z" fill="#d62f3a"/><path d="M58 27 L50 46 L60 46 L54 62 L72 40 L62 40 L68 27 Z" fill="#ffd166"/><path d="M24 66 Q64 54 104 66" stroke="#fff" stroke-width="4" fill="none"/><text x="92" y="50" font-family="sans-serif" font-weight="900" font-size="14" fill="#fff">7</text></g>`;
+    case 'cape':
+      return `<g><path d="M92 64 Q150 36 196 90 Q202 128 188 148 L124 148 Z" fill="#d62f3a"/><path d="M92 64 Q150 44 190 96" stroke="#a51d28" stroke-width="3" fill="none" opacity=".6"/></g>`;
+    case 'mask':
+      return `<path fill-rule="evenodd" d="M32 70 Q63 60 94 70 Q96 84 82 86 Q63 80 44 86 Q30 84 32 70 Z M44 76 a6 5 0 1 0 12 0 a6 5 0 1 0 -12 0 Z M70 76 a6 5 0 1 0 12 0 a6 5 0 1 0 -12 0 Z" fill="#2f74e8"/>`;
     case 'crown':
       return `<g><path d="M40 50 L46 24 L58 38 L64 18 L70 38 L82 24 L88 50 Z" fill="#ffd166" stroke="#d9a21b" stroke-width="2" stroke-linejoin="round"/><rect x="40" y="48" width="48" height="8" rx="3" fill="#e0b037"/><circle cx="64" cy="32" r="3" fill="#d63d74"/><circle cx="50" cy="38" r="2.2" fill="#2f74e8"/><circle cx="78" cy="38" r="2.2" fill="#2f74e8"/></g>`;
     case 'backpack':
@@ -71,12 +80,14 @@ function eyes(mood) {
 /** Returns an SVG string. */
 export function capybaraSVG({ fur = 'caramel', accessory: acc = 'none', mood = 'neutral', title = 'Capybara' } = {}) {
   const f = FURS[fur] || FURS.caramel;
-  const FRONT = ['scarf', 'backpack'], FACE = ['glasses', 'sunglasses', 'goggles'];
+  const FRONT = ['scarf', 'backpack'], FACE = ['glasses', 'sunglasses', 'goggles', 'mask'], BACK = ['cape'];
+  const back = BACK.includes(acc) ? accessory(acc, f) : '';
   const front = FRONT.includes(acc) ? accessory(acc, f) : '';
   const face = FACE.includes(acc) ? accessory(acc, f) : '';
-  const top = !FRONT.includes(acc) && !FACE.includes(acc) ? accessory(acc, f) : '';
+  const top = !FRONT.includes(acc) && !FACE.includes(acc) && !BACK.includes(acc) ? accessory(acc, f) : '';
   return `<svg viewBox="0 0 200 160" role="img" aria-label="${title}" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="108" cy="150" rx="78" ry="7" fill="#000" opacity=".08"/>
+  ${back}
   <rect x="62" y="122" width="16" height="26" rx="7" fill="${f.dark}"/>
   <rect x="146" y="122" width="16" height="26" rx="7" fill="${f.dark}"/>
   <ellipse cx="118" cy="102" rx="72" ry="42" fill="${f.body}"/>

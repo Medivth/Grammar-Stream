@@ -3,6 +3,7 @@
 // Each question: { n, prompt, value, marks }. `value` is a string parseNumber understands.
 
 import { makeRng } from '../core/rng.js';
+import { COURSE } from '../core/subjects.js';
 
 export const PAPER_QUESTIONS = 36;
 export const PAPER_MARKS = 40;
@@ -61,5 +62,44 @@ export function arithmeticPaper(seed) {
   if (q.length !== PAPER_QUESTIONS) throw new Error(`paper has ${q.length} questions`);
   const marks = q.reduce((s, x) => s + x.marks, 0);
   if (marks !== PAPER_MARKS) throw new Error(`paper has ${marks} marks`);
+  return q;
+}
+
+// --- Year 2: the shape of the old KS1 arithmetic paper (25 questions, 25 marks, about 20 minutes)
+export const KS1_SPEC = { questions: 25, marks: 25, minutes: 20, label: 'the end-of-Year-2 arithmetic test', good: 20 };
+export const KS2_SPEC = { questions: PAPER_QUESTIONS, marks: PAPER_MARKS, minutes: PAPER_MINUTES, label: 'the Year 6 arithmetic test', good: 32 };
+export const paperSpec = () => (COURSE.paper === 'ks1' ? KS1_SPEC : KS2_SPEC);
+export const makePaper = (seed) => (COURSE.paper === 'ks1' ? ks1Paper(seed) : arithmeticPaper(seed));
+
+export function ks1Paper(seed) {
+  const r = makeRng(`ks1paper:${seed}`);
+  const q = [];
+  const add = (prompt, value) => q.push({ n: q.length + 1, prompt, value: String(value), marks: 1 });
+  { const a = r.int(2, 9), b = r.int(1, 10 - a); add(`${a} + ${b} =`, a + b); }
+  { const a = r.int(11, 19), b = r.int(2, 9); add(`${a} − ${b} =`, a - b); }
+  { const a = r.int(1, 8) * 10, b = r.int(1, 9 - a / 10) * 10; add(`${a} + ${b} =`, a + b); }
+  { const a = r.int(21, 85), b = r.int(1, 9 - (a % 10)); add(`${a} + ${b} =`, a + b); }
+  { const a = r.int(21, 99), b = r.int(1, a % 10 || 1); add(`${a} − ${b} =`, a - b); }
+  { const a = r.int(6, 9), b = r.int(5, 9); add(`${a} + ${b} =`, a + b); }
+  { const a = r.pick([2, 5, 10]), b = r.int(2, 10); add(`${b} × ${a} =`, a * b); }
+  { const a = r.pick([2, 5, 10]), b = r.int(2, 10); add(`${a * b} ÷ ${a} =`, b); }
+  { const a = r.int(3, 12) * 2; add(`{{1/2}} of ${a} =`, a / 2); }
+  { const a = r.int(2, 6) * 10 + r.int(1, 4), b = r.int(1, 3) * 10 + r.int(1, 5); add(`${a} + ${b} =`, a + b); }
+  { const a = r.int(5, 9) * 10 + r.int(5, 9), b = r.int(1, 4) * 10 + r.int(1, 4); add(`${a} − ${b} =`, a - b); }
+  { const b = r.int(2, 10); add(`10 × ${b} =`, 10 * b); }
+  { const a = r.int(2, 5) * 10 + r.int(5, 9), b = r.int(1, 3) * 10 + r.int(3, 9); add(`${a} + ${b} =`, a + b); }
+  { const a = r.int(5, 9) * 10 + r.int(0, 4), b = r.int(1, 4) * 10 + r.int(5, 9); add(`${a} − ${b} =`, a - b); }
+  { const a = r.int(2, 10) * 4; add(`{{1/4}} of ${a} =`, a / 4); }
+  { const a = r.int(1, 4) * 4; add(`{{3/4}} of ${a} =`, (a * 3) / 4); }
+  { const a = r.int(1, 8) * 10 + r.int(0, 9), t = r.int(a + 5, 99); add(`${a} + ? = ${t}`, t - a); }
+  { const a = r.int(11, 45); add(`Double ${a} =`, 2 * a); }
+  { const a = r.int(11, 49) * 2; add(`Half of ${a} =`, a / 2); }
+  { const a = r.pick([10, 15, 20, 25, 30]); add(`${a} + ${a} + ${a} =`, 3 * a); }
+  { const a = r.pick([3, 4]), b = r.int(2, 10); add(`${a} × ${b} =`, a * b); }
+  { const b = r.int(3, 10); add(`5 × ${b} =`, 5 * b); }
+  { const a = r.int(5, 9) * 10, b = r.int(1, a / 10 - 1) * 10 + 5; add(`${a} − ${b} =`, a - b); }
+  { const a = r.int(2, 8) * 3; add(`{{1/3}} of ${a} =`, a / 3); }
+  { const a = r.int(2, 6) * 4; add(`{{2/4}} of ${a} =`, a / 2); }
+  if (q.length !== KS1_SPEC.questions) throw new Error(`ks1 paper has ${q.length} questions`);
   return q;
 }

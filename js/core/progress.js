@@ -1,7 +1,7 @@
 // Visible progress: what she knows, milestones, timeline and places. Derived only; never stored.
 
 import { topicStatus } from './mastery.js';
-import { SUBJECTS } from './subjects.js';
+import { SUBJECTS, COURSE } from './subjects.js';
 import { monthKey } from './dates.js';
 import { calibration } from './session.js';
 
@@ -40,7 +40,7 @@ export function placesStatus(state, db) {
   for (const item of Object.values(db.items)) {
     if (!item.map || !item.feature || !out[item.map]) continue;
     if (item.kind !== 'mapfact' && item.kind !== 'fact') continue;
-    if (item.kind === 'mapfact' && !['countries', 'features', 'markers', 'rivers'].includes(item.layer)) continue;
+    if (item.kind === 'mapfact' && !['countries', 'features', 'markers', 'rivers', 'continents', 'oceans'].includes(item.layer)) continue;
     if (isKnown(state.cards[item.id])) out[item.map].add(item.feature);
   }
   const totals = { world: new Set(), europe: new Set(), uk: new Set() };
@@ -53,7 +53,7 @@ export const MILESTONES = [
   { id: 'first-session', title: 'First steps', desc: 'Finish your first session', goal: 1, measure: (s) => s.sessions.filter((x) => x.completed).length },
   { id: 'first-mastered', title: 'Topic tamer', desc: 'Master your first topic', goal: 1, measure: (s) => Object.values(s.topics).filter((t) => t.state === 'mastered').length, unlock: 'sunglasses' },
   { id: 'hundred', title: 'Century', desc: 'Know 100 things', goal: 100, measure: (s) => learnedCount(s), unlock: 'headphones' },
-  { id: 'all-rounder', title: 'All-rounder', desc: 'A secure topic in every subject', goal: SUBJECTS.length, measure: (s, db) => SUBJECTS.filter((sub) => Object.entries(s.topics).some(([id, t]) => db.topics[id]?.subject === sub.id && ['proficient', 'mastered'].includes(t.state))).length, unlock: 'beanie' },
+  { id: 'all-rounder', title: 'All-rounder', desc: 'A secure topic in every subject', goal: 6, measure: (s, db) => SUBJECTS.filter((sub) => Object.entries(s.topics).some(([id, t]) => db.topics[id]?.subject === sub.id && ['proficient', 'mastered'].includes(t.state))).length, unlock: 'beanie' },
   { id: 'globetrotter', title: 'Globetrotter', desc: 'Know 25 countries', goal: 25, measure: (s, db) => { const p = placesStatus(s, db); return p.known.world.size + [...p.known.europe].filter((x) => !p.known.world.has(x)).length; }, unlock: 'explorer' },
   { id: 'time-traveller', title: 'Time traveller', desc: 'Light up 12 events on the timeline', goal: 12, measure: (s, db) => timelineStatus(s, db).events.filter((e) => e.known).length },
   { id: 'lab-ready', title: 'Lab ready', desc: 'Secure 5 science topics', goal: 5, measure: (s, db) => Object.entries(s.topics).filter(([id, t]) => db.topics[id]?.subject === 'science' && ['proficient', 'mastered'].includes(t.state)).length, unlock: 'goggles' },
@@ -70,19 +70,44 @@ export const MILESTONES = [
   { id: 'five-hundred', title: 'Scholar', desc: 'Know 500 things', goal: 500, measure: (s) => learnedCount(s), unlock: 'gradcap' },
 ];
 
+const secureIn = (s, db, pred) => Object.entries(s.topics).filter(([id, t]) => db.topics[id] && pred(db.topics[id]) && ['proficient', 'mastered'].includes(t.state)).length;
+const bestSprint = (s) => Math.max(0, ...(s.sprints || []).map((x) => x.correct));
+
+// Year 2: smaller goals, the same fixed-reward rules
+export const KS1_MILESTONES = [
+  { id: 'first-session', title: 'First lap', desc: 'Finish your first session', goal: 1, measure: (s) => s.sessions.filter((x) => x.completed).length },
+  { id: 'first-mastered', title: 'Champion', desc: 'Master your first topic', goal: 1, measure: (s) => Object.values(s.topics).filter((t) => t.state === 'mastered').length, unlock: 'sunglasses' },
+  { id: 'fifty', title: 'Fifty facts', desc: 'Know 50 things', goal: 50, measure: (s) => learnedCount(s), unlock: 'headphones' },
+  { id: 'all-rounder', title: 'Super all-rounder', desc: 'A secure topic in every subject', goal: 5, measure: (s, db) => SUBJECTS.filter((sub) => secureIn(s, db, (t) => t.subject === sub.id) > 0).length, unlock: 'beanie' },
+  { id: 'speed-racer', title: 'Speed racer', desc: 'Get 15 right in one sprint', goal: 15, measure: bestSprint },
+  { id: 'explorer', title: 'World explorer', desc: 'Know 10 places on the map', goal: 10, measure: (s, db) => Object.values(db.items).filter((i) => i.kind === 'mapfact' && isKnown(s.cards[i.id])).length, unlock: 'explorer' },
+  { id: 'time-traveller', title: 'Time traveller', desc: 'Light up 8 events on the timeline', goal: 8, measure: (s, db) => timelineStatus(s, db).events.filter((e) => e.known).length },
+  { id: 'scientist', title: 'Young scientist', desc: 'Secure 3 science topics', goal: 3, measure: (s, db) => secureIn(s, db, (t) => t.subject === 'science'), unlock: 'goggles' },
+  { id: 'bookworm', title: 'Bookworm', desc: 'Finish 5 books', goal: 5, measure: (s) => (s.books || []).filter((b) => b.endDay).length, unlock: 'backpack' },
+  { id: 'paper', title: 'Test ready', desc: 'Score 20 or more on a maths paper', goal: 20, measure: (s) => Math.max(0, ...(s.papers || []).map((p) => p.score)) },
+  { id: 'regular', title: 'Regular', desc: 'Practise on 12 days in one month', goal: 12, measure: (s) => { const m = {}; for (const x of s.sessions) if (x.completed) (m[monthKey(x.day)] ||= new Set()).add(x.day); return Math.max(0, ...Object.values(m).map((v) => v.size)); } },
+  { id: 'hundred', title: 'Century', desc: 'Know 100 things', goal: 100, measure: (s) => learnedCount(s), unlock: 'gradcap' },
+  { id: 'stretch', title: 'Beyond Year 2', desc: 'Secure 3 stretch topics', goal: 3, measure: (s, db) => secureIn(s, db, (t) => t.tier === 'stretch'), unlock: 'crown' },
+];
+
+export const milestoneDefs = () => (COURSE.id === 'ks1' ? KS1_MILESTONES : MILESTONES);
+
 export function milestones(state, db) {
-  return MILESTONES.map((m) => {
+  return milestoneDefs().map((m) => {
     const n = m.measure(state, db);
     return { ...m, value: Math.min(n, m.goal), done: n >= m.goal };
   });
 }
 
-export const STARTER_ACCESSORIES = ['none', 'yuzu', 'flower', 'bow', 'glasses', 'scarf', 'bird'];
+export const starterAccessories = () => COURSE.starter;
 
 export function unlockedAccessories(state, db) {
   const done = new Set(milestones(state, db).filter((m) => m.done).map((m) => m.id));
-  return new Set([...STARTER_ACCESSORIES, ...MILESTONES.filter((m) => m.unlock && done.has(m.id)).map((m) => m.unlock)]);
+  return new Set([...COURSE.starter, ...milestoneDefs().filter((m) => m.unlock && done.has(m.id)).map((m) => m.unlock)]);
 }
+
+/** Every accessory this course can ever show: starters plus milestone rewards. */
+export const wardrobeAccessories = () => new Set([...COURSE.starter, ...milestoneDefs().filter((m) => m.unlock).map((m) => m.unlock)]);
 
 /** A short plan summary for the home screen ("18 reviews · 1 new topic · writing"). */
 export function planSummary(plan) {

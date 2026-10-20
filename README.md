@@ -2,6 +2,15 @@
 
 A daily, offline learning course for the step from Year 6 to Year 7 (grammar school readiness) across English, maths, history, geography, science and Latin. It runs in the browser as an installable web app on a Windows PC and an Android tablet. Progress stays on the device; nothing is sent anywhere.
 
+## Two courses, one app
+
+Each child on a device has their own profile: course, capybara, progress, settings and backup file. With more than one child the app opens on **Who's learning?**; grown-ups add, switch or remove children in the Grown-ups area (one PIN covers all).
+
+- **Year 6 to grammar school** (ages 10–11): English, maths, history, geography, science and Latin, below.
+- **Year 2 greater depth** (ages 6–7): maths (tens and ones to 3-digit column methods, bonds, times tables, fractions, money, time, measures, pictograms, two-step problems and always/sometimes/never reasoning), reading (phonics, wonderful words, Beatrix Potter, Robert Louis Stevenson, fables and fact files), spelling and grammar (the statutory Year 1 and 2 words plus a Year 3/4 taster), science and the world (animals, plants, materials, seasons, space, continents and oceans, the UK), and British history with a focus on soldiers, knights and the two World Wars, told gently. Every question, passage and learn card has a read-aloud button; sessions are 12 minutes with a wiggle break; a 60-second sprint and a 25-question maths test; word problems feature racing cars, space droids and his own superhero (original characters, not trademarked ones); his capybara starts with a racing helmet, hero cape and mask.
+
+Course definitions live in `js/core/subjects.js`; Year 2 content sources are in `tools/content-src/ks1/` and build to `content/ks1/` and `content/index-ks1.json`. Grown-up-facing text uses `{she}`/`{her}`/`{him}` tokens so it reads correctly for each child.
+
 ## Using it
 
 - Open the GitHub Pages address in Chrome or Edge. After the first visit it works offline.

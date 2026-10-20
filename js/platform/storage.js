@@ -3,15 +3,17 @@
 import { serialize, deserialize, emptyState } from '../core/store.js';
 import { dayToISO } from '../core/dates.js';
 
-const KEY = 'grammar-stream.save';
-const BAK = KEY + '.bak';
-const TMP = KEY + '.tmp';
+const BASE = 'grammar-stream.save';
+const REGISTRY = 'grammar-stream.profiles';
+// the first child keeps the original key, so saves from before profiles existed load unchanged
+const slot = (id = 'main') => { const KEY = id === 'main' ? BASE : `${BASE}.${id}`; return { KEY, BAK: KEY + '.bak', TMP: KEY + '.tmp' }; };
 
 function ls() {
   try { return window.localStorage; } catch { return null; }
 }
 
-export function loadState(today) {
+export function loadState(today, id = 'main') {
+  const { KEY, BAK, TMP } = slot(id);
   const store = ls();
   if (!store) return { state: emptyState(today), warning: 'Storage is unavailable, so progress will not be saved on this device.' };
   for (const key of [KEY, BAK, TMP]) {
@@ -27,7 +29,8 @@ export function loadState(today) {
   return { state: emptyState(today), warning: null, fresh: true };
 }
 
-export function saveState(state) {
+export function saveState(state, id = 'main') {
+  const { KEY, BAK, TMP } = slot(id);
   const store = ls();
   if (!store) return false;
   const text = serialize(state);
@@ -78,7 +81,38 @@ export function pickBackupFile() {
   });
 }
 
-export function wipe() {
+export function wipe(id = 'main') {
+  const { KEY, BAK, TMP } = slot(id);
   const store = ls();
   [KEY, BAK, TMP].forEach((k) => store?.removeItem(k));
 }
+
+// --- profiles ---------------------------------------------------------------------------
+/** [{ id, name, course }]. A device that has only ever had one child has no registry yet. */
+export function listProfiles() {
+  const store = ls();
+  try {
+    const reg = JSON.parse(store?.getItem(REGISTRY) || 'null');
+    if (Array.isArray(reg) && reg.length) return reg;
+  } catch { /* unreadable registry: fall back to the main slot */ }
+  return store?.getItem(BASE) || store?.getItem(BASE + '.bak') ? [{ id: 'main', name: '', course: 'y6' }] : [];
+}
+
+export function saveProfiles(list) {
+  try { ls()?.setItem(REGISTRY, JSON.stringify(list)); } catch (e) { console.error('profiles save failed', e); }
+}
+
+export function upsertProfile(id, state) {
+  const list = listProfiles().filter((p) => p.id !== id);
+  const at = listProfiles().findIndex((p) => p.id === id);
+  const entry = { id, name: state.profile?.childName || '', course: state.course || 'y6' };
+  list.splice(at < 0 ? list.length : at, 0, entry);
+  saveProfiles(list);
+}
+
+export function removeProfile(id) {
+  wipe(id);
+  saveProfiles(listProfiles().filter((p) => p.id !== id));
+}
+
+export const newProfileId = () => `p${Date.now().toString(36)}`;

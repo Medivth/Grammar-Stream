@@ -1,19 +1,24 @@
 // Question renderers. Each returns { el, getResponse(), hasResponse(), showResult(result), focus() }.
 // The problem screen stays plain: no rewards, characters or decoration beside the question.
 
-import { h, s, rich, richHTML, plain } from './dom.js';
+import { h, s, rich, richHTML, plain, spoken } from './dom.js';
+import { icon } from './icons.js';
 import { mapSVG, loadMap, featureNames } from './mapview.js';
 import { speak, ttsAvailable } from '../platform/tts.js';
 import { mathsDiagram } from './diagrams.js';
 
 export async function renderQuestion(q, { onChange = () => {}, settings = {} } = {}) {
   const parts = [];
+  const readAloud = settings.readAloud && settings.tts !== false && ttsAvailable();
   if (q.passage) {
-    parts.push(h('blockquote', { class: 'passage' }, q.passage, q.passageSource ? h('cite', {}, q.passageSource) : null));
+    parts.push(h('blockquote', { class: 'passage' }, readAloud ? sayButton(q.passage, 'Read the passage to me') : null, q.passage, q.passageSource ? h('cite', {}, q.passageSource) : null));
   }
   if (q.kind !== 'cloze') {
     const prompt = rich('div', q.prompt, { class: 'q-prompt', id: 'q-prompt' });
-    if (q.say && settings.tts !== false && ttsAvailable()) {
+    if (readAloud && !q.say) {
+      const opts = q.kind === 'choice' && !q.options.every((o) => /^\d+$/.test(o.text)) ? q.options.map((o, i) => `${'ABCDE'[i]}: ${o.text}`).join('. ') : '';
+      parts.push(h('div', { class: 'q-prompt-row' }, sayButton(`${q.prompt}${opts ? `. ${opts}` : ''}`, 'Read the question to me'), prompt));
+    } else if (q.say && settings.tts !== false && ttsAvailable()) {
       parts.push(h('div', { class: 'row', style: { justifyContent: 'space-between', alignItems: 'flex-start' } }, prompt,
         h('button', { class: 'btn-ghost', type: 'button', onclick: () => speak(`${q.say}. ${plain(q.prompt).replace('___', q.say)}`), 'aria-label': 'Hear the word' }, '🔊 Hear it')));
     } else parts.push(prompt);
@@ -80,6 +85,10 @@ function choiceView(q, onChange) {
     },
     focus: () => {},
   };
+}
+
+export function sayButton(text, label = 'Read it to me') {
+  return h('button', { class: 'say-btn', type: 'button', 'aria-label': label, title: label, onclick: (e) => { e.stopPropagation(); speak(spoken(text), { rate: 0.85 }); } }, icon('speaker'));
 }
 
 function typedView(q, onChange) {
@@ -228,7 +237,7 @@ function clozeView(q, onChange) {
   };
 }
 
-function diagram(d) {
+export function diagram(d) {
   const m = mathsDiagram(d);
   if (m) return m;
   // simple angle diagrams; labels show known angles and "?" for the unknown

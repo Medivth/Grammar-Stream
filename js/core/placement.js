@@ -8,6 +8,7 @@ import { check } from './checkers.js';
 import { present } from './present.js';
 import { eloUpdate } from './elo.js';
 import { makeRng } from './rng.js';
+import { COURSE } from './subjects.js';
 
 export const PLACEMENT_CAP = 24;
 const PROBE_LEVEL = 2; // greater-depth Year 6 for generated skills
@@ -51,7 +52,7 @@ export function nextProbe(probe, state, db) {
   if (probe.current && probe.current.results.length < needed(probe.current.results)) return question(probe, db);
   if (probe.current) finishTopic(probe, db);
   while (probe.queue.length) {
-    if (probe.asked >= PLACEMENT_CAP) break;
+    if (probe.asked >= (COURSE.placementCap || PLACEMENT_CAP)) break;
     const tid = probe.queue.shift();
     const blocked = db.topics[tid].prereqs.some((p) => probe.failed.includes(p) || probe.skipped.includes(p));
     if (blocked) { probe.skipped.push(tid); continue; }

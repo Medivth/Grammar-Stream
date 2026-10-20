@@ -1,0 +1,2000 @@
+{
+ "subject": "science",
+ "deck": "core",
+ "topics": [
+  {
+   "id": "science.animals",
+   "title": "Animal groups",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "science.an.d1"
+   ],
+   "intro": "Scientists sort animals into groups: mammals, birds, fish, reptiles and amphibians. Each group has special features.",
+   "teach": "Explain how you know a dolphin is a mammal, not a fish.",
+   "talk": "At the zoo or in a book, ask {him} which group each animal belongs to."
+  },
+  {
+   "id": "science.food",
+   "title": "What animals eat",
+   "kind": "facts",
+   "prereqs": [
+    "science.animals"
+   ],
+   "batch": 5,
+   "intro": "Carnivores eat meat, herbivores eat plants, and omnivores eat both. A food chain shows who eats whom.",
+   "teach": "Explain a food chain that starts with grass.",
+   "talk": "Ask {him} whether {she} is a carnivore, herbivore or omnivore."
+  },
+  {
+   "id": "science.body",
+   "title": "My body and staying healthy",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Our bodies need food, water, exercise, sleep and clean hands to stay healthy. Our five senses tell us about the world.",
+   "teach": "Explain why we wash our hands.",
+   "talk": "Ask {him} which sense {she} would least like to lose, and why."
+  },
+  {
+   "id": "science.lifecycles",
+   "title": "Growing up: life cycles",
+   "kind": "facts",
+   "prereqs": [
+    "science.animals"
+   ],
+   "batch": 5,
+   "intro": "Animals grow and change. A caterpillar becomes a butterfly; frogspawn becomes a frog; babies become grown-ups.",
+   "teach": "Explain the life cycle of a butterfly.",
+   "talk": "Look at baby photos together and talk about how {she} has changed."
+  },
+  {
+   "id": "science.plants",
+   "title": "Plants",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Plants need water, light and warmth to grow. They have roots, a stem, leaves and often flowers.",
+   "teach": "Explain what roots do for a plant.",
+   "talk": "Grow a bean in a jar together and watch the roots appear."
+  },
+  {
+   "id": "science.habitats",
+   "title": "Habitats",
+   "kind": "facts",
+   "prereqs": [
+    "science.food"
+   ],
+   "batch": 5,
+   "intro": "A habitat is the home where an animal or plant lives. It gives them food, water and shelter.",
+   "teach": "Explain why a polar bear could not live in a desert.",
+   "talk": "Look under a log or stone together for minibeasts."
+  },
+  {
+   "id": "science.materials",
+   "title": "Materials",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Everything is made from materials: wood, metal, plastic, glass, rock, fabric. We choose materials because of what they are like.",
+   "teach": "Explain why windows are made of glass, not wood.",
+   "talk": "Ask {him} what {her} raincoat is made of and why."
+  },
+  {
+   "id": "science.seasons",
+   "title": "Seasons and weather",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "The year has four seasons: spring, summer, autumn and winter. Each brings different weather and different length days.",
+   "teach": "Explain how the trees change through the seasons.",
+   "talk": "Ask {him} what season it is and how {she} can tell."
+  },
+  {
+   "id": "science.space",
+   "title": "Space: the Sun, Moon and planets",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Earth is one of eight planets going round the Sun. The Moon goes round the Earth. Real space is even more amazing than space stories!",
+   "teach": "Explain why we have day and night.",
+   "talk": "Look at the Moon together on a clear night. What shape is it today?"
+  },
+  {
+   "id": "science.world",
+   "title": "Continents and oceans",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "The world has seven continents (big areas of land) and five oceans. Let’s find them on the map.",
+   "teach": "Name the seven continents.",
+   "talk": "Find where you live on a globe, then find Antarctica."
+  },
+  {
+   "id": "science.uk",
+   "title": "The United Kingdom",
+   "kind": "facts",
+   "prereqs": [
+    "science.world"
+   ],
+   "batch": 5,
+   "intro": "The UK is made of four countries: England, Scotland, Wales and Northern Ireland. Each has a capital city.",
+   "teach": "Name the four countries of the UK and their capitals.",
+   "talk": "Ask {him} which country of the UK you live in."
+  },
+  {
+   "id": "science.maps",
+   "title": "Maps, directions and places",
+   "kind": "facts",
+   "prereqs": [
+    "science.world"
+   ],
+   "batch": 5,
+   "intro": "North, south, east and west help us find our way. Hot places are near the Equator; cold places are near the North and South Poles.",
+   "teach": "Explain why it is cold at the North Pole.",
+   "talk": "Use a compass app to find north from your front door."
+  },
+  {
+   "id": "science.forces",
+   "title": "Pushes, pulls and magnets",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "science.materials"
+   ],
+   "batch": 5,
+   "intro": "A force is a push or a pull. Racing cars slow down because of friction. Magnets can pull without even touching!",
+   "teach": "Explain why a toy car goes further on a smooth floor than on carpet.",
+   "talk": "Race toy cars down a ramp onto different floors."
+  },
+  {
+   "id": "science.rocks",
+   "title": "Rocks and fossils",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "science.materials"
+   ],
+   "batch": 5,
+   "intro": "Rocks are under our feet everywhere. Some hold fossils: the remains of plants and animals from millions of years ago, like dinosaurs!",
+   "teach": "Explain how a fossil forms.",
+   "talk": "Look for fossils on a beach or in a museum."
+  }
+ ],
+ "items": [
+  {
+   "id": "science.an.d1",
+   "topic": "science.animals",
+   "kind": "mcq",
+   "prompt": "Is a whale a fish?",
+   "options": [
+    {
+     "text": "No: it is a mammal",
+     "correct": true
+    },
+    {
+     "text": "Yes: it lives in the sea",
+     "correct": false,
+     "feedback": "Living in the sea doesn’t make you a fish! Whales breathe air and feed their babies milk, so they are mammals."
+    }
+   ],
+   "explain": "Whales and dolphins breathe air through a blowhole and feed their babies milk: they are mammals."
+  },
+  {
+   "id": "science.an.mammal",
+   "topic": "science.animals",
+   "kind": "fact",
+   "prompt": "Which animal group has hair or fur and feeds its babies milk?",
+   "answer": "mammals",
+   "distractors": [
+    "birds",
+    "reptiles",
+    "fish"
+   ],
+   "explain": "Mammals have hair or fur and feed their babies milk. Humans are mammals!",
+   "accept": [
+    "mammal"
+   ]
+  },
+  {
+   "id": "science.an.bird",
+   "topic": "science.animals",
+   "kind": "fact",
+   "prompt": "Which animal group has feathers, wings and a beak?",
+   "answer": "birds",
+   "distractors": [
+    "mammals",
+    "reptiles",
+    "amphibians"
+   ],
+   "explain": "All birds have feathers and lay eggs. Not all birds can fly: penguins swim instead!",
+   "accept": [
+    "bird"
+   ]
+  },
+  {
+   "id": "science.an.fish",
+   "topic": "science.animals",
+   "kind": "fact",
+   "prompt": "Which animal group lives in water, has scales and breathes with gills?",
+   "answer": "fish",
+   "distractors": [
+    "amphibians",
+    "mammals",
+    "birds"
+   ],
+   "explain": "Fish breathe underwater using gills."
+  },
+  {
+   "id": "science.an.reptile",
+   "topic": "science.animals",
+   "kind": "fact",
+   "prompt": "Which animal group has dry, scaly skin and lays eggs on land?",
+   "answer": "reptiles",
+   "distractors": [
+    "amphibians",
+    "fish",
+    "mammals"
+   ],
+   "explain": "Snakes, lizards, crocodiles and tortoises are reptiles.",
+   "accept": [
+    "reptile"
+   ]
+  },
+  {
+   "id": "science.an.amphibian",
+   "topic": "science.animals",
+   "kind": "fact",
+   "prompt": "Frogs live in water when young and on land when grown up. Which group are they?",
+   "answer": "amphibians",
+   "distractors": [
+    "reptiles",
+    "fish",
+    "mammals"
+   ],
+   "explain": "Amphibians have smooth, damp skin. Frogs, toads and newts are amphibians.",
+   "accept": [
+    "amphibian"
+   ]
+  },
+  {
+   "id": "science.an.penguin",
+   "topic": "science.animals",
+   "kind": "mcq",
+   "prompt": "Which group does a penguin belong to?",
+   "options": [
+    {
+     "text": "birds",
+     "correct": true
+    },
+    {
+     "text": "mammals",
+     "correct": false,
+     "feedback": "Penguins have feathers and lay eggs: birds!"
+    },
+    {
+     "text": "fish",
+     "correct": false,
+     "feedback": "They swim, but they have feathers and breathe air."
+    }
+   ],
+   "explain": "Penguins are birds that swim instead of fly."
+  },
+  {
+   "id": "science.an.croc",
+   "topic": "science.animals",
+   "kind": "mcq",
+   "prompt": "Which group does a crocodile belong to?",
+   "options": [
+    {
+     "text": "reptiles",
+     "correct": true
+    },
+    {
+     "text": "amphibians",
+     "correct": false,
+     "feedback": "Crocodiles have dry, scaly skin and lay eggs on land: reptiles."
+    },
+    {
+     "text": "fish",
+     "correct": false,
+     "feedback": "They breathe air."
+    }
+   ],
+   "explain": "Crocodiles are reptiles, cousins of the dinosaurs."
+  },
+  {
+   "id": "science.an.bat",
+   "topic": "science.animals",
+   "kind": "fact",
+   "prompt": "A bat can fly. Which group does it belong to?",
+   "answer": "mammals",
+   "distractors": [
+    "birds",
+    "insects",
+    "reptiles"
+   ],
+   "explain": "Bats have fur and feed their babies milk: they are the only mammals that can truly fly.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.an.insect",
+   "topic": "science.animals",
+   "kind": "fact",
+   "prompt": "How many legs does an insect have?",
+   "answer": "6",
+   "distractors": [
+    "8",
+    "4",
+    "10"
+   ],
+   "explain": "All insects have 6 legs. Spiders have 8, so they are not insects!"
+  },
+  {
+   "id": "science.fd.carn",
+   "topic": "science.food",
+   "kind": "fact",
+   "prompt": "An animal that eats only meat is called a…",
+   "answer": "carnivore",
+   "distractors": [
+    "herbivore",
+    "omnivore",
+    "producer"
+   ],
+   "explain": "Lions, sharks and owls are carnivores."
+  },
+  {
+   "id": "science.fd.herb",
+   "topic": "science.food",
+   "kind": "fact",
+   "prompt": "An animal that eats only plants is called a…",
+   "answer": "herbivore",
+   "distractors": [
+    "carnivore",
+    "omnivore",
+    "predator"
+   ],
+   "explain": "Cows, rabbits and elephants are herbivores. So are capybaras!"
+  },
+  {
+   "id": "science.fd.omni",
+   "topic": "science.food",
+   "kind": "fact",
+   "prompt": "An animal that eats plants AND meat is called an…",
+   "answer": "omnivore",
+   "distractors": [
+    "herbivore",
+    "carnivore",
+    "insect"
+   ],
+   "explain": "Bears, pigs and most humans are omnivores."
+  },
+  {
+   "id": "science.fd.chain",
+   "topic": "science.food",
+   "kind": "order",
+   "prompt": "Put this food chain in order, starting with the plant.",
+   "items": [
+    "grass",
+    "rabbit",
+    "fox"
+   ],
+   "labels": null,
+   "explain": "Grass is eaten by the rabbit; the rabbit is eaten by the fox. Food chains always start with a plant."
+  },
+  {
+   "id": "science.fd.chain2",
+   "topic": "science.food",
+   "kind": "order",
+   "prompt": "Put this sea food chain in order.",
+   "items": [
+    "seaweed",
+    "fish",
+    "seal",
+    "polar bear"
+   ],
+   "labels": null,
+   "explain": "Seaweed → fish → seal → polar bear."
+  },
+  {
+   "id": "science.fd.start",
+   "topic": "science.food",
+   "kind": "mcq",
+   "prompt": "What is at the start of every food chain?",
+   "options": [
+    {
+     "text": "a plant",
+     "correct": true
+    },
+    {
+     "text": "a big animal",
+     "correct": false,
+     "feedback": "Big animals come at the END. Plants make food from sunlight, so they come first."
+    },
+    {
+     "text": "a human",
+     "correct": false,
+     "feedback": "Plants come first."
+    }
+   ],
+   "explain": "Plants make their own food using sunlight, so every food chain starts with a plant."
+  },
+  {
+   "id": "science.fd.capy",
+   "topic": "science.food",
+   "kind": "fact",
+   "prompt": "Capybaras eat grass and water plants. What does that make them?",
+   "answer": "herbivores",
+   "distractors": [
+    "carnivores",
+    "omnivores",
+    "predators"
+   ],
+   "explain": "Plant-eaters are herbivores.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.bd.senses",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "How many senses do we have?",
+   "answer": "5",
+   "distractors": [
+    "3",
+    "4",
+    "7"
+   ],
+   "explain": "Sight, hearing, smell, taste and touch."
+  },
+  {
+   "id": "science.bd.smell",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "Which part of the body do we use to smell?",
+   "answer": "nose",
+   "distractors": [
+    "ears",
+    "eyes",
+    "tongue"
+   ],
+   "explain": "We smell with our nose.",
+   "accept": [
+    "the nose",
+    "our nose"
+   ]
+  },
+  {
+   "id": "science.bd.taste",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "Which part of the body do we use to taste?",
+   "answer": "tongue",
+   "distractors": [
+    "nose",
+    "teeth",
+    "ears"
+   ],
+   "explain": "Our tongue has taste buds.",
+   "accept": [
+    "the tongue"
+   ]
+  },
+  {
+   "id": "science.bd.wash",
+   "topic": "science.body",
+   "kind": "mcq",
+   "prompt": "Why should we wash our hands before eating?",
+   "options": [
+    {
+     "text": "To wash away germs that could make us ill",
+     "correct": true
+    },
+    {
+     "text": "To make our hands smell nice",
+     "correct": false,
+     "feedback": "Soap smells nice, but the real reason is germs."
+    },
+    {
+     "text": "So our hands are wet",
+     "correct": false,
+     "feedback": "We dry them afterwards!"
+    }
+   ],
+   "explain": "Germs are too small to see. Soap and water wash them away."
+  },
+  {
+   "id": "science.bd.exercise",
+   "topic": "science.body",
+   "kind": "mcq",
+   "prompt": "Why is exercise good for us?",
+   "options": [
+    {
+     "text": "It keeps our heart, muscles and bones strong",
+     "correct": true
+    },
+    {
+     "text": "It makes us taller straight away",
+     "correct": false,
+     "feedback": "Exercise keeps us healthy and strong, but it doesn’t make us taller at once."
+    },
+    {
+     "text": "It means we never need to sleep",
+     "correct": false,
+     "feedback": "We still need sleep!"
+    }
+   ],
+   "explain": "Exercise makes the heart pump stronger and keeps muscles and bones healthy."
+  },
+  {
+   "id": "science.bd.balanced",
+   "topic": "science.body",
+   "kind": "mcq",
+   "prompt": "Which meal is the healthiest?",
+   "options": [
+    {
+     "text": "Fish, potatoes and vegetables, with water",
+     "correct": true
+    },
+    {
+     "text": "Sweets and fizzy drink",
+     "correct": false,
+     "feedback": "Too much sugar is bad for teeth and bodies."
+    },
+    {
+     "text": "Only crisps",
+     "correct": false,
+     "feedback": "We need lots of different foods."
+    }
+   ],
+   "explain": "A balanced diet has lots of different foods, including fruit and vegetables."
+  },
+  {
+   "id": "science.bd.heart",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "Which part of the body pumps blood all around it?",
+   "answer": "heart",
+   "distractors": [
+    "brain",
+    "lungs",
+    "stomach"
+   ],
+   "explain": "Your heart is a muscle about the size of your fist.",
+   "accept": [
+    "the heart"
+   ]
+  },
+  {
+   "id": "science.bd.lungs",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "Which parts of the body do we breathe with?",
+   "answer": "lungs",
+   "distractors": [
+    "heart",
+    "stomach",
+    "kidneys"
+   ],
+   "explain": "Our lungs take in air so our body gets oxygen.",
+   "accept": [
+    "the lungs"
+   ]
+  },
+  {
+   "id": "science.bd.skeleton",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "What is the name for all the bones in your body?",
+   "answer": "skeleton",
+   "distractors": [
+    "muscles",
+    "skin",
+    "brain"
+   ],
+   "explain": "Your skeleton holds you up and protects parts like your brain and heart.",
+   "accept": [
+    "your skeleton",
+    "a skeleton"
+   ]
+  },
+  {
+   "id": "science.lc.butterfly",
+   "topic": "science.lifecycles",
+   "kind": "order",
+   "prompt": "Put the life cycle of a butterfly in order.",
+   "items": [
+    "egg",
+    "caterpillar",
+    "chrysalis",
+    "butterfly"
+   ],
+   "labels": null,
+   "explain": "Egg → caterpillar → chrysalis (pupa) → butterfly, which lays more eggs."
+  },
+  {
+   "id": "science.lc.frog",
+   "topic": "science.lifecycles",
+   "kind": "order",
+   "prompt": "Put the life cycle of a frog in order.",
+   "items": [
+    "frogspawn",
+    "tadpole",
+    "froglet",
+    "frog"
+   ],
+   "labels": null,
+   "explain": "Frogspawn (eggs) → tadpole → froglet (with legs) → frog."
+  },
+  {
+   "id": "science.lc.human",
+   "topic": "science.lifecycles",
+   "kind": "order",
+   "prompt": "Put these stages of a human life in order.",
+   "items": [
+    "baby",
+    "toddler",
+    "child",
+    "teenager",
+    "adult"
+   ],
+   "labels": null,
+   "explain": "Baby → toddler → child → teenager → adult."
+  },
+  {
+   "id": "science.lc.chicken",
+   "topic": "science.lifecycles",
+   "kind": "order",
+   "prompt": "Put the life cycle of a chicken in order.",
+   "items": [
+    "egg",
+    "chick",
+    "young chicken",
+    "hen"
+   ],
+   "labels": null,
+   "explain": "Egg → chick → young chicken → hen, which lays eggs."
+  },
+  {
+   "id": "science.lc.tadpole",
+   "topic": "science.lifecycles",
+   "kind": "fact",
+   "prompt": "What is a baby frog called?",
+   "answer": "tadpole",
+   "distractors": [
+    "chick",
+    "calf",
+    "kitten"
+   ],
+   "explain": "Tadpoles live in water and breathe with gills, like fish.",
+   "accept": [
+    "a tadpole"
+   ]
+  },
+  {
+   "id": "science.lc.calf",
+   "topic": "science.lifecycles",
+   "kind": "fact",
+   "prompt": "What is a baby cow called?",
+   "answer": "calf",
+   "distractors": [
+    "foal",
+    "lamb",
+    "kid"
+   ],
+   "explain": "A baby cow is a calf. A baby horse is a foal; a baby sheep is a lamb.",
+   "accept": [
+    "a calf"
+   ]
+  },
+  {
+   "id": "science.lc.chrysalis",
+   "topic": "science.lifecycles",
+   "kind": "fact",
+   "prompt": "What is the hard case a caterpillar makes before it becomes a butterfly?",
+   "answer": "chrysalis",
+   "distractors": [
+    "cocoon of a spider",
+    "shell",
+    "nest"
+   ],
+   "explain": "Inside the chrysalis, the caterpillar changes completely.",
+   "accept": [
+    "a chrysalis",
+    "pupa",
+    "a pupa"
+   ]
+  },
+  {
+   "id": "science.pl.roots",
+   "topic": "science.plants",
+   "kind": "fact",
+   "prompt": "Which part of a plant takes in water from the soil?",
+   "answer": "roots",
+   "distractors": [
+    "petals",
+    "leaves",
+    "flower"
+   ],
+   "explain": "Roots hold the plant in the ground and take in water.",
+   "accept": [
+    "the roots",
+    "root"
+   ]
+  },
+  {
+   "id": "science.pl.stem",
+   "topic": "science.plants",
+   "kind": "fact",
+   "prompt": "Which part of a plant holds it up and carries water to the leaves?",
+   "answer": "stem",
+   "distractors": [
+    "root",
+    "petal",
+    "seed"
+   ],
+   "explain": "The stem is like a straw carrying water up the plant.",
+   "accept": [
+    "the stem",
+    "trunk"
+   ]
+  },
+  {
+   "id": "science.pl.leaves",
+   "topic": "science.plants",
+   "kind": "fact",
+   "prompt": "Which part of a plant uses sunlight to make food?",
+   "answer": "leaves",
+   "distractors": [
+    "roots",
+    "petals",
+    "seeds"
+   ],
+   "explain": "Leaves catch sunlight and make food for the plant.",
+   "accept": [
+    "the leaves",
+    "leaf"
+   ]
+  },
+  {
+   "id": "science.pl.needs",
+   "topic": "science.plants",
+   "kind": "mcq",
+   "prompt": "What do plants need to grow well?",
+   "options": [
+    {
+     "text": "water, light and warmth",
+     "correct": true
+    },
+    {
+     "text": "only water",
+     "correct": false,
+     "feedback": "Water isn’t enough: they need light and warmth too."
+    },
+    {
+     "text": "darkness and cold",
+     "correct": false,
+     "feedback": "Plants grow badly in the dark and the cold."
+    }
+   ],
+   "explain": "Plants need water, light and a suitable temperature."
+  },
+  {
+   "id": "science.pl.seed",
+   "topic": "science.plants",
+   "kind": "fact",
+   "prompt": "What grows into a new plant?",
+   "answer": "a seed",
+   "distractors": [
+    "a leaf",
+    "a petal",
+    "a stone"
+   ],
+   "explain": "Seeds (and bulbs) grow into new plants.",
+   "accept": [
+    "seed",
+    "seeds",
+    "a bulb",
+    "bulb"
+   ]
+  },
+  {
+   "id": "science.pl.decid",
+   "topic": "science.plants",
+   "kind": "mcq",
+   "prompt": "What is a deciduous tree?",
+   "options": [
+    {
+     "text": "A tree that loses its leaves in autumn",
+     "correct": true
+    },
+    {
+     "text": "A tree that keeps its leaves all year",
+     "correct": false,
+     "feedback": "That is an evergreen tree, like a pine."
+    },
+    {
+     "text": "A tree with no roots",
+     "correct": false,
+     "feedback": "All trees have roots."
+    }
+   ],
+   "explain": "Oak and sycamore are deciduous. Pine and holly are evergreen."
+  },
+  {
+   "id": "science.pl.dark",
+   "topic": "science.plants",
+   "kind": "fact",
+   "prompt": "A plant is left in a dark cupboard. What will happen?",
+   "answer": "it will turn pale and weak",
+   "distractors": [
+    "it will grow faster",
+    "nothing will change",
+    "it will grow flowers"
+   ],
+   "explain": "Without light, plants cannot make food. They turn yellow and weak.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.hb.alive",
+   "topic": "science.habitats",
+   "kind": "mcq",
+   "prompt": "Which of these has NEVER been alive?",
+   "options": [
+    {
+     "text": "a rock",
+     "correct": true
+    },
+    {
+     "text": "a dead leaf",
+     "correct": false,
+     "feedback": "A dead leaf was once alive on a tree."
+    },
+    {
+     "text": "a wooden spoon",
+     "correct": false,
+     "feedback": "Wood came from a tree, which was alive."
+    }
+   ],
+   "explain": "Rocks, metal and plastic have never been alive. Wood and leaves come from living things."
+  },
+  {
+   "id": "science.hb.polar",
+   "topic": "science.habitats",
+   "kind": "fact",
+   "prompt": "Which animal is suited to a cold, icy habitat?",
+   "answer": "polar bear",
+   "distractors": [
+    "camel",
+    "parrot",
+    "lizard"
+   ],
+   "explain": "Polar bears have thick fur and fat to keep warm.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.hb.desert",
+   "topic": "science.habitats",
+   "kind": "fact",
+   "prompt": "Which animal is suited to a hot, dry desert?",
+   "answer": "camel",
+   "distractors": [
+    "penguin",
+    "polar bear",
+    "frog"
+   ],
+   "explain": "Camels can go a long time without water.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.hb.ocean",
+   "topic": "science.habitats",
+   "kind": "fact",
+   "prompt": "Which animal lives in the ocean habitat?",
+   "answer": "shark",
+   "distractors": [
+    "squirrel",
+    "camel",
+    "owl"
+   ],
+   "explain": "Sharks live in the ocean.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.hb.micro",
+   "topic": "science.habitats",
+   "kind": "fact",
+   "prompt": "Where would you find woodlice?",
+   "answer": "under a log or stone",
+   "distractors": [
+    "in the sky",
+    "in a desert",
+    "on a beach towel"
+   ],
+   "explain": "Woodlice like dark, damp places. That is their microhabitat.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.hb.rainforest",
+   "topic": "science.habitats",
+   "kind": "fact",
+   "prompt": "Which habitat is hot and wet, with tall trees and lots of rain?",
+   "answer": "a rainforest",
+   "distractors": [
+    "a desert",
+    "the Arctic",
+    "a pond"
+   ],
+   "explain": "Rainforests have more kinds of animals and plants than anywhere else.",
+   "accept": [
+    "rainforest",
+    "the rainforest",
+    "jungle"
+   ]
+  },
+  {
+   "id": "science.hb.capy",
+   "topic": "science.habitats",
+   "kind": "mcq",
+   "prompt": "Capybaras live near rivers and lakes in South America. Why is that a good habitat for them?",
+   "options": [
+    {
+     "text": "They love swimming and eat water plants and grass",
+     "correct": true
+    },
+    {
+     "text": "They need snow",
+     "correct": false,
+     "feedback": "South America near rivers is warm."
+    },
+    {
+     "text": "They hunt fish",
+     "correct": false,
+     "feedback": "Capybaras are herbivores: they eat plants."
+    }
+   ],
+   "explain": "Capybaras are excellent swimmers and can hide underwater from danger."
+  },
+  {
+   "id": "science.mt.window",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "Why are windows made of glass?",
+   "answer": "it is transparent (you can see through it)",
+   "distractors": [
+    "it is soft",
+    "it is bendy",
+    "it is very cheap"
+   ],
+   "explain": "Transparent means you can see through it.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.mt.coat",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "Which property makes a raincoat useful?",
+   "answer": "it is waterproof",
+   "distractors": [
+    "it is transparent",
+    "it is hard",
+    "it is magnetic"
+   ],
+   "explain": "Waterproof materials don’t let water through.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.mt.spoon",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "Which material would make the best spoon for hot soup?",
+   "answer": "metal",
+   "distractors": [
+    "paper",
+    "chocolate",
+    "ice"
+   ],
+   "explain": "Metal is strong and doesn’t melt in soup.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.mt.squash",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "You can change the shape of modelling clay by squashing, bending, twisting and…",
+   "answer": "stretching",
+   "distractors": [
+    "melting it with your eyes",
+    "singing",
+    "freezing"
+   ],
+   "explain": "Squash, bend, twist and stretch: four ways to change shape with forces.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.mt.wood",
+   "topic": "science.materials",
+   "kind": "mcq",
+   "prompt": "Which is made of wood?",
+   "options": [
+    {
+     "text": "a pencil",
+     "correct": true
+    },
+    {
+     "text": "a window",
+     "correct": false,
+     "feedback": "Windows are glass."
+    },
+    {
+     "text": "a coin",
+     "correct": false,
+     "feedback": "Coins are metal."
+    }
+   ],
+   "explain": "Pencils, tables and doors are often wooden."
+  },
+  {
+   "id": "science.mt.natural",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "Which material is natural (not made by people)?",
+   "answer": "wood",
+   "distractors": [
+    "plastic",
+    "glass",
+    "nylon"
+   ],
+   "explain": "Wood grows on trees. Plastic and glass are made by people.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.mt.mackintosh",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "Charles Macintosh invented a famous waterproof coat. What did he use to make the fabric waterproof?",
+   "answer": "rubber",
+   "distractors": [
+    "paper",
+    "glass",
+    "wool"
+   ],
+   "explain": "In 1823 he joined two layers of fabric with rubber. Raincoats are still called “macs”!",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ss.order",
+   "topic": "science.seasons",
+   "kind": "order",
+   "prompt": "Put the seasons in order, starting with spring.",
+   "items": [
+    "spring",
+    "summer",
+    "autumn",
+    "winter"
+   ],
+   "labels": null,
+   "explain": "Spring, summer, autumn, winter, then spring again."
+  },
+  {
+   "id": "science.ss.longest",
+   "topic": "science.seasons",
+   "kind": "fact",
+   "prompt": "In which season are the days longest?",
+   "answer": "summer",
+   "distractors": [
+    "winter",
+    "autumn",
+    "spring"
+   ],
+   "explain": "In summer, the Sun rises early and sets late."
+  },
+  {
+   "id": "science.ss.leaves",
+   "topic": "science.seasons",
+   "kind": "fact",
+   "prompt": "In which season do many trees lose their leaves?",
+   "answer": "autumn",
+   "distractors": [
+    "spring",
+    "summer",
+    "winter"
+   ],
+   "explain": "Leaves turn red, orange and yellow in autumn and fall.",
+   "accept": [
+    "fall"
+   ]
+  },
+  {
+   "id": "science.ss.winter",
+   "topic": "science.seasons",
+   "kind": "fact",
+   "prompt": "Which months are winter in the UK?",
+   "answer": "December, January and February",
+   "distractors": [
+    "June, July and August",
+    "March, April and May",
+    "September, October and November"
+   ],
+   "explain": "Winter is the coldest season, with the shortest days.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ss.weather",
+   "topic": "science.seasons",
+   "kind": "fact",
+   "prompt": "What do we measure temperature with?",
+   "answer": "a thermometer",
+   "distractors": [
+    "a ruler",
+    "a clock",
+    "a compass"
+   ],
+   "explain": "A thermometer measures how hot or cold it is.",
+   "accept": [
+    "thermometer"
+   ]
+  },
+  {
+   "id": "science.ss.sun",
+   "topic": "science.seasons",
+   "kind": "mcq",
+   "prompt": "Why should you never look straight at the Sun?",
+   "options": [
+    {
+     "text": "It can damage your eyes",
+     "correct": true
+    },
+    {
+     "text": "It will make you sneeze",
+     "correct": false,
+     "feedback": "Some people do sneeze in bright light, but the real danger is eye damage."
+    },
+    {
+     "text": "It will go out",
+     "correct": false,
+     "feedback": "The Sun won’t go out!"
+    }
+   ],
+   "explain": "The Sun is so bright it can damage eyes, even through sunglasses."
+  },
+  {
+   "id": "science.sp.planets",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "How many planets go round the Sun?",
+   "answer": "8",
+   "distractors": [
+    "9",
+    "7",
+    "12"
+   ],
+   "explain": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune."
+  },
+  {
+   "id": "science.sp.order",
+   "topic": "science.space",
+   "kind": "order",
+   "prompt": "Put these planets in order, closest to the Sun first.",
+   "items": [
+    "Mercury",
+    "Venus",
+    "Earth",
+    "Mars",
+    "Jupiter"
+   ],
+   "labels": null,
+   "explain": "My Very Easy Method Just Speeds Up Naming planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune."
+  },
+  {
+   "id": "science.sp.biggest",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "Which is the biggest planet?",
+   "answer": "Jupiter",
+   "distractors": [
+    "Earth",
+    "Mars",
+    "Saturn"
+   ],
+   "explain": "Jupiter is so big that all the other planets could fit inside it.",
+   "accept": [
+    "jupiter"
+   ]
+  },
+  {
+   "id": "science.sp.red",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "Which planet is called the Red Planet?",
+   "answer": "Mars",
+   "distractors": [
+    "Venus",
+    "Jupiter",
+    "Neptune"
+   ],
+   "explain": "Mars is covered in red, rusty dust. Robots called rovers explore it.",
+   "accept": [
+    "mars"
+   ]
+  },
+  {
+   "id": "science.sp.rings",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "Which planet has famous bright rings made of ice and rock?",
+   "answer": "Saturn",
+   "distractors": [
+    "Mars",
+    "Mercury",
+    "Earth"
+   ],
+   "explain": "Saturn’s rings are made of billions of chunks of ice and rock.",
+   "accept": [
+    "saturn"
+   ]
+  },
+  {
+   "id": "science.sp.sun",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "What is the Sun?",
+   "answer": "a star",
+   "distractors": [
+    "a planet",
+    "a moon",
+    "a comet"
+   ],
+   "explain": "The Sun is a star: a giant ball of hot, glowing gas. It looks big because it is close.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.sp.day",
+   "topic": "science.space",
+   "kind": "mcq",
+   "prompt": "Why do we have day and night?",
+   "options": [
+    {
+     "text": "The Earth spins round, so our side faces the Sun, then faces away",
+     "correct": true
+    },
+    {
+     "text": "The Sun switches off at night",
+     "correct": false,
+     "feedback": "The Sun keeps shining: it is our side of the Earth that turns away."
+    },
+    {
+     "text": "The Moon covers the Sun every night",
+     "correct": false,
+     "feedback": "That only happens in a rare eclipse."
+    }
+   ],
+   "explain": "The Earth spins once every 24 hours. When our side faces the Sun, it is day."
+  },
+  {
+   "id": "science.sp.moon",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "What goes round the Earth?",
+   "answer": "the Moon",
+   "distractors": [
+    "the Sun",
+    "Mars",
+    "Jupiter"
+   ],
+   "explain": "The Moon goes round the Earth about once a month.",
+   "accept": [
+    "moon"
+   ]
+  },
+  {
+   "id": "science.sp.astronaut",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "What is a person who travels into space called?",
+   "answer": "an astronaut",
+   "distractors": [
+    "an architect",
+    "a pilot fish",
+    "a knight"
+   ],
+   "explain": "Astronaut means “star sailor”. Tim Peake was a British astronaut on the International Space Station.",
+   "accept": [
+    "astronaut"
+   ]
+  },
+  {
+   "id": "science.sp.iss",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "What is the International Space Station?",
+   "answer": "a spacecraft where astronauts live and work, circling the Earth",
+   "distractors": [
+    "a train station on the Moon",
+    "a planet",
+    "a star"
+   ],
+   "explain": "It goes all the way round the Earth about every 90 minutes!",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.c.asia",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "asia",
+   "answer": "Asia",
+   "explain": "Asia is the biggest continent.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "science.c.africa",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "africa",
+   "answer": "Africa",
+   "explain": "Africa has deserts, rainforests and lions.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "science.c.north-america",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "north-america",
+   "answer": "North America",
+   "explain": "North America includes Canada and the USA.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "science.c.south-america",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "south-america",
+   "answer": "South America",
+   "explain": "South America has the Amazon rainforest.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "science.c.antarctica",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "antarctica",
+   "answer": "Antarctica",
+   "explain": "Antarctica is the coldest place on Earth, covered in ice. Penguins live there.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "science.c.europe",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "europe",
+   "answer": "Europe",
+   "explain": "Europe is where the UK is.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "science.c.oceania",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "oceania",
+   "answer": "Oceania",
+   "explain": "Oceania includes Australia, where kangaroos live. Some books call it Australia.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "science.o.pacific",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "oceans",
+   "feature": "pacific",
+   "answer": "Pacific Ocean",
+   "explain": "The Pacific is the biggest ocean.",
+   "choosePrompt": "Which ocean is highlighted?",
+   "accept": [
+    "Pacific"
+   ]
+  },
+  {
+   "id": "science.o.atlantic",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "oceans",
+   "feature": "atlantic",
+   "answer": "Atlantic Ocean",
+   "explain": "The Atlantic lies between Europe and America.",
+   "choosePrompt": "Which ocean is highlighted?",
+   "accept": [
+    "Atlantic"
+   ]
+  },
+  {
+   "id": "science.o.indian",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "oceans",
+   "feature": "indian",
+   "answer": "Indian Ocean",
+   "explain": "The Indian Ocean is near India and Africa.",
+   "choosePrompt": "Which ocean is highlighted?",
+   "accept": [
+    "Indian"
+   ]
+  },
+  {
+   "id": "science.o.southern",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "oceans",
+   "feature": "southern",
+   "answer": "Southern Ocean",
+   "explain": "The Southern Ocean surrounds Antarctica.",
+   "choosePrompt": "Which ocean is highlighted?",
+   "accept": [
+    "Southern"
+   ]
+  },
+  {
+   "id": "science.o.arctic",
+   "topic": "science.world",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "oceans",
+   "feature": "arctic",
+   "answer": "Arctic Ocean",
+   "explain": "The Arctic is the smallest ocean, at the top of the world.",
+   "choosePrompt": "Which ocean is highlighted?",
+   "accept": [
+    "Arctic"
+   ]
+  },
+  {
+   "id": "science.w.count",
+   "topic": "science.world",
+   "kind": "fact",
+   "prompt": "How many continents are there?",
+   "answer": "7",
+   "distractors": [
+    "5",
+    "6",
+    "8"
+   ],
+   "explain": "Asia, Africa, North America, South America, Antarctica, Europe and Oceania."
+  },
+  {
+   "id": "science.uk.eng",
+   "topic": "science.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "features",
+   "feature": "ENG",
+   "answer": "England",
+   "explain": "England is the biggest country in the UK.",
+   "choosePrompt": "Which country of the UK is highlighted?"
+  },
+  {
+   "id": "science.uk.sct",
+   "topic": "science.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "features",
+   "feature": "SCT",
+   "answer": "Scotland",
+   "explain": "Scotland is in the north, with mountains and lochs.",
+   "choosePrompt": "Which country of the UK is highlighted?"
+  },
+  {
+   "id": "science.uk.wls",
+   "topic": "science.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "features",
+   "feature": "WLS",
+   "answer": "Wales",
+   "explain": "Wales is in the west. Its flag has a red dragon.",
+   "choosePrompt": "Which country of the UK is highlighted?"
+  },
+  {
+   "id": "science.uk.nir",
+   "topic": "science.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "features",
+   "feature": "NIR",
+   "answer": "Northern Ireland",
+   "explain": "Northern Ireland is across the Irish Sea.",
+   "choosePrompt": "Which country of the UK is highlighted?"
+  },
+  {
+   "id": "science.uk.cap.london",
+   "topic": "science.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "markers",
+   "feature": "london",
+   "answer": "London",
+   "explain": "London is the capital of England.",
+   "choosePrompt": "Which capital city is marked?",
+   "group": "capital"
+  },
+  {
+   "id": "science.uk.cap.edinburgh",
+   "topic": "science.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "markers",
+   "feature": "edinburgh",
+   "answer": "Edinburgh",
+   "explain": "Edinburgh is the capital of Scotland.",
+   "choosePrompt": "Which capital city is marked?",
+   "group": "capital"
+  },
+  {
+   "id": "science.uk.cap.cardiff",
+   "topic": "science.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "markers",
+   "feature": "cardiff",
+   "answer": "Cardiff",
+   "explain": "Cardiff is the capital of Wales.",
+   "choosePrompt": "Which capital city is marked?",
+   "group": "capital"
+  },
+  {
+   "id": "science.uk.cap.belfast",
+   "topic": "science.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "markers",
+   "feature": "belfast",
+   "answer": "Belfast",
+   "explain": "Belfast is the capital of Northern Ireland.",
+   "choosePrompt": "Which capital city is marked?",
+   "group": "capital"
+  },
+  {
+   "id": "science.uk.capq.london",
+   "topic": "science.uk",
+   "kind": "fact",
+   "prompt": "What is the capital city of England?",
+   "answer": "London",
+   "distractors": [
+    "Edinburgh",
+    "Cardiff",
+    "Belfast"
+   ],
+   "explain": "London is the capital of England.",
+   "accept": [
+    "london"
+   ]
+  },
+  {
+   "id": "science.uk.capq.edinburgh",
+   "topic": "science.uk",
+   "kind": "fact",
+   "prompt": "What is the capital city of Scotland?",
+   "answer": "Edinburgh",
+   "distractors": [
+    "London",
+    "Cardiff",
+    "Belfast"
+   ],
+   "explain": "Edinburgh is the capital of Scotland.",
+   "accept": [
+    "edinburgh"
+   ]
+  },
+  {
+   "id": "science.uk.capq.cardiff",
+   "topic": "science.uk",
+   "kind": "fact",
+   "prompt": "What is the capital city of Wales?",
+   "answer": "Cardiff",
+   "distractors": [
+    "London",
+    "Edinburgh",
+    "Belfast"
+   ],
+   "explain": "Cardiff is the capital of Wales.",
+   "accept": [
+    "cardiff"
+   ]
+  },
+  {
+   "id": "science.uk.capq.belfast",
+   "topic": "science.uk",
+   "kind": "fact",
+   "prompt": "What is the capital city of Northern Ireland?",
+   "answer": "Belfast",
+   "distractors": [
+    "London",
+    "Edinburgh",
+    "Cardiff"
+   ],
+   "explain": "Belfast is the capital of Northern Ireland.",
+   "accept": [
+    "belfast"
+   ]
+  },
+  {
+   "id": "science.uk.sea",
+   "topic": "science.uk",
+   "kind": "fact",
+   "prompt": "Which sea lies between Great Britain and Ireland?",
+   "answer": "the Irish Sea",
+   "distractors": [
+    "the North Sea",
+    "the Red Sea",
+    "the Black Sea"
+   ],
+   "explain": "The Irish Sea is to the west; the North Sea is to the east.",
+   "accept": [
+    "irish sea"
+   ]
+  },
+  {
+   "id": "science.mp.north",
+   "topic": "science.maps",
+   "kind": "fact",
+   "prompt": "On most maps, which direction is at the top?",
+   "answer": "north",
+   "distractors": [
+    "south",
+    "east",
+    "west"
+   ],
+   "explain": "North is at the top; south at the bottom; east on the right; west on the left."
+  },
+  {
+   "id": "science.mp.never",
+   "topic": "science.maps",
+   "kind": "fact",
+   "prompt": "Which saying helps you remember the compass points going clockwise from north?",
+   "answer": "Never Eat Shredded Wheat",
+   "distractors": [
+    "Some Elephants Never Wake",
+    "Never Swim With Eels",
+    "Eat Nice Soft Waffles"
+   ],
+   "explain": "North, East, South, West.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.mp.equator",
+   "topic": "science.maps",
+   "kind": "fact",
+   "prompt": "What is the imaginary line around the middle of the Earth called?",
+   "answer": "the Equator",
+   "distractors": [
+    "the Pole",
+    "the Prime Minister",
+    "the horizon"
+   ],
+   "explain": "Places near the Equator are hot all year.",
+   "accept": [
+    "equator"
+   ]
+  },
+  {
+   "id": "science.mp.cold",
+   "topic": "science.maps",
+   "kind": "mcq",
+   "prompt": "Why is it cold at the North and South Poles?",
+   "options": [
+    {
+     "text": "The Sun’s light hits them at a low angle and is spread out",
+     "correct": true
+    },
+    {
+     "text": "They are the furthest from the Moon",
+     "correct": false,
+     "feedback": "The Moon doesn’t heat the Earth."
+    },
+    {
+     "text": "Snow makes the cold",
+     "correct": false,
+     "feedback": "Snow is there because it is cold, not the other way round."
+    }
+   ],
+   "explain": "Sunlight is weaker at the Poles, so they stay icy."
+  },
+  {
+   "id": "science.mp.physical",
+   "topic": "science.maps",
+   "kind": "mcq",
+   "prompt": "Which of these is a PHYSICAL feature (made by nature)?",
+   "options": [
+    {
+     "text": "a mountain",
+     "correct": true
+    },
+    {
+     "text": "a factory",
+     "correct": false,
+     "feedback": "A factory is made by people: a human feature."
+    },
+    {
+     "text": "a shop",
+     "correct": false,
+     "feedback": "Shops are human features."
+    }
+   ],
+   "explain": "Physical features: mountain, river, beach, cliff. Human features: house, road, factory, port."
+  },
+  {
+   "id": "science.mp.human",
+   "topic": "science.maps",
+   "kind": "mcq",
+   "prompt": "Which of these is a HUMAN feature (made by people)?",
+   "options": [
+    {
+     "text": "a bridge",
+     "correct": true
+    },
+    {
+     "text": "a river",
+     "correct": false,
+     "feedback": "Rivers are natural: physical features."
+    },
+    {
+     "text": "a forest",
+     "correct": false,
+     "feedback": "Forests grow naturally."
+    }
+   ],
+   "explain": "Bridges, roads and towns are human features."
+  },
+  {
+   "id": "science.mp.island",
+   "topic": "science.maps",
+   "kind": "fact",
+   "prompt": "Land with water all the way round it is called an…",
+   "answer": "island",
+   "distractors": [
+    "ocean",
+    "continent",
+    "valley"
+   ],
+   "explain": "Great Britain is an island.",
+   "accept": [
+    "an island"
+   ]
+  },
+  {
+   "id": "science.fo.force",
+   "topic": "science.forces",
+   "kind": "fact",
+   "prompt": "A force is a push or a…",
+   "answer": "pull",
+   "distractors": [
+    "jump",
+    "colour",
+    "smell"
+   ],
+   "explain": "Kicking a ball is a push; opening a drawer is a pull."
+  },
+  {
+   "id": "science.fo.friction",
+   "topic": "science.forces",
+   "kind": "mcq",
+   "prompt": "Why does a toy car stop sooner on carpet than on a smooth floor?",
+   "options": [
+    {
+     "text": "There is more friction on carpet",
+     "correct": true
+    },
+    {
+     "text": "Carpet is heavier",
+     "correct": false,
+     "feedback": "It is about grip: rough carpet rubs against the wheels more."
+    },
+    {
+     "text": "The car gets tired",
+     "correct": false,
+     "feedback": "Cars don’t get tired!"
+    }
+   ],
+   "explain": "Friction is a force that slows things down when surfaces rub together. Rough surfaces have more friction."
+  },
+  {
+   "id": "science.fo.magnet",
+   "topic": "science.forces",
+   "kind": "fact",
+   "prompt": "Which of these does a magnet pick up?",
+   "answer": "an iron nail",
+   "distractors": [
+    "a plastic spoon",
+    "a wooden block",
+    "a paper clip made of plastic"
+   ],
+   "explain": "Magnets attract iron and steel. They don’t attract plastic, wood or most other metals.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.fo.poles",
+   "topic": "science.forces",
+   "kind": "mcq",
+   "prompt": "What happens when you push the north poles of two magnets together?",
+   "options": [
+    {
+     "text": "They push apart (repel)",
+     "correct": true
+    },
+    {
+     "text": "They stick together",
+     "correct": false,
+     "feedback": "Opposite poles attract. The SAME poles repel."
+    },
+    {
+     "text": "Nothing at all",
+     "correct": false,
+     "feedback": "You can feel them pushing!"
+    }
+   ],
+   "explain": "Opposite poles attract; like poles repel."
+  },
+  {
+   "id": "science.fo.ramp",
+   "topic": "science.forces",
+   "kind": "mcq",
+   "prompt": "A race car rolls down a ramp. How can you make it go further?",
+   "options": [
+    {
+     "text": "Make the ramp higher",
+     "correct": true
+    },
+    {
+     "text": "Paint it a different colour",
+     "correct": false,
+     "feedback": "Colour doesn’t change the force."
+    },
+    {
+     "text": "Make the floor stickier",
+     "correct": false,
+     "feedback": "A sticky floor adds friction, so the car stops sooner."
+    }
+   ],
+   "explain": "A higher ramp gives the car more speed at the bottom."
+  },
+  {
+   "id": "science.rk.fossil",
+   "topic": "science.rocks",
+   "kind": "fact",
+   "prompt": "What is a fossil?",
+   "answer": "the remains of a plant or animal from long ago, turned to rock",
+   "distractors": [
+    "a shiny jewel",
+    "a type of volcano",
+    "a kind of soil"
+   ],
+   "explain": "Fossils form over millions of years.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.rk.anning",
+   "topic": "science.rocks",
+   "kind": "fact",
+   "prompt": "Which young woman found amazing fossils on the beach at Lyme Regis about 200 years ago?",
+   "answer": "Mary Anning",
+   "distractors": [
+    "Florence Nightingale",
+    "Queen Victoria",
+    "Grace Darling"
+   ],
+   "explain": "Mary Anning found the first complete skeleton of an ichthyosaur, a sea reptile, when she was still young.",
+   "accept": [
+    "anning"
+   ]
+  },
+  {
+   "id": "science.rk.form",
+   "topic": "science.rocks",
+   "kind": "mcq",
+   "prompt": "How do most fossils form?",
+   "options": [
+    {
+     "text": "An animal is buried in mud, which slowly turns to rock around it",
+     "correct": true
+    },
+    {
+     "text": "Animals turn to stone when they get cold",
+     "correct": false,
+     "feedback": "It takes burial and millions of years, not cold."
+    },
+    {
+     "text": "People carve them",
+     "correct": false,
+     "feedback": "Fossils are natural."
+    }
+   ],
+   "explain": "Bones are buried in mud or sand; over millions of years the layers become rock."
+  },
+  {
+   "id": "science.rk.soil",
+   "topic": "science.rocks",
+   "kind": "fact",
+   "prompt": "What is soil made of?",
+   "answer": "tiny bits of rock mixed with dead plants and animals",
+   "distractors": [
+    "only sand",
+    "melted metal",
+    "plastic"
+   ],
+   "explain": "Soil is broken rock plus rotting leaves, which feed plants.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.rk.dino",
+   "topic": "science.rocks",
+   "kind": "fact",
+   "prompt": "How do we know dinosaurs existed?",
+   "answer": "from their fossil bones and footprints",
+   "distractors": [
+    "from photographs",
+    "from films",
+    "from people who saw them"
+   ],
+   "explain": "No people lived at the same time as dinosaurs. Fossils are our evidence.",
+   "formats": [
+    "choice"
+   ]
+  }
+ ]
+}

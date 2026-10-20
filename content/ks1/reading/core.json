@@ -1,0 +1,2002 @@
+{
+ "subject": "reading",
+ "deck": "core",
+ "topics": [
+  {
+   "id": "reading.phonics-1",
+   "title": "Sounds: ai, ay, ee, ea, igh",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "The same sound can be spelt in different ways. “ai” in rain and “ay” in play make the same sound. Let’s spot them!",
+   "teach": "Explain two different ways to spell the sound in “rain”.",
+   "talk": "Ask {him} to find three words with “ay” on a cereal box or in a book."
+  },
+  {
+   "id": "reading.phonics-2",
+   "title": "Sounds: oa, ow, oo, ar, or, ir, ou, oi, air",
+   "kind": "facts",
+   "prereqs": [
+    "reading.phonics-1"
+   ],
+   "batch": 5,
+   "intro": "More sounds with more than one spelling: snow and boat, moon and blue, bird and turn.",
+   "teach": "Explain why “ow” can be tricky (cow or snow?).",
+   "talk": "Play “I spy” with sounds: I spy something with an “oo” sound."
+  },
+  {
+   "id": "reading.phonics-3",
+   "title": "Tricky letters: ph, wh, soft c and g, silent letters",
+   "kind": "facts",
+   "prereqs": [
+    "reading.phonics-2"
+   ],
+   "batch": 5,
+   "intro": "Some letters play tricks: ph says “f”, the k in knight is silent, and c says “s” in city.",
+   "teach": "Explain what a silent letter is, with an example.",
+   "talk": "Find a silent letter in a word on a sign."
+  },
+  {
+   "id": "reading.words",
+   "title": "Wonderful words",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Great readers and writers use exciting words. Instead of “big”, why not “enormous” or “gigantic”?",
+   "teach": "Use three of today’s words in a sentence about your favourite superhero.",
+   "talk": "Ask {him} to describe dinner using one of the wonderful words."
+  },
+  {
+   "id": "reading.fables",
+   "title": "Fables: stories with a lesson",
+   "kind": "reading",
+   "prereqs": [
+    "reading.phonics-1"
+   ],
+   "batch": 6,
+   "intro": "Fables are very old stories, often about animals, that teach a lesson called a moral. Read each one carefully, then answer the questions.",
+   "teach": "Explain what the moral of “The Hare and the Tortoise” is.",
+   "talk": "Ask {him} which fable {she} liked best and what lesson it teaches."
+  },
+  {
+   "id": "reading.adventures",
+   "title": "Adventure stories: racing, space and heroes",
+   "kind": "reading",
+   "prereqs": [
+    "reading.fables"
+   ],
+   "batch": 6,
+   "intro": "Three adventure stories. Read each one, then answer questions about what happens, how characters feel, and why.",
+   "teach": "Explain how Turbo felt at the start of the race and at the end.",
+   "talk": "Ask {him} who the real hero was in “The Quiet Hero” and why."
+  },
+  {
+   "id": "reading.facts",
+   "title": "Fact files",
+   "kind": "reading",
+   "prereqs": [
+    "reading.fables"
+   ],
+   "batch": 6,
+   "intro": "Non-fiction gives us facts. Look for headings, numbers and key words to find answers fast.",
+   "teach": "Explain one difference between a story and a fact file.",
+   "talk": "Ask {him} for three facts about racing cars."
+  },
+  {
+   "id": "reading.potter",
+   "title": "Peter Rabbit",
+   "kind": "reading",
+   "prereqs": [
+    "reading.adventures"
+   ],
+   "batch": 6,
+   "intro": "The Tale of Peter Rabbit was written by Beatrix Potter more than 120 years ago. Some words are old-fashioned, so read slowly and use clues.",
+   "teach": "Explain why Peter got into trouble.",
+   "talk": "Read the story together and ask {him} to predict what happens next."
+  },
+  {
+   "id": "reading.poems",
+   "title": "Poems: trains, shadows and windy nights",
+   "kind": "reading",
+   "prereqs": [
+    "reading.adventures"
+   ],
+   "tier": "stretch",
+   "batch": 6,
+   "intro": "Poems use rhythm and rhyme to make pictures in your head. Read these aloud: you can hear the train rattling!",
+   "teach": "Explain how the train poem sounds like a train.",
+   "talk": "Read “From a Railway Carriage” aloud together, faster and faster."
+  }
+ ],
+ "items": [
+  {
+   "id": "reading.ph1.1",
+   "topic": "reading.phonics-1",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “ai” in rain?",
+   "answer": "play",
+   "distractors": [
+    "plan",
+    "pal",
+    "tap"
+   ],
+   "explain": "“ay” in play makes the same sound as “ai” in rain.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph1.2",
+   "topic": "reading.phonics-1",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “ay” in day?",
+   "answer": "cake",
+   "distractors": [
+    "cat",
+    "cap",
+    "can"
+   ],
+   "explain": "a-e (a, a letter, e) in cake makes the same sound: split digraph.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph1.3",
+   "topic": "reading.phonics-1",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "train",
+   "distractors": [
+    "trayn",
+    "trane",
+    "trein"
+   ],
+   "explain": "“ai” usually comes in the middle of a word: train, rain, paint.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph1.4",
+   "topic": "reading.phonics-1",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "today",
+   "distractors": [
+    "todai",
+    "todae",
+    "tadey"
+   ],
+   "explain": "“ay” usually comes at the END of a word: day, play, today.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph1.5",
+   "topic": "reading.phonics-1",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “ee” in tree?",
+   "answer": "beach",
+   "distractors": [
+    "bench",
+    "bed",
+    "bet"
+   ],
+   "explain": "“ea” in beach makes the same sound as “ee”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph1.6",
+   "topic": "reading.phonics-1",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “ee” in see?",
+   "answer": "these",
+   "distractors": [
+    "then",
+    "ten",
+    "the"
+   ],
+   "explain": "e-e in these is a split digraph making the “ee” sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph1.7",
+   "topic": "reading.phonics-1",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "sleep",
+   "distractors": [
+    "sleap",
+    "slepe",
+    "sleip"
+   ],
+   "explain": "Most “ee” words in the middle use “ee” or “ea”: you have to learn which. sleep, feet, green.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph1.8",
+   "topic": "reading.phonics-1",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “igh” in night?",
+   "answer": "pie",
+   "distractors": [
+    "pin",
+    "pig",
+    "pit"
+   ],
+   "explain": "“ie” in pie makes the same sound as “igh”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph1.9",
+   "topic": "reading.phonics-1",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “i-e” in bike?",
+   "answer": "fly",
+   "distractors": [
+    "fill",
+    "fit",
+    "fin"
+   ],
+   "explain": "A “y” at the end of a short word often says “igh”: fly, my, sky, cry.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph1.10",
+   "topic": "reading.phonics-1",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "light",
+   "distractors": [
+    "lite",
+    "lyte",
+    "liet"
+   ],
+   "explain": "“igh” is common: light, night, bright, fight.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph2.1",
+   "topic": "reading.phonics-2",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “oa” in boat?",
+   "answer": "snow",
+   "distractors": [
+    "now",
+    "cow",
+    "how"
+   ],
+   "explain": "“ow” can say “oa” (snow, slow) or “ow” (cow, now). Here it is snow.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph2.2",
+   "topic": "reading.phonics-2",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “o-e” in home?",
+   "answer": "toast",
+   "distractors": [
+    "top",
+    "tot",
+    "tock"
+   ],
+   "explain": "“oa” in toast and “o-e” in home make the same sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph2.3",
+   "topic": "reading.phonics-2",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “oo” in moon?",
+   "answer": "blue",
+   "distractors": [
+    "bun",
+    "bug",
+    "bus"
+   ],
+   "explain": "“ue” in blue makes the long “oo” sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph2.4",
+   "topic": "reading.phonics-2",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “ew” in new?",
+   "answer": "tune",
+   "distractors": [
+    "tun",
+    "ten",
+    "tin"
+   ],
+   "explain": "u-e in tune makes the same sound as “ew”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph2.5",
+   "topic": "reading.phonics-2",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “ar” in car?",
+   "answer": "start",
+   "distractors": [
+    "stair",
+    "store",
+    "stir"
+   ],
+   "explain": "“ar” as in car, star, start, park.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph2.6",
+   "topic": "reading.phonics-2",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “or” in fork?",
+   "answer": "saw",
+   "distractors": [
+    "sow",
+    "sew",
+    "say"
+   ],
+   "explain": "“aw” in saw makes the same sound as “or”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph2.7",
+   "topic": "reading.phonics-2",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “ir” in bird?",
+   "answer": "turn",
+   "distractors": [
+    "torn",
+    "tan",
+    "ten"
+   ],
+   "explain": "“ur” in turn and “ir” in bird make the same sound. So does “er” in her.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph2.8",
+   "topic": "reading.phonics-2",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “ou” in cloud?",
+   "answer": "town",
+   "distractors": [
+    "tone",
+    "tune",
+    "tin"
+   ],
+   "explain": "“ow” in town makes the same sound as “ou” in cloud.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph2.9",
+   "topic": "reading.phonics-2",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “oi” in coin?",
+   "answer": "boy",
+   "distractors": [
+    "bay",
+    "buy",
+    "bee"
+   ],
+   "explain": "“oy” usually comes at the end (boy, toy); “oi” in the middle (coin, point).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph2.10",
+   "topic": "reading.phonics-2",
+   "kind": "fact",
+   "prompt": "Which word has the same sound as the “air” in hair?",
+   "answer": "bear",
+   "distractors": [
+    "beer",
+    "bar",
+    "burn"
+   ],
+   "explain": "“ear” can say “air” (bear, wear) or “eer” (hear, ear).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph3.1",
+   "topic": "reading.phonics-3",
+   "kind": "fact",
+   "prompt": "In “phone”, what sound do the letters “ph” make?",
+   "answer": "f",
+   "distractors": [
+    "p",
+    "h",
+    "sh"
+   ],
+   "explain": "“ph” says “f”: phone, photo, dolphin, elephant.",
+   "accept": [
+    "f sound",
+    "ff"
+   ]
+  },
+  {
+   "id": "reading.ph3.2",
+   "topic": "reading.phonics-3",
+   "kind": "fact",
+   "prompt": "Which word starts with the same sound as “when”?",
+   "answer": "wet",
+   "distractors": [
+    "hen",
+    "tent",
+    "went"
+   ],
+   "explain": "“wh” at the start of when, where, which sounds like “w”."
+  },
+  {
+   "id": "reading.ph3.3",
+   "topic": "reading.phonics-3",
+   "kind": "fact",
+   "prompt": "In “city”, what sound does the “c” make?",
+   "answer": "s",
+   "distractors": [
+    "k",
+    "ch",
+    "sh"
+   ],
+   "explain": "Before e, i or y, c says “s”: city, ice, cycle. This is a soft c.",
+   "accept": [
+    "s sound",
+    "ss"
+   ]
+  },
+  {
+   "id": "reading.ph3.4",
+   "topic": "reading.phonics-3",
+   "kind": "fact",
+   "prompt": "In “giant”, what sound does the “g” make?",
+   "answer": "j",
+   "distractors": [
+    "g as in goat",
+    "y",
+    "ng"
+   ],
+   "explain": "Before e, i or y, g often says “j”: giant, magic, energy. This is a soft g.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph3.5",
+   "topic": "reading.phonics-3",
+   "kind": "fact",
+   "prompt": "In “knight”, which letter is silent at the start?",
+   "answer": "k",
+   "distractors": [
+    "n",
+    "g",
+    "h"
+   ],
+   "explain": "The k in kn- words is silent: knee, knock, knight, know."
+  },
+  {
+   "id": "reading.ph3.6",
+   "topic": "reading.phonics-3",
+   "kind": "fact",
+   "prompt": "In “write”, which letter is silent at the start?",
+   "answer": "w",
+   "distractors": [
+    "r",
+    "i",
+    "t"
+   ],
+   "explain": "The w in wr- words is silent: write, wrong, wrap."
+  },
+  {
+   "id": "reading.ph3.7",
+   "topic": "reading.phonics-3",
+   "kind": "fact",
+   "prompt": "What sound do the letters “-tion” make at the end of “station”?",
+   "answer": "shun",
+   "distractors": [
+    "tee-on",
+    "tun",
+    "tie-on"
+   ],
+   "explain": "-tion says “shun”: station, action, nation, motion.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph3.8",
+   "topic": "reading.phonics-3",
+   "kind": "fact",
+   "prompt": "Which word has the same “zh” sound as “treasure”?",
+   "answer": "measure",
+   "distractors": [
+    "metre",
+    "missed",
+    "master"
+   ],
+   "explain": "“-sure” in treasure and measure makes the “zh” sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph3.9",
+   "topic": "reading.phonics-3",
+   "kind": "fact",
+   "prompt": "Which spelling of the “j” sound is used at the end of “bridge”?",
+   "answer": "-dge",
+   "distractors": [
+    "-ge",
+    "-j",
+    "-gge"
+   ],
+   "explain": "After a short vowel, use -dge: bridge, badge, hedge. After other sounds, -ge: huge, large.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph3.10",
+   "topic": "reading.phonics-3",
+   "kind": "fact",
+   "prompt": "How do you make the plural of “baby”?",
+   "answer": "babies",
+   "distractors": [
+    "babys",
+    "babyes",
+    "babis"
+   ],
+   "explain": "If a word ends consonant + y, change the y to i and add -es.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.w.enormous",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “enormous” mean?",
+   "answer": "very, very big",
+   "distractors": [
+    "very small",
+    "very, very old",
+    "huge"
+   ],
+   "explain": "enormous: very, very big. “The enormous rocket towered over the launch pad.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**enormous** means very, very big.\n_The enormous rocket towered over the launch pad._"
+  },
+  {
+   "id": "reading.w.tiny",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “tiny” mean?",
+   "answer": "very small",
+   "distractors": [
+    "very tired",
+    "strange or unusual",
+    "shining brightly"
+   ],
+   "explain": "tiny: very small. “A tiny droid rolled under the table.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**tiny** means very small.\n_A tiny droid rolled under the table._"
+  },
+  {
+   "id": "reading.w.furious",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “furious” mean?",
+   "answer": "very angry",
+   "distractors": [
+    "very happy",
+    "wanting to find out about something",
+    "very surprised"
+   ],
+   "explain": "furious: very angry. “The villain was furious when his plan failed.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**furious** means very angry.\n_The villain was furious when his plan failed._"
+  },
+  {
+   "id": "reading.w.delighted",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “delighted” mean?",
+   "answer": "very happy",
+   "distractors": [
+    "very small",
+    "not afraid to do something difficult",
+    "a very quick look"
+   ],
+   "explain": "delighted: very happy. “Turbo was delighted to win the cup.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**delighted** means very happy.\n_Turbo was delighted to win the cup._"
+  },
+  {
+   "id": "reading.w.exhausted",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “exhausted” mean?",
+   "answer": "very tired",
+   "distractors": [
+    "very, very big",
+    "very, very old",
+    "huge"
+   ],
+   "explain": "exhausted: very tired. “After the long race, the drivers were exhausted.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**exhausted** means very tired.\n_After the long race, the drivers were exhausted._"
+  },
+  {
+   "id": "reading.w.ancient",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “ancient” mean?",
+   "answer": "very, very old",
+   "distractors": [
+    "very happy",
+    "strange or unusual",
+    "shining brightly"
+   ],
+   "explain": "ancient: very, very old. “They explored an ancient castle.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ancient** means very, very old.\n_They explored an ancient castle._"
+  },
+  {
+   "id": "reading.w.brave",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “brave” mean?",
+   "answer": "not afraid to do something difficult",
+   "distractors": [
+    "very angry",
+    "wanting to find out about something",
+    "very surprised"
+   ],
+   "explain": "brave: not afraid to do something difficult. “The brave hero ran into the storm.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**brave** means not afraid to do something difficult.\n_The brave hero ran into the storm._"
+  },
+  {
+   "id": "reading.w.curious",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “curious” mean?",
+   "answer": "wanting to find out about something",
+   "distractors": [
+    "very small",
+    "very, very old",
+    "a very quick look"
+   ],
+   "explain": "curious: wanting to find out about something. “The curious robot pressed every button.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**curious** means wanting to find out about something.\n_The curious robot pressed every button._"
+  },
+  {
+   "id": "reading.w.peculiar",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “peculiar” mean?",
+   "answer": "strange or unusual",
+   "distractors": [
+    "very, very big",
+    "very tired",
+    "huge"
+   ],
+   "explain": "peculiar: strange or unusual. “There was a peculiar smell coming from the spaceship.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**peculiar** means strange or unusual.\n_There was a peculiar smell coming from the spaceship._"
+  },
+  {
+   "id": "reading.w.gigantic",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “gigantic” mean?",
+   "answer": "huge",
+   "distractors": [
+    "very happy",
+    "wanting to find out about something",
+    "shining brightly"
+   ],
+   "explain": "gigantic: huge. “A gigantic wave crashed onto the beach.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**gigantic** means huge.\n_A gigantic wave crashed onto the beach._"
+  },
+  {
+   "id": "reading.w.glimpse",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “glimpse” mean?",
+   "answer": "a very quick look",
+   "distractors": [
+    "very angry",
+    "not afraid to do something difficult",
+    "very surprised"
+   ],
+   "explain": "glimpse: a very quick look. “He caught a glimpse of the comet before it vanished.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**glimpse** means a very quick look.\n_He caught a glimpse of the comet before it vanished._"
+  },
+  {
+   "id": "reading.w.astonished",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “astonished” mean?",
+   "answer": "very surprised",
+   "distractors": [
+    "very small",
+    "very, very old",
+    "huge"
+   ],
+   "explain": "astonished: very surprised. “Everyone was astonished when the tortoise won.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**astonished** means very surprised.\n_Everyone was astonished when the tortoise won._"
+  },
+  {
+   "id": "reading.w.gleaming",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “gleaming” mean?",
+   "answer": "shining brightly",
+   "distractors": [
+    "very, very big",
+    "very tired",
+    "strange or unusual"
+   ],
+   "explain": "gleaming: shining brightly. “The gleaming trophy stood on the shelf.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**gleaming** means shining brightly.\n_The gleaming trophy stood on the shelf._"
+  },
+  {
+   "id": "reading.w.rescue",
+   "topic": "reading.words",
+   "kind": "fact",
+   "prompt": "What does “rescue” mean?",
+   "answer": "to save someone from danger",
+   "distractors": [
+    "very happy",
+    "wanting to find out about something",
+    "very surprised"
+   ],
+   "explain": "rescue: to save someone from danger. “The hero flew in to rescue the kitten.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**rescue** means to save someone from danger.\n_The hero flew in to rescue the kitten._"
+  },
+  {
+   "id": "reading.hare.1",
+   "topic": "reading.fables",
+   "kind": "fact",
+   "prompt": "Why did the hare stop during the race?",
+   "answer": "he was so sure he would win that he had a nap",
+   "distractors": [
+    "he hurt his foot",
+    "he got lost",
+    "he was hungry"
+   ],
+   "explain": "“He was so sure he would win that he lay down under a tree for a nap.”",
+   "passage": "The Hare and the Tortoise\n\nA hare was always boasting about how fast he could run. “Nobody can beat me,” he said.\n\nThe tortoise looked up slowly. “I will race you,” she said.\n\nThe hare laughed so hard he nearly fell over. But the race began. The hare dashed away and was soon far ahead. He was so sure he would win that he lay down under a tree for a nap.\n\nThe tortoise kept going, one slow step after another, never stopping.\n\nWhen the hare woke up, he raced to the finish line. But the tortoise was already there, waiting.\n\nSlow and steady wins the race.",
+   "passageSource": "A fable by Aesop, retold for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.hare.2",
+   "topic": "reading.fables",
+   "kind": "mcq",
+   "prompt": "What word best describes the hare at the start?",
+   "options": [
+    {
+     "text": "boastful (he showed off)",
+     "correct": true
+    },
+    {
+     "text": "shy",
+     "correct": false,
+     "feedback": "He says “Nobody can beat me.” Shy animals do not say that!"
+    },
+    {
+     "text": "kind",
+     "correct": false,
+     "feedback": "He laughs at the tortoise, which is not kind."
+    }
+   ],
+   "explain": "He was “always boasting”: showing off about how fast he was.",
+   "passage": "The Hare and the Tortoise\n\nA hare was always boasting about how fast he could run. “Nobody can beat me,” he said.\n\nThe tortoise looked up slowly. “I will race you,” she said.\n\nThe hare laughed so hard he nearly fell over. But the race began. The hare dashed away and was soon far ahead. He was so sure he would win that he lay down under a tree for a nap.\n\nThe tortoise kept going, one slow step after another, never stopping.\n\nWhen the hare woke up, he raced to the finish line. But the tortoise was already there, waiting.\n\nSlow and steady wins the race.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.hare.3",
+   "topic": "reading.fables",
+   "kind": "mcq",
+   "prompt": "How did the tortoise win?",
+   "options": [
+    {
+     "text": "She kept going and never stopped",
+     "correct": true
+    },
+    {
+     "text": "She ran faster than the hare",
+     "correct": false,
+     "feedback": "The tortoise is slow. She won because she never stopped."
+    },
+    {
+     "text": "She took a short cut",
+     "correct": false,
+     "feedback": "There was no short cut. She just kept going."
+    }
+   ],
+   "explain": "“The tortoise kept going, one slow step after another, never stopping.”",
+   "passage": "The Hare and the Tortoise\n\nA hare was always boasting about how fast he could run. “Nobody can beat me,” he said.\n\nThe tortoise looked up slowly. “I will race you,” she said.\n\nThe hare laughed so hard he nearly fell over. But the race began. The hare dashed away and was soon far ahead. He was so sure he would win that he lay down under a tree for a nap.\n\nThe tortoise kept going, one slow step after another, never stopping.\n\nWhen the hare woke up, he raced to the finish line. But the tortoise was already there, waiting.\n\nSlow and steady wins the race.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.hare.4",
+   "topic": "reading.fables",
+   "kind": "mcq",
+   "prompt": "What is the moral (the lesson) of this fable?",
+   "options": [
+    {
+     "text": "Slow and steady wins the race",
+     "correct": true
+    },
+    {
+     "text": "Always run as fast as you can",
+     "correct": false,
+     "feedback": "The fast hare lost!"
+    },
+    {
+     "text": "Never race a tortoise",
+     "correct": false,
+     "feedback": "The lesson is about how we try, not about tortoises."
+    }
+   ],
+   "explain": "Keeping going steadily beats being fast but careless.",
+   "passage": "The Hare and the Tortoise\n\nA hare was always boasting about how fast he could run. “Nobody can beat me,” he said.\n\nThe tortoise looked up slowly. “I will race you,” she said.\n\nThe hare laughed so hard he nearly fell over. But the race began. The hare dashed away and was soon far ahead. He was so sure he would win that he lay down under a tree for a nap.\n\nThe tortoise kept going, one slow step after another, never stopping.\n\nWhen the hare woke up, he raced to the finish line. But the tortoise was already there, waiting.\n\nSlow and steady wins the race.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.hare.5",
+   "topic": "reading.fables",
+   "kind": "order",
+   "prompt": "Put these events in order.",
+   "items": [
+    "The hare boasts",
+    "The race begins",
+    "The hare takes a nap",
+    "The tortoise wins"
+   ],
+   "labels": null,
+   "explain": "Boast, race, nap, the tortoise wins.",
+   "passage": "The Hare and the Tortoise\n\nA hare was always boasting about how fast he could run. “Nobody can beat me,” he said.\n\nThe tortoise looked up slowly. “I will race you,” she said.\n\nThe hare laughed so hard he nearly fell over. But the race began. The hare dashed away and was soon far ahead. He was so sure he would win that he lay down under a tree for a nap.\n\nThe tortoise kept going, one slow step after another, never stopping.\n\nWhen the hare woke up, he raced to the finish line. But the tortoise was already there, waiting.\n\nSlow and steady wins the race.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.lion.1",
+   "topic": "reading.fables",
+   "kind": "fact",
+   "prompt": "What woke the lion up?",
+   "answer": "a mouse ran across his nose",
+   "distractors": [
+    "a hunter shouted",
+    "it started to rain",
+    "a bird sang"
+   ],
+   "explain": "“A tiny mouse ran across his nose.”",
+   "passage": "The Lion and the Mouse\n\nA lion was sleeping in the sun when a tiny mouse ran across his nose. The lion woke up and caught the mouse in his huge paw.\n\n“Please let me go,” squeaked the mouse. “One day I might help you.”\n\nThe lion laughed. How could a little mouse ever help a mighty lion? But he let her go.\n\nA few days later, the lion was caught in a hunter’s net. He roared and roared, but he could not get free.\n\nThe mouse heard him. She ran to the net and nibbled through the ropes until the lion was free.\n\n“You laughed at me,” said the mouse, “but even a little friend can be a great help.”",
+   "passageSource": "A fable by Aesop, retold for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.lion.2",
+   "topic": "reading.fables",
+   "kind": "mcq",
+   "prompt": "Why did the lion laugh at the mouse?",
+   "options": [
+    {
+     "text": "He did not believe a little mouse could ever help a mighty lion",
+     "correct": true
+    },
+    {
+     "text": "The mouse told a joke",
+     "correct": false,
+     "feedback": "The mouse was serious: “One day I might help you.”"
+    },
+    {
+     "text": "The mouse was wearing a hat",
+     "correct": false,
+     "feedback": "There is no hat in the story."
+    }
+   ],
+   "explain": "“How could a little mouse ever help a mighty lion?”",
+   "passage": "The Lion and the Mouse\n\nA lion was sleeping in the sun when a tiny mouse ran across his nose. The lion woke up and caught the mouse in his huge paw.\n\n“Please let me go,” squeaked the mouse. “One day I might help you.”\n\nThe lion laughed. How could a little mouse ever help a mighty lion? But he let her go.\n\nA few days later, the lion was caught in a hunter’s net. He roared and roared, but he could not get free.\n\nThe mouse heard him. She ran to the net and nibbled through the ropes until the lion was free.\n\n“You laughed at me,” said the mouse, “but even a little friend can be a great help.”",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.lion.3",
+   "topic": "reading.fables",
+   "kind": "mcq",
+   "prompt": "How did the mouse help the lion?",
+   "options": [
+    {
+     "text": "She nibbled through the ropes of the net",
+     "correct": true
+    },
+    {
+     "text": "She roared to scare the hunter",
+     "correct": false,
+     "feedback": "Mice cannot roar. She used her teeth."
+    },
+    {
+     "text": "She fetched the other lions",
+     "correct": false,
+     "feedback": "She did it herself."
+    }
+   ],
+   "explain": "“She ran to the net and nibbled through the ropes until the lion was free.”",
+   "passage": "The Lion and the Mouse\n\nA lion was sleeping in the sun when a tiny mouse ran across his nose. The lion woke up and caught the mouse in his huge paw.\n\n“Please let me go,” squeaked the mouse. “One day I might help you.”\n\nThe lion laughed. How could a little mouse ever help a mighty lion? But he let her go.\n\nA few days later, the lion was caught in a hunter’s net. He roared and roared, but he could not get free.\n\nThe mouse heard him. She ran to the net and nibbled through the ropes until the lion was free.\n\n“You laughed at me,” said the mouse, “but even a little friend can be a great help.”",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.lion.4",
+   "topic": "reading.fables",
+   "kind": "mcq",
+   "prompt": "What lesson does this fable teach?",
+   "options": [
+    {
+     "text": "Even a little friend can be a great help",
+     "correct": true
+    },
+    {
+     "text": "Lions are dangerous",
+     "correct": false,
+     "feedback": "The lesson is about kindness and friends of every size."
+    },
+    {
+     "text": "Always sleep in the sun",
+     "correct": false,
+     "feedback": "That is not a lesson!"
+    }
+   ],
+   "explain": "Never judge someone by their size: kindness can come back to you.",
+   "passage": "The Lion and the Mouse\n\nA lion was sleeping in the sun when a tiny mouse ran across his nose. The lion woke up and caught the mouse in his huge paw.\n\n“Please let me go,” squeaked the mouse. “One day I might help you.”\n\nThe lion laughed. How could a little mouse ever help a mighty lion? But he let her go.\n\nA few days later, the lion was caught in a hunter’s net. He roared and roared, but he could not get free.\n\nThe mouse heard him. She ran to the net and nibbled through the ropes until the lion was free.\n\n“You laughed at me,” said the mouse, “but even a little friend can be a great help.”",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.lion.5",
+   "topic": "reading.fables",
+   "kind": "fact",
+   "prompt": "Find a word in the story that means “very strong and powerful”.",
+   "answer": "mighty",
+   "distractors": [
+    "tiny",
+    "huge",
+    "free"
+   ],
+   "explain": "“a mighty lion”.",
+   "passage": "The Lion and the Mouse\n\nA lion was sleeping in the sun when a tiny mouse ran across his nose. The lion woke up and caught the mouse in his huge paw.\n\n“Please let me go,” squeaked the mouse. “One day I might help you.”\n\nThe lion laughed. How could a little mouse ever help a mighty lion? But he let her go.\n\nA few days later, the lion was caught in a hunter’s net. He roared and roared, but he could not get free.\n\nThe mouse heard him. She ran to the net and nibbled through the ropes until the lion was free.\n\n“You laughed at me,” said the mouse, “but even a little friend can be a great help.”",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.race.1",
+   "topic": "reading.adventures",
+   "kind": "mcq",
+   "prompt": "What did Blaze say to Turbo before the race?",
+   "options": [
+    {
+     "text": "“You’re too small to win.”",
+     "correct": true
+    },
+    {
+     "text": "“Good luck!”",
+     "correct": false,
+     "feedback": "Blaze was not kind at the start."
+    },
+    {
+     "text": "“Let’s race together.”",
+     "correct": false,
+     "feedback": "Look at what Blaze laughed."
+    }
+   ],
+   "explain": "Blaze laughed: “You’re too small to win.”",
+   "passage": "The Big Race\n\nThe stadium lights blazed. Turbo, a small red racing car, rolled up to the starting line. Next to him was Blaze, the fastest car in the league, revving his engine loudly.\n\n“You’re too small to win,” Blaze laughed.\n\nTurbo said nothing. He had been practising the bendy corners every night.\n\nThe flag dropped! Blaze zoomed ahead on the long straight road. But when the track twisted like a snake, Blaze skidded wide. Turbo hugged the corners, smooth and steady.\n\nOn the last lap, Blaze’s tyres were worn out. Turbo crept past him, then pushed his engine as hard as it would go. He crossed the line first by the length of a bumper!\n\nBlaze rolled over, smiling for the first time. “I was wrong,” he said. “It’s not about size. It’s about practice.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.race.2",
+   "topic": "reading.adventures",
+   "kind": "mcq",
+   "prompt": "Why did Turbo say nothing?",
+   "options": [
+    {
+     "text": "He was calm and knew he had practised",
+     "correct": true
+    },
+    {
+     "text": "He could not hear",
+     "correct": false,
+     "feedback": "The next sentence explains: he had been practising every night."
+    },
+    {
+     "text": "He was asleep",
+     "correct": false,
+     "feedback": "He was at the starting line, ready to race."
+    }
+   ],
+   "explain": "The writer tells us straight after: “He had been practising the bendy corners every night.”",
+   "passage": "The Big Race\n\nThe stadium lights blazed. Turbo, a small red racing car, rolled up to the starting line. Next to him was Blaze, the fastest car in the league, revving his engine loudly.\n\n“You’re too small to win,” Blaze laughed.\n\nTurbo said nothing. He had been practising the bendy corners every night.\n\nThe flag dropped! Blaze zoomed ahead on the long straight road. But when the track twisted like a snake, Blaze skidded wide. Turbo hugged the corners, smooth and steady.\n\nOn the last lap, Blaze’s tyres were worn out. Turbo crept past him, then pushed his engine as hard as it would go. He crossed the line first by the length of a bumper!\n\nBlaze rolled over, smiling for the first time. “I was wrong,” he said. “It’s not about size. It’s about practice.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.race.3",
+   "topic": "reading.adventures",
+   "kind": "fact",
+   "prompt": "The track “twisted like a snake”. What does this tell you about the track?",
+   "answer": "it was very bendy",
+   "distractors": [
+    "it was very long",
+    "it was dangerous because of snakes",
+    "it was straight"
+   ],
+   "explain": "Comparing the track to a snake shows it had lots of bends. This is called a simile.",
+   "passage": "The Big Race\n\nThe stadium lights blazed. Turbo, a small red racing car, rolled up to the starting line. Next to him was Blaze, the fastest car in the league, revving his engine loudly.\n\n“You’re too small to win,” Blaze laughed.\n\nTurbo said nothing. He had been practising the bendy corners every night.\n\nThe flag dropped! Blaze zoomed ahead on the long straight road. But when the track twisted like a snake, Blaze skidded wide. Turbo hugged the corners, smooth and steady.\n\nOn the last lap, Blaze’s tyres were worn out. Turbo crept past him, then pushed his engine as hard as it would go. He crossed the line first by the length of a bumper!\n\nBlaze rolled over, smiling for the first time. “I was wrong,” he said. “It’s not about size. It’s about practice.”",
+   "passageSource": "A story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.race.4",
+   "topic": "reading.adventures",
+   "kind": "mcq",
+   "prompt": "Why did Turbo win?",
+   "options": [
+    {
+     "text": "He was good at the corners and Blaze’s tyres wore out",
+     "correct": true
+    },
+    {
+     "text": "He was the biggest car",
+     "correct": false,
+     "feedback": "Turbo was small!"
+    },
+    {
+     "text": "Blaze stopped for a snack",
+     "correct": false,
+     "feedback": "Blaze’s tyres wore out; he did not stop."
+    }
+   ],
+   "explain": "Practice on the corners, and pushing hard at the end.",
+   "passage": "The Big Race\n\nThe stadium lights blazed. Turbo, a small red racing car, rolled up to the starting line. Next to him was Blaze, the fastest car in the league, revving his engine loudly.\n\n“You’re too small to win,” Blaze laughed.\n\nTurbo said nothing. He had been practising the bendy corners every night.\n\nThe flag dropped! Blaze zoomed ahead on the long straight road. But when the track twisted like a snake, Blaze skidded wide. Turbo hugged the corners, smooth and steady.\n\nOn the last lap, Blaze’s tyres were worn out. Turbo crept past him, then pushed his engine as hard as it would go. He crossed the line first by the length of a bumper!\n\nBlaze rolled over, smiling for the first time. “I was wrong,” he said. “It’s not about size. It’s about practice.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.race.5",
+   "topic": "reading.adventures",
+   "kind": "mcq",
+   "prompt": "How did Blaze change by the end?",
+   "options": [
+    {
+     "text": "He was kind and admitted he was wrong",
+     "correct": true
+    },
+    {
+     "text": "He was angrier than ever",
+     "correct": false,
+     "feedback": "“Blaze rolled over, smiling for the first time.”"
+    },
+    {
+     "text": "He stopped racing",
+     "correct": false,
+     "feedback": "Nothing says he stopped."
+    }
+   ],
+   "explain": "“I was wrong. It’s not about size. It’s about practice.”",
+   "passage": "The Big Race\n\nThe stadium lights blazed. Turbo, a small red racing car, rolled up to the starting line. Next to him was Blaze, the fastest car in the league, revving his engine loudly.\n\n“You’re too small to win,” Blaze laughed.\n\nTurbo said nothing. He had been practising the bendy corners every night.\n\nThe flag dropped! Blaze zoomed ahead on the long straight road. But when the track twisted like a snake, Blaze skidded wide. Turbo hugged the corners, smooth and steady.\n\nOn the last lap, Blaze’s tyres were worn out. Turbo crept past him, then pushed his engine as hard as it would go. He crossed the line first by the length of a bumper!\n\nBlaze rolled over, smiling for the first time. “I was wrong,” he said. “It’s not about size. It’s about practice.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.space.1",
+   "topic": "reading.adventures",
+   "kind": "mcq",
+   "prompt": "Why did Bleep get lost?",
+   "options": [
+    {
+     "text": "He wandered off to look at something shiny",
+     "correct": true
+    },
+    {
+     "text": "A storm blew him away",
+     "correct": false,
+     "feedback": "The wind howled, but he got lost by wandering off."
+    },
+    {
+     "text": "Captain Nova left him on purpose",
+     "correct": false,
+     "feedback": "She told him to stay close."
+    }
+   ],
+   "explain": "“Bleep spotted something shiny behind a rock and wobbled off to look.”",
+   "passage": "The Lost Droid\n\nCaptain Nova’s spaceship landed on a frosty purple planet. Her little droid, Bleep, beeped nervously. Bleep did not like the cold.\n\n“We need to find the crystal that powers our ship,” said Captain Nova. “Stay close.”\n\nBut Bleep spotted something shiny behind a rock and wobbled off to look. When he turned round, the captain had gone. The wind howled. Bleep’s lights flickered blue with fear.\n\nThen Bleep remembered his training. He switched on his signal beam and pointed it at the sky. Far away, Captain Nova saw a bright stripe of light.\n\nShe ran towards it and found Bleep beside a glowing green crystal: the very one they needed!\n\n“You got lost,” she said, “but you also found exactly what we were looking for.” Bleep beeped proudly all the way home.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.space.2",
+   "topic": "reading.adventures",
+   "kind": "fact",
+   "prompt": "What does “Bleep’s lights flickered blue with fear” tell you?",
+   "answer": "Bleep was frightened",
+   "distractors": [
+    "Bleep was happy",
+    "Bleep’s battery was full",
+    "Bleep was hungry"
+   ],
+   "explain": "His lights show how he feels: blue with fear.",
+   "passage": "The Lost Droid\n\nCaptain Nova’s spaceship landed on a frosty purple planet. Her little droid, Bleep, beeped nervously. Bleep did not like the cold.\n\n“We need to find the crystal that powers our ship,” said Captain Nova. “Stay close.”\n\nBut Bleep spotted something shiny behind a rock and wobbled off to look. When he turned round, the captain had gone. The wind howled. Bleep’s lights flickered blue with fear.\n\nThen Bleep remembered his training. He switched on his signal beam and pointed it at the sky. Far away, Captain Nova saw a bright stripe of light.\n\nShe ran towards it and found Bleep beside a glowing green crystal: the very one they needed!\n\n“You got lost,” she said, “but you also found exactly what we were looking for.” Bleep beeped proudly all the way home.",
+   "passageSource": "A story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.space.3",
+   "topic": "reading.adventures",
+   "kind": "mcq",
+   "prompt": "How did Bleep help Captain Nova find him?",
+   "options": [
+    {
+     "text": "He shone his signal beam into the sky",
+     "correct": true
+    },
+    {
+     "text": "He shouted very loudly",
+     "correct": false,
+     "feedback": "He used his signal beam."
+    },
+    {
+     "text": "He flew back to the ship",
+     "correct": false,
+     "feedback": "He stayed and sent a signal."
+    }
+   ],
+   "explain": "“He switched on his signal beam and pointed it at the sky.”",
+   "passage": "The Lost Droid\n\nCaptain Nova’s spaceship landed on a frosty purple planet. Her little droid, Bleep, beeped nervously. Bleep did not like the cold.\n\n“We need to find the crystal that powers our ship,” said Captain Nova. “Stay close.”\n\nBut Bleep spotted something shiny behind a rock and wobbled off to look. When he turned round, the captain had gone. The wind howled. Bleep’s lights flickered blue with fear.\n\nThen Bleep remembered his training. He switched on his signal beam and pointed it at the sky. Far away, Captain Nova saw a bright stripe of light.\n\nShe ran towards it and found Bleep beside a glowing green crystal: the very one they needed!\n\n“You got lost,” she said, “but you also found exactly what we were looking for.” Bleep beeped proudly all the way home.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.space.4",
+   "topic": "reading.adventures",
+   "kind": "mcq",
+   "prompt": "Why did Captain Nova say “you also found exactly what we were looking for”?",
+   "options": [
+    {
+     "text": "Bleep was next to the crystal they needed",
+     "correct": true
+    },
+    {
+     "text": "Bleep found her lost helmet",
+     "correct": false,
+     "feedback": "It was the crystal that powers the ship."
+    },
+    {
+     "text": "Bleep found a new planet",
+     "correct": false,
+     "feedback": "They were already on the planet."
+    }
+   ],
+   "explain": "The shiny thing was the glowing green crystal.",
+   "passage": "The Lost Droid\n\nCaptain Nova’s spaceship landed on a frosty purple planet. Her little droid, Bleep, beeped nervously. Bleep did not like the cold.\n\n“We need to find the crystal that powers our ship,” said Captain Nova. “Stay close.”\n\nBut Bleep spotted something shiny behind a rock and wobbled off to look. When he turned round, the captain had gone. The wind howled. Bleep’s lights flickered blue with fear.\n\nThen Bleep remembered his training. He switched on his signal beam and pointed it at the sky. Far away, Captain Nova saw a bright stripe of light.\n\nShe ran towards it and found Bleep beside a glowing green crystal: the very one they needed!\n\n“You got lost,” she said, “but you also found exactly what we were looking for.” Bleep beeped proudly all the way home.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.hero.1",
+   "topic": "reading.adventures",
+   "kind": "mcq",
+   "prompt": "What was different about Pip compared with Thunderbolt?",
+   "options": [
+    {
+     "text": "She had no cape and no superpowers",
+     "correct": true
+    },
+    {
+     "text": "She could fly faster",
+     "correct": false,
+     "feedback": "Thunderbolt was the one who could fly."
+    },
+    {
+     "text": "She lived on another planet",
+     "correct": false,
+     "feedback": "She ran the bakery in Brickton."
+    }
+   ],
+   "explain": "“Pip had no cape and no superpowers. She ran the little bakery on the corner.”",
+   "passage": "The Quiet Hero\n\nEveryone in Brickton knew about Thunderbolt. He could fly faster than a jet and lift a bus with one hand. But nobody knew about Pip.\n\nPip had no cape and no superpowers. She ran the little bakery on the corner.\n\nOne stormy evening, the power went out across the whole town. Thunderbolt zoomed off to fix the broken power station. Meanwhile, the streets grew dark and cold, and people were frightened.\n\nPip lit every candle in her bakery. She opened the doors and called, “Come in! It’s warm in here!” All night long she handed out hot bread and kind words.\n\nIn the morning, when the lights came back on, Thunderbolt landed outside the bakery. He saw the crowd of happy, sleepy people.\n\n“You’re a hero too,” he told Pip. She just smiled and offered him a bun.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.hero.2",
+   "topic": "reading.adventures",
+   "kind": "mcq",
+   "prompt": "How did Pip help the town?",
+   "options": [
+    {
+     "text": "She opened her bakery and gave people warmth, candles and bread",
+     "correct": true
+    },
+    {
+     "text": "She fixed the power station",
+     "correct": false,
+     "feedback": "Thunderbolt did that."
+    },
+    {
+     "text": "She called Thunderbolt",
+     "correct": false,
+     "feedback": "She helped by opening her bakery."
+    }
+   ],
+   "explain": "“All night long she handed out hot bread and kind words.”",
+   "passage": "The Quiet Hero\n\nEveryone in Brickton knew about Thunderbolt. He could fly faster than a jet and lift a bus with one hand. But nobody knew about Pip.\n\nPip had no cape and no superpowers. She ran the little bakery on the corner.\n\nOne stormy evening, the power went out across the whole town. Thunderbolt zoomed off to fix the broken power station. Meanwhile, the streets grew dark and cold, and people were frightened.\n\nPip lit every candle in her bakery. She opened the doors and called, “Come in! It’s warm in here!” All night long she handed out hot bread and kind words.\n\nIn the morning, when the lights came back on, Thunderbolt landed outside the bakery. He saw the crowd of happy, sleepy people.\n\n“You’re a hero too,” he told Pip. She just smiled and offered him a bun.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.hero.3",
+   "topic": "reading.adventures",
+   "kind": "mcq",
+   "prompt": "What is the big idea of this story?",
+   "options": [
+    {
+     "text": "You don’t need superpowers to be a hero",
+     "correct": true
+    },
+    {
+     "text": "Bakeries are the best shops",
+     "correct": false,
+     "feedback": "The story is about kindness, not shops."
+    },
+    {
+     "text": "Storms are dangerous",
+     "correct": false,
+     "feedback": "The storm is just the problem in the story."
+    }
+   ],
+   "explain": "Kindness and courage make a hero.",
+   "passage": "The Quiet Hero\n\nEveryone in Brickton knew about Thunderbolt. He could fly faster than a jet and lift a bus with one hand. But nobody knew about Pip.\n\nPip had no cape and no superpowers. She ran the little bakery on the corner.\n\nOne stormy evening, the power went out across the whole town. Thunderbolt zoomed off to fix the broken power station. Meanwhile, the streets grew dark and cold, and people were frightened.\n\nPip lit every candle in her bakery. She opened the doors and called, “Come in! It’s warm in here!” All night long she handed out hot bread and kind words.\n\nIn the morning, when the lights came back on, Thunderbolt landed outside the bakery. He saw the crowd of happy, sleepy people.\n\n“You’re a hero too,” he told Pip. She just smiled and offered him a bun.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.hero.4",
+   "topic": "reading.adventures",
+   "kind": "fact",
+   "prompt": "Find and copy the word that tells you how the people felt in the morning.",
+   "answer": "happy",
+   "distractors": [
+    "frightened",
+    "stormy",
+    "dark"
+   ],
+   "explain": "“He saw the crowd of happy, sleepy people.” (Sleepy is right too!)",
+   "passage": "The Quiet Hero\n\nEveryone in Brickton knew about Thunderbolt. He could fly faster than a jet and lift a bus with one hand. But nobody knew about Pip.\n\nPip had no cape and no superpowers. She ran the little bakery on the corner.\n\nOne stormy evening, the power went out across the whole town. Thunderbolt zoomed off to fix the broken power station. Meanwhile, the streets grew dark and cold, and people were frightened.\n\nPip lit every candle in her bakery. She opened the doors and called, “Come in! It’s warm in here!” All night long she handed out hot bread and kind words.\n\nIn the morning, when the lights came back on, Thunderbolt landed outside the bakery. He saw the crowd of happy, sleepy people.\n\n“You’re a hero too,” he told Pip. She just smiled and offered him a bun.",
+   "passageSource": "A story written for this app",
+   "accept": [
+    "sleepy",
+    "happy, sleepy"
+   ]
+  },
+  {
+   "id": "reading.moon.1",
+   "topic": "reading.facts",
+   "kind": "fact",
+   "prompt": "In which year did people first walk on the Moon?",
+   "answer": "1969",
+   "distractors": [
+    "1996",
+    "1869",
+    "2009"
+   ],
+   "explain": "“On 20 July 1969.”",
+   "passage": "Fact file: Footprints on the Moon\n\nOn 20 July 1969, two American astronauts became the first people to walk on the Moon. Their names were Neil Armstrong and Buzz Aldrin. A third astronaut, Michael Collins, stayed in the spacecraft circling above.\n\nThe journey to the Moon took about three days. The astronauts wore special spacesuits because there is no air to breathe on the Moon.\n\nWhen Neil Armstrong stepped onto the dusty ground, he said, “That’s one small step for man, one giant leap for mankind.”\n\nThere is no wind on the Moon, so the astronauts’ footprints are probably still there today!",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.moon.2",
+   "topic": "reading.facts",
+   "kind": "fact",
+   "prompt": "Who was the first person to step onto the Moon?",
+   "answer": "Neil Armstrong",
+   "distractors": [
+    "Buzz Aldrin",
+    "Michael Collins",
+    "Captain Nova"
+   ],
+   "explain": "Neil Armstrong stepped out first; Buzz Aldrin followed.",
+   "passage": "Fact file: Footprints on the Moon\n\nOn 20 July 1969, two American astronauts became the first people to walk on the Moon. Their names were Neil Armstrong and Buzz Aldrin. A third astronaut, Michael Collins, stayed in the spacecraft circling above.\n\nThe journey to the Moon took about three days. The astronauts wore special spacesuits because there is no air to breathe on the Moon.\n\nWhen Neil Armstrong stepped onto the dusty ground, he said, “That’s one small step for man, one giant leap for mankind.”\n\nThere is no wind on the Moon, so the astronauts’ footprints are probably still there today!",
+   "passageSource": "A fact file written for this app",
+   "accept": [
+    "armstrong"
+   ]
+  },
+  {
+   "id": "reading.moon.3",
+   "topic": "reading.facts",
+   "kind": "mcq",
+   "prompt": "Why did the astronauts need spacesuits?",
+   "options": [
+    {
+     "text": "There is no air to breathe on the Moon",
+     "correct": true
+    },
+    {
+     "text": "To look smart for photos",
+     "correct": false,
+     "feedback": "The fact file gives the reason: no air."
+    },
+    {
+     "text": "Because it is wet on the Moon",
+     "correct": false,
+     "feedback": "The Moon is dry and dusty."
+    }
+   ],
+   "explain": "“They wore special spacesuits because there is no air to breathe on the Moon.”",
+   "passage": "Fact file: Footprints on the Moon\n\nOn 20 July 1969, two American astronauts became the first people to walk on the Moon. Their names were Neil Armstrong and Buzz Aldrin. A third astronaut, Michael Collins, stayed in the spacecraft circling above.\n\nThe journey to the Moon took about three days. The astronauts wore special spacesuits because there is no air to breathe on the Moon.\n\nWhen Neil Armstrong stepped onto the dusty ground, he said, “That’s one small step for man, one giant leap for mankind.”\n\nThere is no wind on the Moon, so the astronauts’ footprints are probably still there today!",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.moon.4",
+   "topic": "reading.facts",
+   "kind": "mcq",
+   "prompt": "Why are the footprints probably still there?",
+   "options": [
+    {
+     "text": "There is no wind on the Moon to blow them away",
+     "correct": true
+    },
+    {
+     "text": "Someone guards them",
+     "correct": false,
+     "feedback": "Nobody is there."
+    },
+    {
+     "text": "They were made in concrete",
+     "correct": false,
+     "feedback": "They are in dust."
+    }
+   ],
+   "explain": "“There is no wind on the Moon, so the astronauts’ footprints are probably still there today!”",
+   "passage": "Fact file: Footprints on the Moon\n\nOn 20 July 1969, two American astronauts became the first people to walk on the Moon. Their names were Neil Armstrong and Buzz Aldrin. A third astronaut, Michael Collins, stayed in the spacecraft circling above.\n\nThe journey to the Moon took about three days. The astronauts wore special spacesuits because there is no air to breathe on the Moon.\n\nWhen Neil Armstrong stepped onto the dusty ground, he said, “That’s one small step for man, one giant leap for mankind.”\n\nThere is no wind on the Moon, so the astronauts’ footprints are probably still there today!",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.moon.5",
+   "topic": "reading.facts",
+   "kind": "fact",
+   "prompt": "About how long did the journey to the Moon take?",
+   "answer": "about three days",
+   "distractors": [
+    "about three hours",
+    "about three weeks",
+    "about three years"
+   ],
+   "explain": "“The journey to the Moon took about three days.”",
+   "passage": "Fact file: Footprints on the Moon\n\nOn 20 July 1969, two American astronauts became the first people to walk on the Moon. Their names were Neil Armstrong and Buzz Aldrin. A third astronaut, Michael Collins, stayed in the spacecraft circling above.\n\nThe journey to the Moon took about three days. The astronauts wore special spacesuits because there is no air to breathe on the Moon.\n\nWhen Neil Armstrong stepped onto the dusty ground, he said, “That’s one small step for man, one giant leap for mankind.”\n\nThere is no wind on the Moon, so the astronauts’ footprints are probably still there today!",
+   "passageSource": "A fact file written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.car.1",
+   "topic": "reading.facts",
+   "kind": "mcq",
+   "prompt": "Why are racing cars low and pointed?",
+   "options": [
+    {
+     "text": "So the air flows over them easily and they go faster",
+     "correct": true
+    },
+    {
+     "text": "So they fit in the garage",
+     "correct": false,
+     "feedback": "The shape is about speed."
+    },
+    {
+     "text": "To look scary",
+     "correct": false,
+     "feedback": "The fact file explains it is so the air flows over them easily."
+    }
+   ],
+   "explain": "“They are low to the ground and have a smooth, pointed shape so the air flows over them easily.”",
+   "passage": "Fact file: Racing cars\n\nRacing cars are built to go very fast. They are low to the ground and have a smooth, pointed shape so the air flows over them easily.\n\nRacing tyres are wide and have no grooves when the track is dry. This helps them grip the road. In the rain, drivers change to tyres with grooves to push the water away.\n\nDuring a race, cars drive into the pit lane for a pit stop. A team of mechanics can change all four tyres in about two seconds!\n\nDrivers wear a fireproof suit and a strong helmet to keep them safe. Some races are more than 300 kilometres long, so drivers must be very fit.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.car.2",
+   "topic": "reading.facts",
+   "kind": "mcq",
+   "prompt": "Why do drivers change tyres when it rains?",
+   "options": [
+    {
+     "text": "Tyres with grooves push the water away",
+     "correct": true
+    },
+    {
+     "text": "Wet tyres are too heavy",
+     "correct": false,
+     "feedback": "The reason is grip: grooves push water away."
+    },
+    {
+     "text": "To change colour",
+     "correct": false,
+     "feedback": "Colour is not mentioned."
+    }
+   ],
+   "explain": "“Drivers change to tyres with grooves to push the water away.”",
+   "passage": "Fact file: Racing cars\n\nRacing cars are built to go very fast. They are low to the ground and have a smooth, pointed shape so the air flows over them easily.\n\nRacing tyres are wide and have no grooves when the track is dry. This helps them grip the road. In the rain, drivers change to tyres with grooves to push the water away.\n\nDuring a race, cars drive into the pit lane for a pit stop. A team of mechanics can change all four tyres in about two seconds!\n\nDrivers wear a fireproof suit and a strong helmet to keep them safe. Some races are more than 300 kilometres long, so drivers must be very fit.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.car.3",
+   "topic": "reading.facts",
+   "kind": "fact",
+   "prompt": "How long can a pit stop tyre change take?",
+   "answer": "about two seconds",
+   "distractors": [
+    "about two minutes",
+    "about twenty seconds",
+    "about two hours"
+   ],
+   "explain": "“A team of mechanics can change all four tyres in about two seconds!”",
+   "passage": "Fact file: Racing cars\n\nRacing cars are built to go very fast. They are low to the ground and have a smooth, pointed shape so the air flows over them easily.\n\nRacing tyres are wide and have no grooves when the track is dry. This helps them grip the road. In the rain, drivers change to tyres with grooves to push the water away.\n\nDuring a race, cars drive into the pit lane for a pit stop. A team of mechanics can change all four tyres in about two seconds!\n\nDrivers wear a fireproof suit and a strong helmet to keep them safe. Some races are more than 300 kilometres long, so drivers must be very fit.",
+   "passageSource": "A fact file written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.car.4",
+   "topic": "reading.facts",
+   "kind": "fact",
+   "prompt": "What do drivers wear to keep safe?",
+   "answer": "a fireproof suit and a strong helmet",
+   "distractors": [
+    "shorts and trainers",
+    "a cape",
+    "a spacesuit"
+   ],
+   "explain": "“Drivers wear a fireproof suit and a strong helmet.”",
+   "passage": "Fact file: Racing cars\n\nRacing cars are built to go very fast. They are low to the ground and have a smooth, pointed shape so the air flows over them easily.\n\nRacing tyres are wide and have no grooves when the track is dry. This helps them grip the road. In the rain, drivers change to tyres with grooves to push the water away.\n\nDuring a race, cars drive into the pit lane for a pit stop. A team of mechanics can change all four tyres in about two seconds!\n\nDrivers wear a fireproof suit and a strong helmet to keep them safe. Some races are more than 300 kilometres long, so drivers must be very fit.",
+   "passageSource": "A fact file written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.car.5",
+   "topic": "reading.facts",
+   "kind": "mcq",
+   "prompt": "How can you tell this is non-fiction, not a story?",
+   "options": [
+    {
+     "text": "It gives facts and has a fact-file heading",
+     "correct": true
+    },
+    {
+     "text": "It has talking cars",
+     "correct": false,
+     "feedback": "The talking cars were in the story “The Big Race”."
+    },
+    {
+     "text": "It starts with “Once upon a time”",
+     "correct": false,
+     "feedback": "It does not."
+    }
+   ],
+   "explain": "Non-fiction gives true information. It often has headings and numbers.",
+   "passage": "Fact file: Racing cars\n\nRacing cars are built to go very fast. They are low to the ground and have a smooth, pointed shape so the air flows over them easily.\n\nRacing tyres are wide and have no grooves when the track is dry. This helps them grip the road. In the rain, drivers change to tyres with grooves to push the water away.\n\nDuring a race, cars drive into the pit lane for a pit stop. A team of mechanics can change all four tyres in about two seconds!\n\nDrivers wear a fireproof suit and a strong helmet to keep them safe. Some races are more than 300 kilometres long, so drivers must be very fit.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.pr.1",
+   "topic": "reading.potter",
+   "kind": "fact",
+   "prompt": "Where did the rabbits live?",
+   "answer": "in a sand-bank under a big fir-tree",
+   "distractors": [
+    "in Mr. McGregor’s garden",
+    "in a house in the town",
+    "in a hole by the river"
+   ],
+   "explain": "“They lived with their Mother in a sand-bank, underneath the root of a very big fir-tree.”",
+   "passage": "Once upon a time there were four little Rabbits, and their names were—\n\nFlopsy, Mopsy, Cotton-tail, and Peter.\n\nThey lived with their Mother in a sand-bank, underneath the root of a very big fir-tree.\n\n‘Now my dears,’ said old Mrs. Rabbit one morning, ‘you may go into the fields or down the lane, but don’t go into Mr. McGregor’s garden: your Father had an accident there; he was put in a pie by Mrs. McGregor.’\n\n‘Now run along, and don’t get into mischief. I am going out.’\n\nThen old Mrs. Rabbit took a basket and her umbrella, and went through the wood to the baker’s. She bought a loaf of brown bread and five currant buns.\n\nFlopsy, Mopsy, and Cottontail, who were good little bunnies, went down the lane to gather blackberries:\n\nBut Peter, who was very naughty, ran straight away to Mr. McGregor’s garden, and squeezed under the gate!\n\nFirst he ate some lettuces and some French beans; and then he ate some radishes;\n\nAnd then, feeling rather sick, he went to look for some parsley.\n\nBut round the end of a cucumber frame, whom should he meet but Mr. McGregor!\n\nMr. McGregor was on his hands and knees planting out young cabbages, but he jumped up and ran after Peter, waving a rake and calling out, ‘Stop thief!’",
+   "passageSource": "Beatrix Potter, The Tale of Peter Rabbit (1902)",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.pr.2",
+   "topic": "reading.potter",
+   "kind": "mcq",
+   "prompt": "Why did Mrs. Rabbit tell them not to go into Mr. McGregor’s garden?",
+   "options": [
+    {
+     "text": "Their father had an accident there",
+     "correct": true
+    },
+    {
+     "text": "The garden was closed",
+     "correct": false,
+     "feedback": "She gives a sadder reason: what happened to their father."
+    },
+    {
+     "text": "There were no vegetables",
+     "correct": false,
+     "feedback": "There were lots: lettuces, beans, radishes."
+    }
+   ],
+   "explain": "“Your Father had an accident there; he was put in a pie by Mrs. McGregor.”",
+   "passage": "Once upon a time there were four little Rabbits, and their names were—\n\nFlopsy, Mopsy, Cotton-tail, and Peter.\n\nThey lived with their Mother in a sand-bank, underneath the root of a very big fir-tree.\n\n‘Now my dears,’ said old Mrs. Rabbit one morning, ‘you may go into the fields or down the lane, but don’t go into Mr. McGregor’s garden: your Father had an accident there; he was put in a pie by Mrs. McGregor.’\n\n‘Now run along, and don’t get into mischief. I am going out.’\n\nThen old Mrs. Rabbit took a basket and her umbrella, and went through the wood to the baker’s. She bought a loaf of brown bread and five currant buns.\n\nFlopsy, Mopsy, and Cottontail, who were good little bunnies, went down the lane to gather blackberries:\n\nBut Peter, who was very naughty, ran straight away to Mr. McGregor’s garden, and squeezed under the gate!\n\nFirst he ate some lettuces and some French beans; and then he ate some radishes;\n\nAnd then, feeling rather sick, he went to look for some parsley.\n\nBut round the end of a cucumber frame, whom should he meet but Mr. McGregor!\n\nMr. McGregor was on his hands and knees planting out young cabbages, but he jumped up and ran after Peter, waving a rake and calling out, ‘Stop thief!’",
+   "passageSource": "Beatrix Potter, The Tale of Peter Rabbit (1902)"
+  },
+  {
+   "id": "reading.pr.3",
+   "topic": "reading.potter",
+   "kind": "mcq",
+   "prompt": "The writer says Peter was “very naughty”. What did he do?",
+   "options": [
+    {
+     "text": "He ran straight to Mr. McGregor’s garden and squeezed under the gate",
+     "correct": true
+    },
+    {
+     "text": "He picked blackberries",
+     "correct": false,
+     "feedback": "That was Flopsy, Mopsy and Cotton-tail, the good bunnies."
+    },
+    {
+     "text": "He went to the baker’s",
+     "correct": false,
+     "feedback": "Mrs. Rabbit went to the baker’s."
+    }
+   ],
+   "explain": "He did exactly what his mother told him not to do.",
+   "passage": "Once upon a time there were four little Rabbits, and their names were—\n\nFlopsy, Mopsy, Cotton-tail, and Peter.\n\nThey lived with their Mother in a sand-bank, underneath the root of a very big fir-tree.\n\n‘Now my dears,’ said old Mrs. Rabbit one morning, ‘you may go into the fields or down the lane, but don’t go into Mr. McGregor’s garden: your Father had an accident there; he was put in a pie by Mrs. McGregor.’\n\n‘Now run along, and don’t get into mischief. I am going out.’\n\nThen old Mrs. Rabbit took a basket and her umbrella, and went through the wood to the baker’s. She bought a loaf of brown bread and five currant buns.\n\nFlopsy, Mopsy, and Cottontail, who were good little bunnies, went down the lane to gather blackberries:\n\nBut Peter, who was very naughty, ran straight away to Mr. McGregor’s garden, and squeezed under the gate!\n\nFirst he ate some lettuces and some French beans; and then he ate some radishes;\n\nAnd then, feeling rather sick, he went to look for some parsley.\n\nBut round the end of a cucumber frame, whom should he meet but Mr. McGregor!\n\nMr. McGregor was on his hands and knees planting out young cabbages, but he jumped up and ran after Peter, waving a rake and calling out, ‘Stop thief!’",
+   "passageSource": "Beatrix Potter, The Tale of Peter Rabbit (1902)"
+  },
+  {
+   "id": "reading.pr.4",
+   "topic": "reading.potter",
+   "kind": "order",
+   "prompt": "Put what Peter ate in order.",
+   "items": [
+    "lettuces and French beans",
+    "radishes",
+    "parsley (to feel better)"
+   ],
+   "labels": null,
+   "explain": "Lettuces and French beans, then radishes, then he went looking for parsley because he felt sick.",
+   "passage": "Once upon a time there were four little Rabbits, and their names were—\n\nFlopsy, Mopsy, Cotton-tail, and Peter.\n\nThey lived with their Mother in a sand-bank, underneath the root of a very big fir-tree.\n\n‘Now my dears,’ said old Mrs. Rabbit one morning, ‘you may go into the fields or down the lane, but don’t go into Mr. McGregor’s garden: your Father had an accident there; he was put in a pie by Mrs. McGregor.’\n\n‘Now run along, and don’t get into mischief. I am going out.’\n\nThen old Mrs. Rabbit took a basket and her umbrella, and went through the wood to the baker’s. She bought a loaf of brown bread and five currant buns.\n\nFlopsy, Mopsy, and Cottontail, who were good little bunnies, went down the lane to gather blackberries:\n\nBut Peter, who was very naughty, ran straight away to Mr. McGregor’s garden, and squeezed under the gate!\n\nFirst he ate some lettuces and some French beans; and then he ate some radishes;\n\nAnd then, feeling rather sick, he went to look for some parsley.\n\nBut round the end of a cucumber frame, whom should he meet but Mr. McGregor!\n\nMr. McGregor was on his hands and knees planting out young cabbages, but he jumped up and ran after Peter, waving a rake and calling out, ‘Stop thief!’",
+   "passageSource": "Beatrix Potter, The Tale of Peter Rabbit (1902)"
+  },
+  {
+   "id": "reading.pr.5",
+   "topic": "reading.potter",
+   "kind": "mcq",
+   "prompt": "Why did Peter go to look for some parsley?",
+   "options": [
+    {
+     "text": "He was feeling rather sick from eating too much",
+     "correct": true
+    },
+    {
+     "text": "He wanted to take some home",
+     "correct": false,
+     "feedback": "“feeling rather sick, he went to look for some parsley.”"
+    },
+    {
+     "text": "Mr. McGregor told him to",
+     "correct": false,
+     "feedback": "He had not met Mr. McGregor yet."
+    }
+   ],
+   "explain": "He had eaten too much, so he felt sick.",
+   "passage": "Once upon a time there were four little Rabbits, and their names were—\n\nFlopsy, Mopsy, Cotton-tail, and Peter.\n\nThey lived with their Mother in a sand-bank, underneath the root of a very big fir-tree.\n\n‘Now my dears,’ said old Mrs. Rabbit one morning, ‘you may go into the fields or down the lane, but don’t go into Mr. McGregor’s garden: your Father had an accident there; he was put in a pie by Mrs. McGregor.’\n\n‘Now run along, and don’t get into mischief. I am going out.’\n\nThen old Mrs. Rabbit took a basket and her umbrella, and went through the wood to the baker’s. She bought a loaf of brown bread and five currant buns.\n\nFlopsy, Mopsy, and Cottontail, who were good little bunnies, went down the lane to gather blackberries:\n\nBut Peter, who was very naughty, ran straight away to Mr. McGregor’s garden, and squeezed under the gate!\n\nFirst he ate some lettuces and some French beans; and then he ate some radishes;\n\nAnd then, feeling rather sick, he went to look for some parsley.\n\nBut round the end of a cucumber frame, whom should he meet but Mr. McGregor!\n\nMr. McGregor was on his hands and knees planting out young cabbages, but he jumped up and ran after Peter, waving a rake and calling out, ‘Stop thief!’",
+   "passageSource": "Beatrix Potter, The Tale of Peter Rabbit (1902)"
+  },
+  {
+   "id": "reading.pr.6",
+   "topic": "reading.potter",
+   "kind": "mcq",
+   "prompt": "Why did Peter shed big tears in the gooseberry net?",
+   "options": [
+    {
+     "text": "He was caught and thought he would not escape",
+     "correct": true
+    },
+    {
+     "text": "He had hurt his paw",
+     "correct": false,
+     "feedback": "“Peter gave himself up for lost.”"
+    },
+    {
+     "text": "He missed his mother",
+     "correct": false,
+     "feedback": "He was stuck and frightened."
+    }
+   ],
+   "explain": "“Peter gave himself up for lost, and shed big tears.”",
+   "passage": "Peter was most dreadfully frightened; he rushed all over the garden, for he had forgotten the way back to the gate.\n\nHe lost one of his shoes among the cabbages, and the other shoe amongst the potatoes.\n\nAfter losing them, he ran on four legs and went faster, so that I think he might have got away altogether if he had not unfortunately run into a gooseberry net, and got caught by the large buttons on his jacket. It was a blue jacket with brass buttons, quite new.\n\nPeter gave himself up for lost, and shed big tears; but his sobs were overheard by some friendly sparrows, who flew to him in great excitement, and implored him to exert himself.\n\nMr. McGregor came up with a sieve, which he intended to pop upon the top of Peter; but Peter wriggled out just in time, leaving his jacket behind him.\n\nAnd rushed into the tool-shed, and jumped into a can. It would have been a beautiful thing to hide in, if it had not had so much water in it.\n\nMr. McGregor was quite sure that Peter was somewhere in the tool-shed, perhaps hidden underneath a flower-pot. He began to turn them over carefully, looking under each.\n\nPresently Peter sneezed—‘Kertyschoo!’ Mr. McGregor was after him in no time.\n\nAnd tried to put his foot upon Peter, who jumped out of a window, upsetting three plants. The window was too small for Mr. McGregor, and he was tired of running after Peter. He went back to his work.",
+   "passageSource": "Beatrix Potter, The Tale of Peter Rabbit (1902)"
+  },
+  {
+   "id": "reading.pr.7",
+   "topic": "reading.potter",
+   "kind": "fact",
+   "prompt": "Find and copy the word Peter sneezed.",
+   "answer": "Kertyschoo",
+   "distractors": [
+    "Atishoo",
+    "Stop thief",
+    "lippity"
+   ],
+   "explain": "“Presently Peter sneezed—‘Kertyschoo!’” That gave away his hiding place!",
+   "passage": "Peter was most dreadfully frightened; he rushed all over the garden, for he had forgotten the way back to the gate.\n\nHe lost one of his shoes among the cabbages, and the other shoe amongst the potatoes.\n\nAfter losing them, he ran on four legs and went faster, so that I think he might have got away altogether if he had not unfortunately run into a gooseberry net, and got caught by the large buttons on his jacket. It was a blue jacket with brass buttons, quite new.\n\nPeter gave himself up for lost, and shed big tears; but his sobs were overheard by some friendly sparrows, who flew to him in great excitement, and implored him to exert himself.\n\nMr. McGregor came up with a sieve, which he intended to pop upon the top of Peter; but Peter wriggled out just in time, leaving his jacket behind him.\n\nAnd rushed into the tool-shed, and jumped into a can. It would have been a beautiful thing to hide in, if it had not had so much water in it.\n\nMr. McGregor was quite sure that Peter was somewhere in the tool-shed, perhaps hidden underneath a flower-pot. He began to turn them over carefully, looking under each.\n\nPresently Peter sneezed—‘Kertyschoo!’ Mr. McGregor was after him in no time.\n\nAnd tried to put his foot upon Peter, who jumped out of a window, upsetting three plants. The window was too small for Mr. McGregor, and he was tired of running after Peter. He went back to his work.",
+   "passageSource": "Beatrix Potter, The Tale of Peter Rabbit (1902)",
+   "accept": [
+    "kertyschoo!"
+   ]
+  },
+  {
+   "id": "reading.pr.8",
+   "topic": "reading.potter",
+   "kind": "mcq",
+   "prompt": "Why was hiding in the can not a good idea?",
+   "options": [
+    {
+     "text": "It had lots of water in it",
+     "correct": true
+    },
+    {
+     "text": "It was too small",
+     "correct": false,
+     "feedback": "It was the water that was the problem."
+    },
+    {
+     "text": "Mr. McGregor was inside",
+     "correct": false,
+     "feedback": "He was looking under flower-pots."
+    }
+   ],
+   "explain": "“It would have been a beautiful thing to hide in, if it had not had so much water in it.”",
+   "passage": "Peter was most dreadfully frightened; he rushed all over the garden, for he had forgotten the way back to the gate.\n\nHe lost one of his shoes among the cabbages, and the other shoe amongst the potatoes.\n\nAfter losing them, he ran on four legs and went faster, so that I think he might have got away altogether if he had not unfortunately run into a gooseberry net, and got caught by the large buttons on his jacket. It was a blue jacket with brass buttons, quite new.\n\nPeter gave himself up for lost, and shed big tears; but his sobs were overheard by some friendly sparrows, who flew to him in great excitement, and implored him to exert himself.\n\nMr. McGregor came up with a sieve, which he intended to pop upon the top of Peter; but Peter wriggled out just in time, leaving his jacket behind him.\n\nAnd rushed into the tool-shed, and jumped into a can. It would have been a beautiful thing to hide in, if it had not had so much water in it.\n\nMr. McGregor was quite sure that Peter was somewhere in the tool-shed, perhaps hidden underneath a flower-pot. He began to turn them over carefully, looking under each.\n\nPresently Peter sneezed—‘Kertyschoo!’ Mr. McGregor was after him in no time.\n\nAnd tried to put his foot upon Peter, who jumped out of a window, upsetting three plants. The window was too small for Mr. McGregor, and he was tired of running after Peter. He went back to his work.",
+   "passageSource": "Beatrix Potter, The Tale of Peter Rabbit (1902)"
+  },
+  {
+   "id": "reading.pr.9",
+   "topic": "reading.potter",
+   "kind": "mcq",
+   "prompt": "How did Peter escape from the tool-shed?",
+   "options": [
+    {
+     "text": "He jumped out of a window that was too small for Mr. McGregor",
+     "correct": true
+    },
+    {
+     "text": "He dug a tunnel",
+     "correct": false,
+     "feedback": "He jumped out of a window."
+    },
+    {
+     "text": "The sparrows carried him",
+     "correct": false,
+     "feedback": "The sparrows only encouraged him."
+    }
+   ],
+   "explain": "“Peter… jumped out of a window, upsetting three plants. The window was too small for Mr. McGregor.”",
+   "passage": "Peter was most dreadfully frightened; he rushed all over the garden, for he had forgotten the way back to the gate.\n\nHe lost one of his shoes among the cabbages, and the other shoe amongst the potatoes.\n\nAfter losing them, he ran on four legs and went faster, so that I think he might have got away altogether if he had not unfortunately run into a gooseberry net, and got caught by the large buttons on his jacket. It was a blue jacket with brass buttons, quite new.\n\nPeter gave himself up for lost, and shed big tears; but his sobs were overheard by some friendly sparrows, who flew to him in great excitement, and implored him to exert himself.\n\nMr. McGregor came up with a sieve, which he intended to pop upon the top of Peter; but Peter wriggled out just in time, leaving his jacket behind him.\n\nAnd rushed into the tool-shed, and jumped into a can. It would have been a beautiful thing to hide in, if it had not had so much water in it.\n\nMr. McGregor was quite sure that Peter was somewhere in the tool-shed, perhaps hidden underneath a flower-pot. He began to turn them over carefully, looking under each.\n\nPresently Peter sneezed—‘Kertyschoo!’ Mr. McGregor was after him in no time.\n\nAnd tried to put his foot upon Peter, who jumped out of a window, upsetting three plants. The window was too small for Mr. McGregor, and he was tired of running after Peter. He went back to his work.",
+   "passageSource": "Beatrix Potter, The Tale of Peter Rabbit (1902)"
+  },
+  {
+   "id": "reading.pr.10",
+   "topic": "reading.potter",
+   "kind": "mcq",
+   "prompt": "What do you predict Peter will do after he escapes?",
+   "options": [
+    {
+     "text": "Try to find his way home, scared and sorry",
+     "correct": true
+    },
+    {
+     "text": "Go back to eat more lettuces",
+     "correct": false,
+     "feedback": "He is “trembling with fright”: he wants to get away!"
+    },
+    {
+     "text": "Become friends with Mr. McGregor",
+     "correct": false,
+     "feedback": "Mr. McGregor has been chasing him with a rake."
+    }
+   ],
+   "explain": "Good predictions use clues: he is frightened and lost, so he will want to get home.",
+   "passage": "Peter was most dreadfully frightened; he rushed all over the garden, for he had forgotten the way back to the gate.\n\nHe lost one of his shoes among the cabbages, and the other shoe amongst the potatoes.\n\nAfter losing them, he ran on four legs and went faster, so that I think he might have got away altogether if he had not unfortunately run into a gooseberry net, and got caught by the large buttons on his jacket. It was a blue jacket with brass buttons, quite new.\n\nPeter gave himself up for lost, and shed big tears; but his sobs were overheard by some friendly sparrows, who flew to him in great excitement, and implored him to exert himself.\n\nMr. McGregor came up with a sieve, which he intended to pop upon the top of Peter; but Peter wriggled out just in time, leaving his jacket behind him.\n\nAnd rushed into the tool-shed, and jumped into a can. It would have been a beautiful thing to hide in, if it had not had so much water in it.\n\nMr. McGregor was quite sure that Peter was somewhere in the tool-shed, perhaps hidden underneath a flower-pot. He began to turn them over carefully, looking under each.\n\nPresently Peter sneezed—‘Kertyschoo!’ Mr. McGregor was after him in no time.\n\nAnd tried to put his foot upon Peter, who jumped out of a window, upsetting three plants. The window was too small for Mr. McGregor, and he was tired of running after Peter. He went back to his work.",
+   "passageSource": "Beatrix Potter, The Tale of Peter Rabbit (1902)"
+  },
+  {
+   "id": "reading.rw.1",
+   "topic": "reading.poems",
+   "kind": "mcq",
+   "prompt": "Who is speaking in this poem?",
+   "options": [
+    {
+     "text": "Someone looking out of a fast train window",
+     "correct": true
+    },
+    {
+     "text": "A horse in a field",
+     "correct": false,
+     "feedback": "The title tells us: “From a Railway Carriage”."
+    },
+    {
+     "text": "A witch on a broomstick",
+     "correct": false,
+     "feedback": "The train is faster than witches!"
+    }
+   ],
+   "explain": "Everything flies past the window: bridges, houses, cattle, stations.",
+   "passage": "Faster than fairies, faster than witches,\nBridges and houses, hedges and ditches;\nAnd charging along like troops in a battle\nAll through the meadows the horses and cattle:\nAll of the sights of the hill and the plain\nFly as thick as driving rain;\nAnd ever again, in the wink of an eye,\nPainted stations whistle by.\n\nHere is a child who clambers and scrambles,\nAll by himself and gathering brambles;\nHere is a tramp who stands and gazes;\nAnd here is the green for stringing the daisies!\nHere is a cart run away in the road\nLumping along with man and load;\nAnd here is a mill, and there is a river:\nEach a glimpse and gone forever!",
+   "passageSource": "Robert Louis Stevenson, “From a Railway Carriage”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.rw.2",
+   "topic": "reading.poems",
+   "kind": "mcq",
+   "prompt": "Read the first two lines aloud. Why do they sound like a train?",
+   "options": [
+    {
+     "text": "The rhythm goes clickety-clack, quick and regular, like wheels on a track",
+     "correct": true
+    },
+    {
+     "text": "They are very slow and quiet",
+     "correct": false,
+     "feedback": "Try reading it: it rattles along!"
+    },
+    {
+     "text": "They have no rhythm at all",
+     "correct": false,
+     "feedback": "The beat is strong and regular, like a train."
+    }
+   ],
+   "explain": "“Faster than fairies, faster than witches”: the beat rattles along like train wheels.",
+   "passage": "Faster than fairies, faster than witches,\nBridges and houses, hedges and ditches;\nAnd charging along like troops in a battle\nAll through the meadows the horses and cattle:\nAll of the sights of the hill and the plain\nFly as thick as driving rain;\nAnd ever again, in the wink of an eye,\nPainted stations whistle by.\n\nHere is a child who clambers and scrambles,\nAll by himself and gathering brambles;\nHere is a tramp who stands and gazes;\nAnd here is the green for stringing the daisies!\nHere is a cart run away in the road\nLumping along with man and load;\nAnd here is a mill, and there is a river:\nEach a glimpse and gone forever!",
+   "passageSource": "Robert Louis Stevenson, “From a Railway Carriage”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.rw.3",
+   "topic": "reading.poems",
+   "kind": "fact",
+   "prompt": "Find and copy the phrase that shows the stations go by very quickly.",
+   "answer": "in the wink of an eye",
+   "distractors": [
+    "as thick as driving rain",
+    "a glimpse and gone forever",
+    "charging along"
+   ],
+   "explain": "“in the wink of an eye”: as fast as blinking.",
+   "passage": "Faster than fairies, faster than witches,\nBridges and houses, hedges and ditches;\nAnd charging along like troops in a battle\nAll through the meadows the horses and cattle:\nAll of the sights of the hill and the plain\nFly as thick as driving rain;\nAnd ever again, in the wink of an eye,\nPainted stations whistle by.\n\nHere is a child who clambers and scrambles,\nAll by himself and gathering brambles;\nHere is a tramp who stands and gazes;\nAnd here is the green for stringing the daisies!\nHere is a cart run away in the road\nLumping along with man and load;\nAnd here is a mill, and there is a river:\nEach a glimpse and gone forever!",
+   "passageSource": "Robert Louis Stevenson, “From a Railway Carriage”, A Child’s Garden of Verses (1885)",
+   "accept": [
+    "wink of an eye"
+   ]
+  },
+  {
+   "id": "reading.rw.4",
+   "topic": "reading.poems",
+   "kind": "mcq",
+   "prompt": "What does “Each a glimpse and gone forever” mean?",
+   "options": [
+    {
+     "text": "You see each thing for a moment, then it is gone",
+     "correct": true
+    },
+    {
+     "text": "Everything is lost",
+     "correct": false,
+     "feedback": "It is about seeing things quickly from the train."
+    },
+    {
+     "text": "The train breaks down",
+     "correct": false,
+     "feedback": "The train keeps going!"
+    }
+   ],
+   "explain": "A glimpse is a very quick look. From a fast train, you only glimpse each thing.",
+   "passage": "Faster than fairies, faster than witches,\nBridges and houses, hedges and ditches;\nAnd charging along like troops in a battle\nAll through the meadows the horses and cattle:\nAll of the sights of the hill and the plain\nFly as thick as driving rain;\nAnd ever again, in the wink of an eye,\nPainted stations whistle by.\n\nHere is a child who clambers and scrambles,\nAll by himself and gathering brambles;\nHere is a tramp who stands and gazes;\nAnd here is the green for stringing the daisies!\nHere is a cart run away in the road\nLumping along with man and load;\nAnd here is a mill, and there is a river:\nEach a glimpse and gone forever!",
+   "passageSource": "Robert Louis Stevenson, “From a Railway Carriage”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.sh.1",
+   "topic": "reading.poems",
+   "kind": "mcq",
+   "prompt": "What is the “little shadow” in the poem?",
+   "options": [
+    {
+     "text": "The child’s own shadow",
+     "correct": true
+    },
+    {
+     "text": "A little brother",
+     "correct": false,
+     "feedback": "It goes “in and out with me” and is “very, very like me”: a shadow."
+    },
+    {
+     "text": "A pet dog",
+     "correct": false,
+     "feedback": "It is the poet’s shadow."
+    }
+   ],
+   "explain": "The shadow follows the child everywhere.",
+   "passage": "I have a little shadow that goes in and out with me,\nAnd what can be the use of him is more than I can see.\nHe is very, very like me from the heels up to the head;\nAnd I see him jump before me, when I jump into my bed.\n\nThe funniest thing about him is the way he likes to grow—\nNot at all like proper children, which is always very slow;\nFor he sometimes shoots up taller like an india-rubber ball,\nAnd he sometimes goes so little that there’s none of him at all.\n\nHe hasn’t got a notion of how children ought to play,\nAnd can only make a fool of me in every sort of way.\nHe stays so close behind me, he’s a coward you can see;\nI’d think shame to stick to nursie as that shadow sticks to me!\n\nOne morning, very early, before the sun was up,\nI rose and found the shining dew on every buttercup;\nBut my lazy little shadow, like an arrant sleepy-head,\nHad stayed at home behind me and was fast asleep in bed.",
+   "passageSource": "Robert Louis Stevenson, “My Shadow”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.sh.2",
+   "topic": "reading.poems",
+   "kind": "mcq",
+   "prompt": "What is the “funniest thing” about the shadow?",
+   "options": [
+    {
+     "text": "It grows taller and smaller very quickly",
+     "correct": true
+    },
+    {
+     "text": "It can talk",
+     "correct": false,
+     "feedback": "The poem says it likes to grow."
+    },
+    {
+     "text": "It eats breakfast",
+     "correct": false,
+     "feedback": "Shadows don’t eat!"
+    }
+   ],
+   "explain": "“he sometimes shoots up taller like an india-rubber ball, And he sometimes goes so little that there’s none of him at all.”",
+   "passage": "I have a little shadow that goes in and out with me,\nAnd what can be the use of him is more than I can see.\nHe is very, very like me from the heels up to the head;\nAnd I see him jump before me, when I jump into my bed.\n\nThe funniest thing about him is the way he likes to grow—\nNot at all like proper children, which is always very slow;\nFor he sometimes shoots up taller like an india-rubber ball,\nAnd he sometimes goes so little that there’s none of him at all.\n\nHe hasn’t got a notion of how children ought to play,\nAnd can only make a fool of me in every sort of way.\nHe stays so close behind me, he’s a coward you can see;\nI’d think shame to stick to nursie as that shadow sticks to me!\n\nOne morning, very early, before the sun was up,\nI rose and found the shining dew on every buttercup;\nBut my lazy little shadow, like an arrant sleepy-head,\nHad stayed at home behind me and was fast asleep in bed.",
+   "passageSource": "Robert Louis Stevenson, “My Shadow”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.sh.3",
+   "topic": "reading.poems",
+   "kind": "mcq",
+   "prompt": "Why was the shadow “fast asleep in bed” one early morning?",
+   "options": [
+    {
+     "text": "Before the sun is up there is no shadow",
+     "correct": true
+    },
+    {
+     "text": "It was ill",
+     "correct": false,
+     "feedback": "It is a joke: there was no sunlight to make a shadow."
+    },
+    {
+     "text": "It was lazy every day",
+     "correct": false,
+     "feedback": "Only that morning, before the sun was up."
+    }
+   ],
+   "explain": "Shadows need light. Before sunrise, the shadow “stayed at home”. The poet pretends it was asleep.",
+   "passage": "I have a little shadow that goes in and out with me,\nAnd what can be the use of him is more than I can see.\nHe is very, very like me from the heels up to the head;\nAnd I see him jump before me, when I jump into my bed.\n\nThe funniest thing about him is the way he likes to grow—\nNot at all like proper children, which is always very slow;\nFor he sometimes shoots up taller like an india-rubber ball,\nAnd he sometimes goes so little that there’s none of him at all.\n\nHe hasn’t got a notion of how children ought to play,\nAnd can only make a fool of me in every sort of way.\nHe stays so close behind me, he’s a coward you can see;\nI’d think shame to stick to nursie as that shadow sticks to me!\n\nOne morning, very early, before the sun was up,\nI rose and found the shining dew on every buttercup;\nBut my lazy little shadow, like an arrant sleepy-head,\nHad stayed at home behind me and was fast asleep in bed.",
+   "passageSource": "Robert Louis Stevenson, “My Shadow”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.wn.1",
+   "topic": "reading.poems",
+   "kind": "mcq",
+   "prompt": "In “Windy Nights”, what does the child imagine on stormy nights?",
+   "options": [
+    {
+     "text": "A man galloping by on a horse",
+     "correct": true
+    },
+    {
+     "text": "A racing car",
+     "correct": false,
+     "feedback": "The poem says “A man goes riding by… at the gallop”."
+    },
+    {
+     "text": "A ship landing",
+     "correct": false,
+     "feedback": "Ships are mentioned, tossed at sea, but the rider is the mystery."
+    }
+   ],
+   "explain": "The noise of the wind sounds like a horse galloping.",
+   "passage": "Whenever the moon and stars are set,\nWhenever the wind is high,\nAll night long in the dark and wet,\nA man goes riding by.\nLate in the night when the fires are out,\nWhy does he gallop and gallop about?\n\nWhenever the trees are crying aloud,\nAnd ships are tossed at sea,\nBy, on the highway, low and loud,\nBy at the gallop goes he.\nBy at the gallop he goes, and then\nBy he comes back at the gallop again.",
+   "passageSource": "Robert Louis Stevenson, “Windy Nights”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.wn.2",
+   "topic": "reading.poems",
+   "kind": "mcq",
+   "prompt": "Why do you think the child imagines a galloping rider?",
+   "options": [
+    {
+     "text": "The wind makes loud rushing sounds, like hooves",
+     "correct": true
+    },
+    {
+     "text": "They can see a real horse",
+     "correct": false,
+     "feedback": "It is dark and late. They can only hear."
+    },
+    {
+     "text": "They are dreaming about racing",
+     "correct": false,
+     "feedback": "It is the sound of the wind."
+    }
+   ],
+   "explain": "Poets often turn sounds into pictures. The “gallop” matches the wind’s rhythm.",
+   "passage": "Whenever the moon and stars are set,\nWhenever the wind is high,\nAll night long in the dark and wet,\nA man goes riding by.\nLate in the night when the fires are out,\nWhy does he gallop and gallop about?\n\nWhenever the trees are crying aloud,\nAnd ships are tossed at sea,\nBy, on the highway, low and loud,\nBy at the gallop goes he.\nBy at the gallop he goes, and then\nBy he comes back at the gallop again.",
+   "passageSource": "Robert Louis Stevenson, “Windy Nights”, A Child’s Garden of Verses (1885)"
+  }
+ ]
+}

@@ -4,7 +4,8 @@
 import { h, s, mount } from '../ui/dom.js';
 import { capybaraEl } from '../ui/capybara.js';
 import { icon, iconPath, SUBJECT_ICON } from '../ui/icons.js';
-import { SUBJECTS, SUBJECT_BY_ID } from '../core/subjects.js';
+import { SUBJECTS, SUBJECT_BY_ID, COURSE } from '../core/subjects.js';
+import { paperSpec } from '../gen/paper.js';
 import { topicStatus, stretchReady } from '../core/mastery.js';
 import { daysPractisedThisMonth, planDay } from '../core/session.js';
 import { learnedCount, subjectStats, planSummary, isKnown } from '../core/progress.js';
@@ -61,14 +62,18 @@ function arc(cx, cy, r, a0, a1) {
 }
 
 const LAYOUTS = {
-  wide: { w: 800, h: 520, r: 74, pos: { english: [150, 120], maths: [400, 100], history: [650, 120], geography: [150, 390], science: [400, 410], latin: [650, 390] } },
-  tall: { w: 380, h: 990, r: 70, pos: { english: [112, 110], maths: [268, 262], science: [112, 414], history: [268, 566], geography: [112, 718], latin: [268, 870] } },
+  // island positions by slot, in subject order; the dotted sea route follows the slots
+  wide6: { w: 800, h: 520, r: 74, pos: [[150, 120], [400, 100], [650, 120], [150, 390], [400, 410], [650, 390]], route: [0, 1, 2, 5, 4, 3] },
+  tall6: { w: 380, h: 990, r: 70, pos: [[112, 110], [268, 262], [112, 414], [268, 566], [112, 718], [268, 870]], route: [0, 1, 2, 3, 4, 5] },
+  wide5: { w: 800, h: 470, r: 78, pos: [[165, 135], [635, 125], [400, 245], [175, 360], [625, 360]], route: [0, 2, 1, 4, 3] },
+  tall5: { w: 380, h: 840, r: 72, pos: [[112, 112], [268, 272], [112, 432], [268, 592], [112, 750]], route: [0, 1, 2, 3, 4] },
 };
 
 function islandMap(app) {
   const { state, db } = app;
-  const L = window.matchMedia('(min-width: 640px)').matches ? LAYOUTS.wide : LAYOUTS.tall;
-  const svg = s('svg', { viewBox: `0 0 ${L.w} ${L.h}`, role: 'group', 'aria-label': 'Your world: six subject islands' });
+  const L = LAYOUTS[`${window.matchMedia('(min-width: 640px)').matches ? 'wide' : 'tall'}${SUBJECTS.length > 5 ? 6 : 5}`];
+  const posOf = (id) => L.pos[SUBJECTS.findIndex((x) => x.id === id)];
+  const svg = s('svg', { viewBox: `0 0 ${L.w} ${L.h}`, role: 'group', 'aria-label': `Your world: ${SUBJECTS.length} subject islands` });
   const defs = s('defs', {},
     s('linearGradient', { id: 'sea', x1: 0, y1: 0, x2: 0, y2: 1 }, s('stop', { offset: 0, 'stop-color': '#bfe0f7' }), s('stop', { offset: 1, 'stop-color': '#8fc4ee' })),
     ...SUBJECTS.map((sub) => s('radialGradient', { id: `g-${sub.id}`, cx: 0.35, cy: 0.3, r: 0.85 }, s('stop', { offset: 0, 'stop-color': mix(sub.colour, '#ffffff', 0.45) }), s('stop', { offset: 1, 'stop-color': sub.colour }))));
@@ -79,12 +84,11 @@ function islandMap(app) {
     svg.append(s('path', { d: `M${x},${y} q8,-6 16,0 t16,0`, stroke: '#ffffff', 'stroke-opacity': 0.55, 'stroke-width': 2, fill: 'none', 'stroke-linecap': 'round' }));
   }
   // sea routes between islands
-  const order = ['english', 'maths', 'history', 'latin', 'science', 'geography'];
-  const route = order.map((id) => L.pos[id]);
+  const route = L.route.map((i) => L.pos[i]).filter(Boolean);
   svg.append(s('path', { d: 'M' + route.map((p) => p.join(',')).join(' L'), stroke: '#ffffff', 'stroke-width': 3, 'stroke-dasharray': '2 11', 'stroke-linecap': 'round', fill: 'none', opacity: 0.9 }));
 
   SUBJECTS.forEach((sub, idx) => {
-    const [cx, cy] = L.pos[sub.id];
+    const [cx, cy] = posOf(sub.id);
     const r = L.r;
     const ids = db.topicOrder[sub.id] || [];
     const states = ids.map((id) => topicStatus(db.topics[id], state.topics, db));
@@ -147,7 +151,7 @@ function todayCard(app) {
     btn = h('button', { class: 'btn-start', onclick: () => app.go('#/play') }, icon('play'), ' Continue');
   } else {
     eyebrow = formatDay(today); title = 'Ready when you are';
-    sub = `About ${state.settings.sessionMinutes} minutes, with a break halfway.`;
+    sub = `About ${state.settings.sessionMinutes} minutes, with a ${COURSE.id === 'ks1' ? 'wiggle' : ''} break halfway.`.replace('a  break', 'a break');
     tags = planSummary(plan);
     btn = h('button', { class: 'btn-start', onclick: () => app.go('#/play') }, icon('play'), ' Start today’s session');
   }
@@ -181,7 +185,7 @@ function homeCards(app, rest) {
   const card = (ico, tint, title, text, go, isNew) => h('button', { class: 'choice-card home-card', style: { '--tint': `color-mix(in srgb, ${tint} 14%, var(--card))`, '--tint-ink': tint }, onclick: () => app.go(go) },
     h('span', { class: 'ico' }, icon(ico)), h('span', { class: 'txt' }, h('h3', {}, title, isNew ? h('span', { class: 'badge-new' }, 'NEW') : null), h('p', {}, text)));
   for (const p of unseenFeedback(state)) cards.push(card('star', '#11855a', 'Feedback on your writing', db.pieceById[p.promptId]?.title || '', `#/feedback/${encodeURIComponent(p.id)}`, true));
-  if (!rest && pieceDue(state, today)) {
+  if (COURSE.writing && !rest && pieceDue(state, today)) {
     const cur = currentPiece(state);
     cards.push(card('pen', SUBJECT_BY_ID.english.colour, cur ? 'Carry on writing' : 'Weekly writing', cur ? db.pieceById[cur.promptId]?.title : 'A longer piece, about 30 minutes', '#/writing'));
   }
@@ -189,11 +193,13 @@ function homeCards(app, rest) {
   cards.push(card('book', '#c84a14', book ? book.title : 'Choose a book', `${readingThisWeek(state, today)} minutes read this week`, '#/reading'));
   cards.push(card('chart', '#5143d9', 'My progress', 'Timeline, places and badges', '#/progress'));
   const best = Math.max(0, ...(state.papers || []).map((p) => p.score));
-  const tools = [
-    card('paper', SUBJECT_BY_ID.maths.colour, 'Arithmetic paper', best ? `36 questions in 30 minutes · best ${best}/40` : '36 questions in 30 minutes, like the real test', '#/paper'),
-    card('keyboard', '#5143d9', 'Touch typing', state.typing?.best ? `best ${state.typing.best.wpm} words a minute` : 'Ten lessons, then race the river', '#/typing'),
-    card('eye', SUBJECT_BY_ID.english.colour, 'Speed reading', (state.speed || []).length ? `last read at ${state.speed.at(-1).wpm} words a minute` : 'Read faster without losing the thread', '#/speed'),
-  ];
+  const spec = paperSpec();
+  const TOOLS = {
+    paper: () => card('paper', SUBJECT_BY_ID.maths.colour, COURSE.id === 'ks1' ? 'Maths test' : 'Arithmetic paper', best ? `${spec.questions} questions in ${spec.minutes} minutes · best ${best}/${spec.marks}` : `${spec.questions} questions in ${spec.minutes} minutes, like the real test`, '#/paper'),
+    typing: () => card('keyboard', '#5143d9', 'Touch typing', state.typing?.best ? `best ${state.typing.best.wpm} words a minute` : 'Ten lessons, then race the river', '#/typing'),
+    speed: () => card('eye', '#d63d74', 'Speed reading', (state.speed || []).length ? `last read at ${state.speed.at(-1).wpm} words a minute` : 'Read faster without losing the thread', '#/speed'),
+  };
+  const tools = COURSE.tools.map((t) => TOOLS[t]());
   return h('div', {}, h('div', { class: 'home-cards' }, cards), h('div', { class: 'section-title' }, h('h2', {}, 'Practice tools')), h('div', { class: 'home-cards' }, tools));
 }
 
@@ -204,6 +210,7 @@ export function homeScreen(app) {
     h('div', { class: 'topbar' },
       h('div', {}, h('div', { class: 'eyebrow' }, 'Grammar Stream'), h('h1', {}, `Hi ${state.profile?.childName || 'there'}!`)),
       h('span', { class: 'spacer' }),
+      app.profiles().length > 1 ? h('button', { class: 'btn-icon', 'aria-label': 'Switch child', title: 'Switch child', onclick: () => app.go('#/who') }, icon('swap')) : null,
       h('button', { class: 'btn-icon', 'aria-label': 'My progress', title: 'My progress', onclick: () => app.go('#/progress') }, icon('chart')),
       h('button', { class: 'btn-icon', 'aria-label': 'How it looks', title: 'How it looks', onclick: () => app.go('#/display') }, icon('text')),
       h('button', { class: 'btn-icon', 'aria-label': 'Grown-ups', title: 'Grown-ups', onclick: () => app.go('#/parent') }, icon('lock'))),
@@ -246,7 +253,8 @@ export function subjectScreen(app, subjectId) {
   });
   const extra = subjectId === 'history' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/progress/timeline') }, icon('clock'), ' Open my timeline')
     : subjectId === 'geography' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/progress/places') }, icon('globe'), ' Places I know')
-    : subjectId === 'maths' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/paper') }, icon('paper'), ' Arithmetic paper') : null;
+    : subjectId === 'maths' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/paper') }, icon('paper'), COURSE.id === 'ks1' ? ' Maths test' : ' Arithmetic paper')
+    : subjectId === 'science' && COURSE.id === 'ks1' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/progress/places') }, icon('globe'), ' Places I know') : null;
   mount(app.root,
     h('div', { class: 'topbar' }, h('button', { class: 'btn-icon', 'aria-label': 'Back', onclick: () => app.go('#/home') }, icon('back')), h('span', { class: 'spacer' }), extra),
     h('div', { class: 'narrow', style: { '--subj': subj.colour } },

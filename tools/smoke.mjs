@@ -31,7 +31,7 @@ try {
     await page.fill('#ob-name', 'Ada');
     await page.fill('#ob-pin', '1234');
     await page.fill('#ob-pin2', '1234');
-    await page.click('text=Next: hand over to her');
+    await page.click('text=Next: meet the capybara');
     await page.waitForSelector('#capy-name');
     await page.click('button:has-text("Flower")');
     await page.fill('#capy-name', 'Mochi');
@@ -167,6 +167,72 @@ try {
     await page.click('.region >> nth=3');
     await page.waitForSelector('.journey li');
     await page.screenshot({ path: `${OUT}/${label}-07-subject.png`, fullPage: true });
+    // a second child on the Year 2 course: add, set up, play a full session, then pick from "Who's learning?"
+    await page.click('[aria-label="Back"]').catch(() => {});
+    await page.goto(`http://127.0.0.1:${PORT}/#/parent`);
+    for (const d of '1234') await page.click(`.pin-pad button[aria-label="${d}"]`);
+    await page.click('text=Add another child');
+    await page.waitForSelector('#ob-name');
+    await page.fill('#ob-name', 'Leo');
+    await page.selectOption('#ob-pron', 'he');
+    await page.selectOption('#ob-course', 'ks1');
+    await page.screenshot({ path: `${OUT}/${label}-20-add-child.png`, fullPage: true });
+    await page.click('text=Next: meet the capybara');
+    await page.waitForSelector('#capy-name');
+    await page.fill('#capy-name', 'Zoom');
+    await page.fill('#hero-name', 'Captain Thunder');
+    await page.click('text=Let’s go!');
+    await page.waitForSelector('.btn-start');
+    await page.screenshot({ path: `${OUT}/${label}-21-ks1-home.png`, fullPage: true });
+    const course = await page.evaluate(() => window.__app.state.course);
+    if (course !== 'ks1') throw new Error(`second child course is ${course}`);
+    await page.evaluate(() => { const a = window.__app; a.state.sessions.push({ day: Math.floor(Date.now() / 864e5) - 1, start: 1, end: 2, answered: 5, correct: 5, completed: true }); a.state.plan = null; a.save(); });
+    await page.click('.btn-start');
+    const seen2 = new Set();
+    for (let k = 0; k < 300; k++) {
+      await page.waitForTimeout(60);
+      if (await page.$('text=Finished for today!')) break;
+      const t = await page.evaluate(() => window.__app.state.plan?.steps[window.__app.state.plan.pos]?.t);
+      if (t && !seen2.has(t)) { seen2.add(t); await page.screenshot({ path: `${OUT}/${label}-ks1-step-${t}.png`, fullPage: true }); }
+      await page.evaluate(() => { window.__app.sprintSeconds = 4; });
+      const sIn = await page.$('.sprint-in');
+      if (sIn) { const v = await page.evaluate(() => window.__app.sprintCurrent?.value); try { await sIn.fill(String(v ?? 1)); await sIn.press('Enter'); } catch { /* sprint ended */ } continue; }
+      if (await page.$('text=Which subject shall we look at today?')) { await page.click('.choice-card >> nth=0'); continue; }
+      const skip = await page.$('button:has-text("I haven’t learned this yet")');
+      if (skip) { await skip.click(); continue; }
+      if (await page.$('.confidence')) {
+        const opt = await page.$('.option:not([disabled])');
+        const typed = await page.$('.q-body input[type=text]:not([disabled])');
+        if (opt) await opt.click();
+        else if (typed) { const ans = await page.evaluate(() => { const a = window.__app; const st = a.state.plan.steps[a.state.plan.pos]; return a.db.items[st.id]?.answer || a.db.items[st.id]?.word || '7'; }); for (const i of await page.$$('.q-body input[type=text]:not([disabled])')) await i.fill(String(ans)); }
+        else { const tap = await page.$('.map-box [data-id]'); if (tap) await tap.click({ force: true }); }
+        if (!seen2.has('say')) { seen2.add('say'); if (!(await page.$('.say-btn'))) throw new Error('no read-aloud button on a Year 2 question'); }
+        await page.click('.confidence button:has-text("Think so")');
+        await page.waitForSelector('.feedback');
+        await page.click('button:has-text("Next")');
+        continue;
+      }
+      if (await page.$('.choice-card')) { await page.click('.choice-card'); continue; }
+      if (await page.$('textarea:not([disabled])')) {
+        await page.fill('textarea', 'What does Earth look like from space, because I love racing cars, and when I smile but yesterday I played?');
+        const c = await page.$('button:has-text("Check")'); if (c) { await c.click(); await page.waitForTimeout(50); const again = await page.$('button:has-text("Check again")'); if (again) await again.click(); continue; }
+        const b = await page.$('.q-wrap .btn-primary'); if (b) await b.click(); continue;
+      }
+      const o = await page.$('.options .option:not([disabled])'); if (o) { await o.click(); await page.waitForTimeout(40); }
+      const b = await page.$('.q-wrap .btn-primary:not([disabled])'); if (b) { await b.click(); continue; }
+      throw new Error(`Year 2 stuck at step ${t}`);
+    }
+    console.log(`${label}: Year 2 session step types: ${[...seen2].join(', ')}`);
+    await page.screenshot({ path: `${OUT}/${label}-22-ks1-done.png`, fullPage: true });
+    // reload: with two children the app asks who is learning
+    await page.evaluate(() => sessionStorage.removeItem('gs.profile'));
+    await page.goto(`http://127.0.0.1:${PORT}/`);
+    await page.waitForSelector('.who-card');
+    await page.screenshot({ path: `${OUT}/${label}-23-who.png`, fullPage: true });
+    await page.click('.who-card:has-text("Ada")');
+    await page.waitForSelector('.btn-start, .today');
+    const back = await page.evaluate(() => [window.__app.state.course, window.__app.state.profile.childName]);
+    if (back[0] !== 'y6' || back[1] !== 'Ada') throw new Error(`switching back gave ${back}`);
     // page must not scroll sideways
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     if (overflow > 1) errors.push(`${label}: horizontal overflow ${overflow}px`);

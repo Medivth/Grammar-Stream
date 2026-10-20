@@ -1,4 +1,5 @@
 // Tiny DOM helpers. All content text goes through rich(), which escapes HTML first.
+import { pr, pronounify } from '../core/pronoun.js';
 
 export function h(tag, attrs = {}, ...children) {
   const el = document.createElement(tag);
@@ -59,15 +60,28 @@ export function plain(text) {
   return String(text ?? '').replace(/\{\{([^/{}]+)\/([^/{}]+)\}\}/g, '$1 over $2').replace(/\*\*|_/g, '');
 }
 
+const FRACTION_WORDS = { '1/2': 'one half', '1/3': 'one third', '2/3': 'two thirds', '1/4': 'one quarter', '2/4': 'two quarters', '3/4': 'three quarters' };
+/** Text as it should be read aloud: fractions in words, symbols spoken. */
+export function spoken(text) {
+  return String(text ?? '')
+    .replace(/\{\{([^/{}]+)\/([^/{}]+)\}\}/g, (_, n, d) => FRACTION_WORDS[`${n}/${d}`] || `${n} over ${d}`)
+    .replace(/\*\*|_(?=\w)|(?<=\w)_/g, '')
+    .replace(/_{2,}/g, ' blank ')
+    .replace(/×/g, ' times ').replace(/÷/g, ' divided by ').replace(/−/g, ' minus ').replace(/ = \?/g, ' equals what').replace(/=\s*$/, ' equals what?').replace(/ \? /g, ' what ')
+    .replace(/£(\d+)\.(\d\d)/g, '$1 pounds $2').replace(/(\d+)p\b/g, '$1 pence')
+    .replace(/\s+/g, ' ').trim();
+}
+
 export function mount(root, ...nodes) {
   root.replaceChildren(...nodes);
+  pronounify(root);
   window.scrollTo(0, 0);
 }
 
 let toastTimer;
 export function toast(msg) {
   document.querySelector('.toast')?.remove();
-  const t = h('div', { class: 'toast', role: 'status' }, msg);
+  const t = h('div', { class: 'toast', role: 'status' }, pr(msg));
   document.body.append(t);
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.remove(), 3500);
