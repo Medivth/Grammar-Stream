@@ -223,7 +223,7 @@ export function subjectScreen(app, subjectId) {
   const rows = ids.map((id) => {
     const t = db.topics[id];
     const status = topicStatus(t, state.topics);
-    const items = (db.itemsByTopic[id] || []).filter((i) => db.items[i].kind !== 'template');
+    const items = (db.itemsByTopic[id] || []).filter((i) => !['template', 'written'].includes(db.items[i].kind));
     const known = items.filter((i) => isKnown(state.cards[i])).length;
     return h('li', {},
       h('span', { class: `node ${status}` }, icon(ICON[status])),

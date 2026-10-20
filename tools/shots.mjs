@@ -12,6 +12,7 @@ import { correctResponse } from '../js/core/checkers.js';
 import { makeRng } from '../js/core/rng.js';
 import { dayNumber } from '../js/core/dates.js';
 import { sprintLevel, recordSprint } from '../js/core/sprint.js';
+import { submitAnswer, markAnswer, unseenMarks } from '../js/core/writing.js';
 
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PW || 'playwright');
@@ -60,6 +61,11 @@ export function simulate(days, today = dayNumber()) {
       } else if (st.t === 'sprint') {
         const level = sprintLevel(state), answered = rng.int(8, 26);
         recordSprint(state, { day, level, answered, correct: Math.round(answered * rng.pick([0.6, 0.8, 0.95])) });
+      } else if (st.t === 'written') {
+        const a = submitAnswer(state, st.id, 'The writer uses the word “hazy” to make the garden feel mysterious. '.repeat(5), day);
+        if (rng.chance(0.8)) markAnswer(state, a, { score: rng.pick([1, 2, 2]), note: 'Lovely quotation.' }, day, db.items[st.id].topic);
+      } else if (st.t === 'marked') {
+        unseenMarks(state).forEach((a) => { a.seen = true; });
       } else if (st.t === 'sentence') {
         state.writing.push({ day, taskId: st.options[0], text: db.sentenceById[st.options[0]].model, ok: true, tries: 1 });
       }

@@ -1,4 +1,6 @@
-// Weekly extended writing and the reading log: pure state helpers.
+// Weekly extended writing, written reading answers and the reading log: pure state helpers.
+
+import { recordTopicAttempt } from './mastery.js';
 
 const TYPE_ORDER = ['narrative', 'history', 'viewpoint', 'science', 'analytical', 'geography'];
 export const PIECE_INTERVAL = 7;
@@ -75,4 +77,27 @@ export function logReading(state, minutes, today, book = null) {
 
 export function readingThisWeek(state, today) {
   return state.reading.filter((r) => r.day > today - 7).reduce((a, r) => a + r.minutes, 0);
+}
+
+// --- written reading answers -----------------------------------------------------------
+export const ANSWER_LEVELS = ['Not yet', 'Getting there', 'Yes!'];
+
+export function submitAnswer(state, itemId, text, today) {
+  const a = { day: today, itemId, text, mark: null, seen: false };
+  state.answers.push(a);
+  return a;
+}
+
+export function answersToMark(state) {
+  return state.answers.filter((a) => !a.mark);
+}
+
+/** The grown-up's verdict feeds the topic: a full "Yes!" counts as a correct attempt. */
+export function markAnswer(state, answer, { score, note }, today, topicId) {
+  answer.mark = { score, note: (note || '').trim(), day: today };
+  if (topicId && state.topics[topicId]) state.topics[topicId] = recordTopicAttempt(state.topics[topicId], score === 2, today, { mixed: false });
+}
+
+export function unseenMarks(state) {
+  return state.answers.filter((a) => a.mark && !a.seen);
 }

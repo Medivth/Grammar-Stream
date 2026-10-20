@@ -36,7 +36,7 @@ export async function loadContent(fetchJSON) {
   return db;
 }
 
-const KINDS = ['fact', 'spell', 'mcq', 'weighted', 'order', 'mapfact', 'cloze', 'template'];
+const KINDS = ['fact', 'spell', 'mcq', 'weighted', 'order', 'mapfact', 'cloze', 'template', 'written'];
 
 /** Structural validation. Returns a list of human-readable problems. */
 export function validateDB(db, generators) {
@@ -69,6 +69,9 @@ export function validateDB(db, generators) {
     for (const c of it.credits || []) if (!db.topics[c] || c === it.topic) errs.push(`${where}: bad credit ${c}`);
     if (!KINDS.includes(it.kind)) { errs.push(`${where}: unknown kind ${it.kind}`); continue; }
     switch (it.kind) {
+      case 'written':
+        if (!it.prompt || !it.model || !it.passage || !Array.isArray(it.hints) || it.hints.length < 2) errs.push(`${where}: written answer needs prompt, passage, hints and a model answer`);
+        break;
       case 'fact':
       case 'mapfact':
         if (!it.answer) errs.push(`${where}: missing answer`);
@@ -97,7 +100,7 @@ export function validateDB(db, generators) {
         if (!(it.levels?.length)) errs.push(`${where}: template needs levels`);
         break;
     }
-    if (it.kind !== 'template' && !it.explain) errs.push(`${where}: missing explain`);
+    if (!['template', 'written'].includes(it.kind) && !it.explain) errs.push(`${where}: missing explain`);
   }
   for (const s of db.sentences) {
     if (!s.model || !s.checks?.length) errs.push(`sentence ${s.id}: needs model and checks`);

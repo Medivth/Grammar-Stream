@@ -7,6 +7,7 @@ import { planDay, topicChoices, chooseTopic, questionFor, submit, startSession, 
 import { correctResponse } from '../js/core/checkers.js';
 import { makeRng } from '../js/core/rng.js';
 import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement } from '../js/core/placement.js';
+import { submitAnswer, markAnswer, unseenMarks } from '../js/core/writing.js';
 
 const root = new URL('../content/', import.meta.url);
 const read = (p) => JSON.parse(readFileSync(new URL(p, root)));
@@ -43,6 +44,11 @@ function runDay(state, today, rng, { pRight = null } = {}) {
     } else if (step.t === 'choose') {
       const opts = topicChoices(state, db, step.subject);
       if (opts.length) chooseTopic(state, db, rng.pick(opts), today);
+    } else if (step.t === 'written') {
+      const a = submitAnswer(state, step.id, 'A paragraph. '.repeat(20), today);
+      markAnswer(state, a, { score: rng.pick([1, 2]), note: '' }, today, db.items[step.id].topic);
+    } else if (step.t === 'marked') {
+      unseenMarks(state).forEach((a) => { a.seen = true; });
     } else if (!['review', 'quiz', 'diag', 'practice', 'faded'].includes(step.t)) {
       prevTopic = null;
     }

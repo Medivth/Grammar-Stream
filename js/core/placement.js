@@ -32,7 +32,7 @@ function probeItems(db, topicId) {
   const t = db.topics[topicId];
   const ids = (db.itemsByTopic[topicId] || []).filter((id) => !(t.diagnostic || []).includes(id));
   const tmpl = ids.filter((id) => db.items[id].kind === 'template');
-  return tmpl.length ? tmpl : ids.filter((id) => !db.items[id].reserve);
+  return tmpl.length ? tmpl : ids.filter((id) => !db.items[id].reserve && db.items[id].kind !== 'written');
 }
 
 export function needsPlacement(state, db, subject) {

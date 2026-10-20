@@ -95,7 +95,7 @@ function selectReviews(due, budget) {
 }
 
 function unintroduced(state, db, topicId) {
-  return (db.itemsByTopic[topicId] || []).filter((id) => !state.cards[id] && db.items[id].kind !== 'template' && !db.items[id].reserve);
+  return (db.itemsByTopic[topicId] || []).filter((id) => !state.cards[id] && !['template', 'written'].includes(db.items[id].kind) && !db.items[id].reserve);
 }
 
 function templatesOf(db, topicId) {
@@ -126,6 +126,17 @@ export function pickNewSubject(state, db, today, dueBySubject, cap) {
   return candidates[0] || null;
 }
 
+/** The written reading answer for today, if one is due: a started reading topic, not answered in
+ * the last three weeks, and no more than two written answers in the past week. */
+export function writtenDue(state, db, today) {
+  const recent = (state.answers || []).filter((a) => today - a.day < 7).length;
+  if (recent >= 2) return null;
+  const last = {};
+  for (const a of state.answers || []) last[a.itemId] = Math.max(last[a.itemId] ?? -1, a.day);
+  const seenPassage = (it) => (db.itemsByTopic[it.topic] || []).filter((id) => db.items[id].passage === it.passage && state.cards[id]).length >= 3;
+  return Object.values(db.items).find((it) => it.kind === 'written' && state.topics[it.topic] && !(last[it.id] >= today - 21) && seenPassage(it))?.id || null;
+}
+
 function sentenceOptions(state, db) {
   const done = {};
   for (const w of state.writing) if (w.taskId) done[w.taskId] = Math.max(done[w.taskId] ?? -1, w.day);
@@ -142,7 +153,8 @@ export function planDay(state, db, today) {
   const dueBy = {};
   for (const d of due) dueBy[d.subject] = (dueBy[d.subject] || 0) + 1;
   const sprint = sprintDue(state);
-  const reviews = interleave(selectReviews(due, b.reviews - (sprint ? 2 : 0)), rng);
+  const written = writtenDue(state, db, today);
+  const reviews = interleave(selectReviews(due, b.reviews - (sprint ? 2 : 0) - (written ? 4 : 0)), rng);
   const cap = Math.ceil(b.reviews * 0.4);
   const placeSubject = PLACEMENT_ORDER.find((s) => needsPlacement(state, db, s)) || null;
   // after placing a subject, start its next topic straight away
@@ -158,6 +170,7 @@ export function planDay(state, db, today) {
   const steps = [];
   const yesterday = state.lastFeedback && state.lastFeedback.day < today ? yesterdayEntries(state.lastFeedback) : [];
   if (yesterday.length) steps.push({ t: 'yesterday' });
+  if ((state.answers || []).some((a) => a.mark && !a.seen)) steps.push({ t: 'marked' });
   if (sprint) steps.push({ t: 'sprint' });
   if (placeSubject) steps.push({ t: 'placement', subject: placeSubject });
   const split = reviews.length >= 10 ? Math.ceil(reviews.length * 0.6) : reviews.length;
@@ -166,6 +179,7 @@ export function planDay(state, db, today) {
     steps.push({ t: 'break' });
     reviews.slice(split).forEach((r) => steps.push({ t: 'review', id: r.id }));
   }
+  if (written) steps.push({ t: 'written', id: written });
   if (subject) steps.push({ t: 'choose', subject, options: topicChoices(state, db, subject) });
   if (second) steps.push({ t: 'choose', subject: second, options: topicChoices(state, db, second) });
   const sOpts = sentenceOptions(state, db);
@@ -208,7 +222,9 @@ export function chooseTopic(state, db, topicId, today) {
   }
   if (fresh.length && (!tmpl.length || topic.kind !== 'skill')) {
     const batch = fresh.slice(0, topic.batch || b.newFacts);
-    for (let i = 0; i < batch.length; i += 3) {
+    // reading comprehension: answer from the passage straight away, no learn card, in the author's order
+    if (topic.kind === 'reading') batch.forEach((id) => steps.push({ t: 'quiz', id }));
+    else for (let i = 0; i < batch.length; i += 3) {
       const group = batch.slice(i, i + 3);
       group.forEach((id) => steps.push({ t: 'intro', id }));
       makeRng(`quiz:${today}:${i}`).shuffle(group).forEach((id) => steps.push({ t: 'quiz', id }));
@@ -304,7 +320,7 @@ export function submit(state, db, step, q, response, { ms = null, conf = null, n
   // re-ask a missed item later in the same session (once)
   if (!res.correct && !step.reask && plan.reasks < MAX_REASKS && step.t !== 'diag' && !isFaded) {
     const gap = out.hyper ? 2 : 4;
-    const at = Math.min(plan.pos + 1 + gap, firstIndexOf(plan, ['choose', 'sentence', 'ritual', 'done'], plan.pos + 1));
+    const at = Math.min(plan.pos + 1 + gap, firstIndexOf(plan, ['choose', 'written', 'sentence', 'ritual', 'done'], plan.pos + 1));
     plan.steps.splice(at, 0, { t: step.t === 'practice' ? 'practice' : 'review', id: step.id, reask: true, level: q.level });
     plan.reasks += 1;
   }

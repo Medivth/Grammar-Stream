@@ -40,7 +40,7 @@ try {
     await page.waitForSelector('.btn-start');
     await page.screenshot({ path: `${OUT}/${label}-03-home.png`, fullPage: true });
     // pretend yesterday's session happened, so today's plan includes the arithmetic sprint; keep it short
-    await page.evaluate(() => { const a = window.__app; a.state.sessions.push({ day: Math.floor(Date.now() / 864e5) - 1, start: 1, end: 2, answered: 5, correct: 5, completed: true }); a.state.plan = null; a.save(); });
+    await page.evaluate(() => { const a = window.__app; a.state.sessions.push({ day: Math.floor(Date.now() / 864e5) - 1, start: 1, end: 2, answered: 5, correct: 5, completed: true }); a.state.topics['english.read-mood'] = { ema: 0.6, n: 3, state: 'learning', profDay: null, delayed: 0, started: 1 }; for (const id of ['english.rd.sg1', 'english.rd.sg2', 'english.rd.sg3']) a.state.cards[id] = { state: 'review', s: 3, d: 5, lastDay: 1, due: 99999, ivl: 3, reps: 1, lapses: 0 }; a.state.plan = null; a.save(); });
     await page.click('.btn-start');
 
     const seen = new Set();
@@ -93,6 +93,12 @@ try {
         continue;
       }
       if (await page.$('.choice-card')) { await page.click('.choice-card'); continue; }
+      if (await page.$('.written textarea:not([disabled])')) {
+        await page.fill('.written textarea', 'The writer makes the garden feel mysterious by calling the tangled roses a “hazy mantle”. '.repeat(4));
+        await page.screenshot({ path: `${OUT}/${label}-step-written.png`, fullPage: true });
+        await page.click('.written .btn-primary:not([disabled])');
+        continue;
+      }
       if (await page.$('textarea:not([disabled])')) {
         await page.fill('textarea', 'As a result, the old dog, which was tired, slept; everyone was happy.');
         const check = await page.$('button:has-text("Check")');
@@ -137,6 +143,10 @@ try {
     await page.click('[aria-label="Grown-ups"]');
     for (const d of '1234') await page.click(`.pin-pad button[aria-label="${d}"]`);
     await page.waitForSelector('text=Writing to read');
+    // mark the reading answer
+    await page.click('.card:has-text("Reading answers to mark") .option >> nth=2');
+    await page.click('.card:has-text("Reading answers to mark") button:has-text("Save")');
+    await page.waitForTimeout(200);
     for (let i = 0; i < 4; i++) await page.click(`.field:has(label:has-text("${i + 1}.")) .option >> nth=2`);
     await page.click('button:has-text("Your opening really hooked me.")');
     await page.click('button:has-text("Vary your sentence lengths")');

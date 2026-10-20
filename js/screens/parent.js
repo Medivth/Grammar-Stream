@@ -1,13 +1,13 @@
 // Grown-ups area: PIN gate, weekly card, conversation prompts, settings, backup.
 // Deliberately no live failure feed: it shows patterns and prompts, not a list of mistakes.
 
-import { h, mount, toast } from '../ui/dom.js';
+import { h, mount, toast, rich } from '../ui/dom.js';
 import { weekStart, formatDay } from '../core/dates.js';
 import { calibration, daysPractisedThisMonth } from '../core/session.js';
 import { exportFile, pickBackupFile, saveState, wipe } from '../platform/storage.js';
 import { emptyState } from '../core/store.js';
 import { SUBJECTS, SUBJECT_BY_ID } from '../core/subjects.js';
-import { piecesToMark, markPiece, wordCount } from '../core/writing.js';
+import { piecesToMark, markPiece, wordCount, answersToMark, markAnswer, ANSWER_LEVELS } from '../core/writing.js';
 import { needsPlacement } from '../core/placement.js';
 
 let unlockedUntil = 0;
@@ -79,6 +79,7 @@ function dashboard(app) {
         h('button', { class: 'btn-primary', onclick: () => doExport(app) }, 'Save a backup file')) : null,
 
       markingCard(app),
+      answersCard(app),
 
       h('div', { class: 'card' },
         h('h2', {}, `This week (from ${formatDay(w.ws, { weekday: 'short', day: 'numeric', month: 'short' })})`),
@@ -129,6 +130,35 @@ function markingCard(app) {
   return h('div', { class: 'card stack' }, h('h2', {}, todo.length ? `Writing to read (${todo.length})` : 'Weekly writing'),
     todo.map((p) => markForm(app, p, db.pieceById[p.promptId])),
     marked.length ? h('div', {}, h('h3', {}, 'Recently marked'), marked.map((p) => h('p', { class: 'muted small' }, `${db.pieceById[p.promptId]?.title}: ${p.mark.scores.reduce((a, b) => a + b, 0)}/8 · next step: ${p.mark.next || '–'}`))) : null);
+}
+
+// Short written reading answers: a three-level verdict and one line of comment.
+function answersCard(app) {
+  const { state, db } = app;
+  const todo = answersToMark(state);
+  if (!todo.length) return null;
+  return h('div', { class: 'card stack' }, h('h2', {}, `Reading answers to mark (${todo.length})`),
+    h('p', { class: 'muted small' }, 'Two minutes each. Compare her paragraph with the model answer: does she make a point, quote the text, and explain the effect of the words?'),
+    todo.map((a) => {
+      const item = db.items[a.itemId] || {};
+      let score = null;
+      const note = h('input', { type: 'text', placeholder: 'One line for her (optional)', maxlength: '160' });
+      const btns = ANSWER_LEVELS.map((label, lv) => h('button', { type: 'button', class: 'option', 'aria-pressed': 'false', style: { minHeight: '48px' }, onclick: () => { score = lv; btns.forEach((b, j) => b.setAttribute('aria-pressed', String(j === lv))); } }, label));
+      return h('div', { class: 'card stack', style: { background: 'var(--bg)' } },
+        h('p', { class: 'muted small' }, item.passageSource || ''),
+        rich('p', item.prompt || '', { style: { fontWeight: 700 } }),
+        h('div', { class: 'card', style: { whiteSpace: 'pre-wrap' } }, a.text),
+        h('details', {}, h('summary', { style: { cursor: 'pointer' } }, 'Model answer and what to look for'), h('ul', {}, (item.hints || []).map((t) => h('li', {}, t))), h('p', { class: 'learn', style: { marginTop: '8px' } }, item.model || '')),
+        h('div', { class: 'options plain' }, btns),
+        note,
+        h('button', { class: 'btn-primary', onclick: () => {
+          if (score == null) return toast('Choose a level first.');
+          markAnswer(state, a, { score, note: note.value }, app.today(), item.topic);
+          app.save();
+          toast('Saved. She’ll see it at the start of her next session.');
+          dashboard(app);
+        } }, 'Save'));
+    }));
 }
 
 function markForm(app, piece, prompt) {

@@ -39,6 +39,7 @@ test('every item can be presented in every format and its own answer is accepted
   const state = emptyState(20000);
   const rng = makeRng('content');
   for (const item of Object.values(db.items)) {
+    if (item.kind === 'written') continue; // marked by a grown-up, never presented as a card
     const formats = item.kind === 'fact' ? (item.formats || ['choice', 'cued', 'typed'])
       : item.kind === 'mapfact' ? (item.formats || ['choose', 'locate', 'name'])
         : item.kind === 'spell' ? ['cued', 'typed'] : [undefined];

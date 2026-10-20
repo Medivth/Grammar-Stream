@@ -10,7 +10,7 @@ import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement }
 import { checkSentence } from '../core/checkers.js';
 import { learnText, present } from '../core/present.js';
 import { makeRng } from '../core/rng.js';
-import { currentBooks, logReading } from '../core/writing.js';
+import { currentBooks, logReading, submitAnswer, unseenMarks, ANSWER_LEVELS, wordCount } from '../core/writing.js';
 import { milestones } from '../core/progress.js';
 import { sprintLevel, sprintBest, recordSprint, SPRINT_SECONDS } from '../core/sprint.js';
 import { sprintQuestion, SPRINT_LEVELS } from '../gen/sprint.js';
@@ -75,6 +75,8 @@ async function renderStep(app) {
       case 'intro': return introStep(app, root, step);
       case 'worked': return workedStep(app, root, step);
       case 'sentence': return sentenceStep(app, root, step);
+      case 'written': return writtenStep(app, root, step);
+      case 'marked': return markedStep(app, root);
       case 'ritual': return ritualStep(app, root);
       case 'done': return doneStep(app, root);
       default:
@@ -413,6 +415,55 @@ function sentenceStep(app, root, step) {
   mount(root, header(app, 'Writing'), h('div', { class: 'q-wrap stack' },
     h('h2', {}, task.title), rich('p', task.prompt, { class: 'q-prompt' }), ta, checkBtn, out));
   ta.focus();
+}
+
+// ---------------------------------------------------------------- written reading answer
+// A short analytical paragraph about a passage she has already answered questions on.
+// Nothing here can be auto-marked, so it goes to the grown-up, and her feedback arrives next session.
+function writtenStep(app, root, step) {
+  const { db, state } = app;
+  const item = db.items[step.id];
+  if (!item) return next(app);
+  const [minWords] = item.words || [30, 150];
+  const ta = h('textarea', { 'aria-label': 'Your answer', placeholder: 'Write your paragraph here…', spellcheck: 'true', style: { minHeight: '180px' } });
+  const count = h('span', { class: 'muted small' }, '0 words');
+  const btn = h('button', { class: 'btn-primary btn-big', type: 'button', disabled: true }, 'Hand it in');
+  ta.addEventListener('input', () => { const n = wordCount(ta.value); count.textContent = `${n} word${n === 1 ? '' : 's'}`; btn.disabled = n < minWords; });
+  btn.onclick = () => {
+    submitAnswer(state, item.id, ta.value.trim(), app.today());
+    app.save();
+    ta.disabled = true;
+    btn.replaceWith(h('div', { class: 'feedback good pop' }, h('h3', {}, '✓ Handed in'), h('p', {}, 'A grown-up will read it. Their comments will be waiting at the start of a session soon.'),
+      h('button', { class: 'btn-primary btn-big', style: { marginTop: '12px' }, onclick: () => next(app) }, 'Next')));
+  };
+  mount(root, header(app, 'Reading', null), h('div', { class: 'q-wrap stack written' },
+    h('blockquote', { class: 'passage' }, item.passage, item.passageSource ? h('cite', {}, item.passageSource) : null),
+    rich('div', item.prompt, { class: 'q-prompt' }),
+    h('div', { class: 'card', style: { padding: '14px 18px' } }, h('p', { class: 'muted small', style: { margin: '0 0 6px' } }, 'A good answer includes:'), h('ul', { style: { margin: 0, paddingLeft: '20px' } }, item.hints.map((t) => h('li', {}, t)))),
+    ta, h('div', { class: 'row', style: { justifyContent: 'space-between', alignItems: 'center' } }, count, h('span', { class: 'muted small' }, `at least ${minWords} words`)), btn));
+  ta.focus();
+}
+
+function markedStep(app, root) {
+  const { db, state } = app;
+  const marks = unseenMarks(state);
+  if (!marks.length) return next(app);
+  const cards = marks.map((a) => {
+    const item = db.items[a.itemId] || {};
+    const verdict = ANSWER_LEVELS[a.mark.score] || '';
+    return h('div', { class: 'card stack' },
+      rich('p', item.prompt || '', { style: { fontWeight: 700 } }),
+      h('p', { class: 'muted small' }, item.passageSource || ''),
+      h('div', { class: 'card', style: { background: 'var(--bg)', whiteSpace: 'pre-wrap' } }, a.text),
+      h('p', {}, h('span', { class: `chip ${a.mark.score === 2 ? 'mastered' : a.mark.score === 1 ? 'learning' : ''}` }, verdict), a.mark.note ? ` ${a.mark.note}` : ''),
+      item.model ? h('details', {}, h('summary', { style: { cursor: 'pointer' } }, 'See a model answer'), h('p', { class: 'learn', style: { marginTop: '8px' } }, item.model)) : null);
+  });
+  marks.forEach((a) => { a.seen = true; });
+  app.save();
+  mount(root, header(app, 'Reading', null), h('div', { class: 'q-wrap stack' },
+    h('h2', {}, 'Your reading answers, marked'),
+    cards,
+    h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'On we go')));
 }
 
 // ---------------------------------------------------------------- companion ritual
