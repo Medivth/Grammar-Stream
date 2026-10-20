@@ -1,0 +1,50 @@
+// Topic mastery: exponential moving average of correctness with explicit states.
+// locked -> available -> learning -> proficient -> mastered.
+// "mastered" is only granted by later, delayed success in mixed review.
+
+export const ALPHA = 0.25;
+export const PROFICIENT_AT = 0.85;
+export const MIN_ATTEMPTS = 5;
+export const DELAYED_PASSES_FOR_MASTERY = 2;
+export const DELAY_DAYS = 3;
+
+export function newTopicState() {
+  // Prior of 0.5: five straight correct answers reach 0.85.
+  return { ema: 0.5, n: 0, state: 'learning', profDay: null, delayed: 0, started: null };
+}
+
+export function recordTopicAttempt(t, correct, today, { mixed = true } = {}) {
+  const s = { ...(t || newTopicState()) };
+  if (s.started == null) s.started = today;
+  s.ema += ALPHA * ((correct ? 1 : 0) - s.ema);
+  s.n += 1;
+
+  if (s.state === 'learning' && s.ema >= PROFICIENT_AT && s.n >= MIN_ATTEMPTS) {
+    s.state = 'proficient';
+    s.profDay = today;
+    s.delayed = 0;
+  } else if (s.state === 'proficient') {
+    if (correct && mixed && today - s.profDay >= DELAY_DAYS) s.delayed += 1;
+    if (s.delayed >= DELAYED_PASSES_FOR_MASTERY && s.ema >= PROFICIENT_AT) s.state = 'mastered';
+    else if (s.ema < 0.6) s.state = 'learning';
+  } else if (s.state === 'mastered' && s.ema < 0.7) {
+    s.state = 'proficient';
+    s.profDay = today;
+    s.delayed = 0;
+  }
+  return s;
+}
+
+/** Topic is ready to start when every prerequisite is at least proficient. */
+export function isAvailable(topic, topicStates) {
+  return (topic.prereqs || []).every((p) => {
+    const st = topicStates[p]?.state;
+    return st === 'proficient' || st === 'mastered' || st === 'assumed';
+  });
+}
+
+export function topicStatus(topic, topicStates) {
+  const st = topicStates[topic.id];
+  if (st) return st.state;
+  return isAvailable(topic, topicStates) ? 'available' : 'locked';
+}

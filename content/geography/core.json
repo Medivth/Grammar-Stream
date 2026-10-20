@@ -1,0 +1,2066 @@
+{
+ "subject": "geography",
+ "deck": "core",
+ "topics": [
+  {
+   "id": "geography.continents",
+   "title": "Continents and oceans",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 6,
+   "intro": "There are seven continents and five oceans. Knowing where they are is the starting point for everything else in geography.",
+   "teach": "Name the seven continents, biggest first if you can.",
+   "talk": "Ask her which ocean you would cross to fly to New York."
+  },
+  {
+   "id": "geography.lines",
+   "title": "Lines on the globe",
+   "kind": "facts",
+   "prereqs": [
+    "geography.continents"
+   ],
+   "batch": 5,
+   "intro": "Imaginary lines help us describe where places are and explain climates: the Equator, the tropics, the polar circles and the Prime Meridian.",
+   "teach": "Explain why it is hot near the Equator.",
+   "talk": "Ask her which hemisphere Australia is in."
+  },
+  {
+   "id": "geography.uk",
+   "title": "The United Kingdom",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 6,
+   "intro": "The UK is made of four countries. Let’s learn them, their capitals, the big rivers and the highest mountains.",
+   "teach": "Explain the difference between Great Britain and the United Kingdom.",
+   "talk": "Ask her the capital of Wales and the UK’s longest river."
+  },
+  {
+   "id": "geography.europe-1",
+   "title": "Countries of Europe: west and north",
+   "kind": "facts",
+   "prereqs": [
+    "geography.continents"
+   ],
+   "batch": 6,
+   "teach": "Describe where Portugal is compared with Spain.",
+   "talk": "Ask her which countries border France."
+  },
+  {
+   "id": "geography.europe-2",
+   "title": "Countries of Europe: centre and east",
+   "kind": "facts",
+   "prereqs": [
+    "geography.europe-1"
+   ],
+   "batch": 6,
+   "teach": "Name three countries that border Germany.",
+   "talk": "Ask her to find Poland on a map."
+  },
+  {
+   "id": "geography.capitals-1",
+   "title": "Capitals of Europe: west and north",
+   "kind": "facts",
+   "prereqs": [
+    "geography.europe-1"
+   ],
+   "batch": 6,
+   "teach": "Explain how you remember a tricky capital.",
+   "talk": "Quiz: what is the capital of Norway?"
+  },
+  {
+   "id": "geography.capitals-2",
+   "title": "Capitals of Europe: centre and east",
+   "kind": "facts",
+   "prereqs": [
+    "geography.europe-2",
+    "geography.capitals-1"
+   ],
+   "batch": 6,
+   "teach": "Name a capital that is NOT the biggest city in its country.",
+   "talk": "Quiz: what is the capital of Hungary?"
+  },
+  {
+   "id": "geography.weather",
+   "title": "Air, water and weather",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "geography.w.d1",
+    "geography.w.d2",
+    "geography.w.d3"
+   ],
+   "intro": "Before we learn about weather, let’s check some ideas about air and water. Many adults get these wrong!",
+   "teach": "Explain the water cycle using the words evaporation and condensation.",
+   "talk": "Ask her why puddles disappear on a sunny day."
+  }
+ ],
+ "items": [
+  {
+   "id": "geography.c.asia",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "asia",
+   "answer": "Asia",
+   "explain": "Asia is the largest continent, with more than half the world’s people.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "geography.c.africa",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "africa",
+   "answer": "Africa",
+   "explain": "Africa is the second largest continent, with 54 countries. The Equator crosses it.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "geography.c.north-america",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "north-america",
+   "answer": "North America",
+   "explain": "North America includes Canada, the USA, Mexico, Central America and the Caribbean.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "geography.c.south-america",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "south-america",
+   "answer": "South America",
+   "explain": "South America contains the Amazon rainforest and the Andes mountains.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "geography.c.antarctica",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "antarctica",
+   "answer": "Antarctica",
+   "explain": "Antarctica is the coldest continent and is covered in ice. No country owns it.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "geography.c.europe",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "europe",
+   "answer": "Europe",
+   "explain": "Europe is the second smallest continent. The UK is part of it.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "geography.c.oceania",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "continents",
+   "feature": "oceania",
+   "answer": "Oceania",
+   "explain": "Oceania includes Australia, New Zealand and many Pacific islands. Some books call this continent Australia.",
+   "choosePrompt": "Which continent is highlighted?"
+  },
+  {
+   "id": "geography.o.pacific",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "oceans",
+   "feature": "pacific",
+   "answer": "Pacific Ocean",
+   "explain": "The Pacific is the largest and deepest ocean.",
+   "choosePrompt": "Which ocean is highlighted?",
+   "accept": [
+    "Pacific"
+   ]
+  },
+  {
+   "id": "geography.o.atlantic",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "oceans",
+   "feature": "atlantic",
+   "answer": "Atlantic Ocean",
+   "explain": "The Atlantic lies between the Americas and Europe and Africa.",
+   "choosePrompt": "Which ocean is highlighted?",
+   "accept": [
+    "Atlantic"
+   ]
+  },
+  {
+   "id": "geography.o.indian",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "oceans",
+   "feature": "indian",
+   "answer": "Indian Ocean",
+   "explain": "The Indian Ocean lies between Africa, Asia and Australia.",
+   "choosePrompt": "Which ocean is highlighted?",
+   "accept": [
+    "Indian"
+   ]
+  },
+  {
+   "id": "geography.o.southern",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "oceans",
+   "feature": "southern",
+   "answer": "Southern Ocean",
+   "explain": "The Southern Ocean surrounds Antarctica.",
+   "choosePrompt": "Which ocean is highlighted?",
+   "accept": [
+    "Southern"
+   ]
+  },
+  {
+   "id": "geography.o.arctic",
+   "topic": "geography.continents",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "oceans",
+   "feature": "arctic",
+   "answer": "Arctic Ocean",
+   "explain": "The Arctic is the smallest ocean, around the North Pole.",
+   "choosePrompt": "Which ocean is highlighted?",
+   "accept": [
+    "Arctic"
+   ]
+  },
+  {
+   "id": "geography.c.count",
+   "topic": "geography.continents",
+   "kind": "fact",
+   "prompt": "How many continents are there?",
+   "answer": "7",
+   "distractors": [
+    "5",
+    "6",
+    "8"
+   ],
+   "explain": "Seven: Asia, Africa, North America, South America, Antarctica, Europe and Oceania."
+  },
+  {
+   "id": "geography.c.largest-ocean",
+   "topic": "geography.continents",
+   "kind": "fact",
+   "prompt": "Which is the largest ocean?",
+   "answer": "Pacific Ocean",
+   "distractors": [
+    "Atlantic Ocean",
+    "Indian Ocean",
+    "Arctic Ocean"
+   ],
+   "explain": "The Pacific is bigger than all the land on Earth put together.",
+   "accept": [
+    "pacific",
+    "the pacific"
+   ]
+  },
+  {
+   "id": "geography.l.equator",
+   "topic": "geography.lines",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "lines",
+   "feature": "equator",
+   "answer": "Equator",
+   "explain": "The Equator (0°) divides the Earth into the Northern and Southern Hemispheres.",
+   "choosePrompt": "Which line is highlighted in red?",
+   "accept": []
+  },
+  {
+   "id": "geography.l.cancer",
+   "topic": "geography.lines",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "lines",
+   "feature": "cancer",
+   "answer": "Tropic of Cancer",
+   "explain": "The Tropic of Cancer is about 23.5° north. The Sun is directly overhead here at noon on about 21 June.",
+   "choosePrompt": "Which line is highlighted in red?",
+   "accept": []
+  },
+  {
+   "id": "geography.l.capricorn",
+   "topic": "geography.lines",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "lines",
+   "feature": "capricorn",
+   "answer": "Tropic of Capricorn",
+   "explain": "The Tropic of Capricorn is about 23.5° south. The Sun is directly overhead here at noon on about 21 December.",
+   "choosePrompt": "Which line is highlighted in red?",
+   "accept": []
+  },
+  {
+   "id": "geography.l.arctic",
+   "topic": "geography.lines",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "lines",
+   "feature": "arctic",
+   "answer": "Arctic Circle",
+   "explain": "North of the Arctic Circle (about 66.5° N) there is at least one day a year when the Sun never sets.",
+   "choosePrompt": "Which line is highlighted in red?",
+   "accept": []
+  },
+  {
+   "id": "geography.l.antarctic",
+   "topic": "geography.lines",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "lines",
+   "feature": "antarctic",
+   "answer": "Antarctic Circle",
+   "explain": "The Antarctic Circle is about 66.5° south.",
+   "choosePrompt": "Which line is highlighted in red?",
+   "accept": []
+  },
+  {
+   "id": "geography.l.greenwich",
+   "topic": "geography.lines",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "lines",
+   "feature": "greenwich",
+   "answer": "Prime (Greenwich) Meridian",
+   "explain": "The Prime Meridian (0° longitude) runs through Greenwich in London.",
+   "choosePrompt": "Which line is highlighted in red?",
+   "accept": [
+    "Prime Meridian",
+    "Greenwich Meridian"
+   ]
+  },
+  {
+   "id": "geography.l.hemis",
+   "topic": "geography.lines",
+   "kind": "fact",
+   "prompt": "The Equator divides the Earth into the Northern and ______ Hemispheres.",
+   "answer": "Southern",
+   "distractors": [
+    "Eastern",
+    "Western",
+    "Lower"
+   ],
+   "explain": "North and South of the Equator are the Northern and Southern Hemispheres."
+  },
+  {
+   "id": "geography.l.uk-hemi",
+   "topic": "geography.lines",
+   "kind": "fact",
+   "prompt": "Is the UK in the Northern or Southern Hemisphere?",
+   "answer": "Northern",
+   "distractors": [
+    "Southern"
+   ],
+   "explain": "The UK is about 50–60° north of the Equator.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.l.hot",
+   "topic": "geography.lines",
+   "kind": "mcq",
+   "prompt": "Why is it usually hotter near the Equator?",
+   "options": [
+    {
+     "text": "The Sun’s rays hit the ground more directly, so the heat is concentrated",
+     "correct": true
+    },
+    {
+     "text": "The Equator is closer to the Sun",
+     "correct": false,
+     "feedback": "The difference in distance is tiny. It is about the angle of the Sun’s rays."
+    },
+    {
+     "text": "There are more volcanoes there",
+     "correct": false,
+     "feedback": "Volcanoes don’t control climate zones."
+    }
+   ],
+   "explain": "Near the Equator the Sun is high in the sky, so its energy is spread over a smaller area."
+  },
+  {
+   "id": "geography.l.latitude",
+   "topic": "geography.lines",
+   "kind": "fact",
+   "prompt": "Lines that run east–west around the globe, measuring how far north or south you are, are called lines of…",
+   "answer": "latitude",
+   "distractors": [
+    "longitude",
+    "altitude",
+    "meridians"
+   ],
+   "explain": "Latitude measures north–south (like rungs on a ladder: “lat-itude is flat”). Longitude measures east–west."
+  },
+  {
+   "id": "geography.uk.eng",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "features",
+   "feature": "ENG",
+   "answer": "England",
+   "explain": "England is the largest UK country by area and population.",
+   "choosePrompt": "Which country of the UK is highlighted?"
+  },
+  {
+   "id": "geography.uk.sct",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "features",
+   "feature": "SCT",
+   "answer": "Scotland",
+   "explain": "Scotland is in the north of Great Britain.",
+   "choosePrompt": "Which country of the UK is highlighted?"
+  },
+  {
+   "id": "geography.uk.wls",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "features",
+   "feature": "WLS",
+   "answer": "Wales",
+   "explain": "Wales is in the west of Great Britain.",
+   "choosePrompt": "Which country of the UK is highlighted?"
+  },
+  {
+   "id": "geography.uk.nir",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "features",
+   "feature": "NIR",
+   "answer": "Northern Ireland",
+   "explain": "Northern Ireland is on the island of Ireland, and is part of the UK.",
+   "choosePrompt": "Which country of the UK is highlighted?"
+  },
+  {
+   "id": "geography.uk.cap.london",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "markers",
+   "feature": "london",
+   "answer": "London",
+   "explain": "London is the capital of England.",
+   "choosePrompt": "Which capital city is marked?",
+   "group": "capital"
+  },
+  {
+   "id": "geography.uk.capq.london",
+   "topic": "geography.uk",
+   "kind": "fact",
+   "prompt": "What is the capital of England?",
+   "answer": "London",
+   "distractors": [
+    "Edinburgh",
+    "Cardiff",
+    "Belfast"
+   ],
+   "explain": "London is the capital of England.",
+   "map": "uk",
+   "feature": "ENG"
+  },
+  {
+   "id": "geography.uk.cap.edinburgh",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "markers",
+   "feature": "edinburgh",
+   "answer": "Edinburgh",
+   "explain": "Edinburgh is the capital of Scotland.",
+   "choosePrompt": "Which capital city is marked?",
+   "group": "capital"
+  },
+  {
+   "id": "geography.uk.capq.edinburgh",
+   "topic": "geography.uk",
+   "kind": "fact",
+   "prompt": "What is the capital of Scotland?",
+   "answer": "Edinburgh",
+   "distractors": [
+    "London",
+    "Cardiff",
+    "Belfast",
+    "Glasgow"
+   ],
+   "explain": "Edinburgh is the capital of Scotland.",
+   "map": "uk",
+   "feature": "SCT"
+  },
+  {
+   "id": "geography.uk.cap.cardiff",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "markers",
+   "feature": "cardiff",
+   "answer": "Cardiff",
+   "explain": "Cardiff is the capital of Wales.",
+   "choosePrompt": "Which capital city is marked?",
+   "group": "capital"
+  },
+  {
+   "id": "geography.uk.capq.cardiff",
+   "topic": "geography.uk",
+   "kind": "fact",
+   "prompt": "What is the capital of Wales?",
+   "answer": "Cardiff",
+   "distractors": [
+    "London",
+    "Edinburgh",
+    "Belfast",
+    "Swansea"
+   ],
+   "explain": "Cardiff is the capital of Wales.",
+   "map": "uk",
+   "feature": "WLS"
+  },
+  {
+   "id": "geography.uk.cap.belfast",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "markers",
+   "feature": "belfast",
+   "answer": "Belfast",
+   "explain": "Belfast is the capital of Northern Ireland.",
+   "choosePrompt": "Which capital city is marked?",
+   "group": "capital"
+  },
+  {
+   "id": "geography.uk.capq.belfast",
+   "topic": "geography.uk",
+   "kind": "fact",
+   "prompt": "What is the capital of Northern Ireland?",
+   "answer": "Belfast",
+   "distractors": [
+    "London",
+    "Edinburgh",
+    "Cardiff"
+   ],
+   "explain": "Belfast is the capital of Northern Ireland.",
+   "map": "uk",
+   "feature": "NIR"
+  },
+  {
+   "id": "geography.uk.r.thames",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "rivers",
+   "feature": "river-thames",
+   "answer": "River Thames",
+   "explain": "The Thames flows through London to the North Sea. It is the longest river entirely in England.",
+   "choosePrompt": "Which river is highlighted?",
+   "accept": [
+    "Thames"
+   ],
+   "group": "river"
+  },
+  {
+   "id": "geography.uk.r.severn",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "rivers",
+   "feature": "river-severn",
+   "answer": "River Severn",
+   "explain": "The Severn is the UK’s longest river (about 354 km). It starts in Wales.",
+   "choosePrompt": "Which river is highlighted?",
+   "accept": [
+    "Severn"
+   ],
+   "group": "river"
+  },
+  {
+   "id": "geography.uk.r.trent",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "rivers",
+   "feature": "river-trent",
+   "answer": "River Trent",
+   "explain": "The Trent flows through the Midlands, past Nottingham.",
+   "choosePrompt": "Which river is highlighted?",
+   "accept": [
+    "Trent"
+   ],
+   "group": "river"
+  },
+  {
+   "id": "geography.uk.r.tay",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "rivers",
+   "feature": "river-tay",
+   "answer": "River Tay",
+   "explain": "The Tay is Scotland’s longest river.",
+   "choosePrompt": "Which river is highlighted?",
+   "accept": [
+    "Tay"
+   ],
+   "group": "river"
+  },
+  {
+   "id": "geography.uk.r.tweed",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "rivers",
+   "feature": "river-tweed",
+   "answer": "River Tweed",
+   "explain": "Part of the Tweed forms the border between England and Scotland.",
+   "choosePrompt": "Which river is highlighted?",
+   "accept": [
+    "Tweed"
+   ],
+   "group": "river"
+  },
+  {
+   "id": "geography.uk.longest",
+   "topic": "geography.uk",
+   "kind": "fact",
+   "prompt": "What is the longest river in the UK?",
+   "answer": "River Severn",
+   "distractors": [
+    "River Thames",
+    "River Trent",
+    "River Tay"
+   ],
+   "explain": "The Severn (about 354 km) is longer than the Thames (about 346 km).",
+   "accept": [
+    "severn",
+    "the severn",
+    "the river severn"
+   ]
+  },
+  {
+   "id": "geography.uk.p.ben-nevis",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "markers",
+   "feature": "ben-nevis",
+   "answer": "Ben Nevis",
+   "explain": "Ben Nevis (1345 m), in Scotland, is the highest mountain in the UK.",
+   "choosePrompt": "Which mountain is marked?",
+   "accept": [],
+   "group": "peak"
+  },
+  {
+   "id": "geography.uk.p.snowdon",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "markers",
+   "feature": "snowdon",
+   "answer": "Yr Wyddfa (Snowdon)",
+   "explain": "Yr Wyddfa (Snowdon), 1085 m, is the highest mountain in Wales.",
+   "choosePrompt": "Which mountain is marked?",
+   "accept": [
+    "Snowdon",
+    "Yr Wyddfa"
+   ],
+   "group": "peak"
+  },
+  {
+   "id": "geography.uk.p.scafell",
+   "topic": "geography.uk",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "markers",
+   "feature": "scafell",
+   "answer": "Scafell Pike",
+   "explain": "Scafell Pike (978 m) in the Lake District is the highest mountain in England.",
+   "choosePrompt": "Which mountain is marked?",
+   "accept": [],
+   "group": "peak"
+  },
+  {
+   "id": "geography.uk.highest",
+   "topic": "geography.uk",
+   "kind": "fact",
+   "prompt": "What is the highest mountain in the UK?",
+   "answer": "Ben Nevis",
+   "distractors": [
+    "Scafell Pike",
+    "Snowdon",
+    "Slieve Donard"
+   ],
+   "explain": "Ben Nevis in the Scottish Highlands is 1345 m high."
+  },
+  {
+   "id": "geography.uk.gb",
+   "topic": "geography.uk",
+   "kind": "mcq",
+   "prompt": "What is the difference between Great Britain and the United Kingdom?",
+   "options": [
+    {
+     "text": "Great Britain is the island with England, Scotland and Wales; the UK also includes Northern Ireland",
+     "correct": true
+    },
+    {
+     "text": "They are exactly the same thing",
+     "correct": false,
+     "feedback": "Great Britain is an island. The UK is a country that also includes Northern Ireland."
+    },
+    {
+     "text": "Great Britain includes Ireland; the UK does not",
+     "correct": false,
+     "feedback": "The Republic of Ireland is a separate country, not part of either."
+    }
+   ],
+   "explain": "The UK = England + Scotland + Wales + Northern Ireland. Great Britain is the largest island: England, Scotland and Wales."
+  },
+  {
+   "id": "geography.eu.gbr",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "GBR",
+   "answer": "United Kingdom",
+   "explain": "This is United Kingdom.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": [
+    "UK",
+    "Britain",
+    "Great Britain"
+   ]
+  },
+  {
+   "id": "geography.cap.gbr",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of United Kingdom?",
+   "answer": "London",
+   "distractors": [
+    "Manchester",
+    "Edinburgh"
+   ],
+   "explain": "The capital of United Kingdom is London.",
+   "map": "europe",
+   "feature": "GBR",
+   "fill": true,
+   "learn": "The capital of **United Kingdom** is **London**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.irl",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "IRL",
+   "answer": "Ireland",
+   "explain": "This is Ireland.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.irl",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Ireland?",
+   "answer": "Dublin",
+   "distractors": [
+    "Cork",
+    "Belfast"
+   ],
+   "explain": "The capital of Ireland is Dublin.",
+   "map": "europe",
+   "feature": "IRL",
+   "fill": true,
+   "learn": "The capital of **Ireland** is **Dublin**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.fra",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "FRA",
+   "answer": "France",
+   "explain": "This is France.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.fra",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of France?",
+   "answer": "Paris",
+   "distractors": [
+    "Lyon",
+    "Marseille"
+   ],
+   "explain": "The capital of France is Paris.",
+   "map": "europe",
+   "feature": "FRA",
+   "fill": true,
+   "learn": "The capital of **France** is **Paris**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.esp",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "ESP",
+   "answer": "Spain",
+   "explain": "This is Spain.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.esp",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Spain?",
+   "answer": "Madrid",
+   "distractors": [
+    "Barcelona",
+    "Seville"
+   ],
+   "explain": "The capital of Spain is Madrid. Madrid, not Barcelona.",
+   "map": "europe",
+   "feature": "ESP",
+   "fill": true,
+   "learn": "The capital of **Spain** is **Madrid**. Madrid, not Barcelona.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.prt",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "PRT",
+   "answer": "Portugal",
+   "explain": "This is Portugal.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.prt",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Portugal?",
+   "answer": "Lisbon",
+   "distractors": [
+    "Porto",
+    "Madrid"
+   ],
+   "explain": "The capital of Portugal is Lisbon.",
+   "map": "europe",
+   "feature": "PRT",
+   "fill": true,
+   "learn": "The capital of **Portugal** is **Lisbon**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.deu",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "DEU",
+   "answer": "Germany",
+   "explain": "This is Germany.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.deu",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Germany?",
+   "answer": "Berlin",
+   "distractors": [
+    "Munich",
+    "Frankfurt"
+   ],
+   "explain": "The capital of Germany is Berlin. Berlin, not Munich.",
+   "map": "europe",
+   "feature": "DEU",
+   "fill": true,
+   "learn": "The capital of **Germany** is **Berlin**. Berlin, not Munich.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.ita",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "ITA",
+   "answer": "Italy",
+   "explain": "This is Italy.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.ita",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Italy?",
+   "answer": "Rome",
+   "distractors": [
+    "Milan",
+    "Venice"
+   ],
+   "explain": "The capital of Italy is Rome. Rome, not Milan.",
+   "map": "europe",
+   "feature": "ITA",
+   "fill": true,
+   "learn": "The capital of **Italy** is **Rome**. Rome, not Milan.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.nld",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "NLD",
+   "answer": "Netherlands",
+   "explain": "This is Netherlands.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": [
+    "Holland",
+    "The Netherlands"
+   ]
+  },
+  {
+   "id": "geography.cap.nld",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Netherlands?",
+   "answer": "Amsterdam",
+   "distractors": [
+    "Rotterdam",
+    "Brussels"
+   ],
+   "explain": "The capital of Netherlands is Amsterdam. Amsterdam is the capital, though the government sits in The Hague.",
+   "map": "europe",
+   "feature": "NLD",
+   "fill": true,
+   "learn": "The capital of **Netherlands** is **Amsterdam**. Amsterdam is the capital, though the government sits in The Hague.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.bel",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "BEL",
+   "answer": "Belgium",
+   "explain": "This is Belgium.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.bel",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Belgium?",
+   "answer": "Brussels",
+   "distractors": [
+    "Antwerp",
+    "Amsterdam"
+   ],
+   "explain": "The capital of Belgium is Brussels.",
+   "map": "europe",
+   "feature": "BEL",
+   "fill": true,
+   "learn": "The capital of **Belgium** is **Brussels**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.che",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "CHE",
+   "answer": "Switzerland",
+   "explain": "This is Switzerland.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.che",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Switzerland?",
+   "answer": "Bern",
+   "distractors": [
+    "Zurich",
+    "Geneva"
+   ],
+   "explain": "The capital of Switzerland is Bern. Bern, not Zurich or Geneva, which are bigger.",
+   "map": "europe",
+   "feature": "CHE",
+   "fill": true,
+   "learn": "The capital of **Switzerland** is **Bern**. Bern, not Zurich or Geneva, which are bigger.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.aut",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "AUT",
+   "answer": "Austria",
+   "explain": "This is Austria.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.aut",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Austria?",
+   "answer": "Vienna",
+   "distractors": [
+    "Salzburg",
+    "Berlin"
+   ],
+   "explain": "The capital of Austria is Vienna.",
+   "map": "europe",
+   "feature": "AUT",
+   "fill": true,
+   "learn": "The capital of **Austria** is **Vienna**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.nor",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "NOR",
+   "answer": "Norway",
+   "explain": "This is Norway.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.nor",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Norway?",
+   "answer": "Oslo",
+   "distractors": [
+    "Bergen",
+    "Stockholm"
+   ],
+   "explain": "The capital of Norway is Oslo.",
+   "map": "europe",
+   "feature": "NOR",
+   "fill": true,
+   "learn": "The capital of **Norway** is **Oslo**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.swe",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "SWE",
+   "answer": "Sweden",
+   "explain": "This is Sweden.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.swe",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Sweden?",
+   "answer": "Stockholm",
+   "distractors": [
+    "Gothenburg",
+    "Oslo"
+   ],
+   "explain": "The capital of Sweden is Stockholm.",
+   "map": "europe",
+   "feature": "SWE",
+   "fill": true,
+   "learn": "The capital of **Sweden** is **Stockholm**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.fin",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "FIN",
+   "answer": "Finland",
+   "explain": "This is Finland.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.fin",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Finland?",
+   "answer": "Helsinki",
+   "distractors": [
+    "Oslo",
+    "Tallinn"
+   ],
+   "explain": "The capital of Finland is Helsinki.",
+   "map": "europe",
+   "feature": "FIN",
+   "fill": true,
+   "learn": "The capital of **Finland** is **Helsinki**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.dnk",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "DNK",
+   "answer": "Denmark",
+   "explain": "This is Denmark.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.dnk",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Denmark?",
+   "answer": "Copenhagen",
+   "distractors": [
+    "Aarhus",
+    "Stockholm"
+   ],
+   "explain": "The capital of Denmark is Copenhagen.",
+   "map": "europe",
+   "feature": "DNK",
+   "fill": true,
+   "learn": "The capital of **Denmark** is **Copenhagen**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.isl",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "ISL",
+   "answer": "Iceland",
+   "explain": "This is Iceland.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.isl",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Iceland?",
+   "answer": "Reykjavik",
+   "distractors": [
+    "Oslo",
+    "Dublin"
+   ],
+   "explain": "The capital of Iceland is Reykjavik.",
+   "map": "europe",
+   "feature": "ISL",
+   "fill": true,
+   "learn": "The capital of **Iceland** is **Reykjavik**.",
+   "accept": [
+    "Reykjavík"
+   ]
+  },
+  {
+   "id": "geography.eu.grc",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "GRC",
+   "answer": "Greece",
+   "explain": "This is Greece.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.grc",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Greece?",
+   "answer": "Athens",
+   "distractors": [
+    "Thessaloniki",
+    "Sparta"
+   ],
+   "explain": "The capital of Greece is Athens.",
+   "map": "europe",
+   "feature": "GRC",
+   "fill": true,
+   "learn": "The capital of **Greece** is **Athens**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.lux",
+   "topic": "geography.europe-1",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "LUX",
+   "answer": "Luxembourg",
+   "explain": "This is Luxembourg.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.lux",
+   "topic": "geography.capitals-1",
+   "kind": "fact",
+   "prompt": "What is the capital of Luxembourg?",
+   "answer": "Luxembourg",
+   "distractors": [
+    "Brussels",
+    "Strasbourg"
+   ],
+   "explain": "The capital of Luxembourg is Luxembourg. Its capital has the same name: Luxembourg.",
+   "map": "europe",
+   "feature": "LUX",
+   "fill": true,
+   "learn": "The capital of **Luxembourg** is **Luxembourg**. Its capital has the same name: Luxembourg.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.pol",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "POL",
+   "answer": "Poland",
+   "explain": "This is Poland.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.pol",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Poland?",
+   "answer": "Warsaw",
+   "distractors": [
+    "Kraków",
+    "Prague"
+   ],
+   "explain": "The capital of Poland is Warsaw.",
+   "map": "europe",
+   "feature": "POL",
+   "fill": true,
+   "learn": "The capital of **Poland** is **Warsaw**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.cze",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "CZE",
+   "answer": "Czechia",
+   "explain": "This is Czechia.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": [
+    "Czech Republic"
+   ]
+  },
+  {
+   "id": "geography.cap.cze",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Czechia?",
+   "answer": "Prague",
+   "distractors": [
+    "Brno",
+    "Vienna"
+   ],
+   "explain": "The capital of Czechia is Prague.",
+   "map": "europe",
+   "feature": "CZE",
+   "fill": true,
+   "learn": "The capital of **Czechia** is **Prague**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.svk",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "SVK",
+   "answer": "Slovakia",
+   "explain": "This is Slovakia.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.svk",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Slovakia?",
+   "answer": "Bratislava",
+   "distractors": [
+    "Prague",
+    "Ljubljana"
+   ],
+   "explain": "The capital of Slovakia is Bratislava. Bratislava: don’t mix it up with Ljubljana (Slovenia).",
+   "map": "europe",
+   "feature": "SVK",
+   "fill": true,
+   "learn": "The capital of **Slovakia** is **Bratislava**. Bratislava: don’t mix it up with Ljubljana (Slovenia).",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.hun",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "HUN",
+   "answer": "Hungary",
+   "explain": "This is Hungary.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.hun",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Hungary?",
+   "answer": "Budapest",
+   "distractors": [
+    "Bucharest",
+    "Vienna"
+   ],
+   "explain": "The capital of Hungary is Budapest. Budapest: don’t mix it up with Bucharest (Romania).",
+   "map": "europe",
+   "feature": "HUN",
+   "fill": true,
+   "learn": "The capital of **Hungary** is **Budapest**. Budapest: don’t mix it up with Bucharest (Romania).",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.rou",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "ROU",
+   "answer": "Romania",
+   "explain": "This is Romania.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.rou",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Romania?",
+   "answer": "Bucharest",
+   "distractors": [
+    "Budapest",
+    "Sofia"
+   ],
+   "explain": "The capital of Romania is Bucharest. Bucharest: don’t mix it up with Budapest (Hungary).",
+   "map": "europe",
+   "feature": "ROU",
+   "fill": true,
+   "learn": "The capital of **Romania** is **Bucharest**. Bucharest: don’t mix it up with Budapest (Hungary).",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.bgr",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "BGR",
+   "answer": "Bulgaria",
+   "explain": "This is Bulgaria.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.bgr",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Bulgaria?",
+   "answer": "Sofia",
+   "distractors": [
+    "Bucharest",
+    "Belgrade"
+   ],
+   "explain": "The capital of Bulgaria is Sofia.",
+   "map": "europe",
+   "feature": "BGR",
+   "fill": true,
+   "learn": "The capital of **Bulgaria** is **Sofia**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.hrv",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "HRV",
+   "answer": "Croatia",
+   "explain": "This is Croatia.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.hrv",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Croatia?",
+   "answer": "Zagreb",
+   "distractors": [
+    "Split",
+    "Dubrovnik"
+   ],
+   "explain": "The capital of Croatia is Zagreb.",
+   "map": "europe",
+   "feature": "HRV",
+   "fill": true,
+   "learn": "The capital of **Croatia** is **Zagreb**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.svn",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "SVN",
+   "answer": "Slovenia",
+   "explain": "This is Slovenia.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.svn",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Slovenia?",
+   "answer": "Ljubljana",
+   "distractors": [
+    "Bratislava",
+    "Zagreb"
+   ],
+   "explain": "The capital of Slovenia is Ljubljana. Ljubljana: don’t mix it up with Bratislava (Slovakia).",
+   "map": "europe",
+   "feature": "SVN",
+   "fill": true,
+   "learn": "The capital of **Slovenia** is **Ljubljana**. Ljubljana: don’t mix it up with Bratislava (Slovakia).",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.srb",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "SRB",
+   "answer": "Serbia",
+   "explain": "This is Serbia.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.srb",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Serbia?",
+   "answer": "Belgrade",
+   "distractors": [
+    "Sarajevo",
+    "Sofia"
+   ],
+   "explain": "The capital of Serbia is Belgrade.",
+   "map": "europe",
+   "feature": "SRB",
+   "fill": true,
+   "learn": "The capital of **Serbia** is **Belgrade**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.bih",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "BIH",
+   "answer": "Bosnia and Herzegovina",
+   "explain": "This is Bosnia and Herzegovina.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.bih",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Bosnia and Herzegovina?",
+   "answer": "Sarajevo",
+   "distractors": [
+    "Belgrade",
+    "Mostar"
+   ],
+   "explain": "The capital of Bosnia and Herzegovina is Sarajevo.",
+   "map": "europe",
+   "feature": "BIH",
+   "fill": true,
+   "learn": "The capital of **Bosnia and Herzegovina** is **Sarajevo**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.mne",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "MNE",
+   "answer": "Montenegro",
+   "explain": "This is Montenegro.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.mne",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Montenegro?",
+   "answer": "Podgorica",
+   "distractors": [
+    "Tirana",
+    "Sarajevo"
+   ],
+   "explain": "The capital of Montenegro is Podgorica.",
+   "map": "europe",
+   "feature": "MNE",
+   "fill": true,
+   "learn": "The capital of **Montenegro** is **Podgorica**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.alb",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "ALB",
+   "answer": "Albania",
+   "explain": "This is Albania.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.alb",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Albania?",
+   "answer": "Tirana",
+   "distractors": [
+    "Podgorica",
+    "Skopje"
+   ],
+   "explain": "The capital of Albania is Tirana.",
+   "map": "europe",
+   "feature": "ALB",
+   "fill": true,
+   "learn": "The capital of **Albania** is **Tirana**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.mkd",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "MKD",
+   "answer": "North Macedonia",
+   "explain": "This is North Macedonia.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.mkd",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of North Macedonia?",
+   "answer": "Skopje",
+   "distractors": [
+    "Tirana",
+    "Sofia"
+   ],
+   "explain": "The capital of North Macedonia is Skopje.",
+   "map": "europe",
+   "feature": "MKD",
+   "fill": true,
+   "learn": "The capital of **North Macedonia** is **Skopje**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.ukr",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "UKR",
+   "answer": "Ukraine",
+   "explain": "This is Ukraine.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.ukr",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Ukraine?",
+   "answer": "Kyiv",
+   "distractors": [
+    "Lviv",
+    "Moscow"
+   ],
+   "explain": "The capital of Ukraine is Kyiv. Kyiv (sometimes spelt Kiev).",
+   "map": "europe",
+   "feature": "UKR",
+   "fill": true,
+   "learn": "The capital of **Ukraine** is **Kyiv**. Kyiv (sometimes spelt Kiev).",
+   "accept": [
+    "Kiev"
+   ]
+  },
+  {
+   "id": "geography.eu.blr",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "BLR",
+   "answer": "Belarus",
+   "explain": "This is Belarus.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.blr",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Belarus?",
+   "answer": "Minsk",
+   "distractors": [
+    "Kyiv",
+    "Vilnius"
+   ],
+   "explain": "The capital of Belarus is Minsk.",
+   "map": "europe",
+   "feature": "BLR",
+   "fill": true,
+   "learn": "The capital of **Belarus** is **Minsk**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.mda",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "MDA",
+   "answer": "Moldova",
+   "explain": "This is Moldova.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.mda",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Moldova?",
+   "answer": "Chișinău",
+   "distractors": [
+    "Bucharest",
+    "Kyiv"
+   ],
+   "explain": "The capital of Moldova is Chișinău. Chișinău (you can type Chisinau).",
+   "map": "europe",
+   "feature": "MDA",
+   "fill": true,
+   "learn": "The capital of **Moldova** is **Chișinău**. Chișinău (you can type Chisinau).",
+   "accept": [
+    "Chisinau"
+   ]
+  },
+  {
+   "id": "geography.eu.ltu",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "LTU",
+   "answer": "Lithuania",
+   "explain": "This is Lithuania.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.ltu",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Lithuania?",
+   "answer": "Vilnius",
+   "distractors": [
+    "Riga",
+    "Minsk"
+   ],
+   "explain": "The capital of Lithuania is Vilnius.",
+   "map": "europe",
+   "feature": "LTU",
+   "fill": true,
+   "learn": "The capital of **Lithuania** is **Vilnius**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.lva",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "LVA",
+   "answer": "Latvia",
+   "explain": "This is Latvia.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.lva",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Latvia?",
+   "answer": "Riga",
+   "distractors": [
+    "Tallinn",
+    "Vilnius"
+   ],
+   "explain": "The capital of Latvia is Riga.",
+   "map": "europe",
+   "feature": "LVA",
+   "fill": true,
+   "learn": "The capital of **Latvia** is **Riga**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.est",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "EST",
+   "answer": "Estonia",
+   "explain": "This is Estonia.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.est",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Estonia?",
+   "answer": "Tallinn",
+   "distractors": [
+    "Riga",
+    "Helsinki"
+   ],
+   "explain": "The capital of Estonia is Tallinn.",
+   "map": "europe",
+   "feature": "EST",
+   "fill": true,
+   "learn": "The capital of **Estonia** is **Tallinn**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.rus",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "RUS",
+   "answer": "Russia",
+   "explain": "This is Russia.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.rus",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Russia?",
+   "answer": "Moscow",
+   "distractors": [
+    "St Petersburg",
+    "Kyiv"
+   ],
+   "explain": "The capital of Russia is Moscow.",
+   "map": "europe",
+   "feature": "RUS",
+   "fill": true,
+   "learn": "The capital of **Russia** is **Moscow**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.mlt",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "MLT",
+   "answer": "Malta",
+   "explain": "This is Malta.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.mlt",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Malta?",
+   "answer": "Valletta",
+   "distractors": [
+    "Nicosia",
+    "Rome"
+   ],
+   "explain": "The capital of Malta is Valletta.",
+   "map": "europe",
+   "feature": "MLT",
+   "fill": true,
+   "learn": "The capital of **Malta** is **Valletta**.",
+   "accept": []
+  },
+  {
+   "id": "geography.eu.cyp",
+   "topic": "geography.europe-2",
+   "kind": "mapfact",
+   "map": "europe",
+   "layer": "countries",
+   "feature": "CYP",
+   "answer": "Cyprus",
+   "explain": "This is Cyprus.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "geography.cap.cyp",
+   "topic": "geography.capitals-2",
+   "kind": "fact",
+   "prompt": "What is the capital of Cyprus?",
+   "answer": "Nicosia",
+   "distractors": [
+    "Athens",
+    "Valletta"
+   ],
+   "explain": "The capital of Cyprus is Nicosia.",
+   "map": "europe",
+   "feature": "CYP",
+   "fill": true,
+   "learn": "The capital of **Cyprus** is **Nicosia**.",
+   "accept": []
+  },
+  {
+   "id": "geography.w.d1",
+   "topic": "geography.weather",
+   "kind": "mcq",
+   "prompt": "Does air have mass (does it weigh anything)?",
+   "options": [
+    {
+     "text": "Yes, air has mass, about 1.2 kg per cubic metre",
+     "correct": true
+    },
+    {
+     "text": "No, air weighs nothing",
+     "correct": false,
+     "feedback": "A common idea, but air is made of particles, and particles have mass. A room’s air can weigh more than you!"
+    },
+    {
+     "text": "Only when it is windy",
+     "correct": false,
+     "feedback": "Air always has mass, whether it is moving or not."
+    }
+   ],
+   "explain": "Air is matter: it has mass and takes up space. The weight of air above us causes air pressure."
+  },
+  {
+   "id": "geography.w.d2",
+   "topic": "geography.weather",
+   "kind": "mcq",
+   "prompt": "Is damp (humid) air heavier or lighter than dry air at the same temperature?",
+   "options": [
+    {
+     "text": "Lighter",
+     "correct": true
+    },
+    {
+     "text": "Heavier, because water is heavy",
+     "correct": false,
+     "feedback": "Surprising but true: water vapour molecules are lighter than the nitrogen and oxygen they replace, so humid air is less dense."
+    },
+    {
+     "text": "Exactly the same",
+     "correct": false,
+     "feedback": "There is a small difference: humid air is slightly lighter."
+    }
+   ],
+   "explain": "Water vapour (H₂O) has lighter molecules than nitrogen (N₂) and oxygen (O₂), so humid air is less dense. That helps it rise and form clouds."
+  },
+  {
+   "id": "geography.w.d3",
+   "topic": "geography.weather",
+   "kind": "mcq",
+   "prompt": "Why does the Sun appear to move across the sky during the day?",
+   "options": [
+    {
+     "text": "Because the Earth spins on its axis",
+     "correct": true
+    },
+    {
+     "text": "Because the Sun travels around the Earth each day",
+     "correct": false,
+     "feedback": "This is what people believed for thousands of years, but it is the Earth that turns."
+    },
+    {
+     "text": "Because clouds push it along",
+     "correct": false,
+     "feedback": "Clouds are much closer than the Sun and don’t affect where it appears."
+    }
+   ],
+   "explain": "The Earth rotates once every 24 hours, so the Sun appears to rise in the east and set in the west."
+  },
+  {
+   "id": "geography.w.evap",
+   "topic": "geography.weather",
+   "kind": "fact",
+   "prompt": "What is it called when liquid water turns into water vapour?",
+   "answer": "evaporation",
+   "distractors": [
+    "condensation",
+    "precipitation",
+    "transpiration"
+   ],
+   "explain": "Evaporation: the Sun heats water and it turns into vapour."
+  },
+  {
+   "id": "geography.w.cond",
+   "topic": "geography.weather",
+   "kind": "fact",
+   "prompt": "What is it called when water vapour cools and turns back into liquid droplets?",
+   "answer": "condensation",
+   "distractors": [
+    "evaporation",
+    "precipitation",
+    "infiltration"
+   ],
+   "explain": "Condensation forms clouds, and the droplets on a cold window."
+  },
+  {
+   "id": "geography.w.precip",
+   "topic": "geography.weather",
+   "kind": "fact",
+   "prompt": "What is the word for water falling from clouds as rain, sleet, snow or hail?",
+   "answer": "precipitation",
+   "distractors": [
+    "condensation",
+    "evaporation",
+    "collection"
+   ],
+   "explain": "Precipitation is any water falling from the sky."
+  },
+  {
+   "id": "geography.w.trans",
+   "topic": "geography.weather",
+   "kind": "fact",
+   "prompt": "What is it called when plants lose water vapour through their leaves?",
+   "answer": "transpiration",
+   "distractors": [
+    "evaporation",
+    "respiration",
+    "photosynthesis"
+   ],
+   "explain": "Transpiration: water moves up through a plant and escapes from its leaves."
+  },
+  {
+   "id": "geography.w.weather-climate",
+   "topic": "geography.weather",
+   "kind": "fact",
+   "prompt": "What is the difference between weather and climate?",
+   "answer": "weather is day-to-day; climate is the average over many years",
+   "distractors": [
+    "they mean the same",
+    "climate is day-to-day; weather is the average",
+    "weather is only about rain"
+   ],
+   "explain": "Weather is what happens today. Climate is the typical pattern over about 30 years.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "geography.w.cycle",
+   "topic": "geography.weather",
+   "kind": "order",
+   "prompt": "Put the water cycle in order, starting with water in the sea.",
+   "items": [
+    "evaporation",
+    "condensation",
+    "precipitation",
+    "collection"
+   ],
+   "labels": null,
+   "explain": "The Sun evaporates water; vapour condenses into clouds; water falls as precipitation; it collects in rivers, lakes and seas."
+  }
+ ]
+}

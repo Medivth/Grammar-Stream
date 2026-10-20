@@ -1,0 +1,502 @@
+{
+ "subject": "english",
+ "deck": "morphology",
+ "topics": [
+  {
+   "id": "english.morph-1",
+   "title": "Word parts: Prefixes",
+   "kind": "facts",
+   "prereqs": [],
+   "teach": "Explain how knowing one word part helps you work out a new word.",
+   "talk": "Ask her what “tele” means, and to name three words that use it."
+  },
+  {
+   "id": "english.morph-2",
+   "title": "Word parts: Latin and Greek roots",
+   "kind": "facts",
+   "prereqs": [
+    "english.morph-1"
+   ],
+   "teach": "Explain how knowing one word part helps you work out a new word.",
+   "talk": "Ask her what “tele” means, and to name three words that use it."
+  }
+ ],
+ "items": [
+  {
+   "id": "english.m.un",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “un-” mean (as in unhappy, unfair)?",
+   "answer": "not",
+   "distractors": [
+    "again",
+    "before",
+    "under"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“un-” means not: unhappy, unfair.",
+   "learn": "**un-** means **not**. Examples: unhappy, unfair."
+  },
+  {
+   "id": "english.m.dis",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “dis-” mean (as in disagree, disappear)?",
+   "answer": "not or the opposite of",
+   "distractors": [
+    "again",
+    "across",
+    "half"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“dis-” means not or the opposite of: disagree, disappear.",
+   "learn": "**dis-** means **not or the opposite of**. Examples: disagree, disappear."
+  },
+  {
+   "id": "english.m.mis",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “mis-” mean (as in misspell, misunderstand)?",
+   "answer": "wrongly or badly",
+   "distractors": [
+    "again",
+    "many",
+    "small"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“mis-” means wrongly or badly: misspell, misunderstand.",
+   "learn": "**mis-** means **wrongly or badly**. Examples: misspell, misunderstand."
+  },
+  {
+   "id": "english.m.re",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “re-” mean (as in rebuild, return)?",
+   "answer": "again or back",
+   "distractors": [
+    "not",
+    "before",
+    "against"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“re-” means again or back: rebuild, return.",
+   "learn": "**re-** means **again or back**. Examples: rebuild, return."
+  },
+  {
+   "id": "english.m.pre",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “pre-” mean (as in preview, prehistoric)?",
+   "answer": "before",
+   "distractors": [
+    "after",
+    "again",
+    "not"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“pre-” means before: preview, prehistoric.",
+   "learn": "**pre-** means **before**. Examples: preview, prehistoric."
+  },
+  {
+   "id": "english.m.sub",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “sub-” mean (as in submarine, subway)?",
+   "answer": "under or below",
+   "distractors": [
+    "above",
+    "across",
+    "self"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“sub-” means under or below: submarine, subway.",
+   "learn": "**sub-** means **under or below**. Examples: submarine, subway."
+  },
+  {
+   "id": "english.m.inter",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “inter-” mean (as in international, interrupt)?",
+   "answer": "between",
+   "distractors": [
+    "inside",
+    "under",
+    "against"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“inter-” means between: international, interrupt.",
+   "learn": "**inter-** means **between**. Examples: international, interrupt."
+  },
+  {
+   "id": "english.m.super",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “super-” mean (as in superstar, supermarket)?",
+   "answer": "above or more than",
+   "distractors": [
+    "under",
+    "between",
+    "not"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“super-” means above or more than: superstar, supermarket.",
+   "learn": "**super-** means **above or more than**. Examples: superstar, supermarket."
+  },
+  {
+   "id": "english.m.anti",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “anti-” mean (as in antiseptic, antisocial)?",
+   "answer": "against",
+   "distractors": [
+    "before",
+    "self",
+    "between"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“anti-” means against: antiseptic, antisocial.",
+   "learn": "**anti-** means **against**. Examples: antiseptic, antisocial."
+  },
+  {
+   "id": "english.m.auto",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “auto-” mean (as in autobiography, automatic)?",
+   "answer": "self",
+   "distractors": [
+    "far",
+    "against",
+    "two"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“auto-” means self: autobiography, automatic.",
+   "learn": "**auto-** means **self**. Examples: autobiography, automatic."
+  },
+  {
+   "id": "english.m.trans",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “trans-” mean (as in transport, transatlantic)?",
+   "answer": "across",
+   "distractors": [
+    "under",
+    "again",
+    "self"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“trans-” means across: transport, transatlantic.",
+   "learn": "**trans-** means **across**. Examples: transport, transatlantic."
+  },
+  {
+   "id": "english.m.tele",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “tele-” mean (as in telephone, telescope)?",
+   "answer": "far or at a distance",
+   "distractors": [
+    "small",
+    "self",
+    "sound"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“tele-” means far or at a distance: telephone, telescope.",
+   "learn": "**tele-** means **far or at a distance**. Examples: telephone, telescope."
+  },
+  {
+   "id": "english.m.bi",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “bi-” mean (as in bicycle, bilingual)?",
+   "answer": "two",
+   "distractors": [
+    "three",
+    "half",
+    "many"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“bi-” means two: bicycle, bilingual.",
+   "learn": "**bi-** means **two**. Examples: bicycle, bilingual."
+  },
+  {
+   "id": "english.m.micro",
+   "topic": "english.morph-1",
+   "kind": "fact",
+   "prompt": "What does “micro-” mean (as in microscope, microchip)?",
+   "answer": "very small",
+   "distractors": [
+    "far",
+    "large",
+    "sound"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“micro-” means very small: microscope, microchip.",
+   "learn": "**micro-** means **very small**. Examples: microscope, microchip."
+  },
+  {
+   "id": "english.m.port",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “port” mean (as in transport, portable, export)?",
+   "answer": "carry",
+   "distractors": [
+    "break",
+    "look",
+    "write"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“port” means carry: transport, portable, export.",
+   "learn": "**port** means **carry**. Examples: transport, portable, export."
+  },
+  {
+   "id": "english.m.scrib-script",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “scrib / script” mean (as in describe, manuscript)?",
+   "answer": "write",
+   "distractors": [
+    "say",
+    "carry",
+    "hear"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“scrib / script” means write: describe, manuscript.",
+   "learn": "**scrib / script** means **write**. Examples: describe, manuscript."
+  },
+  {
+   "id": "english.m.spect",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “spect” mean (as in inspect, spectator)?",
+   "answer": "look",
+   "distractors": [
+    "hear",
+    "build",
+    "carry"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“spect” means look: inspect, spectator.",
+   "learn": "**spect** means **look**. Examples: inspect, spectator."
+  },
+  {
+   "id": "english.m.dict",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “dict” mean (as in dictionary, predict, contradict)?",
+   "answer": "say or speak",
+   "distractors": [
+    "write",
+    "look",
+    "break"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“dict” means say or speak: dictionary, predict, contradict.",
+   "learn": "**dict** means **say or speak**. Examples: dictionary, predict, contradict."
+  },
+  {
+   "id": "english.m.rupt",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “rupt” mean (as in erupt, interrupt, disrupt)?",
+   "answer": "break",
+   "distractors": [
+    "carry",
+    "build",
+    "turn"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“rupt” means break: erupt, interrupt, disrupt.",
+   "learn": "**rupt** means **break**. Examples: erupt, interrupt, disrupt."
+  },
+  {
+   "id": "english.m.struct",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “struct” mean (as in construct, structure)?",
+   "answer": "build",
+   "distractors": [
+    "break",
+    "say",
+    "pull"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“struct” means build: construct, structure.",
+   "learn": "**struct** means **build**. Examples: construct, structure."
+  },
+  {
+   "id": "english.m.aud",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “aud” mean (as in audience, audible)?",
+   "answer": "hear",
+   "distractors": [
+    "see",
+    "speak",
+    "write"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“aud” means hear: audience, audible.",
+   "learn": "**aud** means **hear**. Examples: audience, audible."
+  },
+  {
+   "id": "english.m.vis-vid",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “vis / vid” mean (as in visible, video)?",
+   "answer": "see",
+   "distractors": [
+    "hear",
+    "carry",
+    "live"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“vis / vid” means see: visible, video.",
+   "learn": "**vis / vid** means **see**. Examples: visible, video."
+  },
+  {
+   "id": "english.m.graph",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “graph” mean (as in autograph, paragraph)?",
+   "answer": "write or draw",
+   "distractors": [
+    "sound",
+    "earth",
+    "time"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“graph” means write or draw: autograph, paragraph.",
+   "learn": "**graph** means **write or draw**. Examples: autograph, paragraph."
+  },
+  {
+   "id": "english.m.phon",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “phon” mean (as in telephone, phonics)?",
+   "answer": "sound",
+   "distractors": [
+    "light",
+    "life",
+    "write"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“phon” means sound: telephone, phonics.",
+   "learn": "**phon** means **sound**. Examples: telephone, phonics."
+  },
+  {
+   "id": "english.m.geo",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “geo” mean (as in geography, geology)?",
+   "answer": "earth",
+   "distractors": [
+    "life",
+    "water",
+    "time"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“geo” means earth: geography, geology.",
+   "learn": "**geo** means **earth**. Examples: geography, geology."
+  },
+  {
+   "id": "english.m.bio",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “bio” mean (as in biology, biography)?",
+   "answer": "life",
+   "distractors": [
+    "earth",
+    "light",
+    "sound"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“bio” means life: biology, biography.",
+   "learn": "**bio** means **life**. Examples: biology, biography."
+  },
+  {
+   "id": "english.m.chron",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “chron” mean (as in chronological, chronicle)?",
+   "answer": "time",
+   "distractors": [
+    "earth",
+    "sound",
+    "life"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“chron” means time: chronological, chronicle.",
+   "learn": "**chron** means **time**. Examples: chronological, chronicle."
+  },
+  {
+   "id": "english.m.aqua",
+   "topic": "english.morph-2",
+   "kind": "fact",
+   "prompt": "What does “aqua” mean (as in aquarium, aquatic)?",
+   "answer": "water",
+   "distractors": [
+    "air",
+    "earth",
+    "fire"
+   ],
+   "formats": [
+    "choice"
+   ],
+   "explain": "“aqua” means water: aquarium, aquatic.",
+   "learn": "**aqua** means **water**. Examples: aquarium, aquatic."
+  }
+ ]
+}

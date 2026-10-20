@@ -1,0 +1,1125 @@
+{
+ "subject": "english",
+ "deck": "writing",
+ "topics": [
+  {
+   "id": "english.techniques",
+   "title": "Spotting writers’ techniques",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 6,
+   "intro": "Writers choose techniques to create effects. In Year 7 you will name the technique AND explain its effect on the reader.",
+   "teach": "Explain the difference between a simile and a metaphor.",
+   "talk": "Ask her to spot a simile or metaphor in a song lyric or advert."
+  },
+  {
+   "id": "english.punctuation",
+   "title": "Punctuation for effect",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "english.punct.1",
+    "english.punct.2"
+   ],
+   "intro": "Greater-depth writers use semi-colons, colons, dashes and brackets precisely. Let’s check what you already know.",
+   "teach": "Explain when to use a colon and when to use a semi-colon.",
+   "talk": "Ask her to find a semi-colon in a book and explain why it is there."
+  }
+ ],
+ "items": [
+  {
+   "id": "english.tech.1",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “The classroom was a zoo.”",
+   "options": [
+    {
+     "text": "metaphor",
+     "correct": true
+    },
+    {
+     "text": "personification",
+     "correct": false
+    },
+    {
+     "text": "rule of three",
+     "correct": false
+    },
+    {
+     "text": "simile",
+     "correct": false
+    }
+   ],
+   "explain": "It says the classroom IS a zoo rather than LIKE one, so it is a metaphor."
+  },
+  {
+   "id": "english.tech.2",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “Her smile was as bright as the sun.”",
+   "options": [
+    {
+     "text": "simile",
+     "correct": true
+    },
+    {
+     "text": "alliteration",
+     "correct": false
+    },
+    {
+     "text": "onomatopoeia",
+     "correct": false
+    },
+    {
+     "text": "personification",
+     "correct": false
+    }
+   ],
+   "explain": "It compares using “as … as”, so it is a simile."
+  },
+  {
+   "id": "english.tech.3",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “The wind howled angrily through the trees.”",
+   "options": [
+    {
+     "text": "personification",
+     "correct": true
+    },
+    {
+     "text": "rhetorical question",
+     "correct": false
+    },
+    {
+     "text": "hyperbole",
+     "correct": false
+    },
+    {
+     "text": "alliteration",
+     "correct": false
+    }
+   ],
+   "explain": "Wind can’t really be angry or howl like a creature; giving it human feelings is personification."
+  },
+  {
+   "id": "english.tech.4",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “Seven slippery snakes slid silently.”",
+   "options": [
+    {
+     "text": "alliteration",
+     "correct": true
+    },
+    {
+     "text": "simile",
+     "correct": false
+    },
+    {
+     "text": "emotive language",
+     "correct": false
+    },
+    {
+     "text": "rhetorical question",
+     "correct": false
+    }
+   ],
+   "explain": "Several nearby words start with the same sound (s)."
+  },
+  {
+   "id": "english.tech.5",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “Splash! Crash! Bang!”",
+   "options": [
+    {
+     "text": "onomatopoeia",
+     "correct": true
+    },
+    {
+     "text": "metaphor",
+     "correct": false
+    },
+    {
+     "text": "rule of three",
+     "correct": false
+    },
+    {
+     "text": "simile",
+     "correct": false
+    }
+   ],
+   "explain": "The words sound like the noises they describe."
+  },
+  {
+   "id": "english.tech.6",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “Do we really want our parks covered in litter?”",
+   "options": [
+    {
+     "text": "rhetorical question",
+     "correct": true
+    },
+    {
+     "text": "personification",
+     "correct": false
+    },
+    {
+     "text": "metaphor",
+     "correct": false
+    },
+    {
+     "text": "rule of three",
+     "correct": false
+    }
+   ],
+   "explain": "It is asked for effect, not to get an answer."
+  },
+  {
+   "id": "english.tech.7",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “It was cold, dark and silent.”",
+   "options": [
+    {
+     "text": "rule of three",
+     "correct": true
+    },
+    {
+     "text": "alliteration",
+     "correct": false
+    },
+    {
+     "text": "onomatopoeia",
+     "correct": false
+    },
+    {
+     "text": "personification",
+     "correct": false
+    }
+   ],
+   "explain": "Three adjectives in a row make a memorable pattern."
+  },
+  {
+   "id": "english.tech.8",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “I’ve told you a million times!”",
+   "options": [
+    {
+     "text": "hyperbole",
+     "correct": true
+    },
+    {
+     "text": "rhetorical question",
+     "correct": false
+    },
+    {
+     "text": "alliteration",
+     "correct": false
+    },
+    {
+     "text": "onomatopoeia",
+     "correct": false
+    }
+   ],
+   "explain": "It is a huge exaggeration for effect."
+  },
+  {
+   "id": "english.tech.9",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “Innocent puppies are being abandoned every single day.”",
+   "options": [
+    {
+     "text": "emotive language",
+     "correct": true
+    },
+    {
+     "text": "simile",
+     "correct": false
+    },
+    {
+     "text": "rhetorical question",
+     "correct": false
+    },
+    {
+     "text": "hyperbole",
+     "correct": false
+    }
+   ],
+   "explain": "Words like “innocent” and “abandoned” are chosen to make the reader feel sad or angry."
+  },
+  {
+   "id": "english.tech.10",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “The leaves danced in the breeze.”",
+   "options": [
+    {
+     "text": "personification",
+     "correct": true
+    },
+    {
+     "text": "metaphor",
+     "correct": false
+    },
+    {
+     "text": "rule of three",
+     "correct": false
+    },
+    {
+     "text": "simile",
+     "correct": false
+    }
+   ],
+   "explain": "Leaves can’t dance; it gives them a human action."
+  },
+  {
+   "id": "english.tech.11",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “The fog was a grey blanket over the town.”",
+   "options": [
+    {
+     "text": "metaphor",
+     "correct": true
+    },
+    {
+     "text": "personification",
+     "correct": false
+    },
+    {
+     "text": "rule of three",
+     "correct": false
+    },
+    {
+     "text": "simile",
+     "correct": false
+    }
+   ],
+   "explain": "It says the fog IS a blanket, so it is a metaphor."
+  },
+  {
+   "id": "english.tech.12",
+   "topic": "english.techniques",
+   "kind": "mcq",
+   "prompt": "Which technique is used here? “He ran like a cheetah.”",
+   "options": [
+    {
+     "text": "simile",
+     "correct": true
+    },
+    {
+     "text": "alliteration",
+     "correct": false
+    },
+    {
+     "text": "onomatopoeia",
+     "correct": false
+    },
+    {
+     "text": "personification",
+     "correct": false
+    }
+   ],
+   "explain": "It compares using “like”, so it is a simile."
+  },
+  {
+   "id": "english.punct.1",
+   "topic": "english.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence uses a semi-colon correctly?",
+   "options": [
+    {
+     "text": "The rain fell all night; the river burst its banks by morning.",
+     "correct": true
+    },
+    {
+     "text": "The rain fell; all night the river.",
+     "correct": false,
+     "feedback": "A semi-colon must join two complete clauses. “All night the river” is not a complete clause."
+    },
+    {
+     "text": "I bought; apples, pears and plums.",
+     "correct": false,
+     "feedback": "To introduce a list, use a colon, not a semi-colon."
+    },
+    {
+     "text": "Because it rained; we stayed in.",
+     "correct": false,
+     "feedback": "“Because it rained” cannot stand alone, so a semi-colon cannot follow it. Use a comma."
+    }
+   ],
+   "explain": "A semi-colon joins two closely linked main clauses that could each be a sentence."
+  },
+  {
+   "id": "english.punct.2",
+   "topic": "english.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence uses a colon correctly?",
+   "options": [
+    {
+     "text": "You will need three things: a torch, a map and a coat.",
+     "correct": true
+    },
+    {
+     "text": "You will need: three things a torch.",
+     "correct": false,
+     "feedback": "The part before a colon should be a complete clause."
+    },
+    {
+     "text": "I like: swimming.",
+     "correct": false,
+     "feedback": "A colon after “I like” breaks the sentence; no punctuation is needed there."
+    },
+    {
+     "text": "The: dog barked.",
+     "correct": false,
+     "feedback": "A colon cannot go in the middle of a noun phrase."
+    }
+   ],
+   "explain": "A colon comes after a complete clause and introduces a list, an example or an explanation."
+  },
+  {
+   "id": "english.punct.3",
+   "topic": "english.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence uses brackets for parenthesis correctly?",
+   "options": [
+    {
+     "text": "My uncle (who lives in Wales) keeps bees.",
+     "correct": true
+    },
+    {
+     "text": "My uncle who (lives in Wales) keeps bees.",
+     "correct": false,
+     "feedback": "The brackets must go round the whole extra information, including “who”."
+    },
+    {
+     "text": "(My uncle) who lives in Wales keeps bees.",
+     "correct": false,
+     "feedback": "The main sentence must still make sense without the bracketed part."
+    },
+    {
+     "text": "My uncle who lives (in Wales keeps bees).",
+     "correct": false,
+     "feedback": "Taking out the brackets here would leave “My uncle who lives”, which does not make sense."
+    }
+   ],
+   "explain": "Parenthesis adds extra information. The sentence must still make sense if you remove it."
+  },
+  {
+   "id": "english.punct.4",
+   "topic": "english.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence uses dashes for parenthesis correctly?",
+   "options": [
+    {
+     "text": "The castle – built over 800 years ago – still stands.",
+     "correct": true
+    },
+    {
+     "text": "The castle built – over 800 years ago still stands.",
+     "correct": false,
+     "feedback": "Dashes for parenthesis come in a pair, round the extra information."
+    },
+    {
+     "text": "The – castle built over 800 years ago – still stands.",
+     "correct": false,
+     "feedback": "Removing the dashed part leaves “The still stands”, which makes no sense."
+    },
+    {
+     "text": "The castle built over 800 years – ago still stands.",
+     "correct": false,
+     "feedback": "A single dash in the middle of a phrase breaks it."
+    }
+   ],
+   "explain": "A pair of dashes works like brackets: the sentence makes sense without the part between them."
+  },
+  {
+   "id": "english.punct.5",
+   "topic": "english.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence is in the passive voice?",
+   "options": [
+    {
+     "text": "The window was smashed by a football.",
+     "correct": true
+    },
+    {
+     "text": "A football smashed the window.",
+     "correct": false,
+     "feedback": "Here the thing doing the action (the football) comes first. That is the active voice."
+    },
+    {
+     "text": "The football is smashing.",
+     "correct": false,
+     "feedback": "This is active, and it is not about the window at all."
+    },
+    {
+     "text": "Smash the window!",
+     "correct": false,
+     "feedback": "This is a command (imperative), not passive."
+    }
+   ],
+   "explain": "In the passive voice the thing that the action happens to comes first: “The window was smashed (by …)”."
+  },
+  {
+   "id": "english.punct.6",
+   "topic": "english.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence uses the subjunctive form?",
+   "options": [
+    {
+     "text": "If I were you, I would apologise.",
+     "correct": true
+    },
+    {
+     "text": "If I was you, I would apologise.",
+     "correct": false,
+     "feedback": "In formal writing, use “were” after “If I …” for something imagined. This is the subjunctive."
+    },
+    {
+     "text": "I was you yesterday.",
+     "correct": false,
+     "feedback": "This sentence does not make sense and has no subjunctive."
+    },
+    {
+     "text": "When I am you, I apologise.",
+     "correct": false,
+     "feedback": "This is not the subjunctive."
+    }
+   ],
+   "explain": "The subjunctive is used in formal writing for wishes or imagined situations: “If I were…”, “I insist that he be…”."
+  },
+  {
+   "id": "english.punct.7",
+   "topic": "english.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence is the most formal?",
+   "options": [
+    {
+     "text": "We regret to inform you that the event has been cancelled.",
+     "correct": true
+    },
+    {
+     "text": "Sorry, the event’s off!",
+     "correct": false,
+     "feedback": "Contractions (“event’s”) and exclamations are informal."
+    },
+    {
+     "text": "The event is totally not happening, sorry.",
+     "correct": false,
+     "feedback": "“Totally” and “sorry” are chatty and informal."
+    },
+    {
+     "text": "Guess what? No event.",
+     "correct": false,
+     "feedback": "This is very casual."
+    }
+   ],
+   "explain": "Formal writing avoids contractions and chatty words, and often uses the passive voice."
+  },
+  {
+   "id": "english.punct.8",
+   "topic": "english.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence uses a hyphen to avoid ambiguity?",
+   "options": [
+    {
+     "text": "I saw a man-eating shark.",
+     "correct": true
+    },
+    {
+     "text": "I saw a man eating shark.",
+     "correct": false,
+     "feedback": "Without a hyphen this could mean a man was eating shark!"
+    },
+    {
+     "text": "I saw a man – eating shark.",
+     "correct": false,
+     "feedback": "A dash is not a hyphen and changes the meaning."
+    },
+    {
+     "text": "I saw a man eating-shark.",
+     "correct": false,
+     "feedback": "The hyphen must join “man” and “eating”."
+    }
+   ],
+   "explain": "A hyphen joins words to show they work together as one description: “man-eating”."
+  },
+  {
+   "id": "english.punct.9",
+   "topic": "english.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence uses a relative clause?",
+   "options": [
+    {
+     "text": "The boy who won the race was beaming.",
+     "correct": true
+    },
+    {
+     "text": "The boy won the race and was beaming.",
+     "correct": false,
+     "feedback": "This joins two clauses with “and”. A relative clause starts with who, which, that, whose, where or when."
+    },
+    {
+     "text": "The beaming boy won.",
+     "correct": false,
+     "feedback": "This has an adjective, not a relative clause."
+    },
+    {
+     "text": "Winning the race, the boy beamed.",
+     "correct": false,
+     "feedback": "This starts with a fronted non-finite clause, not a relative clause."
+    }
+   ],
+   "explain": "A relative clause adds information about a noun and starts with a relative pronoun such as who, which, that or whose."
+  },
+  {
+   "id": "english.punct.10",
+   "topic": "english.punctuation",
+   "kind": "mcq",
+   "prompt": "Which sentence uses a modal verb to show possibility?",
+   "options": [
+    {
+     "text": "It might snow tomorrow.",
+     "correct": true
+    },
+    {
+     "text": "It snowed yesterday.",
+     "correct": false,
+     "feedback": "This states a fact in the past; there is no modal verb."
+    },
+    {
+     "text": "It is snowing.",
+     "correct": false,
+     "feedback": "This is the present progressive, not a modal verb."
+    },
+    {
+     "text": "Snow falls in winter.",
+     "correct": false,
+     "feedback": "This states a general fact."
+    }
+   ],
+   "explain": "Modal verbs (might, could, should, will, must, may, can, would) show how likely or necessary something is."
+  }
+ ],
+ "sentences": [
+  {
+   "id": "sent.relative-who",
+   "title": "Add a relative clause",
+   "prompt": "Combine into ONE sentence using “who”: My grandma lives in Cornwall. My grandma makes amazing pasties.",
+   "checks": [
+    {
+     "type": "includesAll",
+     "words": [
+      "who"
+     ],
+     "msg": "Use “who” to join the sentences."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "pasties"
+     ],
+     "msg": "Keep the information about the pasties."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "cornwall"
+     ],
+     "msg": "Keep the information about Cornwall."
+    },
+    {
+     "type": "maxSentences",
+     "n": 1
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "My grandma, who lives in Cornwall, makes amazing pasties.",
+   "tip": "Put the extra information straight after the noun it describes, between commas."
+  },
+  {
+   "id": "sent.relative-which",
+   "title": "Relative clause with “which”",
+   "prompt": "Combine into ONE sentence using “which”: The volcano erupted in 1980. The volcano is in the USA.",
+   "checks": [
+    {
+     "type": "includesAll",
+     "words": [
+      "which"
+     ],
+     "msg": "Use “which” to join the sentences."
+    },
+    {
+     "type": "includesAll",
+     "words": [
+      "1980"
+     ],
+     "msg": "Keep the date."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "usa"
+     ],
+     "msg": "Keep where the volcano is."
+    },
+    {
+     "type": "maxSentences",
+     "n": 1
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "The volcano, which is in the USA, erupted in 1980.",
+   "tip": "Use “which” for things and “who” for people."
+  },
+  {
+   "id": "sent.semicolon",
+   "title": "Join with a semi-colon",
+   "prompt": "Join these two sentences with a semi-colon: The bell rang. Everyone rushed outside.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "[a-z]; [a-z]",
+     "flags": "i",
+     "msg": "Put a semi-colon (;) between the two clauses, followed by a space."
+    },
+    {
+     "type": "regex",
+     "pattern": ";\\s*everyone",
+     "flags": "",
+     "msg": "After a semi-colon, carry on with a lower-case letter: “; everyone…”."
+    },
+    {
+     "type": "maxSentences",
+     "n": 1
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "The bell rang; everyone rushed outside.",
+   "tip": "A semi-colon joins two closely linked complete clauses. No capital letter after it."
+  },
+  {
+   "id": "sent.colon-list",
+   "title": "Colon to introduce a list",
+   "prompt": "Write a sentence that uses a colon to introduce a list of three things you would pack for a camping trip.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "[a-z]: ",
+     "flags": "i",
+     "msg": "Use a colon (:) after a complete clause, then the list."
+    },
+    {
+     "type": "regex",
+     "pattern": ",[^,]+ (and|or) ",
+     "flags": "i",
+     "msg": "Separate list items with commas and put “and” before the last one."
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "I would pack three things: a tent, a torch and a sleeping bag.",
+   "tip": "The part before the colon should make sense on its own."
+  },
+  {
+   "id": "sent.fronted-adverbial",
+   "title": "Fronted adverbial",
+   "prompt": "Rewrite so it starts with the adverbial and uses a comma: The fox crept across the garden as the sun went down.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "^As the sun went down, ",
+     "flags": "i",
+     "msg": "Start with “As the sun went down,” followed by a comma."
+    },
+    {
+     "type": "includesAll",
+     "words": [
+      "fox",
+      "crept",
+      "garden"
+     ],
+     "msg": "Keep the rest of the sentence."
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "As the sun went down, the fox crept across the garden.",
+   "tip": "When the adverbial comes first, put a comma after it."
+  },
+  {
+   "id": "sent.passive",
+   "title": "Active to passive",
+   "prompt": "Rewrite in the passive voice: The dog chewed the slipper.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "^The slipper was chewed",
+     "flags": "i",
+     "msg": "Start with the thing the action happened to: “The slipper was chewed…”."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "by the dog"
+     ],
+     "msg": "Add who did it: “by the dog”."
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "The slipper was chewed by the dog.",
+   "tip": "Passive: thing affected + was/were + past participle (+ by whoever did it)."
+  },
+  {
+   "id": "sent.parenthesis-brackets",
+   "title": "Parenthesis with brackets",
+   "prompt": "Add extra information in brackets to this sentence: The Thames flows through London. (Extra info: the longest river entirely in England)",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "\\([^)]+\\)",
+     "flags": "",
+     "msg": "Put the extra information inside brackets ( )."
+    },
+    {
+     "type": "includesAll",
+     "words": [
+      "longest"
+     ],
+     "msg": "Include the extra information about it being the longest river."
+    },
+    {
+     "type": "regex",
+     "pattern": "^The Thames \\(",
+     "flags": "i",
+     "msg": "Put the brackets straight after “The Thames”."
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "The Thames (the longest river entirely in England) flows through London.",
+   "tip": "Read it without the brackets: it should still make sense."
+  },
+  {
+   "id": "sent.parenthesis-dashes",
+   "title": "Parenthesis with dashes",
+   "prompt": "Add “a fearless explorer” as parenthesis using a pair of dashes: Ernest Shackleton led an expedition to Antarctica.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "Shackleton\\s*[–-]\\s*a fearless explorer\\s*[–-]\\s*led",
+     "flags": "i",
+     "msg": "Put “– a fearless explorer –” between “Shackleton” and “led”, with a dash on each side."
+    },
+    {
+     "type": "endPunct"
+    },
+    {
+     "type": "capital"
+    }
+   ],
+   "model": "Ernest Shackleton – a fearless explorer – led an expedition to Antarctica.",
+   "tip": "Dashes for parenthesis always come in a pair."
+  },
+  {
+   "id": "sent.formal",
+   "title": "Make it formal",
+   "prompt": "Rewrite formally, with no contractions or chatty words: Hey, we can’t come to the meeting, sorry!",
+   "checks": [
+    {
+     "type": "notRegex",
+     "pattern": "\\b(hey|sorry|can’t|can't|won’t|won't)\\b",
+     "flags": "i",
+     "msg": "Remove informal words and contractions (hey, sorry, can’t)."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "unable",
+      "cannot",
+      "regret",
+      "unfortunately",
+      "apologise"
+     ],
+     "msg": "Use formal words such as “unable”, “regret” or “unfortunately”."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "meeting"
+     ],
+     "msg": "Keep what you are writing about: the meeting."
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "Unfortunately, we are unable to attend the meeting.",
+   "tip": "Formal: full forms (cannot), polite phrases, no exclamation marks."
+  },
+  {
+   "id": "sent.modal",
+   "title": "Modal verbs for possibility",
+   "prompt": "Write a sentence predicting what might happen in a story, using a modal verb (might, could, may, would or should).",
+   "checks": [
+    {
+     "type": "includesAny",
+     "words": [
+      "might",
+      "could",
+      "may",
+      "would",
+      "should",
+      "will"
+     ],
+     "msg": "Include a modal verb such as might, could or may."
+    },
+    {
+     "type": "minWords",
+     "n": 6
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "The mysterious key might open the locked door in the cellar.",
+   "tip": "Modal verbs show how certain you are."
+  },
+  {
+   "id": "sent.because-although",
+   "title": "Subordinate clause with “although”",
+   "prompt": "Combine into ONE sentence starting with “Although”: It was raining. We went for a walk.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "^Although ",
+     "flags": "i",
+     "msg": "Start with “Although”."
+    },
+    {
+     "type": "regex",
+     "pattern": "raining, ",
+     "flags": "i",
+     "msg": "Put a comma after the “although” clause."
+    },
+    {
+     "type": "includesAll",
+     "words": [
+      "walk"
+     ],
+     "msg": "Keep the walk."
+    },
+    {
+     "type": "maxSentences",
+     "n": 1
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "Although it was raining, we went for a walk.",
+   "tip": "When a subordinate clause comes first, add a comma after it."
+  },
+  {
+   "id": "sent.expanded-noun",
+   "title": "Expanded noun phrase",
+   "prompt": "Expand “the house” into a noun phrase of at least five words with two adjectives and a prepositional phrase, then use it in a sentence.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "\\b(on|in|at|by|near|beside|behind|under|over|with|beyond|across)\\b",
+     "flags": "i",
+     "msg": "Add a prepositional phrase (e.g. “on the hill”)."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "house"
+     ],
+     "msg": "Keep “house” in your noun phrase."
+    },
+    {
+     "type": "regex",
+     "pattern": "\\w+,? \\w+ house",
+     "flags": "i",
+     "msg": "Put adjectives before “house”."
+    },
+    {
+     "type": "minWords",
+     "n": 7
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "The crumbling, silent house on the hill watched us.",
+   "tip": "Determiner + adjectives + noun + prepositional phrase."
+  },
+  {
+   "id": "sent.cohesion",
+   "title": "Cohesive adverbial",
+   "prompt": "Write a second sentence that begins with a cohesive adverbial (e.g. However, As a result, Meanwhile, Furthermore). First sentence: The bridge was closed for repairs.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "^(However|As a result|Meanwhile|Furthermore|Consequently|Therefore|Nevertheless|In addition|On the other hand|Because of this),",
+     "flags": "i",
+     "msg": "Start with an adverbial such as “As a result,” followed by a comma."
+    },
+    {
+     "type": "minWords",
+     "n": 5
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "As a result, drivers had to take a long detour.",
+   "tip": "Cohesive adverbials link ideas between sentences and paragraphs."
+  },
+  {
+   "id": "sent.show-not-tell",
+   "title": "Show, don’t tell",
+   "prompt": "Instead of writing “Sam was scared”, write a sentence that SHOWS Sam was scared through actions or body language. Don’t use “scared”, “afraid” or “frightened”.",
+   "checks": [
+    {
+     "type": "excludes",
+     "words": [
+      "scared",
+      "afraid",
+      "frightened",
+      "fear"
+     ],
+     "msg": "Don’t name the feeling. Show it through what Sam does."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "sam",
+      "his",
+      "her",
+      "their"
+     ],
+     "msg": "Write about Sam."
+    },
+    {
+     "type": "minWords",
+     "n": 8
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "Sam’s hands trembled as he edged towards the creaking door.",
+   "tip": "Think about hands, breathing, voice, eyes and movement."
+  },
+  {
+   "id": "sent.analytical",
+   "title": "Analytical sentence",
+   "prompt": "Write a sentence explaining the effect of this phrase: “the icy fingers of the wind”. Use the word “suggests” or “conveys”.",
+   "checks": [
+    {
+     "type": "includesAny",
+     "words": [
+      "suggests",
+      "conveys",
+      "implies",
+      "shows"
+     ],
+     "msg": "Use an analysis verb such as “suggests” or “conveys”."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "personification",
+      "metaphor",
+      "fingers",
+      "icy"
+     ],
+     "msg": "Refer to the words or the technique used."
+    },
+    {
+     "type": "minWords",
+     "n": 10
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "The personification of “icy fingers” suggests the wind is grasping and cruel, as if it wants to hurt people.",
+   "tip": "Name the technique, quote the words, then explain the effect on the reader."
+  },
+  {
+   "id": "sent.speech",
+   "title": "Punctuate direct speech",
+   "prompt": "Write this as direct speech with correct punctuation: Mia asked where the treasure was hidden.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "[“\"][A-Z][^”\"]*\\?[”\"]",
+     "flags": "",
+     "msg": "Put Mia’s exact words in speech marks, starting with a capital and ending with a question mark inside the speech marks."
+    },
+    {
+     "type": "includesAny",
+     "words": [
+      "asked",
+      "mia"
+     ],
+     "msg": "Say who is speaking (Mia asked…)."
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "“Where is the treasure hidden?” asked Mia.",
+   "tip": "The question mark goes inside the speech marks."
+  }
+ ]
+}

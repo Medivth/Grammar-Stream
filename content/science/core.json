@@ -1,0 +1,1327 @@
+{
+ "subject": "science",
+ "deck": "core",
+ "topics": [
+  {
+   "id": "science.space",
+   "title": "Earth and space",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "science.sp.d1",
+    "science.sp.d2",
+    "science.sp.d3"
+   ],
+   "intro": "Why do we have day and night? Why are there seasons? Let’s find out what you think first.",
+   "teach": "Explain why we have day and night.",
+   "talk": "Ask her why it is dark at night, then why it is colder in winter."
+  },
+  {
+   "id": "science.forces",
+   "title": "Forces",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "science.f.d1",
+    "science.f.d2",
+    "science.f.d3"
+   ],
+   "intro": "Forces are pushes and pulls. Some ideas about forces feel right but are wrong. Let’s test yours.",
+   "teach": "Explain what would happen if you dropped a hammer and a feather on the Moon.",
+   "talk": "Ask her why a ball rolling on grass slows down."
+  },
+  {
+   "id": "science.light",
+   "title": "Light and seeing",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "science.l.d1",
+    "science.l.d2"
+   ],
+   "intro": "How do we see things? The answer surprised scientists for centuries.",
+   "teach": "Explain how you see a book on a table.",
+   "talk": "Ask her why a shadow forms."
+  },
+  {
+   "id": "science.electricity",
+   "title": "Electrical circuits",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "science.e.d1",
+    "science.e.d2"
+   ],
+   "intro": "Circuits need a complete loop. Let’s check what you know about how they work.",
+   "teach": "Explain why a bulb doesn’t light if the circuit has a gap.",
+   "talk": "Ask her what a switch actually does inside a circuit."
+  },
+  {
+   "id": "science.materials",
+   "title": "Materials and changes",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "science.m.d1",
+    "science.m.d2",
+    "science.m.d3"
+   ],
+   "intro": "When sugar dissolves, where does it go? When we bake a cake, can we undo it? Let’s see.",
+   "teach": "Explain the difference between a reversible and an irreversible change.",
+   "talk": "Ask her how she would get salt back out of salty water."
+  },
+  {
+   "id": "science.living",
+   "title": "Classifying living things",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "science.lv.d1"
+   ],
+   "intro": "Scientists sort living things into groups by their features.",
+   "teach": "Explain how you could tell a mammal from a reptile.",
+   "talk": "Ask her whether a whale is a fish or a mammal, and why."
+  },
+  {
+   "id": "science.body",
+   "title": "The heart, blood and health",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "science.b.d1",
+    "science.b.d2"
+   ],
+   "intro": "Your heart beats about 100 000 times a day. What is it actually doing?",
+   "teach": "Explain the journey of blood from the heart to the lungs and back.",
+   "talk": "Ask her to take her pulse before and after running on the spot."
+  },
+  {
+   "id": "science.evolution",
+   "title": "Evolution and inheritance",
+   "kind": "facts",
+   "prereqs": [
+    "science.living"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "science.ev.d1",
+    "science.ev.d2"
+   ],
+   "intro": "How did giraffes get long necks? Darwin had an answer that changed science.",
+   "teach": "Explain how natural selection works using the giraffe.",
+   "talk": "Ask her what Mary Anning discovered."
+  }
+ ],
+ "items": [
+  {
+   "id": "science.sp.d1",
+   "topic": "science.space",
+   "kind": "mcq",
+   "prompt": "Why do we have day and night?",
+   "options": [
+    {
+     "text": "The Earth spins on its axis once every 24 hours",
+     "correct": true
+    },
+    {
+     "text": "The Sun moves around the Earth",
+     "correct": false,
+     "feedback": "The Sun appears to move, but it is the Earth that turns."
+    },
+    {
+     "text": "The Earth orbits the Sun once a day",
+     "correct": false,
+     "feedback": "One orbit of the Sun takes a year, not a day."
+    },
+    {
+     "text": "The Moon blocks the Sun at night",
+     "correct": false,
+     "feedback": "The Moon is often visible during the day, and it doesn’t cause night."
+    }
+   ],
+   "explain": "As the Earth spins, your side faces towards the Sun (day) then away from it (night)."
+  },
+  {
+   "id": "science.sp.d2",
+   "topic": "science.space",
+   "kind": "mcq",
+   "prompt": "Why is it colder in the UK in winter?",
+   "options": [
+    {
+     "text": "The Earth is tilted, so in winter our half leans away from the Sun and gets weaker, shorter days of sunlight",
+     "correct": true
+    },
+    {
+     "text": "The Earth is further from the Sun in winter",
+     "correct": false,
+     "feedback": "Surprisingly, the Earth is closest to the Sun in early January! Seasons are caused by the tilt."
+    },
+    {
+     "text": "The Sun gives out less heat in winter",
+     "correct": false,
+     "feedback": "The Sun’s output doesn’t change with our seasons."
+    }
+   ],
+   "explain": "The Earth’s axis is tilted by about 23.5°. When the Northern Hemisphere leans away from the Sun, sunlight is spread out and days are short: winter."
+  },
+  {
+   "id": "science.sp.d3",
+   "topic": "science.space",
+   "kind": "mcq",
+   "prompt": "Why does the Moon seem to change shape over a month?",
+   "options": [
+    {
+     "text": "We see different amounts of its sunlit half as it orbits the Earth",
+     "correct": true
+    },
+    {
+     "text": "The Earth’s shadow covers part of it",
+     "correct": false,
+     "feedback": "The Earth’s shadow only falls on the Moon during an eclipse, which is rare."
+    },
+    {
+     "text": "Clouds cover part of it",
+     "correct": false,
+     "feedback": "The phases happen even on clear nights."
+    }
+   ],
+   "explain": "Half the Moon is always lit by the Sun. As it orbits us (about 29.5 days), we see more or less of the lit half."
+  },
+  {
+   "id": "science.sp.orbit",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "How long does the Earth take to orbit the Sun?",
+   "answer": "about 365¼ days",
+   "distractors": [
+    "24 hours",
+    "28 days",
+    "100 years"
+   ],
+   "explain": "One orbit takes about 365¼ days. The extra quarter-days add up to a leap day every 4 years.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.sp.moon-orbit",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "Roughly how long does the Moon take to orbit the Earth?",
+   "answer": "about 27 days (about a month)",
+   "distractors": [
+    "24 hours",
+    "365 days",
+    "7 days"
+   ],
+   "explain": "The Moon orbits the Earth in about 27 days; the cycle of phases takes about 29.5 days.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.sp.star",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "What kind of object is the Sun?",
+   "answer": "a star",
+   "distractors": [
+    "a planet",
+    "a moon",
+    "a comet"
+   ],
+   "explain": "The Sun is a star: a huge ball of hot gas. It is the closest star to Earth."
+  },
+  {
+   "id": "science.sp.planets",
+   "topic": "science.space",
+   "kind": "order",
+   "prompt": "Put the planets in order from the Sun, starting with the closest.",
+   "items": [
+    "Mercury",
+    "Venus",
+    "Earth",
+    "Mars",
+    "Jupiter",
+    "Saturn",
+    "Uranus",
+    "Neptune"
+   ],
+   "explain": "My Very Easy Method Just Speeds Up Naming: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune."
+  },
+  {
+   "id": "science.sp.largest",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "Which is the largest planet in our solar system?",
+   "answer": "Jupiter",
+   "distractors": [
+    "Saturn",
+    "Earth",
+    "Neptune"
+   ],
+   "explain": "Jupiter is so big that more than 1000 Earths could fit inside it."
+  },
+  {
+   "id": "science.sp.spherical",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "What shape are the Sun, Earth and Moon?",
+   "answer": "roughly spherical",
+   "distractors": [
+    "flat discs",
+    "cubes",
+    "cones"
+   ],
+   "explain": "They are all roughly spheres, pulled into ball shapes by gravity.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.sp.geocentric",
+   "topic": "science.space",
+   "kind": "fact",
+   "prompt": "Who argued, in the 1500s, that the Earth orbits the Sun?",
+   "answer": "Copernicus",
+   "distractors": [
+    "Newton",
+    "Darwin",
+    "Ptolemy"
+   ],
+   "explain": "Nicolaus Copernicus proposed a Sun-centred (heliocentric) model. Galileo later found evidence for it."
+  },
+  {
+   "id": "science.f.d1",
+   "topic": "science.forces",
+   "kind": "mcq",
+   "prompt": "A hammer and a feather are dropped together on the Moon, where there is no air. What happens?",
+   "options": [
+    {
+     "text": "They hit the ground at the same time",
+     "correct": true
+    },
+    {
+     "text": "The hammer lands first because it is heavier",
+     "correct": false,
+     "feedback": "On Earth air resistance slows the feather. With no air, gravity speeds up all objects at the same rate. An astronaut tested this on the Moon in 1971!"
+    },
+    {
+     "text": "The feather floats away",
+     "correct": false,
+     "feedback": "The Moon has gravity, so the feather falls too."
+    }
+   ],
+   "explain": "Without air resistance, all objects fall with the same acceleration, whatever their mass."
+  },
+  {
+   "id": "science.f.d2",
+   "topic": "science.forces",
+   "kind": "mcq",
+   "prompt": "A ball is rolling across a flat, grassy field. Why does it slow down and stop?",
+   "options": [
+    {
+     "text": "Friction from the grass acts against its motion",
+     "correct": true
+    },
+    {
+     "text": "It runs out of force",
+     "correct": false,
+     "feedback": "Objects don’t carry a store of “force”. A moving object keeps moving unless a force (here friction) acts on it."
+    },
+    {
+     "text": "Gravity pulls it backwards",
+     "correct": false,
+     "feedback": "Gravity pulls down, not backwards."
+    }
+   ],
+   "explain": "Friction acts in the opposite direction to the motion and slows the ball. On ice, with less friction, it would roll much further."
+  },
+  {
+   "id": "science.f.d3",
+   "topic": "science.forces",
+   "kind": "mcq",
+   "prompt": "What is the difference between mass and weight?",
+   "options": [
+    {
+     "text": "Mass is the amount of matter (kg); weight is the pull of gravity on it (newtons)",
+     "correct": true
+    },
+    {
+     "text": "They are the same thing",
+     "correct": false,
+     "feedback": "In everyday speech we mix them up, but in science weight is a force measured in newtons."
+    },
+    {
+     "text": "Weight is measured in kilograms; mass in newtons",
+     "correct": false,
+     "feedback": "It is the other way round: mass in kg, weight in newtons (N)."
+    }
+   ],
+   "explain": "Your mass is the same on the Moon, but your weight is about one-sixth because the Moon’s gravity is weaker."
+  },
+  {
+   "id": "science.f.newtons",
+   "topic": "science.forces",
+   "kind": "fact",
+   "prompt": "What unit are forces measured in?",
+   "answer": "newtons",
+   "distractors": [
+    "kilograms",
+    "metres",
+    "joules"
+   ],
+   "explain": "Forces are measured in newtons (N), after Isaac Newton.",
+   "accept": [
+    "newton",
+    "n"
+   ]
+  },
+  {
+   "id": "science.f.air-res",
+   "topic": "science.forces",
+   "kind": "fact",
+   "prompt": "Which force slows down a parachutist?",
+   "answer": "air resistance",
+   "distractors": [
+    "magnetism",
+    "gravity",
+    "upthrust only"
+   ],
+   "explain": "The large parachute pushes against lots of air, increasing air resistance.",
+   "accept": [
+    "drag"
+   ]
+  },
+  {
+   "id": "science.f.water-res",
+   "topic": "science.forces",
+   "kind": "fact",
+   "prompt": "Why are boats and fish streamlined?",
+   "answer": "to reduce water resistance",
+   "distractors": [
+    "to increase gravity",
+    "to float higher",
+    "to increase friction"
+   ],
+   "explain": "A streamlined shape lets water flow past easily, so less force is wasted.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.f.lever",
+   "topic": "science.forces",
+   "kind": "fact",
+   "prompt": "Which simple machine is a see-saw an example of?",
+   "answer": "a lever",
+   "distractors": [
+    "a pulley",
+    "a gear",
+    "a spring"
+   ],
+   "explain": "A lever turns around a pivot. A small force far from the pivot can lift a big load.",
+   "accept": [
+    "lever"
+   ]
+  },
+  {
+   "id": "science.f.pulley",
+   "topic": "science.forces",
+   "kind": "fact",
+   "prompt": "What simple machine uses a rope over a wheel to lift loads more easily?",
+   "answer": "a pulley",
+   "distractors": [
+    "a lever",
+    "a gear",
+    "a ramp"
+   ],
+   "explain": "Pulleys let a smaller force lift a heavy load by pulling over a longer distance.",
+   "accept": [
+    "pulley"
+   ]
+  },
+  {
+   "id": "science.f.gears",
+   "topic": "science.forces",
+   "kind": "fact",
+   "prompt": "What are wheels with teeth that turn each other called?",
+   "answer": "gears",
+   "distractors": [
+    "pulleys",
+    "levers",
+    "axles"
+   ],
+   "explain": "Gears change the speed or direction of turning, as in a bicycle."
+  },
+  {
+   "id": "science.f.gravity-who",
+   "topic": "science.forces",
+   "kind": "fact",
+   "prompt": "Which scientist described the law of gravity in 1687?",
+   "answer": "Isaac Newton",
+   "distractors": [
+    "Galileo Galilei",
+    "Albert Einstein",
+    "Charles Darwin"
+   ],
+   "explain": "Newton explained that every object pulls on every other object; Earth’s pull on us is our weight.",
+   "accept": [
+    "newton"
+   ]
+  },
+  {
+   "id": "science.l.d1",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "How do we see a book on a table?",
+   "options": [
+    {
+     "text": "Light from a source bounces off the book and travels into our eyes",
+     "correct": true
+    },
+    {
+     "text": "Light travels out of our eyes to the book",
+     "correct": false,
+     "feedback": "Ancient Greeks thought this, but our eyes only receive light. In a dark room you can’t see at all."
+    },
+    {
+     "text": "Our eyes see it because it is there, light isn’t needed",
+     "correct": false,
+     "feedback": "Without light we can’t see anything."
+    }
+   ],
+   "explain": "We see objects when light reflects off them and enters our eyes. Light sources (like the Sun or a lamp) give out their own light."
+  },
+  {
+   "id": "science.l.d2",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "Why does a shadow have the same shape as the object?",
+   "options": [
+    {
+     "text": "Light travels in straight lines, so the object blocks light in its own outline",
+     "correct": true
+    },
+    {
+     "text": "The shadow is a reflection of the object",
+     "correct": false,
+     "feedback": "A reflection shows colour and detail; a shadow is just where light is blocked."
+    },
+    {
+     "text": "Shadows are made by the dark coming out of objects",
+     "correct": false,
+     "feedback": "Darkness isn’t a thing that moves. A shadow is simply an absence of light."
+    }
+   ],
+   "explain": "Because light travels in straight lines, an opaque object blocks it, leaving a dark area shaped like the object."
+  },
+  {
+   "id": "science.l.straight",
+   "topic": "science.light",
+   "kind": "fact",
+   "prompt": "Light travels in…",
+   "answer": "straight lines",
+   "distractors": [
+    "curves",
+    "circles",
+    "zigzags"
+   ],
+   "explain": "Light travels in straight lines (until it hits something and reflects or refracts)."
+  },
+  {
+   "id": "science.l.opaque",
+   "topic": "science.light",
+   "kind": "fact",
+   "prompt": "What is a material that lets no light through called?",
+   "answer": "opaque",
+   "distractors": [
+    "transparent",
+    "translucent",
+    "reflective"
+   ],
+   "explain": "Opaque materials (wood, metal) block light. Transparent ones (clear glass) let it through. Translucent ones (frosted glass) let some through."
+  },
+  {
+   "id": "science.l.translucent",
+   "topic": "science.light",
+   "kind": "fact",
+   "prompt": "What is a material that lets some light through, but you can’t see clearly through it, called?",
+   "answer": "translucent",
+   "distractors": [
+    "transparent",
+    "opaque",
+    "luminous"
+   ],
+   "explain": "Tracing paper and frosted glass are translucent."
+  },
+  {
+   "id": "science.l.mirror",
+   "topic": "science.light",
+   "kind": "fact",
+   "prompt": "What happens to light when it hits a mirror?",
+   "answer": "it reflects (bounces off)",
+   "distractors": [
+    "it is absorbed",
+    "it stops completely",
+    "it turns into heat only"
+   ],
+   "explain": "Smooth, shiny surfaces like mirrors reflect light in a regular way, so we see an image.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.l.periscope",
+   "topic": "science.light",
+   "kind": "fact",
+   "prompt": "Which device uses two mirrors so you can see over a wall?",
+   "answer": "a periscope",
+   "distractors": [
+    "a telescope",
+    "a microscope",
+    "a prism"
+   ],
+   "explain": "A periscope has two mirrors at 45° that reflect light round a corner.",
+   "accept": [
+    "periscope"
+   ]
+  },
+  {
+   "id": "science.l.source",
+   "topic": "science.light",
+   "kind": "fact",
+   "prompt": "Which of these is a light source?",
+   "answer": "a candle flame",
+   "distractors": [
+    "the Moon",
+    "a mirror",
+    "a shiny spoon"
+   ],
+   "explain": "The Moon only reflects sunlight; it is not a light source.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.e.d1",
+   "topic": "science.electricity",
+   "kind": "mcq",
+   "prompt": "In a simple circuit with a bulb, what happens to the electric current?",
+   "options": [
+    {
+     "text": "It flows all the way round the circuit and is not used up",
+     "correct": true
+    },
+    {
+     "text": "It is used up by the bulb, so less comes back to the cell",
+     "correct": false,
+     "feedback": "A very common idea! The current is the same all the way round. It is energy that is transferred to the bulb, not current."
+    },
+    {
+     "text": "It only flows from the cell to the bulb",
+     "correct": false,
+     "feedback": "Current needs a complete loop and flows all the way round."
+    }
+   ],
+   "explain": "Current is the flow of charge round the circuit. The cell pushes it; the bulb transfers energy as light and heat."
+  },
+  {
+   "id": "science.e.d2",
+   "topic": "science.electricity",
+   "kind": "mcq",
+   "prompt": "You add a second cell (battery) in series to a circuit with one bulb. What happens?",
+   "options": [
+    {
+     "text": "The bulb gets brighter",
+     "correct": true
+    },
+    {
+     "text": "The bulb gets dimmer",
+     "correct": false,
+     "feedback": "More cells push harder, so more current flows and the bulb is brighter."
+    },
+    {
+     "text": "Nothing changes",
+     "correct": false,
+     "feedback": "The voltage increases, so the bulb changes."
+    }
+   ],
+   "explain": "More cells means a higher voltage, which pushes more current through the bulb, making it brighter. Adding more bulbs instead would make each one dimmer."
+  },
+  {
+   "id": "science.e.complete",
+   "topic": "science.electricity",
+   "kind": "fact",
+   "prompt": "What does a circuit need for current to flow?",
+   "answer": "a complete loop with no gaps",
+   "distractors": [
+    "two bulbs",
+    "a switch that is open",
+    "a buzzer"
+   ],
+   "explain": "Any gap breaks the circuit and the current stops.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.e.switch",
+   "topic": "science.electricity",
+   "kind": "fact",
+   "prompt": "What does a switch do in a circuit?",
+   "answer": "it opens or closes a gap in the circuit",
+   "distractors": [
+    "it stores electricity",
+    "it makes the current stronger",
+    "it turns electricity into light"
+   ],
+   "explain": "An open switch makes a gap; a closed switch completes the loop.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.e.conductor",
+   "topic": "science.electricity",
+   "kind": "fact",
+   "prompt": "What is a material that lets electricity flow through it called?",
+   "answer": "a conductor",
+   "distractors": [
+    "an insulator",
+    "a resistor only",
+    "a magnet"
+   ],
+   "explain": "Metals like copper are good conductors. Plastic and rubber are insulators.",
+   "accept": [
+    "conductor",
+    "electrical conductor"
+   ]
+  },
+  {
+   "id": "science.e.insulator",
+   "topic": "science.electricity",
+   "kind": "fact",
+   "prompt": "Why are wires covered in plastic?",
+   "answer": "plastic is an insulator, so it keeps us safe",
+   "distractors": [
+    "plastic makes the current faster",
+    "plastic is a conductor",
+    "to make wires bendy only"
+   ],
+   "explain": "The plastic coating stops current flowing into us.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.e.symbol",
+   "topic": "science.electricity",
+   "kind": "fact",
+   "prompt": "In a circuit diagram, a circle with a cross inside is the symbol for…",
+   "answer": "a bulb (lamp)",
+   "distractors": [
+    "a cell",
+    "a switch",
+    "a motor"
+   ],
+   "explain": "Bulb: circle with a cross. Cell: a long and a short line. Motor: circle with an M.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.e.volt",
+   "topic": "science.electricity",
+   "kind": "fact",
+   "prompt": "What unit measures how hard a cell pushes the current?",
+   "answer": "volts",
+   "distractors": [
+    "amps",
+    "newtons",
+    "watts"
+   ],
+   "explain": "Voltage is measured in volts (V). A typical AA cell is 1.5 V.",
+   "accept": [
+    "volt",
+    "v"
+   ]
+  },
+  {
+   "id": "science.m.d1",
+   "topic": "science.materials",
+   "kind": "mcq",
+   "prompt": "You dissolve 10 g of sugar in 100 g of water. What is the mass of the sugary water?",
+   "options": [
+    {
+     "text": "110 g",
+     "correct": true
+    },
+    {
+     "text": "100 g, because the sugar disappears",
+     "correct": false,
+     "feedback": "The sugar breaks into particles too small to see, but they are still there, and so is their mass."
+    },
+    {
+     "text": "Less than 100 g",
+     "correct": false,
+     "feedback": "Nothing is lost: mass is conserved."
+    }
+   ],
+   "explain": "When something dissolves, its particles spread out between the water particles. The total mass stays the same: 110 g."
+  },
+  {
+   "id": "science.m.d2",
+   "topic": "science.materials",
+   "kind": "mcq",
+   "prompt": "Which of these is an irreversible change?",
+   "options": [
+    {
+     "text": "Burning paper",
+     "correct": true
+    },
+    {
+     "text": "Melting ice",
+     "correct": false,
+     "feedback": "Melted ice can be frozen again, so this is reversible."
+    },
+    {
+     "text": "Dissolving salt in water",
+     "correct": false,
+     "feedback": "You can get the salt back by evaporating the water, so this is reversible."
+    },
+    {
+     "text": "Freezing orange juice",
+     "correct": false,
+     "feedback": "It can melt back, so it is reversible."
+    }
+   ],
+   "explain": "Burning makes new materials (ash, smoke and gases). You can’t turn them back into paper."
+  },
+  {
+   "id": "science.m.d3",
+   "topic": "science.materials",
+   "kind": "mcq",
+   "prompt": "Puddles disappear on a sunny day. Where does the water go?",
+   "options": [
+    {
+     "text": "It evaporates into water vapour in the air",
+     "correct": true
+    },
+    {
+     "text": "It soaks into the ground only",
+     "correct": false,
+     "feedback": "Some does, but puddles on a playground disappear because the water evaporates."
+    },
+    {
+     "text": "The Sun destroys it",
+     "correct": false,
+     "feedback": "Matter isn’t destroyed. The water is still there as a gas."
+    }
+   ],
+   "explain": "Heat from the Sun gives water particles energy to escape as water vapour (a gas)."
+  },
+  {
+   "id": "science.m.filter",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "How could you separate sand from water?",
+   "answer": "filtering",
+   "distractors": [
+    "evaporating",
+    "using a magnet",
+    "freezing"
+   ],
+   "explain": "Sand doesn’t dissolve, so a filter paper traps it and lets water through."
+  },
+  {
+   "id": "science.m.evaporate",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "How could you get salt back from salty water?",
+   "answer": "evaporating the water",
+   "distractors": [
+    "filtering",
+    "sieving",
+    "using a magnet"
+   ],
+   "explain": "Salt dissolves, so filtering won’t work. Heating evaporates the water and leaves the salt behind.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.m.magnet",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "How could you separate iron filings from sand?",
+   "answer": "using a magnet",
+   "distractors": [
+    "filtering",
+    "evaporating",
+    "dissolving"
+   ],
+   "explain": "Iron is magnetic; sand is not."
+  },
+  {
+   "id": "science.m.soluble",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "A substance that dissolves in water is called…",
+   "answer": "soluble",
+   "distractors": [
+    "insoluble",
+    "transparent",
+    "magnetic"
+   ],
+   "explain": "Sugar and salt are soluble. Sand and chalk are insoluble."
+  },
+  {
+   "id": "science.m.states",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "What are the three states of matter?",
+   "answer": "solid, liquid and gas",
+   "distractors": [
+    "hot, warm and cold",
+    "metal, wood and plastic",
+    "ice, water and steam only"
+   ],
+   "explain": "Matter exists as solids, liquids and gases. Ice, water and steam are the three states of one substance.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.m.water-boil",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "At what temperature does pure water boil (at sea level)?",
+   "answer": "100°C",
+   "distractors": [
+    "0°C",
+    "50°C",
+    "212°C"
+   ],
+   "explain": "Water boils at 100°C and freezes at 0°C.",
+   "accept": [
+    "100",
+    "100 c",
+    "100 degrees"
+   ]
+  },
+  {
+   "id": "science.m.rust",
+   "topic": "science.materials",
+   "kind": "fact",
+   "prompt": "What is the irreversible change when iron reacts with water and oxygen?",
+   "answer": "rusting",
+   "distractors": [
+    "melting",
+    "dissolving",
+    "freezing"
+   ],
+   "explain": "Rust (iron oxide) is a new material, so rusting is irreversible.",
+   "accept": [
+    "rust"
+   ]
+  },
+  {
+   "id": "science.lv.d1",
+   "topic": "science.living",
+   "kind": "mcq",
+   "prompt": "Is a whale a fish or a mammal?",
+   "options": [
+    {
+     "text": "A mammal: it breathes air with lungs and feeds its young on milk",
+     "correct": true
+    },
+    {
+     "text": "A fish: it lives in water and swims",
+     "correct": false,
+     "feedback": "Living in water doesn’t make an animal a fish. Whales breathe air and feed their babies milk."
+    },
+    {
+     "text": "Neither: it is a reptile",
+     "correct": false,
+     "feedback": "Reptiles have scales and most lay eggs on land."
+    }
+   ],
+   "explain": "Classification is based on features, not habitat. Whales are mammals."
+  },
+  {
+   "id": "science.lv.vertebrate",
+   "topic": "science.living",
+   "kind": "fact",
+   "prompt": "What is an animal with a backbone called?",
+   "answer": "a vertebrate",
+   "distractors": [
+    "an invertebrate",
+    "a mollusc",
+    "an insect"
+   ],
+   "explain": "Vertebrates have backbones: fish, amphibians, reptiles, birds and mammals.",
+   "accept": [
+    "vertebrate"
+   ]
+  },
+  {
+   "id": "science.lv.five",
+   "topic": "science.living",
+   "kind": "fact",
+   "prompt": "Which of these is NOT one of the five vertebrate groups?",
+   "answer": "insects",
+   "distractors": [
+    "fish",
+    "amphibians",
+    "birds"
+   ],
+   "explain": "The five vertebrate groups are fish, amphibians, reptiles, birds and mammals. Insects are invertebrates.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.lv.amphibian",
+   "topic": "science.living",
+   "kind": "fact",
+   "prompt": "Which group do frogs belong to?",
+   "answer": "amphibians",
+   "distractors": [
+    "reptiles",
+    "fish",
+    "mammals"
+   ],
+   "explain": "Amphibians usually start life in water (with gills) and live on land as adults (with lungs)."
+  },
+  {
+   "id": "science.lv.insect-legs",
+   "topic": "science.living",
+   "kind": "fact",
+   "prompt": "How many legs does an insect have?",
+   "answer": "6",
+   "distractors": [
+    "8",
+    "4",
+    "10"
+   ],
+   "explain": "Insects have six legs and three body parts. Spiders, with eight legs, are arachnids, not insects."
+  },
+  {
+   "id": "science.lv.linnaeus",
+   "topic": "science.living",
+   "kind": "fact",
+   "prompt": "Which scientist invented the two-part naming system for living things (like Homo sapiens)?",
+   "answer": "Carl Linnaeus",
+   "distractors": [
+    "Charles Darwin",
+    "Isaac Newton",
+    "Marie Curie"
+   ],
+   "explain": "Carl Linnaeus, an 18th-century Swedish scientist, gave every species a genus and species name.",
+   "accept": [
+    "linnaeus"
+   ]
+  },
+  {
+   "id": "science.lv.microbes",
+   "topic": "science.living",
+   "kind": "fact",
+   "prompt": "Living things too small to see without a microscope are called…",
+   "answer": "micro-organisms",
+   "distractors": [
+    "vertebrates",
+    "fungi only",
+    "plants"
+   ],
+   "explain": "Micro-organisms include bacteria and some fungi. Some cause disease; others help us make bread and yoghurt.",
+   "accept": [
+    "microorganisms",
+    "microbes"
+   ]
+  },
+  {
+   "id": "science.lv.key",
+   "topic": "science.living",
+   "kind": "fact",
+   "prompt": "What is a tool of yes/no questions used to identify living things called?",
+   "answer": "a classification key",
+   "distractors": [
+    "a food chain",
+    "a habitat",
+    "a fossil record"
+   ],
+   "explain": "A classification (branching) key sorts organisms using questions about their features.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.b.d1",
+   "topic": "science.body",
+   "kind": "mcq",
+   "prompt": "What does the heart do?",
+   "options": [
+    {
+     "text": "It pumps blood around the body through blood vessels",
+     "correct": true
+    },
+    {
+     "text": "It makes blood",
+     "correct": false,
+     "feedback": "Blood cells are made in the bone marrow, not the heart."
+    },
+    {
+     "text": "It is where we feel love",
+     "correct": false,
+     "feedback": "That’s a figure of speech. Feelings come from the brain."
+    }
+   ],
+   "explain": "The heart is a muscle that pumps blood, carrying oxygen and nutrients to every part of the body."
+  },
+  {
+   "id": "science.b.d2",
+   "topic": "science.body",
+   "kind": "mcq",
+   "prompt": "Why does your heart beat faster when you exercise?",
+   "options": [
+    {
+     "text": "Your muscles need more oxygen, so blood must be pumped faster",
+     "correct": true
+    },
+    {
+     "text": "The heart gets scared",
+     "correct": false,
+     "feedback": "The heart responds to what the muscles need."
+    },
+    {
+     "text": "Exercise makes the heart smaller",
+     "correct": false,
+     "feedback": "Exercise strengthens the heart over time; it doesn’t make it smaller."
+    }
+   ],
+   "explain": "Working muscles need more oxygen and glucose, so the heart pumps faster and you breathe faster."
+  },
+  {
+   "id": "science.b.arteries",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "Which blood vessels carry blood away from the heart?",
+   "answer": "arteries",
+   "distractors": [
+    "veins",
+    "capillaries",
+    "nerves"
+   ],
+   "explain": "Arteries carry blood away from the heart (A for Away). Veins carry it back."
+  },
+  {
+   "id": "science.b.veins",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "Which blood vessels carry blood back to the heart?",
+   "answer": "veins",
+   "distractors": [
+    "arteries",
+    "capillaries",
+    "tendons"
+   ],
+   "explain": "Veins carry blood back to the heart."
+  },
+  {
+   "id": "science.b.capillaries",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "What are the tiniest blood vessels, where oxygen passes into the cells, called?",
+   "answer": "capillaries",
+   "distractors": [
+    "arteries",
+    "veins",
+    "alveoli"
+   ],
+   "explain": "Capillaries are thinner than a hair, so substances can pass through their walls."
+  },
+  {
+   "id": "science.b.lungs",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "Where does blood pick up oxygen?",
+   "answer": "in the lungs",
+   "distractors": [
+    "in the heart",
+    "in the stomach",
+    "in the kidneys"
+   ],
+   "explain": "In the lungs, oxygen passes into the blood and carbon dioxide passes out to be breathed away.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.b.plasma",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "Blood carries water, nutrients and oxygen. What else does it carry away from cells?",
+   "answer": "waste such as carbon dioxide",
+   "distractors": [
+    "bones",
+    "food chunks",
+    "air bubbles"
+   ],
+   "explain": "Blood carries waste such as carbon dioxide away from cells.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.b.pulse",
+   "topic": "science.body",
+   "kind": "fact",
+   "prompt": "What do you call the beat you can feel in your wrist or neck?",
+   "answer": "your pulse",
+   "distractors": [
+    "your reflex",
+    "your breath",
+    "your nerve"
+   ],
+   "explain": "Each pulse is one heartbeat pushing blood through an artery.",
+   "accept": [
+    "pulse",
+    "a pulse"
+   ]
+  },
+  {
+   "id": "science.ev.d1",
+   "topic": "science.evolution",
+   "kind": "mcq",
+   "prompt": "How did giraffes come to have long necks?",
+   "options": [
+    {
+     "text": "Over many generations, giraffes with slightly longer necks reached more food, survived and passed the trait on",
+     "correct": true
+    },
+    {
+     "text": "Each giraffe stretched its neck, and its babies were born with longer necks",
+     "correct": false,
+     "feedback": "This was Lamarck’s idea, and it’s wrong: changes you make during your life aren’t passed to your children."
+    },
+    {
+     "text": "Giraffes decided they needed longer necks",
+     "correct": false,
+     "feedback": "Animals can’t choose to evolve. Natural selection works on random differences."
+    }
+   ],
+   "explain": "Natural selection: random variation, then the best-suited individuals survive and reproduce more, so the trait becomes common over many generations."
+  },
+  {
+   "id": "science.ev.d2",
+   "topic": "science.evolution",
+   "kind": "mcq",
+   "prompt": "Do offspring look exactly like their parents?",
+   "options": [
+    {
+     "text": "No: they inherit features from both parents, so they vary",
+     "correct": true
+    },
+    {
+     "text": "Yes, always identical",
+     "correct": false,
+     "feedback": "Brothers and sisters look different, even with the same parents."
+    },
+    {
+     "text": "They only inherit features from their mother",
+     "correct": false,
+     "feedback": "Offspring inherit from both parents."
+    }
+   ],
+   "explain": "Offspring inherit a mix of characteristics from their parents. This variation is what natural selection acts on."
+  },
+  {
+   "id": "science.ev.darwin",
+   "topic": "science.evolution",
+   "kind": "fact",
+   "prompt": "Which scientist explained evolution by natural selection in “On the Origin of Species” (1859)?",
+   "answer": "Charles Darwin",
+   "distractors": [
+    "Isaac Newton",
+    "Carl Linnaeus",
+    "Mary Anning"
+   ],
+   "explain": "Darwin developed his ideas after his voyage on HMS Beagle, including studying finches in the Galápagos Islands.",
+   "accept": [
+    "darwin"
+   ]
+  },
+  {
+   "id": "science.ev.anning",
+   "topic": "science.evolution",
+   "kind": "fact",
+   "prompt": "Which fossil hunter from Lyme Regis discovered famous ichthyosaur and plesiosaur skeletons in the early 1800s?",
+   "answer": "Mary Anning",
+   "distractors": [
+    "Marie Curie",
+    "Rosalind Franklin",
+    "Ada Lovelace"
+   ],
+   "explain": "Mary Anning (1799–1847) made major fossil discoveries, though as a woman she was shut out of scientific societies.",
+   "accept": [
+    "anning"
+   ]
+  },
+  {
+   "id": "science.ev.fossil",
+   "topic": "science.evolution",
+   "kind": "fact",
+   "prompt": "What is a fossil?",
+   "answer": "the preserved remains or traces of a living thing from long ago",
+   "distractors": [
+    "a type of crystal",
+    "a living animal in rock",
+    "a rock made by volcanoes"
+   ],
+   "explain": "Fossils form when remains are buried and slowly replaced by minerals. They show how living things have changed.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.ev.adaptation",
+   "topic": "science.evolution",
+   "kind": "fact",
+   "prompt": "A feature that helps a living thing survive in its habitat is called…",
+   "answer": "an adaptation",
+   "distractors": [
+    "a habitat",
+    "a fossil",
+    "a mutation only"
+   ],
+   "explain": "A polar bear’s thick fur and a cactus’s spines are adaptations.",
+   "accept": [
+    "adaptation"
+   ]
+  },
+  {
+   "id": "science.ev.galapagos",
+   "topic": "science.evolution",
+   "kind": "fact",
+   "prompt": "On which islands did Darwin study finches with different beaks?",
+   "answer": "the Galápagos Islands",
+   "distractors": [
+    "the Canary Islands",
+    "the Isle of Wight",
+    "the Falkland Islands"
+   ],
+   "explain": "The finches’ beaks suited the food on each island.",
+   "formats": [
+    "choice"
+   ]
+  }
+ ]
+}

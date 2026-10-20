@@ -1,0 +1,1235 @@
+{
+ "subject": "history",
+ "deck": "core",
+ "topics": [
+  {
+   "id": "history.words",
+   "title": "Words for time",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 6,
+   "intro": "Historians use special words to talk about time. Knowing them makes every history topic easier.",
+   "teach": "Explain what BC and AD mean.",
+   "talk": "Ask her which century we are in, and why it isn’t the 20th."
+  },
+  {
+   "id": "history.century",
+   "title": "Which century?",
+   "kind": "skill",
+   "prereqs": [
+    "history.words"
+   ],
+   "teach": "Explain why 1900 is in the 19th century.",
+   "talk": "Ask her which century the Great Fire of London (1666) was in."
+  },
+  {
+   "id": "history.timeline",
+   "title": "The big timeline of Britain",
+   "kind": "facts",
+   "prereqs": [
+    "history.words"
+   ],
+   "batch": 6,
+   "intro": "A secure mental timeline is the backbone of history. We’ll build it period by period, from the Stone Age to today.",
+   "teach": "Put the Romans, Vikings and Tudors in order and say roughly when each was.",
+   "talk": "Ask her to put three periods in order: Victorians, Romans, Tudors."
+  },
+  {
+   "id": "history.ancient",
+   "title": "The earliest civilisations",
+   "kind": "facts",
+   "prereqs": [
+    "history.timeline"
+   ],
+   "batch": 5,
+   "intro": "Long before Roman Britain, great civilisations grew up along rivers: in Egypt, Mesopotamia, India and China. Ancient Greece came a little later.",
+   "teach": "Explain why early civilisations grew up near rivers.",
+   "talk": "Ask her what the Greeks gave us that we still use today."
+  },
+  {
+   "id": "history.world",
+   "title": "Beyond Europe: Baghdad, the Maya and Benin",
+   "kind": "facts",
+   "prereqs": [
+    "history.timeline"
+   ],
+   "batch": 5,
+   "intro": "While Britain was in the Anglo-Saxon and medieval periods, other parts of the world had great cities and kingdoms.",
+   "teach": "Explain why Baghdad around AD 900 was a centre of learning.",
+   "talk": "Ask her what the House of Wisdom was."
+  },
+  {
+   "id": "history.1066",
+   "title": "1066: the year of three battles",
+   "kind": "facts",
+   "prereqs": [
+    "history.timeline"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "history.1066.d1",
+    "history.1066.d2"
+   ],
+   "intro": "When Edward the Confessor died in January 1066 without a child, several men claimed the English throne. This is the start of Year 7 history.",
+   "teach": "Explain the most important reason William won at Hastings.",
+   "talk": "Ask her who the claimants to the throne were in 1066."
+  },
+  {
+   "id": "history.normans",
+   "title": "How the Normans took control",
+   "kind": "facts",
+   "prereqs": [
+    "history.1066"
+   ],
+   "batch": 5,
+   "intro": "William had won a battle, but now he had to control a whole country of about two million English people.",
+   "teach": "Explain how castles helped William control England.",
+   "talk": "Ask her what the Domesday Book was for."
+  }
+ ],
+ "items": [
+  {
+   "id": "history.w.bc",
+   "topic": "history.words",
+   "kind": "fact",
+   "prompt": "What does BC stand for?",
+   "answer": "Before Christ",
+   "distractors": [
+    "Before Calendar",
+    "British Century",
+    "Before Caesar"
+   ],
+   "explain": "BC means “Before Christ”: years counted backwards from the traditional birth year of Jesus. Some books use BCE (Before Common Era).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w.ad",
+   "topic": "history.words",
+   "kind": "fact",
+   "prompt": "What does AD stand for?",
+   "answer": "Anno Domini",
+   "distractors": [
+    "After Death",
+    "Ancient Days",
+    "After Domesday"
+   ],
+   "explain": "AD stands for Anno Domini, Latin for “in the year of the Lord”. Some books use CE (Common Era).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w.century",
+   "topic": "history.words",
+   "kind": "fact",
+   "prompt": "How many years are in a century?",
+   "answer": "100",
+   "distractors": [
+    "10",
+    "1000",
+    "50"
+   ],
+   "explain": "A century is 100 years."
+  },
+  {
+   "id": "history.w.decade",
+   "topic": "history.words",
+   "kind": "fact",
+   "prompt": "How many years are in a decade?",
+   "answer": "10",
+   "distractors": [
+    "100",
+    "5",
+    "1000"
+   ],
+   "explain": "A decade is 10 years (the 1960s is a decade)."
+  },
+  {
+   "id": "history.w.millennium",
+   "topic": "history.words",
+   "kind": "fact",
+   "prompt": "How many years are in a millennium?",
+   "answer": "1000",
+   "distractors": [
+    "100",
+    "10 000",
+    "500"
+   ],
+   "explain": "A millennium is 1000 years."
+  },
+  {
+   "id": "history.w.circa",
+   "topic": "history.words",
+   "kind": "fact",
+   "prompt": "What does “c.” mean in front of a date, as in c. 1200?",
+   "answer": "about",
+   "distractors": [
+    "century",
+    "certainly",
+    "counted"
+   ],
+   "explain": "“c.” is short for “circa”, Latin for “around”. We use it when we don’t know the exact date.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w.chronology",
+   "topic": "history.words",
+   "kind": "fact",
+   "prompt": "What is the word for putting events in time order?",
+   "answer": "chronology",
+   "distractors": [
+    "geography",
+    "archaeology",
+    "biography"
+   ],
+   "explain": "Chronology means the order in which events happened (chron = time)."
+  },
+  {
+   "id": "history.w.medieval",
+   "topic": "history.words",
+   "kind": "fact",
+   "prompt": "Which word describes the period in Europe from about AD 500 to 1500?",
+   "answer": "medieval",
+   "distractors": [
+    "ancient",
+    "modern",
+    "prehistoric"
+   ],
+   "explain": "“Medieval” means the Middle Ages, roughly AD 500 to 1500."
+  },
+  {
+   "id": "history.w.prehistory",
+   "topic": "history.words",
+   "kind": "fact",
+   "prompt": "What do we call the time before people wrote things down?",
+   "answer": "prehistory",
+   "distractors": [
+    "antiquity",
+    "the Middle Ages",
+    "the Renaissance"
+   ],
+   "explain": "Prehistory is the time before written records. In Britain this includes the Stone, Bronze and Iron Ages."
+  },
+  {
+   "id": "history.w.primary",
+   "topic": "history.words",
+   "kind": "fact",
+   "prompt": "What is a source from the time being studied called?",
+   "answer": "a primary source",
+   "distractors": [
+    "a secondary source",
+    "a reliable source",
+    "a modern source"
+   ],
+   "explain": "A primary source was made at the time (a diary, a coin, a photograph). A secondary source was made later (a textbook).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.w.archaeology",
+   "topic": "history.words",
+   "kind": "fact",
+   "prompt": "What is the study of the past through objects dug up from the ground called?",
+   "answer": "archaeology",
+   "distractors": [
+    "geology",
+    "chronology",
+    "astronomy"
+   ],
+   "explain": "Archaeologists study the past from physical remains such as tools, bones and buildings."
+  },
+  {
+   "id": "history.w.cent-now",
+   "topic": "history.words",
+   "kind": "mcq",
+   "prompt": "Which century are we living in now?",
+   "options": [
+    {
+     "text": "the 21st century",
+     "correct": true
+    },
+    {
+     "text": "the 20th century",
+     "correct": false,
+     "feedback": "The 20th century was 1901–2000. Years starting 20.. are in the 21st century."
+    },
+    {
+     "text": "the 2000th century",
+     "correct": false,
+     "feedback": "Centuries are counted in hundreds of years, so we are only in the 21st."
+    }
+   ],
+   "explain": "The 21st century runs from 2001 to 2100."
+  },
+  {
+   "id": "history.t.o1",
+   "topic": "history.timeline",
+   "kind": "order",
+   "prompt": "Put these periods of British history in order, earliest first.",
+   "items": [
+    "Stone Age",
+    "Bronze Age",
+    "Iron Age",
+    "Roman Britain"
+   ],
+   "labels": [
+    "before c. 2500 BC",
+    "c. 2500–800 BC",
+    "c. 800 BC–AD 43",
+    "AD 43–410"
+   ],
+   "explain": "Stone tools came first, then bronze (a mix of copper and tin), then iron. The Romans invaded in AD 43.",
+   "axis": "time"
+  },
+  {
+   "id": "history.t.o2",
+   "topic": "history.timeline",
+   "kind": "order",
+   "prompt": "Put these in order, earliest first.",
+   "items": [
+    "Roman Britain",
+    "Anglo-Saxons",
+    "Vikings raid Lindisfarne",
+    "Norman Conquest"
+   ],
+   "labels": [
+    "AD 43–410",
+    "from c. 410",
+    "793",
+    "1066"
+   ],
+   "explain": "After the Romans left (c. 410), Anglo-Saxons settled. Vikings first raided in 793. The Normans conquered in 1066.",
+   "axis": "time"
+  },
+  {
+   "id": "history.t.o3",
+   "topic": "history.timeline",
+   "kind": "order",
+   "prompt": "Put these periods in order, earliest first.",
+   "items": [
+    "Normans",
+    "Tudors",
+    "Stuarts",
+    "Georgians",
+    "Victorians"
+   ],
+   "labels": [
+    "1066–1154",
+    "1485–1603",
+    "1603–1714",
+    "1714–1837",
+    "1837–1901"
+   ],
+   "explain": "Normans, then (after many medieval kings) the Tudors, Stuarts, Georgians and Victorians.",
+   "axis": "time"
+  },
+  {
+   "id": "history.t.o4",
+   "topic": "history.timeline",
+   "kind": "order",
+   "prompt": "Put these events in order, earliest first.",
+   "items": [
+    "Battle of Hastings",
+    "Magna Carta",
+    "Black Death",
+    "Battle of Bosworth"
+   ],
+   "labels": [
+    "1066",
+    "1215",
+    "1348",
+    "1485"
+   ],
+   "explain": "Hastings 1066, Magna Carta 1215, the Black Death 1348, Bosworth (the first Tudor king) 1485.",
+   "axis": "time"
+  },
+  {
+   "id": "history.t.o5",
+   "topic": "history.timeline",
+   "kind": "order",
+   "prompt": "Put these events in order, earliest first.",
+   "items": [
+    "Spanish Armada",
+    "Gunpowder Plot",
+    "Great Fire of London",
+    "Queen Victoria crowned"
+   ],
+   "labels": [
+    "1588",
+    "1605",
+    "1666",
+    "1838"
+   ],
+   "explain": "Armada 1588 (Elizabeth I), Gunpowder Plot 1605 (James I), Great Fire 1666 (Charles II), Victoria crowned 1838.",
+   "axis": "time"
+  },
+  {
+   "id": "history.t.o6",
+   "topic": "history.timeline",
+   "kind": "order",
+   "prompt": "Put these in order, earliest first.",
+   "items": [
+    "Ancient Egypt’s pyramids built",
+    "Ancient Greek Olympics begin",
+    "Romans invade Britain",
+    "House of Wisdom in Baghdad"
+   ],
+   "labels": [
+    "c. 2560 BC",
+    "776 BC",
+    "AD 43",
+    "c. AD 830"
+   ],
+   "explain": "The Great Pyramid was finished around 2560 BC, the first recorded Olympics were in 776 BC, the Romans arrived in AD 43 and the House of Wisdom flourished in the 800s.",
+   "axis": "time"
+  },
+  {
+   "id": "history.t.romans",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "In which year did the Romans invade Britain under Emperor Claudius?",
+   "answer": "AD 43",
+   "distractors": [
+    "55 BC",
+    "AD 410",
+    "AD 122"
+   ],
+   "explain": "Julius Caesar visited in 55 and 54 BC, but the real invasion came in AD 43 under Claudius.",
+   "accept": [
+    "43",
+    "43 ad"
+   ]
+  },
+  {
+   "id": "history.t.romans-leave",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "Roughly when did Roman rule in Britain end?",
+   "answer": "AD 410",
+   "distractors": [
+    "AD 43",
+    "AD 1066",
+    "AD 793"
+   ],
+   "explain": "Around AD 410 the Roman army left and Britain had to defend itself.",
+   "accept": [
+    "410",
+    "410 ad",
+    "c. 410",
+    "c 410"
+   ]
+  },
+  {
+   "id": "history.t.lindisfarne",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "The first famous Viking raid hit the monastery at Lindisfarne. In which year?",
+   "answer": "793",
+   "distractors": [
+    "1066",
+    "410",
+    "871"
+   ],
+   "explain": "Vikings attacked Lindisfarne in 793, shocking Christian Europe.",
+   "accept": [
+    "793 ad",
+    "ad 793"
+   ]
+  },
+  {
+   "id": "history.t.hastings",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "In which year was the Battle of Hastings?",
+   "answer": "1066",
+   "distractors": [
+    "1086",
+    "1215",
+    "966"
+   ],
+   "explain": "The Battle of Hastings was on 14 October 1066."
+  },
+  {
+   "id": "history.t.magna",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "In which year did King John agree to Magna Carta?",
+   "answer": "1215",
+   "distractors": [
+    "1066",
+    "1415",
+    "1265"
+   ],
+   "explain": "Magna Carta (1215) limited the king’s power: even the king had to obey the law."
+  },
+  {
+   "id": "history.t.blackdeath",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "In which year did the Black Death reach England?",
+   "answer": "1348",
+   "distractors": [
+    "1066",
+    "1666",
+    "1485"
+   ],
+   "explain": "The Black Death arrived in 1348 and killed perhaps a third to a half of the population."
+  },
+  {
+   "id": "history.t.tudors",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "Which family ruled England from 1485 to 1603?",
+   "answer": "the Tudors",
+   "distractors": [
+    "the Stuarts",
+    "the Normans",
+    "the Windsors"
+   ],
+   "explain": "Henry VII became the first Tudor king after winning at Bosworth in 1485. The last Tudor was Elizabeth I, who died in 1603.",
+   "accept": [
+    "tudors",
+    "tudor"
+   ]
+  },
+  {
+   "id": "history.t.victoria",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "Queen Victoria reigned from 1837 until which year?",
+   "answer": "1901",
+   "distractors": [
+    "1900",
+    "1914",
+    "1870"
+   ],
+   "explain": "Victoria reigned from 1837 to 1901: over 63 years."
+  },
+  {
+   "id": "history.t.ww1",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "In which years was the First World War?",
+   "answer": "1914–1918",
+   "distractors": [
+    "1939–1945",
+    "1899–1902",
+    "1914–1945"
+   ],
+   "explain": "The First World War lasted from 1914 to 1918.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.t.ww2",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "In which years was the Second World War?",
+   "answer": "1939–1945",
+   "distractors": [
+    "1914–1918",
+    "1936–1942",
+    "1945–1950"
+   ],
+   "explain": "The Second World War lasted from 1939 to 1945.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.t.bronze",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "Bronze is made by mixing copper with which metal?",
+   "answer": "tin",
+   "distractors": [
+    "iron",
+    "gold",
+    "lead"
+   ],
+   "explain": "Bronze is copper mixed with tin. It was harder than copper alone."
+  },
+  {
+   "id": "history.t.stonehenge",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "Stonehenge was first built during which period?",
+   "answer": "the Stone Age",
+   "distractors": [
+    "the Iron Age",
+    "Roman Britain",
+    "the Bronze Age only"
+   ],
+   "explain": "Work on Stonehenge began around 3000 BC, in the New Stone Age (Neolithic), and continued into the Bronze Age.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.t.alfred",
+   "topic": "history.timeline",
+   "kind": "fact",
+   "prompt": "Which Anglo-Saxon king of Wessex fought off the Vikings and is called “the Great”?",
+   "answer": "Alfred",
+   "distractors": [
+    "Edward",
+    "Harold",
+    "Canute"
+   ],
+   "explain": "Alfred the Great (king 871–899) defended Wessex against the Vikings.",
+   "accept": [
+    "alfred the great",
+    "king alfred"
+   ]
+  },
+  {
+   "id": "history.a.egypt-river",
+   "topic": "history.ancient",
+   "kind": "fact",
+   "prompt": "Which river did Ancient Egypt depend on?",
+   "answer": "the Nile",
+   "distractors": [
+    "the Tigris",
+    "the Indus",
+    "the Thames"
+   ],
+   "explain": "The Nile flooded every year, leaving rich soil for farming.",
+   "accept": [
+    "nile",
+    "river nile"
+   ]
+  },
+  {
+   "id": "history.a.mesopotamia",
+   "topic": "history.ancient",
+   "kind": "fact",
+   "prompt": "Mesopotamia means “land between two rivers”. Which two?",
+   "answer": "the Tigris and Euphrates",
+   "distractors": [
+    "the Nile and Indus",
+    "the Yellow River and Yangtze",
+    "the Danube and Rhine"
+   ],
+   "explain": "Mesopotamia (modern Iraq) lay between the Tigris and Euphrates. The Sumerians there invented one of the first writing systems, cuneiform.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.a.indus",
+   "topic": "history.ancient",
+   "kind": "fact",
+   "prompt": "Which civilisation built the planned cities of Harappa and Mohenjo-daro?",
+   "answer": "the Indus Valley",
+   "distractors": [
+    "Ancient Egypt",
+    "the Shang",
+    "Ancient Greece"
+   ],
+   "explain": "The Indus Valley civilisation (c. 2600–1900 BC) had well-planned cities with drains.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.a.shang",
+   "topic": "history.ancient",
+   "kind": "fact",
+   "prompt": "Which Chinese dynasty left writing on “oracle bones”?",
+   "answer": "the Shang",
+   "distractors": [
+    "the Ming",
+    "the Tang",
+    "the Qin"
+   ],
+   "explain": "The Shang Dynasty (c. 1600–1046 BC) carved questions to their gods on oracle bones.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.a.hieroglyphs",
+   "topic": "history.ancient",
+   "kind": "fact",
+   "prompt": "What were Ancient Egyptian picture symbols for writing called?",
+   "answer": "hieroglyphs",
+   "distractors": [
+    "cuneiform",
+    "runes",
+    "the alphabet"
+   ],
+   "explain": "Egyptians wrote in hieroglyphs. The Rosetta Stone helped scholars decode them in 1822.",
+   "accept": [
+    "hieroglyphics"
+   ]
+  },
+  {
+   "id": "history.a.democracy",
+   "topic": "history.ancient",
+   "kind": "fact",
+   "prompt": "Which Greek city-state is famous for developing democracy?",
+   "answer": "Athens",
+   "distractors": [
+    "Sparta",
+    "Rome",
+    "Troy"
+   ],
+   "explain": "Athens developed democracy (“rule by the people”) around 508 BC, though only free men could vote."
+  },
+  {
+   "id": "history.a.sparta",
+   "topic": "history.ancient",
+   "kind": "fact",
+   "prompt": "Which Greek city-state was famous for its warriors and tough training?",
+   "answer": "Sparta",
+   "distractors": [
+    "Athens",
+    "Corinth",
+    "Olympia"
+   ],
+   "explain": "Spartan boys began military training at about age 7."
+  },
+  {
+   "id": "history.a.olympics",
+   "topic": "history.ancient",
+   "kind": "fact",
+   "prompt": "In which year were the first recorded Olympic Games held?",
+   "answer": "776 BC",
+   "distractors": [
+    "AD 776",
+    "1896",
+    "490 BC"
+   ],
+   "explain": "The first recorded Olympics were held at Olympia in 776 BC in honour of Zeus.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.a.marathon",
+   "topic": "history.ancient",
+   "kind": "fact",
+   "prompt": "At which battle in 490 BC did the Athenians defeat the Persians?",
+   "answer": "Marathon",
+   "distractors": [
+    "Thermopylae",
+    "Troy",
+    "Hastings"
+   ],
+   "explain": "Legend says a runner ran from Marathon to Athens with the news, which is where the race gets its name."
+  },
+  {
+   "id": "history.a.greek-gift",
+   "topic": "history.ancient",
+   "kind": "fact",
+   "prompt": "Which of these do we owe to the Ancient Greeks?",
+   "answer": "the Olympic Games",
+   "distractors": [
+    "the printing press",
+    "paper money",
+    "the compass"
+   ],
+   "explain": "The Greeks gave us the Olympics, democracy, theatre and many words, such as “alphabet” (from alpha, beta).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.wo.baghdad",
+   "topic": "history.world",
+   "kind": "fact",
+   "prompt": "What was the name of the great centre of learning in Baghdad around AD 900?",
+   "answer": "the House of Wisdom",
+   "distractors": [
+    "the Great Library of Alexandria",
+    "the Colosseum",
+    "the Forbidden City"
+   ],
+   "explain": "The House of Wisdom gathered scholars who translated and improved Greek, Persian and Indian knowledge.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.wo.algebra",
+   "topic": "history.world",
+   "kind": "fact",
+   "prompt": "The word “algebra” comes from the work of which Baghdad scholar?",
+   "answer": "al-Khwarizmi",
+   "distractors": [
+    "Aristotle",
+    "Isaac Newton",
+    "Archimedes"
+   ],
+   "explain": "Al-Khwarizmi (c. 780–850) wrote a book whose title gave us “algebra”. The word “algorithm” comes from his name.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.wo.baghdad-round",
+   "topic": "history.world",
+   "kind": "fact",
+   "prompt": "What shape was the city of Baghdad when it was founded in 762?",
+   "answer": "round",
+   "distractors": [
+    "square",
+    "triangular",
+    "star-shaped"
+   ],
+   "explain": "Caliph al-Mansur built Baghdad as a “Round City” with walls in a circle."
+  },
+  {
+   "id": "history.wo.maya-where",
+   "topic": "history.world",
+   "kind": "fact",
+   "prompt": "The Maya civilisation was in which part of the world?",
+   "answer": "Central America",
+   "distractors": [
+    "South-East Asia",
+    "North Africa",
+    "Northern Europe"
+   ],
+   "explain": "The Maya lived in what is now southern Mexico, Guatemala and Belize. Their classic period was about AD 250–900.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.wo.maya-zero",
+   "topic": "history.world",
+   "kind": "fact",
+   "prompt": "The Maya used a symbol for which important number, long before Europe?",
+   "answer": "zero",
+   "distractors": [
+    "one million",
+    "pi",
+    "ten"
+   ],
+   "explain": "The Maya counted in 20s and had a symbol for zero, shaped like a shell."
+  },
+  {
+   "id": "history.wo.maya-writing",
+   "topic": "history.world",
+   "kind": "fact",
+   "prompt": "The Maya wrote using what?",
+   "answer": "glyphs",
+   "distractors": [
+    "an alphabet of 26 letters",
+    "knotted strings only",
+    "no writing at all"
+   ],
+   "explain": "Maya writing used hundreds of glyphs carved on stone and written in folding books (codices).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.wo.benin-where",
+   "topic": "history.world",
+   "kind": "fact",
+   "prompt": "The Kingdom of Benin was in which modern country?",
+   "answer": "Nigeria",
+   "distractors": [
+    "Benin",
+    "Egypt",
+    "Kenya"
+   ],
+   "explain": "The historic Kingdom of Benin was in what is now southern Nigeria, not the modern country called Benin.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.wo.benin-bronzes",
+   "topic": "history.world",
+   "kind": "fact",
+   "prompt": "What are the famous metal plaques and sculptures from Benin called?",
+   "answer": "the Benin Bronzes",
+   "distractors": [
+    "the Elgin Marbles",
+    "the Terracotta Army",
+    "the Lewis Chessmen"
+   ],
+   "explain": "The Benin Bronzes are thousands of brass and bronze artworks. British soldiers took many in 1897.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.wo.benin-ruler",
+   "topic": "history.world",
+   "kind": "fact",
+   "prompt": "What was the title of the ruler of Benin?",
+   "answer": "the Oba",
+   "distractors": [
+    "the Pharaoh",
+    "the Caliph",
+    "the Emperor"
+   ],
+   "explain": "The Oba ruled Benin from a great palace in Benin City.",
+   "accept": [
+    "oba"
+   ]
+  },
+  {
+   "id": "history.1066.d1",
+   "topic": "history.1066",
+   "kind": "mcq",
+   "prompt": "Why was there a fight for the throne in 1066?",
+   "options": [
+    {
+     "text": "Edward the Confessor died without a child to inherit",
+     "correct": true
+    },
+    {
+     "text": "The Vikings had killed the whole royal family",
+     "correct": false,
+     "feedback": "No: the problem was that King Edward had no son or daughter."
+    },
+    {
+     "text": "England had never had a king before",
+     "correct": false,
+     "feedback": "England had had kings for over 100 years."
+    }
+   ],
+   "explain": "King Edward the Confessor died on 5 January 1066 with no children, so several men claimed the throne."
+  },
+  {
+   "id": "history.1066.d2",
+   "topic": "history.1066",
+   "kind": "mcq",
+   "prompt": "Who won the Battle of Hastings?",
+   "options": [
+    {
+     "text": "William, Duke of Normandy",
+     "correct": true
+    },
+    {
+     "text": "Harold Godwinson",
+     "correct": false,
+     "feedback": "Harold was killed at Hastings."
+    },
+    {
+     "text": "Harald Hardrada",
+     "correct": false,
+     "feedback": "Hardrada was killed earlier at Stamford Bridge."
+    }
+   ],
+   "explain": "William of Normandy defeated and killed Harold Godwinson on 14 October 1066."
+  },
+  {
+   "id": "history.1066.claimants",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "Which English earl was crowned king the day after Edward the Confessor died?",
+   "answer": "Harold Godwinson",
+   "distractors": [
+    "William of Normandy",
+    "Harald Hardrada",
+    "Edgar Ætheling"
+   ],
+   "explain": "Harold Godwinson, the most powerful earl in England, was crowned on 6 January 1066.",
+   "accept": [
+    "harold",
+    "harold ii"
+   ]
+  },
+  {
+   "id": "history.1066.hardrada",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "Which Norwegian king invaded northern England in September 1066?",
+   "answer": "Harald Hardrada",
+   "distractors": [
+    "William of Normandy",
+    "Canute",
+    "Harold Godwinson"
+   ],
+   "explain": "Harald Hardrada landed with Tostig, Harold’s exiled brother.",
+   "accept": [
+    "hardrada",
+    "harald"
+   ]
+  },
+  {
+   "id": "history.1066.stamford",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "Where did Harold defeat Harald Hardrada in September 1066?",
+   "answer": "Stamford Bridge",
+   "distractors": [
+    "Hastings",
+    "Fulford",
+    "York Minster"
+   ],
+   "explain": "Harold marched north and won at Stamford Bridge on 25 September 1066."
+  },
+  {
+   "id": "history.1066.fulford",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "At which battle did Hardrada defeat the northern earls, before Stamford Bridge?",
+   "answer": "Fulford",
+   "distractors": [
+    "Hastings",
+    "Stamford Bridge",
+    "Bosworth"
+   ],
+   "explain": "Hardrada beat the earls Edwin and Morcar at Fulford, near York, on 20 September 1066."
+  },
+  {
+   "id": "history.1066.date",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "On what date was the Battle of Hastings?",
+   "answer": "14 October 1066",
+   "distractors": [
+    "25 December 1066",
+    "5 January 1066",
+    "25 September 1066"
+   ],
+   "explain": "Hastings: 14 October 1066. William was crowned on Christmas Day 1066.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.1066.edgar",
+   "topic": "history.1066",
+   "kind": "fact",
+   "prompt": "Which teenage Anglo-Saxon prince also had a claim to the throne in 1066?",
+   "answer": "Edgar Ætheling",
+   "distractors": [
+    "Alfred",
+    "Edward the Elder",
+    "Tostig"
+   ],
+   "explain": "Edgar Ætheling was the closest blood relative of Edward, but at about 14 he had little support.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.1066.why",
+   "topic": "history.1066",
+   "kind": "weighted",
+   "prompt": "Historians argue about why William won at Hastings. Which factor do most see as the MOST important?",
+   "options": [
+    {
+     "text": "Harold’s army was exhausted after marching north to Stamford Bridge and back",
+     "weight": 3,
+     "feedback": "Strong choice: Harold’s men had marched about 400 km in under three weeks. Many historians put this first, alongside William’s tactics."
+    },
+    {
+     "text": "William’s tactics, including the feigned retreats that broke the shield wall",
+     "weight": 3,
+     "feedback": "Strong choice: the Norman feigned retreats lured the English off the hill. Many historians put this first."
+    },
+    {
+     "text": "William had a papal banner from the Pope",
+     "weight": 1,
+     "feedback": "This boosted morale and gave William’s cause legitimacy, but it didn’t win the battle on its own."
+    },
+    {
+     "text": "The weather was sunny that day",
+     "weight": 0,
+     "feedback": "There’s no evidence the weather decided the battle. The wind direction mattered for when William could cross the Channel, not for the fighting."
+    }
+   ],
+   "explain": "There is no single right answer: historians weigh Harold’s exhausted army, William’s tactics and luck (the wind delaying William until Harold had gone north). A strong answer compares factors and explains why one mattered most."
+  },
+  {
+   "id": "history.1066.source",
+   "topic": "history.1066",
+   "kind": "mcq",
+   "prompt": "The Bayeux Tapestry was made for William’s half-brother, Bishop Odo. Which question could it BEST help a historian answer?",
+   "options": [
+    {
+     "text": "How did the Normans want people to remember the conquest?",
+     "correct": true
+    },
+    {
+     "text": "What did ordinary English farmers think about William?",
+     "correct": false,
+     "feedback": "It was made for the Norman side, so it tells us little about English farmers’ views."
+    },
+    {
+     "text": "Exactly how many soldiers fought at Hastings?",
+     "correct": false,
+     "feedback": "It is an embroidery, not a record of numbers."
+    }
+   ],
+   "explain": "Every source can be useful: a Norman-made source is excellent evidence of the Norman point of view."
+  },
+  {
+   "id": "history.n.motte",
+   "topic": "history.normans",
+   "kind": "fact",
+   "prompt": "What kind of castle did the Normans build quickly after 1066?",
+   "answer": "motte and bailey",
+   "distractors": [
+    "concentric",
+    "Roman fort",
+    "tower house"
+   ],
+   "explain": "A motte (earth mound) with a wooden tower, and a bailey (enclosed yard). Later many were rebuilt in stone.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.n.domesday",
+   "topic": "history.normans",
+   "kind": "fact",
+   "prompt": "In which year was the Domesday survey carried out?",
+   "answer": "1086",
+   "distractors": [
+    "1066",
+    "1215",
+    "1100"
+   ],
+   "explain": "William ordered the Domesday survey in 1086 to find out who owned what, so he could collect taxes."
+  },
+  {
+   "id": "history.n.domesday-why",
+   "topic": "history.normans",
+   "kind": "fact",
+   "prompt": "Why did William order the Domesday Book?",
+   "answer": "to find out who owned land and what it was worth, for taxes",
+   "distractors": [
+    "to record the names of soldiers at Hastings",
+    "to write down the laws of England",
+    "to list the books in monasteries"
+   ],
+   "explain": "Domesday recorded land, people, animals and value, showing William exactly what he could tax.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.n.feudal",
+   "topic": "history.normans",
+   "kind": "fact",
+   "prompt": "What was the system called where the king gave land in return for loyalty and military service?",
+   "answer": "the feudal system",
+   "distractors": [
+    "democracy",
+    "the Danelaw",
+    "the wool trade"
+   ],
+   "explain": "Under the feudal system, land passed down from king to barons to knights to peasants, with loyalty and service owed upward.",
+   "accept": [
+    "feudal system",
+    "feudalism"
+   ]
+  },
+  {
+   "id": "history.n.harrying",
+   "topic": "history.normans",
+   "kind": "fact",
+   "prompt": "What do we call William’s brutal destruction of villages and crops in the north in 1069–70?",
+   "answer": "the Harrying of the North",
+   "distractors": [
+    "the Black Death",
+    "the Peasants’ Revolt",
+    "the Domesday survey"
+   ],
+   "explain": "After rebellions in the north, William’s soldiers destroyed homes, crops and animals; many thousands starved.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.n.tower",
+   "topic": "history.normans",
+   "kind": "fact",
+   "prompt": "Which famous London castle was begun by William the Conqueror?",
+   "answer": "the Tower of London",
+   "distractors": [
+    "Windsor Castle",
+    "Edinburgh Castle",
+    "Caernarfon Castle"
+   ],
+   "explain": "The White Tower at the Tower of London was begun by William around 1078.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.n.language",
+   "topic": "history.normans",
+   "kind": "fact",
+   "prompt": "Which language did the Norman rulers speak?",
+   "answer": "French",
+   "distractors": [
+    "English",
+    "Latin only",
+    "Norse"
+   ],
+   "explain": "The new rulers spoke Norman French, which is why English has pairs like cow (English) and beef (from French boeuf)."
+  },
+  {
+   "id": "history.n.churches",
+   "topic": "history.normans",
+   "kind": "fact",
+   "prompt": "Which great building in Durham did the Normans begin in 1093?",
+   "answer": "Durham Cathedral",
+   "distractors": [
+    "Westminster Abbey",
+    "St Paul’s Cathedral",
+    "York Minster"
+   ],
+   "explain": "Durham Cathedral is one of the finest Norman buildings, with huge round arches.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.n.change",
+   "topic": "history.normans",
+   "kind": "weighted",
+   "prompt": "Which change after 1066 affected the MOST people in England?",
+   "options": [
+    {
+     "text": "Almost all land passed from English to Norman lords",
+     "weight": 3,
+     "feedback": "Strong: new lords meant new rent, new rules and new masters for millions of peasants."
+    },
+    {
+     "text": "New cathedrals were built in the Norman style",
+     "weight": 1,
+     "feedback": "Impressive, but daily life for most people changed more because of new lords."
+    },
+    {
+     "text": "Kings now spoke French at court",
+     "weight": 1,
+     "feedback": "This mattered for nobles and law, but most peasants never went to court."
+    }
+   ],
+   "explain": "Think about scale: who was affected, and how deeply? The transfer of land touched nearly everyone."
+  },
+  {
+   "id": "history.century.tmpl",
+   "topic": "history.century",
+   "kind": "template",
+   "gen": "century",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.8,
+    0.2,
+    1
+   ]
+  }
+ ]
+}
