@@ -4,7 +4,7 @@
 import { h, s, mount } from '../ui/dom.js';
 import { capybaraEl } from '../ui/capybara.js';
 import { icon, iconPath, SUBJECT_ICON } from '../ui/icons.js';
-import { SUBJECTS, SUBJECT_BY_ID, COURSE } from '../core/subjects.js';
+import { SUBJECTS, SUBJECT_BY_ID, COURSE, isStretch } from '../core/subjects.js';
 import { paperSpec } from '../gen/paper.js';
 import { topicStatus, stretchReady } from '../core/mastery.js';
 import { daysPractisedThisMonth, planDay } from '../core/session.js';
@@ -151,7 +151,7 @@ function todayCard(app) {
     btn = h('button', { class: 'btn-start', onclick: () => app.go('#/play') }, icon('play'), ' Continue');
   } else {
     eyebrow = formatDay(today); title = 'Ready when you are';
-    sub = `About ${state.settings.sessionMinutes} minutes, with a ${COURSE.id === 'ks1' ? 'wiggle' : ''} break halfway.`.replace('a  break', 'a break');
+    sub = `About ${state.settings.sessionMinutes} minutes, with a ${COURSE.young ? 'wiggle' : ''} break halfway.`.replace('a  break', 'a break');
     tags = planSummary(plan);
     btn = h('button', { class: 'btn-start', onclick: () => app.go('#/play') }, icon('play'), ' Start today’s session');
   }
@@ -195,7 +195,7 @@ function homeCards(app, rest) {
   const best = Math.max(0, ...(state.papers || []).map((p) => p.score));
   const spec = paperSpec();
   const TOOLS = {
-    paper: () => card('paper', SUBJECT_BY_ID.maths.colour, COURSE.id === 'ks1' ? 'Maths test' : 'Arithmetic paper', best ? `${spec.questions} questions in ${spec.minutes} minutes · best ${best}/${spec.marks}` : `${spec.questions} questions in ${spec.minutes} minutes, like the real test`, '#/paper'),
+    paper: () => card('paper', SUBJECT_BY_ID.maths.colour, COURSE.young ? 'Maths test' : 'Arithmetic paper', best ? `${spec.questions} questions in ${spec.minutes} minutes · best ${best}/${spec.marks}` : `${spec.questions} questions in ${spec.minutes} minutes, like the real test`, '#/paper'),
     typing: () => card('keyboard', '#5143d9', 'Touch typing', state.typing?.best ? `best ${state.typing.best.wpm} words a minute` : 'Ten lessons, then race the river', '#/typing'),
     speed: () => card('eye', '#d63d74', 'Speed reading', (state.speed || []).length ? `last read at ${state.speed.at(-1).wpm} words a minute` : 'Read faster without losing the thread', '#/speed'),
   };
@@ -245,16 +245,16 @@ export function subjectScreen(app, subjectId) {
         h('div', { class: 'meta' },
           h('span', { class: `chip ${status}` }, LABEL[status]),
           t.links ? h('span', { class: 'chip uses' }, icon('link'), ` uses ${t.links.map((l) => SUBJECT_BY_ID[l].name).join(' & ')}`) : null,
-          t.tier === 'stretch' ? h('span', { class: 'chip stretch' }, icon('spark'), ' stretch') : null,
-          status === 'locked' && t.tier === 'stretch' && !stretchReady(db, state.topics, subjectId) ? h('span', {}, `when most of ${subj.name} is secure`)
+          isStretch(t) ? h('span', { class: 'chip stretch' }, icon('spark'), ' stretch') : null,
+          status === 'locked' && isStretch(t) && !stretchReady(db, state.topics, subjectId) ? h('span', {}, `when most of ${subj.name} is secure`)
             : status === 'locked' ? h('span', {}, `after ${t.prereqs.map((p) => db.topics[p]?.title).join(' and ')}`)
             : items.length ? [h('span', { class: 'mini-bar', 'aria-hidden': 'true' }, h('i', { style: { width: `${Math.round((100 * known) / items.length)}%` } })), h('span', {}, `${known} / ${items.length} known`)]
               : h('span', {}, 'a skill you practise'))));
   });
   const extra = subjectId === 'history' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/progress/timeline') }, icon('clock'), ' Open my timeline')
     : subjectId === 'geography' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/progress/places') }, icon('globe'), ' Places I know')
-    : subjectId === 'maths' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/paper') }, icon('paper'), COURSE.id === 'ks1' ? ' Maths test' : ' Arithmetic paper')
-    : subjectId === 'science' && COURSE.id === 'ks1' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/progress/places') }, icon('globe'), ' Places I know') : null;
+    : subjectId === 'maths' ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/paper') }, icon('paper'), COURSE.young ? ' Maths test' : ' Arithmetic paper')
+    : subjectId === 'science' && COURSE.young ? h('button', { class: 'btn-ghost', onclick: () => app.go('#/progress/places') }, icon('globe'), ' Places I know') : null;
   mount(app.root,
     h('div', { class: 'topbar' }, h('button', { class: 'btn-icon', 'aria-label': 'Back', onclick: () => app.go('#/home') }, icon('back')), h('span', { class: 'spacer' }), extra),
     h('div', { class: 'narrow', style: { '--subj': subj.colour } },

@@ -34,6 +34,8 @@ export function mathsDiagram(d) {
     case 'array': return arrayDots(d);
     case 'pictogram': return pictogram(d);
     case 'numline': return numLine(d);
+    case 'angle': return angle(d);
+    case 'squares': return squares(d);
     default: return null;
   }
 }
@@ -314,5 +316,28 @@ function numLine(d) {
     if (d.labels?.includes(v) || v === d.min || v === d.max) el.append(small(X(v), 78, String(v)));
   }
   if (d.mark != null) el.append(s('path', { d: `M${X(d.mark)} 38 l-8 -14 h16 z`, fill: '#d62f3a' }), text(X(d.mark), 18, '?', { fill: '#d62f3a' }));
+  return el;
+}
+
+// an angle between two arms (degrees, measured anticlockwise from the bottom arm); no right-angle mark, so it is a fair question
+function angle(d) {
+  const W = 300, H = 200, vy = 165, L = 130;
+  const a = (d.deg * Math.PI) / 180;
+  const vx = Math.max(40, 24 - Math.cos(a) * L * 0.85); // room on the left for an obtuse arm
+  const el = svg(W, H, 'An angle', 320);
+  el.append(line(vx, vy, vx + L, vy, { 'stroke-width': 4 }), line(vx, vy, vx + Math.cos(a) * L * 0.85, vy - Math.sin(a) * L * 0.85, { 'stroke-width': 4 }));
+  const r = 34;
+  el.append(s('path', { d: `M${vx + r} ${vy} A${r} ${r} 0 0 0 ${vx + Math.cos(a) * r} ${vy - Math.sin(a) * r}`, fill: 'none', stroke: '#d62f3a', 'stroke-width': 3 }));
+  el.append(s('circle', { cx: vx, cy: vy, r: 4, fill: INK }));
+  return el;
+}
+
+// squared paper with some squares shaded: area by counting
+function squares(d) {
+  const size = Math.min(34, Math.floor(300 / Math.max(d.cols, d.rows))), W = d.cols * size + 20, H = d.rows * size + 20;
+  const el = svg(W, H, `A shape made of ${d.cells.length} squares`, Math.min(360, W * 1.3));
+  for (const [r, c] of d.cells) el.append(s('rect', { x: 10 + c * size, y: 10 + r * size, width: size, height: size, fill: BLUE, opacity: 0.75 }));
+  for (let r = 0; r <= d.rows; r++) el.append(line(10, 10 + r * size, 10 + d.cols * size, 10 + r * size, { 'stroke-width': 1, opacity: 0.45 }));
+  for (let c = 0; c <= d.cols; c++) el.append(line(10 + c * size, 10, 10 + c * size, 10 + d.rows * size, { 'stroke-width': 1, opacity: 0.45 }));
   return el;
 }

@@ -16,7 +16,7 @@ export function welcomeScreen(app) {
   const pron = h('select', { id: 'ob-pron' }, [['she', 'she / her'], ['he', 'he / him'], ['they', 'they / them']].map(([v, t]) => h('option', { value: v }, t)));
   const bed = h('input', { type: 'time', id: 'ob-bed', value: '20:30' });
   const mins = h('select', { id: 'ob-mins' }, [8, 10, 12, 15, 20, 25, 30, 40].map((m) => h('option', { value: m }, `${m} minutes`)));
-  const syncMins = () => { mins.value = String(COURSES[course.value].minutes); bed.value = course.value === 'ks1' ? '19:00' : '20:30'; };
+  const syncMins = () => { mins.value = String(COURSES[course.value].minutes); bed.value = COURSES[course.value].young ? '19:00' : '20:30'; };
   course.onchange = syncMins;
   syncMins();
   const pin = h('input', { type: 'password', id: 'ob-pin', inputmode: 'numeric', maxlength: 4, placeholder: '4 digits' });
@@ -42,11 +42,11 @@ export function welcomeScreen(app) {
         if (!name.value.trim()) return toast('Please enter a first name.');
         if (!knownPin && !/^\d{4}$/.test(pin.value)) return toast('The PIN must be 4 digits.');
         if (!knownPin && pin.value !== pin2.value) return toast('The two PINs don’t match.');
-        app.state.profile = { childName: name.value.trim(), pronoun: pron.value, parentPin: knownPin || pin.value, companion: { name: '', fur: 'caramel', accessory: course.value === 'ks1' ? 'racehelmet' : 'yuzu' } };
+        app.state.profile = { childName: name.value.trim(), pronoun: pron.value, parentPin: knownPin || pin.value, companion: { name: '', fur: 'caramel', accessory: COURSES[course.value].young ? 'racehelmet' : 'yuzu' } };
         delete app.state.pendingPin;
         app.state.settings.bedtime = bed.value || '20:30';
         app.state.settings.sessionMinutes = +mins.value;
-        if (course.value === 'ks1') app.state.settings.textScale = 1.15;
+        if (COURSES[course.value].young) app.state.settings.textScale = 1.15;
         setPronoun(pron.value);
         await app.useCourse(course.value);
         app.applySettings();
@@ -90,7 +90,7 @@ export function companionScreen(app) {
   mount(app.root, h('div', { class: 'narrow stack' },
     h('h1', { class: 'center' }, `Hi ${app.state.profile?.childName || ''}! Meet your capybara`),
     h('p', { class: 'center muted' }, 'Your capybara will learn alongside you. Sometimes you’ll teach it, and sometimes it will get things wrong for you to fix. You’ll unlock more outfits as you hit milestones.'),
-    app.state.course === 'ks1' ? h('div', { class: 'card stack' }, h('div', { class: 'field' }, h('label', { for: 'hero-name' }, 'And your superhero name? (it will appear in your maths adventures)'), heroIn)) : null,
+    COURSES[app.state.course]?.young ? h('div', { class: 'card stack' }, h('div', { class: 'field' }, h('label', { for: 'hero-name' }, 'And your superhero name? (it will appear in your maths adventures)'), heroIn)) : null,
     h('div', { class: 'card stack' }, preview,
       h('div', { class: 'field' }, h('label', {}, 'Fur'), furRow),
       h('div', { class: 'field' }, h('label', {}, 'Something special'), accRow),

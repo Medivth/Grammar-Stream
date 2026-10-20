@@ -187,13 +187,14 @@ try {
     const course = await page.evaluate(() => window.__app.state.course);
     if (course !== 'ks1') throw new Error(`second child course is ${course}`);
     await page.evaluate(() => { const a = window.__app; a.state.sessions.push({ day: Math.floor(Date.now() / 864e5) - 1, start: 1, end: 2, answered: 5, correct: 5, completed: true }); a.state.plan = null; a.save(); });
+    const playYoung = async (tag) => {
     await page.click('.btn-start');
     const seen2 = new Set();
     for (let k = 0; k < 300; k++) {
       await page.waitForTimeout(60);
       if (await page.$('text=Finished for today!')) break;
       const t = await page.evaluate(() => window.__app.state.plan?.steps[window.__app.state.plan.pos]?.t);
-      if (t && !seen2.has(t)) { seen2.add(t); await page.screenshot({ path: `${OUT}/${label}-ks1-step-${t}.png`, fullPage: true }); }
+      if (t && !seen2.has(t)) { seen2.add(t); await page.screenshot({ path: `${OUT}/${label}-${tag}-step-${t}.png`, fullPage: true }); }
       await page.evaluate(() => { window.__app.sprintSeconds = 4; });
       const sIn = await page.$('.sprint-in');
       if (sIn) { const v = await page.evaluate(() => window.__app.sprintCurrent?.value); try { await sIn.fill(String(v ?? 1)); await sIn.press('Enter'); } catch { /* sprint ended */ } continue; }
@@ -220,9 +221,31 @@ try {
       }
       const o = await page.$('.options .option:not([disabled])'); if (o) { await o.click(); await page.waitForTimeout(40); }
       const b = await page.$('.q-wrap .btn-primary:not([disabled])'); if (b) { await b.click(); continue; }
-      throw new Error(`Year 2 stuck at step ${t}`);
+      throw new Error(`${tag} stuck at step ${t}`);
     }
+    return seen2;
+    };
+    const seen2 = await playYoung('ks1');
     console.log(`${label}: Year 2 session step types: ${[...seen2].join(', ')}`);
+    // a grown-up moves him up to Year 3: everything is kept, and a Year 3 session runs
+    await page.goto(`http://127.0.0.1:${PORT}/#/parent`);
+    await page.waitForSelector('.pin-pad, button:has-text("Move up to Year 3")');
+    if (await page.$('.pin-pad')) for (const d of '1234') await page.click(`.pin-pad button[aria-label="${d}"]`);
+    page.once('dialog', (d) => d.accept());
+    const cardsBefore = await page.evaluate(() => Object.keys(window.__app.state.cards).length);
+    await page.click('button:has-text("Move up to Year 3")');
+    await page.waitForSelector('button:has-text("Go back to Year 2")');
+    await page.screenshot({ path: `${OUT}/${label}-24-moved-up.png`, fullPage: true });
+    const up = await page.evaluate(() => [window.__app.state.course, Object.keys(window.__app.state.cards).length, window.__app.state.settings.sessionMinutes]);
+    if (up[0] !== 'y3' || up[1] !== cardsBefore || up[2] !== 15) throw new Error(`moving up gave ${up} (cards before ${cardsBefore})`);
+    await page.goto(`http://127.0.0.1:${PORT}/#/home`);
+    await page.waitForSelector('.btn-start');
+    await page.evaluate(() => { const a = window.__app; a.state.sessions.push({ day: Math.floor(Date.now() / 864e5) - 1, start: 1, end: 2, answered: 5, correct: 5, completed: true }); a.state.plan = null; a.save(); });
+    await page.goto(`http://127.0.0.1:${PORT}/#/home`);
+    await page.waitForSelector('.btn-start');
+    await page.screenshot({ path: `${OUT}/${label}-25-y3-home.png`, fullPage: true });
+    const seen3 = await playYoung('y3');
+    console.log(`${label}: Year 3 session step types: ${[...seen3].join(', ')}`);
     await page.screenshot({ path: `${OUT}/${label}-22-ks1-done.png`, fullPage: true });
     // reload: with two children the app asks who is learning
     await page.evaluate(() => sessionStorage.removeItem('gs.profile'));
