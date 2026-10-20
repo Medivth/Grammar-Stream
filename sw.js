@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = 'a6fc14a0f2d3';
+const VERSION = 'dacb0bfcd2d7';
 const FILES = [
  "./",
  "./index.html",
@@ -41,8 +41,10 @@ const FILES = [
  "./js/gen/y3maths.js",
  "./js/gen/y8computing.js",
  "./js/gen/y8greek.js",
+ "./js/gen/y8greek2.js",
  "./js/gen/y8maths.js",
  "./js/gen/y8science.js",
+ "./js/gen/y8science2.js",
  "./js/main.js",
  "./js/platform/storage.js",
  "./js/platform/tts.js",
@@ -121,12 +123,20 @@ const FILES = [
  "./content/y8/computing/y8.json",
  "./content/y8/english/y8-books.json",
  "./content/y8/english/y8-lang.json",
+ "./content/y8/english/y8-lang2.json",
  "./content/y8/english/y8-lit.json",
+ "./content/y8/english/y8-lit2.json",
+ "./content/y8/geography/y8-more.json",
  "./content/y8/geography/y8.json",
+ "./content/y8/greek/y8-grammar.json",
+ "./content/y8/greek/y8-vocab.json",
  "./content/y8/greek/y8.json",
+ "./content/y8/history/y8-more.json",
  "./content/y8/history/y8-timeline.json",
+ "./content/y8/history/y8-timeline2.json",
  "./content/y8/history/y8.json",
  "./content/y8/maths/y8.json",
+ "./content/y8/science/y8-more.json",
  "./content/y8/science/y8.json",
  "./fonts/atkinson-hyperlegible-latin-400-normal.woff2",
  "./fonts/atkinson-hyperlegible-latin-700-normal.woff2",

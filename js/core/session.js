@@ -126,15 +126,27 @@ export function pickNewSubject(state, db, today, dueBySubject, cap) {
   return candidates[0] || null;
 }
 
-/** The written reading answer for today, if one is due: a started reading topic, not answered in
- * the last three weeks, and no more than two written answers in the past week. */
+/** The written answer for today, if one is due: a started topic where she has already met the
+ * material (three answered items on the same passage, or in the topic when nothing else shares
+ * it), not answered in the last three weeks, and no more than two written answers a week.
+ * Subjects take turns: the one written in least recently goes first. */
 export function writtenDue(state, db, today) {
   const recent = (state.answers || []).filter((a) => today - a.day < 7).length;
   if (recent >= 2) return null;
-  const last = {};
-  for (const a of state.answers || []) last[a.itemId] = Math.max(last[a.itemId] ?? -1, a.day);
-  const seenPassage = (it) => (db.itemsByTopic[it.topic] || []).filter((id) => db.items[id].passage === it.passage && state.cards[id]).length >= 3;
-  return Object.values(db.items).find((it) => it.kind === 'written' && state.topics[it.topic] && !(last[it.id] >= today - 21) && seenPassage(it))?.id || null;
+  const last = {}, lastBySubject = {};
+  for (const a of state.answers || []) {
+    last[a.itemId] = Math.max(last[a.itemId] ?? -1, a.day);
+    const sub = db.items[a.itemId]?.subject;
+    if (sub) lastBySubject[sub] = Math.max(lastBySubject[sub] ?? -1, a.day);
+  }
+  const met = (it) => {
+    const ids = (db.itemsByTopic[it.topic] || []).filter((id) => id !== it.id && db.items[id].kind !== 'written');
+    const same = it.passage ? ids.filter((id) => db.items[id].passage === it.passage) : [];
+    return (same.length ? same : ids).filter((id) => state.cards[id]).length >= 3;
+  };
+  const due = Object.values(db.items).filter((it) => it.kind === 'written' && state.topics[it.topic] && !(last[it.id] >= today - 21) && met(it));
+  due.sort((a, b) => (lastBySubject[a.subject] ?? -1) - (lastBySubject[b.subject] ?? -1));
+  return due[0]?.id || null;
 }
 
 function sentenceOptions(state, db) {

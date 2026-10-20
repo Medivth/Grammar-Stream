@@ -1,0 +1,4851 @@
+{
+ "subject": "greek",
+ "deck": "y8-grammar",
+ "topics": [
+  {
+   "id": "greek.decl3-stems",
+   "title": "The third declension: consonant stems",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.nouns-1"
+   ],
+   "batch": 5,
+   "intro": "The third declension is the biggest noun family: φύλαξ (guard), γίγας (giant), ἀγών (contest), ῥήτωρ (speaker), παῖς (child), Ἕλλην (a Greek). The nominative can look odd, so always learn the genitive too: take off -ος and you have the stem. After that the endings are regular: singular -α, -ος, -ι; plural -ες, -ας, -ων, -σι(ν).",
+   "teach": "Explain how to find the stem of a third-declension noun, using φύλαξ, φύλακος.",
+   "talk": "Ask {her} to decline ἀγών aloud, singular and plural, and to name an English word that comes from it."
+  },
+  {
+   "id": "greek.decl3-more",
+   "title": "The third declension: σῶμα, πόλις, βασιλεύς and family words",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.decl3-stems"
+   ],
+   "batch": 5,
+   "intro": "Three more patterns. Neuters ending -μα have a stem in -ματ- (σῶμα, σώματος). πόλις (city) and βασιλεύς (king) change their stem vowel. Family words such as πατήρ (father), μήτηρ (mother) and ἀνήρ (man) drop a vowel in some cases, and γυνή (woman) uses a stem γυναικ-.",
+   "teach": "Explain why τὰ σώματα could be either the subject or the object.",
+   "talk": "Ask {him} which English words come from σῶμα, πόλις and γυνή."
+  },
+  {
+   "id": "greek.pronouns",
+   "title": "Pronouns: I, you, we, and αὐτός",
+   "kind": "facts",
+   "prereqs": [
+    "greek.article",
+    "greek.verbs-1"
+   ],
+   "batch": 5,
+   "intro": "Personal pronouns: ἐγώ (I), σύ (you), ἡμεῖς (we), ὑμεῖς (you all). Greek uses ἐγώ or σύ as a subject only for emphasis, because the verb ending already says who. The busy word αὐτός has three jobs: “him, her, it, them” on its own; “-self” next to a noun (αὐτὸς ὁ βασιλεύς, the king himself); and “the same” after the article (ὁ αὐτὸς βασιλεύς, the same king).",
+   "teach": "Explain the three meanings of αὐτός, with an example of each.",
+   "talk": "Ask {her} the difference between αὐτὸς ὁ βασιλεύς and ὁ αὐτὸς βασιλεύς."
+  },
+  {
+   "id": "greek.demonstratives",
+   "title": "This, that, and who: οὗτος, ἐκεῖνος and the relative",
+   "kind": "facts",
+   "prereqs": [
+    "greek.pronouns",
+    "greek.adjectives"
+   ],
+   "batch": 5,
+   "intro": "οὗτος (this) and ἐκεῖνος (that) stand outside the article: οὗτος ὁ ἀνήρ or ὁ ἀνὴρ οὗτος, “this man”. The relative pronoun ὅς, ἥ, ὅ means “who” or “which”: it takes its gender and number from the noun it refers to, but its case from its own clause.",
+   "teach": "Explain why the relative in ὁ ἀνὴρ ὃν ὁρῶ is accusative.",
+   "talk": "Ask {him} to translate “this girl” and “that city” into Greek."
+  },
+  {
+   "id": "greek.comparison",
+   "title": "Comparison: wiser, wisest",
+   "kind": "facts",
+   "prereqs": [
+    "greek.adjectives"
+   ],
+   "batch": 5,
+   "intro": "Comparatives (“wiser”) and superlatives (“wisest”) usually add -τερος and -τατος: σοφός, σοφώτερος, σοφώτατος. The commonest adjectives are irregular, just as in English (good, better, best): ἀγαθός, ἀμείνων, ἄριστος. “Than” is ἤ, or the genitive on its own.",
+   "teach": "Explain two ways of saying “than” in Greek.",
+   "talk": "Ask {her} where “aristocracy” comes from."
+  },
+  {
+   "id": "greek.aorist-weak",
+   "title": "The weak aorist and the augment",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.tenses"
+   ],
+   "batch": 5,
+   "intro": "The aorist is the storytelling tense: a single action in the past. The weak (first) aorist adds the augment ἐ- at the front and -σα at the end: ἔλυσα, ἔλυσας, ἔλυσε(ν), ἐλύσαμεν, ἐλύσατε, ἔλυσαν. A verb starting with a vowel lengthens it instead (ἀκούω → ἤκουσα), and a compound verb puts the augment after its prefix (ἀποπέμπω → ἀπέπεμψα).",
+   "teach": "Explain how to tell ἐπαίδευε (imperfect) from ἐπαίδευσε (aorist).",
+   "talk": "Ask {him} to tell you the aorist of λύω, all six persons."
+  },
+  {
+   "id": "greek.aorist-strong",
+   "title": "Strong and irregular aorists",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.aorist-weak"
+   ],
+   "batch": 5,
+   "intro": "Many of the commonest verbs have a strong (second) aorist: a different stem with imperfect-style endings. φεύγω → ἔφυγον (I fled), λαμβάνω → ἔλαβον (I took), μανθάνω → ἔμαθον (I learned). A few must simply be learned as new words: λέγω → εἶπον, ὁράω → εἶδον, ἔρχομαι → ἦλθον.",
+   "teach": "Explain how to tell ἔφευγον from ἔφυγον.",
+   "talk": "Ask {her} for the aorists of λέγω, ὁράω and ἔρχομαι."
+  },
+  {
+   "id": "greek.infinitives",
+   "title": "Infinitives and commands",
+   "kind": "facts",
+   "prereqs": [
+    "greek.aorist-strong"
+   ],
+   "batch": 5,
+   "intro": "The infinitive (“to free”) has a present form, λύειν, and an aorist form, λῦσαι (strong aorists: λαβεῖν, φυγεῖν). Both mean “to…”; the aorist just treats the action as a single event. Commands use the imperative: λῦε! (to one person), λύετε! (to several); aorist λῦσον!, λύσατε! To say “don’t”, use μή.",
+   "teach": "Explain the difference between λύσατε! and ἐλύσατε.",
+   "talk": "Ask {him} to give you a command in Greek, and then tell you not to do it."
+  },
+  {
+   "id": "greek.contracted",
+   "title": "Contracted verbs: φιλέω, ποιέω (and a taste of τιμάω)",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.verbs-1"
+   ],
+   "batch": 5,
+   "intro": "Verbs like φιλέω (I love) and ποιέω (I make, do) have stems ending in ε, which merges with the ending: φιλέ-ω → φιλῶ, φιλέ-ει → φιλεῖ, φιλέ-ομεν → φιλοῦμεν. The rules: ε + ω = ω, ε + ε = ει, ε + ει = ει, ε + ο = ου, ε + ου = ου. Verbs in -άω, like τιμάω (I honour) and ὁράω (I see), contract to α and ω sounds instead: τιμᾷ, ὁρῶμεν.",
+   "teach": "Explain how φιλέομεν becomes φιλοῦμεν.",
+   "talk": "Ask {her} what φιλοσοφία has to do with φιλέω."
+  },
+  {
+   "id": "greek.middle",
+   "title": "The middle and passive",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.tenses"
+   ],
+   "batch": 5,
+   "intro": "Greek verbs have a third set of endings: λύομαι, λύεται, λυόμεθα, λύεσθε, λύονται. In the present these can be passive (“I am being freed”) or middle (“I free for myself”). Some verbs have only these endings but active meanings, like βούλομαι (I want) and γίγνομαι (I become): these are called deponents. “By” a person is ὑπό + genitive.",
+   "teach": "Explain what a deponent verb is, with an example.",
+   "talk": "Ask {him} to translate “the horse is freed by the slave” into Greek."
+  },
+  {
+   "id": "greek.participles-full",
+   "title": "Participles in full",
+   "kind": "mixed",
+   "prereqs": [
+    "greek.aorist-strong",
+    "greek.decl3-stems"
+   ],
+   "batch": 5,
+   "intro": "A participle is an adjective made from a verb. The present participle (λύων, λύουσα, λῦον: “freeing”) describes something happening at the same time; the aorist participle (λύσας, λύσασα, λῦσαν: “having freed”) something that happened first. Strong aorists have their own: λαβών (having taken), ἰδών (having seen), ἐλθών (having come). Participles agree with their noun like adjectives, which is how you know who is doing what.",
+   "teach": "Explain how the case of a participle tells you who is doing the action.",
+   "talk": "Ask {her} to translate ταῦτα εἰπών, and say why it is “having said”."
+  },
+  {
+   "id": "greek.cases",
+   "title": "Using the cases: time, means and possession",
+   "kind": "facts",
+   "prereqs": [
+    "greek.decl3-stems",
+    "greek.prepositions"
+   ],
+   "batch": 5,
+   "intro": "The cases do more than subject and object. The dative can mean “with” or “by means of” (τῷ ξίφει, with the sword) and “on” a day (τῇ ὑστεραίᾳ, on the next day). The accusative can mean “for” a length of time (δέκα ἔτη, for ten years). The genitive shows possession (ἡ τοῦ βασιλέως θυγάτηρ) and “during” a time (νυκτός, by night). And ὦ + the vocative calls someone: ὦ φίλε!",
+   "teach": "Explain how Greek says “for ten years” and “on the third day”.",
+   "talk": "Ask {him} how an Athenian speaker would begin a speech: ὦ ἄνδρες Ἀθηναῖοι."
+  },
+  {
+   "id": "greek.questions",
+   "title": "Questions and negatives",
+   "kind": "facts",
+   "prereqs": [
+    "greek.pronouns"
+   ],
+   "batch": 5,
+   "intro": "Greek marks a question with ; (which looks like our semicolon). Many question words begin with π- or τ-: τίς; (who?), τί; (what? why?), ποῦ; (where?), πότε; (when?), πῶς; (how?). ἆρα introduces a yes-or-no question. “Not” is οὐ (οὐκ before a smooth breathing, οὐχ before a rough one) in statements, but μή with commands and infinitives.",
+   "teach": "Explain when Greek uses μή instead of οὐ.",
+   "talk": "Ask {her} three questions in Greek: who are you, where are you, why are you running?"
+  },
+  {
+   "id": "greek.read-1",
+   "title": "Reading: Daedalus and Icarus, Arachne",
+   "kind": "reading",
+   "prereqs": [
+    "greek.myth-2"
+   ],
+   "batch": 6,
+   "intro": "Two more myths in Greek, mostly in the present tense, with a few new words in the glossary. Read each sentence aloud, find the verb, then the subject.",
+   "teach": "Explain what οὖν does in “ὁ οὖν Δαίδαλος… πτέρυγας ποιεῖ”.",
+   "talk": "Ask {him} to retell the Arachne story from Athena’s point of view."
+  },
+  {
+   "id": "greek.read-2",
+   "title": "Reading: Orpheus, and Heracles and the Hydra",
+   "kind": "reading",
+   "prereqs": [
+    "greek.read-1",
+    "greek.decl3-stems",
+    "greek.pronouns"
+   ],
+   "batch": 6,
+   "intro": "These stories mix the present with the imperfect (ᾖδεν, εἶχεν, ἐφύοντο) and use third-declension nouns and pronouns.",
+   "teach": "Explain why ἐφύοντο is imperfect, and what that adds to the Hydra story.",
+   "talk": "Ask {her} why Orpheus looked back. What would {she} have done?"
+  },
+  {
+   "id": "greek.read-3",
+   "title": "Reading: the Sirens, and Jason and the golden fleece",
+   "kind": "reading",
+   "prereqs": [
+    "greek.read-2",
+    "greek.aorist-strong",
+    "greek.infinitives"
+   ],
+   "batch": 6,
+   "intro": "Real storytelling Greek: weak and strong aorists, infinitives and commands. Watch the front of each verb for the augment.",
+   "teach": "Explain the difference between κλεῖσον and ἔκλεισεν in the Sirens story.",
+   "talk": "Ask {him} which of the Argonauts {she} would want on the ship, and why."
+  },
+  {
+   "id": "greek.read-4",
+   "title": "Reading: the wooden horse, and Perseus",
+   "kind": "reading",
+   "tier": "stretch",
+   "prereqs": [
+    "greek.read-3",
+    "greek.participles-full"
+   ],
+   "batch": 6,
+   "intro": "The hardest reading of the year: participles, comparatives and the genitive absolute, the way Greek historians wrote. Take one clause at a time.",
+   "teach": "Explain how the participles in the wooden-horse story move the action along.",
+   "talk": "Ask {her} to find every participle in the Perseus story."
+  },
+  {
+   "id": "greek.genabs",
+   "title": "The genitive absolute",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "greek.participles-full"
+   ],
+   "batch": 5,
+   "intro": "A noun and a participle in the genitive, standing apart from the rest of the sentence, set the scene: τῆς νυκτὸς γενομένης, “when night had fallen”; τῶν Γοργόνων καθευδουσῶν, “while the Gorgons were sleeping”. Translate it with “when”, “while”, “after” or “because”.",
+   "teach": "Explain how to spot a genitive absolute and how to translate it.",
+   "talk": "Ask {him} to make up an English sentence that starts “While the Cyclops was sleeping…”, then try it in Greek."
+  }
+ ],
+ "items": [
+  {
+   "id": "greek.g3.d3.tmpl",
+   "topic": "greek.decl3-stems",
+   "kind": "template",
+   "gen": "y8hDecl3",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.g3.d3.sg",
+   "topic": "greek.decl3-stems",
+   "kind": "mcq",
+   "prompt": "Which are the third-declension singular endings for the accusative, genitive and dative?",
+   "options": [
+    {
+     "text": "-α, -ος, -ι",
+     "correct": true
+    },
+    {
+     "text": "-ον, -ου, -ῳ",
+     "correct": false,
+     "feedback": "Those are second declension (λόγον, λόγου, λόγῳ)."
+    },
+    {
+     "text": "-ην, -ης, -ῃ",
+     "correct": false,
+     "feedback": "Those are first declension (τιμήν, τιμῆς, τιμῇ)."
+    }
+   ],
+   "explain": "φύλαξ, φύλακα, φύλακος, φύλακι. The nominative varies, so learn it with the genitive."
+  },
+  {
+   "id": "greek.g3.d3.pl",
+   "topic": "greek.decl3-stems",
+   "kind": "mcq",
+   "prompt": "Which are the third-declension plural endings (nominative, accusative, genitive, dative)?",
+   "options": [
+    {
+     "text": "-ες, -ας, -ων, -σι(ν)",
+     "correct": true
+    },
+    {
+     "text": "-οι, -ους, -ων, -οις",
+     "correct": false,
+     "feedback": "Those are second declension."
+    },
+    {
+     "text": "-αι, -ας, -ων, -αις",
+     "correct": false,
+     "feedback": "Those are first declension."
+    }
+   ],
+   "explain": "φύλακες, φύλακας, φυλάκων, φύλαξι(ν)."
+  },
+  {
+   "id": "greek.g3.d3.gigas",
+   "topic": "greek.decl3-stems",
+   "kind": "mcq",
+   "prompt": "γίγας (giant) has the genitive γίγαντος. What is its stem?",
+   "options": [
+    {
+     "text": "γιγαντ-",
+     "correct": true
+    },
+    {
+     "text": "γιγα-",
+     "correct": false,
+     "feedback": "Take -ος off the genitive: γίγαντ-ος."
+    },
+    {
+     "text": "γιγας-",
+     "correct": false,
+     "feedback": "The nominative hides the stem. The genitive shows it."
+    }
+   ],
+   "explain": "Genitive minus -ος = stem: γίγαντ-ος → γιγαντ-. “Gigantic” keeps the -ντ-."
+  },
+  {
+   "id": "greek.g3.d3.xi",
+   "topic": "greek.decl3-stems",
+   "kind": "mcq",
+   "prompt": "Why is the dative plural of φύλαξ written φύλαξι(ν), not φύλακσι?",
+   "options": [
+    {
+     "text": "κ + σ is written ξ",
+     "correct": true
+    },
+    {
+     "text": "φύλαξ is irregular",
+     "correct": false,
+     "feedback": "It is perfectly regular: the stem φυλακ- + -σι."
+    },
+    {
+     "text": "The ξ shows it is plural",
+     "correct": false,
+     "feedback": "ξ is just how Greek writes κσ."
+    }
+   ],
+   "explain": "Stem φυλακ- + ending -σι(ν) = φυλακσι → φύλαξι(ν). The same thing happens in the nominative: φυλακ-ς → φύλαξ."
+  },
+  {
+   "id": "greek.g3.d3.ntsi",
+   "topic": "greek.decl3-stems",
+   "kind": "mcq",
+   "prompt": "The dative plural of γίγας (stem γιγαντ-) is γίγασι(ν). What happened?",
+   "options": [
+    {
+     "text": "ντ drops out before σ",
+     "correct": true
+    },
+    {
+     "text": "It is a misprint",
+     "correct": false,
+     "feedback": "It is a regular sound change."
+    },
+    {
+     "text": "It comes from a different word",
+     "correct": false,
+     "feedback": "Same word: γίγας, γίγαντος."
+    }
+   ],
+   "explain": "γιγαντ- + σι → γίγασι(ν), and λεοντ- + σι → λέουσι(ν): ντ disappears before σ, and the vowel lengthens."
+  },
+  {
+   "id": "greek.g3.d3.pais",
+   "topic": "greek.decl3-stems",
+   "kind": "fact",
+   "prompt": "What does **ὁ παῖς** (genitive παιδός) mean?",
+   "answer": "child",
+   "distractors": [
+    "father",
+    "old man",
+    "peace"
+   ],
+   "explain": "παῖς, παῖδα, παιδός, παιδί: a child (boy or girl). It gives us paediatrics and pedagogy.",
+   "accept": [
+    "a child",
+    "the child",
+    "boy",
+    "the boy",
+    "girl",
+    "son",
+    "slave boy"
+   ]
+  },
+  {
+   "id": "greek.g3.d3.hellen",
+   "topic": "greek.decl3-stems",
+   "kind": "fact",
+   "prompt": "What does **ὁ Ἕλλην** (genitive Ἕλληνος) mean?",
+   "answer": "a Greek",
+   "distractors": [
+    "a Persian",
+    "a hero",
+    "a giant"
+   ],
+   "explain": "The Greeks called themselves Ἕλληνες (Hellenes) and their land Ἑλλάς (Hellas).",
+   "accept": [
+    "Greek",
+    "the Greek",
+    "a Greek man",
+    "Hellene",
+    "a Hellene"
+   ]
+  },
+  {
+   "id": "greek.g3.d3.agon",
+   "topic": "greek.decl3-stems",
+   "kind": "fact",
+   "prompt": "What does **ὁ ἀγών** (genitive ἀγῶνος) mean?",
+   "answer": "contest",
+   "distractors": [
+    "tent",
+    "army",
+    "temple"
+   ],
+   "explain": "ἀγών = a contest or struggle: the games at Olympia were ἀγῶνες. English “agony” first meant a struggle.",
+   "accept": [
+    "a contest",
+    "the contest",
+    "struggle",
+    "competition",
+    "a struggle",
+    "a competition",
+    "games"
+   ]
+  },
+  {
+   "id": "greek.g3.d3.rhetor",
+   "topic": "greek.decl3-stems",
+   "kind": "mcq",
+   "prompt": "Which is the genitive singular of **ὁ ῥήτωρ** (speaker)?",
+   "options": [
+    {
+     "text": "ῥήτορος",
+     "correct": true
+    },
+    {
+     "text": "ῥήτορα",
+     "correct": false,
+     "feedback": "That is the accusative singular."
+    },
+    {
+     "text": "ῥήτορι",
+     "correct": false,
+     "feedback": "That is the dative singular."
+    },
+    {
+     "text": "ῥήτορες",
+     "correct": false,
+     "feedback": "That is the nominative plural."
+    }
+   ],
+   "explain": "ῥήτωρ, ῥήτορα, ῥήτορος, ῥήτορι. Rhetoric is the speaker’s art."
+  },
+  {
+   "id": "greek.g3.d3.chase",
+   "topic": "greek.decl3-stems",
+   "kind": "mcq",
+   "prompt": "In **οἱ φύλακες τὸν γίγαντα διώκουσιν**, who is chasing whom?",
+   "options": [
+    {
+     "text": "The guards are chasing the giant",
+     "correct": true
+    },
+    {
+     "text": "The giant is chasing the guards",
+     "correct": false,
+     "feedback": "γίγαντα is accusative (the object); φύλακες is nominative plural (the subject)."
+    },
+    {
+     "text": "The guard is chasing the giants",
+     "correct": false,
+     "feedback": "φύλακες is plural and γίγαντα singular."
+    }
+   ],
+   "explain": "φύλακες: nominative plural, subject. γίγαντα: accusative singular, object. διώκουσιν: they chase."
+  },
+  {
+   "id": "greek.g3.d3.nyx",
+   "topic": "greek.decl3-stems",
+   "kind": "mcq",
+   "prompt": "What does **ἡ νύξ, τῆς νυκτός** mean?",
+   "options": [
+    {
+     "text": "the night",
+     "correct": true
+    },
+    {
+     "text": "the nymph",
+     "correct": false,
+     "feedback": "A nymph is νύμφη."
+    },
+    {
+     "text": "the island",
+     "correct": false,
+     "feedback": "An island is νῆσος."
+    }
+   ],
+   "explain": "νύξ, νύκτα, νυκτός, νυκτί. Nyx was also the goddess of night."
+  },
+  {
+   "id": "greek.g3.d3.accent",
+   "topic": "greek.decl3-stems",
+   "kind": "mcq",
+   "prompt": "Why does φύλαξ become φυλάκων in the genitive plural?",
+   "options": [
+    {
+     "text": "The long ending -ων means the accent cannot stay three syllables from the end, so it moves forward one",
+     "correct": true
+    },
+    {
+     "text": "φυλάκων is a different word",
+     "correct": false,
+     "feedback": "Same word: only the accent has moved."
+    },
+    {
+     "text": "Genitive plurals always take a circumflex",
+     "correct": false,
+     "feedback": "Third-declension -ων usually has the acute on the syllable before: φυλάκων, ἀγώνων."
+    }
+   ],
+   "explain": "A noun keeps its accent where it can. With a long last syllable (-ων), it can be no further back than the second-to-last syllable."
+  },
+  {
+   "id": "greek.g3.d3b.tmpl",
+   "topic": "greek.decl3-more",
+   "kind": "template",
+   "gen": "y8hDecl3b",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.g3.d3b.soma",
+   "topic": "greek.decl3-more",
+   "kind": "mcq",
+   "prompt": "σῶμα (body) has the genitive σώματος. What is its dative singular?",
+   "options": [
+    {
+     "text": "σώματι",
+     "correct": true
+    },
+    {
+     "text": "σώμᾳ",
+     "correct": false,
+     "feedback": "-ᾳ is first declension."
+    },
+    {
+     "text": "σώματος",
+     "correct": false,
+     "feedback": "That is the genitive."
+    }
+   ],
+   "explain": "σῶμα, σῶμα, σώματος, σώματι: stem σωματ- + -ι."
+  },
+  {
+   "id": "greek.g3.d3b.chromo",
+   "topic": "greek.decl3-more",
+   "kind": "mcq",
+   "prompt": "Which English words come from **σῶμα, σώματος** (body)?",
+   "options": [
+    {
+     "text": "psychosomatic and chromosome",
+     "correct": true
+    },
+    {
+     "text": "somersault and sombre",
+     "correct": false,
+     "feedback": "Those come from Latin and French."
+    },
+    {
+     "text": "summer and some",
+     "correct": false,
+     "feedback": "Those are old English words."
+    }
+   ],
+   "explain": "Psychosomatic: of mind and body. Chromosome: “colour body”, because they show up when stained."
+  },
+  {
+   "id": "greek.g3.d3b.neuter",
+   "topic": "greek.decl3-more",
+   "kind": "mcq",
+   "prompt": "Why can **τὰ σώματα** be either the subject or the object?",
+   "options": [
+    {
+     "text": "Neuter nouns always have the same nominative and accusative",
+     "correct": true
+    },
+    {
+     "text": "σώματα is a verb",
+     "correct": false,
+     "feedback": "It is the plural of σῶμα."
+    },
+    {
+     "text": "Third-declension nouns have no accusative",
+     "correct": false,
+     "feedback": "They do: φύλακα, γίγαντα."
+    }
+   ],
+   "explain": "Neuters never tell you subject from object by their ending: use the verb and the other nouns."
+  },
+  {
+   "id": "greek.g3.d3b.pragma",
+   "topic": "greek.decl3-more",
+   "kind": "fact",
+   "prompt": "What does **τὸ πρᾶγμα** (genitive πράγματος) mean?",
+   "answer": "thing, matter",
+   "distractors": [
+    "body",
+    "name",
+    "word"
+   ],
+   "explain": "πρᾶγμα = a thing done, a matter, an affair: “pragmatic” means practical.",
+   "accept": [
+    "thing",
+    "matter",
+    "affair",
+    "business",
+    "deed",
+    "a thing",
+    "the thing",
+    "a matter"
+   ]
+  },
+  {
+   "id": "greek.g3.d3b.polin",
+   "topic": "greek.decl3-more",
+   "kind": "mcq",
+   "prompt": "Which is the accusative singular of **ἡ πόλις**?",
+   "options": [
+    {
+     "text": "πόλιν",
+     "correct": true
+    },
+    {
+     "text": "πόλεα",
+     "correct": false,
+     "feedback": "πόλις takes -ν, not -α, in the accusative singular."
+    },
+    {
+     "text": "πόλεως",
+     "correct": false,
+     "feedback": "That is the genitive."
+    }
+   ],
+   "explain": "πόλις, πόλιν, πόλεως, πόλει; plural πόλεις, πόλεις, πόλεων, πόλεσι(ν)."
+  },
+  {
+   "id": "greek.g3.d3b.poleos",
+   "topic": "greek.decl3-more",
+   "kind": "mcq",
+   "prompt": "What does **τῆς πόλεως** mean?",
+   "options": [
+    {
+     "text": "of the city",
+     "correct": true
+    },
+    {
+     "text": "to the city",
+     "correct": false,
+     "feedback": "That would be the dative, τῇ πόλει."
+    },
+    {
+     "text": "the cities",
+     "correct": false,
+     "feedback": "That would be αἱ πόλεις."
+    }
+   ],
+   "explain": "πόλεως is the genitive singular: of the city. A metropolis is a “mother city”."
+  },
+  {
+   "id": "greek.g3.d3b.basileus",
+   "topic": "greek.decl3-more",
+   "kind": "mcq",
+   "prompt": "What is the genitive singular of **ὁ βασιλεύς** (king)?",
+   "options": [
+    {
+     "text": "βασιλέως",
+     "correct": true
+    },
+    {
+     "text": "βασιλεύου",
+     "correct": false,
+     "feedback": "The second-declension -ου does not apply here."
+    },
+    {
+     "text": "βασιλεῖ",
+     "correct": false,
+     "feedback": "That is the dative."
+    }
+   ],
+   "explain": "βασιλεύς, βασιλέα, βασιλέως, βασιλεῖ. Θησεύς, Ὀδυσσεύς and Περσεύς decline the same way."
+  },
+  {
+   "id": "greek.g3.d3b.thesea",
+   "topic": "greek.decl3-more",
+   "kind": "mcq",
+   "prompt": "In the Theseus story, why is it **τὸν Θησέα**, not τὸν Θησεύν?",
+   "options": [
+    {
+     "text": "Θησεύς declines like βασιλεύς: the accusative ends -έα",
+     "correct": true
+    },
+    {
+     "text": "It is a mistake",
+     "correct": false,
+     "feedback": "It is the correct form."
+    },
+    {
+     "text": "τὸν Θησέα is plural",
+     "correct": false,
+     "feedback": "τόν is singular."
+    }
+   ],
+   "explain": "βασιλεύς → βασιλέα; Θησεύς → Θησέα; Περσεύς → Περσέα."
+  },
+  {
+   "id": "greek.g3.d3b.patros",
+   "topic": "greek.decl3-more",
+   "kind": "mcq",
+   "prompt": "ὁ πατήρ (father) has the genitive πατρός. What does **τοῦ πατρός** mean?",
+   "options": [
+    {
+     "text": "of the father",
+     "correct": true
+    },
+    {
+     "text": "to the father",
+     "correct": false,
+     "feedback": "That would be τῷ πατρί."
+    },
+    {
+     "text": "the fathers",
+     "correct": false,
+     "feedback": "That would be οἱ πατέρες."
+    }
+   ],
+   "explain": "πατήρ, πατέρα, πατρός, πατρί: the ε drops out in the genitive and dative singular."
+  },
+  {
+   "id": "greek.g3.d3b.andrasi",
+   "topic": "greek.decl3-more",
+   "kind": "mcq",
+   "prompt": "Which is the dative plural of **ὁ ἀνήρ** (man)?",
+   "options": [
+    {
+     "text": "ἀνδράσι(ν)",
+     "correct": true
+    },
+    {
+     "text": "ἀνδροῖς",
+     "correct": false,
+     "feedback": "-οις is second declension."
+    },
+    {
+     "text": "ἄνδρες",
+     "correct": false,
+     "feedback": "That is the nominative plural."
+    }
+   ],
+   "explain": "ἀνήρ, ἄνδρα, ἀνδρός, ἀνδρί; ἄνδρες, ἄνδρας, ἀνδρῶν, ἀνδράσι(ν)."
+  },
+  {
+   "id": "greek.g3.d3b.gyne",
+   "topic": "greek.decl3-more",
+   "kind": "mcq",
+   "prompt": "What is unusual about **ἡ γυνή** (woman)?",
+   "options": [
+    {
+     "text": "Its other cases use the stem γυναικ-: γυναῖκα, γυναικός, γυναικί",
+     "correct": true
+    },
+    {
+     "text": "It is masculine",
+     "correct": false,
+     "feedback": "It is feminine: ἡ γυνή."
+    },
+    {
+     "text": "It has no plural",
+     "correct": false,
+     "feedback": "The plural is γυναῖκες."
+    }
+   ],
+   "explain": "γυνή is irregular. “Gynaecology” comes from the stem γυναικ-."
+  },
+  {
+   "id": "greek.g3.d3b.zeus",
+   "topic": "greek.decl3-more",
+   "kind": "mcq",
+   "prompt": "The king of the gods declines oddly. Which is the accusative of **Ζεύς**?",
+   "options": [
+    {
+     "text": "Δία",
+     "correct": true
+    },
+    {
+     "text": "Ζεῦν",
+     "correct": false,
+     "feedback": "There is no such form."
+    },
+    {
+     "text": "Διός",
+     "correct": false,
+     "feedback": "That is the genitive: of Zeus."
+    }
+   ],
+   "explain": "Ζεύς, Δία, Διός, Διί; and when you call him, ὦ Ζεῦ."
+  },
+  {
+   "id": "greek.g3.pr.me",
+   "topic": "greek.pronouns",
+   "kind": "mcq",
+   "prompt": "What does **με** mean in **ὁ Κύκλωψ με διώκει**?",
+   "options": [
+    {
+     "text": "me",
+     "correct": true
+    },
+    {
+     "text": "I",
+     "correct": false,
+     "feedback": "I is ἐγώ, the nominative. με is accusative."
+    },
+    {
+     "text": "my",
+     "correct": false,
+     "feedback": "My (of me) would be μου."
+    }
+   ],
+   "explain": "ἐγώ, ἐμέ (με), ἐμοῦ (μου), ἐμοί (μοι): I, me, of me, to me."
+  },
+  {
+   "id": "greek.g3.pr.ego",
+   "topic": "greek.pronouns",
+   "kind": "mcq",
+   "prompt": "Why is ἐγώ often left out of a Greek sentence?",
+   "options": [
+    {
+     "text": "The verb ending already shows “I”, so ἐγώ only adds emphasis",
+     "correct": true
+    },
+    {
+     "text": "It is rude to say “I”",
+     "correct": false,
+     "feedback": "Not rude: just unnecessary."
+    },
+    {
+     "text": "ἐγώ only appears in poetry",
+     "correct": false,
+     "feedback": "It appears whenever the speaker wants to stress “I”."
+    }
+   ],
+   "explain": "λύω already means “I free”. ἐγὼ λύω = “I (and not you) am freeing”."
+  },
+  {
+   "id": "greek.g3.pr.hemeis",
+   "topic": "greek.pronouns",
+   "kind": "fact",
+   "prompt": "What does **ἡμεῖς** mean?",
+   "answer": "we",
+   "distractors": [
+    "you (plural)",
+    "they",
+    "us"
+   ],
+   "explain": "ἡμεῖς, ἡμᾶς, ἡμῶν, ἡμῖν: we, us, of us, to us."
+  },
+  {
+   "id": "greek.g3.pr.hymin",
+   "topic": "greek.pronouns",
+   "kind": "fact",
+   "prompt": "What does **ὑμῖν** mean?",
+   "answer": "to you (plural)",
+   "distractors": [
+    "to us",
+    "you (as the subject)",
+    "of you (plural)"
+   ],
+   "explain": "ὑμεῖς, ὑμᾶς, ὑμῶν, ὑμῖν: you, you, of you, to you (all plural).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.g3.pr.se",
+   "topic": "greek.pronouns",
+   "kind": "mcq",
+   "prompt": "Which is the accusative of **σύ** (you, singular)?",
+   "options": [
+    {
+     "text": "σέ (or unemphatic σε)",
+     "correct": true
+    },
+    {
+     "text": "σοί",
+     "correct": false,
+     "feedback": "σοί is the dative: to you."
+    },
+    {
+     "text": "σοῦ",
+     "correct": false,
+     "feedback": "σοῦ is the genitive: of you."
+    }
+   ],
+   "explain": "σύ, σέ, σοῦ, σοί."
+  },
+  {
+   "id": "greek.g3.pr.auton",
+   "topic": "greek.pronouns",
+   "kind": "mcq",
+   "prompt": "In **ὁ στρατηγὸς αὐτὸν ὁρᾷ** (ὁρᾷ = sees), what does αὐτόν mean?",
+   "options": [
+    {
+     "text": "him",
+     "correct": true
+    },
+    {
+     "text": "himself",
+     "correct": false,
+     "feedback": "αὐτός means “-self” only next to a noun or as an emphatic subject. On its own in the accusative it means “him”."
+    },
+    {
+     "text": "the same man",
+     "correct": false,
+     "feedback": "“The same man” needs the article: τὸν αὐτόν."
+    }
+   ],
+   "explain": "Use 1 of αὐτός: on its own, not in the nominative, it means him, her, it or them."
+  },
+  {
+   "id": "greek.g3.pr.self",
+   "topic": "greek.pronouns",
+   "kind": "mcq",
+   "prompt": "**αὐτὸς ὁ βασιλεύς** means…",
+   "options": [
+    {
+     "text": "the king himself",
+     "correct": true
+    },
+    {
+     "text": "the same king",
+     "correct": false,
+     "feedback": "The same king is ὁ αὐτὸς βασιλεύς, with the article first."
+    },
+    {
+     "text": "his king",
+     "correct": false,
+     "feedback": "His king would be ὁ βασιλεὺς αὐτοῦ."
+    }
+   ],
+   "explain": "Use 2 of αὐτός: outside the article it means “-self”."
+  },
+  {
+   "id": "greek.g3.pr.same",
+   "topic": "greek.pronouns",
+   "kind": "mcq",
+   "prompt": "**ὁ αὐτὸς βασιλεύς** means…",
+   "options": [
+    {
+     "text": "the same king",
+     "correct": true
+    },
+    {
+     "text": "the king himself",
+     "correct": false,
+     "feedback": "That is αὐτὸς ὁ βασιλεύς."
+    },
+    {
+     "text": "the king alone",
+     "correct": false,
+     "feedback": "Alone would be μόνος."
+    }
+   ],
+   "explain": "Use 3 of αὐτός: inside the article (ὁ αὐτός) it means “the same”."
+  },
+  {
+   "id": "greek.g3.pr.autes",
+   "topic": "greek.pronouns",
+   "kind": "mcq",
+   "prompt": "In **τὰ ἔργα αὐτῆς θαυμάζουσιν**, what does αὐτῆς mean?",
+   "options": [
+    {
+     "text": "her (of her): they admire her works",
+     "correct": true
+    },
+    {
+     "text": "herself",
+     "correct": false,
+     "feedback": "On its own in the genitive, αὐτῆς means “of her”."
+    },
+    {
+     "text": "the same",
+     "correct": false,
+     "feedback": "“The same” needs the article."
+    }
+   ],
+   "explain": "αὐτοῦ = his, αὐτῆς = her, αὐτῶν = their (literally of him, of her, of them)."
+  },
+  {
+   "id": "greek.g3.pr.autoi",
+   "topic": "greek.pronouns",
+   "kind": "mcq",
+   "prompt": "**αὐτοὶ φεύγομεν** means…",
+   "options": [
+    {
+     "text": "we ourselves flee",
+     "correct": true
+    },
+    {
+     "text": "they flee",
+     "correct": false,
+     "feedback": "φεύγομεν is “we”; αὐτοί adds “ourselves”."
+    },
+    {
+     "text": "we flee from them",
+     "correct": false,
+     "feedback": "That would be φεύγομεν αὐτούς."
+    }
+   ],
+   "explain": "In the nominative, αὐτός emphasises the subject: αὐτοὶ φεύγομεν, we flee by ourselves."
+  },
+  {
+   "id": "greek.g3.pr.order",
+   "topic": "greek.pronouns",
+   "kind": "order",
+   "prompt": "Put the forms of ἐγώ in case order: nominative, accusative, genitive, dative.",
+   "items": [
+    "ἐγώ",
+    "ἐμέ",
+    "ἐμοῦ",
+    "ἐμοί"
+   ],
+   "labels": null,
+   "explain": "ἐγώ (I), ἐμέ (me), ἐμοῦ (of me), ἐμοί (to me)."
+  },
+  {
+   "id": "greek.g3.pr.hemas",
+   "topic": "greek.pronouns",
+   "kind": "mcq",
+   "prompt": "Which word means “us”?",
+   "options": [
+    {
+     "text": "ἡμᾶς",
+     "correct": true
+    },
+    {
+     "text": "ἡμεῖς",
+     "correct": false,
+     "feedback": "ἡμεῖς is the nominative: we."
+    },
+    {
+     "text": "ὑμᾶς",
+     "correct": false,
+     "feedback": "ὑμᾶς is “you” (plural)."
+    }
+   ],
+   "explain": "ἡμεῖς, ἡμᾶς, ἡμῶν, ἡμῖν. The υ/η difference matters: ὑμεῖς is “you”."
+  },
+  {
+   "id": "greek.g3.dm.houtos",
+   "topic": "greek.demonstratives",
+   "kind": "mcq",
+   "prompt": "What does **οὗτος ὁ ἀνήρ** mean?",
+   "options": [
+    {
+     "text": "this man",
+     "correct": true
+    },
+    {
+     "text": "that man",
+     "correct": false,
+     "feedback": "That man is ἐκεῖνος ὁ ἀνήρ."
+    },
+    {
+     "text": "a man like this",
+     "correct": false,
+     "feedback": "“Such a man” would be τοιοῦτος ἀνήρ."
+    }
+   ],
+   "explain": "οὗτος stands outside the article: οὗτος ὁ ἀνήρ or ὁ ἀνὴρ οὗτος, this man."
+  },
+  {
+   "id": "greek.g3.dm.ekeine",
+   "topic": "greek.demonstratives",
+   "kind": "mcq",
+   "prompt": "What does **ἐκείνη ἡ κόρη** mean?",
+   "options": [
+    {
+     "text": "that girl",
+     "correct": true
+    },
+    {
+     "text": "this girl",
+     "correct": false,
+     "feedback": "This girl is αὕτη ἡ κόρη."
+    },
+    {
+     "text": "her girl",
+     "correct": false,
+     "feedback": "Her girl would be ἡ κόρη αὐτῆς."
+    }
+   ],
+   "explain": "ἐκεῖνος, ἐκείνη, ἐκεῖνο: that."
+  },
+  {
+   "id": "greek.g3.dm.tauten",
+   "topic": "greek.demonstratives",
+   "kind": "mcq",
+   "prompt": "Which form of οὗτος goes with **τὴν ναῦν** (the ship, feminine accusative)?",
+   "options": [
+    {
+     "text": "ταύτην",
+     "correct": true
+    },
+    {
+     "text": "τοῦτον",
+     "correct": false,
+     "feedback": "τοῦτον is masculine."
+    },
+    {
+     "text": "τοῦτο",
+     "correct": false,
+     "feedback": "τοῦτο is neuter."
+    }
+   ],
+   "explain": "ταύτην τὴν ναῦν, this ship. οὗτος, αὕτη, τοῦτο; accusative τοῦτον, ταύτην, τοῦτο."
+  },
+  {
+   "id": "greek.g3.dm.tauta",
+   "topic": "greek.demonstratives",
+   "kind": "mcq",
+   "prompt": "What does **ταῦτα** mean?",
+   "options": [
+    {
+     "text": "these things",
+     "correct": true
+    },
+    {
+     "text": "this man",
+     "correct": false,
+     "feedback": "This man is οὗτος."
+    },
+    {
+     "text": "those women",
+     "correct": false,
+     "feedback": "Those women would be ἐκεῖναι."
+    }
+   ],
+   "explain": "ταῦτα is neuter plural: these things. Greek often uses it for “this” about something just said."
+  },
+  {
+   "id": "greek.g3.dm.eipon",
+   "topic": "greek.demonstratives",
+   "kind": "fact",
+   "prompt": "What does **ταῦτα εἰπών** mean at the start of a sentence?",
+   "answer": "having said these things",
+   "distractors": [
+    "saying those words later",
+    "he says this",
+    "these men speak"
+   ],
+   "explain": "εἰπών is the aorist participle of λέγω: “having said this”, a favourite way to move a story on.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.g3.dm.ekeinos",
+   "topic": "greek.demonstratives",
+   "kind": "mcq",
+   "prompt": "Which word means “that” (masculine, nominative)?",
+   "options": [
+    {
+     "text": "ἐκεῖνος",
+     "correct": true
+    },
+    {
+     "text": "οὗτος",
+     "correct": false,
+     "feedback": "οὗτος means this."
+    },
+    {
+     "text": "αὐτός",
+     "correct": false,
+     "feedback": "αὐτός means him, -self or the same."
+    }
+   ],
+   "explain": "οὗτος = this (near), ἐκεῖνος = that (further away)."
+  },
+  {
+   "id": "greek.g3.dm.hon",
+   "topic": "greek.demonstratives",
+   "kind": "mcq",
+   "prompt": "In **ὁ ἀνὴρ ὃν ὁρῶ στρατηγός ἐστιν** (ὁρῶ = I see), why is the relative ὅν accusative?",
+   "options": [
+    {
+     "text": "It is the object of ὁρῶ in its own clause",
+     "correct": true
+    },
+    {
+     "text": "Because ὁ ἀνήρ is accusative",
+     "correct": false,
+     "feedback": "ὁ ἀνήρ is nominative. The relative takes its case from its own clause."
+    },
+    {
+     "text": "Relatives are always accusative",
+     "correct": false,
+     "feedback": "They can be any case."
+    }
+   ],
+   "explain": "“The man whom I see is a general.” Gender and number from ὁ ἀνήρ (masculine singular); case from ὁρῶ (object)."
+  },
+  {
+   "id": "greek.g3.dm.he",
+   "topic": "greek.demonstratives",
+   "kind": "mcq",
+   "prompt": "Translate **ἡ κόρη ἣ ᾄδει καλή ἐστιν**.",
+   "options": [
+    {
+     "text": "The girl who is singing is beautiful.",
+     "correct": true
+    },
+    {
+     "text": "The beautiful girl sings.",
+     "correct": false,
+     "feedback": "ἣ ᾄδει is a relative clause: “who is singing”. The main verb is ἐστιν."
+    },
+    {
+     "text": "The girl sings to the beautiful woman.",
+     "correct": false,
+     "feedback": "There is no second woman."
+    }
+   ],
+   "explain": "ἥ is the relative (feminine nominative): who. In running text its accent turns grave: ἣ."
+  },
+  {
+   "id": "greek.g3.dm.ha",
+   "topic": "greek.demonstratives",
+   "kind": "mcq",
+   "prompt": "Which relative goes with **τὰ δῶρα** as the subject of its clause (“the gifts which…”)?",
+   "options": [
+    {
+     "text": "ἅ",
+     "correct": true
+    },
+    {
+     "text": "ἅς",
+     "correct": false,
+     "feedback": "ἅς is feminine accusative plural."
+    },
+    {
+     "text": "οἵ",
+     "correct": false,
+     "feedback": "οἵ is masculine plural."
+    }
+   ],
+   "explain": "Neuter plural nominative: ἅ. τὰ δῶρα ἃ ἐκεῖ ἐστιν = the gifts which are there."
+  },
+  {
+   "id": "greek.g3.dm.accent",
+   "topic": "greek.demonstratives",
+   "kind": "mcq",
+   "prompt": "How do you tell **ἡ** (the, feminine) from **ἥ** (who, feminine)?",
+   "options": [
+    {
+     "text": "The article ἡ has no accent; the relative ἥ has one",
+     "correct": true
+    },
+    {
+     "text": "They are the same word",
+     "correct": false,
+     "feedback": "Same letters, different words: the accent tells them apart."
+    },
+    {
+     "text": "ἥ is plural",
+     "correct": false,
+     "feedback": "Both are singular."
+    }
+   ],
+   "explain": "ὁ, ἡ, οἱ, αἱ have no accent. The relatives ὅς, ἥ, οἵ, αἵ always do."
+  },
+  {
+   "id": "greek.g3.dm.these",
+   "topic": "greek.demonstratives",
+   "kind": "mcq",
+   "prompt": "Translate **οὗτοι οἱ στρατιῶται ἐκεῖνον τὸν ποταμὸν φυλάσσουσιν**.",
+   "options": [
+    {
+     "text": "These soldiers guard that river.",
+     "correct": true
+    },
+    {
+     "text": "Those soldiers guard this river.",
+     "correct": false,
+     "feedback": "οὗτοι = these; ἐκεῖνον = that."
+    },
+    {
+     "text": "These rivers guard the soldiers.",
+     "correct": false,
+     "feedback": "οἱ στρατιῶται (nominative) are the subject."
+    }
+   ],
+   "explain": "οὗτοι οἱ στρατιῶται: these soldiers. ἐκεῖνον τὸν ποταμόν: that river. φυλάσσουσιν: they guard."
+  },
+  {
+   "id": "greek.g3.cm.comp",
+   "topic": "greek.comparison",
+   "kind": "mcq",
+   "prompt": "What does **σοφώτερος** mean?",
+   "options": [
+    {
+     "text": "wiser",
+     "correct": true
+    },
+    {
+     "text": "wisest",
+     "correct": false,
+     "feedback": "Wisest is σοφώτατος."
+    },
+    {
+     "text": "wisdom",
+     "correct": false,
+     "feedback": "Wisdom is σοφία."
+    }
+   ],
+   "explain": "σοφός, σοφώτερος, σοφώτατος: wise, wiser, wisest."
+  },
+  {
+   "id": "greek.g3.cm.sup",
+   "topic": "greek.comparison",
+   "kind": "mcq",
+   "prompt": "What does **σοφώτατος** mean?",
+   "options": [
+    {
+     "text": "wisest, or very wise",
+     "correct": true
+    },
+    {
+     "text": "wiser",
+     "correct": false,
+     "feedback": "Wiser is σοφώτερος."
+    },
+    {
+     "text": "too wise",
+     "correct": false,
+     "feedback": "Greek uses the superlative for “very”, not “too”."
+    }
+   ],
+   "explain": "The superlative can mean “the most…” or just “very…”."
+  },
+  {
+   "id": "greek.g3.cm.omega",
+   "topic": "greek.comparison",
+   "kind": "mcq",
+   "prompt": "Why is it σοφώτερος but δεινότερος?",
+   "options": [
+    {
+     "text": "After a short syllable the ο lengthens to ω; after a long one it stays ο",
+     "correct": true
+    },
+    {
+     "text": "δεινός is irregular",
+     "correct": false,
+     "feedback": "Both are regular."
+    },
+    {
+     "text": "It is a spelling mistake",
+     "correct": false,
+     "feedback": "It is a rule."
+    }
+   ],
+   "explain": "σο- is short, so σοφώτερος (also νεώτερος); δει- is long, so δεινότερος (also μικρότερος)."
+  },
+  {
+   "id": "greek.g3.cm.ameinon",
+   "topic": "greek.comparison",
+   "kind": "mcq",
+   "prompt": "What does **ἀμείνων** mean?",
+   "options": [
+    {
+     "text": "better",
+     "correct": true
+    },
+    {
+     "text": "best",
+     "correct": false,
+     "feedback": "Best is ἄριστος."
+    },
+    {
+     "text": "worse",
+     "correct": false,
+     "feedback": "Worse is κακίων."
+    }
+   ],
+   "explain": "ἀγαθός, ἀμείνων, ἄριστος: good, better, best."
+  },
+  {
+   "id": "greek.g3.cm.megas",
+   "topic": "greek.comparison",
+   "kind": "mcq",
+   "prompt": "Which is the superlative of **μέγας** (big)?",
+   "options": [
+    {
+     "text": "μέγιστος",
+     "correct": true
+    },
+    {
+     "text": "μείζων",
+     "correct": false,
+     "feedback": "μείζων is the comparative: bigger."
+    },
+    {
+     "text": "μεγάλη",
+     "correct": false,
+     "feedback": "μεγάλη is the feminine of μέγας."
+    }
+   ],
+   "explain": "μέγας, μείζων, μέγιστος: big, bigger, biggest. The Cyclops was μέγιστος."
+  },
+  {
+   "id": "greek.g3.cm.aristo",
+   "topic": "greek.comparison",
+   "kind": "fact",
+   "prompt": "Which English word comes from **ἄριστος** (best) + κράτος (power)?",
+   "answer": "aristocracy",
+   "distractors": [
+    "democracy",
+    "autocracy",
+    "arithmetic"
+   ],
+   "explain": "Aristocracy: rule by the best (or by those who think they are)."
+  },
+  {
+   "id": "greek.g3.cm.gen",
+   "topic": "greek.comparison",
+   "kind": "mcq",
+   "prompt": "Translate **ὁ Ἀχιλλεὺς ἀνδρειότερός ἐστι τοῦ Ἕκτορος**.",
+   "options": [
+    {
+     "text": "Achilles is braver than Hector.",
+     "correct": true
+    },
+    {
+     "text": "Hector is braver than Achilles.",
+     "correct": false,
+     "feedback": "τοῦ Ἕκτορος is genitive: “than Hector”."
+    },
+    {
+     "text": "Achilles is Hector’s bravest man.",
+     "correct": false,
+     "feedback": "ἀνδρειότερος is comparative: braver."
+    }
+   ],
+   "explain": "The genitive on its own can mean “than”: τοῦ Ἕκτορος, than Hector."
+  },
+  {
+   "id": "greek.g3.cm.e",
+   "topic": "greek.comparison",
+   "kind": "mcq",
+   "prompt": "Translate **ἡ Ἀθηνᾶ σοφωτέρα ἐστὶν ἢ ὁ Ἄρης**.",
+   "options": [
+    {
+     "text": "Athena is wiser than Ares.",
+     "correct": true
+    },
+    {
+     "text": "Ares is wiser than Athena.",
+     "correct": false,
+     "feedback": "The comparative goes with ἡ Ἀθηνᾶ; ἤ (than) introduces Ares."
+    },
+    {
+     "text": "Athena and Ares are wise.",
+     "correct": false,
+     "feedback": "σοφωτέρα is comparative: wiser."
+    }
+   ],
+   "explain": "ἤ = than, with both people in the same case."
+  },
+  {
+   "id": "greek.g3.cm.hos",
+   "topic": "greek.comparison",
+   "kind": "mcq",
+   "prompt": "What does **ὡς τάχιστα** mean?",
+   "options": [
+    {
+     "text": "as quickly as possible",
+     "correct": true
+    },
+    {
+     "text": "very slowly",
+     "correct": false,
+     "feedback": "τάχιστα is from ταχύς, quick."
+    },
+    {
+     "text": "faster than",
+     "correct": false,
+     "feedback": "Faster is θᾶττον."
+    }
+   ],
+   "explain": "ὡς + superlative = as … as possible: ὡς τάχιστα, as fast as possible."
+  },
+  {
+   "id": "greek.g3.cm.kakion",
+   "topic": "greek.comparison",
+   "kind": "mcq",
+   "prompt": "Which is the comparative of **κακός** (bad)?",
+   "options": [
+    {
+     "text": "κακίων (worse)",
+     "correct": true
+    },
+    {
+     "text": "κακώτερος",
+     "correct": false,
+     "feedback": "κακός is irregular."
+    },
+    {
+     "text": "κάκιστος",
+     "correct": false,
+     "feedback": "κάκιστος is the superlative: worst."
+    }
+   ],
+   "explain": "κακός, κακίων, κάκιστος: bad, worse, worst."
+  },
+  {
+   "id": "greek.g3.cm.pleistoi",
+   "topic": "greek.comparison",
+   "kind": "fact",
+   "prompt": "What does **οἱ πλεῖστοι τῶν στρατιωτῶν** mean?",
+   "answer": "most of the soldiers",
+   "distractors": [
+    "fewer soldiers",
+    "the bravest soldiers",
+    "all the soldiers"
+   ],
+   "explain": "πολύς, πλείων, πλεῖστος: much, more, most.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.g3.cm.kallion",
+   "topic": "greek.comparison",
+   "kind": "mcq",
+   "prompt": "In Arachne’s boast **ἐγὼ κάλλιον ὑφαίνω ἢ ἡ Ἀθηνᾶ**, what does κάλλιον mean?",
+   "options": [
+    {
+     "text": "more beautifully",
+     "correct": true
+    },
+    {
+     "text": "most beautifully",
+     "correct": false,
+     "feedback": "Most beautifully would be κάλλιστα."
+    },
+    {
+     "text": "beautiful",
+     "correct": false,
+     "feedback": "Beautiful is καλός."
+    }
+   ],
+   "explain": "The neuter comparative works as an adverb: κάλλιον, more beautifully. καλός, καλλίων, κάλλιστος."
+  },
+  {
+   "id": "greek.g3.aw.tmpl",
+   "topic": "greek.aorist-weak",
+   "kind": "template",
+   "gen": "y8hAorist",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.g3.aw.order",
+   "topic": "greek.aorist-weak",
+   "kind": "order",
+   "prompt": "Put the weak aorist of λύω in order: I, you (sg), he, we, you (pl), they.",
+   "items": [
+    "ἔλυσα",
+    "ἔλυσας",
+    "ἔλυσε(ν)",
+    "ἐλύσαμεν",
+    "ἐλύσατε",
+    "ἔλυσαν"
+   ],
+   "labels": null,
+   "explain": "ἔλυσα, ἔλυσας, ἔλυσε(ν), ἐλύσαμεν, ἐλύσατε, ἔλυσαν: I freed… they freed."
+  },
+  {
+   "id": "greek.g3.aw.akouo",
+   "topic": "greek.aorist-weak",
+   "kind": "mcq",
+   "prompt": "What is the aorist of **ἀκούω** (I hear), “I heard”?",
+   "options": [
+    {
+     "text": "ἤκουσα",
+     "correct": true
+    },
+    {
+     "text": "ἐάκουσα",
+     "correct": false,
+     "feedback": "A verb starting with a vowel lengthens it instead of adding ἐ-: α → η."
+    },
+    {
+     "text": "ἀκούσω",
+     "correct": false,
+     "feedback": "That has no augment: it looks like a future."
+    }
+   ],
+   "explain": "Augment on a vowel: α → η, ε → η, ο → ω. ἀκούω → ἤκουσα."
+  },
+  {
+   "id": "greek.g3.aw.apo",
+   "topic": "greek.aorist-weak",
+   "kind": "mcq",
+   "prompt": "What is the aorist of **ἀποπέμπω** (I send away), “I sent away”?",
+   "options": [
+    {
+     "text": "ἀπέπεμψα",
+     "correct": true
+    },
+    {
+     "text": "ἐαποπέμψα",
+     "correct": false,
+     "feedback": "The augment goes after the prefix, not before it."
+    },
+    {
+     "text": "ἀποπέμψω",
+     "correct": false,
+     "feedback": "That is the future: no augment."
+    }
+   ],
+   "explain": "ἀπο- + ἐ + πεμψα → ἀπέπεμψα (the ο of ἀπο- drops out before the ε)."
+  },
+  {
+   "id": "greek.g3.aw.psi",
+   "topic": "greek.aorist-weak",
+   "kind": "mcq",
+   "prompt": "Why is the aorist of γράφω written **ἔγραψα**?",
+   "options": [
+    {
+     "text": "φ + σ is written ψ",
+     "correct": true
+    },
+    {
+     "text": "γράφω is irregular",
+     "correct": false,
+     "feedback": "It is regular: ἐ + γραφ + σα."
+    },
+    {
+     "text": "ψ is the sign of the past",
+     "correct": false,
+     "feedback": "The augment shows the past; ψ is just φ + σ."
+    }
+   ],
+   "explain": "π, β, φ + σ → ψ (ἔπεμψα, ἔγραψα); κ, γ, χ + σ → ξ (ἐδίωξα)."
+  },
+  {
+   "id": "greek.g3.aw.ediox",
+   "topic": "greek.aorist-weak",
+   "kind": "mcq",
+   "prompt": "What does **ἐδίωξαν** mean?",
+   "options": [
+    {
+     "text": "they chased",
+     "correct": true
+    },
+    {
+     "text": "they were chasing",
+     "correct": false,
+     "feedback": "They were chasing is ἐδίωκον."
+    },
+    {
+     "text": "they chase",
+     "correct": false,
+     "feedback": "The augment ἐ- shows a past tense."
+    }
+   ],
+   "explain": "ἐ- + διωκ + σαν → ἐδίωξαν (κ + σ = ξ): they chased."
+  },
+  {
+   "id": "greek.g3.aw.contrast",
+   "topic": "greek.aorist-weak",
+   "kind": "mcq",
+   "prompt": "What is the difference between **ἐπαίδευε** and **ἐπαίδευσε**?",
+   "options": [
+    {
+     "text": "ἐπαίδευε = he was teaching (imperfect); ἐπαίδευσε = he taught (aorist)",
+     "correct": true
+    },
+    {
+     "text": "They mean the same",
+     "correct": false,
+     "feedback": "The σ marks the aorist: one finished action."
+    },
+    {
+     "text": "ἐπαίδευσε is the future",
+     "correct": false,
+     "feedback": "The augment shows it is past."
+    }
+   ],
+   "explain": "Imperfect: a continuing action. Aorist: a single, completed action."
+  },
+  {
+   "id": "greek.g3.aw.keleuo",
+   "topic": "greek.aorist-weak",
+   "kind": "mcq",
+   "prompt": "Which form means “he ordered” (from κελεύω)?",
+   "options": [
+    {
+     "text": "ἐκέλευσε(ν)",
+     "correct": true
+    },
+    {
+     "text": "κελεύσει",
+     "correct": false,
+     "feedback": "κελεύσει is the future: he will order."
+    },
+    {
+     "text": "ἐκέλευε(ν)",
+     "correct": false,
+     "feedback": "ἐκέλευε(ν) is the imperfect: he was ordering."
+    }
+   ],
+   "explain": "ἐ- + κελευ + σε: ἐκέλευσε(ν), he ordered."
+  },
+  {
+   "id": "greek.g3.aw.poieo",
+   "topic": "greek.aorist-weak",
+   "kind": "mcq",
+   "prompt": "What does **ἐποίησε(ν)** (from ποιέω, I make) mean?",
+   "options": [
+    {
+     "text": "he made",
+     "correct": true
+    },
+    {
+     "text": "he makes",
+     "correct": false,
+     "feedback": "He makes is ποιεῖ."
+    },
+    {
+     "text": "he was making",
+     "correct": false,
+     "feedback": "He was making is ἐποίει."
+    }
+   ],
+   "explain": "Contracted verbs lengthen the stem vowel before the σ: ποιε- → ποιησα. ἐποίησε(ν), he made."
+  },
+  {
+   "id": "greek.g3.aw.ethelo",
+   "topic": "greek.aorist-weak",
+   "kind": "mcq",
+   "prompt": "What happens to the augment of a verb that begins with **ε**, like ἐθέλω?",
+   "options": [
+    {
+     "text": "The ε lengthens to η: ἤθελον (I was wishing)",
+     "correct": true
+    },
+    {
+     "text": "The ε doubles: εεθελον",
+     "correct": false,
+     "feedback": "Greek lengthens the vowel instead."
+    },
+    {
+     "text": "Nothing changes",
+     "correct": false,
+     "feedback": "The past still needs an augment: here a long vowel."
+    }
+   ],
+   "explain": "ε → η: ἐθέλω, ἤθελον. Odysseus ἤθελε τὰς Σειρῆνας ἀκούειν."
+  },
+  {
+   "id": "greek.g3.aw.pisteuo",
+   "topic": "greek.aorist-weak",
+   "kind": "fact",
+   "prompt": "Which is the aorist of **πιστεύω**, “I trusted”?",
+   "answer": "ἐπίστευσα",
+   "distractors": [
+    "πιστεύσω",
+    "ἐπίστευον",
+    "πιστεύσας"
+   ],
+   "explain": "πιστεύσω is future, ἐπίστευον imperfect, πιστεύσας the aorist participle.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.g3.aw.elusamen",
+   "topic": "greek.aorist-weak",
+   "kind": "mcq",
+   "prompt": "What does **ἐλύσαμεν** mean?",
+   "options": [
+    {
+     "text": "we freed",
+     "correct": true
+    },
+    {
+     "text": "we were freeing",
+     "correct": false,
+     "feedback": "We were freeing is ἐλύομεν."
+    },
+    {
+     "text": "you (plural) freed",
+     "correct": false,
+     "feedback": "You (plural) freed is ἐλύσατε."
+    }
+   ],
+   "explain": "-σαμεν: the weak aorist “we” ending."
+  },
+  {
+   "id": "greek.g3.as.tmpl",
+   "topic": "greek.aorist-strong",
+   "kind": "template",
+   "gen": "y8hAorist2",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.g3.as.elabe",
+   "topic": "greek.aorist-strong",
+   "kind": "mcq",
+   "prompt": "λαμβάνω (I take) has the aorist ἔλαβον. What does **ἔλαβε(ν)** mean?",
+   "options": [
+    {
+     "text": "he took",
+     "correct": true
+    },
+    {
+     "text": "he was taking",
+     "correct": false,
+     "feedback": "He was taking is ἐλάμβανε(ν), on the present stem."
+    },
+    {
+     "text": "he takes",
+     "correct": false,
+     "feedback": "The augment shows the past."
+    }
+   ],
+   "explain": "Strong aorist: new stem λαβ- with the imperfect-style endings -ον, -ες, -ε(ν)…"
+  },
+  {
+   "id": "greek.g3.as.stem",
+   "topic": "greek.aorist-strong",
+   "kind": "mcq",
+   "prompt": "How do you tell the imperfect **ἔφευγον** from the aorist **ἔφυγον**?",
+   "options": [
+    {
+     "text": "By the stem: φευγ- is the present stem (imperfect), φυγ- the aorist stem",
+     "correct": true
+    },
+    {
+     "text": "The endings are different",
+     "correct": false,
+     "feedback": "Both have -ον, -ες, -ε…: only the stem differs."
+    },
+    {
+     "text": "ἔφυγον has no augment",
+     "correct": false,
+     "feedback": "Both have the augment ἐ-."
+    }
+   ],
+   "explain": "Learn every strong aorist with its stem: φεύγω, ἔφυγον; λαμβάνω, ἔλαβον; μανθάνω, ἔμαθον."
+  },
+  {
+   "id": "greek.g3.as.eidon",
+   "topic": "greek.aorist-strong",
+   "kind": "fact",
+   "prompt": "Which is the aorist of **ὁράω** (I see), “I saw”?",
+   "answer": "εἶδον",
+   "distractors": [
+    "ἑώρων",
+    "ὄψομαι",
+    "ἰδών"
+   ],
+   "explain": "ὁράω, ἑώρων (I was seeing), ὄψομαι (I will see), εἶδον (I saw), ἰδών (having seen). “Idea” comes from the same root.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.g3.as.elthon",
+   "topic": "greek.aorist-strong",
+   "kind": "fact",
+   "prompt": "Which is the aorist of **ἔρχομαι** (I come, go), “I came”?",
+   "answer": "ἦλθον",
+   "distractors": [
+    "ἐλθών",
+    "ἐρχόμεθα",
+    "ἔρχεται"
+   ],
+   "explain": "ἔρχομαι, ἦλθον; aorist participle ἐλθών (having come).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.g3.as.eipon",
+   "topic": "greek.aorist-strong",
+   "kind": "fact",
+   "prompt": "What does **εἶπον** mean?",
+   "answer": "I said",
+   "distractors": [
+    "I saw",
+    "I took",
+    "I went"
+   ],
+   "explain": "εἶπον is the aorist of λέγω: I said (or they said).",
+   "accept": [
+    "said",
+    "they said",
+    "i spoke",
+    "spoke",
+    "i told",
+    "told"
+   ]
+  },
+  {
+   "id": "greek.g3.as.math",
+   "topic": "greek.aorist-strong",
+   "kind": "mcq",
+   "prompt": "μανθάνω (I learn) has the aorist ἔμαθον. Which English word shares its root?",
+   "options": [
+    {
+     "text": "mathematics (what is learned)",
+     "correct": true
+    },
+    {
+     "text": "marathon",
+     "correct": false,
+     "feedback": "Marathon is a place name."
+    },
+    {
+     "text": "method",
+     "correct": false,
+     "feedback": "Method comes from μετά + ὁδός (a way after)."
+    }
+   ],
+   "explain": "μάθημα = something learned; μαθηματικός = keen to learn."
+  },
+  {
+   "id": "greek.g3.as.apethane",
+   "topic": "greek.aorist-strong",
+   "kind": "mcq",
+   "prompt": "What does **ἀπέθανε(ν)** (from ἀποθνῄσκω, I die) mean?",
+   "options": [
+    {
+     "text": "he died",
+     "correct": true
+    },
+    {
+     "text": "he was dying",
+     "correct": false,
+     "feedback": "He was dying is ἀπέθνῃσκε(ν), on the present stem."
+    },
+    {
+     "text": "he killed",
+     "correct": false,
+     "feedback": "He killed is ἀπέκτεινε(ν), from ἀποκτείνω."
+    }
+   ],
+   "explain": "ἀποθνῄσκω, ἀπέθανον: a compound, so the augment sits after ἀπο-."
+  },
+  {
+   "id": "greek.g3.as.pathos",
+   "topic": "greek.aorist-strong",
+   "kind": "mcq",
+   "prompt": "ἔπαθον is the aorist of πάσχω (I suffer). Which English words are related?",
+   "options": [
+    {
+     "text": "pathetic, sympathy, empathy",
+     "correct": true
+    },
+    {
+     "text": "path and pathway",
+     "correct": false,
+     "feedback": "Path is an old English word."
+    },
+    {
+     "text": "pasta and paste",
+     "correct": false,
+     "feedback": "Those come from Italian."
+    }
+   ],
+   "explain": "πάθος = suffering, feeling. Sympathy = feeling with someone."
+  },
+  {
+   "id": "greek.g3.as.egagomen",
+   "topic": "greek.aorist-strong",
+   "kind": "mcq",
+   "prompt": "**ἠγάγομεν** comes from ἄγω (I lead). What does it mean?",
+   "options": [
+    {
+     "text": "we led",
+     "correct": true
+    },
+    {
+     "text": "we were leading",
+     "correct": false,
+     "feedback": "We were leading is ἤγομεν."
+    },
+    {
+     "text": "we will lead",
+     "correct": false,
+     "feedback": "The augment (α → η) shows it is past."
+    }
+   ],
+   "explain": "ἄγω has the strong aorist ἤγαγον, with a doubled stem ἀγαγ-."
+  },
+  {
+   "id": "greek.g3.as.heuron",
+   "topic": "greek.aorist-strong",
+   "kind": "fact",
+   "prompt": "Which is the aorist of **εὑρίσκω** (I find), “I found”?",
+   "answer": "εὗρον",
+   "distractors": [
+    "εὑρήσω",
+    "εὑρών",
+    "εὑρίσκει"
+   ],
+   "explain": "εὑρίσκω, εὗρον. Archimedes shouted εὕρηκα (eureka), “I have found it!”: that is the perfect tense.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "greek.g3.as.ebalon",
+   "topic": "greek.aorist-strong",
+   "kind": "mcq",
+   "prompt": "**ἔβαλλον** or **ἔβαλον**: which means “I threw” (a single throw)?",
+   "options": [
+    {
+     "text": "ἔβαλον (aorist, one λ)",
+     "correct": true
+    },
+    {
+     "text": "ἔβαλλον (imperfect, two λ)",
+     "correct": false,
+     "feedback": "ἔβαλλον has the present stem βαλλ-: I was throwing."
+    },
+    {
+     "text": "They mean the same",
+     "correct": false,
+     "feedback": "The single λ is the aorist stem."
+    }
+   ],
+   "explain": "βάλλω, ἔβαλον. A “ballistic” missile is a thrown one."
+  },
+  {
+   "id": "greek.g3.in.which",
+   "topic": "greek.infinitives",
+   "kind": "mcq",
+   "prompt": "Which pair are both infinitives?",
+   "options": [
+    {
+     "text": "λύειν and λῦσαι",
+     "correct": true
+    },
+    {
+     "text": "λύει and λύσει",
+     "correct": false,
+     "feedback": "λύει = he frees; λύσει = he will free."
+    },
+    {
+     "text": "λύων and λύσας",
+     "correct": false,
+     "feedback": "Those are participles."
+    }
+   ],
+   "explain": "Present infinitive -ειν; weak aorist infinitive -σαι; strong aorist infinitive -εῖν (λαβεῖν)."
+  },
+  {
+   "id": "greek.g3.in.phygein",
+   "topic": "greek.infinitives",
+   "kind": "mcq",
+   "prompt": "What does **ἐθέλω φυγεῖν** mean?",
+   "options": [
+    {
+     "text": "I want to flee",
+     "correct": true
+    },
+    {
+     "text": "I fled",
+     "correct": false,
+     "feedback": "I fled is ἔφυγον."
+    },
+    {
+     "text": "I want them to flee",
+     "correct": false,
+     "feedback": "There is no “them”: the wanter and the fleer are the same person."
+    }
+   ],
+   "explain": "φυγεῖν is the strong aorist infinitive of φεύγω: to flee (once)."
+  },
+  {
+   "id": "greek.g3.in.dei",
+   "topic": "greek.infinitives",
+   "kind": "mcq",
+   "prompt": "What does **δεῖ ἡμᾶς μένειν** mean?",
+   "options": [
+    {
+     "text": "We must stay",
+     "correct": true
+    },
+    {
+     "text": "We want to stay",
+     "correct": false,
+     "feedback": "Wanting is ἐθέλω."
+    },
+    {
+     "text": "They stay with us",
+     "correct": false,
+     "feedback": "ἡμᾶς is “us”, the people who must stay."
+    }
+   ],
+   "explain": "δεῖ + accusative + infinitive: “it is necessary for us to stay”, so “we must stay”."
+  },
+  {
+   "id": "greek.g3.in.keleuo",
+   "topic": "greek.infinitives",
+   "kind": "mcq",
+   "prompt": "**ὁ βασιλεὺς ἐκέλευσε τοὺς δούλους τὸν ἵππον λῦσαι.** What did the king order?",
+   "options": [
+    {
+     "text": "the slaves to free the horse",
+     "correct": true
+    },
+    {
+     "text": "the horse to free the slaves",
+     "correct": false,
+     "feedback": "τοὺς δούλους (accusative) are the people ordered; τὸν ἵππον is the object of λῦσαι."
+    },
+    {
+     "text": "the slaves to be freed",
+     "correct": false,
+     "feedback": "λῦσαι is active: to free."
+    }
+   ],
+   "explain": "κελεύω + accusative (the person) + infinitive (the action)."
+  },
+  {
+   "id": "greek.g3.in.labein",
+   "topic": "greek.infinitives",
+   "kind": "mcq",
+   "prompt": "Which is the aorist infinitive of **λαμβάνω**?",
+   "options": [
+    {
+     "text": "λαβεῖν",
+     "correct": true
+    },
+    {
+     "text": "λαμβάνειν",
+     "correct": false,
+     "feedback": "λαμβάνειν is the present infinitive."
+    },
+    {
+     "text": "ἔλαβον",
+     "correct": false,
+     "feedback": "ἔλαβον is “I took”, not an infinitive."
+    }
+   ],
+   "explain": "Strong aorist stem λαβ- + -εῖν: λαβεῖν, to take."
+  },
+  {
+   "id": "greek.g3.in.pheuge",
+   "topic": "greek.infinitives",
+   "kind": "mcq",
+   "prompt": "What does **φεῦγε** mean?",
+   "options": [
+    {
+     "text": "Flee! (said to one person)",
+     "correct": true
+    },
+    {
+     "text": "he flees",
+     "correct": false,
+     "feedback": "He flees is φεύγει."
+    },
+    {
+     "text": "Flee! (said to several people)",
+     "correct": false,
+     "feedback": "To several people: φεύγετε."
+    }
+   ],
+   "explain": "Present imperative: φεῦγε (singular), φεύγετε (plural)."
+  },
+  {
+   "id": "greek.g3.in.lysate",
+   "topic": "greek.infinitives",
+   "kind": "mcq",
+   "prompt": "Odysseus shouts **λύσατέ με!** to his crew. What does he mean?",
+   "options": [
+    {
+     "text": "Untie me! (to more than one person)",
+     "correct": true
+    },
+    {
+     "text": "You untied me.",
+     "correct": false,
+     "feedback": "λύσατε has no augment, so it is a command. “You untied” is ἐλύσατε."
+    },
+    {
+     "text": "I am untied.",
+     "correct": false,
+     "feedback": "με is the object: me."
+    }
+   ],
+   "explain": "Aorist imperative: λῦσον (singular), λύσατε (plural)."
+  },
+  {
+   "id": "greek.g3.in.me",
+   "topic": "greek.infinitives",
+   "kind": "mcq",
+   "prompt": "How do you say “Don’t flee!” to one person?",
+   "options": [
+    {
+     "text": "μὴ φεῦγε",
+     "correct": true
+    },
+    {
+     "text": "οὐ φεῦγε",
+     "correct": false,
+     "feedback": "Commands use μή, not οὐ."
+    },
+    {
+     "text": "φεῦγε οὐκ",
+     "correct": false,
+     "feedback": "The negative goes first, and with a command it is μή."
+    }
+   ],
+   "explain": "μή + imperative = “don’t…!”"
+  },
+  {
+   "id": "greek.g3.in.augment",
+   "topic": "greek.infinitives",
+   "kind": "mcq",
+   "prompt": "What is the difference between **λύσατε** and **ἐλύσατε**?",
+   "options": [
+    {
+     "text": "λύσατε = free! (a command); ἐλύσατε = you freed (a statement)",
+     "correct": true
+    },
+    {
+     "text": "None: they mean the same",
+     "correct": false,
+     "feedback": "The augment ἐ- makes it a past statement."
+    },
+    {
+     "text": "λύσατε is the future",
+     "correct": false,
+     "feedback": "The future is λύσετε."
+    }
+   ],
+   "explain": "No augment on imperatives or infinitives: the augment belongs only to past statements."
+  },
+  {
+   "id": "greek.g3.in.akoue",
+   "topic": "greek.infinitives",
+   "kind": "fact",
+   "prompt": "What does **ἄκουε** mean?",
+   "answer": "Listen!",
+   "distractors": [
+    "he listens",
+    "to listen",
+    "they listen"
+   ],
+   "explain": "ἄκουε: present imperative of ἀκούω, said to one person.",
+   "accept": [
+    "listen",
+    "hear",
+    "hear!"
+   ]
+  },
+  {
+   "id": "greek.g3.in.idein",
+   "topic": "greek.infinitives",
+   "kind": "mcq",
+   "prompt": "Which word fills the gap: **ἐθέλομεν τὴν πόλιν ___** (we want to see the city)?",
+   "options": [
+    {
+     "text": "ἰδεῖν",
+     "correct": true
+    },
+    {
+     "text": "εἶδον",
+     "correct": false,
+     "feedback": "εἶδον = I saw: not an infinitive."
+    },
+    {
+     "text": "ὁρᾷ",
+     "correct": false,
+     "feedback": "ὁρᾷ = he sees."
+    }
+   ],
+   "explain": "ἰδεῖν is the strong aorist infinitive of ὁράω: to see."
+  },
+  {
+   "id": "greek.g3.ct.tmpl",
+   "topic": "greek.contracted",
+   "kind": "template",
+   "gen": "y8hContract",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.g3.ct.order",
+   "topic": "greek.contracted",
+   "kind": "order",
+   "prompt": "Put the present of φιλέω in order: I, you (sg), he, we, you (pl), they.",
+   "items": [
+    "φιλῶ",
+    "φιλεῖς",
+    "φιλεῖ",
+    "φιλοῦμεν",
+    "φιλεῖτε",
+    "φιλοῦσι(ν)"
+   ],
+   "labels": null,
+   "explain": "φιλῶ, φιλεῖς, φιλεῖ, φιλοῦμεν, φιλεῖτε, φιλοῦσι(ν): I love… they love."
+  },
+  {
+   "id": "greek.g3.ct.ou",
+   "topic": "greek.contracted",
+   "kind": "mcq",
+   "prompt": "How does φιλέομεν become **φιλοῦμεν**?",
+   "options": [
+    {
+     "text": "ε + ο contracts to ου",
+     "correct": true
+    },
+    {
+     "text": "The ε is just dropped",
+     "correct": false,
+     "feedback": "It merges with the ο to make ου."
+    },
+    {
+     "text": "ο doubles to ου",
+     "correct": false,
+     "feedback": "The ου comes from ε + ο."
+    }
+   ],
+   "explain": "ε + ο = ου; ε + ε = ει; ε + ω = ω."
+  },
+  {
+   "id": "greek.g3.ct.poiousi",
+   "topic": "greek.contracted",
+   "kind": "mcq",
+   "prompt": "What does **ποιοῦσι(ν)** mean?",
+   "options": [
+    {
+     "text": "they make (or do)",
+     "correct": true
+    },
+    {
+     "text": "he makes",
+     "correct": false,
+     "feedback": "He makes is ποιεῖ."
+    },
+    {
+     "text": "we make",
+     "correct": false,
+     "feedback": "We make is ποιοῦμεν."
+    }
+   ],
+   "explain": "ποιέ-ουσι → ποιοῦσι (ε + ου = ου). “Poet” comes from ποιητής, a maker."
+  },
+  {
+   "id": "greek.g3.ct.inf",
+   "topic": "greek.contracted",
+   "kind": "mcq",
+   "prompt": "Which is the infinitive of **φιλέω**?",
+   "options": [
+    {
+     "text": "φιλεῖν",
+     "correct": true
+    },
+    {
+     "text": "φιλέειν",
+     "correct": false,
+     "feedback": "The ε + ει contracts to ει."
+    },
+    {
+     "text": "φιλοῦν",
+     "correct": false,
+     "feedback": "φιλοῦν is the neuter participle."
+    }
+   ],
+   "explain": "φιλέ-ειν → φιλεῖν, to love."
+  },
+  {
+   "id": "greek.g3.ct.zetei",
+   "topic": "greek.contracted",
+   "kind": "fact",
+   "prompt": "What does **ζητεῖ** (from ζητέω) mean?",
+   "answer": "he seeks",
+   "distractors": [
+    "he lives",
+    "he helps",
+    "he loves"
+   ],
+   "explain": "ζητέω = I seek, look for: ζητεῖ, he or she seeks.",
+   "accept": [
+    "she seeks",
+    "he looks for",
+    "she looks for",
+    "seeks",
+    "looks for",
+    "he searches for",
+    "he is looking for"
+   ]
+  },
+  {
+   "id": "greek.g3.ct.oikoumen",
+   "topic": "greek.contracted",
+   "kind": "fact",
+   "prompt": "What does **οἰκοῦμεν** (from οἰκέω) mean?",
+   "answer": "we live",
+   "distractors": [
+    "we seek",
+    "they live",
+    "we help"
+   ],
+   "explain": "οἰκέω = I live, dwell (related to οἶκος, house). οἰκοῦμεν = we live.",
+   "accept": [
+    "we dwell",
+    "we inhabit",
+    "we live in"
+   ]
+  },
+  {
+   "id": "greek.g3.ct.boethousin",
+   "topic": "greek.contracted",
+   "kind": "mcq",
+   "prompt": "In the Cyclops story, **οὐ βοηθοῦσιν** means…",
+   "options": [
+    {
+     "text": "they do not help",
+     "correct": true
+    },
+    {
+     "text": "they do not shout",
+     "correct": false,
+     "feedback": "They shout would be βοῶσι(ν), from βοάω."
+    },
+    {
+     "text": "he does not help",
+     "correct": false,
+     "feedback": "-οῦσιν is “they”."
+    }
+   ],
+   "explain": "βοηθέω = I help: βοηθοῦσιν, they help."
+  },
+  {
+   "id": "greek.g3.ct.horomen",
+   "topic": "greek.contracted",
+   "kind": "mcq",
+   "prompt": "What does **ὁρῶμεν** (from ὁράω) mean?",
+   "options": [
+    {
+     "text": "we see",
+     "correct": true
+    },
+    {
+     "text": "we saw",
+     "correct": false,
+     "feedback": "We saw is εἴδομεν."
+    },
+    {
+     "text": "you (plural) see",
+     "correct": false,
+     "feedback": "You (plural) see is ὁρᾶτε."
+    }
+   ],
+   "explain": "In -άω verbs, α + ο = ω: ὁρά-ομεν → ὁρῶμεν."
+  },
+  {
+   "id": "greek.g3.ct.tima",
+   "topic": "greek.contracted",
+   "kind": "mcq",
+   "prompt": "What does **τιμᾷ** mean?",
+   "options": [
+    {
+     "text": "he honours",
+     "correct": true
+    },
+    {
+     "text": "honour (the noun)",
+     "correct": false,
+     "feedback": "The noun is τιμή."
+    },
+    {
+     "text": "they honour",
+     "correct": false,
+     "feedback": "They honour is τιμῶσι(ν)."
+    }
+   ],
+   "explain": "τιμά-ει → τιμᾷ: α + ει = ᾳ."
+  },
+  {
+   "id": "greek.g3.ct.aor",
+   "topic": "greek.contracted",
+   "kind": "mcq",
+   "prompt": "Why is the aorist of ποιέω **ἐποίησα**, not ἐποίεσα?",
+   "options": [
+    {
+     "text": "Contracted verbs lengthen ε to η before the σ",
+     "correct": true
+    },
+    {
+     "text": "It is irregular",
+     "correct": false,
+     "feedback": "All -έω verbs do this: ἐφίλησα, ἐζήτησα."
+    },
+    {
+     "text": "η means “made”",
+     "correct": false,
+     "feedback": "The η is just the lengthened stem vowel."
+    }
+   ],
+   "explain": "φιλέω → ἐφίλησα; ποιέω → ἐποίησα; ζητέω → ἐζήτησα."
+  },
+  {
+   "id": "greek.g3.ct.not",
+   "topic": "greek.contracted",
+   "kind": "mcq",
+   "prompt": "Which of these is NOT a contracted verb?",
+   "options": [
+    {
+     "text": "λύω",
+     "correct": true
+    },
+    {
+     "text": "φιλέω",
+     "correct": false,
+     "feedback": "φιλέω contracts: φιλῶ."
+    },
+    {
+     "text": "ὁράω",
+     "correct": false,
+     "feedback": "ὁράω contracts: ὁρῶ."
+    }
+   ],
+   "explain": "Contracted verbs have a stem ending in a vowel (ε, α, ο) that merges with the ending. λύω’s endings stay as they are."
+  },
+  {
+   "id": "greek.g3.mp.tmpl",
+   "topic": "greek.middle",
+   "kind": "template",
+   "gen": "y8hMiddle",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.g3.mp.lyetai",
+   "topic": "greek.middle",
+   "kind": "mcq",
+   "prompt": "What does **λύεται** mean?",
+   "options": [
+    {
+     "text": "he, she or it is (being) freed",
+     "correct": true
+    },
+    {
+     "text": "he frees",
+     "correct": false,
+     "feedback": "He frees is λύει."
+    },
+    {
+     "text": "he will free",
+     "correct": false,
+     "feedback": "He will free is λύσει."
+    }
+   ],
+   "explain": "-εται is the middle/passive “he/she/it” ending."
+  },
+  {
+   "id": "greek.g3.mp.hypo",
+   "topic": "greek.middle",
+   "kind": "mcq",
+   "prompt": "Translate **ὁ ἵππος ὑπὸ τοῦ δούλου λύεται**.",
+   "options": [
+    {
+     "text": "The horse is freed by the slave.",
+     "correct": true
+    },
+    {
+     "text": "The horse frees the slave.",
+     "correct": false,
+     "feedback": "λύεται is passive: the horse is being freed."
+    },
+    {
+     "text": "The slave is freed by the horse.",
+     "correct": false,
+     "feedback": "ὑπὸ τοῦ δούλου (genitive) = by the slave."
+    }
+   ],
+   "explain": "ὑπό + genitive = “by” a person, with a passive verb."
+  },
+  {
+   "id": "greek.g3.mp.deponent",
+   "topic": "greek.middle",
+   "kind": "mcq",
+   "prompt": "What is a deponent verb?",
+   "options": [
+    {
+     "text": "A verb with middle/passive endings but an active meaning",
+     "correct": true
+    },
+    {
+     "text": "A verb with no past tense",
+     "correct": false,
+     "feedback": "Deponents have all the tenses."
+    },
+    {
+     "text": "A verb that only takes the dative",
+     "correct": false,
+     "feedback": "That is a different idea."
+    }
+   ],
+   "explain": "βούλομαι (I want), γίγνομαι (I become), ἔρχομαι (I come), μάχομαι (I fight), δέχομαι (I receive)."
+  },
+  {
+   "id": "greek.g3.mp.boulomai",
+   "topic": "greek.middle",
+   "kind": "fact",
+   "prompt": "What does **βούλομαι** mean?",
+   "answer": "I want",
+   "distractors": [
+    "I become",
+    "I fight",
+    "I receive"
+   ],
+   "explain": "βούλομαι = I want, wish (a deponent). The βουλή was the council: the people who decided what Athens wanted.",
+   "accept": [
+    "want",
+    "i wish",
+    "wish",
+    "i want to"
+   ]
+  },
+  {
+   "id": "greek.g3.mp.gignetai",
+   "topic": "greek.middle",
+   "kind": "fact",
+   "prompt": "What does **γίγνεται** mean?",
+   "answer": "he, she or it becomes",
+   "distractors": [
+    "he wants",
+    "he fights",
+    "he receives"
+   ],
+   "explain": "γίγνομαι = I become, happen (a deponent). Genesis comes from the same root.",
+   "accept": [
+    "becomes",
+    "he becomes",
+    "she becomes",
+    "it becomes",
+    "happens",
+    "it happens"
+   ]
+  },
+  {
+   "id": "greek.g3.mp.ontai",
+   "topic": "greek.middle",
+   "kind": "mcq",
+   "prompt": "Which ending means “they” in the middle and passive?",
+   "options": [
+    {
+     "text": "-ονται (λύονται)",
+     "correct": true
+    },
+    {
+     "text": "-ουσι(ν)",
+     "correct": false,
+     "feedback": "-ουσι(ν) is the active ending."
+    },
+    {
+     "text": "-ομεθα",
+     "correct": false,
+     "feedback": "-ομεθα means “we”."
+    }
+   ],
+   "explain": "Middle/passive: -ομαι, -ει (or -ῃ), -εται, -ομεθα, -εσθε, -ονται."
+  },
+  {
+   "id": "greek.g3.mp.lithoi",
+   "topic": "greek.middle",
+   "kind": "mcq",
+   "prompt": "In the Medusa story, **λίθοι γίγνονται** means…",
+   "options": [
+    {
+     "text": "they become stones",
+     "correct": true
+    },
+    {
+     "text": "they throw stones",
+     "correct": false,
+     "feedback": "Throw is βάλλω."
+    },
+    {
+     "text": "stones are born",
+     "correct": false,
+     "feedback": "Here γίγνονται means “become”: people turn into stones."
+    }
+   ],
+   "explain": "γίγνονται: they become."
+  },
+  {
+   "id": "greek.g3.mp.erchesthe",
+   "topic": "greek.middle",
+   "kind": "mcq",
+   "prompt": "What does **ἔρχεσθε** mean?",
+   "options": [
+    {
+     "text": "you (plural) come, or go",
+     "correct": true
+    },
+    {
+     "text": "we come",
+     "correct": false,
+     "feedback": "We come is ἐρχόμεθα."
+    },
+    {
+     "text": "they come",
+     "correct": false,
+     "feedback": "They come is ἔρχονται."
+    }
+   ],
+   "explain": "-εσθε: the middle/passive “you” (plural) ending."
+  },
+  {
+   "id": "greek.g3.mp.inf",
+   "topic": "greek.middle",
+   "kind": "mcq",
+   "prompt": "What is the present middle/passive infinitive of λύω?",
+   "options": [
+    {
+     "text": "λύεσθαι (to be freed)",
+     "correct": true
+    },
+    {
+     "text": "λύειν",
+     "correct": false,
+     "feedback": "λύειν is active: to free."
+    },
+    {
+     "text": "λῦσαι",
+     "correct": false,
+     "feedback": "λῦσαι is the aorist active: to free."
+    }
+   ],
+   "explain": "Middle/passive infinitive: -εσθαι. Daedalus tells Icarus μὴ… πέτεσθαι, not to fly."
+  },
+  {
+   "id": "greek.g3.mp.machontai",
+   "topic": "greek.middle",
+   "kind": "mcq",
+   "prompt": "Translate **οἱ Ἕλληνες μάχονται**.",
+   "options": [
+    {
+     "text": "The Greeks are fighting.",
+     "correct": true
+    },
+    {
+     "text": "The Greeks are being fought.",
+     "correct": false,
+     "feedback": "μάχομαι is a deponent: its meaning is active."
+    },
+    {
+     "text": "The Greeks fought.",
+     "correct": false,
+     "feedback": "μάχονται is present."
+    }
+   ],
+   "explain": "μάχομαι = I fight: μάχονται, they fight."
+  },
+  {
+   "id": "greek.g3.mp.petetai",
+   "topic": "greek.middle",
+   "kind": "mcq",
+   "prompt": "In the Icarus story, **πρὸς τὸν ἥλιον πέτεται** (πέτομαι = I fly) means…",
+   "options": [
+    {
+     "text": "he flies towards the sun",
+     "correct": true
+    },
+    {
+     "text": "he is flown by the sun",
+     "correct": false,
+     "feedback": "πέτομαι is a deponent: active meaning."
+    },
+    {
+     "text": "the sun flies towards him",
+     "correct": false,
+     "feedback": "τὸν ἥλιον is accusative after πρός: towards the sun."
+    }
+   ],
+   "explain": "πέτεται: he flies. πρός + accusative = towards."
+  },
+  {
+   "id": "greek.g3.pt.tmpl",
+   "topic": "greek.participles-full",
+   "kind": "template",
+   "gen": "y8hPart",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "greek.g3.pt.idon",
+   "topic": "greek.participles-full",
+   "kind": "mcq",
+   "prompt": "What does **ἰδών** mean?",
+   "options": [
+    {
+     "text": "having seen, after seeing",
+     "correct": true
+    },
+    {
+     "text": "seeing (at the same time)",
+     "correct": false,
+     "feedback": "Seeing is ὁρῶν, the present participle."
+    },
+    {
+     "text": "he saw",
+     "correct": false,
+     "feedback": "He saw is εἶδε(ν)."
+    }
+   ],
+   "explain": "ἰδών is the aorist participle of ὁράω (from the aorist stem ἰδ-)."
+  },
+  {
+   "id": "greek.g3.pt.labon",
+   "topic": "greek.participles-full",
+   "kind": "mcq",
+   "prompt": "Translate **ὁ Περσεὺς τὴν κεφαλὴν λαβὼν ἀπέφυγεν**.",
+   "options": [
+    {
+     "text": "Having taken the head, Perseus escaped.",
+     "correct": true
+    },
+    {
+     "text": "Perseus took the head, and the head escaped.",
+     "correct": false,
+     "feedback": "λαβών is masculine nominative: it goes with ὁ Περσεύς."
+    },
+    {
+     "text": "While taking the head, Perseus is escaping.",
+     "correct": false,
+     "feedback": "The aorist participle comes first in time, and ἀπέφυγεν is past."
+    }
+   ],
+   "explain": "λαβών = having taken: the taking happens first, then the escape."
+  },
+  {
+   "id": "greek.g3.pt.agree",
+   "topic": "greek.participles-full",
+   "kind": "mcq",
+   "prompt": "In **ὁ δοῦλος τὴν κόρην φεύγουσαν ὁρᾷ** (ὁρᾷ = sees), who is fleeing?",
+   "options": [
+    {
+     "text": "the girl",
+     "correct": true
+    },
+    {
+     "text": "the slave",
+     "correct": false,
+     "feedback": "φεύγουσαν is feminine accusative, like τὴν κόρην."
+    },
+    {
+     "text": "both of them",
+     "correct": false,
+     "feedback": "The participle agrees with only one noun: τὴν κόρην."
+    }
+   ],
+   "explain": "The slave sees the girl (who is) fleeing."
+  },
+  {
+   "id": "greek.g3.pt.on",
+   "topic": "greek.participles-full",
+   "kind": "mcq",
+   "prompt": "Which is the masculine present participle of εἰμί (being)?",
+   "options": [
+    {
+     "text": "ὤν",
+     "correct": true
+    },
+    {
+     "text": "ἐστί(ν)",
+     "correct": false,
+     "feedback": "ἐστί(ν) = is."
+    },
+    {
+     "text": "οὖσα",
+     "correct": false,
+     "feedback": "οὖσα is feminine."
+    }
+   ],
+   "explain": "ὤν, οὖσα, ὄν: being. σοφώτατος ὤν = being the wisest."
+  },
+  {
+   "id": "greek.g3.pt.machomenoi",
+   "topic": "greek.participles-full",
+   "kind": "mcq",
+   "prompt": "Translate **οἱ στρατιῶται μαχόμενοι ἀπέθανον**.",
+   "options": [
+    {
+     "text": "The soldiers died fighting.",
+     "correct": true
+    },
+    {
+     "text": "The soldiers fought and killed.",
+     "correct": false,
+     "feedback": "ἀπέθανον = they died (killed is ἀπέκτειναν)."
+    },
+    {
+     "text": "The dead soldiers fought.",
+     "correct": false,
+     "feedback": "μαχόμενοι is the participle; ἀπέθανον is the main verb."
+    }
+   ],
+   "explain": "μαχόμενοι: the present participle of μάχομαι, “(while) fighting”."
+  },
+  {
+   "id": "greek.g3.pt.pheugon",
+   "topic": "greek.participles-full",
+   "kind": "mcq",
+   "prompt": "What does **ὁ φεύγων** mean?",
+   "options": [
+    {
+     "text": "the man who is fleeing (the fugitive)",
+     "correct": true
+    },
+    {
+     "text": "he flees",
+     "correct": false,
+     "feedback": "He flees is φεύγει."
+    },
+    {
+     "text": "the flight",
+     "correct": false,
+     "feedback": "Flight is φυγή."
+    }
+   ],
+   "explain": "The article + a participle = “the one who…”."
+  },
+  {
+   "id": "greek.g3.pt.akousasa",
+   "topic": "greek.participles-full",
+   "kind": "mcq",
+   "prompt": "Which participle goes with **ἡ θεά** (the goddess): “the goddess, having heard…”?",
+   "options": [
+    {
+     "text": "ἀκούσασα",
+     "correct": true
+    },
+    {
+     "text": "ἀκούσας",
+     "correct": false,
+     "feedback": "ἀκούσας is masculine."
+    },
+    {
+     "text": "ἀκοῦσαν",
+     "correct": false,
+     "feedback": "ἀκοῦσαν is neuter."
+    }
+   ],
+   "explain": "Aorist participle: ἀκούσας, ἀκούσασα, ἀκοῦσαν. ἡ θεὰ ἀκούσασα = the goddess, having heard."
+  },
+  {
+   "id": "greek.g3.pt.menontes",
+   "topic": "greek.participles-full",
+   "kind": "mcq",
+   "prompt": "How is **οἱ μένοντες** best translated?",
+   "options": [
+    {
+     "text": "those who stay",
+     "correct": true
+    },
+    {
+     "text": "because they stay",
+     "correct": false,
+     "feedback": "With the article, a participle means “those who…”."
+    },
+    {
+     "text": "Stay!",
+     "correct": false,
+     "feedback": "Stay! (plural) is μένετε."
+    }
+   ],
+   "explain": "οἱ μένοντες = the ones staying, those who stay."
+  },
+  {
+   "id": "greek.g3.pt.eipon",
+   "topic": "greek.participles-full",
+   "kind": "mcq",
+   "prompt": "Translate **ταῦτα εἰπὼν ὁ στρατηγὸς ἀπῆλθεν**.",
+   "options": [
+    {
+     "text": "Having said this, the general went away.",
+     "correct": true
+    },
+    {
+     "text": "The general said this and stayed.",
+     "correct": false,
+     "feedback": "ἀπῆλθεν = went away."
+    },
+    {
+     "text": "While saying this, the general is going away.",
+     "correct": false,
+     "feedback": "εἰπών is aorist (having said), and ἀπῆλθεν is past."
+    }
+   ],
+   "explain": "εἰπών: aorist participle of λέγω. ἀπῆλθεν: aorist of ἀπέρχομαι, went away."
+  },
+  {
+   "id": "greek.g3.pt.tense",
+   "topic": "greek.participles-full",
+   "kind": "mcq",
+   "prompt": "What does the difference between **λύων** and **λύσας** show?",
+   "options": [
+    {
+     "text": "λύων: at the same time (freeing); λύσας: before (having freed)",
+     "correct": true
+    },
+    {
+     "text": "λύων is future",
+     "correct": false,
+     "feedback": "The future participle is λύσων."
+    },
+    {
+     "text": "There is no difference",
+     "correct": false,
+     "feedback": "The tense of a participle shows the timing."
+    }
+   ],
+   "explain": "Present participle = same time; aorist participle = earlier."
+  },
+  {
+   "id": "greek.g3.cs.xiphei",
+   "topic": "greek.cases",
+   "kind": "mcq",
+   "prompt": "What does **τῷ ξίφει** mean in **τὸν λέοντα τῷ ξίφει ἀποκτείνει**?",
+   "options": [
+    {
+     "text": "with the sword",
+     "correct": true
+    },
+    {
+     "text": "to the sword",
+     "correct": false,
+     "feedback": "Here the dative is the thing used: “with”."
+    },
+    {
+     "text": "of the sword",
+     "correct": false,
+     "feedback": "“Of the sword” would be the genitive, τοῦ ξίφους."
+    }
+   ],
+   "explain": "The dative of means: τῷ ξίφει, with the sword (ξίφος, -ους, τό)."
+  },
+  {
+   "id": "greek.g3.cs.ete",
+   "topic": "greek.cases",
+   "kind": "mcq",
+   "prompt": "Translate **δέκα ἔτη οἱ Ἕλληνες ἐμάχοντο**.",
+   "options": [
+    {
+     "text": "For ten years the Greeks were fighting.",
+     "correct": true
+    },
+    {
+     "text": "In the tenth year the Greeks fought.",
+     "correct": false,
+     "feedback": "The accusative of time means “for” (how long). In the tenth year would be τῷ δεκάτῳ ἔτει."
+    },
+    {
+     "text": "Ten Greeks were fighting each year.",
+     "correct": false,
+     "feedback": "δέκα ἔτη is a time phrase: ten years."
+    }
+   ],
+   "explain": "Accusative = how long: δέκα ἔτη, for ten years."
+  },
+  {
+   "id": "greek.g3.cs.hysteraia",
+   "topic": "greek.cases",
+   "kind": "mcq",
+   "prompt": "What does **τῇ ὑστεραίᾳ** mean?",
+   "options": [
+    {
+     "text": "on the next day",
+     "correct": true
+    },
+    {
+     "text": "for many days",
+     "correct": false,
+     "feedback": "For many days would be πολλὰς ἡμέρας."
+    },
+    {
+     "text": "yesterday",
+     "correct": false,
+     "feedback": "Yesterday is χθές."
+    }
+   ],
+   "explain": "Dative = when: τῇ ὑστεραίᾳ (ἡμέρᾳ), on the following day."
+  },
+  {
+   "id": "greek.g3.cs.howlong",
+   "topic": "greek.cases",
+   "kind": "mcq",
+   "prompt": "Which case answers the question “how long?”",
+   "options": [
+    {
+     "text": "accusative",
+     "correct": true
+    },
+    {
+     "text": "dative",
+     "correct": false,
+     "feedback": "The dative says when (on which day)."
+    },
+    {
+     "text": "genitive",
+     "correct": false,
+     "feedback": "The genitive says within which time (by night, during the day)."
+    }
+   ],
+   "explain": "Time: accusative = how long; dative = when; genitive = within which."
+  },
+  {
+   "id": "greek.g3.cs.nyktos",
+   "topic": "greek.cases",
+   "kind": "mcq",
+   "prompt": "What does **νυκτὸς ἔφυγον** mean?",
+   "options": [
+    {
+     "text": "they fled by night",
+     "correct": true
+    },
+    {
+     "text": "they fled for a night",
+     "correct": false,
+     "feedback": "For a night would be accusative: νύκτα."
+    },
+    {
+     "text": "they fled from the night",
+     "correct": false,
+     "feedback": "There is no preposition: the genitive alone means “during”."
+    }
+   ],
+   "explain": "Genitive of time within which: νυκτός, by night."
+  },
+  {
+   "id": "greek.g3.cs.phile",
+   "topic": "greek.cases",
+   "kind": "mcq",
+   "prompt": "How would you call out “O friend!” in Greek?",
+   "options": [
+    {
+     "text": "ὦ φίλε",
+     "correct": true
+    },
+    {
+     "text": "ὦ φίλος",
+     "correct": false,
+     "feedback": "The vocative of -ος nouns ends -ε."
+    },
+    {
+     "text": "ὁ φίλος",
+     "correct": false,
+     "feedback": "ὁ is the article: the friend."
+    }
+   ],
+   "explain": "The vocative: ὦ φίλε, ὦ δοῦλε, ὦ Ὀδυσσεῦ, ὦ Ζεῦ."
+  },
+  {
+   "id": "greek.g3.cs.thygater",
+   "topic": "greek.cases",
+   "kind": "mcq",
+   "prompt": "Translate **ἡ τοῦ βασιλέως θυγάτηρ**.",
+   "options": [
+    {
+     "text": "the king’s daughter",
+     "correct": true
+    },
+    {
+     "text": "the daughter of the kings",
+     "correct": false,
+     "feedback": "βασιλέως is singular."
+    },
+    {
+     "text": "the king and his daughter",
+     "correct": false,
+     "feedback": "There is no “and”: the genitive shows whose daughter."
+    }
+   ],
+   "explain": "The genitive of possession can sit between the article and its noun: ἡ τοῦ βασιλέως θυγάτηρ."
+  },
+  {
+   "id": "greek.g3.cs.athenaioi",
+   "topic": "greek.cases",
+   "kind": "mcq",
+   "prompt": "Speakers in the Athenian assembly began **ὦ ἄνδρες Ἀθηναῖοι**. What does it mean?",
+   "options": [
+    {
+     "text": "Men of Athens!",
+     "correct": true
+    },
+    {
+     "text": "The men of Athens are here.",
+     "correct": false,
+     "feedback": "ὦ + vocative calls people; there is no verb."
+    },
+    {
+     "text": "Of the Athenian men",
+     "correct": false,
+     "feedback": "That would be the genitive: τῶν Ἀθηναίων ἀνδρῶν."
+    }
+   ],
+   "explain": "ὦ + vocative plural: “O Athenian men!”"
+  },
+  {
+   "id": "greek.g3.cs.pharmako",
+   "topic": "greek.cases",
+   "kind": "mcq",
+   "prompt": "In **ὁ Ἰάσων τῷ φαρμάκῳ τοὺς ταύρους ἔζευξεν**, why is τῷ φαρμάκῳ dative?",
+   "options": [
+    {
+     "text": "It is the thing he used: with the potion",
+     "correct": true
+    },
+    {
+     "text": "It is the object",
+     "correct": false,
+     "feedback": "The object is τοὺς ταύρους."
+    },
+    {
+     "text": "It means “of the potion”",
+     "correct": false,
+     "feedback": "That would be the genitive, τοῦ φαρμάκου."
+    }
+   ],
+   "explain": "Dative of means: Jason yoked the bulls with the potion."
+  },
+  {
+   "id": "greek.g3.cs.theon",
+   "topic": "greek.cases",
+   "kind": "mcq",
+   "prompt": "Which phrase means “of the gods”?",
+   "options": [
+    {
+     "text": "τῶν θεῶν",
+     "correct": true
+    },
+    {
+     "text": "τοῖς θεοῖς",
+     "correct": false,
+     "feedback": "τοῖς θεοῖς is dative: to or for the gods."
+    },
+    {
+     "text": "τοὺς θεούς",
+     "correct": false,
+     "feedback": "τοὺς θεούς is accusative."
+    }
+   ],
+   "explain": "Genitive plural -ων: τῶν θεῶν, of the gods."
+  },
+  {
+   "id": "greek.g3.cs.polloi",
+   "topic": "greek.cases",
+   "kind": "mcq",
+   "prompt": "What does **οἱ πολλοὶ τῶν στρατιωτῶν** mean?",
+   "options": [
+    {
+     "text": "most of the soldiers",
+     "correct": true
+    },
+    {
+     "text": "the soldiers’ many friends",
+     "correct": false,
+     "feedback": "There is no word for friends."
+    },
+    {
+     "text": "the soldiers of many cities",
+     "correct": false,
+     "feedback": "There is no word for cities."
+    }
+   ],
+   "explain": "The genitive of the whole: “the many of the soldiers”, so most of them."
+  },
+  {
+   "id": "greek.g3.qn.tis",
+   "topic": "greek.questions",
+   "kind": "mcq",
+   "prompt": "What does **τίς εἶ;** mean?",
+   "options": [
+    {
+     "text": "Who are you?",
+     "correct": true
+    },
+    {
+     "text": "What is it?",
+     "correct": false,
+     "feedback": "What is it? is τί ἐστιν;"
+    },
+    {
+     "text": "Where are you?",
+     "correct": false,
+     "feedback": "Where are you? is ποῦ εἶ;"
+    }
+   ],
+   "explain": "τίς; = who? εἶ = you are. The Greek question mark is ;"
+  },
+  {
+   "id": "greek.g3.qn.pou",
+   "topic": "greek.questions",
+   "kind": "mcq",
+   "prompt": "What does **ποῦ ἐστιν ὁ Ὀδυσσεύς;** mean?",
+   "options": [
+    {
+     "text": "Where is Odysseus?",
+     "correct": true
+    },
+    {
+     "text": "When is Odysseus coming?",
+     "correct": false,
+     "feedback": "When? is πότε;"
+    },
+    {
+     "text": "Who is Odysseus?",
+     "correct": false,
+     "feedback": "Who? is τίς;"
+    }
+   ],
+   "explain": "ποῦ; = where? A favourite question in the Odyssey."
+  },
+  {
+   "id": "greek.g3.qn.ouch",
+   "topic": "greek.questions",
+   "kind": "mcq",
+   "prompt": "Why is it **οὐκ ἐθέλει** but **οὐχ ὁρᾷ**?",
+   "options": [
+    {
+     "text": "οὐκ goes before a smooth breathing, οὐχ before a rough breathing",
+     "correct": true
+    },
+    {
+     "text": "They are different words",
+     "correct": false,
+     "feedback": "Both mean “not”."
+    },
+    {
+     "text": "οὐχ is plural",
+     "correct": false,
+     "feedback": "Negatives have no plural."
+    }
+   ],
+   "explain": "οὐ before a consonant, οὐκ before a smooth breathing, οὐχ before a rough breathing (ὁρᾷ)."
+  },
+  {
+   "id": "greek.g3.qn.ara",
+   "topic": "greek.questions",
+   "kind": "mcq",
+   "prompt": "Which word introduces a yes-or-no question?",
+   "options": [
+    {
+     "text": "ἆρα",
+     "correct": true
+    },
+    {
+     "text": "γάρ",
+     "correct": false,
+     "feedback": "γάρ means “for”."
+    },
+    {
+     "text": "οὖν",
+     "correct": false,
+     "feedback": "οὖν means “therefore”."
+    }
+   ],
+   "explain": "ἆρα φεύγεις; = Are you fleeing?"
+  },
+  {
+   "id": "greek.g3.qn.dia",
+   "topic": "greek.questions",
+   "kind": "mcq",
+   "prompt": "What does **διὰ τί φεύγεις;** mean?",
+   "options": [
+    {
+     "text": "Why are you fleeing?",
+     "correct": true
+    },
+    {
+     "text": "Where are you fleeing to?",
+     "correct": false,
+     "feedback": "Where to? is ποῖ;"
+    },
+    {
+     "text": "Are you fleeing through it?",
+     "correct": false,
+     "feedback": "διὰ τί is a fixed phrase: “on account of what?”, so why?"
+    }
+   ],
+   "explain": "διὰ τί; (or just τί;) = why?"
+  },
+  {
+   "id": "greek.g3.qn.oudeis",
+   "topic": "greek.questions",
+   "kind": "mcq",
+   "prompt": "What does **οὐδείς** mean?",
+   "options": [
+    {
+     "text": "no one, nobody",
+     "correct": true
+    },
+    {
+     "text": "everyone",
+     "correct": false,
+     "feedback": "Everyone is πάντες."
+    },
+    {
+     "text": "someone",
+     "correct": false,
+     "feedback": "Someone is τις."
+    }
+   ],
+   "explain": "οὐδείς = no one; οὐδέν = nothing. (The Cyclops was tricked by Οὖτις, “Nobody”, a poetic word.)"
+  },
+  {
+   "id": "greek.g3.qn.oute",
+   "topic": "greek.questions",
+   "kind": "mcq",
+   "prompt": "Translate **οὔτε ὁ βασιλεὺς οὔτε ὁ στρατηγὸς μένει**.",
+   "options": [
+    {
+     "text": "Neither the king nor the general stays.",
+     "correct": true
+    },
+    {
+     "text": "The king and the general stay.",
+     "correct": false,
+     "feedback": "οὔτε… οὔτε = neither… nor."
+    },
+    {
+     "text": "The king stays but the general does not.",
+     "correct": false,
+     "feedback": "Both are negated."
+    }
+   ],
+   "explain": "οὔτε… οὔτε = neither… nor."
+  },
+  {
+   "id": "greek.g3.qn.tis2",
+   "topic": "greek.questions",
+   "kind": "mcq",
+   "prompt": "How is **τίς** (who?) different from **τις** (someone)?",
+   "options": [
+    {
+     "text": "τίς has an accent and asks a question; τις has none and means “someone”",
+     "correct": true
+    },
+    {
+     "text": "They are the same word",
+     "correct": false,
+     "feedback": "The accent makes the difference."
+    },
+    {
+     "text": "τις is plural",
+     "correct": false,
+     "feedback": "Both are singular."
+    }
+   ],
+   "explain": "τίς ἐστιν; = Who is it? ἄνθρωπός τις = a certain man, someone."
+  },
+  {
+   "id": "greek.g3.qn.me",
+   "topic": "greek.questions",
+   "kind": "mcq",
+   "prompt": "Which negative goes with a command, like “don’t look!”?",
+   "options": [
+    {
+     "text": "μή",
+     "correct": true
+    },
+    {
+     "text": "οὐ",
+     "correct": false,
+     "feedback": "οὐ is for statements."
+    },
+    {
+     "text": "οὐδέ",
+     "correct": false,
+     "feedback": "οὐδέ means “and not” or “not even”."
+    }
+   ],
+   "explain": "μὴ βλέπε = don’t look! Hades said this to Orpheus."
+  },
+  {
+   "id": "greek.g3.qn.pote",
+   "topic": "greek.questions",
+   "kind": "fact",
+   "prompt": "What does **πότε;** mean?",
+   "answer": "when?",
+   "distractors": [
+    "where?",
+    "how?",
+    "who?"
+   ],
+   "explain": "πότε; = when? (ποῦ; = where? πῶς; = how?)",
+   "accept": [
+    "when"
+   ]
+  },
+  {
+   "id": "greek.g3.qn.ouketi",
+   "topic": "greek.questions",
+   "kind": "mcq",
+   "prompt": "What does **οὐκέτι** mean in **αἱ κεφαλαὶ οὐκέτι ἐφύοντο**?",
+   "options": [
+    {
+     "text": "no longer: the heads no longer grew",
+     "correct": true
+    },
+    {
+     "text": "not yet",
+     "correct": false,
+     "feedback": "Not yet is οὔπω."
+    },
+    {
+     "text": "never",
+     "correct": false,
+     "feedback": "Never is οὐδέποτε."
+    }
+   ],
+   "explain": "οὐκέτι = no longer, not any more."
+  },
+  {
+   "id": "greek.g3.ga.night",
+   "topic": "greek.genabs",
+   "kind": "mcq",
+   "prompt": "Translate **τῆς νυκτὸς γενομένης, οἱ στρατιῶται ἐξῆλθον**.",
+   "options": [
+    {
+     "text": "When night had fallen, the soldiers came out.",
+     "correct": true
+    },
+    {
+     "text": "The soldiers of the night came out.",
+     "correct": false,
+     "feedback": "τῆς νυκτὸς γενομένης is a genitive absolute: it sets the scene."
+    },
+    {
+     "text": "The soldiers made the night come.",
+     "correct": false,
+     "feedback": "The soldiers are the subject of ἐξῆλθον only."
+    }
+   ],
+   "explain": "Noun + participle in the genitive, apart from the main sentence: “the night having happened”, so “when night had fallen”."
+  },
+  {
+   "id": "greek.g3.ga.which",
+   "topic": "greek.genabs",
+   "kind": "mcq",
+   "prompt": "Which of these is a genitive absolute?",
+   "options": [
+    {
+     "text": "τοῦ βασιλέως φεύγοντος",
+     "correct": true
+    },
+    {
+     "text": "ὁ βασιλεὺς φεύγων",
+     "correct": false,
+     "feedback": "That is nominative: it goes with the subject."
+    },
+    {
+     "text": "τὸν βασιλέα φεύγοντα",
+     "correct": false,
+     "feedback": "That is accusative: it goes with an object."
+    }
+   ],
+   "explain": "τοῦ βασιλέως φεύγοντος = while the king was fleeing."
+  },
+  {
+   "id": "greek.g3.ga.legontos",
+   "topic": "greek.genabs",
+   "kind": "mcq",
+   "prompt": "Translate **τοῦ στρατηγοῦ λέγοντος, οἱ στρατιῶται ἤκουον**.",
+   "options": [
+    {
+     "text": "While the general was speaking, the soldiers were listening.",
+     "correct": true
+    },
+    {
+     "text": "The general’s soldiers were speaking and listening.",
+     "correct": false,
+     "feedback": "τοῦ στρατηγοῦ λέγοντος is a genitive absolute."
+    },
+    {
+     "text": "The soldiers listened to the general’s word.",
+     "correct": false,
+     "feedback": "λέγοντος is a participle, not a noun."
+    }
+   ],
+   "explain": "A present participle in a genitive absolute = “while…”."
+  },
+  {
+   "id": "greek.g3.ga.when",
+   "topic": "greek.genabs",
+   "kind": "mcq",
+   "prompt": "When should you NOT use a genitive absolute?",
+   "options": [
+    {
+     "text": "When its noun is already part of the main sentence, such as the subject",
+     "correct": true
+    },
+    {
+     "text": "When the participle is aorist",
+     "correct": false,
+     "feedback": "Aorist participles are common in genitive absolutes."
+    },
+    {
+     "text": "At the start of a sentence",
+     "correct": false,
+     "feedback": "That is exactly where it usually goes."
+    }
+   ],
+   "explain": "If the general is the subject, write ὁ στρατηγὸς λέγων…, not a genitive absolute."
+  },
+  {
+   "id": "greek.g3.ga.gorgons",
+   "topic": "greek.genabs",
+   "kind": "mcq",
+   "prompt": "Translate **τῶν Γοργόνων καθευδουσῶν, ὁ Περσεὺς προσῆλθεν**.",
+   "options": [
+    {
+     "text": "While the Gorgons were sleeping, Perseus approached.",
+     "correct": true
+    },
+    {
+     "text": "Perseus approached the sleeping Gorgons’ island.",
+     "correct": false,
+     "feedback": "There is no island in this sentence."
+    },
+    {
+     "text": "The Gorgons approached Perseus in their sleep.",
+     "correct": false,
+     "feedback": "ὁ Περσεύς (nominative) is the one who approached."
+    }
+   ],
+   "explain": "καθευδουσῶν: feminine genitive plural participle, agreeing with τῶν Γοργόνων."
+  },
+  {
+   "id": "greek.g3.ga.lephtheises",
+   "topic": "greek.genabs",
+   "kind": "mcq",
+   "prompt": "ληφθείσης means “having been taken”. Translate **τῆς πόλεως ληφθείσης**.",
+   "options": [
+    {
+     "text": "when the city had been captured",
+     "correct": true
+    },
+    {
+     "text": "the captured city’s men",
+     "correct": false,
+     "feedback": "There is no word for men."
+    },
+    {
+     "text": "the city is capturing",
+     "correct": false,
+     "feedback": "ληφθείσης is passive: having been taken."
+    }
+   ],
+   "explain": "An aorist passive participle in a genitive absolute: “the city having been taken”."
+  },
+  {
+   "id": "greek.g3.ga.menonton",
+   "topic": "greek.genabs",
+   "kind": "mcq",
+   "prompt": "Translate **ἡμῶν μενόντων, οἱ πολέμιοι ἔφυγον**.",
+   "options": [
+    {
+     "text": "Because we stood our ground, the enemy fled.",
+     "correct": true
+    },
+    {
+     "text": "The enemy fled from our friends.",
+     "correct": false,
+     "feedback": "There is no word for friends."
+    },
+    {
+     "text": "We stayed, and the enemy stayed too.",
+     "correct": false,
+     "feedback": "ἔφυγον = they fled."
+    }
+   ],
+   "explain": "The genitive absolute can mean “because” as well as “while” or “when”: ἡμῶν μενόντων, us staying."
+  },
+  {
+   "id": "greek.g3.ga.sun",
+   "topic": "greek.genabs",
+   "kind": "mcq",
+   "prompt": "In **τοῦ ἡλίου δύνοντος** (as the sun was setting), which word is the participle?",
+   "options": [
+    {
+     "text": "δύνοντος",
+     "correct": true
+    },
+    {
+     "text": "τοῦ",
+     "correct": false,
+     "feedback": "τοῦ is the article."
+    },
+    {
+     "text": "ἡλίου",
+     "correct": false,
+     "feedback": "ἡλίου is the noun."
+    }
+   ],
+   "explain": "δύνοντος, from δύνω (I set, of the sun): genitive, agreeing with τοῦ ἡλίου."
+  },
+  {
+   "id": "greek.g3.ic.1",
+   "topic": "greek.read-1",
+   "kind": "fact",
+   "prompt": "Who is Daedalus?",
+   "answer": "a wise craftsman",
+   "distractors": [
+    "the king of Crete",
+    "a sea god",
+    "Icarus’s brother"
+   ],
+   "explain": "“ὁ Δαίδαλος τεχνίτης σοφός ἐστιν.”",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Δαίδαλος καὶ ὁ Ἴκαρος\n\nὁ Δαίδαλος τεχνίτης σοφός ἐστιν. ἐν τῇ Κρήτῃ μένει μετὰ τοῦ Ἰκάρου, τοῦ υἱοῦ. ὁ δὲ Μίνως, ὁ βασιλεύς, οὐκ ἐθέλει αὐτοὺς ἀπολύειν.\n\nὁ οὖν Δαίδαλος ἐκ κηροῦ καὶ πτερῶν πτέρυγας ποιεῖ. τὸν δὲ υἱὸν κελεύει μὴ ἐγγὺς τοῦ ἡλίου πέτεσθαι. ἔπειτα ὁ πατὴρ καὶ ὁ υἱὸς ἐκ τῆς Κρήτης πέτονται.\n\nὁ δὲ Ἴκαρος μάλα χαίρει καὶ πρὸς τὸν ἥλιον πέτεται. ὁ οὖν ἥλιος τὸν κηρὸν λύει, καὶ ὁ παῖς εἰς τὴν θάλασσαν πίπτει. ὁ δὲ Δαίδαλος δακρύει.\n\nGlossary: τεχνίτης = craftsman; υἱός = son; ἀπολύειν = to let go; κηρός = wax; πτερόν = feather; πτέρυξ (accusative plural πτέρυγας) = wing; ποιεῖ = makes; κελεύει = orders; μή = not; ἐγγύς (+ genitive) = near; πέτεσθαι = to fly; πέτονται = they fly; πέτεται = he flies; χαίρει = enjoys himself; πίπτει = falls; δακρύει = weeps.",
+   "passageSource": "Adapted for this app from the myth of Daedalus and Icarus"
+  },
+  {
+   "id": "greek.g3.ic.2",
+   "topic": "greek.read-1",
+   "kind": "mcq",
+   "prompt": "Why does Daedalus make wings?",
+   "options": [
+    {
+     "text": "King Minos will not let them go",
+     "correct": true
+    },
+    {
+     "text": "He wants to visit the Sun",
+     "correct": false,
+     "feedback": "Flying near the Sun is what he warns against."
+    },
+    {
+     "text": "Icarus asks for wings",
+     "correct": false,
+     "feedback": "The passage does not say so."
+    }
+   ],
+   "explain": "“ὁ δὲ Μίνως… οὐκ ἐθέλει αὐτοὺς ἀπολύειν. ὁ οὖν Δαίδαλος… πτέρυγας ποιεῖ.” οὖν (so) links the two.",
+   "passage": "ὁ Δαίδαλος καὶ ὁ Ἴκαρος\n\nὁ Δαίδαλος τεχνίτης σοφός ἐστιν. ἐν τῇ Κρήτῃ μένει μετὰ τοῦ Ἰκάρου, τοῦ υἱοῦ. ὁ δὲ Μίνως, ὁ βασιλεύς, οὐκ ἐθέλει αὐτοὺς ἀπολύειν.\n\nὁ οὖν Δαίδαλος ἐκ κηροῦ καὶ πτερῶν πτέρυγας ποιεῖ. τὸν δὲ υἱὸν κελεύει μὴ ἐγγὺς τοῦ ἡλίου πέτεσθαι. ἔπειτα ὁ πατὴρ καὶ ὁ υἱὸς ἐκ τῆς Κρήτης πέτονται.\n\nὁ δὲ Ἴκαρος μάλα χαίρει καὶ πρὸς τὸν ἥλιον πέτεται. ὁ οὖν ἥλιος τὸν κηρὸν λύει, καὶ ὁ παῖς εἰς τὴν θάλασσαν πίπτει. ὁ δὲ Δαίδαλος δακρύει.\n\nGlossary: τεχνίτης = craftsman; υἱός = son; ἀπολύειν = to let go; κηρός = wax; πτερόν = feather; πτέρυξ (accusative plural πτέρυγας) = wing; ποιεῖ = makes; κελεύει = orders; μή = not; ἐγγύς (+ genitive) = near; πέτεσθαι = to fly; πέτονται = they fly; πέτεται = he flies; χαίρει = enjoys himself; πίπτει = falls; δακρύει = weeps.",
+   "passageSource": "Adapted for this app from the myth of Daedalus and Icarus"
+  },
+  {
+   "id": "greek.g3.ic.3",
+   "topic": "greek.read-1",
+   "kind": "mcq",
+   "prompt": "What does Daedalus order his son?",
+   "options": [
+    {
+     "text": "not to fly near the sun",
+     "correct": true
+    },
+    {
+     "text": "to fly near the sun",
+     "correct": false,
+     "feedback": "μή means “not”: μὴ ἐγγὺς τοῦ ἡλίου πέτεσθαι."
+    },
+    {
+     "text": "to stay in Crete",
+     "correct": false,
+     "feedback": "They both fly away from Crete."
+    }
+   ],
+   "explain": "κελεύω + μή + infinitive: he orders him not to fly near the sun.",
+   "passage": "ὁ Δαίδαλος καὶ ὁ Ἴκαρος\n\nὁ Δαίδαλος τεχνίτης σοφός ἐστιν. ἐν τῇ Κρήτῃ μένει μετὰ τοῦ Ἰκάρου, τοῦ υἱοῦ. ὁ δὲ Μίνως, ὁ βασιλεύς, οὐκ ἐθέλει αὐτοὺς ἀπολύειν.\n\nὁ οὖν Δαίδαλος ἐκ κηροῦ καὶ πτερῶν πτέρυγας ποιεῖ. τὸν δὲ υἱὸν κελεύει μὴ ἐγγὺς τοῦ ἡλίου πέτεσθαι. ἔπειτα ὁ πατὴρ καὶ ὁ υἱὸς ἐκ τῆς Κρήτης πέτονται.\n\nὁ δὲ Ἴκαρος μάλα χαίρει καὶ πρὸς τὸν ἥλιον πέτεται. ὁ οὖν ἥλιος τὸν κηρὸν λύει, καὶ ὁ παῖς εἰς τὴν θάλασσαν πίπτει. ὁ δὲ Δαίδαλος δακρύει.\n\nGlossary: τεχνίτης = craftsman; υἱός = son; ἀπολύειν = to let go; κηρός = wax; πτερόν = feather; πτέρυξ (accusative plural πτέρυγας) = wing; ποιεῖ = makes; κελεύει = orders; μή = not; ἐγγύς (+ genitive) = near; πέτεσθαι = to fly; πέτονται = they fly; πέτεται = he flies; χαίρει = enjoys himself; πίπτει = falls; δακρύει = weeps.",
+   "passageSource": "Adapted for this app from the myth of Daedalus and Icarus"
+  },
+  {
+   "id": "greek.g3.ic.4",
+   "topic": "greek.read-1",
+   "kind": "mcq",
+   "prompt": "What case is **πτέρυγας**, and why?",
+   "options": [
+    {
+     "text": "accusative plural: it is the object of ποιεῖ",
+     "correct": true
+    },
+    {
+     "text": "nominative plural: it is the subject",
+     "correct": false,
+     "feedback": "The subject is ὁ Δαίδαλος."
+    },
+    {
+     "text": "genitive: “of wings”",
+     "correct": false,
+     "feedback": "The genitive plural would be πτερύγων."
+    }
+   ],
+   "explain": "πτέρυξ, πτέρυγος: a third-declension noun; -ας is the accusative plural ending.",
+   "passage": "ὁ Δαίδαλος καὶ ὁ Ἴκαρος\n\nὁ Δαίδαλος τεχνίτης σοφός ἐστιν. ἐν τῇ Κρήτῃ μένει μετὰ τοῦ Ἰκάρου, τοῦ υἱοῦ. ὁ δὲ Μίνως, ὁ βασιλεύς, οὐκ ἐθέλει αὐτοὺς ἀπολύειν.\n\nὁ οὖν Δαίδαλος ἐκ κηροῦ καὶ πτερῶν πτέρυγας ποιεῖ. τὸν δὲ υἱὸν κελεύει μὴ ἐγγὺς τοῦ ἡλίου πέτεσθαι. ἔπειτα ὁ πατὴρ καὶ ὁ υἱὸς ἐκ τῆς Κρήτης πέτονται.\n\nὁ δὲ Ἴκαρος μάλα χαίρει καὶ πρὸς τὸν ἥλιον πέτεται. ὁ οὖν ἥλιος τὸν κηρὸν λύει, καὶ ὁ παῖς εἰς τὴν θάλασσαν πίπτει. ὁ δὲ Δαίδαλος δακρύει.\n\nGlossary: τεχνίτης = craftsman; υἱός = son; ἀπολύειν = to let go; κηρός = wax; πτερόν = feather; πτέρυξ (accusative plural πτέρυγας) = wing; ποιεῖ = makes; κελεύει = orders; μή = not; ἐγγύς (+ genitive) = near; πέτεσθαι = to fly; πέτονται = they fly; πέτεται = he flies; χαίρει = enjoys himself; πίπτει = falls; δακρύει = weeps.",
+   "passageSource": "Adapted for this app from the myth of Daedalus and Icarus"
+  },
+  {
+   "id": "greek.g3.ic.5",
+   "topic": "greek.read-1",
+   "kind": "mcq",
+   "prompt": "Translate **ὁ οὖν ἥλιος τὸν κηρὸν λύει**.",
+   "options": [
+    {
+     "text": "So the sun melts the wax.",
+     "correct": true
+    },
+    {
+     "text": "So the wax frees the sun.",
+     "correct": false,
+     "feedback": "τὸν κηρόν is accusative: the object."
+    },
+    {
+     "text": "But the sun stays on the wax.",
+     "correct": false,
+     "feedback": "λύει means loosens, here melts; οὖν means so."
+    }
+   ],
+   "explain": "λύω is the same verb as “I free”: here it loosens, or melts, the wax.",
+   "passage": "ὁ Δαίδαλος καὶ ὁ Ἴκαρος\n\nὁ Δαίδαλος τεχνίτης σοφός ἐστιν. ἐν τῇ Κρήτῃ μένει μετὰ τοῦ Ἰκάρου, τοῦ υἱοῦ. ὁ δὲ Μίνως, ὁ βασιλεύς, οὐκ ἐθέλει αὐτοὺς ἀπολύειν.\n\nὁ οὖν Δαίδαλος ἐκ κηροῦ καὶ πτερῶν πτέρυγας ποιεῖ. τὸν δὲ υἱὸν κελεύει μὴ ἐγγὺς τοῦ ἡλίου πέτεσθαι. ἔπειτα ὁ πατὴρ καὶ ὁ υἱὸς ἐκ τῆς Κρήτης πέτονται.\n\nὁ δὲ Ἴκαρος μάλα χαίρει καὶ πρὸς τὸν ἥλιον πέτεται. ὁ οὖν ἥλιος τὸν κηρὸν λύει, καὶ ὁ παῖς εἰς τὴν θάλασσαν πίπτει. ὁ δὲ Δαίδαλος δακρύει.\n\nGlossary: τεχνίτης = craftsman; υἱός = son; ἀπολύειν = to let go; κηρός = wax; πτερόν = feather; πτέρυξ (accusative plural πτέρυγας) = wing; ποιεῖ = makes; κελεύει = orders; μή = not; ἐγγύς (+ genitive) = near; πέτεσθαι = to fly; πέτονται = they fly; πέτεται = he flies; χαίρει = enjoys himself; πίπτει = falls; δακρύει = weeps.",
+   "passageSource": "Adapted for this app from the myth of Daedalus and Icarus"
+  },
+  {
+   "id": "greek.g3.ic.6",
+   "topic": "greek.read-1",
+   "kind": "order",
+   "prompt": "Put the events of the story in order.",
+   "items": [
+    "Daedalus makes wings",
+    "Daedalus warns his son",
+    "Father and son fly out of Crete",
+    "The sun melts the wax",
+    "Icarus falls into the sea"
+   ],
+   "labels": null,
+   "explain": "Wings, warning, escape, the melting wax, the fall.",
+   "passage": "ὁ Δαίδαλος καὶ ὁ Ἴκαρος\n\nὁ Δαίδαλος τεχνίτης σοφός ἐστιν. ἐν τῇ Κρήτῃ μένει μετὰ τοῦ Ἰκάρου, τοῦ υἱοῦ. ὁ δὲ Μίνως, ὁ βασιλεύς, οὐκ ἐθέλει αὐτοὺς ἀπολύειν.\n\nὁ οὖν Δαίδαλος ἐκ κηροῦ καὶ πτερῶν πτέρυγας ποιεῖ. τὸν δὲ υἱὸν κελεύει μὴ ἐγγὺς τοῦ ἡλίου πέτεσθαι. ἔπειτα ὁ πατὴρ καὶ ὁ υἱὸς ἐκ τῆς Κρήτης πέτονται.\n\nὁ δὲ Ἴκαρος μάλα χαίρει καὶ πρὸς τὸν ἥλιον πέτεται. ὁ οὖν ἥλιος τὸν κηρὸν λύει, καὶ ὁ παῖς εἰς τὴν θάλασσαν πίπτει. ὁ δὲ Δαίδαλος δακρύει.\n\nGlossary: τεχνίτης = craftsman; υἱός = son; ἀπολύειν = to let go; κηρός = wax; πτερόν = feather; πτέρυξ (accusative plural πτέρυγας) = wing; ποιεῖ = makes; κελεύει = orders; μή = not; ἐγγύς (+ genitive) = near; πέτεσθαι = to fly; πέτονται = they fly; πέτεται = he flies; χαίρει = enjoys himself; πίπτει = falls; δακρύει = weeps.",
+   "passageSource": "Adapted for this app from the myth of Daedalus and Icarus"
+  },
+  {
+   "id": "greek.g3.ar.1",
+   "topic": "greek.read-1",
+   "kind": "fact",
+   "prompt": "Why do many people admire Arachne?",
+   "answer": "she weaves beautifully",
+   "distractors": [
+    "she sings beautifully",
+    "she is a goddess",
+    "she is very rich"
+   ],
+   "explain": "“καλῶς ὑφαίνει· πολλοὶ οὖν ἄνθρωποι τὰ ἔργα αὐτῆς θαυμάζουσιν.”",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ἡ Ἀράχνη\n\nἡ Ἀράχνη κόρη ἐστὶν ἐν τῇ Λυδίᾳ. καλῶς ὑφαίνει· πολλοὶ οὖν ἄνθρωποι τὰ ἔργα αὐτῆς θαυμάζουσιν. ἡ δὲ Ἀράχνη λέγει· «ἐγὼ κάλλιον ὑφαίνω ἢ ἡ Ἀθηνᾶ.»\n\nἡ οὖν θεὰ ὀργίζεται καὶ εἰς τὴν οἰκίαν τῆς κόρης ἔρχεται. αἱ δύο ὑφαίνουσιν. τὸ τῆς Ἀράχνης ὕφασμα καλὸν μέν ἐστιν, τοὺς δὲ θεοὺς οὐ τιμᾷ.\n\nἡ οὖν Ἀθηνᾶ τὴν κόρην εἰς ἀράχνην μεταβάλλει. ἔτι καὶ νῦν ἡ ἀράχνη ὑφαίνει.\n\nGlossary: Λυδία = Lydia (in Asia Minor); καλῶς = beautifully, well; ὑφαίνω = I weave; θαυμάζουσιν = admire; κάλλιον = more beautifully; ἤ = than; ὀργίζεται = becomes angry; ἔρχεται = comes; δύο = two; ὕφασμα, -ατος (τό) = woven cloth, tapestry; τιμᾷ = honours; ἀράχνη = spider; μεταβάλλει = changes; ἔτι καὶ νῦν = even now.",
+   "passageSource": "Adapted for this app from the myth of Arachne"
+  },
+  {
+   "id": "greek.g3.ar.2",
+   "topic": "greek.read-1",
+   "kind": "mcq",
+   "prompt": "What is Arachne’s boast?",
+   "options": [
+    {
+     "text": "“I weave more beautifully than Athena.”",
+     "correct": true
+    },
+    {
+     "text": "“Athena weaves more beautifully than I do.”",
+     "correct": false,
+     "feedback": "ἐγώ… ἢ ἡ Ἀθηνᾶ: I (do it better) than Athena."
+    },
+    {
+     "text": "“I am wiser than Athena.”",
+     "correct": false,
+     "feedback": "ὑφαίνω = I weave."
+    }
+   ],
+   "explain": "κάλλιον = more beautifully; ἤ = than.",
+   "passage": "ἡ Ἀράχνη\n\nἡ Ἀράχνη κόρη ἐστὶν ἐν τῇ Λυδίᾳ. καλῶς ὑφαίνει· πολλοὶ οὖν ἄνθρωποι τὰ ἔργα αὐτῆς θαυμάζουσιν. ἡ δὲ Ἀράχνη λέγει· «ἐγὼ κάλλιον ὑφαίνω ἢ ἡ Ἀθηνᾶ.»\n\nἡ οὖν θεὰ ὀργίζεται καὶ εἰς τὴν οἰκίαν τῆς κόρης ἔρχεται. αἱ δύο ὑφαίνουσιν. τὸ τῆς Ἀράχνης ὕφασμα καλὸν μέν ἐστιν, τοὺς δὲ θεοὺς οὐ τιμᾷ.\n\nἡ οὖν Ἀθηνᾶ τὴν κόρην εἰς ἀράχνην μεταβάλλει. ἔτι καὶ νῦν ἡ ἀράχνη ὑφαίνει.\n\nGlossary: Λυδία = Lydia (in Asia Minor); καλῶς = beautifully, well; ὑφαίνω = I weave; θαυμάζουσιν = admire; κάλλιον = more beautifully; ἤ = than; ὀργίζεται = becomes angry; ἔρχεται = comes; δύο = two; ὕφασμα, -ατος (τό) = woven cloth, tapestry; τιμᾷ = honours; ἀράχνη = spider; μεταβάλλει = changes; ἔτι καὶ νῦν = even now.",
+   "passageSource": "Adapted for this app from the myth of Arachne"
+  },
+  {
+   "id": "greek.g3.ar.3",
+   "topic": "greek.read-1",
+   "kind": "mcq",
+   "prompt": "What does **αὐτῆς** mean in τὰ ἔργα αὐτῆς?",
+   "options": [
+    {
+     "text": "her: “her works”",
+     "correct": true
+    },
+    {
+     "text": "herself",
+     "correct": false,
+     "feedback": "On its own in the genitive, αὐτῆς means “of her”."
+    },
+    {
+     "text": "the same",
+     "correct": false,
+     "feedback": "“The same” needs the article."
+    }
+   ],
+   "explain": "αὐτῆς: genitive of αὐτή, “of her”.",
+   "passage": "ἡ Ἀράχνη\n\nἡ Ἀράχνη κόρη ἐστὶν ἐν τῇ Λυδίᾳ. καλῶς ὑφαίνει· πολλοὶ οὖν ἄνθρωποι τὰ ἔργα αὐτῆς θαυμάζουσιν. ἡ δὲ Ἀράχνη λέγει· «ἐγὼ κάλλιον ὑφαίνω ἢ ἡ Ἀθηνᾶ.»\n\nἡ οὖν θεὰ ὀργίζεται καὶ εἰς τὴν οἰκίαν τῆς κόρης ἔρχεται. αἱ δύο ὑφαίνουσιν. τὸ τῆς Ἀράχνης ὕφασμα καλὸν μέν ἐστιν, τοὺς δὲ θεοὺς οὐ τιμᾷ.\n\nἡ οὖν Ἀθηνᾶ τὴν κόρην εἰς ἀράχνην μεταβάλλει. ἔτι καὶ νῦν ἡ ἀράχνη ὑφαίνει.\n\nGlossary: Λυδία = Lydia (in Asia Minor); καλῶς = beautifully, well; ὑφαίνω = I weave; θαυμάζουσιν = admire; κάλλιον = more beautifully; ἤ = than; ὀργίζεται = becomes angry; ἔρχεται = comes; δύο = two; ὕφασμα, -ατος (τό) = woven cloth, tapestry; τιμᾷ = honours; ἀράχνη = spider; μεταβάλλει = changes; ἔτι καὶ νῦν = even now.",
+   "passageSource": "Adapted for this app from the myth of Arachne"
+  },
+  {
+   "id": "greek.g3.ar.4",
+   "topic": "greek.read-1",
+   "kind": "mcq",
+   "prompt": "What was wrong with Arachne’s tapestry?",
+   "options": [
+    {
+     "text": "It was beautiful, but it did not honour the gods",
+     "correct": true
+    },
+    {
+     "text": "It was ugly",
+     "correct": false,
+     "feedback": "“καλὸν μέν ἐστιν”: it is beautiful."
+    },
+    {
+     "text": "It was unfinished",
+     "correct": false,
+     "feedback": "The passage does not say so."
+    }
+   ],
+   "explain": "μέν… δέ: beautiful on the one hand, disrespectful on the other.",
+   "passage": "ἡ Ἀράχνη\n\nἡ Ἀράχνη κόρη ἐστὶν ἐν τῇ Λυδίᾳ. καλῶς ὑφαίνει· πολλοὶ οὖν ἄνθρωποι τὰ ἔργα αὐτῆς θαυμάζουσιν. ἡ δὲ Ἀράχνη λέγει· «ἐγὼ κάλλιον ὑφαίνω ἢ ἡ Ἀθηνᾶ.»\n\nἡ οὖν θεὰ ὀργίζεται καὶ εἰς τὴν οἰκίαν τῆς κόρης ἔρχεται. αἱ δύο ὑφαίνουσιν. τὸ τῆς Ἀράχνης ὕφασμα καλὸν μέν ἐστιν, τοὺς δὲ θεοὺς οὐ τιμᾷ.\n\nἡ οὖν Ἀθηνᾶ τὴν κόρην εἰς ἀράχνην μεταβάλλει. ἔτι καὶ νῦν ἡ ἀράχνη ὑφαίνει.\n\nGlossary: Λυδία = Lydia (in Asia Minor); καλῶς = beautifully, well; ὑφαίνω = I weave; θαυμάζουσιν = admire; κάλλιον = more beautifully; ἤ = than; ὀργίζεται = becomes angry; ἔρχεται = comes; δύο = two; ὕφασμα, -ατος (τό) = woven cloth, tapestry; τιμᾷ = honours; ἀράχνη = spider; μεταβάλλει = changes; ἔτι καὶ νῦν = even now.",
+   "passageSource": "Adapted for this app from the myth of Arachne"
+  },
+  {
+   "id": "greek.g3.ar.6",
+   "topic": "greek.read-1",
+   "kind": "mcq",
+   "prompt": "Which word in the passage is a contracted verb from -άω?",
+   "options": [
+    {
+     "text": "τιμᾷ (from τιμάω)",
+     "correct": true
+    },
+    {
+     "text": "ὑφαίνει",
+     "correct": false,
+     "feedback": "ὑφαίνω is not contracted."
+    },
+    {
+     "text": "ἔρχεται",
+     "correct": false,
+     "feedback": "ἔρχομαι is a deponent, not contracted."
+    }
+   ],
+   "explain": "τιμά-ει → τιμᾷ, he or she honours.",
+   "passage": "ἡ Ἀράχνη\n\nἡ Ἀράχνη κόρη ἐστὶν ἐν τῇ Λυδίᾳ. καλῶς ὑφαίνει· πολλοὶ οὖν ἄνθρωποι τὰ ἔργα αὐτῆς θαυμάζουσιν. ἡ δὲ Ἀράχνη λέγει· «ἐγὼ κάλλιον ὑφαίνω ἢ ἡ Ἀθηνᾶ.»\n\nἡ οὖν θεὰ ὀργίζεται καὶ εἰς τὴν οἰκίαν τῆς κόρης ἔρχεται. αἱ δύο ὑφαίνουσιν. τὸ τῆς Ἀράχνης ὕφασμα καλὸν μέν ἐστιν, τοὺς δὲ θεοὺς οὐ τιμᾷ.\n\nἡ οὖν Ἀθηνᾶ τὴν κόρην εἰς ἀράχνην μεταβάλλει. ἔτι καὶ νῦν ἡ ἀράχνη ὑφαίνει.\n\nGlossary: Λυδία = Lydia (in Asia Minor); καλῶς = beautifully, well; ὑφαίνω = I weave; θαυμάζουσιν = admire; κάλλιον = more beautifully; ἤ = than; ὀργίζεται = becomes angry; ἔρχεται = comes; δύο = two; ὕφασμα, -ατος (τό) = woven cloth, tapestry; τιμᾷ = honours; ἀράχνη = spider; μεταβάλλει = changes; ἔτι καὶ νῦν = even now.",
+   "passageSource": "Adapted for this app from the myth of Arachne"
+  },
+  {
+   "id": "greek.g3.ar.5",
+   "topic": "greek.read-1",
+   "kind": "fact",
+   "prompt": "What does Athena do at the end?",
+   "answer": "she changes Arachne into a spider",
+   "distractors": [
+    "she gives Arachne a prize",
+    "she weaves a better tapestry",
+    "she leaves Lydia"
+   ],
+   "explain": "“τὴν κόρην εἰς ἀράχνην μεταβάλλει.” Scientists still call spiders arachnids.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ἡ Ἀράχνη\n\nἡ Ἀράχνη κόρη ἐστὶν ἐν τῇ Λυδίᾳ. καλῶς ὑφαίνει· πολλοὶ οὖν ἄνθρωποι τὰ ἔργα αὐτῆς θαυμάζουσιν. ἡ δὲ Ἀράχνη λέγει· «ἐγὼ κάλλιον ὑφαίνω ἢ ἡ Ἀθηνᾶ.»\n\nἡ οὖν θεὰ ὀργίζεται καὶ εἰς τὴν οἰκίαν τῆς κόρης ἔρχεται. αἱ δύο ὑφαίνουσιν. τὸ τῆς Ἀράχνης ὕφασμα καλὸν μέν ἐστιν, τοὺς δὲ θεοὺς οὐ τιμᾷ.\n\nἡ οὖν Ἀθηνᾶ τὴν κόρην εἰς ἀράχνην μεταβάλλει. ἔτι καὶ νῦν ἡ ἀράχνη ὑφαίνει.\n\nGlossary: Λυδία = Lydia (in Asia Minor); καλῶς = beautifully, well; ὑφαίνω = I weave; θαυμάζουσιν = admire; κάλλιον = more beautifully; ἤ = than; ὀργίζεται = becomes angry; ἔρχεται = comes; δύο = two; ὕφασμα, -ατος (τό) = woven cloth, tapestry; τιμᾷ = honours; ἀράχνη = spider; μεταβάλλει = changes; ἔτι καὶ νῦν = even now.",
+   "passageSource": "Adapted for this app from the myth of Arachne"
+  },
+  {
+   "id": "greek.g3.or.1",
+   "topic": "greek.read-2",
+   "kind": "fact",
+   "prompt": "What happened when Orpheus sang?",
+   "answer": "even the trees and the wild animals listened",
+   "distractors": [
+    "the gods fell asleep",
+    "the rivers flowed backwards",
+    "Eurydice danced"
+   ],
+   "explain": "“καὶ τὰ δένδρα καὶ τὰ θηρία ἤκουεν.” (A neuter plural subject takes a singular verb.)",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ὀρφεὺς καὶ ἡ Εὐρυδίκη\n\nὁ Ὀρφεὺς μουσικὸς ἄριστος ἦν. ὅτε ᾖδεν, καὶ τὰ δένδρα καὶ τὰ θηρία ἤκουεν. ἡ δὲ γυνὴ αὐτοῦ, ἡ Εὐρυδίκη, ὑπ᾽ ὄφεως δάκνεται καὶ ἀποθνῄσκει.\n\nὁ οὖν Ὀρφεὺς εἰς Ἅιδου καταβαίνει καὶ ᾄδει πρὸ τοῦ βασιλέως τῶν νεκρῶν. ὁ δὲ Ἅιδης λέγει· «ἄγε τὴν γυναῖκα οἴκαδε, ἀλλὰ μὴ βλέπε πρὸς αὐτήν.»\n\nὁ μὲν Ὀρφεὺς ἡγεῖται, ἡ δὲ Εὐρυδίκη ἕπεται. ἐγγὺς δὲ τοῦ φωτὸς ὁ Ὀρφεὺς βλέπει πρὸς αὐτήν· ἡ δὲ εὐθὺς εἰς Ἅιδου ἐπανέρχεται.\n\nGlossary: μουσικός = musician; ἄριστος = best; ἦν = was; ὅτε = when; ᾖδεν = he sang (imperfect of ᾄδω, I sing); δένδρα = trees; θηρία = wild animals; ἤκουεν = listened; γυνή (accusative γυναῖκα) = wife; ὑπ᾽ (= ὑπό) + genitive = by; ὄφις (genitive ὄφεως) = snake; δάκνεται = is bitten; ἀποθνῄσκει = dies; εἰς Ἅιδου = to the house of Hades (the Underworld); καταβαίνει = goes down; πρό (+ genitive) = in front of; νεκρός = dead person; ἄγε = lead!; οἴκαδε = home; βλέπε = look!; ἡγεῖται = leads the way; ἕπεται = follows; φῶς (genitive φωτός) = light; εὐθύς = at once; ἐπανέρχεται = goes back.",
+   "passageSource": "Adapted for this app from the myth of Orpheus"
+  },
+  {
+   "id": "greek.g3.or.2",
+   "topic": "greek.read-2",
+   "kind": "mcq",
+   "prompt": "What tense is **ᾖδεν**, and how do you know?",
+   "options": [
+    {
+     "text": "imperfect: it has an augment (ᾳ lengthened to ῃ) and present-stem endings",
+     "correct": true
+    },
+    {
+     "text": "future: it has a σ",
+     "correct": false,
+     "feedback": "There is no σ."
+    },
+    {
+     "text": "present: there is no augment",
+     "correct": false,
+     "feedback": "ᾄδω → ᾖδον: the long ῃ is the augment."
+    }
+   ],
+   "explain": "ᾄδω, ᾖδον: I was singing. Here, with ὅτε, “whenever he sang”.",
+   "passage": "ὁ Ὀρφεὺς καὶ ἡ Εὐρυδίκη\n\nὁ Ὀρφεὺς μουσικὸς ἄριστος ἦν. ὅτε ᾖδεν, καὶ τὰ δένδρα καὶ τὰ θηρία ἤκουεν. ἡ δὲ γυνὴ αὐτοῦ, ἡ Εὐρυδίκη, ὑπ᾽ ὄφεως δάκνεται καὶ ἀποθνῄσκει.\n\nὁ οὖν Ὀρφεὺς εἰς Ἅιδου καταβαίνει καὶ ᾄδει πρὸ τοῦ βασιλέως τῶν νεκρῶν. ὁ δὲ Ἅιδης λέγει· «ἄγε τὴν γυναῖκα οἴκαδε, ἀλλὰ μὴ βλέπε πρὸς αὐτήν.»\n\nὁ μὲν Ὀρφεὺς ἡγεῖται, ἡ δὲ Εὐρυδίκη ἕπεται. ἐγγὺς δὲ τοῦ φωτὸς ὁ Ὀρφεὺς βλέπει πρὸς αὐτήν· ἡ δὲ εὐθὺς εἰς Ἅιδου ἐπανέρχεται.\n\nGlossary: μουσικός = musician; ἄριστος = best; ἦν = was; ὅτε = when; ᾖδεν = he sang (imperfect of ᾄδω, I sing); δένδρα = trees; θηρία = wild animals; ἤκουεν = listened; γυνή (accusative γυναῖκα) = wife; ὑπ᾽ (= ὑπό) + genitive = by; ὄφις (genitive ὄφεως) = snake; δάκνεται = is bitten; ἀποθνῄσκει = dies; εἰς Ἅιδου = to the house of Hades (the Underworld); καταβαίνει = goes down; πρό (+ genitive) = in front of; νεκρός = dead person; ἄγε = lead!; οἴκαδε = home; βλέπε = look!; ἡγεῖται = leads the way; ἕπεται = follows; φῶς (genitive φωτός) = light; εὐθύς = at once; ἐπανέρχεται = goes back.",
+   "passageSource": "Adapted for this app from the myth of Orpheus"
+  },
+  {
+   "id": "greek.g3.or.4",
+   "topic": "greek.read-2",
+   "kind": "mcq",
+   "prompt": "What does Hades tell Orpheus?",
+   "options": [
+    {
+     "text": "Lead your wife home, but don’t look at her.",
+     "correct": true
+    },
+    {
+     "text": "Stay here with your wife.",
+     "correct": false,
+     "feedback": "ἄγε… οἴκαδε: lead her home."
+    },
+    {
+     "text": "Look at your wife, then go home.",
+     "correct": false,
+     "feedback": "μὴ βλέπε: don’t look!"
+    }
+   ],
+   "explain": "Two commands: ἄγε (lead!) and μὴ βλέπε (don’t look!).",
+   "passage": "ὁ Ὀρφεὺς καὶ ἡ Εὐρυδίκη\n\nὁ Ὀρφεὺς μουσικὸς ἄριστος ἦν. ὅτε ᾖδεν, καὶ τὰ δένδρα καὶ τὰ θηρία ἤκουεν. ἡ δὲ γυνὴ αὐτοῦ, ἡ Εὐρυδίκη, ὑπ᾽ ὄφεως δάκνεται καὶ ἀποθνῄσκει.\n\nὁ οὖν Ὀρφεὺς εἰς Ἅιδου καταβαίνει καὶ ᾄδει πρὸ τοῦ βασιλέως τῶν νεκρῶν. ὁ δὲ Ἅιδης λέγει· «ἄγε τὴν γυναῖκα οἴκαδε, ἀλλὰ μὴ βλέπε πρὸς αὐτήν.»\n\nὁ μὲν Ὀρφεὺς ἡγεῖται, ἡ δὲ Εὐρυδίκη ἕπεται. ἐγγὺς δὲ τοῦ φωτὸς ὁ Ὀρφεὺς βλέπει πρὸς αὐτήν· ἡ δὲ εὐθὺς εἰς Ἅιδου ἐπανέρχεται.\n\nGlossary: μουσικός = musician; ἄριστος = best; ἦν = was; ὅτε = when; ᾖδεν = he sang (imperfect of ᾄδω, I sing); δένδρα = trees; θηρία = wild animals; ἤκουεν = listened; γυνή (accusative γυναῖκα) = wife; ὑπ᾽ (= ὑπό) + genitive = by; ὄφις (genitive ὄφεως) = snake; δάκνεται = is bitten; ἀποθνῄσκει = dies; εἰς Ἅιδου = to the house of Hades (the Underworld); καταβαίνει = goes down; πρό (+ genitive) = in front of; νεκρός = dead person; ἄγε = lead!; οἴκαδε = home; βλέπε = look!; ἡγεῖται = leads the way; ἕπεται = follows; φῶς (genitive φωτός) = light; εὐθύς = at once; ἐπανέρχεται = goes back.",
+   "passageSource": "Adapted for this app from the myth of Orpheus"
+  },
+  {
+   "id": "greek.g3.or.5",
+   "topic": "greek.read-2",
+   "kind": "mcq",
+   "prompt": "In **ὁ μὲν Ὀρφεὺς ἡγεῖται, ἡ δὲ Εὐρυδίκη ἕπεται**, what do μέν and δέ do?",
+   "options": [
+    {
+     "text": "They contrast the two: Orpheus leads, while Eurydice follows",
+     "correct": true
+    },
+    {
+     "text": "They mean “not”",
+     "correct": false,
+     "feedback": "Not is οὐ or μή."
+    },
+    {
+     "text": "They make it a question",
+     "correct": false,
+     "feedback": "There is no question mark (;)."
+    }
+   ],
+   "explain": "μέν… δέ: on the one hand… on the other.",
+   "passage": "ὁ Ὀρφεὺς καὶ ἡ Εὐρυδίκη\n\nὁ Ὀρφεὺς μουσικὸς ἄριστος ἦν. ὅτε ᾖδεν, καὶ τὰ δένδρα καὶ τὰ θηρία ἤκουεν. ἡ δὲ γυνὴ αὐτοῦ, ἡ Εὐρυδίκη, ὑπ᾽ ὄφεως δάκνεται καὶ ἀποθνῄσκει.\n\nὁ οὖν Ὀρφεὺς εἰς Ἅιδου καταβαίνει καὶ ᾄδει πρὸ τοῦ βασιλέως τῶν νεκρῶν. ὁ δὲ Ἅιδης λέγει· «ἄγε τὴν γυναῖκα οἴκαδε, ἀλλὰ μὴ βλέπε πρὸς αὐτήν.»\n\nὁ μὲν Ὀρφεὺς ἡγεῖται, ἡ δὲ Εὐρυδίκη ἕπεται. ἐγγὺς δὲ τοῦ φωτὸς ὁ Ὀρφεὺς βλέπει πρὸς αὐτήν· ἡ δὲ εὐθὺς εἰς Ἅιδου ἐπανέρχεται.\n\nGlossary: μουσικός = musician; ἄριστος = best; ἦν = was; ὅτε = when; ᾖδεν = he sang (imperfect of ᾄδω, I sing); δένδρα = trees; θηρία = wild animals; ἤκουεν = listened; γυνή (accusative γυναῖκα) = wife; ὑπ᾽ (= ὑπό) + genitive = by; ὄφις (genitive ὄφεως) = snake; δάκνεται = is bitten; ἀποθνῄσκει = dies; εἰς Ἅιδου = to the house of Hades (the Underworld); καταβαίνει = goes down; πρό (+ genitive) = in front of; νεκρός = dead person; ἄγε = lead!; οἴκαδε = home; βλέπε = look!; ἡγεῖται = leads the way; ἕπεται = follows; φῶς (genitive φωτός) = light; εὐθύς = at once; ἐπανέρχεται = goes back.",
+   "passageSource": "Adapted for this app from the myth of Orpheus"
+  },
+  {
+   "id": "greek.g3.or.6",
+   "topic": "greek.read-2",
+   "kind": "mcq",
+   "prompt": "Why does Eurydice go back to the Underworld?",
+   "options": [
+    {
+     "text": "Near the light, Orpheus looks at her",
+     "correct": true
+    },
+    {
+     "text": "Hades changes his mind",
+     "correct": false,
+     "feedback": "Hades kept his word."
+    },
+    {
+     "text": "She refuses to follow",
+     "correct": false,
+     "feedback": "ἡ δὲ Εὐρυδίκη ἕπεται: she follows."
+    }
+   ],
+   "explain": "“ἐγγὺς δὲ τοῦ φωτὸς ὁ Ὀρφεὺς βλέπει πρὸς αὐτήν.”",
+   "passage": "ὁ Ὀρφεὺς καὶ ἡ Εὐρυδίκη\n\nὁ Ὀρφεὺς μουσικὸς ἄριστος ἦν. ὅτε ᾖδεν, καὶ τὰ δένδρα καὶ τὰ θηρία ἤκουεν. ἡ δὲ γυνὴ αὐτοῦ, ἡ Εὐρυδίκη, ὑπ᾽ ὄφεως δάκνεται καὶ ἀποθνῄσκει.\n\nὁ οὖν Ὀρφεὺς εἰς Ἅιδου καταβαίνει καὶ ᾄδει πρὸ τοῦ βασιλέως τῶν νεκρῶν. ὁ δὲ Ἅιδης λέγει· «ἄγε τὴν γυναῖκα οἴκαδε, ἀλλὰ μὴ βλέπε πρὸς αὐτήν.»\n\nὁ μὲν Ὀρφεὺς ἡγεῖται, ἡ δὲ Εὐρυδίκη ἕπεται. ἐγγὺς δὲ τοῦ φωτὸς ὁ Ὀρφεὺς βλέπει πρὸς αὐτήν· ἡ δὲ εὐθὺς εἰς Ἅιδου ἐπανέρχεται.\n\nGlossary: μουσικός = musician; ἄριστος = best; ἦν = was; ὅτε = when; ᾖδεν = he sang (imperfect of ᾄδω, I sing); δένδρα = trees; θηρία = wild animals; ἤκουεν = listened; γυνή (accusative γυναῖκα) = wife; ὑπ᾽ (= ὑπό) + genitive = by; ὄφις (genitive ὄφεως) = snake; δάκνεται = is bitten; ἀποθνῄσκει = dies; εἰς Ἅιδου = to the house of Hades (the Underworld); καταβαίνει = goes down; πρό (+ genitive) = in front of; νεκρός = dead person; ἄγε = lead!; οἴκαδε = home; βλέπε = look!; ἡγεῖται = leads the way; ἕπεται = follows; φῶς (genitive φωτός) = light; εὐθύς = at once; ἐπανέρχεται = goes back.",
+   "passageSource": "Adapted for this app from the myth of Orpheus"
+  },
+  {
+   "id": "greek.g3.or.3",
+   "topic": "greek.read-2",
+   "kind": "fact",
+   "prompt": "How did Eurydice die?",
+   "answer": "she was bitten by a snake",
+   "distractors": [
+    "she fell into the sea",
+    "she was turned to stone",
+    "she was killed in a war"
+   ],
+   "explain": "“ὑπ᾽ ὄφεως δάκνεται”: ὑπό + genitive = by. δάκνεται is passive: she is bitten.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ὀρφεὺς καὶ ἡ Εὐρυδίκη\n\nὁ Ὀρφεὺς μουσικὸς ἄριστος ἦν. ὅτε ᾖδεν, καὶ τὰ δένδρα καὶ τὰ θηρία ἤκουεν. ἡ δὲ γυνὴ αὐτοῦ, ἡ Εὐρυδίκη, ὑπ᾽ ὄφεως δάκνεται καὶ ἀποθνῄσκει.\n\nὁ οὖν Ὀρφεὺς εἰς Ἅιδου καταβαίνει καὶ ᾄδει πρὸ τοῦ βασιλέως τῶν νεκρῶν. ὁ δὲ Ἅιδης λέγει· «ἄγε τὴν γυναῖκα οἴκαδε, ἀλλὰ μὴ βλέπε πρὸς αὐτήν.»\n\nὁ μὲν Ὀρφεὺς ἡγεῖται, ἡ δὲ Εὐρυδίκη ἕπεται. ἐγγὺς δὲ τοῦ φωτὸς ὁ Ὀρφεὺς βλέπει πρὸς αὐτήν· ἡ δὲ εὐθὺς εἰς Ἅιδου ἐπανέρχεται.\n\nGlossary: μουσικός = musician; ἄριστος = best; ἦν = was; ὅτε = when; ᾖδεν = he sang (imperfect of ᾄδω, I sing); δένδρα = trees; θηρία = wild animals; ἤκουεν = listened; γυνή (accusative γυναῖκα) = wife; ὑπ᾽ (= ὑπό) + genitive = by; ὄφις (genitive ὄφεως) = snake; δάκνεται = is bitten; ἀποθνῄσκει = dies; εἰς Ἅιδου = to the house of Hades (the Underworld); καταβαίνει = goes down; πρό (+ genitive) = in front of; νεκρός = dead person; ἄγε = lead!; οἴκαδε = home; βλέπε = look!; ἡγεῖται = leads the way; ἕπεται = follows; φῶς (genitive φωτός) = light; εὐθύς = at once; ἐπανέρχεται = goes back.",
+   "passageSource": "Adapted for this app from the myth of Orpheus"
+  },
+  {
+   "id": "greek.g3.hy.1",
+   "topic": "greek.read-2",
+   "kind": "fact",
+   "prompt": "Where did the Hydra live?",
+   "answer": "in the marsh of Lerna",
+   "distractors": [
+    "in a cave on Crete",
+    "in the sea",
+    "on Mount Olympus"
+   ],
+   "explain": "“ἐν τῷ ἕλει τῆς Λέρνης”.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ἡρακλῆς καὶ ἡ Ὕδρα\n\nἐν τῷ ἕλει τῆς Λέρνης ἔμενε θηρίον δεινόν, ἡ Ὕδρα. ἡ Ὕδρα πολλὰς κεφαλὰς εἶχεν, καὶ τοὺς ἀνθρώπους καὶ τὰ πρόβατα διέφθειρεν.\n\nὁ δὲ Ἡρακλῆς μετὰ τοῦ Ἰολάου πρὸς τὸ ἕλος ἔρχεται. ὅτε δὲ ὁ Ἡρακλῆς μίαν κεφαλὴν ἀπέκοπτεν, δύο ἄλλαι ἐφύοντο.\n\nὁ οὖν Ἰόλαος πῦρ φέρει καὶ τοὺς τραχήλους καίει. οὕτως αἱ κεφαλαὶ οὐκέτι ἐφύοντο, καὶ ὁ Ἡρακλῆς τὴν Ὕδραν ἀποκτείνει.\n\nGlossary: ἕλος, -ους (τό) = marsh; Λέρνη = Lerna; θηρίον = beast; κεφαλή = head; εἶχεν = had (imperfect of ἔχω); πρόβατα = sheep; διέφθειρεν = was destroying; Ἰόλαος = Iolaus, his nephew; μίαν = one; ἀπέκοπτεν = cut off (each time); ἄλλος = other; ἐφύοντο = grew; πῦρ = fire; τράχηλος = neck; καίει = burns; οὕτως = in this way; οὐκέτι = no longer; ἀποκτείνει = kills.",
+   "passageSource": "Adapted for this app from the labours of Heracles"
+  },
+  {
+   "id": "greek.g3.hy.2",
+   "topic": "greek.read-2",
+   "kind": "mcq",
+   "prompt": "What does **εἶχεν** mean, and what tense is it?",
+   "options": [
+    {
+     "text": "had: the imperfect of ἔχω",
+     "correct": true
+    },
+    {
+     "text": "has: the present of ἔχω",
+     "correct": false,
+     "feedback": "He has is ἔχει; εἶχεν has the augment (ε → ει)."
+    },
+    {
+     "text": "will have: the future",
+     "correct": false,
+     "feedback": "There is an augment, so it is past."
+    }
+   ],
+   "explain": "ἔχω has an unusual augment: εἶχον, I had, I was having.",
+   "passage": "ὁ Ἡρακλῆς καὶ ἡ Ὕδρα\n\nἐν τῷ ἕλει τῆς Λέρνης ἔμενε θηρίον δεινόν, ἡ Ὕδρα. ἡ Ὕδρα πολλὰς κεφαλὰς εἶχεν, καὶ τοὺς ἀνθρώπους καὶ τὰ πρόβατα διέφθειρεν.\n\nὁ δὲ Ἡρακλῆς μετὰ τοῦ Ἰολάου πρὸς τὸ ἕλος ἔρχεται. ὅτε δὲ ὁ Ἡρακλῆς μίαν κεφαλὴν ἀπέκοπτεν, δύο ἄλλαι ἐφύοντο.\n\nὁ οὖν Ἰόλαος πῦρ φέρει καὶ τοὺς τραχήλους καίει. οὕτως αἱ κεφαλαὶ οὐκέτι ἐφύοντο, καὶ ὁ Ἡρακλῆς τὴν Ὕδραν ἀποκτείνει.\n\nGlossary: ἕλος, -ους (τό) = marsh; Λέρνη = Lerna; θηρίον = beast; κεφαλή = head; εἶχεν = had (imperfect of ἔχω); πρόβατα = sheep; διέφθειρεν = was destroying; Ἰόλαος = Iolaus, his nephew; μίαν = one; ἀπέκοπτεν = cut off (each time); ἄλλος = other; ἐφύοντο = grew; πῦρ = fire; τράχηλος = neck; καίει = burns; οὕτως = in this way; οὐκέτι = no longer; ἀποκτείνει = kills.",
+   "passageSource": "Adapted for this app from the labours of Heracles"
+  },
+  {
+   "id": "greek.g3.hy.4",
+   "topic": "greek.read-2",
+   "kind": "mcq",
+   "prompt": "How did Iolaus help?",
+   "options": [
+    {
+     "text": "He burned the necks with fire, so no heads grew back",
+     "correct": true
+    },
+    {
+     "text": "He cut off the last head",
+     "correct": false,
+     "feedback": "Heracles kills the Hydra."
+    },
+    {
+     "text": "He fetched more sheep",
+     "correct": false,
+     "feedback": "The sheep were the Hydra’s victims."
+    }
+   ],
+   "explain": "“ὁ οὖν Ἰόλαος πῦρ φέρει καὶ τοὺς τραχήλους καίει.”",
+   "passage": "ὁ Ἡρακλῆς καὶ ἡ Ὕδρα\n\nἐν τῷ ἕλει τῆς Λέρνης ἔμενε θηρίον δεινόν, ἡ Ὕδρα. ἡ Ὕδρα πολλὰς κεφαλὰς εἶχεν, καὶ τοὺς ἀνθρώπους καὶ τὰ πρόβατα διέφθειρεν.\n\nὁ δὲ Ἡρακλῆς μετὰ τοῦ Ἰολάου πρὸς τὸ ἕλος ἔρχεται. ὅτε δὲ ὁ Ἡρακλῆς μίαν κεφαλὴν ἀπέκοπτεν, δύο ἄλλαι ἐφύοντο.\n\nὁ οὖν Ἰόλαος πῦρ φέρει καὶ τοὺς τραχήλους καίει. οὕτως αἱ κεφαλαὶ οὐκέτι ἐφύοντο, καὶ ὁ Ἡρακλῆς τὴν Ὕδραν ἀποκτείνει.\n\nGlossary: ἕλος, -ους (τό) = marsh; Λέρνη = Lerna; θηρίον = beast; κεφαλή = head; εἶχεν = had (imperfect of ἔχω); πρόβατα = sheep; διέφθειρεν = was destroying; Ἰόλαος = Iolaus, his nephew; μίαν = one; ἀπέκοπτεν = cut off (each time); ἄλλος = other; ἐφύοντο = grew; πῦρ = fire; τράχηλος = neck; καίει = burns; οὕτως = in this way; οὐκέτι = no longer; ἀποκτείνει = kills.",
+   "passageSource": "Adapted for this app from the labours of Heracles"
+  },
+  {
+   "id": "greek.g3.hy.6",
+   "topic": "greek.read-2",
+   "kind": "mcq",
+   "prompt": "In **ἐν τῷ ἕλει**, what case is ἕλει?",
+   "options": [
+    {
+     "text": "dative, after ἐν",
+     "correct": true
+    },
+    {
+     "text": "genitive",
+     "correct": false,
+     "feedback": "The genitive is ἕλους."
+    },
+    {
+     "text": "accusative",
+     "correct": false,
+     "feedback": "ἐν always takes the dative."
+    }
+   ],
+   "explain": "ἕλος, ἕλους, ἕλει: a third-declension neuter like ξίφος and ἔτος.",
+   "passage": "ὁ Ἡρακλῆς καὶ ἡ Ὕδρα\n\nἐν τῷ ἕλει τῆς Λέρνης ἔμενε θηρίον δεινόν, ἡ Ὕδρα. ἡ Ὕδρα πολλὰς κεφαλὰς εἶχεν, καὶ τοὺς ἀνθρώπους καὶ τὰ πρόβατα διέφθειρεν.\n\nὁ δὲ Ἡρακλῆς μετὰ τοῦ Ἰολάου πρὸς τὸ ἕλος ἔρχεται. ὅτε δὲ ὁ Ἡρακλῆς μίαν κεφαλὴν ἀπέκοπτεν, δύο ἄλλαι ἐφύοντο.\n\nὁ οὖν Ἰόλαος πῦρ φέρει καὶ τοὺς τραχήλους καίει. οὕτως αἱ κεφαλαὶ οὐκέτι ἐφύοντο, καὶ ὁ Ἡρακλῆς τὴν Ὕδραν ἀποκτείνει.\n\nGlossary: ἕλος, -ους (τό) = marsh; Λέρνη = Lerna; θηρίον = beast; κεφαλή = head; εἶχεν = had (imperfect of ἔχω); πρόβατα = sheep; διέφθειρεν = was destroying; Ἰόλαος = Iolaus, his nephew; μίαν = one; ἀπέκοπτεν = cut off (each time); ἄλλος = other; ἐφύοντο = grew; πῦρ = fire; τράχηλος = neck; καίει = burns; οὕτως = in this way; οὐκέτι = no longer; ἀποκτείνει = kills.",
+   "passageSource": "Adapted for this app from the labours of Heracles"
+  },
+  {
+   "id": "greek.g3.hy.3",
+   "topic": "greek.read-2",
+   "kind": "fact",
+   "prompt": "What happened whenever Heracles cut off one head?",
+   "answer": "two others grew",
+   "distractors": [
+    "the Hydra died",
+    "Iolaus ran away",
+    "the marsh caught fire"
+   ],
+   "explain": "“δύο ἄλλαι ἐφύοντο.” The imperfect here means it kept happening.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ἡρακλῆς καὶ ἡ Ὕδρα\n\nἐν τῷ ἕλει τῆς Λέρνης ἔμενε θηρίον δεινόν, ἡ Ὕδρα. ἡ Ὕδρα πολλὰς κεφαλὰς εἶχεν, καὶ τοὺς ἀνθρώπους καὶ τὰ πρόβατα διέφθειρεν.\n\nὁ δὲ Ἡρακλῆς μετὰ τοῦ Ἰολάου πρὸς τὸ ἕλος ἔρχεται. ὅτε δὲ ὁ Ἡρακλῆς μίαν κεφαλὴν ἀπέκοπτεν, δύο ἄλλαι ἐφύοντο.\n\nὁ οὖν Ἰόλαος πῦρ φέρει καὶ τοὺς τραχήλους καίει. οὕτως αἱ κεφαλαὶ οὐκέτι ἐφύοντο, καὶ ὁ Ἡρακλῆς τὴν Ὕδραν ἀποκτείνει.\n\nGlossary: ἕλος, -ους (τό) = marsh; Λέρνη = Lerna; θηρίον = beast; κεφαλή = head; εἶχεν = had (imperfect of ἔχω); πρόβατα = sheep; διέφθειρεν = was destroying; Ἰόλαος = Iolaus, his nephew; μίαν = one; ἀπέκοπτεν = cut off (each time); ἄλλος = other; ἐφύοντο = grew; πῦρ = fire; τράχηλος = neck; καίει = burns; οὕτως = in this way; οὐκέτι = no longer; ἀποκτείνει = kills.",
+   "passageSource": "Adapted for this app from the labours of Heracles"
+  },
+  {
+   "id": "greek.g3.hy.5",
+   "topic": "greek.read-2",
+   "kind": "fact",
+   "prompt": "What does **οὐκέτι** mean in the passage?",
+   "answer": "no longer",
+   "distractors": [
+    "not yet",
+    "never",
+    "again"
+   ],
+   "explain": "“οὐκέτι ἐφύοντο”: they no longer grew.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ἡρακλῆς καὶ ἡ Ὕδρα\n\nἐν τῷ ἕλει τῆς Λέρνης ἔμενε θηρίον δεινόν, ἡ Ὕδρα. ἡ Ὕδρα πολλὰς κεφαλὰς εἶχεν, καὶ τοὺς ἀνθρώπους καὶ τὰ πρόβατα διέφθειρεν.\n\nὁ δὲ Ἡρακλῆς μετὰ τοῦ Ἰολάου πρὸς τὸ ἕλος ἔρχεται. ὅτε δὲ ὁ Ἡρακλῆς μίαν κεφαλὴν ἀπέκοπτεν, δύο ἄλλαι ἐφύοντο.\n\nὁ οὖν Ἰόλαος πῦρ φέρει καὶ τοὺς τραχήλους καίει. οὕτως αἱ κεφαλαὶ οὐκέτι ἐφύοντο, καὶ ὁ Ἡρακλῆς τὴν Ὕδραν ἀποκτείνει.\n\nGlossary: ἕλος, -ους (τό) = marsh; Λέρνη = Lerna; θηρίον = beast; κεφαλή = head; εἶχεν = had (imperfect of ἔχω); πρόβατα = sheep; διέφθειρεν = was destroying; Ἰόλαος = Iolaus, his nephew; μίαν = one; ἀπέκοπτεν = cut off (each time); ἄλλος = other; ἐφύοντο = grew; πῦρ = fire; τράχηλος = neck; καίει = burns; οὕτως = in this way; οὐκέτι = no longer; ἀποκτείνει = kills.",
+   "passageSource": "Adapted for this app from the labours of Heracles"
+  },
+  {
+   "id": "greek.g3.si.1",
+   "topic": "greek.read-3",
+   "kind": "mcq",
+   "prompt": "What does Circe warn Odysseus about?",
+   "options": [
+    {
+     "text": "The Sirens sing beautifully but kill sailors",
+     "correct": true
+    },
+    {
+     "text": "The Sirens cannot sing",
+     "correct": false,
+     "feedback": "“καλῶς ᾄδουσιν”: they sing beautifully."
+    },
+    {
+     "text": "The Cyclops is near",
+     "correct": false,
+     "feedback": "The Cyclops was an earlier adventure."
+    }
+   ],
+   "explain": "“αἱ Σειρῆνες καλῶς ᾄδουσιν, ἀλλὰ τοὺς ναύτας ἀποκτείνουσιν.”",
+   "passage": "ὁ Ὀδυσσεὺς καὶ αἱ Σειρῆνες\n\nἡ Κίρκη τῷ Ὀδυσσεῖ εἶπεν· «αἱ Σειρῆνες καλῶς ᾄδουσιν, ἀλλὰ τοὺς ναύτας ἀποκτείνουσιν. κηρῷ οὖν τὰ ὦτα τῶν ἑταίρων κλεῖσον.»\n\nὁ οὖν Ὀδυσσεὺς τὰ τῶν ἑταίρων ὦτα κηρῷ ἔκλεισεν. αὐτὸς δὲ ἤθελε τὰς Σειρῆνας ἀκούειν· ἐκέλευσεν οὖν τοὺς ἑταίρους αὐτὸν πρὸς τὸν ἱστὸν δῆσαι.\n\nὅτε δὲ τὴν ᾠδὴν ἤκουσεν, ὁ Ὀδυσσεὺς ἐβόησεν· «λύσατέ με, ὦ φίλοι.» οἱ δὲ οὐκ ἤκουσαν, ἀλλ᾽ ἔτι μᾶλλον αὐτὸν ἔδησαν. οὕτως ὁ Ὀδυσσεὺς καὶ οἱ ἑταῖροι ἀπέφυγον.\n\nGlossary: Κίρκη = Circe; εἶπεν = said; Σειρῆνες = the Sirens; ναύτης = sailor; κηρός (dative κηρῷ) = wax; οὖς (accusative plural ὦτα) = ear; ἑταῖρος = companion; κλεῖσον = close! (aorist imperative); ἔκλεισεν = closed; ἤθελε = wanted; ἐκέλευσεν = ordered; ἱστός = mast; δῆσαι = to tie (aorist infinitive); ᾠδή = song; ἐβόησεν = shouted; λύσατε = untie! (aorist imperative); ἔτι μᾶλλον = even more tightly; ἔδησαν = tied; ἀπέφυγον = escaped.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 12"
+  },
+  {
+   "id": "greek.g3.si.2",
+   "topic": "greek.read-3",
+   "kind": "mcq",
+   "prompt": "What kind of word is **κλεῖσον** in Circe’s speech?",
+   "options": [
+    {
+     "text": "A command (aorist imperative): close!",
+     "correct": true
+    },
+    {
+     "text": "A past tense: she closed",
+     "correct": false,
+     "feedback": "No augment, so it is a command. “He closed” is ἔκλεισεν."
+    },
+    {
+     "text": "A future: she will close",
+     "correct": false,
+     "feedback": "The future would be κλείσει."
+    }
+   ],
+   "explain": "Aorist imperative: κλεῖσον (to one person), κλείσατε (to several).",
+   "passage": "ὁ Ὀδυσσεὺς καὶ αἱ Σειρῆνες\n\nἡ Κίρκη τῷ Ὀδυσσεῖ εἶπεν· «αἱ Σειρῆνες καλῶς ᾄδουσιν, ἀλλὰ τοὺς ναύτας ἀποκτείνουσιν. κηρῷ οὖν τὰ ὦτα τῶν ἑταίρων κλεῖσον.»\n\nὁ οὖν Ὀδυσσεὺς τὰ τῶν ἑταίρων ὦτα κηρῷ ἔκλεισεν. αὐτὸς δὲ ἤθελε τὰς Σειρῆνας ἀκούειν· ἐκέλευσεν οὖν τοὺς ἑταίρους αὐτὸν πρὸς τὸν ἱστὸν δῆσαι.\n\nὅτε δὲ τὴν ᾠδὴν ἤκουσεν, ὁ Ὀδυσσεὺς ἐβόησεν· «λύσατέ με, ὦ φίλοι.» οἱ δὲ οὐκ ἤκουσαν, ἀλλ᾽ ἔτι μᾶλλον αὐτὸν ἔδησαν. οὕτως ὁ Ὀδυσσεὺς καὶ οἱ ἑταῖροι ἀπέφυγον.\n\nGlossary: Κίρκη = Circe; εἶπεν = said; Σειρῆνες = the Sirens; ναύτης = sailor; κηρός (dative κηρῷ) = wax; οὖς (accusative plural ὦτα) = ear; ἑταῖρος = companion; κλεῖσον = close! (aorist imperative); ἔκλεισεν = closed; ἤθελε = wanted; ἐκέλευσεν = ordered; ἱστός = mast; δῆσαι = to tie (aorist infinitive); ᾠδή = song; ἐβόησεν = shouted; λύσατε = untie! (aorist imperative); ἔτι μᾶλλον = even more tightly; ἔδησαν = tied; ἀπέφυγον = escaped.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 12"
+  },
+  {
+   "id": "greek.g3.si.4",
+   "topic": "greek.read-3",
+   "kind": "mcq",
+   "prompt": "Translate **ἐκέλευσεν οὖν τοὺς ἑταίρους αὐτὸν πρὸς τὸν ἱστὸν δῆσαι**.",
+   "options": [
+    {
+     "text": "So he ordered his companions to tie him to the mast.",
+     "correct": true
+    },
+    {
+     "text": "So his companions ordered him to tie them to the mast.",
+     "correct": false,
+     "feedback": "ἐκέλευσεν (he ordered) is singular: Odysseus. τοὺς ἑταίρους are the people ordered."
+    },
+    {
+     "text": "So he tied his companions to the mast.",
+     "correct": false,
+     "feedback": "δῆσαι is “to tie”: the companions do the tying."
+    }
+   ],
+   "explain": "κελεύω + accusative + infinitive.",
+   "passage": "ὁ Ὀδυσσεὺς καὶ αἱ Σειρῆνες\n\nἡ Κίρκη τῷ Ὀδυσσεῖ εἶπεν· «αἱ Σειρῆνες καλῶς ᾄδουσιν, ἀλλὰ τοὺς ναύτας ἀποκτείνουσιν. κηρῷ οὖν τὰ ὦτα τῶν ἑταίρων κλεῖσον.»\n\nὁ οὖν Ὀδυσσεὺς τὰ τῶν ἑταίρων ὦτα κηρῷ ἔκλεισεν. αὐτὸς δὲ ἤθελε τὰς Σειρῆνας ἀκούειν· ἐκέλευσεν οὖν τοὺς ἑταίρους αὐτὸν πρὸς τὸν ἱστὸν δῆσαι.\n\nὅτε δὲ τὴν ᾠδὴν ἤκουσεν, ὁ Ὀδυσσεὺς ἐβόησεν· «λύσατέ με, ὦ φίλοι.» οἱ δὲ οὐκ ἤκουσαν, ἀλλ᾽ ἔτι μᾶλλον αὐτὸν ἔδησαν. οὕτως ὁ Ὀδυσσεὺς καὶ οἱ ἑταῖροι ἀπέφυγον.\n\nGlossary: Κίρκη = Circe; εἶπεν = said; Σειρῆνες = the Sirens; ναύτης = sailor; κηρός (dative κηρῷ) = wax; οὖς (accusative plural ὦτα) = ear; ἑταῖρος = companion; κλεῖσον = close! (aorist imperative); ἔκλεισεν = closed; ἤθελε = wanted; ἐκέλευσεν = ordered; ἱστός = mast; δῆσαι = to tie (aorist infinitive); ᾠδή = song; ἐβόησεν = shouted; λύσατε = untie! (aorist imperative); ἔτι μᾶλλον = even more tightly; ἔδησαν = tied; ἀπέφυγον = escaped.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 12"
+  },
+  {
+   "id": "greek.g3.si.5",
+   "topic": "greek.read-3",
+   "kind": "mcq",
+   "prompt": "Why did the crew not untie him?",
+   "options": [
+    {
+     "text": "They could not hear him: their ears were blocked",
+     "correct": true
+    },
+    {
+     "text": "They were asleep",
+     "correct": false,
+     "feedback": "They were rowing; the wax was in their ears."
+    },
+    {
+     "text": "They wanted to hear the Sirens themselves",
+     "correct": false,
+     "feedback": "Their ears were full of wax."
+    }
+   ],
+   "explain": "“οἱ δὲ οὐκ ἤκουσαν”: they did not hear.",
+   "passage": "ὁ Ὀδυσσεὺς καὶ αἱ Σειρῆνες\n\nἡ Κίρκη τῷ Ὀδυσσεῖ εἶπεν· «αἱ Σειρῆνες καλῶς ᾄδουσιν, ἀλλὰ τοὺς ναύτας ἀποκτείνουσιν. κηρῷ οὖν τὰ ὦτα τῶν ἑταίρων κλεῖσον.»\n\nὁ οὖν Ὀδυσσεὺς τὰ τῶν ἑταίρων ὦτα κηρῷ ἔκλεισεν. αὐτὸς δὲ ἤθελε τὰς Σειρῆνας ἀκούειν· ἐκέλευσεν οὖν τοὺς ἑταίρους αὐτὸν πρὸς τὸν ἱστὸν δῆσαι.\n\nὅτε δὲ τὴν ᾠδὴν ἤκουσεν, ὁ Ὀδυσσεὺς ἐβόησεν· «λύσατέ με, ὦ φίλοι.» οἱ δὲ οὐκ ἤκουσαν, ἀλλ᾽ ἔτι μᾶλλον αὐτὸν ἔδησαν. οὕτως ὁ Ὀδυσσεὺς καὶ οἱ ἑταῖροι ἀπέφυγον.\n\nGlossary: Κίρκη = Circe; εἶπεν = said; Σειρῆνες = the Sirens; ναύτης = sailor; κηρός (dative κηρῷ) = wax; οὖς (accusative plural ὦτα) = ear; ἑταῖρος = companion; κλεῖσον = close! (aorist imperative); ἔκλεισεν = closed; ἤθελε = wanted; ἐκέλευσεν = ordered; ἱστός = mast; δῆσαι = to tie (aorist infinitive); ᾠδή = song; ἐβόησεν = shouted; λύσατε = untie! (aorist imperative); ἔτι μᾶλλον = even more tightly; ἔδησαν = tied; ἀπέφυγον = escaped.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 12"
+  },
+  {
+   "id": "greek.g3.si.6",
+   "topic": "greek.read-3",
+   "kind": "mcq",
+   "prompt": "Which of these is an aorist indicative (a past statement)?",
+   "options": [
+    {
+     "text": "ἔκλεισεν",
+     "correct": true
+    },
+    {
+     "text": "κλεῖσον",
+     "correct": false,
+     "feedback": "κλεῖσον is an imperative."
+    },
+    {
+     "text": "δῆσαι",
+     "correct": false,
+     "feedback": "δῆσαι is an infinitive."
+    }
+   ],
+   "explain": "Only the past statement has the augment: ἔκλεισεν, he closed.",
+   "passage": "ὁ Ὀδυσσεὺς καὶ αἱ Σειρῆνες\n\nἡ Κίρκη τῷ Ὀδυσσεῖ εἶπεν· «αἱ Σειρῆνες καλῶς ᾄδουσιν, ἀλλὰ τοὺς ναύτας ἀποκτείνουσιν. κηρῷ οὖν τὰ ὦτα τῶν ἑταίρων κλεῖσον.»\n\nὁ οὖν Ὀδυσσεὺς τὰ τῶν ἑταίρων ὦτα κηρῷ ἔκλεισεν. αὐτὸς δὲ ἤθελε τὰς Σειρῆνας ἀκούειν· ἐκέλευσεν οὖν τοὺς ἑταίρους αὐτὸν πρὸς τὸν ἱστὸν δῆσαι.\n\nὅτε δὲ τὴν ᾠδὴν ἤκουσεν, ὁ Ὀδυσσεὺς ἐβόησεν· «λύσατέ με, ὦ φίλοι.» οἱ δὲ οὐκ ἤκουσαν, ἀλλ᾽ ἔτι μᾶλλον αὐτὸν ἔδησαν. οὕτως ὁ Ὀδυσσεὺς καὶ οἱ ἑταῖροι ἀπέφυγον.\n\nGlossary: Κίρκη = Circe; εἶπεν = said; Σειρῆνες = the Sirens; ναύτης = sailor; κηρός (dative κηρῷ) = wax; οὖς (accusative plural ὦτα) = ear; ἑταῖρος = companion; κλεῖσον = close! (aorist imperative); ἔκλεισεν = closed; ἤθελε = wanted; ἐκέλευσεν = ordered; ἱστός = mast; δῆσαι = to tie (aorist infinitive); ᾠδή = song; ἐβόησεν = shouted; λύσατε = untie! (aorist imperative); ἔτι μᾶλλον = even more tightly; ἔδησαν = tied; ἀπέφυγον = escaped.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 12"
+  },
+  {
+   "id": "greek.g3.si.3",
+   "topic": "greek.read-3",
+   "kind": "fact",
+   "prompt": "Why did Odysseus not block his own ears?",
+   "answer": "he wanted to hear the Sirens",
+   "distractors": [
+    "he was deaf",
+    "Circe forbade it",
+    "he had no wax left"
+   ],
+   "explain": "“αὐτὸς δὲ ἤθελε τὰς Σειρῆνας ἀκούειν.”",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ὀδυσσεὺς καὶ αἱ Σειρῆνες\n\nἡ Κίρκη τῷ Ὀδυσσεῖ εἶπεν· «αἱ Σειρῆνες καλῶς ᾄδουσιν, ἀλλὰ τοὺς ναύτας ἀποκτείνουσιν. κηρῷ οὖν τὰ ὦτα τῶν ἑταίρων κλεῖσον.»\n\nὁ οὖν Ὀδυσσεὺς τὰ τῶν ἑταίρων ὦτα κηρῷ ἔκλεισεν. αὐτὸς δὲ ἤθελε τὰς Σειρῆνας ἀκούειν· ἐκέλευσεν οὖν τοὺς ἑταίρους αὐτὸν πρὸς τὸν ἱστὸν δῆσαι.\n\nὅτε δὲ τὴν ᾠδὴν ἤκουσεν, ὁ Ὀδυσσεὺς ἐβόησεν· «λύσατέ με, ὦ φίλοι.» οἱ δὲ οὐκ ἤκουσαν, ἀλλ᾽ ἔτι μᾶλλον αὐτὸν ἔδησαν. οὕτως ὁ Ὀδυσσεὺς καὶ οἱ ἑταῖροι ἀπέφυγον.\n\nGlossary: Κίρκη = Circe; εἶπεν = said; Σειρῆνες = the Sirens; ναύτης = sailor; κηρός (dative κηρῷ) = wax; οὖς (accusative plural ὦτα) = ear; ἑταῖρος = companion; κλεῖσον = close! (aorist imperative); ἔκλεισεν = closed; ἤθελε = wanted; ἐκέλευσεν = ordered; ἱστός = mast; δῆσαι = to tie (aorist infinitive); ᾠδή = song; ἐβόησεν = shouted; λύσατε = untie! (aorist imperative); ἔτι μᾶλλον = even more tightly; ἔδησαν = tied; ἀπέφυγον = escaped.",
+   "passageSource": "Adapted for this app from Homer, Odyssey book 12"
+  },
+  {
+   "id": "greek.g3.ja.1",
+   "topic": "greek.read-3",
+   "kind": "fact",
+   "prompt": "What did King Pelias order Jason to do?",
+   "answer": "bring the golden fleece from Colchis",
+   "distractors": [
+    "build a city",
+    "kill the bulls of Pelias",
+    "marry Medea"
+   ],
+   "explain": "“τὸν Ἰάσονα ἐκέλευσε τὸ χρυσοῦν δέρας ἐκ τῆς Κόλχιδος φέρειν.”",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ἰάσων καὶ τὸ χρυσοῦν δέρας\n\nὁ Πελίας ὁ βασιλεὺς τὸν Ἰάσονα ἐκέλευσε τὸ χρυσοῦν δέρας ἐκ τῆς Κόλχιδος φέρειν. ὁ οὖν Ἰάσων ναῦν μεγάλην, τὴν Ἀργώ, ἐποίησε καὶ μετὰ πολλῶν ἡρώων ἔπλευσεν.\n\nἐν δὲ τῇ Κόλχιδι ὁ βασιλεὺς Αἰήτης εἶπεν· «εἰ ἐθέλεις τὸ δέρας λαβεῖν, πρῶτον δεῖ σε τοὺς ταύρους ζεῦξαι.» οἱ δὲ ταῦροι πῦρ ἔπνεον.\n\nἡ δὲ Μήδεια, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Ἰάσονα ἐφίλησε καὶ φάρμακον αὐτῷ ἔδωκεν. τῷ φαρμάκῳ ὁ Ἰάσων τοὺς ταύρους ἔζευξε καὶ τὸ δέρας ἔλαβεν. ἔπειτα μετὰ τῆς Μηδείας ἔφυγεν.\n\nGlossary: Πελίας = Pelias; χρυσοῦς, -ῆ, -οῦν = golden; δέρας (τό) = fleece; Κόλχις, -ιδος = Colchis (by the Black Sea); ναῦς (accusative ναῦν) = ship; μέγας (feminine accusative μεγάλην) = big; ἐποίησε = made, had built; ἥρως, ἥρωος = hero; ἔπλευσεν = sailed; εἰ = if; λαβεῖν = to take; πρῶτον = first; δεῖ σε = you must; ταῦρος = bull; ζεῦξαι = to yoke (aorist infinitive); ἔπνεον = breathed; ἐφίλησε = fell in love with; φάρμακον = magic potion, drug; ἔδωκεν = gave; ἔζευξε = yoked; ἔλαβεν = took; ἔφυγεν = fled.",
+   "passageSource": "Adapted for this app from the voyage of the Argonauts"
+  },
+  {
+   "id": "greek.g3.ja.2",
+   "topic": "greek.read-3",
+   "kind": "fact",
+   "prompt": "What was the Argo?",
+   "answer": "a big ship",
+   "distractors": [
+    "a golden fleece",
+    "a bull",
+    "a city"
+   ],
+   "explain": "“ναῦν μεγάλην, τὴν Ἀργώ”. The heroes who sailed in her were the Argonauts.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ἰάσων καὶ τὸ χρυσοῦν δέρας\n\nὁ Πελίας ὁ βασιλεὺς τὸν Ἰάσονα ἐκέλευσε τὸ χρυσοῦν δέρας ἐκ τῆς Κόλχιδος φέρειν. ὁ οὖν Ἰάσων ναῦν μεγάλην, τὴν Ἀργώ, ἐποίησε καὶ μετὰ πολλῶν ἡρώων ἔπλευσεν.\n\nἐν δὲ τῇ Κόλχιδι ὁ βασιλεὺς Αἰήτης εἶπεν· «εἰ ἐθέλεις τὸ δέρας λαβεῖν, πρῶτον δεῖ σε τοὺς ταύρους ζεῦξαι.» οἱ δὲ ταῦροι πῦρ ἔπνεον.\n\nἡ δὲ Μήδεια, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Ἰάσονα ἐφίλησε καὶ φάρμακον αὐτῷ ἔδωκεν. τῷ φαρμάκῳ ὁ Ἰάσων τοὺς ταύρους ἔζευξε καὶ τὸ δέρας ἔλαβεν. ἔπειτα μετὰ τῆς Μηδείας ἔφυγεν.\n\nGlossary: Πελίας = Pelias; χρυσοῦς, -ῆ, -οῦν = golden; δέρας (τό) = fleece; Κόλχις, -ιδος = Colchis (by the Black Sea); ναῦς (accusative ναῦν) = ship; μέγας (feminine accusative μεγάλην) = big; ἐποίησε = made, had built; ἥρως, ἥρωος = hero; ἔπλευσεν = sailed; εἰ = if; λαβεῖν = to take; πρῶτον = first; δεῖ σε = you must; ταῦρος = bull; ζεῦξαι = to yoke (aorist infinitive); ἔπνεον = breathed; ἐφίλησε = fell in love with; φάρμακον = magic potion, drug; ἔδωκεν = gave; ἔζευξε = yoked; ἔλαβεν = took; ἔφυγεν = fled.",
+   "passageSource": "Adapted for this app from the voyage of the Argonauts"
+  },
+  {
+   "id": "greek.g3.ja.3",
+   "topic": "greek.read-3",
+   "kind": "mcq",
+   "prompt": "What is **λαβεῖν**?",
+   "options": [
+    {
+     "text": "the aorist infinitive of λαμβάνω: to take",
+     "correct": true
+    },
+    {
+     "text": "the aorist: he took",
+     "correct": false,
+     "feedback": "He took is ἔλαβεν, with the augment."
+    },
+    {
+     "text": "the present: he takes",
+     "correct": false,
+     "feedback": "He takes is λαμβάνει."
+    }
+   ],
+   "explain": "“εἰ ἐθέλεις τὸ δέρας λαβεῖν”: if you want to take the fleece.",
+   "passage": "ὁ Ἰάσων καὶ τὸ χρυσοῦν δέρας\n\nὁ Πελίας ὁ βασιλεὺς τὸν Ἰάσονα ἐκέλευσε τὸ χρυσοῦν δέρας ἐκ τῆς Κόλχιδος φέρειν. ὁ οὖν Ἰάσων ναῦν μεγάλην, τὴν Ἀργώ, ἐποίησε καὶ μετὰ πολλῶν ἡρώων ἔπλευσεν.\n\nἐν δὲ τῇ Κόλχιδι ὁ βασιλεὺς Αἰήτης εἶπεν· «εἰ ἐθέλεις τὸ δέρας λαβεῖν, πρῶτον δεῖ σε τοὺς ταύρους ζεῦξαι.» οἱ δὲ ταῦροι πῦρ ἔπνεον.\n\nἡ δὲ Μήδεια, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Ἰάσονα ἐφίλησε καὶ φάρμακον αὐτῷ ἔδωκεν. τῷ φαρμάκῳ ὁ Ἰάσων τοὺς ταύρους ἔζευξε καὶ τὸ δέρας ἔλαβεν. ἔπειτα μετὰ τῆς Μηδείας ἔφυγεν.\n\nGlossary: Πελίας = Pelias; χρυσοῦς, -ῆ, -οῦν = golden; δέρας (τό) = fleece; Κόλχις, -ιδος = Colchis (by the Black Sea); ναῦς (accusative ναῦν) = ship; μέγας (feminine accusative μεγάλην) = big; ἐποίησε = made, had built; ἥρως, ἥρωος = hero; ἔπλευσεν = sailed; εἰ = if; λαβεῖν = to take; πρῶτον = first; δεῖ σε = you must; ταῦρος = bull; ζεῦξαι = to yoke (aorist infinitive); ἔπνεον = breathed; ἐφίλησε = fell in love with; φάρμακον = magic potion, drug; ἔδωκεν = gave; ἔζευξε = yoked; ἔλαβεν = took; ἔφυγεν = fled.",
+   "passageSource": "Adapted for this app from the voyage of the Argonauts"
+  },
+  {
+   "id": "greek.g3.ja.5",
+   "topic": "greek.read-3",
+   "kind": "mcq",
+   "prompt": "How did Medea help Jason?",
+   "options": [
+    {
+     "text": "She gave him a magic potion",
+     "correct": true
+    },
+    {
+     "text": "She yoked the bulls herself",
+     "correct": false,
+     "feedback": "“τῷ φαρμάκῳ ὁ Ἰάσων τοὺς ταύρους ἔζευξε”: Jason does it, with the potion."
+    },
+    {
+     "text": "She stole the ship",
+     "correct": false,
+     "feedback": "The Argo was Jason’s own ship."
+    }
+   ],
+   "explain": "“φάρμακον αὐτῷ ἔδωκεν”: she gave him a potion.",
+   "passage": "ὁ Ἰάσων καὶ τὸ χρυσοῦν δέρας\n\nὁ Πελίας ὁ βασιλεὺς τὸν Ἰάσονα ἐκέλευσε τὸ χρυσοῦν δέρας ἐκ τῆς Κόλχιδος φέρειν. ὁ οὖν Ἰάσων ναῦν μεγάλην, τὴν Ἀργώ, ἐποίησε καὶ μετὰ πολλῶν ἡρώων ἔπλευσεν.\n\nἐν δὲ τῇ Κόλχιδι ὁ βασιλεὺς Αἰήτης εἶπεν· «εἰ ἐθέλεις τὸ δέρας λαβεῖν, πρῶτον δεῖ σε τοὺς ταύρους ζεῦξαι.» οἱ δὲ ταῦροι πῦρ ἔπνεον.\n\nἡ δὲ Μήδεια, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Ἰάσονα ἐφίλησε καὶ φάρμακον αὐτῷ ἔδωκεν. τῷ φαρμάκῳ ὁ Ἰάσων τοὺς ταύρους ἔζευξε καὶ τὸ δέρας ἔλαβεν. ἔπειτα μετὰ τῆς Μηδείας ἔφυγεν.\n\nGlossary: Πελίας = Pelias; χρυσοῦς, -ῆ, -οῦν = golden; δέρας (τό) = fleece; Κόλχις, -ιδος = Colchis (by the Black Sea); ναῦς (accusative ναῦν) = ship; μέγας (feminine accusative μεγάλην) = big; ἐποίησε = made, had built; ἥρως, ἥρωος = hero; ἔπλευσεν = sailed; εἰ = if; λαβεῖν = to take; πρῶτον = first; δεῖ σε = you must; ταῦρος = bull; ζεῦξαι = to yoke (aorist infinitive); ἔπνεον = breathed; ἐφίλησε = fell in love with; φάρμακον = magic potion, drug; ἔδωκεν = gave; ἔζευξε = yoked; ἔλαβεν = took; ἔφυγεν = fled.",
+   "passageSource": "Adapted for this app from the voyage of the Argonauts"
+  },
+  {
+   "id": "greek.g3.ja.6",
+   "topic": "greek.read-3",
+   "kind": "mcq",
+   "prompt": "**ἔλαβεν** and **ἔφυγεν** are both…",
+   "options": [
+    {
+     "text": "strong aorists: he took, he fled",
+     "correct": true
+    },
+    {
+     "text": "imperfects: he was taking, he was fleeing",
+     "correct": false,
+     "feedback": "The imperfects use the present stems: ἐλάμβανε, ἔφευγε."
+    },
+    {
+     "text": "futures",
+     "correct": false,
+     "feedback": "The augment shows they are past."
+    }
+   ],
+   "explain": "λαβ- and φυγ- are aorist stems.",
+   "passage": "ὁ Ἰάσων καὶ τὸ χρυσοῦν δέρας\n\nὁ Πελίας ὁ βασιλεὺς τὸν Ἰάσονα ἐκέλευσε τὸ χρυσοῦν δέρας ἐκ τῆς Κόλχιδος φέρειν. ὁ οὖν Ἰάσων ναῦν μεγάλην, τὴν Ἀργώ, ἐποίησε καὶ μετὰ πολλῶν ἡρώων ἔπλευσεν.\n\nἐν δὲ τῇ Κόλχιδι ὁ βασιλεὺς Αἰήτης εἶπεν· «εἰ ἐθέλεις τὸ δέρας λαβεῖν, πρῶτον δεῖ σε τοὺς ταύρους ζεῦξαι.» οἱ δὲ ταῦροι πῦρ ἔπνεον.\n\nἡ δὲ Μήδεια, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Ἰάσονα ἐφίλησε καὶ φάρμακον αὐτῷ ἔδωκεν. τῷ φαρμάκῳ ὁ Ἰάσων τοὺς ταύρους ἔζευξε καὶ τὸ δέρας ἔλαβεν. ἔπειτα μετὰ τῆς Μηδείας ἔφυγεν.\n\nGlossary: Πελίας = Pelias; χρυσοῦς, -ῆ, -οῦν = golden; δέρας (τό) = fleece; Κόλχις, -ιδος = Colchis (by the Black Sea); ναῦς (accusative ναῦν) = ship; μέγας (feminine accusative μεγάλην) = big; ἐποίησε = made, had built; ἥρως, ἥρωος = hero; ἔπλευσεν = sailed; εἰ = if; λαβεῖν = to take; πρῶτον = first; δεῖ σε = you must; ταῦρος = bull; ζεῦξαι = to yoke (aorist infinitive); ἔπνεον = breathed; ἐφίλησε = fell in love with; φάρμακον = magic potion, drug; ἔδωκεν = gave; ἔζευξε = yoked; ἔλαβεν = took; ἔφυγεν = fled.",
+   "passageSource": "Adapted for this app from the voyage of the Argonauts"
+  },
+  {
+   "id": "greek.g3.ja.4",
+   "topic": "greek.read-3",
+   "kind": "fact",
+   "prompt": "What made the task so dangerous?",
+   "answer": "the bulls breathed fire",
+   "distractors": [
+    "the fleece was poisoned",
+    "the king had an army",
+    "the sea was frozen"
+   ],
+   "explain": "“οἱ δὲ ταῦροι πῦρ ἔπνεον.”",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Ἰάσων καὶ τὸ χρυσοῦν δέρας\n\nὁ Πελίας ὁ βασιλεὺς τὸν Ἰάσονα ἐκέλευσε τὸ χρυσοῦν δέρας ἐκ τῆς Κόλχιδος φέρειν. ὁ οὖν Ἰάσων ναῦν μεγάλην, τὴν Ἀργώ, ἐποίησε καὶ μετὰ πολλῶν ἡρώων ἔπλευσεν.\n\nἐν δὲ τῇ Κόλχιδι ὁ βασιλεὺς Αἰήτης εἶπεν· «εἰ ἐθέλεις τὸ δέρας λαβεῖν, πρῶτον δεῖ σε τοὺς ταύρους ζεῦξαι.» οἱ δὲ ταῦροι πῦρ ἔπνεον.\n\nἡ δὲ Μήδεια, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Ἰάσονα ἐφίλησε καὶ φάρμακον αὐτῷ ἔδωκεν. τῷ φαρμάκῳ ὁ Ἰάσων τοὺς ταύρους ἔζευξε καὶ τὸ δέρας ἔλαβεν. ἔπειτα μετὰ τῆς Μηδείας ἔφυγεν.\n\nGlossary: Πελίας = Pelias; χρυσοῦς, -ῆ, -οῦν = golden; δέρας (τό) = fleece; Κόλχις, -ιδος = Colchis (by the Black Sea); ναῦς (accusative ναῦν) = ship; μέγας (feminine accusative μεγάλην) = big; ἐποίησε = made, had built; ἥρως, ἥρωος = hero; ἔπλευσεν = sailed; εἰ = if; λαβεῖν = to take; πρῶτον = first; δεῖ σε = you must; ταῦρος = bull; ζεῦξαι = to yoke (aorist infinitive); ἔπνεον = breathed; ἐφίλησε = fell in love with; φάρμακον = magic potion, drug; ἔδωκεν = gave; ἔζευξε = yoked; ἔλαβεν = took; ἔφυγεν = fled.",
+   "passageSource": "Adapted for this app from the voyage of the Argonauts"
+  },
+  {
+   "id": "greek.g3.ho.1",
+   "topic": "greek.read-4",
+   "kind": "fact",
+   "prompt": "How long had the Greeks been besieging Troy?",
+   "answer": "ten years",
+   "distractors": [
+    "ten days",
+    "ten months",
+    "a hundred years"
+   ],
+   "explain": "“δέκα ἔτη”: the accusative of time (how long).",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ δούρειος ἵππος\n\nδέκα ἔτη οἱ Ἕλληνες τὴν Τροίαν ἐπολιόρκουν. τέλος δὲ ὁ Ὀδυσσεύς, σοφώτατος τῶν Ἑλλήνων ὤν, ἐκέλευσε τοὺς Ἕλληνας ἵππον μέγιστον ἐκ ξύλων ποιῆσαι. οἱ μὲν ἄριστοι τῶν στρατιωτῶν εἰς τὸν ἵππον εἰσβάντες ἔμενον· οἱ δὲ ἄλλοι Ἕλληνες, τὰς σκηνὰς καύσαντες, ἀπέπλευσαν.\n\nοἱ δὲ Τρῶες τὸν ἵππον ἰδόντες ἐχάρησαν καὶ εἰς τὴν πόλιν εἵλκυσαν. τῆς δὲ νυκτὸς γενομένης, οἱ στρατιῶται ἐκ τοῦ ἵππου ἐξελθόντες τὰς πύλας τοῖς φίλοις ἀνέῳξαν. οὕτως οἱ Ἕλληνες τὴν Τροίαν εἷλον.\n\nGlossary: δούρειος = wooden; ἔτος, -ους (τό) = year; ἐπολιόρκουν = were besieging; τέλος = finally; σοφώτατος = wisest; ὤν = being; ξύλον = wood, timber; ποιῆσαι = to make (aorist infinitive); εἰσβάντες = having gone in; σκηνή = tent; καύσαντες = having burned; ἀπέπλευσαν = sailed away; Τρῶες = Trojans; ἰδόντες = having seen; ἐχάρησαν = rejoiced; εἵλκυσαν = dragged; γενομένης = having happened (here: having fallen); ἐξελθόντες = having come out; πύλαι = gates; ἀνέῳξαν = opened; εἷλον = captured.",
+   "passageSource": "Adapted for this app from the fall of Troy"
+  },
+  {
+   "id": "greek.g3.ho.2",
+   "topic": "greek.read-4",
+   "kind": "mcq",
+   "prompt": "What does **σοφώτατος τῶν Ἑλλήνων ὤν** tell you about Odysseus?",
+   "options": [
+    {
+     "text": "being the wisest of the Greeks",
+     "correct": true
+    },
+    {
+     "text": "being wiser than the Trojans",
+     "correct": false,
+     "feedback": "σοφώτατος is superlative: wisest."
+    },
+    {
+     "text": "being the oldest Greek",
+     "correct": false,
+     "feedback": "σοφός means wise."
+    }
+   ],
+   "explain": "ὤν (being) is the participle of εἰμί; τῶν Ἑλλήνων: of the Greeks.",
+   "passage": "ὁ δούρειος ἵππος\n\nδέκα ἔτη οἱ Ἕλληνες τὴν Τροίαν ἐπολιόρκουν. τέλος δὲ ὁ Ὀδυσσεύς, σοφώτατος τῶν Ἑλλήνων ὤν, ἐκέλευσε τοὺς Ἕλληνας ἵππον μέγιστον ἐκ ξύλων ποιῆσαι. οἱ μὲν ἄριστοι τῶν στρατιωτῶν εἰς τὸν ἵππον εἰσβάντες ἔμενον· οἱ δὲ ἄλλοι Ἕλληνες, τὰς σκηνὰς καύσαντες, ἀπέπλευσαν.\n\nοἱ δὲ Τρῶες τὸν ἵππον ἰδόντες ἐχάρησαν καὶ εἰς τὴν πόλιν εἵλκυσαν. τῆς δὲ νυκτὸς γενομένης, οἱ στρατιῶται ἐκ τοῦ ἵππου ἐξελθόντες τὰς πύλας τοῖς φίλοις ἀνέῳξαν. οὕτως οἱ Ἕλληνες τὴν Τροίαν εἷλον.\n\nGlossary: δούρειος = wooden; ἔτος, -ους (τό) = year; ἐπολιόρκουν = were besieging; τέλος = finally; σοφώτατος = wisest; ὤν = being; ξύλον = wood, timber; ποιῆσαι = to make (aorist infinitive); εἰσβάντες = having gone in; σκηνή = tent; καύσαντες = having burned; ἀπέπλευσαν = sailed away; Τρῶες = Trojans; ἰδόντες = having seen; ἐχάρησαν = rejoiced; εἵλκυσαν = dragged; γενομένης = having happened (here: having fallen); ἐξελθόντες = having come out; πύλαι = gates; ἀνέῳξαν = opened; εἷλον = captured.",
+   "passageSource": "Adapted for this app from the fall of Troy"
+  },
+  {
+   "id": "greek.g3.ho.3",
+   "topic": "greek.read-4",
+   "kind": "mcq",
+   "prompt": "Translate **οἱ δὲ Τρῶες τὸν ἵππον ἰδόντες ἐχάρησαν**.",
+   "options": [
+    {
+     "text": "The Trojans, having seen the horse, rejoiced.",
+     "correct": true
+    },
+    {
+     "text": "The horse saw the Trojans and rejoiced.",
+     "correct": false,
+     "feedback": "ἰδόντες is nominative plural: it goes with οἱ Τρῶες."
+    },
+    {
+     "text": "The Trojans rejoiced while they were building the horse.",
+     "correct": false,
+     "feedback": "ἰδόντες = having seen."
+    }
+   ],
+   "explain": "ἰδόντες: aorist participle of ὁράω, nominative plural.",
+   "passage": "ὁ δούρειος ἵππος\n\nδέκα ἔτη οἱ Ἕλληνες τὴν Τροίαν ἐπολιόρκουν. τέλος δὲ ὁ Ὀδυσσεύς, σοφώτατος τῶν Ἑλλήνων ὤν, ἐκέλευσε τοὺς Ἕλληνας ἵππον μέγιστον ἐκ ξύλων ποιῆσαι. οἱ μὲν ἄριστοι τῶν στρατιωτῶν εἰς τὸν ἵππον εἰσβάντες ἔμενον· οἱ δὲ ἄλλοι Ἕλληνες, τὰς σκηνὰς καύσαντες, ἀπέπλευσαν.\n\nοἱ δὲ Τρῶες τὸν ἵππον ἰδόντες ἐχάρησαν καὶ εἰς τὴν πόλιν εἵλκυσαν. τῆς δὲ νυκτὸς γενομένης, οἱ στρατιῶται ἐκ τοῦ ἵππου ἐξελθόντες τὰς πύλας τοῖς φίλοις ἀνέῳξαν. οὕτως οἱ Ἕλληνες τὴν Τροίαν εἷλον.\n\nGlossary: δούρειος = wooden; ἔτος, -ους (τό) = year; ἐπολιόρκουν = were besieging; τέλος = finally; σοφώτατος = wisest; ὤν = being; ξύλον = wood, timber; ποιῆσαι = to make (aorist infinitive); εἰσβάντες = having gone in; σκηνή = tent; καύσαντες = having burned; ἀπέπλευσαν = sailed away; Τρῶες = Trojans; ἰδόντες = having seen; ἐχάρησαν = rejoiced; εἵλκυσαν = dragged; γενομένης = having happened (here: having fallen); ἐξελθόντες = having come out; πύλαι = gates; ἀνέῳξαν = opened; εἷλον = captured.",
+   "passageSource": "Adapted for this app from the fall of Troy"
+  },
+  {
+   "id": "greek.g3.ho.4",
+   "topic": "greek.read-4",
+   "kind": "mcq",
+   "prompt": "Which phrase is a genitive absolute?",
+   "options": [
+    {
+     "text": "τῆς δὲ νυκτὸς γενομένης",
+     "correct": true
+    },
+    {
+     "text": "τῶν Ἑλλήνων",
+     "correct": false,
+     "feedback": "That is a plain genitive: of the Greeks."
+    },
+    {
+     "text": "ἐκ τοῦ ἵππου",
+     "correct": false,
+     "feedback": "That is a genitive after ἐκ."
+    }
+   ],
+   "explain": "“When night had fallen”: noun + participle in the genitive, setting the scene.",
+   "passage": "ὁ δούρειος ἵππος\n\nδέκα ἔτη οἱ Ἕλληνες τὴν Τροίαν ἐπολιόρκουν. τέλος δὲ ὁ Ὀδυσσεύς, σοφώτατος τῶν Ἑλλήνων ὤν, ἐκέλευσε τοὺς Ἕλληνας ἵππον μέγιστον ἐκ ξύλων ποιῆσαι. οἱ μὲν ἄριστοι τῶν στρατιωτῶν εἰς τὸν ἵππον εἰσβάντες ἔμενον· οἱ δὲ ἄλλοι Ἕλληνες, τὰς σκηνὰς καύσαντες, ἀπέπλευσαν.\n\nοἱ δὲ Τρῶες τὸν ἵππον ἰδόντες ἐχάρησαν καὶ εἰς τὴν πόλιν εἵλκυσαν. τῆς δὲ νυκτὸς γενομένης, οἱ στρατιῶται ἐκ τοῦ ἵππου ἐξελθόντες τὰς πύλας τοῖς φίλοις ἀνέῳξαν. οὕτως οἱ Ἕλληνες τὴν Τροίαν εἷλον.\n\nGlossary: δούρειος = wooden; ἔτος, -ους (τό) = year; ἐπολιόρκουν = were besieging; τέλος = finally; σοφώτατος = wisest; ὤν = being; ξύλον = wood, timber; ποιῆσαι = to make (aorist infinitive); εἰσβάντες = having gone in; σκηνή = tent; καύσαντες = having burned; ἀπέπλευσαν = sailed away; Τρῶες = Trojans; ἰδόντες = having seen; ἐχάρησαν = rejoiced; εἵλκυσαν = dragged; γενομένης = having happened (here: having fallen); ἐξελθόντες = having come out; πύλαι = gates; ἀνέῳξαν = opened; εἷλον = captured.",
+   "passageSource": "Adapted for this app from the fall of Troy"
+  },
+  {
+   "id": "greek.g3.ho.6",
+   "topic": "greek.read-4",
+   "kind": "mcq",
+   "prompt": "Why did the other Greeks burn their tents and sail away?",
+   "options": [
+    {
+     "text": "To make the Trojans think they had given up",
+     "correct": true
+    },
+    {
+     "text": "Because they had lost the war",
+     "correct": false,
+     "feedback": "It was a trick: the best soldiers were waiting inside the horse."
+    },
+    {
+     "text": "To fetch more soldiers from Greece",
+     "correct": false,
+     "feedback": "They came back the same night."
+    }
+   ],
+   "explain": "An inference: the passage shows the trick working.",
+   "passage": "ὁ δούρειος ἵππος\n\nδέκα ἔτη οἱ Ἕλληνες τὴν Τροίαν ἐπολιόρκουν. τέλος δὲ ὁ Ὀδυσσεύς, σοφώτατος τῶν Ἑλλήνων ὤν, ἐκέλευσε τοὺς Ἕλληνας ἵππον μέγιστον ἐκ ξύλων ποιῆσαι. οἱ μὲν ἄριστοι τῶν στρατιωτῶν εἰς τὸν ἵππον εἰσβάντες ἔμενον· οἱ δὲ ἄλλοι Ἕλληνες, τὰς σκηνὰς καύσαντες, ἀπέπλευσαν.\n\nοἱ δὲ Τρῶες τὸν ἵππον ἰδόντες ἐχάρησαν καὶ εἰς τὴν πόλιν εἵλκυσαν. τῆς δὲ νυκτὸς γενομένης, οἱ στρατιῶται ἐκ τοῦ ἵππου ἐξελθόντες τὰς πύλας τοῖς φίλοις ἀνέῳξαν. οὕτως οἱ Ἕλληνες τὴν Τροίαν εἷλον.\n\nGlossary: δούρειος = wooden; ἔτος, -ους (τό) = year; ἐπολιόρκουν = were besieging; τέλος = finally; σοφώτατος = wisest; ὤν = being; ξύλον = wood, timber; ποιῆσαι = to make (aorist infinitive); εἰσβάντες = having gone in; σκηνή = tent; καύσαντες = having burned; ἀπέπλευσαν = sailed away; Τρῶες = Trojans; ἰδόντες = having seen; ἐχάρησαν = rejoiced; εἵλκυσαν = dragged; γενομένης = having happened (here: having fallen); ἐξελθόντες = having come out; πύλαι = gates; ἀνέῳξαν = opened; εἷλον = captured.",
+   "passageSource": "Adapted for this app from the fall of Troy"
+  },
+  {
+   "id": "greek.g3.ho.5",
+   "topic": "greek.read-4",
+   "kind": "fact",
+   "prompt": "What did the soldiers do after coming out of the horse?",
+   "answer": "they opened the gates for their friends",
+   "distractors": [
+    "they burned the horse",
+    "they sailed away",
+    "they hid in the tents"
+   ],
+   "explain": "“τὰς πύλας τοῖς φίλοις ἀνέῳξαν.”",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ δούρειος ἵππος\n\nδέκα ἔτη οἱ Ἕλληνες τὴν Τροίαν ἐπολιόρκουν. τέλος δὲ ὁ Ὀδυσσεύς, σοφώτατος τῶν Ἑλλήνων ὤν, ἐκέλευσε τοὺς Ἕλληνας ἵππον μέγιστον ἐκ ξύλων ποιῆσαι. οἱ μὲν ἄριστοι τῶν στρατιωτῶν εἰς τὸν ἵππον εἰσβάντες ἔμενον· οἱ δὲ ἄλλοι Ἕλληνες, τὰς σκηνὰς καύσαντες, ἀπέπλευσαν.\n\nοἱ δὲ Τρῶες τὸν ἵππον ἰδόντες ἐχάρησαν καὶ εἰς τὴν πόλιν εἵλκυσαν. τῆς δὲ νυκτὸς γενομένης, οἱ στρατιῶται ἐκ τοῦ ἵππου ἐξελθόντες τὰς πύλας τοῖς φίλοις ἀνέῳξαν. οὕτως οἱ Ἕλληνες τὴν Τροίαν εἷλον.\n\nGlossary: δούρειος = wooden; ἔτος, -ους (τό) = year; ἐπολιόρκουν = were besieging; τέλος = finally; σοφώτατος = wisest; ὤν = being; ξύλον = wood, timber; ποιῆσαι = to make (aorist infinitive); εἰσβάντες = having gone in; σκηνή = tent; καύσαντες = having burned; ἀπέπλευσαν = sailed away; Τρῶες = Trojans; ἰδόντες = having seen; ἐχάρησαν = rejoiced; εἵλκυσαν = dragged; γενομένης = having happened (here: having fallen); ἐξελθόντες = having come out; πύλαι = gates; ἀνέῳξαν = opened; εἷλον = captured.",
+   "passageSource": "Adapted for this app from the fall of Troy"
+  },
+  {
+   "id": "greek.g3.pe.1",
+   "topic": "greek.read-4",
+   "kind": "fact",
+   "prompt": "What did Polydectes order Perseus to bring?",
+   "answer": "the head of Medusa",
+   "distractors": [
+    "the golden fleece",
+    "a winged horse",
+    "the shield of Athena"
+   ],
+   "explain": "“τὴν τῆς Μεδούσης κεφαλὴν φέρειν”.",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Περσεὺς καὶ ἡ τῆς Μεδούσης κεφαλή\n\nὁ Πολυδέκτης ὁ βασιλεὺς τὸν Περσέα ἐκέλευσε τὴν τῆς Μεδούσης κεφαλὴν φέρειν. ὁ δὲ Περσεὺς οὐ φοβούμενος ἐξῆλθεν. ἡ Ἀθηνᾶ καὶ ὁ Ἑρμῆς αὐτῷ ἐβοήθησαν· ἡ μὲν ἀσπίδα λαμπρὰν ἔδωκεν, ὁ δὲ ἅρπην καὶ πτερωτὰ πέδιλα.\n\nὁ οὖν Περσεὺς πετόμενος πρὸς τὴν τῶν Γοργόνων νῆσον ἦλθεν. τῶν δὲ Γοργόνων καθευδουσῶν, οὐκ εἰς τὴν Μέδουσαν ἀλλ᾽ εἰς τὴν ἀσπίδα βλέπων, τὴν κεφαλὴν αὐτῆς ἀπέτεμεν. ἔπειτα τὴν κεφαλὴν λαβὼν ἀπέφυγεν.\n\nὕστερον δὲ τῷ Πολυδέκτῃ τὴν κεφαλὴν δείξας, αὐτὸν εἰς λίθον μετέβαλεν.\n\nGlossary: Πολυδέκτης = Polydectes; φοβούμενος = being afraid; ἐξῆλθεν = set out; ἐβοήθησαν (+ dative) = helped; ἀσπίς (accusative ἀσπίδα) = shield; λαμπρός = shining; ἔδωκεν = gave; ἅρπη = curved sword; πτερωτὰ πέδιλα = winged sandals; πετόμενος = flying; Γοργών, -όνος = Gorgon; νῆσος (ἡ) = island; ἦλθεν = came; καθευδουσῶν = sleeping; βλέπων = looking; ἀπέτεμεν = cut off; λαβών = having taken; ἀπέφυγεν = escaped; ὕστερον = later; δείξας = having shown; λίθος = stone; μετέβαλεν = changed.",
+   "passageSource": "Adapted for this app from the myth of Perseus"
+  },
+  {
+   "id": "greek.g3.pe.2",
+   "topic": "greek.read-4",
+   "kind": "mcq",
+   "prompt": "What does **οὐ φοβούμενος** tell you about Perseus?",
+   "options": [
+    {
+     "text": "He was not afraid",
+     "correct": true
+    },
+    {
+     "text": "He was very frightened",
+     "correct": false,
+     "feedback": "οὐ = not."
+    },
+    {
+     "text": "He frightened the king",
+     "correct": false,
+     "feedback": "φοβούμενος is middle: being afraid himself."
+    }
+   ],
+   "explain": "φοβούμενος: the present participle of φοβέομαι, I am afraid.",
+   "passage": "ὁ Περσεὺς καὶ ἡ τῆς Μεδούσης κεφαλή\n\nὁ Πολυδέκτης ὁ βασιλεὺς τὸν Περσέα ἐκέλευσε τὴν τῆς Μεδούσης κεφαλὴν φέρειν. ὁ δὲ Περσεὺς οὐ φοβούμενος ἐξῆλθεν. ἡ Ἀθηνᾶ καὶ ὁ Ἑρμῆς αὐτῷ ἐβοήθησαν· ἡ μὲν ἀσπίδα λαμπρὰν ἔδωκεν, ὁ δὲ ἅρπην καὶ πτερωτὰ πέδιλα.\n\nὁ οὖν Περσεὺς πετόμενος πρὸς τὴν τῶν Γοργόνων νῆσον ἦλθεν. τῶν δὲ Γοργόνων καθευδουσῶν, οὐκ εἰς τὴν Μέδουσαν ἀλλ᾽ εἰς τὴν ἀσπίδα βλέπων, τὴν κεφαλὴν αὐτῆς ἀπέτεμεν. ἔπειτα τὴν κεφαλὴν λαβὼν ἀπέφυγεν.\n\nὕστερον δὲ τῷ Πολυδέκτῃ τὴν κεφαλὴν δείξας, αὐτὸν εἰς λίθον μετέβαλεν.\n\nGlossary: Πολυδέκτης = Polydectes; φοβούμενος = being afraid; ἐξῆλθεν = set out; ἐβοήθησαν (+ dative) = helped; ἀσπίς (accusative ἀσπίδα) = shield; λαμπρός = shining; ἔδωκεν = gave; ἅρπη = curved sword; πτερωτὰ πέδιλα = winged sandals; πετόμενος = flying; Γοργών, -όνος = Gorgon; νῆσος (ἡ) = island; ἦλθεν = came; καθευδουσῶν = sleeping; βλέπων = looking; ἀπέτεμεν = cut off; λαβών = having taken; ἀπέφυγεν = escaped; ὕστερον = later; δείξας = having shown; λίθος = stone; μετέβαλεν = changed.",
+   "passageSource": "Adapted for this app from the myth of Perseus"
+  },
+  {
+   "id": "greek.g3.pe.4",
+   "topic": "greek.read-4",
+   "kind": "mcq",
+   "prompt": "Translate **τῶν δὲ Γοργόνων καθευδουσῶν**.",
+   "options": [
+    {
+     "text": "while the Gorgons were sleeping",
+     "correct": true
+    },
+    {
+     "text": "of the sleeping Gorgons’ island",
+     "correct": false,
+     "feedback": "This is a genitive absolute, setting the scene."
+    },
+    {
+     "text": "the Gorgons put him to sleep",
+     "correct": false,
+     "feedback": "καθεύδω = I sleep."
+    }
+   ],
+   "explain": "Genitive noun + genitive participle = a genitive absolute.",
+   "passage": "ὁ Περσεὺς καὶ ἡ τῆς Μεδούσης κεφαλή\n\nὁ Πολυδέκτης ὁ βασιλεὺς τὸν Περσέα ἐκέλευσε τὴν τῆς Μεδούσης κεφαλὴν φέρειν. ὁ δὲ Περσεὺς οὐ φοβούμενος ἐξῆλθεν. ἡ Ἀθηνᾶ καὶ ὁ Ἑρμῆς αὐτῷ ἐβοήθησαν· ἡ μὲν ἀσπίδα λαμπρὰν ἔδωκεν, ὁ δὲ ἅρπην καὶ πτερωτὰ πέδιλα.\n\nὁ οὖν Περσεὺς πετόμενος πρὸς τὴν τῶν Γοργόνων νῆσον ἦλθεν. τῶν δὲ Γοργόνων καθευδουσῶν, οὐκ εἰς τὴν Μέδουσαν ἀλλ᾽ εἰς τὴν ἀσπίδα βλέπων, τὴν κεφαλὴν αὐτῆς ἀπέτεμεν. ἔπειτα τὴν κεφαλὴν λαβὼν ἀπέφυγεν.\n\nὕστερον δὲ τῷ Πολυδέκτῃ τὴν κεφαλὴν δείξας, αὐτὸν εἰς λίθον μετέβαλεν.\n\nGlossary: Πολυδέκτης = Polydectes; φοβούμενος = being afraid; ἐξῆλθεν = set out; ἐβοήθησαν (+ dative) = helped; ἀσπίς (accusative ἀσπίδα) = shield; λαμπρός = shining; ἔδωκεν = gave; ἅρπη = curved sword; πτερωτὰ πέδιλα = winged sandals; πετόμενος = flying; Γοργών, -όνος = Gorgon; νῆσος (ἡ) = island; ἦλθεν = came; καθευδουσῶν = sleeping; βλέπων = looking; ἀπέτεμεν = cut off; λαβών = having taken; ἀπέφυγεν = escaped; ὕστερον = later; δείξας = having shown; λίθος = stone; μετέβαλεν = changed.",
+   "passageSource": "Adapted for this app from the myth of Perseus"
+  },
+  {
+   "id": "greek.g3.pe.5",
+   "topic": "greek.read-4",
+   "kind": "mcq",
+   "prompt": "How did Perseus avoid being turned to stone?",
+   "options": [
+    {
+     "text": "He looked at the shield, not at Medusa",
+     "correct": true
+    },
+    {
+     "text": "He closed his eyes",
+     "correct": false,
+     "feedback": "“εἰς τὴν ἀσπίδα βλέπων”: looking at the shield."
+    },
+    {
+     "text": "He wore a helmet",
+     "correct": false,
+     "feedback": "There is no helmet in this version."
+    }
+   ],
+   "explain": "οὐκ εἰς τὴν Μέδουσαν ἀλλ᾽ εἰς τὴν ἀσπίδα: not at Medusa but at the shield.",
+   "passage": "ὁ Περσεὺς καὶ ἡ τῆς Μεδούσης κεφαλή\n\nὁ Πολυδέκτης ὁ βασιλεὺς τὸν Περσέα ἐκέλευσε τὴν τῆς Μεδούσης κεφαλὴν φέρειν. ὁ δὲ Περσεὺς οὐ φοβούμενος ἐξῆλθεν. ἡ Ἀθηνᾶ καὶ ὁ Ἑρμῆς αὐτῷ ἐβοήθησαν· ἡ μὲν ἀσπίδα λαμπρὰν ἔδωκεν, ὁ δὲ ἅρπην καὶ πτερωτὰ πέδιλα.\n\nὁ οὖν Περσεὺς πετόμενος πρὸς τὴν τῶν Γοργόνων νῆσον ἦλθεν. τῶν δὲ Γοργόνων καθευδουσῶν, οὐκ εἰς τὴν Μέδουσαν ἀλλ᾽ εἰς τὴν ἀσπίδα βλέπων, τὴν κεφαλὴν αὐτῆς ἀπέτεμεν. ἔπειτα τὴν κεφαλὴν λαβὼν ἀπέφυγεν.\n\nὕστερον δὲ τῷ Πολυδέκτῃ τὴν κεφαλὴν δείξας, αὐτὸν εἰς λίθον μετέβαλεν.\n\nGlossary: Πολυδέκτης = Polydectes; φοβούμενος = being afraid; ἐξῆλθεν = set out; ἐβοήθησαν (+ dative) = helped; ἀσπίς (accusative ἀσπίδα) = shield; λαμπρός = shining; ἔδωκεν = gave; ἅρπη = curved sword; πτερωτὰ πέδιλα = winged sandals; πετόμενος = flying; Γοργών, -όνος = Gorgon; νῆσος (ἡ) = island; ἦλθεν = came; καθευδουσῶν = sleeping; βλέπων = looking; ἀπέτεμεν = cut off; λαβών = having taken; ἀπέφυγεν = escaped; ὕστερον = later; δείξας = having shown; λίθος = stone; μετέβαλεν = changed.",
+   "passageSource": "Adapted for this app from the myth of Perseus"
+  },
+  {
+   "id": "greek.g3.pe.6",
+   "topic": "greek.read-4",
+   "kind": "mcq",
+   "prompt": "What does **δείξας** mean, and what happened to Polydectes?",
+   "options": [
+    {
+     "text": "having shown: Perseus showed him the head and turned him to stone",
+     "correct": true
+    },
+    {
+     "text": "having hidden: Perseus hid the head from him",
+     "correct": false,
+     "feedback": "δείκνυμι = I show."
+    },
+    {
+     "text": "while running: Polydectes ran away",
+     "correct": false,
+     "feedback": "“αὐτὸν εἰς λίθον μετέβαλεν”: he turned him into stone."
+    }
+   ],
+   "explain": "δείξας: aorist participle of δείκνυμι, I show.",
+   "passage": "ὁ Περσεὺς καὶ ἡ τῆς Μεδούσης κεφαλή\n\nὁ Πολυδέκτης ὁ βασιλεὺς τὸν Περσέα ἐκέλευσε τὴν τῆς Μεδούσης κεφαλὴν φέρειν. ὁ δὲ Περσεὺς οὐ φοβούμενος ἐξῆλθεν. ἡ Ἀθηνᾶ καὶ ὁ Ἑρμῆς αὐτῷ ἐβοήθησαν· ἡ μὲν ἀσπίδα λαμπρὰν ἔδωκεν, ὁ δὲ ἅρπην καὶ πτερωτὰ πέδιλα.\n\nὁ οὖν Περσεὺς πετόμενος πρὸς τὴν τῶν Γοργόνων νῆσον ἦλθεν. τῶν δὲ Γοργόνων καθευδουσῶν, οὐκ εἰς τὴν Μέδουσαν ἀλλ᾽ εἰς τὴν ἀσπίδα βλέπων, τὴν κεφαλὴν αὐτῆς ἀπέτεμεν. ἔπειτα τὴν κεφαλὴν λαβὼν ἀπέφυγεν.\n\nὕστερον δὲ τῷ Πολυδέκτῃ τὴν κεφαλὴν δείξας, αὐτὸν εἰς λίθον μετέβαλεν.\n\nGlossary: Πολυδέκτης = Polydectes; φοβούμενος = being afraid; ἐξῆλθεν = set out; ἐβοήθησαν (+ dative) = helped; ἀσπίς (accusative ἀσπίδα) = shield; λαμπρός = shining; ἔδωκεν = gave; ἅρπη = curved sword; πτερωτὰ πέδιλα = winged sandals; πετόμενος = flying; Γοργών, -όνος = Gorgon; νῆσος (ἡ) = island; ἦλθεν = came; καθευδουσῶν = sleeping; βλέπων = looking; ἀπέτεμεν = cut off; λαβών = having taken; ἀπέφυγεν = escaped; ὕστερον = later; δείξας = having shown; λίθος = stone; μετέβαλεν = changed.",
+   "passageSource": "Adapted for this app from the myth of Perseus"
+  },
+  {
+   "id": "greek.g3.pe.3",
+   "topic": "greek.read-4",
+   "kind": "fact",
+   "prompt": "Which gifts came from Hermes?",
+   "answer": "a curved sword and winged sandals",
+   "distractors": [
+    "a shining shield",
+    "a magic potion",
+    "a ship"
+   ],
+   "explain": "“ἡ μὲν (Athena) ἀσπίδα λαμπρὰν ἔδωκεν, ὁ δὲ (Hermes) ἅρπην καὶ πτερωτὰ πέδιλα.”",
+   "formats": [
+    "choice"
+   ],
+   "passage": "ὁ Περσεὺς καὶ ἡ τῆς Μεδούσης κεφαλή\n\nὁ Πολυδέκτης ὁ βασιλεὺς τὸν Περσέα ἐκέλευσε τὴν τῆς Μεδούσης κεφαλὴν φέρειν. ὁ δὲ Περσεὺς οὐ φοβούμενος ἐξῆλθεν. ἡ Ἀθηνᾶ καὶ ὁ Ἑρμῆς αὐτῷ ἐβοήθησαν· ἡ μὲν ἀσπίδα λαμπρὰν ἔδωκεν, ὁ δὲ ἅρπην καὶ πτερωτὰ πέδιλα.\n\nὁ οὖν Περσεὺς πετόμενος πρὸς τὴν τῶν Γοργόνων νῆσον ἦλθεν. τῶν δὲ Γοργόνων καθευδουσῶν, οὐκ εἰς τὴν Μέδουσαν ἀλλ᾽ εἰς τὴν ἀσπίδα βλέπων, τὴν κεφαλὴν αὐτῆς ἀπέτεμεν. ἔπειτα τὴν κεφαλὴν λαβὼν ἀπέφυγεν.\n\nὕστερον δὲ τῷ Πολυδέκτῃ τὴν κεφαλὴν δείξας, αὐτὸν εἰς λίθον μετέβαλεν.\n\nGlossary: Πολυδέκτης = Polydectes; φοβούμενος = being afraid; ἐξῆλθεν = set out; ἐβοήθησαν (+ dative) = helped; ἀσπίς (accusative ἀσπίδα) = shield; λαμπρός = shining; ἔδωκεν = gave; ἅρπη = curved sword; πτερωτὰ πέδιλα = winged sandals; πετόμενος = flying; Γοργών, -όνος = Gorgon; νῆσος (ἡ) = island; ἦλθεν = came; καθευδουσῶν = sleeping; βλέπων = looking; ἀπέτεμεν = cut off; λαβών = having taken; ἀπέφυγεν = escaped; ὕστερον = later; δείξας = having shown; λίθος = stone; μετέβαλεν = changed.",
+   "passageSource": "Adapted for this app from the myth of Perseus"
+  }
+ ]
+}

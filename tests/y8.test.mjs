@@ -10,7 +10,7 @@ import { present } from '../js/core/present.js';
 import { check, correctResponse, checkSentence } from '../js/core/checkers.js';
 import { emptyState } from '../js/core/store.js';
 import { makeRng } from '../js/core/rng.js';
-import { planDay, topicChoices, chooseTopic, questionFor, submit, startSession, finishSession, budgets, fsrsFor } from '../js/core/session.js';
+import { planDay, topicChoices, chooseTopic, questionFor, submit, startSession, finishSession, budgets, fsrsFor, writtenDue } from '../js/core/session.js';
 import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement } from '../js/core/placement.js';
 import { milestones } from '../js/core/progress.js';
 import { sprintQuestion } from '../js/gen/sprint.js';
@@ -58,7 +58,7 @@ test('Year 8 content is valid and substantial in every subject', () => {
 });
 
 test('original characters only: nothing from the Percy Jackson books outside the reading list', () => {
-  const banned = /\b(Percy|Annabeth|Grover|Thalia|Nico|Clarisse|Tyson|Camp Half-Blood|Camp Jupiter|half-blood|Valdez|Reyna)\b/;
+  const banned = /\b(Percy(?! Bysshe)|Annabeth|Grover|Thalia|Nico|Clarisse|Tyson|Camp Half-Blood|Camp Jupiter|half-blood|Valdez|Reyna)\b/;
   for (const p of index.decks.filter((p) => !p.endsWith('books.json'))) {
     const text = readFileSync(new URL(p, root), 'utf8');
     const m = text.match(banned);
@@ -108,6 +108,29 @@ test('the Year 8 sprint: numeric answers, and the full keyboard when an answer c
       if (q.value < 0) assert.equal(q.keypad, false, `L${level} ${q.prompt}: negative answer needs the minus key`);
     }
   }
+});
+
+test('written answers: every subject that has them gets a turn, and only once she has met the topic', () => {
+  const state = emptyState(100);
+  const subjects = [...new Set(Object.values(db.items).filter((i) => i.kind === 'written').map((i) => i.subject))];
+  assert.ok(subjects.length >= 4, `written answers in ${subjects.join(', ')}`);
+  for (const sub of subjects) {
+    const w = Object.values(db.items).find((i) => i.kind === 'written' && i.subject === sub);
+    state.topics[w.topic] = { ema: 0.6, n: 3, state: 'learning', started: 90 };
+    for (const id of db.itemsByTopic[w.topic].filter((id) => db.items[id].kind !== 'written')) state.cards[id] = { state: 'review', s: 3, d: 5, lastDay: 95, due: 999, reps: 1, lapses: 0 };
+  }
+  const seen = [];
+  for (let day = 100; day < 100 + 7 * subjects.length; day += 4) {
+    const id = writtenDue(state, db, day);
+    if (!id) continue;
+    seen.push(db.items[id].subject);
+    state.answers.push({ itemId: id, day, text: 'x' });
+  }
+  for (const sub of subjects) assert.ok(seen.includes(sub), `${sub} got a written answer: ${seen.join(', ')}`);
+  const fresh = emptyState(100);
+  const w = Object.values(db.items).find((i) => i.kind === 'written');
+  fresh.topics[w.topic] = { ema: 0.5, n: 0, state: 'learning', started: 100 };
+  assert.equal(writtenDue(fresh, db, 100), null, 'not before she has answered anything in the topic');
 });
 
 test('code in Computing questions is shown as code', () => {

@@ -1,0 +1,4992 @@
+{
+ "subject": "science",
+ "deck": "y8-more",
+ "topics": [
+  {
+   "id": "science.enzymes",
+   "title": "Enzymes: how they work",
+   "kind": "facts",
+   "prereqs": [
+    "science.organs"
+   ],
+   "batch": 5,
+   "intro": "Enzymes are biological catalysts: proteins that speed up reactions without being used up. Each has an active site with a precise shape, so it only fits its own substrate: the lock-and-key model.",
+   "teach": "Explain, using the lock-and-key model, why an enzyme stops working at high temperature.",
+   "talk": "Ask {him} why fresh pineapple stops jelly setting (an enzyme breaks down the protein), but tinned pineapple does not."
+  },
+  {
+   "id": "science.circulation",
+   "title": "The heart and circulation",
+   "kind": "facts",
+   "prereqs": [
+    "science.respiration"
+   ],
+   "batch": 5,
+   "intro": "The heart is two pumps side by side: the right side sends blood to the lungs, the left side to the rest of the body. Arteries, veins and capillaries each have a structure that fits their job.",
+   "teach": "Explain why the left ventricle has a thicker wall than the right.",
+   "talk": "Take each other’s pulse before and after running up the stairs."
+  },
+  {
+   "id": "science.nervous",
+   "title": "Nerves, reflexes and reaction times",
+   "kind": "facts",
+   "prereqs": [
+    "science.organs"
+   ],
+   "batch": 5,
+   "intro": "Receptors detect a stimulus; electrical impulses travel along neurones to the brain or spinal cord; effectors (muscles and glands) respond. Reflexes skip the thinking part of the brain to protect you.",
+   "teach": "Explain the path of a reflex arc when you touch a hot pan.",
+   "talk": "Try the ruler-drop test with {her}, then try it while chatting."
+  },
+  {
+   "id": "science.transport",
+   "title": "Plant transport and stomata",
+   "kind": "facts",
+   "prereqs": [
+    "science.photosynthesis"
+   ],
+   "batch": 5,
+   "intro": "Water travels up from the roots through xylem and evaporates from the leaves through stomata: transpiration. Sugars made in the leaves travel through phloem to where they are needed.",
+   "teach": "Explain why a plant wilts on a hot, windy day.",
+   "talk": "Stand a white carnation or a celery stick in coloured water and watch the xylem."
+  },
+  {
+   "id": "science.immunity",
+   "title": "Microbes, immunity and vaccines",
+   "kind": "facts",
+   "prereqs": [
+    "science.health"
+   ],
+   "batch": 5,
+   "intro": "White blood cells defend the body: some engulf pathogens, others make antibodies that lock onto them. Vaccines train the immune system in advance, so it responds faster the next time.",
+   "teach": "Explain why a vaccinated person usually does not become ill when they meet the real pathogen.",
+   "talk": "Ask {him} why antibiotics don’t work on a cold."
+  },
+  {
+   "id": "science.diet",
+   "title": "Diet, food tests and energy",
+   "kind": "facts",
+   "prereqs": [
+    "science.organs"
+   ],
+   "batch": 5,
+   "intro": "A balanced diet has carbohydrates, proteins, fats, vitamins, minerals, fibre and water. Simple chemical tests show which nutrients a food contains.",
+   "teach": "Explain which test you would use to show a food contains protein, and the colour change.",
+   "talk": "Read a food label together and compare the energy per 100 g of two snacks."
+  },
+  {
+   "id": "science.biodiversity",
+   "title": "Classification and biodiversity",
+   "kind": "facts",
+   "prereqs": [
+    "science.ecosystems"
+   ],
+   "batch": 5,
+   "intro": "Linnaeus sorted living things into a hierarchy, from kingdom down to species, and gave each species a two-part Latin name. Biodiversity is the variety of life in an area, and it is under pressure from human activity.",
+   "teach": "Explain why biodiversity matters, with two reasons.",
+   "talk": "Ask {him} what Homo sapiens means (“wise human”)."
+  },
+  {
+   "id": "science.geneng",
+   "title": "Genetic engineering and its ethics",
+   "kind": "facts",
+   "prereqs": [
+    "science.inheritance"
+   ],
+   "batch": 5,
+   "intro": "Genetic engineering moves a gene from one organism into another, so it makes something new: bacteria that make human insulin, crops that resist pests. It raises big questions about safety and fairness.",
+   "teach": "Explain one benefit and one concern about GM crops.",
+   "talk": "Discuss with {him}: should we bring back extinct animals if we could?"
+  },
+  {
+   "id": "science.formulae",
+   "title": "Formulae, equations and conservation of mass",
+   "kind": "mixed",
+   "prereqs": [
+    "science.reactions"
+   ],
+   "batch": 5,
+   "intro": "A formula tells you which atoms are in a substance and how many. Because atoms are only rearranged in a reaction, the total mass stays the same, though a gas escaping can make it look as if mass is lost.",
+   "teach": "Explain why the mass of magnesium goes UP when it burns.",
+   "talk": "Ask {him} to count the atoms in H₂SO₄."
+  },
+  {
+   "id": "science.extraction",
+   "title": "Reactivity and extracting metals",
+   "kind": "facts",
+   "prereqs": [
+    "science.acids"
+   ],
+   "batch": 5,
+   "intro": "How a metal is extracted depends on its reactivity. Metals below carbon in the reactivity series can be extracted by heating their ores with carbon; more reactive metals need electrolysis.",
+   "teach": "Explain why iron can be extracted with carbon but aluminium cannot.",
+   "talk": "Ask {him} why gold jewellery from ancient Greece still shines."
+  },
+  {
+   "id": "science.rates",
+   "title": "Rates of reaction",
+   "kind": "mixed",
+   "prereqs": [
+    "science.reactions"
+   ],
+   "batch": 5,
+   "intro": "Particles must collide with enough energy to react. More frequent or more energetic collisions mean a faster reaction: raise the temperature, concentration or surface area, or add a catalyst.",
+   "teach": "Explain, using collision theory, why powder reacts faster than lumps.",
+   "talk": "Drop a whole antacid tablet and a crushed one into water and compare."
+  },
+  {
+   "id": "science.energychange",
+   "title": "Exothermic and endothermic reactions",
+   "kind": "facts",
+   "prereqs": [
+    "science.reactions"
+   ],
+   "batch": 5,
+   "intro": "Exothermic reactions give out energy to the surroundings, so the temperature rises. Endothermic reactions take energy in, so the surroundings get colder.",
+   "teach": "Explain, in terms of bonds, why combustion is exothermic.",
+   "talk": "Look at how a reusable hand warmer works."
+  },
+  {
+   "id": "science.materials",
+   "title": "Polymers, ceramics, composites and alloys",
+   "kind": "facts",
+   "prereqs": [
+    "science.atoms"
+   ],
+   "batch": 5,
+   "intro": "Materials are chosen for their properties. Polymers are long chains; ceramics are hard but brittle; composites combine two materials; alloys are mixtures of metals that are harder than the pure metal.",
+   "teach": "Explain why an alloy is harder than a pure metal, using a particle diagram.",
+   "talk": "Spot five composite materials at home or on a bike."
+  },
+  {
+   "id": "science.resources",
+   "title": "Earth’s resources and recycling",
+   "kind": "facts",
+   "prereqs": [
+    "science.earth"
+   ],
+   "batch": 5,
+   "intro": "Many resources are finite: once used, they are gone. Recycling, reusing and life-cycle assessments help us use them more wisely.",
+   "teach": "Explain why recycling aluminium saves so much energy.",
+   "talk": "Sort the recycling together and ask {him} which item saves the most energy to recycle."
+  },
+  {
+   "id": "science.motion",
+   "title": "Motion graphs and terminal velocity",
+   "kind": "mixed",
+   "prereqs": [
+    "science.forces"
+   ],
+   "batch": 5,
+   "intro": "Distance–time graphs show speed as the gradient. Velocity–time graphs show acceleration as the gradient and distance as the area underneath. A falling object reaches terminal velocity when air resistance balances its weight.",
+   "teach": "Explain why a skydiver reaches a steady speed.",
+   "talk": "Drop a flat sheet of paper and a scrunched-up one together, and compare."
+  },
+  {
+   "id": "science.work",
+   "title": "Work, power and energy stores",
+   "kind": "mixed",
+   "prereqs": [
+    "science.energy"
+   ],
+   "batch": 5,
+   "intro": "Work is done when a force moves something: work done = force × distance. Lifting stores energy as gravitational potential energy; moving objects have kinetic energy.",
+   "teach": "Explain the energy transfers when a weightlifter lifts and drops a bar.",
+   "talk": "Ask {him} how much work {she} does climbing the stairs (weight × height)."
+  },
+  {
+   "id": "science.heating",
+   "title": "Heating and specific heat capacity",
+   "kind": "mixed",
+   "prereqs": [
+    "science.energy"
+   ],
+   "batch": 5,
+   "intro": "Energy moves from hot to cold by conduction, convection and radiation. Specific heat capacity tells you how much energy it takes to warm 1 kg of a material by 1 °C; water’s is very high.",
+   "teach": "Explain why the sea warms up more slowly than the sand in summer.",
+   "talk": "Feel a metal spoon and a wooden spoon from the same drawer: which feels colder, and why?"
+  },
+  {
+   "id": "science.static",
+   "title": "Static electricity and electric fields",
+   "kind": "facts",
+   "prereqs": [
+    "science.electricity"
+   ],
+   "batch": 5,
+   "intro": "Rubbing two materials together can move electrons from one to the other, leaving both charged. Like charges repel, opposite charges attract, and a charged object is surrounded by an electric field.",
+   "teach": "Explain why a rubbed balloon sticks to a wall.",
+   "talk": "Rub a balloon on {her} hair and watch it lift."
+  },
+  {
+   "id": "science.light",
+   "title": "Refraction, lenses, colour and ultrasound",
+   "kind": "mixed",
+   "prereqs": [
+    "science.waves"
+   ],
+   "batch": 5,
+   "intro": "Light bends (refracts) when it changes speed between materials. Lenses use refraction to focus light; prisms split white light into a spectrum. Sound above 20 000 Hz is ultrasound, used for scans and sonar.",
+   "teach": "Explain why a straw looks bent in a glass of water.",
+   "talk": "Make a rainbow with a glass of water in sunlight."
+  },
+  {
+   "id": "science.stars",
+   "title": "Stars, galaxies and the universe",
+   "kind": "facts",
+   "prereqs": [
+    "science.space"
+   ],
+   "batch": 5,
+   "intro": "Stars are born in clouds of dust and gas, shine by nuclear fusion, and die in different ways depending on their mass. Our Sun is one of hundreds of billions of stars in the Milky Way.",
+   "teach": "Explain how the life cycle of a massive star differs from the Sun’s.",
+   "talk": "Find Orion and Cassiopeia in the night sky, and tell each other their myths."
+  },
+  {
+   "id": "science.practicals",
+   "title": "Practical skills: methods, errors and evaluation",
+   "kind": "mixed",
+   "prereqs": [
+    "science.working"
+   ],
+   "batch": 5,
+   "intro": "Good practical work means planning a fair test, taking repeat readings, spotting anomalies, calculating means and judging how far the evidence supports a conclusion.",
+   "teach": "Explain the difference between a random error and a systematic error.",
+   "talk": "Ask {him} to plan a fair test for which paper towel is most absorbent."
+  },
+  {
+   "id": "science.electrolysis",
+   "title": "Electrolysis",
+   "kind": "facts",
+   "prereqs": [
+    "science.extraction"
+   ],
+   "batch": 5,
+   "intro": "Electricity can split compounds that contain ions, if they are melted or dissolved so the ions can move. Positive ions go to the negative electrode; negative ions go to the positive electrode.",
+   "teach": "Explain why solid salt cannot be electrolysed but salt solution can.",
+   "talk": "Ask {him} how the aluminium in a drinks can was made.",
+   "tier": "stretch"
+  },
+  {
+   "id": "science.induction",
+   "title": "Electromagnetic induction",
+   "kind": "facts",
+   "prereqs": [
+    "science.electricity"
+   ],
+   "batch": 5,
+   "intro": "Moving a magnet in a coil of wire, or a wire in a magnetic field, induces a potential difference. Power stations, bike dynamos and wind turbines all use this.",
+   "teach": "Explain three ways to make a generator produce a bigger voltage.",
+   "talk": "Look at a wind turbine and talk about where its electricity comes from.",
+   "tier": "stretch"
+  },
+  {
+   "id": "science.momentum",
+   "title": "Momentum",
+   "kind": "mixed",
+   "prereqs": [
+    "science.forces"
+   ],
+   "batch": 5,
+   "intro": "Momentum = mass × velocity. In a collision or explosion the total momentum is conserved. Spreading a collision over a longer time reduces the force: the idea behind crumple zones and airbags.",
+   "teach": "Explain why crumple zones make cars safer.",
+   "talk": "Ask {him} why you bend your knees when you land from a jump.",
+   "tier": "stretch"
+  }
+ ],
+ "items": [
+  {
+   "id": "science.m.ez.case1",
+   "topic": "science.enzymes",
+   "kind": "mcq",
+   "prompt": "At which temperature did Kit’s amylase work fastest?",
+   "options": [
+    {
+     "text": "37 °C",
+     "correct": true
+    },
+    {
+     "text": "10 °C",
+     "correct": false,
+     "feedback": "It took 300 s at 10 °C: the slowest that worked."
+    },
+    {
+     "text": "70 °C",
+     "correct": false,
+     "feedback": "At 70 °C the starch never disappeared at all."
+    }
+   ],
+   "explain": "Fastest means shortest time: 60 s at 37 °C, which is body temperature.",
+   "passage": "Case study: Kit tests how temperature affects amylase.\n\nKit mixes starch solution with amylase at different temperatures. Every 30 seconds she puts a drop of the mixture onto iodine. When the iodine stays orange-brown, all the starch has gone.\n\nTemperature (°C) | Time for starch to disappear (s)\n10 | 300\n20 | 180\n37 | 60\n50 | 150\n70 | starch never disappears",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ez.case2",
+   "topic": "science.enzymes",
+   "kind": "mcq",
+   "prompt": "Why did the starch never disappear at 70 °C?",
+   "options": [
+    {
+     "text": "The high temperature changed the shape of the active site, so the enzyme was denatured",
+     "correct": true
+    },
+    {
+     "text": "The amylase was killed",
+     "correct": false,
+     "feedback": "Enzymes are proteins, not living things, so they cannot be killed."
+    },
+    {
+     "text": "The starch boiled away",
+     "correct": false,
+     "feedback": "Starch does not boil at 70 °C; the enzyme stopped working."
+    }
+   ],
+   "explain": "Denaturing is permanent: the substrate no longer fits the active site.",
+   "passage": "Case study: Kit tests how temperature affects amylase.\n\nKit mixes starch solution with amylase at different temperatures. Every 30 seconds she puts a drop of the mixture onto iodine. When the iodine stays orange-brown, all the starch has gone.\n\nTemperature (°C) | Time for starch to disappear (s)\n10 | 300\n20 | 180\n37 | 60\n50 | 150\n70 | starch never disappears",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ez.case3",
+   "topic": "science.enzymes",
+   "kind": "mcq",
+   "prompt": "Why was the reaction slow at 10 °C?",
+   "options": [
+    {
+     "text": "The molecules moved slowly, so the enzyme and starch collided less often",
+     "correct": true
+    },
+    {
+     "text": "The enzyme was denatured",
+     "correct": false,
+     "feedback": "Cold does not denature enzymes; it slows them down."
+    },
+    {
+     "text": "There was no starch",
+     "correct": false,
+     "feedback": "The starch was there; it was broken down slowly."
+    }
+   ],
+   "explain": "Low temperature means less kinetic energy, so fewer successful collisions.",
+   "passage": "Case study: Kit tests how temperature affects amylase.\n\nKit mixes starch solution with amylase at different temperatures. Every 30 seconds she puts a drop of the mixture onto iodine. When the iodine stays orange-brown, all the starch has gone.\n\nTemperature (°C) | Time for starch to disappear (s)\n10 | 300\n20 | 180\n37 | 60\n50 | 150\n70 | starch never disappears",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ez.case4",
+   "topic": "science.enzymes",
+   "kind": "mcq",
+   "prompt": "How could Kit make her timings more precise?",
+   "options": [
+    {
+     "text": "Test a drop every 10 seconds instead of every 30",
+     "correct": true
+    },
+    {
+     "text": "Use a different enzyme each time",
+     "correct": false,
+     "feedback": "That would make it unfair."
+    },
+    {
+     "text": "Only test one temperature",
+     "correct": false,
+     "feedback": "She needs several temperatures to see the pattern."
+    }
+   ],
+   "explain": "Testing more often gives a time closer to the true value.",
+   "passage": "Case study: Kit tests how temperature affects amylase.\n\nKit mixes starch solution with amylase at different temperatures. Every 30 seconds she puts a drop of the mixture onto iodine. When the iodine stays orange-brown, all the starch has gone.\n\nTemperature (°C) | Time for starch to disappear (s)\n10 | 300\n20 | 180\n37 | 60\n50 | 150\n70 | starch never disappears",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ez.w",
+   "topic": "science.enzymes",
+   "kind": "written",
+   "prompt": "Using Kit’s results, explain how temperature affects the activity of amylase. Use the lock-and-key model in your answer. (6 marks)",
+   "hints": [
+    "Describe the pattern: faster up to 37 °C, then slower, then none at 70 °C",
+    "Use figures from the table",
+    "Explain the rise: more kinetic energy, more collisions",
+    "Explain the fall: active site changes shape, enzyme denatured",
+    "Mention that the optimum is body temperature"
+   ],
+   "model": "As the temperature rises from 10 °C to 37 °C, the time for the starch to disappear falls from 300 s to 60 s, so the enzyme works faster. This is because the molecules have more kinetic energy, so starch collides with the active site more often. Above 37 °C the time rises again (150 s at 50 °C) and at 70 °C the starch never disappears. The high temperature changes the shape of the active site, so starch no longer fits like a key in a lock: the enzyme is denatured. The optimum is about 37 °C, body temperature, because this is a human enzyme.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: Kit tests how temperature affects amylase.\n\nKit mixes starch solution with amylase at different temperatures. Every 30 seconds she puts a drop of the mixture onto iodine. When the iodine stays orange-brown, all the starch has gone.\n\nTemperature (°C) | Time for starch to disappear (s)\n10 | 300\n20 | 180\n37 | 60\n50 | 150\n70 | starch never disappears",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ez.catalyst",
+   "topic": "science.enzymes",
+   "kind": "fact",
+   "prompt": "An enzyme is a biological…",
+   "answer": "catalyst",
+   "distractors": [
+    "nutrient",
+    "hormone",
+    "antibody"
+   ],
+   "explain": "A catalyst speeds up a reaction without being used up.",
+   "accept": [
+    "catalysts"
+   ]
+  },
+  {
+   "id": "science.m.ez.ph",
+   "topic": "science.enzymes",
+   "kind": "mcq",
+   "prompt": "The protease pepsin works best at about pH 2. Where in the body does it work?",
+   "options": [
+    {
+     "text": "The stomach",
+     "correct": true
+    },
+    {
+     "text": "The mouth",
+     "correct": false,
+     "feedback": "Saliva is close to neutral."
+    },
+    {
+     "text": "The small intestine",
+     "correct": false,
+     "feedback": "The small intestine is slightly alkaline."
+    }
+   ],
+   "explain": "The stomach contains hydrochloric acid, so stomach enzymes are adapted to acid."
+  },
+  {
+   "id": "science.m.ez.specific",
+   "topic": "science.enzymes",
+   "kind": "mcq",
+   "prompt": "Why does amylase break down starch but not protein?",
+   "options": [
+    {
+     "text": "Only starch fits the shape of its active site",
+     "correct": true
+    },
+    {
+     "text": "Protein is too big to be digested",
+     "correct": false,
+     "feedback": "Proteases digest protein easily."
+    },
+    {
+     "text": "Amylase only works in the mouth",
+     "correct": false,
+     "feedback": "Amylase also works in the small intestine; the reason is shape."
+    }
+   ],
+   "explain": "Each enzyme is specific to its substrate."
+  },
+  {
+   "id": "science.m.ez.catalase",
+   "topic": "science.enzymes",
+   "kind": "mcq",
+   "prompt": "Liver contains catalase, which breaks down hydrogen peroxide into water and oxygen. What would you SEE when liver is dropped into hydrogen peroxide?",
+   "options": [
+    {
+     "text": "Lots of bubbles of oxygen",
+     "correct": true
+    },
+    {
+     "text": "The liver turning blue",
+     "correct": false,
+     "feedback": "There is no colour indicator here."
+    },
+    {
+     "text": "Nothing at all",
+     "correct": false,
+     "feedback": "Catalase is one of the fastest enzymes known."
+    }
+   ],
+   "explain": "The fizzing is oxygen gas, a quick way to show enzyme activity."
+  },
+  {
+   "id": "science.m.ez.washing",
+   "topic": "science.enzymes",
+   "kind": "mcq",
+   "prompt": "Biological washing powders contain enzymes. Why are they best used at 30–40 °C rather than at 90 °C?",
+   "options": [
+    {
+     "text": "At 90 °C the enzymes would be denatured",
+     "correct": true
+    },
+    {
+     "text": "Hot water does not clean",
+     "correct": false,
+     "feedback": "Hot water does clean; the point is the enzymes."
+    },
+    {
+     "text": "The enzymes only work in cold water",
+     "correct": false,
+     "feedback": "Too cold and they work slowly."
+    }
+   ],
+   "explain": "Low-temperature washes also save energy."
+  },
+  {
+   "id": "science.m.ci.case1",
+   "topic": "science.circulation",
+   "kind": "mcq",
+   "prompt": "Why did Theo’s heart rate go up during exercise?",
+   "options": [
+    {
+     "text": "His muscles needed more oxygen and glucose for respiration, and to remove more carbon dioxide",
+     "correct": true
+    },
+    {
+     "text": "His heart was tired",
+     "correct": false,
+     "feedback": "A tired heart would not speed up."
+    },
+    {
+     "text": "The stairs were cold",
+     "correct": false,
+     "feedback": "Temperature is not the main reason."
+    }
+   ],
+   "explain": "Working muscles respire faster, so the blood must deliver more oxygen and glucose.",
+   "passage": "Case study: Theo’s heart rate.\n\nTheo measures his pulse at rest, then runs up and down the stairs at the Acropolis Museum for three minutes, then measures it again every minute while he rests.\n\nAt rest: 70 beats per minute\nStraight after exercise: 140\n1 minute later: 115\n2 minutes later: 95\n3 minutes later: 80\n4 minutes later: 72",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ci.case2",
+   "topic": "science.circulation",
+   "kind": "mcq",
+   "prompt": "How long did it take Theo’s heart rate to get back to within 2 beats of resting?",
+   "options": [
+    {
+     "text": "4 minutes",
+     "correct": true
+    },
+    {
+     "text": "1 minute",
+     "correct": false,
+     "feedback": "After 1 minute it was still 115."
+    },
+    {
+     "text": "It never recovered",
+     "correct": false,
+     "feedback": "At 4 minutes it was 72, close to his resting 70."
+    }
+   ],
+   "explain": "Recovery time is a measure of fitness: fitter people recover faster.",
+   "passage": "Case study: Theo’s heart rate.\n\nTheo measures his pulse at rest, then runs up and down the stairs at the Acropolis Museum for three minutes, then measures it again every minute while he rests.\n\nAt rest: 70 beats per minute\nStraight after exercise: 140\n1 minute later: 115\n2 minutes later: 95\n3 minutes later: 80\n4 minutes later: 72",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ci.case3",
+   "topic": "science.circulation",
+   "kind": "mcq",
+   "prompt": "By what percentage did Theo’s heart rate increase from rest to straight after exercise?",
+   "options": [
+    {
+     "text": "100%",
+     "correct": true
+    },
+    {
+     "text": "70%",
+     "correct": false,
+     "feedback": "The increase was 70 beats, but as a percentage of 70 that is 100%."
+    },
+    {
+     "text": "200%",
+     "correct": false,
+     "feedback": "140 is double 70: a 100% increase."
+    }
+   ],
+   "explain": "(140 − 70) ÷ 70 × 100 = 100%.",
+   "passage": "Case study: Theo’s heart rate.\n\nTheo measures his pulse at rest, then runs up and down the stairs at the Acropolis Museum for three minutes, then measures it again every minute while he rests.\n\nAt rest: 70 beats per minute\nStraight after exercise: 140\n1 minute later: 115\n2 minutes later: 95\n3 minutes later: 80\n4 minutes later: 72",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ci.w",
+   "topic": "science.circulation",
+   "kind": "written",
+   "prompt": "Describe how Theo could use this experiment to compare his fitness with Mira’s. Explain what results would show who is fitter. (6 marks)",
+   "hints": [
+    "Measure both resting heart rates in the same way",
+    "Same exercise, same time, same stairs (control variables)",
+    "Measure every minute until back to resting",
+    "Repeat to get reliable results",
+    "The fitter person has a lower resting rate and recovers faster"
+   ],
+   "model": "Theo and Mira should each sit quietly and measure their resting pulse for one minute. They should then do exactly the same exercise, such as running up and down the same stairs for three minutes, so it is a fair test. Straight afterwards, and then every minute, they measure their pulse until it returns to resting. They should repeat the whole test on another day and take means. The fitter person will usually have a lower resting heart rate, a smaller rise during exercise and a shorter recovery time, because their heart pumps more blood with each beat.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: Theo’s heart rate.\n\nTheo measures his pulse at rest, then runs up and down the stairs at the Acropolis Museum for three minutes, then measures it again every minute while he rests.\n\nAt rest: 70 beats per minute\nStraight after exercise: 140\n1 minute later: 115\n2 minutes later: 95\n3 minutes later: 80\n4 minutes later: 72",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ci.route",
+   "topic": "science.circulation",
+   "kind": "order",
+   "prompt": "Put the route of blood from the body to the lungs in order.",
+   "items": [
+    "vena cava",
+    "right atrium",
+    "right ventricle",
+    "pulmonary artery",
+    "lungs"
+   ],
+   "labels": null,
+   "explain": "Deoxygenated blood returns in the vena cava, enters the right atrium, and is pumped by the right ventricle along the pulmonary artery to the lungs."
+  },
+  {
+   "id": "science.m.ci.left",
+   "topic": "science.circulation",
+   "kind": "mcq",
+   "prompt": "Why does the left ventricle have a thicker muscular wall than the right ventricle?",
+   "options": [
+    {
+     "text": "It pumps blood all round the body, which needs a higher pressure",
+     "correct": true
+    },
+    {
+     "text": "It holds more blood",
+     "correct": false,
+     "feedback": "Both ventricles pump the same volume each beat."
+    },
+    {
+     "text": "It pumps blood to the lungs",
+     "correct": false,
+     "feedback": "That is the right ventricle."
+    }
+   ],
+   "explain": "The right side only has to push blood the short distance to the lungs."
+  },
+  {
+   "id": "science.m.ci.valves",
+   "topic": "science.circulation",
+   "kind": "mcq",
+   "prompt": "What is the job of the valves in the heart and veins?",
+   "options": [
+    {
+     "text": "To stop blood flowing backwards",
+     "correct": true
+    },
+    {
+     "text": "To make the heartbeat sound",
+     "correct": false,
+     "feedback": "The sound comes from valves closing, but their job is to prevent backflow."
+    },
+    {
+     "text": "To add oxygen to the blood",
+     "correct": false,
+     "feedback": "Oxygen is added in the lungs."
+    }
+   ],
+   "explain": "Veins have valves because the blood in them is at low pressure."
+  },
+  {
+   "id": "science.m.ci.vessels",
+   "topic": "science.circulation",
+   "kind": "mcq",
+   "prompt": "Which vessel has walls only one cell thick, so substances can pass through?",
+   "options": [
+    {
+     "text": "Capillary",
+     "correct": true
+    },
+    {
+     "text": "Artery",
+     "correct": false,
+     "feedback": "Arteries have thick, elastic walls to cope with high pressure."
+    },
+    {
+     "text": "Vein",
+     "correct": false,
+     "feedback": "Veins have thin walls, but more than one cell thick."
+    }
+   ],
+   "explain": "Capillaries are where exchange happens between blood and cells."
+  },
+  {
+   "id": "science.m.ci.double",
+   "topic": "science.circulation",
+   "kind": "fact",
+   "prompt": "Humans have a “double circulation”. What does that mean?",
+   "answer": "blood passes through the heart twice on each complete circuit",
+   "distractors": [
+    "the heart beats twice as fast as other animals",
+    "we have two hearts",
+    "blood flows both ways in each vessel"
+   ],
+   "explain": "Once through the heart to the lungs, then back through the heart to the body.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.m.ci.pa",
+   "topic": "science.circulation",
+   "kind": "mcq",
+   "prompt": "The pulmonary artery is unusual because it carries…",
+   "options": [
+    {
+     "text": "deoxygenated blood",
+     "correct": true
+    },
+    {
+     "text": "oxygenated blood",
+     "correct": false,
+     "feedback": "Most arteries do, but the pulmonary artery carries blood TO the lungs, before it collects oxygen."
+    },
+    {
+     "text": "no blood at all",
+     "correct": false,
+     "feedback": "It carries blood from the right ventricle to the lungs."
+    }
+   ],
+   "explain": "Arteries are defined by carrying blood AWAY from the heart, not by oxygen."
+  },
+  {
+   "id": "science.m.nv.case1",
+   "topic": "science.nervous",
+   "kind": "mcq",
+   "prompt": "Why did Kit’s catches get shorter over the first five attempts?",
+   "options": [
+    {
+     "text": "She was improving with practice: her response got quicker",
+     "correct": true
+    },
+    {
+     "text": "The ruler got lighter",
+     "correct": false,
+     "feedback": "The ruler did not change."
+    },
+    {
+     "text": "Mira dropped it from lower down",
+     "correct": false,
+     "feedback": "That would be an unfair test; the starting position should stay the same."
+    }
+   ],
+   "explain": "Practice improves reaction time, which is why practice goes are often allowed before recording.",
+   "passage": "Case study: the ruler-drop test.\n\nMira holds a ruler just above Kit’s open fingers and drops it without warning. Kit catches it as fast as she can. The distance the ruler falls shows her reaction time.\n\nAttempt 1: 18 cm\nAttempt 2: 15 cm\nAttempt 3: 12 cm\nAttempt 4: 11 cm\nAttempt 5: 11 cm\n\nThen Kit repeats the test while Theo talks to her about the Olympic Games. Her catches get longer again: 16 cm, 17 cm, 15 cm.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.nv.case2",
+   "topic": "science.nervous",
+   "kind": "mcq",
+   "prompt": "What was Kit’s mean catch distance for attempts 3 to 5?",
+   "options": [
+    {
+     "text": "11.3 cm (to 1 decimal place)",
+     "correct": true
+    },
+    {
+     "text": "13.4 cm",
+     "correct": false,
+     "feedback": "That is the mean of all five, including the early ones."
+    },
+    {
+     "text": "12 cm",
+     "correct": false,
+     "feedback": "(12 + 11 + 11) ÷ 3 = 11.3 cm."
+    }
+   ],
+   "explain": "(12 + 11 + 11) ÷ 3 = 34 ÷ 3 = 11.3 cm.",
+   "passage": "Case study: the ruler-drop test.\n\nMira holds a ruler just above Kit’s open fingers and drops it without warning. Kit catches it as fast as she can. The distance the ruler falls shows her reaction time.\n\nAttempt 1: 18 cm\nAttempt 2: 15 cm\nAttempt 3: 12 cm\nAttempt 4: 11 cm\nAttempt 5: 11 cm\n\nThen Kit repeats the test while Theo talks to her about the Olympic Games. Her catches get longer again: 16 cm, 17 cm, 15 cm.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.nv.case3",
+   "topic": "science.nervous",
+   "kind": "mcq",
+   "prompt": "What does the second set of catches suggest?",
+   "options": [
+    {
+     "text": "Distractions slow down reaction time",
+     "correct": true
+    },
+    {
+     "text": "Talking improves reaction time",
+     "correct": false,
+     "feedback": "Her catches got LONGER: slower."
+    },
+    {
+     "text": "The test does not work",
+     "correct": false,
+     "feedback": "The test shows a clear difference."
+    }
+   ],
+   "explain": "Her brain was processing the conversation as well, so her response was slower.",
+   "passage": "Case study: the ruler-drop test.\n\nMira holds a ruler just above Kit’s open fingers and drops it without warning. Kit catches it as fast as she can. The distance the ruler falls shows her reaction time.\n\nAttempt 1: 18 cm\nAttempt 2: 15 cm\nAttempt 3: 12 cm\nAttempt 4: 11 cm\nAttempt 5: 11 cm\n\nThen Kit repeats the test while Theo talks to her about the Olympic Games. Her catches get longer again: 16 cm, 17 cm, 15 cm.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.nv.w",
+   "topic": "science.nervous",
+   "kind": "written",
+   "prompt": "Is catching a falling ruler a reflex? Explain your answer, describing the path the nerve impulses take in Kit’s catch. (6 marks)",
+   "hints": [
+    "It is NOT a reflex: it is a conscious response",
+    "The stimulus is detected by receptors in the eye",
+    "Sensory neurone to the brain, which decides",
+    "Motor neurone to the effector: hand muscles",
+    "Contrast with a reflex arc through the spinal cord, faster and automatic"
+   ],
+   "model": "Catching the ruler is not a reflex, because Kit has to decide to catch it and she improves with practice. Light from the falling ruler is detected by receptors in her eyes. Impulses travel along sensory neurones to her brain, which processes the information and decides to respond. Impulses then travel along motor neurones to the effectors, the muscles in her hand, which contract. A true reflex, like pulling a hand off a hot pan, is automatic and goes through a relay neurone in the spinal cord without the conscious brain, so it is faster.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: the ruler-drop test.\n\nMira holds a ruler just above Kit’s open fingers and drops it without warning. Kit catches it as fast as she can. The distance the ruler falls shows her reaction time.\n\nAttempt 1: 18 cm\nAttempt 2: 15 cm\nAttempt 3: 12 cm\nAttempt 4: 11 cm\nAttempt 5: 11 cm\n\nThen Kit repeats the test while Theo talks to her about the Olympic Games. Her catches get longer again: 16 cm, 17 cm, 15 cm.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.nv.arc",
+   "topic": "science.nervous",
+   "kind": "order",
+   "prompt": "Put the parts of a reflex arc in order.",
+   "items": [
+    "stimulus",
+    "receptor",
+    "sensory neurone",
+    "relay neurone",
+    "motor neurone",
+    "effector"
+   ],
+   "labels": null,
+   "explain": "In a reflex the relay neurone is in the spinal cord, so the conscious brain is bypassed and the response is very fast."
+  },
+  {
+   "id": "science.m.nv.reflex",
+   "topic": "science.nervous",
+   "kind": "mcq",
+   "prompt": "Why are reflexes faster than conscious responses?",
+   "options": [
+    {
+     "text": "They bypass the conscious part of the brain",
+     "correct": true
+    },
+    {
+     "text": "They use special fast blood",
+     "correct": false,
+     "feedback": "Nerves, not blood, carry the message."
+    },
+    {
+     "text": "They use no neurones",
+     "correct": false,
+     "feedback": "Reflexes use sensory, relay and motor neurones."
+    }
+   ],
+   "explain": "Speed protects you, for example from burns."
+  },
+  {
+   "id": "science.m.nv.synapse",
+   "topic": "science.nervous",
+   "kind": "mcq",
+   "prompt": "How does an impulse cross the tiny gap (synapse) between two neurones?",
+   "options": [
+    {
+     "text": "A chemical diffuses across the gap",
+     "correct": true
+    },
+    {
+     "text": "It jumps as a spark",
+     "correct": false,
+     "feedback": "There is no spark: a chemical messenger carries the signal."
+    },
+    {
+     "text": "The neurones touch",
+     "correct": false,
+     "feedback": "There is a real gap."
+    }
+   ],
+   "explain": "This is why some drugs, which affect these chemicals, change how we react."
+  },
+  {
+   "id": "science.m.nv.effector",
+   "topic": "science.nervous",
+   "kind": "mcq",
+   "prompt": "Which of these is an effector?",
+   "options": [
+    {
+     "text": "A gland that releases sweat",
+     "correct": true
+    },
+    {
+     "text": "The retina of the eye",
+     "correct": false,
+     "feedback": "The retina contains receptors."
+    },
+    {
+     "text": "The spinal cord",
+     "correct": false,
+     "feedback": "The spinal cord is part of the central nervous system."
+    }
+   ],
+   "explain": "Effectors are muscles and glands: they bring about the response."
+  },
+  {
+   "id": "science.m.nv.cns",
+   "topic": "science.nervous",
+   "kind": "fact",
+   "prompt": "The brain and spinal cord together are called the…",
+   "answer": "central nervous system",
+   "distractors": [
+    "peripheral nervous system",
+    "reflex arc",
+    "endocrine system"
+   ],
+   "explain": "The CNS coordinates responses.",
+   "accept": [
+    "cns"
+   ]
+  },
+  {
+   "id": "science.m.tr.case1",
+   "topic": "science.transport",
+   "kind": "mcq",
+   "prompt": "Why did the fan make the bubble move further?",
+   "options": [
+    {
+     "text": "Moving air carries water vapour away from the leaves, so more evaporates",
+     "correct": true
+    },
+    {
+     "text": "The fan pushed water into the shoot",
+     "correct": false,
+     "feedback": "The fan blows on the leaves, not the water."
+    },
+    {
+     "text": "The fan cooled the leaves",
+     "correct": false,
+     "feedback": "Cooling would slow transpiration; the effect comes from removing humid air."
+    }
+   ],
+   "explain": "Wind increases the rate of transpiration.",
+   "passage": "Case study: a potometer experiment.\n\nA leafy shoot is set up in a potometer, which measures how fast the shoot takes up water. An air bubble in a thin tube moves as water is taken up.\n\nConditions | Distance bubble moved in 5 minutes (mm)\nStill air, room temperature | 12\nFan blowing on the leaves | 30\nPlastic bag over the leaves | 4\nLeaves smeared with petroleum jelly underneath | 2",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.tr.case2",
+   "topic": "science.transport",
+   "kind": "mcq",
+   "prompt": "Why did the plastic bag slow water uptake?",
+   "options": [
+    {
+     "text": "The air inside became humid, so less water evaporated from the leaves",
+     "correct": true
+    },
+    {
+     "text": "The bag blocked the light completely",
+     "correct": false,
+     "feedback": "A clear bag lets light through; humidity is the main effect."
+    },
+    {
+     "text": "The bag squashed the stomata shut",
+     "correct": false,
+     "feedback": "The bag does not close the stomata."
+    }
+   ],
+   "explain": "Transpiration is slower when the air is already full of water vapour.",
+   "passage": "Case study: a potometer experiment.\n\nA leafy shoot is set up in a potometer, which measures how fast the shoot takes up water. An air bubble in a thin tube moves as water is taken up.\n\nConditions | Distance bubble moved in 5 minutes (mm)\nStill air, room temperature | 12\nFan blowing on the leaves | 30\nPlastic bag over the leaves | 4\nLeaves smeared with petroleum jelly underneath | 2",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.tr.case3",
+   "topic": "science.transport",
+   "kind": "mcq",
+   "prompt": "Petroleum jelly on the UNDERSIDE of the leaves cut water uptake almost to nothing. What does this tell us?",
+   "options": [
+    {
+     "text": "Most stomata are on the underside of the leaf",
+     "correct": true
+    },
+    {
+     "text": "Water enters through the leaves",
+     "correct": false,
+     "feedback": "Water enters through the roots; it leaves through the stomata."
+    },
+    {
+     "text": "The jelly poisoned the plant",
+     "correct": false,
+     "feedback": "The jelly blocked the stomata."
+    }
+   ],
+   "explain": "Stomata are mainly on the shaded lower surface, which reduces water loss.",
+   "passage": "Case study: a potometer experiment.\n\nA leafy shoot is set up in a potometer, which measures how fast the shoot takes up water. An air bubble in a thin tube moves as water is taken up.\n\nConditions | Distance bubble moved in 5 minutes (mm)\nStill air, room temperature | 12\nFan blowing on the leaves | 30\nPlastic bag over the leaves | 4\nLeaves smeared with petroleum jelly underneath | 2",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.tr.w",
+   "topic": "science.transport",
+   "kind": "written",
+   "prompt": "Explain the results of the potometer experiment. Describe how water moves through the plant, and why each condition changed the rate. (6 marks)",
+   "hints": [
+    "Water enters root hair cells by osmosis",
+    "It travels up the xylem",
+    "It evaporates from the leaves through the stomata (transpiration)",
+    "Fan: removes water vapour, so faster",
+    "Bag: humid air, slower; jelly blocks the stomata on the underside"
+   ],
+   "model": "Water enters the root hair cells by osmosis and travels up the stem in the xylem to the leaves, where it evaporates and escapes through the stomata. This loss, called transpiration, pulls more water up behind it, which is what the potometer measures. With a fan the bubble moved 30 mm instead of 12 mm, because moving air carries away water vapour, so evaporation is faster. With a plastic bag it moved only 4 mm because the air became humid. With petroleum jelly under the leaves it moved 2 mm because the jelly blocked the stomata, most of which are on the underside.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: a potometer experiment.\n\nA leafy shoot is set up in a potometer, which measures how fast the shoot takes up water. An air bubble in a thin tube moves as water is taken up.\n\nConditions | Distance bubble moved in 5 minutes (mm)\nStill air, room temperature | 12\nFan blowing on the leaves | 30\nPlastic bag over the leaves | 4\nLeaves smeared with petroleum jelly underneath | 2",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.tr.potometer",
+   "topic": "science.transport",
+   "kind": "mcq",
+   "prompt": "What does a potometer actually measure?",
+   "options": [
+    {
+     "text": "The rate at which the shoot takes up water",
+     "correct": true
+    },
+    {
+     "text": "The rate of photosynthesis",
+     "correct": false,
+     "feedback": "It measures water uptake."
+    },
+    {
+     "text": "The mass of the plant",
+     "correct": false,
+     "feedback": "It tracks the movement of a bubble as water is drawn in."
+    }
+   ],
+   "explain": "Most of the water taken up is lost by transpiration, so it gives a good estimate of the transpiration rate."
+  },
+  {
+   "id": "science.m.tr.phloem",
+   "topic": "science.transport",
+   "kind": "mcq",
+   "prompt": "What does phloem carry?",
+   "options": [
+    {
+     "text": "Dissolved sugars, both up and down the plant",
+     "correct": true
+    },
+    {
+     "text": "Water and minerals up from the roots",
+     "correct": false,
+     "feedback": "That is xylem."
+    },
+    {
+     "text": "Oxygen to the roots",
+     "correct": false,
+     "feedback": "Oxygen diffuses into roots from the soil."
+    }
+   ],
+   "explain": "Moving sugars in the phloem is called translocation."
+  },
+  {
+   "id": "science.m.tr.roothair",
+   "topic": "science.transport",
+   "kind": "mcq",
+   "prompt": "How are root hair cells adapted to absorb water?",
+   "options": [
+    {
+     "text": "They have a long thin extension giving a large surface area",
+     "correct": true
+    },
+    {
+     "text": "They have chloroplasts for photosynthesis",
+     "correct": false,
+     "feedback": "Roots are underground: no light, so no chloroplasts."
+    },
+    {
+     "text": "They have thick waterproof walls",
+     "correct": false,
+     "feedback": "Thin walls let water pass easily."
+    }
+   ],
+   "explain": "Millions of root hairs give a huge surface area."
+  },
+  {
+   "id": "science.m.tr.guard",
+   "topic": "science.transport",
+   "kind": "mcq",
+   "prompt": "What do guard cells do?",
+   "options": [
+    {
+     "text": "Open and close the stomata",
+     "correct": true
+    },
+    {
+     "text": "Carry water up the stem",
+     "correct": false,
+     "feedback": "Xylem does that."
+    },
+    {
+     "text": "Protect the plant from insects",
+     "correct": false,
+     "feedback": "They control gas exchange and water loss."
+    }
+   ],
+   "explain": "Stomata usually close at night or in drought to save water."
+  },
+  {
+   "id": "science.m.tr.wilt",
+   "topic": "science.transport",
+   "kind": "mcq",
+   "prompt": "Why does a plant wilt on a hot, dry day?",
+   "options": [
+    {
+     "text": "It loses water from the leaves faster than the roots can take it up",
+     "correct": true
+    },
+    {
+     "text": "It makes too much glucose",
+     "correct": false,
+     "feedback": "Wilting is about water."
+    },
+    {
+     "text": "The phloem stops carrying sugar",
+     "correct": false,
+     "feedback": "It is a water shortage in the cells."
+    }
+   ],
+   "explain": "The cells lose water and go floppy, so the leaves droop."
+  },
+  {
+   "id": "science.m.im.case1",
+   "topic": "science.immunity",
+   "kind": "mcq",
+   "prompt": "Why did James Phipps not become ill when Jenner exposed him to smallpox?",
+   "options": [
+    {
+     "text": "His immune system had already learned to make antibodies against a very similar virus",
+     "correct": true
+    },
+    {
+     "text": "Smallpox is harmless",
+     "correct": false,
+     "feedback": "Smallpox killed millions."
+    },
+    {
+     "text": "Jenner gave him antibiotics",
+     "correct": false,
+     "feedback": "Antibiotics had not been discovered, and they do not work on viruses."
+    }
+   ],
+   "explain": "Cowpox and smallpox viruses are similar, so his memory cells recognised smallpox.",
+   "passage": "Case study: from cowpox to vaccines.\n\nIn 1796 the English doctor Edward Jenner noticed that milkmaids who had caught cowpox, a mild disease, seemed not to catch smallpox, a deadly one. He scratched material from a cowpox sore into the arm of a boy, James Phipps. Weeks later he exposed the boy to smallpox, and the boy did not become ill.\n\nJenner called his method vaccination, from vacca, Latin for cow. After a worldwide vaccination campaign, smallpox was declared eradicated in 1980.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.im.case2",
+   "topic": "science.immunity",
+   "kind": "mcq",
+   "prompt": "Why would Jenner’s experiment NOT be allowed today?",
+   "options": [
+    {
+     "text": "It deliberately exposed a child to a deadly disease without proper consent or safety testing",
+     "correct": true
+    },
+    {
+     "text": "Cowpox is illegal",
+     "correct": false,
+     "feedback": "The problem is the ethics of testing on a child."
+    },
+    {
+     "text": "Vaccines are banned",
+     "correct": false,
+     "feedback": "Vaccines are widely used; testing is done safely in trials."
+    }
+   ],
+   "explain": "Modern trials need consent, safety testing and ethical approval.",
+   "passage": "Case study: from cowpox to vaccines.\n\nIn 1796 the English doctor Edward Jenner noticed that milkmaids who had caught cowpox, a mild disease, seemed not to catch smallpox, a deadly one. He scratched material from a cowpox sore into the arm of a boy, James Phipps. Weeks later he exposed the boy to smallpox, and the boy did not become ill.\n\nJenner called his method vaccination, from vacca, Latin for cow. After a worldwide vaccination campaign, smallpox was declared eradicated in 1980.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.im.case3",
+   "topic": "science.immunity",
+   "kind": "mcq",
+   "prompt": "Smallpox was declared eradicated in 1980. Why could vaccination wipe it out completely?",
+   "options": [
+    {
+     "text": "When almost everyone is immune, the virus cannot spread from person to person, so it dies out",
+     "correct": true
+    },
+    {
+     "text": "The vaccine destroyed every virus in the world",
+     "correct": false,
+     "feedback": "Vaccines work by making people immune."
+    },
+    {
+     "text": "Smallpox evolved into cowpox",
+     "correct": false,
+     "feedback": "It was eradicated by vaccination."
+    }
+   ],
+   "explain": "This is herd immunity. Smallpox only infected humans, so it had nowhere left to go.",
+   "passage": "Case study: from cowpox to vaccines.\n\nIn 1796 the English doctor Edward Jenner noticed that milkmaids who had caught cowpox, a mild disease, seemed not to catch smallpox, a deadly one. He scratched material from a cowpox sore into the arm of a boy, James Phipps. Weeks later he exposed the boy to smallpox, and the boy did not become ill.\n\nJenner called his method vaccination, from vacca, Latin for cow. After a worldwide vaccination campaign, smallpox was declared eradicated in 1980.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.im.w",
+   "topic": "science.immunity",
+   "kind": "written",
+   "prompt": "Explain how a vaccine protects a person from a disease. Use Jenner’s work as an example. (6 marks)",
+   "hints": [
+    "A vaccine contains a dead, weakened or similar pathogen (or part of one)",
+    "White blood cells (lymphocytes) make antibodies",
+    "Memory cells remain",
+    "On real infection, antibodies are made faster and in larger numbers",
+    "Jenner: cowpox similar to smallpox; herd immunity and eradication"
+   ],
+   "model": "A vaccine contains a dead or weakened pathogen, or a harmless one that is similar, like Jenner’s cowpox. The antigens on it are recognised by white blood cells called lymphocytes, which make antibodies to fit them. Memory cells stay in the blood afterwards. If the real pathogen, such as smallpox, enters later, the memory cells make the right antibodies much faster and in larger numbers, so the pathogen is destroyed before the person becomes ill. When enough people are vaccinated, the disease cannot spread, which is how smallpox was eradicated in 1980.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: from cowpox to vaccines.\n\nIn 1796 the English doctor Edward Jenner noticed that milkmaids who had caught cowpox, a mild disease, seemed not to catch smallpox, a deadly one. He scratched material from a cowpox sore into the arm of a boy, James Phipps. Weeks later he exposed the boy to smallpox, and the boy did not become ill.\n\nJenner called his method vaccination, from vacca, Latin for cow. After a worldwide vaccination campaign, smallpox was declared eradicated in 1980.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.im.phago",
+   "topic": "science.immunity",
+   "kind": "mcq",
+   "prompt": "What do phagocytes do?",
+   "options": [
+    {
+     "text": "Engulf and digest pathogens",
+     "correct": true
+    },
+    {
+     "text": "Make antibodies",
+     "correct": false,
+     "feedback": "Lymphocytes make antibodies."
+    },
+    {
+     "text": "Carry oxygen",
+     "correct": false,
+     "feedback": "Red blood cells carry oxygen."
+    }
+   ],
+   "explain": "Phago- comes from the Greek for “eat”: they are eating cells."
+  },
+  {
+   "id": "science.m.im.antibiotic",
+   "topic": "science.immunity",
+   "kind": "mcq",
+   "prompt": "Why will antibiotics not cure a cold?",
+   "options": [
+    {
+     "text": "Colds are caused by viruses, and antibiotics only kill bacteria",
+     "correct": true
+    },
+    {
+     "text": "Colds are too mild",
+     "correct": false,
+     "feedback": "The reason is the type of pathogen."
+    },
+    {
+     "text": "Antibiotics only work in children",
+     "correct": false,
+     "feedback": "They work in anyone with a bacterial infection."
+    }
+   ],
+   "explain": "Using antibiotics when they are not needed helps resistant bacteria evolve."
+  },
+  {
+   "id": "science.m.im.resist",
+   "topic": "science.immunity",
+   "kind": "mcq",
+   "prompt": "How do antibiotic-resistant bacteria become common?",
+   "options": [
+    {
+     "text": "Bacteria with a resistance mutation survive the antibiotic and reproduce",
+     "correct": true
+    },
+    {
+     "text": "Antibiotics teach bacteria to be strong",
+     "correct": false,
+     "feedback": "Bacteria do not learn; resistant ones are selected."
+    },
+    {
+     "text": "People become immune to antibiotics",
+     "correct": false,
+     "feedback": "It is the bacteria that become resistant."
+    }
+   ],
+   "explain": "This is natural selection happening fast, because bacteria reproduce very quickly."
+  },
+  {
+   "id": "science.m.im.fleming",
+   "topic": "science.immunity",
+   "kind": "fact",
+   "prompt": "Who discovered penicillin, the first antibiotic, in 1928?",
+   "answer": "Alexander Fleming",
+   "distractors": [
+    "Edward Jenner",
+    "Louis Pasteur",
+    "Hippocrates"
+   ],
+   "explain": "He noticed that a mould had killed the bacteria on a dish he had left out.",
+   "accept": [
+    "fleming"
+   ]
+  },
+  {
+   "id": "science.m.im.skin",
+   "topic": "science.immunity",
+   "kind": "mcq",
+   "prompt": "Which of these is part of the body’s FIRST line of defence against pathogens?",
+   "options": [
+    {
+     "text": "The skin, and mucus in the airways",
+     "correct": true
+    },
+    {
+     "text": "Antibodies",
+     "correct": false,
+     "feedback": "Antibodies come later, once pathogens are inside."
+    },
+    {
+     "text": "Vaccines",
+     "correct": false,
+     "feedback": "Vaccines are a medical tool, not a natural defence."
+    }
+   ],
+   "explain": "Skin is a barrier; mucus traps microbes and cilia sweep them away."
+  },
+  {
+   "id": "science.m.dt.case1",
+   "topic": "science.diet",
+   "kind": "mcq",
+   "prompt": "Which nutrients did Theo’s lunch contain?",
+   "options": [
+    {
+     "text": "Starch, protein and fat (lipid), but no reducing sugar",
+     "correct": true
+    },
+    {
+     "text": "Only sugar",
+     "correct": false,
+     "feedback": "Benedict’s stayed blue: no reducing sugar."
+    },
+    {
+     "text": "Starch only",
+     "correct": false,
+     "feedback": "The biuret and ethanol tests were positive too."
+    }
+   ],
+   "explain": "Iodine: starch. Biuret: protein. Ethanol: lipid. Benedict’s: negative.",
+   "passage": "Case study: testing a mystery lunch.\n\nTheo grinds up part of his lunch, adds water and tests it.\n\nTest | Result\nIodine | turned blue-black\nBenedict’s solution, heated | stayed blue\nBiuret solution | turned purple\nEthanol, then water | went cloudy white",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.dt.case2",
+   "topic": "science.diet",
+   "kind": "mcq",
+   "prompt": "Which of Theo’s tests needed heating?",
+   "options": [
+    {
+     "text": "Benedict’s test for sugars",
+     "correct": true
+    },
+    {
+     "text": "The iodine test",
+     "correct": false,
+     "feedback": "Iodine works cold."
+    },
+    {
+     "text": "The biuret test",
+     "correct": false,
+     "feedback": "Biuret works cold."
+    }
+   ],
+   "explain": "Benedict’s turns green, yellow or brick red when heated with a reducing sugar.",
+   "passage": "Case study: testing a mystery lunch.\n\nTheo grinds up part of his lunch, adds water and tests it.\n\nTest | Result\nIodine | turned blue-black\nBenedict’s solution, heated | stayed blue\nBiuret solution | turned purple\nEthanol, then water | went cloudy white",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.dt.case3",
+   "topic": "science.diet",
+   "kind": "mcq",
+   "prompt": "Theo’s lunch could have been…",
+   "options": [
+    {
+     "text": "bread with cheese",
+     "correct": true
+    },
+    {
+     "text": "a fizzy drink",
+     "correct": false,
+     "feedback": "That would contain sugar but no starch, protein or fat."
+    },
+    {
+     "text": "a glass of water",
+     "correct": false,
+     "feedback": "Water would give no positive results."
+    }
+   ],
+   "explain": "Bread gives starch; cheese gives protein and fat.",
+   "passage": "Case study: testing a mystery lunch.\n\nTheo grinds up part of his lunch, adds water and tests it.\n\nTest | Result\nIodine | turned blue-black\nBenedict’s solution, heated | stayed blue\nBiuret solution | turned purple\nEthanol, then water | went cloudy white",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.dt.w",
+   "topic": "science.diet",
+   "kind": "written",
+   "prompt": "Describe how to test a food for protein and for starch, including safety, and explain what Theo’s results show about his lunch. (6 marks)",
+   "hints": [
+    "Grind the food and mix with water",
+    "Starch: iodine, orange-brown to blue-black",
+    "Protein: biuret, blue to purple",
+    "Safety: eye protection; handle chemicals carefully",
+    "Interpret Theo’s results: starch, protein and fat, no sugar"
+   ],
+   "model": "Grind the food with a pestle and mortar and mix it with a little water. For starch, add a few drops of iodine solution: it changes from orange-brown to blue-black if starch is present. For protein, add biuret solution to a sample in a test tube: it changes from blue to purple. Wear eye protection, because biuret contains copper sulfate and an alkali. Theo’s lunch turned blue-black with iodine and purple with biuret, so it contained starch and protein. It also went cloudy in the ethanol test, so it contained fat, but Benedict’s stayed blue, so there was no reducing sugar.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: testing a mystery lunch.\n\nTheo grinds up part of his lunch, adds water and tests it.\n\nTest | Result\nIodine | turned blue-black\nBenedict’s solution, heated | stayed blue\nBiuret solution | turned purple\nEthanol, then water | went cloudy white",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.dt.scurvy",
+   "topic": "science.diet",
+   "kind": "mcq",
+   "prompt": "Sailors on long voyages used to get scurvy. What was missing from their diet?",
+   "options": [
+    {
+     "text": "Vitamin C",
+     "correct": true
+    },
+    {
+     "text": "Protein",
+     "correct": false,
+     "feedback": "They ate salted meat, so they had protein."
+    },
+    {
+     "text": "Fat",
+     "correct": false,
+     "feedback": "Fat deficiency is not the cause of scurvy."
+    }
+   ],
+   "explain": "Fresh fruit, especially citrus, prevents scurvy."
+  },
+  {
+   "id": "science.m.dt.iron",
+   "topic": "science.diet",
+   "kind": "mcq",
+   "prompt": "A lack of iron in the diet can cause anaemia. Why does it make people tired?",
+   "options": [
+    {
+     "text": "Iron is needed to make haemoglobin, so the blood carries less oxygen",
+     "correct": true
+    },
+    {
+     "text": "Iron gives the muscles energy directly",
+     "correct": false,
+     "feedback": "Iron is needed for haemoglobin, which carries oxygen."
+    },
+    {
+     "text": "Iron helps people sleep",
+     "correct": false,
+     "feedback": "The tiredness comes from less oxygen reaching the cells."
+    }
+   ],
+   "explain": "Red meat, beans and green leafy vegetables are good sources of iron."
+  },
+  {
+   "id": "science.m.dt.fibre",
+   "topic": "science.diet",
+   "kind": "mcq",
+   "prompt": "What is the main job of fibre in the diet?",
+   "options": [
+    {
+     "text": "It keeps food moving through the intestines and prevents constipation",
+     "correct": true
+    },
+    {
+     "text": "It provides most of our energy",
+     "correct": false,
+     "feedback": "Carbohydrates and fats provide energy."
+    },
+    {
+     "text": "It builds muscle",
+     "correct": false,
+     "feedback": "Protein builds muscle."
+    }
+   ],
+   "explain": "Fibre is mostly cellulose from plants, which humans cannot digest."
+  },
+  {
+   "id": "science.m.dt.energy",
+   "topic": "science.diet",
+   "kind": "mcq",
+   "prompt": "Which nutrient releases the most energy per gram?",
+   "options": [
+    {
+     "text": "Fat",
+     "correct": true
+    },
+    {
+     "text": "Carbohydrate",
+     "correct": false,
+     "feedback": "Carbohydrates release about 17 kJ per gram; fats about 37 kJ."
+    },
+    {
+     "text": "Protein",
+     "correct": false,
+     "feedback": "Protein is similar to carbohydrate per gram."
+    }
+   ],
+   "explain": "This is why animals store energy as fat."
+  },
+  {
+   "id": "science.m.dt.cal",
+   "topic": "science.diet",
+   "kind": "mcq",
+   "prompt": "To find the energy in a crisp, you burn it under a tube of 20 g of water. Why will your answer be too LOW?",
+   "options": [
+    {
+     "text": "Much of the heat escapes to the air instead of heating the water",
+     "correct": true
+    },
+    {
+     "text": "Water cannot be heated by burning food",
+     "correct": false,
+     "feedback": "It can, but not all the energy reaches the water."
+    },
+    {
+     "text": "The crisp gains mass when it burns",
+     "correct": false,
+     "feedback": "It loses mass; the issue is wasted heat."
+    }
+   ],
+   "explain": "This is a systematic error: it always makes the result too small."
+  },
+  {
+   "id": "science.m.bd.case1",
+   "topic": "science.biodiversity",
+   "kind": "mcq",
+   "prompt": "Which area had higher biodiversity?",
+   "options": [
+    {
+     "text": "The meadow",
+     "correct": true
+    },
+    {
+     "text": "The playing field",
+     "correct": false,
+     "feedback": "It averaged only 2 species per quadrat."
+    },
+    {
+     "text": "They were the same",
+     "correct": false,
+     "feedback": "The meadow had 9 species per quadrat on average, the field 2."
+    }
+   ],
+   "explain": "Biodiversity means the variety of species in an area.",
+   "passage": "Case study: a survey of the meadow behind the school.\n\nMira’s class places ten 1 m² quadrats at random in a meadow and in a mown playing field next to it, and counts the plant species in each.\n\nMeadow: a mean of 9 species per quadrat, including buttercups, clover, knapweed and three kinds of grass.\nPlaying field: a mean of 2 species per quadrat, mostly one kind of grass.\n\nThe meadow also had many more butterflies and bees.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.bd.case2",
+   "topic": "science.biodiversity",
+   "kind": "mcq",
+   "prompt": "Why were the quadrats placed at random?",
+   "options": [
+    {
+     "text": "To avoid choosing spots that were not typical, which would bias the results",
+     "correct": true
+    },
+    {
+     "text": "To make the survey quicker",
+     "correct": false,
+     "feedback": "Random placement is about fairness, not speed."
+    },
+    {
+     "text": "Because the field was too big",
+     "correct": false,
+     "feedback": "The reason is to avoid bias."
+    }
+   ],
+   "explain": "Random sampling gives a fair picture of the whole area.",
+   "passage": "Case study: a survey of the meadow behind the school.\n\nMira’s class places ten 1 m² quadrats at random in a meadow and in a mown playing field next to it, and counts the plant species in each.\n\nMeadow: a mean of 9 species per quadrat, including buttercups, clover, knapweed and three kinds of grass.\nPlaying field: a mean of 2 species per quadrat, mostly one kind of grass.\n\nThe meadow also had many more butterflies and bees.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.bd.case3",
+   "topic": "science.biodiversity",
+   "kind": "mcq",
+   "prompt": "Why were there more bees and butterflies in the meadow?",
+   "options": [
+    {
+     "text": "More kinds of flowering plants provide more food (nectar and pollen)",
+     "correct": true
+    },
+    {
+     "text": "Mowing attracts insects",
+     "correct": false,
+     "feedback": "Mowing removes the flowers they feed on."
+    },
+    {
+     "text": "Insects avoid grass",
+     "correct": false,
+     "feedback": "The field had grass, but few flowers."
+    }
+   ],
+   "explain": "More plant species support more animal species.",
+   "passage": "Case study: a survey of the meadow behind the school.\n\nMira’s class places ten 1 m² quadrats at random in a meadow and in a mown playing field next to it, and counts the plant species in each.\n\nMeadow: a mean of 9 species per quadrat, including buttercups, clover, knapweed and three kinds of grass.\nPlaying field: a mean of 2 species per quadrat, mostly one kind of grass.\n\nThe meadow also had many more butterflies and bees.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.bd.w",
+   "topic": "science.biodiversity",
+   "kind": "written",
+   "prompt": "The school wants to mow the meadow to make another playing field. Evaluate this plan, using the survey results. (6 marks)",
+   "hints": [
+    "Use the data: 9 compared with 2 species per quadrat",
+    "Effect on pollinators and food chains",
+    "Benefits of the plan (more space for sport)",
+    "A possible compromise (keep part as meadow, a wildflower strip)",
+    "A clear judgement"
+   ],
+   "model": "The survey shows the meadow has much higher biodiversity than the playing field: a mean of 9 plant species per quadrat compared with 2. Its flowers feed many bees and butterflies, which pollinate crops and gardens and are food for birds, so mowing it would harm whole food chains. On the other hand, the school would gain more space for sport and exercise, which is good for pupils. A compromise would be to mow only half and keep a wildflower strip around the edge. Overall I think the school should keep most of the meadow, because a playing field can be found elsewhere, but lost biodiversity is hard to restore.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: a survey of the meadow behind the school.\n\nMira’s class places ten 1 m² quadrats at random in a meadow and in a mown playing field next to it, and counts the plant species in each.\n\nMeadow: a mean of 9 species per quadrat, including buttercups, clover, knapweed and three kinds of grass.\nPlaying field: a mean of 2 species per quadrat, mostly one kind of grass.\n\nThe meadow also had many more butterflies and bees.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.bd.ranks",
+   "topic": "science.biodiversity",
+   "kind": "order",
+   "prompt": "Put Linnaeus’s classification groups in order, from largest to smallest.",
+   "items": [
+    "kingdom",
+    "phylum",
+    "class",
+    "order",
+    "family",
+    "genus",
+    "species"
+   ],
+   "labels": null,
+   "explain": "“King Philip Came Over For Good Soup.”"
+  },
+  {
+   "id": "science.m.bd.binomial",
+   "topic": "science.biodiversity",
+   "kind": "mcq",
+   "prompt": "In the name Panthera leo (the lion), what does Panthera tell you?",
+   "options": [
+    {
+     "text": "The genus",
+     "correct": true
+    },
+    {
+     "text": "The species",
+     "correct": false,
+     "feedback": "leo is the species part."
+    },
+    {
+     "text": "The kingdom",
+     "correct": false,
+     "feedback": "The kingdom is Animalia."
+    }
+   ],
+   "explain": "Linnaeus’s binomial names are genus + species, in Latin."
+  },
+  {
+   "id": "science.m.bd.species",
+   "topic": "science.biodiversity",
+   "kind": "mcq",
+   "prompt": "What makes two organisms the same species?",
+   "options": [
+    {
+     "text": "They can breed together and produce fertile offspring",
+     "correct": true
+    },
+    {
+     "text": "They look alike",
+     "correct": false,
+     "feedback": "Some very different-looking dogs are one species."
+    },
+    {
+     "text": "They live in the same place",
+     "correct": false,
+     "feedback": "Many species share a habitat."
+    }
+   ],
+   "explain": "A horse and a donkey make a mule, which is infertile: they are different species."
+  },
+  {
+   "id": "science.m.bd.seedbank",
+   "topic": "science.biodiversity",
+   "kind": "mcq",
+   "prompt": "Why do scientists store seeds in seed banks such as the Millennium Seed Bank in Sussex?",
+   "options": [
+    {
+     "text": "To protect plant species from extinction for the future",
+     "correct": true
+    },
+    {
+     "text": "To sell them to supermarkets",
+     "correct": false,
+     "feedback": "Seed banks are for conservation."
+    },
+    {
+     "text": "To grow food for the scientists",
+     "correct": false,
+     "feedback": "They preserve species."
+    }
+   ],
+   "explain": "Dried, frozen seeds can stay alive for a very long time."
+  },
+  {
+   "id": "science.m.bd.threat",
+   "topic": "science.biodiversity",
+   "kind": "mcq",
+   "prompt": "Which is the biggest threat to biodiversity worldwide?",
+   "options": [
+    {
+     "text": "Habitat loss, such as clearing forests for farming",
+     "correct": true
+    },
+    {
+     "text": "Zoos",
+     "correct": false,
+     "feedback": "Zoos often help conservation."
+    },
+    {
+     "text": "Volcanoes",
+     "correct": false,
+     "feedback": "Natural events matter far less than human land use."
+    }
+   ],
+   "explain": "Pollution, climate change and invasive species also threaten biodiversity."
+  },
+  {
+   "id": "science.m.ge.case1",
+   "topic": "science.geneng",
+   "kind": "mcq",
+   "prompt": "What is different about Golden Rice?",
+   "options": [
+    {
+     "text": "It contains genes from other organisms so that it makes beta-carotene",
+     "correct": true
+    },
+    {
+     "text": "It is coloured with dye",
+     "correct": false,
+     "feedback": "The colour comes from the beta-carotene the rice makes."
+    },
+    {
+     "text": "It was made by selective breeding",
+     "correct": false,
+     "feedback": "Selective breeding cannot add genes from a daffodil."
+    }
+   ],
+   "explain": "Moving genes between species is genetic engineering.",
+   "passage": "Case study: Golden Rice.\n\nIn many countries rice is the main food, and children who eat little else can lack vitamin A, which can lead to blindness. Scientists inserted genes from a daffodil and a bacterium into rice so that the grain makes beta-carotene, which the body turns into vitamin A. The grains are yellow-gold. Supporters say it could prevent many cases of blindness; critics worry about effects on farming and argue that a varied diet is the real answer.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ge.case2",
+   "topic": "science.geneng",
+   "kind": "mcq",
+   "prompt": "Which criticism of Golden Rice is mentioned in the case study?",
+   "options": [
+    {
+     "text": "A varied diet would be a better answer",
+     "correct": true
+    },
+    {
+     "text": "It tastes too sweet",
+     "correct": false,
+     "feedback": "Taste is not mentioned."
+    },
+    {
+     "text": "It causes blindness",
+     "correct": false,
+     "feedback": "It is meant to prevent blindness."
+    }
+   ],
+   "explain": "Critics also worry about effects on farming.",
+   "passage": "Case study: Golden Rice.\n\nIn many countries rice is the main food, and children who eat little else can lack vitamin A, which can lead to blindness. Scientists inserted genes from a daffodil and a bacterium into rice so that the grain makes beta-carotene, which the body turns into vitamin A. The grains are yellow-gold. Supporters say it could prevent many cases of blindness; critics worry about effects on farming and argue that a varied diet is the real answer.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ge.case3",
+   "topic": "science.geneng",
+   "kind": "mcq",
+   "prompt": "How could Golden Rice help prevent blindness?",
+   "options": [
+    {
+     "text": "The body turns beta-carotene into vitamin A, which the eyes need",
+     "correct": true
+    },
+    {
+     "text": "It contains extra protein for the eyes",
+     "correct": false,
+     "feedback": "The key nutrient is vitamin A."
+    },
+    {
+     "text": "It kills bacteria in the eye",
+     "correct": false,
+     "feedback": "It works through nutrition."
+    }
+   ],
+   "explain": "Vitamin A deficiency is a major cause of preventable childhood blindness.",
+   "passage": "Case study: Golden Rice.\n\nIn many countries rice is the main food, and children who eat little else can lack vitamin A, which can lead to blindness. Scientists inserted genes from a daffodil and a bacterium into rice so that the grain makes beta-carotene, which the body turns into vitamin A. The grains are yellow-gold. Supporters say it could prevent many cases of blindness; critics worry about effects on farming and argue that a varied diet is the real answer.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ge.w",
+   "topic": "science.geneng",
+   "kind": "written",
+   "prompt": "Evaluate the use of genetically modified crops such as Golden Rice. Give arguments for and against, and reach a conclusion. (6 marks)",
+   "hints": [
+    "Explain what genetic modification is",
+    "Benefits: nutrition (vitamin A), pest resistance, higher yields",
+    "Concerns: genes spreading to wild plants, cost to farmers, long-term effects",
+    "Alternatives: varied diet, supplements",
+    "A balanced conclusion"
+   ],
+   "model": "Genetic modification inserts genes from another organism into a crop, as with the daffodil and bacterial genes in Golden Rice. Supporters argue it could prevent blindness in children who rely on rice, and other GM crops resist pests or drought, giving bigger harvests with fewer pesticides. Critics worry that the genes might spread to wild plants, that farmers might come to depend on large companies for seed, and that long-term effects are not fully known. Some say a varied diet or vitamin supplements would be better. I think GM crops like Golden Rice are worth using where children are going blind, as long as they are carefully tested and farmers can afford them.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: Golden Rice.\n\nIn many countries rice is the main food, and children who eat little else can lack vitamin A, which can lead to blindness. Scientists inserted genes from a daffodil and a bacterium into rice so that the grain makes beta-carotene, which the body turns into vitamin A. The grains are yellow-gold. Supporters say it could prevent many cases of blindness; critics worry about effects on farming and argue that a varied diet is the real answer.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ge.insulin",
+   "topic": "science.geneng",
+   "kind": "mcq",
+   "prompt": "How is human insulin for people with diabetes made today?",
+   "options": [
+    {
+     "text": "Bacteria are given the human insulin gene and grown in huge tanks",
+     "correct": true
+    },
+    {
+     "text": "It is collected from human donors",
+     "correct": false,
+     "feedback": "That would never give enough."
+    },
+    {
+     "text": "It is extracted from plants",
+     "correct": false,
+     "feedback": "Plants do not make insulin naturally."
+    }
+   ],
+   "explain": "The bacteria copy the gene every time they divide, so they make lots of insulin."
+  },
+  {
+   "id": "science.m.ge.selective",
+   "topic": "science.geneng",
+   "kind": "mcq",
+   "prompt": "How is selective breeding different from genetic engineering?",
+   "options": [
+    {
+     "text": "Selective breeding chooses parents with useful traits; genetic engineering moves genes directly",
+     "correct": true
+    },
+    {
+     "text": "They are the same thing",
+     "correct": false,
+     "feedback": "Selective breeding has been done for thousands of years; genetic engineering only since the 1970s."
+    },
+    {
+     "text": "Selective breeding uses bacteria",
+     "correct": false,
+     "feedback": "It uses ordinary breeding of animals or plants."
+    }
+   ],
+   "explain": "Dog breeds and modern wheat come from selective breeding."
+  },
+  {
+   "id": "science.m.ge.crispr",
+   "topic": "science.geneng",
+   "kind": "mcq",
+   "prompt": "CRISPR is a tool, developed in 2012, that lets scientists…",
+   "options": [
+    {
+     "text": "cut and edit DNA at a precise place",
+     "correct": true
+    },
+    {
+     "text": "count chromosomes",
+     "correct": false,
+     "feedback": "It edits genes."
+    },
+    {
+     "text": "clone whole animals",
+     "correct": false,
+     "feedback": "Cloning is different; CRISPR edits genes."
+    }
+   ],
+   "explain": "Jennifer Doudna and Emmanuelle Charpentier won the 2020 Nobel Prize in Chemistry for it."
+  },
+  {
+   "id": "science.m.ge.bt",
+   "topic": "science.geneng",
+   "kind": "mcq",
+   "prompt": "Some GM crops carry a gene from a bacterium that makes them poisonous to caterpillars. What is the main benefit?",
+   "options": [
+    {
+     "text": "Farmers need to spray less insecticide",
+     "correct": true
+    },
+    {
+     "text": "The crop grows without water",
+     "correct": false,
+     "feedback": "The gene protects against insects."
+    },
+    {
+     "text": "The crop becomes poisonous to people",
+     "correct": false,
+     "feedback": "The toxin targets particular insects and is tested for safety."
+    }
+   ],
+   "explain": "A concern is that insects may evolve resistance, as bacteria do to antibiotics."
+  },
+  {
+   "id": "science.m.ge.dolly",
+   "topic": "science.geneng",
+   "kind": "mcq",
+   "prompt": "Dolly the sheep (born 1996) was famous because she was the first mammal…",
+   "options": [
+    {
+     "text": "cloned from an adult cell",
+     "correct": true
+    },
+    {
+     "text": "to be genetically engineered",
+     "correct": false,
+     "feedback": "Dolly was a clone, not a GM animal."
+    },
+    {
+     "text": "born in space",
+     "correct": false,
+     "feedback": "Dolly was born in Scotland."
+    }
+   ],
+   "explain": "She was a genetic copy of the sheep that gave the cell."
+  },
+  {
+   "id": "science.m.fm.case1",
+   "topic": "science.formulae",
+   "kind": "mcq",
+   "prompt": "By how much did the mass increase when the magnesium burned?",
+   "options": [
+    {
+     "text": "0.16 g",
+     "correct": true
+    },
+    {
+     "text": "0.24 g",
+     "correct": false,
+     "feedback": "That is the mass of magnesium at the start."
+    },
+    {
+     "text": "0.40 g",
+     "correct": false,
+     "feedback": "That is the mass of the powder: 0.24 + 0.16."
+    }
+   ],
+   "explain": "24.40 − 24.24 = 0.16 g.",
+   "passage": "Case study: heating magnesium.\n\nMira heats a strip of magnesium ribbon in a crucible with a lid, lifting the lid now and then to let air in. It glows brightly and turns into a white powder.\n\nMass of crucible and lid: 24.00 g\nMass of crucible, lid and magnesium: 24.24 g\nMass of crucible, lid and white powder at the end: 24.40 g",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.fm.case2",
+   "topic": "science.formulae",
+   "kind": "mcq",
+   "prompt": "Where did the extra mass come from?",
+   "options": [
+    {
+     "text": "Oxygen from the air combined with the magnesium",
+     "correct": true
+    },
+    {
+     "text": "The crucible got heavier",
+     "correct": false,
+     "feedback": "The crucible does not react."
+    },
+    {
+     "text": "Heat has mass",
+     "correct": false,
+     "feedback": "Heat is energy, not matter."
+    }
+   ],
+   "explain": "Magnesium + oxygen → magnesium oxide. Mass is conserved: the oxygen atoms add mass.",
+   "passage": "Case study: heating magnesium.\n\nMira heats a strip of magnesium ribbon in a crucible with a lid, lifting the lid now and then to let air in. It glows brightly and turns into a white powder.\n\nMass of crucible and lid: 24.00 g\nMass of crucible, lid and magnesium: 24.24 g\nMass of crucible, lid and white powder at the end: 24.40 g",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.fm.case3",
+   "topic": "science.formulae",
+   "kind": "mcq",
+   "prompt": "Why did Mira keep the lid on most of the time?",
+   "options": [
+    {
+     "text": "To stop the white powder (magnesium oxide) escaping as smoke",
+     "correct": true
+    },
+    {
+     "text": "To keep oxygen out completely",
+     "correct": false,
+     "feedback": "She lifts it to let oxygen in."
+    },
+    {
+     "text": "To make it burn faster",
+     "correct": false,
+     "feedback": "The lid stops product escaping; it does not speed up burning."
+    }
+   ],
+   "explain": "If smoke escapes, the final mass is too low and the result is wrong.",
+   "passage": "Case study: heating magnesium.\n\nMira heats a strip of magnesium ribbon in a crucible with a lid, lifting the lid now and then to let air in. It glows brightly and turns into a white powder.\n\nMass of crucible and lid: 24.00 g\nMass of crucible, lid and magnesium: 24.24 g\nMass of crucible, lid and white powder at the end: 24.40 g",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.fm.w",
+   "topic": "science.formulae",
+   "kind": "written",
+   "prompt": "Explain Mira’s results using the idea of conservation of mass, and explain why heating calcium carbonate in an open tube gives a DECREASE in mass. (6 marks)",
+   "hints": [
+    "Mass increased by 0.16 g",
+    "Oxygen atoms from the air joined the magnesium",
+    "Total mass of reactants = total mass of products",
+    "Calcium carbonate → calcium oxide + carbon dioxide",
+    "The carbon dioxide gas escapes, so the solid loses mass; in a sealed system mass is unchanged"
+   ],
+   "model": "The mass increased by 0.16 g because magnesium reacted with oxygen from the air to form magnesium oxide. No atoms are created or destroyed in a reaction, so the total mass of the magnesium and oxygen that reacted equals the mass of the magnesium oxide: 0.24 g + 0.16 g = 0.40 g. When calcium carbonate is heated it breaks down into calcium oxide and carbon dioxide. The carbon dioxide is a gas that escapes from an open tube, so the solid left behind weighs less. Mass is still conserved: if the tube were sealed, the total mass would not change.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: heating magnesium.\n\nMira heats a strip of magnesium ribbon in a crucible with a lid, lifting the lid now and then to let air in. It glows brightly and turns into a white powder.\n\nMass of crucible and lid: 24.00 g\nMass of crucible, lid and magnesium: 24.24 g\nMass of crucible, lid and white powder at the end: 24.40 g",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.fm.mass",
+   "topic": "science.formulae",
+   "kind": "template",
+   "gen": "y8tMass",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.m.fm.mr",
+   "topic": "science.formulae",
+   "kind": "template",
+   "gen": "y8tMr",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.m.fm.count",
+   "topic": "science.formulae",
+   "kind": "mcq",
+   "prompt": "How many atoms are there in one formula unit of H₂SO₄?",
+   "options": [
+    {
+     "text": "7",
+     "correct": true
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "That is the number of elements; count every atom: 2 + 1 + 4."
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "2 hydrogen + 1 sulfur + 4 oxygen = 7."
+    }
+   ],
+   "explain": "The small numbers tell you how many of the atom just before them."
+  },
+  {
+   "id": "science.m.fm.balanced",
+   "topic": "science.formulae",
+   "kind": "mcq",
+   "prompt": "Which equation is balanced?",
+   "options": [
+    {
+     "text": "2H₂ + O₂ → 2H₂O",
+     "correct": true
+    },
+    {
+     "text": "H₂ + O₂ → H₂O",
+     "correct": false,
+     "feedback": "There are 2 O on the left but only 1 on the right."
+    },
+    {
+     "text": "H₂ + O₂ → 2H₂O",
+     "correct": false,
+     "feedback": "Now there are 4 H on the right but only 2 on the left."
+    }
+   ],
+   "explain": "Count each kind of atom on both sides: 4 H and 2 O each side."
+  },
+  {
+   "id": "science.m.fm.diatomic",
+   "topic": "science.formulae",
+   "kind": "mcq",
+   "prompt": "Why is oxygen gas written O₂, not O?",
+   "options": [
+    {
+     "text": "Oxygen atoms go around in pairs, as molecules of two atoms",
+     "correct": true
+    },
+    {
+     "text": "There are two kinds of oxygen",
+     "correct": false,
+     "feedback": "The 2 means two atoms joined together."
+    },
+    {
+     "text": "It is a compound",
+     "correct": false,
+     "feedback": "O₂ is an element: both atoms are oxygen."
+    }
+   ],
+   "explain": "Hydrogen, nitrogen, oxygen, chlorine and others are diatomic."
+  },
+  {
+   "id": "science.m.ex.case1",
+   "topic": "science.extraction",
+   "kind": "mcq",
+   "prompt": "Why was gold found as pure nuggets?",
+   "options": [
+    {
+     "text": "It is so unreactive that it does not combine with other elements",
+     "correct": true
+    },
+    {
+     "text": "It is the most common metal",
+     "correct": false,
+     "feedback": "Aluminium and iron are far more common."
+    },
+    {
+     "text": "Ancient people purified it",
+     "correct": false,
+     "feedback": "Gold is found naturally as the metal."
+    }
+   ],
+   "explain": "Very unreactive metals are found native: gold, platinum, sometimes silver and copper.",
+   "passage": "Case study: how metals were won.\n\nGold has been found as shiny nuggets since ancient times. Copper and tin were smelted by heating their ores with charcoal more than 5000 years ago, beginning the Bronze Age. Iron needed hotter furnaces, so the Iron Age came later. Aluminium is the most common metal in the Earth’s crust, but it was more precious than gold until 1886, when a cheap way to extract it using electricity was found.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ex.case2",
+   "topic": "science.extraction",
+   "kind": "mcq",
+   "prompt": "Why did the Iron Age come after the Bronze Age?",
+   "options": [
+    {
+     "text": "Extracting iron from its ore needs hotter furnaces than copper and tin do",
+     "correct": true
+    },
+    {
+     "text": "There was no iron on Earth before",
+     "correct": false,
+     "feedback": "Iron was always there; extracting it was harder."
+    },
+    {
+     "text": "People preferred bronze",
+     "correct": false,
+     "feedback": "Iron tools are better once you can make them."
+    }
+   ],
+   "explain": "Iron is more reactive than copper, so separating it from oxygen takes more energy.",
+   "passage": "Case study: how metals were won.\n\nGold has been found as shiny nuggets since ancient times. Copper and tin were smelted by heating their ores with charcoal more than 5000 years ago, beginning the Bronze Age. Iron needed hotter furnaces, so the Iron Age came later. Aluminium is the most common metal in the Earth’s crust, but it was more precious than gold until 1886, when a cheap way to extract it using electricity was found.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ex.case3",
+   "topic": "science.extraction",
+   "kind": "mcq",
+   "prompt": "Why was aluminium once more precious than gold?",
+   "options": [
+    {
+     "text": "It is too reactive to extract with carbon, and extraction by electricity was expensive",
+     "correct": true
+    },
+    {
+     "text": "It is very rare",
+     "correct": false,
+     "feedback": "It is the most common metal in the crust."
+    },
+    {
+     "text": "It is heavier than gold",
+     "correct": false,
+     "feedback": "It is much lighter."
+    }
+   ],
+   "explain": "Cheap electricity and the Hall–Héroult process (1886) made aluminium cheap.",
+   "passage": "Case study: how metals were won.\n\nGold has been found as shiny nuggets since ancient times. Copper and tin were smelted by heating their ores with charcoal more than 5000 years ago, beginning the Bronze Age. Iron needed hotter furnaces, so the Iron Age came later. Aluminium is the most common metal in the Earth’s crust, but it was more precious than gold until 1886, when a cheap way to extract it using electricity was found.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ex.w",
+   "topic": "science.extraction",
+   "kind": "written",
+   "prompt": "Explain how the reactivity of a metal decides how it is extracted. Use gold, iron and aluminium as examples. (6 marks)",
+   "hints": [
+    "The more reactive the metal, the harder it is to extract",
+    "Gold: unreactive, found native",
+    "Iron: below carbon, so heated with carbon (reduction) in a blast furnace",
+    "Aluminium: above carbon, so electrolysis",
+    "Link to history: Bronze Age, Iron Age, aluminium in 1886"
+   ],
+   "model": "The more reactive a metal is, the more strongly it holds on to other elements in its ore, so the harder it is to extract. Gold is so unreactive that it is found as the pure metal and just needs to be dug up. Iron is below carbon in the reactivity series, so heating iron oxide with carbon in a blast furnace removes the oxygen: carbon is more reactive and takes it. This is called reduction. Aluminium is above carbon, so carbon cannot take the oxygen away; it has to be extracted by electrolysis, which uses a lot of electricity. This explains why gold was used first, iron only once furnaces were hot enough, and aluminium only after 1886.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: how metals were won.\n\nGold has been found as shiny nuggets since ancient times. Copper and tin were smelted by heating their ores with charcoal more than 5000 years ago, beginning the Bronze Age. Iron needed hotter furnaces, so the Iron Age came later. Aluminium is the most common metal in the Earth’s crust, but it was more precious than gold until 1886, when a cheap way to extract it using electricity was found.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ex.ore",
+   "topic": "science.extraction",
+   "kind": "mcq",
+   "prompt": "What is an ore?",
+   "options": [
+    {
+     "text": "A rock that contains enough of a metal or metal compound to be worth extracting",
+     "correct": true
+    },
+    {
+     "text": "Any rock with metal in it",
+     "correct": false,
+     "feedback": "Almost all rocks contain some metal; an ore has enough to make extraction worthwhile."
+    },
+    {
+     "text": "A pure metal found in the ground",
+     "correct": false,
+     "feedback": "That is a native metal, like gold."
+    }
+   ],
+   "explain": "Haematite is an iron ore; bauxite is an aluminium ore."
+  },
+  {
+   "id": "science.m.ex.series",
+   "topic": "science.extraction",
+   "kind": "order",
+   "prompt": "Put these in order of reactivity, most reactive first.",
+   "items": [
+    "potassium",
+    "magnesium",
+    "carbon",
+    "iron",
+    "copper",
+    "gold"
+   ],
+   "labels": null,
+   "explain": "Carbon is included as a guide: metals below it can be extracted by heating with carbon."
+  },
+  {
+   "id": "science.m.ex.displace",
+   "topic": "science.extraction",
+   "kind": "mcq",
+   "prompt": "An iron nail is put into blue copper sulfate solution. What happens?",
+   "options": [
+    {
+     "text": "The nail gets a coat of copper and the solution turns paler",
+     "correct": true
+    },
+    {
+     "text": "Nothing, because iron is less reactive",
+     "correct": false,
+     "feedback": "Iron is MORE reactive than copper, so it displaces it."
+    },
+    {
+     "text": "The nail dissolves completely in seconds",
+     "correct": false,
+     "feedback": "The reaction is slow and the nail is only coated."
+    }
+   ],
+   "explain": "Iron + copper sulfate → iron sulfate + copper: a displacement reaction."
+  },
+  {
+   "id": "science.m.ex.reduction",
+   "topic": "science.extraction",
+   "kind": "mcq",
+   "prompt": "In the blast furnace, iron oxide loses its oxygen. This is called…",
+   "options": [
+    {
+     "text": "reduction",
+     "correct": true
+    },
+    {
+     "text": "oxidation",
+     "correct": false,
+     "feedback": "Oxidation is GAINING oxygen; the carbon is oxidised."
+    },
+    {
+     "text": "neutralisation",
+     "correct": false,
+     "feedback": "Neutralisation is acid + alkali."
+    }
+   ],
+   "explain": "In outline: iron oxide + carbon → iron + carbon dioxide."
+  },
+  {
+   "id": "science.m.ex.recycle",
+   "topic": "science.extraction",
+   "kind": "mcq",
+   "prompt": "Recycling aluminium uses about 5% of the energy needed to extract new aluminium. Why so little?",
+   "options": [
+    {
+     "text": "Melting the metal needs far less energy than the electrolysis used to extract it",
+     "correct": true
+    },
+    {
+     "text": "Recycled aluminium is a different metal",
+     "correct": false,
+     "feedback": "It is the same metal."
+    },
+    {
+     "text": "Recycling uses electrolysis too",
+     "correct": false,
+     "feedback": "Recycling just melts and reshapes the metal."
+    }
+   ],
+   "explain": "It also saves bauxite ore and reduces mining."
+  },
+  {
+   "id": "science.m.rt.case1",
+   "topic": "science.rates",
+   "kind": "mcq",
+   "prompt": "Which reaction was faster at the start?",
+   "options": [
+    {
+     "text": "The powder",
+     "correct": true
+    },
+    {
+     "text": "The large chips",
+     "correct": false,
+     "feedback": "In the first minute the powder made 55 cm³; the chips only 20 cm³."
+    },
+    {
+     "text": "They were the same",
+     "correct": false,
+     "feedback": "The powder made gas much faster."
+    }
+   ],
+   "explain": "Powder has a much bigger surface area, so more collisions with acid particles.",
+   "passage": "Case study: marble chips and acid.\n\nTheo adds hydrochloric acid to marble chips and measures the volume of carbon dioxide made each minute. He does it once with large chips and once with powdered marble of the same mass.\n\nTime (min) | Large chips (cm³) | Powder (cm³)\n1 | 20 | 55\n2 | 36 | 80\n3 | 49 | 88\n4 | 60 | 90\n5 | 68 | 90",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.rt.case2",
+   "topic": "science.rates",
+   "kind": "mcq",
+   "prompt": "Why did the powder’s volume stop rising at 90 cm³?",
+   "options": [
+    {
+     "text": "The reaction had finished: one reactant had been used up",
+     "correct": true
+    },
+    {
+     "text": "The gas syringe was full",
+     "correct": false,
+     "feedback": "The reaction stopped because it finished."
+    },
+    {
+     "text": "The acid got stronger",
+     "correct": false,
+     "feedback": "Acid gets weaker as it is used."
+    }
+   ],
+   "explain": "The large chips would eventually also reach 90 cm³, just more slowly.",
+   "passage": "Case study: marble chips and acid.\n\nTheo adds hydrochloric acid to marble chips and measures the volume of carbon dioxide made each minute. He does it once with large chips and once with powdered marble of the same mass.\n\nTime (min) | Large chips (cm³) | Powder (cm³)\n1 | 20 | 55\n2 | 36 | 80\n3 | 49 | 88\n4 | 60 | 90\n5 | 68 | 90",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.rt.case3",
+   "topic": "science.rates",
+   "kind": "mcq",
+   "prompt": "What was the mean rate for the large chips over the first 5 minutes?",
+   "options": [
+    {
+     "text": "13.6 cm³ per minute",
+     "correct": true
+    },
+    {
+     "text": "68 cm³ per minute",
+     "correct": false,
+     "feedback": "That is the total volume; divide by the 5 minutes."
+    },
+    {
+     "text": "18 cm³ per minute",
+     "correct": false,
+     "feedback": "68 ÷ 5 = 13.6."
+    }
+   ],
+   "explain": "68 cm³ ÷ 5 min = 13.6 cm³/min.",
+   "passage": "Case study: marble chips and acid.\n\nTheo adds hydrochloric acid to marble chips and measures the volume of carbon dioxide made each minute. He does it once with large chips and once with powdered marble of the same mass.\n\nTime (min) | Large chips (cm³) | Powder (cm³)\n1 | 20 | 55\n2 | 36 | 80\n3 | 49 | 88\n4 | 60 | 90\n5 | 68 | 90",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.rt.w",
+   "topic": "science.rates",
+   "kind": "written",
+   "prompt": "Explain the difference between the two sets of results using collision theory. Then describe how Theo could test the effect of temperature instead. (6 marks)",
+   "hints": [
+    "Powder: larger surface area",
+    "More particles exposed, more frequent collisions, faster rate",
+    "Same final volume, because same mass of marble",
+    "Temperature test: change only the temperature; keep mass, chip size and acid the same",
+    "Higher temperature: faster particles, more frequent and more energetic collisions"
+   ],
+   "model": "Both samples had the same mass of marble, so both would make the same total volume of gas (90 cm³ for the powder, which finished first). The powder reacted faster, making 55 cm³ in the first minute compared with 20 cm³, because it has a much larger surface area: more particles are exposed, so acid particles collide with them more often. To test temperature, Theo should use the same mass and size of chips and the same volume and concentration of acid, and change only the temperature using a water bath. He would expect the rate to increase with temperature, because particles move faster and collide more often and with more energy.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: marble chips and acid.\n\nTheo adds hydrochloric acid to marble chips and measures the volume of carbon dioxide made each minute. He does it once with large chips and once with powdered marble of the same mass.\n\nTime (min) | Large chips (cm³) | Powder (cm³)\n1 | 20 | 55\n2 | 36 | 80\n3 | 49 | 88\n4 | 60 | 90\n5 | 68 | 90",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.rt.calc",
+   "topic": "science.rates",
+   "kind": "template",
+   "gen": "y8tRate",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.m.rt.method",
+   "topic": "science.rates",
+   "kind": "mcq",
+   "prompt": "Which method would measure the rate of the marble chip reaction?",
+   "options": [
+    {
+     "text": "Collect the carbon dioxide in a gas syringe and record the volume every 30 seconds",
+     "correct": true
+    },
+    {
+     "text": "Measure the temperature of the room",
+     "correct": false,
+     "feedback": "That does not measure how fast the product forms."
+    },
+    {
+     "text": "Weigh the marble chips once at the start",
+     "correct": false,
+     "feedback": "You need repeated readings over time."
+    }
+   ],
+   "explain": "You could also record the falling mass of the open flask on a balance."
+  },
+  {
+   "id": "science.m.rt.catalyst",
+   "topic": "science.rates",
+   "kind": "mcq",
+   "prompt": "How does a catalyst speed up a reaction?",
+   "options": [
+    {
+     "text": "It provides a different route with a lower activation energy",
+     "correct": true
+    },
+    {
+     "text": "It heats the reaction",
+     "correct": false,
+     "feedback": "Catalysts do not need to add heat."
+    },
+    {
+     "text": "It becomes part of the product",
+     "correct": false,
+     "feedback": "A catalyst is not used up."
+    }
+   ],
+   "explain": "More collisions then have enough energy to react."
+  },
+  {
+   "id": "science.m.rt.conc",
+   "topic": "science.rates",
+   "kind": "mcq",
+   "prompt": "Why does more concentrated acid react faster?",
+   "options": [
+    {
+     "text": "There are more acid particles in the same volume, so collisions are more frequent",
+     "correct": true
+    },
+    {
+     "text": "The particles are bigger",
+     "correct": false,
+     "feedback": "Particle size does not change."
+    },
+    {
+     "text": "It is hotter",
+     "correct": false,
+     "feedback": "Concentration and temperature are different factors."
+    }
+   ],
+   "explain": "Concentration is about how crowded the particles are."
+  },
+  {
+   "id": "science.m.rt.activation",
+   "topic": "science.rates",
+   "kind": "mcq",
+   "prompt": "What is the activation energy?",
+   "options": [
+    {
+     "text": "The minimum energy colliding particles need in order to react",
+     "correct": true
+    },
+    {
+     "text": "The energy released by the reaction",
+     "correct": false,
+     "feedback": "That is the overall energy change."
+    },
+    {
+     "text": "The energy of the Bunsen burner",
+     "correct": false,
+     "feedback": "It is a property of the reaction."
+    }
+   ],
+   "explain": "Raising the temperature means more collisions have at least this energy."
+  },
+  {
+   "id": "science.m.ec.case1",
+   "topic": "science.energychange",
+   "kind": "mcq",
+   "prompt": "Which reactions were exothermic?",
+   "options": [
+    {
+     "text": "The hand warmer, and sodium hydroxide + hydrochloric acid",
+     "correct": true
+    },
+    {
+     "text": "Ammonium nitrate dissolving, and citric acid + sodium hydrogencarbonate",
+     "correct": false,
+     "feedback": "Those got COLDER: endothermic."
+    },
+    {
+     "text": "All four",
+     "correct": false,
+     "feedback": "Two of them got colder."
+    }
+   ],
+   "explain": "Exothermic reactions release energy, so the temperature rises.",
+   "passage": "Case study: hot packs and cold packs.\n\nKit measures the temperature change when different substances are mixed with water or acid.\n\nReaction | Start (°C) | End (°C)\nIron powder + air + salt water (hand warmer) | 20 | 52\nAmmonium nitrate dissolving in water | 20 | 4\nSodium hydroxide + hydrochloric acid | 20 | 31\nCitric acid + sodium hydrogencarbonate | 20 | 13",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ec.case2",
+   "topic": "science.energychange",
+   "kind": "mcq",
+   "prompt": "Which would be best for an instant cold pack for a sports injury?",
+   "options": [
+    {
+     "text": "Ammonium nitrate dissolving in water",
+     "correct": true
+    },
+    {
+     "text": "Iron powder and salt water",
+     "correct": false,
+     "feedback": "That gets hot: it is the hand warmer."
+    },
+    {
+     "text": "Sodium hydroxide and acid",
+     "correct": false,
+     "feedback": "That gets warmer, and the chemicals are harmful."
+    }
+   ],
+   "explain": "It fell by 16 °C, the biggest drop.",
+   "passage": "Case study: hot packs and cold packs.\n\nKit measures the temperature change when different substances are mixed with water or acid.\n\nReaction | Start (°C) | End (°C)\nIron powder + air + salt water (hand warmer) | 20 | 52\nAmmonium nitrate dissolving in water | 20 | 4\nSodium hydroxide + hydrochloric acid | 20 | 31\nCitric acid + sodium hydrogencarbonate | 20 | 13",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ec.case3",
+   "topic": "science.energychange",
+   "kind": "mcq",
+   "prompt": "What was the temperature change for the hand warmer?",
+   "options": [
+    {
+     "text": "A rise of 32 °C",
+     "correct": true
+    },
+    {
+     "text": "52 °C",
+     "correct": false,
+     "feedback": "That is the final temperature; the change is 52 − 20."
+    },
+    {
+     "text": "A fall of 32 °C",
+     "correct": false,
+     "feedback": "The temperature went up."
+    }
+   ],
+   "explain": "52 − 20 = 32 °C rise.",
+   "passage": "Case study: hot packs and cold packs.\n\nKit measures the temperature change when different substances are mixed with water or acid.\n\nReaction | Start (°C) | End (°C)\nIron powder + air + salt water (hand warmer) | 20 | 52\nAmmonium nitrate dissolving in water | 20 | 4\nSodium hydroxide + hydrochloric acid | 20 | 31\nCitric acid + sodium hydrogencarbonate | 20 | 13",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ec.w",
+   "topic": "science.energychange",
+   "kind": "written",
+   "prompt": "Using Kit’s results, explain the difference between exothermic and endothermic reactions in terms of energy and bonds. Give a use for each. (6 marks)",
+   "hints": [
+    "Exothermic: energy released to the surroundings, temperature rises",
+    "Endothermic: energy taken in, temperature falls",
+    "Breaking bonds takes in energy; making bonds releases energy",
+    "Exothermic: more energy released making bonds than taken in breaking them",
+    "Uses: hand warmers, self-heating cans; cold packs"
+   ],
+   "model": "In an exothermic reaction energy is transferred to the surroundings, so the temperature rises, as with the hand warmer (20 °C to 52 °C) and the neutralisation (20 °C to 31 °C). In an endothermic reaction energy is taken in from the surroundings, so the temperature falls, as when ammonium nitrate dissolved (20 °C to 4 °C). Breaking bonds always takes in energy, and making bonds always releases it. A reaction is exothermic when more energy is released making the new bonds than was needed to break the old ones. Exothermic reactions are used in hand warmers and self-heating cans; endothermic ones in instant cold packs for injuries.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: hot packs and cold packs.\n\nKit measures the temperature change when different substances are mixed with water or acid.\n\nReaction | Start (°C) | End (°C)\nIron powder + air + salt water (hand warmer) | 20 | 52\nAmmonium nitrate dissolving in water | 20 | 4\nSodium hydroxide + hydrochloric acid | 20 | 31\nCitric acid + sodium hydrogencarbonate | 20 | 13",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ec.profile",
+   "topic": "science.energychange",
+   "kind": "mcq",
+   "prompt": "On a reaction profile for an EXOTHERMIC reaction, the products are…",
+   "options": [
+    {
+     "text": "lower in energy than the reactants",
+     "correct": true
+    },
+    {
+     "text": "higher in energy than the reactants",
+     "correct": false,
+     "feedback": "That would be endothermic: energy taken in."
+    },
+    {
+     "text": "at the same energy as the reactants",
+     "correct": false,
+     "feedback": "Then there would be no temperature change."
+    }
+   ],
+   "explain": "The difference is the energy released to the surroundings."
+  },
+  {
+   "id": "science.m.ec.combust",
+   "topic": "science.energychange",
+   "kind": "mcq",
+   "prompt": "Which of these is endothermic?",
+   "options": [
+    {
+     "text": "Photosynthesis",
+     "correct": true
+    },
+    {
+     "text": "Burning wood",
+     "correct": false,
+     "feedback": "Combustion releases energy."
+    },
+    {
+     "text": "Respiration",
+     "correct": false,
+     "feedback": "Respiration releases energy for the cell."
+    }
+   ],
+   "explain": "Photosynthesis takes in light energy to make glucose."
+  },
+  {
+   "id": "science.m.ec.bonds",
+   "topic": "science.energychange",
+   "kind": "mcq",
+   "prompt": "Breaking chemical bonds…",
+   "options": [
+    {
+     "text": "always takes in energy",
+     "correct": true
+    },
+    {
+     "text": "always releases energy",
+     "correct": false,
+     "feedback": "MAKING bonds releases energy."
+    },
+    {
+     "text": "never involves energy",
+     "correct": false,
+     "feedback": "Energy is always involved."
+    }
+   ],
+   "explain": "Whether a reaction is exo- or endothermic depends on the balance between the two."
+  },
+  {
+   "id": "science.m.ec.decomp",
+   "topic": "science.energychange",
+   "kind": "mcq",
+   "prompt": "Thermal decomposition of calcium carbonate only continues while it is heated. What does that tell you?",
+   "options": [
+    {
+     "text": "It is endothermic",
+     "correct": true
+    },
+    {
+     "text": "It is exothermic",
+     "correct": false,
+     "feedback": "An exothermic reaction would keep itself going."
+    },
+    {
+     "text": "It is a physical change",
+     "correct": false,
+     "feedback": "New substances form: calcium oxide and carbon dioxide."
+    }
+   ],
+   "explain": "Lime kilns had to be kept hot for days to make quicklime."
+  },
+  {
+   "id": "science.m.mt.case1",
+   "topic": "science.materials",
+   "kind": "mcq",
+   "prompt": "Which material would make the lightest frame that is still strong enough for racing?",
+   "options": [
+    {
+     "text": "Carbon-fibre composite",
+     "correct": true
+    },
+    {
+     "text": "Wood",
+     "correct": false,
+     "feedback": "Wood has the lowest density, but it is too weak, so a wooden frame would need to be much thicker."
+    },
+    {
+     "text": "Steel",
+     "correct": false,
+     "feedback": "Steel is the densest."
+    }
+   ],
+   "explain": "Carbon fibre has a low density AND very high strength, so a thin frame is enough.",
+   "passage": "Case study: choosing a material for a racing bike frame.\n\nMaterial | Density (g/cm³) | Strength | Cost\nSteel | 7.9 | high | low\nAluminium alloy | 2.7 | medium | medium\nCarbon-fibre composite | 1.6 | very high | high\nWood | 0.7 | low | low",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.mt.case2",
+   "topic": "science.materials",
+   "kind": "mcq",
+   "prompt": "Why might a family choose a steel bike instead?",
+   "options": [
+    {
+     "text": "It is strong and cheap, though heavier",
+     "correct": true
+    },
+    {
+     "text": "It is the lightest",
+     "correct": false,
+     "feedback": "It is the densest in the table."
+    },
+    {
+     "text": "It never rusts",
+     "correct": false,
+     "feedback": "Steel can rust unless it is protected."
+    }
+   ],
+   "explain": "Choosing materials is often a trade-off between properties and cost.",
+   "passage": "Case study: choosing a material for a racing bike frame.\n\nMaterial | Density (g/cm³) | Strength | Cost\nSteel | 7.9 | high | low\nAluminium alloy | 2.7 | medium | medium\nCarbon-fibre composite | 1.6 | very high | high\nWood | 0.7 | low | low",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.mt.case3",
+   "topic": "science.materials",
+   "kind": "mcq",
+   "prompt": "Carbon-fibre composite is made of…",
+   "options": [
+    {
+     "text": "strong carbon fibres held in a polymer resin",
+     "correct": true
+    },
+    {
+     "text": "pure carbon metal",
+     "correct": false,
+     "feedback": "Carbon is not a metal, and a composite has two materials."
+    },
+    {
+     "text": "steel mixed with carbon",
+     "correct": false,
+     "feedback": "That is an alloy; a composite has fibres in a matrix."
+    }
+   ],
+   "explain": "A composite combines two materials to get the best of both.",
+   "passage": "Case study: choosing a material for a racing bike frame.\n\nMaterial | Density (g/cm³) | Strength | Cost\nSteel | 7.9 | high | low\nAluminium alloy | 2.7 | medium | medium\nCarbon-fibre composite | 1.6 | very high | high\nWood | 0.7 | low | low",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.mt.w",
+   "topic": "science.materials",
+   "kind": "written",
+   "prompt": "Evaluate the four materials in the table for a racing bike frame, and recommend one. (6 marks)",
+   "hints": [
+    "Use the density data",
+    "Strength",
+    "Cost",
+    "Compare at least three materials",
+    "A justified recommendation"
+   ],
+   "model": "A racing bike needs to be light and strong. Carbon-fibre composite has the lowest density of the strong materials (1.6 g/cm³) and very high strength, so it makes the lightest, stiffest frame, but it is expensive. Aluminium alloy is a good middle choice: much less dense than steel (2.7 compared with 7.9 g/cm³) and cheaper than carbon fibre, though less strong. Steel is strong and cheap but very heavy for racing. Wood is light and cheap but too weak, so the frame would have to be very thick. For a serious racer I would recommend carbon fibre; for a beginner on a budget, aluminium alloy.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: choosing a material for a racing bike frame.\n\nMaterial | Density (g/cm³) | Strength | Cost\nSteel | 7.9 | high | low\nAluminium alloy | 2.7 | medium | medium\nCarbon-fibre composite | 1.6 | very high | high\nWood | 0.7 | low | low",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.mt.alloy",
+   "topic": "science.materials",
+   "kind": "mcq",
+   "prompt": "Why is an alloy harder than the pure metal?",
+   "options": [
+    {
+     "text": "Atoms of a different size disrupt the layers, so they cannot slide easily",
+     "correct": true
+    },
+    {
+     "text": "Alloys are always cold",
+     "correct": false,
+     "feedback": "Temperature is not the reason."
+    },
+    {
+     "text": "Alloys have no atoms",
+     "correct": false,
+     "feedback": "All materials are made of atoms."
+    }
+   ],
+   "explain": "Bronze (copper + tin) was harder than copper, so it made better tools and weapons."
+  },
+  {
+   "id": "science.m.mt.polymer",
+   "topic": "science.materials",
+   "kind": "mcq",
+   "prompt": "What is a polymer?",
+   "options": [
+    {
+     "text": "A very long chain molecule made from many small monomers joined together",
+     "correct": true
+    },
+    {
+     "text": "A mixture of metals",
+     "correct": false,
+     "feedback": "That is an alloy."
+    },
+    {
+     "text": "A type of glass",
+     "correct": false,
+     "feedback": "Glass is a ceramic."
+    }
+   ],
+   "explain": "Poly- is Greek for “many”: poly(ethene) is many ethene units joined."
+  },
+  {
+   "id": "science.m.mt.ceramic",
+   "topic": "science.materials",
+   "kind": "mcq",
+   "prompt": "Greek pottery amphorae have survived for 2500 years. Which property of ceramics helps?",
+   "options": [
+    {
+     "text": "They do not rot or corrode",
+     "correct": true
+    },
+    {
+     "text": "They bend without breaking",
+     "correct": false,
+     "feedback": "Ceramics are brittle: they shatter rather than bend."
+    },
+    {
+     "text": "They conduct electricity well",
+     "correct": false,
+     "feedback": "Ceramics are insulators."
+    }
+   ],
+   "explain": "Ceramics are hard, brittle, heat-resistant and unreactive."
+  },
+  {
+   "id": "science.m.mt.concrete",
+   "topic": "science.materials",
+   "kind": "mcq",
+   "prompt": "Reinforced concrete has steel rods inside. Why?",
+   "options": [
+    {
+     "text": "Concrete is strong when squashed but weak when stretched; steel is strong when stretched",
+     "correct": true
+    },
+    {
+     "text": "Steel makes it lighter",
+     "correct": false,
+     "feedback": "Steel is denser than concrete."
+    },
+    {
+     "text": "To stop it getting wet",
+     "correct": false,
+     "feedback": "The steel adds strength when the concrete is stretched or bent."
+    }
+   ],
+   "explain": "This makes it a composite material."
+  },
+  {
+   "id": "science.m.rs2.finite",
+   "topic": "science.resources",
+   "kind": "mcq",
+   "prompt": "Which of these is a finite resource?",
+   "options": [
+    {
+     "text": "Crude oil",
+     "correct": true
+    },
+    {
+     "text": "Wood from managed forests",
+     "correct": false,
+     "feedback": "Trees can be regrown: renewable."
+    },
+    {
+     "text": "Wind",
+     "correct": false,
+     "feedback": "Wind is renewable."
+    }
+   ],
+   "explain": "Finite resources took millions of years to form, so they will run out."
+  },
+  {
+   "id": "science.m.rs2.lca",
+   "topic": "science.resources",
+   "kind": "mcq",
+   "prompt": "A life-cycle assessment of a product looks at…",
+   "options": [
+    {
+     "text": "its environmental impact from getting the raw materials to disposal",
+     "correct": true
+    },
+    {
+     "text": "how long it lasts on the shop shelf",
+     "correct": false,
+     "feedback": "It covers the whole life, from start to end."
+    },
+    {
+     "text": "how much it costs",
+     "correct": false,
+     "feedback": "It is about environmental impact."
+    }
+   ],
+   "explain": "Stages: raw materials, manufacture, use, disposal."
+  },
+  {
+   "id": "science.m.rs2.potable",
+   "topic": "science.resources",
+   "kind": "mcq",
+   "prompt": "Potable water is water that is…",
+   "options": [
+    {
+     "text": "safe to drink",
+     "correct": true
+    },
+    {
+     "text": "completely pure",
+     "correct": false,
+     "feedback": "Drinking water contains dissolved minerals: it is not pure."
+    },
+    {
+     "text": "salty",
+     "correct": false,
+     "feedback": "Seawater is not potable."
+    }
+   ],
+   "explain": "It is filtered and sterilised, often with chlorine."
+  },
+  {
+   "id": "science.m.rs2.desal",
+   "topic": "science.resources",
+   "kind": "mcq",
+   "prompt": "Why is desalination (removing salt from seawater) not used everywhere?",
+   "options": [
+    {
+     "text": "It needs a lot of energy, so it is expensive",
+     "correct": true
+    },
+    {
+     "text": "Seawater cannot be purified",
+     "correct": false,
+     "feedback": "It can, by distillation or reverse osmosis."
+    },
+    {
+     "text": "It makes the sea fresh",
+     "correct": false,
+     "feedback": "It only treats the water taken in."
+    }
+   ],
+   "explain": "It is used mainly in dry countries with cheap energy."
+  },
+  {
+   "id": "science.m.rs2.reduce",
+   "topic": "science.resources",
+   "kind": "mcq",
+   "prompt": "Which order saves the most resources, best first?",
+   "options": [
+    {
+     "text": "Reduce, reuse, recycle",
+     "correct": true
+    },
+    {
+     "text": "Recycle, reuse, reduce",
+     "correct": false,
+     "feedback": "Recycling still uses energy; not using something at all saves most."
+    },
+    {
+     "text": "Reuse, recycle, reduce",
+     "correct": false,
+     "feedback": "Reducing comes first."
+    }
+   ],
+   "explain": "The best waste is the waste you never make."
+  },
+  {
+   "id": "science.m.rs2.landfill",
+   "topic": "science.resources",
+   "kind": "mcq",
+   "prompt": "Why is putting plastic waste in landfill a long-term problem?",
+   "options": [
+    {
+     "text": "Most plastics are not biodegradable, so they last for hundreds of years",
+     "correct": true
+    },
+    {
+     "text": "Plastic catches fire underground",
+     "correct": false,
+     "feedback": "The main problem is that it does not break down."
+    },
+    {
+     "text": "Plastic turns into oil",
+     "correct": false,
+     "feedback": "It stays as plastic for a very long time."
+    }
+   ],
+   "explain": "Recycling plastic, or using less of it, reduces landfill."
+  },
+  {
+   "id": "science.m.rs2.water",
+   "topic": "science.resources",
+   "kind": "mcq",
+   "prompt": "Which two steps are used to make fresh water from a reservoir safe to drink?",
+   "options": [
+    {
+     "text": "Filtering it, then sterilising it (for example with chlorine)",
+     "correct": true
+    },
+    {
+     "text": "Boiling it, then freezing it",
+     "correct": false,
+     "feedback": "Water companies filter and sterilise."
+    },
+    {
+     "text": "Adding salt, then sugar",
+     "correct": false,
+     "feedback": "Neither makes water safe."
+    }
+   ],
+   "explain": "Filtering removes solids; sterilising kills microbes."
+  },
+  {
+   "id": "science.m.rs2.al",
+   "topic": "science.resources",
+   "kind": "fact",
+   "prompt": "Recycling aluminium saves about what percentage of the energy needed to make new aluminium?",
+   "answer": "95%",
+   "distractors": [
+    "5%",
+    "50%",
+    "10%"
+   ],
+   "explain": "Recycling uses only about 5% of the energy, so it saves about 95%.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.m.mo.case1",
+   "topic": "science.motion",
+   "kind": "mcq",
+   "prompt": "Why does the skydiver speed up at first?",
+   "options": [
+    {
+     "text": "Her weight is bigger than the air resistance",
+     "correct": true
+    },
+    {
+     "text": "Air resistance pushes her down",
+     "correct": false,
+     "feedback": "Air resistance acts upwards, against the motion."
+    },
+    {
+     "text": "Gravity gets stronger as she falls",
+     "correct": false,
+     "feedback": "Gravity is almost constant near the Earth."
+    }
+   ],
+   "explain": "An unbalanced force downwards makes her accelerate.",
+   "passage": "Case study: a skydiver’s jump.\n\nA skydiver jumps from a plane. At first she speeds up. After about 12 seconds she is falling at a steady 55 m/s. When she opens her parachute she slows down sharply, then falls at a steady 5 m/s until she lands.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.mo.case2",
+   "topic": "science.motion",
+   "kind": "mcq",
+   "prompt": "Why does she reach a steady 55 m/s?",
+   "options": [
+    {
+     "text": "Air resistance grows with speed until it balances her weight",
+     "correct": true
+    },
+    {
+     "text": "Gravity switches off",
+     "correct": false,
+     "feedback": "Her weight is still there."
+    },
+    {
+     "text": "She runs out of energy",
+     "correct": false,
+     "feedback": "Falling does not use up her energy."
+    }
+   ],
+   "explain": "Balanced forces mean constant speed: terminal velocity.",
+   "passage": "Case study: a skydiver’s jump.\n\nA skydiver jumps from a plane. At first she speeds up. After about 12 seconds she is falling at a steady 55 m/s. When she opens her parachute she slows down sharply, then falls at a steady 5 m/s until she lands.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.mo.case3",
+   "topic": "science.motion",
+   "kind": "mcq",
+   "prompt": "Why is her terminal velocity much lower with the parachute open?",
+   "options": [
+    {
+     "text": "The large area gives much more air resistance, so the forces balance at a lower speed",
+     "correct": true
+    },
+    {
+     "text": "The parachute makes her lighter",
+     "correct": false,
+     "feedback": "Her mass barely changes."
+    },
+    {
+     "text": "The parachute pulls her up into the sky",
+     "correct": false,
+     "feedback": "She still falls, just slowly."
+    }
+   ],
+   "explain": "Air resistance depends on speed and area.",
+   "passage": "Case study: a skydiver’s jump.\n\nA skydiver jumps from a plane. At first she speeds up. After about 12 seconds she is falling at a steady 55 m/s. When she opens her parachute she slows down sharply, then falls at a steady 5 m/s until she lands.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.mo.w",
+   "topic": "science.motion",
+   "kind": "written",
+   "prompt": "Describe and explain the motion of the skydiver from leaving the plane to landing, in terms of the forces acting on her. (6 marks)",
+   "hints": [
+    "Weight greater than air resistance: she accelerates",
+    "Air resistance increases with speed",
+    "Forces balance: terminal velocity of 55 m/s",
+    "Parachute opens: air resistance greater than weight, so she decelerates",
+    "A new, lower terminal velocity of 5 m/s, then she lands"
+   ],
+   "model": "When she leaves the plane her weight is much bigger than the air resistance, so there is a resultant force downwards and she accelerates. As her speed increases, the air resistance increases, so the resultant force gets smaller and her acceleration decreases. After about 12 s the air resistance equals her weight; the forces are balanced and she falls at a constant 55 m/s, her terminal velocity. When the parachute opens, its large area makes the air resistance much bigger than her weight, so there is a resultant force upwards and she slows down. As she slows, the air resistance falls until it balances her weight again, at a new terminal velocity of 5 m/s.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: a skydiver’s jump.\n\nA skydiver jumps from a plane. At first she speeds up. After about 12 seconds she is falling at a steady 55 m/s. When she opens her parachute she slows down sharply, then falls at a steady 5 m/s until she lands.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.mo.graph",
+   "topic": "science.motion",
+   "kind": "template",
+   "gen": "y8tMotion",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.m.mo.flat",
+   "topic": "science.motion",
+   "kind": "mcq",
+   "prompt": "A horizontal line on a distance–time graph means the object is…",
+   "options": [
+    {
+     "text": "stationary",
+     "correct": true
+    },
+    {
+     "text": "moving at constant speed",
+     "correct": false,
+     "feedback": "That is a straight sloping line."
+    },
+    {
+     "text": "accelerating",
+     "correct": false,
+     "feedback": "That would be a curve getting steeper."
+    }
+   ],
+   "explain": "The distance is not changing, so the speed is zero."
+  },
+  {
+   "id": "science.m.mo.vt",
+   "topic": "science.motion",
+   "kind": "mcq",
+   "prompt": "A horizontal line above zero on a velocity–time graph means the object is…",
+   "options": [
+    {
+     "text": "moving at a constant speed",
+     "correct": true
+    },
+    {
+     "text": "stationary",
+     "correct": false,
+     "feedback": "Only if the line is ON zero velocity."
+    },
+    {
+     "text": "slowing down",
+     "correct": false,
+     "feedback": "That is a line sloping down."
+    }
+   ],
+   "explain": "The velocity is not changing, so the acceleration is zero."
+  },
+  {
+   "id": "science.m.mo.moon",
+   "topic": "science.motion",
+   "kind": "mcq",
+   "prompt": "On the Moon, a hammer and a feather dropped together hit the ground at the same time. Why?",
+   "options": [
+    {
+     "text": "There is no air, so no air resistance to slow the feather",
+     "correct": true
+    },
+    {
+     "text": "The Moon has no gravity",
+     "correct": false,
+     "feedback": "It has gravity, about a sixth of Earth’s."
+    },
+    {
+     "text": "They have the same mass",
+     "correct": false,
+     "feedback": "They have very different masses."
+    }
+   ],
+   "explain": "Astronaut David Scott did this on the Apollo 15 mission in 1971."
+  },
+  {
+   "id": "science.m.wk.case1",
+   "topic": "science.work",
+   "kind": "mcq",
+   "prompt": "How much gravitational potential energy does the bar gain when it is lifted 2.0 m?",
+   "options": [
+    {
+     "text": "3000 J",
+     "correct": true
+    },
+    {
+     "text": "300 J",
+     "correct": false,
+     "feedback": "Ep = m × g × h = 150 × 10 × 2.0 = 3000 J."
+    },
+    {
+     "text": "1500 J",
+     "correct": false,
+     "feedback": "Don’t forget the height of 2.0 m."
+    }
+   ],
+   "explain": "Ep = 150 × 10 × 2.0 = 3000 J.",
+   "passage": "Case study: the Olympic weightlifter.\n\nA weightlifter lifts a 150 kg bar from the floor to 2.0 m above the floor in 2.5 s. She holds it there for 3 seconds, then drops it onto the padded platform. (g = 10 N/kg)",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.wk.case2",
+   "topic": "science.work",
+   "kind": "mcq",
+   "prompt": "What is her useful power while lifting?",
+   "options": [
+    {
+     "text": "1200 W",
+     "correct": true
+    },
+    {
+     "text": "3000 W",
+     "correct": false,
+     "feedback": "Divide the energy by the 2.5 s."
+    },
+    {
+     "text": "7500 W",
+     "correct": false,
+     "feedback": "Power = energy ÷ time = 3000 ÷ 2.5."
+    }
+   ],
+   "explain": "P = 3000 J ÷ 2.5 s = 1200 W.",
+   "passage": "Case study: the Olympic weightlifter.\n\nA weightlifter lifts a 150 kg bar from the floor to 2.0 m above the floor in 2.5 s. She holds it there for 3 seconds, then drops it onto the padded platform. (g = 10 N/kg)",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.wk.case3",
+   "topic": "science.work",
+   "kind": "mcq",
+   "prompt": "How much work does she do on the bar while she HOLDS it still?",
+   "options": [
+    {
+     "text": "None: the bar does not move",
+     "correct": true
+    },
+    {
+     "text": "3000 J",
+     "correct": false,
+     "feedback": "Work needs movement in the direction of the force."
+    },
+    {
+     "text": "It depends on how tired she is",
+     "correct": false,
+     "feedback": "Her muscles use energy, but no work is done on the bar."
+    }
+   ],
+   "explain": "Work done = force × distance, and the distance is zero.",
+   "passage": "Case study: the Olympic weightlifter.\n\nA weightlifter lifts a 150 kg bar from the floor to 2.0 m above the floor in 2.5 s. She holds it there for 3 seconds, then drops it onto the padded platform. (g = 10 N/kg)",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.wk.w",
+   "topic": "science.work",
+   "kind": "written",
+   "prompt": "Describe the energy transfers from the moment the weightlifter starts lifting to the moment the bar lands on the platform. Include calculations. (6 marks)",
+   "hints": [
+    "Energy from the chemical store in her muscles is transferred",
+    "The bar gains gravitational potential energy: 3000 J",
+    "Power while lifting: 1200 W",
+    "Falling: the gravitational potential energy is transferred to kinetic energy",
+    "Landing: energy is dissipated as sound and by heating the platform"
+   ],
+   "model": "Her muscles transfer energy from the chemical store of her food, released by respiration, to lift the bar. The bar gains 150 × 10 × 2.0 = 3000 J of gravitational potential energy, and she does this in 2.5 s, a useful power of 1200 W; her muscles also waste energy by heating her body. While she holds the bar still, no work is done on it, though her muscles still use energy. When she drops it, its gravitational potential energy is transferred to its kinetic store as it speeds up. When it hits the platform, the kinetic energy is dissipated as sound and by heating the platform and the bar.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: the Olympic weightlifter.\n\nA weightlifter lifts a 150 kg bar from the floor to 2.0 m above the floor in 2.5 s. She holds it there for 3 seconds, then drops it onto the padded platform. (g = 10 N/kg)",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.wk.calc",
+   "topic": "science.work",
+   "kind": "template",
+   "gen": "y8tWork",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.m.wk.ke",
+   "topic": "science.work",
+   "kind": "mcq",
+   "prompt": "If a car’s speed doubles, what happens to its kinetic energy?",
+   "options": [
+    {
+     "text": "It becomes four times bigger",
+     "correct": true
+    },
+    {
+     "text": "It doubles",
+     "correct": false,
+     "feedback": "Ek = ½mv²: the speed is squared, so 2² = 4."
+    },
+    {
+     "text": "It stays the same",
+     "correct": false,
+     "feedback": "Faster means more kinetic energy."
+    }
+   ],
+   "explain": "This is why stopping distances rise so steeply with speed."
+  },
+  {
+   "id": "science.m.wk.eff",
+   "topic": "science.work",
+   "kind": "mcq",
+   "prompt": "A motor is supplied with 500 J and does 200 J of useful work. What is its efficiency?",
+   "options": [
+    {
+     "text": "40%",
+     "correct": true
+    },
+    {
+     "text": "250%",
+     "correct": false,
+     "feedback": "Efficiency can never be more than 100%: divide useful by total."
+    },
+    {
+     "text": "60%",
+     "correct": false,
+     "feedback": "60% is the wasted fraction."
+    }
+   ],
+   "explain": "Efficiency = useful output ÷ total input × 100 = 200 ÷ 500 × 100 = 40%."
+  },
+  {
+   "id": "science.m.wk.weight",
+   "topic": "science.work",
+   "kind": "mcq",
+   "prompt": "On the Moon, gravitational field strength is about 1.6 N/kg. What is the weight of a 50 kg astronaut there?",
+   "options": [
+    {
+     "text": "80 N",
+     "correct": true
+    },
+    {
+     "text": "50 N",
+     "correct": false,
+     "feedback": "That is her mass in kg, not her weight."
+    },
+    {
+     "text": "500 N",
+     "correct": false,
+     "feedback": "That would be on Earth (50 × 10)."
+    }
+   ],
+   "explain": "Weight = mass × g = 50 × 1.6 = 80 N. Her mass stays 50 kg."
+  },
+  {
+   "id": "science.m.wk.watt",
+   "topic": "science.work",
+   "kind": "mcq",
+   "prompt": "A power of 1 watt means…",
+   "options": [
+    {
+     "text": "1 joule of energy transferred every second",
+     "correct": true
+    },
+    {
+     "text": "1 newton of force",
+     "correct": false,
+     "feedback": "That is a force, not a power."
+    },
+    {
+     "text": "1 metre moved per second",
+     "correct": false,
+     "feedback": "That is a speed."
+    }
+   ],
+   "explain": "Named after James Watt, the steam-engine engineer."
+  },
+  {
+   "id": "science.m.ht.case1",
+   "topic": "science.heating",
+   "kind": "mcq",
+   "prompt": "Which can lost heat fastest?",
+   "options": [
+    {
+     "text": "The bare can",
+     "correct": true
+    },
+    {
+     "text": "The bubble-wrapped can",
+     "correct": false,
+     "feedback": "It stayed hottest: 66 °C."
+    },
+    {
+     "text": "The foil-wrapped can",
+     "correct": false,
+     "feedback": "It reached 60 °C; the bare can fell to 52 °C."
+    }
+   ],
+   "explain": "The bare can dropped by 28 °C in 20 minutes.",
+   "passage": "Case study: keeping soup hot.\n\nTheo fills three identical cans with 300 g of soup at 80 °C. One is bare, one is wrapped in bubble wrap and one is wrapped in aluminium foil. He measures the temperature after 20 minutes.\n\nBare can: 52 °C\nBubble wrap: 66 °C\nAluminium foil: 60 °C",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ht.case2",
+   "topic": "science.heating",
+   "kind": "mcq",
+   "prompt": "Why did the bubble wrap work best?",
+   "options": [
+    {
+     "text": "The trapped air pockets are poor conductors and stop convection",
+     "correct": true
+    },
+    {
+     "text": "Bubble wrap reflects heat like a mirror",
+     "correct": false,
+     "feedback": "That is what shiny foil does."
+    },
+    {
+     "text": "Plastic heats the soup",
+     "correct": false,
+     "feedback": "It does not add energy; it slows losses."
+    }
+   ],
+   "explain": "Air is a good insulator when it is trapped and cannot circulate.",
+   "passage": "Case study: keeping soup hot.\n\nTheo fills three identical cans with 300 g of soup at 80 °C. One is bare, one is wrapped in bubble wrap and one is wrapped in aluminium foil. He measures the temperature after 20 minutes.\n\nBare can: 52 °C\nBubble wrap: 66 °C\nAluminium foil: 60 °C",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ht.case3",
+   "topic": "science.heating",
+   "kind": "mcq",
+   "prompt": "How did the aluminium foil help, even though metal is a good conductor?",
+   "options": [
+    {
+     "text": "Its shiny surface reduces heat lost by radiation",
+     "correct": true
+    },
+    {
+     "text": "Metals are good insulators",
+     "correct": false,
+     "feedback": "Metals are good conductors; the shine is what helps."
+    },
+    {
+     "text": "It makes the can heavier",
+     "correct": false,
+     "feedback": "Mass is not the reason."
+    }
+   ],
+   "explain": "Shiny surfaces are poor emitters of infrared radiation.",
+   "passage": "Case study: keeping soup hot.\n\nTheo fills three identical cans with 300 g of soup at 80 °C. One is bare, one is wrapped in bubble wrap and one is wrapped in aluminium foil. He measures the temperature after 20 minutes.\n\nBare can: 52 °C\nBubble wrap: 66 °C\nAluminium foil: 60 °C",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ht.w",
+   "topic": "science.heating",
+   "kind": "written",
+   "prompt": "Explain Theo’s results in terms of conduction, convection and radiation, and suggest how he could make his experiment a fairer test. (6 marks)",
+   "hints": [
+    "Bare can: loses heat by all three methods",
+    "Bubble wrap: trapped air reduces conduction and convection",
+    "Foil: shiny surface reduces radiation",
+    "Fair test: same starting temperature, same mass of soup, same room, same time",
+    "Repeat and take means; put a lid on each can"
+   ],
+   "model": "All the cans lose heat to the cooler room. The bare can lost the most, falling from 80 °C to 52 °C, by conduction through the metal, convection of the air around it and infrared radiation. The bubble wrap kept the soup hottest (66 °C) because it traps air, a poor conductor, in small pockets so it cannot move and carry heat away by convection. The shiny foil (60 °C) mainly reduced radiation, because shiny surfaces are poor emitters. To make the test fairer, Theo should make sure each can has the same mass of soup at exactly the same starting temperature, put lids on all of them, keep them in the same place, and repeat the experiment to calculate means.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: keeping soup hot.\n\nTheo fills three identical cans with 300 g of soup at 80 °C. One is bare, one is wrapped in bubble wrap and one is wrapped in aluminium foil. He measures the temperature after 20 minutes.\n\nBare can: 52 °C\nBubble wrap: 66 °C\nAluminium foil: 60 °C",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.ht.calc",
+   "topic": "science.heating",
+   "kind": "template",
+   "gen": "y8tHeat",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.m.ht.sea",
+   "topic": "science.heating",
+   "kind": "mcq",
+   "prompt": "Why does the sea warm up more slowly than the sand on a sunny day?",
+   "options": [
+    {
+     "text": "Water has a much higher specific heat capacity than sand",
+     "correct": true
+    },
+    {
+     "text": "The sea gets less sunlight",
+     "correct": false,
+     "feedback": "They get the same sunlight."
+    },
+    {
+     "text": "Sand is a liquid",
+     "correct": false,
+     "feedback": "Sand is a solid; the reason is specific heat capacity."
+    }
+   ],
+   "explain": "It takes much more energy to raise the temperature of 1 kg of water by 1 °C."
+  },
+  {
+   "id": "science.m.ht.temp",
+   "topic": "science.heating",
+   "kind": "mcq",
+   "prompt": "A bath of warm water and a cup of boiling water: which contains more thermal energy?",
+   "options": [
+    {
+     "text": "The bath, because it has far more water, even though it is cooler",
+     "correct": true
+    },
+    {
+     "text": "The cup, because it is hotter",
+     "correct": false,
+     "feedback": "Temperature is not the same as thermal energy."
+    },
+    {
+     "text": "They are the same",
+     "correct": false,
+     "feedback": "The bath has vastly more moving particles."
+    }
+   ],
+   "explain": "Temperature measures how hot something is; its thermal energy also depends on its mass."
+  },
+  {
+   "id": "science.m.ht.flask",
+   "topic": "science.heating",
+   "kind": "mcq",
+   "prompt": "Why does a vacuum flask keep drinks hot?",
+   "options": [
+    {
+     "text": "The vacuum stops conduction and convection, and the silvered walls reduce radiation",
+     "correct": true
+    },
+    {
+     "text": "It contains a heater",
+     "correct": false,
+     "feedback": "It has no power supply."
+    },
+    {
+     "text": "The vacuum heats the drink",
+     "correct": false,
+     "feedback": "A vacuum just stops heat moving."
+    }
+   ],
+   "explain": "Conduction and convection need particles; a vacuum has almost none."
+  },
+  {
+   "id": "science.m.st.case1",
+   "topic": "science.static",
+   "kind": "mcq",
+   "prompt": "When Kit rubs the balloon on her jumper, what actually moves?",
+   "options": [
+    {
+     "text": "Electrons, from the jumper to the balloon",
+     "correct": true
+    },
+    {
+     "text": "Protons, from the balloon to the jumper",
+     "correct": false,
+     "feedback": "Protons are fixed in the nucleus; only electrons move."
+    },
+    {
+     "text": "Air",
+     "correct": false,
+     "feedback": "Charge moves as electrons."
+    }
+   ],
+   "explain": "The balloon gains electrons and becomes negatively charged.",
+   "passage": "Case study: amber and the electron.\n\nAround 600 BC the Greek thinker Thales of Miletus is said to have noticed that amber, rubbed with fur, attracted feathers and dust. The Greek word for amber is ēlektron, which gives us “electricity” and “electron”. Today Kit rubs a balloon on her jumper: the balloon sticks to the wall, and her hair stands on end.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.st.case2",
+   "topic": "science.static",
+   "kind": "mcq",
+   "prompt": "Why does Kit’s hair stand on end?",
+   "options": [
+    {
+     "text": "Each hair gets the same charge, and like charges repel",
+     "correct": true
+    },
+    {
+     "text": "The hairs are attracted to each other",
+     "correct": false,
+     "feedback": "Like charges repel, so they push apart."
+    },
+    {
+     "text": "Static makes hair grow",
+     "correct": false,
+     "feedback": "It pushes the hairs apart."
+    }
+   ],
+   "explain": "Each hair is pushed away from the others.",
+   "passage": "Case study: amber and the electron.\n\nAround 600 BC the Greek thinker Thales of Miletus is said to have noticed that amber, rubbed with fur, attracted feathers and dust. The Greek word for amber is ēlektron, which gives us “electricity” and “electron”. Today Kit rubs a balloon on her jumper: the balloon sticks to the wall, and her hair stands on end.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.st.case3",
+   "topic": "science.static",
+   "kind": "mcq",
+   "prompt": "The word “electron” comes from the Greek word for…",
+   "options": [
+    {
+     "text": "amber",
+     "correct": true
+    },
+    {
+     "text": "lightning",
+     "correct": false,
+     "feedback": "The Greek for a thunderbolt is keraunos."
+    },
+    {
+     "text": "spark",
+     "correct": false,
+     "feedback": "It comes from ēlektron, amber."
+    }
+   ],
+   "explain": "Rubbed amber was the first known example of static electricity.",
+   "passage": "Case study: amber and the electron.\n\nAround 600 BC the Greek thinker Thales of Miletus is said to have noticed that amber, rubbed with fur, attracted feathers and dust. The Greek word for amber is ēlektron, which gives us “electricity” and “electron”. Today Kit rubs a balloon on her jumper: the balloon sticks to the wall, and her hair stands on end.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.st.w",
+   "topic": "science.static",
+   "kind": "written",
+   "prompt": "Explain why a rubbed balloon becomes charged, and why it sticks to a wall even though the wall is not charged. (6 marks)",
+   "hints": [
+    "Friction transfers electrons",
+    "The balloon gains electrons: negative",
+    "The jumper loses electrons: positive",
+    "Near the wall, the balloon repels electrons in the wall’s surface",
+    "The surface of the wall becomes slightly positive, so it attracts the balloon"
+   ],
+   "model": "When the balloon is rubbed on the jumper, friction transfers electrons from the jumper to the balloon. The balloon gains electrons, so it becomes negatively charged, and the jumper is left positively charged. When the negative balloon is held near the wall, it repels electrons in the surface of the wall, pushing them slightly away. This leaves the surface of the wall nearest the balloon with a small positive charge. Opposite charges attract, so the negative balloon is attracted to the positive surface and sticks to the wall, even though the wall as a whole has no overall charge.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: amber and the electron.\n\nAround 600 BC the Greek thinker Thales of Miletus is said to have noticed that amber, rubbed with fur, attracted feathers and dust. The Greek word for amber is ēlektron, which gives us “electricity” and “electron”. Today Kit rubs a balloon on her jumper: the balloon sticks to the wall, and her hair stands on end.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.st.field",
+   "topic": "science.static",
+   "kind": "mcq",
+   "prompt": "A charged balloon can pull small bits of paper towards it without touching them. Why?",
+   "options": [
+    {
+     "text": "It is surrounded by an electric field, which exerts a force on other charges",
+     "correct": true
+    },
+    {
+     "text": "It is magnetic",
+     "correct": false,
+     "feedback": "This is an electric effect, not a magnetic one."
+    },
+    {
+     "text": "The air carries the paper",
+     "correct": false,
+     "feedback": "The force comes from the charge."
+    }
+   ],
+   "explain": "Fields let forces act at a distance, like gravity and magnetism."
+  },
+  {
+   "id": "science.m.st.dust",
+   "topic": "science.static",
+   "kind": "mcq",
+   "prompt": "Why do television screens and plastic surfaces often collect dust?",
+   "options": [
+    {
+     "text": "They become charged and attract the dust",
+     "correct": true
+    },
+    {
+     "text": "Dust is magnetic",
+     "correct": false,
+     "feedback": "Dust is attracted by static charge."
+    },
+    {
+     "text": "They are sticky",
+     "correct": false,
+     "feedback": "The surfaces are smooth; static charge is the cause."
+    }
+   ],
+   "explain": "Wiping with a damp cloth helps the charge leak away."
+  },
+  {
+   "id": "science.m.st.like",
+   "topic": "science.static",
+   "kind": "mcq",
+   "prompt": "Two negatively charged balloons are hung close together. What happens?",
+   "options": [
+    {
+     "text": "They move apart",
+     "correct": true
+    },
+    {
+     "text": "They stick together",
+     "correct": false,
+     "feedback": "Like charges repel."
+    },
+    {
+     "text": "Nothing",
+     "correct": false,
+     "feedback": "Charged objects exert forces on each other."
+    }
+   ],
+   "explain": "Like charges repel; opposite charges attract."
+  },
+  {
+   "id": "science.m.st.earth",
+   "topic": "science.static",
+   "kind": "mcq",
+   "prompt": "Why do fuel tankers connect a wire to the ground before refuelling a plane?",
+   "options": [
+    {
+     "text": "To let charge flow safely away, so a spark does not ignite the fuel",
+     "correct": true
+    },
+    {
+     "text": "To fill the tank faster",
+     "correct": false,
+     "feedback": "The wire is for safety."
+    },
+    {
+     "text": "To measure the fuel",
+     "correct": false,
+     "feedback": "It removes static charge."
+    }
+   ],
+   "explain": "Fuel flowing through pipes can build up charge by friction."
+  },
+  {
+   "id": "science.m.st.lightning",
+   "topic": "science.static",
+   "kind": "mcq",
+   "prompt": "Lightning is…",
+   "options": [
+    {
+     "text": "a huge spark when charge built up in a cloud flows to the ground or another cloud",
+     "correct": true
+    },
+    {
+     "text": "the sound of thunder",
+     "correct": false,
+     "feedback": "Thunder is the sound; lightning is the spark."
+    },
+    {
+     "text": "sunlight reflected from the clouds",
+     "correct": false,
+     "feedback": "It is an electrical discharge."
+    }
+   ],
+   "explain": "The air heats so suddenly that it expands with a bang: thunder."
+  },
+  {
+   "id": "science.m.lt.case1",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "What happens to a ray that enters the glass along the normal (0°)?",
+   "options": [
+    {
+     "text": "It goes straight through without bending",
+     "correct": true
+    },
+    {
+     "text": "It bends towards the normal",
+     "correct": false,
+     "feedback": "At 0° there is no change of direction, only of speed."
+    },
+    {
+     "text": "It is totally reflected",
+     "correct": false,
+     "feedback": "It passes straight in."
+    }
+   ],
+   "explain": "Rays along the normal change speed but not direction.",
+   "passage": "Case study: a glass block experiment.\n\nMira shines a thin ray of light into a glass block at different angles and measures the angle of the ray inside the glass. All angles are measured from the normal.\n\nAngle in air (°) | Angle in glass (°)\n0 | 0\n20 | 13\n40 | 25\n60 | 35",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.lt.case2",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "In Mira’s results the angle in glass is always smaller than the angle in air. What does this show?",
+   "options": [
+    {
+     "text": "Light bends towards the normal when it slows down entering glass",
+     "correct": true
+    },
+    {
+     "text": "Light speeds up in glass",
+     "correct": false,
+     "feedback": "Light is slower in glass than in air."
+    },
+    {
+     "text": "Her protractor was faulty",
+     "correct": false,
+     "feedback": "This is the expected pattern of refraction."
+    }
+   ],
+   "explain": "Entering a denser material, light slows and bends towards the normal.",
+   "passage": "Case study: a glass block experiment.\n\nMira shines a thin ray of light into a glass block at different angles and measures the angle of the ray inside the glass. All angles are measured from the normal.\n\nAngle in air (°) | Angle in glass (°)\n0 | 0\n20 | 13\n40 | 25\n60 | 35",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.lt.case3",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "Why should Mira measure her angles from the normal, not from the edge of the block?",
+   "options": [
+    {
+     "text": "The rules of refraction use angles measured from the normal",
+     "correct": true
+    },
+    {
+     "text": "It makes the angles bigger",
+     "correct": false,
+     "feedback": "It makes them consistent, not bigger."
+    },
+    {
+     "text": "The edge is not straight",
+     "correct": false,
+     "feedback": "The edge is straight; the convention is to use the normal."
+    }
+   ],
+   "explain": "The normal is a line at 90° to the surface where the ray enters.",
+   "passage": "Case study: a glass block experiment.\n\nMira shines a thin ray of light into a glass block at different angles and measures the angle of the ray inside the glass. All angles are measured from the normal.\n\nAngle in air (°) | Angle in glass (°)\n0 | 0\n20 | 13\n40 | 25\n60 | 35",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.lt.w",
+   "topic": "science.light",
+   "kind": "written",
+   "prompt": "Describe how Mira should carry out the glass block experiment safely and accurately, and explain what her results show. (6 marks)",
+   "hints": [
+    "Draw round the block; draw the normal at 90°",
+    "Shine a narrow ray from a ray box at measured angles",
+    "Mark the ray with crosses; join them with a ruler",
+    "Measure the angles with a protractor from the normal; repeat",
+    "Results: the ray bends towards the normal; safety: the lamp gets hot"
+   ],
+   "model": "Mira should place the glass block on paper, draw round it and draw a normal at 90° to one side. She shines a narrow ray from a ray box into the block where the normal meets the surface, at angles of 0°, 20°, 40° and 60° measured from the normal with a protractor. She marks the ray with crosses where it enters and leaves, removes the block and joins the marks with a ruler to find the ray inside the glass, then measures that angle from the normal. Repeating each angle improves reliability. The ray box lamp gets hot, so she should not touch it. Her results show the ray always bends towards the normal in glass, because light slows down.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: a glass block experiment.\n\nMira shines a thin ray of light into a glass block at different angles and measures the angle of the ray inside the glass. All angles are measured from the normal.\n\nAngle in air (°) | Angle in glass (°)\n0 | 0\n20 | 13\n40 | 25\n60 | 35",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.lt.echo",
+   "topic": "science.light",
+   "kind": "template",
+   "gen": "y8tEcho",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.m.lt.straw",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "Why does a straw look bent in a glass of water?",
+   "options": [
+    {
+     "text": "Light from the straw refracts as it leaves the water, so it seems to come from a different place",
+     "correct": true
+    },
+    {
+     "text": "Water really bends the straw",
+     "correct": false,
+     "feedback": "The straw is straight; the light bends."
+    },
+    {
+     "text": "The glass is curved",
+     "correct": false,
+     "feedback": "It happens in a straight-sided tank too."
+    }
+   ],
+   "explain": "Your brain assumes light travels in straight lines."
+  },
+  {
+   "id": "science.m.lt.convex",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "What does a convex (converging) lens do to parallel rays of light?",
+   "options": [
+    {
+     "text": "Brings them together at a focal point",
+     "correct": true
+    },
+    {
+     "text": "Spreads them apart",
+     "correct": false,
+     "feedback": "That is a concave lens."
+    },
+    {
+     "text": "Reflects them back",
+     "correct": false,
+     "feedback": "Lenses refract; mirrors reflect."
+    }
+   ],
+   "explain": "Magnifying glasses and camera lenses are convex."
+  },
+  {
+   "id": "science.m.lt.filter",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "A red apple is seen in white light through a green filter. What colour does it look?",
+   "options": [
+    {
+     "text": "Black (very dark)",
+     "correct": true
+    },
+    {
+     "text": "Red",
+     "correct": false,
+     "feedback": "The filter only lets green through, and the apple reflects no green."
+    },
+    {
+     "text": "Green",
+     "correct": false,
+     "feedback": "The apple does not reflect green light."
+    }
+   ],
+   "explain": "A red object reflects only red light, and the green filter absorbs red."
+  },
+  {
+   "id": "science.m.lt.prism",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "Who showed, using prisms, that white light is a mixture of colours?",
+   "options": [
+    {
+     "text": "Isaac Newton",
+     "correct": true
+    },
+    {
+     "text": "Galileo",
+     "correct": false,
+     "feedback": "Galileo improved the telescope."
+    },
+    {
+     "text": "Archimedes",
+     "correct": false,
+     "feedback": "Archimedes worked on levers and buoyancy."
+    }
+   ],
+   "explain": "Newton split light with one prism and recombined it with a second."
+  },
+  {
+   "id": "science.m.lt.ultra",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "What is ultrasound?",
+   "options": [
+    {
+     "text": "Sound with a frequency above about 20 000 Hz, too high for humans to hear",
+     "correct": true
+    },
+    {
+     "text": "Very loud sound",
+     "correct": false,
+     "feedback": "Ultrasound is about pitch (frequency), not loudness."
+    },
+    {
+     "text": "A type of light",
+     "correct": false,
+     "feedback": "It is a sound wave."
+    }
+   ],
+   "explain": "It is used for pregnancy scans, sonar and cleaning jewellery."
+  },
+  {
+   "id": "science.m.sr.case1",
+   "topic": "science.stars",
+   "kind": "mcq",
+   "prompt": "What keeps the Sun shining?",
+   "options": [
+    {
+     "text": "Nuclear fusion of hydrogen into helium in its core",
+     "correct": true
+    },
+    {
+     "text": "Burning coal and oil",
+     "correct": false,
+     "feedback": "Burning could not last billions of years."
+    },
+    {
+     "text": "Reflected light from other stars",
+     "correct": false,
+     "feedback": "The Sun makes its own light."
+    }
+   ],
+   "explain": "Fusion releases enormous amounts of energy.",
+   "passage": "Case study: the life of the Sun.\n\nThe Sun formed about 4.6 billion years ago from a cloud of gas and dust. It is a main-sequence star, fusing hydrogen into helium in its core. In about 5 billion years it will run short of hydrogen, swell into a red giant, then shed its outer layers and shrink to a white dwarf. Stars much more massive than the Sun end in a supernova, leaving a neutron star or a black hole.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.sr.case2",
+   "topic": "science.stars",
+   "kind": "order",
+   "prompt": "Put the life of the Sun in order.",
+   "items": [
+    "cloud of gas and dust",
+    "main-sequence star",
+    "red giant",
+    "white dwarf"
+   ],
+   "labels": null,
+   "explain": "A star like the Sun ends quietly as a white dwarf.",
+   "passage": "Case study: the life of the Sun.\n\nThe Sun formed about 4.6 billion years ago from a cloud of gas and dust. It is a main-sequence star, fusing hydrogen into helium in its core. In about 5 billion years it will run short of hydrogen, swell into a red giant, then shed its outer layers and shrink to a white dwarf. Stars much more massive than the Sun end in a supernova, leaving a neutron star or a black hole.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.sr.case3",
+   "topic": "science.stars",
+   "kind": "mcq",
+   "prompt": "How will a star much more massive than the Sun end its life?",
+   "options": [
+    {
+     "text": "In a supernova explosion, leaving a neutron star or a black hole",
+     "correct": true
+    },
+    {
+     "text": "As a white dwarf, like the Sun",
+     "correct": false,
+     "feedback": "Only stars like the Sun end as white dwarfs."
+    },
+    {
+     "text": "It will last for ever",
+     "correct": false,
+     "feedback": "Massive stars use their fuel faster than small ones."
+    }
+   ],
+   "explain": "Massive stars use up their fuel quickly and die violently.",
+   "passage": "Case study: the life of the Sun.\n\nThe Sun formed about 4.6 billion years ago from a cloud of gas and dust. It is a main-sequence star, fusing hydrogen into helium in its core. In about 5 billion years it will run short of hydrogen, swell into a red giant, then shed its outer layers and shrink to a white dwarf. Stars much more massive than the Sun end in a supernova, leaving a neutron star or a black hole.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.sr.w",
+   "topic": "science.stars",
+   "kind": "written",
+   "prompt": "Compare the life cycle of a star like the Sun with the life cycle of a star much more massive than the Sun. (6 marks)",
+   "hints": [
+    "Both form from a cloud of gas and dust (nebula)",
+    "Both spend most of their life on the main sequence, fusing hydrogen",
+    "Sun: red giant, then white dwarf",
+    "Massive star: red supergiant, then supernova",
+    "It ends as a neutron star or black hole; massive stars have shorter lives"
+   ],
+   "model": "Both kinds of star begin in a cloud of gas and dust, which collapses under gravity until it is hot enough for nuclear fusion to start. Both then spend most of their lives as main-sequence stars, fusing hydrogen into helium. A star like the Sun, after about 10 billion years in total, swells into a red giant, then sheds its outer layers and shrinks into a white dwarf, which slowly cools. A much more massive star uses up its hydrogen far more quickly, swells into a red supergiant and then explodes as a supernova. What is left collapses into a neutron star or, if it is massive enough, a black hole.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: the life of the Sun.\n\nThe Sun formed about 4.6 billion years ago from a cloud of gas and dust. It is a main-sequence star, fusing hydrogen into helium in its core. In about 5 billion years it will run short of hydrogen, swell into a red giant, then shed its outer layers and shrink to a white dwarf. Stars much more massive than the Sun end in a supernova, leaving a neutron star or a black hole.",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.sr.fusion",
+   "topic": "science.stars",
+   "kind": "mcq",
+   "prompt": "In a main-sequence star, what stops the star collapsing under its own gravity?",
+   "options": [
+    {
+     "text": "The outward pressure from the energy released by fusion balances gravity",
+     "correct": true
+    },
+    {
+     "text": "Its strong magnetic field",
+     "correct": false,
+     "feedback": "The balance is between gravity and outward pressure."
+    },
+    {
+     "text": "Nothing: all stars are collapsing quickly",
+     "correct": false,
+     "feedback": "Main-sequence stars are stable for billions of years."
+    }
+   ],
+   "explain": "When the hydrogen runs short, the balance changes and the star swells into a giant."
+  },
+  {
+   "id": "science.m.sr.ly",
+   "topic": "science.stars",
+   "kind": "mcq",
+   "prompt": "A light year is a measure of…",
+   "options": [
+    {
+     "text": "distance: how far light travels in a year",
+     "correct": true
+    },
+    {
+     "text": "time: one year",
+     "correct": false,
+     "feedback": "Despite the name, it is a distance."
+    },
+    {
+     "text": "brightness",
+     "correct": false,
+     "feedback": "It measures distance."
+    }
+   ],
+   "explain": "About 9.5 million million kilometres."
+  },
+  {
+   "id": "science.m.sr.milky",
+   "topic": "science.stars",
+   "kind": "mcq",
+   "prompt": "The Milky Way is…",
+   "options": [
+    {
+     "text": "the galaxy our Solar System is part of",
+     "correct": true
+    },
+    {
+     "text": "a nebula near Mars",
+     "correct": false,
+     "feedback": "It is a whole galaxy of stars."
+    },
+    {
+     "text": "another name for our Sun",
+     "correct": false,
+     "feedback": "Our Sun is one of hundreds of billions of stars in it."
+    }
+   ],
+   "explain": "The Greeks told that it was milk spilled by the goddess Hera; “galaxy” comes from the Greek for milk."
+  },
+  {
+   "id": "science.m.sr.bigbang",
+   "topic": "science.stars",
+   "kind": "mcq",
+   "prompt": "About how old do scientists think the universe is?",
+   "options": [
+    {
+     "text": "About 13.8 billion years",
+     "correct": true
+    },
+    {
+     "text": "About 4.6 billion years",
+     "correct": false,
+     "feedback": "That is the age of the Sun and Earth."
+    },
+    {
+     "text": "About 6000 years",
+     "correct": false,
+     "feedback": "Evidence from light and radiation shows it is far older."
+    }
+   ],
+   "explain": "The Big Bang theory is supported by the expansion of the universe and the cosmic background radiation."
+  },
+  {
+   "id": "science.m.sr.orion",
+   "topic": "science.stars",
+   "kind": "mcq",
+   "prompt": "Which constellation is named after a hunter in Greek myth?",
+   "options": [
+    {
+     "text": "Orion",
+     "correct": true
+    },
+    {
+     "text": "Cassiopeia",
+     "correct": false,
+     "feedback": "Cassiopeia was a boastful queen."
+    },
+    {
+     "text": "Andromeda",
+     "correct": false,
+     "feedback": "Andromeda was the princess rescued by Perseus."
+    }
+   ],
+   "explain": "Look for the three stars of Orion’s belt on winter evenings."
+  },
+  {
+   "id": "science.m.pr.case1",
+   "topic": "science.practicals",
+   "kind": "mcq",
+   "prompt": "Which of Kit’s results is anomalous?",
+   "options": [
+    {
+     "text": "18.9 s for the 60 cm pendulum",
+     "correct": true
+    },
+    {
+     "text": "9.0 s for the 20 cm pendulum",
+     "correct": false,
+     "feedback": "It is close to 8.9 and 9.1."
+    },
+    {
+     "text": "12.6 s for the 40 cm pendulum",
+     "correct": false,
+     "feedback": "It fits with 12.7 and 12.8."
+    }
+   ],
+   "explain": "It is far from the other two readings at that length (15.5 and 15.6).",
+   "passage": "Case study: Kit’s pendulum results.\n\nKit times 10 swings of a pendulum for different string lengths, three times each.\n\nLength (cm) | Time 1 (s) | Time 2 (s) | Time 3 (s)\n20 | 9.0 | 8.9 | 9.1\n40 | 12.7 | 12.6 | 12.8\n60 | 15.5 | 18.9 | 15.6\n80 | 17.9 | 18.0 | 17.9",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.pr.case2",
+   "topic": "science.practicals",
+   "kind": "mcq",
+   "prompt": "What is the best mean time for 10 swings at 60 cm?",
+   "options": [
+    {
+     "text": "15.55 s, leaving out the anomaly",
+     "correct": true
+    },
+    {
+     "text": "16.67 s",
+     "correct": false,
+     "feedback": "That includes the anomaly of 18.9 s."
+    },
+    {
+     "text": "18.9 s",
+     "correct": false,
+     "feedback": "That is the anomaly."
+    }
+   ],
+   "explain": "(15.5 + 15.6) ÷ 2 = 15.55 s.",
+   "passage": "Case study: Kit’s pendulum results.\n\nKit times 10 swings of a pendulum for different string lengths, three times each.\n\nLength (cm) | Time 1 (s) | Time 2 (s) | Time 3 (s)\n20 | 9.0 | 8.9 | 9.1\n40 | 12.7 | 12.6 | 12.8\n60 | 15.5 | 18.9 | 15.6\n80 | 17.9 | 18.0 | 17.9",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.pr.case3",
+   "topic": "science.practicals",
+   "kind": "mcq",
+   "prompt": "Why did Kit time 10 swings instead of 1?",
+   "options": [
+    {
+     "text": "Timing many swings reduces the effect of her reaction time, so the result is more accurate",
+     "correct": true
+    },
+    {
+     "text": "One swing is too fast to see",
+     "correct": false,
+     "feedback": "You can see it; the timing error is the problem."
+    },
+    {
+     "text": "It makes the pendulum swing faster",
+     "correct": false,
+     "feedback": "It does not change the swing."
+    }
+   ],
+   "explain": "Divide by 10 afterwards to get the time for one swing.",
+   "passage": "Case study: Kit’s pendulum results.\n\nKit times 10 swings of a pendulum for different string lengths, three times each.\n\nLength (cm) | Time 1 (s) | Time 2 (s) | Time 3 (s)\n20 | 9.0 | 8.9 | 9.1\n40 | 12.7 | 12.6 | 12.8\n60 | 15.5 | 18.9 | 15.6\n80 | 17.9 | 18.0 | 17.9",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.pr.w",
+   "topic": "science.practicals",
+   "kind": "written",
+   "prompt": "Evaluate Kit’s pendulum experiment. Comment on the anomaly, the repeats, and how far her results support the conclusion “longer pendulums swing more slowly”. (6 marks)",
+   "hints": [
+    "Identify the anomaly (18.9 s) and say it should be left out",
+    "The repeats are close, so the results are repeatable",
+    "Timing 10 swings reduces reaction-time error",
+    "Trend: time increases with length, but not in proportion",
+    "Improvements (more lengths, light gates or video) and a clear judgement"
+   ],
+   "model": "Kit’s results are mostly repeatable: at each length, two or three readings are within 0.2 s of each other. The reading of 18.9 s at 60 cm is anomalous, probably a miscount of swings, so it should be left out, giving a mean of 15.55 s. Timing 10 swings and dividing by 10 reduced the effect of her reaction time. The results clearly support the conclusion: the time for 10 swings rises from about 9.0 s at 20 cm to about 17.9 s at 80 cm. However, the time does not double when the length doubles, so the relationship is not directly proportional. She could test more lengths, and use a light gate or a slow-motion video for more precise timing.",
+   "words": [
+    40,
+    200
+   ],
+   "passage": "Case study: Kit’s pendulum results.\n\nKit times 10 swings of a pendulum for different string lengths, three times each.\n\nLength (cm) | Time 1 (s) | Time 2 (s) | Time 3 (s)\n20 | 9.0 | 8.9 | 9.1\n40 | 12.7 | 12.6 | 12.8\n60 | 15.5 | 18.9 | 15.6\n80 | 17.9 | 18.0 | 17.9",
+   "passageSource": "A case study written for this app"
+  },
+  {
+   "id": "science.m.pr.vars",
+   "topic": "science.practicals",
+   "kind": "template",
+   "gen": "y8tVariables",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.m.pr.zero",
+   "topic": "science.practicals",
+   "kind": "mcq",
+   "prompt": "What kind of error is caused by a balance that always reads 0.5 g too high?",
+   "options": [
+    {
+     "text": "A systematic error (a zero error)",
+     "correct": true
+    },
+    {
+     "text": "A random error",
+     "correct": false,
+     "feedback": "A random error varies unpredictably; this one is always the same."
+    },
+    {
+     "text": "An anomaly",
+     "correct": false,
+     "feedback": "Every reading is affected equally."
+    }
+   ],
+   "explain": "Systematic errors shift every result the same way, and repeats do not reveal them."
+  },
+  {
+   "id": "science.m.pr.resolution",
+   "topic": "science.practicals",
+   "kind": "mcq",
+   "prompt": "A thermometer marked every 1 °C has a resolution of…",
+   "options": [
+    {
+     "text": "1 °C",
+     "correct": true
+    },
+    {
+     "text": "100 °C",
+     "correct": false,
+     "feedback": "That might be its range."
+    },
+    {
+     "text": "0 °C",
+     "correct": false,
+     "feedback": "Resolution is the smallest change it can show."
+    }
+   ],
+   "explain": "A digital thermometer reading to 0.1 °C has a finer resolution."
+  },
+  {
+   "id": "science.m.pr.precise",
+   "topic": "science.practicals",
+   "kind": "mcq",
+   "prompt": "Readings of 21.4, 21.5 and 21.4 °C when the true value is 25.0 °C are…",
+   "options": [
+    {
+     "text": "precise but not accurate",
+     "correct": true
+    },
+    {
+     "text": "accurate but not precise",
+     "correct": false,
+     "feedback": "They are close together (precise) but far from the true value (not accurate)."
+    },
+    {
+     "text": "both accurate and precise",
+     "correct": false,
+     "feedback": "They are 3.5 °C away from the true value."
+    }
+   ],
+   "explain": "Precise means close together; accurate means close to the true value."
+  },
+  {
+   "id": "science.m.pr.hazard",
+   "topic": "science.practicals",
+   "kind": "mcq",
+   "prompt": "In a risk assessment, what is a hazard?",
+   "options": [
+    {
+     "text": "Something that could cause harm, such as hot water or acid",
+     "correct": true
+    },
+    {
+     "text": "The chance of an accident",
+     "correct": false,
+     "feedback": "That is the risk."
+    },
+    {
+     "text": "A safety precaution",
+     "correct": false,
+     "feedback": "A precaution reduces the risk from a hazard."
+    }
+   ],
+   "explain": "Identify the hazards, then plan precautions to reduce the risks."
+  },
+  {
+   "id": "science.m.el2.solid",
+   "topic": "science.electrolysis",
+   "kind": "mcq",
+   "prompt": "Why can solid sodium chloride not be electrolysed?",
+   "options": [
+    {
+     "text": "Its ions are fixed in place and cannot move to the electrodes",
+     "correct": true
+    },
+    {
+     "text": "It has no ions",
+     "correct": false,
+     "feedback": "It is made of ions, but in a solid they are locked in a lattice."
+    },
+    {
+     "text": "It is too hard",
+     "correct": false,
+     "feedback": "Hardness is not the reason; the ions must be free to move."
+    }
+   ],
+   "explain": "Melt it or dissolve it and the ions can move."
+  },
+  {
+   "id": "science.m.el2.cathode",
+   "topic": "science.electrolysis",
+   "kind": "mcq",
+   "prompt": "In electrolysis, positive metal ions move towards the…",
+   "options": [
+    {
+     "text": "cathode (negative electrode)",
+     "correct": true
+    },
+    {
+     "text": "anode (positive electrode)",
+     "correct": false,
+     "feedback": "Opposite charges attract: positive ions go to the negative electrode."
+    },
+    {
+     "text": "middle of the beaker",
+     "correct": false,
+     "feedback": "They move to an electrode."
+    }
+   ],
+   "explain": "In a molten compound, the metal forms at the cathode."
+  },
+  {
+   "id": "science.m.el2.al",
+   "topic": "science.electrolysis",
+   "kind": "mcq",
+   "prompt": "Why is aluminium oxide dissolved in molten cryolite before electrolysis?",
+   "options": [
+    {
+     "text": "It lowers the melting point, saving a lot of energy",
+     "correct": true
+    },
+    {
+     "text": "It makes the aluminium shinier",
+     "correct": false,
+     "feedback": "The purpose is to save energy."
+    },
+    {
+     "text": "Cryolite is the source of the aluminium",
+     "correct": false,
+     "feedback": "Aluminium oxide (from bauxite) is the source."
+    }
+   ],
+   "explain": "Aluminium oxide on its own melts at over 2000 °C."
+  },
+  {
+   "id": "science.m.el2.plating",
+   "topic": "science.electrolysis",
+   "kind": "mcq",
+   "prompt": "Electroplating a fork with silver uses electrolysis to…",
+   "options": [
+    {
+     "text": "coat the fork with a thin layer of silver",
+     "correct": true
+    },
+    {
+     "text": "melt the fork",
+     "correct": false,
+     "feedback": "It deposits metal onto the fork."
+    },
+    {
+     "text": "make the fork magnetic",
+     "correct": false,
+     "feedback": "It adds a coating."
+    }
+   ],
+   "explain": "The fork is made the cathode, so silver ions are attracted to it."
+  },
+  {
+   "id": "science.m.el2.davy",
+   "topic": "science.electrolysis",
+   "kind": "fact",
+   "prompt": "Which chemist discovered sodium and potassium in 1807 using electrolysis?",
+   "answer": "Humphry Davy",
+   "distractors": [
+    "Michael Faraday",
+    "Dmitri Mendeleev",
+    "Marie Curie"
+   ],
+   "explain": "Davy used a huge battery to split molten compounds.",
+   "accept": [
+    "davy",
+    "sir humphry davy"
+   ]
+  },
+  {
+   "id": "science.m.el2.brine",
+   "topic": "science.electrolysis",
+   "kind": "mcq",
+   "prompt": "Which gas forms at the anode when concentrated salt solution (brine) is electrolysed?",
+   "options": [
+    {
+     "text": "Chlorine",
+     "correct": true
+    },
+    {
+     "text": "Oxygen",
+     "correct": false,
+     "feedback": "With concentrated chloride ions, chlorine forms at the anode."
+    },
+    {
+     "text": "Sodium",
+     "correct": false,
+     "feedback": "Sodium is a metal and too reactive to form from a solution; hydrogen forms at the cathode instead."
+    }
+   ],
+   "explain": "Hydrogen forms at the cathode, and sodium hydroxide is left in the solution."
+  },
+  {
+   "id": "science.m.el2.anode",
+   "topic": "science.electrolysis",
+   "kind": "mcq",
+   "prompt": "When molten lead bromide is electrolysed, what forms at the anode?",
+   "options": [
+    {
+     "text": "Bromine",
+     "correct": true
+    },
+    {
+     "text": "Lead",
+     "correct": false,
+     "feedback": "Lead forms at the cathode."
+    },
+    {
+     "text": "Hydrogen",
+     "correct": false,
+     "feedback": "There is no water, so no hydrogen."
+    }
+   ],
+   "explain": "Negative bromide ions are attracted to the positive anode."
+  },
+  {
+   "id": "science.m.in.basic",
+   "topic": "science.induction",
+   "kind": "mcq",
+   "prompt": "What happens when a magnet is pushed into a coil of wire connected to a meter?",
+   "options": [
+    {
+     "text": "A potential difference is induced and the meter flickers",
+     "correct": true
+    },
+    {
+     "text": "Nothing, because there is no battery",
+     "correct": false,
+     "feedback": "Moving the magnet induces a voltage."
+    },
+    {
+     "text": "The magnet loses its magnetism",
+     "correct": false,
+     "feedback": "The magnet is unaffected."
+    }
+   ],
+   "explain": "This is electromagnetic induction, discovered by Michael Faraday in 1831."
+  },
+  {
+   "id": "science.m.in.still",
+   "topic": "science.induction",
+   "kind": "mcq",
+   "prompt": "What does the meter show when the magnet is held still inside the coil?",
+   "options": [
+    {
+     "text": "Zero",
+     "correct": true
+    },
+    {
+     "text": "A steady current",
+     "correct": false,
+     "feedback": "There must be movement to induce a voltage."
+    },
+    {
+     "text": "A larger reading",
+     "correct": false,
+     "feedback": "No movement, no induced voltage."
+    }
+   ],
+   "explain": "Induction needs a changing magnetic field."
+  },
+  {
+   "id": "science.m.in.bigger",
+   "topic": "science.induction",
+   "kind": "mcq",
+   "prompt": "Which would NOT increase the induced potential difference?",
+   "options": [
+    {
+     "text": "Using a coil with fewer turns",
+     "correct": true
+    },
+    {
+     "text": "Moving the magnet faster",
+     "correct": false,
+     "feedback": "Faster movement increases it."
+    },
+    {
+     "text": "Using a stronger magnet",
+     "correct": false,
+     "feedback": "A stronger magnet increases it."
+    }
+   ],
+   "explain": "More turns, faster movement and a stronger magnet all increase it."
+  },
+  {
+   "id": "science.m.in.reverse",
+   "topic": "science.induction",
+   "kind": "mcq",
+   "prompt": "What happens to the induced current when the magnet is pulled out instead of pushed in?",
+   "options": [
+    {
+     "text": "It flows the opposite way",
+     "correct": true
+    },
+    {
+     "text": "It flows the same way",
+     "correct": false,
+     "feedback": "Reversing the movement reverses the current."
+    },
+    {
+     "text": "It doubles",
+     "correct": false,
+     "feedback": "The direction changes, not necessarily the size."
+    }
+   ],
+   "explain": "This is why generators produce alternating current."
+  },
+  {
+   "id": "science.m.in.transformer",
+   "topic": "science.induction",
+   "kind": "mcq",
+   "prompt": "What does a step-up transformer at a power station do?",
+   "options": [
+    {
+     "text": "Increases the potential difference so less energy is wasted in the cables",
+     "correct": true
+    },
+    {
+     "text": "Makes the electricity flow faster",
+     "correct": false,
+     "feedback": "It changes the voltage, not the speed."
+    },
+    {
+     "text": "Stores electricity",
+     "correct": false,
+     "feedback": "Transformers do not store energy."
+    }
+   ],
+   "explain": "High voltage means a smaller current, so the cables heat up less. Step-down transformers lower it again for homes."
+  },
+  {
+   "id": "science.m.in.uses",
+   "topic": "science.induction",
+   "kind": "mcq",
+   "prompt": "Which of these uses electromagnetic induction to produce electricity?",
+   "options": [
+    {
+     "text": "A wind turbine’s generator",
+     "correct": true
+    },
+    {
+     "text": "A solar cell",
+     "correct": false,
+     "feedback": "Solar cells convert light directly, without magnets."
+    },
+    {
+     "text": "A battery",
+     "correct": false,
+     "feedback": "Batteries use chemical reactions."
+    }
+   ],
+   "explain": "Generators in power stations, dynamos and wind turbines all use induction."
+  },
+  {
+   "id": "science.m.in.faraday",
+   "topic": "science.induction",
+   "kind": "fact",
+   "prompt": "Which scientist discovered electromagnetic induction in 1831?",
+   "answer": "Michael Faraday",
+   "distractors": [
+    "Humphry Davy",
+    "Isaac Newton",
+    "Thomas Edison"
+   ],
+   "explain": "Faraday began as Davy’s assistant at the Royal Institution.",
+   "accept": [
+    "faraday"
+   ]
+  },
+  {
+   "id": "science.m.mm.calc",
+   "topic": "science.momentum",
+   "kind": "template",
+   "gen": "y8tMomentum",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "science.m.mm.crumple",
+   "topic": "science.momentum",
+   "kind": "mcq",
+   "prompt": "Why do crumple zones make cars safer in a crash?",
+   "options": [
+    {
+     "text": "They make the collision last longer, so the force on the passengers is smaller",
+     "correct": true
+    },
+    {
+     "text": "They make the car heavier",
+     "correct": false,
+     "feedback": "The point is the longer collision time."
+    },
+    {
+     "text": "They stop the car crashing",
+     "correct": false,
+     "feedback": "They reduce injury once a crash happens."
+    }
+   ],
+   "explain": "The same change in momentum over a longer time needs a smaller force."
+  },
+  {
+   "id": "science.m.mm.conserve",
+   "topic": "science.momentum",
+   "kind": "mcq",
+   "prompt": "In a collision with no outside forces, the total momentum…",
+   "options": [
+    {
+     "text": "stays the same",
+     "correct": true
+    },
+    {
+     "text": "always increases",
+     "correct": false,
+     "feedback": "Momentum is conserved."
+    },
+    {
+     "text": "always becomes zero",
+     "correct": false,
+     "feedback": "Only if it started at zero."
+    }
+   ],
+   "explain": "Momentum before = momentum after."
+  },
+  {
+   "id": "science.m.mm.recoil",
+   "topic": "science.momentum",
+   "kind": "mcq",
+   "prompt": "When a cannon fires a cannonball forwards, the cannon moves backwards. Why?",
+   "options": [
+    {
+     "text": "The total momentum was zero before, so the cannon gets equal momentum the other way",
+     "correct": true
+    },
+    {
+     "text": "The ball pushes air back at the cannon",
+     "correct": false,
+     "feedback": "It is conservation of momentum."
+    },
+    {
+     "text": "The cannon is lighter than the ball",
+     "correct": false,
+     "feedback": "The cannon is much heavier, which is why it moves back slowly."
+    }
+   ],
+   "explain": "This recoil is the same reason a rocket moves forwards."
+  },
+  {
+   "id": "science.m.mm.unit",
+   "topic": "science.momentum",
+   "kind": "fact",
+   "prompt": "What is the unit of momentum?",
+   "answer": "kg m/s",
+   "distractors": [
+    "N",
+    "J",
+    "m/s²"
+   ],
+   "explain": "Mass (kg) × velocity (m/s).",
+   "accept": [
+    "kgm/s",
+    "kg m s-1",
+    "kg·m/s"
+   ]
+  },
+  {
+   "id": "science.m.mm.vector",
+   "topic": "science.momentum",
+   "kind": "mcq",
+   "prompt": "Why is momentum called a vector quantity?",
+   "options": [
+    {
+     "text": "It has a direction as well as a size",
+     "correct": true
+    },
+    {
+     "text": "It is always positive",
+     "correct": false,
+     "feedback": "Momentum in the opposite direction is negative."
+    },
+    {
+     "text": "It is measured in vectors",
+     "correct": false,
+     "feedback": "It is measured in kg m/s."
+    }
+   ],
+   "explain": "Velocity is a vector, so momentum is too."
+  },
+  {
+   "id": "science.m.mm.knees",
+   "topic": "science.momentum",
+   "kind": "mcq",
+   "prompt": "Why do you bend your knees when you land after a jump?",
+   "options": [
+    {
+     "text": "It increases the time taken to stop, which reduces the force on your legs",
+     "correct": true
+    },
+    {
+     "text": "It makes you lighter",
+     "correct": false,
+     "feedback": "Your mass does not change."
+    },
+    {
+     "text": "It increases your momentum",
+     "correct": false,
+     "feedback": "Your momentum falls to zero either way."
+    }
+   ],
+   "explain": "The same idea as crumple zones and gym mats."
+  }
+ ]
+}

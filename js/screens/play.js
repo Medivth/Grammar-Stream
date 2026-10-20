@@ -440,8 +440,8 @@ function writtenStep(app, root, step) {
     btn.replaceWith(h('div', { class: 'feedback good pop' }, h('h3', {}, '✓ Handed in'), h('p', {}, 'A grown-up will read it. Their comments will be waiting at the start of a session soon.'),
       h('button', { class: 'btn-primary btn-big', style: { marginTop: '12px' }, onclick: () => next(app) }, 'Next')));
   };
-  mount(root, header(app, 'Reading', null), h('div', { class: 'q-wrap stack written' },
-    h('blockquote', { class: 'passage' }, item.passage, item.passageSource ? h('cite', {}, item.passageSource) : null),
+  mount(root, header(app, item.passage && ['english', 'reading'].includes(item.subject) ? 'Reading' : `${SUBJECT_BY_ID[item.subject]?.name || ''} writing`, null), h('div', { class: 'q-wrap stack written' },
+    item.passage ? h('blockquote', { class: 'passage' }, item.passage, item.passageSource ? h('cite', {}, item.passageSource) : null) : null,
     rich('div', item.prompt, { class: 'q-prompt' }),
     h('div', { class: 'card', style: { padding: '14px 18px' } }, h('p', { class: 'muted small', style: { margin: '0 0 6px' } }, 'A good answer includes:'), h('ul', { style: { margin: 0, paddingLeft: '20px' } }, item.hints.map((t) => h('li', {}, t)))),
     ta, h('div', { class: 'row', style: { justifyContent: 'space-between', alignItems: 'center' } }, count, h('span', { class: 'muted small' }, `at least ${minWords} words`)), btn));
