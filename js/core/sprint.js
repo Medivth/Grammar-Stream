@@ -15,7 +15,7 @@ export function sprintLevel(state) {
   const last = state.sprints?.at(-1);
   if (!last) return SPRINT_START_LEVEL;
   const acc = last.answered ? last.correct / last.answered : 0;
-  if (last.correct >= (COURSE.id === 'ks1' ? 12 : LEVEL_UP_AT.correct) && acc >= LEVEL_UP_AT.accuracy) return Math.min(SPRINT_LEVELS, last.level + 1);
+  if (last.correct >= (COURSE.sprintUp || LEVEL_UP_AT.correct) && acc >= LEVEL_UP_AT.accuracy) return Math.min(SPRINT_LEVELS, last.level + 1);
   if (last.answered >= 5 && acc < LEVEL_DOWN_BELOW) return Math.max(1, last.level - 1);
   return last.level;
 }

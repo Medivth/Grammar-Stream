@@ -38,6 +38,8 @@ test('the course switch swaps subjects, placement order and settings in place', 
 
 test('Year 2 content is valid, plentiful and every topic has items', () => {
   assert.deepEqual(validateDB(db, GENERATORS), []);
+  const ids = index.decks.flatMap((p) => (read(p).items || []).map((i) => i.id));
+  assert.deepEqual(ids.filter((id, i) => ids.indexOf(id) !== i), [], 'item ids are unique across decks');
   for (const s of SUBJECTS) assert.ok(db.topicOrder[s.id]?.length >= 18, `${s.id}: ${db.topicOrder[s.id]?.length} topics`);
   assert.ok(Object.keys(db.items).length > 800);
   assert.ok(db.timeline.events.length >= 30);

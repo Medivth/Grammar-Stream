@@ -68,8 +68,48 @@ export function arithmeticPaper(seed) {
 // --- Year 2: the shape of the old KS1 arithmetic paper (25 questions, 25 marks, about 20 minutes)
 export const KS1_SPEC = { questions: 25, marks: 25, minutes: 20, label: 'the end-of-Year-2 arithmetic test', good: 20 };
 export const KS2_SPEC = { questions: PAPER_QUESTIONS, marks: PAPER_MARKS, minutes: PAPER_MINUTES, label: 'the Year 6 arithmetic test', good: 32 };
-export const paperSpec = () => (COURSE.paper === 'ks1' ? KS1_SPEC : KS2_SPEC);
-export const makePaper = (seed) => (COURSE.paper === 'ks1' ? ks1Paper(seed) : arithmeticPaper(seed));
+export const Y3_SPEC = { questions: 30, marks: 30, minutes: 25, label: 'a Year 3 arithmetic test', good: 24 };
+export const paperSpec = () => ({ ks1: KS1_SPEC, y3: Y3_SPEC }[COURSE.paper] || KS2_SPEC);
+export const makePaper = (seed) => ({ ks1: ks1Paper, y3: y3Paper }[COURSE.paper] || arithmeticPaper)(seed);
+
+// --- Year 3: no national test, so a paper in the same style built from the Year 3 calculation objectives
+export function y3Paper(seed) {
+  const r = makeRng(`y3paper:${seed}`);
+  const q = [];
+  const add = (prompt, value) => q.push({ n: q.length + 1, prompt, value: String(value), marks: 1 });
+  { const a = r.int(21, 79), b = r.int(11, 99 - a); add(`${a} + ${b} =`, a + b); }
+  { const a = r.int(41, 99), b = r.int(11, 39); add(`${a} − ${b} =`, a - b); }
+  { const a = r.int(101, 899), b = r.int(1, 9); add(`${a} + ${b} =`, a + b); }
+  { const a = r.int(110, 890), b = r.int(1, 9) * 10; add(`${a} + ${b} =`, a + b); }
+  { const a = r.int(400, 999), b = r.int(1, 3) * 100; add(`${a} − ${b} =`, a - b); }
+  { const a = r.pick([3, 4, 8]), b = r.int(2, 12); add(`${a} × ${b} =`, a * b); }
+  { const a = r.pick([3, 4, 8]), b = r.int(2, 12); add(`${a * b} ÷ ${a} =`, b); }
+  { const a = r.int(2, 12); add(`${a} × 10 =`, a * 10); }
+  { const d = r.pick([2, 3, 4, 5, 10]), k = r.int(2, 10); add(`{{1/${d}}} of ${d * k} =`, k); }
+  { const a = r.int(101, 499), b = r.int(101, 499); add(`${a} + ${b} =`, a + b); }
+  { const a = r.int(600, 999), b = r.int(101, 499); add(`${a} − ${b} =`, a - b); }
+  { const a = r.int(2, 9) * 10, b = r.pick([3, 4, 8]); add(`${a} × ${b} =`, a * b); }
+  { const a = r.int(12, 29), b = r.pick([2, 3, 4, 5]); add(`${a} × ${b} =`, a * b); }
+  { const b = r.pick([2, 3, 4, 5]), k = r.int(12, 25); add(`${b * k} ÷ ${b} =`, k); }
+  { const a = r.int(145, 455), b = r.int(146, 445); add(`${a} + ${b} =`, a + b); }
+  { const a = r.int(500, 900), b = r.int(105, 395); add(`${a} − ${b} =`, a - b); }
+  { const d = r.pick([5, 7, 10]), n = r.int(1, d - 2), m = r.int(1, d - 1 - n); add(`{{${n}/${d}}} + {{${m}/${d}}} =`, `${n + m}/${d}`); }
+  { const d = r.pick([5, 8, 10]), n = r.int(3, d - 1), m = r.int(1, n - 1); add(`{{${n}/${d}}} − {{${m}/${d}}} =`, `${n - m}/${d}`); }
+  { const d = r.pick([3, 4, 5]), n = r.int(2, d - 1), k = r.int(2, 9); add(`{{${n}/${d}}} of ${d * k} =`, n * k); }
+  { const a = r.int(2, 9) * 100, t = 1000; add(`${a} + ? = ${t}`, t - a); }
+  { const a = r.int(31, 69), b = r.pick([3, 4, 8]); add(`${a} × ${b} =`, a * b); }
+  { const b = r.pick([3, 4, 8]), k = r.int(11, 24); add(`${b * k} ÷ ${b} =`, k); }
+  { const a = r.int(2, 9), b = r.int(2, 9); add(`${a} × ${b} × 10 =`, a * b * 10); }
+  { const a = r.int(301, 799), b = r.int(1, 99); add(`${a} − ? = ${a - b}`, b); }
+  { const a = r.int(1, 9) * 100 + r.int(1, 9) * 10 + r.int(1, 9), b = r.int(1, 9) * 100 + r.int(1, 9) * 10 + r.int(1, 9); const [x, y] = a > b ? [a, b] : [b, a]; add(`${x} − ${y} =`, x - y); }
+  { const a = r.int(105, 495); add(`Double ${a} =`, 2 * a); }
+  { const a = r.int(101, 499) * 2; add(`Half of ${a} =`, a / 2); }
+  { const b = r.pick([3, 4, 5]), k = r.int(4, 9), rem = r.int(1, b - 1); add(`${b * k + rem} ÷ ${b} = ${k} remainder ?`, rem); }
+  { const a = r.int(2, 9) * 10; add(`${a} × 4 ÷ 2 =`, a * 2); }
+  { const a = r.int(14, 49), b = r.pick([6, 7, 9]); add(`${a} × ${b} =`, a * b); }
+  if (q.length !== Y3_SPEC.questions) throw new Error(`y3 paper has ${q.length} questions`);
+  return q;
+}
 
 export function ks1Paper(seed) {
   const r = makeRng(`ks1paper:${seed}`);

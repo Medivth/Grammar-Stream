@@ -1,7 +1,7 @@
 // Visible progress: what she knows, milestones, timeline and places. Derived only; never stored.
 
 import { topicStatus } from './mastery.js';
-import { SUBJECTS, COURSE } from './subjects.js';
+import { SUBJECTS, COURSE, isStretch } from './subjects.js';
 import { monthKey } from './dates.js';
 import { calibration } from './session.js';
 
@@ -57,7 +57,7 @@ export const MILESTONES = [
   { id: 'globetrotter', title: 'Globetrotter', desc: 'Know 25 countries', goal: 25, measure: (s, db) => { const p = placesStatus(s, db); return p.known.world.size + [...p.known.europe].filter((x) => !p.known.world.has(x)).length; }, unlock: 'explorer' },
   { id: 'time-traveller', title: 'Time traveller', desc: 'Light up 12 events on the timeline', goal: 12, measure: (s, db) => timelineStatus(s, db).events.filter((e) => e.known).length },
   { id: 'lab-ready', title: 'Lab ready', desc: 'Secure 5 science topics', goal: 5, measure: (s, db) => Object.entries(s.topics).filter(([id, t]) => db.topics[id]?.subject === 'science' && ['proficient', 'mastered'].includes(t.state)).length, unlock: 'goggles' },
-  { id: 'stretch', title: 'Beyond the syllabus', desc: 'Secure 5 stretch topics', goal: 5, measure: (s, db) => Object.entries(s.topics).filter(([id, t]) => db.topics[id]?.tier === 'stretch' && ['proficient', 'mastered'].includes(t.state)).length, unlock: 'crown' },
+  { id: 'stretch', title: 'Beyond the syllabus', desc: 'Secure 5 stretch topics', goal: 5, measure: (s, db) => Object.entries(s.topics).filter(([id, t]) => isStretch(db.topics[id]) && ['proficient', 'mastered'].includes(t.state)).length, unlock: 'crown' },
   { id: 'typist', title: 'Typist', desc: 'Type 30 words a minute with 95% accuracy', goal: 30, measure: (s) => (s.typing?.best?.wpm) || 0 },
   { id: 'speed-reader', title: 'Speed reader', desc: 'Read at 200 words a minute and still get 3 of 4 right', goal: 200, measure: (s) => Math.max(0, ...(s.speed || []).filter((r) => r.total && r.correct / r.total >= 0.75).map((r) => r.wpm)) },
   { id: 'paper', title: 'Test ready', desc: 'Score 32 or more on an arithmetic paper', goal: 32, measure: (s) => Math.max(0, ...(s.papers || []).map((p) => p.score)) },
@@ -87,10 +87,19 @@ export const KS1_MILESTONES = [
   { id: 'paper', title: 'Test ready', desc: 'Score 20 or more on a maths paper', goal: 20, measure: (s) => Math.max(0, ...(s.papers || []).map((p) => p.score)) },
   { id: 'regular', title: 'Regular', desc: 'Practise on 12 days in one month', goal: 12, measure: (s) => { const m = {}; for (const x of s.sessions) if (x.completed) (m[monthKey(x.day)] ||= new Set()).add(x.day); return Math.max(0, ...Object.values(m).map((v) => v.size)); } },
   { id: 'hundred', title: 'Century', desc: 'Know 100 things', goal: 100, measure: (s) => learnedCount(s), unlock: 'gradcap' },
-  { id: 'stretch', title: 'Beyond Year 2', desc: 'Secure 3 stretch topics', goal: 3, measure: (s, db) => secureIn(s, db, (t) => t.tier === 'stretch'), unlock: 'crown' },
+  { id: 'stretch', title: 'Beyond Year 2', desc: 'Secure 3 stretch topics', goal: 3, measure: (s, db) => secureIn(s, db, (t) => isStretch(t)), unlock: 'crown' },
 ];
 
-export const milestoneDefs = () => (COURSE.id === 'ks1' ? KS1_MILESTONES : MILESTONES);
+// Year 3: the Year 2 badges (so nothing he has earned goes away), with Year 3 goals added
+export const Y3_MILESTONES = [
+  ...KS1_MILESTONES.map((m) => (m.id === 'stretch' ? { ...m, title: 'Beyond Year 3', desc: 'Secure 3 Year 4 stretch topics' } : m)),
+  { id: 'typist', title: 'Typist', desc: 'Type 15 words a minute with 95% accuracy', goal: 15, measure: (s) => (s.typing?.best?.wpm) || 0 },
+  { id: 'sprinter', title: 'Sprinter', desc: 'Get 20 right in one sprint', goal: 20, measure: bestSprint },
+  { id: 'year3-topics', title: 'Year 3 explorer', desc: 'Secure 10 Year 3 topics', goal: 10, measure: (s, db) => secureIn(s, db, (t) => t.deck?.startsWith('y3')) },
+  { id: 'three-hundred', title: 'Three hundred', desc: 'Know 300 things', goal: 300, measure: (s) => learnedCount(s), unlock: 'scarf' },
+];
+
+export const milestoneDefs = () => (COURSE.id === 'y3' ? Y3_MILESTONES : COURSE.young ? KS1_MILESTONES : MILESTONES);
 
 export function milestones(state, db) {
   return milestoneDefs().map((m) => {

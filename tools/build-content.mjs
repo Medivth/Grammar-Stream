@@ -10,15 +10,22 @@ const { DIAGRAMS } = await import(new URL('./content-src/diagrams.mjs', import.m
 
 // the Year 2 course: tools/content-src/ks1/*.mjs -> content/ks1/<subject>/<deck>.json, content/index-ks1.json
 const KS1_SOURCES = ['maths', 'maths2', 'reading', 'reading2', 'spelling', 'spelling2', 'science', 'science2', 'history', 'history2', 'books'];
+// the Year 3 course: every Year 2 deck (Year 2 stretch topics count as core there) plus
+// tools/content-src/y3/*.mjs -> content/y3/...; its own reading ladder and the merged timeline come last.
+const Y3_SOURCES = ['maths', 'reading', 'spelling', 'science', 'history', 'books'];
 
 export async function buildAll() {
   const files = {};
   const decks = [];
   const ks1Decks = [];
-  for (const [list, dir, out] of [[SOURCES, '', decks], [KS1_SOURCES, 'ks1/', ks1Decks]]) {
+  const y3Decks = [];
+  let y3Ladder = false;
+  for (const [list, dir, out] of [[SOURCES, '', decks], [KS1_SOURCES, 'ks1/', ks1Decks], [Y3_SOURCES, 'y3/', y3Decks]]) {
     for (const s of list) {
       const mod = await import(new URL(`./content-src/${dir}${s}.mjs`, import.meta.url));
       for (const deck of mod.default) {
+        if (dir === 'ks1/') for (const t of deck.topics || []) if (t.tier === 'stretch') t.coreIn = ['y3'];
+        if (dir === 'y3/' && deck.ladder) y3Ladder = true;
         const path = `${dir}${deck.subject}/${deck.deck}.json`;
         files[path] = JSON.stringify(deck, null, 1) + '\n';
         out.push(path);
@@ -32,6 +39,8 @@ export async function buildAll() {
   }
   files['index.json'] = JSON.stringify({ version: 1, decks, maps }, null, 1) + '\n';
   files['index-ks1.json'] = JSON.stringify({ version: 1, course: 'ks1', decks: ks1Decks, maps }, null, 1) + '\n';
+  const y3All = [...ks1Decks.filter((p) => !(y3Ladder && p === 'ks1/reading/books.json')), ...y3Decks];
+  files['index-y3.json'] = JSON.stringify({ version: 1, course: 'y3', decks: y3All, maps }, null, 1) + '\n';
   return files;
 }
 

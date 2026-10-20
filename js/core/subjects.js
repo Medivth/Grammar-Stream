@@ -42,6 +42,30 @@ export const COURSES = {
     tools: ['paper'],
     writing: false,
     readAloud: true,
+    young: true, sprintUp: 12, next: 'y3',
+    starter: ['none', 'racehelmet', 'cape', 'mask', 'glasses', 'yuzu', 'bird'],
+  },
+  // Year 3 includes all of Year 2 (same subjects and item ids), so moving up keeps every card.
+  // Year 2's stretch topics are core here (they carry coreIn: ['y3']); Year 4 tasters are the stretch.
+  y3: {
+    id: 'y3', title: 'Year 3 greater depth', short: 'Year 3+',
+    index: 'content/index-y3.json',
+    subjects: [
+      { id: 'maths', name: 'Maths', region: 'Speedway Peaks', colour: '#2f74e8', retention: 0.85 },
+      { id: 'reading', name: 'Reading', region: 'Story Galaxy', colour: '#d63d74', retention: 0.9 },
+      { id: 'spelling', name: 'Spelling', region: 'Hero Academy', colour: '#0f9a6e', retention: 0.9 },
+      { id: 'science', name: 'Science', region: 'Planet Lab', colour: '#9a48d6', retention: 0.9 },
+      { id: 'history', name: 'History', region: 'Castle Command', colour: '#d97a12', retention: 0.9 },
+    ],
+    placement: ['maths', 'reading', 'spelling'],
+    placementCap: 16,
+    minutes: 15,
+    sprint: 'y3', sprintSeconds: 60,
+    paper: 'y3',
+    tools: ['paper', 'typing'],
+    writing: false,
+    readAloud: true,
+    young: true, sprintUp: 14, prev: 'ks1',
     starter: ['none', 'racehelmet', 'cape', 'mask', 'glasses', 'yuzu', 'bird'],
   },
 };
@@ -65,3 +89,6 @@ export function setCourse(id) {
 setCourse('y6');
 
 export const subjectOf = (id) => id.split('.')[0];
+
+/** Stretch (beyond the course) in the active course: a topic can be stretch in one course and core in a later one. */
+export const isStretch = (t) => t?.tier === 'stretch' && !(t.coreIn || []).includes(COURSE.id);

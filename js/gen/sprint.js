@@ -10,9 +10,9 @@ export const SPRINT_LEVELS = 5;
 
 export function sprintQuestion(level, rng, course = COURSE.sprint) {
   const L = Math.max(1, Math.min(SPRINT_LEVELS, level));
-  const table = course === 'ks1' ? SPRINT_KS1 : SPRINT;
+  const table = course === 'ks1' ? SPRINT_KS1 : course === 'y3' ? SPRINT_Y3 : SPRINT;
   const pick = rng.pick(table[L - 1]);
-  return { ...pick(rng), keypad: course === 'ks1' || L !== 4 };
+  return { ...pick(rng), keypad: course !== 'y6' || L !== 4 };
 }
 
 // Year 2 greater depth: bonds, doubles, tens, and the 2, 5, 10 (then 3, 4) tables
@@ -50,6 +50,42 @@ const SPRINT_KS1 = [
     (r) => { const a = r.int(11, 44), b = r.int(11, 44); return { prompt: `${a} + ${b}`, value: a + b }; },
     (r) => { const a = r.int(51, 99), b = r.int(11, 49); return { prompt: `${a} − ${b}`, value: a - b }; },
     (r) => { const a = r.int(1, 99) * 2; return { prompt: `Half of ${a}`, value: a / 2 }; },
+  ],
+];
+
+// Year 3 greater depth: the 3, 4 and 8 tables, then all tables to 12, with mental 3-digit work
+const SPRINT_Y3 = [
+  [
+    (r) => { const a = r.pick([2, 3, 4, 5, 10]), b = r.int(1, 12); return { prompt: `${a} × ${b}`, value: a * b }; },
+    (r) => { const a = r.int(11, 89); return { prompt: `${a} + ? = 100`, value: 100 - a }; },
+    (r) => { const a = r.int(12, 49), b = r.int(12, 49); return { prompt: `${a} + ${b}`, value: a + b }; },
+    (r) => { const a = r.int(5, 50); return { prompt: `Double ${a}`, value: 2 * a }; },
+  ],
+  [
+    (r) => { const a = r.pick([3, 4, 8]), b = r.int(1, 12); return { prompt: `${a} × ${b}`, value: a * b }; },
+    (r) => { const a = r.pick([3, 4, 8]), b = r.int(1, 12); return { prompt: `${a * b} ÷ ${a}`, value: b }; },
+    (r) => { const a = r.int(101, 899), b = r.pick([1, 10, 100]) * r.int(1, 9); return { prompt: `${a} + ${b}`, value: a + b }; },
+    (r) => { const a = r.int(51, 99), b = r.int(12, 49); return { prompt: `${a} − ${b}`, value: a - b }; },
+  ],
+  [
+    (r) => { const a = r.pick([3, 4, 8]), b = r.int(2, 9); return { prompt: `${a} × ${b * 10}`, value: a * b * 10 }; },
+    (r) => { const a = r.int(2, 9) * 100; return { prompt: `${a} + ? = 1000`, value: 1000 - a }; },
+    (r) => { const a = r.int(200, 999), b = r.pick([10, 100]) * r.int(1, 9); return { prompt: `${a} − ${b}`, value: a - b }; },
+    (r) => { const d = r.pick([2, 3, 4, 5, 10]), q = r.int(2, 12); return { prompt: `{{1/${d}}} of ${d * q}`, value: q }; },
+    (r) => { const a = r.int(2, 12); return { prompt: `${a} × 10`, value: a * 10 }; },
+  ],
+  [
+    (r) => { const a = r.int(2, 12), b = r.int(2, 12); return { prompt: `${a} × ${b}`, value: a * b }; },
+    (r) => { const a = r.int(2, 12), b = r.int(2, 12); return { prompt: `${a * b} ÷ ${a}`, value: b }; },
+    (r) => { const a = r.int(12, 49); return { prompt: `${a} × 2`, value: 2 * a }; },
+    (r) => { const a = r.int(105, 495), b = r.int(105, 495); return { prompt: `${a} + ${b}`, value: a + b }; },
+  ],
+  [
+    (r) => { const a = r.pick([6, 7, 9, 11, 12]), b = r.int(2, 12); return { prompt: `${a} × ${b}`, value: a * b }; },
+    (r) => { const a = r.pick([6, 7, 9, 11, 12]), b = r.int(2, 12); return { prompt: `${a * b} ÷ ${a}`, value: b }; },
+    (r) => { const a = r.int(11, 29), b = r.int(3, 5); return { prompt: `${a} × ${b}`, value: a * b }; },
+    (r) => { const a = r.int(501, 999), b = r.int(101, 499); return { prompt: `${a} − ${b}`, value: a - b }; },
+    (r) => { const d = r.pick([3, 4, 5]), n = r.int(2, d - 1), q = r.int(2, 10); return { prompt: `{{${n}/${d}}} of ${d * q}`, value: n * q }; },
   ],
 ];
 

@@ -9,6 +9,8 @@ import { emptyState } from '../core/store.js';
 import { SUBJECTS, SUBJECT_BY_ID, COURSES } from '../core/subjects.js';
 import { piecesToMark, markPiece, wordCount, answersToMark, markAnswer, ANSWER_LEVELS } from '../core/writing.js';
 import { needsPlacement } from '../core/placement.js';
+import { sprintSeconds } from '../core/sprint.js';
+import { paperSpec } from '../gen/paper.js';
 
 let unlockedUntil = 0;
 
@@ -70,6 +72,7 @@ function dashboard(app) {
   const backupAge = state.lastBackup == null ? null : today - state.lastBackup;
 
   const settings = settingsForm(app);
+  const course = courseCard(app);
   mount(app.root,
     h('div', { class: 'topbar' }, h('button', { class: 'btn-icon', 'aria-label': 'Back', onclick: () => { unlockedUntil = 0; app.go('#/home'); } }, '←'), h('h1', {}, 'Grown-ups'),
       h('span', { class: 'spacer' }), h('button', { class: 'btn-ghost', onclick: () => { unlockedUntil = 0; app.go('#/home'); } }, 'Lock')),
@@ -78,6 +81,7 @@ function dashboard(app) {
         h('h3', {}, 'Back up {her} progress'), h('p', {}, backupAge == null ? 'You haven’t made a backup yet. Progress lives only in this browser, so save a copy now and then.' : `Last backup was ${backupAge} days ago.`),
         h('button', { class: 'btn-primary', onclick: () => doExport(app) }, 'Save a backup file')) : null,
 
+      course.ready ? course.el : null,
       markingCard(app),
       answersCard(app),
 
@@ -88,8 +92,8 @@ function dashboard(app) {
         h('p', { style: { marginTop: '12px' } }, `${w.answered} questions answered. Started ${w.started.length} topic${w.started.length === 1 ? '' : 's'}; ${w.secured.length} became secure.`),
         w.started.length ? h('p', { class: 'muted' }, 'New this week: ', w.started.map((id) => db.topics[id]?.title).filter(Boolean).join(', ')) : null,
         h('p', { class: 'muted small' }, SUBJECTS.map((s) => `${s.name} ${w.bySubject[s.id] || 0}`).join(' · ')),
-        w.sprintBest ? h('p', { class: 'muted small' }, `Arithmetic sprint: best this week ${w.sprintBest.correct} right in 90 seconds (level ${w.sprintBest.level} of 5).`) : null,
-        (state.papers || []).length ? h('p', { class: 'muted small' }, `Arithmetic papers: ${state.papers.length} done, best ${Math.max(...state.papers.map((p) => p.score))} / 40, latest ${state.papers.at(-1).score} / 40.`) : null),
+        w.sprintBest ? h('p', { class: 'muted small' }, `Arithmetic sprint: best this week ${w.sprintBest.correct} right in ${sprintSeconds()} seconds (level ${w.sprintBest.level} of 5).`) : null,
+        (state.papers || []).length ? h('p', { class: 'muted small' }, `Arithmetic papers: ${state.papers.length} done, best ${Math.max(...state.papers.map((p) => p.score))} / ${paperSpec().marks}, latest ${state.papers.at(-1).score} / ${paperSpec().marks}.`) : null),
 
       prompts.length ? h('div', { class: 'card' }, h('h2', {}, 'Things to talk about'), h('p', { class: 'muted' }, 'Interest helps more than checking. Try one of these at dinner or in the car:'), h('ul', {}, prompts.map((p) => h('li', {}, p)))) : null,
 
@@ -102,6 +106,7 @@ function dashboard(app) {
         recentWriting.length ? recentWriting.map((wr) => h('div', { class: 'topic-row' }, h('div', { class: 'title' }, h('div', { class: 'muted small' }, `${db.sentenceById[wr.taskId]?.title || 'Sentence'} · ${formatDay(wr.day, { weekday: 'short', day: 'numeric', month: 'short' })}`), h('div', {}, wr.text || '(blank)')))) : h('p', { class: 'muted' }, 'Nothing yet.'),
         h('p', { class: 'muted small' }, 'Read these with {him} and ask what {she} was trying to do. The weekly extended-writing task comes in the next update.')),
 
+      course.ready ? null : course.el,
       levelsCard(app),
       settings,
 
@@ -116,6 +121,32 @@ function dashboard(app) {
       h('div', { class: 'card stack' }, h('h2', {}, 'Start again'),
         h('p', { class: 'muted' }, `This deletes ${state.profile?.childName || 'this child'}’s progress on this device. Save a backup first.`),
         h('button', { class: 'btn-ghost', onclick: () => doReset(app) }, 'Delete this child’s progress…'))));
+}
+
+/** The child's course, and moving up to the next one when the current one is nearly used up. */
+function courseCard(app) {
+  const { state, db } = app;
+  const course = COURSES[state.course];
+  const next = COURSES[course?.next], prev = COURSES[course?.prev];
+  const ids = Object.keys(db.topics);
+  const started = ids.filter((id) => state.topics[id]).length;
+  const secure = ids.filter((id) => ['proficient', 'mastered', 'assumed'].includes(state.topics[id]?.state)).length;
+  const ready = !!next && started / ids.length >= 0.75;
+  const move = async (to, msg) => {
+    await app.useCourse(to.id);
+    if (state.settings.sessionMinutes < to.minutes) { state.settings.sessionMinutes = to.minutes; msg += ` Sessions are now ${to.minutes} minutes (you can change this in Settings).`; }
+    state.plan = null;
+    app.save();
+    toast(msg);
+    dashboard(app);
+  };
+  const el = h('div', { class: 'card stack', style: ready ? { borderColor: 'var(--accent, #5143d9)' } : {} },
+    h('h2', {}, ready ? `Ready for ${next.title.replace(' greater depth', '')}?` : 'Course'),
+    h('p', {}, `${course?.title}: {she} has started ${started} of ${ids.length} topics, and ${secure} are secure.`),
+    next ? h('p', { class: 'muted' }, `${next.title} includes everything in ${course.title.replace(' greater depth', '')}, so nothing is lost: {her} reviews carry on, unfinished topics stay, and the new topics follow on from what {she} knows. ${ready ? 'Most topics here are under way, so now is a good time.' : 'Most children move up when about three quarters of these topics are started, but you can move up any time.'}`) : null,
+    next ? h('button', { class: ready ? 'btn-primary' : 'btn-ghost', onclick: () => { if (confirm(`Move ${state.profile?.childName || 'this child'} up to ${next.title}? All progress is kept.`)) move(next, `Moved up to ${next.title}.`); } }, `Move up to ${next.title}`) : null,
+    prev ? h('button', { class: 'btn-ghost', onclick: () => { if (confirm(`Go back to ${prev.title}? Progress on the new topics is kept and returns if you move up again.`)) move(prev, `Back to ${prev.title}.`); } }, `Go back to ${prev.title}`) : null);
+  return { el, ready };
 }
 
 function childrenCard(app) {
