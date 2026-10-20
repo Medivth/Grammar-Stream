@@ -32,6 +32,10 @@ tests/          node:test suites
 - **Mastery**: exponential moving average per topic; *mastered* only after delayed success in mixed review.
 - **Sessions**: yesterday's answers, interleaved reviews (max 40% per subject), a break, new learning she chooses, a sentence task, then explaining an idea to her capybara and correcting its deliberate mistake. Hard stop, and the app rests in the hour before bedtime.
 
+### Visible progress
+
+The home screen's island map lights up topic by topic (white ring segments for secure, gold for mastered). *My progress* has a history timeline whose events light up as she learns them, maps that colour in the places she knows, and twelve milestones. Milestones are fixed rewards for real achievement (never random); six of them unlock outfits for her capybara.
+
 ### Commands
 
 ```sh
@@ -40,6 +44,7 @@ node tools/build-content.mjs               # rebuild content/*.json from tools/c
 node tools/gen-precache.mjs                # regenerate sw.js after changing any app file
 node tools/build-maps.mjs                  # rebuild maps (needs Natural Earth files in .cache/ne/)
 PW=$(npm root -g)/playwright node tools/smoke.mjs   # full session in a real browser
+PW=$(npm root -g)/playwright node tools/shots.mjs out/ 35   # screenshots after 35 simulated days
 npm run serve                              # local server on http://localhost:8080
 ```
 
@@ -49,4 +54,4 @@ CI (`.github/workflows/pages.yml`) runs the tests and freshness checks on every 
 
 - Curriculum structure: DfE National Curriculum programmes of study and STA frameworks (Open Government Licence). Questions are written for this app.
 - Maps: [Natural Earth](https://www.naturalearthdata.com/) (public domain). Borders follow UK government recognition.
-- Fonts: Atkinson Hyperlegible and OpenDyslexic (SIL Open Font Licence; see `fonts/`).
+- Fonts: Atkinson Hyperlegible, OpenDyslexic and Outfit (SIL Open Font Licence; see `fonts/`).

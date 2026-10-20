@@ -11,6 +11,9 @@ import { checkSentence } from '../core/checkers.js';
 import { learnText, present } from '../core/present.js';
 import { makeRng } from '../core/rng.js';
 import { currentBooks, logReading } from '../core/writing.js';
+import { milestones } from '../core/progress.js';
+import { icon, SUBJECT_ICON } from '../ui/icons.js';
+import { ACCESSORIES } from '../ui/capybara.js';
 import { SUBJECT_BY_ID } from '../core/subjects.js';
 
 const GRADED = new Set(['review', 'quiz', 'diag', 'practice', 'faded']);
@@ -23,6 +26,8 @@ export async function playScreen(app) {
   }
   if (state.plan.finished) return app.go('#/home');
   startSession(state, today);
+  // remember which badges were already earned, so the finished screen can celebrate new ones
+  if (!state.plan.badgesBefore) state.plan.badgesBefore = milestones(state, db).filter((m) => m.done).map((m) => m.id);
   app.save();
   await renderStep(app);
 }
@@ -30,10 +35,13 @@ export async function playScreen(app) {
 function header(app, label) {
   const plan = app.state.plan;
   const pct = Math.round((100 * plan.pos) / Math.max(1, plan.steps.length - 1));
-  return h('div', { class: 'topbar q-wrap' },
-    h('button', { class: 'btn-icon', type: 'button', 'aria-label': 'Pause and go home', onclick: () => app.go('#/home') }, '⏸'),
+  const step = plan.steps[plan.pos] || {};
+  const subject = step.subject || app.db.items[step.id]?.subject || (step.topic && app.db.topics[step.topic]?.subject);
+  const colour = SUBJECT_BY_ID[subject]?.colour;
+  return h('div', { class: 'q-head q-wrap', style: colour ? { '--bar': colour } : {} },
+    h('button', { class: 'btn-icon', type: 'button', 'aria-label': 'Pause and go home', title: 'Pause', onclick: () => app.go('#/home') }, icon('pause')),
     h('div', { class: 'progress', role: 'progressbar', 'aria-valuenow': pct, 'aria-valuemin': 0, 'aria-valuemax': 100 }, h('div', { style: { width: `${pct}%` } })),
-    label ? h('span', { class: 'chip' }, label) : null);
+    label ? h('span', { class: 'chip', style: colour ? { background: `color-mix(in srgb, ${colour} 14%, var(--card))`, color: colour } : {} }, label) : null);
 }
 
 async function next(app) {
@@ -111,9 +119,10 @@ function chooseStep(app, root, step) {
     opts.map((id) => {
       const t = db.topics[id];
       const started = !!state.topics[id];
-      return h('button', { class: 'choice-card', type: 'button', onclick: async () => { chooseTopic(state, db, id, app.today()); await next(app); } },
-        h('div', { class: 'subj', style: { color: subj.colour } }, started ? `Continue · ${subj.name}` : `New · ${subj.name}`),
-        h('h3', { style: { margin: '4px 0 0' } }, t.title));
+      return h('button', { class: 'choice-card home-card', type: 'button', style: { '--tint': `color-mix(in srgb, ${subj.colour} 14%, var(--card))`, '--tint-ink': subj.colour }, onclick: async () => { chooseTopic(state, db, id, app.today()); await next(app); } },
+        h('span', { class: 'ico' }, icon(SUBJECT_ICON[subj.id])),
+        h('span', { class: 'txt' }, h('div', { class: 'subj', style: { color: subj.colour } }, started ? `Continue · ${subj.name}` : `New · ${subj.name}`),
+          h('h3', { style: { margin: '2px 0 0' } }, t.title)));
     })));
 }
 
@@ -408,20 +417,34 @@ function doneStep(app, root) {
   readBox.append(alreadyRead ? h('p', {}, '📚 Reading logged for today.') : h('div', {}, h('p', { style: { fontWeight: 700 } }, book ? `Did you read ${book.title} today?` : 'Did you read a book today?'),
     h('div', { class: 'row' }, [10, 20, 30, 45].map((m) => h('button', { class: 'btn-ghost', onclick: () => logRead(m) }, `${m}${m === 45 ? '+' : ''} min`)), h('button', { class: 'btn-ghost', onclick: () => readBox.replaceChildren(h('p', { class: 'muted' }, 'Maybe tonight, then!')) }, 'Not yet'))));
 
+  const before = new Set(plan.badgesBefore || []);
+  const fresh = milestones(state, db).filter((m) => m.done && !before.has(m.id));
+  const right = res.filter((r) => r.correct).length;
+  const capy = capybaraEl({ ...c, mood: 'happy' }, 'capy bob');
+  const burst = h('div', { class: 'celebrate', style: { width: '200px', margin: '0 auto' } }, capy);
+  const COLS = ['#ffd166', '#5143d9', '#d63d74', '#0f9a6e', '#2f74e8', '#ff8a3d'];
+  for (let i = 0; i < 16; i++) {
+    const a = (i / 16) * Math.PI * 2;
+    burst.append(h('span', { class: 'spark', style: { left: '50%', top: '45%', background: COLS[i % COLS.length], '--dx': `${Math.cos(a) * 110}px`, '--dy': `${Math.sin(a) * 80}px`, animationDelay: `${(i % 4) * 40}ms` } }));
+  }
+  const tile = (n, label, colour) => h('div', { class: 'stat-tile', style: { '--tile': colour } }, h('b', {}, String(n)), h('span', {}, label));
   mount(root, h('div', { class: 'q-wrap stack' },
-    h('div', { class: 'hero' }, capybaraEl({ ...c, mood: 'happy' }, 'capy bob'),
-      h('div', {}, h('h1', {}, 'Finished for today!'), h('p', { class: 'record' }, h('b', {}, String(days)), ` day${days === 1 ? '' : 's'} practised this month`))),
+    burst,
+    h('div', { class: 'center' }, h('div', { class: 'eyebrow' }, 'Session complete'), h('h1', {}, 'Finished for today!')),
+    h('div', { class: 'stat-strip', style: { margin: 0 } }, tile(right, 'answers right', 'var(--good)'), remembered ? tile(remembered, 'remembered from before', 'var(--accent)') : tile(res.length, 'questions answered', 'var(--accent)'), tile(days, `day${days === 1 ? '' : 's'} this month`, 'var(--warm)')),
+    fresh.map((m) => h('div', { class: 'unlock pop' },
+      m.unlock ? capybaraEl({ ...c, accessory: m.unlock, mood: 'happy' }) : h('div', { class: 'medal', style: { width: '56px', height: '56px', borderRadius: '50%', display: 'grid', placeItems: 'center', background: 'radial-gradient(circle at 35% 30%, #ffd88a, #ff9d3d 60%, #e0731d)', color: '#fff' } }, icon('star')),
+      h('div', {}, h('div', { class: 'eyebrow', style: { color: 'var(--warn)' } }, 'New badge'), h('h3', { style: { margin: 0 } }, m.title), h('p', { style: { margin: '2px 0 0' } }, m.unlock ? `You unlocked the ${ACCESSORIES[m.unlock].toLowerCase()} for ${c.name || 'your capybara'}!` : m.desc)))),
     h('div', { class: 'card stack' },
       h('h3', {}, 'What you did'),
-      h('ul', {},
-        remembered ? h('li', {}, `You remembered ${remembered} thing${remembered === 1 ? '' : 's'} from earlier days.`) : null,
+      h('ul', { style: { margin: 0, paddingLeft: '1.2em' } },
         learned.length ? h('li', {}, `You started: ${learned.join(', ')}.`) : null,
         state.writing.some((w) => w.day === app.today()) ? h('li', {}, 'You wrote a sentence in the workshop.') : null,
         state.taught.some((t) => t.day === app.today()) ? h('li', {}, `You taught ${c.name || 'your capybara'} something new.`) : null,
         h('li', {}, `You answered ${res.length} questions.`)),
-      sure.length ? h('p', { class: 'muted' }, `When you said “Sure”, you were right ${sureRight} out of ${sure.length} times.${sure.length >= 4 && sureRight / sure.length > 0.9 ? ' You know what you know!' : ''}`) : null),
+      sure.length ? h('p', { class: 'muted', style: { margin: 0 } }, `When you said “Sure”, you were right ${sureRight} out of ${sure.length} times.${sure.length >= 4 && sureRight / sure.length > 0.9 ? ' You know what you know!' : ''}`) : null),
     h('div', { class: 'card' }, readBox),
-    h('button', { class: 'btn-primary btn-big', onclick: () => app.go('#/home') }, 'Back home')));
+    h('div', { class: 'row' }, h('button', { class: 'btn-primary btn-big', style: { flex: 1 }, onclick: () => app.go('#/home') }, 'Back home'), h('button', { class: 'btn-big', onclick: () => app.go('#/progress') }, icon('chart'), ' Progress'))));
 }
 
 // ---------------------------------------------------------------- placement

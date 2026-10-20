@@ -37,9 +37,9 @@ try {
     await page.fill('#capy-name', 'Mochi');
     await page.screenshot({ path: `${OUT}/${label}-02-companion.png`, fullPage: true });
     await page.click('text=Let’s go!');
-    await page.waitForSelector('text=Start today’s session');
+    await page.waitForSelector('.btn-start');
     await page.screenshot({ path: `${OUT}/${label}-03-home.png`, fullPage: true });
-    await page.click('text=Start today’s session');
+    await page.click('.btn-start');
 
     const seen = new Set();
     let steps = 0, reloaded = false;
@@ -51,7 +51,7 @@ try {
         seen.add(stepType);
         await page.screenshot({ path: `${OUT}/${label}-step-${stepType}.png`, fullPage: true });
       }
-      if (!reloaded && steps === 12) { reloaded = true; await page.goto(`http://127.0.0.1:${PORT}/#/home`); await page.reload(); await page.waitForSelector('text=Continue today’s session'); await page.click('text=Continue today’s session'); continue; }
+      if (!reloaded && steps === 12) { reloaded = true; await page.goto(`http://127.0.0.1:${PORT}/#/home`); await page.reload(); await page.waitForSelector('.btn-start'); await page.click('.btn-start'); continue; }
       // placement: answer some, skip others
       const skip = await page.$('button:has-text("I haven’t learned this yet")');
       if (skip) {
@@ -101,7 +101,7 @@ try {
     console.log(`${label}: session finished in ${steps} actions; step types: ${[...seen].join(', ')}`);
     await page.click('button:has-text("20 min")');
     await page.click('text=Back home');
-    await page.waitForSelector('text=Finished for today! See you tomorrow.');
+    await page.waitForSelector('.today.done');
     await page.screenshot({ path: `${OUT}/${label}-05-home-after.png`, fullPage: true });
     // parent area
     await page.click('[aria-label="Grown-ups"]');
@@ -112,7 +112,7 @@ try {
     console.log(`${label}: backup downloaded as ${download.suggestedFilename()}`);
     // weekly writing: do a piece, then mark it as the grown-up
     await page.click('[aria-label="Back"]');
-    await page.click('text=Your weekly writing piece');
+    await page.click('text=Weekly writing');
     await page.click('text=Start this piece');
     await page.click('text=Type it here');
     await page.fill('textarea >> nth=0', 'A note for the first box');
@@ -133,19 +133,19 @@ try {
     await page.screenshot({ path: `${OUT}/${label}-10-marking.png`, fullPage: true });
     await page.click('text=Save feedback');
     await page.click('[aria-label="Back"]');
-    await page.click('text=Feedback on');
+    await page.click('text=Feedback on your writing');
     await page.waitForSelector('text=What worked');
     await page.screenshot({ path: `${OUT}/${label}-11-feedback.png`, fullPage: true });
     await page.click('text=Back home');
     // reading
-    await page.click('text=My reading');
+    await page.click('.home-card:has-text("minutes read this week")');
     await page.click('text=I’m reading this >> nth=0');
     await page.click('text=+20 min');
     await page.screenshot({ path: `${OUT}/${label}-12-reading.png`, fullPage: true });
     await page.click('[aria-label="Back"]');
     // a subject page
     await page.click('.region >> nth=3');
-    await page.waitForSelector('.topic-row');
+    await page.waitForSelector('.journey li');
     await page.screenshot({ path: `${OUT}/${label}-07-subject.png`, fullPage: true });
     // page must not scroll sideways
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);

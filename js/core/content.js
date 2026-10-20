@@ -1,7 +1,7 @@
 // Content database: topics and items from every deck, indexed for the scheduler.
 
 export function buildDB(decks) {
-  const db = { topics: {}, items: {}, topicOrder: {}, itemsByTopic: {}, sentences: [], sentenceById: {}, maps: {}, pieces: [], pieceById: {}, ladder: [], bookById: {}, rungs: [] };
+  const db = { topics: {}, items: {}, topicOrder: {}, itemsByTopic: {}, sentences: [], sentenceById: {}, maps: {}, pieces: [], pieceById: {}, ladder: [], bookById: {}, rungs: [], timeline: null };
   for (const deck of decks) {
     const subject = deck.subject;
     db.topicOrder[subject] ||= [];
@@ -19,6 +19,7 @@ export function buildDB(decks) {
     for (const p of deck.pieces || []) { db.pieces.push(p); db.pieceById[p.id] = p; }
     for (const b of deck.ladder || []) { db.ladder.push(b); db.bookById[b.id] = b; }
     if (deck.rungs) db.rungs = deck.rungs;
+    if (deck.timeline) db.timeline = deck.timeline;
     for (const s of deck.sentences || []) {
       db.sentences.push(s);
       db.sentenceById[s.id] = s;
@@ -106,5 +107,6 @@ export function validateDB(db, generators) {
   }
   for (const b of db.ladder) if (!(b.rung >= 1 && b.rung <= 5) || !b.title || !b.author) errs.push(`book ${b.id}: needs rung 1-5, title, author`);
   if (db.ladder.length && db.rungs.length !== 5) errs.push('reading ladder needs 5 rung names');
+  for (const e of db.timeline?.events || []) for (const i of e.items) if (!db.items[i]) errs.push(`timeline event ${e.label}: unknown item ${i}`);
   return errs;
 }

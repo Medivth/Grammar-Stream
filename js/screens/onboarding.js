@@ -3,6 +3,7 @@
 import { h, mount, toast } from '../ui/dom.js';
 import { capybaraSVG, FURS, ACCESSORIES } from '../ui/capybara.js';
 import { requestPersistence } from '../platform/storage.js';
+import { STARTER_ACCESSORIES } from '../core/progress.js';
 
 export function welcomeScreen(app) {
   const name = h('input', { type: 'text', id: 'ob-name', autocomplete: 'off', placeholder: 'First name' });
@@ -44,14 +45,14 @@ export function companionScreen(app) {
   const accRow = h('div', { class: 'capy-pick', role: 'group', 'aria-label': 'Accessory' });
   const drawPickers = () => {
     furRow.replaceChildren(...Object.entries(FURS).map(([k, f]) => h('button', { type: 'button', 'aria-pressed': String(c.fur === k), 'aria-label': k, onclick: () => { c.fur = k; draw(); drawPickers(); } }, h('span', { class: 'swatch', style: { background: f.body } }))));
-    accRow.replaceChildren(...Object.entries(ACCESSORIES).map(([k, label]) => h('button', { type: 'button', 'aria-pressed': String(c.accessory === k), onclick: () => { c.accessory = k; draw(); drawPickers(); } }, label)));
+    accRow.replaceChildren(...Object.entries(ACCESSORIES).filter(([k]) => STARTER_ACCESSORIES.includes(k)).map(([k, label]) => h('button', { type: 'button', 'aria-pressed': String(c.accessory === k), onclick: () => { c.accessory = k; draw(); drawPickers(); } }, label)));
   };
   const name = h('input', { type: 'text', id: 'capy-name', placeholder: 'Give your capybara a name', maxlength: 20, value: c.name, oninput: () => { c.name = name.value; draw(); } });
   draw();
   drawPickers();
   mount(app.root, h('div', { class: 'narrow stack' },
     h('h1', { class: 'center' }, `Hi ${app.state.profile?.childName || ''}! Meet your capybara`),
-    h('p', { class: 'center muted' }, 'Your capybara will learn alongside you. Sometimes you’ll teach it, and sometimes it will get things wrong for you to fix.'),
+    h('p', { class: 'center muted' }, 'Your capybara will learn alongside you. Sometimes you’ll teach it, and sometimes it will get things wrong for you to fix. You’ll unlock more outfits as you hit milestones.'),
     h('div', { class: 'card stack' }, preview,
       h('div', { class: 'field' }, h('label', {}, 'Fur'), furRow),
       h('div', { class: 'field' }, h('label', {}, 'Something special'), accRow),

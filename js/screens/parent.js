@@ -138,7 +138,7 @@ function markForm(app, piece, prompt) {
       scores[i] = lv;
       btns.forEach((b, j) => b.setAttribute('aria-pressed', String(j === lv)));
     } }, h('strong', {}, `${lv} `), desc));
-    return h('div', { class: 'field' }, h('label', {}, `${i + 1}. ${r.name}`), h('div', { class: 'options' }, btns));
+    return h('div', { class: 'field' }, h('label', {}, `${i + 1}. ${r.name}`), h('div', { class: 'options plain' }, btns));
   });
   return h('div', { class: 'card stack', style: { background: 'var(--bg)' } },
     h('h3', {}, prompt.title), h('p', { class: 'muted small' }, prompt.task),

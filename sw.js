@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = 'ed66d17d92df';
+const VERSION = 'e96afad312fa';
 const FILES = [
  "./",
  "./index.html",
@@ -15,6 +15,7 @@ const FILES = [
  "./js/core/mastery.js",
  "./js/core/placement.js",
  "./js/core/present.js",
+ "./js/core/progress.js",
  "./js/core/rng.js",
  "./js/core/session.js",
  "./js/core/store.js",
@@ -33,11 +34,13 @@ const FILES = [
  "./js/screens/onboarding.js",
  "./js/screens/parent.js",
  "./js/screens/play.js",
+ "./js/screens/progress.js",
  "./js/screens/reading.js",
  "./js/screens/util.js",
  "./js/screens/writing.js",
  "./js/ui/capybara.js",
  "./js/ui/dom.js",
+ "./js/ui/icons.js",
  "./js/ui/mapview.js",
  "./js/ui/qtypes.js",
  "./content/english/morphology.json",
@@ -49,6 +52,7 @@ const FILES = [
  "./content/geography/core.json",
  "./content/geography/year7.json",
  "./content/history/core.json",
+ "./content/history/timeline.json",
  "./content/history/year7.json",
  "./content/index.json",
  "./content/maps/cell-animal.json",
@@ -65,6 +69,8 @@ const FILES = [
  "./fonts/atkinson-hyperlegible-latin-700-normal.woff2",
  "./fonts/opendyslexic-latin-400-normal.woff2",
  "./fonts/opendyslexic-latin-700-normal.woff2",
+ "./fonts/outfit-latin-600-normal.woff2",
+ "./fonts/outfit-latin-800-normal.woff2",
  "./icons/icon-192.png",
  "./icons/icon-512.png",
  "./icons/icon-maskable-512.png",

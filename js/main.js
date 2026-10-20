@@ -10,6 +10,7 @@ import { parentScreen } from './screens/parent.js';
 import { welcomeScreen, companionScreen, displayScreen } from './screens/onboarding.js';
 import { writingScreen, feedbackScreen } from './screens/writing.js';
 import { readingScreen } from './screens/reading.js';
+import { progressScreen } from './screens/progress.js';
 
 const root = document.getElementById('app');
 
@@ -52,6 +53,7 @@ async function route() {
     case 'writing': return writingScreen(app);
     case 'feedback': return feedbackScreen(app, arg);
     case 'reading': return readingScreen(app);
+    case 'progress': return progressScreen(app, arg);
     default: return homeScreen(app);
   }
 }
