@@ -38,9 +38,12 @@ test('the course switch swaps subjects, placement order and settings in place', 
 
 test('Year 2 content is valid, plentiful and every topic has items', () => {
   assert.deepEqual(validateDB(db, GENERATORS), []);
-  for (const s of SUBJECTS) assert.ok(db.topicOrder[s.id]?.length >= 8, `${s.id}: ${db.topicOrder[s.id]?.length} topics`);
-  assert.ok(Object.keys(db.items).length > 450);
-  assert.ok(db.timeline.events.length >= 15);
+  for (const s of SUBJECTS) assert.ok(db.topicOrder[s.id]?.length >= 18, `${s.id}: ${db.topicOrder[s.id]?.length} topics`);
+  assert.ok(Object.keys(db.items).length > 800);
+  assert.ok(db.timeline.events.length >= 30);
+  const years = db.timeline.events.map((e) => e.year);
+  assert.deepEqual(years, [...years].sort((a, b) => a - b), 'timeline events in order');
+  assert.ok(db.sentences.length >= 14);
   assert.ok(db.ladder.length >= 20 && db.rungs.length === 5);
   for (const sub of SUBJECTS) assert.ok(db.topicOrder[sub.id].some((id) => db.topics[id].tier === 'stretch'), `${sub.id}: a stretch topic`);
 });
@@ -55,7 +58,7 @@ test('every Year 2 item can be presented in every format and its own answer is a
       for (let i = 0; i < (item.kind === 'template' ? 40 : 2); i++) {
         const q = present(item, undefined, { db, state, rng, format });
         const label = `${item.id} [${format ?? q.kind}]`;
-        assert.ok(!/\{hero\}|undefined|NaN/.test(`${q.prompt} ${q.explain} ${(q.steps || []).join(' ')}`), `${label}: unfilled text: ${q.prompt}`);
+        assert.ok(!/\{hero\}|undefined|NaN/.test(`${q.prompt} ${q.explain} ${(q.steps || []).join(' ')} ${q.passage || ''}`), `${label}: unfilled text: ${q.prompt}`);
         if (item.kind === 'template') { assertWellFormed(q, label); continue; }
         if (q.kind === 'choice') {
           // choices are checked by position, so options that differ only in capital letters are fine (that can be the point)
@@ -78,6 +81,8 @@ test('the hero name appears in the word problems', () => {
     if (q.prompt.includes('Captain Thunder')) seen++;
   }
   assert.ok(seen > 20, `hero seen ${seen} times`);
+  const story = present(db.items['reading.run.1'], undefined, { db, state, rng });
+  assert.ok(story.passage.startsWith('Captain Thunder and the Runaway Train'), 'the hero stars in the story');
 });
 
 test('map items point at real features; sentences check their own models', () => {

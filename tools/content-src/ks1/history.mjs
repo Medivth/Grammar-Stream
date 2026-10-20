@@ -1,6 +1,8 @@
 // Year 2 British history with a focus on soldiers, knights and the two World Wars, told
 // factually and gently for a six-year-old. Also: famous people, firsts, and a timeline.
 
+import { PERIODS_2, EVENTS_2 } from './history2.mjs';
+
 const fact = (id, topic, prompt, answer, distractors, explain, extra = {}) => ({ id: `history.${id}`, topic: `history.${topic}`, kind: 'fact', prompt, answer, distractors, explain, ...extra });
 const mcq = (id, topic, prompt, options, explain, extra = {}) => ({ id: `history.${id}`, topic: `history.${topic}`, kind: 'mcq', prompt, options: options.map(([text, correct, feedback]) => ({ text, correct: !!correct, feedback })), explain, ...extra });
 const order = (id, topic, prompt, items, explain, labels = null) => ({ id: `history.${id}`, topic: `history.${topic}`, kind: 'order', prompt, items, labels, explain });
@@ -161,5 +163,5 @@ const EVENTS = [
 
 export default [
   { subject: 'history', deck: 'core', topics, items },
-  { subject: 'history', deck: 'timeline', topics: [], items: [], timeline: { periods: PERIODS.map(([name, from, to]) => ({ name, from, to })), events: EVENTS.map(([year, label, ids]) => ({ year, label, items: ids })) } },
+  { subject: 'history', deck: 'timeline', topics: [], items: [], timeline: { periods: [...PERIODS_2, ...PERIODS].sort((a, b) => a[1] - b[1]).map(([name, from, to]) => ({ name, from, to })), events: [...EVENTS, ...EVENTS_2].sort((a, b) => a[0] - b[0]).map(([year, label, ids]) => ({ year, label, items: ids })) } },
 ];

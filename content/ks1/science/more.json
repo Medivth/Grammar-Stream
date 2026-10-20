@@ -1,0 +1,1460 @@
+{
+ "subject": "science",
+ "deck": "more",
+ "topics": [
+  {
+   "id": "science.minibeasts",
+   "title": "Minibeasts",
+   "kind": "facts",
+   "prereqs": [
+    "science.animals"
+   ],
+   "batch": 5,
+   "intro": "Minibeasts are small creatures like insects, spiders, snails and worms. Insects always have six legs and three body parts.",
+   "teach": "Explain why a spider is not an insect.",
+   "talk": "Go on a minibeast hunt: look under stones and logs, then put them back gently."
+  },
+  {
+   "id": "science.dinosaurs",
+   "title": "Dinosaurs and prehistoric life",
+   "kind": "facts",
+   "prereqs": [
+    "science.animals"
+   ],
+   "batch": 5,
+   "intro": "Dinosaurs ruled the Earth for millions of years, long before people. We know about them from fossils.",
+   "teach": "Explain how we can tell what a dinosaur ate from its teeth.",
+   "talk": "Visit a museum (or a book) and ask {him} which dinosaur {she} would most like to meet."
+  },
+  {
+   "id": "science.hotcold",
+   "title": "Hot and cold places",
+   "kind": "facts",
+   "prereqs": [
+    "science.maps"
+   ],
+   "batch": 5,
+   "intro": "Places near the Equator are hot. Places near the Poles are cold. Animals and people have clever ways to live in each.",
+   "teach": "Explain how a camel is suited to the desert.",
+   "talk": "Ask {him} what {she} would pack for a trip to the Arctic, and to the Sahara."
+  },
+  {
+   "id": "science.countries",
+   "title": "Countries of the world",
+   "kind": "facts",
+   "prereqs": [
+    "science.world"
+   ],
+   "batch": 5,
+   "intro": "There are about 200 countries in the world. Let’s find some of the biggest and most famous on the map.",
+   "teach": "Name a country in each of three continents.",
+   "talk": "When you see where something was made (“Made in China”), find that country on the map."
+  },
+  {
+   "id": "science.coasts",
+   "title": "Seasides and rivers",
+   "kind": "facts",
+   "prereqs": [
+    "science.uk"
+   ],
+   "batch": 5,
+   "intro": "The UK is an island, so the sea is never far away. Rivers start in the hills as streams and flow down to the sea.",
+   "teach": "Explain the journey of a river from the hills to the sea.",
+   "talk": "At the beach or a river, ask {him} to point out physical and human features."
+  },
+  {
+   "id": "science.explore",
+   "title": "Exploring space",
+   "kind": "facts",
+   "prereqs": [
+    "science.space"
+   ],
+   "batch": 5,
+   "intro": "People have walked on the Moon, lived on space stations and sent robots to Mars. Space exploration is one of humanity’s greatest adventures.",
+   "teach": "Explain why astronauts need spacesuits.",
+   "talk": "Look up when the International Space Station flies over your home, and watch for it together."
+  },
+  {
+   "id": "science.light",
+   "title": "Light and shadows",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "science.materials"
+   ],
+   "batch": 5,
+   "intro": "We need light to see. Light travels in straight lines. When something blocks the light, it makes a shadow.",
+   "teach": "Explain how a shadow is made.",
+   "talk": "Make shadow puppets on the wall with a torch."
+  },
+  {
+   "id": "science.sound",
+   "title": "Sound",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "science.body"
+   ],
+   "batch": 5,
+   "intro": "Every sound is made by something vibrating (shaking very fast). The vibrations travel to our ears.",
+   "teach": "Explain how a drum makes a sound.",
+   "talk": "Put rice on a drum or a tin lid and watch it jump when you make a noise."
+  },
+  {
+   "id": "science.electricity",
+   "title": "Electricity",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "science.materials"
+   ],
+   "batch": 5,
+   "intro": "Electricity powers lights, toys and even some racing cars. It flows round a complete circuit, like cars round a track.",
+   "teach": "Explain why a bulb only lights when the circuit is complete.",
+   "talk": "Count the things in one room that use electricity. Which use batteries?"
+  }
+ ],
+ "items": [
+  {
+   "id": "science.mb.insect",
+   "topic": "science.minibeasts",
+   "kind": "fact",
+   "prompt": "How many legs does an insect have?",
+   "answer": "6",
+   "distractors": [
+    "8",
+    "4",
+    "10"
+   ],
+   "explain": "All insects have 6 legs and 3 body parts: head, thorax and abdomen."
+  },
+  {
+   "id": "science.mb.spider",
+   "topic": "science.minibeasts",
+   "kind": "fact",
+   "prompt": "How many legs does a spider have?",
+   "answer": "8",
+   "distractors": [
+    "6",
+    "10",
+    "4"
+   ],
+   "explain": "Spiders have 8 legs, so they are not insects. They are arachnids."
+  },
+  {
+   "id": "science.mb.notinsect",
+   "topic": "science.minibeasts",
+   "kind": "mcq",
+   "prompt": "Which of these is NOT an insect?",
+   "options": [
+    {
+     "text": "spider",
+     "correct": true
+    },
+    {
+     "text": "ant",
+     "correct": false,
+     "feedback": "Ants have 6 legs: insects."
+    },
+    {
+     "text": "bee",
+     "correct": false,
+     "feedback": "Bees have 6 legs: insects."
+    },
+    {
+     "text": "ladybird",
+     "correct": false,
+     "feedback": "Ladybirds are beetles: insects."
+    }
+   ],
+   "explain": "Spiders have 8 legs."
+  },
+  {
+   "id": "science.mb.worm",
+   "topic": "science.minibeasts",
+   "kind": "mcq",
+   "prompt": "How do earthworms help gardens?",
+   "options": [
+    {
+     "text": "They mix up the soil and let air and water in",
+     "correct": true
+    },
+    {
+     "text": "They eat all the weeds",
+     "correct": false,
+     "feedback": "Worms eat dead leaves and soil, not living weeds."
+    },
+    {
+     "text": "They scare away birds",
+     "correct": false,
+     "feedback": "Birds love eating worms!"
+    }
+   ],
+   "explain": "Worm tunnels let air and water reach plant roots, and their poo makes the soil rich."
+  },
+  {
+   "id": "science.mb.snail",
+   "topic": "science.minibeasts",
+   "kind": "fact",
+   "prompt": "What does a snail carry on its back?",
+   "answer": "its shell",
+   "distractors": [
+    "its babies",
+    "leaves",
+    "water"
+   ],
+   "explain": "A snail’s shell is its home and protection.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.mb.habitat",
+   "topic": "science.minibeasts",
+   "kind": "fact",
+   "prompt": "Where are you most likely to find woodlice?",
+   "answer": "under a damp log",
+   "distractors": [
+    "on a sunny wall",
+    "in a pond",
+    "up a tall tree"
+   ],
+   "explain": "Woodlice like dark, damp places.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.mb.bee",
+   "topic": "science.minibeasts",
+   "kind": "mcq",
+   "prompt": "Why are bees so important for plants?",
+   "options": [
+    {
+     "text": "They carry pollen from flower to flower so seeds can grow",
+     "correct": true
+    },
+    {
+     "text": "They water the flowers",
+     "correct": false,
+     "feedback": "Bees carry pollen."
+    },
+    {
+     "text": "They eat the pests",
+     "correct": false,
+     "feedback": "Ladybirds do that! Bees carry pollen."
+    }
+   ],
+   "explain": "This is called pollination. Without bees, many fruits wouldn’t grow."
+  },
+  {
+   "id": "science.mb.ladybird",
+   "topic": "science.minibeasts",
+   "kind": "order",
+   "prompt": "Put the life cycle of a ladybird in order.",
+   "items": [
+    "egg",
+    "larva",
+    "pupa",
+    "adult ladybird"
+   ],
+   "labels": null,
+   "explain": "Like butterflies, ladybirds go egg, larva, pupa, adult."
+  },
+  {
+   "id": "science.mb.camouflage",
+   "topic": "science.minibeasts",
+   "kind": "fact",
+   "prompt": "A stick insect looks just like a twig. What is this called?",
+   "answer": "camouflage",
+   "distractors": [
+    "hibernation",
+    "migration",
+    "pollination"
+   ],
+   "explain": "Camouflage helps animals hide from predators.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.dn.teeth",
+   "topic": "science.dinosaurs",
+   "kind": "mcq",
+   "prompt": "A dinosaur had sharp, pointed teeth. What did it probably eat?",
+   "options": [
+    {
+     "text": "meat",
+     "correct": true
+    },
+    {
+     "text": "leaves",
+     "correct": false,
+     "feedback": "Plant-eaters had flat or peg-like teeth for chewing or stripping leaves."
+    },
+    {
+     "text": "nothing",
+     "correct": false,
+     "feedback": "All animals need food."
+    }
+   ],
+   "explain": "Sharp teeth are for tearing meat. T. rex had teeth as long as bananas!"
+  },
+  {
+   "id": "science.dn.herb",
+   "topic": "science.dinosaurs",
+   "kind": "fact",
+   "prompt": "A dinosaur that ate only plants was a…",
+   "answer": "herbivore",
+   "distractors": [
+    "carnivore",
+    "omnivore",
+    "predator"
+   ],
+   "explain": "Stegosaurus, Triceratops and Diplodocus were herbivores.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.dn.trex",
+   "topic": "science.dinosaurs",
+   "kind": "fact",
+   "prompt": "Which famous dinosaur had huge jaws, big back legs and tiny arms?",
+   "answer": "Tyrannosaurus rex",
+   "distractors": [
+    "Stegosaurus",
+    "Triceratops",
+    "Diplodocus"
+   ],
+   "explain": "T. rex was one of the biggest meat-eating dinosaurs.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.dn.tri",
+   "topic": "science.dinosaurs",
+   "kind": "fact",
+   "prompt": "Which dinosaur had three horns on its face?",
+   "answer": "Triceratops",
+   "distractors": [
+    "Stegosaurus",
+    "Velociraptor",
+    "Brachiosaurus"
+   ],
+   "explain": "Tri means three: Triceratops means “three-horned face”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.dn.steg",
+   "topic": "science.dinosaurs",
+   "kind": "fact",
+   "prompt": "Which dinosaur had big plates along its back and spikes on its tail?",
+   "answer": "Stegosaurus",
+   "distractors": [
+    "Triceratops",
+    "T. rex",
+    "Diplodocus"
+   ],
+   "explain": "Stegosaurus used its spiky tail to defend itself.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.dn.people",
+   "topic": "science.dinosaurs",
+   "kind": "mcq",
+   "prompt": "Did people and dinosaurs live at the same time?",
+   "options": [
+    {
+     "text": "No: dinosaurs died out millions of years before people",
+     "correct": true
+    },
+    {
+     "text": "Yes: people kept them as pets",
+     "correct": false,
+     "feedback": "Only in films! There were no people then."
+    },
+    {
+     "text": "Yes, in the Stone Age",
+     "correct": false,
+     "feedback": "Stone Age people lived long after the dinosaurs."
+    }
+   ],
+   "explain": "The last dinosaurs died out about 66 million years ago. The first humans appeared much, much later."
+  },
+  {
+   "id": "science.dn.extinct",
+   "topic": "science.dinosaurs",
+   "kind": "mcq",
+   "prompt": "What does “extinct” mean?",
+   "options": [
+    {
+     "text": "There are none of that animal left alive anywhere",
+     "correct": true
+    },
+    {
+     "text": "Very old",
+     "correct": false,
+     "feedback": "It means none are left."
+    },
+    {
+     "text": "Very big",
+     "correct": false,
+     "feedback": "Extinct animals can be any size."
+    }
+   ],
+   "explain": "Dinosaurs are extinct. So is the dodo."
+  },
+  {
+   "id": "science.dn.why",
+   "topic": "science.dinosaurs",
+   "kind": "fact",
+   "prompt": "What do most scientists think helped wipe out the dinosaurs?",
+   "answer": "a giant rock from space hitting the Earth",
+   "distractors": [
+    "a big flood",
+    "people hunting them",
+    "they got too old"
+   ],
+   "explain": "A huge asteroid hit the Earth about 66 million years ago, changing the weather all over the world.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.dn.ptero",
+   "topic": "science.dinosaurs",
+   "kind": "fact",
+   "prompt": "Pterosaurs flew in the sky at the time of the dinosaurs. What did they use to fly?",
+   "answer": "wings made of skin",
+   "distractors": [
+    "feathers like eagles",
+    "propellers",
+    "balloons"
+   ],
+   "explain": "Their wings were stretched skin, a bit like a bat’s.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.hc.desert",
+   "topic": "science.hotcold",
+   "kind": "fact",
+   "prompt": "A very dry place with very little rain is called a…",
+   "answer": "desert",
+   "distractors": [
+    "rainforest",
+    "swamp",
+    "glacier"
+   ],
+   "explain": "The Sahara in Africa is the biggest hot desert.",
+   "accept": [
+    "a desert"
+   ]
+  },
+  {
+   "id": "science.hc.camel",
+   "topic": "science.hotcold",
+   "kind": "mcq",
+   "prompt": "How is a camel suited to the desert?",
+   "options": [
+    {
+     "text": "It can go a long time without drinking, and wide feet stop it sinking in sand",
+     "correct": true
+    },
+    {
+     "text": "It has thick fur to keep cool",
+     "correct": false,
+     "feedback": "Its fur is quite thin; its body is built to save water."
+    },
+    {
+     "text": "It swims to find water",
+     "correct": false,
+     "feedback": "There is very little water in a desert!"
+    }
+   ],
+   "explain": "Camels store fat in their humps and can go days without water."
+  },
+  {
+   "id": "science.hc.polar",
+   "topic": "science.hotcold",
+   "kind": "mcq",
+   "prompt": "How is a polar bear suited to the Arctic?",
+   "options": [
+    {
+     "text": "Thick fur and a layer of fat keep it warm",
+     "correct": true
+    },
+    {
+     "text": "It sleeps in the sun all day",
+     "correct": false,
+     "feedback": "The Arctic is cold: it needs fur and fat."
+    },
+    {
+     "text": "It has thin skin to stay cool",
+     "correct": false,
+     "feedback": "It needs to stay warm, not cool."
+    }
+   ],
+   "explain": "White fur also helps it hide in the snow."
+  },
+  {
+   "id": "science.hc.rainforest",
+   "topic": "science.hotcold",
+   "kind": "fact",
+   "prompt": "A hot, wet forest near the Equator is called a…",
+   "answer": "rainforest",
+   "distractors": [
+    "desert",
+    "tundra",
+    "woodland"
+   ],
+   "explain": "The Amazon rainforest in South America is the biggest.",
+   "accept": [
+    "rain forest",
+    "jungle"
+   ]
+  },
+  {
+   "id": "science.hc.arctic",
+   "topic": "science.hotcold",
+   "kind": "fact",
+   "prompt": "The cold area around the North Pole is called the…",
+   "answer": "Arctic",
+   "distractors": [
+    "Antarctic",
+    "Equator",
+    "Sahara"
+   ],
+   "explain": "Polar bears live in the Arctic. Penguins live in the Antarctic, at the other end!",
+   "accept": [
+    "arctic"
+   ]
+  },
+  {
+   "id": "science.hc.penguin-bear",
+   "topic": "science.hotcold",
+   "kind": "mcq",
+   "prompt": "Would a penguin ever meet a polar bear in the wild?",
+   "options": [
+    {
+     "text": "No: polar bears live in the north, penguins in the south",
+     "correct": true
+    },
+    {
+     "text": "Yes, they are best friends",
+     "correct": false,
+     "feedback": "They live at opposite ends of the Earth!"
+    },
+    {
+     "text": "Yes, at the Equator",
+     "correct": false,
+     "feedback": "Neither lives at the hot Equator."
+    }
+   ],
+   "explain": "Polar bears: Arctic (north). Penguins: Antarctic and southern seas."
+  },
+  {
+   "id": "science.hc.equator",
+   "topic": "science.hotcold",
+   "kind": "mcq",
+   "prompt": "Why is it hot near the Equator?",
+   "options": [
+    {
+     "text": "The Sun shines almost straight down there all year",
+     "correct": true
+    },
+    {
+     "text": "It is closer to the Moon",
+     "correct": false,
+     "feedback": "The Moon doesn’t heat the Earth."
+    },
+    {
+     "text": "There are more volcanoes",
+     "correct": false,
+     "feedback": "It is because of the Sun."
+    }
+   ],
+   "explain": "Direct sunlight is strongest, so the Equator is hot all year."
+  },
+  {
+   "id": "science.hc.igloo",
+   "topic": "science.hotcold",
+   "kind": "fact",
+   "prompt": "Inuit people in the Arctic used to build winter shelters from blocks of snow. What are they called?",
+   "answer": "igloos",
+   "distractors": [
+    "tents",
+    "castles",
+    "huts"
+   ],
+   "explain": "Snow traps air, so an igloo keeps people surprisingly warm.",
+   "accept": [
+    "igloo"
+   ]
+  },
+  {
+   "id": "science.ct.gbr",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "GBR",
+   "answer": "United Kingdom",
+   "explain": "This is the UK, where we live: England, Scotland, Wales and Northern Ireland.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": [
+    "UK",
+    "Britain",
+    "Great Britain"
+   ]
+  },
+  {
+   "id": "science.ct.fra",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "FRA",
+   "answer": "France",
+   "explain": "France is our neighbour, across the English Channel. Its capital is Paris.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.usa",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "USA",
+   "answer": "United States",
+   "explain": "The USA is a huge country in North America. Astronauts went to the Moon from here.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": [
+    "USA",
+    "America",
+    "United States of America"
+   ]
+  },
+  {
+   "id": "science.ct.chn",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CHN",
+   "answer": "China",
+   "explain": "China has more people than almost any other country, and the Great Wall of China.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.ind",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "IND",
+   "answer": "India",
+   "explain": "India is in Asia. Tigers and elephants live there.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.bra",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "BRA",
+   "answer": "Brazil",
+   "explain": "Brazil is in South America. Most of the Amazon rainforest is here.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.aus",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "AUS",
+   "answer": "Australia",
+   "explain": "Australia is a country AND a continent. Kangaroos live here.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.egy",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "EGY",
+   "answer": "Egypt",
+   "explain": "Egypt is in Africa. The ancient Egyptians built the pyramids beside the River Nile.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.ken",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "KEN",
+   "answer": "Kenya",
+   "explain": "Kenya is in Africa, on the Equator. Lions, giraffes and zebras live on its grasslands.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.jpn",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "JPN",
+   "answer": "Japan",
+   "explain": "Japan is a country made of islands in Asia. It has super-fast bullet trains.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.can",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "CAN",
+   "answer": "Canada",
+   "explain": "Canada is the second biggest country in the world, north of the USA.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.rus",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "RUS",
+   "answer": "Russia",
+   "explain": "Russia is the biggest country in the world. It stretches across Europe and Asia.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.ita",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ITA",
+   "answer": "Italy",
+   "explain": "Italy is shaped like a boot! The ancient Romans came from here.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.esp",
+   "topic": "science.countries",
+   "kind": "mapfact",
+   "map": "world",
+   "layer": "countries",
+   "feature": "ESP",
+   "answer": "Spain",
+   "explain": "Spain is in Europe, south of France. It is often hot and sunny.",
+   "choosePrompt": "Which country is highlighted?",
+   "accept": []
+  },
+  {
+   "id": "science.ct.biggest",
+   "topic": "science.countries",
+   "kind": "fact",
+   "prompt": "Which is the biggest country in the world?",
+   "answer": "Russia",
+   "distractors": [
+    "China",
+    "the USA",
+    "Australia"
+   ],
+   "explain": "Russia is so big it has 11 time zones!",
+   "accept": [
+    "russia"
+   ]
+  },
+  {
+   "id": "science.ct.channel",
+   "topic": "science.countries",
+   "kind": "fact",
+   "prompt": "Which country is just across the English Channel from England?",
+   "answer": "France",
+   "distractors": [
+    "Spain",
+    "Italy",
+    "Canada"
+   ],
+   "explain": "You can go through the Channel Tunnel by train to France.",
+   "accept": [
+    "france"
+   ]
+  },
+  {
+   "id": "science.ct.boot",
+   "topic": "science.countries",
+   "kind": "fact",
+   "prompt": "Which country is shaped like a boot?",
+   "answer": "Italy",
+   "distractors": [
+    "France",
+    "Spain",
+    "Japan"
+   ],
+   "explain": "Look at a map: Italy kicks a ball (the island of Sicily)!",
+   "accept": [
+    "italy"
+   ]
+  },
+  {
+   "id": "science.rv.thames",
+   "topic": "science.coasts",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "rivers",
+   "feature": "river-thames",
+   "answer": "River Thames",
+   "explain": "The Thames flows through London to the North Sea.",
+   "choosePrompt": "Which river is highlighted?",
+   "accept": [
+    "Thames"
+   ],
+   "group": "river"
+  },
+  {
+   "id": "science.rv.severn",
+   "topic": "science.coasts",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "rivers",
+   "feature": "river-severn",
+   "answer": "River Severn",
+   "explain": "The Severn is the longest river in the UK.",
+   "choosePrompt": "Which river is highlighted?",
+   "accept": [
+    "Severn"
+   ],
+   "group": "river"
+  },
+  {
+   "id": "science.rv.trent",
+   "topic": "science.coasts",
+   "kind": "mapfact",
+   "map": "uk",
+   "layer": "rivers",
+   "feature": "river-trent",
+   "answer": "River Trent",
+   "explain": "The Trent flows through the middle of England.",
+   "choosePrompt": "Which river is highlighted?",
+   "accept": [
+    "Trent"
+   ],
+   "group": "river"
+  },
+  {
+   "id": "science.cs.coast",
+   "topic": "science.coasts",
+   "kind": "fact",
+   "prompt": "Where the land meets the sea is called the…",
+   "answer": "coast",
+   "distractors": [
+    "source",
+    "valley",
+    "desert"
+   ],
+   "explain": "The UK has a very long coast because it is made of islands.",
+   "accept": [
+    "coastline",
+    "seaside"
+   ]
+  },
+  {
+   "id": "science.cs.source",
+   "topic": "science.coasts",
+   "kind": "fact",
+   "prompt": "Where a river starts is called its…",
+   "answer": "source",
+   "distractors": [
+    "mouth",
+    "bank",
+    "bed"
+   ],
+   "explain": "Rivers often start as small streams in the hills."
+  },
+  {
+   "id": "science.cs.mouth",
+   "topic": "science.coasts",
+   "kind": "fact",
+   "prompt": "Where a river meets the sea is called its…",
+   "answer": "mouth",
+   "distractors": [
+    "source",
+    "head",
+    "foot"
+   ],
+   "explain": "The mouth of the Thames is near the North Sea."
+  },
+  {
+   "id": "science.cs.flow",
+   "topic": "science.coasts",
+   "kind": "mcq",
+   "prompt": "Which way does a river always flow?",
+   "options": [
+    {
+     "text": "Downhill, towards the sea",
+     "correct": true
+    },
+    {
+     "text": "Uphill, towards the mountains",
+     "correct": false,
+     "feedback": "Water flows downhill."
+    },
+    {
+     "text": "Round in circles",
+     "correct": false,
+     "feedback": "Rivers flow downhill to the sea or a lake."
+    }
+   ],
+   "explain": "Water always flows downhill, so rivers run from the hills to the sea."
+  },
+  {
+   "id": "science.cs.cliff",
+   "topic": "science.coasts",
+   "kind": "fact",
+   "prompt": "A high, steep rock face by the sea is called a…",
+   "answer": "cliff",
+   "distractors": [
+    "beach",
+    "harbour",
+    "bay"
+   ],
+   "explain": "The White Cliffs of Dover are made of chalk.",
+   "accept": [
+    "a cliff"
+   ]
+  },
+  {
+   "id": "science.cs.lighthouse",
+   "topic": "science.coasts",
+   "kind": "mcq",
+   "prompt": "What is a lighthouse for?",
+   "options": [
+    {
+     "text": "To warn ships about dangerous rocks",
+     "correct": true
+    },
+    {
+     "text": "To light up the beach for swimmers",
+     "correct": false,
+     "feedback": "It shines out to sea for ships."
+    },
+    {
+     "text": "To grow plants",
+     "correct": false,
+     "feedback": "It is a tower with a bright light."
+    }
+   ],
+   "explain": "The flashing light warns sailors at night."
+  },
+  {
+   "id": "science.cs.human",
+   "topic": "science.coasts",
+   "kind": "mcq",
+   "prompt": "Which is a HUMAN feature at the seaside?",
+   "options": [
+    {
+     "text": "a pier",
+     "correct": true
+    },
+    {
+     "text": "a cliff",
+     "correct": false,
+     "feedback": "Cliffs are made by nature."
+    },
+    {
+     "text": "sand dunes",
+     "correct": false,
+     "feedback": "Dunes are formed by the wind."
+    }
+   ],
+   "explain": "Piers, harbours and lighthouses are built by people."
+  },
+  {
+   "id": "science.ex.first",
+   "topic": "science.explore",
+   "kind": "fact",
+   "prompt": "Who was the first person ever to go into space, in 1961?",
+   "answer": "Yuri Gagarin",
+   "distractors": [
+    "Neil Armstrong",
+    "Tim Peake",
+    "Buzz Aldrin"
+   ],
+   "explain": "Yuri Gagarin, from the Soviet Union (now Russia), orbited the Earth once in 1961.",
+   "accept": [
+    "gagarin"
+   ]
+  },
+  {
+   "id": "science.ex.moon",
+   "topic": "science.explore",
+   "kind": "fact",
+   "prompt": "Who was the first person to walk on the Moon?",
+   "answer": "Neil Armstrong",
+   "distractors": [
+    "Yuri Gagarin",
+    "Tim Peake",
+    "Helen Sharman"
+   ],
+   "explain": "In 1969, on the Apollo 11 mission.",
+   "accept": [
+    "armstrong"
+   ]
+  },
+  {
+   "id": "science.ex.sharman",
+   "topic": "science.explore",
+   "kind": "fact",
+   "prompt": "Who was the first British astronaut, in 1991?",
+   "answer": "Helen Sharman",
+   "distractors": [
+    "Tim Peake",
+    "Neil Armstrong",
+    "Queen Victoria"
+   ],
+   "explain": "Helen Sharman was a chemist who went to the Mir space station.",
+   "accept": [
+    "sharman"
+   ]
+  },
+  {
+   "id": "science.ex.peake",
+   "topic": "science.explore",
+   "kind": "fact",
+   "prompt": "Which British astronaut lived on the International Space Station in 2015 and 2016?",
+   "answer": "Tim Peake",
+   "distractors": [
+    "Helen Sharman",
+    "Yuri Gagarin",
+    "Buzz Aldrin"
+   ],
+   "explain": "Tim Peake even ran a marathon on a treadmill in space!",
+   "accept": [
+    "peake"
+   ]
+  },
+  {
+   "id": "science.ex.iss",
+   "topic": "science.explore",
+   "kind": "mcq",
+   "prompt": "What is the International Space Station?",
+   "options": [
+    {
+     "text": "A huge spacecraft where astronauts live and work, circling the Earth",
+     "correct": true
+    },
+    {
+     "text": "A train station on the Moon",
+     "correct": false,
+     "feedback": "It flies around the Earth."
+    },
+    {
+     "text": "A rocket launch pad",
+     "correct": false,
+     "feedback": "It is in space, not on the ground."
+    }
+   ],
+   "explain": "Astronauts from many countries live there for months at a time. You can sometimes see it from your garden!"
+  },
+  {
+   "id": "science.ex.float",
+   "topic": "science.explore",
+   "kind": "mcq",
+   "prompt": "Why do astronauts float inside the space station?",
+   "options": [
+    {
+     "text": "They are falling around the Earth together with the station",
+     "correct": true
+    },
+    {
+     "text": "There is no air",
+     "correct": false,
+     "feedback": "There IS air inside the station; that is not why they float."
+    },
+    {
+     "text": "They wear special floating boots",
+     "correct": false,
+     "feedback": "They float because they and the station are falling round the Earth together."
+    }
+   ],
+   "explain": "The station and everything in it falls around the Earth at the same speed, so everything floats."
+  },
+  {
+   "id": "science.ex.mars",
+   "topic": "science.explore",
+   "kind": "mcq",
+   "prompt": "How have scientists explored Mars?",
+   "options": [
+    {
+     "text": "By sending robot rovers",
+     "correct": true
+    },
+    {
+     "text": "By sending astronauts to live there",
+     "correct": false,
+     "feedback": "No person has been to Mars yet. Maybe you will be the first!"
+    },
+    {
+     "text": "By looking through binoculars",
+     "correct": false,
+     "feedback": "Mars is too far away for that: we send rovers."
+    }
+   ],
+   "explain": "Rovers like Curiosity and Perseverance drive around Mars taking photos and studying rocks."
+  },
+  {
+   "id": "science.ex.rocket",
+   "topic": "science.explore",
+   "kind": "fact",
+   "prompt": "What do we need to launch astronauts into space?",
+   "answer": "a rocket",
+   "distractors": [
+    "a jet plane",
+    "a hot air balloon",
+    "a helicopter"
+   ],
+   "explain": "Only rockets are powerful enough to escape Earth’s gravity and reach space.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.lt.need",
+   "topic": "science.light",
+   "kind": "fact",
+   "prompt": "What do we need to be able to see things?",
+   "answer": "light",
+   "distractors": [
+    "sound",
+    "heat",
+    "wind"
+   ],
+   "explain": "Without light we can’t see anything: dark is the absence of light.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.lt.shadow",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "How is a shadow made?",
+   "options": [
+    {
+     "text": "An object blocks the light",
+     "correct": true
+    },
+    {
+     "text": "Light bounces off a mirror",
+     "correct": false,
+     "feedback": "That is reflection."
+    },
+    {
+     "text": "The Sun goes out",
+     "correct": false,
+     "feedback": "Shadows need light!"
+    }
+   ],
+   "explain": "Light travels in straight lines. If something blocks it, there is a dark patch behind: a shadow."
+  },
+  {
+   "id": "science.lt.source",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "Which of these is a LIGHT SOURCE (it makes its own light)?",
+   "options": [
+    {
+     "text": "the Sun",
+     "correct": true
+    },
+    {
+     "text": "the Moon",
+     "correct": false,
+     "feedback": "The Moon only reflects the Sun’s light."
+    },
+    {
+     "text": "a mirror",
+     "correct": false,
+     "feedback": "A mirror reflects light; it doesn’t make it."
+    }
+   ],
+   "explain": "Light sources: the Sun, fire, a torch, a light bulb."
+  },
+  {
+   "id": "science.lt.sun",
+   "topic": "science.light",
+   "kind": "fact",
+   "prompt": "Why should you never look straight at the Sun?",
+   "answer": "it can damage your eyes",
+   "distractors": [
+    "it will make you sneeze",
+    "it is too far away",
+    "it might go out"
+   ],
+   "explain": "The Sun’s light is so strong that it can hurt your eyes. Wear sunglasses on bright days.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.lt.long",
+   "topic": "science.light",
+   "kind": "mcq",
+   "prompt": "When is your shadow longest on a sunny day?",
+   "options": [
+    {
+     "text": "Early morning or evening, when the Sun is low",
+     "correct": true
+    },
+    {
+     "text": "At midday, when the Sun is high",
+     "correct": false,
+     "feedback": "At midday your shadow is shortest."
+    },
+    {
+     "text": "It is always the same",
+     "correct": false,
+     "feedback": "Watch it change through the day!"
+    }
+   ],
+   "explain": "A low Sun makes long shadows; a high Sun makes short ones."
+  },
+  {
+   "id": "science.sd.make",
+   "topic": "science.sound",
+   "kind": "mcq",
+   "prompt": "How are all sounds made?",
+   "options": [
+    {
+     "text": "By something vibrating",
+     "correct": true
+    },
+    {
+     "text": "By light",
+     "correct": false,
+     "feedback": "Light helps us see, not hear."
+    },
+    {
+     "text": "By magnets",
+     "correct": false,
+     "feedback": "Sound comes from vibrations."
+    }
+   ],
+   "explain": "Touch your throat while you hum: you can feel the vibrations."
+  },
+  {
+   "id": "science.sd.ear",
+   "topic": "science.sound",
+   "kind": "fact",
+   "prompt": "Which part of your body do you hear with?",
+   "answer": "ears",
+   "distractors": [
+    "eyes",
+    "nose",
+    "tongue"
+   ],
+   "explain": "Vibrations travel through the air into your ears.",
+   "accept": [
+    "ear",
+    "your ears"
+   ]
+  },
+  {
+   "id": "science.sd.far",
+   "topic": "science.sound",
+   "kind": "mcq",
+   "prompt": "What happens to a sound as you walk away from it?",
+   "options": [
+    {
+     "text": "It gets quieter",
+     "correct": true
+    },
+    {
+     "text": "It gets louder",
+     "correct": false,
+     "feedback": "Sounds get fainter with distance."
+    },
+    {
+     "text": "It gets higher",
+     "correct": false,
+     "feedback": "The pitch stays the same; the volume drops."
+    }
+   ],
+   "explain": "The further away you are, the quieter it sounds."
+  },
+  {
+   "id": "science.sd.space",
+   "topic": "science.sound",
+   "kind": "mcq",
+   "prompt": "Could you hear a rocket explosion in empty space?",
+   "options": [
+    {
+     "text": "No: there is no air to carry the sound",
+     "correct": true
+    },
+    {
+     "text": "Yes, very loudly",
+     "correct": false,
+     "feedback": "Sound needs something to travel through, like air."
+    },
+    {
+     "text": "Only at night",
+     "correct": false,
+     "feedback": "Day or night, there is no air in space to carry sound."
+    }
+   ],
+   "explain": "Sound needs air (or water or a solid) to travel. Space is silent!"
+  },
+  {
+   "id": "science.sd.pitch",
+   "topic": "science.sound",
+   "kind": "mcq",
+   "prompt": "A short guitar string makes a high note. What does a long string make?",
+   "options": [
+    {
+     "text": "A lower note",
+     "correct": true
+    },
+    {
+     "text": "A higher note",
+     "correct": false,
+     "feedback": "Longer strings vibrate more slowly: lower notes."
+    },
+    {
+     "text": "No sound",
+     "correct": false,
+     "feedback": "It still vibrates and makes a sound."
+    }
+   ],
+   "explain": "Short = high, long = low."
+  },
+  {
+   "id": "science.el.circuit",
+   "topic": "science.electricity",
+   "kind": "mcq",
+   "prompt": "Why does a bulb only light when the circuit is complete?",
+   "options": [
+    {
+     "text": "Electricity needs an unbroken loop to flow round",
+     "correct": true
+    },
+    {
+     "text": "The bulb needs to warm up first",
+     "correct": false,
+     "feedback": "It is about the loop being complete."
+    },
+    {
+     "text": "Batteries only work in the dark",
+     "correct": false,
+     "feedback": "Batteries work any time."
+    }
+   ],
+   "explain": "Like cars on a track: if there is a gap, they can’t get round."
+  },
+  {
+   "id": "science.el.conductor",
+   "topic": "science.electricity",
+   "kind": "mcq",
+   "prompt": "Which material lets electricity flow through it?",
+   "options": [
+    {
+     "text": "metal",
+     "correct": true
+    },
+    {
+     "text": "plastic",
+     "correct": false,
+     "feedback": "Plastic is an insulator: that is why wires are covered in it."
+    },
+    {
+     "text": "wood",
+     "correct": false,
+     "feedback": "Dry wood is an insulator."
+    }
+   ],
+   "explain": "Metals are conductors. Copper is used in wires."
+  },
+  {
+   "id": "science.el.battery",
+   "topic": "science.electricity",
+   "kind": "fact",
+   "prompt": "What gives a torch the power to light up?",
+   "answer": "a battery",
+   "distractors": [
+    "a magnet",
+    "a plug",
+    "a mirror"
+   ],
+   "explain": "Batteries store electricity for things we carry about.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.el.safe",
+   "topic": "science.electricity",
+   "kind": "mcq",
+   "prompt": "Which is a safe thing to do?",
+   "options": [
+    {
+     "text": "Keep electrical things away from water",
+     "correct": true
+    },
+    {
+     "text": "Poke things into plug sockets",
+     "correct": false,
+     "feedback": "Never! Mains electricity can kill."
+    },
+    {
+     "text": "Fly a kite near power lines",
+     "correct": false,
+     "feedback": "Power lines are very dangerous."
+    }
+   ],
+   "explain": "Water and electricity are a dangerous mix."
+  },
+  {
+   "id": "science.el.switch",
+   "topic": "science.electricity",
+   "kind": "fact",
+   "prompt": "What does a switch do in a circuit?",
+   "answer": "it opens or closes a gap to turn it off or on",
+   "distractors": [
+    "it makes the battery bigger",
+    "it changes the colour of the light",
+    "it stores electricity"
+   ],
+   "explain": "A switch breaks or completes the circuit.",
+   "formats": [
+    "choice"
+   ]
+  }
+ ]
+}

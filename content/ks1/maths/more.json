@@ -1,0 +1,791 @@
+{
+ "subject": "maths",
+ "deck": "more",
+ "topics": [
+  {
+   "kind": "skill",
+   "id": "maths.numberline",
+   "title": "Number lines",
+   "prereqs": [
+    "maths.place"
+   ],
+   "intro": "A number line is like a race track with numbers on it. Work out what each little step is worth, then count the steps.",
+   "teach": "Explain how you know what each step is worth on a number line from 0 to 100 with 10 steps.",
+   "talk": "Draw a number line from 0 to 20 on paper and ask {him} to mark where 13 goes."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.factfamilies",
+   "title": "Fact families",
+   "prereqs": [
+    "maths.bonds",
+    "maths.addsub"
+   ],
+   "intro": "If you know one fact, you know four! 7 + 3 = 10, so 3 + 7 = 10, 10 − 3 = 7 and 10 − 7 = 3.",
+   "teach": "Explain how 8 + 5 = 13 helps you work out 13 − 5.",
+   "talk": "Give {him} one fact and ask for the other three in the family."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.doubles",
+   "title": "Doubling and halving",
+   "prereqs": [
+    "maths.bonds",
+    "maths.place"
+   ],
+   "intro": "Double means two lots of the same. Half means two equal parts. They undo each other: double 6 is 12, half of 12 is 6.",
+   "teach": "Explain how to double 34 by splitting it into tens and ones.",
+   "talk": "Ask {him} to halve the number of grapes in a bowl, then check by doubling."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.turns",
+   "title": "Turns and directions",
+   "prereqs": [],
+   "intro": "A full turn takes you all the way round. A half turn faces you the opposite way. Clockwise is the way clock hands go: north, east, south, west.",
+   "teach": "Explain the difference between clockwise and anticlockwise.",
+   "talk": "Play robots: give {him} instructions like “quarter turn clockwise, 3 steps forward”."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.scales",
+   "title": "Reading scales",
+   "prereqs": [
+    "maths.numberline",
+    "maths.measure"
+   ],
+   "intro": "Rulers, jugs and thermometers all have scales. Not every mark has a number, so first work out what each mark is worth.",
+   "teach": "Explain how to read a jug when the marks go up in 100s but only some are numbered.",
+   "talk": "Ask {him} to read the temperature on a thermometer or the oven dial."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.grouping",
+   "title": "Grouping and sharing",
+   "prereqs": [
+    "maths.times"
+   ],
+   "intro": "Dividing can mean sharing equally, or making equal groups. Sometimes there are some left over: these are called the remainder.",
+   "teach": "Explain why 13 cars need 4 transporters if each carries 4.",
+   "talk": "Share some biscuits equally and ask {him} how many are left over."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.charts",
+   "title": "Block charts and tables",
+   "prereqs": [
+    "maths.data"
+   ],
+   "intro": "A block chart (bar chart) shows numbers as tall bars. Always look at the scale on the side: it might go up in 2s!",
+   "teach": "Explain how to find the difference between the tallest and shortest bars.",
+   "talk": "Make a block chart of the family’s favourite fruits."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.amounts",
+   "title": "Making amounts and change",
+   "prereqs": [
+    "maths.money"
+   ],
+   "intro": "There are lots of ways to make the same amount with coins. Finding change means counting on from what it costs to what you paid.",
+   "teach": "Explain two different ways to make 50p.",
+   "talk": "Play shops with real coins: price toys and give change."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.durations",
+   "title": "How long does it take?",
+   "prereqs": [
+    "maths.time"
+   ],
+   "intro": "Time passes in minutes and hours. To find how long something takes, count on from the start time to the finish time.",
+   "teach": "Explain how to work out when a 30-minute race finishes if it starts at quarter past 2.",
+   "talk": "Ask {him} how long until dinner, or how long the car journey took."
+  },
+  {
+   "kind": "facts",
+   "id": "maths.facts-2",
+   "title": "More number facts",
+   "prereqs": [
+    "maths.facts"
+   ],
+   "batch": 5,
+   "intro": "More facts to know by heart: days in a year, sides of shapes, and number words.",
+   "teach": "Explain how many days are in a year, and what a leap year is.",
+   "talk": "Ask {him} to spell a number word, like “twelve” or “forty”."
+  },
+  {
+   "kind": "facts",
+   "id": "maths.puzzles",
+   "title": "Puzzles and proof",
+   "prereqs": [
+    "maths.addsub",
+    "maths.times"
+   ],
+   "batch": 4,
+   "intro": "Greater depth means thinking hard: finding all the answers, spotting patterns and explaining why.",
+   "teach": "Explain how you know you have found ALL the ways.",
+   "talk": "Ask {him} a “what number am I?” puzzle at dinner."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.times10",
+   "title": "Multiplying and dividing by 10 and 100",
+   "prereqs": [
+    "maths.times",
+    "maths.hundreds"
+   ],
+   "tier": "stretch",
+   "intro": "Multiplying by 10 makes a number ten times bigger: the digits shift one place to the left. Dividing by 10 shifts them back.",
+   "teach": "Explain what happens to the digits of 7 when you multiply by 100.",
+   "talk": "Ask {him} how many pence are in £3, £5 and £10."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.perimeter",
+   "title": "Perimeter",
+   "prereqs": [
+    "maths.measure",
+    "maths.addsub"
+   ],
+   "tier": "stretch",
+   "intro": "Perimeter is the distance all the way round the outside of a shape, like one lap of a race track.",
+   "teach": "Explain how to find the perimeter of a rectangle quickly.",
+   "talk": "Measure round a table or a book with a tape measure."
+  },
+  {
+   "kind": "skill",
+   "id": "maths.roman",
+   "title": "Roman numerals",
+   "prereqs": [
+    "maths.place"
+   ],
+   "tier": "stretch",
+   "intro": "The Romans wrote numbers with letters: I = 1, V = 5, X = 10. You still see them on clocks and in film titles.",
+   "teach": "Explain why 4 is written IV, not IIII.",
+   "talk": "Find Roman numerals on a clock face, a building or a book."
+  }
+ ],
+ "items": [
+  {
+   "id": "maths.numberline.tmpl",
+   "topic": "maths.numberline",
+   "kind": "template",
+   "gen": "k1NumberLine",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.factfamilies.tmpl",
+   "topic": "maths.factfamilies",
+   "kind": "template",
+   "gen": "k1FactFamily",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.doubles.tmpl",
+   "topic": "maths.doubles",
+   "kind": "template",
+   "gen": "k1Doubles",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.turns.tmpl",
+   "topic": "maths.turns",
+   "kind": "template",
+   "gen": "k1Turns",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.scales.tmpl",
+   "topic": "maths.scales",
+   "kind": "template",
+   "gen": "k1Scales",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.grouping.tmpl",
+   "topic": "maths.grouping",
+   "kind": "template",
+   "gen": "k1Grouping",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.charts.tmpl",
+   "topic": "maths.charts",
+   "kind": "template",
+   "gen": "k1Charts",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.amounts.tmpl",
+   "topic": "maths.amounts",
+   "kind": "template",
+   "gen": "k1Amounts",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.durations.tmpl",
+   "topic": "maths.durations",
+   "kind": "template",
+   "gen": "k1Durations",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.times10.tmpl",
+   "topic": "maths.times10",
+   "kind": "template",
+   "gen": "k1Times10",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.perimeter.tmpl",
+   "topic": "maths.perimeter",
+   "kind": "template",
+   "gen": "k1Perimeter",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.roman.tmpl",
+   "topic": "maths.roman",
+   "kind": "template",
+   "gen": "k1Roman",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.f2.1",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "How many days are in a year (not a leap year)?",
+   "answer": "365",
+   "distractors": [
+    "356",
+    "100",
+    "52"
+   ],
+   "explain": "A year has 365 days. A leap year has 366: an extra day on 29 February."
+  },
+  {
+   "id": "maths.f2.2",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "How many weeks are in a year?",
+   "answer": "52",
+   "distractors": [
+    "12",
+    "365",
+    "100"
+   ],
+   "explain": "52 weeks, and one day more."
+  },
+  {
+   "id": "maths.f2.3",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "How many days are in a fortnight?",
+   "answer": "14",
+   "distractors": [
+    "10",
+    "7",
+    "15"
+   ],
+   "explain": "A fortnight is two weeks: 2 × 7 = 14."
+  },
+  {
+   "id": "maths.f2.4",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "How many days are in September?",
+   "answer": "30",
+   "distractors": [
+    "31",
+    "28",
+    "29"
+   ],
+   "explain": "“Thirty days has September, April, June and November…”"
+  },
+  {
+   "id": "maths.f2.5",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "Which month has 28 days (29 in a leap year)?",
+   "answer": "February",
+   "distractors": [
+    "January",
+    "March",
+    "June"
+   ],
+   "explain": "February is the shortest month.",
+   "accept": [
+    "february",
+    "feb"
+   ]
+  },
+  {
+   "id": "maths.f2.6",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "How many grams are in 1 kilogram?",
+   "answer": "1000",
+   "distractors": [
+    "100",
+    "10",
+    "60"
+   ],
+   "explain": "Kilo means a thousand: 1 kg = 1000 g."
+  },
+  {
+   "id": "maths.f2.7",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "How many millilitres are in 1 litre?",
+   "answer": "1000",
+   "distractors": [
+    "100",
+    "10",
+    "500"
+   ],
+   "explain": "1 litre = 1000 ml. A big bottle of pop is often 2 litres."
+  },
+  {
+   "id": "maths.f2.8",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "What number is “forty-seven” in digits?",
+   "answer": "47",
+   "distractors": [
+    "407",
+    "74",
+    "4007"
+   ],
+   "explain": "Forty = 4 tens, seven = 7 ones: 47."
+  },
+  {
+   "id": "maths.f2.9",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "What is the number word for 19?",
+   "answer": "nineteen",
+   "distractors": [
+    "ninety",
+    "ninteen",
+    "nine"
+   ],
+   "explain": "Nineteen keeps the “e” of nine: nine-teen.",
+   "accept": [
+    "nineteen"
+   ]
+  },
+  {
+   "id": "maths.f2.10",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "What is the number word for 90?",
+   "answer": "ninety",
+   "distractors": [
+    "nineteen",
+    "ninty",
+    "nine hundred"
+   ],
+   "explain": "Ninety keeps the “e” of nine too: nine-ty.",
+   "accept": [
+    "ninety"
+   ]
+  },
+  {
+   "id": "maths.f2.11",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "How many sides does a quadrilateral have?",
+   "answer": "4",
+   "distractors": [
+    "3",
+    "5",
+    "6"
+   ],
+   "explain": "Quad means four. Squares, rectangles and kites are all quadrilaterals."
+  },
+  {
+   "id": "maths.f2.12",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "How many edges does a cube have?",
+   "answer": "12",
+   "distractors": [
+    "6",
+    "8",
+    "4"
+   ],
+   "explain": "4 round the top, 4 round the bottom and 4 going up: 12."
+  },
+  {
+   "id": "maths.f2.13",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "What is the name of a 3D shape with a square base and triangle faces meeting at a point?",
+   "answer": "a square-based pyramid",
+   "distractors": [
+    "a cone",
+    "a prism",
+    "a cube"
+   ],
+   "explain": "Like the pyramids in Egypt!",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.f2.14",
+   "topic": "maths.facts-2",
+   "kind": "fact",
+   "prompt": "Which is the smallest: 0, 10 or 1?",
+   "answer": "0",
+   "distractors": [
+    "10",
+    "1",
+    "they are equal"
+   ],
+   "explain": "Zero means none at all: it is smaller than every counting number.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "maths.pz.ways",
+   "topic": "maths.puzzles",
+   "kind": "mcq",
+   "prompt": "How many different ways can you make 5 by adding two whole numbers (counting 0 + 5 and 5 + 0 as different)?",
+   "options": [
+    {
+     "text": "6 ways",
+     "correct": true
+    },
+    {
+     "text": "5 ways",
+     "correct": false,
+     "feedback": "Did you remember 0 + 5 and 5 + 0? List them: 0+5, 1+4, 2+3, 3+2, 4+1, 5+0."
+    },
+    {
+     "text": "3 ways",
+     "correct": false,
+     "feedback": "That is if you don’t count turnarounds or 0. There are 6 when you list them all."
+    }
+   ],
+   "explain": "Work systematically: 0 + 5, 1 + 4, 2 + 3, 3 + 2, 4 + 1, 5 + 0. Six ways. Going in order means you never miss one."
+  },
+  {
+   "id": "maths.pz.digit",
+   "topic": "maths.puzzles",
+   "kind": "mcq",
+   "prompt": "4? + 23 = 68. What is the missing digit?",
+   "options": [
+    {
+     "text": "5",
+     "correct": true
+    },
+    {
+     "text": "4",
+     "correct": false,
+     "feedback": "44 + 23 = 67, not 68."
+    },
+    {
+     "text": "6",
+     "correct": false,
+     "feedback": "46 + 23 = 69."
+    }
+   ],
+   "explain": "The ones must make 8: ? + 3 = 8, so ? = 5. Check: 45 + 23 = 68."
+  },
+  {
+   "id": "maths.pz.whoami",
+   "topic": "maths.puzzles",
+   "kind": "mcq",
+   "prompt": "I am a 2-digit number. My tens digit is 3. My ones digit is double my tens digit. What am I?",
+   "options": [
+    {
+     "text": "36",
+     "correct": true
+    },
+    {
+     "text": "33",
+     "correct": false,
+     "feedback": "The ones digit is DOUBLE 3, which is 6."
+    },
+    {
+     "text": "63",
+     "correct": false,
+     "feedback": "The TENS digit is 3, so the number starts with 3."
+    }
+   ],
+   "explain": "Tens = 3, ones = double 3 = 6. The number is 36."
+  },
+  {
+   "id": "maths.pz.pattern",
+   "topic": "maths.puzzles",
+   "kind": "mcq",
+   "prompt": "5, 10, 15, 20… Will 63 be in this pattern?",
+   "options": [
+    {
+     "text": "No: numbers in the 5s pattern end in 0 or 5",
+     "correct": true
+    },
+    {
+     "text": "Yes: it keeps going forever",
+     "correct": false,
+     "feedback": "It goes on forever, but it only hits numbers ending in 0 or 5."
+    },
+    {
+     "text": "Only if you count backwards",
+     "correct": false,
+     "feedback": "Backwards gets smaller, away from 63."
+    }
+   ],
+   "explain": "Counting in 5s always lands on numbers ending in 5 or 0, so 63 is never reached."
+  },
+  {
+   "id": "maths.pz.balance",
+   "topic": "maths.puzzles",
+   "kind": "mcq",
+   "prompt": "15 + 5 = 12 + ?",
+   "options": [
+    {
+     "text": "8",
+     "correct": true
+    },
+    {
+     "text": "20",
+     "correct": false,
+     "feedback": "20 is what 15 + 5 makes. The other side needs to make 20 too: 12 + 8."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "12 + 3 = 15, not 20."
+    }
+   ],
+   "explain": "The = sign means “is the same as”. 15 + 5 = 20, so 12 + ? = 20, and ? = 8."
+  },
+  {
+   "id": "maths.pz.greatest",
+   "topic": "maths.puzzles",
+   "kind": "mcq",
+   "prompt": "Using the digits 4, 7 and 1 once each, what is the GREATEST 2-digit number you can make?",
+   "options": [
+    {
+     "text": "74",
+     "correct": true
+    },
+    {
+     "text": "47",
+     "correct": false,
+     "feedback": "Put the biggest digit in the tens place: 74."
+    },
+    {
+     "text": "71",
+     "correct": false,
+     "feedback": "7 is right for tens, but 4 is bigger than 1 for the ones."
+    }
+   ],
+   "explain": "Biggest digit in the tens (7), next biggest in the ones (4): 74."
+  },
+  {
+   "id": "maths.pz.legs",
+   "topic": "maths.puzzles",
+   "kind": "mcq",
+   "prompt": "There are some droids and some cats. Droids have 2 legs, cats have 4. There are 3 of them altogether, with 10 legs. How many are cats?",
+   "options": [
+    {
+     "text": "2 cats and 1 droid",
+     "correct": true
+    },
+    {
+     "text": "1 cat and 2 droids",
+     "correct": false,
+     "feedback": "4 + 2 + 2 = 8 legs, not 10."
+    },
+    {
+     "text": "3 cats",
+     "correct": false,
+     "feedback": "3 cats would have 12 legs."
+    }
+   ],
+   "explain": "Try it: 2 cats = 8 legs, 1 droid = 2 legs, total 10. Trial and improvement!"
+  },
+  {
+   "id": "maths.pz.prove",
+   "topic": "maths.puzzles",
+   "kind": "mcq",
+   "prompt": "{hero} says: “If you double any number, the answer is always even.” Is that true for whole numbers?",
+   "options": [
+    {
+     "text": "Yes: doubling makes pairs, so nothing is left over",
+     "correct": true
+    },
+    {
+     "text": "No: double 3 is odd",
+     "correct": false,
+     "feedback": "Double 3 is 6, which is even!"
+    },
+    {
+     "text": "Only for even numbers",
+     "correct": false,
+     "feedback": "Double 5 = 10, double 7 = 14: odd numbers doubled are even too."
+    }
+   ],
+   "explain": "Doubling a number makes two equal groups, so it can always be put into pairs: even."
+  },
+  {
+   "id": "maths.pz.sum",
+   "topic": "maths.puzzles",
+   "kind": "mcq",
+   "prompt": "Two numbers add to 10 and one is 4 more than the other. What are they?",
+   "options": [
+    {
+     "text": "3 and 7",
+     "correct": true
+    },
+    {
+     "text": "4 and 6",
+     "correct": false,
+     "feedback": "6 is only 2 more than 4."
+    },
+    {
+     "text": "2 and 8",
+     "correct": false,
+     "feedback": "8 is 6 more than 2."
+    }
+   ],
+   "explain": "3 + 7 = 10, and 7 − 3 = 4. Try pairs that make 10 until the difference is 4."
+  },
+  {
+   "id": "maths.pz.half",
+   "topic": "maths.puzzles",
+   "kind": "mcq",
+   "prompt": "Half of a number is 9. What is a quarter of the number?",
+   "options": [
+    {
+     "text": "4 and a half",
+     "correct": true
+    },
+    {
+     "text": "18",
+     "correct": false,
+     "feedback": "18 is the whole number. A quarter is half of 9."
+    },
+    {
+     "text": "3",
+     "correct": false,
+     "feedback": "A quarter is half of a half: half of 9 is 4 and a half."
+    }
+   ],
+   "explain": "The whole is 18. A quarter is half of half: half of 9 = 4½. Greater depth answers can be halves!"
+  }
+ ]
+}

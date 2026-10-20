@@ -9,7 +9,7 @@ const MAPS = { world: 'maps/world.json', europe: 'maps/europe.json', uk: 'maps/u
 const { DIAGRAMS } = await import(new URL('./content-src/diagrams.mjs', import.meta.url));
 
 // the Year 2 course: tools/content-src/ks1/*.mjs -> content/ks1/<subject>/<deck>.json, content/index-ks1.json
-const KS1_SOURCES = ['maths', 'reading', 'spelling', 'science', 'history', 'books'];
+const KS1_SOURCES = ['maths', 'maths2', 'reading', 'reading2', 'spelling', 'spelling2', 'science', 'science2', 'history', 'history2', 'books'];
 
 export async function buildAll() {
   const files = {};

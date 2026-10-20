@@ -117,6 +117,7 @@ export function present(item, card, { db, state, rng, level, format }) {
   const fill = (t) => (typeof t === 'string' && t.includes('{hero}') ? t.replaceAll('{hero}', hero) : t);
   q.prompt = fill(q.prompt); q.explain = fill(q.explain);
   if (q.steps) q.steps = q.steps.map(fill);
+  if (q.passage) q.passage = fill(q.passage);
   if (q.diagram?.title) q.diagram = { ...q.diagram, title: fill(q.diagram.title) };
   if (q.options) q.options = q.options.map((o) => ({ ...o, text: fill(o.text), feedback: fill(o.feedback) }));
   return q;

@@ -1,0 +1,1409 @@
+{
+ "subject": "spelling",
+ "deck": "more",
+ "topics": [
+  {
+   "id": "spelling.pattern-1",
+   "title": "Spelling: -dge, -ge, kn, gn, wr",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.cew-2"
+   ],
+   "batch": 5,
+   "intro": "These words follow a pattern. Learn the pattern, and you can spell hundreds of words!",
+   "teach": "Pick one pattern and give two more words that follow it.",
+   "talk": "Ask {him} to find a word with today’s pattern in a book or on a sign."
+  },
+  {
+   "id": "spelling.pattern-2",
+   "title": "Spelling: -le, -el, -al, -il, -tion",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.pattern-1"
+   ],
+   "batch": 5,
+   "intro": "These words follow a pattern. Learn the pattern, and you can spell hundreds of words!",
+   "teach": "Pick one pattern and give two more words that follow it.",
+   "talk": "Ask {him} to find a word with today’s pattern in a book or on a sign."
+  },
+  {
+   "id": "spelling.pattern-3",
+   "title": "Spelling: wa, wor, war, o as in mother, ey",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.pattern-2"
+   ],
+   "batch": 5,
+   "intro": "These words follow a pattern. Learn the pattern, and you can spell hundreds of words!",
+   "teach": "Pick one pattern and give two more words that follow it.",
+   "talk": "Ask {him} to find a word with today’s pattern in a book or on a sign."
+  },
+  {
+   "id": "spelling.prefixes",
+   "title": "Beginnings: un-, dis-, re-",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.suffixes"
+   ],
+   "batch": 5,
+   "intro": "A prefix goes at the start of a word and changes its meaning. un- and dis- mean “not”; re- means “again”.",
+   "teach": "Explain what “unhappy” and “rebuild” mean.",
+   "talk": "Ask {him} for the opposite of “lock”, “like” and “tidy” using a prefix."
+  },
+  {
+   "id": "spelling.plurals",
+   "title": "One and many: plurals",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.suffixes"
+   ],
+   "batch": 5,
+   "intro": "Most words add -s for more than one. Words ending s, x, sh or ch add -es. Some words change completely: one mouse, two mice!",
+   "teach": "Explain how to make “baby” and “box” plural.",
+   "talk": "Ask {him} for the plural of “tooth”, “foot” and “child”."
+  },
+  {
+   "id": "spelling.compounds",
+   "title": "Compound words",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.cew-1"
+   ],
+   "batch": 5,
+   "intro": "A compound word is two words joined together: foot + ball = football, sun + flower = sunflower.",
+   "teach": "Explain what a compound word is, with two examples.",
+   "talk": "Race to find compound words around the house (toothbrush, cupboard…)."
+  },
+  {
+   "id": "spelling.grammar-2",
+   "title": "Better sentences",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.joining",
+    "spelling.word-classes"
+   ],
+   "batch": 5,
+   "intro": "Great writers make sentences better: add adjectives to nouns, use adverbs to say how, and join ideas with and, but, because, when and if.",
+   "teach": "Make this sentence better: “The car went.”",
+   "talk": "Say a dull sentence and ask {him} to make it exciting."
+  },
+  {
+   "id": "spelling.speech",
+   "title": "Speech marks",
+   "kind": "facts",
+   "tier": "stretch",
+   "prereqs": [
+    "spelling.punctuation",
+    "spelling.apostrophes"
+   ],
+   "batch": 5,
+   "intro": "Inverted commas (speech marks) go around the words someone actually says: “Ready for launch!” said the captain.",
+   "teach": "Explain where the speech marks go in a sentence.",
+   "talk": "Write a comic strip together and turn the speech bubbles into sentences with speech marks."
+  }
+ ],
+ "items": [
+  {
+   "id": "spelling.sp2.badge",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "badge",
+   "sentence": "The knight wore a ___ on his tunic.",
+   "clue": "a little sign you pin on",
+   "explain": "After a short vowel, the “j” sound is -dge: badge, bridge, hedge.",
+   "learn": "**badge**: After a short vowel, the “j” sound is -dge: badge, bridge, hedge."
+  },
+  {
+   "id": "spelling.sp2.bridge",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "bridge",
+   "sentence": "The train rattled over the ___.",
+   "clue": "it crosses a river",
+   "explain": "Short i, then -dge.",
+   "learn": "**bridge**: Short i, then -dge."
+  },
+  {
+   "id": "spelling.sp2.hedge",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "hedge",
+   "sentence": "The ball went over the ___.",
+   "clue": "a wall of bushes",
+   "explain": "Short e, then -dge.",
+   "learn": "**hedge**: Short e, then -dge."
+  },
+  {
+   "id": "spelling.sp2.fudge",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "fudge",
+   "sentence": "Grandma made chocolate ___.",
+   "clue": "a soft sweet",
+   "explain": "Short u, then -dge.",
+   "learn": "**fudge**: Short u, then -dge."
+  },
+  {
+   "id": "spelling.sp2.huge",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "huge",
+   "sentence": "A ___ dragon landed on the castle.",
+   "clue": "enormous",
+   "explain": "After a long vowel, just -ge: huge, page, cage.",
+   "learn": "**huge**: After a long vowel, just -ge: huge, page, cage."
+  },
+  {
+   "id": "spelling.sp2.large",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "large",
+   "sentence": "I would like a ___ ice cream, please.",
+   "clue": "big",
+   "explain": "After “ar”, -ge: large, charge.",
+   "learn": "**large**: After “ar”, -ge: large, charge."
+  },
+  {
+   "id": "spelling.sp2.change",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "change",
+   "sentence": "Time to ___ the tyres!",
+   "clue": "swap for a new one",
+   "explain": "After n, -ge: change, orange.",
+   "learn": "**change**: After n, -ge: change, orange."
+  },
+  {
+   "id": "spelling.sp2.knock",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "knock",
+   "sentence": "___ on the door before you go in.",
+   "clue": "tap loudly",
+   "explain": "Silent k: kn- says “n”.",
+   "learn": "**knock**: Silent k: kn- says “n”."
+  },
+  {
+   "id": "spelling.sp2.know",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "know",
+   "sentence": "Do you ___ the answer?",
+   "clue": "have it in your head",
+   "explain": "Silent k, and -ow at the end.",
+   "learn": "**know**: Silent k, and -ow at the end."
+  },
+  {
+   "id": "spelling.sp2.knee",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "knee",
+   "sentence": "He fell and hurt his ___.",
+   "clue": "the middle of your leg",
+   "explain": "Silent k, then double e.",
+   "learn": "**knee**: Silent k, then double e."
+  },
+  {
+   "id": "spelling.sp2.gnaw",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "gnaw",
+   "sentence": "The dog likes to ___ on a bone.",
+   "clue": "chew and chew",
+   "explain": "Silent g: gn- says “n”.",
+   "learn": "**gnaw**: Silent g: gn- says “n”."
+  },
+  {
+   "id": "spelling.sp2.write",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "write",
+   "sentence": "Please ___ your name.",
+   "clue": "put words on paper",
+   "explain": "Silent w: wr- says “r”.",
+   "learn": "**write**: Silent w: wr- says “r”."
+  },
+  {
+   "id": "spelling.sp2.wrong",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "wrong",
+   "sentence": "That answer is ___.",
+   "clue": "not right",
+   "explain": "Silent w again.",
+   "learn": "**wrong**: Silent w again."
+  },
+  {
+   "id": "spelling.sp2.wrist",
+   "topic": "spelling.pattern-1",
+   "kind": "spell",
+   "word": "wrist",
+   "sentence": "He wears a watch on his ___.",
+   "clue": "between hand and arm",
+   "explain": "Silent w: wr-ist.",
+   "learn": "**wrist**: Silent w: wr-ist."
+  },
+  {
+   "id": "spelling.sp2.little",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "little",
+   "sentence": "A ___ mouse helped the lion.",
+   "clue": "small",
+   "explain": "-le is the most common ending: lit-tle, with double t.",
+   "learn": "**little**: -le is the most common ending: lit-tle, with double t."
+  },
+  {
+   "id": "spelling.sp2.middle",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "middle",
+   "sentence": "Stand in the ___ of the line.",
+   "clue": "the centre",
+   "explain": "mid-dle: double d.",
+   "learn": "**middle**: mid-dle: double d."
+  },
+  {
+   "id": "spelling.sp2.bottle",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "bottle",
+   "sentence": "Fill your water ___.",
+   "clue": "you drink from it",
+   "explain": "bot-tle: double t.",
+   "learn": "**bottle**: bot-tle: double t."
+  },
+  {
+   "id": "spelling.sp2.tunnel",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "tunnel",
+   "sentence": "The train went into a dark ___.",
+   "clue": "a passage under the ground",
+   "explain": "Some words end -el: tunnel, camel, travel.",
+   "learn": "**tunnel**: Some words end -el: tunnel, camel, travel."
+  },
+  {
+   "id": "spelling.sp2.travel",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "travel",
+   "sentence": "I would like to ___ to the Moon.",
+   "clue": "go on a journey",
+   "explain": "trav-el.",
+   "learn": "**travel**: trav-el."
+  },
+  {
+   "id": "spelling.sp2.squirrel",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "squirrel",
+   "sentence": "A ___ ran up the tree.",
+   "clue": "Nutkin is one",
+   "explain": "squ-ir-rel: double r, then -el.",
+   "learn": "**squirrel**: squ-ir-rel: double r, then -el."
+  },
+  {
+   "id": "spelling.sp2.metal",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "metal",
+   "sentence": "The robot is made of ___.",
+   "clue": "iron, steel or gold, for example",
+   "explain": "Some words end -al: metal, pedal, animal.",
+   "learn": "**metal**: Some words end -al: metal, pedal, animal."
+  },
+  {
+   "id": "spelling.sp2.pedal",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "pedal",
+   "sentence": "Push the ___ to make the bike go.",
+   "clue": "you push it with your foot",
+   "explain": "ped-al.",
+   "learn": "**pedal**: ped-al."
+  },
+  {
+   "id": "spelling.sp2.hospital",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "hospital",
+   "sentence": "The nurse works at the ___.",
+   "clue": "where poorly people are cared for",
+   "explain": "hos-pi-tal.",
+   "learn": "**hospital**: hos-pi-tal."
+  },
+  {
+   "id": "spelling.sp2.pencil",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "pencil",
+   "sentence": "Sharpen your ___.",
+   "clue": "you write with it",
+   "explain": "Some words end -il: pencil, fossil, nostril.",
+   "learn": "**pencil**: Some words end -il: pencil, fossil, nostril."
+  },
+  {
+   "id": "spelling.sp2.fossil",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "fossil",
+   "sentence": "We found a dinosaur ___!",
+   "clue": "remains turned to stone",
+   "explain": "fos-sil: double s, then -il.",
+   "learn": "**fossil**: fos-sil: double s, then -il."
+  },
+  {
+   "id": "spelling.sp2.station",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "station",
+   "sentence": "The train stopped at the ___.",
+   "clue": "where trains stop",
+   "explain": "-tion says “shun”: sta-tion.",
+   "learn": "**station**: -tion says “shun”: sta-tion."
+  },
+  {
+   "id": "spelling.sp2.action",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "action",
+   "sentence": "Lights, camera, ___!",
+   "clue": "doing something",
+   "explain": "ac-tion.",
+   "learn": "**action**: ac-tion."
+  },
+  {
+   "id": "spelling.sp2.motion",
+   "topic": "spelling.pattern-2",
+   "kind": "spell",
+   "word": "motion",
+   "sentence": "The car was in ___.",
+   "clue": "moving",
+   "explain": "mo-tion.",
+   "learn": "**motion**: mo-tion."
+  },
+  {
+   "id": "spelling.sp2.want",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "want",
+   "sentence": "I ___ to be an astronaut.",
+   "clue": "wish for",
+   "explain": "After w, a says “o”: want, watch, wash.",
+   "learn": "**want**: After w, a says “o”: want, watch, wash."
+  },
+  {
+   "id": "spelling.sp2.watch",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "watch",
+   "sentence": "Let’s ___ the race.",
+   "clue": "look at",
+   "explain": "w-a-t-c-h: a says “o”, and -tch after a short vowel.",
+   "learn": "**watch**: w-a-t-c-h: a says “o”, and -tch after a short vowel."
+  },
+  {
+   "id": "spelling.sp2.wash",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "wash",
+   "sentence": "___ your hands before tea.",
+   "clue": "clean with water",
+   "explain": "a says “o” after w.",
+   "learn": "**wash**: a says “o” after w."
+  },
+  {
+   "id": "spelling.sp2.word",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "word",
+   "sentence": "Spell this ___.",
+   "clue": "a group of letters that means something",
+   "explain": "After w, or says “ur”: word, work, world.",
+   "learn": "**word**: After w, or says “ur”: word, work, world."
+  },
+  {
+   "id": "spelling.sp2.work",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "work",
+   "sentence": "The robots ___ all day.",
+   "clue": "do a job",
+   "explain": "wor- says “wur”.",
+   "learn": "**work**: wor- says “wur”."
+  },
+  {
+   "id": "spelling.sp2.world",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "world",
+   "sentence": "He flew all around the ___.",
+   "clue": "the Earth",
+   "explain": "wor- says “wur”, then -ld.",
+   "learn": "**world**: wor- says “wur”, then -ld."
+  },
+  {
+   "id": "spelling.sp2.warm",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "warm",
+   "sentence": "The sun is ___ today.",
+   "clue": "a bit hot",
+   "explain": "After w, ar says “or”: war, warm.",
+   "learn": "**warm**: After w, ar says “or”: war, warm."
+  },
+  {
+   "id": "spelling.sp2.towards",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "towards",
+   "sentence": "The rocket flew ___ the stars.",
+   "clue": "in the direction of",
+   "explain": "to-wards: ar says “or”.",
+   "learn": "**towards**: to-wards: ar says “or”."
+  },
+  {
+   "id": "spelling.sp2.other",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "other",
+   "sentence": "Where is my ___ glove?",
+   "clue": "the second one",
+   "explain": "o says “u” as in cup: o-ther.",
+   "learn": "**other**: o says “u” as in cup: o-ther."
+  },
+  {
+   "id": "spelling.sp2.brother",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "brother",
+   "sentence": "My little ___ is three.",
+   "clue": "a boy in your family",
+   "explain": "o says “u”: bro-ther.",
+   "learn": "**brother**: o says “u”: bro-ther."
+  },
+  {
+   "id": "spelling.sp2.monday",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "Monday",
+   "sentence": "School starts on ___.",
+   "clue": "the first day of the school week",
+   "explain": "Capital M, and o says “u”: Mon-day.",
+   "learn": "**Monday**: Capital M, and o says “u”: Mon-day."
+  },
+  {
+   "id": "spelling.sp2.nothing",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "nothing",
+   "sentence": "There was ___ in the box.",
+   "clue": "not anything",
+   "explain": "o says “u”: no-thing.",
+   "learn": "**nothing**: o says “u”: no-thing."
+  },
+  {
+   "id": "spelling.sp2.key",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "key",
+   "sentence": "Turn the ___ to start the engine.",
+   "clue": "it opens a lock",
+   "explain": "ey says “ee”: key, monkey, donkey.",
+   "learn": "**key**: ey says “ee”: key, monkey, donkey."
+  },
+  {
+   "id": "spelling.sp2.monkey",
+   "topic": "spelling.pattern-3",
+   "kind": "spell",
+   "word": "monkey",
+   "sentence": "The ___ swung from the tree.",
+   "clue": "a cheeky animal with a tail",
+   "explain": "o says “u” AND ey says “ee”: mon-key.",
+   "learn": "**monkey**: o says “u” AND ey says “ee”: mon-key."
+  },
+  {
+   "id": "spelling.pf.unhappy",
+   "topic": "spelling.prefixes",
+   "kind": "fact",
+   "prompt": "Add un- to “happy”.",
+   "answer": "unhappy",
+   "distractors": [
+    "unnhappy",
+    "unhapy",
+    "onhappy"
+   ],
+   "explain": "un- means not: unhappy = not happy.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pf.undo",
+   "topic": "spelling.prefixes",
+   "kind": "fact",
+   "prompt": "Which word means the opposite of “lock”?",
+   "answer": "unlock",
+   "distractors": [
+    "dislock",
+    "relock",
+    "mislock"
+   ],
+   "explain": "un- + lock = unlock.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "spelling.pf.dislike",
+   "topic": "spelling.prefixes",
+   "kind": "fact",
+   "prompt": "Which word means “not like”?",
+   "answer": "dislike",
+   "distractors": [
+    "unlike",
+    "relike",
+    "mislike"
+   ],
+   "explain": "dis- + like = dislike. (“unlike” means “different from”.)",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "spelling.pf.disappear",
+   "topic": "spelling.prefixes",
+   "kind": "fact",
+   "prompt": "Add dis- to “appear”.",
+   "answer": "disappear",
+   "distractors": [
+    "dissappear",
+    "disapear",
+    "disappeer"
+   ],
+   "explain": "dis + appear: one s, double p (because appear has a double p).",
+   "strict": true
+  },
+  {
+   "id": "spelling.pf.rebuild",
+   "topic": "spelling.prefixes",
+   "kind": "fact",
+   "prompt": "What does “rebuild” mean?",
+   "answer": "build again",
+   "distractors": [
+    "not build",
+    "build badly",
+    "build before"
+   ],
+   "explain": "re- means again.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "spelling.pf.replay",
+   "topic": "spelling.prefixes",
+   "kind": "fact",
+   "prompt": "Add re- to “play”.",
+   "answer": "replay",
+   "distractors": [
+    "reeplay",
+    "riplay",
+    "repley"
+   ],
+   "explain": "re + play = replay: play again.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pf.untidy",
+   "topic": "spelling.prefixes",
+   "kind": "fact",
+   "prompt": "Which word means “not tidy”?",
+   "answer": "untidy",
+   "distractors": [
+    "distidy",
+    "retidy",
+    "notidy"
+   ],
+   "explain": "un- + tidy = untidy.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "spelling.pf.disobey",
+   "topic": "spelling.prefixes",
+   "kind": "fact",
+   "prompt": "Which word means “not obey”?",
+   "answer": "disobey",
+   "distractors": [
+    "unobey",
+    "reobey",
+    "misobey"
+   ],
+   "explain": "dis- + obey = disobey.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "spelling.pf.which",
+   "topic": "spelling.prefixes",
+   "kind": "mcq",
+   "prompt": "Which word has a prefix?",
+   "options": [
+    {
+     "text": "unkind",
+     "correct": true
+    },
+    {
+     "text": "under",
+     "correct": false,
+     "feedback": "“under” is a whole word: there is no “der” on its own."
+    },
+    {
+     "text": "uncle",
+     "correct": false,
+     "feedback": "“uncle” is a whole word, not un + cle."
+    }
+   ],
+   "explain": "unkind = un + kind. A prefix is added to a word that makes sense on its own."
+  },
+  {
+   "id": "spelling.pl.box",
+   "topic": "spelling.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of “box”?",
+   "answer": "boxes",
+   "distractors": [
+    "boxs",
+    "boxies",
+    "boxen"
+   ],
+   "explain": "Words ending -x add -es.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pl.bus",
+   "topic": "spelling.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of “bus”?",
+   "answer": "buses",
+   "distractors": [
+    "buss",
+    "busses",
+    "busies"
+   ],
+   "explain": "Words ending -s add -es.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pl.wish",
+   "topic": "spelling.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of “wish”?",
+   "answer": "wishes",
+   "distractors": [
+    "wishs",
+    "wishies",
+    "wish"
+   ],
+   "explain": "Words ending -sh add -es.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pl.lunch",
+   "topic": "spelling.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of “lunch”?",
+   "answer": "lunches",
+   "distractors": [
+    "lunchs",
+    "lunchies",
+    "lunchen"
+   ],
+   "explain": "Words ending -ch add -es.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pl.lady",
+   "topic": "spelling.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of “lady”?",
+   "answer": "ladies",
+   "distractors": [
+    "ladys",
+    "ladyes",
+    "ladis"
+   ],
+   "explain": "Consonant + y: change y to i and add -es.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pl.toy",
+   "topic": "spelling.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of “toy”?",
+   "answer": "toys",
+   "distractors": [
+    "toies",
+    "toyes",
+    "tois"
+   ],
+   "explain": "Vowel + y: just add -s.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pl.mouse",
+   "topic": "spelling.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of “mouse”?",
+   "answer": "mice",
+   "distractors": [
+    "mouses",
+    "mices",
+    "meese"
+   ],
+   "explain": "Some plurals change completely: mouse → mice.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pl.foot",
+   "topic": "spelling.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of “foot”?",
+   "answer": "feet",
+   "distractors": [
+    "foots",
+    "feets",
+    "footies"
+   ],
+   "explain": "foot → feet, tooth → teeth, goose → geese.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pl.man",
+   "topic": "spelling.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of “man”?",
+   "answer": "men",
+   "distractors": [
+    "mans",
+    "mens",
+    "manes"
+   ],
+   "explain": "man → men, woman → women.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pl.sheep",
+   "topic": "spelling.plurals",
+   "kind": "fact",
+   "prompt": "What is the plural of “sheep”?",
+   "answer": "sheep",
+   "distractors": [
+    "sheeps",
+    "shoop",
+    "sheepes"
+   ],
+   "explain": "Some words stay the same: one sheep, ten sheep. Fish and deer too!",
+   "strict": true
+  },
+  {
+   "id": "spelling.cp.foot",
+   "topic": "spelling.compounds",
+   "kind": "mcq",
+   "prompt": "Which two words make “football”?",
+   "options": [
+    {
+     "text": "foot + ball",
+     "correct": true
+    },
+    {
+     "text": "foo + tball",
+     "correct": false,
+     "feedback": "Both parts must be real words."
+    },
+    {
+     "text": "fo + otball",
+     "correct": false,
+     "feedback": "Look for two whole words."
+    }
+   ],
+   "explain": "foot + ball = football."
+  },
+  {
+   "id": "spelling.cp.sun",
+   "topic": "spelling.compounds",
+   "kind": "fact",
+   "prompt": "sun + flower =",
+   "answer": "sunflower",
+   "distractors": [
+    "sunflour",
+    "sun-flower",
+    "sunnyflower"
+   ],
+   "explain": "Join them with no gap: sunflower.",
+   "strict": true
+  },
+  {
+   "id": "spelling.cp.rain",
+   "topic": "spelling.compounds",
+   "kind": "fact",
+   "prompt": "rain + bow =",
+   "answer": "rainbow",
+   "distractors": [
+    "rainboe",
+    "rainbo",
+    "rain bow"
+   ],
+   "explain": "rainbow.",
+   "strict": true
+  },
+  {
+   "id": "spelling.cp.tooth",
+   "topic": "spelling.compounds",
+   "kind": "fact",
+   "prompt": "tooth + brush =",
+   "answer": "toothbrush",
+   "distractors": [
+    "toothbrushh",
+    "tothbrush",
+    "tooth brush"
+   ],
+   "explain": "toothbrush.",
+   "strict": true
+  },
+  {
+   "id": "spelling.cp.some",
+   "topic": "spelling.compounds",
+   "kind": "fact",
+   "prompt": "some + thing =",
+   "answer": "something",
+   "distractors": [
+    "somthing",
+    "sumthing",
+    "some thing"
+   ],
+   "explain": "Keep the e of “some”: something.",
+   "strict": true
+  },
+  {
+   "id": "spelling.cp.space",
+   "topic": "spelling.compounds",
+   "kind": "fact",
+   "prompt": "space + ship =",
+   "answer": "spaceship",
+   "distractors": [
+    "spaceshipp",
+    "spacship",
+    "space ship"
+   ],
+   "explain": "spaceship.",
+   "strict": true
+  },
+  {
+   "id": "spelling.cp.which",
+   "topic": "spelling.compounds",
+   "kind": "mcq",
+   "prompt": "Which is a compound word?",
+   "options": [
+    {
+     "text": "playground",
+     "correct": true
+    },
+    {
+     "text": "playing",
+     "correct": false,
+     "feedback": "play + ing: -ing is an ending, not a word."
+    },
+    {
+     "text": "player",
+     "correct": false,
+     "feedback": "-er is an ending, not a word."
+    }
+   ],
+   "explain": "play + ground: two whole words."
+  },
+  {
+   "id": "spelling.cp.make",
+   "topic": "spelling.compounds",
+   "kind": "mcq",
+   "prompt": "Which word joins with “fire” to make a compound word?",
+   "options": [
+    {
+     "text": "work (firework)",
+     "correct": true
+    },
+    {
+     "text": "ing (firing)",
+     "correct": false,
+     "feedback": "-ing is an ending, not a word."
+    },
+    {
+     "text": "ed (fired)",
+     "correct": false,
+     "feedback": "-ed is an ending."
+    }
+   ],
+   "explain": "fire + work = firework. Also fireman, fireplace, firefly!"
+  },
+  {
+   "id": "spelling.gr.np",
+   "topic": "spelling.grammar-2",
+   "kind": "mcq",
+   "prompt": "Which sentence has the best expanded noun phrase?",
+   "options": [
+    {
+     "text": "The gleaming red racing car zoomed past.",
+     "correct": true
+    },
+    {
+     "text": "The car zoomed past.",
+     "correct": false,
+     "feedback": "No describing words for the car."
+    },
+    {
+     "text": "Car zoomed.",
+     "correct": false,
+     "feedback": "That is very short!"
+    }
+   ],
+   "explain": "“the gleaming red racing car” gives the reader a clear picture."
+  },
+  {
+   "id": "spelling.gr.adv",
+   "topic": "spelling.grammar-2",
+   "kind": "mcq",
+   "prompt": "Which adverb best fits? “The spy crept ___ past the guard.”",
+   "options": [
+    {
+     "text": "silently",
+     "correct": true
+    },
+    {
+     "text": "loudly",
+     "correct": false,
+     "feedback": "A spy creeping past a guard wants to be quiet!"
+    },
+    {
+     "text": "happily",
+     "correct": false,
+     "feedback": "It doesn’t tell us how a spy sneaks."
+    }
+   ],
+   "explain": "Adverbs tell us how: crept silently."
+  },
+  {
+   "id": "spelling.gr.coord",
+   "topic": "spelling.grammar-2",
+   "kind": "mcq",
+   "prompt": "Which joining word gives a CHOICE?",
+   "options": [
+    {
+     "text": "or",
+     "correct": true
+    },
+    {
+     "text": "and",
+     "correct": false,
+     "feedback": "“and” adds another idea."
+    },
+    {
+     "text": "but",
+     "correct": false,
+     "feedback": "“but” shows a contrast."
+    }
+   ],
+   "explain": "“Would you like juice or milk?”"
+  },
+  {
+   "id": "spelling.gr.that",
+   "topic": "spelling.grammar-2",
+   "kind": "mcq",
+   "prompt": "Choose the best joining word: “I hope ___ we win the race.”",
+   "options": [
+    {
+     "text": "that",
+     "correct": true
+    },
+    {
+     "text": "or",
+     "correct": false,
+     "feedback": "“I hope or we win” doesn’t make sense."
+    },
+    {
+     "text": "but",
+     "correct": false,
+     "feedback": "“I hope but we win” doesn’t make sense."
+    }
+   ],
+   "explain": "“that” introduces what you hope: I hope that we win."
+  },
+  {
+   "id": "spelling.gr.statement",
+   "topic": "spelling.grammar-2",
+   "kind": "mcq",
+   "prompt": "What kind of sentence is this? “Mars is the red planet.”",
+   "options": [
+    {
+     "text": "A statement",
+     "correct": true
+    },
+    {
+     "text": "A question",
+     "correct": false,
+     "feedback": "It doesn’t ask anything."
+    },
+    {
+     "text": "A command",
+     "correct": false,
+     "feedback": "It doesn’t tell anyone to do something."
+    },
+    {
+     "text": "An exclamation",
+     "correct": false,
+     "feedback": "It is a calm fact, with a full stop."
+    }
+   ],
+   "explain": "A statement tells you something and ends with a full stop."
+  },
+  {
+   "id": "spelling.gr.tense",
+   "topic": "spelling.grammar-2",
+   "kind": "mcq",
+   "prompt": "Which sentence is in the PAST tense all the way through?",
+   "options": [
+    {
+     "text": "The knight rode to the castle and knocked on the door.",
+     "correct": true
+    },
+    {
+     "text": "The knight rode to the castle and knocks on the door.",
+     "correct": false,
+     "feedback": "“knocks” is present tense. Keep the tense the same."
+    },
+    {
+     "text": "The knight rides to the castle and knocked on the door.",
+     "correct": false,
+     "feedback": "“rides” is present. Both verbs should be past."
+    }
+   ],
+   "explain": "Keep the tense the same: rode… knocked."
+  },
+  {
+   "id": "spelling.gr.was",
+   "topic": "spelling.grammar-2",
+   "kind": "mcq",
+   "prompt": "Which is correct?",
+   "options": [
+    {
+     "text": "We were racing.",
+     "correct": true
+    },
+    {
+     "text": "We was racing.",
+     "correct": false,
+     "feedback": "With “we”, use “were”."
+    },
+    {
+     "text": "We is racing.",
+     "correct": false,
+     "feedback": "With “we”, use “are” (now) or “were” (past)."
+    }
+   ],
+   "explain": "I was, you were, he was, we were, they were."
+  },
+  {
+   "id": "spelling.gr.past-prog",
+   "topic": "spelling.grammar-2",
+   "kind": "mcq",
+   "prompt": "Which sentence shows something that WAS happening for a while?",
+   "options": [
+    {
+     "text": "The rain was falling all night.",
+     "correct": true
+    },
+    {
+     "text": "The rain falls.",
+     "correct": false,
+     "feedback": "That is present tense."
+    },
+    {
+     "text": "The rain will fall.",
+     "correct": false,
+     "feedback": "That is future."
+    }
+   ],
+   "explain": "“was falling” is the past progressive: it was going on for a while."
+  },
+  {
+   "id": "spelling.sp.where",
+   "topic": "spelling.speech",
+   "kind": "mcq",
+   "prompt": "Which sentence has the speech marks in the right place?",
+   "options": [
+    {
+     "text": "“Blast off!” shouted the captain.",
+     "correct": true
+    },
+    {
+     "text": "“Blast off! shouted the captain.”",
+     "correct": false,
+     "feedback": "Only the words that are SPOKEN go inside."
+    },
+    {
+     "text": "Blast off! “shouted the captain.”",
+     "correct": false,
+     "feedback": "The captain didn’t say “shouted the captain”!"
+    }
+   ],
+   "explain": "Speech marks go round the exact words spoken."
+  },
+  {
+   "id": "spelling.sp.spoken",
+   "topic": "spelling.speech",
+   "kind": "mcq",
+   "prompt": "In “I can fly!” said the hero, which words were spoken?",
+   "options": [
+    {
+     "text": "I can fly!",
+     "correct": true
+    },
+    {
+     "text": "said the hero",
+     "correct": false,
+     "feedback": "Those words tell us WHO spoke."
+    },
+    {
+     "text": "the hero",
+     "correct": false,
+     "feedback": "That is who said it."
+    }
+   ],
+   "explain": "The words inside the speech marks are the ones spoken aloud."
+  },
+  {
+   "id": "spelling.sp.comma",
+   "topic": "spelling.speech",
+   "kind": "mcq",
+   "prompt": "Which is punctuated correctly?",
+   "options": [
+    {
+     "text": "“We need fuel,” said Rosa.",
+     "correct": true
+    },
+    {
+     "text": "“We need fuel” said Rosa.",
+     "correct": false,
+     "feedback": "You need a comma (or ! or ?) before the closing speech marks."
+    },
+    {
+     "text": "“We need fuel.” said Rosa.",
+     "correct": false,
+     "feedback": "Use a comma, not a full stop, when “said Rosa” follows."
+    }
+   ],
+   "explain": "When the sentence carries on after the speech, put a comma before the closing speech marks."
+  },
+  {
+   "id": "spelling.sp.capital",
+   "topic": "spelling.speech",
+   "kind": "mcq",
+   "prompt": "Which is correct?",
+   "options": [
+    {
+     "text": "The captain said, “Get ready.”",
+     "correct": true
+    },
+    {
+     "text": "The captain said, “get ready.”",
+     "correct": false,
+     "feedback": "Spoken words start with a capital letter."
+    },
+    {
+     "text": "The captain said “Get ready”.",
+     "correct": false,
+     "feedback": "Put a comma before the speech, and the full stop inside."
+    }
+   ],
+   "explain": "Comma before the speech, capital letter to start it, punctuation inside the closing marks."
+  },
+  {
+   "id": "spelling.sp.verbs",
+   "topic": "spelling.speech",
+   "kind": "mcq",
+   "prompt": "Which is the most exciting word to use instead of “said”? “Help!” ___ the princess.",
+   "options": [
+    {
+     "text": "screamed",
+     "correct": true
+    },
+    {
+     "text": "said",
+     "correct": false,
+     "feedback": "“said” is fine, but “screamed” tells us how she said it."
+    },
+    {
+     "text": "told",
+     "correct": false,
+     "feedback": "“told” doesn’t fit here."
+    }
+   ],
+   "explain": "Words like screamed, whispered and bellowed show HOW someone spoke."
+  }
+ ],
+ "sentences": [
+  {
+   "id": "k1s.speech",
+   "title": "Speech marks",
+   "prompt": "Write what a racing driver says at the start of a race. Use speech marks and “said”.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "[“\"][^”\"]+[”\"]",
+     "msg": "Put speech marks around the spoken words: “…”"
+    },
+    {
+     "type": "includesAll",
+     "words": [
+      "said"
+     ],
+     "msg": "Use the word “said” (or try “shouted”, but keep “said” this time)."
+    },
+    {
+     "type": "endPunct"
+    }
+   ],
+   "model": "“Let’s go!” said the driver.",
+   "tip": "Only the spoken words go inside the speech marks."
+  },
+  {
+   "id": "k1s.if",
+   "title": "Use “if”",
+   "prompt": "Write a sentence using “if”: “If I were a superhero, I would…”",
+   "checks": [
+    {
+     "type": "includesAll",
+     "words": [
+      "if"
+     ],
+     "msg": "Use the word “if”."
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    },
+    {
+     "type": "minWords",
+     "n": 7,
+     "msg": "Finish the idea: what would you do?"
+    }
+   ],
+   "model": "If I were a superhero, I would fly to the Moon.",
+   "tip": "“if” sets up something that might happen."
+  },
+  {
+   "id": "k1s.adverb",
+   "title": "Add an adverb",
+   "prompt": "Write a sentence about a spy using an adverb ending in -ly, like “silently” or “quickly”.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "\\b\\w{3,}ly\\b",
+     "flags": "i",
+     "msg": "Use an adverb ending in -ly."
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    },
+    {
+     "type": "minWords",
+     "n": 5,
+     "msg": "Write at least 5 words."
+    }
+   ],
+   "model": "The spy crept silently past the guard.",
+   "tip": "Adverbs tell the reader HOW something happened."
+  },
+  {
+   "id": "k1s.command",
+   "title": "A command",
+   "prompt": "Write a command for a robot. Start with a bossy verb like “Go”, “Stop” or “Pick”.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "^[\"“]?(Go|Stop|Pick|Put|Turn|Walk|Bring|Take|Open|Close|Make|Clean|Find|Fetch|Move|Push|Pull|Look|Sit|Stand|Switch|Press|Help|Give|Get|Carry|Jump|Run|Fly|Wait|Come|Tidy|Wash|Hold|Drive|Lift|Dance|Climb|Throw|Catch)\\b",
+     "msg": "Start with a bossy verb, like Go, Stop or Pick."
+    },
+    {
+     "type": "endPunct"
+    },
+    {
+     "type": "minWords",
+     "n": 3,
+     "msg": "Write at least 3 words."
+    }
+   ],
+   "model": "Pick up the red block.",
+   "tip": "Commands start with a verb that tells someone what to do."
+  },
+  {
+   "id": "k1s.noun-phrase",
+   "title": "A super noun phrase",
+   "prompt": "Describe a dinosaur using “The” plus TWO adjectives before the noun, like “The huge, scaly dinosaur…”.",
+   "checks": [
+    {
+     "type": "regex",
+     "pattern": "^[\"“]?The \\w+,? \\w+",
+     "msg": "Start with “The” and two describing words."
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    },
+    {
+     "type": "minWords",
+     "n": 6,
+     "msg": "Finish your sentence: what did the dinosaur do?"
+    }
+   ],
+   "model": "The huge, scaly dinosaur stomped through the jungle.",
+   "tip": "Two adjectives can be separated by a comma: the huge, scaly dinosaur."
+  },
+  {
+   "id": "k1s.and-but",
+   "title": "Two joining words",
+   "prompt": "Write ONE sentence about a castle that uses both “and” and “but”.",
+   "checks": [
+    {
+     "type": "includesAll",
+     "words": [
+      "and",
+      "but"
+     ],
+     "msg": "Use both “and” and “but”."
+    },
+    {
+     "type": "capital"
+    },
+    {
+     "type": "endPunct"
+    },
+    {
+     "type": "minWords",
+     "n": 9,
+     "msg": "Write a longer sentence."
+    }
+   ],
+   "model": "The castle was big and strong, but the dragon was stronger.",
+   "tip": "“and” adds an idea; “but” adds a surprise."
+  }
+ ]
+}

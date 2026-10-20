@@ -1,0 +1,2532 @@
+{
+ "subject": "reading",
+ "deck": "more",
+ "topics": [
+  {
+   "id": "reading.phonics-4",
+   "title": "Tricky endings and w-words",
+   "kind": "facts",
+   "prereqs": [
+    "reading.phonics-3"
+   ],
+   "batch": 5,
+   "intro": "More spelling patterns: -le, -el and -al endings, and how “w” changes the sound after it (want, word, warm).",
+   "teach": "Explain why “want” doesn’t rhyme with “pant”.",
+   "talk": "Ask {him} to find a word ending in -le in a book."
+  },
+  {
+   "id": "reading.words-2",
+   "title": "Wonderful words 2",
+   "kind": "facts",
+   "prereqs": [
+    "reading.words"
+   ],
+   "batch": 5,
+   "intro": "More exciting words to use in your writing: swift, ferocious, triumphant…",
+   "teach": "Use “ferocious” and “swift” in a sentence about a race.",
+   "talk": "Ask {him} to describe the family pet (or a toy) using a new word."
+  },
+  {
+   "id": "reading.words-3",
+   "title": "Wonderful words 3",
+   "kind": "facts",
+   "prereqs": [
+    "reading.words-2"
+   ],
+   "batch": 5,
+   "intro": "Even more powerful words, some from the old stories you are reading: magnificent, plummet, impertinent…",
+   "teach": "Explain the difference between “soar” and “plummet”.",
+   "talk": "Play “say it better”: {she} replaces a dull word with a wonderful one."
+  },
+  {
+   "id": "reading.fables-2",
+   "title": "More fables",
+   "kind": "reading",
+   "prereqs": [
+    "reading.fables"
+   ],
+   "batch": 6,
+   "intro": "Four more fables, each with a lesson. As you read, ask: what is the lesson, and who learns it?",
+   "teach": "Explain the moral of “The Boy Who Cried Wolf”.",
+   "talk": "Ask {him} which fable’s lesson is most useful in real life."
+  },
+  {
+   "id": "reading.stories-2",
+   "title": "More adventures: pit stops, Mars and a superhero",
+   "kind": "reading",
+   "prereqs": [
+    "reading.adventures"
+   ],
+   "batch": 6,
+   "intro": "Three new adventures. Look for how characters feel and why they act as they do. The last one stars your own superhero!",
+   "teach": "Explain how Rosa’s practice helped her on race day.",
+   "talk": "Ask {him} to tell you what {her} superhero did in the story."
+  },
+  {
+   "id": "reading.facts-2",
+   "title": "Fact files: penguins, volcanoes and dinosaurs",
+   "kind": "reading",
+   "prereqs": [
+    "reading.facts"
+   ],
+   "batch": 6,
+   "intro": "Three fact files about amazing animals and our planet. Look for numbers, key words and headings.",
+   "teach": "Explain the difference between magma and lava.",
+   "talk": "Ask {him} for the most surprising fact {she} learned."
+  },
+  {
+   "id": "reading.facts-3",
+   "title": "Fact files: the Spitfire and knights",
+   "kind": "reading",
+   "prereqs": [
+    "reading.facts-2"
+   ],
+   "batch": 6,
+   "intro": "Two fact files from history: a famous aeroplane, and how a boy became a knight.",
+   "teach": "Explain the three stages of becoming a knight.",
+   "talk": "Ask {him} what {she} would put on {her} own coat of arms."
+  },
+  {
+   "id": "reading.nutkin",
+   "title": "Squirrel Nutkin",
+   "kind": "reading",
+   "prereqs": [
+    "reading.potter"
+   ],
+   "batch": 6,
+   "intro": "Another tale by Beatrix Potter, from 1903, about a very cheeky squirrel. Some of the words are old, so use the clues around them.",
+   "teach": "Explain how Nutkin behaved differently from the other squirrels.",
+   "talk": "Read it aloud together. Can {she} guess the answer to the riddle? (A cherry!)"
+  },
+  {
+   "id": "reading.poems-2",
+   "title": "Poems: bedtime, boats and stars",
+   "kind": "reading",
+   "prereqs": [
+    "reading.poems"
+   ],
+   "tier": "stretch",
+   "batch": 6,
+   "intro": "Three more poems by Robert Louis Stevenson, all from a child’s point of view. Read them aloud and listen for the rhymes.",
+   "teach": "Explain why the child in “Bed in Summer” thinks it is unfair.",
+   "talk": "Read “Escape at Bedtime” together under the real stars."
+  }
+ ],
+ "items": [
+  {
+   "id": "reading.ph4.1",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "Which word ends with the same sound and spelling as “table”?",
+   "answer": "apple",
+   "distractors": [
+    "camel",
+    "metal",
+    "pencil"
+   ],
+   "explain": "-le is the most common spelling of this ending: table, apple, bottle, little.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph4.2",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "camel",
+   "distractors": [
+    "camle",
+    "camal",
+    "camil"
+   ],
+   "explain": "Some words end -el: camel, tunnel, travel, towel.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph4.3",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "animal",
+   "distractors": [
+    "animle",
+    "animel",
+    "animil"
+   ],
+   "explain": "Some words end -al: animal, metal, hospital, petal.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph4.4",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "In “want” and “was”, what sound does the “a” make?",
+   "answer": "o as in hot",
+   "distractors": [
+    "a as in cat",
+    "ay as in day",
+    "ar as in car"
+   ],
+   "explain": "After w, a often says “o”: want, watch, wander, was.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph4.5",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "In “word” and “work”, what sound does the “or” make?",
+   "answer": "ur as in turn",
+   "distractors": [
+    "or as in fork",
+    "oo as in moon",
+    "ar as in car"
+   ],
+   "explain": "After w, or often says “ur”: word, work, worm, world.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph4.6",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "In “war” and “warm”, what sound does the “ar” make?",
+   "answer": "or as in fork",
+   "distractors": [
+    "ar as in car",
+    "air as in hair",
+    "ur as in turn"
+   ],
+   "explain": "After w, ar often says “or”: war, warm, towards.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph4.7",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "Which word has the “zh” sound, like in “television”?",
+   "answer": "treasure",
+   "distractors": [
+    "telephone",
+    "tell",
+    "teacher"
+   ],
+   "explain": "The “s” in television and treasure makes the “zh” sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph4.8",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "In “mother”, the “o” sounds like the “u” in “cup”. Which word has the same sound?",
+   "answer": "brother",
+   "distractors": [
+    "bother",
+    "rob",
+    "home"
+   ],
+   "explain": "In mother, brother, Monday and other, the “o” says “u” as in cup.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph4.9",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "wrapped",
+   "distractors": [
+    "wraped",
+    "wrappd",
+    "rappt"
+   ],
+   "explain": "The w in wr- is silent, and the p doubles after a short vowel: wrap → wrapped.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph4.10",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "How do you make the plural of “fox”?",
+   "answer": "foxes",
+   "distractors": [
+    "foxs",
+    "foxies",
+    "foxen"
+   ],
+   "explain": "Words ending -s, -x, -sh, -ch add -es: foxes, buses, wishes, churches.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph4.11",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "Which word has the long “ee” sound spelt “ey”?",
+   "answer": "key",
+   "distractors": [
+    "they",
+    "grey",
+    "obey"
+   ],
+   "explain": "“ey” says “ee” in key, monkey and donkey (but “ay” in they and grey!).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.ph4.12",
+   "topic": "reading.phonics-4",
+   "kind": "fact",
+   "prompt": "In “chef”, what sound does “ch” make?",
+   "answer": "sh",
+   "distractors": [
+    "ch as in chip",
+    "k",
+    "j"
+   ],
+   "explain": "In some words from French, ch says “sh”: chef, machine, parachute.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.w2.swift",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “swift” mean?",
+   "answer": "very fast",
+   "distractors": [
+    "fierce and frightening",
+    "to speak very quietly",
+    "shining with a gentle, wobbly light"
+   ],
+   "explain": "swift: very fast. “The swift car zoomed past the crowd.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**swift** means very fast.\n_The swift car zoomed past the crowd._"
+  },
+  {
+   "id": "reading.w2.ferocious",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “ferocious” mean?",
+   "answer": "fierce and frightening",
+   "distractors": [
+    "very big and wide",
+    "moved slowly and quietly",
+    "happy to give and share"
+   ],
+   "explain": "ferocious: fierce and frightening. “A ferocious dinosaur roared in the jungle.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ferocious** means fierce and frightening.\n_A ferocious dinosaur roared in the jungle._"
+  },
+  {
+   "id": "reading.w2.nervous",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “nervous” mean?",
+   "answer": "a bit worried or scared",
+   "distractors": [
+    "proud and happy after winning",
+    "to run very quickly",
+    "clever at tricking people"
+   ],
+   "explain": "nervous: a bit worried or scared. “Rosa felt nervous before the race.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**nervous** means a bit worried or scared.\n_Rosa felt nervous before the race._"
+  },
+  {
+   "id": "reading.w2.triumphant",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “triumphant” mean?",
+   "answer": "proud and happy after winning",
+   "distractors": [
+    "fierce and frightening",
+    "to shout in a loud, deep voice",
+    "dark and sad"
+   ],
+   "explain": "triumphant: proud and happy after winning. “The triumphant team lifted the cup.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**triumphant** means proud and happy after winning.\n_The triumphant team lifted the cup._"
+  },
+  {
+   "id": "reading.w2.vast",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “vast” mean?",
+   "answer": "very big and wide",
+   "distractors": [
+    "very fast",
+    "to speak very quietly",
+    "shining with a gentle, wobbly light"
+   ],
+   "explain": "vast: very big and wide. “The vast desert stretched as far as he could see.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**vast** means very big and wide.\n_The vast desert stretched as far as he could see._"
+  },
+  {
+   "id": "reading.w2.whisper",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “whisper” mean?",
+   "answer": "to speak very quietly",
+   "distractors": [
+    "proud and happy after winning",
+    "moved slowly and quietly",
+    "happy to give and share"
+   ],
+   "explain": "whisper: to speak very quietly. “The spy had to whisper the secret password.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**whisper** means to speak very quietly.\n_The spy had to whisper the secret password._"
+  },
+  {
+   "id": "reading.w2.bellow",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “bellow” mean?",
+   "answer": "to shout in a loud, deep voice",
+   "distractors": [
+    "a bit worried or scared",
+    "to run very quickly",
+    "clever at tricking people"
+   ],
+   "explain": "bellow: to shout in a loud, deep voice. “The giant began to bellow with rage.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**bellow** means to shout in a loud, deep voice.\n_The giant began to bellow with rage._"
+  },
+  {
+   "id": "reading.w2.dash",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “dash” mean?",
+   "answer": "to run very quickly",
+   "distractors": [
+    "fierce and frightening",
+    "to speak very quietly",
+    "dark and sad"
+   ],
+   "explain": "dash: to run very quickly. “The hero made a dash for the door.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**dash** means to run very quickly.\n_The hero made a dash for the door._"
+  },
+  {
+   "id": "reading.w2.crept",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “crept” mean?",
+   "answer": "moved slowly and quietly",
+   "distractors": [
+    "very fast",
+    "very big and wide",
+    "shining with a gentle, wobbly light"
+   ],
+   "explain": "crept: moved slowly and quietly. “The wolf crept out of the forest.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**crept** means moved slowly and quietly.\n_The wolf crept out of the forest._"
+  },
+  {
+   "id": "reading.w2.shimmering",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “shimmering” mean?",
+   "answer": "shining with a gentle, wobbly light",
+   "distractors": [
+    "proud and happy after winning",
+    "to run very quickly",
+    "happy to give and share"
+   ],
+   "explain": "shimmering: shining with a gentle, wobbly light. “The shimmering lake reflected the moon.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**shimmering** means shining with a gentle, wobbly light.\n_The shimmering lake reflected the moon._"
+  },
+  {
+   "id": "reading.w2.gloomy",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “gloomy” mean?",
+   "answer": "dark and sad",
+   "distractors": [
+    "a bit worried or scared",
+    "to shout in a loud, deep voice",
+    "clever at tricking people"
+   ],
+   "explain": "gloomy: dark and sad. “The castle dungeon was cold and gloomy.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**gloomy** means dark and sad.\n_The castle dungeon was cold and gloomy._"
+  },
+  {
+   "id": "reading.w2.cunning",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “cunning” mean?",
+   "answer": "clever at tricking people",
+   "distractors": [
+    "fierce and frightening",
+    "to speak very quietly",
+    "shining with a gentle, wobbly light"
+   ],
+   "explain": "cunning: clever at tricking people. “The cunning fox had a plan.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**cunning** means clever at tricking people.\n_The cunning fox had a plan._"
+  },
+  {
+   "id": "reading.w2.generous",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “generous” mean?",
+   "answer": "happy to give and share",
+   "distractors": [
+    "very fast",
+    "very big and wide",
+    "moved slowly and quietly"
+   ],
+   "explain": "generous: happy to give and share. “The generous ant shared her food.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**generous** means happy to give and share.\n_The generous ant shared her food._"
+  },
+  {
+   "id": "reading.w2.determined",
+   "topic": "reading.words-2",
+   "kind": "fact",
+   "prompt": "What does “determined” mean?",
+   "answer": "not giving up, even when it is hard",
+   "distractors": [
+    "proud and happy after winning",
+    "to run very quickly",
+    "clever at tricking people"
+   ],
+   "explain": "determined: not giving up, even when it is hard. “The determined rover kept going through the storm.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**determined** means not giving up, even when it is hard.\n_The determined rover kept going through the storm._"
+  },
+  {
+   "id": "reading.w3.magnificent",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “magnificent” mean?",
+   "answer": "very beautiful and impressive",
+   "distractors": [
+    "shaking, often from fear or cold",
+    "to fall very fast",
+    "very tired"
+   ],
+   "explain": "magnificent: very beautiful and impressive. “The magnificent castle stood on the hill.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**magnificent** means very beautiful and impressive.\n_The magnificent castle stood on the hill._"
+  },
+  {
+   "id": "reading.w3.trembling",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “trembling” mean?",
+   "answer": "shaking, often from fear or cold",
+   "distractors": [
+    "to fly high in the sky",
+    "really wanting to do something",
+    "enormous"
+   ],
+   "explain": "trembling: shaking, often from fear or cold. “Peter was trembling with fright.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**trembling** means shaking, often from fear or cold.\n_Peter was trembling with fright._"
+  },
+  {
+   "id": "reading.w3.dazzling",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “dazzling” mean?",
+   "answer": "so bright it is hard to look at",
+   "distractors": [
+    "dark and dirty, hard to see through",
+    "impossible to see",
+    "rude and cheeky"
+   ],
+   "explain": "dazzling: so bright it is hard to look at. “The dazzling lights of the stadium lit up the track.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**dazzling** means so bright it is hard to look at.\n_The dazzling lights of the stadium lit up the track._"
+  },
+  {
+   "id": "reading.w3.murky",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “murky” mean?",
+   "answer": "dark and dirty, hard to see through",
+   "distractors": [
+    "shaking, often from fear or cold",
+    "dangerous",
+    "stubborn: refusing to change your mind"
+   ],
+   "explain": "murky: dark and dirty, hard to see through. “Something moved in the murky water.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**murky** means dark and dirty, hard to see through.\n_Something moved in the murky water._"
+  },
+  {
+   "id": "reading.w3.soar",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “soar” mean?",
+   "answer": "to fly high in the sky",
+   "distractors": [
+    "very beautiful and impressive",
+    "to fall very fast",
+    "very tired"
+   ],
+   "explain": "soar: to fly high in the sky. “The eagle began to soar above the mountains.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**soar** means to fly high in the sky.\n_The eagle began to soar above the mountains._"
+  },
+  {
+   "id": "reading.w3.plummet",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “plummet” mean?",
+   "answer": "to fall very fast",
+   "distractors": [
+    "dark and dirty, hard to see through",
+    "really wanting to do something",
+    "enormous"
+   ],
+   "explain": "plummet: to fall very fast. “The rock began to plummet down the cliff.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**plummet** means to fall very fast.\n_The rock began to plummet down the cliff._"
+  },
+  {
+   "id": "reading.w3.hazardous",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “hazardous” mean?",
+   "answer": "dangerous",
+   "distractors": [
+    "so bright it is hard to look at",
+    "impossible to see",
+    "rude and cheeky"
+   ],
+   "explain": "hazardous: dangerous. “The icy road was hazardous for the drivers.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**hazardous** means dangerous.\n_The icy road was hazardous for the drivers._"
+  },
+  {
+   "id": "reading.w3.invisible",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “invisible” mean?",
+   "answer": "impossible to see",
+   "distractors": [
+    "shaking, often from fear or cold",
+    "to fall very fast",
+    "stubborn: refusing to change your mind"
+   ],
+   "explain": "invisible: impossible to see. “The superhero could turn invisible.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**invisible** means impossible to see.\n_The superhero could turn invisible._"
+  },
+  {
+   "id": "reading.w3.eager",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “eager” mean?",
+   "answer": "really wanting to do something",
+   "distractors": [
+    "very beautiful and impressive",
+    "to fly high in the sky",
+    "very tired"
+   ],
+   "explain": "eager: really wanting to do something. “The eager puppy waited by the door.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**eager** means really wanting to do something.\n_The eager puppy waited by the door._"
+  },
+  {
+   "id": "reading.w3.weary",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “weary” mean?",
+   "answer": "very tired",
+   "distractors": [
+    "dark and dirty, hard to see through",
+    "impossible to see",
+    "enormous"
+   ],
+   "explain": "weary: very tired. “The weary knight rode home after the battle.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**weary** means very tired.\n_The weary knight rode home after the battle._"
+  },
+  {
+   "id": "reading.w3.obstinate",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “obstinate” mean?",
+   "answer": "stubborn: refusing to change your mind",
+   "distractors": [
+    "so bright it is hard to look at",
+    "dangerous",
+    "rude and cheeky"
+   ],
+   "explain": "obstinate: stubborn: refusing to change your mind. “Old Brown shut his eyes obstinately.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**obstinate** means stubborn: refusing to change your mind.\n_Old Brown shut his eyes obstinately._"
+  },
+  {
+   "id": "reading.w3.impertinent",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “impertinent” mean?",
+   "answer": "rude and cheeky",
+   "distractors": [
+    "shaking, often from fear or cold",
+    "to fall very fast",
+    "very tired"
+   ],
+   "explain": "impertinent: rude and cheeky. “Nutkin was impertinent to the owl.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**impertinent** means rude and cheeky.\n_Nutkin was impertinent to the owl._"
+  },
+  {
+   "id": "reading.w3.colossal",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “colossal” mean?",
+   "answer": "enormous",
+   "distractors": [
+    "very beautiful and impressive",
+    "to fly high in the sky",
+    "really wanting to do something"
+   ],
+   "explain": "colossal: enormous. “A colossal wave crashed over the ship.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**colossal** means enormous.\n_A colossal wave crashed over the ship._"
+  },
+  {
+   "id": "reading.w3.vanish",
+   "topic": "reading.words-3",
+   "kind": "fact",
+   "prompt": "What does “vanish” mean?",
+   "answer": "to disappear suddenly",
+   "distractors": [
+    "dark and dirty, hard to see through",
+    "impossible to see",
+    "rude and cheeky"
+   ],
+   "explain": "vanish: to disappear suddenly. “The magician made the coin vanish.”",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**vanish** means to disappear suddenly.\n_The magician made the coin vanish._"
+  },
+  {
+   "id": "reading.wolf.1",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "Why did the boy shout “Wolf!” the first time?",
+   "options": [
+    {
+     "text": "He was bored and wanted to play a trick",
+     "correct": true
+    },
+    {
+     "text": "He saw a real wolf",
+     "correct": false,
+     "feedback": "There was no wolf the first time."
+    },
+    {
+     "text": "He was lost",
+     "correct": false,
+     "feedback": "He knew where he was: on the hill with the sheep."
+    }
+   ],
+   "explain": "He was bored, so he played a trick.",
+   "passage": "The Boy Who Cried Wolf\n\nA shepherd boy looked after the sheep on a hill above the village. It was a long, quiet job, and the boy was bored.\n\nOne day he had an idea. He ran down the hill shouting, “Wolf! Wolf! A wolf is chasing the sheep!”\n\nThe villagers dropped their tools and raced up the hill to help. But there was no wolf. The boy laughed and laughed.\n\nA week later, he did it again. “Wolf! Wolf!” Again the villagers ran up the hill, puffing and panting. Again there was no wolf. They were cross.\n\nThen one evening, a real wolf crept out of the forest. The boy screamed, “Wolf! Wolf! Please help!”\n\nBut this time nobody came. “He is just playing his tricks again,” they said.\n\nNobody believes a liar, even when he is telling the truth.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.wolf.2",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "How did the villagers feel after the second trick?",
+   "options": [
+    {
+     "text": "Cross",
+     "correct": true
+    },
+    {
+     "text": "Happy",
+     "correct": false,
+     "feedback": "They had run up the hill for nothing again!"
+    },
+    {
+     "text": "Proud",
+     "correct": false,
+     "feedback": "The story says: “They were cross.”"
+    }
+   ],
+   "explain": "“They were cross.”",
+   "passage": "The Boy Who Cried Wolf\n\nA shepherd boy looked after the sheep on a hill above the village. It was a long, quiet job, and the boy was bored.\n\nOne day he had an idea. He ran down the hill shouting, “Wolf! Wolf! A wolf is chasing the sheep!”\n\nThe villagers dropped their tools and raced up the hill to help. But there was no wolf. The boy laughed and laughed.\n\nA week later, he did it again. “Wolf! Wolf!” Again the villagers ran up the hill, puffing and panting. Again there was no wolf. They were cross.\n\nThen one evening, a real wolf crept out of the forest. The boy screamed, “Wolf! Wolf! Please help!”\n\nBut this time nobody came. “He is just playing his tricks again,” they said.\n\nNobody believes a liar, even when he is telling the truth.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.wolf.3",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "Why did nobody come when the real wolf appeared?",
+   "options": [
+    {
+     "text": "They thought he was playing a trick again",
+     "correct": true
+    },
+    {
+     "text": "They could not hear him",
+     "correct": false,
+     "feedback": "They heard him, but they said “He is just playing his tricks again.”"
+    },
+    {
+     "text": "They were asleep",
+     "correct": false,
+     "feedback": "They heard him and decided not to come."
+    }
+   ],
+   "explain": "He had lied too many times, so they didn’t believe him.",
+   "passage": "The Boy Who Cried Wolf\n\nA shepherd boy looked after the sheep on a hill above the village. It was a long, quiet job, and the boy was bored.\n\nOne day he had an idea. He ran down the hill shouting, “Wolf! Wolf! A wolf is chasing the sheep!”\n\nThe villagers dropped their tools and raced up the hill to help. But there was no wolf. The boy laughed and laughed.\n\nA week later, he did it again. “Wolf! Wolf!” Again the villagers ran up the hill, puffing and panting. Again there was no wolf. They were cross.\n\nThen one evening, a real wolf crept out of the forest. The boy screamed, “Wolf! Wolf! Please help!”\n\nBut this time nobody came. “He is just playing his tricks again,” they said.\n\nNobody believes a liar, even when he is telling the truth.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.wolf.4",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "What is the moral of this fable?",
+   "options": [
+    {
+     "text": "Nobody believes a liar, even when he tells the truth",
+     "correct": true
+    },
+    {
+     "text": "Wolves are dangerous",
+     "correct": false,
+     "feedback": "The lesson is about telling the truth."
+    },
+    {
+     "text": "Never look after sheep",
+     "correct": false,
+     "feedback": "The lesson is about lying."
+    }
+   ],
+   "explain": "If you tell lies, people stop trusting you.",
+   "passage": "The Boy Who Cried Wolf\n\nA shepherd boy looked after the sheep on a hill above the village. It was a long, quiet job, and the boy was bored.\n\nOne day he had an idea. He ran down the hill shouting, “Wolf! Wolf! A wolf is chasing the sheep!”\n\nThe villagers dropped their tools and raced up the hill to help. But there was no wolf. The boy laughed and laughed.\n\nA week later, he did it again. “Wolf! Wolf!” Again the villagers ran up the hill, puffing and panting. Again there was no wolf. They were cross.\n\nThen one evening, a real wolf crept out of the forest. The boy screamed, “Wolf! Wolf! Please help!”\n\nBut this time nobody came. “He is just playing his tricks again,” they said.\n\nNobody believes a liar, even when he is telling the truth.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.wolf.5",
+   "topic": "reading.fables-2",
+   "kind": "order",
+   "prompt": "Put these events in order.",
+   "items": [
+    "The boy is bored",
+    "He tricks the villagers twice",
+    "A real wolf comes",
+    "Nobody comes to help"
+   ],
+   "labels": null,
+   "explain": "Bored, two tricks, a real wolf, no help.",
+   "passage": "The Boy Who Cried Wolf\n\nA shepherd boy looked after the sheep on a hill above the village. It was a long, quiet job, and the boy was bored.\n\nOne day he had an idea. He ran down the hill shouting, “Wolf! Wolf! A wolf is chasing the sheep!”\n\nThe villagers dropped their tools and raced up the hill to help. But there was no wolf. The boy laughed and laughed.\n\nA week later, he did it again. “Wolf! Wolf!” Again the villagers ran up the hill, puffing and panting. Again there was no wolf. They were cross.\n\nThen one evening, a real wolf crept out of the forest. The boy screamed, “Wolf! Wolf! Please help!”\n\nBut this time nobody came. “He is just playing his tricks again,” they said.\n\nNobody believes a liar, even when he is telling the truth.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.ant.1",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "What was the ant doing all summer?",
+   "options": [
+    {
+     "text": "Carrying corn to her nest for the winter",
+     "correct": true
+    },
+    {
+     "text": "Singing and dancing",
+     "correct": false,
+     "feedback": "That was the grasshopper."
+    },
+    {
+     "text": "Sleeping",
+     "correct": false,
+     "feedback": "She was busy working."
+    }
+   ],
+   "explain": "“Up and down the path she went, carrying grains of corn to her nest.”",
+   "passage": "The Ant and the Grasshopper\n\nAll summer long, the grasshopper sang and danced in the warm sunshine.\n\nThe ant was busy. Up and down the path she went, carrying grains of corn to her nest, one at a time.\n\n“Why are you working so hard?” asked the grasshopper. “Come and play!”\n\n“I am storing food for the winter,” said the ant. “You should do the same.”\n\nThe grasshopper laughed. “Winter is ages away! There is plenty of food now.”\n\nBut winter came. Snow covered the fields, and there was no food to be found. The hungry grasshopper knocked on the ant’s door.\n\nThe ant had plenty to eat. She shared a little with the grasshopper, and said, “Next summer, remember: work today, and you will be ready for tomorrow.”",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.ant.2",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "Why did the grasshopper laugh at the ant?",
+   "options": [
+    {
+     "text": "He thought winter was a long way off",
+     "correct": true
+    },
+    {
+     "text": "The ant fell over",
+     "correct": false,
+     "feedback": "He laughed at her idea of working."
+    },
+    {
+     "text": "The ant told a joke",
+     "correct": false,
+     "feedback": "The ant was serious."
+    }
+   ],
+   "explain": "“Winter is ages away! There is plenty of food now.”",
+   "passage": "The Ant and the Grasshopper\n\nAll summer long, the grasshopper sang and danced in the warm sunshine.\n\nThe ant was busy. Up and down the path she went, carrying grains of corn to her nest, one at a time.\n\n“Why are you working so hard?” asked the grasshopper. “Come and play!”\n\n“I am storing food for the winter,” said the ant. “You should do the same.”\n\nThe grasshopper laughed. “Winter is ages away! There is plenty of food now.”\n\nBut winter came. Snow covered the fields, and there was no food to be found. The hungry grasshopper knocked on the ant’s door.\n\nThe ant had plenty to eat. She shared a little with the grasshopper, and said, “Next summer, remember: work today, and you will be ready for tomorrow.”",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.ant.3",
+   "topic": "reading.fables-2",
+   "kind": "fact",
+   "prompt": "Find and copy the word that tells you how the grasshopper felt in winter.",
+   "answer": "hungry",
+   "distractors": [
+    "busy",
+    "warm",
+    "sunny"
+   ],
+   "explain": "“The hungry grasshopper knocked on the ant’s door.”",
+   "passage": "The Ant and the Grasshopper\n\nAll summer long, the grasshopper sang and danced in the warm sunshine.\n\nThe ant was busy. Up and down the path she went, carrying grains of corn to her nest, one at a time.\n\n“Why are you working so hard?” asked the grasshopper. “Come and play!”\n\n“I am storing food for the winter,” said the ant. “You should do the same.”\n\nThe grasshopper laughed. “Winter is ages away! There is plenty of food now.”\n\nBut winter came. Snow covered the fields, and there was no food to be found. The hungry grasshopper knocked on the ant’s door.\n\nThe ant had plenty to eat. She shared a little with the grasshopper, and said, “Next summer, remember: work today, and you will be ready for tomorrow.”",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.ant.4",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "How was the ant kind at the end?",
+   "options": [
+    {
+     "text": "She shared a little food with the grasshopper",
+     "correct": true
+    },
+    {
+     "text": "She gave him her house",
+     "correct": false,
+     "feedback": "She shared “a little” food."
+    },
+    {
+     "text": "She sang with him",
+     "correct": false,
+     "feedback": "She shared food."
+    }
+   ],
+   "explain": "Even though he hadn’t worked, she shared.",
+   "passage": "The Ant and the Grasshopper\n\nAll summer long, the grasshopper sang and danced in the warm sunshine.\n\nThe ant was busy. Up and down the path she went, carrying grains of corn to her nest, one at a time.\n\n“Why are you working so hard?” asked the grasshopper. “Come and play!”\n\n“I am storing food for the winter,” said the ant. “You should do the same.”\n\nThe grasshopper laughed. “Winter is ages away! There is plenty of food now.”\n\nBut winter came. Snow covered the fields, and there was no food to be found. The hungry grasshopper knocked on the ant’s door.\n\nThe ant had plenty to eat. She shared a little with the grasshopper, and said, “Next summer, remember: work today, and you will be ready for tomorrow.”",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.ant.5",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "What is the moral of this fable?",
+   "options": [
+    {
+     "text": "Work hard now so you are ready for the future",
+     "correct": true
+    },
+    {
+     "text": "Always sing in the summer",
+     "correct": false,
+     "feedback": "The grasshopper sang all summer and went hungry."
+    },
+    {
+     "text": "Ants are better than grasshoppers",
+     "correct": false,
+     "feedback": "The lesson is about planning ahead."
+    }
+   ],
+   "explain": "“Work today, and you will be ready for tomorrow.”",
+   "passage": "The Ant and the Grasshopper\n\nAll summer long, the grasshopper sang and danced in the warm sunshine.\n\nThe ant was busy. Up and down the path she went, carrying grains of corn to her nest, one at a time.\n\n“Why are you working so hard?” asked the grasshopper. “Come and play!”\n\n“I am storing food for the winter,” said the ant. “You should do the same.”\n\nThe grasshopper laughed. “Winter is ages away! There is plenty of food now.”\n\nBut winter came. Snow covered the fields, and there was no food to be found. The hungry grasshopper knocked on the ant’s door.\n\nThe ant had plenty to eat. She shared a little with the grasshopper, and said, “Next summer, remember: work today, and you will be ready for tomorrow.”",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.nw.1",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "What were the North Wind and the Sun arguing about?",
+   "options": [
+    {
+     "text": "Who was the strongest",
+     "correct": true
+    },
+    {
+     "text": "Who was the warmest",
+     "correct": false,
+     "feedback": "They argued about strength."
+    },
+    {
+     "text": "Who could travel furthest",
+     "correct": false,
+     "feedback": "They argued about who was strongest."
+    }
+   ],
+   "explain": "“arguing about who was the strongest.”",
+   "passage": "The North Wind and the Sun\n\nThe North Wind and the Sun were arguing about who was the strongest.\n\n“Let’s have a contest,” said the Sun. “Do you see that traveller walking down the road? Whoever can make him take off his coat is the strongest.”\n\nThe North Wind went first. He blew and he blew. He blew so hard that leaves flew off the trees. But the harder he blew, the tighter the traveller wrapped his coat around himself.\n\nAt last the North Wind gave up.\n\nThen it was the Sun’s turn. The Sun came out from behind a cloud and shone gently down. The traveller grew warmer and warmer. Soon he unbuttoned his coat. Then he took it off altogether and sat down in the shade.\n\nKindness can win where force fails.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.nw.2",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "What happened when the North Wind blew harder?",
+   "options": [
+    {
+     "text": "The traveller held his coat tighter",
+     "correct": true
+    },
+    {
+     "text": "The coat blew away",
+     "correct": false,
+     "feedback": "The opposite: he wrapped it tighter."
+    },
+    {
+     "text": "The traveller fell over",
+     "correct": false,
+     "feedback": "He kept walking, holding his coat."
+    }
+   ],
+   "explain": "“The harder he blew, the tighter the traveller wrapped his coat around himself.”",
+   "passage": "The North Wind and the Sun\n\nThe North Wind and the Sun were arguing about who was the strongest.\n\n“Let’s have a contest,” said the Sun. “Do you see that traveller walking down the road? Whoever can make him take off his coat is the strongest.”\n\nThe North Wind went first. He blew and he blew. He blew so hard that leaves flew off the trees. But the harder he blew, the tighter the traveller wrapped his coat around himself.\n\nAt last the North Wind gave up.\n\nThen it was the Sun’s turn. The Sun came out from behind a cloud and shone gently down. The traveller grew warmer and warmer. Soon he unbuttoned his coat. Then he took it off altogether and sat down in the shade.\n\nKindness can win where force fails.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.nw.3",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "How did the Sun win?",
+   "options": [
+    {
+     "text": "By shining gently until the traveller was warm",
+     "correct": true
+    },
+    {
+     "text": "By blowing even harder",
+     "correct": false,
+     "feedback": "The Sun doesn’t blow. It shone gently."
+    },
+    {
+     "text": "By hiding behind a cloud",
+     "correct": false,
+     "feedback": "The Sun came OUT from behind a cloud."
+    }
+   ],
+   "explain": "Gentle warmth made the traveller take his coat off himself.",
+   "passage": "The North Wind and the Sun\n\nThe North Wind and the Sun were arguing about who was the strongest.\n\n“Let’s have a contest,” said the Sun. “Do you see that traveller walking down the road? Whoever can make him take off his coat is the strongest.”\n\nThe North Wind went first. He blew and he blew. He blew so hard that leaves flew off the trees. But the harder he blew, the tighter the traveller wrapped his coat around himself.\n\nAt last the North Wind gave up.\n\nThen it was the Sun’s turn. The Sun came out from behind a cloud and shone gently down. The traveller grew warmer and warmer. Soon he unbuttoned his coat. Then he took it off altogether and sat down in the shade.\n\nKindness can win where force fails.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.nw.4",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "What is the moral of this fable?",
+   "options": [
+    {
+     "text": "Kindness can win where force fails",
+     "correct": true
+    },
+    {
+     "text": "The wind is stronger than the Sun",
+     "correct": false,
+     "feedback": "The wind lost!"
+    },
+    {
+     "text": "Always wear a coat",
+     "correct": false,
+     "feedback": "The lesson is about being gentle, not about coats."
+    }
+   ],
+   "explain": "Being gentle often works better than being forceful.",
+   "passage": "The North Wind and the Sun\n\nThe North Wind and the Sun were arguing about who was the strongest.\n\n“Let’s have a contest,” said the Sun. “Do you see that traveller walking down the road? Whoever can make him take off his coat is the strongest.”\n\nThe North Wind went first. He blew and he blew. He blew so hard that leaves flew off the trees. But the harder he blew, the tighter the traveller wrapped his coat around himself.\n\nAt last the North Wind gave up.\n\nThen it was the Sun’s turn. The Sun came out from behind a cloud and shone gently down. The traveller grew warmer and warmer. Soon he unbuttoned his coat. Then he took it off altogether and sat down in the shade.\n\nKindness can win where force fails.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.fox.1",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "Why did the fox want the grapes?",
+   "options": [
+    {
+     "text": "He was hungry and it was a hot day",
+     "correct": true
+    },
+    {
+     "text": "He wanted to sell them",
+     "correct": false,
+     "feedback": "He was hungry: “Just what I need.”"
+    },
+    {
+     "text": "He wanted to make juice for his friends",
+     "correct": false,
+     "feedback": "He wanted to eat them himself."
+    }
+   ],
+   "explain": "“One hot day, a hungry fox…”",
+   "passage": "The Fox and the Grapes\n\nOne hot day, a hungry fox was walking through an orchard. High above him, on a vine, hung a bunch of juicy purple grapes.\n\n“Just what I need,” said the fox, licking his lips.\n\nHe took a run and jumped, but he missed. He tried again, jumping higher, but the grapes were still out of reach. Again and again he jumped, until he was hot and tired.\n\nAt last he gave up and walked away with his nose in the air.\n\n“I didn’t want them anyway,” he said. “I am sure they are sour.”\n\nIt is easy to pretend you don’t want something when you can’t have it.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.fox.2",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "Why couldn’t the fox reach the grapes?",
+   "options": [
+    {
+     "text": "They were hanging too high",
+     "correct": true
+    },
+    {
+     "text": "A farmer chased him away",
+     "correct": false,
+     "feedback": "No farmer is mentioned."
+    },
+    {
+     "text": "He was too tired to try",
+     "correct": false,
+     "feedback": "He tried again and again."
+    }
+   ],
+   "explain": "“High above him, on a vine…” and they “were still out of reach”.",
+   "passage": "The Fox and the Grapes\n\nOne hot day, a hungry fox was walking through an orchard. High above him, on a vine, hung a bunch of juicy purple grapes.\n\n“Just what I need,” said the fox, licking his lips.\n\nHe took a run and jumped, but he missed. He tried again, jumping higher, but the grapes were still out of reach. Again and again he jumped, until he was hot and tired.\n\nAt last he gave up and walked away with his nose in the air.\n\n“I didn’t want them anyway,” he said. “I am sure they are sour.”\n\nIt is easy to pretend you don’t want something when you can’t have it.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.fox.3",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "“He walked away with his nose in the air.” What does this show?",
+   "options": [
+    {
+     "text": "He was pretending he didn’t care",
+     "correct": true
+    },
+    {
+     "text": "He could smell something",
+     "correct": false,
+     "feedback": "It is a way of showing pride, not sniffing."
+    },
+    {
+     "text": "He was looking for birds",
+     "correct": false,
+     "feedback": "It shows he is acting proud."
+    }
+   ],
+   "explain": "Walking with your nose in the air means acting proud and superior.",
+   "passage": "The Fox and the Grapes\n\nOne hot day, a hungry fox was walking through an orchard. High above him, on a vine, hung a bunch of juicy purple grapes.\n\n“Just what I need,” said the fox, licking his lips.\n\nHe took a run and jumped, but he missed. He tried again, jumping higher, but the grapes were still out of reach. Again and again he jumped, until he was hot and tired.\n\nAt last he gave up and walked away with his nose in the air.\n\n“I didn’t want them anyway,” he said. “I am sure they are sour.”\n\nIt is easy to pretend you don’t want something when you can’t have it.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.fox.4",
+   "topic": "reading.fables-2",
+   "kind": "mcq",
+   "prompt": "Were the grapes really sour?",
+   "options": [
+    {
+     "text": "We don’t know: the fox only said so because he couldn’t get them",
+     "correct": true
+    },
+    {
+     "text": "Yes, the story says so",
+     "correct": false,
+     "feedback": "Only the fox says so, and he is pretending."
+    },
+    {
+     "text": "No, they were poisonous",
+     "correct": false,
+     "feedback": "Nothing says that."
+    }
+   ],
+   "explain": "The fox couldn’t reach them, so he pretended they were sour. That is where the saying “sour grapes” comes from!",
+   "passage": "The Fox and the Grapes\n\nOne hot day, a hungry fox was walking through an orchard. High above him, on a vine, hung a bunch of juicy purple grapes.\n\n“Just what I need,” said the fox, licking his lips.\n\nHe took a run and jumped, but he missed. He tried again, jumping higher, but the grapes were still out of reach. Again and again he jumped, until he was hot and tired.\n\nAt last he gave up and walked away with his nose in the air.\n\n“I didn’t want them anyway,” he said. “I am sure they are sour.”\n\nIt is easy to pretend you don’t want something when you can’t have it.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.pit.1",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "What was Rosa’s job in the pit crew?",
+   "options": [
+    {
+     "text": "Changing the front left tyre",
+     "correct": true
+    },
+    {
+     "text": "Driving the car",
+     "correct": false,
+     "feedback": "She was in the pit crew, not the driver."
+    },
+    {
+     "text": "Being the crew chief",
+     "correct": false,
+     "feedback": "Sam was the crew chief."
+    }
+   ],
+   "explain": "“Her job was the front left tyre.”",
+   "passage": "Two Seconds\n\nRosa was the newest member of the pit crew. Her job was the front left tyre.\n\nAll week she had practised. Wheel gun on, nut off, old tyre out, new tyre in, nut on. Again and again, until her arms ached. On Friday she was still too slow. “Don’t worry,” said Sam, the crew chief. “Keep practising.”\n\nOn race day, the cars thundered round the track. The noise was so loud that Rosa could feel it in her chest.\n\nThen the radio crackled: “Box, box, box!” Their car was coming in.\n\nRosa’s heart pounded. The car screeched into the pit lane and stopped exactly on the line. Rosa did not think. Her hands remembered everything. Nut off, tyre out, tyre in, nut on. She raised her hand. Done!\n\nThe car roared away. Sam looked at the clock and grinned. “Two seconds,” he said. “The fastest stop of the day.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.pit.2",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "How do you know Rosa worked very hard all week?",
+   "options": [
+    {
+     "text": "She practised again and again until her arms ached",
+     "correct": true
+    },
+    {
+     "text": "She won a prize",
+     "correct": false,
+     "feedback": "Look at what she did all week."
+    },
+    {
+     "text": "She stayed up late watching races",
+     "correct": false,
+     "feedback": "She practised the tyre change."
+    }
+   ],
+   "explain": "“Again and again, until her arms ached.”",
+   "passage": "Two Seconds\n\nRosa was the newest member of the pit crew. Her job was the front left tyre.\n\nAll week she had practised. Wheel gun on, nut off, old tyre out, new tyre in, nut on. Again and again, until her arms ached. On Friday she was still too slow. “Don’t worry,” said Sam, the crew chief. “Keep practising.”\n\nOn race day, the cars thundered round the track. The noise was so loud that Rosa could feel it in her chest.\n\nThen the radio crackled: “Box, box, box!” Their car was coming in.\n\nRosa’s heart pounded. The car screeched into the pit lane and stopped exactly on the line. Rosa did not think. Her hands remembered everything. Nut off, tyre out, tyre in, nut on. She raised her hand. Done!\n\nThe car roared away. Sam looked at the clock and grinned. “Two seconds,” he said. “The fastest stop of the day.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.pit.3",
+   "topic": "reading.stories-2",
+   "kind": "fact",
+   "prompt": "“The noise was so loud that Rosa could feel it in her chest.” What does this tell you about the cars?",
+   "answer": "they were extremely loud",
+   "distractors": [
+    "they were very slow",
+    "they were broken",
+    "they were very quiet"
+   ],
+   "explain": "Feeling a noise in your chest means it is VERY loud.",
+   "passage": "Two Seconds\n\nRosa was the newest member of the pit crew. Her job was the front left tyre.\n\nAll week she had practised. Wheel gun on, nut off, old tyre out, new tyre in, nut on. Again and again, until her arms ached. On Friday she was still too slow. “Don’t worry,” said Sam, the crew chief. “Keep practising.”\n\nOn race day, the cars thundered round the track. The noise was so loud that Rosa could feel it in her chest.\n\nThen the radio crackled: “Box, box, box!” Their car was coming in.\n\nRosa’s heart pounded. The car screeched into the pit lane and stopped exactly on the line. Rosa did not think. Her hands remembered everything. Nut off, tyre out, tyre in, nut on. She raised her hand. Done!\n\nThe car roared away. Sam looked at the clock and grinned. “Two seconds,” he said. “The fastest stop of the day.”",
+   "passageSource": "A story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.pit.4",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "“Her hands remembered everything.” What does this mean?",
+   "options": [
+    {
+     "text": "She had practised so much that she did it without thinking",
+     "correct": true
+    },
+    {
+     "text": "Her hands could talk",
+     "correct": false,
+     "feedback": "It is a way of saying she knew it by heart."
+    },
+    {
+     "text": "She had written notes on her hands",
+     "correct": false,
+     "feedback": "No notes: she had practised."
+    }
+   ],
+   "explain": "All that practice paid off: the job had become automatic.",
+   "passage": "Two Seconds\n\nRosa was the newest member of the pit crew. Her job was the front left tyre.\n\nAll week she had practised. Wheel gun on, nut off, old tyre out, new tyre in, nut on. Again and again, until her arms ached. On Friday she was still too slow. “Don’t worry,” said Sam, the crew chief. “Keep practising.”\n\nOn race day, the cars thundered round the track. The noise was so loud that Rosa could feel it in her chest.\n\nThen the radio crackled: “Box, box, box!” Their car was coming in.\n\nRosa’s heart pounded. The car screeched into the pit lane and stopped exactly on the line. Rosa did not think. Her hands remembered everything. Nut off, tyre out, tyre in, nut on. She raised her hand. Done!\n\nThe car roared away. Sam looked at the clock and grinned. “Two seconds,” he said. “The fastest stop of the day.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.pit.5",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "How do you think Rosa felt at the end?",
+   "options": [
+    {
+     "text": "Proud and happy",
+     "correct": true
+    },
+    {
+     "text": "Bored",
+     "correct": false,
+     "feedback": "She had just done the fastest stop of the day!"
+    },
+    {
+     "text": "Angry with Sam",
+     "correct": false,
+     "feedback": "Sam grinned at her: they were both pleased."
+    }
+   ],
+   "explain": "Sam grinned and said it was the fastest stop of the day.",
+   "passage": "Two Seconds\n\nRosa was the newest member of the pit crew. Her job was the front left tyre.\n\nAll week she had practised. Wheel gun on, nut off, old tyre out, new tyre in, nut on. Again and again, until her arms ached. On Friday she was still too slow. “Don’t worry,” said Sam, the crew chief. “Keep practising.”\n\nOn race day, the cars thundered round the track. The noise was so loud that Rosa could feel it in her chest.\n\nThen the radio crackled: “Box, box, box!” Their car was coming in.\n\nRosa’s heart pounded. The car screeched into the pit lane and stopped exactly on the line. Rosa did not think. Her hands remembered everything. Nut off, tyre out, tyre in, nut on. She raised her hand. Done!\n\nThe car roared away. Sam looked at the clock and grinned. “Two seconds,” he said. “The fastest stop of the day.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.rov.1",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "What did Dot do every day?",
+   "options": [
+    {
+     "text": "The jobs sent by scientists, then sent back photographs",
+     "correct": true
+    },
+    {
+     "text": "Raced other rovers",
+     "correct": false,
+     "feedback": "There are no other rovers in the story."
+    },
+    {
+     "text": "Slept all day",
+     "correct": false,
+     "feedback": "Dot only slept during the storm."
+    }
+   ],
+   "explain": "“Every day, Dot did them, then sent back photographs.”",
+   "passage": "The Rover Who Kept Going\n\nFar away, on the dusty red planet Mars, a little rover called Dot rolled slowly across the rocks.\n\nDot had six wheels, a camera on a long neck and a robot arm for picking up stones. Every day, scientists on Earth sent Dot a list of jobs. Every day, Dot did them, then sent back photographs.\n\nOne morning a dust storm swept across the planet. The sky turned dark orange. Dust covered Dot’s solar panels, and without sunlight her batteries began to run low.\n\nDot went to sleep to save power. On Earth, the scientists waited. Days passed. Weeks passed. Some people said, “We have lost her.”\n\nThen one day the wind changed. It blew the dust off Dot’s panels. The Sun shone on them again, and Dot’s batteries slowly filled up.\n\nBeep. A message arrived on Earth. The scientists cheered and hugged each other. Dot was awake, and ready for work.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.rov.2",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "Why did Dot’s batteries run low?",
+   "options": [
+    {
+     "text": "Dust covered her solar panels so no sunlight reached them",
+     "correct": true
+    },
+    {
+     "text": "She drove too fast",
+     "correct": false,
+     "feedback": "The dust storm was the problem."
+    },
+    {
+     "text": "The scientists forgot to charge her",
+     "correct": false,
+     "feedback": "Dot is charged by sunlight on her panels."
+    }
+   ],
+   "explain": "“Dust covered Dot’s solar panels, and without sunlight her batteries began to run low.”",
+   "passage": "The Rover Who Kept Going\n\nFar away, on the dusty red planet Mars, a little rover called Dot rolled slowly across the rocks.\n\nDot had six wheels, a camera on a long neck and a robot arm for picking up stones. Every day, scientists on Earth sent Dot a list of jobs. Every day, Dot did them, then sent back photographs.\n\nOne morning a dust storm swept across the planet. The sky turned dark orange. Dust covered Dot’s solar panels, and without sunlight her batteries began to run low.\n\nDot went to sleep to save power. On Earth, the scientists waited. Days passed. Weeks passed. Some people said, “We have lost her.”\n\nThen one day the wind changed. It blew the dust off Dot’s panels. The Sun shone on them again, and Dot’s batteries slowly filled up.\n\nBeep. A message arrived on Earth. The scientists cheered and hugged each other. Dot was awake, and ready for work.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.rov.3",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "Why did Dot go to sleep?",
+   "options": [
+    {
+     "text": "To save power",
+     "correct": true
+    },
+    {
+     "text": "Because it was night-time",
+     "correct": false,
+     "feedback": "She slept to save her batteries."
+    },
+    {
+     "text": "Because she was bored",
+     "correct": false,
+     "feedback": "Rovers sleep to save power."
+    }
+   ],
+   "explain": "“Dot went to sleep to save power.”",
+   "passage": "The Rover Who Kept Going\n\nFar away, on the dusty red planet Mars, a little rover called Dot rolled slowly across the rocks.\n\nDot had six wheels, a camera on a long neck and a robot arm for picking up stones. Every day, scientists on Earth sent Dot a list of jobs. Every day, Dot did them, then sent back photographs.\n\nOne morning a dust storm swept across the planet. The sky turned dark orange. Dust covered Dot’s solar panels, and without sunlight her batteries began to run low.\n\nDot went to sleep to save power. On Earth, the scientists waited. Days passed. Weeks passed. Some people said, “We have lost her.”\n\nThen one day the wind changed. It blew the dust off Dot’s panels. The Sun shone on them again, and Dot’s batteries slowly filled up.\n\nBeep. A message arrived on Earth. The scientists cheered and hugged each other. Dot was awake, and ready for work.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.rov.4",
+   "topic": "reading.stories-2",
+   "kind": "order",
+   "prompt": "Put these events in order.",
+   "items": [
+    "A dust storm comes",
+    "Dot goes to sleep",
+    "The wind blows the dust off",
+    "A message arrives on Earth"
+   ],
+   "labels": null,
+   "explain": "Storm, sleep, wind clears the dust, message.",
+   "passage": "The Rover Who Kept Going\n\nFar away, on the dusty red planet Mars, a little rover called Dot rolled slowly across the rocks.\n\nDot had six wheels, a camera on a long neck and a robot arm for picking up stones. Every day, scientists on Earth sent Dot a list of jobs. Every day, Dot did them, then sent back photographs.\n\nOne morning a dust storm swept across the planet. The sky turned dark orange. Dust covered Dot’s solar panels, and without sunlight her batteries began to run low.\n\nDot went to sleep to save power. On Earth, the scientists waited. Days passed. Weeks passed. Some people said, “We have lost her.”\n\nThen one day the wind changed. It blew the dust off Dot’s panels. The Sun shone on them again, and Dot’s batteries slowly filled up.\n\nBeep. A message arrived on Earth. The scientists cheered and hugged each other. Dot was awake, and ready for work.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.rov.5",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "Which word best describes how the scientists felt at the end?",
+   "options": [
+    {
+     "text": "overjoyed",
+     "correct": true
+    },
+    {
+     "text": "worried",
+     "correct": false,
+     "feedback": "They were worried before. At the end they “cheered and hugged”."
+    },
+    {
+     "text": "angry",
+     "correct": false,
+     "feedback": "They cheered!"
+    }
+   ],
+   "explain": "Cheering and hugging show they were overjoyed.",
+   "passage": "The Rover Who Kept Going\n\nFar away, on the dusty red planet Mars, a little rover called Dot rolled slowly across the rocks.\n\nDot had six wheels, a camera on a long neck and a robot arm for picking up stones. Every day, scientists on Earth sent Dot a list of jobs. Every day, Dot did them, then sent back photographs.\n\nOne morning a dust storm swept across the planet. The sky turned dark orange. Dust covered Dot’s solar panels, and without sunlight her batteries began to run low.\n\nDot went to sleep to save power. On Earth, the scientists waited. Days passed. Weeks passed. Some people said, “We have lost her.”\n\nThen one day the wind changed. It blew the dust off Dot’s panels. The Sun shone on them again, and Dot’s batteries slowly filled up.\n\nBeep. A message arrived on Earth. The scientists cheered and hugged each other. Dot was awake, and ready for work.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.run.1",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "Why was the train dangerous?",
+   "options": [
+    {
+     "text": "Its brakes had broken and people were waiting at the end of the line",
+     "correct": true
+    },
+    {
+     "text": "It was on fire",
+     "correct": false,
+     "feedback": "Its brakes had broken."
+    },
+    {
+     "text": "It was going the wrong way",
+     "correct": false,
+     "feedback": "It was going too fast to stop."
+    }
+   ],
+   "explain": "“Its brakes had broken!” and a crowd was waiting on the platform.",
+   "passage": "{hero} and the Runaway Train\n\nIt was a quiet Saturday in the city. {hero} was at the park, eating an ice cream, when a terrible noise filled the air.\n\nA train was racing down the track towards the station. Its brakes had broken! The driver was waving his arms. At the end of the line, a crowd of people was waiting on the platform.\n\n{hero} dropped the ice cream and shot into the sky.\n\nThe train was too heavy to lift, so the hero flew round in front of it and pushed back against the engine. Sparks flew. The wheels squealed. Slowly, slowly, the train began to slow down.\n\nIt stopped just one metre from the end of the platform. Everyone was safe.\n\nThe driver climbed down, shaking. “Thank you,” he said. “You saved us all.”\n\n{hero} smiled and looked down at the empty hand where the ice cream had been. “Do you know,” said the hero, “I think I’d like another ice cream.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.run.2",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "Why did {hero} push the train instead of lifting it?",
+   "options": [
+    {
+     "text": "It was too heavy to lift",
+     "correct": true
+    },
+    {
+     "text": "Pushing is more fun",
+     "correct": false,
+     "feedback": "The story gives the reason: it was too heavy."
+    },
+    {
+     "text": "The driver asked for a push",
+     "correct": false,
+     "feedback": "The driver was just waving his arms."
+    }
+   ],
+   "explain": "“The train was too heavy to lift.”",
+   "passage": "{hero} and the Runaway Train\n\nIt was a quiet Saturday in the city. {hero} was at the park, eating an ice cream, when a terrible noise filled the air.\n\nA train was racing down the track towards the station. Its brakes had broken! The driver was waving his arms. At the end of the line, a crowd of people was waiting on the platform.\n\n{hero} dropped the ice cream and shot into the sky.\n\nThe train was too heavy to lift, so the hero flew round in front of it and pushed back against the engine. Sparks flew. The wheels squealed. Slowly, slowly, the train began to slow down.\n\nIt stopped just one metre from the end of the platform. Everyone was safe.\n\nThe driver climbed down, shaking. “Thank you,” he said. “You saved us all.”\n\n{hero} smiled and looked down at the empty hand where the ice cream had been. “Do you know,” said the hero, “I think I’d like another ice cream.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.run.3",
+   "topic": "reading.stories-2",
+   "kind": "fact",
+   "prompt": "How close to the end of the platform did the train stop?",
+   "answer": "one metre",
+   "distractors": [
+    "ten metres",
+    "one mile",
+    "one centimetre"
+   ],
+   "explain": "“It stopped just one metre from the end of the platform.”",
+   "passage": "{hero} and the Runaway Train\n\nIt was a quiet Saturday in the city. {hero} was at the park, eating an ice cream, when a terrible noise filled the air.\n\nA train was racing down the track towards the station. Its brakes had broken! The driver was waving his arms. At the end of the line, a crowd of people was waiting on the platform.\n\n{hero} dropped the ice cream and shot into the sky.\n\nThe train was too heavy to lift, so the hero flew round in front of it and pushed back against the engine. Sparks flew. The wheels squealed. Slowly, slowly, the train began to slow down.\n\nIt stopped just one metre from the end of the platform. Everyone was safe.\n\nThe driver climbed down, shaking. “Thank you,” he said. “You saved us all.”\n\n{hero} smiled and looked down at the empty hand where the ice cream had been. “Do you know,” said the hero, “I think I’d like another ice cream.”",
+   "passageSource": "A story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.run.4",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "Why is the ending funny?",
+   "options": [
+    {
+     "text": "After saving everyone, the hero just wants another ice cream",
+     "correct": true
+    },
+    {
+     "text": "The train falls over",
+     "correct": false,
+     "feedback": "Everyone was safe."
+    },
+    {
+     "text": "The driver is a dog",
+     "correct": false,
+     "feedback": "The driver is a man."
+    }
+   ],
+   "explain": "The hero had dropped the ice cream to save the day. It is a funny, small thing after a huge rescue.",
+   "passage": "{hero} and the Runaway Train\n\nIt was a quiet Saturday in the city. {hero} was at the park, eating an ice cream, when a terrible noise filled the air.\n\nA train was racing down the track towards the station. Its brakes had broken! The driver was waving his arms. At the end of the line, a crowd of people was waiting on the platform.\n\n{hero} dropped the ice cream and shot into the sky.\n\nThe train was too heavy to lift, so the hero flew round in front of it and pushed back against the engine. Sparks flew. The wheels squealed. Slowly, slowly, the train began to slow down.\n\nIt stopped just one metre from the end of the platform. Everyone was safe.\n\nThe driver climbed down, shaking. “Thank you,” he said. “You saved us all.”\n\n{hero} smiled and looked down at the empty hand where the ice cream had been. “Do you know,” said the hero, “I think I’d like another ice cream.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.run.5",
+   "topic": "reading.stories-2",
+   "kind": "mcq",
+   "prompt": "Which words show that the train was slowing down very gradually?",
+   "options": [
+    {
+     "text": "“Slowly, slowly”",
+     "correct": true
+    },
+    {
+     "text": "“shot into the sky”",
+     "correct": false,
+     "feedback": "That was the hero taking off."
+    },
+    {
+     "text": "“a terrible noise”",
+     "correct": false,
+     "feedback": "That was at the start."
+    }
+   ],
+   "explain": "Repeating “slowly” makes us feel how long it took.",
+   "passage": "{hero} and the Runaway Train\n\nIt was a quiet Saturday in the city. {hero} was at the park, eating an ice cream, when a terrible noise filled the air.\n\nA train was racing down the track towards the station. Its brakes had broken! The driver was waving his arms. At the end of the line, a crowd of people was waiting on the platform.\n\n{hero} dropped the ice cream and shot into the sky.\n\nThe train was too heavy to lift, so the hero flew round in front of it and pushed back against the engine. Sparks flew. The wheels squealed. Slowly, slowly, the train began to slow down.\n\nIt stopped just one metre from the end of the platform. Everyone was safe.\n\nThe driver climbed down, shaking. “Thank you,” he said. “You saved us all.”\n\n{hero} smiled and looked down at the empty hand where the ice cream had been. “Do you know,” said the hero, “I think I’d like another ice cream.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.pen.1",
+   "topic": "reading.facts-2",
+   "kind": "fact",
+   "prompt": "Where do emperor penguins live?",
+   "answer": "Antarctica",
+   "distractors": [
+    "the Arctic",
+    "Africa",
+    "Australia"
+   ],
+   "explain": "“They live in Antarctica, the coldest place on Earth.”",
+   "passage": "Fact file: Emperor penguins\n\nEmperor penguins are the biggest penguins in the world. They can grow to more than a metre tall, about as tall as a six-year-old child.\n\nThey live in Antarctica, the coldest place on Earth. To keep warm, they have a thick layer of fat called blubber, and tightly packed feathers.\n\nPenguins are birds, but they cannot fly. Instead, they are amazing swimmers. They use their flippers like wings to “fly” through the water, catching fish and squid.\n\nIn the middle of winter, the mother penguin lays one egg. Then she goes to sea to feed. The father keeps the egg warm on his feet, under a flap of skin, for about two months. He eats nothing at all until she comes back!",
+   "passageSource": "A fact file written for this app",
+   "accept": [
+    "antarctic"
+   ]
+  },
+  {
+   "id": "reading.pen.2",
+   "topic": "reading.facts-2",
+   "kind": "mcq",
+   "prompt": "How do emperor penguins keep warm?",
+   "options": [
+    {
+     "text": "A thick layer of fat called blubber, and tightly packed feathers",
+     "correct": true
+    },
+    {
+     "text": "They wear scarves",
+     "correct": false,
+     "feedback": "Only in cartoons!"
+    },
+    {
+     "text": "They live in caves",
+     "correct": false,
+     "feedback": "The fact file says blubber and feathers."
+    }
+   ],
+   "explain": "“A thick layer of fat called blubber, and tightly packed feathers.”",
+   "passage": "Fact file: Emperor penguins\n\nEmperor penguins are the biggest penguins in the world. They can grow to more than a metre tall, about as tall as a six-year-old child.\n\nThey live in Antarctica, the coldest place on Earth. To keep warm, they have a thick layer of fat called blubber, and tightly packed feathers.\n\nPenguins are birds, but they cannot fly. Instead, they are amazing swimmers. They use their flippers like wings to “fly” through the water, catching fish and squid.\n\nIn the middle of winter, the mother penguin lays one egg. Then she goes to sea to feed. The father keeps the egg warm on his feet, under a flap of skin, for about two months. He eats nothing at all until she comes back!",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.pen.3",
+   "topic": "reading.facts-2",
+   "kind": "fact",
+   "prompt": "Find and copy the word for the thick layer of fat.",
+   "answer": "blubber",
+   "distractors": [
+    "feathers",
+    "flippers",
+    "squid"
+   ],
+   "explain": "Blubber keeps whales, seals and penguins warm.",
+   "passage": "Fact file: Emperor penguins\n\nEmperor penguins are the biggest penguins in the world. They can grow to more than a metre tall, about as tall as a six-year-old child.\n\nThey live in Antarctica, the coldest place on Earth. To keep warm, they have a thick layer of fat called blubber, and tightly packed feathers.\n\nPenguins are birds, but they cannot fly. Instead, they are amazing swimmers. They use their flippers like wings to “fly” through the water, catching fish and squid.\n\nIn the middle of winter, the mother penguin lays one egg. Then she goes to sea to feed. The father keeps the egg warm on his feet, under a flap of skin, for about two months. He eats nothing at all until she comes back!",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.pen.4",
+   "topic": "reading.facts-2",
+   "kind": "mcq",
+   "prompt": "Who keeps the egg warm in winter?",
+   "options": [
+    {
+     "text": "The father, on his feet",
+     "correct": true
+    },
+    {
+     "text": "The mother, in a nest",
+     "correct": false,
+     "feedback": "The mother goes to sea to feed."
+    },
+    {
+     "text": "Both, taking turns each day",
+     "correct": false,
+     "feedback": "The father does it for about two months."
+    }
+   ],
+   "explain": "“The father keeps the egg warm on his feet, under a flap of skin.”",
+   "passage": "Fact file: Emperor penguins\n\nEmperor penguins are the biggest penguins in the world. They can grow to more than a metre tall, about as tall as a six-year-old child.\n\nThey live in Antarctica, the coldest place on Earth. To keep warm, they have a thick layer of fat called blubber, and tightly packed feathers.\n\nPenguins are birds, but they cannot fly. Instead, they are amazing swimmers. They use their flippers like wings to “fly” through the water, catching fish and squid.\n\nIn the middle of winter, the mother penguin lays one egg. Then she goes to sea to feed. The father keeps the egg warm on his feet, under a flap of skin, for about two months. He eats nothing at all until she comes back!",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.pen.5",
+   "topic": "reading.facts-2",
+   "kind": "mcq",
+   "prompt": "Penguins are birds. Why is that surprising?",
+   "options": [
+    {
+     "text": "They cannot fly",
+     "correct": true
+    },
+    {
+     "text": "They have feathers",
+     "correct": false,
+     "feedback": "All birds have feathers, so that is not surprising."
+    },
+    {
+     "text": "They lay eggs",
+     "correct": false,
+     "feedback": "All birds lay eggs."
+    }
+   ],
+   "explain": "Most birds fly, but penguins “fly” through water instead.",
+   "passage": "Fact file: Emperor penguins\n\nEmperor penguins are the biggest penguins in the world. They can grow to more than a metre tall, about as tall as a six-year-old child.\n\nThey live in Antarctica, the coldest place on Earth. To keep warm, they have a thick layer of fat called blubber, and tightly packed feathers.\n\nPenguins are birds, but they cannot fly. Instead, they are amazing swimmers. They use their flippers like wings to “fly” through the water, catching fish and squid.\n\nIn the middle of winter, the mother penguin lays one egg. Then she goes to sea to feed. The father keeps the egg warm on his feet, under a flap of skin, for about two months. He eats nothing at all until she comes back!",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.vol.1",
+   "topic": "reading.facts-2",
+   "kind": "mcq",
+   "prompt": "What is the difference between magma and lava?",
+   "options": [
+    {
+     "text": "Magma is melted rock underground; lava is the same rock once it comes out",
+     "correct": true
+    },
+    {
+     "text": "Magma is hot and lava is cold",
+     "correct": false,
+     "feedback": "Both are extremely hot."
+    },
+    {
+     "text": "They are different colours",
+     "correct": false,
+     "feedback": "It is about where the rock is."
+    }
+   ],
+   "explain": "“Once it comes out of the ground, we call it lava.”",
+   "passage": "Fact file: Volcanoes\n\nDeep under the ground, it is so hot that rock melts. This melted rock is called magma.\n\nA volcano is an opening in the Earth’s surface. When a volcano erupts, magma bursts out. Once it comes out of the ground, we call it lava. Lava can be as hot as 1,000 degrees Celsius, ten times hotter than boiling water!\n\nVolcanoes can also throw out clouds of ash and gas. Long ago, in the year 79, a volcano in Italy called Vesuvius erupted. Its ash buried the Roman town of Pompeii. Today we can walk through its streets and see how the Romans lived.\n\nScientists who study volcanoes are called volcanologists. They watch for clues, like small earthquakes, that a volcano might be about to erupt.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.vol.2",
+   "topic": "reading.facts-2",
+   "kind": "fact",
+   "prompt": "Which Roman town was buried by ash from Vesuvius?",
+   "answer": "Pompeii",
+   "distractors": [
+    "Rome",
+    "London",
+    "Athens"
+   ],
+   "explain": "In the year 79, ash from Vesuvius buried Pompeii.",
+   "passage": "Fact file: Volcanoes\n\nDeep under the ground, it is so hot that rock melts. This melted rock is called magma.\n\nA volcano is an opening in the Earth’s surface. When a volcano erupts, magma bursts out. Once it comes out of the ground, we call it lava. Lava can be as hot as 1,000 degrees Celsius, ten times hotter than boiling water!\n\nVolcanoes can also throw out clouds of ash and gas. Long ago, in the year 79, a volcano in Italy called Vesuvius erupted. Its ash buried the Roman town of Pompeii. Today we can walk through its streets and see how the Romans lived.\n\nScientists who study volcanoes are called volcanologists. They watch for clues, like small earthquakes, that a volcano might be about to erupt.",
+   "passageSource": "A fact file written for this app",
+   "accept": [
+    "pompei"
+   ]
+  },
+  {
+   "id": "reading.vol.3",
+   "topic": "reading.facts-2",
+   "kind": "mcq",
+   "prompt": "How hot can lava be?",
+   "options": [
+    {
+     "text": "About 1,000 degrees Celsius",
+     "correct": true
+    },
+    {
+     "text": "About 100 degrees Celsius",
+     "correct": false,
+     "feedback": "That is boiling water. Lava is ten times hotter."
+    },
+    {
+     "text": "About 10 degrees Celsius",
+     "correct": false,
+     "feedback": "That is a cold day!"
+    }
+   ],
+   "explain": "“As hot as 1,000 degrees Celsius, ten times hotter than boiling water!”",
+   "passage": "Fact file: Volcanoes\n\nDeep under the ground, it is so hot that rock melts. This melted rock is called magma.\n\nA volcano is an opening in the Earth’s surface. When a volcano erupts, magma bursts out. Once it comes out of the ground, we call it lava. Lava can be as hot as 1,000 degrees Celsius, ten times hotter than boiling water!\n\nVolcanoes can also throw out clouds of ash and gas. Long ago, in the year 79, a volcano in Italy called Vesuvius erupted. Its ash buried the Roman town of Pompeii. Today we can walk through its streets and see how the Romans lived.\n\nScientists who study volcanoes are called volcanologists. They watch for clues, like small earthquakes, that a volcano might be about to erupt.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.vol.4",
+   "topic": "reading.facts-2",
+   "kind": "fact",
+   "prompt": "What is a scientist who studies volcanoes called?",
+   "answer": "a volcanologist",
+   "distractors": [
+    "a palaeontologist",
+    "an astronaut",
+    "a vet"
+   ],
+   "explain": "“Scientists who study volcanoes are called volcanologists.”",
+   "passage": "Fact file: Volcanoes\n\nDeep under the ground, it is so hot that rock melts. This melted rock is called magma.\n\nA volcano is an opening in the Earth’s surface. When a volcano erupts, magma bursts out. Once it comes out of the ground, we call it lava. Lava can be as hot as 1,000 degrees Celsius, ten times hotter than boiling water!\n\nVolcanoes can also throw out clouds of ash and gas. Long ago, in the year 79, a volcano in Italy called Vesuvius erupted. Its ash buried the Roman town of Pompeii. Today we can walk through its streets and see how the Romans lived.\n\nScientists who study volcanoes are called volcanologists. They watch for clues, like small earthquakes, that a volcano might be about to erupt.",
+   "passageSource": "A fact file written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.dino.1",
+   "topic": "reading.facts-2",
+   "kind": "mcq",
+   "prompt": "What does the word “dinosaur” mean?",
+   "options": [
+    {
+     "text": "Terrible lizard",
+     "correct": true
+    },
+    {
+     "text": "Big bird",
+     "correct": false,
+     "feedback": "Look for the meaning in the fact file."
+    },
+    {
+     "text": "Old bones",
+     "correct": false,
+     "feedback": "It means “terrible lizard”."
+    }
+   ],
+   "explain": "“The word dinosaur means terrible lizard.”",
+   "passage": "Fact file: Dinosaurs\n\nDinosaurs lived on Earth for millions of years. The last dinosaurs died out about 66 million years ago, long before there were any people.\n\nThe word “dinosaur” means “terrible lizard”. Some dinosaurs were as small as a chicken. Others were longer than three buses!\n\nSome dinosaurs, like Tyrannosaurus rex, were carnivores: they ate meat. T. rex had teeth as long as bananas. Others, like Stegosaurus and Triceratops, were herbivores: they ate plants.\n\nHow do we know about dinosaurs? From fossils. Fossils are the remains of bones, teeth and footprints that have turned to stone. Scientists who study fossils are called palaeontologists.\n\nMost scientists think that birds are the living relatives of dinosaurs. So the next time you see a pigeon, say hello to a tiny dinosaur!",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.dino.2",
+   "topic": "reading.facts-2",
+   "kind": "mcq",
+   "prompt": "Which dinosaur was a meat-eater (carnivore)?",
+   "options": [
+    {
+     "text": "Tyrannosaurus rex",
+     "correct": true
+    },
+    {
+     "text": "Stegosaurus",
+     "correct": false,
+     "feedback": "Stegosaurus ate plants."
+    },
+    {
+     "text": "Triceratops",
+     "correct": false,
+     "feedback": "Triceratops ate plants."
+    }
+   ],
+   "explain": "T. rex had teeth as long as bananas!",
+   "passage": "Fact file: Dinosaurs\n\nDinosaurs lived on Earth for millions of years. The last dinosaurs died out about 66 million years ago, long before there were any people.\n\nThe word “dinosaur” means “terrible lizard”. Some dinosaurs were as small as a chicken. Others were longer than three buses!\n\nSome dinosaurs, like Tyrannosaurus rex, were carnivores: they ate meat. T. rex had teeth as long as bananas. Others, like Stegosaurus and Triceratops, were herbivores: they ate plants.\n\nHow do we know about dinosaurs? From fossils. Fossils are the remains of bones, teeth and footprints that have turned to stone. Scientists who study fossils are called palaeontologists.\n\nMost scientists think that birds are the living relatives of dinosaurs. So the next time you see a pigeon, say hello to a tiny dinosaur!",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.dino.3",
+   "topic": "reading.facts-2",
+   "kind": "mcq",
+   "prompt": "How do we know about dinosaurs?",
+   "options": [
+    {
+     "text": "From fossils of bones, teeth and footprints",
+     "correct": true
+    },
+    {
+     "text": "From old photographs",
+     "correct": false,
+     "feedback": "There were no cameras, or people, then."
+    },
+    {
+     "text": "People wrote about them",
+     "correct": false,
+     "feedback": "There were no people when dinosaurs lived."
+    }
+   ],
+   "explain": "“How do we know about dinosaurs? From fossils.”",
+   "passage": "Fact file: Dinosaurs\n\nDinosaurs lived on Earth for millions of years. The last dinosaurs died out about 66 million years ago, long before there were any people.\n\nThe word “dinosaur” means “terrible lizard”. Some dinosaurs were as small as a chicken. Others were longer than three buses!\n\nSome dinosaurs, like Tyrannosaurus rex, were carnivores: they ate meat. T. rex had teeth as long as bananas. Others, like Stegosaurus and Triceratops, were herbivores: they ate plants.\n\nHow do we know about dinosaurs? From fossils. Fossils are the remains of bones, teeth and footprints that have turned to stone. Scientists who study fossils are called palaeontologists.\n\nMost scientists think that birds are the living relatives of dinosaurs. So the next time you see a pigeon, say hello to a tiny dinosaur!",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.dino.4",
+   "topic": "reading.facts-2",
+   "kind": "mcq",
+   "prompt": "Why does the fact file call a pigeon “a tiny dinosaur”?",
+   "options": [
+    {
+     "text": "Most scientists think birds are relatives of dinosaurs",
+     "correct": true
+    },
+    {
+     "text": "Pigeons are millions of years old",
+     "correct": false,
+     "feedback": "Each pigeon is young, but birds are related to dinosaurs."
+    },
+    {
+     "text": "Pigeons have big teeth",
+     "correct": false,
+     "feedback": "Pigeons have no teeth!"
+    }
+   ],
+   "explain": "“Most scientists think that birds are the living relatives of dinosaurs.”",
+   "passage": "Fact file: Dinosaurs\n\nDinosaurs lived on Earth for millions of years. The last dinosaurs died out about 66 million years ago, long before there were any people.\n\nThe word “dinosaur” means “terrible lizard”. Some dinosaurs were as small as a chicken. Others were longer than three buses!\n\nSome dinosaurs, like Tyrannosaurus rex, were carnivores: they ate meat. T. rex had teeth as long as bananas. Others, like Stegosaurus and Triceratops, were herbivores: they ate plants.\n\nHow do we know about dinosaurs? From fossils. Fossils are the remains of bones, teeth and footprints that have turned to stone. Scientists who study fossils are called palaeontologists.\n\nMost scientists think that birds are the living relatives of dinosaurs. So the next time you see a pigeon, say hello to a tiny dinosaur!",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.dino.5",
+   "topic": "reading.facts-2",
+   "kind": "fact",
+   "prompt": "About how long ago did the last dinosaurs die out?",
+   "answer": "about 66 million years ago",
+   "distractors": [
+    "about 66 years ago",
+    "about 6,000 years ago",
+    "last year"
+   ],
+   "explain": "Dinosaurs died out long before there were people.",
+   "passage": "Fact file: Dinosaurs\n\nDinosaurs lived on Earth for millions of years. The last dinosaurs died out about 66 million years ago, long before there were any people.\n\nThe word “dinosaur” means “terrible lizard”. Some dinosaurs were as small as a chicken. Others were longer than three buses!\n\nSome dinosaurs, like Tyrannosaurus rex, were carnivores: they ate meat. T. rex had teeth as long as bananas. Others, like Stegosaurus and Triceratops, were herbivores: they ate plants.\n\nHow do we know about dinosaurs? From fossils. Fossils are the remains of bones, teeth and footprints that have turned to stone. Scientists who study fossils are called palaeontologists.\n\nMost scientists think that birds are the living relatives of dinosaurs. So the next time you see a pigeon, say hello to a tiny dinosaur!",
+   "passageSource": "A fact file written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.spit.1",
+   "topic": "reading.facts-3",
+   "kind": "fact",
+   "prompt": "Who designed the Spitfire?",
+   "answer": "R. J. Mitchell",
+   "distractors": [
+    "Neil Armstrong",
+    "Florence Nightingale",
+    "Isambard Kingdom Brunel"
+   ],
+   "explain": "“It was designed by an engineer called R. J. Mitchell.”",
+   "passage": "Fact file: The Spitfire\n\nThe Spitfire is one of the most famous aeroplanes ever built. It was designed by an engineer called R. J. Mitchell, and it first flew in 1936.\n\nThe Spitfire was a fighter plane with room for just one pilot. It had a powerful engine called the Merlin, and special curved wings shaped like an oval. These wings helped it to turn very quickly.\n\nIn the summer of 1940, during the Second World War, Spitfires and Hurricanes flew in the Battle of Britain. Their pilots stopped enemy planes from taking control of the skies over Britain.\n\nPeople all over Britain gave money to help build more Spitfires. Some even gave their old pots and pans so the metal could be used!\n\nToday, a few Spitfires still fly at air shows. The sound of their engines is unforgettable.",
+   "passageSource": "A fact file written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.spit.2",
+   "topic": "reading.facts-3",
+   "kind": "fact",
+   "prompt": "In which year did the Spitfire first fly?",
+   "answer": "1936",
+   "distractors": [
+    "1940",
+    "1066",
+    "1969"
+   ],
+   "explain": "“It first flew in 1936.”",
+   "passage": "Fact file: The Spitfire\n\nThe Spitfire is one of the most famous aeroplanes ever built. It was designed by an engineer called R. J. Mitchell, and it first flew in 1936.\n\nThe Spitfire was a fighter plane with room for just one pilot. It had a powerful engine called the Merlin, and special curved wings shaped like an oval. These wings helped it to turn very quickly.\n\nIn the summer of 1940, during the Second World War, Spitfires and Hurricanes flew in the Battle of Britain. Their pilots stopped enemy planes from taking control of the skies over Britain.\n\nPeople all over Britain gave money to help build more Spitfires. Some even gave their old pots and pans so the metal could be used!\n\nToday, a few Spitfires still fly at air shows. The sound of their engines is unforgettable.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.spit.3",
+   "topic": "reading.facts-3",
+   "kind": "mcq",
+   "prompt": "What helped the Spitfire turn very quickly?",
+   "options": [
+    {
+     "text": "Its special curved, oval-shaped wings",
+     "correct": true
+    },
+    {
+     "text": "Its bright colours",
+     "correct": false,
+     "feedback": "The fact file says the wings helped it turn."
+    },
+    {
+     "text": "It had two pilots",
+     "correct": false,
+     "feedback": "It had room for just one pilot."
+    }
+   ],
+   "explain": "“Special curved wings shaped like an oval. These wings helped it to turn very quickly.”",
+   "passage": "Fact file: The Spitfire\n\nThe Spitfire is one of the most famous aeroplanes ever built. It was designed by an engineer called R. J. Mitchell, and it first flew in 1936.\n\nThe Spitfire was a fighter plane with room for just one pilot. It had a powerful engine called the Merlin, and special curved wings shaped like an oval. These wings helped it to turn very quickly.\n\nIn the summer of 1940, during the Second World War, Spitfires and Hurricanes flew in the Battle of Britain. Their pilots stopped enemy planes from taking control of the skies over Britain.\n\nPeople all over Britain gave money to help build more Spitfires. Some even gave their old pots and pans so the metal could be used!\n\nToday, a few Spitfires still fly at air shows. The sound of their engines is unforgettable.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.spit.4",
+   "topic": "reading.facts-3",
+   "kind": "mcq",
+   "prompt": "What happened in the Battle of Britain in 1940?",
+   "options": [
+    {
+     "text": "Pilots stopped enemy planes taking control of the skies over Britain",
+     "correct": true
+    },
+    {
+     "text": "Ships fought in the sea",
+     "correct": false,
+     "feedback": "It was a battle in the air."
+    },
+    {
+     "text": "Spitfires flew to the Moon",
+     "correct": false,
+     "feedback": "Spitfires could not fly to space!"
+    }
+   ],
+   "explain": "“Their pilots stopped enemy planes from taking control of the skies over Britain.”",
+   "passage": "Fact file: The Spitfire\n\nThe Spitfire is one of the most famous aeroplanes ever built. It was designed by an engineer called R. J. Mitchell, and it first flew in 1936.\n\nThe Spitfire was a fighter plane with room for just one pilot. It had a powerful engine called the Merlin, and special curved wings shaped like an oval. These wings helped it to turn very quickly.\n\nIn the summer of 1940, during the Second World War, Spitfires and Hurricanes flew in the Battle of Britain. Their pilots stopped enemy planes from taking control of the skies over Britain.\n\nPeople all over Britain gave money to help build more Spitfires. Some even gave their old pots and pans so the metal could be used!\n\nToday, a few Spitfires still fly at air shows. The sound of their engines is unforgettable.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.spit.5",
+   "topic": "reading.facts-3",
+   "kind": "mcq",
+   "prompt": "Why did people give their old pots and pans?",
+   "options": [
+    {
+     "text": "So the metal could be used to build more planes",
+     "correct": true
+    },
+    {
+     "text": "They didn’t need to cook any more",
+     "correct": false,
+     "feedback": "They wanted to help build Spitfires."
+    },
+    {
+     "text": "To make medals",
+     "correct": false,
+     "feedback": "The metal was for building planes."
+    }
+   ],
+   "explain": "Everybody wanted to help: “so the metal could be used”.",
+   "passage": "Fact file: The Spitfire\n\nThe Spitfire is one of the most famous aeroplanes ever built. It was designed by an engineer called R. J. Mitchell, and it first flew in 1936.\n\nThe Spitfire was a fighter plane with room for just one pilot. It had a powerful engine called the Merlin, and special curved wings shaped like an oval. These wings helped it to turn very quickly.\n\nIn the summer of 1940, during the Second World War, Spitfires and Hurricanes flew in the Battle of Britain. Their pilots stopped enemy planes from taking control of the skies over Britain.\n\nPeople all over Britain gave money to help build more Spitfires. Some even gave their old pots and pans so the metal could be used!\n\nToday, a few Spitfires still fly at air shows. The sound of their engines is unforgettable.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.kn.1",
+   "topic": "reading.facts-3",
+   "kind": "order",
+   "prompt": "Put the stages of becoming a knight in order.",
+   "items": [
+    "page",
+    "squire",
+    "knight"
+   ],
+   "labels": null,
+   "explain": "Page at about 7, squire at about 14, knight at about 21.",
+   "passage": "Fact file: How to become a knight\n\nIn the Middle Ages, a boy who wanted to be a knight had to train for many years.\n\nAt about seven years old, he went to live in a lord’s castle as a page. He learned good manners, and how to ride a horse.\n\nAt about fourteen, he became a squire. A squire looked after a knight’s armour and horse, and practised fighting with a sword and lance.\n\nAt about twenty-one, if he had trained well, the squire was made a knight. He knelt in front of the lord or the king, who tapped him on the shoulder with a sword. This was called being dubbed.\n\nKnights wore armour made of metal. Each knight had a coat of arms on his shield, so that people could tell who he was when his face was hidden by his helmet.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.kn.2",
+   "topic": "reading.facts-3",
+   "kind": "mcq",
+   "prompt": "What did a page learn?",
+   "options": [
+    {
+     "text": "Good manners and how to ride a horse",
+     "correct": true
+    },
+    {
+     "text": "How to fly a plane",
+     "correct": false,
+     "feedback": "This was hundreds of years before planes!"
+    },
+    {
+     "text": "How to be a king",
+     "correct": false,
+     "feedback": "A page learned manners and riding."
+    }
+   ],
+   "explain": "“He learned good manners, and how to ride a horse.”",
+   "passage": "Fact file: How to become a knight\n\nIn the Middle Ages, a boy who wanted to be a knight had to train for many years.\n\nAt about seven years old, he went to live in a lord’s castle as a page. He learned good manners, and how to ride a horse.\n\nAt about fourteen, he became a squire. A squire looked after a knight’s armour and horse, and practised fighting with a sword and lance.\n\nAt about twenty-one, if he had trained well, the squire was made a knight. He knelt in front of the lord or the king, who tapped him on the shoulder with a sword. This was called being dubbed.\n\nKnights wore armour made of metal. Each knight had a coat of arms on his shield, so that people could tell who he was when his face was hidden by his helmet.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.kn.3",
+   "topic": "reading.facts-3",
+   "kind": "mcq",
+   "prompt": "What did a squire do?",
+   "options": [
+    {
+     "text": "Looked after a knight’s armour and horse, and practised fighting",
+     "correct": true
+    },
+    {
+     "text": "Cooked for the king",
+     "correct": false,
+     "feedback": "Look for “squire” in the fact file."
+    },
+    {
+     "text": "Built the castle",
+     "correct": false,
+     "feedback": "A squire helped a knight."
+    }
+   ],
+   "explain": "“A squire looked after a knight’s armour and horse, and practised fighting.”",
+   "passage": "Fact file: How to become a knight\n\nIn the Middle Ages, a boy who wanted to be a knight had to train for many years.\n\nAt about seven years old, he went to live in a lord’s castle as a page. He learned good manners, and how to ride a horse.\n\nAt about fourteen, he became a squire. A squire looked after a knight’s armour and horse, and practised fighting with a sword and lance.\n\nAt about twenty-one, if he had trained well, the squire was made a knight. He knelt in front of the lord or the king, who tapped him on the shoulder with a sword. This was called being dubbed.\n\nKnights wore armour made of metal. Each knight had a coat of arms on his shield, so that people could tell who he was when his face was hidden by his helmet.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.kn.4",
+   "topic": "reading.facts-3",
+   "kind": "fact",
+   "prompt": "What was it called when a squire was tapped on the shoulder with a sword to become a knight?",
+   "answer": "being dubbed",
+   "distractors": [
+    "being crowned",
+    "being knighted by a page",
+    "jousting"
+   ],
+   "explain": "“This was called being dubbed.”",
+   "passage": "Fact file: How to become a knight\n\nIn the Middle Ages, a boy who wanted to be a knight had to train for many years.\n\nAt about seven years old, he went to live in a lord’s castle as a page. He learned good manners, and how to ride a horse.\n\nAt about fourteen, he became a squire. A squire looked after a knight’s armour and horse, and practised fighting with a sword and lance.\n\nAt about twenty-one, if he had trained well, the squire was made a knight. He knelt in front of the lord or the king, who tapped him on the shoulder with a sword. This was called being dubbed.\n\nKnights wore armour made of metal. Each knight had a coat of arms on his shield, so that people could tell who he was when his face was hidden by his helmet.",
+   "passageSource": "A fact file written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.kn.5",
+   "topic": "reading.facts-3",
+   "kind": "mcq",
+   "prompt": "Why did each knight have a coat of arms on his shield?",
+   "options": [
+    {
+     "text": "So people could tell who he was when his helmet hid his face",
+     "correct": true
+    },
+    {
+     "text": "To make the shield heavier",
+     "correct": false,
+     "feedback": "It was for recognising him."
+    },
+    {
+     "text": "Because it was the law to paint shields",
+     "correct": false,
+     "feedback": "The fact file gives the reason: recognising him."
+    }
+   ],
+   "explain": "“So that people could tell who he was when his face was hidden by his helmet.”",
+   "passage": "Fact file: How to become a knight\n\nIn the Middle Ages, a boy who wanted to be a knight had to train for many years.\n\nAt about seven years old, he went to live in a lord’s castle as a page. He learned good manners, and how to ride a horse.\n\nAt about fourteen, he became a squire. A squire looked after a knight’s armour and horse, and practised fighting with a sword and lance.\n\nAt about twenty-one, if he had trained well, the squire was made a knight. He knelt in front of the lord or the king, who tapped him on the shoulder with a sword. This was called being dubbed.\n\nKnights wore armour made of metal. Each knight had a coat of arms on his shield, so that people could tell who he was when his face was hidden by his helmet.",
+   "passageSource": "A fact file written for this app"
+  },
+  {
+   "id": "reading.nut.1",
+   "topic": "reading.nutkin",
+   "kind": "fact",
+   "prompt": "What was the name of Nutkin’s brother?",
+   "answer": "Twinkleberry",
+   "distractors": [
+    "Old Brown",
+    "Peter",
+    "Flopsy"
+   ],
+   "explain": "“He had a brother called Twinkleberry.”",
+   "passage": "This is a Tale about a tail—a tail that belonged to a little red squirrel, and his name was Nutkin.\n\nHe had a brother called Twinkleberry, and a great many cousins: they lived in a wood at the edge of a lake.\n\nIn the middle of the lake there is an island covered with trees and nut bushes; and amongst those trees stands a hollow oak-tree, which is the house of an owl who is called Old Brown.\n\nOne autumn when the nuts were ripe, and the leaves on the hazel bushes were golden and green—Nutkin and Twinkleberry and all the other little squirrels came out of the wood, and down to the edge of the lake.\n\nThey made little rafts out of twigs, and they paddled away over the water to Owl Island to gather nuts.\n\nEach squirrel had a little sack and a large oar, and spread out his tail for a sail.\n\nThey also took with them an offering of three fat mice as a present for Old Brown, and put them down upon his door-step.\n\nThen Twinkleberry and the other little squirrels each made a low bow, and said politely—\n\n“Old Mr. Brown, will you favour us with permission to gather nuts upon your island?”\n\nBut Nutkin was excessively impertinent in his manners. He bobbed up and down like a little red cherry, singing—\n\n“Riddle me, riddle me, rot-tot-tote!\nA little wee man, in a red red coat!\nA staff in his hand, and a stone in his throat;\nIf you’ll tell me this riddle, I’ll give you a groat.”\n\nNow this riddle is as old as the hills; Mr. Brown paid no attention whatever to Nutkin.\n\nHe shut his eyes obstinately and went to sleep.",
+   "passageSource": "Beatrix Potter, The Tale of Squirrel Nutkin (1903)",
+   "accept": [
+    "twinkle berry"
+   ]
+  },
+  {
+   "id": "reading.nut.2",
+   "topic": "reading.nutkin",
+   "kind": "mcq",
+   "prompt": "Where did Old Brown live?",
+   "options": [
+    {
+     "text": "In a hollow oak-tree on an island in the lake",
+     "correct": true
+    },
+    {
+     "text": "In a sand-bank under a fir-tree",
+     "correct": false,
+     "feedback": "That is where Peter Rabbit lived!"
+    },
+    {
+     "text": "In the wood at the edge of the lake",
+     "correct": false,
+     "feedback": "The squirrels lived there."
+    }
+   ],
+   "explain": "“A hollow oak-tree, which is the house of an owl who is called Old Brown.”",
+   "passage": "This is a Tale about a tail—a tail that belonged to a little red squirrel, and his name was Nutkin.\n\nHe had a brother called Twinkleberry, and a great many cousins: they lived in a wood at the edge of a lake.\n\nIn the middle of the lake there is an island covered with trees and nut bushes; and amongst those trees stands a hollow oak-tree, which is the house of an owl who is called Old Brown.\n\nOne autumn when the nuts were ripe, and the leaves on the hazel bushes were golden and green—Nutkin and Twinkleberry and all the other little squirrels came out of the wood, and down to the edge of the lake.\n\nThey made little rafts out of twigs, and they paddled away over the water to Owl Island to gather nuts.\n\nEach squirrel had a little sack and a large oar, and spread out his tail for a sail.\n\nThey also took with them an offering of three fat mice as a present for Old Brown, and put them down upon his door-step.\n\nThen Twinkleberry and the other little squirrels each made a low bow, and said politely—\n\n“Old Mr. Brown, will you favour us with permission to gather nuts upon your island?”\n\nBut Nutkin was excessively impertinent in his manners. He bobbed up and down like a little red cherry, singing—\n\n“Riddle me, riddle me, rot-tot-tote!\nA little wee man, in a red red coat!\nA staff in his hand, and a stone in his throat;\nIf you’ll tell me this riddle, I’ll give you a groat.”\n\nNow this riddle is as old as the hills; Mr. Brown paid no attention whatever to Nutkin.\n\nHe shut his eyes obstinately and went to sleep.",
+   "passageSource": "Beatrix Potter, The Tale of Squirrel Nutkin (1903)"
+  },
+  {
+   "id": "reading.nut.3",
+   "topic": "reading.nutkin",
+   "kind": "mcq",
+   "prompt": "How did the squirrels sail to the island?",
+   "options": [
+    {
+     "text": "On rafts made of twigs, using their tails as sails",
+     "correct": true
+    },
+    {
+     "text": "In a rowing boat",
+     "correct": false,
+     "feedback": "They made little rafts out of twigs."
+    },
+    {
+     "text": "They swam",
+     "correct": false,
+     "feedback": "They paddled rafts."
+    }
+   ],
+   "explain": "“They made little rafts out of twigs… and spread out his tail for a sail.”",
+   "passage": "This is a Tale about a tail—a tail that belonged to a little red squirrel, and his name was Nutkin.\n\nHe had a brother called Twinkleberry, and a great many cousins: they lived in a wood at the edge of a lake.\n\nIn the middle of the lake there is an island covered with trees and nut bushes; and amongst those trees stands a hollow oak-tree, which is the house of an owl who is called Old Brown.\n\nOne autumn when the nuts were ripe, and the leaves on the hazel bushes were golden and green—Nutkin and Twinkleberry and all the other little squirrels came out of the wood, and down to the edge of the lake.\n\nThey made little rafts out of twigs, and they paddled away over the water to Owl Island to gather nuts.\n\nEach squirrel had a little sack and a large oar, and spread out his tail for a sail.\n\nThey also took with them an offering of three fat mice as a present for Old Brown, and put them down upon his door-step.\n\nThen Twinkleberry and the other little squirrels each made a low bow, and said politely—\n\n“Old Mr. Brown, will you favour us with permission to gather nuts upon your island?”\n\nBut Nutkin was excessively impertinent in his manners. He bobbed up and down like a little red cherry, singing—\n\n“Riddle me, riddle me, rot-tot-tote!\nA little wee man, in a red red coat!\nA staff in his hand, and a stone in his throat;\nIf you’ll tell me this riddle, I’ll give you a groat.”\n\nNow this riddle is as old as the hills; Mr. Brown paid no attention whatever to Nutkin.\n\nHe shut his eyes obstinately and went to sleep.",
+   "passageSource": "Beatrix Potter, The Tale of Squirrel Nutkin (1903)"
+  },
+  {
+   "id": "reading.nut.4",
+   "topic": "reading.nutkin",
+   "kind": "mcq",
+   "prompt": "Why did the squirrels bring three fat mice?",
+   "options": [
+    {
+     "text": "As a present for Old Brown, to ask permission to gather nuts",
+     "correct": true
+    },
+    {
+     "text": "To eat on the journey",
+     "correct": false,
+     "feedback": "They put them on Old Brown’s door-step."
+    },
+    {
+     "text": "As pets",
+     "correct": false,
+     "feedback": "They were an “offering… as a present for Old Brown”."
+    }
+   ],
+   "explain": "They were being polite to the owl whose island it was.",
+   "passage": "This is a Tale about a tail—a tail that belonged to a little red squirrel, and his name was Nutkin.\n\nHe had a brother called Twinkleberry, and a great many cousins: they lived in a wood at the edge of a lake.\n\nIn the middle of the lake there is an island covered with trees and nut bushes; and amongst those trees stands a hollow oak-tree, which is the house of an owl who is called Old Brown.\n\nOne autumn when the nuts were ripe, and the leaves on the hazel bushes were golden and green—Nutkin and Twinkleberry and all the other little squirrels came out of the wood, and down to the edge of the lake.\n\nThey made little rafts out of twigs, and they paddled away over the water to Owl Island to gather nuts.\n\nEach squirrel had a little sack and a large oar, and spread out his tail for a sail.\n\nThey also took with them an offering of three fat mice as a present for Old Brown, and put them down upon his door-step.\n\nThen Twinkleberry and the other little squirrels each made a low bow, and said politely—\n\n“Old Mr. Brown, will you favour us with permission to gather nuts upon your island?”\n\nBut Nutkin was excessively impertinent in his manners. He bobbed up and down like a little red cherry, singing—\n\n“Riddle me, riddle me, rot-tot-tote!\nA little wee man, in a red red coat!\nA staff in his hand, and a stone in his throat;\nIf you’ll tell me this riddle, I’ll give you a groat.”\n\nNow this riddle is as old as the hills; Mr. Brown paid no attention whatever to Nutkin.\n\nHe shut his eyes obstinately and went to sleep.",
+   "passageSource": "Beatrix Potter, The Tale of Squirrel Nutkin (1903)"
+  },
+  {
+   "id": "reading.nut.5",
+   "topic": "reading.nutkin",
+   "kind": "mcq",
+   "prompt": "“Nutkin was excessively impertinent.” What does “impertinent” mean?",
+   "options": [
+    {
+     "text": "Rude and cheeky",
+     "correct": true
+    },
+    {
+     "text": "Very polite",
+     "correct": false,
+     "feedback": "The other squirrels were polite. Nutkin was the opposite."
+    },
+    {
+     "text": "Very hungry",
+     "correct": false,
+     "feedback": "Look at how he behaves: bobbing about and singing riddles at the owl."
+    }
+   ],
+   "explain": "Instead of bowing, Nutkin bobbed about singing riddles. That is cheeky and rude.",
+   "passage": "This is a Tale about a tail—a tail that belonged to a little red squirrel, and his name was Nutkin.\n\nHe had a brother called Twinkleberry, and a great many cousins: they lived in a wood at the edge of a lake.\n\nIn the middle of the lake there is an island covered with trees and nut bushes; and amongst those trees stands a hollow oak-tree, which is the house of an owl who is called Old Brown.\n\nOne autumn when the nuts were ripe, and the leaves on the hazel bushes were golden and green—Nutkin and Twinkleberry and all the other little squirrels came out of the wood, and down to the edge of the lake.\n\nThey made little rafts out of twigs, and they paddled away over the water to Owl Island to gather nuts.\n\nEach squirrel had a little sack and a large oar, and spread out his tail for a sail.\n\nThey also took with them an offering of three fat mice as a present for Old Brown, and put them down upon his door-step.\n\nThen Twinkleberry and the other little squirrels each made a low bow, and said politely—\n\n“Old Mr. Brown, will you favour us with permission to gather nuts upon your island?”\n\nBut Nutkin was excessively impertinent in his manners. He bobbed up and down like a little red cherry, singing—\n\n“Riddle me, riddle me, rot-tot-tote!\nA little wee man, in a red red coat!\nA staff in his hand, and a stone in his throat;\nIf you’ll tell me this riddle, I’ll give you a groat.”\n\nNow this riddle is as old as the hills; Mr. Brown paid no attention whatever to Nutkin.\n\nHe shut his eyes obstinately and went to sleep.",
+   "passageSource": "Beatrix Potter, The Tale of Squirrel Nutkin (1903)"
+  },
+  {
+   "id": "reading.nut.6",
+   "topic": "reading.nutkin",
+   "kind": "mcq",
+   "prompt": "How did the other squirrels behave towards Old Brown?",
+   "options": [
+    {
+     "text": "Politely: they bowed and asked permission",
+     "correct": true
+    },
+    {
+     "text": "Rudely, like Nutkin",
+     "correct": false,
+     "feedback": "They “each made a low bow, and said politely…”"
+    },
+    {
+     "text": "They ignored him",
+     "correct": false,
+     "feedback": "They spoke to him politely."
+    }
+   ],
+   "explain": "Twinkleberry and the others bowed and asked politely.",
+   "passage": "This is a Tale about a tail—a tail that belonged to a little red squirrel, and his name was Nutkin.\n\nHe had a brother called Twinkleberry, and a great many cousins: they lived in a wood at the edge of a lake.\n\nIn the middle of the lake there is an island covered with trees and nut bushes; and amongst those trees stands a hollow oak-tree, which is the house of an owl who is called Old Brown.\n\nOne autumn when the nuts were ripe, and the leaves on the hazel bushes were golden and green—Nutkin and Twinkleberry and all the other little squirrels came out of the wood, and down to the edge of the lake.\n\nThey made little rafts out of twigs, and they paddled away over the water to Owl Island to gather nuts.\n\nEach squirrel had a little sack and a large oar, and spread out his tail for a sail.\n\nThey also took with them an offering of three fat mice as a present for Old Brown, and put them down upon his door-step.\n\nThen Twinkleberry and the other little squirrels each made a low bow, and said politely—\n\n“Old Mr. Brown, will you favour us with permission to gather nuts upon your island?”\n\nBut Nutkin was excessively impertinent in his manners. He bobbed up and down like a little red cherry, singing—\n\n“Riddle me, riddle me, rot-tot-tote!\nA little wee man, in a red red coat!\nA staff in his hand, and a stone in his throat;\nIf you’ll tell me this riddle, I’ll give you a groat.”\n\nNow this riddle is as old as the hills; Mr. Brown paid no attention whatever to Nutkin.\n\nHe shut his eyes obstinately and went to sleep.",
+   "passageSource": "Beatrix Potter, The Tale of Squirrel Nutkin (1903)"
+  },
+  {
+   "id": "reading.nut.7",
+   "topic": "reading.nutkin",
+   "kind": "mcq",
+   "prompt": "What did Old Brown do when Nutkin sang the riddle?",
+   "options": [
+    {
+     "text": "He ignored him, shut his eyes and went to sleep",
+     "correct": true
+    },
+    {
+     "text": "He answered the riddle",
+     "correct": false,
+     "feedback": "“Mr. Brown paid no attention whatever to Nutkin.”"
+    },
+    {
+     "text": "He chased Nutkin away",
+     "correct": false,
+     "feedback": "Not yet! He just ignored him."
+    }
+   ],
+   "explain": "“He shut his eyes obstinately and went to sleep.”",
+   "passage": "This is a Tale about a tail—a tail that belonged to a little red squirrel, and his name was Nutkin.\n\nHe had a brother called Twinkleberry, and a great many cousins: they lived in a wood at the edge of a lake.\n\nIn the middle of the lake there is an island covered with trees and nut bushes; and amongst those trees stands a hollow oak-tree, which is the house of an owl who is called Old Brown.\n\nOne autumn when the nuts were ripe, and the leaves on the hazel bushes were golden and green—Nutkin and Twinkleberry and all the other little squirrels came out of the wood, and down to the edge of the lake.\n\nThey made little rafts out of twigs, and they paddled away over the water to Owl Island to gather nuts.\n\nEach squirrel had a little sack and a large oar, and spread out his tail for a sail.\n\nThey also took with them an offering of three fat mice as a present for Old Brown, and put them down upon his door-step.\n\nThen Twinkleberry and the other little squirrels each made a low bow, and said politely—\n\n“Old Mr. Brown, will you favour us with permission to gather nuts upon your island?”\n\nBut Nutkin was excessively impertinent in his manners. He bobbed up and down like a little red cherry, singing—\n\n“Riddle me, riddle me, rot-tot-tote!\nA little wee man, in a red red coat!\nA staff in his hand, and a stone in his throat;\nIf you’ll tell me this riddle, I’ll give you a groat.”\n\nNow this riddle is as old as the hills; Mr. Brown paid no attention whatever to Nutkin.\n\nHe shut his eyes obstinately and went to sleep.",
+   "passageSource": "Beatrix Potter, The Tale of Squirrel Nutkin (1903)"
+  },
+  {
+   "id": "reading.nut.8",
+   "topic": "reading.nutkin",
+   "kind": "mcq",
+   "prompt": "What do you predict will happen to Nutkin if he keeps being rude?",
+   "options": [
+    {
+     "text": "He will get into trouble with Old Brown",
+     "correct": true
+    },
+    {
+     "text": "Old Brown will give him a prize",
+     "correct": false,
+     "feedback": "Rudeness doesn’t usually get rewarded in Beatrix Potter stories!"
+    },
+    {
+     "text": "He will become king of the island",
+     "correct": false,
+     "feedback": "There are no clues for that."
+    }
+   ],
+   "explain": "In the full story, Old Brown loses patience and Nutkin loses part of his tail!",
+   "passage": "This is a Tale about a tail—a tail that belonged to a little red squirrel, and his name was Nutkin.\n\nHe had a brother called Twinkleberry, and a great many cousins: they lived in a wood at the edge of a lake.\n\nIn the middle of the lake there is an island covered with trees and nut bushes; and amongst those trees stands a hollow oak-tree, which is the house of an owl who is called Old Brown.\n\nOne autumn when the nuts were ripe, and the leaves on the hazel bushes were golden and green—Nutkin and Twinkleberry and all the other little squirrels came out of the wood, and down to the edge of the lake.\n\nThey made little rafts out of twigs, and they paddled away over the water to Owl Island to gather nuts.\n\nEach squirrel had a little sack and a large oar, and spread out his tail for a sail.\n\nThey also took with them an offering of three fat mice as a present for Old Brown, and put them down upon his door-step.\n\nThen Twinkleberry and the other little squirrels each made a low bow, and said politely—\n\n“Old Mr. Brown, will you favour us with permission to gather nuts upon your island?”\n\nBut Nutkin was excessively impertinent in his manners. He bobbed up and down like a little red cherry, singing—\n\n“Riddle me, riddle me, rot-tot-tote!\nA little wee man, in a red red coat!\nA staff in his hand, and a stone in his throat;\nIf you’ll tell me this riddle, I’ll give you a groat.”\n\nNow this riddle is as old as the hills; Mr. Brown paid no attention whatever to Nutkin.\n\nHe shut his eyes obstinately and went to sleep.",
+   "passageSource": "Beatrix Potter, The Tale of Squirrel Nutkin (1903)"
+  },
+  {
+   "id": "reading.bed.1",
+   "topic": "reading.poems-2",
+   "kind": "mcq",
+   "prompt": "In “Bed in Summer”, why does the child go to bed “by day”?",
+   "options": [
+    {
+     "text": "In summer it is still light at bedtime",
+     "correct": true
+    },
+    {
+     "text": "The child is ill",
+     "correct": false,
+     "feedback": "It is about the seasons: summer evenings are light."
+    },
+    {
+     "text": "The child likes sleeping in the daytime",
+     "correct": false,
+     "feedback": "The child would “like so much to play”."
+    }
+   ],
+   "explain": "In summer the Sun sets late, so bedtime comes while it is still light.",
+   "passage": "In winter I get up at night\nAnd dress by yellow candle-light.\nIn summer quite the other way,\nI have to go to bed by day.\n\nI have to go to bed and see\nThe birds still hopping on the tree,\nOr hear the grown-up people’s feet\nStill going past me in the street.\n\nAnd does it not seem hard to you,\nWhen all the sky is clear and blue,\nAnd I should like so much to play,\nTo have to go to bed by day?",
+   "passageSource": "Robert Louis Stevenson, “Bed in Summer”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.bed.2",
+   "topic": "reading.poems-2",
+   "kind": "mcq",
+   "prompt": "What does the child get up by in winter?",
+   "options": [
+    {
+     "text": "Candle-light",
+     "correct": true
+    },
+    {
+     "text": "Sunlight",
+     "correct": false,
+     "feedback": "In winter it is still dark in the morning."
+    },
+    {
+     "text": "Moonlight",
+     "correct": false,
+     "feedback": "The poem says “yellow candle-light”."
+    }
+   ],
+   "explain": "“In winter I get up at night / And dress by yellow candle-light.”",
+   "passage": "In winter I get up at night\nAnd dress by yellow candle-light.\nIn summer quite the other way,\nI have to go to bed by day.\n\nI have to go to bed and see\nThe birds still hopping on the tree,\nOr hear the grown-up people’s feet\nStill going past me in the street.\n\nAnd does it not seem hard to you,\nWhen all the sky is clear and blue,\nAnd I should like so much to play,\nTo have to go to bed by day?",
+   "passageSource": "Robert Louis Stevenson, “Bed in Summer”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.bed.3",
+   "topic": "reading.poems-2",
+   "kind": "mcq",
+   "prompt": "How does the child feel about going to bed in summer?",
+   "options": [
+    {
+     "text": "It seems unfair",
+     "correct": true
+    },
+    {
+     "text": "Excited",
+     "correct": false,
+     "feedback": "“Does it not seem hard to you…?”"
+    },
+    {
+     "text": "Sleepy",
+     "correct": false,
+     "feedback": "The child wants to play!"
+    }
+   ],
+   "explain": "“And does it not seem hard to you… To have to go to bed by day?”",
+   "passage": "In winter I get up at night\nAnd dress by yellow candle-light.\nIn summer quite the other way,\nI have to go to bed by day.\n\nI have to go to bed and see\nThe birds still hopping on the tree,\nOr hear the grown-up people’s feet\nStill going past me in the street.\n\nAnd does it not seem hard to you,\nWhen all the sky is clear and blue,\nAnd I should like so much to play,\nTo have to go to bed by day?",
+   "passageSource": "Robert Louis Stevenson, “Bed in Summer”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.bed.4",
+   "topic": "reading.poems-2",
+   "kind": "fact",
+   "prompt": "Which word rhymes with “night” in the first two lines?",
+   "answer": "light",
+   "distractors": [
+    "day",
+    "tree",
+    "feet"
+   ],
+   "explain": "“night” and “candle-light” rhyme.",
+   "passage": "In winter I get up at night\nAnd dress by yellow candle-light.\nIn summer quite the other way,\nI have to go to bed by day.\n\nI have to go to bed and see\nThe birds still hopping on the tree,\nOr hear the grown-up people’s feet\nStill going past me in the street.\n\nAnd does it not seem hard to you,\nWhen all the sky is clear and blue,\nAnd I should like so much to play,\nTo have to go to bed by day?",
+   "passageSource": "Robert Louis Stevenson, “Bed in Summer”, A Child’s Garden of Verses (1885)",
+   "accept": [
+    "candle-light"
+   ]
+  },
+  {
+   "id": "reading.boat.1",
+   "topic": "reading.poems-2",
+   "kind": "mcq",
+   "prompt": "What colour is the river in “Where Go the Boats?”",
+   "options": [
+    {
+     "text": "Dark brown",
+     "correct": true
+    },
+    {
+     "text": "Golden",
+     "correct": false,
+     "feedback": "The SAND is golden."
+    },
+    {
+     "text": "Green",
+     "correct": false,
+     "feedback": "The leaves are green."
+    }
+   ],
+   "explain": "“Dark brown is the river, / Golden is the sand.”",
+   "passage": "Dark brown is the river,\nGolden is the sand.\nIt flows along for ever,\nWith trees on either hand.\n\nGreen leaves a-floating,\nCastles of the foam,\nBoats of mine a-boating—\nWhere will all come home?\n\nOn goes the river\nAnd out past the mill,\nAway down the valley,\nAway down the hill.\n\nAway down the river,\nA hundred miles or more,\nOther little children\nShall bring my boats ashore.",
+   "passageSource": "Robert Louis Stevenson, “Where Go the Boats?”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.boat.2",
+   "topic": "reading.poems-2",
+   "kind": "mcq",
+   "prompt": "Where does the child think the boats will end up?",
+   "options": [
+    {
+     "text": "A hundred miles away, where other children will find them",
+     "correct": true
+    },
+    {
+     "text": "Back at home",
+     "correct": false,
+     "feedback": "They float “away down the river”."
+    },
+    {
+     "text": "At the bottom of the river",
+     "correct": false,
+     "feedback": "“Other little children / Shall bring my boats ashore.”"
+    }
+   ],
+   "explain": "The boats float far away, and other children pull them ashore.",
+   "passage": "Dark brown is the river,\nGolden is the sand.\nIt flows along for ever,\nWith trees on either hand.\n\nGreen leaves a-floating,\nCastles of the foam,\nBoats of mine a-boating—\nWhere will all come home?\n\nOn goes the river\nAnd out past the mill,\nAway down the valley,\nAway down the hill.\n\nAway down the river,\nA hundred miles or more,\nOther little children\nShall bring my boats ashore.",
+   "passageSource": "Robert Louis Stevenson, “Where Go the Boats?”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.boat.3",
+   "topic": "reading.poems-2",
+   "kind": "mcq",
+   "prompt": "What are the “castles of the foam”?",
+   "options": [
+    {
+     "text": "Shapes made by bubbles on the water",
+     "correct": true
+    },
+    {
+     "text": "Real castles by the river",
+     "correct": false,
+     "feedback": "Foam is bubbles: the poet imagines them as castles."
+    },
+    {
+     "text": "Sandcastles",
+     "correct": false,
+     "feedback": "They are floating on the river."
+    }
+   ],
+   "explain": "The poet imagines the foam looks like castles.",
+   "passage": "Dark brown is the river,\nGolden is the sand.\nIt flows along for ever,\nWith trees on either hand.\n\nGreen leaves a-floating,\nCastles of the foam,\nBoats of mine a-boating—\nWhere will all come home?\n\nOn goes the river\nAnd out past the mill,\nAway down the valley,\nAway down the hill.\n\nAway down the river,\nA hundred miles or more,\nOther little children\nShall bring my boats ashore.",
+   "passageSource": "Robert Louis Stevenson, “Where Go the Boats?”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.esc.1",
+   "topic": "reading.poems-2",
+   "kind": "mcq",
+   "prompt": "What did the child see when they escaped at bedtime?",
+   "options": [
+    {
+     "text": "Thousands of millions of stars",
+     "correct": true
+    },
+    {
+     "text": "A fox in the garden",
+     "correct": false,
+     "feedback": "Look up: the stars!"
+    },
+    {
+     "text": "Fireworks",
+     "correct": false,
+     "feedback": "The poem is about stars."
+    }
+   ],
+   "explain": "“There were thousands of millions of stars.”",
+   "passage": "The lights from the parlour and kitchen shone out\nThrough the blinds and the windows and bars;\nAnd high overhead and all moving about,\nThere were thousands of millions of stars.\nThere ne’er were such thousands of leaves on a tree,\nNor of people in church or the Park,\nAs the crowds of the stars that looked down upon me,\nAnd that glittered and winked in the dark.\n\nThe Dog, and the Plough, and the Hunter, and all,\nAnd the star of the sailor, and Mars,\nThese shown in the sky, and the pail by the wall\nWould be half full of water and stars.\nThey saw me at last, and they chased me with cries,\nAnd they soon had me packed into bed;\nBut the glory kept shining and bright in my eyes,\nAnd the stars going round in my head.",
+   "passageSource": "Robert Louis Stevenson, “Escape at Bedtime”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.esc.2",
+   "topic": "reading.poems-2",
+   "kind": "mcq",
+   "prompt": "Why would the pail by the wall be “half full of water and stars”?",
+   "options": [
+    {
+     "text": "The stars were reflected in the water",
+     "correct": true
+    },
+    {
+     "text": "Stars fell into it",
+     "correct": false,
+     "feedback": "Stars can’t fall into a bucket! It is a reflection."
+    },
+    {
+     "text": "Someone painted stars on it",
+     "correct": false,
+     "feedback": "It is the reflection of the night sky."
+    }
+   ],
+   "explain": "The water is like a mirror, so you see the stars in it.",
+   "passage": "The lights from the parlour and kitchen shone out\nThrough the blinds and the windows and bars;\nAnd high overhead and all moving about,\nThere were thousands of millions of stars.\nThere ne’er were such thousands of leaves on a tree,\nNor of people in church or the Park,\nAs the crowds of the stars that looked down upon me,\nAnd that glittered and winked in the dark.\n\nThe Dog, and the Plough, and the Hunter, and all,\nAnd the star of the sailor, and Mars,\nThese shown in the sky, and the pail by the wall\nWould be half full of water and stars.\nThey saw me at last, and they chased me with cries,\nAnd they soon had me packed into bed;\nBut the glory kept shining and bright in my eyes,\nAnd the stars going round in my head.",
+   "passageSource": "Robert Louis Stevenson, “Escape at Bedtime”, A Child’s Garden of Verses (1885)"
+  },
+  {
+   "id": "reading.esc.3",
+   "topic": "reading.poems-2",
+   "kind": "mcq",
+   "prompt": "What does “the stars going round in my head” mean at the end?",
+   "options": [
+    {
+     "text": "The child keeps thinking about the stars even in bed",
+     "correct": true
+    },
+    {
+     "text": "The child has a headache",
+     "correct": false,
+     "feedback": "It means the stars are still in their thoughts."
+    },
+    {
+     "text": "Stars are inside the bedroom",
+     "correct": false,
+     "feedback": "They are in the child’s mind."
+    }
+   ],
+   "explain": "Something amazing stays in your mind after you have seen it.",
+   "passage": "The lights from the parlour and kitchen shone out\nThrough the blinds and the windows and bars;\nAnd high overhead and all moving about,\nThere were thousands of millions of stars.\nThere ne’er were such thousands of leaves on a tree,\nNor of people in church or the Park,\nAs the crowds of the stars that looked down upon me,\nAnd that glittered and winked in the dark.\n\nThe Dog, and the Plough, and the Hunter, and all,\nAnd the star of the sailor, and Mars,\nThese shown in the sky, and the pail by the wall\nWould be half full of water and stars.\nThey saw me at last, and they chased me with cries,\nAnd they soon had me packed into bed;\nBut the glory kept shining and bright in my eyes,\nAnd the stars going round in my head.",
+   "passageSource": "Robert Louis Stevenson, “Escape at Bedtime”, A Child’s Garden of Verses (1885)"
+  }
+ ]
+}
