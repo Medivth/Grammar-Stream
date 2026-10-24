@@ -279,21 +279,21 @@
    "prompt": "Which set of conditions does a tropical storm need to form?",
    "options": [
     {
-     "text": "Ocean water of at least about 26–27 °C, a location roughly 5–30° from the Equator, and low wind shear",
+     "text": "Sea water above about 27 °C, away from the Equator",
      "correct": true
     },
     {
-     "text": "Cold water and strong winds from the poles",
+     "text": "Cold water and strong winds blowing from the poles",
      "correct": false,
      "feedback": "They are fed by warm water: heat and moisture are their fuel."
     },
     {
-     "text": "Any sea, as long as it is windy",
+     "text": "Any stretch of sea, as long as it is windy",
      "correct": false,
      "feedback": "They need very warm water and the spin from the Earth’s rotation."
     },
     {
-     "text": "Land with high mountains",
+     "text": "Warm land with high mountains nearby",
      "correct": false,
      "feedback": "They form over the ocean and weaken over land."
     }
@@ -307,21 +307,21 @@
    "prompt": "Why do tropical storms not form right on the Equator?",
    "options": [
     {
-     "text": "The Coriolis effect (the spin from the Earth’s rotation) is too weak there to set them turning",
+     "text": "The Earth’s spin is too weak there to turn them",
      "correct": true
     },
     {
-     "text": "The water is too cold",
+     "text": "The sea there is too cold for them to form",
      "correct": false,
      "feedback": "The water at the Equator is very warm."
     },
     {
-     "text": "There is no wind at the Equator",
+     "text": "There is almost no wind at the Equator",
      "correct": false,
      "feedback": "There is wind; the problem is the lack of spin."
     },
     {
-     "text": "They do, all the time",
+     "text": "They do form there, many times each year",
      "correct": false,
      "feedback": "They almost never form within about 5° of the Equator."
     }
@@ -351,7 +351,7 @@
    "prompt": "What is the eye of a tropical storm like?",
    "options": [
     {
-     "text": "Calm, with light winds and often clear skies, surrounded by the strongest winds in the eyewall",
+     "text": "Calm, with light winds",
      "correct": true
     },
     {
@@ -360,12 +360,12 @@
      "feedback": "The strongest winds are in the eyewall around it."
     },
     {
-     "text": "Full of hail",
+     "text": "Full of heavy hail",
      "correct": false,
      "feedback": "The eye is calm, as sinking air clears the cloud."
     },
     {
-     "text": "Freezing cold",
+     "text": "Much colder than the rest",
      "correct": false,
      "feedback": "It is not especially cold."
     }
@@ -395,23 +395,23 @@
    "prompt": "Typhoon Haiyan hit the Philippines in 2013 and killed more than 6,000 people. What caused most of the deaths?",
    "options": [
     {
-     "text": "A storm surge: a wall of seawater pushed onto low coasts such as Tacloban",
+     "text": "A storm surge flooding low coasts",
      "correct": true
     },
     {
-     "text": "Hailstones",
+     "text": "Hailstones the size of tennis balls",
      "correct": false,
      "feedback": "Hail is rare in tropical storms."
     },
     {
-     "text": "Lightning",
+     "text": "Lightning strikes on crowded towns",
      "correct": false,
      "feedback": "Lightning was not the main killer."
     },
     {
-     "text": "Volcanic eruptions",
+     "text": "Landslides on volcanic slopes",
      "correct": false,
-     "feedback": "No eruption was involved."
+     "feedback": "Landslides happened, but the surge killed far more."
     }
    ],
    "explain": "Low pressure and fierce winds raise the sea by several metres, flooding coastal towns."
@@ -423,23 +423,23 @@
    "prompt": "Hurricane Katrina (2005) flooded about 80% of New Orleans. Why was a rich country hit so hard?",
    "options": [
     {
-     "text": "The city lies largely below sea level and its flood walls (levees) failed",
+     "text": "Its levees failed",
      "correct": true
     },
     {
-     "text": "The USA had no warning",
+     "text": "The USA had no warning at all",
      "correct": false,
      "feedback": "Forecasters warned days in advance."
     },
     {
-     "text": "It was the strongest hurricane ever recorded",
+     "text": "It was the strongest hurricane ever",
      "correct": false,
      "feedback": "It was category 3 at landfall."
     },
     {
-     "text": "Nobody lived there",
+     "text": "Nobody had been told to leave",
      "correct": false,
-     "feedback": "Hundreds of thousands lived there."
+     "feedback": "A mandatory evacuation was ordered, but many could not leave."
     }
    ],
    "explain": "About 1,800 people died. Poorer residents without cars found it hardest to evacuate."
@@ -451,11 +451,11 @@
    "prompt": "Why do tropical storms weaken when they move over land?",
    "options": [
     {
-     "text": "They lose their supply of warm, moist air from the ocean, and friction slows them",
+     "text": "They lose their warm, moist air",
      "correct": true
     },
     {
-     "text": "Land is magnetic",
+     "text": "The land’s magnetism pulls them apart",
      "correct": false,
      "feedback": "Magnetism has nothing to do with it."
     },
@@ -465,7 +465,7 @@
      "feedback": "Friction helps, but the main reason is losing their fuel."
     },
     {
-     "text": "They do not weaken",
+     "text": "They gain strength from hills",
      "correct": false,
      "feedback": "They weaken quickly, though their rain can still cause floods far inland."
     }
@@ -499,21 +499,21 @@
    "prompt": "What caused the “Beast from the East” in February and March 2018?",
    "options": [
     {
-     "text": "Bitterly cold air flowing from Siberia on easterly winds, after the polar vortex was disrupted",
+     "text": "Freezing easterly winds from Siberia",
      "correct": true
     },
     {
-     "text": "A volcanic eruption in Iceland",
+     "text": "Ash from a volcanic eruption in Iceland",
      "correct": false,
      "feedback": "No eruption was involved."
     },
     {
-     "text": "A tropical storm",
+     "text": "A tropical storm that drifted north",
      "correct": false,
      "feedback": "It was extreme cold, not a tropical storm."
     },
     {
-     "text": "The Gulf Stream stopping",
+     "text": "The Gulf Stream stopping for a month",
      "correct": false,
      "feedback": "The North Atlantic Drift did not stop."
     }
@@ -527,16 +527,16 @@
    "prompt": "Why have UK storms been given names since 2015?",
    "options": [
     {
-     "text": "Named storms grab attention, so people take warnings more seriously",
+     "text": "So people take warnings seriously",
      "correct": true
     },
     {
-     "text": "To honour famous scientists",
+     "text": "To honour famous British scientists",
      "correct": false,
      "feedback": "Names are chosen from public suggestions, not to honour anyone."
     },
     {
-     "text": "Only hurricanes can be named",
+     "text": "Because they are all hurricanes",
      "correct": false,
      "feedback": "Ordinary deep depressions are named when they are likely to cause severe impacts."
     },
@@ -571,7 +571,7 @@
    "prompt": "Which of these is a typical response to drought in the UK?",
    "options": [
     {
-     "text": "A hosepipe ban, to save water for essential uses",
+     "text": "A hosepipe ban",
      "correct": true
     },
     {
@@ -580,12 +580,12 @@
      "feedback": "The UK does not routinely seed clouds."
     },
     {
-     "text": "Closing all schools",
+     "text": "Closing schools to save water",
      "correct": false,
      "feedback": "Drought does not close schools."
     },
     {
-     "text": "Building sea walls",
+     "text": "Building new sea walls",
      "correct": false,
      "feedback": "Sea walls protect against coastal flooding, not drought."
     }
@@ -599,21 +599,21 @@
    "prompt": "Why might extreme rainfall in the UK become more common as the climate warms?",
    "options": [
     {
-     "text": "Warmer air can hold more water vapour, so heavy downpours can be heavier",
+     "text": "Warmer air holds more water vapour",
      "correct": true
     },
     {
-     "text": "Warmer air holds less water",
+     "text": "Warmer air holds less water vapour",
      "correct": false,
      "feedback": "It is the opposite: about 7% more water vapour per °C."
     },
     {
-     "text": "The UK is moving towards the Equator",
+     "text": "The UK is drifting towards the Equator",
      "correct": false,
      "feedback": "Plates move only a few centimetres a year."
     },
     {
-     "text": "It will not change at all",
+     "text": "Rainfall will not change at all",
      "correct": false,
      "feedback": "Scientists expect wetter winters and more intense downpours."
     }
@@ -627,23 +627,23 @@
    "prompt": "What does a Met Office RED weather warning mean?",
    "options": [
     {
-     "text": "Dangerous weather is expected: take action to keep yourself and others safe",
+     "text": "Dangerous weather: take action now",
      "correct": true
     },
     {
-     "text": "Be aware: weather could cause minor problems",
+     "text": "Be aware of minor disruption",
      "correct": false,
      "feedback": "That is yellow."
     },
     {
-     "text": "Be prepared: there could be travel delays and power cuts",
+     "text": "Be prepared for travel delays",
      "correct": false,
      "feedback": "That is amber."
     },
     {
-     "text": "The weather will be sunny",
+     "text": "Very hot sun: wear sun cream",
      "correct": false,
-     "feedback": "Red is the most serious level."
+     "feedback": "Heat can bring warnings too, but red means danger to life."
     }
    ],
    "explain": "Yellow, amber, red: from “be aware” to “take action”."
@@ -675,7 +675,7 @@
    "prompt": "What does the Tees–Exe line roughly divide?",
    "options": [
     {
-     "text": "Upland Britain of older, harder rocks (north and west) from lowland Britain of younger, softer rocks (south and east)",
+     "text": "Upland from lowland Britain",
      "correct": true
     },
     {
@@ -684,12 +684,12 @@
      "feedback": "It runs from the River Tees in the north-east to the River Exe in Devon."
     },
     {
-     "text": "Wet from dry farmland only",
+     "text": "Wet farmland from dry farmland",
      "correct": false,
      "feedback": "Rainfall differs too, but the line is mainly about rock and height."
     },
     {
-     "text": "Cities from countryside",
+     "text": "Cities from the countryside",
      "correct": false,
      "feedback": "Both sides have cities and countryside."
     }
@@ -747,21 +747,21 @@
    "prompt": "Clints and grikes (blocks and cracks) at Malham Cove form a limestone pavement. How did the grikes form?",
    "options": [
     {
-     "text": "Slightly acidic rainwater dissolved the limestone along its joints",
+     "text": "Acid rainwater dissolved the joints",
      "correct": true
     },
     {
-     "text": "Earthquakes cracked the rock",
+     "text": "Earthquakes cracked the rock apart",
      "correct": false,
      "feedback": "Weathering, not earthquakes."
     },
     {
-     "text": "Farmers dug them",
+     "text": "Farmers dug them as drains",
      "correct": false,
      "feedback": "They are natural."
     },
     {
-     "text": "Lava cooled into blocks",
+     "text": "Lava cooled and shrank into blocks",
      "correct": false,
      "feedback": "Limestone is sedimentary, not volcanic."
     }
@@ -823,21 +823,21 @@
    "prompt": "Freeze–thaw weathering is common on British mountains. How does it work?",
    "options": [
     {
-     "text": "Water in cracks freezes and expands, widening the crack; repeated many times, rock breaks off",
+     "text": "Ice expands in cracks",
      "correct": true
     },
     {
-     "text": "The Sun melts the rock",
+     "text": "The Sun melts the rock surface",
      "correct": false,
      "feedback": "Rock does not melt in sunshine."
     },
     {
-     "text": "Plants dissolve the rock",
+     "text": "Plant roots dissolve the rock",
      "correct": false,
      "feedback": "Roots can widen cracks, but that is biological weathering."
     },
     {
-     "text": "Waves crash on it",
+     "text": "Waves crash against it",
      "correct": false,
      "feedback": "That is erosion at the coast."
     }
@@ -871,21 +871,21 @@
    "prompt": "Why is arable farming (growing crops) common in East Anglia?",
    "options": [
     {
-     "text": "Flat land, fertile soils, warm summers and lower rainfall suit cereals",
+     "text": "Flat, fertile land and dry summers",
      "correct": true
     },
     {
-     "text": "It is very mountainous",
+     "text": "Its mountains shelter the crops",
      "correct": false,
      "feedback": "East Anglia is one of the flattest parts of the UK."
     },
     {
-     "text": "It rains every day",
+     "text": "It rains almost every day",
      "correct": false,
      "feedback": "It is one of the driest parts of the UK."
     },
     {
-     "text": "Sheep cannot live there",
+     "text": "Sheep cannot survive on its grass",
      "correct": false,
      "feedback": "Sheep could, but crops make better use of the land."
     }
@@ -899,21 +899,21 @@
    "prompt": "Why is pastoral farming (raising animals) common in Wales and the Lake District?",
    "options": [
     {
-     "text": "High rainfall, steep slopes and thin soils suit grass for sheep and cattle better than crops",
+     "text": "Wet, steep land suits grass",
      "correct": true
     },
     {
-     "text": "The land is too flat",
+     "text": "The land is too flat for crops",
      "correct": false,
      "feedback": "It is hilly."
     },
     {
-     "text": "It is too dry for grass",
+     "text": "It is too dry for most crops",
      "correct": false,
-     "feedback": "It is wet: grass grows well."
+     "feedback": "It is wet, not dry: grass grows well."
     },
     {
-     "text": "Crops grow best there",
+     "text": "Its soils are the richest in Britain",
      "correct": false,
      "feedback": "Machinery struggles on steep, wet land."
     }
@@ -959,21 +959,21 @@
    "prompt": "What is humus?",
    "options": [
     {
-     "text": "Dark, rotted plant and animal matter that makes soil fertile",
+     "text": "Rotted plant and animal matter",
      "correct": true
     },
     {
-     "text": "A type of rock",
+     "text": "A type of soft volcanic rock",
      "correct": false,
      "feedback": "It is organic matter, not rock."
     },
     {
-     "text": "The layer of rock under soil",
+     "text": "The layer of rock under the soil",
      "correct": false,
      "feedback": "That is bedrock."
     },
     {
-     "text": "A farm chemical",
+     "text": "A chemical fertiliser for farms",
      "correct": false,
      "feedback": "It forms naturally."
     }
@@ -987,7 +987,7 @@
    "prompt": "Which practice best protects soil from being washed or blown away?",
    "options": [
     {
-     "text": "Planting hedgerows and cover crops, and ploughing along the contours of a slope",
+     "text": "Ploughing along the contours",
      "correct": true
     },
     {
@@ -996,7 +996,7 @@
      "feedback": "Furrows down a slope channel rainwater and soil downhill."
     },
     {
-     "text": "Removing all hedges",
+     "text": "Removing hedges to make big fields",
      "correct": false,
      "feedback": "Hedges break the wind and hold soil."
     },
@@ -1015,13 +1015,13 @@
    "prompt": "What was the Green Revolution of the 1960s and 1970s?",
    "options": [
     {
-     "text": "The spread of high-yield crops, fertilisers and irrigation that greatly increased food production, especially in Asia",
+     "text": "High-yield crops raising food output",
      "correct": true
     },
     {
-     "text": "A campaign to paint farms green",
+     "text": "A campaign to plant forests on farmland",
      "correct": false,
-     "feedback": "It was about crop yields."
+     "feedback": "It was about raising crop yields, not forests."
     },
     {
      "text": "The first organic farming movement",
@@ -1029,7 +1029,7 @@
      "feedback": "It relied heavily on fertilisers and pesticides."
     },
     {
-     "text": "A war over farmland",
+     "text": "A war over farmland in Asia",
      "correct": false,
      "feedback": "It was a change in farming methods."
     }
@@ -1043,16 +1043,16 @@
    "prompt": "What are food miles?",
    "options": [
     {
-     "text": "The distance food travels from where it is produced to where it is eaten",
+     "text": "How far food travels to your plate",
      "correct": true
     },
     {
-     "text": "How many miles a farmer drives a year",
+     "text": "How many miles a farmer drives each year",
      "correct": false,
      "feedback": "It is about the food’s journey."
     },
     {
-     "text": "The length of a field",
+     "text": "The size of the farmland used",
      "correct": false,
      "feedback": "It is about transport."
     },
@@ -1106,21 +1106,21 @@
    "prompt": "What is “virtual water”?",
    "options": [
     {
-     "text": "The water used to produce goods and food, hidden in what we buy",
+     "text": "Water used to make what we buy",
      "correct": true
     },
     {
-     "text": "Water shown in computer games",
+     "text": "Water modelled on computer maps",
      "correct": false,
      "feedback": "It is real water: the water used in production."
     },
     {
-     "text": "Rainwater that evaporates before landing",
+     "text": "Rain that evaporates before landing",
      "correct": false,
      "feedback": "That is not the term."
     },
     {
-     "text": "Bottled water",
+     "text": "Bottled water sold abroad",
      "correct": false,
      "feedback": "It is the water hidden in products."
     }
@@ -1134,21 +1134,21 @@
    "prompt": "Why do Saudi Arabia and the United Arab Emirates rely on desalination?",
    "options": [
     {
-     "text": "They have almost no rivers and very little rain, but plenty of seawater and energy",
+     "text": "They have little rain and few rivers",
      "correct": true
     },
     {
-     "text": "Seawater is healthier than fresh water",
+     "text": "Seawater is healthier than river water",
      "correct": false,
      "feedback": "Seawater must have the salt removed before it can be drunk."
     },
     {
-     "text": "It is the cheapest way to get water everywhere",
+     "text": "It is the cheapest way to get water",
      "correct": false,
      "feedback": "It uses a lot of energy, so it is expensive."
     },
     {
-     "text": "Their rivers are too salty",
+     "text": "Their rivers are far too salty",
      "correct": false,
      "feedback": "They have very few rivers at all."
     }
@@ -1162,7 +1162,7 @@
    "prompt": "Turkey has built large dams on the Tigris and Euphrates, such as the Atatürk Dam. Why does this worry Syria and Iraq?",
    "options": [
     {
-     "text": "They are downstream, so less water may reach their farms and cities",
+     "text": "Less water may reach them downstream",
      "correct": true
     },
     {
@@ -1171,14 +1171,14 @@
      "feedback": "Rivers cannot flow uphill."
     },
     {
-     "text": "The dams flood their cities",
+     "text": "The reservoirs flood their cities",
      "correct": false,
      "feedback": "The reservoirs are in Turkey."
     },
     {
-     "text": "They have plenty of other water",
+     "text": "The dams pollute the water with salt",
      "correct": false,
-     "feedback": "They depend heavily on these rivers."
+     "feedback": "The main worry is the amount of water, not salt."
     }
    ],
    "explain": "Rivers that cross borders can cause tension when the upstream country takes more water."
@@ -1190,11 +1190,11 @@
    "prompt": "Why has the Grand Ethiopian Renaissance Dam on the Blue Nile caused tension with Egypt?",
    "options": [
     {
-     "text": "Egypt gets almost all its fresh water from the Nile and fears less will reach it",
+     "text": "Egypt fears less Nile water will reach it",
      "correct": true
     },
     {
-     "text": "The dam is in Egypt",
+     "text": "The dam floods land inside Egypt",
      "correct": false,
      "feedback": "It is in Ethiopia, upstream."
     },
@@ -1204,7 +1204,7 @@
      "feedback": "The dispute is about water flow."
     },
     {
-     "text": "The Nile flows from Egypt to Ethiopia",
+     "text": "The Nile flows south from Egypt to Ethiopia",
      "correct": false,
      "feedback": "It flows north, from Ethiopia and Uganda towards Egypt."
     }
@@ -1235,21 +1235,21 @@
    "prompt": "What does food security mean?",
    "options": [
     {
-     "text": "Everyone always having access to enough safe, nutritious food for a healthy life",
+     "text": "Everyone having enough safe, healthy food",
      "correct": true
     },
     {
-     "text": "Guards protecting supermarkets",
+     "text": "Guards protecting food warehouses",
      "correct": false,
      "feedback": "It is about access to food, not guards."
     },
     {
-     "text": "Growing all your own food",
+     "text": "A country growing all its own food",
      "correct": false,
      "feedback": "Countries can be food-secure by importing, too."
     },
     {
-     "text": "Having a freezer",
+     "text": "Every home having a full freezer",
      "correct": false,
      "feedback": "It is about whole populations."
     }
@@ -1326,21 +1326,21 @@
    "prompt": "What is the multiplier effect in tourism?",
    "options": [
     {
-     "text": "Money spent by tourists is spent again by local people and businesses, spreading the benefit",
+     "text": "Tourist money is spent again locally",
      "correct": true
     },
     {
-     "text": "Tourists multiply the number of photos taken",
+     "text": "Tourists telling friends, who then visit",
      "correct": false,
-     "feedback": "It is about money circulating."
+     "feedback": "Word of mouth helps, but the multiplier is about money circulating."
     },
     {
-     "text": "Hotels double their prices",
+     "text": "Hotels doubling their prices in summer",
      "correct": false,
      "feedback": "It is about money spreading through the economy."
     },
     {
-     "text": "The number of tourists doubles every year",
+     "text": "The number of tourists doubling each year",
      "correct": false,
      "feedback": "It is about how money spreads."
     }
@@ -1354,13 +1354,13 @@
    "prompt": "What is “leakage” in tourism?",
    "options": [
     {
-     "text": "When tourist money flows out of the country, for example to foreign-owned hotels and airlines",
+     "text": "Tourist money flowing abroad",
      "correct": true
     },
     {
-     "text": "A leaking hotel roof",
+     "text": "Sewage leaking from hotels",
      "correct": false,
-     "feedback": "It is about money, not roofs."
+     "feedback": "It is about money, not sewage."
     },
     {
      "text": "Tourists losing their luggage",
@@ -1368,7 +1368,7 @@
      "feedback": "It is an economic term."
     },
     {
-     "text": "Water pollution from beaches",
+     "text": "Water leaking from hotel pools",
      "correct": false,
      "feedback": "It is about profits leaving the country."
     }
@@ -1382,7 +1382,7 @@
    "prompt": "Which is the best example of ecotourism?",
    "options": [
     {
-     "text": "Small groups visiting a rainforest with local guides, with profits helping to protect the forest",
+     "text": "Small groups with local guides",
      "correct": true
     },
     {
@@ -1391,12 +1391,12 @@
      "feedback": "That damages the very environment people come to see."
     },
     {
-     "text": "A cruise ship visiting ten ports in ten days",
+     "text": "A cruise visiting ten ports in ten days",
      "correct": false,
      "feedback": "Mass cruise tourism has a big environmental footprint."
     },
     {
-     "text": "A theme park in a desert",
+     "text": "A safari park built in the desert",
      "correct": false,
      "feedback": "Ecotourism is about protecting nature and benefiting local people."
     }
@@ -1410,21 +1410,21 @@
    "prompt": "Venice has trialled an entry fee for day visitors. Why?",
    "options": [
     {
-     "text": "Too many day-trippers crowd the city while spending little, and residents are leaving",
+     "text": "Crowds of day-trippers spend little",
      "correct": true
     },
     {
-     "text": "To pay for the canals to be filled in",
+     "text": "To pay for filling in the canals",
      "correct": false,
      "feedback": "The canals are part of what makes Venice special."
     },
     {
-     "text": "Because no one visits any more",
+     "text": "Because visitor numbers have collapsed",
      "correct": false,
      "feedback": "It is the opposite: it is overcrowded."
     },
     {
-     "text": "To stop residents leaving home",
+     "text": "To stop residents leaving their homes",
      "correct": false,
      "feedback": "Residents do not pay the fee."
     }
@@ -1438,7 +1438,7 @@
    "prompt": "Safaris in Kenya’s Maasai Mara bring money and jobs. Which is a possible NEGATIVE impact?",
    "options": [
     {
-     "text": "Minibuses crowding around animals and wearing tracks across the grassland",
+     "text": "Minibuses crowding the animals",
      "correct": true
     },
     {
@@ -1452,7 +1452,7 @@
      "feedback": "That is a positive impact."
     },
     {
-     "text": "People learning about Maasai culture",
+     "text": "Visitors learning about Maasai culture",
      "correct": false,
      "feedback": "That can be positive if done respectfully."
     }
@@ -1502,11 +1502,11 @@
    "prompt": "What makes somewhere a desert?",
    "options": [
     {
-     "text": "Very low rainfall: usually less than about 250 mm a year",
+     "text": "Less than about 250 mm of rain a year",
      "correct": true
     },
     {
-     "text": "Being hot all year",
+     "text": "Being hot all year round",
      "correct": false,
      "feedback": "Antarctica is a desert, and it is freezing."
     },
@@ -1516,7 +1516,7 @@
      "feedback": "Only a small part of most deserts is sand dunes; much is rock and gravel."
     },
     {
-     "text": "Having no animals",
+     "text": "Having no plants or animals at all",
      "correct": false,
      "feedback": "Many animals live in deserts."
     }
@@ -1579,21 +1579,21 @@
    "prompt": "Which is a HUMAN cause of desertification in the Sahel?",
    "options": [
     {
-     "text": "Overgrazing by too many animals, which strips plants and exposes soil",
+     "text": "Overgrazing by too many animals",
      "correct": true
     },
     {
-     "text": "Long-term changes in the Earth’s orbit",
+     "text": "Changes in the Earth’s orbit",
      "correct": false,
      "feedback": "That is natural, and acts over thousands of years."
     },
     {
-     "text": "More rain falling",
+     "text": "More rain falling each year",
      "correct": false,
      "feedback": "More rain would help."
     },
     {
-     "text": "Volcanic eruptions",
+     "text": "Volcanic eruptions nearby",
      "correct": false,
      "feedback": "Not a cause in the Sahel."
     }
@@ -1607,7 +1607,7 @@
    "prompt": "What is the Great Green Wall?",
    "options": [
     {
-     "text": "An African-led project to restore a belt of land across the Sahel with trees, crops and better farming",
+     "text": "A belt of restored land across the Sahel",
      "correct": true
     },
     {
@@ -1616,12 +1616,12 @@
      "feedback": "It is living vegetation and land restoration, not a wall."
     },
     {
-     "text": "The Great Wall of China painted green",
+     "text": "A green wall along China’s deserts",
      "correct": false,
      "feedback": "It is in Africa."
     },
     {
-     "text": "A row of solar panels",
+     "text": "A line of solar farms across Africa",
      "correct": false,
      "feedback": "It is mainly about plants and farming."
     }
@@ -1635,21 +1635,21 @@
    "prompt": "How is a cactus adapted to the desert?",
    "options": [
     {
-     "text": "Spines instead of leaves lose less water, and a thick stem stores water",
+     "text": "Spines and a thick stem storing water",
      "correct": true
     },
     {
-     "text": "Huge thin leaves catch sunlight",
+     "text": "Huge thin leaves to catch sunlight",
      "correct": false,
      "feedback": "Big thin leaves would lose too much water."
     },
     {
-     "text": "It needs rain every day",
+     "text": "It needs a little rain every day",
      "correct": false,
      "feedback": "It survives long droughts."
     },
     {
-     "text": "It grows only in water",
+     "text": "It grows only beside oases",
      "correct": false,
      "feedback": "It grows in dry ground."
     }
@@ -1682,21 +1682,21 @@
    "prompt": "What is the main difference between the Arctic and Antarctica?",
    "options": [
     {
-     "text": "The Arctic is mostly frozen ocean surrounded by land; Antarctica is a continent surrounded by ocean",
+     "text": "The Arctic is ocean; Antarctica is land",
      "correct": true
     },
     {
-     "text": "The Arctic is in the south",
+     "text": "The Arctic is around the South Pole",
      "correct": false,
      "feedback": "The Arctic is around the North Pole."
     },
     {
-     "text": "Antarctica has polar bears",
+     "text": "Polar bears live on both of them",
      "correct": false,
      "feedback": "Polar bears live only in the Arctic."
     },
     {
-     "text": "They are the same thing",
+     "text": "They are the same frozen continent",
      "correct": false,
      "feedback": "They are at opposite ends of the Earth."
     }
@@ -1726,16 +1726,16 @@
    "prompt": "What does the Antarctic Treaty (signed in 1959) do?",
    "options": [
     {
-     "text": "Keeps Antarctica for peaceful science, banning military activity; a later agreement bans mining",
+     "text": "Keeps it for peaceful science",
      "correct": true
     },
     {
-     "text": "Divides Antarctica between Britain and Norway",
+     "text": "Divides it between Britain and Norway",
      "correct": false,
      "feedback": "Territorial claims were frozen, not settled."
     },
     {
-     "text": "Allows oil drilling everywhere",
+     "text": "Allows oil drilling along the coasts",
      "correct": false,
      "feedback": "Mining and drilling are banned."
     },
@@ -1754,21 +1754,21 @@
    "prompt": "Why does melting Arctic SEA ice raise sea levels much less than melting ice on Antarctica?",
    "options": [
     {
-     "text": "Sea ice already floats in the ocean, displacing its own weight of water; land ice adds new water to the sea",
+     "text": "Sea ice is already floating",
      "correct": true
     },
     {
-     "text": "Arctic ice is not real ice",
+     "text": "Arctic ice is mostly snow, not ice",
      "correct": false,
-     "feedback": "It is real frozen seawater."
+     "feedback": "It is real ice: frozen seawater."
     },
     {
-     "text": "Antarctica is warmer",
+     "text": "Antarctica is warmer than the Arctic",
      "correct": false,
      "feedback": "Antarctica is colder."
     },
     {
-     "text": "The Arctic has no water",
+     "text": "Arctic ice melts more slowly",
      "correct": false,
      "feedback": "The Arctic is an ocean."
     }
@@ -1782,21 +1782,21 @@
    "prompt": "As Arctic sea ice melts, the dark ocean absorbs more sunlight. What does this cause?",
    "options": [
     {
-     "text": "More warming and more melting: a positive feedback loop",
+     "text": "More warming and melting",
      "correct": true
     },
     {
-     "text": "Cooling, because water is cold",
+     "text": "Cooling, because the water is cold",
      "correct": false,
      "feedback": "Dark water absorbs more heat than white ice reflects."
     },
     {
-     "text": "No change",
+     "text": "No change to the climate at all",
      "correct": false,
      "feedback": "It speeds up warming."
     },
     {
-     "text": "More sea ice next year",
+     "text": "More sea ice forming next year",
      "correct": false,
      "feedback": "It makes the problem worse."
     }
@@ -1810,7 +1810,7 @@
    "prompt": "Why does the Antarctic have months of continuous daylight in December?",
    "options": [
     {
-     "text": "The Earth’s tilt points the South Pole towards the Sun in December",
+     "text": "The Earth’s tilt",
      "correct": true
     },
     {
@@ -1903,10 +1903,10 @@
    "topic": "geography.oceans",
    "kind": "fact",
    "prompt": "What is the deepest known point in the ocean?",
-   "answer": "the Challenger Deep in the Mariana Trench",
+   "answer": "the Mariana Trench",
    "distractors": [
-    "the Grand Canyon",
-    "the Dead Sea",
+    "the Puerto Rico Trench",
+    "the Java Trench",
     "the Mid-Atlantic Ridge"
    ],
    "explain": "It is about 11 km deep, in the western Pacific: deeper than Everest is high.",
@@ -1921,7 +1921,7 @@
    "prompt": "What is the Great Pacific Garbage Patch?",
    "options": [
     {
-     "text": "A huge area of the North Pacific where ocean currents collect floating plastic",
+     "text": "Plastic gathered by ocean currents",
      "correct": true
     },
     {
@@ -1930,12 +1930,12 @@
      "feedback": "Most of it is small pieces and tiny microplastics spread through the water."
     },
     {
-     "text": "A rubbish dump in California",
+     "text": "A rubbish dump on the Californian coast",
      "correct": false,
      "feedback": "It is in the open ocean."
     },
     {
-     "text": "A seaweed farm",
+     "text": "A huge floating mat of seaweed",
      "correct": false,
      "feedback": "It is plastic pollution."
     }
@@ -1965,7 +1965,7 @@
    "prompt": "What causes coral bleaching?",
    "options": [
     {
-     "text": "Water that is too warm makes corals expel the tiny algae that live in them and give them colour and food",
+     "text": "Warm water makes corals lose algae",
      "correct": true
     },
     {
@@ -1974,12 +1974,12 @@
      "feedback": "Heat is the main cause."
     },
     {
-     "text": "Fish eating the coral",
+     "text": "Fish eating the coral’s colour",
      "correct": false,
      "feedback": "Some fish nibble coral, but bleaching is caused by heat stress."
     },
     {
-     "text": "Bleach from ships",
+     "text": "Chemical bleach dumped from ships",
      "correct": false,
      "feedback": "It is not chemical bleach."
     }
@@ -1993,7 +1993,7 @@
    "prompt": "Why are the oceans becoming more acidic?",
    "options": [
     {
-     "text": "They absorb carbon dioxide from the air, which forms a weak acid in seawater",
+     "text": "They absorb carbon dioxide",
      "correct": true
     },
     {
@@ -2002,12 +2002,12 @@
      "feedback": "Carbon dioxide from burning fossil fuels is the main cause."
     },
     {
-     "text": "Rivers are full of lemon juice",
+     "text": "Rivers carry acid from farms",
      "correct": false,
-     "feedback": "Ha! No."
+     "feedback": "Farm run-off causes other problems; the main cause is carbon dioxide."
     },
     {
-     "text": "Plastic dissolving",
+     "text": "Plastic dissolving in seawater",
      "correct": false,
      "feedback": "Plastic does not make seawater acidic."
     }
@@ -2021,21 +2021,21 @@
    "prompt": "In 1992 Canada closed the Grand Banks cod fishery. Why?",
    "options": [
     {
-     "text": "Overfishing had made cod stocks collapse",
+     "text": "Cod stocks had collapsed",
      "correct": true
     },
     {
-     "text": "The fish moved to Africa",
+     "text": "The cod had all migrated to Africa",
      "correct": false,
      "feedback": "They were fished out."
     },
     {
-     "text": "A volcano erupted",
+     "text": "An oil spill had poisoned them",
      "correct": false,
-     "feedback": "It was overfishing."
+     "feedback": "It was overfishing, not pollution."
     },
     {
-     "text": "People stopped eating fish",
+     "text": "People had stopped eating cod",
      "correct": false,
      "feedback": "Demand stayed high."
     }
@@ -2143,7 +2143,7 @@
    "prompt": "M-Pesa, launched in Kenya in 2007, is famous for…",
    "options": [
     {
-     "text": "Letting millions of people send and save money using basic mobile phones",
+     "text": "Sending money by mobile phone",
      "correct": true
     },
     {
@@ -2152,12 +2152,12 @@
      "feedback": "It is a mobile money service."
     },
     {
-     "text": "A safari park",
+     "text": "Being Kenya’s biggest safari park",
      "correct": false,
      "feedback": "It is mobile banking."
     },
     {
-     "text": "A football club",
+     "text": "Being a famous Nairobi football club",
      "correct": false,
      "feedback": "It is mobile money."
     }
@@ -2171,21 +2171,21 @@
    "prompt": "What is the Great Rift Valley?",
    "options": [
     {
-     "text": "A long valley in East Africa where the land is slowly being pulled apart by plate movement",
+     "text": "East African land pulling apart",
      "correct": true
     },
     {
-     "text": "A river in West Africa",
+     "text": "A long river valley in West Africa",
      "correct": false,
      "feedback": "It is a valley system, mainly in East Africa."
     },
     {
-     "text": "A man-made canal",
+     "text": "A canal dug across the continent",
      "correct": false,
      "feedback": "It formed naturally."
     },
     {
-     "text": "A desert in South Africa",
+     "text": "A desert in southern Africa",
      "correct": false,
      "feedback": "It runs through Ethiopia, Kenya and Tanzania."
     }
@@ -2199,7 +2199,7 @@
    "prompt": "Which is a MISLEADING stereotype about Africa?",
    "options": [
     {
-     "text": "That it is one poor country with the same culture everywhere",
+     "text": "That it is one poor country",
      "correct": true
     },
     {
@@ -2208,12 +2208,12 @@
      "feedback": "That is a fact."
     },
     {
-     "text": "That it has big cities",
+     "text": "That it has huge, growing cities",
      "correct": false,
      "feedback": "Lagos, Cairo, Kinshasa and Johannesburg are huge."
     },
     {
-     "text": "That it has deserts, rainforests and mountains",
+     "text": "That it has deserts and rainforests",
      "correct": false,
      "feedback": "All true: it is hugely varied."
     }
@@ -2225,11 +2225,11 @@
    "topic": "geography.africa",
    "kind": "fact",
    "prompt": "Roughly how many languages are spoken in Africa?",
-   "answer": "well over a thousand",
+   "answer": "over a thousand",
    "distractors": [
-    "about ten",
-    "just one",
-    "about fifty"
+    "about forty",
+    "about two hundred",
+    "about fifty-four"
    ],
    "explain": "Estimates range from about 1,500 to over 2,000, including Swahili, Hausa, Yoruba, Amharic, Zulu and Arabic.",
    "formats": [
@@ -2279,23 +2279,23 @@
    "prompt": "Nigeria is often described as a newly emerging economy (NEE). What does that mean?",
    "options": [
     {
-     "text": "Its economy is growing fast and changing from farming towards industry and services",
+     "text": "Its economy is growing and changing fast",
      "correct": true
     },
     {
-     "text": "It has only just become a country",
+     "text": "It has only just become independent",
      "correct": false,
      "feedback": "It became independent from Britain in 1960."
     },
     {
-     "text": "It is the richest country in the world",
+     "text": "It is the richest country in Africa per person",
      "correct": false,
-     "feedback": "Many Nigerians are still poor."
+     "feedback": "It has one of Africa’s largest economies in total, but income per person is low."
     },
     {
-     "text": "It has no economy",
+     "text": "Its economy depends only on farming",
      "correct": false,
-     "feedback": "It has one of Africa’s largest economies."
+     "feedback": "Industry and services are growing fast."
     }
    ],
    "explain": "Other NEEs include India, Brazil and China."
@@ -2307,21 +2307,21 @@
    "prompt": "Which is a PROBLEM linked to oil in the Niger Delta?",
    "options": [
     {
-     "text": "Oil spills polluting farmland, rivers and mangroves, harming fishing and farming",
+     "text": "Oil spills polluting rivers and farmland",
      "correct": true
     },
     {
-     "text": "Oil providing government income",
+     "text": "Oil providing much of the government’s income",
      "correct": false,
      "feedback": "That is a benefit, though it has also encouraged corruption."
     },
     {
-     "text": "Jobs in the oil industry",
+     "text": "New jobs in the oil industry",
      "correct": false,
      "feedback": "That is a benefit, though many jobs go to skilled outsiders."
     },
     {
-     "text": "Cheap fuel",
+     "text": "Cheaper fuel for local people",
      "correct": false,
      "feedback": "That is not the main problem."
     }
@@ -2364,11 +2364,11 @@
    "prompt": "Why has Lagos grown so fast?",
    "options": [
     {
-     "text": "People move from the countryside for jobs and opportunities, and its population is young with a high birth rate",
+     "text": "Migration for jobs and a high birth rate",
      "correct": true
     },
     {
-     "text": "It is the capital, so everyone must live there",
+     "text": "It is the capital, so the government moved everyone there",
      "correct": false,
      "feedback": "Abuja is the capital."
     },
@@ -2378,7 +2378,7 @@
      "feedback": "It is hot and humid."
     },
     {
-     "text": "Nobody leaves the countryside",
+     "text": "Its population is mostly elderly people",
      "correct": false,
      "feedback": "Rural–urban migration is a key reason."
     }
@@ -2428,11 +2428,11 @@
    "prompt": "China’s one-child policy ran from about 1980 to 2015. What is one long-term effect?",
    "options": [
     {
-     "text": "An ageing population with fewer young workers to support older people",
+     "text": "An ageing population",
      "correct": true
     },
     {
-     "text": "A population explosion",
+     "text": "A sudden population explosion",
      "correct": false,
      "feedback": "It slowed growth sharply."
     },
@@ -2442,7 +2442,7 @@
      "feedback": "The opposite: a preference for sons led to more boys."
     },
     {
-     "text": "No effect at all",
+     "text": "No lasting effect at all",
      "correct": false,
      "feedback": "Its effects will last for decades."
     }
@@ -2456,21 +2456,21 @@
    "prompt": "What is a benefit of the Three Gorges Dam on the Yangtze River?",
    "options": [
     {
-     "text": "It generates huge amounts of hydroelectric power and helps control floods",
+     "text": "Huge amounts of hydroelectric power",
      "correct": true
     },
     {
-     "text": "It needed no one to move home",
+     "text": "Nobody had to move home for it",
      "correct": false,
      "feedback": "More than a million people were relocated."
     },
     {
-     "text": "It increased the silt reaching the sea",
+     "text": "More silt now reaches the sea",
      "correct": false,
      "feedback": "It traps silt behind the dam."
     },
     {
-     "text": "It is a small dam",
+     "text": "It made the river safe to swim in",
      "correct": false,
      "feedback": "It is one of the largest power stations in the world."
     }
@@ -2484,16 +2484,16 @@
    "prompt": "Shenzhen grew from a small town to a city of over 10 million people in about 40 years. Why?",
    "options": [
     {
-     "text": "It was made a Special Economic Zone in 1980, attracting foreign companies and factories",
+     "text": "It became a Special Economic Zone",
      "correct": true
     },
     {
-     "text": "Gold was discovered there",
+     "text": "Gold was discovered there in 1980",
      "correct": false,
      "feedback": "It was government economic policy."
     },
     {
-     "text": "It is China’s capital",
+     "text": "It became China’s new capital",
      "correct": false,
      "feedback": "Beijing is the capital."
     },
@@ -2512,11 +2512,11 @@
    "prompt": "Which statement about China and carbon dioxide is correct?",
    "options": [
     {
-     "text": "It is now the world’s largest emitter in total, but emits less per person than the USA",
+     "text": "It emits most in total, but not per person",
      "correct": true
     },
     {
-     "text": "It emits almost none",
+     "text": "It emits almost none at all",
      "correct": false,
      "feedback": "It burns a great deal of coal."
     },
@@ -2526,7 +2526,7 @@
      "feedback": "Some smaller, richer countries emit more per person."
     },
     {
-     "text": "It has no renewable energy",
+     "text": "It has almost no renewable energy",
      "correct": false,
      "feedback": "It builds more solar and wind power than any other country."
     }
@@ -2538,11 +2538,11 @@
    "topic": "geography.china",
    "kind": "fact",
    "prompt": "Which Chinese river has been called “China’s Sorrow” because of its deadly floods?",
-   "answer": "the Yellow River (Huang He)",
+   "answer": "the Yellow River",
    "distractors": [
-    "the Yangtze",
-    "the Mekong",
-    "the Ganges"
+    "the Yangtze River",
+    "the Mekong River",
+    "the Pearl River"
    ],
    "explain": "Its yellow silt raises the riverbed, so floods can break through embankments across the flat plain.",
    "formats": [
@@ -2556,21 +2556,21 @@
    "prompt": "What is China’s hukou system?",
    "options": [
     {
-     "text": "A household registration system that has limited rural migrants’ access to services in cities",
+     "text": "A household registration system",
      "correct": true
     },
     {
-     "text": "A type of noodle",
+     "text": "A high-speed railway network",
      "correct": false,
-     "feedback": "It is a government system."
+     "feedback": "It is a registration system, not a railway."
     },
     {
-     "text": "A railway network",
+     "text": "A national pension scheme",
      "correct": false,
-     "feedback": "It is about registration."
+     "feedback": "It records where a household is registered to live."
     },
     {
-     "text": "A national park",
+     "text": "A system of national parks",
      "correct": false,
      "feedback": "It is about where people are registered to live."
     }
@@ -2619,21 +2619,21 @@
    "prompt": "What is the Indian monsoon?",
    "options": [
     {
-     "text": "A seasonal change of wind that brings heavy rain to most of India from about June to September",
+     "text": "A seasonal wind bringing summer rain",
      "correct": true
     },
     {
-     "text": "A type of earthquake",
+     "text": "A type of tropical earthquake",
      "correct": false,
      "feedback": "It is a seasonal wind and rain pattern."
     },
     {
-     "text": "A winter snowstorm",
+     "text": "A winter snowstorm in the Himalayas",
      "correct": false,
      "feedback": "It brings summer rain."
     },
     {
-     "text": "A river in India",
+     "text": "A dry wind from the Thar Desert",
      "correct": false,
      "feedback": "It is a weather pattern."
     }
@@ -2647,21 +2647,21 @@
    "prompt": "Why does the monsoon matter so much to India?",
    "options": [
     {
-     "text": "Most farmland depends on its rain; a weak monsoon can mean poor harvests, while a very strong one can cause floods",
+     "text": "Most farms depend on its rain",
      "correct": true
     },
     {
-     "text": "It only affects tourists",
+     "text": "It mainly affects tourists",
      "correct": false,
      "feedback": "It affects hundreds of millions of farmers."
     },
     {
-     "text": "It brings snow for skiing",
+     "text": "It brings snow for the rivers",
      "correct": false,
-     "feedback": "It brings rain."
+     "feedback": "Himalayan snowmelt feeds rivers, but the monsoon brings rain."
     },
     {
-     "text": "It has no effect on food",
+     "text": "It has little effect on food",
      "correct": false,
      "feedback": "Food prices rise when it fails."
     }
@@ -2673,11 +2673,11 @@
    "topic": "geography.india",
    "kind": "fact",
    "prompt": "Which river is sacred to Hindus and flows from the Himalayas across northern India?",
-   "answer": "the Ganges (Ganga)",
+   "answer": "the Ganges",
    "distractors": [
-    "the Indus",
-    "the Mekong",
-    "the Thames"
+    "the Indus River",
+    "the Brahmaputra",
+    "the Godavari"
    ],
    "explain": "Millions bathe in it at Varanasi; it is also heavily polluted, and big clean-up schemes are under way.",
    "formats": [
@@ -2689,11 +2689,11 @@
    "topic": "geography.india",
    "kind": "fact",
    "prompt": "Which Indian city is known as the centre of its IT industry, sometimes called “India’s Silicon Valley”?",
-   "answer": "Bengaluru (Bangalore)",
+   "answer": "Bengaluru",
    "distractors": [
-    "Delhi",
+    "Mumbai",
     "Kolkata",
-    "Varanasi"
+    "Chennai"
    ],
    "explain": "Many global technology companies have offices there.",
    "formats": [
@@ -2707,21 +2707,21 @@
    "prompt": "Some of the wettest places on Earth are in north-east India, near Mawsynram and Cherrapunji. Why?",
    "options": [
     {
-     "text": "Monsoon winds rise steeply over the hills and drop huge amounts of relief rainfall",
+     "text": "Monsoon winds rise over the hills",
      "correct": true
     },
     {
-     "text": "They are below sea level",
+     "text": "They lie in a low, sheltered basin",
      "correct": false,
      "feedback": "They are high in the hills."
     },
     {
-     "text": "It rains there because of volcanoes",
+     "text": "Warm volcanic ground heats the air",
      "correct": false,
      "feedback": "It is relief rainfall."
     },
     {
-     "text": "They are in a desert",
+     "text": "They are close to the Equator",
      "correct": false,
      "feedback": "They are in the wettest part of India."
     }
@@ -2810,21 +2810,21 @@
    "prompt": "The Amazon is often called “the lungs of the planet”. Why do scientists say this is misleading?",
    "options": [
     {
-     "text": "The forest uses most of the oxygen it makes; its real global value is storing carbon, recycling rain and holding biodiversity",
+     "text": "It uses most of the oxygen it makes",
      "correct": true
     },
     {
-     "text": "The Amazon makes no oxygen",
+     "text": "The Amazon makes no oxygen at all",
      "correct": false,
      "feedback": "It makes plenty, but uses most of it itself."
     },
     {
-     "text": "The Amazon breathes like an animal",
+     "text": "It breathes in oxygen at night only",
      "correct": false,
      "feedback": "It is a metaphor."
     },
     {
-     "text": "It is actually a desert",
+     "text": "It produces more carbon than it stores",
      "correct": false,
      "feedback": "It is the largest rainforest on Earth."
     }
@@ -2838,21 +2838,21 @@
    "prompt": "How did the Trans-Amazonian Highway, begun in the 1970s, speed up deforestation?",
    "options": [
     {
-     "text": "It opened the forest to settlers, loggers, farmers and miners, with clearing spreading out along the roads",
+     "text": "It opened the forest to settlers",
      "correct": true
     },
     {
-     "text": "Cars cut down the trees",
+     "text": "Its traffic pollution killed the trees",
      "correct": false,
      "feedback": "It was the access it gave, not the cars."
     },
     {
-     "text": "It flooded the forest",
+     "text": "It flooded large areas of the forest",
      "correct": false,
      "feedback": "Roads do not flood forests; dams can."
     },
     {
-     "text": "It had no effect",
+     "text": "It had no effect on the forest",
      "correct": false,
      "feedback": "Deforestation often follows new roads."
     }
@@ -2884,7 +2884,7 @@
    "prompt": "Why do many scientists argue that protecting indigenous peoples’ land rights helps protect the rainforest?",
    "options": [
     {
-     "text": "Forest in indigenous territories is often cleared much less than land around it",
+     "text": "Their forest is cleared far less",
      "correct": true
     },
     {
@@ -2898,7 +2898,7 @@
      "feedback": "The question is about protection."
     },
     {
-     "text": "Indigenous people want all the trees removed",
+     "text": "Indigenous people own all the land already",
      "correct": false,
      "feedback": "Most depend on the forest."
     }
@@ -2912,21 +2912,21 @@
    "prompt": "Why does the city of Manaus, in the middle of the Amazon, have so many factories?",
    "options": [
     {
-     "text": "It is a free trade zone with tax breaks to attract industry to the region",
+     "text": "It is a tax-free trade zone",
      "correct": true
     },
     {
-     "text": "It is on the coast",
+     "text": "It is a big port on the coast",
      "correct": false,
      "feedback": "It is about 1,500 km inland."
     },
     {
-     "text": "It is Brazil’s capital",
+     "text": "It is Brazil’s capital city",
      "correct": false,
      "feedback": "Brasília is the capital."
     },
     {
-     "text": "Factories need rainforest wood",
+     "text": "Its factories need rainforest wood",
      "correct": false,
      "feedback": "It is about tax incentives."
     }
@@ -2988,7 +2988,7 @@
    "prompt": "Which statement is TRUE?",
    "options": [
     {
-     "text": "The EU, the euro area and the Schengen area are different groups: not every EU country uses the euro or is in Schengen",
+     "text": "Not every EU country uses the euro",
      "correct": true
     },
     {
@@ -2997,14 +2997,14 @@
      "feedback": "Several, such as Poland, Sweden and Denmark, still use their own currencies."
     },
     {
-     "text": "Schengen and the EU are exactly the same",
+     "text": "Schengen and the EU are the same group",
      "correct": false,
      "feedback": "Some non-EU countries such as Norway and Switzerland are in Schengen."
     },
     {
-     "text": "The UK uses the euro",
+     "text": "The UK is still in the Schengen area",
      "correct": false,
-     "feedback": "The UK never joined the euro."
+     "feedback": "The UK never joined Schengen, and has now left the EU."
     }
    ],
    "explain": "The euro is shared by 20 EU countries; Schengen removes routine passport checks at most internal borders."
@@ -3045,7 +3045,7 @@
    "prompt": "What does “freedom of movement” in the EU mean?",
    "options": [
     {
-     "text": "Citizens of EU countries can live and work in any other EU country",
+     "text": "EU citizens can live and work in any EU country",
      "correct": true
     },
     {
@@ -3054,12 +3054,12 @@
      "feedback": "It applies to EU citizens."
     },
     {
-     "text": "Cars can drive without licences",
+     "text": "Goods can cross borders with no taxes",
      "correct": false,
-     "feedback": "It is about living and working."
+     "feedback": "That is the single market for goods; free movement is about people."
     },
     {
-     "text": "Borders can move",
+     "text": "Countries can move their borders freely",
      "correct": false,
      "feedback": "It is about people."
     }
@@ -3073,11 +3073,11 @@
    "prompt": "Why was the border between Northern Ireland and the Republic of Ireland such a difficult issue in the Brexit talks?",
    "options": [
     {
-     "text": "The 1998 Good Friday Agreement helped keep the peace with an open border, and nobody wanted checkpoints to return",
+     "text": "Nobody wanted border checkpoints again",
      "correct": true
     },
     {
-     "text": "There is no border there",
+     "text": "There is no border there at all",
      "correct": false,
      "feedback": "There is a border, but it has been open with no checks."
     },
@@ -3087,7 +3087,7 @@
      "feedback": "Ireland stayed in the EU."
     },
     {
-     "text": "It is a sea border",
+     "text": "It is only a short sea border",
      "correct": false,
      "feedback": "It is a land border about 500 km long."
     }
@@ -3136,21 +3136,21 @@
    "prompt": "What is a brownfield site?",
    "options": [
     {
-     "text": "Land that has been built on before, such as an old factory site, and can be redeveloped",
+     "text": "Land that has been built on before",
      "correct": true
     },
     {
-     "text": "A field of brown crops",
+     "text": "A field used for brown crops",
      "correct": false,
      "feedback": "It is previously developed land."
     },
     {
-     "text": "Countryside that has never been built on",
+     "text": "Countryside never built on",
      "correct": false,
      "feedback": "That is a greenfield site."
     },
     {
-     "text": "A polluted river",
+     "text": "A polluted river or canal bank",
      "correct": false,
      "feedback": "It is about land."
     }
@@ -3164,21 +3164,21 @@
    "prompt": "Why did London’s Docklands decline in the 1960s and 1970s?",
    "options": [
     {
-     "text": "Large container ships could not reach the old docks, so trade moved downstream to ports like Tilbury",
+     "text": "Big container ships could not reach them",
      "correct": true
     },
     {
-     "text": "The River Thames dried up",
+     "text": "The River Thames silted up",
      "correct": false,
-     "feedback": "It was about changing technology in shipping."
+     "feedback": "It was about bigger ships, not silt."
     },
     {
-     "text": "A flood destroyed them",
+     "text": "A great flood destroyed them in 1953",
      "correct": false,
      "feedback": "They closed as trade moved."
     },
     {
-     "text": "They were too far from London",
+     "text": "They were too far from central London",
      "correct": false,
      "feedback": "They were in the heart of East London."
     }
@@ -3192,21 +3192,21 @@
    "prompt": "Which was a criticism of how London’s Docklands were regenerated from the 1980s?",
    "options": [
     {
-     "text": "Many new jobs, such as in finance, went to commuters, while house prices rose beyond many local people",
+     "text": "New jobs went mainly to commuters",
      "correct": true
     },
     {
-     "text": "Nothing was built",
+     "text": "Almost nothing new was built",
      "correct": false,
      "feedback": "Canary Wharf, the DLR and City Airport were built."
     },
     {
-     "text": "It became farmland",
+     "text": "It was turned back into farmland",
      "correct": false,
      "feedback": "It became offices and homes."
     },
     {
-     "text": "It was too cheap",
+     "text": "The new homes were too cheap",
      "correct": false,
      "feedback": "Prices rose sharply."
     }
@@ -3236,23 +3236,23 @@
    "prompt": "What is a green belt?",
    "options": [
     {
-     "text": "A ring of protected countryside around a city where building is tightly controlled",
+     "text": "Protected countryside around a city",
      "correct": true
     },
     {
-     "text": "A row of trees down a motorway",
+     "text": "A row of trees along a motorway",
      "correct": false,
      "feedback": "It is much bigger: a protected zone around a city."
     },
     {
-     "text": "A type of recycling bin",
+     "text": "A recycling scheme for green waste",
      "correct": false,
      "feedback": "It is planning land."
     },
     {
-     "text": "A judo grade",
+     "text": "Parks inside the city centre",
      "correct": false,
-     "feedback": "Not in geography!"
+     "feedback": "City parks are green space, but the green belt surrounds the city."
     }
    ],
    "explain": "Green belts stop cities sprawling, but they also make it harder to build enough homes."
@@ -3264,7 +3264,7 @@
    "prompt": "Counter-urbanisation is when…",
    "options": [
     {
-     "text": "people move out of big cities to towns and villages in the countryside",
+     "text": "people leave cities for the countryside",
      "correct": true
     },
     {
@@ -3273,7 +3273,7 @@
      "feedback": "That is urbanisation."
     },
     {
-     "text": "cities are knocked down",
+     "text": "old city buildings are knocked down",
      "correct": false,
      "feedback": "It is about people moving."
     },
@@ -3290,11 +3290,11 @@
    "topic": "geography.regeneration",
    "kind": "fact",
    "prompt": "Which light railway opened in 1987 to link the regenerated Docklands to the City of London?",
-   "answer": "the Docklands Light Railway (DLR)",
+   "answer": "the Docklands Light Railway",
    "distractors": [
     "the Elizabeth line",
-    "the Jubilee line",
-    "Eurostar"
+    "the Jubilee line extension",
+    "the London Overground"
    ],
    "explain": "Its driverless trains were part of making Docklands attractive to businesses.",
    "formats": [
@@ -3444,11 +3444,11 @@
    "prompt": "What is a GIS?",
    "options": [
     {
-     "text": "A computer system that layers different data on digital maps to show and analyse patterns",
+     "text": "Software that layers data on maps",
      "correct": true
     },
     {
-     "text": "A type of compass",
+     "text": "A satellite navigation compass",
      "correct": false,
      "feedback": "It is software."
     },
@@ -3458,7 +3458,7 @@
      "feedback": "Satellites can provide data, but a GIS is the system that maps and analyses it."
     },
     {
-     "text": "A rock-testing kit",
+     "text": "A kit for testing soil samples",
      "correct": false,
      "feedback": "It is about digital maps."
     }
@@ -3472,21 +3472,21 @@
    "prompt": "Why are satellite images useful for studying the Amazon?",
    "options": [
     {
-     "text": "They can show how much forest is cleared, quickly and over huge, remote areas",
+     "text": "They show clearing over huge areas",
      "correct": true
     },
     {
-     "text": "They can count every individual insect",
+     "text": "They count every individual animal",
      "correct": false,
      "feedback": "They are not that detailed."
     },
     {
-     "text": "They replace all fieldwork",
+     "text": "They replace the need for fieldwork",
      "correct": false,
      "feedback": "Ground checks are still needed."
     },
     {
-     "text": "They only work at night",
+     "text": "They see clearly through thick cloud",
      "correct": false,
      "feedback": "Most images need daylight, though radar can see through cloud."
     }
@@ -3500,21 +3500,21 @@
    "prompt": "How could you make a traffic survey more reliable?",
    "options": [
     {
-     "text": "Repeat the counts on several days and times, and take an average",
+     "text": "Repeat the counts and average them",
      "correct": true
     },
     {
-     "text": "Count for one minute only",
+     "text": "Count for one minute at rush hour",
      "correct": false,
      "feedback": "A tiny sample is unreliable."
     },
     {
-     "text": "Guess the numbers",
+     "text": "Estimate the numbers by eye",
      "correct": false,
      "feedback": "Data must be measured."
     },
     {
-     "text": "Only count red cars",
+     "text": "Count only the cars, not lorries",
      "correct": false,
      "feedback": "That would give a biased sample."
     }
@@ -3561,21 +3561,21 @@
    "prompt": "Which is the best definition of sustainable development?",
    "options": [
     {
-     "text": "Development that meets the needs of today without stopping future generations from meeting theirs",
+     "text": "Meeting today’s needs without harming the future",
      "correct": true
     },
     {
-     "text": "Making as much money as possible as fast as possible",
+     "text": "Making as much money as fast as possible",
      "correct": false,
      "feedback": "That may not be sustainable."
     },
     {
-     "text": "Stopping all development",
+     "text": "Stopping all new building and industry",
      "correct": false,
      "feedback": "Sustainability is about how we develop, not stopping."
     },
     {
-     "text": "Only using solar power",
+     "text": "Using only solar and wind power",
      "correct": false,
      "feedback": "Energy is one part, but the idea is much wider."
     }
@@ -3587,11 +3587,11 @@
    "topic": "geography.sustainability",
    "kind": "fact",
    "prompt": "The Sustainable Development Goals replaced which earlier set of eight goals (2000–2015)?",
-   "answer": "the Millennium Development Goals",
+   "answer": "the Millennium Goals",
    "distractors": [
     "the Paris Agreement",
     "the Kyoto Protocol",
-    "the Olympic Charter"
+    "the Rio Earth Summit"
    ],
    "explain": "The Millennium Goals halved extreme poverty, but missed many targets.",
    "formats": [
@@ -3609,14 +3609,14 @@
      "correct": true
     },
     {
-     "text": "Water, food and air",
+     "text": "Water, food and clean air",
      "correct": false,
      "feedback": "Those are resources, not the three parts."
     },
     {
-     "text": "Past, present and future",
+     "text": "Political, cultural and technological",
      "correct": false,
-     "feedback": "Sustainability is about the future, but the three parts are different."
+     "feedback": "Those are other ways to analyse an issue; the three pillars are environmental, social and economic."
     },
     {
      "text": "Local, national and global",
@@ -3633,13 +3633,13 @@
    "prompt": "What is a circular economy?",
    "options": [
     {
-     "text": "One where products are designed to be reused, repaired and recycled instead of thrown away",
+     "text": "Products reused and recycled, not binned",
      "correct": true
     },
     {
-     "text": "An economy based on round objects",
+     "text": "Money circulating around a town",
      "correct": false,
-     "feedback": "It is about loops of materials."
+     "feedback": "That is the multiplier effect; a circular economy is about loops of materials."
     },
     {
      "text": "Trading only with neighbouring countries",
@@ -3647,7 +3647,7 @@
      "feedback": "It is about materials, not trade partners."
     },
     {
-     "text": "Spending money in a circle of friends",
+     "text": "Using only renewable energy sources",
      "correct": false,
      "feedback": "It is about resources."
     }
@@ -3661,16 +3661,16 @@
    "prompt": "How does the Fairtrade mark aim to help farmers in poorer countries?",
    "options": [
     {
-     "text": "It guarantees a minimum price and an extra premium for community projects",
+     "text": "It guarantees a minimum price",
      "correct": true
     },
     {
-     "text": "It makes products free",
+     "text": "It removes import taxes",
      "correct": false,
      "feedback": "Shoppers still pay."
     },
     {
-     "text": "It bans exports",
+     "text": "It bans exports of raw crops",
      "correct": false,
      "feedback": "It supports exports on fairer terms."
     },
@@ -4703,21 +4703,21 @@
    "prompt": "In geography, what is a stakeholder?",
    "options": [
     {
-     "text": "A person or group affected by, or interested in, a decision",
+     "text": "Anyone affected by a decision",
      "correct": true
     },
     {
-     "text": "Someone who holds a wooden stake",
+     "text": "Someone who owns shares in a company",
      "correct": false,
      "feedback": "It means someone with a “stake” (an interest) in an issue."
     },
     {
-     "text": "Only the government",
+     "text": "Only the government and council",
      "correct": false,
      "feedback": "Residents, businesses, charities and others are stakeholders too."
     },
     {
-     "text": "A type of bank account",
+     "text": "Only the people who pay for it",
      "correct": false,
      "feedback": "It is about people with an interest."
     }
@@ -4731,7 +4731,7 @@
    "prompt": "A council can protect only one of these with its coastal defence budget. Which choice is easiest to justify on cost–benefit grounds?",
    "options": [
     {
-     "text": "A town of 10,000 people with a railway line",
+     "text": "A town of 10,000 people",
      "correct": true
     },
     {
@@ -4740,7 +4740,7 @@
      "feedback": "The cost would far outweigh what is protected."
     },
     {
-     "text": "A single disused barn",
+     "text": "A single disused farm barn",
      "correct": false,
      "feedback": "Very little would be gained."
     },
@@ -4759,23 +4759,23 @@
    "prompt": "Which phrase from an answer shows the strongest evaluation?",
    "options": [
     {
-     "text": "“Although the dam is the most expensive option, it is the most sustainable because…”",
+     "text": "“Although it costs more, the dam is better because…”",
      "correct": true
     },
     {
-     "text": "“The dam is good.”",
+     "text": "“The dam is good and the other options are bad.”",
      "correct": false,
      "feedback": "There is no reason or comparison."
     },
     {
-     "text": "“I like option B best.”",
+     "text": "“I like option B best because it is nice.”",
      "correct": false,
      "feedback": "A choice needs justifying with evidence."
     },
     {
-     "text": "“All the options are the same.”",
+     "text": "“All the options have good and bad points.”",
      "correct": false,
-     "feedback": "You must weigh them."
+     "feedback": "True, but it does not weigh them or reach a judgement."
     }
    ],
    "explain": "Words like “although”, “however” and “on balance” show you are weighing the options."
@@ -4850,11 +4850,11 @@
    "prompt": "Why are buildings in the central business district (CBD) usually tall?",
    "options": [
     {
-     "text": "Land there is the most expensive, so businesses build upwards",
+     "text": "Land there is the most expensive",
      "correct": true
     },
     {
-     "text": "The ground is softer",
+     "text": "The ground there is the firmest",
      "correct": false,
      "feedback": "It is about land value."
     },
@@ -4864,7 +4864,7 @@
      "feedback": "It is about cost."
     },
     {
-     "text": "People like climbing stairs",
+     "text": "The tall buildings were built first",
      "correct": false,
      "feedback": "Lifts help with that."
     }
@@ -4878,21 +4878,21 @@
    "prompt": "In many British cities, rows of terraced houses near the centre were built mainly…",
    "options": [
     {
-     "text": "in the 1800s, close to factories, for workers",
+     "text": "in the 1800s, for factory workers",
      "correct": true
     },
     {
-     "text": "in the 1990s for commuters",
+     "text": "in the 1990s for city commuters",
      "correct": false,
      "feedback": "Modern estates are usually further out."
     },
     {
-     "text": "by the Romans",
+     "text": "in the 1950s to replace bomb damage",
      "correct": false,
-     "feedback": "Roman towns were much smaller."
+     "feedback": "Post-war housing was mostly estates and tower blocks."
     },
     {
-     "text": "in the countryside",
+     "text": "in the countryside for farm workers",
      "correct": false,
      "feedback": "They were built in the inner city."
     }
@@ -4906,11 +4906,11 @@
    "prompt": "Which land use is typical of the rural–urban fringe?",
    "options": [
     {
-     "text": "Out-of-town retail parks, business parks and golf courses",
+     "text": "Retail parks and golf courses",
      "correct": true
     },
     {
-     "text": "Skyscraper offices",
+     "text": "Skyscraper offices and banks",
      "correct": false,
      "feedback": "Those are in the CBD."
     },
@@ -4934,7 +4934,7 @@
    "prompt": "How does the Hoyt sector model differ from the Burgess model?",
    "options": [
     {
-     "text": "It shows wedge-shaped sectors following transport routes, not just rings",
+     "text": "It adds wedges along transport routes",
      "correct": true
     },
     {
@@ -4948,7 +4948,7 @@
      "feedback": "It shows industry along routes like railways and rivers."
     },
     {
-     "text": "There is no difference",
+     "text": "It shows the city as a grid of blocks",
      "correct": false,
      "feedback": "Hoyt added sectors."
     }
@@ -4981,18 +4981,18 @@
    "prompt": "Why is the Arctic becoming more contested?",
    "options": [
     {
-     "text": "Melting sea ice is opening shipping routes and access to oil, gas and minerals that several countries claim",
+     "text": "Melting ice opens routes and resources",
      "correct": true
     },
     {
-     "text": "It is getting colder",
+     "text": "It is getting colder and icier",
      "correct": false,
      "feedback": "It is warming faster than almost anywhere."
     },
     {
-     "text": "Nobody lives near it",
+     "text": "Its sea ice is growing every year",
      "correct": false,
-     "feedback": "Several countries border it, including Russia, Canada and Norway."
+     "feedback": "Arctic sea ice is shrinking, not growing."
     },
     {
      "text": "It is protected like Antarctica",
@@ -5009,21 +5009,21 @@
    "prompt": "Rare earth elements and cobalt are vital for phones, batteries and wind turbines. Why does this matter geographically?",
    "options": [
     {
-     "text": "They are mined in only a few countries, so supply can be disrupted and mining can harm local people and environments",
+     "text": "They are mined in only a few countries",
      "correct": true
     },
     {
-     "text": "They are found in every garden",
+     "text": "They are found in every country",
      "correct": false,
      "feedback": "They are concentrated in a few places."
     },
     {
-     "text": "They are not used in technology",
+     "text": "They are easy to recycle from phones",
      "correct": false,
-     "feedback": "They are essential to it."
+     "feedback": "Recycling them is still difficult and rare."
     },
     {
-     "text": "They never run out",
+     "text": "They can never run out",
      "correct": false,
      "feedback": "They are finite."
     }
@@ -5037,11 +5037,11 @@
    "prompt": "Which is the best example of countries COOPERATING over a shared river?",
    "options": [
     {
-     "text": "A treaty that agrees how much water each country takes and shares data on floods",
+     "text": "A treaty sharing water and flood data",
      "correct": true
     },
     {
-     "text": "One country building a dam without telling its neighbours",
+     "text": "One country building a dam without telling",
      "correct": false,
      "feedback": "That can cause tension."
     },
@@ -5051,7 +5051,7 @@
      "feedback": "That harms neighbours downstream."
     },
     {
-     "text": "Closing the river to boats",
+     "text": "Closing the river to foreign boats",
      "correct": false,
      "feedback": "That is not cooperation."
     }

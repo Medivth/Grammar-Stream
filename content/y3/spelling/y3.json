@@ -1220,9 +1220,9 @@
    "prompt": "What does super- mean, as in superhero and supermarket?",
    "answer": "above, or bigger than usual",
    "distractors": [
-    "below",
-    "not",
-    "again"
+    "below, or under",
+    "not, or the opposite",
+    "again, or back"
    ],
    "explain": "A superhero has powers above ordinary people’s; a supermarket is bigger than a shop.",
    "formats": [
@@ -3123,16 +3123,16 @@
    "prompt": "What is a conjunction?",
    "options": [
     {
-     "text": "A word that joins words or clauses, like “because” or “when”",
+     "text": "A word that joins clauses, like “because”",
      "correct": true
     },
     {
-     "text": "A naming word",
+     "text": "A naming word, like “rocket” or “Mars”",
      "correct": false,
      "feedback": "That is a noun."
     },
     {
-     "text": "A describing word",
+     "text": "A describing word, like “shiny”",
      "correct": false,
      "feedback": "That is an adjective."
     }
@@ -3242,14 +3242,14 @@
      "correct": true
     },
     {
-     "text": "{hero} flew home.",
+     "text": "{hero} flew home and the storm ended.",
      "correct": false,
-     "feedback": "Just one clause here."
+     "feedback": "Two main clauses joined by “and”: neither depends on the other."
     },
     {
-     "text": "The storm ended.",
+     "text": "{hero} flew home through the storm.",
      "correct": false,
-     "feedback": "Just one clause here."
+     "feedback": "Just one clause here: “through the storm” has no verb."
     }
    ],
    "explain": "“after the storm ended” is the subordinate clause."
@@ -3261,16 +3261,16 @@
    "prompt": "Why do writers use paragraphs?",
    "options": [
     {
-     "text": "To group sentences about one idea, and show when the time, place, person or topic changes",
+     "text": "To group sentences about one idea",
      "correct": true
     },
     {
-     "text": "To make the writing longer",
+     "text": "To make the writing look longer",
      "correct": false,
      "feedback": "Paragraphs organise writing; they don’t make it longer."
     },
     {
-     "text": "Because every sentence needs its own line",
+     "text": "Because every sentence needs a new line",
      "correct": false,
      "feedback": "A paragraph usually has several sentences."
     }
@@ -3284,16 +3284,16 @@
    "prompt": "In a fact file about the planets, what are headings for?",
    "options": [
     {
-     "text": "To show the reader what each part is about",
+     "text": "To show what each part is about",
      "correct": true
     },
     {
-     "text": "To make it look like a story",
+     "text": "To make it look more like a story",
      "correct": false,
      "feedback": "Stories don’t usually have headings."
     },
     {
-     "text": "To end a sentence",
+     "text": "To show where a sentence ends",
      "correct": false,
      "feedback": "That is a full stop’s job."
     }
@@ -3311,12 +3311,12 @@
      "correct": true
     },
     {
-     "text": "After every sentence",
+     "text": "After every single sentence you write",
      "correct": false,
      "feedback": "That would be very bitty!"
     },
     {
-     "text": "Only at the end",
+     "text": "Only once, right at the very end",
      "correct": false,
      "feedback": "Paragraphs are for the whole story."
     }
@@ -3445,7 +3445,7 @@
    "prompt": "What is a prefix?",
    "options": [
     {
-     "text": "Letters added to the start of a word to change its meaning",
+     "text": "Letters added to the start of a word",
      "correct": true
     },
     {
@@ -3454,7 +3454,7 @@
      "feedback": "That is a suffix."
     },
     {
-     "text": "A joining word",
+     "text": "A word that joins two clauses",
      "correct": false,
      "feedback": "That is a conjunction."
     }
@@ -3491,16 +3491,16 @@
    "prompt": "What is a fronted adverbial?",
    "options": [
     {
-     "text": "A word or phrase at the start of a sentence that tells you when, where or how",
+     "text": "A phrase at the start saying when or how",
      "correct": true
     },
     {
-     "text": "The last word in a sentence",
+     "text": "The very last word in a sentence",
      "correct": false,
      "feedback": "“Fronted” means at the front."
     },
     {
-     "text": "A naming word",
+     "text": "A naming word, like “dragon”",
      "correct": false,
      "feedback": "That is a noun."
     }
@@ -4069,11 +4069,11 @@
    "prompt": "Why might a writer use a name again instead of a pronoun?",
    "options": [
     {
-     "text": "To make it clear who is meant when there are two people",
+     "text": "To make it clear who is meant",
      "correct": true
     },
     {
-     "text": "Because pronouns are wrong",
+     "text": "Because pronouns are always wrong",
      "correct": false,
      "feedback": "Pronouns are useful; they just need to be clear."
     },

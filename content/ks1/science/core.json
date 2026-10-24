@@ -497,7 +497,7 @@
    "prompt": "Why should we wash our hands before eating?",
    "options": [
     {
-     "text": "To wash away germs that could make us ill",
+     "text": "To wash away germs",
      "correct": true
     },
     {
@@ -506,7 +506,7 @@
      "feedback": "Soap smells nice, but the real reason is germs."
     },
     {
-     "text": "So our hands are wet",
+     "text": "So our hands are wet for eating",
      "correct": false,
      "feedback": "We dry them afterwards!"
     }
@@ -520,11 +520,11 @@
    "prompt": "Why is exercise good for us?",
    "options": [
     {
-     "text": "It keeps our heart, muscles and bones strong",
+     "text": "It keeps our heart and muscles strong",
      "correct": true
     },
     {
-     "text": "It makes us taller straight away",
+     "text": "It makes us grow taller straight away",
      "correct": false,
      "feedback": "Exercise keeps us healthy and strong, but it doesn’t make us taller at once."
     },
@@ -543,16 +543,16 @@
    "prompt": "Which meal is the healthiest?",
    "options": [
     {
-     "text": "Fish, potatoes and vegetables, with water",
+     "text": "Fish, potatoes and vegetables",
      "correct": true
     },
     {
-     "text": "Sweets and fizzy drink",
+     "text": "Sweets with a fizzy drink",
      "correct": false,
      "feedback": "Too much sugar is bad for teeth and bodies."
     },
     {
-     "text": "Only crisps",
+     "text": "A big bowl of only crisps",
      "correct": false,
      "feedback": "We need lots of different foods."
     }
@@ -959,16 +959,16 @@
    "prompt": "Capybaras live near rivers and lakes in South America. Why is that a good habitat for them?",
    "options": [
     {
-     "text": "They love swimming and eat water plants and grass",
+     "text": "They love swimming and water plants",
      "correct": true
     },
     {
-     "text": "They need snow",
+     "text": "They need lots of snow and ice",
      "correct": false,
      "feedback": "South America near rivers is warm."
     },
     {
-     "text": "They hunt fish",
+     "text": "They hunt fish in the water",
      "correct": false,
      "feedback": "Capybaras are herbivores: they eat plants."
     }
@@ -980,9 +980,9 @@
    "topic": "science.materials",
    "kind": "fact",
    "prompt": "Why are windows made of glass?",
-   "answer": "it is transparent (you can see through it)",
+   "answer": "it is transparent",
    "distractors": [
-    "it is soft",
+    "it is soft and squashy",
     "it is bendy",
     "it is very cheap"
    ],
@@ -1291,7 +1291,7 @@
    "prompt": "Why do we have day and night?",
    "options": [
     {
-     "text": "The Earth spins round, so our side faces the Sun, then faces away",
+     "text": "The Earth spins round",
      "correct": true
     },
     {
@@ -1344,11 +1344,11 @@
    "topic": "science.space",
    "kind": "fact",
    "prompt": "What is the International Space Station?",
-   "answer": "a spacecraft where astronauts live and work, circling the Earth",
+   "answer": "a spacecraft where astronauts live",
    "distractors": [
     "a train station on the Moon",
-    "a planet",
-    "a star"
+    "a small planet near Mars",
+    "a bright star in the sky"
    ],
    "explain": "It goes all the way round the Earth about every 90 minutes!",
    "formats": [
@@ -1739,7 +1739,7 @@
    "prompt": "Why is it cold at the North and South Poles?",
    "options": [
     {
-     "text": "The Sun’s light hits them at a low angle and is spread out",
+     "text": "The Sun’s light is weak and spread out there",
      "correct": true
     },
     {
@@ -1748,7 +1748,7 @@
      "feedback": "The Moon doesn’t heat the Earth."
     },
     {
-     "text": "Snow makes the cold",
+     "text": "The snow there makes the cold",
      "correct": false,
      "feedback": "Snow is there because it is cold, not the other way round."
     }
@@ -1841,12 +1841,12 @@
      "correct": true
     },
     {
-     "text": "Carpet is heavier",
+     "text": "Carpet is much heavier than floors",
      "correct": false,
      "feedback": "It is about grip: rough carpet rubs against the wheels more."
     },
     {
-     "text": "The car gets tired",
+     "text": "The car gets tired on carpet",
      "correct": false,
      "feedback": "Cars don’t get tired!"
     }
@@ -1920,11 +1920,11 @@
    "topic": "science.rocks",
    "kind": "fact",
    "prompt": "What is a fossil?",
-   "answer": "the remains of a plant or animal from long ago, turned to rock",
+   "answer": "old remains of a living thing, turned to rock",
    "distractors": [
-    "a shiny jewel",
-    "a type of volcano",
-    "a kind of soil"
+    "a shiny jewel found in caves",
+    "a type of very old volcano",
+    "a kind of soil found by rivers"
    ],
    "explain": "Fossils form over millions of years.",
    "formats": [
@@ -1954,7 +1954,7 @@
    "prompt": "How do most fossils form?",
    "options": [
     {
-     "text": "An animal is buried in mud, which slowly turns to rock around it",
+     "text": "An animal is buried and slowly turns to rock",
      "correct": true
     },
     {
@@ -1963,7 +1963,7 @@
      "feedback": "It takes burial and millions of years, not cold."
     },
     {
-     "text": "People carve them",
+     "text": "People carve them out of stone",
      "correct": false,
      "feedback": "Fossils are natural."
     }
@@ -1975,11 +1975,11 @@
    "topic": "science.rocks",
    "kind": "fact",
    "prompt": "What is soil made of?",
-   "answer": "tiny bits of rock mixed with dead plants and animals",
+   "answer": "bits of rock and rotted plants",
    "distractors": [
-    "only sand",
-    "melted metal",
-    "plastic"
+    "only sand from the beach",
+    "melted metal and water",
+    "tiny pieces of plastic"
    ],
    "explain": "Soil is broken rock plus rotting leaves, which feed plants.",
    "formats": [
@@ -1991,10 +1991,10 @@
    "topic": "science.rocks",
    "kind": "fact",
    "prompt": "How do we know dinosaurs existed?",
-   "answer": "from their fossil bones and footprints",
+   "answer": "from their fossil bones",
    "distractors": [
-    "from photographs",
-    "from films",
+    "from old photographs",
+    "from films about them",
     "from people who saw them"
    ],
    "explain": "No people lived at the same time as dinosaurs. Fossils are our evidence.",

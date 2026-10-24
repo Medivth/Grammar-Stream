@@ -188,11 +188,11 @@
    "prompt": "What big change happened when Stone Age people learned to farm?",
    "options": [
     {
-     "text": "They could stay in one place instead of following animals",
+     "text": "They could stay in one place",
      "correct": true
     },
     {
-     "text": "They stopped eating",
+     "text": "They stopped needing to eat",
      "correct": false,
      "feedback": "Farming gave them MORE food."
     },
@@ -342,16 +342,16 @@
    "prompt": "How did experts learn to read hieroglyphs again?",
    "options": [
     {
-     "text": "The Rosetta Stone had the same message in hieroglyphs and in Greek",
+     "text": "The Rosetta Stone also had Greek on it",
      "correct": true
     },
     {
-     "text": "An old Egyptian taught them",
+     "text": "An old Egyptian taught them how",
      "correct": false,
      "feedback": "Nobody had read hieroglyphs for over a thousand years."
     },
     {
-     "text": "They guessed",
+     "text": "They guessed what each picture meant",
      "correct": false,
      "feedback": "They used the Rosetta Stone to compare the writing."
     }
@@ -365,11 +365,11 @@
    "prompt": "Which came first: the pyramids of Egypt, or the Romans arriving in Britain?",
    "options": [
     {
-     "text": "The pyramids, more than 2,000 years earlier",
+     "text": "The pyramids, long before",
      "correct": true
     },
     {
-     "text": "The Romans",
+     "text": "The Romans, a little before",
      "correct": false,
      "feedback": "The Great Pyramid was built around 2560 BC; the Romans invaded in AD 43."
     },
@@ -388,16 +388,16 @@
    "prompt": "Before cars, how did most people travel long distances on land?",
    "options": [
     {
-     "text": "By horse, carriage or walking (and later by train)",
+     "text": "By horse or on foot",
      "correct": true
     },
     {
-     "text": "By aeroplane",
+     "text": "By aeroplane or helicopter",
      "correct": false,
      "feedback": "Aeroplanes came after cars."
     },
     {
-     "text": "By rocket",
+     "text": "By rocket or by jet pack",
      "correct": false,
      "feedback": "Rockets are much more recent!"
     }
@@ -427,11 +427,11 @@
    "prompt": "In early motoring in Britain, a law said someone had to walk in front of a steam car carrying what?",
    "options": [
     {
-     "text": "A red flag, to warn people",
+     "text": "A red flag",
      "correct": true
     },
     {
-     "text": "A trumpet",
+     "text": "A loud trumpet",
      "correct": false,
      "feedback": "It was a red flag."
     },
@@ -464,13 +464,13 @@
    "topic": "history.cars",
    "kind": "fact",
    "prompt": "The very first Formula One World Championship race was held in 1950 in which country?",
-   "answer": "Britain (at Silverstone)",
+   "answer": "Britain",
    "distractors": [
     "France",
     "the USA",
     "Australia"
    ],
-   "explain": "Silverstone is a racetrack in Northamptonshire, built on an old wartime airfield.",
+   "explain": "It was at Silverstone, a racetrack in Northamptonshire built on an old wartime airfield.",
    "formats": [
     "choice"
    ]
@@ -514,11 +514,11 @@
    "prompt": "How are many new cars today different from old ones?",
    "options": [
     {
-     "text": "Many are electric, so they don’t burn petrol",
+     "text": "Many are electric",
      "correct": true
     },
     {
-     "text": "They have no wheels",
+     "text": "They have no wheels at all",
      "correct": false,
      "feedback": "They still have wheels!"
     },
@@ -588,8 +588,8 @@
    "prompt": "Which engineer with a tall top hat built bridges, tunnels, a railway and giant steamships?",
    "answer": "Isambard Kingdom Brunel",
    "distractors": [
-    "Henry VIII",
-    "Tim Peake",
+    "King Henry the Eighth",
+    "Alexander Graham Bell",
     "Charles Dickens"
    ],
    "explain": "Brunel designed the Clifton Suspension Bridge in Bristol and built the Great Western Railway.",
@@ -636,16 +636,16 @@
    "prompt": "What do all good inventors do?",
    "options": [
     {
-     "text": "Keep trying, even when their ideas fail at first",
+     "text": "Keep trying when ideas fail",
      "correct": true
     },
     {
-     "text": "Get it right first time",
+     "text": "Get everything right first time",
      "correct": false,
      "feedback": "Edison failed thousands of times before his bulb worked!"
     },
     {
-     "text": "Copy someone else",
+     "text": "Copy someone else’s idea",
      "correct": false,
      "feedback": "Inventors come up with new ideas."
     }
@@ -708,11 +708,11 @@
    "prompt": "Most RNLI lifeboat crew are volunteers. What does that mean?",
    "options": [
     {
-     "text": "They choose to help and are not paid",
+     "text": "They help without being paid",
      "correct": true
     },
     {
-     "text": "They are soldiers",
+     "text": "They are soldiers in the navy",
      "correct": false,
      "feedback": "They are ordinary people who give their time."
     },
@@ -731,16 +731,16 @@
    "prompt": "Why was Grace Darling’s rescue so brave?",
    "options": [
     {
-     "text": "The sea was stormy and dangerous, and the boat was small",
+     "text": "The sea was stormy and dangerous",
      "correct": true
     },
     {
-     "text": "She couldn’t swim",
+     "text": "She couldn’t swim at all",
      "correct": false,
      "feedback": "The danger was the storm."
     },
     {
-     "text": "It was a sunny day",
+     "text": "It was a calm and sunny day",
      "correct": false,
      "feedback": "It was a terrible storm!"
     }
@@ -815,16 +815,16 @@
    "prompt": "Why was exploring Antarctica so dangerous?",
    "options": [
     {
-     "text": "It is freezing cold, windy, and covered in ice",
+     "text": "It is freezing cold and icy",
      "correct": true
     },
     {
-     "text": "There are lots of lions",
+     "text": "There are lots of hungry lions",
      "correct": false,
      "feedback": "No lions! Only penguins and seals."
     },
     {
-     "text": "It is too hot",
+     "text": "It is far too hot and dry",
      "correct": false,
      "feedback": "Antarctica is the coldest place on Earth."
     }
@@ -883,16 +883,16 @@
    "prompt": "How was a Victorian school different from yours?",
    "options": [
     {
-     "text": "Children wrote on slates and teachers were very strict",
+     "text": "Children wrote on slates",
      "correct": true
     },
     {
-     "text": "They had computers",
+     "text": "They had computers in every room",
      "correct": false,
      "feedback": "No computers! They used slates and chalk."
     },
     {
-     "text": "There were no teachers",
+     "text": "There were no teachers at all",
      "correct": false,
      "feedback": "There were teachers, and they were very strict."
     }
@@ -906,16 +906,16 @@
    "prompt": "What hard job did some poor Victorian children do?",
    "options": [
     {
-     "text": "Worked in factories, mines or as chimney sweeps",
+     "text": "Worked in factories and mines",
      "correct": true
     },
     {
-     "text": "Flew aeroplanes",
+     "text": "Flew aeroplanes for the army",
      "correct": false,
      "feedback": "There were no aeroplanes yet."
     },
     {
-     "text": "Worked in space",
+     "text": "Worked on rockets in space",
      "correct": false,
      "feedback": "Space travel came 100 years later."
     }
@@ -994,16 +994,16 @@
    "prompt": "Why is the Tudor rose red AND white?",
    "options": [
     {
-     "text": "It joined the red rose of Lancaster and the white rose of York",
+     "text": "It joined Lancaster and York",
      "correct": true
     },
     {
-     "text": "Red and white were Henry’s favourite colours",
+     "text": "They were Henry’s favourite colours",
      "correct": false,
      "feedback": "It joined two families who had been fighting."
     },
     {
-     "text": "It was painted twice",
+     "text": "It was painted twice by mistake",
      "correct": false,
      "feedback": "It shows two families coming together."
     }

@@ -507,16 +507,16 @@
    "prompt": "Why does φύλαξ become φυλάκων in the genitive plural?",
    "options": [
     {
-     "text": "The long ending -ων means the accent cannot stay three syllables from the end, so it moves forward one",
+     "text": "The long -ων stops the accent staying three syllables back",
      "correct": true
     },
     {
-     "text": "φυλάκων is a different word",
+     "text": "The genitive plural always moves the accent to the stem",
      "correct": false,
-     "feedback": "Same word: only the accent has moved."
+     "feedback": "Not always: it moves here only because the ending -ων is long."
     },
     {
-     "text": "Genitive plurals always take a circumflex",
+     "text": "Genitive plurals always take a circumflex on the ending",
      "correct": false,
      "feedback": "Third-declension -ων usually has the acute on the syllable before: φυλάκων, ἀγώνων."
     }
@@ -596,12 +596,12 @@
      "correct": true
     },
     {
-     "text": "σώματα is a verb",
+     "text": "σώματα is a dative plural that can do both jobs",
      "correct": false,
-     "feedback": "It is the plural of σῶμα."
+     "feedback": "It is nominative or accusative plural; the dative plural is σώμασι(ν)."
     },
     {
-     "text": "Third-declension nouns have no accusative",
+     "text": "Third-declension nouns have no separate accusative form",
      "correct": false,
      "feedback": "They do: φύλακα, γίγαντα."
     }
@@ -615,9 +615,9 @@
    "prompt": "What does **τὸ πρᾶγμα** (genitive πράγματος) mean?",
    "answer": "thing, matter",
    "distractors": [
-    "body",
-    "name",
-    "word"
+    "body, corpse",
+    "name, fame",
+    "word, speech"
    ],
    "explain": "πρᾶγμα = a thing done, a matter, an affair: “pragmatic” means practical.",
    "accept": [
@@ -707,16 +707,16 @@
    "prompt": "In the Theseus story, why is it **τὸν Θησέα**, not τὸν Θησεύν?",
    "options": [
     {
-     "text": "Θησεύς declines like βασιλεύς: the accusative ends -έα",
+     "text": "Θησεύς declines like βασιλεύς: accusative -έα",
      "correct": true
     },
     {
-     "text": "It is a mistake",
+     "text": "It is a poetic form that Homer uses",
      "correct": false,
-     "feedback": "It is the correct form."
+     "feedback": "It is the ordinary prose form, like βασιλέα."
     },
     {
-     "text": "τὸν Θησέα is plural",
+     "text": "Θησέα is the accusative plural of Θησεύς",
      "correct": false,
      "feedback": "τόν is singular."
     }
@@ -776,16 +776,16 @@
    "prompt": "What is unusual about **ἡ γυνή** (woman)?",
    "options": [
     {
-     "text": "Its other cases use the stem γυναικ-: γυναῖκα, γυναικός, γυναικί",
+     "text": "Its other cases use the stem γυναικ-",
      "correct": true
     },
     {
-     "text": "It is masculine",
+     "text": "It is masculine, despite meaning woman",
      "correct": false,
      "feedback": "It is feminine: ἡ γυνή."
     },
     {
-     "text": "It has no plural",
+     "text": "It has no plural form at all",
      "correct": false,
      "feedback": "The plural is γυναῖκες."
     }
@@ -845,11 +845,11 @@
    "prompt": "Why is ἐγώ often left out of a Greek sentence?",
    "options": [
     {
-     "text": "The verb ending already shows “I”, so ἐγώ only adds emphasis",
+     "text": "The verb ending already shows “I”",
      "correct": true
     },
     {
-     "text": "It is rude to say “I”",
+     "text": "It is thought rude to say “I” in Greek",
      "correct": false,
      "feedback": "Not rude: just unnecessary."
     },
@@ -901,12 +901,12 @@
      "correct": true
     },
     {
-     "text": "σοί",
+     "text": "σοί (or unemphatic σοι)",
      "correct": false,
      "feedback": "σοί is the dative: to you."
     },
     {
-     "text": "σοῦ",
+     "text": "σοῦ (or unemphatic σου)",
      "correct": false,
      "feedback": "σοῦ is the genitive: of you."
     }
@@ -989,16 +989,16 @@
    "prompt": "In **τὰ ἔργα αὐτῆς θαυμάζουσιν**, what does αὐτῆς mean?",
    "options": [
     {
-     "text": "her (of her): they admire her works",
+     "text": "her: they admire her works",
      "correct": true
     },
     {
-     "text": "herself",
+     "text": "herself: she herself admires the works",
      "correct": false,
      "feedback": "On its own in the genitive, αὐτῆς means “of her”."
     },
     {
-     "text": "the same",
+     "text": "the same: they admire the same works",
      "correct": false,
      "feedback": "“The same” needs the article."
     }
@@ -1212,7 +1212,7 @@
      "feedback": "ὁ ἀνήρ is nominative. The relative takes its case from its own clause."
     },
     {
-     "text": "Relatives are always accusative",
+     "text": "Relative pronouns are always in the accusative",
      "correct": false,
      "feedback": "They can be any case."
     }
@@ -1276,12 +1276,12 @@
      "correct": true
     },
     {
-     "text": "They are the same word",
+     "text": "They are the same word, written two ways",
      "correct": false,
      "feedback": "Same letters, different words: the accent tells them apart."
     },
     {
-     "text": "ἥ is plural",
+     "text": "ἥ is the plural form of the article ἡ",
      "correct": false,
      "feedback": "Both are singular."
     }
@@ -1345,12 +1345,12 @@
      "correct": true
     },
     {
-     "text": "wiser",
+     "text": "wiser, or rather wise",
      "correct": false,
      "feedback": "Wiser is σοφώτερος."
     },
     {
-     "text": "too wise",
+     "text": "too wise, or over-wise",
      "correct": false,
      "feedback": "Greek uses the superlative for “very”, not “too”."
     }
@@ -1364,16 +1364,16 @@
    "prompt": "Why is it σοφώτερος but δεινότερος?",
    "options": [
     {
-     "text": "After a short syllable the ο lengthens to ω; after a long one it stays ο",
+     "text": "A short syllable before it lengthens ο to ω",
      "correct": true
     },
     {
-     "text": "δεινός is irregular",
+     "text": "δεινός is irregular, like ἀγαθός",
      "correct": false,
      "feedback": "Both are regular."
     },
     {
-     "text": "It is a spelling mistake",
+     "text": "It is a spelling choice that varies by author",
      "correct": false,
      "feedback": "It is a rule."
     }
@@ -1496,12 +1496,12 @@
      "correct": true
     },
     {
-     "text": "very slowly",
+     "text": "as slowly as possible",
      "correct": false,
      "feedback": "τάχιστα is from ταχύς, quick."
     },
     {
-     "text": "faster than",
+     "text": "faster than ever before",
      "correct": false,
      "feedback": "Faster is θᾶττον."
     }
@@ -1701,16 +1701,16 @@
    "prompt": "What is the difference between **ἐπαίδευε** and **ἐπαίδευσε**?",
    "options": [
     {
-     "text": "ἐπαίδευε = he was teaching (imperfect); ἐπαίδευσε = he taught (aorist)",
+     "text": "ἐπαίδευε = he was teaching; ἐπαίδευσε = he taught",
      "correct": true
     },
     {
-     "text": "They mean the same",
+     "text": "ἐπαίδευε = he taught; ἐπαίδευσε = he was teaching",
      "correct": false,
      "feedback": "The σ marks the aorist: one finished action."
     },
     {
-     "text": "ἐπαίδευσε is the future",
+     "text": "ἐπαίδευσε is the future: he will teach",
      "correct": false,
      "feedback": "The augment shows it is past."
     }
@@ -1774,14 +1774,14 @@
      "correct": true
     },
     {
-     "text": "The ε doubles: εεθελον",
+     "text": "The ε doubles: εεθελον (I was wishing)",
      "correct": false,
      "feedback": "Greek lengthens the vowel instead."
     },
     {
-     "text": "Nothing changes",
+     "text": "The ε becomes ει: εἴθελον (I was wishing)",
      "correct": false,
-     "feedback": "The past still needs an augment: here a long vowel."
+     "feedback": "ε augments to η, not ει: ἤθελον."
     }
    ],
    "explain": "ε → η: ἐθέλω, ἤθελον. Odysseus ἤθελε τὰς Σειρῆνας ἀκούειν."
@@ -1871,16 +1871,16 @@
    "prompt": "How do you tell the imperfect **ἔφευγον** from the aorist **ἔφυγον**?",
    "options": [
     {
-     "text": "By the stem: φευγ- is the present stem (imperfect), φυγ- the aorist stem",
+     "text": "By the stem: φευγ- (imperfect) or φυγ- (aorist)",
      "correct": true
     },
     {
-     "text": "The endings are different",
+     "text": "By the ending: the aorist has -σα instead of -ον",
      "correct": false,
      "feedback": "Both have -ον, -ες, -ε…: only the stem differs."
     },
     {
-     "text": "ἔφυγον has no augment",
+     "text": "ἔφυγον has no augment; ἔφευγον does",
      "correct": false,
      "feedback": "Both have the augment ἐ-."
     }
@@ -1951,12 +1951,12 @@
      "correct": true
     },
     {
-     "text": "marathon",
+     "text": "marathon (a long race)",
      "correct": false,
      "feedback": "Marathon is a place name."
     },
     {
-     "text": "method",
+     "text": "method (a way of doing)",
      "correct": false,
      "feedback": "Method comes from μετά + ὁδός (a way after)."
     }
@@ -1997,12 +1997,12 @@
      "correct": true
     },
     {
-     "text": "path and pathway",
+     "text": "path, pathway and footpath",
      "correct": false,
      "feedback": "Path is an old English word."
     },
     {
-     "text": "pasta and paste",
+     "text": "pasta, paste and pastry",
      "correct": false,
      "feedback": "Those come from Italian."
     }
@@ -2220,14 +2220,14 @@
      "correct": true
     },
     {
-     "text": "You untied me.",
+     "text": "You (plural) untied me.",
      "correct": false,
      "feedback": "λύσατε has no augment, so it is a command. “You untied” is ἐλύσατε."
     },
     {
-     "text": "I am untied.",
+     "text": "Untie me! (to one person only)",
      "correct": false,
-     "feedback": "με is the object: me."
+     "feedback": "To one person it would be λῦσόν με; λύσατε is plural."
     }
    ],
    "explain": "Aorist imperative: λῦσον (singular), λύσατε (plural)."
@@ -2262,16 +2262,16 @@
    "prompt": "What is the difference between **λύσατε** and **ἐλύσατε**?",
    "options": [
     {
-     "text": "λύσατε = free! (a command); ἐλύσατε = you freed (a statement)",
+     "text": "λύσατε is a command; ἐλύσατε is a statement",
      "correct": true
     },
     {
-     "text": "None: they mean the same",
+     "text": "None: they both mean “you freed”",
      "correct": false,
      "feedback": "The augment ἐ- makes it a past statement."
     },
     {
-     "text": "λύσατε is the future",
+     "text": "λύσατε is the future: you will free",
      "correct": false,
      "feedback": "The future is λύσετε."
     }
@@ -2385,12 +2385,12 @@
      "correct": true
     },
     {
-     "text": "he makes",
+     "text": "he makes (or does)",
      "correct": false,
      "feedback": "He makes is ποιεῖ."
     },
     {
-     "text": "we make",
+     "text": "we make (or do)",
      "correct": false,
      "feedback": "We make is ποιοῦμεν."
     }
@@ -2540,12 +2540,12 @@
      "correct": true
     },
     {
-     "text": "It is irregular",
+     "text": "It is irregular, like many common verbs",
      "correct": false,
      "feedback": "All -έω verbs do this: ἐφίλησα, ἐζήτησα."
     },
     {
-     "text": "η means “made”",
+     "text": "The η is part of the augment",
      "correct": false,
      "feedback": "The η is just the lengthened stem vowel."
     }
@@ -2602,12 +2602,12 @@
      "correct": true
     },
     {
-     "text": "he frees",
+     "text": "he, she or it frees",
      "correct": false,
      "feedback": "He frees is λύει."
     },
     {
-     "text": "he will free",
+     "text": "he, she or it will free",
      "correct": false,
      "feedback": "He will free is λύσει."
     }
@@ -2648,12 +2648,12 @@
      "correct": true
     },
     {
-     "text": "A verb with no past tense",
+     "text": "A verb with active endings but a passive meaning",
      "correct": false,
-     "feedback": "Deponents have all the tenses."
+     "feedback": "The reverse: deponents look middle/passive but mean something active."
     },
     {
-     "text": "A verb that only takes the dative",
+     "text": "A verb that only takes an object in the dative",
      "correct": false,
      "feedback": "That is a different idea."
     }
@@ -2686,9 +2686,9 @@
    "prompt": "What does **γίγνεται** mean?",
    "answer": "he, she or it becomes",
    "distractors": [
-    "he wants",
-    "he fights",
-    "he receives"
+    "he, she or it wants",
+    "he, she or it fights",
+    "he, she or it receives"
    ],
    "explain": "γίγνομαι = I become, happen (a deponent). Genesis comes from the same root.",
    "accept": [
@@ -2711,12 +2711,12 @@
      "correct": true
     },
     {
-     "text": "-ουσι(ν)",
+     "text": "-ουσι(ν) (λύουσι)",
      "correct": false,
      "feedback": "-ουσι(ν) is the active ending."
     },
     {
-     "text": "-ομεθα",
+     "text": "-ομεθα (λυόμεθα)",
      "correct": false,
      "feedback": "-ομεθα means “we”."
     }
@@ -2757,12 +2757,12 @@
      "correct": true
     },
     {
-     "text": "we come",
+     "text": "you (singular) come, or go",
      "correct": false,
-     "feedback": "We come is ἐρχόμεθα."
+     "feedback": "You (singular) come is ἔρχῃ (or ἔρχει)."
     },
     {
-     "text": "they come",
+     "text": "they come, or go",
      "correct": false,
      "feedback": "They come is ἔρχονται."
     }
@@ -2780,12 +2780,12 @@
      "correct": true
     },
     {
-     "text": "λύειν",
+     "text": "λύειν (to free)",
      "correct": false,
      "feedback": "λύειν is active: to free."
     },
     {
-     "text": "λῦσαι",
+     "text": "λῦσαι (to free, aorist)",
      "correct": false,
      "feedback": "λῦσαι is the aorist active: to free."
     }
@@ -2980,12 +2980,12 @@
      "correct": true
     },
     {
-     "text": "he flees",
+     "text": "he flees (a present-tense verb)",
      "correct": false,
      "feedback": "He flees is φεύγει."
     },
     {
-     "text": "the flight",
+     "text": "the flight (the act of fleeing)",
      "correct": false,
      "feedback": "Flight is φυγή."
     }
@@ -3068,16 +3068,16 @@
    "prompt": "What does the difference between **λύων** and **λύσας** show?",
    "options": [
     {
-     "text": "λύων: at the same time (freeing); λύσας: before (having freed)",
+     "text": "λύων: while freeing; λύσας: having freed",
      "correct": true
     },
     {
-     "text": "λύων is future",
+     "text": "λύων is future; λύσας is present",
      "correct": false,
      "feedback": "The future participle is λύσων."
     },
     {
-     "text": "There is no difference",
+     "text": "λύσας: while freeing; λύων: having freed",
      "correct": false,
      "feedback": "The tense of a participle shows the timing."
     }
@@ -3279,12 +3279,12 @@
      "correct": true
     },
     {
-     "text": "It is the object",
+     "text": "It is the direct object of ἔζευξεν",
      "correct": false,
      "feedback": "The object is τοὺς ταύρους."
     },
     {
-     "text": "It means “of the potion”",
+     "text": "It shows possession: “of the potion”",
      "correct": false,
      "feedback": "That would be the genitive, τοῦ φαρμάκου."
     }
@@ -3390,18 +3390,18 @@
    "prompt": "Why is it **οὐκ ἐθέλει** but **οὐχ ὁρᾷ**?",
    "options": [
     {
-     "text": "οὐκ goes before a smooth breathing, οὐχ before a rough breathing",
+     "text": "οὐκ before a smooth breathing; οὐχ before a rough one",
      "correct": true
     },
     {
-     "text": "They are different words",
+     "text": "οὐχ is used before verbs that start with a vowel",
      "correct": false,
-     "feedback": "Both mean “not”."
+     "feedback": "ἐθέλει starts with a vowel too: the breathing decides."
     },
     {
-     "text": "οὐχ is plural",
+     "text": "οὐχ is a stronger “not”, used for emphasis",
      "correct": false,
-     "feedback": "Negatives have no plural."
+     "feedback": "Both mean simply “not”: only the next sound decides."
     }
    ],
    "explain": "οὐ before a consonant, οὐκ before a smooth breathing, οὐχ before a rough breathing (ὁρᾷ)."
@@ -3505,16 +3505,16 @@
    "prompt": "How is **τίς** (who?) different from **τις** (someone)?",
    "options": [
     {
-     "text": "τίς has an accent and asks a question; τις has none and means “someone”",
+     "text": "τίς has an accent and asks; τις has none: “someone”",
      "correct": true
     },
     {
-     "text": "They are the same word",
+     "text": "They are the same word, written with or without stress",
      "correct": false,
      "feedback": "The accent makes the difference."
     },
     {
-     "text": "τις is plural",
+     "text": "τις is the plural, “some people”",
      "correct": false,
      "feedback": "Both are singular."
     }
@@ -3571,12 +3571,12 @@
      "correct": true
     },
     {
-     "text": "not yet",
+     "text": "not yet: the heads had not yet grown",
      "correct": false,
      "feedback": "Not yet is οὔπω."
     },
     {
-     "text": "never",
+     "text": "never: the heads never grew",
      "correct": false,
      "feedback": "Never is οὐδέποτε."
     }
@@ -3659,16 +3659,16 @@
    "prompt": "When should you NOT use a genitive absolute?",
    "options": [
     {
-     "text": "When its noun is already part of the main sentence, such as the subject",
+     "text": "When its noun is already in the main sentence",
      "correct": true
     },
     {
-     "text": "When the participle is aorist",
+     "text": "When the participle is aorist, not present",
      "correct": false,
      "feedback": "Aorist participles are common in genitive absolutes."
     },
     {
-     "text": "At the start of a sentence",
+     "text": "At the start of a sentence, before the verb",
      "correct": false,
      "feedback": "That is exactly where it usually goes."
     }
@@ -3714,7 +3714,7 @@
      "feedback": "There is no word for men."
     },
     {
-     "text": "the city is capturing",
+     "text": "while the city was capturing them",
      "correct": false,
      "feedback": "ληφθείσης is passive: having been taken."
     }
@@ -3956,12 +3956,12 @@
      "correct": true
     },
     {
-     "text": "herself",
+     "text": "herself: “she herself”",
      "correct": false,
      "feedback": "On its own in the genitive, αὐτῆς means “of her”."
     },
     {
-     "text": "the same",
+     "text": "the same: “the same works”",
      "correct": false,
      "feedback": "“The same” needs the article."
     }
@@ -3981,12 +3981,12 @@
      "correct": true
     },
     {
-     "text": "It was ugly",
+     "text": "It was ugly, and the threads were tangled",
      "correct": false,
      "feedback": "“καλὸν μέν ἐστιν”: it is beautiful."
     },
     {
-     "text": "It was unfinished",
+     "text": "It was unfinished when the contest ended",
      "correct": false,
      "feedback": "The passage does not say so."
     }
@@ -4006,12 +4006,12 @@
      "correct": true
     },
     {
-     "text": "ὑφαίνει",
+     "text": "ὑφαίνει (from ὑφαίνω)",
      "correct": false,
      "feedback": "ὑφαίνω is not contracted."
     },
     {
-     "text": "ἔρχεται",
+     "text": "ἔρχεται (from ἔρχομαι)",
      "correct": false,
      "feedback": "ἔρχομαι is a deponent, not contracted."
     }
@@ -4045,9 +4045,9 @@
    "prompt": "What happened when Orpheus sang?",
    "answer": "even the trees and the wild animals listened",
    "distractors": [
-    "the gods fell asleep",
-    "the rivers flowed backwards",
-    "Eurydice danced"
+    "the gods of Olympus fell asleep",
+    "the rivers flowed backwards to their springs",
+    "Eurydice danced with the nymphs"
    ],
    "explain": "“καὶ τὰ δένδρα καὶ τὰ θηρία ἤκουεν.” (A neuter plural subject takes a singular verb.)",
    "formats": [
@@ -4063,16 +4063,16 @@
    "prompt": "What tense is **ᾖδεν**, and how do you know?",
    "options": [
     {
-     "text": "imperfect: it has an augment (ᾳ lengthened to ῃ) and present-stem endings",
+     "text": "imperfect: it has an augment and present-stem endings",
      "correct": true
     },
     {
-     "text": "future: it has a σ",
+     "text": "future: it has a σ before the ending",
      "correct": false,
      "feedback": "There is no σ."
     },
     {
-     "text": "present: there is no augment",
+     "text": "aorist: it has an augment and a σ",
      "correct": false,
      "feedback": "ᾄδω → ᾖδον: the long ῃ is the augment."
     }
@@ -4092,12 +4092,12 @@
      "correct": true
     },
     {
-     "text": "Stay here with your wife.",
+     "text": "Stay here with your wife for ever.",
      "correct": false,
      "feedback": "ἄγε… οἴκαδε: lead her home."
     },
     {
-     "text": "Look at your wife, then go home.",
+     "text": "Look at your wife, then lead her home.",
      "correct": false,
      "feedback": "μὴ βλέπε: don’t look!"
     }
@@ -4113,16 +4113,16 @@
    "prompt": "In **ὁ μὲν Ὀρφεὺς ἡγεῖται, ἡ δὲ Εὐρυδίκη ἕπεται**, what do μέν and δέ do?",
    "options": [
     {
-     "text": "They contrast the two: Orpheus leads, while Eurydice follows",
+     "text": "They contrast the two: one leads, one follows",
      "correct": true
     },
     {
-     "text": "They mean “not”",
+     "text": "They mean “and”, joining two equal actions",
      "correct": false,
-     "feedback": "Not is οὐ or μή."
+     "feedback": "They do join them, but as a contrast: one leads, the other follows."
     },
     {
-     "text": "They make it a question",
+     "text": "They make the sentence a question",
      "correct": false,
      "feedback": "There is no question mark (;)."
     }
@@ -4142,12 +4142,12 @@
      "correct": true
     },
     {
-     "text": "Hades changes his mind",
+     "text": "Hades changes his mind and calls her",
      "correct": false,
      "feedback": "Hades kept his word."
     },
     {
-     "text": "She refuses to follow",
+     "text": "She refuses to follow him out",
      "correct": false,
      "feedback": "ἡ δὲ Εὐρυδίκη ἕπεται: she follows."
     }
@@ -4224,18 +4224,18 @@
    "prompt": "How did Iolaus help?",
    "options": [
     {
-     "text": "He burned the necks with fire, so no heads grew back",
+     "text": "He burned the necks so no heads grew back",
      "correct": true
     },
     {
-     "text": "He cut off the last head",
+     "text": "He cut off the last head with a sword",
      "correct": false,
      "feedback": "Heracles kills the Hydra."
     },
     {
-     "text": "He fetched more sheep",
+     "text": "He held the Hydra down with a net",
      "correct": false,
-     "feedback": "The sheep were the Hydra’s victims."
+     "feedback": "There is no net: “πῦρ φέρει”, he brings fire."
     }
    ],
    "explain": "“ὁ οὖν Ἰόλαος πῦρ φέρει καὶ τοὺς τραχήλους καίει.”",
@@ -4314,12 +4314,12 @@
      "correct": true
     },
     {
-     "text": "The Sirens cannot sing",
+     "text": "The Sirens sing badly and scare sailors",
      "correct": false,
      "feedback": "“καλῶς ᾄδουσιν”: they sing beautifully."
     },
     {
-     "text": "The Cyclops is near",
+     "text": "The Cyclops is waiting near the shore",
      "correct": false,
      "feedback": "The Cyclops was an earlier adventure."
     }
@@ -4339,12 +4339,12 @@
      "correct": true
     },
     {
-     "text": "A past tense: she closed",
+     "text": "A past tense (aorist): she closed",
      "correct": false,
      "feedback": "No augment, so it is a command. “He closed” is ἔκλεισεν."
     },
     {
-     "text": "A future: she will close",
+     "text": "A future (indicative): she will close",
      "correct": false,
      "feedback": "The future would be κλείσει."
     }
@@ -4435,9 +4435,9 @@
    "prompt": "Why did Odysseus not block his own ears?",
    "answer": "he wanted to hear the Sirens",
    "distractors": [
-    "he was deaf",
-    "Circe forbade it",
-    "he had no wax left"
+    "he was already partly deaf",
+    "Circe had forbidden him to do it",
+    "he had no wax left for himself"
    ],
    "explain": "“αὐτὸς δὲ ἤθελε τὰς Σειρῆνας ἀκούειν.”",
    "formats": [
@@ -4453,9 +4453,9 @@
    "prompt": "What did King Pelias order Jason to do?",
    "answer": "bring the golden fleece from Colchis",
    "distractors": [
-    "build a city",
+    "build a city in Thessaly",
     "kill the bulls of Pelias",
-    "marry Medea"
+    "marry the princess Medea of Colchis"
    ],
    "explain": "“τὸν Ἰάσονα ἐκέλευσε τὸ χρυσοῦν δέρας ἐκ τῆς Κόλχιδος φέρειν.”",
    "formats": [
@@ -4493,14 +4493,14 @@
      "correct": true
     },
     {
-     "text": "the aorist: he took",
+     "text": "the aorist indicative of λαμβάνω: he took",
      "correct": false,
      "feedback": "He took is ἔλαβεν, with the augment."
     },
     {
-     "text": "the present: he takes",
+     "text": "the present infinitive of λαμβάνω: to take",
      "correct": false,
-     "feedback": "He takes is λαμβάνει."
+     "feedback": "The present infinitive is λαμβάνειν; λαβεῖν uses the aorist stem λαβ-."
     }
    ],
    "explain": "“εἰ ἐθέλεις τὸ δέρας λαβεῖν”: if you want to take the fleece.",
@@ -4654,12 +4654,12 @@
      "correct": true
     },
     {
-     "text": "τῶν Ἑλλήνων",
+     "text": "τῶν Ἑλλήνων τῶν ἀνδρείων",
      "correct": false,
      "feedback": "That is a plain genitive: of the Greeks."
     },
     {
-     "text": "ἐκ τοῦ ἵππου",
+     "text": "ἐκ τοῦ ἵππου τοῦ ξυλίνου",
      "correct": false,
      "feedback": "That is a genitive after ἐκ."
     }
@@ -4700,8 +4700,8 @@
    "prompt": "What did the soldiers do after coming out of the horse?",
    "answer": "they opened the gates for their friends",
    "distractors": [
-    "they burned the horse",
-    "they sailed away",
+    "they burned the horse on the beach",
+    "they sailed away to their ships",
     "they hid in the tents"
    ],
    "explain": "“τὰς πύλας τοῖς φίλοις ἀνέῳξαν.”",
@@ -4790,12 +4790,12 @@
      "correct": true
     },
     {
-     "text": "He closed his eyes",
+     "text": "He closed his eyes and felt his way",
      "correct": false,
      "feedback": "“εἰς τὴν ἀσπίδα βλέπων”: looking at the shield."
     },
     {
-     "text": "He wore a helmet",
+     "text": "He wore a helmet with a mirrored visor",
      "correct": false,
      "feedback": "There is no helmet in this version."
     }
@@ -4811,7 +4811,7 @@
    "prompt": "What does **δείξας** mean, and what happened to Polydectes?",
    "options": [
     {
-     "text": "having shown: Perseus showed him the head and turned him to stone",
+     "text": "having shown: he turned Polydectes to stone",
      "correct": true
     },
     {
@@ -4820,7 +4820,7 @@
      "feedback": "δείκνυμι = I show."
     },
     {
-     "text": "while running: Polydectes ran away",
+     "text": "while showing: Polydectes ran away in fear",
      "correct": false,
      "feedback": "“αὐτὸν εἰς λίθον μετέβαλεν”: he turned him into stone."
     }
@@ -4836,9 +4836,9 @@
    "prompt": "Which gifts came from Hermes?",
    "answer": "a curved sword and winged sandals",
    "distractors": [
-    "a shining shield",
-    "a magic potion",
-    "a ship"
+    "a shining shield and a bag",
+    "a magic potion and a cloak",
+    "a ship and a crew of heroes"
    ],
    "explain": "“ἡ μὲν (Athena) ἀσπίδα λαμπρὰν ἔδωκεν, ὁ δὲ (Hermes) ἅρπην καὶ πτερωτὰ πέδιλα.”",
    "formats": [

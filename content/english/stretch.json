@@ -99,16 +99,16 @@
    "prompt": "Why might a scientist write “The liquid was heated to 80°C” instead of “I heated the liquid to 80°C”?",
    "options": [
     {
-     "text": "The passive puts the focus on the experiment, not the person, and sounds formal and impersonal",
+     "text": "The passive keeps the focus on the experiment",
      "correct": true
     },
     {
-     "text": "Because scientists are not allowed to use “I”",
+     "text": "Because scientists are never allowed to use “I”",
      "correct": false,
      "feedback": "There is no rule, but the passive is the convention because it focuses on the process."
     },
     {
-     "text": "Because it is shorter",
+     "text": "Because the passive is shorter and quicker to write",
      "correct": false,
      "feedback": "It is actually longer. The reason is focus and formality."
     }
@@ -141,16 +141,16 @@
    "prompt": "“If I were you, I would apologise.” Why “were” and not “was”?",
    "options": [
     {
-     "text": "It is the subjunctive mood, used for things that are imagined or not true",
+     "text": "It is the subjunctive, for imagined situations",
      "correct": true
     },
     {
-     "text": "It is a mistake",
+     "text": "It is a mistake that should be “was”",
      "correct": false,
      "feedback": "It is correct formal English. “Were” after “if I” shows something imagined."
     },
     {
-     "text": "Because “I” is plural here",
+     "text": "Because “I” counts as plural in this sentence",
      "correct": false,
      "feedback": "“I” is never plural. The form is the subjunctive."
     }
@@ -235,16 +235,16 @@
    "prompt": "“My brother – who never reads – finished the book in a day.” What job are the dashes doing?",
    "options": [
     {
-     "text": "Marking parenthesis: extra information that could be removed",
+     "text": "Marking parenthesis: extra, removable information",
      "correct": true
     },
     {
-     "text": "Showing a pause for breath",
+     "text": "Showing a pause for breath when reading aloud",
      "correct": false,
      "feedback": "They mark off an extra clause, like brackets or a pair of commas."
     },
     {
-     "text": "Joining two words",
+     "text": "Joining two words into a compound",
      "correct": false,
      "feedback": "That is a hyphen (shorter, no spaces): “well-known”."
     }
@@ -261,16 +261,16 @@
    "prompt": "In “The book that I lost was a present”, what kind of clause is “that I lost”?",
    "options": [
     {
-     "text": "A relative clause: it describes the noun “book”",
+     "text": "A relative clause describing “book”",
      "correct": true
     },
     {
-     "text": "A main clause",
+     "text": "A main clause that could stand alone",
      "correct": false,
      "feedback": "It cannot stand alone; it adds information about the book."
     },
     {
-     "text": "An adverbial clause",
+     "text": "An adverbial clause saying when",
      "correct": false,
      "feedback": "Adverbial clauses tell you when, where, why or how. This one describes a noun."
     }
@@ -697,16 +697,16 @@
    "prompt": "Line 9 begins “But thy eternal summer shall not fade”. What happens here?",
    "options": [
     {
-     "text": "The turn (volta): the poem stops describing summer’s faults and turns to the loved one’s lasting beauty",
+     "text": "The volta: a turn to the loved one’s lasting beauty",
      "correct": true
     },
     {
-     "text": "A new poem starts",
+     "text": "A second, separate sonnet begins at this line",
      "correct": false,
      "feedback": "It is the same poem. Sonnets often change direction at line 9."
     },
     {
-     "text": "The rhyme scheme breaks down",
+     "text": "The rhyme scheme breaks down completely",
      "correct": false,
      "feedback": "The rhyme continues (EFEF). It is the ARGUMENT that turns."
     }
@@ -722,16 +722,16 @@
    "prompt": "What does the final couplet claim?",
    "options": [
     {
-     "text": "The poem itself will keep the loved one alive as long as people read it",
+     "text": "The poem will keep the loved one alive",
      "correct": true
     },
     {
-     "text": "Summer lasts for ever",
+     "text": "Summer will last for ever in England",
      "correct": false,
      "feedback": "The poem says the opposite: “summer’s lease hath all too short a date”."
     },
     {
-     "text": "The poet will live for ever",
+     "text": "The poet himself will live for ever",
      "correct": false,
      "feedback": "It is “this” (the poem) and “thee” (the loved one) who live, through the lines."
     }
@@ -808,16 +808,16 @@
    "prompt": "The convict is described in three sentences that all begin “A man…” What is the effect of this repetition?",
    "options": [
     {
-     "text": "It piles up detail like a list, so the man seems to appear in pieces, more and more frightening",
+     "text": "It builds him up piece by frightening piece",
      "correct": true
     },
     {
-     "text": "It makes him seem ordinary",
+     "text": "It makes him seem ordinary and harmless",
      "correct": false,
      "feedback": "Each sentence adds something worse: “iron on his leg”, “soaked in water”, “cut by flints”."
     },
     {
-     "text": "It shows Pip knows him",
+     "text": "It shows that Pip already knows him",
      "correct": false,
      "feedback": "Pip has never seen him before."
     }
@@ -855,19 +855,19 @@
    "id": "english.rd.pp3",
    "topic": "english.read-stretch",
    "kind": "fact",
-   "prompt": "Find and copy the three-word phrase that describes Pip at the very start, before the man appears.",
-   "answer": "small bundle of shivers",
+   "prompt": "Find and copy the word that shows how the man ate the bread.",
+   "answer": "ravenously",
    "distractors": [
-    "terrible voice",
-    "little devil",
-    "fearful man"
+    "earnestly",
+    "suddenly",
+    "trembling"
    ],
-   "explain": "“the small bundle of shivers growing afraid of it all and beginning to cry, was Pip.” He is not even called a boy: just a bundle of fear.",
-   "accept": [
-    "bundle of shivers"
-   ],
+   "explain": "“he ate the bread ravenously”: hungrily, like a starving animal. He is desperate as well as frightening.",
    "passage": "(Pip, a small orphan, is alone in the churchyard on the marshes at dusk.)\n\n“Hold your noise!” cried a terrible voice, as a man started up from among the graves at the side of the church porch. “Keep still, you little devil, or I’ll cut your throat!”\n\nA fearful man, all in coarse gray, with a great iron on his leg. A man with no hat, and with broken shoes, and with an old rag tied round his head. A man who had been soaked in water, and smothered in mud, and lamed by stones, and cut by flints, and stung by nettles, and torn by briars; who limped, and shivered, and glared, and growled; and whose teeth chattered in his head as he seized me by the chin.\n\n“Oh! Don’t cut my throat, sir,” I pleaded in terror. “Pray don’t do it, sir.”\n\n“Tell us your name!” said the man. “Quick!”\n\n“Pip, sir.”\n\n“Once more,” said the man, staring at me. “Give it mouth!”\n\n“Pip. Pip, sir.”\n\n“Show us where you live,” said the man. “Pint out the place!”\n\nI pointed to where our village lay, on the flat in-shore among the alder-trees and pollards, a mile or more from the church.\n\nThe man, after looking at me for a moment, turned me upside down, and emptied my pockets. There was nothing in them but a piece of bread. When the church came to itself,—for he was so sudden and strong that he made it go head over heels before me, and I saw the steeple under my feet,—when the church came to itself, I say, I was seated on a high tombstone, trembling while he ate the bread ravenously.\n\n“You young dog,” said the man, licking his lips, “what fat cheeks you ha’ got.”\n\nI believe they were fat, though I was at that time undersized for my years, and not strong.\n\n“Darn me if I couldn’t eat em,” said the man, with a threatening shake of his head, “and if I han’t half a mind to’t!”\n\nI earnestly expressed my hope that he wouldn’t, and held tighter to the tombstone on which he had put me; partly, to keep myself upon it; partly, to keep myself from crying.",
-   "passageSource": "Charles Dickens, Great Expectations (1861)"
+   "passageSource": "Charles Dickens, Great Expectations (1861)",
+   "accept": [
+    "ravenous"
+   ]
   },
   {
    "id": "english.rd.pp4",
@@ -876,16 +876,16 @@
    "prompt": "What does the man do when Pip points out where he lives?",
    "options": [
     {
-     "text": "Turns him upside down and empties his pockets",
+     "text": "Turns him upside down",
      "correct": true
     },
     {
-     "text": "Lets him go",
+     "text": "Lets him go home to his sister",
      "correct": false,
      "feedback": "He is only beginning. He tips Pip up and takes his bread."
     },
     {
-     "text": "Walks towards the village",
+     "text": "Walks off towards the village",
      "correct": false,
      "feedback": "He stays and eats the bread “ravenously”."
     }
@@ -901,16 +901,16 @@
    "prompt": "“When the church came to itself,—for he was so sudden and strong that he made it go head over heels before me”. Why does Dickens say the CHURCH turned over?",
    "options": [
     {
-     "text": "Pip is upside down, so from his point of view the church turns; it shows the scene through the child’s eyes",
+     "text": "Pip is upside down, so the church seems to turn",
      "correct": true
     },
     {
-     "text": "An earthquake happened",
+     "text": "An earthquake shook the old church to its roots",
      "correct": false,
      "feedback": "It is Pip who is turned, not the building."
     },
     {
-     "text": "Dickens made a mistake",
+     "text": "Dickens made a mistake in the sentence",
      "correct": false,
      "feedback": "It is deliberate: the child sees the steeple under his feet."
     }
@@ -926,16 +926,16 @@
    "prompt": "“Darn me if I couldn’t eat em… and if I han’t half a mind to’t!” Is the man serious? What does Pip think?",
    "options": [
     {
-     "text": "Probably a threat to frighten the boy, but Pip takes it seriously and holds tighter to the tombstone",
+     "text": "Probably a threat, but Pip takes it seriously",
      "correct": true
     },
     {
-     "text": "He is joking and Pip laughs",
+     "text": "He is joking, and Pip laughs along with him",
      "correct": false,
      "feedback": "Pip “earnestly expressed my hope that he wouldn’t”. He believes it."
     },
     {
-     "text": "He is serious and Pip runs away",
+     "text": "He is serious, and Pip runs away to the village",
      "correct": false,
      "feedback": "Pip stays on the tombstone, “partly, to keep myself from crying”."
     }
@@ -970,7 +970,7 @@
    "prompt": "Why is Jane glad there will be no walk?",
    "options": [
     {
-     "text": "She hates coming home cold and being told off, and feeling weaker than her cousins",
+     "text": "She hates coming home cold and scolded",
      "correct": true
     },
     {
@@ -979,7 +979,7 @@
      "feedback": "They are “clustered round their mama”; Jane has been “dispensed from joining the group”."
     },
     {
-     "text": "She is ill",
+     "text": "She is ill and must stay in bed",
      "correct": false,
      "feedback": "There is no illness. The reason is “a heart saddened by the chidings of Bessie”."
     }
@@ -995,7 +995,7 @@
    "prompt": "Mrs Reed says Jane needs “a more sociable and childlike disposition… something lighter, franker, more natural”. What does this reveal about Mrs Reed?",
    "options": [
     {
-     "text": "She blames Jane for being unhappy and demands cheerfulness Jane has no reason to feel",
+     "text": "She blames Jane for being unhappy",
      "correct": true
     },
     {
@@ -1038,16 +1038,16 @@
    "prompt": "Jane draws the curtain and sits in the window-seat “shrined in double retirement”. What does this suggest?",
    "options": [
     {
-     "text": "She makes herself a private, almost sacred space, hidden twice over: by the curtain and by the window",
+     "text": "She makes herself a private, almost sacred space",
      "correct": true
     },
     {
-     "text": "She is being punished in a cupboard",
+     "text": "She is being punished by being shut in",
      "correct": false,
      "feedback": "She chooses this hiding place herself."
     },
     {
-     "text": "She is going to sleep",
+     "text": "She is settling down to go to sleep",
      "correct": false,
      "feedback": "She reads, and watches the November afternoon."
     }
@@ -1063,16 +1063,16 @@
    "prompt": "The weather is described as “clouds so sombre, and a rain so penetrating”, on a “drear November day”. How does the weather connect with Jane’s situation?",
    "options": [
     {
-     "text": "It matches her mood: cold, grey and shut out, a technique called pathetic fallacy",
+     "text": "It mirrors her mood: pathetic fallacy",
      "correct": true
     },
     {
-     "text": "It is just a weather report",
+     "text": "It is simply a weather report for the day",
      "correct": false,
      "feedback": "Novelists choose weather. Brontë opens with gloom for a reason."
     },
     {
-     "text": "It shows the story is set in summer",
+     "text": "It shows that the story is set in summer",
      "correct": false,
      "feedback": "It is November."
     }

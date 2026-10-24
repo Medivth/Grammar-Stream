@@ -323,16 +323,16 @@
    "prompt": "In this code, what is `ships`?\n```\ndef launch(ships):\n    return ships * 2\n\nprint(launch(50))\n```",
    "options": [
     {
-     "text": "A parameter: the name the function uses for the value passed in",
+     "text": "A parameter: the name for the value passed in",
      "correct": true
     },
     {
-     "text": "An argument: the actual value passed in",
+     "text": "An argument: the actual value, 50, that is passed in",
      "correct": false,
      "feedback": "The argument is 50; ships is the parameter that receives it."
     },
     {
-     "text": "A global variable",
+     "text": "A global variable that the whole program can use",
      "correct": false,
      "feedback": "It only exists inside the function."
     }
@@ -346,16 +346,16 @@
    "prompt": "What does return do?",
    "options": [
     {
-     "text": "Ends the function and sends a value back to where it was called",
+     "text": "Ends the function and sends a value back",
      "correct": true
     },
     {
-     "text": "Prints the value on the screen",
+     "text": "Prints the value on the screen, then carries on",
      "correct": false,
      "feedback": "return does not print; the caller decides what to do with the value."
     },
     {
-     "text": "Restarts the function",
+     "text": "Restarts the function from its first line",
      "correct": false,
      "feedback": "It ends the function."
     }
@@ -369,7 +369,7 @@
    "prompt": "Why are variables inside a function local?",
    "options": [
     {
-     "text": "So a function cannot accidentally change variables in other parts of the program",
+     "text": "So functions can’t accidentally change each other’s variables",
      "correct": true
     },
     {
@@ -378,7 +378,7 @@
      "feedback": "It is about keeping parts of a program separate and safe."
     },
     {
-     "text": "Because Python cannot store more than one variable",
+     "text": "Because Python can only keep one variable of each name in memory",
      "correct": false,
      "feedback": "Python can store millions."
     }
@@ -412,12 +412,12 @@
      "correct": true
     },
     {
-     "text": "Copy and paste them more carefully",
+     "text": "Copy and paste them more carefully, checking each one",
      "correct": false,
      "feedback": "If there is a bug, he would have to fix it in five places."
     },
     {
-     "text": "Delete four of the checks",
+     "text": "Delete four of the checks so the code is shorter",
      "correct": false,
      "feedback": "The checks are needed; they just should not be repeated."
     }
@@ -523,7 +523,7 @@
      "correct": true
     },
     {
-     "text": "A second \"Hera\" key is added",
+     "text": "A second \"Hera\" key is added after the first",
      "correct": false,
      "feedback": "Keys are unique: there can only be one \"Hera\"."
     },
@@ -546,12 +546,12 @@
      "correct": true
     },
     {
-     "text": "It prints owl",
+     "text": "It prints owl, the only value in the dictionary",
      "correct": false,
      "feedback": "Only Athena is in the dictionary."
     },
     {
-     "text": "It prints nothing",
+     "text": "It prints None, because Ares has no value yet",
      "correct": false,
      "feedback": "Python raises a KeyError for a missing key."
     }
@@ -597,16 +597,16 @@
    "prompt": "Why does this cause an error?\n```\nname = \"Medusa\"\nname[0] = \"J\"\n```",
    "options": [
     {
-     "text": "Strings cannot be changed in place; you have to make a new string",
+     "text": "Strings can’t be changed in place; make a new one instead",
      "correct": true
     },
     {
-     "text": "Medusa is a protected name",
+     "text": "Medusa is a protected word that Python reserves",
      "correct": false,
      "feedback": "Python does not know about Gorgons!"
     },
     {
-     "text": "The index should be 1",
+     "text": "The index should be 1, because strings start at 1",
      "correct": false,
      "feedback": "Index 0 is the first letter; the problem is changing it."
     }
@@ -663,14 +663,14 @@
      "correct": true
     },
     {
-     "text": "\"Zeus Hera Ares\"",
+     "text": "[\"Zeus\", \",\", \"Hera\", \",\", \"Ares\"]",
      "correct": false,
-     "feedback": "split gives a list, not a string."
+     "feedback": "split removes the commas: they are not kept as items."
     },
     {
-     "text": "3",
+     "text": "[\"Zeus,Hera,Ares\"]",
      "correct": false,
-     "feedback": "That would be the length of the list."
+     "feedback": "split cuts at every comma, so each name becomes its own item."
     }
    ],
    "explain": "split(\",\") breaks the string at each comma into a list: handy for reading CSV files."
@@ -698,7 +698,7 @@
    "prompt": "In grid[r][c], what do r and c choose?",
    "options": [
     {
-     "text": "r chooses the row (which inner list), then c the column (which item in it)",
+     "text": "r chooses the row, then c the column",
      "correct": true
     },
     {
@@ -707,7 +707,7 @@
      "feedback": "The first index picks a whole inner list: a row."
     },
     {
-     "text": "They are added together",
+     "text": "They are added together to give one position",
      "correct": false,
      "feedback": "They are two separate indexes."
     }
@@ -744,7 +744,7 @@
    "prompt": "Why is a 2D list a good way to store a black-and-white image?",
    "options": [
     {
-     "text": "Each item can hold one pixel, in rows and columns just like the picture",
+     "text": "Its rows and columns match the picture’s pixels",
      "correct": true
     },
     {
@@ -753,7 +753,7 @@
      "feedback": "Grids map naturally onto rows and columns of pixels."
     },
     {
-     "text": "It makes the image lossy",
+     "text": "It compresses the image so it takes up less space",
      "correct": false,
      "feedback": "Storing it in a grid does not throw away detail."
     }
@@ -805,7 +805,7 @@
      "feedback": "Validation: is it reasonable? Verification: is it what was meant?"
     },
     {
-     "text": "Verification checks data is sensible; validation checks it was typed twice",
+     "text": "Verification checks data is sensible; validation checks it was entered correctly",
      "correct": false,
      "feedback": "It is the other way round."
     }
@@ -865,11 +865,11 @@
    "prompt": "A form refuses a birth year of 2079 but accepts 2011 when the user meant 2012. What does this show?",
    "options": [
     {
-     "text": "Validation can stop impossible data, but it cannot prove the data is TRUE",
+     "text": "Validation can stop impossible data, but can’t prove it is true",
      "correct": true
     },
     {
-     "text": "Validation guarantees all data is correct",
+     "text": "Validation guarantees that all data entered is correct",
      "correct": false,
      "feedback": "A sensible but wrong year still passes."
     },
@@ -928,16 +928,16 @@
    "prompt": "Why do programs save data to files?",
    "options": [
     {
-     "text": "Variables are lost when the program ends; files keep data for next time",
+     "text": "Variables are lost when a program ends; files keep the data",
      "correct": true
     },
     {
-     "text": "Files make programs run faster",
+     "text": "Files make programs run faster than variables do",
      "correct": false,
      "feedback": "Reading files is actually slower than using variables."
     },
     {
-     "text": "Python cannot store numbers in variables",
+     "text": "Python cannot keep more than 100 values in variables",
      "correct": false,
      "feedback": "It can; they just do not last after the program closes."
     }
@@ -955,12 +955,12 @@
      "correct": true
     },
     {
-     "text": "The new score is added to the end",
+     "text": "The new score is added to the end of the old ones",
      "correct": false,
      "feedback": "That is \"a\" (append) mode."
     },
     {
-     "text": "Nothing is written",
+     "text": "Nothing is written, because the file already exists",
      "correct": false,
      "feedback": "The new score is written, but the old ones are gone."
     }
@@ -990,16 +990,16 @@
    "prompt": "Why should a program close a file (or use with open(...) as f:)?",
    "options": [
     {
-     "text": "So the data is properly saved and the file is released for other programs",
+     "text": "So the data is properly saved and the file is released",
      "correct": true
     },
     {
-     "text": "To delete the file",
+     "text": "To delete the file once the program has finished",
      "correct": false,
      "feedback": "Closing does not delete anything."
     },
     {
-     "text": "To compress the file",
+     "text": "To compress the file so it takes less space",
      "correct": false,
      "feedback": "Closing is not compression."
     }
@@ -1063,7 +1063,7 @@
      "correct": true
     },
     {
-     "text": "1 to 5 only",
+     "text": "1, 2, 3, 4 or 5 only",
      "correct": false,
      "feedback": "randint includes BOTH ends, unlike range."
     },
@@ -1086,12 +1086,12 @@
      "correct": true
     },
     {
-     "text": "Picks all three",
+     "text": "Picks all three, in a random order",
      "correct": false,
      "feedback": "It picks one."
     },
     {
-     "text": "Always picks the first",
+     "text": "Always picks the first name in the list",
      "correct": false,
      "feedback": "That would not be random!"
     }
@@ -1105,16 +1105,16 @@
    "prompt": "Why are computer “random” numbers called pseudo-random?",
    "options": [
     {
-     "text": "They come from a formula, so with the same starting seed they repeat exactly",
+     "text": "They come from a formula, so the same seed repeats them",
      "correct": true
     },
     {
-     "text": "They are always even",
+     "text": "They are always slightly biased towards even numbers",
      "correct": false,
      "feedback": "They can be any value in the range."
     },
     {
-     "text": "They are typed in by a person",
+     "text": "They are typed in by a person in advance",
      "correct": false,
      "feedback": "A formula produces them."
     }
@@ -1194,12 +1194,12 @@
      "correct": true
     },
     {
-     "text": "Athena should not have quotes",
+     "text": "The word Athena should not have quotation marks",
      "correct": false,
      "feedback": "Text values need quotes."
     },
     {
-     "text": "if should be in capitals",
+     "text": "if should be written in capitals, as IF",
      "correct": false,
      "feedback": "Python keywords are lower case."
     }
@@ -1217,12 +1217,12 @@
      "correct": true
     },
     {
-     "text": "print cannot be used in a loop",
+     "text": "print cannot be used inside a while loop at all",
      "correct": false,
      "feedback": "It can."
     },
     {
-     "text": "10 is too big",
+     "text": "10 is too big a starting value for a while loop",
      "correct": false,
      "feedback": "Any positive start would loop for ever."
     }
@@ -1240,12 +1240,12 @@
      "correct": true
     },
     {
-     "text": "It prints Orpheus",
+     "text": "It prints Orpheus, the last hero in the list",
      "correct": false,
      "feedback": "Orpheus is heroes[2]."
     },
     {
-     "text": "SyntaxError",
+     "text": "SyntaxError: the square brackets are wrong",
      "correct": false,
      "feedback": "The syntax is fine; the problem appears when it runs."
     }
@@ -1259,18 +1259,18 @@
    "prompt": "Mira wants to print “Done” once, after the loop. What is wrong?\n```\nfor i in range(3):\n    print(i)\n    print(\"Done\")\n```",
    "options": [
     {
-     "text": "print(\"Done\") is indented, so it is inside the loop and runs 3 times",
+     "text": "print(\"Done\") is indented, so it runs inside the loop",
      "correct": true
     },
     {
-     "text": "range(3) should be range(4)",
+     "text": "range(3) should be range(4) so the loop can finish",
      "correct": false,
      "feedback": "The range is fine."
     },
     {
-     "text": "print cannot print text",
+     "text": "The second print needs to come before the loop",
      "correct": false,
-     "feedback": "It can."
+     "feedback": "Before the loop it would print first; Mira wants it after."
     }
    ],
    "explain": "In Python, indentation decides what is inside a loop. Unindent the last line."
@@ -1282,16 +1282,16 @@
    "prompt": "Why does this crash when Theo types 12?\n```\nage = input(\"Age? \")\nprint(age + 1)\n```",
    "options": [
     {
-     "text": "input() gives a string, and you cannot add 1 to a string",
+     "text": "input() gives a string, which can’t have 1 added",
      "correct": true
     },
     {
-     "text": "12 is too old",
+     "text": "12 is too big for the variable age to hold",
      "correct": false,
      "feedback": "Any number would crash it."
     },
     {
-     "text": "print needs two lines",
+     "text": "print cannot show a number and text together",
      "correct": false,
      "feedback": "The problem is the data type."
     }
@@ -1305,16 +1305,16 @@
    "prompt": "A program gives the wrong total. Which is the most reliable way to find the bug?",
    "options": [
     {
-     "text": "Trace the program with a small test case, comparing each variable with what it should be",
+     "text": "Trace it with a small test case, checking each variable",
      "correct": true
     },
     {
-     "text": "Change lines at random until it works",
+     "text": "Change lines one at a time at random until it works",
      "correct": false,
      "feedback": "That can create new bugs and teaches nothing."
     },
     {
-     "text": "Delete the program and start again",
+     "text": "Delete the program and write it again more carefully",
      "correct": false,
      "feedback": "Usually the bug is one line; tracing finds it."
     }
@@ -1344,16 +1344,16 @@
    "prompt": "Why must the list be sorted before a binary search?",
    "options": [
     {
-     "text": "Binary search throws away half the list by assuming smaller items are on one side",
+     "text": "It assumes smaller items are all on one side of the middle",
      "correct": true
     },
     {
-     "text": "Unsorted lists are too long",
+     "text": "Unsorted lists are too long to split in half",
      "correct": false,
      "feedback": "Length is not the issue."
     },
     {
-     "text": "Python cannot search unsorted lists",
+     "text": "Python cannot search lists that are not sorted",
      "correct": false,
      "feedback": "Linear search works on any list."
     }
@@ -1443,7 +1443,7 @@
    "prompt": "What does Big-O notation describe?",
    "options": [
     {
-     "text": "How the time (or memory) an algorithm needs grows as the input gets bigger",
+     "text": "How an algorithm’s time grows as the input gets bigger",
      "correct": true
     },
     {
@@ -1452,7 +1452,7 @@
      "feedback": "It describes growth, not exact time on one computer."
     },
     {
-     "text": "How big the program file is",
+     "text": "How much memory the program code itself takes up",
      "correct": false,
      "feedback": "It is about the algorithm’s work."
     }
@@ -1470,7 +1470,7 @@
      "correct": true
     },
     {
-     "text": "O(n): linear search",
+     "text": "O(n): a simple linear search",
      "correct": false,
      "feedback": "Doubling the list doubles the work."
     },
@@ -1489,16 +1489,16 @@
    "prompt": "In a class of 30, everyone shakes hands with everyone else once. Why is this like an O(n²) algorithm?",
    "options": [
     {
-     "text": "The number of handshakes grows roughly with the square of the class size",
+     "text": "Handshakes grow roughly with the square of the class size",
      "correct": true
     },
     {
-     "text": "It takes exactly 30 seconds",
+     "text": "It takes exactly 30 seconds, one for each person",
      "correct": false,
      "feedback": "Big-O is about growth, not seconds."
     },
     {
-     "text": "Each person shakes one hand",
+     "text": "Each person shakes hands with just one neighbour",
      "correct": false,
      "feedback": "Each shakes hands with everyone else."
     }
@@ -1610,12 +1610,12 @@
      "correct": true
     },
     {
-     "text": "A stack",
+     "text": "A stack (last in, first out)",
      "correct": false,
      "feedback": "A stack would print the newest document first."
     },
     {
-     "text": "A 2D list",
+     "text": "A 2D list (rows and columns)",
      "correct": false,
      "feedback": "A queue models waiting in line."
     }
@@ -1629,18 +1629,18 @@
    "prompt": "How is a traditional array different from a Python list?",
    "options": [
     {
-     "text": "An array has a fixed size and every item is the same type",
+     "text": "An array has a fixed size and one data type",
      "correct": true
     },
     {
-     "text": "An array can only store text",
+     "text": "An array can only store text, not numbers",
      "correct": false,
      "feedback": "Arrays can store numbers too, just all of one type."
     },
     {
-     "text": "There is no difference at all",
+     "text": "An array can grow; a Python list cannot",
      "correct": false,
-     "feedback": "Many languages make arrays fixed-size and single-type."
+     "feedback": "It is the other way round: Python lists grow; traditional arrays have a fixed size."
     }
    ],
    "explain": "Python lists can grow and mix types; arrays in languages like C are fixed and uniform, which makes them very fast."
@@ -1685,18 +1685,18 @@
    "prompt": "Which is true of LOSSY compression?",
    "options": [
     {
-     "text": "It permanently removes some data that people are unlikely to notice",
+     "text": "It permanently removes data you are unlikely to notice",
      "correct": true
     },
     {
-     "text": "It gives back exactly the original file",
+     "text": "It gives back exactly the original file when opened",
      "correct": false,
      "feedback": "That is lossless compression."
     },
     {
-     "text": "It always makes files bigger",
+     "text": "It only works on text documents, not pictures",
      "correct": false,
-     "feedback": "It makes them smaller, often much smaller."
+     "feedback": "It is used mostly for photos, music and video."
     }
    ],
    "explain": "JPEG photos and MP3 or AAC music use lossy compression."
@@ -1708,16 +1708,16 @@
    "prompt": "Why must a text document or a program be compressed LOSSLESSLY?",
    "options": [
     {
-     "text": "Losing even one character could change the meaning or break the program",
+     "text": "Losing one character could change the meaning or break it",
      "correct": true
     },
     {
-     "text": "Text is too small to compress",
+     "text": "Text files are too small to compress usefully",
      "correct": false,
      "feedback": "Text compresses very well."
     },
     {
-     "text": "Lossy compression only works on text",
+     "text": "Lossy compression would make the text file bigger",
      "correct": false,
      "feedback": "Lossy compression is for images, sound and video."
     }
@@ -1754,16 +1754,16 @@
    "prompt": "What is the main reason for compressing a video before uploading it?",
    "options": [
     {
-     "text": "A smaller file uploads faster and uses less storage and data",
+     "text": "A smaller file uploads faster and uses less data",
      "correct": true
     },
     {
-     "text": "It improves the picture quality",
+     "text": "It improves the picture quality and sharpness",
      "correct": false,
      "feedback": "Compression never improves quality."
     },
     {
-     "text": "It adds subtitles",
+     "text": "It adds subtitles and chapter markers",
      "correct": false,
      "feedback": "Compression has nothing to do with subtitles."
     }
@@ -1806,16 +1806,16 @@
    "prompt": "Why is the Caesar cipher easy to crack?",
    "options": [
     {
-     "text": "There are only 25 possible shifts, so you can try them all",
+     "text": "There are only 25 shifts to try",
      "correct": true
     },
     {
-     "text": "It uses numbers",
+     "text": "It turns every letter into a number",
      "correct": false,
      "feedback": "It shifts letters."
     },
     {
-     "text": "It is only used in Latin",
+     "text": "It only works on words written in Latin",
      "correct": false,
      "feedback": "It works with any alphabet."
     }
@@ -1829,16 +1829,16 @@
    "prompt": "Why is the Vigenère cipher harder to crack than the Caesar cipher?",
    "options": [
     {
-     "text": "The same letter is shifted by different amounts, which disguises letter frequencies",
+     "text": "The same letter is shifted by different amounts",
      "correct": true
     },
     {
-     "text": "It uses a longer alphabet",
+     "text": "It uses a longer alphabet with numbers in it",
      "correct": false,
      "feedback": "It uses the same 26 letters."
     },
     {
-     "text": "It cannot be cracked at all",
+     "text": "It cannot be cracked at all, even by computers",
      "correct": false,
      "feedback": "Charles Babbage and Friedrich Kasiski worked out how to crack it in the 1800s."
     }
@@ -1856,12 +1856,12 @@
      "correct": true
     },
     {
-     "text": "Decrypt all of Kit’s messages",
+     "text": "Decrypt all the messages that Kit receives",
      "correct": false,
      "feedback": "Only the private key decrypts them."
     },
     {
-     "text": "Read Kit’s private key",
+     "text": "Work out Kit’s private key from the public one",
      "correct": false,
      "feedback": "The private key stays secret."
     }
@@ -1896,14 +1896,14 @@
      "correct": true
     },
     {
-     "text": "The website is definitely honest",
+     "text": "The website is definitely safe and honest",
      "correct": false,
      "feedback": "A scam site can have HTTPS too: it only means the connection is encrypted."
     },
     {
-     "text": "The website is free",
+     "text": "The website has been checked for viruses",
      "correct": false,
-     "feedback": "It is about encryption, not cost."
+     "feedback": "HTTPS checks nothing about viruses; it only encrypts the connection."
     }
    ],
    "explain": "HTTPS stops people on the network reading your data, but you still need to check who you are talking to."
@@ -1931,7 +1931,7 @@
    "prompt": "What does a DNS server do?",
    "options": [
     {
-     "text": "Translates a web address like example.org into an IP address",
+     "text": "Turns a web address into an IP address",
      "correct": true
     },
     {
@@ -1940,7 +1940,7 @@
      "feedback": "Websites are stored on their own servers."
     },
     {
-     "text": "Speeds up your Wi-Fi",
+     "text": "Speeds up your Wi-Fi connection at home",
      "correct": false,
      "feedback": "DNS is about names and addresses."
     }
@@ -1954,11 +1954,11 @@
    "prompt": "Why is data split into packets?",
    "options": [
     {
-     "text": "Packets can take different routes and be resent individually if lost",
+     "text": "Each packet can take its own route and be resent if lost",
      "correct": true
     },
     {
-     "text": "Packets are prettier",
+     "text": "Small packets are easier to encrypt than big files",
      "correct": false,
      "feedback": "It is about reliability and sharing the network."
     },
@@ -1977,16 +1977,16 @@
    "prompt": "What is HTTP?",
    "options": [
     {
-     "text": "The protocol (set of rules) browsers and web servers use to request and send web pages",
+     "text": "The rules browsers and servers use to send web pages",
      "correct": true
     },
     {
-     "text": "A type of cable",
+     "text": "A type of cable that connects you to a website",
      "correct": false,
      "feedback": "It is a set of rules, not hardware."
     },
     {
-     "text": "A programming language",
+     "text": "A programming language for building web pages",
      "correct": false,
      "feedback": "HTML is the markup language; HTTP is the protocol."
     }
@@ -2000,13 +2000,13 @@
    "prompt": "What is the difference between an IP address and a MAC address?",
    "options": [
     {
-     "text": "An IP address can change as a device moves between networks; a MAC address is fixed in the hardware",
+     "text": "An IP address can change; a MAC address is fixed in hardware",
      "correct": true
     },
     {
-     "text": "They are the same",
+     "text": "A MAC address can change; an IP address is fixed in hardware",
      "correct": false,
-     "feedback": "They are used at different layers."
+     "feedback": "It is the other way round."
     },
     {
      "text": "MAC addresses are only for Apple computers",
@@ -2023,11 +2023,11 @@
    "prompt": "What does a router do?",
    "options": [
     {
-     "text": "Forwards packets between networks towards their destination",
+     "text": "Forwards packets between networks",
      "correct": true
     },
     {
-     "text": "Stores web pages",
+     "text": "Stores the web pages you have visited",
      "correct": false,
      "feedback": "Servers do that."
     },
@@ -2130,16 +2130,16 @@
    "prompt": "Why does this image tag include alt text?\n```\n<img src=\"parthenon.jpg\" alt=\"The Parthenon on the Acropolis\">\n```",
    "options": [
     {
-     "text": "Screen readers read it aloud, and it shows if the image fails to load",
+     "text": "It is read by screen readers and shown if the image fails",
      "correct": true
     },
     {
-     "text": "It makes the image bigger",
+     "text": "It makes the image load faster on slow connections",
      "correct": false,
      "feedback": "alt is a text description."
     },
     {
-     "text": "It is the image’s file name",
+     "text": "It is the caption printed under the image",
      "correct": false,
      "feedback": "src is the file; alt is the description."
     }
@@ -2208,16 +2208,16 @@
    "prompt": "Why is “name” a poor choice of primary key for a table of students?",
    "options": [
     {
-     "text": "Two students might have the same name, but a primary key must be unique",
+     "text": "Two students might share a name, but keys must be unique",
      "correct": true
     },
     {
-     "text": "Names are too short",
+     "text": "Names are too short to work as a primary key",
      "correct": false,
      "feedback": "The problem is that names can repeat."
     },
     {
-     "text": "Names cannot be stored in databases",
+     "text": "Names cannot be stored in a key field, only numbers",
      "correct": false,
      "feedback": "They can; they just are not unique."
     }
@@ -2235,7 +2235,7 @@
      "correct": true
     },
     {
-     "text": "Every field of every record",
+     "text": "Every field of every record in the table",
      "correct": false,
      "feedback": "That is SELECT *."
     },
@@ -2277,16 +2277,16 @@
    "prompt": "Why do big organisations use databases rather than spreadsheets?",
    "options": [
     {
-     "text": "Many users can safely use huge amounts of data at once, with rules that keep it consistent",
+     "text": "Many users can share huge amounts of data safely",
      "correct": true
     },
     {
-     "text": "Databases cannot be searched",
+     "text": "Spreadsheets are too expensive for big organisations",
      "correct": false,
-     "feedback": "They are designed for searching."
+     "feedback": "Cost is not the main reason; scale and safe sharing are."
     },
     {
-     "text": "Spreadsheets cannot store numbers",
+     "text": "Spreadsheets cannot store numbers with decimals",
      "correct": false,
      "feedback": "They can, but they struggle with millions of records and many users."
     }
@@ -2332,7 +2332,7 @@
    "prompt": "How does a machine-learning system learn to recognise owls in photos?",
    "options": [
     {
-     "text": "It is trained on many labelled photos and adjusts itself to spot the patterns",
+     "text": "It is trained on many labelled photos of owls",
      "correct": true
     },
     {
@@ -2355,18 +2355,18 @@
    "prompt": "A face-recognition system was trained mostly on photos of one group of people. What is the likely problem?",
    "options": [
     {
-     "text": "It will be less accurate for people who were under-represented in the training data",
+     "text": "It will be less accurate for under-represented groups",
      "correct": true
     },
     {
-     "text": "It will work perfectly for everyone",
+     "text": "It will work perfectly for everyone, as computers are fair",
      "correct": false,
      "feedback": "A system is only as good as its training data."
     },
     {
-     "text": "It will refuse to start",
+     "text": "It will only recognise faces it has seen before",
      "correct": false,
-     "feedback": "It will run, but unfairly."
+     "feedback": "It can recognise new faces, but less accurately for some groups."
     }
    ],
    "explain": "Biased training data leads to biased results, which can have serious real-world effects."
@@ -2378,16 +2378,16 @@
    "prompt": "What is the Turing test?",
    "options": [
     {
-     "text": "A test of whether a machine’s conversation can be told apart from a human’s",
+     "text": "Whether a machine’s conversation passes for a human’s",
      "correct": true
     },
     {
-     "text": "A test of how fast a computer is",
+     "text": "A test of how fast a computer can solve puzzles",
      "correct": false,
      "feedback": "It is about intelligent behaviour."
     },
     {
-     "text": "An exam to become a programmer",
+     "text": "An exam that Alan Turing set for his code-breakers",
      "correct": false,
      "feedback": "Alan Turing proposed it in 1950 as a thought experiment."
     }
@@ -2401,16 +2401,16 @@
    "prompt": "A chatbot confidently gives a wrong date for the Battle of Marathon. What does this show?",
    "options": [
     {
-     "text": "AI systems can produce fluent but false answers, so important facts need checking",
+     "text": "AI can sound sure but be wrong, so check facts",
      "correct": true
     },
     {
-     "text": "The battle date has changed",
+     "text": "Historians have recently changed the battle date",
      "correct": false,
      "feedback": "Marathon was in 490 BC; the chatbot was wrong."
     },
     {
-     "text": "Chatbots are never useful",
+     "text": "Chatbots are never useful for history homework",
      "correct": false,
      "feedback": "They can be very useful, but need checking."
     }
@@ -2473,18 +2473,18 @@
    "prompt": "What is cache memory?",
    "options": [
     {
-     "text": "A small amount of very fast memory inside or near the CPU that holds frequently used data",
+     "text": "Small, very fast memory near the CPU for frequent data",
      "correct": true
     },
     {
-     "text": "Extra hard-disk space",
+     "text": "Extra hard-disk space used when RAM is full",
      "correct": false,
      "feedback": "Cache is much faster and much smaller than storage."
     },
     {
-     "text": "Money saved for upgrades",
+     "text": "A copy of every file saved in the cloud",
      "correct": false,
-     "feedback": "That is cash!"
+     "feedback": "That is cloud storage, which is far slower."
     }
    ],
    "explain": "Fetching from cache is many times faster than fetching from RAM."
@@ -2496,16 +2496,16 @@
    "prompt": "A quad-core CPU has four cores. Why might a program NOT run four times faster than on one core?",
    "options": [
     {
-     "text": "Some tasks have to happen one after another and cannot be split between cores",
+     "text": "Some tasks must happen in order and can’t be split",
      "correct": true
     },
     {
-     "text": "Cores only work at night",
+     "text": "Each core only runs at a quarter of the speed",
      "correct": false,
-     "feedback": "They all run together, all the time."
+     "feedback": "Each core runs at full speed."
     },
     {
-     "text": "Four cores share one clock tick",
+     "text": "Four cores must share one clock tick between them",
      "correct": false,
      "feedback": "Each core runs at the clock speed."
     }
@@ -2519,16 +2519,16 @@
    "prompt": "What is a register?",
    "options": [
     {
-     "text": "A tiny, extremely fast storage location inside the CPU",
+     "text": "A tiny, very fast storage location in the CPU",
      "correct": true
     },
     {
-     "text": "A list of students",
+     "text": "A list of the programs that are installed",
      "correct": false,
      "feedback": "In a CPU it is a storage location."
     },
     {
-     "text": "A type of hard drive",
+     "text": "A type of hard drive built into the motherboard",
      "correct": false,
      "feedback": "Registers are inside the CPU itself."
     }
@@ -2546,12 +2546,12 @@
      "correct": true
     },
     {
-     "text": "Only the data",
+     "text": "Only the data, with programs in the CPU",
      "correct": false,
      "feedback": "The key idea is that programs are stored like data."
     },
     {
-     "text": "Only the graphics",
+     "text": "Only the operating system and its files",
      "correct": false,
      "feedback": "Instructions and data share memory."
     }
@@ -2569,12 +2569,12 @@
      "correct": true
     },
     {
-     "text": "A laptop",
+     "text": "A laptop used for many different jobs",
      "correct": false,
      "feedback": "Laptops are general-purpose computers."
     },
     {
-     "text": "A web browser",
+     "text": "A web browser running on a smartphone",
      "correct": false,
      "feedback": "That is software, not a system inside a device."
     }
@@ -2628,16 +2628,16 @@
    "prompt": "How can a single-core computer seem to run music, a browser and a game at the same time?",
    "options": [
     {
-     "text": "The OS switches between them so fast that they all appear to run at once",
+     "text": "The OS switches between them very fast",
      "correct": true
     },
     {
-     "text": "Each program has its own CPU",
+     "text": "Each program secretly gets its own hidden CPU",
      "correct": false,
      "feedback": "There is only one core."
     },
     {
-     "text": "The programs take turns once a day",
+     "text": "The programs take turns, each for an hour",
      "correct": false,
      "feedback": "Switching happens thousands of times a second."
     }
@@ -2651,16 +2651,16 @@
    "prompt": "What does a device driver do?",
    "options": [
     {
-     "text": "Lets the operating system communicate with a piece of hardware, like a printer",
+     "text": "Lets the OS communicate with a piece of hardware",
      "correct": true
     },
     {
-     "text": "Drives the computer to a repair shop",
+     "text": "Installs new hardware inside the computer case",
      "correct": false,
      "feedback": "It is software!"
     },
     {
-     "text": "Speeds up the internet",
+     "text": "Speeds up the internet by compressing data",
      "correct": false,
      "feedback": "It is about controlling hardware."
     }
@@ -2674,16 +2674,16 @@
    "prompt": "Why should you not defragment a solid-state drive (SSD)?",
    "options": [
     {
-     "text": "SSDs read any location equally fast, so it does not help and adds wear",
+     "text": "It doesn’t speed an SSD up and adds wear",
      "correct": true
     },
     {
-     "text": "SSDs cannot store files",
+     "text": "SSDs cannot store files in fragments at all",
      "correct": false,
      "feedback": "They store files very well."
     },
     {
-     "text": "Defragmenting deletes files",
+     "text": "Defragmenting deletes the files stored on an SSD",
      "correct": false,
      "feedback": "It rearranges them; on an SSD there is no benefit."
     }
@@ -2697,16 +2697,16 @@
    "prompt": "What is open-source software?",
    "options": [
     {
-     "text": "Software whose source code anyone can read, change and share",
+     "text": "Software whose source code anyone can read and change",
      "correct": true
     },
     {
-     "text": "Software that is always open on screen",
+     "text": "Software that stays open on screen in the background",
      "correct": false,
      "feedback": "It is about the source code."
     },
     {
-     "text": "Software that has no bugs",
+     "text": "Software that has been tested to have no bugs",
      "correct": false,
      "feedback": "Open-source software has bugs like any other."
     }
@@ -2745,7 +2745,7 @@
      "feedback": "That would break the law."
     },
     {
-     "text": "People have no right to see their own data",
+     "text": "People have no right to see the data held about them",
      "correct": false,
      "feedback": "People have the right to access their data."
     }
@@ -2786,12 +2786,12 @@
      "correct": true
     },
     {
-     "text": "The Data Protection Act",
+     "text": "The Data Protection Act 2018 (UK GDPR)",
      "correct": false,
      "feedback": "That is about personal data."
     },
     {
-     "text": "The Computer Misuse Act",
+     "text": "The Computer Misuse Act 1990",
      "correct": false,
      "feedback": "That is about hacking."
     }
@@ -2805,16 +2805,16 @@
    "prompt": "Why is e-waste (old phones and laptops) an environmental problem?",
    "options": [
     {
-     "text": "Devices contain toxic materials and valuable metals that are often dumped instead of recycled",
+     "text": "Toxic materials and valuable metals are dumped, not recycled",
      "correct": true
     },
     {
-     "text": "Phones are made of paper",
+     "text": "Phones release harmful radio waves when thrown away",
      "correct": false,
      "feedback": "They contain metals, plastics and chemicals."
     },
     {
-     "text": "E-waste is always recycled perfectly",
+     "text": "E-waste is always recycled perfectly in the UK",
      "correct": false,
      "feedback": "Much of it is not."
     }
@@ -2828,16 +2828,16 @@
    "prompt": "Why do data centres affect the environment?",
    "options": [
     {
-     "text": "They use huge amounts of electricity to run and cool thousands of servers",
+     "text": "They use huge amounts of electricity for power and cooling",
      "correct": true
     },
     {
-     "text": "They are all underwater",
+     "text": "They are all built underwater to keep them cool",
      "correct": false,
      "feedback": "Almost all are on land."
     },
     {
-     "text": "They have no effect at all",
+     "text": "They have no effect, as they run on solar power",
      "correct": false,
      "feedback": "Their electricity and water use is significant."
     }
@@ -2851,16 +2851,16 @@
    "prompt": "What is the digital divide?",
    "options": [
     {
-     "text": "The gap between people who have good access to technology and the internet and those who do not",
+     "text": "The gap between people with and without good internet access",
      "correct": true
     },
     {
-     "text": "The line between two computer screens",
+     "text": "The split between people who use Apple and Android",
      "correct": false,
      "feedback": "It is a social idea."
     },
     {
-     "text": "Dividing a file into packets",
+     "text": "Dividing a file into packets to send online",
      "correct": false,
      "feedback": "That is packet switching."
     }
@@ -2890,16 +2890,16 @@
    "prompt": "What happens if a recursive function has no base case?",
    "options": [
     {
-     "text": "It keeps calling itself until the program runs out of memory and crashes",
+     "text": "It calls itself until it runs out of memory",
      "correct": true
     },
     {
-     "text": "It returns 0",
+     "text": "It returns 0 because nothing was calculated",
      "correct": false,
      "feedback": "Without a base case nothing stops the calls."
     },
     {
-     "text": "It runs once",
+     "text": "It runs once and then stops by itself",
      "correct": false,
      "feedback": "It never stops calling itself."
     }
@@ -2973,12 +2973,12 @@
      "correct": true
     },
     {
-     "text": "Edges",
+     "text": "Edges (or arcs)",
      "correct": false,
      "feedback": "The routes are the edges."
     },
     {
-     "text": "Weights",
+     "text": "Weights (or costs)",
      "correct": false,
      "feedback": "Weights are the distances on the edges."
     }
@@ -2992,16 +2992,16 @@
    "prompt": "Why does breadth-first search find the route with the fewest steps?",
    "options": [
     {
-     "text": "It explores every square 1 step away, then every square 2 steps away, and so on",
+     "text": "It checks all squares 1 step away, then 2, and so on",
      "correct": true
     },
     {
-     "text": "It always turns left",
+     "text": "It always turns left at every junction it meets",
      "correct": false,
      "feedback": "That is a maze-walking trick, not BFS."
     },
     {
-     "text": "It guesses",
+     "text": "It picks the direction closest to the exit",
      "correct": false,
      "feedback": "BFS is systematic."
     }
@@ -3024,7 +3024,7 @@
      "feedback": "Calculators do arithmetic, not routes."
     },
     {
-     "text": "Spell-checkers",
+     "text": "Spell-checkers and grammar tools",
      "correct": false,
      "feedback": "They compare words, not routes."
     }
@@ -3090,7 +3090,7 @@
    "prompt": "Why are NAND gates special?",
    "options": [
     {
-     "text": "Any logic circuit can be built from NAND gates alone",
+     "text": "Any logic circuit can be built from NANDs alone",
      "correct": true
     },
     {
@@ -3099,7 +3099,7 @@
      "feedback": "Every gate has an output."
     },
     {
-     "text": "They only work in pairs",
+     "text": "They only work in pairs, joined to an AND gate",
      "correct": false,
      "feedback": "They work alone, but combinations make every other gate."
     }
@@ -3129,16 +3129,16 @@
    "prompt": "Why does Huffman coding give E a short code in English text?",
    "options": [
     {
-     "text": "E is the most common letter, so a short code saves the most bits overall",
+     "text": "E is the most common letter, so it saves the most bits",
      "correct": true
     },
     {
-     "text": "E comes first in the alphabet",
+     "text": "E is the first letter Huffman’s algorithm reads",
      "correct": false,
      "feedback": "A comes first; it is about frequency."
     },
     {
-     "text": "E is a vowel",
+     "text": "E is a vowel, and vowels always get short codes",
      "correct": false,
      "feedback": "Frequency matters, not whether it is a vowel."
     }
@@ -3152,16 +3152,16 @@
    "prompt": "Why must no Huffman code be the start of another code?",
    "options": [
     {
-     "text": "So a stream of bits can be decoded without any gaps or separators",
+     "text": "So bits can be decoded without any separators",
      "correct": true
     },
     {
-     "text": "To make every code the same length",
+     "text": "To make every code exactly the same length",
      "correct": false,
      "feedback": "Huffman codes have different lengths."
     },
     {
-     "text": "So it becomes lossy",
+     "text": "So that the file becomes lossy and smaller",
      "correct": false,
      "feedback": "Huffman coding is lossless."
     }

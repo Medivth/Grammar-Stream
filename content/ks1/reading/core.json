@@ -627,7 +627,7 @@
    "answer": "very angry",
    "distractors": [
     "very happy",
-    "wanting to find out about something",
+    "wanting to know more",
     "very surprised"
    ],
    "explain": "furious: very angry. “The villain was furious when his plan failed.”",
@@ -644,7 +644,7 @@
    "answer": "very happy",
    "distractors": [
     "very small",
-    "not afraid to do something difficult",
+    "not afraid to face danger",
     "a very quick look"
    ],
    "explain": "delighted: very happy. “Turbo was delighted to win the cup.”",
@@ -692,34 +692,34 @@
    "topic": "reading.words",
    "kind": "fact",
    "prompt": "What does “brave” mean?",
-   "answer": "not afraid to do something difficult",
+   "answer": "not afraid to face danger",
    "distractors": [
     "very angry",
-    "wanting to find out about something",
+    "wanting to know more",
     "very surprised"
    ],
-   "explain": "brave: not afraid to do something difficult. “The brave hero ran into the storm.”",
+   "explain": "brave: not afraid to face danger. “The brave hero ran into the storm.”",
    "formats": [
     "choice"
    ],
-   "learn": "**brave** means not afraid to do something difficult.\n_The brave hero ran into the storm._"
+   "learn": "**brave** means not afraid to face danger.\n_The brave hero ran into the storm._"
   },
   {
    "id": "reading.w.curious",
    "topic": "reading.words",
    "kind": "fact",
    "prompt": "What does “curious” mean?",
-   "answer": "wanting to find out about something",
+   "answer": "wanting to know more",
    "distractors": [
     "very small",
     "very, very old",
     "a very quick look"
    ],
-   "explain": "curious: wanting to find out about something. “The curious robot pressed every button.”",
+   "explain": "curious: wanting to know more. “The curious robot pressed every button.”",
    "formats": [
     "choice"
    ],
-   "learn": "**curious** means wanting to find out about something.\n_The curious robot pressed every button._"
+   "learn": "**curious** means wanting to know more.\n_The curious robot pressed every button._"
   },
   {
    "id": "reading.w.peculiar",
@@ -746,7 +746,7 @@
    "answer": "huge",
    "distractors": [
     "very happy",
-    "wanting to find out about something",
+    "wanting to know more",
     "shining brightly"
    ],
    "explain": "gigantic: huge. “A gigantic wave crashed onto the beach.”",
@@ -763,7 +763,7 @@
    "answer": "a very quick look",
    "distractors": [
     "very angry",
-    "not afraid to do something difficult",
+    "not afraid to face danger",
     "very surprised"
    ],
    "explain": "glimpse: a very quick look. “He caught a glimpse of the comet before it vanished.”",
@@ -814,7 +814,7 @@
    "answer": "to save someone from danger",
    "distractors": [
     "very happy",
-    "wanting to find out about something",
+    "wanting to know more",
     "very surprised"
    ],
    "explain": "rescue: to save someone from danger. “The hero flew in to rescue the kitten.”",
@@ -828,11 +828,11 @@
    "topic": "reading.fables",
    "kind": "fact",
    "prompt": "Why did the hare stop during the race?",
-   "answer": "he was so sure he would win that he had a nap",
+   "answer": "he was sure he would win",
    "distractors": [
-    "he hurt his foot",
-    "he got lost",
-    "he was hungry"
+    "he hurt his foot on a stone",
+    "he got lost in the woods",
+    "he stopped to eat carrots"
    ],
    "explain": "“He was so sure he would win that he lay down under a tree for a nap.”",
    "passage": "The Hare and the Tortoise\n\nA hare was always boasting about how fast he could run. “Nobody can beat me,” he said.\n\nThe tortoise looked up slowly. “I will race you,” she said.\n\nThe hare laughed so hard he nearly fell over. But the race began. The hare dashed away and was soon far ahead. He was so sure he would win that he lay down under a tree for a nap.\n\nThe tortoise kept going, one slow step after another, never stopping.\n\nWhen the hare woke up, he raced to the finish line. But the tortoise was already there, waiting.\n\nSlow and steady wins the race.",
@@ -848,18 +848,18 @@
    "prompt": "What word best describes the hare at the start?",
    "options": [
     {
-     "text": "boastful (he showed off)",
+     "text": "boastful",
      "correct": true
     },
     {
-     "text": "shy",
+     "text": "nervous",
      "correct": false,
-     "feedback": "He says “Nobody can beat me.” Shy animals do not say that!"
+     "feedback": "He says “Nobody can beat me.” That is not nervous!"
     },
     {
-     "text": "kind",
+     "text": "friendly",
      "correct": false,
-     "feedback": "He laughs at the tortoise, which is not kind."
+     "feedback": "He laughs at the tortoise, which is not friendly."
     }
    ],
    "explain": "He was “always boasting”: showing off about how fast he was.",
@@ -939,9 +939,9 @@
    "prompt": "What woke the lion up?",
    "answer": "a mouse ran across his nose",
    "distractors": [
-    "a hunter shouted",
-    "it started to rain",
-    "a bird sang"
+    "a hunter shouted at him",
+    "rain fell on his face",
+    "a bird sang in a tree"
    ],
    "explain": "“A tiny mouse ran across his nose.”",
    "passage": "The Lion and the Mouse\n\nA lion was sleeping in the sun when a tiny mouse ran across his nose. The lion woke up and caught the mouse in his huge paw.\n\n“Please let me go,” squeaked the mouse. “One day I might help you.”\n\nThe lion laughed. How could a little mouse ever help a mighty lion? But he let her go.\n\nA few days later, the lion was caught in a hunter’s net. He roared and roared, but he could not get free.\n\nThe mouse heard him. She ran to the net and nibbled through the ropes until the lion was free.\n\n“You laughed at me,” said the mouse, “but even a little friend can be a great help.”",
@@ -957,16 +957,16 @@
    "prompt": "Why did the lion laugh at the mouse?",
    "options": [
     {
-     "text": "He did not believe a little mouse could ever help a mighty lion",
+     "text": "He thought a mouse was too small to help",
      "correct": true
     },
     {
-     "text": "The mouse told a joke",
+     "text": "The mouse told him a very funny joke",
      "correct": false,
      "feedback": "The mouse was serious: “One day I might help you.”"
     },
     {
-     "text": "The mouse was wearing a hat",
+     "text": "The mouse was wearing a tiny red hat",
      "correct": false,
      "feedback": "There is no hat in the story."
     }
@@ -982,7 +982,7 @@
    "prompt": "How did the mouse help the lion?",
    "options": [
     {
-     "text": "She nibbled through the ropes of the net",
+     "text": "She nibbled through the ropes",
      "correct": true
     },
     {
@@ -1011,14 +1011,14 @@
      "correct": true
     },
     {
-     "text": "Lions are dangerous",
+     "text": "Lions are the strongest animals of all",
      "correct": false,
      "feedback": "The lesson is about kindness and friends of every size."
     },
     {
-     "text": "Always sleep in the sun",
+     "text": "It is best to sleep in the shade",
      "correct": false,
-     "feedback": "That is not a lesson!"
+     "feedback": "That is not the lesson!"
     }
    ],
    "explain": "Never judge someone by their size: kindness can come back to you.",
@@ -1076,14 +1076,14 @@
      "correct": true
     },
     {
-     "text": "He could not hear",
+     "text": "He could not hear what Blaze said",
      "correct": false,
      "feedback": "The next sentence explains: he had been practising every night."
     },
     {
-     "text": "He was asleep",
+     "text": "He was too scared to say anything",
      "correct": false,
-     "feedback": "He was at the starting line, ready to race."
+     "feedback": "He wasn’t scared: he had been practising every night."
     }
    ],
    "explain": "The writer tells us straight after: “He had been practising the bendy corners every night.”",
@@ -1115,11 +1115,11 @@
    "prompt": "Why did Turbo win?",
    "options": [
     {
-     "text": "He was good at the corners and Blaze’s tyres wore out",
+     "text": "He was good at the corners",
      "correct": true
     },
     {
-     "text": "He was the biggest car",
+     "text": "He was the biggest car in the race",
      "correct": false,
      "feedback": "Turbo was small!"
     },
@@ -1140,16 +1140,16 @@
    "prompt": "How did Blaze change by the end?",
    "options": [
     {
-     "text": "He was kind and admitted he was wrong",
+     "text": "He was kind and said he was wrong",
      "correct": true
     },
     {
-     "text": "He was angrier than ever",
+     "text": "He was angrier than ever before",
      "correct": false,
      "feedback": "“Blaze rolled over, smiling for the first time.”"
     },
     {
-     "text": "He stopped racing",
+     "text": "He said he would stop racing",
      "correct": false,
      "feedback": "Nothing says he stopped."
     }
@@ -1165,16 +1165,16 @@
    "prompt": "Why did Bleep get lost?",
    "options": [
     {
-     "text": "He wandered off to look at something shiny",
+     "text": "He went off to look at something shiny",
      "correct": true
     },
     {
-     "text": "A storm blew him away",
+     "text": "A big storm blew him far away",
      "correct": false,
      "feedback": "The wind howled, but he got lost by wandering off."
     },
     {
-     "text": "Captain Nova left him on purpose",
+     "text": "Captain Nova left him behind on purpose",
      "correct": false,
      "feedback": "She told him to stay close."
     }
@@ -1212,12 +1212,12 @@
      "correct": true
     },
     {
-     "text": "He shouted very loudly",
+     "text": "He shouted as loudly as he could",
      "correct": false,
      "feedback": "He used his signal beam."
     },
     {
-     "text": "He flew back to the ship",
+     "text": "He flew all the way back to the ship",
      "correct": false,
      "feedback": "He stayed and sent a signal."
     }
@@ -1237,12 +1237,12 @@
      "correct": true
     },
     {
-     "text": "Bleep found her lost helmet",
+     "text": "Bleep had found her lost space helmet",
      "correct": false,
      "feedback": "It was the crystal that powers the ship."
     },
     {
-     "text": "Bleep found a new planet",
+     "text": "Bleep had found a brand new planet",
      "correct": false,
      "feedback": "They were already on the planet."
     }
@@ -1283,16 +1283,16 @@
    "prompt": "How did Pip help the town?",
    "options": [
     {
-     "text": "She opened her bakery and gave people warmth, candles and bread",
+     "text": "She opened her bakery to everyone",
      "correct": true
     },
     {
-     "text": "She fixed the power station",
+     "text": "She fixed the broken power station",
      "correct": false,
      "feedback": "Thunderbolt did that."
     },
     {
-     "text": "She called Thunderbolt",
+     "text": "She called Thunderbolt for help",
      "correct": false,
      "feedback": "She helped by opening her bakery."
     }
@@ -1312,12 +1312,12 @@
      "correct": true
     },
     {
-     "text": "Bakeries are the best shops",
+     "text": "Bakeries are the best shops in town",
      "correct": false,
      "feedback": "The story is about kindness, not shops."
     },
     {
-     "text": "Storms are dangerous",
+     "text": "Storms are more dangerous than villains",
      "correct": false,
      "feedback": "The storm is just the problem in the story."
     }
@@ -1389,12 +1389,12 @@
      "correct": true
     },
     {
-     "text": "To look smart for photos",
+     "text": "To look smart in their photographs",
      "correct": false,
      "feedback": "The fact file gives the reason: no air."
     },
     {
-     "text": "Because it is wet on the Moon",
+     "text": "Because it rains a lot on the Moon",
      "correct": false,
      "feedback": "The Moon is dry and dusty."
     }
@@ -1410,16 +1410,16 @@
    "prompt": "Why are the footprints probably still there?",
    "options": [
     {
-     "text": "There is no wind on the Moon to blow them away",
+     "text": "There is no wind to blow them away",
      "correct": true
     },
     {
-     "text": "Someone guards them",
+     "text": "Someone guards them day and night",
      "correct": false,
      "feedback": "Nobody is there."
     },
     {
-     "text": "They were made in concrete",
+     "text": "They were pressed into hard concrete",
      "correct": false,
      "feedback": "They are in dust."
     }
@@ -1453,16 +1453,16 @@
    "prompt": "Why are racing cars low and pointed?",
    "options": [
     {
-     "text": "So the air flows over them easily and they go faster",
+     "text": "So the air flows over them easily",
      "correct": true
     },
     {
-     "text": "So they fit in the garage",
+     "text": "So they fit into a small garage",
      "correct": false,
      "feedback": "The shape is about speed."
     },
     {
-     "text": "To look scary",
+     "text": "To look scary to the other drivers",
      "correct": false,
      "feedback": "The fact file explains it is so the air flows over them easily."
     }
@@ -1482,12 +1482,12 @@
      "correct": true
     },
     {
-     "text": "Wet tyres are too heavy",
+     "text": "Dry tyres would get far too heavy",
      "correct": false,
      "feedback": "The reason is grip: grooves push water away."
     },
     {
-     "text": "To change colour",
+     "text": "To change the colour of the car",
      "correct": false,
      "feedback": "Colour is not mentioned."
     }
@@ -1521,9 +1521,9 @@
    "prompt": "What do drivers wear to keep safe?",
    "answer": "a fireproof suit and a strong helmet",
    "distractors": [
-    "shorts and trainers",
-    "a cape",
-    "a spacesuit"
+    "shorts, a T-shirt and trainers",
+    "a long cape and a mask",
+    "a spacesuit and moon boots"
    ],
    "explain": "“Drivers wear a fireproof suit and a strong helmet.”",
    "passage": "Fact file: Racing cars\n\nRacing cars are built to go very fast. They are low to the ground and have a smooth, pointed shape so the air flows over them easily.\n\nRacing tyres are wide and have no grooves when the track is dry. This helps them grip the road. In the rain, drivers change to tyres with grooves to push the water away.\n\nDuring a race, cars drive into the pit lane for a pit stop. A team of mechanics can change all four tyres in about two seconds!\n\nDrivers wear a fireproof suit and a strong helmet to keep them safe. Some races are more than 300 kilometres long, so drivers must be very fit.",
@@ -1564,9 +1564,9 @@
    "prompt": "Where did the rabbits live?",
    "answer": "in a sand-bank under a big fir-tree",
    "distractors": [
-    "in Mr. McGregor’s garden",
-    "in a house in the town",
-    "in a hole by the river"
+    "in a shed in Mr. McGregor’s garden",
+    "in a little house in the town",
+    "in a hole by the side of the river"
    ],
    "explain": "“They lived with their Mother in a sand-bank, underneath the root of a very big fir-tree.”",
    "passage": "Once upon a time there were four little Rabbits, and their names were—\n\nFlopsy, Mopsy, Cotton-tail, and Peter.\n\nThey lived with their Mother in a sand-bank, underneath the root of a very big fir-tree.\n\n‘Now my dears,’ said old Mrs. Rabbit one morning, ‘you may go into the fields or down the lane, but don’t go into Mr. McGregor’s garden: your Father had an accident there; he was put in a pie by Mrs. McGregor.’\n\n‘Now run along, and don’t get into mischief. I am going out.’\n\nThen old Mrs. Rabbit took a basket and her umbrella, and went through the wood to the baker’s. She bought a loaf of brown bread and five currant buns.\n\nFlopsy, Mopsy, and Cottontail, who were good little bunnies, went down the lane to gather blackberries:\n\nBut Peter, who was very naughty, ran straight away to Mr. McGregor’s garden, and squeezed under the gate!\n\nFirst he ate some lettuces and some French beans; and then he ate some radishes;\n\nAnd then, feeling rather sick, he went to look for some parsley.\n\nBut round the end of a cucumber frame, whom should he meet but Mr. McGregor!\n\nMr. McGregor was on his hands and knees planting out young cabbages, but he jumped up and ran after Peter, waving a rake and calling out, ‘Stop thief!’",
@@ -1586,12 +1586,12 @@
      "correct": true
     },
     {
-     "text": "The garden was closed",
+     "text": "The garden was closed on Sundays",
      "correct": false,
      "feedback": "She gives a sadder reason: what happened to their father."
     },
     {
-     "text": "There were no vegetables",
+     "text": "There were no vegetables left to eat",
      "correct": false,
      "feedback": "There were lots: lettuces, beans, radishes."
     }
@@ -1607,16 +1607,16 @@
    "prompt": "The writer says Peter was “very naughty”. What did he do?",
    "options": [
     {
-     "text": "He ran straight to Mr. McGregor’s garden and squeezed under the gate",
+     "text": "He squeezed under Mr. McGregor’s gate",
      "correct": true
     },
     {
-     "text": "He picked blackberries",
+     "text": "He picked blackberries down the lane",
      "correct": false,
      "feedback": "That was Flopsy, Mopsy and Cotton-tail, the good bunnies."
     },
     {
-     "text": "He went to the baker’s",
+     "text": "He went to the baker’s on his own",
      "correct": false,
      "feedback": "Mrs. Rabbit went to the baker’s."
     }
@@ -1647,16 +1647,16 @@
    "prompt": "Why did Peter go to look for some parsley?",
    "options": [
     {
-     "text": "He was feeling rather sick from eating too much",
+     "text": "He felt sick from eating too much",
      "correct": true
     },
     {
-     "text": "He wanted to take some home",
+     "text": "He wanted to take some home for tea",
      "correct": false,
      "feedback": "“feeling rather sick, he went to look for some parsley.”"
     },
     {
-     "text": "Mr. McGregor told him to",
+     "text": "Mr. McGregor told him to fetch some",
      "correct": false,
      "feedback": "He had not met Mr. McGregor yet."
     }
@@ -1672,16 +1672,16 @@
    "prompt": "Why did Peter shed big tears in the gooseberry net?",
    "options": [
     {
-     "text": "He was caught and thought he would not escape",
+     "text": "He thought he could not escape",
      "correct": true
     },
     {
-     "text": "He had hurt his paw",
+     "text": "He had hurt his paw on a thorn",
      "correct": false,
      "feedback": "“Peter gave himself up for lost.”"
     },
     {
-     "text": "He missed his mother",
+     "text": "He missed his mother very much",
      "correct": false,
      "feedback": "He was stuck and frightened."
     }
@@ -1740,16 +1740,16 @@
    "prompt": "How did Peter escape from the tool-shed?",
    "options": [
     {
-     "text": "He jumped out of a window that was too small for Mr. McGregor",
+     "text": "He jumped out of a small window",
      "correct": true
     },
     {
-     "text": "He dug a tunnel",
+     "text": "He dug a tunnel under the wall",
      "correct": false,
      "feedback": "He jumped out of a window."
     },
     {
-     "text": "The sparrows carried him",
+     "text": "The sparrows carried him away",
      "correct": false,
      "feedback": "The sparrows only encouraged him."
     }
@@ -1765,7 +1765,7 @@
    "prompt": "What do you predict Peter will do after he escapes?",
    "options": [
     {
-     "text": "Try to find his way home, scared and sorry",
+     "text": "Try to find his way home",
      "correct": true
     },
     {
@@ -1774,7 +1774,7 @@
      "feedback": "He is “trembling with fright”: he wants to get away!"
     },
     {
-     "text": "Become friends with Mr. McGregor",
+     "text": "Make friends with Mr. McGregor",
      "correct": false,
      "feedback": "Mr. McGregor has been chasing him with a rake."
     }
@@ -1790,16 +1790,16 @@
    "prompt": "Who is speaking in this poem?",
    "options": [
     {
-     "text": "Someone looking out of a fast train window",
+     "text": "Someone on a fast train",
      "correct": true
     },
     {
-     "text": "A horse in a field",
+     "text": "A horse running in a field",
      "correct": false,
      "feedback": "The title tells us: “From a Railway Carriage”."
     },
     {
-     "text": "A witch on a broomstick",
+     "text": "A witch flying on a broomstick",
      "correct": false,
      "feedback": "The train is faster than witches!"
     }
@@ -1815,16 +1815,16 @@
    "prompt": "Read the first two lines aloud. Why do they sound like a train?",
    "options": [
     {
-     "text": "The rhythm goes clickety-clack, quick and regular, like wheels on a track",
+     "text": "The beat is quick, like train wheels",
      "correct": true
     },
     {
-     "text": "They are very slow and quiet",
+     "text": "They are slow and quiet, like a lullaby",
      "correct": false,
      "feedback": "Try reading it: it rattles along!"
     },
     {
-     "text": "They have no rhythm at all",
+     "text": "They have no rhythm or beat at all",
      "correct": false,
      "feedback": "The beat is strong and regular, like a train."
     }
@@ -1858,16 +1858,16 @@
    "prompt": "What does “Each a glimpse and gone forever” mean?",
    "options": [
     {
-     "text": "You see each thing for a moment, then it is gone",
+     "text": "You see each thing for a moment only",
      "correct": true
     },
     {
-     "text": "Everything is lost",
+     "text": "Everything on the train is lost",
      "correct": false,
      "feedback": "It is about seeing things quickly from the train."
     },
     {
-     "text": "The train breaks down",
+     "text": "The train breaks down and stops",
      "correct": false,
      "feedback": "The train keeps going!"
     }
@@ -1908,16 +1908,16 @@
    "prompt": "What is the “funniest thing” about the shadow?",
    "options": [
     {
-     "text": "It grows taller and smaller very quickly",
+     "text": "It grows and shrinks very fast",
      "correct": true
     },
     {
-     "text": "It can talk",
+     "text": "It can talk and sing songs",
      "correct": false,
      "feedback": "The poem says it likes to grow."
     },
     {
-     "text": "It eats breakfast",
+     "text": "It eats breakfast with the child",
      "correct": false,
      "feedback": "Shadows don’t eat!"
     }
@@ -1933,16 +1933,16 @@
    "prompt": "Why was the shadow “fast asleep in bed” one early morning?",
    "options": [
     {
-     "text": "Before the sun is up there is no shadow",
+     "text": "There was no sun to make a shadow",
      "correct": true
     },
     {
-     "text": "It was ill",
+     "text": "It was ill and had to rest",
      "correct": false,
      "feedback": "It is a joke: there was no sunlight to make a shadow."
     },
     {
-     "text": "It was lazy every day",
+     "text": "It was too lazy to get up",
      "correct": false,
      "feedback": "Only that morning, before the sun was up."
     }
@@ -1962,12 +1962,12 @@
      "correct": true
     },
     {
-     "text": "A racing car",
+     "text": "A racing car speeding past",
      "correct": false,
      "feedback": "The poem says “A man goes riding by… at the gallop”."
     },
     {
-     "text": "A ship landing",
+     "text": "A big ship landing on the beach",
      "correct": false,
      "feedback": "Ships are mentioned, tossed at sea, but the rider is the mystery."
     }
@@ -1983,11 +1983,11 @@
    "prompt": "Why do you think the child imagines a galloping rider?",
    "options": [
     {
-     "text": "The wind makes loud rushing sounds, like hooves",
+     "text": "The wind sounds like hooves",
      "correct": true
     },
     {
-     "text": "They can see a real horse",
+     "text": "They can see a real horse outside",
      "correct": false,
      "feedback": "It is dark and late. They can only hear."
     },

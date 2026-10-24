@@ -1764,10 +1764,10 @@
    "topic": "latin.sentences-1",
    "kind": "fact",
    "prompt": "How do you say “the” or “a” in Latin?",
-   "answer": "you don’t: Latin has no words for “the” or “a”",
+   "answer": "you don’t: there are no such words",
    "distractors": [
-    "ille",
-    "unus",
+    "ille for “the”, unus for “a”",
+    "with the ending -que",
     "et"
    ],
    "explain": "servus can mean “slave”, “a slave” or “the slave”. You choose when you translate.",
@@ -2047,7 +2047,7 @@
    "distractors": [
     "you sleep",
     "I shout",
-    "he, she or it is"
+    "he/she/it is"
    ],
    "explain": "laboro = I work. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
    "accept": [
@@ -2094,7 +2094,7 @@
    "answer": "I see",
    "distractors": [
     "I shout",
-    "he, she or it is",
+    "he/she/it is",
     "he or she walks"
    ],
    "explain": "video = I see. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
@@ -2141,7 +2141,7 @@
    "prompt": "What does **sum** mean?",
    "answer": "I am",
    "distractors": [
-    "he, she or it is",
+    "he/she/it is",
     "he or she walks",
     "you sleep"
    ],
@@ -2171,18 +2171,19 @@
    "topic": "latin.verbs-2",
    "kind": "fact",
    "prompt": "What does **est** mean?",
-   "answer": "he, she or it is",
+   "answer": "he/she/it is",
    "distractors": [
     "you walk",
     "you sit",
     "you hear"
    ],
-   "explain": "est = he, she or it is. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
+   "explain": "est = he/she/it is. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
    "accept": [
     "he is",
     "she is",
     "it is",
-    "is"
+    "is",
+    "he, she or it is"
    ]
   },
   {
@@ -2680,9 +2681,9 @@
    "prompt": "How do you say **thank you** in Latin?",
    "answer": "gratias tibi ago",
    "distractors": [
-    "minime",
-    "salve",
-    "vale"
+    "ita vero, amice",
+    "vale, mi amice",
+    "salvete, omnes"
    ],
    "explain": "thank you = gratias tibi ago: literally “I give thanks to you”; gratias on its own works too.",
    "accept": [
@@ -2715,9 +2716,9 @@
    "prompt": "How do you say **yes** in Latin?",
    "answer": "ita vero",
    "distractors": [
-    "salve",
-    "vale",
-    "gratias tibi ago"
+    "ita vero, amice",
+    "vale, mi amice",
+    "salvete, omnes"
    ],
    "explain": "yes = ita vero: literally “thus truly”.",
    "accept": []
@@ -2999,11 +3000,11 @@
    "topic": "latin.romans",
    "kind": "fact",
    "prompt": "What was the **forum**?",
-   "answer": "the public square and market-place at the centre of a Roman town",
+   "answer": "the town’s market-place",
    "distractors": [
     "the public baths",
-    "the dining room",
-    "the army camp"
+    "the main dining room",
+    "the walled army camp"
    ],
    "explain": "Business, politics, shopping and gossip all happened in the forum. Rome’s Forum Romanum is still there.",
    "formats": [
@@ -3033,11 +3034,11 @@
    "topic": "latin.romans",
    "kind": "fact",
    "prompt": "What was the **atrium** of a Roman house?",
-   "answer": "the entrance hall, with an opening in the roof and a pool to catch rainwater",
+   "answer": "the entrance hall",
    "distractors": [
     "the kitchen",
-    "the garden",
-    "the bedroom"
+    "the walled garden",
+    "the main bedroom"
    ],
    "explain": "The pool was the impluvium. Modern hotel atriums borrow the name.",
    "formats": [
@@ -3049,7 +3050,7 @@
    "topic": "latin.romans",
    "kind": "fact",
    "prompt": "What happened in the **triclinium**?",
-   "answer": "dinner, eaten lying on couches",
+   "answer": "dinner",
    "distractors": [
     "bathing",
     "sleeping",
@@ -3065,10 +3066,10 @@
    "topic": "latin.romans",
    "kind": "fact",
    "prompt": "Who wore the **toga**?",
-   "answer": "adult male Roman citizens, on formal occasions",
+   "answer": "adult male citizens",
    "distractors": [
-    "slaves",
-    "all women",
+    "slaves at work",
+    "all Roman women",
     "soldiers in battle"
    ],
    "explain": "A huge semicircle of wool, hard to put on without help. Everyday wear was the simpler tunica.",
@@ -3114,10 +3115,10 @@
    "topic": "latin.romans",
    "kind": "fact",
    "prompt": "What kind of building was the **amphitheatrum**?",
-   "answer": "an oval arena for gladiator fights and wild-beast shows",
+   "answer": "an arena for gladiator fights",
    "distractors": [
     "a semicircular theatre for plays",
-    "a temple",
+    "a temple to all the gods",
     "a race-track for chariots"
    ],
    "explain": "Amphi = all round: seats on every side. The Colosseum in Rome held about 50,000 people. Chariots raced in the circus.",
@@ -3130,10 +3131,10 @@
    "topic": "latin.romans",
    "kind": "fact",
    "prompt": "What do the letters **SPQR**, seen on Roman standards and still on Rome’s drain covers, stand for?",
-   "answer": "Senatus Populusque Romanus: the Senate and People of Rome",
+   "answer": "Senatus Populusque Romanus",
    "distractors": [
     "Super Potens Quattuor Reges",
-    "Sic Parvis Quid Roma",
+    "Senatus Pater Quirinus Rex",
     "Semper Paratus Quis Regit"
    ],
    "explain": "The -que on Populusque means “and”: “the Senate and-People of-Rome”.",
@@ -3222,7 +3223,7 @@
    "topic": "latin.story",
    "kind": "fact",
    "prompt": "What is Felix doing?",
-   "answer": "preparing dinner in the kitchen",
+   "answer": "preparing dinner",
    "distractors": [
     "sleeping in the street",
     "working in the atrium",
@@ -3294,7 +3295,7 @@
    "topic": "latin.story",
    "kind": "fact",
    "prompt": "Where does the family eat?",
-   "answer": "in the triclinium (dining room)",
+   "answer": "in the triclinium",
    "distractors": [
     "in the atrium",
     "in the garden",

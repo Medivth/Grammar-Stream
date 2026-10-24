@@ -262,12 +262,12 @@
      "correct": true
     },
     {
-     "text": "They crowned their first emperor",
+     "text": "They crowned their first emperor, Augustus",
      "correct": false,
      "feedback": "That was Augustus, nearly 500 years later."
     },
     {
-     "text": "They conquered Greece",
+     "text": "They conquered Greece and its colonies",
      "correct": false,
      "feedback": "Greece came under Roman control in the 100s BC."
     }
@@ -313,16 +313,16 @@
    "prompt": "Who were the plebeians?",
    "options": [
     {
-     "text": "Ordinary Roman citizens, as opposed to the noble patrician families",
+     "text": "Ordinary citizens, not from the noble families",
      "correct": true
     },
     {
-     "text": "Slaves who worked in the mines",
+     "text": "Enslaved people who worked in the mines",
      "correct": false,
      "feedback": "Plebeians were free citizens."
     },
     {
-     "text": "Priests of Jupiter",
+     "text": "Priests who served in the temple of Jupiter",
      "correct": false,
      "feedback": "Plebeians were the ordinary citizens."
     }
@@ -373,11 +373,11 @@
    "topic": "history.rome",
    "kind": "fact",
    "prompt": "On which date was Julius Caesar assassinated by senators?",
-   "answer": "15 March 44 BC (the Ides of March)",
+   "answer": "15 March 44 BC",
    "distractors": [
     "1 January 27 BC",
     "4 July 44 BC",
-    "25 December AD 1"
+    "21 April 753 BC"
    ],
    "explain": "About sixty senators, led by Brutus and Cassius, stabbed him in the Senate, claiming to save the Republic.",
    "formats": [
@@ -424,16 +424,16 @@
    "prompt": "What was the main reason the Roman Republic collapsed in the first century BC?",
    "options": [
     {
-     "text": "Powerful generals with armies loyal to them, not to Rome, fought each other for control",
+     "text": "Generals with loyal private armies fought for control",
      "correct": true
     },
     {
-     "text": "Rome was conquered by Carthage",
+     "text": "Rome was conquered by its old rival Carthage in a long war",
      "correct": false,
      "feedback": "Carthage had been destroyed in 146 BC."
     },
     {
-     "text": "The people voted to have a king",
+     "text": "The people voted to bring back a king",
      "correct": false,
      "feedback": "Romans hated the word “king”; Augustus avoided it."
     }
@@ -540,16 +540,16 @@
    "prompt": "How did the Third Crusade (1189–92), led by Richard I, end?",
    "options": [
     {
-     "text": "With a truce: Jerusalem stayed in Muslim hands, but Christian pilgrims could visit",
+     "text": "A truce: Jerusalem stayed Muslim, but pilgrims could visit",
      "correct": true
     },
     {
-     "text": "Richard captured Jerusalem",
+     "text": "Richard captured Jerusalem and was crowned king",
      "correct": false,
      "feedback": "He came close but never took it."
     },
     {
-     "text": "Saladin was killed in battle",
+     "text": "Saladin was killed in battle outside Acre",
      "correct": false,
      "feedback": "Saladin died of illness in 1193."
     }
@@ -563,16 +563,16 @@
    "prompt": "What did the Fourth Crusade do in 1204?",
    "options": [
     {
-     "text": "It attacked and looted Constantinople, a Christian city",
+     "text": "It looted Constantinople, a Christian city",
      "correct": true
     },
     {
-     "text": "It recaptured Jerusalem",
+     "text": "It recaptured Jerusalem from the Muslims",
      "correct": false,
      "feedback": "It never reached the Holy Land."
     },
     {
-     "text": "It made peace with Saladin",
+     "text": "It made a lasting peace with Saladin",
      "correct": false,
      "feedback": "Saladin had died in 1193."
     }
@@ -584,11 +584,11 @@
    "topic": "history.crusades",
    "kind": "fact",
    "prompt": "The Knights Templar and the Knights Hospitaller were what kind of group?",
-   "answer": "military religious orders: monks who were also knights",
+   "answer": "monks who were also knights",
    "distractors": [
     "tax collectors for the king",
     "merchant guilds from Venice",
-    "Muslim armies"
+    "Muslim armies from Egypt"
    ],
    "explain": "They protected pilgrims and fought in the Holy Land, and grew rich and powerful.",
    "formats": [
@@ -602,16 +602,16 @@
    "prompt": "What happened to many Jewish communities in the Rhineland in 1096?",
    "options": [
     {
-     "text": "They were attacked and massacred by crusaders on their way east",
+     "text": "Crusaders heading east attacked and massacred them",
      "correct": true
     },
     {
-     "text": "They led the crusade",
+     "text": "They paid for and led the crusading armies",
      "correct": false,
      "feedback": "They were victims of it."
     },
     {
-     "text": "They were invited to Jerusalem",
+     "text": "They were invited to settle in Jerusalem",
      "correct": false,
      "feedback": "Crusaders attacked them in Germany."
     }
@@ -629,12 +629,12 @@
      "correct": true
     },
     {
-     "text": "Christianity disappeared from Europe",
+     "text": "Christianity disappeared from most of northern and western Europe",
      "correct": false,
      "feedback": "It did not."
     },
     {
-     "text": "The end of all wars about religion",
+     "text": "The end of all wars fought over religion",
      "correct": false,
      "feedback": "Sadly not."
     }
@@ -669,11 +669,12 @@
    "prompt": "Which two families fought the Wars of the Roses?",
    "options": [
     {
-     "text": "The houses of Lancaster (red rose) and York (white rose)",
-     "correct": true
+     "text": "The houses of Lancaster and York",
+     "correct": true,
+     "feedback": "Red rose for Lancaster, white for York."
     },
     {
-     "text": "The Tudors and the Stuarts",
+     "text": "The houses of Tudor and Stuart",
      "correct": false,
      "feedback": "The Tudors came out of the wars; the Stuarts came later."
     },
@@ -692,16 +693,16 @@
    "prompt": "Why did the wars begin in the 1450s?",
    "options": [
     {
-     "text": "Henry VI was a weak king who suffered mental illness, and nobles fought for control",
+     "text": "A weak, ill king let rival nobles fight for control",
      "correct": true
     },
     {
-     "text": "England was invaded by France",
+     "text": "England was invaded by a large French army seeking revenge",
      "correct": false,
      "feedback": "England had just LOST its French lands."
     },
     {
-     "text": "The Pope declared war",
+     "text": "The Pope declared war on Henry VI",
      "correct": false,
      "feedback": "It was a struggle within the English nobility."
     }
@@ -731,16 +732,16 @@
    "prompt": "What do we know for certain about the “Princes in the Tower”, Edward V and his brother, who disappeared in 1483?",
    "options": [
     {
-     "text": "Nothing certain: they vanished, and historians still argue about what happened to them",
+     "text": "Nothing certain: historians still argue about their fate",
      "correct": true
     },
     {
-     "text": "They escaped to France and lived happily",
+     "text": "They escaped to France and lived there in secret",
      "correct": false,
      "feedback": "There is no reliable evidence for that."
     },
     {
-     "text": "Richard III confessed to killing them",
+     "text": "Richard III confessed in writing to having them killed in the Tower",
      "correct": false,
      "feedback": "There was no confession."
     }
@@ -767,16 +768,16 @@
    "prompt": "What helped Henry Tudor win at Bosworth?",
    "options": [
     {
-     "text": "Sir William Stanley’s men joined the battle on Henry’s side at the crucial moment",
+     "text": "Sir William Stanley’s men joined Henry at the key moment",
      "correct": true
     },
     {
-     "text": "Henry had cannons and Richard had none",
+     "text": "Henry had far more cannons, while Richard had none at all",
      "correct": false,
      "feedback": "Both sides had some artillery."
     },
     {
-     "text": "Richard surrendered before the battle",
+     "text": "Richard surrendered before the battle began",
      "correct": false,
      "feedback": "He died fighting."
     }
@@ -806,16 +807,16 @@
    "prompt": "Why did Henry VII marry Elizabeth of York in 1486?",
    "options": [
     {
-     "text": "To unite the two houses and make his claim to the throne stronger",
+     "text": "To unite the two houses and strengthen his claim",
      "correct": true
     },
     {
-     "text": "Because the Pope ordered it",
+     "text": "Because the Pope had ordered the marriage",
      "correct": false,
      "feedback": "It was Henry’s own political choice."
     },
     {
-     "text": "To gain land in France",
+     "text": "To gain her family’s lands in France",
      "correct": false,
      "feedback": "It was about the English crown."
     }
@@ -984,16 +985,17 @@
    "prompt": "Which was a result of printing?",
    "options": [
     {
-     "text": "Books became cheaper and ideas spread far faster, helping the Reformation",
-     "correct": true
+     "text": "Books became cheaper and ideas spread faster",
+     "correct": true,
+     "feedback": "This helped the Reformation spread."
     },
     {
-     "text": "Fewer people learned to read",
+     "text": "Fewer people bothered to learn to read",
      "correct": false,
      "feedback": "Literacy rose as books became cheaper."
     },
     {
-     "text": "Monks copied more books by hand",
+     "text": "Monks copied even more books by hand",
      "correct": false,
      "feedback": "Printing replaced hand copying."
     }
@@ -1007,11 +1009,11 @@
    "prompt": "What was Renaissance humanism?",
    "options": [
     {
-     "text": "Studying Greek and Roman texts and believing in human talent and achievement",
+     "text": "Studying ancient texts and celebrating human talent",
      "correct": true
     },
     {
-     "text": "A belief that humans are evil",
+     "text": "A belief that humans are naturally evil",
      "correct": false,
      "feedback": "Humanists celebrated human potential."
     },
@@ -1030,16 +1032,16 @@
    "prompt": "Which technique made Renaissance paintings look three-dimensional?",
    "options": [
     {
-     "text": "Linear perspective, where parallel lines meet at a vanishing point",
+     "text": "Linear perspective, with a vanishing point",
      "correct": true
     },
     {
-     "text": "Gold leaf backgrounds",
+     "text": "Gold leaf backgrounds behind each figure",
      "correct": false,
      "feedback": "That was typical of medieval art."
     },
     {
-     "text": "Painting everyone the same size",
+     "text": "Painting every figure the same size",
      "correct": false,
      "feedback": "Perspective made distant things smaller."
     }
@@ -1074,18 +1076,19 @@
    "prompt": "Where did Christopher Columbus land in 1492?",
    "options": [
     {
-     "text": "Islands in the Caribbean, though he thought he had reached Asia",
-     "correct": true
+     "text": "Islands in the Caribbean",
+     "correct": true,
+     "feedback": "Though he thought he had reached Asia."
     },
     {
-     "text": "India",
+     "text": "The coast of India",
      "correct": false,
      "feedback": "He believed he was near Asia, which is why the islands were called the “West Indies”."
     },
     {
-     "text": "England",
+     "text": "The coast of China",
      "correct": false,
-     "feedback": "He sailed from Spain westwards."
+     "feedback": "He believed he was near Asia, but he had reached the Caribbean."
     }
    ],
    "explain": "Columbus sailed for Spain and died believing he had reached Asia."
@@ -1113,16 +1116,17 @@
    "prompt": "Why is it misleading to say “Magellan sailed round the world”?",
    "options": [
     {
-     "text": "He was killed in the Philippines in 1521; Juan Sebastián Elcano finished the voyage in 1522",
-     "correct": true
+     "text": "He was killed on the way; Elcano finished the voyage",
+     "correct": true,
+     "feedback": "Magellan died in the Philippines in 1521; Elcano returned in 1522."
     },
     {
-     "text": "He never left Spain",
+     "text": "He never left Spain but paid for the voyage",
      "correct": false,
      "feedback": "He led the expedition from 1519."
     },
     {
-     "text": "The voyage went round Africa only",
+     "text": "The voyage only went round the coast of Africa",
      "correct": false,
      "feedback": "It crossed the Atlantic and Pacific."
     }
@@ -1170,16 +1174,17 @@
    "prompt": "What caused most of the catastrophic fall in the Indigenous population of the Americas after 1492?",
    "options": [
     {
-     "text": "Diseases such as smallpox that Europeans brought, to which people had no immunity",
-     "correct": true
+     "text": "Diseases such as smallpox that Europeans brought",
+     "correct": true,
+     "feedback": "People had no immunity to them."
     },
     {
-     "text": "Volcanic eruptions",
+     "text": "A series of volcanic eruptions and famines",
      "correct": false,
      "feedback": "Disease, war and forced labour were the causes."
     },
     {
-     "text": "Emigration to Europe",
+     "text": "Mass emigration across the sea to Europe",
      "correct": false,
      "feedback": "Very few Indigenous people went to Europe."
     }
@@ -1232,16 +1237,16 @@
    "prompt": "How did exploration lead to the transatlantic slave trade?",
    "options": [
     {
-     "text": "Europeans set up plantations in the Americas and forcibly transported enslaved Africans to work them",
+     "text": "American plantations were worked by enslaved Africans",
      "correct": true
     },
     {
-     "text": "Explorers abolished slavery in Africa",
+     "text": "Explorers abolished the slave trade in Africa",
      "correct": false,
      "feedback": "The opposite: the trade grew enormously."
     },
     {
-     "text": "It had no connection",
+     "text": "The two were not connected in any way",
      "correct": false,
      "feedback": "Colonies in the Americas created the demand for enslaved labour."
     }
@@ -1305,16 +1310,16 @@
    "prompt": "Why might Elizabeth have chosen never to marry?",
    "options": [
     {
-     "text": "A husband might take power from her, and a foreign husband could drag England into his country’s wars",
+     "text": "A husband might take power from her, or drag England into wars",
      "correct": true
     },
     {
-     "text": "Women were not allowed to marry in Tudor times",
+     "text": "Queens were not allowed to marry in Tudor times",
      "correct": false,
      "feedback": "They certainly were."
     },
     {
-     "text": "Parliament banned her from marrying",
+     "text": "Parliament passed a law that banned her from marrying a foreigner",
      "correct": false,
      "feedback": "Parliament BEGGED her to marry and have an heir."
     }
@@ -1344,16 +1349,17 @@
    "prompt": "Why was Mary, Queen of Scots, such a danger to Elizabeth?",
    "options": [
     {
-     "text": "She was Catholic and had a strong claim to the English throne, so Catholic plotters wanted to replace Elizabeth with her",
-     "correct": true
+     "text": "She was a Catholic with a strong claim to the throne",
+     "correct": true,
+     "feedback": "So Catholic plotters wanted to replace Elizabeth with her."
     },
     {
-     "text": "She commanded the Spanish Armada",
+     "text": "She commanded the army sent with the Spanish Armada",
      "correct": false,
      "feedback": "The Armada came after her death."
     },
     {
-     "text": "She was Elizabeth’s daughter",
+     "text": "She was Elizabeth’s only daughter and chosen heir",
      "correct": false,
      "feedback": "She was her cousin."
     }
@@ -1383,16 +1389,17 @@
    "prompt": "Why did Elizabeth control how artists painted her?",
    "options": [
     {
-     "text": "Portraits were propaganda: they showed her as powerful, ageless and chosen by God",
-     "correct": true
+     "text": "Portraits were propaganda showing her as powerful",
+     "correct": true,
+     "feedback": "Powerful, ageless and chosen by God."
     },
     {
-     "text": "She disliked paintings",
+     "text": "She disliked being painted and banned most portraits",
      "correct": false,
      "feedback": "She used them cleverly."
     },
     {
-     "text": "Paint was too expensive",
+     "text": "Good paint was far too expensive to waste",
      "correct": false,
      "feedback": "The reason was political."
     }
@@ -1406,16 +1413,17 @@
    "prompt": "What did the 1601 Poor Law do?",
    "options": [
     {
-     "text": "Made each parish collect a tax to support its poor, with work for the able-bodied",
-     "correct": true
+     "text": "Made each parish raise a tax to support its poor",
+     "correct": true,
+     "feedback": "The able-bodied poor were given work."
     },
     {
-     "text": "Abolished poverty",
+     "text": "Abolished poverty by giving land to the poor",
      "correct": false,
      "feedback": "Nothing could do that."
     },
     {
-     "text": "Sent all poor people to America",
+     "text": "Sent all poor people to the new American colonies",
      "correct": false,
      "feedback": "Colonies were barely beginning."
     }
@@ -1484,16 +1492,16 @@
    "prompt": "What happened to Galileo in 1633?",
    "options": [
     {
-     "text": "The Catholic Church put him on trial and he spent his last years under house arrest",
+     "text": "He was tried by the Church and put under house arrest",
      "correct": true
     },
     {
-     "text": "He was made Pope",
+     "text": "He was made a cardinal and given a great observatory",
      "correct": false,
      "feedback": "He was condemned by the Church."
     },
     {
-     "text": "He was burned at the stake",
+     "text": "He was burned at the stake as a heretic",
      "correct": false,
      "feedback": "He was forced to recant and kept under house arrest."
     }
@@ -1572,16 +1580,17 @@
    "prompt": "What was new about the scientific method championed by Francis Bacon?",
    "options": [
     {
-     "text": "Testing ideas by observation and experiment, rather than trusting ancient authorities",
-     "correct": true
+     "text": "Testing ideas by observation and experiment",
+     "correct": true,
+     "feedback": "Rather than trusting ancient authorities."
     },
     {
-     "text": "Reading Aristotle more carefully",
+     "text": "Reading Aristotle and Galen far more carefully",
      "correct": false,
      "feedback": "The point was to check, not just read."
     },
     {
-     "text": "Relying on dreams and visions",
+     "text": "Relying on dreams, visions and the stars",
      "correct": false,
      "feedback": "It relied on evidence."
     }
@@ -1595,16 +1604,17 @@
    "prompt": "Why had the Greek doctor Galen’s ideas lasted about 1,400 years?",
    "options": [
     {
-     "text": "The Church approved of them and doctors trusted ancient authorities rather than testing them",
-     "correct": true
+     "text": "Doctors trusted ancient authority instead of testing him",
+     "correct": true,
+     "feedback": "The Church approved of his ideas too."
     },
     {
-     "text": "They were all correct",
+     "text": "They were all correct, as every later doctor went on to prove",
      "correct": false,
      "feedback": "Many were wrong, as Vesalius and Harvey showed."
     },
     {
-     "text": "Nobody could read Greek",
+     "text": "Nobody in Europe could read Greek any more",
      "correct": false,
      "feedback": "His works were translated and widely taught."
     }
@@ -1659,7 +1669,7 @@
    "prompt": "What changed when Charles II returned in 1660?",
    "options": [
     {
-     "text": "Theatres reopened, and women were allowed to act on stage for the first time",
+     "text": "Theatres reopened, and women could act on stage",
      "correct": true
     },
     {
@@ -1668,7 +1678,7 @@
      "feedback": "Parliament remained powerful."
     },
     {
-     "text": "England became a republic",
+     "text": "England became a republic under the army",
      "correct": false,
      "feedback": "The opposite: the monarchy was restored."
     }
@@ -1698,16 +1708,16 @@
    "prompt": "What do we now know spread the plague?",
    "options": [
     {
-     "text": "Fleas carried by rats, which passed the bacterium to people",
+     "text": "Fleas on rats, which passed the bacterium to people",
      "correct": true
     },
     {
-     "text": "Bad air from rotting rubbish",
+     "text": "Bad air rising from rotting rubbish in the streets",
      "correct": false,
      "feedback": "That was the “miasma” idea people believed then."
     },
     {
-     "text": "Cats and dogs",
+     "text": "Stray cats and dogs roaming the city",
      "correct": false,
      "feedback": "Londoners killed thousands of cats and dogs, which probably made things worse by leaving the rats alone."
     }
@@ -1753,16 +1763,17 @@
    "prompt": "Why did the fire spread so far?",
    "options": [
     {
-     "text": "Wooden houses built close together, a dry summer and a strong east wind",
-     "correct": true
+     "text": "Close-packed wooden houses, a dry summer and a strong wind",
+     "correct": true,
+     "feedback": "The wind blew from the east."
     },
     {
-     "text": "Firefighters refused to help",
+     "text": "The city’s firefighters refused to help put it out",
      "correct": false,
      "feedback": "People fought it, but with buckets and hooks."
     },
     {
-     "text": "It was started deliberately in many places",
+     "text": "It was started deliberately in many places by foreign spies",
      "correct": false,
      "feedback": "It started by accident in one bakery."
     }
@@ -1776,16 +1787,17 @@
    "prompt": "Only a handful of deaths were recorded in the Great Fire. Why do historians think the real number was higher?",
    "options": [
     {
-     "text": "Poor people’s deaths were often not recorded, and the heat may have left no remains",
-     "correct": true
+     "text": "Poor people’s deaths often went unrecorded",
+     "correct": true,
+     "feedback": "And the heat may have left no remains."
     },
     {
-     "text": "Everyone escaped by boat",
+     "text": "Almost everyone escaped by boat along the Thames",
      "correct": false,
      "feedback": "Many did escape, but some must have died."
     },
     {
-     "text": "Records were perfect in 1666",
+     "text": "Records of deaths in 1666 were complete and perfect",
      "correct": false,
      "feedback": "They were far from perfect."
     }
@@ -1853,16 +1865,16 @@
    "prompt": "What did the colonists mean by “No taxation without representation”?",
    "options": [
     {
-     "text": "Parliament should not tax them because they had no MPs to vote for",
+     "text": "Parliament should not tax them, as they had no MPs",
      "correct": true
     },
     {
-     "text": "They refused to pay any taxes at all, ever",
+     "text": "They refused to pay any taxes at all, ever again",
      "correct": false,
      "feedback": "They objected to taxes they had no say in."
     },
     {
-     "text": "They wanted the king to pay their taxes",
+     "text": "They wanted the king himself to pay their taxes",
      "correct": false,
      "feedback": "The issue was who had the right to tax them."
     }
@@ -1944,12 +1956,12 @@
      "correct": true
     },
     {
-     "text": "Russia",
+     "text": "Russia, which sent an army across the sea",
      "correct": false,
      "feedback": "Russia stayed out of the war."
     },
     {
-     "text": "Prussia",
+     "text": "Prussia, which lent money and generals",
      "correct": false,
      "feedback": "France was the key ally."
     }
@@ -1983,12 +1995,12 @@
      "correct": true
     },
     {
-     "text": "Everyone in America was already equal",
+     "text": "Everyone in America was already treated as equal",
      "correct": false,
      "feedback": "Enslaved people, women and Indigenous Americans were not treated as equal."
     },
     {
-     "text": "The words were added in 1900",
+     "text": "The famous words were only added to the Declaration in about 1900",
      "correct": false,
      "feedback": "They are in the original 1776 text."
     }
@@ -2085,16 +2097,16 @@
    "prompt": "What was the Napoleonic Code?",
    "options": [
     {
-     "text": "A single set of laws for France that influenced legal systems across Europe and beyond",
+     "text": "A single set of laws for France, copied across Europe",
      "correct": true
     },
     {
-     "text": "A secret army cipher",
+     "text": "A secret cipher used to send army orders",
      "correct": false,
      "feedback": "It was a code of LAWS."
     },
     {
-     "text": "Rules for fighting at sea",
+     "text": "A secret set of rules for fighting battles at sea against Britain",
      "correct": false,
      "feedback": "It covered property, family and civil law."
     }
@@ -2108,16 +2120,16 @@
    "prompt": "What happened when Napoleon invaded Russia in 1812?",
    "options": [
     {
-     "text": "His huge army had to retreat through the winter, and most of it died or deserted",
+     "text": "His army retreated in winter, and most of it was lost",
      "correct": true
     },
     {
-     "text": "He conquered Russia",
+     "text": "He conquered Russia and made his brother its king",
      "correct": false,
      "feedback": "He reached Moscow but had to retreat."
     },
     {
-     "text": "Russia surrendered at once",
+     "text": "Russia surrendered at once and joined his empire",
      "correct": false,
      "feedback": "The Russians retreated and burned Moscow."
     }
@@ -2164,16 +2176,17 @@
    "prompt": "What happened at “Peterloo” in Manchester in 1819?",
    "options": [
     {
-     "text": "Cavalry charged a peaceful crowd demanding parliamentary reform; about 18 people were killed",
-     "correct": true
+     "text": "Cavalry charged a peaceful crowd calling for reform",
+     "correct": true,
+     "feedback": "About 18 people were killed."
     },
     {
-     "text": "Napoleon was finally defeated",
+     "text": "Napoleon was finally defeated by Wellington",
      "correct": false,
      "feedback": "The name mocks Waterloo, four years earlier."
     },
     {
-     "text": "The first railway opened",
+     "text": "The world’s first passenger railway opened",
      "correct": false,
      "feedback": "That was 1830."
     }
@@ -2208,16 +2221,16 @@
    "prompt": "What caused the potato crop to fail in Ireland from 1845?",
    "options": [
     {
-     "text": "Potato blight, a plant disease that rotted the potatoes in the ground",
+     "text": "Potato blight, a disease that rotted the crop",
      "correct": true
     },
     {
-     "text": "A long drought",
+     "text": "A long drought that dried up the fields",
      "correct": false,
      "feedback": "It was a disease, spread in damp weather."
     },
     {
-     "text": "A plague of locusts",
+     "text": "A plague of insects that ate the leaves",
      "correct": false,
      "feedback": "It was blight."
     }
@@ -2231,16 +2244,16 @@
    "prompt": "Why did the failure of one crop cause a famine?",
    "options": [
     {
-     "text": "About a third of the people depended almost entirely on potatoes for food",
+     "text": "A third of the people lived almost entirely on potatoes",
      "correct": true
     },
     {
-     "text": "Irish people refused to eat other food",
+     "text": "Irish people refused to eat any other kind of food",
      "correct": false,
      "feedback": "Many simply could not afford anything else."
     },
     {
-     "text": "There were no other crops in Ireland",
+     "text": "There were no other crops grown in Ireland",
      "correct": false,
      "feedback": "Other crops were grown, but much was sold or exported."
     }
@@ -2270,16 +2283,16 @@
    "prompt": "What did over a million people do to escape the famine?",
    "options": [
     {
-     "text": "Emigrated, especially to the USA, Britain, Canada and Australia",
+     "text": "Emigrated, especially to America and Britain",
      "correct": true
     },
     {
-     "text": "Moved to France",
+     "text": "Moved to France and the Low Countries",
      "correct": false,
      "feedback": "Most went to America and Britain."
     },
     {
-     "text": "Joined the army in India",
+     "text": "Joined the British army in India",
      "correct": false,
      "feedback": "Emigration across the Atlantic was the main escape."
     }
@@ -2293,16 +2306,17 @@
    "prompt": "Why has the government’s response been so heavily criticised?",
    "options": [
     {
-     "text": "Food such as grain and cattle continued to be exported from Ireland while people starved, and relief was cut back",
-     "correct": true
+     "text": "Food was still exported while people starved",
+     "correct": true,
+     "feedback": "And relief was cut back."
     },
     {
-     "text": "The government gave too much food away",
+     "text": "The government gave too much free food away",
      "correct": false,
      "feedback": "Relief was limited and stopped too soon."
     },
     {
-     "text": "Ireland was not part of the United Kingdom",
+     "text": "Ireland was not yet part of the United Kingdom",
      "correct": false,
      "feedback": "Ireland was part of the UK from 1801."
     }
@@ -2333,16 +2347,17 @@
    "prompt": "Officials such as Charles Trevelyan believed in “laissez-faire”. What does that mean?",
    "options": [
     {
-     "text": "The government should interfere as little as possible in the economy",
-     "correct": true
+     "text": "The government should interfere as little as possible",
+     "correct": true,
+     "feedback": "Especially in the economy."
     },
     {
-     "text": "The government should feed everyone for free",
+     "text": "The government should feed every citizen for free",
      "correct": false,
      "feedback": "The opposite."
     },
     {
-     "text": "Free trade should be banned",
+     "text": "Free trade should be banned to protect farmers",
      "correct": false,
      "feedback": "Laissez-faire supporters wanted free trade."
     }
@@ -2356,16 +2371,17 @@
    "prompt": "What happened in 1847 when the government opened soup kitchens?",
    "options": [
     {
-     "text": "Millions of people were fed each day, showing that relief could work, but the kitchens were closed after a few months",
-     "correct": true
+     "text": "They fed millions a day but closed after a few months",
+     "correct": true,
+     "feedback": "They showed that relief could work."
     },
     {
-     "text": "Nobody used them",
+     "text": "Hardly anyone used them, so they were closed within a week",
      "correct": false,
      "feedback": "They fed millions."
     },
     {
-     "text": "They ended the famine",
+     "text": "They ended the famine within the year",
      "correct": false,
      "feedback": "Famine and disease continued for years."
     }
@@ -2453,12 +2469,12 @@
      "correct": true
     },
     {
-     "text": "Through bad smells",
+     "text": "Through bad smells from the river",
      "correct": false,
      "feedback": "That was the miasma theory."
     },
     {
-     "text": "Through mosquito bites",
+     "text": "Through the bites of mosquitoes",
      "correct": false,
      "feedback": "That is malaria."
     }
@@ -2504,16 +2520,17 @@
    "prompt": "What was the key difference between the Public Health Acts of 1848 and 1875?",
    "options": [
     {
-     "text": "The 1848 Act was voluntary for towns; the 1875 Act made councils provide clean water, drains and sewers",
-     "correct": true
+     "text": "The 1848 Act was voluntary; the 1875 Act was compulsory",
+     "correct": true,
+     "feedback": "It made councils provide clean water, drains and sewers."
     },
     {
-     "text": "The 1848 Act was much stronger",
+     "text": "The 1848 Act was much stronger than the 1875 Act",
      "correct": false,
      "feedback": "It was weaker: councils could choose to ignore it."
     },
     {
-     "text": "There was no difference",
+     "text": "There was no real difference at all between the two Public Health Acts",
      "correct": false,
      "feedback": "The 1875 Act was compulsory."
     }
@@ -2580,16 +2597,16 @@
    "prompt": "From 1909 imprisoned suffragettes went on hunger strike. How did the government first respond?",
    "options": [
     {
-     "text": "By force-feeding them through tubes, which caused public outrage",
+     "text": "By force-feeding them, which caused outrage",
      "correct": true
     },
     {
-     "text": "By giving them the vote",
+     "text": "By releasing them and giving them the vote",
      "correct": false,
      "feedback": "Not until 1918."
     },
     {
-     "text": "By ignoring them completely",
+     "text": "By ignoring them and letting them starve",
      "correct": false,
      "feedback": "The government feared they would die and become martyrs."
     }
@@ -2603,16 +2620,16 @@
    "prompt": "What did the 1913 “Cat and Mouse Act” allow?",
    "options": [
     {
-     "text": "Hunger strikers could be released when weak, then re-arrested once they recovered",
+     "text": "Hunger strikers were freed when weak, then re-arrested",
      "correct": true
     },
     {
-     "text": "Suffragettes could vote in local elections",
+     "text": "Suffragettes could vote in local council elections from 1913",
      "correct": false,
      "feedback": "It was about prisoners."
     },
     {
-     "text": "Police could use dogs at protests",
+     "text": "Police could use dogs to break up protests",
      "correct": false,
      "feedback": "The name compares the government to a cat playing with a mouse."
     }
@@ -2642,11 +2659,12 @@
    "prompt": "What happened in March 1912 in London’s West End?",
    "options": [
     {
-     "text": "Suffragettes smashed hundreds of shop windows with hammers at an agreed time",
-     "correct": true
+     "text": "Suffragettes smashed hundreds of shop windows",
+     "correct": true,
+     "feedback": "With hammers, all at an agreed time."
     },
     {
-     "text": "A peaceful march of a million women",
+     "text": "A peaceful march of a million women to Parliament",
      "correct": false,
      "feedback": "That was not it: this was a planned attack on property."
     },
@@ -2681,16 +2699,16 @@
    "prompt": "What did the WSPU do when war broke out in 1914?",
    "options": [
     {
-     "text": "It stopped its militant campaign and supported the war effort",
+     "text": "It stopped militancy and supported the war effort",
      "correct": true
     },
     {
-     "text": "It increased the bombings",
+     "text": "It increased its bombing campaign against MPs",
      "correct": false,
      "feedback": "It suspended militancy."
     },
     {
-     "text": "It joined the enemy",
+     "text": "It campaigned for Britain to stay out of the war",
      "correct": false,
      "feedback": "It strongly supported Britain."
     }
@@ -2720,16 +2738,17 @@
    "prompt": "Why do historians disagree about whether militancy helped?",
    "options": [
     {
-     "text": "It won huge publicity, but it also let opponents argue women were too irrational to vote",
-     "correct": true
+     "text": "It won publicity but also gave opponents ammunition",
+     "correct": true,
+     "feedback": "Opponents argued that women were too irrational to vote."
     },
     {
-     "text": "Because there was no militancy",
+     "text": "There was in fact no militancy before 1918",
      "correct": false,
      "feedback": "There was a great deal."
     },
     {
-     "text": "Because women won the vote in 1900",
+     "text": "Because women had already won the vote in 1900",
      "correct": false,
      "feedback": "Some women won it in 1918."
     }
@@ -2806,16 +2825,16 @@
    "prompt": "What was the Blitz?",
    "options": [
     {
-     "text": "German bombing of British cities, especially from September 1940 to May 1941",
+     "text": "German bombing of British cities in 1940–41",
      "correct": true
     },
     {
-     "text": "A British invasion of France",
+     "text": "A British invasion of northern France",
      "correct": false,
      "feedback": "That was D-Day in 1944."
     },
     {
-     "text": "A rationing scheme",
+     "text": "A scheme for rationing food and clothes",
      "correct": false,
      "feedback": "It was a bombing campaign."
     }
@@ -2829,16 +2848,17 @@
    "prompt": "What was the difference between an Anderson shelter and a Morrison shelter?",
    "options": [
     {
-     "text": "An Anderson was buried in the garden; a Morrison was a steel cage that doubled as a table indoors",
-     "correct": true
+     "text": "An Anderson went in the garden; a Morrison indoors",
+     "correct": true,
+     "feedback": "A Morrison was a steel cage that doubled as a table."
     },
     {
-     "text": "They were the same thing",
+     "text": "They were two names for the same shelter",
      "correct": false,
      "feedback": "One was outdoor, one indoor."
     },
     {
-     "text": "A Morrison was a London Underground station",
+     "text": "A Morrison was a deep Tube station shelter",
      "correct": false,
      "feedback": "People did shelter in the Tube, but a Morrison was a home shelter."
     }
@@ -2900,16 +2920,17 @@
    "prompt": "What happened in December 1941?",
    "options": [
     {
-     "text": "Britain began conscripting unmarried women aged 20 to 30 into war work or the services",
-     "correct": true
+     "text": "Britain began conscripting unmarried young women",
+     "correct": true,
+     "feedback": "Women aged 20 to 30, into war work or the services."
     },
     {
-     "text": "Rationing ended",
+     "text": "Food rationing ended across Britain after two years",
      "correct": false,
      "feedback": "It went on until 1954."
     },
     {
-     "text": "The Blitz began",
+     "text": "The Blitz on London and other cities began",
      "correct": false,
      "feedback": "That was September 1940."
     }
@@ -2923,16 +2944,17 @@
    "prompt": "The famous “Keep Calm and Carry On” poster was printed in 1939. What actually happened to it?",
    "options": [
     {
-     "text": "It was hardly ever displayed during the war and only became famous after a copy was found in 2000",
-     "correct": true
+     "text": "It was hardly used, and became famous after 2000",
+     "correct": true,
+     "feedback": "A copy was found in a bookshop in 2000."
     },
     {
-     "text": "It was on every wall in Britain",
+     "text": "It was put up on almost every wall in Britain",
      "correct": false,
      "feedback": "Almost all copies were pulped."
     },
     {
-     "text": "It was designed by Churchill",
+     "text": "It was designed by Churchill himself",
      "correct": false,
      "feedback": "It was a Ministry of Information design."
     }
@@ -2981,11 +3003,11 @@
    "topic": "history.civil-rights",
    "kind": "fact",
    "prompt": "How long did the Montgomery Bus Boycott last?",
-   "answer": "just over a year (381 days)",
+   "answer": "just over a year",
    "distractors": [
-    "one week",
-    "one month",
-    "ten years"
+    "about one week",
+    "about one month",
+    "about ten years"
    ],
    "explain": "Black residents walked or shared cars until the Supreme Court ruled bus segregation unconstitutional.",
    "formats": [
@@ -3003,12 +3025,12 @@
      "correct": true
     },
     {
-     "text": "That buses must be segregated",
+     "text": "That buses must stay segregated",
      "correct": false,
      "feedback": "The opposite kind of ruling, and about schools."
     },
     {
-     "text": "That Black Americans could vote",
+     "text": "That Black Americans could vote in every state",
      "correct": false,
      "feedback": "Voting rights came with the 1965 Act."
     }
@@ -3057,16 +3079,16 @@
    "prompt": "What did the Civil Rights Act (1964) and Voting Rights Act (1965) do?",
    "options": [
     {
-     "text": "Banned segregation in public places and discrimination, and protected Black Americans’ right to vote",
+     "text": "Banned segregation and protected voting rights",
      "correct": true
     },
     {
-     "text": "Ended slavery",
+     "text": "Ended slavery across the United States",
      "correct": false,
      "feedback": "Slavery was abolished in 1865."
     },
     {
-     "text": "Created segregation",
+     "text": "Made segregation the law in the South",
      "correct": false,
      "feedback": "They outlawed it."
     }
@@ -3103,16 +3125,16 @@
    "prompt": "Why is the ship Empire Windrush remembered?",
    "options": [
     {
-     "text": "It brought hundreds of passengers from the Caribbean to Britain in June 1948, a symbol of post-war migration",
+     "text": "It brought Caribbean migrants to Britain in 1948",
      "correct": true
     },
     {
-     "text": "It sank in the Second World War",
+     "text": "It sank in the Second World War with all hands",
      "correct": false,
      "feedback": "It arrived at Tilbury in 1948."
     },
     {
-     "text": "It carried Rosa Parks to Britain",
+     "text": "It carried Rosa Parks to Britain on a tour",
      "correct": false,
      "feedback": "It is about Caribbean migration to Britain."
     }
@@ -3126,16 +3148,17 @@
    "prompt": "What was the Bristol Bus Boycott of 1963?",
    "options": [
     {
-     "text": "A campaign against a bus company that refused to employ Black and Asian crews",
-     "correct": true
+     "text": "A campaign against a bus company’s ban on Black crews",
+     "correct": true,
+     "feedback": "It refused to employ Black and Asian bus crews."
     },
     {
-     "text": "A protest about bus fares",
+     "text": "A protest about rising bus fares in the city",
      "correct": false,
      "feedback": "It was about racial discrimination."
     },
     {
-     "text": "A strike by bus drivers for more pay",
+     "text": "A strike by the city’s bus drivers for more pay and holidays",
      "correct": false,
      "feedback": "It was a boycott against a colour bar."
     }
@@ -3203,16 +3226,17 @@
    "prompt": "Why did Gandhi lead the Salt March to the sea in 1930?",
    "options": [
     {
-     "text": "To protest against the British tax on salt by making salt himself",
-     "correct": true
+     "text": "To protest against the British tax on salt",
+     "correct": true,
+     "feedback": "By making salt himself, breaking the law peacefully."
     },
     {
-     "text": "To open a new salt factory",
+     "text": "To open a new salt factory for Indian workers",
      "correct": false,
      "feedback": "It was an act of peaceful law-breaking."
     },
     {
-     "text": "To leave India for good",
+     "text": "To leave India for good and live in Britain",
      "correct": false,
      "feedback": "It was a protest within India."
     }
@@ -3226,18 +3250,19 @@
    "prompt": "What happened at Amritsar in 1919?",
    "options": [
     {
-     "text": "British troops fired on an unarmed crowd, killing hundreds",
-     "correct": true
+     "text": "British troops fired on an unarmed crowd",
+     "correct": true,
+     "feedback": "Hundreds were killed."
     },
     {
-     "text": "India became independent",
+     "text": "India became an independent country",
      "correct": false,
      "feedback": "That was 1947."
     },
     {
-     "text": "Gandhi was born",
+     "text": "Gandhi led his famous Salt March there",
      "correct": false,
-     "feedback": "He was born in 1869."
+     "feedback": "That was 1930, to the coast at Dandi."
     }
    ],
    "explain": "The official count was 379 dead; Indian estimates were higher. The massacre turned many Indians against British rule."
@@ -3249,16 +3274,16 @@
    "prompt": "What was Partition in 1947?",
    "options": [
     {
-     "text": "The division of British India into India and Pakistan, which caused enormous migration and violence",
+     "text": "The division of British India into India and Pakistan",
      "correct": true
     },
     {
-     "text": "The division of Ireland",
+     "text": "The division of Ireland into two parts",
      "correct": false,
      "feedback": "Ireland was partitioned in 1921."
     },
     {
-     "text": "The division of Germany",
+     "text": "The division of Germany into East and West",
      "correct": false,
      "feedback": "That followed the Second World War in Europe."
     }
@@ -3304,8 +3329,9 @@
    "prompt": "How did the Second World War help bring about the end of empire?",
    "options": [
     {
-     "text": "It left Britain nearly bankrupt and weakened, while independence movements grew stronger",
-     "correct": true
+     "text": "It left Britain nearly bankrupt and weakened",
+     "correct": true,
+     "feedback": "Meanwhile independence movements grew stronger."
     },
     {
      "text": "Britain won so easily it no longer needed colonies",
@@ -3313,9 +3339,9 @@
      "feedback": "Victory came at a huge cost."
     },
     {
-     "text": "It had no effect",
+     "text": "It made the empire stronger than ever",
      "correct": false,
-     "feedback": "It was a major factor."
+     "feedback": "It was a major factor in the end of empire."
     }
    ],
    "explain": "Britain could no longer afford to hold an empire against the will of its peoples."
@@ -3344,11 +3370,11 @@
    "prompt": "What did the Suez Crisis of 1956 show?",
    "options": [
     {
-     "text": "Britain could no longer act as a world power without the support of the USA",
+     "text": "Britain could not act as a world power without the USA",
      "correct": true
     },
     {
-     "text": "Britain was stronger than ever",
+     "text": "Britain was stronger than it had ever been and could act alone",
      "correct": false,
      "feedback": "Britain had to withdraw in humiliation."
     },
@@ -3453,16 +3479,17 @@
    "prompt": "What is the Hagia Sophia?",
    "options": [
     {
-     "text": "A vast domed church built by Emperor Justinian in Constantinople, finished in 537",
-     "correct": true
+     "text": "A vast domed church built by Justinian",
+     "correct": true,
+     "feedback": "In Constantinople, finished in 537."
     },
     {
-     "text": "A Greek goddess",
+     "text": "A Greek goddess of wisdom and war",
      "correct": false,
-     "feedback": "The name means “Holy Wisdom”."
+     "feedback": "The name means “Holy Wisdom”: it is a church."
     },
     {
-     "text": "A Byzantine warship",
+     "text": "The flagship of the Byzantine navy",
      "correct": false,
      "feedback": "It is a building."
     }
@@ -3476,11 +3503,11 @@
    "prompt": "Why is Emperor Justinian’s law code important?",
    "options": [
     {
-     "text": "It collected Roman law, and it became the basis of legal systems across much of Europe",
+     "text": "It collected Roman law, later used across Europe",
      "correct": true
     },
     {
-     "text": "It banned all writing",
+     "text": "It banned all writing except in Greek",
      "correct": false,
      "feedback": "It preserved centuries of law."
     },
@@ -3528,16 +3555,16 @@
    "prompt": "How did the fall of Constantinople help the Renaissance?",
    "options": [
     {
-     "text": "Greek scholars fled to Italy, bringing ancient Greek manuscripts and knowledge of the language",
+     "text": "Greek scholars fled to Italy with ancient manuscripts",
      "correct": true
     },
     {
-     "text": "It ended all trade with Asia",
+     "text": "It ended all trade between Europe and Asia for a hundred years",
      "correct": false,
      "feedback": "Trade continued, though routes changed."
     },
     {
-     "text": "It destroyed every Greek book",
+     "text": "It destroyed nearly every Greek book",
      "correct": false,
      "feedback": "Many were saved and taken west."
     }
@@ -3590,16 +3617,17 @@
    "prompt": "What happened on “Bloody Sunday” in January 1905?",
    "options": [
     {
-     "text": "Troops fired on peaceful marchers bringing a petition to the Tsar in St Petersburg",
-     "correct": true
+     "text": "Troops fired on peaceful marchers with a petition",
+     "correct": true,
+     "feedback": "In St Petersburg, at the Winter Palace."
     },
     {
-     "text": "The Tsar was killed",
+     "text": "The Tsar was killed by a revolutionary’s bomb",
      "correct": false,
      "feedback": "He survived until 1918."
     },
     {
-     "text": "Russia won a war against Japan",
+     "text": "Russia won a great victory against Japan",
      "correct": false,
      "feedback": "Russia lost that war in 1905."
     }
@@ -3613,8 +3641,9 @@
    "prompt": "How did the First World War help bring down the Tsar?",
    "options": [
     {
-     "text": "Huge defeats and shortages of food and fuel at home, and the Tsar took personal command, so he was blamed",
-     "correct": true
+     "text": "Defeats and shortages, blamed on a Tsar in command",
+     "correct": true,
+     "feedback": "He took personal command of the army in 1915."
     },
     {
      "text": "Russia won easily, so people wanted change",
@@ -3622,7 +3651,7 @@
      "feedback": "Russia suffered terrible losses."
     },
     {
-     "text": "It had no effect",
+     "text": "It made the Tsar more popular than ever",
      "correct": false,
      "feedback": "It was the key trigger."
     }
@@ -3636,11 +3665,12 @@
    "prompt": "What happened in the February Revolution of 1917?",
    "options": [
     {
-     "text": "Strikes and mutinies in Petrograd forced the Tsar to abdicate, and a Provisional Government took over",
-     "correct": true
+     "text": "Strikes and mutinies forced the Tsar to abdicate",
+     "correct": true,
+     "feedback": "A Provisional Government took over."
     },
     {
-     "text": "Lenin seized power",
+     "text": "Lenin and the Bolsheviks seized power in Petrograd",
      "correct": false,
      "feedback": "That was October."
     },
@@ -3691,16 +3721,17 @@
    "prompt": "Why did the “October” Revolution happen on 7 November by our calendar?",
    "options": [
     {
-     "text": "Russia still used the old Julian calendar, which was 13 days behind",
-     "correct": true
+     "text": "Russia still used the old Julian calendar",
+     "correct": true,
+     "feedback": "It was 13 days behind the Western calendar."
     },
     {
-     "text": "The news took two weeks to arrive",
+     "text": "The news took two weeks to reach the West",
      "correct": false,
      "feedback": "It is a calendar difference."
     },
     {
-     "text": "It lasted from October to November",
+     "text": "It lasted all the way from October to November",
      "correct": false,
      "feedback": "The seizure of power took about a day."
     }
@@ -3714,16 +3745,17 @@
    "prompt": "What happened to the Tsar and his family in July 1918?",
    "options": [
     {
-     "text": "They were executed by the Bolsheviks at Yekaterinburg",
-     "correct": true
+     "text": "They were executed by the Bolsheviks",
+     "correct": true,
+     "feedback": "At Yekaterinburg, in July 1918."
     },
     {
-     "text": "They escaped to Britain",
+     "text": "They escaped to Britain with help from the king",
      "correct": false,
      "feedback": "Britain declined to take them in."
     },
     {
-     "text": "They ruled again",
+     "text": "They returned to rule after the civil war",
      "correct": false,
      "feedback": "The monarchy was never restored."
     }
@@ -3774,16 +3806,17 @@
    "prompt": "Which was a term of the Treaty of Versailles (1919)?",
    "options": [
     {
-     "text": "Germany had to accept blame for the war, pay reparations and limit its army to 100,000 men",
-     "correct": true
+     "text": "Germany had to accept blame and pay reparations",
+     "correct": true,
+     "feedback": "Its army was also limited to 100,000 men."
     },
     {
-     "text": "Germany gained new colonies",
+     "text": "Germany gained new colonies in Africa",
      "correct": false,
      "feedback": "Germany LOST all its colonies."
     },
     {
-     "text": "Germany could keep its air force",
+     "text": "Germany could keep its air force and navy",
      "correct": false,
      "feedback": "Germany was banned from having an air force."
     }
@@ -3813,16 +3846,17 @@
    "prompt": "Why did the League of Nations fail to stop aggression in the 1930s?",
    "options": [
     {
-     "text": "It had no army of its own, key powers like the USA were not members, and it failed to stop Japan in Manchuria and Italy in Abyssinia",
-     "correct": true
+     "text": "It had no army, and key powers like the USA were not members",
+     "correct": true,
+     "feedback": "It failed to stop Japan in Manchuria and Italy in Abyssinia."
     },
     {
-     "text": "It started the Second World War",
+     "text": "It started the Second World War by declaring war on Germany",
      "correct": false,
      "feedback": "It failed to prevent it."
     },
     {
-     "text": "Every country obeyed it",
+     "text": "Every country obeyed it, so it never had any need to take action",
      "correct": false,
      "feedback": "Aggressors ignored it."
     }
@@ -3881,16 +3915,17 @@
    "prompt": "What did the Enabling Act of March 1933 do?",
    "options": [
     {
-     "text": "It let Hitler make laws without the Reichstag (parliament), making him a dictator",
-     "correct": true
+     "text": "It let Hitler make laws without parliament",
+     "correct": true,
+     "feedback": "Without the Reichstag, making him a dictator."
     },
     {
-     "text": "It enabled women to vote",
+     "text": "It gave German women the right to vote",
      "correct": false,
      "feedback": "It destroyed German democracy."
     },
     {
-     "text": "It started the war",
+     "text": "It began the war with Poland",
      "correct": false,
      "feedback": "War came in 1939."
     }
@@ -3904,16 +3939,16 @@
    "prompt": "What was appeasement?",
    "options": [
     {
-     "text": "Giving in to Hitler’s demands to try to avoid another war",
+     "text": "Giving in to Hitler’s demands to avoid war",
      "correct": true
     },
     {
-     "text": "Attacking Germany first",
+     "text": "Attacking Germany first, before it grew stronger",
      "correct": false,
      "feedback": "The opposite."
     },
     {
-     "text": "A peace treaty with Japan",
+     "text": "A peace treaty that Britain signed with Japan",
      "correct": false,
      "feedback": "It was Britain and France’s policy towards Hitler."
     }
@@ -3988,14 +4023,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "The Republic collapsed slowly from old age and decay",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "Rome’s generals saved the Republic from Caesar",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: One man, Julius Caesar, destroyed the Republic. Look for the sentence that sums up its view.",
@@ -4013,14 +4048,14 @@
      "correct": true
     },
     {
-     "text": "Generals such as Marius and Sulla had already marched on Rome, and the Republic did not return after Caesar’s murder",
+     "text": "Marius and Sulla marched on Rome long before Caesar did",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "According to legend, Rome was founded by Romulus and Remus in 753 BC",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4034,7 +4069,7 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "Generals such as Marius and Sulla had already marched on Rome, and the Republic did not return after Caesar’s murder",
+     "text": "Marius and Sulla marched on Rome long before Caesar did",
      "correct": true
     },
     {
@@ -4043,9 +4078,9 @@
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "According to legend, Rome was founded by Romulus and Remus in 753 BC",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4063,14 +4098,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "Faith alone drove the crusaders, and greed played no part",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "The crusades were defensive wars ordered by kings",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: Greed for land and wealth, not faith, drove the crusaders. Look for the sentence that sums up its view.",
@@ -4084,18 +4119,18 @@
    "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
    "options": [
     {
-     "text": "Some crusader lords seized land and set up their own states in the East",
+     "text": "Some crusader lords seized land and founded states in the East",
      "correct": true
     },
     {
-     "text": "The journey was so dangerous and costly that many crusaders sold their own land to go and gained nothing",
+     "text": "Many crusaders sold their own land to go and gained nothing",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Pope Urban II called for the First Crusade at Clermont in France in 1095",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4109,18 +4144,18 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "The journey was so dangerous and costly that many crusaders sold their own land to go and gained nothing",
+     "text": "Many crusaders sold their own land to go and gained nothing",
      "correct": true
     },
     {
-     "text": "Some crusader lords seized land and set up their own states in the East",
+     "text": "Some crusader lords seized land and founded states in the East",
      "correct": false,
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Pope Urban II called for the First Crusade at Clermont in France in 1095",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4134,21 +4169,21 @@
    "prompt": "What is the main argument of this interpretation?",
    "options": [
     {
-     "text": "Luck and the Stanleys’ last-minute intervention decided the battle",
+     "text": "Luck, through the Stanleys’ late attack, decided Bosworth",
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "Henry won because his army was far larger and better led than Richard’s",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "Richard lost because he refused to fight at Bosworth",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
-   "explain": "Its main claim: Luck and the Stanleys’ last-minute intervention decided the battle. Look for the sentence that sums up its view.",
+   "explain": "Its main claim: Luck, through the Stanleys’ late attack, decided Bosworth. Look for the sentence that sums up its view.",
    "passage": "Henry Tudor won at Bosworth through pure luck. If the Stanleys had stayed out of the battle, Richard III would have won and there would never have been a Tudor dynasty.",
    "passageSource": "An interpretation written for this app"
   },
@@ -4159,18 +4194,18 @@
    "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
    "options": [
     {
-     "text": "The Stanleys watched the battle and only attacked Richard at the crucial moment",
+     "text": "The Stanleys waited and attacked Richard only at the end",
      "correct": true
     },
     {
-     "text": "Richard was so distrusted that some of his own army, like the Earl of Northumberland’s men, did not fight",
+     "text": "Richard was so distrusted that some of his men stood aside",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Henry VII married Elizabeth of York the following year, uniting the houses",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4184,18 +4219,18 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "Richard was so distrusted that some of his own army, like the Earl of Northumberland’s men, did not fight",
+     "text": "Richard was so distrusted that some of his men stood aside",
      "correct": true
     },
     {
-     "text": "The Stanleys watched the battle and only attacked Richard at the crucial moment",
+     "text": "The Stanleys waited and attacked Richard only at the end",
      "correct": false,
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Henry VII married Elizabeth of York the following year, uniting the houses",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4209,21 +4244,21 @@
    "prompt": "What is the main argument of this interpretation?",
    "options": [
     {
-     "text": "Printing spread ideas that would otherwise have stayed with a few scholars",
+     "text": "Printing turned a few scholars’ ideas into mass movements",
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "The printing press slowed the spread of new ideas",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "The Renaissance only began because the printing press was invented",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
-   "explain": "Its main claim: Printing spread ideas that would otherwise have stayed with a few scholars. Look for the sentence that sums up its view.",
+   "explain": "Its main claim: Printing turned a few scholars’ ideas into mass movements. Look for the sentence that sums up its view.",
    "passage": "Printing was the single invention that made the modern world. Without it, the Renaissance, the Reformation and the Scientific Revolution would have remained the private ideas of a few scholars.",
    "passageSource": "An interpretation written for this app"
   },
@@ -4238,14 +4273,14 @@
      "correct": true
     },
     {
-     "text": "The Renaissance had already begun in Italy before printing was invented",
+     "text": "The Renaissance had begun in Italy before printing existed",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Gutenberg had trained as a goldsmith in Mainz before inventing printing",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4259,7 +4294,7 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "The Renaissance had already begun in Italy before printing was invented",
+     "text": "The Renaissance had begun in Italy before printing existed",
      "correct": true
     },
     {
@@ -4268,9 +4303,9 @@
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Gutenberg had trained as a goldsmith in Mainz before inventing printing",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4284,21 +4319,21 @@
    "prompt": "What is the main argument of this interpretation?",
    "options": [
     {
-     "text": "Exploration was a heroic achievement",
+     "text": "Exploration was a heroic achievement of courage and science",
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "Exploration was a disaster for Europe that achieved nothing at all",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "The explorers were mainly looking for new slaves",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
-   "explain": "Its main claim: Exploration was a heroic achievement. Look for the sentence that sums up its view.",
+   "explain": "Its main claim: Exploration was a heroic achievement of courage and science. Look for the sentence that sums up its view.",
    "passage": "The voyages of Columbus, da Gama and Magellan were triumphs of courage and science. These explorers opened up the world and laid the foundations of the modern age.",
    "passageSource": "An interpretation written for this app"
   },
@@ -4313,14 +4348,14 @@
      "correct": true
     },
     {
-     "text": "The conquest of the Aztecs, the deaths from disease and the enslavement of Africans",
+     "text": "Conquest, disease and slavery followed the explorers",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Gutenberg’s printing press had been invented in Germany around 1450",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4334,7 +4369,7 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "The conquest of the Aztecs, the deaths from disease and the enslavement of Africans",
+     "text": "Conquest, disease and slavery followed the explorers",
      "correct": true
     },
     {
@@ -4343,9 +4378,9 @@
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Gutenberg’s printing press had been invented in Germany around 1450",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4363,14 +4398,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "Elizabeth’s reign was a time of civil war and decline",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "Shakespeare mattered more than the queen herself",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: The reign was a time of glory, unity and prosperity. Look for the sentence that sums up its view.",
@@ -4384,18 +4419,18 @@
    "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
    "options": [
     {
-     "text": "The defeat of the Spanish Armada in 1588",
+     "text": "The Spanish Armada was defeated in 1588, to great rejoicing",
      "correct": true
     },
     {
-     "text": "Poverty was so serious that Parliament had to pass the Poor Law of 1601",
+     "text": "Poverty was so bad that Parliament passed the 1601 Poor Law",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Henry VIII had broken with the Pope in the 1530s to marry Anne Boleyn",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4409,18 +4444,18 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "Poverty was so serious that Parliament had to pass the Poor Law of 1601",
+     "text": "Poverty was so bad that Parliament passed the 1601 Poor Law",
      "correct": true
     },
     {
-     "text": "The defeat of the Spanish Armada in 1588",
+     "text": "The Spanish Armada was defeated in 1588, to great rejoicing",
      "correct": false,
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Henry VIII had broken with the Pope in the 1530s to marry Anne Boleyn",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4438,14 +4473,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "The Church paid for and led all scientific research",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "Science advanced fastest where the Church was strongest",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: The Church opposed science because it hated new ideas. Look for the sentence that sums up its view.",
@@ -4463,14 +4498,14 @@
      "correct": true
     },
     {
-     "text": "Copernicus was himself a Church official, and many priests and monks studied science",
+     "text": "Copernicus was a Church official, and many priests did science",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Isaac Newton later published his laws of motion and gravity in 1687",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4484,7 +4519,7 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "Copernicus was himself a Church official, and many priests and monks studied science",
+     "text": "Copernicus was a Church official, and many priests did science",
      "correct": true
     },
     {
@@ -4493,9 +4528,9 @@
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Isaac Newton later published his laws of motion and gravity in 1687",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4513,14 +4548,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "The fire was a total disaster with no good results",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "The plague caused the Great Fire of London",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: The fire had good results as well as bad ones. Look for the sentence that sums up its view.",
@@ -4534,18 +4569,18 @@
    "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
    "options": [
     {
-     "text": "London was rebuilt in brick and stone, with Wren’s new St Paul’s",
+     "text": "London was rebuilt in brick and stone, with a new St Paul’s",
      "correct": true
     },
     {
-     "text": "The plague was already dying down, and the poor districts outside the walls, where it had been worst, did not burn",
+     "text": "The plague was already fading, and its worst areas did not burn",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Charles II returned from exile in France to take the throne in 1660",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4559,18 +4594,18 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "The plague was already dying down, and the poor districts outside the walls, where it had been worst, did not burn",
+     "text": "The plague was already fading, and its worst areas did not burn",
      "correct": true
     },
     {
-     "text": "London was rebuilt in brick and stone, with Wren’s new St Paul’s",
+     "text": "London was rebuilt in brick and stone, with a new St Paul’s",
      "correct": false,
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Charles II returned from exile in France to take the throne in 1660",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4588,14 +4623,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "The revolution was mainly about lower taxes for the rich",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "The colonists wanted a stronger king, not freedom",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: The revolution fought for everyone’s freedom. Look for the sentence that sums up its view.",
@@ -4609,7 +4644,7 @@
    "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
    "options": [
     {
-     "text": "The Declaration of Independence said that “all men are created equal”",
+     "text": "The Declaration said that “all men are created equal”",
      "correct": true
     },
     {
@@ -4618,9 +4653,9 @@
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "France sent troops and a fleet to help the colonists defeat Britain",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4638,14 +4673,14 @@
      "correct": true
     },
     {
-     "text": "The Declaration of Independence said that “all men are created equal”",
+     "text": "The Declaration said that “all men are created equal”",
      "correct": false,
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "France sent troops and a fleet to help the colonists defeat Britain",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4663,14 +4698,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "Napoleon was defeated by the betrayal of his own marshals and generals",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "Napoleon was never truly defeated in any battle",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: The Russian winter, not his enemies, defeated Napoleon. Look for the sentence that sums up its view.",
@@ -4684,18 +4719,18 @@
    "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
    "options": [
     {
-     "text": "Most of his army of over half a million men died or deserted in the retreat from Moscow in 1812",
+     "text": "Most of his huge army died or deserted on the retreat from Moscow",
      "correct": true
     },
     {
-     "text": "Britain had already stopped him invading at Trafalgar, and Wellington and the Prussians beat him at Waterloo in 1815",
+     "text": "Wellington and the Prussians beat him at Waterloo in 1815",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Napoleon’s legal code was later copied by many countries across Europe",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4709,18 +4744,18 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "Britain had already stopped him invading at Trafalgar, and Wellington and the Prussians beat him at Waterloo in 1815",
+     "text": "Wellington and the Prussians beat him at Waterloo in 1815",
      "correct": true
     },
     {
-     "text": "Most of his army of over half a million men died or deserted in the retreat from Moscow in 1812",
+     "text": "Most of his huge army died or deserted on the retreat from Moscow",
      "correct": false,
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Napoleon’s legal code was later copied by many countries across Europe",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4734,21 +4769,21 @@
    "prompt": "What is the main argument of this interpretation?",
    "options": [
     {
-     "text": "Nobody could have prevented the Famine",
+     "text": "Nobody could have prevented the Famine or its suffering",
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "The Famine was deliberately planned and caused by Irish landlords",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "The Famine was caused by a long drought in Ireland",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
-   "explain": "Its main claim: Nobody could have prevented the Famine. Look for the sentence that sums up its view.",
+   "explain": "Its main claim: Nobody could have prevented the Famine or its suffering. Look for the sentence that sums up its view.",
    "passage": "The Great Famine was a natural disaster. Potato blight struck without warning, and no government of the time could have prevented the suffering that followed.",
    "passageSource": "An interpretation written for this app"
   },
@@ -4759,18 +4794,18 @@
    "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
    "options": [
     {
-     "text": "Potato blight was a plant disease that nobody at the time understood",
+     "text": "Potato blight was a disease nobody then understood",
      "correct": true
     },
     {
-     "text": "Food continued to be exported while people starved, and the soup kitchens were closed after a few months",
+     "text": "Food was exported while people starved, and relief was cut",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Many Irish emigrants settled in Boston, New York and other American cities",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4784,18 +4819,18 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "Food continued to be exported while people starved, and the soup kitchens were closed after a few months",
+     "text": "Food was exported while people starved, and relief was cut",
      "correct": true
     },
     {
-     "text": "Potato blight was a plant disease that nobody at the time understood",
+     "text": "Potato blight was a disease nobody then understood",
      "correct": false,
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Many Irish emigrants settled in Boston, New York and other American cities",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4813,14 +4848,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "Victorian governments did nothing at all to improve public health",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "Bad smells were the real cause of cholera after all",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: One man, John Snow, was responsible for better public health. Look for the sentence that sums up its view.",
@@ -4838,14 +4873,14 @@
      "correct": true
     },
     {
-     "text": "Few people accepted Snow’s ideas at first; it took the Great Stink, Bazalgette’s sewers and the 1875 Act to change things",
+     "text": "Few accepted Snow’s ideas; sewers and new laws made the change",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Florence Nightingale nursed wounded soldiers in the Crimea in the 1850s",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4859,7 +4894,7 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "Few people accepted Snow’s ideas at first; it took the Great Stink, Bazalgette’s sewers and the 1875 Act to change things",
+     "text": "Few accepted Snow’s ideas; sewers and new laws made the change",
      "correct": true
     },
     {
@@ -4868,9 +4903,9 @@
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Florence Nightingale nursed wounded soldiers in the Crimea in the 1850s",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4888,14 +4923,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "The suffragettes’ violence alone won the vote in 1918",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "Women won the vote in 1918 because men stopped voting",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: Women’s war work, not militancy, won the vote. Look for the sentence that sums up its view.",
@@ -4909,18 +4944,18 @@
    "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
    "options": [
     {
-     "text": "Women worked in munitions factories and on the land during the war",
+     "text": "Women worked in munitions factories and on the land",
      "correct": true
     },
     {
-     "text": "The 1918 Act only gave the vote to women over 30, so many young war workers still could not vote",
+     "text": "The 1918 Act left out most young women war workers",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "The Chartists had campaigned for the vote for all men in the 1840s",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -4934,18 +4969,18 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "The 1918 Act only gave the vote to women over 30, so many young war workers still could not vote",
+     "text": "The 1918 Act left out most young women war workers",
      "correct": true
     },
     {
-     "text": "Women worked in munitions factories and on the land during the war",
+     "text": "Women worked in munitions factories and on the land",
      "correct": false,
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "The Chartists had campaigned for the vote for all men in the 1840s",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -4963,14 +4998,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "The war made no difference to women at all",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "The war ended women’s paid work for good",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: The war permanently changed women’s lives. Look for the sentence that sums up its view.",
@@ -4984,18 +5019,18 @@
    "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
    "options": [
     {
-     "text": "From 1941 women were conscripted into war work and the services",
+     "text": "From 1941 women were conscripted into war work",
      "correct": true
     },
     {
-     "text": "After 1945 many women were expected to give up their jobs, and they were still paid less than men",
+     "text": "After 1945 many women had to give up their jobs",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Food rationing began in Britain in January 1940 and lasted until 1954",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -5009,18 +5044,18 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "After 1945 many women were expected to give up their jobs, and they were still paid less than men",
+     "text": "After 1945 many women had to give up their jobs",
      "correct": true
     },
     {
-     "text": "From 1941 women were conscripted into war work and the services",
+     "text": "From 1941 women were conscripted into war work",
      "correct": false,
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Food rationing began in Britain in January 1940 and lasted until 1954",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -5038,14 +5073,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "The movement failed to change any laws at all",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "Presidents and judges, not campaigners, ended segregation on their own",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: King’s leadership was the reason the movement succeeded. Look for the sentence that sums up its view.",
@@ -5063,14 +5098,14 @@
      "correct": true
     },
     {
-     "text": "The Montgomery Bus Boycott was organised by local activists, and thousands of ordinary people walked for over a year",
+     "text": "Ordinary people ran the Montgomery boycott for over a year",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "The Empire Windrush brought Caribbean migrants to Britain in June 1948",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -5084,7 +5119,7 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "The Montgomery Bus Boycott was organised by local activists, and thousands of ordinary people walked for over a year",
+     "text": "Ordinary people ran the Montgomery boycott for over a year",
      "correct": true
     },
     {
@@ -5093,9 +5128,9 @@
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "The Empire Windrush brought Caribbean migrants to Britain in June 1948",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -5113,14 +5148,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "Britain kept hold of all its colonies until the year 2000",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "The colonies asked Britain to stay in charge",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: Britain gave independence willingly and generously. Look for the sentence that sums up its view.",
@@ -5138,14 +5173,14 @@
      "correct": true
     },
     {
-     "text": "Britain resisted independence movements for decades, as at Amritsar in 1919, and left mainly because it could no longer afford to stay",
+     "text": "Britain resisted independence for decades, as at Amritsar",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "The Suez Canal first opened to shipping in 1869, linking two seas",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -5159,7 +5194,7 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "Britain resisted independence movements for decades, as at Amritsar in 1919, and left mainly because it could no longer afford to stay",
+     "text": "Britain resisted independence for decades, as at Amritsar",
      "correct": true
     },
     {
@@ -5168,9 +5203,9 @@
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "The Suez Canal first opened to shipping in 1869, linking two seas",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -5188,14 +5223,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "Byzantium was stronger than Rome had ever been",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "Byzantium fell soon after the Western Empire",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: Byzantium was weak and always in decline. Look for the sentence that sums up its view.",
@@ -5213,14 +5248,14 @@
      "correct": true
     },
     {
-     "text": "It survived for nearly a thousand years after the West fell, built the Hagia Sophia and preserved Roman law and Greek learning",
+     "text": "It lasted a thousand years and preserved Greek learning",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Viking raiders attacked the monastery at Lindisfarne in the year 793",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -5234,7 +5269,7 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "It survived for nearly a thousand years after the West fell, built the Hagia Sophia and preserved Roman law and Greek learning",
+     "text": "It lasted a thousand years and preserved Greek learning",
      "correct": true
     },
     {
@@ -5243,9 +5278,9 @@
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Viking raiders attacked the monastery at Lindisfarne in the year 793",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -5263,14 +5298,14 @@
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "The Tsar fell because Russia won the war too easily",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "The Tsar gave up power willingly to the Bolsheviks",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
    "explain": "Its main claim: Nicholas II’s personal failings caused his downfall. Look for the sentence that sums up its view.",
@@ -5284,18 +5319,18 @@
    "prompt": "Which piece of evidence best SUPPORTS this interpretation?",
    "options": [
     {
-     "text": "He took personal command of the army in 1915 and was blamed for its defeats",
+     "text": "He took command of the army in 1915 and was blamed",
      "correct": true
     },
     {
-     "text": "Deep problems such as poverty and the huge losses of the war would have tested any ruler",
+     "text": "Poverty and huge war losses would have tested any ruler",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "Russia went on using the old Julian calendar until early 1918",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -5309,18 +5344,18 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "Deep problems such as poverty and the huge losses of the war would have tested any ruler",
+     "text": "Poverty and huge war losses would have tested any ruler",
      "correct": true
     },
     {
-     "text": "He took personal command of the army in 1915 and was blamed for its defeats",
+     "text": "He took command of the army in 1915 and was blamed",
      "correct": false,
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "Russia went on using the old Julian calendar until early 1918",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",
@@ -5334,21 +5369,21 @@
    "prompt": "What is the main argument of this interpretation?",
    "options": [
     {
-     "text": "Versailles made another war certain",
+     "text": "The Treaty of Versailles made another war certain",
      "correct": true
     },
     {
-     "text": "That the period was peaceful and uneventful",
+     "text": "The Treaty of Versailles was far too kind to Germany",
      "correct": false,
-     "feedback": "Read it again: it makes a clear claim about causes or significance."
+     "feedback": "Read it again: that is not the claim it makes."
     },
     {
-     "text": "That historians cannot know anything about it",
+     "text": "Hitler alone, not any treaty, caused the war",
      "correct": false,
-     "feedback": "Historians do make arguments from evidence: this one makes a clear claim."
+     "feedback": "Read it again: look for the sentence that sums up its view."
     }
    ],
-   "explain": "Its main claim: Versailles made another war certain. Look for the sentence that sums up its view.",
+   "explain": "Its main claim: The Treaty of Versailles made another war certain. Look for the sentence that sums up its view.",
    "passage": "The Treaty of Versailles made the Second World War inevitable. From 1919 onwards, another war was only a matter of time.",
    "passageSource": "An interpretation written for this app"
   },
@@ -5363,14 +5398,14 @@
      "correct": true
     },
     {
-     "text": "In the 1920s Germany recovered and joined the League of Nations; it took the Depression to bring Hitler to power",
+     "text": "Germany recovered in the 1920s; the Depression brought Hitler",
      "correct": false,
      "feedback": "This evidence actually challenges the interpretation."
     },
     {
-     "text": "An opinion with no evidence",
+     "text": "The League of Nations had its headquarters in Geneva in Switzerland",
      "correct": false,
-     "feedback": "Support needs evidence, not just an opinion."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "Good historians test an interpretation against evidence, starting with what supports it.",
@@ -5384,7 +5419,7 @@
    "prompt": "Which piece of evidence best CHALLENGES this interpretation?",
    "options": [
     {
-     "text": "In the 1920s Germany recovered and joined the League of Nations; it took the Depression to bring Hitler to power",
+     "text": "Germany recovered in the 1920s; the Depression brought Hitler",
      "correct": true
     },
     {
@@ -5393,9 +5428,9 @@
      "feedback": "This evidence supports the interpretation."
     },
     {
-     "text": "A fact from a different century",
+     "text": "The League of Nations had its headquarters in Geneva in Switzerland",
      "correct": false,
-     "feedback": "Evidence must be about the right period to challenge it."
+     "feedback": "True, but it is not evidence about this claim."
     }
    ],
    "explain": "An interpretation is only convincing if it survives the evidence against it.",

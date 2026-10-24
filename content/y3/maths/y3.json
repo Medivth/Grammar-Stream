@@ -993,16 +993,16 @@
    "prompt": "Turbo works out 452 − 127 and gets 335. What went wrong?",
    "options": [
     {
-     "text": "He took 2 from 7 in the ones instead of exchanging: it should be 325",
+     "text": "He didn’t exchange: it is 325",
      "correct": true
     },
     {
-     "text": "Nothing, it is right",
+     "text": "Nothing: 335 is the right answer",
      "correct": false,
      "feedback": "Check: 335 + 127 = 462, not 452."
     },
     {
-     "text": "He should have added",
+     "text": "He should have added: it is 579",
      "correct": false,
      "feedback": "It is a subtraction; the mistake is in the ones column."
     }
@@ -1062,16 +1062,16 @@
    "prompt": "When you divide a number by 4, can the remainder be 5?",
    "options": [
     {
-     "text": "No: if 5 were left, you could make another group of 4",
+     "text": "No: 5 makes another group of 4",
      "correct": true
     },
     {
-     "text": "Yes, sometimes",
+     "text": "Yes, sometimes it can be 5",
      "correct": false,
      "feedback": "With 5 left over you could share one more each."
     },
     {
-     "text": "Only for big numbers",
+     "text": "Only when dividing big numbers",
      "correct": false,
      "feedback": "The remainder is always less than 4 when you divide by 4."
     }
@@ -1131,16 +1131,16 @@
    "prompt": "7, 15, 23, 31… Will 100 be in this pattern?",
    "options": [
     {
-     "text": "No: it goes up in 8s from 7, so the numbers are all odd",
+     "text": "No: every number in it is odd",
      "correct": true
     },
     {
-     "text": "Yes, if you keep going",
+     "text": "Yes, if you keep on going",
      "correct": false,
      "feedback": "Adding 8 to an odd number always gives odd, and 100 is even."
     },
     {
-     "text": "Only after 1000",
+     "text": "Only after it passes 1000",
      "correct": false,
      "feedback": "Every number in the pattern is odd, so 100 never appears."
     }
@@ -1200,16 +1200,16 @@
    "prompt": "A square has 4 right angles. Can a triangle have 2 right angles?",
    "options": [
     {
-     "text": "No: the two sides would be parallel and never meet",
+     "text": "No: its sides could never meet",
      "correct": true
     },
     {
-     "text": "Yes",
+     "text": "Yes, any triangle can",
      "correct": false,
      "feedback": "Try drawing it: the two lines go straight up side by side and never join."
     },
     {
-     "text": "Only a big triangle",
+     "text": "Only a really big triangle",
      "correct": false,
      "feedback": "Size doesn’t matter: two right angles means the sides can’t meet."
     }

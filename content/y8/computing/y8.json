@@ -314,7 +314,7 @@
    "answer": "pattern recognition",
    "distractors": [
     "abstraction",
-    "debugging",
+    "algorithmic thinking",
     "decomposition"
    ],
    "explain": "Once you can sort one list, the same pattern sorts any list.",
@@ -329,7 +329,7 @@
    "prompt": "What is an algorithm?",
    "answer": "a precise sequence of steps to solve a problem",
    "distractors": [
-    "a computer program written in Python",
+    "a computer program written in a language like Python",
     "a type of computer",
     "a mistake in a program"
    ],
@@ -372,7 +372,7 @@
      "correct": true
     },
     {
-     "text": "“Walk 200 steps north.”",
+     "text": "“Walk 200 steps north, then stop at the gate.”",
      "correct": false,
      "feedback": "This is precise: a number and a direction."
     },
@@ -391,16 +391,16 @@
    "prompt": "Theo is writing a quiz game about the Greek gods. Which list is the best decomposition?",
    "options": [
     {
-     "text": "Store the questions; ask a question; check the answer; keep score; show the result",
+     "text": "Store questions; ask one; check the answer; keep score; show the result",
      "correct": true
     },
     {
-     "text": "Write the whole game in one go",
+     "text": "Write the whole game in one go, then test it at the end",
      "correct": false,
      "feedback": "That is the opposite of decomposition."
     },
     {
-     "text": "Make it look nice",
+     "text": "Design the title screen; pick colours; choose fonts; add sound effects",
      "correct": false,
      "feedback": "That is only one small part, and not the most important."
     }
@@ -476,9 +476,9 @@
    "prompt": "In a flowchart, which shape is used for Start and Stop?",
    "answer": "an oval (rounded rectangle)",
    "distractors": [
-    "a diamond",
+    "a diamond (rhombus)",
     "a parallelogram",
-    "a square"
+    "a rectangle with double sides"
    ],
    "explain": "The terminator shape marks where the algorithm begins and ends.",
    "formats": [
@@ -507,11 +507,11 @@
    "topic": "computing.flowcharts",
    "kind": "fact",
    "prompt": "What is pseudocode?",
-   "answer": "a way of writing an algorithm in structured English, not a real programming language",
+   "answer": "structured English used to plan an algorithm",
    "distractors": [
-    "code that has a bug in it",
-    "a fake password",
-    "the machine code a CPU runs"
+    "a program that compiles but has a hidden bug in it",
+    "a programming language designed for beginners",
+    "the low-level code that a compiler makes from Python"
    ],
    "explain": "Pseudocode lets you plan the logic without worrying about the exact rules of one language.",
    "formats": [
@@ -663,12 +663,12 @@
      "correct": true
     },
     {
-     "text": "They mean the same thing",
+     "text": "They are the same, but == is used inside if statements",
      "correct": false,
      "feedback": "x = 5 sets x; x == 5 asks “is x 5?”"
     },
     {
-     "text": "== stores a value; = compares",
+     "text": "== stores a value in a variable; = compares two values",
      "correct": false,
      "feedback": "It is the other way round."
     }
@@ -803,7 +803,7 @@
      "correct": true
     },
     {
-     "text": "They are inside curly brackets",
+     "text": "They are inside curly brackets { }, as in JavaScript",
      "correct": false,
      "feedback": "Many languages use { }, but Python uses indentation."
     },
@@ -822,16 +822,16 @@
    "prompt": "Why use elif instead of a second if?",
    "options": [
     {
-     "text": "elif is only checked if the earlier conditions were False, so only one branch runs",
+     "text": "elif is only checked if the earlier conditions were False",
      "correct": true
     },
     {
-     "text": "elif runs faster",
+     "text": "elif runs faster because it skips the condition check",
      "correct": false,
      "feedback": "The point is the logic: only one branch of an if/elif/else chain runs."
     },
     {
-     "text": "There is no difference",
+     "text": "There is no difference; elif is just shorter to type",
      "correct": false,
      "feedback": "Two separate ifs can BOTH run; an elif cannot run if the if before it did."
     }
@@ -950,14 +950,14 @@
      "correct": true
     },
     {
-     "text": "It is missing a colon",
+     "text": "The while line is missing a colon at the end",
      "correct": false,
      "feedback": "The colon is there."
     },
     {
-     "text": "while cannot use >",
+     "text": "print cannot be used inside a while loop",
      "correct": false,
-     "feedback": "Any comparison is fine."
+     "feedback": "print works fine in a loop; the problem is that lives never changes."
     }
    ],
    "explain": "An infinite loop. The loop body needs lives = lives - 1 (or another way to make the condition False)."
@@ -1058,12 +1058,12 @@
      "correct": true
     },
     {
-     "text": "It prints \"Urania\"",
+     "text": "It prints \"Urania\", the last item in the list",
      "correct": false,
      "feedback": "Urania is at index 2. Three items have indexes 0, 1, 2."
     },
     {
-     "text": "It prints nothing",
+     "text": "It prints None because index 3 is empty",
      "correct": false,
      "feedback": "Python raises an error."
     }
@@ -1099,14 +1099,14 @@
      "correct": true
     },
     {
-     "text": "The return value",
+     "text": "The return value: what the function sends back",
      "correct": false,
      "feedback": "The return value is power * 2."
     },
     {
-     "text": "The name of the function",
+     "text": "A global variable that every function can use",
      "correct": false,
-     "feedback": "The function is called charge."
+     "feedback": "power only exists inside the function; it is not global."
     }
    ],
    "explain": "Parameters are the inputs a function expects. The value you pass in when calling it is the argument."
@@ -1118,16 +1118,16 @@
    "prompt": "What is the difference between return and print inside a function?",
    "options": [
     {
-     "text": "return sends a value back to the code that called it; print only shows it on screen",
+     "text": "return sends a value back to the caller; print only displays it",
      "correct": true
     },
     {
-     "text": "They are the same",
+     "text": "They are the same, except that print adds a new line",
      "correct": false,
      "feedback": "A printed value cannot be stored or used again; a returned one can."
     },
     {
-     "text": "return shows it on screen twice",
+     "text": "return displays the value and then ends the whole program",
      "correct": false,
      "feedback": "return doesn’t show anything by itself."
     }
@@ -1150,7 +1150,7 @@
      "feedback": "Speed isn’t the main reason: organisation and reuse are."
     },
     {
-     "text": "Python requires everything to be in a function",
+     "text": "Python requires all code to be written inside a function",
      "correct": false,
      "feedback": "It doesn’t."
     }
@@ -1181,12 +1181,12 @@
      "correct": true
     },
     {
-     "text": "A logic error",
+     "text": "A logic error: the message is in the wrong place",
      "correct": false,
      "feedback": "The code can’t even run, so it is a syntax error."
     },
     {
-     "text": "A runtime error",
+     "text": "A runtime error: Python cannot print a comma",
      "correct": false,
      "feedback": "Python spots this before running anything."
     }
@@ -1204,12 +1204,12 @@
      "correct": true
     },
     {
-     "text": "A syntax error",
+     "text": "A syntax error: a line needs a semicolon",
      "correct": false,
      "feedback": "It runs without complaint, so it is not a syntax error."
     },
     {
-     "text": "A runtime error",
+     "text": "A runtime error: you cannot divide by 2 here",
      "correct": false,
      "feedback": "It doesn’t crash: it just prints 11.0 instead of 7.0."
     }
@@ -1227,12 +1227,12 @@
      "correct": true
     },
     {
-     "text": "A syntax error",
+     "text": "A syntax error: print needs quotation marks",
      "correct": false,
      "feedback": "The code is written correctly; the problem only appears when it runs."
     },
     {
-     "text": "No error",
+     "text": "No error: it prints infinity",
      "correct": false,
      "feedback": "Dividing by zero is impossible, so Python stops with ZeroDivisionError."
     }
@@ -1279,18 +1279,18 @@
    "prompt": "What is a “dry run”?",
    "options": [
     {
-     "text": "Working through code by hand, line by line, to see what it does",
+     "text": "Working through code by hand, line by line",
      "correct": true
     },
     {
-     "text": "Running a program with no data",
+     "text": "Running a program with no input data",
      "correct": false,
      "feedback": "It is done on paper, often with a trace table."
     },
     {
-     "text": "Deleting the code and starting again",
+     "text": "Running a program once before it is finished",
      "correct": false,
-     "feedback": "A dry run is a careful reading, not deletion."
+     "feedback": "A dry run uses no computer at all: you trace the code by hand."
     }
    ],
    "explain": "Dry runs find logic errors that the computer can’t point out for you."
@@ -1302,16 +1302,16 @@
    "prompt": "Why is fixing errors called “debugging”?",
    "options": [
     {
-     "text": "A famous story: a moth was found stuck in an early computer, and the team taped it in their logbook",
+     "text": "From a famous story of a moth stuck in an early computer",
      "correct": true
     },
     {
-     "text": "Programmers used to keep bugs as pets",
+     "text": "Early programmers were nicknamed “bugs” by engineers",
      "correct": false,
      "feedback": "It comes from a moth found in a computer in 1947."
     },
     {
-     "text": "It is short for “de-buggy-ing” a car",
+     "text": "Errors look like tiny insects when printed out on paper",
      "correct": false,
      "feedback": "The word “bug” for a fault is older, but the moth story made it famous."
     }
@@ -1368,7 +1368,7 @@
      "correct": true
     },
     {
-     "text": "When the list is huge and sorted",
+     "text": "When the list is huge and already sorted",
      "correct": false,
      "feedback": "That is exactly when binary search shines."
     },
@@ -1408,12 +1408,12 @@
      "correct": true
     },
     {
-     "text": "1",
+     "text": "1: only the first item",
      "correct": false,
      "feedback": "That is the best case (found first time)."
     },
     {
-     "text": "n ÷ 2",
+     "text": "n ÷ 2: half the items",
      "correct": false,
      "feedback": "That is roughly the average, not the worst."
     }
@@ -1452,7 +1452,7 @@
      "feedback": "It needs to check the order, not the number of items."
     },
     {
-     "text": "After exactly one pass",
+     "text": "After exactly one pass through the whole list",
      "correct": false,
      "feedback": "One pass only guarantees the largest item is at the end."
     }
@@ -1475,7 +1475,7 @@
      "feedback": "Brute force tries every possibility."
     },
     {
-     "text": "Trial and error",
+     "text": "Trial and improvement",
      "correct": false,
      "feedback": "Merge sort is a precise algorithm."
     }
@@ -1512,16 +1512,16 @@
    "prompt": "Which everyday activity is most like an insertion sort?",
    "options": [
     {
-     "text": "Sorting a hand of cards by picking each card up and sliding it into place",
+     "text": "Picking up cards one at a time and sliding each into place",
      "correct": true
     },
     {
-     "text": "Splitting a pile in half again and again",
+     "text": "Splitting a pile of cards in half again and again",
      "correct": false,
      "feedback": "That is more like merge sort."
     },
     {
-     "text": "Swapping neighbouring books until none are out of order",
+     "text": "Swapping neighbouring books on a shelf until none are out of order",
      "correct": false,
      "feedback": "That is bubble sort."
     }
@@ -1567,16 +1567,16 @@
    "prompt": "Why do computers use binary?",
    "options": [
     {
-     "text": "Their circuits are made of transistors that are either on or off",
+     "text": "Their transistors are switches: either on or off",
      "correct": true
     },
     {
-     "text": "Binary is easier for humans to read",
+     "text": "Binary is easier for humans to read and check",
      "correct": false,
      "feedback": "Humans find binary hard. That’s why we use hex!"
     },
     {
-     "text": "It uses less electricity than denary",
+     "text": "It uses less electricity than storing denary digits",
      "correct": false,
      "feedback": "The reason is that switches have two states."
     }
@@ -1620,16 +1620,16 @@
    "prompt": "Why do programmers often use hexadecimal?",
    "options": [
     {
-     "text": "It is shorter and easier to read than binary, and converts to it easily",
+     "text": "It is shorter than binary and converts to it easily",
      "correct": true
     },
     {
-     "text": "Computers store data in hexadecimal",
+     "text": "Computers store all their data in hexadecimal",
      "correct": false,
      "feedback": "Computers store binary. Hex is only for humans."
     },
     {
-     "text": "It uses less memory",
+     "text": "Hex numbers take up less memory than binary ones",
      "correct": false,
      "feedback": "It makes no difference to memory."
     }
@@ -1730,16 +1730,16 @@
    "prompt": "What is an overflow error?",
    "options": [
     {
-     "text": "The result of a calculation is too big to fit in the bits available",
+     "text": "A result too big to fit in the bits available",
      "correct": true
     },
     {
-     "text": "Too many programs are open at once",
+     "text": "Too many programs are open at once for the RAM",
      "correct": false,
      "feedback": "That is about memory, not overflow."
     },
     {
-     "text": "Water damage to a computer",
+     "text": "A number with more digits than the screen can show",
      "correct": false,
      "feedback": "Not this kind of overflow!"
     }
@@ -1757,12 +1757,12 @@
      "correct": true
     },
     {
-     "text": "Doubles it",
+     "text": "Doubles it (adding a 0 on the right)",
      "correct": false,
      "feedback": "That is a left shift."
     },
     {
-     "text": "Makes it negative",
+     "text": "Makes it negative (flipping the first bit)",
      "correct": false,
      "feedback": "Shifts move the bits; they don’t change the sign in simple binary."
     }
@@ -1824,16 +1824,16 @@
    "prompt": "Why was Unicode invented when ASCII already existed?",
    "options": [
     {
-     "text": "ASCII has only 128 characters, not enough for every language, such as Greek, Chinese or Arabic",
+     "text": "ASCII’s 128 characters were not enough for every language",
      "correct": true
     },
     {
-     "text": "ASCII was too slow",
+     "text": "ASCII was too slow for sending text over the internet",
      "correct": false,
      "feedback": "The problem was the number of characters."
     },
     {
-     "text": "ASCII could not store capital letters",
+     "text": "ASCII could not store capital letters or punctuation",
      "correct": false,
      "feedback": "It can: A is 65."
     }
@@ -2120,12 +2120,12 @@
      "correct": true
     },
     {
-     "text": "Tiny light bulbs",
+     "text": "Tiny light bulbs that switch on and off",
      "correct": false,
      "feedback": "Early computers used valves; modern ones use transistors."
     },
     {
-     "text": "Magnets",
+     "text": "Magnets that store a 1 or a 0",
      "correct": false,
      "feedback": "Transistors, billions of them."
     }
@@ -2236,18 +2236,18 @@
    "prompt": "What is the main benefit of a quad-core processor?",
    "options": [
     {
-     "text": "It can work on up to four instructions at the same time",
+     "text": "It can process up to four tasks at once",
      "correct": true
     },
     {
-     "text": "It has four times as much storage",
+     "text": "It has four times as much storage space",
      "correct": false,
      "feedback": "Cores are about processing, not storage."
     },
     {
-     "text": "It never overheats",
+     "text": "It runs every program exactly four times faster",
      "correct": false,
-     "feedback": "More cores can actually produce more heat."
+     "feedback": "Only programs written to use several cores speed up, and never by exactly four times."
     }
    ],
    "explain": "Each core is like a separate processor, but software must be written to use them all."
@@ -2259,16 +2259,16 @@
    "prompt": "Why do most laptops now use an SSD instead of a hard disk drive?",
    "options": [
     {
-     "text": "It has no moving parts, so it is faster, quieter and tougher",
+     "text": "It has no moving parts, so it is faster and tougher",
      "correct": true
     },
     {
-     "text": "It holds more data for the money",
+     "text": "It holds more data for the same amount of money",
      "correct": false,
      "feedback": "Hard disks are usually cheaper per gigabyte."
     },
     {
-     "text": "It never runs out of space",
+     "text": "It never runs out of space, because it compresses files",
      "correct": false,
      "feedback": "SSDs fill up too."
     }
@@ -2332,14 +2332,14 @@
      "correct": true
     },
     {
-     "text": "Only inside the CPU",
+     "text": "Only inside the CPU’s registers",
      "correct": false,
      "feedback": "The CPU fetches them from memory."
     },
     {
-     "text": "On paper cards",
+     "text": "In a separate memory from the data",
      "correct": false,
-     "feedback": "Very old machines did that; von Neumann’s idea was to store them in memory."
+     "feedback": "Some designs (Harvard architecture) do that; von Neumann’s idea was one shared memory."
     }
    ],
    "explain": "The stored-program idea means a computer can switch jobs just by loading a different program."
@@ -2369,16 +2369,16 @@
    "prompt": "Which of these is a job of the operating system?",
    "options": [
     {
-     "text": "Managing memory and sharing the CPU between programs",
+     "text": "Managing memory and sharing the CPU",
      "correct": true
     },
     {
-     "text": "Writing your essays",
+     "text": "Writing and checking your essays",
      "correct": false,
      "feedback": "That is application software, like a word processor."
     },
     {
-     "text": "Designing websites",
+     "text": "Designing websites and editing photos",
      "correct": false,
      "feedback": "That is done with applications."
     }
@@ -2409,11 +2409,11 @@
    "prompt": "What is a high-level language?",
    "options": [
     {
-     "text": "A language like Python that is close to English and must be translated for the CPU",
+     "text": "A language like Python that must be translated for the CPU",
      "correct": true
     },
     {
-     "text": "The machine code the CPU runs directly",
+     "text": "The machine code the CPU runs directly, with no translation",
      "correct": false,
      "feedback": "That is the lowest level."
     },
@@ -2432,16 +2432,16 @@
    "prompt": "What does a compiler do?",
    "options": [
     {
-     "text": "Translates the whole program into machine code before it runs",
+     "text": "Translates the whole program before it runs",
      "correct": true
     },
     {
-     "text": "Translates and runs one line at a time",
+     "text": "Translates and runs the program one line at a time",
      "correct": false,
      "feedback": "That is an interpreter."
     },
     {
-     "text": "Finds viruses",
+     "text": "Checks the program for viruses before it runs",
      "correct": false,
      "feedback": "That is antivirus software."
     }
@@ -2455,7 +2455,7 @@
    "prompt": "Python is usually run by an interpreter. What does that mean?",
    "options": [
     {
-     "text": "Each line is translated and run in turn, stopping at the first error it reaches",
+     "text": "Each line is translated and run in turn",
      "correct": true
     },
     {
@@ -2482,12 +2482,12 @@
      "correct": true
     },
     {
-     "text": "Software that is always free of bugs",
+     "text": "Software that is checked to be free of bugs",
      "correct": false,
      "feedback": "Open source can still have bugs, but anyone can fix them."
     },
     {
-     "text": "Software that can only be used online",
+     "text": "Software that can only be used online, in a browser",
      "correct": false,
      "feedback": "It is about the source code being open."
     }
@@ -2517,16 +2517,16 @@
    "prompt": "What is the difference between a LAN and a WAN?",
    "options": [
     {
-     "text": "A LAN covers a small area like a school; a WAN covers a large area like a country",
+     "text": "A LAN covers a small area; a WAN covers a large one",
      "correct": true
     },
     {
-     "text": "A LAN is wireless; a WAN uses cables",
+     "text": "A LAN is wireless; a WAN always uses fibre cables",
      "correct": false,
      "feedback": "Both can use cables or wireless. The difference is the area."
     },
     {
-     "text": "They are the same",
+     "text": "A LAN is private; a WAN is open to anyone online",
      "correct": false,
      "feedback": "Local Area Network vs Wide Area Network."
     }
@@ -2540,18 +2540,18 @@
    "prompt": "What is the difference between the internet and the World Wide Web?",
    "options": [
     {
-     "text": "The internet is the worldwide network of computers; the web is the pages and links you visit using it",
+     "text": "The internet is the network; the web is pages you visit on it",
      "correct": true
     },
     {
-     "text": "They are two names for the same thing",
+     "text": "They are two names for the same worldwide network",
      "correct": false,
      "feedback": "Email and online games use the internet but are not the web."
     },
     {
-     "text": "The web came first",
+     "text": "The web is the cables; the internet is the websites",
      "correct": false,
-     "feedback": "The internet existed before Tim Berners-Lee invented the web in 1989."
+     "feedback": "It is the other way round: the internet is the network, and the web runs on it."
     }
    ],
    "explain": "The web is one service that runs on the internet, like email or video calls."
@@ -2580,16 +2580,16 @@
    "prompt": "Why can packets from the same email take different routes across the internet?",
    "options": [
     {
-     "text": "Each is sent the quickest way at that moment, then they are put back in order",
+     "text": "Each takes the quickest route at that moment",
      "correct": true
     },
     {
-     "text": "Because the email was sent by mistake",
+     "text": "Because the email is copied to several servers first",
      "correct": false,
-     "feedback": "This is normal: it is called packet switching."
+     "feedback": "Copies are not the reason: each packet is routed separately (packet switching)."
     },
     {
-     "text": "To confuse hackers",
+     "text": "To confuse hackers who might be watching one route",
      "correct": false,
      "feedback": "Packets take different routes to avoid busy or broken links."
     }
@@ -2637,11 +2637,11 @@
    "prompt": "What does a router do?",
    "options": [
     {
-     "text": "Sends packets between different networks, such as your home and the internet",
+     "text": "Forwards packets between different networks",
      "correct": true
     },
     {
-     "text": "Stores websites",
+     "text": "Stores copies of the websites you visit",
      "correct": false,
      "feedback": "Servers store websites."
     },
@@ -2660,11 +2660,11 @@
    "prompt": "What does the S in HTTPS mean, and why does it matter?",
    "options": [
     {
-     "text": "Secure: the data is encrypted between your device and the website",
+     "text": "Secure: the data sent is encrypted",
      "correct": true
     },
     {
-     "text": "Speedy: pages load faster",
+     "text": "Speedy: pages load faster over the connection",
      "correct": false,
      "feedback": "It means secure."
     },
@@ -2738,16 +2738,16 @@
    "prompt": "Which is the strongest clue that an email is a phishing attempt?",
    "options": [
     {
-     "text": "It urgently demands you click a link and log in, from an address that doesn’t match the company",
+     "text": "It urges you to log in via a link, from an odd address",
      "correct": true
     },
     {
-     "text": "It arrives in the morning",
+     "text": "It arrives early in the morning while you are asleep",
      "correct": false,
      "feedback": "Timing tells you nothing."
     },
     {
-     "text": "It has the company logo",
+     "text": "It has the company logo and a polite greeting",
      "correct": false,
      "feedback": "Logos are easy to copy. Look at the sender address and the link."
     }
@@ -2765,14 +2765,14 @@
      "correct": true
     },
     {
-     "text": "athena123",
+     "text": "Athena-Athena-Athena-Athena",
      "correct": false,
-     "feedback": "A common word plus simple numbers can be cracked in seconds."
+     "feedback": "Repeating one common word is easy to guess, however long it is."
     },
     {
-     "text": "Password",
+     "text": "P@ssw0rd2024!",
      "correct": false,
-     "feedback": "One of the most common passwords in the world."
+     "feedback": "Swapping letters for symbols in “Password” is one of the first things crackers try."
     }
    ],
    "explain": "Long passwords made of random words, with symbols and numbers, are strong and memorable."
@@ -2784,16 +2784,16 @@
    "prompt": "What is two-factor authentication?",
    "options": [
     {
-     "text": "Proving it’s you in two different ways, like a password and a code sent to your phone",
+     "text": "Proving it’s you in two separate ways",
      "correct": true
     },
     {
-     "text": "Typing your password twice",
+     "text": "Typing your password twice to make sure it is right",
      "correct": false,
      "feedback": "That is still just one factor."
     },
     {
-     "text": "Having two different passwords",
+     "text": "Having two passwords for two different accounts",
      "correct": false,
      "feedback": "Both are things you know: still one kind of factor."
     }
@@ -2820,18 +2820,18 @@
    "prompt": "Why is a Trojan horse a good name for a type of malware?",
    "options": [
     {
-     "text": "It pretends to be useful software but hides something harmful inside",
+     "text": "It pretends to be useful but hides something harmful",
      "correct": true
     },
     {
-     "text": "It spreads by itself across networks",
+     "text": "It spreads by itself across networks like an army",
      "correct": false,
      "feedback": "That is a worm."
     },
     {
-     "text": "It only attacks Greek computers",
+     "text": "It attacks computers by flooding them with traffic",
      "correct": false,
-     "feedback": "It is named after the wooden horse that hid Greek soldiers at Troy."
+     "feedback": "That is a denial-of-service attack. The name comes from the wooden horse that hid soldiers at Troy."
     }
    ],
    "explain": "Just like the wooden horse, the user welcomes it in."
@@ -2843,18 +2843,18 @@
    "prompt": "What makes a worm different from a virus?",
    "options": [
     {
-     "text": "A worm spreads across networks by itself; a virus attaches to files and needs them to be opened",
+     "text": "A worm spreads by itself; a virus needs a file opened",
      "correct": true
     },
     {
-     "text": "Worms are harmless",
+     "text": "Worms are harmless; viruses always delete files",
      "correct": false,
      "feedback": "Worms can do serious damage and spread very fast."
     },
     {
-     "text": "A virus can only infect phones",
+     "text": "A virus spreads by itself; a worm needs a file opened",
      "correct": false,
-     "feedback": "Viruses can infect any computer."
+     "feedback": "It is the other way round."
     }
    ],
    "explain": "Both are malware (malicious software)."
@@ -2866,16 +2866,16 @@
    "prompt": "What is encryption?",
    "options": [
     {
-     "text": "Scrambling data so only someone with the key can read it",
+     "text": "Scrambling data so only the key holder can read it",
      "correct": true
     },
     {
-     "text": "Deleting data safely",
+     "text": "Deleting data safely so nobody can recover it",
      "correct": false,
      "feedback": "Encryption keeps data, but makes it unreadable without the key."
     },
     {
-     "text": "Making a backup",
+     "text": "Making a hidden backup copy of the data",
      "correct": false,
      "feedback": "Backups copy data; encryption protects it."
     }
@@ -2912,11 +2912,11 @@
    "prompt": "What does a firewall do?",
    "options": [
     {
-     "text": "Checks data coming in and out of a network and blocks anything not allowed",
+     "text": "Blocks network traffic that isn’t allowed",
      "correct": true
     },
     {
-     "text": "Stops the computer overheating",
+     "text": "Stops the computer from overheating under load",
      "correct": false,
      "feedback": "It is about network traffic."
     },
@@ -2939,7 +2939,7 @@
      "correct": true
     },
     {
-     "text": "The photo might be blurry",
+     "text": "The photo might be reused in a school newsletter",
      "correct": false,
      "feedback": "The worry is what it reveals."
     },
@@ -2958,16 +2958,16 @@
    "prompt": "What is the Antikythera mechanism?",
    "options": [
     {
-     "text": "An ancient Greek geared device, over 2,000 years old, that predicted the positions of the Sun and Moon, and eclipses",
+     "text": "An ancient Greek geared device for predicting eclipses",
      "correct": true
     },
     {
-     "text": "The first electronic computer",
+     "text": "The first electronic computer, built in the 1940s",
      "correct": false,
      "feedback": "It is bronze gears, not electronics, but it was an analogue computer."
     },
     {
-     "text": "A Roman siege weapon",
+     "text": "A Roman water clock used to time speeches",
      "correct": false,
      "feedback": "It was found in a Greek shipwreck and is a calculating device."
     }
@@ -3030,18 +3030,18 @@
    "prompt": "Colossus (1944) is famous because it was…",
    "options": [
     {
-     "text": "one of the first programmable electronic digital computers, built to break German codes",
+     "text": "an early electronic computer built to break codes",
      "correct": true
     },
     {
-     "text": "the first smartphone",
+     "text": "the first computer ever to connect to the internet",
      "correct": false,
      "feedback": "It filled a room!"
     },
     {
-     "text": "a Greek statue",
+     "text": "a giant calculator used to design the Spitfire",
      "correct": false,
-     "feedback": "The Colossus of Rhodes was a statue; this Colossus was a computer at Bletchley Park."
+     "feedback": "It was a code-breaking computer at Bletchley Park, not a design tool."
     }
    ],
    "explain": "It was designed by the engineer Tommy Flowers and used about 2,500 valves."
@@ -3053,16 +3053,16 @@
    "prompt": "Why was the invention of the transistor in 1947 so important?",
    "options": [
     {
-     "text": "It replaced big, hot valves with tiny, reliable switches, so computers could shrink",
+     "text": "It replaced big, hot valves, so computers could shrink",
      "correct": true
     },
     {
-     "text": "It invented the internet",
+     "text": "It let computers connect to the internet for the first time",
      "correct": false,
      "feedback": "The internet came decades later."
     },
     {
-     "text": "It made computers mechanical",
+     "text": "It made computers mechanical, with moving gears",
      "correct": false,
      "feedback": "It made them smaller electronic machines."
     }
@@ -3154,7 +3154,7 @@
      "feedback": "He didn’t hack anything; he copied someone else’s work."
     },
     {
-     "text": "No law: it was online",
+     "text": "No law, because the film was already online",
      "correct": false,
      "feedback": "Copyright law applies online too."
     }
@@ -3168,7 +3168,7 @@
    "prompt": "An AI that helps choose job applicants was trained mostly on data about past male employees. What is the risk?",
    "options": [
     {
-     "text": "It may unfairly favour men: bias in the data becomes bias in the decisions",
+     "text": "It may unfairly favour men",
      "correct": true
     },
     {
@@ -3177,7 +3177,7 @@
      "feedback": "Computers learn patterns from data, including unfair ones."
     },
     {
-     "text": "It will refuse to work",
+     "text": "It will reject everyone who applies",
      "correct": false,
      "feedback": "It will work, but unfairly."
     }
@@ -3191,16 +3191,16 @@
    "prompt": "What is the biggest environmental problem with throwing away old phones?",
    "options": [
     {
-     "text": "They contain toxic chemicals and valuable metals that should be recycled",
+     "text": "They contain toxic chemicals and metals worth recycling",
      "correct": true
     },
     {
-     "text": "They take up a lot of space in the bin",
+     "text": "They take up a lot of space in landfill sites",
      "correct": false,
      "feedback": "The real problem is toxic materials and wasted metals."
     },
     {
-     "text": "There is no problem",
+     "text": "There is no problem, because phones are mostly glass",
      "correct": false,
      "feedback": "E-waste is one of the fastest-growing kinds of rubbish."
     }
@@ -3214,16 +3214,16 @@
    "prompt": "What is the “digital divide”?",
    "options": [
     {
-     "text": "The gap between people who have good access to technology and the internet and those who don’t",
+     "text": "The gap between people with and without good internet access",
      "correct": true
     },
     {
-     "text": "A kind of division in binary",
+     "text": "A kind of division used in binary arithmetic",
      "correct": false,
      "feedback": "It is a social issue."
     },
     {
-     "text": "The space between two computer screens",
+     "text": "The split between Apple users and Android users",
      "correct": false,
      "feedback": "It means unequal access to technology."
     }
@@ -3237,16 +3237,16 @@
    "prompt": "Why are “deepfake” videos a problem?",
    "options": [
     {
-     "text": "AI can make someone appear to say or do things they never did",
+     "text": "AI can show people doing things they never did",
      "correct": true
     },
     {
-     "text": "They are too large to download",
+     "text": "They are too large to download on most phones",
      "correct": false,
      "feedback": "The problem is trust, not file size."
     },
     {
-     "text": "They are always obviously fake",
+     "text": "They are always obviously fake to anyone watching",
      "correct": false,
      "feedback": "Many are very convincing."
     }
@@ -3276,16 +3276,16 @@
    "prompt": "What is a trace table for?",
    "options": [
     {
-     "text": "Recording the value of each variable as a program runs, line by line",
+     "text": "Recording each variable’s value as a program runs",
      "correct": true
     },
     {
-     "text": "Drawing a flowchart",
+     "text": "Drawing a flowchart of the program’s structure",
      "correct": false,
      "feedback": "Flowcharts show the design; trace tables follow it running."
     },
     {
-     "text": "Storing data in a database",
+     "text": "Storing the program’s results in a table",
      "correct": false,
      "feedback": "That is a database table."
     }
@@ -3299,16 +3299,16 @@
    "prompt": "In a trace table for a loop, when do you add a new row?",
    "options": [
     {
-     "text": "Each time a variable changes (often once per time round the loop)",
+     "text": "Each time a variable’s value changes",
      "correct": true
     },
     {
-     "text": "Only at the very end",
+     "text": "Only at the very end, when the loop has finished",
      "correct": false,
      "feedback": "Then you would miss the steps in between."
     },
     {
-     "text": "Only when something is printed",
+     "text": "Only when something is printed to the screen",
      "correct": false,
      "feedback": "Track every change, not just output."
     }
@@ -3338,16 +3338,16 @@
    "prompt": "In sign and magnitude, the first bit shows the sign (1 = negative). What problem does this cause?",
    "options": [
     {
-     "text": "There are two zeros (+0 and −0), and ordinary binary addition gives wrong answers",
+     "text": "There are two zeros, and normal addition goes wrong",
      "correct": true
     },
     {
-     "text": "It cannot show positive numbers",
+     "text": "It cannot show positive numbers bigger than 1",
      "correct": false,
      "feedback": "A leading 0 means positive."
     },
     {
-     "text": "It needs 16 bits for every number",
+     "text": "It needs 16 bits to store any number at all",
      "correct": false,
      "feedback": "It can use any number of bits."
     }
@@ -3383,7 +3383,7 @@
      "correct": true
     },
     {
-     "text": "write n in binary and put a 1 at the front",
+     "text": "write n in binary, then put a 1 at the front of it",
      "correct": false,
      "feedback": "That is sign and magnitude."
     },
@@ -3444,16 +3444,16 @@
    "prompt": "What is a primary key?",
    "options": [
     {
-     "text": "A field that is different for every record, so each one can be identified",
+     "text": "A field that is unique for every record",
      "correct": true
     },
     {
-     "text": "The password to the database",
+     "text": "The password needed to open the database",
      "correct": false,
      "feedback": "It is a field, not a password."
     },
     {
-     "text": "The first record in the table",
+     "text": "The first field in every table",
      "correct": false,
      "feedback": "It is a field that uniquely identifies records."
     }
@@ -3517,7 +3517,7 @@
      "correct": true
     },
     {
-     "text": "If one cable breaks, every device stops working",
+     "text": "If any one cable breaks, every device on it stops working",
      "correct": false,
      "feedback": "Only the device on that cable is affected."
     },
@@ -3536,18 +3536,18 @@
    "prompt": "Why is a mesh network very reliable?",
    "options": [
     {
-     "text": "There are many routes between devices, so data can go around a broken link",
+     "text": "Data can take another route around a broken link",
      "correct": true
     },
     {
-     "text": "It has only one cable",
+     "text": "It has only one cable, so less can go wrong",
      "correct": false,
      "feedback": "It has many connections."
     },
     {
-     "text": "It doesn’t need electricity",
+     "text": "It uses the strongest and most expensive cables",
      "correct": false,
-     "feedback": "Every network needs power."
+     "feedback": "Reliability comes from the many routes, not the cables."
     }
    ],
    "explain": "The internet itself is a giant partial mesh."
@@ -3559,7 +3559,7 @@
    "prompt": "In a client–server network…",
    "options": [
     {
-     "text": "clients request services (like web pages) and servers provide them",
+     "text": "clients request services and servers provide them",
      "correct": true
     },
     {
@@ -3568,9 +3568,9 @@
      "feedback": "That is peer-to-peer."
     },
     {
-     "text": "there are no servers",
+     "text": "the server asks each client for its files",
      "correct": false,
-     "feedback": "Servers are the whole point."
+     "feedback": "It is the clients that ask; servers answer."
     }
    ],
    "explain": "Most websites, email and school networks are client–server."
@@ -3582,16 +3582,16 @@
    "prompt": "What is a MAC address?",
    "options": [
     {
-     "text": "A unique number built into a device’s network hardware",
+     "text": "A unique number in a device’s network hardware",
      "correct": true
     },
     {
-     "text": "The address of an Apple shop",
+     "text": "An address given to a device by the router",
      "correct": false,
      "feedback": "It stands for Media Access Control."
     },
     {
-     "text": "A website address",
+     "text": "A website address typed into the browser",
      "correct": false,
      "feedback": "Web addresses are URLs."
     }
@@ -3619,16 +3619,16 @@
    "prompt": "Why are network protocols organised in layers?",
    "options": [
     {
-     "text": "Each layer does one job, so one can be changed without redesigning the others",
+     "text": "Each layer does one job and can be changed alone",
      "correct": true
     },
     {
-     "text": "To make the internet slower but safer",
+     "text": "To make the internet slower but safer from hackers",
      "correct": false,
      "feedback": "Layers are about organisation, not speed."
     },
     {
-     "text": "Because of a law",
+     "text": "So each layer can use a different language",
      "correct": false,
      "feedback": "It is a design choice that makes networks easier to build."
     }

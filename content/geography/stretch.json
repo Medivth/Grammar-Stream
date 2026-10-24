@@ -70,16 +70,16 @@
    "prompt": "Which statement about waves is true?",
    "options": [
     {
-     "text": "Waves are made by wind blowing across the sea; the further it blows, the bigger the waves",
+     "text": "Waves are made by wind blowing across the sea",
      "correct": true
     },
     {
-     "text": "Waves are caused by the Moon",
+     "text": "Waves are caused by the pull of the Moon",
      "correct": false,
      "feedback": "The Moon causes tides, not waves."
     },
     {
-     "text": "Waves move water across the ocean",
+     "text": "Waves carry water right across the ocean",
      "correct": false,
      "feedback": "Energy moves across; the water mostly goes round in circles."
     }
@@ -150,16 +150,16 @@
    "prompt": "Why do headlands and bays form along some coasts?",
    "options": [
     {
-     "text": "Bands of hard and soft rock: the soft rock erodes faster into bays, leaving hard rock as headlands",
+     "text": "Soft rock erodes faster than the hard rock beside it",
      "correct": true
     },
     {
-     "text": "Rivers cut the bays",
+     "text": "Rivers cut the bays as they reach the sea",
      "correct": false,
      "feedback": "It is the sea eroding softer rock faster."
     },
     {
-     "text": "People dig out the bays for harbours",
+     "text": "People dig out the bays to make harbours",
      "correct": false,
      "feedback": "Harbours use natural bays; they do not create them."
     }
@@ -218,16 +218,16 @@
    "prompt": "A village on a crumbling clay cliff asks for a sea wall. Which is a GOOD reason to say no?",
    "options": [
     {
-     "text": "A wall would stop sand reaching the beach further along, so another place would erode faster",
+     "text": "It would starve beaches further along of sand",
      "correct": true
     },
     {
-     "text": "Sea walls never work",
+     "text": "Sea walls never work against strong waves",
      "correct": false,
      "feedback": "They work, at a cost. The issue is knock-on effects."
     },
     {
-     "text": "Villages are not worth protecting",
+     "text": "Small villages are not worth protecting",
      "correct": false,
      "feedback": "That is a value judgement, not a geographical reason. Decisions weigh costs against the value of what is protected."
     }
@@ -244,16 +244,16 @@
    "prompt": "Which country is most developed, and which indicator tells you LEAST on its own?",
    "options": [
     {
-     "text": "Country A is most developed; income alone can hide inequality and how money is spent",
+     "text": "A; income alone can hide inequality",
      "correct": true
     },
     {
-     "text": "Country C, because low income means people are closer to nature",
+     "text": "C, because low income means simpler lives",
      "correct": false,
      "feedback": "Development measures how long and healthy lives are. Country C has the shortest lives and highest infant deaths."
     },
     {
-     "text": "It is impossible to tell",
+     "text": "It is impossible to tell from these figures",
      "correct": false,
      "feedback": "Every indicator points the same way here: A, then B, then C."
     }
@@ -287,16 +287,16 @@
    "prompt": "Why is life expectancy such a useful development indicator?",
    "options": [
     {
-     "text": "It sums up health care, food, clean water and safety in one number",
+     "text": "It sums up health, food and safety in one number",
      "correct": true
     },
     {
-     "text": "Because it is easy to guess",
+     "text": "Because it is easy to guess for any country",
      "correct": false,
      "feedback": "It is calculated from careful records of births and deaths."
     },
     {
-     "text": "Because rich people live for ever",
+     "text": "Because it only measures how rich people are",
      "correct": false,
      "feedback": "Nobody does, but people in richer countries live about twenty years longer on average."
     }
@@ -311,11 +311,11 @@
    "topic": "geography.development",
    "kind": "fact",
    "prompt": "Which UN measure combines income, life expectancy and years of schooling into one number between 0 and 1?",
-   "answer": "the Human Development Index (HDI)",
+   "answer": "the HDI",
    "distractors": [
-    "GDP",
+    "the GDP",
     "the birth rate",
-    "the Richter scale"
+    "the Gini index"
    ],
    "explain": "HDI: Norway and Switzerland are near 0.96; the lowest countries are below 0.4.",
    "accept": [
@@ -328,10 +328,10 @@
    "topic": "geography.development",
    "kind": "fact",
    "prompt": "What does GDP per capita measure?",
-   "answer": "the value of everything a country produces in a year, divided by its population",
+   "answer": "the value a country produces per person",
    "distractors": [
     "the number of cars per family",
-    "the average height of adults",
+    "the average wage of factory workers",
     "the amount of gold a country owns"
    ],
    "explain": "Per capita means per head. It is the most common measure of wealth, but it says nothing about how equally the wealth is shared.",
@@ -362,16 +362,16 @@
    "prompt": "As countries develop, birth rates usually fall. Why?",
    "options": [
     {
-     "text": "Children are more likely to survive, more girls are educated, and families no longer need many children to work the land",
+     "text": "More children survive and more girls are educated",
      "correct": true
     },
     {
-     "text": "Governments ban large families",
+     "text": "Governments everywhere ban large families",
      "correct": false,
      "feedback": "A few have tried, but the fall happens everywhere development happens."
     },
     {
-     "text": "People stop wanting children",
+     "text": "People stop wanting children at all",
      "correct": false,
      "feedback": "Families get smaller, not childless. Education of girls is the strongest single factor."
     }
@@ -388,16 +388,16 @@
    "prompt": "A country sells raw cocoa beans for $2 a kilo. The chocolate made from them sells for $20 a kilo abroad. What does this show about development?",
    "options": [
     {
-     "text": "Countries that export raw materials earn far less than those that process them",
+     "text": "Processing goods earns far more than raw materials",
      "correct": true
     },
     {
-     "text": "Cocoa is worthless",
+     "text": "Cocoa beans are almost worthless to anyone",
      "correct": false,
      "feedback": "It is valuable, but most of the value is added later by processing and branding."
     },
     {
-     "text": "Chocolate is overpriced",
+     "text": "Chocolate makers charge far too much abroad",
      "correct": false,
      "feedback": "The point is where the value and jobs end up."
     }
@@ -509,16 +509,16 @@
    "prompt": "Why is UK weather so changeable?",
    "options": [
     {
-     "text": "It sits where warm tropical air and cold polar air meet, under a belt of westerly winds that bring one depression after another from the Atlantic",
+     "text": "It sits where warm and cold air masses meet",
      "correct": true
     },
     {
-     "text": "Because it is an island",
+     "text": "Because it is a small island in the sea",
      "correct": false,
      "feedback": "Being an island matters (mild, wet), but the changeability comes from the fronts and depressions passing over."
     },
     {
-     "text": "Because of the Gulf Stream only",
+     "text": "Because of the Gulf Stream and nothing else",
      "correct": false,
      "feedback": "The Gulf Stream keeps the UK mild, not changeable."
     }
@@ -554,16 +554,16 @@
    "prompt": "A forecaster sees a deep low approaching from the Atlantic with tightly packed isobars. What should she expect?",
    "options": [
     {
-     "text": "Strong winds and heavy rain, possibly a named storm",
+     "text": "Strong winds and heavy rain",
      "correct": true
     },
     {
-     "text": "A heatwave",
+     "text": "A long, dry heatwave",
      "correct": false,
      "feedback": "Heatwaves come with high pressure."
     },
     {
-     "text": "Fog and frost",
+     "text": "Calm weather with fog and frost",
      "correct": false,
      "feedback": "Those need calm, clear conditions: a high."
     }

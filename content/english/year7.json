@@ -259,11 +259,11 @@
    "topic": "english.grammar7",
    "kind": "fact",
    "prompt": "Writers sometimes use “Silence.” or “Nothing.” as a sentence for impact. What is a sentence without a main verb called?",
-   "answer": "a minor sentence (fragment)",
+   "answer": "a minor sentence",
    "distractors": [
     "a compound sentence",
     "a complex sentence",
-    "a run-on sentence"
+    "a run-on sentence (comma splice)"
    ],
    "explain": "Used on purpose, minor sentences create tension or emphasis. Used by accident, they are mistakes.",
    "formats": [
@@ -466,34 +466,34 @@
    "topic": "english.roots-3",
    "kind": "fact",
    "prompt": "What does “-ous” mean (as in dangerous, courageous)?",
-   "answer": "full of or having",
+   "answer": "full of",
    "distractors": [
-    "without",
+    "without any",
     "study of",
     "fear of"
    ],
-   "explain": "“-ous” means full of or having: dangerous, courageous.",
+   "explain": "“-ous” means full of: dangerous, courageous.",
    "formats": [
     "choice"
    ],
-   "learn": "**-ous** means **full of or having**. Examples: dangerous, courageous."
+   "learn": "**-ous** means **full of**. Examples: dangerous, courageous."
   },
   {
    "id": "english.rt3.cracy",
    "topic": "english.roots-3",
    "kind": "fact",
    "prompt": "What does “-cracy” mean (as in democracy, autocracy)?",
-   "answer": "rule or government by",
+   "answer": "rule by",
    "distractors": [
     "study of",
-    "writing",
-    "measure"
+    "writing about",
+    "measure of"
    ],
-   "explain": "“-cracy” means rule or government by: democracy, autocracy.",
+   "explain": "“-cracy” means rule by: democracy, autocracy.",
    "formats": [
     "choice"
    ],
-   "learn": "**-cracy** means **rule or government by**. Examples: democracy, autocracy."
+   "learn": "**-cracy** means **rule by**. Examples: democracy, autocracy."
   },
   {
    "id": "english.rt3.meter",
@@ -502,9 +502,9 @@
    "prompt": "What does “-meter” mean (as in thermometer, speedometer)?",
    "answer": "a measuring instrument",
    "distractors": [
-    "a picture",
-    "a fear",
-    "a sound"
+    "a picture or drawing",
+    "a strong fear",
+    "a sound recorder"
    ],
    "explain": "“-meter” means a measuring instrument: thermometer, speedometer.",
    "formats": [
@@ -519,9 +519,9 @@
    "prompt": "What does “-scope” mean (as in telescope, periscope)?",
    "answer": "an instrument for looking",
    "distractors": [
-    "for measuring",
-    "for hearing",
-    "for writing"
+    "an instrument for weighing",
+    "a device for hearing",
+    "a tool for writing"
    ],
    "explain": "“-scope” means an instrument for looking: telescope, periscope.",
    "formats": [
@@ -783,16 +783,16 @@
    "prompt": "Which technique is used in “Tyger Tyger, burning bright”?",
    "options": [
     {
-     "text": "Repetition and alliteration (the repeated “Tyger” and the “b” sounds)",
+     "text": "Repetition and alliteration",
      "correct": true
     },
     {
-     "text": "A simile",
+     "text": "A simile comparing the tiger to fire",
      "correct": false,
      "feedback": "There is no “like” or “as” comparison here."
     },
     {
-     "text": "Onomatopoeia",
+     "text": "Onomatopoeia and personification",
      "correct": false,
      "feedback": "None of these words imitate a sound."
     }
@@ -808,16 +808,16 @@
    "prompt": "What is the speaker asking in this stanza?",
    "options": [
     {
-     "text": "Who or what could have created such a powerful, frightening creature?",
+     "text": "Who could have made such a frightening creature?",
      "correct": true
     },
     {
-     "text": "Where the tiger lives",
+     "text": "Where the tiger lives and hunts at night",
      "correct": false,
      "feedback": "The forest is mentioned, but the question is “what immortal hand… could frame” it: who made it?"
     },
     {
-     "text": "Why the tiger is hungry",
+     "text": "Why the tiger is so hungry and fierce",
      "correct": false,
      "feedback": "Hunger isn’t mentioned."
     }
@@ -833,16 +833,16 @@
    "prompt": "What technique is used in the first line?",
    "options": [
     {
-     "text": "A simile: the speaker compares himself to a cloud",
+     "text": "A simile comparing himself to a cloud",
      "correct": true
     },
     {
-     "text": "A metaphor",
+     "text": "A metaphor saying he is a cloud",
      "correct": false,
      "feedback": "It uses “as”, so it is a simile, not a metaphor."
     },
     {
-     "text": "Onomatopoeia",
+     "text": "Onomatopoeia: the sound of the wind",
      "correct": false,
      "feedback": "No sound words here."
     }
@@ -889,7 +889,7 @@
    "prompt": "How does Rossetti show that the wind is real, even though no one can see it?",
    "options": [
     {
-     "text": "Through its effects: “the leaves hang trembling”",
+     "text": "Through what it does to the leaves",
      "correct": true
     },
     {
@@ -898,7 +898,7 @@
      "feedback": "The poem says “Neither I nor you” have seen it; it has no colour."
     },
     {
-     "text": "By saying it is a cloud",
+     "text": "By comparing the wind to a passing cloud",
      "correct": false,
      "feedback": "Clouds aren’t mentioned."
     }
@@ -914,7 +914,7 @@
    "prompt": "What is the irony in Ozymandias’s boast, “Look on my Works, ye Mighty, and despair!”?",
    "options": [
     {
-     "text": "Nothing of his great works is left: only sand, so his power has not lasted",
+     "text": "Nothing of his great works is left",
      "correct": true
     },
     {
@@ -923,7 +923,7 @@
      "feedback": "The poem shows the opposite: his statue lies broken in the desert."
     },
     {
-     "text": "The travellers are afraid of the statue",
+     "text": "The travellers are terrified of the statue",
      "correct": false,
      "feedback": "There is no one there to be afraid; the sands are “lone and level”."
     }
@@ -939,7 +939,7 @@
    "prompt": "What is the effect of the alliteration in “lone and level sands”?",
    "options": [
     {
-     "text": "The smooth “l” sounds emphasise the empty, endless desert where the empire used to be",
+     "text": "The soft “l” sounds stress the empty desert",
      "correct": true
     },
     {
@@ -948,7 +948,7 @@
      "feedback": "The “l” sounds are soft and slow, not exciting."
     },
     {
-     "text": "It shows the sand is wet",
+     "text": "It shows the sand is wet and shining",
      "correct": false,
      "feedback": "Nothing suggests the sand is wet."
     }
@@ -964,7 +964,7 @@
    "prompt": "How does Stevenson create a sense of speed?",
    "options": [
     {
-     "text": "A fast, regular rhythm, rhyming couplets and quick lists of things flashing past",
+     "text": "A fast rhythm and quick lists of things flashing by",
      "correct": true
     },
     {
@@ -989,16 +989,16 @@
    "prompt": "You are comparing two poems. Which sentence makes the best comparison?",
    "options": [
     {
-     "text": "Both poets use nature, but whereas Wordsworth finds comfort in the daffodils, Blake finds the tiger frightening.",
+     "text": "Whereas Wordsworth finds nature comforting, Blake finds it frightening.",
      "correct": true
     },
     {
-     "text": "Wordsworth wrote about daffodils. Blake wrote about a tiger.",
+     "text": "Wordsworth wrote about daffodils, and Blake wrote about a fierce tiger.",
      "correct": false,
      "feedback": "This describes each poem but doesn’t compare them."
     },
     {
-     "text": "I liked the daffodils poem more than the tiger poem.",
+     "text": "I liked the daffodils poem much more than the poem about the tiger.",
      "correct": false,
      "feedback": "A personal opinion, not a comparison of how the poems work."
     }
@@ -1012,9 +1012,9 @@
    "prompt": "In which town was Shakespeare born, in 1564?",
    "answer": "Stratford-upon-Avon",
    "distractors": [
-    "London",
+    "London, on the Thames",
     "Oxford",
-    "Windsor"
+    "Windsor-upon-Thames"
    ],
    "explain": "Shakespeare was born in Stratford-upon-Avon in 1564 and died there in 1616.",
    "accept": [
@@ -1189,11 +1189,11 @@
    "topic": "english.dream",
    "kind": "fact",
    "prompt": "Where is A Midsummer Night’s Dream set?",
-   "answer": "Athens and a nearby forest",
+   "answer": "Athens and a forest",
    "distractors": [
-    "Rome and the sea",
-    "London and Windsor",
-    "a desert island"
+    "Rome and the stormy sea",
+    "London and Windsor Castle",
+    "a magical desert island"
    ],
    "explain": "The lovers flee from strict Athens into the magical forest, where the rules of ordinary life break down.",
    "formats": [
@@ -1336,16 +1336,16 @@
    "prompt": "Which idea is most important in A Midsummer Night’s Dream?",
    "options": [
     {
-     "text": "Love is irrational and can make people behave foolishly",
+     "text": "Love makes people behave foolishly",
      "correct": true
     },
     {
-     "text": "War is glorious",
+     "text": "War is glorious and makes heroes of men",
      "correct": false,
      "feedback": "There is no war in the play."
     },
     {
-     "text": "Money brings happiness",
+     "text": "Money and rank bring lasting happiness",
      "correct": false,
      "feedback": "Money is hardly mentioned."
     }
@@ -1359,7 +1359,7 @@
    "prompt": "What does this speech suggest about Puck?",
    "options": [
     {
-     "text": "He loves playing tricks and making Oberon laugh",
+     "text": "He loves playing tricks",
      "correct": true
     },
     {
@@ -1368,7 +1368,7 @@
      "feedback": "“Merry” and “jest” show he is playful, not serious."
     },
     {
-     "text": "He is frightened of horses",
+     "text": "He is frightened of horses and fillies",
      "correct": false,
      "feedback": "He tricks a horse; he isn’t afraid of it."
     }
@@ -1434,11 +1434,11 @@
    "topic": "english.tempest",
    "kind": "fact",
    "prompt": "Who stole Prospero’s title as Duke of Milan?",
-   "answer": "his brother Antonio",
+   "answer": "Antonio, his brother",
    "distractors": [
-    "Ferdinand",
+    "Ferdinand, the prince",
     "Caliban",
-    "King Lear"
+    "Alonso’s son Sebastian"
    ],
    "explain": "Antonio and Alonso, King of Naples, set Prospero and Miranda adrift at sea.",
    "formats": [
@@ -1523,16 +1523,16 @@
    "prompt": "How does The Tempest end?",
    "options": [
     {
-     "text": "Prospero forgives his enemies, frees Ariel and gives up his magic",
+     "text": "Prospero forgives his enemies and frees Ariel",
      "correct": true
     },
     {
-     "text": "Prospero drowns his enemies in revenge",
+     "text": "Prospero drowns all his enemies in revenge",
      "correct": false,
      "feedback": "He chooses mercy instead: “The rarer action is / In virtue than in vengeance.”"
     },
     {
-     "text": "Caliban becomes King of Naples",
+     "text": "Caliban becomes King of Naples and Milan",
      "correct": false,
      "feedback": "Caliban stays on the island."
     }
@@ -1591,7 +1591,7 @@
    "prompt": "Scrooge asks, “Are there no prisons? … And the Union workhouses?” What was Dickens trying to show?",
    "options": [
     {
-     "text": "That cold, uncaring attitudes to the poor were wrong; rich people should help",
+     "text": "That uncaring attitudes to the poor were wrong",
      "correct": true
     },
     {
@@ -1600,7 +1600,7 @@
      "feedback": "Dickens is criticising Scrooge here; by the end, Scrooge has changed his mind."
     },
     {
-     "text": "That Victorian workhouses were pleasant",
+     "text": "That Victorian workhouses were kind, pleasant places",
      "correct": false,
      "feedback": "Workhouses were deliberately harsh. Dickens wanted readers to feel uncomfortable."
     }
@@ -1660,16 +1660,16 @@
    "prompt": "Which of these openings is most typical of the Gothic genre?",
    "options": [
     {
-     "text": "The ruined abbey loomed against a sky of bruised clouds, and somewhere a door creaked.",
+     "text": "The ruined abbey loomed; somewhere a door creaked.",
      "correct": true
     },
     {
-     "text": "The sun shone brightly on the busy market as children played.",
+     "text": "The sun shone brightly on the market as children played.",
      "correct": false,
      "feedback": "Too cheerful for Gothic!"
     },
     {
-     "text": "The spaceship landed gently on the red planet.",
+     "text": "The silver spaceship landed gently on the red planet.",
      "correct": false,
      "feedback": "That sounds like science fiction."
     }
@@ -1729,11 +1729,11 @@
    "topic": "english.victorian",
    "kind": "fact",
    "prompt": "What does “melancholy” mean?",
-   "answer": "deep, lasting sadness",
+   "answer": "deep sadness",
    "distractors": [
-    "great anger",
-    "excitement",
-    "hunger"
+    "great, lasting anger",
+    "nervous excitement",
+    "gnawing hunger"
    ],
    "explain": "A word Victorian writers loved. It suits Gothic stories."
   },
@@ -1744,7 +1744,7 @@
    "prompt": "What impression does the narrator give of the man arriving at the inn?",
    "options": [
     {
-     "text": "He is rough, tough and probably dangerous",
+     "text": "He is rough and probably dangerous",
      "correct": true
     },
     {
@@ -1753,7 +1753,7 @@
      "feedback": "His coat is “soiled” and his nails “black, broken”: not a gentleman."
     },
     {
-     "text": "He is a frightened young boy",
+     "text": "He is a frightened and lost young boy",
      "correct": false,
      "feedback": "He is “tall, strong, heavy”."
     }
@@ -1769,7 +1769,7 @@
    "prompt": "Why does the writer use such a long list of details in one sentence?",
    "options": [
     {
-     "text": "To build up a vivid, overwhelming picture, as if we are seeing him through the boy’s eyes",
+     "text": "To build an overwhelming picture, as the boy saw him",
      "correct": true
     },
     {
@@ -1778,7 +1778,7 @@
      "feedback": "Writers choose sentence length for effect."
     },
     {
-     "text": "To make the man seem boring",
+     "text": "To make the man seem dull and ordinary",
      "correct": false,
      "feedback": "The details make him fascinating and threatening, not boring."
     }
@@ -1794,16 +1794,16 @@
    "prompt": "What does “as if it were yesterday” suggest?",
    "options": [
     {
-     "text": "The memory is so powerful that the narrator still remembers it clearly",
+     "text": "The memory is still very clear to him",
      "correct": true
     },
     {
-     "text": "It actually happened yesterday",
+     "text": "It actually happened only yesterday",
      "correct": false,
      "feedback": "“As if” means it didn’t; it just feels that recent."
     },
     {
-     "text": "The narrator has forgotten most of it",
+     "text": "The narrator has forgotten most of what happened",
      "correct": false,
      "feedback": "The opposite: the details are vivid."
     }
@@ -1819,16 +1819,16 @@
    "prompt": "What can you infer about Mary from the opening?",
    "options": [
     {
-     "text": "She is unhappy and unpleasant to be around, at least at first",
+     "text": "She is unhappy and unpleasant, at first",
      "correct": true
     },
     {
-     "text": "She is popular and cheerful",
+     "text": "She is popular, cheerful and well liked",
      "correct": false,
      "feedback": "“Disagreeable” and “sour expression” suggest the opposite."
     },
     {
-     "text": "She is very rich and spoiled",
+     "text": "She is very rich and spoiled by her parents",
      "correct": false,
      "feedback": "The extract doesn’t tell us about money."
     }
@@ -1844,16 +1844,16 @@
    "prompt": "What is the effect of repeating the word “thin”?",
    "options": [
     {
-     "text": "It emphasises how unhealthy and unloved Mary seems",
+     "text": "It stresses how unhealthy Mary seems",
      "correct": true
     },
     {
-     "text": "It shows she is good at running",
+     "text": "It shows she is quick and good at running",
      "correct": false,
      "feedback": "Nothing here is about running."
     },
     {
-     "text": "It is a spelling mistake",
+     "text": "It is a printing mistake in the book",
      "correct": false,
      "feedback": "The repetition is deliberate."
     }
@@ -1869,7 +1869,7 @@
    "prompt": "The narrator agrees: “It was true, too.” What does this short sentence do?",
    "options": [
     {
-     "text": "It confirms everyone’s harsh opinion, which surprises and slightly shocks the reader",
+     "text": "It bluntly confirms everyone’s harsh opinion",
      "correct": true
     },
     {
@@ -1878,7 +1878,7 @@
      "feedback": "“It was true” means the narrator agrees."
     },
     {
-     "text": "It describes the manor",
+     "text": "It describes the manor and its gardens",
      "correct": false,
      "feedback": "It refers to Mary."
     }
@@ -1894,7 +1894,7 @@
    "prompt": "What point is Holmes making to Watson?",
    "options": [
     {
-     "text": "Looking at something is not the same as noticing details about it",
+     "text": "Seeing is not the same as observing",
      "correct": true
     },
     {
@@ -1903,7 +1903,7 @@
      "feedback": "The stairs are just an example of a bigger idea."
     },
     {
-     "text": "Watson has bad eyesight",
+     "text": "Watson needs glasses for his bad eyesight",
      "correct": false,
      "feedback": "Watson can see; he just doesn’t observe."
     }
@@ -1919,16 +1919,16 @@
    "prompt": "How does the writer make Holmes seem clever through the dialogue?",
    "options": [
     {
-     "text": "Holmes asks short, quick questions that lead Watson to realise he hasn’t noticed",
+     "text": "Holmes asks short questions that expose Watson",
      "correct": true
     },
     {
-     "text": "Holmes gives a long speech about science",
+     "text": "Holmes gives a long speech about chemistry",
      "correct": false,
      "feedback": "His questions are short and sharp."
     },
     {
-     "text": "Watson explains everything to Holmes",
+     "text": "Watson explains everything patiently to Holmes",
      "correct": false,
      "feedback": "It is the other way round."
     }
@@ -2049,16 +2049,16 @@
    "prompt": "“The wind howled.” Which comment zooms in best on a single word?",
    "options": [
     {
-     "text": "“Howled” suggests the wind is like a wild animal, making it sound threatening and alive.",
+     "text": "“Howled” makes the wind sound like a wild animal.",
      "correct": true
     },
     {
-     "text": "The writer describes the weather.",
+     "text": "The writer describes the stormy weather in detail.",
      "correct": false,
      "feedback": "This doesn’t analyse any particular word."
     },
     {
-     "text": "The sentence is short.",
+     "text": "The sentence is short, which makes it punchy.",
      "correct": false,
      "feedback": "A true observation, but not about word choice."
     }
@@ -2070,11 +2070,11 @@
    "topic": "english.analysis",
    "kind": "fact",
    "prompt": "In analysis, “the effect on the reader” means…",
-   "answer": "what the reader thinks, feels or imagines because of the writer’s choice",
+   "answer": "what the writer’s choice makes the reader feel",
    "distractors": [
-    "whether the reader enjoyed the book",
-    "how long it takes to read",
-    "what the reader does next"
+    "whether the reader enjoyed the whole book",
+    "how long the book takes to read",
+    "what the reader decides to read next"
    ],
    "explain": "Always ask: why did the writer choose this, and what does it make us think or feel?",
    "formats": [
@@ -2102,11 +2102,11 @@
    "topic": "english.rhetoric",
    "kind": "fact",
    "prompt": "A speaker who says “As a doctor for twenty years, I have seen…” is persuading by showing their…",
-   "answer": "expertise (credibility)",
+   "answer": "expertise",
    "distractors": [
-    "anger",
-    "humour",
-    "age only"
+    "strong anger",
+    "sense of humour",
+    "age and nothing else"
    ],
    "explain": "The Ancient Greeks called this ethos: persuading through trust in the speaker.",
    "formats": [
@@ -2147,11 +2147,11 @@
    "topic": "english.rhetoric",
    "kind": "fact",
    "prompt": "“Some people say homework helps us learn. However…” What is the speaker doing?",
-   "answer": "answering a counter-argument",
+   "answer": "rebutting the other side",
    "distractors": [
-    "agreeing completely",
-    "telling a story",
-    "using a simile"
+    "agreeing completely with them",
+    "telling a personal story",
+    "using a simile for effect"
    ],
    "explain": "Raising and then rebutting the other side makes an argument look stronger and fairer.",
    "formats": [
@@ -2188,16 +2188,16 @@
    "prompt": "Churchill said: “We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets.” What technique is used?",
    "options": [
     {
-     "text": "Repetition (anaphora) of “we shall fight”",
+     "text": "Repetition of “we shall fight”",
      "correct": true
     },
     {
-     "text": "A simile",
+     "text": "A simile comparing beaches to fields",
      "correct": false,
      "feedback": "Nothing is compared using “like” or “as”."
     },
     {
-     "text": "A rhetorical question",
+     "text": "A rhetorical question to the nation",
      "correct": false,
      "feedback": "It is a statement, not a question."
     }

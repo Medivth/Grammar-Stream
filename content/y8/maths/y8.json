@@ -675,16 +675,16 @@
    "prompt": "Odd numbers can be written 2n + 1. What is (2a + 1)(2b + 1), and what does it prove?",
    "options": [
     {
-     "text": "4ab + 2a + 2b + 1 = 2(2ab + a + b) + 1, so odd × odd is always odd",
+     "text": "2(2ab + a + b) + 1, so odd × odd is always odd",
      "correct": true
     },
     {
-     "text": "4ab + 1, so it is one more than a multiple of 4",
+     "text": "4ab + 2a + 2b + 1 = 4(ab + a + b) + 1, so it is 1 more than a multiple of 4",
      "correct": false,
-     "feedback": "Expand all four terms: you also get 2a and 2b."
+     "feedback": "Check the factorising: 4(ab + a + b) = 4ab + 4a + 4b, not 4ab + 2a + 2b."
     },
     {
-     "text": "2ab + 1, so it is odd",
+     "text": "4ab + 1, so odd × odd is always odd",
      "correct": false,
      "feedback": "2a × 2b = 4ab, and there are two more terms."
     }
@@ -721,11 +721,11 @@
    "prompt": "Kit says −3² = 9. Theo says −3² = −9. Who is right?",
    "options": [
     {
-     "text": "Theo: the square applies only to the 3, so −3² = −(3²) = −9",
+     "text": "Theo: only the 3 is squared, so −3² = −9",
      "correct": true
     },
     {
-     "text": "Kit: a negative squared is positive",
+     "text": "Kit: a negative number squared is always positive",
      "correct": false,
      "feedback": "That is true of (−3)², with brackets. Without brackets the minus waits until after the square."
     },
@@ -771,12 +771,12 @@
      "correct": true
     },
     {
-     "text": "It ends where it started",
+     "text": "It ends exactly where it started",
      "correct": false,
      "feedback": "The 10% fall is of a BIGGER amount: 1.1 × 0.9 = 0.99."
     },
     {
-     "text": "It ends 1% higher",
+     "text": "It ends 1% higher than it started",
      "correct": false,
      "feedback": "1.1 × 0.9 = 0.99, which is a decrease."
     }
@@ -790,18 +790,18 @@
    "prompt": "“Dividing always makes a number smaller.” Always, sometimes or never true?",
    "options": [
     {
-     "text": "Sometimes: dividing by a number between 0 and 1 makes it bigger",
+     "text": "Sometimes: dividing by 0.5 doubles a number",
      "correct": true
     },
     {
-     "text": "Always true",
+     "text": "Always true: you are sharing it into parts",
      "correct": false,
      "feedback": "Try 6 ÷ ½ = 12."
     },
     {
-     "text": "Never true",
+     "text": "Always true, except when you divide by 1",
      "correct": false,
-     "feedback": "6 ÷ 2 = 3 is smaller."
+     "feedback": "Try 6 ÷ 0.5 = 12: dividing by a number below 1 makes it bigger."
     }
    ],
    "explain": "Dividing by a number less than 1 (but more than 0) increases the answer: 6 ÷ 0.5 = 12."
@@ -813,11 +813,11 @@
    "prompt": "Eight athletes run a race in 12, 12, 13, 13, 14, 14, 15 and 41 seconds (one fell). Which average best describes a typical time?",
    "options": [
     {
-     "text": "The median (13.5 s): the outlier barely affects it",
+     "text": "The median (13.5 s)",
      "correct": true
     },
     {
-     "text": "The mean (16.75 s)",
+     "text": "The mean (16.75 s), because it uses every time",
      "correct": false,
      "feedback": "The 41-second fall drags the mean far above every other time."
     },
@@ -836,16 +836,16 @@
    "prompt": "A scatter graph shows that towns with more ice-cream sales have more sunburn cases. What can you conclude?",
    "options": [
     {
-     "text": "They are correlated, but ice cream does not cause sunburn: hot weather drives both",
+     "text": "They are correlated, but neither causes the other",
      "correct": true
     },
     {
-     "text": "Ice cream causes sunburn",
+     "text": "Ice cream causes sunburn, so sales should be limited",
      "correct": false,
      "feedback": "Correlation is not causation: a third factor (sunshine) explains both."
     },
     {
-     "text": "There is no relationship",
+     "text": "There is no relationship, because it is a coincidence",
      "correct": false,
      "feedback": "There is a relationship (a positive correlation), just not a causal one."
     }
@@ -882,11 +882,11 @@
    "prompt": "Eratosthenes measured the Earth around 240 BC. At noon the Sun was overhead at Syene but 7.2° from overhead at Alexandria, about 800 km north. Why does that give the Earth’s circumference?",
    "options": [
     {
-     "text": "7.2° is {{1/50}} of 360°, so the Earth is about 50 × 800 = 40,000 km round",
+     "text": "7.2° is {{1/50}} of 360°, so about 50 × 800 km",
      "correct": true
     },
     {
-     "text": "800 × 7.2 = 5,760 km",
+     "text": "800 × 7.2 = 5,760 km, using the angle as a scale",
      "correct": false,
      "feedback": "The angle tells you what FRACTION of a full circle the distance is."
     },
@@ -905,16 +905,16 @@
    "prompt": "n² + n is always even, for any whole number n. Why?",
    "options": [
     {
-     "text": "n² + n = n(n + 1), and one of two consecutive numbers is always even",
+     "text": "n² + n = n(n + 1), and one of n, n + 1 is even",
      "correct": true
     },
     {
-     "text": "Because n² is always even",
+     "text": "Because n² and n are always both even",
      "correct": false,
      "feedback": "n² is odd when n is odd: 3² = 9."
     },
     {
-     "text": "Because squares end in 0, 4 or 6",
+     "text": "Because square numbers always end in 0, 4 or 6",
      "correct": false,
      "feedback": "Squares can end in 1, 5 or 9 too."
     }
@@ -992,9 +992,9 @@
    "prompt": "In 7x² − 3x, what is the number −3 called?",
    "answer": "the coefficient of x",
    "distractors": [
-    "the constant",
+    "the constant term",
     "the index",
-    "the gradient"
+    "the gradient of the curve"
    ],
    "explain": "A coefficient is the number multiplying a letter.",
    "formats": [

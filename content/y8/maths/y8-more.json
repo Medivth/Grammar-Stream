@@ -751,7 +751,7 @@
      "correct": true
     },
     {
-     "text": "A circle centred on A",
+     "text": "A circle centred on the midpoint of AB",
      "correct": false,
      "feedback": "A circle gives points the same distance from ONE point."
     },
@@ -761,7 +761,7 @@
      "feedback": "Points on AB are mostly closer to one pillar than the other."
     },
     {
-     "text": "The angle bisector at A",
+     "text": "The bisector of the angle at A",
      "correct": false,
      "feedback": "Angle bisectors are about being equidistant from two LINES."
     }
@@ -831,11 +831,11 @@
    "prompt": "What is the locus of points exactly 2 cm from a straight line segment AB?",
    "options": [
     {
-     "text": "Two parallel lines joined by semicircles at each end (a “stadium” shape)",
+     "text": "Two parallel lines joined by semicircles (a “stadium”)",
      "correct": true
     },
     {
-     "text": "Two parallel lines only",
+     "text": "Two parallel lines, 2 cm either side of AB",
      "correct": false,
      "feedback": "Near the ends A and B the points curve round."
     },
@@ -845,9 +845,9 @@
      "feedback": "A circle is for a single point."
     },
     {
-     "text": "A rectangle",
+     "text": "An ellipse with A and B as its two foci",
      "correct": false,
-     "feedback": "The ends are rounded, not square."
+     "feedback": "The long sides are straight lines, not the curve of an ellipse."
     }
    ],
    "explain": "Alongside the segment the points lie on two parallel lines; round each end they form semicircles centred on A and B."
@@ -887,18 +887,18 @@
    "prompt": "Why is SSA (two sides and an angle that is NOT between them) not a congruence condition?",
    "options": [
     {
-     "text": "The same measurements can fit two different triangles",
+     "text": "The same data can fit two different triangles",
      "correct": true
     },
     {
-     "text": "It always gives a right angle",
+     "text": "It only works for right-angled triangles",
      "correct": false,
-     "feedback": "It doesn’t force a right angle."
+     "feedback": "SSA fails for many kinds of triangle, not just right-angled ones."
     },
     {
-     "text": "It needs a calculator",
+     "text": "It needs all three angles to be known as well",
      "correct": false,
-     "feedback": "Congruence is about shape, not calculation."
+     "feedback": "Three angles fix the shape but not the size, so they don’t help here."
     },
     {
      "text": "It is the same as SAS",
@@ -1031,9 +1031,9 @@
      "correct": true
     },
     {
-     "text": "4² − 3² = 7, which is odd",
+     "text": "4² − 3² = 7 and 5² − 4² = 9, which are odd",
      "correct": false,
-     "feedback": "One example is not a proof."
+     "feedback": "Examples, however many, are not a proof."
     },
     {
      "text": "(n + 1)² − n² = 1",
@@ -1059,12 +1059,12 @@
      "correct": true
     },
     {
-     "text": "3 + 5 = 8, which is even",
+     "text": "3 + 5 = 8, 7 + 9 = 16 and 11 + 13 = 24, all even",
      "correct": false,
      "feedback": "Examples don’t prove “always”."
     },
     {
-     "text": "(2n + 1) + (2n + 1) = 4n + 2",
+     "text": "(2n + 1) + (2n + 1) = 4n + 2 = 2(2n + 1), a multiple of 2",
      "correct": false,
      "feedback": "That only covers adding an odd number to itself: use different letters."
     },
@@ -1087,12 +1087,12 @@
      "correct": true
     },
     {
-     "text": "2 × 4 = 8 and 4 × 6 = 24",
+     "text": "2 × 4 = 8, 4 × 6 = 24 and 6 × 8 = 48 all work",
      "correct": false,
      "feedback": "Examples support a claim but don’t prove it."
     },
     {
-     "text": "2n × 2n = 4n²",
+     "text": "2n × 2n = 4n², and 4n² is a multiple of 8",
      "correct": false,
      "feedback": "Those are the same number, not consecutive even numbers."
     },
@@ -1111,11 +1111,11 @@
    "prompt": "Kit says: “n² + n + 41 is prime for every whole number n.” How can you disprove it?",
    "options": [
     {
-     "text": "Find one value of n where it is not prime: n = 40 gives 41²",
+     "text": "Find one n where it fails: n = 40 gives 41²",
      "correct": true
     },
     {
-     "text": "Show it works for n = 1, 2 and 3",
+     "text": "Show it works for n = 1, 2 and 3, then generalise",
      "correct": false,
      "feedback": "Examples that work can never disprove a claim."
     },
@@ -1223,16 +1223,16 @@
    "prompt": "The Pythagoreans discovered that √2 is irrational. The classic proof that it can’t be a fraction works by…",
    "options": [
     {
-     "text": "contradiction: assume √2 = {{a/b}} in lowest terms and show a and b must both be even",
+     "text": "contradiction: assume √2 = {{a/b}} in lowest terms",
      "correct": true
     },
     {
-     "text": "exhaustion: checking every fraction",
+     "text": "exhaustion: checking every possible fraction a/b",
      "correct": false,
      "feedback": "There are infinitely many fractions to check."
     },
     {
-     "text": "a counterexample",
+     "text": "a counterexample: one fraction that fails",
      "correct": false,
      "feedback": "Counterexamples disprove claims."
     },

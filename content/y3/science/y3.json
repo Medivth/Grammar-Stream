@@ -290,16 +290,16 @@
    "prompt": "What does a plant need to grow well?",
    "options": [
     {
-     "text": "Light, water, air, warmth, room to grow and nutrients from the soil",
+     "text": "Light, water, air and warmth",
      "correct": true
     },
     {
-     "text": "Only water",
+     "text": "Only water, nothing else at all",
      "correct": false,
      "feedback": "Water alone isn’t enough: a plant in a dark cupboard goes pale and weak."
     },
     {
-     "text": "Darkness and cold",
+     "text": "Darkness and cold to rest in",
      "correct": false,
      "feedback": "Most plants need light and warmth."
     }
@@ -313,7 +313,7 @@
    "prompt": "A stick of celery stands in blue water. After a day, the leaves have blue streaks. What does this show?",
    "options": [
     {
-     "text": "Water travels up the stem to the leaves",
+     "text": "Water travels up the stem",
      "correct": true
     },
     {
@@ -461,16 +461,16 @@
    "prompt": "Why do many flowers have bright petals and a sweet smell?",
    "options": [
     {
-     "text": "To attract insects to pollinate them",
+     "text": "To attract insects",
      "correct": true
     },
     {
-     "text": "To scare away birds",
+     "text": "To scare away hungry birds",
      "correct": false,
      "feedback": "Bright colours attract visitors."
     },
     {
-     "text": "To keep warm",
+     "text": "To keep the flower warm",
      "correct": false,
      "feedback": "Petals don’t keep the plant warm."
     }
@@ -500,9 +500,9 @@
    "prompt": "Blackberry seeds are spread when birds eat the berries. How do the seeds get to a new place?",
    "answer": "they pass out in the bird’s droppings",
    "distractors": [
-    "the bird plants them",
-    "the wind blows the bird",
-    "they float on rivers"
+    "the bird plants them with its beak",
+    "the wind blows the berries away",
+    "they float away down rivers"
    ],
    "explain": "The seeds survive the bird’s tummy and land far away, with a little fertiliser!",
    "formats": [
@@ -516,9 +516,9 @@
    "prompt": "Burdock seeds have tiny hooks. How are they spread?",
    "answer": "they stick to animals’ fur",
    "distractors": [
-    "the wind",
-    "water",
-    "they explode"
+    "the wind blows them",
+    "they float on water",
+    "their pods explode"
    ],
    "explain": "The hooks catch on fur (and socks!) and drop off somewhere new. They gave the idea for Velcro.",
    "formats": [
@@ -548,11 +548,11 @@
    "prompt": "Why is it good for seeds to travel away from the parent plant?",
    "options": [
     {
-     "text": "So the new plants don’t compete for light, water and space",
+     "text": "So they have room and light to grow",
      "correct": true
     },
     {
-     "text": "Because seeds like holidays",
+     "text": "Because seeds like going on holiday",
      "correct": false,
      "feedback": "Ha! It is about having enough to grow."
     },
@@ -621,7 +621,7 @@
    "prompt": "Why should we eat plenty of fruit and vegetables?",
    "options": [
     {
-     "text": "They give us vitamins, minerals and fibre to stay healthy",
+     "text": "They give us vitamins and fibre",
      "correct": true
     },
     {
@@ -630,7 +630,7 @@
      "feedback": "Lots of foods have energy; fruit and veg give vitamins and fibre."
     },
     {
-     "text": "They make us taller overnight",
+     "text": "They make us grow taller overnight",
      "correct": false,
      "feedback": "Not overnight!"
     }
@@ -644,16 +644,16 @@
    "prompt": "Butter, oil and cheese contain fat. How much fat should we eat?",
    "options": [
     {
-     "text": "A small amount: we need some, but not too much",
+     "text": "A small amount",
      "correct": true
     },
     {
-     "text": "None at all",
+     "text": "None at all, ever",
      "correct": false,
      "feedback": "Our bodies do need a little fat."
     },
     {
-     "text": "As much as possible",
+     "text": "As much as we possibly can",
      "correct": false,
      "feedback": "Too much fat is unhealthy."
     }
@@ -667,7 +667,7 @@
    "prompt": "How is the way humans get food different from plants?",
    "options": [
     {
-     "text": "Plants make their own food; humans have to eat food",
+     "text": "Plants make their own food",
      "correct": true
     },
     {
@@ -676,7 +676,7 @@
      "feedback": "Only plants can do that."
     },
     {
-     "text": "There is no difference",
+     "text": "There is no difference at all",
      "correct": false,
      "feedback": "Plants make food; animals must eat."
     }
@@ -707,12 +707,12 @@
      "correct": true
     },
     {
-     "text": "Crisps, chocolate and cola",
+     "text": "Crisps, a chocolate bar and cola",
      "correct": false,
      "feedback": "Lots of fat and sugar, and no fruit or vegetables."
     },
     {
-     "text": "Just a big bowl of sweets",
+     "text": "A big bowl of sweets and juice",
      "correct": false,
      "feedback": "All sugar!"
     }
@@ -726,16 +726,16 @@
    "prompt": "Turbo’s driver has a long race tomorrow. What should she eat tonight for slow-release energy?",
    "options": [
     {
-     "text": "A plate of pasta with vegetables",
+     "text": "Pasta with vegetables",
      "correct": true
     },
     {
-     "text": "A bag of sweets",
+     "text": "A big bag of sweets",
      "correct": false,
      "feedback": "Sweets give a quick burst, then you feel tired."
     },
     {
-     "text": "Nothing at all",
+     "text": "Nothing at all, to stay light",
      "correct": false,
      "feedback": "You need fuel for a long race!"
     }
@@ -749,9 +749,9 @@
    "prompt": "Which of these is a job of your skeleton?",
    "answer": "protecting your organs",
    "distractors": [
-    "digesting food",
-    "pumping blood",
-    "seeing colours"
+    "digesting your food",
+    "pumping blood round",
+    "helping you see colours"
    ],
    "explain": "Your skeleton supports you, protects organs (your skull protects your brain) and helps you move.",
    "formats": [
@@ -798,7 +798,7 @@
    "topic": "science.y3-skeletons",
    "kind": "fact",
    "prompt": "What is the long chain of bones down the middle of your back called?",
-   "answer": "the spine (backbone)",
+   "answer": "the spine",
    "distractors": [
     "the ribcage",
     "the pelvis",
@@ -836,7 +836,7 @@
    "prompt": "How do muscles move your bones?",
    "options": [
     {
-     "text": "They contract (get shorter) and pull on the bones",
+     "text": "They contract and pull on bones",
      "correct": true
     },
     {
@@ -845,7 +845,7 @@
      "feedback": "Muscles can only pull, not push."
     },
     {
-     "text": "They melt and set again",
+     "text": "They melt and then set again",
      "correct": false,
      "feedback": "Muscles contract and relax."
     }
@@ -1062,7 +1062,7 @@
    "prompt": "Why is slate a good rock for roof tiles?",
    "options": [
     {
-     "text": "It is impermeable and splits into thin flat sheets",
+     "text": "It splits into thin, waterproof sheets",
      "correct": true
     },
     {
@@ -1071,7 +1071,7 @@
      "feedback": "Crumbly rock would fall apart in the rain."
     },
     {
-     "text": "It soaks up rain",
+     "text": "It soaks up the rain like a sponge",
      "correct": false,
      "feedback": "A roof must keep water OUT."
     }
@@ -1098,11 +1098,11 @@
    "topic": "science.y3-rocks",
    "kind": "fact",
    "prompt": "Soil is made from tiny pieces of rock mixed with…",
-   "answer": "dead plants and animals (organic matter)",
+   "answer": "dead plants and animals",
    "distractors": [
-    "plastic and glass",
-    "melted metal",
-    "salt water"
+    "bits of plastic and glass",
+    "melted metal from volcanoes",
+    "salt water from the sea"
    ],
    "explain": "Rotting leaves and dead creatures make soil rich, and worms mix it all up.",
    "formats": [
@@ -1116,16 +1116,16 @@
    "prompt": "How could you test which of two rocks is harder?",
    "options": [
     {
-     "text": "Try scratching each one with a coin or a nail",
+     "text": "Try scratching each one",
      "correct": true
     },
     {
-     "text": "Look at their colour",
+     "text": "Look carefully at their colour",
      "correct": false,
      "feedback": "Colour doesn’t tell you hardness."
     },
     {
-     "text": "Smell them",
+     "text": "Smell them to see which is stronger",
      "correct": false,
      "feedback": "Smell doesn’t show hardness."
     }
@@ -1168,16 +1168,16 @@
    "prompt": "How do we see a book that is not a light source?",
    "options": [
     {
-     "text": "Light bounces off the book into our eyes",
+     "text": "Light bounces off it into our eyes",
      "correct": true
     },
     {
-     "text": "Our eyes send out light beams",
+     "text": "Our eyes send out beams of light",
      "correct": false,
      "feedback": "Our eyes take light in; they don’t send it out."
     },
     {
-     "text": "The book glows in the dark",
+     "text": "The book glows a little in the dark",
      "correct": false,
      "feedback": "Books don’t make their own light."
     }
@@ -1231,16 +1231,16 @@
    "prompt": "Why do cyclists wear reflective strips at night?",
    "options": [
     {
-     "text": "Car headlights reflect off them, so drivers can see the cyclist",
+     "text": "Headlights reflect off them",
      "correct": true
     },
     {
-     "text": "They make their own light",
+     "text": "They make their own bright light",
      "correct": false,
      "feedback": "Reflective strips only shine when light hits them."
     },
     {
-     "text": "They keep the cyclist warm",
+     "text": "They keep the cyclist warm at night",
      "correct": false,
      "feedback": "They are for being seen."
     }
@@ -1316,11 +1316,11 @@
    "prompt": "Why should you wear sunglasses on very bright days?",
    "options": [
     {
-     "text": "To protect your eyes from the Sun’s harmful light",
+     "text": "To protect your eyes",
      "correct": true
     },
     {
-     "text": "To see in the dark",
+     "text": "To help you see in the dark",
      "correct": false,
      "feedback": "Sunglasses make things darker."
     },
@@ -1408,16 +1408,16 @@
    "prompt": "Friction is a force that…",
    "options": [
     {
-     "text": "slows things down when surfaces rub together",
+     "text": "slows things down when they rub",
      "correct": true
     },
     {
-     "text": "makes things float",
+     "text": "makes things float on water",
      "correct": false,
      "feedback": "That is not friction."
     },
     {
-     "text": "only happens in space",
+     "text": "only happens out in space",
      "correct": false,
      "feedback": "Friction happens everywhere surfaces touch."
     }
@@ -1454,16 +1454,16 @@
    "prompt": "To make the ramp test fair, what must stay the same each time?",
    "options": [
     {
-     "text": "the same car, the same ramp height and the same starting point",
+     "text": "the car, the ramp height and the start",
      "correct": true
     },
     {
-     "text": "the surface",
+     "text": "the surface the car rolls onto",
      "correct": false,
-     "feedback": "The surface is the ONE thing you change."
+     "feedback": "The surface is the ONE thing you change. Everything else stays the same."
     },
     {
-     "text": "nothing: change everything",
+     "text": "nothing: change everything each time",
      "correct": false,
      "feedback": "Then you couldn’t tell what made the difference."
     }
@@ -1477,7 +1477,7 @@
    "prompt": "Why do racing tyres need friction?",
    "options": [
     {
-     "text": "To grip the track so the car can speed up, brake and turn",
+     "text": "To grip the track",
      "correct": true
     },
     {
@@ -1486,7 +1486,7 @@
      "feedback": "Grip helps the car go round corners fast."
     },
     {
-     "text": "To keep the tyres clean",
+     "text": "To keep the tyres nice and clean",
      "correct": false,
      "feedback": "It is about grip."
     }
@@ -1539,16 +1539,16 @@
    "prompt": "Are ALL metals magnetic?",
    "options": [
     {
-     "text": "No: only some, like iron, steel and nickel",
+     "text": "No: only some, like iron",
      "correct": true
     },
     {
-     "text": "Yes, every metal",
+     "text": "Yes, every single metal is",
      "correct": false,
      "feedback": "Aluminium cans and copper pipes aren’t magnetic."
     },
     {
-     "text": "No metals are magnetic",
+     "text": "No metals are magnetic at all",
      "correct": false,
      "feedback": "Iron and steel are."
     }
@@ -1585,11 +1585,11 @@
    "prompt": "Why does a compass needle point north?",
    "options": [
     {
-     "text": "It is a tiny magnet, pulled by the Earth’s magnetism",
+     "text": "It is a magnet pulled by the Earth",
      "correct": true
     },
     {
-     "text": "It is very light",
+     "text": "It is very light and thin",
      "correct": false,
      "feedback": "Its lightness lets it turn, but magnetism points it."
     },
@@ -1631,7 +1631,7 @@
    "prompt": "What is a fair test?",
    "options": [
     {
-     "text": "A test where you change only one thing and keep everything else the same",
+     "text": "You change only one thing",
      "correct": true
     },
     {
@@ -1640,7 +1640,7 @@
      "feedback": "Fair here means the results can be trusted."
     },
     {
-     "text": "A test you do once quickly",
+     "text": "A test you do once, very quickly",
      "correct": false,
      "feedback": "Good scientists repeat tests."
     }
@@ -1700,16 +1700,16 @@
    "prompt": "Captain Nova is testing how far toy rockets fly. What is the best way to record it?",
    "options": [
     {
-     "text": "Measure the distance with a tape measure and write it in a table",
+     "text": "Measure it and write it in a table",
      "correct": true
     },
     {
-     "text": "Guess by looking",
+     "text": "Guess by looking at where it lands",
      "correct": false,
      "feedback": "Measuring is more accurate than guessing."
     },
     {
-     "text": "Remember it in your head",
+     "text": "Try to remember it in your head",
      "correct": false,
      "feedback": "Write results down so you don’t forget."
     }
@@ -1723,16 +1723,16 @@
    "prompt": "The results show that cars always roll further on wood than carpet. What is a good conclusion?",
    "options": [
     {
-     "text": "Smoother surfaces have less friction, so cars roll further",
+     "text": "Smoother surfaces have less friction",
      "correct": true
     },
     {
-     "text": "Carpet is bad",
+     "text": "Carpet is bad for toy cars",
      "correct": false,
      "feedback": "A conclusion should explain the pattern."
     },
     {
-     "text": "The car was tired on carpet",
+     "text": "The car got tired on the carpet",
      "correct": false,
      "feedback": "Cars don’t get tired!"
     }
@@ -2410,16 +2410,16 @@
    "prompt": "What causes most earthquakes?",
    "options": [
     {
-     "text": "Tectonic plates suddenly slipping past each other",
+     "text": "Plates slipping past each other",
      "correct": true
     },
     {
-     "text": "Very heavy lorries",
+     "text": "Very heavy lorries on the roads",
      "correct": false,
      "feedback": "Lorries can shake the ground a little, but real earthquakes come from moving plates."
     },
     {
-     "text": "Thunderstorms",
+     "text": "Big thunderstorms overhead",
      "correct": false,
      "feedback": "Storms are in the air, not underground."
     }
@@ -2488,7 +2488,7 @@
    "prompt": "A volcano that has not erupted for thousands of years but might again is…",
    "options": [
     {
-     "text": "dormant (sleeping)",
+     "text": "dormant",
      "correct": true
     },
     {
@@ -2511,11 +2511,11 @@
    "prompt": "What should you do during an earthquake if you are indoors?",
    "options": [
     {
-     "text": "Drop, cover under a strong table, and hold on",
+     "text": "Get under a strong table",
      "correct": true
     },
     {
-     "text": "Run outside past windows",
+     "text": "Run outside past the windows",
      "correct": false,
      "feedback": "Glass and falling things are dangerous. Stay under cover."
     },
@@ -2680,7 +2680,7 @@
    "prompt": "What does the key on a map tell you?",
    "options": [
     {
-     "text": "What the symbols on the map mean",
+     "text": "What the symbols mean",
      "correct": true
     },
     {
@@ -2726,16 +2726,16 @@
    "prompt": "What is the difference between weather and climate?",
    "options": [
     {
-     "text": "Weather is day to day; climate is the usual weather over many years",
+     "text": "Weather is daily; climate is long-term",
      "correct": true
     },
     {
-     "text": "They mean exactly the same",
+     "text": "They mean exactly the same thing",
      "correct": false,
      "feedback": "Weather changes daily. Climate is the long-term pattern."
     },
     {
-     "text": "Climate only happens in hot countries",
+     "text": "Climate only happens in hot places",
      "correct": false,
      "feedback": "Every place has a climate."
     }
@@ -3021,12 +3021,12 @@
      "correct": true
     },
     {
-     "text": "milk",
+     "text": "a glass of milk",
      "correct": false,
      "feedback": "Milk is a liquid."
     },
     {
-     "text": "sand",
+     "text": "a pile of sand",
      "correct": false,
      "feedback": "Each grain of sand is a solid."
     }
@@ -3103,7 +3103,7 @@
    "prompt": "What happens to food in the stomach?",
    "options": [
     {
-     "text": "It is churned up and mixed with acid to break it down",
+     "text": "It is churned up with acid",
      "correct": true
     },
     {
@@ -3112,7 +3112,7 @@
      "feedback": "Food is broken down step by step first."
     },
     {
-     "text": "Nothing: it just waits",
+     "text": "Nothing: it just sits and waits",
      "correct": false,
      "feedback": "The stomach is busy churning and mixing."
     }
@@ -3130,12 +3130,12 @@
      "correct": true
     },
     {
-     "text": "the mouth",
+     "text": "the mouth and tongue",
      "correct": false,
      "feedback": "Digestion starts in the mouth, but nutrients are absorbed later."
     },
     {
-     "text": "the teeth",
+     "text": "the front teeth",
      "correct": false,
      "feedback": "Teeth break food up."
     }
@@ -3149,7 +3149,7 @@
    "prompt": "Why should you brush your teeth twice a day?",
    "options": [
     {
-     "text": "To remove plaque, which can cause tooth decay",
+     "text": "To stop tooth decay",
      "correct": true
     },
     {
@@ -3188,16 +3188,16 @@
    "prompt": "What is a classification key?",
    "options": [
     {
-     "text": "A set of yes/no questions that helps you name or group a living thing",
+     "text": "Yes/no questions to name a living thing",
      "correct": true
     },
     {
-     "text": "A key that opens a zoo",
+     "text": "A special key that opens a zoo",
      "correct": false,
      "feedback": "It is a different kind of key!"
     },
     {
-     "text": "A list of animals in alphabetical order",
+     "text": "A list of animals from A to Z",
      "correct": false,
      "feedback": "A key uses questions, not the alphabet."
     }
@@ -3372,7 +3372,7 @@
    "prompt": "Why are electric wires covered in plastic?",
    "options": [
     {
-     "text": "Plastic is an insulator, so it stops electricity escaping and keeps us safe",
+     "text": "Plastic is an insulator",
      "correct": true
     },
     {
@@ -3395,7 +3395,7 @@
    "prompt": "You put a spoon in the gap of a circuit and the bulb lights. What does that tell you?",
    "options": [
     {
-     "text": "The spoon is a conductor (probably metal)",
+     "text": "The spoon is a conductor",
      "correct": true
     },
     {
@@ -3404,7 +3404,7 @@
      "feedback": "Insulators would leave the bulb off."
     },
     {
-     "text": "The bulb is broken",
+     "text": "The bulb in the circuit is broken",
      "correct": false,
      "feedback": "It lit, so it works!"
     }
@@ -3418,9 +3418,9 @@
    "prompt": "In a circuit, what does a cell (battery) provide?",
    "answer": "the push that makes electricity flow",
    "distractors": [
-    "light",
-    "a gap",
-    "friction"
+    "the light from the bulb",
+    "a gap in the wires",
+    "friction to slow it down"
    ],
    "explain": "The cell pushes electricity round the circuit.",
    "formats": [

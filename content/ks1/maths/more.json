@@ -541,9 +541,9 @@
    "prompt": "What is the name of a 3D shape with a square base and triangle faces meeting at a point?",
    "answer": "a square-based pyramid",
    "distractors": [
-    "a cone",
-    "a prism",
-    "a cube"
+    "a triangular prism",
+    "a cylinder",
+    "a hexagonal prism"
    ],
    "explain": "Like the pyramids in Egypt!",
    "formats": [
@@ -642,11 +642,11 @@
    "prompt": "5, 10, 15, 20… Will 63 be in this pattern?",
    "options": [
     {
-     "text": "No: numbers in the 5s pattern end in 0 or 5",
+     "text": "No, it skips 63",
      "correct": true
     },
     {
-     "text": "Yes: it keeps going forever",
+     "text": "Yes: the pattern goes on forever",
      "correct": false,
      "feedback": "It goes on forever, but it only hits numbers ending in 0 or 5."
     },
@@ -734,16 +734,16 @@
    "prompt": "{hero} says: “If you double any number, the answer is always even.” Is that true for whole numbers?",
    "options": [
     {
-     "text": "Yes: doubling makes pairs, so nothing is left over",
+     "text": "Yes: doubles make pairs",
      "correct": true
     },
     {
-     "text": "No: double 3 is odd",
+     "text": "No: double 3 is an odd number",
      "correct": false,
      "feedback": "Double 3 is 6, which is even!"
     },
     {
-     "text": "Only for even numbers",
+     "text": "Only when you double even numbers",
      "correct": false,
      "feedback": "Double 5 = 10, double 7 = 14: odd numbers doubled are even too."
     }
@@ -792,6 +792,11 @@
      "text": "3",
      "correct": false,
      "feedback": "A quarter is half of a half: half of 9 is 4 and a half."
+    },
+    {
+     "text": "2 and a quarter",
+     "correct": false,
+     "feedback": "That is half of 4 and a half. The whole is 18, so a quarter is 4 and a half."
     }
    ],
    "explain": "The whole is 18. A quarter is half of half: half of 9 = 4½. Greater depth answers can be halves!"

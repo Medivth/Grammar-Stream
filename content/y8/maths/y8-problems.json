@@ -2238,16 +2238,16 @@
    "prompt": "On the island of knights (always truthful) and knaves (always lying), what can you conclude if someone says, “I am a knave”?",
    "options": [
     {
-     "text": "Nobody on the island can say it: the speaker must be a visitor",
+     "text": "No islander can say it, so the speaker is a visitor",
      "correct": true
     },
     {
-     "text": "The speaker is a knave",
+     "text": "The speaker is a knave telling the truth for once",
      "correct": false,
      "feedback": "A knave saying “I am a knave” would be telling the truth."
     },
     {
-     "text": "The speaker is a knight",
+     "text": "The speaker is a knight who made a mistake",
      "correct": false,
      "feedback": "A knight would not falsely call himself a knave."
     },
@@ -2257,7 +2257,7 @@
      "feedback": "Knights and knaves cannot joke their way out of the rule."
     },
     {
-     "text": "Nothing at all",
+     "text": "Nothing at all, without asking another question",
      "correct": false,
      "feedback": "You can conclude something strong: neither a knight nor a knave can say it."
     }
@@ -2436,7 +2436,7 @@
    "prompt": "Two guards stand where the road forks; one road leads to Delphi. One guard always tells the truth and one always lies, but you do not know which is which. You may ask one guard one question. Which plan always works?",
    "options": [
     {
-     "text": "Ask either guard “Which road would the other guard say leads to Delphi?” and take the other road",
+     "text": "Ask either: “Which road would the other guard point to?” Take the other",
      "correct": true
     },
     {
@@ -2455,7 +2455,7 @@
      "feedback": "The truthful guard would then send you the wrong way."
     },
     {
-     "text": "It cannot be done with one question",
+     "text": "It cannot be done with one question; you need two",
      "correct": false,
      "feedback": "The double question works."
     }
@@ -3933,21 +3933,21 @@
    "prompt": "Two opposite corner squares are removed from a chessboard, leaving 62 squares. Can the board be exactly covered by 31 dominoes, each covering two neighbouring squares?",
    "options": [
     {
-     "text": "No: the two removed squares are the same colour, but every domino covers one black and one white",
+     "text": "No: both removed squares are the same colour",
      "correct": true
     },
     {
-     "text": "Yes, if you start from the middle",
+     "text": "Yes, if you start placing dominoes from the middle",
      "correct": false,
      "feedback": "However you place them, the colours do not balance."
     },
     {
-     "text": "Yes: 62 is even",
+     "text": "Yes: 62 is even, so 31 dominoes fit exactly",
      "correct": false,
      "feedback": "An even number of squares is needed, but it is not enough."
     },
     {
-     "text": "No: 31 is odd",
+     "text": "No: 31 is odd, so one square is left over",
      "correct": false,
      "feedback": "The odd number of dominoes is not the reason."
     },
@@ -3970,12 +3970,12 @@
      "correct": true
     },
     {
-     "text": "Yes, by pairing equal numbers",
+     "text": "Yes, by pairing numbers so every difference is equal",
      "correct": false,
      "feedback": "There are no equal numbers to start with, and parity blocks it anyway."
     },
     {
-     "text": "Yes, always",
+     "text": "Yes, always, whatever order you choose",
      "correct": false,
      "feedback": "Try it: the last number is always odd."
     },
@@ -3999,11 +3999,11 @@
    "prompt": "Seven cups stand upside down. A move turns over exactly two cups. Can all seven be made the right way up?",
    "options": [
     {
-     "text": "No: each cup must be turned an odd number of times, so the total number of turns is odd, but every move adds 2",
+     "text": "No: the number of upright cups always stays even",
      "correct": true
     },
     {
-     "text": "Yes, in 4 moves",
+     "text": "Yes, in 4 moves, turning a different pair each time",
      "correct": false,
      "feedback": "Four moves turn over 8 cups in total, an even number."
     },
@@ -4013,7 +4013,7 @@
      "feedback": "Seven moves make 14 turns, still even."
     },
     {
-     "text": "Only if you may turn one cup",
+     "text": "Only if you are allowed to turn one cup on its own",
      "correct": false,
      "feedback": "That changes the rules; with pairs it is impossible."
     },
@@ -4410,7 +4410,7 @@
    "prompt": "Which of these PROVES that the sum of any two odd numbers is even?",
    "options": [
     {
-     "text": "Any odd numbers are 2a + 1 and 2b + 1, and (2a + 1) + (2b + 1) = 2(a + b + 1), which is a multiple of 2",
+     "text": "(2a + 1) + (2b + 1) = 2(a + b + 1), a multiple of 2",
      "correct": true
     },
     {
@@ -4476,7 +4476,7 @@
    "prompt": "Why is n² + n always even, for every whole number n?",
    "options": [
     {
-     "text": "n² + n = n(n + 1), and one of two consecutive numbers is always even",
+     "text": "n² + n = n(n + 1), and one of n, n + 1 is even",
      "correct": true
     },
     {
@@ -4495,7 +4495,7 @@
      "feedback": "Try n = 3: 9 + 3 = 12, even too."
     },
     {
-     "text": "Because squares end in 0, 4 or 6",
+     "text": "Because square numbers always end in 0, 4 or 6",
      "correct": false,
      "feedback": "Squares can end in 1, 5 or 9 too."
     }
@@ -4518,7 +4518,7 @@
      "feedback": "That is what it is trying to prove, so it cannot assume it."
     },
     {
-     "text": "That √2 ≈ 1.414",
+     "text": "That √2 ≈ 1.414 to three decimal places",
      "correct": false,
      "feedback": "A decimal approximation proves nothing either way."
     },
@@ -4528,7 +4528,7 @@
      "feedback": "It assumes √2 = a/b, from which a² = 2b² follows."
     },
     {
-     "text": "That every number is a fraction",
+     "text": "That every number can be written as a fraction",
      "correct": false,
      "feedback": "It assumes only that √2 is."
     }

@@ -289,7 +289,7 @@
    "topic": "geography.scale",
    "kind": "fact",
    "prompt": "A blue triangle with a dot in the middle on an OS map marks a…",
-   "answer": "triangulation pillar (trig point)",
+   "answer": "trig point",
    "distractors": [
     "campsite",
     "youth hostel",
@@ -320,11 +320,11 @@
    "prompt": "Where does a river usually flow fastest on average: near its source in the hills, or near its mouth?",
    "options": [
     {
-     "text": "Often nearer the mouth: it is deeper and smoother, so less energy is lost to friction",
+     "text": "Often near the mouth, where less energy is lost",
      "correct": true
     },
     {
-     "text": "Always near the source, because it is steep",
+     "text": "Always near the source, because it is steepest",
      "correct": false,
      "feedback": "Mountain streams look fast because they splash over rocks, but friction slows them. Lower down, rivers are deeper and smoother, so the average speed is often higher."
     },
@@ -543,16 +543,16 @@
    "prompt": "What is the Earth’s mantle mostly made of?",
    "options": [
     {
-     "text": "Solid rock that flows very, very slowly",
+     "text": "Solid rock that slowly flows",
      "correct": true
     },
     {
-     "text": "A sea of liquid lava",
+     "text": "A deep sea of liquid lava",
      "correct": false,
      "feedback": "A very common idea! The mantle is mostly solid, but hot enough to flow like extremely thick toffee over millions of years."
     },
     {
-     "text": "Water",
+     "text": "Hot water and steam under pressure",
      "correct": false,
      "feedback": "The mantle is rock, not water."
     }
@@ -566,7 +566,7 @@
    "prompt": "How fast do tectonic plates move?",
    "options": [
     {
-     "text": "A few centimetres a year, about as fast as your fingernails grow",
+     "text": "A few centimetres a year",
      "correct": true
     },
     {
@@ -575,7 +575,7 @@
      "feedback": "Much slower than that: centimetres per year."
     },
     {
-     "text": "They don’t move at all",
+     "text": "They don’t move at all any more",
      "correct": false,
      "feedback": "They do move, and GPS can measure it."
     }
@@ -775,9 +775,9 @@
    "prompt": "Which biome, near the Equator, is hot and wet all year with the most species on land?",
    "answer": "tropical rainforest",
    "distractors": [
-    "desert",
-    "tundra",
-    "savanna"
+    "hot desert",
+    "temperate forest",
+    "tropical grassland"
    ],
    "explain": "Tropical rainforests like the Amazon get over 2000 mm of rain a year and stay hot because the Sun is high all year.",
    "accept": [
@@ -820,11 +820,11 @@
    "topic": "geography.biomes",
    "kind": "fact",
    "prompt": "Hot deserts are found about 30° north and south of the Equator. Why?",
-   "answer": "dry air sinks there, so clouds rarely form",
+   "answer": "dry air sinks there",
    "distractors": [
     "they are closest to the Sun",
     "the oceans are colder there",
-    "there are no rivers"
+    "there are no rivers or lakes"
    ],
    "explain": "Air rises at the Equator, drops its rain, then sinks around 30°, warming and drying as it falls.",
    "formats": [
@@ -897,7 +897,7 @@
    "topic": "geography.biomes",
    "kind": "fact",
    "prompt": "Which warm ocean current keeps the UK milder than other places as far north?",
-   "answer": "the North Atlantic Drift (Gulf Stream)",
+   "answer": "the North Atlantic Drift",
    "distractors": [
     "the Humboldt Current",
     "the Agulhas Current",
@@ -1055,16 +1055,16 @@
    "prompt": "Which of these is the best single measure of how developed a country is?",
    "options": [
     {
-     "text": "None is perfect: geographers combine several, such as life expectancy, income and literacy",
+     "text": "None is perfect: combine several measures",
      "correct": true
     },
     {
-     "text": "How many tall buildings it has",
+     "text": "How many tall buildings its capital has",
      "correct": false,
      "feedback": "Buildings don’t tell you about most people’s lives."
     },
     {
-     "text": "How big the country is",
+     "text": "How big the country is in area",
      "correct": false,
      "feedback": "Size has little to do with development."
     }
