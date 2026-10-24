@@ -263,7 +263,7 @@
      "correct": true
     },
     {
-     "text": "The oracle spoke and the king was afraid.",
+     "text": "The oracle spoke and the king was afraid of the prophecy.",
      "correct": false,
      "feedback": "Two main clauses joined by “and”: that is compound."
     },
@@ -345,12 +345,12 @@
      "correct": true
     },
     {
-     "text": "Makes the sentence incorrect",
+     "text": "Makes the sentence a grammatical error",
      "correct": false,
      "feedback": "It is correct, with a comma after the subordinate clause."
     },
     {
-     "text": "Turns it into a question",
+     "text": "Changes the sentence into a question",
      "correct": false,
      "feedback": "It is still a statement."
     }
@@ -377,16 +377,16 @@
    "prompt": "“Silence. Then a roar.” These are minor sentences. What makes them minor?",
    "options": [
     {
-     "text": "They have no main verb, but work for effect",
+     "text": "They have no main verb",
      "correct": true
     },
     {
-     "text": "They are too long",
+     "text": "They are missing a full stop",
      "correct": false,
      "feedback": "They are very short."
     },
     {
-     "text": "They are questions",
+     "text": "They are used only in speech",
      "correct": false,
      "feedback": "They are statements."
     }
@@ -400,16 +400,16 @@
    "prompt": "In “What the Sphinx asked baffled every traveller”, what job does “What the Sphinx asked” do?",
    "options": [
     {
-     "text": "It is a noun clause acting as the subject",
+     "text": "A noun clause acting as the subject",
      "correct": true
     },
     {
-     "text": "It is a relative clause",
+     "text": "A relative clause describing the Sphinx",
      "correct": false,
      "feedback": "It does not describe a noun; it IS the subject."
     },
     {
-     "text": "It is a question",
+     "text": "An adverbial clause of time",
      "correct": false,
      "feedback": "There is no question mark: it is a statement."
     }
@@ -427,7 +427,7 @@
      "correct": true
     },
     {
-     "text": "Orpheus looked back.",
+     "text": "Orpheus never looked back again.",
      "correct": false,
      "feedback": "That is declarative: a statement."
     },
@@ -524,16 +524,16 @@
    "prompt": "“The soldiers who were exhausted surrendered.” vs “The soldiers, who were exhausted, surrendered.” What is the difference?",
    "options": [
     {
-     "text": "The first: only the exhausted soldiers surrendered. The second: all the soldiers surrendered (and all were exhausted).",
+     "text": "First: only the exhausted ones surrendered. Second: all did, and all were exhausted.",
      "correct": true
     },
     {
-     "text": "No difference",
+     "text": "First: all surrendered. Second: only the exhausted ones surrendered.",
      "correct": false,
      "feedback": "The commas change the meaning completely."
     },
     {
-     "text": "The second is wrong",
+     "text": "No difference: the commas only show where to pause for breath.",
      "correct": false,
      "feedback": "Both are correct, but mean different things."
     }
@@ -586,16 +586,16 @@
    "prompt": "Why might a writer choose dashes here: “The Minotaur – half man, half bull – waited in the dark”?",
    "options": [
     {
-     "text": "To make the description dramatic and emphatic",
+     "text": "To make the description more dramatic",
      "correct": true
     },
     {
-     "text": "Because commas are wrong here",
+     "text": "Because commas would be a grammatical error",
      "correct": false,
      "feedback": "Commas would be correct too; dashes are a stylistic choice."
     },
     {
-     "text": "To show missing letters",
+     "text": "To show that letters have been left out",
      "correct": false,
      "feedback": "That is the job of an apostrophe."
     }
@@ -618,7 +618,7 @@
      "feedback": "Parenthetical commas come in pairs: you need one after “heights”."
     },
     {
-     "text": "Kit who hated heights, climbed Mount Olympus.",
+     "text": "Kit who hated heights, climbed up Mount Olympus.",
      "correct": false,
      "feedback": "You need a comma before “who” as well."
     }
@@ -632,16 +632,16 @@
    "prompt": "In “Hermes, the messenger of the gods, wore winged sandals”, what is “the messenger of the gods”?",
    "options": [
     {
-     "text": "A noun phrase in apposition (renaming Hermes)",
+     "text": "A noun phrase in apposition",
      "correct": true
     },
     {
-     "text": "A relative clause",
+     "text": "A relative clause about Hermes",
      "correct": false,
      "feedback": "There is no relative pronoun or verb: it is a noun phrase."
     },
     {
-     "text": "The main clause",
+     "text": "The subject of the sentence",
      "correct": false,
      "feedback": "The main clause is “Hermes wore winged sandals”."
     }
@@ -664,7 +664,7 @@
      "feedback": "That is active: the storm (the doer) is the subject."
     },
     {
-     "text": "The ship sailed into the storm.",
+     "text": "The ship sailed straight into the storm.",
      "correct": false,
      "feedback": "That is active."
     }
@@ -769,7 +769,7 @@
      "feedback": "“was” is common in speech, but the formal subjunctive is “were”."
     },
     {
-     "text": "If I am a god, I would calm the sea.",
+     "text": "If I am a god, I would calm the stormy sea.",
      "correct": false,
      "feedback": "The tenses do not match."
     }
@@ -833,12 +833,12 @@
      "correct": true
     },
     {
-     "text": "Kit arrived and the ship sailed.",
+     "text": "When Kit arrived, the ship was sailing away.",
      "correct": false,
      "feedback": "That is simple past."
     },
     {
-     "text": "Kit has arrived.",
+     "text": "By tomorrow, Kit will have reached the ship.",
      "correct": false,
      "feedback": "That is present perfect."
     }
@@ -856,12 +856,12 @@
      "correct": true
     },
     {
-     "text": "The singing had finished",
+     "text": "The singing had finished before the ship arrived",
      "correct": false,
      "feedback": "That would be “had sung”."
     },
     {
-     "text": "The singing will happen later",
+     "text": "The singing began only once the ship arrived",
      "correct": false,
      "feedback": "It is past, not future."
     }
@@ -898,7 +898,7 @@
    "prompt": "Why are semicolons used in this list? “The guests were Zeus, king of the gods; Poseidon, god of the sea; and Hades, lord of the underworld.”",
    "options": [
     {
-     "text": "The items already contain commas, so semicolons separate them clearly",
+     "text": "The items already contain commas",
      "correct": true
     },
     {
@@ -907,7 +907,7 @@
      "feedback": "Only when items contain commas."
     },
     {
-     "text": "To show possession",
+     "text": "To show each god is less important",
      "correct": false,
      "feedback": "That is an apostrophe’s job."
     }
@@ -944,9 +944,9 @@
    "prompt": "What must come BEFORE a colon?",
    "answer": "a complete main clause",
    "distractors": [
-    "a single word",
-    "a question",
-    "a conjunction"
+    "a single word or phrase",
+    "a subordinate clause",
+    "a coordinating conjunction"
    ],
    "explain": "If the words before the colon could not stand alone as a sentence, the colon is wrong.",
    "formats": [
@@ -964,12 +964,12 @@
      "correct": true
     },
     {
-     "text": "Joining two words",
+     "text": "Joining two words into a compound",
      "correct": false,
      "feedback": "That is a hyphen’s job."
     },
     {
-     "text": "Starting a list",
+     "text": "Introducing a list of what was in the box",
      "correct": false,
      "feedback": "Lists are introduced by colons."
     }
@@ -983,16 +983,16 @@
    "prompt": "“A man eating shark” and “a man-eating shark”. Why does the hyphen matter?",
    "options": [
     {
-     "text": "Without it, a man is eating a shark; with it, the shark eats men",
+     "text": "Without it, the man is the one eating the shark",
      "correct": true
     },
     {
-     "text": "It doesn’t matter",
+     "text": "It doesn’t: both mean a shark that eats men",
      "correct": false,
      "feedback": "It changes who is eating whom!"
     },
     {
-     "text": "Hyphens are only for long words",
+     "text": "The hyphen just makes the phrase look formal",
      "correct": false,
      "feedback": "Hyphens join words into a single description."
     }
@@ -1029,16 +1029,16 @@
    "prompt": "Why does “re-cover the sofa” have a hyphen?",
    "options": [
     {
-     "text": "To avoid confusion with “recover” (get better)",
+     "text": "So it is not read as “recover” (get better)",
      "correct": true
     },
     {
-     "text": "All re- words need hyphens",
+     "text": "Every word beginning with re- needs a hyphen",
      "correct": false,
      "feedback": "Most do not: rebuild, rewrite."
     },
     {
-     "text": "It is a mistake",
+     "text": "It is a mistake: it should be one word",
      "correct": false,
      "feedback": "It is correct and useful here."
     }
@@ -1121,7 +1121,7 @@
    "prompt": "Which of these is acceptable for something belonging to Achilles?",
    "options": [
     {
-     "text": "Achilles’ armour (and Achilles’s is also used)",
+     "text": "Achilles’ armour",
      "correct": true
     },
     {
@@ -1253,7 +1253,7 @@
      "correct": true
     },
     {
-     "text": "The captain said that we will sail tomorrow.",
+     "text": "The captain said that we will be sailing tomorrow.",
      "correct": false,
      "feedback": "will → would, we → they, tomorrow → the next day."
     },
@@ -1281,7 +1281,7 @@
      "feedback": "“We was” is non-standard; use “we were”."
     },
     {
-     "text": "Us was going to the museum.",
+     "text": "Us was going to the big museum.",
      "correct": false,
      "feedback": "“Us” cannot be the subject."
     }
@@ -1341,16 +1341,16 @@
    "prompt": "Which version fits a formal letter to a museum?",
    "options": [
     {
-     "text": "I would be grateful if you could tell me when the exhibition opens.",
+     "text": "I would be grateful to know when the exhibition opens.",
      "correct": true
     },
     {
-     "text": "When’s the exhibition opening, then?",
+     "text": "Hi there, when’s the exhibition opening, then?",
      "correct": false,
      "feedback": "Too chatty for a formal letter."
     },
     {
-     "text": "Tell me when the exhibition opens.",
+     "text": "You must tell me when the exhibition opens, please.",
      "correct": false,
      "feedback": "Too blunt: a command."
     }
@@ -1368,7 +1368,7 @@
      "correct": true
     },
     {
-     "text": "The secret was between Kit and I.",
+     "text": "The secret was just between Kit and I.",
      "correct": false,
      "feedback": "After a preposition like “between”, use “me”."
     },
@@ -1419,9 +1419,9 @@
    "prompt": "The Greek root “graph” (as in autograph, paragraph, biography) means…",
    "answer": "write or draw",
    "distractors": [
-    "speak",
-    "see",
-    "measure"
+    "speak or say",
+    "see or look",
+    "measure or count"
    ],
    "explain": "graph: write or draw. Think of autograph.",
    "formats": [
@@ -1435,9 +1435,9 @@
    "prompt": "The Greek root “path” (as in sympathy, empathy, pathetic) means…",
    "answer": "feeling or suffering",
    "distractors": [
-    "road",
-    "thought",
-    "people"
+    "road or journey",
+    "thought or idea",
+    "people or crowd"
    ],
    "explain": "path: feeling or suffering. Think of sympathy.",
    "formats": [
@@ -1451,9 +1451,9 @@
    "prompt": "The Greek root “psych” (as in psychology, psychic, psychiatrist) means…",
    "answer": "mind or soul",
    "distractors": [
-    "body",
-    "water",
-    "god"
+    "body or flesh",
+    "water or sea",
+    "god or heaven"
    ],
    "explain": "psych: mind or soul. Think of psychology.",
    "formats": [
@@ -1483,9 +1483,9 @@
    "prompt": "The Greek root “kratos (-cracy)” (as in democracy, aristocracy, bureaucracy) means…",
    "answer": "rule or power",
    "distractors": [
-    "study",
-    "love",
-    "fear"
+    "study or science",
+    "love or friendship",
+    "fear or terror"
    ],
    "explain": "kratos (-cracy): rule or power. Think of democracy.",
    "formats": [
@@ -1627,9 +1627,9 @@
    "prompt": "The Greek root “logos (-logy)” (as in biology, archaeology, mythology) means…",
    "answer": "word, reason or study",
    "distractors": [
-    "fear",
-    "rule",
-    "measure"
+    "fear, dread or panic",
+    "rule, power or law",
+    "measure, size or scale"
    ],
    "explain": "logos (-logy): word, reason or study. Think of biology.",
    "formats": [
@@ -1659,9 +1659,9 @@
    "prompt": "The Greek root “phone” (as in telephone, symphony, phonics) means…",
    "answer": "sound or voice",
    "distractors": [
-    "light",
-    "picture",
-    "writing"
+    "light or brightness",
+    "picture or image",
+    "writing or letters"
    ],
    "explain": "phone: sound or voice. Think of telephone.",
    "formats": [
@@ -1675,9 +1675,9 @@
    "prompt": "The Greek root “anthropos” (as in anthropology, philanthropy, misanthrope) means…",
    "answer": "human being",
    "distractors": [
-    "animal",
-    "god",
-    "plant"
+    "wild animal",
+    "god of war",
+    "living plant"
    ],
    "explain": "anthropos: human being. Think of anthropology.",
    "formats": [
@@ -1734,7 +1734,7 @@
      "correct": true
     },
     {
-     "text": "one language",
+     "text": "only one language",
      "correct": false,
      "feedback": "“poly” means many."
     },
@@ -1780,12 +1780,12 @@
      "correct": true
     },
     {
-     "text": "fear of words",
+     "text": "fear of written words",
      "correct": false,
      "feedback": "“dys” means bad or difficult, not fear."
     },
     {
-     "text": "love of words",
+     "text": "love of long words",
      "correct": false,
      "feedback": "That would be philo-."
     }
@@ -1943,9 +1943,9 @@
    "prompt": "The Latin root “bene” (as in benefit, benevolent, benefactor) means…",
    "answer": "good or well",
    "distractors": [
-    "bad",
-    "big",
-    "before"
+    "bad or ill",
+    "big or great",
+    "before or first"
    ],
    "explain": "bene: good or well. Think of benefit.",
    "formats": [
@@ -1975,9 +1975,9 @@
    "prompt": "The Latin root “terra” (as in terrain, territory, subterranean) means…",
    "answer": "land or earth",
    "distractors": [
-    "water",
-    "air",
-    "fire"
+    "water or sea",
+    "air or sky",
+    "fire or flame"
    ],
    "explain": "terra: land or earth. Think of terrain.",
    "formats": [
@@ -1991,7 +1991,7 @@
    "prompt": "Why is “television” called a hybrid word?",
    "options": [
     {
-     "text": "It joins a Greek root (tele, far) to a Latin one (visio, seeing)",
+     "text": "It joins a Greek root to a Latin one",
      "correct": true
     },
     {
@@ -2000,7 +2000,7 @@
      "feedback": "Hybrid here means mixed languages."
     },
     {
-     "text": "It has two meanings",
+     "text": "It joins two Greek roots together",
      "correct": false,
      "feedback": "It means mixed origins."
     }
@@ -2041,12 +2041,12 @@
      "correct": true
     },
     {
-     "text": "The study of insects",
+     "text": "The study of how insects behave",
      "correct": false,
      "feedback": "That is entomology: a classic mix-up!"
     },
     {
-     "text": "The study of handwriting",
+     "text": "The study of how words are spelt",
      "correct": false,
      "feedback": "That is graphology."
     }
@@ -2083,9 +2083,9 @@
    "prompt": "The word “panic” comes from…",
    "answer": "Pan, the wild god whose sudden shouts terrified travellers",
    "distractors": [
-    "Zeus, king of the gods",
-    "Poseidon, who shook the earth",
-    "Hermes, who tricked Apollo"
+    "Zeus, whose thunderbolts terrified mortals below",
+    "Poseidon, whose earthquakes sent whole cities fleeing in chaos",
+    "Hermes, who stole Apollo’s cattle on his first day"
    ],
    "explain": "panic: from Pan, the wild god whose sudden shouts terrified travellers.",
    "formats": [
@@ -2097,13 +2097,13 @@
    "topic": "english.lang-myth-words",
    "kind": "fact",
    "prompt": "The word “echo” comes from…",
-   "answer": "the nymph Echo, cursed by Hera to repeat only the last words she heard",
+   "answer": "the nymph Echo, cursed to repeat the last words she heard",
    "distractors": [
-    "the goddess Eos, who brought the dawn",
-    "the hero Hector of Troy",
-    "the god Eros, who shot arrows of love"
+    "the goddess Eos, who opened the gates of dawn every morning",
+    "the Trojan prince Hector, famous for his thunderous battle cry",
+    "the god Eros, whose arrows made gods and mortals fall in love"
    ],
-   "explain": "echo: from the nymph Echo, cursed by Hera to repeat only the last words she heard.",
+   "explain": "echo: from the nymph Echo, cursed to repeat the last words she heard.",
    "formats": [
     "choice"
    ]
@@ -2115,8 +2115,8 @@
    "prompt": "The word “narcissist” comes from…",
    "answer": "Narcissus, who fell in love with his own reflection",
    "distractors": [
-    "Nestor, the wise old king",
-    "Nemesis, goddess of revenge",
+    "Nestor, the old king who never stopped talking about himself",
+    "Nemesis, the goddess who punished human arrogance",
     "Nereus, the old man of the sea"
    ],
    "explain": "narcissist: from Narcissus, who fell in love with his own reflection.",
@@ -2129,13 +2129,13 @@
    "topic": "english.lang-myth-words",
    "kind": "fact",
    "prompt": "The word “tantalise” comes from…",
-   "answer": "Tantalus, punished with food and water always just out of reach",
+   "answer": "Tantalus, punished with food and drink just out of reach",
    "distractors": [
-    "Talos, the bronze giant",
+    "Talos, the bronze giant who guarded the island of Crete",
     "Tartarus, the deepest pit of the underworld",
-    "Theseus, who slew the Minotaur"
+    "Theseus, who found his way out of the Labyrinth"
    ],
-   "explain": "tantalise: from Tantalus, punished with food and water always just out of reach.",
+   "explain": "tantalise: from Tantalus, punished with food and drink just out of reach.",
    "formats": [
     "choice"
    ]
@@ -2149,7 +2149,7 @@
    "distractors": [
     "Oedipus, who answered the Sphinx",
     "Orion, the great hunter",
-    "Orpheus, who sang his way into the underworld"
+    "Orpheus, who sang his way into the underworld and back again"
    ],
    "explain": "odyssey: from Odysseus, whose journey home from Troy took ten years.",
    "formats": [
@@ -2163,8 +2163,8 @@
    "prompt": "The word “nemesis” comes from…",
    "answer": "Nemesis, goddess of retribution who punished arrogance",
    "distractors": [
-    "Nike, goddess of victory",
-    "Nyx, goddess of night",
+    "Nike, the winged goddess who brought victory in battle",
+    "Nyx, goddess of night and mother of many dark powers",
     "Narcissus, who loved his reflection"
    ],
    "explain": "nemesis: from Nemesis, goddess of retribution who punished arrogance.",
@@ -2179,9 +2179,9 @@
    "prompt": "The word “titanic” comes from…",
    "answer": "the Titans, the giant gods who ruled before the Olympians",
    "distractors": [
-    "Triton, son of Poseidon",
-    "Tithonus, who lived for ever",
-    "Typhon, the storm monster"
+    "Triton, the mighty son of Poseidon who calmed the waves",
+    "Tithonus, granted eternal life but not eternal youth",
+    "Typhon, the colossal storm monster who fought Zeus"
    ],
    "explain": "titanic: from the Titans, the giant gods who ruled before the Olympians.",
    "formats": [
@@ -2193,13 +2193,13 @@
    "topic": "english.lang-myth-words",
    "kind": "fact",
    "prompt": "The word “herculean” comes from…",
-   "answer": "Heracles (Hercules to the Romans) and his twelve impossible labours",
+   "answer": "Heracles (Hercules to the Romans) and his twelve labours",
    "distractors": [
-    "Hera, queen of the gods",
-    "Hermes, the messenger",
-    "Helios, the sun god"
+    "Hera, queen of the gods, who set impossible tasks",
+    "Hermes, the messenger who ran errands for every god",
+    "Helios, who drove the sun’s chariot across the sky"
    ],
-   "explain": "herculean: from Heracles (Hercules to the Romans) and his twelve impossible labours.",
+   "explain": "herculean: from Heracles (Hercules to the Romans) and his twelve labours.",
    "formats": [
     "choice"
    ]
@@ -2209,13 +2209,13 @@
    "topic": "english.lang-myth-words",
    "kind": "fact",
    "prompt": "The word “mentor” comes from…",
-   "answer": "Mentor, the friend of Odysseus whose form Athena took to guide his son Telemachus",
+   "answer": "Mentor, whose form Athena took to guide Telemachus",
    "distractors": [
-    "Menelaus, king of Sparta",
-    "Medea, the sorceress",
-    "Midas, the golden king"
+    "Menelaus, king of Sparta, who advised the young Greek heroes",
+    "Medea, the sorceress who taught Jason her secrets",
+    "Midas, the king whose touch turned all to gold"
    ],
-   "explain": "mentor: from Mentor, the friend of Odysseus whose form Athena took to guide his son Telemachus.",
+   "explain": "mentor: from Mentor, whose form Athena took to guide Telemachus.",
    "formats": [
     "choice"
    ]
@@ -2243,9 +2243,9 @@
    "prompt": "The word “atlas (a book of maps)” comes from…",
    "answer": "Atlas, the Titan made to hold up the heavens",
    "distractors": [
-    "Athena, goddess of wisdom",
-    "Ajax, the mighty warrior",
-    "Artemis, the hunter"
+    "Athena, goddess of wisdom and patron of Athens",
+    "Ajax, the giant warrior who carried a huge shield",
+    "Artemis, the hunter who roamed every mountain"
    ],
    "explain": "atlas (a book of maps): from Atlas, the Titan made to hold up the heavens.",
    "formats": [
@@ -2259,9 +2259,9 @@
    "prompt": "The word “music” comes from…",
    "answer": "the Muses, the nine goddesses of the arts",
    "distractors": [
-    "Midas, who had ass’s ears",
-    "Medusa, the Gorgon",
-    "Minos, king of Crete"
+    "Midas, who was given ass’s ears by Apollo",
+    "Medusa, the Gorgon with snakes for hair",
+    "Minos, the king of Crete who built a palace"
    ],
    "explain": "music: from the Muses, the nine goddesses of the arts.",
    "formats": [
@@ -2279,12 +2279,12 @@
      "correct": true
     },
     {
-     "text": "A very fast runner",
+     "text": "Someone who can run faster than anyone else",
      "correct": false,
      "feedback": "Achilles was swift, but the phrase is about weakness."
     },
     {
-     "text": "A type of armour",
+     "text": "A piece of armour that protects the ankle",
      "correct": false,
      "feedback": "It is a weakness."
     }
@@ -2298,16 +2298,16 @@
    "prompt": "If someone “opens Pandora’s box”, what have they done?",
    "options": [
     {
-     "text": "Started something that causes many unforeseen problems",
+     "text": "Started something that causes many problems",
      "correct": true
     },
     {
-     "text": "Found hidden treasure",
+     "text": "Found a treasure that everyone else had missed",
      "correct": false,
      "feedback": "Pandora released the world’s troubles."
     },
     {
-     "text": "Kept a promise",
+     "text": "Kept a secret they had promised to protect",
      "correct": false,
      "feedback": "Pandora was told not to open it."
     }
@@ -2321,16 +2321,16 @@
    "prompt": "Why is a harmful computer program disguised as something useful called a Trojan horse?",
    "options": [
     {
-     "text": "Like the wooden horse, it hides enemies inside a gift",
+     "text": "Like the wooden horse, it hides danger inside a gift",
      "correct": true
     },
     {
-     "text": "It was invented in Troy",
+     "text": "It attacks the computer from every side at once",
      "correct": false,
      "feedback": "The name comes from the myth."
     },
     {
-     "text": "It runs very fast",
+     "text": "It spreads as fast as a galloping horse",
      "correct": false,
      "feedback": "It is about disguise."
     }
@@ -2348,12 +2348,12 @@
      "correct": true
     },
     {
-     "text": "ruins everything",
+     "text": "spoils everything they try to improve",
      "correct": false,
      "feedback": "It is usually used positively today."
     },
     {
-     "text": "cannot touch anything",
+     "text": "cannot hold on to their money for long",
      "correct": false,
      "feedback": "It is about turning things to gold."
     }
@@ -2367,9 +2367,9 @@
    "prompt": "What does “hubris” mean?",
    "answer": "excessive pride that leads to downfall",
    "distractors": [
-    "deep sadness",
-    "great courage",
-    "quiet humility"
+    "deep sadness that follows a great loss",
+    "great courage shown in the face of danger",
+    "quiet humility before the gods"
    ],
    "explain": "hubris: excessive pride that leads to downfall. In Greek tragedy, the hero’s hubris angers the gods.",
    "formats": [
@@ -2401,9 +2401,9 @@
    "prompt": "What does “draconian” mean?",
    "answer": "excessively harsh (of laws or punishments)",
    "distractors": [
-    "very generous",
-    "old-fashioned",
-    "magical"
+    "very generous (of rulers or gifts)",
+    "old-fashioned (of customs or laws)",
+    "magical (of creatures or spells)"
    ],
    "explain": "draconian: excessively harsh (of laws or punishments). From Draco, an Athenian lawgiver whose laws punished even small crimes with death.",
    "formats": [
@@ -2418,9 +2418,9 @@
    "prompt": "What does “ostracise” mean?",
    "answer": "to exclude someone from a group",
    "distractors": [
-    "to praise publicly",
-    "to elect a leader",
-    "to forgive"
+    "to praise someone in front of a crowd",
+    "to choose someone as the group’s leader",
+    "to forgive someone for a wrong"
    ],
    "explain": "ostracise: to exclude someone from a group. Athenians voted to exile a citizen by writing his name on pottery shards called ostraka.",
    "formats": [
@@ -2435,9 +2435,9 @@
    "prompt": "What does “stoic” mean?",
    "answer": "enduring hardship without complaining",
    "distractors": [
-    "easily upset",
-    "very wealthy",
-    "deceitful"
+    "easily upset by small difficulties",
+    "very wealthy but careful with money",
+    "deceitful and hard to trust"
    ],
    "explain": "stoic: enduring hardship without complaining. From the Stoa, the painted porch in Athens where Zeno taught.",
    "formats": [
@@ -2452,9 +2452,9 @@
    "prompt": "What does “catharsis” mean?",
    "answer": "the release of strong emotions, bringing relief",
    "distractors": [
-    "a feeling of boredom",
-    "a kind of illness",
-    "a sudden fear"
+    "a feeling of boredom after too much excitement",
+    "a kind of illness that comes on suddenly",
+    "a sudden fear of what will happen next"
    ],
    "explain": "catharsis: the release of strong emotions, bringing relief. Aristotle said tragedy gives the audience catharsis.",
    "formats": [
@@ -2469,9 +2469,9 @@
    "prompt": "What does “epiphany” mean?",
    "answer": "a sudden moment of understanding",
    "distractors": [
-    "a long journey",
-    "a gift",
-    "a mistake"
+    "a long journey to a holy place",
+    "a gift given at a festival",
+    "a mistake that cannot be undone"
    ],
    "explain": "epiphany: a sudden moment of understanding. In the shower, Kit had an epiphany about the riddle.",
    "formats": [
@@ -2486,9 +2486,9 @@
    "prompt": "What does “cacophony” mean?",
    "answer": "a harsh, unpleasant mixture of sounds",
    "distractors": [
-    "a sweet melody",
-    "complete silence",
-    "a single note"
+    "a sweet, gentle melody played softly",
+    "complete silence after a loud noise",
+    "a single note held for a long time"
    ],
    "explain": "cacophony: a harsh, unpleasant mixture of sounds. The cacophony of the harpies’ shrieks filled the hall.",
    "formats": [
@@ -2503,9 +2503,9 @@
    "prompt": "What does “ominous” mean?",
    "answer": "suggesting something bad is about to happen",
    "distractors": [
-    "cheerful",
-    "ancient",
-    "enormous"
+    "cheerful and full of hope for the future",
+    "ancient and worn away by time",
+    "enormous and impossible to ignore"
    ],
    "explain": "ominous: suggesting something bad is about to happen. Ominous clouds gathered over the Trojan plain.",
    "formats": [
@@ -2520,9 +2520,9 @@
    "prompt": "What does “poignant” mean?",
    "answer": "deeply moving, causing sadness",
    "distractors": [
-    "very funny",
-    "boring",
-    "confusing"
+    "very funny, causing laughter",
+    "boring and far too long",
+    "confusing and hard to follow"
    ],
    "explain": "poignant: deeply moving, causing sadness. The old dog recognising Odysseus is one of the most poignant moments in Homer.",
    "formats": [
@@ -2537,9 +2537,9 @@
    "prompt": "What does “juxtaposition” mean?",
    "answer": "placing two contrasting things side by side",
    "distractors": [
-    "a repeated sound",
-    "a long speech",
-    "an exaggeration"
+    "repeating a sound at the start of words",
+    "a long speech given by one character",
+    "exaggerating something for effect"
    ],
    "explain": "juxtaposition: placing two contrasting things side by side. The juxtaposition of the feast and the beggar made the hall feel cruel.",
    "formats": [
@@ -2554,9 +2554,9 @@
    "prompt": "What does “ambiguous” mean?",
    "answer": "open to more than one interpretation",
    "distractors": [
-    "perfectly clear",
-    "very loud",
-    "untrue"
+    "perfectly clear with only one meaning",
+    "very loud and hard to ignore",
+    "untrue or made up on purpose"
    ],
    "explain": "ambiguous: open to more than one interpretation. The oracle’s answers were always ambiguous.",
    "formats": [
@@ -2571,9 +2571,9 @@
    "prompt": "What does “vindicate” mean?",
    "answer": "to prove someone right or innocent",
    "distractors": [
-    "to blame",
-    "to forget",
-    "to punish"
+    "to blame someone for a crime",
+    "to forget an insult or wrong",
+    "to punish someone very harshly"
    ],
    "explain": "vindicate: to prove someone right or innocent. The new evidence vindicated Theo.",
    "formats": [
@@ -2586,17 +2586,17 @@
    "topic": "english.lang-vocab",
    "kind": "fact",
    "prompt": "What does “paradox” mean?",
-   "answer": "a statement that seems to contradict itself but may be true",
+   "answer": "a statement that seems to contradict itself",
    "distractors": [
-    "a simple fact",
-    "a rhyme",
-    "a lie"
+    "a simple fact that everyone accepts",
+    "a pair of lines that rhyme",
+    "a lie told to win an argument"
    ],
-   "explain": "paradox: a statement that seems to contradict itself but may be true. “I know that I know nothing” is a famous paradox attributed to Socrates.",
+   "explain": "paradox: a statement that seems to contradict itself. “I know that I know nothing” is a famous paradox attributed to Socrates.",
    "formats": [
     "choice"
    ],
-   "learn": "**paradox**: a statement that seems to contradict itself but may be true.\n_“I know that I know nothing” is a famous paradox attributed to Socrates._"
+   "learn": "**paradox**: a statement that seems to contradict itself.\n_“I know that I know nothing” is a famous paradox attributed to Socrates._"
   },
   {
    "id": "english.lang.rh.ethos",
@@ -2605,11 +2605,11 @@
    "prompt": "Which appeal is ETHOS?",
    "options": [
     {
-     "text": "Persuading through the speaker’s credibility and character",
+     "text": "Persuading through the speaker’s credibility",
      "correct": true
     },
     {
-     "text": "Persuading through emotion",
+     "text": "Persuading through the audience’s emotions",
      "correct": false,
      "feedback": "That is pathos."
     },
@@ -2674,7 +2674,7 @@
    "prompt": "“We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields…” What device is Churchill using?",
    "options": [
     {
-     "text": "anaphora (repeating words at the start of clauses)",
+     "text": "anaphora",
      "correct": true
     },
     {
@@ -2688,7 +2688,7 @@
      "feedback": "No contradictory pairing."
     }
    ],
-   "explain": "Anaphora builds rhythm and determination. Churchill, June 1940."
+   "explain": "Anaphora (repeating words at the start of clauses) builds rhythm and determination. Churchill, June 1940."
   },
   {
    "id": "english.lang.rh.antithesis",
@@ -2697,7 +2697,7 @@
    "prompt": "“That’s one small step for man, one giant leap for mankind.” What device?",
    "options": [
     {
-     "text": "antithesis (contrasting ideas in a balanced structure)",
+     "text": "antithesis",
      "correct": true
     },
     {
@@ -2766,16 +2766,16 @@
    "prompt": "What is the purpose of a rhetorical question?",
    "options": [
     {
-     "text": "To make the audience think, without expecting an answer",
+     "text": "To make listeners think rather than reply",
      "correct": true
     },
     {
-     "text": "To ask for information",
+     "text": "To find out what the audience already knows",
      "correct": false,
      "feedback": "Real questions do that."
     },
     {
-     "text": "To end the speech",
+     "text": "To give the audience a moment to answer",
      "correct": false,
      "feedback": "They can come anywhere."
     }
@@ -2789,16 +2789,16 @@
    "prompt": "Why does a good persuasive speech include a counter-argument?",
    "options": [
     {
-     "text": "Rebutting the other side makes your case look stronger and fairer",
+     "text": "It makes your case look stronger and fairer",
      "correct": true
     },
     {
-     "text": "To confuse the audience",
+     "text": "It confuses the audience so they stop disagreeing",
      "correct": false,
      "feedback": "It shows you have considered other views."
     },
     {
-     "text": "It is a rule of grammar",
+     "text": "Persuasive speeches must always be balanced",
      "correct": false,
      "feedback": "It is a rhetorical choice."
     }
@@ -2816,12 +2816,12 @@
      "correct": true
     },
     {
-     "text": "Because “I” is incorrect",
+     "text": "Because “I” is grammatically incorrect in speeches",
      "correct": false,
      "feedback": "Inclusive pronouns are a choice."
     },
     {
-     "text": "To sound more formal",
+     "text": "To sound more formal and less personal",
      "correct": false,
      "feedback": "It is about unity, not formality."
     }
@@ -2871,16 +2871,16 @@
    "prompt": "Martin Luther King repeated “I have a dream” at the start of several sentences. Why is this effective?",
    "options": [
     {
-     "text": "The repetition builds rhythm, hope and a vision the audience remembers",
+     "text": "The repetition builds rhythm and a memorable vision",
      "correct": true
     },
     {
-     "text": "He forgot what he had said",
+     "text": "He had forgotten that he had already said it",
      "correct": false,
      "feedback": "It was deliberate anaphora."
     },
     {
-     "text": "It makes the speech shorter",
+     "text": "Repeating a phrase makes the speech easier to write",
      "correct": false,
      "feedback": "Repetition adds length but also power."
     }
@@ -2898,7 +2898,7 @@
      "correct": true
     },
     {
-     "text": "a change to the building",
+     "text": "a planned change to the old building",
      "correct": false,
      "feedback": "Neutral and calm."
     },
@@ -2990,12 +2990,12 @@
      "correct": true
     },
     {
-     "text": "Mira was very scared.",
+     "text": "Mira was very scared, more scared than she had ever been.",
      "correct": false,
      "feedback": "This tells the emotion directly."
     },
     {
-     "text": "Mira felt fear.",
+     "text": "Mira felt a terrible fear growing inside her.",
      "correct": false,
      "feedback": "This names the emotion."
     }
@@ -3082,7 +3082,7 @@
      "correct": true
     },
     {
-     "text": "a first-person narrator",
+     "text": "a first-person narrator who sees everything",
      "correct": false,
      "feedback": "First-person narrators only know their own thoughts."
     },
@@ -3105,12 +3105,12 @@
      "correct": true
     },
     {
-     "text": "The beach was nice.",
+     "text": "The beach was beautiful and the day was very pleasant.",
      "correct": false,
      "feedback": "No sensory detail at all."
     },
     {
-     "text": "There was a beach with some birds.",
+     "text": "There was a long beach with some birds and a few old boats.",
      "correct": false,
      "feedback": "Sight only, and very vague."
     }
@@ -3143,12 +3143,12 @@
      "correct": true
     },
     {
-     "text": "One day I woke up and had breakfast.",
+     "text": "One day I woke up, got dressed and went down to have my breakfast.",
      "correct": false,
      "feedback": "Ordinary details do not create intrigue."
     },
     {
-     "text": "This is a story about a monster.",
+     "text": "This is a story about a monster that lived near our small village.",
      "correct": false,
      "feedback": "It tells rather than intrigues."
     }
@@ -3189,12 +3189,12 @@
      "correct": true
     },
     {
-     "text": "It makes the story more distant",
+     "text": "It makes the story feel more distant and formal",
      "correct": false,
      "feedback": "It does the opposite."
     },
     {
-     "text": "It shows an omniscient view",
+     "text": "It shows the narrator knows everyone’s thoughts",
      "correct": false,
      "feedback": "Second person is close, not all-knowing."
     }
@@ -3659,12 +3659,12 @@
      "correct": true
     },
     {
-     "text": "a simile",
+     "text": "a repeated simile",
      "correct": false,
      "feedback": "A simile uses like or as."
     },
     {
-     "text": "a motif",
+     "text": "a recurring motif",
      "correct": false,
      "feedback": "A motif is a repeated image or idea, not one continuous comparison."
     }
@@ -3678,16 +3678,16 @@
    "prompt": "In a structure question, what is a “shift in focus”?",
    "options": [
     {
-     "text": "A point where the writer moves the reader’s attention, e.g. from the wide setting to one character",
+     "text": "A point where the writer moves the reader’s attention elsewhere",
      "correct": true
     },
     {
-     "text": "A change of font",
+     "text": "A point where the writer switches to a new font or colour",
      "correct": false,
      "feedback": "Structure is about the order and focus of ideas."
     },
     {
-     "text": "A spelling change",
+     "text": "A place where a word is spelt in an unusual or old-fashioned way",
      "correct": false,
      "feedback": "Not a structural feature."
     }
@@ -3705,12 +3705,12 @@
      "correct": true
     },
     {
-     "text": "The writer uses a verb.",
+     "text": "The writer uses the word “clawed”, which is a verb, to describe the storm.",
      "correct": false,
      "feedback": "It names a feature but explains nothing."
     },
     {
-     "text": "This makes it more interesting.",
+     "text": "The storm is very violent and the ship is in a lot of danger here.",
      "correct": false,
      "feedback": "Too vague: how and why?"
     }
@@ -3793,16 +3793,16 @@
    "prompt": "A Victorian travel writer calls a Greek ruin “a sad heap of stones”; a modern guide calls it “breathtaking”. What should a comparison focus on?",
    "options": [
     {
-     "text": "How and why their viewpoints differ, and the methods each uses",
+     "text": "How and why their viewpoints and methods differ",
      "correct": true
     },
     {
-     "text": "Which writer is right",
+     "text": "Which writer is right about the ruin today",
      "correct": false,
      "feedback": "Comparison analyses views; it doesn’t judge which is correct."
     },
     {
-     "text": "Summarising each text separately",
+     "text": "Summarising what each text says, one after the other",
      "correct": false,
      "feedback": "You must compare as you go."
     }
@@ -3816,16 +3816,16 @@
    "prompt": "A “summary of differences” question tests what skill?",
    "options": [
     {
-     "text": "Synthesis: drawing information from both texts together",
+     "text": "Synthesis: combining information from both texts",
      "correct": true
     },
     {
-     "text": "Spelling",
+     "text": "Spelling and punctuation in a short answer",
      "correct": false,
      "feedback": "It tests reading."
     },
     {
-     "text": "Creative writing",
+     "text": "Creative writing inspired by the two texts",
      "correct": false,
      "feedback": "It is a reading skill."
     }
@@ -3866,12 +3866,12 @@
      "correct": true
     },
     {
-     "text": "Everything in it must be true",
+     "text": "Everything in it must be true because it is printed",
      "correct": false,
      "feedback": "Leaflets persuade; they can be selective."
     },
     {
-     "text": "It is a work of fiction",
+     "text": "It is fiction, so none of it can be trusted at all",
      "correct": false,
      "feedback": "It is non-fiction, but persuasive."
     }
@@ -3885,16 +3885,16 @@
    "prompt": "“The tourists stepped around the beggar without looking down.” What can you infer?",
    "options": [
     {
-     "text": "The tourists ignore or do not care about the beggar",
+     "text": "The tourists don’t care about the beggar",
      "correct": true
     },
     {
-     "text": "The tourists are lost",
+     "text": "The tourists are lost and looking at their map",
      "correct": false,
      "feedback": "There is no evidence of that."
     },
     {
-     "text": "The beggar is asleep",
+     "text": "The tourists are in a hurry to catch a boat",
      "correct": false,
      "feedback": "Nothing suggests that."
     }
@@ -3908,16 +3908,16 @@
    "prompt": "Why might a 19th-century text sound very different from a 21st-century one on the same subject?",
    "options": [
     {
-     "text": "Language, attitudes and context have changed over time",
+     "text": "Language, attitudes and context have changed",
      "correct": true
     },
     {
-     "text": "People were less intelligent",
+     "text": "People in the 19th century were less intelligent",
      "correct": false,
      "feedback": "No: the context was different."
     },
     {
-     "text": "There was no punctuation",
+     "text": "Punctuation had not yet been properly invented",
      "correct": false,
      "feedback": "There was plenty, often more!"
     }
@@ -3931,16 +3931,16 @@
    "prompt": "Which comparative sentence is strongest?",
    "options": [
     {
-     "text": "While the first writer uses statistics to persuade, the second relies on an emotive personal anecdote.",
+     "text": "While Text A persuades with statistics, Text B relies on an emotive anecdote.",
      "correct": true
     },
     {
-     "text": "Both texts are about the sea.",
+     "text": "Both texts are about the sea, and both writers clearly love it very much.",
      "correct": false,
      "feedback": "True, but too general."
     },
     {
-     "text": "Text A is good and Text B is also good.",
+     "text": "Text A uses statistics. Text B uses an anecdote. Both are persuasive.",
      "correct": false,
      "feedback": "No methods or evidence."
     }
@@ -4000,16 +4000,16 @@
    "prompt": "“There was only one thing waiting in the cave: the Minotaur.” What does the colon do?",
    "options": [
     {
-     "text": "It delays and then delivers a dramatic reveal",
+     "text": "It delays, then delivers a dramatic reveal",
      "correct": true
     },
     {
-     "text": "It starts a list",
+     "text": "It introduces a list of things in the cave",
      "correct": false,
      "feedback": "Only one item follows."
     },
     {
-     "text": "It joins two questions",
+     "text": "It joins two separate questions together",
      "correct": false,
      "feedback": "There are no questions."
     }
@@ -4027,12 +4027,12 @@
      "correct": true
     },
     {
-     "text": "it saves time",
+     "text": "it saves time when the reader is tired",
      "correct": false,
      "feedback": "It is about impact."
     },
     {
-     "text": "paragraphs must be short",
+     "text": "paragraphs in stories must always be short",
      "correct": false,
      "feedback": "It is a deliberate contrast with longer paragraphs."
     }
@@ -4046,11 +4046,11 @@
    "prompt": "“I never meant to –” Why does the dash end the speech?",
    "options": [
     {
-     "text": "It shows the speaker being interrupted or breaking off",
+     "text": "It shows the speaker breaking off",
      "correct": true
     },
     {
-     "text": "It joins two words",
+     "text": "It joins two words into one",
      "correct": false,
      "feedback": "That would be a hyphen."
     },
@@ -4069,16 +4069,16 @@
    "prompt": "“Zeus ruled the sky; Poseidon ruled the sea; Hades ruled the dead.” What does the semicolon structure create?",
    "options": [
     {
-     "text": "Balance and parallelism, stressing the division of power",
+     "text": "Balance, stressing how power is divided",
      "correct": true
     },
     {
-     "text": "Confusion",
+     "text": "Confusion about who rules what",
      "correct": false,
      "feedback": "The pattern is very clear."
     },
     {
-     "text": "A question",
+     "text": "A list of questions about the gods",
      "correct": false,
      "feedback": "They are statements."
     }
@@ -4092,16 +4092,16 @@
    "prompt": "“The hero (if you can call him that) ran away.” What do the brackets add?",
    "options": [
     {
-     "text": "A sarcastic narrative aside that reveals the narrator’s opinion",
+     "text": "A sarcastic aside revealing the narrator’s opinion",
      "correct": true
     },
     {
-     "text": "A definition",
+     "text": "A definition explaining what a hero is to the reader",
      "correct": false,
      "feedback": "It is a comment, not a definition."
     },
     {
-     "text": "A list",
+     "text": "A list of the hero’s other names",
      "correct": false,
      "feedback": "Only one aside."
     }
@@ -4119,12 +4119,12 @@
      "correct": true
     },
     {
-     "text": "They are not allowed in stories",
+     "text": "They are not allowed in stories, only in speech",
      "correct": false,
      "feedback": "They are allowed, just powerful when rare."
     },
     {
-     "text": "They are only for questions",
+     "text": "They can only be used at the end of questions",
      "correct": false,
      "feedback": "Questions take question marks."
     }
@@ -4142,7 +4142,7 @@
      "correct": true
     },
     {
-     "text": "make the ending unclear by mistake",
+     "text": "make the ending confusing for the reader by mistake",
      "correct": false,
      "feedback": "When deliberate, it provokes reflection."
     },

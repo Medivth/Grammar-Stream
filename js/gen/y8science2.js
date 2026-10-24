@@ -147,11 +147,11 @@ export const Y8_SCIENCE2_GENERATORS = {
 
   y8tVariables(level, rng) {
     const EXP = [
-      ['how the temperature of the acid affects the rate of reaction with marble chips', 'temperature of the acid', 'rate of reaction (volume of gas per second)', ['concentration of acid', 'mass and size of marble chips', 'volume of acid']],
+      ['how the temperature of the acid affects the rate of reaction with marble chips', 'temperature of the acid', 'volume of gas per second', ['concentration of the acid', 'size of the marble chips', 'volume of the acid used']],
       ['how the length of a wire affects its resistance', 'length of the wire', 'resistance', ['thickness of the wire', 'material of the wire', 'temperature of the wire']],
-      ['how light intensity affects the rate of photosynthesis in pondweed', 'distance of the lamp (light intensity)', 'number of oxygen bubbles per minute', ['temperature of the water', 'type and size of pondweed', 'amount of carbon dioxide in the water']],
+      ['how light intensity affects the rate of photosynthesis in pondweed', 'distance of the lamp', 'oxygen bubbles per minute', ['temperature of the water', 'size of the pondweed', 'carbon dioxide in the water']],
       ['how the height of a ramp affects how far a toy car rolls', 'height of the ramp', 'distance the car rolls', ['the car used', 'the floor surface', 'where the car is released']],
-      ['how temperature affects how quickly amylase breaks down starch', 'temperature', 'time until iodine no longer turns blue-black', ['pH', 'concentration of starch', 'volume of amylase']],
+      ['how temperature affects how quickly amylase breaks down starch', 'temperature of the mixture', 'time for the starch to go', ['pH of the solution', 'concentration of starch', 'volume of amylase used']],
     ];
     const [aim, iv, dv, cvs] = rng.pick(EXP);
     if (level === 1) return choice(`An investigation into ${aim}. What is the independent variable (the one you change)?`, iv, [dv, cvs[0], cvs[1]], rng, `You change the independent variable (${iv}) and measure the dependent variable (${dv}).`, ['The independent variable is the one you choose to change', 'The dependent variable is the one you measure', `Here you change the ${iv}`]);

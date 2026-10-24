@@ -382,16 +382,16 @@
    "prompt": "Why is it usually hotter near the Equator?",
    "options": [
     {
-     "text": "The Sun’s rays hit the ground more directly, so the heat is concentrated",
+     "text": "The Sun’s rays hit the ground more directly",
      "correct": true
     },
     {
-     "text": "The Equator is closer to the Sun",
+     "text": "The Equator is much closer to the Sun",
      "correct": false,
      "feedback": "The difference in distance is tiny. It is about the angle of the Sun’s rays."
     },
     {
-     "text": "There are more volcanoes there",
+     "text": "There are more volcanoes heating the ground",
      "correct": false,
      "feedback": "Volcanoes don’t control climate zones."
     }
@@ -720,7 +720,7 @@
    "prompt": "What is the difference between Great Britain and the United Kingdom?",
    "options": [
     {
-     "text": "Great Britain is the island with England, Scotland and Wales; the UK also includes Northern Ireland",
+     "text": "The UK also includes Northern Ireland",
      "correct": true
     },
     {
@@ -1918,7 +1918,7 @@
    "prompt": "Does air have mass (does it weigh anything)?",
    "options": [
     {
-     "text": "Yes, air has mass, about 1.2 kg per cubic metre",
+     "text": "Yes, air has mass",
      "correct": true
     },
     {
@@ -1927,7 +1927,7 @@
      "feedback": "A common idea, but air is made of particles, and particles have mass. A room’s air can weigh more than you!"
     },
     {
-     "text": "Only when it is windy",
+     "text": "Only when it is cold and wet",
      "correct": false,
      "feedback": "Air always has mass, whether it is moving or not."
     }
@@ -2037,11 +2037,11 @@
    "topic": "geography.weather",
    "kind": "fact",
    "prompt": "What is the difference between weather and climate?",
-   "answer": "weather is day-to-day; climate is the average over many years",
+   "answer": "weather is daily; climate is the average",
    "distractors": [
-    "they mean the same",
-    "climate is day-to-day; weather is the average",
-    "weather is only about rain"
+    "they mean exactly the same thing",
+    "climate is daily; weather is the average",
+    "weather is about rain; climate is about heat"
    ],
    "explain": "Weather is what happens today. Climate is the typical pattern over about 30 years.",
    "formats": [

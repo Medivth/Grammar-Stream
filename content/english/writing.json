@@ -335,23 +335,23 @@
    "prompt": "Which sentence uses a semi-colon correctly?",
    "options": [
     {
-     "text": "The rain fell all night; the river burst its banks by morning.",
+     "text": "The rain fell; the river burst its banks.",
      "correct": true
     },
     {
-     "text": "The rain fell; all night the river.",
+     "text": "The rain fell all night; the river.",
      "correct": false,
-     "feedback": "A semi-colon must join two complete clauses. “All night the river” is not a complete clause."
+     "feedback": "A semi-colon must join two complete clauses. “The river” is not a complete clause."
     },
     {
-     "text": "I bought; apples, pears and plums.",
+     "text": "I bought three kinds of fruit; apples and pears.",
      "correct": false,
      "feedback": "To introduce a list, use a colon, not a semi-colon."
     },
     {
-     "text": "Because it rained; we stayed in.",
+     "text": "Because it rained all night; we stayed in.",
      "correct": false,
-     "feedback": "“Because it rained” cannot stand alone, so a semi-colon cannot follow it. Use a comma."
+     "feedback": "“Because it rained all night” cannot stand alone, so a semi-colon cannot follow it. Use a comma."
     }
    ],
    "explain": "A semi-colon joins two closely linked main clauses that could each be a sentence."
@@ -363,23 +363,23 @@
    "prompt": "Which sentence uses a colon correctly?",
    "options": [
     {
-     "text": "You will need three things: a torch, a map and a coat.",
+     "text": "You will need: a torch, a map and a coat.",
+     "correct": false,
+     "feedback": "The part before a colon should be a complete clause. “You will need” is not complete on its own."
+    },
+    {
+     "text": "You need three things: a torch, a map and a coat.",
      "correct": true
     },
     {
-     "text": "You will need: three things a torch.",
-     "correct": false,
-     "feedback": "The part before a colon should be a complete clause."
-    },
-    {
-     "text": "I like: swimming.",
+     "text": "I like: swimming, cycling and running.",
      "correct": false,
      "feedback": "A colon after “I like” breaks the sentence; no punctuation is needed there."
     },
     {
-     "text": "The: dog barked.",
+     "text": "The old dog: barked loudly at the postman.",
      "correct": false,
-     "feedback": "A colon cannot go in the middle of a noun phrase."
+     "feedback": "A colon cannot split the subject from its verb."
     }
    ],
    "explain": "A colon comes after a complete clause and introduces a list, an example or an explanation."
@@ -507,7 +507,7 @@
      "correct": true
     },
     {
-     "text": "Sorry, the event’s off!",
+     "text": "Sorry, the event’s off, so don’t bother coming!",
      "correct": false,
      "feedback": "Contractions (“event’s”) and exclamations are informal."
     },
@@ -517,9 +517,9 @@
      "feedback": "“Totally” and “sorry” are chatty and informal."
     },
     {
-     "text": "Guess what? No event.",
+     "text": "Guess what? There’s no event after all, folks.",
      "correct": false,
-     "feedback": "This is very casual."
+     "feedback": "Questions like “Guess what?”, contractions and “folks” are very casual."
     }
    ],
    "explain": "Formal writing avoids contractions and chatty words, and often uses the passive voice."

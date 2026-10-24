@@ -848,10 +848,10 @@ const G = {
     if (level === 2) {
       const a = rng.int(1, 5), r = rng.int(2, 3), n = rng.int(5, 8);
       if (rng.chance(0.5)) return num(`A geometric sequence has first term ${a} and common ratio ${r}. What is the ${n}th term?`, a * r ** (n - 1), `uₙ = a × r^(n − 1) = ${a} × ${r}${sup(n - 1)} = ${a} × ${r ** (n - 1)} = ${a * r ** (n - 1)}.`, ['nth term = a × rⁿ⁻¹.', `${r}${sup(n - 1)} = ${r ** (n - 1)}.`, `${a} × ${r ** (n - 1)} = ${a * r ** (n - 1)}.`]);
-      const seqs = [[`${a}, ${a * r}, ${a * r * r}, ${a * r ** 3}`, 'geometric'], [`${a}, ${a + r + 2}, ${a + 2 * (r + 2)}, ${a + 3 * (r + 2)}`, 'arithmetic'], [`1, 4, 9, 16`, 'neither (these are square numbers)'], [`1, 1, 2, 3, 5`, 'neither (each term is the sum of the two before)']];
+      const seqs = [[`${a}, ${a * r}, ${a * r * r}, ${a * r ** 3}`, 'geometric: multiply each time'], [`${a}, ${a + r + 2}, ${a + 2 * (r + 2)}, ${a + 3 * (r + 2)}`, 'arithmetic: add each time'], [`1, 4, 9, 16`, 'neither: square numbers'], [`1, 1, 2, 3, 5`, 'neither: Fibonacci-type']];
       const [s, kind] = rng.pick(seqs);
-      return choice(`Is ${s}, … arithmetic, geometric or neither?`, kind, ['geometric', 'arithmetic', 'neither (these are square numbers)', 'neither (each term is the sum of the two before)'].filter((x) => x !== kind).slice(0, 3), rng, {
-        explain: 'Arithmetic sequences add the same amount each time; geometric sequences multiply by the same amount.', steps: ['Check the differences: all equal means arithmetic.', 'Check the ratios: all equal means geometric.', `This one: ${kind}.`],
+      return choice(`Is ${s}, … arithmetic, geometric or neither?`, kind, ['geometric: multiply each time', 'arithmetic: add each time', 'neither: square numbers', 'neither: Fibonacci-type'].filter((x) => x !== kind), rng, {
+        explain: 'Arithmetic sequences add the same amount each time; geometric sequences multiply by the same amount. Square numbers go up by 3, 5, 7…; in a Fibonacci-type sequence each term is the sum of the two before.', steps: ['Check the differences: all equal means arithmetic.', 'Check the ratios: all equal means geometric.', `This one: ${kind}.`],
       });
     }
     const a = rng.int(1, 5), r = rng.int(2, 3), k = rng.pick([2, 3]);

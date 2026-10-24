@@ -159,16 +159,16 @@
    "prompt": "Where are the metals on the periodic table?",
    "options": [
     {
-     "text": "On the left and in the middle; non-metals are on the right",
+     "text": "On the left and in the middle",
      "correct": true
     },
     {
-     "text": "On the right",
+     "text": "On the right-hand side",
      "correct": false,
      "feedback": "The right-hand side is non-metals: oxygen, nitrogen, the halogens and noble gases."
     },
     {
-     "text": "Only along the bottom",
+     "text": "Only along the bottom two rows",
      "correct": false,
      "feedback": "The bottom rows are metals, but so is most of the table: about three quarters of elements are metals."
     }
@@ -199,7 +199,7 @@
    "topic": "science.periodic",
    "kind": "fact",
    "prompt": "Helium, neon and argon are unreactive gases in which group?",
-   "answer": "group 0, the noble gases",
+   "answer": "group 0",
    "distractors": [
     "group 1",
     "group 7",
@@ -392,16 +392,16 @@
    "prompt": "A match burns and the ash weighs less than the match. Has mass been destroyed?",
    "options": [
     {
-     "text": "No: the missing mass left as gases (carbon dioxide and water vapour)",
+     "text": "No: the missing mass escaped as gases",
      "correct": true
     },
     {
-     "text": "Yes: burning destroys matter",
+     "text": "Yes: burning destroys some of the matter",
      "correct": false,
      "feedback": "Weigh the gases too and the total is unchanged. Mass is conserved."
     },
     {
-     "text": "No: the ash is just squashed",
+     "text": "No: the ash is just squashed and denser",
      "correct": false,
      "feedback": "The ash is lighter because atoms have left as gas, not because it is compressed."
     }
@@ -622,16 +622,16 @@
    "prompt": "Why is the small intestine lined with millions of tiny finger-like villi?",
    "options": [
     {
-     "text": "To give a huge surface area for absorbing digested food into the blood",
+     "text": "To give a huge surface area for absorption",
      "correct": true
     },
     {
-     "text": "To grind food up",
+     "text": "To grind food into smaller pieces",
      "correct": false,
      "feedback": "Grinding happens in the mouth and stomach. Villi absorb."
     },
     {
-     "text": "To store food",
+     "text": "To store food until the body needs it",
      "correct": false,
      "feedback": "Food is not stored there; it is absorbed."
     }
@@ -811,16 +811,16 @@
    "prompt": "Why does a prism split white light into a spectrum?",
    "options": [
     {
-     "text": "Each colour is refracted by a slightly different amount; violet bends most, red least",
+     "text": "Each colour refracts by a different amount",
      "correct": true
     },
     {
-     "text": "The glass adds colours",
+     "text": "The glass adds colours to the light",
      "correct": false,
      "feedback": "The colours were already there. White light is a mixture of all of them."
     },
     {
-     "text": "The prism reflects different colours in different directions",
+     "text": "It reflects each colour in a different direction",
      "correct": false,
      "feedback": "It is refraction, not reflection, that separates them."
     }
@@ -853,16 +853,16 @@
    "prompt": "Why does a red jumper look red in white light?",
    "options": [
     {
-     "text": "It reflects red light and absorbs the other colours",
+     "text": "It reflects red and absorbs the rest",
      "correct": true
     },
     {
-     "text": "It gives out red light",
+     "text": "It gives out its own red light",
      "correct": false,
      "feedback": "Jumpers are not luminous. They reflect some colours and absorb others."
     },
     {
-     "text": "It absorbs red light",
+     "text": "It absorbs red and reflects the rest",
      "correct": false,
      "feedback": "The opposite: what is absorbed is what you do NOT see."
     }
@@ -993,7 +993,7 @@
    "prompt": "In a series circuit with two bulbs, which statement is true?",
    "options": [
     {
-     "text": "The current is the same through both bulbs, and the battery’s voltage is shared between them",
+     "text": "The current is the same; the voltage is shared",
      "correct": true
     },
     {
@@ -1019,16 +1019,16 @@
    "prompt": "In a parallel circuit with two bulbs, which statement is true?",
    "options": [
     {
-     "text": "Each bulb gets the full battery voltage, and the current splits between the branches",
+     "text": "Each bulb gets the full voltage; current splits",
      "correct": true
     },
     {
-     "text": "The bulbs share the voltage",
+     "text": "The bulbs share the battery voltage equally",
      "correct": false,
      "feedback": "That is series. In parallel each branch gets the full voltage."
     },
     {
-     "text": "If one bulb breaks the other goes out",
+     "text": "If one bulb breaks, the other goes out too",
      "correct": false,
      "feedback": "Each branch is its own loop, so the other keeps working. That is why homes are wired in parallel."
     }

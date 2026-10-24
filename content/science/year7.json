@@ -175,16 +175,16 @@
    "prompt": "When a metal bar is heated it expands (gets slightly longer). Why?",
    "options": [
     {
-     "text": "The particles vibrate more and move slightly further apart",
+     "text": "The particles vibrate more and spread apart",
      "correct": true
     },
     {
-     "text": "Each particle gets bigger",
+     "text": "Each particle swells and gets a little bigger",
      "correct": false,
      "feedback": "A very common idea! The particles themselves stay the same size. They take up more room because they move more."
     },
     {
-     "text": "New particles are made by the heat",
+     "text": "The heat makes extra particles in the metal",
      "correct": false,
      "feedback": "Heating doesn’t create particles; the number stays the same."
     }
@@ -198,11 +198,11 @@
    "prompt": "What is in the space between the particles of a gas?",
    "options": [
     {
-     "text": "Nothing: it is empty space",
+     "text": "Nothing at all",
      "correct": true
     },
     {
-     "text": "Air",
+     "text": "Air, which fills the gaps",
      "correct": false,
      "feedback": "Air IS a gas, made of particles. Between the particles there is nothing at all."
     },
@@ -271,11 +271,11 @@
    "topic": "science.particles",
    "kind": "fact",
    "prompt": "Why can a gas be squashed (compressed) but a liquid hardly at all?",
-   "answer": "gas particles have big spaces between them",
+   "answer": "its particles are far apart",
    "distractors": [
-    "gas particles are smaller",
-    "liquids are heavier",
-    "gas particles are softer"
+    "gas particles are much smaller",
+    "liquid particles are heavier",
+    "gas particles are soft and squashy"
    ],
    "explain": "In a liquid the particles already touch, so there is no room to squash them closer.",
    "formats": [
@@ -370,11 +370,11 @@
    "prompt": "Which of these is made of cells?",
    "options": [
     {
-     "text": "All of them: a mushroom, a tree, a bacterium and you",
+     "text": "All living things, including you",
      "correct": true
     },
     {
-     "text": "Only animals",
+     "text": "Only animals, not plants or fungi",
      "correct": false,
      "feedback": "Plants, fungi and bacteria are all made of cells too."
     },
@@ -619,7 +619,7 @@
    "prompt": "Is a compound the same as a mixture?",
    "options": [
     {
-     "text": "No: in a compound the elements are chemically joined; in a mixture they are just mixed",
+     "text": "No: a compound’s elements are chemically joined",
      "correct": true
     },
     {
@@ -628,7 +628,7 @@
      "feedback": "They are very different. Iron and sulfur mixed can be separated with a magnet; iron sulfide, a compound, cannot."
     },
     {
-     "text": "Only if it is a liquid",
+     "text": "Only when both are liquids at room temperature",
      "correct": false,
      "feedback": "The difference is about chemical bonds, not the state."
     }
@@ -802,11 +802,11 @@
    "topic": "science.atoms",
    "kind": "fact",
    "prompt": "On the periodic table, where are most metals found?",
-   "answer": "on the left and in the middle",
+   "answer": "left and middle",
    "distractors": [
     "on the far right",
-    "only at the top",
-    "only at the bottom"
+    "along the top row",
+    "along the bottom two rows"
    ],
    "explain": "Non-metals are on the right. The staircase line separates them.",
    "formats": [
@@ -820,16 +820,16 @@
    "prompt": "A carton says “100% pure orange juice”. To a scientist, is it a pure substance?",
    "options": [
     {
-     "text": "No: it is a mixture of water, sugars, acids and more",
+     "text": "No: it is a mixture of substances",
      "correct": true
     },
     {
-     "text": "Yes, because nothing has been added",
+     "text": "Yes, because nothing has been added to it",
      "correct": false,
      "feedback": "In everyday language “pure” means nothing added. In science a pure substance contains only one substance."
     },
     {
-     "text": "Yes, if it is freshly squeezed",
+     "text": "Yes, as long as it is freshly squeezed",
      "correct": false,
      "feedback": "Fresh juice is still a mixture of many substances."
     }
@@ -896,11 +896,11 @@
    "topic": "science.separating",
    "kind": "fact",
    "prompt": "How can you get large crystals of salt from salt solution?",
-   "answer": "evaporate the water slowly (crystallisation)",
+   "answer": "evaporate it slowly",
    "distractors": [
-    "filter it",
-    "freeze it quickly",
-    "shake it"
+    "filter it through paper",
+    "freeze it very quickly",
+    "boil it dry rapidly"
    ],
    "explain": "Slow evaporation gives the crystals time to grow.",
    "formats": [
@@ -912,11 +912,11 @@
    "topic": "science.separating",
    "kind": "fact",
    "prompt": "How can a scientist test whether a substance is pure?",
-   "answer": "check that it melts or boils at one exact temperature",
+   "answer": "check it melts at one exact temperature",
    "distractors": [
-    "taste it",
-    "see if it is see-through",
-    "weigh it"
+    "check that it tastes the same throughout",
+    "see whether it is clear and see-through",
+    "weigh it before and after heating"
    ],
    "explain": "Pure water boils at exactly 100°C; impurities change and spread out the boiling and melting points.",
    "formats": [
@@ -944,16 +944,16 @@
    "prompt": "Are all acids dangerous?",
    "options": [
     {
-     "text": "No: some are weak and safe to eat, like lemon juice and vinegar",
+     "text": "No: some, like vinegar, are safe to eat",
      "correct": true
     },
     {
-     "text": "Yes, all acids burn your skin",
+     "text": "Yes, all acids burn your skin badly",
      "correct": false,
      "feedback": "Strong acids are dangerous, but weak acids are in lots of foods."
     },
     {
-     "text": "Only acids that are green",
+     "text": "Only the acids that are brightly coloured",
      "correct": false,
      "feedback": "Colour has nothing to do with it."
     }
@@ -1036,11 +1036,11 @@
    "topic": "science.acids",
    "kind": "fact",
    "prompt": "Why do indigestion tablets work?",
-   "answer": "they contain an alkali (base) that neutralises excess stomach acid",
+   "answer": "they neutralise excess stomach acid",
    "distractors": [
-    "they add more acid",
-    "they cool the stomach",
-    "they contain sugar"
+    "they add more acid to digest the food",
+    "they cool and calm the stomach lining",
+    "they coat the stomach with sugar"
    ],
    "explain": "Neutralisation in everyday life!",
    "formats": [
@@ -1136,11 +1136,11 @@
    "topic": "science.forces7",
    "kind": "fact",
    "prompt": "On a distance–time graph, what does a flat (horizontal) line mean?",
-   "answer": "the object is stationary (not moving)",
+   "answer": "it is stationary",
    "distractors": [
-    "it is moving very fast",
-    "it is speeding up",
-    "it is going backwards"
+    "it is moving at a steady high speed",
+    "it is speeding up steadily",
+    "it is going back towards the start"
    ],
    "explain": "Distance isn’t changing, so it has stopped. A steeper line means faster.",
    "formats": [
@@ -1255,9 +1255,9 @@
    "prompt": "A book lifted onto a high shelf gains energy in which store?",
    "answer": "gravitational potential",
    "distractors": [
-    "kinetic",
-    "elastic",
-    "chemical"
+    "kinetic (movement)",
+    "elastic potential",
+    "chemical potential"
    ],
    "explain": "The higher it is raised, the more energy in its gravitational potential store.",
    "formats": [
@@ -1284,9 +1284,9 @@
    "prompt": "A stretched catapult elastic stores energy in which store?",
    "answer": "elastic potential",
    "distractors": [
-    "kinetic",
-    "chemical",
-    "nuclear"
+    "kinetic (movement)",
+    "chemical potential",
+    "gravitational potential"
    ],
    "explain": "When released, the energy is transferred to the kinetic store of the stone.",
    "formats": [
@@ -1357,7 +1357,7 @@
    "prompt": "Is the Sun the biggest star in the universe?",
    "options": [
     {
-     "text": "No: it is an average-sized star; many are far bigger",
+     "text": "No: it is an average-sized star",
      "correct": true
     },
     {
@@ -1366,7 +1366,7 @@
      "feedback": "It looks bright because it is close. Some stars are over 1000 times wider than the Sun."
     },
     {
-     "text": "The Sun is not a star",
+     "text": "The Sun is a planet, not a star",
      "correct": false,
      "feedback": "The Sun is a star, the closest one to us."
     }
@@ -1380,11 +1380,11 @@
    "prompt": "A light-year is a measure of…",
    "options": [
     {
-     "text": "distance: how far light travels in a year",
+     "text": "distance",
      "correct": true
     },
     {
-     "text": "time: one year in space",
+     "text": "time",
      "correct": false,
      "feedback": "Despite the name, it is a distance, about 9.5 trillion km."
     },
@@ -1509,16 +1509,16 @@
    "prompt": "Where does a tree get most of the material to build its trunk and leaves?",
    "options": [
     {
-     "text": "From carbon dioxide in the air, using energy from light (photosynthesis)",
+     "text": "From carbon dioxide in the air",
      "correct": true
     },
     {
-     "text": "From the soil",
+     "text": "From minerals in the soil",
      "correct": false,
      "feedback": "A common idea! In the 1600s van Helmont grew a willow tree for 5 years: it gained about 74 kg, but the soil lost only about 60 g."
     },
     {
-     "text": "From water alone",
+     "text": "From water taken up by its roots",
      "correct": false,
      "feedback": "Water matters, but most of the dry mass comes from carbon in carbon dioxide."
     }
@@ -1532,7 +1532,7 @@
    "prompt": "In the food chain grass → rabbit → fox, what do the arrows show?",
    "options": [
     {
-     "text": "The direction energy flows: from the food to the animal that eats it",
+     "text": "The direction energy flows",
      "correct": true
     },
     {
@@ -1541,7 +1541,7 @@
      "feedback": "The arrow points TO the eater, showing where the energy goes."
     },
     {
-     "text": "Which is biggest",
+     "text": "Which living thing is biggest",
      "correct": false,
      "feedback": "Arrows are about energy transfer, not size."
     }
@@ -1626,16 +1626,16 @@
    "prompt": "In a woodland food web, a disease kills most of the owls, which eat mice. What happens to the mice first?",
    "options": [
     {
-     "text": "Their numbers increase, because fewer are eaten",
+     "text": "Their numbers increase",
      "correct": true
     },
     {
-     "text": "They all die too",
+     "text": "They all die from the same disease",
      "correct": false,
      "feedback": "The mice don’t catch the owls’ disease; they lose a predator."
     },
     {
-     "text": "Nothing at all",
+     "text": "Their numbers stay exactly the same",
      "correct": false,
      "feedback": "Living things in a food web depend on each other (interdependence)."
     }
@@ -1647,11 +1647,11 @@
    "topic": "science.ecosystems",
    "kind": "fact",
    "prompt": "Why are bees so important to many food crops?",
-   "answer": "they pollinate the flowers so fruits and seeds form",
+   "answer": "they pollinate the flowers",
    "distractors": [
-    "they eat pests",
+    "they eat the pests that harm crops",
     "they make the soil richer",
-    "they water the plants"
+    "they carry water to the plants"
    ],
    "explain": "About a third of the food we eat depends on pollinators.",
    "formats": [
@@ -1684,11 +1684,11 @@
    "prompt": "Why do many flowers have brightly coloured petals and a sweet scent?",
    "options": [
     {
-     "text": "To attract insects, which carry pollen between flowers",
+     "text": "To attract insects that carry pollen",
      "correct": true
     },
     {
-     "text": "To scare away animals",
+     "text": "To scare away animals that eat them",
      "correct": false,
      "feedback": "The colours and scents attract animals; they don’t scare them."
     },
@@ -1822,11 +1822,11 @@
    "topic": "science.reproduction",
    "kind": "fact",
    "prompt": "Burdock seeds have tiny hooks. How are they dispersed?",
-   "answer": "by sticking to animals’ fur",
+   "answer": "by animals",
    "distractors": [
     "by the wind",
-    "by floating",
-    "by exploding"
+    "by water",
+    "by bursting open"
    ],
    "explain": "Velcro was invented after an engineer studied burdock burrs!",
    "formats": [
@@ -1854,11 +1854,11 @@
    "topic": "science.reproduction",
    "kind": "fact",
    "prompt": "About how long does a human baby develop in the uterus before birth?",
-   "answer": "about 9 months (40 weeks)",
+   "answer": "about 9 months",
    "distractors": [
     "about 3 months",
-    "about 2 years",
-    "about 4 weeks"
+    "about 12 months",
+    "about 6 months"
    ],
    "explain": "This time is called gestation.",
    "formats": [
@@ -1978,9 +1978,9 @@
    "topic": "science.working",
    "kind": "fact",
    "prompt": "Why do scientists repeat measurements?",
-   "answer": "to spot anomalies and calculate a more reliable mean",
+   "answer": "to make the results more reliable",
    "distractors": [
-    "to make the experiment take longer",
+    "to make the experiment fairer to all",
     "to change the independent variable",
     "because the first one is always wrong"
    ],

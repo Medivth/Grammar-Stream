@@ -785,12 +785,12 @@
      "correct": true
     },
     {
-     "text": "Yes, always",
+     "text": "Yes: 10 − 3 is the same as 3 − 10",
      "correct": false,
      "feedback": "10 − 3 = 7, but 3 − 10 would go below zero. Order matters for take away."
     },
     {
-     "text": "Only for even numbers",
+     "text": "Only when both numbers are even",
      "correct": false,
      "feedback": "It does not depend on odd or even: order matters for subtraction."
     }
@@ -804,16 +804,16 @@
    "prompt": "Turbo says: “34 + 25 = 95.” What mistake did Turbo make?",
    "options": [
     {
-     "text": "Added the tens to the ones in the wrong places: it should be 59",
+     "text": "He mixed up tens and ones: it is 59",
      "correct": true
     },
     {
-     "text": "No mistake",
+     "text": "No mistake: 34 + 25 really is 95",
      "correct": false,
      "feedback": "34 + 25: 3 tens + 2 tens = 5 tens; 4 + 5 = 9 ones. 59."
     },
     {
-     "text": "Should have taken away",
+     "text": "He should have taken away: it is 9",
      "correct": false,
      "feedback": "The question is an addition. The mistake is mixing up tens and ones."
     }
@@ -827,16 +827,16 @@
    "prompt": "{hero} says: “Half of 30 is 13.” How can you prove this is wrong?",
    "options": [
     {
-     "text": "13 + 13 = 26, not 30. Half of 30 is 15, because 15 + 15 = 30",
+     "text": "13 + 13 is 26, not 30",
      "correct": true
     },
     {
-     "text": "Half of 30 is 60",
+     "text": "Half of 30 is 60, not 13",
      "correct": false,
      "feedback": "Halving makes things smaller. Doubling 30 gives 60."
     },
     {
-     "text": "You can’t halve 30",
+     "text": "30 is odd, so it cannot be halved",
      "correct": false,
      "feedback": "30 is even, so it halves exactly: 15."
     }
@@ -850,7 +850,7 @@
    "prompt": "Which is greater: {{1/2}} of 20 or {{1/4}} of 48?",
    "options": [
     {
-     "text": "{{1/4}} of 48 (12 is more than 10)",
+     "text": "{{1/4}} of 48",
      "correct": true
     },
     {
@@ -952,7 +952,12 @@
      "feedback": "25 is in the 5 times table but it is odd, so not in the 2 times table."
     },
     {
-     "text": "There is no such number between 20 and 30",
+     "text": "30",
+     "correct": false,
+     "feedback": "30 is in both tables, but it is not BETWEEN 20 and 30."
+    },
+    {
+     "text": "No number",
      "correct": true
     }
    ],

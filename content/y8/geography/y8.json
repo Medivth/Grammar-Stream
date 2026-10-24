@@ -244,18 +244,18 @@
    "prompt": "In a grid reference, which comes first?",
    "options": [
     {
-     "text": "Eastings (the numbers along the bottom, read left to right)",
+     "text": "Eastings, read along the bottom",
      "correct": true
     },
     {
-     "text": "Northings (the numbers up the side)",
+     "text": "Northings, read up the side of the map",
      "correct": false,
      "feedback": "“Along the corridor, then up the stairs”: eastings first."
     },
     {
-     "text": "It doesn’t matter",
+     "text": "Whichever line is nearer the place",
      "correct": false,
-     "feedback": "It matters: swap them and you are somewhere else entirely."
+     "feedback": "No: always eastings first, or you end up somewhere else entirely."
     }
    ],
    "explain": "Along the corridor (eastings), then up the stairs (northings)."
@@ -386,21 +386,21 @@
    "prompt": "On an OS map, what does a small blue triangle with a dot in the middle show?",
    "options": [
     {
-     "text": "A triangulation pillar (trig point)",
+     "text": "A trig point on a hilltop",
      "correct": true
     },
     {
-     "text": "A campsite",
+     "text": "A campsite with toilets and water",
      "correct": false,
      "feedback": "Campsites have a tent symbol."
     },
     {
-     "text": "A church with a tower",
+     "text": "A church with a tower or spire",
      "correct": false,
      "feedback": "Churches are shown by a black square or circle with a cross."
     },
     {
-     "text": "A youth hostel",
+     "text": "A youth hostel or mountain hut",
      "correct": false,
      "feedback": "Hostels have a red triangle symbol."
     }
@@ -414,18 +414,18 @@
    "prompt": "What is a spot height?",
    "options": [
     {
-     "text": "A dot with a number giving the exact height of that point in metres",
+     "text": "An exact height in metres, marked by a dot",
      "correct": true
     },
     {
-     "text": "The highest point in the country",
+     "text": "The highest point shown on that map sheet",
      "correct": false,
      "feedback": "Spot heights appear all over a map."
     },
     {
-     "text": "A place to spot birds",
+     "text": "A viewpoint with a wide view of the land",
      "correct": false,
-     "feedback": "Nice idea, but no."
+     "feedback": "Viewpoints have their own symbol; a spot height is a number beside a dot."
     }
    ],
    "explain": "Spot heights fill in detail between contour lines."
@@ -481,21 +481,21 @@
    "prompt": "What do most geologists now think mainly drives the plates?",
    "options": [
     {
-     "text": "Slab pull and ridge push, helped by heat moving in the mantle",
+     "text": "Slab pull and ridge push",
      "correct": true
     },
     {
-     "text": "The Moon’s gravity",
+     "text": "The pull of the Moon’s gravity",
      "correct": false,
      "feedback": "Tides move water, not plates."
     },
     {
-     "text": "The wind",
+     "text": "The Earth’s spin flinging them outwards",
      "correct": false,
-     "feedback": "Wind is far too weak."
+     "feedback": "The Earth’s rotation is far too gentle a force to move plates."
     },
     {
-     "text": "Earthquakes",
+     "text": "Earthquakes shoving the plates along",
      "correct": false,
      "feedback": "Earthquakes are a result of plate movement, not the cause."
     }
@@ -509,23 +509,23 @@
    "prompt": "At a destructive plate boundary such as the west coast of South America, what happens?",
    "options": [
     {
-     "text": "The denser oceanic plate sinks beneath the continental plate, causing earthquakes and volcanoes",
+     "text": "The oceanic plate sinks under the continental plate",
      "correct": true
     },
     {
-     "text": "Two plates move apart and new crust forms",
+     "text": "The plates move apart and magma rises to form new crust",
      "correct": false,
      "feedback": "That is a constructive boundary."
     },
     {
-     "text": "Two plates slide past each other",
+     "text": "The two plates slide past each other sideways",
      "correct": false,
      "feedback": "That is a conservative boundary."
     },
     {
-     "text": "Nothing: it is stable",
+     "text": "The continental plate sinks under the oceanic plate",
      "correct": false,
-     "feedback": "The Andes and Chile’s huge earthquakes say otherwise."
+     "feedback": "The denser plate sinks, and oceanic crust is denser than continental crust."
     }
    ],
    "explain": "The Nazca Plate subducts beneath the South American Plate, building the Andes."
@@ -537,21 +537,21 @@
    "prompt": "Why is Iceland slowly getting wider?",
    "options": [
     {
-     "text": "It sits on a constructive boundary where the plates pull apart",
+     "text": "Two plates are pulling apart beneath it",
      "correct": true
     },
     {
-     "text": "Lava from Hawaii reaches it",
+     "text": "Lava drifts across the ocean floor from Hawaii",
      "correct": false,
      "feedback": "Hawaii is a hotspot in the Pacific."
     },
     {
-     "text": "Sea levels are falling",
+     "text": "Falling sea levels are uncovering more land",
      "correct": false,
      "feedback": "The plates are moving apart, about 2 cm a year."
     },
     {
-     "text": "Glaciers push it outwards",
+     "text": "Melting glaciers let the land spread outwards",
      "correct": false,
      "feedback": "It is plate movement."
     }
@@ -565,21 +565,21 @@
    "prompt": "The San Andreas Fault in California is a famous example of which kind of boundary?",
    "options": [
     {
-     "text": "Conservative: plates slide past each other",
+     "text": "Conservative: plates slide past",
      "correct": true
     },
     {
-     "text": "Constructive",
+     "text": "Constructive: plates pull apart",
      "correct": false,
      "feedback": "No new crust forms there."
     },
     {
-     "text": "Destructive",
+     "text": "Destructive: one plate sinks under",
      "correct": false,
      "feedback": "No plate sinks there."
     },
     {
-     "text": "Collision",
+     "text": "Collision: two continents meet",
      "correct": false,
      "feedback": "Collision boundaries build mountain ranges like the Himalayas."
     }
@@ -667,7 +667,7 @@
    "prompt": "The 2010 Haiti earthquake (magnitude 7.0) killed well over 100,000 people. What was the MAIN reason the death toll was so high?",
    "options": [
     {
-     "text": "Poorly built, crowded buildings in one of the world’s poorest countries, close to the epicentre",
+     "text": "Weak, crowded buildings near the epicentre",
      "correct": true
     },
     {
@@ -676,12 +676,12 @@
      "feedback": "Magnitude 7.0 is strong but far from the largest: Chile 1960 was 9.5."
     },
     {
-     "text": "It happened far out at sea",
+     "text": "It struck at night while people slept",
      "correct": false,
-     "feedback": "The epicentre was on land, near Port-au-Prince."
+     "feedback": "It struck just before 5 pm; the weak buildings were the main reason."
     },
     {
-     "text": "Haiti never normally has earthquakes",
+     "text": "Haiti had never had an earthquake before",
      "correct": false,
      "feedback": "Haiti sits near a plate boundary; the issue was vulnerability."
     }
@@ -695,16 +695,16 @@
    "prompt": "The 2010 eruption of Eyjafjallajökull in Iceland killed no one. What problem did it cause across Europe?",
    "options": [
     {
-     "text": "Its ash cloud closed much of Europe’s airspace for about a week",
+     "text": "Its ash closed European airspace",
      "correct": true
     },
     {
-     "text": "A tsunami flooded Britain",
+     "text": "A tsunami flooded the coast of Norway",
      "correct": false,
      "feedback": "There was no tsunami."
     },
     {
-     "text": "Lava reached Scotland",
+     "text": "Lava flowed into the North Atlantic",
      "correct": false,
      "feedback": "Lava stayed in Iceland."
     },
@@ -723,21 +723,21 @@
    "prompt": "About 3,600 years ago, the volcano on Thera (Santorini) erupted. What does the island look like today because of it?",
    "options": [
     {
-     "text": "A ring of islands around a flooded caldera (a giant collapsed crater)",
+     "text": "A ring of islands round a flooded crater",
      "correct": true
     },
     {
-     "text": "A tall cone-shaped mountain",
+     "text": "A tall cone-shaped mountain above the sea",
      "correct": false,
      "feedback": "The middle of the volcano collapsed into the sea."
     },
     {
-     "text": "A flat sandy island",
+     "text": "A flat island of black volcanic sand",
      "correct": false,
      "feedback": "Its famous cliffs are the caldera walls."
     },
     {
-     "text": "It disappeared completely",
+     "text": "It sank completely beneath the waves",
      "correct": false,
      "feedback": "Much of it survives as a crescent of islands."
     }
@@ -751,21 +751,21 @@
    "prompt": "Which of these is a SECONDARY effect of an earthquake?",
    "options": [
     {
-     "text": "Disease spreading because clean water supplies were damaged",
+     "text": "Disease from damaged water supplies",
      "correct": true
     },
     {
-     "text": "Buildings collapsing",
+     "text": "Buildings collapsing during the shaking",
      "correct": false,
      "feedback": "That happens straight away: a primary effect."
     },
     {
-     "text": "The ground shaking",
+     "text": "Gas pipes snapping as the ground moves",
      "correct": false,
-     "feedback": "That is the earthquake itself."
+     "feedback": "That happens at the moment of the quake: a primary effect."
     },
     {
-     "text": "Roads cracking",
+     "text": "Roads and bridges cracking apart",
      "correct": false,
      "feedback": "Direct damage is primary."
     }
@@ -807,21 +807,21 @@
    "prompt": "Why do millions of people live near active volcanoes such as Vesuvius?",
    "options": [
     {
-     "text": "Fertile volcanic soils, tourism, geothermal energy, and family ties to the land",
+     "text": "Fertile soils, tourism and geothermal energy",
      "correct": true
     },
     {
-     "text": "They do not know the volcano is there",
+     "text": "They do not know the volcano is still active",
      "correct": false,
      "feedback": "Most know very well."
     },
     {
-     "text": "Volcanoes never erupt twice",
+     "text": "Volcanoes rarely erupt more than once",
      "correct": false,
      "feedback": "Vesuvius erupted in AD 79 and many times since, most recently in 1944."
     },
     {
-     "text": "It is required by law",
+     "text": "The government forbids them to move away",
      "correct": false,
      "feedback": "It is a choice, often for good reasons."
     }
@@ -835,7 +835,7 @@
    "prompt": "What kind of weather does a low-pressure system (a depression) usually bring to the UK?",
    "options": [
     {
-     "text": "Cloud, wind and rain, as air rises and cools",
+     "text": "Cloud, wind and rain",
      "correct": true
     },
     {
@@ -844,14 +844,14 @@
      "feedback": "That is high pressure."
     },
     {
-     "text": "Snow every time",
+     "text": "Heavy snow, whatever the season",
      "correct": false,
      "feedback": "Only if it is cold enough."
     },
     {
-     "text": "Fog only",
+     "text": "Fog and frost but no wind",
      "correct": false,
-     "feedback": "Fog is more common with high pressure in winter."
+     "feedback": "Fog and frost come with high pressure in winter."
     }
    ],
    "explain": "Rising air cools, water vapour condenses into clouds, and rain follows."
@@ -886,23 +886,23 @@
    "prompt": "Why is the west of Britain (e.g. the Lake District) much wetter than the east?",
    "options": [
     {
-     "text": "Relief rainfall: moist south-westerly winds rise over the hills, cool and drop their rain",
+     "text": "Relief rain: moist winds rise over the hills",
      "correct": true
     },
     {
-     "text": "The west is nearer the Equator",
+     "text": "The west is nearer the Equator than the east",
      "correct": false,
      "feedback": "They are at similar latitudes."
     },
     {
-     "text": "The east has no clouds",
+     "text": "The east is too warm for clouds to form",
      "correct": false,
      "feedback": "The east is in a rain shadow, but it still has clouds."
     },
     {
-     "text": "Rivers flow west",
+     "text": "Sea spray from the Atlantic falls as rain",
      "correct": false,
-     "feedback": "Rivers do not cause rain."
+     "feedback": "Rain comes from clouds; the key is air rising over the hills."
     }
    ],
    "explain": "The prevailing wind comes from the south-west, across the warm Atlantic."
@@ -947,7 +947,7 @@
    "prompt": "Why are UK winters much milder than those of places at the same latitude in Canada?",
    "options": [
     {
-     "text": "The North Atlantic Drift (part of the Gulf Stream) brings warm water across the ocean",
+     "text": "The warm North Atlantic Drift",
      "correct": true
     },
     {
@@ -956,14 +956,14 @@
      "feedback": "Same latitude, same sunlight."
     },
     {
-     "text": "The UK is lower down",
+     "text": "The UK is lower above sea level",
      "correct": false,
      "feedback": "Height is not the reason."
     },
     {
-     "text": "Canada has more snow ploughs",
+     "text": "Cold Arctic air never reaches the UK",
      "correct": false,
-     "feedback": "That deals with cold; it does not cause it."
+     "feedback": "Arctic air does reach the UK; the warm ocean current is the difference."
     }
    ],
    "explain": "This is one reason the UK has a mild, wet maritime climate."
@@ -979,17 +979,17 @@
      "correct": true
     },
     {
-     "text": "Cold all year",
+     "text": "Cold winters with snow and cool, wet summers",
      "correct": false,
-     "feedback": "That is polar."
+     "feedback": "That is closer to a cold continental climate."
     },
     {
-     "text": "Hot and wet all year",
+     "text": "Hot and wet all year, with daily storms",
      "correct": false,
      "feedback": "That is equatorial."
     },
     {
-     "text": "Rain only in summer",
+     "text": "Hot summers with heavy rain, dry winters",
      "correct": false,
      "feedback": "It is the other way round: summers are dry."
     }
@@ -1003,21 +1003,21 @@
    "prompt": "On a climate graph, how are temperature and rainfall usually shown?",
    "options": [
     {
-     "text": "Temperature as a line, rainfall as bars, for each month",
+     "text": "Temperature as a line, rainfall as bars",
      "correct": true
     },
     {
-     "text": "Both as pie charts",
+     "text": "Both as pie charts, one per season",
      "correct": false,
      "feedback": "Pie charts show proportions, not monthly change."
     },
     {
-     "text": "Temperature as bars, rainfall as a map",
+     "text": "Temperature as bars, rainfall as a line",
      "correct": false,
-     "feedback": "Bars are for rainfall."
+     "feedback": "The other way round: bars are for rainfall."
     },
     {
-     "text": "Only rainfall is shown",
+     "text": "Rainfall as a line, with no temperature",
      "correct": false,
      "feedback": "Both are shown, on two axes."
     }
@@ -1031,21 +1031,21 @@
    "prompt": "What is the enhanced greenhouse effect?",
    "options": [
     {
-     "text": "Extra greenhouse gases from human activity trap more heat, warming the planet",
+     "text": "Human-made gases trapping extra heat",
      "correct": true
     },
     {
-     "text": "A hole in the ozone layer lets in more heat",
+     "text": "A hole in the ozone layer letting in heat",
      "correct": false,
      "feedback": "The ozone hole is a separate problem (about ultraviolet light)."
     },
     {
-     "text": "Greenhouses heating the air",
+     "text": "Heat escaping from greenhouses and buildings",
      "correct": false,
      "feedback": "Real greenhouses are only an analogy."
     },
     {
-     "text": "The Sun getting brighter",
+     "text": "The Sun giving out more energy each year",
      "correct": false,
      "feedback": "The Sun’s output has not risen enough to explain recent warming."
     }
@@ -1075,23 +1075,23 @@
    "prompt": "Which of these is EVIDENCE that the climate is changing?",
    "options": [
     {
-     "text": "Ice cores, retreating glaciers, rising sea levels and temperature records",
+     "text": "Ice cores and retreating glaciers",
      "correct": true
     },
     {
-     "text": "One very cold winter",
+     "text": "One record-breaking cold winter",
      "correct": false,
      "feedback": "A single season is weather, not climate."
     },
     {
-     "text": "Weather forecasts being wrong",
+     "text": "Weather forecasts being wrong more often",
      "correct": false,
      "feedback": "Forecast accuracy is not evidence of climate change."
     },
     {
-     "text": "More people using umbrellas",
+     "text": "Rising sales of fans and air conditioners",
      "correct": false,
-     "feedback": "Not a scientific measure!"
+     "feedback": "Sales are not a scientific measurement of climate."
     }
    ],
    "explain": "Climate is measured over decades; many independent kinds of evidence agree."
@@ -1103,21 +1103,21 @@
    "prompt": "Which is a NATURAL cause of climate change?",
    "options": [
     {
-     "text": "Changes in the Earth’s orbit (Milankovitch cycles)",
+     "text": "Changes in the Earth’s orbit",
      "correct": true
     },
     {
-     "text": "Burning coal",
+     "text": "Burning coal in power stations",
      "correct": false,
      "feedback": "Human cause."
     },
     {
-     "text": "Cattle farming",
+     "text": "Methane from cattle farming",
      "correct": false,
      "feedback": "Human cause (methane)."
     },
     {
-     "text": "Cutting down rainforest",
+     "text": "Cutting down the rainforests",
      "correct": false,
      "feedback": "Human cause."
     }
@@ -1159,11 +1159,11 @@
    "prompt": "What did countries agree in the 2015 Paris Agreement?",
    "options": [
     {
-     "text": "To keep warming well below 2 °C and try to limit it to 1.5 °C",
+     "text": "To keep warming well below 2 °C",
      "correct": true
     },
     {
-     "text": "To ban all cars by 2020",
+     "text": "To ban all petrol cars by 2020",
      "correct": false,
      "feedback": "No such ban was agreed."
     },
@@ -1173,9 +1173,9 @@
      "feedback": "Some warming is already locked in."
     },
     {
-     "text": "To move to Mars",
+     "text": "To stop using all coal by 2016",
      "correct": false,
-     "feedback": "No."
+     "feedback": "No such deadline was agreed."
     }
    ],
    "explain": "Each country sets its own targets and updates them every five years."
@@ -1187,21 +1187,21 @@
    "prompt": "What is the difference between mitigation and adaptation?",
    "options": [
     {
-     "text": "Mitigation reduces the causes (e.g. less carbon); adaptation copes with the effects (e.g. flood defences)",
+     "text": "Mitigation cuts causes; adaptation copes with effects",
      "correct": true
     },
     {
-     "text": "They mean the same",
+     "text": "They are two words for the same response",
      "correct": false,
      "feedback": "They are two different responses."
     },
     {
-     "text": "Mitigation is building sea walls",
+     "text": "Mitigation is building sea walls and flood barriers",
      "correct": false,
      "feedback": "Sea walls are adaptation."
     },
     {
-     "text": "Adaptation is planting trees to absorb CO₂",
+     "text": "Adaptation is planting forests to soak up CO₂",
      "correct": false,
      "feedback": "That reduces the cause: mitigation."
     }
@@ -1215,21 +1215,21 @@
    "prompt": "Which is a likely effect of climate change on the UK?",
    "options": [
     {
-     "text": "Hotter, drier summers, wetter winters and more coastal flooding",
+     "text": "Hotter summers and wetter winters",
      "correct": true
     },
     {
-     "text": "A new ice age next year",
+     "text": "A new ice age within ten years",
      "correct": false,
      "feedback": "Not supported by evidence."
     },
     {
-     "text": "No change at all",
+     "text": "Colder summers and drier winters",
      "correct": false,
      "feedback": "Changes are already measured."
     },
     {
-     "text": "The end of all rain",
+     "text": "Rain disappearing completely",
      "correct": false,
      "feedback": "Winters are expected to get wetter."
     }
@@ -1262,7 +1262,7 @@
    "prompt": "What is hydraulic action?",
    "options": [
     {
-     "text": "The force of water hitting the bed and banks, forcing air into cracks",
+     "text": "Water forcing air into cracks in the bank",
      "correct": true
     },
     {
@@ -1276,7 +1276,7 @@
      "feedback": "That is attrition."
     },
     {
-     "text": "Rock dissolving in the water",
+     "text": "Rock dissolving slowly in the water",
      "correct": false,
      "feedback": "That is solution."
     }
@@ -1332,21 +1332,21 @@
    "prompt": "Why do waterfalls such as High Force on the River Tees form?",
    "options": [
     {
-     "text": "Hard rock lies on top of softer rock, which erodes faster and undercuts it",
+     "text": "Soft rock under hard rock erodes faster",
      "correct": true
     },
     {
-     "text": "The river is pushed up by a volcano",
+     "text": "A volcano pushes the riverbed up suddenly",
      "correct": false,
      "feedback": "No volcano involved."
     },
     {
-     "text": "People dug them for power",
+     "text": "People dug them to power water mills",
      "correct": false,
      "feedback": "They are natural."
     },
     {
-     "text": "The sea level dropped suddenly",
+     "text": "The sea level dropped suddenly long ago",
      "correct": false,
      "feedback": "It is about differences in rock hardness."
     }
@@ -1376,7 +1376,7 @@
    "prompt": "Which of these is SOFT engineering for flood management?",
    "options": [
     {
-     "text": "Planting trees and letting some fields flood",
+     "text": "Planting trees upstream",
      "correct": true
     },
     {
@@ -1390,7 +1390,7 @@
      "feedback": "Hard engineering."
     },
     {
-     "text": "Building a dam",
+     "text": "Building a dam and reservoir",
      "correct": false,
      "feedback": "Hard engineering."
     }
@@ -1420,7 +1420,7 @@
    "prompt": "Which statement about the world’s great rivers is correct?",
    "options": [
     {
-     "text": "The Nile is usually listed as the longest; the Amazon carries by far the most water",
+     "text": "The Amazon carries the most water",
      "correct": true
     },
     {
@@ -1429,7 +1429,7 @@
      "feedback": "The Thames is about 346 km; the Nile is over 6,600 km."
     },
     {
-     "text": "The Amazon is in Africa",
+     "text": "The Amazon flows through central Africa",
      "correct": false,
      "feedback": "It is in South America."
     },
@@ -1486,23 +1486,23 @@
    "prompt": "What is longshore drift?",
    "options": [
     {
-     "text": "Waves moving sand and shingle along the coast in a zigzag",
+     "text": "Waves moving sand along the coast",
      "correct": true
     },
     {
-     "text": "The tide coming in and out",
+     "text": "The tide carrying sand in and out",
      "correct": false,
      "feedback": "Tides are caused mainly by the Moon."
     },
     {
-     "text": "Cliffs falling into the sea",
+     "text": "Cliffs slumping into the sea",
      "correct": false,
      "feedback": "That is mass movement."
     },
     {
-     "text": "Ships drifting off course",
+     "text": "Wind blowing sand inland into dunes",
      "correct": false,
-     "feedback": "Not this time."
+     "feedback": "That builds sand dunes; longshore drift moves sand along the coast."
     }
    ],
    "explain": "Swash moves material up the beach at an angle with the prevailing wind; backwash pulls it straight back down."
@@ -1530,23 +1530,23 @@
    "prompt": "The Holderness coast in Yorkshire is eroding by about 2 metres a year. Why so fast?",
    "options": [
     {
-     "text": "Its cliffs are made of soft boulder clay, battered by powerful North Sea waves",
+     "text": "Its cliffs are soft boulder clay",
      "correct": true
     },
     {
-     "text": "It is made of granite",
+     "text": "Its cliffs are hard granite",
      "correct": false,
      "feedback": "Granite is very resistant."
     },
     {
-     "text": "People dig it away",
+     "text": "Quarries are digging the cliffs away",
      "correct": false,
-     "feedback": "It is natural erosion."
+     "feedback": "It is natural erosion of soft clay."
     },
     {
-     "text": "There are no waves there",
+     "text": "The tides there are unusually high",
      "correct": false,
-     "feedback": "The North Sea waves are strong."
+     "feedback": "The tidal range is not the reason: the soft clay is."
     }
    ],
    "explain": "It is one of the fastest-eroding coastlines in Europe; villages recorded in the Domesday Book are now under the sea."
@@ -1558,21 +1558,21 @@
    "prompt": "What do groynes do?",
    "options": [
     {
-     "text": "Trap sand moving by longshore drift, keeping the beach wide",
+     "text": "Trap sand moving along the beach",
      "correct": true
     },
     {
-     "text": "Stop the tide coming in",
+     "text": "Stop the tide coming in too far",
      "correct": false,
      "feedback": "Nothing stops the tide."
     },
     {
-     "text": "Make waves bigger",
+     "text": "Break up waves out at sea",
      "correct": false,
-     "feedback": "They reduce erosion."
+     "feedback": "That is an offshore reef or breakwater; groynes run down the beach."
     },
     {
-     "text": "Hold up the pier",
+     "text": "Hold up the pier and promenade",
      "correct": false,
      "feedback": "They are fences down the beach."
     }
@@ -1586,23 +1586,23 @@
    "prompt": "What is managed retreat?",
    "options": [
     {
-     "text": "Letting the sea flood some low-lying land in a controlled way, creating salt marsh",
+     "text": "Letting the sea flood some low land",
      "correct": true
     },
     {
-     "text": "Building a new sea wall further out",
+     "text": "Building a new sea wall further out to sea",
      "correct": false,
      "feedback": "That is advancing the line."
     },
     {
-     "text": "Evacuating a city",
+     "text": "Moving a whole city inland at once",
      "correct": false,
      "feedback": "It is planned, gradual change to the coastline."
     },
     {
-     "text": "Removing the beach",
+     "text": "Removing old groynes from the beach",
      "correct": false,
-     "feedback": "No."
+     "feedback": "That is not the plan: low land is allowed to flood and become salt marsh."
     }
    ],
    "explain": "Salt marshes absorb wave energy and are excellent habitats, so managed retreat can be cheaper and greener."
@@ -1614,21 +1614,21 @@
    "prompt": "Why might a council decide NOT to protect an eroding stretch of coast?",
    "options": [
     {
-     "text": "The cost of defences is greater than the value of the land and buildings protected",
+     "text": "The defences cost more than the land is worth",
      "correct": true
     },
     {
-     "text": "Erosion is impossible to measure",
+     "text": "Erosion is impossible to measure accurately",
      "correct": false,
      "feedback": "It can be measured precisely."
     },
     {
-     "text": "The law forbids sea walls",
+     "text": "The law forbids building any sea walls",
      "correct": false,
      "feedback": "Sea walls are allowed."
     },
     {
-     "text": "Erosion always stops by itself",
+     "text": "Erosion always stops by itself in time",
      "correct": false,
      "feedback": "It does not."
     }
@@ -1642,21 +1642,21 @@
    "prompt": "How does a corrie (also called a cirque or cwm) form?",
    "options": [
     {
-     "text": "Snow collects in a hollow on a mountainside, turns to ice, and plucking and abrasion deepen it into an armchair shape",
+     "text": "Ice in a mountain hollow deepens it",
      "correct": true
     },
     {
-     "text": "A meteorite hits a mountain",
+     "text": "A meteorite strikes a mountainside",
      "correct": false,
      "feedback": "Glaciers, not meteorites."
     },
     {
-     "text": "A river carves it",
+     "text": "A mountain stream carves it out",
      "correct": false,
      "feedback": "Rivers make V-shaped valleys."
     },
     {
-     "text": "Wind blows it out",
+     "text": "Strong winds scour it out",
      "correct": false,
      "feedback": "Ice is the cause."
     }
@@ -1777,21 +1777,21 @@
    "prompt": "Why are tropical rainforest soils surprisingly poor in nutrients?",
    "options": [
     {
-     "text": "Nutrients are recycled so fast that most are held in the plants, and heavy rain washes the rest away",
+     "text": "Nutrients are locked up in the plants",
      "correct": true
     },
     {
-     "text": "There are no dead leaves",
+     "text": "Hardly any dead leaves fall to the ground",
      "correct": false,
      "feedback": "There are plenty, but they decompose very quickly."
     },
     {
-     "text": "It is too cold for decomposition",
+     "text": "It is too cold for leaves to decompose",
      "correct": false,
      "feedback": "It is hot, so decomposition is fast."
     },
     {
-     "text": "Rainforests have no soil",
+     "text": "The roots grow on bare rock with no soil",
      "correct": false,
      "feedback": "They have soil, just thin and poor."
     }
@@ -1849,7 +1849,7 @@
    "prompt": "Which is an adaptation of a cactus to the desert?",
    "options": [
     {
-     "text": "Spines instead of leaves, reducing water loss",
+     "text": "Spines instead of leaves",
      "correct": true
     },
     {
@@ -1858,12 +1858,12 @@
      "feedback": "Big leaves lose too much water."
     },
     {
-     "text": "Deep roots used only in winter",
+     "text": "Deep roots used only in winter months",
      "correct": false,
      "feedback": "Many cactus roots spread widely and shallowly to catch brief rain."
     },
     {
-     "text": "Bright flowers all year",
+     "text": "Bright flowers open all year round",
      "correct": false,
      "feedback": "Flowering is brief."
     }
@@ -1893,21 +1893,21 @@
    "prompt": "In an ecosystem, what is a producer?",
    "options": [
     {
-     "text": "A plant (or alga) that makes its own food by photosynthesis",
+     "text": "A plant that makes its own food",
      "correct": true
     },
     {
-     "text": "An animal that eats plants",
+     "text": "An animal that eats only plants",
      "correct": false,
      "feedback": "That is a primary consumer."
     },
     {
-     "text": "A decomposer such as fungi",
+     "text": "A decomposer such as fungi or bacteria",
      "correct": false,
      "feedback": "Decomposers break down dead matter."
     },
     {
-     "text": "The top predator",
+     "text": "The top predator in the food web",
      "correct": false,
      "feedback": "Top predators are consumers."
     }
@@ -2042,21 +2042,21 @@
    "prompt": "What is the difference between a refugee and an economic migrant?",
    "options": [
     {
-     "text": "A refugee has fled war or persecution; an economic migrant moves mainly for work or a better income",
+     "text": "Refugees flee danger; economic migrants seek work",
      "correct": true
     },
     {
-     "text": "There is no difference",
+     "text": "They are two names for the same people",
      "correct": false,
      "feedback": "International law treats them differently."
     },
     {
-     "text": "Refugees always move to a richer country",
+     "text": "Refugees always move to a much richer country",
      "correct": false,
      "feedback": "Most refugees live in neighbouring, often poorer, countries."
     },
     {
-     "text": "Economic migrants are not allowed to move",
+     "text": "Economic migrants are never allowed to move",
      "correct": false,
      "feedback": "Many move legally for work."
     }
@@ -2086,21 +2086,21 @@
    "prompt": "A population pyramid has a very wide base and narrow top. What does it suggest?",
    "options": [
     {
-     "text": "A high birth rate and a young population, as in many lower-income countries",
+     "text": "A high birth rate and a young population",
      "correct": true
     },
     {
-     "text": "An ageing population",
+     "text": "An ageing population with few young people",
      "correct": false,
      "feedback": "An ageing population has a narrow base and wide top."
     },
     {
-     "text": "A shrinking population",
+     "text": "A shrinking population with few births",
      "correct": false,
      "feedback": "A wide base shows many births."
     },
     {
-     "text": "Nobody lives past 30",
+     "text": "Very few people live beyond about 30",
      "correct": false,
      "feedback": "It shows fewer older people, not none."
     }
@@ -2172,21 +2172,21 @@
    "prompt": "Dharavi in Mumbai and Makoko in Lagos are informal settlements. What does “informal” mean here?",
    "options": [
     {
-     "text": "Homes built without official permission, often lacking services, but full of businesses and community life",
+     "text": "Homes built without official permission",
      "correct": true
     },
     {
-     "text": "A relaxed holiday resort",
+     "text": "A relaxed resort for holidaymakers",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Informal means built without official permission, not relaxed."
     },
     {
-     "text": "Government-built tower blocks",
+     "text": "Tower blocks built by the government",
      "correct": false,
      "feedback": "Those are formal housing."
     },
     {
-     "text": "Empty land",
+     "text": "Empty land kept for future building",
      "correct": false,
      "feedback": "Hundreds of thousands of people live in each."
     }
@@ -2200,21 +2200,21 @@
    "prompt": "London grew enormously in the 1800s. Why?",
    "options": [
     {
-     "text": "Industrial jobs and trade drew people from the countryside and abroad",
+     "text": "Jobs and trade drew people in",
      "correct": true
     },
     {
-     "text": "The climate improved",
+     "text": "The climate became warmer and drier",
      "correct": false,
      "feedback": "Climate was not the reason."
     },
     {
-     "text": "The Romans built it then",
+     "text": "The Romans rebuilt it as their capital",
      "correct": false,
      "feedback": "The Romans founded it in about AD 47–50."
     },
     {
-     "text": "Farming became more popular",
+     "text": "Farming around London became more popular",
      "correct": false,
      "feedback": "People left farming for city jobs."
     }
@@ -2228,21 +2228,21 @@
    "prompt": "Which feature makes a city more sustainable?",
    "options": [
     {
-     "text": "Good public transport, green spaces and energy-efficient buildings",
+     "text": "Good public transport and green spaces",
      "correct": true
     },
     {
-     "text": "More motorways into the centre",
+     "text": "More motorways leading into the centre",
      "correct": false,
      "feedback": "More traffic usually means more pollution."
     },
     {
-     "text": "Building on all its parks",
+     "text": "Building new homes on all its parks",
      "correct": false,
      "feedback": "Green spaces cool cities and reduce flooding."
     },
     {
-     "text": "Sending all waste to landfill",
+     "text": "Sending all its waste to landfill sites",
      "correct": false,
      "feedback": "Recycling is more sustainable."
     }
@@ -2256,21 +2256,21 @@
    "prompt": "What does the Human Development Index (HDI) combine?",
    "options": [
     {
-     "text": "Life expectancy, education and income per person",
+     "text": "Life expectancy, education and income",
      "correct": true
     },
     {
-     "text": "Only GDP",
+     "text": "GDP, exports and government debt",
      "correct": false,
      "feedback": "HDI was designed to go beyond income alone."
     },
     {
-     "text": "Population and land area",
+     "text": "Population, land area and birth rate",
      "correct": false,
      "feedback": "Those are not development measures."
     },
     {
-     "text": "Number of cars and phones",
+     "text": "Numbers of cars, phones and computers",
      "correct": false,
      "feedback": "Not part of the HDI."
     }
@@ -2300,21 +2300,21 @@
    "prompt": "What was the Brandt line (1980)?",
    "options": [
     {
-     "text": "A line dividing the richer “global North” from the poorer “global South”",
+     "text": "A line between richer and poorer countries",
      "correct": true
     },
     {
-     "text": "The Equator",
+     "text": "The Equator, redrawn as a policy line",
      "correct": false,
      "feedback": "It wiggled: Australia and New Zealand were in the North."
     },
     {
-     "text": "A railway in Germany",
+     "text": "A railway built across West Germany",
      "correct": false,
      "feedback": "Willy Brandt led the report that drew it."
     },
     {
-     "text": "The Greenwich Meridian",
+     "text": "The Greenwich Meridian through London",
      "correct": false,
      "feedback": "That is the Prime Meridian."
     }
@@ -2328,7 +2328,7 @@
    "prompt": "Why is the infant mortality rate a useful measure of development?",
    "options": [
     {
-     "text": "It reflects health care, clean water, food and education for mothers all at once",
+     "text": "It reflects health care, water and food",
      "correct": true
     },
     {
@@ -2337,12 +2337,12 @@
      "feedback": "That is the school enrolment rate."
     },
     {
-     "text": "It measures wealth directly",
+     "text": "It measures a family’s wealth directly",
      "correct": false,
      "feedback": "It is a social measure."
     },
     {
-     "text": "It counts babies born each year",
+     "text": "It counts the babies born each year",
      "correct": false,
      "feedback": "That is the birth rate."
     }
@@ -2356,21 +2356,21 @@
    "prompt": "Which is a PHYSICAL factor that can slow a country’s development?",
    "options": [
     {
-     "text": "Frequent natural hazards or being landlocked",
+     "text": "Being landlocked",
      "correct": true
     },
     {
-     "text": "Corruption",
+     "text": "Corruption in the government",
      "correct": false,
      "feedback": "That is a political factor."
     },
     {
-     "text": "Debt",
+     "text": "High levels of national debt",
      "correct": false,
      "feedback": "An economic factor."
     },
     {
-     "text": "A history of colonialism",
+     "text": "A history of colonial rule",
      "correct": false,
      "feedback": "A historical factor."
     }
@@ -2384,23 +2384,23 @@
    "prompt": "Which type of aid is often thought to do most good in the long term?",
    "options": [
     {
-     "text": "Small-scale projects run with local people, such as wells or training (bottom-up)",
+     "text": "Small local projects, such as wells",
      "correct": true
     },
     {
-     "text": "Only emergency food, forever",
+     "text": "Emergency food parcels every year",
      "correct": false,
      "feedback": "Emergency aid saves lives but does not build long-term change."
     },
     {
-     "text": "Loans that must be paid back with high interest",
+     "text": "Loans paid back with high interest",
      "correct": false,
      "feedback": "Debt can hold development back."
     },
     {
-     "text": "Gifts of weapons",
+     "text": "Huge dams built by foreign firms",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Large top-down projects can help, but often miss local needs."
     }
    ],
    "explain": "Bottom-up projects use appropriate technology that local people can maintain."
@@ -2412,21 +2412,21 @@
    "prompt": "What is globalisation?",
    "options": [
     {
-     "text": "The growing connection of the world’s countries through trade, communication, travel and culture",
+     "text": "Countries becoming more connected",
      "correct": true
     },
     {
-     "text": "Making maps of the globe",
+     "text": "Making accurate maps of the globe",
      "correct": false,
      "feedback": "That is cartography."
     },
     {
-     "text": "Every country becoming the same size",
+     "text": "Countries joining into one government",
      "correct": false,
-     "feedback": "No."
+     "feedback": "There is no single world government; globalisation is about connections."
     },
     {
-     "text": "Climate change",
+     "text": "The whole planet warming up",
      "correct": false,
      "feedback": "Related, but not the definition."
     }
@@ -2440,9 +2440,9 @@
    "prompt": "A company that operates in many countries, such as Apple or Toyota, is called a…",
    "answer": "transnational corporation",
    "distractors": [
-    "charity",
-    "cooperative",
-    "local business"
+    "registered charity",
+    "workers’ cooperative",
+    "nationalised industry"
    ],
    "explain": "TNCs often design products in one country and make them in others where costs are lower.",
    "accept": [
@@ -2459,7 +2459,7 @@
    "prompt": "Why did the shipping container (from the 1950s) transform world trade?",
    "options": [
     {
-     "text": "Standard boxes can move between ships, trains and lorries without unpacking, making transport cheap",
+     "text": "Standard boxes move between ships and lorries",
      "correct": true
     },
     {
@@ -2468,14 +2468,14 @@
      "feedback": "Ships are still slower than planes."
     },
     {
-     "text": "They replaced money",
+     "text": "They let goods skip customs checks",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Goods still pass through customs."
     },
     {
-     "text": "They are made of gold",
+     "text": "They are light enough to fly by air",
      "correct": false,
-     "feedback": "Steel!"
+     "feedback": "They are heavy steel boxes, carried by sea."
     }
    ],
    "explain": "About 90% of the world’s goods travel by sea; Shanghai is the busiest container port."
@@ -2487,7 +2487,7 @@
    "prompt": "Which is a DISADVANTAGE when a TNC builds a factory in a lower-income country?",
    "options": [
     {
-     "text": "Profits may flow back to the home country, and wages and safety can be poor",
+     "text": "Profits may go back to the home country",
      "correct": true
     },
     {
@@ -2501,7 +2501,7 @@
      "feedback": "An advantage."
     },
     {
-     "text": "Roads and power may be improved",
+     "text": "Roads and power supplies may be improved",
      "correct": false,
      "feedback": "Usually an advantage."
     }
@@ -2515,23 +2515,23 @@
    "prompt": "What is Fairtrade?",
    "options": [
     {
-     "text": "A scheme that guarantees farmers a minimum price and extra money for community projects",
+     "text": "A scheme guaranteeing farmers a fair price",
      "correct": true
     },
     {
-     "text": "Trade with no taxes at all",
+     "text": "Trade with no import taxes at all",
      "correct": false,
      "feedback": "That is free trade."
     },
     {
-     "text": "Only buying from neighbours",
+     "text": "Buying only from nearby farms",
      "correct": false,
-     "feedback": "No."
+     "feedback": "That is buying local; Fairtrade is about prices for farmers."
     },
     {
-     "text": "A type of market stall",
+     "text": "A market where prices are fixed by law",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Fairtrade is a certification scheme, not a law."
     }
    ],
    "explain": "It helps producers of coffee, cocoa and bananas, among others."
@@ -2543,21 +2543,21 @@
    "prompt": "In 2021 a container ship, the Ever Given, blocked the Suez Canal for six days. Why did it matter worldwide?",
    "options": [
     {
-     "text": "About 12% of world trade passes through the canal, so goods were delayed around the globe",
+     "text": "About 12% of world trade uses the canal",
      "correct": true
     },
     {
-     "text": "It flooded Egypt",
+     "text": "It flooded the towns along the canal",
      "correct": false,
      "feedback": "No flooding."
     },
     {
-     "text": "It closed the internet",
+     "text": "It cut the undersea internet cables",
      "correct": false,
      "feedback": "Undersea cables were not affected."
     },
     {
-     "text": "It mattered only to Egypt",
+     "text": "It stopped Egypt exporting its oil",
      "correct": false,
      "feedback": "Supply chains are global."
     }
@@ -2599,11 +2599,11 @@
    "prompt": "Iceland gets most of its electricity and heating from which two sources?",
    "options": [
     {
-     "text": "Hydroelectric and geothermal power",
+     "text": "Hydro and geothermal",
      "correct": true
     },
     {
-     "text": "Coal and oil",
+     "text": "Coal and imported oil",
      "correct": false,
      "feedback": "Iceland uses very little fossil fuel for electricity."
     },
@@ -2613,7 +2613,7 @@
      "feedback": "It has no nuclear power stations."
     },
     {
-     "text": "Wind and tidal only",
+     "text": "Wind and tidal power",
      "correct": false,
      "feedback": "Its rivers and volcanic heat do most of the work."
     }
@@ -2627,21 +2627,21 @@
    "prompt": "What is one disadvantage of wind power?",
    "options": [
     {
-     "text": "It is intermittent: no wind, no power, so storage or back-up is needed",
+     "text": "It stops when the wind drops",
      "correct": true
     },
     {
-     "text": "It produces lots of carbon dioxide while running",
+     "text": "It gives off carbon dioxide while running",
      "correct": false,
      "feedback": "It produces almost none while running."
     },
     {
-     "text": "It will run out",
+     "text": "The wind will run out one day",
      "correct": false,
      "feedback": "Wind is renewable."
     },
     {
-     "text": "It only works in deserts",
+     "text": "It only works well in deserts",
      "correct": false,
      "feedback": "The UK has some of Europe’s best wind."
     }
@@ -2655,23 +2655,23 @@
    "prompt": "What is water stress?",
    "options": [
     {
-     "text": "When demand for water is greater than the supply available, or its quality is poor",
+     "text": "When demand for water exceeds supply",
      "correct": true
     },
     {
-     "text": "Having too much rain",
+     "text": "When far too much rain falls at once",
      "correct": false,
      "feedback": "That is flooding."
     },
     {
-     "text": "A swimming exam",
+     "text": "When rivers flow faster than usual",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Fast rivers are not the point: it is about demand and supply."
     },
     {
-     "text": "Water being too cold",
+     "text": "When water is too cold to drink safely",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Temperature is not the point: it is about demand and supply."
     }
    ],
    "explain": "Parts of the Middle East use desalination plants to turn seawater into drinking water."
@@ -2683,23 +2683,23 @@
    "prompt": "Why do some people try to buy food with fewer “food miles”?",
    "options": [
     {
-     "text": "To cut the fuel and emissions used transporting food long distances",
+     "text": "To cut transport emissions",
      "correct": true
     },
     {
-     "text": "Local food is always cheaper",
+     "text": "Local food is always much cheaper",
      "correct": false,
      "feedback": "Not always."
     },
     {
-     "text": "Imported food is illegal",
+     "text": "Imported food has fewer vitamins",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Freshness varies; the main aim is cutting transport emissions."
     },
     {
-     "text": "Miles make food heavier",
+     "text": "Shops must charge more for it by law",
      "correct": false,
-     "feedback": "No."
+     "feedback": "There is no such law."
     }
    ],
    "explain": "It is not the whole story: food grown in heated greenhouses nearby can have a bigger footprint than food shipped in."
@@ -2711,21 +2711,21 @@
    "prompt": "What is a country’s “energy mix”?",
    "options": [
     {
-     "text": "The combination of sources it uses to produce its energy",
+     "text": "All the sources it gets energy from",
      "correct": true
     },
     {
-     "text": "A recipe",
+     "text": "Its total energy use per person",
      "correct": false,
-     "feedback": "Not this time."
+     "feedback": "That is consumption; the mix is the range of sources."
     },
     {
-     "text": "Only its oil",
+     "text": "Only the oil and gas it produces",
      "correct": false,
      "feedback": "It includes every source."
     },
     {
-     "text": "Its weather",
+     "text": "The weather that affects its energy",
      "correct": false,
      "feedback": "Weather affects some sources, but the mix is the sources themselves."
     }
@@ -2785,23 +2785,23 @@
    "prompt": "How does permafrost affect building in Siberia?",
    "options": [
     {
-     "text": "Buildings stand on stilts or piles so their heat does not melt the ground beneath",
+     "text": "Buildings stand on stilts or piles",
      "correct": true
     },
     {
-     "text": "Buildings must be made of ice",
+     "text": "Buildings must be made of ice blocks",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Buildings are ordinary materials, raised on piles."
     },
     {
-     "text": "Nothing can be built there",
+     "text": "Nothing at all can be built there",
      "correct": false,
      "feedback": "Cities such as Yakutsk are built on permafrost."
     },
     {
-     "text": "Buildings float",
+     "text": "Buildings sit on heated concrete",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Heating the ground would melt the permafrost and the building would sink."
     }
    ],
    "explain": "As the climate warms, thawing permafrost is cracking roads and buildings."
@@ -2846,7 +2846,7 @@
    "prompt": "Travelling north through Russia, which order of biomes would you pass through?",
    "options": [
     {
-     "text": "Steppe grassland, then taiga (coniferous forest), then tundra",
+     "text": "Steppe, then taiga, then tundra",
      "correct": true
     },
     {
@@ -2874,7 +2874,7 @@
    "prompt": "Why is Russia important in world energy?",
    "options": [
     {
-     "text": "It has huge reserves of natural gas and oil, much of it in Siberia",
+     "text": "It has huge reserves of gas and oil",
      "correct": true
     },
     {
@@ -2883,14 +2883,14 @@
      "feedback": "That is China."
     },
     {
-     "text": "It has no energy resources",
+     "text": "It has the world’s largest wind farms",
      "correct": false,
-     "feedback": "It has vast reserves."
+     "feedback": "Its wind power is small; its gas and oil matter most."
     },
     {
-     "text": "It runs entirely on wind",
+     "text": "It supplies most of the world’s uranium",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Russia does mine uranium, but its gas and oil matter far more."
     }
    ],
    "explain": "Pipelines carry Siberian gas thousands of kilometres to customers."
@@ -2967,7 +2967,7 @@
    "prompt": "Why does Greece have so many earthquakes?",
    "options": [
     {
-     "text": "The African Plate is sinking beneath the plate Greece sits on, south of Crete",
+     "text": "The African Plate sinks beneath it",
      "correct": true
     },
     {
@@ -2976,14 +2976,14 @@
      "feedback": "That was the ancient explanation; the evidence points to plate tectonics."
     },
     {
-     "text": "Greece is on the Mid-Atlantic Ridge",
+     "text": "Greece sits on the Mid-Atlantic Ridge",
      "correct": false,
      "feedback": "That runs through Iceland."
     },
     {
-     "text": "Heavy traffic in Athens",
+     "text": "Its old volcanoes are collapsing",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Volcanoes like Thera exist, but most quakes come from the plates."
     }
    ],
    "explain": "This subduction zone (the Hellenic arc) also feeds the volcanoes of the southern Aegean, including Santorini."
@@ -2995,23 +2995,23 @@
    "prompt": "Why do olive trees grow so well in Greece?",
    "options": [
     {
-     "text": "They are adapted to the Mediterranean climate of hot, dry summers and mild, wet winters",
+     "text": "They suit hot, dry summers",
      "correct": true
     },
     {
-     "text": "Greece is a rainforest",
+     "text": "They need constant heavy rain",
      "correct": false,
      "feedback": "Far too dry in summer."
     },
     {
-     "text": "They need snow all year",
+     "text": "They need cold, snowy winters",
      "correct": false,
      "feedback": "Olives hate long frosts."
     },
     {
-     "text": "They are watered by volcanoes",
+     "text": "They grow best in volcanic ash",
      "correct": false,
-     "feedback": "No."
+     "feedback": "Some soils are volcanic, but the climate is the key."
     }
    ],
    "explain": "Small leathery leaves and deep roots help them survive summer drought. In myth, Athena gave the olive tree to Athens."
@@ -3023,21 +3023,21 @@
    "prompt": "Mira notices that Santorini is packed with cruise passengers in summer. Which is a NEGATIVE impact of mass tourism on small islands?",
    "options": [
     {
-     "text": "Pressure on water supplies, crowding and rising house prices for locals",
+     "text": "Pressure on water and housing",
      "correct": true
     },
     {
-     "text": "More jobs in hotels",
+     "text": "More jobs in hotels and bars",
      "correct": false,
      "feedback": "That is a benefit, though often seasonal."
     },
     {
-     "text": "Money for restaurants",
+     "text": "More money for local restaurants",
      "correct": false,
      "feedback": "A benefit."
     },
     {
-     "text": "Better ferry links",
+     "text": "Better ferry links to the mainland",
      "correct": false,
      "feedback": "Usually a benefit."
     }
@@ -3880,19 +3880,19 @@
     "Bolivia"
    ],
    "choosePrompt": "Which country is highlighted?",
-   "explain": "This is Bolivia. Sucre is the constitutional capital; the government sits in La Paz, the highest seat of government in the world."
+   "explain": "This is Bolivia. Sucre is the constitutional capital; the government sits in La Paz, the highest seat of government in the world, so La Paz is accepted too."
   },
   {
    "id": "geography.plc.bol",
    "topic": "geography.places",
    "kind": "fact",
    "prompt": "What is the capital of Bolivia?",
-   "answer": "Sucre (with La Paz as the seat of government)",
+   "answer": "Sucre",
    "distractors": [
     "Santa Cruz",
-    "Lima"
+    "Cochabamba"
    ],
-   "explain": "The capital of Bolivia is Sucre (with La Paz as the seat of government). Sucre is the constitutional capital; the government sits in La Paz, the highest seat of government in the world.",
+   "explain": "The capital of Bolivia is Sucre. Sucre is the constitutional capital; the government sits in La Paz, the highest seat of government in the world, so La Paz is accepted too.",
    "map": "world",
    "layer": "countries",
    "feature": "BOL",
@@ -3901,13 +3901,9 @@
    ],
    "fill": true,
    "accept": [
-    "Sucre",
     "La Paz"
    ],
-   "formats": [
-    "choice"
-   ],
-   "learn": "The capital of **Bolivia** is **Sucre (with La Paz as the seat of government)**. Sucre is the constitutional capital; the government sits in La Paz, the highest seat of government in the world."
+   "learn": "The capital of **Bolivia** is **Sucre**. Sucre is the constitutional capital; the government sits in La Paz, the highest seat of government in the world, so La Paz is accepted too."
   },
   {
    "id": "geography.pl.cub",
@@ -4361,17 +4357,17 @@
      "correct": true
     },
     {
-     "text": "Plates, pressure and power",
+     "text": "Plates, pressure and power supplies",
      "correct": false,
      "feedback": "Not a framework."
     },
     {
-     "text": "Planning, panic and payment",
+     "text": "Planning, policing and payment",
      "correct": false,
-     "feedback": "Panic is what preparation tries to prevent."
+     "feedback": "Planning is close, but the three Ps are prediction, protection and preparation."
     },
     {
-     "text": "People, places and plans",
+     "text": "People, places and emergency plans",
      "correct": false,
      "feedback": "Not the standard terms."
     }
@@ -4385,16 +4381,16 @@
    "prompt": "Which can scientists use to help PREDICT a volcanic eruption?",
    "options": [
     {
-     "text": "Tiny earthquakes, the ground swelling, and gases escaping",
+     "text": "Tiny earthquakes and gas",
      "correct": true
     },
     {
-     "text": "Animal horoscopes",
+     "text": "Unusual animal behaviour alone",
      "correct": false,
-     "feedback": "Not science."
+     "feedback": "Animal behaviour is not reliable enough on its own."
     },
     {
-     "text": "The phase of the Moon",
+     "text": "The phase of the Moon and the tides",
      "correct": false,
      "feedback": "No reliable link."
     },
@@ -4413,16 +4409,16 @@
    "prompt": "Which is an example of PROTECTION against earthquakes?",
    "options": [
     {
-     "text": "Buildings with rubber shock absorbers and cross-bracing",
+     "text": "Buildings with shock absorbers",
      "correct": true
     },
     {
-     "text": "An evacuation drill",
+     "text": "An evacuation drill at school",
      "correct": false,
      "feedback": "That is preparation."
     },
     {
-     "text": "A seismometer network",
+     "text": "A network of seismometers",
      "correct": false,
      "feedback": "That is monitoring (prediction)."
     },
@@ -4441,7 +4437,7 @@
    "prompt": "Why do lower-income countries often suffer more deaths from similar hazards?",
    "options": [
     {
-     "text": "Less money for strong buildings, monitoring, emergency services and recovery",
+     "text": "Less money for strong buildings",
      "correct": true
     },
     {
@@ -4450,9 +4446,9 @@
      "feedback": "Magnitude does not depend on wealth."
     },
     {
-     "text": "People there do not care",
+     "text": "Their hazards happen more often",
      "correct": false,
-     "feedback": "This is untrue and unfair."
+     "feedback": "Frequency is not the key difference: wealth and preparation are."
     },
     {
      "text": "They have more plate boundaries",
@@ -4497,23 +4493,23 @@
    "prompt": "Hazard risk is often described as hazard × vulnerability ÷ capacity to cope. What does “vulnerability” mean?",
    "options": [
     {
-     "text": "How likely people are to be harmed, because of poor housing, poverty or location",
+     "text": "How easily people are harmed",
      "correct": true
     },
     {
-     "text": "How big the earthquake is",
+     "text": "How big the earthquake or eruption is",
      "correct": false,
      "feedback": "That is the hazard."
     },
     {
-     "text": "How fast help arrives",
+     "text": "How fast rescue teams arrive",
      "correct": false,
      "feedback": "That is capacity to cope."
     },
     {
-     "text": "How old the volcano is",
+     "text": "How often the hazard happens",
      "correct": false,
-     "feedback": "No."
+     "feedback": "That is about the hazard itself, not the people."
     }
    ],
    "explain": "Reducing vulnerability is often the most effective way to reduce deaths."
@@ -4564,11 +4560,11 @@
    "prompt": "Why is the interquartile range (IQR) often better than the range?",
    "options": [
     {
-     "text": "It ignores extreme values, measuring the spread of the middle half of the data",
+     "text": "Extreme values do not affect it",
      "correct": true
     },
     {
-     "text": "It is always bigger",
+     "text": "It is always bigger than the range",
      "correct": false,
      "feedback": "It is usually smaller."
     },
@@ -4578,9 +4574,9 @@
      "feedback": "It deliberately ignores the top and bottom quarters."
     },
     {
-     "text": "It is easier to spell",
+     "text": "It is quicker to work out by hand",
      "correct": false,
-     "feedback": "Not a statistical reason."
+     "feedback": "It is not quicker, and speed is not a statistical reason."
     }
    ],
    "explain": "IQR = upper quartile − lower quartile."
@@ -4620,7 +4616,7 @@
    "prompt": "What is a choropleth map?",
    "options": [
     {
-     "text": "A map where areas are shaded darker or lighter to show a value, such as population density",
+     "text": "Areas shaded by value",
      "correct": true
     },
     {
@@ -4634,7 +4630,7 @@
      "feedback": "That is a bathymetric map."
     },
     {
-     "text": "A map drawn by hand",
+     "text": "Dots placed for each event",
      "correct": false,
      "feedback": "It is about shading by value."
     }
@@ -4755,11 +4751,11 @@
    "prompt": "On a storm hydrograph, what is the lag time?",
    "options": [
     {
-     "text": "The time between peak rainfall and peak river discharge",
+     "text": "The gap between peak rain and peak flow",
      "correct": true
     },
     {
-     "text": "How long it rains",
+     "text": "How long the storm lasts in total",
      "correct": false,
      "feedback": "That is the storm’s duration."
     },
@@ -4769,9 +4765,9 @@
      "feedback": "Not quite."
     },
     {
-     "text": "The time for the river to freeze",
+     "text": "The time until the river level falls again",
      "correct": false,
-     "feedback": "No."
+     "feedback": "That is the falling limb, not the lag time."
     }
    ],
    "explain": "A short lag time means the river rises quickly: a higher flood risk."
@@ -4783,11 +4779,11 @@
    "prompt": "Why does an urban area usually have a shorter lag time than a forested area?",
    "options": [
     {
-     "text": "Concrete and drains send rain to the river quickly instead of letting it soak in",
+     "text": "Concrete and drains speed up runoff",
      "correct": true
     },
     {
-     "text": "Cities get less rain",
+     "text": "Cities get much less rain",
      "correct": false,
      "feedback": "They get similar or more."
     },

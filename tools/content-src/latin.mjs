@@ -111,7 +111,7 @@ const SENT = [
 ];
 SENT.forEach(([la, en, wrong], i) => items.push(fact(`s1.${i + 1}`, 'sentences-1', `Translate: **${la}**`, en, wrong, `${la} → “${en}”. Remember: the verb usually comes last, and English adds “the”.`, choiceOnly)));
 items.push(fact('s1.order', 'sentences-1', 'Where does the verb usually go in a Latin sentence?', 'at the end', ['at the start', 'in the middle', 'anywhere; it doesn’t matter'], '“puella in horto sedet”: the verb sedet comes last. Latin can move words around for emphasis, but the end is normal.', choiceOnly));
-items.push(fact('s1.the', 'sentences-1', 'How do you say “the” or “a” in Latin?', 'you don’t: Latin has no words for “the” or “a”', ['ille', 'unus', 'et'], 'servus can mean “slave”, “a slave” or “the slave”. You choose when you translate.', choiceOnly));
+items.push(fact('s1.the', 'sentences-1', 'How do you say “the” or “a” in Latin?', 'you don’t: there are no such words', ['ille for “the”, unus for “a”', 'with the ending -que', 'et'], 'servus can mean “slave”, “a slave” or “the slave”. You choose when you translate.', choiceOnly));
 items.push(fact('s1.est', 'sentences-1', 'What does **est** mean?', 'is', ['and', 'he', 'the'], 'est = is. “Marcus est pater” = Marcus is the father.', { accept: ['he is', 'she is', 'it is'] }));
 items.push(fact('s1.in', 'sentences-1', 'What does **in** mean in “in horto”?', 'in', ['into', 'on top of', 'near'], 'in + horto = in the garden. (With a different ending, in can also mean “into”, but not yet!)', choiceOnly));
 
@@ -134,10 +134,10 @@ items.push(fact('c.um', 'cases', 'What is the accusative (object) form of **serv
 items.push(mcq('c.order', 'cases', '**canem puer videt.** Who sees whom?', [['The boy sees the dog', true], ['The dog sees the boy', false, 'canem ends in -em (accusative): the dog is the object even though it comes first. Latin word order is flexible; endings are not.']], 'puer is nominative (subject), canem is accusative (object). Putting canem first just emphasises the dog.'));
 
 // --- verb endings
-const PERS = [['ambulo', 'I walk'], ['ambulas', 'you walk'], ['ambulat', 'he or she walks'], ['laboro', 'I work'], ['sedes', 'you sit'], ['dormis', 'you sleep'], ['video', 'I see'], ['audis', 'you hear'], ['clamo', 'I shout'], ['sum', 'I am'], ['es', 'you are'], ['est', 'he, she or it is']];
+const PERS = [['ambulo', 'I walk'], ['ambulas', 'you walk'], ['ambulat', 'he or she walks'], ['laboro', 'I work'], ['sedes', 'you sit'], ['dormis', 'you sleep'], ['video', 'I see'], ['audis', 'you hear'], ['clamo', 'I shout'], ['sum', 'I am'], ['es', 'you are'], ['est', 'he/she/it is']];
 PERS.forEach(([la, en], i) => {
   const others = PERS.filter((p) => p[0] !== la);
-  items.push(fact(`v2.${la}`, 'verbs-2', `What does **${la}** mean?`, en, [others[(i + 1) % 11][1], others[(i + 4) % 11][1], others[(i + 7) % 11][1]], `${la} = ${en}. The ending tells you the person: -o is I, -s is you, -t is he/she/it.`, { accept: en.startsWith('he or she') ? [en.replace('he or she ', 'he '), en.replace('he or she ', 'she ')] : en.startsWith('he, she or it') ? ['he is', 'she is', 'it is', 'is'] : [en.replace(/^(I|you) /, '$1 am ').replace('am walk', 'am walking')] }));
+  items.push(fact(`v2.${la}`, 'verbs-2', `What does **${la}** mean?`, en, [others[(i + 1) % 11][1], others[(i + 4) % 11][1], others[(i + 7) % 11][1]], `${la} = ${en}. The ending tells you the person: -o is I, -s is you, -t is he/she/it.`, { accept: en.startsWith('he or she') ? [en.replace('he or she ', 'he '), en.replace('he or she ', 'she ')] : en.startsWith('he/she/it') ? ['he is', 'she is', 'it is', 'is', 'he, she or it is'] : [en.replace(/^(I|you) /, '$1 am ').replace('am walk', 'am walking')] }));
 });
 items.push(fact('v2.o', 'verbs-2', 'Which ending means “I” on a Latin verb?', '-o', ['-s', '-t', '-nt'], 'amo = I love, laboro = I work.', { accept: ['o'] }));
 items.push(fact('v2.s', 'verbs-2', 'Which ending means “you” (one person) on a Latin verb?', '-s', ['-o', '-t', '-mus'], 'amas = you love, sedes = you sit.', { accept: ['s'] }));
@@ -163,7 +163,7 @@ NUMBERS.forEach(([la, en, deriv], i) => {
 PHRASES.forEach(([la, en, note, accept], i) => {
   const others = PHRASES.filter((p) => p[0] !== la);
   items.push(fact(`ph.${i + 1}`, 'numbers', `What does **${la}** mean?`, en, [others[(i + 1) % 4][1], others[(i + 2) % 4][1], others[(i + 3) % 4][1]], `${la} = ${en}: ${note}.`, { accept, learn: `**${la}** = ${en}\n_${note}._` }));
-  items.push(fact(`ph.en.${i + 1}`, 'numbers', `How do you say **${en}** in Latin?`, la, [others[(i + 1) % 4][0], others[(i + 2) % 4][0], others[(i + 3) % 4][0]], `${en} = ${la}: ${note}.`, { accept: la === 'gratias tibi ago' ? ['gratias', 'gratias ago'] : [] }));
+  items.push(fact(`ph.en.${i + 1}`, 'numbers', `How do you say **${en}** in Latin?`, la, la.includes(' ') ? ['ita vero, amice', 'vale, mi amice', 'salvete, omnes'] : [others[(i + 1) % 4][0], others[(i + 2) % 4][0], others[(i + 3) % 4][0]], `${en} = ${la}: ${note}.`, { accept: la === 'gratias tibi ago' ? ['gratias', 'gratias ago'] : [] }));
 });
 items.push(fact('n.months', 'numbers', 'September, October, November and December are named after the numbers seven, eight, nine and ten. Why do the names not match our calendar?', 'the Roman year originally began in March', ['the Romans could not count', 'the names were chosen at random', 'the months were renamed by the Normans'], 'Starting from March, September really was the seventh month. Two months were later added at the start, and the names stayed.', choiceOnly));
 
@@ -187,15 +187,15 @@ const ROOTS = [
 ROOTS.forEach(([la, en, word, wrong], i) => items.push(fact(`r.${i + 1}`, 'roots', `**${la}** means “${en}”. Which English word comes from it?`, word, wrong, `${word} comes from ${la} (${en}).${word === 'capital' ? ' A capital city is the “head” city; a capital letter heads a sentence.' : word === 'manual' ? ' A manual is a handbook; manual work is done by hand.' : word === 'evidence' ? ' Evidence is what can be seen.' : word === 'annual' ? ' Annual means yearly; an anniversary is the turning of a year.' : ''}`, choiceOnly)));
 
 // --- Roman life
-items.push(fact('ro.forum', 'romans', 'What was the **forum**?', 'the public square and market-place at the centre of a Roman town', ['the public baths', 'the dining room', 'the army camp'], 'Business, politics, shopping and gossip all happened in the forum. Rome’s Forum Romanum is still there.', choiceOnly));
+items.push(fact('ro.forum', 'romans', 'What was the **forum**?', 'the town’s market-place', ['the public baths', 'the main dining room', 'the walled army camp'], 'Business, politics, shopping and gossip all happened in the forum. Rome’s Forum Romanum is still there.', choiceOnly));
 items.push(fact('ro.thermae', 'romans', 'What were the **thermae**?', 'the public baths', ['the temples', 'the shops', 'the kitchens'], 'Thermae (from the Greek for heat): hot rooms, cold plunges, exercise yards. Bath in England is named after its Roman baths.', { accept: ['baths', 'public baths', 'the baths'] }));
-items.push(fact('ro.atrium', 'romans', 'What was the **atrium** of a Roman house?', 'the entrance hall, with an opening in the roof and a pool to catch rainwater', ['the kitchen', 'the garden', 'the bedroom'], 'The pool was the impluvium. Modern hotel atriums borrow the name.', choiceOnly));
-items.push(fact('ro.triclinium', 'romans', 'What happened in the **triclinium**?', 'dinner, eaten lying on couches', ['bathing', 'sleeping', 'lessons'], 'Tri-clinium = three couches, arranged round a low table. Guests reclined on their left elbow and ate with their right hand.', choiceOnly));
-items.push(fact('ro.toga', 'romans', 'Who wore the **toga**?', 'adult male Roman citizens, on formal occasions', ['slaves', 'all women', 'soldiers in battle'], 'A huge semicircle of wool, hard to put on without help. Everyday wear was the simpler tunica.', choiceOnly));
+items.push(fact('ro.atrium', 'romans', 'What was the **atrium** of a Roman house?', 'the entrance hall', ['the kitchen', 'the walled garden', 'the main bedroom'], 'The pool was the impluvium. Modern hotel atriums borrow the name.', choiceOnly));
+items.push(fact('ro.triclinium', 'romans', 'What happened in the **triclinium**?', 'dinner', ['bathing', 'sleeping', 'lessons'], 'Tri-clinium = three couches, arranged round a low table. Guests reclined on their left elbow and ate with their right hand.', choiceOnly));
+items.push(fact('ro.toga', 'romans', 'Who wore the **toga**?', 'adult male citizens', ['slaves at work', 'all Roman women', 'soldiers in battle'], 'A huge semicircle of wool, hard to put on without help. Everyday wear was the simpler tunica.', choiceOnly));
 items.push(fact('ro.stilus', 'romans', 'Roman schoolchildren wrote with a **stilus** on a…', 'wax tablet (tabula)', ['sheet of paper', 'slate', 'computer'], 'Scratch letters in the wax with the point; smooth them out with the flat end. “Stylus” and “style” come from stilus.', choiceOnly));
 items.push(fact('ro.ludus', 'romans', '**ludus** means both “school” and…', 'game', ['dinner', 'temple', 'war'], 'The same word for school and play. Gladiators trained in a ludus too.', { accept: ['games', 'play'] }));
-items.push(fact('ro.amph', 'romans', 'What kind of building was the **amphitheatrum**?', 'an oval arena for gladiator fights and wild-beast shows', ['a semicircular theatre for plays', 'a temple', 'a race-track for chariots'], 'Amphi = all round: seats on every side. The Colosseum in Rome held about 50,000 people. Chariots raced in the circus.', choiceOnly));
-items.push(fact('ro.spqr', 'romans', 'What do the letters **SPQR**, seen on Roman standards and still on Rome’s drain covers, stand for?', 'Senatus Populusque Romanus: the Senate and People of Rome', ['Super Potens Quattuor Reges', 'Sic Parvis Quid Roma', 'Semper Paratus Quis Regit'], 'The -que on Populusque means “and”: “the Senate and-People of-Rome”.', choiceOnly));
+items.push(fact('ro.amph', 'romans', 'What kind of building was the **amphitheatrum**?', 'an arena for gladiator fights', ['a semicircular theatre for plays', 'a temple to all the gods', 'a race-track for chariots'], 'Amphi = all round: seats on every side. The Colosseum in Rome held about 50,000 people. Chariots raced in the circus.', choiceOnly));
+items.push(fact('ro.spqr', 'romans', 'What do the letters **SPQR**, seen on Roman standards and still on Rome’s drain covers, stand for?', 'Senatus Populusque Romanus', ['Super Potens Quattuor Reges', 'Senatus Pater Quirinus Rex', 'Semper Paratus Quis Regit'], 'The -que on Populusque means “and”: “the Senate and-People of-Rome”.', choiceOnly));
 items.push(fact('ro.num1', 'romans', 'What number is **XIV** in Roman numerals?', '14', ['16', '9', '24'], 'X = 10, IV = 4 (one before five). 10 + 4 = 14.'));
 items.push(fact('ro.num2', 'romans', 'What number is **XLII**?', '42', ['62', '38', '92'], 'XL = 40 (ten before fifty), II = 2.'));
 items.push(fact('ro.num3', 'romans', 'Write **2026** in Roman numerals.', 'MMXXVI', ['MMXVI', 'MXXVI', 'MMXXIV'], 'M = 1000, so MM = 2000; XX = 20; VI = 6.', { strict: true }));
@@ -204,11 +204,11 @@ items.push(fact('ro.num3', 'romans', 'Write **2026** in Roman numerals.', 'MMXXV
 const Q = (id, prompt, right, wrongs, explain) => items.push(fact(`st.${id}`, 'story', prompt, right, wrongs, explain, { ...STORY, formats: ['choice'] }));
 Q(1, 'Who is the mother?', 'Iulia', ['Flavia', 'Marcus', 'Felix'], '“Iulia est mater.”');
 Q(2, 'Where is Marcus?', 'in the garden', ['in the kitchen', 'in the street', 'in the dining room'], '“Marcus in horto sedet”: he sits in the garden.');
-Q(3, 'What is Felix doing?', 'preparing dinner in the kitchen', ['sleeping in the street', 'working in the atrium', 'carrying water'], '“Felix in culina cenam parat.” Felix is the servus (slave) and the cook.');
+Q(3, 'What is Felix doing?', 'preparing dinner', ['sleeping in the street', 'working in the atrium', 'carrying water'], '“Felix in culina cenam parat.” Felix is the servus (slave) and the cook.');
 Q(4, 'Who is Rufus?', 'the dog', ['the son', 'the slave', 'a friend'], '“Rufus est canis.”');
 Q(5, 'What does Lucius do when he sees the dog?', 'he shouts its name', ['he carries it', 'he runs away', 'he feeds it'], '“Lucius clamat: ‘Rufe!’” Rufe is the form of Rufus used when calling someone: the vocative.');
 Q(6, 'What does Flavia carry?', 'water', ['dinner', 'a book', 'the dog'], '“Flavia aquam portat.” aquam is the accusative of aqua.');
-Q(7, 'Where does the family eat?', 'in the triclinium (dining room)', ['in the atrium', 'in the garden', 'in the kitchen'], '“familia in triclinio cenat.” cenat = dines, from cena.');
+Q(7, 'Where does the family eat?', 'in the triclinium', ['in the atrium', 'in the garden', 'in the kitchen'], '“familia in triclinio cenat.” cenat = dines, from cena.');
 Q(8, 'Where does Rufus sleep at the end?', 'under the table', ['in the street', 'in the garden', 'on a couch'], '“Rufus sub mensa dormit.” sub = under.');
 
 export default [{ subject: 'latin', deck: 'core', topics, items }];

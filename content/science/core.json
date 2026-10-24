@@ -127,7 +127,7 @@
    "prompt": "Why do we have day and night?",
    "options": [
     {
-     "text": "The Earth spins on its axis once every 24 hours",
+     "text": "The Earth spins on its axis",
      "correct": true
     },
     {
@@ -141,7 +141,7 @@
      "feedback": "One orbit of the Sun takes a year, not a day."
     },
     {
-     "text": "The Moon blocks the Sun at night",
+     "text": "The Moon blocks out the Sun at night",
      "correct": false,
      "feedback": "The Moon is often visible during the day, and it doesn’t cause night."
     }
@@ -155,7 +155,7 @@
    "prompt": "Why is it colder in the UK in winter?",
    "options": [
     {
-     "text": "The Earth is tilted, so in winter our half leans away from the Sun and gets weaker, shorter days of sunlight",
+     "text": "Our half of the tilted Earth leans away from the Sun",
      "correct": true
     },
     {
@@ -164,7 +164,7 @@
      "feedback": "Surprisingly, the Earth is closest to the Sun in early January! Seasons are caused by the tilt."
     },
     {
-     "text": "The Sun gives out less heat in winter",
+     "text": "The Sun gives out less heat during winter",
      "correct": false,
      "feedback": "The Sun’s output doesn’t change with our seasons."
     }
@@ -178,7 +178,7 @@
    "prompt": "Why does the Moon seem to change shape over a month?",
    "options": [
     {
-     "text": "We see different amounts of its sunlit half as it orbits the Earth",
+     "text": "We see different amounts of its lit half",
      "correct": true
     },
     {
@@ -187,7 +187,7 @@
      "feedback": "The Earth’s shadow only falls on the Moon during an eclipse, which is rare."
     },
     {
-     "text": "Clouds cover part of it",
+     "text": "Clouds in space cover part of it",
      "correct": false,
      "feedback": "The phases happen even on clear nights."
     }
@@ -215,11 +215,11 @@
    "topic": "science.space",
    "kind": "fact",
    "prompt": "Roughly how long does the Moon take to orbit the Earth?",
-   "answer": "about 27 days (about a month)",
+   "answer": "about 27 days",
    "distractors": [
-    "24 hours",
-    "365 days",
-    "7 days"
+    "about 24 hours",
+    "about 365 days",
+    "about 7 days"
    ],
    "explain": "The Moon orbits the Earth in about 27 days; the cycle of phases takes about 29.5 days.",
    "formats": [
@@ -328,11 +328,11 @@
    "prompt": "A ball is rolling across a flat, grassy field. Why does it slow down and stop?",
    "options": [
     {
-     "text": "Friction from the grass acts against its motion",
+     "text": "Friction from the grass",
      "correct": true
     },
     {
-     "text": "It runs out of force",
+     "text": "It runs out of the force from the kick",
      "correct": false,
      "feedback": "Objects don’t carry a store of “force”. A moving object keeps moving unless a force (here friction) acts on it."
     },
@@ -351,16 +351,16 @@
    "prompt": "What is the difference between mass and weight?",
    "options": [
     {
-     "text": "Mass is the amount of matter (kg); weight is the pull of gravity on it (newtons)",
+     "text": "Mass is matter (kg); weight is gravity’s pull (N)",
      "correct": true
     },
     {
-     "text": "They are the same thing",
+     "text": "They are the same thing, measured in kilograms",
      "correct": false,
      "feedback": "In everyday speech we mix them up, but in science weight is a force measured in newtons."
     },
     {
-     "text": "Weight is measured in kilograms; mass in newtons",
+     "text": "Weight is measured in kg; mass in newtons",
      "correct": false,
      "feedback": "It is the other way round: mass in kg, weight in newtons (N)."
     }
@@ -507,7 +507,7 @@
    "prompt": "Why does a shadow have the same shape as the object?",
    "options": [
     {
-     "text": "Light travels in straight lines, so the object blocks light in its own outline",
+     "text": "Light travels in straight lines",
      "correct": true
     },
     {
@@ -516,7 +516,7 @@
      "feedback": "A reflection shows colour and detail; a shadow is just where light is blocked."
     },
     {
-     "text": "Shadows are made by the dark coming out of objects",
+     "text": "Darkness comes out of the object",
      "correct": false,
      "feedback": "Darkness isn’t a thing that moves. A shadow is simply an absence of light."
     }
@@ -710,11 +710,11 @@
    "topic": "science.electricity",
    "kind": "fact",
    "prompt": "Why are wires covered in plastic?",
-   "answer": "plastic is an insulator, so it keeps us safe",
+   "answer": "plastic is an insulator",
    "distractors": [
-    "plastic makes the current faster",
-    "plastic is a conductor",
-    "to make wires bendy only"
+    "plastic makes the current flow faster",
+    "plastic is a good conductor",
+    "only to make the wires bendy"
    ],
    "explain": "The plastic coating stops current flowing into us.",
    "formats": [
@@ -812,16 +812,16 @@
    "prompt": "Puddles disappear on a sunny day. Where does the water go?",
    "options": [
     {
-     "text": "It evaporates into water vapour in the air",
+     "text": "It evaporates into the air",
      "correct": true
     },
     {
-     "text": "It soaks into the ground only",
+     "text": "It all soaks down into the ground",
      "correct": false,
      "feedback": "Some does, but puddles on a playground disappear because the water evaporates."
     },
     {
-     "text": "The Sun destroys it",
+     "text": "The Sun’s heat destroys the water",
      "correct": false,
      "feedback": "Matter isn’t destroyed. The water is still there as a gas."
     }
@@ -940,16 +940,16 @@
    "prompt": "Is a whale a fish or a mammal?",
    "options": [
     {
-     "text": "A mammal: it breathes air with lungs and feeds its young on milk",
+     "text": "A mammal: it breathes air and feeds milk",
      "correct": true
     },
     {
-     "text": "A fish: it lives in water and swims",
+     "text": "A fish: it lives in water and has fins",
      "correct": false,
      "feedback": "Living in water doesn’t make an animal a fish. Whales breathe air and feed their babies milk."
     },
     {
-     "text": "Neither: it is a reptile",
+     "text": "Neither: it is a type of reptile",
      "correct": false,
      "feedback": "Reptiles have scales and most lay eggs on land."
     }
@@ -1070,16 +1070,16 @@
    "prompt": "What does the heart do?",
    "options": [
     {
-     "text": "It pumps blood around the body through blood vessels",
+     "text": "It pumps blood around the body",
      "correct": true
     },
     {
-     "text": "It makes blood",
+     "text": "It makes new blood for the body",
      "correct": false,
      "feedback": "Blood cells are made in the bone marrow, not the heart."
     },
     {
-     "text": "It is where we feel love",
+     "text": "It cleans the blood of waste",
      "correct": false,
      "feedback": "That’s a figure of speech. Feelings come from the brain."
     }
@@ -1093,16 +1093,16 @@
    "prompt": "Why does your heart beat faster when you exercise?",
    "options": [
     {
-     "text": "Your muscles need more oxygen, so blood must be pumped faster",
+     "text": "Your muscles need more oxygen",
      "correct": true
     },
     {
-     "text": "The heart gets scared",
+     "text": "The heart gets nervous and scared",
      "correct": false,
      "feedback": "The heart responds to what the muscles need."
     },
     {
-     "text": "Exercise makes the heart smaller",
+     "text": "Exercise makes your heart smaller",
      "correct": false,
      "feedback": "Exercise strengthens the heart over time; it doesn’t make it smaller."
     }
@@ -1169,10 +1169,10 @@
    "topic": "science.body",
    "kind": "fact",
    "prompt": "Blood carries water, nutrients and oxygen. What else does it carry away from cells?",
-   "answer": "waste such as carbon dioxide",
+   "answer": "carbon dioxide",
    "distractors": [
-    "bones",
-    "food chunks",
+    "fresh nutrients",
+    "undigested food",
     "air bubbles"
    ],
    "explain": "Blood carries waste such as carbon dioxide away from cells.",
@@ -1204,16 +1204,16 @@
    "prompt": "How did giraffes come to have long necks?",
    "options": [
     {
-     "text": "Over many generations, giraffes with slightly longer necks reached more food, survived and passed the trait on",
+     "text": "Longer-necked giraffes survived and passed it on",
      "correct": true
     },
     {
-     "text": "Each giraffe stretched its neck, and its babies were born with longer necks",
+     "text": "Each giraffe stretched its neck, and its babies inherited it",
      "correct": false,
      "feedback": "This was Lamarck’s idea, and it’s wrong: changes you make during your life aren’t passed to your children."
     },
     {
-     "text": "Giraffes decided they needed longer necks",
+     "text": "Giraffes decided that they needed longer necks",
      "correct": false,
      "feedback": "Animals can’t choose to evolve. Natural selection works on random differences."
     }
@@ -1280,11 +1280,11 @@
    "topic": "science.evolution",
    "kind": "fact",
    "prompt": "What is a fossil?",
-   "answer": "the preserved remains or traces of a living thing from long ago",
+   "answer": "remains of an ancient living thing",
    "distractors": [
-    "a type of crystal",
-    "a living animal in rock",
-    "a rock made by volcanoes"
+    "a type of crystal found in caves",
+    "an animal still alive inside rock",
+    "a rock made by cooling lava"
    ],
    "explain": "Fossils form when remains are buried and slowly replaced by minerals. They show how living things have changed.",
    "formats": [

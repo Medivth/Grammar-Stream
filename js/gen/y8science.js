@@ -122,12 +122,12 @@ export const Y8_SCIENCE_GENERATORS = {
       ['CH₄ + O₂ → CO₂ + H₂O', 'CH₄ + 2O₂ → CO₂ + 2H₂O', ['CH₄ + O₂ → CO₂ + 2H₂O', '2CH₄ + O₂ → CO₂ + H₂O', 'CH₄ + 3O₂ → CO₂ + 2H₂O']],
       ['Na + Cl₂ → NaCl', '2Na + Cl₂ → 2NaCl', ['Na + Cl₂ → 2NaCl', 'Na + 2Cl₂ → NaCl', '2Na + 2Cl₂ → 2NaCl']],
       ['Fe + O₂ → Fe₂O₃', '4Fe + 3O₂ → 2Fe₂O₃', ['2Fe + O₂ → Fe₂O₃', '4Fe + 2O₂ → 2Fe₂O₃', '2Fe + 3O₂ → 2Fe₂O₃']],
-      ['HCl + NaOH → NaCl + H₂O', 'HCl + NaOH → NaCl + H₂O (already balanced)', ['2HCl + NaOH → NaCl + H₂O', 'HCl + 2NaOH → NaCl + 2H₂O', 'HCl + NaOH → 2NaCl + H₂O']],
+      ['HCl + NaOH → NaCl + H₂O', 'HCl + NaOH → NaCl + H₂O', ['2HCl + NaOH → NaCl + H₂O', 'HCl + 2NaOH → NaCl + 2H₂O', 'HCl + NaOH → 2NaCl + H₂O']],
       ['Ca + H₂O → Ca(OH)₂ + H₂', 'Ca + 2H₂O → Ca(OH)₂ + H₂', ['Ca + H₂O → Ca(OH)₂ + 2H₂', '2Ca + H₂O → Ca(OH)₂ + H₂', 'Ca + 2H₂O → 2Ca(OH)₂ + H₂']],
     ];
     const pool = level === 1 ? EQ.slice(0, 2) : level === 2 ? EQ.slice(0, 4).concat(EQ.slice(5, 6)) : EQ;
     const [raw, right, wrongs] = rng.pick(pool);
-    return choice(`Which is the correctly balanced equation for ${raw}?`, right, wrongs, rng, `Count each type of atom on both sides: in ${right.replace(' (already balanced)', '')} they match, because atoms are rearranged, never created or destroyed.`, ['Count the atoms of each element on each side.', 'Change only the big numbers in front (coefficients), never the small ones in a formula.', `${right}`]);
+    return choice(`Which is the correctly balanced equation for ${raw}?`, right, wrongs, rng, `Count each type of atom on both sides: in ${right} they match, because atoms are rearranged, never created or destroyed.`, ['Count the atoms of each element on each side.', 'Change only the big numbers in front (coefficients), never the small ones in a formula.', `${right}`]);
   },
 
   y8sPunnett(level, rng) {

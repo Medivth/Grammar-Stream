@@ -9,10 +9,10 @@ function choice(prompt, correct, wrongs, rng, extra = {}) {
 
 // [question, independent, dependent, control, wrong-but-tempting]
 const INVESTIGATIONS = [
-  ['Does the temperature of water affect how quickly sugar dissolves?', 'the temperature of the water', 'the time taken for the sugar to dissolve', 'the mass of sugar', 'the colour of the cup'],
+  ['Does the temperature of water affect how quickly sugar dissolves?', 'the temperature of the water', 'the time to dissolve', 'the mass of sugar used', 'the colour of the cup'],
   ['Does the height a ball is dropped from affect how high it bounces?', 'the height it is dropped from', 'the height of the bounce', 'the type of ball', 'the time of day'],
   ['Does the amount of light affect how tall a plant grows?', 'the amount of light', 'the height of the plant', 'the amount of water', 'the name of the plant'],
-  ['Does the thickness of wrapping affect how fast a cup of water cools?', 'the thickness of wrapping', 'the temperature after 20 minutes', 'the starting temperature of the water', 'who reads the thermometer'],
+  ['Does the thickness of wrapping affect how fast a cup of water cools?', 'the thickness of wrapping', 'the temperature after 20 minutes', 'the starting temperature', 'who reads the thermometer'],
   ['Does the surface a toy car rolls on affect how far it travels?', 'the type of surface', 'the distance the car travels', 'the height of the ramp', 'the colour of the car'],
   ['Does the size of a parachute affect how long it takes to fall?', 'the size of the parachute', 'the time taken to fall', 'the mass hanging from it', 'the shape of the room'],
   ['Does the number of cells (batteries) affect how bright a bulb is?', 'the number of cells', 'the brightness of the bulb', 'the type of bulb', 'the length of the table'],
@@ -98,9 +98,9 @@ export const SCIENCE_GENERATORS = {
     }
     const acidic = rng.chance(0.5);
     const [name] = rng.pick(SUBSTANCES.filter((s) => s[2] === (acidic ? 'acid' : 'alkali')));
-    const fixers = acidic ? ['baking soda solution', 'milk of magnesia', 'soap'] : ['vinegar', 'lemon juice'];
+    const fixers = acidic ? ['baking soda solution', 'milk of magnesia', 'soapy water'] : ['white vinegar', 'lemon juice'];
     const fix = rng.pick(fixers);
-    const wrongs = rng.sample(acidic ? ['vinegar', 'lemon juice', 'pure water', 'cola'] : ['soap', 'bleach', 'pure water', 'baking soda solution'], 3).filter((w) => w !== name && w !== fix);
+    const wrongs = rng.sample(acidic ? ['white vinegar', 'fresh lemon juice', 'pure distilled water', 'a fizzy cola drink'] : ['soapy water', 'household bleach', 'pure distilled water', 'baking soda solution'], 3).filter((w) => !w.includes(name) && !name.includes(w) && w !== fix);
     return choice(`Which of these could neutralise ${name}?`, fix, wrongs.slice(0, 2), rng, {
       explain: `${acidic ? 'An acid' : 'An alkali'} is neutralised by ${acidic ? 'an alkali' : 'an acid'}. ${fix[0].toUpperCase() + fix.slice(1)} is ${acidic ? 'an alkali' : 'an acid'}. Acid + alkali → salt + water.`,
       steps: [`${name[0].toUpperCase() + name.slice(1)} is ${acidic ? 'an acid' : 'an alkali'}.`, `To neutralise it I need ${acidic ? 'an alkali' : 'an acid'}.`, `${fix[0].toUpperCase() + fix.slice(1)} is ${acidic ? 'an alkali' : 'an acid'}, so it works.`],

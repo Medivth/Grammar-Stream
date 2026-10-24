@@ -407,21 +407,21 @@
    "prompt": "How is a bacterial cell different from an animal cell?",
    "options": [
     {
-     "text": "It has no nucleus: its DNA floats in the cytoplasm",
+     "text": "It has no nucleus; its DNA is loose",
      "correct": true
     },
     {
-     "text": "It is much bigger",
+     "text": "It is far bigger than an animal cell",
      "correct": false,
      "feedback": "Bacteria are usually much smaller than animal cells."
     },
     {
-     "text": "It has chloroplasts",
+     "text": "It has chloroplasts for photosynthesis",
      "correct": false,
      "feedback": "Most bacteria have no chloroplasts."
     }
    ],
-   "explain": "Bacteria are prokaryotes: no nucleus, and often a loop of DNA plus small rings called plasmids."
+   "explain": "It has no nucleus: its DNA floats in the cytoplasm. Bacteria are prokaryotes: no nucleus, and often a loop of DNA plus small rings called plasmids."
   },
   {
    "id": "science.cl.stain",
@@ -430,21 +430,21 @@
    "prompt": "Why do you add a stain such as iodine when preparing an onion cell slide?",
    "options": [
     {
-     "text": "To make the parts of the cell easier to see",
+     "text": "To make the cell parts show up",
      "correct": true
     },
     {
-     "text": "To kill the cells",
+     "text": "To kill the cells so they keep still",
      "correct": false,
      "feedback": "The point is contrast: cell parts are almost transparent."
     },
     {
-     "text": "To make the cells bigger",
+     "text": "To make the cells swell up bigger",
      "correct": false,
      "feedback": "Stains don’t change size."
     }
    ],
-   "explain": "Most cell parts are colourless; stains colour them so they show up."
+   "explain": "To make the parts of the cell easier to see. Most cell parts are colourless; stains colour them so they show up."
   },
   {
    "id": "science.cl.em",
@@ -453,7 +453,7 @@
    "prompt": "Which kind of microscope can show ribosomes and the inside of mitochondria?",
    "answer": "an electron microscope",
    "distractors": [
-    "a light microscope",
+    "a high-power light microscope",
     "a magnifying glass",
     "a telescope"
    ],
@@ -500,21 +500,21 @@
    "prompt": "Why does a sperm cell have lots of mitochondria?",
    "options": [
     {
-     "text": "To release energy for swimming with its tail",
+     "text": "To release energy for swimming",
      "correct": true
     },
     {
-     "text": "To make the egg grow",
+     "text": "To provide food for the growing egg",
      "correct": false,
      "feedback": "The mitochondria power the sperm itself."
     },
     {
-     "text": "To store food for the baby",
+     "text": "To store energy for the baby later",
      "correct": false,
      "feedback": "That is the egg’s job, which is why eggs are large."
     }
    ],
-   "explain": "Specialised cells have features suited to their job: sperm need energy to swim."
+   "explain": "To release energy for swimming with its tail. Specialised cells have features suited to their job: sperm need energy to swim."
   },
   {
    "id": "science.or.rbc",
@@ -523,21 +523,21 @@
    "prompt": "Why do red blood cells have no nucleus?",
    "options": [
     {
-     "text": "To make more room for haemoglobin to carry oxygen",
+     "text": "To leave more room for haemoglobin",
      "correct": true
     },
     {
-     "text": "So they can divide faster",
+     "text": "So that they can divide more quickly",
      "correct": false,
      "feedback": "Without a nucleus they cannot divide at all."
     },
     {
-     "text": "Because they are dead",
+     "text": "Because they are dead before they work",
      "correct": false,
      "feedback": "They are living, specialised cells."
     }
    ],
-   "explain": "Their biconcave shape and lack of nucleus help them carry as much oxygen as possible."
+   "explain": "To make more room for haemoglobin to carry oxygen. Their biconcave shape and lack of nucleus help them carry as much oxygen as possible."
   },
   {
    "id": "science.or.enzyme",
@@ -546,16 +546,16 @@
    "prompt": "What does an enzyme do in digestion?",
    "options": [
     {
-     "text": "Speeds up the breakdown of large food molecules into small ones",
+     "text": "Speeds up breaking big food molecules into small ones",
      "correct": true
     },
     {
-     "text": "Absorbs food into the blood",
+     "text": "Absorbs the digested food into the blood",
      "correct": false,
      "feedback": "Absorption happens through the small intestine wall."
     },
     {
-     "text": "Makes food bigger so it lasts longer",
+     "text": "Joins small molecules into bigger, longer-lasting ones",
      "correct": false,
      "feedback": "The opposite: digestion makes molecules small enough to absorb."
     }
@@ -615,16 +615,16 @@
    "prompt": "Why is the small intestine lined with millions of tiny villi?",
    "options": [
     {
-     "text": "They give a huge surface area for absorbing digested food",
+     "text": "They give a huge surface area for absorption",
      "correct": true
     },
     {
-     "text": "They chew the food",
+     "text": "They grind the food up into smaller pieces",
      "correct": false,
      "feedback": "Teeth do the chewing."
     },
     {
-     "text": "They make stomach acid",
+     "text": "They make the stomach acid that kills microbes",
      "correct": false,
      "feedback": "Acid is made in the stomach."
     }
@@ -638,7 +638,7 @@
    "prompt": "Why does boiling stop an enzyme working?",
    "options": [
     {
-     "text": "The heat changes the shape of its active site, so it is denatured",
+     "text": "Heat changes the active site’s shape (denatured)",
      "correct": true
     },
     {
@@ -647,25 +647,25 @@
      "feedback": "Enzymes are proteins, not living things."
     },
     {
-     "text": "It dissolves the enzyme",
+     "text": "The heat dissolves the enzyme in the water",
      "correct": false,
      "feedback": "The enzyme is still there, but its shape is ruined."
     }
    ],
-   "explain": "Enzymes work by shape: the substrate fits the active site like a key in a lock. Too much heat and the lock is bent."
+   "explain": "The heat changes the shape of its active site, so it is denatured. Enzymes work by shape: the substrate fits the active site like a key in a lock. Too much heat and the lock is bent."
   },
   {
    "id": "science.or.acid",
    "topic": "science.organs",
    "kind": "fact",
    "prompt": "Why is there hydrochloric acid in the stomach?",
-   "answer": "it kills microbes and helps stomach enzymes work",
+   "answer": "it kills microbes and helps enzymes",
    "distractors": [
-    "it digests fat",
-    "it absorbs water",
-    "it makes bile"
+    "it digests the fat in food",
+    "it absorbs water into the blood",
+    "it makes bile to emulsify fats"
    ],
-   "explain": "Stomach protease (pepsin) works best in acid conditions.",
+   "explain": "It kills microbes and helps stomach enzymes work. Stomach protease (pepsin) works best in acid conditions.",
    "formats": [
     "choice"
    ]
@@ -694,21 +694,21 @@
    "prompt": "What is the difference between breathing and respiration?",
    "options": [
     {
-     "text": "Breathing moves air in and out of the lungs; respiration is a chemical reaction in cells",
+     "text": "Breathing moves air; respiration releases energy in cells",
      "correct": true
     },
     {
-     "text": "They are the same thing",
+     "text": "They are two names for exactly the same process",
      "correct": false,
      "feedback": "A common mix-up: respiration happens in every cell, even in plants."
     },
     {
-     "text": "Respiration only happens in the lungs",
+     "text": "Respiration only happens in the lungs, breathing everywhere",
      "correct": false,
      "feedback": "It happens in every living cell."
     }
    ],
-   "explain": "Plants respire too, day and night, even though they don’t breathe."
+   "explain": "Breathing moves air in and out of the lungs; respiration is a chemical reaction in cells. Plants respire too, day and night, even though they don’t breathe."
   },
   {
    "id": "science.rs.anaer",
@@ -734,7 +734,7 @@
    "answer": "carbon dioxide",
    "distractors": [
     "oxygen",
-    "hydrogen",
+    "hydrogen sulfide",
     "nitrogen"
    ],
    "explain": "This is fermentation, used in baking and brewing.",
@@ -750,21 +750,21 @@
    "prompt": "How are the alveoli in the lungs suited to gas exchange?",
    "options": [
     {
-     "text": "Huge surface area, walls one cell thick, and a rich blood supply",
+     "text": "Huge surface area, thin walls, rich blood supply",
      "correct": true
     },
     {
-     "text": "Thick walls to stop them bursting",
+     "text": "Thick, strong walls to stop them bursting",
      "correct": false,
      "feedback": "Thin walls give a short distance for diffusion."
     },
     {
-     "text": "They are filled with mucus to trap oxygen",
+     "text": "They are coated in mucus to trap the oxygen",
      "correct": false,
      "feedback": "Mucus is in the airways to trap dust and microbes."
     }
    ],
-   "explain": "Oxygen diffuses into the blood, and carbon dioxide out, across very thin walls."
+   "explain": "Huge surface area, walls one cell thick, and a rich blood supply. Oxygen diffuses into the blood, and carbon dioxide out, across very thin walls."
   },
   {
    "id": "science.rs.smoke",
@@ -773,21 +773,21 @@
    "prompt": "Why do smokers often get breathless?",
    "options": [
     {
-     "text": "Tar and smoke damage the alveoli and cilia, and carbon monoxide reduces the oxygen blood can carry",
+     "text": "Smoke damages the alveoli and carbon monoxide cuts oxygen carried",
      "correct": true
     },
     {
-     "text": "Smoke makes the lungs bigger",
+     "text": "Smoke makes the lungs grow bigger, so they need more air",
      "correct": false,
      "feedback": "Smoking damages the lungs; it does not enlarge them usefully."
     },
     {
-     "text": "Nicotine is a source of oxygen",
+     "text": "Nicotine uses up the oxygen in the blood as it is digested",
      "correct": false,
      "feedback": "Nicotine is an addictive drug, not oxygen."
     }
    ],
-   "explain": "Carbon monoxide binds to haemoglobin more strongly than oxygen does."
+   "explain": "Tar and smoke damage the alveoli and cilia, and carbon monoxide reduces the oxygen blood can carry. Carbon monoxide binds to haemoglobin more strongly than oxygen does."
   },
   {
    "id": "science.rs.air",
@@ -847,7 +847,7 @@
    "prompt": "Which of these does NOT limit the rate of photosynthesis?",
    "options": [
     {
-     "text": "The amount of oxygen in the air",
+     "text": "Oxygen in the air",
      "correct": true
     },
     {
@@ -861,12 +861,12 @@
      "feedback": "CO₂ is a raw material, so it can limit the rate."
     },
     {
-     "text": "Temperature",
+     "text": "Temperature around the plant",
      "correct": false,
      "feedback": "Enzymes control photosynthesis, so temperature matters."
     }
    ],
-   "explain": "Light, CO₂ and temperature are the limiting factors. Oxygen is a product."
+   "explain": "The amount of oxygen in the air. Light, CO₂ and temperature are the limiting factors. Oxygen is a product."
   },
   {
    "id": "science.ps.iodine",
@@ -875,21 +875,21 @@
    "prompt": "A leaf is tested with iodine and turns blue-black. What does that show?",
    "options": [
     {
-     "text": "Starch is present, so the leaf has been photosynthesising",
+     "text": "Starch is present: it has photosynthesised",
      "correct": true
     },
     {
-     "text": "The leaf contains protein",
+     "text": "The leaf contains protein from the soil",
      "correct": false,
      "feedback": "Biuret tests for protein; iodine tests for starch."
     },
     {
-     "text": "The leaf is dead",
+     "text": "The leaf is dead and has stopped working",
      "correct": false,
      "feedback": "It shows starch, made from the glucose of photosynthesis."
     }
    ],
-   "explain": "Plants store glucose as starch. Variegated leaves only go blue-black in the green parts."
+   "explain": "Starch is present, so the leaf has been photosynthesising. Plants store glucose as starch. Variegated leaves only go blue-black in the green parts."
   },
   {
    "id": "science.ps.stomata",
@@ -898,21 +898,21 @@
    "prompt": "What are stomata?",
    "options": [
     {
-     "text": "Tiny holes, mostly under the leaf, that let gases in and out",
+     "text": "Tiny holes in leaves that let gases in and out",
      "correct": true
     },
     {
-     "text": "The roots’ water pipes",
+     "text": "The tubes in roots that carry water upwards",
      "correct": false,
      "feedback": "Those are xylem vessels."
     },
     {
-     "text": "Green parts of the cell",
+     "text": "The green parts of a cell that trap light",
      "correct": false,
      "feedback": "Those are chloroplasts."
     }
    ],
-   "explain": "Guard cells open and close the stomata; carbon dioxide enters and water vapour escapes."
+   "explain": "Tiny holes, mostly under the leaf, that let gases in and out. Guard cells open and close the stomata; carbon dioxide enters and water vapour escapes."
   },
   {
    "id": "science.ps.xylem",
@@ -989,21 +989,21 @@
    "prompt": "In the 1600s van Helmont grew a willow tree for five years. It gained 74 kg but the soil lost only a few grams. Where did most of the tree’s mass come from?",
    "options": [
     {
-     "text": "Carbon dioxide from the air (and water)",
+     "text": "Carbon dioxide from the air",
      "correct": true
     },
     {
-     "text": "The soil",
+     "text": "Minerals from the soil",
      "correct": false,
      "feedback": "The soil lost almost nothing: that was the surprise."
     },
     {
-     "text": "Sunlight",
+     "text": "Energy from the sunlight",
      "correct": false,
      "feedback": "Light gives energy, not mass."
     }
    ],
-   "explain": "Van Helmont thought it was water. We now know the carbon comes from CO₂ in the air."
+   "explain": "Carbon dioxide from the air (and water). Van Helmont thought it was water. We now know the carbon comes from CO₂ in the air."
   },
   {
    "id": "science.ec.arrow",
@@ -1012,21 +1012,21 @@
    "prompt": "In a food chain, what do the arrows show?",
    "options": [
     {
-     "text": "The direction energy flows: from the eaten to the eater",
+     "text": "The direction energy flows, eaten to eater",
      "correct": true
     },
     {
-     "text": "Who eats whom, pointing at the food",
+     "text": "Who eats whom, pointing at the food eaten",
      "correct": false,
      "feedback": "The arrow points TO the animal doing the eating."
     },
     {
-     "text": "Which animal is bigger",
+     "text": "Which animal is the bigger of the two",
      "correct": false,
      "feedback": "Size does not matter here."
     }
    ],
-   "explain": "grass → rabbit → fox: energy passes from grass to rabbit to fox."
+   "explain": "The direction energy flows: from the eaten to the eater. grass → rabbit → fox: energy passes from grass to rabbit to fox."
   },
   {
    "id": "science.ec.producer",
@@ -1051,21 +1051,21 @@
    "prompt": "Why are food chains rarely longer than four or five steps?",
    "options": [
     {
-     "text": "Energy is lost at each step, through movement, heat and waste",
+     "text": "Energy is lost at each step",
      "correct": true
     },
     {
-     "text": "Predators get bored",
+     "text": "Top predators would run out of space to hunt",
      "correct": false,
      "feedback": "The reason is energy."
     },
     {
-     "text": "There aren’t enough species",
+     "text": "There are not enough species in a habitat",
      "correct": false,
      "feedback": "There are millions of species; energy is the limit."
     }
    ],
-   "explain": "Only about 10% of the energy passes to the next level, so there is little left for top predators."
+   "explain": "Energy is lost at each step, through movement, heat and waste. Only about 10% of the energy passes to the next level, so there is little left for top predators."
   },
   {
    "id": "science.ec.decomp",
@@ -1095,12 +1095,12 @@
      "correct": true
     },
     {
-     "text": "Bees eat crop pests",
+     "text": "Bees eat the pests that attack the crops",
      "correct": false,
      "feedback": "Bees mainly matter as pollinators."
     },
     {
-     "text": "Bees make the soil fertile",
+     "text": "Bees dig tunnels that make the soil fertile",
      "correct": false,
      "feedback": "Worms and decomposers do that."
     }
@@ -1114,21 +1114,21 @@
    "prompt": "A pesticide sprayed on plants ends up most concentrated in birds of prey. Why?",
    "options": [
     {
-     "text": "It builds up at each step because animals eat many organisms below them",
+     "text": "It builds up at each step of the chain",
      "correct": true
     },
     {
-     "text": "Birds of prey eat the plants directly",
+     "text": "Birds of prey eat the sprayed plants directly",
      "correct": false,
      "feedback": "They are at the top of the chain."
     },
     {
-     "text": "It is made inside the birds",
+     "text": "The birds make the pesticide in their own bodies",
      "correct": false,
      "feedback": "It comes from the spray."
     }
    ],
-   "explain": "This is bioaccumulation; DDT harmed eagles and falcons this way."
+   "explain": "It builds up at each step because animals eat many organisms below them. This is bioaccumulation; DDT harmed eagles and falcons this way."
   },
   {
    "id": "science.ec.web",
@@ -1137,16 +1137,16 @@
    "prompt": "In a pond, fish eat water fleas, and water fleas eat algae. If the fish all died, what would most likely happen first?",
    "options": [
     {
-     "text": "Water flea numbers would rise, and algae would fall",
+     "text": "Water fleas would rise; algae would fall",
      "correct": true
     },
     {
-     "text": "Algae would increase",
+     "text": "Algae would rise; water fleas would fall",
      "correct": false,
      "feedback": "More water fleas would eat more algae."
     },
     {
-     "text": "Nothing would change",
+     "text": "Nothing would change, because fish are at the top",
      "correct": false,
      "feedback": "Every link affects the others."
     }
@@ -1242,21 +1242,21 @@
    "prompt": "In industrial Britain, dark peppered moths became more common than pale ones. Why?",
    "options": [
     {
-     "text": "On soot-covered trees, dark moths were better hidden from birds, so more survived to breed",
+     "text": "Dark moths were better hidden on sooty trees, so more survived",
      "correct": true
     },
     {
-     "text": "The moths turned dark from the soot",
+     "text": "The moths’ wings turned dark from soot landing on them",
      "correct": false,
      "feedback": "Individuals cannot change their genes; the dark ones survived more often."
     },
     {
-     "text": "Pale moths moved away",
+     "text": "Pale moths flew away to cleaner countryside to breed",
      "correct": false,
      "feedback": "They were eaten more often."
     }
    ],
-   "explain": "Natural selection: variation, a survival advantage, and passing the useful gene on."
+   "explain": "On soot-covered trees, dark moths were better hidden from birds, so more survived to breed. Natural selection: variation, a survival advantage, and passing the useful gene on."
   },
   {
    "id": "science.in.darwin",
@@ -1266,7 +1266,7 @@
    "answer": "Charles Darwin",
    "distractors": [
     "Gregor Mendel",
-    "Isaac Newton",
+    "Alfred Russel Wallace",
     "Aristotle"
    ],
    "explain": "Darwin’s ideas were shaped by his voyage on HMS Beagle, including the Galápagos Islands.",
@@ -1281,21 +1281,21 @@
    "prompt": "Why is it important to finish a course of antibiotics?",
    "options": [
     {
-     "text": "So no partly resistant bacteria survive to multiply",
+     "text": "So no partly resistant bacteria survive",
      "correct": true
     },
     {
-     "text": "To kill viruses as well",
+     "text": "So that it kills any viruses as well",
      "correct": false,
      "feedback": "Antibiotics don’t work on viruses."
     },
     {
-     "text": "Because the tablets are expensive",
+     "text": "Because unused tablets go off in the bottle",
      "correct": false,
      "feedback": "The reason is resistance."
     }
    ],
-   "explain": "Resistant bacteria are natural selection happening fast: a big problem for modern medicine."
+   "explain": "So no partly resistant bacteria survive to multiply. Resistant bacteria are natural selection happening fast: a big problem for modern medicine."
   },
   {
    "id": "science.in.extinct",
@@ -1320,16 +1320,16 @@
    "prompt": "How do fossils support the theory of evolution?",
    "options": [
     {
-     "text": "Rock layers show simpler forms in older rock, changing gradually over time",
+     "text": "Older rock layers show simpler forms that change over time",
      "correct": true
     },
     {
-     "text": "Fossils show animals never change",
+     "text": "Fossils show that animals have never changed",
      "correct": false,
      "feedback": "They show change over very long times."
     },
     {
-     "text": "Every fossil is of a species alive today",
+     "text": "Every fossil found is of a species still alive today",
      "correct": false,
      "feedback": "Most fossil species are extinct."
     }
@@ -1343,21 +1343,21 @@
    "prompt": "Why don’t antibiotics cure a cold?",
    "options": [
     {
-     "text": "Colds are caused by viruses, and antibiotics only kill bacteria",
+     "text": "Colds are viral; antibiotics kill bacteria",
      "correct": true
     },
     {
-     "text": "Colds are too mild",
+     "text": "Colds are too mild for antibiotics to notice",
      "correct": false,
      "feedback": "It is about the type of microbe."
     },
     {
-     "text": "Colds are caused by fungi",
+     "text": "Colds are caused by fungi, not by bacteria",
      "correct": false,
      "feedback": "Colds are viruses."
     }
    ],
-   "explain": "Viruses live inside our own cells, so antibiotics can’t reach them."
+   "explain": "Colds are caused by viruses, and antibiotics only kill bacteria. Viruses live inside our own cells, so antibiotics can’t reach them."
   },
   {
    "id": "science.hd.vaccine",
@@ -1366,21 +1366,21 @@
    "prompt": "How does a vaccine protect you?",
    "options": [
     {
-     "text": "It contains a harmless form of the microbe, so white blood cells learn to make the right antibodies",
+     "text": "A harmless form of the microbe trains white blood cells",
      "correct": true
     },
     {
-     "text": "It kills every microbe in your body",
+     "text": "It kills every microbe in your body for a few years",
      "correct": false,
      "feedback": "It trains the immune system for one particular disease."
     },
     {
-     "text": "It is an antibiotic",
+     "text": "It is a strong antibiotic that stays in your blood",
      "correct": false,
      "feedback": "Vaccines prevent disease; they are not a cure."
     }
    ],
-   "explain": "Memory cells mean that next time, antibodies are made so fast you don’t fall ill."
+   "explain": "It contains a harmless form of the microbe, so white blood cells learn to make the right antibodies. Memory cells mean that next time, antibodies are made so fast you don’t fall ill."
   },
   {
    "id": "science.hd.jenner",
@@ -1438,12 +1438,12 @@
      "correct": true
     },
     {
-     "text": "Antibodies",
+     "text": "Antibodies in the blood",
      "correct": false,
      "feedback": "Antibodies come later, from white blood cells."
     },
     {
-     "text": "Vaccines",
+     "text": "Vaccines given as a baby",
      "correct": false,
      "feedback": "Vaccines are medicine, not a natural barrier."
     }
@@ -1532,21 +1532,21 @@
    "prompt": "Why does diffusion happen faster in a gas than in a liquid?",
    "options": [
     {
-     "text": "Gas particles move faster and have more space between them",
+     "text": "Gas particles move faster with more space",
      "correct": true
     },
     {
-     "text": "Gas particles are bigger",
+     "text": "Gas particles are bigger and push harder",
      "correct": false,
      "feedback": "The particles are the same; their spacing and speed differ."
     },
     {
-     "text": "Liquids don’t have particles",
+     "text": "Liquids have no particles to move about",
      "correct": false,
      "feedback": "Everything is made of particles."
     }
    ],
-   "explain": "Diffusion is the net movement of particles from high to low concentration."
+   "explain": "Gas particles move faster and have more space between them. Diffusion is the net movement of particles from high to low concentration."
   },
   {
    "id": "science.pt.melt",
@@ -1555,21 +1555,21 @@
    "prompt": "When ice melts, what happens to its particles?",
    "options": [
     {
-     "text": "They gain energy and can move past each other, but stay close together",
+     "text": "They gain energy and slide past each other",
      "correct": true
     },
     {
-     "text": "They get bigger",
+     "text": "They get bigger, so the ice takes up more room",
      "correct": false,
      "feedback": "Particles don’t change size; their arrangement changes."
     },
     {
-     "text": "They become water molecules",
+     "text": "They break apart into separate hydrogen and oxygen",
      "correct": false,
      "feedback": "They were water molecules all along."
     }
    ],
-   "explain": "A change of state is a physical change: the substance is still water."
+   "explain": "They gain energy and can move past each other, but stay close together. A change of state is a physical change: the substance is still water."
   },
   {
    "id": "science.pt.temp",
@@ -1578,16 +1578,16 @@
    "prompt": "While pure water is boiling, what happens to its temperature?",
    "options": [
     {
-     "text": "It stays at 100 °C until all the water has boiled",
+     "text": "It stays at 100 °C until it has all boiled",
      "correct": true
     },
     {
-     "text": "It keeps rising",
+     "text": "It keeps rising for as long as you heat it",
      "correct": false,
      "feedback": "The energy goes into separating the particles, not raising the temperature."
     },
     {
-     "text": "It falls",
+     "text": "It falls as the hottest water escapes as steam",
      "correct": false,
      "feedback": "It stays steady."
     }
@@ -1700,21 +1700,21 @@
    "prompt": "How is a mixture different from a compound?",
    "options": [
     {
-     "text": "A mixture’s parts are not chemically joined and can be separated physically",
+     "text": "A mixture’s parts are not chemically joined",
      "correct": true
     },
     {
-     "text": "A mixture always has a fixed recipe",
+     "text": "A mixture always has a fixed recipe of parts",
      "correct": false,
      "feedback": "Compounds have fixed proportions; mixtures can vary."
     },
     {
-     "text": "A mixture contains only one element",
+     "text": "A mixture contains only one kind of element",
      "correct": false,
      "feedback": "That would be an element."
     }
    ],
-   "explain": "Iron and sulfur mixed: a magnet can separate them. Heated together: iron sulfide, a new compound."
+   "explain": "A mixture’s parts are not chemically joined and can be separated physically. Iron and sulfur mixed: a magnet can separate them. Heated together: iron sulfide, a new compound."
   },
   {
    "id": "science.at.distil",
@@ -1741,7 +1741,7 @@
    "answer": "chromatography",
    "distractors": [
     "filtration",
-    "distillation",
+    "fractional distillation",
     "sieving"
    ],
    "explain": "The dyes travel different distances up the paper.",
@@ -1815,21 +1815,21 @@
    "prompt": "How can you tell if water is pure?",
    "options": [
     {
-     "text": "It boils at exactly 100 °C and freezes at exactly 0 °C",
+     "text": "It boils at exactly 100 °C",
      "correct": true
     },
     {
-     "text": "It looks clear",
+     "text": "It looks completely clear",
      "correct": false,
      "feedback": "Salt water looks clear too."
     },
     {
-     "text": "It tastes of nothing",
+     "text": "It has no taste or smell at all",
      "correct": false,
      "feedback": "Never taste-test in a lab!"
     }
    ],
-   "explain": "Impurities change the melting and boiling points."
+   "explain": "It boils at exactly 100 °C and freezes at exactly 0 °C. Impurities change the melting and boiling points."
   },
   {
    "id": "science.pd.mendeleev",
@@ -1858,12 +1858,12 @@
      "correct": true
     },
     {
-     "text": "The same mass",
+     "text": "The same atomic mass",
      "correct": false,
      "feedback": "Mass increases down a group."
     },
     {
-     "text": "They are all gases",
+     "text": "They are all gases at room temperature",
      "correct": false,
      "feedback": "Most groups contain solids."
     }
@@ -1893,7 +1893,7 @@
    "prompt": "How does reactivity change going DOWN Group 1?",
    "options": [
     {
-     "text": "It increases: potassium reacts more violently than sodium",
+     "text": "It increases",
      "correct": true
     },
     {
@@ -1907,7 +1907,7 @@
      "feedback": "There is a clear trend."
     }
    ],
-   "explain": "The outer electron is further from the nucleus, so it is lost more easily."
+   "explain": "It increases: potassium reacts more violently than sodium. The outer electron is further from the nucleus, so it is lost more easily."
   },
   {
    "id": "science.pd.g7",
@@ -1976,12 +1976,12 @@
      "correct": true
     },
     {
-     "text": "Only on the right",
+     "text": "Only on the far right side",
      "correct": false,
      "feedback": "Non-metals are mostly top right."
     },
     {
-     "text": "Only in the bottom row",
+     "text": "Only along the bottom two rows",
      "correct": false,
      "feedback": "Most elements are metals."
     }
@@ -2058,21 +2058,21 @@
    "prompt": "Magnesium ribbon is burned in a crucible. Its mass INCREASES. Why?",
    "options": [
     {
-     "text": "It has combined with oxygen from the air to make magnesium oxide",
+     "text": "It has combined with oxygen from the air",
      "correct": true
     },
     {
-     "text": "Mass was created",
+     "text": "Mass was created by the heat of the flame",
      "correct": false,
      "feedback": "Mass is never created; the extra came from the air."
     },
     {
-     "text": "The crucible got heavier",
+     "text": "The crucible absorbed some of the magnesium",
      "correct": false,
      "feedback": "You weigh the crucible before and after."
     }
    ],
-   "explain": "Oxidation adds oxygen, so the product is heavier than the metal."
+   "explain": "It has combined with oxygen from the air to make magnesium oxide. Oxidation adds oxygen, so the product is heavier than the metal."
   },
   {
    "id": "science.rx.exo",
@@ -2104,9 +2104,9 @@
    "prompt": "Heating copper carbonate breaks it into copper oxide and carbon dioxide. What type of reaction is this?",
    "answer": "thermal decomposition",
    "distractors": [
-    "combustion",
+    "combustion in oxygen",
     "neutralisation",
-    "displacement"
+    "displacement reaction"
    ],
    "explain": "Thermal decomposition: one substance broken down by heat into two or more.",
    "formats": [
@@ -2240,21 +2240,21 @@
    "prompt": "Why is gold found as a pure metal in the ground, while iron must be extracted from ore?",
    "options": [
     {
-     "text": "Gold is so unreactive it doesn’t combine with other elements",
+     "text": "Gold is too unreactive to combine with others",
      "correct": true
     },
     {
-     "text": "Gold is heavier",
+     "text": "Gold is much heavier, so it sinks to the surface",
      "correct": false,
      "feedback": "It is about reactivity, not mass."
     },
     {
-     "text": "Iron is rarer",
+     "text": "Iron is rarer, so it is only found in compounds",
      "correct": false,
      "feedback": "Iron is far more common than gold."
     }
    ],
-   "explain": "The least reactive metals (gold, platinum) are found native; even Hephaestus would need a furnace for iron."
+   "explain": "Gold is so unreactive it doesn’t combine with other elements. The least reactive metals (gold, platinum) are found native; even Hephaestus would need a furnace for iron."
   },
   {
    "id": "science.ac.displace",
@@ -2263,21 +2263,21 @@
    "prompt": "An iron nail is dipped in blue copper sulfate solution. It becomes coated in copper. Why?",
    "options": [
     {
-     "text": "Iron is more reactive than copper, so it displaces copper from the compound",
+     "text": "Iron is more reactive, so it displaces copper",
      "correct": true
     },
     {
-     "text": "Copper is more reactive",
+     "text": "Copper is more reactive, so it pulls itself out",
      "correct": false,
      "feedback": "Then nothing would happen."
     },
     {
-     "text": "The nail is painted",
+     "text": "The copper sulfate paints a coat onto the nail",
      "correct": false,
      "feedback": "It is a displacement reaction."
     }
    ],
-   "explain": "A more reactive metal pushes a less reactive one out of its compound."
+   "explain": "Iron is more reactive than copper, so it displaces copper from the compound. A more reactive metal pushes a less reactive one out of its compound."
   },
   {
    "id": "science.ac.indig",
@@ -2317,21 +2317,21 @@
    "prompt": "How is igneous rock formed?",
    "options": [
     {
-     "text": "When molten rock (magma or lava) cools and solidifies",
+     "text": "Molten rock cools and solidifies",
      "correct": true
     },
     {
-     "text": "From layers of sediment pressed together",
+     "text": "Layers of sediment are pressed together",
      "correct": false,
      "feedback": "That is sedimentary rock."
     },
     {
-     "text": "By heat and pressure changing other rocks",
+     "text": "Heat and pressure change other rocks",
      "correct": false,
      "feedback": "That is metamorphic rock."
     }
    ],
-   "explain": "Granite cools slowly underground (big crystals); basalt cools fast at the surface (small crystals)."
+   "explain": "When molten rock (magma or lava) cools and solidifies. Granite cools slowly underground (big crystals); basalt cools fast at the surface (small crystals)."
   },
   {
    "id": "science.er.fossil",
@@ -2418,21 +2418,21 @@
    "prompt": "How do greenhouse gases warm the Earth?",
    "options": [
     {
-     "text": "They absorb heat radiated from the Earth’s surface and re-emit it, trapping it in the atmosphere",
+     "text": "They absorb heat from the Earth and re-emit it",
      "correct": true
     },
     {
-     "text": "They make a hole in the ozone layer",
+     "text": "They make a hole in the ozone layer that lets heat in",
      "correct": false,
      "feedback": "The ozone hole is a different problem."
     },
     {
-     "text": "They reflect sunlight back to space",
+     "text": "They reflect extra sunlight down onto the surface",
      "correct": false,
      "feedback": "That would cool the Earth."
     }
    ],
-   "explain": "More CO₂ and methane mean more heat trapped: the enhanced greenhouse effect."
+   "explain": "They absorb heat radiated from the Earth’s surface and re-emit it, trapping it in the atmosphere. More CO₂ and methane mean more heat trapped: the enhanced greenhouse effect."
   },
   {
    "id": "science.er.carbon",
@@ -2471,7 +2471,7 @@
    "prompt": "A car travels at a steady 30 mph in a straight line. What can you say about the forces on it?",
    "options": [
     {
-     "text": "They are balanced: driving force equals resistive forces",
+     "text": "They are balanced",
      "correct": true
     },
     {
@@ -2480,12 +2480,12 @@
      "feedback": "Then it would speed up."
     },
     {
-     "text": "There are no forces",
+     "text": "There are no forces acting on it",
      "correct": false,
      "feedback": "Friction and air resistance act all the time."
     }
    ],
-   "explain": "Balanced forces mean no change in motion: steady speed or stationary (Newton’s first law)."
+   "explain": "They are balanced: driving force equals resistive forces. Balanced forces mean no change in motion: steady speed or stationary (Newton’s first law)."
   },
   {
    "id": "science.fo.terminal",
@@ -2494,21 +2494,21 @@
    "prompt": "Why does a skydiver reach a terminal velocity?",
    "options": [
     {
-     "text": "Air resistance grows with speed until it equals weight, so forces balance",
+     "text": "Air resistance rises until it equals weight",
      "correct": true
     },
     {
-     "text": "Gravity switches off",
+     "text": "Gravity switches off once you fall fast enough",
      "correct": false,
      "feedback": "Gravity keeps pulling."
     },
     {
-     "text": "The parachute is always open",
+     "text": "The parachute is open from the moment you jump",
      "correct": false,
      "feedback": "Terminal velocity happens with or without a parachute."
     }
    ],
-   "explain": "With the parachute open, a much bigger air resistance gives a slower terminal velocity."
+   "explain": "Air resistance grows with speed until it equals weight, so forces balance. With the parachute open, a much bigger air resistance gives a slower terminal velocity."
   },
   {
    "id": "science.fo.weight",
@@ -2530,7 +2530,7 @@
    "prompt": "What happens to your MASS if you travel to the Moon?",
    "options": [
     {
-     "text": "It stays the same; only your weight changes",
+     "text": "It stays the same",
      "correct": true
     },
     {
@@ -2539,12 +2539,12 @@
      "feedback": "That is your weight."
     },
     {
-     "text": "It becomes zero",
+     "text": "It becomes zero in space",
      "correct": false,
      "feedback": "Mass is the amount of matter in you."
     }
    ],
-   "explain": "Mass is measured in kg; weight is a force, in newtons."
+   "explain": "It stays the same; only your weight changes. Your mass stays the same; only your weight changes, to about a sixth. Mass is measured in kg; weight is a force, in newtons."
   },
   {
    "id": "science.fo.dt",
@@ -2576,21 +2576,21 @@
    "prompt": "Atlas holds up the sky. The sky pushes down on Atlas. By Newton’s third law, how do these two forces compare?",
    "options": [
     {
-     "text": "They are equal in size and opposite in direction",
+     "text": "Equal in size, opposite in direction",
      "correct": true
     },
     {
-     "text": "The sky’s push is bigger",
+     "text": "The sky’s push is bigger, so Atlas strains",
      "correct": false,
      "feedback": "Interaction pairs are always equal."
     },
     {
-     "text": "Atlas’s push is bigger",
+     "text": "Atlas’s push is bigger, so the sky stays up",
      "correct": false,
      "feedback": "Interaction pairs are always equal, whatever is happening."
     }
    ],
-   "explain": "For every action there is an equal and opposite reaction; the pair acts on different objects."
+   "explain": "They are equal in size and opposite in direction. For every action there is an equal and opposite reaction; the pair acts on different objects."
   },
   {
    "id": "science.fo.speed",
@@ -2686,16 +2686,16 @@
    "prompt": "What does the law of conservation of energy say?",
    "options": [
     {
-     "text": "Energy cannot be created or destroyed, only transferred between stores",
+     "text": "Energy is never created or destroyed, only transferred",
      "correct": true
     },
     {
-     "text": "We should switch lights off",
+     "text": "We should always switch off lights we are not using",
      "correct": false,
      "feedback": "That is energy saving, not the law."
     },
     {
-     "text": "Energy is used up when things move",
+     "text": "Energy gets used up and disappears when things move",
      "correct": false,
      "feedback": "It is transferred, often to thermal energy."
     }
@@ -2709,21 +2709,21 @@
    "prompt": "Why does a dropped ball bounce lower each time?",
    "options": [
     {
-     "text": "Some energy is transferred to the surroundings as heat and sound at each bounce",
+     "text": "Some energy is transferred to heat and sound",
      "correct": true
     },
     {
-     "text": "Energy is destroyed",
+     "text": "Some energy is destroyed at every bounce",
      "correct": false,
      "feedback": "Energy is never destroyed."
     },
     {
-     "text": "Gravity gets stronger",
+     "text": "Gravity gets stronger as the ball slows down",
      "correct": false,
      "feedback": "g stays the same."
     }
    ],
-   "explain": "Less energy remains in the ball’s gravitational store at the top of each bounce."
+   "explain": "Some energy is transferred to the surroundings as heat and sound at each bounce. Less energy remains in the ball’s gravitational store at the top of each bounce."
   },
   {
    "id": "science.en.renew",
@@ -2760,21 +2760,21 @@
    "prompt": "Why do saucepans have metal bases but plastic handles?",
    "options": [
     {
-     "text": "Metal is a good thermal conductor; plastic is an insulator",
+     "text": "Metal conducts heat; plastic insulates",
      "correct": true
     },
     {
-     "text": "Plastic is stronger",
+     "text": "Plastic is stronger and lasts much longer",
      "correct": false,
      "feedback": "It is about conducting heat."
     },
     {
-     "text": "Metal is cheaper",
+     "text": "Metal is cheaper and easier to shape",
      "correct": false,
      "feedback": "The reason is conduction."
     }
    ],
-   "explain": "Thermal energy is transferred by conduction, convection and radiation."
+   "explain": "Metal is a good thermal conductor; plastic is an insulator. Thermal energy is transferred by conduction, convection and radiation."
   },
   {
    "id": "science.en.convect",
@@ -2812,21 +2812,21 @@
    "prompt": "You add a second bulb in SERIES. What happens to the brightness?",
    "options": [
     {
-     "text": "Both bulbs are dimmer than one bulb alone",
+     "text": "Both bulbs are dimmer",
      "correct": true
     },
     {
-     "text": "Both are brighter",
+     "text": "Both bulbs are brighter",
      "correct": false,
      "feedback": "More resistance means less current."
     },
     {
-     "text": "No change",
+     "text": "No change in brightness",
      "correct": false,
      "feedback": "The current falls."
     }
    ],
-   "explain": "Total resistance goes up, so current goes down. In parallel, each bulb stays as bright as one alone."
+   "explain": "Both bulbs are dimmer than one bulb alone. Total resistance goes up, so current goes down. In parallel, each bulb stays as bright as one alone."
   },
   {
    "id": "science.el.parallel",
@@ -2835,21 +2835,21 @@
    "prompt": "Why are house lights wired in PARALLEL?",
    "options": [
     {
-     "text": "Each light gets the full voltage and can be switched on or off separately",
+     "text": "Each light gets full voltage and its own switch",
      "correct": true
     },
     {
-     "text": "It uses less wire",
+     "text": "It uses less wire, so it is cheaper to install",
      "correct": false,
      "feedback": "The reason is independence and full voltage."
     },
     {
-     "text": "It makes bulbs last longer",
+     "text": "It makes the bulbs last much longer before failing",
      "correct": false,
      "feedback": "Not the main reason."
     }
    ],
-   "explain": "If one bulb fails in parallel, the others stay on."
+   "explain": "Each light gets the full voltage and can be switched on or off separately. If one bulb fails in parallel, the others stay on."
   },
   {
    "id": "science.el.ammeter",
@@ -2891,16 +2891,16 @@
    "prompt": "A balloon rubbed on hair sticks to a wall. Why?",
    "options": [
     {
-     "text": "Friction transfers electrons, leaving the balloon charged",
+     "text": "Rubbing moves electrons, charging the balloon",
      "correct": true
     },
     {
-     "text": "It is magnetic",
+     "text": "The balloon becomes magnetic when it is rubbed",
      "correct": false,
      "feedback": "It is static electricity, not magnetism."
     },
     {
-     "text": "It is sticky",
+     "text": "Rubbing leaves a sticky layer of hair oil on it",
      "correct": false,
      "feedback": "It is electric charge."
     }
@@ -2914,21 +2914,21 @@
    "prompt": "How can you make an electromagnet stronger?",
    "options": [
     {
-     "text": "More turns of wire, more current, and an iron core",
+     "text": "More turns, more current, an iron core",
      "correct": true
     },
     {
-     "text": "Use a plastic core",
+     "text": "Fewer turns of wire and a plastic core",
      "correct": false,
      "feedback": "An iron core concentrates the field."
     },
     {
-     "text": "Use less current",
+     "text": "Less current and a copper core inside",
      "correct": false,
      "feedback": "More current makes a stronger field."
     }
    ],
-   "explain": "Electromagnets can be switched off, which is why scrapyard cranes use them."
+   "explain": "More turns of wire, more current, and an iron core. Electromagnets can be switched off, which is why scrapyard cranes use them."
   },
   {
    "id": "science.el.field",
@@ -2937,7 +2937,7 @@
    "prompt": "Outside a bar magnet, field lines go from…",
    "options": [
     {
-     "text": "the north pole to the south pole",
+     "text": "north to south",
      "correct": true
     },
     {
@@ -2946,12 +2946,12 @@
      "feedback": "The convention is north to south outside the magnet."
     },
     {
-     "text": "the middle outwards",
+     "text": "the middle outwards to both ends",
      "correct": false,
      "feedback": "They start at N and end at S."
     }
    ],
-   "explain": "The closer the lines, the stronger the field."
+   "explain": "The north pole to the south pole. The closer the lines, the stronger the field."
   },
   {
    "id": "science.el.ohm",
@@ -2976,16 +2976,16 @@
    "prompt": "Why can’t sound travel through space?",
    "options": [
     {
-     "text": "There are no particles to pass on the vibrations",
+     "text": "No particles to pass on the vibrations",
      "correct": true
     },
     {
-     "text": "It is too cold",
+     "text": "It is far too cold for sound to move",
      "correct": false,
      "feedback": "Temperature isn’t the reason."
     },
     {
-     "text": "Space is too big",
+     "text": "Space is too big, so the sound fades out",
      "correct": false,
      "feedback": "Sound needs a medium; space is a vacuum."
     }
@@ -3022,11 +3022,11 @@
    "prompt": "When light reflects off a mirror, how do the angles compare?",
    "options": [
     {
-     "text": "Angle of incidence equals angle of reflection",
+     "text": "Incidence equals reflection",
      "correct": true
     },
     {
-     "text": "Angle of reflection is always 90°",
+     "text": "Reflection is always 90°",
      "correct": false,
      "feedback": "Only if the light hits at 90° does it bounce straight back."
     },
@@ -3036,7 +3036,7 @@
      "feedback": "They are equal."
     }
    ],
-   "explain": "Both angles are measured from the normal, a line at 90° to the mirror."
+   "explain": "Angle of incidence equals angle of reflection. Both angles are measured from the normal, a line at 90° to the mirror."
   },
   {
    "id": "science.wv.refract",
@@ -3045,21 +3045,21 @@
    "prompt": "A straw in water looks bent. Why?",
    "options": [
     {
-     "text": "Light changes speed and direction as it passes from water to air (refraction)",
+     "text": "Light changes speed and direction (refraction)",
      "correct": true
     },
     {
-     "text": "The water bends the straw",
+     "text": "The water bends the straw as it soaks in",
      "correct": false,
      "feedback": "The straw is straight."
     },
     {
-     "text": "Light reflects off the water",
+     "text": "Light reflects off the surface of the water",
      "correct": false,
      "feedback": "It is refraction."
     }
    ],
-   "explain": "Light slows down in denser materials like water and glass."
+   "explain": "Light changes speed and direction as it passes from water to air (refraction). Light slows down in denser materials like water and glass."
   },
   {
    "id": "science.wv.prism",
@@ -3072,12 +3072,12 @@
      "correct": true
     },
     {
-     "text": "The prism adds colour",
+     "text": "The prism adds colour to the light",
      "correct": false,
      "feedback": "Newton showed a second prism can recombine the colours."
     },
     {
-     "text": "Light is a sound wave",
+     "text": "Light is made of seven separate rays",
      "correct": false,
      "feedback": "Light and sound are very different waves."
     }
@@ -3091,21 +3091,21 @@
    "prompt": "Why does a red apple look red in white light?",
    "options": [
     {
-     "text": "It reflects red light and absorbs the other colours",
+     "text": "It reflects red and absorbs the rest",
      "correct": true
     },
     {
-     "text": "It makes red light",
+     "text": "It gives out its own red light",
      "correct": false,
      "feedback": "It is not a light source."
     },
     {
-     "text": "It absorbs red light",
+     "text": "It absorbs red light and reflects the rest",
      "correct": false,
      "feedback": "It reflects red."
     }
    ],
-   "explain": "In blue light, the same apple would look black."
+   "explain": "It reflects red light and absorbs the other colours. In blue light, the same apple would look black."
   },
   {
    "id": "science.wv.speed",
@@ -3143,7 +3143,7 @@
    "prompt": "What causes the seasons?",
    "options": [
     {
-     "text": "The Earth’s tilted axis, so each hemisphere leans towards the Sun for part of the year",
+     "text": "The Earth’s tilted axis",
      "correct": true
     },
     {
@@ -3152,12 +3152,12 @@
      "feedback": "The Earth is actually closest to the Sun in January."
     },
     {
-     "text": "The Sun getting hotter",
+     "text": "The Sun burning hotter for half of the year",
      "correct": false,
      "feedback": "The Sun’s output is almost constant."
     }
    ],
-   "explain": "When the northern hemisphere tilts towards the Sun, days are longer and sunlight is more direct: summer."
+   "explain": "The Earth’s axis is tilted, so each hemisphere leans towards the Sun for part of the year. When the northern hemisphere tilts towards the Sun, days are longer and sunlight is more direct: summer."
   },
   {
    "id": "science.sp.gravity",
@@ -3189,21 +3189,21 @@
    "prompt": "Why does the Moon have phases?",
    "options": [
     {
-     "text": "We see different amounts of its sunlit half as it orbits the Earth",
+     "text": "We see different amounts of its lit half",
      "correct": true
     },
     {
-     "text": "The Earth’s shadow covers it",
+     "text": "The Earth’s shadow covers part of it each night",
      "correct": false,
      "feedback": "That is an eclipse, which is rare."
     },
     {
-     "text": "It changes size",
+     "text": "It grows and shrinks in size as it orbits",
      "correct": false,
      "feedback": "It stays the same size."
     }
    ],
-   "explain": "A full cycle of phases takes about 29.5 days."
+   "explain": "We see different amounts of its sunlit half as it orbits the Earth. A full cycle of phases takes about 29.5 days."
   },
   {
    "id": "science.sp.year",
@@ -3271,21 +3271,21 @@
    "prompt": "Why would Theo weigh less on Mars than on Earth?",
    "options": [
     {
-     "text": "Mars has less mass, so its gravitational field is weaker",
+     "text": "Mars’s gravitational field is weaker",
      "correct": true
     },
     {
-     "text": "Mars is further from the Sun",
+     "text": "Mars is further away from the Sun",
      "correct": false,
      "feedback": "Weight on a planet depends on that planet’s gravity."
     },
     {
-     "text": "There is no air on Mars",
+     "text": "There is no air on Mars to press down",
      "correct": false,
      "feedback": "Air has nothing to do with weight."
     }
    ],
-   "explain": "On Mars g ≈ 3.7 N/kg, compared with about 10 N/kg on Earth."
+   "explain": "Mars has less mass, so its gravitational field is weaker. On Mars g ≈ 3.7 N/kg, compared with about 10 N/kg on Earth."
   },
   {
    "id": "science.wk.iv",
@@ -3317,21 +3317,21 @@
    "prompt": "In the same investigation, which is a control variable?",
    "options": [
     {
-     "text": "Using the same car each time",
+     "text": "Using the same car",
      "correct": true
     },
     {
-     "text": "The ramp height",
+     "text": "The height of the ramp",
      "correct": false,
      "feedback": "That is what she changes."
     },
     {
-     "text": "The distance rolled",
+     "text": "The distance the car rolls",
      "correct": false,
      "feedback": "That is what she measures."
     }
    ],
-   "explain": "Keeping everything else the same makes it a fair test."
+   "explain": "Using the same car each time. Keeping everything else the same makes it a fair test."
   },
   {
    "id": "science.wk.precise",
@@ -3363,21 +3363,21 @@
    "prompt": "Why repeat an experiment and calculate a mean?",
    "options": [
     {
-     "text": "To reduce the effect of random errors and spot anomalies",
+     "text": "To reduce random errors and spot anomalies",
      "correct": true
     },
     {
-     "text": "To make it take longer",
+     "text": "To make sure the experiment takes longer",
      "correct": false,
      "feedback": "Repeats make results more reliable."
     },
     {
-     "text": "To change the independent variable",
+     "text": "To change the independent variable each time",
      "correct": false,
      "feedback": "Repeats use the same conditions."
     }
    ],
-   "explain": "An anomalous result is one that doesn’t fit the pattern; check it, and leave it out of the mean if it is a mistake."
+   "explain": "To reduce the effect of random errors and spot anomalies. An anomalous result is one that doesn’t fit the pattern; check it, and leave it out of the mean if it is a mistake."
   },
   {
    "id": "science.wk.graph",
@@ -3386,7 +3386,7 @@
    "prompt": "You measure temperature every minute as water heats. Which graph should you draw?",
    "options": [
     {
-     "text": "A line graph, because both variables are continuous",
+     "text": "A line graph",
      "correct": true
     },
     {
@@ -3400,7 +3400,7 @@
      "feedback": "Pie charts show proportions of a whole."
     }
    ],
-   "explain": "Continuous data: line graph (or scatter graph with a line of best fit)."
+   "explain": "A line graph, because both variables are continuous. Continuous data: line graph (or scatter graph with a line of best fit)."
   },
   {
    "id": "science.wk.hypo",
@@ -3409,21 +3409,21 @@
    "prompt": "Which is a good scientific hypothesis?",
    "options": [
     {
-     "text": "If the temperature increases, the rate of reaction will increase, because particles collide more often",
+     "text": "Higher temperatures will speed up the reaction, as particles collide more",
      "correct": true
     },
     {
-     "text": "Reactions are interesting",
+     "text": "Reactions are interesting, so I will watch closely what happens",
      "correct": false,
      "feedback": "A hypothesis must be testable."
     },
     {
-     "text": "I will do the experiment carefully",
+     "text": "I will do the experiment carefully and record every result",
      "correct": false,
      "feedback": "That is a plan, not a hypothesis."
     }
    ],
-   "explain": "A hypothesis predicts a relationship and explains why, and it can be tested."
+   "explain": "If the temperature increases, the rate of reaction will increase, because particles collide more often. A hypothesis predicts a relationship and explains why, and it can be tested."
   },
   {
    "id": "science.wk.sys",
@@ -3436,12 +3436,12 @@
      "correct": true
     },
     {
-     "text": "A random error",
+     "text": "A random (reading) error",
      "correct": false,
      "feedback": "Random errors vary unpredictably; this is the same every time."
     },
     {
-     "text": "No error",
+     "text": "An anomalous result",
      "correct": false,
      "feedback": "Every reading will be 0.2 g too high."
     }
@@ -3455,21 +3455,21 @@
    "prompt": "Ice cream sales and sunburn both rise in summer. Does ice cream cause sunburn?",
    "options": [
     {
-     "text": "No: both are caused by a third factor, sunny weather",
+     "text": "No: sunny weather causes both",
      "correct": true
     },
     {
-     "text": "Yes: the graph proves it",
+     "text": "Yes: the graph proves that it does",
      "correct": false,
      "feedback": "Correlation is not causation."
     },
     {
-     "text": "Yes, because sugar weakens skin",
+     "text": "Yes, because sugar weakens the skin",
      "correct": false,
      "feedback": "There is no evidence for that."
     }
    ],
-   "explain": "A correlation shows a link, not that one thing causes the other."
+   "explain": "No: both are caused by a third factor, sunny weather. A correlation shows a link, not that one thing causes the other."
   },
   {
    "id": "science.am.parts",
@@ -3562,7 +3562,7 @@
      "feedback": "Most particles went straight through: atoms are mostly empty space."
     },
     {
-     "text": "Gold is magnetic",
+     "text": "Gold atoms are magnetic and repel alpha",
      "correct": false,
      "feedback": "It shows the structure of atoms."
     }
@@ -3652,7 +3652,7 @@
    "prompt": "How fast do all electromagnetic waves travel in a vacuum?",
    "options": [
     {
-     "text": "At the speed of light, about 300 000 km/s",
+     "text": "At the speed of light",
      "correct": true
     },
     {
@@ -3661,12 +3661,12 @@
      "feedback": "EM waves are much faster."
     },
     {
-     "text": "Radio waves are fastest",
+     "text": "Radio waves are the fastest",
      "correct": false,
      "feedback": "They all travel at the same speed in a vacuum."
     }
    ],
-   "explain": "They differ in wavelength and frequency, not speed."
+   "explain": "At the speed of light, about 300 000 km/s. They differ in wavelength and frequency, not speed."
   },
   {
    "id": "science.em.uv",
@@ -3698,21 +3698,21 @@
    "prompt": "Why are X-rays useful for seeing broken bones?",
    "options": [
     {
-     "text": "They pass through soft tissue but are absorbed by bone",
+     "text": "They pass through flesh but not bone",
      "correct": true
     },
     {
-     "text": "They bounce off skin",
+     "text": "They bounce off the skin and back to film",
      "correct": false,
      "feedback": "They pass through skin and muscle."
     },
     {
-     "text": "They make bones glow",
+     "text": "They make the bones glow so they show",
      "correct": false,
      "feedback": "Bones absorb them, leaving a shadow."
     }
    ],
-   "explain": "Radiographers stand behind a screen because X-rays can damage cells."
+   "explain": "They pass through soft tissue but are absorbed by bone. Radiographers stand behind a screen because X-rays can damage cells."
   },
   {
    "id": "science.em.ir",
@@ -3738,16 +3738,16 @@
    "prompt": "Gamma rays can kill cells. How is this useful?",
    "options": [
     {
-     "text": "To kill cancer cells and sterilise medical equipment",
+     "text": "To kill cancer cells and sterilise equipment",
      "correct": true
     },
     {
-     "text": "To cook food",
+     "text": "To cook food quickly from the inside",
      "correct": false,
      "feedback": "Microwaves cook food."
     },
     {
-     "text": "To send TV signals",
+     "text": "To carry TV signals over long distances",
      "correct": false,
      "feedback": "That is radio."
     }
@@ -3761,7 +3761,7 @@
    "prompt": "What is an allele?",
    "options": [
     {
-     "text": "A different version of the same gene",
+     "text": "A different version of a gene",
      "correct": true
     },
     {
@@ -3770,7 +3770,7 @@
      "feedback": "Alleles are versions of genes on chromosomes."
     },
     {
-     "text": "A sex cell",
+     "text": "A sex cell, like a sperm or egg",
      "correct": false,
      "feedback": "Sex cells are gametes."
     }
@@ -3784,21 +3784,21 @@
    "prompt": "What does it mean that an allele is DOMINANT?",
    "options": [
     {
-     "text": "It shows its effect even if only one copy is present",
+     "text": "It shows its effect with only one copy",
      "correct": true
     },
     {
-     "text": "It is always the most common",
+     "text": "It is always the most common in a population",
      "correct": false,
      "feedback": "Dominant alleles can be rare."
     },
     {
-     "text": "It needs two copies to show",
+     "text": "It needs two copies before it has any effect",
      "correct": false,
      "feedback": "That describes a recessive allele."
     }
    ],
-   "explain": "Use a capital letter for dominant (B) and a lower case letter for recessive (b)."
+   "explain": "It shows its effect even if only one copy is present. Use a capital letter for dominant (B) and a lower case letter for recessive (b)."
   },
   {
    "id": "science.gn.homo",
@@ -3839,21 +3839,21 @@
    "prompt": "What decides whether a baby is a boy or a girl?",
    "options": [
     {
-     "text": "Whether the sperm carries an X or a Y chromosome",
+     "text": "Whether the sperm carries X or Y",
      "correct": true
     },
     {
-     "text": "The egg’s chromosome",
+     "text": "Which chromosome the egg carries",
      "correct": false,
      "feedback": "All eggs carry an X."
     },
     {
-     "text": "The time of year",
+     "text": "The mother’s diet during pregnancy",
      "correct": false,
      "feedback": "It is genetic."
     }
    ],
-   "explain": "XX: female; XY: male. The chance is 50:50."
+   "explain": "Whether the sperm carries an X or a Y chromosome. XX: female; XY: male. The chance is 50:50."
   },
   {
    "id": "science.gn.punnett",

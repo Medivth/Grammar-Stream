@@ -255,11 +255,11 @@
    "topic": "history.athens",
    "kind": "fact",
    "prompt": "The word “democracy” comes from two Greek words. What do they mean?",
-   "answer": "people + power (rule)",
+   "answer": "people + power",
    "distractors": [
-    "many + votes",
-    "city + law",
-    "free + speech"
+    "crowd + voting",
+    "city + lawmaking",
+    "free + speaking"
    ],
    "explain": "dēmos = the people, kratos = power or rule.",
    "formats": [
@@ -296,18 +296,18 @@
    "prompt": "How was Athenian democracy different from British democracy today?",
    "options": [
     {
-     "text": "Citizens voted on laws themselves (direct democracy) rather than electing representatives",
+     "text": "Citizens voted on laws themselves instead of electing MPs",
      "correct": true
     },
     {
-     "text": "Athens had a prime minister",
+     "text": "A prime minister led the assembly and chose all of its laws",
      "correct": false,
      "feedback": "There was no prime minister; the assembly of citizens decided."
     },
     {
-     "text": "Athenians voted online",
+     "text": "Athenians elected a parliament every five years",
      "correct": false,
-     "feedback": "They met in person on the Pnyx hill."
+     "feedback": "They met in person on the Pnyx hill and voted on laws themselves."
     }
    ],
    "explain": "Britain is a representative democracy: we elect MPs to decide for us. Athens was direct."
@@ -341,14 +341,14 @@
      "correct": true
     },
     {
-     "text": "By election only",
+     "text": "By election, held every single year",
      "correct": false,
      "feedback": "Generals were elected, but most posts were filled by lot, which Athenians thought fairer."
     },
     {
-     "text": "By the king",
+     "text": "By the richest families, in turn",
      "correct": false,
-     "feedback": "Athens had no king by then."
+     "feedback": "Athens had no such system; choosing by lot was meant to stop the rich taking every post."
     }
    ],
    "explain": "Choosing by lot stopped the rich and famous from taking every job."
@@ -393,16 +393,16 @@
    "prompt": "What was the agora?",
    "options": [
     {
-     "text": "The open market and meeting place at the heart of the city",
+     "text": "The city’s open market and meeting place",
      "correct": true
     },
     {
-     "text": "A type of warship",
+     "text": "A three-banked Athenian warship with a ram",
      "correct": false,
      "feedback": "That was a trireme."
     },
     {
-     "text": "The Spartan training system",
+     "text": "The harsh training system for Spartan boys",
      "correct": false,
      "feedback": "That was the agoge."
     }
@@ -456,9 +456,9 @@
    "prompt": "Who were the helots?",
    "answer": "an enslaved people who farmed Sparta’s land",
    "distractors": [
-    "Sparta’s kings",
-    "foreign traders in Athens",
-    "Persian soldiers"
+    "the two royal families who ruled Sparta",
+    "foreign traders who lived in Athens",
+    "Persian soldiers who settled in Greece"
    ],
    "explain": "The helots outnumbered Spartan citizens many times over, which is one reason Sparta needed a powerful army.",
    "formats": [
@@ -472,16 +472,16 @@
    "prompt": "How was Sparta governed?",
    "options": [
     {
-     "text": "By two kings, a council of elders and five elected ephors",
+     "text": "By two kings, a council of elders and elected ephors",
      "correct": true
     },
     {
-     "text": "By a direct democracy like Athens",
+     "text": "By a direct democracy of all the citizens, just like Athens",
      "correct": false,
      "feedback": "Sparta was an oligarchy: rule by the few."
     },
     {
-     "text": "By a single emperor",
+     "text": "By a single king advised by a council of priests",
      "correct": false,
      "feedback": "Sparta unusually had TWO kings at once."
     }
@@ -495,16 +495,16 @@
    "prompt": "How were Spartan women different from Athenian women?",
    "options": [
     {
-     "text": "They could own land and had more freedom, and girls did athletics",
+     "text": "They could own land, and girls trained in athletics",
      "correct": true
     },
     {
-     "text": "They could vote in the assembly",
+     "text": "They voted in the assembly and served as magistrates",
      "correct": false,
      "feedback": "Neither city let women vote."
     },
     {
-     "text": "They fought in the army",
+     "text": "They served in the army alongside the men",
      "correct": false,
      "feedback": "Spartan women did not fight, but they did train their bodies."
     }
@@ -518,16 +518,16 @@
    "prompt": "Why did Sparta need such a powerful army?",
    "options": [
     {
-     "text": "To keep the much larger helot population under control, as well as to fight enemies",
+     "text": "To control the far larger helot population",
      "correct": true
     },
     {
-     "text": "Because the Spartans had no farms",
+     "text": "Because the Spartans had no farms of their own",
      "correct": false,
      "feedback": "They had farms, worked by the helots."
     },
     {
-     "text": "Because Athens forced them to",
+     "text": "Because Athens forced them to defend Greece",
      "correct": false,
      "feedback": "Sparta chose its own path."
     }
@@ -557,18 +557,18 @@
    "prompt": "What was a phalanx?",
    "options": [
     {
-     "text": "A tight block of armoured soldiers with overlapping shields and long spears",
+     "text": "A tight block of soldiers with overlapping shields",
      "correct": true
     },
     {
-     "text": "A Spartan festival",
+     "text": "A Spartan festival honouring soldiers killed in war",
      "correct": false,
      "feedback": "It was a battle formation."
     },
     {
-     "text": "A type of temple",
+     "text": "A fast warship with three banks of oars",
      "correct": false,
-     "feedback": "It was a battle formation."
+     "feedback": "That was a trireme; a phalanx was a battle formation."
     }
    ],
    "explain": "Each soldier’s shield partly protected the man to his left, so the line depended on everyone holding firm."
@@ -631,16 +631,17 @@
    "prompt": "How did the Persians finally get past the Greeks at Thermopylae?",
    "options": [
     {
-     "text": "A local man, Ephialtes, showed them a mountain path round the back",
-     "correct": true
+     "text": "A local man showed them a mountain path behind the Greeks",
+     "correct": true,
+     "feedback": "His name was Ephialtes."
     },
     {
-     "text": "They had far more ships",
+     "text": "Their larger fleet landed troops behind the Greek line",
      "correct": false,
      "feedback": "Thermopylae was a land battle in a narrow pass."
     },
     {
-     "text": "The Spartans ran out of food",
+     "text": "The Spartans finally ran out of food and water after three days",
      "correct": false,
      "feedback": "They were outflanked by a hidden path."
     }
@@ -670,16 +671,17 @@
    "prompt": "Why did the Greeks win at Salamis even though the Persians had more ships?",
    "options": [
     {
-     "text": "In the narrow straits the Persian ships got in each other’s way, while Greek triremes rammed them",
-     "correct": true
+     "text": "In the narrow straits the Persian ships got in each other’s way",
+     "correct": true,
+     "feedback": "And the Greek triremes rammed them."
     },
     {
-     "text": "The Persians had no sailors",
+     "text": "The Persian ships had no trained sailors on board",
      "correct": false,
      "feedback": "They had excellent Phoenician sailors."
     },
     {
-     "text": "A storm sank them all first",
+     "text": "A great storm had sunk most of the Persian fleet first",
      "correct": false,
      "feedback": "Storms had hurt the Persians earlier, but Salamis was won by tactics."
     }
@@ -745,16 +747,17 @@
    "prompt": "What does the story of Pheidippides tell historians about Marathon?",
    "options": [
     {
-     "text": "It is a later legend, so it shows how the battle was remembered rather than what definitely happened",
-     "correct": true
+     "text": "It shows how the battle was later remembered, not what happened",
+     "correct": true,
+     "feedback": "It is a later legend."
     },
     {
-     "text": "It proves the first marathon race was run in 490 BC",
+     "text": "It proves that a runner carried news of victory 26 miles to Athens",
      "correct": false,
      "feedback": "The 26-mile run to Athens appears only in much later writers."
     },
     {
-     "text": "Nothing, because legends are useless",
+     "text": "Nothing at all, because legends are useless to historians",
      "correct": false,
      "feedback": "Legends are useful evidence of how people remembered events."
     }
@@ -866,18 +869,19 @@
    "prompt": "What was Alexander’s most lasting legacy?",
    "options": [
     {
-     "text": "Greek language and culture spread across the eastern Mediterranean and beyond (the Hellenistic world)",
-     "correct": true
+     "text": "Greek language and culture spread across the East",
+     "correct": true,
+     "feedback": "This was the Hellenistic world."
     },
     {
-     "text": "A united empire that lasted 500 years",
+     "text": "A single empire that his heirs held for 500 years",
      "correct": false,
      "feedback": "His empire split between his generals soon after he died."
     },
     {
-     "text": "He invented democracy",
+     "text": "He spread Athenian democracy to every city he took",
      "correct": false,
-     "feedback": "Democracy was Athenian, 170 years earlier."
+     "feedback": "Democracy was Athenian, 170 years earlier, and Alexander ruled as a king."
     }
    ],
    "explain": "For centuries afterwards, Greek was the shared language of the eastern Mediterranean: even the New Testament was written in it."
@@ -889,16 +893,16 @@
    "prompt": "Why did Alexander’s empire break up so quickly?",
    "options": [
     {
-     "text": "He died young without an adult heir, and his generals fought over the lands",
+     "text": "He died young with no adult heir, and his generals fought",
      "correct": true
     },
     {
-     "text": "The Romans conquered it the next year",
+     "text": "The Romans conquered it within a year of his death",
      "correct": false,
      "feedback": "Rome took over parts only much later."
     },
     {
-     "text": "He gave it away",
+     "text": "He divided it between his sons in his will",
      "correct": false,
      "feedback": "His generals (the Successors) divided it by war."
     }
@@ -912,16 +916,17 @@
    "prompt": "How did the feudal system help William control England?",
    "options": [
     {
-     "text": "He gave land to barons in return for loyalty and knights, and they did the same down the chain",
-     "correct": true
+     "text": "He gave land to barons in return for loyalty and knights",
+     "correct": true,
+     "feedback": "And they did the same down the chain."
     },
     {
-     "text": "Everyone voted for William",
+     "text": "Every landowner voted to accept William as king",
      "correct": false,
      "feedback": "He won the crown by conquest."
     },
     {
-     "text": "Peasants owned their own land",
+     "text": "Peasants bought their own land and paid him rent directly",
      "correct": false,
      "feedback": "Most peasants were villeins, tied to their lord’s land."
     }
@@ -952,16 +957,16 @@
    "prompt": "What was the Harrying of the North (1069–70)?",
    "options": [
     {
-     "text": "William’s destruction of villages, crops and animals in northern England to crush rebellion",
+     "text": "William’s burning of the north to crush rebellion",
      "correct": true
     },
     {
-     "text": "A Viking invasion",
+     "text": "A Scottish invasion that William drove back",
      "correct": false,
      "feedback": "It was William’s own campaign."
     },
     {
-     "text": "A peaceful survey of the north",
+     "text": "A peaceful survey of northern land and its value for taxes",
      "correct": false,
      "feedback": "It was brutal: many people starved."
     }
@@ -975,8 +980,9 @@
    "prompt": "Why did the Normans build motte and bailey castles so quickly after 1066?",
    "options": [
     {
-     "text": "They could be built fast from earth and wood to control the local area",
-     "correct": true
+     "text": "Earth and timber made them quick to build",
+     "correct": true,
+     "feedback": "From them a few soldiers could control the area."
     },
     {
      "text": "They were made of stone, which was quick to cut",
@@ -984,7 +990,7 @@
      "feedback": "Stone keeps came later; the first castles were timber."
     },
     {
-     "text": "They were palaces for the English",
+     "text": "They were built as homes for English nobles",
      "correct": false,
      "feedback": "They were bases to dominate the English."
     }
@@ -996,11 +1002,11 @@
    "topic": "history.normans",
    "kind": "fact",
    "prompt": "What was the tithe that peasants paid to the Church?",
-   "answer": "one tenth of what they produced",
+   "answer": "a tenth of their produce",
    "distractors": [
-    "one half of their land",
-    "a penny a year",
-    "nothing at all"
+    "one half of all their land",
+    "one penny for each child",
+    "one day’s work every week"
    ],
    "explain": "The Church was enormously rich and powerful in medieval England.",
    "formats": [
@@ -1032,16 +1038,16 @@
    "prompt": "Why did Henry II and Becket quarrel?",
    "options": [
     {
-     "text": "Over whether churchmen accused of crimes should be tried in the king’s courts or the Church’s courts",
+     "text": "Over whether clergy accused of crimes faced the king’s courts",
      "correct": true
     },
     {
-     "text": "Over who would marry the king’s daughter",
+     "text": "Over who should marry the king’s eldest daughter",
      "correct": false,
      "feedback": "It was about power: Church versus Crown."
     },
     {
-     "text": "Over the Crusades",
+     "text": "Over whether Henry should lead a crusade",
      "correct": false,
      "feedback": "The quarrel was about law and power in England."
     }
@@ -1055,16 +1061,16 @@
    "prompt": "What was the purpose of a medieval “doom painting” on a church wall?",
    "options": [
     {
-     "text": "To show ordinary people, most of whom could not read, what heaven and hell were like",
+     "text": "To show people who could not read what heaven and hell were like",
      "correct": true
     },
     {
-     "text": "To decorate a castle",
+     "text": "To decorate a lord’s castle hall with scenes of battle",
      "correct": false,
      "feedback": "Doom paintings were in churches."
     },
     {
-     "text": "To record the Domesday survey",
+     "text": "To record who owned what land in the Domesday survey",
      "correct": false,
      "feedback": "Different “doom”: it means judgement."
     }
@@ -1104,16 +1110,17 @@
    "prompt": "Why were the barons so angry with King John?",
    "options": [
     {
-     "text": "He had lost his lands in France, raised heavy taxes and quarrelled with the Pope",
-     "correct": true
+     "text": "He lost his French lands, then taxed heavily to win them back",
+     "correct": true,
+     "feedback": "He also quarrelled with the Pope."
     },
     {
-     "text": "He refused to go on crusade",
+     "text": "He refused to join his brother Richard on crusade",
      "correct": false,
      "feedback": "That was not the main grievance."
     },
     {
-     "text": "He gave the vote to peasants",
+     "text": "He gave peasants the right to vote for Parliament",
      "correct": false,
      "feedback": "Nobody had a vote then."
     }
@@ -1127,16 +1134,17 @@
    "prompt": "What did clause 39 of Magna Carta promise?",
    "options": [
     {
-     "text": "No free man would be imprisoned or punished except by the lawful judgement of his peers or the law of the land",
-     "correct": true
+     "text": "No free man would be jailed except by lawful judgement",
+     "correct": true,
+     "feedback": "By the lawful judgement of his peers or the law of the land."
     },
     {
-     "text": "Every man could vote",
+     "text": "Every free man could vote for the king’s council",
      "correct": false,
      "feedback": "Voting came centuries later."
     },
     {
-     "text": "Taxes would be abolished",
+     "text": "No taxes could ever again be raised by the king",
      "correct": false,
      "feedback": "Taxes needed consent, not abolition."
     }
@@ -1150,16 +1158,16 @@
    "prompt": "Why is Magna Carta still seen as significant?",
    "options": [
     {
-     "text": "It established the principle that even the king must obey the law",
+     "text": "It set the principle that even the king is under the law",
      "correct": true
     },
     {
-     "text": "It gave everyone equal rights in 1215",
+     "text": "It gave every single person in England equal rights in 1215",
      "correct": false,
      "feedback": "It mostly protected barons and free men, not villeins."
     },
     {
-     "text": "It ended the monarchy",
+     "text": "It ended royal power and handed rule to the barons",
      "correct": false,
      "feedback": "England kept its kings."
     }
@@ -1226,16 +1234,17 @@
    "prompt": "What do we now know caused the Black Death?",
    "options": [
     {
-     "text": "Bacteria (Yersinia pestis) spread by fleas on rats, and between people",
-     "correct": true
+     "text": "Bacteria (Yersinia pestis) carried by rat fleas",
+     "correct": true,
+     "feedback": "It also spread between people."
     },
     {
-     "text": "Bad air from rotting rubbish",
+     "text": "Bad air (miasma) rising from rotting rubbish",
      "correct": false,
      "feedback": "That was the medieval “miasma” theory."
     },
     {
-     "text": "The position of the planets",
+     "text": "An unlucky alignment of Saturn, Jupiter and Mars",
      "correct": false,
      "feedback": "Some medieval doctors believed this, but it is wrong."
     }
@@ -1249,16 +1258,16 @@
    "prompt": "Why did some people called flagellants whip themselves in public?",
    "options": [
     {
-     "text": "They believed the plague was God’s punishment and hoped to win forgiveness",
+     "text": "They hoped to win God’s forgiveness and end the plague",
      "correct": true
     },
     {
-     "text": "To spread the disease",
+     "text": "They wanted to spread the disease to their enemies",
      "correct": false,
      "feedback": "They thought they were stopping it."
     },
     {
-     "text": "As a punishment for stealing",
+     "text": "Courts had sentenced them to it as a punishment for theft",
      "correct": false,
      "feedback": "It was voluntary religious penance."
     }
@@ -1272,18 +1281,18 @@
    "prompt": "How did the Black Death change life for surviving peasants?",
    "options": [
     {
-     "text": "Labour was scarce, so peasants could demand higher wages and better conditions",
+     "text": "Scarce labour let peasants demand higher wages",
      "correct": true
     },
     {
-     "text": "They all became knights",
+     "text": "Many were made knights to replace the dead lords",
      "correct": false,
      "feedback": "They stayed peasants, but with more bargaining power."
     },
     {
-     "text": "Nothing changed",
+     "text": "Wages fell because there was less work to do",
      "correct": false,
-     "feedback": "Labour shortages shook the feudal system."
+     "feedback": "The opposite: labour shortages pushed wages up and shook the feudal system."
     }
    ],
    "explain": "The government tried to freeze wages with the Statute of Labourers (1351), which caused resentment."
@@ -1312,14 +1321,14 @@
      "correct": true
     },
     {
-     "text": "The murder of Thomas Becket",
+     "text": "A new law forcing peasants to fight in France",
      "correct": false,
-     "feedback": "That was in 1170."
+     "feedback": "There was no such law; the poll tax was the spark."
     },
     {
-     "text": "The Battle of Hastings",
+     "text": "The king’s order to close all village markets",
      "correct": false,
-     "feedback": "That was in 1066."
+     "feedback": "There was no such order; the poll tax was the spark."
     }
    ],
    "explain": "Long-term causes included anger over wages and serfdom; the poll tax was the spark."
@@ -1364,18 +1373,18 @@
    "prompt": "“When Adam delved and Eve span, who was then the gentleman?” What was the preacher John Ball arguing?",
    "options": [
     {
-     "text": "That God made all people equal, so there should be no lords and serfs",
+     "text": "That God made all equal, so no one should be a serf",
      "correct": true
     },
     {
-     "text": "That farming was better than spinning",
+     "text": "That men should farm while women spin the wool",
      "correct": false,
      "feedback": "It is a question about equality."
     },
     {
-     "text": "That the king should marry",
+     "text": "That Adam and Eve had been the very first English peasants",
      "correct": false,
-     "feedback": "It is about equality."
+     "feedback": "It is about equality, not English history."
     }
    ],
    "explain": "At the start of the world, Adam dug and Eve spun: nobody was a lord. So why should anyone be a serf?"
@@ -1403,16 +1412,17 @@
    "prompt": "Why did Henry VIII break with the Catholic Church?",
    "options": [
     {
-     "text": "The Pope refused to annul his marriage to Catherine of Aragon, and Henry wanted a male heir and control of the Church",
-     "correct": true
+     "text": "The Pope would not annul his marriage, and he wanted a son",
+     "correct": true,
+     "feedback": "He also wanted control of the Church and its wealth."
     },
     {
-     "text": "Henry had become a Protestant like Luther",
+     "text": "Henry had become a convinced Lutheran Protestant",
      "correct": false,
      "feedback": "Henry had attacked Luther and stayed Catholic in many beliefs."
     },
     {
-     "text": "The Pope invaded England",
+     "text": "The Pope had sent an army to invade England",
      "correct": false,
      "feedback": "There was no invasion."
     }
@@ -1442,16 +1452,16 @@
    "prompt": "Why did Henry VIII close the monasteries between 1536 and 1541?",
    "options": [
     {
-     "text": "To take their wealth and land, and remove loyalty to the Pope",
+     "text": "To take their wealth and end loyalty to the Pope",
      "correct": true
     },
     {
-     "text": "Because the monks asked to leave",
+     "text": "Because most monks asked to leave and marry",
      "correct": false,
      "feedback": "Most did not."
     },
     {
-     "text": "To build schools",
+     "text": "To turn every monastery into a free grammar school",
      "correct": false,
      "feedback": "A few schools were founded, but money and power were the main motives."
     }
@@ -1508,16 +1518,16 @@
    "prompt": "What was Elizabeth I’s “middle way” (the religious settlement of 1559)?",
    "options": [
     {
-     "text": "A Protestant Church of England that kept some Catholic-style traditions to keep most people content",
+     "text": "A Protestant Church that kept some Catholic traditions",
      "correct": true
     },
     {
-     "text": "Allowing complete freedom of religion",
+     "text": "Complete freedom to follow whichever religion you chose",
      "correct": false,
      "feedback": "Everyone still had to attend the Church of England."
     },
     {
-     "text": "Becoming Catholic again",
+     "text": "A Catholic Church that obeyed the Pope again",
      "correct": false,
      "feedback": "It was Protestant, but moderate."
     }
@@ -1529,11 +1539,11 @@
    "topic": "history.reformation",
    "kind": "fact",
    "prompt": "What important change happened in English churches in 1539?",
-   "answer": "an official Bible in English was placed in every parish church",
+   "answer": "an English Bible was placed in every parish church",
    "distractors": [
-    "the churches were all closed",
-    "services were held in French",
-    "the Pope visited England"
+    "every parish church was closed for a year",
+    "all services were held in French, not Latin",
+    "the Pope visited England to bless the king"
    ],
    "explain": "The Great Bible meant ordinary people could hear and read the Bible in their own language.",
    "formats": [
@@ -1560,16 +1570,17 @@
    "prompt": "What did Charles I believe about his power?",
    "options": [
     {
-     "text": "The Divine Right of Kings: God had chosen him, so he answered only to God",
-     "correct": true
+     "text": "God had chosen him, so he answered only to God",
+     "correct": true,
+     "feedback": "This is the Divine Right of Kings."
     },
     {
-     "text": "That Parliament should rule",
+     "text": "Parliament should share power and approve all taxes",
      "correct": false,
      "feedback": "That was what his opponents wanted."
     },
     {
-     "text": "That the people should elect the king",
+     "text": "The people should elect each new king",
      "correct": false,
      "feedback": "Not in the 1600s!"
     }
@@ -1628,12 +1639,12 @@
      "correct": true
     },
     {
-     "text": "English and Scottish armies",
+     "text": "The English army and the invading Scottish army",
      "correct": false,
      "feedback": "Both sides were mostly English."
     },
     {
-     "text": "Catholics and Protestants",
+     "text": "Catholic rebels and the king’s Protestant army",
      "correct": false,
      "feedback": "Both sides were largely Protestant."
     }
@@ -1692,16 +1703,16 @@
    "prompt": "Why do historians disagree about Oliver Cromwell?",
    "options": [
     {
-     "text": "He defended Parliament and religious freedom for some Protestants, but ruled by army power and acted brutally in Ireland",
+     "text": "He defended Parliament but ruled through the army and was brutal in Ireland",
      "correct": true
     },
     {
-     "text": "Nobody knows what he did",
+     "text": "Almost no written records of his life or rule have survived to today",
      "correct": false,
      "feedback": "His life is very well recorded."
     },
     {
-     "text": "He was a king",
+     "text": "He crowned himself king, which some saw as a betrayal",
      "correct": false,
      "feedback": "He refused the crown in 1657."
     }
@@ -1732,16 +1743,16 @@
    "prompt": "What happened in the “Glorious Revolution” of 1688?",
    "options": [
     {
-     "text": "James II was replaced by William III and Mary II, who accepted limits on royal power",
+     "text": "James II was replaced by William and Mary, with limits on royal power",
      "correct": true
     },
     {
-     "text": "Charles I was executed",
+     "text": "Charles I was tried by Parliament and executed in Whitehall",
      "correct": false,
      "feedback": "That was 1649."
     },
     {
-     "text": "Parliament was abolished",
+     "text": "Parliament was abolished and the army ruled the country",
      "correct": false,
      "feedback": "Parliament became stronger."
     }
@@ -1755,16 +1766,16 @@
    "prompt": "What was the central idea of the Enlightenment?",
    "options": [
     {
-     "text": "That reason and evidence, not tradition or authority, should guide how we understand the world and govern it",
+     "text": "That reason and evidence, not tradition, should guide us",
      "correct": true
     },
     {
-     "text": "That kings were chosen by God",
+     "text": "That kings were chosen by God and must be obeyed",
      "correct": false,
      "feedback": "Enlightenment thinkers challenged this."
     },
     {
-     "text": "That science was dangerous",
+     "text": "That science threatened faith and so should be strictly limited",
      "correct": false,
      "feedback": "They championed science."
     }
@@ -1810,9 +1821,9 @@
    "prompt": "What was the motto of the French Revolution?",
    "answer": "Liberty, Equality, Fraternity",
    "distractors": [
-    "Peace, Land, Bread",
-    "Deeds not words",
-    "God save the King"
+    "Peace, Bread, Land and Liberty",
+    "Unity, Justice and Freedom",
+    "Faith, Family, Fatherland"
    ],
    "explain": "Liberté, égalité, fraternité is still France’s motto.",
    "formats": [
@@ -1826,8 +1837,9 @@
    "prompt": "Which was a cause of the French Revolution?",
    "options": [
     {
-     "text": "The government was nearly bankrupt, bread was expensive, and the Third Estate paid most taxes but had little power",
-     "correct": true
+     "text": "The state was nearly bankrupt and bread was very expensive",
+     "correct": true,
+     "feedback": "And the Third Estate paid most taxes but had little power."
     },
     {
      "text": "France had just won a war against Britain and was very rich",
@@ -1835,7 +1847,7 @@
      "feedback": "Helping America win independence had left France deep in debt."
     },
     {
-     "text": "The king had given everyone the vote",
+     "text": "The king had just given every man the right to vote",
      "correct": false,
      "feedback": "Ordinary people had almost no power."
     }
@@ -1866,16 +1878,16 @@
    "prompt": "What was the Reign of Terror (1793–94)?",
    "options": [
     {
-     "text": "A period when the revolutionary government executed thousands of suspected enemies",
+     "text": "A time when the revolutionary government executed thousands",
      "correct": true
     },
     {
-     "text": "Napoleon’s invasion of Russia",
+     "text": "Napoleon’s disastrous invasion of Russia in winter",
      "correct": false,
      "feedback": "That was 1812."
     },
     {
-     "text": "A British blockade of France",
+     "text": "A British naval blockade that starved French ports",
      "correct": false,
      "feedback": "It was violence inside France."
     }
@@ -1905,16 +1917,17 @@
    "prompt": "Which reason helps explain why Britain industrialised first?",
    "options": [
     {
-     "text": "Plentiful coal and iron, money from trade and empire, inventors, and a growing population",
-     "correct": true
+     "text": "Plentiful coal and iron, trade money and inventors",
+     "correct": true,
+     "feedback": "And a growing population to work and to buy."
     },
     {
-     "text": "Britain had the warmest weather",
+     "text": "Britain’s warm climate suited cotton growing",
      "correct": false,
-     "feedback": "Climate was not the reason."
+     "feedback": "Climate was not the reason, and cotton was imported."
     },
     {
-     "text": "Britain had no farms",
+     "text": "Britain had given up farming in order to build factories",
      "correct": false,
      "feedback": "An agricultural revolution actually helped feed the workers."
     }
@@ -1976,16 +1989,16 @@
    "prompt": "What did the Factory Act of 1833 do?",
    "options": [
     {
-     "text": "Banned children under 9 from working in textile factories and limited hours for older children",
+     "text": "Banned under-9s from textile mills; limited others’ hours",
      "correct": true
     },
     {
-     "text": "Banned all child labour",
+     "text": "Banned all child labour in every kind of workplace",
      "correct": false,
      "feedback": "It was a first step, not a complete ban."
     },
     {
-     "text": "Gave factory workers the vote",
+     "text": "Gave every male factory worker over the age of 21 the vote",
      "correct": false,
      "feedback": "That came much later."
     }
@@ -2022,16 +2035,16 @@
    "prompt": "Who were the Luddites (1811–16)?",
    "options": [
     {
-     "text": "Workers who smashed new machines they feared would take their jobs",
+     "text": "Workers who smashed machines they feared would replace them",
      "correct": true
     },
     {
-     "text": "Factory owners who built canals",
+     "text": "Factory owners who paid for new canals and roads",
      "correct": false,
      "feedback": "They were skilled workers protesting."
     },
     {
-     "text": "A railway company",
+     "text": "A company that built the first passenger railway",
      "correct": false,
      "feedback": "They were protesters."
     }
@@ -2069,18 +2082,19 @@
    "prompt": "What was the “triangular trade”?",
    "options": [
     {
-     "text": "Ships took goods from Britain to West Africa, enslaved Africans across the Atlantic, and sugar, cotton and tobacco back to Britain",
-     "correct": true
+     "text": "Goods to Africa, enslaved people to the Americas, sugar home",
+     "correct": true,
+     "feedback": "Cotton and tobacco came back to Britain too."
     },
     {
-     "text": "Trade between Britain, France and Spain",
+     "text": "A treaty trade between Britain, France and Spain",
      "correct": false,
      "feedback": "It linked Europe, Africa and the Americas."
     },
     {
-     "text": "A trade in triangles",
+     "text": "A trade in tea between Britain, India and China",
      "correct": false,
-     "feedback": "It is named after the shape of the route."
+     "feedback": "It linked Europe, Africa and the Americas; it is named after the shape of the route."
     }
    ],
    "explain": "Each leg made profits for British merchants, built on the suffering of enslaved people."
@@ -2216,16 +2230,17 @@
    "prompt": "Which shows enslaved people’s own role in ending slavery?",
    "options": [
     {
-     "text": "The Haitian Revolution (1791–1804) and the Jamaican rebellion led by Samuel Sharpe in 1831–32",
-     "correct": true
+     "text": "The Haitian Revolution and the 1831 Jamaican rebellion",
+     "correct": true,
+     "feedback": "Samuel Sharpe led the Jamaican rebellion of 1831–32."
     },
     {
-     "text": "Parliament acting entirely alone",
+     "text": "Parliament acting entirely on its own, with no outside pressure",
      "correct": false,
      "feedback": "Parliament acted, but resistance by enslaved people put real pressure on it."
     },
     {
-     "text": "Nothing; enslaved people did not resist",
+     "text": "Enslaved people accepting their fate until freed",
      "correct": false,
      "feedback": "Resistance was constant, from everyday refusal to large rebellions."
     }
@@ -2239,16 +2254,17 @@
    "prompt": "What happened after the Indian Rebellion of 1857?",
    "options": [
     {
-     "text": "The British government took direct control of India from the East India Company (the Raj)",
-     "correct": true
+     "text": "The British government took direct control of India",
+     "correct": true,
+     "feedback": "Rule passed from the East India Company to the Crown: the Raj."
     },
     {
-     "text": "India became independent",
+     "text": "India became a fully independent country within a year",
      "correct": false,
      "feedback": "Independence came in 1947."
     },
     {
-     "text": "India joined France",
+     "text": "France took over the East India Company’s lands",
      "correct": false,
      "feedback": "It came under direct British rule."
     }
@@ -2307,16 +2323,16 @@
    "prompt": "What did the Chartists (1838–48) campaign for?",
    "options": [
     {
-     "text": "Votes for all men, secret ballots and other reforms to Parliament",
+     "text": "Votes for all men and a secret ballot",
      "correct": true
     },
     {
-     "text": "Votes for women",
+     "text": "Votes for all women over the age of 30",
      "correct": false,
      "feedback": "The People’s Charter asked for votes for all men."
     },
     {
-     "text": "An end to the monarchy",
+     "text": "An end to the monarchy and the Lords",
      "correct": false,
      "feedback": "Their six points were about Parliament."
     }
@@ -2330,16 +2346,16 @@
    "prompt": "What was the difference between the suffragists and the suffragettes?",
    "options": [
     {
-     "text": "Suffragists used peaceful campaigning; suffragettes used direct, sometimes violent, action",
+     "text": "Suffragists campaigned peacefully; suffragettes used direct action",
      "correct": true
     },
     {
-     "text": "Suffragists wanted the vote, suffragettes did not",
+     "text": "Suffragists wanted the vote for women; suffragettes opposed it",
      "correct": false,
      "feedback": "Both wanted votes for women."
     },
     {
-     "text": "There was no difference",
+     "text": "They were the same group under two different names",
      "correct": false,
      "feedback": "Their methods were very different."
     }
@@ -2390,12 +2406,12 @@
      "correct": true
     },
     {
-     "text": "She won the race",
+     "text": "She rode the king’s horse to victory in the race",
      "correct": false,
      "feedback": "She ran onto the course during the race."
     },
     {
-     "text": "She was elected to Parliament",
+     "text": "She was arrested at the course and later elected to Parliament",
      "correct": false,
      "feedback": "Women could not stand for Parliament until 1918."
     }
@@ -2407,11 +2423,11 @@
    "topic": "history.vote",
    "kind": "fact",
    "prompt": "In 1918 which women gained the vote?",
-   "answer": "women over 30 who met a property qualification",
+   "answer": "women over 30 meeting a property test",
    "distractors": [
-    "all women over 18",
-    "all women over 21",
-    "no women"
+    "all women over 21, the same as men",
+    "all women over 18 who had done war work",
+    "only women who owned their own businesses"
    ],
    "explain": "The same Act gave the vote to all men over 21.",
    "formats": [
@@ -2438,16 +2454,16 @@
    "prompt": "Why did some women get the vote in 1918?",
    "options": [
     {
-     "text": "Women’s war work changed attitudes, building on decades of campaigning",
+     "text": "War work changed attitudes, after decades of campaigning",
      "correct": true
     },
     {
-     "text": "The suffragettes had won a war",
+     "text": "The suffragettes had won a famous court case against Parliament",
      "correct": false,
-     "feedback": "There was no such war."
+     "feedback": "There was no such case."
     },
     {
-     "text": "Men stopped wanting to vote",
+     "text": "Most men gave up their votes so women could vote",
      "correct": false,
      "feedback": "Men’s votes were extended too."
     }
@@ -2518,16 +2534,16 @@
    "prompt": "Why did Britain declare war on 4 August 1914?",
    "options": [
     {
-     "text": "Germany invaded neutral Belgium, which Britain had promised to protect",
+     "text": "Germany invaded Belgium, whose neutrality Britain guaranteed",
      "correct": true
     },
     {
-     "text": "Germany attacked London",
+     "text": "German Zeppelins had already bombed London",
      "correct": false,
-     "feedback": "That came later, with Zeppelin raids."
+     "feedback": "That came later, in 1915."
     },
     {
-     "text": "Britain wanted German colonies",
+     "text": "Britain wanted to seize Germany’s African colonies",
      "correct": false,
      "feedback": "The treaty with Belgium was the official reason."
     }
@@ -2557,16 +2573,17 @@
    "prompt": "What happened on 1 July 1916, the first day of the Battle of the Somme?",
    "options": [
     {
-     "text": "The British Army suffered about 57,000 casualties, its worst day ever",
-     "correct": true
+     "text": "Britain suffered about 57,000 casualties in one day",
+     "correct": true,
+     "feedback": "The British Army’s worst day ever."
     },
     {
-     "text": "The war ended",
+     "text": "Germany asked for an armistice and the war soon ended",
      "correct": false,
      "feedback": "The battle lasted until November 1916."
     },
     {
-     "text": "Tanks won the battle in one day",
+     "text": "British tanks broke through and won in one day",
      "correct": false,
      "feedback": "Tanks were first used later in the battle, in September."
     }
@@ -2597,18 +2614,18 @@
    "prompt": "How did the war change life for women in Britain?",
    "options": [
     {
-     "text": "Many took jobs in factories, transport and farming, including dangerous work making shells",
+     "text": "Many took jobs in factories, including making shells",
      "correct": true
     },
     {
-     "text": "Women were forbidden to work",
+     "text": "Women were forbidden by law to take paid jobs",
      "correct": false,
      "feedback": "The opposite: their work was essential."
     },
     {
-     "text": "Nothing changed for women",
+     "text": "Women had to join the army and fight in the trenches of France",
      "correct": false,
-     "feedback": "Over a million more women went out to work."
+     "feedback": "Women served as nurses and in support roles, not as fighting soldiers; over a million more went out to work."
     }
    ],
    "explain": "Women making munitions were nicknamed “munitionettes”."
@@ -2665,16 +2682,17 @@
    "prompt": "What did the Treaty of Versailles (1919) make Germany do?",
    "options": [
     {
-     "text": "Accept blame for the war, pay reparations, lose land and limit its army",
-     "correct": true
+     "text": "Accept blame, pay reparations and lose land",
+     "correct": true,
+     "feedback": "Its army was limited too."
     },
     {
-     "text": "Join the Allies",
+     "text": "Join the Allies in a new defensive alliance",
      "correct": false,
      "feedback": "Germany was treated as the defeated enemy."
     },
     {
-     "text": "Nothing; it was a fair peace",
+     "text": "Little: it was a gentle peace that Germany welcomed",
      "correct": false,
      "feedback": "Many Germans called it a “Diktat”: a dictated peace."
     }
@@ -2814,18 +2832,18 @@
    "prompt": "What was Kristallnacht (9–10 November 1938)?",
    "options": [
     {
-     "text": "A night of violence across Germany when synagogues, Jewish homes and shops were attacked",
+     "text": "A night of attacks on synagogues and Jewish shops",
      "correct": true
     },
     {
-     "text": "A German victory in battle",
+     "text": "A German victory over Poland in the war’s first battle",
      "correct": false,
      "feedback": "It was violence against Jewish people inside Germany."
     },
     {
-     "text": "A festival",
+     "text": "A festival of glass-making held in Berlin",
      "correct": false,
-     "feedback": "The name means “night of broken glass”."
+     "feedback": "The name means “night of broken glass”: it was a pogrom."
     }
    ],
    "explain": "Around 30,000 Jewish men were sent to concentration camps afterwards."
@@ -2851,11 +2869,11 @@
    "topic": "history.ww2",
    "kind": "fact",
    "prompt": "Holocaust Memorial Day is 27 January. What happened on that day in 1945?",
-   "answer": "Soviet soldiers liberated Auschwitz-Birkenau",
+   "answer": "Soviet troops freed Auschwitz",
    "distractors": [
-    "the war ended",
-    "Hitler came to power",
-    "D-Day began"
+    "the war in Europe finally ended",
+    "Hitler came to power in Germany",
+    "Allied troops landed in Normandy"
    ],
    "explain": "Auschwitz was the largest Nazi death camp; about 1.1 million people were murdered there.",
    "formats": [
@@ -2946,12 +2964,12 @@
      "correct": true
     },
     {
-     "text": "A history textbook written in 2015",
+     "text": "A history textbook about the battle, written in 2015",
      "correct": false,
      "feedback": "That is secondary: written later, using other sources."
     },
     {
-     "text": "A documentary made in 2006",
+     "text": "A documentary about the battle made in 2006",
      "correct": false,
      "feedback": "That is secondary."
     }
@@ -2988,16 +3006,16 @@
    "prompt": "A wartime poster exaggerates how happy factory workers were. Is it useless to a historian?",
    "options": [
     {
-     "text": "No: it is useful evidence of what the government wanted people to think",
+     "text": "No: it shows what the government wanted people to think",
      "correct": true
     },
     {
-     "text": "Yes: biased sources are useless",
+     "text": "Yes: a biased source cannot tell us anything true",
      "correct": false,
      "feedback": "A biased source tells you a lot about its author’s purpose."
     },
     {
-     "text": "Yes: posters are not real history",
+     "text": "Yes: only official written documents count as real evidence",
      "correct": false,
      "feedback": "Propaganda is valuable evidence."
     }
@@ -3011,11 +3029,11 @@
    "prompt": "What is the difference between a long-term cause and a trigger?",
    "options": [
     {
-     "text": "Long-term causes build up over years; a trigger is the event that finally sets things off",
+     "text": "Long-term causes build up; a trigger sets things off",
      "correct": true
     },
     {
-     "text": "There is no difference",
+     "text": "There is no real difference: both words mean the same thing",
      "correct": false,
      "feedback": "Good history essays separate them."
     },
@@ -3038,12 +3056,12 @@
      "correct": true
     },
     {
-     "text": "Was it exciting?",
+     "text": "Was it exciting and dramatic for people at the time?",
      "correct": false,
      "feedback": "Exciting events are not always significant."
     },
     {
-     "text": "Did it happen a long time ago?",
+     "text": "Did it happen a very long time ago, before 1500?",
      "correct": false,
      "feedback": "Age does not make something significant."
     }
@@ -3061,7 +3079,7 @@
      "correct": true
     },
     {
-     "text": "Steam engines replaced water wheels",
+     "text": "Steam engines replaced most water wheels",
      "correct": false,
      "feedback": "That is a change."
     },
@@ -3174,16 +3192,17 @@
    "prompt": "An account of the Black Death was written in 1349 by a monk. Which point about its provenance is strongest?",
    "options": [
     {
-     "text": "Written during the plague, so it shows contemporary fear and belief, though a monk might stress God’s punishment",
-     "correct": true
+     "text": "Written during the plague, so it shows contemporary beliefs",
+     "correct": true,
+     "feedback": "Though a monk might stress God’s punishment."
     },
     {
-     "text": "It was written by a monk, so it is all lies",
+     "text": "A monk wrote it, so nothing in it can be trusted",
      "correct": false,
      "feedback": "Monks were key record-keepers; their viewpoint needs weighing, not dismissing."
     },
     {
-     "text": "It was written long after the event",
+     "text": "It was written long after the plague had ended",
      "correct": false,
      "feedback": "1349 is during the plague."
     }
@@ -3197,18 +3216,18 @@
    "prompt": "How can a historian check whether a source is reliable?",
    "options": [
     {
-     "text": "Cross-reference it with other sources and with what is already known",
+     "text": "Compare it with other sources and known facts",
      "correct": true
     },
     {
-     "text": "Check if it is printed in a book",
+     "text": "Check whether it has been printed in a book",
      "correct": false,
      "feedback": "Printing does not make something true."
     },
     {
-     "text": "Count how many words it has",
+     "text": "See whether its author was famous at the time",
      "correct": false,
-     "feedback": "Length tells you little."
+     "feedback": "Fame does not make a source reliable."
     }
    ],
    "explain": "Corroboration is one of the historian’s main tools."
@@ -3244,16 +3263,16 @@
    "prompt": "What should you do FIRST when analysing a political cartoon?",
    "options": [
     {
-     "text": "Work out its date, origin and the message the cartoonist wanted to give",
+     "text": "Work out its date, origin and intended message",
      "correct": true
     },
     {
-     "text": "Decide whether it is funny",
+     "text": "Decide whether you find it funny or not",
      "correct": false,
      "feedback": "Humour is a technique; the message matters."
     },
     {
-     "text": "Count the people in it",
+     "text": "Count and name every single person drawn in the cartoon",
      "correct": false,
      "feedback": "Focus on the message and context."
     }
@@ -3267,16 +3286,16 @@
    "prompt": "Why was the Cold War called “cold”?",
    "options": [
     {
-     "text": "The USA and USSR never fought each other directly, though they competed in other ways",
+     "text": "The superpowers never fought each other directly",
      "correct": true
     },
     {
-     "text": "It was fought in Antarctica",
+     "text": "Most of the actual fighting took place in the frozen Arctic",
      "correct": false,
      "feedback": "It was a global rivalry."
     },
     {
-     "text": "It happened only in winter",
+     "text": "The battles stopped every year for the winter",
      "correct": false,
      "feedback": "It lasted from about 1945 to 1991."
     }
@@ -3294,12 +3313,12 @@
      "correct": true
     },
     {
-     "text": "Catholic and Protestant",
+     "text": "Protestant Christianity (USA) against Orthodox Christianity (USSR)",
      "correct": false,
-     "feedback": "It was about economic and political systems."
+     "feedback": "It was about economic and political systems, not religion."
     },
     {
-     "text": "Monarchy and republic",
+     "text": "Monarchy (USSR) against republicanism (USA)",
      "correct": false,
      "feedback": "Both were republics."
     }
@@ -3329,16 +3348,16 @@
    "prompt": "What was the Berlin Airlift (1948–49)?",
    "options": [
     {
-     "text": "Western planes flew in food and fuel to West Berlin after the Soviets blocked roads and railways",
+     "text": "Western planes flew supplies into blockaded West Berlin",
      "correct": true
     },
     {
-     "text": "An air battle over Berlin",
+     "text": "A huge air battle between US and Soviet jets",
      "correct": false,
      "feedback": "No shots were fired."
     },
     {
-     "text": "The building of the Berlin Wall",
+     "text": "The building of the Berlin Wall to divide the city",
      "correct": false,
      "feedback": "That was in 1961."
     }
@@ -3365,16 +3384,16 @@
    "prompt": "Why was the Cuban Missile Crisis (October 1962) so dangerous?",
    "options": [
     {
-     "text": "The USSR had placed nuclear missiles in Cuba, close to the USA, and both sides came close to nuclear war",
+     "text": "Soviet missiles in Cuba brought nuclear war close",
      "correct": true
     },
     {
-     "text": "Cuba invaded the USA",
+     "text": "Cuban troops invaded Florida and seized Miami",
      "correct": false,
      "feedback": "Cuba did not invade."
     },
     {
-     "text": "The Berlin Wall fell",
+     "text": "The Berlin Wall fell and Germany reunited",
      "correct": false,
      "feedback": "That was 1989."
     }
@@ -3483,16 +3502,16 @@
    "prompt": "How did many Ancient Greek books survive to reach medieval Europe?",
    "options": [
     {
-     "text": "They were translated into Arabic in the Islamic world, then into Latin",
+     "text": "They were translated into Arabic, then into Latin",
      "correct": true
     },
     {
-     "text": "They were kept in Viking libraries",
+     "text": "Viking raiders carried them back north to Scandinavia",
      "correct": false,
      "feedback": "Arabic translations were the key route."
     },
     {
-     "text": "They were buried in Athens until 1900",
+     "text": "They lay buried under Athens until about 1900",
      "correct": false,
      "feedback": "Many reached Europe through Spain and Sicily in the 1100s."
     }
@@ -3506,16 +3525,16 @@
    "prompt": "Where did our “Arabic” numerals, including zero, originally come from?",
    "options": [
     {
-     "text": "India, and they spread to Europe through the Arab world",
+     "text": "India, via the Arab world",
      "correct": true
     },
     {
-     "text": "Ancient Rome",
+     "text": "Ancient Rome, via the Byzantine Empire",
      "correct": false,
      "feedback": "Romans used letters: I, V, X."
     },
     {
-     "text": "Ancient Egypt",
+     "text": "Ancient Egypt, via Greek traders",
      "correct": false,
      "feedback": "Egyptian numerals were different symbols."
     }
