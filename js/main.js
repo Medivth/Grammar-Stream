@@ -84,10 +84,11 @@ async function route() {
   if (!p && hash !== '#/welcome') return app.go('#/welcome');
   if (p && !p.companion?.name && hash !== '#/companion' && hash !== '#/welcome') return app.go('#/companion');
   const [, page, arg] = hash.split('/');
+  if (page !== 'play' && app.state) app.state.extraOn = false; // leaving extra practice returns to today's session
   switch (page) {
     case 'welcome': return welcomeScreen(app);
     case 'companion': return companionScreen(app);
-    case 'play': return playScreen(app);
+    case 'play': return playScreen(app, arg);
     case 'subject': return subjectScreen(app, arg);
     case 'parent': return parentScreen(app);
     case 'display': return displayScreen(app);

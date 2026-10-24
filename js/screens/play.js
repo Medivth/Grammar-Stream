@@ -5,7 +5,7 @@ import { renderQuestion, sayButton, diagram } from '../ui/qtypes.js';
 import { capybaraEl } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
 import { speak } from '../platform/tts.js';
-import { planDay, chooseTopic, topicChoices, questionFor, submit, startSession, finishSession, daysPractisedThisMonth, CONF } from '../core/session.js';
+import { planDay, planExtra, activePlan, chooseTopic, topicChoices, questionFor, submit, startSession, finishSession, daysPractisedThisMonth, CONF } from '../core/session.js';
 import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement } from '../core/placement.js';
 import { checkSentence } from '../core/checkers.js';
 import { learnText, present } from '../core/present.js';
@@ -21,9 +21,18 @@ import { SUBJECT_BY_ID, COURSE } from '../core/subjects.js';
 
 const GRADED = new Set(['review', 'quiz', 'diag', 'practice', 'faded']);
 
-export async function playScreen(app) {
+export async function playScreen(app, arg) {
   const { state, db } = app;
   const today = app.today();
+  // extra practice in a language (#/play/latin, #/play/greek): any time, alongside today's session
+  const lang = arg && (COURSE.extra || []).includes(arg) ? arg : null;
+  state.extraOn = !!lang;
+  if (lang) {
+    if (!state.extra || state.extra.day !== today || state.extra.subject !== lang || state.extra.finished) state.extra = planExtra(state, db, today, lang);
+    if (!state.extra.badgesBefore) state.extra.badgesBefore = milestones(state, db).filter((m) => m.done).map((m) => m.id);
+    app.save();
+    return renderStep(app);
+  }
   if (!state.plan || state.plan.day !== today) {
     state.plan = planDay(state, db, today);
   }
@@ -41,7 +50,7 @@ function linkBits(links) {
 }
 
 function header(app, label, links = null) {
-  const plan = app.state.plan;
+  const plan = activePlan(app.state);
   const pct = Math.round((100 * plan.pos) / Math.max(1, plan.steps.length - 1));
   const step = plan.steps[plan.pos] || {};
   const subject = step.subject || app.db.items[step.id]?.subject || (step.topic && app.db.topics[step.topic]?.subject);
@@ -53,13 +62,13 @@ function header(app, label, links = null) {
 }
 
 async function next(app) {
-  app.state.plan.pos += 1;
+  activePlan(app.state).pos += 1;
   app.save();
   await renderStep(app);
 }
 
 async function renderStep(app) {
-  const plan = app.state.plan;
+  const plan = activePlan(app.state);
   const step = plan.steps[plan.pos];
   const root = app.root;
   if (!step) return app.go('#/home');
@@ -92,7 +101,7 @@ async function renderStep(app) {
 
 // ---------------------------------------------------------------- yesterday
 function yesterdayStep(app, root) {
-  const entries = app.state.plan.yesterday || [];
+  const entries = activePlan(app.state).yesterday || [];
   const wrong = entries.filter((e) => !e.correct);
   mount(root, header(app, 'Yesterday'), h('div', { class: 'q-wrap stack' },
     h('h2', {}, 'Yesterday’s answers'),
@@ -114,7 +123,7 @@ function breakStep(app, root) {
     h('p', {}, `You’ve done the first block. Stand up, stretch, get a drink of water. ${c.name || 'Your companion'} is having a snack.`),
     h('div', { class: 'row', style: { justifyContent: 'center' } },
       h('button', { class: 'btn-primary btn-big', onclick: () => next(app) }, 'Keep going'),
-      h('button', { class: 'btn-ghost btn-big', onclick: () => { app.state.plan.pos += 1; app.save(); app.go('#/home'); } }, 'Finish later today'))));
+      h('button', { class: 'btn-ghost btn-big', onclick: () => { activePlan(app.state).pos += 1; app.save(); app.go('#/home'); } }, 'Finish later today'))));
 }
 
 // ---------------------------------------------------------------- arithmetic sprint
@@ -250,7 +259,7 @@ async function introStep(app, root, step) {
 
 // ---------------------------------------------------------------- worked example
 function workedStep(app, root, step) {
-  const q = questionFor(app.state, app.db, step, app.state.plan.pos);
+  const q = questionFor(app.state, app.db, step, activePlan(app.state).pos);
   const steps = q.steps || [];
   let shown = 1;
   const list = h('ol', { class: 'steps' });
@@ -274,7 +283,7 @@ function workedStep(app, root, step) {
 // ---------------------------------------------------------------- question
 async function questionStep(app, root, step) {
   const { state, db } = app;
-  const plan = state.plan;
+  const plan = activePlan(state);
   const q = questionFor(state, db, step, plan.pos);
   const subj = SUBJECT_BY_ID[q.subject];
   const label = step.t === 'diag' ? 'What do you think?' : step.t === 'quiz' ? 'Quick check' : step.reask ? 'Second try' : step.t === 'faded' ? 'Your turn' : step.t === 'practice' ? 'Practice' : subj.name;
@@ -473,7 +482,7 @@ function markedStep(app, root) {
 // ---------------------------------------------------------------- companion ritual
 function ritualStep(app, root) {
   const { state, db } = app;
-  const plan = state.plan;
+  const plan = activePlan(state);
   const c = state.profile?.companion || { name: 'Capy' };
   const topicId = plan.topics?.[0] || plan.results.map((r) => db.items[r.id]?.topic).find((t) => db.topics[t]?.teach);
   const topic = db.topics[topicId];
@@ -520,9 +529,29 @@ function ritualStep(app, root) {
 }
 
 // ---------------------------------------------------------------- done
+/** The end of an extra language practice: a short summary, then back home (today's session is untouched). */
+function extraDoneStep(app, root, plan) {
+  const { state, db } = app;
+  plan.finished = true;
+  state.extraOn = false;
+  app.save();
+  const subj = SUBJECT_BY_ID[plan.subject];
+  const right = plan.results.filter((r) => r.correct).length;
+  const learned = (plan.topics || []).map((t) => db.topics[t]?.title).filter(Boolean);
+  const c = state.profile?.companion || {};
+  mount(root, h('div', { class: 'q-wrap stack center' },
+    capybaraEl({ ...c, mood: 'happy' }, 'capy bob'),
+    h('div', { class: 'eyebrow' }, `${subj?.name || ''} practice`), h('h1', {}, plan.results.length || learned.length ? 'Well done!' : 'All caught up'),
+    plan.results.length ? h('p', {}, `${right} of ${plan.results.length} right.${learned.length ? ` New: ${learned.join(', ')}.` : ''}`) : h('p', { class: 'muted' }, `Nothing to review in ${subj?.name || 'this subject'} just now, and no new topic is ready yet. Come back tomorrow, or try today’s session.`),
+    h('div', { class: 'row', style: { justifyContent: 'center' } },
+      h('button', { class: 'btn-primary btn-big', onclick: () => app.go('#/home') }, 'Back home'),
+      plan.results.length ? h('button', { class: 'btn-ghost btn-big', onclick: () => { state.extra = null; app.go(`#/play/${plan.subject}`); } }, 'A bit more') : null)));
+}
+
 function doneStep(app, root) {
   const { state, db } = app;
-  const plan = state.plan;
+  const plan = activePlan(state);
+  if (plan.extra) return extraDoneStep(app, root, plan);
   if (!plan.finished) {
     finishSession(state);
     plan.finished = true;
@@ -589,7 +618,7 @@ async function placementStep(app, root, step) {
         return h('button', { class: 'choice-card home-card', type: 'button', style: { '--tint': `color-mix(in srgb, ${s.colour} 14%, var(--card))`, '--tint-ink': s.colour }, onclick: () => {
           step.subject = id;
           step.picked = true;
-          const next = state.plan.steps.find((x) => x.t === 'choose' && x.afterPlacement);
+          const next = activePlan(state).steps.find((x) => x.t === 'choose' && x.afterPlacement);
           if (next) next.subject = id;
           app.save();
           placementStep(app, root, step);

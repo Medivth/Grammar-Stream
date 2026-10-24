@@ -1,6 +1,7 @@
 // Pure logic for the practice tools: touch-typing lessons and speed-reading pacing.
 
 import { makeRng } from './rng.js';
+import { COURSE } from './subjects.js';
 
 // --- touch typing -------------------------------------------------------------------------
 
@@ -79,21 +80,24 @@ export function recordLesson(typing, id, { wpm: w, acc }, day) {
 export const SPEED_START = 150;
 export const SPEED_MIN = 100;
 export const SPEED_MAX = 600;
+/** [start, slowest, fastest] words a minute for this course; younger readers start slower. */
+export const speedRange = () => COURSE.speedRange || [SPEED_START, SPEED_MIN, SPEED_MAX];
 
 /** Next pace from the last result: up on strong comprehension, down on weak. */
 export function nextSpeed(records) {
+  const [start, min, max] = speedRange();
   const last = records.at(-1);
-  if (!last) return SPEED_START;
+  if (!last) return start;
   const rate = last.total ? last.correct / last.total : 0;
-  const step = rate >= 0.75 ? 20 : rate < 0.5 ? -20 : 0;
-  return Math.max(SPEED_MIN, Math.min(SPEED_MAX, last.wpm + step));
+  const step = (rate >= 0.75 ? 20 : rate < 0.5 ? -20 : 0) * (start < SPEED_START ? 0.5 : 1);
+  return Math.max(min, Math.min(max, last.wpm + step));
 }
 
 /** Passages with enough multiple-choice questions, least recently read first. */
 export function speedPassages(db, records) {
   const by = new Map();
   for (const it of Object.values(db.items)) {
-    if (!it.passage || it.kind !== 'mcq' || it.subject !== 'english') continue;
+    if (!it.passage || it.kind !== 'mcq' || !['english', 'reading'].includes(it.subject)) continue;
     const key = it.passageSource;
     if (!by.has(key)) by.set(key, { key, passage: it.passage.replace(/^\([^)]*\)\n\n/, ''), source: it.passageSource, items: [] });
     by.get(key).items.push(it);

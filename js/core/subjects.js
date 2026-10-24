@@ -20,6 +20,7 @@ export const COURSES = {
     sprint: 'y6', sprintSeconds: 90,
     paper: 'ks2',
     tools: ['paper', 'typing', 'speed'],
+    extra: ['latin'], // practise any time, outside the daily session
     writing: true,
     readAloud: false,
     starter: ['none', 'yuzu', 'flower', 'bow', 'glasses', 'scarf', 'bird'],
@@ -39,7 +40,8 @@ export const COURSES = {
     minutes: 12,
     sprint: 'ks1', sprintSeconds: 60,
     paper: 'ks1',
-    tools: ['paper'],
+    tools: ['paper', 'typing', 'speed'],
+    speedRange: [50, 30, 200], // start, slowest, fastest words a minute
     writing: false,
     readAloud: true,
     young: true, sprintUp: 12, next: 'y3',
@@ -62,7 +64,8 @@ export const COURSES = {
     minutes: 15,
     sprint: 'y3', sprintSeconds: 60,
     paper: 'y3',
-    tools: ['paper', 'typing'],
+    tools: ['paper', 'typing', 'speed'],
+    speedRange: [70, 40, 260],
     writing: false,
     readAloud: true,
     young: true, sprintUp: 14, prev: 'ks1',
@@ -88,6 +91,7 @@ export const COURSES = {
     sprint: 'y8', sprintSeconds: 90,
     paper: null,
     tools: ['typing', 'speed'],
+    extra: ['greek'], // practise any time, outside the daily session
     writing: true,
     readAloud: false,
     starter: ['none', 'glasses', 'scarf', 'bird', 'yuzu', 'flower', 'bow'],

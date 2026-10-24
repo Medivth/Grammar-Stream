@@ -136,7 +136,7 @@ test('pronoun tokens read naturally for each choice', () => {
 test('Year 2 badges and wardrobe: his starters, his rewards, no Year 6 extras', () => {
   const s = emptyState(1);
   const ids = milestones(s, db).map((m) => m.id);
-  assert.ok(ids.includes('speed-racer') && !ids.includes('typist'));
+  assert.ok(ids.includes('speed-racer') && ids.includes('typist'));
   const open = unlockedAccessories(s, db);
   for (const a of ['racehelmet', 'cape', 'mask']) assert.ok(open.has(a), a);
   assert.ok(!wardrobeAccessories().has('flower'));

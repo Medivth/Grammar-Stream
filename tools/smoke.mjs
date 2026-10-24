@@ -167,6 +167,33 @@ try {
     await page.click('.region >> nth=3');
     await page.waitForSelector('.journey li');
     await page.screenshot({ path: `${OUT}/${label}-07-subject.png`, fullPage: true });
+    // Latin any time: after today's session is finished, a Latin practice plays through and leaves the day alone
+    await page.goto(`http://127.0.0.1:${PORT}/#/home`);
+    await page.waitForSelector('.home-card:has-text("Latin practice")');
+    const dayBefore = await page.evaluate(() => JSON.stringify(window.__app.state.plan));
+    await page.click('.home-card:has-text("Latin practice")');
+    for (let k = 0; k < 120; k++) {
+      await page.waitForTimeout(60);
+      if (await page.$('text=Well done!') || await page.$('text=All caught up')) break;
+      if (await page.$('.choice-card')) { await page.click('.choice-card >> nth=0'); continue; }
+      if (await page.$('.confidence')) {
+        const opt = await page.$('.option:not([disabled])');
+        const typed = await page.$('.q-body input[type=text]:not([disabled])');
+        if (opt) await opt.click(); else if (typed) await typed.fill('puella');
+        await page.click('.confidence button:has-text("Think so")');
+        await page.waitForSelector('.feedback');
+        await page.click('button:has-text("Next")');
+        continue;
+      }
+      const b = await page.$('.q-wrap .btn-primary:not([disabled])'); if (b) { await b.click(); continue; }
+      throw new Error('stuck in Latin practice');
+    }
+    await page.screenshot({ path: `${OUT}/${label}-13-latin-done.png`, fullPage: true });
+    const latin = await page.evaluate(() => { const s = window.__app.state; return [s.extra?.finished, s.extra?.results.length, Object.keys(s.cards).filter((id) => id.startsWith('latin.')).length]; });
+    if (!latin[0] || !latin[1] || !latin[2]) throw new Error(`Latin practice: ${latin}`);
+    if (await page.evaluate(() => JSON.stringify(window.__app.state.plan)) !== dayBefore) throw new Error('Latin practice changed today\'s session');
+    console.log(`${label}: Latin practice answered ${latin[1]} questions`);
+    await page.click('button:has-text("Back home")');
     // a second child on the Year 2 course: add, set up, play a full session, then pick from "Who's learning?"
     await page.click('[aria-label="Back"]').catch(() => {});
     await page.goto(`http://127.0.0.1:${PORT}/#/parent`);
@@ -184,6 +211,8 @@ try {
     await page.click('text=Let’s go!');
     await page.waitForSelector('.btn-start');
     await page.screenshot({ path: `${OUT}/${label}-21-ks1-home.png`, fullPage: true });
+    for (const t of ['Touch typing', 'Speed reading']) if (!(await page.$(`.home-card:has-text("${t}")`))) throw new Error(`Year 2 home has no ${t}`);
+    if (await page.$('.home-card:has-text("Latin practice")')) throw new Error('Year 2 should not offer Latin');
     const course = await page.evaluate(() => [window.__app.state.course, window.__app.state.profile.companion.species]);
     if (course[0] !== 'ks1' || course[1] !== 'lion') throw new Error(`second child course and companion: ${course}`);
     await page.evaluate(() => { const a = window.__app; a.state.sessions.push({ day: Math.floor(Date.now() / 864e5) - 1, start: 1, end: 2, answered: 5, correct: 5, completed: true }); a.state.plan = null; a.save(); });
@@ -267,6 +296,7 @@ try {
     await page.goto(`http://127.0.0.1:${PORT}/#/home`);
     await page.waitForSelector('.btn-start');
     await page.screenshot({ path: `${OUT}/${label}-30-y8-home.png`, fullPage: true });
+    if (!(await page.$('.home-card:has-text("Ancient Greek practice")'))) throw new Error('Year 8 home has no Greek practice');
     const seen8 = await playYoung('y8');
     console.log(`${label}: Year 8 session step types: ${[...seen8].join(', ')}`);
     for (const tool of ['typing', 'speed']) { await page.goto(`http://127.0.0.1:${PORT}/#/${tool}`); await page.waitForTimeout(300); await page.screenshot({ path: `${OUT}/${label}-31-y8-${tool}.png`, fullPage: true }); }
