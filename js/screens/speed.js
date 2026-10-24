@@ -3,9 +3,10 @@
 
 import { h, mount, rich } from '../ui/dom.js';
 import { icon } from '../ui/icons.js';
-import { nextSpeed, speedPassages, SPEED_MIN, SPEED_MAX } from '../core/practice.js';
+import { nextSpeed, speedPassages, speedRange } from '../core/practice.js';
 import { makeRng } from '../core/rng.js';
 import { formatDay } from '../core/dates.js';
+import { COURSE } from '../core/subjects.js';
 
 export function speedScreen(app) {
   const { state, db } = app;
@@ -14,14 +15,14 @@ export function speedScreen(app) {
   let pace = suggested;
   const passages = speedPassages(db, records);
   const paceEl = h('strong', {}, `${pace} words a minute`);
-  const setPace = (d) => { pace = Math.max(SPEED_MIN, Math.min(SPEED_MAX, pace + d)); paceEl.textContent = `${pace} words a minute`; };
+  const setPace = (d) => { const [, min, max] = speedRange(); pace = Math.max(min, Math.min(max, pace + d)); paceEl.textContent = `${pace} words a minute`; };
   mount(app.root,
     h('div', { class: 'topbar' }, h('button', { class: 'btn-icon', 'aria-label': 'Back', onclick: () => app.go('#/home') }, icon('back')), h('h1', {}, 'Speed reading'), h('span', { class: 'spacer' })),
     h('div', { class: 'narrow stack' },
       h('div', { class: 'card stack' },
         h('p', {}, 'The words light up at a steady pace and you keep up with them. Then four questions check you really read it. Get three right and the pace goes up next time; understanding always comes first.'),
-        h('p', {}, 'Pace: ', paceEl, records.length ? h('span', { class: 'muted small' }, ` (suggested from last time: ${suggested})`) : h('span', { class: 'muted small' }, ' (a typical Year 6 reader is 120–180)')),
-        h('div', { class: 'row' }, h('button', { class: 'btn-ghost', onclick: () => setPace(-20) }, '− slower'), h('button', { class: 'btn-ghost', onclick: () => setPace(20) }, '+ faster')),
+        h('p', {}, 'Pace: ', paceEl, records.length ? h('span', { class: 'muted small' }, ` (suggested from last time: ${suggested})`) : h('span', { class: 'muted small' }, ` (${COURSE.id === 'ks1' ? 'a typical Year 2 reader is about 40–90' : COURSE.id === 'y3' ? 'a typical Year 3 reader is about 60–110' : COURSE.id === 'y8' ? 'a typical Year 8 reader is about 180–250' : 'a typical Year 6 reader is 120–180'})`)),
+        h('div', { class: 'row' }, h('button', { class: 'btn-ghost', onclick: () => setPace(COURSE.young ? -10 : -20) }, '− slower'), h('button', { class: 'btn-ghost', onclick: () => setPace(COURSE.young ? 10 : 20) }, '+ faster')),
         h('button', { class: 'btn-primary btn-big', disabled: !passages.length, onclick: () => read(app, passages[0], pace) }, passages.length ? `Read: ${passages[0].source.split(',')[0]}` : 'No passages available')),
       records.length ? h('div', { class: 'card' }, h('h2', {}, 'Your reads'),
         h('ul', { class: 'plain-list' }, records.slice(-8).reverse().map((r) => h('li', {}, h('strong', {}, `${r.wpm} wpm`), ` · ${r.correct} of ${r.total} right · ${r.passage.split(',')[0]} · ${formatDay(r.day, { day: 'numeric', month: 'short' })}`)))) : null));

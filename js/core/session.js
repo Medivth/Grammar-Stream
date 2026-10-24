@@ -208,9 +208,34 @@ function yesterdayEntries(fb) {
   return [...wrong, ...sureRight].slice(0, 8);
 }
 
+/** The plan being played: the extra language practice while it is open, otherwise today's session. */
+export const activePlan = (state) => (state.extraOn && state.extra) || state.plan;
+
+/**
+ * Extra practice in one subject (Latin, Greek), open any time of day: its reviews that are due
+ * (not ones still waiting in today's session), then the next topic if one is ready. It never
+ * touches today's main session, which carries on as normal.
+ */
+export function planExtra(state, db, today, subject) {
+  const daily = state.plan?.day === today && !state.plan.finished ? state.plan : null;
+  const waiting = new Set((daily ? daily.steps.slice(daily.pos) : []).map((s) => s.id).filter(Boolean));
+  const rng = makeRng(`extra:${today}:${subject}:${state.sessions.length}`);
+  const due = dueItems(state, db, today).filter((d) => d.subject === subject && !waiting.has(d.id));
+  const steps = interleave(due.slice(0, 12), rng).map((r) => ({ t: 'review', id: r.id }));
+  const options = topicChoices(state, db, subject);
+  if (options.length) steps.push({ t: 'choose', subject, options });
+  steps.push({ t: 'done' });
+  return { day: today, extra: true, subject, steps, pos: 0, results: [], yesterday: [], reasks: 0, started: Date.now() };
+}
+
+/** What an extra-practice card can promise: reviews due now and whether a new topic is ready. */
+export function extraStatus(state, db, today, subject) {
+  return { due: dueItems(state, db, today).filter((d) => d.subject === subject).length, fresh: topicChoices(state, db, subject).length > 0 };
+}
+
 /** Expand the chosen topic into lesson steps inserted after the choose step. */
 export function chooseTopic(state, db, topicId, today) {
-  const plan = state.plan;
+  const plan = activePlan(state);
   const topic = db.topics[topicId];
   const b = budgets(state.settings.sessionMinutes);
   const started = !!state.topics[topicId];
@@ -254,13 +279,13 @@ export function chooseTopic(state, db, topicId, today) {
 }
 
 export function skipChoose(state) {
-  state.plan.subject = null;
+  activePlan(state).subject = null;
 }
 
 export function questionFor(state, db, step, pos) {
   const item = db.items[step.id];
   const card = state.cards[step.id];
-  const rng = makeRng(`q:${state.plan.day}:${pos}:${step.id}`);
+  const rng = makeRng(`q:${activePlan(state).day}:${pos}:${step.id}`);
   // diagnostics and first quizzes are always recognition format
   const format = step.t === 'diag' || step.t === 'quiz' ? (item.kind === 'mapfact' ? 'choose' : item.kind === 'spell' ? 'cued' : item.kind === 'fact' ? 'choice' : undefined) : undefined;
   return present(item, card, { db, state, rng, level: step.level, format });
@@ -279,7 +304,7 @@ export function ratingFor(correct, ms, conf, kind) {
 export function submit(state, db, step, q, response, { ms = null, conf = null, now = Date.now(), today }) {
   const res = check(q, response);
   const item = db.items[step.id];
-  const plan = state.plan;
+  const plan = activePlan(state);
   const out = { ...res, rating: null, hyper: !res.correct && conf === CONF.sure };
   if (!GRADED.has(step.t)) return out;
 

@@ -7,7 +7,7 @@ import { icon, iconPath, SUBJECT_ICON } from '../ui/icons.js';
 import { SUBJECTS, SUBJECT_BY_ID, COURSE, isStretch } from '../core/subjects.js';
 import { paperSpec } from '../gen/paper.js';
 import { topicStatus, stretchReady } from '../core/mastery.js';
-import { daysPractisedThisMonth, planDay } from '../core/session.js';
+import { daysPractisedThisMonth, planDay, extraStatus } from '../core/session.js';
 import { learnedCount, subjectStats, planSummary, isKnown } from '../core/progress.js';
 import { formatDay } from '../core/dates.js';
 import { restTime } from './util.js';
@@ -194,7 +194,13 @@ function homeCards(app, rest) {
     typing: () => card('keyboard', '#5143d9', 'Touch typing', state.typing?.best ? `best ${state.typing.best.wpm} words a minute` : 'Ten lessons, then race the river', '#/typing'),
     speed: () => card('eye', '#d63d74', 'Speed reading', (state.speed || []).length ? `last read at ${state.speed.at(-1).wpm} words a minute` : 'Read faster without losing the thread', '#/speed'),
   };
-  const tools = COURSE.tools.map((t) => TOOLS[t]());
+  // Latin or Greek any time, as often as she likes, whether or not today's session is done
+  const extras = (COURSE.extra || []).map((sub) => {
+    const s = SUBJECT_BY_ID[sub], st = extraStatus(state, db, today, sub);
+    const text = rest ? 'Resting before bedtime' : st.due || st.fresh ? `${[st.due ? `${st.due} to review` : null, st.fresh ? 'a new topic ready' : null].filter(Boolean).join(' · ')}. Any time you like.` : 'All caught up for now';
+    return card(SUBJECT_ICON[sub], s.colour, `${s.name} practice`, text, rest ? '#/home' : `#/play/${sub}`);
+  });
+  const tools = [...extras, ...COURSE.tools.map((t) => TOOLS[t]())];
   return h('div', {}, h('div', { class: 'home-cards' }, cards), h('div', { class: 'section-title' }, h('h2', {}, 'Practice tools')), h('div', { class: 'home-cards' }, tools));
 }
 

@@ -80,6 +80,7 @@ export const KS1_MILESTONES = [
   { id: 'fifty', title: 'Fifty facts', desc: 'Know 50 things', goal: 50, measure: (s) => learnedCount(s), unlock: 'headphones' },
   { id: 'all-rounder', title: 'Super all-rounder', desc: 'A secure topic in every subject', goal: 5, measure: (s, db) => SUBJECTS.filter((sub) => secureIn(s, db, (t) => t.subject === sub.id) > 0).length, unlock: 'beanie' },
   { id: 'speed-racer', title: 'Speed racer', desc: 'Get 15 right in one sprint', goal: 15, measure: bestSprint },
+  { id: 'typist', title: 'Typist', desc: 'Type 10 words a minute with 95% accuracy', goal: 10, measure: (s) => (s.typing?.best?.wpm) || 0 },
   { id: 'explorer', title: 'World explorer', desc: 'Know 10 places on the map', goal: 10, measure: (s, db) => Object.values(db.items).filter((i) => i.kind === 'mapfact' && isKnown(s.cards[i.id])).length, unlock: 'explorer' },
   { id: 'time-traveller', title: 'Time traveller', desc: 'Light up 8 events on the timeline', goal: 8, measure: (s, db) => timelineStatus(s, db).events.filter((e) => e.known).length },
   { id: 'scientist', title: 'Young scientist', desc: 'Secure 3 science topics', goal: 3, measure: (s, db) => secureIn(s, db, (t) => t.subject === 'science'), unlock: 'goggles' },
@@ -92,8 +93,7 @@ export const KS1_MILESTONES = [
 
 // Year 3: the Year 2 badges (so nothing he has earned goes away), with Year 3 goals added
 export const Y3_MILESTONES = [
-  ...KS1_MILESTONES.map((m) => (m.id === 'stretch' ? { ...m, title: 'Beyond Year 3', desc: 'Secure 3 Year 4 stretch topics' } : m)),
-  { id: 'typist', title: 'Typist', desc: 'Type 15 words a minute with 95% accuracy', goal: 15, measure: (s) => (s.typing?.best?.wpm) || 0 },
+  ...KS1_MILESTONES.map((m) => (m.id === 'stretch' ? { ...m, title: 'Beyond Year 3', desc: 'Secure 3 Year 4 stretch topics' } : m.id === 'typist' ? { ...m, desc: 'Type 15 words a minute with 95% accuracy', goal: 15 } : m)),
   { id: 'sprinter', title: 'Sprinter', desc: 'Get 20 right in one sprint', goal: 20, measure: bestSprint },
   { id: 'year3-topics', title: 'Year 3 explorer', desc: 'Secure 10 Year 3 topics', goal: 10, measure: (s, db) => secureIn(s, db, (t) => t.deck?.startsWith('y3')) },
   { id: 'three-hundred', title: 'Three hundred', desc: 'Know 300 things', goal: 300, measure: (s) => learnedCount(s), unlock: 'scarf' },
