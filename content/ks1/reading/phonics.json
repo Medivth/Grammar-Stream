@@ -1,0 +1,2469 @@
+{
+ "subject": "reading",
+ "deck": "phonics",
+ "topics": [
+  {
+   "id": "reading.rwi-set2",
+   "title": "Set 2 Speed Sounds: ay ee igh ow oo ar or air ir ou oy",
+   "kind": "facts",
+   "strand": "phonics",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Every Speed Sound has a phrase to help you remember it: ay, may I play! ee, what can you see! Say the phrase, then find the sound in a word.",
+   "teach": "Teach me the phrase for “igh” and two words with that sound.",
+   "talk": "These follow the Read Write Inc. Speed Sounds many schools use. Ask {him} to say the phrase for each sound, and to spot the sounds in a book."
+  },
+  {
+   "id": "reading.rwi-set3a",
+   "title": "Set 3 Speed Sounds 1: ea oi a-e i-e o-e u-e aw are ur er",
+   "kind": "facts",
+   "strand": "phonics",
+   "prereqs": [
+    "reading.rwi-set2"
+   ],
+   "batch": 5,
+   "intro": "Set 3 sounds are new ways to write sounds you know. a-e is a split special friend: make a cake! The e at the end makes the a say its name.",
+   "teach": "Explain how “slid” changes when you add an e at the end.",
+   "talk": "These follow the Read Write Inc. Speed Sounds many schools use. Ask {him} for the phrase for a-e, i-e and o-e, and to read slid/slide, hop/hope."
+  },
+  {
+   "id": "reading.rwi-set3b",
+   "title": "Set 3 Speed Sounds 2: ow ai oa ew ire ear ure tion cious e",
+   "kind": "facts",
+   "strand": "phonics",
+   "prereqs": [
+    "reading.rwi-set3a"
+   ],
+   "batch": 5,
+   "intro": "More Set 3 sounds: brown cow, snail in the rain, goat in a boat. Some sounds have two spellings: ay at the end of a word (play), ai in the middle (rain).",
+   "teach": "Explain when to use “ay” and when to use “ai”.",
+   "talk": "These follow the Read Write Inc. Speed Sounds many schools use. Ask {him} to write day and rain and explain the spelling choice."
+  },
+  {
+   "id": "reading.rwi-fred",
+   "title": "Fred Talk and Fred Fingers",
+   "kind": "facts",
+   "strand": "phonics",
+   "prereqs": [],
+   "batch": 5,
+   "intro": "Fred Talk means saying the sounds in a word, then pushing them together: sh-i-p, ship! Fred Fingers means holding up one finger for each sound. Special friends like sh and igh are one sound, so they get one finger.",
+   "teach": "Fred Talk “night” for me, and tell me how many sounds it has.",
+   "talk": "These follow the Read Write Inc. Speed Sounds many schools use. Say a word in Fred Talk (ch-ai-n) and ask {him} to say the word."
+  },
+  {
+   "id": "reading.rwi-red",
+   "title": "Red words and green words",
+   "kind": "facts",
+   "strand": "phonics",
+   "prereqs": [
+    "reading.rwi-fred"
+   ],
+   "batch": 5,
+   "intro": "Green words can be read by Fred Talking them. Red words are tricky: they don’t sound the way they look, so “you can’t Fred a red”. We learn red words by heart.",
+   "teach": "Explain why “said” is a red word.",
+   "talk": "These follow the Read Write Inc. Speed Sounds many schools use. Write five red words on sticky notes around the house; {she} reads each one as {she} passes."
+  },
+  {
+   "id": "reading.rwi-alien",
+   "title": "Alien words",
+   "kind": "facts",
+   "strand": "phonics",
+   "prereqs": [
+    "reading.rwi-set2",
+    "reading.rwi-fred"
+   ],
+   "batch": 5,
+   "intro": "Alien words are made-up words. They aren’t real, so you can’t guess them: you have to Fred Talk them. Ready for some alien names?",
+   "teach": "Fred Talk the alien word “zort”. Which Speed Sound is in it?",
+   "talk": "The Year 1 phonics check uses alien words, and they are still great practice: make up alien names together and read them."
+  }
+ ],
+ "items": [
+  {
+   "id": "reading.rwi.set2.ay.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “may I play”?",
+   "answer": "ay",
+   "distractors": [
+    "ee",
+    "ir",
+    "u-e"
+   ],
+   "explain": "“may I play” is the phrase for ay: day, play, spray, away.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ay**: _may I play_\nday, play, spray, away"
+  },
+  {
+   "id": "reading.rwi.set2.ay.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “ay” as in “may I play”?",
+   "answer": "stay",
+   "distractors": [
+    "stop",
+    "stem",
+    "stack"
+   ],
+   "explain": "stay has ay, like day, play, spray, away.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ay**: _may I play_\nday, play, spray, away"
+  },
+  {
+   "id": "reading.rwi.set2.ee.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “what can you see”?",
+   "answer": "ee",
+   "distractors": [
+    "or",
+    "a-e",
+    "ai"
+   ],
+   "explain": "“what can you see” is the phrase for ee: see, tree, sleep, green.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ee**: _what can you see_\nsee, tree, sleep, green"
+  },
+  {
+   "id": "reading.rwi.set2.ee.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “ee” as in “what can you see”?",
+   "answer": "sheep",
+   "distractors": [
+    "shop",
+    "ship",
+    "shape"
+   ],
+   "explain": "sheep has ee, like see, tree, sleep, green.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ee**: _what can you see_\nsee, tree, sleep, green"
+  },
+  {
+   "id": "reading.rwi.set2.igh.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “fly high”?",
+   "answer": "igh",
+   "distractors": [
+    "ea",
+    "are",
+    "ure"
+   ],
+   "explain": "“fly high” is the phrase for igh: high, night, light, bright.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**igh**: _fly high_\nhigh, night, light, bright"
+  },
+  {
+   "id": "reading.rwi.set2.igh.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “igh” as in “fly high”?",
+   "answer": "night",
+   "distractors": [
+    "north",
+    "nasty",
+    "notes"
+   ],
+   "explain": "night has igh, like high, night, light, bright.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**igh**: _fly high_\nhigh, night, light, bright"
+  },
+  {
+   "id": "reading.rwi.set2.ow.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “blow the snow”?",
+   "answer": "ow",
+   "distractors": [
+    "u-e",
+    "ew",
+    "ar"
+   ],
+   "explain": "“blow the snow” is the phrase for ow: blow, snow, slow, grow.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ow**: _blow the snow_\nblow, snow, slow, grow"
+  },
+  {
+   "id": "reading.rwi.set2.ow.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “ow” as in “blow the snow”?",
+   "answer": "grow",
+   "distractors": [
+    "grab",
+    "grit",
+    "grub"
+   ],
+   "explain": "grow has ow, like blow, snow, slow, grow.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ow**: _blow the snow_\nblow, snow, slow, grow"
+  },
+  {
+   "id": "reading.rwi.set2.oo-zoo.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “poo at the zoo”?",
+   "answer": "oo",
+   "distractors": [
+    "ai",
+    "ee",
+    "oy"
+   ],
+   "explain": "“poo at the zoo” is the phrase for oo: zoo, moon, spoon, food.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**oo**: _poo at the zoo_\nzoo, moon, spoon, food"
+  },
+  {
+   "id": "reading.rwi.set2.oo-zoo.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “oo” as in “poo at the zoo”?",
+   "answer": "moon",
+   "distractors": [
+    "mint",
+    "mast",
+    "melt"
+   ],
+   "explain": "moon has oo, like zoo, moon, spoon, food.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**oo**: _poo at the zoo_\nzoo, moon, spoon, food"
+  },
+  {
+   "id": "reading.rwi.set2.oo-book.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “look at a book”?",
+   "answer": "oo",
+   "distractors": [
+    "ure",
+    "air",
+    "o-e"
+   ],
+   "explain": "“look at a book” is the phrase for oo: look, book, cook, foot.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**oo**: _look at a book_\nlook, book, cook, foot"
+  },
+  {
+   "id": "reading.rwi.set2.oo-book.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “oo” as in “look at a book”?",
+   "answer": "foot",
+   "distractors": [
+    "fist",
+    "fast",
+    "felt"
+   ],
+   "explain": "foot has oo, like look, book, cook, foot.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**oo**: _look at a book_\nlook, book, cook, foot"
+  },
+  {
+   "id": "reading.rwi.set2.ar.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “start the car”?",
+   "answer": "ar",
+   "distractors": [
+    "oo",
+    "oi",
+    "er"
+   ],
+   "explain": "“start the car” is the phrase for ar: car, star, park, farm.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ar**: _start the car_\ncar, star, park, farm"
+  },
+  {
+   "id": "reading.rwi.set2.ar.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “ar” as in “start the car”?",
+   "answer": "park",
+   "distractors": [
+    "pick",
+    "peck",
+    "puck"
+   ],
+   "explain": "park has ar, like car, star, park, farm.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ar**: _start the car_\ncar, star, park, farm"
+  },
+  {
+   "id": "reading.rwi.set2.or.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “shut the door”?",
+   "answer": "or",
+   "distractors": [
+    "oy",
+    "aw",
+    "ear"
+   ],
+   "explain": "“shut the door” is the phrase for or: for, sport, horse, storm.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**or**: _shut the door_\nfor, sport, horse, storm"
+  },
+  {
+   "id": "reading.rwi.set2.or.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “or” as in “shut the door”?",
+   "answer": "sport",
+   "distractors": [
+    "spent",
+    "spilt",
+    "spots"
+   ],
+   "explain": "sport has or, like for, sport, horse, storm.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**or**: _shut the door_\nfor, sport, horse, storm"
+  },
+  {
+   "id": "reading.rwi.set2.air.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “that’s not fair”?",
+   "answer": "air",
+   "distractors": [
+    "o-e",
+    "oa",
+    "ow"
+   ],
+   "explain": "“that’s not fair” is the phrase for air: fair, hair, chair, stairs.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**air**: _that’s not fair_\nfair, hair, chair, stairs"
+  },
+  {
+   "id": "reading.rwi.set2.air.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “air” as in “that’s not fair”?",
+   "answer": "chair",
+   "distractors": [
+    "chain",
+    "cheer",
+    "chart"
+   ],
+   "explain": "chair has air, like fair, hair, chair, stairs.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**air**: _that’s not fair_\nfair, hair, chair, stairs"
+  },
+  {
+   "id": "reading.rwi.set2.ir.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “whirl and twirl”?",
+   "answer": "ir",
+   "distractors": [
+    "er",
+    "ay",
+    "ou"
+   ],
+   "explain": "“whirl and twirl” is the phrase for ir: girl, bird, shirt, first.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ir**: _whirl and twirl_\ngirl, bird, shirt, first"
+  },
+  {
+   "id": "reading.rwi.set2.ir.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “ir” as in “whirl and twirl”?",
+   "answer": "shirt",
+   "distractors": [
+    "short",
+    "shift",
+    "sheet"
+   ],
+   "explain": "shirt has ir, like girl, bird, shirt, first.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ir**: _whirl and twirl_\ngirl, bird, shirt, first"
+  },
+  {
+   "id": "reading.rwi.set2.ou.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “shout it out”?",
+   "answer": "ou",
+   "distractors": [
+    "ear",
+    "ar",
+    "i-e"
+   ],
+   "explain": "“shout it out” is the phrase for ou: out, shout, loud, mouth.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ou**: _shout it out_\nout, shout, loud, mouth"
+  },
+  {
+   "id": "reading.rwi.set2.ou.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “ou” as in “shout it out”?",
+   "answer": "cloud",
+   "distractors": [
+    "climb",
+    "clamp",
+    "clock"
+   ],
+   "explain": "cloud has ou, like out, shout, loud, mouth.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ou**: _shout it out_\nout, shout, loud, mouth"
+  },
+  {
+   "id": "reading.rwi.set2.oy.phrase",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “toy for a boy”?",
+   "answer": "oy",
+   "distractors": [
+    "ow",
+    "ea",
+    "ur"
+   ],
+   "explain": "“toy for a boy” is the phrase for oy: toy, boy, enjoy, annoy.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**oy**: _toy for a boy_\ntoy, boy, enjoy, annoy"
+  },
+  {
+   "id": "reading.rwi.set2.oy.word",
+   "topic": "reading.rwi-set2",
+   "kind": "fact",
+   "prompt": "Which word has “oy” as in “toy for a boy”?",
+   "answer": "enjoy",
+   "distractors": [
+    "empty",
+    "entry",
+    "envy"
+   ],
+   "explain": "enjoy has oy, like toy, boy, enjoy, annoy.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**oy**: _toy for a boy_\ntoy, boy, enjoy, annoy"
+  },
+  {
+   "id": "reading.rwi.set3a.ea.phrase",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “cup of tea”?",
+   "answer": "ea",
+   "distractors": [
+    "ay",
+    "air",
+    "u-e"
+   ],
+   "explain": "“cup of tea” is the phrase for ea: tea, sea, dream, beach.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ea**: _cup of tea_\ntea, sea, dream, beach"
+  },
+  {
+   "id": "reading.rwi.set3a.ea.word",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which word has “ea” as in “cup of tea”?",
+   "answer": "dream",
+   "distractors": [
+    "drum",
+    "drop",
+    "dress"
+   ],
+   "explain": "dream has ea, like tea, sea, dream, beach.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ea**: _cup of tea_\ntea, sea, dream, beach"
+  },
+  {
+   "id": "reading.rwi.set3a.oi.phrase",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “spoil the boy”?",
+   "answer": "oi",
+   "distractors": [
+    "ar",
+    "a-e",
+    "ai"
+   ],
+   "explain": "“spoil the boy” is the phrase for oi: coin, oil, point, spoil.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**oi**: _spoil the boy_\ncoin, oil, point, spoil"
+  },
+  {
+   "id": "reading.rwi.set3a.oi.word",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which word has “oi” as in “spoil the boy”?",
+   "answer": "point",
+   "distractors": [
+    "paint",
+    "pint",
+    "punt"
+   ],
+   "explain": "point has oi, like coin, oil, point, spoil.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**oi**: _spoil the boy_\ncoin, oil, point, spoil"
+  },
+  {
+   "id": "reading.rwi.set3a.ae.phrase",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “make a cake”?",
+   "answer": "a-e",
+   "distractors": [
+    "oy",
+    "are",
+    "ure"
+   ],
+   "explain": "“make a cake” is the phrase for a-e: cake, make, game, snake.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**a-e**: _make a cake_\ncake, make, game, snake"
+  },
+  {
+   "id": "reading.rwi.set3a.ae.word",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which word has “a-e” as in “make a cake”?",
+   "answer": "snake",
+   "distractors": [
+    "snack",
+    "snag",
+    "sneak"
+   ],
+   "explain": "snake has a-e, like cake, make, game, snake.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**a-e**: _make a cake_\ncake, make, game, snake"
+  },
+  {
+   "id": "reading.rwi.set3a.ie.phrase",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “nice smile”?",
+   "answer": "i-e",
+   "distractors": [
+    "u-e",
+    "ew",
+    "oo"
+   ],
+   "explain": "“nice smile” is the phrase for i-e: nice, smile, bike, slide.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**i-e**: _nice smile_\nnice, smile, bike, slide"
+  },
+  {
+   "id": "reading.rwi.set3a.ie.word",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which word has “i-e” as in “nice smile”?",
+   "answer": "slide",
+   "distractors": [
+    "slid",
+    "sled",
+    "slept"
+   ],
+   "explain": "slide has i-e, like nice, smile, bike, slide.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**i-e**: _nice smile_\nnice, smile, bike, slide"
+  },
+  {
+   "id": "reading.rwi.set3a.oe.phrase",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “phone home”?",
+   "answer": "o-e",
+   "distractors": [
+    "ai",
+    "ee",
+    "ou"
+   ],
+   "explain": "“phone home” is the phrase for o-e: home, bone, note, stone.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**o-e**: _phone home_\nhome, bone, note, stone"
+  },
+  {
+   "id": "reading.rwi.set3a.oe.word",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which word has “o-e” as in “phone home”?",
+   "answer": "stone",
+   "distractors": [
+    "stun",
+    "sting",
+    "stand"
+   ],
+   "explain": "stone has o-e, like home, bone, note, stone.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**o-e**: _phone home_\nhome, bone, note, stone"
+  },
+  {
+   "id": "reading.rwi.set3a.ue.phrase",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “huge brute”?",
+   "answer": "u-e",
+   "distractors": [
+    "ure",
+    "or",
+    "i-e"
+   ],
+   "explain": "“huge brute” is the phrase for u-e: huge, tune, flute, cube.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**u-e**: _huge brute_\nhuge, tune, flute, cube"
+  },
+  {
+   "id": "reading.rwi.set3a.ue.word",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which word has “u-e” as in “huge brute”?",
+   "answer": "flute",
+   "distractors": [
+    "flat",
+    "flit",
+    "float"
+   ],
+   "explain": "flute has u-e, like huge, tune, flute, cube.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**u-e**: _huge brute_\nhuge, tune, flute, cube"
+  },
+  {
+   "id": "reading.rwi.set3a.aw.phrase",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “yawn at dawn”?",
+   "answer": "aw",
+   "distractors": [
+    "oo",
+    "ea",
+    "er"
+   ],
+   "explain": "“yawn at dawn” is the phrase for aw: saw, paw, yawn, crawl.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**aw**: _yawn at dawn_\nsaw, paw, yawn, crawl"
+  },
+  {
+   "id": "reading.rwi.set3a.aw.word",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which word has “aw” as in “yawn at dawn”?",
+   "answer": "crawl",
+   "distractors": [
+    "crab",
+    "crest",
+    "crust"
+   ],
+   "explain": "crawl has aw, like saw, paw, yawn, crawl.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**aw**: _yawn at dawn_\nsaw, paw, yawn, crawl"
+  },
+  {
+   "id": "reading.rwi.set3a.are.phrase",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “care and share”?",
+   "answer": "are",
+   "distractors": [
+    "ou",
+    "u-e",
+    "ear"
+   ],
+   "explain": "“care and share” is the phrase for are: care, share, scare, stare.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**are**: _care and share_\ncare, share, scare, stare"
+  },
+  {
+   "id": "reading.rwi.set3a.are.word",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which word has “are” as in “care and share”?",
+   "answer": "scare",
+   "distractors": [
+    "scarf",
+    "score",
+    "scar"
+   ],
+   "explain": "scare has are, like care, share, scare, stare.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**are**: _care and share_\ncare, share, scare, stare"
+  },
+  {
+   "id": "reading.rwi.set3a.ur.phrase",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “nurse for a purse”?",
+   "answer": "ur",
+   "distractors": [
+    "i-e",
+    "oa",
+    "ow"
+   ],
+   "explain": "“nurse for a purse” is the phrase for ur: nurse, purse, turn, burn.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ur**: _nurse for a purse_\nnurse, purse, turn, burn"
+  },
+  {
+   "id": "reading.rwi.set3a.ur.word",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which word has “ur” as in “nurse for a purse”?",
+   "answer": "burn",
+   "distractors": [
+    "barn",
+    "born",
+    "bun"
+   ],
+   "explain": "burn has ur, like nurse, purse, turn, burn.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ur**: _nurse for a purse_\nnurse, purse, turn, burn"
+  },
+  {
+   "id": "reading.rwi.set3a.er.phrase",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “a better letter”?",
+   "answer": "er",
+   "distractors": [
+    "ur",
+    "ay",
+    "ir"
+   ],
+   "explain": "“a better letter” is the phrase for er: better, letter, sister, under.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**er**: _a better letter_\nbetter, letter, sister, under"
+  },
+  {
+   "id": "reading.rwi.set3a.er.word",
+   "topic": "reading.rwi-set3a",
+   "kind": "fact",
+   "prompt": "Which word has “er” as in “a better letter”?",
+   "answer": "sister",
+   "distractors": [
+    "silent",
+    "single",
+    "sixty"
+   ],
+   "explain": "sister has er, like better, letter, sister, under.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**er**: _a better letter_\nbetter, letter, sister, under"
+  },
+  {
+   "id": "reading.rwi.set3b.ow-cow.phrase",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “brown cow”?",
+   "answer": "ow",
+   "distractors": [
+    "ay",
+    "ir",
+    "u-e"
+   ],
+   "explain": "“brown cow” is the phrase for ow: cow, now, brown, down.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ow**: _brown cow_\ncow, now, brown, down"
+  },
+  {
+   "id": "reading.rwi.set3b.ow-cow.word",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which word has “ow” as in “brown cow”?",
+   "answer": "town",
+   "distractors": [
+    "tone",
+    "torn",
+    "tin"
+   ],
+   "explain": "town has ow, like cow, now, brown, down.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ow**: _brown cow_\ncow, now, brown, down"
+  },
+  {
+   "id": "reading.rwi.set3b.ai.phrase",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “snail in the rain”?",
+   "answer": "ai",
+   "distractors": [
+    "ar",
+    "oi",
+    "er"
+   ],
+   "explain": "“snail in the rain” is the phrase for ai: rain, snail, train, paint.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ai**: _snail in the rain_\nrain, snail, train, paint"
+  },
+  {
+   "id": "reading.rwi.set3b.ai.word",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which word has “ai” as in “snail in the rain”?",
+   "answer": "paint",
+   "distractors": [
+    "print",
+    "plant",
+    "point"
+   ],
+   "explain": "paint has ai, like rain, snail, train, paint.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ai**: _snail in the rain_\nrain, snail, train, paint"
+  },
+  {
+   "id": "reading.rwi.set3b.oa.phrase",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “goat in a boat”?",
+   "answer": "oa",
+   "distractors": [
+    "oy",
+    "aw",
+    "ure"
+   ],
+   "explain": "“goat in a boat” is the phrase for oa: boat, goat, coat, toast.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**oa**: _goat in a boat_\nboat, goat, coat, toast"
+  },
+  {
+   "id": "reading.rwi.set3b.oa.word",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which word has “oa” as in “goat in a boat”?",
+   "answer": "toast",
+   "distractors": [
+    "twist",
+    "tests",
+    "trust"
+   ],
+   "explain": "toast has oa, like boat, goat, coat, toast.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**oa**: _goat in a boat_\nboat, goat, coat, toast"
+  },
+  {
+   "id": "reading.rwi.set3b.ew.phrase",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “chew the stew”?",
+   "answer": "ew",
+   "distractors": [
+    "o-e",
+    "oa",
+    "oo"
+   ],
+   "explain": "“chew the stew” is the phrase for ew: new, chew, stew, flew.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ew**: _chew the stew_\nnew, chew, stew, flew"
+  },
+  {
+   "id": "reading.rwi.set3b.ew.word",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which word has “ew” as in “chew the stew”?",
+   "answer": "flew",
+   "distractors": [
+    "flow",
+    "flat",
+    "flag"
+   ],
+   "explain": "flew has ew, like new, chew, stew, flew.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ew**: _chew the stew_\nnew, chew, stew, flew"
+  },
+  {
+   "id": "reading.rwi.set3b.ire.phrase",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “fire fire!”?",
+   "answer": "ire",
+   "distractors": [
+    "er",
+    "ee",
+    "ou"
+   ],
+   "explain": "“fire fire!” is the phrase for ire: fire, wire, tired, inspire.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ire**: _fire fire!_\nfire, wire, tired, inspire"
+  },
+  {
+   "id": "reading.rwi.set3b.ire.word",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which word has “ire” as in “fire fire!”?",
+   "answer": "wire",
+   "distractors": [
+    "wore",
+    "were",
+    "wipe"
+   ],
+   "explain": "wire has ire, like fire, wire, tired, inspire.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ire**: _fire fire!_\nfire, wire, tired, inspire"
+  },
+  {
+   "id": "reading.rwi.set3b.ear.phrase",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “hear with your ear”?",
+   "answer": "ear",
+   "distractors": [
+    "ure",
+    "or",
+    "i-e"
+   ],
+   "explain": "“hear with your ear” is the phrase for ear: ear, hear, near, clear.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ear**: _hear with your ear_\near, hear, near, clear"
+  },
+  {
+   "id": "reading.rwi.set3b.ear.word",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which word has “ear” as in “hear with your ear”?",
+   "answer": "near",
+   "distractors": [
+    "nest",
+    "neat",
+    "nerve"
+   ],
+   "explain": "near has ear, like ear, hear, near, clear.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ear**: _hear with your ear_\near, hear, near, clear"
+  },
+  {
+   "id": "reading.rwi.set3b.ure.phrase",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which Speed Sound goes with “sure it’s pure?”?",
+   "answer": "ure",
+   "distractors": [
+    "oo",
+    "ea",
+    "ur"
+   ],
+   "explain": "“sure it’s pure?” is the phrase for ure: sure, pure, cure, picture.",
+   "formats": [
+    "choice",
+    "typed"
+   ],
+   "learn": "**ure**: _sure it’s pure?_\nsure, pure, cure, picture"
+  },
+  {
+   "id": "reading.rwi.set3b.ure.word",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which word has “ure” as in “sure it’s pure?”?",
+   "answer": "cure",
+   "distractors": [
+    "core",
+    "care",
+    "cute"
+   ],
+   "explain": "cure has ure, like sure, pure, cure, picture.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**ure**: _sure it’s pure?_\nsure, pure, cure, picture"
+  },
+  {
+   "id": "reading.rwi.set3b.tion.phrase",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which Speed Sound says “shun” at the end of “celebration”?",
+   "answer": "tion",
+   "distractors": [
+    "shun",
+    "chun",
+    "tian"
+   ],
+   "explain": "tion says “shun”: station, celebration, action.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**tion** says “shun”\nstation, action, celebration"
+  },
+  {
+   "id": "reading.rwi.set3b.tion.word",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which word ends with the “shun” sound spelt tion?",
+   "answer": "station",
+   "distractors": [
+    "statue",
+    "stadium",
+    "stamped"
+   ],
+   "explain": "sta-tion: the tion says “shun”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.set3b.cious.phrase",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "In “delicious”, which letters say “shus” at the end?",
+   "answer": "cious",
+   "distractors": [
+    "shus",
+    "shous",
+    "cous"
+   ],
+   "explain": "cious and tious both say “shus”: delicious, precious, scrumptious.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**cious** and **tious** say “shus”\ndelicious, precious, scrumptious, cautious"
+  },
+  {
+   "id": "reading.rwi.set3b.tious.word",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which word ends in tious?",
+   "answer": "cautious",
+   "distractors": [
+    "precious",
+    "spacious",
+    "gracious"
+   ],
+   "explain": "cau-tious. The others all end in cious.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.set3b.e.phrase",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which Speed Sound do “he, me, we, she, be” share?",
+   "answer": "e",
+   "distractors": [
+    "ee",
+    "ea",
+    "ey"
+   ],
+   "explain": "In he, me, we, she and be, the e says its name: “ee”.",
+   "formats": [
+    "choice"
+   ],
+   "learn": "**e** says “ee”: _he me we she be_"
+  },
+  {
+   "id": "reading.rwi.set3b.e.word",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "In which word does the e say “ee”, like in “he me we she be”?",
+   "answer": "she",
+   "distractors": [
+    "shed",
+    "shell",
+    "step"
+   ],
+   "explain": "sh-e: the e says its name. In shed, shell and step it says “e” as in egg.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.set3b.ow.which",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Is the “ow” in “clown” like “brown cow” or “blow the snow”?",
+   "answer": "brown cow",
+   "distractors": [
+    "blow the snow",
+    "both of them",
+    "neither one"
+   ],
+   "explain": "cl-ow-n: the ow says “ow” as in brown cow. In snow and grow it says “oa”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.set3b.ow.which2",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Is the “ow” in “window” like “brown cow” or “blow the snow”?",
+   "answer": "blow the snow",
+   "distractors": [
+    "brown cow",
+    "both of them",
+    "neither one"
+   ],
+   "explain": "win-dow: the ow says “oa” as in blow the snow.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.set3b.spell.day",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "day",
+   "distractors": [
+    "dai",
+    "dae",
+    "dey"
+   ],
+   "explain": "ay usually comes at the end of a word (may I play); ai comes in the middle (snail in the rain).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.set3b.spell.rain",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "rain",
+   "distractors": [
+    "rayn",
+    "rane",
+    "raine"
+   ],
+   "explain": "ai comes in the middle of a word: snail in the rain.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.set3b.spell.boy",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "boy",
+   "distractors": [
+    "boi",
+    "boye",
+    "boiy"
+   ],
+   "explain": "oy usually comes at the end of a word (toy for a boy); oi comes in the middle (spoil the boy).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.set3b.spell.coin",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "coin",
+   "distractors": [
+    "coyn",
+    "coine",
+    "koyn"
+   ],
+   "explain": "oi comes in the middle of a word: coin, point, spoil.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.set3b.spell.snow",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "snow",
+   "distractors": [
+    "snoa",
+    "snoe",
+    "snowe"
+   ],
+   "explain": "oa is hardly ever at the end of a word. At the end, use ow: snow, grow, blow.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.set3b.spell.claw",
+   "topic": "reading.rwi-set3b",
+   "kind": "fact",
+   "prompt": "Which spelling is right?",
+   "answer": "claw",
+   "distractors": [
+    "clor",
+    "clau",
+    "clore"
+   ],
+   "explain": "aw often comes at the end: claw, saw, paw, draw.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.ship",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: sh-i-p. What’s the word?",
+   "answer": "ship",
+   "distractors": [
+    "shop",
+    "chip",
+    "sip"
+   ],
+   "explain": "sh-i-p… ship! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.chain",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: ch-ai-n. What’s the word?",
+   "answer": "chain",
+   "distractors": [
+    "chin",
+    "chair",
+    "cane"
+   ],
+   "explain": "ch-ai-n… chain! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.night",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: n-igh-t. What’s the word?",
+   "answer": "night",
+   "distractors": [
+    "net",
+    "nut",
+    "knit"
+   ],
+   "explain": "n-igh-t… night! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.start",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: s-t-ar-t. What’s the word?",
+   "answer": "start",
+   "distractors": [
+    "stark",
+    "smart",
+    "stars"
+   ],
+   "explain": "s-t-ar-t… start! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.brown",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: b-r-ow-n. What’s the word?",
+   "answer": "brown",
+   "distractors": [
+    "brain",
+    "crown",
+    "bring"
+   ],
+   "explain": "b-r-ow-n… brown! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.spoon",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: s-p-oo-n. What’s the word?",
+   "answer": "spoon",
+   "distractors": [
+    "spin",
+    "spun",
+    "soon"
+   ],
+   "explain": "s-p-oo-n… spoon! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.float",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: f-l-oa-t. What’s the word?",
+   "answer": "float",
+   "distractors": [
+    "flat",
+    "fleet",
+    "flute"
+   ],
+   "explain": "f-l-oa-t… float! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.three",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: th-r-ee. What’s the word?",
+   "answer": "three",
+   "distractors": [
+    "tree",
+    "throw",
+    "there"
+   ],
+   "explain": "th-r-ee… three! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.cloud",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: c-l-ou-d. What’s the word?",
+   "answer": "cloud",
+   "distractors": [
+    "could",
+    "clod",
+    "cold"
+   ],
+   "explain": "c-l-ou-d… cloud! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.paint",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: p-ai-n-t. What’s the word?",
+   "answer": "paint",
+   "distractors": [
+    "point",
+    "pant",
+    "print"
+   ],
+   "explain": "p-ai-n-t… paint! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.burst",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: b-ur-s-t. What’s the word?",
+   "answer": "burst",
+   "distractors": [
+    "beast",
+    "boost",
+    "bust"
+   ],
+   "explain": "b-ur-s-t… burst! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.blend.queen",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Fred Talk: qu-ee-n. What’s the word?",
+   "answer": "queen",
+   "distractors": [
+    "quiet",
+    "quack",
+    "green"
+   ],
+   "explain": "qu-ee-n… queen! Say the sounds, then push them together.",
+   "formats": [
+    "choice",
+    "typed"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.count.night",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "How many sounds in “night”? Use your Fred Fingers.",
+   "answer": "3",
+   "distractors": [
+    "2",
+    "4",
+    "5"
+   ],
+   "explain": "n-igh-t: 3 sounds. Special friends (like sh, igh, ar) are one sound, so they get one finger.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.count.sheep",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "How many sounds in “sheep”? Use your Fred Fingers.",
+   "answer": "3",
+   "distractors": [
+    "4",
+    "5",
+    "6"
+   ],
+   "explain": "sh-ee-p: 3 sounds. Special friends (like sh, igh, ar) are one sound, so they get one finger.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.count.chair",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "How many sounds in “chair”? Use your Fred Fingers.",
+   "answer": "2",
+   "distractors": [
+    "3",
+    "4",
+    "5"
+   ],
+   "explain": "ch-air: 2 sounds. Special friends (like sh, igh, ar) are one sound, so they get one finger.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.count.frog",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "How many sounds in “frog”? Use your Fred Fingers.",
+   "answer": "4",
+   "distractors": [
+    "3",
+    "5",
+    "6"
+   ],
+   "explain": "f-r-o-g: 4 sounds. Special friends (like sh, igh, ar) are one sound, so they get one finger.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.count.shout",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "How many sounds in “shout”? Use your Fred Fingers.",
+   "answer": "3",
+   "distractors": [
+    "2",
+    "4",
+    "5"
+   ],
+   "explain": "sh-ou-t: 3 sounds. Special friends (like sh, igh, ar) are one sound, so they get one finger.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.count.string",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "How many sounds in “string”? Use your Fred Fingers.",
+   "answer": "5",
+   "distractors": [
+    "3",
+    "4",
+    "6"
+   ],
+   "explain": "s-t-r-i-ng: 5 sounds. Special friends (like sh, igh, ar) are one sound, so they get one finger.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.count.thick",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "How many sounds in “thick”? Use your Fred Fingers.",
+   "answer": "3",
+   "distractors": [
+    "2",
+    "4",
+    "5"
+   ],
+   "explain": "th-i-ck: 3 sounds. Special friends (like sh, igh, ar) are one sound, so they get one finger.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.count.splash",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "How many sounds in “splash”? Use your Fred Fingers.",
+   "answer": "5",
+   "distractors": [
+    "3",
+    "4",
+    "6"
+   ],
+   "explain": "s-p-l-a-sh: 5 sounds. Special friends (like sh, igh, ar) are one sound, so they get one finger.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.count.storm",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "How many sounds in “storm”? Use your Fred Fingers.",
+   "answer": "4",
+   "distractors": [
+    "2",
+    "3",
+    "5"
+   ],
+   "explain": "s-t-or-m: 4 sounds. Special friends (like sh, igh, ar) are one sound, so they get one finger.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.count.boat",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "How many sounds in “boat”? Use your Fred Fingers.",
+   "answer": "3",
+   "distractors": [
+    "4",
+    "5",
+    "6"
+   ],
+   "explain": "b-oa-t: 3 sounds. Special friends (like sh, igh, ar) are one sound, so they get one finger.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.friends.light",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Which letters in “light” are special friends (two or three letters making one sound)?",
+   "answer": "igh",
+   "distractors": [
+    "lig",
+    "ght",
+    "li"
+   ],
+   "explain": "In light, igh is a special friend: the letters work together to make one sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.friends.boat",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Which letters in “boat” are special friends (two or three letters making one sound)?",
+   "answer": "oa",
+   "distractors": [
+    "bo",
+    "at",
+    "ba"
+   ],
+   "explain": "In boat, oa is a special friend: the letters work together to make one sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.friends.shark",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Which letters in “shark” are special friends (two or three letters making one sound)?",
+   "answer": "sh and ar",
+   "distractors": [
+    "sh and rk",
+    "ha and rk",
+    "s and ar"
+   ],
+   "explain": "In shark, sh and ar are special friends: the letters work together to make one sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.friends.thing",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Which letters in “thing” are special friends (two or three letters making one sound)?",
+   "answer": "th and ng",
+   "distractors": [
+    "th and in",
+    "hi and ng",
+    "t and ng"
+   ],
+   "explain": "In thing, th and ng are special friends: the letters work together to make one sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.friends.queen",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Which letters in “queen” are special friends (two or three letters making one sound)?",
+   "answer": "qu and ee",
+   "distractors": [
+    "qu and en",
+    "ue and en",
+    "q and ee"
+   ],
+   "explain": "In queen, qu and ee are special friends: the letters work together to make one sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.friends.chip",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Which letters in “chip” are special friends (two or three letters making one sound)?",
+   "answer": "ch",
+   "distractors": [
+    "hi",
+    "ip",
+    "ci"
+   ],
+   "explain": "In chip, ch is a special friend: the letters work together to make one sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.buttons.sheep",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Which shows the sounds in “sheep” correctly? (Special friends stay together.)",
+   "answer": "sh-ee-p",
+   "distractors": [
+    "s-h-ee-p",
+    "sh-e-e-p",
+    "s-h-e-e-p"
+   ],
+   "explain": "sh-ee-p: a dot under each single sound, a dash under special friends.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.buttons.night",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Which shows the sounds in “night” correctly? (Special friends stay together.)",
+   "answer": "n-igh-t",
+   "distractors": [
+    "n-i-gh-t",
+    "n-ig-h-t",
+    "ni-g-h-t"
+   ],
+   "explain": "n-igh-t: a dot under each single sound, a dash under special friends.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.buttons.chair",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Which shows the sounds in “chair” correctly? (Special friends stay together.)",
+   "answer": "ch-air",
+   "distractors": [
+    "c-h-air",
+    "ch-ai-r",
+    "c-h-ai-r"
+   ],
+   "explain": "ch-air: a dot under each single sound, a dash under special friends.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.fred.buttons.shout",
+   "topic": "reading.rwi-fred",
+   "kind": "fact",
+   "prompt": "Which shows the sounds in “shout” correctly? (Special friends stay together.)",
+   "answer": "sh-ou-t",
+   "distractors": [
+    "s-h-ou-t",
+    "sh-o-u-t",
+    "sho-u-t"
+   ],
+   "explain": "sh-ou-t: a dot under each single sound, a dash under special friends.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.said",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a red word? (You can’t Fred a red!)",
+   "answer": "said",
+   "distractors": [
+    "sand",
+    "slip",
+    "shed"
+   ],
+   "explain": "said is a red word: it doesn’t sound the way it looks, so we learn it by heart. The others can be Fred Talked.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.was",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a red word? (You can’t Fred a red!)",
+   "answer": "was",
+   "distractors": [
+    "wig",
+    "web",
+    "win"
+   ],
+   "explain": "was is a red word: it doesn’t sound the way it looks, so we learn it by heart. The others can be Fred Talked.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.they",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a red word? (You can’t Fred a red!)",
+   "answer": "they",
+   "distractors": [
+    "then",
+    "them",
+    "that"
+   ],
+   "explain": "they is a red word: it doesn’t sound the way it looks, so we learn it by heart. The others can be Fred Talked.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.come",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a red word? (You can’t Fred a red!)",
+   "answer": "come",
+   "distractors": [
+    "camp",
+    "cost",
+    "crab"
+   ],
+   "explain": "come is a red word: it doesn’t sound the way it looks, so we learn it by heart. The others can be Fred Talked.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.once",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a red word? (You can’t Fred a red!)",
+   "answer": "once",
+   "distractors": [
+    "inch",
+    "itch",
+    "ends"
+   ],
+   "explain": "once is a red word: it doesn’t sound the way it looks, so we learn it by heart. The others can be Fred Talked.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.where",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a red word? (You can’t Fred a red!)",
+   "answer": "where",
+   "distractors": [
+    "wheel",
+    "white",
+    "whisk"
+   ],
+   "explain": "where is a red word: it doesn’t sound the way it looks, so we learn it by heart. The others can be Fred Talked.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.water",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a red word? (You can’t Fred a red!)",
+   "answer": "water",
+   "distractors": [
+    "winter",
+    "wetter",
+    "wider"
+   ],
+   "explain": "water is a red word: it doesn’t sound the way it looks, so we learn it by heart. The others can be Fred Talked.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.could",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a red word? (You can’t Fred a red!)",
+   "answer": "could",
+   "distractors": [
+    "cloud",
+    "cold",
+    "clod"
+   ],
+   "explain": "could is a red word: it doesn’t sound the way it looks, so we learn it by heart. The others can be Fred Talked.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.two",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a red word? (You can’t Fred a red!)",
+   "answer": "two",
+   "distractors": [
+    "ten",
+    "tin",
+    "tub"
+   ],
+   "explain": "two is a red word: it doesn’t sound the way it looks, so we learn it by heart. The others can be Fred Talked.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.people",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a red word? (You can’t Fred a red!)",
+   "answer": "people",
+   "distractors": [
+    "puppet",
+    "pocket",
+    "picnic"
+   ],
+   "explain": "people is a red word: it doesn’t sound the way it looks, so we learn it by heart. The others can be Fred Talked.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.green.stamp",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a green word? (You can Fred Talk it.)",
+   "answer": "stamp",
+   "distractors": [
+    "said",
+    "once",
+    "could"
+   ],
+   "explain": "stamp is a green word: say its sounds and you can read it. The others are red words.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.green.crunch",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a green word? (You can Fred Talk it.)",
+   "answer": "crunch",
+   "distractors": [
+    "school",
+    "people",
+    "through"
+   ],
+   "explain": "crunch is a green word: say its sounds and you can read it. The others are red words.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.green.flight",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a green word? (You can Fred Talk it.)",
+   "answer": "flight",
+   "distractors": [
+    "should",
+    "other",
+    "whose"
+   ],
+   "explain": "flight is a green word: say its sounds and you can read it. The others are red words.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.green.shark",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "Which is a green word? (You can Fred Talk it.)",
+   "answer": "shark",
+   "distractors": [
+    "there",
+    "where",
+    "water"
+   ],
+   "explain": "shark is a green word: say its sounds and you can read it. The others are red words.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.why.was",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "“Was” is a red word. Why?",
+   "answer": "the a says o",
+   "distractors": [
+    "it has no vowel",
+    "it is too long",
+    "it starts with w"
+   ],
+   "explain": "w-a-s should say “wass”, but we say “woz”: the a says o.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.why.said",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "“Said” is a red word. Which letters don’t make their usual sound?",
+   "answer": "ai",
+   "distractors": [
+    "sa",
+    "id",
+    "sd"
+   ],
+   "explain": "ai usually says “ay” (snail in the rain), but in said it says “e”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.why.come",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "“Come” is a red word. What does the o say?",
+   "answer": "u as in cup",
+   "distractors": [
+    "o as in hot",
+    "oa as in boat",
+    "oo as in zoo"
+   ],
+   "explain": "In come, some, love and mother, the o says “u” as in cup.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.red.why.they",
+   "topic": "reading.rwi-red",
+   "kind": "fact",
+   "prompt": "“They” is a red word. What does the ey say?",
+   "answer": "ay as in play",
+   "distractors": [
+    "ee as in see",
+    "igh as in fly",
+    "e as in bed"
+   ],
+   "explain": "In they and grey, ey says “ay”. In key and monkey it says “ee”!",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.sound.zort",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "“zort” is an alien word. Fred Talk it. Which Speed Sound is in it?",
+   "answer": "or",
+   "distractors": [
+    "oa",
+    "ar",
+    "ow"
+   ],
+   "explain": "zort has or in it. Alien words aren’t real, so you have to use your sounds to read them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.sound.vight",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "“vight” is an alien word. Fred Talk it. Which Speed Sound is in it?",
+   "answer": "igh",
+   "distractors": [
+    "ay",
+    "ee",
+    "oo"
+   ],
+   "explain": "vight has igh in it. Alien words aren’t real, so you have to use your sounds to read them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.sound.blain",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "“blain” is an alien word. Fred Talk it. Which Speed Sound is in it?",
+   "answer": "ai",
+   "distractors": [
+    "oi",
+    "ay",
+    "ee"
+   ],
+   "explain": "blain has ai in it. Alien words aren’t real, so you have to use your sounds to read them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.sound.thurp",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "“thurp” is an alien word. Fred Talk it. Which Speed Sound is in it?",
+   "answer": "ur",
+   "distractors": [
+    "ar",
+    "or",
+    "ow"
+   ],
+   "explain": "thurp has ur in it. Alien words aren’t real, so you have to use your sounds to read them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.sound.groy",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "“groy” is an alien word. Fred Talk it. Which Speed Sound is in it?",
+   "answer": "oy",
+   "distractors": [
+    "oa",
+    "ow",
+    "ay"
+   ],
+   "explain": "groy has oy in it. Alien words aren’t real, so you have to use your sounds to read them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.sound.stoob",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "“stoob” is an alien word. Fred Talk it. Which Speed Sound is in it?",
+   "answer": "oo",
+   "distractors": [
+    "oa",
+    "ou",
+    "ow"
+   ],
+   "explain": "stoob has oo in it. Alien words aren’t real, so you have to use your sounds to read them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.sound.sheem",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "“sheem” is an alien word. Fred Talk it. Which Speed Sound is in it?",
+   "answer": "ee",
+   "distractors": [
+    "ea",
+    "ie",
+    "ay"
+   ],
+   "explain": "sheem has ee in it. Alien words aren’t real, so you have to use your sounds to read them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.sound.splair",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "“splair” is an alien word. Fred Talk it. Which Speed Sound is in it?",
+   "answer": "air",
+   "distractors": [
+    "ear",
+    "are",
+    "ire"
+   ],
+   "explain": "splair has air in it. Alien words aren’t real, so you have to use your sounds to read them.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.has.ay",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "Which alien word has “ay” as in “may I play”?",
+   "answer": "glay",
+   "distractors": [
+    "glop",
+    "glib",
+    "glug"
+   ],
+   "explain": "glay has ay in it, as in “may I play”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.has.igh",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "Which alien word has “igh” as in “fly high”?",
+   "answer": "jight",
+   "distractors": [
+    "jarps",
+    "jorns",
+    "jilps"
+   ],
+   "explain": "jight has igh in it, as in “fly high”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.has.ar",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "Which alien word has “ar” as in “start the car”?",
+   "answer": "tharb",
+   "distractors": [
+    "thebs",
+    "thubs",
+    "thobs"
+   ],
+   "explain": "tharb has ar in it, as in “start the car”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.has.ou",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "Which alien word has “ou” as in “shout it out”?",
+   "answer": "frouk",
+   "distractors": [
+    "freks",
+    "fraks",
+    "friks"
+   ],
+   "explain": "frouk has ou in it, as in “shout it out”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.has.oi",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "Which alien word has “oi” as in “spoil the boy”?",
+   "answer": "zoip",
+   "distractors": [
+    "zapt",
+    "zept",
+    "zupt"
+   ],
+   "explain": "zoip has oi in it, as in “spoil the boy”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.has.ew",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "Which alien word has “ew” as in “chew the stew”?",
+   "answer": "plew",
+   "distractors": [
+    "plop",
+    "plip",
+    "plup"
+   ],
+   "explain": "plew has ew in it, as in “chew the stew”.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.count.blain",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "How many sounds in the alien word “blain”?",
+   "answer": "4",
+   "distractors": [
+    "2",
+    "3",
+    "5"
+   ],
+   "explain": "b-l-ai-n: 4 sounds.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.count.strom",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "How many sounds in the alien word “strom”?",
+   "answer": "5",
+   "distractors": [
+    "3",
+    "4",
+    "6"
+   ],
+   "explain": "s-t-r-o-m: 5 sounds.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.count.chig",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "How many sounds in the alien word “chig”?",
+   "answer": "3",
+   "distractors": [
+    "2",
+    "4",
+    "5"
+   ],
+   "explain": "ch-i-g: 3 sounds.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.count.thorp",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "How many sounds in the alien word “thorp”?",
+   "answer": "3",
+   "distractors": [
+    "4",
+    "5",
+    "6"
+   ],
+   "explain": "th-or-p: 3 sounds.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.count.splurt",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "How many sounds in the alien word “splurt”?",
+   "answer": "5",
+   "distractors": [
+    "2",
+    "3",
+    "4"
+   ],
+   "explain": "s-p-l-ur-t: 5 sounds.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.count.quoop",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "How many sounds in the alien word “quoop”?",
+   "answer": "3",
+   "distractors": [
+    "4",
+    "5",
+    "6"
+   ],
+   "explain": "qu-oo-p: 3 sounds.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.rwi.alien.count.shent",
+   "topic": "reading.rwi-alien",
+   "kind": "fact",
+   "prompt": "How many sounds in the alien word “shent”?",
+   "answer": "4",
+   "distractors": [
+    "2",
+    "3",
+    "5"
+   ],
+   "explain": "sh-e-n-t: 4 sounds.",
+   "formats": [
+    "choice"
+   ]
+  }
+ ]
+}

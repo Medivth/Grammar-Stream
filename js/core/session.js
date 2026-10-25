@@ -8,7 +8,7 @@ import { check } from './checkers.js';
 import { present } from './present.js';
 import { makeRng } from './rng.js';
 import { sprintDue } from './sprint.js';
-import { SUBJECTS, SUBJECT_BY_ID, PLACEMENT_ORDER } from './subjects.js';
+import { SUBJECTS, SUBJECT_BY_ID, PLACEMENT_ORDER, COURSE } from './subjects.js';
 import { monthKey } from './dates.js';
 import { needsPlacement } from './placement.js';
 
@@ -114,7 +114,24 @@ export function topicChoices(state, db, subject) {
     if (st === 'available') fresh.push(tid);
     else if (st === 'learning' && (hasNewFacts || hasTemplates)) continuing.push(tid);
   }
-  return [...continuing.slice(0, 2), ...fresh].slice(0, 3);
+  // Topics in a strand (phonics) take turns with the rest, starting with whichever has less
+  // under way; after moving up, this year's new topics alternate with any left from last year.
+  const strand = (tid) => db.topics[tid].strand || '';
+  const busy = (k) => continuing.slice(0, 2).filter((tid) => strand(tid) === k).length;
+  const balance = (list) => {
+    const groups = [...new Set(list.map(strand))].sort((a, b) => busy(a) - busy(b)).map((k) => list.filter((tid) => strand(tid) === k));
+    return alternate(...groups);
+  };
+  const own = fresh.filter((tid) => db.topics[tid].deck?.startsWith(COURSE.id));
+  const older = fresh.filter((tid) => !own.includes(tid));
+  return [...continuing.slice(0, 2), ...alternate(balance(own), balance(older))].slice(0, 3);
+}
+
+/** Take one from each list in turn: alternate([a, b], [c]) is [a, c, b]. */
+function alternate(...lists) {
+  const out = [];
+  for (let i = 0; i < Math.max(0, ...lists.map((l) => l.length)); i++) for (const l of lists) if (i < l.length) out.push(l[i]);
+  return out;
 }
 
 export function pickNewSubject(state, db, today, dueBySubject, cap) {

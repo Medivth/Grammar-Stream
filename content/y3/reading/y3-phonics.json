@@ -1,0 +1,882 @@
+{
+ "subject": "reading",
+ "deck": "y3-phonics",
+ "topics": [
+  {
+   "id": "reading.y3-speedsounds",
+   "title": "Complex Speed Sounds: every spelling of a sound",
+   "kind": "facts",
+   "strand": "phonics",
+   "prereqs": [
+    "reading.phonics-2"
+   ],
+   "batch": 5,
+   "intro": "You know the Speed Sounds. Now for the tricky spellings! The “ay” sound can be ay, ai, a-e, but also eigh (eight), ey (they) and even ea (great).",
+   "teach": "Teach me three different ways to spell the “or” sound.",
+   "talk": "This carries on from the Read Write Inc. Set 3 Speed Sounds. Ask {him} how many ways {she} can spell the “ay” sound."
+  },
+  {
+   "id": "reading.y3-longwords",
+   "title": "Long words: chunk by chunk",
+   "kind": "facts",
+   "strand": "phonics",
+   "prereqs": [
+    "reading.phonics-1"
+   ],
+   "batch": 5,
+   "intro": "Long words are easy if you take them in chunks. Clap the beats (syllables): ad-ven-ture. Read each chunk with Fred in your head, then put them together.",
+   "teach": "Clap the beats in “caterpillar” and tell me how many there are.",
+   "talk": "When {she} gets stuck on a long word, cover all but the first chunk, then reveal one chunk at a time."
+  }
+ ],
+ "items": [
+  {
+   "id": "reading.y3.ss.eight",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “ay” sound (as in may I play) is in “eight”?",
+   "answer": "eigh",
+   "distractors": [
+    "ay",
+    "ai",
+    "a-e"
+   ],
+   "explain": "In eight, the “ay” sound is spelt eigh: eight, weigh, neighbour.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.they",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “ay” sound (as in may I play) is in “they”?",
+   "answer": "ey",
+   "distractors": [
+    "ay",
+    "ai",
+    "eigh"
+   ],
+   "explain": "In they, the “ay” sound is spelt ey: they, grey, obey.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.great",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “ay” sound (as in may I play) is in “great”?",
+   "answer": "ea",
+   "distractors": [
+    "ai",
+    "ay",
+    "a-e"
+   ],
+   "explain": "In great, the “ay” sound is spelt ea: great, break, steak.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.straight",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “ay” sound (as in may I play) is in “straight”?",
+   "answer": "aigh",
+   "distractors": [
+    "ai",
+    "eigh",
+    "a-e"
+   ],
+   "explain": "In straight, the “ay” sound is spelt aigh: straight.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.field",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “ee” sound (as in what can you see) is in “field”?",
+   "answer": "ie",
+   "distractors": [
+    "ee",
+    "ea",
+    "ey"
+   ],
+   "explain": "In field, the “ee” sound is spelt ie: field, chief, shield.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.key",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “ee” sound (as in what can you see) is in “key”?",
+   "answer": "ey",
+   "distractors": [
+    "ee",
+    "ea",
+    "e"
+   ],
+   "explain": "In key, the “ee” sound is spelt ey: key, monkey, donkey.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.happy",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “ee” sound (as in what can you see) is in “happy”?",
+   "answer": "y",
+   "distractors": [
+    "ee",
+    "ey",
+    "ie"
+   ],
+   "explain": "In happy, the “ee” sound is spelt y: happy, funny, sunny.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.sky",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “igh” sound (as in fly high) is in “sky”?",
+   "answer": "y",
+   "distractors": [
+    "igh",
+    "ie",
+    "i-e"
+   ],
+   "explain": "In sky, the “igh” sound is spelt y: sky, fly, cry.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.pie",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “igh” sound (as in fly high) is in “pie”?",
+   "answer": "ie",
+   "distractors": [
+    "igh",
+    "y",
+    "i-e"
+   ],
+   "explain": "In pie, the “igh” sound is spelt ie: pie, tie, lie.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.toe",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “oa” sound (as in goat in a boat) is in “toe”?",
+   "answer": "oe",
+   "distractors": [
+    "oa",
+    "ow",
+    "o-e"
+   ],
+   "explain": "In toe, the “oa” sound is spelt oe: toe, goes, hoe.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.fruit",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “oo” sound (as in poo at the zoo) is in “fruit”?",
+   "answer": "ui",
+   "distractors": [
+    "oo",
+    "ew",
+    "ue"
+   ],
+   "explain": "In fruit, the “oo” sound is spelt ui: fruit, juice, suit.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.soup",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “oo” sound (as in poo at the zoo) is in “soup”?",
+   "answer": "ou",
+   "distractors": [
+    "oo",
+    "ew",
+    "ue"
+   ],
+   "explain": "In soup, the “oo” sound is spelt ou: soup, group, you.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.blue",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “oo” sound (as in poo at the zoo) is in “blue”?",
+   "answer": "ue",
+   "distractors": [
+    "oo",
+    "ew",
+    "u-e"
+   ],
+   "explain": "In blue, the “oo” sound is spelt ue: blue, glue, true.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.caught",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “or” sound (as in shut the door) is in “caught”?",
+   "answer": "augh",
+   "distractors": [
+    "or",
+    "aw",
+    "ough"
+   ],
+   "explain": "In caught, the “or” sound is spelt augh: caught, taught, daughter.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.bought",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “or” sound (as in shut the door) is in “bought”?",
+   "answer": "ough",
+   "distractors": [
+    "or",
+    "aw",
+    "augh"
+   ],
+   "explain": "In bought, the “or” sound is spelt ough: bought, thought, brought.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.walk",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “or” sound (as in shut the door) is in “walk”?",
+   "answer": "al",
+   "distractors": [
+    "or",
+    "aw",
+    "au"
+   ],
+   "explain": "In walk, the “or” sound is spelt al: walk, talk, chalk.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.four",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “or” sound (as in shut the door) is in “four”?",
+   "answer": "our",
+   "distractors": [
+    "or",
+    "ore",
+    "oor"
+   ],
+   "explain": "In four, the “or” sound is spelt our: four, pour, your.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.launch",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “or” sound (as in shut the door) is in “launch”?",
+   "answer": "au",
+   "distractors": [
+    "or",
+    "aw",
+    "al"
+   ],
+   "explain": "In launch, the “or” sound is spelt au: launch, astronaut, autumn.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.learn",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “ur” sound (as in nurse for a purse) is in “learn”?",
+   "answer": "ear",
+   "distractors": [
+    "ur",
+    "er",
+    "ir"
+   ],
+   "explain": "In learn, the “ur” sound is spelt ear: learn, early, earth.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.word",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “ur” sound (as in nurse for a purse) is in “word”?",
+   "answer": "or",
+   "distractors": [
+    "ur",
+    "ir",
+    "er"
+   ],
+   "explain": "In word, the “ur” sound is spelt or: word, work, world.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.bear",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “air” sound (as in that’s not fair) is in “bear”?",
+   "answer": "ear",
+   "distractors": [
+    "air",
+    "are",
+    "ere"
+   ],
+   "explain": "In bear, the “air” sound is spelt ear: bear, wear, pear.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.where",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “air” sound (as in that’s not fair) is in “where”?",
+   "answer": "ere",
+   "distractors": [
+    "air",
+    "are",
+    "ear"
+   ],
+   "explain": "In where, the “air” sound is spelt ere: where, there.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.young",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “u” sound (as in cup) is in “young”?",
+   "answer": "ou",
+   "distractors": [
+    "u",
+    "o",
+    "oo"
+   ],
+   "explain": "In young, the “u” sound is spelt ou: young, touch, double.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.station",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “sh” sound (as in shell) is in “station”?",
+   "answer": "ti",
+   "distractors": [
+    "sh",
+    "ch",
+    "ci"
+   ],
+   "explain": "In station, the “sh” sound is spelt ti: station, action, potion.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.chef",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “sh” sound (as in shell) is in “chef”?",
+   "answer": "ch",
+   "distractors": [
+    "sh",
+    "ti",
+    "ci"
+   ],
+   "explain": "In chef, the “sh” sound is spelt ch: chef, machine, parachute.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.science",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “s” sound (as in sun) is in “science”?",
+   "answer": "sc",
+   "distractors": [
+    "s",
+    "ce",
+    "ss"
+   ],
+   "explain": "In science, the “s” sound is spelt sc: science, scene, scissors.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.gnome",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “n” sound (as in net) is in “gnome”?",
+   "answer": "gn",
+   "distractors": [
+    "n",
+    "kn",
+    "nn"
+   ],
+   "explain": "In gnome, the “n” sound is spelt gn: gnome, gnaw, sign.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.ss.dolphin",
+   "topic": "reading.y3-speedsounds",
+   "kind": "fact",
+   "prompt": "Which spelling of the “f” sound (as in fish) is in “dolphin”?",
+   "answer": "ph",
+   "distractors": [
+    "f",
+    "ff",
+    "gh"
+   ],
+   "explain": "In dolphin, the “f” sound is spelt ph: dolphin, phone, alphabet.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.adventure",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “adventure”? Clap it!",
+   "answer": "3",
+   "distractors": [
+    "2",
+    "4",
+    "5"
+   ],
+   "explain": "adventure has 3 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.fantastic",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “fantastic”? Clap it!",
+   "answer": "3",
+   "distractors": [
+    "4",
+    "5",
+    "6"
+   ],
+   "explain": "fantastic has 3 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.dinosaur",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “dinosaur”? Clap it!",
+   "answer": "3",
+   "distractors": [
+    "2",
+    "4",
+    "5"
+   ],
+   "explain": "dinosaur has 3 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.caterpillar",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “caterpillar”? Clap it!",
+   "answer": "4",
+   "distractors": [
+    "3",
+    "5",
+    "6"
+   ],
+   "explain": "caterpillar has 4 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.astronaut",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “astronaut”? Clap it!",
+   "answer": "3",
+   "distractors": [
+    "2",
+    "4",
+    "5"
+   ],
+   "explain": "astronaut has 3 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.information",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “information”? Clap it!",
+   "answer": "4",
+   "distractors": [
+    "3",
+    "5",
+    "6"
+   ],
+   "explain": "information has 4 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.helicopter",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “helicopter”? Clap it!",
+   "answer": "4",
+   "distractors": [
+    "2",
+    "3",
+    "5"
+   ],
+   "explain": "helicopter has 4 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.remember",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “remember”? Clap it!",
+   "answer": "3",
+   "distractors": [
+    "4",
+    "5",
+    "6"
+   ],
+   "explain": "remember has 3 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.volcano",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “volcano”? Clap it!",
+   "answer": "3",
+   "distractors": [
+    "2",
+    "4",
+    "5"
+   ],
+   "explain": "volcano has 3 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.television",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “television”? Clap it!",
+   "answer": "4",
+   "distractors": [
+    "3",
+    "5",
+    "6"
+   ],
+   "explain": "television has 4 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.champion",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “champion”? Clap it!",
+   "answer": "3",
+   "distractors": [
+    "2",
+    "4",
+    "5"
+   ],
+   "explain": "champion has 3 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.beats.crocodile",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "How many beats (syllables) in “crocodile”? Clap it!",
+   "answer": "3",
+   "distractors": [
+    "4",
+    "5",
+    "6"
+   ],
+   "explain": "crocodile has 3 beats.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunks.fantastic",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Which shows “fantastic” split into its beats?",
+   "answer": "fan-tas-tic",
+   "distractors": [
+    "fa-nt-astic",
+    "fant-as-tic",
+    "f-an-tastic"
+   ],
+   "explain": "fan-tas-tic: each chunk has one vowel sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunks.dinosaur",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Which shows “dinosaur” split into its beats?",
+   "answer": "di-no-saur",
+   "distractors": [
+    "din-os-aur",
+    "d-ino-saur",
+    "dino-s-aur"
+   ],
+   "explain": "di-no-saur: each chunk has one vowel sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunks.remember",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Which shows “remember” split into its beats?",
+   "answer": "re-mem-ber",
+   "distractors": [
+    "rem-em-ber",
+    "r-emem-ber",
+    "reme-mb-er"
+   ],
+   "explain": "re-mem-ber: each chunk has one vowel sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunks.unhelpful",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Which shows “unhelpful” split into its beats?",
+   "answer": "un-help-ful",
+   "distractors": [
+    "unh-el-pful",
+    "u-nhelp-ful",
+    "unhel-p-ful"
+   ],
+   "explain": "un-help-ful: each chunk has one vowel sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunks.racetrack",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Which shows “racetrack” split into its beats?",
+   "answer": "race-track",
+   "distractors": [
+    "rac-etrack",
+    "ra-cetrack",
+    "racet-rack"
+   ],
+   "explain": "race-track: each chunk has one vowel sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunkspell.caterpillar",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Spell it chunk by chunk: cat-er-pil-lar. Which spelling is right?",
+   "answer": "caterpillar",
+   "distractors": [
+    "catterpillar",
+    "caterpiller",
+    "catapiller"
+   ],
+   "explain": "cat-er-pil-lar: caterpillar.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunkspell.astronaut",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Spell it chunk by chunk: as-tro-naut. Which spelling is right?",
+   "answer": "astronaut",
+   "distractors": [
+    "astronot",
+    "astronought",
+    "astronawt"
+   ],
+   "explain": "as-tro-naut: astronaut.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunkspell.helicopter",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Spell it chunk by chunk: hel-i-cop-ter. Which spelling is right?",
+   "answer": "helicopter",
+   "distractors": [
+    "hellicopter",
+    "helicoptor",
+    "helocopter"
+   ],
+   "explain": "hel-i-cop-ter: helicopter.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunkspell.television",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Spell it chunk by chunk: tel-e-vi-sion. Which spelling is right?",
+   "answer": "television",
+   "distractors": [
+    "telivision",
+    "televition",
+    "televishun"
+   ],
+   "explain": "tel-e-vi-sion: television.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunkspell.volcano",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Spell it chunk by chunk: vol-ca-no. Which spelling is right?",
+   "answer": "volcano",
+   "distractors": [
+    "volcarno",
+    "vulcano",
+    "volcanoe"
+   ],
+   "explain": "vol-ca-no: volcano.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunkspell.adventure",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Spell it chunk by chunk: ad-ven-ture. Which spelling is right?",
+   "answer": "adventure",
+   "distractors": [
+    "adventcher",
+    "adventur",
+    "advencher"
+   ],
+   "explain": "ad-ven-ture: adventure.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunkspell.explorer",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Spell it chunk by chunk: ex-plor-er. Which spelling is right?",
+   "answer": "explorer",
+   "distractors": [
+    "exploror",
+    "explora",
+    "explorur"
+   ],
+   "explain": "ex-plor-er: explorer.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.y3.chunkspell.submarine",
+   "topic": "reading.y3-longwords",
+   "kind": "fact",
+   "prompt": "Spell it chunk by chunk: sub-ma-rine. Which spelling is right?",
+   "answer": "submarine",
+   "distractors": [
+    "submareen",
+    "submarean",
+    "sumbarine"
+   ],
+   "explain": "sub-ma-rine: submarine.",
+   "formats": [
+    "choice"
+   ]
+  }
+ ]
+}

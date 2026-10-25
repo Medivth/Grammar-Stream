@@ -9,10 +9,10 @@ const MAPS = { world: 'maps/world.json', europe: 'maps/europe.json', uk: 'maps/u
 const { DIAGRAMS } = await import(new URL('./content-src/diagrams.mjs', import.meta.url));
 
 // the Year 2 course: tools/content-src/ks1/*.mjs -> content/ks1/<subject>/<deck>.json, content/index-ks1.json
-const KS1_SOURCES = ['maths', 'maths2', 'reading', 'reading2', 'reading3', 'spelling', 'spelling2', 'science', 'science2', 'history', 'history2', 'books'];
+const KS1_SOURCES = ['maths', 'maths2', 'phonics', 'reading', 'reading2', 'reading3', 'spelling', 'spelling2', 'science', 'science2', 'history', 'history2', 'books'];
 // the Year 3 course: every Year 2 deck (Year 2 stretch topics count as core there) plus
 // tools/content-src/y3/*.mjs -> content/y3/...; its own reading ladder and the merged timeline come last.
-const Y3_SOURCES = ['maths', 'reading', 'spelling', 'science', 'history', 'books'];
+const Y3_SOURCES = ['maths', 'phonics', 'reading', 'spelling', 'science', 'history', 'books'];
 // the Year 8 course (its own content only): tools/content-src/y8/*.mjs -> content/y8/..., content/index-y8.json
 const Y8_SOURCES = ['english', 'english2', 'english-lang', 'english-lang2', 'maths', 'maths2', 'maths3', 'science', 'science2', 'history', 'history2', 'geography', 'geography2', 'computing', 'computing2', 'greek', 'greek2', 'greek3', 'books'];
 
@@ -42,7 +42,10 @@ export async function buildAll() {
   }
   files['index.json'] = JSON.stringify({ version: 1, decks, maps }, null, 1) + '\n';
   files['index-ks1.json'] = JSON.stringify({ version: 1, course: 'ks1', decks: ks1Decks, maps }, null, 1) + '\n';
-  const y3All = [...ks1Decks.filter((p) => !(y3Ladder && p === 'ks1/reading/books.json')), ...y3Decks];
+  // Year 3 children have usually finished Set 2 and 3 Speed Sounds, so the Year 2 phonics deck
+  // comes last there: still available for revision, but Year 3 topics are offered first.
+  const y2Phonics = 'ks1/reading/phonics.json';
+  const y3All = [...ks1Decks.filter((p) => p !== y2Phonics && !(y3Ladder && p === 'ks1/reading/books.json')), ...y3Decks, y2Phonics];
   files['index-y3.json'] = JSON.stringify({ version: 1, course: 'y3', decks: y3All, maps }, null, 1) + '\n';
   files['index-y8.json'] = JSON.stringify({ version: 1, course: 'y8', decks: y8Decks, maps }, null, 1) + '\n';
   return files;
