@@ -93,14 +93,27 @@ export function nextSpeed(records) {
   return Math.max(min, Math.min(max, last.wpm + step));
 }
 
-/** Passages with enough multiple-choice questions, least recently read first. */
+/** A short name for a passage: its own title line if it has one, else its opening words. */
+export function passageTitle(passage) {
+  const first = String(passage).replace(/^\([^)]*\)\n\n/, '').trim().split('\n')[0].replace(/^Fact file: /, '');
+  return first.length <= 60 && !/[.!?,;:—]$/.test(first) ? first : `${first.slice(0, 40).replace(/\s+\S*$/, '')}…`;
+}
+
+/** Passages with enough multiple-choice questions, least recently read first. Questions are grouped by
+ * the passage itself (many passages share a source line, such as “A fable by Aesop, retold for this app”). */
 export function speedPassages(db, records) {
   const by = new Map();
+  const keys = new Set();
   for (const it of Object.values(db.items)) {
     if (!it.passage || it.kind !== 'mcq' || !['english', 'reading'].includes(it.subject)) continue;
-    const key = it.passageSource;
-    if (!by.has(key)) by.set(key, { key, passage: it.passage.replace(/^\([^)]*\)\n\n/, ''), source: it.passageSource, items: [] });
-    by.get(key).items.push(it);
+    if (!by.has(it.passage)) {
+      const title = passageTitle(it.passage);
+      let key = `${it.passageSource} — ${title}`;
+      for (let n = 2; keys.has(key); n++) key = `${it.passageSource} — ${title} (${n})`;
+      keys.add(key);
+      by.set(it.passage, { key, title, label: title.endsWith('…') ? it.passageSource : title, passage: it.passage.replace(/^\([^)]*\)\n\n/, ''), source: it.passageSource, items: [] });
+    }
+    by.get(it.passage).items.push(it);
   }
   const last = {};
   for (const r of records) last[r.passage] = Math.max(last[r.passage] ?? -1, r.day);

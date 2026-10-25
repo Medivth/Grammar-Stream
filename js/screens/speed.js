@@ -23,13 +23,16 @@ export function speedScreen(app) {
         h('p', {}, 'The words light up at a steady pace and you keep up with them. Then four questions check you really read it. Get three right and the pace goes up next time; understanding always comes first.'),
         h('p', {}, 'Pace: ', paceEl, records.length ? h('span', { class: 'muted small' }, ` (suggested from last time: ${suggested})`) : h('span', { class: 'muted small' }, ` (${COURSE.id === 'ks1' ? 'a typical Year 2 reader is about 40–90' : COURSE.id === 'y3' ? 'a typical Year 3 reader is about 60–110' : COURSE.id === 'y8' ? 'a typical Year 8 reader is about 180–250' : 'a typical Year 6 reader is 120–180'})`)),
         h('div', { class: 'row' }, h('button', { class: 'btn-ghost', onclick: () => setPace(COURSE.young ? -10 : -20) }, '− slower'), h('button', { class: 'btn-ghost', onclick: () => setPace(COURSE.young ? 10 : 20) }, '+ faster')),
-        h('button', { class: 'btn-primary btn-big', disabled: !passages.length, onclick: () => read(app, passages[0], pace) }, passages.length ? `Read: ${passages[0].source.split(',')[0]}` : 'No passages available')),
+        h('button', { class: 'btn-primary btn-big', disabled: !passages.length, onclick: () => read(app, passages[0], pace) }, passages.length ? `Read: ${heroFill(app, passages[0].label)}` : 'No passages available')),
       records.length ? h('div', { class: 'card' }, h('h2', {}, 'Your reads'),
-        h('ul', { class: 'plain-list' }, records.slice(-8).reverse().map((r) => h('li', {}, h('strong', {}, `${r.wpm} wpm`), ` · ${r.correct} of ${r.total} right · ${r.passage.split(',')[0]} · ${formatDay(r.day, { day: 'numeric', month: 'short' })}`)))) : null));
+        h('ul', { class: 'plain-list' }, records.slice(-8).reverse().map((r) => h('li', {}, h('strong', {}, `${r.wpm} wpm`), ` · ${r.correct} of ${r.total} right · ${r.title || r.passage.split(' — ').pop().split(',')[0]} · ${formatDay(r.day, { day: 'numeric', month: 'short' })}`)))) : null));
 }
 
+/** His own superhero's name in place of {hero} (Year 2 and 3 stories star him). */
+const heroFill = (app, t) => (typeof t === 'string' ? t.replaceAll('{hero}', app.state.profile?.hero || 'Captain Comet') : t);
+
 function read(app, p, pace) {
-  const words = p.passage.split(/(\s+)/);
+  const words = heroFill(app, p.passage).split(/(\s+)/);
   const spans = words.map((w) => (/^\s+$/.test(w) ? document.createTextNode(w) : h('span', { class: 'sr-word' }, w)));
   const wordSpans = spans.filter((s) => s.nodeType === 1);
   const box = h('div', { class: 'card sr-text' }, spans);
@@ -49,7 +52,7 @@ function read(app, p, pace) {
   mount(app.root,
     h('div', { class: 'topbar' }, h('button', { class: 'btn-icon', 'aria-label': 'Back', onclick: () => { clearInterval(timer); speedScreen(app); } }, icon('back')), h('div', { class: 'progress', style: { '--bar': 'var(--accent)' } }, bar), h('span', { class: 'chip' }, `${pace} wpm`)),
     h('div', { class: 'narrow stack' },
-      h('p', { class: 'muted small' }, p.source),
+      h('p', { class: 'muted small' }, heroFill(app, `${p.title} · ${p.source}`)),
       h('div', { class: 'center' }, startBtn),
       box));
 }
@@ -61,7 +64,7 @@ function quiz(app, p, pace, seconds) {
   let k = 0, correct = 0;
   const show = () => {
     const it = qs[k];
-    const opts = rng.shuffle(it.options.map((o, idx) => ({ ...o, idx })));
+    const opts = rng.shuffle(it.options.map((o, idx) => ({ ...o, text: heroFill(app, o.text), feedback: heroFill(app, o.feedback), idx })));
     let answered = false;
     const out = h('div', { 'aria-live': 'polite' });
     const btns = opts.map((o) => h('button', { class: 'option', type: 'button', onclick: () => {
@@ -69,14 +72,14 @@ function quiz(app, p, pace, seconds) {
       answered = true;
       if (o.correct) correct++;
       btns.forEach((b, j) => { b.disabled = true; if (opts[j].correct) b.classList.add('right'); else if (opts[j] === o) b.classList.add('wrong'); });
-      out.append(h('div', { class: `feedback ${o.correct ? 'good' : 'warn'} pop` }, h('p', {}, o.correct ? '✓ Yes.' : (o.feedback || it.explain)), h('button', { class: 'btn-primary', style: { marginTop: '10px' }, onclick: () => { k++; k < qs.length ? show() : finish(); } }, k + 1 < qs.length ? 'Next question' : 'See my result')));
+      out.append(h('div', { class: `feedback ${o.correct ? 'good' : 'warn'} pop` }, h('p', {}, o.correct ? '✓ Yes.' : (o.feedback || heroFill(app, it.explain))), h('button', { class: 'btn-primary', style: { marginTop: '10px' }, onclick: () => { k++; k < qs.length ? show() : finish(); } }, k + 1 < qs.length ? 'Next question' : 'See my result')));
     } }, o.text));
     mount(app.root, h('div', { class: 'topbar' }, h('span', { class: 'eyebrow' }, `Question ${k + 1} of ${qs.length}`), h('span', { class: 'spacer' })),
-      h('div', { class: 'narrow stack' }, rich('div', it.prompt, { class: 'q-prompt' }), h('div', { class: 'options' }, btns), out));
+      h('div', { class: 'narrow stack' }, rich('div', heroFill(app, it.prompt), { class: 'q-prompt' }), h('div', { class: 'options' }, btns), out));
   };
   const finish = () => {
     const actual = Math.round((p.passage.split(/\s+/).length / Math.max(1, seconds)) * 60);
-    state.speed.push({ day: app.today(), passage: p.key, wpm: pace, actual, correct, total: qs.length });
+    state.speed.push({ day: app.today(), passage: p.key, title: p.label, wpm: pace, actual, correct, total: qs.length });
     app.save();
     const next = nextSpeed(state.speed);
     mount(app.root, h('div', { class: 'topbar' }, h('h1', {}, 'Result'), h('span', { class: 'spacer' })),
