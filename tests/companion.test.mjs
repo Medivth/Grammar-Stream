@@ -42,3 +42,18 @@ test('every accessory draws on both animals, alone and combined', () => {
   }
   assert.equal(SLOT.skateboard, 'ride');
 });
+
+test('every course has a full wardrobe, and every reward and starter is a real accessory', async () => {
+  const { COURSES } = await import('../js/core/subjects.js');
+  const { MILESTONES, KS1_MILESTONES, Y3_MILESTONES, wardrobeAccessories } = await import('../js/core/progress.js');
+  for (const list of [MILESTONES, KS1_MILESTONES, Y3_MILESTONES]) for (const m of list) if (m.unlock) assert.ok(ACCESSORIES[m.unlock], `${m.id} unlocks ${m.unlock}`);
+  for (const id of Object.keys(COURSES)) {
+    setCourse(id);
+    for (const a of COURSES[id].starter) assert.ok(ACCESSORIES[a], `${id} starter ${a}`);
+    assert.ok(wardrobeAccessories().size >= 20, `${id}: ${wardrobeAccessories().size} accessories`);
+  }
+  setCourse('y6');
+  assert.equal(SLOT.shield, 'hand');
+  const both = capybaraSVG({ species: 'lion', wear: { head: 'knight', back: 'cape', hand: 'shield', ride: 'scooter' } });
+  assert.ok(both.includes('#c8913a') && both.includes('#d62f3a'), 'shield and cape drawn together');
+});

@@ -34,6 +34,13 @@ export const ACCESSORIES = {
   cape: 'Hero cape',
   mask: 'Hero mask',
   skateboard: 'Skateboard',
+  chef: 'Chef’s hat',
+  partyhat: 'Party hat',
+  astronaut: 'Space helmet',
+  scooter: 'Scooter',
+  laurel: 'Laurel wreath',
+  corinthian: 'Greek helmet',
+  shield: 'Round shield',
   // earned through milestones (see js/core/progress.js)
   sunglasses: 'Sunglasses',
   headphones: 'Headphones',
@@ -43,9 +50,19 @@ export const ACCESSORIES = {
   backpack: 'Backpack',
   gradcap: 'Graduation cap',
   crown: 'Crown',
+  pirate: 'Pirate hat',
+  starglasses: 'Star glasses',
+  wings: 'Wings',
+  jetpack: 'Jetpack',
+  wizard: 'Wizard hat',
+  medal: 'Gold medal',
+  surfboard: 'Surfboard',
+  owl: 'Owl friend',
+  bowtie: 'Bow tie',
+  knight: 'Knight’s helmet',
 };
 
-export const SLOT = { glasses: 'face', sunglasses: 'face', goggles: 'face', mask: 'face', scarf: 'front', cape: 'back', backpack: 'back', skateboard: 'ride' };
+export const SLOT = { glasses: 'face', sunglasses: 'face', goggles: 'face', mask: 'face', starglasses: 'face', scarf: 'front', bowtie: 'front', medal: 'front', cape: 'back', backpack: 'back', wings: 'back', jetpack: 'back', shield: 'hand', skateboard: 'ride', scooter: 'ride', surfboard: 'ride' };
 const slotOf = (id) => SLOT[id] || 'head';
 
 /** What the companion is wearing, one accessory per slot (older saves have a single `accessory`). */
@@ -62,6 +79,8 @@ export function toggleWear(c, id) {
   if (wear[slot] === id) delete wear[slot]; else wear[slot] = id;
   return { ...c, wear, accessory: Object.values(wear).at(-1) || 'none' };
 }
+
+const star = (cx, cy, r, fill) => `<path d="${Array.from({ length: 10 }, (_, i) => { const a = -Math.PI / 2 + (i * Math.PI) / 5, rr = i % 2 ? r * 0.45 : r; return `${i ? 'L' : 'M'}${(cx + Math.cos(a) * rr).toFixed(1)} ${(cy + Math.sin(a) * rr).toFixed(1)}`; }).join(' ')}Z" fill="${fill}"/>`;
 
 function accessory(kind, f) {
   switch (kind) {
@@ -101,6 +120,44 @@ function accessory(kind, f) {
       return f.lion
         ? `<g><rect x="56" y="146" width="88" height="7" rx="3.5" fill="#2f74e8"/><path d="M60 148 h80" stroke="#ffd166" stroke-width="2" stroke-dasharray="6 5"/><circle cx="72" cy="156" r="3.6" fill="#2b2a33"/><circle cx="128" cy="156" r="3.6" fill="#2b2a33"/></g>`
         : `<g><rect x="48" y="145" width="140" height="7" rx="3.5" fill="#2f74e8"/><path d="M54 147 h128" stroke="#ffd166" stroke-width="2" stroke-dasharray="6 5"/><circle cx="66" cy="155" r="3.6" fill="#2b2a33"/><circle cx="170" cy="155" r="3.6" fill="#2b2a33"/></g>`;
+    case 'chef':
+      return `<g fill="#fff" stroke="#d9d9e3" stroke-width="2"><rect x="40" y="44" width="48" height="14" rx="4"/><circle cx="47" cy="37" r="11"/><circle cx="64" cy="31" r="12"/><circle cx="81" cy="37" r="11"/><path d="M40 44 h48" stroke="none"/></g>`;
+    case 'partyhat':
+      return `<g><path d="M47 56 L64 22 L81 56 Z" fill="#ff8a3d"/><path d="M53 44 L75 44 M50 51 L78 51 M57 34 L71 34" stroke="#ffd166" stroke-width="3.5"/><circle cx="64" cy="22" r="5.5" fill="#d63d74"/></g>`;
+    case 'astronaut':
+      return `<g><circle cx="64" cy="82" r="50" fill="#bfe6ff" opacity=".28" stroke="#c7ced9" stroke-width="6"/><path d="M30 50 Q40 38 54 36" stroke="#fff" stroke-width="4" fill="none" opacity=".8" stroke-linecap="round"/><rect x="40" y="126" width="48" height="10" rx="5" fill="#e3e7ee" stroke="#c7ced9" stroke-width="2"/></g>`;
+    case 'laurel':
+      return `<g fill="#5c9a3c">${[200, 215, 230, 245, 260, 280, 295, 310, 325, 340].map((a) => { const t = (a * Math.PI) / 180, x = 64 + Math.cos(t) * 40, y = 70 + Math.sin(t) * 30; return `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="8" ry="4" transform="rotate(${a + 90} ${x.toFixed(1)} ${y.toFixed(1)})"/>`; }).join('')}<circle cx="64" cy="41" r="3.5" fill="#ffd166"/></g>`;
+    case 'corinthian':
+      return `<g><path d="M40 34 Q64 10 88 34" stroke="#d62f3a" stroke-width="11" fill="none" stroke-linecap="round"/><path d="M28 68 Q28 28 64 28 Q100 28 100 68 L100 92 L90 92 L90 66 Q64 58 38 66 L38 92 L28 92 Z" fill="#c8913a"/><path d="M60 62 L60 96 L68 96 L68 62" fill="#c8913a"/><path d="M30 60 Q64 50 98 60" stroke="#a46f24" stroke-width="3" fill="none"/></g>`;
+    case 'knight':
+      return `<g><path d="M64 28 Q72 12 90 14 Q80 22 76 30" fill="#d62f3a"/><path d="M28 70 Q28 26 64 26 Q100 26 100 70 Z" fill="#a9b1bb"/><path d="M28 62 h72" stroke="#7d8692" stroke-width="3"/><rect x="60" y="28" width="8" height="34" fill="#c7ced6"/></g>`;
+    case 'pirate':
+      return `<g><path d="M22 60 Q28 30 64 30 Q100 30 106 60 Q86 48 64 50 Q42 48 22 60 Z" fill="#1c1a33"/><path d="M24 58 Q64 40 104 58" stroke="#ffd166" stroke-width="3" fill="none"/><circle cx="64" cy="41" r="5.5" fill="#fff"/><path d="M56 49 l16 -6 M56 43 l16 6" stroke="#fff" stroke-width="2.4"/></g>`;
+    case 'wizard':
+      return `<g><path d="M32 58 Q64 48 96 58 L70 18 Q66 14 62 20 Z" fill="#5143d9"/><ellipse cx="64" cy="58" rx="38" ry="7" fill="#3b2fb0"/>${star(56, 42, 5.5, '#ffd166')}${star(70, 28, 4, '#ffd166')}${star(72, 48, 3, '#fff')}</g>`;
+    case 'owl':
+      return `<g transform="translate(64 37)"><path d="M-12 -12 l4 -7 l4 5 M12 -12 l-4 -7 l-4 5" fill="#6b4e33"/><ellipse rx="13" ry="15" fill="#8a6a4a"/><ellipse cy="5" rx="8" ry="8" fill="#c9a77f"/><circle cx="-5" cy="-4" r="5" fill="#fff"/><circle cx="5" cy="-4" r="5" fill="#fff"/><circle cx="-5" cy="-4" r="2.4" fill="#2b2a33"/><circle cx="5" cy="-4" r="2.4" fill="#2b2a33"/><path d="M-2 1 l2 4 l2 -4z" fill="#f2a533"/></g>`;
+    case 'starglasses':
+      return `<g>${star(50, 76, 12, '#ff5fa2')}${star(76, 76, 12, '#ff5fa2')}<path d="M60 76 h6 M38 74 l-6 -3" stroke="#2b2a33" stroke-width="2.4"/>${star(50, 76, 6, '#ffd166')}${star(76, 76, 6, '#ffd166')}</g>`;
+    case 'bowtie':
+      return `<g transform="translate(86 124)"><path d="M0 0 L-13 -8 L-13 8 Z M0 0 L13 -8 L13 8 Z" fill="#d62f3a"/><circle r="4" fill="#a51d28"/></g>`;
+    case 'medal':
+      return `<g><path d="M80 112 L90 134 L100 112" stroke="#2f74e8" stroke-width="6" fill="none"/><circle cx="90" cy="136" r="9" fill="#ffd166" stroke="#d9a21b" stroke-width="2.5"/>${star(90, 136, 5, '#d9a21b')}</g>`;
+    case 'wings':
+      return `<g fill="#f4f7ff" stroke="#c5cde0" stroke-width="2"><path d="M120 66 Q128 24 168 22 Q160 42 170 46 Q150 52 156 62 Q136 64 120 66 Z"/><path d="M134 64 Q148 36 182 40 Q172 54 180 60 Q162 64 164 70 Q148 70 134 64 Z" opacity=".9"/></g>`;
+    case 'jetpack':
+      return `<g><rect x="118" y="38" width="16" height="36" rx="7" fill="#c7ced6" stroke="#8d96a3" stroke-width="2"/><rect x="138" y="38" width="16" height="36" rx="7" fill="#c7ced6" stroke="#8d96a3" stroke-width="2"/><path d="M120 74 l6 18 l6 -18 Z M140 74 l6 18 l6 -18 Z" fill="#ff8a3d"/><path d="M123 74 l3 10 l3 -10 Z M143 74 l3 10 l3 -10 Z" fill="#ffd166"/></g>`;
+    case 'shield':
+      return `<g><circle cx="152" cy="104" r="28" fill="#c8913a" stroke="#a46f24" stroke-width="4"/><circle cx="152" cy="104" r="18" fill="none" stroke="#a46f24" stroke-width="2"/><path d="M142 118 L152 90 L162 118" stroke="#7a2f1d" stroke-width="5" fill="none" stroke-linejoin="round"/></g>`;
+    case 'scooter':
+      return f.lion
+        ? `<g><rect x="56" y="146" width="84" height="6" rx="3" fill="#d62f3a"/><path d="M62 148 L58 98" stroke="#8d96a3" stroke-width="4"/><path d="M48 98 h20" stroke="#2b2a33" stroke-width="5" stroke-linecap="round"/><circle cx="62" cy="155" r="4" fill="#2b2a33"/><circle cx="134" cy="155" r="4" fill="#2b2a33"/></g>`
+        : `<g><rect x="44" y="145" width="140" height="6" rx="3" fill="#d62f3a"/><path d="M48 147 L40 92" stroke="#8d96a3" stroke-width="4"/><path d="M30 92 h20" stroke="#2b2a33" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="155" r="4" fill="#2b2a33"/><circle cx="178" cy="155" r="4" fill="#2b2a33"/></g>`;
+    case 'surfboard':
+      return f.lion
+        ? `<g><ellipse cx="100" cy="151" rx="60" ry="6" fill="#4fc3f7"/><path d="M44 151 h112" stroke="#fff" stroke-width="2" opacity=".8"/><path d="M84 146 v10" stroke="#ff8a3d" stroke-width="5"/></g>`
+        : `<g><ellipse cx="114" cy="150" rx="88" ry="7" fill="#4fc3f7"/><path d="M30 150 h168" stroke="#fff" stroke-width="2" opacity=".8"/><path d="M100 144 v12" stroke="#ff8a3d" stroke-width="6"/></g>`;
     case 'backpack':
       return `<g><rect x="126" y="56" width="42" height="48" rx="12" fill="#2f74e8"/><rect x="134" y="80" width="26" height="16" rx="5" fill="#1f5cc4"/><path d="M128 66 Q118 80 120 100" stroke="#1f5cc4" stroke-width="5" fill="none"/></g>`;
     default:
@@ -132,7 +189,7 @@ export function capybaraSVG({ species, fur = 'caramel', accessory: acc = 'none',
   <rect x="80" y="126" width="16" height="22" rx="7" fill="${f.body}"/>
   <rect x="164" y="122" width="15" height="24" rx="7" fill="${f.body}"/>
   <path d="M150 74 q22 6 30 26" stroke="${f.dark}" stroke-width="3" fill="none" opacity=".35" stroke-linecap="round"/>
-  ${draw(['front'])}
+  ${draw(['front', 'hand'])}
   <ellipse cx="46" cy="52" rx="8" ry="7" fill="${f.dark}"/>
   <ellipse cx="82" cy="52" rx="8" ry="7" fill="${f.dark}"/>
   <rect x="24" y="50" width="80" height="70" rx="32" fill="${f.body}"/>
@@ -152,7 +209,7 @@ export function capybaraSVG({ species, fur = 'caramel', accessory: acc = 'none',
 const HEAD = 'translate(37 -16)';
 function lionSVG(f, worn, layer, mood, title) {
   const draw = (slots) => layer(slots).map((a) => (['head', 'face'].includes(slotOf(a)) ? `<g transform="${HEAD}">${accessory(a, f)}</g>` : lionBody(a, f))).join('');
-  const riding = worn.includes('skateboard');
+  const riding = worn.some((a) => slotOf(a) === 'ride');
   const mane = Array.from({ length: 14 }, (_, i) => { const t = (i / 14) * Math.PI * 2; return `<circle cx="${(100 + Math.cos(t) * 33).toFixed(1)}" cy="${(64 + Math.sin(t) * 31).toFixed(1)}" r="14"/>`; }).join('');
   return `<svg viewBox="0 0 200 160" role="img" aria-label="${title}" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="100" cy="${riding ? 158 : 151}" rx="${riding ? 52 : 40}" ry="5" fill="#000" opacity=".08"/>
@@ -170,7 +227,7 @@ function lionSVG(f, worn, layer, mood, title) {
   <path d="M121 104 Q134 116 130 128" stroke="${f.body}" stroke-width="10" fill="none" stroke-linecap="round"/>
   <circle cx="70" cy="129" r="6" fill="${f.light}"/>
   <circle cx="130" cy="129" r="6" fill="${f.light}"/>
-  ${draw(['front'])}
+  ${draw(['front', 'hand'])}
   <g fill="${f.mane}">${mane}<circle cx="100" cy="64" r="36"/></g>
   <circle cx="76" cy="38" r="9" fill="${f.body}"/><circle cx="76" cy="38" r="4.5" fill="${f.light}"/>
   <circle cx="124" cy="38" r="9" fill="${f.body}"/><circle cx="124" cy="38" r="4.5" fill="${f.light}"/>
@@ -195,7 +252,19 @@ function lionBody(kind, f) {
     case 'scarf':
       return `<g><path d="M76 96 Q100 108 124 96 L126 104 Q100 116 74 104 Z" fill="#4d8fd6"/><path d="M110 104 l4 26 l9 -2 l-5 -26z" fill="#3a74b5"/></g>`;
     case 'skateboard':
-      return accessory('skateboard', { ...f, lion: true });
+    case 'scooter':
+    case 'surfboard':
+      return accessory(kind, { ...f, lion: true });
+    case 'bowtie':
+      return `<g transform="translate(100 108)"><path d="M0 0 L-11 -7 L-11 7 Z M0 0 L11 -7 L11 7 Z" fill="#d62f3a"/><circle r="3.5" fill="#a51d28"/></g>`;
+    case 'medal':
+      return `<g><path d="M90 96 L100 116 L110 96" stroke="#2f74e8" stroke-width="5" fill="none"/><circle cx="100" cy="120" r="8" fill="#ffd166" stroke="#d9a21b" stroke-width="2.5"/>${star(100, 120, 4.5, '#d9a21b')}</g>`;
+    case 'wings':
+      return `<g fill="#f4f7ff" stroke="#c5cde0" stroke-width="2"><path d="M82 104 Q46 70 26 84 Q40 92 34 100 Q52 100 50 110 Q66 106 82 112 Z"/><path d="M118 104 Q154 70 174 84 Q160 92 166 100 Q148 100 150 110 Q134 106 118 112 Z"/></g>`;
+    case 'jetpack':
+      return `<g><rect x="52" y="94" width="14" height="32" rx="6" fill="#c7ced6" stroke="#8d96a3" stroke-width="2"/><rect x="134" y="94" width="14" height="32" rx="6" fill="#c7ced6" stroke="#8d96a3" stroke-width="2"/><path d="M53 126 l6 16 l6 -16 Z M135 126 l6 16 l6 -16 Z" fill="#ff8a3d"/><path d="M56 126 l3 9 l3 -9 Z M138 126 l3 9 l3 -9 Z" fill="#ffd166"/></g>`;
+    case 'shield':
+      return `<g><circle cx="134" cy="120" r="19" fill="#c8913a" stroke="#a46f24" stroke-width="3"/><circle cx="134" cy="120" r="12" fill="none" stroke="#a46f24" stroke-width="1.6"/><path d="M127 130 L134 110 L141 130" stroke="#7a2f1d" stroke-width="4" fill="none" stroke-linejoin="round"/></g>`;
     default:
       return '';
   }

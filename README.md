@@ -72,7 +72,7 @@ Some topics draw on another subject: *Geography by numbers* (averages, density, 
 
 ### Visible progress
 
-The home screen's island map lights up topic by topic (white ring segments for secure, gold for mastered). *My progress* has a history timeline whose events light up as she learns them, maps that colour in the places she knows, and nineteen milestones. Milestones are fixed rewards for real achievement (never random); six of them unlock outfits for her capybara. Outfits sit in slots (head, face, front, back, ride), so a companion can wear a helmet, a cape and a skateboard at once.
+The home screen's island map lights up topic by topic (white ring segments for secure, gold for mastered). *My progress* has a history timeline whose events light up as she learns them, maps that colour in the places she knows, and nineteen milestones. Milestones are fixed rewards for real achievement (never random); six of them unlock outfits for her capybara. Outfits sit in slots (head, face, neck, back, hand, ride), so a companion can wear a helmet, a cape, a shield and a skateboard at once. There are 37 outfits in all, from a chef’s hat and a wizard hat to a space helmet and jetpack, a knight’s helmet, and (on Year 8) a laurel wreath, a Greek helmet, a round shield and Athena’s owl; each course starts with some and earns the rest through badges.
 
 ### Commands
 

@@ -156,6 +156,6 @@ function badgesTab(app, body) {
     h('div', { class: 'badge-grid' }, ms.map(badge)),
     h('div', { class: 'section-title' }, h('h2', {}, `${c.name || 'Your companion'}’s wardrobe`)),
     h('div', { style: { maxWidth: '240px', margin: '0 auto 8px' } }, capybaraEl({ ...c, mood: 'happy' })),
-    h('p', { class: 'muted center' }, 'Tap to put something on, and tap again to take it off. You can wear one thing on your head, one on your face, one on your back and ride a skateboard, all at once. Locked ones are earned with badges.'),
+    h('p', { class: 'muted center' }, 'Tap to put something on, and tap again to take it off. You can wear one thing on your head, one on your face, one round your neck, one on your back, hold one, and ride one, all at once. Locked ones are earned with badges.'),
     wardrobe);
 }
