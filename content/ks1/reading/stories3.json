@@ -1,0 +1,1627 @@
+{
+ "subject": "reading",
+ "deck": "stories3",
+ "topics": [
+  {
+   "id": "reading.fables-3",
+   "title": "Even more fables",
+   "kind": "reading",
+   "prereqs": [
+    "reading.fables-2"
+   ],
+   "batch": 6,
+   "intro": "Five more fables, each with a lesson. Look for who learns the lesson, and how.",
+   "teach": "Explain the moral of “The Crow and the Jug”.",
+   "talk": "Ask {him} which fable {she} would tell a friend, and why."
+  },
+  {
+   "id": "reading.stories-3",
+   "title": "Racing, space and rally adventures",
+   "kind": "reading",
+   "prereqs": [
+    "reading.stories-2"
+   ],
+   "batch": 6,
+   "intro": "Three new adventures with Turbo, Blaze, Bleep, Captain Nova and Rosa. Think about how the characters feel, and why they make their choices.",
+   "teach": "Explain why Blaze stopped to help Turbo.",
+   "talk": "Ask {him} which character was the bravest, and why."
+  },
+  {
+   "id": "reading.stories-4",
+   "title": "Heroes, dragons and dinosaurs",
+   "kind": "reading",
+   "prereqs": [
+    "reading.stories-3"
+   ],
+   "batch": 6,
+   "intro": "A superhero without powers, a knight and a dragon, and a night in a museum. Each one has a surprise in it.",
+   "teach": "Explain what the surprise was in “The Knight and the Dragon”.",
+   "talk": "Ask {him} what {her} superhero would do without superpowers."
+  },
+  {
+   "id": "reading.potter-2",
+   "title": "More Beatrix Potter",
+   "kind": "reading",
+   "prereqs": [
+    "reading.nutkin"
+   ],
+   "batch": 6,
+   "intro": "Three more of Beatrix Potter’s tales, in her own words: Benjamin Bunny, Jemima Puddle-Duck and Tom Kitten. Some words are old-fashioned, so use the clues around them.",
+   "teach": "Explain why Jemima should not have trusted the gentleman with sandy whiskers.",
+   "talk": "Read one of the tales aloud together and ask {him} what happens next."
+  }
+ ],
+ "items": [
+  {
+   "id": "reading.s3.crow.1",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "Why couldn’t the crow drink the water at first?",
+   "options": [
+    {
+     "text": "The water was too low to reach",
+     "correct": true
+    },
+    {
+     "text": "The water was too hot to drink",
+     "correct": false,
+     "feedback": "It was a hot day, but the water was fine. It was just too far down."
+    },
+    {
+     "text": "A cat was guarding the jug",
+     "correct": false,
+     "feedback": "There is no cat in this fable."
+    }
+   ],
+   "explain": "“There was a little water at the very bottom… She could not reach it.”",
+   "passage": "The Crow and the Jug\n\nIt was the hottest day of the summer. A crow had flown a long way and she was very thirsty.\n\nAt last she saw a tall jug standing by a garden wall. There was a little water at the very bottom. The crow pushed her beak into the jug, but it was too narrow and the water was too low. She could not reach it.\n\nShe tried to tip the jug over, but it was too heavy.\n\nThe crow did not give up. She looked around and saw some small pebbles on the path. She had an idea.\n\nShe picked up one pebble and dropped it into the jug. Plop! Then another, and another. Each pebble pushed the water up a little higher.\n\nAfter fifty pebbles, the water was right at the top. The crow drank and drank until she was not thirsty any more.\n\nLittle by little does the trick.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.crow.2",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "What did the crow drop into the jug?",
+   "options": [
+    {
+     "text": "Pebbles",
+     "correct": true
+    },
+    {
+     "text": "Leaves",
+     "correct": false,
+     "feedback": "Look for what she saw on the path."
+    },
+    {
+     "text": "Twigs and feathers",
+     "correct": false,
+     "feedback": "She dropped small stones, one at a time."
+    }
+   ],
+   "explain": "“She saw some small pebbles on the path.”",
+   "passage": "The Crow and the Jug\n\nIt was the hottest day of the summer. A crow had flown a long way and she was very thirsty.\n\nAt last she saw a tall jug standing by a garden wall. There was a little water at the very bottom. The crow pushed her beak into the jug, but it was too narrow and the water was too low. She could not reach it.\n\nShe tried to tip the jug over, but it was too heavy.\n\nThe crow did not give up. She looked around and saw some small pebbles on the path. She had an idea.\n\nShe picked up one pebble and dropped it into the jug. Plop! Then another, and another. Each pebble pushed the water up a little higher.\n\nAfter fifty pebbles, the water was right at the top. The crow drank and drank until she was not thirsty any more.\n\nLittle by little does the trick.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.crow.3",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "Why did the pebbles help?",
+   "options": [
+    {
+     "text": "They pushed the water up higher",
+     "correct": true
+    },
+    {
+     "text": "They made the jug tip over",
+     "correct": false,
+     "feedback": "The jug was too heavy to tip."
+    },
+    {
+     "text": "They cleaned the dirty water",
+     "correct": false,
+     "feedback": "The story says each pebble pushed the water higher."
+    }
+   ],
+   "explain": "Each pebble took up space in the jug, so the water rose.",
+   "passage": "The Crow and the Jug\n\nIt was the hottest day of the summer. A crow had flown a long way and she was very thirsty.\n\nAt last she saw a tall jug standing by a garden wall. There was a little water at the very bottom. The crow pushed her beak into the jug, but it was too narrow and the water was too low. She could not reach it.\n\nShe tried to tip the jug over, but it was too heavy.\n\nThe crow did not give up. She looked around and saw some small pebbles on the path. She had an idea.\n\nShe picked up one pebble and dropped it into the jug. Plop! Then another, and another. Each pebble pushed the water up a little higher.\n\nAfter fifty pebbles, the water was right at the top. The crow drank and drank until she was not thirsty any more.\n\nLittle by little does the trick.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.crow.4",
+   "topic": "reading.fables-3",
+   "kind": "order",
+   "prompt": "Put these in order.",
+   "items": [
+    "The crow finds a jug",
+    "She cannot reach the water",
+    "She drops in pebbles",
+    "She drinks at last"
+   ],
+   "labels": null,
+   "explain": "Jug, can’t reach, pebbles, drink.",
+   "passage": "The Crow and the Jug\n\nIt was the hottest day of the summer. A crow had flown a long way and she was very thirsty.\n\nAt last she saw a tall jug standing by a garden wall. There was a little water at the very bottom. The crow pushed her beak into the jug, but it was too narrow and the water was too low. She could not reach it.\n\nShe tried to tip the jug over, but it was too heavy.\n\nThe crow did not give up. She looked around and saw some small pebbles on the path. She had an idea.\n\nShe picked up one pebble and dropped it into the jug. Plop! Then another, and another. Each pebble pushed the water up a little higher.\n\nAfter fifty pebbles, the water was right at the top. The crow drank and drank until she was not thirsty any more.\n\nLittle by little does the trick.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.crow.5",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "What is the lesson of this fable?",
+   "options": [
+    {
+     "text": "Little by little does the trick",
+     "correct": true
+    },
+    {
+     "text": "Crows are the cleverest birds of all",
+     "correct": false,
+     "feedback": "The fable is about how to solve a problem, not about crows."
+    },
+    {
+     "text": "Always carry water on a hot day",
+     "correct": false,
+     "feedback": "Good advice, but not the moral here."
+    }
+   ],
+   "explain": "Lots of small steps can solve a big problem. Don’t give up!",
+   "passage": "The Crow and the Jug\n\nIt was the hottest day of the summer. A crow had flown a long way and she was very thirsty.\n\nAt last she saw a tall jug standing by a garden wall. There was a little water at the very bottom. The crow pushed her beak into the jug, but it was too narrow and the water was too low. She could not reach it.\n\nShe tried to tip the jug over, but it was too heavy.\n\nThe crow did not give up. She looked around and saw some small pebbles on the path. She had an idea.\n\nShe picked up one pebble and dropped it into the jug. Plop! Then another, and another. Each pebble pushed the water up a little higher.\n\nAfter fifty pebbles, the water was right at the top. The crow drank and drank until she was not thirsty any more.\n\nLittle by little does the trick.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.mice.1",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "What did the country mouse give her cousin to eat?",
+   "options": [
+    {
+     "text": "Barley and beans",
+     "correct": true
+    },
+    {
+     "text": "Cakes and jelly",
+     "correct": false,
+     "feedback": "Those were in the town house."
+    },
+    {
+     "text": "Bread and honey",
+     "correct": false,
+     "feedback": "Look at the second sentence."
+    }
+   ],
+   "explain": "“The country mouse gave him barley, beans and a drink from the stream.”",
+   "passage": "The Town Mouse and the Country Mouse\n\nA country mouse lived in a field. One day her cousin from the town came to visit. The country mouse gave him barley, beans and a drink from the stream.\n\n“How can you eat such plain food?” said the town mouse. “Come to the town with me. I will show you how to live!”\n\nSo they went to the town. In a big house, on a long table, there were cakes, cheese and jelly left over from a party. The country mouse could not believe her eyes.\n\nBut just as she took her first bite, the door burst open. A cook came in with a broom! Then a cat sprang out from under a chair. The two mice ran for their lives and hid in a tiny hole, shaking.\n\nWhen it was quiet again, the country mouse picked up her bag.\n\n“Thank you, cousin,” she said. “But I would rather eat beans in peace than cake in fear.”\n\nAnd she went home to her quiet field.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.mice.2",
+   "topic": "reading.fables-3",
+   "kind": "fact",
+   "prompt": "What did the town mouse think of the country food?",
+   "answer": "it was too plain",
+   "distractors": [
+    "it was delicious",
+    "it was too spicy",
+    "it was too sweet"
+   ],
+   "explain": "“How can you eat such plain food?”",
+   "passage": "The Town Mouse and the Country Mouse\n\nA country mouse lived in a field. One day her cousin from the town came to visit. The country mouse gave him barley, beans and a drink from the stream.\n\n“How can you eat such plain food?” said the town mouse. “Come to the town with me. I will show you how to live!”\n\nSo they went to the town. In a big house, on a long table, there were cakes, cheese and jelly left over from a party. The country mouse could not believe her eyes.\n\nBut just as she took her first bite, the door burst open. A cook came in with a broom! Then a cat sprang out from under a chair. The two mice ran for their lives and hid in a tiny hole, shaking.\n\nWhen it was quiet again, the country mouse picked up her bag.\n\n“Thank you, cousin,” she said. “But I would rather eat beans in peace than cake in fear.”\n\nAnd she went home to her quiet field.",
+   "passageSource": "A fable by Aesop, retold for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.s3.mice.3",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "What frightened the mice in the town?",
+   "options": [
+    {
+     "text": "A cook and a cat",
+     "correct": true
+    },
+    {
+     "text": "A thunderstorm",
+     "correct": false,
+     "feedback": "The danger came through the door and from under a chair."
+    },
+    {
+     "text": "A big barking dog in the garden",
+     "correct": false,
+     "feedback": "It was a cat, not a dog."
+    }
+   ],
+   "explain": "The cook burst in with a broom, and a cat sprang out.",
+   "passage": "The Town Mouse and the Country Mouse\n\nA country mouse lived in a field. One day her cousin from the town came to visit. The country mouse gave him barley, beans and a drink from the stream.\n\n“How can you eat such plain food?” said the town mouse. “Come to the town with me. I will show you how to live!”\n\nSo they went to the town. In a big house, on a long table, there were cakes, cheese and jelly left over from a party. The country mouse could not believe her eyes.\n\nBut just as she took her first bite, the door burst open. A cook came in with a broom! Then a cat sprang out from under a chair. The two mice ran for their lives and hid in a tiny hole, shaking.\n\nWhen it was quiet again, the country mouse picked up her bag.\n\n“Thank you, cousin,” she said. “But I would rather eat beans in peace than cake in fear.”\n\nAnd she went home to her quiet field.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.mice.4",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "Why did the country mouse go home?",
+   "options": [
+    {
+     "text": "She would rather be safe than rich",
+     "correct": true
+    },
+    {
+     "text": "She did not like her cousin",
+     "correct": false,
+     "feedback": "She thanked him kindly."
+    },
+    {
+     "text": "She had eaten all the cake",
+     "correct": false,
+     "feedback": "She only had one bite!"
+    }
+   ],
+   "explain": "“I would rather eat beans in peace than cake in fear.”",
+   "passage": "The Town Mouse and the Country Mouse\n\nA country mouse lived in a field. One day her cousin from the town came to visit. The country mouse gave him barley, beans and a drink from the stream.\n\n“How can you eat such plain food?” said the town mouse. “Come to the town with me. I will show you how to live!”\n\nSo they went to the town. In a big house, on a long table, there were cakes, cheese and jelly left over from a party. The country mouse could not believe her eyes.\n\nBut just as she took her first bite, the door burst open. A cook came in with a broom! Then a cat sprang out from under a chair. The two mice ran for their lives and hid in a tiny hole, shaking.\n\nWhen it was quiet again, the country mouse picked up her bag.\n\n“Thank you, cousin,” she said. “But I would rather eat beans in peace than cake in fear.”\n\nAnd she went home to her quiet field.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.mice.5",
+   "topic": "reading.fables-3",
+   "kind": "fact",
+   "prompt": "Find and copy the word that tells you how the mice felt in the tiny hole.",
+   "answer": "shaking",
+   "distractors": [
+    "quiet",
+    "happy",
+    "tiny"
+   ],
+   "explain": "“hid in a tiny hole, shaking.” They were terrified.",
+   "passage": "The Town Mouse and the Country Mouse\n\nA country mouse lived in a field. One day her cousin from the town came to visit. The country mouse gave him barley, beans and a drink from the stream.\n\n“How can you eat such plain food?” said the town mouse. “Come to the town with me. I will show you how to live!”\n\nSo they went to the town. In a big house, on a long table, there were cakes, cheese and jelly left over from a party. The country mouse could not believe her eyes.\n\nBut just as she took her first bite, the door burst open. A cook came in with a broom! Then a cat sprang out from under a chair. The two mice ran for their lives and hid in a tiny hole, shaking.\n\nWhen it was quiet again, the country mouse picked up her bag.\n\n“Thank you, cousin,” she said. “But I would rather eat beans in peace than cake in fear.”\n\nAnd she went home to her quiet field.",
+   "passageSource": "A fable by Aesop, retold for this app",
+   "accept": [
+    "shaking"
+   ]
+  },
+  {
+   "id": "reading.s3.dog.1",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "What did the dog really see in the water?",
+   "options": [
+    {
+     "text": "His own reflection",
+     "correct": true
+    },
+    {
+     "text": "A stranger with a bigger bone",
+     "correct": false,
+     "feedback": "That is what he thought, but it was himself."
+    },
+    {
+     "text": "A fish swimming past",
+     "correct": false,
+     "feedback": "He saw a dog with a bone."
+    }
+   ],
+   "explain": "The water was like a mirror.",
+   "passage": "The Dog and His Reflection\n\nA dog was trotting home with a big juicy bone in his mouth. He felt very pleased with himself.\n\nOn the way he had to cross a little bridge over a stream. As he crossed, he looked down into the water.\n\nThere he saw another dog, with another big bone! The dog did not know he was looking at his own reflection.\n\n“That bone looks even bigger than mine,” he thought. “I want it too.”\n\nSo he opened his mouth to grab the other bone and gave a loud bark. Splash! His own bone fell into the stream and sank to the bottom.\n\nThe other dog had vanished, and so had the bone. The dog walked home sadly with nothing at all.\n\nIf you are greedy, you can lose what you already have.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.dog.2",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "Why did the dog lose his bone?",
+   "options": [
+    {
+     "text": "He opened his mouth to bark",
+     "correct": true
+    },
+    {
+     "text": "Another dog snatched it away",
+     "correct": false,
+     "feedback": "There was no other dog."
+    },
+    {
+     "text": "He was tired and put it down to rest",
+     "correct": false,
+     "feedback": "He opened his mouth to grab the other bone."
+    }
+   ],
+   "explain": "When he barked, his bone fell out of his mouth into the stream.",
+   "passage": "The Dog and His Reflection\n\nA dog was trotting home with a big juicy bone in his mouth. He felt very pleased with himself.\n\nOn the way he had to cross a little bridge over a stream. As he crossed, he looked down into the water.\n\nThere he saw another dog, with another big bone! The dog did not know he was looking at his own reflection.\n\n“That bone looks even bigger than mine,” he thought. “I want it too.”\n\nSo he opened his mouth to grab the other bone and gave a loud bark. Splash! His own bone fell into the stream and sank to the bottom.\n\nThe other dog had vanished, and so had the bone. The dog walked home sadly with nothing at all.\n\nIf you are greedy, you can lose what you already have.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.dog.3",
+   "topic": "reading.fables-3",
+   "kind": "fact",
+   "prompt": "What sound did the bone make when it fell?",
+   "answer": "Splash",
+   "distractors": [
+    "Plop",
+    "Crash",
+    "Woof"
+   ],
+   "explain": "“Splash! His own bone fell into the stream.”",
+   "passage": "The Dog and His Reflection\n\nA dog was trotting home with a big juicy bone in his mouth. He felt very pleased with himself.\n\nOn the way he had to cross a little bridge over a stream. As he crossed, he looked down into the water.\n\nThere he saw another dog, with another big bone! The dog did not know he was looking at his own reflection.\n\n“That bone looks even bigger than mine,” he thought. “I want it too.”\n\nSo he opened his mouth to grab the other bone and gave a loud bark. Splash! His own bone fell into the stream and sank to the bottom.\n\nThe other dog had vanished, and so had the bone. The dog walked home sadly with nothing at all.\n\nIf you are greedy, you can lose what you already have.",
+   "passageSource": "A fable by Aesop, retold for this app",
+   "accept": [
+    "splash!"
+   ]
+  },
+  {
+   "id": "reading.s3.dog.4",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "Which word best describes the dog?",
+   "options": [
+    {
+     "text": "greedy",
+     "correct": true
+    },
+    {
+     "text": "generous",
+     "correct": false,
+     "feedback": "He wanted the other bone as well as his own."
+    },
+    {
+     "text": "patient",
+     "correct": false,
+     "feedback": "He grabbed straight away."
+    }
+   ],
+   "explain": "He already had a big bone, but he wanted more.",
+   "passage": "The Dog and His Reflection\n\nA dog was trotting home with a big juicy bone in his mouth. He felt very pleased with himself.\n\nOn the way he had to cross a little bridge over a stream. As he crossed, he looked down into the water.\n\nThere he saw another dog, with another big bone! The dog did not know he was looking at his own reflection.\n\n“That bone looks even bigger than mine,” he thought. “I want it too.”\n\nSo he opened his mouth to grab the other bone and gave a loud bark. Splash! His own bone fell into the stream and sank to the bottom.\n\nThe other dog had vanished, and so had the bone. The dog walked home sadly with nothing at all.\n\nIf you are greedy, you can lose what you already have.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.dog.5",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "What is the moral?",
+   "options": [
+    {
+     "text": "Greed can lose you what you have",
+     "correct": true
+    },
+    {
+     "text": "Never cross a bridge with a bone",
+     "correct": false,
+     "feedback": "The bridge isn’t the problem; wanting more is."
+    },
+    {
+     "text": "Dogs should not bark near water",
+     "correct": false,
+     "feedback": "The lesson is about being greedy."
+    }
+   ],
+   "explain": "“If you are greedy, you can lose what you already have.”",
+   "passage": "The Dog and His Reflection\n\nA dog was trotting home with a big juicy bone in his mouth. He felt very pleased with himself.\n\nOn the way he had to cross a little bridge over a stream. As he crossed, he looked down into the water.\n\nThere he saw another dog, with another big bone! The dog did not know he was looking at his own reflection.\n\n“That bone looks even bigger than mine,” he thought. “I want it too.”\n\nSo he opened his mouth to grab the other bone and gave a loud bark. Splash! His own bone fell into the stream and sank to the bottom.\n\nThe other dog had vanished, and so had the bone. The dog walked home sadly with nothing at all.\n\nIf you are greedy, you can lose what you already have.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.goose.1",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "What was special about the goose?",
+   "options": [
+    {
+     "text": "She laid a golden egg every day",
+     "correct": true
+    },
+    {
+     "text": "She could talk to the farmer",
+     "correct": false,
+     "feedback": "She never speaks in the story."
+    },
+    {
+     "text": "She was the biggest goose in the land",
+     "correct": false,
+     "feedback": "Her eggs were special, not her size."
+    }
+   ],
+   "explain": "“Every morning she laid an egg made of shining gold.”",
+   "passage": "The Goose That Laid the Golden Eggs\n\nA farmer and his wife had a very special goose. Every morning she laid an egg made of shining gold.\n\nThe farmer sold the eggs at the market, and soon he and his wife were rich. They bought new clothes, a new cart and a fine horse.\n\nBut the farmer was not happy. “One golden egg a day is too slow,” he grumbled. “The goose must be full of gold inside. If we open her up, we can have all the gold at once!”\n\nHis wife agreed. So they did. But inside, the goose was just like any other goose. There was no gold at all.\n\nAnd now there would never be any more golden eggs.\n\nThe farmer and his wife sat down and cried. They had been too impatient, and they had lost everything.\n\nWanting too much, too quickly, can leave you with nothing.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.goose.2",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "Why was the farmer not happy?",
+   "options": [
+    {
+     "text": "He wanted more gold, faster",
+     "correct": true
+    },
+    {
+     "text": "The eggs were too heavy",
+     "correct": false,
+     "feedback": "He said one egg a day was “too slow”."
+    },
+    {
+     "text": "His wife wanted to sell the goose",
+     "correct": false,
+     "feedback": "His wife agreed with his plan."
+    }
+   ],
+   "explain": "“One golden egg a day is too slow.”",
+   "passage": "The Goose That Laid the Golden Eggs\n\nA farmer and his wife had a very special goose. Every morning she laid an egg made of shining gold.\n\nThe farmer sold the eggs at the market, and soon he and his wife were rich. They bought new clothes, a new cart and a fine horse.\n\nBut the farmer was not happy. “One golden egg a day is too slow,” he grumbled. “The goose must be full of gold inside. If we open her up, we can have all the gold at once!”\n\nHis wife agreed. So they did. But inside, the goose was just like any other goose. There was no gold at all.\n\nAnd now there would never be any more golden eggs.\n\nThe farmer and his wife sat down and cried. They had been too impatient, and they had lost everything.\n\nWanting too much, too quickly, can leave you with nothing.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.goose.3",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "What did they find inside the goose?",
+   "options": [
+    {
+     "text": "No gold at all",
+     "correct": true
+    },
+    {
+     "text": "A huge pile of gold",
+     "correct": false,
+     "feedback": "That is what they hoped, but it was not true."
+    },
+    {
+     "text": "One last golden egg",
+     "correct": false,
+     "feedback": "There was no gold anywhere."
+    }
+   ],
+   "explain": "“Inside, the goose was just like any other goose.”",
+   "passage": "The Goose That Laid the Golden Eggs\n\nA farmer and his wife had a very special goose. Every morning she laid an egg made of shining gold.\n\nThe farmer sold the eggs at the market, and soon he and his wife were rich. They bought new clothes, a new cart and a fine horse.\n\nBut the farmer was not happy. “One golden egg a day is too slow,” he grumbled. “The goose must be full of gold inside. If we open her up, we can have all the gold at once!”\n\nHis wife agreed. So they did. But inside, the goose was just like any other goose. There was no gold at all.\n\nAnd now there would never be any more golden eggs.\n\nThe farmer and his wife sat down and cried. They had been too impatient, and they had lost everything.\n\nWanting too much, too quickly, can leave you with nothing.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.goose.4",
+   "topic": "reading.fables-3",
+   "kind": "fact",
+   "prompt": "Find and copy the word that means they could not wait.",
+   "answer": "impatient",
+   "distractors": [
+    "rich",
+    "special",
+    "happy"
+   ],
+   "explain": "“They had been too impatient.”",
+   "passage": "The Goose That Laid the Golden Eggs\n\nA farmer and his wife had a very special goose. Every morning she laid an egg made of shining gold.\n\nThe farmer sold the eggs at the market, and soon he and his wife were rich. They bought new clothes, a new cart and a fine horse.\n\nBut the farmer was not happy. “One golden egg a day is too slow,” he grumbled. “The goose must be full of gold inside. If we open her up, we can have all the gold at once!”\n\nHis wife agreed. So they did. But inside, the goose was just like any other goose. There was no gold at all.\n\nAnd now there would never be any more golden eggs.\n\nThe farmer and his wife sat down and cried. They had been too impatient, and they had lost everything.\n\nWanting too much, too quickly, can leave you with nothing.",
+   "passageSource": "A fable by Aesop, retold for this app",
+   "accept": [
+    "impatient"
+   ]
+  },
+  {
+   "id": "reading.s3.oak.1",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "What did the oak say about itself?",
+   "options": [
+    {
+     "text": "It was strong and never bent",
+     "correct": true
+    },
+    {
+     "text": "It was the oldest tree in the land",
+     "correct": false,
+     "feedback": "It boasted about being strong, not old."
+    },
+    {
+     "text": "It was kind to every plant nearby",
+     "correct": false,
+     "feedback": "It laughed at the reed, which was not kind."
+    }
+   ],
+   "explain": "“I am strong. I never bend for anyone.”",
+   "passage": "The Oak and the Reed\n\nA tall oak tree stood beside a river. Down by the water grew a thin green reed.\n\n“Look at you,” said the oak. “You bend over whenever a little breeze blows. I am strong. I never bend for anyone.”\n\nThe reed said nothing.\n\nThat night a great storm came. The wind howled and roared. The reed bent low, right down to the water, and let the wind rush over it.\n\nThe oak stood straight and proud. It would not bend. The wind pushed and pushed. Then, with a terrible crack, the oak broke and crashed into the river.\n\nIn the morning the sun came out. The little reed stood up again, as green as ever.\n\nIt is sometimes wiser to bend than to break.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.oak.2",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "What did the reed do in the storm?",
+   "options": [
+    {
+     "text": "It bent low",
+     "correct": true
+    },
+    {
+     "text": "It hid under the oak",
+     "correct": false,
+     "feedback": "It bent down to the water."
+    },
+    {
+     "text": "It snapped in two with a crack",
+     "correct": false,
+     "feedback": "That happened to the oak."
+    }
+   ],
+   "explain": "“The reed bent low, right down to the water.”",
+   "passage": "The Oak and the Reed\n\nA tall oak tree stood beside a river. Down by the water grew a thin green reed.\n\n“Look at you,” said the oak. “You bend over whenever a little breeze blows. I am strong. I never bend for anyone.”\n\nThe reed said nothing.\n\nThat night a great storm came. The wind howled and roared. The reed bent low, right down to the water, and let the wind rush over it.\n\nThe oak stood straight and proud. It would not bend. The wind pushed and pushed. Then, with a terrible crack, the oak broke and crashed into the river.\n\nIn the morning the sun came out. The little reed stood up again, as green as ever.\n\nIt is sometimes wiser to bend than to break.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.oak.3",
+   "topic": "reading.fables-3",
+   "kind": "order",
+   "prompt": "Put these in order.",
+   "items": [
+    "The oak boasts",
+    "A storm comes",
+    "The oak breaks",
+    "The reed stands up again"
+   ],
+   "labels": null,
+   "explain": "Boast, storm, crack, the reed survives.",
+   "passage": "The Oak and the Reed\n\nA tall oak tree stood beside a river. Down by the water grew a thin green reed.\n\n“Look at you,” said the oak. “You bend over whenever a little breeze blows. I am strong. I never bend for anyone.”\n\nThe reed said nothing.\n\nThat night a great storm came. The wind howled and roared. The reed bent low, right down to the water, and let the wind rush over it.\n\nThe oak stood straight and proud. It would not bend. The wind pushed and pushed. Then, with a terrible crack, the oak broke and crashed into the river.\n\nIn the morning the sun came out. The little reed stood up again, as green as ever.\n\nIt is sometimes wiser to bend than to break.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.oak.4",
+   "topic": "reading.fables-3",
+   "kind": "mcq",
+   "prompt": "What is the lesson of this fable?",
+   "options": [
+    {
+     "text": "Bending can be wiser than breaking",
+     "correct": true
+    },
+    {
+     "text": "Big trees are always the strongest",
+     "correct": false,
+     "feedback": "The big tree broke!"
+    },
+    {
+     "text": "Never stand near a river in a storm",
+     "correct": false,
+     "feedback": "The lesson is about being flexible."
+    }
+   ],
+   "explain": "Sometimes giving way a little is smarter than being stubborn.",
+   "passage": "The Oak and the Reed\n\nA tall oak tree stood beside a river. Down by the water grew a thin green reed.\n\n“Look at you,” said the oak. “You bend over whenever a little breeze blows. I am strong. I never bend for anyone.”\n\nThe reed said nothing.\n\nThat night a great storm came. The wind howled and roared. The reed bent low, right down to the water, and let the wind rush over it.\n\nThe oak stood straight and proud. It would not bend. The wind pushed and pushed. Then, with a terrible crack, the oak broke and crashed into the river.\n\nIn the morning the sun came out. The little reed stood up again, as green as ever.\n\nIt is sometimes wiser to bend than to break.",
+   "passageSource": "A fable by Aesop, retold for this app"
+  },
+  {
+   "id": "reading.s3.rain.1",
+   "topic": "reading.stories-3",
+   "kind": "mcq",
+   "prompt": "Why did Turbo spin off the track?",
+   "options": [
+    {
+     "text": "The road was wet and slippery",
+     "correct": true
+    },
+    {
+     "text": "Blaze bumped into him",
+     "correct": false,
+     "feedback": "Blaze was ahead of him. It was the rain."
+    },
+    {
+     "text": "His engine stopped working",
+     "correct": false,
+     "feedback": "His wheels lost their grip on the wet road."
+    }
+   ],
+   "explain": "“The road turned shiny and slippery… Turbo’s wheels lost their grip.”",
+   "passage": "The Rain Race\n\nThe Grand Prix had just begun when the rain came. Big drops drummed on the track and the road turned shiny and slippery.\n\nBlaze was in the lead. Turbo was right behind him, trying hard to catch up.\n\nOn the sharpest corner, Turbo’s wheels lost their grip. He spun round and round and slid off the track into the gravel. His wheels whirred, but he was stuck.\n\nBlaze saw him in his mirror. He could keep going and win the race easily. But he remembered how Turbo had once been kind to him.\n\nBlaze slowed down, turned off the track and drove up behind Turbo. “Hold on!” he called. He pushed with his front bumper. Turbo’s wheels found the grass, then the road.\n\nThe other cars zoomed past them both. Turbo and Blaze crossed the line together, last of all, covered in mud.\n\nThe crowd cheered louder for them than for the winner.\n\n“We came last,” said Turbo.\n\n“No,” said Blaze, smiling. “We came together.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.rain.2",
+   "topic": "reading.stories-3",
+   "kind": "mcq",
+   "prompt": "Why did Blaze stop to help?",
+   "options": [
+    {
+     "text": "He remembered Turbo had been kind to him",
+     "correct": true
+    },
+    {
+     "text": "He was running out of fuel",
+     "correct": false,
+     "feedback": "He could have won easily."
+    },
+    {
+     "text": "The race had been stopped for rain",
+     "correct": false,
+     "feedback": "The race carried on: the other cars zoomed past."
+    }
+   ],
+   "explain": "“He remembered how Turbo had once been kind to him.”",
+   "passage": "The Rain Race\n\nThe Grand Prix had just begun when the rain came. Big drops drummed on the track and the road turned shiny and slippery.\n\nBlaze was in the lead. Turbo was right behind him, trying hard to catch up.\n\nOn the sharpest corner, Turbo’s wheels lost their grip. He spun round and round and slid off the track into the gravel. His wheels whirred, but he was stuck.\n\nBlaze saw him in his mirror. He could keep going and win the race easily. But he remembered how Turbo had once been kind to him.\n\nBlaze slowed down, turned off the track and drove up behind Turbo. “Hold on!” he called. He pushed with his front bumper. Turbo’s wheels found the grass, then the road.\n\nThe other cars zoomed past them both. Turbo and Blaze crossed the line together, last of all, covered in mud.\n\nThe crowd cheered louder for them than for the winner.\n\n“We came last,” said Turbo.\n\n“No,” said Blaze, smiling. “We came together.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.rain.3",
+   "topic": "reading.stories-3",
+   "kind": "fact",
+   "prompt": "How did Blaze get Turbo out of the gravel?",
+   "answer": "he pushed with his bumper",
+   "distractors": [
+    "he towed him with a rope",
+    "he lifted him up",
+    "he called for a crane"
+   ],
+   "explain": "“He pushed with his front bumper.”",
+   "passage": "The Rain Race\n\nThe Grand Prix had just begun when the rain came. Big drops drummed on the track and the road turned shiny and slippery.\n\nBlaze was in the lead. Turbo was right behind him, trying hard to catch up.\n\nOn the sharpest corner, Turbo’s wheels lost their grip. He spun round and round and slid off the track into the gravel. His wheels whirred, but he was stuck.\n\nBlaze saw him in his mirror. He could keep going and win the race easily. But he remembered how Turbo had once been kind to him.\n\nBlaze slowed down, turned off the track and drove up behind Turbo. “Hold on!” he called. He pushed with his front bumper. Turbo’s wheels found the grass, then the road.\n\nThe other cars zoomed past them both. Turbo and Blaze crossed the line together, last of all, covered in mud.\n\nThe crowd cheered louder for them than for the winner.\n\n“We came last,” said Turbo.\n\n“No,” said Blaze, smiling. “We came together.”",
+   "passageSource": "A story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.s3.rain.4",
+   "topic": "reading.stories-3",
+   "kind": "mcq",
+   "prompt": "Why did the crowd cheer so loudly for them?",
+   "options": [
+    {
+     "text": "Blaze had been kind",
+     "correct": true
+    },
+    {
+     "text": "They had won the race",
+     "correct": false,
+     "feedback": "They came last!"
+    },
+    {
+     "text": "They were the fastest cars",
+     "correct": false,
+     "feedback": "They were slowest in this race."
+    }
+   ],
+   "explain": "The crowd saw Blaze give up winning to help a friend.",
+   "passage": "The Rain Race\n\nThe Grand Prix had just begun when the rain came. Big drops drummed on the track and the road turned shiny and slippery.\n\nBlaze was in the lead. Turbo was right behind him, trying hard to catch up.\n\nOn the sharpest corner, Turbo’s wheels lost their grip. He spun round and round and slid off the track into the gravel. His wheels whirred, but he was stuck.\n\nBlaze saw him in his mirror. He could keep going and win the race easily. But he remembered how Turbo had once been kind to him.\n\nBlaze slowed down, turned off the track and drove up behind Turbo. “Hold on!” he called. He pushed with his front bumper. Turbo’s wheels found the grass, then the road.\n\nThe other cars zoomed past them both. Turbo and Blaze crossed the line together, last of all, covered in mud.\n\nThe crowd cheered louder for them than for the winner.\n\n“We came last,” said Turbo.\n\n“No,” said Blaze, smiling. “We came together.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.rain.5",
+   "topic": "reading.stories-3",
+   "kind": "mcq",
+   "prompt": "What does Blaze mean by “We came together”?",
+   "options": [
+    {
+     "text": "Helping each other mattered more than winning",
+     "correct": true
+    },
+    {
+     "text": "They had crashed into each other",
+     "correct": false,
+     "feedback": "They crossed the line side by side, as friends."
+    },
+    {
+     "text": "They both forgot where the finish was",
+     "correct": false,
+     "feedback": "He means being together was what counted."
+    }
+   ],
+   "explain": "Friendship mattered more than first place.",
+   "passage": "The Rain Race\n\nThe Grand Prix had just begun when the rain came. Big drops drummed on the track and the road turned shiny and slippery.\n\nBlaze was in the lead. Turbo was right behind him, trying hard to catch up.\n\nOn the sharpest corner, Turbo’s wheels lost their grip. He spun round and round and slid off the track into the gravel. His wheels whirred, but he was stuck.\n\nBlaze saw him in his mirror. He could keep going and win the race easily. But he remembered how Turbo had once been kind to him.\n\nBlaze slowed down, turned off the track and drove up behind Turbo. “Hold on!” he called. He pushed with his front bumper. Turbo’s wheels found the grass, then the road.\n\nThe other cars zoomed past them both. Turbo and Blaze crossed the line together, last of all, covered in mud.\n\nThe crowd cheered louder for them than for the winner.\n\n“We came last,” said Turbo.\n\n“No,” said Blaze, smiling. “We came together.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.sat.1",
+   "topic": "reading.stories-3",
+   "kind": "mcq",
+   "prompt": "Why did the satellite matter?",
+   "options": [
+    {
+     "text": "It showed whether storms were coming",
+     "correct": true
+    },
+    {
+     "text": "It carried astronauts to the Moon",
+     "correct": false,
+     "feedback": "It was a weather satellite."
+    },
+    {
+     "text": "It sent messages to Mars",
+     "correct": false,
+     "feedback": "It helped people know about the weather."
+    }
+   ],
+   "explain": "“Without it, nobody could tell whether a storm was coming.”",
+   "passage": "Bleep and the Broken Satellite\n\nHigh above the Earth, a weather satellite had stopped working. Without it, nobody could tell whether a storm was coming.\n\nCaptain Nova flew her spaceship up close to the satellite. She floated out in her spacesuit, with Bleep the droid tucked under her arm.\n\nThere was a small hatch on the side of the satellite. Captain Nova opened it and peered in. “The broken part is right at the back,” she said. “My hands are much too big to reach it.”\n\nBleep beeped bravely. He was small. He could fit.\n\nSlowly, carefully, Bleep squeezed through the hatch. Inside it was dark and full of wires. He switched on his headlight. There it was: a loose bolt, wobbling in its hole.\n\nBleep reached out his little tool arm and turned the bolt, tighter and tighter, until it would not wobble any more.\n\nThe satellite’s lights blinked on. Blue, green, blue.\n\nBack on Earth, the weather maps came to life again.\n\n“Being small,” said Captain Nova, “is exactly what we needed today.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.sat.2",
+   "topic": "reading.stories-3",
+   "kind": "mcq",
+   "prompt": "Why couldn’t Captain Nova fix it herself?",
+   "options": [
+    {
+     "text": "Her hands were too big",
+     "correct": true
+    },
+    {
+     "text": "She had forgotten her tools",
+     "correct": false,
+     "feedback": "The problem was the size of the hatch."
+    },
+    {
+     "text": "She was too scared of space",
+     "correct": false,
+     "feedback": "She floated out bravely."
+    }
+   ],
+   "explain": "“My hands are much too big to reach it.”",
+   "passage": "Bleep and the Broken Satellite\n\nHigh above the Earth, a weather satellite had stopped working. Without it, nobody could tell whether a storm was coming.\n\nCaptain Nova flew her spaceship up close to the satellite. She floated out in her spacesuit, with Bleep the droid tucked under her arm.\n\nThere was a small hatch on the side of the satellite. Captain Nova opened it and peered in. “The broken part is right at the back,” she said. “My hands are much too big to reach it.”\n\nBleep beeped bravely. He was small. He could fit.\n\nSlowly, carefully, Bleep squeezed through the hatch. Inside it was dark and full of wires. He switched on his headlight. There it was: a loose bolt, wobbling in its hole.\n\nBleep reached out his little tool arm and turned the bolt, tighter and tighter, until it would not wobble any more.\n\nThe satellite’s lights blinked on. Blue, green, blue.\n\nBack on Earth, the weather maps came to life again.\n\n“Being small,” said Captain Nova, “is exactly what we needed today.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.sat.3",
+   "topic": "reading.stories-3",
+   "kind": "fact",
+   "prompt": "What was broken inside the satellite?",
+   "answer": "a loose bolt",
+   "distractors": [
+    "a cut wire",
+    "a flat battery",
+    "a cracked window"
+   ],
+   "explain": "“A loose bolt, wobbling in its hole.”",
+   "passage": "Bleep and the Broken Satellite\n\nHigh above the Earth, a weather satellite had stopped working. Without it, nobody could tell whether a storm was coming.\n\nCaptain Nova flew her spaceship up close to the satellite. She floated out in her spacesuit, with Bleep the droid tucked under her arm.\n\nThere was a small hatch on the side of the satellite. Captain Nova opened it and peered in. “The broken part is right at the back,” she said. “My hands are much too big to reach it.”\n\nBleep beeped bravely. He was small. He could fit.\n\nSlowly, carefully, Bleep squeezed through the hatch. Inside it was dark and full of wires. He switched on his headlight. There it was: a loose bolt, wobbling in its hole.\n\nBleep reached out his little tool arm and turned the bolt, tighter and tighter, until it would not wobble any more.\n\nThe satellite’s lights blinked on. Blue, green, blue.\n\nBack on Earth, the weather maps came to life again.\n\n“Being small,” said Captain Nova, “is exactly what we needed today.”",
+   "passageSource": "A story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.s3.sat.4",
+   "topic": "reading.stories-3",
+   "kind": "order",
+   "prompt": "Put these in order.",
+   "items": [
+    "Captain Nova opens the hatch",
+    "Bleep squeezes inside",
+    "Bleep tightens the bolt",
+    "The satellite’s lights blink on"
+   ],
+   "labels": null,
+   "explain": "Hatch, squeeze, bolt, lights.",
+   "passage": "Bleep and the Broken Satellite\n\nHigh above the Earth, a weather satellite had stopped working. Without it, nobody could tell whether a storm was coming.\n\nCaptain Nova flew her spaceship up close to the satellite. She floated out in her spacesuit, with Bleep the droid tucked under her arm.\n\nThere was a small hatch on the side of the satellite. Captain Nova opened it and peered in. “The broken part is right at the back,” she said. “My hands are much too big to reach it.”\n\nBleep beeped bravely. He was small. He could fit.\n\nSlowly, carefully, Bleep squeezed through the hatch. Inside it was dark and full of wires. He switched on his headlight. There it was: a loose bolt, wobbling in its hole.\n\nBleep reached out his little tool arm and turned the bolt, tighter and tighter, until it would not wobble any more.\n\nThe satellite’s lights blinked on. Blue, green, blue.\n\nBack on Earth, the weather maps came to life again.\n\n“Being small,” said Captain Nova, “is exactly what we needed today.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.sat.5",
+   "topic": "reading.stories-3",
+   "kind": "mcq",
+   "prompt": "What is the big idea of this story?",
+   "options": [
+    {
+     "text": "Being small can be useful",
+     "correct": true
+    },
+    {
+     "text": "Space is far too dangerous",
+     "correct": false,
+     "feedback": "They fixed it safely."
+    },
+    {
+     "text": "Droids are better than people at everything",
+     "correct": false,
+     "feedback": "Each was good at something different."
+    }
+   ],
+   "explain": "“Being small is exactly what we needed today.”",
+   "passage": "Bleep and the Broken Satellite\n\nHigh above the Earth, a weather satellite had stopped working. Without it, nobody could tell whether a storm was coming.\n\nCaptain Nova flew her spaceship up close to the satellite. She floated out in her spacesuit, with Bleep the droid tucked under her arm.\n\nThere was a small hatch on the side of the satellite. Captain Nova opened it and peered in. “The broken part is right at the back,” she said. “My hands are much too big to reach it.”\n\nBleep beeped bravely. He was small. He could fit.\n\nSlowly, carefully, Bleep squeezed through the hatch. Inside it was dark and full of wires. He switched on his headlight. There it was: a loose bolt, wobbling in its hole.\n\nBleep reached out his little tool arm and turned the bolt, tighter and tighter, until it would not wobble any more.\n\nThe satellite’s lights blinked on. Blue, green, blue.\n\nBack on Earth, the weather maps came to life again.\n\n“Being small,” said Captain Nova, “is exactly what we needed today.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.sand.1",
+   "topic": "reading.stories-3",
+   "kind": "mcq",
+   "prompt": "What made the racing car stop?",
+   "options": [
+    {
+     "text": "Sand blocked its air filter",
+     "correct": true
+    },
+    {
+     "text": "It ran out of fuel",
+     "correct": false,
+     "feedback": "The engine could not breathe because of the sand."
+    },
+    {
+     "text": "A tyre burst on a rock",
+     "correct": false,
+     "feedback": "The problem was sand in the filter."
+    }
+   ],
+   "explain": "“Sand had blocked its air filter, and the engine could not breathe.”",
+   "passage": "The Desert Rally\n\nRosa’s team were racing across the desert. The sand was golden and the sky was bright blue.\n\nThen, far away, a brown cloud rose up. It grew bigger and bigger. “Sandstorm!” shouted Rosa.\n\nThe wind whipped up the sand until nobody could see more than a few steps. The racing car spluttered and stopped. Sand had blocked its air filter, and the engine could not breathe.\n\nRosa pulled on her goggles and tied a scarf over her nose and mouth. She tied a rope from the truck to her belt, so she could not get lost.\n\nThen she walked out into the storm, step by step, holding the rope.\n\nShe found the car, opened the bonnet and took out the filter. It was full of sand. She tapped it, shook it and blew on it until it was clean, then clicked it back in place.\n\nThe engine coughed, then roared.\n\nWhen the storm passed, the team cheered. They did not win the rally, but every single car in their team reached the finish.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.sand.2",
+   "topic": "reading.stories-3",
+   "kind": "mcq",
+   "prompt": "Why did Rosa tie a rope to her belt?",
+   "options": [
+    {
+     "text": "So she would not get lost",
+     "correct": true
+    },
+    {
+     "text": "To pull the car back to the truck",
+     "correct": false,
+     "feedback": "She walked out to fix it, not tow it."
+    },
+    {
+     "text": "To keep her goggles from blowing off",
+     "correct": false,
+     "feedback": "The rope linked her to the truck."
+    }
+   ],
+   "explain": "“She tied a rope from the truck to her belt, so she could not get lost.”",
+   "passage": "The Desert Rally\n\nRosa’s team were racing across the desert. The sand was golden and the sky was bright blue.\n\nThen, far away, a brown cloud rose up. It grew bigger and bigger. “Sandstorm!” shouted Rosa.\n\nThe wind whipped up the sand until nobody could see more than a few steps. The racing car spluttered and stopped. Sand had blocked its air filter, and the engine could not breathe.\n\nRosa pulled on her goggles and tied a scarf over her nose and mouth. She tied a rope from the truck to her belt, so she could not get lost.\n\nThen she walked out into the storm, step by step, holding the rope.\n\nShe found the car, opened the bonnet and took out the filter. It was full of sand. She tapped it, shook it and blew on it until it was clean, then clicked it back in place.\n\nThe engine coughed, then roared.\n\nWhen the storm passed, the team cheered. They did not win the rally, but every single car in their team reached the finish.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.sand.3",
+   "topic": "reading.stories-3",
+   "kind": "fact",
+   "prompt": "Which word tells you how the wind moved the sand?",
+   "answer": "whipped",
+   "distractors": [
+    "golden",
+    "blocked",
+    "tapped"
+   ],
+   "explain": "“The wind whipped up the sand”: it moved fast and hard, like a whip.",
+   "passage": "The Desert Rally\n\nRosa’s team were racing across the desert. The sand was golden and the sky was bright blue.\n\nThen, far away, a brown cloud rose up. It grew bigger and bigger. “Sandstorm!” shouted Rosa.\n\nThe wind whipped up the sand until nobody could see more than a few steps. The racing car spluttered and stopped. Sand had blocked its air filter, and the engine could not breathe.\n\nRosa pulled on her goggles and tied a scarf over her nose and mouth. She tied a rope from the truck to her belt, so she could not get lost.\n\nThen she walked out into the storm, step by step, holding the rope.\n\nShe found the car, opened the bonnet and took out the filter. It was full of sand. She tapped it, shook it and blew on it until it was clean, then clicked it back in place.\n\nThe engine coughed, then roared.\n\nWhen the storm passed, the team cheered. They did not win the rally, but every single car in their team reached the finish.",
+   "passageSource": "A story written for this app",
+   "accept": [
+    "whipped up"
+   ]
+  },
+  {
+   "id": "reading.s3.sand.4",
+   "topic": "reading.stories-3",
+   "kind": "mcq",
+   "prompt": "Which words best describe Rosa?",
+   "options": [
+    {
+     "text": "brave and clever",
+     "correct": true
+    },
+    {
+     "text": "silly and careless",
+     "correct": false,
+     "feedback": "She planned carefully: goggles, scarf and rope."
+    },
+    {
+     "text": "bossy and grumpy",
+     "correct": false,
+     "feedback": "She quietly fixed the problem for her team."
+    }
+   ],
+   "explain": "She walked into the storm, and she thought ahead.",
+   "passage": "The Desert Rally\n\nRosa’s team were racing across the desert. The sand was golden and the sky was bright blue.\n\nThen, far away, a brown cloud rose up. It grew bigger and bigger. “Sandstorm!” shouted Rosa.\n\nThe wind whipped up the sand until nobody could see more than a few steps. The racing car spluttered and stopped. Sand had blocked its air filter, and the engine could not breathe.\n\nRosa pulled on her goggles and tied a scarf over her nose and mouth. She tied a rope from the truck to her belt, so she could not get lost.\n\nThen she walked out into the storm, step by step, holding the rope.\n\nShe found the car, opened the bonnet and took out the filter. It was full of sand. She tapped it, shook it and blew on it until it was clean, then clicked it back in place.\n\nThe engine coughed, then roared.\n\nWhen the storm passed, the team cheered. They did not win the rally, but every single car in their team reached the finish.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.sand.5",
+   "topic": "reading.stories-3",
+   "kind": "mcq",
+   "prompt": "Why did the team cheer, even though they did not win?",
+   "options": [
+    {
+     "text": "Every car reached the finish",
+     "correct": true
+    },
+    {
+     "text": "The storm meant nobody won",
+     "correct": false,
+     "feedback": "Someone else won the rally."
+    },
+    {
+     "text": "They found treasure in the sand",
+     "correct": false,
+     "feedback": "There is no treasure in the story."
+    }
+   ],
+   "explain": "Finishing safely, together, was their success.",
+   "passage": "The Desert Rally\n\nRosa’s team were racing across the desert. The sand was golden and the sky was bright blue.\n\nThen, far away, a brown cloud rose up. It grew bigger and bigger. “Sandstorm!” shouted Rosa.\n\nThe wind whipped up the sand until nobody could see more than a few steps. The racing car spluttered and stopped. Sand had blocked its air filter, and the engine could not breathe.\n\nRosa pulled on her goggles and tied a scarf over her nose and mouth. She tied a rope from the truck to her belt, so she could not get lost.\n\nThen she walked out into the storm, step by step, holding the rope.\n\nShe found the car, opened the bonnet and took out the filter. It was full of sand. She tapped it, shook it and blew on it until it was clean, then clicked it back in place.\n\nThe engine coughed, then roared.\n\nWhen the storm passed, the team cheered. They did not win the rally, but every single car in their team reached the finish.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.nopow.1",
+   "topic": "reading.stories-4",
+   "kind": "mcq",
+   "prompt": "Why had {hero}’s powers gone?",
+   "options": [
+    {
+     "text": "A terrible cold",
+     "correct": true
+    },
+    {
+     "text": "A villain stole them",
+     "correct": false,
+     "feedback": "There is no villain in this story."
+    },
+    {
+     "text": "They were tired from saving the city all week",
+     "correct": false,
+     "feedback": "Look at the first sentence."
+    }
+   ],
+   "explain": "“{hero} woke up with a terrible cold… The superpowers had gone, just for the day.”",
+   "passage": "{hero} and the Rainy Day\n\nOne morning {hero} woke up with a terrible cold. Achoo! When the hero tried to fly, nothing happened. When the hero tried to lift the sofa, it would not budge. The superpowers had gone, just for the day.\n\nThat afternoon a little girl ran up, crying. “My kitten is stuck on the roof of the library!”\n\n{hero} looked up at the high roof. With no flying, how could anyone get up there?\n\nThe hero thought hard. Then the hero ran to the fire station and knocked on the door. “I need your tallest ladder,” said {hero}, “and some help to hold it.”\n\nThe firefighters carried the ladder over and held it tight. {hero} climbed up, step by step, legs shaking a little. It was a long way down.\n\nAt the top, the kitten was hiding behind a chimney. {hero} spoke softly until the kitten crept close, then tucked it inside a warm jacket and climbed down again.\n\nThe little girl hugged her kitten.\n\n“You don’t need superpowers to be brave,” said the fire chief. “You just did it without them.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.nopow.2",
+   "topic": "reading.stories-4",
+   "kind": "mcq",
+   "prompt": "Where was the kitten stuck?",
+   "options": [
+    {
+     "text": "On the library roof",
+     "correct": true
+    },
+    {
+     "text": "Up a tree in the park",
+     "correct": false,
+     "feedback": "Look at what the little girl said."
+    },
+    {
+     "text": "Down a well",
+     "correct": false,
+     "feedback": "It was up high, not down low."
+    }
+   ],
+   "explain": "“My kitten is stuck on the roof of the library!”",
+   "passage": "{hero} and the Rainy Day\n\nOne morning {hero} woke up with a terrible cold. Achoo! When the hero tried to fly, nothing happened. When the hero tried to lift the sofa, it would not budge. The superpowers had gone, just for the day.\n\nThat afternoon a little girl ran up, crying. “My kitten is stuck on the roof of the library!”\n\n{hero} looked up at the high roof. With no flying, how could anyone get up there?\n\nThe hero thought hard. Then the hero ran to the fire station and knocked on the door. “I need your tallest ladder,” said {hero}, “and some help to hold it.”\n\nThe firefighters carried the ladder over and held it tight. {hero} climbed up, step by step, legs shaking a little. It was a long way down.\n\nAt the top, the kitten was hiding behind a chimney. {hero} spoke softly until the kitten crept close, then tucked it inside a warm jacket and climbed down again.\n\nThe little girl hugged her kitten.\n\n“You don’t need superpowers to be brave,” said the fire chief. “You just did it without them.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.nopow.3",
+   "topic": "reading.stories-4",
+   "kind": "mcq",
+   "prompt": "How did {hero} get up to the roof?",
+   "options": [
+    {
+     "text": "With the firefighters’ ladder",
+     "correct": true
+    },
+    {
+     "text": "By flying up very slowly",
+     "correct": false,
+     "feedback": "The flying power had gone."
+    },
+    {
+     "text": "Up the library’s inside stairs",
+     "correct": false,
+     "feedback": "The hero borrowed the firefighters’ tallest ladder."
+    }
+   ],
+   "explain": "The hero asked the firefighters for help.",
+   "passage": "{hero} and the Rainy Day\n\nOne morning {hero} woke up with a terrible cold. Achoo! When the hero tried to fly, nothing happened. When the hero tried to lift the sofa, it would not budge. The superpowers had gone, just for the day.\n\nThat afternoon a little girl ran up, crying. “My kitten is stuck on the roof of the library!”\n\n{hero} looked up at the high roof. With no flying, how could anyone get up there?\n\nThe hero thought hard. Then the hero ran to the fire station and knocked on the door. “I need your tallest ladder,” said {hero}, “and some help to hold it.”\n\nThe firefighters carried the ladder over and held it tight. {hero} climbed up, step by step, legs shaking a little. It was a long way down.\n\nAt the top, the kitten was hiding behind a chimney. {hero} spoke softly until the kitten crept close, then tucked it inside a warm jacket and climbed down again.\n\nThe little girl hugged her kitten.\n\n“You don’t need superpowers to be brave,” said the fire chief. “You just did it without them.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.nopow.4",
+   "topic": "reading.stories-4",
+   "kind": "fact",
+   "prompt": "“legs shaking a little”. How was the hero feeling?",
+   "answer": "a bit scared",
+   "distractors": [
+    "very sleepy",
+    "very cross",
+    "bored"
+   ],
+   "explain": "Shaking legs show fear. The hero kept going anyway, which is what bravery means.",
+   "passage": "{hero} and the Rainy Day\n\nOne morning {hero} woke up with a terrible cold. Achoo! When the hero tried to fly, nothing happened. When the hero tried to lift the sofa, it would not budge. The superpowers had gone, just for the day.\n\nThat afternoon a little girl ran up, crying. “My kitten is stuck on the roof of the library!”\n\n{hero} looked up at the high roof. With no flying, how could anyone get up there?\n\nThe hero thought hard. Then the hero ran to the fire station and knocked on the door. “I need your tallest ladder,” said {hero}, “and some help to hold it.”\n\nThe firefighters carried the ladder over and held it tight. {hero} climbed up, step by step, legs shaking a little. It was a long way down.\n\nAt the top, the kitten was hiding behind a chimney. {hero} spoke softly until the kitten crept close, then tucked it inside a warm jacket and climbed down again.\n\nThe little girl hugged her kitten.\n\n“You don’t need superpowers to be brave,” said the fire chief. “You just did it without them.”",
+   "passageSource": "A story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.s3.nopow.5",
+   "topic": "reading.stories-4",
+   "kind": "mcq",
+   "prompt": "What is the big idea of this story?",
+   "options": [
+    {
+     "text": "You can be brave without superpowers",
+     "correct": true
+    },
+    {
+     "text": "Kittens should stay indoors",
+     "correct": false,
+     "feedback": "The story is about the hero, not the kitten."
+    },
+    {
+     "text": "You should never climb a ladder",
+     "correct": false,
+     "feedback": "The hero climbed safely, with help."
+    }
+   ],
+   "explain": "“You don’t need superpowers to be brave.”",
+   "passage": "{hero} and the Rainy Day\n\nOne morning {hero} woke up with a terrible cold. Achoo! When the hero tried to fly, nothing happened. When the hero tried to lift the sofa, it would not budge. The superpowers had gone, just for the day.\n\nThat afternoon a little girl ran up, crying. “My kitten is stuck on the roof of the library!”\n\n{hero} looked up at the high roof. With no flying, how could anyone get up there?\n\nThe hero thought hard. Then the hero ran to the fire station and knocked on the door. “I need your tallest ladder,” said {hero}, “and some help to hold it.”\n\nThe firefighters carried the ladder over and held it tight. {hero} climbed up, step by step, legs shaking a little. It was a long way down.\n\nAt the top, the kitten was hiding behind a chimney. {hero} spoke softly until the kitten crept close, then tucked it inside a warm jacket and climbed down again.\n\nThe little girl hugged her kitten.\n\n“You don’t need superpowers to be brave,” said the fire chief. “You just did it without them.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.drag.1",
+   "topic": "reading.stories-4",
+   "kind": "mcq",
+   "prompt": "Why were the people frightened?",
+   "options": [
+    {
+     "text": "They heard a roar every night",
+     "correct": true
+    },
+    {
+     "text": "The dragon had burnt the castle",
+     "correct": false,
+     "feedback": "Nothing had been burnt."
+    },
+    {
+     "text": "Sir Rowan had run away",
+     "correct": false,
+     "feedback": "Sir Rowan went to help."
+    }
+   ],
+   "explain": "“Every night a loud, sad roar echoed around Castle Rook.”",
+   "passage": "The Knight and the Dragon\n\nEvery night a loud, sad roar echoed around Castle Rook. The people were frightened. “There is a dragon in the hills,” they said. “It will eat us all!”\n\nSir Rowan, the youngest knight, put on his armour and rode into the hills. He was scared, but he kept going.\n\nIn a dark cave he found the dragon. It was enormous and green, with smoke curling from its nose. Sir Rowan held up his shield.\n\nBut the dragon did not attack. It just sat there, holding out one huge foot and groaning.\n\nSir Rowan looked closer. A long, sharp thorn was stuck in the dragon’s toe!\n\nVery carefully, the knight took hold of the thorn and pulled. Out it came. The dragon sighed a long, warm sigh of relief.\n\nThe next morning, Sir Rowan rode back to the castle with the dragon flying above him. The people screamed, until they saw the dragon land gently and bow its head.\n\nFrom that day on, the dragon lived at Castle Rook. Every winter it lit all the fires in the great hall with one puff, and nobody was cold again.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.drag.2",
+   "topic": "reading.stories-4",
+   "kind": "fact",
+   "prompt": "Find the word that tells you the roar was not angry.",
+   "answer": "sad",
+   "distractors": [
+    "loud",
+    "enormous",
+    "green"
+   ],
+   "explain": "“a loud, sad roar”: a big clue that the dragon was hurt, not fierce.",
+   "passage": "The Knight and the Dragon\n\nEvery night a loud, sad roar echoed around Castle Rook. The people were frightened. “There is a dragon in the hills,” they said. “It will eat us all!”\n\nSir Rowan, the youngest knight, put on his armour and rode into the hills. He was scared, but he kept going.\n\nIn a dark cave he found the dragon. It was enormous and green, with smoke curling from its nose. Sir Rowan held up his shield.\n\nBut the dragon did not attack. It just sat there, holding out one huge foot and groaning.\n\nSir Rowan looked closer. A long, sharp thorn was stuck in the dragon’s toe!\n\nVery carefully, the knight took hold of the thorn and pulled. Out it came. The dragon sighed a long, warm sigh of relief.\n\nThe next morning, Sir Rowan rode back to the castle with the dragon flying above him. The people screamed, until they saw the dragon land gently and bow its head.\n\nFrom that day on, the dragon lived at Castle Rook. Every winter it lit all the fires in the great hall with one puff, and nobody was cold again.",
+   "passageSource": "A story written for this app",
+   "accept": [
+    "sad"
+   ]
+  },
+  {
+   "id": "reading.s3.drag.3",
+   "topic": "reading.stories-4",
+   "kind": "mcq",
+   "prompt": "What was wrong with the dragon?",
+   "options": [
+    {
+     "text": "A thorn in its toe",
+     "correct": true
+    },
+    {
+     "text": "It was hungry for people",
+     "correct": false,
+     "feedback": "That is what the people feared, but it wasn’t true."
+    },
+    {
+     "text": "It had lost its fire",
+     "correct": false,
+     "feedback": "Smoke was still curling from its nose."
+    }
+   ],
+   "explain": "“A long, sharp thorn was stuck in the dragon’s toe!”",
+   "passage": "The Knight and the Dragon\n\nEvery night a loud, sad roar echoed around Castle Rook. The people were frightened. “There is a dragon in the hills,” they said. “It will eat us all!”\n\nSir Rowan, the youngest knight, put on his armour and rode into the hills. He was scared, but he kept going.\n\nIn a dark cave he found the dragon. It was enormous and green, with smoke curling from its nose. Sir Rowan held up his shield.\n\nBut the dragon did not attack. It just sat there, holding out one huge foot and groaning.\n\nSir Rowan looked closer. A long, sharp thorn was stuck in the dragon’s toe!\n\nVery carefully, the knight took hold of the thorn and pulled. Out it came. The dragon sighed a long, warm sigh of relief.\n\nThe next morning, Sir Rowan rode back to the castle with the dragon flying above him. The people screamed, until they saw the dragon land gently and bow its head.\n\nFrom that day on, the dragon lived at Castle Rook. Every winter it lit all the fires in the great hall with one puff, and nobody was cold again.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.drag.4",
+   "topic": "reading.stories-4",
+   "kind": "order",
+   "prompt": "Put these in order.",
+   "items": [
+    "The people hear a roar",
+    "Sir Rowan rides to the cave",
+    "He pulls out the thorn",
+    "The dragon lights the castle fires"
+   ],
+   "labels": null,
+   "explain": "Roar, ride, thorn, fires.",
+   "passage": "The Knight and the Dragon\n\nEvery night a loud, sad roar echoed around Castle Rook. The people were frightened. “There is a dragon in the hills,” they said. “It will eat us all!”\n\nSir Rowan, the youngest knight, put on his armour and rode into the hills. He was scared, but he kept going.\n\nIn a dark cave he found the dragon. It was enormous and green, with smoke curling from its nose. Sir Rowan held up his shield.\n\nBut the dragon did not attack. It just sat there, holding out one huge foot and groaning.\n\nSir Rowan looked closer. A long, sharp thorn was stuck in the dragon’s toe!\n\nVery carefully, the knight took hold of the thorn and pulled. Out it came. The dragon sighed a long, warm sigh of relief.\n\nThe next morning, Sir Rowan rode back to the castle with the dragon flying above him. The people screamed, until they saw the dragon land gently and bow its head.\n\nFrom that day on, the dragon lived at Castle Rook. Every winter it lit all the fires in the great hall with one puff, and nobody was cold again.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.drag.5",
+   "topic": "reading.stories-4",
+   "kind": "mcq",
+   "prompt": "What is the twist in this story?",
+   "options": [
+    {
+     "text": "The dragon was hurt, not wicked",
+     "correct": true
+    },
+    {
+     "text": "The knight turned out to be a dragon",
+     "correct": false,
+     "feedback": "Sir Rowan was a real knight."
+    },
+    {
+     "text": "The castle was empty all along",
+     "correct": false,
+     "feedback": "The people were there, frightened."
+    }
+   ],
+   "explain": "We expect a fight, but the dragon only needs help.",
+   "passage": "The Knight and the Dragon\n\nEvery night a loud, sad roar echoed around Castle Rook. The people were frightened. “There is a dragon in the hills,” they said. “It will eat us all!”\n\nSir Rowan, the youngest knight, put on his armour and rode into the hills. He was scared, but he kept going.\n\nIn a dark cave he found the dragon. It was enormous and green, with smoke curling from its nose. Sir Rowan held up his shield.\n\nBut the dragon did not attack. It just sat there, holding out one huge foot and groaning.\n\nSir Rowan looked closer. A long, sharp thorn was stuck in the dragon’s toe!\n\nVery carefully, the knight took hold of the thorn and pulled. Out it came. The dragon sighed a long, warm sigh of relief.\n\nThe next morning, Sir Rowan rode back to the castle with the dragon flying above him. The people screamed, until they saw the dragon land gently and bow its head.\n\nFrom that day on, the dragon lived at Castle Rook. Every winter it lit all the fires in the great hall with one puff, and nobody was cold again.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.mus.1",
+   "topic": "reading.stories-4",
+   "kind": "mcq",
+   "prompt": "Where were Maya and Sam sleeping?",
+   "options": [
+    {
+     "text": "Under a Diplodocus skeleton",
+     "correct": true
+    },
+    {
+     "text": "In a tent in the garden",
+     "correct": false,
+     "feedback": "They were inside the museum."
+    },
+    {
+     "text": "Next to the T. rex teeth",
+     "correct": false,
+     "feedback": "They walked past those later."
+    }
+   ],
+   "explain": "“right under the giant skeleton of a Diplodocus.”",
+   "passage": "A Night at the Dinosaur Museum\n\nMaya and Sam were having a sleepover at the dinosaur museum. Their sleeping bags were laid out right under the giant skeleton of a Diplodocus.\n\nWhen the lights went out, the museum was very quiet and very dark.\n\nThen they heard it. A low rumbling, growling noise. GRRRRRR.\n\n“A dinosaur!” whispered Sam, pulling his sleeping bag over his head.\n\nMaya was scared too, but she wanted to find out. She switched on her torch and followed the sound, past the T. rex teeth and the fossil eggs, round the corner and into the next hall.\n\nThere stood Mr Patel the cleaner, pushing a big floor-polishing machine. GRRRRRR, it went, as it spun round and round.\n\nMr Patel laughed. “Did I wake you? Come and see something special.”\n\nHe shone his torch on a glass case. Inside was a real fossil footprint, as big as Maya’s sleeping bag.\n\n“That was made by a dinosaur that walked here millions of years ago,” said Mr Patel.\n\nMaya ran to fetch Sam. Being brave, she decided, was much more fun than hiding.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.mus.2",
+   "topic": "reading.stories-4",
+   "kind": "mcq",
+   "prompt": "What was really making the GRRRRRR noise?",
+   "options": [
+    {
+     "text": "A floor-polishing machine",
+     "correct": true
+    },
+    {
+     "text": "A real living dinosaur",
+     "correct": false,
+     "feedback": "That is what Sam thought!"
+    },
+    {
+     "text": "Sam snoring in his sleeping bag",
+     "correct": false,
+     "feedback": "Sam was awake and hiding."
+    }
+   ],
+   "explain": "Mr Patel the cleaner was polishing the floor.",
+   "passage": "A Night at the Dinosaur Museum\n\nMaya and Sam were having a sleepover at the dinosaur museum. Their sleeping bags were laid out right under the giant skeleton of a Diplodocus.\n\nWhen the lights went out, the museum was very quiet and very dark.\n\nThen they heard it. A low rumbling, growling noise. GRRRRRR.\n\n“A dinosaur!” whispered Sam, pulling his sleeping bag over his head.\n\nMaya was scared too, but she wanted to find out. She switched on her torch and followed the sound, past the T. rex teeth and the fossil eggs, round the corner and into the next hall.\n\nThere stood Mr Patel the cleaner, pushing a big floor-polishing machine. GRRRRRR, it went, as it spun round and round.\n\nMr Patel laughed. “Did I wake you? Come and see something special.”\n\nHe shone his torch on a glass case. Inside was a real fossil footprint, as big as Maya’s sleeping bag.\n\n“That was made by a dinosaur that walked here millions of years ago,” said Mr Patel.\n\nMaya ran to fetch Sam. Being brave, she decided, was much more fun than hiding.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.mus.3",
+   "topic": "reading.stories-4",
+   "kind": "mcq",
+   "prompt": "How were Sam and Maya different when they heard the noise?",
+   "options": [
+    {
+     "text": "Sam hid; Maya went to look",
+     "correct": true
+    },
+    {
+     "text": "Sam went to look; Maya hid",
+     "correct": false,
+     "feedback": "It was the other way round."
+    },
+    {
+     "text": "They both ran out of the museum",
+     "correct": false,
+     "feedback": "Neither of them ran away."
+    }
+   ],
+   "explain": "Sam pulled his sleeping bag over his head; Maya switched on her torch.",
+   "passage": "A Night at the Dinosaur Museum\n\nMaya and Sam were having a sleepover at the dinosaur museum. Their sleeping bags were laid out right under the giant skeleton of a Diplodocus.\n\nWhen the lights went out, the museum was very quiet and very dark.\n\nThen they heard it. A low rumbling, growling noise. GRRRRRR.\n\n“A dinosaur!” whispered Sam, pulling his sleeping bag over his head.\n\nMaya was scared too, but she wanted to find out. She switched on her torch and followed the sound, past the T. rex teeth and the fossil eggs, round the corner and into the next hall.\n\nThere stood Mr Patel the cleaner, pushing a big floor-polishing machine. GRRRRRR, it went, as it spun round and round.\n\nMr Patel laughed. “Did I wake you? Come and see something special.”\n\nHe shone his torch on a glass case. Inside was a real fossil footprint, as big as Maya’s sleeping bag.\n\n“That was made by a dinosaur that walked here millions of years ago,” said Mr Patel.\n\nMaya ran to fetch Sam. Being brave, she decided, was much more fun than hiding.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.mus.4",
+   "topic": "reading.stories-4",
+   "kind": "fact",
+   "prompt": "What special thing did Mr Patel show Maya?",
+   "answer": "a fossil footprint",
+   "distractors": [
+    "a dinosaur egg that hatched",
+    "a baby dinosaur",
+    "a map of the museum"
+   ],
+   "explain": "“a real fossil footprint, as big as Maya’s sleeping bag.”",
+   "passage": "A Night at the Dinosaur Museum\n\nMaya and Sam were having a sleepover at the dinosaur museum. Their sleeping bags were laid out right under the giant skeleton of a Diplodocus.\n\nWhen the lights went out, the museum was very quiet and very dark.\n\nThen they heard it. A low rumbling, growling noise. GRRRRRR.\n\n“A dinosaur!” whispered Sam, pulling his sleeping bag over his head.\n\nMaya was scared too, but she wanted to find out. She switched on her torch and followed the sound, past the T. rex teeth and the fossil eggs, round the corner and into the next hall.\n\nThere stood Mr Patel the cleaner, pushing a big floor-polishing machine. GRRRRRR, it went, as it spun round and round.\n\nMr Patel laughed. “Did I wake you? Come and see something special.”\n\nHe shone his torch on a glass case. Inside was a real fossil footprint, as big as Maya’s sleeping bag.\n\n“That was made by a dinosaur that walked here millions of years ago,” said Mr Patel.\n\nMaya ran to fetch Sam. Being brave, she decided, was much more fun than hiding.",
+   "passageSource": "A story written for this app",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.s3.mus.5",
+   "topic": "reading.stories-4",
+   "kind": "mcq",
+   "prompt": "What did Maya decide at the end?",
+   "options": [
+    {
+     "text": "Being brave is more fun than hiding",
+     "correct": true
+    },
+    {
+     "text": "Museums are too scary at night",
+     "correct": false,
+     "feedback": "She was having fun by the end."
+    },
+    {
+     "text": "She wanted to be a cleaner",
+     "correct": false,
+     "feedback": "Look at the last sentence."
+    }
+   ],
+   "explain": "“Being brave, she decided, was much more fun than hiding.”",
+   "passage": "A Night at the Dinosaur Museum\n\nMaya and Sam were having a sleepover at the dinosaur museum. Their sleeping bags were laid out right under the giant skeleton of a Diplodocus.\n\nWhen the lights went out, the museum was very quiet and very dark.\n\nThen they heard it. A low rumbling, growling noise. GRRRRRR.\n\n“A dinosaur!” whispered Sam, pulling his sleeping bag over his head.\n\nMaya was scared too, but she wanted to find out. She switched on her torch and followed the sound, past the T. rex teeth and the fossil eggs, round the corner and into the next hall.\n\nThere stood Mr Patel the cleaner, pushing a big floor-polishing machine. GRRRRRR, it went, as it spun round and round.\n\nMr Patel laughed. “Did I wake you? Come and see something special.”\n\nHe shone his torch on a glass case. Inside was a real fossil footprint, as big as Maya’s sleeping bag.\n\n“That was made by a dinosaur that walked here millions of years ago,” said Mr Patel.\n\nMaya ran to fetch Sam. Being brave, she decided, was much more fun than hiding.",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "reading.s3.ben.1",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "Who had Peter’s clothes?",
+   "options": [
+    {
+     "text": "The scarecrow",
+     "correct": true
+    },
+    {
+     "text": "Mrs. McGregor",
+     "correct": false,
+     "feedback": "She had gone out in the gig."
+    },
+    {
+     "text": "Benjamin",
+     "correct": false,
+     "feedback": "Benjamin asked who had them."
+    }
+   ],
+   "explain": "“The scarecrow in Mr. McGregor’s garden.”",
+   "passage": "Little Benjamin did not very much want to see his Aunt.\n\nHe came round the back of the fir-tree, and nearly tumbled upon the top of his Cousin Peter.\n\nPeter was sitting by himself. He looked poorly, and was dressed in a red cotton pocket-handkerchief.\n\n“Peter,” said little Benjamin, in a whisper, “who has got your clothes?”\n\nPeter replied, “The scarecrow in Mr. McGregor’s garden,” and described how he had been chased about the garden, and had dropped his shoes and coat.\n\nLittle Benjamin sat down beside his cousin and assured him that Mr. McGregor had gone out in a gig, and Mrs. McGregor also; and certainly for the day, because she was wearing her best bonnet.\n\nPeter said he hoped that it would rain.\n\nAt this point old Mrs. Rabbit’s voice was heard inside the rabbit hole, calling: “Cotton-tail! Cotton-tail! fetch some more camomile!”\n\nPeter said he thought he might feel better if he went for a walk.\n\nThey went away hand in hand, and got upon the flat top of the wall at the bottom of the wood. From here they looked down into Mr. McGregor’s garden. Peter’s coat and shoes were plainly to be seen upon the scarecrow, topped with an old tam-o’-shanter of Mr. McGregor’s.\n\nLittle Benjamin said: “It spoils people’s clothes to squeeze under a gate; the proper way to get in is to climb down a pear-tree.”\n\nPeter fell down head first; but it was of no consequence, as the bed below was newly raked and quite soft.\n\nIt had been sown with lettuces.",
+   "passageSource": "Beatrix Potter, The Tale of Benjamin Bunny (1904)"
+  },
+  {
+   "id": "reading.s3.ben.2",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "How did Benjamin know the McGregors would be out all day?",
+   "options": [
+    {
+     "text": "Mrs. McGregor wore her best bonnet",
+     "correct": true
+    },
+    {
+     "text": "Mr. McGregor had told him so himself",
+     "correct": false,
+     "feedback": "Benjamin worked it out from a clue."
+    },
+    {
+     "text": "The garden gate had been locked tight",
+     "correct": false,
+     "feedback": "Look for the bonnet."
+    }
+   ],
+   "explain": "“certainly for the day, because she was wearing her best bonnet.”",
+   "passage": "Little Benjamin did not very much want to see his Aunt.\n\nHe came round the back of the fir-tree, and nearly tumbled upon the top of his Cousin Peter.\n\nPeter was sitting by himself. He looked poorly, and was dressed in a red cotton pocket-handkerchief.\n\n“Peter,” said little Benjamin, in a whisper, “who has got your clothes?”\n\nPeter replied, “The scarecrow in Mr. McGregor’s garden,” and described how he had been chased about the garden, and had dropped his shoes and coat.\n\nLittle Benjamin sat down beside his cousin and assured him that Mr. McGregor had gone out in a gig, and Mrs. McGregor also; and certainly for the day, because she was wearing her best bonnet.\n\nPeter said he hoped that it would rain.\n\nAt this point old Mrs. Rabbit’s voice was heard inside the rabbit hole, calling: “Cotton-tail! Cotton-tail! fetch some more camomile!”\n\nPeter said he thought he might feel better if he went for a walk.\n\nThey went away hand in hand, and got upon the flat top of the wall at the bottom of the wood. From here they looked down into Mr. McGregor’s garden. Peter’s coat and shoes were plainly to be seen upon the scarecrow, topped with an old tam-o’-shanter of Mr. McGregor’s.\n\nLittle Benjamin said: “It spoils people’s clothes to squeeze under a gate; the proper way to get in is to climb down a pear-tree.”\n\nPeter fell down head first; but it was of no consequence, as the bed below was newly raked and quite soft.\n\nIt had been sown with lettuces.",
+   "passageSource": "Beatrix Potter, The Tale of Benjamin Bunny (1904)"
+  },
+  {
+   "id": "reading.s3.ben.3",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "“He looked poorly”. What does poorly mean here?",
+   "options": [
+    {
+     "text": "unwell",
+     "correct": true
+    },
+    {
+     "text": "very poor",
+     "correct": false,
+     "feedback": "Here “poorly” means not well, not short of money."
+    },
+    {
+     "text": "cheerful",
+     "correct": false,
+     "feedback": "He was sitting by himself, wrapped in a handkerchief."
+    }
+   ],
+   "explain": "In old-fashioned English (and still today), poorly means a bit ill.",
+   "passage": "Little Benjamin did not very much want to see his Aunt.\n\nHe came round the back of the fir-tree, and nearly tumbled upon the top of his Cousin Peter.\n\nPeter was sitting by himself. He looked poorly, and was dressed in a red cotton pocket-handkerchief.\n\n“Peter,” said little Benjamin, in a whisper, “who has got your clothes?”\n\nPeter replied, “The scarecrow in Mr. McGregor’s garden,” and described how he had been chased about the garden, and had dropped his shoes and coat.\n\nLittle Benjamin sat down beside his cousin and assured him that Mr. McGregor had gone out in a gig, and Mrs. McGregor also; and certainly for the day, because she was wearing her best bonnet.\n\nPeter said he hoped that it would rain.\n\nAt this point old Mrs. Rabbit’s voice was heard inside the rabbit hole, calling: “Cotton-tail! Cotton-tail! fetch some more camomile!”\n\nPeter said he thought he might feel better if he went for a walk.\n\nThey went away hand in hand, and got upon the flat top of the wall at the bottom of the wood. From here they looked down into Mr. McGregor’s garden. Peter’s coat and shoes were plainly to be seen upon the scarecrow, topped with an old tam-o’-shanter of Mr. McGregor’s.\n\nLittle Benjamin said: “It spoils people’s clothes to squeeze under a gate; the proper way to get in is to climb down a pear-tree.”\n\nPeter fell down head first; but it was of no consequence, as the bed below was newly raked and quite soft.\n\nIt had been sown with lettuces.",
+   "passageSource": "Beatrix Potter, The Tale of Benjamin Bunny (1904)"
+  },
+  {
+   "id": "reading.s3.ben.4",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "What did Benjamin say was the proper way into the garden?",
+   "options": [
+    {
+     "text": "Climb down a pear-tree",
+     "correct": true
+    },
+    {
+     "text": "Squeeze under the gate",
+     "correct": false,
+     "feedback": "He said that spoils your clothes!"
+    },
+    {
+     "text": "Dig a tunnel under the wall",
+     "correct": false,
+     "feedback": "He chose a tree."
+    }
+   ],
+   "explain": "“the proper way to get in is to climb down a pear-tree.”",
+   "passage": "Little Benjamin did not very much want to see his Aunt.\n\nHe came round the back of the fir-tree, and nearly tumbled upon the top of his Cousin Peter.\n\nPeter was sitting by himself. He looked poorly, and was dressed in a red cotton pocket-handkerchief.\n\n“Peter,” said little Benjamin, in a whisper, “who has got your clothes?”\n\nPeter replied, “The scarecrow in Mr. McGregor’s garden,” and described how he had been chased about the garden, and had dropped his shoes and coat.\n\nLittle Benjamin sat down beside his cousin and assured him that Mr. McGregor had gone out in a gig, and Mrs. McGregor also; and certainly for the day, because she was wearing her best bonnet.\n\nPeter said he hoped that it would rain.\n\nAt this point old Mrs. Rabbit’s voice was heard inside the rabbit hole, calling: “Cotton-tail! Cotton-tail! fetch some more camomile!”\n\nPeter said he thought he might feel better if he went for a walk.\n\nThey went away hand in hand, and got upon the flat top of the wall at the bottom of the wood. From here they looked down into Mr. McGregor’s garden. Peter’s coat and shoes were plainly to be seen upon the scarecrow, topped with an old tam-o’-shanter of Mr. McGregor’s.\n\nLittle Benjamin said: “It spoils people’s clothes to squeeze under a gate; the proper way to get in is to climb down a pear-tree.”\n\nPeter fell down head first; but it was of no consequence, as the bed below was newly raked and quite soft.\n\nIt had been sown with lettuces.",
+   "passageSource": "Beatrix Potter, The Tale of Benjamin Bunny (1904)"
+  },
+  {
+   "id": "reading.s3.ben.5",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "Why didn’t Peter get hurt when he fell?",
+   "options": [
+    {
+     "text": "He landed on soft, raked soil",
+     "correct": true
+    },
+    {
+     "text": "Benjamin caught him in his arms",
+     "correct": false,
+     "feedback": "He fell head first into the bed."
+    },
+    {
+     "text": "He landed in a deep, soft pond",
+     "correct": false,
+     "feedback": "The bed was full of lettuces."
+    }
+   ],
+   "explain": "“the bed below was newly raked and quite soft.”",
+   "passage": "Little Benjamin did not very much want to see his Aunt.\n\nHe came round the back of the fir-tree, and nearly tumbled upon the top of his Cousin Peter.\n\nPeter was sitting by himself. He looked poorly, and was dressed in a red cotton pocket-handkerchief.\n\n“Peter,” said little Benjamin, in a whisper, “who has got your clothes?”\n\nPeter replied, “The scarecrow in Mr. McGregor’s garden,” and described how he had been chased about the garden, and had dropped his shoes and coat.\n\nLittle Benjamin sat down beside his cousin and assured him that Mr. McGregor had gone out in a gig, and Mrs. McGregor also; and certainly for the day, because she was wearing her best bonnet.\n\nPeter said he hoped that it would rain.\n\nAt this point old Mrs. Rabbit’s voice was heard inside the rabbit hole, calling: “Cotton-tail! Cotton-tail! fetch some more camomile!”\n\nPeter said he thought he might feel better if he went for a walk.\n\nThey went away hand in hand, and got upon the flat top of the wall at the bottom of the wood. From here they looked down into Mr. McGregor’s garden. Peter’s coat and shoes were plainly to be seen upon the scarecrow, topped with an old tam-o’-shanter of Mr. McGregor’s.\n\nLittle Benjamin said: “It spoils people’s clothes to squeeze under a gate; the proper way to get in is to climb down a pear-tree.”\n\nPeter fell down head first; but it was of no consequence, as the bed below was newly raked and quite soft.\n\nIt had been sown with lettuces.",
+   "passageSource": "Beatrix Potter, The Tale of Benjamin Bunny (1904)"
+  },
+  {
+   "id": "reading.s3.jem.1",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "Why did Jemima leave the farm?",
+   "options": [
+    {
+     "text": "To find a safe place for her nest",
+     "correct": true
+    },
+    {
+     "text": "To visit her sister-in-law",
+     "correct": false,
+     "feedback": "She wanted to hatch her own eggs, away from the farm."
+    },
+    {
+     "text": "To go to the market",
+     "correct": false,
+     "feedback": "She was looking for a nesting-place."
+    }
+   ],
+   "explain": "“She determined to make a nest right away from the farm.”",
+   "passage": "Jemima Puddle-duck became quite desperate. She determined to make a nest right away from the farm.\n\nShe set off on a fine spring afternoon along the cart-road that leads over the hill.\n\nShe was wearing a shawl and a poke bonnet.\n\nWhen she reached the top of the hill, she saw a wood in the distance.\n\nShe thought that it looked a safe quiet spot.\n\nJemima Puddle-duck was not much in the habit of flying. She ran downhill a few yards flapping her shawl, and then she jumped off into the air.\n\nShe flew beautifully when she had got a good start.\n\nShe skimmed along over the tree-tops until she saw an open place in the middle of the wood, where the trees and brushwood had been cleared.\n\nJemima alighted rather heavily, and began to waddle about in search of a convenient dry nesting-place. She rather fancied a tree-stump amongst some tall fox-gloves.\n\nBut—seated upon the stump, she was startled to find an elegantly dressed gentleman reading a newspaper.\n\nHe had black prick ears and sandy coloured whiskers.\n\n“Quack?” said Jemima Puddle-duck, with her head and her bonnet on one side—“Quack?”\n\nThe gentleman raised his eyes above his newspaper and looked curiously at Jemima—\n\n“Madam, have you lost your way?” said he. He had a long bushy tail which he was sitting upon, as the stump was somewhat damp.\n\nJemima thought him mighty civil and handsome. She explained that she had not lost her way, but that she was trying to find a convenient dry nesting-place.\n\n“Ah! is that so? indeed!” said the gentleman with sandy whiskers, looking curiously at Jemima. He folded up the newspaper, and put it in his coat-tail pocket.",
+   "passageSource": "Beatrix Potter, The Tale of Jemima Puddle-Duck (1908)"
+  },
+  {
+   "id": "reading.s3.jem.2",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "How did Jemima start flying?",
+   "options": [
+    {
+     "text": "She ran downhill flapping her shawl",
+     "correct": true
+    },
+    {
+     "text": "She jumped off the top of a tall tree",
+     "correct": false,
+     "feedback": "She ran down a hill first."
+    },
+    {
+     "text": "A strong gust of wind lifted her up",
+     "correct": false,
+     "feedback": "She got a running start."
+    }
+   ],
+   "explain": "“She ran downhill a few yards flapping her shawl, and then she jumped off into the air.”",
+   "passage": "Jemima Puddle-duck became quite desperate. She determined to make a nest right away from the farm.\n\nShe set off on a fine spring afternoon along the cart-road that leads over the hill.\n\nShe was wearing a shawl and a poke bonnet.\n\nWhen she reached the top of the hill, she saw a wood in the distance.\n\nShe thought that it looked a safe quiet spot.\n\nJemima Puddle-duck was not much in the habit of flying. She ran downhill a few yards flapping her shawl, and then she jumped off into the air.\n\nShe flew beautifully when she had got a good start.\n\nShe skimmed along over the tree-tops until she saw an open place in the middle of the wood, where the trees and brushwood had been cleared.\n\nJemima alighted rather heavily, and began to waddle about in search of a convenient dry nesting-place. She rather fancied a tree-stump amongst some tall fox-gloves.\n\nBut—seated upon the stump, she was startled to find an elegantly dressed gentleman reading a newspaper.\n\nHe had black prick ears and sandy coloured whiskers.\n\n“Quack?” said Jemima Puddle-duck, with her head and her bonnet on one side—“Quack?”\n\nThe gentleman raised his eyes above his newspaper and looked curiously at Jemima—\n\n“Madam, have you lost your way?” said he. He had a long bushy tail which he was sitting upon, as the stump was somewhat damp.\n\nJemima thought him mighty civil and handsome. She explained that she had not lost her way, but that she was trying to find a convenient dry nesting-place.\n\n“Ah! is that so? indeed!” said the gentleman with sandy whiskers, looking curiously at Jemima. He folded up the newspaper, and put it in his coat-tail pocket.",
+   "passageSource": "Beatrix Potter, The Tale of Jemima Puddle-Duck (1908)"
+  },
+  {
+   "id": "reading.s3.jem.3",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "Who was the gentleman with sandy whiskers really?",
+   "options": [
+    {
+     "text": "A fox",
+     "correct": true
+    },
+    {
+     "text": "A farmer",
+     "correct": false,
+     "feedback": "Look at the clues: prick ears, sandy whiskers, a long bushy tail."
+    },
+    {
+     "text": "A rabbit",
+     "correct": false,
+     "feedback": "Rabbits don’t have long bushy tails."
+    }
+   ],
+   "explain": "Black prick ears, sandy whiskers and a bushy tail: it is a fox! (Jemima doesn’t realise.)",
+   "passage": "Jemima Puddle-duck became quite desperate. She determined to make a nest right away from the farm.\n\nShe set off on a fine spring afternoon along the cart-road that leads over the hill.\n\nShe was wearing a shawl and a poke bonnet.\n\nWhen she reached the top of the hill, she saw a wood in the distance.\n\nShe thought that it looked a safe quiet spot.\n\nJemima Puddle-duck was not much in the habit of flying. She ran downhill a few yards flapping her shawl, and then she jumped off into the air.\n\nShe flew beautifully when she had got a good start.\n\nShe skimmed along over the tree-tops until she saw an open place in the middle of the wood, where the trees and brushwood had been cleared.\n\nJemima alighted rather heavily, and began to waddle about in search of a convenient dry nesting-place. She rather fancied a tree-stump amongst some tall fox-gloves.\n\nBut—seated upon the stump, she was startled to find an elegantly dressed gentleman reading a newspaper.\n\nHe had black prick ears and sandy coloured whiskers.\n\n“Quack?” said Jemima Puddle-duck, with her head and her bonnet on one side—“Quack?”\n\nThe gentleman raised his eyes above his newspaper and looked curiously at Jemima—\n\n“Madam, have you lost your way?” said he. He had a long bushy tail which he was sitting upon, as the stump was somewhat damp.\n\nJemima thought him mighty civil and handsome. She explained that she had not lost her way, but that she was trying to find a convenient dry nesting-place.\n\n“Ah! is that so? indeed!” said the gentleman with sandy whiskers, looking curiously at Jemima. He folded up the newspaper, and put it in his coat-tail pocket.",
+   "passageSource": "Beatrix Potter, The Tale of Jemima Puddle-Duck (1908)"
+  },
+  {
+   "id": "reading.s3.jem.4",
+   "topic": "reading.potter-2",
+   "kind": "fact",
+   "prompt": "Find and copy the two words that tell you what Jemima thought of him.",
+   "answer": "civil and handsome",
+   "distractors": [
+    "dark and dismal",
+    "curious and quiet",
+    "sandy and damp"
+   ],
+   "explain": "“Jemima thought him mighty civil and handsome.” Civil means polite.",
+   "passage": "Jemima Puddle-duck became quite desperate. She determined to make a nest right away from the farm.\n\nShe set off on a fine spring afternoon along the cart-road that leads over the hill.\n\nShe was wearing a shawl and a poke bonnet.\n\nWhen she reached the top of the hill, she saw a wood in the distance.\n\nShe thought that it looked a safe quiet spot.\n\nJemima Puddle-duck was not much in the habit of flying. She ran downhill a few yards flapping her shawl, and then she jumped off into the air.\n\nShe flew beautifully when she had got a good start.\n\nShe skimmed along over the tree-tops until she saw an open place in the middle of the wood, where the trees and brushwood had been cleared.\n\nJemima alighted rather heavily, and began to waddle about in search of a convenient dry nesting-place. She rather fancied a tree-stump amongst some tall fox-gloves.\n\nBut—seated upon the stump, she was startled to find an elegantly dressed gentleman reading a newspaper.\n\nHe had black prick ears and sandy coloured whiskers.\n\n“Quack?” said Jemima Puddle-duck, with her head and her bonnet on one side—“Quack?”\n\nThe gentleman raised his eyes above his newspaper and looked curiously at Jemima—\n\n“Madam, have you lost your way?” said he. He had a long bushy tail which he was sitting upon, as the stump was somewhat damp.\n\nJemima thought him mighty civil and handsome. She explained that she had not lost her way, but that she was trying to find a convenient dry nesting-place.\n\n“Ah! is that so? indeed!” said the gentleman with sandy whiskers, looking curiously at Jemima. He folded up the newspaper, and put it in his coat-tail pocket.",
+   "passageSource": "Beatrix Potter, The Tale of Jemima Puddle-Duck (1908)",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.s3.jem.5",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "What do you predict might happen to Jemima?",
+   "options": [
+    {
+     "text": "She could be in danger",
+     "correct": true
+    },
+    {
+     "text": "She will open a farm shop",
+     "correct": false,
+     "feedback": "Think about who the gentleman really is."
+    },
+    {
+     "text": "The fox will fly away with her eggs to help her",
+     "correct": false,
+     "feedback": "Foxes don’t usually help ducks!"
+    }
+   ],
+   "explain": "Good readers notice clues the character misses. In the full story, Jemima has a lucky escape.",
+   "passage": "Jemima Puddle-duck became quite desperate. She determined to make a nest right away from the farm.\n\nShe set off on a fine spring afternoon along the cart-road that leads over the hill.\n\nShe was wearing a shawl and a poke bonnet.\n\nWhen she reached the top of the hill, she saw a wood in the distance.\n\nShe thought that it looked a safe quiet spot.\n\nJemima Puddle-duck was not much in the habit of flying. She ran downhill a few yards flapping her shawl, and then she jumped off into the air.\n\nShe flew beautifully when she had got a good start.\n\nShe skimmed along over the tree-tops until she saw an open place in the middle of the wood, where the trees and brushwood had been cleared.\n\nJemima alighted rather heavily, and began to waddle about in search of a convenient dry nesting-place. She rather fancied a tree-stump amongst some tall fox-gloves.\n\nBut—seated upon the stump, she was startled to find an elegantly dressed gentleman reading a newspaper.\n\nHe had black prick ears and sandy coloured whiskers.\n\n“Quack?” said Jemima Puddle-duck, with her head and her bonnet on one side—“Quack?”\n\nThe gentleman raised his eyes above his newspaper and looked curiously at Jemima—\n\n“Madam, have you lost your way?” said he. He had a long bushy tail which he was sitting upon, as the stump was somewhat damp.\n\nJemima thought him mighty civil and handsome. She explained that she had not lost her way, but that she was trying to find a convenient dry nesting-place.\n\n“Ah! is that so? indeed!” said the gentleman with sandy whiskers, looking curiously at Jemima. He folded up the newspaper, and put it in his coat-tail pocket.",
+   "passageSource": "Beatrix Potter, The Tale of Jemima Puddle-Duck (1908)"
+  },
+  {
+   "id": "reading.s3.tom.1",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "Why did Mrs. Tabitha send the kittens into the garden?",
+   "options": [
+    {
+     "text": "To keep them out of the way",
+     "correct": true
+    },
+    {
+     "text": "To play with the Puddle-Ducks",
+     "correct": false,
+     "feedback": "She told them to keep away from the ducks."
+    },
+    {
+     "text": "To pick flowers for the table",
+     "correct": false,
+     "feedback": "She wanted them out of the way."
+    }
+   ],
+   "explain": "“to be out of the way while she made hot buttered toast.”",
+   "passage": "When the three kittens were ready, Mrs. Tabitha unwisely turned them out into the garden, to be out of the way while she made hot buttered toast.\n\n“Now keep your frocks clean, children! You must walk on your hind legs. Keep away from the dirty ash-pit, and from Sally Henny Penny, and from the pig-stye and the Puddle-Ducks.”\n\nMoppet and Mittens walked down the garden path unsteadily. Presently they trod upon their pinafores and fell on their noses.\n\nWhen they stood up there were several green smears!\n\n“Let us climb up the rockery, and sit on the garden wall,” said Moppet.\n\nThey turned their pinafores back to front, and went up with a skip and a jump; Moppet’s white tucker fell down into the road.\n\nTom Kitten was quite unable to jump when walking upon his hind legs in trousers. He came up the rockery by degrees, breaking the ferns, and shedding buttons right and left.\n\nHe was all in pieces when he reached the top of the wall.\n\nMoppet and Mittens tried to pull him together; his hat fell off, and the rest of his buttons burst.\n\nWhile they were in difficulties, there was a pit pat paddle pat! and the three Puddle-Ducks came along the hard high road, marching one behind the other and doing the goose step—pit pat paddle pat! pit pat waddle pat!\n\nThey stopped and stood in a row, and stared up at the kittens. They had very small eyes and looked surprised.",
+   "passageSource": "Beatrix Potter, The Tale of Tom Kitten (1907)"
+  },
+  {
+   "id": "reading.s3.tom.2",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "Why does the writer say “unwisely”?",
+   "options": [
+    {
+     "text": "Their clothes were sure to get dirty",
+     "correct": true
+    },
+    {
+     "text": "It was pouring with rain outside all day",
+     "correct": false,
+     "feedback": "Think about kittens in their best clothes in a garden."
+    },
+    {
+     "text": "Wolves were hiding in the garden hedge",
+     "correct": false,
+     "feedback": "There are no wolves."
+    }
+   ],
+   "explain": "Sending kittens in their best clothes into a garden was never going to end well!",
+   "passage": "When the three kittens were ready, Mrs. Tabitha unwisely turned them out into the garden, to be out of the way while she made hot buttered toast.\n\n“Now keep your frocks clean, children! You must walk on your hind legs. Keep away from the dirty ash-pit, and from Sally Henny Penny, and from the pig-stye and the Puddle-Ducks.”\n\nMoppet and Mittens walked down the garden path unsteadily. Presently they trod upon their pinafores and fell on their noses.\n\nWhen they stood up there were several green smears!\n\n“Let us climb up the rockery, and sit on the garden wall,” said Moppet.\n\nThey turned their pinafores back to front, and went up with a skip and a jump; Moppet’s white tucker fell down into the road.\n\nTom Kitten was quite unable to jump when walking upon his hind legs in trousers. He came up the rockery by degrees, breaking the ferns, and shedding buttons right and left.\n\nHe was all in pieces when he reached the top of the wall.\n\nMoppet and Mittens tried to pull him together; his hat fell off, and the rest of his buttons burst.\n\nWhile they were in difficulties, there was a pit pat paddle pat! and the three Puddle-Ducks came along the hard high road, marching one behind the other and doing the goose step—pit pat paddle pat! pit pat waddle pat!\n\nThey stopped and stood in a row, and stared up at the kittens. They had very small eyes and looked surprised.",
+   "passageSource": "Beatrix Potter, The Tale of Tom Kitten (1907)"
+  },
+  {
+   "id": "reading.s3.tom.3",
+   "topic": "reading.potter-2",
+   "kind": "mcq",
+   "prompt": "What happened to Tom on the rockery?",
+   "options": [
+    {
+     "text": "His buttons kept popping off",
+     "correct": true
+    },
+    {
+     "text": "He found a mouse hiding in the ferns",
+     "correct": false,
+     "feedback": "Look at what he was shedding."
+    },
+    {
+     "text": "He climbed up quickly and easily",
+     "correct": false,
+     "feedback": "He came up “by degrees”, breaking the ferns."
+    }
+   ],
+   "explain": "“shedding buttons right and left… He was all in pieces.”",
+   "passage": "When the three kittens were ready, Mrs. Tabitha unwisely turned them out into the garden, to be out of the way while she made hot buttered toast.\n\n“Now keep your frocks clean, children! You must walk on your hind legs. Keep away from the dirty ash-pit, and from Sally Henny Penny, and from the pig-stye and the Puddle-Ducks.”\n\nMoppet and Mittens walked down the garden path unsteadily. Presently they trod upon their pinafores and fell on their noses.\n\nWhen they stood up there were several green smears!\n\n“Let us climb up the rockery, and sit on the garden wall,” said Moppet.\n\nThey turned their pinafores back to front, and went up with a skip and a jump; Moppet’s white tucker fell down into the road.\n\nTom Kitten was quite unable to jump when walking upon his hind legs in trousers. He came up the rockery by degrees, breaking the ferns, and shedding buttons right and left.\n\nHe was all in pieces when he reached the top of the wall.\n\nMoppet and Mittens tried to pull him together; his hat fell off, and the rest of his buttons burst.\n\nWhile they were in difficulties, there was a pit pat paddle pat! and the three Puddle-Ducks came along the hard high road, marching one behind the other and doing the goose step—pit pat paddle pat! pit pat waddle pat!\n\nThey stopped and stood in a row, and stared up at the kittens. They had very small eyes and looked surprised.",
+   "passageSource": "Beatrix Potter, The Tale of Tom Kitten (1907)"
+  },
+  {
+   "id": "reading.s3.tom.4",
+   "topic": "reading.potter-2",
+   "kind": "fact",
+   "prompt": "What sound did the Puddle-Ducks make as they marched?",
+   "answer": "pit pat paddle pat",
+   "distractors": [
+    "quack quack quack",
+    "tick tock tick",
+    "trit-trot trit-trot"
+   ],
+   "explain": "“pit pat paddle pat! pit pat waddle pat!”",
+   "passage": "When the three kittens were ready, Mrs. Tabitha unwisely turned them out into the garden, to be out of the way while she made hot buttered toast.\n\n“Now keep your frocks clean, children! You must walk on your hind legs. Keep away from the dirty ash-pit, and from Sally Henny Penny, and from the pig-stye and the Puddle-Ducks.”\n\nMoppet and Mittens walked down the garden path unsteadily. Presently they trod upon their pinafores and fell on their noses.\n\nWhen they stood up there were several green smears!\n\n“Let us climb up the rockery, and sit on the garden wall,” said Moppet.\n\nThey turned their pinafores back to front, and went up with a skip and a jump; Moppet’s white tucker fell down into the road.\n\nTom Kitten was quite unable to jump when walking upon his hind legs in trousers. He came up the rockery by degrees, breaking the ferns, and shedding buttons right and left.\n\nHe was all in pieces when he reached the top of the wall.\n\nMoppet and Mittens tried to pull him together; his hat fell off, and the rest of his buttons burst.\n\nWhile they were in difficulties, there was a pit pat paddle pat! and the three Puddle-Ducks came along the hard high road, marching one behind the other and doing the goose step—pit pat paddle pat! pit pat waddle pat!\n\nThey stopped and stood in a row, and stared up at the kittens. They had very small eyes and looked surprised.",
+   "passageSource": "Beatrix Potter, The Tale of Tom Kitten (1907)",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "reading.s3.tom.5",
+   "topic": "reading.potter-2",
+   "kind": "order",
+   "prompt": "Put these in order.",
+   "items": [
+    "Mrs. Tabitha sends them outside",
+    "Moppet and Mittens fall on their noses",
+    "Tom climbs the rockery",
+    "The Puddle-Ducks arrive"
+   ],
+   "labels": null,
+   "explain": "Out, fall, climb, ducks.",
+   "passage": "When the three kittens were ready, Mrs. Tabitha unwisely turned them out into the garden, to be out of the way while she made hot buttered toast.\n\n“Now keep your frocks clean, children! You must walk on your hind legs. Keep away from the dirty ash-pit, and from Sally Henny Penny, and from the pig-stye and the Puddle-Ducks.”\n\nMoppet and Mittens walked down the garden path unsteadily. Presently they trod upon their pinafores and fell on their noses.\n\nWhen they stood up there were several green smears!\n\n“Let us climb up the rockery, and sit on the garden wall,” said Moppet.\n\nThey turned their pinafores back to front, and went up with a skip and a jump; Moppet’s white tucker fell down into the road.\n\nTom Kitten was quite unable to jump when walking upon his hind legs in trousers. He came up the rockery by degrees, breaking the ferns, and shedding buttons right and left.\n\nHe was all in pieces when he reached the top of the wall.\n\nMoppet and Mittens tried to pull him together; his hat fell off, and the rest of his buttons burst.\n\nWhile they were in difficulties, there was a pit pat paddle pat! and the three Puddle-Ducks came along the hard high road, marching one behind the other and doing the goose step—pit pat paddle pat! pit pat waddle pat!\n\nThey stopped and stood in a row, and stared up at the kittens. They had very small eyes and looked surprised.",
+   "passageSource": "Beatrix Potter, The Tale of Tom Kitten (1907)"
+  }
+ ]
+}

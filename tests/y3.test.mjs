@@ -160,7 +160,7 @@ function simulate(state, sdb, start, days, rng, counts) {
   }
 }
 
-test('100 days of Year 2, then moving up: cards carry over, no new placement, Year 3 topics begin', () => {
+test('160 days of Year 2, then moving up: cards carry over, no new placement, Year 3 topics begin', () => {
   const start = 20800;
   const state = emptyState(start);
   state.course = 'ks1';
@@ -168,7 +168,7 @@ test('100 days of Year 2, then moving up: cards carry over, no new placement, Ye
   state.profile = { childName: 'Test', hero: 'Captain Thunder', companion: { name: 'Zoom' } };
   const rng = makeRng('move-up');
   setCourse('ks1');
-  simulate(state, ks1db, start, 100, rng, {});
+  simulate(state, ks1db, start, 160, rng, {});
   const cardsBefore = Object.keys(state.cards).length;
   assert.ok(cardsBefore > 150);
 
@@ -176,11 +176,11 @@ test('100 days of Year 2, then moving up: cards carry over, no new placement, Ye
   state.course = 'y3';
   state.settings.sessionMinutes = 15;
   const counts = {};
-  simulate(state, db, start + 100, 100, rng, counts);
+  simulate(state, db, start + 160, 100, rng, counts);
   assert.equal(counts.placement || 0, 0, 'no second placement after moving up');
   assert.ok(Object.keys(state.cards).length > cardsBefore + 100, `cards ${cardsBefore} -> ${Object.keys(state.cards).length}`);
   const y3Started = Object.keys(state.topics).filter(isY3);
   for (const s of SUBJECTS) assert.ok(y3Started.some((id) => db.topics[id].subject === s.id), `${s.id}: a Year 3 topic started`);
   // Year 2 cards are still reviewed in Year 3
-  assert.ok(dueItems(state, db, start + 260).some((x) => !isY3(x.topic)), 'Year 2 items still come up for review');
+  assert.ok(dueItems(state, db, start + 320).some((x) => !isY3(x.topic)), 'Year 2 items still come up for review');
 });
