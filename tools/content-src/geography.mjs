@@ -1,4 +1,5 @@
 // Geography content source. Map items refer to features in content/maps/*.json.
+import { the } from './names.mjs';
 
 const mapfact = (id, topic, map, layer, feature, answer, explain, extra = {}) => ({ id: `geography.${id}`, topic: `geography.${topic}`, kind: 'mapfact', map, layer, feature, answer, explain, ...extra });
 const fact = (id, topic, prompt, answer, distractors, explain, extra = {}) => ({ id: `geography.${id}`, topic: `geography.${topic}`, kind: 'fact', prompt, answer, distractors, explain, ...extra });
@@ -70,7 +71,7 @@ const CAPITAL_NOTES = {
   CHE: 'Bern, not Zurich or Geneva, which are bigger.', NLD: 'Amsterdam is the capital, though the government sits in The Hague.',
   ITA: 'Rome, not Milan.', ESP: 'Madrid, not Barcelona.', DEU: 'Berlin, not Munich.', HUN: 'Budapest: don’t mix it up with Bucharest (Romania).',
   ROU: 'Bucharest: don’t mix it up with Budapest (Hungary).', SVK: 'Bratislava: don’t mix it up with Ljubljana (Slovenia).', SVN: 'Ljubljana: don’t mix it up with Bratislava (Slovakia).',
-  UKR: 'Kyiv (sometimes spelt Kiev).', MDA: 'Chișinău (you can type Chisinau).', LUX: 'Its capital has the same name: Luxembourg.',
+  UKR: 'Kyiv (sometimes spelt Kiev).', MDA: 'Chișinău (you can type Chisinau).', LUX: 'The country and its capital share a name: the city is often called Luxembourg City.',
 };
 
 const items = [];
@@ -98,7 +99,7 @@ for (const [id, name, country] of UK_CAPITALS) {
 }
 const RIVERS = [['thames', 'River Thames', 'The Thames flows through London to the North Sea. It is the longest river entirely in England.'], ['severn', 'River Severn', 'The Severn is the UK’s longest river (about 354 km). It starts in Wales.'], ['trent', 'River Trent', 'The Trent flows through the Midlands, past Nottingham.'], ['tay', 'River Tay', 'The Tay is Scotland’s longest river.'], ['tweed', 'River Tweed', 'Part of the Tweed forms the border between England and Scotland.']];
 for (const [id, name, explain] of RIVERS) items.push(mapfact(`uk.r.${id}`, 'uk', 'uk', 'rivers', `river-${id}`, name, explain, { choosePrompt: 'Which river is highlighted?', accept: [name.replace('River ', '')], group: 'river' }));
-items.push(fact('uk.longest', 'uk', 'What is the longest river in the UK?', 'River Severn', ['River Thames', 'River Trent', 'River Tay'], 'The Severn (about 354 km) is longer than the Thames (about 346 km).', { accept: ['severn', 'the severn', 'the river severn'] }));
+items.push(fact('uk.longest', 'uk', 'What is the longest river in the UK?', 'River Severn', ['River Thames', 'River Trent', 'River Tay'], 'Only just! The Severn (about 354 km, from the Welsh mountains to the Bristol Channel) beats the Thames (about 346 km). The Thames is the longest river entirely in England.', { accept: ['severn', 'the severn', 'the river severn'] }));
 const PEAKS = [['ben-nevis', 'Ben Nevis', 'Ben Nevis (1345 m), in Scotland, is the highest mountain in the UK.'], ['snowdon', 'Yr Wyddfa (Snowdon)', 'Yr Wyddfa (Snowdon), 1085 m, is the highest mountain in Wales.'], ['scafell', 'Scafell Pike', 'Scafell Pike (978 m) in the Lake District is the highest mountain in England.']];
 for (const [id, name, explain] of PEAKS) items.push(mapfact(`uk.p.${id}`, 'uk', 'uk', 'markers', id, name, explain, { choosePrompt: 'Which mountain is marked?', accept: id === 'snowdon' ? ['Snowdon', 'Yr Wyddfa'] : [], group: 'peak' }));
 items.push(fact('uk.highest', 'uk', 'What is the highest mountain in the UK?', 'Ben Nevis', ['Scafell Pike', 'Snowdon', 'Slieve Donard'], 'Ben Nevis in the Scottish Highlands is 1345 m high.'));
@@ -106,10 +107,10 @@ items.push(mcq('uk.gb', 'uk', 'What is the difference between Great Britain and 
 
 // Europe
 for (const [id, name, capital, wrong, set] of EUROPE) {
-  items.push(mapfact(`eu.${id.toLowerCase()}`, `europe-${set}`, 'europe', 'countries', id, name, `This is ${name}.`, { choosePrompt: 'Which country is highlighted?', accept: id === 'GBR' ? ['UK', 'Britain', 'Great Britain'] : id === 'CZE' ? ['Czech Republic'] : id === 'NLD' ? ['Holland', 'The Netherlands'] : [] }));
-  items.push(fact(`cap.${id.toLowerCase()}`, `capitals-${set}`, `What is the capital of ${name}?`, capital, wrong, `The capital of ${name} is ${capital}.${CAPITAL_NOTES[id] ? ' ' + CAPITAL_NOTES[id] : ''}`, {
-    map: 'europe', feature: id, fill: true, learn: `The capital of **${name}** is **${capital}**.${CAPITAL_NOTES[id] ? ' ' + CAPITAL_NOTES[id] : ''}`,
-    accept: id === 'UKR' ? ['Kiev'] : id === 'MDA' ? ['Chisinau'] : id === 'ISL' ? ['Reykjavík'] : [],
+  items.push(mapfact(`eu.${id.toLowerCase()}`, `europe-${set}`, 'europe', 'countries', id, name, `This is ${the(name)}.`, { choosePrompt: 'Which country is highlighted?', accept: id === 'GBR' ? ['UK', 'Britain', 'Great Britain'] : id === 'CZE' ? ['Czech Republic'] : id === 'NLD' ? ['Holland', 'The Netherlands'] : [] }));
+  items.push(fact(`cap.${id.toLowerCase()}`, `capitals-${set}`, `What is the capital of ${the(name)}?`, capital, wrong, `The capital of ${the(name)} is ${capital.replace(/\.$/, '')}.${CAPITAL_NOTES[id] ? ' ' + CAPITAL_NOTES[id] : ''}`, {
+    map: 'europe', feature: id, fill: true, learn: `The capital of **${the(name)}** is **${capital}**.${CAPITAL_NOTES[id] ? ' ' + CAPITAL_NOTES[id] : ''}`,
+    accept: id === 'UKR' ? ['Kiev'] : id === 'MDA' ? ['Chisinau'] : id === 'ISL' ? ['Reykjavík'] : id === 'LUX' ? ['Luxembourg City'] : [],
   }));
 }
 

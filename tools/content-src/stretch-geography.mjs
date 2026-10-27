@@ -1,4 +1,5 @@
 // Geography stretch tier: coasts, development, weather systems, and harder world countries.
+import { the } from './names.mjs';
 
 const fact = (id, topic, prompt, answer, distractors, explain, extra = {}) => ({ id: `geography.${id}`, topic: `geography.${topic}`, kind: 'fact', prompt, answer, distractors, explain, ...extra });
 const mcq = (id, topic, prompt, options, explain, extra = {}) => ({ id: `geography.${id}`, topic: `geography.${topic}`, kind: 'mcq', prompt, options: options.map(([text, correct, feedback]) => ({ text, correct: !!correct, feedback })), explain, ...extra });
@@ -71,8 +72,8 @@ const items = [
 
   // --- harder world countries
   ...WORLD.flatMap(([id, name, capital, zoom, note], i) => [
-    { id: `geography.w2.${id.toLowerCase()}`, topic: 'geography.world-2', kind: 'mapfact', map: 'world', layer: 'countries', feature: id, zoom, answer: name, accept: [], choosePrompt: 'Which country is highlighted?', explain: `This is ${name}. ${note}` },
-    ...(capital ? [fact(`w2.cap.${id.toLowerCase()}`, 'world-2', `What is the capital of ${name}?`, capital, WORLD.filter((w) => w[2] && w[1] !== name).slice(i % 9, i % 9 + 3).map((w) => w[2]), `${capital} is the capital of ${name}. ${note}`, { fill: true })] : []),
+    { id: `geography.w2.${id.toLowerCase()}`, topic: 'geography.world-2', kind: 'mapfact', map: 'world', layer: 'countries', feature: id, zoom, answer: name, accept: [], choosePrompt: 'Which country is highlighted?', explain: `This is ${the(name)}. ${note}` },
+    ...(capital ? [fact(`w2.cap.${id.toLowerCase()}`, 'world-2', `What is the capital of ${the(name)}?`, capital, WORLD.filter((w) => w[2] && w[1] !== name).slice(i % 9, i % 9 + 3).map((w) => w[2]), `${capital} is the capital of ${the(name)}. ${note}`, { fill: true })] : []),
   ]),
 ];
 

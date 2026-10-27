@@ -651,7 +651,7 @@
     "River Trent",
     "River Tay"
    ],
-   "explain": "The Severn (about 354 km) is longer than the Thames (about 346 km).",
+   "explain": "Only just! The Severn (about 354 km, from the Welsh mountains to the Bristol Channel) beats the Thames (about 346 km). The Thames is the longest river entirely in England.",
    "accept": [
     "severn",
     "the severn",
@@ -744,7 +744,7 @@
    "layer": "countries",
    "feature": "GBR",
    "answer": "United Kingdom",
-   "explain": "This is United Kingdom.",
+   "explain": "This is the United Kingdom.",
    "choosePrompt": "Which country is highlighted?",
    "accept": [
     "UK",
@@ -756,17 +756,17 @@
    "id": "geography.cap.gbr",
    "topic": "geography.capitals-1",
    "kind": "fact",
-   "prompt": "What is the capital of United Kingdom?",
+   "prompt": "What is the capital of the United Kingdom?",
    "answer": "London",
    "distractors": [
     "Manchester",
     "Edinburgh"
    ],
-   "explain": "The capital of United Kingdom is London.",
+   "explain": "The capital of the United Kingdom is London.",
    "map": "europe",
    "feature": "GBR",
    "fill": true,
-   "learn": "The capital of **United Kingdom** is **London**.",
+   "learn": "The capital of **the United Kingdom** is **London**.",
    "accept": []
   },
   {
@@ -951,7 +951,7 @@
    "layer": "countries",
    "feature": "NLD",
    "answer": "Netherlands",
-   "explain": "This is Netherlands.",
+   "explain": "This is the Netherlands.",
    "choosePrompt": "Which country is highlighted?",
    "accept": [
     "Holland",
@@ -962,17 +962,17 @@
    "id": "geography.cap.nld",
    "topic": "geography.capitals-1",
    "kind": "fact",
-   "prompt": "What is the capital of Netherlands?",
+   "prompt": "What is the capital of the Netherlands?",
    "answer": "Amsterdam",
    "distractors": [
     "Rotterdam",
     "Brussels"
    ],
-   "explain": "The capital of Netherlands is Amsterdam. Amsterdam is the capital, though the government sits in The Hague.",
+   "explain": "The capital of the Netherlands is Amsterdam. Amsterdam is the capital, though the government sits in The Hague.",
    "map": "europe",
    "feature": "NLD",
    "fill": true,
-   "learn": "The capital of **Netherlands** is **Amsterdam**. Amsterdam is the capital, though the government sits in The Hague.",
+   "learn": "The capital of **the Netherlands** is **Amsterdam**. Amsterdam is the capital, though the government sits in The Hague.",
    "accept": []
   },
   {
@@ -1260,12 +1260,14 @@
     "Brussels",
     "Strasbourg"
    ],
-   "explain": "The capital of Luxembourg is Luxembourg. Its capital has the same name: Luxembourg.",
+   "explain": "The capital of Luxembourg is Luxembourg. The country and its capital share a name: the city is often called Luxembourg City.",
    "map": "europe",
    "feature": "LUX",
    "fill": true,
-   "learn": "The capital of **Luxembourg** is **Luxembourg**. Its capital has the same name: Luxembourg.",
-   "accept": []
+   "learn": "The capital of **Luxembourg** is **Luxembourg**. The country and its capital share a name: the city is often called Luxembourg City.",
+   "accept": [
+    "Luxembourg City"
+   ]
   },
   {
    "id": "geography.eu.pol",

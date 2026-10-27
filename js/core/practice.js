@@ -30,6 +30,22 @@ export function keysUpTo(lessonIdx) {
 }
 
 /** The text for a lesson: pseudo-words from learned keys, real words, or sentences. ~40 words. */
+/**
+ * Words and sentences to type, from the course itself: its spelling words, topped up with
+ * everyday words from its passages and model sentences (courses without spelling lists, like
+ * Year 8, rely on these). Only lowercase a–z words, so every one can be typed as shown.
+ */
+export function wordBank(db) {
+  const sentences = db.sentences.map((s) => s.model).filter((m) => m && m.length < 110 && !/[“”_*{}]/.test(m));
+  const words = [...new Set(Object.values(db.items).filter((i) => i.kind === 'spell').map((i) => i.word).filter((w) => /^[a-z]+$/.test(w)))];
+  if (words.length < 80) {
+    const seen = new Set(words);
+    const texts = [...sentences, ...new Set(Object.values(db.items).filter((i) => !['greek', 'latin'].includes(i.subject)).map((i) => i.passage).filter(Boolean))];
+    for (const t of texts) for (const w of String(t).split(/[^A-Za-z’'-]+/)) if (/^[a-z]{3,9}$/.test(w) && !seen.has(w)) { seen.add(w); words.push(w); }
+  }
+  return { words, sentences };
+}
+
 export function drillText(lessonIdx, seed, { words = [], sentences = [] } = {}) {
   const lesson = TYPING_LESSONS[lessonIdx];
   const rng = makeRng(`type:${lesson.id}:${seed}`);

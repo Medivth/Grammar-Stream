@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { buildDB } from '../js/core/content.js';
-import { TYPING_LESSONS, drillText, keysUpTo, wpm, unlockedLessons, recordLesson, fingerFor, nextSpeed, speedPassages, SPEED_START } from '../js/core/practice.js';
+import { TYPING_LESSONS, drillText, keysUpTo, wpm, unlockedLessons, recordLesson, fingerFor, nextSpeed, speedPassages, SPEED_START, wordBank } from '../js/core/practice.js';
 
 const root = new URL('../content/', import.meta.url);
 const read = (p) => JSON.parse(readFileSync(new URL(p, root)));
@@ -46,4 +46,24 @@ test('speed-reading pace adapts to comprehension and rotates passages', () => {
   for (const p of ps) { assert.ok(p.items.length >= 3); assert.ok(!p.passage.startsWith('('), p.key); }
   const again = speedPassages(db, [{ day: 5, passage: ps[0].key }]);
   assert.notEqual(again[0].key, ps[0].key, 'the one just read goes to the back');
+});
+
+test('every course has words to type: lessons and the river race never show a blank word', () => {
+  for (const idx of ['index.json', 'index-ks1.json', 'index-y3.json', 'index-y8.json']) {
+    const cdb = buildDB(read(idx).decks.map(read));
+    const bank = wordBank(cdb);
+    assert.ok(bank.words.filter((w) => w.length <= 9).length >= 80, `${idx}: ${bank.words.length} words`);
+    for (const w of bank.words) assert.match(w, /^[a-z]+$/, `${idx}: ${w}`);
+    for (let i = 0; i < TYPING_LESSONS.length; i++) assert.ok(!/undefined/.test(drillText(i, 'blank', bank)), `${idx} lesson ${i + 1}`);
+  }
+});
+
+test('on the UK map the Severn is drawn about as long as the Thames (354 km against 346 km)', () => {
+  const uk = read('maps/uk.json');
+  const len = (id) => uk.rivers.find((r) => r.id === id).d.split('M').filter(Boolean).reduce((sum, seg) => {
+    const pts = seg.split('L').map((p) => p.split(',').map(Number));
+    return sum + pts.slice(1).reduce((s, p, i) => s + Math.hypot(p[0] - pts[i][0], p[1] - pts[i][1]), 0);
+  }, 0);
+  assert.ok(len('river-severn') >= 0.95 * len('river-thames'), `Severn ${len('river-severn')}, Thames ${len('river-thames')}`);
+  assert.ok(len('river-tay') > len('river-tweed'), 'the Tay is longer than the Tweed');
 });

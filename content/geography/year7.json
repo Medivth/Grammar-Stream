@@ -510,16 +510,18 @@
    "id": "geography.rv.nile",
    "topic": "geography.rivers",
    "kind": "fact",
-   "prompt": "Which is usually called the longest river in the world?",
+   "prompt": "Which river is usually listed as the longest in the world?",
    "answer": "the Nile",
    "distractors": [
-    "the Amazon",
+    "the Yangtze",
     "the Thames",
     "the Mississippi"
    ],
-   "explain": "The Nile (about 6650 km) is usually listed as longest; some measurements give the Amazon. The Amazon carries far more water than any other river.",
+   "explain": "The Nile, about 6,650 km, is usually listed as the longest. Some scientists measure the Amazon as slightly longer, so the two are close rivals; the Amazon carries far more water than any other river.",
    "accept": [
-    "nile"
+    "nile",
+    "river nile",
+    "the river nile"
    ]
   },
   {
@@ -1103,19 +1105,19 @@
     "the US"
    ],
    "choosePrompt": "Which country is highlighted?",
-   "explain": "This is United States."
+   "explain": "This is the United States."
   },
   {
    "id": "geography.wc.usa",
    "topic": "geography.americas",
    "kind": "fact",
-   "prompt": "What is the capital of United States?",
+   "prompt": "What is the capital of the United States?",
    "answer": "Washington, D.C.",
    "distractors": [
     "New York",
     "Los Angeles"
    ],
-   "explain": "The capital of United States is Washington, D.C.. Not New York!",
+   "explain": "The capital of the United States is Washington, D.C. Not New York!",
    "map": "world",
    "layer": "countries",
    "feature": "USA",
@@ -1128,7 +1130,7 @@
     "Washington",
     "Washington DC"
    ],
-   "learn": "The capital of **United States** is **Washington, D.C.**. Not New York!"
+   "learn": "The capital of **the United States** is **Washington, D.C.**. Not New York!"
   },
   {
    "id": "geography.w.can",
@@ -1709,19 +1711,19 @@
     "Congo"
    ],
    "choosePrompt": "Which country is highlighted?",
-   "explain": "This is Democratic Republic of the Congo."
+   "explain": "This is the Democratic Republic of the Congo."
   },
   {
    "id": "geography.wc.cod",
    "topic": "geography.africa",
    "kind": "fact",
-   "prompt": "What is the capital of Democratic Republic of the Congo?",
+   "prompt": "What is the capital of the Democratic Republic of the Congo?",
    "answer": "Kinshasa",
    "distractors": [
     "Brazzaville",
     "Lagos"
    ],
-   "explain": "The capital of Democratic Republic of the Congo is Kinshasa.",
+   "explain": "The capital of the Democratic Republic of the Congo is Kinshasa.",
    "map": "world",
    "layer": "countries",
    "feature": "COD",
@@ -1730,7 +1732,7 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Democratic Republic of the Congo** is **Kinshasa**."
+   "learn": "The capital of **the Democratic Republic of the Congo** is **Kinshasa**."
   },
   {
    "id": "geography.w.zaf",

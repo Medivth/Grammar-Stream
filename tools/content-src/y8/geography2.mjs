@@ -2,6 +2,7 @@
 // tourism, deserts, the polar regions, oceans, Africa and Nigeria, China, India, Brazil, the EU,
 // regeneration, fieldwork and GIS, sustainability, and more world places. GCSE-style written
 // answers in most topics, marked by a grown-up. Greek links where they fit; characters are original.
+import { the } from '../names.mjs';
 
 const fact = (id, topic, prompt, answer, distractors, explain, extra = {}) => ({ id: `geography.m.${id}`, topic: `geography.${topic}`, kind: 'fact', prompt, answer, distractors, explain, ...extra });
 const mcq = (id, topic, prompt, options, explain, extra = {}) => ({
@@ -281,10 +282,10 @@ const items = [
 
   // --- world places, part 2
   ...PLACES.flatMap(([id, name, capital, wrong, note, acceptName, acceptCap, cont]) => [
-    { id: `geography.m.pl.${id.toLowerCase()}`, topic: 'geography.places-2', kind: 'mapfact', map: 'world', layer: 'countries', feature: id, zoom: ZOOM[cont], answer: name, accept: acceptName, choosePrompt: 'Which country is highlighted?', explain: `This is ${name}. ${note}` },
-    fact(`plc.${id.toLowerCase()}`, 'places-2', `What is the capital of ${name}?`, capital, wrong, `The capital of ${name} is ${capital}. ${note}`, {
+    { id: `geography.m.pl.${id.toLowerCase()}`, topic: 'geography.places-2', kind: 'mapfact', map: 'world', layer: 'countries', feature: id, zoom: ZOOM[cont], answer: name, accept: acceptName, choosePrompt: 'Which country is highlighted?', explain: `This is ${the(name)}. ${note}` },
+    fact(`plc.${id.toLowerCase()}`, 'places-2', `What is the capital of ${the(name)}?`, capital, wrong, `The capital of ${the(name)} is ${capital.replace(/\.$/, '')}. ${note}`, {
       map: 'world', layer: 'countries', feature: id, zoom: ZOOM[cont], fill: true, accept: acceptCap,
-      learn: `The capital of **${name}** is **${capital}**. ${note}`,
+      learn: `The capital of **${the(name)}** is **${capital}**. ${note}`,
     }),
   ]),
 

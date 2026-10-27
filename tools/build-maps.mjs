@@ -5,6 +5,7 @@
 // Northern Cyprus as part of Cyprus and Somaliland as part of Somalia.
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { extendRivers } from './map-fixes.mjs';
 import { geoPath, geoNaturalEarth1, geoAzimuthalEqualArea, geoTransverseMercator, geoGraticule10, geoArea } from 'd3-geo';
 
 const SRC = new URL('../.cache/ne/', import.meta.url);
@@ -219,7 +220,7 @@ const SOVEREIGN_EUROPE = new Set('GBR IRL FRA ESP PRT DEU ITA NLD BEL CHE AUT NO
     const p = toPath(proj, r.geometry, { tol: 0.3 });
     if (p.d) (byRiver[n] ||= []).push(p.d);
   }
-  const riverLines = Object.entries(byRiver).map(([n, ds]) => ({ id: 'river-' + n.toLowerCase().replace(/[^a-z]+/g, '-'), name: `River ${n}`, d: ds.join('') }));
+  const riverLines = extendRivers(Object.entries(byRiver).map(([n, ds]) => ({ id: 'river-' + n.toLowerCase().replace(/[^a-z]+/g, '-'), name: `River ${n}`, d: ds.join('') })), proj);
   const CITIES = [
     ['london', 'London', -0.13, 51.51, 1], ['birmingham', 'Birmingham', -1.9, 52.48, 0], ['manchester', 'Manchester', -2.24, 53.48, 0], ['leeds', 'Leeds', -1.55, 53.8, 0],
     ['liverpool', 'Liverpool', -2.98, 53.41, 0], ['newcastle', 'Newcastle upon Tyne', -1.61, 54.98, 0], ['bristol', 'Bristol', -2.59, 51.45, 0], ['sheffield', 'Sheffield', -1.47, 53.38, 0],

@@ -1,4 +1,5 @@
 // Year 7 geography: map skills, physical processes, human geography and the wider world.
+import { the } from './names.mjs';
 
 const fact = (id, topic, prompt, answer, distractors, explain, extra = {}) => ({ id: `geography.${id}`, topic: `geography.${topic}`, kind: 'fact', prompt, answer, distractors, explain, ...extra });
 const mcq = (id, topic, prompt, options, explain, extra = {}) => ({
@@ -51,7 +52,7 @@ const items = [
   fact('rv.oxbow', 'rivers', 'A meander that has been cut off from the river forms…', 'an ox-bow lake', ['a waterfall', 'a delta', 'a gorge'], 'Erosion narrows the neck of a meander until the river cuts through, and deposition seals off the old loop.', { accept: ['ox-bow lake', 'oxbow lake', 'an oxbow lake'] }),
   fact('rv.waterfall', 'rivers', 'A waterfall forms where a river flows over hard rock lying on top of…', 'softer rock', ['ice', 'sand only', 'harder rock'], 'The soft rock erodes faster, undercutting the hard rock, which collapses. The waterfall moves upstream, leaving a gorge.', choiceOnly),
   fact('rv.floodplain', 'rivers', 'The flat land beside a river in its lower course, which floods, is called the…', 'floodplain', ['watershed', 'source', 'interlocking spur'], 'Each flood deposits silt, making floodplains very fertile.'),
-  fact('rv.nile', 'rivers', 'Which is usually called the longest river in the world?', 'the Nile', ['the Amazon', 'the Thames', 'the Mississippi'], 'The Nile (about 6650 km) is usually listed as longest; some measurements give the Amazon. The Amazon carries far more water than any other river.', { accept: ['nile'] }),
+  fact('rv.nile', 'rivers', 'Which river is usually listed as the longest in the world?', 'the Nile', ['the Yangtze', 'the Thames', 'the Mississippi'], 'The Nile, about 6,650 km, is usually listed as the longest. Some scientists measure the Amazon as slightly longer, so the two are close rivals; the Amazon carries far more water than any other river.', { accept: ['nile', 'river nile', 'the river nile'] }),
   order('rv.course', 'rivers', 'Put these river features in the order you would usually meet them, from source to mouth.', ['waterfall', 'meander', 'ox-bow lake', 'estuary'], null, 'Waterfalls in the upper course; meanders in the middle course; ox-bow lakes on the floodplain; the estuary at the mouth.'),
 
   // --- tectonics
@@ -134,10 +135,10 @@ const ACCEPT_CAP = { USA: ['Washington', 'Washington DC'], BRA: ['Brasilia'], CO
 const ACCEPT_NAME = { USA: ['USA', 'United States of America', 'America', 'the US'], COD: ['DR Congo', 'DRC', 'Congo'] };
 
 for (const [id, name, capital, wrong, topic, note] of WORLD) {
-  items.push({ id: `geography.w.${id.toLowerCase()}`, topic: `geography.${topic}`, kind: 'mapfact', map: 'world', layer: 'countries', feature: id, zoom: ZOOM[topic], answer: name, accept: ACCEPT_NAME[id] || [], choosePrompt: 'Which country is highlighted?', explain: `This is ${name}.` });
-  items.push(fact(`wc.${id.toLowerCase()}`, topic, `What is the capital of ${name}?`, capital, wrong, `The capital of ${name} is ${capital}.${note ? ' ' + note : ''}`, {
+  items.push({ id: `geography.w.${id.toLowerCase()}`, topic: `geography.${topic}`, kind: 'mapfact', map: 'world', layer: 'countries', feature: id, zoom: ZOOM[topic], answer: name, accept: ACCEPT_NAME[id] || [], choosePrompt: 'Which country is highlighted?', explain: `This is ${the(name)}.` });
+  items.push(fact(`wc.${id.toLowerCase()}`, topic, `What is the capital of ${the(name)}?`, capital, wrong, `The capital of ${the(name)} is ${capital.replace(/\.$/, '')}.${note ? ' ' + note : ''}`, {
     map: 'world', layer: 'countries', feature: id, zoom: ZOOM[topic], fill: true, accept: ACCEPT_CAP[id] || [],
-    learn: `The capital of **${name}** is **${capital}**.${note ? ' ' + note : ''}`,
+    learn: `The capital of **${the(name)}** is **${capital}**.${note ? ' ' + note : ''}`,
   }));
 }
 

@@ -4,16 +4,10 @@
 import { h, mount } from '../ui/dom.js';
 import { icon } from '../ui/icons.js';
 import { capybaraEl } from '../ui/capybara.js';
-import { TYPING_LESSONS, KEYBOARD_ROWS, drillText, wpm, unlockedLessons, recordLesson, fingerFor, PASS_ACCURACY } from '../core/practice.js';
+import { TYPING_LESSONS, KEYBOARD_ROWS, drillText, wpm, unlockedLessons, recordLesson, fingerFor, PASS_ACCURACY, wordBank } from '../core/practice.js';
 import { makeRng } from '../core/rng.js';
 
 const FINGER_COLOUR = { 'L little': '#d63d74', 'L ring': '#d97a12', 'L middle': '#0f9a6e', 'L index': '#2f74e8', 'R index': '#2f74e8', 'R middle': '#0f9a6e', 'R ring': '#d97a12', 'R little': '#d63d74', thumb: '#9a48d6' };
-
-function wordBank(db) {
-  const words = Object.values(db.items).filter((i) => i.kind === 'spell').map((i) => i.word).filter((w) => /^[a-z]+$/.test(w));
-  const sentences = db.sentences.map((s) => s.model).filter((m) => m && m.length < 110 && !/[“”_*{}]/.test(m));
-  return { words, sentences };
-}
 
 function keyboard(next) {
   const rows = KEYBOARD_ROWS.map((row, ri) => h('div', { class: 'kb-row', style: { paddingLeft: `${ri * 18}px` } }, [...row].map((k) => {

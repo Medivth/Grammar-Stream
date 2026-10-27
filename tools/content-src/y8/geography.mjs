@@ -2,6 +2,7 @@
 // tectonics and hazards, weather and climate change, rivers, coasts and ice, biomes, people and
 // cities, development, globalisation and energy, Russia, and places on the world map. Greek links
 // (Thera, the Aegean, the Mediterranean climate) where they fit; the characters are original.
+import { the } from '../names.mjs';
 
 const fact = (id, topic, prompt, answer, distractors, explain, extra = {}) => ({ id: `geography.${id}`, topic: `geography.${topic}`, kind: 'fact', prompt, answer, distractors, explain, ...extra });
 const mcq = (id, topic, prompt, options, explain, extra = {}) => ({
@@ -235,14 +236,14 @@ const items = [
   mcq('ae.quakes', 'aegean', 'Why does Greece have so many earthquakes?', [['The African Plate sinks beneath it', true], ['Poseidon strikes the ground with his trident', false, 'That was the ancient explanation; the evidence points to plate tectonics.'], ['Greece sits on the Mid-Atlantic Ridge', false, 'That runs through Iceland.'], ['Its old volcanoes are collapsing', false, 'Volcanoes like Thera exist, but most quakes come from the plates.']], 'This subduction zone (the Hellenic arc) also feeds the volcanoes of the southern Aegean, including Santorini.'),
   mcq('ae.olives', 'aegean', 'Why do olive trees grow so well in Greece?', [['They suit hot, dry summers', true], ['They need constant heavy rain', false, 'Far too dry in summer.'], ['They need cold, snowy winters', false, 'Olives hate long frosts.'], ['They grow best in volcanic ash', false, 'Some soils are volcanic, but the climate is the key.']], 'Small leathery leaves and deep roots help them survive summer drought. In myth, Athena gave the olive tree to Athens.'),
   mcq('ae.tourism', 'aegean', 'Mira notices that Santorini is packed with cruise passengers in summer. Which is a NEGATIVE impact of mass tourism on small islands?', [['Pressure on water and housing', true], ['More jobs in hotels and bars', false, 'That is a benefit, though often seasonal.'], ['More money for local restaurants', false, 'A benefit.'], ['Better ferry links to the mainland', false, 'Usually a benefit.']], 'Santorini has introduced limits on cruise ship visitors to manage the pressure.'),
-  ...MED.map(([id, name, note]) => ({ id: `geography.med.${id.toLowerCase()}`, topic: 'geography.aegean', kind: 'mapfact', map: 'europe', layer: 'countries', feature: id, answer: name, accept: [], choosePrompt: 'Which Mediterranean country is highlighted?', explain: `This is ${name}. ${note}` })),
+  ...MED.map(([id, name, note]) => ({ id: `geography.med.${id.toLowerCase()}`, topic: 'geography.aegean', kind: 'mapfact', map: 'europe', layer: 'countries', feature: id, answer: name, accept: [], choosePrompt: 'Which Mediterranean country is highlighted?', explain: `This is ${the(name)}. ${note}` })),
 
   // --- world places
   ...PLACES.flatMap(([id, name, capital, wrong, note, acceptName, acceptCap]) => [
-    { id: `geography.pl.${id.toLowerCase()}`, topic: 'geography.places', kind: 'mapfact', map: 'world', layer: 'countries', feature: id, zoom: ZOOM[CONT[id]], answer: name.replace(/^the /, '').replace(/^./, (c) => c.toUpperCase()), accept: [name, ...acceptName], choosePrompt: 'Which country is highlighted?', explain: `This is ${name}. ${note}` },
-    fact(`plc.${id.toLowerCase()}`, 'places', `What is the capital of ${name}?`, capital, wrong, `The capital of ${name} is ${capital}. ${note}`, {
+    { id: `geography.pl.${id.toLowerCase()}`, topic: 'geography.places', kind: 'mapfact', map: 'world', layer: 'countries', feature: id, zoom: ZOOM[CONT[id]], answer: name.replace(/^the /, '').replace(/^./, (c) => c.toUpperCase()), accept: [name, ...acceptName], choosePrompt: 'Which country is highlighted?', explain: `This is ${the(name)}. ${note}` },
+    fact(`plc.${id.toLowerCase()}`, 'places', `What is the capital of ${the(name)}?`, capital, wrong, `The capital of ${the(name)} is ${capital.replace(/\.$/, '')}. ${note}`, {
       map: 'world', layer: 'countries', feature: id, zoom: ZOOM[CONT[id]], fill: true, accept: acceptCap, ...(capital.length > 20 ? C : {}),
-      learn: `The capital of **${name}** is **${capital}**. ${note}`,
+      learn: `The capital of **${the(name)}** is **${capital}**. ${note}`,
     }),
   ]),
 
