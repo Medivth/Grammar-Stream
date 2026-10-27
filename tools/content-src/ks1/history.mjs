@@ -119,7 +119,7 @@ const items = [
   // --- firsts
   fact('fi.wright', 'firsts', 'Which two brothers made the first powered aeroplane flight in 1903?', 'the Wright brothers', ['the Grimm brothers', 'the Montgolfier brothers', 'the Romans'], 'Orville Wright flew for 12 seconds. The plane was called the Flyer.', C),
   fact('fi.amy', 'firsts', 'Which brave British pilot was the first woman to fly alone from England to Australia, in 1930?', 'Amy Johnson', ['Florence Nightingale', 'Mary Anning', 'Grace Darling'], 'She flew in a small plane called Jason. The trip took 19 days.', { accept: ['amy'] }),
-  fact('fi.moon', 'firsts', 'Who was the first person to walk on the Moon?', 'Neil Armstrong', ['Buzz Aldrin', 'Amy Johnson', 'Orville Wright'], 'On 20 July 1969. Buzz Aldrin stepped out next.', { accept: ['armstrong'] }),
+  fact('fi.moon', 'firsts', 'Who was the first person to walk on the Moon?', 'Neil Armstrong', ['Buzz Aldrin', 'Amy Johnson', 'Orville Wright'], 'Apollo 11 landed on 20 July 1969, and he stepped out a few hours later (early on 21 July, UK time). Buzz Aldrin stepped out next.', { accept: ['armstrong'] }),
   fact('fi.rocket', 'firsts', 'What was the name of a famous early steam train, built by George and Robert Stephenson in 1829?', 'Rocket', ['Spitfire', 'Flyer', 'Thunderbolt'], 'Stephenson’s Rocket won a race to find the best locomotive, at nearly 30 miles per hour!', { accept: ['the rocket', "stephenson's rocket", 'stephenson’s rocket'] }),
   order('fi.order', 'firsts', 'Put these firsts in order, earliest first.', ['Stephenson’s Rocket (steam train)', 'Wright brothers’ first flight', 'Amy Johnson flies to Australia', 'First person on the Moon'], '1829, 1903, 1930, 1969.'),
 

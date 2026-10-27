@@ -215,7 +215,7 @@ const MEMORY = {
   'pp.urban': { hook: 'Urban comes from the Latin “urbs”, a city.', example: 'In 1800 most people in Britain lived in the countryside; today over 80% live in towns and cities.' },
   'pp.population': { hook: 'Counting to 8 billion, one number a second, would take over 250 years.', example: 'That is well over 100 times the UK’s population of nearly 70 million.' },
   'pp.populous': { hook: 'India overtook China in 2023: more than 1 person in 6 on Earth lives in India.' },
-  'pp.development': { hook: 'The HDI mixes three things: a long life, a good education and a decent income.', example: 'Norway and Switzerland usually top the HDI table; the UK is usually in the top 20.' },
+  'pp.development': { hook: 'The HDI mixes three things: a long life, a good education and a decent income.', example: 'Iceland, Norway and Switzerland usually top the HDI table; the UK is usually in the top 20.' },
   'pp.life': { example: 'Life expectancy is about 81 in the UK, but under 60 in some countries, such as Chad and Nigeria.' },
 
   // capitals of the wider world (only where a link genuinely helps)

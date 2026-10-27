@@ -83,7 +83,7 @@ const PEAKS = [
 
 const items = [
   // --- how plants work
-  fact('pl.roots', 'plants', 'Which part of a plant takes in water from the soil and holds it in place?', 'the roots', ['the leaves', 'the flower', 'the petals'], 'Roots spread out underground to take in water and minerals, and anchor the plant.', { accept: ['roots', 'root'] }),
+  fact('pl.roots', 'plants', 'Which part of a plant takes in water from the soil and holds the plant in place?', 'the roots', ['the leaves', 'the flower', 'the petals'], 'Roots spread out underground to take in water and minerals, and anchor the plant.', { accept: ['roots', 'root'] }),
   fact('pl.stem', 'plants', 'Which part of a plant carries water up from the roots to the leaves?', 'the stem', ['the petals', 'the seeds', 'the flower'], 'The stem works like a bundle of tiny drinking straws, and holds the plant up towards the light.', { accept: ['stem', 'the trunk', 'trunk'] }),
   fact('pl.leaf', 'plants', 'Which part of a plant makes food using sunlight?', 'the leaves', ['the roots', 'the stem', 'the soil'], 'Leaves use sunlight, air and water to make the plant’s food. This is called photosynthesis.', { accept: ['leaves', 'leaf'] }),
   fact('pl.flower', 'plants', 'What is the main job of a flower?', 'to make seeds', ['to drink water', 'to hold the plant up', 'to make food from sunlight'], 'Flowers attract insects so they can be pollinated and make seeds.', C),
@@ -155,7 +155,7 @@ const items = [
   mcq('li.straight', 'light', 'Light travels in…', [['straight lines', true], ['curly lines', false, 'Light doesn’t bend round corners: that is why shadows form.'], ['circles', false, 'Light goes straight.']], 'Because light travels in straight lines, an object blocking it makes a shadow behind.'),
 
   // --- forces and magnets
-  mcq('fo.contact', 'forces', 'Which force does NOT need the objects to touch?', [['magnetism', true], ['friction', false, 'Friction needs two surfaces rubbing together.'], ['a push', false, 'A push needs contact.']], 'Magnetism (and gravity) act at a distance. Pushes, pulls and friction need contact.'),
+  mcq('fo.contact', 'forces', 'Which force does NOT need the objects to touch?', [['magnetism', true], ['friction', false, 'Friction needs two surfaces rubbing together.'], ['a push', false, 'A push needs contact.']], 'Magnetism (and gravity) act at a distance. Pushing or pulling something with your hands, and friction, need contact.'),
   mcq('fo.friction', 'forces', 'Friction is a force that…', [['slows things down when they rub', true], ['makes things float on water', false, 'That is not friction.'], ['only happens out in space', false, 'Friction happens everywhere surfaces touch.']], 'Rough surfaces make more friction; smooth surfaces make less.'),
   mcq('fo.ramp', 'forces', 'Rosa rolls a toy car down a ramp onto three surfaces. On which will it travel furthest?', [['smooth wooden floor', true], ['thick carpet', false, 'Carpet is rough: lots of friction.'], ['grass', false, 'Grass is bumpy and has lots of friction.']], 'The smoothest surface has the least friction, so the car rolls furthest.'),
   mcq('fo.fair', 'forces', 'To make the ramp test fair, what must stay the same each time?', [['the car, the ramp height and the start', true], ['the surface the car rolls onto', false, 'The surface is the ONE thing you change. Everything else stays the same.'], ['nothing: change everything each time', false, 'Then you couldn’t tell what made the difference.']], 'Change one thing (the surface); keep everything else the same.'),

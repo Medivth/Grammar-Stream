@@ -49,7 +49,7 @@ const SPELLINGS = {
     ['stomach', 'My ___ is rumbling.', 'where food goes after you swallow it', 'ch sounds like “k”.'],
     ['twelfth', 'Today is my ___ birthday.', 'number 12 in order', 'twelve → twelfth: the v becomes f, then add th.'],
     ['thorough', 'Give your room a ___ clean.', 'complete and careful', 'thor + ough (like borough).'],
-    ['queue', 'We waited in a long ___.', 'a line of people waiting', 'q-u-e-u-e: five letters, only one sound.'],
+    ['queue', 'We waited in a long ___.', 'a line of people waiting', 'q-u-e-u-e: five letters, but you only hear “kyoo”.'],
     ['lightning', 'A flash of ___ lit up the sky.', 'a flash of light in a storm', 'No e: lightning (not lightening).'],
     ['guarantee', 'I ___ you will love this film.', 'to promise for certain', 'Silent u after g: guar-an-tee.'],
     ['leisure', 'Swimming is my favourite ___ activity.', 'free time for enjoyment', 'ei, not ie: lei-sure.'],

@@ -84,7 +84,7 @@ export const KS1_GENERATORS_2 = {
     if (kind === 'jug') { const step = level === 3 ? 50 : 100, max = 500, k = rng.int(1, max / step - 1), v = k * step; if (v % 250 === 0 && level === 3) return KS1_GENERATORS_2.k1Scales(level, rng); return typed('How much water is in the jug, in millilitres?', v, `The scale goes up in ${step} ml steps: ${v} ml.`, [`Each mark is ${step} ml.`, `Count the marks up to the arrow: ${k}.`, `${k} × ${step} = ${v} ml.`], { unit: 'ml', diagram: { type: 'numline', min: 0, max, step, labels: [0, 250, 500].filter((x) => x % step === 0), mark: v } }); }
     const step = level === 1 ? 5 : 2, every = level === 3 ? 20 : 10, max = level === 3 ? 40 : 50, k = rng.int(1, max / step - 1), v = k * step;
     if (v % every === 0) return KS1_GENERATORS_2.k1Scales(level, rng);
-    return typed('What temperature does the thermometer show, in °C?', v, `Each mark is ${step}°C, so it shows ${v}°C.`, [`The labels go up in ${every}s, and each small mark is ${step}.`, `The arrow is ${k} marks along.`, `${k} × ${step} = ${v}°C.`], { unit: '°C', diagram: { type: 'numline', min: 0, max, step, labels: Array.from({ length: max / every + 1 }, (_, i) => i * every), mark: v } });
+    return typed('What temperature does the thermometer show, in °C?', v, `Each mark is ${step}°C, so it shows ${v}°C.`, [`The labels go up in ${every}s, and each small mark is ${step}.`, `The arrow is ${k} mark${k === 1 ? '' : 's'} along.`, `${k} × ${step} = ${v}°C.`], { unit: '°C', diagram: { type: 'numline', min: 0, max, step, labels: Array.from({ length: max / every + 1 }, (_, i) => i * every), mark: v } });
   },
 
   k1Grouping(level, rng) {

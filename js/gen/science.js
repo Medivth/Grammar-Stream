@@ -85,7 +85,7 @@ export const SCIENCE_GENERATORS = {
       const [name, ph, type] = rng.pick(SUBSTANCES);
       return choice(`${name[0].toUpperCase() + name.slice(1)} has a pH of about ${ph}. Is it an acid, an alkali or neutral?`, type === 'acid' ? 'acid' : type === 'alkali' ? 'alkali' : 'neutral',
         ['acid', 'alkali', 'neutral'].filter((x) => x !== type), rng, {
-          explain: `Below 7 is acidic, 7 is neutral, above 7 is alkaline. pH ${ph} is ${type === 'neutral' ? 'neutral' : type === 'acid' ? 'acidic' : 'alkaline'}.`,
+          explain: `Below 7 is acidic, 7 is neutral, above 7 is alkaline. pH ${ph} is ${type === 'neutral' ? 'neutral' : type === 'acid' ? 'acidic' : 'alkaline'}.${name === 'bleach' ? ' Safety: never mix bleach with an acid (or with other cleaners). It gives off poisonous chlorine gas.' : ''}`,
           steps: ['The pH scale runs from 0 to 14.', 'Below 7 = acid, 7 = neutral, above 7 = alkali.', `pH ${ph}, so it is ${type === 'neutral' ? 'neutral' : `an ${type}`}.`],
         });
     }
@@ -97,10 +97,11 @@ export const SCIENCE_GENERATORS = {
       });
     }
     const acidic = rng.chance(0.5);
-    const [name] = rng.pick(SUBSTANCES.filter((s) => s[2] === (acidic ? 'acid' : 'alkali')));
+    // Never ask how to neutralise bleach: bleach + acid gives off toxic chlorine gas.
+    const [name] = rng.pick(SUBSTANCES.filter((s) => s[2] === (acidic ? 'acid' : 'alkali') && s[0] !== 'bleach'));
     const fixers = acidic ? ['baking soda solution', 'milk of magnesia', 'soapy water'] : ['white vinegar', 'lemon juice'];
     const fix = rng.pick(fixers);
-    const wrongs = rng.sample(acidic ? ['white vinegar', 'fresh lemon juice', 'pure distilled water', 'a fizzy cola drink'] : ['soapy water', 'household bleach', 'pure distilled water', 'baking soda solution'], 3).filter((w) => !w.includes(name) && !name.includes(w) && w !== fix);
+    const wrongs = rng.sample(acidic ? ['white vinegar', 'fresh lemon juice', 'pure distilled water', 'a fizzy cola drink'] : ['soapy water', 'toothpaste', 'pure distilled water', 'baking soda solution'], 3).filter((w) => !w.includes(name) && !name.includes(w) && w !== fix);
     return choice(`Which of these could neutralise ${name}?`, fix, wrongs.slice(0, 2), rng, {
       explain: `${acidic ? 'An acid' : 'An alkali'} is neutralised by ${acidic ? 'an alkali' : 'an acid'}. ${fix[0].toUpperCase() + fix.slice(1)} is ${acidic ? 'an alkali' : 'an acid'}. Acid + alkali → salt + water.`,
       steps: [`${name[0].toUpperCase() + name.slice(1)} is ${acidic ? 'an acid' : 'an alkali'}.`, `To neutralise it I need ${acidic ? 'an alkali' : 'an acid'}.`, `${fix[0].toUpperCase() + fix.slice(1)} is ${acidic ? 'an alkali' : 'an acid'}, so it works.`],

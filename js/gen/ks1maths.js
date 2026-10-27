@@ -137,7 +137,8 @@ export const KS1_GENERATORS = {
         const n = rng.int(11, 99);
         return choice(`Is ${n} odd or even?`, n % 2 ? 'odd' : 'even', [n % 2 ? 'even' : 'odd'], rng, { explain: `Look at the ones digit: ${n % 10} is ${n % 2 ? 'odd' : 'even'}, so ${n} is ${n % 2 ? 'odd' : 'even'}.`, steps: ['Only the ones digit decides odd or even.', `The ones digit is ${n % 10}.`, `${n % 10} is ${n % 2 ? 'odd' : 'even'}, so ${n} is ${n % 2 ? 'odd' : 'even'}.`] });
       }
-      const step = rng.pick([3, 2, 5, 10]), down = rng.chance(0.5), start = rng.int(20, 60);
+      // Counting down never goes below zero: negative numbers are not Year 2 content.
+      const step = rng.pick([3, 2, 5, 10]), down = rng.chance(0.5), start = rng.int(down ? Math.max(20, 4 * step) : 20, 60);
       const seq = [0, 1, 2, 3].map((i) => start + (down ? -1 : 1) * i * step);
       const nxt = start + (down ? -1 : 1) * 4 * step;
       return typed(`What comes next?   ${seq.join(', ')}, ?`, nxt, `The rule is ${down ? 'take away' : 'add'} ${step}: ${seq.at(-1)} ${down ? '−' : '+'} ${step} = ${nxt}.`, ['I find the rule by looking at the gaps.', `Each step ${down ? 'goes down' : 'goes up'} by ${step}.`, `${seq.at(-1)} ${down ? '−' : '+'} ${step} = ${nxt}.`]);
@@ -157,12 +158,12 @@ export const KS1_GENERATORS = {
     }
     if (level === 2) {
       const a = rng.pick([2, 5, 10]), b = rng.int(2, 12);
-      if (rng.chance(0.5)) return typed(`${b} × ${a} =`, a * b, `${b} lots of ${a} = ${a * b}.`, [`I count in ${a}s, ${b} times.`, Array.from({ length: Math.min(b, 6) }, (_, i) => (i + 1) * a).join(', ') + (b > 6 ? '…' : '') + '.', `${b} × ${a} = ${a * b}.`]);
+      if (rng.chance(0.5)) return typed(`${b} × ${a} =`, a * b, `${b} lots of ${a} = ${a * b}.`, [`I count in ${a}s, ${b} times.`, Array.from({ length: Math.min(b, 6) }, (_, i) => (i + 1) * a).join(', ') + (b > 6 ? '…' : '.'), `${b} × ${a} = ${a * b}.`]);
       const thing = rng.pick(['stickers', 'space gems', 'tyres']);
       return typed(`${a * b} ${thing} are shared equally between ${a} friends. How many does each friend get?`, b, `${a * b} ÷ ${a} = ${b}, because ${a} × ${b} = ${a * b}.`,
         ['Sharing equally is dividing.', `I need ${a} × ? = ${a * b}.`, `${a} × ${b} = ${a * b}, so each friend gets ${b}.`]);
     }
-    const a = rng.pick([2, 3, 4, 5, 10]), b = rng.int(2, 12);
+    const a = rng.pick([2, 5, 10]), b = rng.int(2, 12);
     if (rng.chance(0.5)) return typed(`? × ${a} = ${a * b}`, b, `Count in ${a}s until you reach ${a * b}: that takes ${b} jumps. ${a * b} ÷ ${a} = ${b}.`, ['Division undoes multiplication.', `${a * b} ÷ ${a} = ?`, `${b}, because ${b} × ${a} = ${a * b}.`]);
     return typed(`How many groups of ${a} are there in ${a * b}?`, b, `${a * b} ÷ ${a} = ${b}.`, [`I count up in ${a}s to ${a * b}.`, `That is ${b} groups.`, `${a * b} ÷ ${a} = ${b}.`]);
   },
@@ -265,8 +266,9 @@ export const KS1_GENERATORS = {
     if (level < 3 || rng.chance(0.4)) {
       const i = rng.int(0, 3);
       const DAY = { Mon: 'Monday', Tue: 'Tuesday', Wed: 'Wednesday', Thu: 'Thursday' };
-      return typed(DAY[labels[i]] ? `How many rescues were there on ${DAY[labels[i]]}?` : `How many ${unit} did ${labels[i]} get?`, vals[i], `Each star is ${key}. ${labels[i]} has ${vals[i] / key} star${vals[i] === key ? '' : 's'}: ${vals[i]}.`,
-        [`The key says one star = ${key}.`, `${labels[i]} has ${Math.floor(vals[i] / key)} whole star${Math.floor(vals[i] / key) === 1 ? '' : 's'}${vals[i] % key ? ' and a half' : ''}.`, `That is ${vals[i]}.`], { diagram: dg });
+      const row = DAY[labels[i]] ? `${DAY[labels[i]]}’s row` : labels[i];
+      return typed(DAY[labels[i]] ? `How many rescues were there on ${DAY[labels[i]]}?` : `How many ${unit} did ${labels[i]} get?`, vals[i], `Each star is ${key}. ${row} has ${vals[i] % key ? `${Math.floor(vals[i] / key)} and a half stars` : `${vals[i] / key} star${vals[i] === key ? '' : 's'}`}: ${vals[i]}.`,
+        [`The key says one star = ${key}.`, `${row} has ${Math.floor(vals[i] / key)} whole star${Math.floor(vals[i] / key) === 1 ? '' : 's'}${vals[i] % key ? ' and a half' : ''}.`, `That is ${vals[i]}.`], { diagram: dg });
     }
     const [i, j] = rng.sample([0, 1, 2, 3], 2);
     const [hi, lo] = vals[i] >= vals[j] ? [i, j] : [j, i];

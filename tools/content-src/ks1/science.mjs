@@ -71,7 +71,7 @@ const items = [
   order('lc.chicken', 'lifecycles', 'Put the life cycle of a chicken in order.', ['egg', 'chick', 'young chicken', 'hen'], 'Egg → chick → young chicken → hen, which lays eggs.'),
   fact('lc.tadpole', 'lifecycles', 'What is a baby frog called?', 'tadpole', ['chick', 'calf', 'kitten'], 'Tadpoles live in water and breathe with gills, like fish.', { accept: ['a tadpole'] }),
   fact('lc.calf', 'lifecycles', 'What is a baby cow called?', 'calf', ['foal', 'lamb', 'kid'], 'A baby cow is a calf. A baby horse is a foal; a baby sheep is a lamb.', { accept: ['a calf'] }),
-  fact('lc.chrysalis', 'lifecycles', 'What is the hard case a caterpillar makes before it becomes a butterfly?', 'chrysalis', ['cocoon of a spider', 'shell', 'nest'], 'Inside the chrysalis, the caterpillar changes completely.', { accept: ['a chrysalis', 'pupa', 'a pupa'] }),
+  fact('lc.chrysalis', 'lifecycles', 'What is the hard case a caterpillar turns into before it becomes a butterfly?', 'chrysalis', ['cocoon of a spider', 'shell', 'nest'], 'Inside the chrysalis, the caterpillar changes completely.', { accept: ['a chrysalis', 'pupa', 'a pupa'] }),
 
   // --- plants
   fact('pl.roots', 'plants', 'Which part of a plant takes in water from the soil?', 'roots', ['petals', 'leaves', 'flower'], 'Roots hold the plant in the ground and take in water.', { accept: ['the roots', 'root'] }),
@@ -88,7 +88,7 @@ const items = [
   fact('hb.desert', 'habitats', 'Which animal is suited to a hot, dry desert?', 'camel', ['penguin', 'polar bear', 'frog'], 'Camels can go a long time without water.', C),
   fact('hb.ocean', 'habitats', 'Which animal lives in the ocean habitat?', 'shark', ['squirrel', 'camel', 'owl'], 'Sharks live in the ocean.', C),
   fact('hb.micro', 'habitats', 'Where would you find woodlice?', 'under a log or stone', ['in the sky', 'in a desert', 'on a beach towel'], 'Woodlice like dark, damp places. That is their microhabitat.', C),
-  fact('hb.rainforest', 'habitats', 'Which habitat is hot and wet, with tall trees and lots of rain?', 'a rainforest', ['a desert', 'the Arctic', 'a pond'], 'Rainforests have more kinds of animals and plants than anywhere else.', { accept: ['rainforest', 'the rainforest', 'jungle'] }),
+  fact('hb.rainforest', 'habitats', 'Which habitat is hot and wet, with tall trees and lots of rain?', 'a rainforest', ['a desert', 'the Arctic', 'a pond'], 'Rainforests have more kinds of animals and plants than any other habitat on land.', { accept: ['rainforest', 'the rainforest', 'jungle'] }),
   mcq('hb.capy', 'habitats', 'Capybaras live near rivers and lakes in South America. Why is that a good habitat for them?', [['They love swimming and water plants', true], ['They need lots of snow and ice', false, 'South America near rivers is warm.'], ['They hunt fish in the water', false, 'Capybaras are herbivores: they eat plants.']], 'Capybaras are excellent swimmers and can hide underwater from danger.'),
 
   // --- materials

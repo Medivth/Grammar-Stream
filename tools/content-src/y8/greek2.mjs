@@ -321,16 +321,30 @@ topics.push(
 const items = [];
 const push = (...xs) => items.push(...xs);
 
+// wrong options must not share a meaning with the right answer (or with what it accepts when typed)
+const senses = (en, accept = []) => new Set([en, ...accept].flatMap((s) => s.split(/[,;/]|\bor\b/)).map((s) => s.replace(/^\s*(I|a|an|the)\s+/i, '').trim().toLowerCase()).filter(Boolean));
+const clashes = (a, b) => [...a].some((s) => b.has(s));
+/** Three entries from others, starting at the given offsets and skipping any whose meaning overlaps mine. */
+function distinct(others, offsets, mine, meaningOf) {
+  const out = [];
+  for (let k = 0; out.length < 3 && k < offsets.length + others.length; k++) {
+    const w = others[(k < offsets.length ? offsets[k] : offsets[0] + k) % others.length];
+    if (!out.includes(w) && !clashes(meaningOf(w), mine)) out.push(w);
+  }
+  return out;
+}
+const article = (w) => (/^[aeiou]/i.test(w) ? 'an' : 'a');
 // same pattern as the vocabulary in greek.mjs: Greek→English (typed or chosen), English→Greek (chosen)
 SETS.forEach(([topic, , , , , list]) => {
   const prefix = `v${topic.split('-')[1]}`;
   list.forEach(([gr, en, deriv, accept, note], i) => {
     const others = list.filter((w) => w[0] !== gr);
-    const wrongEn = [others[(i + 1) % others.length][1], others[(i + 4) % others.length][1], others[(i + 7) % others.length][1]];
-    const wrongGr = [others[(i + 2) % others.length][0], others[(i + 5) % others.length][0], others[(i + 8) % others.length][0]];
+    // a wrong English meaning must not be one this word accepts; a wrong Greek word must not also mean “{en}”
+    const wrongEn = distinct(others, [i + 1, i + 4, i + 7], senses(en, accept), (w) => senses(w[1])).map((w) => w[1]);
+    const wrongGr = distinct(others, [i + 2, i + 5, i + 8], senses(en), (w) => senses(w[1], w[3])).map((w) => w[0]);
     const isVerb = en.startsWith('I ');
     const plain = en.split(/[,;(]/)[0].trim();
-    const extraAccept = isVerb || en === 'I' ? [] : [`a ${plain}`, `the ${plain}`];
+    const extraAccept = isVerb || en === 'I' ? [] : [`${article(plain)} ${plain}`, `the ${plain}`];
     push(fact(`${prefix}.${i + 1}`, topic, `What does **${gr}** mean?`, en, wrongEn, `${gr} = ${en}. English relatives: ${deriv}.${note ? ' ' + note : ''}`, { accept: [...accept, ...extraAccept], learn: `**${gr}** = ${en}\n_${deriv}_${note ? '\n' + note : ''}` }));
     push(fact(`${prefix}.en.${i + 1}`, topic, `Which is the Greek for **${en}**?`, gr, wrongGr, `${en} = ${gr}.`, C));
   });
@@ -476,9 +490,9 @@ const VOCAB_HOOKS = [
   ['v8.8', 'αγρος', 'ἀγρός (field) is a cousin of Latin ager: **agriculture** is field-culture.'],
   ['v8.9', 'ζωον', 'ζῷον (animal) → **zoo** and **zoology**. Note the little ι under the ω.'],
   ['v8.10', 'βους', 'βοῦς, βοός → **bucolic**, from βουκόλος, a cowherd. Homer calls Hera βοῶπις, ox-eyed.'],
-  ['v8.11', 'προβατον', 'πρόβατα (sheep) saved Odysseus: his men escaped the Cyclops’ cave clinging underneath them.'],
+  ['v8.11', 'προβατον', 'πρόβατα (sheep) saved Odysseus: he and his men escaped the Cyclops’ cave hidden underneath them.'],
   ['v8.12', 'κυων', 'κύων, κυνός (dog) → **cynic**: the Cynic Diogenes lived like a dog, in a large jar.'],
-  ['v8.13', 'εσθιω', 'ἐσθίω, aorist ἔφαγον: φαγ- gives **-phagus**, eater, as in oesophagus and sarcophagus.'],
+  ['v8.13', 'εσθιω', 'ἐσθίω, aorist ἔφαγον: φαγ- gives **-phagus**: a sarcophagus is a “flesh-eater”, and the oesophagus “carries what is eaten”.'],
   ['v8.14', 'πινω', 'πίνω, aorist ἔπιον: a **symposium** was a drinking party, a drinking together.'],
   ['v8.15', 'καθευδω', 'καθεύδω = κατά + εὕδω (sleep): the rough breathing turns κατ- into καθ-.'],
   ['v8.16', 'οικεω', 'οἰκέω (I live) is οἶκος (house) as a verb: **ecumenical**, of the whole inhabited world.'],

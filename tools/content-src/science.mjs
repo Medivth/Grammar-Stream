@@ -127,7 +127,7 @@ const MEMORY = {
   'f.newtons': { hook: '**N** for **N**ewton: forces are measured in newtons (N).', example: 'An apple weighs about 1 newton, fitting for the scientist in the falling-apple story!' },
   'f.air-res': { hook: 'Bigger surface, more air to push aside, more air resistance.', example: 'Drop a flat sheet of paper and it drifts down; scrunch the same sheet into a ball and it falls fast.' },
   'f.water-res': { hook: 'Streamlined = smooth and pointed, so water slips past instead of pushing back.', example: 'Swimmers push off the pool wall with their arms stretched into a point to cut through the water.' },
-  'f.lever': { hook: 'Archimedes: “Give me a lever long enough and I shall move the world.”', example: 'Scissors, a crowbar and a bottle opener are all levers turning on a pivot.' },
+  'f.lever': { hook: 'Archimedes is said to have boasted: “Give me a place to stand and I will move the Earth” (with a long enough lever).', example: 'Scissors, a crowbar and a bottle opener are all levers turning on a pivot.' },
   'f.pulley': { hook: 'A pulley turns your pull **down** into a lift **up**.', example: 'Pull a flagpole’s rope down and the flag goes up, thanks to a pulley at the top.' },
   'f.gears': { hook: 'Gears are toothed wheels that bite into each other, so turning one turns the next.', example: 'Changing to a low gear on a bike makes pedalling uphill easier.' },
   'f.gravity-who': { hook: 'The famous story: an apple falling from a tree set Newton thinking about gravity.', example: 'Newton’s childhood home, Woolsthorpe Manor in Lincolnshire, still has the apple tree linked to the story.' },

@@ -103,7 +103,7 @@ items.push(fact('uk.longest', 'uk', 'What is the longest river in the UK?', 'Riv
 const PEAKS = [['ben-nevis', 'Ben Nevis', 'Ben Nevis (1345 m), in Scotland, is the highest mountain in the UK.'], ['snowdon', 'Yr Wyddfa (Snowdon)', 'Yr Wyddfa (Snowdon), 1085 m, is the highest mountain in Wales.'], ['scafell', 'Scafell Pike', 'Scafell Pike (978 m) in the Lake District is the highest mountain in England.']];
 for (const [id, name, explain] of PEAKS) items.push(mapfact(`uk.p.${id}`, 'uk', 'uk', 'markers', id, name, explain, { choosePrompt: 'Which mountain is marked?', accept: id === 'snowdon' ? ['Snowdon', 'Yr Wyddfa'] : [], group: 'peak' }));
 items.push(fact('uk.highest', 'uk', 'What is the highest mountain in the UK?', 'Ben Nevis', ['Scafell Pike', 'Snowdon', 'Slieve Donard'], 'Ben Nevis in the Scottish Highlands is 1345 m high.'));
-items.push(mcq('uk.gb', 'uk', 'What is the difference between Great Britain and the United Kingdom?', [['The UK also includes Northern Ireland', true], ['They are exactly the same thing', false, 'Great Britain is an island. The UK is a country that also includes Northern Ireland.'], ['Great Britain includes Ireland; the UK does not', false, 'The Republic of Ireland is a separate country, not part of either.']], 'The UK = England + Scotland + Wales + Northern Ireland. Great Britain is the largest island: England, Scotland and Wales.'));
+items.push(mcq('uk.gb', 'uk', 'What is the difference between Great Britain and the United Kingdom?', [['The UK also includes Northern Ireland', true], ['They are exactly the same thing', false, 'Great Britain is an island. The UK is a country that also includes Northern Ireland.'], ['Great Britain includes Ireland; the UK does not', false, 'The Republic of Ireland is a separate country, not part of either.']], 'The UK = England + Scotland + Wales + Northern Ireland. Great Britain is the largest island in the British Isles: England, Scotland and Wales.'));
 
 // Europe
 for (const [id, name, capital, wrong, set] of EUROPE) {
@@ -216,7 +216,7 @@ const MEMORY = {
   'cap.pol': { example: 'Marie Curie, who discovered radium, was born in Warsaw.' },
   'cap.cze': { hook: '“Good King Wenceslas” was a real duke of Bohemia: his statue stands in Prague’s Wenceslas Square.' },
   'cap.svk': { hook: 'Bratislava sits on the Danube right by the Austrian border, only about an hour from Vienna.' },
-  'cap.hun': { hook: 'A HUNGry PEST: Budapest is Hungary’s. It was two cities, Buda and Pest, either side of the Danube.' },
+  'cap.hun': { hook: 'A HUNGry PEST: Budapest is Hungary’s. It was separate towns, Buda and Óbuda on one bank of the Danube and Pest on the other, joined in 1873.' },
   'cap.rou': { hook: 'ROAM-ania, then REST: you roam Romania, then rest in BuchaREST.' },
   'cap.svn': { hook: 'sLOVEnia has LOVE hidden in it, and Ljubljana’s symbol is a dragon, on its Dragon Bridge.' },
   'cap.srb': { hook: 'Belgrade means “white city”. It stands where the River Sava meets the Danube.' },

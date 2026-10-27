@@ -9,6 +9,8 @@ const choiceOnly = { formats: ['choice'] };
 // [word, sentence with ___, clue, the tricky part]
 const LISTS = {
   'Tricky Year 1 words': [
+    ['pull', '___ the rope!', 'tug towards you', 'Double l: p-u-l-l.'],
+    ['full', 'The rocket’s tank is ___.', 'cannot fit any more', 'Double l at the end, but -ful has one l.'],
     ['said', '“Ready, steady, go!” ___ the starter.', 'spoke', 'It sounds like “sed” but is spelt s-a-i-d.'],
     ['says', 'Mum ___ it is time for bed.', 'speaks (now)', 'Sounds like “sez”: s-a-y-s.'],
     ['were', 'The cars ___ very fast.', 'past of “are”', 'w-e-r-e: it rhymes with “her”.'],
@@ -95,8 +97,6 @@ const LISTS = {
     ['gold', 'The winner gets a ___ medal.', 'a shiny yellow metal', 'g-o-l-d.'],
     ['hold', '___ on tight!', 'keep in your hands', 'h-o-l-d.'],
     ['told', 'She ___ us a story.', 'past of tell', 't-o-l-d.'],
-    ['pull', '___ the rope!', 'tug towards you', 'Double l: p-u-l-l.'],
-    ['full', 'The rocket’s tank is ___.', 'cannot fit any more', 'Double l at the end, but -ful has one l.'],
   ],
 };
 const STRETCH = [
@@ -175,7 +175,7 @@ items.push(
   fact('wc.noun-phrase', 'word-classes', 'Which is the best expanded noun phrase?', 'the shiny silver rocket', ['the rocket zoomed off', 'rocket silver the shiny', 'shiny and silver'], 'An expanded noun phrase adds describing words: the shiny silver rocket.', choiceOnly),
   // punctuation
   mcq('pu.q', 'punctuation', 'Which sentence needs a question mark?', [['What is the biggest planet', true], ['The biggest planet is Jupiter', false, 'That tells you something: it is a statement.'], ['Look at Jupiter', false, 'That is a command.']], 'Questions ask something and end with ?.'),
-  mcq('pu.ex', 'punctuation', 'Which is an exclamation?', [['What a fast car that is!', true], ['Is that car fast?', false, 'That is a question.'], ['The car is fast.', false, 'That is a statement.']], 'Exclamations often start with “What” or “How” and show strong feeling: What a fast car that is!'),
+  mcq('pu.ex', 'punctuation', 'Which is an exclamation?', [['What a fast car that is!', true], ['Is that car fast?', false, 'That is a question.'], ['The car is fast.', false, 'That is a statement.']], 'In grammar, an exclamation starts with “What” or “How”, has a verb, and shows strong feeling: What a fast car that is!'),
   mcq('pu.cmd', 'punctuation', 'Which is a command (it tells you to do something)?', [['Put on your helmet.', true], ['I like my helmet.', false, 'That is a statement.'], ['Where is my helmet?', false, 'That is a question.']], 'Commands start with a bossy verb: Put, Go, Stop, Look.'),
   mcq('pu.cap', 'punctuation', 'Which sentence uses capital letters correctly?', [['On Monday, Sam went to London.', true], ['on monday, sam went to london.', false, 'Sentences, days, names and places all need capitals.'], ['On monday, Sam went to london.', false, 'Monday and London are names, so they need capitals too.']], 'Capitals for the start of a sentence, names, days, months and places, and the word I.'),
   mcq('pu.comma', 'punctuation', 'Where do the commas go in this list? “I saw a rocket a planet a star and a moon.”', [['I saw a rocket, a planet, a star and a moon.', true], ['I saw a rocket a planet, a star, and, a moon.', false, 'Commas go between the items, but not before “and” in a simple list.'], ['I saw, a rocket a planet a star and a moon.', false, 'The commas separate the items in the list.']], 'Use commas between items in a list, and “and” before the last one.'),

@@ -21,7 +21,7 @@ const topics = [
 
 const items = [
   // --- Stone Age to Iron Age
-  order('sa.ages', 'stoneage', 'Put these ages in order, earliest first.', ['Stone Age', 'Bronze Age', 'Iron Age'], 'Stone tools came first, then bronze (copper mixed with tin), then iron, which is harder still.'),
+  order('sa.ages', 'stoneage', 'Put these ages in order, earliest first.', ['Stone Age', 'Bronze Age', 'Iron Age'], 'Stone tools came first, then bronze (copper mixed with tin), then iron, which was much easier to find and, once smiths learned to harden it, made tougher tools.'),
   fact('sa.tools', 'stoneage', 'Stone Age people made sharp tools from a hard stone called…', 'flint', ['chalk', 'gold', 'plastic'], 'Flint can be chipped to make a very sharp edge.', C),
   fact('sa.stonehenge', 'stoneage', 'Which famous circle of giant stones was built in Britain about 5,000 years ago?', 'Stonehenge', ['Hadrian’s Wall', 'the Tower of London', 'the pyramids'], 'Stonehenge is in Wiltshire. Some stones came all the way from Wales!', C),
   fact('sa.mammoth', 'stoneage', 'Which huge hairy elephant did early Stone Age people hunt?', 'the woolly mammoth', ['the T. rex', 'the elephant seal', 'the hippo'], 'Woolly mammoths lived in cold places and had long curved tusks. Dinosaurs were long gone by then.', C),
@@ -74,7 +74,7 @@ const items = [
   mcq('vi.school', 'victorians', 'How was a Victorian school different from yours?', [['Children wrote on slates', true], ['They had computers in every room', false, 'No computers! They used slates and chalk.'], ['There were no teachers at all', false, 'There were teachers, and they were very strict.']], 'Children sat in rows, chanted their tables and wrote on slates.'),
   mcq('vi.work', 'victorians', 'What hard job did some poor Victorian children do?', [['Worked in factories and mines', true], ['Flew aeroplanes for the army', false, 'There were no aeroplanes yet.'], ['Worked on rockets in space', false, 'Space travel came 100 years later.']], 'Laws were slowly passed to stop young children working and send them to school.'),
   fact('vi.stamp', 'victorians', 'In 1840 Britain made the world’s first postage stamp. What was it called?', 'the Penny Black', ['the Golden Penny', 'the Red Rose', 'the Blue Peter'], 'It had Queen Victoria’s head on it and cost one penny.', C),
-  fact('vi.train', 'victorians', 'Which new kind of transport spread across Britain in Victorian times?', 'steam trains', ['jet planes', 'electric scooters', 'spaceships'], 'Railways meant people could travel to the seaside for the first time.', C),
+  fact('vi.train', 'victorians', 'Which new kind of transport spread across Britain in Victorian times?', 'steam trains', ['jet planes', 'electric scooters', 'spaceships'], 'Railways meant many ordinary families could travel to the seaside for the first time.', C),
   fact('vi.exhibition', 'victorians', 'In 1851 the Great Exhibition showed off inventions in a huge building made of glass. What was it called?', 'the Crystal Palace', ['the Glass Castle', 'Buckingham Palace', 'the Tower of London'], 'It was like a giant greenhouse in Hyde Park, London.', C),
   // --- Tudors (stretch)
   fact('tu.henry7', 'tudors', 'Who was the first Tudor king, in 1485?', 'Henry VII', ['Henry VIII', 'William I', 'Charles III'], 'Henry VII won the Battle of Bosworth. His son was Henry VIII.', { accept: ['henry the seventh', 'henry 7'] }),

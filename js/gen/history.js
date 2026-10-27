@@ -19,10 +19,10 @@ const EVENTS = [
   [1534, 'the Act of Supremacy'], [1588, 'the Spanish Armada'], [1605, 'the Gunpowder Plot'], [1666, 'the Great Fire of London'],
   [1837, 'Queen Victoria becoming queen'], [1914, 'the start of the First World War'], [1969, 'the first Moon landing'],
   [43, 'the Roman invasion of Britain'], [122, 'work starting on Hadrian’s Wall'], [410, 'the Romans leaving Britain'],
-  [793, 'the Viking raid on Lindisfarne'], [871, 'Alfred becoming king of Wessex'], [600, 'the Sutton Hoo ship burial (about)'],
+  [793, 'the Viking raid on Lindisfarne'], [871, 'Alfred becoming king of Wessex'], [625, 'the Sutton Hoo ship burial (about)'],
   [1800, 'the year 1800'], [1900, 'the year 1900'], [1700, 'the year 1700'], [1200, 'the year 1200'], [2000, 'the year 2000'],
   [-55, 'Julius Caesar’s first visit to Britain'], [-776, 'the first recorded Olympic Games'], [-2560, 'the Great Pyramid being finished (about)'],
-  [-3000, 'work starting on Stonehenge (about)'], [-490, 'the Battle of Marathon'], [-332, 'Alexander the Great conquering Egypt'],
+  [-1332, 'Tutankhamun becoming pharaoh (about)'], [-300, 'the year 300 BC'], [-490, 'the Battle of Marathon'], [-332, 'Alexander the Great conquering Egypt'],
 ];
 
 export const HISTORY_GENERATORS = {
@@ -34,9 +34,12 @@ export const HISTORY_GENERATORS = {
     const yearText = bc ? `${-year} BC` : year < 1000 ? `AD ${year}` : String(year);
     const answer = ordinal(c);
     const edge = !bc && year % 100 === 0;
+    // Approximate dates are kept well inside their century, so “about” never straddles a boundary.
+    const about = what.endsWith(' (about)');
+    const event = about ? what.slice(0, -' (about)'.length) : what;
     return {
       kind: 'typed',
-      prompt: what.startsWith('the year') ? `Which century is the year ${yearText} in?` : `${what[0].toUpperCase() + what.slice(1)}: ${yearText}. Which century is that?`,
+      prompt: what.startsWith('the year') ? `Which century is the year ${yearText} in?` : `${event[0].toUpperCase() + event.slice(1)}: ${about ? 'about ' : ''}${yearText}. Which century is that?`,
       answer,
       accept: [String(c), ORD_WORDS[c], `${answer} century`, `${ORD_WORDS[c]} century`, ...(bc ? [`${answer} century bc`, `${answer} bc`] : [])],
       strict: true,

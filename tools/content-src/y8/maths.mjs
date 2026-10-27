@@ -155,7 +155,7 @@ const MEMORY = {
   'maths.lg.product': { hook: '**Sum** add, **difference** subtract, **product** multiply, **quotient** divide.', example: 'A café’s takings are the product of price and number sold: 30 drinks at £2 make £60.' },
   'maths.lg.quotient': { hook: 'Quotient comes from Latin **quot, “how many”**: how many times one number goes into another.', example: '36 sweets shared between 4 friends: the quotient is 9 each.' },
   'maths.lg.hypotenuse': { hook: 'The hypotenuse is **always opposite the right angle**, and always the longest side.', example: 'On a wheelchair ramp, the sloping surface is the hypotenuse; the ground and the rise are the other two sides.' },
-  'maths.lg.polygon': { hook: 'An **oct**opus has 8 arms and an **oct**agon 8 sides; a **dec**ade is 10 years and a **dec**agon 10 sides.', example: 'The UK 20p and 50p coins both have 7 sides: they are heptagons.' },
+  'maths.lg.polygon': { hook: 'An **oct**opus has 8 arms and an **oct**agon 8 sides; a **dec**ade is 10 years and a **dec**agon 10 sides.', example: 'The UK 20p and 50p coins are based on heptagons: they have 7 sides, each slightly curved so the coin is the same width in every direction.' },
   'maths.lg.isosceles': { hook: '**Isos = equal, skelos = leg**: two equal legs, and two equal base angles.', example: 'The end wall of a house under a pitched roof is usually an isosceles triangle on top of a rectangle.' },
   'maths.lg.perpendicular': { hook: 'Perpendicular comes from **a plumb line**, a weight on a string that hangs at 90° to level ground.', example: 'The lines of a noughts-and-crosses grid and the corners of a door frame are perpendicular.' },
 };

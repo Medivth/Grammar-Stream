@@ -127,7 +127,12 @@ export const Y3_GENERATORS = {
     const a = add ? rng.int(201, 999 - k) : rng.int(k + 101, 999);
     const v = add ? a + k : a - k;
     const adjText = adj < 0 ? `${-adj} less` : `${adj} more`;
-    return typed(`${a} ${add ? '+' : '−'} ${k} =`, v, `${k} is ${near} ${adj < 0 ? `take away ${-adj}` : `add ${adj}`}. So ${add ? 'add' : 'take away'} ${near}, then adjust: ${v}.`, [`${k} is close to ${near} (${adjText}).`, `${a} ${add ? '+' : '−'} ${near} = ${add ? a + near : a - near}.`, `Then adjust by ${Math.abs(adj)}: ${v}.`]);
+    const mid = add ? a + near : a - near, d = Math.abs(adj);
+    // Which way to adjust: using the rounder number did too much (put it back) or too little (do a bit more).
+    const [fixShort, fixStep] = add
+      ? (adj < 0 ? [`take ${d} away`, `I added ${d} too many, so I take ${d} away: ${mid} − ${d} = ${v}.`] : [`add ${d} more`, `I need to add ${d} more: ${mid} + ${d} = ${v}.`])
+      : (adj < 0 ? [`add ${d} back`, `I took away ${d} too many, so I add ${d} back: ${mid} + ${d} = ${v}.`] : [`take away ${d} more`, `I need to take away ${d} more: ${mid} − ${d} = ${v}.`]);
+    return typed(`${a} ${add ? '+' : '−'} ${k} =`, v, `${k} is ${near} ${adj < 0 ? `take away ${-adj}` : `add ${adj}`}. So ${add ? 'add' : 'take away'} ${near}, then ${fixShort}: ${v}.`, [`${k} is close to ${near} (${adjText}).`, `${a} ${add ? '+' : '−'} ${near} = ${mid}.`, fixStep]);
   },
 
   y3Column(level, rng) {
@@ -288,7 +293,7 @@ export const Y3_GENERATORS = {
       return typed(`A sticker costs ${a}p and a badge costs ${b}p. How much is that altogether, in pence?`, a + b, `${a} + ${b} = ${a + b}p.`, ['I add the two prices.', `${a} + ${b}.`, `${a + b}p.`], { unit: 'p' });
     }
     if (level === 2) {
-      if (rng.chance(0.5)) { const pay = rng.pick([200, 500, 1000]), cost = rng.int(20, pay / 5 - 2) * 5; return typed(`A model racing car costs ${money(cost)}. You pay with ${money(pay)}. How much change do you get, in pence?`, pay - cost, `${pay}p − ${cost}p = ${pay - cost}p (${money(pay - cost)}).`, [`${money(pay)} = ${pay}p and ${money(cost)} = ${cost}p.`, `Count on from ${cost} to ${pay}.`, `${pay - cost}p.`], { unit: 'p' }); }
+      if (rng.chance(0.5)) { const pay = rng.pick([200, 500, 1000]), cost = rng.int(20, pay / 5 - 2) * 5; return typed(`A model racing car costs ${money(cost)}. You pay with ${money(pay)}. How much change do you get, in pence?`, pay - cost, `${pay}p − ${cost}p = ${pay - cost}p${pay - cost >= 100 ? ` (${money(pay - cost)})` : ''}.`, [`${money(pay)} = ${pay}p and ${money(cost)} = ${cost}p.`, `Count on from ${cost} to ${pay}.`, `${pay - cost}p.`], { unit: 'p' }); }
       const a = rng.int(21, 79) * 5, b = rng.int(21, 79) * 5;
       return typed(`A space poster costs ${money(a)} and a rocket kit costs ${money(b)}. How much do they cost altogether, in pence?`, a + b, `${a}p + ${b}p = ${a + b}p${a + b >= 100 ? ` (${money(a + b)})` : ''}.`, [`Change to pence: ${a}p and ${b}p.`, `${a} + ${b}.`, `${a + b}p = ${money(a + b)}.`], { unit: 'p' });
     }
@@ -308,8 +313,11 @@ export const Y3_GENERATORS = {
         const right = timeWords(h, m);
         return choice('What time does the clock show?', right, [timeWords(h, (m + 5) % 60 || 10), timeWords((h % 12) + 1, m), timeWords(h, 60 - m === m ? 25 : 60 - m)], rng, { explain: `The short hand is ${m < 30 ? `just past ${h}` : `between ${h} and ${(h % 12) + 1}, getting closer to ${(h % 12) + 1}`} and the long hand is on ${m / 5}, which means ${m} minutes past: ${right}.`, steps: ['The short hand shows the hour.', `The long hand points to ${m / 5}: count in 5s to get ${m} minutes past.`, right], diagram: { type: 'clock', h, m } });
       }
-      const morning = rng.chance(0.5), hh = morning ? rng.int(6, 11) : rng.int(1, 8);
-      return choice(`${morning ? 'Breakfast' : 'Football practice'} is at ${hh}:${pad(rng.pick([0, 15, 30, 45]))} in the ${morning ? 'morning' : 'afternoon'}. Is that a.m. or p.m.?`, morning ? 'a.m.' : 'p.m.', [morning ? 'p.m.' : 'a.m.'], rng, { explain: 'a.m. is from midnight to midday; p.m. is from midday to midnight.', steps: ['a.m. means before midday.', 'p.m. means after midday.', `${morning ? 'Morning' : 'Afternoon'}, so ${morning ? 'a.m.' : 'p.m.'}`] });
+      // Each activity comes with a time of day that suits it (no breakfast at 11:30).
+      const morning = rng.chance(0.5);
+      const [what, lo, hi, part] = rng.pick(morning ? [['Breakfast', 6, 8, 'morning'], ['A trip to the park', 9, 11, 'morning']] : [['Football practice', 1, 5, 'afternoon'], ['Bath time', 6, 8, 'evening']]);
+      const hh = rng.int(lo, hi);
+      return choice(`${what} is at ${hh}:${pad(rng.pick([0, 15, 30, 45]))} in the ${part}. Is that a.m. or p.m.?`, morning ? 'a.m.' : 'p.m.', [morning ? 'p.m.' : 'a.m.'], rng, { explain: 'a.m. is from midnight to midday; p.m. is from midday to midnight.', steps: ['a.m. means before midday.', 'p.m. means after midday.', `${part[0].toUpperCase() + part.slice(1)} is ${morning ? 'before' : 'after'} midday, so ${morning ? 'a.m.' : 'p.m.'}`] });
     }
     if (level === 2) {
       if (rng.chance(0.5)) {
@@ -342,7 +350,7 @@ export const Y3_GENERATORS = {
       return choice(prompt, right, ['a right angle', 'smaller than a right angle', 'bigger than a right angle'], rng, { explain: `Compare it with the corner of a piece of paper (a right angle). This angle is ${right}.`, steps: ['A right angle is a square corner, like the corner of a book.', `This angle is ${deg === 90 ? 'exactly a square corner' : deg < 90 ? 'narrower than a square corner' : 'wider than a square corner'}.`, `So it is ${right}.`], diagram: { type: 'angle', deg } });
     };
     if (level === 1) {
-      if (rng.chance(0.5)) { const [turn, n] = rng.pick([['a half turn', 2], ['a full turn', 4], ['a three-quarter turn', 3], ['a quarter turn', 1]]); return typed(`How many right angles make ${turn}?`, n, `A quarter turn is one right angle, so ${turn} is ${n}.`, ['A quarter turn = 1 right angle.', `${turn[2].toUpperCase() + turn.slice(3)} is ${n} quarter turn${n > 1 ? 's' : ''}.`, `${n} right angle${n > 1 ? 's' : ''}.`]); }
+      if (rng.chance(0.5)) { const [turn, n] = rng.pick([['a half turn', 2], ['a full turn', 4], ['a three-quarter turn', 3], ['a quarter turn', 1]]); if (n === 1) return typed(`How many right angles make ${turn}?`, n, 'A quarter turn is exactly one right angle.', ['A right angle is a square corner, like the corner of a book.', 'Turning through one square corner is a quarter of a full turn.', 'So a quarter turn is 1 right angle.']); return typed(`How many right angles make ${turn}?`, n, `A quarter turn is one right angle, and ${turn} is ${n} quarter turns, so it is ${n} right angles.`, ['A quarter turn = 1 right angle.', `${turn[0].toUpperCase() + turn.slice(1)} is ${n} quarter turns.`, `${n} right angles.`]); }
       return angleQ('Is this angle a right angle, smaller than a right angle, or bigger?', rng.pick([30, 45, 60, 90, 90, 120, 135, 150]));
     }
     if (level === 2) {
@@ -350,14 +358,14 @@ export const Y3_GENERATORS = {
       if (kind === 'angle') return angleQ('Look at the angle. How does it compare with a right angle?', rng.pick([40, 70, 80, 100, 110, 160]));
       if (kind === 'clock') {
         const [hh, right] = rng.pick([[3, 'a right angle'], [9, 'a right angle'], [1, 'smaller than a right angle'], [2, 'smaller than a right angle'], [4, 'bigger than a right angle'], [5, 'bigger than a right angle']]);
-        return choice(`At ${hh} o’clock, what angle do the clock hands make?`, right, ['a right angle', 'smaller than a right angle', 'bigger than a right angle'], rng, { explain: `At 3 and 9 o’clock the hands make a right angle. At ${hh} o’clock the angle is ${right}.`, steps: ['The long hand points at 12.', `The short hand points at ${hh}.`, `3 o’clock is a right angle, so ${hh} o’clock is ${right}.`], diagram: { type: 'clock', h: hh, m: 0 } });
+        return choice(`At ${hh} o’clock, what angle do the clock hands make?`, right, ['a right angle', 'smaller than a right angle', 'bigger than a right angle'], rng, { explain: hh === 3 || hh === 9 ? `At ${hh} o’clock the hands are a quarter turn apart, so they make a right angle.` : `At 3 and 9 o’clock the hands make a right angle. At ${hh} o’clock the angle is ${right}.`, steps: ['The long hand points at 12.', `The short hand points at ${hh}.`, hh === 3 || hh === 9 ? 'The hands are a quarter turn apart, so they make a right angle.' : `At 3 o’clock the hands make a right angle. The short hand points ${hh < 3 ? 'before' : 'past'} 3, so ${hh} o’clock is ${right}.`], diagram: { type: 'clock', h: hh, m: 0 } });
       }
       const DIRS = ['north', 'east', 'south', 'west'], s = rng.int(0, 3), n = rng.int(1, 3), cw = rng.chance(0.5), end = DIRS[(s + (cw ? n : -n) + 8) % 4], who = rng.pick(['Bleep', 'Turbo', '{hero}']);
       return choice(`${who} faces ${DIRS[s]} and turns ${n} right angle${n > 1 ? 's' : ''} ${cw ? 'clockwise' : 'anticlockwise'}. Which way is ${who} facing now?`, end, DIRS.filter((d) => d !== end), rng, { explain: `Each right angle is a quarter turn: ${DIRS[s]} → ${end}.`, steps: ['Clockwise: north, east, south, west.', `${n} quarter turn${n > 1 ? 's' : ''} ${cw ? 'clockwise' : 'anticlockwise'} from ${DIRS[s]}.`, `${who} faces ${end}.`] });
     }
     const kind = rng.pick(['degrees', 'minute', 'compass8']);
-    if (kind === 'degrees') { const [turn, d] = rng.pick([['a half turn', 180], ['a full turn', 360], ['a three-quarter turn', 270], ['two right angles', 180]]); return typed(`A right angle is 90 degrees. How many degrees are in ${turn}?`, d, `${turn[0] === 't' ? 'Two right angles' : turn[2].toUpperCase() + turn.slice(3)} is ${d / 90} × 90 = ${d} degrees.`, ['A right angle is 90°.', `${turn} is ${d / 90} right angle${d / 90 > 1 ? 's' : ''}.`, `${d / 90} × 90 = ${d}°.`]); }
-    if (kind === 'minute') { const [to, n] = rng.pick([[3, 1], [6, 2], [9, 3]]); return typed(`The minute hand turns clockwise from 12 to ${to}. How many right angles has it turned through?`, n, `12 to 3 is one right angle (a quarter turn), so 12 to ${to} is ${n}.`, ['12 to 3 is a quarter turn.', `12 to ${to} is ${n} quarter turn${n > 1 ? 's' : ''}.`, `${n} right angle${n > 1 ? 's' : ''}.`]); }
+    if (kind === 'degrees') { const [turn, d] = rng.pick([['a half turn', 180], ['a full turn', 360], ['a three-quarter turn', 270], ['two right angles', 180]]); return typed(`A right angle is 90 degrees. How many degrees are in ${turn}?`, d, `${turn[0].toUpperCase() + turn.slice(1)} is ${d / 90} × 90 = ${d} degrees.`, ['A right angle is 90°.', turn[0] === 't' ? 'Two right angles is 2 lots of 90°.' : `${turn[0].toUpperCase() + turn.slice(1)} is ${d / 90} right angles.`, `${d / 90} × 90 = ${d}°.`]); }
+    if (kind === 'minute') { const [to, n] = rng.pick([[3, 1], [6, 2], [9, 3]]); return typed(`The minute hand turns clockwise from 12 to ${to}. How many right angles has it turned through?`, n, n === 1 ? '12 to 3 is a quarter turn, which is 1 right angle.' : `12 to 3 is a quarter turn (1 right angle), and 12 to ${to} is ${n} quarter turns, so it is ${n} right angles.`, ['12 → 3 is a quarter turn.', n === 1 ? 'A quarter turn = 1 right angle.' : `12 → ${to} is ${n} quarter turns, and each quarter turn = 1 right angle.`, `${n} right angle${n > 1 ? 's' : ''}.`]); }
     const D8 = ['north', 'north-east', 'east', 'south-east', 'south', 'south-west', 'west', 'north-west'], s = rng.int(0, 7), half = rng.chance(0.5), cw = rng.chance(0.5);
     const step = half ? 4 : 2, end = D8[(s + (cw ? step : -step) + 16) % 8];
     return choice(`On an 8-point compass, Captain Nova faces ${D8[s]} and makes ${half ? 'a half turn' : 'a quarter turn ' + (cw ? 'clockwise' : 'anticlockwise')}. Which way does she face now?`, end, rng.shuffle(D8.filter((d) => d !== end)).slice(0, 3), rng, { explain: `${half ? 'A half turn faces the opposite way' : 'A quarter turn moves two points round the 8-point compass'}: ${D8[s]} → ${end}.`, steps: ['The 8-point compass adds north-east, south-east, south-west and north-west.', half ? 'A half turn is 4 points round.' : `A quarter turn is 2 points ${cw ? 'clockwise' : 'anticlockwise'}.`, end] });
@@ -407,7 +415,7 @@ export const Y3_GENERATORS = {
   y3TablesY4(level, rng) {
     const a = level === 1 ? rng.pick([6, 11]) : level === 2 ? rng.pick([7, 9, 12]) : rng.pick([6, 7, 9, 11, 12]), b = rng.int(2, 12);
     if (level === 3 && rng.chance(0.5)) return typed(`${a} × ? = ${a * b}`, b, `${a * b} ÷ ${a} = ${b}.`, ['Use the inverse.', `${a * b} ÷ ${a}.`, `${b}.`]);
-    const tip = { 6: `6 × ${b} is double 3 × ${b} (${3 * b}).`, 11: `For 11s up to 9, repeat the digit; then 10 × ${b} + ${b}.`, 7: `7 × ${b} = 5 × ${b} + 2 × ${b} = ${5 * b} + ${2 * b}.`, 9: `9 × ${b} = 10 × ${b} − ${b} = ${10 * b} − ${b}.`, 12: `12 × ${b} = 10 × ${b} + 2 × ${b} = ${10 * b} + ${2 * b}.` }[a];
+    const tip = { 6: `6 × ${b} is double 3 × ${b} (${3 * b}).`, 11: b <= 9 ? `For 11 × 1 up to 11 × 9, repeat the digit (${b} → ${11 * b}), or think 10 × ${b} + ${b} = ${11 * b}.` : `11 × ${b} = 10 × ${b} + ${b} = ${10 * b} + ${b}.`, 7: `7 × ${b} = 5 × ${b} + 2 × ${b} = ${5 * b} + ${2 * b}.`, 9: `9 × ${b} = 10 × ${b} − ${b} = ${10 * b} − ${b}.`, 12: `12 × ${b} = 10 × ${b} + 2 × ${b} = ${10 * b} + ${2 * b}.` }[a];
     if (rng.chance(0.5)) return typed(`${a * b} ÷ ${a} =`, b, `${b} × ${a} = ${a * b}, so ${a * b} ÷ ${a} = ${b}.`, ['Division undoes multiplication.', tip, `${b}.`]);
     return typed(`${a} × ${b} =`, a * b, `${a} × ${b} = ${a * b}. ${tip}`, [`I use a fact I know.`, tip, `${a * b}.`]);
   },
