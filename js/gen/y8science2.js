@@ -3,7 +3,8 @@
 // momentum (GCSE taster). Levels: secure Year 8, grammar-school depth, GCSE taster.
 // Uses g = 10 N/kg and c(water) = 4200 J/kg °C, as school courses do.
 
-const fmt = (x) => String(Math.round(x * 1000) / 1000);
+// 6 dp: enough to show values like 0.0125 and 0.0375 exactly (answers are checked exactly)
+const fmt = (x) => String(Math.round(x * 1e6) / 1e6);
 const typed = (prompt, value, unit, explain, steps, extra = {}) => ({ kind: 'typed', prompt, numeric: { value: fmt(value), form: 'any' }, unit, explain, steps, ...extra });
 function choice(prompt, correct, wrongs, rng, explain, steps) {
   const seen = new Set([correct]);

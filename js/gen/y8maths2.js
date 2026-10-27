@@ -16,6 +16,8 @@ const subs = (n) => String(n).split('').map((d) => SUB[+d]).join('');
 const F = (n, d = 1) => new Frac(n, d).simplify();
 const tex = (f) => show(f.toTex());
 const comma = (s) => String(s).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+/** 'an' when the number is said with a vowel sound: an 8, an 11, an 18, an 80–89, an 800… */
+const an = (n) => (/^8/.test(String(n)) || (/^1[18]/.test(String(n)) && String(n).length % 3 === 2) ? 'an' : 'a');
 
 /** Exact decimal text from an integer count of 10^-scale units ("-12.5" style, ASCII minus). */
 function dp(num, scale = 2) {
@@ -349,7 +351,7 @@ const G = {
       a *= g0; b *= g0;
       const g = gcd(a, b), A = a / g, B = b / g;
       const right = `${g === 1 ? '' : g}x(${A === 1 ? '' : A}x + ${B})`;
-      return choice(`Factorise fully: ${a}x² + ${b}x`, right, [`${g}(${A === 1 ? '' : A}x² + ${B}x)`, `x(${a}x + ${b})`, `${g}x(${A}x + ${b})`, `${g}x²(${A} + ${B}x)`].filter((t) => t !== right), rng, {
+      return choice(`Factorise fully: ${a}x² + ${b}x`, right, [`${g}(${co(A)}x² + ${co(B)}x)`, `x(${a}x + ${b})`, `${g}x(${co(A)}x + ${b})`, `${g}x²(${A} + ${co(B)}x)`].filter((t) => t !== right), rng, {
         explain: `The highest common factor of ${a}x² and ${b}x is ${g}x. ${a}x² ÷ ${g}x = ${A === 1 ? '' : A}x and ${b}x ÷ ${g}x = ${B}: ${right}.`, steps: [`HCF of ${a} and ${b} is ${g}; both terms contain x.`, `Take out ${g}x.`, `${right}. Expand to check.`],
       });
     }
@@ -384,13 +386,14 @@ const G = {
         let m = rng.int(2, 6), n = rng.int(2, 7);
         while (m === n) n = rng.int(2, 7);
         const k = rng.int(1, 6), x = rng.int(-4, 12), a = m * k - x, b = n * k - x;
-        return num(`Solve {{x + ${a}/${m}}} = {{x + ${b}/${n}}}.`.replace(/\+ -/g, '− '), x, `Cross-multiply: ${n}(x + ${a}) = ${m}(x + ${b}), so ${n}x + ${n * a} = ${m}x + ${m * b}. Then ${neg(n - m)}x = ${neg(m * b - n * a)}, x = ${neg(x)}.`.replace(/\+ -/g, '− '),
-          [`Multiply both sides by ${m} × ${n} (or cross-multiply).`, `${n}x + ${n * a} = ${m}x + ${m * b}.`.replace(/\+ -/g, '− '), `Collect: ${neg(n - m)}x = ${neg(m * b - n * a)}, so x = ${neg(x)}.`], { keypad: x >= 0 });
+        if (a === 0 || b === 0) return G.y8nEqFrac(level, rng);
+        return num(`Solve {{x + ${a}/${m}}} = {{x + ${b}/${n}}}.`.replace(/\+ -/g, '− '), x, `Cross-multiply: ${n}(x + ${a}) = ${m}(x + ${b}), so ${n}x + ${n * a} = ${m}x + ${m * b}. Then ${lin(n - m, 0)} = ${neg(m * b - n * a)}, x = ${neg(x)}.`.replace(/\+ -/g, '− '),
+          [`Multiply both sides by ${m} × ${n} (or cross-multiply).`, `${n}x + ${n * a} = ${m}x + ${m * b}.`.replace(/\+ -/g, '− '), `Collect: ${lin(n - m, 0)} = ${neg(m * b - n * a)}, so x = ${neg(x)}.`], { keypad: x >= 0 });
       }
       let a = rng.int(2, 6), b = rng.int(2, 8);
       while (a === b) b = rng.int(2, 8);
       const L = (a * b) / gcd(a, b), x = L * rng.int(1, 4), c = x / a + x / b;
-      return num(`Solve {{x/${a}}} + {{x/${b}}} = ${c}.`, x, `Multiply every term by ${L}: ${L / a}x + ${L / b}x = ${c * L}, so ${L / a + L / b}x = ${c * L} and x = ${x}.`, [`The LCM of ${a} and ${b} is ${L}.`, `× ${L}: ${L / a}x + ${L / b}x = ${c * L}.`, `${L / a + L / b}x = ${c * L}, x = ${x}.`]);
+      return num(`Solve {{x/${a}}} + {{x/${b}}} = ${c}.`, x, `Multiply every term by ${L}: ${co(L / a)}x + ${co(L / b)}x = ${c * L}, so ${L / a + L / b}x = ${c * L} and x = ${x}.`, [`The LCM of ${a} and ${b} is ${L}.`, `× ${L}: ${co(L / a)}x + ${co(L / b)}x = ${c * L}.`, `${L / a + L / b}x = ${c * L}, x = ${x}.`]);
     }
     const kind = rng.pick(['triangle', 'rectangle', 'ages']);
     if (kind === 'triangle') {
@@ -549,7 +552,7 @@ const G = {
       return num(`Two similar shields have areas ${A} cm² and ${A * k * k} cm². What is the length scale factor from the smaller to the larger?`, k, `Area scale factor = ${A * k * k} ÷ ${A} = ${k * k}. Length scale factor = √${k * k} = ${k}.`, ['Find the area scale factor first.', `${A * k * k} ÷ ${A} = ${k * k}.`, `Square root it: ${k}.`]);
     }
     const [p, q] = rng.pick([[2, 1], [3, 1], [3, 2], [4, 3], [5, 2], [4, 1]]);
-    const unitV = rng.int(1, 4), Vs = unitV * q ** 3, Vl = unitV * p ** 3, hs = q * rng.int(2, 6);
+    const unitV = rng.int(1, 4), Vs = unitV * q ** 3, Vl = unitV * p ** 3, hs = q * rng.int(3, 8) * 5; // realistic jar heights (15–40 cm per ratio unit)
     const litres = (n) => `${n} litre${n === 1 ? '' : 's'}`;
     if (rng.chance(0.5)) return num(`Two similar amphorae have volumes ${litres(Vs)} and ${litres(Vl)}. The smaller one is ${hs} cm tall. How tall is the larger one?`, (hs * p) / q, `Volume scale factor = {{${Vl}/${Vs}}} = {{${p ** 3}/${q ** 3}}}, so the length scale factor is the cube root: {{${p}/${q}}}. Height = ${hs} × {{${p}/${q}}} = ${(hs * p) / q} cm.`,
       [`Volume scale factor {{${Vl}/${Vs}}} = {{${p ** 3}/${q ** 3}}}.`, `Cube root for lengths: {{${p}/${q}}}.`, `${hs} × {{${p}/${q}}} = ${(hs * p) / q} cm.`], { unit: 'cm' });
@@ -601,7 +604,7 @@ const G = {
         const p = rng.int(1, 5), q = rng.int(1, 5), r = rng.int(1, 6), s = p + q + r;
         if (180 % s || p === q && q === r) continue;
         const x = 180 / s;
-        return num(`The angles of a triangle are ${lin(p, 0)}, ${lin(q, 0)} and ${lin(r, 0)}. Find x.`, x, `${lin(s, 0)} = 180, so x = ${x}°.`, ['Angles in a triangle add to 180°.', `${p}x + ${q}x + ${r}x = ${s}x.`, `${s}x = 180, x = ${x}.`], { unit: '°' });
+        return num(`The angles of a triangle are ${lin(p, 0)}, ${lin(q, 0)} and ${lin(r, 0)}. Find x.`, x, `${lin(s, 0)} = 180, so x = ${x}°.`, ['Angles in a triangle add to 180°.', `${co(p)}x + ${co(q)}x + ${co(r)}x = ${s}x.`, `${s}x = 180, x = ${x}.`], { unit: '°' });
       }
     }
     if (level === 2) {
@@ -704,7 +707,7 @@ const G = {
     const kind = rng.pick(['handshake', 'diagonals', 'repeat', 'pairs']);
     const n = rng.int(5, 15);
     if (kind === 'handshake') return num(`At a council of ${n} heroes, everyone shakes hands with everyone else once. How many handshakes are there?`, (n * (n - 1)) / 2, `Each of the ${n} shakes ${n - 1} hands, but that counts every handshake twice: ${n} × ${n - 1} ÷ 2 = ${(n * (n - 1)) / 2}.`, [`Each person: ${n - 1} handshakes.`, `${n} × ${n - 1} = ${n * (n - 1)} counts each one twice.`, `÷ 2 = ${(n * (n - 1)) / 2}.`]);
-    if (kind === 'diagonals') return num(`How many diagonals does a ${n}-sided polygon have?`, (n * (n - 3)) / 2, `From each vertex you can draw a diagonal to ${n - 3} others (not itself or its two neighbours). ${n} × ${n - 3} ÷ 2 = ${(n * (n - 3)) / 2}.`, [`Each vertex: ${n - 3} diagonals.`, `${n} × ${n - 3} = ${n * (n - 3)} counts each twice.`, `÷ 2 = ${(n * (n - 3)) / 2}.`]);
+    if (kind === 'diagonals') return num(`How many diagonals does ${an(n)} ${n}-sided polygon have?`, (n * (n - 3)) / 2, `From each vertex you can draw a diagonal to ${n - 3} others (not itself or its two neighbours). ${n} × ${n - 3} ÷ 2 = ${(n * (n - 3)) / 2}.`, [`Each vertex: ${n - 3} diagonals.`, `${n} × ${n - 3} = ${n * (n - 3)} counts each twice.`, `÷ 2 = ${(n * (n - 3)) / 2}.`]);
     if (kind === 'pairs') { const k = Math.min(n, 9); return num(`A team of 2 is chosen from ${k} Argonauts. How many different pairs are possible?`, (k * (k - 1)) / 2, `${k} × ${k - 1} ordered choices, but each pair is counted twice: ${(k * (k - 1)) / 2}.`, [`First person ${k} ways, second ${k - 1}.`, 'The order doesn’t matter, so divide by 2.', `${(k * (k - 1)) / 2}.`]); }
     const [word, len, rep] = rng.pick([['ATHENA', 6, 2], ['ODYSSEUS', 8, 6], ['APOLLO', 6, 4], ['HELLAS', 6, 2], ['ARTEMIS', 7, 1]]);
     let f = 1; for (let i = 2; i <= len; i++) f *= i;

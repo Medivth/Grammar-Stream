@@ -399,7 +399,7 @@ function describe(q) {
     }
     return q.options.find((o) => o.correct)?.text ?? '';
   }
-  if (q.kind === 'typed') return q.numeric ? `${q.prefix ? q.prefix + ' ' : ''}${q.unitBefore ? q.unit : ''}${q.numeric.value}${q.unit && !q.unitBefore ? q.unit : ''}` : q.answer;
+  if (q.kind === 'typed') return q.numeric ? `${q.prefix ? q.prefix + ' ' : ''}${q.unitBefore ? q.unit : ''}${q.numeric.value}${q.unit && !q.unitBefore ? (/^([%°′″]|p$)/.test(q.unit) ? '' : ' ') + q.unit : ''}` : q.answer;
   if (q.kind === 'order') return q.items.join(' → ');
   if (q.kind === 'map') return q.answer;
   if (q.kind === 'numberline') return `${q.targetLabel} (shown in green)`;

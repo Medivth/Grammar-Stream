@@ -146,7 +146,7 @@ export const Y8_COMPUTING2_GENERATORS = {
       return num(`What does this program print?\n${code(`word = "${w}"`, 'count = 0', 'for ch in word:', '    if ch in "AEIOU":', '        count = count + 1', 'print(count)')}`, v, `The loop looks at each letter of ${w}; ${v} of them are vowels.`, ['for ch in word: takes each character in turn.', 'ch in "AEIOU" is True for vowels.', `There are ${v} vowels.`]);
     }
     if (kind === 'reverse') {
-      const s = w.slice(0, rng.int(4, Math.min(6, w.length)));
+      const s = rng.pick(WORDS.filter((x) => x.length <= 7)); // whole words: a cut-off word looks like a misspelling
       return text(`What does this program print?\n${code(`word = "${s}"`, 'print(word[::-1])')}`, [...s].reverse().join(''), 'A slice with a step of −1 goes backwards through the string, reversing it.', ['[::-1] means: whole string, step −1.', `So it reads ${s} from the end.`, `It prints ${[...s].reverse().join('')}.`]);
     }
     const xs = sample(rng, GODS, 3), sep = rng.pick(['-', '+', '/']);
@@ -212,7 +212,9 @@ export const Y8_COMPUTING2_GENERATORS = {
       const right = scores.filter((s) => s >= pass).length, wrong = scores.filter((s) => s > pass).length;
       return choice(`A pass is ${pass} or more. This program should count the passes (${right}) but prints ${wrong}. Which change fixes it?\n${code(`scores = ${pyList(scores)}`, 'passes = 0', 'for s in scores:', `    if s > ${pass}:`, '        passes = passes + 1', 'print(passes)')}`, `Change s > ${pass} to s >= ${pass}`, [`Change s > ${pass} to s < ${pass}`, 'Change passes = 0 to passes = 1', `Change s > ${pass} to s == ${pass}`, 'Indent print(passes) inside the loop'], rng, { explain: `> leaves out a score of exactly ${pass}, which should count as a pass. >= includes it. (passes = 1 would give the right number here only by luck: it would be wrong for other data.)`, steps: [`One score is exactly ${pass}.`, `s > ${pass} is False for it, so it is not counted.`, `s >= ${pass} counts it: ${right}.`], _py: `scores = ${pyList(scores)}\npasses = 0\nfor s in scores:\n    if s >= ${pass}:\n        passes = passes + 1\nprint(passes)`, _expect: right, _pyBug: `scores = ${pyList(scores)}\npasses = 0\nfor s in scores:\n    if s > ${pass}:\n        passes = passes + 1\nprint(passes)`, _bugOut: wrong });
     }
-    const xs = Array.from({ length: 4 }, () => rng.int(2, 9) * 2);
+    // re-roll until the last score differs from the mean, or the bug would not show
+    let xs;
+    do xs = Array.from({ length: 4 }, () => rng.int(2, 9) * 2); while (xs[3] * 4 === xs.reduce((a, b) => a + b, 0));
     const right = xs.reduce((a, b) => a + b, 0) / 4;
     const wrongOut = xs[3];
     return choice(`This program should print the mean of the four scores (${right}) but prints ${wrongOut}. Which change fixes it?\n${code(`scores = ${pyList(xs)}`, 'for s in scores:', '    total = 0', '    total = total + s', 'print(total)')}`, 'Move total = 0 above the loop and print total / len(scores)', ['Change total = 0 to total = 1', 'Change for s in scores to for s in range(scores)', 'Print total * len(scores)', 'Move print(total) inside the loop'], rng, { explain: `total = 0 inside the loop resets the total every time, so only the last score (${wrongOut}) survives. Set it to 0 once, before the loop, then divide by len(scores) to get the mean.`, steps: ['Look at what happens to total on every pass.', `It is reset to 0 each time, so only ${wrongOut} is kept.`, `Initialise before the loop, then divide: ${xs.join(' + ')} = ${xs.reduce((a, b) => a + b, 0)}, ÷ 4 = ${right}.`], _py: `scores = ${pyList(xs)}\ntotal = 0\nfor s in scores:\n    total = total + s\nprint(total / len(scores))`, _expect: right, _pyBug: `scores = ${pyList(xs)}\nfor s in scores:\n    total = 0\n    total = total + s\nprint(total)`, _bugOut: wrongOut });
@@ -237,7 +239,7 @@ export const Y8_COMPUTING2_GENERATORS = {
     const present = rng.chance(0.7), target = present ? rng.pick(xs) : xs[rng.int(0, xs.length - 2)] + 1;
     let lo = 0, hi = xs.length - 1, loops = 0;
     while (lo <= hi) { loops++; const mid = Math.floor((lo + hi) / 2); if (xs[mid] === target) break; if (xs[mid] < target) lo = mid + 1; else hi = mid - 1; }
-    return num(`How many times does the while loop run?\n${code(`items = ${pyList(xs)}`, `target = ${target}`, 'low = 0', 'high = len(items) - 1', 'loops = 0', 'while low <= high:', '    loops = loops + 1', '    mid = (low + high) // 2', '    if items[mid] == target:', '        break', '    elif items[mid] < target:', '        low = mid + 1', '    else:', '        high = mid - 1', 'print(loops)')}`, loops, `Tracing low, high and mid: the loop runs ${loops} time${loops === 1 ? '' : 's'}${present ? ` before it finds ${target}` : ` before low passes high (${target} is not in the list)`}. A linear search could take up to ${xs.length}.`, ['Keep a trace table of low, high and mid.', 'Each time, half of what is left is thrown away.', `It runs ${loops} times.`]);
+    return num(`How many times does the while loop run?\n${code(`items = ${pyList(xs)}`, `target = ${target}`, 'low = 0', 'high = len(items) - 1', 'loops = 0', 'while low <= high:', '    loops = loops + 1', '    mid = (low + high) // 2', '    if items[mid] == target:', '        break', '    elif items[mid] < target:', '        low = mid + 1', '    else:', '        high = mid - 1', 'print(loops)')}`, loops, `Tracing low, high and mid: the loop runs ${loops} time${loops === 1 ? '' : 's'}${present ? ` before it finds ${target}` : ` before low passes high (${target} is not in the list)`}. A linear search could take up to ${xs.length}.`, ['Keep a trace table of low, high and mid.', 'Each time, half of what is left is thrown away.', `It runs ${loops} time${loops === 1 ? '' : 's'}.`]);
   },
 
   // --- efficiency ----------------------------------------------------------------------------
@@ -289,7 +291,7 @@ export const Y8_COMPUTING2_GENERATORS = {
     }
     if (level === 2) {
       const s = runs(4), e = rle(s);
-      return text(`A row of a black-and-white Greek-key pattern is stored with run-length encoding as ${e}. Decode it.`, s, `Expand each count: ${e.match(/\d+\D/g).map((p) => `${p} → ${p.slice(-1).repeat(+p.slice(0, -1))}`).join('; ')}.`, ['Read the number, then the character it applies to.', 'Write that character that many times.', `${s}.`], { _py: `import re\nprint("".join(ch * int(n) for n, ch in re.findall(r"(\\d+)(\\D)", "${e}")))` });
+      return text(`A row of a ${/^[BW]+$/.test(s) ? 'black-and-white ' : ''}Greek-key pattern is stored with run-length encoding as ${e}. Decode it.`, s, `Expand each count: ${e.match(/\d+\D/g).map((p) => `${p} → ${p.slice(-1).repeat(+p.slice(0, -1))}`).join('; ')}.`, ['Read the number, then the character it applies to.', 'Write that character that many times.', `${s}.`], { _py: `import re\nprint("".join(ch * int(n) for n, ch in re.findall(r"(\\d+)(\\D)", "${e}")))` });
     }
     const s = runs(rng.int(3, 5)), e = rle(s);
     return num(`${s} has ${s.length} characters. How many characters long is its run-length encoding?`, e.length, `The encoding is ${e}: ${e.length} characters, saving ${s.length - e.length}. RLE works well when there are long runs; for data like ABABAB it makes things BIGGER.`, ['Encode it first.', `Encoding: ${e}.`, `Length: ${e.length}.`], { _py: `from itertools import groupby\nprint(len("".join(str(len(list(g))) + k for k, g in groupby("${s}"))))` });
@@ -316,8 +318,8 @@ export const Y8_COMPUTING2_GENERATORS = {
   // --- HTML and CSS --------------------------------------------------------------------------
   y8dHTML(level, rng) {
     if (level === 1) {
-      const [g, b] = rng.pick([['Zeus', 'thunder'], ['Athena', 'wisdom'], ['Poseidon', 'the sea'], ['Apollo', 'the sun'], ['Hermes', 'messages'], ['Demeter', 'the harvest'], ['Artemis', 'the hunt']]);
-      if (rng.chance(0.5)) return text(`Which words appear in **bold** when this page is shown?\n${code(`<h1>${g}</h1>`, `<p>God of <b>${b}</b> and much more.</p>`)}`, b, `<b>…</b> makes the text between the tags bold: “${b}”.`, ['Tags come in pairs: <b> opens, </b> closes.', 'Only text between them is bold.', `“${b}”.`]);
+      const [g, b, title] = rng.pick([['Zeus', 'thunder', 'God'], ['Athena', 'wisdom', 'Goddess'], ['Poseidon', 'the sea', 'God'], ['Apollo', 'the sun', 'God'], ['Hermes', 'messages', 'God'], ['Demeter', 'the harvest', 'Goddess'], ['Artemis', 'the hunt', 'Goddess']]);
+      if (rng.chance(0.5)) return text(`Which words appear in **bold** when this page is shown?\n${code(`<h1>${g}</h1>`, `<p>${title} of <b>${b}</b> and much more.</p>`)}`, b, `<b>…</b> makes the text between the tags bold: “${b}”.`, ['Tags come in pairs: <b> opens, </b> closes.', 'Only text between them is bold.', `“${b}”.`]);
       const n = rng.int(3, 5), items = sample(rng, HEROES, n);
       return num(`How many bullet points does this page show?\n${code('<ul>', ...items.map((x) => `  <li>${x}</li>`), '</ul>')}`, n, `<ul> is an unordered (bulleted) list; each <li> is one item: ${n}.`, ['<ul> starts a bulleted list.', 'Each <li>…</li> is one bullet point.', `${n} bullets.`]);
     }

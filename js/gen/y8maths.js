@@ -15,7 +15,8 @@ const NAMES = { opp: 'opposite', adj: 'adjacent', hyp: 'hypotenuse' };
 const sup = (n) => (n < 0 ? '⁻' : '') + String(Math.abs(n)).split('').map((d) => SUP[+d]).join('');
 const F = (n, d = 1) => new Frac(n, d).simplify();
 const tex = (f, mixed = false) => show(f.toTex({ mixed }));
-const an = (n) => ([8, 11, 18, 80, 800].includes(n) ? 'an' : 'a');
+/** 'an' when the number is said with a vowel sound: an 8, an 11, an 18, an 80–89, an 800… */
+const an = (n) => (/^8/.test(String(n)) || (/^1[18]/.test(String(n)) && String(n).length % 3 === 2) ? 'an' : 'a');
 const plural = (n, one, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
 const nth = (n) => `${n}${[11, 12, 13].includes(n % 100) ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th'}`;
 const comma = (s) => String(s).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -615,7 +616,7 @@ const G = {
         return iq(`Solve ${neg(b)} − ${a}x ${sym} ${neg(c)}`, flip[sym], k, `−${a}x ${sym} ${neg(c - b)}. Dividing by a NEGATIVE number reverses the sign: x ${flip[sym]} ${neg(k)}.`,
           [`${b < 0 ? `Add ${-b}` : `Subtract ${b}`}: −${a}x ${sym} ${neg(c - b)}.`, `Divide by −${a}: dividing by a negative flips the inequality.`, `x ${flip[sym]} ${neg(k)}.`]);
       }
-      const a = rng.pick([2, 3, 4, 5]), b = rng.int(-7, 7), L = rng.int(-5, 2), H = L + rng.int(2, 6);
+      const a = rng.pick([2, 3, 4, 5]), b = rng.int(1, 7) * rng.pick([-1, 1]), L = rng.int(-5, 2), H = L + rng.int(2, 6);
       const count = H - L; // L < x ≤ H
       if (rng.chance(0.5)) {
         return alg(`Solve ${neg(a * L + b)} < ${a}x${sgn(b)} ≤ ${neg(a * H + b)}`, { answer: `${L} < x ≤ ${H}`, accept: [`${L} < x <= ${H}`, `${H} ≥ x > ${L}`, `${H} >= x > ${L}`] },
@@ -628,8 +629,8 @@ const G = {
     if (rng.chance(0.5)) {
       const a = rng.int(4, 9), c = rng.int(1, 3), k = rng.int(-3, 9), d = rng.pick([-9, -6, -4, -1, 2, 3, 5, 7, 9]), b = d + (c - a) * k, sym = rng.pick(['≥', '>', '≤']);
       if (b === 0) return G.y8mInequalities(level, rng);
-      return iq(`Solve ${a}x${sgn(b)} ${sym} ${c === 1 ? '' : c}x${sgn(d)}`, sym, k, `${a - c}x ${sym} ${neg(d - b)}, so x ${sym} ${neg(k)}.`,
-        [`Subtract ${c === 1 ? '' : c}x from both sides: ${a - c}x${sgn(b)} ${sym} ${neg(d)}.`, `${b < 0 ? `Add ${-b}` : `Subtract ${b}`}: ${a - c}x ${sym} ${neg(d - b)}.`, `Divide by ${a - c}: x ${sym} ${neg(k)}.`]);
+      return iq(`Solve ${a}x${sgn(b)} ${sym} ${c === 1 ? '' : c}x${sgn(d)}`, sym, k, `${ex([[a - c, 'x']])} ${sym} ${neg(d - b)}, so x ${sym} ${neg(k)}.`,
+        [`Subtract ${c === 1 ? '' : c}x from both sides: ${ex([[a - c, 'x']])}${sgn(b)} ${sym} ${neg(d)}.`, `${b < 0 ? `Add ${-b}` : `Subtract ${b}`}: ${ex([[a - c, 'x']])} ${sym} ${neg(d - b)}.`, a - c === 1 ? `So x ${sym} ${neg(k)}.` : `Divide by ${a - c}: x ${sym} ${neg(k)}.`]);
     }
     const M = rng.int(30, 120), a = rng.int(3, 9), f = rng.int(2, 9);
     const n = Math.floor((M - f) / a);
@@ -776,8 +777,9 @@ const G = {
           ['Co-interior angles (a C shape) add up to 180°.', `${a}x + ${p} + ${b}x${sgn(q)} = ${a + b}x${sgn(p + q)} = 180.`, `${a + b}x = ${180 - p - q}, x = ${x}.`]);
       }
       const q = a * x + p - b * x;
+      if (q === 0) return G.y8mAngles(level, rng);
       return num(`Two ${kind} angles between parallel lines are (${a}x + ${p})° and (${b}x${sgn(q)})°. Find x.`, x, `${kind === 'corresponding' ? 'Corresponding (F)' : 'Alternate (Z)'} angles are equal: ${a}x + ${p} = ${b}x${sgn(q)}, so x = ${x}.`,
-        [`${kind === 'corresponding' ? 'Corresponding angles (an F shape)' : 'Alternate angles (a Z shape)'} are equal.`, `${a}x + ${p} = ${b}x${sgn(q)}.`, `${b - a}x = ${p - q}, so x = ${x}.`]);
+        [`${kind === 'corresponding' ? 'Corresponding angles (an F shape)' : 'Alternate angles (a Z shape)'} are equal.`, `${a}x + ${p} = ${b}x${sgn(q)}.`, `${ex([[b - a, 'x']])} = ${p - q}, so x = ${x}.`]);
     }
     const kind = rng.pick(['ratio', 'pentagon', 'possible']);
     if (kind === 'ratio') {
@@ -790,7 +792,7 @@ const G = {
       const fifth = 540 - (x + 2 * x + (x + p) + 2 * x);
       if (fifth <= 0 || fifth >= 180) return G.y8mAngles(level, rng);
       const r = 3 * x - fifth;
-      if (r <= 0) return G.y8mAngles(level, rng);
+      if (r <= 0 || r === p) return G.y8mAngles(level, rng);
       return num(`A pentagon has angles x, 2x, x + ${p}, 2x and 3x − ${r} (in degrees). Find x.`, x, `Pentagon angles add up to 540°: 9x${sgn(p - r)} = 540, so x = ${x}.`,
         ['A pentagon splits into 3 triangles: 3 × 180 = 540°.', `x + 2x + x + ${p} + 2x + 3x − ${r} = 9x${sgn(p - r)}.`, `9x = ${540 - p + r}, x = ${x}.`], { unit: '°' });
     }
@@ -832,7 +834,7 @@ const G = {
     if (kind === 'semicircle') {
       const w = 2 * rng.int(2, 8), h = rng.int(4, 15), r = w / 2;
       const A = w * h * 100 + 157 * r * r;
-      return num(`A temple doorway is a ${w} m by ${h} m rectangle with a semicircle on top (its diameter is the ${w} m width). Using π = 3.14, what is the total area?`, dp(A, 2),
+      return num(`A temple doorway is ${an(w)} ${w} m by ${h} m rectangle with a semicircle on top (its diameter is the ${w} m width). Using π = 3.14, what is the total area?`, dp(A, 2),
         `Rectangle ${w * h} m². Semicircle ½ × 3.14 × ${r}² = ${dp(157 * r * r, 2)} m². Total ${dp(A, 2)} m².`,
         [`Rectangle: ${w} × ${h} = ${w * h} m².`, `Semicircle radius ${r}: ½ × 3.14 × ${r * r} = ${dp(157 * r * r, 2)} m².`, `Total: ${dp(A, 2)} m².`], { unit: 'm²' });
     }
@@ -1091,8 +1093,8 @@ const G = {
       const a = rng.int(2, 5), b = rng.int(1, 4), c = rng.int(1, 4);
       if (a === c) return G.y8mSimultaneous(level, rng);
       return pairQ(`Solve: ${a}x + ${b}y = ${neg(a * x + b * y)} and ${c === 1 ? '' : c}x + ${b}y = ${neg(c * x + b * y)}. Give (x, y).`.replace(/ 1y/g, ' y'), [x, y],
-        `The y terms match, so subtract: ${a - c}x = ${neg((a - c) * x)}, x = ${neg(x)}. Then ${b === 1 ? '' : b}y = ${neg(a * x + b * y)} − ${paren(a * x)}, so y = ${neg(y)}.`,
-        ['Both equations have the same y term: subtract to eliminate it.', `${a - c}x = ${neg((a - c) * x)}, x = ${neg(x)}.`, `Substitute: y = ${neg(y)}.`]);
+        `The y terms match, so subtract: ${ex([[a - c, 'x']])} = ${neg((a - c) * x)}, x = ${neg(x)}. Then ${b === 1 ? '' : b}y = ${neg(a * x + b * y)} − ${paren(a * x)}, so y = ${neg(y)}.`,
+        ['Both equations have the same y term: subtract to eliminate it.', `${ex([[a - c, 'x']])} = ${neg((a - c) * x)}, x = ${neg(x)}.`, `Substitute: y = ${neg(y)}.`]);
     }
     if (rng.chance(0.5)) {
       const o = rng.int(2, 12), l = rng.int(2, 12), [p, q, r, s] = [rng.int(2, 5), rng.int(1, 4), rng.int(1, 3), rng.int(2, 6)];

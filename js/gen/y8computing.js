@@ -32,7 +32,6 @@ const binAnswer = (prompt, n, w, explain, steps, extra = {}) => text(prompt, bin
 const HEROES = ['Perseus', 'Theseus', 'Jason', 'Atalanta', 'Odysseus', 'Achilles', 'Hippolyta', 'Orpheus', 'Cadmus', 'Bellerophon', 'Heracles', 'Penelope'];
 const GODS = ['Zeus', 'Hera', 'Athena', 'Apollo', 'Artemis', 'Hermes', 'Poseidon', 'Hades', 'Demeter', 'Ares', 'Hestia', 'Dionysus'];
 const WORDS = ['ZEUS', 'HERA', 'ARGO', 'TROY', 'HYDRA', 'ATHENA', 'HERMES', 'MEDUSA', 'ORACLE', 'DELPHI', 'SPARTA', 'OLYMPUS', 'TITAN', 'NYMPH', 'SPHINX', 'CYCLOPS'];
-const KIDS = ['Mira', 'Theo', 'Kit'];
 
 const sample = (rng, arr, k) => rng.shuffle(arr).slice(0, k);
 
@@ -199,7 +198,7 @@ export const Y8_COMPUTING_GENERATORS = {
       return binAnswer(`Capital A is 65 = \`01000001\` in ASCII. Write capital ${ch} as an 8-bit binary code.`, c, 8, `${ch} is ${c}, which is ${bin(c, 8)}.`, [`${ch} = 65 + ${c - 65} = ${c}.`, `Convert ${c} to binary: ${[128, 64, 32, 16, 8, 4, 2, 1].filter((v) => c & v).join(' + ')}.`, `${bin(c, 8)}.`]);
     }
     const [bits, chars] = rng.pick([[7, 128], [8, 256], [16, 65536]]);
-    return num(`How many different characters can a ${bits}-bit character set represent?`, chars, `2^{${bits}} = ${chars}. ${bits === 7 ? 'This is standard ASCII.' : bits === 8 ? 'Extended ASCII uses 8 bits.' : 'Unicode can use 16 bits (or more) to include every alphabet, Greek included.'}`, [`${bits} bits make 2^{${bits}} patterns.`, `2^{${bits}} = ${chars}.`, `Each pattern is one character: ${chars}.`]);
+    return num(`How many different characters can ${bits === 8 ? 'an' : 'a'} ${bits}-bit character set represent?`, chars, `2^{${bits}} = ${chars}. ${bits === 7 ? 'This is standard ASCII.' : bits === 8 ? 'Extended ASCII uses 8 bits.' : 'Unicode can use 16 bits (or more) to include every alphabet, Greek included.'}`, [`${bits} bits make 2^{${bits}} patterns.`, `2^{${bits}} = ${chars}.`, `Each pattern is one character: ${chars}.`]);
   },
 
   y8cCaesar(level, rng) {
@@ -252,7 +251,7 @@ export const Y8_COMPUTING_GENERATORS = {
       ['(A AND B) OR C', (a, b, c) => (a & b) | c],
       ['A AND (B OR C)', (a, b, c) => a & (b | c)],
       ['(A XOR B) AND C', (a, b, c) => (a ^ b) & c],
-      ['NOT A AND (B OR C)', (a, b, c) => (1 - a) & (b | c)],
+      ['(NOT A) AND (B OR C)', (a, b, c) => (1 - a) & (b | c)],
     ];
     const [expr, f] = rng.pick(exprs);
     let count = 0;
@@ -267,7 +266,7 @@ export const Y8_COMPUTING_GENERATORS = {
       const present = rng.chance(0.8);
       const t = present ? rng.pick(xs) : rng.pick(HEROES.filter((h) => !xs.includes(h)));
       const n = present ? xs.indexOf(t) + 1 : xs.length;
-      return num(`A linear search looks for ${t} in this list, starting from the left: ${list(xs)}. How many names does it check?`, n, present ? `It checks each name in turn and finds ${t} at position ${n}.` : `${t} is not in the list, so it checks all ${n} names before giving up.`, ['A linear search checks items one at a time from the start.', present ? `${t} is item number ${n}.` : `${t} is never found.`, `So ${n} checks.`]);
+      return num(`A linear search looks for ${t} in this list, starting from the left: ${list(xs)}. How many names does it check?`, n, present ? `It checks each name in turn and finds ${t} at position ${n}.` : `${t} is not in the list, so it checks all ${n} names before giving up.`, ['A linear search checks items one at a time from the start.', present ? `${t} is item number ${n}.` : `${t} is never found.`, `So ${n} check${n > 1 ? 's' : ''}.`]);
     }
     if (level === 2) {
       const n = rng.pick([7, 9, 11, 15]);
@@ -282,7 +281,7 @@ export const Y8_COMPUTING_GENERATORS = {
     }
     const n = rng.pick([7, 15, 31, 63, 100, 127, 255, 1000, 1023, 1000000]);
     const k = Math.floor(Math.log2(n)) + 1;
-    return num(`What is the largest number of items a binary search needs to check in a sorted list of ${n.toLocaleString('en-GB')} items?`, k, `Each check halves what is left. ${n.toLocaleString('en-GB')} can be halved down to 1 item within ${k} checks (2^{${k}} = ${(2 ** k).toLocaleString('en-GB')} > ${n.toLocaleString('en-GB')}). A linear search could need ${n.toLocaleString('en-GB')}!`, ['Each check throws away half of the list.', `Find the smallest k with 2^{k} > ${n.toLocaleString('en-GB')}.`, `k = ${k}.`]);
+    return num(`What is the largest number of items a binary search needs to check in a sorted list of ${n.toLocaleString('en-GB')} items?`, k, `Each check halves what is left. ${n.toLocaleString('en-GB')} can be halved down to 1 item within ${k} checks (2^{${k}} = ${(2 ** k).toLocaleString('en-GB')} > ${n.toLocaleString('en-GB')}). A linear search could need ${n.toLocaleString('en-GB')} checks!`, ['Each check throws away half of the list.', `Find the smallest k with 2^{k} > ${n.toLocaleString('en-GB')}.`, `k = ${k}.`]);
   },
 
   y8cSort(level, rng) {
@@ -300,8 +299,9 @@ export const Y8_COMPUTING_GENERATORS = {
       return num(`How many swaps happen in the first pass of a bubble sort (ascending) on ${list(xs)}?`, swaps, `Comparing each neighbouring pair left to right gives ${swaps} swaps, leaving ${list(once)}.`, ['Go through the pairs from left to right, swapping when the left one is bigger.', 'Keep track of the list as it changes.', `${swaps} swaps; the list becomes ${list(once)}.`]);
     }
     if (rng.chance(0.5)) {
-      const xs = make(6), k = rng.int(2, 3);
-      const done = [...xs.slice(0, k + 1).sort((a, b) => a - b), ...xs.slice(k + 1)];
+      let xs, k, done;
+      // re-roll if the passes change nothing, which would leave only two distinct options
+      do { xs = make(6); k = rng.int(2, 3); done = [...xs.slice(0, k + 1).sort((a, b) => a - b), ...xs.slice(k + 1)]; } while (list(done) === list(xs) || list(done) === list([...xs.slice(0, k + 2).sort((a, b) => a - b), ...xs.slice(k + 2)]));
       const wrongA = [...xs.slice(0, k).sort((a, b) => a - b), ...xs.slice(k)];
       const wrongB = xs.slice().sort((a, b) => a - b);
       const wrongC = [...xs.slice(0, k + 2).sort((a, b) => a - b), ...xs.slice(k + 2)];
@@ -321,8 +321,8 @@ export const Y8_COMPUTING_GENERATORS = {
         const v = a + b * c;
         return num(`What does this program print?\n${code(`a = ${a}`, `b = ${b}`, `c = a + b * ${c}`, 'print(c)')}`, v, `Multiplication before addition: ${b} × ${c} = ${b * c}, then ${a} + ${b * c} = ${v}.`, [`a is ${a} and b is ${b}.`, `c = ${a} + ${b} * ${c}: Python multiplies first, ${b * c}.`, `c = ${v}, so it prints ${v}.`]);
       }
-      const name = rng.pick(KIDS), n = rng.int(2, 9), add = rng.int(2, 9);
-      return num(`What does this program print?\n${code(`shields = ${n}`, `shields = shields + ${add}`, `shields = shields * 2`, 'print(shields)')}`, (n + add) * 2, `${name} starts with ${n}, adds ${add} to get ${n + add}, then doubles it: ${(n + add) * 2}.`, [`shields starts at ${n}.`, `After the second line it is ${n + add}.`, `After the third line it is ${(n + add) * 2}.`]);
+      const n = rng.int(2, 9), add = rng.int(2, 9);
+      return num(`What does this program print?\n${code(`shields = ${n}`, `shields = shields + ${add}`, `shields = shields * 2`, 'print(shields)')}`, (n + add) * 2, `shields starts at ${n}, adds ${add} to get ${n + add}, then doubles: ${(n + add) * 2}.`, [`shields starts at ${n}.`, `After the second line it is ${n + add}.`, `After the third line it is ${(n + add) * 2}.`]);
     }
     if (level === 2) {
       const kind = rng.pick(['divmod', 'string', 'cast']);
@@ -509,6 +509,6 @@ export const Y8_COMPUTING_GENERATORS = {
     const n = rng.int(12, 60), d = rng.pick([2, 3, 5]);
     let x = n, c = 0; const seq = [n];
     while (x >= d) { x = Math.floor(x / d); c++; seq.push(x); }
-    return num(`How many times does the loop body run?\n${code(`x = ${n}`, 'count = 0', `while x >= ${d}:`, `    x = x // ${d}`, '    count = count + 1', 'print(count)')}`, c, `x goes ${seq.join(' → ')}. That is ${c} time${c === 1 ? '' : 's'} round the loop.`, [`Each time, x is divided by ${d} (whole-number division).`, `x: ${seq.join(', ')}.`, `The loop stops when x is less than ${d}: ${c} times.`]);
+    return num(`How many times does the loop body run?\n${code(`x = ${n}`, 'count = 0', `while x >= ${d}:`, `    x = x // ${d}`, '    count = count + 1', 'print(count)')}`, c, `x goes ${seq.join(' → ')}. That is ${c} time${c === 1 ? '' : 's'} round the loop.`, [`Each time, x is divided by ${d} (whole-number division).`, `x: ${seq.join(', ')}.`, `The loop stops when x is less than ${d}: ${c} time${c === 1 ? '' : 's'}.`]);
   },
 };
