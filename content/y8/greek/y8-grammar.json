@@ -37,7 +37,7 @@
     "greek.verbs-1"
    ],
    "batch": 5,
-   "intro": "Personal pronouns: ἐγώ (I), σύ (you), ἡμεῖς (we), ὑμεῖς (you all). Greek uses ἐγώ or σύ as a subject only for emphasis, because the verb ending already says who. The busy word αὐτός has three jobs: “him, her, it, them” on its own; “-self” next to a noun (αὐτὸς ὁ βασιλεύς, the king himself); and “the same” after the article (ὁ αὐτὸς βασιλεύς, the same king).",
+   "intro": "Personal pronouns: ἐγώ (I), σύ (you), ἡμεῖς (we), ὑμεῖς (you all). Greek uses ἐγώ or σύ as a subject only for emphasis, because the verb ending already says who. The busy word αὐτός has three jobs: “him, her, it, them” on its own (in every case except the nominative); “-self” next to a noun (αὐτὸς ὁ βασιλεύς, the king himself); and “the same” after the article (ὁ αὐτὸς βασιλεύς, the same king).",
    "teach": "Explain the three meanings of αὐτός, with an example of each.",
    "talk": "Ask {him} the difference between αὐτὸς ὁ βασιλεύς and ὁ αὐτὸς βασιλεύς.",
    "hook": "**αὐτός** has three jobs: alone = him; outside the article = self; inside it = same."
@@ -129,7 +129,7 @@
     "greek.tenses"
    ],
    "batch": 5,
-   "intro": "Greek verbs have a third set of endings: λύομαι, λύεται, λυόμεθα, λύεσθε, λύονται. In the present these can be passive (“I am being freed”) or middle (“I free for myself”). Some verbs have only these endings but active meanings, like βούλομαι (I want) and γίγνομαι (I become): these are called deponents. “By” a person is ὑπό + genitive.",
+   "intro": "Greek verbs have a third set of endings: λύομαι, λύῃ, λύεται, λυόμεθα, λύεσθε, λύονται. In the present these can be passive (“I am being freed”) or middle (“I free for myself”). Some verbs have only these endings but active meanings, like βούλομαι (I want) and γίγνομαι (I become): these are called deponents. “By” a person is ὑπό + genitive.",
    "teach": "Explain what a deponent verb is, with an example.",
    "talk": "Ask {him} to translate “the horse is freed by the slave” into Greek.",
    "hook": "Middle and passive endings: **-ομαι, -ῃ, -εται, -ομεθα, -εσθε, -ονται**."
@@ -1082,7 +1082,7 @@
      "feedback": "That would be φεύγομεν αὐτούς."
     }
    ],
-   "explain": "In the nominative, αὐτός emphasises the subject: αὐτοὶ φεύγομεν, we flee by ourselves.",
+   "explain": "In the nominative, αὐτός emphasises the subject: αὐτοὶ φεύγομεν, we ourselves flee.",
    "hook": "αὐτός in the nominative stresses the subject: we ourselves."
   },
   {
@@ -1355,7 +1355,7 @@
     }
    ],
    "explain": "ὁ, ἡ, οἱ, αἱ have no accent. The relatives ὅς, ἥ, οἵ, αἵ always do.",
-   "hook": "Article: no accent. Relative: an accent and a rough breathing."
+   "hook": "Both have a rough breathing; only the relative has an accent."
   },
   {
    "id": "greek.g3.dm.these",
@@ -2702,7 +2702,7 @@
      "feedback": "ὁράω contracts: ὁρῶ."
     }
    ],
-   "explain": "Contracted verbs have a stem ending in a vowel (ε, α, ο) that merges with the ending. λύω’s endings stay as they are.",
+   "explain": "Contracted verbs have a stem ending in ε, α or ο, which merges with the ending. λύω’s endings stay as they are.",
    "hook": "λύω has no contraction: its endings stay as they are."
   },
   {
@@ -2805,7 +2805,7 @@
     "I fight",
     "I receive"
    ],
-   "explain": "βούλομαι = I want, wish (a deponent). The βουλή was the council: the people who decided what Athens wanted.",
+   "explain": "βούλομαι = I want, wish (a deponent). The βουλή was the Council, which prepared business for the Assembly to decide.",
    "accept": [
     "want",
     "i wish",
@@ -4261,7 +4261,7 @@
    "prompt": "What tense is **ᾖδεν**, and how do you know?",
    "options": [
     {
-     "text": "imperfect: it has an augment and present-stem endings",
+     "text": "imperfect: it has an augment and the present stem, with no σ",
      "correct": true
     },
     {
@@ -4272,7 +4272,7 @@
     {
      "text": "aorist: it has an augment and a σ",
      "correct": false,
-     "feedback": "ᾄδω → ᾖδον: the long ῃ is the augment."
+     "feedback": "There is no σ: the aorist would be ᾖσε(ν). ᾖδεν is the imperfect, with the long ῃ as the augment."
     }
    ],
    "explain": "ᾄδω, ᾖδον: I was singing. Here, with ὅτε, “whenever he sang”.",
@@ -4920,7 +4920,7 @@
    "passage": "ὁ δούρειος ἵππος\n\nδέκα ἔτη οἱ Ἕλληνες τὴν Τροίαν ἐπολιόρκουν. τέλος δὲ ὁ Ὀδυσσεύς, σοφώτατος τῶν Ἑλλήνων ὤν, ἐκέλευσε τοὺς Ἕλληνας ἵππον μέγιστον ἐκ ξύλων ποιῆσαι. οἱ μὲν ἄριστοι τῶν στρατιωτῶν εἰς τὸν ἵππον εἰσβάντες ἔμενον· οἱ δὲ ἄλλοι Ἕλληνες, τὰς σκηνὰς καύσαντες, ἀπέπλευσαν.\n\nοἱ δὲ Τρῶες τὸν ἵππον ἰδόντες ἐχάρησαν καὶ εἰς τὴν πόλιν εἵλκυσαν. τῆς δὲ νυκτὸς γενομένης, οἱ στρατιῶται ἐκ τοῦ ἵππου ἐξελθόντες τὰς πύλας τοῖς φίλοις ἀνέῳξαν. οὕτως οἱ Ἕλληνες τὴν Τροίαν εἷλον.\n\nGlossary: δούρειος = wooden; ἔτος, -ους (τό) = year; ἐπολιόρκουν = were besieging; τέλος = finally; σοφώτατος = wisest; ὤν = being; ξύλον = wood, timber; ποιῆσαι = to make (aorist infinitive); εἰσβάντες = having gone in; σκηνή = tent; καύσαντες = having burned; ἀπέπλευσαν = sailed away; Τρῶες = Trojans; ἰδόντες = having seen; ἐχάρησαν = rejoiced; εἵλκυσαν = dragged; γενομένης = having happened (here: having fallen); ἐξελθόντες = having come out; πύλαι = gates; ἀνέῳξαν = opened; εἷλον = captured.",
    "passageSource": "Adapted for this app from the fall of Troy",
    "hook": "The wooden horse was a trick to get inside.",
-   "example": "A computer virus that hides inside a harmless-looking program is called a Trojan horse."
+   "example": "A harmful program disguised as a harmless one is called a Trojan horse, or just a Trojan."
   },
   {
    "id": "greek.g3.ho.5",

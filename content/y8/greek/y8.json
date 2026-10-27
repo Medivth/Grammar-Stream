@@ -1228,7 +1228,7 @@
     {
      "text": "a letter for the h sound",
      "correct": false,
-     "feedback": "Ancient Greek has no letter for h: a rough breathing does that job. Η is capital eta."
+     "feedback": "The standard Greek alphabet has no letter for h: a rough breathing does that job. (Early Athenians wrote h with Η until they adopted the Ionic alphabet in 403 BC.) Η is capital eta."
     },
     {
      "text": "nu (ν)",
@@ -4252,7 +4252,7 @@
     "The slave flees.",
     "The slaves do not flee."
    ],
-   "explain": "ὁ δοῦλος οὐ φεύγει. → “The slave does not flee.” Find the verb, then the nominative (the subject), then the accusative (the object).",
+   "explain": "ὁ δοῦλος οὐ φεύγει. → “The slave does not flee.” Find the verb, then the nominative (the subject). There is no object here: φεύγει (flees) needs none.",
    "formats": [
     "choice"
    ],
@@ -4554,9 +4554,9 @@
    "prompt": "What does **καλός, καλή, καλόν** mean?",
    "answer": "beautiful",
    "distractors": [
-    "good",
     "small",
-    "just"
+    "just",
+    "terrible"
    ],
    "explain": "καλός = beautiful. English relatives: kaleidoscope (“seeing beautiful shapes”), calligraphy.",
    "accept": [
@@ -4632,8 +4632,8 @@
    "answer": "good",
    "distractors": [
     "small",
-    "brave",
-    "new"
+    "new",
+    "just"
    ],
    "explain": "ἀγαθός = good. English relatives: Agatha (“good woman”).",
    "accept": [
@@ -4652,7 +4652,7 @@
    "distractors": [
     "δεινός",
     "δίκαιος",
-    "καλός"
+    "χαλεπός"
    ],
    "explain": "good = ἀγαθός, ἀγαθή, ἀγαθόν.",
    "formats": [

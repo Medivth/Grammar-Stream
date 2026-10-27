@@ -216,8 +216,9 @@ export const Y8_COMPUTING2_GENERATORS = {
     let xs;
     do xs = Array.from({ length: 4 }, () => rng.int(2, 9) * 2); while (xs[3] * 4 === xs.reduce((a, b) => a + b, 0));
     const right = xs.reduce((a, b) => a + b, 0) / 4;
+    const shown = Number.isInteger(right) ? `${right}.0` : String(right); // / always gives a float in Python 3: 40 / 4 prints 10.0
     const wrongOut = xs[3];
-    return choice(`This program should print the mean of the four scores (${right}) but prints ${wrongOut}. Which change fixes it?\n${code(`scores = ${pyList(xs)}`, 'for s in scores:', '    total = 0', '    total = total + s', 'print(total)')}`, 'Move total = 0 above the loop and print total / len(scores)', ['Change total = 0 to total = 1', 'Change for s in scores to for s in range(scores)', 'Print total * len(scores)', 'Move print(total) inside the loop'], rng, { explain: `total = 0 inside the loop resets the total every time, so only the last score (${wrongOut}) survives. Set it to 0 once, before the loop, then divide by len(scores) to get the mean.`, steps: ['Look at what happens to total on every pass.', `It is reset to 0 each time, so only ${wrongOut} is kept.`, `Initialise before the loop, then divide: ${xs.join(' + ')} = ${xs.reduce((a, b) => a + b, 0)}, ÷ 4 = ${right}.`], _py: `scores = ${pyList(xs)}\ntotal = 0\nfor s in scores:\n    total = total + s\nprint(total / len(scores))`, _expect: right, _pyBug: `scores = ${pyList(xs)}\nfor s in scores:\n    total = 0\n    total = total + s\nprint(total)`, _bugOut: wrongOut });
+    return choice(`This program should print the mean of the four scores (${shown}) but prints ${wrongOut}. Which change fixes it?\n${code(`scores = ${pyList(xs)}`, 'for s in scores:', '    total = 0', '    total = total + s', 'print(total)')}`, 'Move total = 0 above the loop and print total / len(scores)', ['Change total = 0 to total = 1', 'Change for s in scores to for s in range(scores)', 'Print total * len(scores)', 'Move print(total) inside the loop'], rng, { explain: `total = 0 inside the loop resets the total every time, so only the last score (${wrongOut}) survives. Set it to 0 once, before the loop, then divide by len(scores) to get the mean.`, steps: ['Look at what happens to total on every pass.', `It is reset to 0 each time, so only ${wrongOut} is kept.`, `Initialise before the loop, then divide: ${xs.join(' + ')} = ${xs.reduce((a, b) => a + b, 0)}, ÷ 4 = ${right}${shown === String(right) ? '' : ` (Python prints ${shown}, because / always gives a decimal)`}.`], _py: `scores = ${pyList(xs)}\ntotal = 0\nfor s in scores:\n    total = total + s\nprint(total / len(scores))`, _expect: shown, _pyBug: `scores = ${pyList(xs)}\nfor s in scores:\n    total = 0\n    total = total + s\nprint(total)`, _bugOut: wrongOut });
   },
 
   // --- tracing algorithms --------------------------------------------------------------------
@@ -450,16 +451,18 @@ export const Y8_COMPUTING2_GENERATORS = {
     ];
     const [e, f, py] = rng.pick(exprs);
     const uses = (v) => new RegExp(`\\b${v}\\b`).test(e);
+    // how to start: brackets first if there are any; otherwise NOT binds tighter than AND
+    const first = e.includes('(') ? ['Work inside the brackets first.', 'Work out the brackets first.'] : e.startsWith('NOT') ? ['NOT applies first, to A only: (NOT A) AND B.', 'Work out NOT A first, then the AND.'] : ['There are no brackets: XOR is 1 when exactly one input is 1.', 'Compare A and B: are they different?'];
     if (level === 1 || level === 2 && rng.chance(0.4)) {
       const a = rng.int(0, 1), b = rng.int(0, 1), c = rng.int(0, 1);
       const out = f(!!a, !!b, !!c) ? 1 : 0;
-      return num(`What is the output of ${e} when ${['A', 'B', 'C'].filter(uses).map((v) => `${v} = ${{ A: a, B: b, C: c }[v]}`).join(', ')}? (Answer 1 or 0.)`, out, `Work inside the brackets first. With these inputs, ${e} is ${out}.`, ['NOT flips 0 and 1; AND needs both; OR needs at least one; XOR needs exactly one.', 'Work out the brackets first.', `The output is ${out}.`], { _py: `A, B, C = ${a === 1 ? 'True' : 'False'}, ${b === 1 ? 'True' : 'False'}, ${c === 1 ? 'True' : 'False'}\nprint(1 if (${py}) else 0)` });
+      return num(`What is the output of ${e} when ${['A', 'B', 'C'].filter(uses).map((v) => `${v} = ${{ A: a, B: b, C: c }[v]}`).join(', ')}? (Answer 1 or 0.)`, out, `${first[0]} With these inputs, ${e} is ${out}.`, ['NOT flips 0 and 1; AND needs both; OR needs at least one; XOR needs exactly one.', first[1], `The output is ${out}.`], { _py: `A, B, C = ${a === 1 ? 'True' : 'False'}, ${b === 1 ? 'True' : 'False'}, ${c === 1 ? 'True' : 'False'}\nprint(1 if (${py}) else 0)` });
     }
     if (level === 2) {
       const vars = ['A', 'B', 'C'].filter(uses), n = vars.length;
       let count = 0;
       for (let m = 0; m < 2 ** n; m++) { const v = { A: false, B: false, C: false }; vars.forEach((x, i) => { v[x] = !!((m >> i) & 1); }); if (f(v.A, v.B, v.C)) count++; }
-      return num(`A truth table for ${e} has ${2 ** n} rows (every combination of ${vars.join(', ')}). In how many rows is the output 1?`, count, `Working through all ${2 ** n} combinations, the output is 1 in ${count} of them.`, [`${n} inputs give 2^{${n}} = ${2 ** n} rows.`, 'Work out the output for each row.', `${count} rows give 1.`], { _py: `from itertools import product\nprint(sum(1 for ${vars.join(', ')} in product([False, True], repeat=${n}) if (${py})))` });
+      return num(`A truth table for ${e} has ${2 ** n} rows (every combination of ${vars.join(', ')}). In how many rows is the output 1?`, count, `Working through all ${2 ** n} combinations, the output is 1 in ${count} of them.`, [`${n} inputs give 2^{${n}} = ${2 ** n} rows.`, 'Work out the output for each row.', `${count} ${count === 1 ? 'row gives' : 'rows give'} 1.`], { _py: `from itertools import product\nprint(sum(1 for ${vars.join(', ')} in product([False, True], repeat=${n}) if (${py})))` });
     }
     const vars = ['A', 'B', 'C'].filter(uses);
     const rowsT = [];

@@ -127,7 +127,7 @@ export const Y8_SCIENCE2_GENERATORS = {
     }
     const t = rng.pick([0.2, 0.4, 0.6, 1, 1.6, 2]);
     if (level === 2) return typed(`A ship’s sonar pulse returns from the seabed after ${t} s. Sound travels at 1500 m/s in sea water. How deep is the sea?`, (1500 * t) / 2, 'm', `There and back: 1500 × ${t} = ${fmt(1500 * t)} m, so the depth is ${fmt((1500 * t) / 2)} m.`, ['distance = speed × time', `1500 × ${t} = ${fmt(1500 * t)} m for the round trip`, `÷ 2 = ${fmt((1500 * t) / 2)} m`]);
-    const f = rng.pick([20000, 25000, 40000, 50000]), lam = 1500 / f;
+    const f = rng.pick([25000, 30000, 40000, 50000]), lam = 1500 / f; // ultrasound is above 20 000 Hz
     return typed(`An ultrasound wave of frequency ${f} Hz travels through water at 1500 m/s. What is its wavelength, in mm?`, lam * 1000, 'mm', `λ = v ÷ f = 1500 ÷ ${f} = ${fmt(lam)} m = ${fmt(lam * 1000)} mm.`, ['wave speed = frequency × wavelength, so λ = v ÷ f', `1500 ÷ ${f} = ${fmt(lam)} m`, `× 1000 = ${fmt(lam * 1000)} mm`]);
   },
 

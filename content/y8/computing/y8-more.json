@@ -930,7 +930,7 @@
    ],
    "explain": "A format check compares input with a pattern.",
    "hook": "**Format check: does it fit the pattern?**",
-   "example": "Postcodes like SW1A 1AA and email addresses with an @ in them are checked for format."
+   "example": "Postcodes like OX1 2JD and email addresses with an @ in them are checked for format."
   },
   {
    "id": "computing.m.rb.valid",
@@ -1253,7 +1253,7 @@
     {
      "text": "install a dice",
      "correct": false,
-     "feedback": "It is a built-in module."
+     "feedback": "It is part of Python’s standard library: it comes with Python, but you import it first."
     },
     {
      "text": "define randint itself",
@@ -3289,7 +3289,7 @@
     0,
     1
    ],
-   "hook": "**Work inside the brackets first**, and give each gate its own column in the truth table.",
+   "hook": "**Brackets first, then NOT, then AND, then OR**, and give each gate its own column in the truth table.",
    "example": "A seatbelt warning beeps when (the engine is on AND the seatbelt is NOT fastened)."
   },
   {

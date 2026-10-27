@@ -115,7 +115,7 @@ const items = [
   fact('pt.diag', 'patterns', 'How many diagonals does a decagon (10 sides) have?', '35', ['45', '70', '10'], 'Each of the 10 vertices joins to 7 others by a diagonal (not itself or its 2 neighbours). 10 × 7 = 70 counts each diagonal twice: 35.'),
   mcq('pt.fib', 'patterns', 'In the sequence 1, 1, 2, 3, 5, 8, 13, … each term is the sum of the two before. How many of the first 30 terms are even?', '10', [['15', 'Evens are not every other term: the pattern is odd, odd, even.'], ['9', 'Every third term is even: the 3rd, 6th, …, 30th. That is 10.'], ['12', 'Only every third term is even.'], ['0', '2, 8 and 34 are even.']], 'Odd + odd = even, then odd + even = odd, then even + odd = odd: the pattern odd, odd, even repeats. Every third term is even: 30 ÷ 3 = 10.'),
   fact('pt.stars', 'patterns', 'Pattern number n has n² + n stars. Which pattern has 132 stars?', '11', ['12', '10', '66'], 'n² + n = n(n + 1) = 132 = 11 × 12, so n = 11.'),
-  mcq('pt.cubes', 'patterns', 'The odd numbers are written in rows: 1 / 3 5 / 7 9 11 / 13 15 17 19 / … What is the sum of the 10th row?', '1000', [['100', 'Row sums are 1, 8, 27, 64: cubes, not squares.'], ['190', 'Check the first rows: 1, 8, 27, 64.'], ['550', 'The rows add to 1, 8, 27, 64, …'], ['1100', 'Row n adds to exactly n³.']], 'Row sums are 1, 8, 27, 64, …: the cubes. Row 10 adds to 10³ = 1000. (Its middle is 100 and there are 10 numbers.)'),
+  mcq('pt.cubes', 'patterns', 'The odd numbers are written in rows: 1 / 3 5 / 7 9 11 / 13 15 17 19 / … What is the sum of the 10th row?', '1000', [['100', 'Row sums are 1, 8, 27, 64: cubes, not squares.'], ['190', 'Check the first rows: 1, 8, 27, 64.'], ['550', 'The rows add to 1, 8, 27, 64, …'], ['1100', 'Row n adds to exactly n³.']], 'Row sums are 1, 8, 27, 64, …: the cubes. Row 10 adds to 10³ = 1000. (Its numbers, 91 to 109, average 100, and there are 10 of them.)'),
   fact('pt.403', 'patterns', 'A sequence starts at 3 and goes up by 4 each time: 3, 7, 11, … Which term is 403?', '101', ['100', '102', '400'], 'The nth term is 4n − 1. 4n − 1 = 403 gives n = 101.'),
   mcq('pt.100th', 'patterns', 'What is the 100th term of 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, …?', '14', [['10', 'By the end of the 10s you have only written 55 terms.'], ['13', 'The 13s end at term 91; terms 92 to 105 are 14.'], ['15', 'The 14s run from term 92 to term 105.'], ['50', 'Each number n is written n times.']], 'The last n appears at term 1 + 2 + … + n = n(n + 1)/2. 13 × 14 ÷ 2 = 91 and 14 × 15 ÷ 2 = 105, so term 100 is a 14.'),
   fact('pt.dbl', 'patterns', 'Start at 1 and repeatedly double and add 1: 1, 3, 7, 15, … What is the 10th term?', '1023', ['1024', '511', '2047'], 'Each term is one less than a power of 2: 2ⁿ − 1. The 10th is 2¹⁰ − 1 = 1023.'),
@@ -279,7 +279,7 @@ const MEMORY = {
   'maths.ps.dg.abba': { hook: '**AB + BA = 11(A + B)**: a two-digit number plus its reverse is always a multiple of 11.', example: '47 + 74 = 121 = 11 × 11, and 23 + 32 = 55 = 11 × 5.' },
   'maths.ps.dg.last7': { hook: '**Last digits of powers cycle**: 7, 9, 3, 1, then repeat every 4.', example: 'It is like days of the week: to find the 100th, you only need the remainder after dividing by the cycle length.' },
   'maths.ps.dg.prod120': { hook: '**Fewest digits, then smallest digit first**: fewer digits always make a smaller number.' },
-  'maths.ps.dg.pal': { hook: 'A four-digit palindrome is **abba**: only the first two digits are free choices.', example: '2002 and 2112 were palindromic years; the next one after 2112 is 2222.' },
+  'maths.ps.dg.pal': { hook: 'A four-digit palindrome is **abba**: only the first two digits are free choices.', example: '2002 was a palindromic year; the next ones are 2112 and then 2222.' },
   'maths.ps.dg.count': { hook: '**Count by digit length**: the one-digit numbers, then the two-digit numbers.', example: 'Printing page numbers 1 to 30 in a booklet takes 51 digits.' },
   'maths.ps.dg.no1': { hook: '**Count with leading zeros**: 001 to 999 gives every place the same 9 choices.' },
 
@@ -331,7 +331,7 @@ const MEMORY = {
   'maths.ps.mn.dec': { hook: '**Decimals are fractions in disguise**: 0.25 × 400 is a quarter of 400.', example: '“25% off” a £400 sofa is 0.25 × 400 = £100 off.' },
   'maths.ps.mn.999': { hook: '**× 999 = × 1000, take away one lot.**', example: 'Three items at £9.99 cost 3 × £10 − 3p = £29.97.' },
   'maths.ps.mn.prod': { hook: '**Write each bracket as a fraction**: ½ × ⅔ × ¾ …, and watch it cancel.' },
-  'maths.ps.mn.37': { hook: '**37 × 3 = 111**, so 37 × 3k gives k three times over: 37 × 18 = 37 × 3 × 6 = 666.' },
+  'maths.ps.mn.37': { hook: '**37 × 3 = 111**, so 37 × 3k gives k three times over (for k from 1 to 9): 37 × 18 = 37 × 3 × 6 = 666.' },
   'maths.ps.mn.odds': { hook: '**The first n odd numbers add to n²**: they build squares, layer by layer.', example: 'L-shaped rows of 1, 3, 5 and 7 tiles fit together into 1 × 1, 2 × 2, 3 × 3 and 4 × 4 squares.' },
   'maths.ps.mn.pct': { hook: '**x% of y = y% of x**: 8% of 50 is 50% of 8, which is 4.', example: 'Need 4% of £75? Work out 75% of £4 instead: £3.' },
 

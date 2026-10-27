@@ -160,7 +160,7 @@ push(
   mcq('a1.cap.g', 'alphabet-1', 'Which capital letter goes with **γ** (gamma)?', [['Γ', true], ['Λ', false, 'Λ is capital lambda (λ).'], ['Π', false, 'Π is capital pi (π).'], ['Δ', false, 'Δ is capital delta (δ).']], 'Capital gamma is Γ, like an upside-down L.'),
   mcq('a1.cap.d', 'alphabet-1', 'Which capital letter goes with **δ** (delta)?', [['Δ', true], ['Λ', false, 'Λ is capital lambda.'], ['Α', false, 'Α is capital alpha.'], ['Θ', false, 'Θ is capital theta.']], 'Capital delta is Δ, the triangle you use in maths for “change in”.'),
   mcq('a1.cap.l', 'alphabet-1', 'Which capital letter goes with **λ** (lambda)?', [['Λ', true], ['Δ', false, 'Δ is capital delta.'], ['Γ', false, 'Γ is capital gamma.'], ['Μ', false, 'Μ is capital mu.']], 'Capital lambda is Λ: a triangle with no bottom.'),
-  mcq('a1.cap.h', 'alphabet-1', 'The capital letter **Η** looks like an English H. Which Greek letter is it?', [['eta (η), a long e', true], ['a letter for the h sound', false, 'Ancient Greek has no letter for h: a rough breathing does that job. Η is capital eta.'], ['nu (ν)', false, 'Capital nu is Ν.']], 'Η is capital eta. Greek shows the h sound with a rough breathing instead.'),
+  mcq('a1.cap.h', 'alphabet-1', 'The capital letter **Η** looks like an English H. Which Greek letter is it?', [['eta (η), a long e', true], ['a letter for the h sound', false, 'The standard Greek alphabet has no letter for h: a rough breathing does that job. (Early Athenians wrote h with Η until they adopted the Ionic alphabet in 403 BC.) Η is capital eta.'], ['nu (ν)', false, 'Capital nu is Ν.']], 'Η is capital eta. Greek shows the h sound with a rough breathing instead.'),
   mcq('a1.cap.th', 'alphabet-1', 'Which capital letter goes with **θ** (theta)?', [['Θ', true], ['Ο', false, 'Ο is capital omicron.'], ['Φ', false, 'Φ is capital phi.'], ['Ε', false, 'Ε is capital epsilon.']], 'Θ: an O with a bar across it.'),
   mcq('a1.maths', 'alphabet-1', 'Which Greek letter do mathematicians usually use for an unknown angle?', [['θ (theta)', true], ['μ (mu)', false, 'μ is used for “micro” (a millionth) and for the mean.'], ['δ (delta)', false, 'δ and Δ usually mean a small change.']], 'θ is the classic angle letter: sin θ, cos θ.'),
   mcq('a1.alpha', 'alphabet-1', 'Our word “alphabet” comes from…', [['the first two Greek letters, alpha and beta', true], ['a Latin word for “letters”', false, 'The Romans borrowed it from the Greek: alpha + beta.'], ['the name of the man who invented writing', false, 'It is just the first two letters, like saying “the ABC”.']], 'alpha + beta = alphabet.'),
@@ -201,11 +201,25 @@ push(
 );
 
 // --- vocabulary
+// wrong options must not share a meaning with the right answer (or with what it accepts when typed)
+const senses = (en, accept = []) => new Set([en, ...accept].flatMap((s) => s.split(/[,;/]|\bor\b/)).map((s) => s.replace(/^\s*(I|a|an|the)\s+/i, '').trim().toLowerCase()).filter(Boolean));
+const clashes = (a, b) => [...a].some((s) => b.has(s));
+/** Three entries from others, starting at the given offsets and skipping any whose meaning overlaps mine. */
+function distinct(others, offsets, mine, meaningOf) {
+  const out = [];
+  for (let k = 0; out.length < 3 && k < offsets.length + others.length; k++) {
+    const w = others[(k < offsets.length ? offsets[k] : offsets[0] + k) % others.length];
+    if (!out.includes(w) && !clashes(meaningOf(w), mine)) out.push(w);
+  }
+  return out;
+}
+const article = (w) => (/^[aeiou]/i.test(w) ? 'an' : 'a');
 const vocab = (prefix, topic, list) => list.forEach(([gr, en, deriv, accept], i) => {
   const others = list.filter((w) => w[0] !== gr);
-  const wrongEn = [others[(i + 1) % others.length][1], others[(i + 4) % others.length][1], others[(i + 7) % others.length][1]];
-  const wrongGr = [others[(i + 2) % others.length][0], others[(i + 5) % others.length][0], others[(i + 8) % others.length][0]];
-  push(fact(`${prefix}.${i + 1}`, topic, `What does **${gr}** mean?`, en, wrongEn, `${gr} = ${en}. English relatives: ${deriv}.`, { accept: [...accept, ...(en.startsWith('I ') ? [] : [`a ${en.split(',')[0]}`, `the ${en.split(',')[0]}`])], learn: `**${gr}** = ${en}\n_${deriv}_` }));
+  // a wrong English meaning must not be one this word accepts; a wrong Greek word must not also mean “{en}”
+  const wrongEn = distinct(others, [i + 1, i + 4, i + 7], senses(en, accept), (w) => senses(w[1])).map((w) => w[1]);
+  const wrongGr = distinct(others, [i + 2, i + 5, i + 8], senses(en), (w) => senses(w[1], w[3])).map((w) => w[0]);
+  push(fact(`${prefix}.${i + 1}`, topic, `What does **${gr}** mean?`, en, wrongEn, `${gr} = ${en}. English relatives: ${deriv}.`, { accept: [...accept, ...(en.startsWith('I ') ? [] : [`${article(en)} ${en.split(',')[0]}`, `the ${en.split(',')[0]}`])], learn: `**${gr}** = ${en}\n_${deriv}_` }));
   push(fact(`${prefix}.en.${i + 1}`, topic, `Which is the Greek for **${en}**?`, gr, wrongGr, `${en} = ${gr}.`, C));
 });
 vocab('w1', 'words-1', WORDS_1);
@@ -266,7 +280,7 @@ const SENT = [
   ['οἱ θεοὶ σοφοί εἰσιν.', 'The gods are wise.', ['The god is wise.', 'The wise gods are here.']],
 ];
 // sentences whose second noun is not an accusative object
-const SENT_NOTE = { 7: '. πιστεύω takes the dative: τῷ στρατηγῷ is dative, not accusative.', 9: '. With εἰμί the describing word is nominative too: σοφοί.' };
+const SENT_NOTE = { 8: '. There is no object here: φεύγει (flees) needs none.', 7: '. πιστεύω takes the dative: τῷ στρατηγῷ is dative, not accusative.', 9: '. With εἰμί the describing word is nominative too: σοφοί.' };
 SENT.forEach(([gr, en, wrong], i) => push(fact(`s.${i + 1}`, 'sentences', `Translate: **${gr}**`, en, wrong, `${gr} → “${en}” Find the verb, then the nominative (the subject)${SENT_NOTE[i] || ', then the accusative (the object).'}${i === 3 ? ' οἱ πολέμιοι (from πολέμιος, hostile) means “the enemy”.' : ''}`, C)));
 push(
   mcq('s.first', 'sentences', 'What is the best first step when translating a Greek sentence?', [['Find the verb and its ending', true], ['Translate the words left to right', false, 'Greek word order is flexible, so left to right can mislead you.'], ['Look for the longest word', false, 'Length doesn’t tell you the structure.']], 'Verb first, then the nominative subject, then the accusative object, then the rest.'),
@@ -295,8 +309,8 @@ push(
 // --- adjectives
 ADJ.forEach(([m, f, n, en, deriv, accept], i) => {
   const others = ADJ.filter((a) => a[0] !== m);
-  push(fact(`adj.${i + 1}`, 'adjectives', `What does **${m}, ${f}, ${n}** mean?`, en, [others[(i + 1) % 9][3], others[(i + 3) % 9][3], others[(i + 6) % 9][3]], `${m} = ${en}. English relatives: ${deriv}.`, { accept, learn: `**${m}, ${f}, ${n}** = ${en}\n_${deriv}_` }));
-  push(fact(`adj.en.${i + 1}`, 'adjectives', `Which is the Greek for **${en}**?`, m, [others[(i + 2) % 9][0], others[(i + 4) % 9][0], others[(i + 7) % 9][0]], `${en} = ${m}, ${f}, ${n}.`, C));
+  push(fact(`adj.${i + 1}`, 'adjectives', `What does **${m}, ${f}, ${n}** mean?`, en, distinct(others, [i + 1, i + 3, i + 6], senses(en, accept), (a) => senses(a[3])).map((a) => a[3]), `${m} = ${en}. English relatives: ${deriv}.`, { accept, learn: `**${m}, ${f}, ${n}** = ${en}\n_${deriv}_` }));
+  push(fact(`adj.en.${i + 1}`, 'adjectives', `Which is the Greek for **${en}**?`, m, distinct(others, [i + 2, i + 4, i + 7], senses(en), (a) => senses(a[3], a[5])).map((a) => a[0]), `${en} = ${m}, ${f}, ${n}.`, C));
 });
 push(
   mcq('adj.agree', 'adjectives', 'Which phrase means “the beautiful girl”?', [['ἡ καλὴ κόρη', true], ['ἡ καλὸς κόρη', false, 'κόρη is feminine, so the adjective must be feminine: καλή.'], ['ὁ καλὸς κόρη', false, 'Both the article and the adjective must be feminine.']], 'Adjectives agree with their noun in gender, case and number: ἡ καλὴ κόρη.'),

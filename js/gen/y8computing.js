@@ -183,12 +183,12 @@ export const Y8_COMPUTING_GENERATORS = {
   y8cAscii(level, rng) {
     if (level === 1) {
       const c = rng.int(66, 90), ch = String.fromCharCode(c);
-      return num(`In ASCII, the capital letter A has code 65. What is the code for capital ${ch}?`, c, `${ch} is ${c - 65} letters after A, so 65 + ${c - 65} = ${c}.`, ['Capital letters have consecutive codes, starting with A = 65.', `${ch} is letter number ${c - 64} of the alphabet, ${c - 65} after A.`, `65 + ${c - 65} = ${c}.`]);
+      return num(`In ASCII, the capital letter A has code 65. What is the code for capital ${ch}?`, c, `${ch} is ${c - 65} letter${c - 65 === 1 ? '' : 's'} after A, so 65 + ${c - 65} = ${c}.`, ['Capital letters have consecutive codes, starting with A = 65.', `${ch} is letter number ${c - 64} of the alphabet, ${c - 65} after A.`, `65 + ${c - 65} = ${c}.`]);
     }
     if (level === 2) {
       if (rng.chance(0.5)) {
         const c = rng.int(98, 122), ch = String.fromCharCode(c);
-        return text(`In ASCII, lowercase a is 97. Which lowercase letter has code ${c}?`, ch, `${c} − 97 = ${c - 97}, so it is ${c - 97} letters after a: ${ch}.`, ['Lowercase letters run from a = 97.', `${c} − 97 = ${c - 97}.`, `Count ${c - 97} on from a: ${ch}.`]);
+        return text(`In ASCII, lowercase a is 97. Which lowercase letter has code ${c}?`, ch, `${c} − 97 = ${c - 97}, so it is ${c - 97} letter${c - 97 === 1 ? '' : 's'} after a: ${ch}.`, ['Lowercase letters run from a = 97.', `${c} − 97 = ${c - 97}.`, `Count ${c - 97} on from a: ${ch}.`]);
       }
       const c = rng.int(65, 90), ch = String.fromCharCode(c);
       return num(`Capital ${ch} has ASCII code ${c}. Lowercase codes are 32 more than capitals. What is the code for lowercase ${ch.toLowerCase()}?`, c + 32, `${c} + 32 = ${c + 32}.`, ['Every lowercase letter is exactly 32 after its capital.', `${c} + 32.`, `= ${c + 32}.`]);

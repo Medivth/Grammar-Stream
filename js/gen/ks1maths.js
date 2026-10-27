@@ -3,6 +3,7 @@
 // child's own superhero name when the question is shown (js/core/present.js).
 
 const pad = (n) => String(n).padStart(2, '0');
+const pv = (n, unit) => `${n} ${unit}${n === 1 ? '' : 's'}`; // 1 ten, 2 tens
 const money = (p) => (p >= 100 ? `£${(p / 100).toFixed(2)}` : `${p}p`);
 const CARS = ['Turbo', 'Blaze', 'Sparky', 'Rusty', 'Zoom'];
 const SPACE = ['Captain Nova', 'Bleep the robot', 'Commander Zara'];
@@ -31,8 +32,8 @@ export const KS1_GENERATORS = {
   k1Place(level, rng) {
     if (level === 1) {
       const t = rng.int(2, 9), o = rng.int(0, 9), n = t * 10 + o;
-      return typed('What number do the blocks show?', n, `${t} tens make ${t * 10}, and ${o} ones: ${t * 10} + ${o} = ${n}.`,
-        [`I count the tens rods: ${t} tens = ${t * 10}.`, `I count the ones cubes: ${o}.`, `${t * 10} + ${o} = ${n}.`], { diagram: { type: 'tens', tens: t, ones: o } });
+      return typed('What number do the blocks show?', n, `${pv(t, 'ten')} make ${t * 10}, and ${pv(o, 'one')}: ${t * 10} + ${o} = ${n}.`,
+        [`I count the tens rods: ${pv(t, 'ten')} = ${t * 10}.`, `I count the ones cubes: ${o}.`, `${t * 10} + ${o} = ${n}.`], { diagram: { type: 'tens', tens: t, ones: o } });
     }
     if (level === 2) {
       const kind = rng.pick(['compare', 'value', 'tenmore']);
@@ -41,13 +42,13 @@ export const KS1_GENERATORS = {
         if (rng.chance(0.3)) b = Number(String(a).split('').reverse().join('')) || a;
         const sym = a < b ? '<' : a > b ? '>' : '=';
         return choice(`Which sign goes in the box?   ${a} ☐ ${b}`, sym, ['<', '>', '='], rng, {
-          explain: `${a} has ${Math.floor(a / 10)} tens and ${b} has ${Math.floor(b / 10)} tens. ${a === b ? 'They are the same.' : `${Math.max(a, b)} is bigger, and the open mouth of the sign eats the bigger number.`}`,
-          steps: ['I compare the tens first.', `${a}: ${Math.floor(a / 10)} tens. ${b}: ${Math.floor(b / 10)} tens.`, `So ${a} ${sym} ${b}.`],
+          explain: `${a} has ${pv(Math.floor(a / 10), 'ten')} and ${b} has ${pv(Math.floor(b / 10), 'ten')}.${a !== b && Math.floor(a / 10) === Math.floor(b / 10) ? ` The tens are the same, so I compare the ones: ${a % 10} and ${b % 10}.` : ''} ${a === b ? 'They are the same.' : `${Math.max(a, b)} is bigger, and the open mouth of the sign eats the bigger number.`}`,
+          steps: ['I compare the tens first.', `${a}: ${pv(Math.floor(a / 10), 'ten')}. ${b}: ${pv(Math.floor(b / 10), 'ten')}.${a !== b && Math.floor(a / 10) === Math.floor(b / 10) ? ` Same tens, so I compare the ones: ${a % 10} and ${b % 10}.` : ''}`, `So ${a} ${sym} ${b}.`],
         });
       }
       if (kind === 'value') {
         const n = rng.int(21, 98), d = String(n)[0];
-        return typed(`In the number ${n}, what is the value of the digit ${d}?`, +d * 10, `The ${d} is in the tens place, so it is worth ${d} tens: ${+d * 10}.`,
+        return typed(`In the number ${n}, what is the value of the digit ${d}?`, +d * 10, `The ${d} is in the tens place, so it is worth ${pv(d, 'ten')}: ${+d * 10}.`,
           [`${n} = ${+d * 10} + ${n % 10}.`, `The ${d} is in the tens column.`, `So it is worth ${+d * 10}.`]);
       }
       const n = rng.int(10, 89), up = rng.chance(0.5);
@@ -57,13 +58,13 @@ export const KS1_GENERATORS = {
     const kind = rng.pick(['partition', 'order', 'blocks']);
     if (kind === 'blocks') {
       const hh = rng.int(1, 3), t = rng.int(0, 9), o = rng.int(0, 9), n = hh * 100 + t * 10 + o;
-      return typed('What number do the blocks show?', n, `${hh} hundred${hh > 1 ? 's' : ''}, ${t} tens and ${o} ones: ${n}.`,
+      return typed('What number do the blocks show?', n, `${hh} hundred${hh > 1 ? 's' : ''}, ${pv(t, 'ten')} and ${pv(o, 'one')}: ${n}.`,
         [`Hundreds: ${hh} → ${hh * 100}.`, `Tens: ${t} → ${t * 10}. Ones: ${o}.`, `${hh * 100} + ${t * 10} + ${o} = ${n}.`], { diagram: { type: 'tens', hundreds: hh, tens: t, ones: o } });
     }
     if (kind === 'partition') {
       const t = rng.int(1, 9), o = rng.int(1, 9), hh = rng.int(1, 9), n = hh * 100 + t * 10 + o;
       return typed(`${n} = ${hh * 100} + ? + ${o}`, t * 10, `${n} is ${hh * 100} + ${t * 10} + ${o}, so the missing part is ${t * 10}.`,
-        [`${n} has ${hh} hundreds, ${t} tens and ${o} ones.`, `The tens are worth ${t * 10}.`, `${hh * 100} + ${t * 10} + ${o} = ${n}.`]);
+        [`${n} has ${pv(hh, 'hundred')}, ${pv(t, 'ten')} and ${pv(o, 'one')}.`, `The tens are worth ${t * 10}.`, `${hh * 100} + ${t * 10} + ${o} = ${n}.`]);
     }
     const nums = new Set();
     while (nums.size < 3) nums.add(rng.int(30, 99));
@@ -80,8 +81,8 @@ export const KS1_GENERATORS = {
     }
     if (level === 2) {
       const a = rng.int(1, 9);
-      return typed(`${a} + ${10 - a} = 10, so ${a * 10} + ? = 100`, (10 - a) * 10, `Ten times bigger: ${a} tens + ${10 - a} tens = 10 tens = 100.`,
-        [`I know ${a} + ${10 - a} = 10.`, `${a * 10} is ${a} tens, and 100 is 10 tens.`, `So I need ${10 - a} tens: ${(10 - a) * 10}.`]);
+      return typed(`${a} + ${10 - a} = 10, so ${a * 10} + ? = 100`, (10 - a) * 10, `Ten times bigger: ${pv(a, 'ten')} + ${pv(10 - a, 'ten')} = 10 tens = 100.`,
+        [`I know ${a} + ${10 - a} = 10.`, `${a * 10} is ${pv(a, 'ten')}, and 100 is 10 tens.`, `So I need ${pv(10 - a, 'ten')}: ${(10 - a) * 10}.`]);
     }
     const a = rng.int(11, 89);
     if (a % 10 === 0) return KS1_GENERATORS.k1Bonds(3, rng);
@@ -93,9 +94,9 @@ export const KS1_GENERATORS = {
     if (level === 1) {
       const kind = rng.pick(['add1', 'sub1', 'tens']);
       if (kind === 'add1') { const a = rng.int(21, 85), b = rng.int(1, 9 - (a % 10) || 1); return typed(`${a} + ${b} =`, a + b, `Add the ones: ${a % 10} + ${b} = ${(a % 10) + b}. ${a + b}.`, [`${a} is ${a - (a % 10)} and ${a % 10}.`, `${a % 10} + ${b} = ${(a % 10) + b}.`, `${a - (a % 10)} + ${(a % 10) + b} = ${a + b}.`]); }
-      if (kind === 'sub1') { const a = rng.int(21, 99), b = rng.int(1, a % 10 || 1); return typed(`${a} − ${b} =`, a - b, `Take ${b} from the ${a % 10} ones: ${a - b}.`, [`${a} has ${a % 10} ones.`, `${a % 10} − ${b} = ${(a % 10) - b}.`, `So ${a} − ${b} = ${a - b}.`]); }
+      if (kind === 'sub1') { let a; do a = rng.int(21, 99); while (a % 10 === 0); const b = rng.int(1, a % 10); return typed(`${a} − ${b} =`, a - b, `Take ${b} from the ${a % 10} ${a % 10 === 1 ? 'one' : 'ones'}: ${a - b}.`, [`${a} has ${a % 10} ${a % 10 === 1 ? 'one' : 'ones'}.`, `${a % 10} − ${b} = ${(a % 10) - b}.`, `So ${a} − ${b} = ${a - b}.`]); }
       const a = rng.int(12, 59), t = rng.int(1, 4) * 10;
-      return typed(`${a} + ${t} =`, a + t, `Adding ${t} adds ${t / 10} tens; the ones stay the same: ${a + t}.`, [`${t} is ${t / 10} tens.`, `${a} has ${Math.floor(a / 10)} tens; ${Math.floor(a / 10)} + ${t / 10} = ${Math.floor(a / 10) + t / 10} tens.`, `${a + t}.`]);
+      return typed(`${a} + ${t} =`, a + t, `Adding ${t} adds ${pv(t / 10, 'ten')}; the ones stay the same: ${a + t}.`, [`${t} is ${pv(t / 10, 'ten')}.`, `${a} has ${pv(Math.floor(a / 10), 'ten')}; ${Math.floor(a / 10)} + ${t / 10} = ${pv(Math.floor(a / 10) + t / 10, 'ten')}.`, `${a + t}.`]);
     }
     if (level === 2) {
       if (rng.chance(0.5)) {
@@ -137,7 +138,8 @@ export const KS1_GENERATORS = {
         const n = rng.int(11, 99);
         return choice(`Is ${n} odd or even?`, n % 2 ? 'odd' : 'even', [n % 2 ? 'even' : 'odd'], rng, { explain: `Look at the ones digit: ${n % 10} is ${n % 2 ? 'odd' : 'even'}, so ${n} is ${n % 2 ? 'odd' : 'even'}.`, steps: ['Only the ones digit decides odd or even.', `The ones digit is ${n % 10}.`, `${n % 10} is ${n % 2 ? 'odd' : 'even'}, so ${n} is ${n % 2 ? 'odd' : 'even'}.`] });
       }
-      const step = rng.pick([3, 2, 5, 10]), down = rng.chance(0.5), start = rng.int(20, 60);
+      // Counting down never goes below zero: negative numbers are not Year 2 content.
+      const step = rng.pick([3, 2, 5, 10]), down = rng.chance(0.5), start = rng.int(down ? Math.max(20, 4 * step) : 20, 60);
       const seq = [0, 1, 2, 3].map((i) => start + (down ? -1 : 1) * i * step);
       const nxt = start + (down ? -1 : 1) * 4 * step;
       return typed(`What comes next?   ${seq.join(', ')}, ?`, nxt, `The rule is ${down ? 'take away' : 'add'} ${step}: ${seq.at(-1)} ${down ? '−' : '+'} ${step} = ${nxt}.`, ['I find the rule by looking at the gaps.', `Each step ${down ? 'goes down' : 'goes up'} by ${step}.`, `${seq.at(-1)} ${down ? '−' : '+'} ${step} = ${nxt}.`]);
@@ -157,12 +159,12 @@ export const KS1_GENERATORS = {
     }
     if (level === 2) {
       const a = rng.pick([2, 5, 10]), b = rng.int(2, 12);
-      if (rng.chance(0.5)) return typed(`${b} × ${a} =`, a * b, `${b} lots of ${a} = ${a * b}.`, [`I count in ${a}s, ${b} times.`, Array.from({ length: Math.min(b, 6) }, (_, i) => (i + 1) * a).join(', ') + (b > 6 ? '…' : '') + '.', `${b} × ${a} = ${a * b}.`]);
+      if (rng.chance(0.5)) return typed(`${b} × ${a} =`, a * b, `${b} lots of ${a} = ${a * b}.`, [`I count in ${a}s, ${b} times.`, Array.from({ length: Math.min(b, 6) }, (_, i) => (i + 1) * a).join(', ') + (b > 6 ? '…' : '.'), `${b} × ${a} = ${a * b}.`]);
       const thing = rng.pick(['stickers', 'space gems', 'tyres']);
       return typed(`${a * b} ${thing} are shared equally between ${a} friends. How many does each friend get?`, b, `${a * b} ÷ ${a} = ${b}, because ${a} × ${b} = ${a * b}.`,
         ['Sharing equally is dividing.', `I need ${a} × ? = ${a * b}.`, `${a} × ${b} = ${a * b}, so each friend gets ${b}.`]);
     }
-    const a = rng.pick([2, 3, 4, 5, 10]), b = rng.int(2, 12);
+    const a = rng.pick([2, 5, 10]), b = rng.int(2, 12);
     if (rng.chance(0.5)) return typed(`? × ${a} = ${a * b}`, b, `Count in ${a}s until you reach ${a * b}: that takes ${b} jumps. ${a * b} ÷ ${a} = ${b}.`, ['Division undoes multiplication.', `${a * b} ÷ ${a} = ?`, `${b}, because ${b} × ${a} = ${a * b}.`]);
     return typed(`How many groups of ${a} are there in ${a * b}?`, b, `${a * b} ÷ ${a} = ${b}.`, [`I count up in ${a}s to ${a * b}.`, `That is ${b} groups.`, `${a * b} ÷ ${a} = ${b}.`]);
   },
@@ -265,8 +267,9 @@ export const KS1_GENERATORS = {
     if (level < 3 || rng.chance(0.4)) {
       const i = rng.int(0, 3);
       const DAY = { Mon: 'Monday', Tue: 'Tuesday', Wed: 'Wednesday', Thu: 'Thursday' };
-      return typed(DAY[labels[i]] ? `How many rescues were there on ${DAY[labels[i]]}?` : `How many ${unit} did ${labels[i]} get?`, vals[i], `Each star is ${key}. ${labels[i]} has ${vals[i] / key} star${vals[i] === key ? '' : 's'}: ${vals[i]}.`,
-        [`The key says one star = ${key}.`, `${labels[i]} has ${Math.floor(vals[i] / key)} whole star${Math.floor(vals[i] / key) === 1 ? '' : 's'}${vals[i] % key ? ' and a half' : ''}.`, `That is ${vals[i]}.`], { diagram: dg });
+      const row = DAY[labels[i]] ? `${DAY[labels[i]]}’s row` : labels[i];
+      return typed(DAY[labels[i]] ? `How many rescues were there on ${DAY[labels[i]]}?` : `How many ${unit} did ${labels[i]} get?`, vals[i], `Each star is ${key}. ${row} has ${vals[i] % key ? `${Math.floor(vals[i] / key)} and a half stars` : `${vals[i] / key} star${vals[i] === key ? '' : 's'}`}: ${vals[i]}.`,
+        [`The key says one star = ${key}.`, `${row} has ${Math.floor(vals[i] / key)} whole star${Math.floor(vals[i] / key) === 1 ? '' : 's'}${vals[i] % key ? ' and a half' : ''}.`, `That is ${vals[i]}.`], { diagram: dg });
     }
     const [i, j] = rng.sample([0, 1, 2, 3], 2);
     const [hi, lo] = vals[i] >= vals[j] ? [i, j] : [j, i];

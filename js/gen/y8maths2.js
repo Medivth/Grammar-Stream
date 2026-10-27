@@ -82,6 +82,13 @@ function roundSf(n, sf) {
   const f = 10 ** (len - sf);
   return Math.round(n / f) * f;
 }
+/** r × 10^-scale written to exactly `sf` significant figures, keeping significant trailing zeros (0.0960, 0.400). */
+function sfText(r, scale, sf) {
+  const keep = scale - (String(r).length - sf); // decimal places that hold significant figures
+  if (keep <= 0) return dp(r, scale);
+  const p = 10 ** scale;
+  return `${Math.floor(r / p)}.${String(r % p).padStart(scale, '0').slice(0, keep)}`;
+}
 /** Text of n × 10^-scale, tidied. */
 const decText = (n, scale) => (scale <= 0 ? String(n * 10 ** -scale) : dp(n, scale));
 
@@ -89,41 +96,46 @@ const G = {
   // ---- compound measures --------------------------------------------------------------------
   y8nCompound(level, rng) {
     if (level === 1) {
-      const s = rng.int(4, 18) * 5, t = rng.int(2, 6), d = s * t;
-      const who = rng.pick(['Hermes, running with winged sandals,', 'A chariot', 'Odysseus’s ship', 'A courier on the Marathon road']);
+      // [traveller, pronoun, speeds in km/h]: only Hermes, a god, goes faster than a real runner, ship or chariot could
+      const [who, pro, speeds] = rng.pick([['Hermes, running with winged sandals,', 'he', [20, 90]], ['A chariot', 'it', [10, 20]], ['Odysseus’s ship', 'it', [5, 12]], ['A courier on the Marathon road', 'he', [8, 14]]]);
+      const s = who.startsWith('Hermes') ? rng.int(4, 18) * 5 : rng.int(...speeds), t = rng.int(2, 6), d = s * t;
       const kind = rng.pick(['speed', 'dist', 'time']);
       if (kind === 'speed') return num(`${who} covers ${d} km in ${t} hours. What is the average speed, in km/h?`, s, `Speed = distance ÷ time = ${d} ÷ ${t} = ${s} km/h.`, ['Speed = distance ÷ time.', `${d} ÷ ${t}.`, `= ${s} km/h.`], { unit: 'km/h' });
-      if (kind === 'dist') return num(`${who} travels at ${s} km/h for ${t} hours. How far does it go?`, d, `Distance = speed × time = ${s} × ${t} = ${d} km.`, ['Distance = speed × time.', `${s} × ${t}.`, `= ${d} km.`], { unit: 'km' });
+      if (kind === 'dist') return num(`${who} travels at ${s} km/h for ${t} hours. How far does ${pro} go?`, d, `Distance = speed × time = ${s} × ${t} = ${d} km.`, ['Distance = speed × time.', `${s} × ${t}.`, `= ${d} km.`], { unit: 'km' });
       return num(`${who} travels ${d} km at ${s} km/h. How many hours does it take?`, t, `Time = distance ÷ speed = ${d} ÷ ${s} = ${t} hours.`, ['Time = distance ÷ speed.', `${d} ÷ ${s}.`, `= ${t} hours.`], { unit: 'hours' });
     }
     if (level === 2) {
       const kind = rng.pick(['density', 'mass', 'volume', 'pressure', 'force']);
       if (kind === 'pressure' || kind === 'force') {
-        const A = rng.int(2, 10), P = rng.int(5, 50) * 10, Fz = A * P;
-        if (kind === 'pressure') return num(`The Colossus statue pushes down with a force of ${comma(Fz)} N on a base of area ${A} m². What pressure does it exert, in N/m²?`, P, `Pressure = force ÷ area = ${comma(Fz)} ÷ ${A} = ${P} N/m².`, ['Pressure = force ÷ area.', `${Fz} ÷ ${A}.`, `= ${P} N/m² (pascals).`], { unit: 'N/m²' });
-        return num(`A pressure of ${P} N/m² acts on an area of ${A} m². What is the force, in newtons?`, Fz, `Force = pressure × area = ${P} × ${A} = ${Fz} N.`, ['Rearrange P = F ÷ A to F = P × A.', `${P} × ${A}.`, `= ${Fz} N.`], { unit: 'N' });
+        // a marble statue of a few tonnes standing on a base of a few square metres
+        const A = rng.int(2, 6), P = rng.int(4, 25) * 1000, Fz = A * P;
+        if (kind === 'pressure') return num(`A marble statue pushes down with a force of ${comma(Fz)} N on a base of area ${A} m². What pressure does it exert, in N/m²?`, P, `Pressure = force ÷ area = ${comma(Fz)} ÷ ${A} = ${comma(P)} N/m².`, ['Pressure = force ÷ area.', `${Fz} ÷ ${A}.`, `= ${comma(P)} N/m² (pascals).`], { unit: 'N/m²' });
+        return num(`A pressure of ${comma(P)} N/m² acts on an area of ${A} m². What is the force, in newtons?`, Fz, `Force = pressure × area = ${comma(P)} × ${A} = ${comma(Fz)} N.`, ['Rearrange P = F ÷ A to F = P × A.', `${P} × ${A}.`, `= ${comma(Fz)} N.`], { unit: 'N' });
       }
       const [metal, rho] = rng.pick([['aluminium', 3], ['iron', 8], ['silver', 10], ['lead', 11], ['gold', 19], ['marble', 3], ['bronze', 9]]);
       const V = rng.int(3, 40), m = rho * V;
-      if (kind === 'density') return num(`Hephaestus casts a block of ${metal} with mass ${m} g and volume ${V} cm³. What is its density, in g/cm³?`, rho, `Density = mass ÷ volume = ${m} ÷ ${V} = ${rho} g/cm³.`, ['Density = mass ÷ volume.', `${m} ÷ ${V}.`, `= ${rho} g/cm³.`], { unit: 'g/cm³' });
+      if (kind === 'density') return num(`Hephaestus ${metal === 'marble' ? 'carves' : 'casts'} a block of ${metal} with mass ${m} g and volume ${V} cm³. What is its density, in g/cm³?`, rho, `Density = mass ÷ volume = ${m} ÷ ${V} = ${rho} g/cm³.`, ['Density = mass ÷ volume.', `${m} ÷ ${V}.`, `= ${rho} g/cm³.`], { unit: 'g/cm³' });
       if (kind === 'mass') return num(`${metal[0].toUpperCase() + metal.slice(1)} has a density of ${rho} g/cm³. What is the mass of ${V} cm³ of it, in grams?`, m, `Mass = density × volume = ${rho} × ${V} = ${m} g.`, ['Rearrange: mass = density × volume.', `${rho} × ${V}.`, `= ${m} g.`], { unit: 'g' });
       return num(`A ${metal} figurine has mass ${m} g. The density of ${metal} is ${rho} g/cm³. What is its volume, in cm³?`, V, `Volume = mass ÷ density = ${m} ÷ ${rho} = ${V} cm³.`, ['Rearrange: volume = mass ÷ density.', `${m} ÷ ${rho}.`, `= ${V} cm³.`], { unit: 'cm³' });
     }
     const kind = rng.pick(['kmh2ms', 'ms2kmh', 'minutes', 'rate']);
     if (kind === 'kmh2ms') {
       const k = rng.int(1, 8), v = 18 * k;
-      return num(`A cheetah-fast chariot reaches ${v} km/h. What is that in metres per second?`, 5 * k, `${v} km/h = ${v * 1000} m in 3600 s, so ${v * 1000} ÷ 3600 = ${5 * k} m/s.`, ['1 km = 1000 m and 1 hour = 3600 s.', `${v} × 1000 = ${v * 1000} m per hour.`, `÷ 3600 = ${5 * k} m/s.`], { unit: 'm/s' });
+      const who = k === 1 ? 'A long-distance runner keeps up' : k <= 3 ? 'A racing chariot reaches' : 'A train reaches';
+      return num(`${who} ${v} km/h. What is that in metres per second?`, 5 * k, `${v} km/h = ${v * 1000} m in 3600 s, so ${v * 1000} ÷ 3600 = ${5 * k} m/s.`, ['1 km = 1000 m and 1 hour = 3600 s.', `${v} × 1000 = ${v * 1000} m per hour.`, `÷ 3600 = ${5 * k} m/s.`], { unit: 'm/s' });
     }
     if (kind === 'ms2kmh') {
       const v = rng.int(4, 30);
       return num(`A discus flies at ${v} m/s. What is that in km/h?`, dp(36 * v, 1), `Multiply by 3600 (seconds in an hour) and divide by 1000 (metres in a km): ${v} × 3.6 = ${dp(36 * v, 1)} km/h.`, [`${v} m every second is ${v * 3600} m every hour.`, `${v * 3600} m = ${dp(36 * v, 1)} km.`, `So ${dp(36 * v, 1)} km/h.`], { unit: 'km/h' });
     }
     if (kind === 'minutes') {
-      const s = rng.pick([30, 40, 45, 60, 80, 90, 120]);
+      const s = rng.pick([12, 15, 18, 20, 24, 30, 40, 45, 60, 80, 90, 120]);
       const mins = rng.pick([15, 20, 30, 40, 45, 50, 75, 90, 100]);
       if ((s * mins) % 60) return G.y8nCompound(level, rng);
       const d = (s * mins) / 60;
-      return num(`Theo cycles ${d} km at an average speed of ${s} km/h. How many MINUTES does it take?`, mins, `Time = ${d} ÷ ${s} = ${say(F(d, s))} hours = ${mins} minutes.`, ['Time = distance ÷ speed (in hours).', `${d} ÷ ${s} = ${say(F(d, s))} hours.`, `× 60 = ${mins} minutes.`], { unit: 'minutes' });
+      // a cyclist averages up to about 30 km/h; faster speeds need a ferry or a train
+      const trip = s <= 30 ? 'Theo cycles' : s <= 45 ? 'Theo’s ferry sails' : 'Theo’s train travels';
+      return num(`${trip} ${d} km at an average speed of ${s} km/h. How many MINUTES does it take?`, mins, `Time = ${d} ÷ ${s} = ${say(F(d, s))} hours = ${mins} minutes.`, ['Time = distance ÷ speed (in hours).', `${d} ÷ ${s} = ${say(F(d, s))} hours.`, `× 60 = ${mins} minutes.`], { unit: 'minutes' });
     }
     const workers = rng.int(2, 6), rate = rng.int(3, 12), hours = rng.int(2, 8), more = workers + rng.int(1, 4);
     return num(`${workers} builders lay ${workers * rate} stones an hour between them on the temple wall. At the same rate each, how many stones do ${more} builders lay in ${hours} hours?`, more * rate * hours,
@@ -164,17 +176,23 @@ const G = {
       const sf = rng.int(1, 3);
       if (rng.chance(0.5)) {
         const n = rng.int(1000, 999999), r = roundSf(n, sf);
+        if (String(n).replace(/0+$/, '').length <= sf) return G.y8nBounds(level, rng); // nothing to round
         return num(`Round ${comma(n)} to ${sf} significant figure${sf > 1 ? 's' : ''}.`, r, `The first ${sf} significant figure${sf > 1 ? 's are' : ' is'} kept; look at the next digit to decide whether to round up. ${comma(n)} ≈ ${comma(r)}.`,
           ['Significant figures start at the first non-zero digit.', `Keep ${sf} digit${sf > 1 ? 's' : ''}, check the next one (5 or more rounds up).`, `Fill the gaps with zeros: ${comma(r)}.`]);
       }
       const scale = rng.int(3, 5), n = rng.int(100, 9999), r = roundSf(n, sf);
-      return num(`Round ${dp(n, scale)} to ${sf} significant figure${sf > 1 ? 's' : ''}.`, dp(r, scale), `Leading zeros are not significant. The first significant figure is the first non-zero digit. ${dp(n, scale)} ≈ ${dp(r, scale)}.`,
-        ['Skip the zeros at the start.', `Keep ${sf} significant figure${sf > 1 ? 's' : ''} and look at the next digit.`, `${dp(r, scale)}.`]);
+      if (String(n).replace(/0+$/, '').length <= sf) return G.y8nBounds(level, rng); // nothing to round
+      const t = sfText(r, scale, sf), zero = t !== dp(r, scale);
+      const q = { prompt: `Round ${dp(n, scale)} to ${sf} significant figure${sf > 1 ? 's' : ''}.`, explain: `Leading zeros are not significant. The first significant figure is the first non-zero digit. ${dp(n, scale)} ≈ ${t}.${zero ? ` The final zero is one of the ${sf} significant figures, so it must be written: ${t}, not ${dp(r, scale)}.` : ''}`,
+        steps: ['Skip the zeros at the start.', `Keep ${sf} significant figure${sf > 1 ? 's' : ''} and look at the next digit.`, zero ? `${t}: keep the zero, because it is a significant figure.` : `${t}.`] };
+      // a significant trailing zero is the point of the question, so a value-only (numeric) check would wrongly accept 0.096 for 0.0960
+      if (zero) return { kind: 'typed', ...q, answer: t, accept: t.startsWith('0.') ? [t.slice(1)] : [], strict: true, placeholder: 'Type a number' };
+      return num(q.prompt, t, q.explain, q.steps);
     }
     if (level === 2) {
       const kind = rng.pick(['cm', 'dp', 'ten', 'interval']);
       if (kind === 'cm') { const x = rng.int(12, 95), up = rng.chance(0.5); return num(`A spear is ${x} cm long, to the nearest centimetre. What is the ${up ? 'upper' : 'lower'} bound of its length?`, dp(up ? 10 * x + 5 : 10 * x - 5, 1), `To the nearest cm means within half a centimetre: from ${dp(10 * x - 5, 1)} cm up to (but not including) ${dp(10 * x + 5, 1)} cm.`, ['Half of the unit is 0.5 cm.', `Lower bound: ${x} − 0.5 = ${dp(10 * x - 5, 1)}.`, `Upper bound: ${x} + 0.5 = ${dp(10 * x + 5, 1)}.`], { unit: 'cm' }); }
-      if (kind === 'dp') { const x = rng.int(12, 99), up = rng.chance(0.5); return num(`A rope is ${dp(x, 1)} m to 1 decimal place. What is the ${up ? 'upper' : 'lower'} bound?`, dp(up ? 10 * x + 5 : 10 * x - 5, 2), `To 1 dp means within 0.05: from ${dp(10 * x - 5, 2)} m to ${dp(10 * x + 5, 2)} m.`, ['The unit is 0.1, so half of it is 0.05.', `${dp(x, 1)} − 0.05 = ${dp(10 * x - 5, 2)}.`, `${dp(x, 1)} + 0.05 = ${dp(10 * x + 5, 2)}.`], { unit: 'm' }); }
+      if (kind === 'dp') { const x = rng.int(12, 99), up = rng.chance(0.5), xt = (x / 10).toFixed(1); return num(`A rope is ${xt} m to 1 decimal place. What is the ${up ? 'upper' : 'lower'} bound?`, dp(up ? 10 * x + 5 : 10 * x - 5, 2), `To 1 dp means within 0.05: from ${dp(10 * x - 5, 2)} m to ${dp(10 * x + 5, 2)} m.`, ['The unit is 0.1, so half of it is 0.05.', `${xt} − 0.05 = ${dp(10 * x - 5, 2)}.`, `${xt} + 0.05 = ${dp(10 * x + 5, 2)}.`], { unit: 'm' }); }
       if (kind === 'ten') { const x = rng.int(12, 99) * 10, up = rng.chance(0.5); return num(`About ${x} people watched the race at Olympia, to the nearest 10. What is the ${up ? 'upper' : 'lower'} bound?`, up ? x + 5 : x - 5, `To the nearest 10 means within 5: from ${x - 5} up to (not including) ${x + 5}.`, ['Half of 10 is 5.', `${x} − 5 = ${x - 5}.`, `${x} + 5 = ${x + 5} (the upper bound itself would round up).`]); }
       const x = rng.int(20, 80);
       return choice(`x = ${x} rounded to the nearest whole number. Which error interval is correct?`, `${x - 1}.5 ≤ x < ${x}.5`, [`${x - 1}.5 < x ≤ ${x}.5`, `${x - 1} ≤ x < ${x + 1}`, `${x - 1}.5 ≤ x ≤ ${x}.5`, `${x}.5 ≤ x < ${x + 1}.5`], rng, {
@@ -285,7 +303,7 @@ const G = {
       }
       const a = rng.int(2, 5), b = rng.int(2, 5), m = rng.int(4, 9), n = rng.int(1, m - 1), p = rng.int(2, 5), q = rng.int(1, p - 1);
       const fmt = (c, e1, e2) => `${c}x${e1 === 1 ? '' : sup(e1)}y${e2 === 1 ? '' : sup(e2)}`;
-      return choice(`Simplify ${a * a * b}x${sup(m)}y${sup(p)} ÷ ${a}x${sup(n)}y${sup(q)}.`, fmt(a * b, m - n, p - q), [fmt(a * b, m + n, p + q), fmt(a * a * b - a, m - n, p - q), fmt(a * b, m / n, p - q), fmt(a, m - n, p - q)].filter((t) => !t.includes('.')), rng, {
+      return choice(`Simplify ${a * a * b}x${sup(m)}y${sup(p)} ÷ ${a}x${sup(n)}y${sup(q)}.`, fmt(a * b, m - n, p - q), [fmt(a * b, m + n, p + q), fmt(a * a * b - a, m - n, p - q), ...(m % n === 0 ? [fmt(a * b, m / n, p - q)] : []), fmt(a, m - n, p - q)], rng, {
         explain: `Divide the numbers (${a * a * b} ÷ ${a} = ${a * b}) and subtract the indices for each letter (x: ${m} − ${n}; y: ${p} − ${q}).`, steps: [`${a * a * b} ÷ ${a} = ${a * b}.`, `x${sup(m)} ÷ x${sup(n)} = x${sup(m - n)}.`, `y${sup(p)} ÷ y${sup(q)} = y${sup(p - q)}. Answer ${fmt(a * b, m - n, p - q)}.`],
       });
     }
@@ -377,7 +395,7 @@ const G = {
   y8nEqFrac(level, rng) {
     if (level === 1) {
       const a = rng.int(2, 9), x = a * rng.int(1, 12) * (rng.chance(0.15) ? -1 : 1), b = rng.int(1, 15);
-      if (rng.chance(0.5)) return num(`Solve {{x/${a}}} + ${b} = ${x / a + b}.`, x, `Subtract ${b}: {{x/${a}}} = ${neg(x / a)}. Multiply by ${a}: x = ${neg(x)}.`, [`Undo the + ${b}: {{x/${a}}} = ${neg(x / a)}.`, `Undo the ÷ ${a}: multiply by ${a}.`, `x = ${neg(x)}.`], { keypad: x >= 0 });
+      if (rng.chance(0.5)) return num(`Solve {{x/${a}}} + ${b} = ${neg(x / a + b)}.`, x, `Subtract ${b}: {{x/${a}}} = ${neg(x / a)}. Multiply by ${a}: x = ${neg(x)}.`, [`Undo the + ${b}: {{x/${a}}} = ${neg(x / a)}.`, `Undo the ÷ ${a}: multiply by ${a}.`, `x = ${neg(x)}.`], { keypad: x >= 0 });
       const c = rng.int(2, 9), y = c * rng.int(1, 10) - b;
       return num(`Solve {{x + ${b}/${c}}} = ${(y + b) / c}.`, y, `Multiply by ${c}: x + ${b} = ${y + b}. Subtract ${b}: x = ${neg(y)}.`, [`Multiply both sides by ${c}: x + ${b} = ${y + b}.`, `Subtract ${b}.`, `x = ${neg(y)}.`], { keypad: y >= 0 });
     }
@@ -387,8 +405,8 @@ const G = {
         while (m === n) n = rng.int(2, 7);
         const k = rng.int(1, 6), x = rng.int(-4, 12), a = m * k - x, b = n * k - x;
         if (a === 0 || b === 0) return G.y8nEqFrac(level, rng);
-        return num(`Solve {{x + ${a}/${m}}} = {{x + ${b}/${n}}}.`.replace(/\+ -/g, '− '), x, `Cross-multiply: ${n}(x + ${a}) = ${m}(x + ${b}), so ${n}x + ${n * a} = ${m}x + ${m * b}. Then ${lin(n - m, 0)} = ${neg(m * b - n * a)}, x = ${neg(x)}.`.replace(/\+ -/g, '− '),
-          [`Multiply both sides by ${m} × ${n} (or cross-multiply).`, `${n}x + ${n * a} = ${m}x + ${m * b}.`.replace(/\+ -/g, '− '), `Collect: ${lin(n - m, 0)} = ${neg(m * b - n * a)}, so x = ${neg(x)}.`], { keypad: x >= 0 });
+        return num(`Solve {{x + ${a}/${m}}} = {{x + ${b}/${n}}}.`.replace(/\+ -/g, '− '), x, `Cross-multiply: ${n}(x + ${a}) = ${m}(x + ${b}), so ${n}x + ${n * a} = ${m}x + ${m * b}. Then ${n - m === 1 ? `x = ${neg(x)}` : `${lin(n - m, 0)} = ${neg(m * b - n * a)}, so x = ${neg(x)}`}.`.replace(/\+ -/g, '− '),
+          [`Multiply both sides by ${m} × ${n} (or cross-multiply).`, `${n}x + ${n * a} = ${m}x + ${m * b}.`.replace(/\+ -/g, '− '), n - m === 1 ? `Collect: x = ${neg(x)}.` : `Collect: ${lin(n - m, 0)} = ${neg(m * b - n * a)}, so x = ${neg(x)}.`], { keypad: x >= 0 });
       }
       let a = rng.int(2, 6), b = rng.int(2, 8);
       while (a === b) b = rng.int(2, 8);
@@ -403,7 +421,7 @@ const G = {
         if (rest % s) continue;
         const x = rest / s, A = [p * x, q * x + u, r * x + w];
         if (x < 5 || A.some((t) => t <= 0)) continue;
-        return num(`The angles of a triangle are ${lin(p, 0)}, ${lin(q, u)} and ${lin(r, w)} degrees. Find x.`, x, `Angles in a triangle add to 180°: ${lin(s, u + w)} = 180, so ${s}x = ${rest} and x = ${x}. (The angles are ${A.join('°, ')}°.)`,
+        return num(`The angles of a triangle are ${lin(p, 0)}, ${lin(q, u)} and ${lin(r, w)} degrees. Find x.`, x, `Angles in a triangle add to 180°: ${lin(s, u + w)} = 180, so ${u + w ? `${s}x = ${rest} and ` : ''}x = ${x}. (The angles are ${A.join('°, ')}°.)`,
           ['Angles in a triangle sum to 180°.', `${lin(p, 0)} + (${lin(q, u)}) + (${lin(r, w)}) = ${lin(s, u + w)}.`, `${lin(s, u + w)} = 180 → x = ${x}.`]);
       }
     }
@@ -414,7 +432,7 @@ const G = {
         ['Perimeter = 2 × (length + width).', `2(${lin(a + c, b + d)}) = ${lin(2 * (a + c), 2 * (b + d))}.`, `${lin(2 * (a + c), 2 * (b + d))} = ${P} → x = ${x}.`]);
     }
     const t = rng.int(5, 15), mult = rng.int(2, 4), diff = rng.int(1, 9), sum = t + mult * t + diff;
-    return num(`Mira is ${diff} years older than ${mult} times Theo’s age. Together their ages add up to ${sum}. How old is Theo?`, t, `Let Theo be x. Mira is ${mult}x + ${diff}. x + ${mult}x + ${diff} = ${sum}, so ${mult + 1}x = ${sum - diff} and x = ${t}.`,
+    return num(`Mira is ${diff} year${diff === 1 ? '' : 's'} older than ${mult === 2 ? 'twice' : `${mult} times`} Theo’s age. Together their ages add up to ${sum}. How old is Theo?`, t, `Let Theo be x. Mira is ${mult}x + ${diff}. x + ${mult}x + ${diff} = ${sum}, so ${mult + 1}x = ${sum - diff} and x = ${t}.`,
       ['Let Theo’s age be x.', `Mira: ${mult}x + ${diff}. Total: ${mult + 1}x + ${diff} = ${sum}.`, `${mult + 1}x = ${sum - diff}, x = ${t}.`]);
   },
 
@@ -554,9 +572,12 @@ const G = {
     const [p, q] = rng.pick([[2, 1], [3, 1], [3, 2], [4, 3], [5, 2], [4, 1]]);
     const unitV = rng.int(1, 4), Vs = unitV * q ** 3, Vl = unitV * p ** 3, hs = q * rng.int(3, 8) * 5; // realistic jar heights (15–40 cm per ratio unit)
     const litres = (n) => `${n} litre${n === 1 ? '' : 's'}`;
-    if (rng.chance(0.5)) return num(`Two similar amphorae have volumes ${litres(Vs)} and ${litres(Vl)}. The smaller one is ${hs} cm tall. How tall is the larger one?`, (hs * p) / q, `Volume scale factor = {{${Vl}/${Vs}}} = {{${p ** 3}/${q ** 3}}}, so the length scale factor is the cube root: {{${p}/${q}}}. Height = ${hs} × {{${p}/${q}}} = ${(hs * p) / q} cm.`,
-      [`Volume scale factor {{${Vl}/${Vs}}} = {{${p ** 3}/${q ** 3}}}.`, `Cube root for lengths: {{${p}/${q}}}.`, `${hs} × {{${p}/${q}}} = ${(hs * p) / q} cm.`], { unit: 'cm' });
-    return num(`Two similar statues have heights in the ratio ${q} : ${p}. The smaller one has a volume of ${litres(Vs)}. What is the volume of the larger one?`, Vl, `Length ratio ${q} : ${p}, so volume ratio ${q}³ : ${p}³ = ${q ** 3} : ${p ** 3}. ${Vs} × {{${p ** 3}/${q ** 3}}} = ${litres(Vl)}.`, [`Cube the length ratio: ${q ** 3} : ${p ** 3}.`, `Multiply ${Vs} by {{${p ** 3}/${q ** 3}}}.`, `= ${litres(Vl)}.`], { unit: 'litres' });
+    const fr = (n, d) => (d === 1 ? String(n) : `{{${n}/${d}}}`); // whole numbers are not shown as n/1
+    // Vl ÷ Vs, simplified to p³/q³ (shown only when it simplifies)
+    const vsf = unitV === 1 ? fr(p ** 3, q ** 3) : `${q === 1 ? `${Vl} ÷ ${Vs}` : `{{${Vl}/${Vs}}}`} = ${fr(p ** 3, q ** 3)}`;
+    if (rng.chance(0.5)) return num(`Two similar amphorae have volumes ${litres(Vs)} and ${litres(Vl)}. The smaller one is ${hs} cm tall. How tall is the larger one?`, (hs * p) / q, `Volume scale factor = ${vsf}, so the length scale factor is the cube root: ${fr(p, q)}. Height = ${hs} × ${fr(p, q)} = ${(hs * p) / q} cm.`,
+      [`Volume scale factor ${vsf}.`, `Cube root for lengths: ${fr(p, q)}.`, `${hs} × ${fr(p, q)} = ${(hs * p) / q} cm.`], { unit: 'cm' });
+    return num(`Two similar statues have heights in the ratio ${q} : ${p}. The smaller one has a volume of ${litres(Vs)}. What is the volume of the larger one?`, Vl, `Length ratio ${q} : ${p}, so volume ratio ${q}³ : ${p}³ = ${q ** 3} : ${p ** 3}. ${Vs} × ${fr(p ** 3, q ** 3)} = ${litres(Vl)}.`, [`Cube the length ratio: ${q ** 3} : ${p ** 3}.`, `Multiply ${Vs} by ${fr(p ** 3, q ** 3)}.`, `= ${litres(Vl)}.`], { unit: 'litres' });
   },
 
   // ---- circles: parts, arcs and sectors -------------------------------------------------------------
@@ -616,7 +637,7 @@ const G = {
         const x = (total - sc) / sx;
         if (x < 5 || terms.some(([c, k]) => c * x + k <= 0 || c * x + k >= 180)) continue;
         const name = { 4: 'quadrilateral', 5: 'pentagon', 6: 'hexagon' }[sides];
-        return num(`The angles of a ${name} are ${terms.map(([c, k]) => `(${lin(c, k)})°`).join(', ')}. Find x.`, x, `Interior angles of a ${name} add to (${sides} − 2) × 180 = ${total}°. ${lin(sx, sc)} = ${total}, so ${sx}x = ${total - sc} and x = ${x}.`,
+        return num(`The angles of a ${name} are ${terms.map(([c, k]) => `(${lin(c, k)})°`).join(', ')}. Find x.`, x, `Interior angles of a ${name} add to (${sides} − 2) × 180 = ${total}°. ${lin(sx, sc)} = ${total}, so ${sc ? `${sx}x = ${total - sc} and ` : ''}x = ${x}.`,
           [`Angle sum = (n − 2) × 180 = ${total}°.`, `Add the expressions: ${lin(sx, sc)}.`, `${lin(sx, sc)} = ${total} → x = ${x}.`]);
       }
     }
@@ -629,7 +650,7 @@ const G = {
       if ((180 - b - c) % (a + 1)) continue;
       const x = (180 - b - c) / (a + 1), ext = x + c, int = a * x + b;
       if (ext <= 0 || int <= 0 || 360 % ext) continue;
-      return num(`In a regular polygon, each exterior angle is (${lin(1, c)})° and each interior angle is (${lin(a, b)})°. Find x.`, x, `Interior + exterior = 180: ${lin(a + 1, b + c)} = 180, so ${a + 1}x = ${180 - b - c} and x = ${x}. (Exterior ${ext}°, so the polygon has ${360 / ext} sides.)`,
+      return num(`In a regular polygon, each exterior angle is (${lin(1, c)})° and each interior angle is (${lin(a, b)})°. Find x.`, x, `Interior + exterior = 180: ${lin(a + 1, b + c)} = 180, so ${b + c ? `${a + 1}x = ${180 - b - c} and ` : ''}x = ${x}. (Exterior ${ext}°, so the polygon has ${360 / ext} sides.)`,
         ['At each corner, interior + exterior = 180°.', `${lin(a, b)} + ${lin(1, c)} = ${lin(a + 1, b + c)}.`, `${lin(a + 1, b + c)} = 180 → x = ${x}.`]);
     }
   },
@@ -648,8 +669,9 @@ const G = {
       const m = rng.int(2, 4), n = rng.int(1, 3) * (rng.chance(0.5) ? -1 : 1);
       const r = [m * a[0] + n * b[0], m * a[1] + n * b[1]];
       const nb = n < 0 ? `− ${-n === 1 ? '' : -n}b` : `+ ${n === 1 ? '' : n}b`;
-      return pairQ(`Work out ${m}a ${nb}. Type the top number then the bottom number.`, r, `${m}a = (${neg(m * a[0])}, ${neg(m * a[1])}); ${n}b = (${neg(n * b[0])}, ${neg(n * b[1])}). Add: (${neg(r[0])}, ${neg(r[1])}).`,
-        [`Multiply each part of a by ${m}.`, `Multiply each part of b by ${n}.`, `Add the tops and the bottoms: (${neg(r[0])}, ${neg(r[1])}).`], { diagram: dg([['a', ...a], ['b', ...b]]), placeholder: 'top, bottom' });
+      const nB = n === 1 ? 'b' : n === -1 ? '−b' : `${neg(n)}b`; // never "1b" or "-1b"
+      return pairQ(`Work out ${m}a ${nb}. Type the top number then the bottom number.`, r, `${m}a = (${neg(m * a[0])}, ${neg(m * a[1])}); ${nB} = (${neg(n * b[0])}, ${neg(n * b[1])}). Add: (${neg(r[0])}, ${neg(r[1])}).`,
+        [`Multiply each part of a by ${m}.`, n === 1 ? 'b stays as it is.' : `Multiply each part of b by ${neg(n)}.`, `Add the tops and the bottoms: (${neg(r[0])}, ${neg(r[1])}).`], { diagram: dg([['a', ...a], ['b', ...b]]), placeholder: 'top, bottom' });
     }
     if (rng.chance(0.5)) {
       const A = [rng.int(-5, 5), rng.int(-5, 5)], B = [rng.int(-5, 5), rng.int(-5, 5)];
@@ -793,8 +815,8 @@ const G = {
   y8nQuadForm(level, rng) {
     if (level === 1) {
       const p = rng.int(-6, 6) || 3, c = rng.int(-10, 15) || 7, q = c - p * p;
-      return num(`Write x² ${p < 0 ? '−' : '+'} ${Math.abs(2 * p)}x ${c < 0 ? '−' : '+'} ${Math.abs(c)} in the form (x ${p < 0 ? '−' : '+'} ${Math.abs(p)})² + q. What is q?`, q, `(x ${p < 0 ? '−' : '+'} ${Math.abs(p)})² = x² ${p < 0 ? '−' : '+'} ${Math.abs(2 * p)}x + ${p * p}. To get ${neg(c)} instead of ${p * p}, add ${neg(q)}: q = ${c} − ${p * p} = ${neg(q)}.`,
-        [`Halve the x coefficient: ${neg(p)}.`, `(x ${p < 0 ? '−' : '+'} ${Math.abs(p)})² gives an extra ${p * p}.`, `q = ${c} − ${p * p} = ${neg(q)}.`], { keypad: q >= 0 });
+      return num(`Write x² ${p < 0 ? '−' : '+'} ${Math.abs(2 * p)}x ${c < 0 ? '−' : '+'} ${Math.abs(c)} in the form (x ${p < 0 ? '−' : '+'} ${Math.abs(p)})² + q. What is q?`, q, `(x ${p < 0 ? '−' : '+'} ${Math.abs(p)})² = x² ${p < 0 ? '−' : '+'} ${Math.abs(2 * p)}x + ${p * p}. To get ${neg(c)} instead of ${p * p}, add ${neg(q)}: q = ${neg(c)} − ${p * p} = ${neg(q)}.`,
+        [`Halve the x coefficient: ${neg(p)}.`, `(x ${p < 0 ? '−' : '+'} ${Math.abs(p)})² gives an extra ${p * p}.`, `q = ${neg(c)} − ${p * p} = ${neg(q)}.`], { keypad: q >= 0 });
     }
     if (level === 2) {
       for (;;) {

@@ -97,7 +97,7 @@ const SCIENCE_WORDS = [
 const science = {
   subject: 'science', deck: 'joined-up',
   topics: [
-    { id: 'science.by-numbers', title: 'Science by numbers', kind: 'skill', prereqs: ['science.working', 'maths.ratio'], links: ['maths'], batch: 5, intro: 'Scientists use percentages, ratios and rates all the time: how much oxygen is in the air, how to mix a solution, how fast something cools.', teach: 'Explain how you would mix squash and water in the ratio 1 : 4.', talk: 'Ask her what 21% of a 500-litre room’s air would be oxygen.' },
+    { id: 'science.by-numbers', title: 'Science by numbers', kind: 'skill', prereqs: ['science.working', 'maths.ratio'], links: ['maths'], batch: 5, intro: 'Scientists use percentages, ratios and rates all the time: how much oxygen is in the air, how to mix a solution, how fast something cools.', teach: 'Explain how you would mix squash and water in the ratio 1 : 4.', talk: 'Ask her how many litres of the air in a 500-litre space would be oxygen (21% of 500).' },
     { id: 'science.words', title: 'Science words: spelling and meaning', kind: 'facts', prereqs: ['english.spell-1', 'science.cells'], links: ['english'], batch: 5, intro: 'Science words are built from Greek and Latin parts. Knowing the parts helps you spell them and work out what they mean.', teach: 'Pick a science word and explain what each part of it means.', talk: 'Ask her what “photo” means in photosynthesis and photograph.' },
   ],
   items: [
@@ -146,7 +146,7 @@ const MEMORY = {
   'history.src.tb3': { hook: 'Written down years later = a memory, not a recording.' },
   'science.sw.photo': { hook: 'Photo = light: a photograph is a “light drawing”.', example: 'Solar panels on roofs are photovoltaic: they turn light into electricity.' },
   'science.sw.chloro': { hook: 'Chloro = green: chlorophyll makes leaves green.', example: 'Swimming-pool chlorine is named after the yellow-green colour of chlorine gas.' },
-  'science.sw.therm': { hook: 'Therm = heat: a vacuum flask keeps the heat in your hot chocolate.', example: 'The thermostat on the wall at home controls the heating: therm (heat) + stat (stay).' },
+  'science.sw.therm': { hook: 'Therm = heat: a thermal flask keeps the heat in your hot chocolate.', example: 'The thermostat on the wall at home controls the heating: therm (heat) + stat (stay).' },
   'science.sw.photosynthesis': { hook: 'Photo (light) + synthesis (making): plants make their food with light.' },
   'science.sw.respiration': { hook: 're + SPIR + ation: think of “spirit”, the breath of life.' },
   'science.sw.chlorophyll': { hook: 'Chloro (green) + phyll (leaf): the green stuff in leaves.' },

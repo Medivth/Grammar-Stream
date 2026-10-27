@@ -13,7 +13,7 @@ const choiceOnly = { formats: ['choice'] };
 
 // passages (public domain)
 const TYGER = { passage: 'Tyger Tyger, burning bright,\nIn the forests of the night;\nWhat immortal hand or eye,\nCould frame thy fearful symmetry?', passageSource: 'William Blake, “The Tyger” (1794)' };
-const DAFFODILS = { passage: 'I wandered lonely as a cloud\nThat floats on high o’er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;', passageSource: 'William Wordsworth, “I Wandered Lonely as a Cloud” (1807)' };
+const DAFFODILS = { passage: 'I wandered lonely as a cloud\nThat floats on high o’er vales and hills,\nWhen all at once I saw a crowd,\nA host, of golden daffodils;', passageSource: 'William Wordsworth, “I Wandered Lonely as a Cloud” (1807, revised 1815)' };
 const WIND = { passage: 'Who has seen the wind?\nNeither I nor you:\nBut when the leaves hang trembling,\nThe wind is passing through.', passageSource: 'Christina Rossetti, “Who Has Seen the Wind?” (1872)' };
 const OZY = { passage: '“My name is Ozymandias, King of Kings;\nLook on my Works, ye Mighty, and despair!”\nNothing beside remains. Round the decay\nOf that colossal Wreck, boundless and bare\nThe lone and level sands stretch far away.', passageSource: 'Percy Bysshe Shelley, “Ozymandias” (1818)' };
 const RAILWAY = { passage: 'Faster than fairies, faster than witches,\nBridges and houses, hedges and ditches;\nAnd charging along like troops in a battle,\nAll through the meadows the horses and cattle:', passageSource: 'Robert Louis Stevenson, “From a Railway Carriage” (1885)' };

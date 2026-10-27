@@ -29,7 +29,16 @@ function dp(num, scale = 2) {
   const frac = String(num % p).padStart(scale, '0').replace(/0+$/, '');
   return sign + (frac ? `${whole}.${frac}` : String(whole));
 }
-const money = (pence) => `£${(pence / 100).toFixed(2)}`;
+/** Pounds with exactly two decimal places ("5.40", never "5.4"), for answers; money() adds £ and commas. */
+const pounds = (pence) => (pence / 100).toFixed(2);
+const money = (pence) => `£${comma(pounds(pence))}`;
+/** "= 12.5" when n ÷ d stops within 2 decimal places, otherwise "≈ 12.33" (rounded to 2 dp). */
+function quot(n, d) {
+  const sign = n * d < 0 ? '−' : '', c = Math.abs(n) * 100, a = Math.abs(d);
+  if (c % a === 0) return `= ${sign}${dp(c / a, 2)}`;
+  const t = Math.round(c / a);
+  return `≈ ${sign}${Math.floor(t / 100)}.${String(t % 100).padStart(2, '0')}`;
+}
 
 const norm = (t) => String(t).normalize('NFKC').toLowerCase().replace(/[−–]/g, '-').replace(/\s+/g, ' ').trim();
 function choice(prompt, correct, wrongs, rng, extra = {}) {
@@ -99,7 +108,7 @@ const G = {
       let m = n;
       for (const [p, k] of f) for (let i = 0; i < k; i++) { ladder.push(`${m} ÷ ${p} = ${m / p}`); m /= p; }
       if (rng.chance(0.4)) {
-        return num(`${indexForm(f)} = ?`, n, `Multiply it out: ${f.map(([p, k]) => (k === 1 ? `${p}` : `${p}${sup(k)} = ${p ** k}`)).join(', ')}. The product is ${n}.`,
+        return num(`${indexForm(f)} = ?`, n, `Multiply it out: ${f.map(([p, k]) => (k === 1 ? `${p} is just ${p}` : `${p}${sup(k)} = ${p ** k}`)).join(', ').replace(/, ([^,]*)$/, ' and $1')}. The product is ${f.map(([p, k]) => p ** k).join(' × ')} = ${n}.`,
           ['A small raised number (an index) says how many times to multiply the prime by itself.', f.map(([p, k]) => `${p}${sup(k)} = ${p ** k}`).join(', ') + '.', `Multiply them together: ${n}.`]);
       }
       const swapped = f.length >= 2 && f[0][1] !== f[1][1] ? indexForm([[f[0][0], f[1][1]], [f[1][0], f[0][1]], ...f.slice(2)]) : null;
@@ -143,9 +152,11 @@ const G = {
     const A = e.filter(([, k]) => k), B = f2.filter(([, k]) => k);
     const h = e.map(([p, k], i) => [p, Math.min(k, f2[i][1])]).filter(([, k]) => k);
     if (!A.length || !B.length || valueOf(A) === valueOf(B)) return G.y8mPrimes(level, rng);
+    // a single shared prime to the power 1 would read "2 = 2"
+    const hcf = h.length === 1 && h[0][1] === 1 ? `the only shared prime is ${h[0][0]}, and its lower power is just ${h[0][0]}, so HCF = ${h[0][0]}` : `${indexForm(h)} = ${valueOf(h)}`;
     return num(`A = ${indexForm(A)} and B = ${indexForm(B)}. What is the HCF of A and B?`, valueOf(h),
-      `Take each prime at the LOWER of its two powers: ${h.length ? indexForm(h) : '1'} = ${valueOf(h)}.`,
-      ['For the HCF, use only primes in both numbers.', 'Take the lower power of each shared prime.', `HCF = ${h.length ? indexForm(h) : '1'} = ${valueOf(h)}.`]);
+      `Take each shared prime at the LOWER of its two powers: ${hcf}.`,
+      ['For the HCF, use only primes in both numbers.', 'Take the lower power of each shared prime.', h.length === 1 && h[0][1] === 1 ? `Only ${h[0][0]} is shared, so HCF = ${h[0][0]}.` : `HCF = ${indexForm(h)} = ${valueOf(h)}.`]);
   },
 
   // ---- powers, roots and order of operations ---------------------------------------------
@@ -322,7 +333,7 @@ const G = {
       const p = rng.pick([3, 7, 12, 15, 35, 4, 17, 60]), up = rng.chance(0.5);
       const right = up ? dp(100 + p, 2) : dp(100 - p, 2);
       return choice(`Which single multiplier ${up ? 'increases' : 'decreases'} an amount by ${p}%?`, right, [dp(p, 2), up ? dp(100 - p, 2) : dp(100 + p, 2), dp(100 + p * 10, 2), String(p)], rng, {
-        explain: `${up ? 'An increase' : 'A decrease'} of ${p}% leaves ${up ? 100 + p : 100 - p}% of the original, and ${up ? 100 + p : 100 - p}% = ${right}.`,
+        explain: `${up ? 'An increase' : 'A decrease'} of ${p}% ${up ? 'gives' : 'leaves'} ${up ? 100 + p : 100 - p}% of the original, and ${up ? 100 + p : 100 - p}% = ${right}.`,
         steps: ['The original amount is 100%.', `${up ? 'Add' : 'Take away'} ${p}%: ${up ? 100 + p : 100 - p}%.`, `As a decimal: ${right}.`],
       });
     }
@@ -347,7 +358,7 @@ const G = {
       for (let i = 0; i < n; i++) { const next = (pence * (down ? 100 - r : 100 + r)) / 100; if (!Number.isInteger(next)) { ok = false; break; } pence = next; }
       if (!ok) continue;
       const thing = down ? `A merchant’s chariot is worth £${comma(P)}. It loses ${r}% of its value every year.` : `Mira puts £${comma(P)} in a savings account paying ${r}% compound interest each year.`;
-      return num(`${thing} What is it worth after ${n} years? Give the exact amount in pounds.`, dp(pence, 2),
+      return num(`${thing} What is it worth after ${n} years? Give the exact amount in pounds.`, pounds(pence),
         `Multiply by ${dp(down ? 100 - r : 100 + r, 2)} once for each year: £${comma(P)} × ${dp(down ? 100 - r : 100 + r, 2)}${sup(n)} = ${money(pence)}.`,
         [`Each year the value is multiplied by ${dp(down ? 100 - r : 100 + r, 2)}.`, `After ${n} years: £${comma(P)} × ${dp(down ? 100 - r : 100 + r, 2)}${sup(n)}.`, `= ${money(pence)}.`], { unit: '£', unitBefore: true });
     }
@@ -393,11 +404,11 @@ const G = {
       if (kind === 'diff') {
         const a = rng.int(2, 6), b = a + rng.int(1, 5), k = rng.int(3, 15);
         return num(`Kit and Theo share some sweets in the ratio ${a} : ${b}. Theo gets ${(b - a) * k} more than Kit. How many sweets are there altogether?`, (a + b) * k,
-          `The difference is ${b} − ${a} = ${b - a} parts = ${(b - a) * k}, so one part is ${k}. Altogether ${a + b} parts = ${(a + b) * k}.`,
-          [`The difference in parts is ${b - a}.`, `${b - a} parts = ${(b - a) * k}, so 1 part = ${k}.`, `Total = ${a + b} × ${k} = ${(a + b) * k}.`]);
+          `The difference is ${b} − ${a} = ${b - a} part${b - a === 1 ? '' : 's'} = ${(b - a) * k}, so one part is ${k}. Altogether ${a + b} parts = ${(a + b) * k}.`,
+          [`The difference in parts is ${b - a}.`, b - a === 1 ? `1 part = ${k}.` : `${b - a} parts = ${(b - a) * k}, so 1 part = ${k}.`, `Total = ${a + b} × ${k} = ${(a + b) * k}.`]);
       }
       const n1 = rng.int(3, 8), u = rng.int(3, 40) * 5, n2 = rng.int(9, 20);
-      return num(`${n1} jars of olive oil cost ${money(n1 * u)}. How much do ${n2} jars cost?`, dp(n2 * u, 2), `One jar costs ${money(n1 * u)} ÷ ${n1} = ${money(u)}. ${n2} jars: ${money(n2 * u)}.`,
+      return num(`${n1} jars of olive oil cost ${money(n1 * u)}. How much do ${n2} jars cost?`, pounds(n2 * u), `One jar costs ${money(n1 * u)} ÷ ${n1} = ${money(u)}. ${n2} jars: ${money(n2 * u)}.`,
         [`Find the cost of one jar first (the unitary method).`, `${money(n1 * u)} ÷ ${n1} = ${money(u)}.`, `× ${n2} = ${money(n2 * u)}.`], { unit: '£', unitBefore: true });
     }
     const kind = rng.pick(['inverse', 'combine']);
@@ -410,11 +421,14 @@ const G = {
         ['Ask: should more workers take more or less time? Less, so it is inverse proportion.', `Total work = ${w1} × ${P / w1} = ${P} worker-days.`, `${P} ÷ ${w2} = ${P / w2} days.`]);
     }
     const p = rng.int(1, 5), q = rng.int(2, 6), r = rng.int(2, 6), s = rng.int(1, 7);
-    const A = p * r, C = q * s, g = gcd(A, C);
+    // scale both ratios so b becomes LCM(q, r): the smallest whole numbers that make the b parts match
+    const L = lcm(q, r), A = (p * L) / q, C = (s * L) / r, g = gcd(A, C);
     if (gcd(p, q) !== 1 || gcd(r, s) !== 1 || A / g === C / g) return G.y8mRatio(level, rng);
+    const scaled = (x, y, by) => (by === 1 ? `${x} : ${y} stays as it is` : `${x} : ${y} = ${x * by} : ${y * by}`);
+    const match = q === r ? `b is ${q} in both ratios already, so they match.` : `b is ${q} in the first ratio and ${r} in the second. Make both ${L}: ${scaled(p, q, L / q)} and ${scaled(r, s, L / r)}.`;
     return choice(`a : b = ${p} : ${q} and b : c = ${r} : ${s}. What is a : c?`, `${A / g} : ${C / g}`, [`${p} : ${s}`, `${C / g} : ${A / g}`, `${p * s} : ${q * r}`], rng, {
-      explain: `Make the b parts match: a : b = ${p * r} : ${q * r} and b : c = ${q * r} : ${q * s}. So a : c = ${A} : ${C}${g > 1 ? ` = ${A / g} : ${C / g}` : ''}.`,
-      steps: [`b is ${q} in the first ratio and ${r} in the second. Make both ${q * r}.`, `a : b : c = ${p * r} : ${q * r} : ${q * s}.`, `a : c = ${A} : ${C}${g > 1 ? ` = ${A / g} : ${C / g}` : ''}.`],
+      explain: `${q === r ? 'The b parts already match' : `Make the b parts match: a : b = ${A} : ${L} and b : c = ${L} : ${C}`}. So a : b : c = ${A} : ${L} : ${C} and a : c = ${A} : ${C}${g > 1 ? ` = ${A / g} : ${C / g}` : ''}.`,
+      steps: [match, `a : b : c = ${A} : ${L} : ${C}.`, `a : c = ${A} : ${C}${g > 1 ? ` = ${A / g} : ${C / g}` : ''}.`],
     });
   },
 
@@ -635,7 +649,7 @@ const G = {
     const M = rng.int(30, 120), a = rng.int(3, 9), f = rng.int(2, 9);
     const n = Math.floor((M - f) / a);
     return num(`Kit has £${M}. Arrows cost £${a} each, plus a one-off £${f} delivery charge. What is the greatest number of arrows Kit can buy?`, n,
-      `${a}n + ${f} ≤ ${M}, so ${a}n ≤ ${M - f} and n ≤ ${dp(Math.round(((M - f) / a) * 100), 2)}. The greatest whole number is ${n}.`,
+      `${a}n + ${f} ≤ ${M}, so ${a}n ≤ ${M - f} and n ≤ ${M - f} ÷ ${a} ${quot(M - f, a)}. The greatest whole number is ${n}.`,
       [`Write an inequality: ${a}n + ${f} ≤ ${M}.`, `${a}n ≤ ${M - f}, so n ≤ ${M - f} ÷ ${a}.`, `Round DOWN (you cannot buy part of an arrow): ${n}.`]);
   },
 
@@ -657,7 +671,7 @@ const G = {
         const k = rng.int(12, 40), N = t(k) + (rng.chance(0.5) ? 0 : rng.pick([1, -1]));
         const yes = N === t(k);
         return choice(`Is ${neg(N)} a term in the sequence ${five}, …?`, yes ? `Yes: it is term ${k}` : 'No', yes ? ['No', `Yes: it is term ${k + 1}`] : [`Yes: it is term ${k}`, `Yes: it is term ${k + 1}`], rng, {
-          explain: `Solve ${ex([[d, 'n'], [c, '']])} = ${neg(N)}: n = ${dp(Math.round(((N - c) / d) * 100), 2)}. ${yes ? 'A whole number, so yes.' : 'Not a whole number, so no.'}`,
+          explain: `Solve ${ex([[d, 'n'], [c, '']])} = ${neg(N)}: n ${quot(N - c, d)}. ${yes ? 'A whole number, so yes.' : 'Not a whole number, so no.'}`,
           steps: [`nth term: ${ex([[d, 'n'], [c, '']])}.`, `Set it equal to ${neg(N)} and solve for n.`, yes ? `n = ${k}, a whole number: yes, term ${k}.` : 'n is not a whole number, so it is not in the sequence.'],
         });
       }
@@ -779,7 +793,7 @@ const G = {
       const q = a * x + p - b * x;
       if (q === 0) return G.y8mAngles(level, rng);
       return num(`Two ${kind} angles between parallel lines are (${a}x + ${p})° and (${b}x${sgn(q)})°. Find x.`, x, `${kind === 'corresponding' ? 'Corresponding (F)' : 'Alternate (Z)'} angles are equal: ${a}x + ${p} = ${b}x${sgn(q)}, so x = ${x}.`,
-        [`${kind === 'corresponding' ? 'Corresponding angles (an F shape)' : 'Alternate angles (a Z shape)'} are equal.`, `${a}x + ${p} = ${b}x${sgn(q)}.`, `${ex([[b - a, 'x']])} = ${p - q}, so x = ${x}.`]);
+        [`${kind === 'corresponding' ? 'Corresponding angles (an F shape)' : 'Alternate angles (a Z shape)'} are equal.`, `${a}x + ${p} = ${b}x${sgn(q)}.`, b - a === 1 ? `Subtract ${a}x from both sides: x${sgn(q)} = ${p}, so x = ${p}${sgn(-q)} = ${x}.` : `Subtract ${a}x from both sides: ${b - a}x${sgn(q)} = ${p}, so ${b - a}x = ${p - q} and x = ${x}.`]);
     }
     const kind = rng.pick(['ratio', 'pentagon', 'possible']);
     if (kind === 'ratio') {
@@ -798,8 +812,8 @@ const G = {
     }
     const a = rng.pick([25, 35, 40, 50, 70, 80, 14, 16]), ok = 360 % a === 0;
     return choice(`Can a regular polygon have an exterior angle of ${a}°?`, ok ? `Yes: it has ${360 / a} sides` : 'No', ok ? ['No', `Yes: it has ${360 / a + 1} sides`] : [`Yes: it has ${Math.round(360 / a)} sides`, `Yes: it has ${Math.round(360 / a) + 1} sides`], rng, {
-      explain: `The number of sides would be 360 ÷ ${a} = ${dp(Math.round((360 / a) * 100), 2)}. ${ok ? 'That is a whole number, so yes.' : 'That is not a whole number, so no.'}`,
-      steps: ['Exterior angles of a regular polygon are 360 ÷ (number of sides).', `360 ÷ ${a} = ${dp(Math.round((360 / a) * 100), 2)}.`, ok ? 'A whole number: yes.' : 'Not a whole number: impossible.'],
+      explain: `The number of sides would be 360 ÷ ${a} ${quot(360, a)}. ${ok ? 'That is a whole number, so yes.' : 'That is not a whole number, so no.'}`,
+      steps: ['Exterior angles of a regular polygon are 360 ÷ (number of sides).', `360 ÷ ${a} ${quot(360, a)}.`, ok ? 'A whole number: yes.' : 'Not a whole number: impossible.'],
     });
   },
 
@@ -938,9 +952,10 @@ const G = {
     }
     const cx = rng.int(-3, 3), cy = rng.int(-3, 3), k = rng.pick([2, 3]);
     const R = [cx + k * (x - cx), cy + k * (y - cy)];
+    const move = (h, v) => `${Math.abs(h)} ${h < 0 ? 'left' : 'right'}, ${Math.abs(v)} ${v < 0 ? 'down' : 'up'}`;
     if (Math.abs(R[0]) > 20 || Math.abs(R[1]) > 20) return G.y8mTransform(level, rng);
     return pairQ(`P${P} is enlarged by scale factor ${k} with centre (${neg(cx)}, ${neg(cy)}). Where is its image?`, R, `From the centre to P is (${neg(x - cx)}, ${neg(y - cy)}). Multiply by ${k}: (${neg(k * (x - cx))}, ${neg(k * (y - cy))}). Add to the centre: (${neg(R[0])}, ${neg(R[1])}).`,
-      [`Vector from the centre to P: ${neg(x - cx)} across, ${neg(y - cy)} up.`, `× ${k}: ${neg(k * (x - cx))} across, ${neg(k * (y - cy))} up.`, `From the centre: (${neg(R[0])}, ${neg(R[1])}).`]);
+      [`Vector from the centre to P: ${move(x - cx, y - cy)}.`, `× ${k}: ${move(k * (x - cx), k * (y - cy))}.`, `From the centre: (${neg(R[0])}, ${neg(R[1])}).`]);
   },
 
   // ---- probability ---------------------------------------------------------------------------
@@ -1085,6 +1100,7 @@ const G = {
 
   y8mSimultaneous(level, rng) {
     const x = rng.int(-4, 9), y = rng.int(-4, 9);
+    if (x === 0 && y === 0) return G.y8mSimultaneous(level, rng); // x + y = 0 and x − y = 0 is no puzzle
     if (level === 1) {
       return pairQ(`Solve: x + y = ${neg(x + y)} and x − y = ${neg(x - y)}. Give your answer as (x, y).`, [x, y], `Add the equations: 2x = ${neg(2 * x)}, so x = ${neg(x)}. Then y = ${neg(x + y)} − ${paren(x)} = ${neg(y)}.`,
         ['Adding the two equations cancels y.', `2x = ${neg(2 * x)}, x = ${neg(x)}.`, `Substitute back: y = ${neg(y)}.`]);
@@ -1092,9 +1108,12 @@ const G = {
     if (level === 2) {
       const a = rng.int(2, 5), b = rng.int(1, 4), c = rng.int(1, 4);
       if (a === c) return G.y8mSimultaneous(level, rng);
+      // subtract the equation with fewer x's from the other, so the x coefficient stays positive
+      const k = Math.abs(a - c), sub = a > c ? 'the second from the first' : 'the first from the second';
+      const solveX = k === 1 ? `x = ${neg(x)}` : `${k}x = ${neg(k * x)}, so x = ${neg(x)}`;
       return pairQ(`Solve: ${a}x + ${b}y = ${neg(a * x + b * y)} and ${c === 1 ? '' : c}x + ${b}y = ${neg(c * x + b * y)}. Give (x, y).`.replace(/ 1y/g, ' y'), [x, y],
-        `The y terms match, so subtract: ${ex([[a - c, 'x']])} = ${neg((a - c) * x)}, x = ${neg(x)}. Then ${b === 1 ? '' : b}y = ${neg(a * x + b * y)} − ${paren(a * x)}, so y = ${neg(y)}.`,
-        ['Both equations have the same y term: subtract to eliminate it.', `${ex([[a - c, 'x']])} = ${neg((a - c) * x)}, x = ${neg(x)}.`, `Substitute: y = ${neg(y)}.`]);
+        `The y terms match, so subtract ${sub}: ${solveX}. Then ${b === 1 ? '' : b}y = ${neg(a * x + b * y)} − ${paren(a * x)}, so y = ${neg(y)}.`,
+        [`Both equations have the same y term: subtract ${sub} to eliminate it.`, `${solveX}.`, `Substitute: y = ${neg(y)}.`]);
     }
     if (rng.chance(0.5)) {
       const o = rng.int(2, 12), l = rng.int(2, 12), [p, q, r, s] = [rng.int(2, 5), rng.int(1, 4), rng.int(1, 3), rng.int(2, 6)];
@@ -1186,7 +1205,8 @@ const G = {
       return fracQ(`Write 0.${dot(s)} (0.${s.repeat(3)}…) as a fraction in its simplest form.`, F(ab, 99), `Two digits repeat, so use 100x: 100x − x = ${ab}, 99x = ${ab}, x = ${tex(F(ab, 99))}.`,
         [`x = 0.${s}${s}…`, `100x = ${s}.${s}${s}…`, `99x = ${ab}, so x = ${ab}/99${gcd(ab, 99) > 1 ? ` = ${tex(F(ab, 99))}` : ''}.`]);
     }
-    const a = rng.int(1, 9), b = rng.int(1, 9);
+    // never 9 as the repeating digit: 0.4999… is exactly 0.5, not a true recurring decimal
+    const a = rng.int(1, 9), b = rng.int(1, 8);
     if (a === b) return G.y8mRecurring(level, rng);
     const f = F(10 * a + b - a, 90);
     return fracQ(`Write 0.${a}${dot(String(b))} (0.${a}${String(b).repeat(3)}…) as a fraction in its simplest form.`, f, `Let x = 0.${a}${String(b).repeat(3)}…; 100x = ${a}${b}.${String(b).repeat(3)}… and 10x = ${a}.${String(b).repeat(3)}…; subtract: 90x = ${10 * a + b - a}, so x = ${tex(f)}.`,

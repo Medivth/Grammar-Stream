@@ -744,7 +744,7 @@
    ],
    "strict": true,
    "hook": "A four-digit palindrome is **abba**: only the first two digits are free choices.",
-   "example": "2002 and 2112 were palindromic years; the next one after 2112 is 2222."
+   "example": "2002 was a palindromic year; the next ones are 2112 and then 2222."
   },
   {
    "id": "maths.ps.dg.count",
@@ -1960,7 +1960,7 @@
     "choice"
    ],
    "strict": true,
-   "hook": "**37 × 3 = 111**, so 37 × 3k gives k three times over: 37 × 18 = 37 × 3 × 6 = 666."
+   "hook": "**37 × 3 = 111**, so 37 × 3k gives k three times over (for k from 1 to 9): 37 × 18 = 37 × 3 × 6 = 666."
   },
   {
    "id": "maths.ps.mn.odds",
@@ -2201,7 +2201,7 @@
      "feedback": "Row n adds to exactly n³."
     }
    ],
-   "explain": "Row sums are 1, 8, 27, 64, …: the cubes. Row 10 adds to 10³ = 1000. (Its middle is 100 and there are 10 numbers.)",
+   "explain": "Row sums are 1, 8, 27, 64, …: the cubes. Row 10 adds to 10³ = 1000. (Its numbers, 91 to 109, average 100, and there are 10 of them.)",
    "hook": "**Row n of the odd numbers adds to n³**: 3 + 5 = 8, 7 + 9 + 11 = 27."
   },
   {

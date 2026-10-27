@@ -47,7 +47,7 @@ const ROOTS_1 = [
   ['kosmos (cosm-)', 'order or the world', ['cosmos', 'cosmopolitan'], ['beauty or charm', 'star or planet', 'city or citizen']],
   ['aster (astr-)', 'star', ['astronomy', 'asteroid'], ['flower', 'stone', 'sky']],
   ['kyklos (cycl-)', 'circle or wheel', ['cycle', 'encyclopedia'], ['storm or whirlwind', 'eye or sight', 'speed or haste']],
-  ['genos (gen-)', 'birth, kind or origin', ['genesis', 'genetics'], ['gentle or kind', 'knee or joint', 'giant, huge or vast']],
+  ['genos (gen-)', 'birth, kind or origin', ['genesis', 'genetics'], ['gentle or polite', 'knee or joint', 'giant, huge or vast']],
   ['hemi-', 'half', ['hemisphere'], ['blood', 'whole', 'sun']],
   ['isos (iso-)', 'equal', ['isosceles', 'isobar'], ['island', 'alone', 'ice']],
 ];
@@ -126,7 +126,7 @@ const VOCAB_3 = [
 ];
 // [word, definition, wrong spellings, tip]
 const SPELL_2 = [
-  ['conscientious', 'careful and hard-working', ['conscienscious', 'consciencious', 'contientious'], 'conscience + -tious: a conscientious worker listens to her conscience.'],
+  ['conscientious', 'careful and hard-working', ['conscienscious', 'consciencious', 'contientious'], 'conscien(ce) + -tious, dropping the final -ce: a conscientious worker listens to her conscience.'],
   ['connoisseur', 'an expert judge of fine things', ['connoiseur', 'conoisseur', 'connosseur'], 'Double n, double s, and “eu” near the end: con-nois-seur.'],
   ['consensus', 'general agreement', ['concensus', 'consencus', 'consensous'], 'It comes from “consent”, not “census”: con-sen-sus.'],
   ['desiccated', 'completely dried out', ['dessicated', 'desicated', 'dessiccated'], 'One s, two c’s: a desert is dry and has one s.'],
@@ -138,7 +138,7 @@ const SPELL_2 = [
   ['inoculate', 'to vaccinate', ['innoculate', 'inocculate', 'inoculatte'], 'One n, one c, one l: in-oc-u-late.'],
   ['manoeuvre', 'a skilful movement', ['manouevre', 'manoeuver', 'manuver'], 'British spelling: man-oeu-vre.'],
   ['minuscule', 'extremely small', ['miniscule', 'minuscle', 'minusscule'], 'From “minus”, not “mini”: minus-cule.'],
-  ['pharaoh', 'a ruler of ancient Egypt', ['pharoah', 'pharao', 'faraoh'], 'The vowels go a-o-h at the end: phar-a-oh.'],
+  ['pharaoh', 'a ruler of ancient Egypt', ['pharoah', 'pharao', 'faraoh'], 'The letters go a-o-h at the end: phar-a-oh.'],
   ['playwright', 'a person who writes plays', ['playwrite', 'plawright', 'playright'], 'A wright is a maker, as in shipwright: a playwright makes plays.'],
   ['supersede', 'to take the place of something older', ['supercede', 'superceed', 'supersed'], 'The only common English word ending in -sede.'],
   ['bureaucracy', 'a system of government run by officials', ['beaurocracy', 'bureaucrasy', 'burocracy'], 'bureau (desk) + -cracy (Greek kratos, power).'],
@@ -518,7 +518,7 @@ const MEMORY = {
   'g3.nonfinite': { hook: 'Non-finite = no tense and no subject: “Gripping the thread” needs a main clause to finish it.' },
   'g3.dangling': { example: 'A classic howler: “Walking to school, a tree fell on me.” Was the tree walking?' },
   'g3.inversion': { example: '“Down came the rain” and “Here comes the bride” both put the verb before the subject.' },
-  'g3.minor': { hook: 'A minor sentence is a pause made solid: one word, then a full stop.' },
+  'g3.minor': { hook: 'A minor sentence is a pause made solid: a word or two, then a full stop.' },
   'g3.periodic': { hook: 'In a periodic sentence the point arrives only at the full stop, which Americans call a period.' },
   'g3.polysyndeton': { hook: 'Poly = many: many “and”s, a breathless pile-up.' },
   'g3.asyndeton': { example: 'Shopping lists are naturally asyndetic: eggs, milk, bread, butter.' },

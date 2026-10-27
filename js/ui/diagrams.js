@@ -322,7 +322,7 @@ function numLine(d) {
   el.append(line(x0, 50, x1, 50));
   for (let v = d.min; v <= d.max; v += d.step) {
     el.append(line(X(v), 42, X(v), 58, { 'stroke-width': 2 }));
-    if (d.labels?.includes(v) || v === d.min || v === d.max) el.append(small(X(v), 78, String(v)));
+    if (d.labels?.includes(v) || v === d.min || v === d.max) el.append(small(X(v), 78, v < 0 ? `−${-v}` : String(v)));
   }
   if (d.mark != null) el.append(s('path', { d: `M${X(d.mark)} 38 l-8 -14 h16 z`, fill: '#d62f3a' }), text(X(d.mark), 18, '?', { fill: '#d62f3a' }));
   return el;

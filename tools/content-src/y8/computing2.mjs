@@ -100,7 +100,7 @@ const items = [
   mcq('rd.choice', 'random', 'What does random.choice(["Zeus", "Hera", "Ares"]) do?', [['Picks one of the three names at random', true], ['Picks all three, in a random order', false, 'It picks one.'], ['Always picks the first name in the list', false, 'That would not be random!']], 'random.choice picks one item from a list at random.'),
   mcq('rd.pseudo', 'random', 'Why are computer “random” numbers called pseudo-random?', [['They come from a formula, so the same seed repeats them', true], ['They are always slightly biased towards even numbers', false, 'They can be any value in the range.'], ['They are typed in by a person in advance', false, 'A formula produces them.']], 'A pseudo-random generator is deterministic but looks random. For encryption, computers mix in real-world noise as well.'),
   mcq('rd.sim', 'random', 'Kit simulates 10,000 dice rolls and counts the sixes. About how many should he expect?', [['About 1,667', true], ['Exactly 1,000', false, 'One in six of 10,000 is about 1,667.'], ['About 6,000', false, 'Each roll has only a 1 in 6 chance of a six.']], '10,000 ÷ 6 ≈ 1,667. The result will vary a little each run, and more rolls make it closer to the true probability.'),
-  mcq('rd.import', 'random', 'What must a Python program do before using random.randint?', [['import random', true], ['install a dice', false, 'It is a built-in module.'], ['define randint itself', false, 'The random module already provides it.']], 'Modules like random and math are libraries of ready-made functions; import makes them available.'),
+  mcq('rd.import', 'random', 'What must a Python program do before using random.randint?', [['import random', true], ['install a dice', false, 'It is part of Python’s standard library: it comes with Python, but you import it first.'], ['define randint itself', false, 'The random module already provides it.']], 'Modules like random and math are libraries of ready-made functions; import makes them available.'),
 
   // --- bug hunting
   tmpl('bh.tmpl', 'bughunt', 'y8dBug'),
@@ -283,7 +283,7 @@ const MEMORY = {
   'computing.m.ar.tmpl': { hook: '**1 GHz = 1 billion cycles every second.**', example: 'A 3 GHz processor ticks about 3 billion times in the second it takes you to say “one”.' },
   'computing.m.rc.tmpl': { hook: '**Base case + a smaller call**: factorial(n) = n × factorial(n − 1), stopping at 1.', example: 'Russian dolls: open each doll to find a smaller one, until the tiny solid doll, the base case.' },
   'computing.m.pt.tmpl': { hook: '**BFS: ripples on a pond. Dijkstra: always extend the shortest route found so far.**', example: 'Sat navs and delivery firms use shortest-path algorithms to plan their routes.' },
-  'computing.m.lc.tmpl': { hook: '**Work inside the brackets first**, and give each gate its own column in the truth table.', example: 'A seatbelt warning beeps when (the engine is on AND the seatbelt is NOT fastened).' },
+  'computing.m.lc.tmpl': { hook: '**Brackets first, then NOT, then AND, then OR**, and give each gate its own column in the truth table.', example: 'A seatbelt warning beeps when (the engine is on AND the seatbelt is NOT fastened).' },
   'computing.m.hf.tmpl': { hook: '**Huffman: join the two least common, again and again**, to build the tree.', example: 'ZIP files and JPEG images both use Huffman coding as one of their steps.' },
 
   // functions
@@ -316,7 +316,7 @@ const MEMORY = {
   // validation and robust programs
   'computing.m.rb.valver': { hook: '**Validation: is it reasonable? Verification: is it what you meant?** Typing it twice is verification.', example: 'Typing a new password twice is verification; refusing one shorter than 8 characters is validation.' },
   'computing.m.rb.checks': { hook: '**Presence check: is anything there at all?**', example: 'Online forms mark required boxes with a star and won’t submit while they are empty.' },
-  'computing.m.rb.format': { hook: '**Format check: does it fit the pattern?**', example: 'Postcodes like SW1A 1AA and email addresses with an @ in them are checked for format.' },
+  'computing.m.rb.format': { hook: '**Format check: does it fit the pattern?**', example: 'Postcodes like OX1 2JD and email addresses with an @ in them are checked for format.' },
   'computing.m.rb.valid': { hook: '**Validation catches the impossible, not the wrong-but-sensible.**', example: 'A form can reject a birthday of 31 February, but not a real date that you mistyped.' },
   'computing.m.rb.auth': { hook: '**Authentication = proving who you are.**', example: 'Unlocking a phone with your face or fingerprint is authentication.' },
 

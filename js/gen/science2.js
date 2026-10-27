@@ -40,6 +40,7 @@ export const SCIENCE2_GENERATORS = {
       };
     }
     if (level === 2) {
+      if (b !== 'oxygen') return SCIENCE2_GENERATORS.massConserve(level, rng); // only oxygen comes from the air (iron sulfide needs sulfur)
       return {
         kind: 'typed', prompt: `${A} g of ${a} burns in air to make ${P} g of ${p}. What mass of ${b} did it react with?`, numeric: { value: B, form: 'any' }, unit: 'g',
         explain: `The extra mass came from the ${b} in the air: ${P} − ${A} = ${B} g.`,
@@ -50,7 +51,7 @@ export const SCIENCE2_GENERATORS = {
     return {
       kind: 'typed', prompt: `${A} g of ${a} makes ${P} g of ${p}. How much ${p} would ${fmt(ma * k * mult)} g of ${a} make?`, numeric: { value: fmt((ma + mb) * k * mult), form: 'any' }, unit: 'g',
       explain: `${fmt(ma * k * mult)} g is ${mult} times as much ${a}, so it makes ${mult} times as much product: ${mult} × ${P} = ${fmt((ma + mb) * k * mult)} g.`,
-      steps: ['Reacting masses are proportional: double the reactant, double the product.', `${fmt(ma * k * mult)} ÷ ${A} = ${mult}, so there is ${mult} times as much ${a}.`, `${mult} × ${P} = ${fmt((ma + mb) * k * mult)} g.`],
+      steps: ['Reacting masses are proportional: multiply the mass of reactant by a number and the mass of product is multiplied by the same number.', `${fmt(ma * k * mult)} ÷ ${A} = ${mult}, so there is ${mult} times as much ${a}.`, `${mult} × ${P} = ${fmt((ma + mb) * k * mult)} g.`],
     };
   },
 };
