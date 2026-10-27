@@ -24,7 +24,7 @@ const CONTINENTS = [
   ['africa', 'Africa', 'Africa is the second largest continent, with 54 countries. The Equator crosses it.'],
   ['north-america', 'North America', 'North America includes Canada, the USA, Mexico, Central America and the Caribbean.'],
   ['south-america', 'South America', 'South America contains the Amazon rainforest and the Andes mountains.'],
-  ['antarctica', 'Antarctica', 'Antarctica is the coldest continent and is covered in ice. No country owns it.'],
+  ['antarctica', 'Antarctica', 'Antarctica is the coldest continent and is covered in ice. Several countries, including the UK, claim parts of it, but under the Antarctic Treaty it is kept for peace and science.'],
   ['europe', 'Europe', 'Europe is the second smallest continent. The UK is part of it.'],
   ['oceania', 'Oceania', 'Oceania includes Australia, New Zealand and many Pacific islands. Some books call this continent Australia.'],
 ];
@@ -107,7 +107,7 @@ items.push(mcq('uk.gb', 'uk', 'What is the difference between Great Britain and 
 
 // Europe
 for (const [id, name, capital, wrong, set] of EUROPE) {
-  items.push(mapfact(`eu.${id.toLowerCase()}`, `europe-${set}`, 'europe', 'countries', id, name, `This is ${the(name)}.`, { choosePrompt: 'Which country is highlighted?', accept: id === 'GBR' ? ['UK', 'Britain', 'Great Britain'] : id === 'CZE' ? ['Czech Republic'] : id === 'NLD' ? ['Holland', 'The Netherlands'] : [] }));
+  items.push(mapfact(`eu.${id.toLowerCase()}`, `europe-${set}`, 'europe', 'countries', id, name, `This is ${the(name)}.`, { choosePrompt: 'Which country is highlighted?', accept: id === 'GBR' ? ['UK', 'Britain'] : id === 'CZE' ? ['Czech Republic'] : id === 'NLD' ? ['Holland', 'The Netherlands'] : [] }));
   items.push(fact(`cap.${id.toLowerCase()}`, `capitals-${set}`, `What is the capital of ${the(name)}?`, capital, wrong, `The capital of ${the(name)} is ${capital.replace(/\.$/, '')}.${CAPITAL_NOTES[id] ? ' ' + CAPITAL_NOTES[id] : ''}`, {
     map: 'europe', feature: id, fill: true, learn: `The capital of **${the(name)}** is **${capital}**.${CAPITAL_NOTES[id] ? ' ' + CAPITAL_NOTES[id] : ''}`,
     accept: id === 'UKR' ? ['Kiev'] : id === 'MDA' ? ['Chisinau'] : id === 'ISL' ? ['Reykjavík'] : id === 'LUX' ? ['Luxembourg City'] : [],
@@ -116,7 +116,7 @@ for (const [id, name, capital, wrong, set] of EUROPE) {
 
 // Weather diagnostics and water cycle (misconceptions from Ofsted's geography review)
 items.push(
-  mcq('w.d1', 'weather', 'Does air have mass (does it weigh anything)?', [['Yes, air has mass', true], ['No, air weighs nothing', false, 'A common idea, but air is made of particles, and particles have mass. A room’s air can weigh more than you!'], ['Only when it is cold and wet', false, 'Air always has mass, whether it is moving or not.']], 'Air is matter: it has mass and takes up space. The weight of air above us causes air pressure.'),
+  mcq('w.d1', 'weather', 'Does air have mass (does it weigh anything)?', [['Yes, air has mass', true], ['No, air weighs nothing', false, 'A common idea, but air is made of particles, and particles have mass. A room’s air can weigh more than you!'], ['Only when it is cold and wet', false, 'Air always has mass, whatever the weather or temperature.']], 'Air is matter: it has mass and takes up space. The weight of air above us causes air pressure.'),
   mcq('w.d2', 'weather', 'Is damp (humid) air heavier or lighter than dry air at the same temperature?', [['Lighter', true], ['Heavier, because water is heavy', false, 'Surprising but true: water vapour molecules are lighter than the nitrogen and oxygen they replace, so humid air is less dense.'], ['Exactly the same', false, 'There is a small difference: humid air is slightly lighter.']], 'Water vapour (H₂O) has lighter molecules than nitrogen (N₂) and oxygen (O₂), so humid air is less dense. That helps it rise and form clouds.'),
   mcq('w.d3', 'weather', 'Why does the Sun appear to move across the sky during the day?', [['Because the Earth spins on its axis', true], ['Because the Sun travels around the Earth each day', false, 'This is what people believed for thousands of years, but it is the Earth that turns.'], ['Because clouds push it along', false, 'Clouds are much closer than the Sun and don’t affect where it appears.']], 'The Earth rotates once every 24 hours, so the Sun appears to rise in the east and set in the west.'),
   fact('w.evap', 'weather', 'What is it called when liquid water turns into water vapour?', 'evaporation', ['condensation', 'precipitation', 'transpiration'], 'Evaporation: the Sun heats water and it turns into vapour.'),

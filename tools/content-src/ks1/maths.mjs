@@ -32,7 +32,7 @@ const SHAPES = [
   ['How many sides does a triangle have?', '3', ['4', '5', '6'], 'Tri means three: 3 sides and 3 corners.'],
   ['How many sides does a pentagon have?', '5', ['4', '6', '8'], 'Pent means five.'],
   ['How many sides does a hexagon have?', '6', ['5', '8', '4'], 'Hex means six. Bees build hexagons in their honeycomb.'],
-  ['How many sides does an octagon have?', '8', ['6', '10', '7'], 'Oct means eight, like an octopus with 8 legs.'],
+  ['How many sides does an octagon have?', '8', ['6', '10', '7'], 'Oct means eight, like an octopus with 8 arms.'],
   ['What is the name of a corner on a shape?', 'a vertex', ['an edge', 'a face', 'a side'], 'A corner is a vertex. More than one are vertices.', { accept: ['vertex'] }],
   ['How many faces does a cube have?', '6', ['4', '8', '12'], 'A dice is a cube: 6 square faces.'],
   ['How many vertices (corners) does a cube have?', '8', ['6', '12', '4'], '4 on the top and 4 on the bottom: 8.'],

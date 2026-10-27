@@ -15,7 +15,7 @@ export const SCIENCE2_GENERATORS = {
     }
     if (level === 2) {
       return {
-        kind: 'typed', prompt: `A ${fmt(V)} V battery is connected across a ${R} Ω resistor. What current flows?`, numeric: { value: String(I), form: 'any' }, unit: 'A',
+        kind: 'typed', prompt: `A ${fmt(V)} V battery is connected across ${/^(8|11|18)/.test(String(R)) ? 'an' : 'a'} ${R} Ω resistor. What current flows?`, numeric: { value: String(I), form: 'any' }, unit: 'A',
         explain: `I = V ÷ R = ${fmt(V)} ÷ ${R} = ${I} A.`,
         steps: ['Rearrange V = I × R to I = V ÷ R.', `V = ${fmt(V)} V, R = ${R} Ω.`, `${fmt(V)} ÷ ${R} = ${I} A.`],
       };
@@ -43,7 +43,7 @@ export const SCIENCE2_GENERATORS = {
       return {
         kind: 'typed', prompt: `${A} g of ${a} burns in air to make ${P} g of ${p}. What mass of ${b} did it react with?`, numeric: { value: B, form: 'any' }, unit: 'g',
         explain: `The extra mass came from the ${b} in the air: ${P} − ${A} = ${B} g.`,
-        steps: ['The product weighs more than the metal because it has joined with a gas from the air.', `Mass of ${b} = mass of product − mass of ${a}.`, `${P} − ${A} = ${B} g.`],
+        steps: [`The product weighs more than the ${a} because it has joined with ${b} from the air.`, `Mass of ${b} = mass of product − mass of ${a}.`, `${P} − ${A} = ${B} g.`],
       };
     }
     const mult = rng.pick([2, 3, 4]);

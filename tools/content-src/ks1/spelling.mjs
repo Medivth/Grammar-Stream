@@ -45,7 +45,7 @@ const LISTS = {
     ['cold', 'Space is very, very ___.', 'not hot', 'o says its name before ld: cold, gold, old, hold, told.'],
   ],
   'Year 2 words: long vowels and odd ones out': [
-    ['every', 'I practise ___ day.', 'each one', 'e-v-e-r-y: three syllables, ev-er-y.'],
+    ['every', 'I practise ___ day.', 'each one', 'e-v-e-r-y: say it in three parts to spell it: ev-er-y.'],
     ['everybody', '___ clapped for the winner.', 'all the people', 'every + body.'],
     ['even', 'Is 8 an odd or ___ number?', 'can be shared into 2 equal groups', 'e says its name: e-v-e-n.'],
     ['great', 'That was a ___ race!', 'very good', 'Sounds like “grate” but spelt g-r-e-a-t.'],

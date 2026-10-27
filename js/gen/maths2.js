@@ -31,7 +31,7 @@ export const MATHS2_GENERATORS = {
   // --- written multiplication ---------------------------------------------------
   longMult(level, rng) {
     if (level === 1) {
-      const a = rng.int(12, 99), b = rng.int(3, 9);
+      const a = rng.pick([...Array(88).keys()].map((k) => k + 12).filter((x) => x % 10)), b = rng.int(3, 9);
       const t = Math.floor(a / 10) * 10, o = a % 10;
       return {
         kind: 'typed', prompt: `${a} × ${b} = ?`, numeric: { value: String(a * b), form: 'any' },
@@ -278,7 +278,7 @@ export const MATHS2_GENERATORS = {
       return {
         kind: 'typed', prompt: `${a} ${big} ${add ? '+' : '−'} ${b} ${small} = ? ${small}`, numeric: { value: String(total), form: 'any' }, unit: small,
         explain: `First make the units the same: ${a} ${big} = ${fmtNum(a * f)} ${small}. Then ${fmtNum(a * f)} ${add ? '+' : '−'} ${b} = ${fmtNum(total)} ${small}.`,
-        steps: [`I can’t add ${big} to ${small} directly, so I change ${a} ${big} into ${small}: × ${f} = ${fmtNum(a * f)}.`, `${fmtNum(a * f)} ${add ? '+' : '−'} ${b}.`, `= ${fmtNum(total)} ${small}.`],
+        steps: [`I can’t ${add ? 'add' : 'subtract'} ${big} and ${small} directly, so I change ${a} ${big} into ${small}: × ${f} = ${fmtNum(a * f)}.`, `${fmtNum(a * f)} ${add ? '+' : '−'} ${b}.`, `= ${fmtNum(total)} ${small}.`],
       };
     }
     if (rng.chance(0.5)) {
@@ -383,7 +383,7 @@ export const MATHS2_GENERATORS = {
       const start = (left * den) / (den - num);
       return {
         kind: 'typed', prompt: `Jo spends {{${num}/${den}}} of her money and has £${left} left. How much did she start with?`, numeric: { value: String(start), form: 'any' }, unit: '£', unitBefore: true,
-        explain: `If ${num}/${den} is spent, ${den - num}/${den} is left. ${den - num}/${den} = £${left}, so 1/${den} = £${left / (den - num)} and the whole is ${den} × £${left / (den - num)} = £${start}.`,
+        explain: `If ${num}/${den} is spent, ${den - num}/${den} is left. ${den - num === 1 ? `That 1/${den} is £${left}, so` : `${den - num}/${den} = £${left}, so 1/${den} = £${left / (den - num)} and`} the whole is ${den} × £${left / (den - num)} = £${start}.`,
         steps: [`Spending ${num}/${den} leaves ${den - num}/${den}. That is the £${left}.`, den - num === 1 ? `So one ${NTH[den]} is £${left}.` : `One ${NTH[den]} is £${left} ÷ ${den - num} = £${left / (den - num)}.`, `The whole amount is ${den} × £${left / (den - num)} = £${start}.`],
       };
     }
@@ -473,8 +473,9 @@ export const MATHS2_GENERATORS = {
       const title = cats === PETS ? 'Favourite pets in Year 6' : 'How Year 6 travel to school';
       const dg = { type: 'bar', title, cats: cats.map((c, i) => ({ label: c, v: vals[i] })), step, ylabel: 'pupils' };
       if (rng.chance(0.5)) {
-        const [i, j] = rng.sample([0, 1, 2, 3, 4], 2);
-        const [hi, lo] = vals[i] >= vals[j] ? [i, j] : [j, i];
+        let [i, j] = rng.sample([0, 1, 2, 3, 4], 2);
+        while (vals[i] === vals[j]) [i, j] = rng.sample([0, 1, 2, 3, 4], 2);
+        const [hi, lo] = vals[i] > vals[j] ? [i, j] : [j, i];
         return {
           kind: 'typed', prompt: `How many more pupils chose “${cats[hi]}” than “${cats[lo]}”?`, numeric: { value: String(vals[hi] - vals[lo]), form: 'any' }, unit: 'pupils', diagram: dg,
           explain: `${cats[hi]}: ${vals[hi]}. ${cats[lo]}: ${vals[lo]}. Difference ${vals[hi]} − ${vals[lo]} = ${vals[hi] - vals[lo]}. Check the scale: each gridline is ${step}.`,

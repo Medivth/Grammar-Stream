@@ -44,24 +44,24 @@ const GOTHIC_PAIR = both('havisham', 'frankenstein', '(Two texts: Pip meets Miss
 const EXCALIBUR = X('excalibur', 'King Arthur is dying after his last battle. Twice he has sent his knight Sir Bedivere to throw his sword into the lake, and twice Bedivere has hidden it instead. Arthur speaks first.');
 
 const topics = [
-  { id: 'english.myths', title: 'Myths retold: Persephone, Orpheus and Arachne', kind: 'reading', prereqs: [], batch: 7, intro: 'Greek myths explain the world (why winter comes, where spiders came from) and test human beings against the gods. Read each one closely: who breaks a rule, and what does it cost them?', teach: 'Explain how the Persephone myth explains the seasons.', talk: 'Ask {her} which myth {she} would retell in a modern setting, and how.' },
-  { id: 'english.homer', title: 'Homer: Hector and the Sirens', kind: 'reading', prereqs: ['english.myths'], batch: 7, intro: 'The Iliad and the Odyssey are nearly 3,000 years old and are the oldest stories in Western literature. One extract is in prose; the other is in rhyming couplets, as Alexander Pope translated it in the 1720s.', teach: 'Explain why Hector takes off his helmet, and what that moment shows about him.', talk: 'Ask {her} whether Odysseus was brave or just clever to have himself tied to the mast.' },
+  { id: 'english.myths', title: 'Myths retold: Persephone, Orpheus and Arachne', kind: 'reading', prereqs: [], batch: 7, intro: 'Greek myths explain the world (why winter comes, where spiders came from) and test human beings against the gods. Read each one closely: who breaks a rule, and what does it cost them?', teach: 'Explain how the Persephone myth explains the seasons.', talk: 'Ask {him} which myth {she} would retell in a modern setting, and how.' },
+  { id: 'english.homer', title: 'Homer: Hector and the Sirens', kind: 'reading', prereqs: ['english.myths'], batch: 7, intro: 'The Iliad and the Odyssey are nearly 3,000 years old and are the oldest stories in Western literature. One extract is in prose; the other is in rhyming couplets, as Alexander Pope translated it in the 1720s.', teach: 'Explain why Hector takes off his helmet, and what that moment shows about him.', talk: 'Ask {him} whether Odysseus was brave or just clever to have himself tied to the mast.' },
   { id: 'english.openings', title: 'How great novels begin', kind: 'reading', prereqs: [], batch: 7, intro: 'A first page has to hook the reader, set up the world and hint at what is to come. Dickens and Austen begin with two of the most famous sentences in English, and both are being slyly ironic.', teach: 'Explain why Austen’s first sentence is ironic.', talk: 'Read the first lines of the book {she} is reading now together. What do they promise?' },
-  { id: 'english.gothic', title: 'Gothic horror: Frankenstein and Jekyll', kind: 'reading', prereqs: ['english.openings'], batch: 7, intro: 'Gothic fiction is about fear: dark nights, secret experiments, the monster that may be inside us. Notice how both writers make the reader wait for the horror and how they describe it.', teach: 'Explain why Victor runs away from the creature he has worked so hard to make.', talk: 'Ask {her} what makes something frightening on the page rather than on screen.' },
+  { id: 'english.gothic', title: 'Gothic horror: Frankenstein and Jekyll', kind: 'reading', prereqs: ['english.openings'], batch: 7, intro: 'Gothic fiction is about fear: dark nights, secret experiments, the monster that may be inside us. Notice how both writers make the reader wait for the horror and how they describe it.', teach: 'Explain why Victor runs away from the creature he has worked so hard to make.', talk: 'Ask {him} what makes something frightening on the page rather than on screen.' },
   { id: 'english.detective', title: 'Detective fiction: Sherlock Holmes', kind: 'reading', prereqs: ['english.openings'], batch: 7, intro: 'Detective stories are built on inference: clues, deductions, and a narrator who sees less than the detective. Read Watson’s reasoning carefully. Is he as clever as he thinks?', teach: 'Explain the difference between an observation and a deduction.', talk: 'Play a game of deductions: what can you infer about a stranger from their shoes?' },
-  { id: 'english.havisham', title: 'Character and setting: Miss Havisham', kind: 'reading', prereqs: ['english.openings'], batch: 7, intro: 'Dickens builds one of the strangest characters in fiction from objects: a dress, a shoe, a veil. As you read, ask what each detail suggests about her past.', teach: 'Explain how Dickens uses the colour white in this extract.', talk: 'Ask {her} what Miss Havisham’s room says about her, and what {her} own room would say about {her}.' },
-  { id: 'english.tempest', title: 'Shakespeare: Caliban in The Tempest', kind: 'reading', prereqs: [], batch: 7, intro: 'The Tempest was one of Shakespeare’s last plays. Caliban is called a monster by the other characters, yet he speaks some of the most beautiful poetry in the play. Read his two speeches aloud.', teach: 'Explain why some readers feel sympathy for Caliban.', talk: 'Ask {her} whether Caliban is a villain or a victim, and why.' },
-  { id: 'english.macbeth', title: 'Shakespeare: Macbeth’s dagger', kind: 'reading', prereqs: ['english.tempest'], batch: 7, intro: 'A soliloquy lets the audience hear a character think. Macbeth is about to murder his king, and his mind is playing tricks on him. Read it aloud and listen for where the rhythm breaks.', teach: 'Explain what the dagger soliloquy reveals about Macbeth’s state of mind.', talk: 'Ask {her} whether the dagger is real, a hallucination, or a sign from the witches.' },
+  { id: 'english.havisham', title: 'Character and setting: Miss Havisham', kind: 'reading', prereqs: ['english.openings'], batch: 7, intro: 'Dickens builds one of the strangest characters in fiction from objects: a dress, a shoe, a veil. As you read, ask what each detail suggests about her past.', teach: 'Explain how Dickens uses the colour white in this extract.', talk: 'Ask {him} what Miss Havisham’s room says about her, and what {her} own room would say about {him}.' },
+  { id: 'english.tempest', title: 'Shakespeare: Caliban in The Tempest', kind: 'reading', prereqs: [], batch: 7, intro: 'The Tempest was one of Shakespeare’s last plays. Caliban is called a monster by the other characters, yet he speaks some of the most beautiful poetry in the play. Read his two speeches aloud.', teach: 'Explain why some readers feel sympathy for Caliban.', talk: 'Ask {him} whether Caliban is a villain or a victim, and why.' },
+  { id: 'english.macbeth', title: 'Shakespeare: Macbeth’s dagger', kind: 'reading', prereqs: ['english.tempest'], batch: 7, intro: 'A soliloquy lets the audience hear a character think. Macbeth is about to murder his king, and his mind is playing tricks on him. Read it aloud and listen for where the rhythm breaks.', teach: 'Explain what the dagger soliloquy reveals about Macbeth’s state of mind.', talk: 'Ask {him} whether the dagger is real, a hallucination, or a sign from the witches.' },
   { id: 'english.war-poetry', title: 'War poetry: Wilfred Owen', kind: 'reading', prereqs: [], batch: 7, intro: 'Wilfred Owen wrote about the First World War from inside it. His poems are angry and tender at once. “Anthem for Doomed Youth” is a sonnet that asks what funeral rites these soldiers will have.', teach: 'Explain the contrast between the two halves of “Anthem for Doomed Youth”.', talk: 'On Remembrance Sunday, read the poem aloud together.' },
-  { id: 'english.tennyson', title: 'Victorian poetry: the passing of Arthur', kind: 'reading', prereqs: ['english.war-poetry'], batch: 7, intro: 'Tennyson was Queen Victoria’s Poet Laureate. Here he retells the end of King Arthur in blank verse: unrhymed lines of iambic pentameter that sound like grand, heightened speech.', teach: 'Explain how Tennyson makes the moment the sword is thrown feel magical.', talk: 'Ask {her} why Bedivere might not have wanted to throw such a beautiful sword away.' },
-  { id: 'english.short-story', title: 'The craft of the short story', kind: 'reading', prereqs: ['english.myths'], batch: 7, intro: 'A short story has no room to waste. Every detail should matter, and the best ones plant clues that only make sense at the end. Read this story twice: once for the plot, once for the clues.', teach: 'Explain how the writer foreshadows who the guard really is.', talk: 'Ask {her} to plan a short story with a twist in five sentences.' },
-  { id: 'english.terms', title: 'The literature toolkit', kind: 'facts', prereqs: [], batch: 6, intro: 'The right term lets you say precisely what a writer is doing, which is the difference between a good answer and a top one.', teach: 'Explain the difference between dramatic irony and foreshadowing.', talk: 'Ask {her} to spot one technique in a song lyric.' },
-  { id: 'english.context', title: 'Writers and their worlds', kind: 'facts', prereqs: ['english.terms'], batch: 6, intro: 'Context means the world a text was written in. Knowing it helps you understand why a writer chose what they did, but always use it to explain the text, not instead of it.', teach: 'Explain how knowing that Owen was a soldier changes how you read his poems.', talk: 'Ask {her} which writer {she} would most like to interview, and what {she} would ask.' },
-  { id: 'english.tragedy', title: 'Greek tragedy and the epic', kind: 'facts', prereqs: ['english.homer'], batch: 6, intro: 'The Greeks invented tragedy and named its parts: the hero’s fatal flaw, the chorus, the reversal of fortune. Shakespeare, and every crime drama on television, still use their ideas.', teach: 'Explain what hubris and hamartia mean, using a myth as an example.', talk: 'Ask {her} which modern film follows the shape of a Greek tragedy.' },
+  { id: 'english.tennyson', title: 'Victorian poetry: the passing of Arthur', kind: 'reading', prereqs: ['english.war-poetry'], batch: 7, intro: 'Tennyson was Queen Victoria’s Poet Laureate. Here he retells the end of King Arthur in blank verse: unrhymed lines of iambic pentameter that sound like grand, heightened speech.', teach: 'Explain how Tennyson makes the moment the sword is thrown feel magical.', talk: 'Ask {him} why Bedivere might not have wanted to throw such a beautiful sword away.' },
+  { id: 'english.short-story', title: 'The craft of the short story', kind: 'reading', prereqs: ['english.myths'], batch: 7, intro: 'A short story has no room to waste. Every detail should matter, and the best ones plant clues that only make sense at the end. Read this story twice: once for the plot, once for the clues.', teach: 'Explain how the writer foreshadows who the guard really is.', talk: 'Ask {him} to plan a short story with a twist in five sentences.' },
+  { id: 'english.terms', title: 'The literature toolkit', kind: 'facts', prereqs: [], batch: 6, intro: 'The right term lets you say precisely what a writer is doing, which is the difference between a good answer and a top one.', teach: 'Explain the difference between dramatic irony and foreshadowing.', talk: 'Ask {him} to spot one technique in a song lyric.' },
+  { id: 'english.context', title: 'Writers and their worlds', kind: 'facts', prereqs: ['english.terms'], batch: 6, intro: 'Context means the world a text was written in. Knowing it helps you understand why a writer chose what they did, but always use it to explain the text, not instead of it.', teach: 'Explain how knowing that Owen was a soldier changes how you read his poems.', talk: 'Ask {him} which writer {she} would most like to interview, and what {she} would ask.' },
+  { id: 'english.tragedy', title: 'Greek tragedy and the epic', kind: 'facts', prereqs: ['english.homer'], batch: 6, intro: 'The Greeks invented tragedy and named its parts: the hero’s fatal flaw, the chorus, the reversal of fortune. Shakespeare, and every crime drama on television, still use their ideas.', teach: 'Explain what hubris and hamartia mean, using a myth as an example.', talk: 'Ask {him} which modern film follows the shape of a Greek tragedy.' },
   // stretch: GCSE tasters
-  { id: 'english.sonnet', title: 'The Shakespearean sonnet: Romeo and Juliet', kind: 'reading', tier: 'stretch', prereqs: ['english.macbeth', 'english.war-poetry'], batch: 6, intro: 'The play opens with a sonnet that gives away the ending. GCSE examiners love form: how a poem’s shape and rhyme carry its meaning.', teach: 'Explain why Shakespeare tells the audience the ending before the play starts.', talk: 'Ask {her} what changes when you know how a story ends.' },
-  { id: 'english.exposure', title: 'GCSE poetry: Owen’s “Exposure”', kind: 'reading', tier: 'stretch', prereqs: ['english.war-poetry'], batch: 6, intro: '“Exposure” is on many GCSE courses. Owen’s enemy here is not the other army but the weather, and the poem’s sounds, half-rhymes and refrain make the waiting unbearable.', teach: 'Explain the effect of the repeated line “But nothing happens.”', talk: 'Ask {her} what the soldiers are waiting for, and why that is worse than fighting.' },
-  { id: 'english.compare', title: 'Comparing texts', kind: 'facts', tier: 'stretch', prereqs: ['english.gothic', 'english.homer', 'english.war-poetry'], batch: 5, intro: 'Comparison is a GCSE skill: find what two texts share, then explore how they differ. Use comparative connectives such as “whereas”, “similarly” and “in contrast”.', teach: 'Explain one similarity and one difference between Hector and Owen’s soldiers.', talk: 'Ask {her} to compare two films with the same story.' },
+  { id: 'english.sonnet', title: 'The Shakespearean sonnet: Romeo and Juliet', kind: 'reading', tier: 'stretch', prereqs: ['english.macbeth', 'english.war-poetry'], batch: 6, intro: 'The play opens with a sonnet that gives away the ending. GCSE examiners love form: how a poem’s shape and rhyme carry its meaning.', teach: 'Explain why Shakespeare tells the audience the ending before the play starts.', talk: 'Ask {him} what changes when you know how a story ends.' },
+  { id: 'english.exposure', title: 'GCSE poetry: Owen’s “Exposure”', kind: 'reading', tier: 'stretch', prereqs: ['english.war-poetry'], batch: 6, intro: '“Exposure” is on many GCSE courses. Owen’s enemy here is not the other army but the weather, and the poem’s sounds, half-rhymes and refrain make the waiting unbearable.', teach: 'Explain the effect of the repeated line “But nothing happens.”', talk: 'Ask {him} what the soldiers are waiting for, and why that is worse than fighting.' },
+  { id: 'english.compare', title: 'Comparing texts', kind: 'facts', tier: 'stretch', prereqs: ['english.gothic', 'english.homer', 'english.war-poetry'], batch: 5, intro: 'Comparison is a GCSE skill: find what two texts share, then explore how they differ. Use comparative connectives such as “whereas”, “similarly” and “in contrast”.', teach: 'Explain one similarity and one difference between Hector and Owen’s soldiers.', talk: 'Ask {him} to compare two films with the same story.' },
 ];
 
 const TERMS = [
@@ -117,7 +117,7 @@ const items = [
   mcq('my.o2', 'myths', 'The single-sentence paragraph “He turned.” is very short. What is its effect?', [['It isolates the fatal moment so it hits hard', true], ['It speeds the story on towards a happy ending', false, 'The ending is tragic.'], ['It shows that the writer has run out of ideas', false, 'Short paragraphs are a deliberate structural choice.']], 'After long sentences of climbing and doubt, two words change everything.', ORPHEUS),
   fact('my.o3', 'myths', 'Find a detail that shows how powerful Orpheus’s music is in the Underworld.', 'tears ran down the iron cheeks of the king of the dead', ['he walked down into the Underworld to fetch her back', 'rivers paused to listen and wild animals lay down at his feet', 'she faded like mist, whispering a last farewell'], 'Even Hades, whose cheeks are “iron”, weeps. (Cerberus falling asleep is another good answer.)', { ...ORPHEUS, ...C }),
   mcq('my.o4', 'myths', 'Why is it especially painful that Orpheus turns “with the sunlight already shining on his face”?', [['He was moments away from saving her', true], ['The sudden sunlight blinds him for a moment', false, 'The point is timing, not sight.'], ['It tells us the journey took the whole night', false, 'Think about what the detail does to the reader.']], 'Writers often make the failure happen at the last possible moment, to make it hurt more.', ORPHEUS),
-  mcq('my.a1', 'myths', 'What is Arachne’s great fault?', [['Pride: she claims to be better than a goddess', true], ['Laziness: she will not finish her tapestry', false, 'She is the hardest-working weaver in the world.'], ['Weakness: she cannot weave as well as she says', false, 'Even Athena could find no fault in her work.']], 'The Greeks called this hubris: pride that challenges the gods.', ARACHNE),
+  mcq('my.a1', 'myths', 'What is Arachne’s great fault?', [['Pride: she claims to be better than a goddess', true], ['Laziness: she will not finish her tapestry', false, 'She is “the finest weaver in the world”, and people travel for days to watch her.'], ['Weakness: she cannot weave as well as she says', false, 'Even Athena could find no fault in her work.']], 'The Greeks called this hubris: pride that challenges the gods.', ARACHNE),
   mcq('my.a2', 'myths', 'Why does Athena weave mortals being punished in the corners of her tapestry?', [['As a warning to Arachne', true], ['To fill the empty corners of the design', false, 'The text says it was a warning.'], ['To show how much she loved mortals', false, 'They are being punished for challenging the gods.']], 'Athena gives Arachne one last chance to back down.', ARACHNE),
   mcq('my.a3', 'myths', '“Even Athena could find no fault in it, and that, more than the insult, was what she could not bear.” What does this suggest about Athena?', [['She is jealous, which makes her seem human', true], ['She is fair and kind, and admires the work', false, 'She tears up perfect work.'], ['She does not care who wins the contest', false, 'She cannot “bear” losing.']], 'The myth can be read as a warning about pride, or about how unfairly the powerful treat the talented.', ARACHNE),
   order('my.a4', 'myths', 'Put the events of Arachne’s story in order.', ['Arachne boasts she is better than Athena', 'Athena warns her in disguise', 'The weaving contest', 'Arachne becomes a spider'], 'Boast, warning, contest, transformation: the classic pattern of a hubris myth.', ARACHNE),
@@ -129,7 +129,7 @@ const items = [
   mcq('ho.h2', 'homer', 'Why does Hector refuse?', [['He would be ashamed to shirk the battle', true], ['He does not really love his wife and son', false, 'Everything he does in the extract shows his love.'], ['He is certain that he will win the fight', false, 'Nothing he says suggests he expects to win.']], 'Honour, and what others will think, matter more to a Homeric hero than his own life.', HECTOR),
   mcq('ho.h3', 'homer', 'Why does the baby cry when Hector reaches for him?', [['He is frightened by the armour and plume', true], ['He is hungry and wants his nurse to feed him', false, 'The text gives a reason: the armour and the plume.'], ['He does not recognise his own mother’s voice', false, 'He nestles into the nurse.']], 'The helmet, a symbol of war, literally comes between Hector and his son.', HECTOR),
   mcq('ho.h4', 'homer', 'Hector takes off his helmet to hold his son. What is the symbolic meaning of this action?', [['He puts aside the warrior to be a father', true], ['He is tired and getting ready to sleep', false, 'He is going back to battle.'], ['He is showing he will surrender to the Greeks', false, 'He refuses to shirk battle.']], 'One of the most famous moments in Homer: the gentle man under the armour.', HECTOR),
-  fact('ho.h5', 'homer', 'Find the phrase that shows Andromache is both sad and comforted as she takes the baby back.', 'smiling through her tears', ['weeping and taking his hand', 'scared at the sight', 'all gleaming upon the ground'], 'Mixed feelings in three words: she is moved by Hector’s love, and afraid for him.', { ...HECTOR, ...C }),
+  fact('ho.h5', 'homer', 'Find the phrase that shows Andromache is both sad and comforted as she takes the baby back.', 'smiling through her tears', ['weeping and taking his hand', 'scared at the sight', 'all gleaming upon the ground'], 'Mixed feelings in four words: she is moved by Hector’s love, and afraid for him.', { ...HECTOR, ...C }),
   mcq('ho.s1', 'homer', 'How does Ulysses protect his crew from the Sirens’ song?', [['He blocks their ears with softened wax', true], ['He tells them to sing loudly over the song', false, 'He “barr’d” every ear with wax.'], ['He orders them to sail the other way round', false, 'They row straight past.']], '“The ductile wax with busy hands I mould… Then every ear I barr’d against the strain.”', SIRENS),
   mcq('ho.s2', 'homer', 'Ulysses has himself bound to the mast instead of blocking his own ears. What does this show about him?', [['He wants to hear the song but not obey it', true], ['There was not enough wax for his ears too', false, 'He chooses to listen.'], ['As captain he has to stay at the helm and steer', false, 'He is bound “limb by limb” so he cannot move.']], 'Curiosity and cunning: he gets the experience without the danger.', SIRENS),
   mcq('ho.s3', 'homer', 'What do the Sirens promise, to tempt Ulysses?', [['Knowledge of everything, even the Trojan War', true], ['Gold, treasure and a palace of their own', false, 'Look at what they offer: “learn new wisdom from the wise”.'], ['A quick and safe way home to Ithaca', false, 'They want him to stop, not to go home.']], 'The Sirens know exactly what Ulysses, a man famous for his intelligence, cannot resist.', SIRENS),
@@ -162,9 +162,9 @@ const items = [
   written('go.w1', 'gothic', 'Compare how Shelley and Stevenson make their “monsters” frightening. Use a quotation from each.', ['Frankenstein: how the creature is described, and Victor’s reaction', 'Jekyll and Hyde: how the man behaves, and Enfield’s reaction', 'One similarity and one difference', 'Comparative connectives: similarly, whereas, in contrast'], 'Both writers frighten the reader through the reactions of horrified witnesses, but they focus on different things. Shelley concentrates on the creature’s appearance: his “yellow skin scarcely covered the work of muscles and arteries beneath”, so the horror is physical and Victor flees in “breathless horror and disgust”. Stevenson, in contrast, frightens us with behaviour: the man “trampled calmly over the child’s body”, and it is the word “calmly” that is chilling, because it suggests no conscience at all. Similarly, both monsters seem not quite human, a “wretch” in one and a “Juggernaut” in the other. Yet whereas Shelley makes us half pity her creature, Stevenson gives us nothing to pity.', JEKYLL),
 
   // --- detective
-  mcq('de.1', 'detective', 'How does Holmes know what Watson is doing behind his back?', [['He sees Watson reflected in the coffee-pot', true], ['He has heard Watson moving across the room', false, 'That is Watson’s joke. Holmes gives the real reason.'], ['He guessed, and happened to guess correctly', false, 'Holmes observes rather than guesses.']], 'A small joke that shows Holmes’s method: notice what others overlook.', HOUND),
+  mcq('de.1', 'detective', 'How does Holmes know what Watson is doing behind his back?', [['He sees Watson reflected in the coffee-pot', true], ['He has heard Watson moving across the room', false, 'Holmes gives a different reason: the shiny coffee-pot in front of him.'], ['He guessed, and happened to guess correctly', false, 'Holmes observes rather than guesses.']], 'A small joke that shows Holmes’s method: notice what others overlook.', HOUND),
   mcq('de.2', 'detective', 'Which is an OBSERVATION rather than a deduction?', [['The iron ferrule on the stick is worn down', true], ['Dr Mortimer must be a country doctor', false, 'That is a conclusion drawn from evidence.'], ['He visits most of his patients on foot', false, 'That is deduced from the worn stick.']], 'An observation is what you see; a deduction is what you work out from it.', HOUND),
-  mcq('de.3', 'detective', 'Why does Watson think the owner is a country doctor rather than a town one?', [['A town doctor would hardly carry so battered a stick', true], ['The words ‘country doctor’ are engraved on the stick', false, 'It gives only initials.'], ['Dr Mortimer told him so in a letter last week', false, 'They missed the visitor.']], 'Watson reasons from the stick’s condition: “so knocked about”.', HOUND),
+  mcq('de.3', 'detective', 'Why does Watson think the owner is a country doctor rather than a town one?', [['A town doctor would hardly carry so battered a stick', true], ['The words ‘country doctor’ are engraved on the stick', false, 'It gives only a name, initials and a date.'], ['Dr Mortimer told him so in a letter last week', false, 'They missed the visitor.']], 'Watson reasons from the stick’s condition: “so knocked about”.', HOUND),
   mcq('de.4', 'detective', '“It may be that you are not yourself luminous, but you are a conductor of light.” What is Holmes really saying?', [['Watson isn’t brilliant, but helps Holmes think', true], ['Watson is a genius, cleverer than Holmes himself', false, 'He says Watson is NOT luminous.'], ['Watson ought to take up the study of electricity', false, 'It is a metaphor.']], 'Watson is delighted, but the reader may notice the insult. (A few lines later in the novel, Holmes shows that most of Watson’s deductions were wrong.)', HOUND),
   mcq('de.5', 'detective', 'Why do detective stories so often have a narrator like Watson?', [['The reader follows the clues and is still surprised', true], ['Because Holmes himself cannot write very well', false, 'It is a deliberate choice by the author.'], ['To make the stories shorter and quicker to read', false, 'It is about how much the reader knows.']], 'A slightly slow narrator lets the reader feel clever, then amazed.', HOUND),
   written('de.w1', 'detective', 'What does this extract reveal about the relationship between Holmes and Watson? Use two quotations.', ['How Holmes speaks to Watson (praise, teasing, superiority)', 'How Watson tries to impress him', 'What the reader notices that Watson may not', 'Quotations embedded in your sentences'], 'The extract shows a friendship that is affectionate but unequal. Watson tries hard to copy Holmes, “following as far as I could the methods of my companion”, and Holmes rewards him with praise: “Really, Watson, you excel yourself.” Yet the compliment is double-edged. Watson is “not yourself luminous, but you are a conductor of light”, which really means that Watson’s ideas help Holmes have better ones. The reader may smile at Watson’s eagerness, because Holmes is always one step ahead, even when he is sitting with his back turned.', HOUND),
@@ -184,7 +184,7 @@ const items = [
   mcq('te.3', 'tempest', 'Why does Caliban say “Curs’d be I that did so!”?', [['He regrets showing Prospero the island’s secrets', true], ['He regrets having been so rude to his master', false, 'He regrets helping.'], ['He is cursing the stormy weather on the island', false, 'He curses himself, then Prospero.']], 'He shared “the fresh springs, brine-pits” and lost everything.', CALIBAN),
   mcq('te.4', 'tempest', 'How is the language of “Be not afeard” different from Caliban’s angry first speech?', [['It is gentle, musical and dreamlike', true], ['It is full of curses and insults', false, 'He describes “sweet airs, that give delight, and hurt not”.'], ['It is written in prose, not verse', false, 'It is verse, and some of the most beautiful in the play.']], 'Shakespeare gives the “monster” some of his loveliest poetry, which complicates our view of him.', CALIBAN),
   mcq('te.5', 'tempest', '“When I wak’d, / I cried to dream again.” What does this reveal about Caliban?', [['His waking life is so unhappy he longs to dream', true], ['He is afraid of the dark and of the island’s noises', false, 'He tells the others “Be not afeard”.'], ['He does not sleep at all because of the voices', false, 'He describes dreaming.']], 'A moment of deep sadness that invites sympathy.', CALIBAN),
-  fact('te.6', 'tempest', 'Shakespeare writes most of his characters’ lines in unrhymed iambic pentameter. What is this called?', 'blank verse', ['free verse', 'heroic couplets', 'prose'], 'Ten syllables, five beats (da-DUM ×5), no rhyme: “Be NOT a-FEARD: the ISLE is FULL of NOIS-es.”', { ...CALIBAN, ...C }),
+  fact('te.6', 'tempest', 'Shakespeare writes most of his characters’ lines in unrhymed iambic pentameter. What is this called?', 'blank verse', ['free verse', 'heroic couplets', 'prose'], 'Ten syllables, five beats (da-DUM ×5), no rhyme: “to NAME the BIG-ger LIGHT, and HOW the LESS.”', { ...CALIBAN, ...C }),
   written('te.w1', 'tempest', 'Is Caliban a monster or a victim? Use evidence from both speeches.', ['A clear argument (you can say “both”)', 'Evidence of his anger and curses', 'Evidence of what was taken from him, and of his gentler side', 'How Shakespeare’s language shapes our sympathy'], 'Caliban is presented as both, which is what makes him so interesting. His curses are vicious: he wishes “toads, beetles, bats” upon Prospero, and other characters call him a monster. Yet he also has a strong case as a victim. He says “This island’s mine”, and explains that he showed Prospero “all the qualities o’ th’ isle” in return for kindness, only to be kept “in this hard rock”. Most strikingly, Shakespeare gives him the gentle, musical speech “Be not afeard”, in which he “cried to dream again”. A true monster would not long for beauty like this, so the audience is pushed towards pity.', CALIBAN),
 
   // --- Macbeth
@@ -254,5 +254,169 @@ const items = [
   written('cm.w1', 'compare', 'Compare how Homer and Owen present war. Refer to the Hector extract and “Anthem for Doomed Youth”.', ['Glory and honour in Homer', 'Anonymity and waste in Owen', 'Family and grief in both', 'Why the writers’ views differ (context)'], 'Both writers show the cost of war through the people left behind, but they differ in how they view honour. Homer presents war as tragic yet glorious: Hector fights because he would be ashamed to have “shirked battle like a coward”, and prays that his son will be “far better than the father”. Owen, in contrast, sees no glory: his soldiers “die as cattle”, with only “the monstrous anger of the guns” for their funeral. Similarly, both writers turn to grief at home: Andromache weeps even as she smiles, and Owen’s families draw down the blinds. The difference reflects their worlds: Homer sang of heroes for an audience who admired them, whereas Owen wrote from the trenches to shock readers into seeing the truth.', WAR_PAIR),
   written('cm.w2', 'compare', 'Compare how Dickens presents Miss Havisham and how Shelley presents the creature. Which is more frightening?', ['Appearance and contrast in both', 'How the narrator reacts in each', 'Which makes the reader feel pity as well as fear', 'A clear judgement'], 'Both writers frighten us through a body that is wrong. Dickens shows a bride who has “shrunk to skin and bone” inside a dress made for a young woman, while Shelley’s creature has beautiful features that only form “a more horrid contrast” with his watery eyes. In both, the narrator’s reaction guides us: Pip says he “should have cried out”, whereas Victor “rushed out of the room”. However, Miss Havisham is more frightening, because she seems to be a living corpse, with eyes that “moved and looked at me”, while the creature, newly born and abandoned, is already a figure we might pity.', GOTHIC_PAIR),
 ];
+
+// --- memory hooks -------------------------------------------------------------------------
+// Optional `hook` (a mnemonic or memory trick) and `example` (a real-world link) for each topic
+// and many items, keyed by id without the “english.” prefix. Kept apart from the questions so
+// edits to prompts and answers do not collide; an unknown id throws, so renames are caught.
+const TOPIC_HOOKS = {
+  myths: 'Every myth asks the same two questions: who broke the rule, and what did it cost them?',
+  homer: 'The **Iliad** is named after Ilion, the Greek name for Troy; the **Odyssey** after Odysseus, who takes ten years to get home.',
+  openings: 'A great first line is a promise: it hooks the reader and hints at the whole book.',
+  gothic: 'Gothic = fear in the dark: a lonely setting, a secret, and a monster who might be one of us.',
+  detective: 'Observe, then deduce: what you see is the clue; what you work out from it is the answer.',
+  havisham: 'Stopped clocks, one shoe, a rotting wedding cake: Miss Havisham is a woman frozen at one moment.',
+  tempest: 'Caliban: called a monster, yet given some of the most beautiful lines in the play.',
+  macbeth: 'Actors avoid saying the name inside a theatre and call it “the Scottish Play”.',
+  'war-poetry': 'Owen wrote that his subject was “War, and the pity of War”.',
+  tennyson: 'Blank verse: no rhyme, but the heartbeat stays, da-DUM five times a line.',
+  'short-story': 'In a short story nothing is wasted: every clue is planted to pay off at the end.',
+  terms: 'Name it, quote it, explain it: the right term is the key that opens up the analysis.',
+  context: 'Context explains the text; it never replaces it.',
+  tragedy: 'Pride comes before a fall: hubris, then nemesis. That is the shape of a Greek tragedy.',
+  sonnet: 'Shakespearean sonnet: three quatrains and a couplet, 4 + 4 + 4 + 2 = 14 lines.',
+  exposure: '“But nothing happens”: the refrain is the waiting itself, repeated until it hurts.',
+  compare: 'Compare = similar AND different. Link every point to both texts: whereas, similarly, in contrast.',
+};
+const MEMORY = {
+  // myths
+  'my.p1': { hook: 'Demeter is the goddess of the harvest: when she grieves, the crops grieve with her.', example: 'Demeter’s Roman name is Ceres, which gives us the word “cereal”: think of her at breakfast.' },
+  'my.p2': { hook: 'Spot “like” or “as”? It’s a simile. The earth closes “like a mouth”, so it swallows her.' },
+  'my.p3': { hook: 'Six seeds, six months: one month below for every seed she ate.' },
+  'my.p4': { hook: 'Persephone above = spring and summer; Persephone below = autumn and winter.' },
+  'my.o1': { hook: '“But not hers… but not hers”: the repeated silence is what feeds his doubt.' },
+  'my.o2': { hook: 'A tiny paragraph is a spotlight: two words alone on the line land like a blow.' },
+  'my.o3': { hook: 'Find the toughest listener: if Hades, with his “iron” cheeks, weeps, the music must be extraordinary.' },
+  'my.o4': { hook: 'So close, yet so far: a failure at the very last moment is the cruellest kind.' },
+  'my.a1': { hook: 'Hubris = pride that challenges the gods. Mortal boasts; gods punish.' },
+  'my.a4': { hook: 'A hubris myth runs Boast, Warning, Contest, Punishment.', example: 'Arachne is the Greek word for spider: hence “arachnid” and “arachnophobia”.' },
+  // Homer
+  'ho.h1': { hook: 'Andromache fears his valour: his bravery is the very thing that will kill him.' },
+  'ho.h2': { hook: 'A Homeric hero lives for honour and glory (kleos): the fame that outlives him.' },
+  'ho.h3': { hook: 'The helmet comes between father and son: war literally gets in the way.' },
+  'ho.h4': { hook: 'Helmet off = warrior off: for one moment, Hector is simply a father.' },
+  'ho.h5': { hook: '“Smiling through her tears”: two opposite feelings in one phrase.' },
+  'ho.s1': { hook: 'Wax for the crew’s ears, ropes for the captain: everyone survives the song.', example: 'We still call a dangerous temptation a “siren song”, and the warning siren on a police car is named after them.' },
+  'ho.s2': { hook: 'Homer calls Odysseus the man “of many turns”: clever enough to hear the song and live.' },
+  'ho.s4': { hook: 'Heroic couplet: two rhyming lines of iambic pentameter, da-DUM five times, then the rhyme.', example: 'Pope also wrote “To err is human, to forgive divine”, a line from a poem in heroic couplets.' },
+  'ho.s5': { hook: 'The calm before the storm: a sudden stillness warns that danger is near.', example: '“The calm before the storm” is an everyday phrase for an eerie quiet before trouble.' },
+  // openings
+  'op.t1': { hook: 'Antithesis comes from Greek for “setting against”: opposites placed side by side.', example: '“One small step for man, one giant leap for mankind” uses antithesis too.' },
+  'op.t2': { hook: '“The best of times… the worst of times”: an age pulled in two directions at once.' },
+  'op.t4': { hook: 'Satire mocks the powerful: describe a king only by his jaw and he stops looking grand.' },
+  'op.p1': { hook: 'Irony: the words say one thing and mean another. It is the mothers who are “in want”.', example: 'The first sentence of Pride and Prejudice is one of the most quoted openings in English.' },
+  'op.p2': { hook: 'Mr Bennet teases; Mrs Bennet gossips. The mismatch makes the comedy.' },
+  'op.p4': { hook: 'Bingley has “four or five thousand a year”: to Mrs Bennet, that makes him perfect.' },
+  // gothic
+  'go.f1': { hook: 'Pathetic fallacy: the weather feels what the characters feel. Dreary night, dreadful deed.', example: 'Mary Shelley first imagined the story during a cold, stormy summer by Lake Geneva in 1816.' },
+  'go.f2': { hook: 'Same word, new feeling: “Beautiful!” turns from pride to horror.' },
+  'go.f3': { hook: 'The beautiful parts make the ugly parts worse: contrast sharpens horror.' },
+  'go.f4': { hook: 'Victor dreamed, then fled: the creator abandons his creation.', example: 'People often call the creature “Frankenstein”, but that is the scientist’s name: the creature has none.' },
+  'go.j1': { hook: 'Lit lamps, empty streets, a church-like hush: the quiet before the horror.' },
+  'go.j2': { hook: 'One adverb, “calmly”, turns an accident into cruelty.' },
+  'go.j3': { example: 'In Britain a “juggernaut” is also a huge lorry: something vast that nothing can stop.' },
+  'go.j4': { example: 'We still call someone with a kind side and a cruel side “a Jekyll and Hyde”.' },
+  // detective
+  'de.1': { hook: 'Holmes’s method: notice what everyone else overlooks, even a shiny coffee-pot.' },
+  'de.2': { hook: 'Observation = what you SEE. Deduction = what you WORK OUT from it.', example: 'A doctor sees spots (observation) and concludes it is chickenpox (deduction).' },
+  'de.4': { hook: 'A backhanded compliment: “not luminous, but a conductor of light” means useful, not brilliant.' },
+  'de.5': { hook: 'The narrator knows less than the detective, so the reader is surprised along with him.' },
+  // Havisham
+  'hv.1': { hook: 'White satin, lace, a veil, bridal flowers: dressed for a wedding that never came.' },
+  'hv.2': { hook: 'Frozen in time: half-dressed, one shoe on, for years.', example: 'In the novel, the clocks in her room have stopped at twenty minutes to nine.' },
+  'hv.3': { hook: 'White, then yellow: hope that has gone stale.' },
+  'hv.5': { hook: 'Waxwork + skeleton = a living corpse: alive, yet dead.' },
+  'hv.6': { hook: 'An older narrator looking back gives us two Pips: the frightened boy and the man who understands.' },
+  // The Tempest
+  'te.1': { hook: '“This island’s mine”: Caliban’s first claim is ownership.', example: 'Many modern productions present Caliban as an islander whose land has been taken by outsiders.' },
+  'te.2': { hook: 'Bigger light = Sun, the less = Moon. Genesis calls them “the greater light” and “the lesser light”.' },
+  'te.4': { hook: 'Read “Be not afeard” aloud: soft sounds and a gentle rhythm, like a lullaby from a “monster”.' },
+  'te.5': { hook: '“I cried to dream again”: his dreams are kinder than his life.' },
+  'te.6': { hook: 'Blank verse: no rhyme, but a da-DUM heartbeat of iambic pentameter.' },
+  // Macbeth
+  'mc.1': { example: '“Is this a dagger which I see before me” is one of the most quoted lines in Shakespeare.' },
+  'mc.2': { hook: '“Heat-oppressed brain”: a fevered, guilty mind can see what is not there.' },
+  'mc.3': { hook: 'Blood = guilt all through Macbeth. Later, Lady Macbeth cannot wash it away: “Out, damned spot!”' },
+  'mc.5': { hook: 'A bell rings, and Macbeth hears a funeral knell: “Hear it not, Duncan.”' },
+  'mc.6': { hook: 'A rhyming couplet is a door clicking shut: Shakespeare often ends a scene this way.' },
+  // war poetry
+  'wp.1': { hook: 'Cattle are slaughtered in herds: the simile turns soldiers into livestock.' },
+  'wp.2': { hook: 'Say it fast: “stuttering rifles’ rapid rattle”. Your mouth makes the gunfire.' },
+  'wp.3': { example: 'A passing-bell was the church bell rung to mark a death.' },
+  'wp.4': { hook: 'The sonnet turns (the volta) after line 8: from the noise of the front to the silence at home.' },
+  'wp.5': { example: 'In Victorian and Edwardian Britain, families drew their blinds or curtains when someone died.' },
+  'wp.6': { hook: 'Sonnet comes from Italian sonetto, “little song”: 14 lines.' },
+  // Tennyson
+  'tn.2': { example: 'The “streamer of the northern morn” is the aurora borealis, the Northern Lights.' },
+  'tn.3': { hook: 'Given by the Lady of the Lake, returned to the lake: the sword goes home.' },
+  'tn.5': { hook: 'Laureate comes from the laurel wreath that the Greeks and Romans gave to poets and victors.', example: 'Britain still has a Poet Laureate today, who writes poems for national occasions.' },
+  // the short story
+  'ss.1': { hook: 'First line, first clue: count the steps with Mira.' },
+  'ss.2': { hook: 'Athena’s calling cards: the owl, her sacred bird, and grey eyes.', example: 'Athena’s owl was stamped on the silver coins of ancient Athens.' },
+  'ss.4': { hook: 'The feather is the payoff: grey, like the owl and like the guard’s eyes.' },
+  'ss.5': { hook: 'A twist lands best on its own line, with white space around it.' },
+  // terms
+  'tm.1': { hook: 'Soliloquy: Latin solus (alone) + loqui (to speak). Speaking alone.', example: 'Hamlet’s “To be, or not to be” is the most famous soliloquy of all.' },
+  'tm.2': { hook: 'Dramatic irony: the audience is in on the secret.', example: 'In a horror film we see the figure behind the door; the character reaching for the handle does not.' },
+  'tm.3': { hook: 'Pathetic = feelings (as in sympathy); fallacy = a false idea. Weather does not really feel.', example: 'A thunderclap just as the villain walks in is pathetic fallacy.' },
+  'tm.4': { hook: 'Fore (before) + shadow: a shadow cast before the event arrives.', example: 'Film trailers and ominous music work the same way: they hint at what is coming.' },
+  'tm.5': { hook: 'Iambic pentameter is a heartbeat: da-DUM da-DUM da-DUM da-DUM da-DUM.', example: '“Shall I compare thee to a summer’s day?” is iambic pentameter: tap out the five beats.' },
+  'tm.6': { hook: 'From French for “striding over”: the sentence strides over the line break.' },
+  'tm.7': { hook: 'Caesura, from Latin caedere, to cut: a pause that cuts a line in two.' },
+  'tm.8': { hook: 'Volta is Italian for “turn”: the sonnet turns a corner.' },
+  'tm.9': { hook: 'The word is one itself: Greek oxys (sharp) + moros (dull or foolish).', example: 'Everyday oxymorons: “bittersweet”, “deafening silence”, “seriously funny”.' },
+  'tm.10': { hook: 'A semantic field is a word family: spot the family, then ask what mood it creates.', example: 'Football reports often borrow a semantic field of war: attack, defence, battle, shoot.' },
+  'tm.11': { hook: 'In medias res = “into the middle of things”: start with the action.', example: 'Many films open with a chase or a fight, then show how we got there.' },
+  'tm.12': { hook: 'Ask of every narrator: can I trust them? What might they be missing, or hiding?' },
+  'tm.13': { hook: 'Epithets were memory aids for bards: swift-footed Achilles, rosy-fingered Dawn.', example: 'We still use epithets for famous people: Alfred the Great, Richard the Lionheart.' },
+  'tm.14': { example: 'Everyday symbols: a dove for peace, a red poppy for remembrance.' },
+  // context
+  'cx.1': { hook: 'Iliad and Odyssey: around 700 BC, so roughly 2,700 years old.' },
+  'cx.2': { hook: 'Repeated phrases helped bards remember thousands of lines, like the chorus of a song.' },
+  'cx.3': { example: 'Shakespeare’s Globe on London’s South Bank is a modern reconstruction, opened in 1997 near the original site.' },
+  'cx.4': { hook: '1660: after the Restoration, women could at last act on the public stage in England.', example: 'Some modern productions use all-male or all-female casts as a nod to this history.' },
+  'cx.5': { hook: 'James I was fascinated by witches, so Macbeth gave him witches and Banquo, his supposed ancestor.' },
+  'cx.6': { hook: 'Mary Shelley, aged 18, during a ghost-story contest: one of the most famous dares in literature.', example: 'Frankenstein is often called one of the first science-fiction novels.' },
+  'cx.7': { hook: 'Cliffhanger chapters kept readers buying the next part.', example: 'Like a TV series released one episode a week, readers waited eagerly for each new part.' },
+  'cx.8': { hook: 'Killed on 4 November 1918; the war ended on 11 November, one week later.' },
+  'cx.9': { hook: 'Craiglockhart, 1917: Sassoon read Owen’s drafts and encouraged him.' },
+  'cx.10': { example: 'Jane Austen’s portrait appears on the Bank of England £10 note.' },
+  'cx.11': { hook: 'Gothic ingredients: castles, curses, ghosts, storms and secrets.', example: 'Horace Walpole’s The Castle of Otranto (1764) is usually called the first Gothic novel.' },
+  'cx.12': { hook: 'Set in foggy London, written by a man who grew up in foggy Edinburgh.' },
+  // tragedy
+  'tr.1': { hook: 'Hamartia comes from a Greek verb meaning “to miss the mark”, like an arrow going astray.' },
+  'tr.2': { hook: 'Hubris: pride that challenges the gods. Pride comes before a fall.', example: 'Icarus flying too close to the sun is a classic picture of hubris.' },
+  'tr.3': { hook: 'Catharsis is Greek for “cleansing”: the lighter feeling after a good cry.', example: 'The feeling at the end of a sad film, when you have cried and feel calmer, is catharsis.' },
+  'tr.4': { example: 'Sports reporters call a team’s old rival its “nemesis”.' },
+  'tr.5': { example: 'The chorus of a pop song takes its name from the Greek chorus, who sang and danced.' },
+  'tr.6': { hook: 'The three great tragedians, oldest first: Aeschylus, Sophocles, Euripides.' },
+  'tr.7': { example: 'When a story is saved by a lucky last-minute rescue, critics call it a deus ex machina.' },
+  'tr.8': { example: 'The smiling and frowning masks of comedy and tragedy are still the symbol of theatre.' },
+  'tr.9': { example: 'We call a long, hard adventure “epic” today, after these heroic poems.' },
+  'tr.10': { hook: 'Dionysus was the god of wine and of theatre, so plays were part of his festival.' },
+  'tr.oed': { hook: 'Run from fate, run into fate: the further Oedipus flees, the nearer he gets.' },
+  // stretch: the sonnet
+  'so.1': { hook: 'Shakespearean sonnet: ABAB CDCD EFEF GG, three quatrains and a clinching couplet.' },
+  'so.2': { example: 'When Romeo and Juliet first meet, their first fourteen lines together form a shared sonnet.' },
+  'so.3': { hook: 'Star-cross’d: crossed by the stars, so fate is against them.', example: 'Horoscopes are a modern echo of the old belief that the stars shape our lives.' },
+  'so.4': { hook: 'Civil war = citizens fighting citizens. “Civil” is a pun: polite, and of citizens.' },
+  'so.5': { hook: 'Not what, but how and why: knowing the ending makes every happy scene painful.' },
+  'so.6': { example: '“The two hours’ traffic of our stage”: about the length of a feature film today.' },
+  // stretch: Exposure
+  'ex.1': { hook: 'The real enemy is the cold: “the merciless iced east winds that knife us”.' },
+  'ex.2': { hook: 'A refrain is a chorus that keeps coming back: here it brings back the boredom every time.' },
+  'ex.3': { hook: 'Half-rhyme: the consonants match but the vowels slip, like a rhyme with a wobble.', example: 'Owen is famous for this pararhyme, such as “silent” and “salient” in this poem.' },
+  'ex.4': { hook: 'Personification: dawn marches like an army. Even the morning attacks.' },
+  'ex.5': { hook: 'Sibilance hisses: “sudden successive… streak the silence”.' },
+  // stretch: comparing
+  'cm.1': { hook: 'Whereas = “but on the other hand”: use it to set two texts against each other.' },
+  'cm.2': { hook: 'Homer: glory, and a name remembered. Owen: anonymous deaths, “as cattle”.' },
+  'cm.3': { example: 'In the myth, Prometheus stole fire from the gods for humans and was punished for it.' },
+  'cm.4': { hook: 'A comparison is a zip, not two halves: interlock the texts in every paragraph.' },
+};
+for (const t of topics) { const k = t.id.replace(/^english\./, ''); if (TOPIC_HOOKS[k]) t.hook = TOPIC_HOOKS[k]; }
+for (const k of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === `english.${k}`)) throw new Error(`topic hook for unknown topic ${k}`);
+for (const it of items) { const m = MEMORY[it.id.replace(/^english\./, '')]; if (m) Object.assign(it, m); }
+for (const k of Object.keys(MEMORY)) if (!items.some((it) => it.id === `english.${k}`)) throw new Error(`memory hook for unknown item ${k}`);
 
 export default [{ subject: 'english', deck: 'y8-lit', topics, items }];

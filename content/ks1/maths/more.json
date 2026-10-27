@@ -584,7 +584,7 @@
     {
      "text": "3 ways",
      "correct": false,
-     "feedback": "That is if you don’t count turnarounds or 0. There are 6 when you list them all."
+     "feedback": "That is if you don’t count turnarounds (0 + 5, 1 + 4, 2 + 3). There are 6 when you list them all."
     }
    ],
    "explain": "Work systematically: 0 + 5, 1 + 4, 2 + 3, 3 + 2, 4 + 1, 5 + 0. Six ways. Going in order means you never miss one."
@@ -708,14 +708,14 @@
    "id": "maths.pz.legs",
    "topic": "maths.puzzles",
    "kind": "mcq",
-   "prompt": "There are some droids and some cats. Droids have 2 legs, cats have 4. There are 3 of them altogether, with 10 legs. How many are cats?",
+   "prompt": "There are some robots and some cats. Robots have 2 legs, cats have 4. There are 3 of them altogether, with 10 legs. How many are cats?",
    "options": [
     {
-     "text": "2 cats and 1 droid",
+     "text": "2 cats and 1 robot",
      "correct": true
     },
     {
-     "text": "1 cat and 2 droids",
+     "text": "1 cat and 2 robots",
      "correct": false,
      "feedback": "4 + 2 + 2 = 8 legs, not 10."
     },
@@ -725,7 +725,7 @@
      "feedback": "3 cats would have 12 legs."
     }
    ],
-   "explain": "Try it: 2 cats = 8 legs, 1 droid = 2 legs, total 10. Trial and improvement!"
+   "explain": "Try it: 2 cats = 8 legs, 1 robot = 2 legs, total 10. Trial and improvement!"
   },
   {
    "id": "maths.pz.prove",

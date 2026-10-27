@@ -12,7 +12,8 @@
    "batch": 4,
    "intro": "Hard problems rarely yield to the first idea. Try working backwards, solving a smaller version, drawing a diagram or listing systematically. Choosing the strategy is half the problem.",
    "teach": "Explain how working backwards solves “I doubled my money, spent 7, doubled again, spent 7 and had 11 left.”",
-   "talk": "Ask {her} which strategy {she} used on the hardest problem today, and why it worked."
+   "talk": "Ask {him} which strategy {she} used on the hardest problem today, and why it worked.",
+   "hook": "Stuck? **Work backwards, try a smaller case, draw it, or list it systematically.**"
   },
   {
    "id": "maths.ps-digits",
@@ -24,7 +25,8 @@
    "batch": 4,
    "intro": "Digits behave like little building blocks: place value, digit sums and last digits each follow patterns you can exploit instead of writing out every number.",
    "teach": "Explain how to count the three-digit numbers whose digits add up to 5 without listing them all.",
-   "talk": "Give {her} a number and ask for its digit sum and the last digit of its square."
+   "talk": "Give {him} a number and ask for its digit sum and the last digit of its square.",
+   "hook": "**Place value is the key**: the two-digit number AB is really 10A + B."
   },
   {
    "id": "maths.ps-divisibility",
@@ -37,7 +39,8 @@
    "batch": 4,
    "intro": "Remainders repeat in cycles, digit sums reveal multiples of 3 and 9, and inclusion–exclusion stops you counting anything twice.",
    "teach": "Explain why 3A7 is divisible by 9 only when A is 8.",
-   "talk": "Ask {her} what day of the week it will be in 100 days, and how {she} knows."
+   "talk": "Ask {him} what day of the week it will be in 100 days, and how {she} knows.",
+   "hook": "**Digit sum → 3 and 9; last digit → 2, 5 and 10; alternating sum → 11.**"
   },
   {
    "id": "maths.ps-primes",
@@ -49,7 +52,8 @@
    "batch": 4,
    "intro": "Primes are the atoms of arithmetic. Factor counts, perfect numbers and HCF × LCM tricks all come from prime factorisations.",
    "teach": "Explain why only square numbers have an odd number of factors.",
-   "talk": "Ask {her} to find a perfect number and explain what makes it perfect."
+   "talk": "Ask {him} to find a perfect number and explain what makes it perfect.",
+   "hook": "**Factors come in pairs**, except for square numbers, which have one in the middle."
   },
   {
    "id": "maths.ps-fractions",
@@ -62,7 +66,8 @@
    "batch": 4,
    "intro": "Many fraction puzzles hide a simple whole: find what one part is worth, or notice that a long sum collapses (telescopes) to almost nothing.",
    "teach": "Explain how ½ + 1/6 + 1/12 + 1/20 + 1/30 telescopes.",
-   "talk": "Ask {her} to share a bill in a tricky ratio at dinner."
+   "talk": "Ask {him} to share a bill in a tricky ratio at dinner.",
+   "hook": "**Find what one part is worth**, and everything else follows."
   },
   {
    "id": "maths.ps-mental",
@@ -74,7 +79,8 @@
    "batch": 4,
    "intro": "The quickest calculators are not faster at arithmetic; they spot structure: 99 × 101 = (100 − 1)(100 + 1), and long sums pair up.",
    "teach": "Explain how Gauss could add 1 to 100 in his head.",
-   "talk": "Ask {her} to work out 2026² − 2025² without a calculator, and explain the trick."
+   "talk": "Ask {him} to work out 2026² − 2025² without a calculator, and explain the trick.",
+   "hook": "Look for **structure before arithmetic**: pairs, near-hundreds and a² − b²."
   },
   {
    "id": "maths.ps-patterns",
@@ -87,7 +93,8 @@
    "batch": 4,
    "intro": "Mathematicians generalise: spot the rule for a few cases, write it in algebra, then use it for the hundredth case without drawing it.",
    "teach": "Explain why the sum of row n of the odd-number triangle is n³.",
-   "talk": "Ask {her} for the 20th triangular number and how {she} found it without listing them."
+   "talk": "Ask {him} for the 20th triangular number and how {she} found it without listing them.",
+   "hook": "**Three cases, one rule, then the 100th case**: generalise with algebra."
   },
   {
    "id": "maths.ps-logic",
@@ -99,7 +106,8 @@
    "batch": 4,
    "intro": "Logic puzzles reward patience: suppose one person is truthful, follow the consequences, and throw out any case that contradicts itself.",
    "teach": "Explain why nobody on the island of knights and knaves can say “I am a knave”.",
-   "talk": "Set {her} a knights-and-knaves puzzle in the car, or ask {her} to invent one."
+   "talk": "Set {him} a knights-and-knaves puzzle in the car, or ask {him} to invent one.",
+   "hook": "**Suppose, follow, contradict**: assume one case and see whether it breaks."
   },
   {
    "id": "maths.ps-counting",
@@ -111,7 +119,8 @@
    "batch": 4,
    "intro": "Counting cleverly beats counting one by one: multiply the choices at each stage, divide when order does not matter, and count the complement when that is easier.",
    "teach": "Explain why choosing 2 heroes from 8 gives 28, not 56.",
-   "talk": "Ask {her} how many ways the family could sit along one side of a table."
+   "talk": "Ask {him} how many ways the family could sit along one side of a table.",
+   "hook": "**Multiply the choices; divide when order doesn’t matter.**"
   },
   {
    "id": "maths.ps-probability",
@@ -124,7 +133,8 @@
    "batch": 4,
    "intro": "Probability puzzles are counting puzzles in disguise: count the outcomes you want, count all the equally likely outcomes, and divide.",
    "teach": "Explain why the chance of at least one head in three tosses is 7/8.",
-   "talk": "Play a dice game and ask {her} which total is most likely, and why."
+   "talk": "Play a dice game and ask {him} which total is most likely, and why.",
+   "hook": "**Wanted outcomes ÷ all equally likely outcomes**, and “at least one” = 1 − P(none)."
   },
   {
    "id": "maths.ps-geometry",
@@ -137,7 +147,8 @@
    "batch": 4,
    "intro": "Geometry puzzles often turn on one fact used cleverly: exterior angles add to 360°, a shape can be cut and rearranged, or a grid hides more squares than you think.",
    "teach": "Explain how to find the number of sides of a regular polygon from its exterior angle.",
-   "talk": "Ask {her} what angle the clock hands make right now."
+   "talk": "Ask {him} what angle the clock hands make right now.",
+   "hook": "**Triangles 180°, straight lines 180°, around a point 360°, exterior angles 360°.**"
   },
   {
    "id": "maths.ps-time",
@@ -149,7 +160,8 @@
    "batch": 4,
    "intro": "Average speed is total distance ÷ total time, never the average of the speeds. Calendars cycle in sevens, and clock hands move at steady rates you can calculate.",
    "teach": "Explain why going at 15 km/h and returning at 10 km/h does not average 12.5 km/h.",
-   "talk": "On a journey, ask {her} to estimate the arrival time from the speed and the distance left."
+   "talk": "On a journey, ask {him} to estimate the arrival time from the speed and the distance left.",
+   "hook": "**Average speed = total distance ÷ total time**, never the average of the speeds."
   },
   {
    "id": "maths.ps-algebra",
@@ -162,7 +174,8 @@
    "batch": 4,
    "intro": "Word puzzles become easy once you name the unknown: let x be the thing you want, write the facts as equations, and the algebra does the rest.",
    "teach": "Explain the brick puzzle: a brick weighs 1 kg plus half a brick.",
-   "talk": "Ask {her} the bat-and-ball puzzle, and why the quick answer is wrong."
+   "talk": "Ask {him} the bat-and-ball puzzle, and why the quick answer is wrong.",
+   "hook": "**Name the unknown**: let x be what you want, then write the story as an equation."
   },
   {
    "id": "maths.ps-invariants",
@@ -175,8 +188,9 @@
    "batch": 4,
    "intro": "Some puzzles are solved by finding something that never changes, an invariant, such as whether a total is odd or even. If the start and the target differ in it, the target is impossible.",
    "teach": "Explain why a chessboard with two opposite corners removed cannot be covered by dominoes.",
-   "talk": "Ask {her} to explain why seven upturned cups cannot all be turned up two at a time.",
-   "tier": "stretch"
+   "talk": "Ask {him} to explain why seven upturned cups cannot all be turned up two at a time.",
+   "tier": "stretch",
+   "hook": "**Find what never changes**: if the start and the target differ in it, the target is impossible."
   },
   {
    "id": "maths.ps-olympiad",
@@ -190,8 +204,9 @@
    "batch": 4,
    "intro": "These are Olympiad-style: each needs an idea, not a long calculation. Expect to be stuck for a while, then try a small case.",
    "teach": "Explain why (x − 6)(y − 6) = 36 helps solve 1/x + 1/y = 1/6.",
-   "talk": "Ask {her} which problem today needed the cleverest idea.",
-   "tier": "stretch"
+   "talk": "Ask {him} which problem today needed the cleverest idea.",
+   "tier": "stretch",
+   "hook": "**Try a small case first**, then hunt for the idea that makes the big case easy."
   },
   {
    "id": "maths.ps-proof",
@@ -204,8 +219,9 @@
    "batch": 4,
    "intro": "Checking examples is not proof. A proof explains why something is true for EVERY case, usually with algebra or a careful argument a sceptical reader cannot fault.",
    "teach": "Prove that the sum of three consecutive whole numbers is a multiple of 3.",
-   "talk": "Ask {her} to read you one of {her} proofs and convince you there is no gap.",
-   "tier": "stretch"
+   "talk": "Ask {him} to read you one of {her} proofs and convince you there is no gap.",
+   "tier": "stretch",
+   "hook": "**Examples persuade; proofs convince**: cover every case at once with algebra."
   }
  ],
  "items": [
@@ -240,7 +256,9 @@
      "feedback": "Check forwards: 4 → 8 → 1, and he cannot then spend 7 again."
     }
    ],
-   "explain": "Work backwards, undoing each step: 11 + 7 = 18, halve → 9; 9 + 7 = 16, halve → 8. Check: 8 → 16 → 9 → 18 → 11."
+   "explain": "Work backwards, undoing each step: 11 + 7 = 18, halve → 9; 9 + 7 = 16, halve → 8. Check: 8 → 16 → 9 → 18 → 11.",
+   "hook": "**Work backwards and undo**: spending becomes adding, doubling becomes halving, last step first.",
+   "example": "Be at school by 8:40 with a 25-minute walk and 30 minutes to get ready? Work back: get up by 7:45."
   },
   {
    "id": "maths.ps.st.handshakes",
@@ -258,7 +276,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**n people make n(n − 1)/2 handshakes**: each pair counted once.",
+   "example": "A league of 12 teams, each playing every other team once, needs 12 × 11 ÷ 2 = 66 matches."
   },
   {
    "id": "maths.ps.st.coins",
@@ -291,7 +311,9 @@
      "feedback": "That is the number of 2s in one of the ways, not the number of ways."
     }
    ],
-   "explain": "List by the number of 5-obol coins: 0 fives + 10 twos, 2 fives + 5 twos, 4 fives + 0 twos. An odd number of fives leaves an odd remainder, so 3 ways."
+   "explain": "List by the number of 5-obol coins: 0 fives + 10 twos, 2 fives + 5 twos, 4 fives + 0 twos. An odd number of fives leaves an odd remainder, so 3 ways.",
+   "hook": "**List systematically**: fix the number of the biggest coin first, then fill in the rest.",
+   "example": "Making 20p postage from 2p and 5p stamps has the same three answers: 0, 2 or 4 of the 5p stamps."
   },
   {
    "id": "maths.ps.st.snail",
@@ -309,7 +331,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Watch the last day**: once it reaches the top, it doesn’t slip back.",
+   "example": "Fence-post problems are the same trap: a 10 m fence with a post every metre needs 11 posts, not 10."
   },
   {
    "id": "maths.ps.st.figs",
@@ -342,7 +366,8 @@
      "feedback": "That is how many there were before Mira ate. Go back one more step."
     }
    ],
-   "explain": "Work backwards. Before Mira: (1 + 1) × 2 = 4. Before Theo: (4 + 1) × 2 = 10. Check: 10 → eats 6 → 4 → eats 3 → 1."
+   "explain": "Work backwards. Before Mira: (1 + 1) × 2 = 4. Before Theo: (4 + 1) × 2 = 10. Check: 10 → eats 6 → 4 → eats 3 → 1.",
+   "hook": "**Undo in reverse**, last person first: add the 1 back, then double."
   },
   {
    "id": "maths.ps.st.squares",
@@ -360,7 +385,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Count by size**: 16 + 9 + 4 + 1, the square numbers.",
+   "example": "A chessboard holds 1² + 2² + … + 8² = 204 squares of all sizes."
   },
   {
    "id": "maths.ps.st.race",
@@ -393,7 +420,9 @@
      "feedback": "The facts link all five into one chain: Iris, Mira, Kit, Theo, Leon."
     }
    ],
-   "explain": "Draw the chain: Iris > Mira > Kit > Theo > Leon. Every athlete is placed, so Kit is third."
+   "explain": "Draw the chain: Iris > Mira > Kit > Theo > Leon. Every athlete is placed, so Kit is third.",
+   "hook": "**Draw the chain**, with arrows from winner to loser, and the order falls out.",
+   "example": "League tables and knockout brackets are the same idea: who beat whom, in order."
   },
   {
    "id": "maths.ps.st.cake",
@@ -426,7 +455,9 @@
      "feedback": "Parallel cuts give only 4. Make the cuts cross."
     }
    ],
-   "explain": "Each new cut can cross every earlier cut once, adding one more piece than the number of cuts it crosses: 1 + 1 + 2 + 3 = 7."
+   "explain": "Each new cut can cross every earlier cut once, adding one more piece than the number of cuts it crosses: 1 + 1 + 2 + 3 = 7.",
+   "hook": "**Each new cut crosses every old cut**: 2, 4, 7, 11 pieces (add 2, then 3, then 4 …).",
+   "example": "This is the “lazy caterer’s sequence”: with 4 straight cuts, a caterer can make 11 pieces."
   },
   {
    "id": "maths.ps.st.sumprod",
@@ -459,7 +490,9 @@
      "feedback": "132 = 11 × 12, which differ by 1."
     }
    ],
-   "explain": "List factor pairs of 132 until the sum is 23: 11 × 12 = 132 and 11 + 12 = 23. The difference is 1."
+   "explain": "List factor pairs of 132 until the sum is 23: 11 × 12 = 132 and 11 + 12 = 23. The difference is 1.",
+   "hook": "**Factor pairs**: list pairs that multiply to the product, then check which pair adds to the sum.",
+   "example": "A rectangular garden of 132 m² with a 46 m perimeter must be 11 m by 12 m."
   },
   {
    "id": "maths.ps.st.amphora",
@@ -477,7 +510,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Halving forwards means doubling backwards**: 3, 6, 12, 24, 48, 96.",
+   "example": "Medicines fall by half in the body over a fixed “half-life”: double back to find the starting amount."
   },
   {
    "id": "maths.ps.dg.sum5",
@@ -495,7 +530,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**The hundreds digit can’t be 0**: fix it first, then count what is left."
   },
   {
    "id": "maths.ps.dg.nines",
@@ -528,7 +564,9 @@
      "feedback": "Each digit is 9, not 10."
     }
    ],
-   "explain": "10²⁰ − 1 is written as twenty 9s (like 1000 − 1 = 999). Digit sum: 20 × 9 = 180."
+   "explain": "10²⁰ − 1 is written as twenty 9s (like 1000 − 1 = 999). Digit sum: 20 × 9 = 180.",
+   "hook": "**10ⁿ − 1 is n nines**: 1000 − 1 = 999.",
+   "example": "A 6-digit car mileometer at 999 999 has done 10⁶ − 1 miles: one more and it rolls round to 000 000."
   },
   {
    "id": "maths.ps.dg.bigsum",
@@ -561,7 +599,8 @@
      "feedback": "Only one of each digit: 6 and 5 hundreds, 4 and 3 tens, 2 and 1 units give 1173."
     }
    ],
-   "explain": "Hundreds count most: 6 and 5 there (1100), 4 and 3 in the tens (70), 2 and 1 in the units (3). 1100 + 70 + 3 = 1173, for example 642 + 531."
+   "explain": "Hundreds count most: 6 and 5 there (1100), 4 and 3 in the tens (70), 2 and 1 in the units (3). 1100 + 70 + 3 = 1173, for example 642 + 531.",
+   "hook": "**Biggest digits in the biggest places**: hundreds first, then tens, then units."
   },
   {
    "id": "maths.ps.dg.sevens",
@@ -579,7 +618,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Count units digits and tens digits separately**: 77 counts twice, because it has two 7s.",
+   "example": "A sign-maker numbering 100 doors needs twenty 7s: ten in the units place and ten in the tens."
   },
   {
    "id": "maths.ps.dg.abba",
@@ -612,7 +653,9 @@
      "feedback": "A + B must be 11, but that is not the number of solutions."
     }
    ],
-   "explain": "AB + BA = 10A + B + 10B + A = 11(A + B), so A + B = 11. The numbers are 29, 38, 47, 56, 65, 74, 83, 92: eight."
+   "explain": "AB + BA = 10A + B + 10B + A = 11(A + B), so A + B = 11. The numbers are 29, 38, 47, 56, 65, 74, 83, 92: eight.",
+   "hook": "**AB + BA = 11(A + B)**: a two-digit number plus its reverse is always a multiple of 11.",
+   "example": "47 + 74 = 121 = 11 × 11, and 23 + 32 = 55 = 11 × 5."
   },
   {
    "id": "maths.ps.dg.last7",
@@ -645,7 +688,9 @@
      "feedback": "Powers of 7 are never multiples of 10."
     }
    ],
-   "explain": "Last digits of 7, 7², 7³, 7⁴ are 7, 9, 3, 1, then the cycle repeats every 4. 100 is a multiple of 4, so the last digit is 1."
+   "explain": "Last digits of 7, 7², 7³, 7⁴ are 7, 9, 3, 1, then the cycle repeats every 4. 100 is a multiple of 4, so the last digit is 1.",
+   "hook": "**Last digits of powers cycle**: 7, 9, 3, 1, then repeat every 4.",
+   "example": "It is like days of the week: to find the 100th, you only need the remainder after dividing by the cycle length."
   },
   {
    "id": "maths.ps.dg.prod120",
@@ -678,7 +723,8 @@
      "feedback": "Put the digits in increasing order."
     }
    ],
-   "explain": "Two digits can multiply to at most 81, so we need three: 120 = 3 × 5 × 8 or 4 × 5 × 6. The smallest arrangement is 358."
+   "explain": "Two digits can multiply to at most 81, so we need three: 120 = 3 × 5 × 8 or 4 × 5 × 6. The smallest arrangement is 358.",
+   "hook": "**Fewest digits, then smallest digit first**: fewer digits always make a smaller number."
   },
   {
    "id": "maths.ps.dg.pal",
@@ -696,13 +742,15 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "A four-digit palindrome is **abba**: only the first two digits are free choices.",
+   "example": "2002 and 2112 were palindromic years; the next one after 2112 is 2222."
   },
   {
    "id": "maths.ps.dg.count",
    "topic": "maths.ps-digits",
    "kind": "fact",
-   "prompt": "Kit writes the numbers 1 to 30 in a row: 123456789101112…2930. How many digits does she write?",
+   "prompt": "Kit writes the numbers 1 to 30 in a row: 123456789101112…2930. How many digits does he write?",
    "answer": "51",
    "distractors": [
     "30",
@@ -714,7 +762,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Count by digit length**: the one-digit numbers, then the two-digit numbers.",
+   "example": "Printing page numbers 1 to 30 in a booklet takes 51 digits."
   },
   {
    "id": "maths.ps.dg.25th",
@@ -765,7 +815,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Count with leading zeros**: 001 to 999 gives every place the same 9 choices."
   },
   {
    "id": "maths.ps.dv.nine",
@@ -783,7 +834,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Digit-sum test**: a number is a multiple of 9 when its digits add to a multiple of 9.",
+   "example": "Shopkeepers once checked their sums by “casting out nines”, using digit sums."
   },
   {
    "id": "maths.ps.dv.pow2",
@@ -816,13 +869,14 @@
      "feedback": "2¹⁰ = 1024 is not a multiple of 7."
     }
    ],
-   "explain": "Remainders of 2, 4, 8, 16, … on division by 7 cycle 2, 4, 1. 10 = 3 × 3 + 1, so 2¹⁰ leaves the same remainder as 2¹: 2. (1024 = 7 × 146 + 2.)"
+   "explain": "Remainders of 2, 4, 8, 16, … on division by 7 cycle 2, 4, 1. 10 = 3 × 3 + 1, so 2¹⁰ leaves the same remainder as 2¹: 2. (1024 = 7 × 146 + 2.)",
+   "hook": "**Remainders cycle**: find the cycle’s length, then use where the power falls in it."
   },
   {
    "id": "maths.ps.dv.piles",
    "topic": "maths.ps-divisibility",
    "kind": "mcq",
-   "prompt": "Kit has more than one drachma. In piles of 3, 4 or 5 there is always exactly 1 left over. What is the smallest number she could have?",
+   "prompt": "Kit has more than one drachma. In piles of 3, 4 or 5 there is always exactly 1 left over. What is the smallest number he could have?",
    "options": [
     {
      "text": "61",
@@ -849,7 +903,9 @@
      "feedback": "121 works, but 61 is smaller."
     }
    ],
-   "explain": "One fewer than the number is a multiple of 3, 4 and 5, so of their LCM, 60. The smallest above 1 is 60 + 1 = 61."
+   "explain": "One fewer than the number is a multiple of 3, 4 and 5, so of their LCM, 60. The smallest above 1 is 60 + 1 = 61.",
+   "hook": "**One left over every time → one more than a common multiple**: LCM + 1.",
+   "example": "Eggs packed in 3s, 4s or 5s that always leave one spare could be 61 eggs (or 121, 181 …)."
   },
   {
    "id": "maths.ps.dv.or",
@@ -867,7 +923,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Inclusion–exclusion**: add both groups, then subtract the overlap so it isn’t counted twice.",
+   "example": "If 18 pupils do football, 12 do netball and 5 do both, then 18 + 12 − 5 = 25 do at least one."
   },
   {
    "id": "maths.ps.dv.gauss7",
@@ -900,7 +958,9 @@
      "feedback": "The sum is 5050, and 5050 − 5047 = 3."
     }
    ],
-   "explain": "1 + 2 + … + 100 = 100 × 101 ÷ 2 = 5050. 7 × 721 = 5047, so the remainder is 3."
+   "explain": "1 + 2 + … + 100 = 100 × 101 ÷ 2 = 5050. 7 × 721 = 5047, so the remainder is 3.",
+   "hook": "**1 + 2 + … + n = n(n + 1)/2**: Gauss’s pairing trick.",
+   "example": "Opening 1, 2, 3, … up to 24 chocolates on the days of an advent calendar makes 24 × 25 ÷ 2 = 300."
   },
   {
    "id": "maths.ps.dv.triple",
@@ -933,7 +993,8 @@
      "feedback": "Try 7 (21 leaves 1) and 12 (36 leaves 1): it is always 1."
     }
    ],
-   "explain": "Write the number as 5k + 2. Three times it is 15k + 6 = 5(3k + 1) + 1, which leaves remainder 1."
+   "explain": "Write the number as 5k + 2. Three times it is 15k + 6 = 5(3k + 1) + 1, which leaves remainder 1.",
+   "hook": "**Remainders multiply too**: remainder 2, tripled, is 6, which leaves remainder 1."
   },
   {
    "id": "maths.ps.dv.eleven",
@@ -966,7 +1027,9 @@
      "feedback": "Alternating sum 4 − 1 + 8 − 5 = 6."
     }
    ],
-   "explain": "Test for 11: alternately add and subtract the digits. For 4851: 4 − 8 + 5 − 1 = 0, a multiple of 11, so 4851 is too (4851 = 11 × 441)."
+   "explain": "Test for 11: alternately add and subtract the digits. For 4851: 4 − 8 + 5 − 1 = 0, a multiple of 11, so 4851 is too (4851 = 11 × 441).",
+   "hook": "**Test for 11**: alternately add and subtract the digits; a multiple of 11 (or 0) means divisible.",
+   "example": "121, 1331 and 14641 are powers of 11, and their alternating digit sums are all 0."
   },
   {
    "id": "maths.ps.dv.zeros10",
@@ -984,7 +1047,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Each final zero needs a 10 = 2 × 5**: count the 5s, because there are always more 2s.",
+   "example": "10! = 3 628 800 seconds is exactly 6 weeks: 6 × 7 × 24 × 60 × 60 = 3 628 800."
   },
   {
    "id": "maths.ps.dv.zeros25",
@@ -1017,7 +1082,8 @@
      "feedback": "There are only six factors of 5: one each from 5, 10, 15, 20 and two from 25."
     }
    ],
-   "explain": "Count factors of 5: 5, 10, 15, 20 give one each and 25 gives two: 6. There are more than enough 2s, so 6 zeros."
+   "explain": "Count factors of 5: 5, 10, 15, 20 give one each and 25 gives two: 6. There are more than enough 2s, so 6 zeros.",
+   "hook": "**25 = 5 × 5 counts twice**: count the multiples of 5, then add the multiples of 25."
   },
   {
    "id": "maths.ps.dv.days",
@@ -1050,7 +1116,9 @@
      "feedback": "100 is not a multiple of 7."
     }
    ],
-   "explain": "Days repeat every 7. 100 = 7 × 14 + 2, so it is the same as 2 days on: Thursday."
+   "explain": "Days repeat every 7. 100 = 7 × 14 + 2, so it is the same as 2 days on: Thursday.",
+   "hook": "**Days repeat every 7**: divide by 7 and use the remainder.",
+   "example": "A birthday on a Tuesday this year is usually on a Wednesday next year: 365 = 52 weeks + 1 day."
   },
   {
    "id": "maths.ps.dv.lcm10",
@@ -1083,7 +1151,9 @@
      "feedback": "720 is not divisible by 7."
     }
    ],
-   "explain": "Take the highest power of each prime up to 10: 2³ = 8, 3² = 9, 5 and 7. 8 × 9 × 5 × 7 = 2520."
+   "explain": "Take the highest power of each prime up to 10: 2³ = 8, 3² = 9, 5 and 7. 8 × 9 × 5 × 7 = 2520.",
+   "hook": "**LCM = the highest power of each prime**: 2³ × 3² × 5 × 7 = 2520.",
+   "example": "2520 sweets could be shared equally among any number of children from 1 to 10."
   },
   {
    "id": "maths.ps.pr.f36",
@@ -1101,7 +1171,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Factor-count trick**: add 1 to each power in the prime factorisation, then multiply.",
+   "example": "36 chairs can be set out in 9 different rectangles (rows × columns), one for each factor of 36."
   },
   {
    "id": "maths.ps.pr.three",
@@ -1134,7 +1206,8 @@
      "feedback": "Try including the even prime, 2."
     }
    ],
-   "explain": "Three odd primes give an odd sum, so one prime is 2 and the other two add to 18: 5 + 13 or 7 + 11 (not 9 + 9, which repeats and is not prime, and not 1 + 17). So 2 ways."
+   "explain": "Three odd primes give an odd sum, so one prime is 2 and the other two add to 18: 5 + 13 or 7 + 11 (not 9 + 9, which repeats and is not prime, and not 1 + 17). So 2 ways.",
+   "hook": "**Odd + odd + odd = odd**, so an even total of three primes must include 2."
   },
   {
    "id": "maths.ps.pr.2026",
@@ -1167,7 +1240,9 @@
      "feedback": "506 is not a factor of 2026, and is not prime."
     }
    ],
-   "explain": "2026 = 2 × 1013. To check 1013 is prime, test the primes up to √1013 ≈ 31.8: none of 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 divides it."
+   "explain": "2026 = 2 × 1013. To check 1013 is prime, test the primes up to √1013 ≈ 31.8: none of 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 divides it.",
+   "hook": "**Test primes only up to the square root**: √1013 < 32.",
+   "example": "Online security uses huge primes: multiplying two is quick, but splitting the answer back up is very hard."
   },
   {
    "id": "maths.ps.pr.most",
@@ -1200,7 +1275,9 @@
      "feedback": "30 has 8 factors."
     }
    ],
-   "explain": "48 = 2⁴ × 3 has (4 + 1)(1 + 1) = 10 factors: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48. No number below 50 has more."
+   "explain": "48 = 2⁴ × 3 has (4 + 1)(1 + 1) = 10 factors: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48. No number below 50 has more.",
+   "hook": "Lots of factors come from **lots of small primes**: 48 = 2⁴ × 3 has 5 × 2 = 10.",
+   "example": "A day has 24 hours and a circle 360°: both have many factors, so they split neatly into equal parts."
   },
   {
    "id": "maths.ps.pr.perfect",
@@ -1233,7 +1310,9 @@
      "feedback": "1 + 2 + 3 + 5 + 6 + 10 + 15 = 42."
     }
    ],
-   "explain": "28 = 1 + 2 + 4 + 7 + 14. The Greeks knew the first four perfect numbers: 6, 28, 496 and 8128."
+   "explain": "28 = 1 + 2 + 4 + 7 + 14. The Greeks knew the first four perfect numbers: 6, 28, 496 and 8128.",
+   "hook": "**6 = 1 + 2 + 3 and 28 = 1 + 2 + 4 + 7 + 14**: the first two perfect numbers.",
+   "example": "The next perfect numbers are 496 and 8128; Euclid found a recipe for building them from primes."
   },
   {
    "id": "maths.ps.pr.below50",
@@ -1251,7 +1330,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Sieve of Eratosthenes**: cross out the multiples of 2, 3, 5 and 7; what is left below 50 is prime.",
+   "example": "Some cicadas in North America emerge every 13 or 17 years, both prime, which may help them dodge predators."
   },
   {
    "id": "maths.ps.pr.euler",
@@ -1279,12 +1360,13 @@
      "feedback": "Forty examples are not a proof: n = 40 breaks it."
     },
     {
-     "text": "It equals 1721 = 41 × 42",
+     "text": "It equals 1722 = 41 × 42",
      "correct": false,
      "feedback": "Check the arithmetic: 1600 + 40 + 41 = 1681."
     }
    ],
-   "explain": "40² + 40 + 41 = 40 × 41 + 41 = 41 × 41 = 1681. Lots of examples never prove a pattern; one counterexample destroys it."
+   "explain": "40² + 40 + 41 = 40 × 41 + 41 = 41 × 41 = 1681. Lots of examples never prove a pattern; one counterexample destroys it.",
+   "hook": "**Forty successes prove nothing**; one failure disproves the pattern."
   },
   {
    "id": "maths.ps.pr.hcflcm",
@@ -1302,7 +1384,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**HCF × LCM = the product** of the two numbers.",
+   "example": "12 and 18 have HCF 6 and LCM 36, and 6 × 36 = 216 = 12 × 18."
   },
   {
    "id": "maths.ps.pr.odd",
@@ -1335,7 +1419,9 @@
      "feedback": "Factors come in pairs, except for square numbers."
     }
    ],
-   "explain": "Factors pair up (a × b), except when a = b, which only happens for square numbers. The squares up to 30 are 1, 4, 9, 16, 25: five."
+   "explain": "Factors pair up (a × b), except when a = b, which only happens for square numbers. The squares up to 30 are 1, 4, 9, 16, 25: five.",
+   "hook": "**Only squares have an odd number of factors**: their middle pair is a number times itself.",
+   "example": "In the famous locker puzzle, 100 lockers are toggled by 100 pupils; only the square-numbered ones end up open."
   },
   {
    "id": "maths.ps.pr.twins",
@@ -1353,7 +1439,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**After (3, 5), twin primes always sit either side of a multiple of 6**: 11 and 13 surround 12."
   },
   {
    "id": "maths.ps.pr.six",
@@ -1386,7 +1473,9 @@
      "feedback": "32 = 2⁵ has 6 factors, but it is much bigger."
     }
    ],
-   "explain": "12 = 2² × 3 has (2 + 1)(1 + 1) = 6 factors: 1, 2, 3, 4, 6, 12. Checking 1 to 11, none has 6."
+   "explain": "12 = 2² × 3 has (2 + 1)(1 + 1) = 6 factors: 1, 2, 3, 4, 6, 12. Checking 1 to 11, none has 6.",
+   "hook": "Exactly 6 factors means p⁵ or p² × q, and the smallest is **2² × 3 = 12**.",
+   "example": "Egg boxes of 12 can be packed as 1 × 12, 2 × 6 or 3 × 4, either way round: 6 arrangements, one per factor."
   },
   {
    "id": "maths.ps.fr.half",
@@ -1404,7 +1493,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Start from what you know**: a third of 30 first, then double it."
   },
   {
    "id": "maths.ps.fr.day",
@@ -1437,7 +1527,9 @@
      "feedback": "1/24 of a day is an hour."
     }
    ],
-   "explain": "A day has 24 × 60 = 1440 minutes. 20/1440 = 1/72."
+   "explain": "A day has 24 × 60 = 1440 minutes. 20/1440 = 1/72.",
+   "hook": "**Same units first**: a day is 24 × 60 = 1440 minutes.",
+   "example": "A 20-minute bus ride twice a day takes 40/1440 = 1/36 of every day."
   },
   {
    "id": "maths.ps.fr.class",
@@ -1455,7 +1547,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**The difference is made of parts too**: 5 − 3 = 2 parts = 6 pupils.",
+   "example": "Squash mixed 1 : 4 with 300 ml more water than squash: 3 parts = 300 ml, so there is 100 ml of squash."
   },
   {
    "id": "maths.ps.fr.telescope",
@@ -1488,7 +1582,8 @@
      "feedback": "The other four fractions add a third more."
     }
    ],
-   "explain": "Each term splits: 1/2 = 1 − 1/2, 1/6 = 1/2 − 1/3, 1/12 = 1/3 − 1/4, 1/20 = 1/4 − 1/5, 1/30 = 1/5 − 1/6. Almost everything cancels (it telescopes), leaving 1 − 1/6 = 5/6."
+   "explain": "Each term splits: 1/2 = 1 − 1/2, 1/6 = 1/2 − 1/3, 1/12 = 1/3 − 1/4, 1/20 = 1/4 − 1/5, 1/30 = 1/5 − 1/6. Almost everything cancels (it telescopes), leaving 1 − 1/6 = 5/6.",
+   "hook": "**1/(n(n + 1)) = 1/n − 1/(n + 1)**: neighbours cancel, like a telescope collapsing."
   },
   {
    "id": "maths.ps.fr.jar",
@@ -1506,7 +1601,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Match the fraction to the amount**: ¾ − ½ = ¼ of the jar is 15 litres.",
+   "example": "A fuel gauge falling from ¾ to ½ on a 60-litre tank means 15 litres have been used."
   },
   {
    "id": "maths.ps.fr.spend",
@@ -1524,7 +1621,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Multiply what is left**: ⅔ remains, then ¾ of that: ⅔ × ¾ = ½.",
+   "example": "Spend a third of your savings, then a quarter of the rest, and exactly half is left."
   },
   {
    "id": "maths.ps.fr.largest",
@@ -1557,7 +1656,9 @@
      "feedback": "9/14 ≈ 0.643, just smaller than 11/17."
     }
    ],
-   "explain": "As decimals: 5/8 = 0.625, 7/11 ≈ 0.636, 3/5 = 0.6, 9/14 ≈ 0.643, 11/17 ≈ 0.647. Each is a little less than 2/3; 11/17 is closest."
+   "explain": "As decimals: 5/8 = 0.625, 7/11 ≈ 0.636, 3/5 = 0.6, 9/14 ≈ 0.643, 11/17 ≈ 0.647. Each is a little less than 2/3; 11/17 is closest.",
+   "hook": "**Turn them into decimals**, or compare each with a benchmark such as ⅔.",
+   "example": "Shoppers compare deals the same way: 3 for £5 is £1.67 each, 5 for £8 is £1.60 each."
   },
   {
    "id": "maths.ps.fr.crown",
@@ -1575,7 +1676,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Add the parts, share the total, multiply back**: 1 + 2 + 4 = 7 parts.",
+   "example": "A punch of juice, lemonade and water in the ratio 1 : 2 : 4 filling a 1.4-litre bowl has 400 ml of lemonade."
   },
   {
    "id": "maths.ps.fr.wall",
@@ -1608,7 +1711,9 @@
      "feedback": "Four builders is a third more, not twice as many."
     }
    ],
-   "explain": "The wall needs 3 × 8 = 24 builder-days of work. Four builders take 24 ÷ 4 = 6 days (inverse proportion)."
+   "explain": "The wall needs 3 × 8 = 24 builder-days of work. Four builders take 24 ÷ 4 = 6 days (inverse proportion).",
+   "hook": "**More workers, fewer days**: workers × days stays the same.",
+   "example": "If 2 people take 3 hours to paint a fence, 6 people take 1 hour: 6 person-hours either way."
   },
   {
    "id": "maths.ps.fr.chain",
@@ -1626,7 +1731,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**“Of” means multiply**: ⅓ × ¼ × ⅕ = 1/60.",
+   "example": "A sixtieth of an hour is a minute: ⅓ × ¼ × ⅕ of 60 minutes is just 1 minute."
   },
   {
    "id": "maths.ps.fr.honey",
@@ -1644,7 +1751,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Scale the ratio**: 5 parts = 350 g, so 1 part = 70 g.",
+   "example": "Mortar mixed 1 : 4 cement to sand: 5 kg of cement needs 20 kg of sand."
   },
   {
    "id": "maths.ps.mn.99",
@@ -1662,7 +1771,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**(a − b)(a + b) = a² − b²**: 99 × 101 = 100² − 1².",
+   "example": "Mental-maths champions use the same trick: 49 × 51 = 50² − 1 = 2499."
   },
   {
    "id": "maths.ps.mn.alt",
@@ -1695,7 +1806,8 @@
      "feedback": "That is just one pair; there are 50."
     }
    ],
-   "explain": "Pair the terms: (1 − 2) + (3 − 4) + … + (99 − 100). Each of the 50 pairs is −1, so the total is −50."
+   "explain": "Pair the terms: (1 − 2) + (3 − 4) + … + (99 − 100). Each of the 50 pairs is −1, so the total is −50.",
+   "hook": "**Pair them up**: (1 − 2) + (3 − 4) + …, fifty pairs of −1."
   },
   {
    "id": "maths.ps.mn.sq",
@@ -1713,7 +1825,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Neighbouring squares differ by their sum**: 2026² − 2025² = 2026 + 2025.",
+   "example": "Check with small ones: 5² − 4² = 25 − 16 = 9 = 5 + 4."
   },
   {
    "id": "maths.ps.mn.gauss",
@@ -1731,7 +1845,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Gauss’s trick**: pair the first and last, so the total is n(n + 1)/2.",
+   "example": "Save 1p on day 1, 2p on day 2, and so on up to 50p: you have 1275p, or £12.75."
   },
   {
    "id": "maths.ps.mn.25",
@@ -1749,7 +1865,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Hunt for 100s and 1000s**: 25 × 4 = 100 and 125 × 8 = 1000.",
+   "example": "Four items at 25p make £1, and eight at £1.25 make £10: shopkeepers know these by heart."
   },
   {
    "id": "maths.ps.mn.dec",
@@ -1767,7 +1885,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Decimals are fractions in disguise**: 0.25 × 400 is a quarter of 400.",
+   "example": "“25% off” a £400 sofa is 0.25 × 400 = £100 off."
   },
   {
    "id": "maths.ps.mn.999",
@@ -1785,7 +1905,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**× 999 = × 1000, take away one lot.**",
+   "example": "Three items at £9.99 cost 3 × £10 − 3p = £29.97."
   },
   {
    "id": "maths.ps.mn.prod",
@@ -1818,7 +1940,8 @@
      "feedback": "Write the brackets as 1/2 × 2/3 × 3/4 × … × 9/10 and cancel."
     }
    ],
-   "explain": "Each bracket is a fraction: 1/2 × 2/3 × 3/4 × … × 9/10. Every top cancels the bottom before it, leaving 1/10."
+   "explain": "Each bracket is a fraction: 1/2 × 2/3 × 3/4 × … × 9/10. Every top cancels the bottom before it, leaving 1/10.",
+   "hook": "**Write each bracket as a fraction**: ½ × ⅔ × ¾ …, and watch it cancel."
   },
   {
    "id": "maths.ps.mn.37",
@@ -1836,7 +1959,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**37 × 3 = 111**, so 37 × 3k gives k three times over: 37 × 18 = 37 × 3 × 6 = 666."
   },
   {
    "id": "maths.ps.mn.odds",
@@ -1854,7 +1978,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**The first n odd numbers add to n²**: they build squares, layer by layer.",
+   "example": "L-shaped rows of 1, 3, 5 and 7 tiles fit together into 1 × 1, 2 × 2, 3 × 3 and 4 × 4 squares."
   },
   {
    "id": "maths.ps.mn.pct",
@@ -1872,7 +1998,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**x% of y = y% of x**: 8% of 50 is 50% of 8, which is 4.",
+   "example": "Need 4% of £75? Work out 75% of £4 instead: £3."
   },
   {
    "id": "maths.ps.pt.tri",
@@ -1890,7 +2018,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Triangular numbers: n(n + 1)/2**, half of an n by (n + 1) rectangle of dots.",
+   "example": "Ten-pin bowling pins make the 4th triangular number: 1 + 2 + 3 + 4 = 10."
   },
   {
    "id": "maths.ps.pt.match",
@@ -1908,7 +2038,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**1 to start, then 3 more for each square**: 3n + 1.",
+   "example": "Fencing a row of square pens works the same way: each new pen needs 3 more panels."
   },
   {
    "id": "maths.ps.pt.pow2",
@@ -1941,7 +2073,9 @@
      "feedback": "The sum is 1023."
     }
    ],
-   "explain": "1 + 2 + … + 2⁹ = 2¹⁰ − 1 = 1023 (each power of 2 is one more than the sum of all the smaller ones). Its units digit is 3."
+   "explain": "1 + 2 + … + 2⁹ = 2¹⁰ − 1 = 1023 (each power of 2 is one more than the sum of all the smaller ones). Its units digit is 3.",
+   "hook": "**1 + 2 + 4 + … + 2ⁿ⁻¹ = 2ⁿ − 1**, one less than the next power of 2.",
+   "example": "With weights of 1, 2, 4, 8 and 16 g you can weigh every whole number of grams up to 31 g."
   },
   {
    "id": "maths.ps.pt.sq1",
@@ -1959,7 +2093,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Compare with the squares**: 1, 4, 9, 16, 25, then add 1 to each."
   },
   {
    "id": "maths.ps.pt.diag",
@@ -1977,7 +2112,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Diagonals = n(n − 3)/2**: each corner joins all but itself and its two neighbours.",
+   "example": "A pentagon has 5 × 2 ÷ 2 = 5 diagonals: they draw the five-pointed star inside it."
   },
   {
    "id": "maths.ps.pt.fib",
@@ -2010,7 +2147,9 @@
      "feedback": "2, 8 and 34 are even."
     }
    ],
-   "explain": "Odd + odd = even, then odd + even = odd, then even + odd = odd: the pattern odd, odd, even repeats. Every third term is even: 30 ÷ 3 = 10."
+   "explain": "Odd + odd = even, then odd + even = odd, then even + odd = odd: the pattern odd, odd, even repeats. Every third term is even: 30 ÷ 3 = 10.",
+   "hook": "**Fibonacci goes odd, odd, even**, over and over.",
+   "example": "Fibonacci numbers turn up in nature: count the spirals on a pine cone or a sunflower, often 8, 13, 21 or 34."
   },
   {
    "id": "maths.ps.pt.stars",
@@ -2028,7 +2167,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**n² + n = n(n + 1)**: look for two consecutive numbers that multiply to the total."
   },
   {
    "id": "maths.ps.pt.cubes",
@@ -2061,7 +2201,8 @@
      "feedback": "Row n adds to exactly n³."
     }
    ],
-   "explain": "Row sums are 1, 8, 27, 64, …: the cubes. Row 10 adds to 10³ = 1000. (Its middle is 100 and there are 10 numbers.)"
+   "explain": "Row sums are 1, 8, 27, 64, …: the cubes. Row 10 adds to 10³ = 1000. (Its middle is 100 and there are 10 numbers.)",
+   "hook": "**Row n of the odd numbers adds to n³**: 3 + 5 = 8, 7 + 9 + 11 = 27."
   },
   {
    "id": "maths.ps.pt.403",
@@ -2079,7 +2220,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**nth term = difference × n + the zero term**: 4n − 1.",
+   "example": "Bus fares starting at £3 and rising £4 per zone follow 4n − 1."
   },
   {
    "id": "maths.ps.pt.100th",
@@ -2130,7 +2273,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Double and add 1 → one less than a power of 2**: 2ⁿ − 1.",
+   "example": "The Tower of Hanoi puzzle with n discs takes 2ⁿ − 1 moves: 1023 moves for 10 discs."
   },
   {
    "id": "maths.ps.lg.ab",
@@ -2163,7 +2308,9 @@
      "feedback": "Only one of the four cases is consistent."
     }
    ],
-   "explain": "Try each case. If A is a knight, B is a knave, and B’s claim “same kind” is false, as a knave’s must be. Every other case contradicts itself."
+   "explain": "Try each case. If A is a knight, B is a knave, and B’s claim “same kind” is false, as a knave’s must be. Every other case contradicts itself.",
+   "hook": "**Suppose A is a knight**, follow the consequences, and throw out any case that contradicts itself.",
+   "example": "Detectives test alibis this way: suppose this witness is honest; does the whole story still hold together?"
   },
   {
    "id": "maths.ps.lg.oracles",
@@ -2196,7 +2343,8 @@
      "feedback": "Only one case gives exactly one truth."
     }
    ],
-   "explain": "Sibyl says the opposite of Pythia, and Manto says the opposite of Sibyl (so the same as Pythia). If Pythia were true, Manto would be true too. So Pythia and Manto are false and Sibyl is true."
+   "explain": "Sibyl says the opposite of Pythia, and Manto says the opposite of Sibyl (so the same as Pythia). If Pythia were true, Manto would be true too. So Pythia and Manto are false and Sibyl is true.",
+   "hook": "Two people who say the same thing **stand or fall together**."
   },
   {
    "id": "maths.ps.lg.pets",
@@ -2229,7 +2377,9 @@
      "feedback": "Each of them has a pet."
     }
    ],
-   "explain": "Theo cannot have the dog (allergic) or the snake (it is Mira’s or Kit’s), so Theo has the owl."
+   "explain": "Theo cannot have the dog (allergic) or the snake (it is Mira’s or Kit’s), so Theo has the owl.",
+   "hook": "**Use a grid**: cross off what is impossible until each answer is forced.",
+   "example": "Logic-grid puzzles in puzzle books work like this: ticks and crosses until only one option is left."
   },
   {
    "id": "maths.ps.lg.knave",
@@ -2262,7 +2412,9 @@
      "feedback": "You can conclude something strong: neither a knight nor a knave can say it."
     }
    ],
-   "explain": "A knight cannot say it (it would be false) and a knave cannot say it (it would be true). So whoever says it is neither."
+   "explain": "A knight cannot say it (it would be false) and a knave cannot say it (it would be true). So whoever says it is neither.",
+   "hook": "“I am a knave” is **the liar paradox**: no knight or knave can ever say it.",
+   "example": "The ancient Cretan Epimenides is said to have claimed “All Cretans are liars”, a famous version of the paradox."
   },
   {
    "id": "maths.ps.lg.apple",
@@ -2295,7 +2447,8 @@
      "feedback": "Exactly one suspect gives exactly one true statement."
     }
    ],
-   "explain": "Try each thief. If Apollo did it, Ares and Eris are wrong, Apollo is lying, and only Hermes (“Eris is lying”) is true: exactly one. Every other suspect makes two or more statements true."
+   "explain": "Try each thief. If Apollo did it, Ares and Eris are wrong, Apollo is lying, and only Hermes (“Eris is lying”) is true: exactly one. Every other suspect makes two or more statements true.",
+   "hook": "**Try each suspect**, count the true statements, and keep the case with exactly one."
   },
   {
    "id": "maths.ps.lg.count",
@@ -2394,7 +2547,9 @@
      "feedback": "The clues fix the whole order: Urania, Calliope, Clio, Euterpe, Erato."
     }
    ],
-   "explain": "Erato is last. Urania beats Clio, who beats Euterpe, and Calliope comes straight after Urania, so the order is Urania, Calliope, Clio, Euterpe, Erato."
+   "explain": "Erato is last. Urania beats Clio, who beats Euterpe, and Calliope comes straight after Urania, so the order is Urania, Calliope, Clio, Euterpe, Erato.",
+   "hook": "**Place the definite facts first** (Erato is last), then slot the rest around them.",
+   "example": "Timetables are built the same way: put the fixed lessons in first, then fit the others around them."
   },
   {
    "id": "maths.ps.lg.boxes",
@@ -2427,7 +2582,8 @@
      "feedback": "It can, from the right box."
     }
    ],
-   "explain": "The “gold and silver” box is wrongly labelled, so it holds only gold or only silver, and one coin tells you which. The other two labels are also wrong, which then fixes everything."
+   "explain": "The “gold and silver” box is wrongly labelled, so it holds only gold or only silver, and one coin tells you which. The other two labels are also wrong, which then fixes everything.",
+   "hook": "**All labels wrong?** Start with the “mixed” box: it must really be pure."
   },
   {
    "id": "maths.ps.lg.guards",
@@ -2460,7 +2616,8 @@
      "feedback": "The double question works."
     }
    ],
-   "explain": "Either way, the answer passes through one lie exactly once, so it always points to the wrong road. Take the other one."
+   "explain": "Either way, the answer passes through one lie exactly once, so it always points to the wrong road. Take the other one.",
+   "hook": "**A double question passes through exactly one lie**, so the answer is always wrong: do the opposite."
   },
   {
    "id": "maths.ps.lg.chain",
@@ -2511,7 +2668,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**n! = n × (n − 1) × … × 1**: 4! = 24.",
+   "example": "Four friends can line up for a photo in 24 different orders."
   },
   {
    "id": "maths.ps.ct.meal",
@@ -2529,7 +2688,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Product rule**: multiply the choices at each stage.",
+   "example": "Outfits from 3 tops, 5 pairs of trousers and 2 pairs of shoes: 3 × 5 × 2 = 30."
   },
   {
    "id": "maths.ps.ct.digits",
@@ -2547,7 +2708,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**No repeats → one fewer choice each time**: 5 × 4 × 3.",
+   "example": "A lock code of 3 different digits chosen from 1 to 5 has 60 possible codes."
   },
   {
    "id": "maths.ps.ct.choose",
@@ -2580,7 +2743,9 @@
      "feedback": "That would be choosing 2 from 9."
     }
    ],
-   "explain": "8 × 7 = 56 ordered choices, but each pair is counted twice, so 56 ÷ 2 = 28."
+   "explain": "8 × 7 = 56 ordered choices, but each pair is counted twice, so 56 ÷ 2 = 28.",
+   "hook": "**Order doesn’t matter? Divide** by the number of ways to arrange the ones you chose.",
+   "example": "Choosing 2 of 8 pizza toppings gives 28 choices: ham-and-mushroom is the same as mushroom-and-ham."
   },
   {
    "id": "maths.ps.ct.paths",
@@ -2613,7 +2778,9 @@
      "feedback": "2⁶ includes routes with the wrong number of rights and ups."
     }
    ],
-   "explain": "Every route is an arrangement of R, R, R, U, U, U. Choose which 3 of the 6 steps are R: 6 × 5 × 4 ÷ (3 × 2 × 1) = 20."
+   "explain": "Every route is an arrangement of R, R, R, U, U, U. Choose which 3 of the 6 steps are R: 6 × 5 × 4 ÷ (3 × 2 × 1) = 20.",
+   "hook": "**Every route is a word made of Rs and Us**: count the arrangements of RRRUUU.",
+   "example": "Routes through a city laid out in a grid of blocks, heading only east or north, are counted this way."
   },
   {
    "id": "maths.ps.ct.rect",
@@ -2631,7 +2798,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**A rectangle = 2 horizontal lines + 2 vertical lines**: choose each pair.",
+   "example": "A chessboard hides 1296 rectangles: choose 2 of its 9 lines each way, 36 × 36."
   },
   {
    "id": "maths.ps.ct.apollo",
@@ -2664,7 +2833,9 @@
      "feedback": "Only divide by 2 × 2 = 4."
     }
    ],
-   "explain": "6! = 720 arrangements if every letter were different. Swapping the two Ls or the two Os changes nothing, so divide by 2 × 2: 720 ÷ 4 = 180."
+   "explain": "6! = 720 arrangements if every letter were different. Swapping the two Ls or the two Os changes nothing, so divide by 2 × 2: 720 ÷ 4 = 180.",
+   "hook": "**Repeated letters? Divide by the ways to swap them**: 6! ÷ (2! × 2!).",
+   "example": "MISSISSIPPI can be rearranged in 11! ÷ (4! × 4! × 2!) = 34 650 ways."
   },
   {
    "id": "maths.ps.ct.not235",
@@ -2682,7 +2853,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Count the complement**: find how many ARE multiples, then subtract from 100."
   },
   {
    "id": "maths.ps.ct.cube",
@@ -2715,7 +2887,9 @@
      "feedback": "Each of the 12 edges has just one middle cube."
     }
    ],
-   "explain": "Cubes with exactly two red faces sit in the middle of each edge. A cube has 12 edges, so 12."
+   "explain": "Cubes with exactly two red faces sit in the middle of each edge. A cube has 12 edges, so 12.",
+   "hook": "**Corners 3 faces, edges 2, face centres 1, the core 0**: 8 + 12 + 6 + 1 = 27.",
+   "example": "A 3 × 3 × 3 twisty puzzle cube has 8 corner pieces, 12 edge pieces and 6 centre pieces."
   },
   {
    "id": "maths.ps.ct.hex",
@@ -2733,7 +2907,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Choose 3 from 6** and divide by 3! because the order of the corners doesn’t matter."
   },
   {
    "id": "maths.ps.ct.league",
@@ -2751,7 +2926,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Each match is a pair**: n(n − 1)/2 = 6 × 5 ÷ 2.",
+   "example": "A 20-team league in which every team plays every other twice, home and away, has 20 × 19 = 380 matches."
   },
   {
    "id": "maths.ps.ct.medals",
@@ -2769,7 +2946,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Order matters → don’t divide**: 7 × 6 × 5 for gold, silver and bronze.",
+   "example": "Choosing a captain, a vice-captain and a treasurer from 7 people can be done in 210 ways."
   },
   {
    "id": "maths.ps.pb.even",
@@ -2802,7 +2981,9 @@
      "feedback": "P(odd product) = 1/2 × 1/2 = 1/4, so P(even) = 3/4."
     }
    ],
-   "explain": "The product is odd only when both dice are odd: 1/2 × 1/2 = 1/4. So P(even) = 1 − 1/4 = 3/4."
+   "explain": "The product is odd only when both dice are odd: 1/2 × 1/2 = 1/4. So P(even) = 1 − 1/4 = 3/4.",
+   "hook": "**Odd × odd is the only odd product**: P(even) = 1 − P(both odd).",
+   "example": "In a dice game where an even product wins, you would win about 3 games in every 4."
   },
   {
    "id": "maths.ps.pb.head",
@@ -2835,7 +3016,9 @@
      "feedback": "Use the complement: only TTT has no heads."
     }
    ],
-   "explain": "Use the complement: no heads means TTT, probability 1/8. So at least one head is 1 − 1/8 = 7/8."
+   "explain": "Use the complement: no heads means TTT, probability 1/8. So at least one head is 1 − 1/8 = 7/8.",
+   "hook": "**At least one = 1 − none**: usually the quickest route.",
+   "example": "With a ½ chance of rain on each of 3 days (independently), the chance of at least one wet day is 7/8."
   },
   {
    "id": "maths.ps.pb.bag",
@@ -2868,7 +3051,9 @@
      "feedback": "Multiply the two probabilities: 3/5 × 2/4."
     }
    ],
-   "explain": "P(first red) = 3/5. Then 2 of the 4 left are red: 2/4. 3/5 × 2/4 = 6/20 = 3/10."
+   "explain": "P(first red) = 3/5. Then 2 of the 4 left are red: 2/4. 3/5 × 2/4 = 6/20 = 3/10.",
+   "hook": "**Without replacement, the bottom number drops by one**: 3/5, then 2/4.",
+   "example": "Picking two socks from a drawer in the dark: there is one fewer sock to choose from for the second."
   },
   {
    "id": "maths.ps.pb.bigger",
@@ -2901,7 +3086,8 @@
      "feedback": "That is “bigger or equal”."
     }
    ],
-   "explain": "Of the 36 outcomes, 6 are equal. The other 30 split evenly into “bigger” and “smaller”, so 15/36 = 5/12."
+   "explain": "Of the 36 outcomes, 6 are equal. The other 30 split evenly into “bigger” and “smaller”, so 15/36 = 5/12.",
+   "hook": "**Symmetry**: remove the ties, and “bigger” and “smaller” share what is left equally."
   },
   {
    "id": "maths.ps.pb.prime",
@@ -2934,7 +3120,9 @@
      "feedback": "Count the primes: there are 8."
     }
    ],
-   "explain": "The primes up to 20 are 2, 3, 5, 7, 11, 13, 17, 19: 8 of the 20. 8/20 = 2/5."
+   "explain": "The primes up to 20 are 2, 3, 5, 7, 11, 13, 17, 19: 8 of the 20. 8/20 = 2/5.",
+   "hook": "**Count carefully**: 1 is not prime, but 2 is.",
+   "example": "Of the 25 primes below 100, only 8 are below 20, so the chance changes with the range you choose."
   },
   {
    "id": "maths.ps.pb.total",
@@ -2967,7 +3155,9 @@
      "feedback": "Totals near the middle can be made in more ways."
     }
    ],
-   "explain": "7 can be made 6 ways (1+6, 2+5, 3+4, 4+3, 5+2, 6+1), more than any other total."
+   "explain": "7 can be made 6 ways (1+6, 2+5, 3+4, 4+3, 5+2, 6+1), more than any other total.",
+   "hook": "**7 is the most likely total of two dice**: 6 of the 36 ways.",
+   "example": "In board games played with two dice, the square 7 spaces ahead is the likeliest place to land."
   },
   {
    "id": "maths.ps.pb.sign",
@@ -3000,13 +3190,15 @@
      "feedback": "There are 12 signs, not 2."
     }
    ],
-   "explain": "Mira can be any sign; Theo then matches with probability 1/12."
+   "explain": "Mira can be any sign; Theo then matches with probability 1/12.",
+   "hook": "**The first person can be anything**; only the second has to match.",
+   "example": "The birthday puzzle: in a class of 23, there is about a 50% chance that two people share a birthday."
   },
   {
    "id": "maths.ps.pb.tf",
    "topic": "maths.ps-probability",
    "kind": "mcq",
-   "prompt": "Kit guesses all four answers on a true-or-false quiz at random. What is the probability that she gets all four right?",
+   "prompt": "Kit guesses all four answers on a true-or-false quiz at random. What is the probability that he gets all four right?",
    "options": [
     {
      "text": "{{1/16}}",
@@ -3033,7 +3225,9 @@
      "feedback": "Multiply the four halves: 1/16."
     }
    ],
-   "explain": "Each guess is right with probability 1/2, independently: (1/2)⁴ = 1/16."
+   "explain": "Each guess is right with probability 1/2, independently: (1/2)⁴ = 1/16.",
+   "hook": "**Independent? Multiply**: (½)⁴ = 1/16.",
+   "example": "Guessing a 4-digit PIN at random is far harder: a 1 in 10 000 chance."
   },
   {
    "id": "maths.ps.pb.spin",
@@ -3051,7 +3245,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Expected number = probability × number of trials.**",
+   "example": "If 0.35 of customers buy a drink, a café serving 200 people expects to sell about 70."
   },
   {
    "id": "maths.ps.pb.athena",
@@ -3117,7 +3313,8 @@
      "feedback": "There are 4 good pairs out of 10."
     }
    ],
-   "explain": "There are 10 pairs. An even total needs both odd ({1,3}, {1,5}, {3,5}) or both even ({2,4}): 4 pairs. 4/10 = 2/5."
+   "explain": "There are 10 pairs. An even total needs both odd ({1,3}, {1,5}, {3,5}) or both even ({2,4}): 4 pairs. 4/10 = 2/5.",
+   "hook": "**Even + even and odd + odd give even**; odd + even gives odd."
   },
   {
    "id": "maths.ps.gm.ext",
@@ -3135,7 +3332,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Number of sides = 360° ÷ the exterior angle.**",
+   "example": "An octagonal stop sign has exterior angles of 360° ÷ 8 = 45°."
   },
   {
    "id": "maths.ps.gm.iso",
@@ -3168,7 +3367,8 @@
      "feedback": "The other angles are 40° and 100°, or 70° and 70°: 80° is not possible."
     }
    ],
-   "explain": "Either 40° is one of the two equal angles (40, 40, 100) or it is the odd one (40, 70, 70). So the largest is 100° or 70°."
+   "explain": "Either 40° is one of the two equal angles (40, 40, 100) or it is the odd one (40, 70, 70). So the largest is 100° or 70°.",
+   "hook": "**Which angle is the odd one out?** With isosceles triangles, check both cases."
   },
   {
    "id": "maths.ps.gm.circle",
@@ -3193,15 +3393,17 @@
     {
      "text": "14 cm²",
      "correct": false,
-     "feedback": "100 − 25π ≈ 21.5."
+     "feedback": "100 − 25π ≈ 21.46."
     },
     {
      "text": "31 cm²",
      "correct": false,
-     "feedback": "Use π ≈ 3.14: 100 − 78.5 = 21.5."
+     "feedback": "Use π ≈ 3.142: 100 − 78.54 = 21.46, which rounds to 21."
     }
    ],
-   "explain": "The radius is 5 cm, so the circle’s area is 25π ≈ 78.5 cm². 100 − 78.5 ≈ 21 cm² (21.46)."
+   "explain": "The radius is 5 cm, so the circle’s area is 25π ≈ 78.54 cm². 100 − 78.54 = 21.46, which is 21 cm² to the nearest cm².",
+   "hook": "**Square minus circle**: 100 − 25π. A circle fills about 79% of the square around it.",
+   "example": "A round pizza in a square box leaves about 21% of the box empty."
   },
   {
    "id": "maths.ps.gm.quad",
@@ -3219,7 +3421,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**A quadrilateral’s angles add to 360°**: it splits into two triangles.",
+   "example": "Any four-sided field, however wonky, has corner angles that add to 360°."
   },
   {
    "id": "maths.ps.gm.rect",
@@ -3237,7 +3441,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Fixed perimeter? The closer to a square, the bigger the area.**",
+   "example": "With 30 m of fencing and whole-metre sides, a 7 m × 8 m pen gives the most room: 56 m²."
   },
   {
    "id": "maths.ps.gm.clock",
@@ -3255,7 +3461,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**The minute hand turns 6° a minute; the hour hand only 0.5° a minute** (30° an hour).",
+   "example": "At 3:30 the hour hand is halfway between the 3 and the 4, not on the 3: that is the usual slip."
   },
   {
    "id": "maths.ps.gm.tri",
@@ -3273,7 +3481,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Area = ½ × base × perpendicular height**, wherever the top corner is.",
+   "example": "A triangular sail 6 m along the bottom and 5 m tall has area 15 m², however much it leans."
   },
   {
    "id": "maths.ps.gm.oct",
@@ -3291,7 +3501,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Interior angle sum = (n − 2) × 180°.**",
+   "example": "An octagonal gazebo’s eight corner angles add to 6 × 180° = 1080°, so each is 135°."
   },
   {
    "id": "maths.ps.gm.sq10",
@@ -3324,7 +3536,9 @@
      "feedback": "1.1² = 1.21: a 21% increase."
     }
    ],
-   "explain": "The area scales by 1.1 × 1.1 = 1.21, an increase of 21%. Try it with a square of side 10: area 100 becomes 121."
+   "explain": "The area scales by 1.1 × 1.1 = 1.21, an increase of 21%. Try it with a square of side 10: area 100 becomes 121.",
+   "hook": "**Scale lengths by k, and the area scales by k²**: 1.1² = 1.21, so 21% more.",
+   "example": "A TV screen 10% wider and 10% taller has 21% more picture."
   },
   {
    "id": "maths.ps.gm.prism",
@@ -3342,7 +3556,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**An n-sided prism has 3n edges, 2n vertices and n + 2 faces.**",
+   "example": "A triangular chocolate box is a prism with 9 edges, 6 corners and 5 faces."
   },
   {
    "id": "maths.ps.gm.hex",
@@ -3378,7 +3594,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Sum and difference**: the smaller = (sum − difference) ÷ 2."
   },
   {
    "id": "maths.ps.tm.run",
@@ -3411,7 +3628,9 @@
      "feedback": "Divide 42 by 12."
     }
    ],
-   "explain": "Time = distance ÷ speed = 42 ÷ 12 = 3.5 hours = 3 hours 30 minutes."
+   "explain": "Time = distance ÷ speed = 42 ÷ 12 = 3.5 hours = 3 hours 30 minutes.",
+   "hook": "**0.5 hours is 30 minutes, not 50**: time is counted in sixties.",
+   "example": "A sat nav saying 3.5 hours means 3 hours 30 minutes, not 3 hours 50."
   },
   {
    "id": "maths.ps.tm.tunnel",
@@ -3429,13 +3648,15 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**The whole train has to clear it**: distance = tunnel + train.",
+   "example": "Lorry drivers must allow for their own length when pulling out past a junction or overtaking."
   },
   {
    "id": "maths.ps.tm.cycle",
    "topic": "maths.ps-time",
    "kind": "mcq",
-   "prompt": "Kit cycles to the temple at 15 km/h and back by the same road at 10 km/h. What is her average speed for the whole journey?",
+   "prompt": "Kit cycles to the temple at 15 km/h and back by the same road at 10 km/h. What is his average speed for the whole journey?",
    "options": [
     {
      "text": "12 km/h",
@@ -3444,7 +3665,7 @@
     {
      "text": "12.5 km/h",
      "correct": false,
-     "feedback": "She spends longer at the slower speed, so the average is below 12.5."
+     "feedback": "He spends longer at the slower speed, so the average is below 12.5."
     },
     {
      "text": "13 km/h",
@@ -3462,7 +3683,9 @@
      "feedback": "Try a distance of 30 km each way: 60 km in 5 hours."
     }
    ],
-   "explain": "Pick a distance, say 30 km each way: 2 hours there and 3 hours back. 60 km ÷ 5 hours = 12 km/h."
+   "explain": "Pick a distance, say 30 km each way: 2 hours there and 3 hours back. 60 km ÷ 5 hours = 12 km/h.",
+   "hook": "**Never average the speeds**: use total distance ÷ total time.",
+   "example": "Average speed cameras divide the distance between two cameras by your time between them."
   },
   {
    "id": "maths.ps.tm.2028",
@@ -3495,7 +3718,9 @@
      "feedback": "365 = 7 × 52 + 1."
     }
    ],
-   "explain": "2027 has 365 days = 52 weeks + 1 day, so the day moves on by one: Saturday."
+   "explain": "2027 has 365 days = 52 weeks + 1 day, so the day moves on by one: Saturday.",
+   "hook": "**365 = 52 weeks + 1 day**: a date moves on one weekday a year, or two if a 29 February comes between.",
+   "example": "If 1 January is a Friday this year, next year it is a Saturday, unless this year is a leap year."
   },
   {
    "id": "maths.ps.tm.week",
@@ -3513,7 +3738,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**7 × 24 × 60 × 60**: a week is just over 600 000 seconds.",
+   "example": "A million seconds is about 11.6 days; a billion seconds is nearly 32 years."
   },
   {
    "id": "maths.ps.tm.gain",
@@ -3546,7 +3773,8 @@
      "feedback": "8 hours × 3 minutes is 24 minutes."
     }
    ],
-   "explain": "In 8 hours it gains 8 × 3 = 24 minutes, so it shows 8:24 pm."
+   "explain": "In 8 hours it gains 8 × 3 = 24 minutes, so it shows 8:24 pm.",
+   "hook": "**Gain per hour × number of hours**, then add it on: a gaining clock runs ahead."
   },
   {
    "id": "maths.ps.tm.track",
@@ -3564,7 +3792,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Opposite directions? Add the speeds** to find how fast the gap closes.",
+   "example": "Two trains 300 km apart heading towards each other at 100 km/h and 50 km/h meet after 2 hours."
   },
   {
    "id": "maths.ps.tm.day100",
@@ -3597,7 +3827,9 @@
      "feedback": "That is day 91."
     }
    ],
-   "explain": "January (31), February (28) and March (31) make 90 days, so day 91 is 1 April and day 100 is 10 April."
+   "explain": "January (31), February (28) and March (31) make 90 days, so day 91 is 1 April and day 100 is 10 April.",
+   "hook": "“**Thirty days hath September, April, June and November**”; all the rest have 31, except February.",
+   "example": "Or use your knuckles: make two fists, and the months that land on a knuckle have 31 days."
   },
   {
    "id": "maths.ps.tm.hermes",
@@ -3615,7 +3847,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Find each time separately**, then total distance ÷ total time.",
+   "example": "A journey of 60 km at 30 km/h and 60 km at 60 km/h takes 3 hours: an average of 40 km/h, not 45."
   },
   {
    "id": "maths.ps.tm.overlap",
@@ -3648,7 +3882,8 @@
      "feedback": "They overlap roughly once an hour, not twice."
     }
    ],
-   "explain": "In 12 hours the minute hand goes round 12 times and the hour hand once, so the minute hand gains 11 laps and passes it 11 times. In 24 hours: 22."
+   "explain": "In 12 hours the minute hand goes round 12 times and the hour hand once, so the minute hand gains 11 laps and passes it 11 times. In 24 hours: 22.",
+   "hook": "**The minute hand laps the hour hand 11 times in 12 hours**, not 12."
   },
   {
    "id": "maths.ps.tm.late",
@@ -3681,7 +3916,9 @@
      "feedback": "Count again: 00:45 plus 40 minutes is 01:25."
     }
    ],
-   "explain": "21:45 + 3 hours = 00:45. 00:45 + 40 minutes = 01:25."
+   "explain": "21:45 + 3 hours = 00:45. 00:45 + 40 minutes = 01:25.",
+   "hook": "**Add the hours, then the minutes**, and start again after 24:00.",
+   "example": "A flight leaving at 21:45 and lasting 3 h 40 min lands at 01:25 the next morning (same time zone)."
   },
   {
    "id": "maths.ps.al.trick",
@@ -3699,7 +3936,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Call it n**: every “think of a number” trick is algebra in which n cancels out.",
+   "example": "Magicians’ number tricks work this way: the n cancels, so they always know your final answer."
   },
   {
    "id": "maths.ps.al.brick",
@@ -3732,7 +3971,8 @@
      "feedback": "It weighs more than 1 kg."
     }
    ],
-   "explain": "Let the brick be b: b = 1 + b/2, so b/2 = 1 and b = 2 kg."
+   "explain": "Let the brick be b: b = 1 + b/2, so b/2 = 1 and b = 2 kg.",
+   "hook": "**Write it as an equation**: b = 1 + b/2."
   },
   {
    "id": "maths.ps.al.bat",
@@ -3765,7 +4005,9 @@
      "feedback": "That splits it equally; the bat is £1 more."
     }
    ],
-   "explain": "Let the ball cost b: b + (b + 1) = 1.10, so 2b = 0.10 and b = 5p. The quick answer, 10p, makes the total £1.20."
+   "explain": "Let the ball cost b: b + (b + 1) = 1.10, so 2b = 0.10 and b = 5p. The quick answer, 10p, makes the total £1.20.",
+   "hook": "**Check the quick answer**: a 10p ball makes the bat £1.10 and the total £1.20. Wrong!",
+   "example": "Shop deals catch people the same way: always test a quick answer against every fact you are given."
   },
   {
    "id": "maths.ps.al.consec",
@@ -3783,25 +4025,29 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**The middle one is the average**: 72 ÷ 3 = 24, so the numbers are 23, 24, 25.",
+   "example": "Three seats in a row whose numbers add up to 72 must be seats 23, 24 and 25."
   },
   {
    "id": "maths.ps.al.ages",
    "topic": "maths.ps-algebra",
    "kind": "fact",
-   "prompt": "Kit’s age and her mother’s age add up to 50. In 5 years’ time her mother will be three times as old as Kit. How old is Kit now?",
+   "prompt": "Kit’s age and his mother’s age add up to 50. In 5 years’ time his mother will be three times as old as Kit. How old is Kit now?",
    "answer": "10",
    "distractors": [
     "15",
     "12",
     "5"
    ],
-   "explain": "Let Kit be k, so her mother is 50 − k. In 5 years: 55 − k = 3(k + 5), so 55 − k = 3k + 15 and 4k = 40: k = 10.",
+   "explain": "Let Kit be k, so his mother is 50 − k. In 5 years: 55 − k = 3(k + 5), so 55 − k = 3k + 15 and 4k = 40: k = 10.",
    "formats": [
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Add the years to everyone**: in 5 years, both ages go up by 5.",
+   "example": "Family age puzzles always work this way: everyone gets older by the same number of years."
   },
   {
    "id": "maths.ps.al.xy",
@@ -3819,7 +4065,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Add the equations to eliminate y**: 2x = 14.",
+   "example": "Two numbers with a sum of 10 and a difference of 4: the bigger one is (10 + 4) ÷ 2 = 7."
   },
   {
    "id": "maths.ps.al.abc",
@@ -3837,7 +4085,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Add everything first**: each letter appears twice."
   },
   {
    "id": "maths.ps.al.cube",
@@ -3870,7 +4119,9 @@
      "feedback": "(−7)² = 49 and (−7)³ = −343."
     }
    ],
-   "explain": "x² = 49 allows 7 or −7, but x³ is negative, so x = −7."
+   "explain": "x² = 49 allows 7 or −7, but x³ is negative, so x = −7.",
+   "hook": "**Square roots come as ±; cube roots keep the sign**: the cube root of −343 is −7.",
+   "example": "A cube with a volume of 343 cm³ has edges of 7 cm, since 7 × 7 × 7 = 343."
   },
   {
    "id": "maths.ps.al.coins",
@@ -3888,7 +4139,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Giving 6 away and receiving 6 closes a gap of 12**, so Theo has 12."
   },
   {
    "id": "maths.ps.al.mean",
@@ -3906,7 +4158,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Mean × count = total**: work with totals, not means.",
+   "example": "Average 15 over 4 tests and want 17 after 5? The 5th test needs 5 × 17 − 4 × 15 = 25."
   },
   {
    "id": "maths.ps.al.legs",
@@ -3924,7 +4178,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Pretend they are all nymphs**; each swap to a centaur adds 2 legs.",
+   "example": "An ancient Chinese puzzle asks the same about pheasants and rabbits in a cage: count heads and legs."
   },
   {
    "id": "maths.ps.iv.chess",
@@ -3957,7 +4213,8 @@
      "feedback": "A colouring argument settles it without searching."
     }
    ],
-   "explain": "Opposite corners are the same colour, so 30 squares of one colour and 32 of the other remain. Each domino covers one of each colour, so 31 dominoes would cover 31 of each. Impossible."
+   "explain": "Opposite corners are the same colour, so 30 squares of one colour and 32 of the other remain. Each domino covers one of each colour, so 31 dominoes would cover 31 of each. Impossible.",
+   "hook": "**Colour it in**: every domino covers one black and one white square."
   },
   {
    "id": "maths.ps.iv.diff",
@@ -3990,7 +4247,8 @@
      "feedback": "It is always odd, but not always 1."
     }
    ],
-   "explain": "Replacing a and b by a − b changes the total by 2b, an even amount, so the total stays odd (it starts at 55). One number left means that number is odd, never 0."
+   "explain": "Replacing a and b by a − b changes the total by 2b, an even amount, so the total stays odd (it starts at 55). One number left means that number is odd, never 0.",
+   "hook": "**Parity is the invariant**: swapping a and b for a − b changes the total by an even amount."
   },
   {
    "id": "maths.ps.iv.cups",
@@ -4023,7 +4281,8 @@
      "feedback": "That undoes itself."
     }
    ],
-   "explain": "Each cup needs an odd number of turns, and 7 odd numbers add to an odd total. Every move adds exactly 2 turns, so the total is always even. Impossible."
+   "explain": "Each cup needs an odd number of turns, and 7 odd numbers add to an odd total. Every move adds exactly 2 turns, so the total is always even. Impossible.",
+   "hook": "**Count the turns**: each move adds 2, but 7 cups need an odd total."
   },
   {
    "id": "maths.ps.iv.knight",
@@ -4056,7 +4315,9 @@
      "feedback": "Knights stay on the board!"
     }
    ],
-   "explain": "A knight’s move always lands on the opposite colour. After 7 moves (odd) it has changed colour: black."
+   "explain": "A knight’s move always lands on the opposite colour. After 7 moves (odd) it has changed colour: black.",
+   "hook": "**A knight always changes colour**: an odd number of moves, the opposite colour.",
+   "example": "Chess players use this: a knight on a white square can never reach another white square in one move."
   },
   {
    "id": "maths.ps.iv.graph",
@@ -4089,7 +4350,9 @@
      "feedback": "Lengths do not matter, only the counting."
     }
    ],
-   "explain": "Each path has 2 ends, so adding up the path-ends at every junction gives an even total. A sum of whole numbers can only be even if an even number of them are odd."
+   "explain": "Each path has 2 ends, so adding up the path-ends at every junction gives an even total. A sum of whole numbers can only be even if an even number of them are odd.",
+   "hook": "**Odd junctions come in pairs**: every path has two ends.",
+   "example": "Königsberg’s seven bridges joined land with 4 odd junctions, so no walk could cross each bridge exactly once."
   },
   {
    "id": "maths.ps.iv.signs",
@@ -4140,7 +4403,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Track the total**: each step lowers it by exactly 1."
   },
   {
    "id": "maths.ps.iv.ab2",
@@ -4176,7 +4440,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Zeros at the end of n! come from the 5s**: three 5s by 15!.",
+   "example": "15! = 1 307 674 368 000, which ends in exactly three zeros."
   },
   {
    "id": "maths.ps.ol.unit",
@@ -4242,7 +4508,8 @@
      "feedback": "Powers of 3 are odd."
     }
    ],
-   "explain": "Last digits of powers of 3 cycle 3, 9, 7, 1. 2026 = 4 × 506 + 2, so it matches 3²: 9."
+   "explain": "Last digits of powers of 3 cycle 3, 9, 7, 1. 2026 = 4 × 506 + 2, so it matches 3²: 9.",
+   "hook": "**3, 9, 7, 1 repeats every 4**: divide the power by 4 and use the remainder."
   },
   {
    "id": "maths.ps.ol.sqcube",
@@ -4260,7 +4527,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Inclusion–exclusion**: squares + cubes − sixth powers."
   },
   {
    "id": "maths.ps.ol.magic",
@@ -4293,7 +4561,9 @@
      "feedback": "The four lines through the centre force it to be 5."
     }
    ],
-   "explain": "Each line totals 45 ÷ 3 = 15. The four lines through the centre use every number once plus the centre three extra times: 4 × 15 = 45 + 3c, so c = 5."
+   "explain": "Each line totals 45 ÷ 3 = 15. The four lines through the centre use every number once plus the centre three extra times: 4 × 15 = 45 + 3c, so c = 5.",
+   "hook": "**Each line of a 1–9 magic square totals 45 ÷ 3 = 15**, and 5 sits in the middle.",
+   "example": "The Lo Shu square of ancient China is this 3 × 3 magic square, with 5 at its centre."
   },
   {
    "id": "maths.ps.ol.digsum",
@@ -4317,7 +4587,7 @@
    "id": "maths.ps.ol.stairs",
    "topic": "maths.ps-olympiad",
    "kind": "fact",
-   "prompt": "In how many ways can Kit climb a staircase of 10 steps if she takes 1 or 2 steps at a time?",
+   "prompt": "In how many ways can Kit climb a staircase of 10 steps if he takes 1 or 2 steps at a time?",
    "answer": "89",
    "distractors": [
     "55",
@@ -4329,7 +4599,9 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Ways(n) = ways(n − 1) + ways(n − 2)**: Fibonacci again.",
+   "example": "Fibonacci’s book of 1202 has the famous rabbit puzzle that gives the same sequence: 1, 1, 2, 3, 5, 8 …"
   },
   {
    "id": "maths.ps.ol.twos",
@@ -4365,7 +4637,8 @@
     "typed",
     "choice"
    ],
-   "strict": true
+   "strict": true,
+   "hook": "**Square both sides**: (x + 1/x)² = x² + 2 + 1/x²."
   },
   {
    "id": "maths.ps.ol.dig10",
@@ -4434,7 +4707,9 @@
      "feedback": "Still only examples."
     }
    ],
-   "explain": "A proof must cover EVERY case. Writing the odd numbers as 2a + 1 and 2b + 1 does that, and the sum 2(a + b + 1) is clearly even."
+   "explain": "A proof must cover EVERY case. Writing the odd numbers as 2a + 1 and 2b + 1 does that, and the sum 2(a + b + 1) is clearly even.",
+   "hook": "**Odd = 2a + 1**: two odds make 2(a + b + 1), which is even.",
+   "example": "That is why two odd-sized piles of socks, put together, can always be paired up exactly."
   },
   {
    "id": "maths.ps.pf.counter",
@@ -4467,7 +4742,8 @@
      "feedback": "2 is prime and even."
     }
    ],
-   "explain": "A counterexample must satisfy the condition (prime) but break the conclusion (odd). 2 is prime and even."
+   "explain": "A counterexample must satisfy the condition (prime) but break the conclusion (odd). 2 is prime and even.",
+   "hook": "**2 is the only even prime**: the counterexample to “all primes are odd”."
   },
   {
    "id": "maths.ps.pf.nn1",
@@ -4500,7 +4776,9 @@
      "feedback": "Squares can end in 1, 5 or 9 too."
     }
    ],
-   "explain": "Factorise: n² + n = n(n + 1). Of any two consecutive whole numbers, one is even, so the product is even."
+   "explain": "Factorise: n² + n = n(n + 1). Of any two consecutive whole numbers, one is even, so the product is even.",
+   "hook": "**n(n + 1): two neighbours, so one is even.**",
+   "example": "7 × 8 = 56 and 12 × 13 = 156: the product of two neighbours is always even."
   },
   {
    "id": "maths.ps.pf.root2",
@@ -4533,7 +4811,8 @@
      "feedback": "It assumes only that √2 is."
     }
    ],
-   "explain": "Assume the opposite of what you want: √2 = a/b in lowest terms. Then a² = 2b², which forces a and b both to be even, contradicting “lowest terms”."
+   "explain": "Assume the opposite of what you want: √2 = a/b in lowest terms. Then a² = 2b², which forces a and b both to be even, contradicting “lowest terms”.",
+   "hook": "**Assume the opposite**, then show it can’t be true: proof by contradiction."
   },
   {
    "id": "maths.ps.pf.w1",

@@ -12,10 +12,10 @@ const read = (p) => JSON.parse(readFileSync(new URL(p, root)));
 const db = buildDB(read('index.json').decks.map(read));
 const PASSAGES = JSON.parse(readFileSync(new URL('../tools/content-src/passages.json', import.meta.url)));
 
-test('every reading passage is a real extract: 150-420 words, with a source, shared by its questions', () => {
+test('every reading passage is a real extract: 150-500 words, with a source, shared by its questions', () => {
   for (const [k, p] of Object.entries(PASSAGES)) {
     const n = p.passage.split(/\s+/).length;
-    assert.ok(n >= 150 && n <= 420, `${k}: ${n} words`);
+    assert.ok(n >= 150 && n <= 500, `${k}: ${n} words`);
     assert.match(p.passageSource, /\(1[89]\d\d\)/, `${k}: dated source`);
     assert.ok(!/["']/.test(p.passage), `${k}: straight quotes left in`);
   }

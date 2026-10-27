@@ -89,7 +89,7 @@ const SHAPES = [
 
 // Memory hooks and real-world examples for SHAPES, keyed by answer.
 const SHAPE_MEMORY = {
-  'a rhombus': { hook: 'A rhombus is a squashed square: four equal sides.', example: 'The diamond on a playing card is a rhombus.' },
+  'a rectangle': { hook: 'A rhombus is a squashed square: four equal sides.', example: 'The diamond on a playing card is a rhombus.' },
   'a trapezium': { hook: 'Trapezium: ONE pair of parallel sides. Parallelogram: two pairs (“parallel” is in its name).', example: 'A bucket or a classic handbag seen from the side is a trapezium shape.' },
   'a kite': { hook: 'A kite: two short sides together at the top, two long sides together at the bottom.' },
   equilateral: { hook: 'Equi-lateral = equal sides: all three the same.', example: 'The triangle used to rack up snooker balls is equilateral.' },
@@ -114,7 +114,7 @@ const FACTS = [
   ['What is 7²?', '49', ['14', '72', '56'], { hook: 'Squared means times itself: 7² = 7 × 7, not 7 × 2.', example: 'A square patio 7 tiles by 7 tiles uses 49 tiles.' }],
   ['What is 9²?', '81', ['18', '92', '72'], { hook: 'In the 9 times table the digits add to 9: 8 + 1 = 9.' }],
   ['What is 12²?', '144', ['24', '122', '132'], { hook: 'A dozen dozen is a gross: 12 × 12 = 144.', example: 'Twelve boxes of a dozen eggs make 144 eggs.' }],
-  ['What is 15²?', '225', ['30', '215', '255'], { hook: 'Squaring a number ending in 5: 1 × 2 = 2, then write 25 after it, giving 225.' }],
+  ['What is 15²?', '225', ['30', '215', '255'], { hook: 'Squaring a number ending in 5: multiply the tens digit by the next number up (1 × 2 = 2), then write 25 after it, giving 225.' }],
   ['What is √64?', '8', ['32', '6', '16'], { hook: 'Square root asks “what times ITSELF makes this?” 8 × 8 = 64.', example: 'A chessboard is 8 squares by 8 squares: 64 squares in all.' }],
   ['What is √121?', '11', ['12', '60.5', '21'], { hook: '11 × 11 = 121, a number that reads the same backwards.' }],
   ['What is {{1/8}} as a decimal?', '0.125', ['0.8', '0.18', '0.25'], { hook: 'Keep halving: 1/2 = 0.5, 1/4 = 0.25, 1/8 = 0.125.' }],

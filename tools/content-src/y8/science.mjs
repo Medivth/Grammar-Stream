@@ -15,29 +15,29 @@ const T = (id, title, kind, prereqs, intro, teach, talk, extra = {}) => ({ id: `
 const topics = [
   // biology
   T('cells', 'Cells and microscopes', 'mixed', [], 'Every living thing is built from cells. With a light microscope you can see the nucleus and the cell wall; an electron microscope shows far smaller parts, like ribosomes.', 'Explain three differences between a plant cell and an animal cell, and what each extra part does.', 'Ask {him} to explain how a microscope’s magnification is worked out.'),
-  T('organs', 'Specialised cells, organs and digestion', 'facts', ['cells'], 'Cells → tissues → organs → organ systems. In digestion, enzymes act like molecular scissors, breaking big food molecules into small ones the blood can absorb.', 'Explain the job of an enzyme, using amylase as an example, and why boiling stops it working.', 'At dinner, ask {her} which nutrients in the meal will be broken down by which enzymes.'),
+  T('organs', 'Specialised cells, organs and digestion', 'facts', ['cells'], 'Cells → tissues → organs → organ systems. In digestion, enzymes act like molecular scissors, breaking big food molecules into small ones the blood can absorb.', 'Explain the job of an enzyme, using amylase as an example, and why boiling stops it working.', 'At dinner, ask {him} which nutrients in the meal will be broken down by which enzymes.'),
   T('respiration', 'Breathing and respiration', 'facts', ['organs'], 'Breathing moves air in and out; respiration is the chemical reaction in every cell that releases energy from glucose. They are not the same thing!', 'Explain the difference between breathing and respiration, and write the word equation for aerobic respiration.', 'After a sprint, ask {him} why {she} is panting even after stopping (oxygen debt).'),
   T('photosynthesis', 'Photosynthesis and plants', 'facts', ['cells'], 'Plants make their own food: in chloroplasts, light energy turns carbon dioxide and water into glucose and oxygen. Almost every food chain on Earth starts here.', 'Explain the word equation for photosynthesis and three things that could limit its rate.', 'Ask {him} why a plant left in a dark cupboard turns yellow and dies.'),
-  T('ecosystems', 'Ecosystems and food webs', 'facts', ['photosynthesis'], 'In an ecosystem every organism depends on others. Energy flows along food chains, but most is lost at each step, which is why there are few top predators.', 'Explain what would happen to a food web if one species disappeared, using a real example.', 'On a walk, ask {her} to build a food chain from what you can see.'),
+  T('ecosystems', 'Ecosystems and food webs', 'facts', ['photosynthesis'], 'In an ecosystem every organism depends on others. Energy flows along food chains, but most is lost at each step, which is why there are few top predators.', 'Explain what would happen to a food web if one species disappeared, using a real example.', 'On a walk, ask {him} to build a food chain from what you can see.'),
   T('inheritance', 'DNA, variation and evolution', 'facts', ['cells'], 'DNA in the nucleus carries the genetic code, arranged in genes on chromosomes. Variation, plus natural selection over many generations, explains how species evolve.', 'Explain natural selection using the peppered moth or antibiotic-resistant bacteria.', 'Ask {him} which of {her} features are inherited, which are environmental, and which are both.'),
-  T('health', 'Health, microbes and disease', 'facts', ['organs'], 'Bacteria, viruses and fungi can cause disease. Our bodies fight back with white blood cells; vaccines train the immune system in advance. Hippocrates, the Greek “father of medicine”, insisted that diseases have natural causes.', 'Explain how a vaccine protects you without making you ill.', 'Ask {her} why antibiotics do not work against a cold.'),
+  T('health', 'Health, microbes and disease', 'facts', ['organs'], 'Bacteria, viruses and fungi can cause disease. Our bodies fight back with white blood cells; vaccines train the immune system in advance. Hippocrates, the Greek “father of medicine”, insisted that diseases have natural causes.', 'Explain how a vaccine protects you without making you ill.', 'Ask {him} why antibiotics do not work against a cold.'),
   // chemistry
   T('particles', 'Particles, states and density', 'mixed', [], 'Democritus, in ancient Greece, guessed that everything is made of tiny uncuttable pieces: atomos. The particle model explains solids, liquids and gases, diffusion and density.', 'Explain, using particles, why a gas fills its container and a solid keeps its shape.', 'Ask {him} why you can smell perfume across a room (diffusion).'),
-  T('atoms', 'Elements, compounds and separating mixtures', 'facts', ['particles'], 'An element has one type of atom; a compound has different atoms chemically bonded; a mixture is not chemically joined, so it can be separated by filtering, evaporating, distilling or chromatography.', 'Explain how you would get pure water and pure salt back from salty water.', 'Ask {her} whether air, water and gold are elements, compounds or mixtures.'),
+  T('atoms', 'Elements, compounds and separating mixtures', 'facts', ['particles'], 'An element has one type of atom; a compound has different atoms chemically bonded; a mixture is not chemically joined, so it can be separated by filtering, evaporating, distilling or chromatography.', 'Explain how you would get pure water and pure salt back from salty water.', 'Ask {him} whether air, water and gold are elements, compounds or mixtures.'),
   T('periodic', 'The periodic table', 'facts', ['atoms'], 'Mendeleev arranged the elements so that ones with similar properties line up in columns called groups. He left gaps for elements nobody had found yet, and was proved right.', 'Explain why the elements in Group 1 react in similar ways, and why reactivity increases down the group.', 'Ask {him} to name a metal and a non-metal and give one property of each.'),
-  T('reactions', 'Chemical reactions and equations', 'mixed', ['atoms'], 'In a chemical reaction atoms are rearranged into new substances: no atoms are made or destroyed, so mass is conserved. Combustion, oxidation and thermal decomposition are common types.', 'Explain how you can tell a chemical change from a physical change, with two signs of a reaction.', 'Light a candle together and ask {her} what is being made as the wax burns.'),
+  T('reactions', 'Chemical reactions and equations', 'mixed', ['atoms'], 'In a chemical reaction atoms are rearranged into new substances: no atoms are made or destroyed, so mass is conserved. Combustion, oxidation and thermal decomposition are common types.', 'Explain how you can tell a chemical change from a physical change, with two signs of a reaction.', 'Light a candle together and ask {him} what is being made as the wax burns.'),
   T('acids', 'Acids, alkalis and metals', 'facts', ['reactions'], 'Acids have a pH below 7, alkalis above 7. Acid + alkali → salt + water (neutralisation). Metals react with acids to make a salt and hydrogen, and the reactivity series ranks how readily they react.', 'Explain the reactivity series and how it explains why gold is found pure in the ground but iron is not.', 'Ask {him} why indigestion tablets work.'),
-  T('earth', 'The Earth and its atmosphere', 'facts', ['reactions'], 'Rocks are recycled over millions of years in the rock cycle; carbon is recycled between air, living things, oceans and rocks. Burning fossil fuels adds carbon dioxide faster than it is removed.', 'Explain how burning fossil fuels contributes to climate change, using the carbon cycle.', 'Ask {her} which rock type a fossil is most likely to be found in, and why.'),
+  T('earth', 'The Earth and its atmosphere', 'facts', ['reactions'], 'Rocks are recycled over millions of years in the rock cycle; carbon is recycled between air, living things, oceans and rocks. Burning fossil fuels adds carbon dioxide faster than it is removed.', 'Explain how burning fossil fuels contributes to climate change, using the carbon cycle.', 'Ask {him} which rock type a fossil is most likely to be found in, and why.'),
   // physics
   T('forces', 'Forces, motion and pressure', 'mixed', [], 'Forces change an object’s speed, direction or shape. Balanced forces mean constant speed; unbalanced forces mean acceleration. Pressure is force spread over an area; a moment is a turning effect.', 'Explain why a skydiver reaches a terminal velocity.', 'Ask {him} why snowshoes stop you sinking into snow.'),
-  T('energy', 'Energy, power and efficiency', 'mixed', ['forces'], 'Energy is stored (kinetic, gravitational, elastic, thermal, chemical, nuclear…) and transferred by forces, heating, electricity and waves. It is never used up, but some is always wasted, usually as heat.', 'Explain the energy transfers when a ball is dropped and bounces lower each time.', 'Check the power rating on the kettle and ask {her} how much a boil costs.'),
+  T('energy', 'Energy, power and efficiency', 'mixed', ['forces'], 'Energy is stored (kinetic, gravitational, elastic, thermal, chemical, nuclear…) and transferred by forces, heating, electricity and waves. It is never used up, but some is always wasted, usually as heat.', 'Explain the energy transfers when a ball is dropped and bounces lower each time.', 'Check the power rating on the kettle and ask {him} how much a boil costs.'),
   T('electricity', 'Electricity and magnetism', 'mixed', ['energy'], 'Current is the flow of charge; potential difference is the push; resistance opposes the flow. In series, current is the same everywhere; in parallel, current splits. A current also makes a magnetic field.', 'Explain what happens to the brightness of bulbs when you add more in series, and why.', 'Ask {him} why lights in a house are wired in parallel, not series.'),
-  T('waves', 'Sound and light', 'mixed', ['energy'], 'Sound is a longitudinal wave that needs a medium; light is a transverse wave that can cross empty space at 300 000 km per second. Both reflect and refract.', 'Explain why you see lightning before you hear thunder.', 'Put a pencil in a glass of water and ask {her} to explain why it looks bent.'),
+  T('waves', 'Sound and light', 'mixed', ['energy'], 'Sound is a longitudinal wave that needs a medium; light is a transverse wave that can cross empty space at 300 000 km per second. Both reflect and refract.', 'Explain why you see lightning before you hear thunder.', 'Put a pencil in a glass of water and ask {him} to explain why it looks bent.'),
   T('space', 'Space, gravity and the seasons', 'facts', ['forces'], 'Gravity holds moons around planets and planets around the Sun. The seasons happen because the Earth’s axis is tilted, not because we are nearer the Sun. Eratosthenes measured the Earth’s size more than 2000 years ago using shadows.', 'Explain why it is summer in Britain when the Earth is actually furthest from the Sun.', 'Look for the Moon together and ask {him} what phase it is in and why.'),
-  T('working', 'Working scientifically', 'facts', [], 'Good science is about fair tests, careful measurement and honest conclusions. Know your variables, and the difference between accurate, precise and repeatable results.', 'Explain the independent, dependent and control variables in an experiment of your choice.', 'Ask {her} to design a fair test to find the best paper for a paper aeroplane.'),
+  T('working', 'Working scientifically', 'facts', [], 'Good science is about fair tests, careful measurement and honest conclusions. Know your variables, and the difference between accurate, precise and repeatable results.', 'Explain the independent, dependent and control variables in an experiment of your choice.', 'Ask {him} to design a fair test to find the best paper for a paper aeroplane.'),
   // GCSE tasters
   T('atomic', 'Inside the atom: isotopes and bonding', 'facts', ['periodic'], 'Atoms have a tiny nucleus of protons and neutrons, with electrons in shells around it. Atoms bond by transferring electrons (ionic) or sharing them (covalent).', 'Explain the difference between ionic and covalent bonding with an example of each.', 'Ask {him} what carbon-12 and carbon-14 have in common, and what is different.', { tier: 'stretch' }),
-  T('spectrum', 'The electromagnetic spectrum', 'facts', ['waves'], 'Visible light is only a small part of a family of waves, from radio to gamma rays, all travelling at the speed of light. Shorter wavelengths carry more energy.', 'Explain why X-rays are useful but dangerous.', 'Ask {her} which electromagnetic waves {she} used today (radio, microwaves, visible light…).', { tier: 'stretch' }),
+  T('spectrum', 'The electromagnetic spectrum', 'facts', ['waves'], 'Visible light is only a small part of a family of waves, from radio to gamma rays, all travelling at the speed of light. Shorter wavelengths carry more energy.', 'Explain why X-rays are useful but dangerous.', 'Ask {him} which electromagnetic waves {she} used today (radio, microwaves, visible light…).', { tier: 'stretch' }),
   T('genetics', 'Genetics and Punnett squares', 'mixed', ['inheritance'], 'Genes come in different versions called alleles. Dominant alleles show up even with just one copy; recessive ones only when both copies match. Punnett squares predict the chances.', 'Explain why two brown-eyed parents can have a blue-eyed child (using a simplified model).', 'Ask {him} to draw a Punnett square for two parents who are both Bb.', { tier: 'stretch' }),
 ];
 
@@ -51,7 +51,7 @@ const items = [
   part('cl.vacuole', 'cells', 'cell-plant', 'vacuole', 'vacuole', 'The permanent vacuole is filled with cell sap and keeps the cell firm.', { accept: ['permanent vacuole'] }),
   part('cl.chloro', 'cells', 'cell-plant', 'chloroplasts', 'chloroplasts', 'Chloroplasts contain green chlorophyll, which absorbs light for photosynthesis.', { accept: ['chloroplast'] }),
   mcq('cl.which', 'cells', 'Which part is found in plant cells but NEVER in animal cells?', [['Chloroplasts', true], ['Mitochondria', false, 'Both plant and animal cells have mitochondria: both respire.'], ['Nucleus', false, 'Both have a nucleus.'], ['Cell membrane', false, 'Both have a membrane; plants have a wall as well.']], 'Plant cells have three extras: a cell wall, a permanent vacuole and chloroplasts.'),
-  mcq('cl.bact', 'cells', 'How is a bacterial cell different from an animal cell?', [['It has no nucleus; its DNA is loose', true], ['It is far bigger than an animal cell', false, 'Bacteria are usually much smaller than animal cells.'], ['It has chloroplasts for photosynthesis', false, 'Most bacteria have no chloroplasts.']], 'It has no nucleus: its DNA floats in the cytoplasm. Bacteria are prokaryotes: no nucleus, and often a loop of DNA plus small rings called plasmids.'),
+  mcq('cl.bact', 'cells', 'How is a bacterial cell different from an animal cell?', [['It has no nucleus; its DNA is loose', true], ['It is far bigger than an animal cell', false, 'Bacteria are usually much smaller than animal cells.'], ['It has chloroplasts for photosynthesis', false, 'Bacteria never have chloroplasts (a few, like cyanobacteria, photosynthesise without them).']], 'It has no nucleus: its DNA floats in the cytoplasm. Bacteria are prokaryotes: no nucleus, and often a loop of DNA plus small rings called plasmids.'),
   mcq('cl.stain', 'cells', 'Why do you add a stain such as iodine when preparing an onion cell slide?', [['To make the cell parts show up', true], ['To kill the cells so they keep still', false, 'The point is contrast: cell parts are almost transparent.'], ['To make the cells swell up bigger', false, 'Stains don’t change size.']], 'To make the parts of the cell easier to see. Most cell parts are colourless; stains colour them so they show up.'),
   fact('cl.em', 'cells', 'Which kind of microscope can show ribosomes and the inside of mitochondria?', 'an electron microscope', ['a high-power light microscope', 'a magnifying glass', 'a telescope'], 'Electron microscopes have far higher magnification and resolution than light microscopes.', C),
   tmpl('cl.mag', 'cells', 'y8sMagnify'),
@@ -86,9 +86,9 @@ const items = [
   fact('ps.xylem', 'photosynthesis', 'Which tubes carry water up from the roots to the leaves?', 'xylem', ['phloem', 'stomata', 'veins of chlorophyll'], 'Xylem carries water up; phloem carries dissolved sugars around the plant.'),
   fact('ps.roothair', 'photosynthesis', 'Root hair cells take in water by osmosis. What else do they absorb from the soil?', 'mineral ions', ['glucose', 'oxygen only', 'starch'], 'Plants need minerals such as nitrates (for proteins) and magnesium (for chlorophyll).', { ...C }),
   part('ps.stigma', 'photosynthesis', 'flower', 'stigma', 'stigma', 'The sticky stigma catches pollen.'),
-  part('ps.anther', 'photosynthesis', 'flower', 'anther', 'anther', 'The anther makes pollen, the male sex cell.'),
+  part('ps.anther', 'photosynthesis', 'flower', 'anther', 'anther', 'The anther makes pollen, which contains the male sex cells.'),
   part('ps.ovary', 'photosynthesis', 'flower', 'ovary', 'ovary', 'The ovary contains ovules; after fertilisation it becomes the fruit.'),
-  mcq('ps.helmont', 'photosynthesis', 'In the 1600s van Helmont grew a willow tree for five years. It gained 74 kg but the soil lost only a few grams. Where did most of the tree’s mass come from?', [['Carbon dioxide from the air', true], ['Minerals from the soil', false, 'The soil lost almost nothing: that was the surprise.'], ['Energy from the sunlight', false, 'Light gives energy, not mass.']], 'Carbon dioxide from the air (and water). Van Helmont thought it was water. We now know the carbon comes from CO₂ in the air.'),
+  mcq('ps.helmont', 'photosynthesis', 'In the 1600s van Helmont grew a willow tree for five years. It gained 74 kg but the soil lost only about 57 g. Where did most of the tree’s mass come from?', [['Carbon dioxide from the air', true], ['Minerals from the soil', false, 'The soil lost almost nothing: that was the surprise.'], ['Energy from the sunlight', false, 'Light gives energy, not mass.']], 'Carbon dioxide from the air (and water). Van Helmont thought it was water. We now know the carbon comes from CO₂ in the air.'),
 
   // --- ecosystems
   mcq('ec.arrow', 'ecosystems', 'In a food chain, what do the arrows show?', [['The direction energy flows, eaten to eater', true], ['Who eats whom, pointing at the food eaten', false, 'The arrow points TO the animal doing the eating.'], ['Which animal is the bigger of the two', false, 'Size does not matter here.']], 'The direction energy flows: from the eaten to the eater. grass → rabbit → fox: energy passes from grass to rabbit to fox.'),
@@ -112,7 +112,7 @@ const items = [
   mcq('in.fossil', 'inheritance', 'How do fossils support the theory of evolution?', [['Older rock layers show simpler forms that change over time', true], ['Fossils show that animals have never changed', false, 'They show change over very long times.'], ['Every fossil found is of a species still alive today', false, 'Most fossil species are extinct.']], 'The fossil record shows how organisms have changed over millions of years.'),
 
   // --- health
-  mcq('hd.virus', 'health', 'Why don’t antibiotics cure a cold?', [['Colds are viral; antibiotics kill bacteria', true], ['Colds are too mild for antibiotics to notice', false, 'It is about the type of microbe.'], ['Colds are caused by fungi, not by bacteria', false, 'Colds are viruses.']], 'Colds are caused by viruses, and antibiotics only kill bacteria. Viruses live inside our own cells, so antibiotics can’t reach them.'),
+  mcq('hd.virus', 'health', 'Why don’t antibiotics cure a cold?', [['Colds are viral; antibiotics kill bacteria', true], ['Colds are too mild for antibiotics to notice', false, 'It is about the type of microbe.'], ['Colds are caused by fungi, not by bacteria', false, 'Colds are viruses.']], 'Colds are caused by viruses, and antibiotics only kill bacteria. Antibiotics attack parts of bacterial cells, such as their cell walls, which viruses do not have; viruses also reproduce inside our own cells.'),
   mcq('hd.vaccine', 'health', 'How does a vaccine protect you?', [['A harmless form of the microbe trains white blood cells', true], ['It kills every microbe in your body for a few years', false, 'It trains the immune system for one particular disease.'], ['It is a strong antibiotic that stays in your blood', false, 'Vaccines prevent disease; they are not a cure.']], 'It contains a harmless form of the microbe, so white blood cells learn to make the right antibodies. Memory cells mean that next time, antibodies are made so fast you don’t fall ill.'),
   fact('hd.jenner', 'health', 'Who developed the first vaccine, against smallpox, in 1796?', 'Edward Jenner', ['Louis Pasteur', 'Alexander Fleming', 'Florence Nightingale'], 'He used cowpox; “vaccine” comes from vacca, Latin for cow.', { accept: ['jenner'] }),
   fact('hd.fleming', 'health', 'Who discovered penicillin, the first antibiotic, in 1928?', 'Alexander Fleming', ['Edward Jenner', 'Marie Curie', 'Joseph Lister'], 'He noticed mould killing bacteria on a dish he had left out.', { accept: ['fleming'] }),
@@ -181,7 +181,7 @@ const items = [
   fact('er.marble', 'earth', 'Marble is metamorphic rock formed from which sedimentary rock?', 'limestone', ['granite', 'sandstone', 'basalt'], 'Heat and pressure recrystallise limestone into marble; the Parthenon in Athens is built of marble.', { accept: ['chalk'] }),
   mcq('er.air', 'earth', 'About how much of today’s air is nitrogen?', [['About 78%', true], ['About 21%', false, 'That is oxygen.'], ['About 1%', false, 'That is roughly argon.']], 'Nitrogen 78%, oxygen 21%, argon about 0.9%, carbon dioxide about 0.04%.'),
   mcq('er.co2', 'earth', 'Which of these REMOVES carbon dioxide from the atmosphere?', [['Photosynthesis', true], ['Burning fossil fuels', false, 'That adds CO₂.'], ['Respiration', false, 'Respiration releases CO₂.']], 'Plants, algae and the oceans absorb carbon dioxide.'),
-  mcq('er.greenhouse', 'earth', 'How do greenhouse gases warm the Earth?', [['They absorb heat from the Earth and re-emit it', true], ['They make a hole in the ozone layer that lets heat in', false, 'The ozone hole is a different problem.'], ['They reflect extra sunlight down onto the surface', false, 'That would cool the Earth.']], 'They absorb heat radiated from the Earth’s surface and re-emit it, trapping it in the atmosphere. More CO₂ and methane mean more heat trapped: the enhanced greenhouse effect.'),
+  mcq('er.greenhouse', 'earth', 'How do greenhouse gases warm the Earth?', [['They absorb heat from the Earth and re-emit it', true], ['They make a hole in the ozone layer that lets heat in', false, 'The ozone hole is a different problem.'], ['They reflect extra sunlight down onto the surface', false, 'Greenhouse gases let most sunlight through; they absorb and re-emit heat radiated by the Earth.']], 'They absorb heat radiated from the Earth’s surface and re-emit it, trapping it in the atmosphere. More CO₂ and methane mean more heat trapped: the enhanced greenhouse effect.'),
   order('er.carbon', 'earth', 'Put this route of a carbon atom in order.', ['CO₂ in the air', 'absorbed by a plant (photosynthesis)', 'eaten by an animal', 'released by respiration'], null, 'Carbon cycles between the air, living things, oceans and rocks.'),
   fact('er.weather', 'earth', 'The breaking down of rocks by rain, ice and plants without them moving is called…', 'weathering', ['erosion', 'deposition', 'compaction'], 'Erosion is when the bits are carried away; freeze–thaw weathering splits rocks as water freezes and expands.', { accept: ['weather'] }),
 
@@ -189,7 +189,7 @@ const items = [
   mcq('fo.balanced', 'forces', 'A car travels at a steady 30 mph in a straight line. What can you say about the forces on it?', [['They are balanced', true], ['The driving force is bigger', false, 'Then it would speed up.'], ['There are no forces acting on it', false, 'Friction and air resistance act all the time.']], 'They are balanced: driving force equals resistive forces. Balanced forces mean no change in motion: steady speed or stationary (Newton’s first law).'),
   mcq('fo.terminal', 'forces', 'Why does a skydiver reach a terminal velocity?', [['Air resistance rises until it equals weight', true], ['Gravity switches off once you fall fast enough', false, 'Gravity keeps pulling.'], ['The parachute is open from the moment you jump', false, 'Terminal velocity happens with or without a parachute.']], 'Air resistance grows with speed until it equals weight, so forces balance. With the parachute open, a much bigger air resistance gives a slower terminal velocity.'),
   fact('fo.weight', 'forces', 'Weight = mass × gravitational field strength. On Earth g ≈ 10 N/kg. What does a 50 kg person weigh, in newtons?', '500', ['50', '5', '5000'], '50 × 10 = 500 N. On the Moon (g ≈ 1.6 N/kg) the same person would weigh only about 80 N.'),
-  mcq('fo.mass', 'forces', 'What happens to your MASS if you travel to the Moon?', [['It stays the same', true], ['It falls to about a sixth', false, 'That is your weight.'], ['It becomes zero in space', false, 'Mass is the amount of matter in you.']], 'It stays the same; only your weight changes. Your mass stays the same; only your weight changes, to about a sixth. Mass is measured in kg; weight is a force, in newtons.'),
+  mcq('fo.mass', 'forces', 'What happens to your MASS if you travel to the Moon?', [['It stays the same', true], ['It falls to about a sixth', false, 'That is your weight.'], ['It becomes zero in space', false, 'Mass is the amount of matter in you.']], 'It stays the same; only your weight changes, to about a sixth. Mass is measured in kg; weight is a force, in newtons.'),
   mcq('fo.dt', 'forces', 'On a distance–time graph, what does a horizontal line mean?', [['The object is stationary', true], ['It is moving at a steady speed', false, 'A steady speed is a straight sloping line.'], ['It is accelerating', false, 'Accelerating gives a curve getting steeper.']], 'The gradient of a distance–time graph is the speed.'),
   mcq('fo.newton3', 'forces', 'Atlas holds up the sky. The sky pushes down on Atlas. By Newton’s third law, how do these two forces compare?', [['Equal in size, opposite in direction', true], ['The sky’s push is bigger, so Atlas strains', false, 'Interaction pairs are always equal.'], ['Atlas’s push is bigger, so the sky stays up', false, 'Interaction pairs are always equal, whatever is happening.']], 'They are equal in size and opposite in direction. For every action there is an equal and opposite reaction; the pair acts on different objects.'),
   tmpl('fo.speed', 'forces', 'y8sSpeed'),
@@ -219,9 +219,9 @@ const items = [
   // --- sound and light
   mcq('wv.sound', 'waves', 'Why can’t sound travel through space?', [['No particles to pass on the vibrations', true], ['It is far too cold for sound to move', false, 'Temperature isn’t the reason.'], ['Space is too big, so the sound fades out', false, 'Sound needs a medium; space is a vacuum.']], 'Sound is a longitudinal wave of vibrating particles.'),
   mcq('wv.pitch', 'waves', 'A higher pitched note has a…', [['higher frequency', true], ['larger amplitude', false, 'Amplitude affects loudness.'], ['lower frequency', false, 'Lower frequency gives a lower pitch.']], 'Frequency (Hz) is the number of waves per second.'),
-  mcq('wv.reflect', 'waves', 'When light reflects off a mirror, how do the angles compare?', [['Incidence equals reflection', true], ['Reflection is always 90°', false, 'Only if the light hits at 90° does it bounce straight back.'], ['The reflected angle is double', false, 'They are equal.']], 'Angle of incidence equals angle of reflection. Both angles are measured from the normal, a line at 90° to the mirror.'),
+  mcq('wv.reflect', 'waves', 'When light reflects off a mirror, how do the angles compare?', [['Incidence equals reflection', true], ['Reflection is always 90°', false, 'The two angles, measured from the normal, are always equal; light hitting along the normal bounces straight back.'], ['The reflected angle is double', false, 'They are equal.']], 'Angle of incidence equals angle of reflection. Both angles are measured from the normal, a line at 90° to the mirror.'),
   mcq('wv.refract', 'waves', 'A straw in water looks bent. Why?', [['Light changes speed and direction (refraction)', true], ['The water bends the straw as it soaks in', false, 'The straw is straight.'], ['Light reflects off the surface of the water', false, 'It is refraction.']], 'Light changes speed and direction as it passes from water to air (refraction). Light slows down in denser materials like water and glass.'),
-  mcq('wv.prism', 'waves', 'White light passes through a prism and splits into a spectrum. What does this show?', [['White light is a mixture of colours', true], ['The prism adds colour to the light', false, 'Newton showed a second prism can recombine the colours.'], ['Light is made of seven separate rays', false, 'Light and sound are very different waves.']], 'This is dispersion: each colour refracts by a different amount.'),
+  mcq('wv.prism', 'waves', 'White light passes through a prism and splits into a spectrum. What does this show?', [['White light is a mixture of colours', true], ['The prism adds colour to the light', false, 'Newton showed a second prism can recombine the colours.'], ['Light is made of seven separate rays', false, 'The spectrum is continuous; “seven colours” is just how Newton named the bands.']], 'This is dispersion: each colour refracts by a different amount.'),
   mcq('wv.red', 'waves', 'Why does a red apple look red in white light?', [['It reflects red and absorbs the rest', true], ['It gives out its own red light', false, 'It is not a light source.'], ['It absorbs red light and reflects the rest', false, 'It reflects red.']], 'It reflects red light and absorbs the other colours. In blue light, the same apple would look black.'),
   fact('wv.speed', 'waves', 'Which travels faster: light or sound?', 'light', ['sound', 'they are the same', 'it depends on the weather'], 'Light: about 300 000 km/s. Sound in air: about 340 m/s.'),
   tmpl('wv.calc', 'waves', 'y8sWave'),
@@ -272,5 +272,277 @@ const items = [
   mcq('gn.sex', 'genetics', 'What decides whether a baby is a boy or a girl?', [['Whether the sperm carries X or Y', true], ['Which chromosome the egg carries', false, 'All eggs carry an X.'], ['The mother’s diet during pregnancy', false, 'It is genetic.']], 'Whether the sperm carries an X or a Y chromosome. XX: female; XY: male. The chance is 50:50.'),
   tmpl('gn.punnett', 'genetics', 'y8sPunnett'),
 ];
+
+// ---------------------------------------------------------------------------------------------
+// Memory hooks (optional): a topic hook, and per-item `hook` (a mnemonic or memory trick) and
+// `example` (a real-world connection). Kept in this separate block, keyed by id, so corrections
+// to the items above never collide with it. Unknown ids throw.
+const TOPIC_HOOKS = {
+  cells: 'Animal cells have the basic kit; plant cells add three extras: a **wall**, a **vacuole** and **chloroplasts**.',
+  organs: 'Cell → tissue → organ → organ system → organism; enzymes are the **scissors** that cut food small.',
+  respiration: 'Breathing **moves air**; respiration **releases energy**, in every living cell, day and night.',
+  photosynthesis: 'Photo = **light**, synthesis = **putting together** (Greek): plants use light to build glucose.',
+  ecosystems: 'Energy flows along the chain, and only about a **tenth** passes up each step.',
+  inheritance: 'Nucleus = **library**, chromosome = **book**, gene = **recipe**, base = **letter**.',
+  health: 'Antibiotics kill **bacteria**, never viruses; vaccines **train** the immune system before the fight.',
+  particles: 'Solids **vibrate**, liquids **slide**, gases **zoom**, and the particles themselves never change size.',
+  atoms: 'Element: one kind of atom. Compound: different atoms **bonded**. Mixture: **not joined**, so it can be separated.',
+  periodic: 'Columns are **groups** (similar properties); rows are **periods**.',
+  reactions: 'Atoms are never made or destroyed, only **rearranged**: mass in = mass out.',
+  acids: '**MASH**: **M**etal + **A**cid → **S**alt + **H**ydrogen. Acid + alkali → salt + water.',
+  earth: '**Igneous** from fire (Latin ignis), **sedimentary** from layers, **metamorphic** from change.',
+  forces: 'Balanced forces: **no change** in motion. Unbalanced forces: speed up, slow down or turn.',
+  energy: 'Energy is never used up, only **shifted between stores**, and some always leaks away as heat.',
+  electricity: 'Series: one loop, **current the same** everywhere. Parallel: branches, **current splits**.',
+  waves: 'Sound needs **particles** to pass it on; light can cross **empty space**, almost a million times faster.',
+  space: 'Seasons come from the **tilt**, not the distance: the Earth is closest to the Sun in January.',
+  working: '**Cows Moo Softly**: **C**hange one thing, **M**easure one thing, keep everything else the **S**ame.',
+  atomic: '**P**rotons **p**ositive, **n**eutrons **n**eutral, both in the nucleus; electrons whizz round in shells.',
+  spectrum: '**R**aging **M**artians **I**nvaded **V**enus **U**sing **X**-ray **G**uns: radio to gamma.',
+  genetics: 'A **capital** letter (dominant) shows with one copy; a **small** letter (recessive) needs two.',
+};
+
+const MEMORY = {
+  // --- cells
+  'cl.nucleus': { hook: 'The nucleus is the cell’s **control centre**, holding the DNA instructions.' },
+  'cl.membrane': { hook: 'The membrane is the **gatekeeper**: it decides what gets in and out.' },
+  'cl.mito': { hook: 'Mitochondria are the **powerhouses** of the cell, where aerobic respiration releases energy.', example: 'Muscle cells, which need lots of energy, are packed with mitochondria.' },
+  'cl.ribo': { hook: 'Ribosomes are tiny **protein factories**, too small for a light microscope to show.' },
+  'cl.wall': { hook: 'The cell **wall** is like the walls of a house: rigid **cellulose** support.', example: 'The crunch of fresh celery comes from firm plant cell walls.' },
+  'cl.vacuole': { hook: 'A full vacuole keeps the cell firm, like air in a bouncy castle.', example: 'A limp lettuce leaf crisps up in cold water as its vacuoles fill again.' },
+  'cl.chloro': { hook: 'Chloro- means **green** (Greek chlōros): chloroplasts hold green chlorophyll.', example: 'Leaves look green because chlorophyll absorbs red and blue light and reflects green.' },
+  'cl.which': { hook: 'Plant extras: **wall, vacuole, chloroplasts**. Both have mitochondria, because both respire.' },
+  'cl.bact': { hook: 'Pro-karyote = “before the kernel” (Greek): bacteria have **no nucleus**.', example: 'The bacteria in live yoghurt are single prokaryotic cells.' },
+  'cl.stain': { hook: 'Stains add **contrast**: colourless cell parts suddenly show up.' },
+  'cl.em': { hook: 'Electron microscopes use beams of **electrons**, not light, so they show far tinier details.', example: 'The famous close-up pictures of the coronavirus were taken with electron microscopes.' },
+  'cl.mag': { hook: '**I AM** triangle: **I**mage size = **A**ctual size × **M**agnification.' },
+
+  // --- organs and digestion
+  'or.levels': { hook: 'Smallest to largest: cell, tissue, organ, organ system, organism, each built from the one before.', example: 'Muscle cell → muscle tissue → heart → circulatory system → you.' },
+  'or.sperm': { hook: 'Lots of swimming needs lots of energy, so lots of **mitochondria**.' },
+  'or.rbc': { hook: 'No nucleus = more room for **haemoglobin**, the oxygen carrier.', example: 'Blood is red because of the iron-containing haemoglobin in red blood cells.' },
+  'or.enzyme': { hook: 'Enzymes are **molecular scissors**, cutting big food molecules into small ones.', example: 'Biological washing powders use enzymes to digest food stains on clothes.' },
+  'or.amylase': { hook: '**Amyl**- comes from amylum, Latin for **starch**; -ase means an enzyme.', example: 'Chew a plain cracker for a minute and it starts to taste sweet.' },
+  'or.protease': { hook: '**Prot**ease breaks down **prot**eins.', example: 'Meat tenderisers contain protease enzymes from papaya or pineapple.' },
+  'or.lipase': { hook: '**Lip**ase breaks down **lip**ids (fats and oils).', example: 'Some biological washing powders contain lipase to lift greasy stains.' },
+  'or.villi': { hook: 'Villi are like the loops on a **towel**: lots of folds give a huge surface to soak things up.' },
+  'or.boil': { hook: 'Lock and key: heat **bends the lock**, so the key no longer fits.', example: 'A boiled egg white can never turn clear and runny again: its proteins are denatured.' },
+  'or.acid': { hook: 'Stomach acid is a **microbe killer**, and pepsin likes it acidic.', example: 'Heartburn is stomach acid escaping up into the gullet.' },
+
+  // --- respiration
+  'rs.eq': { hook: 'Respiration is photosynthesis **backwards**: glucose + oxygen → carbon dioxide + water.', example: 'Breathe out through limewater and it turns milky: the carbon dioxide comes from respiration.' },
+  'rs.diff': { hook: '**B**reathing is the **b**ellows; **r**espiration is the **r**eaction in cells.' },
+  'rs.anaer': { hook: 'An-aerobic = **without air** (Greek): short of oxygen, muscles make lactic acid.', example: 'After a 100 m sprint you keep panting to pay back the oxygen debt.' },
+  'rs.yeast': { hook: 'Yeast **ferments** sugar: ethanol + carbon dioxide.', example: 'The holes in a slice of bread are bubbles of carbon dioxide made by yeast.' },
+  'rs.alveoli': { hook: 'Alveoli are tiny **air sacs**, like bunches of grapes, with walls one cell thick.' },
+  'rs.smoke': { hook: 'Carbon monoxide **hijacks haemoglobin**, so the blood carries less oxygen.', example: 'Homes have carbon monoxide alarms because the gas has no colour or smell.' },
+  'rs.air': { hook: 'Nose → trachea → bronchus → bronchiole → alveolus: big pipes branching into ever tinier ones.', example: 'The branching airways are called the bronchial tree: an upside-down tree in your chest.' },
+  'rs.mito': { hook: 'Mitochondria are the cell’s **power stations**: aerobic respiration happens there.' },
+
+  // --- photosynthesis
+  'ps.eq': { hook: 'Carbon dioxide + water → glucose + oxygen: the reverse of respiration.', example: 'Pondweed in bright light gives off streams of tiny oxygen bubbles.' },
+  'ps.limit': { hook: 'The limiting factors are **light, CO₂ and temperature**: the one in shortest supply sets the pace.', example: 'Growers pump extra carbon dioxide into greenhouses to make tomatoes grow faster.' },
+  'ps.iodine': { hook: 'Iodine: orange-brown → **blue-black** means **starch**.', example: 'A drop of iodine on a cut potato turns blue-black.' },
+  'ps.stomata': { hook: 'Stoma is Greek for **mouth**: stomata are the leaf’s tiny mouths.' },
+  'ps.xylem': { hook: '**Ph**loem carries **f**ood (both start with an f sound), so xylem is the water pipe.', example: 'Stand a celery stick in food colouring and its xylem vessels turn coloured.' },
+  'ps.roothair': { hook: 'Root hairs soak up water **and minerals**, such as nitrates and magnesium.', example: 'Garden “plant food” is mostly mineral ions, such as nitrates.' },
+  'ps.stigma': { hook: 'The **st**igma is **st**icky, to catch pollen.' },
+  'ps.anther': { hook: 'The stamen (anther + filament) is the male part: think “sta-**men**”.', example: 'Lily anthers drop orange pollen that stains clothes.' },
+  'ps.ovary': { hook: 'After fertilisation the ovary becomes the **fruit** and the ovules become **seeds**.', example: 'A pea pod is a ripened ovary, and the peas were its ovules.' },
+  'ps.helmont': { hook: 'A tree is built mostly from **thin air**: its carbon comes from CO₂.', example: 'Most of the mass of a log on the fire came from carbon dioxide in the air.' },
+
+  // --- ecosystems
+  'ec.arrow': { hook: 'Arrows point to the **eater**: read each arrow as “is eaten by”.', example: 'grass → rabbit → fox: grass is eaten by rabbit, rabbit is eaten by fox.' },
+  'ec.producer': { hook: '**Producers produce** their own food by photosynthesis.', example: 'Tiny phytoplankton in the sea are the producers at the base of food chains that feed fish and whales.' },
+  'ec.loss': { hook: 'Only about **10%** passes up each step: the rest goes on movement, heat and waste.', example: 'A field of wheat feeds far more people than the same field used to raise cattle.' },
+  'ec.decomp': { hook: 'Decomposers are nature’s **recyclers**.', example: 'A compost heap, mushrooms on a rotting log and mould on old bread are decomposers at work.' },
+  'ec.bees': { hook: 'Bees are flying **pollen couriers**.', example: 'Apples, strawberries and oilseed rape all crop better when bees visit their flowers.' },
+  'ec.bioacc': { hook: 'Bio-**accumulation**: poison piles up the chain because each eater eats many meals.', example: 'After DDT was banned, peregrine falcons recovered in Britain.' },
+  'ec.web': { hook: 'Remove a predator and its prey **boom**; then the prey’s food **crashes**.', example: 'Where sea otters vanished, sea urchins boomed and ate whole kelp forests.' },
+  'ec.niche': { hook: 'Competition: the same food, space or mates, and not enough to go round.', example: 'Seedlings sown too close together compete for light and stay small.' },
+
+  // --- inheritance and evolution
+  'in.dna': { hook: 'Nucleus = library, chromosome = book, gene = recipe, base = letter.' },
+  'in.number': { hook: '**23 pairs** = 46: one of each pair from each parent.', example: 'A sperm and an egg each bring 23 chromosomes: 23 + 23 = 46.' },
+  'in.helix': { hook: 'A double helix is a **twisted ladder**.', example: 'A spiral staircase has the same shape as DNA’s double helix.' },
+  'in.var': { hook: 'Genes deal the cards; the **environment** plays them. A scar is all environment.', example: 'Identical twins share their genes, but only one might have a scar.' },
+  'in.ns': { hook: 'Natural selection: **variation**, **survival** of the best suited, **passing on** the genes.', example: 'Since Britain’s air was cleaned up, pale peppered moths have become common again.' },
+  'in.darwin': { hook: 'Darwin + the **Beagle** + the **Galápagos** = evolution by natural selection.', example: 'Darwin’s face was on the Bank of England £10 note from 2000 to 2018.' },
+  'in.resist': { hook: 'Stop early and the **toughest** bacteria survive and multiply.', example: 'MRSA is a “superbug”: bacteria resistant to many antibiotics.' },
+  'in.extinct': { hook: '**Dead as a dodo**: extinct means gone for ever.', example: 'The dodo lived only on Mauritius and was wiped out after sailors arrived.' },
+  'in.fossil': { hook: 'Rock layers are a **history book**: the deeper the page, the older it is.', example: 'The cliffs of Dorset’s Jurassic Coast are full of fossil ammonites.' },
+
+  // --- health
+  'hd.virus': { hook: 'Anti**b**iotics beat **b**acteria; viruses hide inside your own cells.' },
+  'hd.vaccine': { hook: 'A vaccine is a **wanted poster**: white blood cells learn the face before the real criminal arrives.', example: 'The MMR jab protects against measles, mumps and rubella.' },
+  'hd.jenner': { hook: 'Vacca = **cow** (Latin): Jenner used cowpox to protect against smallpox.', example: 'Smallpox was declared wiped out worldwide in 1980.' },
+  'hd.fleming': { hook: 'Fleming’s messy bench: a mouldy dish led to **penicillin**.', example: 'Penicillin, from the Penicillium mould, has saved millions of lives.' },
+  'hd.hippocrates': { hook: 'Hippocrates: illness has **natural** causes, not angry gods.' },
+  'hd.defence': { hook: 'First line = **keep them out**: skin, mucus, cilia and stomach acid.', example: 'A cut needs a plaster because broken skin lets microbes in.' },
+  'hd.diet': { hook: 'Vitamin **C** for long voyages at **sea**: it prevents scurvy.', example: 'British sailors were nicknamed “limeys” after the lime juice they drank.' },
+  'hd.drug': { hook: '**Nicotine** hooks you; **tar** causes cancer; **carbon monoxide** steals oxygen.' },
+
+  // --- particles
+  'pt.solid': { hook: 'Solid: particles in neat rows, **vibrating on the spot**.', example: 'An ice cube keeps its shape until it starts to melt.' },
+  'pt.gas': { hook: 'Gas: particles **far apart and zooming** in all directions.', example: 'Air pumped into a bike tyre spreads into every part of it.' },
+  'pt.democritus': { hook: 'A-tomos = **uncuttable** (Greek): the root of the word atom.' },
+  'pt.diffusion': { hook: 'Diffusion: from **crowded to empty**, faster in gases and faster when hot.', example: 'You can smell toast from upstairs in seconds, but squash takes ages to spread through still water.' },
+  'pt.melt': { hook: 'Melting: particles get enough energy to **slide**, but stay close together.', example: 'Chocolate melts in a hot car and sets again in the fridge: a physical change.' },
+  'pt.temp': { hook: 'While water boils, the energy **pulls particles apart** instead of making them hotter.', example: 'Turning the hob up under boiling pasta makes it boil harder, not hotter than 100 °C.' },
+  'pt.icarus': { hook: '**Melting**: solid → liquid. **Freezing**: liquid → solid.', example: 'Candle wax melts near the flame, and the drips turn solid again as they cool.' },
+  'pt.sublime': { hook: 'Sublimation **skips the liquid**: solid straight to gas.', example: 'Dry ice is used to make the low, swirling fog on stage at concerts.' },
+  'pt.gaspress': { hook: 'Gas pressure = billions of tiny **particle punches** on the walls every second.', example: 'A football left in hot sun feels harder: its air particles hit the inside faster.' },
+  'pt.density': { hook: 'Density triangle: **m** on top, **ρ × V** below: density = mass ÷ volume.', example: 'Ice (about 0.92 g/cm³) floats because it is less dense than water (1.0 g/cm³).' },
+
+  // --- elements, compounds and separating
+  'at.which': { hook: 'Compound = different atoms **chemically joined**, with a formula like H₂O.', example: 'Water, table salt and carbon dioxide are compounds; oxygen and gold are elements.' },
+  'at.mixture': { hook: 'Mixtures are **just mixed**: you can sort them out without a reaction.', example: 'A magnet pulls iron filings out of sand, but cannot pull the iron out of rust.' },
+  'at.distil': { hook: 'Distil = **boil, then cool**: the vapour leaves the salt behind.', example: 'Rain is nature’s distillation: the Sun evaporates sea water and leaves the salt behind.' },
+  'at.chrom': { hook: 'Chroma = **colour**, graph = **writing** (Greek): colour-writing.', example: 'Forensic scientists use chromatography to compare the inks on documents.' },
+  'at.filter': { hook: 'A filter is a **sieve for tiny bits**: insoluble solids stay behind.', example: 'A coffee filter keeps back the grounds and lets the coffee through.' },
+  'at.salt': { hook: 'Salt dissolves, sand doesn’t: **dissolve, filter, evaporate**.', example: 'Sea salt is made by evaporating sea water in shallow pans.' },
+  'at.formula': { hook: 'A small number counts the atom **just before** it: CO₂ = C + O + O.' },
+  'at.symbol': { hook: 'Odd symbols come from Latin: **Na**trium (sodium), **Fe**rrum (iron), **Pb** plumbum (lead), **Au**rum (gold).', example: 'Plumbers are named after plumbum, because water pipes were once made of lead.' },
+  'at.pure': { hook: 'Pure = **one substance only**, with sharp melting and boiling points.', example: 'Salt is spread on icy roads because it lowers the freezing point of water.' },
+
+  // --- periodic table
+  'pd.mendeleev': { hook: 'Mendeleev left **gaps**, and predicted what would fill them.', example: 'Element 101, mendelevium, is named after him.' },
+  'pd.group': { hook: '**Groups** go down (columns); **periods** go across (rows).' },
+  'pd.g1': { hook: 'Group 1 metals make **alkalis** with water: hence alkali metals.', example: 'Lithium, the lightest Group 1 metal, is in the battery of your phone.' },
+  'pd.g1trend': { hook: 'Group 1: reactivity goes **up as you go down**.', example: 'Lithium fizzes gently on water; potassium bursts into lilac flames.' },
+  'pd.g7': { hook: 'Halogen = **salt-maker** (Greek hals, salt).', example: 'Chlorine keeps swimming pools free of germs; iodine is used as an antiseptic.' },
+  'pd.g0': { hook: 'Noble gases are **snobs**: full outer shells, so they won’t react with anyone.', example: 'Neon glows red-orange in signs; helium fills party balloons.' },
+  'pd.metal': { hook: 'Non-metals are mostly **dull, brittle insulators**; graphite is the rebel that conducts.', example: 'Pencil “lead” is graphite: a thick pencil line on paper can conduct a little electricity.' },
+  'pd.where': { hook: 'Metals on the **left** and middle, non-metals top **right**, split by the staircase.' },
+
+  // --- reactions
+  'rx.chem': { hook: 'Chemical change = a **new substance**, usually hard to undo.', example: 'Toast can never turn back into bread, but melted chocolate sets again.' },
+  'rx.combust': { hook: 'Burning a fuel like methane: fuel + oxygen → **carbon dioxide + water**.', example: 'Gas boilers are checked every year so they burn completely and make no carbon monoxide.' },
+  'rx.triangle': { hook: 'Fire triangle: **heat, fuel, oxygen**: take one away and the fire dies.', example: 'A fire blanket cuts off the oxygen from a pan fire.' },
+  'rx.mass': { hook: 'The white ash is **heavier** than the ribbon: it has grabbed oxygen from the air.', example: 'Rust weighs more than the iron it came from, because it has gained oxygen (and water).' },
+  'rx.exo': { hook: '**Ex**othermic: heat **ex**its. **En**dothermic: heat **en**ters.', example: 'A campfire is exothermic; sherbet feels cool as it fizzes on your tongue: endothermic.' },
+  'rx.decomp': { hook: 'Thermal **de-composition**: heat **breaks one substance into two or more**.', example: 'Bicarbonate of soda breaks down when heated, giving off carbon dioxide that helps cakes rise.' },
+  'rx.test': { hook: 'Hydrogen **pops**, oxygen **relights** a glowing splint, carbon dioxide turns limewater **milky**.', example: 'The Hindenburg airship was filled with hydrogen, which burned explosively in 1937.' },
+  'rx.balance': { hook: 'Balance with **big numbers in front**; never change the small numbers inside a formula.' },
+
+  // --- acids, alkalis and metals
+  'ac.ph7': { hook: 'pH **7** is neutral: below 7 is acid, above 7 is alkali.', example: 'Lemon juice is about pH 2; soapy water is about pH 9 to 10.' },
+  'ac.neut': { hook: 'Acid + alkali → **salt + water**: they cancel each other out.', example: 'Farmers spread lime on acidic fields to neutralise the soil.' },
+  'ac.salt': { hook: 'Hydro**chlor**ic → **chlor**ides, **sulf**uric → **sulf**ates, **nitr**ic → **nitr**ates.', example: 'Sodium chloride is the table salt on your chips.' },
+  'ac.metal': { hook: '**MASH**: **M**etal + **A**cid → **S**alt + **H**ydrogen.', example: 'Magnesium ribbon fizzes in dilute acid: the bubbles are hydrogen.' },
+  'ac.series': { hook: 'Please Stop Calling Me A Careless Zebra Instead Try Learning How Copper Saves Gold: K Na Ca Mg Al C Zn Fe Sn Pb H Cu Ag Au', example: 'Gold coins from old shipwrecks still gleam, while iron cannons from the same wrecks are crusted with rust.' },
+  'ac.gold': { hook: 'Gold is the **lazy** metal: too unreactive to join anything, so it lies about pure.', example: 'Gold leaf on old picture frames and church domes still shines after centuries.' },
+  'ac.displace': { hook: 'Displacement is a **playground bully**: the more reactive metal pushes the weaker one out.' },
+  'ac.indig': { hook: 'Bases **cancel** acids: that is neutralisation.', example: 'Many indigestion tablets contain calcium carbonate, the same compound as chalk.' },
+  'ac.uip': { hook: 'Universal indicator runs like a **rainbow**: red (strong acid) → green (neutral) → purple (strong alkali).', example: 'Red cabbage juice is a homemade indicator: pink in vinegar, blue or green in alkalis.' },
+
+  // --- Earth and atmosphere
+  'er.igneous': { hook: 'Igneous comes from Latin ignis, **fire**: it starts as molten rock.', example: 'The Giant’s Causeway in Northern Ireland is columns of basalt from cooled lava.' },
+  'er.fossil': { hook: 'Fossils rest in **sedimentary** rock, laid down gently in layers like pages in a book.', example: 'Fossil hunters find ammonites on the beach at Lyme Regis.' },
+  'er.marble': { hook: 'Meta-morph = **change of form** (Greek): limestone changes into marble.', example: 'Michelangelo’s statue of David is carved from marble.' },
+  'er.air': { hook: 'Air is about **four-fifths nitrogen** and one-fifth oxygen.' },
+  'er.co2': { hook: 'Plants are carbon **sponges**: photosynthesis takes CO₂ out of the air.', example: 'Planting new forests is one way countries try to soak up carbon dioxide.' },
+  'er.greenhouse': { hook: 'Greenhouse gases are a **blanket**: the heat gets out more slowly.', example: 'Venus, with its thick carbon dioxide atmosphere, is hotter than Mercury, though further from the Sun.' },
+  'er.carbon': { hook: 'Carbon goes **round and round**: air → plants → animals → air.', example: 'The carbon in your toast was carbon dioxide in the air only months ago.' },
+  'er.weather': { hook: '**Weathering** breaks rock where it is; **erosion** carries the bits away.', example: 'Potholes grow in winter as water in cracks freezes and expands.' },
+
+  // --- forces
+  'fo.balanced': { hook: 'Balanced = **no change**: still stays still, moving keeps moving steadily.', example: 'If a car stops suddenly your body keeps moving forward: that is why seatbelts matter.' },
+  'fo.terminal': { hook: 'Terminal = **end** (Latin terminus): the top speed, when air resistance equals weight.', example: 'Skydivers fall at about 55 m/s spread flat, but much faster diving head-down.' },
+  'fo.weight': { hook: 'Weight = mass × g: **W = mg**, with g ≈ 10 N/kg on Earth.', example: 'A 1 kg bag of sugar weighs about 10 N.' },
+  'fo.mass': { hook: 'Mass is the **stuff** in you; weight is the **pull** on that stuff.', example: 'Astronauts bounded about on the Moon in heavy suits because they weighed only a sixth as much.' },
+  'fo.dt': { hook: 'Distance–time: a flat line = **stopped**; a steeper line = **faster**.', example: 'On a graph of a bus journey, each flat bit is a stop at a bus stop.' },
+  'fo.newton3': { hook: 'Newton 3: **every push gets a push back**, equal and opposite, on the other object.', example: 'A swimmer pushes the water backwards, and the water pushes the swimmer forwards.' },
+  'fo.speed': { hook: 'Formula triangle: **d** on top, **s × t** below: speed = distance ÷ time.', example: 'A sprinter running 100 m in 10 s averages 10 m/s.' },
+  'fo.pressure': { hook: 'Formula triangle: **F** on top, **p × A** below: pressure = force ÷ area.', example: 'A sharp knife cuts easily: its tiny edge area gives a huge pressure.' },
+  'fo.moments': { hook: 'Moment = force × distance: a **longer spanner** turns a nut more easily.', example: 'Door handles are far from the hinges, so a small push gives a big turning effect.' },
+  'fo.hooke': { hook: 'Hooke’s law: **double the pull, double the stretch** (up to the limit).', example: 'Spring luggage scales use Hooke’s law to weigh your suitcase.' },
+
+  // --- energy
+  'en.store': { hook: 'Stretched, squashed or bent = an **elastic** store.', example: 'A trampoline’s springs store elastic energy and fling you back up.' },
+  'en.conserve': { hook: 'Energy is like **money moved between accounts**: the total never changes.', example: 'An old filament bulb gets hot: much of its energy is wasted heating the room.' },
+  'en.bounce': { hook: 'Every bounce **leaks** a little energy as heat and sound.', example: 'Squash players warm the ball up before a game, because a warm ball bounces higher.' },
+  'en.renew': { hook: '**Renew**able resources **renew** themselves: wind, sun, waves, tides, rivers.', example: 'Solar panels on roofs and wind farms in the North Sea.' },
+  'en.conduct': { hook: 'Metals **pass heat on**; plastic and wood **hold it back**.', example: 'A metal spoon left in hot tea soon gets too hot to hold.' },
+  'en.convect': { hook: 'Convection: hot fluid **rises**, cool fluid **sinks**, round and round.', example: 'A hot-air balloon rises because the air inside is warmer and less dense.' },
+  'en.power': { hook: 'Power = energy ÷ time: a 3 kW kettle transfers **3000 J every second**.', example: 'Electricity bills count kilowatt-hours: 1 kW running for 1 hour.' },
+
+  // --- electricity and magnetism
+  'el.series': { hook: 'Series = **one road**: more bulbs share the push, so each is dimmer.', example: 'In old Christmas lights wired in series, one broken bulb blacked out the whole string.' },
+  'el.parallel': { hook: 'Parallel = **own branch, full voltage** for each.', example: 'You can switch off the kitchen light without the hall light going out.' },
+  'el.ammeter': { hook: 'An ammeter must **join the queue** (series) to count the charge going past; a voltmeter watches from the side.' },
+  'el.unit': { hook: 'The ohm’s symbol, Ω, is the Greek capital **omega**.' },
+  'el.static': { hook: 'Rubbing **moves electrons**. Like charges repel; opposites attract.', example: 'You can get a small shock from a car door after sliding across the seat.' },
+  'el.electromag': { hook: 'Stronger electromagnet: more **turns**, more **current**, an iron **core**.', example: 'Electric door locks and doorbells use electromagnets.' },
+  'el.field': { hook: 'Outside a magnet, field lines run **north → south**, the way a compass needle points.', example: 'Iron filings sprinkled round a magnet show its field-line pattern.' },
+  'el.ohm': { hook: 'Formula triangle: **V** on top, **I × R** below: V = IR.', example: 'Phone chargers are labelled with volts and amps, such as 5 V, 2 A.' },
+
+  // --- sound and light
+  'wv.sound': { hook: 'Sound is a **passed-on wobble**: no particles, nothing to pass it on.', example: 'Astronauts on spacewalks talk by radio, which can cross empty space.' },
+  'wv.pitch': { hook: '**Hi**gh frequency = **hi**gh pitch; bigger amplitude = louder.', example: 'A flute plays higher notes than a tuba: its sound waves have a higher frequency.' },
+  'wv.reflect': { hook: 'Angle in = angle out, both measured from the **normal**.', example: 'Snooker players use the same rule to bounce a ball off the cushion.' },
+  'wv.refract': { hook: 'Refraction = **bending** as light changes speed.', example: 'A swimming pool looks shallower than it really is.' },
+  'wv.prism': { hook: '**Roy G Biv**: red, orange, yellow, green, blue, indigo, violet.', example: 'A rainbow is sunlight split into colours by raindrops.' },
+  'wv.red': { hook: 'You see the colour that is **bounced back**; all the others are absorbed.', example: 'A black T-shirt gets hot in the sun because it absorbs every colour.' },
+  'wv.speed': { hook: 'Lightning: **flash first, crash later**. Light wins every race.', example: 'Count the seconds from flash to thunder: about 3 seconds for every kilometre.' },
+  'wv.calc': { hook: 'Wave speed = frequency × wavelength: **v = fλ**.', example: 'On a pond, count the ripples passing each second and measure the gap between crests.' },
+
+  // --- space
+  'sp.seasons': { hook: 'It is the **tilt** (about 23.5°): each hemisphere takes a turn leaning towards the Sun.', example: 'When it is summer in Britain it is winter in Australia.' },
+  'sp.gravity': { hook: 'The Moon is **always falling** towards Earth, but moving sideways fast enough to keep missing.', example: 'The Moon’s gravity also pulls on the oceans, causing the tides.' },
+  'sp.phases': { hook: '**DOC**: seen from Britain, a **D** shape is waxing, an **O** is full, a **C** is waning.', example: 'The Moon’s lit half never changes; only how much of it we can see.' },
+  'sp.year': { hook: 'Four quarter-days make one extra **leap day** every four years.', example: '29 February comes round once every four years.' },
+  'sp.erat': { hook: 'Two cities, two shadows, one **angle**: Eratosthenes measured the whole Earth.', example: 'At midsummer noon in Syene the Sun was said to shine straight down a well, with no shadow.' },
+  'sp.lightyear': { hook: 'A light **year** is a **distance**, like saying a town is “an hour away”.', example: 'Light from Proxima Centauri, the nearest star after the Sun, takes about 4.2 years to reach us.' },
+  'sp.size': { hook: 'Moon < Earth < Sun < Milky Way: over a million Earths would fit inside the Sun.' },
+  'sp.weight': { hook: 'Weight depends on the **planet’s pull**: a weaker g means you weigh less.', example: 'A 50 kg person weighs about 500 N on Earth but only about 185 N on Mars.' },
+
+  // --- working scientifically
+  'wk.iv': { hook: '**I** change the **I**ndependent; the **D**ependent is the **D**ata I measure.' },
+  'wk.control': { hook: 'Control variables are **kept the same**, so the test is fair.', example: 'Testing paper aeroplanes? Same thrower, same throw and same room each time.' },
+  'wk.precise': { hook: '**P**recise = readings **P**acked together; **A**ccurate = **A**t the true value.', example: 'Darts clumped tightly together but far from the bullseye are precise, not accurate.' },
+  'wk.repeat': { hook: 'Once could be luck: **repeat and average** to see the real pattern.', example: 'A league table is fairer than one match: more results smooth out the luck.' },
+  'wk.graph': { hook: 'Numbers on both axes? **Line graph**. Categories (names)? **Bar chart**.', example: 'Weather apps show the temperature through the day as a line graph.' },
+  'wk.hypo': { hook: 'A good hypothesis: **If… then… because…**' },
+  'wk.sys': { hook: 'Systematic errors are the **same every time**; random errors **jump about**.', example: 'Bathroom scales that show 1 kg with nobody on them add 1 kg to everyone.' },
+  'wk.correl': { hook: '**Correlation is not causation**: look for a hidden third factor.', example: 'Bigger fires bring more fire engines, but the fire engines do not cause the damage.' },
+
+  // --- stretch: inside the atom
+  'am.parts': { hook: '**P**rotons **p**ositive and **n**eutrons **n**eutral sit in the nucleus; electrons orbit outside.', example: 'If an atom were as wide as a football pitch, its nucleus would be about the size of a pinhead.' },
+  'am.number': { hook: 'Atomic number = **proton number**: the element’s ID card.', example: 'Carbon is number 6: every carbon atom anywhere has 6 protons.' },
+  'am.isotope': { hook: 'Isotope = **same place** (Greek isos + topos) in the periodic table: same protons, different neutrons.', example: 'Carbon-14 dating showed that Ötzi the Iceman lived over 5000 years ago.' },
+  'am.neutrons': { hook: 'Neutrons = **mass number − atomic number** (big number minus small number).' },
+  'am.rutherford': { hook: 'Rutherford said it was like firing a shell at **tissue paper** and having it bounce back.' },
+  'am.ionic': { hook: 'Ionic = **give and take**: the metal gives electrons, the non-metal takes them.', example: 'Table salt crystals are a lattice of Na⁺ and Cl⁻ ions.' },
+  'am.covalent': { hook: '**Co**valent = **co**-operate: non-metals **share** pairs of electrons.', example: 'Water, carbon dioxide and the oxygen you breathe are all covalent molecules.' },
+  'am.shell': { hook: 'Shells fill **2, 8, 8**: the first shell is a two-seater.' },
+
+  // --- stretch: electromagnetic spectrum
+  'em.order': { hook: '**R**aging **M**artians **I**nvaded **V**enus **U**sing **X**-ray **G**uns: radio, micro, infrared, visible, UV, X, gamma.' },
+  'em.speed': { hook: 'All EM waves are **equally fast** in a vacuum: about 300 000 km/s.', example: 'Radio signals from rovers on Mars take several minutes to reach Earth, even at light speed.' },
+  'em.uv': { hook: '**Ultra**violet = **beyond** violet: too energetic for skin to ignore.', example: 'You can still get sunburnt on a cloudy day, because UV gets through clouds.' },
+  'em.xray': { hook: 'Bones **block** X-rays, flesh **lets them through**: the shadow is the picture.', example: 'Airport scanners use X-rays to see inside suitcases.' },
+  'em.ir': { hook: '**Infra**red = **below** red: we feel it as heat.', example: 'Point a TV remote at a phone camera and press a button: many cameras show its invisible flash.' },
+  'em.gamma': { hook: 'Gamma: the **most energy**, so the most danger, and most useful when carefully aimed.', example: 'Syringes and bandages are sterilised with gamma rays.' },
+
+  // --- stretch: genetics
+  'gn.allele': { hook: 'The gene is the **feature** (eye colour); alleles are its **versions** (brown, blue).' },
+  'gn.dominant': { hook: 'Dominant alleles **dominate**: one copy is enough. Give them a capital letter.' },
+  'gn.homo': { hook: 'Homo = **same**, hetero = **different** (Greek): bb is homozygous, Bb is heterozygous.' },
+  'gn.mendel': { hook: 'Mendel’s **peas** gave us the rules of inheritance.', example: 'Mendel bred tall and short pea plants in his monastery garden in Brno.' },
+  'gn.sex': { hook: 'Eggs always carry **X**; the sperm decides: **X → girl, Y → boy**.' },
+  'gn.punnett': { hook: 'Punnett square: one parent’s alleles **across the top**, the other’s **down the side**, then fill every box.' },
+};
+for (const t of topics) {
+  const key = t.id.replace(/^science\./, '');
+  if (TOPIC_HOOKS[key]) t.hook = TOPIC_HOOKS[key];
+}
+for (const key of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === `science.${key}`)) throw new Error(`y8/science.mjs: topic hook for unknown topic ${key}`);
+for (const [id, memory] of Object.entries(MEMORY)) {
+  const item = items.find((it) => it.id === `science.${id}`);
+  if (!item) throw new Error(`y8/science.mjs: memory hook for unknown item ${id}`);
+  Object.assign(item, memory);
+}
+// --- end of memory hooks
 
 export default [{ subject: 'science', deck: 'y8', topics, items }];

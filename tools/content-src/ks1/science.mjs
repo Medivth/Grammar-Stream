@@ -54,7 +54,7 @@ const items = [
   fact('fd.capy', 'food', 'Capybaras eat grass and water plants. What does that make them?', 'herbivores', ['carnivores', 'omnivores', 'predators'], 'Plant-eaters are herbivores.', { ...C }),
 
   // --- body
-  fact('bd.senses', 'body', 'How many senses do we have?', '5', ['3', '4', '7'], 'Sight, hearing, smell, taste and touch.'),
+  fact('bd.senses', 'body', 'How many main senses do we have?', '5', ['3', '4', '7'], 'Sight, hearing, smell, taste and touch.'),
   fact('bd.smell', 'body', 'Which part of the body do we use to smell?', 'nose', ['ears', 'eyes', 'tongue'], 'We smell with our nose.', { accept: ['the nose', 'our nose'] }),
   fact('bd.taste', 'body', 'Which part of the body do we use to taste?', 'tongue', ['nose', 'teeth', 'ears'], 'Our tongue has taste buds.', { accept: ['the tongue'] }),
   mcq('bd.wash', 'body', 'Why should we wash our hands before eating?', [['To wash away germs', true], ['To make our hands smell nice', false, 'Soap smells nice, but the real reason is germs.'], ['So our hands are wet for eating', false, 'We dry them afterwards!']], 'Germs are too small to see. Soap and water wash them away.'),
@@ -80,7 +80,7 @@ const items = [
   mcq('pl.needs', 'plants', 'What do plants need to grow well?', [['water, light and warmth', true], ['only water', false, 'Water isn’t enough: they need light and warmth too.'], ['darkness and cold', false, 'Plants grow badly in the dark and the cold.']], 'Plants need water, light and a suitable temperature.'),
   fact('pl.seed', 'plants', 'What grows into a new plant?', 'a seed', ['a leaf', 'a petal', 'a stone'], 'Seeds (and bulbs) grow into new plants.', { accept: ['seed', 'seeds', 'a bulb', 'bulb'] }),
   mcq('pl.decid', 'plants', 'What is a deciduous tree?', [['A tree that loses its leaves in autumn', true], ['A tree that keeps its leaves all year', false, 'That is an evergreen tree, like a pine.'], ['A tree with no roots', false, 'All trees have roots.']], 'Oak and sycamore are deciduous. Pine and holly are evergreen.'),
-  fact('pl.dark', 'plants', 'A plant is left in a dark cupboard. What will happen?', 'it will turn pale and weak', ['it will grow faster', 'nothing will change', 'it will grow flowers'], 'Without light, plants cannot make food. They turn yellow and weak.', C),
+  fact('pl.dark', 'plants', 'A plant is left in a dark cupboard. What will happen?', 'it will turn pale and weak', ['it will turn a brighter green', 'nothing will change', 'it will grow flowers'], 'Without light, plants cannot make food. They turn yellow and weak.', C),
 
   // --- habitats
   mcq('hb.alive', 'habitats', 'Which of these has NEVER been alive?', [['a rock', true], ['a dead leaf', false, 'A dead leaf was once alive on a tree.'], ['a wooden spoon', false, 'Wood came from a tree, which was alive.']], 'Rocks, metal and plastic have never been alive. Wood and leaves come from living things.'),
@@ -146,7 +146,7 @@ const items = [
   mcq('fo.ramp', 'forces', 'A race car rolls down a ramp. How can you make it go further?', [['Make the ramp higher', true], ['Paint it a different colour', false, 'Colour doesn’t change the force.'], ['Make the floor stickier', false, 'A sticky floor adds friction, so the car stops sooner.']], 'A higher ramp gives the car more speed at the bottom.'),
   // --- rocks (stretch)
   fact('rk.fossil', 'rocks', 'What is a fossil?', 'old remains of a living thing, turned to rock', ['a shiny jewel found in caves', 'a type of very old volcano', 'a kind of soil found by rivers'], 'Fossils form over millions of years.', C),
-  fact('rk.anning', 'rocks', 'Which young woman found amazing fossils on the beach at Lyme Regis about 200 years ago?', 'Mary Anning', ['Florence Nightingale', 'Queen Victoria', 'Grace Darling'], 'Mary Anning found the first complete skeleton of an ichthyosaur, a sea reptile, when she was still young.', { accept: ['anning'] }),
+  fact('rk.anning', 'rocks', 'Which young woman found amazing fossils on the beach at Lyme Regis about 200 years ago?', 'Mary Anning', ['Florence Nightingale', 'Queen Victoria', 'Grace Darling'], 'When she was only about 12, Mary Anning found the skeleton of an ichthyosaur, a sea reptile. Later she found the first nearly complete plesiosaur skeleton.', { accept: ['anning'] }),
   mcq('rk.form', 'rocks', 'How do most fossils form?', [['An animal is buried and slowly turns to rock', true], ['Animals turn to stone when they get cold', false, 'It takes burial and millions of years, not cold.'], ['People carve them out of stone', false, 'Fossils are natural.']], 'Bones are buried in mud or sand; over millions of years the layers become rock.'),
   fact('rk.soil', 'rocks', 'What is soil made of?', 'bits of rock and rotted plants', ['only sand from the beach', 'melted metal and water', 'tiny pieces of plastic'], 'Soil is broken rock plus rotting leaves, which feed plants.', C),
   fact('rk.dino', 'rocks', 'How do we know dinosaurs existed?', 'from their fossil bones', ['from old photographs', 'from films about them', 'from people who saw them'], 'No people lived at the same time as dinosaurs. Fossils are our evidence.', C),

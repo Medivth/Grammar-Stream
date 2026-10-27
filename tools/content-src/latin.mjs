@@ -19,12 +19,12 @@ const WORDS_1 = [
   ['mater', 'mother', 'maternal, maternity', ['mum', 'mom']],
   ['pater', 'father', 'paternal, paternity, patriot (father-land)', ['dad']],
   ['filius', 'son', 'filial means to do with a son or daughter', []],
-  ['filia', 'daughter', 'affiliate: to join as a “daughter” organisation', []],
+  ['filia', 'daughter', 'filial means to do with a son or daughter', []],
   ['femina', 'woman', 'feminine', ['lady']],
   ['vir', 'man', 'virtue originally meant manliness, then goodness', []],
 ];
 const WORDS_2 = [
-  ['cibus', 'food', 'no common English word, but ciborium is a food vessel in churches', []],
+  ['cibus', 'food', 'no common English word comes from it, so learn this one by heart', []],
   ['aqua', 'water', 'aquarium, aqueduct, aquatic', []],
   ['via', 'road', 'via (by way of), viaduct', ['street', 'way']],
   ['cena', 'dinner', 'the Romans’ main meal, eaten in the late afternoon', ['meal', 'supper']],
@@ -56,7 +56,7 @@ const VERBS = [
   ['bibit', 'drinks', 'imbibe, beverage'],
   ['parat', 'prepares', 'prepare, apparatus'],
 ];
-const NUMBERS = [['unus', 'one', 'unicorn, unit, unique'], ['duo', 'two', 'duet, duo, dual'], ['tres', 'three', 'trio, tripod, triangle'], ['quattuor', 'four', 'quartet, quadrilateral'], ['quinque', 'five', 'quintet, quintuplets'], ['sex', 'six', 'sextet, sextuplets'], ['septem', 'seven', 'September was the seventh month of the old Roman year'], ['octo', 'eight', 'octopus, octagon, October (the eighth month)'], ['novem', 'nine', 'November (the ninth month)'], ['decem', 'ten', 'December (the tenth month), decimal, decade']];
+const NUMBERS = [['unus', 'one', 'unicorn, unit, unique'], ['duo', 'two', 'duet, duo, dual'], ['tres', 'three', 'trio, triple, triangle'], ['quattuor', 'four', 'quartet, quadrilateral'], ['quinque', 'five', 'quintet, quintuplets'], ['sex', 'six', 'sextet, sextuplets'], ['septem', 'seven', 'September was the seventh month of the old Roman year'], ['octo', 'eight', 'October (once the eighth month of the Roman year), octave, octet'], ['novem', 'nine', 'November (once the ninth month of the Roman year)'], ['decem', 'ten', 'December (once the tenth month of the Roman year), decimal']];
 const PHRASES = [['salve', 'hello', 'literally “be well”; to more than one person, salvete', ['hi', 'greetings']], ['vale', 'goodbye', 'literally “be strong”; to more than one person, valete', ['farewell', 'bye']], ['gratias tibi ago', 'thank you', 'literally “I give thanks to you”; gratias on its own works too', ['thanks', 'thank you very much']], ['ita vero', 'yes', 'literally “thus truly”', ['yes indeed', 'indeed']], ['minime', 'no', 'literally “least of all”', ['not at all', 'no way']]];
 
 const STORY = { passage: 'Marcus est pater. Iulia est mater. Lucius est filius. Flavia est filia.\nMarcus in horto sedet. Iulia in atrio laborat. Felix est servus. Felix in culina cenam parat.\nRufus est canis. Rufus in via dormit. Lucius canem videt. Lucius clamat: “Rufe!” Rufus ad Lucium currit.\nFlavia aquam portat. Felix cenam portat. familia in triclinio cenat. Rufus sub mensa dormit.', passageSource: 'A short story written for this app' };
@@ -90,9 +90,12 @@ const vocab = (prefix, topic, list) => {
 vocab('w1', 'words-1', WORDS_1);
 vocab('w2', 'words-2', WORDS_2);
 
+// works → working, but sits → sitting, carries → carrying, sees → seeing
+const ING = { sits: 'sitting', runs: 'running', carries: 'carrying', sees: 'seeing', loves: 'loving', prepares: 'preparing' };
+const ing = (en) => ING[en] || en.replace(/s$/, 'ing');
 VERBS.forEach(([la, en, deriv], i) => {
   const others = VERBS.filter((v) => v[0] !== la);
-  items.push(fact(`v1.${la}`, 'verbs-1', `What does **${la}** mean?`, `he or she ${en}`, [others[(i + 1) % 13][1], others[(i + 5) % 13][1], others[(i + 9) % 13][1]].map((e) => `he or she ${e}`), `${la} = he/she ${en}. English relatives: ${deriv}.`, { accept: [en, `he ${en}`, `she ${en}`, `it ${en}`, `is ${en.replace(/s$/, 'ing').replace(/eing$/, 'ing').replace(/iing$/, 'ying')}`, `he is ${en.replace(/s$/, 'ing').replace(/eing$/, 'ing')}`, `she is ${en.replace(/s$/, 'ing').replace(/eing$/, 'ing')}`, `he/she ${en}`], learn: `**${la}** = he or she ${en}\n_${deriv}._` }));
+  items.push(fact(`v1.${la}`, 'verbs-1', `What does **${la}** mean?`, `he or she ${en}`, [others[(i + 1) % 13][1], others[(i + 5) % 13][1], others[(i + 9) % 13][1]].map((e) => `he or she ${e}`), `${la} = he/she ${en}. English relatives: ${deriv}.`, { accept: [en, `he ${en}`, `she ${en}`, `it ${en}`, `is ${ing(en)}`, `he is ${ing(en)}`, `she is ${ing(en)}`, `he/she ${en}`], learn: `**${la}** = he or she ${en}\n_${deriv}._` }));
   items.push(fact(`v1.en.${la}`, 'verbs-1', `What is the Latin for **he ${en}**?`, la, [others[(i + 2) % 13][0], others[(i + 6) % 13][0], others[(i + 10) % 13][0]], `he ${en} = ${la}.`, { strict: true }));
 });
 
@@ -125,7 +128,8 @@ const CASES = [
   ['puer puellam amat.', 'the boy', 'the girl'],
 ];
 CASES.forEach(([la, subj, obj], i) => {
-  items.push(mcq(`c.${i + 1}`, 'cases', `**${la}** Who is doing the action, and to whom?`, [[`${subj} → ${obj}`, true], [`${obj} → ${subj}`, false, `Look at the endings. The word ending in -am or -um is the one the action is done TO.`]], `${la}: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So ${subj} does it to ${obj}.`));
+  const objWord = la.split(' ').find((w) => /m$/.test(w));
+  items.push(mcq(`c.${i + 1}`, 'cases', `**${la}** Who is doing the action, and to whom?`, [[`${subj} → ${obj}`, true], [`${obj} → ${subj}`, false, `Look at the endings. The word ending in -m (${objWord}) is the accusative: the one the action is done TO.`]], `${la}: the subject (nominative) has its plain ending; the object (accusative) ends in -m: ${objWord}. So ${subj} does it to ${obj}.`));
 });
 items.push(fact('c.nom', 'cases', 'The form of a noun used for the person DOING the action (puella, servus) is called the…', 'nominative', ['accusative', 'genitive', 'plural'], 'Nominative = the subject. puella sedet: the girl is doing the sitting.'));
 items.push(fact('c.acc', 'cases', 'The form of a noun used for the person the action is done TO (puellam, servum) is called the…', 'accusative', ['nominative', 'ablative', 'vocative'], 'Accusative = the object. servus puellam videt: the girl is seen.'));
@@ -135,9 +139,10 @@ items.push(mcq('c.order', 'cases', '**canem puer videt.** Who sees whom?', [['Th
 
 // --- verb endings
 const PERS = [['ambulo', 'I walk'], ['ambulas', 'you walk'], ['ambulat', 'he or she walks'], ['laboro', 'I work'], ['sedes', 'you sit'], ['dormis', 'you sleep'], ['video', 'I see'], ['audis', 'you hear'], ['clamo', 'I shout'], ['sum', 'I am'], ['es', 'you are'], ['est', 'he/she/it is']];
+const PROG = { 'I walk': 'I am walking', 'you walk': 'you are walking', 'I work': 'I am working', 'you sit': 'you are sitting', 'you sleep': 'you are sleeping', 'I shout': 'I am shouting' };
 PERS.forEach(([la, en], i) => {
   const others = PERS.filter((p) => p[0] !== la);
-  items.push(fact(`v2.${la}`, 'verbs-2', `What does **${la}** mean?`, en, [others[(i + 1) % 11][1], others[(i + 4) % 11][1], others[(i + 7) % 11][1]], `${la} = ${en}. The ending tells you the person: -o is I, -s is you, -t is he/she/it.`, { accept: en.startsWith('he or she') ? [en.replace('he or she ', 'he '), en.replace('he or she ', 'she ')] : en.startsWith('he/she/it') ? ['he is', 'she is', 'it is', 'is', 'he, she or it is'] : [en.replace(/^(I|you) /, '$1 am ').replace('am walk', 'am walking')] }));
+  items.push(fact(`v2.${la}`, 'verbs-2', `What does **${la}** mean?`, en, [others[(i + 1) % 11][1], others[(i + 4) % 11][1], others[(i + 7) % 11][1]], la === 'sum' ? 'sum = I am. sum is irregular: it ends in -m, not -o, but es (you are) and est (he/she/it is) follow the -s and -t pattern.' : `${la} = ${en}. The ending tells you the person: -o is I, -s is you, -t is he/she/it.`, { accept: en.startsWith('he or she') ? [en.replace('he or she ', 'he '), en.replace('he or she ', 'she ')] : en.startsWith('he/she/it') ? ['he is', 'she is', 'it is', 'is', 'he, she or it is'] : PROG[en] ? [PROG[en]] : [] }));
 });
 items.push(fact('v2.o', 'verbs-2', 'Which ending means “I” on a Latin verb?', '-o', ['-s', '-t', '-nt'], 'amo = I love, laboro = I work.', { accept: ['o'] }));
 items.push(fact('v2.s', 'verbs-2', 'Which ending means “you” (one person) on a Latin verb?', '-s', ['-o', '-t', '-mus'], 'amas = you love, sedes = you sit.', { accept: ['s'] }));
@@ -147,13 +152,13 @@ items.push(fact('v2.t', 'verbs-2', 'Which ending means “he, she or it” on a 
 const PL = [['puellae', 'girls'], ['servi', 'slaves'], ['pueri', 'boys'], ['amici', 'friends'], ['villae', 'houses'], ['horti', 'gardens'], ['domini', 'masters']];
 PL.forEach(([la, en], i) => {
   const others = PL.filter((p) => p[0] !== la);
-  items.push(fact(`pl.${la}`, 'plurals', `What does **${la}** mean?`, en, [others[(i + 1) % 6][1], others[(i + 3) % 6][1], others[(i + 5) % 6][1]], `${la} = ${en}. -a words go to -ae; -us words go to -i.`, { accept: [`the ${en}`] }));
+  items.push(fact(`pl.${la}`, 'plurals', `What does **${la}** mean?`, en, [others[(i + 1) % 6][1], others[(i + 3) % 6][1], others[(i + 5) % 6][1]], la === 'pueri' ? 'pueri = boys. puer does not end in -us, but it still takes -i in the plural, like servus → servi.' : `${la} = ${en}. -a words go to -ae; -us words go to -i.`, { accept: [`the ${en}`] }));
 });
 items.push(fact('pl.sunt', 'plurals', 'What does **sunt** mean?', 'they are', ['he is', 'you are', 'we are'], 'est = is (one); sunt = are (more than one). “servi in horto sunt” = the slaves are in the garden.', { accept: ['are'] }));
 items.push(fact('pl.ant', 'plurals', 'Translate: **servi laborant.**', 'The slaves work.', ['The slave works.', 'The slaves sleep.', 'The masters work.'], 'servi (plural) + laborant (-nt = they): the slaves work.', choiceOnly));
-items.push(fact('pl.ending', 'plurals', 'When the subject is plural, what does the verb end in?', '-nt', ['-t', '-s', '-ae'], 'servus laborat → servi laborant. puella clamat → puellae clamant.', { accept: ['nt'] }));
-items.push(fact('pl.make', 'plurals', 'What is the plural of **puella**?', 'puellae', ['puellam', 'puelli', 'puellas'], '-a becomes -ae: puella → puellae.', { strict: true }));
-items.push(fact('pl.make2', 'plurals', 'What is the plural of **amicus**?', 'amici', ['amicae', 'amicum', 'amicos'], '-us becomes -i: amicus → amici.', { strict: true }));
+items.push(fact('pl.ending', 'plurals', 'When the subject is “they” or a plural noun like servi, what does the verb end in?', '-nt', ['-t', '-s', '-ae'], 'servus laborat → servi laborant. puella clamat → puellae clamant.', { accept: ['nt'] }));
+items.push(fact('pl.make', 'plurals', 'What is the plural of **puella**?', 'puellae', ['puellam', 'puelli', 'puella'], '-a becomes -ae: puella → puellae.', { strict: true }));
+items.push(fact('pl.make2', 'plurals', 'What is the plural of **amicus**?', 'amici', ['amicae', 'amicum', 'amicus'], '-us becomes -i: amicus → amici.', { strict: true }));
 
 // --- numbers and greetings
 NUMBERS.forEach(([la, en, deriv], i) => {
@@ -163,7 +168,7 @@ NUMBERS.forEach(([la, en, deriv], i) => {
 PHRASES.forEach(([la, en, note, accept], i) => {
   const others = PHRASES.filter((p) => p[0] !== la);
   items.push(fact(`ph.${i + 1}`, 'numbers', `What does **${la}** mean?`, en, [others[(i + 1) % 4][1], others[(i + 2) % 4][1], others[(i + 3) % 4][1]], `${la} = ${en}: ${note}.`, { accept, learn: `**${la}** = ${en}\n_${note}._` }));
-  items.push(fact(`ph.en.${i + 1}`, 'numbers', `How do you say **${en}** in Latin?`, la, la.includes(' ') ? ['ita vero, amice', 'vale, mi amice', 'salvete, omnes'] : [others[(i + 1) % 4][0], others[(i + 2) % 4][0], others[(i + 3) % 4][0]], `${en} = ${la}: ${note}.`, { accept: la === 'gratias tibi ago' ? ['gratias', 'gratias ago'] : [] }));
+  items.push(fact(`ph.en.${i + 1}`, 'numbers', `How do you say **${en}** in Latin?`, la, la.includes(' ') ? [la === 'ita vero' ? 'minime' : 'ita vero, amice', 'vale, mi amice', 'salvete, omnes'] : [others[(i + 1) % 4][0], others[(i + 2) % 4][0], others[(i + 3) % 4][0]], `${en} = ${la}: ${note}.`, { accept: la === 'gratias tibi ago' ? ['gratias', 'gratias ago'] : [] }));
 });
 items.push(fact('n.months', 'numbers', 'September, October, November and December are named after the numbers seven, eight, nine and ten. Why do the names not match our calendar?', 'the Roman year originally began in March', ['the Romans could not count', 'the names were chosen at random', 'the months were renamed by the Normans'], 'Starting from March, September really was the seventh month. Two months were later added at the start, and the names stayed.', choiceOnly));
 
@@ -175,12 +180,12 @@ const ROOTS = [
   ['video', 'I see', 'evidence', ['divide', 'vivid', 'velvet']],
   ['audio', 'I hear', 'audience', ['odour', 'auburn', 'autumn']],
   ['manus', 'hand', 'manual', ['mansion', 'mandarin', 'many']],
-  ['pes, pedis', 'foot', 'pedal', ['pest', 'pedigree', 'petal']],
-  ['caput', 'head', 'capital', ['cap', 'carpet', 'capsule']],
-  ['scribo', 'I write', 'scribble', ['scrub', 'script-free', 'crisp']],
+  ['pes, pedis', 'foot', 'pedal', ['pest', 'pebble', 'petal']],
+  ['caput', 'head', 'capital', ['capture', 'carpet', 'capsule']],
+  ['scribo', 'I write', 'scribble', ['scrub', 'scramble', 'crisp']],
   ['dico', 'I say', 'dictionary', ['dice', 'ditch', 'dinosaur']],
   ['magnus', 'great', 'magnify', ['magnet', 'magpie', 'mango']],
-  ['terra', 'land, earth', 'terrain', ['terror', 'terrier', 'tear']],
+  ['terra', 'land, earth', 'terrain', ['terror', 'terrible', 'tear']],
   ['annus', 'year', 'annual', ['annoy', 'anchor', 'anthem']],
   ['corpus', 'body', 'corpse', ['corn', 'corner', 'copper']],
 ];

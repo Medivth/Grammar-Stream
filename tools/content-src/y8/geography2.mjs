@@ -25,15 +25,15 @@ const BRIEF = {
   'af.w': '54 countries; over 1.4 billion people; median age under 20.\nPhysical: Sahara, Congo rainforest, Great Rift Valley, Kilimanjaro (5,895 m), the Nile.\nEconomy: some of the world’s fastest-growing economies; M-Pesa mobile money launched in Kenya in 2007.\nWell over 1,000 languages.',
   'ng.w': 'Nigeria: over 200 million people, the most in Africa. Oil provides most export earnings. Oil spills in the Niger Delta have damaged farmland, fishing grounds and mangroves. Growing sectors: telecommunications, services, farming and film (Nollywood). Independence from Britain in 1960.',
   'cn.w': 'Three Gorges Dam, Yangtze River, completed in the 2000s: one of the world’s largest power stations. Reservoir about 600 km long. More than a million people relocated; towns, farmland and archaeological sites flooded. Reduces flood risk downstream and allows large ships further inland.',
-  'in.w': 'Monsoon: most rain falls June–September. Over half of India’s workers depend on farming.\nThe Ganges: rises in the Himalayas; sacred to Hindus; supplies hundreds of millions of people.\nThe Himalayas: snow and glacier meltwater; earthquakes and landslides.\nMawsynram, north-east India: over 11 m of rain in a year.',
+  'in.w': 'Monsoon: most rain falls June–September. Nearly half of India’s workers depend on farming.\nThe Ganges: rises in the Himalayas; sacred to Hindus; supplies hundreds of millions of people.\nThe Himalayas: snow and glacier meltwater; earthquakes and landslides.\nMawsynram, north-east India: over 11 m of rain in a year.',
   'bz.w': 'About 60% of the Amazon is in Brazil. Main causes of clearing: cattle ranching, soya, logging, mining, roads and dams. The forest stores huge amounts of carbon and recycles rainfall that falls far away. Indigenous territories are generally cleared much less than surrounding land.',
-  'eu.w': 'EU: 27 members since the UK left on 31 January 2020. Euro: used by 20 EU countries. Schengen area: no routine passport checks at most internal borders; includes some non-EU countries. Good Friday Agreement (1998): supported peace in Northern Ireland with an open border.',
+  'eu.w': 'EU: 27 members since the UK left on 31 January 2020. Euro: used by 21 EU countries. Schengen area: no routine passport checks at most internal borders; includes some non-EU countries. Good Friday Agreement (1998): supported peace in Northern Ireland with an open border.',
   'rg.w': 'London Docklands: docks closed between the 1960s and 1981. London Docklands Development Corporation from 1981. Canary Wharf offices, the Docklands Light Railway (1987), London City Airport. Tens of thousands of new jobs, many in finance. House prices rose sharply. Queen Elizabeth Olympic Park, Stratford, for 2012.',
   'fw.w': 'Hypothesis: environmental quality improves with distance from the town centre.\nUseful methods: a transect; systematic sampling every 200 m; an environmental quality survey (scores from −2 to +2); traffic counts; photographs.\nUseful secondary data: maps of crime, house prices or air quality.',
   'su.w': 'Sustainable development (Brundtland Report, 1987): meeting the needs of the present without compromising the ability of future generations to meet their own needs.\nThree parts: environmental, social and economic.\nThe UN agreed 17 Sustainable Development Goals in 2015, for 2030.',
   'dc.w': 'Cliffs retreating about 1–2 m a year; about 300 homes at risk within 50 years.\nOption A, sea wall: very expensive per metre; reflects waves; may increase erosion further along the coast.\nOption B, rock armour: cheaper; absorbs wave energy; lasts a few decades.\nOption C, managed retreat: cheapest now; homes and businesses lost; most natural.',
   'um.w': 'Burgess model (1920s): rings from the centre: CBD; inner city (factories, 1800s terraces); inner suburbs; outer suburbs; rural–urban fringe.\nLondon examples: the City (CBD); Hackney (Victorian terraces); outer boroughs such as Bromley (suburbs); Canary Wharf (regenerated docks with skyscrapers).',
-  'rc.w': 'The Nile: Ethiopia’s Grand Ethiopian Renaissance Dam is upstream of Sudan and Egypt.\nThe Arctic: shrinking sea ice is opening routes and seabed resources; Russia, Canada, Norway, Denmark (Greenland) and the USA border it.\nIndus Waters Treaty, 1960: shares the rivers of the Indus basin between India and Pakistan.',
+  'rc.w': 'The Nile: Ethiopia’s Grand Ethiopian Renaissance Dam is upstream of Sudan and Egypt.\nThe Arctic: shrinking sea ice is opening routes and seabed resources; Russia, Canada, Norway, Denmark (Greenland) and the USA border it.\nIndus Waters Treaty, 1960: shared the rivers of the Indus basin between India and Pakistan for over 60 years; India suspended it in 2025.',
 };
 const C = { formats: ['choice'] };
 
@@ -88,7 +88,7 @@ const PLACES = [
   ['BGD', 'Bangladesh', 'Dhaka', ['Kolkata', 'Chittagong'], 'Most of Bangladesh is a huge, low delta of the Ganges and Brahmaputra rivers.', [], [], 'Asia'],
   ['VNM', 'Vietnam', 'Hanoi', ['Ho Chi Minh City', 'Bangkok'], 'The Mekong River ends in a vast rice-growing delta in southern Vietnam.', [], [], 'Asia'],
   ['THA', 'Thailand', 'Bangkok', ['Phuket', 'Hanoi'], 'Thailand is one of the world’s biggest rice exporters.', [], [], 'Asia'],
-  ['KOR', 'South Korea', 'Seoul', ['Busan', 'Pyongyang'], 'South Korea went from one of the poorest countries in the 1950s to one of the richest.', ['Korea'], [], 'Asia'],
+  ['KOR', 'South Korea', 'Seoul', ['Busan', 'Pyongyang'], 'South Korea went from one of the poorest countries in the 1950s to one of the richest.', [], [], 'Asia'],
   ['AUS', 'Australia', 'Canberra', ['Sydney', 'Melbourne'], 'Canberra was built as a compromise between rivals Sydney and Melbourne.', [], [], 'Oceania'],
   ['NZL', 'New Zealand', 'Wellington', ['Auckland', 'Christchurch'], 'Wellington is the southernmost capital city of any country.', [], [], 'Oceania'],
 ];
@@ -170,7 +170,7 @@ const items = [
 
   // --- polar regions
   mcq('pl.difference', 'polar', 'What is the main difference between the Arctic and Antarctica?', [['The Arctic is ocean; Antarctica is land', true], ['The Arctic is around the South Pole', false, 'The Arctic is around the North Pole.'], ['Polar bears live on both of them', false, 'Polar bears live only in the Arctic.'], ['They are the same frozen continent', false, 'They are at opposite ends of the Earth.']], 'Penguins live in the south, polar bears in the north: they never meet in the wild.'),
-  fact('pl.ice', 'polar', 'Roughly what share of the world’s ice is in Antarctica?', 'about 90%', ['about 10%', 'about 50%', 'about 25%'], 'Antarctica’s ice sheet is up to about 4 km thick and holds most of the world’s fresh water.', C),
+  fact('pl.ice', 'polar', 'Roughly what share of the world’s ice is in Antarctica?', 'about 90%', ['about 10%', 'about 50%', 'about 25%'], 'Antarctica’s ice sheet is nearly 5 km thick in places and holds most of the world’s fresh water.', C),
   mcq('pl.treaty', 'polar', 'What does the Antarctic Treaty (signed in 1959) do?', [['Keeps it for peaceful science', true], ['Divides it between Britain and Norway', false, 'Territorial claims were frozen, not settled.'], ['Allows oil drilling along the coasts', false, 'Mining and drilling are banned.'], ['Makes Antarctica part of Chile', false, 'No country owns it under the treaty.']], 'The 1991 Madrid Protocol added a ban on mining. It has kept the continent peaceful for over 60 years.'),
   mcq('pl.sea-level', 'polar', 'Why does melting Arctic SEA ice raise sea levels much less than melting ice on Antarctica?', [['Sea ice is already floating', true], ['Arctic ice is mostly snow, not ice', false, 'It is real ice: frozen seawater.'], ['Antarctica is warmer than the Arctic', false, 'Antarctica is colder.'], ['Arctic ice melts more slowly', false, 'The Arctic is an ocean.']], 'Like an ice cube melting in a glass of water: the level hardly changes. Ice sliding off land into the sea does raise it.'),
   mcq('pl.albedo', 'polar', 'As Arctic sea ice melts, the dark ocean absorbs more sunlight. What does this cause?', [['More warming and melting', true], ['Cooling, because the water is cold', false, 'Dark water absorbs more heat than white ice reflects.'], ['No change to the climate at all', false, 'It speeds up warming.'], ['More sea ice forming next year', false, 'It makes the problem worse.']], 'White ice reflects most sunlight; this reflectiveness is called albedo.'),
@@ -193,7 +193,7 @@ const items = [
   fact('af.count', 'africa', 'How many countries are there in Africa?', '54', ['14', '25', '100'], 'Africa has 54 countries recognised by the United Nations. Nigeria has the most people; Algeria is the biggest by area.'),
   fact('af.kili', 'africa', 'What is the highest mountain in Africa?', 'Kilimanjaro', ['Mount Kenya', 'the Atlas Mountains', 'Table Mountain'], 'Kilimanjaro in Tanzania is about 5,895 m high: a volcano with snow near the Equator.', { accept: ['mount kilimanjaro', 'kilimanjaro'] }),
   fact('af.victoria', 'africa', 'What is the largest lake in Africa?', 'Lake Victoria', ['Lake Chad', 'Lake Malawi', 'Lake Tanganyika'], 'It is shared by Uganda, Kenya and Tanzania, and is a source of the White Nile.', { accept: ['victoria', 'lake victoria'] }),
-  mcq('af.young', 'africa', 'Which statement about Africa’s population is TRUE?', [['It is the youngest continent: the average age is under 20', true], ['It is the oldest continent: most people are over 60', false, 'That describes parts of Europe and Japan.'], ['Its population is shrinking fast', false, 'It is growing fast.'], ['Almost nobody lives in cities', false, 'Cities like Lagos, Cairo and Kinshasa have many millions.']], 'A young, fast-growing population could be a huge strength if there are jobs and education.'),
+  mcq('af.young', 'africa', 'Which statement about Africa’s population is TRUE?', [['It is the youngest continent: the median age is under 20', true], ['It is the oldest continent: most people are over 60', false, 'That describes parts of Europe and Japan.'], ['Its population is shrinking fast', false, 'It is growing fast.'], ['Almost nobody lives in cities', false, 'Cities like Lagos, Cairo and Kinshasa have many millions.']], 'A young, fast-growing population could be a huge strength if there are jobs and education.'),
   mcq('af.mpesa', 'africa', 'M-Pesa, launched in Kenya in 2007, is famous for…', [['Sending money by mobile phone', true], ['Being Africa’s first railway', false, 'It is a mobile money service.'], ['Being Kenya’s biggest safari park', false, 'It is mobile banking.'], ['Being a famous Nairobi football club', false, 'It is mobile money.']], 'It reached people without bank accounts and is copied around the world.'),
   mcq('af.rift', 'africa', 'What is the Great Rift Valley?', [['East African land pulling apart', true], ['A long river valley in West Africa', false, 'It is a valley system, mainly in East Africa.'], ['A canal dug across the continent', false, 'It formed naturally.'], ['A desert in southern Africa', false, 'It runs through Ethiopia, Kenya and Tanzania.']], 'Some of the oldest human fossils have been found along it.'),
   mcq('af.stereotype', 'africa', 'Which is a MISLEADING stereotype about Africa?', [['That it is one poor country', true], ['That it has 54 countries', false, 'That is a fact.'], ['That it has huge, growing cities', false, 'Lagos, Cairo, Kinshasa and Johannesburg are huge.'], ['That it has deserts and rainforests', false, 'All true: it is hugely varied.']], 'Africa has some of the world’s fastest-growing economies alongside very poor regions: like any continent, it is varied.'),
@@ -212,7 +212,7 @@ const items = [
 
   // --- China
   mcq('cn.onechild', 'china', 'China’s one-child policy ran from about 1980 to 2015. What is one long-term effect?', [['An ageing population', true], ['A sudden population explosion', false, 'It slowed growth sharply.'], ['More girls than boys being born', false, 'The opposite: a preference for sons led to more boys.'], ['No lasting effect at all', false, 'Its effects will last for decades.']], 'China now encourages families to have up to three children, but many choose to have one or none.'),
-  mcq('cn.gorges', 'china', 'What is a benefit of the Three Gorges Dam on the Yangtze River?', [['Huge amounts of hydroelectric power', true], ['Nobody had to move home for it', false, 'More than a million people were relocated.'], ['More silt now reaches the sea', false, 'It traps silt behind the dam.'], ['It made the river safe to swim in', false, 'It is one of the largest power stations in the world.']], 'Costs included lost farmland, flooded towns and historic sites, and changes to river ecosystems.'),
+  mcq('cn.gorges', 'china', 'What is a benefit of the Three Gorges Dam on the Yangtze River?', [['Huge amounts of hydroelectric power', true], ['Nobody had to move home for it', false, 'More than a million people were relocated.'], ['More silt now reaches the sea', false, 'It traps silt behind the dam.'], ['It made the river safe to swim in', false, 'Its benefits are power, flood control and shipping, not swimming.']], 'Costs included lost farmland, flooded towns and historic sites, and changes to river ecosystems.'),
   mcq('cn.shenzhen', 'china', 'Shenzhen grew from a small town to a city of over 10 million people in about 40 years. Why?', [['It became a Special Economic Zone', true], ['Gold was discovered there in 1980', false, 'It was government economic policy.'], ['It became China’s new capital', false, 'Beijing is the capital.'], ['It has a cool mountain climate', false, 'It is in the warm south, next to Hong Kong.']], 'Special Economic Zones offered low taxes and cheap labour to foreign investors.'),
   mcq('cn.emit', 'china', 'Which statement about China and carbon dioxide is correct?', [['It emits most in total, but not per person', true], ['It emits almost none at all', false, 'It burns a great deal of coal.'], ['It emits the most per person in the world', false, 'Some smaller, richer countries emit more per person.'], ['It has almost no renewable energy', false, 'It builds more solar and wind power than any other country.']], 'Total and per-person figures tell different stories: both matter.'),
   fact('cn.yellow', 'china', 'Which Chinese river has been called “China’s Sorrow” because of its deadly floods?', 'the Yellow River', ['the Yangtze River', 'the Mekong River', 'the Pearl River'], 'Its yellow silt raises the riverbed, so floods can break through embankments across the flat plain.', C),
@@ -231,7 +231,7 @@ const items = [
 
   // --- Brazil and the Amazon
   mcq('bz.share', 'brazil', 'About how much of the Amazon rainforest is in Brazil?', [['About 60%', true], ['All of it', false, 'It spreads across nine countries, including Peru and Colombia.'], ['About 5%', false, 'Brazil has the largest share by far.'], ['None', false, 'Brazil has most of it.']], 'The Amazon covers about 5.5 million km².'),
-  mcq('bz.lungs', 'brazil', 'The Amazon is often called “the lungs of the planet”. Why do scientists say this is misleading?', [['It uses most of the oxygen it makes', true], ['The Amazon makes no oxygen at all', false, 'It makes plenty, but uses most of it itself.'], ['It breathes in oxygen at night only', false, 'It is a metaphor.'], ['It produces more carbon than it stores', false, 'It is the largest rainforest on Earth.']], 'Burning it releases stored carbon, which speeds up climate change.'),
+  mcq('bz.lungs', 'brazil', 'The Amazon is often called “the lungs of the planet”. Why do scientists say this is misleading?', [['It uses most of the oxygen it makes', true], ['The Amazon makes no oxygen at all', false, 'It makes plenty, but uses most of it itself.'], ['It breathes in oxygen at night only', false, 'It is a metaphor.'], ['It produces more carbon than it stores', false, 'Taken as a whole it still stores vast amounts of carbon, though fires and clearing are releasing more.']], 'Burning it releases stored carbon, which speeds up climate change.'),
   mcq('bz.road', 'brazil', 'How did the Trans-Amazonian Highway, begun in the 1970s, speed up deforestation?', [['It opened the forest to settlers', true], ['Its traffic pollution killed the trees', false, 'It was the access it gave, not the cars.'], ['It flooded large areas of the forest', false, 'Roads do not flood forests; dams can.'], ['It had no effect on the forest', false, 'Deforestation often follows new roads.']], 'Satellite images show a “fishbone” pattern of clearing along side roads.'),
   fact('bz.soy', 'brazil', 'Apart from cattle ranching, which crop, grown largely for animal feed, has driven forest clearing in Brazil?', 'soya', ['coffee', 'tea', 'cotton'], 'Much of it is exported to feed pigs and chickens in China and Europe.', { accept: ['soy', 'soybeans', 'soya beans'] }),
   mcq('bz.indigenous', 'brazil', 'Why do many scientists argue that protecting indigenous peoples’ land rights helps protect the rainforest?', [['Their forest is cleared far less', true], ['Indigenous peoples do not live in the Amazon', false, 'Hundreds of indigenous groups live there.'], ['It is cheaper to cut the forest down', false, 'The question is about protection.'], ['Indigenous people own all the land already', false, 'Most depend on the forest.']], 'Satellite maps show forest boundaries that match territory boundaries.'),
@@ -240,8 +240,8 @@ const items = [
   written('bz.w', 'brazil', '“Protecting the Amazon is the responsibility of the whole world, not just Brazil.” How far do you agree?', ['Why the Amazon matters globally (carbon, climate, biodiversity, rainfall)', 'Brazil’s point of view: development, jobs, sovereignty, poverty', 'Ideas for shared responsibility (funding, buying choices, supply chains)', 'A clear judgement'], 'I largely agree, because the Amazon matters to everyone. It stores enormous amounts of carbon, so clearing and burning it speeds up climate change worldwide; it recycles rainfall that farms far beyond the forest depend on; and it holds a huge share of the world’s species. However, it is mostly Brazilian territory, and Brazil has the right to make its own decisions and to develop. Farming, mining and roads bring jobs and income, and many Brazilians are poor. So responsibility should be shared. Richer countries can fund protection, for example by paying to keep forests standing, and consumers and companies can refuse beef and soya grown on newly cleared land. Brazil, in turn, can enforce its laws and protect indigenous territories. The world should share the cost, but Brazil must lead.'),
 
   // --- the EU and borders
-  fact('eu.members', 'eu', 'How many member countries has the European Union had since the UK left in 2020?', '27', ['15', '28', '50'], 'The UK left on 31 January 2020, four years after the 2016 referendum.'),
-  mcq('eu.three', 'eu', 'Which statement is TRUE?', [['Not every EU country uses the euro', true], ['Every EU country uses the euro', false, 'Several, such as Poland, Sweden and Denmark, still use their own currencies.'], ['Schengen and the EU are the same group', false, 'Some non-EU countries such as Norway and Switzerland are in Schengen.'], ['The UK is still in the Schengen area', false, 'The UK never joined Schengen, and has now left the EU.']], 'The euro is shared by 20 EU countries; Schengen removes routine passport checks at most internal borders.'),
+  fact('eu.members', 'eu', 'How many member countries has the European Union had since the UK left in 2020?', '27', ['15', '28', '50'], 'The UK left on 31 January 2020, three and a half years after the 2016 referendum.'),
+  mcq('eu.three', 'eu', 'Which statement is TRUE?', [['Not every EU country uses the euro', true], ['Every EU country uses the euro', false, 'Several, such as Poland, Sweden and Denmark, still use their own currencies.'], ['Schengen and the EU are the same group', false, 'Some non-EU countries such as Norway and Switzerland are in Schengen.'], ['The UK is still in the Schengen area', false, 'The UK never joined Schengen, and has now left the EU.']], 'The euro is shared by 21 EU countries (Bulgaria joined in 2026); Schengen removes routine passport checks at most internal borders.'),
   fact('eu.schengen', 'eu', 'The agreement that removed routine passport checks between most European countries is named after a village in…', 'Luxembourg', ['France', 'Belgium', 'Germany'], 'Schengen is a small village where the agreement was signed in 1985, near where Luxembourg, France and Germany meet.', C),
   fact('eu.rome', 'eu', 'The European Economic Community, which grew into the EU, was set up by the Treaty of Rome in which year?', '1957', ['1918', '1945', '1992'], 'Six countries started it, partly to make another war between France and Germany impossible.'),
   mcq('eu.movement', 'eu', 'What does “freedom of movement” in the EU mean?', [['EU citizens can live and work in any EU country', true], ['Anyone in the world can move to the EU', false, 'It applies to EU citizens.'], ['Goods can cross borders with no taxes', false, 'That is the single market for goods; free movement is about people.'], ['Countries can move their borders freely', false, 'It is about people.']], 'UK citizens lost this right in the EU when Brexit took effect.'),
@@ -266,14 +266,14 @@ const items = [
   mcq('fw.primary', 'fieldwork', 'Which of these is PRIMARY data?', [['A traffic count you did yourself', true], ['Census statistics from a government website', false, 'Data collected by someone else is secondary.'], ['A newspaper article', false, 'Secondary.'], ['A textbook map', false, 'Secondary.']], 'Primary data: you collected it. Secondary data: someone else did.'),
   fact('fw.qual', 'fieldwork', 'Interview answers, sketches and photographs are examples of which type of data?', 'qualitative data', ['quantitative data', 'secondary data', 'continuous data'], 'Qualitative data is descriptive; quantitative data is numbers you can measure or count.', C),
   mcq('fw.gis', 'fieldwork', 'What is a GIS?', [['Software that layers data on maps', true], ['A satellite navigation compass', false, 'It is software.'], ['A satellite that takes photos', false, 'Satellites can provide data, but a GIS is the system that maps and analyses it.'], ['A kit for testing soil samples', false, 'It is about digital maps.']], 'For example, layering flood risk, housing and school locations helps planners decide where to build.'),
-  mcq('fw.remote', 'fieldwork', 'Why are satellite images useful for studying the Amazon?', [['They show clearing over huge areas', true], ['They count every individual animal', false, 'They are not that detailed.'], ['They replace the need for fieldwork', false, 'Ground checks are still needed.'], ['They see clearly through thick cloud', false, 'Most images need daylight, though radar can see through cloud.']], 'Collecting data from a distance like this is called remote sensing.'),
+  mcq('fw.remote', 'fieldwork', 'Why are satellite images useful for studying the Amazon?', [['They show clearing over huge areas', true], ['They count every individual animal', false, 'They are not that detailed.'], ['They replace the need for fieldwork', false, 'Ground checks are still needed.'], ['They see clearly through thick cloud', false, 'Ordinary satellite photos cannot see through cloud, though radar can.']], 'Collecting data from a distance like this is called remote sensing.'),
   mcq('fw.reliable', 'fieldwork', 'How could you make a traffic survey more reliable?', [['Repeat the counts and average them', true], ['Count for one minute at rush hour', false, 'A tiny sample is unreliable.'], ['Estimate the numbers by eye', false, 'Data must be measured.'], ['Count only the cars, not lorries', false, 'That would give a biased sample.']], 'Bigger, repeated samples reduce the effect of unusual results.'),
   written('fw.w', 'fieldwork', 'Plan a fieldwork enquiry to test this hypothesis: “The environmental quality of a town gets better further from the centre.”', ['How you would sample sites (e.g. systematic along a transect)', 'What you would measure (e.g. an environmental quality survey, litter, noise, traffic)', 'At least one source of secondary data', 'How you would present and analyse the results', 'One way to make it reliable, and one risk to manage'], 'I would draw a transect from the town centre outwards and use systematic sampling, stopping every 200 metres. At each site I would complete an environmental quality survey, scoring things like litter, noise, traffic and green space from −2 to +2, and take a photograph. I would also count the number of cars passing in two minutes. For secondary data I would use crime or house-price maps from the internet. I would present the scores on a line graph against distance from the centre and test the pattern with a scatter graph. To make it reliable, two people would score each site and I would repeat it on a second day. I would carry out a risk assessment, for example for busy roads, and work in a group.'),
 
   // --- sustainability
   fact('su.goals', 'sustainability', 'How many Sustainable Development Goals did the United Nations agree in 2015?', '17', ['8', '10', '50'], 'They run to 2030 and include ending poverty, zero hunger, clean water, climate action and quality education.'),
   mcq('su.define', 'sustainability', 'Which is the best definition of sustainable development?', [['Meeting today’s needs without harming the future', true], ['Making as much money as fast as possible', false, 'That may not be sustainable.'], ['Stopping all new building and industry', false, 'Sustainability is about how we develop, not stopping.'], ['Using only solar and wind power', false, 'Energy is one part, but the idea is much wider.']], 'This definition comes from the 1987 Brundtland Report.'),
-  fact('su.mdg', 'sustainability', 'The Sustainable Development Goals replaced which earlier set of eight goals (2000–2015)?', 'the Millennium Goals', ['the Paris Agreement', 'the Kyoto Protocol', 'the Rio Earth Summit'], 'The Millennium Goals halved extreme poverty, but missed many targets.', C),
+  fact('su.mdg', 'sustainability', 'The Sustainable Development Goals replaced which earlier set of eight goals (2000–2015)?', 'the Millennium Development Goals', ['the Paris Agreement', 'the Kyoto Protocol', 'the Rio Earth Summit'], 'The Millennium Goals halved extreme poverty, but missed many targets.', C),
   mcq('su.three', 'sustainability', 'Sustainability is often described as having three parts. What are they?', [['Environmental, social and economic', true], ['Water, food and clean air', false, 'Those are resources, not the three parts.'], ['Political, cultural and technological', false, 'Those are other ways to analyse an issue; the three pillars are environmental, social and economic.'], ['Local, national and global', false, 'Those are scales.']], 'A truly sustainable project protects the environment, treats people fairly and pays its way.'),
   mcq('su.circular', 'sustainability', 'What is a circular economy?', [['Products reused and recycled, not binned', true], ['Money circulating around a town', false, 'That is the multiplier effect; a circular economy is about loops of materials.'], ['Trading only with neighbouring countries', false, 'It is about materials, not trade partners.'], ['Using only renewable energy sources', false, 'It is about resources.']], 'It replaces “take, make, throw away” with loops of reuse.'),
   mcq('su.fairtrade', 'sustainability', 'How does the Fairtrade mark aim to help farmers in poorer countries?', [['It guarantees a minimum price', true], ['It removes import taxes', false, 'Shoppers still pay.'], ['It bans exports of raw crops', false, 'It supports exports on fairer terms.'], ['It only applies to UK farmers', false, 'It is for producers in poorer countries.']], 'Coffee, cocoa and bananas are common Fairtrade products.'),
@@ -299,7 +299,7 @@ const items = [
 
   // --- urban models (GCSE taster)
   order('um.burgess', 'urban-models', 'Put the zones of the Burgess model in order, from the centre outwards.', ['Central business district (CBD)', 'Inner city (factories and older terraced housing)', 'Inner suburbs', 'Outer suburbs', 'Rural–urban fringe'], null, 'Ernest Burgess described these rings around Chicago in the 1920s. Real cities fit it only roughly.'),
-  mcq('um.cbd', 'urban-models', 'Why are buildings in the central business district (CBD) usually tall?', [['Land there is the most expensive', true], ['The ground there is the firmest', false, 'It is about land value.'], ['Tall buildings are required by law', false, 'It is about cost.'], ['The tall buildings were built first', false, 'Lifts help with that.']], 'Shops and offices compete for the most accessible land, which drives prices up.'),
+  mcq('um.cbd', 'urban-models', 'Why are buildings in the central business district (CBD) usually tall?', [['Land there is the most expensive', true], ['The ground there is the firmest', false, 'It is about land value.'], ['Tall buildings are required by law', false, 'It is about cost.'], ['The tall buildings were built first', false, 'Age is not the reason: high land prices make building upwards worth it.']], 'Shops and offices compete for the most accessible land, which drives prices up.'),
   mcq('um.terrace', 'urban-models', 'In many British cities, rows of terraced houses near the centre were built mainly…', [['in the 1800s, for factory workers', true], ['in the 1990s for city commuters', false, 'Modern estates are usually further out.'], ['in the 1950s to replace bomb damage', false, 'Post-war housing was mostly estates and tower blocks.'], ['in the countryside for farm workers', false, 'They were built in the inner city.']], 'Workers had to walk to the factories, so housing was packed in close by.'),
   mcq('um.fringe', 'urban-models', 'Which land use is typical of the rural–urban fringe?', [['Retail parks and golf courses', true], ['Skyscraper offices and banks', false, 'Those are in the CBD.'], ['Old Victorian factories', false, 'Those are in the inner city.'], ['City-centre shopping streets', false, 'Those are in the CBD.']], 'Cheap, flat land and easy motorway access attract big developments to the edge of cities.'),
   mcq('um.hoyt', 'urban-models', 'How does the Hoyt sector model differ from the Burgess model?', [['It adds wedges along transport routes', true], ['It only shows the countryside', false, 'It is a city model too.'], ['It puts factories in the outer suburbs', false, 'It shows industry along routes like railways and rivers.'], ['It shows the city as a grid of blocks', false, 'Hoyt added sectors.']], 'Homer Hoyt suggested in 1939 that cities grow outward along roads, railways and rivers.'),
@@ -308,9 +308,251 @@ const items = [
   // --- resources and conflict (GCSE taster)
   mcq('rc.arctic', 'resources-conflict', 'Why is the Arctic becoming more contested?', [['Melting ice opens routes and resources', true], ['It is getting colder and icier', false, 'It is warming faster than almost anywhere.'], ['Its sea ice is growing every year', false, 'Arctic sea ice is shrinking, not growing.'], ['It is protected like Antarctica', false, 'There is no treaty for the Arctic like the Antarctic Treaty.']], 'Routes such as the Northern Sea Route along Russia’s coast are becoming usable in summer.'),
   mcq('rc.rare', 'resources-conflict', 'Rare earth elements and cobalt are vital for phones, batteries and wind turbines. Why does this matter geographically?', [['They are mined in only a few countries', true], ['They are found in every country', false, 'They are concentrated in a few places.'], ['They are easy to recycle from phones', false, 'Recycling them is still difficult and rare.'], ['They can never run out', false, 'They are finite.']], 'Much of the world’s cobalt comes from the Democratic Republic of the Congo, sometimes in dangerous conditions.'),
-  mcq('rc.water', 'resources-conflict', 'Which is the best example of countries COOPERATING over a shared river?', [['A treaty sharing water and flood data', true], ['One country building a dam without telling', false, 'That can cause tension.'], ['Polluting the river upstream', false, 'That harms neighbours downstream.'], ['Closing the river to foreign boats', false, 'That is not cooperation.']], 'The Indus Waters Treaty of 1960 between India and Pakistan lasted for decades despite their rivalry.'),
+  mcq('rc.water', 'resources-conflict', 'Which is the best example of countries COOPERATING over a shared river?', [['A treaty sharing water and flood data', true], ['One country building a dam without telling', false, 'That can cause tension.'], ['Polluting the river upstream', false, 'That harms neighbours downstream.'], ['Closing the river to foreign boats', false, 'That is not cooperation.']], 'The Indus Waters Treaty of 1960 between India and Pakistan survived several wars between them, though India suspended it in 2025.'),
   mcq('rc.finite', 'resources-conflict', 'Which of these is a NON-RENEWABLE resource?', [['Oil', true], ['Wind', false, 'Wind is renewable.'], ['Sunlight', false, 'Renewable.'], ['Timber from a well-managed forest', false, 'Managed forests can be renewable.']], 'Non-renewable resources such as oil, coal and gas will eventually run out.'),
   written('rc.w', 'resources-conflict', 'Explain why shared or scarce resources can lead to tension between countries. Use at least one example.', ['Why scarcity or sharing causes tension (upstream–downstream, competing claims)', 'A named example (e.g. the Nile, the Euphrates, the Arctic)', 'How tension could be reduced (treaties, data sharing)', 'A brief conclusion'], 'Resources cause tension when they are scarce or when more than one country depends on them. Rivers are a clear example, because the country upstream can control how much water flows downstream. Ethiopia’s Grand Ethiopian Renaissance Dam on the Blue Nile will provide electricity for development, but Egypt, which depends almost entirely on the Nile, fears its water supply will fall. Similarly, as Arctic sea ice melts, countries such as Russia, Canada and Norway are competing to claim newly reachable seabed resources and shipping routes. Tension can be reduced through treaties that share resources fairly, such as the 1960 Indus Waters Treaty between India and Pakistan, and by sharing data and benefits. Cooperation is possible, but it needs trust and agreed rules.'),
 ];
+
+// ---------------------------------------------------------------------------------------------
+// Memory hooks (separate block: merged into the topics and items above; ids must exist).
+// TOPIC_HOOKS is keyed by topic id without “geography.”; MEMORY by item id without “geography.m.”.
+// ---------------------------------------------------------------------------------------------
+const TOPIC_HOOKS = {
+  storms: 'Same storm, different names: hurricane (Atlantic), typhoon (north-west Pacific), cyclone (Indian Ocean and South Pacific).',
+  'uk-extremes': 'Weather warnings are traffic lights: yellow be aware, amber be prepared, red take action.',
+  'uk-landscapes': 'Old, hard rocks in the north and west make the uplands; younger, softer rocks in the south and east make the lowlands.',
+  farming: 'Dry and flat in the east: crops. Wet and hilly in the west: sheep.',
+  'water-food': 'Rivers ignore borders: whoever is upstream holds the tap.',
+  tourism: 'Tourism can love a place to death: the trick is sharing the benefits without wrecking the place.',
+  deserts: 'A desert is defined by dryness, not heat: under 250 mm of rain a year.',
+  polar: 'Arctic: an ocean ringed by land, with polar bears. Antarctica: land ringed by ocean, with penguins.',
+  oceans: 'With about 71% of its surface under the sea, Earth could be called Planet Ocean.',
+  africa: 'Africa is a continent of 54 countries, not one country.',
+  nigeria: 'Nigeria is named after the River Niger; Lagos is its megacity, Abuja its capital.',
+  china: 'In about forty years China went from a land of farms to “the workshop of the world”.',
+  india: 'India’s year turns on the monsoon: months of dry weather, then the rain that feeds the country.',
+  brazil: 'Brazil holds about 60% of the Amazon: what Brazil decides, the whole planet feels.',
+  eu: 'Three different clubs: the EU (27 members), the euro (shared money) and Schengen (no routine passport checks).',
+  regeneration: 'Brownfield is brown like old bricks (built on before); greenfield is green like grass (never built on).',
+  fieldwork: 'Ask, collect, present, analyse, conclude, then evaluate: examiners love that last step.',
+  sustainability: 'Meet today’s needs without stealing from tomorrow’s.',
+  'places-2': 'Capitals are not always the biggest city: Canberra, Ottawa, Brasília and Pretoria were chosen on purpose.',
+  decisions: 'Options, stakeholders, costs and benefits, a choice, a justification: then say why you rejected the rest.',
+  'urban-models': 'Burgess is a dartboard with the CBD as the bullseye; Hoyt slices the city like a pizza along its transport routes.',
+  'resources-conflict': 'Scarce or shared resources breed tension: rivers, the Arctic seabed and the metals in your phone.',
+};
+
+const MEMORY = {
+  // tropical storms
+  'ts.conditions': { hook: 'Storm recipe: sea above about 27 °C, warm moist air rising, and the Earth’s spin to set it turning.', example: 'The Atlantic hurricane season runs from June to November, when the ocean is warmest.' },
+  'ts.equator': { hook: 'No spin at 0°: the Coriolis effect is zero on the Equator, so storms need about 5° of latitude to start turning.' },
+  'ts.names': { hook: 'Typhoon for Tokyo (north-west Pacific); hurricane for the Atlantic; cyclone for the Indian Ocean.' },
+  'ts.eye': { hook: 'The eye is the calm at the centre: the eyewall whirling round it is the most violent part.' },
+  'ts.scale': { hook: 'Saffir–Simpson for Storms, Richter for Rocking ground, Beaufort for Breezes.' },
+  'ts.surge': { hook: 'Low pressure lets the sea bulge up; fierce winds then shove that bulge onto the coast.', example: 'In 1953 a North Sea storm surge flooded the east coast of England, killing over 300 people.' },
+  'ts.katrina': { hook: 'Katrina shows wealth is not enough: when the levees broke, the poorest were hit hardest.' },
+  'ts.land': { hook: 'Take away the warm sea and the storm starves: no fuel, no fire.' },
+
+  // UK extremes
+  'uk.beast': { hook: 'Beast from the East: a winter wind from the east brings Siberian cold instead of mild Atlantic air.' },
+  'uk.names': { hook: 'UK storm names go A to Z, alternating male and female, but skip Q, U, X, Y and Z.', example: 'Storm Eunice, in February 2022, brought a record English gust of 122 mph at the Needles on the Isle of Wight.' },
+  'uk.cold': { hook: 'Height plus distance from the warm sea makes the Scottish Highlands the UK’s freezer.', example: 'Braemar, in the Cairngorms, has hit −27.2 °C twice, in 1895 and 1982.' },
+  'uk.drought': { hook: 'Drought responses grow step by step: save water, then a hosepipe ban, then standpipes in the street.', example: 'In the drought of 1976, the government even appointed a Minister for Drought.' },
+  'uk.why-floods': { hook: 'Every 1 °C warmer, air holds about 7% more water vapour: a bigger sponge to wring out.', example: 'Storm Desmond, in December 2015, dropped a UK record 341 mm of rain in 24 hours at Honister Pass in Cumbria.' },
+  'uk.warning': { hook: 'Traffic lights for weather: yellow be aware, amber be prepared, red take action.', example: 'In July 2022 the Met Office issued its first ever red warning for extreme heat.' },
+
+  // UK landscapes
+  'ul.tees': { hook: 'Draw a line from the Tees to the Exe: hard and high to the north-west, soft and low to the south-east.' },
+  'ul.granite': { hook: 'Granite is grainy: big crystals grew slowly as the magma cooled deep underground.', example: 'Haytor and Hound Tor are two of Dartmoor’s best-known granite tors.' },
+  'ul.chalk': { hook: 'Chalk is made of the skeletons of tiny sea plankton: a whole cliff of ancient sea life.', example: 'The Seven Sisters in East Sussex are chalk cliffs; nearby Beachy Head rises about 160 m above the sea.' },
+  'ul.karst': { hook: 'Grikes are the Gaps; clints are the blocks between them.', example: 'Malham Cove is a curved limestone cliff about 80 m high, with a limestone pavement along its top.' },
+  'ul.ben': { hook: 'Ben Nevis is 1,345 m: the digits 1-3-4-5, almost counting up.', example: 'The National Three Peaks Challenge climbs Ben Nevis, Scafell Pike and Snowdon (Yr Wyddfa).' },
+  'ul.lough': { hook: 'Lough Neagh wins on area; Loch Ness wins on volume.', example: 'Loch Ness holds more water than all the lakes in England and Wales put together.' },
+  'ul.park': { hook: 'The Peak was at the peak of the list: the first national park, in 1951.', example: 'The 1932 mass trespass on Kinder Scout helped win the right to roam that led to national parks.' },
+  'ul.weathering': { hook: 'Water grows by about 9% when it freezes: ice is a wedge that splits rock apart.', example: 'The Wastwater Screes in the Lake District are huge slopes of rock broken off by freeze–thaw.' },
+
+  // farming
+  'fm.east': { hook: 'East is for eating crops: flat, dry and sunny, perfect for combine harvesters.', example: 'The Fens of Cambridgeshire and Lincolnshire have some of the richest farmland in England.' },
+  'fm.west': { hook: 'Wet and steep makes grass grow and tractors slip: perfect for sheep.', example: 'Hardy Herdwick sheep graze the Lake District fells.' },
+  'fm.intensive': { hook: 'Intensive = intense effort on a little land; extensive = extends over a lot of land.', example: 'Heated glasshouses growing tomatoes are very intensive; hill sheep farms are extensive.' },
+  'fm.subsistence': { hook: 'Subsistence: just enough to subsist (survive), with nothing left over to sell.' },
+  'fm.humus': { hook: 'Humus is nature’s compost; hummus is a dip. One extra m, a very different meal.' },
+  'fm.erosion': { hook: 'Plough across the slope, not down it: each furrow becomes a little dam.', example: 'Britain’s hedgerows act as windbreaks and help hold the soil in place.' },
+  'fm.green': { hook: 'Green Revolution = more grain from every field, thanks to new seeds, fertiliser and irrigation.', example: 'In the Punjab in India, wheat harvests soared, but pumping groundwater for irrigation has drained the water table.' },
+  'fm.miles': { hook: 'Food miles: count the journey from field to fork.', example: 'Strawberries in a UK supermarket in January have often travelled from Spain or Morocco.' },
+
+  // water and food security
+  'wf.stress': { hook: 'Below 1,700 is stress; below 1,000 is scarcity (cubic metres per person per year).' },
+  'wf.virtual': { hook: 'Virtual water is the hidden water in what you buy: a burger is very thirsty food.', example: 'One cotton T-shirt can take around 2,700 litres of water to make, mostly for growing the cotton.' },
+  'wf.desal': { hook: 'Desalination: de- means “remove”, sal is Latin for “salt”.' },
+  'wf.euphrates': { hook: 'Upstream holds the tap; downstream gets what is left.' },
+  'wf.nile': { hook: 'Egypt is “the gift of the Nile”, as the Greek historian Herodotus put it.', example: 'Almost all Egyptians live on the narrow green strip beside the Nile and in its delta.' },
+  'wf.kielder': { hook: 'Kielder Water holds about 200 billion litres, more than any other artificial lake in the UK.', example: 'It is surrounded by Kielder Forest, the largest planted forest in England.' },
+  'wf.food': { hook: 'Food security: enough food, safe food and healthy food, for everyone, all the time.', example: 'Food banks in UK towns show that food insecurity exists even in rich countries.' },
+  'wf.increase': { hook: 'Fix the leaks first: the cheapest water is the water you do not waste.', example: 'Water companies in England lose roughly a fifth of their supply through leaking pipes.' },
+
+  // tourism
+  'tr.butler': { hook: 'Butler’s cycle is a life story: discovered, grows up, peaks, gets tired, then fades or reinvents itself.', example: 'Blackpool boomed as a seaside resort, then declined, and has tried to rejuvenate with new attractions.' },
+  'tr.multiplier': { hook: 'Tourist money ripples outwards like a pebble dropped in a pond.', example: 'A visitor’s lunch in a Cornish café pays the cook, who spends the wages in the village shop.' },
+  'tr.leakage': { hook: 'Leakage: money leaks out of the bucket before it reaches local people.' },
+  'tr.eco': { hook: 'Ecotourism: take only photographs, leave only footprints.', example: 'Gorilla-trekking permits in Rwanda pay for conservation and for local communities.' },
+  'tr.venice': { hook: 'Overtourism: too many day-trippers, not enough locals.', example: 'Fewer than 50,000 people now live in Venice’s historic centre.' },
+  'tr.kenya': { hook: 'Too many minibuses round one cheetah: watching wildlife can harm the wildlife.' },
+  'tr.share': { hook: 'All-inclusive = all the money stays inside the resort walls.' },
+
+  // deserts
+  'ds.define': { hook: 'Desert means dry, not hot: Antarctica is a desert of ice.' },
+  'ds.sahara': { hook: 'Sahara means “desert” in Arabic, so “Sahara Desert” really means “Desert Desert”.', example: 'Saharan dust sometimes blows all the way to the UK and leaves an orange film on cars.' },
+  'ds.atacama': { hook: 'Doubly dry: the Andes block wet air from the east, and a cold ocean current chills the air from the west.', example: 'NASA has tested Mars rover equipment in the Atacama because its dry soil is so like Mars.' },
+  'ds.sahel': { hook: 'Sahel means “shore”: the shoreline of the great sea of sand.', example: 'The Sahel crosses countries including Senegal, Mali, Niger, Chad and Sudan.' },
+  'ds.causes': { hook: 'The three overs: overgrazing, over-cultivation and over-cutting of trees.' },
+  'ds.wall': { hook: 'A wall made of trees and farms, not bricks.' },
+  'ds.cactus': { hook: 'Cactus survival kit: spines for leaves, a fat stem for a water tank, and roots spread out like a net.' },
+
+  // polar regions
+  'pl.difference': { hook: 'Arktos is Greek for “bear”, after the Great Bear stars in the north; Ant-arctic is the opposite end.' },
+  'pl.ice': { hook: 'Nine-tenths of the world’s ice sits on one continent.', example: 'If all of Antarctica’s ice melted, sea levels would rise by about 58 m.' },
+  'pl.treaty': { hook: 'Antarctica: a continent for science and peace, owned by no one.', example: 'The British Antarctic Survey runs research stations there, such as Rothera and Halley.' },
+  'pl.sea-level': { hook: 'Ice cubes in a glass: melting floating ice barely changes the level; tipping in more ice from outside does.' },
+  'pl.albedo': { hook: 'Albedo comes from the Latin albus, “white”: white surfaces reflect sunlight, dark ones soak it up.', example: 'It is why a black T-shirt feels hotter than a white one on a sunny day.' },
+  'pl.daylight': { hook: 'Tilt, not distance: the pole leaning towards the Sun gets the midnight sun.', example: 'In northern Norway the midnight sun shines through the night in June.' },
+  'pl.vault': { hook: 'Svalbard’s seed vault is a Noah’s Ark for the world’s crops.', example: 'In 2015 it sent seeds back to scientists whose seed bank in Syria had been cut off by war.' },
+  'pl.amundsen': { hook: 'Amundsen first, Scott second: Amundsen relied on dogs and skis.', example: 'Scott’s earlier ship, RRS Discovery, can be visited in Dundee.' },
+
+  // oceans
+  'oc.share': { hook: 'About seven-tenths of the Earth is sea: 71% blue.' },
+  'oc.deep': { hook: 'Drop Everest into the Mariana Trench and its summit would still be about 2 km under water.' },
+  'oc.patch': { hook: 'Gyres are giant ocean whirlpools that sweep floating rubbish into the middle, like tea leaves in a stirred cup.' },
+  'oc.micro': { hook: 'Micro means small: microplastics are under 5 mm, smaller than a grain of rice.', example: 'Washing fleeces and other synthetic clothes releases tiny plastic fibres into the water.' },
+  'oc.coral': { hook: 'Bleached coral has lost its colourful algae lodgers: no algae, no food, just a white skeleton.', example: 'The Great Barrier Reef, off north-east Australia, is the largest coral reef system on Earth.' },
+  'oc.acid': { hook: 'Carbon dioxide + seawater = a weak acid, like the fizz in sparkling water.' },
+  'oc.cod': { hook: 'Fish faster than they breed and the bank runs empty.', example: 'Catch quotas for North Sea cod are set every year to stop it going the same way.' },
+
+  // Africa
+  'af.count': { hook: '54 countries: visit one a week and you would still need more than a year.' },
+  'af.kili': { hook: 'Kilimanjaro: snow on a volcano just south of the Equator.', example: 'Kilimanjaro is often called the tallest free-standing mountain in the world.' },
+  'af.victoria': { hook: 'Lake Victoria: Africa’s biggest lake, shared by three countries, and a source of the White Nile.', example: 'The explorer John Hanning Speke named it after Queen Victoria in 1858.' },
+  'af.young': { hook: 'Africa is the youngest continent: half its people are under about 19.', example: 'Niger has one of the youngest populations in the world.' },
+  'af.mpesa': { hook: 'Pesa is Swahili for “money”: M-Pesa is mobile money.' },
+  'af.rift': { hook: 'A rift is a tear: East Africa is very slowly ripping apart.', example: 'Lake Tanganyika, in the rift, is the second-deepest lake in the world.' },
+  'af.stereotype': { hook: 'Africa is not a country: think 54 stories, not one.' },
+  'af.languages': { hook: 'Swahili, Hausa, Yoruba, Amharic, Zulu: five of well over a thousand languages.', example: 'Swahili is spoken by tens of millions of people across East Africa.' },
+
+  // Nigeria
+  'ng.pop': { hook: 'Nigeria is Africa’s population giant: over 200 million people.' },
+  'ng.nee': { hook: 'NEE = Newly Emerging Economy: growing fast, from farming into industry and services.' },
+  'ng.oil': { hook: 'Oil money flows to the cities; oil spills stay in the Delta.', example: 'A 2011 UN report found that oil pollution in Ogoniland, in the Niger Delta, could take decades to clean up.' },
+  'ng.nollywood': { hook: 'N for Nigeria + Hollywood = Nollywood, just as Bollywood comes from Bombay.' },
+  'ng.indep': { hook: '1960 was the “Year of Africa”: 17 African countries won independence, including Nigeria.' },
+  'ng.lagos': { hook: 'Lagos grows two ways: people arriving and babies being born.', example: 'Lagos is built on islands and around lagoons, so flooding and rising seas are serious threats.' },
+  'ng.groups': { hook: 'North, south-west, south-east: Hausa-Fulani, Yoruba, Igbo.' },
+
+  // China
+  'cn.onechild': { hook: 'Fewer children then means fewer workers now and more grandparents to look after later.' },
+  'cn.gorges': { hook: 'Three Gorges: one dam, huge power, over a million people moved.', example: 'Its reservoir is about 600 km long: longer than the straight-line distance from London to Edinburgh.' },
+  'cn.shenzhen': { hook: 'SEZ = Special Economic Zone: special rules to welcome foreign factories.' },
+  'cn.emit': { hook: 'Biggest in total, not per person: a huge family can use more than a small one even if each member uses less.' },
+  'cn.yellow': { hook: 'The Yellow River is named after its yellow silt, the same silt that raises its bed.', example: 'Its flood of 1887 is thought to have killed hundreds of thousands of people, perhaps more.' },
+  'cn.hukou': { hook: 'Hukou = where your household is registered: move to the city and your rights may not move with you.' },
+  'cn.belt': { hook: 'The Belt is the overland route and the Road is the sea route: a new Silk Road.' },
+
+  // India
+  'in.monsoon': { hook: 'Monsoon comes from the Arabic mawsim, “season”.' },
+  'in.depend': { hook: 'No monsoon, no harvest: India’s farms run on the summer rain.' },
+  'in.ganges': { hook: 'Ganga Ma, “Mother Ganges”: Hindus honour the river as a goddess.', example: 'At Varanasi, pilgrims bathe in the river from stone steps called ghats.' },
+  'in.wet': { hook: 'Monsoon winds slam into the hills and rise: relief rain at its most extreme.', example: 'Mawsynram gets roughly 20 times as much rain as London in a year.' },
+  'in.moon': { hook: 'Chandra is Sanskrit for “Moon”: Chandrayaan means “Moon craft”.' },
+
+  // Brazil
+  'bz.share': { hook: 'About 60% in Brazil; the rest is shared by eight other countries and territories.', example: 'The Amazon rainforest is more than 20 times the size of the UK.' },
+  'bz.lungs': { hook: 'The Amazon breathes in roughly as much oxygen as it breathes out.' },
+  'bz.road': { hook: 'Roads first, chainsaws next: a fishbone pattern of clearing.' },
+  'bz.soy': { hook: 'Soya feeds animals more than people: much of it ends up as chicken and pork.' },
+  'bz.indigenous': { hook: 'Forest peoples are forest guardians: on satellite images, the green often stops where their land ends.' },
+  'bz.manaus': { hook: 'Manaus: a tax-free factory zone in the middle of the rainforest.', example: 'Manaus’s grand opera house, built during the rubber boom of the 1890s, still stands.' },
+  'bz.river': { hook: 'Discharge is how much water is discharged each second, measured in cumecs (cubic metres per second).' },
+
+  // the EU
+  'eu.members': { hook: '28 minus the UK = 27.' },
+  'eu.three': { hook: 'EU, euro, Schengen: three clubs with overlapping but different members.', example: 'Bulgaria swapped its lev for the euro on 1 January 2026.' },
+  'eu.schengen': { hook: 'Schengen is a tiny village near the point where Luxembourg, France and Germany meet.', example: 'The agreement was signed in 1985 aboard a boat on the River Moselle.' },
+  'eu.rome': { hook: 'Rome, 1957, six founders: France, West Germany, Italy, Belgium, the Netherlands and Luxembourg.' },
+  'eu.movement': { hook: 'The single market’s four freedoms: goods, services, money and people.' },
+  'eu.ireland': { hook: 'No hard border: no checkpoints or customs posts on the island of Ireland.', example: 'The border runs for about 500 km through fields, lakes and villages, and hundreds of roads cross it.' },
+  'eu.capital': { hook: 'Brussels is the EU’s base: the European Commission works from the Berlaymont building.' },
+
+  // regeneration
+  'rg.brownfield': { hook: 'Brownfield is brown like old bricks; greenfield is green like grass.' },
+  'rg.docklands': { hook: 'Bigger ships needed deeper water: the port moved downstream to Tilbury.' },
+  'rg.canary': { hook: 'Gentrification: wealthier newcomers (the “gentry”) move in, prices rise, locals get priced out.' },
+  'rg.olympic': { hook: 'Stratford: from polluted industrial land to an Olympic Park.', example: 'The former Olympic Stadium in Stratford is now the home of West Ham United.' },
+  'rg.greenbelt': { hook: 'A green belt is a belt round a city’s waist, stopping it spreading outwards.' },
+  'rg.counter': { hook: 'Counter means “against”: moving against the flow, out of the cities.' },
+  'rg.dlr': { hook: 'Sit at the very front of a DLR train for the driver’s view: there is no driver’s cab.' },
+
+  // fieldwork
+  'fw.enquiry': { hook: 'Ask, collect, present, analyse, conclude, evaluate: finish by judging your own work.' },
+  'fw.systematic': { hook: 'Systematic = a system: every 50 cm, every tenth house, every 200 m.' },
+  'fw.stratified': { hook: 'Strata are layers: stratified sampling takes each layer in its true proportion.' },
+  'fw.primary': { hook: 'Primary = first-hand, collected by you; secondary = second-hand, collected by someone else.' },
+  'fw.qual': { hook: 'Qualitative = qualities (words, pictures); quantitative = quantities (numbers).' },
+  'fw.gis': { hook: 'A GIS is a stack of see-through maps: lay one over another and patterns appear.', example: 'In 1854 Dr John Snow mapped cholera deaths around a water pump in Soho, London: a GIS on paper.' },
+  'fw.remote': { hook: 'Remote sensing: sensing from far away, by satellite or aircraft.' },
+  'fw.reliable': { hook: 'Repeat it, average it, trust it more.' },
+
+  // sustainability
+  'su.goals': { hook: '17 goals by 2030: think “17 by 30”.' },
+  'su.define': { hook: 'Do not steal from your grandchildren: leave enough for the people who come after you.' },
+  'su.mdg': { hook: 'Eight Millennium Goals (2000–2015), then 17 Sustainable Development Goals (to 2030).' },
+  'su.three': { hook: 'Planet, People, Profit: environmental, social and economic.' },
+  'su.circular': { hook: 'A straight line goes take, make, throw away; a circle goes make, use, remake.' },
+  'su.fairtrade': { hook: 'Fairtrade sets a floor: farmers are never paid below a minimum price.' },
+  'su.footprint': { hook: 'Every journey, meal and light switch leaves a carbon footprint.', example: 'A return flight from London to New York adds roughly a tonne of carbon dioxide per passenger.' },
+
+  // decisions
+  'dc.steps': { hook: 'Options, people, pros and cons, pick, prove.' },
+  'dc.stakeholder': { hook: 'A stakeholder has a stake (an interest) in what happens.' },
+  'dc.coast': { hook: 'Spend the money where it protects the most people and property.' },
+  'dc.sustain': { hook: 'Use the judge’s words: although, however, on balance, therefore.' },
+  'dc.conflict': { hook: 'Find who gains and who loses: that is where the conflict lies.' },
+
+  // urban models
+  'um.burgess': { hook: 'Like the rings of a dartboard: the CBD is the bullseye, and housing gets newer and greener further out.' },
+  'um.cbd': { hook: 'Everyone wants the centre, so land costs most there: build upwards.', example: 'The Gherkin and other towers crowd the City of London, where land is among the most expensive in Britain.' },
+  'um.terrace': { hook: 'No cars or buses: workers had to live within walking distance of the mill.', example: 'Rows of back-to-back terraces once packed the streets around the mills of Leeds and Manchester.' },
+  'um.fringe': { hook: 'The fringe is the edge of the rug, where city and countryside overlap.', example: 'Out-of-town centres such as the Trafford Centre near Manchester and Meadowhall near Sheffield draw shoppers by car.' },
+  'um.hoyt': { hook: 'Burgess is a dartboard; Hoyt is a pizza, sliced along the roads, railways and rivers.' },
+
+  // resources and conflict
+  'rc.arctic': { hook: 'Less ice, more access: new sea routes and seabed oil and gas.', example: 'In 2007 a Russian mini-submarine planted a flag on the seabed at the North Pole.' },
+  'rc.rare': { hook: 'Your phone is a world map: its metals come from many countries, but a few supply most of them.', example: 'China produces most of the world’s rare earth elements.' },
+  'rc.water': { hook: 'Share the data, share the water, keep the peace.' },
+  'rc.finite': { hook: 'Non-renewable = no refills: once it is burned, it is gone.' },
+
+  // capitals (only where a link genuinely helps)
+  'plc.arg': { hook: 'Buenos Aires means “good airs”.' },
+  'plc.bra': { hook: 'Seen from the air, Brasília’s plan looks like an aeroplane or a bird with spread wings.' },
+  'plc.can': { hook: 'Queen Victoria picked Ottawa in 1857: it sits on the river between English- and French-speaking Canada.' },
+  'plc.ken': { hook: 'Nairobi comes from the Maasai words for “cool water”.' },
+  'plc.zaf': { hook: 'Pretoria governs, Cape Town makes the laws, Bloemfontein judges.' },
+  'plc.mli': { hook: 'Bamako, not Timbuktu: Timbuktu is famous, but lies far away on the edge of the Sahara.' },
+  'plc.sau': { hook: 'Mecca is the holy city, but Riyadh is the capital.' },
+  'plc.pak': { hook: 'Islamabad means “city of Islam”: it was built as a brand-new capital in the 1960s.' },
+  'plc.vnm': { hook: 'Hanoi in the north is the capital; Ho Chi Minh City (once Saigon), in the south, is bigger.' },
+  'plc.kor': { hook: 'Seoul is South Korea’s capital; Pyongyang is North Korea’s.' },
+  'plc.aus': { example: 'Canberra was designed by the American architects Walter Burley Griffin and Marion Mahony Griffin.' },
+  'plc.nzl': { hook: 'Wellington is named after the Duke of Wellington, who won the Battle of Waterloo.' },
+};
+
+for (const [id, hook] of Object.entries(TOPIC_HOOKS)) {
+  const topic = topics.find((t) => t.id === `geography.${id}`);
+  if (!topic) throw new Error(`TOPIC_HOOKS: no topic geography.${id}`);
+  topic.hook = hook;
+}
+for (const [id, extra] of Object.entries(MEMORY)) {
+  const item = items.find((it) => it.id === `geography.m.${id}`);
+  if (!item) throw new Error(`MEMORY: no item geography.m.${id}`);
+  Object.assign(item, extra);
+}
 
 export default [{ subject: 'geography', deck: 'y8-more', topics, items }];

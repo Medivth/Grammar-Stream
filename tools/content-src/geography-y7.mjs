@@ -44,7 +44,7 @@ const items = [
   fact('rv.mouth', 'rivers', 'Where a river meets the sea is called its…', 'mouth', ['source', 'tributary', 'watershed'], 'The mouth is where the river ends, at the sea or a lake.'),
   fact('rv.tributary', 'rivers', 'A smaller river that joins a bigger one is called a…', 'tributary', ['confluence', 'meander', 'delta'], 'Tributaries join the main river at a confluence.'),
   fact('rv.confluence', 'rivers', 'The place where two rivers meet is called a…', 'confluence', ['tributary', 'source', 'levee'], 'Many towns grew at confluences, such as Pittsburgh, or Koblenz on the Rhine and Moselle.'),
-  fact('rv.basin', 'rivers', 'The area of land drained by a river and its tributaries is called a…', 'drainage basin', ['floodplain', 'watershed', 'valley'], 'The edge of a drainage basin, usually high ground, is the watershed.'),
+  fact('rv.basin', 'rivers', 'The area of land drained by a river and its tributaries is called a…', 'drainage basin', ['floodplain', 'estuary', 'valley'], 'The edge of a drainage basin, usually high ground, is the watershed.'),
   fact('rv.hydraulic', 'rivers', 'Which type of erosion is the sheer force of water forcing air into cracks in the riverbank?', 'hydraulic action', ['abrasion', 'attrition', 'solution'], 'Hydraulic action: the force of water. Abrasion: rocks scraping the bed. Attrition: rocks knocking each other smaller. Solution: dissolving rock.'),
   fact('rv.attrition', 'rivers', 'Which process makes stones smaller and rounder as they knock into each other?', 'attrition', ['abrasion', 'hydraulic action', 'deposition'], 'That is why stones near a river’s mouth are small and smooth.'),
   fact('rv.saltation', 'rivers', 'Pebbles bouncing along a river bed are being transported by…', 'saltation', ['traction', 'suspension', 'solution'], 'Traction: big boulders rolled. Saltation: pebbles bounced. Suspension: fine silt carried in the water. Solution: dissolved minerals.'),
@@ -132,7 +132,7 @@ const WORLD = [
 ];
 const ZOOM = { americas: ['North America', 'South America'], africa: ['Africa'], asia: ['Asia', 'Oceania'] };
 const ACCEPT_CAP = { USA: ['Washington', 'Washington DC'], BRA: ['Brasilia'], COL: ['Bogota'], IND: ['Delhi'], ZAF: ['Cape Town', 'Bloemfontein'] };
-const ACCEPT_NAME = { USA: ['USA', 'United States of America', 'America', 'the US'], COD: ['DR Congo', 'DRC', 'Congo'] };
+const ACCEPT_NAME = { USA: ['USA', 'United States of America', 'America', 'the US'], COD: ['DR Congo', 'DRC', 'Democratic Republic of Congo'] };
 
 for (const [id, name, capital, wrong, topic, note] of WORLD) {
   items.push({ id: `geography.w.${id.toLowerCase()}`, topic: `geography.${topic}`, kind: 'mapfact', map: 'world', layer: 'countries', feature: id, zoom: ZOOM[topic], answer: name, accept: ACCEPT_NAME[id] || [], choosePrompt: 'Which country is highlighted?', explain: `This is ${the(name)}.` });

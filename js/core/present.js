@@ -62,6 +62,22 @@ export function templateLevel(item, state, rng) {
  * @param card FSRS card or undefined
  * @param ctx { db, state, rng, level? (template override), format? (override) }
  */
+// Generated text says “1 part”, not “1 parts”; “an 8”, not “a 8”; and “n + 5”, not “1n + 5”.
+const ONE = /(?<![\d.,−-])1 (parts|lots|tens|ones|tenths|hundredths|thousandths|elements|litres|hours|minutes|seconds|metres|days|weeks|pupils|steps|jumps|groups|left over still need)\b/g;
+const SINGULAR = { parts: 'part', lots: 'lot', tens: 'ten', ones: 'one', tenths: 'tenth', hundredths: 'hundredth', thousandths: 'thousandth', elements: 'element', litres: 'litre', hours: 'hour', minutes: 'minute', seconds: 'second', metres: 'metre', days: 'day', weeks: 'week', pupils: 'pupil', steps: 'step', jumps: 'jump', groups: 'group', 'left over still need': 'left over still needs' };
+export function tidyText(t) {
+  if (typeof t !== 'string') return t;
+  return t.replace(ONE, (_, w) => `1 ${SINGULAR[w]}`)
+    .replace(/\b([Aa]) (8\d*|11|18)(?![\d])/g, (_, a, n) => `${a}n ${n}`)
+    .replace(/(?<![\d.^])1([nx])\b/g, '$1');
+}
+function tidyGenerated(q) {
+  for (const k of ['prompt', 'explain', 'answer']) if (typeof q[k] === 'string') q[k] = tidyText(q[k]);
+  if (Array.isArray(q.steps)) q.steps = q.steps.map(tidyText);
+  if (Array.isArray(q.options)) q.options = q.options.map((o) => (typeof o.text === 'string' ? { ...o, text: tidyText(o.text), feedback: tidyText(o.feedback) } : o));
+  return q;
+}
+
 export function present(item, card, { db, state, rng, level, format }) {
   const base = { itemId: item.id, topicId: item.topic, subject: item.subject, explain: item.explain, source: item.source, passage: item.passage, passageSource: item.passageSource, hook: item.hook, example: item.example, layer: item.layer || (item.map === 'europe' ? 'countries' : item.map === 'uk' ? 'features' : undefined), group: item.group };
   let q;
@@ -105,7 +121,7 @@ export function present(item, card, { db, state, rng, level, format }) {
     case 'template': {
       const lv = level ?? templateLevel(item, state, rng);
       const g = GENERATORS[item.gen](lv, rng);
-      q = { ...base, fmt: 'template', ...g, level: lv, explain: g.explain };
+      q = tidyGenerated({ ...base, fmt: 'template', ...g, level: lv, explain: g.explain });
       break;
     }
     default:

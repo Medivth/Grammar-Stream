@@ -22,7 +22,7 @@ const topics = [
 ];
 
 const COUNTRIES = [
-  ['GBR', 'United Kingdom', 'This is the UK, where we live: England, Scotland, Wales and Northern Ireland.', ['UK', 'Britain', 'Great Britain']],
+  ['GBR', 'United Kingdom', 'This is the UK, where we live: England, Scotland, Wales and Northern Ireland.', ['UK', 'Britain']],
   ['FRA', 'France', 'France is our neighbour, across the English Channel. Its capital is Paris.', []],
   ['USA', 'United States', 'The USA is a huge country in North America. Astronauts went to the Moon from here.', ['USA', 'America', 'United States of America']],
   ['CHN', 'China', 'China has more people than almost any other country, and the Great Wall of China.', []],
@@ -62,11 +62,11 @@ const items = [
   fact('dn.ptero', 'dinosaurs', 'Pterosaurs flew in the sky at the time of the dinosaurs. What did they use to fly?', 'wings made of skin', ['feathers like eagles', 'propellers', 'balloons'], 'Their wings were stretched skin, a bit like a bat’s.', C),
   // --- hot and cold
   fact('hc.desert', 'hotcold', 'A very dry place with very little rain is called a…', 'desert', ['rainforest', 'swamp', 'glacier'], 'The Sahara in Africa is the biggest hot desert.', { accept: ['a desert'] }),
-  mcq('hc.camel', 'hotcold', 'How is a camel suited to the desert?', [['It can go a long time without water', true], ['It has thick fur to keep it cool', false, 'Its fur is quite thin; its body is built to save water.'], ['It swims to find water to drink', false, 'There is very little water in a desert!']], 'Camels store fat in their humps and can go days without water.'),
+  mcq('hc.camel', 'hotcold', 'How is a camel suited to the desert?', [['It can go a long time without water', true], ['It has thick blubber like a seal', false, 'Blubber is for cold seas. A camel’s body is built to save water.'], ['It swims to find water to drink', false, 'There is very little water in a desert!']], 'Camels store fat in their humps and can go days without water.'),
   mcq('hc.polar', 'hotcold', 'How is a polar bear suited to the Arctic?', [['Thick fur and fat keep it warm', true], ['It sleeps in the warm sun all day', false, 'The Arctic is cold: it needs fur and fat.'], ['It has thin skin to stay cool', false, 'It needs to stay warm, not cool.']], 'White fur also helps it hide in the snow.'),
   fact('hc.rainforest', 'hotcold', 'A hot, wet forest near the Equator is called a…', 'rainforest', ['desert', 'tundra', 'woodland'], 'The Amazon rainforest in South America is the biggest.', { accept: ['rain forest', 'jungle'] }),
   fact('hc.arctic', 'hotcold', 'The cold area around the North Pole is called the…', 'Arctic', ['Antarctic', 'Equator', 'Sahara'], 'Polar bears live in the Arctic. Penguins live in the Antarctic, at the other end!', { accept: ['arctic'] }),
-  mcq('hc.penguin-bear', 'hotcold', 'Would a penguin ever meet a polar bear in the wild?', [['No: they live at opposite ends', true], ['Yes, they are best friends', false, 'They live at opposite ends of the Earth!'], ['Yes, at the hot Equator', false, 'Neither lives at the hot Equator.']], 'Polar bears: Arctic (north). Penguins: Antarctic and southern seas.'),
+  mcq('hc.penguin-bear', 'hotcold', 'Would a penguin ever meet a polar bear in the wild?', [['No: they live at opposite ends', true], ['Yes, they are best friends', false, 'They live at opposite ends of the Earth!'], ['Yes, at the hot Equator', false, 'Polar bears never go anywhere near the hot Equator.']], 'Polar bears: Arctic (north). Penguins: Antarctic and southern seas.'),
   mcq('hc.equator', 'hotcold', 'Why is it hot near the Equator?', [['The Sun shines straight down there', true], ['It is much closer to the Moon', false, 'The Moon doesn’t heat the Earth.'], ['There are more volcanoes there', false, 'It is because of the Sun.']], 'Direct sunlight is strongest, so the Equator is hot all year.'),
   fact('hc.igloo', 'hotcold', 'Inuit people in the Arctic used to build winter shelters from blocks of snow. What are they called?', 'igloos', ['tents', 'castles', 'huts'], 'Snow traps air, so an igloo keeps people surprisingly warm.', { accept: ['igloo'] }),
   // --- countries
@@ -84,7 +84,7 @@ const items = [
   mcq('cs.lighthouse', 'coasts', 'What is a lighthouse for?', [['To warn ships about dangerous rocks', true], ['To light up the beach for swimmers', false, 'It shines out to sea for ships.'], ['To grow plants', false, 'It is a tower with a bright light.']], 'The flashing light warns sailors at night.'),
   mcq('cs.human', 'coasts', 'Which is a HUMAN feature at the seaside?', [['a pier', true], ['a cliff', false, 'Cliffs are made by nature.'], ['sand dunes', false, 'Dunes are formed by the wind.']], 'Piers, harbours and lighthouses are built by people.'),
   // --- exploring space
-  fact('ex.first', 'explore', 'Who was the first person ever to go into space, in 1961?', 'Yuri Gagarin', ['Neil Armstrong', 'Tim Peake', 'Buzz Aldrin'], 'Yuri Gagarin, from the Soviet Union (now Russia), orbited the Earth once in 1961.', { accept: ['gagarin'] }),
+  fact('ex.first', 'explore', 'Who was the first person ever to go into space, in 1961?', 'Yuri Gagarin', ['Neil Armstrong', 'Tim Peake', 'Buzz Aldrin'], 'Yuri Gagarin, from the Soviet Union (he was born in what is now Russia), orbited the Earth once in 1961.', { accept: ['gagarin'] }),
   fact('ex.moon', 'explore', 'Who was the first person to walk on the Moon?', 'Neil Armstrong', ['Yuri Gagarin', 'Tim Peake', 'Helen Sharman'], 'In 1969, on the Apollo 11 mission.', { accept: ['armstrong'] }),
   fact('ex.sharman', 'explore', 'Who was the first British astronaut, in 1991?', 'Helen Sharman', ['Tim Peake', 'Neil Armstrong', 'Queen Victoria'], 'Helen Sharman was a chemist who went to the Mir space station.', { accept: ['sharman'] }),
   fact('ex.peake', 'explore', 'Which British astronaut lived on the International Space Station in 2015 and 2016?', 'Tim Peake', ['Helen Sharman', 'Yuri Gagarin', 'Buzz Aldrin'], 'Tim Peake even ran a marathon on a treadmill in space!', { accept: ['peake'] }),

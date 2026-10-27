@@ -6,7 +6,7 @@ import { timeWords } from './ks1maths.js';
 
 const money = (p) => (p >= 100 ? `£${(p / 100).toFixed(2)}` : `${p}p`);
 const pad = (n) => String(n).padStart(2, '0');
-const RACERS = ['Turbo', 'Blaze', 'Rosa', 'Captain Nova', 'Bleep the droid', '{hero}'];
+const RACERS = ['Turbo', 'Blaze', 'Rosa', 'Captain Nova', 'Bleep the robot', '{hero}'];
 function choice(prompt, correct, wrongs, rng, extra = {}) {
   const seen = new Set([correct]);
   const ws = wrongs.map((w) => (typeof w === 'string' ? { text: w } : w)).filter((w) => !seen.has(w.text) && seen.add(w.text));
@@ -119,7 +119,7 @@ export const Y3_GENERATORS = {
         let a, k; do { a = rng.int(150, 880); k = rng.int(2, 9); } while (digits(a)[1] + k < 10 || a + k * 10 > 999);
         return typed(`${a} + ${k * 10} =`, a + k * 10, `${digits(a)[1]} tens + ${k} tens = ${digits(a)[1] + k} tens, which crosses into the next hundred: ${a + k * 10}.`, [`${a} has ${digits(a)[1]} tens.`, `${digits(a)[1]} + ${k} = ${digits(a)[1] + k} tens: that is 1 hundred and ${digits(a)[1] + k - 10} tens.`, `${a + k * 10}.`]);
       }
-      let a, k; do { a = rng.int(120, 990); k = rng.int(2, 9); } while (digits(a)[2] >= k || digits(a)[1] === 0);
+      let a, k; do { a = rng.int(120, 990); k = rng.int(2, 9); } while (digits(a)[2] >= k || digits(a)[2] === 0 || digits(a)[1] === 0);
       return typed(`${a} − ${k} =`, a - k, `There aren’t enough ones, so I cross back over a ten: ${a} − ${digits(a)[2]} = ${a - digits(a)[2]}, then − ${k - digits(a)[2]} more = ${a - k}.`, [`Split ${k} into ${digits(a)[2]} and ${k - digits(a)[2]}.`, `${a} − ${digits(a)[2]} = ${a - digits(a)[2]}.`, `${a - digits(a)[2]} − ${k - digits(a)[2]} = ${a - k}.`]);
     }
     const k = rng.pick([99, 98, 199, 101, 201]), add = rng.chance(0.5);
@@ -200,7 +200,7 @@ export const Y3_GENERATORS = {
   y3Divide(level, rng) {
     if (level === 1) {
       const d = rng.pick([2, 3, 4, 5, 8, 10]), q = rng.int(2, 12), who = rng.pick(['Captain Nova', '{hero}', 'Rosa']);
-      return typed(`${who} shares ${d * q} space crystals equally between ${d} droids. How many does each droid get?`, q, `${d * q} ÷ ${d} = ${q}, because ${q} × ${d} = ${d * q}.`, ['Sharing equally means dividing.', `${d * q} ÷ ${d}.`, `${q} each. Check: ${q} × ${d} = ${d * q}.`]);
+      return typed(`${who} shares ${d * q} space crystals equally between ${d} robots. How many does each robot get?`, q, `${d * q} ÷ ${d} = ${q}, because ${q} × ${d} = ${d * q}.`, ['Sharing equally means dividing.', `${d * q} ÷ ${d}.`, `${q} each. Check: ${q} × ${d} = ${d * q}.`]);
     }
     if (level === 2) {
       let d, q; do { d = rng.pick([2, 3, 4, 5]); q = rng.int(13, 24); } while (d * q >= 100);
@@ -223,14 +223,14 @@ export const Y3_GENERATORS = {
     }
     if (level === 2) {
       const d = rng.pick([3, 4, 5, 8, 10]), n = rng.int(2, d - 1), k = rng.int(2, 10);
-      return typed(`{{${n}/${d}}} of ${d * k} =`, n * k, `{{1/${d}}} of ${d * k} is ${k}, so {{${n}/${d}}} is ${n} × ${k} = ${n * k}.`, [`First find {{1/${d}}}: ${d * k} ÷ ${d} = ${k}.`, `I need ${n} of those parts.`, `${n} × ${k} = ${n * k}.`]);
+      return typed(`{{${n}/${d}}} of ${d * k} =`, n * k, n === 1 ? `{{1/${d}}} of ${d * k} is ${d * k} ÷ ${d} = ${k}.` : `{{1/${d}}} of ${d * k} is ${k}, so {{${n}/${d}}} is ${n} × ${k} = ${n * k}.`, [`First find {{1/${d}}}: ${d * k} ÷ ${d} = ${k}.`, `I need ${n} of those parts.`, `${n} × ${k} = ${n * k}.`]);
     }
     const kind = rng.pick(['whole', 'nonunit-whole', 'measure']);
     if (kind === 'whole') { const d = rng.pick([3, 4, 5, 6, 8]), k = rng.int(3, 12); return typed(`{{1/${d}}} of a number is ${k}. What is the number?`, d * k, `If one part is ${k}, all ${d} parts are ${d} × ${k} = ${d * k}.`, [`The whole has ${d} equal parts.`, `Each part is ${k}.`, `${d} × ${k} = ${d * k}.`]); }
     if (kind === 'nonunit-whole') { const d = rng.pick([4, 5, 8]), n = rng.int(2, d - 1), k = rng.int(2, 9); return typed(`{{${n}/${d}}} of a number is ${n * k}. What is the number?`, d * k, `${n} parts make ${n * k}, so one part is ${k}, and ${d} parts make ${d * k}.`, [`${n} parts = ${n * k}, so 1 part = ${n * k} ÷ ${n} = ${k}.`, `The whole is ${d} parts.`, `${d} × ${k} = ${d * k}.`]); }
     const [what, total, unit] = rng.pick([['1 hour', 60, 'minutes'], ['£1', 100, 'pence'], ['1 metre', 100, 'centimetres']]);
     const d = rng.pick([2, 4, 5, 10].filter((x) => total % x === 0)), n = rng.int(1, d - 1);
-    return typed(`How many ${unit} are in {{${n}/${d}}} of ${what}?`, (total * n) / d, `${what} = ${total} ${unit}. {{1/${d}}} is ${total / d}, so {{${n}/${d}}} is ${(total * n) / d}.`, [`${what} is ${total} ${unit}.`, `{{1/${d}}} of ${total} = ${total / d}.`, `${n} × ${total / d} = ${(total * n) / d}.`]);
+    return typed(`How many ${unit} are in {{${n}/${d}}} of ${what}?`, (total * n) / d, n === 1 ? `${what} = ${total} ${unit}. {{1/${d}}} of ${total} is ${total} ÷ ${d} = ${total / d}.` : `${what} = ${total} ${unit}. {{1/${d}}} is ${total / d}, so {{${n}/${d}}} is ${(total * n) / d}.`, [`${what} is ${total} ${unit}.`, `{{1/${d}}} of ${total} = ${total / d}.`, `${n} × ${total / d} = ${(total * n) / d}.`]);
   },
 
   y3FracCalc(level, rng) {
@@ -290,7 +290,7 @@ export const Y3_GENERATORS = {
     if (level === 2) {
       if (rng.chance(0.5)) { const pay = rng.pick([200, 500, 1000]), cost = rng.int(20, pay / 5 - 2) * 5; return typed(`A model racing car costs ${money(cost)}. You pay with ${money(pay)}. How much change do you get, in pence?`, pay - cost, `${pay}p − ${cost}p = ${pay - cost}p (${money(pay - cost)}).`, [`${money(pay)} = ${pay}p and ${money(cost)} = ${cost}p.`, `Count on from ${cost} to ${pay}.`, `${pay - cost}p.`], { unit: 'p' }); }
       const a = rng.int(21, 79) * 5, b = rng.int(21, 79) * 5;
-      return typed(`A space poster costs ${money(a)} and a rocket kit costs ${money(b)}. How much do they cost altogether, in pence?`, a + b, `${a}p + ${b}p = ${a + b}p (${money(a + b)}).`, [`Change to pence: ${a}p and ${b}p.`, `${a} + ${b}.`, `${a + b}p = ${money(a + b)}.`], { unit: 'p' });
+      return typed(`A space poster costs ${money(a)} and a rocket kit costs ${money(b)}. How much do they cost altogether, in pence?`, a + b, `${a}p + ${b}p = ${a + b}p${a + b >= 100 ? ` (${money(a + b)})` : ''}.`, [`Change to pence: ${a}p and ${b}p.`, `${a} + ${b}.`, `${a + b}p = ${money(a + b)}.`], { unit: 'p' });
     }
     if (rng.chance(0.5)) {
       const n = rng.int(2, 5), c = rng.int(5, 19) * 5, pay = Math.ceil((n * c + 1) / 100) * 100;
@@ -306,7 +306,7 @@ export const Y3_GENERATORS = {
       if (rng.chance(0.7)) {
         let m; do m = rng.int(1, 11) * 5; while ([15, 30, 45].includes(m));
         const right = timeWords(h, m);
-        return choice('What time does the clock show?', right, [timeWords(h, (m + 5) % 60 || 10), timeWords((h % 12) + 1, m), timeWords(h, 60 - m === m ? 25 : 60 - m)], rng, { explain: `The short hand is just past ${h} and the long hand is on ${m / 5}, which means ${m} minutes past: ${right}.`, steps: ['The short hand shows the hour.', `The long hand points to ${m / 5}: count in 5s to get ${m} minutes past.`, right], diagram: { type: 'clock', h, m } });
+        return choice('What time does the clock show?', right, [timeWords(h, (m + 5) % 60 || 10), timeWords((h % 12) + 1, m), timeWords(h, 60 - m === m ? 25 : 60 - m)], rng, { explain: `The short hand is ${m < 30 ? `just past ${h}` : `between ${h} and ${(h % 12) + 1}, getting closer to ${(h % 12) + 1}`} and the long hand is on ${m / 5}, which means ${m} minutes past: ${right}.`, steps: ['The short hand shows the hour.', `The long hand points to ${m / 5}: count in 5s to get ${m} minutes past.`, right], diagram: { type: 'clock', h, m } });
       }
       const morning = rng.chance(0.5), hh = morning ? rng.int(6, 11) : rng.int(1, 8);
       return choice(`${morning ? 'Breakfast' : 'Football practice'} is at ${hh}:${pad(rng.pick([0, 15, 30, 45]))} in the ${morning ? 'morning' : 'afternoon'}. Is that a.m. or p.m.?`, morning ? 'a.m.' : 'p.m.', [morning ? 'p.m.' : 'a.m.'], rng, { explain: 'a.m. is from midnight to midday; p.m. is from midday to midnight.', steps: ['a.m. means before midday.', 'p.m. means after midday.', `${morning ? 'Morning' : 'Afternoon'}, so ${morning ? 'a.m.' : 'p.m.'}`] });
@@ -397,7 +397,7 @@ export const Y3_GENERATORS = {
     }
     if (rng.chance(0.5)) {
       const d = rng.pick([3, 4, 5]), each = rng.int(12, 19), give = rng.int(2, 9);
-      return typed(`Captain Nova has ${d * each} space crystals. She shares them equally between ${d} droids. Each droid then gives ${give} away. How many does each droid have now?`, each - give, `${d * each} ÷ ${d} = ${each}, then ${each} − ${give} = ${each - give}.`, [`Share: ${d * each} ÷ ${d} = ${each} each.`, `Each gives away ${give}.`, `${each} − ${give} = ${each - give}.`]);
+      return typed(`Captain Nova has ${d * each} space crystals. She shares them equally between ${d} robots. Each robot then gives ${give} away. How many does each robot have now?`, each - give, `${d * each} ÷ ${d} = ${each}, then ${each} − ${give} = ${each - give}.`, [`Share: ${d * each} ÷ ${d} = ${each} each.`, `Each gives away ${give}.`, `${each} − ${give} = ${each - give}.`]);
     }
     const n = rng.int(3, 8), price = rng.int(3, 9), pay = Math.ceil((n * price + 1) / 10) * 10;
     return typed(`Grand Prix tickets cost £${price} each. Turbo buys ${n} tickets and pays with £${pay}. How many pounds change does he get?`, pay - n * price, `${n} × £${price} = £${n * price}. £${pay} − £${n * price} = £${pay - n * price}.`, [`Cost: ${n} × ${price} = ${n * price} pounds.`, `Change from £${pay}.`, `${pay} − ${n * price} = ${pay - n * price} pounds.`]);

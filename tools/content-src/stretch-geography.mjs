@@ -16,7 +16,7 @@ const topics = [
 ];
 
 const WORLD = [
-  ['IDN', 'Indonesia', 'Jakarta', ['Asia', 'Oceania'], 'Over 17,000 islands and 270 million people: the world’s fourth most populous country.'],
+  ['IDN', 'Indonesia', 'Jakarta', ['Asia', 'Oceania'], 'Over 17,000 islands and more than 280 million people: the world’s fourth most populous country.'],
   ['PHL', 'Philippines', 'Manila', ['Asia', 'Oceania'], 'More than 7,000 islands in the western Pacific.'],
   ['MYS', 'Malaysia', 'Kuala Lumpur', ['Asia', 'Oceania'], 'Split between the Malay Peninsula and the island of Borneo.'],
   ['MNG', 'Mongolia', 'Ulaanbaatar', ['Asia'], 'The most sparsely populated country on Earth: about 2 people per km².'],
@@ -31,7 +31,7 @@ const WORLD = [
   ['LBY', 'Libya', 'Tripoli', ['Africa'], 'Mediterranean coast, Saharan interior; rich in oil.'],
   ['MDG', 'Madagascar', 'Antananarivo', ['Africa'], 'The world’s fourth largest island; most of its wildlife, including lemurs, lives nowhere else.'],
   ['ETH', null, null, ['Africa'], ''], // placeholder removed below
-  ['BOL', 'Bolivia', null, ['South America'], 'Landlocked, high in the Andes; La Paz is the world’s highest capital city.'],
+  ['BOL', 'Bolivia', null, ['South America'], 'Landlocked, high in the Andes; La Paz, where the government sits, is the world’s highest seat of government (Sucre is the official capital).'],
   ['ECU', 'Ecuador', 'Quito', ['South America'], 'Named after the equator, which runs through it; the Galapagos Islands belong to it.'],
   ['URY', 'Uruguay', 'Montevideo', ['South America'], 'A small country between Brazil and Argentina.'],
   ['GTM', 'Guatemala', 'Guatemala City', ['North America'], 'Heart of the ancient Maya civilisation.'],

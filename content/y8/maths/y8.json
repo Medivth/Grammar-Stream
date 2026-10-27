@@ -9,7 +9,8 @@
    "prereqs": [],
    "intro": "Every whole number above 1 is built from primes in exactly one way: its prime factorisation. Once you have it, HCFs and LCMs fall out almost for free.",
    "teach": "Explain how prime factorisation helps you find the LCM of 84 and 90.",
-   "talk": "Ask {her} why 1 is not counted as a prime number."
+   "talk": "Ask {him} why 1 is not counted as a prime number.",
+   "hook": "Primes are the building blocks: **HCF** takes the primes both numbers share; **LCM** takes every prime, at its highest power."
   },
   {
    "id": "maths.indices",
@@ -20,7 +21,8 @@
    ],
    "intro": "Powers are repeated multiplication, and the index laws (add, subtract, multiply the little numbers) follow from that. Negative and fractional indices are the same idea pushed further.",
    "teach": "Explain why 5⁰ = 1 using the division law.",
-   "talk": "Ask {her} what 2⁻¹ means, and why."
+   "talk": "Ask {him} what 2⁻¹ means, and why.",
+   "hook": "**BIDMAS** sets the order; for powers, **multiply → add** the indices, **divide → subtract**, **power of a power → multiply**."
   },
   {
    "id": "maths.standard-form",
@@ -31,7 +33,8 @@
    ],
    "intro": "Astronomers and atom-scientists both need standard form: A × 10ⁿ with A at least 1 and less than 10. Big numbers have positive powers; tiny ones negative.",
    "teach": "Explain how to multiply two numbers written in standard form.",
-   "talk": "The Sun is about 1.5 × 10⁸ km away. Ask {her} to write it out in full."
+   "talk": "The Sun is about 1.5 × 10⁸ km away. Ask {him} to write it out in full.",
+   "hook": "**A × 10ⁿ with 1 ≤ A < 10**: big numbers get a positive power, tiny ones a negative power."
   },
   {
    "id": "maths.fractions",
@@ -40,7 +43,8 @@
    "prereqs": [],
    "intro": "Adding needs a common denominator; multiplying doesn’t; dividing means multiplying by the reciprocal. Mixed numbers become improper fractions first.",
    "teach": "Explain why dividing by {{2/3}} is the same as multiplying by {{3/2}}.",
-   "talk": "Ask {her} how many {{3/4}}-hour lessons fit into 4½ hours."
+   "talk": "Ask {him} how many {{3/4}}-hour lessons fit into 4½ hours.",
+   "hook": "Adding? Find a common denominator. Dividing? **Keep, Change, Flip**."
   },
   {
    "id": "maths.percentages",
@@ -51,7 +55,8 @@
    ],
    "intro": "Multipliers make percentages quick: a 15% increase is × 1.15. Reverse percentages divide by the multiplier; compound interest multiplies again and again.",
    "teach": "Explain why a 20% rise followed by a 20% fall leaves you worse off.",
-   "talk": "Find a sale price in a shop and ask {her} for the original price."
+   "talk": "Find a sale price in a shop and ask {him} for the original price.",
+   "hook": "Percentages are multipliers: **+15% is × 1.15, −15% is × 0.85**. Reverse a change by dividing."
   },
   {
    "id": "maths.ratio",
@@ -62,7 +67,8 @@
    ],
    "intro": "Ratio compares parts; proportion scales them. Direct proportion goes up together, inverse proportion trades off: more workers, fewer days.",
    "teach": "Explain how to tell whether a problem is direct or inverse proportion.",
-   "talk": "Ask {her} which pack of something in the cupboard is the better value per 100 g."
+   "talk": "Ask {him} which pack of something in the cupboard is the better value per 100 g.",
+   "hook": "**Add the parts, share the total, multiply back**: find what one part is worth first."
   },
   {
    "id": "maths.algebra",
@@ -71,7 +77,8 @@
    "prereqs": [],
    "intro": "Algebra is arithmetic with the numbers left unknown. Expanding multiplies out brackets; factorising puts them back. Each undoes the other.",
    "teach": "Explain how you know you have factorised fully.",
-   "talk": "Ask {her} to factorise 12x + 18 and check by expanding."
+   "talk": "Ask {him} to factorise 12x + 18 and check by expanding.",
+   "hook": "Expanding and factorising are opposites, like zipping and unzipping a coat."
   },
   {
    "id": "maths.formulae",
@@ -83,7 +90,8 @@
    ],
    "intro": "Physics, finance and engineering run on formulae. Substitute carefully (brackets round negatives!), and rearrange by undoing the operations in reverse order.",
    "teach": "Explain how to make r the subject of A = πr².",
-   "talk": "Ask {her} to convert today’s temperature to Fahrenheit using F = {{9/5}}C + 32."
+   "talk": "Ask {him} to convert today’s temperature to Fahrenheit using F = {{9/5}}C + 32.",
+   "hook": "Socks on, then shoes; shoes off, then socks: **rearrange by undoing in reverse order**."
   },
   {
    "id": "maths.equations",
@@ -94,7 +102,8 @@
    ],
    "intro": "An equation is a balance: do the same to both sides. With unknowns on both sides, gather the x terms first; with fractions, multiply them away.",
    "teach": "Explain how to solve 5(x − 2) = 3(x + 4).",
-   "talk": "I think of a number, multiply by 4 and subtract 7. I get the same as doubling it and adding 9. Ask {her} for the number."
+   "talk": "I think of a number, multiply by 4 and subtract 7. I get the same as doubling it and adding 9. Ask {him} for the number.",
+   "hook": "An equation is a balance: **whatever you do to one side, do to the other**."
   },
   {
    "id": "maths.inequalities",
@@ -105,7 +114,8 @@
    ],
    "intro": "Inequalities are solved like equations, with one twist: multiplying or dividing by a negative number flips the sign.",
    "teach": "Explain why −2x > 6 gives x < −3, not x > −3.",
-   "talk": "Ask {her} for all the integers that satisfy −2 < n ≤ 3."
+   "talk": "Ask {him} for all the integers that satisfy −2 < n ≤ 3.",
+   "hook": "Solve like an equation, but **multiply or divide by a negative and the sign flips**."
   },
   {
    "id": "maths.sequences",
@@ -116,7 +126,8 @@
    ],
    "intro": "A linear sequence goes up by the same amount each time, so its nth term is dn + c. If the differences themselves go up steadily, it is quadratic.",
    "teach": "Explain how to decide whether 100 is in the sequence 4, 11, 18, …",
-   "talk": "Ask {her} for the nth term of 5, 8, 11, 14, … and its 100th term."
+   "talk": "Ask {him} for the nth term of 5, 8, 11, 14, … and its 100th term.",
+   "hook": "Linear nth term = **difference × n + the zero term** (the term before the first)."
   },
   {
    "id": "maths.graphs",
@@ -127,7 +138,8 @@
    ],
    "intro": "In y = mx + c, m is the gradient (steepness) and c is where the line crosses the y-axis. Parallel lines share a gradient; perpendicular gradients multiply to −1.",
    "teach": "Explain how to find the equation of a line from its graph.",
-   "talk": "Ask {her} which is steeper: y = 3x − 1 or y = −4x + 2."
+   "talk": "Ask {him} which is steeper: y = 3x − 1 or y = −4x + 2.",
+   "hook": "**y = mx + c**: m is the gradient (rise ÷ run), c is where the line cuts the y-axis."
   },
   {
    "id": "maths.angles",
@@ -136,7 +148,8 @@
    "prereqs": [],
    "intro": "Exterior angles of any polygon add to 360°; interior angles add to (n − 2) × 180°. Between parallel lines, F angles and Z angles are equal and C angles add to 180°.",
    "teach": "Explain why the interior angles of a hexagon add up to 720°.",
-   "talk": "Count the sides of a 50p coin and ask {her} for its exterior angle."
+   "talk": "Count the sides of a 50p coin and ask {him} for its exterior angle.",
+   "hook": "**F angles are equal, Z angles are equal, C angles add to 180°**. Exterior angles of any polygon total 360°."
   },
   {
    "id": "maths.area",
@@ -145,7 +158,8 @@
    "prereqs": [],
    "intro": "A trapezium’s area is the average of the parallel sides times the height. For circles, Archimedes showed that π links the radius to both the circumference and the area.",
    "teach": "Explain why the area of a trapezium is ½(a + b)h.",
-   "talk": "Measure round a plate and across it: ask {her} to estimate π."
+   "talk": "Measure round a plate and across it: ask {him} to estimate π.",
+   "hook": "“**Cherry pie’s delicious; apple pies are too**”: C = πd and A = πr²."
   },
   {
    "id": "maths.volume",
@@ -156,7 +170,8 @@
    ],
    "intro": "Every prism has volume = cross-section × length; a cylinder is a prism with a circle for its cross-section. Surface area means unfolding the solid into a net.",
    "teach": "Explain how to find the surface area of a cylinder.",
-   "talk": "Ask {her} to estimate how many litres a bath holds by measuring it."
+   "talk": "Ask {him} to estimate how many litres a bath holds by measuring it.",
+   "hook": "Prism volume = **cross-section × length**, like a loaf of bread: every slice is the same shape."
   },
   {
    "id": "maths.transformations",
@@ -167,7 +182,8 @@
    ],
    "intro": "Reflections, rotations, translations and enlargements move shapes on a grid. Bearings measure direction clockwise from north; scales turn maps into real distances.",
    "teach": "Explain what happens to the area of a shape enlarged by scale factor 3.",
-   "talk": "Use a map app together: ask {her} for the bearing from home to school."
+   "talk": "Use a map app together: ask {him} for the bearing from home to school.",
+   "hook": "Bearings: **from North, Clockwise, in Three figures** (045°, not 45°)."
   },
   {
    "id": "maths.probability",
@@ -178,7 +194,8 @@
    ],
    "intro": "Probabilities run from 0 to 1. Sample spaces list every outcome; Venn diagrams sort overlapping groups; for independent events, multiply.",
    "teach": "Explain why the probability of “at least one” is 1 − P(none).",
-   "talk": "Roll two dice 36 times and compare how often you get a total of 7 with the theory."
+   "talk": "Roll two dice 36 times and compare how often you get a total of 7 with the theory.",
+   "hook": "All the outcomes add to 1, so **P(not A) = 1 − P(A)**. Independent events: **AND means multiply**."
   },
   {
    "id": "maths.statistics",
@@ -189,7 +206,8 @@
    ],
    "intro": "Mean, median and mode each answer “what is typical?” differently. From frequency tables, multiply before you add; for grouped data, midpoints give an estimate.",
    "teach": "Explain when the median is a better average than the mean.",
-   "talk": "Ask {her} to find the mean and median of the family’s shoe sizes."
+   "talk": "Ask {him} to find the mean and median of the family’s shoe sizes.",
+   "hook": "**Mo**de = **mo**st, **med**ian = **mid**dle, mean = add them up and share fairly."
   },
   {
    "id": "maths.reasoning",
@@ -201,7 +219,8 @@
    "batch": 4,
    "intro": "Mathematicians since Euclid have not been content with examples: they want proof. Algebra lets you prove something for EVERY number at once.",
    "teach": "Prove that the sum of three consecutive integers is a multiple of 3.",
-   "talk": "Ask {her} for a counterexample to “all prime numbers are odd”."
+   "talk": "Ask {him} for a counterexample to “all prime numbers are odd”.",
+   "hook": "A million examples never prove a rule, but **one counterexample destroys it**."
   },
   {
    "id": "maths.language",
@@ -211,7 +230,8 @@
    "batch": 5,
    "intro": "Precise words matter: an expression is not an equation, a factor is not a multiple, and an identity is true for every value.",
    "teach": "Explain the difference between an equation, an expression, a formula and an identity.",
-   "talk": "Ask {her} to give an example of each: expression, equation, formula."
+   "talk": "Ask {him} to give an example of each: expression, equation, formula.",
+   "hook": "**Sum** add, **difference** subtract, **product** multiply, **quotient** divide."
   },
   {
    "id": "maths.pythagoras",
@@ -224,7 +244,8 @@
    "tier": "stretch",
    "intro": "In a right-angled triangle, a² + b² = c², where c is the hypotenuse. Pythagoras’ followers in ancient Croton treated numbers almost as sacred.",
    "teach": "Explain how to tell whether you add or subtract the squares.",
-   "talk": "Ask {her} whether a 6, 8, 10 triangle is right-angled, and why."
+   "talk": "Ask {him} whether a 6, 8, 10 triangle is right-angled, and why.",
+   "hook": "**a² + b² = c²**, where c, the hypotenuse, is always the longest side, opposite the right angle."
   },
   {
    "id": "maths.simultaneous",
@@ -236,7 +257,8 @@
    "tier": "stretch",
    "intro": "Two equations, two unknowns: add or subtract the equations to eliminate one letter, solve for the other, then substitute back.",
    "teach": "Explain why you might multiply one equation before eliminating.",
-   "talk": "Two lyres and an owl cost 17 drachmae; one lyre and an owl cost 11. Ask {her} the price of each."
+   "talk": "Two lyres and an owl cost 17 drachmae; one lyre and an owl cost 11. Ask {him} the price of each.",
+   "hook": "**Same Signs Subtract**: if the terms you want to eliminate have the same sign, subtract; if not, add."
   },
   {
    "id": "maths.quadratics",
@@ -248,7 +270,8 @@
    "tier": "stretch",
    "intro": "Multiplying (x + a)(x + b) gives x² + (a + b)x + ab. Factorising runs this backwards: find two numbers that multiply to the constant and add to the middle number.",
    "teach": "Explain how to factorise x² + 7x + 12.",
-   "talk": "Ask {her} to expand (x + 3)² and spot why it is not x² + 9."
+   "talk": "Ask {him} to expand (x + 3)² and spot why it is not x² + 9.",
+   "hook": "For x² + bx + c, find two numbers that **multiply to c and add to b**."
   },
   {
    "id": "maths.trigonometry",
@@ -260,7 +283,8 @@
    "tier": "stretch",
    "intro": "In a right-angled triangle the ratios of the sides depend only on the angle. Hipparchus of Nicaea built the first trigonometric tables over 2,000 years ago to track the stars.",
    "teach": "Explain how to choose between sin, cos and tan.",
-   "talk": "Ask {her} what tan 45° must be, and why."
+   "talk": "Ask {him} what tan 45° must be, and why.",
+   "hook": "**SOH CAH TOA**: Sin = Opposite ÷ Hypotenuse, Cos = Adjacent ÷ Hypotenuse, Tan = Opposite ÷ Adjacent."
   },
   {
    "id": "maths.recurring",
@@ -273,7 +297,8 @@
    "tier": "stretch",
    "intro": "Every fraction is a terminating or a recurring decimal, and every recurring decimal is a fraction. A neat algebra trick (10x − x) proves it.",
    "teach": "Explain how to write 0.7̇ as a fraction.",
-   "talk": "Ask {her} to prove that 0.9̇ = 1."
+   "talk": "Ask {him} to prove that 0.9̇ = 1.",
+   "hook": "One digit repeating? Put it over **9**. Two repeating digits? Over **99**: 0.272727… = 27/99."
   }
  ],
  "items": [
@@ -291,7 +316,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "Prime factor tree: keep splitting until every branch ends in a prime, then circle the primes.",
+   "example": "Two buses leave together, one every 12 minutes, one every 18: they next leave together after LCM(12, 18) = 36 minutes."
   },
   {
    "id": "maths.indices.tmpl",
@@ -307,7 +334,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**BIDMAS**: Brackets, Indices, Division and Multiplication, then Addition and Subtraction.",
+   "example": "Bacteria that double every 20 minutes are 2⁹ = 512 times as many after 3 hours: that is 9 doublings."
   },
   {
    "id": "maths.standard-form.tmpl",
@@ -323,7 +352,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "Count the places the digits jump: that is the power. Big numbers get a **+** power, tiny ones a **−** power.",
+   "example": "A human hair is about 8 × 10⁻⁵ m wide, and the Moon is about 3.8 × 10⁸ m away."
   },
   {
    "id": "maths.fractions.tmpl",
@@ -339,7 +370,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "Dividing fractions: **Keep, Change, Flip**. Keep the first, change ÷ to ×, flip the second.",
+   "example": "A recipe for 4 needs 3/4 of a cup of sugar. For 6 people, multiply by 6/4 = 3/2: 9/8 cups."
   },
   {
    "id": "maths.percentages.tmpl",
@@ -355,7 +388,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Multiplier magic**: 20% off is × 0.8; adding 20% VAT is × 1.2. To undo a change, divide.",
+   "example": "A jacket costs £60 including 20% VAT. Before VAT it was 60 ÷ 1.2 = £50, not £48."
   },
   {
    "id": "maths.ratio.tmpl",
@@ -371,7 +406,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Unitary method**: find the value of one part, then multiply up.",
+   "example": "Squash mixed 1 : 4 with water: a 1-litre jug holds 200 ml of squash and 800 ml of water."
   },
   {
    "id": "maths.algebra.tmpl",
@@ -387,7 +424,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "Expanding: **everything inside the bracket gets multiplied**. Factorising: take out the highest common factor.",
+   "example": "3 bags, each holding x apples and 2 pears, make 3(x + 2) = 3x + 6 pieces of fruit."
   },
   {
    "id": "maths.formulae.tmpl",
@@ -403,7 +442,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Undo in reverse order**: the last thing done to the letter is the first thing you undo.",
+   "example": "A taxi costs £3 plus £2 a mile: C = 3 + 2m. A £15 fare means m = (15 − 3) ÷ 2 = 6 miles."
   },
   {
    "id": "maths.equations.tmpl",
@@ -419,7 +460,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "Think of a see-saw: **do the same to both sides** to keep it level.",
+   "example": "A phone plan is £10 a month plus £2 per GB. A £24 bill means 10 + 2g = 24, so g = 7 GB."
   },
   {
    "id": "maths.inequalities.tmpl",
@@ -435,7 +478,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "The crocodile’s mouth eats the bigger number. Multiply or divide by a negative? **Flip the sign**.",
+   "example": "A ride says you must be at least 120 cm tall: h ≥ 120. Exactly 120 cm is allowed, so it is ≥, not >."
   },
   {
    "id": "maths.sequences.tmpl",
@@ -451,7 +496,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "nth term = **(difference)n + (zero term)**: for 4, 7, 10, … that is 3n + 1.",
+   "example": "A taxi charging £3 plus £2 a mile gives fares of £5, £7, £9, …: nth term 2n + 3."
   },
   {
    "id": "maths.graphs.tmpl",
@@ -467,7 +514,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**y = mx + c**: m is the gradient (rise ÷ run); c is the y-intercept, where the line crosses the y-axis.",
+   "example": "A gym charges £20 to join plus £15 a month: cost y = 15x + 20. The gradient is the monthly fee."
   },
   {
    "id": "maths.angles.tmpl",
@@ -483,7 +532,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "Parallel lines: **F** (corresponding) equal, **Z** (alternate) equal, **C** (co-interior) add to 180°.",
+   "example": "A 50p coin has 7 sides, so each exterior angle is 360° ÷ 7 ≈ 51.4°."
   },
   {
    "id": "maths.area.tmpl",
@@ -499,7 +550,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "Trapezium: **add the parallel sides, halve, times the height**. Circle: **πr²**.",
+   "example": "A 12-inch pizza (radius 6 in) has area 36π ≈ 113 in², over twice the 8-inch pizza’s 16π ≈ 50 in²."
   },
   {
    "id": "maths.volume.tmpl",
@@ -515,7 +568,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "Volume of a prism = **cross-section × length**; a cylinder is just πr² × h.",
+   "example": "A tin 7 cm across and 11 cm tall holds about π × 3.5² × 11 ≈ 423 cm³."
   },
   {
    "id": "maths.transformations.tmpl",
@@ -531,7 +586,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "Bearings: **North, Clockwise, Three figures**. Enlarge by scale factor k and areas grow by k².",
+   "example": "On a 1 : 25 000 map, 4 cm stands for 100 000 cm = 1 km on the ground."
   },
   {
    "id": "maths.probability.tmpl",
@@ -547,7 +604,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**P(not A) = 1 − P(A)**. For independent events, AND means multiply.",
+   "example": "With a 0.3 chance of rain each day (independently), two dry days in a row has probability 0.7 × 0.7 = 0.49."
   },
   {
    "id": "maths.statistics.tmpl",
@@ -563,7 +622,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Mo**de = **mo**st; median = middle; mean = total ÷ how many. From a frequency table: multiply, then add.",
+   "example": "A shoe shop’s mean size might be 5.7, a size nobody wears; the mode tells it which size to stock most."
   },
   {
    "id": "maths.pythagoras.tmpl",
@@ -579,7 +640,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "Finding the long side? Square, **add**, square root. A short side? Square, **subtract**, square root.",
+   "example": "A 4 m ladder with its foot 1 m from a wall reaches √(16 − 1) = √15 ≈ 3.87 m up the wall."
   },
   {
    "id": "maths.simultaneous.tmpl",
@@ -595,7 +658,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Same Signs Subtract**: same sign on the term to remove? Subtract the equations. Different signs? Add.",
+   "example": "2 coffees and a cake cost £8; 1 coffee and a cake cost £5.50. Subtract: a coffee is £2.50, so the cake is £3."
   },
   {
    "id": "maths.quadratics.tmpl",
@@ -611,7 +676,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**FOIL** for double brackets: First, Outer, Inner, Last.",
+   "example": "Make an x m square garden 2 m longer and 2 m wider and its area is (x + 2)² = x² + 4x + 4, not x² + 4."
   },
   {
    "id": "maths.trigonometry.tmpl",
@@ -627,7 +694,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**SOH CAH TOA**: Sin = Opp ÷ Hyp, Cos = Adj ÷ Hyp, Tan = Opp ÷ Adj. Label the sides first.",
+   "example": "Stand 20 m from a tree and look up 35° to its top: it is about 20 × tan 35° ≈ 14 m above your eyes."
   },
   {
    "id": "maths.recurring.tmpl",
@@ -643,7 +712,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "One repeating digit? Over **9**. Two? Over **99**: 0.272727… = 27/99 = 3/11.",
+   "example": "Split £10 three ways and a calculator shows 3.333…: each share is exactly £10/3, which pennies can’t pay."
   },
   {
    "id": "maths.rs.consecutive",
@@ -666,7 +737,9 @@
      "feedback": "True, but it doesn’t show the SUM is a multiple of 3."
     }
    ],
-   "explain": "Writing the integers as n, n + 1, n + 2 covers every case at once, and 3(n + 1) is clearly a multiple of 3."
+   "explain": "Writing the integers as n, n + 1, n + 2 covers every case at once, and 3(n + 1) is clearly a multiple of 3.",
+   "hook": "Three in a row? Call the middle one n: (n − 1) + n + (n + 1) = 3n.",
+   "example": "Any three page numbers in a row, like 41, 42 and 43, add to 3 × 42 = 126."
   },
   {
    "id": "maths.rs.oddodd",
@@ -689,7 +762,9 @@
      "feedback": "2a × 2b = 4ab, and there are two more terms."
     }
    ],
-   "explain": "Anything of the form 2(…) + 1 is odd, so the product of two odd numbers is always odd."
+   "explain": "Anything of the form 2(…) + 1 is odd, so the product of two odd numbers is always odd.",
+   "hook": "**Odd × odd = odd**; one even factor makes any product even.",
+   "example": "5 rows of 7 chairs make 35 seats: odd × odd, so the seats can never all be paired up."
   },
   {
    "id": "maths.rs.prime",
@@ -712,7 +787,9 @@
      "feedback": "1 is not a prime number."
     }
    ],
-   "explain": "2 is prime and even, so one example is enough to disprove the claim."
+   "explain": "2 is prime and even, so one example is enough to disprove the claim.",
+   "hook": "**2 is the odd one out**: the only even prime.",
+   "example": "Black swans, seen by European sailors in Australia in 1697, disproved “all swans are white”: a real counterexample."
   },
   {
    "id": "maths.rs.neg",
@@ -735,7 +812,9 @@
      "feedback": "The convention is fixed: indices before the minus sign."
     }
    ],
-   "explain": "Without brackets, indices come first: −3² = −9. With brackets, (−3)² = 9."
+   "explain": "Without brackets, indices come first: −3² = −9. With brackets, (−3)² = 9.",
+   "hook": "**BIDMAS**: indices come before the minus sign. Want the negative squared? Use brackets: (−3)².",
+   "example": "Type −3² into many calculators and you get −9; type (−3)² to get 9."
   },
   {
    "id": "maths.rs.square",
@@ -758,7 +837,9 @@
      "feedback": "It fails for almost every pair, e.g. 1 and 2."
     }
    ],
-   "explain": "Expanding (a + b)(a + b) gives four terms: a² + ab + ab + b²."
+   "explain": "Expanding (a + b)(a + b) gives four terms: a² + ab + ab + b².",
+   "hook": "(a + b)² means (a + b)(a + b): **four terms, two of them ab**. Don’t lose the middle!",
+   "example": "Grow a 10 cm square tile by 2 cm each way: 12² = 144 = 100 + 40 + 4, not 100 + 4."
   },
   {
    "id": "maths.rs.percent",
@@ -781,7 +862,9 @@
      "feedback": "1.1 × 0.9 = 0.99, which is a decrease."
     }
    ],
-   "explain": "Multipliers: 1.10 × 0.90 = 0.99, a 1% decrease overall."
+   "explain": "Multipliers: 1.10 × 0.90 = 0.99, a 1% decrease overall.",
+   "hook": "Up 10% then down 10% is × 1.1 × 0.9 = **× 0.99**: the fall is 10% of a bigger number.",
+   "example": "A £100 game rises to £110, then a 10% sale cuts it to £99."
   },
   {
    "id": "maths.rs.divide",
@@ -804,7 +887,9 @@
      "feedback": "Try 6 ÷ 0.5 = 12: dividing by a number below 1 makes it bigger."
     }
    ],
-   "explain": "Dividing by a number less than 1 (but more than 0) increases the answer: 6 ÷ 0.5 = 12."
+   "explain": "Dividing by a number less than 1 (but more than 0) increases the answer: 6 ÷ 0.5 = 12.",
+   "hook": "Dividing by a half means **how many halves fit in?** So it doubles.",
+   "example": "Cut 6 pizzas into halves and you get 6 ÷ ½ = 12 pieces."
   },
   {
    "id": "maths.rs.averages",
@@ -827,7 +912,9 @@
      "feedback": "The range measures spread, not a typical value."
     }
    ],
-   "explain": "The median ignores how extreme the outlier is, so it represents the typical runner better."
+   "explain": "The median ignores how extreme the outlier is, so it represents the typical runner better.",
+   "hook": "Outlier alert: one extreme value drags the **mean**, but the **median** stays in the middle.",
+   "example": "If a billionaire walks into a café, the mean wealth soars, but the median customer is no richer."
   },
   {
    "id": "maths.rs.correlation",
@@ -836,7 +923,7 @@
    "prompt": "A scatter graph shows that towns with more ice-cream sales have more sunburn cases. What can you conclude?",
    "options": [
     {
-     "text": "They are correlated, but neither causes the other",
+     "text": "They are correlated, but that does not prove one causes the other",
      "correct": true
     },
     {
@@ -850,7 +937,9 @@
      "feedback": "There is a relationship (a positive correlation), just not a causal one."
     }
    ],
-   "explain": "Correlation shows the two move together; it does not prove that one causes the other."
+   "explain": "Correlation shows the two move together; it does not prove that one causes the other.",
+   "hook": "**Correlation is not causation**: look for a hidden third factor.",
+   "example": "Sales of sun cream and of ice lollies rise together because both follow the sunshine."
   },
   {
    "id": "maths.rs.irrational",
@@ -873,7 +962,9 @@
      "feedback": "Primes are whole numbers with exactly two factors."
     }
    ],
-   "explain": "Irrational numbers (√2, π) have decimals that never end and never repeat. Legend says the discovery shocked the Pythagoreans."
+   "explain": "Irrational numbers (√2, π) have decimals that never end and never repeat. Legend says the discovery shocked the Pythagoreans.",
+   "hook": "Irrational = **can’t be written as a ratio**: its decimal never ends and never repeats.",
+   "example": "An A4 sheet’s long side is √2 times its short side, so halving it keeps the same shape; √2 is irrational."
   },
   {
    "id": "maths.rs.eratosthenes",
@@ -896,7 +987,9 @@
      "feedback": "Compare 7.2° with the full 360°: it is one fiftieth."
     }
    ],
-   "explain": "The distance between the cities is the same fraction of the circumference as 7.2° is of 360°: {{1/50}}. 50 × 800 km = 40,000 km, remarkably close to the true value."
+   "explain": "The distance between the cities is the same fraction of the circumference as 7.2° is of 360°: {{1/50}}. 50 × 800 km = 40,000 km, remarkably close to the true value.",
+   "hook": "Angle fraction = distance fraction: **7.2° is 1/50 of 360°**.",
+   "example": "Sailors once found their latitude the same way, by measuring the angle of the Sun at noon."
   },
   {
    "id": "maths.rs.always",
@@ -919,7 +1012,9 @@
      "feedback": "Squares can end in 1, 5 or 9 too."
     }
    ],
-   "explain": "Factorising gives n(n + 1): two consecutive whole numbers, one of which must be even, so the product is even."
+   "explain": "Factorising gives n(n + 1): two consecutive whole numbers, one of which must be even, so the product is even.",
+   "hook": "**Two neighbours, one is even**: so n(n + 1) is always even.",
+   "example": "Take any two dates in a row, like the 14th and 15th: one is even, so their product is even."
   },
   {
    "id": "maths.lg.expression",
@@ -935,7 +1030,9 @@
    "explain": "An expression is a collection of terms with no equals sign.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**No equals sign, no equation**: an expression is like a phrase without a verb.",
+   "example": "The cost of x cinema tickets at £8 plus £2 for popcorn is the expression 8x + 2: no answer yet."
   },
   {
    "id": "maths.lg.equation",
@@ -951,7 +1048,9 @@
    "explain": "An equation is true only for particular values (here x = 3).",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "An equation is **a question with an answer**: only some values make it true.",
+   "example": "I spent £34 on £8 tickets plus £2 popcorn: 8x + 2 = 34, so x = 4 tickets."
   },
   {
    "id": "maths.lg.identity",
@@ -967,7 +1066,9 @@
    "explain": "An identity (≡) is true whatever the value of the letter.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Three bars, ≡, mean **always, always, always true**, whatever the value.",
+   "example": "Doubling a bill of x + 3 pounds always gives 2x + 6 pounds, whatever x is: 2(x + 3) ≡ 2x + 6."
   },
   {
    "id": "maths.lg.formula",
@@ -983,7 +1084,9 @@
    "explain": "A formula is a rule linking two or more quantities.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "A formula is **a recipe linking quantities**: put values in, get a value out.",
+   "example": "Average speed cameras use speed = distance ÷ time: 1 km in 30 seconds means 120 km/h."
   },
   {
    "id": "maths.lg.coefficient",
@@ -999,7 +1102,9 @@
    "explain": "A coefficient is the number multiplying a letter.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "The coefficient **co-operates** with the letter: it is the number stuck to its front, sign included.",
+   "example": "In a phone bill of 5 + 2g pounds (£2 per GB), the coefficient 2 is the price of each gigabyte."
   },
   {
    "id": "maths.lg.reciprocal",
@@ -1020,7 +1125,9 @@
    "accept": [
     "1 3/4",
     "1.75"
-   ]
+   ],
+   "hook": "**Flip it**: the reciprocal of a/b is b/a, and a number × its reciprocal = 1.",
+   "example": "If 4 cups of rice make 7 portions, 1 portion needs 4/7 of a cup and 1 cup makes 7/4 portions."
   },
   {
    "id": "maths.lg.integer",
@@ -1037,7 +1144,9 @@
    "accept": [
     "an integer",
     "integers"
-   ]
+   ],
+   "hook": "Integer is Latin for **whole, untouched**: no fractions, but positive, negative or zero.",
+   "example": "Lift buttons are integers: −2, −1, 0 for the ground floor, then 1, 2, 3 …"
   },
   {
    "id": "maths.lg.rational",
@@ -1053,7 +1162,9 @@
    "explain": "Rational comes from “ratio”: 0.75 = 3/4 and 0.3̇ = 1/3 are rational; √2 and π are not.",
    "accept": [
     "a rational number"
-   ]
+   ],
+   "hook": "Rational contains **ratio**: if it can be a fraction of two integers, it is rational.",
+   "example": "Every price in pounds and pence is rational: £2.49 = 249/100 of a pound."
   },
   {
    "id": "maths.lg.product",
@@ -1069,7 +1180,9 @@
    "explain": "Sum: add. Difference: subtract. Product: multiply. Quotient: divide.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Sum** add, **difference** subtract, **product** multiply, **quotient** divide.",
+   "example": "A café’s takings are the product of price and number sold: 30 drinks at £2 make £60."
   },
   {
    "id": "maths.lg.quotient",
@@ -1082,7 +1195,9 @@
     "40",
     "32"
    ],
-   "explain": "The quotient is the result of division: 36 ÷ 4 = 9."
+   "explain": "The quotient is the result of division: 36 ÷ 4 = 9.",
+   "hook": "Quotient comes from Latin **quot, “how many”**: how many times one number goes into another.",
+   "example": "36 sweets shared between 4 friends: the quotient is 9 each."
   },
   {
    "id": "maths.lg.hypotenuse",
@@ -1098,7 +1213,9 @@
    "explain": "From the Greek hypoteinousa, “stretching under” the right angle.",
    "accept": [
     "hypotenuse"
-   ]
+   ],
+   "hook": "The hypotenuse is **always opposite the right angle**, and always the longest side.",
+   "example": "On a wheelchair ramp, the sloping surface is the hypotenuse; the ground and the rise are the other two sides."
   },
   {
    "id": "maths.lg.polygon",
@@ -1114,7 +1231,9 @@
    "explain": "Polygon names are Greek: pente (5) pentagon, hex (6) hexagon, okto (8) octagon, deka (10) decagon, dodeka (12) dodecagon.",
    "accept": [
     "decagon"
-   ]
+   ],
+   "hook": "An **oct**opus has 8 arms and an **oct**agon 8 sides; a **dec**ade is 10 years and a **dec**agon 10 sides.",
+   "example": "The UK 20p and 50p coins both have 7 sides: they are heptagons."
   },
   {
    "id": "maths.lg.isosceles",
@@ -1130,7 +1249,9 @@
    "explain": "Two equal “legs”, and so two equal base angles.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Isos = equal, skelos = leg**: two equal legs, and two equal base angles.",
+   "example": "The end wall of a house under a pitched roof is usually an isosceles triangle on top of a rectangle."
   },
   {
    "id": "maths.lg.perpendicular",
@@ -1146,7 +1267,9 @@
    "explain": "Perpendicular lines meet at 90°; parallel lines never meet.",
    "accept": [
     "perpendicular lines"
-   ]
+   ],
+   "hook": "Perpendicular comes from **a plumb line**, a weight on a string that hangs at 90° to level ground.",
+   "example": "The lines of a noughts-and-crosses grid and the corners of a door frame are perpendicular."
   }
  ]
 }

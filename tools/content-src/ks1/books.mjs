@@ -22,7 +22,7 @@ const LADDER = [
   B(4, 'The Hundred-Mile-an-Hour Dog', 'Jeremy Strong', 1996, 'A very fast, very funny dog.'),
   B(4, 'George’s Secret Key to the Universe', 'Lucy and Stephen Hawking', 2007, 'Space adventure with real science.'),
   B(4, 'The Velveteen Rabbit', 'Margery Williams', 1922, 'A classic about becoming “real”.', { free: true }),
-  B(4, 'Just So Stories', 'Rudyard Kipling', 1902, 'Read together: “How the Elephant Got His Trunk”.', { free: true }),
+  B(4, 'Just So Stories', 'Rudyard Kipling', 1902, 'Read together: “The Elephant’s Child”.', { free: true }),
   B(5, 'The Wind in the Willows', 'Kenneth Grahame', 1908, 'Read aloud together: Toad loves fast motor cars!', { free: true }),
   B(5, 'The Lion, the Witch and the Wardrobe', 'C. S. Lewis', 1950, 'Read together: four evacuees find a magic land.'),
   B(5, 'Carrie’s War', 'Nina Bawden', 1973, 'Read together: evacuees in the Second World War.'),
