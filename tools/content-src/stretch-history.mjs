@@ -60,4 +60,62 @@ const items = [
   fact('in.anachronism', 'interpretations', 'A film shows a Roman soldier wearing a wristwatch. What is this mistake called?', 'an anachronism', ['an interpretation', 'a primary source', 'a bias'], 'An anachronism is something placed in the wrong time period. Historians look out for them in films, novels and even in old history books.', { accept: ['anachronism'] }),
 ];
 
-export default [{ subject: 'history', deck: 'stretch', topics, items }];
+// --- memory hooks: a mnemonic (hook) and a real-world connection (example), merged in by id.
+const topicHooks = {
+  'history.reformation': 'The three Hs of the break with Rome: an **heir** (a son), his **heart** (Anne Boleyn) and the Church’s **hoard** of wealth.',
+  'history.armada': '“God blew and they were scattered”: the words on a medal struck after the Armada.',
+  'history.civil-war': '**Cavaliers** for the king, **Roundheads** for Parliament: war **1642**, king executed **1649**, king restored **1660**.',
+  'history.interpretations': '“History is written by the winners”, so always ask **who** wrote it, **when**, and **why**.',
+};
+
+const memory = {
+  // Reformation
+  'rf.d1': { hook: 'Henry’s father won the crown in battle: without a son, Henry feared another war over the throne.', example: 'Catherine of Aragon is buried in Peterborough Cathedral; visitors still leave pomegranates, her symbol, on her tomb.' },
+  'rf.pope': { hook: 'Pope **Clement** was not “clement” (merciful) to Henry: he said no.' },
+  'rf.supremacy': { hook: '**Supreme Head**: from 1534 the king sat at the top of the Church as well as the country.', example: 'The monarch still has the title “Supreme Governor of the Church of England”.' },
+  'rf.year': { hook: 'Married Anne Boleyn in 15**33**, Supreme Head in 15**34**: one year after the other.' },
+  'rf.cromwell': { hook: 'Two Cromwells: **Thomas** for the Tudors (monasteries), **Oliver** a century later (Civil War).' },
+  'rf.why-monast': { hook: 'Monasteries = money: about 800 closed, their land sold or given to loyal gentry.', example: 'Grand houses such as Woburn Abbey stand on land taken from monasteries; they kept the name “abbey”.' },
+  'rf.more': { hook: 'Thomas **More** would swear no **more**: he refused Henry’s oath.', example: 'More wrote “Utopia”: the word we still use for a perfect, imaginary place.' },
+  'rf.wives': { hook: '“Divorced, beheaded, died; divorced, beheaded, survived.” Three Catherines, two Annes and one Jane.', example: 'Jane Seymour, mother of Edward VI, is buried beside Henry VIII in St George’s Chapel, Windsor.' },
+  'rf.children': { hook: 'A religious see-saw: Edward **Protestant**, Mary **Catholic**, Elizabeth the **middle way**.', example: 'The English Book of Common Prayer began under Edward VI in 1549; versions are still used in churches.' },
+  'rf.settlement': { hook: 'Elizabeth chose **Governor**, not Head: a softer word to keep Catholics calm.', example: 'King Charles III still holds the title Supreme Governor of the Church of England.' },
+
+  // Armada
+  'ar.year': { hook: '“Fifteen eighty-eight, the Spanish fleet met its fate.”' },
+  'ar.philip': { hook: 'Philip II was Elizabeth’s **brother-in-law**: he had been married to her sister, Mary I.', example: 'The Philippines, in South-East Asia, are named after Philip II of Spain.' },
+  'ar.why': { hook: 'Four Rs: **R**eligion, **R**aids on treasure ships, **R**ebels in the Netherlands helped by England, a **R**oyal execution.' },
+  'ar.drake': { hook: '“Singeing the King of Spain’s beard”: Drake’s cheeky raid on Cadiz delayed the Armada by a year.', example: 'Drake’s Drum, said in legend to beat when England is in danger, is kept at Buckland Abbey in Devon.' },
+  'ar.fireships': { hook: '**Fire**ships at night → panic → the Spanish cut their anchors and lost their crescent shape.' },
+  'ar.gravelines': { hook: 'First **fire** at Calais, then the **fight** at Gravelines the next day.', example: 'Gravelines is a small town on the French coast between Calais and Dunkirk.' },
+  'ar.weather': { hook: '“God blew and they were scattered”: the words on England’s Armada medal.', example: 'Gold from the Armada ship Girona, wrecked off Northern Ireland, is on show in the Ulster Museum, Belfast.' },
+  'ar.beacons': { hook: 'Hill to hill, fire to fire: like passing a message down a line of friends.', example: 'Beacons are still lit on hilltops across Britain to celebrate royal jubilees.' },
+  'ar.sidonia': { hook: 'Medina Sidonia begged **not** to command: he had little experience at sea and said he suffered from seasickness.' },
+
+  // Stuarts and Civil War
+  'cw.james': { hook: 'James **VI and I**: the sixth of Scotland, the first of England. One king, two numbers.', example: 'The King James Bible (1611), made in his reign, is still read today.' },
+  'cw.gunpowder': { hook: '“Remember, remember the fifth of November, gunpowder, treason and plot.”', example: 'Before every State Opening of Parliament, guards still search the cellars because of the 1605 plot.' },
+  'cw.causes': { hook: '**Money, religion, power**: and Charles ruled with no Parliament for 11 years (1629–40).' },
+  'cw.divine': { hook: '**Divine** = from God: “God chose the king, so only God can judge him.”' },
+  'cw.start': { hook: 'War **1642**, king executed **1649**: seven years from the first battle to the king’s trial.', example: 'Standard Hill, a street in Nottingham, is named after the spot where Charles raised his standard in 1642.' },
+  'cw.sides': { hook: '**Round**heads had short, round haircuts; **Cavaliers** (from an old word for horseman) wore long curls.' },
+  'cw.naseby': { hook: '**N** for **N**: **N**aseby was the **N**ew Model Army’s great win.' },
+  'cw.cromwell': { hook: 'Cromwell refused the crown, but as **Lord Protector** he ruled almost like a king.', example: 'A statue of Oliver Cromwell stands outside the Houses of Parliament in London.' },
+  'cw.execution': { hook: '’42 war, ’49 execution, ’60 crown back: the Civil War years in a row.', example: 'The Banqueting House in Whitehall, outside which Charles I was executed, still stands; its ceiling was painted by Rubens.' },
+  'cw.restoration': { hook: '**Re**storation = the king **re**stored, in **1660**, after 11 years with no king.', example: 'Charles II hid in an oak tree in 1651, which is why so many pubs are called the Royal Oak.' },
+  'cw.order': { hook: 'All in the 1600s, so learn the endings: **05, 42, 45, 49, 60**.' },
+
+  // Interpretations
+  'in.d1': { hook: 'A **source** is a raw ingredient from the time; an **interpretation** is the meal a historian cooks later.' },
+  'in.why': { hook: 'Historians differ because of **evidence**, **purpose**, **audience** and their own **times**, not because they lie.' },
+  'in.richard': { hook: '“History is written by the winners”, and the Tudors were the winners at Bosworth.', example: 'Shakespeare’s Richard III is still performed today, so his Tudor version of Richard is the one most people know.' },
+  'in.bones': { hook: 'New evidence usually **nudges** an interpretation rather than knocking it down.', example: 'The King Richard III Visitor Centre in Leicester is built on the site where his skeleton was found.' },
+  'in.provenance': { hook: 'The three Ws: **W**ho, **W**hen and **W**hy.' },
+  'in.textbook': { hook: 'Every interpretation has two dates: the date it is **about** and the date it was **written**.' },
+  'in.anachronism': { hook: '**Ana** = against, **chron** = time: something set against its proper time.', example: 'Shakespeare made one: in his play Julius Caesar a clock strikes, though the Romans had no striking clocks.' },
+};
+
+for (const id of Object.keys(memory)) if (!items.some((it) => it.id === `history.${id}`)) throw new Error(`history memory hook for unknown item ${id}`);
+const withMemory = (it) => ({ ...it, ...memory[it.id.slice('history.'.length)] });
+
+export default [{ subject: 'history', deck: 'stretch', topics: topics.map((t) => ({ ...t, hook: topicHooks[t.id] })), items: items.map(withMemory) }];

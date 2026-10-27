@@ -15,19 +15,23 @@ export function newTopicState() {
   return { ema: 0.5, n: 0, state: 'learning', profDay: null, delayed: 0, started: null };
 }
 
-export function recordTopicAttempt(t, correct, today, { mixed = true } = {}) {
+// A topic is secure only once at least half its questions have been taught, and mastered only
+// when all have: otherwise its later questions would never be taught.
+export const COVERAGE_FOR_PROFICIENT = 0.5;
+
+export function recordTopicAttempt(t, correct, today, { mixed = true, coverage = 1 } = {}) {
   const s = { ...(t || newTopicState()) };
   if (s.started == null) s.started = today;
   s.ema += ALPHA * ((correct ? 1 : 0) - s.ema);
   s.n += 1;
 
-  if (s.state === 'learning' && s.ema >= PROFICIENT_AT && s.n >= MIN_ATTEMPTS) {
+  if (s.state === 'learning' && s.ema >= PROFICIENT_AT && s.n >= MIN_ATTEMPTS && coverage >= COVERAGE_FOR_PROFICIENT) {
     s.state = 'proficient';
     s.profDay = today;
     s.delayed = 0;
   } else if (s.state === 'proficient') {
     if (correct && mixed && today - s.profDay >= DELAY_DAYS) s.delayed += 1;
-    if (s.delayed >= DELAYED_PASSES_FOR_MASTERY && s.ema >= PROFICIENT_AT) s.state = 'mastered';
+    if (s.delayed >= DELAYED_PASSES_FOR_MASTERY && s.ema >= PROFICIENT_AT && coverage >= 1) s.state = 'mastered';
     else if (s.ema < 0.6) s.state = 'learning';
   } else if (s.state === 'mastered' && s.ema < 0.7) {
     s.state = 'proficient';

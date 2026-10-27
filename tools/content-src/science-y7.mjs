@@ -13,17 +13,17 @@ const tmpl = (id, topic, gen, seed = [-1, 0, 1]) => ({ id: `science.${id}`, topi
 const choiceOnly = { formats: ['choice'] };
 
 const topics = [
-  { id: 'science.particles', title: 'The particle model', kind: 'facts', prereqs: ['science.materials'], batch: 5, diagnostic: ['science.pt.d1', 'science.pt.d2'], intro: 'Everything is made of tiny particles. The way they are arranged and move explains solids, liquids, gases, smells spreading and balloons bursting.', teach: 'Explain why you can smell perfume from across a room.', talk: 'Ask her why a balloon gets bigger in the sun.' },
-  { id: 'science.cells', title: 'Cells and the microscope', kind: 'facts', prereqs: ['science.living'], batch: 5, diagnostic: ['science.cl.d1', 'science.cl.d2'], intro: 'All living things are made of cells, the building blocks of life. Most are far too small to see without a microscope.', teach: 'Explain three differences between a plant cell and an animal cell.', talk: 'Ask her what mitochondria do.' },
-  { id: 'science.atoms', title: 'Atoms, elements and compounds', kind: 'facts', prereqs: ['science.particles'], batch: 5, diagnostic: ['science.at.d1'], intro: 'There are only about 118 elements, but they combine to make everything in the universe.', teach: 'Explain the difference between an element and a compound.', talk: 'Ask her what H₂O means.' },
-  { id: 'science.separating', title: 'Mixtures and separating them', kind: 'facts', prereqs: ['science.atoms'], batch: 5, diagnostic: ['science.sp7.d1'], intro: 'Sea water, ink and air are all mixtures. Scientists have clever ways to separate them.', teach: 'Explain how you could get pure water from sea water.', talk: 'Ask her what “pure” means to a scientist.' },
-  { id: 'science.acids', title: 'Acids and alkalis', kind: 'mixed', prereqs: ['science.separating'], batch: 5, diagnostic: ['science.ac.d1'], intro: 'Lemon juice, soap, vinegar and toothpaste: some are acids and some are alkalis. Indicators tell them apart.', teach: 'Explain what happens when an acid and an alkali are mixed.', talk: 'Ask her why indigestion tablets help with heartburn.' },
-  { id: 'science.forces7', title: 'Forces and motion', kind: 'mixed', prereqs: ['science.forces'], batch: 5, diagnostic: ['science.f7.d1'], intro: 'Forces change how things move. Now we’ll calculate speed and weight, and read distance–time graphs.', teach: 'Explain what balanced forces do to a moving object.', talk: 'Ask her what your speed is if you drive 120 km in 2 hours.' },
-  { id: 'science.energy', title: 'Energy stores and resources', kind: 'facts', prereqs: ['science.forces7'], batch: 5, diagnostic: ['science.en.d1'], intro: 'Energy is never used up. It moves between stores: kinetic, thermal, chemical and more.', teach: 'Explain the energy changes when you throw a ball up in the air.', talk: 'Ask her which energy resources are renewable.' },
-  { id: 'science.universe', title: 'Stars, galaxies and the solar system', kind: 'facts', prereqs: ['science.space'], batch: 5, diagnostic: ['science.un.d1', 'science.un.d2'], intro: 'Our Sun is one of hundreds of billions of stars in the Milky Way, and the Milky Way is one of billions of galaxies.', teach: 'Explain what a light-year is.', talk: 'Ask her what causes a solar eclipse.' },
-  { id: 'science.ecosystems', title: 'Food webs and photosynthesis', kind: 'facts', prereqs: ['science.living'], batch: 5, diagnostic: ['science.ec.d1', 'science.ec.d2'], intro: 'Every living thing depends on others. Energy flows from the Sun through plants to animals.', teach: 'Explain what would happen to a food web if all the bees disappeared.', talk: 'Ask her where a tree gets the stuff to build its trunk.' },
-  { id: 'science.reproduction', title: 'Reproduction in plants and animals', kind: 'facts', prereqs: ['science.body'], batch: 5, diagnostic: ['science.rp.d1'], intro: 'All living things reproduce. Flowers are a plant’s way of making seeds.', teach: 'Explain the difference between pollination and fertilisation.', talk: 'Ask her how a sycamore seed travels.' },
-  { id: 'science.working', title: 'Investigations: fair tests and results', kind: 'skill', prereqs: [], batch: 5, intro: 'Scientists test ideas with fair tests: change one thing, measure another, and keep everything else the same.', teach: 'Explain how to make an investigation a fair test.', talk: 'Plan a kitchen experiment together: which variable will you change?' },
+  { id: 'science.particles', title: 'The particle model', kind: 'facts', prereqs: ['science.materials'], batch: 5, diagnostic: ['science.pt.d1', 'science.pt.d2'], intro: 'Everything is made of tiny particles. The way they are arranged and move explains solids, liquids, gases, smells spreading and balloons bursting.', teach: 'Explain why you can smell perfume from across a room.', talk: 'Ask her why a balloon gets bigger in the sun.', hook: 'Solids **vibrate**, liquids **slide**, gases **zoom**.' },
+  { id: 'science.cells', title: 'Cells and the microscope', kind: 'facts', prereqs: ['science.living'], batch: 5, diagnostic: ['science.cl.d1', 'science.cl.d2'], intro: 'All living things are made of cells, the building blocks of life. Most are far too small to see without a microscope.', teach: 'Explain three differences between a plant cell and an animal cell.', talk: 'Ask her what mitochondria do.', hook: 'Cells are the building blocks of life, and **mitochondria are the powerhouse of the cell**.' },
+  { id: 'science.atoms', title: 'Atoms, elements and compounds', kind: 'facts', prereqs: ['science.particles'], batch: 5, diagnostic: ['science.at.d1'], intro: 'There are only about 118 elements, but they combine to make everything in the universe.', teach: 'Explain the difference between an element and a compound.', talk: 'Ask her what H₂O means.', hook: 'Element: one kind of atom. Compound: different atoms **chemically joined**. Mixture: just **mixed**.' },
+  { id: 'science.separating', title: 'Mixtures and separating them', kind: 'facts', prereqs: ['science.atoms'], batch: 5, diagnostic: ['science.sp7.d1'], intro: 'Sea water, ink and air are all mixtures. Scientists have clever ways to separate them.', teach: 'Explain how you could get pure water from sea water.', talk: 'Ask her what “pure” means to a scientist.', hook: '**Filter** out bits, **evaporate** to get a solid back, **distil** to get a liquid back, **chromatography** for colours.' },
+  { id: 'science.acids', title: 'Acids and alkalis', kind: 'mixed', prereqs: ['science.separating'], batch: 5, diagnostic: ['science.ac.d1'], intro: 'Lemon juice, soap, vinegar and toothpaste: some are acids and some are alkalis. Indicators tell them apart.', teach: 'Explain what happens when an acid and an alkali are mixed.', talk: 'Ask her why indigestion tablets help with heartburn.', hook: 'pH **7** is neutral: below 7 is acid (sour), above 7 is alkali (soapy).' },
+  { id: 'science.forces7', title: 'Forces and motion', kind: 'mixed', prereqs: ['science.forces'], batch: 5, diagnostic: ['science.f7.d1'], intro: 'Forces change how things move. Now we’ll calculate speed and weight, and read distance–time graphs.', teach: 'Explain what balanced forces do to a moving object.', talk: 'Ask her what your speed is if you drive 120 km in 2 hours.', hook: '**Balanced** forces: no change in motion. **Unbalanced**: speed up, slow down or change direction.' },
+  { id: 'science.energy', title: 'Energy stores and resources', kind: 'facts', prereqs: ['science.forces7'], batch: 5, diagnostic: ['science.en.d1'], intro: 'Energy is never used up. It moves between stores: kinetic, thermal, chemical and more.', teach: 'Explain the energy changes when you throw a ball up in the air.', talk: 'Ask her which energy resources are renewable.', hook: 'Energy is never used up, only **moved between stores**, like money moved between bank accounts.' },
+  { id: 'science.universe', title: 'Stars, galaxies and the solar system', kind: 'facts', prereqs: ['science.space'], batch: 5, diagnostic: ['science.un.d1', 'science.un.d2'], intro: 'Our Sun is one of hundreds of billions of stars in the Milky Way, and the Milky Way is one of billions of galaxies.', teach: 'Explain what a light-year is.', talk: 'Ask her what causes a solar eclipse.', hook: 'Planet → solar system → galaxy → universe: like house → street → town → world.' },
+  { id: 'science.ecosystems', title: 'Food webs and photosynthesis', kind: 'facts', prereqs: ['science.living'], batch: 5, diagnostic: ['science.ec.d1', 'science.ec.d2'], intro: 'Every living thing depends on others. Energy flows from the Sun through plants to animals.', teach: 'Explain what would happen to a food web if all the bees disappeared.', talk: 'Ask her where a tree gets the stuff to build its trunk.', hook: 'Sun → plant → animal: the arrows point to the **eater**, following the energy.' },
+  { id: 'science.reproduction', title: 'Reproduction in plants and animals', kind: 'facts', prereqs: ['science.body'], batch: 5, diagnostic: ['science.rp.d1'], intro: 'All living things reproduce. Flowers are a plant’s way of making seeds.', teach: 'Explain the difference between pollination and fertilisation.', talk: 'Ask her how a sycamore seed travels.', hook: 'First **pollination** (pollen lands), then **fertilisation** (cells join), then **dispersal** (seeds travel).' },
+  { id: 'science.working', title: 'Investigations: fair tests and results', kind: 'skill', prereqs: [], batch: 5, intro: 'Scientists test ideas with fair tests: change one thing, measure another, and keep everything else the same.', teach: 'Explain how to make an investigation a fair test.', talk: 'Plan a kitchen experiment together: which variable will you change?', hook: '**Cows Moo Softly**: **C**hange one thing, **M**easure one thing, keep everything else the **S**ame.' },
 ];
 
 const items = [
@@ -143,11 +143,11 @@ const items = [
   mcq('rp.d1', 'reproduction', 'Why do many flowers have brightly coloured petals and a sweet scent?', [['To attract insects that carry pollen', true], ['To scare away animals that eat them', false, 'The colours and scents attract animals; they don’t scare them.'], ['Just to look pretty for people', false, 'Flowers evolved long before people. The colours attract pollinators.']], 'Insect-pollinated flowers offer nectar as a reward. Wind-pollinated flowers, like grasses, are small and dull.'),
   part('rp.petal', 'reproduction', 'flower', 'petal', 'petal', 'Petals are often brightly coloured to attract insects.'),
   part('rp.sepal', 'reproduction', 'flower', 'sepal', 'sepal', 'Sepals protect the flower when it is a bud.'),
-  part('rp.anther', 'reproduction', 'flower', 'anther', 'anther', 'The anther makes pollen (the male sex cells). Anther + filament = stamen.'),
+  part('rp.anther', 'reproduction', 'flower', 'anther', 'anther', 'The anther makes pollen, which carries the male sex cells. Anther + filament = stamen.'),
   part('rp.filament', 'reproduction', 'flower', 'filament', 'filament', 'The filament is the stalk that holds up the anther.'),
   part('rp.stigma', 'reproduction', 'flower', 'stigma', 'stigma', 'The sticky stigma catches pollen.'),
   part('rp.style', 'reproduction', 'flower', 'style', 'style', 'The style connects the stigma to the ovary.'),
-  part('rp.ovary', 'reproduction', 'flower', 'ovary', 'ovary', 'The ovary contains ovules (the female sex cells). Stigma + style + ovary = carpel.'),
+  part('rp.ovary', 'reproduction', 'flower', 'ovary', 'ovary', 'The ovary contains ovules, which hold the female sex cells. Stigma + style + ovary = carpel.'),
   fact('rp.pollination', 'reproduction', 'The transfer of pollen from an anther to a stigma is called…', 'pollination', ['fertilisation', 'germination', 'dispersal'], 'Pollination comes first; fertilisation happens later, when the pollen nucleus joins the ovule nucleus.'),
   fact('rp.sycamore', 'reproduction', 'Sycamore seeds have “wings” that spin. How are they dispersed?', 'by the wind', ['by animals eating them', 'by water', 'by exploding pods'], 'Spinning slows their fall, so the wind carries them further from the parent tree.'),
   fact('rp.burdock', 'reproduction', 'Burdock seeds have tiny hooks. How are they dispersed?', 'by animals', ['by the wind', 'by water', 'by bursting open'], 'Velcro was invented after an engineer studied burdock burrs!', choiceOnly),
@@ -165,5 +165,152 @@ const items = [
   fact('wk.repeat', 'working', 'Why do scientists repeat measurements?', 'to make the results more reliable', ['to make the experiment fairer to all', 'to change the independent variable', 'because the first one is always wrong'], 'Repeats show whether results are consistent.', choiceOnly),
   fact('wk.hypothesis', 'working', 'An idea that can be tested by an experiment is called a…', 'hypothesis', ['conclusion', 'variable', 'method'], 'For example: “Sugar dissolves faster in warmer water because the particles move faster.”'),
 ];
+
+// Memory hooks (mnemonics) and real-world examples, shown on the learn card and after a
+// wrong answer. Keyed by item id without the `science.` prefix; merged in below.
+const MEMORY = {
+  // --- particles
+  'pt.d1': { hook: 'Particles never grow: heated, they **jiggle** more and need more room.', example: 'Bridges and railway tracks have small gaps so they can expand on hot days without buckling.' },
+  'pt.d2': { hook: 'Between gas particles there is **nothing**: just empty space.', example: 'Block the end of a bike pump and push: the air squashes because there is empty space between its particles.' },
+  'pt.solid': { hook: 'Solid: particles in neat rows, **vibrating on the spot**, like fidgety pupils sitting in assembly.', example: 'An ice cube keeps its shape until it starts to melt.' },
+  'pt.liquid': { hook: 'Liquid: particles **touching but sliding** past each other, like people in a busy corridor.', example: 'Pour juice from a carton into a glass: it flows and takes the shape of the glass.' },
+  'pt.gas': { hook: 'Gas: particles **far apart and zooming** in all directions, like a playground at break time.', example: 'Air from a pump spreads into every part of a bike tyre.' },
+  'pt.diffusion': { hook: 'Diffusion: particles spread from crowded to empty, like people leaving a packed lift.', example: 'You can smell toast from upstairs, and a drop of squash slowly colours a whole glass of water.' },
+  'pt.compress': { hook: 'A gas has room to squash; a liquid is already packed tight.', example: 'A bike pump squashes air into a tyre, but you can’t squash water in a sealed syringe.' },
+  'pt.pressure': { hook: 'Gas pressure = billions of tiny particle punches on the walls every second.', example: 'A football left in hot sun feels harder: the warmer air particles hit the inside faster and harder.' },
+  'pt.sublimation': { hook: 'Sublimation **skips the liquid**: solid straight to gas.', example: 'On cold, dry, sunny days, snow can slowly vanish without melting first: it sublimes.' },
+  'pt.flow': { hook: 'Liquids keep their **volume** but borrow their container’s **shape**.', example: '500 ml of water is still 500 ml in a tall glass or a wide bowl.' },
+  'pt.ice': { hook: 'Water is the odd one out: its solid floats on its liquid.', example: 'Ice cubes float in a drink, and ponds freeze from the top down, so fish survive underneath.' },
+
+  // --- cells
+  'cl.d1': { hook: 'Photosynthesis **makes** the food; respiration **releases** its energy. Plants do both.' },
+  'cl.d2': { hook: '**All** living things are made of cells: a bacterium is one cell; you are about 37 trillion.', example: 'Even the mould on old bread and the moss on a wall are made of cells.' },
+  'cl.nucleus': { hook: 'The nucleus is the cell’s **control centre**, holding the instructions (DNA).' },
+  'cl.cytoplasm': { hook: 'Cytoplasm is the cell’s jelly-like kitchen, where most reactions are cooked up.' },
+  'cl.membrane': { hook: 'The membrane is the cell’s **security guard**, deciding what goes in and out.' },
+  'cl.mito': { hook: '**Mitochondria are the powerhouse of the cell.**', example: 'Muscle cells, which work hard, are packed with extra mitochondria.' },
+  'cl.wall': { hook: 'A cell **wall** is a strong box around a plant cell, made of cellulose.', example: 'Paper and cotton are made of cellulose, the same stuff as plant cell walls.' },
+  'cl.chloro': { hook: '**Chloro-** means green: green chloroplasts catch sunlight for photosynthesis.', example: 'Leaves are green because their cells are packed with chloroplasts; roots underground have none.' },
+  'cl.vacuole': { hook: 'The vacuole is the cell’s **water balloon**: full of sap, keeping it firm.', example: 'A droopy pot plant perks up after watering as its vacuoles fill up again.' },
+  'cl.ribosome-job': { hook: 'Ribosomes are tiny **protein factories**.' },
+  'cl.plant-only': { hook: 'Plant extras: a **wall** to stand tall, **chloroplasts** to catch light, a **vacuole** to stay firm.' },
+  'cl.hooke': { hook: '**Hooke** looked at cork and saw rows of tiny rooms, like monks’ **cells**.', example: 'A cork from a bottle is the same material Hooke looked at.' },
+  'cl.mag': { hook: 'Total magnification: **multiply**, don’t add. Eyepiece × objective.', example: 'Under ×400, a hair about a tenth of a millimetre wide would look 4 centimetres wide.' },
+  'cl.levels': { hook: 'Bricks → walls → rooms → floors → house: cell → tissue → organ → system → organism.' },
+  'cl.rbc': { hook: 'Red blood cells ditch the nucleus to make room for more oxygen-carrying haemoglobin.', example: 'Blood is red because of the iron-containing haemoglobin in red blood cells.' },
+  'cl.roothair': { hook: 'Root hair cells are long thin straws in the soil, drinking up water.', example: 'Gently pull up a seedling grown on damp kitchen roll: the fuzz on its roots is root hairs.' },
+  'cl.nerve': { hook: 'Nerve cells are the body’s **wires**: long and thin to carry electrical signals.', example: 'Stub your toe and a signal races along nerve cells up your leg to your spinal cord.' },
+
+  // --- atoms
+  'at.d1': { hook: 'Mixture = just **mixed**, easy to separate. Compound = **chemically joined**: a new substance.', example: 'Iron filings and sulfur separate with a magnet; heat them and they make iron sulfide, which won’t.' },
+  'at.element': { hook: 'Element = **one** kind of atom only, like a box of identical Lego bricks.', example: 'The copper in electric wires, the carbon in pencil “lead” (graphite) and the helium in a balloon are elements.' },
+  'at.compound': { hook: '**Com**pound = **com**bined: different atoms bonded into a new substance.', example: 'Table salt is sodium (a metal that fizzes on water) joined to chlorine (a poisonous gas), yet you sprinkle it on chips.' },
+  'at.count': { example: 'Everything you can see, from your desk to your dinner to you, is built from combinations of these elements.' },
+  'at.mendeleev': { hook: 'Mendeleev is said to have sorted cards of the elements like a game of patience, leaving gaps for missing ones.' },
+  'at.o': { hook: 'Most symbols are first letters: **O**xygen, **H**ydrogen, **C**arbon, **N**itrogen.', example: 'Oxygen cylinders in hospitals and ambulances are labelled O₂.' },
+  'at.na': { hook: '**Na** from **na**trium. Sodium is the Na in NaCl, table salt.', example: 'Old orange street lights in the UK were sodium lamps.' },
+  'at.fe': { hook: '**Fe** from **fe**rrum. “Ferrous” metals contain iron.', example: 'Breakfast cereal boxes often say “fortified with iron”: check the label.' },
+  'at.au': { hook: '**Au**: “**A**y, yo**u**! Give me back my gold!”', example: 'Olympic gold medals are mostly silver with a coating of gold.' },
+  'at.h2o': { hook: 'The little number belongs to the atom **just before** it: H₂O = two H, one O.', example: 'People often call water “H-two-O” in everyday speech.' },
+  'at.co2': { hook: '**Di-** means two: carbon **di**oxide has two oxygens, just as a **di**lemma has two options.', example: 'The bubbles in fizzy drinks are carbon dioxide.' },
+  'at.air': { hook: 'Air is nearly **four-fifths nitrogen** and about one-fifth oxygen.', example: 'Crisp packets are often filled with nitrogen to keep the crisps fresh.' },
+  'at.metals': { hook: 'Metals on the **left** and middle; non-metals on the **right**; the staircase is the border.' },
+
+  // --- separating
+  'sp7.d1': { hook: 'Science “pure” = **one substance only**. Shop “pure” = nothing added.', example: 'Even bottled spring water contains dissolved minerals: check the label.' },
+  'sp7.solute': { hook: 'Solute + solvent = solution. The solvent is the liquid that does the dissolving.', example: 'In a glass of squash, water is the solvent and the sugar is a solute.' },
+  'sp7.saturated': { hook: 'Saturated = **full up**, like a soaked sponge that can’t hold any more.', example: 'Keep stirring sugar into cold water and eventually grains stay at the bottom: it’s saturated.' },
+  'sp7.distil': { hook: 'Distillation: **boil it, cool it, collect it**.', example: 'Sea water evaporates in the sunshine and falls as fresh rain: the water cycle is nature’s distillation.' },
+  'sp7.chrom': { hook: '**Chroma** means colour: chromatography is “colour writing”.', example: 'Draw a black felt-tip dot on kitchen roll, dip the edge in water and watch hidden colours spread out.' },
+  'sp7.crystal': { hook: 'Slow and steady grows big crystals; rush it and you get tiny ones.', example: 'Sugar crystals grown on a string over several days get big and chunky.' },
+  'sp7.mp': { hook: 'Pure = sharp: it melts or boils at **one exact temperature**.', example: 'Gritting roads with salt makes ice melt below 0°C: an impurity changes the melting point.' },
+  'sp7.order': { hook: 'Crush, Dissolve, Filter, Evaporate: “**C**ats **D**on’t **F**ancy **E**lephants”.', example: 'The rock salt spread on icy UK roads in winter is mined in Cheshire: salt mixed with sand and clay.' },
+
+  // --- acids
+  'ac.d1': { hook: 'Sour = acid. Many weak acids are safe to eat.', example: 'Vinegar on your chips is a weak acid (ethanoic acid); lemon juice contains citric acid.' },
+  'ac.ph': { hook: 'pH **7** is neutral: **below** 7 is acid, **above** 7 is alkali.', example: 'Lemon juice is about pH 2, pure water pH 7 and soap about pH 9 to 10.' },
+  'ac.range': { hook: '0 to 14, with **7** right in the middle for neutral.', example: 'Lemon juice is about pH 2, pure water pH 7 and soap about pH 9 to 10.' },
+  'ac.litmus': { hook: '**BRA**: **B**lue litmus turns **R**ed in **A**cid.', example: 'Red cabbage water is a homemade indicator: lemon juice turns it pink; bicarbonate of soda turns it blue-green.' },
+  'ac.neutral': { hook: 'Acid + alkali → salt + water: they cancel each other out.', example: 'Farmers spread lime (an alkali) on fields to neutralise acidic soil.' },
+  'ac.stomach': { example: 'The burning feeling of heartburn is stomach acid creeping up into the food pipe.' },
+  'ac.indigestion': { hook: 'Too much acid? Add a base to neutralise it.', example: 'Many indigestion tablets contain calcium carbonate, the same chemical as chalk.' },
+  'ac.corrosive': { hook: '**Corrosive** things **corrode**: they eat away skin and metal.', example: 'Some oven cleaners and drain unblockers carry the corrosive symbol.' },
+
+  // --- forces and motion
+  'f7.d1': { hook: 'Steady speed in a straight line = **balanced** forces. No overall force, no change.', example: 'At a steady 70 mph on a motorway, the engine’s push exactly matches air resistance and friction.' },
+  'f7.speed': { hook: '**Speed = distance ÷ time.** In the triangle, D sits on top of S and T.', example: 'UK speed limits are in mph: miles per hour, a distance divided by a time.' },
+  'f7.weight': { hook: '**Weight = mass × g**, and on Earth g is about 10 N/kg.', example: 'A 1 kg bag of sugar weighs about 10 N on Earth, but only 1.6 N on the Moon.' },
+  'f7.resultant': { hook: 'Same direction: **add**. Opposite directions: **subtract**, and it goes the way of the bigger force.', example: 'In tug of war, the team pulling harder wins: the resultant force points their way.' },
+  'f7.flat': { hook: 'Flat line: time ticks on but distance doesn’t, so it has **stopped**.', example: 'A bus waiting at a stop makes a flat line on its distance–time graph.' },
+  'f7.steep': { hook: '**Steeper = speedier.**', example: 'A cyclist racing downhill makes a steeper line than someone pushing a bike uphill.' },
+  'f7.hooke': { hook: 'Hooke’s law: **double the pull, double the stretch**. (The same Robert Hooke named cells!)', example: 'Overstretch a hair bobble or a spring and it won’t go back to its old shape: it has passed its limit.' },
+  'f7.mass': { hook: 'Mass stays, weight changes: same **stuff**, different **pull**.' },
+
+  // --- energy
+  'en.d1': { hook: 'Energy is never destroyed: much of it ends up **spread out as heat** (dissipated).', example: 'A phone or laptop feels warm when it’s working hard: energy is heating the surroundings.' },
+  'en.unit': { hook: 'Joules = **how much** energy. Watts = **how fast** (joules per second).', example: 'UK food labels show energy in kJ (kilojoules) as well as kcal.' },
+  'en.kinetic': { hook: '**Kinetic** and **cinema** both come from the Greek for movement.', example: 'A football flying towards the goal has energy in its kinetic store.' },
+  'en.gpe': { hook: 'Higher up = more gravitational potential energy, waiting to fall.', example: 'A rollercoaster’s first big climb fills its gravitational store for the rest of the ride.' },
+  'en.chem': { hook: 'Chemical store: energy locked in food, fuels and batteries, released by reactions.', example: 'A burning log, a car’s petrol and the cereal you eat for breakfast all transfer energy from chemical stores.' },
+  'en.elastic': { hook: 'Stretch it or squash it, and it stores elastic potential energy to spring back.', example: 'A trampoline stores energy as it stretches down, then bounces you back up.' },
+  'en.renewable': { hook: '**Re-new-able**: nature tops it up. Fossil fuels took millions of years to form.', example: 'Huge offshore wind farms in the North Sea now generate a large share of the UK’s electricity.' },
+  'en.fossil': { hook: 'Fossil fuels are ancient life, buried and squashed. Burn them and their carbon returns as CO₂.', example: 'A gas hob burns natural gas (methane), releasing carbon dioxide and water.' },
+  'en.power': { hook: '**1 watt = 1 joule every second.**', example: 'A UK kettle is about 3000 W; an LED light bulb is about 5 to 10 W.' },
+  'en.ball': { hook: 'Muscles → rising → top → falling: **chemical, kinetic, gravitational, kinetic**.', example: 'Throw a ball up in the garden: it slows, pauses for a split second at the top, then speeds up as it falls.' },
+
+  // --- universe
+  'un.d1': { hook: 'The Sun is an ordinary star that just lives next door.', example: 'A torch held near you looks brighter than a distant lighthouse: being close makes the Sun look special.' },
+  'un.d2': { hook: 'A light-**year** sounds like time, but it’s a **distance**: how far light goes in a year.', example: 'Looking at the stars is looking back in time: you see light that left them years ago.' },
+  'un.galaxy': { hook: '**Galaxy** comes from the Greek for milk, so “Milky Way galaxy” says milk twice!', example: 'From a dark place such as Northumberland or Exmoor you can see the Milky Way as a misty band across the sky.' },
+  'un.nearest': { hook: '**Proxima** is Latin for “nearest”, as in **proximity**.' },
+  'un.sunlight': { hook: 'Sunlight takes about **8 minutes** to reach us: about as long as hard-boiling an egg.' },
+  'un.orbit': { hook: 'Gravity is like an invisible string: swing a ball on a string, let go, and it flies off.' },
+  'un.solar-eclipse': { hook: '**Solar**: Moon in the middle, blocking the Sun. **Lunar**: Earth in the middle, shadowing the Moon.', example: 'The UK saw a deep partial solar eclipse on 20 March 2015; the next total one visible here is in 2090.' },
+  'un.belt': { hook: 'The asteroid belt is a rocky fence between the four rocky planets and the four giants.' },
+  'un.gas-giants': { hook: 'Jupiter and Saturn: **gas giants**. Uranus and Neptune: **ice giants**.', example: 'Through a small telescope or good binoculars you can spot Saturn’s rings and Jupiter’s moons.' },
+
+  // --- ecosystems
+  'ec.d1': { hook: 'A tree is built mostly from **thin air**: carbon dioxide (plus water).', example: 'Burning a log puts the carbon the tree took from the air back into the air as carbon dioxide.' },
+  'ec.d2': { hook: 'Arrows point to the **eater**: read them as “gives energy to”.' },
+  'ec.producer': { hook: '**Producers produce** their own food using sunlight.', example: 'Grass in a field, vegetables in a garden and seaweed on a beach are all producers.' },
+  'ec.photosynthesis': { hook: '**Photo** = light, **synthesis** = making: making food with light.', example: 'Pondweed in sunlight gives off tiny bubbles: that is oxygen from photosynthesis.' },
+  'ec.chlorophyll': { hook: 'Chloro**phyll** is the green **pigment**; chloro**plasts** are the little packets that hold it.', example: 'Leaves turn yellow and red in autumn as the green chlorophyll breaks down.' },
+  'ec.herbivore': { hook: '**Herb**ivores eat plants, **carn**ivores eat meat (as in chilli con **carn**e), **omni**vores eat all.', example: 'Sheep and cows grazing on British hillsides are herbivores.' },
+  'ec.decomposer': { hook: 'Decomposers are nature’s recyclers, rotting dead things back into nutrients.', example: 'A compost heap, mushrooms on a rotting log and mould on old bread are decomposers at work.' },
+  'ec.web': { hook: 'Lose a predator and the prey boom; everything in a food web is linked.' },
+  'ec.bees': { hook: 'Bees are flying pollen couriers, carrying pollen from flower to flower.', example: 'Apples, strawberries and blackberries all crop better when bees visit their flowers.' },
+  'ec.chain': { hook: 'Every food chain starts with a **producer**, then the arrows point to whoever eats it.', example: 'In a seaside rock pool: seaweed → periwinkles → shore crabs → gulls.' },
+
+  // --- reproduction
+  'rp.d1': { hook: 'Bright colours and sweet scents are adverts saying: “Free nectar here!”', example: 'Bees buzzing round lavender in a summer garden are drinking nectar and carrying pollen.' },
+  'rp.petal': { hook: 'Petals are the flower’s **billboard**, advertising nectar to insects.' },
+  'rp.sepal': { hook: 'Sepals are the bud’s **protective jacket**: the green leafy bits under the petals.', example: 'The green leafy frill on top of a strawberry is its sepals.' },
+  'rp.anther': { hook: 'The stamen (anther + filament) is the male part: think “sta-**MEN**”.', example: 'Lily anthers drop orange pollen that stains clothes, so florists often snip them off.' },
+  'rp.filament': { hook: 'Filament = a thin stalk, like the thin glowing filament wire in an old light bulb.' },
+  'rp.stigma': { hook: 'The **st**igma is **st**icky, to catch pollen.' },
+  'rp.style': { hook: 'The style is the neck between stigma and ovary: pollen tubes grow down it.' },
+  'rp.ovary': { hook: 'After fertilisation the ovary becomes the **fruit** and the ovules become **seeds**.', example: 'A pea pod is a ripened ovary, and the peas inside were its ovules.' },
+  'rp.pollination': { hook: '**P**ollen lands first (**p**ollination); **f**usion of the cells comes later (**f**ertilisation).', example: 'Hay fever is caused by wind-pollinated plants, like grasses, releasing clouds of pollen.' },
+  'rp.sycamore': { hook: 'Sycamore seeds are **helicopters**: their spinning wings ride the wind.', example: 'Drop a sycamore seed from a step in autumn and watch it twirl away.' },
+  'rp.burdock': { hook: 'Hooked seeds are **hitchhikers**, catching a lift on animal fur.', example: 'Burrs stuck in a dog’s fur or on your socks after a country walk are hitchhiking seeds.' },
+  'rp.gametes': { hook: 'Plants: pollen meets ovule. Humans: sperm meets egg. Same idea, different names.' },
+  'rp.gestation': { example: 'Different animals take different times: an elephant carries its baby for nearly two years.' },
+  'rp.placenta': { hook: 'The placenta is the baby’s **lifeline**: food and oxygen in, waste out, through the umbilical cord.', example: 'Your belly button is where your umbilical cord was once attached.' },
+
+  // --- working scientifically
+  'wk.variables': { hook: '**Cows Moo Softly**: **C**hange one thing, **M**easure one thing, keep everything else the **S**ame.' },
+  'wk.mean': { hook: 'Mean: **add them all up, then divide by how many** there are.', example: 'Your average score across five spelling tests is a mean.' },
+  'wk.accurate': { hook: '**A**ccurate = **A**t the target (the true value).', example: 'Darts all in the bullseye are accurate; darts all clumped together somewhere else are precise but not accurate.' },
+  'wk.precise': { hook: '**P**recise = readings **P**acked closely together.', example: 'Kitchen scales that always read 2 g too high give precise but inaccurate results.' },
+  'wk.anomaly': { hook: 'An anomaly is the **odd one out** that doesn’t fit the pattern.', example: 'In a set of sprint times, one much slower time might be the race when the runner tripped.' },
+  'wk.linegraph': { hook: 'Numbers on both axes? **Line graph**. Categories (names)? **Bar chart**.', example: 'Weather apps show the temperature through the day as a line graph.' },
+  'wk.repeat': { hook: 'Once could be luck; repeats show whether there is a real pattern.' },
+  'wk.hypothesis': { hook: 'A hypothesis is a **testable** idea with a reason: “I think… because…”' },
+};
+for (const [id, memory] of Object.entries(MEMORY)) {
+  const item = items.find((it) => it.id === `science.${id}`);
+  if (!item) throw new Error(`science-y7.mjs: memory hook for unknown item ${id}`);
+  Object.assign(item, memory);
+}
 
 export default [{ subject: 'science', deck: 'year7', topics, items }];

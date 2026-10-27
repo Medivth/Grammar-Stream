@@ -10,15 +10,15 @@ const order = (id, topic, prompt, items, labels, explain) => ({ id: `geography.$
 const choiceOnly = { formats: ['choice'] };
 
 const topics = [
-  { id: 'geography.map-skills', title: 'Map skills: grid references and compass points', kind: 'mixed', prereqs: [], batch: 5, intro: 'Ordnance Survey maps use a grid of numbered lines. Remember: along the corridor, then up the stairs.', teach: 'Explain how to give a 4-figure grid reference.', talk: 'On a walk, ask her which direction you’re heading using the 8 compass points.' },
-  { id: 'geography.scale', title: 'Map scale and symbols', kind: 'mixed', prereqs: ['geography.map-skills'], batch: 5, intro: 'A map’s scale tells you how much smaller it is than real life. On a 1:25 000 map, 4 cm is 1 km.', teach: 'Explain what 1:25 000 means.', talk: 'Look at an OS map together and find a pub, a school and a church.' },
-  { id: 'geography.rivers', title: 'Rivers: processes and landforms', kind: 'facts', prereqs: ['geography.weather'], batch: 5, diagnostic: ['geography.rv.d1'], intro: 'Rivers carve valleys, carry rocks to the sea and build new land. We’ll follow a river from its source to its mouth.', teach: 'Explain how a meander turns into an ox-bow lake.', talk: 'Next time you cross a river, ask her which course it might be in: upper, middle or lower.' },
-  { id: 'geography.tectonics', title: 'Earth’s structure, earthquakes and volcanoes', kind: 'facts', prereqs: ['geography.continents'], batch: 5, diagnostic: ['geography.tc.d1', 'geography.tc.d2'], intro: 'The ground beneath us is moving, very slowly. Let’s find out what is inside the Earth and why volcanoes and earthquakes happen where they do.', teach: 'Explain what happens at a destructive plate boundary.', talk: 'Ask her why Iceland has so many volcanoes.' },
-  { id: 'geography.biomes', title: 'Climate zones and biomes', kind: 'facts', prereqs: ['geography.lines'], batch: 5, diagnostic: ['geography.bi.d1'], intro: 'Why are there rainforests near the Equator and deserts a little further away? Climate decides which plants and animals live where.', teach: 'Explain why tropical rainforests are near the Equator.', talk: 'Ask her which biome the UK is in.' },
-  { id: 'geography.people', title: 'Population, settlement and development', kind: 'facts', prereqs: ['geography.uk'], batch: 5, intro: 'Where do people live, and why? Why do people move? And how do we measure whether a country is rich or poor?', teach: 'Explain the difference between a push factor and a pull factor.', talk: 'Ask her why your town grew where it did.' },
-  { id: 'geography.americas', title: 'The Americas: countries and capitals', kind: 'facts', prereqs: ['geography.continents'], batch: 6, teach: 'Name three countries in South America and their capitals.', talk: 'Ask her the capital of Canada (it isn’t Toronto).' },
-  { id: 'geography.africa', title: 'Africa: countries and capitals', kind: 'facts', prereqs: ['geography.continents'], batch: 6, intro: 'Africa is a continent of 54 countries, not one country! Let’s learn some of the biggest.', teach: 'Explain why “Africa is a country” is a mistake.', talk: 'Ask her the capital of Nigeria (it isn’t Lagos).' },
-  { id: 'geography.asia', title: 'Asia and Oceania: countries and capitals', kind: 'facts', prereqs: ['geography.continents'], batch: 6, teach: 'Name the capitals of China, India and Japan.', talk: 'Ask her the capital of Australia (it isn’t Sydney).' },
+  { id: 'geography.map-skills', title: 'Map skills: grid references and compass points', kind: 'mixed', prereqs: [], batch: 5, intro: 'Ordnance Survey maps use a grid of numbered lines. Remember: along the corridor, then up the stairs.', hook: '“Never Eat Shredded Wheat” for the compass; “along the corridor, then up the stairs” for grid references.', teach: 'Explain how to give a 4-figure grid reference.', talk: 'On a walk, ask her which direction you’re heading using the 8 compass points.' },
+  { id: 'geography.scale', title: 'Map scale and symbols', kind: 'mixed', prereqs: ['geography.map-skills'], batch: 5, intro: 'A map’s scale tells you how much smaller it is than real life. On a 1:25 000 map, 4 cm is 1 km.', hook: 'On a 1:25 000 map, 4 cm = 1 km; on a 1:50 000 map, 2 cm = 1 km.', teach: 'Explain what 1:25 000 means.', talk: 'Look at an OS map together and find a pub, a school and a church.' },
+  { id: 'geography.rivers', title: 'Rivers: processes and landforms', kind: 'facts', prereqs: ['geography.weather'], batch: 5, diagnostic: ['geography.rv.d1'], intro: 'Rivers carve valleys, carry rocks to the sea and build new land. We’ll follow a river from its source to its mouth.', hook: 'Source to sea: V-shaped valleys and waterfalls up high, meanders in the middle, floodplains and an estuary near the mouth.', teach: 'Explain how a meander turns into an ox-bow lake.', talk: 'Next time you cross a river, ask her which course it might be in: upper, middle or lower.' },
+  { id: 'geography.tectonics', title: 'Earth’s structure, earthquakes and volcanoes', kind: 'facts', prereqs: ['geography.continents'], batch: 5, diagnostic: ['geography.tc.d1', 'geography.tc.d2'], intro: 'The ground beneath us is moving, very slowly. Let’s find out what is inside the Earth and why volcanoes and earthquakes happen where they do.', hook: 'The Earth is like a peach: thin skin (crust), thick flesh (mantle) and a hard stone in the middle (core).', teach: 'Explain what happens at a destructive plate boundary.', talk: 'Ask her why Iceland has so many volcanoes.' },
+  { id: 'geography.biomes', title: 'Climate zones and biomes', kind: 'facts', prereqs: ['geography.lines'], batch: 5, diagnostic: ['geography.bi.d1'], intro: 'Why are there rainforests near the Equator and deserts a little further away? Climate decides which plants and animals live where.', hook: 'Wet at 0°, dry at 30°: rainforests hug the Equator and hot deserts lie near the tropics.', teach: 'Explain why tropical rainforests are near the Equator.', talk: 'Ask her which biome the UK is in.' },
+  { id: 'geography.people', title: 'Population, settlement and development', kind: 'facts', prereqs: ['geography.uk'], batch: 5, intro: 'Where do people live, and why? Why do people move? And how do we measure whether a country is rich or poor?', hook: 'Settlements grew where life was easier: by water (wet point), at a crossing (bridging point) or somewhere safe (defensive site).', teach: 'Explain the difference between a push factor and a pull factor.', talk: 'Ask her why your town grew where it did.' },
+  { id: 'geography.americas', title: 'The Americas: countries and capitals', kind: 'facts', prereqs: ['geography.continents'], batch: 6, hook: 'Capitals are often not the biggest city: Washington, Ottawa and Brasília, not New York, Toronto and Rio.', teach: 'Name three countries in South America and their capitals.', talk: 'Ask her the capital of Canada (it isn’t Toronto).' },
+  { id: 'geography.africa', title: 'Africa: countries and capitals', kind: 'facts', prereqs: ['geography.continents'], batch: 6, intro: 'Africa is a continent of 54 countries, not one country! Let’s learn some of the biggest.', hook: 'Africa is 54 countries, not one, and Nigeria’s capital is Abuja, not Lagos.', teach: 'Explain why “Africa is a country” is a mistake.', talk: 'Ask her the capital of Nigeria (it isn’t Lagos).' },
+  { id: 'geography.asia', title: 'Asia and Oceania: countries and capitals', kind: 'facts', prereqs: ['geography.continents'], batch: 6, hook: 'Sydney and Melbourne were rivals, so Australia built a brand-new capital between them: Canberra.', teach: 'Name the capitals of China, India and Japan.', talk: 'Ask her the capital of Australia (it isn’t Sydney).' },
 ];
 
 const items = [
@@ -140,6 +140,110 @@ for (const [id, name, capital, wrong, topic, note] of WORLD) {
     map: 'world', layer: 'countries', feature: id, zoom: ZOOM[topic], fill: true, accept: ACCEPT_CAP[id] || [],
     learn: `The capital of **${the(name)}** is **${capital}**.${note ? ' ' + note : ''}`,
   }));
+}
+
+// Memory hooks (mnemonics) and real-world examples, keyed by item id. Shown on the learn card and after a wrong answer.
+const SOURCE_MOUTH = 'Source = Start; Mouth = where it Meets the sea.';
+const MEMORY = {
+  // map skills
+  'ms.grid': { hook: 'Along the corridor, then up the stairs: read the eastings first, then the northings.' },
+  'ms.compass': { hook: '“Never Eat Shredded Wheat”: N, E, S, W clockwise. The in-between points join their neighbours: NE, SE, SW, NW.', example: 'The Sun rises roughly in the east and sets roughly in the west, so you can use it to find your bearings.' },
+  'ms.nnw': { hook: 'Say the nearest main point first: north + north-west makes north-north-west.' },
+  'ms.corridor': { hook: 'You have to walk along the corridor before you can go up the stairs: eastings, then northings.' },
+  'ms.easting': { hook: 'Eastings count up as you go East; Northings count up as you go North.' },
+
+  // scale and symbols
+  'sc.scale': { hook: '1:25 000 means 1 cm on the map is 25 000 cm (250 m) in real life, so 4 cm = 1 km.', example: 'Orange OS Explorer maps are 1:25 000; pink OS Landranger maps are 1:50 000.' },
+  'sc.contour': { hook: 'Contours are like the rings left round a bath as it drains: one line for each height.', example: 'On an OS map of Ben Nevis, the contours crowd together on its steep north face.' },
+  'sc.steep': { hook: 'Lines close together: a hill to climb. Lines far apart: an easy walk.', example: 'Stanage Edge, a gritstone cliff in the Peak District, shows up as tightly packed contours on an OS map.' },
+  'sc.ph': { hook: '“Pub” is short for “public house”: PH.' },
+  'sc.spot': { hook: 'A spot height is a single spot (dot) with its height in metres beside it.' },
+  'sc.trig': { example: 'There are trig points on the summits of Ben Nevis, Yr Wyddfa and Scafell Pike; walkers like to touch them at the top.' },
+  'sc.os': { hook: '“Ordnance” means military supplies: the Army’s Board of Ordnance made the first maps.', example: 'The first OS map, published in 1801, was of Kent.' },
+
+  // rivers
+  'rv.d1': { hook: 'Smooth is speedy: rocks and shallow water slow mountain streams down with friction.' },
+  'rv.source': { hook: SOURCE_MOUTH, example: 'The Thames begins at a stone marking its source in a field near Kemble, Gloucestershire.' },
+  'rv.mouth': { hook: SOURCE_MOUTH, example: 'The Thames’s mouth is a wide estuary that meets the North Sea near Southend-on-Sea.' },
+  'rv.tributary': { hook: 'A tributary pays tribute: it gives its water to the main river.', example: 'The River Kennet is a tributary of the Thames, joining it at Reading.' },
+  'rv.confluence': { hook: 'Con = together, fluence = flowing: two rivers flowing together.', example: 'In York, the River Foss flows into the River Ouse.' },
+  'rv.basin': { hook: 'Like a bathroom basin: all the water inside the rim drains to one plughole.', example: 'Rain falling on Oxford, Reading or London all drains into the Thames basin.' },
+  'rv.hydraulic': { hook: 'HAAS: Hydraulic action, Abrasion, Attrition, Solution, the four ways rivers erode.', example: 'Like a jet wash blasting a patio, the sheer force of the water does the work.' },
+  'rv.attrition': { hook: 'Attrition: rocks attack each other. Abrasion: rocks attack the bed and banks.', example: 'Stones near a river’s mouth are small and smooth; boulders in mountain streams are big and jagged.' },
+  'rv.saltation': { hook: 'Saltation comes from the Latin for “leap”: pebbles hop. Boulders roll, silt floats, minerals dissolve.' },
+  'rv.vvalley': { hook: 'V for vertical: rivers cut down into a V. Glaciers gouge out a U.', example: 'Nant Ffrancon in Snowdonia is a classic U-shaped valley, carved by a glacier rather than a river.' },
+  'rv.oxbow': { hook: 'An ox-bow is the U-shaped collar of an ox’s yoke: a curved loop left behind.', example: 'The Severn winds in great meanders around Shrewsbury; the Mississippi’s floodplain is dotted with ox-bow lakes.' },
+  'rv.waterfall': { hook: 'Hard on top, soft below: the soft rock is undercut, the hard ledge snaps off and the falls step back.', example: 'High Force on the River Tees pours over hard whinstone sitting on softer limestone and shale.' },
+  'rv.floodplain': { hook: 'The floodplain is the plain that floods, and every flood leaves fertile silt behind.', example: 'Tewkesbury, where the Avon meets the Severn, was badly flooded in 2007.' },
+  'rv.nile': { hook: 'The Nile is number one for length; the Amazon is number one for water.', example: 'The Blue and White Niles meet at Khartoum, then the Nile flows north through Egypt past the pyramids.' },
+  'rv.course': { hook: 'Up high it falls, in the middle it bends, low down it loops and leaves lakes, then it widens to the sea.', example: 'On the Tees: High Force up high, a meander wrapped round Yarm, then the estuary at Middlesbrough.' },
+
+  // tectonics
+  'tc.d1': { hook: 'The mantle is thick toffee, not soup: solid rock that creeps very slowly.' },
+  'tc.d2': { hook: 'Plates move about as fast as your fingernails grow.', example: 'The Atlantic widens by a few centimetres a year, nudging Britain and North America apart.' },
+  'tc.layers': { hook: 'Like a peach: skin (crust), flesh (mantle) and a stone (core) in two parts, liquid outside and solid inside.', example: 'Compared with the whole Earth, the crust is about as thin as the skin on an apple.' },
+  'tc.core': { hook: 'Squeezed so hard it cannot melt: the inner core stays solid even at about 5400°C.' },
+  'tc.constructive': { hook: 'Constructive: constructing new crust as the plates pull apart.', example: 'At Þingvellir in Iceland you can walk in the rift between the North American and Eurasian plates.' },
+  'tc.destructive': { hook: 'Destructive: the ocean plate is destroyed as it sinks and melts.', example: 'Mount Fuji in Japan and the volcanoes of the Andes sit above destructive boundaries.' },
+  'tc.conservative': { hook: 'Conservative: crust is conserved, neither made nor destroyed; the plates just slide.', example: 'San Francisco lies beside the San Andreas Fault and was wrecked by an earthquake in 1906.' },
+  'tc.epicentre': { hook: 'Epi means “on top of” in Greek: the epicentre is on top of the focus.' },
+  'tc.seismometer': { hook: 'Seismos is Greek for “earthquake”: a seismometer measures the shaking.', example: 'The British Geological Survey records a few hundred earthquakes in the UK each year, mostly too small to feel.' },
+  'tc.lava': { hook: 'Magma is in the Middle (underground); Lava has Left the volcano.', example: 'Etna in Sicily and Kīlauea in Hawaii often send out rivers of glowing lava.' },
+  'tc.ring': { hook: 'Picture a ring of fire round the Pacific: Japan, Indonesia, New Zealand, the Andes and Alaska.', example: 'Mount St Helens (USA, 1980) and Mount Fuji (Japan) are both on the Ring of Fire.' },
+  'tc.pangaea': { hook: 'Pangaea is Greek for “all lands”: every continent joined into one.', example: 'On a map, the bulge of Brazil fits into the curve of West Africa like a jigsaw piece.' },
+  'tc.pompeii': { hook: 'Pompeii was Preserved: ash buried it so fast that it was frozen in time.', example: 'Vesuvius still towers over Naples and is one of the most closely watched volcanoes in the world.' },
+
+  // biomes
+  'bi.d1': { hook: 'A desert is dry, not necessarily hot: Antarctica is the biggest desert of all.' },
+  'bi.rainforest': { hook: 'Hot and wet every day: near the Equator it rains most afternoons.', example: 'You can walk through an indoor rainforest at the Eden Project in Cornwall; the real giant is the Amazon.' },
+  'bi.layers': { hook: '“Every Cheeky Uncle Falls”: Emergent, Canopy, Understorey, Floor. Think eagles, monkeys, jaguars, ants.' },
+  'bi.sahara': { hook: 'Sahara means “desert” in Arabic, so “Sahara Desert” really means “Desert Desert”!', example: 'Saharan dust sometimes blows all the way to the UK and leaves an orange film on cars.' },
+  'bi.why-desert': { hook: 'Air rises wet at 0° and sinks dry at 30°.', example: 'The Sahara, the Arabian Desert and the Australian deserts all lie near the tropics.' },
+  'bi.tundra': { hook: 'Tundra is too cold for trees; permafrost is PERMAnently FROzen ground.', example: 'Reindeer, Arctic foxes and snowy owls live on the tundra of northern Canada, Alaska and Siberia.' },
+  'bi.taiga': { hook: 'Taiga = trees (conifers); tundra = too cold for trees.', example: 'Endless spruce and pine forests across Siberia and Canada are home to moose, wolves and bears.' },
+  'bi.savanna': { hook: 'Think of The Lion King: golden grass, flat-topped acacia trees, a wet season and a dry season.', example: 'In the Serengeti, in Tanzania, more than a million wildebeest migrate across the savanna each year.' },
+  'bi.uk': { hook: 'Deciduous comes from the Latin for “falling off”: the leaves drop each autumn.', example: 'Sherwood Forest and the New Forest are survivors of the oak woods that once covered much of Britain.' },
+  'bi.drift': { hook: 'The North Atlantic Drift is the UK’s central heating.', example: 'Thanks to it, palm-like plants grow in Cornwall and subtropical gardens thrive at Inverewe in north-west Scotland.' },
+  'bi.wind': { hook: 'South-west winds make the west wet.', example: 'Seathwaite in the Lake District gets over 3 m of rain a year; London gets about 0.6 m.' },
+
+  // people
+  'pp.hierarchy': { hook: '“Happy Villagers Take City Coaches”: hamlet, village, town, city, conurbation.', example: 'Greater Manchester is a conurbation: Manchester, Salford, Bolton, Stockport and more grew into one.' },
+  'pp.megacity': { hook: 'Mega means “great”: a megacity has more than 10 million people.', example: 'Tokyo is the biggest, with about 37 million people in its metropolitan area: about four times London.' },
+  'pp.bridging': { hook: 'Listen for -ford and -bridge: Oxford, Stamford, Cambridge.', example: 'London grew where the Romans first bridged the Thames.' },
+  'pp.wetpoint': { hook: 'Wet point: near water. Dry point: up out of the floods.', example: 'Villages along the foot of the South Downs grew where springs bubble out of the chalk.' },
+  'pp.push': { hook: 'Push factors push you out; pull factors pull you in, like a magnet.', example: 'In the 1800s, jobs in the cotton mills pulled people from the countryside into towns like Manchester.' },
+  'pp.urban': { hook: 'Urban comes from the Latin “urbs”, a city.', example: 'In 1800 most people in Britain lived in the countryside; today over 80% live in towns and cities.' },
+  'pp.population': { hook: 'Counting to 8 billion, one number a second, would take over 250 years.', example: 'That is well over 100 times the UK’s population of nearly 70 million.' },
+  'pp.populous': { hook: 'India overtook China in 2023: more than 1 person in 6 on Earth lives in India.' },
+  'pp.development': { hook: 'The HDI mixes three things: a long life, a good education and a decent income.', example: 'Norway and Switzerland usually top the HDI table; the UK is usually in the top 20.' },
+  'pp.life': { example: 'Life expectancy is about 81 in the UK, but under 60 in some countries, such as Chad and Nigeria.' },
+
+  // capitals of the wider world (only where a link genuinely helps)
+  'wc.usa': { hook: 'D.C. stands for District of Columbia: a special area that belongs to no state.' },
+  'wc.can': { hook: 'Queen Victoria picked Ottawa in 1857: it sits on the river between English- and French-speaking Canada.' },
+  'wc.bra': { hook: 'Brasília was built from scratch in the middle of Brazil, to draw people inland from the coast.' },
+  'wc.arg': { hook: 'Buenos Aires means “good airs”.' },
+  'wc.per': { hook: 'Cusco was the old Inca capital; Lima, on the coast, is Peru’s capital today.', example: 'Machu Picchu, the Inca city in the clouds, is near Cusco.' },
+  'wc.egy': { example: 'Cairo stands on the Nile, close to the pyramids of Giza.' },
+  'wc.nga': { hook: 'Abuja was built in the middle of Nigeria and became the capital in 1991; Lagos, on the coast, is bigger.' },
+  'wc.ken': { hook: 'Nairobi comes from the Maasai words for “cool water”.' },
+  'wc.eth': { hook: 'Addis Ababa means “new flower” in Amharic.' },
+  'wc.cod': { hook: 'Kinshasa faces Brazzaville, capital of the other Congo, across the Congo River.' },
+  'wc.chn': { hook: 'Beijing means “northern capital”.' },
+  'wc.ind': { hook: 'New Delhi is the new part of Delhi, built by the British and opened in 1931.' },
+  'wc.jpn': { hook: 'Tokyo means “eastern capital”; Kyoto was the old capital for over 1,000 years.' },
+  'wc.kor': { hook: 'Seoul is South Korea’s capital; Pyongyang is North Korea’s.' },
+  'wc.pak': { hook: 'Islamabad was built in the 1960s as a brand-new capital, taking over from Karachi.' },
+  'wc.sau': { hook: 'Mecca is the holy city, but Riyadh is the capital.' },
+  'wc.tur': { hook: 'Istanbul was the old Ottoman capital; Atatürk made Ankara the capital in 1923.' },
+  'wc.vnm': { hook: 'Hanoi in the north is the capital; Ho Chi Minh City (once Saigon), in the south, is bigger.' },
+  'wc.aus': { example: 'Canberra was designed from scratch by the American architects Walter Burley Griffin and Marion Mahony Griffin.' },
+  'wc.nzl': { hook: 'Wellington is named after the Duke of Wellington, who won the Battle of Waterloo.' },
+};
+for (const [id, extra] of Object.entries(MEMORY)) {
+  const item = items.find((it) => it.id === `geography.${id}`);
+  if (!item) throw new Error(`MEMORY: no item geography.${id}`);
+  Object.assign(item, extra);
 }
 
 export default [{ subject: 'geography', deck: 'year7', topics, items }];

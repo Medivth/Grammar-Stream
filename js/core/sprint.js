@@ -15,7 +15,13 @@ export function sprintLevel(state) {
   const last = state.sprints?.at(-1);
   if (!last) return SPRINT_START_LEVEL;
   const acc = last.answered ? last.correct / last.answered : 0;
-  if (last.correct >= (COURSE.sprintUp || LEVEL_UP_AT.correct) && acc >= LEVEL_UP_AT.accuracy) return Math.min(SPRINT_LEVELS, last.level + 1);
+  const up = COURSE.sprintUp || LEVEL_UP_AT.correct;
+  if (last.correct >= up && acc >= LEVEL_UP_AT.accuracy) return Math.min(SPRINT_LEVELS, last.level + 1);
+  // accurate but not yet quick (typing answers takes young children longer): two sprints in a
+  // row nearly all right at this level also move her up, so the questions keep getting harder
+  const prev = state.sprints.at(-2);
+  const solid = (s) => s && s.level === last.level && s.answered && s.correct / s.answered >= 0.95 && s.correct >= Math.ceil(up * 0.6);
+  if (solid(last) && solid(prev)) return Math.min(SPRINT_LEVELS, last.level + 1);
   if (last.answered >= 5 && acc < LEVEL_DOWN_BELOW) return Math.max(1, last.level - 1);
   return last.level;
 }

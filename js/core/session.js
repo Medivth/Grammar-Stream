@@ -7,7 +7,7 @@ import { recordTopicAttempt, topicStatus } from './mastery.js';
 import { check } from './checkers.js';
 import { present } from './present.js';
 import { makeRng } from './rng.js';
-import { sprintDue } from './sprint.js';
+import { sprintDue, sprintSeconds } from './sprint.js';
 import { SUBJECTS, SUBJECT_BY_ID, PLACEMENT_ORDER, COURSE } from './subjects.js';
 import { monthKey } from './dates.js';
 import { needsPlacement } from './placement.js';
@@ -17,7 +17,7 @@ export { PLACEMENT_ORDER } from './subjects.js';
 
 export const FAST_MS = { choice: 4000, typed: 8000, map: 5000, order: 12000, numberline: 6000, cloze: 10000 };
 export const CONF = { guess: 0, think: 1, sure: 2 };
-const GRADED = new Set(['review', 'quiz', 'diag', 'practice', 'faded']);
+const GRADED = new Set(['review', 'quiz', 'diag', 'practice', 'faded', 'recall']);
 const MAX_REASKS = 6;
 
 const schedulers = {};
@@ -25,6 +25,12 @@ export function fsrsFor(subject) {
   const r = SUBJECT_BY_ID[subject]?.retention ?? 0.9;
   return (schedulers[r] ||= createFSRS({ retention: r }));
 }
+
+/** Rough seconds per step, for fitting new learning into the session she has set. */
+export const STEP_SECONDS = { review: 18, quiz: 18, recall: 20, intro: 12, practice: 40, worked: 40, faded: 45, sentence: 120, yesterday: 25, written: 600 };
+// a new fact costs its learn card, its quick check and (often) the end-of-session recall
+const NEW_ITEM_SECONDS = STEP_SECONDS.intro + STEP_SECONDS.quiz + STEP_SECONDS.recall;
+const TOPUP_SECONDS = STEP_SECONDS.intro + STEP_SECONDS.quiz;
 
 export function budgets(minutes) {
   return {
@@ -98,13 +104,47 @@ function unintroduced(state, db, topicId) {
   return (db.itemsByTopic[topicId] || []).filter((id) => !state.cards[id] && !['template', 'written'].includes(db.items[id].kind) && !db.items[id].reserve);
 }
 
+/** Share of a topic's questions she has been taught (templates and written answers aside). */
+export function coverage(state, db, topicId) {
+  const ids = (db.itemsByTopic[topicId] || []).filter((id) => !['template', 'written'].includes(db.items[id].kind) && !db.items[id].reserve);
+  return ids.length ? ids.filter((id) => state.cards[id]).length / ids.length : 1;
+}
+
+/**
+ * How well she is doing lately: the share right in her last 60 graded answers over the past
+ * fortnight (null until there are 20). It sets the pace: strong form brings more new learning.
+ */
+export function recentForm(state, today) {
+  const recent = (state.log || []).filter((e) => e[0] >= today - 14).slice(-60);
+  return recent.length >= 20 ? recent.filter((e) => e[3]).length / recent.length : null;
+}
+
+/** Extra new questions per topic batch when she is flying, none when she is not. */
+export function rampBonus(state, today) {
+  const f = recentForm(state, today);
+  return f == null ? 0 : f >= 0.92 ? 2 : f >= 0.85 ? 1 : 0;
+}
+
+/**
+ * Questions not yet taught in topics that are already secure. Without these, a topic marked
+ * secure after its first batch would keep its other questions unseen for good. A few are
+ * mixed into each session, one subject after another, oldest topic first.
+ */
+export function topUpItems(state, db, n) {
+  if (n <= 0) return [];
+  const bySubject = SUBJECTS.map((s) => (db.topicOrder[s.id] || [])
+    .filter((tid) => ['proficient', 'mastered'].includes(state.topics[tid]?.state))
+    .flatMap((tid) => unintroduced(state, db, tid).slice(0, 3)));
+  return alternate(...bySubject).slice(0, n);
+}
+
 function templatesOf(db, topicId) {
   return (db.itemsByTopic[topicId] || []).filter((id) => db.items[id].kind === 'template');
 }
 
 /** Topics she could start or continue in a subject, best first (max 3). */
 export function topicChoices(state, db, subject) {
-  const continuing = [], fresh = [];
+  const continuing = [], fresh = [], unfinished = [];
   for (const tid of db.topicOrder[subject] || []) {
     const t = db.topics[tid];
     const st = topicStatus(t, state.topics, db);
@@ -113,7 +153,10 @@ export function topicChoices(state, db, subject) {
     const hasTemplates = templatesOf(db, tid).length > 0;
     if (st === 'available') fresh.push(tid);
     else if (st === 'learning' && (hasNewFacts || hasTemplates)) continuing.push(tid);
+    // secure, but with questions still to teach: carry on with it too
+    else if (st === 'proficient' && hasNewFacts) unfinished.push(tid);
   }
+  continuing.push(...unfinished);
   // Topics in a strand (phonics) take turns with the rest, starting with whichever has less
   // under way; after moving up, this year's new topics alternate with any left from last year.
   const strand = (tid) => db.topics[tid].strand || '';
@@ -138,8 +181,11 @@ export function pickNewSubject(state, db, today, dueBySubject, cap) {
   const order = SUBJECTS.map((s) => s.id);
   const rot = today % order.length;
   const rotated = [...order.slice(rot), ...order.slice(0, rot)];
-  const candidates = rotated.filter((s) => (dueBySubject[s] || 0) <= cap && topicChoices(state, db, s).length);
-  candidates.sort((a, b) => (state.subjects[a]?.lastNew ?? -1) - (state.subjects[b]?.lastNew ?? -1));
+  // subjects take turns; one with a pile of reviews waits a few days longer, rather than
+  // missing out altogether (that let one subject hog the new learning)
+  const waitFor = (s) => (state.subjects[s]?.lastNew ?? -1) + ((dueBySubject[s] || 0) > cap ? 3 : 0);
+  const candidates = rotated.filter((s) => topicChoices(state, db, s).length);
+  candidates.sort((a, b) => waitFor(a) - waitFor(b));
   return candidates[0] || null;
 }
 
@@ -166,12 +212,15 @@ export function writtenDue(state, db, today) {
   return due[0]?.id || null;
 }
 
-function sentenceOptions(state, db) {
+function sentenceOptions(state, db, today = 0) {
+  const n = db.sentences.length || 1;
+  const rot = (i) => (((i - today * 3) % n) + n) % n;
   const done = {};
   for (const w of state.writing) if (w.taskId) done[w.taskId] = Math.max(done[w.taskId] ?? -1, w.day);
   const sorted = db.sentences
     .map((s, i) => ({ s, i, last: done[s.id] ?? -1 }))
-    .sort((a, b) => a.last - b.last || a.i - b.i);
+    // ones not done yet rotate day by day, so a skipped choice is not offered again tomorrow
+    .sort((a, b) => a.last - b.last || rot(a.i) - rot(b.i));
   return sorted.slice(0, 3).map((x) => x.s.id);
 }
 
@@ -183,14 +232,23 @@ export function planDay(state, db, today) {
   for (const d of due) dueBy[d.subject] = (dueBy[d.subject] || 0) + 1;
   const sprint = sprintDue(state);
   const written = writtenDue(state, db, today);
-  const reviews = interleave(selectReviews(due, b.reviews - (sprint ? 2 : 0) - (written ? 4 : 0)), rng);
-  const cap = Math.ceil(b.reviews * 0.4);
+  const form = recentForm(state, today);
+  // when nearly everything comes back right, reviews make room for new learning
+  const reviewBudget = Math.round(b.reviews * (form >= 0.92 ? 0.7 : form >= 0.85 ? 0.85 : 1));
+  const reviews = interleave(selectReviews(due, reviewBudget - (sprint ? 2 : 0) - (written ? 4 : 0)), rng);
+  // a subject with a pile of reviews waits a little longer for new learning, unless she is doing well
+  const cap = form >= 0.85 ? Infinity : Math.ceil(b.reviews * 0.4);
   const placeSubject = PLACEMENT_ORDER.find((s) => needsPlacement(state, db, s)) || null;
   // after placing a subject, start its next topic straight away
   const subject = placeSubject || pickNewSubject(state, db, today, dueBy, cap);
   // light review days (early on, or after a quiet spell) get a second new topic from another subject
+  // the time left after reviews and the fixed parts goes on new learning
+  const fixed = reviews.length * STEP_SECONDS.review + (sprint ? sprintSeconds() + 15 : 0) + (written ? STEP_SECONDS.written : 0)
+    + STEP_SECONDS.sentence + (state.lastFeedback && state.lastFeedback.day < today ? STEP_SECONDS.yesterday : 0);
+  const room = Math.max(0, state.settings.sessionMinutes * 60 - fixed);
+  const newItems = Math.max(subject ? 3 : 0, Math.floor(room / NEW_ITEM_SECONDS));
   let second = null;
-  if (subject && !placeSubject && reviews.length < b.reviews * 0.6) {
+  if (subject && !placeSubject && newItems >= 10 && (reviews.length < b.reviews * 0.6 || form >= 0.9)) {
     const others = { ...state, subjects: { ...state.subjects, [subject]: { ...(state.subjects[subject] || {}), lastNew: today } } };
     second = pickNewSubject(others, db, today, dueBy, cap);
     if (second === subject) second = null;
@@ -212,17 +270,30 @@ export function planDay(state, db, today) {
   if (written) steps.push({ t: 'written', id: written });
   if (subject) steps.push({ t: 'choose', subject, options: topicChoices(state, db, subject), afterPlacement: !!placeSubject });
   if (second) steps.push({ t: 'choose', subject: second, options: topicChoices(state, db, second) });
-  const sOpts = sentenceOptions(state, db);
+  // a few untaught questions from topics already secure, in whatever time the new topics leave
+  // (none while she is finding things hard)
+  const perTopic = subject ? Math.max(3, Math.floor(newItems / (second ? 2 : 1))) : 0;
+  const spare = room - perTopic * (second ? 2 : 1) * NEW_ITEM_SECONDS;
+  const topUpCount = form != null && form < 0.7 ? 0 : Math.min(COURSE.young ? 2 : 4, Math.max(COURSE.young ? 1 : 2, Math.floor(spare / TOPUP_SECONDS)));
+  const topUp = topUpItems(state, db, topUpCount);
+  for (let i = 0; i < topUp.length; i += 3) {
+    const group = topUp.slice(i, i + 3);
+    group.forEach((id) => { if (db.topics[db.items[id].topic].kind !== 'reading') steps.push({ t: 'intro', id, topUp: true }); });
+    rng.shuffle(group).forEach((id) => steps.push({ t: 'quiz', id, topUp: true }));
+  }
+  const sOpts = sentenceOptions(state, db, today);
   if (sOpts.length) steps.push({ t: 'sentence', options: sOpts });
   steps.push({ t: 'ritual' });
   steps.push({ t: 'done' });
-  return { day: today, steps, pos: 0, results: [], yesterday, subject, topic: null, reasks: 0, started: null, dueTotal: due.length };
+  return { day: today, steps, pos: 0, results: [], yesterday, subject, topic: null, reasks: 0, started: null, dueTotal: due.length, perTopic };
 }
 
 function yesterdayEntries(fb) {
+  // mistakes, and right answers that were only guesses; ones she knew are not worth the time
   const wrong = fb.entries.filter((e) => !e.correct);
-  const sureRight = fb.entries.filter((e) => e.correct && e.conf !== CONF.sure);
-  return [...wrong, ...sureRight].slice(0, 8);
+  const guessed = fb.entries.filter((e) => e.correct && e.conf === CONF.guess);
+  const seen = new Set();
+  return [...wrong, ...guessed].filter((e) => !seen.has(e.itemId) && seen.add(e.itemId)).slice(0, 8);
 }
 
 /** The plan being played: the extra language practice while it is open, otherwise today's session. */
@@ -257,6 +328,7 @@ export function chooseTopic(state, db, topicId, today) {
   const b = budgets(state.settings.sessionMinutes);
   const started = !!state.topics[topicId];
   const steps = [];
+  let recall = [];
   if (!started && topic.diagnostic?.length) {
     steps.push({ t: 'intro-topic', topic: topicId });
     topic.diagnostic.forEach((id) => steps.push({ t: 'diag', id }));
@@ -276,7 +348,9 @@ export function chooseTopic(state, db, topicId, today) {
     for (let i = 0; i < b.practice; i++) steps.push({ t: 'practice', id: t0, level: firstTime && i === 0 ? db.items[t0].levels[0] : undefined });
   }
   if (fresh.length && (!tmpl.length || topic.kind !== 'skill')) {
-    const batch = fresh.slice(0, topic.batch || b.newFacts);
+    const bonus = Math.min(rampBonus(state, today), COURSE.young ? 1 : 2);
+    // a bigger batch when she is flying, but never more than today's time allows
+    const batch = fresh.slice(0, Math.min((topic.batch || b.newFacts) + bonus, plan.perTopic || Infinity));
     // reading comprehension: answer from the passage straight away, no learn card, in the author's order
     if (topic.kind === 'reading') batch.forEach((id) => steps.push({ t: 'quiz', id }));
     else for (let i = 0; i < batch.length; i += 3) {
@@ -284,15 +358,19 @@ export function chooseTopic(state, db, topicId, today) {
       group.forEach((id) => steps.push({ t: 'intro', id }));
       makeRng(`quiz:${today}:${i}`).shuffle(group).forEach((id) => steps.push({ t: 'quiz', id }));
     }
+    // recall today's new facts once more near the end, from memory where the format allows:
+    // a second retrieval after a gap is what makes new learning stick
+    if (topic.kind !== 'reading') recall = makeRng(`recall:${today}:${topicId}`).shuffle(batch.slice()).slice(0, COURSE.young ? 3 : 6).map((id) => ({ t: 'recall', id }));
   }
   const at = plan.pos + 1;
   plan.steps.splice(at, 0, ...steps);
+  if (recall.length) plan.steps.splice(firstIndexOf(plan, ['sentence', 'ritual', 'done'], at + steps.length), 0, ...recall);
   plan.topic = topicId;
   (plan.topics ||= []).push(topicId);
   state.topics[topicId] ||= { ema: 0.5, n: 0, state: 'learning', profDay: null, delayed: 0, started: today };
   const subj = (state.subjects[topic.subject] ||= { ability: 0, attempts: 0, lastNew: null });
   subj.lastNew = today;
-  return steps.length;
+  return steps.length + recall.length;
 }
 
 export function skipChoose(state) {
@@ -304,7 +382,11 @@ export function questionFor(state, db, step, pos) {
   const card = state.cards[step.id];
   const rng = makeRng(`q:${activePlan(state).day}:${pos}:${step.id}`);
   // diagnostics and first quizzes are always recognition format
-  const format = step.t === 'diag' || step.t === 'quiz' ? (item.kind === 'mapfact' ? 'choose' : item.kind === 'spell' ? 'cued' : item.kind === 'fact' ? 'choice' : undefined) : undefined;
+  let format = step.t === 'diag' || step.t === 'quiz' ? (item.kind === 'mapfact' ? 'choose' : item.kind === 'spell' ? 'cued' : item.kind === 'fact' ? 'choice' : undefined) : undefined;
+  // the end-of-session recall: first letter only, if the item can be typed
+  if (step.t === 'recall' && item.kind === 'fact' && (item.formats || ['cued']).includes('cued')) format = 'cued';
+  // ...or, for a place, finding it on the map
+  if (step.t === 'recall' && item.kind === 'mapfact' && (item.formats || ['locate']).includes('locate')) format = 'locate';
   return present(item, card, { db, state, rng, level: step.level, format });
 }
 
@@ -338,10 +420,10 @@ export function submit(state, db, step, q, response, { ms = null, conf = null, n
 
   // topic mastery (diagnostics measure prior knowledge, so they do not count)
   if (step.t !== 'diag') {
-    state.topics[item.topic] = recordTopicAttempt(state.topics[item.topic], res.correct, today, { mixed: step.t === 'review' });
+    state.topics[item.topic] = recordTopicAttempt(state.topics[item.topic], res.correct, today, { mixed: step.t === 'review', coverage: coverage(state, db, item.topic) });
     // a skill used in another subject is evidence for that skill too (only once she has started it)
     for (const tid of item.credits || []) {
-      if (state.topics[tid]) state.topics[tid] = recordTopicAttempt(state.topics[tid], res.correct, today, { mixed: true });
+      if (state.topics[tid]) state.topics[tid] = recordTopicAttempt(state.topics[tid], res.correct, today, { mixed: true, coverage: coverage(state, db, tid) });
     }
   }
 
@@ -366,6 +448,7 @@ export function submit(state, db, step, q, response, { ms = null, conf = null, n
       correct: res.correct,
       conf,
       explain: q.explain,
+      hook: q.hook,
       itemId: step.id,
     });
   }

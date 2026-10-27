@@ -35,7 +35,7 @@ const SPELL = [
   ['separate', 'Keep the two piles ___.', 'apart from each other', 'There is “a rat” in sep-a-rat-e: two a’s, not an e in the middle.'],
   ['definitely', 'I will ___ be there.', 'certainly', 'Built on “finite”: de-finite-ly. No “a” anywhere.'],
   ['occasionally', 'We ___ have pizza on Fridays.', 'now and then', 'Double c, single s: oc-cas-ion-al-ly.'],
-  ['independence', 'The colony won its ___ in 1776.', 'freedom from control', 'in-depend-ence: ends -ence, like dependence.'],
+  ['independence', 'The American colonies declared their ___ in 1776.', 'freedom from control', 'in-depend-ence: ends -ence, like dependence.'],
   ['knowledge', 'Her ___ of history is impressive.', 'what you know', 'know + ledge: keep the silent k and the d.'],
   ['argument', 'They had an ___ about the rules.', 'a disagreement', 'Argue drops its e before -ment: argu-ment.'],
   ['business', 'She runs a small ___.', 'a company; trade', 'busi-ness: busy changes y to i, then -ness.'],
@@ -51,11 +51,11 @@ const SPELL = [
 ];
 
 const topics = [
-  { id: 'english.grammar-8', title: 'Advanced grammar: passive, subjunctive and punctuation', kind: 'facts', ...S({}), prereqs: ['english.grammar7'], batch: 5, intro: 'The grammar that makes writing sound sophisticated: the passive voice, the subjunctive mood, modal verbs, and the colon, semicolon and dash used with purpose.', teach: 'Explain when a writer might choose the passive voice.', talk: 'Challenge her to say three sentences in the passive at dinner (“The peas were eaten by…”).' },
-  { id: 'english.vocab-3', title: 'Ambitious vocabulary', kind: 'facts', ...S({}), prereqs: ['english.lit-words'], batch: 6, intro: 'Twelve words that top-set essays use and most eleven-year-olds do not. Learn them, then use each one in a real sentence this week.', teach: 'Use three of this week’s words in one paragraph about your day.', talk: 'Pick a word and see who can use it first, naturally, during the day.' },
-  { id: 'english.spell-8', title: 'Spelling: words everyone gets wrong', kind: 'facts', ...S({}), prereqs: ['english.spell-7'], batch: 5, intro: 'Not on the Year 6 list, but these are the words that lose marks in Year 7 and 8: separate, definitely, occasionally, manoeuvre…', teach: 'Pick one word and explain its trap.', talk: 'Ask her to spell “definitely” and “separate” out loud.' },
-  { id: 'english.poetry-2', title: 'Poetic form: the sonnet and the ballad', kind: 'facts', ...S({}), prereqs: ['english.poems'], batch: 5, intro: 'Form is the shape of a poem: how many lines, what rhymes, what rhythm. Shakespeare’s Sonnet 18 is the most famous fourteen lines in English.', teach: 'Explain what a sonnet is.', talk: 'Clap the ten syllables of “Shall I compare thee to a summer’s day?” together.' },
-  { id: 'english.read-stretch', title: 'Reading: Dickens and Brontë', kind: 'reading', ...S({}), prereqs: ['english.read-nonfic'], batch: 7, intro: 'Two openings from great Victorian novels. The sentences are long and the vocabulary is hard. Slow down, reread, and trust the clues.', teach: 'Explain how Dickens makes the convict frightening in a single paragraph.', talk: 'Read the first paragraph of Great Expectations aloud together, as dramatically as you can.' },
+  { id: 'english.grammar-8', title: 'Advanced grammar: passive, subjunctive and punctuation', kind: 'facts', ...S({}), prereqs: ['english.grammar7'], batch: 5, intro: 'The grammar that makes writing sound sophisticated: the passive voice, the subjunctive mood, modal verbs, and the colon, semicolon and dash used with purpose.', hook: 'Passive hides the doer, subjunctive imagines (“If I were…”), colon announces, semicolon balances.', teach: 'Explain when a writer might choose the passive voice.', talk: 'Challenge her to say three sentences in the passive at dinner (“The peas were eaten by…”).' },
+  { id: 'english.vocab-3', title: 'Ambitious vocabulary', kind: 'facts', ...S({}), prereqs: ['english.lit-words'], batch: 6, intro: 'Twelve words that top-set essays use and most eleven-year-olds do not. Learn them, then use each one in a real sentence this week.', hook: 'Use a new word three times in one week and it’s yours for life.', teach: 'Use three of this week’s words in one paragraph about your day.', talk: 'Pick a word and see who can use it first, naturally, during the day.' },
+  { id: 'english.spell-8', title: 'Spelling: words everyone gets wrong', kind: 'facts', ...S({}), prereqs: ['english.spell-7'], batch: 5, intro: 'Not on the Year 6 list, but these are the words that lose marks in Year 7 and 8: separate, definitely, occasionally, manoeuvre…', hook: 'There’s a rat in separate, and definitely has finite in it.', teach: 'Pick one word and explain its trap.', talk: 'Ask her to spell “definitely” and “separate” out loud.' },
+  { id: 'english.poetry-2', title: 'Poetic form: the sonnet and the ballad', kind: 'facts', ...S({}), prereqs: ['english.poems'], batch: 5, intro: 'Form is the shape of a poem: how many lines, what rhymes, what rhythm. Shakespeare’s Sonnet 18 is the most famous fourteen lines in English.', hook: 'Sonnet: 14 lines, ABAB CDCD EFEF GG, which is three quatrains and a couplet.', teach: 'Explain what a sonnet is.', talk: 'Clap the ten syllables of “Shall I compare thee to a summer’s day?” together.' },
+  { id: 'english.read-stretch', title: 'Reading: Dickens and Brontë', kind: 'reading', ...S({}), prereqs: ['english.read-nonfic'], batch: 7, intro: 'Two openings from great Victorian novels. The sentences are long and the vocabulary is hard. Slow down, reread, and trust the clues.', hook: 'Read twice: once for what happens, once for how the writer makes you feel it.', teach: 'Explain how Dickens makes the convict frightening in a single paragraph.', talk: 'Read the first paragraph of Great Expectations aloud together, as dramatically as you can.' },
 ];
 
 const items = [
@@ -106,6 +106,64 @@ const items = [
   fact('rd.je6', 'read-stretch', 'What does Jane take with her into the window-seat?', 'a book with pictures', ['her cousins’ toys', 'a cup of tea', 'a letter from Bessie'], '“I soon possessed myself of a volume, taking care that it should be one stored with pictures.”', choiceOnly),
   written('rd.je7', 'read-stretch', 'How does Charlotte Brontë make the reader sympathise with Jane in this opening? Write a paragraph using at least two quotations.', ['How Jane is treated (Mrs Reed’s words, the cousins “clustered round their mama”)', 'Jane’s own feelings and her refuge', 'The weather, and what it reflects', 'Why a first-person narrator helps'], 'Brontë makes us sympathise with Jane by showing her shut out of her own family. The cousins are “clustered round their mama” while Jane is “dispensed from joining the group”, and Mrs Reed calls her a “caviller” for asking one question. Because Jane tells the story herself, we feel her “heart saddened by the chidings of Bessie” from the inside. The “drear November day” and “rain so penetrating” reflect her loneliness, and her hiding place, “shrined in double retirement”, shows a child making the only safe space she can.', JANE),
 ];
+
+// Memory hooks (mnemonics) and real-world examples, keyed by item id (without “english.”).
+const MEMORY = {
+  'g8.passive1': { hook: 'The zombie test: if you can add “by zombies” after the verb, it’s passive. “The window was broken by zombies.”' },
+  'g8.passive2': { example: 'News reports say “A man was arrested”: the police (the doers) are obvious, so they are left out.' },
+  'g8.passive3': { hook: 'Swap the ends, add “was” + past participle, then “by”: the cat was chased by the dog.' },
+  'g8.subj': { hook: 'Imagining or wishing? Use “were” for everyone: if I were, I wish it were.', example: 'The famous song from Fiddler on the Roof is “If I Were a Rich Man”.' },
+  'g8.modal': { hook: 'The modals: can, could, may, might, must, shall, should, will, would. They never take -s: “she can”, not “she cans”.' },
+  'g8.colon': { hook: 'A colon is a drumroll: a complete sentence, then “here it comes”.' },
+  'g8.semi': { hook: 'Semicolon test: could each side be a sentence on its own? Then a semicolon can join them.' },
+  'g8.dash': { hook: 'A hyphen joins words (no spaces: well-known); a dash separates (spaces either side).' },
+  'g8.relative': { hook: 'Relative pronouns relate back to a noun: who, which, that, whose, where, when.' },
+  'g8.hyphen': { example: '“Twenty-odd people” means about twenty; “twenty odd people” means twenty strange ones!' },
+  'v3.meticulous': { hook: 'Meticulous measuring: every millimetre checked.' },
+  'v3.ambivalent': { hook: 'Ambi = both (like ambidextrous): feeling both ways at once.' },
+  'v3.ephemeral': { example: 'Soap bubbles, rainbows and sandcastles are ephemeral.' },
+  'v3.pragmatic': { hook: 'Pragmatic = practical: both start with “pra”.' },
+  'v3.benevolent': { hook: 'Bene = good (as in benefit), vol = wish: wishing others well.' },
+  'v3.scrutinise': { example: 'Video referees scrutinise the replay frame by frame before giving a decision.' },
+  'v3.tenacious': { hook: 'A tenacious terrier never lets go of the ball.' },
+  'v3.superfluous': { hook: 'Super-fluous = overflowing: more than you need.' },
+  'v3.eloquent': { hook: 'loqu = speak, as in ventriloquist: an eloquent person speaks beautifully.' },
+  'v3.ubiquitous': { hook: 'Ubique is Latin for “everywhere”.', example: 'Pigeons and phones are ubiquitous in city centres.' },
+  'v3.candid': { example: 'A candid photo catches people as they really are, not posing.' },
+  'v3.inevitable': { hook: 'In (not) + evitable (avoidable): it cannot be avoided.' },
+  'sp8.separate': { hook: 'There’s a rat in separate: sep-A-RAT-e.' },
+  'sp8.definitely': { hook: 'Definitely has finite in it: de-FINITE-ly, and never an a.' },
+  'sp8.occasionally': { hook: 'Occasionally: two c’s go out together, one s stays home.' },
+  'sp8.independence': { hook: 'You DEPEND on no one: in-DEPEND-ence, ending -ence.' },
+  'sp8.knowledge': { hook: 'Your knowledge sits on a LEDGE: know + ledge.' },
+  'sp8.argument': { hook: 'Don’t argue about GUM: ar-GUM-ent (argue loses its e).' },
+  'sp8.business': { hook: 'Go to work on the BUS: BUS-i-ness.' },
+  'sp8.colleague': { hook: 'Colleagues are in the same LEAGUE: col-LEAGUE.' },
+  'sp8.fascinating': { hook: 'Science is fascinating: both have “sc”.' },
+  'sp8.humorous': { hook: 'Humour drops its u in humorous: the joke isn’t about “you”.' },
+  'sp8.manoeuvre': { example: 'The UK driving test includes a reversing manoeuvre. Americans spell it “maneuver”.' },
+  'sp8.parallel': { hook: 'The two l’s in the middle of paraLLel are a pair of parallel lines.' },
+  'sp8.perseverance': { hook: 'Keep going even when it gets SEVERE: per-SEVER-ance.' },
+  'sp8.questionnaire': { example: 'Customer feedback forms and school surveys are questionnaires: question + naire, double n.' },
+  'sp8.vacuum': { hook: 'A vacuum cleaner sucks up one c and leaves two u’s: va-c-uu-m.' },
+  'sp8.truly': { hook: 'True loses its e in truly, but sure keeps it in surely.' },
+  'p2.lines': { hook: 'Three quatrains (4 + 4 + 4) and a couplet (2) = 14 lines.' },
+  'p2.pent': { hook: 'Iamb = da-DUM, like a heartbeat; penta = five (as in pentagon).' },
+  'p2.scheme': { hook: 'ABAB CDCD EFEF GG: three alternating quatrains, then a rhyming pair.' },
+  'p2.volta': { hook: 'Volta is Italian for “turn”: look for a “But” around line 9.' },
+  'p2.personify': { hook: 'The eye of heaven = the sun: a bright eye looking down from the sky.' },
+  'p2.ballad': { hook: 'Ballads were sung: a story, a simple beat and a repeated refrain.' },
+  'p2.haiku': { example: 'Matsuo Bashō’s 17th-century haiku about a frog jumping into an old pond is the most famous of all.' },
+  'p2.enjamb': { hook: 'Enjambment strides over the line end; a caesura cuts a line in two.' },
+  'rd.pp1': { hook: 'Repetition piles up: each “A man…” adds another frightening detail.' },
+  'rd.pp2': { hook: 'Look for the word that makes a villain pitiable: shivered.' },
+  'rd.pp3': { hook: 'Ravenously = wolfing it down, like a starving animal.' },
+  'rd.pp5': { hook: 'Point of view: the church turns because Pip is upside down.' },
+  'rd.je3': { hook: 'A caviller cavils: picks at tiny faults.' },
+  'rd.je4': { hook: 'A shrine is a holy place: Jane’s window-seat is her sacred hideaway.' },
+  'rd.je5': { hook: 'Pathetic fallacy: the weather feels what the character feels.' },
+};
+for (const it of items) Object.assign(it, MEMORY[it.id.replace(/^english\./, '')]);
 
 for (const it of items) if (!it.passage && it.id.startsWith('english.rd.')) Object.assign(it, it.id.includes('.pp') ? PIP : JANE);
 

@@ -17,13 +17,24 @@ export function sprintQuestion(level, rng, course = COURSE.sprint) {
   return { ...q, keypad: q.keypad ?? (course === 'ks1' || course === 'y3' || (course === 'y6' && L !== 4)) };
 }
 
+/** A sprint question that is not one of the last few asked (`recent` is updated). */
+export function freshSprintQuestion(L, rng, recent, keep = 6) {
+  let q = sprintQuestion(L, rng);
+  for (let i = 0; i < 10 && recent.includes(q.prompt); i++) q = sprintQuestion(L, rng);
+  recent.push(q.prompt);
+  if (recent.length > keep) recent.shift();
+  return q;
+}
+
 // Year 2 greater depth: bonds, doubles, tens, and the 2, 5, 10 (then 3, 4) tables
 const SPRINT_KS1 = [
   [
     (r) => { const a = r.int(0, 10); return { prompt: `${a} + ? = 10`, value: 10 - a }; },
-    (r) => { const a = r.int(1, 6), b = r.int(1, 4); return { prompt: `${a} + ${b}`, value: a + b }; },
-    (r) => { const a = r.int(4, 10), b = r.int(1, a); return { prompt: `${a} − ${b}`, value: a - b }; },
-    (r) => { const a = r.int(1, 5); return { prompt: `Double ${a}`, value: 2 * a }; },
+    (r) => { const a = r.int(2, 9), b = r.int(2, 9); return { prompt: `${a} + ${b}`, value: a + b }; },
+    (r) => { const a = r.int(6, 18), b = r.int(2, Math.min(9, a)); return { prompt: `${a} − ${b}`, value: a - b }; },
+    (r) => { const a = r.int(1, 10); return { prompt: `Double ${a}`, value: 2 * a }; },
+    (r) => { const a = r.int(5, 49), up = r.chance(0.5); return { prompt: `1 ${up ? 'more' : 'less'} than ${a}`, value: up ? a + 1 : a - 1 }; },
+    (r) => { const a = r.int(1, 9); return { prompt: `${a} + 10`, value: a + 10 }; },
   ],
   [
     (r) => { const a = r.int(0, 20); return { prompt: `${a} + ? = 20`, value: 20 - a }; },

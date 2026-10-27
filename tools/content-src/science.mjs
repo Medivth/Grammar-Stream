@@ -8,14 +8,14 @@ const mcq = (id, topic, prompt, options, explain, extra = {}) => ({
 });
 
 const topics = [
-  { id: 'science.space', title: 'Earth and space', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.sp.d1', 'science.sp.d2', 'science.sp.d3'], intro: 'Why do we have day and night? Why are there seasons? Let’s find out what you think first.', teach: 'Explain why we have day and night.', talk: 'Ask her why it is dark at night, then why it is colder in winter.' },
-  { id: 'science.forces', title: 'Forces', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.f.d1', 'science.f.d2', 'science.f.d3'], intro: 'Forces are pushes and pulls. Some ideas about forces feel right but are wrong. Let’s test yours.', teach: 'Explain what would happen if you dropped a hammer and a feather on the Moon.', talk: 'Ask her why a ball rolling on grass slows down.' },
-  { id: 'science.light', title: 'Light and seeing', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.l.d1', 'science.l.d2'], intro: 'How do we see things? The answer surprised scientists for centuries.', teach: 'Explain how you see a book on a table.', talk: 'Ask her why a shadow forms.' },
-  { id: 'science.electricity', title: 'Electrical circuits', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.e.d1', 'science.e.d2'], intro: 'Circuits need a complete loop. Let’s check what you know about how they work.', teach: 'Explain why a bulb doesn’t light if the circuit has a gap.', talk: 'Ask her what a switch actually does inside a circuit.' },
-  { id: 'science.materials', title: 'Materials and changes', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.m.d1', 'science.m.d2', 'science.m.d3'], intro: 'When sugar dissolves, where does it go? When we bake a cake, can we undo it? Let’s see.', teach: 'Explain the difference between a reversible and an irreversible change.', talk: 'Ask her how she would get salt back out of salty water.' },
-  { id: 'science.living', title: 'Classifying living things', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.lv.d1'], intro: 'Scientists sort living things into groups by their features.', teach: 'Explain how you could tell a mammal from a reptile.', talk: 'Ask her whether a whale is a fish or a mammal, and why.' },
-  { id: 'science.body', title: 'The heart, blood and health', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.b.d1', 'science.b.d2'], intro: 'Your heart beats about 100 000 times a day. What is it actually doing?', teach: 'Explain the journey of blood from the heart to the lungs and back.', talk: 'Ask her to take her pulse before and after running on the spot.' },
-  { id: 'science.evolution', title: 'Evolution and inheritance', kind: 'facts', prereqs: ['science.living'], batch: 5, diagnostic: ['science.ev.d1', 'science.ev.d2'], intro: 'How did giraffes get long necks? Darwin had an answer that changed science.', teach: 'Explain how natural selection works using the giraffe.', talk: 'Ask her what Mary Anning discovered.' },
+  { id: 'science.space', title: 'Earth and space', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.sp.d1', 'science.sp.d2', 'science.sp.d3'], intro: 'Why do we have day and night? Why are there seasons? Let’s find out what you think first.', teach: 'Explain why we have day and night.', talk: 'Ask her why it is dark at night, then why it is colder in winter.', hook: 'Spin gives a **day**, orbit gives a **year**, tilt gives the **seasons**.' },
+  { id: 'science.forces', title: 'Forces', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.f.d1', 'science.f.d2', 'science.f.d3'], intro: 'Forces are pushes and pulls. Some ideas about forces feel right but are wrong. Let’s test yours.', teach: 'Explain what would happen if you dropped a hammer and a feather on the Moon.', talk: 'Ask her why a ball rolling on grass slows down.', hook: 'Forces are pushes and pulls, measured in **newtons**: they change an object’s speed, direction or shape.' },
+  { id: 'science.light', title: 'Light and seeing', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.l.d1', 'science.l.d2'], intro: 'How do we see things? The answer surprised scientists for centuries.', teach: 'Explain how you see a book on a table.', talk: 'Ask her why a shadow forms.', hook: '**Source → Object → Eye**, and always in straight lines.' },
+  { id: 'science.electricity', title: 'Electrical circuits', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.e.d1', 'science.e.d2'], intro: 'Circuits need a complete loop. Let’s check what you know about how they work.', teach: 'Explain why a bulb doesn’t light if the circuit has a gap.', talk: 'Ask her what a switch actually does inside a circuit.', hook: '**No loop, no flow**: a circuit must be complete, with no gaps.' },
+  { id: 'science.materials', title: 'Materials and changes', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.m.d1', 'science.m.d2', 'science.m.d3'], intro: 'When sugar dissolves, where does it go? When we bake a cake, can we undo it? Let’s see.', teach: 'Explain the difference between a reversible and an irreversible change.', talk: 'Ask her how she would get salt back out of salty water.', hook: 'Can you undo it? Melting, freezing, dissolving: **reversible**. Burning, rusting, baking: **irreversible**.' },
+  { id: 'science.living', title: 'Classifying living things', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.lv.d1'], intro: 'Scientists sort living things into groups by their features.', teach: 'Explain how you could tell a mammal from a reptile.', talk: 'Ask her whether a whale is a fish or a mammal, and why.', hook: '**K**ing **P**hilip **C**ame **O**ver **F**or **G**ood **S**oup: kingdom, phylum, class, order, family, genus, species.' },
+  { id: 'science.body', title: 'The heart, blood and health', kind: 'facts', prereqs: [], batch: 5, diagnostic: ['science.b.d1', 'science.b.d2'], intro: 'Your heart beats about 100 000 times a day. What is it actually doing?', teach: 'Explain the journey of blood from the heart to the lungs and back.', talk: 'Ask her to take her pulse before and after running on the spot.', hook: '**A**rteries carry blood **A**way from the heart; v**ein**s bring it back **in**.' },
+  { id: 'science.evolution', title: 'Evolution and inheritance', kind: 'facts', prereqs: ['science.living'], batch: 5, diagnostic: ['science.ev.d1', 'science.ev.d2'], intro: 'How did giraffes get long necks? Darwin had an answer that changed science.', teach: 'Explain how natural selection works using the giraffe.', talk: 'Ask her what Mary Anning discovered.', hook: '“Survival of the fittest”: the best-suited survive, breed and pass on their features.' },
 ];
 
 const items = [
@@ -86,7 +86,7 @@ const items = [
   fact('lv.key', 'living', 'What is a tool of yes/no questions used to identify living things called?', 'a classification key', ['a food chain', 'a habitat', 'a fossil record'], 'A classification (branching) key sorts organisms using questions about their features.', { formats: ['choice'] }),
 
   // --- body
-  mcq('b.d1', 'body', 'What does the heart do?', [['It pumps blood around the body', true], ['It makes new blood for the body', false, 'Blood cells are made in the bone marrow, not the heart.'], ['It cleans the blood of waste', false, 'That’s a figure of speech. Feelings come from the brain.']], 'The heart is a muscle that pumps blood, carrying oxygen and nutrients to every part of the body.'),
+  mcq('b.d1', 'body', 'What does the heart do?', [['It pumps blood around the body', true], ['It makes new blood for the body', false, 'Blood cells are made in the bone marrow, not the heart.'], ['It cleans the blood of waste', false, 'Cleaning waste out of the blood is mainly the job of the kidneys (and the liver), not the heart.']], 'The heart is a muscle that pumps blood, carrying oxygen and nutrients to every part of the body.'),
   mcq('b.d2', 'body', 'Why does your heart beat faster when you exercise?', [['Your muscles need more oxygen', true], ['The heart gets nervous and scared', false, 'The heart responds to what the muscles need.'], ['Exercise makes your heart smaller', false, 'Exercise strengthens the heart over time; it doesn’t make it smaller.']], 'Working muscles need more oxygen and glucose, so the heart pumps faster and you breathe faster.'),
   fact('b.arteries', 'body', 'Which blood vessels carry blood away from the heart?', 'arteries', ['veins', 'capillaries', 'nerves'], 'Arteries carry blood away from the heart (A for Away). Veins carry it back.'),
   fact('b.veins', 'body', 'Which blood vessels carry blood back to the heart?', 'veins', ['arteries', 'capillaries', 'tendons'], 'Veins carry blood back to the heart.'),
@@ -104,5 +104,99 @@ const items = [
   fact('ev.adaptation', 'evolution', 'A feature that helps a living thing survive in its habitat is called…', 'an adaptation', ['a habitat', 'a fossil', 'a mutation only'], 'A polar bear’s thick fur and a cactus’s spines are adaptations.', { accept: ['adaptation'] }),
   fact('ev.galapagos', 'evolution', 'On which islands did Darwin study finches with different beaks?', 'the Galápagos Islands', ['the Canary Islands', 'the Isle of Wight', 'the Falkland Islands'], 'The finches’ beaks suited the food on each island.', { formats: ['choice'] }),
 ];
+
+// Memory hooks (mnemonics) and real-world examples, shown on the learn card and after a
+// wrong answer. Keyed by item id without the `science.` prefix; merged in below.
+const MEMORY = {
+  // --- space
+  'sp.d1': { hook: 'The Earth spins like a roast on a spit: whichever side faces the Sun has day.', example: 'The Sun seems to cross the sky from east to west each day, but really you are being carried round by the spinning Earth.' },
+  'sp.d2': { hook: '**Tilt, not distance**: the Earth is actually closest to the Sun in early January.', example: 'Shine a torch straight down and you get a small bright spot; tilt it and the light spreads out and is weaker. That is UK winter sunlight.' },
+  'sp.d3': { hook: '**DOC**: in the UK the Moon grows from a D shape to an O (full), then shrinks to a C shape.', example: 'Look at the Moon from your window on clear evenings a week apart and watch the lit part grow or shrink.' },
+  'sp.orbit': { hook: '365 days in a year, 366 in a **leap year**: the four leftover quarter-days make one extra day.', example: '2024 was a leap year with a 29 February; the next one is 2028.' },
+  'sp.moon-orbit': { hook: '**Moon** and **month** come from the same old word: one trip of the Moon is about a month.', example: 'A full Moon comes round about once a month: many calendars and diaries show the Moon’s phases.' },
+  'sp.star': { hook: 'Stars make their own light; planets and moons only reflect it. The Sun shines, so it’s a star.', example: 'Each twinkling star you see on a clear night is a sun, many of them bigger than ours, just very far away.' },
+  'sp.planets': { hook: '**M**y **V**ery **E**asy **M**ethod **J**ust **S**peeds **U**p **N**aming.', example: 'The brightest “star” low in the west just after sunset is often not a star at all, but the planet Venus.' },
+  'sp.largest': { hook: '**J**upiter is the **J**umbo planet.', example: 'If the Earth were a pea, Jupiter would be about the size of a tennis ball.' },
+  'sp.spherical': { hook: 'Gravity pulls everything towards the middle equally, squeezing huge objects into balls.', example: 'Photos taken from the International Space Station show the Earth’s curved edge.' },
+  'sp.geocentric': { hook: '**Co**pernicus put the Sun at the **co**re of the solar system.', example: 'Helio- means Sun: the gas helium was named because it was first discovered in the Sun’s light.' },
+
+  // --- forces
+  'f.d1': { hook: 'No air, no difference: gravity speeds everything up at the same rate.', example: 'On the Apollo 15 mission in 1971, astronaut David Scott dropped a hammer and a feather on the Moon. They landed together.' },
+  'f.d2': { hook: 'Moving things keep moving unless a force acts: friction is the thief that steals speed.', example: 'A ball rolls much further across a smooth playground or an ice rink than across long grass.' },
+  'f.d3': { hook: '**M**ass is the **M**atter in you (kg); **W**eight is the **W**orld’s pull on you (N).', example: 'Bathroom scales show kg but really measure your weight: on the Moon they would read about one-sixth as much.' },
+  'f.newtons': { hook: '**N** for **N**ewton: forces are measured in newtons (N).', example: 'An apple weighs about 1 newton, fitting for the scientist in the falling-apple story!' },
+  'f.air-res': { hook: 'Bigger surface, more air to push aside, more air resistance.', example: 'Drop a flat sheet of paper and it drifts down; scrunch the same sheet into a ball and it falls fast.' },
+  'f.water-res': { hook: 'Streamlined = smooth and pointed, so water slips past instead of pushing back.', example: 'Swimmers push off the pool wall with their arms stretched into a point to cut through the water.' },
+  'f.lever': { hook: 'Archimedes: “Give me a lever long enough and I shall move the world.”', example: 'Scissors, a crowbar and a bottle opener are all levers turning on a pivot.' },
+  'f.pulley': { hook: 'A pulley turns your pull **down** into a lift **up**.', example: 'Pull a flagpole’s rope down and the flag goes up, thanks to a pulley at the top.' },
+  'f.gears': { hook: 'Gears are toothed wheels that bite into each other, so turning one turns the next.', example: 'Changing to a low gear on a bike makes pedalling uphill easier.' },
+  'f.gravity-who': { hook: 'The famous story: an apple falling from a tree set Newton thinking about gravity.', example: 'Newton’s childhood home, Woolsthorpe Manor in Lincolnshire, still has the apple tree linked to the story.' },
+
+  // --- light
+  'l.d1': { hook: '**Source → Object → Eye**: light travels into your eyes, never out of them.', example: 'In a room with no windows and the light off, you can’t see a thing, because no light is bouncing into your eyes.' },
+  'l.d2': { hook: 'A shadow is a light-shaped hole: the place where straight-line light is blocked.', example: 'Make shadow-puppet animals with your hands in front of a torch shining on a wall.' },
+  'l.straight': { hook: 'Light can’t turn corners: you can hear someone round a corner, but you can’t see them.', example: 'Sunbeams through a gap in the curtains, or through clouds, make straight lines like a ruler.' },
+  'l.opaque': { hook: '**O**paque: “**O**h no, nothing gets through!”', example: 'Blackout curtains are opaque, which is why they keep a bedroom dark on light summer evenings.' },
+  'l.translucent': { hook: 'Transparent = see-through. Translucent = light gets through, but the view is blurry.', example: 'A frosted bathroom window lets light in but stops people seeing in.' },
+  'l.mirror': { hook: 'Mirrors bounce light back, like a ball bouncing off a wall.', example: 'Ambulances have AMBULANCE written back-to-front on the bonnet so drivers ahead can read it in their mirrors.' },
+  'l.periscope': { hook: '**Peri-** means “around”: a periscope lets you look around things.', example: 'Submarines use periscopes to see above the waves while staying hidden underwater.' },
+  'l.source': { hook: 'Makes its own light? Source. Only bounces light? Reflector, like the Moon.', example: 'Cat’s eyes on UK roads shine in headlights, but they are reflectors, not light sources.' },
+
+  // --- electricity
+  'e.d1': { hook: 'Current is like a bike chain: it moves all the way round, and none of it gets used up.' },
+  'e.d2': { hook: 'More cells = more push = brighter bulb. More bulbs = push shared = dimmer bulbs.', example: 'Torches often hold two or three cells in a row (in series) to give the bulb a bigger push.' },
+  'e.complete': { hook: 'No loop, no flow!', example: 'A broken wire inside a headphone cable leaves a gap, so the sound cuts out.' },
+  'e.switch': { hook: 'Switch **C**losed = circuit **C**omplete = on.', example: 'Pressing a light switch at home closes or opens a gap in the circuit to the light.' },
+  'e.conductor': { hook: 'Metals conduct; plastic, rubber, wood and glass insulate.', example: 'A UK plug has brass (metal) pins to conduct and a plastic case to insulate.' },
+  'e.insulator': { hook: 'An insulator is a coat for the wire: it keeps the current in, like a coat keeps heat in.', example: 'Look at a phone charger cable: copper wire inside, a plastic or rubber coating outside.' },
+  'e.symbol': { hook: 'The cross in the bulb symbol is like the glowing wire inside a glass bulb.' },
+  'e.volt': { hook: '**V**olts measure **V**oltage: the push.', example: 'AA and AAA batteries are printed with 1.5 V; a square smoke-alarm battery says 9 V.' },
+
+  // --- materials
+  'm.d1': { hook: 'Dissolved isn’t disappeared: mass in = mass out.', example: 'Stir sugar into tea: you can’t see it, but you can still taste it, so it must still be there.' },
+  'm.d2': { hook: 'Ask: can I get it back? If not, it’s irreversible. You can’t unbake a cake.', example: 'Toast can’t be turned back into bread, but a melted ice lolly can be refrozen.' },
+  'm.d3': { hook: 'Evaporation: water particles escape into the air as invisible water vapour.', example: 'Wet washing on a line dries fastest on a warm, windy day.' },
+  'm.filter': { hook: 'A filter is a super-fine sieve: it catches bits that haven’t dissolved.', example: 'A tea bag or a coffee filter lets water through but traps the leaves or grounds.' },
+  'm.evaporate': { hook: 'Salt hides in water, but stays behind when the water evaporates.', example: 'White marks on wellies after a day at the seaside are salt left behind as the seawater dried.' },
+  'm.magnet': { hook: 'Magnets pick out iron (and nickel and cobalt), not sand and not most other metals.', example: 'Recycling centres use giant magnets to pull steel cans out from aluminium ones.' },
+  'm.soluble': { hook: '**Sol**uble things dis**sol**ve.', example: 'Sugar disappears into tea; sand stays gritty at the bottom of a bucket of water.' },
+  'm.states': { hook: 'Solid keeps its shape, liquid takes the shape, gas fills the space.', example: 'An ice cube melts into a puddle, and the puddle slowly dries up: one substance, all three states.' },
+  'm.water-boil': { hook: 'Water freezes at **0** and boils at **100**: the Celsius scale was built around it.', example: 'A kettle clicks off when its water reaches boiling point, about 100°C.' },
+  'm.rust': { hook: 'Rust needs **water and oxygen** together: take either away and iron won’t rust.', example: 'A bike left out in the rain gets an orange, rusty chain.' },
+
+  // --- living things
+  'lv.d1': { hook: 'Breathes air and feeds its baby milk? Mammal, wherever it lives.', example: 'Dolphins and grey seals around UK coasts are mammals too: watch them come up to breathe.' },
+  'lv.vertebrate': { hook: '**Vertebr**ate = has **vertebr**ae, the bones of a backbone.', example: 'Run a finger down the middle of your back: those bumps are your vertebrae.' },
+  'lv.five': { hook: '**MR FAB**: **M**ammals, **R**eptiles, **F**ish, **A**mphibians, **B**irds.', example: 'A garden can hold all five: a hedgehog, a slow-worm, goldfish in the pond, a frog and a robin.' },
+  'lv.amphibian': { hook: '**Amphibian** means “double life”: in water as a tadpole, on land as an adult.', example: 'Frogspawn in a pond in spring hatches into tadpoles, which grow legs and become froglets.' },
+  'lv.insect-legs': { hook: 'Six legs and three body parts (head, thorax, abdomen) = insect. Eight legs = spider.', example: 'Count the legs on a ladybird (6) and a garden spider (8) next time you find one.' },
+  'lv.linnaeus': { hook: 'Linnaeus gave each species a two-part name, like a surname then a first name: Genus, then species.', example: 'A pet cat is Felis catus; a robin is Erithacus rubecula.' },
+  'lv.microbes': { hook: '**Micro** means tiny, as in microscope: micro-organisms are tiny living things.', example: 'Yeast makes bread dough rise, and bacteria turn milk into yoghurt: both are micro-organisms.' },
+  'lv.key': { hook: 'A key works like the game 20 Questions: each yes/no answer narrows it down.', example: 'Spotter guides to British minibeasts or wild flowers often use keys.' },
+
+  // --- body
+  'b.d1': { hook: 'The heart is a pump, not a factory or a filter: blood is made in bone marrow.', example: 'Squeeze a squeezy bottle of water to feel how a pump pushes liquid out.' },
+  'b.d2': { hook: 'Muscles shout “more oxygen!” and the heart answers by beating faster.', example: 'Feel your pulse after running up the stairs: it’s much faster than when you sit still.' },
+  'b.arteries': { hook: '**A**rteries carry blood **A**way from the heart.', example: 'When a nurse takes your pulse at your wrist, they’re feeling an artery.' },
+  'b.veins': { hook: 'Arteries go **A**way; v**ein**s bring blood back **in** to the heart.', example: 'The bluish lines on the inside of your wrist are veins.' },
+  'b.capillaries': { hook: '**Capillary** comes from the Latin for “hair”: they are hair-thin.', example: 'When you graze your knee, the tiny beads of blood come from broken capillaries.' },
+  'b.lungs': { hook: 'Lungs are a swap shop: oxygen **in**, carbon dioxide **out**.', example: 'Breathe into a balloon: the air inside has less oxygen and more carbon dioxide than room air.' },
+  'b.plasma': { hook: 'Blood is a delivery van: it drops off oxygen and food and picks up the rubbish.' },
+  'b.pulse': { hook: 'Count your pulse for 15 seconds and multiply by 4 to get beats per minute.', example: 'A fitness watch or smartwatch measures your pulse (heart rate).' },
+
+  // --- evolution
+  'ev.d1': { hook: '“Survival of the fittest”: giraffes didn’t stretch; the longer-necked ones survived more.', example: 'Peppered moths: when soot blackened trees near Victorian factories, dark moths were better hidden and became common.' },
+  'ev.d2': { hook: 'Half your genes from Mum, half from Dad, mixed differently each time, so siblings differ.', example: 'Brothers and sisters often share features, like hair colour, but rarely look identical (unless they are identical twins).' },
+  'ev.darwin': { hook: '**Darwin** sailed round the world on a ship called the **Beagle**.', example: 'Darwin was on the back of the Bank of England £10 note from 2000 to 2018.' },
+  'ev.anning': { hook: 'The tongue-twister “She sells seashells on the seashore” is said to be about Mary Anning.', example: 'You can still hunt for fossils on the beach at Lyme Regis, on Dorset’s Jurassic Coast.' },
+  'ev.fossil': { hook: 'Fossils are nature’s photos of the past, turned to stone.', example: 'The Natural History Museum in London displays fossils, including some found by Mary Anning.' },
+  'ev.adaptation': { hook: 'Adaptations are survival tools: thick fur for cold, spines for protection, camouflage for hiding.', example: 'A hedgehog’s spines protect it from predators; a duck’s webbed feet help it swim.' },
+  'ev.galapagos': { hook: 'The Galápagos are named after their giant tortoises: galápago is an old Spanish word for tortoise.' },
+};
+for (const [id, memory] of Object.entries(MEMORY)) {
+  const item = items.find((it) => it.id === `science.${id}`);
+  if (!item) throw new Error(`science.mjs: memory hook for unknown item ${id}`);
+  Object.assign(item, memory);
+}
 
 export default [{ subject: 'science', deck: 'core', topics, items }];

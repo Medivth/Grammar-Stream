@@ -108,4 +108,99 @@ const items = [
   order('td.order', 'tudors', 'Put these Tudor monarchs in order.', ['Henry VII', 'Henry VIII', 'Edward VI', 'Mary I', 'Elizabeth I'], ['1485–1509', '1509–1547', '1547–1553', '1553–1558', '1558–1603'], 'Five Tudor monarchs ruled from 1485 to 1603.'),
 ];
 
-export default [{ subject: 'history', deck: 'year7', topics, items }];
+// --- memory hooks: a mnemonic (hook) and a real-world connection (example), merged in by id.
+const topicHooks = {
+  'history.church': 'The Church was there from **cradle to grave**, and every peasant paid it a **tithe**: one tenth of everything.',
+  'history.becket': '“Will no one rid me of this turbulent priest?”: the words Henry II is famously said to have shouted.',
+  'history.magna-carta': '**Magna** = great (as in magnify), **Carta** = charter: the Great Charter of 1215 put the king under the law.',
+  'history.village': '“Some pray, some fight, some work”: and the ones who worked, the peasants, were almost everyone.',
+  'history.black-death': '**1348** plague → **1351** wages frozen → **1381** revolt: death, then anger, then rebellion.',
+  'history.peasants-revolt': '“When Adam delved and Eve span, who was then the gentleman?”: John Ball’s famous question.',
+  'history.war-france': 'The Hundred Years War lasted **116** years; the Wars of the Roses were **red** Lancaster against **white** York.',
+  'history.tudors': '“Divorced, beheaded, died; divorced, beheaded, survived”: Henry VIII’s six wives, in order.',
+};
+
+const memory = {
+  // Church and Crusades
+  'ch.pope': { hook: '**Pope** comes from “papa”, father: the father of the Church, based in Rome.', example: 'The Pope still lives in Vatican City, inside Rome: the smallest country in the world.' },
+  'ch.tithe': { hook: '**Tithe** sounds like **tenth**, and that is just what it means.', example: 'Huge tithe barns, like the medieval one at Bradford on Avon in Wiltshire, were built to store the Church’s tenth.' },
+  'ch.purgatory': { hook: '**Purg**atory sounds like **purge** (to clean out): a waiting room where souls were cleaned before Heaven.' },
+  'ch.pilgrimage': { hook: 'Pilgrims brought home **badges** like souvenirs: a scallop shell meant you had been to Santiago.', example: 'Scallop-shell signs still mark the Camino, the pilgrims’ path to Santiago de Compostela in Spain.' },
+  'ch.monks': { hook: '**Monk** comes from Greek monos, “alone” (like **mono**rail): monks lived apart from the world.', example: 'Ruined abbeys such as Whitby and Fountains in Yorkshire were once busy homes for monks.' },
+  'ch.urban': { hook: 'Pope **Urban** (think “city”) wanted Christians to win back the holy **city** of Jerusalem.' },
+  'ch.jerusalem': { hook: '**1095** called, **1099** captured: the First Crusade took four years.', example: 'Jerusalem is still a holy city for Jews, Christians and Muslims today.' },
+  'ch.saladin': { hook: 'Saladin took Jerusalem in **1187**; Richard the Lionheart’s Third Crusade set out two years later to win it back.' },
+  'ch.richard': { hook: '**Lion**heart, brave as a lion, yet he spent only about six months of his reign in England.', example: 'A statue of Richard the Lionheart on horseback stands outside the Houses of Parliament in London.' },
+  'ch.why-crusade': { hook: 'The three Gs: **G**od, **G**lory and **G**old: faith, adventure and the hope of wealth.' },
+
+  // Henry II and Becket
+  'bk.henry': { hook: 'Henry II reigned **1154–1189**; Becket was killed in **1170**, about halfway through.', example: 'Henry II is buried at Fontevraud Abbey in France: a sign of how much of France he ruled.' },
+  'bk.archbishop': { hook: 'Becket went from **chancellor** (the king’s man) to **archbishop** (the Church’s man), and changed sides.', example: 'The Archbishop of Canterbury still leads the Church of England and crowns new monarchs.' },
+  'bk.courts': { hook: '“Criminous clerks”: should a priest who broke the law face the **king’s** court or the **Church’s**?' },
+  'bk.date': { hook: 'Murdered **1170**, made a saint **1173**: just three years from murder to saint.', example: 'A candle burns in Canterbury Cathedral where Becket’s shrine once stood, and the place where he fell is marked.' },
+  'bk.saint': { hook: 'The **Canterbury Tales** are stories told by pilgrims on the road to Becket’s shrine.', example: 'Geoffrey Chaucer’s Canterbury Tales are still read today, in schools and in children’s retellings.' },
+  'bk.source': { hook: 'An **eye**witness saw it with his own **eyes**, but Grim was Becket’s admirer, so check for bias.' },
+
+  // John and Magna Carta
+  'mc.john': { hook: 'There has only ever been **one** King John of England: no later king has taken the name.', example: 'King John’s tomb is in Worcester Cathedral.' },
+  'mc.where': { hook: '**Runnymede**: “mede” is an old word for meadow, and the barons met John in a meadow by the Thames.', example: 'Runnymede is now a National Trust meadow near Windsor, with a memorial to Magna Carta.' },
+  'mc.who': { hook: 'The **barons** bargained: rebel barons captured London in May 1215, so John had to talk.' },
+  'mc.normandy': { hook: 'John “Softsword” lost **Normandy** in **1204**: the Norman kings’ own homeland, gone.', example: 'The Channel Islands, such as Jersey and Guernsey, are the last part of the old Duchy of Normandy still linked to the Crown.' },
+  'mc.clause': { hook: '**Nobody is above the law**, not even the king: the big idea of 1215.', example: 'The US Constitution and modern human rights laws echo Magna Carta’s ideas.' },
+  'mc.montfort': { hook: '**1265** is exactly **50 years** after Magna Carta (1215).', example: 'De Montfort University in Leicester is named after him.' },
+
+  // village
+  'v.manor': { hook: '**Manor** → “manor house”: the lord’s big house at the heart of the village.', example: 'Many villages still have a Manor Farm or Manor House: a clue to the old lord of the manor.' },
+  'v.villein': { hook: 'A **villein** was tied to his **vill**age. Our word “villain” comes from it!' },
+  'v.strips': { hook: 'Three fields: one for winter crops, one for spring crops, one resting (**fallow**), taking turns each year.', example: 'Wavy “ridge and furrow” lines left by medieval ploughing can still be seen in many fields today.' },
+  'v.reeve': { hook: 'A **reeve** ran the work of a village; a **shire-reeve** (sheriff) kept order in a whole county.' },
+  'v.wool': { hook: 'England’s wealth was built “on the sheep’s back”: wool paid for castles and churches.', example: 'Rich “wool churches”, like the one in Lavenham, Suffolk, were paid for by wool merchants.' },
+  'v.diet': { hook: '**Pottage** = everything in one **pot**: a thick stew of vegetables, beans and grain.', example: 'Potatoes came from South America after 1500, so there were no medieval chips!' },
+
+  // Black Death
+  'bd.d1': { hook: 'Bacteria in **fleas**, fleas on **rats**: the plague travelled by flea bite. Doctors then blamed bad air and the planets.' },
+  'bd.year': { hook: '“Thirteen-forty-eight, the plague came through the gate.”' },
+  'bd.flagellants': { hook: '**Flag**ellants **flog**ged themselves: flagellum is Latin for whip.' },
+  'bd.miasma': { hook: '**Miasma** = a “mist” of bad air, so people carried posies of sweet-smelling herbs to block it.', example: 'Beaked plague-doctor masks (from a later century) were stuffed with herbs to keep out miasma.' },
+  'bd.consequence': { hook: 'Fewer workers = each worker worth more. Scarce things cost more.', example: 'Today too, when employers cannot find enough workers, wages tend to rise.' },
+  'bd.statute': { hook: 'A **stat**ute to keep wages **stat**ic: 1351, just three years after the plague arrived.' },
+
+  // Peasants' Revolt
+  'pr.year': { hook: '“Thirteen-eighty-one, the peasants’ march begun.”', example: 'The rebels camped at Blackheath, in south-east London, where John Ball preached to them.' },
+  'pr.tax': { hook: '**Poll** is an old word for **head**: a tax on every head, the same for rich and poor.', example: 'A new “poll tax” in 1990 also caused huge protests: history echoing 1381.' },
+  'pr.tyler': { hook: '**Wat led, Ball preached**: Wat Tyler was the leader, John Ball the preacher.', example: 'Smithfield in London, where Tyler met the king, has been home to a famous meat market for centuries.' },
+  'pr.ball': { hook: '“Delved” = dug, “span” = spun wool: when the first people worked the land, nobody was a lord.' },
+  'pr.richard': { hook: 'Richard II was **14**: the age of a Year 9 pupil, facing an angry crowd.', example: 'The Wilton Diptych, a painting of the young Richard II, hangs in the National Gallery in London.' },
+  'pr.trigger': { hook: 'Think of a bonfire: long-term causes are the **wood**, the trigger is the **match**.' },
+  'pr.outcome': { hook: 'Richard is reported to have told the peasants: “Villeins you are, and villeins you shall remain.”' },
+
+  // Hundred Years War, Wars of the Roses
+  'wf.dates': { hook: 'Not 100 but **116** years: 1337 to 1453.' },
+  'wf.longbow': { hook: 'Crécy, Poitiers, Agincourt: the longbow’s three great English wins.', example: 'Over 130 longbows were found on the Mary Rose wreck; you can see them in Portsmouth.' },
+  'wf.agincourt': { hook: '“We few, we happy few, we band of brothers”: Shakespeare’s Henry V before Agincourt.', example: 'Shakespeare’s play Henry V is still performed, with the famous St Crispin’s Day speech.' },
+  'wf.joan': { hook: 'Joan of Arc, the **Maid of Orléans**: she helped end the siege of Orléans at about 17.', example: 'Joan was made a saint in 1920; statues of her stand all over France.' },
+  'wf.calais': { hook: 'Calais was lost in 1558. Mary I is said to have claimed “Calais” would be found written on her heart.', example: 'Ferries from Dover still sail to Calais, the closest French port to England.' },
+  'wf.roses': { hook: '**Red** rose = **L**ancashire, **white** rose = **Y**orkshire: still the two counties’ symbols.', example: 'Look for the white rose on Yorkshire signs and the red rose on Lancashire’s.' },
+  'wf.princes': { hook: 'Richard III, uncle of the Princes in the Tower: a mystery that has stuck to his name for 500 years.' },
+  'wf.bosworth': { hook: 'Richard III lost his crown at Bosworth in 1485: “Richard Of York Gave Battle In Vain” (the rainbow rhyme) is often linked to him.', example: 'Richard III was reburied in Leicester Cathedral in 2015; Bosworth battlefield has a visitor centre.' },
+  'wf.tudor-rose': { hook: 'Red + white = the Tudor rose: Henry (Lancaster) married Elizabeth (York) and joined the two roses.', example: 'The Tudor rose is still a royal badge: you can spot it carved all over Hampton Court Palace.' },
+
+  // Tudors
+  'td.henry8': { hook: '“Divorced, beheaded, died; divorced, beheaded, survived”: six fates, six wives.', example: 'Henry’s warship the Mary Rose is in Portsmouth, and his suits of armour are in the Tower of London.' },
+  'td.wives': { hook: 'Three Catherines, two Annes, one Jane: **Cath, Anne, Jane, Anne, Cath, Cath**.', example: 'Hever Castle in Kent, Anne Boleyn’s childhood home, can be visited today.' },
+  'td.break': { hook: 'No son → no annulment → no Pope: Henry made himself head of his own Church.', example: 'The monarch is still Supreme Governor of the Church of England today.' },
+  'td.supremacy': { hook: '**Supreme** = the very top. **1534** came just after Henry married Anne Boleyn in 1533.' },
+  'td.dissolution': { hook: '**Dissolve** = melt away: like sugar in tea, the monasteries vanished.', example: 'Many streets named Abbey Road or Priory Lane mark where a monastery once stood.' },
+  'td.edward': { hook: '“**Ned the lad**”: the boy-king Edward VI in the old monarchs rhyme.', example: 'Many old grammar schools are called “King Edward VI School” because they were founded or refounded in his reign.' },
+  'td.mary': { hook: 'Catholic **Mary**, Protestant **Elizabeth**: half-sisters on opposite sides.', example: 'The Martyrs’ Memorial in Oxford remembers three Protestant bishops who died under Mary I.' },
+  'td.elizabeth': { hook: 'Elizabeth **1558–1603**: when she died, James VI of Scotland became king of England too.', example: 'The famous “Armada Portrait” of Elizabeth I hangs in the Queen’s House at Greenwich.' },
+  'td.armada': { hook: 'Legend says Drake finished his game of bowls on Plymouth Hoe before sailing out to meet the Armada.', example: 'A statue of Francis Drake stands on Plymouth Hoe today.' },
+  'td.drake': { hook: 'Drake’s ship, the **Golden Hind**, was the first English ship to sail around the world.', example: 'A full-size replica of the Golden Hind is moored by the Thames in London.' },
+  'td.golden': { hook: 'Always ask “golden for **whom**?”: courtiers and poets, yes; the poor and Catholics, less so.', example: 'Shakespeare’s Globe, rebuilt on London’s South Bank, shows the theatre of Elizabeth’s age.' },
+  'td.order': { hook: '“Harrys twain and Ned the lad, Mary, Bessie”: the old monarchs rhyme gives the Tudors in order.' },
+};
+
+for (const id of Object.keys(memory)) if (!items.some((it) => it.id === `history.${id}`)) throw new Error(`history memory hook for unknown item ${id}`);
+const withMemory = (it) => ({ ...it, ...memory[it.id.slice('history.'.length)] });
+
+export default [{ subject: 'history', deck: 'year7', topics: topics.map((t) => ({ ...t, hook: topicHooks[t.id] })), items: items.map(withMemory) }];

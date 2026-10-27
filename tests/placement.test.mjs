@@ -38,9 +38,9 @@ test('a learner who knows everything is placed high, within the question cap', (
   assert.ok(summary.passed.length >= 8, `passed ${summary.passed.length}`);
   assert.equal(summary.failed.length, 0);
   for (const t of summary.passed) assert.equal(state.topics[t].state, 'proficient');
-  // assumed items enter review spread over two weeks, not all at once
+  // assumed items enter review spread over six weeks, not all at once
   const dues = Object.values(state.cards).filter((c) => c.assumed).map((c) => c.due - TODAY);
-  assert.ok(dues.length > 0 && Math.min(...dues) >= 2 && Math.max(...dues) <= 14);
+  assert.ok(dues.length > 0 && Math.min(...dues) >= 4 && Math.max(...dues) <= 42);
   assert.ok(state.subjects.maths.ability > 0, 'ability rises after correct answers');
   assert.equal(needsPlacement(state, db, 'maths'), false);
 });

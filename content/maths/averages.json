@@ -12,7 +12,8 @@
    "batch": 5,
    "intro": "An average is one number that sums up a whole set of data. Geographers, scientists and historians all use them, so this skill turns up everywhere.",
    "teach": "Explain the difference between the mean and the median.",
-   "talk": "Ask her the mean of everyone’s ages at the table."
+   "talk": "Ask her the mean of everyone’s ages at the table.",
+   "hook": "“Hey diddle diddle, the median’s the middle; you add and divide for the mean. The mode is the one that appears the most, and the range is the difference between.”"
   }
  ],
  "items": [
@@ -30,7 +31,8 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "Put the numbers in order first: then the middle, the most common and the spread are easy to see."
   },
   {
    "id": "maths.av.median",
@@ -46,7 +48,9 @@
    "explain": "Median sounds like “medium”: the middle one.",
    "accept": [
     "median"
-   ]
+   ],
+   "hook": "The median is the middle, like the median strip down the middle of a motorway.",
+   "example": "Line your class up by height: the person standing in the middle has the median height."
   },
   {
    "id": "maths.av.mode",
@@ -62,7 +66,9 @@
    "explain": "Mode sounds like “most”: the most common value.",
    "accept": [
     "mode"
-   ]
+   ],
+   "hook": "**Mo**de = **mo**st.",
+   "example": "A shoe shop orders more of the mode, the size it sells most often."
   },
   {
    "id": "maths.av.mean",
@@ -78,7 +84,9 @@
    "explain": "Mean = total ÷ number of values. It shares the total out equally.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Mean = share it out fairly: add it all up, then share it between everyone.",
+   "example": "Three friends with 2, 4 and 6 sweets who share them equally get 4 each: that is the mean."
   },
   {
    "id": "maths.av.range",
@@ -94,7 +102,9 @@
    "explain": "Range = largest − smallest. A big range means the data is spread out.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Range = biggest − smallest: how far the data ranges.",
+   "example": "A week of temperatures from 12°C to 20°C has a range of 8°C."
   },
   {
    "id": "maths.av.mode-q",
@@ -107,7 +117,8 @@
     "2",
     "9"
    ],
-   "explain": "7 appears twice; every other number appears once. (5.6 is the mean.)"
+   "explain": "7 appears twice; every other number appears once. (5.6 is the mean.)",
+   "hook": "Mode = most: count which value turns up most often."
   },
   {
    "id": "maths.av.even",
@@ -120,7 +131,8 @@
     "8",
     "28"
    ],
-   "explain": "With an even number of values there are two middle ones (6 and 8). The median is halfway between them: 7."
+   "explain": "With an even number of values there are two middle ones (6 and 8). The median is halfway between them: 7.",
+   "hook": "Two middle values? Go halfway between them: add them and halve."
   }
  ]
 }

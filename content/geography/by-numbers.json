@@ -16,7 +16,8 @@
    "batch": 5,
    "intro": "Geographers use maths to compare places: average earnings, rainfall, population density and growth. Your maths skills do the work here.",
    "teach": "Explain what population density means and how to work it out.",
-   "talk": "Ask her whether a village or a city has a higher population density, and why."
+   "talk": "Ask her whether a village or a city has a higher population density, and why.",
+   "hook": "Every geography number needs a “per”: per person, per km², per cent. Always ask “out of how many?”"
   }
  ],
  "items": [
@@ -63,7 +64,9 @@
    ],
    "explain": "When one value is far bigger than the rest, the median gives a fairer picture of a typical household. That is why average earnings in a country are usually reported as a median.",
    "passage": "Weekly earnings of five households on one street:\n£400   £420   £450   £480   £2,250",
-   "passageSource": "Invented data"
+   "passageSource": "Invented data",
+   "hook": "One giant value drags the mean up; the median ignores it.",
+   "example": "House prices in the news are often given as medians, so a few mansions don’t make homes look dearer."
   },
   {
    "id": "geography.gn.density",
@@ -88,7 +91,9 @@
    ],
    "explain": "Population density = people ÷ area. A: 1,200 ÷ 40 = 30 per km². B: 900 ÷ 10 = 90 per km², three times as crowded.",
    "passage": "Island A: 1,200 people, area 40 km²\nIsland B: 900 people, area 10 km²",
-   "passageSource": "Invented data"
+   "passageSource": "Invented data",
+   "hook": "Density = people ÷ area: how crowded each square kilometre is.",
+   "example": "England is one of the most crowded countries in Europe; the Scottish Highlands are among the emptiest places."
   },
   {
    "id": "geography.gn.climate",
@@ -113,7 +118,9 @@
    ],
    "explain": "This pattern is typical of a Mediterranean climate, like southern Spain or Greece: hot, dry summers and mild, wet winters.",
    "passage": "Rainfall (mm) in a coastal town\nJan 110 · Feb 95 · Mar 70 · Apr 40 · May 20 · Jun 5\nJul 2 · Aug 5 · Sep 25 · Oct 70 · Nov 100 · Dec 120",
-   "passageSource": "Invented data"
+   "passageSource": "Invented data",
+   "hook": "Read the pattern, not each number: which months are high, and which are low?",
+   "example": "Summer holidays in Spain or Greece are dry and sunny: that is the Mediterranean climate."
   },
   {
    "id": "geography.gn.anomaly",
@@ -138,7 +145,9 @@
    ],
    "explain": "4°C at midday in a UK July is almost impossible. Like an anomaly in a science experiment, it should be checked, and left out of the mean if it was a mistake.",
    "passage": "Midday temperature (°C) in a UK town, one week in July\nMon 21 · Tue 23 · Wed 22 · Thu 4 · Fri 24 · Sat 22 · Sun 23",
-   "passageSource": "Invented data"
+   "passageSource": "Invented data",
+   "hook": "An anomaly is the odd one out: it doesn’t fit the pattern of the rest.",
+   "example": "In a science experiment, one result far from all the others is an anomaly: repeat it to check."
   },
   {
    "id": "geography.gn.survey",
@@ -154,7 +163,9 @@
    "explain": "50 out of 200 = 50 ÷ 200 = 0.25 = 25%.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Percentage = part ÷ whole × 100.",
+   "example": "If 15 of the 30 people in your class walk to school, that is 50%."
   },
   {
    "id": "geography.gn.urban",
@@ -170,7 +181,8 @@
    "explain": "The fractions must add up to one whole: 1 − 4/5 = 1/5. The UK is a bit more urban than this: over 80% of people live in towns and cities.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "The parts make one whole: 1 − 4/5 = 1/5."
   }
  ]
 }

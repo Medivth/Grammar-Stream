@@ -13,13 +13,13 @@ import { makeRng } from '../core/rng.js';
 import { currentBooks, logReading, submitAnswer, unseenMarks, ANSWER_LEVELS, wordCount } from '../core/writing.js';
 import { milestones } from '../core/progress.js';
 import { sprintLevel, sprintBest, recordSprint, sprintSeconds } from '../core/sprint.js';
-import { sprintQuestion, SPRINT_LEVELS } from '../gen/sprint.js';
+import { freshSprintQuestion, SPRINT_LEVELS } from '../gen/sprint.js';
 import { parseNumber } from '../core/fraction.js';
 import { icon, SUBJECT_ICON } from '../ui/icons.js';
 import { ACCESSORIES } from '../ui/capybara.js';
 import { SUBJECT_BY_ID, COURSE } from '../core/subjects.js';
 
-const GRADED = new Set(['review', 'quiz', 'diag', 'practice', 'faded']);
+const GRADED = new Set(['review', 'quiz', 'diag', 'practice', 'faded', 'recall']);
 
 export async function playScreen(app, arg) {
   const { state, db } = app;
@@ -99,6 +99,16 @@ async function renderStep(app) {
   }
 }
 
+// ---------------------------------------------------------------- memory hooks
+// A mnemonic or memorable link, and an example from real life, make new facts far easier to
+// recall. Shown on learn cards, after a wrong answer and in the look-back.
+function hookCard({ hook, example }) {
+  if (!hook && !example) return null;
+  return h('div', { class: 'hook' },
+    hook ? h('p', {}, h('span', { class: 'hook-label' }, 'Memory hook'), rich('span', hook)) : null,
+    example ? h('p', {}, h('span', { class: 'hook-label' }, 'In real life'), rich('span', example)) : null);
+}
+
 // ---------------------------------------------------------------- yesterday
 function yesterdayStep(app, root) {
   const entries = activePlan(app.state).yesterday || [];
@@ -110,7 +120,8 @@ function yesterdayStep(app, root) {
       rich('p', e.prompt, { style: { fontWeight: 700 } }),
       !e.correct && e.given ? h('p', {}, 'You said: ', rich('span', e.given)) : null,
       h('p', {}, e.correct ? '✓ ' : 'Answer: ', rich('strong', e.answer)),
-      e.explain && !e.correct ? rich('p', e.explain, { class: 'muted small' }) : null)),
+      e.explain && !e.correct ? rich('p', e.explain, { class: 'muted small' }) : null,
+      e.hook ? hookCard({ hook: e.hook }) : null)),
     h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'On we go')));
 }
 
@@ -149,7 +160,8 @@ function sprintStep(app, root) {
     const input = h('input', { type: 'text', class: 'sprint-in', autocomplete: 'off', 'aria-label': 'Your answer', inputmode: 'text' });
     const score = h('div', { class: 'sprint-score' }, '0');
     const card = h('div', { class: 'sprint card' }, h('div', { class: 'progress sprint-timer' }, bar), prompt, h('div', { class: 'typed-row' }, input), h('p', { class: 'muted small center' }, 'Right so far: ', score));
-    const nextQ = () => { q = sprintQuestion(level, rng); app.sprintCurrent = q; prompt.innerHTML = richHTML(q.prompt); input.value = ''; input.setAttribute('inputmode', q.keypad ? 'decimal' : 'text'); };
+    const recent = [];
+    const nextQ = () => { q = freshSprintQuestion(level, rng, recent); app.sprintCurrent = q; prompt.innerHTML = richHTML(q.prompt); input.value = ''; input.setAttribute('inputmode', q.keypad ? 'decimal' : 'text'); };
     const flash = (ok) => { card.classList.remove('ok', 'no'); void card.offsetWidth; card.classList.add(ok ? 'ok' : 'no'); };
     const submitQ = () => {
       if (done || !input.value.trim()) return;
@@ -218,6 +230,8 @@ function introTopicStep(app, root, step) {
     h('h2', {}, t.title),
     t.links ? h('p', { class: 'joined' }, icon('link'), ` A joined-up topic: it uses your ${t.links.map((l) => SUBJECT_BY_ID[l].name).join(' and ')} skills too.`) : null,
     t.intro ? (COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(t.intro), rich('p', t.intro, { class: 'learn' })) : rich('p', t.intro, { class: 'learn' })) : null,
+    // with a diagnostic first, the hook would give its answers away: it comes after instead
+    (() => { const plan = activePlan(app.state); return plan.steps[plan.pos + 1]?.t === 'diag'; })() ? null : hookCard({ hook: t.hook }),
     t.diagnostic?.length ? h('p', { class: 'muted' }, 'First, a few questions to see what you think already. Just answer honestly: it’s fine not to know yet.') : null,
     h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'Let’s go')));
 }
@@ -226,6 +240,7 @@ function diagSummaryStep(app, root, step) {
   mount(root, header(app), h('div', { class: 'q-wrap stack' },
     h('h2', {}, 'Thanks!'),
     h('p', { class: 'learn' }, 'Those answers show what you think right now. Lots of people believe some of the wrong ideas, even adults. Now let’s learn the science properly.'),
+    hookCard({ hook: app.db.topics[step.topic]?.hook }),
     h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'Carry on')));
 }
 
@@ -253,6 +268,8 @@ async function introStep(app, root, step) {
     parts.push(COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(`${learnText(item)} ${item.explain && !item.learn ? item.explain : ''}`), rich('div', learnText(item), { class: 'learn' })) : rich('div', learnText(item), { class: 'learn' }));
     if (item.explain && !item.learn) parts.push(rich('p', item.explain, { class: 'muted' }));
   }
+  const hk = hookCard(item);
+  if (hk) parts.push(hk);
   mount(root, header(app, subj.name), h('div', { class: 'q-wrap stack card pop' }, parts,
     h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'Got it')));
 }
@@ -275,6 +292,7 @@ function workedStep(app, root, step) {
     COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(q.prompt), rich('div', q.prompt, { class: 'q-prompt' })) : rich('div', q.prompt, { class: 'q-prompt' }),
     q.diagram ? diagram(q.diagram) : null,
     list,
+    hookCard(q),
     COURSE.readAloud ? h('div', {}, h('button', { class: 'btn-ghost', type: 'button', onclick: () => speak(spoken(steps.slice(0, shown).at(-1) || '')) }, icon('speaker'), ' Read this step')) : null,
     btn));
   btn.focus();
@@ -286,7 +304,7 @@ async function questionStep(app, root, step) {
   const plan = activePlan(state);
   const q = questionFor(state, db, step, plan.pos);
   const subj = SUBJECT_BY_ID[q.subject];
-  const label = step.t === 'diag' ? 'What do you think?' : step.t === 'quiz' ? 'Quick check' : step.reask ? 'Second try' : step.t === 'faded' ? 'Your turn' : step.t === 'practice' ? 'Practice' : subj.name;
+  const label = step.t === 'diag' ? 'What do you think?' : step.t === 'quiz' ? 'Quick check' : step.t === 'recall' ? 'From earlier today' : step.reask ? 'Second try' : step.t === 'faded' ? 'Your turn' : step.t === 'practice' ? 'Practice' : subj.name;
   const t0 = performance.now();
 
   const confBtns = [];
@@ -366,6 +384,8 @@ function feedbackPanel(q, res, step, conf) {
     if (q.explain) parts.push(rich('p', q.explain, { class: 'muted' }));
     if (q.steps && (step.t === 'practice' || step.t === 'faded')) parts.push(h('ol', { class: 'steps' }, q.steps.map((t) => rich('li', t))));
   }
+  const hk = hookCard(q);
+  if (hk) parts.push(hk);
   if (COURSE.readAloud) parts.splice(1, 0, h('div', {}, sayButton(`The answer is ${answerText}. ${q.explain || ''}`, 'Read it to me')));
   parts.push(h('p', { class: 'small muted' }, step.t === 'diag' ? 'Now you know!' : step.reask ? 'This one will come back tomorrow.' : 'You’ll see this again in a few minutes.'));
   return h('div', { class: 'feedback warn pop' }, parts);

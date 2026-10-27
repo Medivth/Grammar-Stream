@@ -9,6 +9,7 @@
    "prereqs": [],
    "batch": 5,
    "intro": "Ordnance Survey maps use a grid of numbered lines. Remember: along the corridor, then up the stairs.",
+   "hook": "“Never Eat Shredded Wheat” for the compass; “along the corridor, then up the stairs” for grid references.",
    "teach": "Explain how to give a 4-figure grid reference.",
    "talk": "On a walk, ask her which direction you’re heading using the 8 compass points."
   },
@@ -21,6 +22,7 @@
    ],
    "batch": 5,
    "intro": "A map’s scale tells you how much smaller it is than real life. On a 1:25 000 map, 4 cm is 1 km.",
+   "hook": "On a 1:25 000 map, 4 cm = 1 km; on a 1:50 000 map, 2 cm = 1 km.",
    "teach": "Explain what 1:25 000 means.",
    "talk": "Look at an OS map together and find a pub, a school and a church."
   },
@@ -36,6 +38,7 @@
     "geography.rv.d1"
    ],
    "intro": "Rivers carve valleys, carry rocks to the sea and build new land. We’ll follow a river from its source to its mouth.",
+   "hook": "Source to sea: V-shaped valleys and waterfalls up high, meanders in the middle, floodplains and an estuary near the mouth.",
    "teach": "Explain how a meander turns into an ox-bow lake.",
    "talk": "Next time you cross a river, ask her which course it might be in: upper, middle or lower."
   },
@@ -52,6 +55,7 @@
     "geography.tc.d2"
    ],
    "intro": "The ground beneath us is moving, very slowly. Let’s find out what is inside the Earth and why volcanoes and earthquakes happen where they do.",
+   "hook": "The Earth is like a peach: thin skin (crust), thick flesh (mantle) and a hard stone in the middle (core).",
    "teach": "Explain what happens at a destructive plate boundary.",
    "talk": "Ask her why Iceland has so many volcanoes."
   },
@@ -67,6 +71,7 @@
     "geography.bi.d1"
    ],
    "intro": "Why are there rainforests near the Equator and deserts a little further away? Climate decides which plants and animals live where.",
+   "hook": "Wet at 0°, dry at 30°: rainforests hug the Equator and hot deserts lie near the tropics.",
    "teach": "Explain why tropical rainforests are near the Equator.",
    "talk": "Ask her which biome the UK is in."
   },
@@ -79,6 +84,7 @@
    ],
    "batch": 5,
    "intro": "Where do people live, and why? Why do people move? And how do we measure whether a country is rich or poor?",
+   "hook": "Settlements grew where life was easier: by water (wet point), at a crossing (bridging point) or somewhere safe (defensive site).",
    "teach": "Explain the difference between a push factor and a pull factor.",
    "talk": "Ask her why your town grew where it did."
   },
@@ -90,6 +96,7 @@
     "geography.continents"
    ],
    "batch": 6,
+   "hook": "Capitals are often not the biggest city: Washington, Ottawa and Brasília, not New York, Toronto and Rio.",
    "teach": "Name three countries in South America and their capitals.",
    "talk": "Ask her the capital of Canada (it isn’t Toronto)."
   },
@@ -102,6 +109,7 @@
    ],
    "batch": 6,
    "intro": "Africa is a continent of 54 countries, not one country! Let’s learn some of the biggest.",
+   "hook": "Africa is 54 countries, not one, and Nigeria’s capital is Abuja, not Lagos.",
    "teach": "Explain why “Africa is a country” is a mistake.",
    "talk": "Ask her the capital of Nigeria (it isn’t Lagos)."
   },
@@ -113,6 +121,7 @@
     "geography.continents"
    ],
    "batch": 6,
+   "hook": "Sydney and Melbourne were rivals, so Australia built a brand-new capital between them: Canberra.",
    "teach": "Name the capitals of China, India and Japan.",
    "talk": "Ask her the capital of Australia (it isn’t Sydney)."
   }
@@ -132,7 +141,8 @@
     -1,
     0.3,
     0
-   ]
+   ],
+   "hook": "Along the corridor, then up the stairs: read the eastings first, then the northings."
   },
   {
    "id": "geography.ms.compass",
@@ -150,7 +160,9 @@
     "north-west"
    ],
    "labels": null,
-   "explain": "Clockwise: N, NE, E, SE, S, SW, W, NW. “Never Eat Shredded Wheat” helps with N, E, S, W."
+   "explain": "Clockwise: N, NE, E, SE, S, SW, W, NW. “Never Eat Shredded Wheat” helps with N, E, S, W.",
+   "hook": "“Never Eat Shredded Wheat”: N, E, S, W clockwise. The in-between points join their neighbours: NE, SE, SW, NW.",
+   "example": "The Sun rises roughly in the east and sets roughly in the west, so you can use it to find your bearings."
   },
   {
    "id": "geography.ms.nnw",
@@ -166,7 +178,8 @@
    "explain": "With 16 points, the in-between points take the name of the nearest main point first: north-north-west (NNW).",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Say the nearest main point first: north + north-west makes north-north-west."
   },
   {
    "id": "geography.ms.corridor",
@@ -182,7 +195,8 @@
    "explain": "Along the corridor (eastings), then up the stairs (northings).",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "You have to walk along the corridor before you can go up the stairs: eastings, then northings."
   },
   {
    "id": "geography.ms.easting",
@@ -195,7 +209,8 @@
     "contours",
     "latitudes"
    ],
-   "explain": "Eastings increase as you go east. Northings increase as you go north."
+   "explain": "Eastings increase as you go east. Northings increase as you go north.",
+   "hook": "Eastings count up as you go East; Northings count up as you go North."
   },
   {
    "id": "geography.sc.scale",
@@ -211,7 +226,9 @@
     -0.5,
     0,
     0.8
-   ]
+   ],
+   "hook": "1:25 000 means 1 cm on the map is 25 000 cm (250 m) in real life, so 4 cm = 1 km.",
+   "example": "Orange OS Explorer maps are 1:25 000; pink OS Landranger maps are 1:50 000."
   },
   {
    "id": "geography.sc.contour",
@@ -227,7 +244,9 @@
    "explain": "Contour lines join points at the same height above sea level. Close together = steep slope.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Contours are like the rings left round a bath as it drains: one line for each height.",
+   "example": "On an OS map of Ben Nevis, the contours crowd together on its steep north face."
   },
   {
    "id": "geography.sc.steep",
@@ -250,7 +269,9 @@
      "feedback": "Rivers are shown by blue lines, not contours."
     }
    ],
-   "explain": "Close contours mean the height changes quickly over a short distance: a steep slope."
+   "explain": "Close contours mean the height changes quickly over a short distance: a steep slope.",
+   "hook": "Lines close together: a hill to climb. Lines far apart: an easy walk.",
+   "example": "Stanage Edge, a gritstone cliff in the Peak District, shows up as tightly packed contours on an OS map."
   },
   {
    "id": "geography.sc.ph",
@@ -266,7 +287,8 @@
    "explain": "PH marks a pub. “Sch” is a school.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "“Pub” is short for “public house”: PH."
   },
   {
    "id": "geography.sc.spot",
@@ -282,7 +304,8 @@
    "explain": "A spot height shows the exact height in metres at that point.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "A spot height is a single spot (dot) with its height in metres beside it."
   },
   {
    "id": "geography.sc.trig",
@@ -298,7 +321,8 @@
    "explain": "Trig points are concrete pillars on hilltops once used for surveying.",
    "formats": [
     "choice"
-   ]
+   ],
+   "example": "There are trig points on the summits of Ben Nevis, Yr Wyddfa and Scafell Pike; walkers like to touch them at the top."
   },
   {
    "id": "geography.sc.os",
@@ -311,7 +335,9 @@
     "the National Trust",
     "English Heritage"
    ],
-   "explain": "Ordnance Survey (OS) began in 1791, mapping the south coast in case of invasion."
+   "explain": "Ordnance Survey (OS) began in 1791, mapping the south coast in case of invasion.",
+   "hook": "“Ordnance” means military supplies: the Army’s Board of Ordnance made the first maps.",
+   "example": "The first OS map, published in 1801, was of Kent."
   },
   {
    "id": "geography.rv.d1",
@@ -334,7 +360,8 @@
      "feedback": "Speed changes along the course."
     }
    ],
-   "explain": "This surprises most people! Steep upland streams lose lots of energy to friction. Downstream the channel is wider, deeper and smoother."
+   "explain": "This surprises most people! Steep upland streams lose lots of energy to friction. Downstream the channel is wider, deeper and smoother.",
+   "hook": "Smooth is speedy: rocks and shallow water slow mountain streams down with friction."
   },
   {
    "id": "geography.rv.source",
@@ -350,7 +377,9 @@
    "explain": "The source is often a spring or a bog in the hills.",
    "accept": [
     "source"
-   ]
+   ],
+   "hook": "Source = Start; Mouth = where it Meets the sea.",
+   "example": "The Thames begins at a stone marking its source in a field near Kemble, Gloucestershire."
   },
   {
    "id": "geography.rv.mouth",
@@ -363,7 +392,9 @@
     "tributary",
     "watershed"
    ],
-   "explain": "The mouth is where the river ends, at the sea or a lake."
+   "explain": "The mouth is where the river ends, at the sea or a lake.",
+   "hook": "Source = Start; Mouth = where it Meets the sea.",
+   "example": "The Thames’s mouth is a wide estuary that meets the North Sea near Southend-on-Sea."
   },
   {
    "id": "geography.rv.tributary",
@@ -376,7 +407,9 @@
     "meander",
     "delta"
    ],
-   "explain": "Tributaries join the main river at a confluence."
+   "explain": "Tributaries join the main river at a confluence.",
+   "hook": "A tributary pays tribute: it gives its water to the main river.",
+   "example": "The River Kennet is a tributary of the Thames, joining it at Reading."
   },
   {
    "id": "geography.rv.confluence",
@@ -389,7 +422,9 @@
     "source",
     "levee"
    ],
-   "explain": "Many towns grew at confluences, such as Pittsburgh, or Koblenz on the Rhine and Moselle."
+   "explain": "Many towns grew at confluences, such as Pittsburgh, or Koblenz on the Rhine and Moselle.",
+   "hook": "Con = together, fluence = flowing: two rivers flowing together.",
+   "example": "In York, the River Foss flows into the River Ouse."
   },
   {
    "id": "geography.rv.basin",
@@ -402,7 +437,9 @@
     "watershed",
     "valley"
    ],
-   "explain": "The edge of a drainage basin, usually high ground, is the watershed."
+   "explain": "The edge of a drainage basin, usually high ground, is the watershed.",
+   "hook": "Like a bathroom basin: all the water inside the rim drains to one plughole.",
+   "example": "Rain falling on Oxford, Reading or London all drains into the Thames basin."
   },
   {
    "id": "geography.rv.hydraulic",
@@ -415,7 +452,9 @@
     "attrition",
     "solution"
    ],
-   "explain": "Hydraulic action: the force of water. Abrasion: rocks scraping the bed. Attrition: rocks knocking each other smaller. Solution: dissolving rock."
+   "explain": "Hydraulic action: the force of water. Abrasion: rocks scraping the bed. Attrition: rocks knocking each other smaller. Solution: dissolving rock.",
+   "hook": "HAAS: Hydraulic action, Abrasion, Attrition, Solution, the four ways rivers erode.",
+   "example": "Like a jet wash blasting a patio, the sheer force of the water does the work."
   },
   {
    "id": "geography.rv.attrition",
@@ -428,7 +467,9 @@
     "hydraulic action",
     "deposition"
    ],
-   "explain": "That is why stones near a river’s mouth are small and smooth."
+   "explain": "That is why stones near a river’s mouth are small and smooth.",
+   "hook": "Attrition: rocks attack each other. Abrasion: rocks attack the bed and banks.",
+   "example": "Stones near a river’s mouth are small and smooth; boulders in mountain streams are big and jagged."
   },
   {
    "id": "geography.rv.saltation",
@@ -441,7 +482,8 @@
     "suspension",
     "solution"
    ],
-   "explain": "Traction: big boulders rolled. Saltation: pebbles bounced. Suspension: fine silt carried in the water. Solution: dissolved minerals."
+   "explain": "Traction: big boulders rolled. Saltation: pebbles bounced. Suspension: fine silt carried in the water. Solution: dissolved minerals.",
+   "hook": "Saltation comes from the Latin for “leap”: pebbles hop. Boulders roll, silt floats, minerals dissolve."
   },
   {
    "id": "geography.rv.vvalley",
@@ -457,7 +499,9 @@
    "explain": "In the upper course the river cuts downwards, making steep V-shaped valleys with interlocking spurs. (U-shaped valleys are made by glaciers.)",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "V for vertical: rivers cut down into a V. Glaciers gouge out a U.",
+   "example": "Nant Ffrancon in Snowdonia is a classic U-shaped valley, carved by a glacier rather than a river."
   },
   {
    "id": "geography.rv.oxbow",
@@ -475,7 +519,9 @@
     "ox-bow lake",
     "oxbow lake",
     "an oxbow lake"
-   ]
+   ],
+   "hook": "An ox-bow is the U-shaped collar of an ox’s yoke: a curved loop left behind.",
+   "example": "The Severn winds in great meanders around Shrewsbury; the Mississippi’s floodplain is dotted with ox-bow lakes."
   },
   {
    "id": "geography.rv.waterfall",
@@ -491,7 +537,9 @@
    "explain": "The soft rock erodes faster, undercutting the hard rock, which collapses. The waterfall moves upstream, leaving a gorge.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Hard on top, soft below: the soft rock is undercut, the hard ledge snaps off and the falls step back.",
+   "example": "High Force on the River Tees pours over hard whinstone sitting on softer limestone and shale."
   },
   {
    "id": "geography.rv.floodplain",
@@ -504,7 +552,9 @@
     "source",
     "interlocking spur"
    ],
-   "explain": "Each flood deposits silt, making floodplains very fertile."
+   "explain": "Each flood deposits silt, making floodplains very fertile.",
+   "hook": "The floodplain is the plain that floods, and every flood leaves fertile silt behind.",
+   "example": "Tewkesbury, where the Avon meets the Severn, was badly flooded in 2007."
   },
   {
    "id": "geography.rv.nile",
@@ -522,7 +572,9 @@
     "nile",
     "river nile",
     "the river nile"
-   ]
+   ],
+   "hook": "The Nile is number one for length; the Amazon is number one for water.",
+   "example": "The Blue and White Niles meet at Khartoum, then the Nile flows north through Egypt past the pyramids."
   },
   {
    "id": "geography.rv.course",
@@ -536,7 +588,9 @@
     "estuary"
    ],
    "labels": null,
-   "explain": "Waterfalls in the upper course; meanders in the middle course; ox-bow lakes on the floodplain; the estuary at the mouth."
+   "explain": "Waterfalls in the upper course; meanders in the middle course; ox-bow lakes on the floodplain; the estuary at the mouth.",
+   "hook": "Up high it falls, in the middle it bends, low down it loops and leaves lakes, then it widens to the sea.",
+   "example": "On the Tees: High Force up high, a meander wrapped round Yarm, then the estuary at Middlesbrough."
   },
   {
    "id": "geography.tc.d1",
@@ -559,7 +613,8 @@
      "feedback": "The mantle is rock, not water."
     }
    ],
-   "explain": "Magma forms only where rock partly melts, for example where plates move apart or one sinks under another."
+   "explain": "Magma forms only where rock partly melts, for example where plates move apart or one sinks under another.",
+   "hook": "The mantle is thick toffee, not soup: solid rock that creeps very slowly."
   },
   {
    "id": "geography.tc.d2",
@@ -582,7 +637,9 @@
      "feedback": "They do move, and GPS can measure it."
     }
    ],
-   "explain": "A few cm a year adds up: over 200 million years the Atlantic Ocean opened up."
+   "explain": "A few cm a year adds up: over 200 million years the Atlantic Ocean opened up.",
+   "hook": "Plates move about as fast as your fingernails grow.",
+   "example": "The Atlantic widens by a few centimetres a year, nudging Britain and North America apart."
   },
   {
    "id": "geography.tc.layers",
@@ -601,7 +658,9 @@
     "liquid iron and nickel",
     "solid iron and nickel"
    ],
-   "explain": "Crust, mantle, outer core (liquid), inner core (solid, about 5400°C)."
+   "explain": "Crust, mantle, outer core (liquid), inner core (solid, about 5400°C).",
+   "hook": "Like a peach: skin (crust), flesh (mantle) and a stone (core) in two parts, liquid outside and solid inside.",
+   "example": "Compared with the whole Earth, the crust is about as thin as the skin on an apple."
   },
   {
    "id": "geography.tc.core",
@@ -617,7 +676,8 @@
    "explain": "The inner core is solid because the pressure is so great, even though it is around 5400°C.",
    "accept": [
     "inner core"
-   ]
+   ],
+   "hook": "Squeezed so hard it cannot melt: the inner core stays solid even at about 5400°C."
   },
   {
    "id": "geography.tc.constructive",
@@ -630,7 +690,9 @@
     "conservative",
     "collision"
    ],
-   "explain": "Constructive boundaries make new crust, as at the Mid-Atlantic Ridge through Iceland."
+   "explain": "Constructive boundaries make new crust, as at the Mid-Atlantic Ridge through Iceland.",
+   "hook": "Constructive: constructing new crust as the plates pull apart.",
+   "example": "At Þingvellir in Iceland you can walk in the rift between the North American and Eurasian plates."
   },
   {
    "id": "geography.tc.destructive",
@@ -643,7 +705,9 @@
     "conservative",
     "stationary"
    ],
-   "explain": "Destructive boundaries cause violent volcanoes and earthquakes, as in the Andes and Japan."
+   "explain": "Destructive boundaries cause violent volcanoes and earthquakes, as in the Andes and Japan.",
+   "hook": "Destructive: the ocean plate is destroyed as it sinks and melts.",
+   "example": "Mount Fuji in Japan and the volcanoes of the Andes sit above destructive boundaries."
   },
   {
    "id": "geography.tc.conservative",
@@ -656,7 +720,9 @@
     "destructive",
     "divergent"
    ],
-   "explain": "The San Andreas Fault in California is a conservative boundary."
+   "explain": "The San Andreas Fault in California is a conservative boundary.",
+   "hook": "Conservative: crust is conserved, neither made nor destroyed; the plates just slide.",
+   "example": "San Francisco lies beside the San Andreas Fault and was wrecked by an earthquake in 1906."
   },
   {
    "id": "geography.tc.epicentre",
@@ -669,7 +735,8 @@
     "crater",
     "fault"
    ],
-   "explain": "The focus is underground, where the rocks slip. The epicentre is the point on the surface above it."
+   "explain": "The focus is underground, where the rocks slip. The epicentre is the point on the surface above it.",
+   "hook": "Epi means “on top of” in Greek: the epicentre is on top of the focus."
   },
   {
    "id": "geography.tc.seismometer",
@@ -687,7 +754,9 @@
     "seismometer",
     "seismograph",
     "a seismograph"
-   ]
+   ],
+   "hook": "Seismos is Greek for “earthquake”: a seismometer measures the shaking.",
+   "example": "The British Geological Survey records a few hundred earthquakes in the UK each year, mostly too small to feel."
   },
   {
    "id": "geography.tc.lava",
@@ -700,7 +769,9 @@
     "pumice",
     "crust"
    ],
-   "explain": "Magma underground; lava above ground."
+   "explain": "Magma underground; lava above ground.",
+   "hook": "Magma is in the Middle (underground); Lava has Left the volcano.",
+   "example": "Etna in Sicily and Kīlauea in Hawaii often send out rivers of glowing lava."
   },
   {
    "id": "geography.tc.ring",
@@ -716,7 +787,9 @@
    "explain": "About three-quarters of the world’s active volcanoes lie around the Pacific.",
    "accept": [
     "ring of fire"
-   ]
+   ],
+   "hook": "Picture a ring of fire round the Pacific: Japan, Indonesia, New Zealand, the Andes and Alaska.",
+   "example": "Mount St Helens (USA, 1980) and Mount Fuji (Japan) are both on the Ring of Fire."
   },
   {
    "id": "geography.tc.pangaea",
@@ -732,7 +805,9 @@
    "explain": "Alfred Wegener proposed in 1912 that the continents had once been joined in Pangaea. Few believed him until the 1960s.",
    "accept": [
     "pangea"
-   ]
+   ],
+   "hook": "Pangaea is Greek for “all lands”: every continent joined into one.",
+   "example": "On a map, the bulge of Brazil fits into the curve of West Africa like a jigsaw piece."
   },
   {
    "id": "geography.tc.pompeii",
@@ -745,7 +820,9 @@
     "Athens",
     "Carthage"
    ],
-   "explain": "Ash preserved Pompeii so well that we can still walk its streets."
+   "explain": "Ash preserved Pompeii so well that we can still walk its streets.",
+   "hook": "Pompeii was Preserved: ash buried it so fast that it was frozen in time.",
+   "example": "Vesuvius still towers over Naples and is one of the most closely watched volcanoes in the world."
   },
   {
    "id": "geography.bi.d1",
@@ -768,7 +845,8 @@
      "feedback": "The Gobi is large, but smaller than both Antarctica and the Sahara."
     }
    ],
-   "explain": "Deserts get less than about 250 mm of precipitation a year. Antarctica qualifies, and it is huge."
+   "explain": "Deserts get less than about 250 mm of precipitation a year. Antarctica qualifies, and it is huge.",
+   "hook": "A desert is dry, not necessarily hot: Antarctica is the biggest desert of all."
   },
   {
    "id": "geography.bi.rainforest",
@@ -785,7 +863,9 @@
    "accept": [
     "rainforest",
     "tropical rainforest"
-   ]
+   ],
+   "hook": "Hot and wet every day: near the Equator it rains most afternoons.",
+   "example": "You can walk through an indoor rainforest at the Eden Project in Cornwall; the real giant is the Amazon."
   },
   {
    "id": "geography.bi.layers",
@@ -799,7 +879,8 @@
     "forest floor"
    ],
    "labels": null,
-   "explain": "Emergent trees poke above the canopy; the canopy is a thick roof of leaves; the understorey is dim; the forest floor gets only about 2% of the sunlight."
+   "explain": "Emergent trees poke above the canopy; the canopy is a thick roof of leaves; the understorey is dim; the forest floor gets only about 2% of the sunlight.",
+   "hook": "“Every Cheeky Uncle Falls”: Emergent, Canopy, Understorey, Floor. Think eagles, monkeys, jaguars, ants."
   },
   {
    "id": "geography.bi.sahara",
@@ -815,7 +896,9 @@
    "explain": "The Sahara covers much of North Africa, about the size of the USA.",
    "accept": [
     "sahara"
-   ]
+   ],
+   "hook": "Sahara means “desert” in Arabic, so “Sahara Desert” really means “Desert Desert”!",
+   "example": "Saharan dust sometimes blows all the way to the UK and leaves an orange film on cars."
   },
   {
    "id": "geography.bi.why-desert",
@@ -831,7 +914,9 @@
    "explain": "Air rises at the Equator, drops its rain, then sinks around 30°, warming and drying as it falls.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Air rises wet at 0° and sinks dry at 30°.",
+   "example": "The Sahara, the Arabian Desert and the Australian deserts all lie near the tropics."
   },
   {
    "id": "geography.bi.tundra",
@@ -844,7 +929,9 @@
     "savanna",
     "steppe"
    ],
-   "explain": "The frozen ground in the tundra is called permafrost."
+   "explain": "The frozen ground in the tundra is called permafrost.",
+   "hook": "Tundra is too cold for trees; permafrost is PERMAnently FROzen ground.",
+   "example": "Reindeer, Arctic foxes and snowy owls live on the tundra of northern Canada, Alaska and Siberia."
   },
   {
    "id": "geography.bi.taiga",
@@ -860,7 +947,9 @@
    "explain": "The taiga is the largest land biome in the world.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Taiga = trees (conifers); tundra = too cold for trees.",
+   "example": "Endless spruce and pine forests across Siberia and Canada are home to moose, wolves and bears."
   },
   {
    "id": "geography.bi.savanna",
@@ -876,7 +965,9 @@
    "explain": "Savannas lie between rainforests and deserts, as in East Africa.",
    "accept": [
     "savannah"
-   ]
+   ],
+   "hook": "Think of The Lion King: golden grass, flat-topped acacia trees, a wet season and a dry season.",
+   "example": "In the Serengeti, in Tanzania, more than a million wildebeest migrate across the savanna each year."
   },
   {
    "id": "geography.bi.uk",
@@ -892,7 +983,9 @@
    "explain": "Deciduous trees like oak and beech lose their leaves in winter.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Deciduous comes from the Latin for “falling off”: the leaves drop each autumn.",
+   "example": "Sherwood Forest and the New Forest are survivors of the oak woods that once covered much of Britain."
   },
   {
    "id": "geography.bi.drift",
@@ -908,7 +1001,9 @@
    "explain": "Without it, UK winters would be much colder, more like Canada’s at the same latitude.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "The North Atlantic Drift is the UK’s central heating.",
+   "example": "Thanks to it, palm-like plants grow in Cornwall and subtropical gardens thrive at Inverewe in north-west Scotland."
   },
   {
    "id": "geography.bi.wind",
@@ -921,7 +1016,9 @@
     "south-east",
     "north"
    ],
-   "explain": "South-westerly winds bring mild, wet air from the Atlantic, which is why the west of the UK is wetter."
+   "explain": "South-westerly winds bring mild, wet air from the Atlantic, which is why the west of the UK is wetter.",
+   "hook": "South-west winds make the west wet.",
+   "example": "Seathwaite in the Lake District gets over 3 m of rain a year; London gets about 0.6 m."
   },
   {
    "id": "geography.pp.hierarchy",
@@ -936,7 +1033,9 @@
     "conurbation"
    ],
    "labels": null,
-   "explain": "A conurbation is where towns and cities have grown together, like Greater Manchester."
+   "explain": "A conurbation is where towns and cities have grown together, like Greater Manchester.",
+   "hook": "“Happy Villagers Take City Coaches”: hamlet, village, town, city, conurbation.",
+   "example": "Greater Manchester is a conurbation: Manchester, Salford, Bolton, Stockport and more grew into one."
   },
   {
    "id": "geography.pp.megacity",
@@ -953,7 +1052,9 @@
    "accept": [
     "megacity",
     "mega city"
-   ]
+   ],
+   "hook": "Mega means “great”: a megacity has more than 10 million people.",
+   "example": "Tokyo is the biggest, with about 37 million people in its metropolitan area: about four times London."
   },
   {
    "id": "geography.pp.bridging",
@@ -969,7 +1070,9 @@
    "explain": "Many towns ending in “-ford” grew at river crossings, such as Oxford.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Listen for -ford and -bridge: Oxford, Stamford, Cambridge.",
+   "example": "London grew where the Romans first bridged the Thames."
   },
   {
    "id": "geography.pp.wetpoint",
@@ -985,7 +1088,9 @@
    "explain": "Before taps, water was vital. A dry point site, on the other hand, avoids flooding.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Wet point: near water. Dry point: up out of the floods.",
+   "example": "Villages along the foot of the South Downs grew where springs bubble out of the chalk."
   },
   {
    "id": "geography.pp.push",
@@ -1003,7 +1108,9 @@
     "push factor",
     "a push factor",
     "push"
-   ]
+   ],
+   "hook": "Push factors push you out; pull factors pull you in, like a magnet.",
+   "example": "In the 1800s, jobs in the cotton mills pulled people from the countryside into towns like Manchester."
   },
   {
    "id": "geography.pp.urban",
@@ -1019,7 +1126,9 @@
    "explain": "Over half the world’s people now live in urban areas.",
    "accept": [
     "urbanization"
-   ]
+   ],
+   "hook": "Urban comes from the Latin “urbs”, a city.",
+   "example": "In 1800 most people in Britain lived in the countryside; today over 80% live in towns and cities."
   },
   {
    "id": "geography.pp.population",
@@ -1035,7 +1144,9 @@
    "explain": "World population passed 8 billion in November 2022.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Counting to 8 billion, one number a second, would take over 250 years.",
+   "example": "That is well over 100 times the UK’s population of nearly 70 million."
   },
   {
    "id": "geography.pp.populous",
@@ -1048,7 +1159,8 @@
     "USA",
     "Indonesia"
    ],
-   "explain": "India overtook China in 2023, with over 1.4 billion people."
+   "explain": "India overtook China in 2023, with over 1.4 billion people.",
+   "hook": "India overtook China in 2023: more than 1 person in 6 on Earth lives in India."
   },
   {
    "id": "geography.pp.development",
@@ -1071,7 +1183,9 @@
      "feedback": "Size has little to do with development."
     }
    ],
-   "explain": "Measures like GDP per person, life expectancy and literacy are combined in the Human Development Index (HDI)."
+   "explain": "Measures like GDP per person, life expectancy and literacy are combined in the Human Development Index (HDI).",
+   "hook": "The HDI mixes three things: a long life, a good education and a decent income.",
+   "example": "Norway and Switzerland usually top the HDI table; the UK is usually in the top 20."
   },
   {
    "id": "geography.pp.life",
@@ -1084,7 +1198,8 @@
     "literacy rate",
     "GDP"
    ],
-   "explain": "Life expectancy is around 81 years in the UK."
+   "explain": "Life expectancy is around 81 years in the UK.",
+   "example": "Life expectancy is about 81 in the UK, but under 60 in some countries, such as Chad and Nigeria."
   },
   {
    "id": "geography.w.usa",
@@ -1130,7 +1245,8 @@
     "Washington",
     "Washington DC"
    ],
-   "learn": "The capital of **the United States** is **Washington, D.C.**. Not New York!"
+   "learn": "The capital of **the United States** is **Washington, D.C.**. Not New York!",
+   "hook": "D.C. stands for District of Columbia: a special area that belongs to no state."
   },
   {
    "id": "geography.w.can",
@@ -1168,7 +1284,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Canada** is **Ottawa**. Ottawa, not Toronto or Vancouver."
+   "learn": "The capital of **Canada** is **Ottawa**. Ottawa, not Toronto or Vancouver.",
+   "hook": "Queen Victoria picked Ottawa in 1857: it sits on the river between English- and French-speaking Canada."
   },
   {
    "id": "geography.w.mex",
@@ -1246,7 +1363,8 @@
    "accept": [
     "Brasilia"
    ],
-   "learn": "The capital of **Brazil** is **Brasília**. Brasília was built as a new capital in 1960."
+   "learn": "The capital of **Brazil** is **Brasília**. Brasília was built as a new capital in 1960.",
+   "hook": "Brasília was built from scratch in the middle of Brazil, to draw people inland from the coast."
   },
   {
    "id": "geography.w.arg",
@@ -1284,7 +1402,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Argentina** is **Buenos Aires**."
+   "learn": "The capital of **Argentina** is **Buenos Aires**.",
+   "hook": "Buenos Aires means “good airs”."
   },
   {
    "id": "geography.w.chl",
@@ -1360,7 +1479,9 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Peru** is **Lima**."
+   "learn": "The capital of **Peru** is **Lima**.",
+   "hook": "Cusco was the old Inca capital; Lima, on the coast, is Peru’s capital today.",
+   "example": "Machu Picchu, the Inca city in the clouds, is near Cusco."
   },
   {
    "id": "geography.w.col",
@@ -1512,7 +1633,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Egypt** is **Cairo**."
+   "learn": "The capital of **Egypt** is **Cairo**.",
+   "example": "Cairo stands on the Nile, close to the pyramids of Giza."
   },
   {
    "id": "geography.w.nga",
@@ -1548,7 +1670,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Nigeria** is **Abuja**. Abuja, not Lagos, which is the biggest city."
+   "learn": "The capital of **Nigeria** is **Abuja**. Abuja, not Lagos, which is the biggest city.",
+   "hook": "Abuja was built in the middle of Nigeria and became the capital in 1991; Lagos, on the coast, is bigger."
   },
   {
    "id": "geography.w.ken",
@@ -1584,7 +1707,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Kenya** is **Nairobi**."
+   "learn": "The capital of **Kenya** is **Nairobi**.",
+   "hook": "Nairobi comes from the Maasai words for “cool water”."
   },
   {
    "id": "geography.w.eth",
@@ -1620,7 +1744,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Ethiopia** is **Addis Ababa**."
+   "learn": "The capital of **Ethiopia** is **Addis Ababa**.",
+   "hook": "Addis Ababa means “new flower” in Amharic."
   },
   {
    "id": "geography.w.mar",
@@ -1732,7 +1857,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **the Democratic Republic of the Congo** is **Kinshasa**."
+   "learn": "The capital of **the Democratic Republic of the Congo** is **Kinshasa**.",
+   "hook": "Kinshasa faces Brazzaville, capital of the other Congo, across the Congo River."
   },
   {
    "id": "geography.w.zaf",
@@ -1809,7 +1935,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **China** is **Beijing**."
+   "learn": "The capital of **China** is **Beijing**.",
+   "hook": "Beijing means “northern capital”."
   },
   {
    "id": "geography.w.ind",
@@ -1849,7 +1976,8 @@
    "accept": [
     "Delhi"
    ],
-   "learn": "The capital of **India** is **New Delhi**."
+   "learn": "The capital of **India** is **New Delhi**.",
+   "hook": "New Delhi is the new part of Delhi, built by the British and opened in 1931."
   },
   {
    "id": "geography.w.jpn",
@@ -1887,7 +2015,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Japan** is **Tokyo**."
+   "learn": "The capital of **Japan** is **Tokyo**.",
+   "hook": "Tokyo means “eastern capital”; Kyoto was the old capital for over 1,000 years."
   },
   {
    "id": "geography.w.kor",
@@ -1925,7 +2054,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **South Korea** is **Seoul**."
+   "learn": "The capital of **South Korea** is **Seoul**.",
+   "hook": "Seoul is South Korea’s capital; Pyongyang is North Korea’s."
   },
   {
    "id": "geography.w.pak",
@@ -1963,7 +2093,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Pakistan** is **Islamabad**. Islamabad, not Karachi."
+   "learn": "The capital of **Pakistan** is **Islamabad**. Islamabad, not Karachi.",
+   "hook": "Islamabad was built in the 1960s as a brand-new capital, taking over from Karachi."
   },
   {
    "id": "geography.w.bgd",
@@ -2039,7 +2170,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Saudi Arabia** is **Riyadh**."
+   "learn": "The capital of **Saudi Arabia** is **Riyadh**.",
+   "hook": "Mecca is the holy city, but Riyadh is the capital."
   },
   {
    "id": "geography.w.tur",
@@ -2077,7 +2209,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Turkey** is **Ankara**. Ankara, not Istanbul."
+   "learn": "The capital of **Turkey** is **Ankara**. Ankara, not Istanbul.",
+   "hook": "Istanbul was the old Ottoman capital; Atatürk made Ankara the capital in 1923."
   },
   {
    "id": "geography.w.irn",
@@ -2153,7 +2286,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Vietnam** is **Hanoi**."
+   "learn": "The capital of **Vietnam** is **Hanoi**.",
+   "hook": "Hanoi in the north is the capital; Ho Chi Minh City (once Saigon), in the south, is bigger."
   },
   {
    "id": "geography.w.tha",
@@ -2229,7 +2363,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **Australia** is **Canberra**. Canberra, not Sydney: it was built as a compromise between Sydney and Melbourne."
+   "learn": "The capital of **Australia** is **Canberra**. Canberra, not Sydney: it was built as a compromise between Sydney and Melbourne.",
+   "example": "Canberra was designed from scratch by the American architects Walter Burley Griffin and Marion Mahony Griffin."
   },
   {
    "id": "geography.w.nzl",
@@ -2267,7 +2402,8 @@
    ],
    "fill": true,
    "accept": [],
-   "learn": "The capital of **New Zealand** is **Wellington**. Wellington, not Auckland."
+   "learn": "The capital of **New Zealand** is **Wellington**. Wellington, not Auckland.",
+   "hook": "Wellington is named after the Duke of Wellington, who won the Battle of Waterloo."
   }
  ]
 }

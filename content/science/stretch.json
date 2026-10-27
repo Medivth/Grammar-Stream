@@ -13,7 +13,8 @@
    "batch": 6,
    "intro": "Every element in the universe, arranged so that similar ones line up in columns. Learn to read the table and you can predict how an element you have never met will behave.",
    "teach": "Explain what a group and a period are on the periodic table.",
-   "talk": "Ask her why gold’s symbol is Au and not Go."
+   "talk": "Ask her why gold’s symbol is Au and not Go.",
+   "hook": "First ten elements: **Happy Henry Lives Beside Boring Cousin Nicholas’s Old Friend Nellie** (H, He, Li, Be, B, C, N, O, F, Ne)."
   },
   {
    "id": "science.reactions",
@@ -30,7 +31,8 @@
    "batch": 6,
    "intro": "In a chemical reaction atoms are rearranged into new substances, but none are made or lost. That one idea lets you predict masses, write word equations and explain why a burnt match weighs less.",
    "teach": "Explain why magnesium gets heavier when it burns.",
-   "talk": "Ask her where the mass of a burning candle goes."
+   "talk": "Ask her where the mass of a burning candle goes.",
+   "hook": "Atoms are **rearranged**, never made or destroyed: mass in = mass out."
   },
   {
    "id": "science.digestion",
@@ -44,7 +46,8 @@
    "batch": 6,
    "intro": "Food is broken down by enzymes into molecules small enough to pass into the blood. Each nutrient has a job, and each organ has a role.",
    "teach": "Explain what enzymes do in digestion.",
-   "talk": "Ask her which food test would show whether bread contains starch."
+   "talk": "Ask her which food test would show whether bread contains starch.",
+   "hook": "Enzymes are **chemical scissors**, cutting food into molecules small enough to pass into the blood."
   },
   {
    "id": "science.light-2",
@@ -57,7 +60,8 @@
    "batch": 6,
    "intro": "Light travels in straight lines at 300,000 km per second, bounces off mirrors at the same angle it arrives, bends when it enters glass or water, and is made of all the colours of the rainbow.",
    "teach": "Explain why a straw in a glass of water looks bent.",
-   "talk": "Shine a torch through a glass of water onto a wall and look for colours at the edge."
+   "talk": "Shine a torch through a glass of water onto a wall and look for colours at the edge.",
+   "hook": "**Reflection bounces, refraction bends**, and white light is **R**ichard **O**f **Y**ork **G**ave **B**attle **I**n **V**ain."
   },
   {
    "id": "science.circuits",
@@ -74,7 +78,8 @@
    "batch": 6,
    "intro": "Current is the flow of charge; voltage is the push; resistance is what slows it down. The three are linked by one equation, V = I × R, and series and parallel circuits follow different rules.",
    "teach": "Explain the difference between current and voltage.",
-   "talk": "Ask her why the lights at home do not all go out when one bulb fails."
+   "talk": "Ask her why the lights at home do not all go out when one bulb fails.",
+   "hook": "**V = I × R**. Series: one loop, same current. Parallel: separate branches, same voltage."
   }
  ],
  "items": [
@@ -102,7 +107,8 @@
    "explain": "Everything from stars to spiders is built from these 118 elements, mostly combined into compounds.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "118 elements are an alphabet for matter: a few “letters” that spell out everything."
   },
   {
    "id": "science.pe.mendeleev",
@@ -118,7 +124,9 @@
    "explain": "Mendeleev predicted the properties of the missing elements, such as gallium and germanium, and was proved right.",
    "accept": [
     "mendeleev"
-   ]
+   ],
+   "hook": "Mendeleev left gaps like missing cards in a set, sure they would turn up. They did.",
+   "example": "Element 101, mendelevium, is named in his honour."
   },
   {
    "id": "science.pe.group",
@@ -134,7 +142,8 @@
    "explain": "Elements in the same group have similar properties because they have the same number of electrons in their outer shell.",
    "accept": [
     "group"
-   ]
+   ],
+   "hook": "A **group** is a family standing in a column: members share similar properties."
   },
   {
    "id": "science.pe.period",
@@ -150,7 +159,8 @@
    "explain": "Across a period, elements change from metals on the left to non-metals on the right.",
    "accept": [
     "period"
-   ]
+   ],
+   "hook": "A **period** runs **across**, like a sentence that ends in a full stop (a “period”)."
   },
   {
    "id": "science.pe.metals",
@@ -176,7 +186,9 @@
    "explain": "A staircase line near the right separates metals from non-metals.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Metals to the **left** of the staircase line, non-metals to the **right**.",
+   "example": "The shiny things in a kitchen drawer that conduct heat, like spoons, foil and pans, are metals."
   },
   {
    "id": "science.pe.alkali",
@@ -192,7 +204,9 @@
    "explain": "Alkali metals are soft, stored under oil, and react more violently the further down the group you go: potassium bursts into lilac flame on water.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Group 1 gets **wilder going down**: lithium fizzes, sodium whizzes about, potassium bursts into flame.",
+   "example": "Lithium is the metal in the rechargeable batteries of phones and laptops."
   },
   {
    "id": "science.pe.noble",
@@ -208,7 +222,9 @@
    "explain": "Noble gases have full outer electron shells, so they do not need to react. Argon fills light bulbs; helium lifts balloons.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Noble gases are like snooty nobles: they won’t mix (react) with anyone.",
+   "example": "Neon makes glowing red-orange shop signs; helium makes party balloons float."
   },
   {
    "id": "science.pe.halogen",
@@ -224,7 +240,9 @@
    "explain": "Halogens are reactive non-metals. Unlike group 1, they get LESS reactive down the group.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Halogen** means “salt-maker”: chlorine + sodium makes table salt.",
+   "example": "Chlorine keeps swimming pools clean, and fluoride (from fluorine) is in toothpaste."
   },
   {
    "id": "science.pe.sym.na",
@@ -238,7 +256,9 @@
     "Cu"
    ],
    "explain": "Na is sodium. The symbol comes from its Latin name (natrium).",
-   "strict": true
+   "strict": true,
+   "hook": "**Na** from **na**trium: the Na in NaCl, the salt on your chips.",
+   "example": "Old orange street lights in the UK were sodium lamps."
   },
   {
    "id": "science.pe.sym.k",
@@ -252,7 +272,9 @@
     "Pb"
    ],
    "explain": "K is potassium. The symbol comes from its Latin name (kalium).",
-   "strict": true
+   "strict": true,
+   "hook": "**K** from **k**alium: think “**K**-rich bananas”, which are full of potassium.",
+   "example": "Plant feed labels show NPK: nitrogen, phosphorus and potassium (K)."
   },
   {
    "id": "science.pe.sym.fe",
@@ -266,7 +288,9 @@
     "Ag"
    ],
    "explain": "Fe is iron. The symbol comes from its Latin name (ferrum).",
-   "strict": true
+   "strict": true,
+   "hook": "**Fe** from **fe**rrum, as in **fe**rrous metals.",
+   "example": "Magnets stick to a steel fridge door because steel is mostly iron."
   },
   {
    "id": "science.pe.sym.cu",
@@ -279,8 +303,10 @@
     "K",
     "Fe"
    ],
-   "explain": "Cu is copper.",
-   "strict": true
+   "explain": "Cu is copper. The symbol comes from its Latin name (cuprum).",
+   "strict": true,
+   "hook": "**Cu** from **cu**prum, named after Cyprus, where the Romans got their copper.",
+   "example": "The wires inside a phone charger cable’s plastic coating are copper."
   },
   {
    "id": "science.pe.sym.pb",
@@ -294,7 +320,9 @@
     "Cu"
    ],
    "explain": "Pb is lead. The symbol comes from its Latin name (plumbum).",
-   "strict": true
+   "strict": true,
+   "hook": "**Pb** from **p**lum**b**um: Romans made water pipes of lead, which is why we have **plumbers**.",
+   "example": "Many old church roofs are covered in sheets of lead."
   },
   {
    "id": "science.pe.sym.ag",
@@ -308,7 +336,9 @@
     "Pb"
    ],
    "explain": "Ag is silver. The symbol comes from its Latin name (argentum).",
-   "strict": true
+   "strict": true,
+   "hook": "**Ag** from **a**r**g**entum: Argentina was named after silver.",
+   "example": "Silver jewellery is often stamped “925”, meaning sterling silver."
   },
   {
    "id": "science.pe.sym.au",
@@ -322,7 +352,9 @@
     "Fe"
    ],
    "explain": "Au is gold. The symbol comes from its Latin name (aurum).",
-   "strict": true
+   "strict": true,
+   "hook": "**Au**: “**A**y, yo**u**! Give me back my gold!”",
+   "example": "Gold never rusts or tarnishes, which is why it’s used for wedding rings."
   },
   {
    "id": "science.pe.sym.sn",
@@ -336,7 +368,9 @@
     "Cu"
    ],
    "explain": "Sn is tin. The symbol comes from its Latin name (stannum).",
-   "strict": true
+   "strict": true,
+   "hook": "**Sn** from **s**ta**n**num. The odd one out: there’s no S in “tin”!",
+   "example": "“Tin” cans are really steel with a thin coat of tin to stop them rusting."
   },
   {
    "id": "science.pe.sym.hg",
@@ -350,7 +384,9 @@
     "Pb"
    ],
    "explain": "Hg is mercury. The symbol comes from its Latin name (hydrargyrum).",
-   "strict": true
+   "strict": true,
+   "hook": "**Hg** from **h**ydrar**g**yrum, “watery silver”: a metal that is liquid at room temperature.",
+   "example": "Old glass thermometers held mercury; today’s are digital or use coloured alcohol, as mercury is poisonous."
   },
   {
    "id": "science.pe.sym.w",
@@ -363,8 +399,10 @@
     "K",
     "Fe"
    ],
-   "explain": "W is tungsten. The symbol comes from its Latin name (wolfram).",
-   "strict": true
+   "explain": "W is tungsten. The symbol comes from its other name, wolfram.",
+   "strict": true,
+   "hook": "**W** from **w**olfram, tungsten’s other name.",
+   "example": "Old-style filament light bulbs glowed using a thin coil of tungsten wire."
   },
   {
    "id": "science.rx.mass",
@@ -383,7 +421,8 @@
    ],
    "credits": [
     "maths.ratio"
-   ]
+   ],
+   "hook": "Atoms are only **rearranged**: total mass in = total mass out."
   },
   {
    "id": "science.rx.d1",
@@ -409,7 +448,9 @@
    "explain": "Lavoisier showed in the 1770s that in a sealed container, mass never changes in a reaction.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Burning doesn’t delete atoms; it sends some up as invisible gases.",
+   "example": "A candle gets shorter as it burns because its wax turns into carbon dioxide and water vapour that drift away."
   },
   {
    "id": "science.rx.reactants",
@@ -422,7 +463,9 @@
     "catalysts",
     "elements"
    ],
-   "explain": "Reactants → products. The arrow means “react to make”."
+   "explain": "Reactants → products. The arrow means “react to make”.",
+   "hook": "**React**ants **react**; **produc**ts are **produc**ed.",
+   "example": "When you bake, flour, eggs and sugar (the reactants) change into cake (the product)."
   },
   {
    "id": "science.rx.combustion",
@@ -435,7 +478,9 @@
     "carbon",
     "oxygen"
    ],
-   "explain": "Burning a hydrocarbon in plenty of oxygen always makes carbon dioxide and water. That is why car exhausts drip on cold mornings."
+   "explain": "Burning a hydrocarbon in plenty of oxygen always makes carbon dioxide and water. That is why car exhausts drip on cold mornings.",
+   "hook": "Burn a hydrocarbon in plenty of oxygen and you always get **CO₂ and H₂O**.",
+   "example": "A gas hob flame gives off water vapour, one reason kitchen windows steam up when you cook."
   },
   {
    "id": "science.rx.exo",
@@ -448,7 +493,9 @@
     "reversible",
     "neutral"
    ],
-   "explain": "Exo = out. Endothermic reactions take heat IN and feel cold, like the sherbet fizzing on your tongue."
+   "explain": "Exo = out. Endothermic reactions take heat IN and feel cold, like the sherbet fizzing on your tongue.",
+   "hook": "**Exo**thermic: heat **exits**. **Endo**thermic: heat **enters**.",
+   "example": "Air-activated hand warmers heat up because the iron powder inside slowly oxidises: an exothermic reaction."
   },
   {
    "id": "science.rx.endo",
@@ -461,7 +508,9 @@
     "explosive",
     "catalytic"
    ],
-   "explain": "Endo = in. The surroundings get colder."
+   "explain": "Endo = in. The surroundings get colder.",
+   "hook": "**Endo**thermic: heat **enters** the reaction, so the surroundings feel cold.",
+   "example": "Instant cold packs in first-aid kits turn icy when you squeeze them."
   },
   {
    "id": "science.rx.signs",
@@ -487,7 +536,9 @@
    "explain": "Melting is a physical change: water is still water. Chemical reactions make NEW substances: look for colour change, gas, a precipitate or a temperature change.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Spot a reaction: **colour change, fizzing, a new solid, or a temperature change**.",
+   "example": "A bath bomb fizzing is a chemical reaction; an ice lolly melting is not."
   },
   {
    "id": "science.rx.oxidation",
@@ -500,7 +551,9 @@
     "neutralisation",
     "distillation"
    ],
-   "explain": "Rusting is slow oxidation of iron. Burning is fast oxidation."
+   "explain": "Rusting is slow oxidation of iron. Burning is fast oxidation.",
+   "hook": "**Ox**idation = gaining **ox**ygen.",
+   "example": "A cut apple going brown in the air is oxidation in action."
   },
   {
    "id": "science.rx.acid-metal",
@@ -513,7 +566,8 @@
     "carbon dioxide",
     "oxygen"
    ],
-   "explain": "Test for hydrogen: a lit splint gives a squeaky pop."
+   "explain": "Test for hydrogen: a lit splint gives a squeaky pop.",
+   "hook": "**MASH**: **M**etal + **A**cid → **S**alt + **H**ydrogen."
   },
   {
    "id": "science.rx.acid-carb",
@@ -529,7 +583,9 @@
    "explain": "Test for carbon dioxide: it turns limewater cloudy.",
    "accept": [
     "co2"
-   ]
+   ],
+   "hook": "Acid + carbonate → salt + water + carbon dioxide: the fizz is the CO₂.",
+   "example": "Kettle descaler (an acid) fizzes as it dissolves limescale, which is calcium carbonate."
   },
   {
    "id": "science.rx.decomp",
@@ -545,7 +601,9 @@
    "explain": "Thermal = heat; decomposition = breaking down. One substance becomes two.",
    "accept": [
     "decomposition"
-   ]
+   ],
+   "hook": "**Thermal** = heat, **decomposition** = breaking down: heat splits one compound apart.",
+   "example": "Bicarbonate of soda breaks down when heated, giving off carbon dioxide that helps cakes rise."
   },
   {
    "id": "science.dg.order",
@@ -561,7 +619,9 @@
     "rectum"
    ],
    "labels": null,
-   "explain": "Mouth → oesophagus (gullet) → stomach → small intestine (where most digestion and absorption happens) → large intestine (water absorbed) → rectum."
+   "explain": "Mouth → oesophagus (gullet) → stomach → small intestine (where most digestion and absorption happens) → large intestine (water absorbed) → rectum.",
+   "hook": "“**M**y **O**ld **S**hoes **S**mell **L**ike **R**ubbish”: mouth, oesophagus, stomach, small and large intestine, rectum.",
+   "example": "Food usually takes between one and three days to make the whole journey."
   },
   {
    "id": "science.dg.enzyme",
@@ -574,7 +634,9 @@
     "vitamins",
     "antibodies"
    ],
-   "explain": "Enzymes speed up digestion without being used up. Each works on one kind of food."
+   "explain": "Enzymes speed up digestion without being used up. Each works on one kind of food.",
+   "hook": "Enzymes are **chemical scissors**, snipping big food molecules into small ones.",
+   "example": "Biological washing powder uses enzymes to digest food stains like egg and gravy."
   },
   {
    "id": "science.dg.amylase",
@@ -587,7 +649,9 @@
     "lipase",
     "bile"
    ],
-   "explain": "Chew bread for a minute and it starts to taste sweet: amylase at work."
+   "explain": "Chew bread for a minute and it starts to taste sweet: amylase at work.",
+   "hook": "Amyl**ase** digests starch (**amylum** is Latin for starch). Enzyme names usually end in -ase.",
+   "example": "Chew a plain cracker for a minute and it starts to taste sweet: amylase is turning starch into sugar."
   },
   {
    "id": "science.dg.protease",
@@ -600,7 +664,9 @@
     "lipase",
     "cellulase"
    ],
-   "explain": "Protease works in the stomach (where acid helps) and the small intestine."
+   "explain": "Protease works in the stomach (where acid helps) and the small intestine.",
+   "hook": "**Prote**ase digests **prote**ins: the enzyme’s name tells you its food.",
+   "example": "Fresh pineapple contains a protease, which is why it stops jelly from setting."
   },
   {
    "id": "science.dg.lipase",
@@ -613,7 +679,9 @@
     "protease",
     "insulin"
    ],
-   "explain": "Lipids = fats. Bile from the liver breaks fat into droplets first so lipase can work faster."
+   "explain": "Lipids = fats. Bile from the liver breaks fat into droplets first so lipase can work faster.",
+   "hook": "**Lip**ase digests **lip**ids (fats).",
+   "example": "Bile works like washing-up liquid, breaking fat into small droplets for lipase to attack."
   },
   {
    "id": "science.dg.small",
@@ -636,10 +704,12 @@
      "feedback": "Food is not stored there; it is absorbed."
     }
    ],
-   "explain": "Flattened out, the villi would cover a tennis court. More surface means faster absorption.",
+   "explain": "Counting the villi (and the even tinier microvilli on their cells), the small intestine’s lining has an area of about 30 square metres: bigger than most living-room floors. More surface means faster absorption.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Villi are like the loops on a fluffy towel: lots of surface for soaking things up.",
+   "example": "A fluffy towel soaks up more water than a smooth tea towel because its loops give a bigger surface area."
   },
   {
    "id": "science.dg.large",
@@ -652,7 +722,8 @@
     "sugar",
     "fat"
    ],
-   "explain": "By the time food reaches the large intestine the nutrients are gone; water is reabsorbed and the rest becomes faeces."
+   "explain": "By the time food reaches the large intestine the nutrients are gone; water is reabsorbed and the rest becomes faeces.",
+   "hook": "**L**arge intestine: the **L**ast stop, where water is taken back."
   },
   {
    "id": "science.dg.iodine",
@@ -668,7 +739,9 @@
    "explain": "A drop of iodine on bread or potato goes blue-black.",
    "accept": [
     "iodine"
-   ]
+   ],
+   "hook": "**I**odine finds **s**tarch: “**I S**ee blue-black.”",
+   "example": "A drop of iodine on a cut potato turns blue-black: potatoes are full of starch."
   },
   {
    "id": "science.dg.benedict",
@@ -686,7 +759,8 @@
     "benedicts",
     "benedict’s",
     "benedict"
-   ]
+   ],
+   "hook": "**B**enedict’s for sugar: **B**lue to **B**rick red, but only when heated."
   },
   {
    "id": "science.dg.biuret",
@@ -702,7 +776,9 @@
    "explain": "Biuret solution on egg white goes lilac.",
    "accept": [
     "biuret"
-   ]
+   ],
+   "hook": "**P**urple means **P**rotein.",
+   "example": "Egg white, milk and beans would all turn biuret solution purple."
   },
   {
    "id": "science.dg.nutrients",
@@ -728,7 +804,9 @@
    "explain": "Carbohydrates and fats for energy; protein for growth and repair; vitamins and minerals in small amounts; fibre and water to keep everything working.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Protein is for **building** (muscle, skin, hair); carbohydrates and fats are **fuel**.",
+   "example": "Eggs, beans, fish and meat are protein-rich foods."
   },
   {
    "id": "science.dg.scurvy",
@@ -744,7 +822,9 @@
    "explain": "Scurvy. The Royal Navy eventually issued lime juice, which is why British sailors were called “limeys”.",
    "accept": [
     "c"
-   ]
+   ],
+   "hook": "**C** for **C**itrus, the **c**ure for s**c**urvy.",
+   "example": "Oranges, kiwis, peppers and strawberries are all rich in vitamin C."
   },
   {
    "id": "science.li.speed",
@@ -760,7 +840,9 @@
    "explain": "Light from the Sun takes about 8 minutes to reach us. Sound travels at only 340 m/s, which is why you see lightning before you hear thunder.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "In one second, light could travel around the Earth about **7½ times**.",
+   "example": "Count the seconds between lightning and thunder and divide by 3: that is roughly how many kilometres away the storm is."
   },
   {
    "id": "science.li.law",
@@ -773,7 +855,9 @@
     "incidence",
     "diffraction"
    ],
-   "explain": "Both angles are measured from the normal, an imaginary line at 90° to the mirror."
+   "explain": "Both angles are measured from the normal, an imaginary line at 90° to the mirror.",
+   "hook": "**Angle in = angle out**, like a snooker ball bouncing off the cushion.",
+   "example": "Bounce a ball against a wall at an angle: it comes off at the same angle it hit."
   },
   {
    "id": "science.li.normal",
@@ -789,7 +873,8 @@
    "explain": "Angles of incidence and reflection are always measured from the normal, not from the mirror.",
    "accept": [
     "normal"
-   ]
+   ],
+   "hook": "The normal stands at 90° to the mirror, like a lamppost on a flat road."
   },
   {
    "id": "science.li.refract",
@@ -802,7 +887,9 @@
     "dispersion",
     "absorption"
    ],
-   "explain": "Light slows down in glass and water, which bends it. That is why a straw looks broken in a glass of water and why lenses work."
+   "explain": "Light slows down in glass and water, which bends it. That is why a straw looks broken in a glass of water and why lenses work.",
+   "hook": "Re**flect** = bounce back. Re**fract** = bend, as if the ray’s path were **fract**ured (broken).",
+   "example": "A straw in a glass of water looks broken, and your legs look short when you stand in a swimming pool."
   },
   {
    "id": "science.li.prism",
@@ -828,7 +915,9 @@
    "explain": "Newton showed this in 1666 and recombined the colours into white with a second prism. Rainbows are raindrops doing the same job.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**R**ichard **O**f **Y**ork **G**ave **B**attle **I**n **V**ain: red, orange, yellow, green, blue, indigo, violet.",
+   "example": "A rainbow appears when the Sun is behind you and rain is falling in front of you."
   },
   {
    "id": "science.li.spectrum",
@@ -844,7 +933,9 @@
    "explain": "ROY G BIV. Red bends least and violet most.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**R**ichard **O**f **Y**ork **G**ave **B**attle **I**n **V**ain. Red bends least; violet bends most.",
+   "example": "Spray a garden hose with the Sun behind you to make a mini rainbow: red on the outside, violet on the inside."
   },
   {
    "id": "science.li.red",
@@ -870,7 +961,9 @@
    "explain": "A white object reflects every colour; a black one absorbs them all. Under pure blue light, a red jumper looks black because there is no red to reflect.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "You see the colour that **bounces back**; all the others are swallowed (absorbed).",
+   "example": "Black clothes feel hotter in summer sun because they absorb all the colours."
   },
   {
    "id": "science.li.filter",
@@ -886,7 +979,9 @@
    "explain": "Filters work by absorbing: a green filter absorbs every colour except green, which it transmits.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "A filter is a bouncer: only its own colour gets through the door.",
+   "example": "Theatres put coloured filters, called gels, over stage lights to colour the light."
   },
   {
    "id": "science.li.retina",
@@ -902,7 +997,8 @@
    "explain": "The lens focuses an upside-down image onto the retina at the back of the eye. The brain turns it the right way up.",
    "accept": [
     "retina"
-   ]
+   ],
+   "hook": "The retina is the eye’s **screen**, like the sensor in a camera."
   },
   {
    "id": "science.li.pupil",
@@ -918,7 +1014,9 @@
    "explain": "The iris is the coloured muscle that changes the pupil’s size.",
    "accept": [
     "pupil"
-   ]
+   ],
+   "hook": "The pupil is the black hole in the middle; the iris is the coloured ring around it.",
+   "example": "Look in a mirror, then switch on a bright light: watch your pupils shrink."
   },
   {
    "id": "science.ci.ohm",
@@ -937,7 +1035,8 @@
    ],
    "credits": [
     "maths.equations"
-   ]
+   ],
+   "hook": "**V = I × R**. In the triangle V sits on top of I and R: cover the one you want."
   },
   {
    "id": "science.ci.current",
@@ -950,7 +1049,9 @@
     "resistance",
     "power"
    ],
-   "explain": "Current is the rate of flow of charge: how much charge passes a point each second."
+   "explain": "Current is the rate of flow of charge: how much charge passes a point each second.",
+   "hook": "Current is the **flow**, like the current in a river, measured in **amps**.",
+   "example": "A phone charger’s small print might say “2 A”: that is the current it can supply."
   },
   {
    "id": "science.ci.voltage",
@@ -967,7 +1068,9 @@
    "accept": [
     "volts",
     "v"
-   ]
+   ],
+   "hook": "**V**olts are named after Alessandro **V**olta, who built the first battery.",
+   "example": "A car battery is 12 V; a UK mains socket is 230 V, which is why mains electricity is so dangerous."
   },
   {
    "id": "science.ci.resistance",
@@ -984,7 +1087,9 @@
    "accept": [
     "ohms",
     "ohm"
-   ]
+   ],
+   "hook": "Resistance is like a narrow, crowded corridor slowing the current down.",
+   "example": "The glowing wires in a toaster have a high resistance, so they get hot."
   },
   {
    "id": "science.ci.series",
@@ -1010,7 +1115,9 @@
    "explain": "One loop: same current everywhere, voltages add up to the supply. Remove one bulb and the other goes out.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Series = single loop**: same current everywhere, voltage shared. One bulb breaks, all go out.",
+   "example": "Some old Christmas lights went out completely when just one bulb failed: they were wired in series."
   },
   {
    "id": "science.ci.parallel",
@@ -1036,7 +1143,9 @@
    "explain": "Parallel: same voltage across each branch, currents add up at the junctions.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Parallel = separate paths**: each branch gets the full voltage; one fails, the rest carry on.",
+   "example": "Home lighting is wired in parallel, so one blown bulb doesn’t plunge the whole house into darkness."
   },
   {
    "id": "science.ci.ammeter",
@@ -1052,7 +1161,8 @@
    "explain": "Current must flow THROUGH an ammeter. A voltmeter goes in parallel, ACROSS the component.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**A**mmeter goes **A**long the wire, in series: the current must flow through it."
   },
   {
    "id": "science.ci.voltmeter",
@@ -1068,7 +1178,8 @@
    "explain": "A voltmeter compares the two sides of a component, so it connects across it.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "A **V**oltmeter goes across a component, its two leads making a **V** over it."
   },
   {
    "id": "science.ci.wire",
@@ -1094,7 +1205,8 @@
    "explain": "Longer wire: electrons collide with more atoms. Thinner wire: less room to flow. Heating a wire also raises its resistance.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Long and thin is hard to flow through, like sucking a milkshake up a long, thin straw."
   },
   {
    "id": "science.ci.fuse",
@@ -1110,7 +1222,9 @@
    "explain": "A fuse is a thin wire that melts at a set current. Circuit breakers do the same job but can be reset.",
    "accept": [
     "fuse"
-   ]
+   ],
+   "hook": "A fuse sacrifices itself: it melts to protect the circuit (and you).",
+   "example": "Every UK plug contains a fuse, often 3 A or 13 A; the house’s fuse box has circuit breakers."
   }
  ]
 }

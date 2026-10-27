@@ -49,6 +49,7 @@ export function validateDB(db, generators) {
     if (!t.id.startsWith(t.subject + '.')) errs.push(`topic ${t.id}: id must start with "${t.subject}."`);
     for (const d of t.diagnostic || []) if (db.items[d]?.topic !== t.id) errs.push(`topic ${t.id}: diagnostic ${d} is not an item of this topic`);
     if (!(db.itemsByTopic[t.id] || []).length) errs.push(`topic ${t.id}: has no items`);
+    if (t.hook != null && (typeof t.hook !== 'string' || !t.hook.trim())) errs.push(`topic ${t.id}: hook must be text`);
   }
   // prerequisite cycles
   const state = {};
@@ -101,6 +102,7 @@ export function validateDB(db, generators) {
         break;
     }
     if (!['template', 'written'].includes(it.kind) && !it.explain) errs.push(`${where}: missing explain`);
+    for (const k of ['hook', 'example']) if (it[k] != null && (typeof it[k] !== 'string' || !it[k].trim() || it[k].length > 220)) errs.push(`${where}: ${k} must be short text`);
   }
   for (const s of db.sentences) {
     if (!s.model || !s.checks?.length) errs.push(`sentence ${s.id}: needs model and checks`);

@@ -9,6 +9,7 @@
    "prereqs": [],
    "batch": 6,
    "intro": "There are seven continents and five oceans. Knowing where they are is the starting point for everything else in geography.",
+   "hook": "Seven continents and five oceans, and the Pacific alone is bigger than all the land on Earth put together.",
    "teach": "Name the seven continents, biggest first if you can.",
    "talk": "Ask her which ocean you would cross to fly to New York."
   },
@@ -21,6 +22,7 @@
    ],
    "batch": 5,
    "intro": "Imaginary lines help us describe where places are and explain climates: the Equator, the tropics, the polar circles and the Prime Meridian.",
+   "hook": "Top to bottom: Arctic Circle, Tropic of Cancer, Equator, Tropic of Capricorn, Antarctic Circle.",
    "teach": "Explain why it is hot near the Equator.",
    "talk": "Ask her which hemisphere Australia is in."
   },
@@ -31,6 +33,7 @@
    "prereqs": [],
    "batch": 6,
    "intro": "The UK is made of four countries. Let’s learn them, their capitals, the big rivers and the highest mountains.",
+   "hook": "UK = GB + NI: Great Britain (England, Scotland, Wales) plus Northern Ireland makes four countries.",
    "teach": "Explain the difference between Great Britain and the United Kingdom.",
    "talk": "Ask her the capital of Wales and the UK’s longest river."
   },
@@ -42,6 +45,7 @@
     "geography.continents"
    ],
    "batch": 6,
+   "hook": "Italy is a boot about to kick a football (Sicily); Scandinavia is Norway, Sweden and Denmark.",
    "teach": "Describe where Portugal is compared with Spain.",
    "talk": "Ask her which countries border France."
   },
@@ -53,6 +57,7 @@
     "geography.europe-1"
    ],
    "batch": 6,
+   "hook": "The River Danube strings four capitals together: Vienna, Bratislava, Budapest and Belgrade.",
    "teach": "Name three countries that border Germany.",
    "talk": "Ask her to find Poland on a map."
   },
@@ -64,6 +69,7 @@
     "geography.europe-1"
    ],
    "batch": 6,
+   "hook": "Make a picture for each: Bern’s bears, Brussels sprouts, Madrid in the middle of Spain, all roads leading to Rome.",
    "teach": "Explain how you remember a tricky capital.",
    "talk": "Quiz: what is the capital of Norway?"
   },
@@ -76,6 +82,7 @@
     "geography.capitals-1"
    ],
    "batch": 6,
+   "hook": "A HUNGry PEST lives in Budapest (Hungary); you ROAM Romania, then REST in Bucharest.",
    "teach": "Name a capital that is NOT the biggest city in its country.",
    "talk": "Quiz: what is the capital of Hungary?"
   },
@@ -91,6 +98,7 @@
     "geography.w.d3"
    ],
    "intro": "Before we learn about weather, let’s check some ideas about air and water. Many adults get these wrong!",
+   "hook": "The water cycle is a loop: up as vapour, cool into cloud, fall as rain, collect, and round again.",
    "teach": "Explain the water cycle using the words evaporation and condensation.",
    "talk": "Ask her why puddles disappear on a sunny day."
   }
@@ -105,7 +113,9 @@
    "feature": "asia",
    "answer": "Asia",
    "explain": "Asia is the largest continent, with more than half the world’s people.",
-   "choosePrompt": "Which continent is highlighted?"
+   "choosePrompt": "Which continent is highlighted?",
+   "hook": "Asia is the giant: the biggest continent AND the most people.",
+   "example": "China and India, the two countries with the most people, are both in Asia, and so is Mount Everest."
   },
   {
    "id": "geography.c.africa",
@@ -116,7 +126,9 @@
    "feature": "africa",
    "answer": "Africa",
    "explain": "Africa is the second largest continent, with 54 countries. The Equator crosses it.",
-   "choosePrompt": "Which continent is highlighted?"
+   "choosePrompt": "Which continent is highlighted?",
+   "hook": "54 countries: Africa is a continent, never “a country”.",
+   "example": "The Sahara stretches across the north, Kilimanjaro rises in Tanzania, and the Nile flows north through Egypt."
   },
   {
    "id": "geography.c.north-america",
@@ -127,7 +139,8 @@
    "feature": "north-america",
    "answer": "North America",
    "explain": "North America includes Canada, the USA, Mexico, Central America and the Caribbean.",
-   "choosePrompt": "Which continent is highlighted?"
+   "choosePrompt": "Which continent is highlighted?",
+   "example": "New York, Toronto and Mexico City are all in North America, and so is the huge island of Greenland."
   },
   {
    "id": "geography.c.south-america",
@@ -138,7 +151,9 @@
    "feature": "south-america",
    "answer": "South America",
    "explain": "South America contains the Amazon rainforest and the Andes mountains.",
-   "choosePrompt": "Which continent is highlighted?"
+   "choosePrompt": "Which continent is highlighted?",
+   "hook": "South America hangs below North America like an ice-cream cone, joined on by the thin strip of Panama.",
+   "example": "Brazil and the Amazon rainforest fill much of it; the Andes run all the way down the west coast."
   },
   {
    "id": "geography.c.antarctica",
@@ -149,7 +164,9 @@
    "feature": "antarctica",
    "answer": "Antarctica",
    "explain": "Antarctica is the coldest continent and is covered in ice. No country owns it.",
-   "choosePrompt": "Which continent is highlighted?"
+   "choosePrompt": "Which continent is highlighted?",
+   "hook": "Ant-arctica means “opposite the Arctic”: it sits at the South Pole, the far end of the Earth.",
+   "example": "Emperor penguins breed there, and British scientists work at the Halley and Rothera research stations."
   },
   {
    "id": "geography.c.europe",
@@ -160,7 +177,8 @@
    "feature": "europe",
    "answer": "Europe",
    "explain": "Europe is the second smallest continent. The UK is part of it.",
-   "choosePrompt": "Which continent is highlighted?"
+   "choosePrompt": "Which continent is highlighted?",
+   "example": "The UK is in Europe: on a clear day you can see France from the white cliffs of Dover, about 33 km away."
   },
   {
    "id": "geography.c.oceania",
@@ -171,7 +189,9 @@
    "feature": "oceania",
    "answer": "Oceania",
    "explain": "Oceania includes Australia, New Zealand and many Pacific islands. Some books call this continent Australia.",
-   "choosePrompt": "Which continent is highlighted?"
+   "choosePrompt": "Which continent is highlighted?",
+   "hook": "Ocean-ia: mostly ocean, dotted with islands around Australia.",
+   "example": "Australia’s Great Barrier Reef, New Zealand’s volcanoes and the islands of Fiji and Samoa are all in Oceania."
   },
   {
    "id": "geography.o.pacific",
@@ -185,7 +205,9 @@
    "choosePrompt": "Which ocean is highlighted?",
    "accept": [
     "Pacific"
-   ]
+   ],
+   "hook": "Pacific means “peaceful”: Magellan named it in 1520 after a calm crossing.",
+   "example": "The Mariana Trench, the deepest place on Earth at about 11 km, is in the Pacific."
   },
   {
    "id": "geography.o.atlantic",
@@ -199,7 +221,9 @@
    "choosePrompt": "Which ocean is highlighted?",
    "accept": [
     "Atlantic"
-   ]
+   ],
+   "hook": "A for Atlantic, A for America: it is the ocean we fly over to get to America.",
+   "example": "It washes the UK’s west coast, and the Titanic sank in the North Atlantic in 1912."
   },
   {
    "id": "geography.o.indian",
@@ -213,7 +237,9 @@
    "choosePrompt": "Which ocean is highlighted?",
    "accept": [
     "Indian"
-   ]
+   ],
+   "hook": "Named after India, which pokes down into it like a triangle.",
+   "example": "The Maldives, Mauritius and Madagascar are islands in the Indian Ocean."
   },
   {
    "id": "geography.o.southern",
@@ -227,7 +253,9 @@
    "choosePrompt": "Which ocean is highlighted?",
    "accept": [
     "Southern"
-   ]
+   ],
+   "hook": "The Southern Ocean is the ring of sea that goes all the way round Antarctica.",
+   "example": "In 1916 Ernest Shackleton crossed it in a small lifeboat after his ship, Endurance, was crushed by ice."
   },
   {
    "id": "geography.o.arctic",
@@ -241,7 +269,9 @@
    "choosePrompt": "Which ocean is highlighted?",
    "accept": [
     "Arctic"
-   ]
+   ],
+   "hook": "Arctic comes from the Greek for “bear”: it lies beneath the stars of the Great Bear.",
+   "example": "Polar bears hunt seals on its sea ice, which shrinks a lot each summer."
   },
   {
    "id": "geography.c.count",
@@ -254,7 +284,8 @@
     "6",
     "8"
    ],
-   "explain": "Seven: Asia, Africa, North America, South America, Antarctica, Europe and Oceania."
+   "explain": "Seven: Asia, Africa, North America, South America, Antarctica, Europe and Oceania.",
+   "hook": "“Eat An Aspirin After A Nighttime Snack”: Europe, Asia, Africa, Australia (Oceania), Antarctica, North and South America."
   },
   {
    "id": "geography.c.largest-ocean",
@@ -271,7 +302,8 @@
    "accept": [
     "pacific",
     "the pacific"
-   ]
+   ],
+   "hook": "P for Pacific, P for plenty of room: it covers about a third of the whole Earth."
   },
   {
    "id": "geography.l.equator",
@@ -283,7 +315,9 @@
    "answer": "Equator",
    "explain": "The Equator (0°) divides the Earth into the Northern and Southern Hemispheres.",
    "choosePrompt": "Which line is highlighted in red?",
-   "accept": []
+   "accept": [],
+   "hook": "The Equator divides the Earth into two EQUAL halves.",
+   "example": "It runs through Ecuador (named after it), the Amazon in Brazil, Kenya and Indonesia."
   },
   {
    "id": "geography.l.cancer",
@@ -295,7 +329,9 @@
    "answer": "Tropic of Cancer",
    "explain": "The Tropic of Cancer is about 23.5° north. The Sun is directly overhead here at noon on about 21 June.",
    "choosePrompt": "Which line is highlighted in red?",
-   "accept": []
+   "accept": [],
+   "hook": "CaNcer has an N for North; CapriCORN has a corn on its foot, down at the bottom.",
+   "example": "It passes through Mexico, the Sahara, Egypt near Aswan, and India."
   },
   {
    "id": "geography.l.capricorn",
@@ -307,7 +343,9 @@
    "answer": "Tropic of Capricorn",
    "explain": "The Tropic of Capricorn is about 23.5° south. The Sun is directly overhead here at noon on about 21 December.",
    "choosePrompt": "Which line is highlighted in red?",
-   "accept": []
+   "accept": [],
+   "hook": "CaNcer has an N for North; CapriCORN has a corn on its foot, down at the bottom.",
+   "example": "It runs through Brazil (right by São Paulo), southern Madagascar and the middle of Australia."
   },
   {
    "id": "geography.l.arctic",
@@ -319,7 +357,9 @@
    "answer": "Arctic Circle",
    "explain": "North of the Arctic Circle (about 66.5° N) there is at least one day a year when the Sun never sets.",
    "choosePrompt": "Which line is highlighted in red?",
-   "accept": []
+   "accept": [],
+   "hook": "Inside the Arctic Circle is the land of the midnight Sun: in midsummer it shines all night.",
+   "example": "It crosses Lapland in northern Norway, Sweden and Finland, as well as Russia, Alaska, Canada and Greenland."
   },
   {
    "id": "geography.l.antarctic",
@@ -331,7 +371,9 @@
    "answer": "Antarctic Circle",
    "explain": "The Antarctic Circle is about 66.5° south.",
    "choosePrompt": "Which line is highlighted in red?",
-   "accept": []
+   "accept": [],
+   "hook": "Antarctic = anti-Arctic: the same circle, mirrored in the south.",
+   "example": "Almost all of Antarctica lies inside it; around 21 June the Sun does not rise there at all."
   },
   {
    "id": "geography.l.greenwich",
@@ -346,7 +388,9 @@
    "accept": [
     "Prime Meridian",
     "Greenwich Meridian"
-   ]
+   ],
+   "hook": "Greenwich Mean Time (GMT) is measured from this line: 0° is where world time begins.",
+   "example": "At the Royal Observatory in Greenwich you can stand with one foot in the eastern and one in the western hemisphere."
   },
   {
    "id": "geography.l.hemis",
@@ -359,7 +403,9 @@
     "Western",
     "Lower"
    ],
-   "explain": "North and South of the Equator are the Northern and Southern Hemispheres."
+   "explain": "North and South of the Equator are the Northern and Southern Hemispheres.",
+   "hook": "Hemi means “half”: a hemisphere is half a sphere.",
+   "example": "Australia and South Africa are in the Southern Hemisphere, so Christmas there is in summer."
   },
   {
    "id": "geography.l.uk-hemi",
@@ -373,7 +419,9 @@
    "explain": "The UK is about 50–60° north of the Equator.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "We are northerners: our summer is in June, Australia’s is in December.",
+   "example": "London is about 51.5° north, roughly 5,700 km north of the Equator."
   },
   {
    "id": "geography.l.hot",
@@ -396,7 +444,9 @@
      "feedback": "Volcanoes don’t control climate zones."
     }
    ],
-   "explain": "Near the Equator the Sun is high in the sky, so its energy is spread over a smaller area."
+   "explain": "Near the Equator the Sun is high in the sky, so its energy is spread over a smaller area.",
+   "hook": "Torch test: shine a torch straight down for a small, bright spot; tilt it and the same light spreads out, weaker.",
+   "example": "The midday Sun is much higher over the UK in June than in December, which is a big reason summer is warmer."
   },
   {
    "id": "geography.l.latitude",
@@ -409,7 +459,9 @@
     "altitude",
     "meridians"
    ],
-   "explain": "Latitude measures north–south (like rungs on a ladder: “lat-itude is flat”). Longitude measures east–west."
+   "explain": "Latitude measures north–south (like rungs on a ladder: “lat-itude is flat”). Longitude measures east–west.",
+   "hook": "“Lat is flat”: latitude lines lie flat like ladder rungs; longitude lines are long, running pole to pole.",
+   "example": "London is about 51.5° N and Edinburgh about 56° N, so Edinburgh is further north."
   },
   {
    "id": "geography.uk.eng",
@@ -420,7 +472,8 @@
    "feature": "ENG",
    "answer": "England",
    "explain": "England is the largest UK country by area and population.",
-   "choosePrompt": "Which country of the UK is highlighted?"
+   "choosePrompt": "Which country of the UK is highlighted?",
+   "example": "England is home to London, Birmingham and Manchester, and to most of the UK’s people."
   },
   {
    "id": "geography.uk.sct",
@@ -431,7 +484,8 @@
    "feature": "SCT",
    "answer": "Scotland",
    "explain": "Scotland is in the north of Great Britain.",
-   "choosePrompt": "Which country of the UK is highlighted?"
+   "choosePrompt": "Which country of the UK is highlighted?",
+   "example": "Scotland has Ben Nevis, Loch Ness and the Highlands, plus nearly 800 islands."
   },
   {
    "id": "geography.uk.wls",
@@ -442,7 +496,9 @@
    "feature": "WLS",
    "answer": "Wales",
    "explain": "Wales is in the west of Great Britain.",
-   "choosePrompt": "Which country of the UK is highlighted?"
+   "choosePrompt": "Which country of the UK is highlighted?",
+   "hook": "Wales bulges out to the west of England: some say it looks like a pig’s head.",
+   "example": "Road signs in Wales are in Welsh and English: “Araf” means “Slow”."
   },
   {
    "id": "geography.uk.nir",
@@ -453,7 +509,9 @@
    "feature": "NIR",
    "answer": "Northern Ireland",
    "explain": "Northern Ireland is on the island of Ireland, and is part of the UK.",
-   "choosePrompt": "Which country of the UK is highlighted?"
+   "choosePrompt": "Which country of the UK is highlighted?",
+   "hook": "Northern Ireland is the only part of the UK with a land border with another country: Ireland.",
+   "example": "See the Giant’s Causeway on its north coast, and the Belfast shipyard where the Titanic was built."
   },
   {
    "id": "geography.uk.cap.london",
@@ -480,7 +538,8 @@
    ],
    "explain": "London is the capital of England.",
    "map": "uk",
-   "feature": "ENG"
+   "feature": "ENG",
+   "example": "The Houses of Parliament and Big Ben stand beside the Thames in London."
   },
   {
    "id": "geography.uk.cap.edinburgh",
@@ -508,7 +567,9 @@
    ],
    "explain": "Edinburgh is the capital of Scotland.",
    "map": "uk",
-   "feature": "SCT"
+   "feature": "SCT",
+   "hook": "Edinburgh, not Glasgow: Glasgow is bigger, but Edinburgh has the castle and the Scottish Parliament.",
+   "example": "Edinburgh Castle sits on Castle Rock, the plug of an ancient volcano."
   },
   {
    "id": "geography.uk.cap.cardiff",
@@ -536,7 +597,8 @@
    ],
    "explain": "Cardiff is the capital of Wales.",
    "map": "uk",
-   "feature": "WLS"
+   "feature": "WLS",
+   "example": "The Welsh Parliament (the Senedd) and the Principality Stadium are in Cardiff."
   },
   {
    "id": "geography.uk.cap.belfast",
@@ -563,7 +625,9 @@
    ],
    "explain": "Belfast is the capital of Northern Ireland.",
    "map": "uk",
-   "feature": "NIR"
+   "feature": "NIR",
+   "hook": "Belfast is in Northern Ireland (UK); Dublin is the capital of the Republic of Ireland.",
+   "example": "The Titanic was built in Belfast, and the Northern Ireland Assembly meets at Stormont."
   },
   {
    "id": "geography.uk.r.thames",
@@ -578,7 +642,8 @@
    "accept": [
     "Thames"
    ],
-   "group": "river"
+   "group": "river",
+   "example": "The Thames Barrier at Woolwich closes against high tides and storm surges to stop London flooding."
   },
   {
    "id": "geography.uk.r.severn",
@@ -593,7 +658,8 @@
    "accept": [
     "Severn"
    ],
-   "group": "river"
+   "group": "river",
+   "example": "Its huge tides push a wave called the Severn Bore upstream, and people surf it."
   },
   {
    "id": "geography.uk.r.trent",
@@ -608,7 +674,9 @@
    "accept": [
     "Trent"
    ],
-   "group": "river"
+   "group": "river",
+   "hook": "Stoke-on-Trent and Burton upon Trent are named after it.",
+   "example": "It flows through the Midlands past Nottingham, then joins the Ouse to make the Humber estuary."
   },
   {
    "id": "geography.uk.r.tay",
@@ -623,7 +691,9 @@
    "accept": [
     "Tay"
    ],
-   "group": "river"
+   "group": "river",
+   "hook": "Small name, big river: the Tay carries more water than any other river in the UK.",
+   "example": "Dundee stands on the Firth of Tay, crossed by the long Tay Rail Bridge."
   },
   {
    "id": "geography.uk.r.tweed",
@@ -638,7 +708,8 @@
    "accept": [
     "Tweed"
    ],
-   "group": "river"
+   "group": "river",
+   "example": "Berwick-upon-Tweed, England’s most northerly town, sits at its mouth."
   },
   {
    "id": "geography.uk.longest",
@@ -656,7 +727,9 @@
     "severn",
     "the severn",
     "the river severn"
-   ]
+   ],
+   "hook": "S comes before T: the Severn comes first, just ahead of the Thames.",
+   "example": "The Severn flows from Plynlimon in mid-Wales through Shrewsbury, Worcester and Gloucester."
   },
   {
    "id": "geography.uk.p.ben-nevis",
@@ -669,7 +742,8 @@
    "explain": "Ben Nevis (1345 m), in Scotland, is the highest mountain in the UK.",
    "choosePrompt": "Which mountain is marked?",
    "accept": [],
-   "group": "peak"
+   "group": "peak",
+   "example": "It towers over Fort William in the Highlands; walkers climb it in the Three Peaks Challenge."
   },
   {
    "id": "geography.uk.p.snowdon",
@@ -685,7 +759,9 @@
     "Snowdon",
     "Yr Wyddfa"
    ],
-   "group": "peak"
+   "group": "peak",
+   "hook": "The Three Peaks, tallest first: Ben Nevis (Scotland), Yr Wyddfa (Wales), Scafell Pike (England).",
+   "example": "The Snowdon Mountain Railway carries visitors almost to the summit."
   },
   {
    "id": "geography.uk.p.scafell",
@@ -698,7 +774,9 @@
    "explain": "Scafell Pike (978 m) in the Lake District is the highest mountain in England.",
    "choosePrompt": "Which mountain is marked?",
    "accept": [],
-   "group": "peak"
+   "group": "peak",
+   "hook": "Scafell Pike is the shortest of the Three Peaks, but the top of England.",
+   "example": "It rises above Wasdale in the Lake District, beside Wastwater, England’s deepest lake."
   },
   {
    "id": "geography.uk.highest",
@@ -711,7 +789,8 @@
     "Snowdon",
     "Slieve Donard"
    ],
-   "explain": "Ben Nevis in the Scottish Highlands is 1345 m high."
+   "explain": "Ben Nevis in the Scottish Highlands is 1345 m high.",
+   "hook": "Big Ben is a London bell; Ben Nevis is the BIG Ben of mountains."
   },
   {
    "id": "geography.uk.gb",
@@ -734,7 +813,9 @@
      "feedback": "The Republic of Ireland is a separate country, not part of either."
     }
    ],
-   "explain": "The UK = England + Scotland + Wales + Northern Ireland. Great Britain is the largest island: England, Scotland and Wales."
+   "explain": "The UK = England + Scotland + Wales + Northern Ireland. Great Britain is the largest island: England, Scotland and Wales.",
+   "hook": "GB = 3 countries on one island. UK = GB + Northern Ireland = 4.",
+   "example": "The UK’s full name is “the United Kingdom of Great Britain and Northern Ireland”: it says so on a British passport."
   },
   {
    "id": "geography.eu.gbr",
@@ -779,7 +860,8 @@
    "answer": "Ireland",
    "explain": "This is Ireland.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Ireland is the island to the west of Great Britain; the Republic covers most of it."
   },
   {
    "id": "geography.cap.irl",
@@ -796,7 +878,8 @@
    "feature": "IRL",
    "fill": true,
    "learn": "The capital of **Ireland** is **Dublin**.",
-   "accept": []
+   "accept": [],
+   "hook": "Dublin is in the Republic of Ireland; Belfast is in Northern Ireland, part of the UK."
   },
   {
    "id": "geography.eu.fra",
@@ -854,7 +937,8 @@
    "feature": "ESP",
    "fill": true,
    "learn": "The capital of **Spain** is **Madrid**. Madrid, not Barcelona.",
-   "accept": []
+   "accept": [],
+   "hook": "M for Madrid, M for Middle: it is right in the middle of Spain."
   },
   {
    "id": "geography.eu.prt",
@@ -866,7 +950,8 @@
    "answer": "Portugal",
    "explain": "This is Portugal.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Portugal is the strip down Spain’s Atlantic side, at the far south-west corner of Europe."
   },
   {
    "id": "geography.cap.prt",
@@ -883,7 +968,8 @@
    "feature": "PRT",
    "fill": true,
    "learn": "The capital of **Portugal** is **Lisbon**.",
-   "accept": []
+   "accept": [],
+   "hook": "Porto gave Portugal its name, but Lisbon is the capital."
   },
   {
    "id": "geography.eu.deu",
@@ -912,7 +998,8 @@
    "feature": "DEU",
    "fill": true,
    "learn": "The capital of **Germany** is **Berlin**. Berlin, not Munich.",
-   "accept": []
+   "accept": [],
+   "example": "The Berlin Wall split the city from 1961 to 1989; Berlin became the capital of a reunited Germany in 1990."
   },
   {
    "id": "geography.eu.ita",
@@ -924,7 +1011,8 @@
    "answer": "Italy",
    "explain": "This is Italy.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Italy is shaped like a boot, about to kick a football (Sicily)."
   },
   {
    "id": "geography.cap.ita",
@@ -941,7 +1029,8 @@
    "feature": "ITA",
    "fill": true,
    "learn": "The capital of **Italy** is **Rome**. Rome, not Milan.",
-   "accept": []
+   "accept": [],
+   "hook": "“All roads lead to Rome”: the Romans built their roads out from their capital."
   },
   {
    "id": "geography.eu.nld",
@@ -956,7 +1045,8 @@
    "accept": [
     "Holland",
     "The Netherlands"
-   ]
+   ],
+   "hook": "Nether-lands means “low lands”: about a quarter of it lies below sea level."
   },
   {
    "id": "geography.cap.nld",
@@ -1002,7 +1092,9 @@
    "feature": "BEL",
    "fill": true,
    "learn": "The capital of **Belgium** is **Brussels**.",
-   "accept": []
+   "accept": [],
+   "hook": "Brussels sprouts are named after Brussels, Belgium’s capital.",
+   "example": "Brussels is home to the European Union’s main buildings and NATO’s headquarters."
   },
   {
    "id": "geography.eu.che",
@@ -1014,7 +1106,8 @@
    "answer": "Switzerland",
    "explain": "This is Switzerland.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Switzerland is landlocked and full of Alps: think cheese, chocolate and mountains."
   },
   {
    "id": "geography.cap.che",
@@ -1031,7 +1124,8 @@
    "feature": "CHE",
    "fill": true,
    "learn": "The capital of **Switzerland** is **Bern**. Bern, not Zurich or Geneva, which are bigger.",
-   "accept": []
+   "accept": [],
+   "hook": "Bern has bears: a bear is on its coat of arms, and real bears live in the city’s Bear Park."
   },
   {
    "id": "geography.eu.aut",
@@ -1060,7 +1154,8 @@
    "feature": "AUT",
    "fill": true,
    "learn": "The capital of **Austria** is **Vienna**.",
-   "accept": []
+   "accept": [],
+   "example": "Mozart, Haydn and Beethoven all lived and worked in Vienna."
   },
   {
    "id": "geography.eu.nor",
@@ -1072,7 +1167,8 @@
    "answer": "Norway",
    "explain": "This is Norway.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Norway is long and thin, down Scandinavia’s west coast, with deep fjords."
   },
   {
    "id": "geography.cap.nor",
@@ -1089,7 +1185,8 @@
    "feature": "NOR",
    "fill": true,
    "learn": "The capital of **Norway** is **Oslo**.",
-   "accept": []
+   "accept": [],
+   "example": "The Nobel Peace Prize is awarded in Oslo every December."
   },
   {
    "id": "geography.eu.swe",
@@ -1118,7 +1215,8 @@
    "feature": "SWE",
    "fill": true,
    "learn": "The capital of **Sweden** is **Stockholm**.",
-   "accept": []
+   "accept": [],
+   "example": "Stockholm is built on 14 islands, and the other Nobel Prizes are awarded there."
   },
   {
    "id": "geography.eu.fin",
@@ -1147,7 +1245,8 @@
    "feature": "FIN",
    "fill": true,
    "learn": "The capital of **Finland** is **Helsinki**.",
-   "accept": []
+   "accept": [],
+   "example": "Ferries cross from Helsinki to Tallinn, Estonia’s capital, in about two hours."
   },
   {
    "id": "geography.eu.dnk",
@@ -1159,7 +1258,8 @@
    "answer": "Denmark",
    "explain": "This is Denmark.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Denmark is a thumb of land (Jutland) poking north from Germany, plus islands."
   },
   {
    "id": "geography.cap.dnk",
@@ -1176,7 +1276,8 @@
    "feature": "DNK",
    "fill": true,
    "learn": "The capital of **Denmark** is **Copenhagen**.",
-   "accept": []
+   "accept": [],
+   "example": "Copenhagen’s Little Mermaid statue comes from Hans Christian Andersen’s fairy tale."
   },
   {
    "id": "geography.eu.isl",
@@ -1188,7 +1289,8 @@
    "answer": "Iceland",
    "explain": "This is Iceland.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Iceland sits on the Mid-Atlantic Ridge, so it has volcanoes and hot springs. The word “geyser” comes from Geysir there."
   },
   {
    "id": "geography.cap.isl",
@@ -1207,7 +1309,9 @@
    "learn": "The capital of **Iceland** is **Reykjavik**.",
    "accept": [
     "Reykjavík"
-   ]
+   ],
+   "hook": "Reykjavik means “smoky bay”, after the steam rising from its hot springs.",
+   "example": "It is the world’s most northerly capital of an independent country."
   },
   {
    "id": "geography.eu.grc",
@@ -1219,7 +1323,8 @@
    "answer": "Greece",
    "explain": "This is Greece.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Greece is a hand of peninsulas reaching into the Mediterranean, with thousands of islands."
   },
   {
    "id": "geography.cap.grc",
@@ -1236,7 +1341,8 @@
    "feature": "GRC",
    "fill": true,
    "learn": "The capital of **Greece** is **Athens**.",
-   "accept": []
+   "accept": [],
+   "hook": "Athens is named after the goddess Athena; the Parthenon on the Acropolis was her temple."
   },
   {
    "id": "geography.eu.lux",
@@ -1296,7 +1402,8 @@
    "feature": "POL",
    "fill": true,
    "learn": "The capital of **Poland** is **Warsaw**.",
-   "accept": []
+   "accept": [],
+   "example": "Marie Curie, who discovered radium, was born in Warsaw."
   },
   {
    "id": "geography.eu.cze",
@@ -1327,7 +1434,8 @@
    "feature": "CZE",
    "fill": true,
    "learn": "The capital of **Czechia** is **Prague**.",
-   "accept": []
+   "accept": [],
+   "hook": "“Good King Wenceslas” was a real duke of Bohemia: his statue stands in Prague’s Wenceslas Square."
   },
   {
    "id": "geography.eu.svk",
@@ -1356,7 +1464,8 @@
    "feature": "SVK",
    "fill": true,
    "learn": "The capital of **Slovakia** is **Bratislava**. Bratislava: don’t mix it up with Ljubljana (Slovenia).",
-   "accept": []
+   "accept": [],
+   "hook": "Bratislava sits on the Danube right by the Austrian border, only about an hour from Vienna."
   },
   {
    "id": "geography.eu.hun",
@@ -1385,7 +1494,8 @@
    "feature": "HUN",
    "fill": true,
    "learn": "The capital of **Hungary** is **Budapest**. Budapest: don’t mix it up with Bucharest (Romania).",
-   "accept": []
+   "accept": [],
+   "hook": "A HUNGry PEST: Budapest is Hungary’s. It was two cities, Buda and Pest, either side of the Danube."
   },
   {
    "id": "geography.eu.rou",
@@ -1414,7 +1524,8 @@
    "feature": "ROU",
    "fill": true,
    "learn": "The capital of **Romania** is **Bucharest**. Bucharest: don’t mix it up with Budapest (Hungary).",
-   "accept": []
+   "accept": [],
+   "hook": "ROAM-ania, then REST: you roam Romania, then rest in BuchaREST."
   },
   {
    "id": "geography.eu.bgr",
@@ -1501,7 +1612,8 @@
    "feature": "SVN",
    "fill": true,
    "learn": "The capital of **Slovenia** is **Ljubljana**. Ljubljana: don’t mix it up with Bratislava (Slovakia).",
-   "accept": []
+   "accept": [],
+   "hook": "sLOVEnia has LOVE hidden in it, and Ljubljana’s symbol is a dragon, on its Dragon Bridge."
   },
   {
    "id": "geography.eu.srb",
@@ -1530,7 +1642,8 @@
    "feature": "SRB",
    "fill": true,
    "learn": "The capital of **Serbia** is **Belgrade**.",
-   "accept": []
+   "accept": [],
+   "hook": "Belgrade means “white city”. It stands where the River Sava meets the Danube."
   },
   {
    "id": "geography.eu.bih",
@@ -1559,7 +1672,8 @@
    "feature": "BIH",
    "fill": true,
    "learn": "The capital of **Bosnia and Herzegovina** is **Sarajevo**.",
-   "accept": []
+   "accept": [],
+   "example": "In Sarajevo in 1914, Archduke Franz Ferdinand was shot, which set off the First World War."
   },
   {
    "id": "geography.eu.mne",
@@ -1646,7 +1760,8 @@
    "feature": "MKD",
    "fill": true,
    "learn": "The capital of **North Macedonia** is **Skopje**.",
-   "accept": []
+   "accept": [],
+   "example": "Mother Teresa was born in Skopje in 1910."
   },
   {
    "id": "geography.eu.ukr",
@@ -1658,7 +1773,8 @@
    "answer": "Ukraine",
    "explain": "This is Ukraine.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Ukraine is the largest country entirely in Europe."
   },
   {
    "id": "geography.cap.ukr",
@@ -1766,7 +1882,8 @@
    "feature": "LTU",
    "fill": true,
    "learn": "The capital of **Lithuania** is **Vilnius**.",
-   "accept": []
+   "accept": [],
+   "hook": "The Baltic states go alphabetically from north to south: Estonia (Tallinn), Latvia (Riga), Lithuania (Vilnius)."
   },
   {
    "id": "geography.eu.lva",
@@ -1795,7 +1912,8 @@
    "feature": "LVA",
    "fill": true,
    "learn": "The capital of **Latvia** is **Riga**.",
-   "accept": []
+   "accept": [],
+   "hook": "The Baltic states go alphabetically from north to south: Estonia (Tallinn), Latvia (Riga), Lithuania (Vilnius)."
   },
   {
    "id": "geography.eu.est",
@@ -1824,7 +1942,8 @@
    "feature": "EST",
    "fill": true,
    "learn": "The capital of **Estonia** is **Tallinn**.",
-   "accept": []
+   "accept": [],
+   "hook": "The Baltic states go alphabetically from north to south: Estonia (Tallinn), Latvia (Riga), Lithuania (Vilnius)."
   },
   {
    "id": "geography.eu.rus",
@@ -1836,7 +1955,8 @@
    "answer": "Russia",
    "explain": "This is Russia.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Russia is the largest country in the world, stretching from Europe right across Asia."
   },
   {
    "id": "geography.cap.rus",
@@ -1853,7 +1973,9 @@
    "feature": "RUS",
    "fill": true,
    "learn": "The capital of **Russia** is **Moscow**.",
-   "accept": []
+   "accept": [],
+   "hook": "Moscow, not St Petersburg: St Petersburg was the capital only from 1712 to 1918.",
+   "example": "Red Square, the Kremlin and the onion domes of St Basil’s Cathedral are in Moscow."
   },
   {
    "id": "geography.eu.mlt",
@@ -1865,7 +1987,8 @@
    "answer": "Malta",
    "explain": "This is Malta.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Malta is a tiny group of islands just south of Sicily."
   },
   {
    "id": "geography.cap.mlt",
@@ -1894,7 +2017,8 @@
    "answer": "Cyprus",
    "explain": "This is Cyprus.",
    "choosePrompt": "Which country is highlighted?",
-   "accept": []
+   "accept": [],
+   "hook": "Cyprus is an island at the far east of the Mediterranean, south of Turkey."
   },
   {
    "id": "geography.cap.cyp",
@@ -1934,7 +2058,9 @@
      "feedback": "Air always has mass, whether it is moving or not."
     }
    ],
-   "explain": "Air is matter: it has mass and takes up space. The weight of air above us causes air pressure."
+   "explain": "Air is matter: it has mass and takes up space. The weight of air above us causes air pressure.",
+   "hook": "Air is stuff: a football weighs a little more once it is pumped up.",
+   "example": "Crisp packets puff up on a plane because there is less air pressing on them in the cabin."
   },
   {
    "id": "geography.w.d2",
@@ -1957,7 +2083,9 @@
      "feedback": "There is a small difference: humid air is slightly lighter."
     }
    ],
-   "explain": "Water vapour (H₂O) has lighter molecules than nitrogen (N₂) and oxygen (O₂), so humid air is less dense. That helps it rise and form clouds."
+   "explain": "Water vapour (H₂O) has lighter molecules than nitrogen (N₂) and oxygen (O₂), so humid air is less dense. That helps it rise and form clouds.",
+   "hook": "H₂O (18) is lighter than N₂ (28) and O₂ (32): swap water vapour in and the air gets lighter.",
+   "example": "Warm, muggy air rises easily, building the towering clouds of a summer thunderstorm."
   },
   {
    "id": "geography.w.d3",
@@ -1980,7 +2108,9 @@
      "feedback": "Clouds are much closer than the Sun and don’t affect where it appears."
     }
    ],
-   "explain": "The Earth rotates once every 24 hours, so the Sun appears to rise in the east and set in the west."
+   "explain": "The Earth rotates once every 24 hours, so the Sun appears to rise in the east and set in the west.",
+   "hook": "The Earth turns towards the east, so the Sun rises in the east and sets in the west.",
+   "example": "At the Equator the ground spins at about 1,670 km/h, yet we never feel it."
   },
   {
    "id": "geography.w.evap",
@@ -1993,7 +2123,9 @@
     "precipitation",
     "transpiration"
    ],
-   "explain": "Evaporation: the Sun heats water and it turns into vapour."
+   "explain": "Evaporation: the Sun heats water and it turns into vapour.",
+   "hook": "e-VAPOUR-ation: the water escapes as vapour.",
+   "example": "Washing dries on the line and puddles vanish on a sunny day."
   },
   {
    "id": "geography.w.cond",
@@ -2006,7 +2138,9 @@
     "precipitation",
     "infiltration"
    ],
-   "explain": "Condensation forms clouds, and the droplets on a cold window."
+   "explain": "Condensation forms clouds, and the droplets on a cold window.",
+   "hook": "Condensation: when vapour cools, it comes together into droplets.",
+   "example": "Breathe on a cold mirror, or take a can out of the fridge: droplets appear on the cold surface."
   },
   {
    "id": "geography.w.precip",
@@ -2019,7 +2153,8 @@
     "evaporation",
     "collection"
    ],
-   "explain": "Precipitation is any water falling from the sky."
+   "explain": "Precipitation is any water falling from the sky.",
+   "example": "Rain gauges measure precipitation in millimetres: London gets about 600 mm a year."
   },
   {
    "id": "geography.w.trans",
@@ -2032,7 +2167,9 @@
     "respiration",
     "photosynthesis"
    ],
-   "explain": "Transpiration: water moves up through a plant and escapes from its leaves."
+   "explain": "Transpiration: water moves up through a plant and escapes from its leaves.",
+   "hook": "TRANSpiration: plants TRANSfer water out through their leaves, like plant sweat.",
+   "example": "Tie a clear plastic bag over a leafy branch on a sunny day: droplets collect inside within hours."
   },
   {
    "id": "geography.w.weather-climate",
@@ -2048,7 +2185,9 @@
    "explain": "Weather is what happens today. Climate is the typical pattern over about 30 years.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "“Climate is what you expect; weather is what you get.”",
+   "example": "The UK’s climate is mild and wet, yet the weather on any one day might be a heatwave or a snowstorm."
   },
   {
    "id": "geography.w.cycle",
@@ -2062,7 +2201,9 @@
     "collection"
    ],
    "labels": null,
-   "explain": "The Sun evaporates water; vapour condenses into clouds; water falls as precipitation; it collects in rivers, lakes and seas."
+   "explain": "The Sun evaporates water; vapour condenses into clouds; water falls as precipitation; it collects in rivers, lakes and seas.",
+   "hook": "“Every Cloud Pours Constantly”: Evaporation, Condensation, Precipitation, Collection.",
+   "example": "Rain that falls on the Welsh mountains runs down the Severn and back to the sea, ready to evaporate again."
   }
  ]
 }

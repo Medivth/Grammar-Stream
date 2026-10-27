@@ -211,4 +211,19 @@ Q(6, 'What does Flavia carry?', 'water', ['dinner', 'a book', 'the dog'], '“Fl
 Q(7, 'Where does the family eat?', 'in the triclinium', ['in the atrium', 'in the garden', 'in the kitchen'], '“familia in triclinio cenat.” cenat = dines, from cena.');
 Q(8, 'Where does Rufus sleep at the end?', 'under the table', ['in the street', 'in the garden', 'on a couch'], '“Rufus sub mensa dormit.” sub = under.');
 
+const TOPIC_HOOKS = {
+  'latin.words-1': 'Latin hides inside English: **aqua** → aquarium, **villa** → village.',
+  'latin.verbs-1': 'A Latin verb ending in **-t** means he or she is doing it: **amat**, he or she loves.',
+  'latin.sentences-1': 'Find the verb first: Latin usually saves it for the end of the sentence.',
+  'latin.cases': 'The **-m** marks who is on the receiving end: puella**m** is the girl as the object.',
+  'latin.verbs-2': 'Chant the endings: **-o, -s, -t, -mus, -tis, -nt** (I, you, he or she, we, you all, they).',
+  'latin.plurals': 'More than one: **-ae** and **-i** for the people, **-nt** on the verb: puellae ambulant.',
+  'latin.words-2': 'Home and food words live on in English: **domus** → domestic, **panis** → pantry.',
+  'latin.numbers': '**Unus, duo, tres**: a unicycle has one wheel, a duet has two singers, a triangle three corners.',
+  'latin.roots': 'Spot the root: **port** = carry (porter, transport), **scrib** = write (scribble, script).',
+  'latin.romans': 'The Romans gave us straight roads, public baths, and July and August (after Julius Caesar and Augustus).',
+  'latin.story': 'Read Latin in chunks: find the verb at the end, then look for **-m** to see who it happens to.',
+};
+for (const t of topics) t.hook = TOPIC_HOOKS[t.id];
+
 export default [{ subject: 'latin', deck: 'core', topics, items }];

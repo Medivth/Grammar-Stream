@@ -109,4 +109,99 @@ const items = [
   ], explain: 'Think about scale: who was affected, and how deeply? The transfer of land touched nearly everyone.' },
 ];
 
-export default [{ subject: 'history', deck: 'core', topics, items: [...items, { id: 'history.century.tmpl', topic: 'history.century', kind: 'template', gen: 'century', levels: [1, 2, 3], seed: [-0.8, 0.2, 1] }] }];
+// --- memory hooks: a mnemonic (hook) and a real-world connection (example), merged in by id.
+const topicHooks = {
+  'history.words': '**BC** counts down towards year 1, **AD** counts up from it. There is no year 0: 1 BC is followed straight by AD 1.',
+  'history.century': 'Add one to the hundreds: 1666 → 16 + 1 = **17th** century. A year ending in 00 belongs to the century that is just finishing.',
+  'history.timeline': '“Willie, Willie, Harry, Stee, Harry, Dick, John, Harry three…”: the old rhyme that lists every monarch since 1066, in order.',
+  'history.ancient': 'Civilisations are born by rivers: **Nile** (Egypt), **Tigris and Euphrates** (Mesopotamia), **Indus** (India), **Yellow River** (China).',
+  'history.world': 'Books, maths and brass: Baghdad’s **House of Wisdom**, the **Maya** zero and the **Benin** Bronzes.',
+  'history.1066': '1066: the year of **three kings** (Edward, Harold, William) and **three battles** (Fulford, Stamford Bridge, Hastings).',
+  'history.normans': 'William’s toolkit: **castles** to frighten, the **feudal system** to bind everyone to the king, **Domesday** to count it all.',
+};
+
+const memory = {
+  // words for time
+  'w.bc': { hook: 'BC counts **down** towards year 1, so 500 BC is longer ago than 100 BC.', example: 'Museum labels saying “c. 3000 BC” mean about 5000 years ago: roughly when Stonehenge was begun.' },
+  'w.ad': { hook: '“Anno” is like “annual”: it means year. Anno Domini = “in the year of the Lord”, counting forwards.', example: 'Look for “A.D.” carved with the date on old buildings, foundation stones and gravestones.' },
+  'w.century': { hook: '**Cent** = 100: 100 cents in a dollar, 100 centimetres in a metre, and a centipede is named for “100 legs”.', example: 'In cricket, when a batter scores 100 runs it is called a “century”.' },
+  'w.decade': { hook: '**Dec** = 10: a decagon has 10 sides, and December was the 10th month of the old Roman year.', example: 'The 1960s, the 1990s and the 2010s are each a decade.' },
+  'w.millennium': { hook: '**Mille** = 1000 in Latin: a millimetre is a thousandth of a metre, and a millipede is named for “1000 legs”.', example: 'London’s Millennium Bridge and the Millennium Dome (now the O2) were built to mark the year 2000.' },
+  'w.circa': { hook: '**Circa** sounds like circle: we are circling around the date, close but not exactly on it.', example: 'Museum labels often say things like “c. 1500” when nobody knows the exact year an object was made.' },
+  'w.chronology': { hook: '**Chron** = time (from Greek): chronological order, synchronise your watches, a chronometer is a clock.', example: 'The photos on a phone are shown in chronological order: oldest to newest, or newest first.' },
+  'w.medieval': { hook: '**Medi** = middle, as in medium: the **Middle** Ages sit in the middle, between the ancient and modern worlds.', example: 'Medieval castles such as Warwick, Conwy and Bodiam can still be visited today.' },
+  'w.prehistory': { hook: '**Pre** = before, as in preview: prehistory is the time **before** history was written down.', example: 'Stonehenge is prehistoric: nobody left any writing to tell us exactly why it was built.' },
+  'w.primary': { hook: '**Primary** = first-hand, made at the time. **Secondary** = second-hand, made later.', example: 'A Victorian photo of your street is a primary source; a modern website about the Victorians is secondary.' },
+  'w.archaeology': { hook: '**Archae** = ancient (like “archaic”): archaeologists dig up the past, layer by layer.', example: 'The Sutton Hoo ship burial in Suffolk was dug up in 1939; its famous helmet is in the British Museum.' },
+  'w.cent-now': { hook: 'Like birthdays: when you are 10, you are in your 11th year. So the 2000s are the **21st** century.', example: 'The year 2000 was the last year of the 20th century; you were born in the 21st.' },
+
+  // timeline
+  't.o1': { hook: 'Tools got tougher: **stone**, then **bronze**, then **iron**. Then the Romans arrived in AD 43.', example: 'Stone Age Skara Brae (Orkney) and Iron Age hillforts such as Maiden Castle (Dorset) can still be visited.' },
+  't.o2': { hook: '“**R**omans **A**lways **V**isit **N**ormandy”: Romans, Anglo-Saxons, Vikings, Normans.', example: 'Hadrian’s Wall (Roman), Sutton Hoo (Anglo-Saxon), Jorvik in York (Viking), the Tower of London (Norman).' },
+  't.o3': { hook: '“**N**o **T**iny **S**quirrel **G**ets **V**exed”: Normans, Tudors, Stuarts, Georgians, Victorians.', example: 'Hampton Court Palace has Tudor rooms built for Henry VIII and grand Stuart rooms added for William and Mary.' },
+  't.o4': { hook: 'Picture them in order: an **arrow** (Hastings), a **charter** (Magna Carta), a **flea** (Black Death), a **crown** (Bosworth).', example: 'Original copies of the 1215 Magna Carta can be seen at the British Library in London.' },
+  't.o5': { hook: '“Remember, remember the fifth of November, gunpowder, treason and plot” (1605).', example: 'Bonfire Night (5 November) and the Monument in London, built for the Great Fire, still remind us of these events.' },
+  't.o6': { hook: 'The pyramids were already about **1800 years old** when the first Olympic Games were held.', example: 'The flame for every modern Olympic Games is still lit at Olympia in Greece.' },
+  't.romans': { hook: 'Claudius sent **4** legions in AD **4**3: four legions, forty-three.', example: 'Hadrian’s Wall still stands across northern England; Watling Street is the line of today’s A5.' },
+  't.romans-leave': { hook: '43 in, 410 out: the Romans ruled Britain for **nearly 370 years**.', example: 'The Roman Baths in Bath are still fed by the hot spring. The Romans called the town Aquae Sulis.' },
+  't.lindisfarne': { hook: '“Seven-nine-three, raiders from the sea.”', example: 'Lindisfarne (Holy Island) in Northumberland can only be reached across a causeway when the tide is out.' },
+  't.hastings': { hook: '1066 → 1666 (Great Fire of London) is exactly **600 years**: just swap the 0 for a 6.', example: 'The town of Battle in East Sussex is named after it; Battle Abbey stands where the fighting took place.' },
+  't.magna': { hook: '“Twelve-fifteen, the barons were keen.”', example: 'Four 1215 copies survive: two at the British Library, one at Lincoln Castle and one at Salisbury Cathedral.' },
+  't.blackdeath': { hook: 'Black Death **1348**, Peasants’ Revolt **1381**: the revolt came 33 years later.', example: 'Builders of London’s Elizabeth line found a 1348 plague burial ground at Charterhouse Square in 2013.' },
+  't.tudors': { hook: 'Tudors: **1485** (Bosworth) to **1603** (Elizabeth I dies): five monarchs in 118 years.', example: 'Henry VIII’s warship, the Mary Rose, can be seen in Portsmouth; Hampton Court was one of his palaces.' },
+  't.victoria': { hook: 'Victoria lived just into the 20th century: she died in January **1901**.', example: 'Victorian post boxes still in use have “VR” on them: Victoria Regina (Queen Victoria).' },
+  't.ww1': { hook: '**MAIN** causes of WW1: **M**ilitarism, **A**lliances, **I**mperialism, **N**ationalism. It ended at 11 a.m. on 11/11/1918.', example: 'On Remembrance Day (11 November) people wear poppies, which grew on the old battlefields of France and Belgium.' },
+  't.ww2': { hook: 'WW2 began 21 years after WW1 ended: 1918 + 21 = **1939**. It lasted six years, to **1945**.', example: 'HMS Belfast, a Second World War warship, is moored on the Thames in London and can be visited.' },
+  't.bronze': { hook: '**C**opper + **T**in = bronze. Cornwall’s tin was traded far and wide in the Bronze Age.', example: 'Many statues, such as the four lions in Trafalgar Square, are cast in bronze.' },
+  't.stonehenge': { hook: '**Stone**henge was begun in the **Stone** Age, around 3000 BC.', example: 'Stonehenge, on Salisbury Plain in Wiltshire, lines up with the sunrise on midsummer’s day.' },
+  't.alfred': { hook: 'Alfred and the cakes: legend says that while hiding from the Vikings he let a woman’s cakes burn.', example: 'A huge statue of Alfred stands in Winchester, his capital; the Alfred Jewel is in Oxford’s Ashmolean Museum.' },
+
+  // ancient
+  'a.egypt-river': { hook: '“Egypt is the gift of the Nile”: the Greek writer Herodotus.', example: 'Egyptian mummies and coffins can be seen in the British Museum in London.' },
+  'a.mesopotamia': { hook: '**Meso** = middle, **potamos** = river: the land in the middle of the rivers. **T**igris and **E**uphrates: **T**wo **E**normous rivers.', example: 'Our 60-minute hour and 360° circle come from Mesopotamian counting in 60s.' },
+  'a.indus': { hook: '**Indus** → **India**: the river gave the country its name.', example: 'Mohenjo-daro had covered drains about 4500 years ago, thousands of years before London had sewers.' },
+  'a.shang': { hook: 'Shang priests heated **oracle bones** until they cracked, then read the cracks as the gods’ answers.', example: 'Some Chinese characters still look like their Shang ancestors, such as 人 (person) and 日 (sun).' },
+  'a.hieroglyphs': { hook: '**Hiero** = holy, **glyph** = carving: hieroglyphs are “holy carvings”.', example: 'The Rosetta Stone, the key to reading hieroglyphs, is in the British Museum in London.' },
+  'a.democracy': { hook: '**Demos** = people, **kratos** = power: democracy is “people power”.', example: 'Every UK general election, when adults vote for their MP, uses the idea Athens began.' },
+  'a.sparta': { hook: 'We still call something plain and tough “**spartan**”, after Sparta.', example: 'A bare room with hardly any furniture is still described as “spartan”.' },
+  'a.olympics': { hook: '**776 BC**: the Olympics are older than Rome, which legend says was founded in 753 BC.', example: 'London has hosted the modern Olympic Games three times: 1908, 1948 and 2012.' },
+  'a.marathon': { hook: 'The marathon race is named after the legend of a runner carrying news of the victory to Athens.', example: 'The London Marathon, run every year, is 26.2 miles long.' },
+  'a.greek-gift': { hook: '**Alphabet** = alpha + beta, the first two Greek letters.', example: 'The front of the British Museum copies the columns of an ancient Greek temple.' },
+
+  // world
+  'wo.baghdad': { hook: 'The **House of Wisdom**: a giant library where scholars translated books from Greek, Persian and Indian.', example: 'Our digits 0 to 9 reached Europe through scholars in the Islamic world, which is why we call them Arabic numerals.' },
+  'wo.algebra': { hook: 'His book “al-jabr” → **algebra**; his name, al-Khwarizmi → **algorithm**.', example: 'Every computer and app runs on algorithms: a word named after al-Khwarizmi.' },
+  'wo.baghdad-round': { hook: 'Picture a giant coin: the Round City had the caliph’s palace and great mosque in the very centre.' },
+  'wo.maya-where': { hook: '**M**aya, **M**exico: southern Mexico, Guatemala and Belize, in Central America.', example: 'Maya pyramids, such as those at Chichén Itzá in Mexico, are visited by millions of people every year.' },
+  'wo.maya-zero': { hook: 'The Maya zero looked like a shell: an empty shell means nothing.', example: 'Without a zero you could not write 10, 100 or 2026: every calculator depends on it.' },
+  'wo.maya-writing': { hook: 'Glyphs, like Egyptian hiero**glyphs**: picture-signs carved in stone.', example: 'The Dresden Codex, one of the few Maya folding books to survive, is kept in a library in Dresden, Germany.' },
+  'wo.benin-where': { hook: 'The Kingdom of Benin is **N**ot in Benin: it was in **N**igeria.', example: 'Benin City is still a large city in southern Nigeria, in West Africa.' },
+  'wo.benin-bronzes': { hook: '**B**enin **B**ronzes: many are really made of **b**rass.', example: 'Benin Bronzes are in the British Museum; some museums have now returned theirs to Nigeria.' },
+  'wo.benin-ruler': { hook: '**Oba** for Benin, **Pharaoh** for Egypt, **Caliph** for Baghdad.', example: 'There is still an Oba of Benin today, with a palace in Benin City.' },
+
+  // 1066
+  '1066.d1': { hook: 'No child, no clear heir: so a crowd of claimants, Harold, William, Harald and Edgar.', example: 'Edward the Confessor rebuilt Westminster Abbey and is buried there; monarchs are still crowned in it.' },
+  '1066.d2': { hook: '**W** for **W**illiam, **W** for **W**inner: he became William the Conqueror.', example: 'The Bayeux Tapestry, about 70 metres long, tells the story. Its home is a museum in Bayeux, Normandy.' },
+  '1066.claimants': { hook: 'Harold was hasty: crowned the very **next day**, 6 January 1066.', example: 'Waltham Abbey in Essex claims to be Harold’s burial place; a stone marks the spot.' },
+  '1066.hardrada': { hook: '“Hardrada” means roughly “hard ruler” in Old Norse: Norway’s tough Viking king.' },
+  '1066.stamford': { hook: 'Stamford Bridge is often called the **end of the Viking Age** in England.', example: 'Stamford Bridge is a real village east of York, with a memorial to the battle.' },
+  '1066.fulford': { hook: '“**F**ish **S**wim **H**ome”: **F**ulford, **S**tamford Bridge, **H**astings, the three battles in order.' },
+  '1066.date': { hook: 'Hastings 14/10/1066, then a **Christmas Day** coronation for William: 25/12/1066.', example: 'Battle Abbey marks where Harold fell; re-enactments of the battle are often held there in October.' },
+  '1066.edgar': { hook: '**Ætheling** means “prince”: Edgar was the royal boy hardly anyone backed.' },
+  '1066.source': { hook: 'Ask **who made it, and why**: a Norman-made tapestry shows the Norman side.', example: 'A full-size Victorian copy of the Bayeux Tapestry is on show in Reading Museum.' },
+
+  // Normans
+  'n.motte': { hook: '**M**otte = **M**ound; **B**ailey = **B**ig yard.', example: 'Clifford’s Tower in York stands on the motte William built in 1068; you can climb up to it today.' },
+  'n.domesday': { hook: 'Domesday came 20 years after Hastings: 10**6**6 → 10**8**6.', example: 'You can search the Domesday Book online to see whether your town or village is in it.' },
+  'n.domesday-why': { hook: 'It was nicknamed after **Doomsday**, Judgement Day: like God’s judgement, its answers could not be argued with.', example: 'The original Domesday Book is kept at The National Archives in Kew, London.' },
+  'n.feudal': { hook: 'Picture a pyramid: the **king** at the top, then **barons**, **knights**, and lots of **peasants** at the bottom.', example: 'Titles such as “baron” and “lord”, still used in the House of Lords, come from feudal times.' },
+  'n.harrying': { hook: 'To **harry** means to attack again and again: William harried the North to stop it rebelling.', example: 'The Domesday Book, 16 years later, still lists many Yorkshire villages as “waste”.' },
+  'n.tower': { hook: 'The **White Tower**: William’s great stone keep, named after it was whitewashed in 1240.', example: 'The Tower of London is where the Crown Jewels are kept today.' },
+  'n.language': { hook: 'Animals in the field have English names; meat on the Norman table has French ones: cow/beef, pig/pork, sheep/mutton.', example: 'The royal coat of arms still says “Dieu et mon droit”: French for “God and my right”.' },
+  'n.churches': { hook: 'Norman = **round** arches and fat pillars. Later Gothic churches have **pointed** arches.', example: 'Durham Cathedral is a World Heritage Site; its huge patterned pillars are over 900 years old.' },
+};
+
+for (const id of Object.keys(memory)) if (!items.some((it) => it.id === `history.${id}`)) throw new Error(`history memory hook for unknown item ${id}`);
+const withMemory = (it) => ({ ...it, ...memory[it.id.slice('history.'.length)] });
+
+export default [{ subject: 'history', deck: 'core', topics: topics.map((t) => ({ ...t, hook: topicHooks[t.id] })), items: [...items.map(withMemory), { id: 'history.century.tmpl', topic: 'history.century', kind: 'template', gen: 'century', levels: [1, 2, 3], seed: [-0.8, 0.2, 1] }] }];

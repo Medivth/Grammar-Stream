@@ -109,4 +109,58 @@ const science = {
   ],
 };
 
+// --- memory hooks (shown on learn cards and after a wrong answer) ---------------
+const TOPIC_HOOKS = {
+  'maths.averages': '“Hey diddle diddle, the median’s the middle; you add and divide for the mean. The mode is the one that appears the most, and the range is the difference between.”',
+  'geography.by-numbers': 'Every geography number needs a “per”: per person, per km², per cent. Always ask “out of how many?”',
+  'history.by-numbers': 'How long ago or how long for? Take the earlier year from the later one: end − start.',
+  'history.sources': 'Ask **NOP** of every source: its **N**ature, **O**rigin and **P**urpose.',
+  'science.by-numbers': 'Per cent means out of 100; a ratio is a recipe, like 1 : 4 squash to water.',
+  'science.words': 'Science words are built like Lego: **photo** (light) + **synthesis** (putting together).',
+};
+const MEMORY = {
+  'maths.av.calc': { hook: 'Put the numbers in order first: then the middle, the most common and the spread are easy to see.' },
+  'maths.av.median': { hook: 'The median is the middle, like the median strip down the middle of a motorway.', example: 'Line your class up by height: the person standing in the middle has the median height.' },
+  'maths.av.mode': { hook: '**Mo**de = **mo**st.', example: 'A shoe shop orders more of the mode, the size it sells most often.' },
+  'maths.av.mean': { hook: 'Mean = share it out fairly: add it all up, then share it between everyone.', example: 'Three friends with 2, 4 and 6 sweets who share them equally get 4 each: that is the mean.' },
+  'maths.av.range': { hook: 'Range = biggest − smallest: how far the data ranges.', example: 'A week of temperatures from 12°C to 20°C has a range of 8°C.' },
+  'maths.av.mode-q': { hook: 'Mode = most: count which value turns up most often.' },
+  'maths.av.even': { hook: 'Two middle values? Go halfway between them: add them and halve.' },
+  'geography.gn.median': { hook: 'One giant value drags the mean up; the median ignores it.', example: 'House prices in the news are often given as medians, so a few mansions don’t make homes look dearer.' },
+  'geography.gn.density': { hook: 'Density = people ÷ area: how crowded each square kilometre is.', example: 'England is one of the most crowded countries in Europe; the Scottish Highlands are among the emptiest places.' },
+  'geography.gn.climate': { hook: 'Read the pattern, not each number: which months are high, and which are low?', example: 'Summer holidays in Spain or Greece are dry and sunny: that is the Mediterranean climate.' },
+  'geography.gn.anomaly': { hook: 'An anomaly is the odd one out: it doesn’t fit the pattern of the rest.', example: 'In a science experiment, one result far from all the others is an anomaly: repeat it to check.' },
+  'geography.gn.survey': { hook: 'Percentage = part ÷ whole × 100.', example: 'If 15 of the 30 people in your class walk to school, that is 50%.' },
+  'geography.gn.urban': { hook: 'The parts make one whole: 1 − 4/5 = 1/5.' },
+  'history.hn.henry': { hook: 'How long for? End − start: 1547 − 1509 = 38 years.' },
+  'history.hn.elizabeth': { hook: 'Age = the later year − the year of birth.' },
+  'history.hn.halved': { hook: 'From 5 million to 2.5 million: half is left, 1/2.' },
+  'history.src.bias': { hook: 'Biased = one-sided, like a fan describing their own team’s match.', example: 'An advert for a cereal is biased: it only tells you the good things.' },
+  'history.src.provenance': { hook: 'Provenance is a source’s back story: **who** made it, **when**, and **why**.', example: 'Antiques experts check provenance too: who owned a painting before, and when.' },
+  'history.src.corroborate': { hook: 'Corroborate = check it with a **co**-witness: do other sources agree?', example: 'Police corroborate a story by asking other witnesses whether they saw the same thing.' },
+  'history.src.ch1': { hook: 'Feelings hide in the describing words: “heathen”, “lamentable”.' },
+  'history.src.ch2': { hook: 'In 793 people often read strange skies as warnings from God.' },
+  'history.src.ch3': { hook: 'Ask who wrote it: monks whose monastery was raided were hardly neutral.' },
+  'history.src.tb1': { hook: 'A clever speaker admits a weakness first, then turns it into a strength.' },
+  'history.src.tb2': { hook: 'Repetition builds a speech to a climax: “of a king, and of a king of England too”.' },
+  'history.src.tb3': { hook: 'Written down years later = a memory, not a recording.' },
+  'science.sw.photo': { hook: 'Photo = light: a photograph is a “light drawing”.', example: 'Solar panels on roofs are photovoltaic: they turn light into electricity.' },
+  'science.sw.chloro': { hook: 'Chloro = green: chlorophyll makes leaves green.', example: 'Swimming-pool chlorine is named after the yellow-green colour of chlorine gas.' },
+  'science.sw.therm': { hook: 'Therm = heat: a thermos flask keeps the heat in.', example: 'The thermostat on the wall at home controls the heating: therm (heat) + stat (stay).' },
+  'science.sw.photosynthesis': { hook: 'Photo (light) + synthesis (making): plants make their food with light.' },
+  'science.sw.respiration': { hook: 're + SPIR + ation: think of “spirit”, the breath of life.' },
+  'science.sw.chlorophyll': { hook: 'Chloro (green) + phyll (leaf): the green stuff in leaves.' },
+  'science.sw.hypothesis': { hook: 'A hypothesis is a hunch you can test.' },
+  'science.sw.evaporation': { hook: 'Water vanishes as vapour: e + vapour (drop the u) + ation.', example: 'Washing dries on the line by evaporation, fastest on warm, windy days.' },
+  'science.sw.condensation': { hook: 'con + dense (drop the e) + ation: vapour gets dense and turns to drops.', example: 'The steamy bathroom mirror after a shower is condensation.' },
+  'science.sw.independent': { hook: 'There’s a dent in indepen**dent**: it ends -ent, not -ant.' },
+  'science.sw.thermometer': { hook: 'Therm (heat) + meter (measure): a heat measurer.', example: 'Doctors use a thermometer to check for a fever: about 37°C is normal.' },
+  'science.sw.nucleus': { hook: 'The nucleus is the cell’s control centre: nu-CLE-us.' },
+};
+for (const deck of [maths, geography, history, science]) {
+  for (const t of deck.topics) t.hook = TOPIC_HOOKS[t.id];
+  for (const it of deck.items) if (MEMORY[it.id]) Object.assign(it, MEMORY[it.id]);
+}
+for (const id of Object.keys(MEMORY)) if (![maths, geography, history, science].some((d) => d.items.some((it) => it.id === id))) throw new Error(`memory hook for unknown item ${id}`);
+
 export default [maths, geography, history, science];

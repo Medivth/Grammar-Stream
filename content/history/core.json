@@ -10,7 +10,8 @@
    "batch": 6,
    "intro": "Historians use special words to talk about time. Knowing them makes every history topic easier.",
    "teach": "Explain what BC and AD mean.",
-   "talk": "Ask her which century we are in, and why it isn’t the 20th."
+   "talk": "Ask her which century we are in, and why it isn’t the 20th.",
+   "hook": "**BC** counts down towards year 1, **AD** counts up from it. There is no year 0: 1 BC is followed straight by AD 1."
   },
   {
    "id": "history.century",
@@ -20,7 +21,8 @@
     "history.words"
    ],
    "teach": "Explain why 1900 is in the 19th century.",
-   "talk": "Ask her which century the Great Fire of London (1666) was in."
+   "talk": "Ask her which century the Great Fire of London (1666) was in.",
+   "hook": "Add one to the hundreds: 1666 → 16 + 1 = **17th** century. A year ending in 00 belongs to the century that is just finishing."
   },
   {
    "id": "history.timeline",
@@ -32,7 +34,8 @@
    "batch": 6,
    "intro": "A secure mental timeline is the backbone of history. We’ll build it period by period, from the Stone Age to today.",
    "teach": "Put the Romans, Vikings and Tudors in order and say roughly when each was.",
-   "talk": "Ask her to put three periods in order: Victorians, Romans, Tudors."
+   "talk": "Ask her to put three periods in order: Victorians, Romans, Tudors.",
+   "hook": "“Willie, Willie, Harry, Stee, Harry, Dick, John, Harry three…”: the old rhyme that lists every monarch since 1066, in order."
   },
   {
    "id": "history.ancient",
@@ -44,7 +47,8 @@
    "batch": 5,
    "intro": "Long before Roman Britain, great civilisations grew up along rivers: in Egypt, Mesopotamia, India and China. Ancient Greece came a little later.",
    "teach": "Explain why early civilisations grew up near rivers.",
-   "talk": "Ask her what the Greeks gave us that we still use today."
+   "talk": "Ask her what the Greeks gave us that we still use today.",
+   "hook": "Civilisations are born by rivers: **Nile** (Egypt), **Tigris and Euphrates** (Mesopotamia), **Indus** (India), **Yellow River** (China)."
   },
   {
    "id": "history.world",
@@ -56,7 +60,8 @@
    "batch": 5,
    "intro": "While Britain was in the Anglo-Saxon and medieval periods, other parts of the world had great cities and kingdoms.",
    "teach": "Explain why Baghdad around AD 900 was a centre of learning.",
-   "talk": "Ask her what the House of Wisdom was."
+   "talk": "Ask her what the House of Wisdom was.",
+   "hook": "Books, maths and brass: Baghdad’s **House of Wisdom**, the **Maya** zero and the **Benin** Bronzes."
   },
   {
    "id": "history.1066",
@@ -72,7 +77,8 @@
    ],
    "intro": "When Edward the Confessor died in January 1066 without a child, several men claimed the English throne. This is the start of Year 7 history.",
    "teach": "Explain the most important reason William won at Hastings.",
-   "talk": "Ask her who the claimants to the throne were in 1066."
+   "talk": "Ask her who the claimants to the throne were in 1066.",
+   "hook": "1066: the year of **three kings** (Edward, Harold, William) and **three battles** (Fulford, Stamford Bridge, Hastings)."
   },
   {
    "id": "history.normans",
@@ -84,7 +90,8 @@
    "batch": 5,
    "intro": "William had won a battle, but now he had to control a whole country of about two million English people.",
    "teach": "Explain how castles helped William control England.",
-   "talk": "Ask her what the Domesday Book was for."
+   "talk": "Ask her what the Domesday Book was for.",
+   "hook": "William’s toolkit: **castles** to frighten, the **feudal system** to bind everyone to the king, **Domesday** to count it all."
   }
  ],
  "items": [
@@ -102,7 +109,9 @@
    "explain": "BC means “Before Christ”: years counted backwards from the traditional birth year of Jesus. Some books use BCE (Before Common Era).",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "BC counts **down** towards year 1, so 500 BC is longer ago than 100 BC.",
+   "example": "Museum labels saying “c. 3000 BC” mean about 5000 years ago: roughly when Stonehenge was begun."
   },
   {
    "id": "history.w.ad",
@@ -118,7 +127,9 @@
    "explain": "AD stands for Anno Domini, Latin for “in the year of the Lord”. Some books use CE (Common Era).",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "“Anno” is like “annual”: it means year. Anno Domini = “in the year of the Lord”, counting forwards.",
+   "example": "Look for “A.D.” carved with the date on old buildings, foundation stones and gravestones."
   },
   {
    "id": "history.w.century",
@@ -131,7 +142,9 @@
     "1000",
     "50"
    ],
-   "explain": "A century is 100 years."
+   "explain": "A century is 100 years.",
+   "hook": "**Cent** = 100: 100 cents in a dollar, 100 centimetres in a metre, and a centipede is named for “100 legs”.",
+   "example": "In cricket, when a batter scores 100 runs it is called a “century”."
   },
   {
    "id": "history.w.decade",
@@ -144,7 +157,9 @@
     "5",
     "1000"
    ],
-   "explain": "A decade is 10 years (the 1960s is a decade)."
+   "explain": "A decade is 10 years (the 1960s is a decade).",
+   "hook": "**Dec** = 10: a decagon has 10 sides, and December was the 10th month of the old Roman year.",
+   "example": "The 1960s, the 1990s and the 2010s are each a decade."
   },
   {
    "id": "history.w.millennium",
@@ -157,7 +172,9 @@
     "10 000",
     "500"
    ],
-   "explain": "A millennium is 1000 years."
+   "explain": "A millennium is 1000 years.",
+   "hook": "**Mille** = 1000 in Latin: a millimetre is a thousandth of a metre, and a millipede is named for “1000 legs”.",
+   "example": "London’s Millennium Bridge and the Millennium Dome (now the O2) were built to mark the year 2000."
   },
   {
    "id": "history.w.circa",
@@ -173,7 +190,9 @@
    "explain": "“c.” is short for “circa”, Latin for “around”. We use it when we don’t know the exact date.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Circa** sounds like circle: we are circling around the date, close but not exactly on it.",
+   "example": "Museum labels often say things like “c. 1500” when nobody knows the exact year an object was made."
   },
   {
    "id": "history.w.chronology",
@@ -186,7 +205,9 @@
     "archaeology",
     "biography"
    ],
-   "explain": "Chronology means the order in which events happened (chron = time)."
+   "explain": "Chronology means the order in which events happened (chron = time).",
+   "hook": "**Chron** = time (from Greek): chronological order, synchronise your watches, a chronometer is a clock.",
+   "example": "The photos on a phone are shown in chronological order: oldest to newest, or newest first."
   },
   {
    "id": "history.w.medieval",
@@ -199,7 +220,9 @@
     "modern",
     "prehistoric"
    ],
-   "explain": "“Medieval” means the Middle Ages, roughly AD 500 to 1500."
+   "explain": "“Medieval” means the Middle Ages, roughly AD 500 to 1500.",
+   "hook": "**Medi** = middle, as in medium: the **Middle** Ages sit in the middle, between the ancient and modern worlds.",
+   "example": "Medieval castles such as Warwick, Conwy and Bodiam can still be visited today."
   },
   {
    "id": "history.w.prehistory",
@@ -212,7 +235,9 @@
     "the Middle Ages",
     "the Renaissance"
    ],
-   "explain": "Prehistory is the time before written records. In Britain this includes the Stone, Bronze and Iron Ages."
+   "explain": "Prehistory is the time before written records. In Britain this includes the Stone, Bronze and Iron Ages.",
+   "hook": "**Pre** = before, as in preview: prehistory is the time **before** history was written down.",
+   "example": "Stonehenge is prehistoric: nobody left any writing to tell us exactly why it was built."
   },
   {
    "id": "history.w.primary",
@@ -228,7 +253,9 @@
    "explain": "A primary source was made at the time (a diary, a coin, a photograph). A secondary source was made later (a textbook).",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Primary** = first-hand, made at the time. **Secondary** = second-hand, made later.",
+   "example": "A Victorian photo of your street is a primary source; a modern website about the Victorians is secondary."
   },
   {
    "id": "history.w.archaeology",
@@ -241,7 +268,9 @@
     "chronology",
     "astronomy"
    ],
-   "explain": "Archaeologists study the past from physical remains such as tools, bones and buildings."
+   "explain": "Archaeologists study the past from physical remains such as tools, bones and buildings.",
+   "hook": "**Archae** = ancient (like “archaic”): archaeologists dig up the past, layer by layer.",
+   "example": "The Sutton Hoo ship burial in Suffolk was dug up in 1939; its famous helmet is in the British Museum."
   },
   {
    "id": "history.w.cent-now",
@@ -264,7 +293,9 @@
      "feedback": "Centuries are counted in hundreds of years, so we are only in the 21st."
     }
    ],
-   "explain": "The 21st century runs from 2001 to 2100."
+   "explain": "The 21st century runs from 2001 to 2100.",
+   "hook": "Like birthdays: when you are 10, you are in your 11th year. So the 2000s are the **21st** century.",
+   "example": "The year 2000 was the last year of the 20th century; you were born in the 21st."
   },
   {
    "id": "history.t.o1",
@@ -284,7 +315,9 @@
     "AD 43–410"
    ],
    "explain": "Stone tools came first, then bronze (a mix of copper and tin), then iron. The Romans invaded in AD 43.",
-   "axis": "time"
+   "axis": "time",
+   "hook": "Tools got tougher: **stone**, then **bronze**, then **iron**. Then the Romans arrived in AD 43.",
+   "example": "Stone Age Skara Brae (Orkney) and Iron Age hillforts such as Maiden Castle (Dorset) can still be visited."
   },
   {
    "id": "history.t.o2",
@@ -304,7 +337,9 @@
     "1066"
    ],
    "explain": "After the Romans left (c. 410), Anglo-Saxons settled. Vikings first raided in 793. The Normans conquered in 1066.",
-   "axis": "time"
+   "axis": "time",
+   "hook": "“**R**omans **A**lways **V**isit **N**ormandy”: Romans, Anglo-Saxons, Vikings, Normans.",
+   "example": "Hadrian’s Wall (Roman), Sutton Hoo (Anglo-Saxon), Jorvik in York (Viking), the Tower of London (Norman)."
   },
   {
    "id": "history.t.o3",
@@ -326,7 +361,9 @@
     "1837–1901"
    ],
    "explain": "Normans, then (after many medieval kings) the Tudors, Stuarts, Georgians and Victorians.",
-   "axis": "time"
+   "axis": "time",
+   "hook": "“**N**o **T**iny **S**quirrel **G**ets **V**exed”: Normans, Tudors, Stuarts, Georgians, Victorians.",
+   "example": "Hampton Court Palace has Tudor rooms built for Henry VIII and grand Stuart rooms added for William and Mary."
   },
   {
    "id": "history.t.o4",
@@ -346,7 +383,9 @@
     "1485"
    ],
    "explain": "Hastings 1066, Magna Carta 1215, the Black Death 1348, Bosworth (the first Tudor king) 1485.",
-   "axis": "time"
+   "axis": "time",
+   "hook": "Picture them in order: an **arrow** (Hastings), a **charter** (Magna Carta), a **flea** (Black Death), a **crown** (Bosworth).",
+   "example": "Original copies of the 1215 Magna Carta can be seen at the British Library in London."
   },
   {
    "id": "history.t.o5",
@@ -366,7 +405,9 @@
     "1838"
    ],
    "explain": "Armada 1588 (Elizabeth I), Gunpowder Plot 1605 (James I), Great Fire 1666 (Charles II), Victoria crowned 1838.",
-   "axis": "time"
+   "axis": "time",
+   "hook": "“Remember, remember the fifth of November, gunpowder, treason and plot” (1605).",
+   "example": "Bonfire Night (5 November) and the Monument in London, built for the Great Fire, still remind us of these events."
   },
   {
    "id": "history.t.o6",
@@ -386,7 +427,9 @@
     "c. AD 830"
    ],
    "explain": "The Great Pyramid was finished around 2560 BC, the first recorded Olympics were in 776 BC, the Romans arrived in AD 43 and the House of Wisdom flourished in the 800s.",
-   "axis": "time"
+   "axis": "time",
+   "hook": "The pyramids were already about **1800 years old** when the first Olympic Games were held.",
+   "example": "The flame for every modern Olympic Games is still lit at Olympia in Greece."
   },
   {
    "id": "history.t.romans",
@@ -403,7 +446,9 @@
    "accept": [
     "43",
     "43 ad"
-   ]
+   ],
+   "hook": "Claudius sent **4** legions in AD **4**3: four legions, forty-three.",
+   "example": "Hadrian’s Wall still stands across northern England; Watling Street is the line of today’s A5."
   },
   {
    "id": "history.t.romans-leave",
@@ -422,7 +467,9 @@
     "410 ad",
     "c. 410",
     "c 410"
-   ]
+   ],
+   "hook": "43 in, 410 out: the Romans ruled Britain for **nearly 370 years**.",
+   "example": "The Roman Baths in Bath are still fed by the hot spring. The Romans called the town Aquae Sulis."
   },
   {
    "id": "history.t.lindisfarne",
@@ -439,7 +486,9 @@
    "accept": [
     "793 ad",
     "ad 793"
-   ]
+   ],
+   "hook": "“Seven-nine-three, raiders from the sea.”",
+   "example": "Lindisfarne (Holy Island) in Northumberland can only be reached across a causeway when the tide is out."
   },
   {
    "id": "history.t.hastings",
@@ -452,7 +501,9 @@
     "1215",
     "966"
    ],
-   "explain": "The Battle of Hastings was on 14 October 1066."
+   "explain": "The Battle of Hastings was on 14 October 1066.",
+   "hook": "1066 → 1666 (Great Fire of London) is exactly **600 years**: just swap the 0 for a 6.",
+   "example": "The town of Battle in East Sussex is named after it; Battle Abbey stands where the fighting took place."
   },
   {
    "id": "history.t.magna",
@@ -465,7 +516,9 @@
     "1415",
     "1265"
    ],
-   "explain": "Magna Carta (1215) limited the king’s power: even the king had to obey the law."
+   "explain": "Magna Carta (1215) limited the king’s power: even the king had to obey the law.",
+   "hook": "“Twelve-fifteen, the barons were keen.”",
+   "example": "Four 1215 copies survive: two at the British Library, one at Lincoln Castle and one at Salisbury Cathedral."
   },
   {
    "id": "history.t.blackdeath",
@@ -478,7 +531,9 @@
     "1666",
     "1485"
    ],
-   "explain": "The Black Death arrived in 1348 and killed perhaps a third to a half of the population."
+   "explain": "The Black Death arrived in 1348 and killed perhaps a third to a half of the population.",
+   "hook": "Black Death **1348**, Peasants’ Revolt **1381**: the revolt came 33 years later.",
+   "example": "Builders of London’s Elizabeth line found a 1348 plague burial ground at Charterhouse Square in 2013."
   },
   {
    "id": "history.t.tudors",
@@ -495,7 +550,9 @@
    "accept": [
     "tudors",
     "tudor"
-   ]
+   ],
+   "hook": "Tudors: **1485** (Bosworth) to **1603** (Elizabeth I dies): five monarchs in 118 years.",
+   "example": "Henry VIII’s warship, the Mary Rose, can be seen in Portsmouth; Hampton Court was one of his palaces."
   },
   {
    "id": "history.t.victoria",
@@ -508,7 +565,9 @@
     "1914",
     "1870"
    ],
-   "explain": "Victoria reigned from 1837 to 1901: over 63 years."
+   "explain": "Victoria reigned from 1837 to 1901: over 63 years.",
+   "hook": "Victoria lived just into the 20th century: she died in January **1901**.",
+   "example": "Victorian post boxes still in use have “VR” on them: Victoria Regina (Queen Victoria)."
   },
   {
    "id": "history.t.ww1",
@@ -524,7 +583,9 @@
    "explain": "The First World War lasted from 1914 to 1918.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**MAIN** causes of WW1: **M**ilitarism, **A**lliances, **I**mperialism, **N**ationalism. It ended at 11 a.m. on 11/11/1918.",
+   "example": "On Remembrance Day (11 November) people wear poppies, which grew on the old battlefields of France and Belgium."
   },
   {
    "id": "history.t.ww2",
@@ -540,7 +601,9 @@
    "explain": "The Second World War lasted from 1939 to 1945.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "WW2 began 21 years after WW1 ended: 1918 + 21 = **1939**. It lasted six years, to **1945**.",
+   "example": "HMS Belfast, a Second World War warship, is moored on the Thames in London and can be visited."
   },
   {
    "id": "history.t.bronze",
@@ -553,7 +616,9 @@
     "gold",
     "lead"
    ],
-   "explain": "Bronze is copper mixed with tin. It was harder than copper alone."
+   "explain": "Bronze is copper mixed with tin. It was harder than copper alone.",
+   "hook": "**C**opper + **T**in = bronze. Cornwall’s tin was traded far and wide in the Bronze Age.",
+   "example": "Many statues, such as the four lions in Trafalgar Square, are cast in bronze."
   },
   {
    "id": "history.t.stonehenge",
@@ -569,7 +634,9 @@
    "explain": "Work on Stonehenge began around 3000 BC, in the New Stone Age (Neolithic), and continued into the Bronze Age.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Stone**henge was begun in the **Stone** Age, around 3000 BC.",
+   "example": "Stonehenge, on Salisbury Plain in Wiltshire, lines up with the sunrise on midsummer’s day."
   },
   {
    "id": "history.t.alfred",
@@ -586,7 +653,9 @@
    "accept": [
     "alfred the great",
     "king alfred"
-   ]
+   ],
+   "hook": "Alfred and the cakes: legend says that while hiding from the Vikings he let a woman’s cakes burn.",
+   "example": "A huge statue of Alfred stands in Winchester, his capital; the Alfred Jewel is in Oxford’s Ashmolean Museum."
   },
   {
    "id": "history.a.egypt-river",
@@ -603,7 +672,9 @@
    "accept": [
     "nile",
     "river nile"
-   ]
+   ],
+   "hook": "“Egypt is the gift of the Nile”: the Greek writer Herodotus.",
+   "example": "Egyptian mummies and coffins can be seen in the British Museum in London."
   },
   {
    "id": "history.a.mesopotamia",
@@ -619,7 +690,9 @@
    "explain": "Mesopotamia (modern Iraq) lay between the Tigris and Euphrates. The Sumerians there invented one of the first writing systems, cuneiform.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Meso** = middle, **potamos** = river: the land in the middle of the rivers. **T**igris and **E**uphrates: **T**wo **E**normous rivers.",
+   "example": "Our 60-minute hour and 360° circle come from Mesopotamian counting in 60s."
   },
   {
    "id": "history.a.indus",
@@ -635,7 +708,9 @@
    "explain": "The Indus Valley civilisation (c. 2600–1900 BC) had well-planned cities with drains.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Indus** → **India**: the river gave the country its name.",
+   "example": "Mohenjo-daro had covered drains about 4500 years ago, thousands of years before London had sewers."
   },
   {
    "id": "history.a.shang",
@@ -651,7 +726,9 @@
    "explain": "The Shang Dynasty (c. 1600–1046 BC) carved questions to their gods on oracle bones.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Shang priests heated **oracle bones** until they cracked, then read the cracks as the gods’ answers.",
+   "example": "Some Chinese characters still look like their Shang ancestors, such as 人 (person) and 日 (sun)."
   },
   {
    "id": "history.a.hieroglyphs",
@@ -667,7 +744,9 @@
    "explain": "Egyptians wrote in hieroglyphs. The Rosetta Stone helped scholars decode them in 1822.",
    "accept": [
     "hieroglyphics"
-   ]
+   ],
+   "hook": "**Hiero** = holy, **glyph** = carving: hieroglyphs are “holy carvings”.",
+   "example": "The Rosetta Stone, the key to reading hieroglyphs, is in the British Museum in London."
   },
   {
    "id": "history.a.democracy",
@@ -680,7 +759,9 @@
     "Rome",
     "Troy"
    ],
-   "explain": "Athens developed democracy (“rule by the people”) around 508 BC, though only free men could vote."
+   "explain": "Athens developed democracy (“rule by the people”) around 508 BC, though only free men could vote.",
+   "hook": "**Demos** = people, **kratos** = power: democracy is “people power”.",
+   "example": "Every UK general election, when adults vote for their MP, uses the idea Athens began."
   },
   {
    "id": "history.a.sparta",
@@ -693,7 +774,9 @@
     "Corinth",
     "Olympia"
    ],
-   "explain": "Spartan boys began military training at about age 7."
+   "explain": "Spartan boys began military training at about age 7.",
+   "hook": "We still call something plain and tough “**spartan**”, after Sparta.",
+   "example": "A bare room with hardly any furniture is still described as “spartan”."
   },
   {
    "id": "history.a.olympics",
@@ -709,7 +792,9 @@
    "explain": "The first recorded Olympics were held at Olympia in 776 BC in honour of Zeus.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**776 BC**: the Olympics are older than Rome, which legend says was founded in 753 BC.",
+   "example": "London has hosted the modern Olympic Games three times: 1908, 1948 and 2012."
   },
   {
    "id": "history.a.marathon",
@@ -722,7 +807,9 @@
     "Troy",
     "Hastings"
    ],
-   "explain": "Legend says a runner ran from Marathon to Athens with the news, which is where the race gets its name."
+   "explain": "Legend says a runner ran from Marathon to Athens with the news, which is where the race gets its name.",
+   "hook": "The marathon race is named after the legend of a runner carrying news of the victory to Athens.",
+   "example": "The London Marathon, run every year, is 26.2 miles long."
   },
   {
    "id": "history.a.greek-gift",
@@ -738,7 +825,9 @@
    "explain": "The Greeks gave us the Olympics, democracy, theatre and many words, such as “alphabet” (from alpha, beta).",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Alphabet** = alpha + beta, the first two Greek letters.",
+   "example": "The front of the British Museum copies the columns of an ancient Greek temple."
   },
   {
    "id": "history.wo.baghdad",
@@ -754,7 +843,9 @@
    "explain": "The House of Wisdom gathered scholars who translated and improved Greek, Persian and Indian knowledge.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "The **House of Wisdom**: a giant library where scholars translated books from Greek, Persian and Indian.",
+   "example": "Our digits 0 to 9 reached Europe through scholars in the Islamic world, which is why we call them Arabic numerals."
   },
   {
    "id": "history.wo.algebra",
@@ -770,7 +861,9 @@
    "explain": "Al-Khwarizmi (c. 780–850) wrote a book whose title gave us “algebra”. The word “algorithm” comes from his name.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "His book “al-jabr” → **algebra**; his name, al-Khwarizmi → **algorithm**.",
+   "example": "Every computer and app runs on algorithms: a word named after al-Khwarizmi."
   },
   {
    "id": "history.wo.baghdad-round",
@@ -783,7 +876,8 @@
     "triangular",
     "star-shaped"
    ],
-   "explain": "Caliph al-Mansur built Baghdad as a “Round City” with walls in a circle."
+   "explain": "Caliph al-Mansur built Baghdad as a “Round City” with walls in a circle.",
+   "hook": "Picture a giant coin: the Round City had the caliph’s palace and great mosque in the very centre."
   },
   {
    "id": "history.wo.maya-where",
@@ -799,7 +893,9 @@
    "explain": "The Maya lived in what is now southern Mexico, Guatemala and Belize. Their classic period was about AD 250–900.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**M**aya, **M**exico: southern Mexico, Guatemala and Belize, in Central America.",
+   "example": "Maya pyramids, such as those at Chichén Itzá in Mexico, are visited by millions of people every year."
   },
   {
    "id": "history.wo.maya-zero",
@@ -812,7 +908,9 @@
     "pi",
     "ten"
    ],
-   "explain": "The Maya counted in 20s and had a symbol for zero, shaped like a shell."
+   "explain": "The Maya counted in 20s and had a symbol for zero, shaped like a shell.",
+   "hook": "The Maya zero looked like a shell: an empty shell means nothing.",
+   "example": "Without a zero you could not write 10, 100 or 2026: every calculator depends on it."
   },
   {
    "id": "history.wo.maya-writing",
@@ -828,7 +926,9 @@
    "explain": "Maya writing used hundreds of glyphs carved on stone and written in folding books (codices).",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Glyphs, like Egyptian hiero**glyphs**: picture-signs carved in stone.",
+   "example": "The Dresden Codex, one of the few Maya folding books to survive, is kept in a library in Dresden, Germany."
   },
   {
    "id": "history.wo.benin-where",
@@ -844,7 +944,9 @@
    "explain": "The historic Kingdom of Benin was in what is now southern Nigeria, not the modern country called Benin.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "The Kingdom of Benin is **N**ot in Benin: it was in **N**igeria.",
+   "example": "Benin City is still a large city in southern Nigeria, in West Africa."
   },
   {
    "id": "history.wo.benin-bronzes",
@@ -860,7 +962,9 @@
    "explain": "The Benin Bronzes are thousands of brass and bronze artworks. British soldiers took many in 1897.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**B**enin **B**ronzes: many are really made of **b**rass.",
+   "example": "Benin Bronzes are in the British Museum; some museums have now returned theirs to Nigeria."
   },
   {
    "id": "history.wo.benin-ruler",
@@ -876,7 +980,9 @@
    "explain": "The Oba ruled Benin from a great palace in Benin City.",
    "accept": [
     "oba"
-   ]
+   ],
+   "hook": "**Oba** for Benin, **Pharaoh** for Egypt, **Caliph** for Baghdad.",
+   "example": "There is still an Oba of Benin today, with a palace in Benin City."
   },
   {
    "id": "history.1066.d1",
@@ -899,7 +1005,9 @@
      "feedback": "England had had kings for over 100 years."
     }
    ],
-   "explain": "King Edward the Confessor died on 5 January 1066 with no children, so several men claimed the throne."
+   "explain": "King Edward the Confessor died on 5 January 1066 with no children, so several men claimed the throne.",
+   "hook": "No child, no clear heir: so a crowd of claimants, Harold, William, Harald and Edgar.",
+   "example": "Edward the Confessor rebuilt Westminster Abbey and is buried there; monarchs are still crowned in it."
   },
   {
    "id": "history.1066.d2",
@@ -922,7 +1030,9 @@
      "feedback": "Hardrada was killed earlier at Stamford Bridge."
     }
    ],
-   "explain": "William of Normandy defeated and killed Harold Godwinson on 14 October 1066."
+   "explain": "William of Normandy defeated and killed Harold Godwinson on 14 October 1066.",
+   "hook": "**W** for **W**illiam, **W** for **W**inner: he became William the Conqueror.",
+   "example": "The Bayeux Tapestry, about 70 metres long, tells the story. Its home is a museum in Bayeux, Normandy."
   },
   {
    "id": "history.1066.claimants",
@@ -939,7 +1049,9 @@
    "accept": [
     "harold",
     "harold ii"
-   ]
+   ],
+   "hook": "Harold was hasty: crowned the very **next day**, 6 January 1066.",
+   "example": "Waltham Abbey in Essex claims to be Harold’s burial place; a stone marks the spot."
   },
   {
    "id": "history.1066.hardrada",
@@ -956,7 +1068,8 @@
    "accept": [
     "hardrada",
     "harald"
-   ]
+   ],
+   "hook": "“Hardrada” means roughly “hard ruler” in Old Norse: Norway’s tough Viking king."
   },
   {
    "id": "history.1066.stamford",
@@ -969,7 +1082,9 @@
     "Fulford",
     "York Minster"
    ],
-   "explain": "Harold marched north and won at Stamford Bridge on 25 September 1066."
+   "explain": "Harold marched north and won at Stamford Bridge on 25 September 1066.",
+   "hook": "Stamford Bridge is often called the **end of the Viking Age** in England.",
+   "example": "Stamford Bridge is a real village east of York, with a memorial to the battle."
   },
   {
    "id": "history.1066.fulford",
@@ -982,7 +1097,8 @@
     "Stamford Bridge",
     "Bosworth"
    ],
-   "explain": "Hardrada beat the earls Edwin and Morcar at Fulford, near York, on 20 September 1066."
+   "explain": "Hardrada beat the earls Edwin and Morcar at Fulford, near York, on 20 September 1066.",
+   "hook": "“**F**ish **S**wim **H**ome”: **F**ulford, **S**tamford Bridge, **H**astings, the three battles in order."
   },
   {
    "id": "history.1066.date",
@@ -998,7 +1114,9 @@
    "explain": "Hastings: 14 October 1066. William was crowned on Christmas Day 1066.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Hastings 14/10/1066, then a **Christmas Day** coronation for William: 25/12/1066.",
+   "example": "Battle Abbey marks where Harold fell; re-enactments of the battle are often held there in October."
   },
   {
    "id": "history.1066.edgar",
@@ -1014,7 +1132,8 @@
    "explain": "Edgar Ætheling was the closest blood relative of Edward, but at about 14 he had little support.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Ætheling** means “prince”: Edgar was the royal boy hardly anyone backed."
   },
   {
    "id": "history.1066.why",
@@ -1066,7 +1185,9 @@
      "feedback": "It is an embroidery, not a record of numbers."
     }
    ],
-   "explain": "Every source can be useful: a Norman-made source is excellent evidence of the Norman point of view."
+   "explain": "Every source can be useful: a Norman-made source is excellent evidence of the Norman point of view.",
+   "hook": "Ask **who made it, and why**: a Norman-made tapestry shows the Norman side.",
+   "example": "A full-size Victorian copy of the Bayeux Tapestry is on show in Reading Museum."
   },
   {
    "id": "history.n.motte",
@@ -1082,7 +1203,9 @@
    "explain": "A motte (earth mound) with a wooden tower, and a bailey (enclosed yard). Later many were rebuilt in stone.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**M**otte = **M**ound; **B**ailey = **B**ig yard.",
+   "example": "Clifford’s Tower in York stands on the motte William built in 1068; you can climb up to it today."
   },
   {
    "id": "history.n.domesday",
@@ -1095,7 +1218,9 @@
     "1215",
     "1100"
    ],
-   "explain": "William ordered the Domesday survey in 1086 to find out who owned what, so he could collect taxes."
+   "explain": "William ordered the Domesday survey in 1086 to find out who owned what, so he could collect taxes.",
+   "hook": "Domesday came 20 years after Hastings: 10**6**6 → 10**8**6.",
+   "example": "You can search the Domesday Book online to see whether your town or village is in it."
   },
   {
    "id": "history.n.domesday-why",
@@ -1111,7 +1236,9 @@
    "explain": "Domesday recorded land, people, animals and value, showing William exactly what he could tax.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "It was nicknamed after **Doomsday**, Judgement Day: like God’s judgement, its answers could not be argued with.",
+   "example": "The original Domesday Book is kept at The National Archives in Kew, London."
   },
   {
    "id": "history.n.feudal",
@@ -1128,7 +1255,9 @@
    "accept": [
     "feudal system",
     "feudalism"
-   ]
+   ],
+   "hook": "Picture a pyramid: the **king** at the top, then **barons**, **knights**, and lots of **peasants** at the bottom.",
+   "example": "Titles such as “baron” and “lord”, still used in the House of Lords, come from feudal times."
   },
   {
    "id": "history.n.harrying",
@@ -1144,7 +1273,9 @@
    "explain": "After rebellions in the north, William’s soldiers destroyed homes, crops and animals; many thousands starved.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "To **harry** means to attack again and again: William harried the North to stop it rebelling.",
+   "example": "The Domesday Book, 16 years later, still lists many Yorkshire villages as “waste”."
   },
   {
    "id": "history.n.tower",
@@ -1160,7 +1291,9 @@
    "explain": "The White Tower at the Tower of London was begun by William around 1078.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "The **White Tower**: William’s great stone keep, named after it was whitewashed in 1240.",
+   "example": "The Tower of London is where the Crown Jewels are kept today."
   },
   {
    "id": "history.n.language",
@@ -1173,7 +1306,9 @@
     "Latin only",
     "Norse"
    ],
-   "explain": "The new rulers spoke Norman French, which is why English has pairs like cow (English) and beef (from French boeuf)."
+   "explain": "The new rulers spoke Norman French, which is why English has pairs like cow (English) and beef (from French boeuf).",
+   "hook": "Animals in the field have English names; meat on the Norman table has French ones: cow/beef, pig/pork, sheep/mutton.",
+   "example": "The royal coat of arms still says “Dieu et mon droit”: French for “God and my right”."
   },
   {
    "id": "history.n.churches",
@@ -1189,7 +1324,9 @@
    "explain": "Durham Cathedral is one of the finest Norman buildings, with huge round arches.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Norman = **round** arches and fat pillars. Later Gothic churches have **pointed** arches.",
+   "example": "Durham Cathedral is a World Heritage Site; its huge patterned pillars are over 900 years old."
   },
   {
    "id": "history.n.change",

@@ -10,6 +10,7 @@
    "prereqs": [
     "maths.equations"
    ],
+   "hook": "Multiply EVERY term inside the bracket by the number outside: no term left behind.",
    "intro": "Algebra is about doing the same thing to every term. Expanding multiplies out a bracket; factorising puts one back. Collecting like terms tidies up.",
    "teach": "Explain why 3(x + 2) is 3x + 6 and not 3x + 2.",
    "talk": "Ask her to expand 4(y − 3) in her head."
@@ -22,6 +23,7 @@
    "prereqs": [
     "maths.expand"
    ],
+   "hook": "Move the smaller x term across to join the bigger one, then solve as usual.",
    "intro": "When x appears on both sides, move the smaller x term across first. Then it is an equation you already know how to solve.",
    "teach": "Explain how to solve 5x + 2 = 2x + 14.",
    "talk": "I think of a number, treble it and add 4. That is the same as doubling it and adding 9. What is my number?"
@@ -34,6 +36,7 @@
    "prereqs": [
     "maths.percent"
    ],
+   "hook": "Always work from the ORIGINAL: 20% off means you pay 80%, so divide by 0.8 to go back.",
    "intro": "Shops, banks and newspapers all talk in percentage changes. The trap: a percentage is always OF the original amount.",
    "teach": "Explain why a 20% rise followed by a 20% cut does not get you back where you started.",
    "talk": "A game is £48 after 20% off. Ask her what it cost before (not £57.60!)."
@@ -46,6 +49,7 @@
    "prereqs": [
     "maths.angles"
    ],
+   "hook": "Interior angles add up to (n − 2) × 180°; exterior angles always add up to 360°.",
    "intro": "Every polygon can be cut into triangles, which is why we can work out its angles. Walking round the outside of any shape, you always turn 360°.",
    "teach": "Explain why the interior angles of a hexagon add up to 720°.",
    "talk": "Count the sides on a 50p coin. What is each interior angle of a regular heptagon?"
@@ -58,6 +62,7 @@
    "prereqs": [
     "maths.polygons"
    ],
+   "hook": "F angles are corresponding (equal), Z angles are alternate (equal), C angles are co-interior (add to 180°).",
    "intro": "A line crossing two parallel lines makes eight angles, but only two different sizes. Learn the F, Z and C shapes and you can find any of them.",
    "teach": "Explain the difference between corresponding and alternate angles.",
    "talk": "Find parallel lines in the room (shelves, window bars) and spot a Z angle."
@@ -70,6 +75,7 @@
    "prereqs": [
     "maths.ratio"
    ],
+   "hook": "Best buy: compare the price of the SAME amount, such as pence per 100 g.",
    "intro": "Harder ratio problems hide the total: sometimes you are told the difference instead. Best-buy questions are ratio in disguise: compare the price of the same amount.",
    "teach": "Explain how you compare value for money between two pack sizes.",
    "talk": "In the supermarket, ask her which size of a product is better value per 100 g."
@@ -82,6 +88,7 @@
    "prereqs": [
     "maths.primes"
    ],
+   "hook": "Multiplying? Add the powers. Dividing? Subtract them. Power of a power? Multiply them.",
    "intro": "Powers are repeated multiplication. Once you see that, the three index laws (add, subtract, multiply the little numbers) are obvious.",
    "teach": "Explain why 2³ × 2⁴ = 2⁷.",
    "talk": "How many great-great-grandparents does she have? (2⁴)"
@@ -95,6 +102,7 @@
     "maths.coordinates",
     "maths.substitute"
    ],
+   "hook": "y = mx + c: m is the steepness (gradient), c is where the line crosses the y-axis.",
    "intro": "y = 2x + 3 is a rule connecting x and y. Every point that follows the rule sits on a straight line; the 2 is its steepness and the 3 is where it crosses the y-axis.",
    "teach": "Explain what the gradient of a line tells you.",
    "talk": "Ask her what y = 3x + 1 gives when x = 10, and when x = −2."
@@ -108,6 +116,7 @@
     "maths.frac-addsub",
     "maths.frac-multiply"
    ],
+   "hook": "Dividing by a fraction: Keep, Change, Flip (KCF). 3 ÷ ½ = 3 × 2 = 6.",
    "intro": "The last fraction skills: adding mixed numbers, and dividing by a fraction (which means flipping it and multiplying).",
    "teach": "Explain why dividing by a half is the same as doubling.",
    "talk": "How many quarter-pizzas in 3½ pizzas?"
@@ -120,6 +129,7 @@
    "prereqs": [
     "maths.area"
    ],
+   "hook": "Cherry pie’s delicious: C = πd. Apple pies are too: A = πr².",
    "intro": "π is the same for every circle in the universe: the circumference is always a little more than three times the diameter. Two formulas and you can measure any circle.",
    "teach": "Explain the difference between the formulas for circumference and area.",
    "talk": "Measure round a mug with string and across it with a ruler. Divide. Did you get about 3.14?"
@@ -140,7 +150,8 @@
     -0.6,
     0.2,
     1
-   ]
+   ],
+   "example": "4 lunch bags, each with a sandwich and 2 apples: 4(s + 2a) = 4s + 8a."
   },
   {
    "id": "maths.equations-2.tmpl",
@@ -156,7 +167,8 @@
     -0.6,
     0.2,
     1
-   ]
+   ],
+   "example": "Gym A: £20 to join plus £5 a visit. Gym B: £9 a visit. 20 + 5x = 9x, so after 5 visits they cost the same."
   },
   {
    "id": "maths.percent-change.tmpl",
@@ -172,7 +184,8 @@
     -0.6,
     0.2,
     1
-   ]
+   ],
+   "example": "A coat costs £60 in a 25% off sale. You pay 75%, so the original price was £60 ÷ 0.75 = £80."
   },
   {
    "id": "maths.polygons.tmpl",
@@ -188,7 +201,8 @@
     -0.6,
     0.2,
     1
-   ]
+   ],
+   "example": "Hexagonal floor tiles fit with no gaps: each angle is 120°, and three of them meet to make 360°."
   },
   {
    "id": "maths.parallel.tmpl",
@@ -204,7 +218,8 @@
     -0.6,
     0.2,
     1
-   ]
+   ],
+   "example": "A five-bar gate: the diagonal bar crosses the parallel bars and makes Z-shaped alternate angles."
   },
   {
    "id": "maths.ratio-2.tmpl",
@@ -220,7 +235,8 @@
     -0.6,
     0.2,
     1
-   ]
+   ],
+   "example": "Cereal: 500 g for £2 is 40p per 100 g; 750 g for £2.70 is 36p per 100 g, so the big box is better value."
   },
   {
    "id": "maths.indices.tmpl",
@@ -236,7 +252,8 @@
     -0.6,
     0.2,
     1
-   ]
+   ],
+   "example": "Fold a sheet of paper in half 5 times and you get 2⁵ = 32 layers."
   },
   {
    "id": "maths.linear-graphs.tmpl",
@@ -252,7 +269,8 @@
     -0.6,
     0.2,
     1
-   ]
+   ],
+   "example": "A taxi charges £3 to get in plus £2 a mile: fare = 2 × miles + 3, which is the line y = 2x + 3."
   },
   {
    "id": "maths.frac-mixed.tmpl",
@@ -268,7 +286,8 @@
     -0.6,
     0.2,
     1
-   ]
+   ],
+   "example": "How many quarter-pizzas in 3½ pizzas? 3½ ÷ ¼ = 7/2 × 4 = 14."
   },
   {
    "id": "maths.circles.tmpl",
@@ -284,7 +303,8 @@
     -0.6,
     0.2,
     1
-   ]
+   ],
+   "example": "A bike wheel 70 cm across rolls about 3.14 × 70 ≈ 220 cm forward on every turn."
   }
  ]
 }

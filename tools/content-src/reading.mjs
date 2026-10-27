@@ -159,4 +159,14 @@ const items = [
 const BY_PREFIX = { sg: SECRET, ww: WILLOWS, ti: TREASURE, wo: WORLDS, an: ANNE, rc: RAILWAY, bb: BEAUTY, tm: BOAT, ot: OLIVER, fc: PSAMMEAD, dw: DARWIN, jb: JABBER };
 for (const it of items) if (!it.passage) Object.assign(it, BY_PREFIX[it.id.split('.')[2].slice(0, 2)]);
 
+const TOPIC_HOOKS = {
+  'english.read-mood': 'Setting = where and when; atmosphere = how it feels. Hunt for weather, light and sound words.',
+  'english.read-tension': 'Short sentences, the unknown and a ticking clock: three ways writers wind up tension.',
+  'english.read-character': 'Show, don’t tell: characters give themselves away by what they say and do.',
+  'english.read-voice': 'First person says “I”: you are inside one head. Third person says “he” or “she”: a narrator watching.',
+  'english.read-classic': 'In older writing, read the whole sentence first, then work out strange words from the words around them.',
+  'english.read-nonfic': 'Answer with **PEE**: make your Point, give Evidence from the text, Explain it.',
+};
+for (const t of topics) t.hook = TOPIC_HOOKS[t.id];
+
 export default [{ subject: 'english', deck: 'reading', topics, items }];

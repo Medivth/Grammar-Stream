@@ -12,6 +12,7 @@
    ],
    "batch": 6,
    "intro": "The sea is a sculptor. Waves attack cliffs in four ways, carve caves into arches and stacks, and carry sand along the beach grain by grain.",
+   "hook": "Crack, cave, arch, stack, stump: the sea knocks a headland down, bump by bump.",
    "teach": "Explain how a cave becomes a stack.",
    "talk": "Next time you are at a beach, ask her which way the groynes show the sand is moving."
   },
@@ -29,6 +30,7 @@
    ],
    "batch": 6,
    "intro": "How do we compare rich and poor countries fairly? Geographers use indicators: income, life expectancy, literacy, infant mortality. Each tells part of the story.",
+   "hook": "One number can mislead: the HDI combines a long life, education and income.",
    "teach": "Explain why income alone is not a good measure of development.",
    "talk": "Ask her which single number she would use to decide how well a country looks after its people."
   },
@@ -43,6 +45,7 @@
    ],
    "batch": 6,
    "intro": "Why does the UK get so much changeable weather? Low pressure brings cloud and rain; high pressure brings clear skies. Fronts are the battle lines between warm and cold air.",
+   "hook": "Low is lousy (rising air, cloud and rain); high is happy (sinking air, clear skies).",
    "teach": "Explain the difference between high and low pressure weather.",
    "talk": "Look at tonight’s weather map together and find the fronts."
   },
@@ -58,6 +61,7 @@
    ],
    "batch": 6,
    "intro": "Beyond the famous names: eighteen more countries that a well-travelled mind should be able to place on a map.",
+   "hook": "Link each country to one picture: Everest for Nepal, lemurs for Madagascar, the Equator for Ecuador.",
    "teach": "Point to three countries on a world map that most people could not find.",
    "talk": "Ask her the capital of Mongolia (it is a tongue-twister)."
   }
@@ -87,7 +91,9 @@
    "explain": "The distance wind blows over open water is called the fetch. A long fetch (the Atlantic hitting Cornwall) means big waves.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Wind makes waves; the Moon makes tides.",
+   "example": "Cornwall faces thousands of kilometres of open Atlantic, which is why surfers at Newquay get big waves."
   },
   {
    "id": "geography.co.hydraulic",
@@ -100,7 +106,9 @@
     "attrition",
     "solution"
    ],
-   "explain": "Hydraulic action: water and trapped air are forced into cracks, which widen until the rock breaks."
+   "explain": "Hydraulic action: water and trapped air are forced into cracks, which widen until the rock breaks.",
+   "hook": "HAAS: Hydraulic action, Abrasion, Attrition, Solution, the four ways the sea erodes.",
+   "example": "Like slamming a door on trapped air: waves squash air into cracks, then it bursts out and prises the rock apart."
   },
   {
    "id": "geography.co.abrasion",
@@ -113,7 +121,9 @@
     "hydraulic action",
     "deposition"
    ],
-   "explain": "Abrasion (also called corrasion) is the sandpaper effect."
+   "explain": "Abrasion (also called corrasion) is the sandpaper effect.",
+   "hook": "Abrasion is the sea’s sandpaper, like an abrasive scouring pad.",
+   "example": "The flat, rocky wave-cut platforms below the chalk cliffs of the Seven Sisters were scraped smooth by the sea."
   },
   {
    "id": "geography.co.attrition",
@@ -126,7 +136,9 @@
     "solution",
     "traction"
    ],
-   "explain": "Attrition is why beach pebbles are smooth: they wear each other down."
+   "explain": "Attrition is why beach pebbles are smooth: they wear each other down.",
+   "hook": "Attrition: the pebbles attack each other.",
+   "example": "Chesil Beach in Dorset is made of smooth, rounded pebbles that get bigger towards Portland."
   },
   {
    "id": "geography.co.stack",
@@ -141,7 +153,9 @@
     "stump"
    ],
    "labels": null,
-   "explain": "Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack is worn down to a stump."
+   "explain": "Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack is worn down to a stump.",
+   "hook": "Crack, cave, arch, stack, stump: say it like a drumbeat.",
+   "example": "Durdle Door in Dorset is an arch; nearby Old Harry Rocks are chalk stacks, and Old Harry’s Wife is a stump."
   },
   {
    "id": "geography.co.headland",
@@ -167,7 +181,9 @@
    "explain": "Where rock types alternate along the coast, the sea picks out the soft rock. Swanage Bay and Durlston Head in Dorset are a classic example.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Hard rock hangs on as headlands; soft rock is scooped out into bays.",
+   "example": "Swanage Bay is cut into soft clays and sands, between chalk at Ballard Point and limestone at Peveril Point."
   },
   {
    "id": "geography.co.longshore",
@@ -183,7 +199,9 @@
    "explain": "Waves swash up the beach at an angle and drain straight back; each wave moves sand a little further along.",
    "accept": [
     "long shore drift"
-   ]
+   ],
+   "hook": "Swash goes up at an angle, backwash comes straight back down: zigzag along the beach.",
+   "example": "On the Holderness coast in Yorkshire, longshore drift carries sand south to build Spurn Head."
   },
   {
    "id": "geography.co.spit",
@@ -196,7 +214,9 @@
     "bay",
     "groyne"
    ],
-   "explain": "Spurn Head in Yorkshire is a spit 5 km long."
+   "explain": "Spurn Head in Yorkshire is a spit 5 km long.",
+   "hook": "A spit is a finger of sand that keeps growing where the coast turns a corner.",
+   "example": "Hurst Castle stands on a shingle spit in Hampshire; Dawlish Warren in Devon is a sand spit."
   },
   {
    "id": "geography.co.groyne",
@@ -209,7 +229,9 @@
     "stacks",
     "sea walls"
    ],
-   "explain": "Groynes stop longshore drift carrying the beach away. The sand piles up on one side, showing the direction of drift."
+   "explain": "Groynes stop longshore drift carrying the beach away. The sand piles up on one side, showing the direction of drift.",
+   "hook": "Groynes grab the sand: it piles up on the side the drift comes from.",
+   "example": "Look along the beaches at Brighton or Bournemouth: groynes stick out into the sea all the way along."
   },
   {
    "id": "geography.co.manage",
@@ -235,7 +257,9 @@
    "explain": "Protecting one stretch of coast often starves another of sediment. Some places now choose “managed retreat”.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Protect one place and you may starve the next.",
+   "example": "At Mappleton on the Holderness coast, Europe’s fastest-eroding, rock groynes saved the village but sped up erosion further south."
   },
   {
    "id": "geography.dv.d1",
@@ -260,7 +284,8 @@
    ],
    "explain": "Geographers combine indicators (the Human Development Index uses income, life expectancy and education) because any one number can mislead.",
    "passage": "Development data for three countries (rounded)\n\nCountry A: income per person $65,000 · life expectancy 81 · 99% of adults can read · 6 babies in 1,000 die before age 1\nCountry B: income per person $9,000 · life expectancy 73 · 92% of adults can read · 22 babies in 1,000 die before age 1\nCountry C: income per person $800 · life expectancy 59 · 44% of adults can read · 70 babies in 1,000 die before age 1",
-   "passageSource": "Invented but realistic figures"
+   "passageSource": "Invented but realistic figures",
+   "hook": "One number can mislead; several numbers pointing the same way tell the story."
   },
   {
    "id": "geography.dv.infant",
@@ -278,7 +303,8 @@
    "passageSource": "Invented but realistic figures",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Per 1,000 to per cent: divide by 10. So 70 per 1,000 = 7%."
   },
   {
    "id": "geography.dv.life",
@@ -298,13 +324,15 @@
     {
      "text": "Because it only measures how rich people are",
      "correct": false,
-     "feedback": "Nobody does, but people in richer countries live about twenty years longer on average."
+     "feedback": "It does not measure wealth directly, though people in richer countries do live nearly twenty years longer on average."
     }
    ],
    "explain": "A long average life needs clean water, enough food, vaccinations, doctors and peace. It captures a lot at once.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "A long life needs clean water, food, doctors and peace.",
+   "example": "Life expectancy is about 81 in the UK but under 55 in Chad."
   },
   {
    "id": "geography.dv.hdi",
@@ -321,7 +349,9 @@
    "accept": [
     "hdi",
     "human development index"
-   ]
+   ],
+   "hook": "The HDI mixes three things: a long life, years at school and income.",
+   "example": "The UK is usually in the top 20; Norway and Switzerland are near the very top."
   },
   {
    "id": "geography.dv.gdp",
@@ -337,7 +367,9 @@
    "explain": "Per capita means per head. It is the most common measure of wealth, but it says nothing about how equally the wealth is shared.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Per capita means “per head” (Latin “caput”, head).",
+   "example": "Tiny Luxembourg has one of the highest GDPs per person in the world."
   },
   {
    "id": "geography.dv.lic",
@@ -353,7 +385,9 @@
    "explain": "LICs, NEEs (newly emerging economies such as Brazil and India) and HICs (high-income countries) replaced the old “third world” labels.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "LIC, NEE, HIC: low, emerging, high.",
+   "example": "Ethiopia is an LIC; Brazil and India are NEEs; the UK is an HIC."
   },
   {
    "id": "geography.dv.birth",
@@ -379,7 +413,9 @@
    "explain": "The demographic transition: high birth and death rates, then death rates fall, then birth rates follow.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "When children survive and girls go to school, families get smaller.",
+   "example": "In Bangladesh, the average family has fallen from about 6 children in 1980 to about 2 today."
   },
   {
    "id": "geography.dv.trade",
@@ -405,7 +441,9 @@
    "explain": "Many LICs export raw materials cheaply and import manufactured goods dearly, which makes it hard to grow richer. Fair trade schemes try to shift the balance.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Raw is cheap, processed is pricey: the money is in the making.",
+   "example": "Côte d’Ivoire and Ghana grow over half the world’s cocoa, but much of the chocolate is made in Europe."
   },
   {
    "id": "geography.ws.low",
@@ -424,7 +462,9 @@
     "a depression",
     "depression",
     "low"
-   ]
+   ],
+   "hook": "Low is lousy: air rises, cools and makes cloud and rain.",
+   "example": "Named storms, like Storm Arwen in 2021, are deep depressions."
   },
   {
    "id": "geography.ws.high",
@@ -443,7 +483,9 @@
     "an anticyclone",
     "anticyclone",
     "high"
-   ]
+   ],
+   "hook": "High is happy: sinking air, clear skies, sunny days and frosty nights.",
+   "example": "A crisp, sunny winter morning with frost on the cars usually means a high is sitting over the UK."
   },
   {
    "id": "geography.ws.front",
@@ -461,7 +503,9 @@
     "front",
     "a weather front",
     "weather front"
-   ]
+   ],
+   "hook": "Warm front: long, steady rain. Cold front: short, sharp showers.",
+   "example": "On TV weather maps, red semicircles mark a warm front and blue triangles a cold front."
   },
   {
    "id": "geography.ws.isobar",
@@ -474,7 +518,9 @@
     "fronts",
     "latitudes"
    ],
-   "explain": "Close isobars mean a big pressure difference over a short distance, which means strong winds."
+   "explain": "Close isobars mean a big pressure difference over a short distance, which means strong winds.",
+   "hook": "Iso means “equal”, bar means “pressure” (as in barometer).",
+   "example": "On the Met Office pressure chart, isobars are labelled in millibars, such as 1000 mb."
   },
   {
    "id": "geography.ws.wind",
@@ -500,7 +546,8 @@
    "explain": "Wind is air moving from high to low pressure. The steeper the pressure change, the faster the wind.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Squashed isobars, strong winds; wide gaps, gentle breezes."
   },
   {
    "id": "geography.ws.uk",
@@ -526,7 +573,8 @@
    "explain": "The polar front runs near the UK. Depressions form along it and are steered east by the jet stream.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "The UK sits on the battle line between cold polar air and warm tropical air."
   },
   {
    "id": "geography.ws.prevailing",
@@ -545,7 +593,9 @@
     "southwest",
     "sw",
     "south west"
-   ]
+   ],
+   "hook": "South-west wind, wet west: it picks up moisture crossing the Atlantic.",
+   "example": "On exposed hills in Cornwall, trees grow bent over towards the north-east, pushed by the wind."
   },
   {
    "id": "geography.ws.forecast",
@@ -571,7 +621,9 @@
    "explain": "The Met Office names storms when a deep depression is likely to cause damage. The deeper the low, the tighter the isobars, the stronger the wind.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Deep low + tight isobars = batten down the hatches.",
+   "example": "The Met Office names storms in alphabetical order each season, starting in September."
   },
   {
    "id": "geography.w2.idn",
@@ -661,7 +713,8 @@
     "Kabul"
    ],
    "explain": "Kuala Lumpur is the capital of Malaysia. Split between the Malay Peninsula and the island of Borneo.",
-   "fill": true
+   "fill": true,
+   "hook": "Kuala Lumpur means “muddy confluence”: it grew where two rivers meet."
   },
   {
    "id": "geography.w2.mng",
@@ -690,7 +743,8 @@
     "Baghdad"
    ],
    "explain": "Ulaanbaatar is the capital of Mongolia. The most sparsely populated country on Earth: about 2 people per km².",
-   "fill": true
+   "fill": true,
+   "hook": "Ulaanbaatar means “red hero”: say it oo-lahn-BAH-tor."
   },
   {
    "id": "geography.w2.kaz",
@@ -719,7 +773,8 @@
     "Kathmandu"
    ],
    "explain": "Astana is the capital of Kazakhstan. The largest landlocked country in the world.",
-   "fill": true
+   "fill": true,
+   "hook": "Astana simply means “capital” in Kazakh."
   },
   {
    "id": "geography.w2.afg",
@@ -777,7 +832,8 @@
     "Algiers"
    ],
    "explain": "Baghdad is the capital of Iraq. Mesopotamia, between the Tigris and Euphrates: home of some of the first cities.",
-   "fill": true
+   "fill": true,
+   "example": "Baghdad stands on the River Tigris."
   },
   {
    "id": "geography.w2.npl",
@@ -806,7 +862,8 @@
     "Tripoli"
    ],
    "explain": "Kathmandu is the capital of Nepal. Home to Mount Everest, on its border with China.",
-   "fill": true
+   "fill": true,
+   "example": "Most Everest climbers fly into Kathmandu before trekking to base camp."
   },
   {
    "id": "geography.w2.lka",
@@ -894,7 +951,8 @@
     "Astana"
    ],
    "explain": "Algiers is the capital of Algeria. Africa’s largest country by area, mostly Sahara.",
-   "fill": true
+   "fill": true,
+   "hook": "Algeria and Algiers: the country is named after its capital."
   },
   {
    "id": "geography.w2.lby",
@@ -952,7 +1010,8 @@
     "Baghdad"
    ],
    "explain": "Antananarivo is the capital of Madagascar. The world’s fourth largest island; most of its wildlife, including lemurs, lives nowhere else.",
-   "fill": true
+   "fill": true,
+   "hook": "Antananarivo means “city of the thousand”; locals shorten it to Tana."
   },
   {
    "id": "geography.w2.bol",
@@ -996,7 +1055,8 @@
     "Khartoum"
    ],
    "explain": "Quito is the capital of Ecuador. Named after the equator, which runs through it; the Galapagos Islands belong to it.",
-   "fill": true
+   "fill": true,
+   "hook": "Quito is only about 25 km south of the Equator, the line that gave Ecuador its name."
   },
   {
    "id": "geography.w2.ury",

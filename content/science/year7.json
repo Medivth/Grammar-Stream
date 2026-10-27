@@ -16,7 +16,8 @@
    ],
    "intro": "Everything is made of tiny particles. The way they are arranged and move explains solids, liquids, gases, smells spreading and balloons bursting.",
    "teach": "Explain why you can smell perfume from across a room.",
-   "talk": "Ask her why a balloon gets bigger in the sun."
+   "talk": "Ask her why a balloon gets bigger in the sun.",
+   "hook": "Solids **vibrate**, liquids **slide**, gases **zoom**."
   },
   {
    "id": "science.cells",
@@ -32,7 +33,8 @@
    ],
    "intro": "All living things are made of cells, the building blocks of life. Most are far too small to see without a microscope.",
    "teach": "Explain three differences between a plant cell and an animal cell.",
-   "talk": "Ask her what mitochondria do."
+   "talk": "Ask her what mitochondria do.",
+   "hook": "Cells are the building blocks of life, and **mitochondria are the powerhouse of the cell**."
   },
   {
    "id": "science.atoms",
@@ -47,7 +49,8 @@
    ],
    "intro": "There are only about 118 elements, but they combine to make everything in the universe.",
    "teach": "Explain the difference between an element and a compound.",
-   "talk": "Ask her what H₂O means."
+   "talk": "Ask her what H₂O means.",
+   "hook": "Element: one kind of atom. Compound: different atoms **chemically joined**. Mixture: just **mixed**."
   },
   {
    "id": "science.separating",
@@ -62,7 +65,8 @@
    ],
    "intro": "Sea water, ink and air are all mixtures. Scientists have clever ways to separate them.",
    "teach": "Explain how you could get pure water from sea water.",
-   "talk": "Ask her what “pure” means to a scientist."
+   "talk": "Ask her what “pure” means to a scientist.",
+   "hook": "**Filter** out bits, **evaporate** to get a solid back, **distil** to get a liquid back, **chromatography** for colours."
   },
   {
    "id": "science.acids",
@@ -77,7 +81,8 @@
    ],
    "intro": "Lemon juice, soap, vinegar and toothpaste: some are acids and some are alkalis. Indicators tell them apart.",
    "teach": "Explain what happens when an acid and an alkali are mixed.",
-   "talk": "Ask her why indigestion tablets help with heartburn."
+   "talk": "Ask her why indigestion tablets help with heartburn.",
+   "hook": "pH **7** is neutral: below 7 is acid (sour), above 7 is alkali (soapy)."
   },
   {
    "id": "science.forces7",
@@ -92,7 +97,8 @@
    ],
    "intro": "Forces change how things move. Now we’ll calculate speed and weight, and read distance–time graphs.",
    "teach": "Explain what balanced forces do to a moving object.",
-   "talk": "Ask her what your speed is if you drive 120 km in 2 hours."
+   "talk": "Ask her what your speed is if you drive 120 km in 2 hours.",
+   "hook": "**Balanced** forces: no change in motion. **Unbalanced**: speed up, slow down or change direction."
   },
   {
    "id": "science.energy",
@@ -107,7 +113,8 @@
    ],
    "intro": "Energy is never used up. It moves between stores: kinetic, thermal, chemical and more.",
    "teach": "Explain the energy changes when you throw a ball up in the air.",
-   "talk": "Ask her which energy resources are renewable."
+   "talk": "Ask her which energy resources are renewable.",
+   "hook": "Energy is never used up, only **moved between stores**, like money moved between bank accounts."
   },
   {
    "id": "science.universe",
@@ -123,7 +130,8 @@
    ],
    "intro": "Our Sun is one of hundreds of billions of stars in the Milky Way, and the Milky Way is one of billions of galaxies.",
    "teach": "Explain what a light-year is.",
-   "talk": "Ask her what causes a solar eclipse."
+   "talk": "Ask her what causes a solar eclipse.",
+   "hook": "Planet → solar system → galaxy → universe: like house → street → town → world."
   },
   {
    "id": "science.ecosystems",
@@ -139,7 +147,8 @@
    ],
    "intro": "Every living thing depends on others. Energy flows from the Sun through plants to animals.",
    "teach": "Explain what would happen to a food web if all the bees disappeared.",
-   "talk": "Ask her where a tree gets the stuff to build its trunk."
+   "talk": "Ask her where a tree gets the stuff to build its trunk.",
+   "hook": "Sun → plant → animal: the arrows point to the **eater**, following the energy."
   },
   {
    "id": "science.reproduction",
@@ -154,7 +163,8 @@
    ],
    "intro": "All living things reproduce. Flowers are a plant’s way of making seeds.",
    "teach": "Explain the difference between pollination and fertilisation.",
-   "talk": "Ask her how a sycamore seed travels."
+   "talk": "Ask her how a sycamore seed travels.",
+   "hook": "First **pollination** (pollen lands), then **fertilisation** (cells join), then **dispersal** (seeds travel)."
   },
   {
    "id": "science.working",
@@ -164,7 +174,8 @@
    "batch": 5,
    "intro": "Scientists test ideas with fair tests: change one thing, measure another, and keep everything else the same.",
    "teach": "Explain how to make an investigation a fair test.",
-   "talk": "Plan a kitchen experiment together: which variable will you change?"
+   "talk": "Plan a kitchen experiment together: which variable will you change?",
+   "hook": "**Cows Moo Softly**: **C**hange one thing, **M**easure one thing, keep everything else the **S**ame."
   }
  ],
  "items": [
@@ -189,7 +200,9 @@
      "feedback": "Heating doesn’t create particles; the number stays the same."
     }
    ],
-   "explain": "Heating gives particles more energy, so they vibrate more and need more space. The particles do not grow."
+   "explain": "Heating gives particles more energy, so they vibrate more and need more space. The particles do not grow.",
+   "hook": "Particles never grow: heated, they **jiggle** more and need more room.",
+   "example": "Bridges and railway tracks have small gaps so they can expand on hot days without buckling."
   },
   {
    "id": "science.pt.d2",
@@ -212,7 +225,9 @@
      "feedback": "Water vapour is itself made of particles."
     }
    ],
-   "explain": "Gas particles are far apart with empty space (a vacuum) between them, which is why gases can be squashed."
+   "explain": "Gas particles are far apart with empty space (a vacuum) between them, which is why gases can be squashed.",
+   "hook": "Between gas particles there is **nothing**: just empty space.",
+   "example": "Block the end of a bike pump and push: the air squashes because there is empty space between its particles."
   },
   {
    "id": "science.pt.solid",
@@ -225,7 +240,9 @@
    "explain": "In a solid, particles are packed in a regular pattern and vibrate on the spot.",
    "choosePrompt": "Which state of matter is highlighted?",
    "locatePrompt": "Tap the box showing a solid.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "Solid: particles in neat rows, **vibrating on the spot**, like fidgety pupils sitting in assembly.",
+   "example": "An ice cube keeps its shape until it starts to melt."
   },
   {
    "id": "science.pt.liquid",
@@ -238,7 +255,9 @@
    "explain": "In a liquid, particles touch but are jumbled and can slide past each other, so liquids flow.",
    "choosePrompt": "Which state of matter is highlighted?",
    "locatePrompt": "Tap the box showing a liquid.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "Liquid: particles **touching but sliding** past each other, like people in a busy corridor.",
+   "example": "Pour juice from a carton into a glass: it flows and takes the shape of the glass."
   },
   {
    "id": "science.pt.gas",
@@ -251,7 +270,9 @@
    "explain": "In a gas, particles are far apart and move quickly in all directions.",
    "choosePrompt": "Which state of matter is highlighted?",
    "locatePrompt": "Tap the box showing a gas.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "Gas: particles **far apart and zooming** in all directions, like a playground at break time.",
+   "example": "Air from a pump spreads into every part of a bike tyre."
   },
   {
    "id": "science.pt.diffusion",
@@ -264,7 +285,9 @@
     "evaporation",
     "dissolving"
    ],
-   "explain": "Diffusion is why you can smell food cooking from another room. It happens faster in warm gases."
+   "explain": "Diffusion is why you can smell food cooking from another room. It happens faster in warm gases.",
+   "hook": "Diffusion: particles spread from crowded to empty, like people leaving a packed lift.",
+   "example": "You can smell toast from upstairs, and a drop of squash slowly colours a whole glass of water."
   },
   {
    "id": "science.pt.compress",
@@ -280,7 +303,9 @@
    "explain": "In a liquid the particles already touch, so there is no room to squash them closer.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "A gas has room to squash; a liquid is already packed tight.",
+   "example": "A bike pump squashes air into a tyre, but you can’t squash water in a sealed syringe."
   },
   {
    "id": "science.pt.pressure",
@@ -296,7 +321,9 @@
    "explain": "Billions of collisions every second push the balloon outwards. Heating makes them move faster and hit harder.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Gas pressure = billions of tiny particle punches on the walls every second.",
+   "example": "A football left in hot sun feels harder: the warmer air particles hit the inside faster and harder."
   },
   {
    "id": "science.pt.sublimation",
@@ -309,7 +336,9 @@
     "evaporation",
     "diffusion"
    ],
-   "explain": "Dry ice (solid carbon dioxide) sublimes, making the “smoke” used on stage."
+   "explain": "Dry ice (solid carbon dioxide) sublimes, making the “smoke” used on stage.",
+   "hook": "Sublimation **skips the liquid**: solid straight to gas.",
+   "example": "On cold, dry, sunny days, snow can slowly vanish without melting first: it sublimes."
   },
   {
    "id": "science.pt.flow",
@@ -322,7 +351,9 @@
     "gas",
     "none of them"
    ],
-   "explain": "Liquids keep their volume but flow to fill the bottom of a container. Gases fill the whole container."
+   "explain": "Liquids keep their volume but flow to fill the bottom of a container. Gases fill the whole container.",
+   "hook": "Liquids keep their **volume** but borrow their container’s **shape**.",
+   "example": "500 ml of water is still 500 ml in a tall glass or a wide bowl."
   },
   {
    "id": "science.pt.ice",
@@ -338,7 +369,9 @@
    "explain": "Water is unusual: as it freezes, its particles form an open pattern that takes up more space, so ice is less dense.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Water is the odd one out: its solid floats on its liquid.",
+   "example": "Ice cubes float in a drink, and ponds freeze from the top down, so fish survive underneath."
   },
   {
    "id": "science.cl.d1",
@@ -361,7 +394,8 @@
      "feedback": "All plant cells that are alive respire."
     }
    ],
-   "explain": "Photosynthesis makes glucose; respiration in the mitochondria releases its energy. Plants do both."
+   "explain": "Photosynthesis makes glucose; respiration in the mitochondria releases its energy. Plants do both.",
+   "hook": "Photosynthesis **makes** the food; respiration **releases** its energy. Plants do both."
   },
   {
    "id": "science.cl.d2",
@@ -384,7 +418,9 @@
      "feedback": "Trees don’t move about but are made of billions of cells."
     }
    ],
-   "explain": "Every living thing is made of one or more cells. That is one of the big ideas of biology."
+   "explain": "Every living thing is made of one or more cells. That is one of the big ideas of biology.",
+   "hook": "**All** living things are made of cells: a bacterium is one cell; you are about 37 trillion.",
+   "example": "Even the mould on old bread and the moss on a wall are made of cells."
   },
   {
    "id": "science.cl.nucleus",
@@ -397,7 +433,8 @@
    "explain": "The nucleus controls the cell and contains genetic material (DNA).",
    "choosePrompt": "Which part is highlighted?",
    "locatePrompt": "Tap the nucleus.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "The nucleus is the cell’s **control centre**, holding the instructions (DNA)."
   },
   {
    "id": "science.cl.cytoplasm",
@@ -410,7 +447,8 @@
    "explain": "Cytoplasm is the jelly where most of the cell’s chemical reactions happen.",
    "choosePrompt": "Which part is highlighted?",
    "locatePrompt": "Tap the cytoplasm.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "Cytoplasm is the cell’s jelly-like kitchen, where most reactions are cooked up."
   },
   {
    "id": "science.cl.membrane",
@@ -426,7 +464,8 @@
    "namePrompt": "Name the highlighted part.",
    "accept": [
     "membrane"
-   ]
+   ],
+   "hook": "The membrane is the cell’s **security guard**, deciding what goes in and out."
   },
   {
    "id": "science.cl.mito",
@@ -442,7 +481,9 @@
    "namePrompt": "Name the highlighted part.",
    "accept": [
     "mitochondrion"
-   ]
+   ],
+   "hook": "**Mitochondria are the powerhouse of the cell.**",
+   "example": "Muscle cells, which work hard, are packed with extra mitochondria."
   },
   {
    "id": "science.cl.wall",
@@ -458,7 +499,9 @@
    "namePrompt": "Name the highlighted part.",
    "accept": [
     "wall"
-   ]
+   ],
+   "hook": "A cell **wall** is a strong box around a plant cell, made of cellulose.",
+   "example": "Paper and cotton are made of cellulose, the same stuff as plant cell walls."
   },
   {
    "id": "science.cl.chloro",
@@ -474,7 +517,9 @@
    "namePrompt": "Name the highlighted part.",
    "accept": [
     "chloroplast"
-   ]
+   ],
+   "hook": "**Chloro-** means green: green chloroplasts catch sunlight for photosynthesis.",
+   "example": "Leaves are green because their cells are packed with chloroplasts; roots underground have none."
   },
   {
    "id": "science.cl.vacuole",
@@ -487,7 +532,9 @@
    "explain": "The vacuole is filled with cell sap and keeps the cell firm.",
    "choosePrompt": "Which part is highlighted?",
    "locatePrompt": "Tap the vacuole.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "The vacuole is the cell’s **water balloon**: full of sap, keeping it firm.",
+   "example": "A droopy pot plant perks up after watering as its vacuoles fill up again."
   },
   {
    "id": "science.cl.ribosome-job",
@@ -500,7 +547,8 @@
     "control the cell",
     "make glucose"
    ],
-   "explain": "Ribosomes are tiny structures that build proteins."
+   "explain": "Ribosomes are tiny structures that build proteins.",
+   "hook": "Ribosomes are tiny **protein factories**."
   },
   {
    "id": "science.cl.plant-only",
@@ -516,7 +564,8 @@
    "explain": "Both have a nucleus, cytoplasm, membrane, mitochondria and ribosomes.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Plant extras: a **wall** to stand tall, **chloroplasts** to catch light, a **vacuole** to stay firm."
   },
   {
    "id": "science.cl.hooke",
@@ -529,7 +578,9 @@
     "Isaac Newton",
     "Louis Pasteur"
    ],
-   "explain": "Hooke thought the tiny boxes in cork looked like the small rooms (cells) monks lived in."
+   "explain": "Hooke thought the tiny boxes in cork looked like the small rooms (cells) monks lived in.",
+   "hook": "**Hooke** looked at cork and saw rows of tiny rooms, like monks’ **cells**.",
+   "example": "A cork from a bottle is the same material Hooke looked at."
   },
   {
    "id": "science.cl.mag",
@@ -545,7 +596,9 @@
    "explain": "Total magnification = eyepiece × objective = 10 × 40 = 400.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Total magnification: **multiply**, don’t add. Eyepiece × objective.",
+   "example": "Under ×400, a hair about a tenth of a millimetre wide would look 4 centimetres wide."
   },
   {
    "id": "science.cl.levels",
@@ -566,7 +619,8 @@
     "circulatory system",
     "you"
    ],
-   "explain": "Cells group into tissues, tissues into organs, organs into organ systems, and systems make an organism."
+   "explain": "Cells group into tissues, tissues into organs, organs into organ systems, and systems make an organism.",
+   "hook": "Bricks → walls → rooms → floors → house: cell → tissue → organ → system → organism."
   },
   {
    "id": "science.cl.rbc",
@@ -579,7 +633,9 @@
     "root hair cell",
     "sperm cell"
    ],
-   "explain": "Red blood cells are packed with haemoglobin, which carries oxygen."
+   "explain": "Red blood cells are packed with haemoglobin, which carries oxygen.",
+   "hook": "Red blood cells ditch the nucleus to make room for more oxygen-carrying haemoglobin.",
+   "example": "Blood is red because of the iron-containing haemoglobin in red blood cells."
   },
   {
    "id": "science.cl.roothair",
@@ -592,7 +648,9 @@
     "guard cell",
     "red blood cell"
    ],
-   "explain": "The long “hair” gives a large surface area for absorbing water and minerals."
+   "explain": "The long “hair” gives a large surface area for absorbing water and minerals.",
+   "hook": "Root hair cells are long thin straws in the soil, drinking up water.",
+   "example": "Gently pull up a seedling grown on damp kitchen roll: the fuzz on its roots is root hairs."
   },
   {
    "id": "science.cl.nerve",
@@ -610,7 +668,9 @@
     "neurone",
     "neuron",
     "nerve cell"
-   ]
+   ],
+   "hook": "Nerve cells are the body’s **wires**: long and thin to carry electrical signals.",
+   "example": "Stub your toe and a signal races along nerve cells up your leg to your spinal cord."
   },
   {
    "id": "science.at.d1",
@@ -633,7 +693,9 @@
      "feedback": "The difference is about chemical bonds, not the state."
     }
    ],
-   "explain": "Water (H₂O) is a compound: hydrogen and oxygen are chemically bonded. Air is a mixture of different gases."
+   "explain": "Water (H₂O) is a compound: hydrogen and oxygen are chemically bonded. Air is a mixture of different gases.",
+   "hook": "Mixture = just **mixed**, easy to separate. Compound = **chemically joined**: a new substance.",
+   "example": "Iron filings and sulfur separate with a magnet; heat them and they make iron sulfide, which won’t."
   },
   {
    "id": "science.at.element",
@@ -649,7 +711,9 @@
    "explain": "Gold, oxygen and carbon are elements.",
    "accept": [
     "element"
-   ]
+   ],
+   "hook": "Element = **one** kind of atom only, like a box of identical Lego bricks.",
+   "example": "The copper in electric wires, the carbon in pencil “lead” (graphite) and the helium in a balloon are elements."
   },
   {
    "id": "science.at.compound",
@@ -665,7 +729,9 @@
    "explain": "Water, carbon dioxide and salt are compounds.",
    "accept": [
     "compound"
-   ]
+   ],
+   "hook": "**Com**pound = **com**bined: different atoms bonded into a new substance.",
+   "example": "Table salt is sodium (a metal that fizzes on water) joined to chlorine (a poisonous gas), yet you sprinkle it on chips."
   },
   {
    "id": "science.at.count",
@@ -681,7 +747,8 @@
    "explain": "About 118, of which around 90 occur naturally.",
    "formats": [
     "choice"
-   ]
+   ],
+   "example": "Everything you can see, from your desk to your dinner to you, is built from combinations of these elements."
   },
   {
    "id": "science.at.mendeleev",
@@ -697,7 +764,8 @@
    "explain": "Mendeleev’s gaps were later filled by elements with the properties he predicted.",
    "accept": [
     "mendeleev"
-   ]
+   ],
+   "hook": "Mendeleev is said to have sorted cards of the elements like a game of patience, leaving gaps for missing ones."
   },
   {
    "id": "science.at.o",
@@ -711,7 +779,9 @@
     "X"
    ],
    "explain": "Oxygen is O. H is hydrogen, C is carbon, N is nitrogen.",
-   "strict": true
+   "strict": true,
+   "hook": "Most symbols are first letters: **O**xygen, **H**ydrogen, **C**arbon, **N**itrogen.",
+   "example": "Oxygen cylinders in hospitals and ambulances are labelled O₂."
   },
   {
    "id": "science.at.na",
@@ -724,7 +794,9 @@
     "neon",
     "nickel"
    ],
-   "explain": "Na comes from its Latin name, natrium."
+   "explain": "Na comes from its Latin name, natrium.",
+   "hook": "**Na** from **na**trium. Sodium is the Na in NaCl, table salt.",
+   "example": "Old orange street lights in the UK were sodium lamps."
   },
   {
    "id": "science.at.fe",
@@ -737,7 +809,9 @@
     "lead",
     "fermium"
    ],
-   "explain": "Fe comes from the Latin ferrum. “Ferrous” metals contain iron."
+   "explain": "Fe comes from the Latin ferrum. “Ferrous” metals contain iron.",
+   "hook": "**Fe** from **fe**rrum. “Ferrous” metals contain iron.",
+   "example": "Breakfast cereal boxes often say “fortified with iron”: check the label."
   },
   {
    "id": "science.at.au",
@@ -750,7 +824,9 @@
     "aluminium",
     "argon"
    ],
-   "explain": "Au from aurum, Latin for gold. Silver is Ag (argentum)."
+   "explain": "Au from aurum, Latin for gold. Silver is Ag (argentum).",
+   "hook": "**Au**: “**A**y, yo**u**! Give me back my gold!”",
+   "example": "Olympic gold medals are mostly silver with a coating of gold."
   },
   {
    "id": "science.at.h2o",
@@ -766,7 +842,9 @@
    "explain": "The small 2 belongs to the H in front of it.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "The little number belongs to the atom **just before** it: H₂O = two H, one O.",
+   "example": "People often call water “H-two-O” in everyday speech."
   },
   {
    "id": "science.at.co2",
@@ -782,7 +860,9 @@
    "explain": "One carbon atom and two oxygen atoms (di- means two).",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Di-** means two: carbon **di**oxide has two oxygens, just as a **di**lemma has two options.",
+   "example": "The bubbles in fizzy drinks are carbon dioxide."
   },
   {
    "id": "science.at.air",
@@ -795,7 +875,9 @@
     "carbon dioxide",
     "hydrogen"
    ],
-   "explain": "Air is about 78% nitrogen, 21% oxygen and 1% other gases including carbon dioxide."
+   "explain": "Air is about 78% nitrogen, 21% oxygen and 1% other gases including carbon dioxide.",
+   "hook": "Air is nearly **four-fifths nitrogen** and about one-fifth oxygen.",
+   "example": "Crisp packets are often filled with nitrogen to keep the crisps fresh."
   },
   {
    "id": "science.at.metals",
@@ -811,7 +893,8 @@
    "explain": "Non-metals are on the right. The staircase line separates them.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Metals on the **left** and middle; non-metals on the **right**; the staircase is the border."
   },
   {
    "id": "science.sp7.d1",
@@ -834,7 +917,9 @@
      "feedback": "Fresh juice is still a mixture of many substances."
     }
    ],
-   "explain": "A pure substance contains only one element or compound, and melts and boils at fixed temperatures."
+   "explain": "A pure substance contains only one element or compound, and melts and boils at fixed temperatures.",
+   "hook": "Science “pure” = **one substance only**. Shop “pure” = nothing added.",
+   "example": "Even bottled spring water contains dissolved minerals: check the label."
   },
   {
    "id": "science.sp7.solute",
@@ -850,7 +935,9 @@
    "explain": "Solute + solvent = solution.",
    "accept": [
     "solvent"
-   ]
+   ],
+   "hook": "Solute + solvent = solution. The solvent is the liquid that does the dissolving.",
+   "example": "In a glass of squash, water is the solvent and the sugar is a solute."
   },
   {
    "id": "science.sp7.saturated",
@@ -863,7 +950,9 @@
     "pure",
     "diluted"
    ],
-   "explain": "Warming the solvent usually lets more solid dissolve."
+   "explain": "Warming the solvent usually lets more solid dissolve.",
+   "hook": "Saturated = **full up**, like a soaked sponge that can’t hold any more.",
+   "example": "Keep stirring sugar into cold water and eventually grains stay at the bottom: it’s saturated."
   },
   {
    "id": "science.sp7.distil",
@@ -876,7 +965,9 @@
     "chromatography",
     "sieving"
    ],
-   "explain": "Distillation boils the water off and condenses the steam, leaving the salt behind."
+   "explain": "Distillation boils the water off and condenses the steam, leaving the salt behind.",
+   "hook": "Distillation: **boil it, cool it, collect it**.",
+   "example": "Sea water evaporates in the sunshine and falls as fresh rain: the water cycle is nature’s distillation."
   },
   {
    "id": "science.sp7.chrom",
@@ -889,7 +980,9 @@
     "filtration",
     "evaporation"
    ],
-   "explain": "The dyes travel up the paper at different speeds, so they separate."
+   "explain": "The dyes travel up the paper at different speeds, so they separate.",
+   "hook": "**Chroma** means colour: chromatography is “colour writing”.",
+   "example": "Draw a black felt-tip dot on kitchen roll, dip the edge in water and watch hidden colours spread out."
   },
   {
    "id": "science.sp7.crystal",
@@ -905,7 +998,9 @@
    "explain": "Slow evaporation gives the crystals time to grow.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Slow and steady grows big crystals; rush it and you get tiny ones.",
+   "example": "Sugar crystals grown on a string over several days get big and chunky."
   },
   {
    "id": "science.sp7.mp",
@@ -921,7 +1016,9 @@
    "explain": "Pure water boils at exactly 100°C; impurities change and spread out the boiling and melting points.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Pure = sharp: it melts or boils at **one exact temperature**.",
+   "example": "Gritting roads with salt makes ice melt below 0°C: an impurity changes the melting point."
   },
   {
    "id": "science.sp7.order",
@@ -935,7 +1032,9 @@
     "evaporate the water"
    ],
    "labels": null,
-   "explain": "The salt dissolves but the sand does not. Filter, then evaporate the filtrate to get the salt back."
+   "explain": "The salt dissolves but the sand does not. Filter, then evaporate the filtrate to get the salt back.",
+   "hook": "Crush, Dissolve, Filter, Evaporate: “**C**ats **D**on’t **F**ancy **E**lephants”.",
+   "example": "The rock salt spread on icy UK roads in winter is mined in Cheshire: salt mixed with sand and clay."
   },
   {
    "id": "science.ac.d1",
@@ -958,7 +1057,9 @@
      "feedback": "Colour has nothing to do with it."
     }
    ],
-   "explain": "Strong acids (like concentrated hydrochloric acid) are corrosive. Weak acids give food a sour taste."
+   "explain": "Strong acids (like concentrated hydrochloric acid) are corrosive. Weak acids give food a sour taste.",
+   "hook": "Sour = acid. Many weak acids are safe to eat.",
+   "example": "Vinegar on your chips is a weak acid (ethanoic acid); lemon juice contains citric acid."
   },
   {
    "id": "science.ac.ph",
@@ -974,7 +1075,9 @@
     -1,
     0,
     0.8
-   ]
+   ],
+   "hook": "pH **7** is neutral: **below** 7 is acid, **above** 7 is alkali.",
+   "example": "Lemon juice is about pH 2, pure water pH 7 and soap about pH 9 to 10."
   },
   {
    "id": "science.ac.range",
@@ -987,7 +1090,9 @@
     "10",
     "100"
    ],
-   "explain": "pH 0 to 14: below 7 acid, 7 neutral, above 7 alkali."
+   "explain": "pH 0 to 14: below 7 acid, 7 neutral, above 7 alkali.",
+   "hook": "0 to 14, with **7** right in the middle for neutral.",
+   "example": "Lemon juice is about pH 2, pure water pH 7 and soap about pH 9 to 10."
   },
   {
    "id": "science.ac.litmus",
@@ -1000,7 +1105,9 @@
     "green",
     "purple"
    ],
-   "explain": "Acids turn blue litmus red; alkalis turn red litmus blue."
+   "explain": "Acids turn blue litmus red; alkalis turn red litmus blue.",
+   "hook": "**BRA**: **B**lue litmus turns **R**ed in **A**cid.",
+   "example": "Red cabbage water is a homemade indicator: lemon juice turns it pink; bicarbonate of soda turns it blue-green."
   },
   {
    "id": "science.ac.neutral",
@@ -1013,7 +1120,9 @@
     "oxygen",
     "more acid"
    ],
-   "explain": "Neutralisation makes a salt and water. Hydrochloric acid + sodium hydroxide → sodium chloride (table salt) + water."
+   "explain": "Neutralisation makes a salt and water. Hydrochloric acid + sodium hydroxide → sodium chloride (table salt) + water.",
+   "hook": "Acid + alkali → salt + water: they cancel each other out.",
+   "example": "Farmers spread lime (an alkali) on fields to neutralise acidic soil."
   },
   {
    "id": "science.ac.stomach",
@@ -1029,7 +1138,8 @@
    "explain": "Stomach acid has a pH of about 1 to 2.",
    "formats": [
     "choice"
-   ]
+   ],
+   "example": "The burning feeling of heartburn is stomach acid creeping up into the food pipe."
   },
   {
    "id": "science.ac.indigestion",
@@ -1045,7 +1155,9 @@
    "explain": "Neutralisation in everyday life!",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Too much acid? Add a base to neutralise it.",
+   "example": "Many indigestion tablets contain calcium carbonate, the same chemical as chalk."
   },
   {
    "id": "science.ac.corrosive",
@@ -1058,7 +1170,9 @@
     "toxic",
     "explosive"
    ],
-   "explain": "Corrosive substances destroy living tissue and materials. Wear goggles!"
+   "explain": "Corrosive substances destroy living tissue and materials. Wear goggles!",
+   "hook": "**Corrosive** things **corrode**: they eat away skin and metal.",
+   "example": "Some oven cleaners and drain unblockers carry the corrosive symbol."
   },
   {
    "id": "science.f7.d1",
@@ -1081,7 +1195,9 @@
      "feedback": "There are forces (engine, friction, air resistance); they just cancel out."
     }
    ],
-   "explain": "Balanced forces mean no change in motion: stay still, or keep moving at the same speed in the same direction."
+   "explain": "Balanced forces mean no change in motion: stay still, or keep moving at the same speed in the same direction.",
+   "hook": "Steady speed in a straight line = **balanced** forces. No overall force, no change.",
+   "example": "At a steady 70 mph on a motorway, the engine’s push exactly matches air resistance and friction."
   },
   {
    "id": "science.f7.speed",
@@ -1097,7 +1213,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Speed = distance ÷ time.** In the triangle, D sits on top of S and T.",
+   "example": "UK speed limits are in mph: miles per hour, a distance divided by a time."
   },
   {
    "id": "science.f7.weight",
@@ -1113,7 +1231,9 @@
     -0.8,
     0.2,
     0.5
-   ]
+   ],
+   "hook": "**Weight = mass × g**, and on Earth g is about 10 N/kg.",
+   "example": "A 1 kg bag of sugar weighs about 10 N on Earth, but only 1.6 N on the Moon."
   },
   {
    "id": "science.f7.resultant",
@@ -1129,7 +1249,9 @@
    "explain": "Opposite forces subtract: 10 − 4 = 6 N, in the direction of the bigger force.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Same direction: **add**. Opposite directions: **subtract**, and it goes the way of the bigger force.",
+   "example": "In tug of war, the team pulling harder wins: the resultant force points their way."
   },
   {
    "id": "science.f7.flat",
@@ -1145,7 +1267,9 @@
    "explain": "Distance isn’t changing, so it has stopped. A steeper line means faster.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Flat line: time ticks on but distance doesn’t, so it has **stopped**.",
+   "example": "A bus waiting at a stop makes a flat line on its distance–time graph."
   },
   {
    "id": "science.f7.steep",
@@ -1161,7 +1285,9 @@
    "explain": "More distance in the same time = faster.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Steeper = speedier.**",
+   "example": "A cyclist racing downhill makes a steeper line than someone pushing a bike uphill."
   },
   {
    "id": "science.f7.hooke",
@@ -1177,7 +1303,9 @@
    "explain": "Hooke’s law: extension is proportional to force, up to the limit of proportionality.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Hooke’s law: **double the pull, double the stretch**. (The same Robert Hooke named cells!)",
+   "example": "Overstretch a hair bobble or a spring and it won’t go back to its old shape: it has passed its limit."
   },
   {
    "id": "science.f7.mass",
@@ -1193,7 +1321,8 @@
    "explain": "Mass is the amount of matter and doesn’t change. Her weight is about one-sixth.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Mass stays, weight changes: same **stuff**, different **pull**."
   },
   {
    "id": "science.en.d1",
@@ -1216,7 +1345,9 @@
      "feedback": "It doesn’t go back to the plug."
     }
    ],
-   "explain": "The law of conservation of energy: energy cannot be created or destroyed, only transferred between stores."
+   "explain": "The law of conservation of energy: energy cannot be created or destroyed, only transferred between stores.",
+   "hook": "Energy is never destroyed: much of it ends up **spread out as heat** (dissipated).",
+   "example": "A phone or laptop feels warm when it’s working hard: energy is heating the surroundings."
   },
   {
    "id": "science.en.unit",
@@ -1233,7 +1364,9 @@
    "accept": [
     "joule",
     "j"
-   ]
+   ],
+   "hook": "Joules = **how much** energy. Watts = **how fast** (joules per second).",
+   "example": "UK food labels show energy in kJ (kilojoules) as well as kcal."
   },
   {
    "id": "science.en.kinetic",
@@ -1246,7 +1379,9 @@
     "elastic",
     "nuclear"
    ],
-   "explain": "The faster it moves, the more energy in its kinetic store."
+   "explain": "The faster it moves, the more energy in its kinetic store.",
+   "hook": "**Kinetic** and **cinema** both come from the Greek for movement.",
+   "example": "A football flying towards the goal has energy in its kinetic store."
   },
   {
    "id": "science.en.gpe",
@@ -1262,7 +1397,9 @@
    "explain": "The higher it is raised, the more energy in its gravitational potential store.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Higher up = more gravitational potential energy, waiting to fall.",
+   "example": "A rollercoaster’s first big climb fills its gravitational store for the rest of the ride."
   },
   {
    "id": "science.en.chem",
@@ -1275,7 +1412,9 @@
     "kinetic",
     "magnetic"
    ],
-   "explain": "Chemical reactions transfer this energy, for example respiration in your cells."
+   "explain": "Chemical reactions transfer this energy, for example respiration in your cells.",
+   "hook": "Chemical store: energy locked in food, fuels and batteries, released by reactions.",
+   "example": "A burning log, a car’s petrol and the cereal you eat for breakfast all transfer energy from chemical stores."
   },
   {
    "id": "science.en.elastic",
@@ -1291,7 +1430,9 @@
    "explain": "When released, the energy is transferred to the kinetic store of the stone.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Stretch it or squash it, and it stores elastic potential energy to spring back.",
+   "example": "A trampoline stores energy as it stretches down, then bounces you back up."
   },
   {
    "id": "science.en.renewable",
@@ -1304,7 +1445,9 @@
     "natural gas",
     "oil"
    ],
-   "explain": "Renewables (wind, solar, hydroelectric, tidal, geothermal, biomass) won’t run out."
+   "explain": "Renewables (wind, solar, hydroelectric, tidal, geothermal, biomass) won’t run out.",
+   "hook": "**Re-new-able**: nature tops it up. Fossil fuels took millions of years to form.",
+   "example": "Huge offshore wind farms in the North Sea now generate a large share of the UK’s electricity."
   },
   {
    "id": "science.en.fossil",
@@ -1317,7 +1460,9 @@
     "nitrogen",
     "helium"
    ],
-   "explain": "Coal, oil and gas formed from ancient living things. Burning them releases carbon dioxide."
+   "explain": "Coal, oil and gas formed from ancient living things. Burning them releases carbon dioxide.",
+   "hook": "Fossil fuels are ancient life, buried and squashed. Burn them and their carbon returns as CO₂.",
+   "example": "A gas hob burns natural gas (methane), releasing carbon dioxide and water."
   },
   {
    "id": "science.en.power",
@@ -1334,7 +1479,9 @@
    "accept": [
     "watt",
     "w"
-   ]
+   ],
+   "hook": "**1 watt = 1 joule every second.**",
+   "example": "A UK kettle is about 3000 W; an LED light bulb is about 5 to 10 W."
   },
   {
    "id": "science.en.ball",
@@ -1348,7 +1495,9 @@
     "kinetic (ball falling)"
    ],
    "labels": null,
-   "explain": "Chemical → kinetic → gravitational potential → kinetic. Some energy is dissipated to the surroundings by air resistance."
+   "explain": "Chemical → kinetic → gravitational potential → kinetic. Some energy is dissipated to the surroundings by air resistance.",
+   "hook": "Muscles → rising → top → falling: **chemical, kinetic, gravitational, kinetic**.",
+   "example": "Throw a ball up in the garden: it slows, pauses for a split second at the top, then speeds up as it falls."
   },
   {
    "id": "science.un.d1",
@@ -1371,7 +1520,9 @@
      "feedback": "The Sun is a star, the closest one to us."
     }
    ],
-   "explain": "The Sun looks biggest and brightest only because it is about 150 million km away; the next nearest star is about 40 trillion km away."
+   "explain": "The Sun looks biggest and brightest only because it is about 150 million km away; the next nearest star is about 40 trillion km away.",
+   "hook": "The Sun is an ordinary star that just lives next door.",
+   "example": "A torch held near you looks brighter than a distant lighthouse: being close makes the Sun look special."
   },
   {
    "id": "science.un.d2",
@@ -1394,7 +1545,9 @@
      "feedback": "It measures distance, not brightness."
     }
    ],
-   "explain": "Light travels about 300 000 km every second, so in a year it goes about 9.5 trillion km."
+   "explain": "Light travels about 300 000 km every second, so in a year it goes about 9.5 trillion km.",
+   "hook": "A light-**year** sounds like time, but it’s a **distance**: how far light goes in a year.",
+   "example": "Looking at the stars is looking back in time: you see light that left them years ago."
   },
   {
    "id": "science.un.galaxy",
@@ -1410,7 +1563,9 @@
    "explain": "The Milky Way contains hundreds of billions of stars. Andromeda is our nearest large neighbouring galaxy.",
    "accept": [
     "milky way"
-   ]
+   ],
+   "hook": "**Galaxy** comes from the Greek for milk, so “Milky Way galaxy” says milk twice!",
+   "example": "From a dark place such as Northumberland or Exmoor you can see the Milky Way as a misty band across the sky."
   },
   {
    "id": "science.un.nearest",
@@ -1423,7 +1578,8 @@
     "the Pole Star",
     "Betelgeuse"
    ],
-   "explain": "Proxima Centauri is about 4.2 light-years away."
+   "explain": "Proxima Centauri is about 4.2 light-years away.",
+   "hook": "**Proxima** is Latin for “nearest”, as in **proximity**."
   },
   {
    "id": "science.un.sunlight",
@@ -1439,7 +1595,8 @@
    "explain": "So when you see the Sun, you see it as it was about 8 minutes ago. (Never look straight at it!)",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Sunlight takes about **8 minutes** to reach us: about as long as hard-boiling an egg."
   },
   {
    "id": "science.un.orbit",
@@ -1452,7 +1609,8 @@
     "the solar wind",
     "friction"
    ],
-   "explain": "The Sun’s gravity pulls on the planets, bending their paths into orbits."
+   "explain": "The Sun’s gravity pulls on the planets, bending their paths into orbits.",
+   "hook": "Gravity is like an invisible string: swing a ball on a string, let go, and it flies off."
   },
   {
    "id": "science.un.solar-eclipse",
@@ -1468,7 +1626,9 @@
    "explain": "In a lunar eclipse, the Earth is between the Sun and the Moon.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Solar**: Moon in the middle, blocking the Sun. **Lunar**: Earth in the middle, shadowing the Moon.",
+   "example": "The UK saw a deep partial solar eclipse on 20 March 2015; the next total one visible here is in 2090."
   },
   {
    "id": "science.un.belt",
@@ -1484,7 +1644,8 @@
    "explain": "Millions of rocky asteroids orbit there.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "The asteroid belt is a rocky fence between the four rocky planets and the four giants."
   },
   {
    "id": "science.un.gas-giants",
@@ -1500,7 +1661,9 @@
    "explain": "Jupiter and Saturn are mostly hydrogen and helium. Uranus and Neptune are “ice giants”.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Jupiter and Saturn: **gas giants**. Uranus and Neptune: **ice giants**.",
+   "example": "Through a small telescope or good binoculars you can spot Saturn’s rings and Jupiter’s moons."
   },
   {
    "id": "science.ec.d1",
@@ -1523,7 +1686,9 @@
      "feedback": "Water matters, but most of the dry mass comes from carbon in carbon dioxide."
     }
    ],
-   "explain": "Photosynthesis: carbon dioxide + water → glucose + oxygen, using light energy. The plant builds itself from that glucose."
+   "explain": "Photosynthesis: carbon dioxide + water → glucose + oxygen, using light energy. The plant builds itself from that glucose.",
+   "hook": "A tree is built mostly from **thin air**: carbon dioxide (plus water).",
+   "example": "Burning a log puts the carbon the tree took from the air back into the air as carbon dioxide."
   },
   {
    "id": "science.ec.d2",
@@ -1546,7 +1711,8 @@
      "feedback": "Arrows are about energy transfer, not size."
     }
    ],
-   "explain": "Arrows always point from the thing eaten to the eater."
+   "explain": "Arrows always point from the thing eaten to the eater.",
+   "hook": "Arrows point to the **eater**: read them as “gives energy to”."
   },
   {
    "id": "science.ec.producer",
@@ -1562,7 +1728,9 @@
    "explain": "Producers make their own food by photosynthesis. Every food chain starts with one.",
    "accept": [
     "producer"
-   ]
+   ],
+   "hook": "**Producers produce** their own food using sunlight.",
+   "example": "Grass in a field, vegetables in a garden and seaweed on a beach are all producers."
   },
   {
    "id": "science.ec.photosynthesis",
@@ -1575,7 +1743,9 @@
     "nitrogen",
     "salt"
    ],
-   "explain": "Photosynthesis releases the oxygen we breathe."
+   "explain": "Photosynthesis releases the oxygen we breathe.",
+   "hook": "**Photo** = light, **synthesis** = making: making food with light.",
+   "example": "Pondweed in sunlight gives off tiny bubbles: that is oxygen from photosynthesis."
   },
   {
    "id": "science.ec.chlorophyll",
@@ -1588,7 +1758,9 @@
     "haemoglobin",
     "cellulose"
    ],
-   "explain": "Chlorophyll is found inside chloroplasts."
+   "explain": "Chlorophyll is found inside chloroplasts.",
+   "hook": "Chloro**phyll** is the green **pigment**; chloro**plasts** are the little packets that hold it.",
+   "example": "Leaves turn yellow and red in autumn as the green chlorophyll breaks down."
   },
   {
    "id": "science.ec.herbivore",
@@ -1601,7 +1773,9 @@
     "omnivore",
     "predator"
    ],
-   "explain": "Rabbits, deer and cows are herbivores."
+   "explain": "Rabbits, deer and cows are herbivores.",
+   "hook": "**Herb**ivores eat plants, **carn**ivores eat meat (as in chilli con **carn**e), **omni**vores eat all.",
+   "example": "Sheep and cows grazing on British hillsides are herbivores."
   },
   {
    "id": "science.ec.decomposer",
@@ -1617,7 +1791,9 @@
    "explain": "Decomposers return nutrients to the soil for plants to use again.",
    "accept": [
     "decomposer"
-   ]
+   ],
+   "hook": "Decomposers are nature’s recyclers, rotting dead things back into nutrients.",
+   "example": "A compost heap, mushrooms on a rotting log and mould on old bread are decomposers at work."
   },
   {
    "id": "science.ec.web",
@@ -1640,7 +1816,8 @@
      "feedback": "Living things in a food web depend on each other (interdependence)."
     }
    ],
-   "explain": "Then, with more mice, the plants and seeds they eat may decrease. Changes ripple through the web."
+   "explain": "Then, with more mice, the plants and seeds they eat may decrease. Changes ripple through the web.",
+   "hook": "Lose a predator and the prey boom; everything in a food web is linked."
   },
   {
    "id": "science.ec.bees",
@@ -1656,7 +1833,9 @@
    "explain": "About a third of the food we eat depends on pollinators.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Bees are flying pollen couriers, carrying pollen from flower to flower.",
+   "example": "Apples, strawberries and blackberries all crop better when bees visit their flowers."
   },
   {
    "id": "science.ec.chain",
@@ -1675,7 +1854,9 @@
     "secondary consumer",
     "tertiary consumer"
    ],
-   "explain": "Energy flows from the producer through each consumer in turn."
+   "explain": "Energy flows from the producer through each consumer in turn.",
+   "hook": "Every food chain starts with a **producer**, then the arrows point to whoever eats it.",
+   "example": "In a seaside rock pool: seaweed → periwinkles → shore crabs → gulls."
   },
   {
    "id": "science.rp.d1",
@@ -1698,7 +1879,9 @@
      "feedback": "Flowers evolved long before people. The colours attract pollinators."
     }
    ],
-   "explain": "Insect-pollinated flowers offer nectar as a reward. Wind-pollinated flowers, like grasses, are small and dull."
+   "explain": "Insect-pollinated flowers offer nectar as a reward. Wind-pollinated flowers, like grasses, are small and dull.",
+   "hook": "Bright colours and sweet scents are adverts saying: “Free nectar here!”",
+   "example": "Bees buzzing round lavender in a summer garden are drinking nectar and carrying pollen."
   },
   {
    "id": "science.rp.petal",
@@ -1711,7 +1894,8 @@
    "explain": "Petals are often brightly coloured to attract insects.",
    "choosePrompt": "Which part is highlighted?",
    "locatePrompt": "Tap the petal.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "Petals are the flower’s **billboard**, advertising nectar to insects."
   },
   {
    "id": "science.rp.sepal",
@@ -1724,7 +1908,9 @@
    "explain": "Sepals protect the flower when it is a bud.",
    "choosePrompt": "Which part is highlighted?",
    "locatePrompt": "Tap the sepal.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "Sepals are the bud’s **protective jacket**: the green leafy bits under the petals.",
+   "example": "The green leafy frill on top of a strawberry is its sepals."
   },
   {
    "id": "science.rp.anther",
@@ -1734,10 +1920,12 @@
    "layer": "features",
    "feature": "anther",
    "answer": "anther",
-   "explain": "The anther makes pollen (the male sex cells). Anther + filament = stamen.",
+   "explain": "The anther makes pollen, which carries the male sex cells. Anther + filament = stamen.",
    "choosePrompt": "Which part is highlighted?",
    "locatePrompt": "Tap the anther.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "The stamen (anther + filament) is the male part: think “sta-**MEN**”.",
+   "example": "Lily anthers drop orange pollen that stains clothes, so florists often snip them off."
   },
   {
    "id": "science.rp.filament",
@@ -1750,7 +1938,8 @@
    "explain": "The filament is the stalk that holds up the anther.",
    "choosePrompt": "Which part is highlighted?",
    "locatePrompt": "Tap the filament.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "Filament = a thin stalk, like the thin glowing filament wire in an old light bulb."
   },
   {
    "id": "science.rp.stigma",
@@ -1763,7 +1952,8 @@
    "explain": "The sticky stigma catches pollen.",
    "choosePrompt": "Which part is highlighted?",
    "locatePrompt": "Tap the stigma.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "The **st**igma is **st**icky, to catch pollen."
   },
   {
    "id": "science.rp.style",
@@ -1776,7 +1966,8 @@
    "explain": "The style connects the stigma to the ovary.",
    "choosePrompt": "Which part is highlighted?",
    "locatePrompt": "Tap the style.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "The style is the neck between stigma and ovary: pollen tubes grow down it."
   },
   {
    "id": "science.rp.ovary",
@@ -1786,10 +1977,12 @@
    "layer": "features",
    "feature": "ovary",
    "answer": "ovary",
-   "explain": "The ovary contains ovules (the female sex cells). Stigma + style + ovary = carpel.",
+   "explain": "The ovary contains ovules, which hold the female sex cells. Stigma + style + ovary = carpel.",
    "choosePrompt": "Which part is highlighted?",
    "locatePrompt": "Tap the ovary.",
-   "namePrompt": "Name the highlighted part."
+   "namePrompt": "Name the highlighted part.",
+   "hook": "After fertilisation the ovary becomes the **fruit** and the ovules become **seeds**.",
+   "example": "A pea pod is a ripened ovary, and the peas inside were its ovules."
   },
   {
    "id": "science.rp.pollination",
@@ -1802,7 +1995,9 @@
     "germination",
     "dispersal"
    ],
-   "explain": "Pollination comes first; fertilisation happens later, when the pollen nucleus joins the ovule nucleus."
+   "explain": "Pollination comes first; fertilisation happens later, when the pollen nucleus joins the ovule nucleus.",
+   "hook": "**P**ollen lands first (**p**ollination); **f**usion of the cells comes later (**f**ertilisation).",
+   "example": "Hay fever is caused by wind-pollinated plants, like grasses, releasing clouds of pollen."
   },
   {
    "id": "science.rp.sycamore",
@@ -1815,7 +2010,9 @@
     "by water",
     "by exploding pods"
    ],
-   "explain": "Spinning slows their fall, so the wind carries them further from the parent tree."
+   "explain": "Spinning slows their fall, so the wind carries them further from the parent tree.",
+   "hook": "Sycamore seeds are **helicopters**: their spinning wings ride the wind.",
+   "example": "Drop a sycamore seed from a step in autumn and watch it twirl away."
   },
   {
    "id": "science.rp.burdock",
@@ -1831,7 +2028,9 @@
    "explain": "Velcro was invented after an engineer studied burdock burrs!",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Hooked seeds are **hitchhikers**, catching a lift on animal fur.",
+   "example": "Burrs stuck in a dog’s fur or on your socks after a country walk are hitchhiking seeds."
   },
   {
    "id": "science.rp.gametes",
@@ -1847,7 +2046,8 @@
    "explain": "Fertilisation happens when a sperm cell joins with an egg cell.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Plants: pollen meets ovule. Humans: sperm meets egg. Same idea, different names."
   },
   {
    "id": "science.rp.gestation",
@@ -1863,7 +2063,8 @@
    "explain": "This time is called gestation.",
    "formats": [
     "choice"
-   ]
+   ],
+   "example": "Different animals take different times: an elephant carries its baby for nearly two years."
   },
   {
    "id": "science.rp.placenta",
@@ -1879,7 +2080,9 @@
    "explain": "The placenta is joined to the baby by the umbilical cord.",
    "accept": [
     "placenta"
-   ]
+   ],
+   "hook": "The placenta is the baby’s **lifeline**: food and oxygen in, waste out, through the umbilical cord.",
+   "example": "Your belly button is where your umbilical cord was once attached."
   },
   {
    "id": "science.wk.variables",
@@ -1895,7 +2098,8 @@
     -0.8,
     -0.3,
     0.3
-   ]
+   ],
+   "hook": "**Cows Moo Softly**: **C**hange one thing, **M**easure one thing, keep everything else the **S**ame."
   },
   {
    "id": "science.wk.mean",
@@ -1911,7 +2115,9 @@
     -0.6,
     0.2,
     0.6
-   ]
+   ],
+   "hook": "Mean: **add them all up, then divide by how many** there are.",
+   "example": "Your average score across five spelling tests is a mean."
   },
   {
    "id": "science.wk.accurate",
@@ -1924,7 +2130,9 @@
     "anomalous",
     "repeatable only"
    ],
-   "explain": "Accurate = close to the true value. Precise = repeat readings are close to each other."
+   "explain": "Accurate = close to the true value. Precise = repeat readings are close to each other.",
+   "hook": "**A**ccurate = **A**t the target (the true value).",
+   "example": "Darts all in the bullseye are accurate; darts all clumped together somewhere else are precise but not accurate."
   },
   {
    "id": "science.wk.precise",
@@ -1937,7 +2145,9 @@
     "anomalous",
     "biased"
    ],
-   "explain": "Readings can be precise but not accurate, for example if a scale always reads 2 g too high."
+   "explain": "Readings can be precise but not accurate, for example if a scale always reads 2 g too high.",
+   "hook": "**P**recise = readings **P**acked closely together.",
+   "example": "Kitchen scales that always read 2 g too high give precise but inaccurate results."
   },
   {
    "id": "science.wk.anomaly",
@@ -1955,7 +2165,9 @@
     "an anomaly",
     "anomaly",
     "an anomalous result"
-   ]
+   ],
+   "hook": "An anomaly is the **odd one out** that doesn’t fit the pattern.",
+   "example": "In a set of sprint times, one much slower time might be the race when the runner tripped."
   },
   {
    "id": "science.wk.linegraph",
@@ -1971,7 +2183,9 @@
    "explain": "Use a bar chart when the independent variable is in categories, such as types of material.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Numbers on both axes? **Line graph**. Categories (names)? **Bar chart**.",
+   "example": "Weather apps show the temperature through the day as a line graph."
   },
   {
    "id": "science.wk.repeat",
@@ -1987,7 +2201,8 @@
    "explain": "Repeats show whether results are consistent.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "Once could be luck; repeats show whether there is a real pattern."
   },
   {
    "id": "science.wk.hypothesis",
@@ -2000,7 +2215,8 @@
     "variable",
     "method"
    ],
-   "explain": "For example: “Sugar dissolves faster in warmer water because the particles move faster.”"
+   "explain": "For example: “Sugar dissolves faster in warmer water because the particles move faster.”",
+   "hook": "A hypothesis is a **testable** idea with a reason: “I think… because…”"
   }
  ]
 }
