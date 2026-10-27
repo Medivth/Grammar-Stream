@@ -95,7 +95,7 @@ const MEMORY = {
   // development
   'dv.d1': { hook: 'One number can mislead; several numbers pointing the same way tell the story.' },
   'dv.infant': { hook: 'Per 1,000 to per cent: divide by 10. So 70 per 1,000 = 7%.' },
-  'dv.life': { hook: 'A long life needs clean water, food, doctors and peace.', example: 'Life expectancy is about 81 in the UK but under 55 in Chad.' },
+  'dv.life': { hook: 'A long life needs clean water, food, doctors and peace.', example: 'Life expectancy is about 81 in the UK but only about 55 in Chad.' },
   'dv.hdi': { hook: 'The HDI mixes three things: a long life, years at school and income.', example: 'The UK is usually in the top 20; Norway and Switzerland are near the very top.' },
   'dv.gdp': { hook: 'Per capita means “per head” (Latin “caput”, head).', example: 'Tiny Luxembourg has one of the highest GDPs per person in the world.' },
   'dv.lic': { hook: 'LIC, NEE, HIC: low, emerging, high.', example: 'Ethiopia is an LIC; Brazil and India are NEEs; the UK is an HIC.' },
@@ -106,7 +106,7 @@ const MEMORY = {
   'ws.low': { hook: 'Low is lousy: air rises, cools and makes cloud and rain.', example: 'Named storms, like Storm Arwen in 2021, are deep depressions.' },
   'ws.high': { hook: 'High is happy: sinking air, clear skies, sunny days and frosty nights.', example: 'A crisp, sunny winter morning with frost on the cars usually means a high is sitting over the UK.' },
   'ws.front': { hook: 'Warm front: long, steady rain. Cold front: short, sharp showers.', example: 'On TV weather maps, red semicircles mark a warm front and blue triangles a cold front.' },
-  'ws.isobar': { hook: 'Iso means “equal”, bar means “pressure” (as in barometer).', example: 'On the Met Office pressure chart, isobars are labelled in millibars, such as 1000 mb.' },
+  'ws.isobar': { hook: 'Iso means “equal”; bar comes from the Greek for “weight”, as in barometer: lines of equal pressure.', example: 'On the Met Office pressure chart, isobars are labelled in millibars, such as 1000 mb.' },
   'ws.wind': { hook: 'Squashed isobars, strong winds; wide gaps, gentle breezes.' },
   'ws.uk': { hook: 'The UK sits on the battle line between cold polar air and warm tropical air.' },
   'ws.prevailing': { hook: 'South-west wind, wet west: it picks up moisture crossing the Atlantic.', example: 'On exposed hills in Cornwall, trees grow bent over towards the north-east, pushed by the wind.' },

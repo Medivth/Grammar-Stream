@@ -134,7 +134,7 @@ const MEMORY = {
 
   // --- light
   'l.d1': { hook: '**Source → Object → Eye**: light travels into your eyes, never out of them.', example: 'In a room with no windows and the light off, you can’t see a thing, because no light is bouncing into your eyes.' },
-  'l.d2': { hook: 'A shadow is a light-shaped hole: the place where straight-line light is blocked.', example: 'Make shadow-puppet animals with your hands in front of a torch shining on a wall.' },
+  'l.d2': { hook: 'A shadow is an object-shaped gap in the light, where straight-line light is blocked.', example: 'Make shadow-puppet animals with your hands in front of a torch shining on a wall.' },
   'l.straight': { hook: 'Light can’t turn corners: you can hear someone round a corner, but you can’t see them.', example: 'Sunbeams through a gap in the curtains, or through clouds, make straight lines like a ruler.' },
   'l.opaque': { hook: '**O**paque: “**O**h no, nothing gets through!”', example: 'Blackout curtains are opaque, which is why they keep a bedroom dark on light summer evenings.' },
   'l.translucent': { hook: 'Transparent = see-through. Translucent = light gets through, but the view is blurry.', example: 'A frosted bathroom window lets light in but stops people seeing in.' },

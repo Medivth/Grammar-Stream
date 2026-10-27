@@ -113,8 +113,8 @@ const items = [
 const topicHooks = {
   'history.words': '**BC** counts down towards year 1, **AD** counts up from it. There is no year 0: 1 BC is followed straight by AD 1.',
   'history.century': 'Add one to the hundreds: 1666 → 16 + 1 = **17th** century. A year ending in 00 belongs to the century that is just finishing.',
-  'history.timeline': '“Willie, Willie, Harry, Stee, Harry, Dick, John, Harry three…”: the old rhyme that lists every monarch since 1066, in order.',
-  'history.ancient': 'Civilisations are born by rivers: **Nile** (Egypt), **Tigris and Euphrates** (Mesopotamia), **Indus** (India), **Yellow River** (China).',
+  'history.timeline': '“Willie, Willie, Harry, Stee, Harry, Dick, John, Harry three…”: the old rhyme that lists England’s monarchs since 1066, in order.',
+  'history.ancient': 'Civilisations are born by rivers: **Nile** (Egypt), **Tigris and Euphrates** (Mesopotamia), **Indus** (Pakistan), **Yellow River** (China).',
   'history.world': 'Books, maths and brass: Baghdad’s **House of Wisdom**, the **Maya** zero and the **Benin** Bronzes.',
   'history.1066': '1066: the year of **three kings** (Edward, Harold, William) and **three battles** (Fulford, Stamford Bridge, Hastings).',
   'history.normans': 'William’s toolkit: **castles** to frighten, the **feudal system** to bind everyone to the king, **Domesday** to count it all.',
@@ -159,21 +159,21 @@ const memory = {
   // ancient
   'a.egypt-river': { hook: '“Egypt is the gift of the Nile”: the Greek writer Herodotus.', example: 'Egyptian mummies and coffins can be seen in the British Museum in London.' },
   'a.mesopotamia': { hook: '**Meso** = middle, **potamos** = river: the land in the middle of the rivers. **T**igris and **E**uphrates: **T**wo **E**normous rivers.', example: 'Our 60-minute hour and 360° circle come from Mesopotamian counting in 60s.' },
-  'a.indus': { hook: '**Indus** → **India**: the river gave the country its name.', example: 'Mohenjo-daro had covered drains about 4500 years ago, thousands of years before London had sewers.' },
+  'a.indus': { hook: '**Indus** → **India**: the river gave the country its name.', example: 'Mohenjo-daro, now in Pakistan, had covered drains about 4500 years ago, thousands of years before London had sewers.' },
   'a.shang': { hook: 'Shang priests heated **oracle bones** until they cracked, then read the cracks as the gods’ answers.', example: 'Some Chinese characters still look like their Shang ancestors, such as 人 (person) and 日 (sun).' },
   'a.hieroglyphs': { hook: '**Hiero** = holy, **glyph** = carving: hieroglyphs are “holy carvings”.', example: 'The Rosetta Stone, the key to reading hieroglyphs, is in the British Museum in London.' },
   'a.democracy': { hook: '**Demos** = people, **kratos** = power: democracy is “people power”.', example: 'Every UK general election, when adults vote for their MP, uses the idea Athens began.' },
   'a.sparta': { hook: 'We still call something plain and tough “**spartan**”, after Sparta.', example: 'A bare room with hardly any furniture is still described as “spartan”.' },
   'a.olympics': { hook: '**776 BC**: the Olympics are older than Rome, which legend says was founded in 753 BC.', example: 'London has hosted the modern Olympic Games three times: 1908, 1948 and 2012.' },
   'a.marathon': { hook: 'The marathon race is named after the legend of a runner carrying news of the victory to Athens.', example: 'The London Marathon, run every year, is 26.2 miles long.' },
-  'a.greek-gift': { hook: '**Alphabet** = alpha + beta, the first two Greek letters.', example: 'The front of the British Museum copies the columns of an ancient Greek temple.' },
+  'a.greek-gift': { hook: 'The first Olympic Games were held at Olympia in Greece in 776 BC, in honour of the god Zeus.', example: 'The front of the British Museum copies the columns of an ancient Greek temple.' },
 
   // world
-  'wo.baghdad': { hook: 'The **House of Wisdom**: a giant library where scholars translated books from Greek, Persian and Indian.', example: 'Our digits 0 to 9 reached Europe through scholars in the Islamic world, which is why we call them Arabic numerals.' },
+  'wo.baghdad': { hook: 'The **House of Wisdom**: a giant library where scholars translated books from Greek, Persian and Sanskrit.', example: 'Our digits 0 to 9 reached Europe through scholars in the Islamic world, which is why we call them Arabic numerals.' },
   'wo.algebra': { hook: 'His book “al-jabr” → **algebra**; his name, al-Khwarizmi → **algorithm**.', example: 'Every computer and app runs on algorithms: a word named after al-Khwarizmi.' },
   'wo.baghdad-round': { hook: 'Picture a giant coin: the Round City had the caliph’s palace and great mosque in the very centre.' },
   'wo.maya-where': { hook: '**M**aya, **M**exico: southern Mexico, Guatemala and Belize, in Central America.', example: 'Maya pyramids, such as those at Chichén Itzá in Mexico, are visited by millions of people every year.' },
-  'wo.maya-zero': { hook: 'The Maya zero looked like a shell: an empty shell means nothing.', example: 'Without a zero you could not write 10, 100 or 2026: every calculator depends on it.' },
+  'wo.maya-zero': { hook: 'The Maya zero looked like a shell: an empty shell means nothing.', example: 'The Maya invented zero on their own; the zero we use in 10, 100 or 2026 came from India, through scholars in Baghdad.' },
   'wo.maya-writing': { hook: 'Glyphs, like Egyptian hiero**glyphs**: picture-signs carved in stone.', example: 'The Dresden Codex, one of the few Maya folding books to survive, is kept in a library in Dresden, Germany.' },
   'wo.benin-where': { hook: 'The Kingdom of Benin is **N**ot in Benin: it was in **N**igeria.', example: 'Benin City is still a large city in southern Nigeria, in West Africa.' },
   'wo.benin-bronzes': { hook: '**B**enin **B**ronzes: many are really made of **b**rass.', example: 'Benin Bronzes are in the British Museum; some museums have now returned theirs to Nigeria.' },
@@ -181,13 +181,13 @@ const memory = {
 
   // 1066
   '1066.d1': { hook: 'No child, no clear heir: so a crowd of claimants, Harold, William, Harald and Edgar.', example: 'Edward the Confessor rebuilt Westminster Abbey and is buried there; monarchs are still crowned in it.' },
-  '1066.d2': { hook: '**W** for **W**illiam, **W** for **W**inner: he became William the Conqueror.', example: 'The Bayeux Tapestry, about 70 metres long, tells the story. Its home is a museum in Bayeux, Normandy.' },
+  '1066.d2': { hook: '**W** for **W**illiam, **W** for **W**inner: he became William the Conqueror.', example: 'The Bayeux Tapestry, about 70 metres long, tells the story. Its usual home is a museum in Bayeux, Normandy.' },
   '1066.claimants': { hook: 'Harold was hasty: crowned the very **next day**, 6 January 1066.', example: 'Waltham Abbey in Essex claims to be Harold’s burial place; a stone marks the spot.' },
   '1066.hardrada': { hook: '“Hardrada” means roughly “hard ruler” in Old Norse: Norway’s tough Viking king.' },
   '1066.stamford': { hook: 'Stamford Bridge is often called the **end of the Viking Age** in England.', example: 'Stamford Bridge is a real village east of York, with a memorial to the battle.' },
   '1066.fulford': { hook: '“**F**ish **S**wim **H**ome”: **F**ulford, **S**tamford Bridge, **H**astings, the three battles in order.' },
   '1066.date': { hook: 'Hastings 14/10/1066, then a **Christmas Day** coronation for William: 25/12/1066.', example: 'Battle Abbey marks where Harold fell; re-enactments of the battle are often held there in October.' },
-  '1066.edgar': { hook: '**Ætheling** means “prince”: Edgar was the royal boy hardly anyone backed.' },
+  '1066.edgar': { hook: '**Ætheling** means “prince”: Edgar was passed over for Harold, then named king after Hastings, but never crowned.' },
   '1066.source': { hook: 'Ask **who made it, and why**: a Norman-made tapestry shows the Norman side.', example: 'A full-size Victorian copy of the Bayeux Tapestry is on show in Reading Museum.' },
 
   // Normans

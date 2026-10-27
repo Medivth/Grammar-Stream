@@ -119,10 +119,10 @@ export function recentForm(state, today) {
   return recent.length >= 20 ? recent.filter((e) => e[3]).length / recent.length : null;
 }
 
-/** Extra new questions per topic batch when she is flying, none when she is not. */
+/** Extra new questions per topic batch when she is flying; one fewer while she is struggling. */
 export function rampBonus(state, today) {
   const f = recentForm(state, today);
-  return f == null ? 0 : f >= 0.92 ? 2 : f >= 0.85 ? 1 : 0;
+  return f == null ? 0 : f >= 0.92 ? 2 : f >= 0.85 ? 1 : f < 0.7 ? -1 : 0;
 }
 
 /**
@@ -153,10 +153,12 @@ export function topicChoices(state, db, subject) {
     const hasTemplates = templatesOf(db, tid).length > 0;
     if (st === 'available') fresh.push(tid);
     else if (st === 'learning' && (hasNewFacts || hasTemplates)) continuing.push(tid);
-    // secure, but with questions still to teach: carry on with it too
-    else if (st === 'proficient' && hasNewFacts) unfinished.push(tid);
+    // secure (or marked mastered under the old rules) but with questions still to teach:
+    // carry on with it too. Last year's course (after moving up) is left to the top-ups.
+    else if ((st === 'proficient' || st === 'mastered') && hasNewFacts && (!COURSE.prev || t.deck?.startsWith(COURSE.id))) unfinished.push(tid);
   }
-  continuing.push(...unfinished);
+  // at most one of the two "carry on" places goes to finishing a secure topic
+  continuing.push(...unfinished.slice(0, continuing.length < 2 ? 1 : 0));
   // Topics in a strand (phonics) take turns with the rest, starting with whichever has less
   // under way; after moving up, this year's new topics alternate with any left from last year.
   const strand = (tid) => db.topics[tid].strand || '';
@@ -348,9 +350,9 @@ export function chooseTopic(state, db, topicId, today) {
     for (let i = 0; i < b.practice; i++) steps.push({ t: 'practice', id: t0, level: firstTime && i === 0 ? db.items[t0].levels[0] : undefined });
   }
   if (fresh.length && (!tmpl.length || topic.kind !== 'skill')) {
-    const bonus = Math.min(rampBonus(state, today), COURSE.young ? 1 : 2);
+    const bonus = rampBonus(state, today);
     // a bigger batch when she is flying, but never more than today's time allows
-    const batch = fresh.slice(0, Math.min((topic.batch || b.newFacts) + bonus, plan.perTopic || Infinity));
+    const batch = fresh.slice(0, Math.max(3, Math.min((topic.batch || b.newFacts) + bonus, plan.perTopic || Infinity)));
     // reading comprehension: answer from the passage straight away, no learn card, in the author's order
     if (topic.kind === 'reading') batch.forEach((id) => steps.push({ t: 'quiz', id }));
     else for (let i = 0; i < batch.length; i += 3) {

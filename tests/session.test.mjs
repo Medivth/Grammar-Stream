@@ -55,14 +55,15 @@ function runDay(state, today, rng, { pRight = null } = {}) {
     if (['review', 'quiz', 'diag', 'practice', 'faded'].includes(step.t)) {
       const q = questionFor(state, db, step, plan.pos);
       const item = db.items[step.id];
-      const plainReview = step.t === 'review' && !step.reask;
-      if (plainReview && item.topic === prevTopic) consecutive++;
-      prevTopic = plainReview ? item.topic : null;
       const c = state.cards[step.id];
       const p = pRight ?? (c && c.state !== 'new' ? fsrsFor(item.subject).retrievability(c.s, today - c.lastDay) : 0.7);
       const right = rng.chance(p);
       const resp = right ? correctResponse(q) : wrongResponse(q);
+      // no wrong option to pick (every choice earns credit): try this step again, uncounted
       if (q.kind === 'choice' && !right && resp < 0) continue;
+      const plainReview = step.t === 'review' && !step.reask;
+      if (plainReview && item.topic === prevTopic) consecutive++;
+      prevTopic = plainReview ? item.topic : null;
       submit(state, db, step, q, resp, { ms: 5000, conf: rng.pick([0, 1, 2]), now: today * 864e5 + plan.pos, today });
       graded++;
     }

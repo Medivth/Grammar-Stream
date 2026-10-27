@@ -48,7 +48,7 @@ const items = [
 
   // --- literary words
   ...[
-    ['protagonist', 'the main character in a story', 'Harry is the protagonist of the Harry Potter books.'],
+    ['protagonist', 'the main character in a story', 'Jim Hawkins is the protagonist of Treasure Island.'],
     ['antagonist', 'the character who works against the main character', 'The Wicked Witch is the antagonist in The Wizard of Oz.'],
     ['narrator', 'the voice telling the story', 'In Treasure Island the narrator is Jim Hawkins.'],
     ['foreshadowing', 'hints about what will happen later in a story', 'The broken mirror in chapter one is foreshadowing.'],
@@ -208,7 +208,7 @@ const MEMORY = {
   'gr7.compound': { hook: 'FANBOYS: for, and, nor, but, or, yet, so, the coordinating conjunctions that join two main clauses.' },
   'gr7.fragment': { example: 'Film posters and adverts love minor sentences: “Coming soon.” “Simply delicious.”' },
   'lw.protagonist': { hook: 'Proto = first: the protagonist is the first, main character.' },
-  'lw.antagonist': { hook: 'Anti = against: the antagonist works against the hero.', example: 'Darth Vader is the antagonist of the first Star Wars films.' },
+  'lw.antagonist': { hook: 'Anti = against: the antagonist works against the hero.', example: 'The Big Bad Wolf is the antagonist in “The Three Little Pigs”.' },
   'lw.foreshadowing': { hook: 'Fore-shadowing: a shadow cast before the event arrives.', example: 'In films, spooky music before the shark appears is foreshadowing.' },
   'lw.symbolism': { example: 'A red rose stands for love; a white flag stands for surrender.' },
   'lw.connotation': { hook: 'Connotations come WITH a word: “home” comes with warmth; “house” is just a building.', example: 'Food labels say “home-made”, not “made in a factory”, for the cosy connotations.' },
@@ -249,7 +249,7 @@ const MEMORY = {
   'pm.railway': { example: 'Read it aloud and say “clickety-clack” under your breath: the rhythm copies a train on the tracks.' },
   'pm.compare': { hook: 'Comparison words: whereas, similarly, in contrast, both, however.' },
   'sh.born': { hook: '’64 to ’16: Shakespeare was born and died in Stratford-upon-Avon (1564–1616).' },
-  'sh.globe': { hook: 'The Globe was a round theatre, and in one of his plays “All the world’s a stage”.' },
+  'sh.globe': { hook: 'The Globe was round like the world, and in As You Like It Shakespeare wrote “All the world’s a stage”.' },
   'sh.groundlings': { hook: 'Groundlings stood on the ground in the yard, for a penny.', example: 'Shakespeare’s Globe in London still sells cheap standing tickets in the yard today.' },
   'sh.actors': { example: 'Imagine it: when Viola in Twelfth Night disguises herself as a boy, it was a boy playing a girl playing a boy!' },
   'sh.soliloquy': { hook: 'Soliloquy sounds like “solo”: alone on stage, thinking aloud.' },

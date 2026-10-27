@@ -97,7 +97,7 @@ const memory = {
   'cw.gunpowder': { hook: '“Remember, remember the fifth of November, gunpowder, treason and plot.”', example: 'Before every State Opening of Parliament, guards still search the cellars because of the 1605 plot.' },
   'cw.causes': { hook: '**Money, religion, power**: and Charles ruled with no Parliament for 11 years (1629–40).' },
   'cw.divine': { hook: '**Divine** = from God: “God chose the king, so only God can judge him.”' },
-  'cw.start': { hook: 'War **1642**, king executed **1649**: seven years from the first battle to the king’s trial.', example: 'Standard Hill, a street in Nottingham, is named after the spot where Charles raised his standard in 1642.' },
+  'cw.start': { hook: 'War **1642**, king executed **1649**: seven years from the start of the war to the king’s execution.', example: 'Standard Hill, a street in Nottingham, is named after the spot where Charles raised his standard in 1642.' },
   'cw.sides': { hook: '**Round**heads had short, round haircuts; **Cavaliers** (from an old word for horseman) wore long curls.' },
   'cw.naseby': { hook: '**N** for **N**: **N**aseby was the **N**ew Model Army’s great win.' },
   'cw.cromwell': { hook: 'Cromwell refused the crown, but as **Lord Protector** he ruled almost like a king.', example: 'A statue of Oliver Cromwell stands outside the Houses of Parliament in London.' },

@@ -152,8 +152,8 @@ const MEMORY = {
 
   // lines on the globe
   'l.equator': { hook: 'The Equator divides the Earth into two EQUAL halves.', example: 'It runs through Ecuador (named after it), the Amazon in Brazil, Kenya and Indonesia.' },
-  'l.cancer': { hook: 'CaNcer has an N for North; CapriCORN has a corn on its foot, down at the bottom.', example: 'It passes through Mexico, the Sahara, Egypt near Aswan, and India.' },
-  'l.capricorn': { hook: 'CaNcer has an N for North; CapriCORN has a corn on its foot, down at the bottom.', example: 'It runs through Brazil (right by São Paulo), southern Madagascar and the middle of Australia.' },
+  'l.cancer': { hook: 'Alphabet order, top to bottom: CaN comes before CaP, so Cancer is north and Capricorn is south.', example: 'It passes through Mexico, the Sahara, Egypt near Aswan, and India.' },
+  'l.capricorn': { hook: 'Alphabet order, top to bottom: CaN comes before CaP, so Cancer is north and Capricorn is south.', example: 'It runs through Brazil (right by São Paulo), southern Madagascar and the middle of Australia.' },
   'l.arctic': { hook: 'Inside the Arctic Circle is the land of the midnight Sun: in midsummer it shines all night.', example: 'It crosses Lapland in northern Norway, Sweden and Finland, as well as Russia, Alaska, Canada and Greenland.' },
   'l.antarctic': { hook: 'Antarctic = anti-Arctic: the same circle, mirrored in the south.', example: 'Almost all of Antarctica lies inside it; around 21 June the Sun does not rise there at all.' },
   'l.greenwich': { hook: 'Greenwich Mean Time (GMT) is measured from this line: 0° is where world time begins.', example: 'At the Royal Observatory in Greenwich you can stand with one foot in the eastern and one in the western hemisphere.' },

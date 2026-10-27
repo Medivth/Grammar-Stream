@@ -124,3 +124,13 @@ test('Year 6 has memory hooks: every topic in the five core subjects, and most q
   }
   for (const i of Object.values(db.items)) for (const k of ['hook', 'example']) if (i[k]) assert.ok(!/\{[a-z]+\}|undefined/.test(i[k]) && !/['"]/.test(i[k].replace(/\*\*/g, '')), `${i.id} ${k}: ${i[k]}`);
 });
+
+test('no trademarked characters anywhere in any course, hooks and examples included', () => {
+  const banned = /\b(Mickey Mouse|Minnie Mouse|Donald Duck|Peppa Pig|Darth Vader|Star Wars|Skywalker|Yoda|Lion King|Simba|Spider-Man|Avengers|Marvel|Pixar|Buzz Lightyear|Paw Patrol|Harry Potter|Hogwarts)\b/;
+  for (const idx of ['index.json', 'index-ks1.json', 'index-y3.json', 'index-y8.json']) {
+    for (const p of read(idx).decks.filter((p) => !p.endsWith('/books.json'))) {
+      const d = read(p);
+      for (const x of [...(d.items || []), ...(d.topics || [])]) assert.ok(!banned.test(JSON.stringify(x)), `${p} ${x.id}: ${JSON.stringify(x).match(banned)?.[0]}`);
+    }
+  }
+});

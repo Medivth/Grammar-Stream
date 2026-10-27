@@ -161,12 +161,12 @@ const memory = {
   'bd.d1': { hook: 'Bacteria in **fleas**, fleas on **rats**: the plague travelled by flea bite. Doctors then blamed bad air and the planets.' },
   'bd.year': { hook: '“Thirteen-forty-eight, the plague came through the gate.”' },
   'bd.flagellants': { hook: '**Flag**ellants **flog**ged themselves: flagellum is Latin for whip.' },
-  'bd.miasma': { hook: '**Miasma** = a “mist” of bad air, so people carried posies of sweet-smelling herbs to block it.', example: 'Beaked plague-doctor masks (from a later century) were stuffed with herbs to keep out miasma.' },
+  'bd.miasma': { hook: '**Miasma** is Greek for “pollution”: foul, misty air, so people carried posies of sweet herbs to block it.', example: 'Beaked plague-doctor masks (from a later century) were stuffed with herbs to keep out miasma.' },
   'bd.consequence': { hook: 'Fewer workers = each worker worth more. Scarce things cost more.', example: 'Today too, when employers cannot find enough workers, wages tend to rise.' },
   'bd.statute': { hook: 'A **stat**ute to keep wages **stat**ic: 1351, just three years after the plague arrived.' },
 
   // Peasants' Revolt
-  'pr.year': { hook: '“Thirteen-eighty-one, the peasants’ march begun.”', example: 'The rebels camped at Blackheath, in south-east London, where John Ball preached to them.' },
+  'pr.year': { hook: '“In thirteen-eighty-one, the peasants’ revolt had begun.”', example: 'The rebels camped at Blackheath, in south-east London, where John Ball preached to them.' },
   'pr.tax': { hook: '**Poll** is an old word for **head**: a tax on every head, the same for rich and poor.', example: 'A new “poll tax” in 1990 also caused huge protests: history echoing 1381.' },
   'pr.tyler': { hook: '**Wat led, Ball preached**: Wat Tyler was the leader, John Ball the preacher.', example: 'Smithfield in London, where Tyler met the king, has been home to a famous meat market for centuries.' },
   'pr.ball': { hook: '“Delved” = dug, “span” = spun wool: when the first people worked the land, nobody was a lord.' },
@@ -180,15 +180,15 @@ const memory = {
   'wf.agincourt': { hook: '“We few, we happy few, we band of brothers”: Shakespeare’s Henry V before Agincourt.', example: 'Shakespeare’s play Henry V is still performed, with the famous St Crispin’s Day speech.' },
   'wf.joan': { hook: 'Joan of Arc, the **Maid of Orléans**: she helped end the siege of Orléans at about 17.', example: 'Joan was made a saint in 1920; statues of her stand all over France.' },
   'wf.calais': { hook: 'Calais was lost in 1558. Mary I is said to have claimed “Calais” would be found written on her heart.', example: 'Ferries from Dover still sail to Calais, the closest French port to England.' },
-  'wf.roses': { hook: '**Red** rose = **L**ancashire, **white** rose = **Y**orkshire: still the two counties’ symbols.', example: 'Look for the white rose on Yorkshire signs and the red rose on Lancashire’s.' },
+  'wf.roses': { hook: '**Red** rose = House of **L**ancaster, **white** rose = House of **Y**ork: Lancashire and Yorkshire still use them.', example: 'Look for the white rose on Yorkshire signs and the red rose on Lancashire’s.' },
   'wf.princes': { hook: 'Richard III, uncle of the Princes in the Tower: a mystery that has stuck to his name for 500 years.' },
-  'wf.bosworth': { hook: 'Richard III lost his crown at Bosworth in 1485: “Richard Of York Gave Battle In Vain” (the rainbow rhyme) is often linked to him.', example: 'Richard III was reburied in Leicester Cathedral in 2015; Bosworth battlefield has a visitor centre.' },
+  'wf.bosworth': { hook: 'Henry Tudor beat Richard III at Bosworth in 1485 and was crowned Henry VII, the first Tudor king.', example: 'Richard III was reburied in Leicester Cathedral in 2015; Bosworth battlefield has a visitor centre.' },
   'wf.tudor-rose': { hook: 'Red + white = the Tudor rose: Henry (Lancaster) married Elizabeth (York) and joined the two roses.', example: 'The Tudor rose is still a royal badge: you can spot it carved all over Hampton Court Palace.' },
 
   // Tudors
   'td.henry8': { hook: '“Divorced, beheaded, died; divorced, beheaded, survived”: six fates, six wives.', example: 'Henry’s warship the Mary Rose is in Portsmouth, and his suits of armour are in the Tower of London.' },
   'td.wives': { hook: 'Three Catherines, two Annes, one Jane: **Cath, Anne, Jane, Anne, Cath, Cath**.', example: 'Hever Castle in Kent, Anne Boleyn’s childhood home, can be visited today.' },
-  'td.break': { hook: 'No son → no annulment → no Pope: Henry made himself head of his own Church.', example: 'The monarch is still Supreme Governor of the Church of England today.' },
+  'td.break': { hook: 'No son → Henry wants an annulment → the Pope says no → Henry makes himself head of his own Church.', example: 'The monarch is still Supreme Governor of the Church of England today.' },
   'td.supremacy': { hook: '**Supreme** = the very top. **1534** came just after Henry married Anne Boleyn in 1533.' },
   'td.dissolution': { hook: '**Dissolve** = melt away: like sugar in tea, the monasteries vanished.', example: 'Many streets named Abbey Road or Priory Lane mark where a monastery once stood.' },
   'td.edward': { hook: '“**Ned the lad**”: the boy-king Edward VI in the old monarchs rhyme.', example: 'Many old grammar schools are called “King Edward VI School” because they were founded or refounded in his reign.' },
