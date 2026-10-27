@@ -45,6 +45,15 @@ const DECL3B = [
   ['βασιλεύς', 'm', 'king', 'βασιλέως', ['βασιλεύς', 'βασιλέα', 'βασιλέως', 'βασιλεῖ'], null],
 ];
 
+// nouns whose stem is not simply the genitive without -ος
+const STEM_NOTE = {
+  πόλις: 'πόλις changes its stem: πολι- in the nominative and accusative singular, πολε- everywhere else (genitive πόλεως).',
+  πατήρ: 'πατήρ uses the stem πατερ- in most cases, but πατρ- in the genitive and dative singular (πατρός, πατρί) and πατρα- in the dative plural.',
+  μήτηρ: 'μήτηρ uses the stem μητερ- in most cases, but μητρ- in the genitive and dative singular (μητρός, μητρί) and μητρα- in the dative plural.',
+  βασιλεύς: 'βασιλεύς has the stem βασιλε- (genitive βασιλέως, with -ως not -ος).',
+};
+const stemStep = (lemma, gen) => STEM_NOTE[lemma] || `Find the stem from the genitive: ${gen} minus -ος.`;
+
 function slotsOf(noun) {
   const all = [...noun[4], ...(noun[5] || [])];
   const out = [];
@@ -63,7 +72,7 @@ function decl3Drill(list, level, rng) {
     const wrongs = rng.shuffle([...noun[4], ...(noun[5] || [])].filter((f) => f !== right));
     return choice(`Which is the **${CASES[c]} ${num}** of **${lemma}** (genitive ${gen}, “${meaning}”)?`, right, wrongs, rng, {
       explain: `${entry}. Its ${CASES[c]} ${num} is ${grave(ART[g][num === 'singular' ? 'sg' : 'pl'][c])} ${right}, used for ${CASE_USE[CASES[c]]}.`,
-      steps: [`Find the stem from the genitive: ${gen} minus -ος.`, `Add the third-declension ${CASES[c]} ${num} ending.`, `So: ${right}.`],
+      steps: [stemStep(lemma, gen), `Add the third-declension ${CASES[c]} ${num} ending.`, `So: ${right}.`],
     });
   }
   const slots = slotsOf(noun).filter((s) => level === 2 || s.num === 'singular').filter((s) => !(level === 1 && s.c === 0));
@@ -73,7 +82,7 @@ function decl3Drill(list, level, rng) {
   const wrongs = level === 1 ? CASES.filter((x) => x !== right) : rng.shuffle(CASES.flatMap((c) => ['singular', 'plural'].map((n) => `${c} ${n}`))).filter((x) => x !== right);
   return choice(`**${s.form}** (from ${lemma}, ${gen}: “${meaning}”). Which ${level === 1 ? 'case' : 'case and number'} is it?`, right, wrongs, rng, {
     explain: `${s.form} is the ${CASES[s.c]} ${s.num} of ${lemma}: ${grave(ART[g][s.num === 'singular' ? 'sg' : 'pl'][s.c])} ${s.form}, used for ${CASE_USE[CASES[s.c]]}.`,
-    steps: [`The stem of ${lemma} is the genitive ${gen} without -ος.`, 'Third-declension endings: singular -α, -ος, -ι; plural -ες, -ας, -ων, -σι(ν).', `${s.form} has the ${CASES[s.c]} ${s.num} ending.`],
+    steps: [STEM_NOTE[lemma] || `The stem of ${lemma} is the genitive ${gen} without -ος.`, 'Third-declension endings: singular -α, -ος, -ι; plural -ες, -ας, -ων, -σι(ν).', `${s.form} has the ${CASES[s.c]} ${s.num} ending.`],
   });
 }
 

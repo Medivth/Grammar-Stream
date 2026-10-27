@@ -117,7 +117,7 @@ const items = [
   fact('w2.ve', 'ww2', 'VE Day was when the war in Europe ended. How did people celebrate?', 'with street parties', ['by going to school', 'by building castles', 'by rationing more'], 'VE Day was 8 May 1945. People danced, sang and shared food in the streets.', C),
 
   // --- firsts
-  fact('fi.wright', 'firsts', 'Which two brothers made the first powered aeroplane flight in 1903?', 'the Wright brothers', ['the Grimm brothers', 'the Mario brothers', 'the Romans'], 'Orville Wright flew for 12 seconds. The plane was called the Flyer.', C),
+  fact('fi.wright', 'firsts', 'Which two brothers made the first powered aeroplane flight in 1903?', 'the Wright brothers', ['the Grimm brothers', 'the Montgolfier brothers', 'the Romans'], 'Orville Wright flew for 12 seconds. The plane was called the Flyer.', C),
   fact('fi.amy', 'firsts', 'Which brave British pilot was the first woman to fly alone from England to Australia, in 1930?', 'Amy Johnson', ['Florence Nightingale', 'Mary Anning', 'Grace Darling'], 'She flew in a small plane called Jason. The trip took 19 days.', { accept: ['amy'] }),
   fact('fi.moon', 'firsts', 'Who was the first person to walk on the Moon?', 'Neil Armstrong', ['Buzz Aldrin', 'Amy Johnson', 'Orville Wright'], 'On 20 July 1969. Buzz Aldrin stepped out next.', { accept: ['armstrong'] }),
   fact('fi.rocket', 'firsts', 'What was the name of a famous early steam train, built by George and Robert Stephenson in 1829?', 'Rocket', ['Spitfire', 'Flyer', 'Thunderbolt'], 'Stephenson’s Rocket won a race to find the best locomotive, at nearly 30 miles per hour!', { accept: ['the rocket', "stephenson's rocket", 'stephenson’s rocket'] }),

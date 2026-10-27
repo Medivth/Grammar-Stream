@@ -161,7 +161,7 @@ export const Y8_GREEK_GENERATORS = {
     if (level === 3 && rng.chance(0.5)) {
       return choice(`Which Greek form means **${eng(i)}**?`, forms[i], rng.shuffle(forms.filter((_, k) => k !== i)), rng, {
         explain: useBe ? `${eng(i)} = ${forms[i]}. εἰμί is irregular, so its forms are learned by heart.` : `${eng(i)} = ${forms[i]}. The ending -${ENDINGS[i]} shows the person: ${PERSON[i]}.`,
-        steps: [`${eng(i)} is ${PERSON[i]} (${i < 3 ? 'singular' : 'plural'}).`, useBe ? 'εἰμί is irregular, so learn it by heart: εἰμί, εἶ, ἐστί(ν), ἐσμέν, ἐστέ, εἰσί(ν).' : `Present endings: -ω, -εις, -ει, -ομεν, -ετε, -ουσι(ν).`, `So: ${forms[i]}.`],
+        steps: [`${eng(i)} is ${PERSON[i]}${PERSON[i].includes('(') ? '' : ` (${i < 3 ? 'singular' : 'plural'})`}.`, useBe ? 'εἰμί is irregular, so learn it by heart: εἰμί, εἶ, ἐστί(ν), ἐσμέν, ἐστέ, εἰσί(ν).' : `Present endings: -ω, -εις, -ει, -ομεν, -ετε, -ουσι(ν).`, `So: ${forms[i]}.`],
       });
     }
     const wrongs = rng.shuffle([0, 1, 2, 3, 4, 5].filter((k) => k !== i)).map(eng);

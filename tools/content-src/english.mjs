@@ -47,12 +47,12 @@ const SPELLINGS = {
     ['parliament', 'Laws are debated in ___.', 'the group that makes a country’s laws', 'Hidden i: par-li-a-ment.'],
     ['soldier', 'The ___ marched across the square.', 'a member of an army', 'di sounds like “j”.'],
     ['stomach', 'My ___ is rumbling.', 'where food goes after you swallow it', 'ch sounds like “k”.'],
-    ['twelfth', 'Today is my ___ birthday.', 'number 12 in order', 'twelve → twelfth: keep the f, add th.'],
+    ['twelfth', 'Today is my ___ birthday.', 'number 12 in order', 'twelve → twelfth: the v becomes f, then add th.'],
     ['thorough', 'Give your room a ___ clean.', 'complete and careful', 'thor + ough (like borough).'],
     ['queue', 'We waited in a long ___.', 'a line of people waiting', 'q-u-e-u-e: five letters, only one sound.'],
     ['lightning', 'A flash of ___ lit up the sky.', 'a flash of light in a storm', 'No e: lightning (not lightening).'],
     ['guarantee', 'I ___ you will love this film.', 'to promise for certain', 'Silent u after g: guar-an-tee.'],
-    ['leisure', 'Swimming is my favourite ___ activity.', 'free time for enjoyment', 'ei, an exception to “i before e”.'],
+    ['leisure', 'Swimming is my favourite ___ activity.', 'free time for enjoyment', 'ei, not ie: lei-sure.'],
   ],
   'Endings: -ance, -ence, -ant, -ent, -ous': [
     ['nuisance', 'The buzzing fly was a real ___.', 'something annoying', 'nui + sance.'],
@@ -203,7 +203,7 @@ const TECHNIQUES = [
   ['Her smile was as bright as the sun.', 'simile', 'It compares using “as … as”, so it is a simile.'],
   ['The wind howled angrily through the trees.', 'personification', 'Wind can’t really be angry or howl like a creature; giving it human feelings is personification.'],
   ['Seven slippery snakes slid silently.', 'alliteration', 'Several nearby words start with the same sound (s).'],
-  ['Splash! Crash! Bang!', 'onomatopoeia', 'The words sound like the noises they describe.'],
+  ['Splash! Crash! Bang!', 'onomatopoeia', 'The words sound like the noises they describe.', ['rule of three']],
   ['Do we really want our parks covered in litter?', 'rhetorical question', 'It is asked for effect, not to get an answer.'],
   ['It was cold, dark and silent.', 'rule of three', 'Three adjectives in a row make a memorable pattern.'],
   ['I’ve told you a million times!', 'hyperbole', 'It is a huge exaggeration for effect.'],
@@ -222,7 +222,7 @@ const PUNCT = [
     options: [
       ['The rain fell; the river burst its banks.', true],
       ['The rain fell all night; the river.', false, 'A semi-colon must join two complete clauses. “The river” is not a complete clause.'],
-      ['I bought three kinds of fruit; apples and pears.', false, 'To introduce a list, use a colon, not a semi-colon.'],
+      ['I bought two kinds of fruit; apples and pears.', false, 'To introduce a list, use a colon, not a semi-colon.'],
       ['Because it rained all night; we stayed in.', false, '“Because it rained all night” cannot stand alone, so a semi-colon cannot follow it. Use a comma.'],
     ],
     explain: 'A semi-colon joins two closely linked main clauses that could each be a sentence.',
@@ -676,9 +676,9 @@ function morphDeck() {
 
 function techniqueDeck() {
   const id = 'english.techniques';
-  const items = TECHNIQUES.map(([quote, tech, why], i) => ({
+  const items = TECHNIQUES.map(([quote, tech, why, notAlso = []], i) => ({
     id: `english.tech.${i + 1}`, topic: id, kind: 'mcq', prompt: `Which technique is used here? “${quote}”`,
-    options: [tech, ...TECH_NAMES.filter((t) => t !== tech).sort((a, b) => (a.length * 7 + i) % 5 - (b.length * 7 + i) % 5).slice(0, 3)].map((t) => ({ text: t, correct: t === tech })),
+    options: [tech, ...TECH_NAMES.filter((t) => t !== tech && !notAlso.includes(t)).sort((a, b) => (a.length * 7 + i) % 5 - (b.length * 7 + i) % 5).slice(0, 3)].map((t) => ({ text: t, correct: t === tech })),
     explain: why, ...TECH_MEMORY[tech],
   }));
   const punct = PUNCT.map((p, i) => ({

@@ -5,7 +5,7 @@
 const pad = (n) => String(n).padStart(2, '0');
 const money = (p) => (p >= 100 ? `£${(p / 100).toFixed(2)}` : `${p}p`);
 const CARS = ['Turbo', 'Blaze', 'Sparky', 'Rusty', 'Zoom'];
-const SPACE = ['Captain Nova', 'Bleep the droid', 'Commander Zara'];
+const SPACE = ['Captain Nova', 'Bleep the robot', 'Commander Zara'];
 const HOUR_WORD = ['twelve', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
 
 function choice(prompt, correct, wrongs, rng, extra = {}) {
@@ -112,8 +112,11 @@ export const KS1_GENERATORS = {
     if (kind === 'three') {
       const xs = [rng.int(3, 9), rng.int(3, 9), rng.int(3, 9)];
       const bond = xs.findIndex((x, i) => xs.some((y, j) => j !== i && x + y === 10));
-      return typed(`${xs.join(' + ')} =`, xs[0] + xs[1] + xs[2], `${bond >= 0 ? 'Look for a pair that makes 10 first. ' : ''}${xs.join(' + ')} = ${xs[0] + xs[1] + xs[2]}.`,
-        ['Adding can be done in any order, so I look for an easy pair first.', `${xs[0]} + ${xs[1]} = ${xs[0] + xs[1]}.`, `${xs[0] + xs[1]} + ${xs[2]} = ${xs[0] + xs[1] + xs[2]}.`]);
+      const tot = xs[0] + xs[1] + xs[2];
+      const pj = bond >= 0 ? xs.findIndex((y, j) => j !== bond && xs[bond] + y === 10) : -1;
+      const [p1, p2, rest] = bond >= 0 ? [xs[bond], xs[pj], xs[3 - bond - pj]] : xs;
+      return typed(`${xs.join(' + ')} =`, tot, bond >= 0 ? `Look for a pair that makes 10 first: ${p1} + ${p2} = 10, then 10 + ${rest} = ${tot}.` : `${xs.join(' + ')} = ${tot}.`,
+        ['Adding can be done in any order, so I look for an easy pair first.', `${p1} + ${p2} = ${p1 + p2}.`, `${p1 + p2} + ${rest} = ${tot}.`]);
     }
     if (kind === 'missing-add') {
       const a = rng.int(14, 48), b = rng.int(12, 45);
@@ -188,7 +191,7 @@ export const KS1_GENERATORS = {
       });
     }
     const [num, d] = rng.pick([[3, 4], [2, 3], [3, 4], [2, 4]]), n = d * rng.int(2, 6);
-    return typed(`What is {{${num}/${d}}} of ${n}?`, (n / d) * num, `{{1/${d}}} of ${n} is ${n / d}, so {{${num}/${d}}} is ${num} × ${n / d} = ${(n / d) * num}.`,
+    return typed(`What is {{${num}/${d}}} of ${n}?`, (n / d) * num, num === 1 ? `{{1/${d}}} of ${n} is ${n} ÷ ${d} = ${n / d}.` : `{{1/${d}}} of ${n} is ${n / d}, so {{${num}/${d}}} is ${num} × ${n / d} = ${(n / d) * num}.`,
       [`First I find {{1/${d}}}: ${n} ÷ ${d} = ${n / d}.`, `{{${num}/${d}}} is ${num} of those parts.`, `${num} × ${n / d} = ${(n / d) * num}.`]);
   },
 
@@ -225,7 +228,7 @@ export const KS1_GENERATORS = {
     const wrongs = [timeWords((h % 12) + 1, mins), timeWords(h === 1 ? 12 : h - 1, mins), timeWords(h, (mins + 30) % 60)].filter((w) => w !== right);
     return choice('What time does the clock show?', right, wrongs, rng, {
       diagram: { type: 'clock', h, m: mins },
-      explain: `The long hand points to ${mins === 0 ? '12' : mins / 5} (${mins} minutes) and the short hand is ${mins === 0 ? 'on' : mins > 30 ? 'nearly at' : 'just past'} ${mins > 30 ? (h % 12) + 1 : h}. It is ${right}.`,
+      explain: `The long hand points to ${mins === 0 ? '12' : mins / 5} (${mins} minutes) and the short hand is ${mins === 0 ? `on ${h}` : mins === 30 ? `halfway between ${h} and ${(h % 12) + 1}` : mins > 30 ? `nearly at ${(h % 12) + 1}` : `just past ${h}`}. It is ${right}.`,
       steps: ['The long hand shows the minutes. The short hand shows the hour.', `The long hand points to ${mins === 0 ? '12' : mins / 5}: that is ${mins} minutes${mins ? '' : ', o’clock'}.`, `So it is ${right}.`],
     });
   },
@@ -280,9 +283,9 @@ export const KS1_GENERATORS = {
       const n = rng.int(3, 9); return typed(`Each racing car has 4 wheels. How many wheels do ${n} cars have?`, 4 * n, `${n} × 4 = ${4 * n}.`, ['Each car has 4 wheels.', `${n} lots of 4.`, `${n} × 4 = ${4 * n}.`]);
     }
     if (level === 2) {
-      const kind = rng.pick(['points', 'droids', 'rescue']);
+      const kind = rng.pick(['points', 'robots', 'rescue']);
       if (kind === 'points') { const a = rng.int(12, 30), more = rng.int(5, 15); const other = rng.pick(CARS.filter((c) => c !== car)); return typed(`${car} scores ${a} points. ${other} scores ${more} more than ${car}. How many points do they score altogether?`, a + a + more, `${other} scores ${a} + ${more} = ${a + more}. Altogether ${a} + ${a + more} = ${2 * a + more}.`, [`First, ${other}’s score: ${a} + ${more} = ${a + more}.`, `Then add both scores.`, `${a} + ${a + more} = ${2 * a + more}.`]); }
-      if (kind === 'droids') { const rows = rng.int(2, 5), per = rng.pick([2, 5, 10]), leave = rng.int(2, rows * per - 1); return typed(`${ship}’s spaceship carries ${rows} rows of ${per} droids. ${leave} droids get off at the space station. How many are still on the ship?`, rows * per - leave, `${rows} × ${per} = ${rows * per} droids, then ${rows * per} − ${leave} = ${rows * per - leave}.`, [`First, how many droids: ${rows} × ${per} = ${rows * per}.`, `Then take away the ${leave} that get off.`, `${rows * per} − ${leave} = ${rows * per - leave}.`]); }
+      if (kind === 'robots') { const rows = rng.int(2, 5), per = rng.pick([2, 5, 10]), leave = rng.int(2, rows * per - 1); return typed(`${ship}’s spaceship carries ${rows} rows of ${per} robots. ${leave} robots get off at the space station. How many are still on the ship?`, rows * per - leave, `${rows} × ${per} = ${rows * per} robots, then ${rows * per} − ${leave} = ${rows * per - leave}.`, [`First, how many robots: ${rows} × ${per} = ${rows * per}.`, `Then take away the ${leave} that get off.`, `${rows * per} − ${leave} = ${rows * per - leave}.`]); }
       const mon = rng.int(3, 9); return typed(`{hero} rescues ${mon} cats on Monday and twice as many on Tuesday. How many cats are rescued altogether?`, mon * 3, `Tuesday: double ${mon} = ${mon * 2}. Altogether ${mon} + ${mon * 2} = ${mon * 3}.`, ['“Twice as many” means double.', `Tuesday: ${mon} × 2 = ${mon * 2}.`, `${mon} + ${mon * 2} = ${mon * 3}.`]);
     }
     const kind = rng.pick(['share', 'cost', 'compare']);
@@ -296,7 +299,7 @@ export const KS1_GENERATORS = {
   k1Times8(level, rng) {
     const a = level === 1 ? 3 : level === 2 ? 4 : rng.pick([3, 4, 8]), b = rng.int(2, 12);
     if (level === 3 && rng.chance(0.5)) return typed(`${a * b} ÷ ${a} =`, b, `${a} × ${b} = ${a * b}, so ${a * b} ÷ ${a} = ${b}.`, ['Division undoes multiplication.', `Which number times ${a} makes ${a * b}?`, `${b}, because ${a} × ${b} = ${a * b}.`]);
-    return typed(`${b} × ${a} =`, a * b, a === 8 ? `Double the 4 times table: ${b} × 4 = ${b * 4}, doubled is ${b * 8}.` : a === 4 ? `Double the 2 times table: ${b} × 2 = ${b * 2}, doubled is ${b * 4}.` : `Count in 3s: ${Array.from({ length: Math.min(b, 6) }, (_, i) => 3 * (i + 1)).join(', ')}${b > 6 ? '…' : ''} ${a * b}.`,
+    return typed(`${b} × ${a} =`, a * b, a === 8 ? `Double the 4 times table: ${b} × 4 = ${b * 4}, doubled is ${b * 8}.` : a === 4 ? `Double the 2 times table: ${b} × 2 = ${b * 2}, doubled is ${b * 4}.` : `Count in 3s: ${Array.from({ length: Math.min(b, 6) }, (_, i) => 3 * (i + 1)).join(', ')}${b > 6 ? `, … ${a * b}` : ''}. ${b} × 3 = ${a * b}.`,
       [a === 8 ? '× 8 is double × 4.' : a === 4 ? '× 4 is double × 2.' : 'I count in 3s.', a === 8 ? `${b} × 4 = ${b * 4}.` : a === 4 ? `${b} × 2 = ${b * 2}.` : `${b} jumps of 3.`, `${b} × ${a} = ${a * b}.`]);
   },
 

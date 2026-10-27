@@ -32,7 +32,7 @@ const COMPLEX = [
   ['u', 'cup', 'young', 'ou', ['u', 'o', 'oo'], 'young, touch, double'],
   ['sh', 'shell', 'station', 'ti', ['sh', 'ch', 'ci'], 'station, action, potion'],
   ['sh', 'shell', 'chef', 'ch', ['sh', 'ti', 'ci'], 'chef, machine, parachute'],
-  ['s', 'sun', 'science', 'sc', ['s', 'ce', 'ss'], 'science, scene, scissors'],
+  ['s', 'sun', 'science', 'sc', ['s', 'ps', 'ss'], 'science, scene, scissors'],
   ['n', 'net', 'gnome', 'gn', ['n', 'kn', 'nn'], 'gnome, gnaw, sign'],
   ['f', 'fish', 'dolphin', 'ph', ['f', 'ff', 'gh'], 'dolphin, phone, alphabet'],
 ];

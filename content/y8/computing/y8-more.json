@@ -12,7 +12,8 @@
    "batch": 5,
    "intro": "A function is a named, reusable block of code. You pass values in through parameters and get a result back with return. Variables made inside a function are local: they vanish when it ends, which stops one part of a program accidentally breaking another.",
    "teach": "Explain the difference between a parameter and an argument.",
-   "talk": "Ask {him} which jobs in a game {she} would turn into functions."
+   "talk": "Ask {him} which jobs in a game {she} would turn into functions.",
+   "hook": "**Parameters in, return value out**; local variables stay inside the function."
   },
   {
    "id": "computing.dicts",
@@ -24,7 +25,8 @@
    "batch": 5,
    "intro": "A dictionary stores pairs: a key and its value, like a word and its meaning, or a god and their symbol. Instead of remembering a position, you look things up by name.",
    "teach": "Explain when a dictionary is better than a list.",
-   "talk": "Ask {him} how {she} would store everyone’s phone numbers in Python."
+   "talk": "Ask {him} how {she} would store everyone’s phone numbers in Python.",
+   "hook": "**Key → value**: look things up by name, not by position."
   },
   {
    "id": "computing.strings",
@@ -36,7 +38,8 @@
    "batch": 5,
    "intro": "Strings come with built-in methods: count, find, replace, split, join. Slicing picks out parts, and f-strings drop values neatly into text. Most real programs spend a lot of time handling text.",
    "teach": "Explain what split() and join() do.",
-   "talk": "Ask {her} to reverse a word in Python in one line."
+   "talk": "Ask {him} to reverse a word in Python in one line.",
+   "hook": "**Strings count from 0 too**, and a slice stops just before its end index."
   },
   {
    "id": "computing.grids",
@@ -49,7 +52,8 @@
    "batch": 5,
    "intro": "A list of lists makes a grid: a game board, a seating plan, Daedalus’s labyrinth or the pixels of an image. A loop inside a loop visits every square, row by row.",
    "teach": "Explain how grid[2][3] finds one square.",
-   "talk": "Draw a 3 × 3 noughts-and-crosses board as a Python list of lists together."
+   "talk": "Draw a 3 × 3 noughts-and-crosses board as a Python list of lists together.",
+   "hook": "**grid[row][column]**: pick the row first, then the column, both counted from 0."
   },
   {
    "id": "computing.robust",
@@ -61,7 +65,8 @@
    "batch": 5,
    "intro": "Users type the strangest things. Robust programs check input (validation), confirm it was entered correctly (verification), and are tested with normal, boundary and erroneous data so they never crash.",
    "teach": "Explain the difference between validation and verification.",
-   "talk": "Ask {him} what checks a sign-up form should make."
+   "talk": "Ask {him} what checks a sign-up form should make.",
+   "hook": "**Validation: is it sensible? Verification: is it what you meant?**"
   },
   {
    "id": "computing.files",
@@ -73,7 +78,8 @@
    "batch": 5,
    "intro": "Variables disappear when a program ends. To keep high scores or settings, programs write data to files and read it back next time. Opening a file the wrong way can wipe it, so the mode matters.",
    "teach": "Explain the difference between opening a file with \"w\" and with \"a\".",
-   "talk": "Ask {her} which apps on {her} phone must save data to files."
+   "talk": "Ask {him} which apps on {her} phone must save data to files.",
+   "hook": "**r reads, w wipes and writes, a appends.**"
   },
   {
    "id": "computing.random",
@@ -85,7 +91,8 @@
    "batch": 5,
    "intro": "Games, simulations and encryption all need randomness. Python’s random module can roll dice, shuffle cards or pick a hero, and a simulation can repeat an experiment thousands of times in a second.",
    "teach": "Explain why computer “random” numbers are really pseudo-random.",
-   "talk": "Ask {him} how a simulation could estimate the chance of rolling a double six."
+   "talk": "Ask {him} how a simulation could estimate the chance of rolling a double six.",
+   "hook": "**randint includes both ends**; range stops before the end."
   },
   {
    "id": "computing.bughunt",
@@ -98,7 +105,8 @@
    "batch": 5,
    "intro": "Logic errors are the hardest bugs: the program runs, but the answer is wrong. Good debuggers compare what the program does with what it should do, then find the exact line where they part ways.",
    "teach": "Explain what an off-by-one error is.",
-   "talk": "Show {him} a bug from your own work and ask how {she} would find it."
+   "talk": "Show {him} a bug from your own work and ask how {she} would find it.",
+   "hook": "**Compare what it does with what it should do**, and find the line where they part ways."
   },
   {
    "id": "computing.algotrace",
@@ -111,7 +119,8 @@
    "batch": 5,
    "intro": "Knowing the name of an algorithm is not enough: you need to be able to follow it step by step, like a computer would. Trace tables and careful notes make it reliable.",
    "teach": "Explain the steps of a binary search for one number.",
-   "talk": "Ask {her} to sort a shuffled hand of cards using insertion sort and narrate it."
+   "talk": "Ask {him} to sort a shuffled hand of cards using insertion sort and narrate it.",
+   "hook": "**Be the computer**: one step at a time, writing every change down."
   },
   {
    "id": "computing.efficiency",
@@ -123,7 +132,8 @@
    "batch": 5,
    "intro": "Two algorithms can give the same answer but take wildly different times. Computer scientists count steps and describe how the work grows as the data grows, using Big-O notation: O(n), O(n²), O(log n).",
    "teach": "Explain why an O(n²) algorithm gets slow on big lists.",
-   "talk": "Ask {him} how many handshakes there are if everyone in a class shakes hands once."
+   "talk": "Ask {him} how many handshakes there are if everyone in a class shakes hands once.",
+   "hook": "**O(log n) < O(n) < O(n²)**: how fast the work grows as the data grows."
   },
   {
    "id": "computing.structures",
@@ -135,7 +145,8 @@
    "batch": 5,
    "intro": "A stack is last in, first out, like a pile of plates. A queue is first in, first out, like the line at a ticket office. These simple structures power undo buttons, printers and even how a program calls functions.",
    "teach": "Explain the difference between a stack and a queue, with an example of each.",
-   "talk": "Ask {her} whether the “back” button in a web browser is a stack or a queue."
+   "talk": "Ask {him} whether the “back” button in a web browser is a stack or a queue.",
+   "hook": "**Stack = LIFO, like a pile of plates. Queue = FIFO, like a bus queue.**"
   },
   {
    "id": "computing.compression",
@@ -147,7 +158,8 @@
    "batch": 5,
    "intro": "Compression makes files smaller so they download faster and take less space. Lossless compression gives back exactly the original; lossy compression throws away detail people will not notice.",
    "teach": "Explain the difference between lossy and lossless compression.",
-   "talk": "Compare the file size of a photo and a screenshot on your phone together."
+   "talk": "Compare the file size of a photo and a screenshot on your phone together.",
+   "hook": "**Lossy loses detail for good; lossless gives back every bit.**"
   },
   {
    "id": "computing.encryption",
@@ -159,7 +171,8 @@
    "batch": 5,
    "intro": "The Caesar cipher has only 25 keys, so it is easy to crack. The Vigenère cipher uses a key word, so each letter is shifted by a different amount. Modern public-key encryption lets strangers send secrets without ever meeting to share a key.",
    "teach": "Explain why the Vigenère cipher is harder to crack than the Caesar cipher.",
-   "talk": "Send each other a Vigenère message at dinner."
+   "talk": "Send each other a Vigenère message at dinner.",
+   "hook": "**The public key locks; only the private key unlocks.**"
   },
   {
    "id": "computing.internet",
@@ -171,7 +184,8 @@
    "batch": 5,
    "intro": "When you visit a website, your device asks a DNS server for the site’s IP address, then sends a request in packets that hop between routers across the world. The answer comes back the same way, often in under a second.",
    "teach": "Explain what happens, step by step, when you type a web address.",
-   "talk": "Ask {him} how a message gets from your house to a server in another country."
+   "talk": "Ask {him} how a message gets from your house to a server in another country.",
+   "hook": "**Name → DNS → IP address → packets → routers → server**, and back again."
   },
   {
    "id": "computing.web",
@@ -183,7 +197,8 @@
    "batch": 5,
    "intro": "Every web page is made of HTML (the structure and content), CSS (the style) and often JavaScript (the behaviour). Reading markup is like reading the scaffolding behind the page.",
    "teach": "Explain the jobs of HTML and CSS.",
-   "talk": "Open “view source” on a simple web page together and find the <h1>."
+   "talk": "Open “view source” on a simple web page together and find the <h1>.",
+   "hook": "**HTML is the skeleton, CSS the clothes, JavaScript the muscles.**"
   },
   {
    "id": "computing.databases",
@@ -195,7 +210,8 @@
    "batch": 5,
    "intro": "Databases answer questions about huge amounts of data in moments. SQL can count, total, sort and search, and a primary key makes sure every record can be found exactly.",
    "teach": "Explain what COUNT(*) and ORDER BY do.",
-   "talk": "Ask {her} what tables a school database would need."
+   "talk": "Ask {him} what tables a school database would need.",
+   "hook": "**WHERE filters, ORDER BY sorts, and COUNT, SUM, MAX, MIN and AVG summarise.**"
   },
   {
    "id": "computing.ai",
@@ -207,7 +223,8 @@
    "batch": 5,
    "intro": "Machine learning systems are not programmed with rules: they learn patterns from huge amounts of training data. That makes them powerful, and also means they can copy the mistakes and biases in the data.",
    "teach": "Explain how bias can get into an AI system.",
-   "talk": "Ask {him} where {she} has met AI today, and whether it was always right."
+   "talk": "Ask {him} where {she} has met AI today, and whether it was always right.",
+   "hook": "**Machine learning learns from examples**, mistakes and biases included."
   },
   {
    "id": "computing.architecture",
@@ -219,7 +236,8 @@
    "batch": 5,
    "intro": "Inside the CPU, a clock ticks billions of times a second, registers hold the values being worked on, and fast cache memory keeps useful data close. More cores let a CPU work on several things at once.",
    "teach": "Explain three things that affect how fast a CPU is.",
-   "talk": "Look up the clock speed and number of cores of a device at home."
+   "talk": "Look up the clock speed and number of cores of a device at home.",
+   "hook": "**Clock speed, cores and cache**: the three Cs of CPU performance."
   },
   {
    "id": "computing.os",
@@ -231,7 +249,8 @@
    "batch": 5,
    "intro": "The operating system is the manager: it shares out memory and processor time, talks to devices through drivers, keeps files organised and keeps users apart. Utilities are small programs that look after the computer.",
    "teach": "Explain three jobs an operating system does.",
-   "talk": "Ask {her} which operating systems are on the devices in your home."
+   "talk": "Ask {him} which operating systems are on the devices in your home.",
+   "hook": "**The OS is the manager**: memory, processor time, devices, files and users."
   },
   {
    "id": "computing.law",
@@ -244,7 +263,8 @@
    "batch": 5,
    "intro": "Technology changes lives, so laws and ethics matter: who may use your data, what counts as hacking, who owns a piece of music, and what happens to the millions of devices thrown away every year.",
    "teach": "Explain one principle of the Data Protection Act.",
-   "talk": "Ask {him} what {she} would put in a law about AI."
+   "talk": "Ask {him} what {she} would put in a law about AI.",
+   "hook": "**DPA: your data. CMA: no hacking. CDPA: no copying without permission.**"
   },
   {
    "id": "computing.recursion",
@@ -256,8 +276,9 @@
    "batch": 5,
    "intro": "A recursive function calls itself, each time on a smaller problem, until it reaches a base case it can answer directly. Like Russian dolls, or a hall of mirrors.",
    "teach": "Explain why every recursive function needs a base case.",
-   "talk": "Ask {her} to explain recursion using a recursive explanation.",
-   "tier": "stretch"
+   "talk": "Ask {him} to explain recursion using a recursive explanation.",
+   "tier": "stretch",
+   "hook": "“**To understand recursion, you must first understand recursion**”, and every recursive function needs a base case to stop."
   },
   {
    "id": "computing.paths",
@@ -270,7 +291,8 @@
    "intro": "A graph is a set of places (nodes) joined by routes (edges), sometimes with distances. Breadth-first search finds the fewest steps through a labyrinth; Dijkstra’s algorithm finds the shortest weighted route, as a sat nav does.",
    "teach": "Explain how breadth-first search finds the shortest route out of a maze.",
    "talk": "Plan the quickest route between three places in town, as a graph.",
-   "tier": "stretch"
+   "tier": "stretch",
+   "hook": "**Breadth-first search spreads like ripples on a pond**: 1 step away, then 2, then 3."
   },
   {
    "id": "computing.circuits",
@@ -283,7 +305,8 @@
    "intro": "Logic gates combine into circuits, and circuits can be written as Boolean expressions like (A AND B) OR C. A truth table proves exactly what a circuit does for every possible input.",
    "teach": "Explain how to build a truth table for a three-input expression.",
    "talk": "Ask {him} to design a circuit for a door alarm.",
-   "tier": "stretch"
+   "tier": "stretch",
+   "hook": "**n inputs → 2ⁿ rows** in the truth table: list every combination."
   },
   {
    "id": "computing.huffman",
@@ -296,7 +319,8 @@
    "intro": "Huffman coding gives the most common characters the shortest codes, so text takes fewer bits. No code is the start of another, so a stream of bits can be read without gaps.",
    "teach": "Explain why common letters get short Huffman codes.",
    "talk": "Count the commonest letter in a page of a book together.",
-   "tier": "stretch"
+   "tier": "stretch",
+   "hook": "**Common letters get short codes**, just as Morse code gives E a single dot."
   }
  ],
  "items": [
@@ -314,7 +338,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**def name(parameters):** then return the answer to whoever called it.",
+   "example": "A currency converter in a travel app calls the same function with a different amount each time."
   },
   {
    "id": "computing.m.fn.param",
@@ -337,7 +363,9 @@
      "feedback": "It only exists inside the function."
     }
    ],
-   "explain": "Parameters are the names in the def line; arguments are the values you pass when you call the function."
+   "explain": "Parameters are the names in the def line; arguments are the values you pass when you call the function.",
+   "hook": "**Parameter = the name in the def line; argument = the value you pass in.**",
+   "example": "A coffee machine’s size setting is like a parameter; pressing “large” passes the argument."
   },
   {
    "id": "computing.m.fn.return",
@@ -360,7 +388,9 @@
      "feedback": "It ends the function."
     }
    ],
-   "explain": "A function can calculate something and hand it back, so the result can be used in further calculations."
+   "explain": "A function can calculate something and hand it back, so the result can be used in further calculations.",
+   "hook": "**return = hand it back and leave**: the function ends there.",
+   "example": "A price lookup returns a scanned item’s price to the till, which then adds it to your bill."
   },
   {
    "id": "computing.m.fn.local",
@@ -383,7 +413,9 @@
      "feedback": "Python can store millions."
     }
    ],
-   "explain": "Local variables keep functions self-contained, so each one can be written and tested on its own."
+   "explain": "Local variables keep functions self-contained, so each one can be written and tested on its own.",
+   "hook": "**What happens in the function stays in the function.**",
+   "example": "Like scrap paper used for one sum and then thrown away: the rest of the program never sees it."
   },
   {
    "id": "computing.m.fn.keyword",
@@ -399,7 +431,8 @@
    "explain": "def is short for define: def name(parameters):",
    "accept": [
     "def"
-   ]
+   ],
+   "hook": "**def = define**: def name(parameters):"
   },
   {
    "id": "computing.m.fn.why",
@@ -422,7 +455,9 @@
      "feedback": "The checks are needed; they just should not be repeated."
     }
    ],
-   "explain": "Functions avoid repetition: write once, fix once, reuse many times."
+   "explain": "Functions avoid repetition: write once, fix once, reuse many times.",
+   "hook": "**DRY: Don’t Repeat Yourself.**",
+   "example": "A website’s menu is written once and reused on every page, so one fix updates them all."
   },
   {
    "id": "computing.m.fn.builtin",
@@ -438,7 +473,8 @@
    "explain": "Built-in functions are always available; user-defined ones are those you write with def.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**Built-in = comes in the box**, like the apps already on a new phone."
   },
   {
    "id": "computing.m.fn.w",
@@ -470,7 +506,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**A dictionary maps word → meaning; a Python dict maps key → value.**",
+   "example": "Your phone’s contacts are a dictionary: look up a name (the key) to get the number (the value)."
   },
   {
    "id": "computing.m.dc.best",
@@ -493,7 +531,9 @@
      "feedback": "That is a job for a loop."
     }
    ],
-   "explain": "Dictionaries are for looking things up by a key, like a real dictionary looks up words."
+   "explain": "Dictionaries are for looking things up by a key, like a real dictionary looks up words.",
+   "hook": "**Look it up by name → dictionary; keep things in order → list.**",
+   "example": "Phone contacts: look up “Mum” to get her number, without needing to know where she is in the list."
   },
   {
    "id": "computing.m.dc.key",
@@ -510,7 +550,9 @@
    "accept": [
     "key",
     "a key"
-   ]
+   ],
+   "hook": "**Key: value**, like a locker number and what is inside it.",
+   "example": "A café menu is a dictionary: each dish (the key) has a price (the value)."
   },
   {
    "id": "computing.m.dc.unique",
@@ -533,7 +575,9 @@
      "feedback": "Assigning to an existing key just updates it."
     }
    ],
-   "explain": "Keys in a dictionary are unique, so assigning to an existing key overwrites its value."
+   "explain": "Keys in a dictionary are unique, so assigning to an existing key overwrites its value.",
+   "hook": "**Keys are unique**: assign to one again and the old value is overwritten.",
+   "example": "Like a locker: put a new bag in locker 12 and the old contents have to come out."
   },
   {
    "id": "computing.m.dc.missing",
@@ -556,7 +600,8 @@
      "feedback": "Python raises a KeyError for a missing key."
     }
    ],
-   "explain": "Check with \"Ares\" in symbols first, or use symbols.get(\"Ares\")."
+   "explain": "Check with \"Ares\" in symbols first, or use symbols.get(\"Ares\").",
+   "hook": "**No such key → KeyError**: check with in, or use get()."
   },
   {
    "id": "computing.m.dc.braces",
@@ -572,7 +617,8 @@
    "explain": "Lists use [ ], tuples use ( ), dictionaries use { }.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**[ ] list, ( ) tuple, { } dictionary.**"
   },
   {
    "id": "computing.m.st.tmpl",
@@ -588,7 +634,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Slices [start:stop] stop before stop**, and [::-1] reverses a string.",
+   "example": "Apps hide card numbers by slicing: only the last 4 digits are shown."
   },
   {
    "id": "computing.m.st.immut",
@@ -611,7 +659,9 @@
      "feedback": "Index 0 is the first letter; the problem is changing it."
     }
    ],
-   "explain": "Strings are immutable. Make a new one instead: name = \"J\" + name[1:]."
+   "explain": "Strings are immutable. Make a new one instead: name = \"J\" + name[1:].",
+   "hook": "**Strings are immutable**: you can’t change one letter, only build a new string.",
+   "example": "Like a printed name badge: to fix a typo, you print a new badge."
   },
   {
    "id": "computing.m.st.cast",
@@ -634,7 +684,9 @@
      "feedback": "The variable is used, not its name."
     }
    ],
-   "explain": "You cannot join a string and a number with +, so str() converts the number first."
+   "explain": "You cannot join a string and a number with +, so str() converts the number first.",
+   "hook": "**str() turns a number into text** so that + can join them.",
+   "example": "A game showing “Score: 120” joins text to a number converted with str()."
   },
   {
    "id": "computing.m.st.len",
@@ -650,7 +702,9 @@
    "explain": "len(\"Hermes\") is 6.",
    "accept": [
     "len"
-   ]
+   ],
+   "hook": "**len = length**: it counts every character, spaces included.",
+   "example": "Password rules like “at least 12 characters” are checked with len()."
   },
   {
    "id": "computing.m.st.split",
@@ -673,7 +727,9 @@
      "feedback": "split cuts at every comma, so each name becomes its own item."
     }
    ],
-   "explain": "split(\",\") breaks the string at each comma into a list: handy for reading CSV files."
+   "explain": "split(\",\") breaks the string at each comma into a list: handy for reading CSV files.",
+   "hook": "**split cuts a string into a list; join glues a list back into a string.**",
+   "example": "Spreadsheets saved as CSV are read back by splitting each line at its commas."
   },
   {
    "id": "computing.m.gr.tmpl",
@@ -689,7 +745,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**grid[r][c]: row first, then column**, both counted from 0.",
+   "example": "A cinema seating plan is a 2D list: the fourth seat in the front row is grid[0][3]."
   },
   {
    "id": "computing.m.gr.order",
@@ -712,7 +770,9 @@
      "feedback": "They are two separate indexes."
     }
    ],
-   "explain": "grid[r] is one row (a list); grid[r][c] is one item in that row."
+   "explain": "grid[r] is one row (a list); grid[r][c] is one item in that row.",
+   "hook": "**grid[r][c]: pick the row first, then the column**, like a theatre seat “row F, seat 7”.",
+   "example": "Spreadsheet cells are found the same way, by a row and a column."
   },
   {
    "id": "computing.m.gr.inner",
@@ -735,7 +795,9 @@
      "feedback": "That is for one outer loop."
     }
    ],
-   "explain": "Nested loops multiply: 4 × 6 = 24."
+   "explain": "Nested loops multiply: 4 × 6 = 24.",
+   "hook": "**Nested loops multiply**: 4 rows × 6 columns = 24 visits.",
+   "example": "A day is nested loops too: 24 hours × 60 minutes = 1440 minutes."
   },
   {
    "id": "computing.m.gr.image",
@@ -758,7 +820,9 @@
      "feedback": "Storing it in a grid does not throw away detail."
     }
    ],
-   "explain": "Images are grids of pixels, so a list of lists fits them exactly."
+   "explain": "Images are grids of pixels, so a list of lists fits them exactly.",
+   "hook": "**An image is a grid of pixels**: rows and columns, a perfect fit for a 2D list.",
+   "example": "A QR code is a grid of black and white squares: a 2D list of 1s and 0s."
   },
   {
    "id": "computing.m.gr.count",
@@ -771,7 +835,9 @@
     "32",
     "88"
    ],
-   "explain": "8 × 8 = 64."
+   "explain": "8 × 8 = 64.",
+   "hook": "**Rows × columns = number of items.**",
+   "example": "A noughts-and-crosses board is 3 × 3 = 9 squares."
   },
   {
    "id": "computing.m.rb.tmpl",
@@ -787,7 +853,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Presence, range, length, type, format**: the five main validation checks.",
+   "example": "A sign-up form that refuses an email address with no @ is doing a format check."
   },
   {
    "id": "computing.m.rb.valver",
@@ -810,7 +878,9 @@
      "feedback": "It is the other way round."
     }
    ],
-   "explain": "A date of 31/02 fails validation. Typing your email twice to make sure it matches is verification."
+   "explain": "A date of 31/02 fails validation. Typing your email twice to make sure it matches is verification.",
+   "hook": "**Validation: is it reasonable? Verification: is it what you meant?** Typing it twice is verification.",
+   "example": "Typing a new password twice is verification; refusing one shorter than 8 characters is validation."
   },
   {
    "id": "computing.m.rb.checks",
@@ -833,7 +903,9 @@
      "feedback": "A length check tests how many characters there are."
     }
    ],
-   "explain": "Presence, range, length, type and format checks are the main kinds of validation."
+   "explain": "Presence, range, length, type and format checks are the main kinds of validation.",
+   "hook": "**Presence check: is anything there at all?**",
+   "example": "Online forms mark required boxes with a star and won’t submit while they are empty."
   },
   {
    "id": "computing.m.rb.format",
@@ -856,7 +928,9 @@
      "feedback": "Postcodes are not numbers in a range."
     }
    ],
-   "explain": "A format check compares input with a pattern."
+   "explain": "A format check compares input with a pattern.",
+   "hook": "**Format check: does it fit the pattern?**",
+   "example": "Postcodes like SW1A 1AA and email addresses with an @ in them are checked for format."
   },
   {
    "id": "computing.m.rb.valid",
@@ -879,7 +953,9 @@
      "feedback": "Checks are tiny compared with the cost of bad data."
     }
    ],
-   "explain": "Validation reduces errors; it cannot know what is true."
+   "explain": "Validation reduces errors; it cannot know what is true.",
+   "hook": "**Validation catches the impossible, not the wrong-but-sensible.**",
+   "example": "A form can reject a birthday of 31 February, but not a real date that you mistyped."
   },
   {
    "id": "computing.m.rb.auth",
@@ -902,7 +978,9 @@
      "feedback": "Compression makes files smaller."
     }
    ],
-   "explain": "Authentication checks who a user is, using passwords, codes or fingerprints."
+   "explain": "Authentication checks who a user is, using passwords, codes or fingerprints.",
+   "hook": "**Authentication = proving who you are.**",
+   "example": "Unlocking a phone with your face or fingerprint is authentication."
   },
   {
    "id": "computing.m.rb.w",
@@ -942,7 +1020,9 @@
      "feedback": "It can; they just do not last after the program closes."
     }
    ],
-   "explain": "Saving to a file (or database) is how high scores, documents and settings survive."
+   "explain": "Saving to a file (or database) is how high scores, documents and settings survive.",
+   "hook": "**Variables live in RAM and vanish; files live in storage and last.**",
+   "example": "A game’s save file is how your progress survives switching the console off."
   },
   {
    "id": "computing.m.fl.w",
@@ -965,7 +1045,9 @@
      "feedback": "The new score is written, but the old ones are gone."
     }
    ],
-   "explain": "\"r\" reads, \"w\" overwrites, \"a\" appends. Choosing the wrong mode is a classic bug."
+   "explain": "\"r\" reads, \"w\" overwrites, \"a\" appends. Choosing the wrong mode is a classic bug.",
+   "hook": "**w = wipe, then write.**",
+   "example": "It is like recording over an old video: the previous recording is gone for good."
   },
   {
    "id": "computing.m.fl.a",
@@ -976,12 +1058,14 @@
    "distractors": [
     "w (write)",
     "r (read)",
-    "x (extra)"
+    "e (end)"
    ],
    "explain": "Append keeps what is there and adds to it.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**a = add to the end**: append.",
+   "example": "A diary app adding today’s entry after yesterday’s is appending."
   },
   {
    "id": "computing.m.fl.close",
@@ -1004,7 +1088,8 @@
      "feedback": "Closing is not compression."
     }
    ],
-   "explain": "The with statement closes the file automatically, even if an error happens."
+   "explain": "The with statement closes the file automatically, even if an error happens.",
+   "hook": "**with open(…) as f: closes the file for you**, even if something goes wrong."
   },
   {
    "id": "computing.m.fl.csv",
@@ -1027,7 +1112,9 @@
      "feedback": "CSV files are plain text, not secret."
     }
    ],
-   "explain": "Each line is a record and the commas separate the fields. Spreadsheets can open CSV files."
+   "explain": "Each line is a record and the commas separate the fields. Spreadsheets can open CSV files.",
+   "hook": "**CSV = Comma-Separated Values**: one record per line, with commas between the fields.",
+   "example": "Bank statements and sports results are often downloaded as CSV files for spreadsheets."
   },
   {
    "id": "computing.m.fl.loop",
@@ -1050,7 +1137,8 @@
      "feedback": "The file is opened for reading, so its lines are read."
     }
    ],
-   "explain": "Looping over a file object gives one line at a time."
+   "explain": "Looping over a file object gives one line at a time.",
+   "hook": "**for line in f** visits each line of the file once."
   },
   {
    "id": "computing.m.rd.randint",
@@ -1073,7 +1161,9 @@
      "feedback": "It starts at 1 here."
     }
    ],
-   "explain": "randint(a, b) includes a and b, which is why it is perfect for dice."
+   "explain": "randint(a, b) includes a and b, which is why it is perfect for dice.",
+   "hook": "**randint(a, b) includes both a and b**: perfect for dice.",
+   "example": "A dice app can roll with random.randint(1, 6)."
   },
   {
    "id": "computing.m.rd.choice",
@@ -1096,7 +1186,9 @@
      "feedback": "That would not be random!"
     }
    ],
-   "explain": "random.choice picks one item from a list at random."
+   "explain": "random.choice picks one item from a list at random.",
+   "hook": "**choice picks one item; shuffle mixes them all.**",
+   "example": "A music app’s random-song button is like choice; shuffle play is like shuffle."
   },
   {
    "id": "computing.m.rd.pseudo",
@@ -1119,7 +1211,9 @@
      "feedback": "A formula produces them."
     }
    ],
-   "explain": "A pseudo-random generator is deterministic but looks random. For encryption, computers mix in real-world noise as well."
+   "explain": "A pseudo-random generator is deterministic but looks random. For encryption, computers mix in real-world noise as well.",
+   "hook": "**Pseudo-random = random-looking, but made by a formula.**",
+   "example": "One internet security company films a wall of lava lamps to collect truly unpredictable data."
   },
   {
    "id": "computing.m.rd.sim",
@@ -1142,7 +1236,9 @@
      "feedback": "Each roll has only a 1 in 6 chance of a six."
     }
    ],
-   "explain": "10,000 ÷ 6 ≈ 1,667. The result will vary a little each run, and more rolls make it closer to the true probability."
+   "explain": "10,000 ÷ 6 ≈ 1,667. The result will vary a little each run, and more rolls make it closer to the true probability.",
+   "hook": "**Expected count = trials × probability**: 10 000 × 1/6 ≈ 1667.",
+   "example": "Weather forecasters run many simulations of tomorrow and report the share that bring rain."
   },
   {
    "id": "computing.m.rd.import",
@@ -1165,7 +1261,8 @@
      "feedback": "The random module already provides it."
     }
    ],
-   "explain": "Modules like random and math are libraries of ready-made functions; import makes them available."
+   "explain": "Modules like random and math are libraries of ready-made functions; import makes them available.",
+   "hook": "**import random** first; then random.randint is ready to use."
   },
   {
    "id": "computing.m.bh.tmpl",
@@ -1181,7 +1278,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Off-by-one?** Check the first and last values of every loop and range.",
+   "example": "The fence-post error: a 10 m fence with a post every metre needs 11 posts, not 10."
   },
   {
    "id": "computing.m.bh.eq",
@@ -1204,7 +1303,8 @@
      "feedback": "Python keywords are lower case."
     }
    ],
-   "explain": "= stores a value; == compares two values. Python gives a syntax error here."
+   "explain": "= stores a value; == compares two values. Python gives a syntax error here.",
+   "hook": "**if needs ==**: one = stores, two == compares."
   },
   {
    "id": "computing.m.bh.infinite",
@@ -1227,7 +1327,9 @@
      "feedback": "Any positive start would loop for ever."
     }
    ],
-   "explain": "Add n = n - 1 inside the loop so the condition eventually becomes False."
+   "explain": "Add n = n - 1 inside the loop so the condition eventually becomes False.",
+   "hook": "**A loop that never ends? Nothing inside it changes the condition.**",
+   "example": "A countdown that forgets to subtract 1 is stuck on 10 for ever."
   },
   {
    "id": "computing.m.bh.index",
@@ -1250,7 +1352,8 @@
      "feedback": "The syntax is fine; the problem appears when it runs."
     }
    ],
-   "explain": "A list of 3 items has indexes 0 to 2. heroes[-1] or heroes[len(heroes) - 1] gives the last one."
+   "explain": "A list of 3 items has indexes 0 to 2. heroes[-1] or heroes[len(heroes) - 1] gives the last one.",
+   "hook": "**Last index = len − 1**, or use −1 for the last item."
   },
   {
    "id": "computing.m.bh.indent",
@@ -1273,7 +1376,8 @@
      "feedback": "Before the loop it would print first; Mira wants it after."
     }
    ],
-   "explain": "In Python, indentation decides what is inside a loop. Unindent the last line."
+   "explain": "In Python, indentation decides what is inside a loop. Unindent the last line.",
+   "hook": "**Indentation decides what is inside the loop.**"
   },
   {
    "id": "computing.m.bh.type",
@@ -1296,7 +1400,8 @@
      "feedback": "The problem is the data type."
     }
    ],
-   "explain": "Use age = int(input(\"Age? \")) to turn the text into a number."
+   "explain": "Use age = int(input(\"Age? \")) to turn the text into a number.",
+   "hook": "**input() gives text**: you can’t add 1 to text until int() turns it into a number."
   },
   {
    "id": "computing.m.bh.method",
@@ -1319,7 +1424,9 @@
      "feedback": "Usually the bug is one line; tracing finds it."
     }
    ],
-   "explain": "Tracing (or adding temporary print statements) shows exactly where the program goes wrong."
+   "explain": "Tracing (or adding temporary print statements) shows exactly where the program goes wrong.",
+   "hook": "**Trace a small test case**, comparing each value with what you expect.",
+   "example": "Mechanics test one part at a time to find a fault, rather than swapping parts at random."
   },
   {
    "id": "computing.m.at.tmpl",
@@ -1335,7 +1442,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Trace it like a computer**: one step at a time, writing down every comparison and swap.",
+   "example": "Referees check a close finish by replaying it frame by frame: tracing does the same for an algorithm."
   },
   {
    "id": "computing.m.at.sorted",
@@ -1358,7 +1467,8 @@
      "feedback": "Linear search works on any list."
     }
    ],
-   "explain": "If the list is not in order, the half that is thrown away might contain the target."
+   "explain": "If the list is not in order, the half that is thrown away might contain the target.",
+   "hook": "**Binary search trusts the order**: with no order, there is no safe half to throw away."
   },
   {
    "id": "computing.m.at.insertion",
@@ -1381,7 +1491,9 @@
      "feedback": "That is famously awful (bogosort)!"
     }
    ],
-   "explain": "Insertion sort only moves items that are out of place, so a nearly sorted list needs very little work."
+   "explain": "Insertion sort only moves items that are out of place, so a nearly sorted list needs very little work.",
+   "hook": "**Nearly sorted? Insertion sort barely has to move anything.**",
+   "example": "Adding one new name to an alphabetical register takes just one insertion."
   },
   {
    "id": "computing.m.at.merge",
@@ -1404,7 +1516,8 @@
      "feedback": "That is after only one split."
     }
    ],
-   "explain": "Single items are sorted by definition; merge sort then merges them back in order: divide and conquer."
+   "explain": "Single items are sorted by definition; merge sort then merges them back in order: divide and conquer.",
+   "hook": "**Split down to single items, then merge**: one item on its own is already sorted."
   },
   {
    "id": "computing.m.at.binary",
@@ -1418,7 +1531,9 @@
     "otherwise discard the half that cannot contain the target and repeat"
    ],
    "labels": null,
-   "explain": "Middle, compare, stop if found, otherwise halve and repeat."
+   "explain": "Middle, compare, stop if found, otherwise halve and repeat.",
+   "hook": "**Middle, compare, keep half, repeat.**",
+   "example": "Guessing a number from 1 to 100 with “higher” or “lower” clues takes at most 7 guesses."
   },
   {
    "id": "computing.m.ef.tmpl",
@@ -1434,7 +1549,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Double the data: O(n) doubles the work, O(n²) quadruples it, O(log n) adds one step.**",
+   "example": "Binary search could find one person in a sorted list of all 8 billion people on Earth in about 33 steps."
   },
   {
    "id": "computing.m.ef.bigo",
@@ -1457,7 +1574,9 @@
      "feedback": "It is about the algorithm’s work."
     }
    ],
-   "explain": "O(n) grows in step with n; O(n²) grows with its square; O(log n) grows very slowly."
+   "explain": "O(n) grows in step with n; O(n²) grows with its square; O(log n) grows very slowly.",
+   "hook": "**Big-O = how the work grows**, not how many seconds it takes.",
+   "example": "Washing up after a party is O(n): twice as many guests, twice as many plates."
   },
   {
    "id": "computing.m.ef.which",
@@ -1480,7 +1599,8 @@
      "feedback": "Doubling the list quadruples the work."
     }
    ],
-   "explain": "Binary search on a million items needs about 20 checks; on two million, about 21."
+   "explain": "Binary search on a million items needs about 20 checks; on two million, about 21.",
+   "hook": "**log n grows slowest**: double the data and add just one step."
   },
   {
    "id": "computing.m.ef.handshake",
@@ -1503,7 +1623,9 @@
      "feedback": "Each shakes hands with everyone else."
     }
    ],
-   "explain": "30 people make 30 × 29 ÷ 2 = 435 handshakes; 60 people make 1,770, about four times as many."
+   "explain": "30 people make 30 × 29 ÷ 2 = 435 handshakes; 60 people make 1,770, about four times as many.",
+   "hook": "**Everyone with everyone grows like n²**: double the class, about four times the handshakes.",
+   "example": "A group chat where everyone replies to everyone gets busy fast, for the same reason."
   },
   {
    "id": "computing.m.ef.tradeoff",
@@ -1526,7 +1648,9 @@
      "feedback": "Numbers sort perfectly well."
     }
    ],
-   "explain": "Sorting costs time. If you search just once, a single linear search is quicker than sorting then binary searching."
+   "explain": "Sorting costs time. If you search just once, a single linear search is quicker than sorting then binary searching.",
+   "hook": "**Sort once, search many times.** Only searching once? Don’t bother sorting.",
+   "example": "A library keeps its books in order because thousands of people search the shelves."
   },
   {
    "id": "computing.m.ef.w",
@@ -1558,7 +1682,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Stack: push on top, pop off the top. Queue: join at the back, leave from the front.**",
+   "example": "A browser’s back button uses a stack; a school printer’s list of jobs is a queue."
   },
   {
    "id": "computing.m.sk.lifo",
@@ -1574,7 +1700,9 @@
    "explain": "Like a pile of plates: the last one added is the first one taken.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**LIFO = Last In, First Out**: the plate on top is the first one taken.",
+   "example": "A tube of crisps: the last crisp in is the first one out."
   },
   {
    "id": "computing.m.sk.undo",
@@ -1597,7 +1725,9 @@
      "feedback": "Order matters here; a stack keeps it."
     }
    ],
-   "explain": "Each action is pushed onto a stack; undo pops the most recent."
+   "explain": "Each action is pushed onto a stack; undo pops the most recent.",
+   "hook": "**Undo = pop the stack**: the newest change comes off first.",
+   "example": "Pressing Ctrl+Z in a word processor removes your most recent change first."
   },
   {
    "id": "computing.m.sk.printer",
@@ -1620,7 +1750,9 @@
      "feedback": "A queue models waiting in line."
     }
    ],
-   "explain": "Queues are fair: first come, first served."
+   "explain": "Queues are fair: first come, first served.",
+   "hook": "**Queue = FIFO: first come, first served.**",
+   "example": "Calls to a helpline wait in a queue: “You are number 3 in the queue.”"
   },
   {
    "id": "computing.m.sk.array",
@@ -1643,7 +1775,9 @@
      "feedback": "It is the other way round: Python lists grow; traditional arrays have a fixed size."
     }
    ],
-   "explain": "Python lists can grow and mix types; arrays in languages like C are fixed and uniform, which makes them very fast."
+   "explain": "Python lists can grow and mix types; arrays in languages like C are fixed and uniform, which makes them very fast.",
+   "hook": "**An array has a fixed size and one type**, like an egg box with 12 egg-shaped spaces.",
+   "example": "An egg box holds exactly 12 eggs and nothing else; a shopping bag, like a Python list, grows and holds anything."
   },
   {
    "id": "computing.m.sk.push",
@@ -1660,7 +1794,8 @@
    "accept": [
     "pushing",
     "a push"
-   ]
+   ],
+   "hook": "**Push on, pop off**, both at the top."
   },
   {
    "id": "computing.m.cm.tmpl",
@@ -1676,7 +1811,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**RLE: count the run, then the value**: WWWWBB becomes 4W2B.",
+   "example": "Simple pixel art with big blocks of one colour compresses well with RLE."
   },
   {
    "id": "computing.m.cm.lossy",
@@ -1699,7 +1836,9 @@
      "feedback": "It is used mostly for photos, music and video."
     }
    ],
-   "explain": "JPEG photos and MP3 or AAC music use lossy compression."
+   "explain": "JPEG photos and MP3 or AAC music use lossy compression.",
+   "hook": "**Lossy loses it for good**: a smaller file, with some detail gone.",
+   "example": "Music streaming apps use lossy compression so songs start playing quickly."
   },
   {
    "id": "computing.m.cm.text",
@@ -1722,7 +1861,9 @@
      "feedback": "Lossy compression is for images, sound and video."
     }
    ],
-   "explain": "ZIP and PNG are lossless: every bit comes back."
+   "explain": "ZIP and PNG are lossless: every bit comes back.",
+   "hook": "**One lost letter can change everything**, so text and code need lossless compression.",
+   "example": "Lose one digit from a bank account number and the money goes to the wrong place."
   },
   {
    "id": "computing.m.cm.rlebad",
@@ -1745,7 +1886,8 @@
      "feedback": "That becomes 4W4B."
     }
    ],
-   "explain": "With no repeated runs, ABCDEFG becomes 1A1B1C1D1E1F1G: twice as long."
+   "explain": "With no repeated runs, ABCDEFG becomes 1A1B1C1D1E1F1G: twice as long.",
+   "hook": "**RLE needs runs**: with no repeats, the file gets bigger."
   },
   {
    "id": "computing.m.cm.why",
@@ -1768,7 +1910,9 @@
      "feedback": "Compression has nothing to do with subtitles."
     }
    ],
-   "explain": "Streaming services compress video so it plays smoothly over ordinary internet connections."
+   "explain": "Streaming services compress video so it plays smoothly over ordinary internet connections.",
+   "hook": "**Smaller file = faster upload and less data used.**",
+   "example": "Video calls compress the picture all the time so they can run over ordinary home Wi-Fi."
   },
   {
    "id": "computing.m.cm.lossless",
@@ -1781,7 +1925,9 @@
     "run-off",
     "leaky"
    ],
-   "explain": "Lossless: nothing is lost."
+   "explain": "Lossless: nothing is lost.",
+   "hook": "**Lossless: less size, no loss.**",
+   "example": "PNG screenshots and ZIP folders are lossless: every pixel and character comes back."
   },
   {
    "id": "computing.m.en.tmpl",
@@ -1797,7 +1943,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Each key letter is a Caesar shift** (A = 0, B = 1, C = 2 …), with the key repeated along the message.",
+   "example": "In the American Civil War, one side used Vigenère ciphers, and the other side often cracked them."
   },
   {
    "id": "computing.m.en.caesar",
@@ -1820,7 +1968,9 @@
      "feedback": "It works with any alphabet."
     }
    ],
-   "explain": "Trying every key is called a brute-force attack."
+   "explain": "Trying every key is called a brute-force attack.",
+   "hook": "**Only 25 keys**: a computer, or a patient person, can simply try them all.",
+   "example": "A brute-force attack on a 4-digit PIN works the same way: try all 10 000 possibilities."
   },
   {
    "id": "computing.m.en.vig",
@@ -1843,7 +1993,9 @@
      "feedback": "Charles Babbage and Friedrich Kasiski worked out how to crack it in the 1800s."
     }
    ],
-   "explain": "In a Caesar cipher, the most common letter (often E) stays the most common; Vigenère smears the pattern across the key."
+   "explain": "In a Caesar cipher, the most common letter (often E) stays the most common; Vigenère smears the pattern across the key.",
+   "hook": "**Vigenère = many Caesars**: each key letter sets its own shift.",
+   "example": "It was nicknamed “le chiffre indéchiffrable”, the indecipherable cipher, for about 300 years."
   },
   {
    "id": "computing.m.en.public",
@@ -1866,7 +2018,9 @@
      "feedback": "The private key stays secret."
     }
    ],
-   "explain": "Anyone can lock the padlock; only Kit has the key to open it."
+   "explain": "Anyone can lock the padlock; only Kit has the key to open it.",
+   "hook": "**Public key = an open padlock anyone can snap shut; private key = the only key that opens it.**",
+   "example": "Whenever you see the padlock on a shopping site, public-key encryption helped set up the connection."
   },
   {
    "id": "computing.m.en.plain",
@@ -1883,7 +2037,8 @@
    "accept": [
     "plain text",
     "the plaintext"
-   ]
+   ],
+   "hook": "**Plaintext in, ciphertext out**: plain means readable."
   },
   {
    "id": "computing.m.en.https",
@@ -1906,7 +2061,9 @@
      "feedback": "HTTPS checks nothing about viruses; it only encrypts the connection."
     }
    ],
-   "explain": "HTTPS stops people on the network reading your data, but you still need to check who you are talking to."
+   "explain": "HTTPS stops people on the network reading your data, but you still need to check who you are talking to.",
+   "hook": "**The padlock means private, not honest.**",
+   "example": "Scam websites can show a padlock too: it proves the connection is encrypted, not that the shop is real."
   },
   {
    "id": "computing.m.en.w",
@@ -1945,7 +2102,9 @@
      "feedback": "DNS is about names and addresses."
     }
    ],
-   "explain": "DNS is the internet’s phone book: names for people, numbers for computers."
+   "explain": "DNS is the internet’s phone book: names for people, numbers for computers.",
+   "hook": "**DNS turns names into numbers**: a web address becomes an IP address.",
+   "example": "When DNS fails, websites seem to vanish even though the internet connection is still working."
   },
   {
    "id": "computing.m.in.packet",
@@ -1968,7 +2127,9 @@
      "feedback": "Packets let millions share it."
     }
    ],
-   "explain": "Each packet has the destination address and a sequence number so the message can be put back together."
+   "explain": "Each packet has the destination address and a sequence number so the message can be put back together.",
+   "hook": "**Packets are a jigsaw posted piece by piece**, numbered so it can be rebuilt.",
+   "example": "A glitchy video call is often caused by packets arriving late, or not at all."
   },
   {
    "id": "computing.m.in.http",
@@ -1991,7 +2152,8 @@
      "feedback": "HTML is the markup language; HTTP is the protocol."
     }
    ],
-   "explain": "HyperText Transfer Protocol. HTTPS is the secure, encrypted version."
+   "explain": "HyperText Transfer Protocol. HTTPS is the secure, encrypted version.",
+   "hook": "**HTTP = HyperText Transfer Protocol**: the rules for fetching web pages."
   },
   {
    "id": "computing.m.in.ipmac",
@@ -2014,7 +2176,8 @@
      "feedback": "Every network card has one."
     }
    ],
-   "explain": "IP addresses route data across the internet; MAC addresses identify devices on the local network."
+   "explain": "IP addresses route data across the internet; MAC addresses identify devices on the local network.",
+   "hook": "**An IP address is like your postal address (it changes when you move); a MAC address is like your fingerprint.**"
   },
   {
    "id": "computing.m.in.router",
@@ -2037,7 +2200,9 @@
      "feedback": "That was what old modems did."
     }
    ],
-   "explain": "Routers read each packet’s destination and send it on its next hop."
+   "explain": "Routers read each packet’s destination and send it on its next hop.",
+   "hook": "**A router is a postal sorting office** for packets.",
+   "example": "A packet crossing the world may pass through 10 to 20 routers on the way."
   },
   {
    "id": "computing.m.in.ipv4",
@@ -2050,7 +2215,9 @@
     "16",
     "128"
    ],
-   "explain": "Written as four numbers from 0 to 255, like 192.168.1.10. IPv6 uses 128 bits because we ran out of IPv4 addresses."
+   "explain": "Written as four numbers from 0 to 255, like 192.168.1.10. IPv6 uses 128 bits because we ran out of IPv4 addresses.",
+   "hook": "**IPv4 = 4 numbers × 8 bits = 32 bits.**",
+   "example": "32 bits allow about 4.3 billion addresses, fewer than the devices now online: hence IPv6."
   },
   {
    "id": "computing.m.in.visit",
@@ -2065,7 +2232,8 @@
     "the browser displays the page"
    ],
    "labels": null,
-   "explain": "Name → address → request → response → display."
+   "explain": "Name → address → request → response → display.",
+   "hook": "**Name, address, request, response, display.**"
   },
   {
    "id": "computing.m.in.w",
@@ -2098,7 +2266,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Most tags come in pairs**: <p> opens and </p> closes; the slash means “end”. A few, like <img>, stand alone.",
+   "example": "Choose “view source” on any web page to see the HTML tags behind it."
   },
   {
    "id": "computing.m.wb.jobs",
@@ -2121,7 +2291,9 @@
      "feedback": "HTTP is how the page is delivered."
     }
    ],
-   "explain": "HTML: what is on the page. CSS: how it looks. JavaScript: how it behaves."
+   "explain": "HTML: what is on the page. CSS: how it looks. JavaScript: how it behaves.",
+   "hook": "**HTML = skeleton, CSS = clothes, JavaScript = muscles.**",
+   "example": "Dark mode on a website is often just a different set of CSS styles."
   },
   {
    "id": "computing.m.wb.alt",
@@ -2144,7 +2316,9 @@
      "feedback": "src is the file; alt is the description."
     }
    ],
-   "explain": "Alt text makes pages accessible to blind and partially sighted users."
+   "explain": "Alt text makes pages accessible to blind and partially sighted users.",
+   "hook": "**alt text describes the image** for anyone who can’t see it.",
+   "example": "Social media apps let you add alt text to photos so that everyone can follow your posts."
   },
   {
    "id": "computing.m.wb.h1",
@@ -2160,7 +2334,8 @@
    "explain": "<h1> to <h6> are headings, from biggest to smallest. <head> holds information about the page, not the heading.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**h1 = heading number 1**, the biggest; the head section is hidden information about the page."
   },
   {
    "id": "computing.m.wb.js",
@@ -2183,7 +2358,9 @@
      "feedback": "DNS finds IP addresses."
     }
    ],
-   "explain": "JavaScript runs in the browser and makes pages interactive."
+   "explain": "JavaScript runs in the browser and makes pages interactive.",
+   "hook": "**JavaScript = behaviour**: it reacts to clicks and typing.",
+   "example": "A like button that changes the moment you tap it is run by JavaScript."
   },
   {
    "id": "computing.m.dbx.tmpl",
@@ -2199,7 +2376,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**COUNT counts rows, SUM adds, AVG averages, ORDER BY sorts.**",
+   "example": "A music app’s “most played” list is a query sorted with ORDER BY plays DESC."
   },
   {
    "id": "computing.m.dbx.pk",
@@ -2222,7 +2401,9 @@
      "feedback": "They can; they just are not unique."
     }
    ],
-   "explain": "Schools use a student ID number as the primary key instead."
+   "explain": "Schools use a student ID number as the primary key instead.",
+   "hook": "**Primary key = unique**, so names are out and ID numbers are in.",
+   "example": "A library card number is a primary key: it picks out exactly one member."
   },
   {
    "id": "computing.m.dbx.count",
@@ -2245,7 +2426,9 @@
      "feedback": "That would be MAX."
     }
    ],
-   "explain": "COUNT, SUM, MAX, MIN and AVG are aggregate functions: they summarise many rows into one answer."
+   "explain": "COUNT, SUM, MAX, MIN and AVG are aggregate functions: they summarise many rows into one answer.",
+   "hook": "**COUNT counts rows**; SUM adds, MAX finds the biggest.",
+   "example": "A shop asking “how many orders came in today?” runs a COUNT query."
   },
   {
    "id": "computing.m.dbx.desc",
@@ -2268,7 +2451,9 @@
      "feedback": "WHERE filters rows; it does not sort."
     }
    ],
-   "explain": "DESC = descending, biggest first."
+   "explain": "DESC = descending, biggest first.",
+   "hook": "**DESC = descending = biggest first; ASC = ascending = smallest first.**",
+   "example": "Sorting a shop by “price: high to low” is ORDER BY price DESC."
   },
   {
    "id": "computing.m.dbx.why",
@@ -2291,7 +2476,9 @@
      "feedback": "They can, but they struggle with millions of records and many users."
     }
    ],
-   "explain": "Databases enforce data types, keys and permissions, and answer queries very fast."
+   "explain": "Databases enforce data types, keys and permissions, and answer queries very fast.",
+   "hook": "**Databases: many users, millions of records, all kept safe.**",
+   "example": "Airlines use databases so that two people can never book the same seat at the same moment."
   },
   {
    "id": "computing.m.dbx.like",
@@ -2307,7 +2494,8 @@
    "explain": "LIKE 'A%' matches anything starting with A.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**% means any number of characters** in LIKE, so A% means “starts with A”."
   },
   {
    "id": "computing.m.dbx.w",
@@ -2346,7 +2534,9 @@
      "feedback": "It uses the patterns it learned in training."
     }
    ],
-   "explain": "Machine learning finds patterns in training data rather than following hand-written rules."
+   "explain": "Machine learning finds patterns in training data rather than following hand-written rules.",
+   "hook": "**Machine learning = learning from examples**, not from hand-written rules.",
+   "example": "Email spam filters learn from millions of messages that people have marked as spam."
   },
   {
    "id": "computing.m.ai.bias",
@@ -2369,7 +2559,9 @@
      "feedback": "It can recognise new faces, but less accurately for some groups."
     }
    ],
-   "explain": "Biased training data leads to biased results, which can have serious real-world effects."
+   "explain": "Biased training data leads to biased results, which can have serious real-world effects.",
+   "hook": "**Biased data in, biased results out.**",
+   "example": "Researchers have found some face-recognition systems were least accurate for darker-skinned women."
   },
   {
    "id": "computing.m.ai.turing",
@@ -2392,7 +2584,9 @@
      "feedback": "Alan Turing proposed it in 1950 as a thought experiment."
     }
    ],
-   "explain": "Turing called it the “imitation game”."
+   "explain": "Turing called it the “imitation game”.",
+   "hook": "**The Turing test is the imitation game**: can a machine pass for a human in a chat?",
+   "example": "CAPTCHA puzzles on websites are a reverse Turing test: you prove that you are human."
   },
   {
    "id": "computing.m.ai.gen",
@@ -2415,7 +2609,9 @@
      "feedback": "They can be very useful, but need checking."
     }
    ],
-   "explain": "Generative AI predicts likely text; it does not always know what is true."
+   "explain": "Generative AI predicts likely text; it does not always know what is true.",
+   "hook": "**AI predicts likely words, not true facts**: always check.",
+   "example": "Lawyers have been caught quoting court cases that a chatbot simply made up."
   },
   {
    "id": "computing.m.ai.data",
@@ -2431,7 +2627,8 @@
    "explain": "Good, varied, fairly collected training data is vital.",
    "accept": [
     "training set"
-   ]
+   ],
+   "hook": "**Training data is the textbook the AI learns from.**"
   },
   {
    "id": "computing.m.ai.w",
@@ -2464,7 +2661,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**1 GHz = 1 billion cycles every second.**",
+   "example": "A 3 GHz processor ticks about 3 billion times in the second it takes you to say “one”."
   },
   {
    "id": "computing.m.ar.cache",
@@ -2487,7 +2686,8 @@
      "feedback": "That is cloud storage, which is far slower."
     }
    ],
-   "explain": "Fetching from cache is many times faster than fetching from RAM."
+   "explain": "Fetching from cache is many times faster than fetching from RAM.",
+   "hook": "**Cache = the snack drawer by your desk**: small, close and fast."
   },
   {
    "id": "computing.m.ar.cores",
@@ -2510,7 +2710,9 @@
      "feedback": "Each core runs at the clock speed."
     }
    ],
-   "explain": "Software has to be written to use several cores, and some steps depend on earlier ones."
+   "explain": "Software has to be written to use several cores, and some steps depend on earlier ones.",
+   "hook": "**Some jobs can’t be shared**: four cooks can’t boil one egg four times faster.",
+   "example": "Exporting a video keeps every core busy; loading one web page uses only one or two."
   },
   {
    "id": "computing.m.ar.register",
@@ -2533,7 +2735,8 @@
      "feedback": "Registers are inside the CPU itself."
     }
    ],
-   "explain": "The program counter register, for example, holds the address of the next instruction."
+   "explain": "The program counter register, for example, holds the address of the next instruction.",
+   "hook": "**Registers are the CPU’s own pockets**: tiny, but the fastest storage of all."
   },
   {
    "id": "computing.m.ar.vonneumann",
@@ -2556,7 +2759,8 @@
      "feedback": "Instructions and data share memory."
     }
    ],
-   "explain": "The stored-program idea means a computer can run any program just by loading it into memory."
+   "explain": "The stored-program idea means a computer can run any program just by loading it into memory.",
+   "hook": "**Stored program: instructions are just data in memory.**"
   },
   {
    "id": "computing.m.ar.embedded",
@@ -2579,7 +2783,9 @@
      "feedback": "That is software, not a system inside a device."
     }
    ],
-   "explain": "Embedded systems do one dedicated job inside a bigger device: cars, microwaves, traffic lights."
+   "explain": "Embedded systems do one dedicated job inside a bigger device: cars, microwaves, traffic lights.",
+   "hook": "**Embedded = one job, built in.**",
+   "example": "A smart thermostat, a car’s airbag controller and a washing machine all contain embedded systems."
   },
   {
    "id": "computing.m.ar.w",
@@ -2619,7 +2825,8 @@
      "feedback": "That is an OS job."
     }
    ],
-   "explain": "The OS manages memory, the processor, devices, files, users and security, and provides the user interface."
+   "explain": "The OS manages memory, the processor, devices, files, users and security, and provides the user interface.",
+   "hook": "**The OS is the manager, not the worker**: it won’t write your essay."
   },
   {
    "id": "computing.m.os.multi",
@@ -2642,7 +2849,9 @@
      "feedback": "Switching happens thousands of times a second."
     }
    ],
-   "explain": "This is called multitasking, and scheduling the processor is a key OS job."
+   "explain": "This is called multitasking, and scheduling the processor is a key OS job.",
+   "hook": "**Multitasking is super-fast juggling**: the CPU switches between tasks.",
+   "example": "Music keeps playing while you browse because the OS switches the processor between them many times a second."
   },
   {
    "id": "computing.m.os.driver",
@@ -2665,7 +2874,9 @@
      "feedback": "It is about controlling hardware."
     }
    ],
-   "explain": "Each printer, graphics card or controller needs a driver so the OS knows how to talk to it."
+   "explain": "Each printer, graphics card or controller needs a driver so the OS knows how to talk to it.",
+   "hook": "**A driver is a translator** between the OS and one piece of hardware.",
+   "example": "Plugging in a new printer or games controller often installs a driver first."
   },
   {
    "id": "computing.m.os.defrag",
@@ -2688,7 +2899,8 @@
      "feedback": "It rearranges them; on an SSD there is no benefit."
     }
    ],
-   "explain": "Defragmenting helps spinning hard disks, where scattered pieces of a file slow reading down."
+   "explain": "Defragmenting helps spinning hard disks, where scattered pieces of a file slow reading down.",
+   "hook": "**Defragmenting helps spinning disks, not SSDs**: an SSD has no moving head to wait for."
   },
   {
    "id": "computing.m.os.open",
@@ -2711,7 +2923,9 @@
      "feedback": "Open-source software has bugs like any other."
     }
    ],
-   "explain": "Linux and Firefox are open source; Windows is proprietary (closed source)."
+   "explain": "Linux and Firefox are open source; Windows is proprietary (closed source).",
+   "hook": "**Open source = an open recipe**: anyone can read and change it.",
+   "example": "Android is built on the open-source Linux kernel."
   },
   {
    "id": "computing.m.os.backup",
@@ -2727,7 +2941,9 @@
    "explain": "A good habit is the 3-2-1 rule: three copies, on two kinds of storage, one kept somewhere else.",
    "formats": [
     "choice"
-   ]
+   ],
+   "hook": "**3-2-1: three copies, two kinds of storage, one kept somewhere else.**",
+   "example": "A phone that backs up its photos to the cloud each night is keeping a copy somewhere else."
   },
   {
    "id": "computing.m.lw.dpa",
@@ -2750,7 +2966,9 @@
      "feedback": "People have the right to access their data."
     }
    ],
-   "explain": "Data must be used fairly and lawfully, for stated purposes, kept accurate and secure, and not kept longer than needed."
+   "explain": "Data must be used fairly and lawfully, for stated purposes, kept accurate and secure, and not kept longer than needed.",
+   "hook": "**Keep only what you need, only for as long as you need it.**",
+   "example": "A shop shouldn’t keep your card details for years after a single online order."
   },
   {
    "id": "computing.m.lw.cma",
@@ -2773,7 +2991,9 @@
      "feedback": "Unauthorised access is an offence even if nothing is changed."
     }
    ],
-   "explain": "Unauthorised access is the first offence under the Computer Misuse Act; doing it to commit further crimes, or to damage data, are more serious offences."
+   "explain": "Unauthorised access is the first offence under the Computer Misuse Act; doing it to commit further crimes, or to damage data, are more serious offences.",
+   "hook": "**Unauthorised access is a crime**, even “just to look”.",
+   "example": "Guessing a teacher’s password to peek at test answers would break the Computer Misuse Act."
   },
   {
    "id": "computing.m.lw.copy",
@@ -2796,7 +3016,9 @@
      "feedback": "That is about hacking."
     }
    ],
-   "explain": "Copyright protects films, music, books and software from being copied and shared without permission."
+   "explain": "Copyright protects films, music, books and software from being copied and shared without permission.",
+   "hook": "**CDPA 1988 = Copyright, Designs and Patents**: don’t copy and share other people’s work.",
+   "example": "Video sites take down uploaded films and songs after copyright complaints."
   },
   {
    "id": "computing.m.lw.ewaste",
@@ -2819,7 +3041,9 @@
      "feedback": "Much of it is not."
     }
    ],
-   "explain": "Recycling recovers metals like gold and copper and stops toxic chemicals leaking into soil and water."
+   "explain": "Recycling recovers metals like gold and copper and stops toxic chemicals leaking into soil and water.",
+   "hook": "**E-waste: poison inside, and treasure inside.**",
+   "example": "The UK throws away more electronic waste per person than almost any other country."
   },
   {
    "id": "computing.m.lw.datacentre",
@@ -2842,7 +3066,9 @@
      "feedback": "Their electricity and water use is significant."
     }
    ],
-   "explain": "Streaming, cloud storage and AI all run in data centres, so their energy use is growing fast."
+   "explain": "Streaming, cloud storage and AI all run in data centres, so their energy use is growing fast.",
+   "hook": "“**The cloud is just someone else’s computer**”, and it needs power and cooling.",
+   "example": "Some data centres are built in cold places such as Iceland and Scandinavia to save on cooling."
   },
   {
    "id": "computing.m.lw.divide",
@@ -2865,7 +3091,9 @@
      "feedback": "That is packet switching."
     }
    ],
-   "explain": "Cost, location, age and skills can all leave people behind as more services move online."
+   "explain": "Cost, location, age and skills can all leave people behind as more services move online.",
+   "hook": "**The divide is the gap between online and offline.**",
+   "example": "Older people without the internet can struggle as banks close branches and move services online."
   },
   {
    "id": "computing.m.rc.tmpl",
@@ -2881,7 +3109,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Base case + a smaller call**: factorial(n) = n × factorial(n − 1), stopping at 1.",
+   "example": "Russian dolls: open each doll to find a smaller one, until the tiny solid doll, the base case."
   },
   {
    "id": "computing.m.rc.base",
@@ -2904,7 +3134,9 @@
      "feedback": "It never stops calling itself."
     }
    ],
-   "explain": "Python stops it with a RecursionError when the call stack gets too deep."
+   "explain": "Python stops it with a RecursionError when the call stack gets too deep.",
+   "hook": "**No base case = no brakes.**",
+   "example": "Two mirrors facing each other make an endless corridor of reflections: recursion with no base case."
   },
   {
    "id": "computing.m.rc.vs",
@@ -2927,7 +3159,8 @@
      "feedback": "Recursion and iteration are interchangeable, though one is often clearer."
     }
    ],
-   "explain": "Recursion is elegant for problems that contain smaller copies of themselves, like trees and mazes."
+   "explain": "Recursion is elegant for problems that contain smaller copies of themselves, like trees and mazes.",
+   "hook": "**Recursion and loops are two roads to the same place.**"
   },
   {
    "id": "computing.m.rc.def",
@@ -2944,7 +3177,9 @@
    "accept": [
     "recursion",
     "a recursive function"
-   ]
+   ],
+   "hook": "**Recursive = it calls itself**, each time on a smaller problem.",
+   "example": "Searching a folder that has folders inside folders is naturally done recursively."
   },
   {
    "id": "computing.m.pt.tmpl",
@@ -2960,7 +3195,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**BFS: ripples on a pond. Dijkstra: always extend the shortest route found so far.**",
+   "example": "Sat navs and delivery firms use shortest-path algorithms to plan their routes."
   },
   {
    "id": "computing.m.pt.graph",
@@ -2983,7 +3220,9 @@
      "feedback": "Weights are the distances on the edges."
     }
    ],
-   "explain": "Graphs model maps, networks, friendships and much more."
+   "explain": "Graphs model maps, networks, friendships and much more.",
+   "hook": "**Nodes are the dots; edges are the lines between them.**",
+   "example": "A social network is a graph: people are the nodes and friendships are the edges."
   },
   {
    "id": "computing.m.pt.bfs",
@@ -3006,7 +3245,9 @@
      "feedback": "BFS is systematic."
     }
    ],
-   "explain": "The first time BFS reaches the exit, no shorter route can exist."
+   "explain": "The first time BFS reaches the exit, no shorter route can exist.",
+   "hook": "**BFS = ripples spreading out**: everything 1 step away, then 2, then 3.",
+   "example": "Social apps can find “friends of friends” with a breadth-first search."
   },
   {
    "id": "computing.m.pt.satnav",
@@ -3029,7 +3270,9 @@
      "feedback": "They compare words, not routes."
     }
    ],
-   "explain": "Internet routers use similar algorithms to choose paths for packets."
+   "explain": "Internet routers use similar algorithms to choose paths for packets.",
+   "hook": "**Dijkstra: always extend the shortest route found so far.**",
+   "example": "Delivery firms plan van routes with shortest-path algorithms to save time and fuel."
   },
   {
    "id": "computing.m.lc.tmpl",
@@ -3045,7 +3288,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Work inside the brackets first**, and give each gate its own column in the truth table.",
+   "example": "A seatbelt warning beeps when (the engine is on AND the seatbelt is NOT fastened)."
   },
   {
    "id": "computing.m.lc.rows",
@@ -3058,7 +3303,8 @@
     "6",
     "9"
    ],
-   "explain": "2 × 2 × 2 = 2^{3} = 8 combinations."
+   "explain": "2 × 2 × 2 = 2^{3} = 8 combinations.",
+   "hook": "**Each extra input doubles the rows**: 2³ = 8 for three inputs."
   },
   {
    "id": "computing.m.lc.half",
@@ -3081,7 +3327,9 @@
      "feedback": "NOT has only one input."
     }
    ],
-   "explain": "0+0 = 00, 0+1 = 01, 1+1 = 10: the sum bit is XOR and the carry bit is AND."
+   "explain": "0+0 = 00, 0+1 = 01, 1+1 = 10: the sum bit is XOR and the carry bit is AND.",
+   "hook": "**Half adder: XOR gives the sum, AND gives the carry.**",
+   "example": "Every sum your phone works out is built from chains of adders like this one."
   },
   {
    "id": "computing.m.lc.nand",
@@ -3104,7 +3352,9 @@
      "feedback": "They work alone, but combinations make every other gate."
     }
    ],
-   "explain": "NAND (NOT AND) is “universal”, which is why chips can be built from huge numbers of one simple gate."
+   "explain": "NAND (NOT AND) is “universal”, which is why chips can be built from huge numbers of one simple gate.",
+   "hook": "**NAND = NOT AND, the universal gate**: you can build anything from it.",
+   "example": "The flash memory in phones and USB sticks is called NAND flash because its memory cells are wired together in a pattern like a NAND gate."
   },
   {
    "id": "computing.m.hf.tmpl",
@@ -3120,7 +3370,9 @@
     -1,
     0,
     1
-   ]
+   ],
+   "hook": "**Huffman: join the two least common, again and again**, to build the tree.",
+   "example": "ZIP files and JPEG images both use Huffman coding as one of their steps."
   },
   {
    "id": "computing.m.hf.why",
@@ -3135,7 +3387,7 @@
     {
      "text": "E is the first letter Huffman’s algorithm reads",
      "correct": false,
-     "feedback": "A comes first; it is about frequency."
+     "feedback": "Huffman’s algorithm works from how often each letter appears, not the order it reads them."
     },
     {
      "text": "E is a vowel, and vowels always get short codes",
@@ -3143,7 +3395,9 @@
      "feedback": "Frequency matters, not whether it is a vowel."
     }
    ],
-   "explain": "Common symbols get short codes; rare symbols get long ones."
+   "explain": "Common symbols get short codes; rare symbols get long ones.",
+   "hook": "**Common = short**, like Morse code’s single dot for E.",
+   "example": "Morse code used the same idea: E is one dot, while the rare Q is dash, dash, dot, dash."
   },
   {
    "id": "computing.m.hf.prefix",
@@ -3166,7 +3420,8 @@
      "feedback": "Huffman coding is lossless."
     }
    ],
-   "explain": "If A were 1 and B 10, the bits 10 could mean B or “A then something”."
+   "explain": "If A were 1 and B 10, the bits 10 could mean B or “A then something”.",
+   "hook": "**No code is the start of another**: prefix-free, so no gaps are needed between codes."
   },
   {
    "id": "computing.m.hf.type",
@@ -3179,7 +3434,8 @@
     "neither",
     "both"
    ],
-   "explain": "The original text comes back exactly."
+   "explain": "The original text comes back exactly.",
+   "hook": "**Huffman coding is lossless**: every letter comes back."
   }
  ]
 }

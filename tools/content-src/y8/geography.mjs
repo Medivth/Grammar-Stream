@@ -13,27 +13,27 @@ const order = (id, topic, prompt, items, labels, explain) => ({ id: `geography.$
 const C = { formats: ['choice'] };
 
 const topics = [
-  { id: 'geography.maps', title: 'Map skills: six-figure grid references, contours and bearings', kind: 'facts', prereqs: [], batch: 5, intro: 'Ordnance Survey maps reward precision. A six-figure grid reference pins a place to within 100 metres; contours show the shape of the land; bearings give an exact direction.', teach: 'Explain how to give a six-figure grid reference, and why eastings come first.', talk: 'Plan a walk together on an OS map (or the OS app) and ask {her} to read the contours along the route.' },
-  { id: 'geography.tectonics', title: 'Plate tectonics', kind: 'facts', prereqs: [], batch: 5, intro: 'The Earth’s crust is broken into plates that move a few centimetres a year. What happens at their edges builds mountains, opens oceans and shakes cities. The Greeks blamed Poseidon, the Earth-shaker; we have better evidence.', teach: 'Explain the difference between a destructive and a constructive plate boundary, with an example of each.', talk: 'Ask {her} why Iceland is getting wider every year.' },
-  { id: 'geography.hazards', title: 'Earthquakes and volcanoes: case studies', kind: 'facts', prereqs: ['geography.tectonics'], batch: 5, intro: 'The same size of earthquake can kill a hundred people in one country and a hundred thousand in another. Case studies show why: wealth, buildings, planning and luck.', teach: 'Explain why the 2010 Haiti earthquake killed far more people than many larger earthquakes in richer countries.', talk: 'Ask {her} what happened to the island of Thera (Santorini) about 3,600 years ago.' },
-  { id: 'geography.weather', title: 'Weather, pressure and rainfall', kind: 'facts', prereqs: [], batch: 5, intro: 'Weather is what is happening in the sky today; climate is the pattern over thirty years or more. Air pressure, the ocean and the shape of the land explain most of what the UK gets.', teach: 'Explain the three types of rainfall, with a place where each is common.', talk: 'Watch a weather forecast together and ask {her} to spot a depression (a low) and a high.' },
-  { id: 'geography.climate', title: 'Climate change: causes, effects and responses', kind: 'facts', prereqs: ['geography.weather'], batch: 5, intro: 'The climate has always changed, but never this fast in human history. Separate the evidence, the natural causes, the human causes and the choices we can still make.', teach: 'Explain the enhanced greenhouse effect in four steps.', talk: 'Ask {her} which response to climate change {she} thinks matters most: changing energy, food, transport or something else.' },
-  { id: 'geography.rivers', title: 'Rivers and flooding', kind: 'facts', prereqs: ['geography.weather'], batch: 5, intro: 'A river shapes its valley from source to mouth: erosion in the hills, meanders in the middle course, floodplains and deltas near the sea. Floods are natural; the damage depends on what we build.', teach: 'Explain how an oxbow lake forms, in four steps.', talk: 'On a walk by a river, ask {her} to find the fastest-flowing side of a bend.' },
-  { id: 'geography.coasts', title: 'Coasts: erosion, landforms and management', kind: 'facts', prereqs: ['geography.rivers'], batch: 5, intro: 'Waves attack the coast with hydraulic action and abrasion, carry sand along it by longshore drift, and build it back as beaches and spits. Deciding what to protect is a hard choice.', teach: 'Explain how a headland becomes a stack and then a stump.', talk: 'Ask {her} whether the government should protect every stretch of eroding coast, and why.' },
-  { id: 'geography.ice', title: 'Glaciers and the shape of upland Britain', kind: 'facts', prereqs: ['geography.rivers'], batch: 5, intro: 'Twenty thousand years ago ice covered most of Britain. The Lake District, Snowdonia and the Highlands are still shaped by it: corries, arêtes, U-shaped valleys and ribbon lakes.', teach: 'Explain how a corrie forms.', talk: 'Look at a photo of Striding Edge or Windermere together and ask {her} to name the glacial landform.' },
-  { id: 'geography.biomes', title: 'Ecosystems and biomes', kind: 'facts', prereqs: ['geography.weather'], batch: 5, intro: 'A biome is a huge ecosystem shaped by climate: rainforest, hot desert, tundra. Each has plants and animals adapted to it, and each faces its own threats.', teach: 'Explain why tropical rainforest soils are poor even though the forest is so lush.', talk: 'Ask {her} for three ways a camel or a cactus is adapted to the desert.' },
-  { id: 'geography.population', title: 'Population and migration', kind: 'facts', prereqs: [], batch: 5, intro: 'There are now about 8 billion people. Why do some countries grow fast while others shrink? And why do people move?', teach: 'Explain the five stages of the demographic transition model.', talk: 'Ask {her} for one push factor and one pull factor in a family or local migration story you know.' },
-  { id: 'geography.cities', title: 'Urbanisation and megacities', kind: 'facts', prereqs: ['geography.population'], batch: 5, intro: 'Since about 2007 more people have lived in towns and cities than in the countryside. Megacities such as Lagos and Mumbai grow by millions in a decade; London grew the same way 150 years ago.', teach: 'Explain the opportunities and challenges of living in a fast-growing city such as Lagos.', talk: 'Ask {her} what an informal settlement is, and why it is a mistake to call it just a slum.' },
-  { id: 'geography.development', title: 'Development and inequality', kind: 'facts', prereqs: ['geography.population'], batch: 5, intro: 'How do we compare countries fairly? Income alone hides too much, so geographers use measures like the Human Development Index, and ask why gaps open and how they close.', teach: 'Explain why HDI is a better measure of development than GNI per head alone.', talk: 'Ask {her} what the Brandt line was, and whether it still works today.' },
-  { id: 'geography.global', title: 'Globalisation and trade', kind: 'facts', prereqs: ['geography.development'], batch: 5, intro: 'Your phone was designed in one country, assembled in another from parts made in a dozen more. Containers, the internet and transnational companies tie the world together, for better and worse.', teach: 'Explain two advantages and two disadvantages of a transnational company opening a factory in a lower-income country.', talk: 'Check the labels on three things at home and ask {her} to map where they were made.' },
-  { id: 'geography.energy', title: 'Resources and energy', kind: 'facts', prereqs: ['geography.climate'], batch: 5, intro: 'Food, water and energy are unevenly shared. The big question for this generation: how to power the world without wrecking the climate.', teach: 'Explain the difference between renewable and non-renewable energy, with two examples of each.', talk: 'Ask {her} which renewable source suits your area best, and why.' },
-  { id: 'geography.russia', title: 'Regional study: Russia', kind: 'facts', prereqs: ['geography.biomes'], batch: 5, intro: 'The largest country on Earth spans two continents, eleven time zones and every cold biome from steppe to tundra. Its geography explains much of its history.', teach: 'Explain how permafrost affects building and living in Siberia.', talk: 'Ask {her} how long the Trans-Siberian Railway is, and how long the journey takes.' },
-  { id: 'geography.places', title: 'World places: countries and capitals', kind: 'facts', prereqs: [], batch: 6, intro: 'Beyond the obvious: thirty countries every well-informed person should be able to find, and their capitals (several of which are not the biggest city).', teach: 'Name three countries whose capital is not their largest city.', talk: 'When a country is in the news, ask {her} to find it on a map and name its capital.' },
-  { id: 'geography.aegean', title: 'Greece and the Mediterranean', kind: 'facts', prereqs: ['geography.tectonics'], batch: 6, intro: 'The world of the Greek myths is a real landscape: mountains, thousands of islands, earthquakes and volcanoes, and a climate of hot, dry summers. Mira and Theo are island-hopping across the Aegean.', teach: 'Explain why Greece has so many earthquakes.', talk: 'Ask {her} which Greek island {she} would visit first, and what landform {she} would see there.' },
+  { id: 'geography.maps', title: 'Map skills: six-figure grid references, contours and bearings', kind: 'facts', prereqs: [], batch: 5, intro: 'Ordnance Survey maps reward precision. A six-figure grid reference pins a place to within 100 metres; contours show the shape of the land; bearings give an exact direction.', teach: 'Explain how to give a six-figure grid reference, and why eastings come first.', talk: 'Plan a walk together on an OS map (or the OS app) and ask {him} to read the contours along the route.' },
+  { id: 'geography.tectonics', title: 'Plate tectonics', kind: 'facts', prereqs: [], batch: 5, intro: 'The Earth’s crust is broken into plates that move a few centimetres a year. What happens at their edges builds mountains, opens oceans and shakes cities. The Greeks blamed Poseidon, the Earth-shaker; we have better evidence.', teach: 'Explain the difference between a destructive and a constructive plate boundary, with an example of each.', talk: 'Ask {him} why Iceland is getting wider every year.' },
+  { id: 'geography.hazards', title: 'Earthquakes and volcanoes: case studies', kind: 'facts', prereqs: ['geography.tectonics'], batch: 5, intro: 'The same size of earthquake can kill a hundred people in one country and a hundred thousand in another. Case studies show why: wealth, buildings, planning and luck.', teach: 'Explain why the 2010 Haiti earthquake killed far more people than many larger earthquakes in richer countries.', talk: 'Ask {him} what happened to the island of Thera (Santorini) about 3,600 years ago.' },
+  { id: 'geography.weather', title: 'Weather, pressure and rainfall', kind: 'facts', prereqs: [], batch: 5, intro: 'Weather is what is happening in the sky today; climate is the pattern over thirty years or more. Air pressure, the ocean and the shape of the land explain most of what the UK gets.', teach: 'Explain the three types of rainfall, with a place where each is common.', talk: 'Watch a weather forecast together and ask {him} to spot a depression (a low) and a high.' },
+  { id: 'geography.climate', title: 'Climate change: causes, effects and responses', kind: 'facts', prereqs: ['geography.weather'], batch: 5, intro: 'The climate has always changed, but never this fast in human history. Separate the evidence, the natural causes, the human causes and the choices we can still make.', teach: 'Explain the enhanced greenhouse effect in four steps.', talk: 'Ask {him} which response to climate change {she} thinks matters most: changing energy, food, transport or something else.' },
+  { id: 'geography.rivers', title: 'Rivers and flooding', kind: 'facts', prereqs: ['geography.weather'], batch: 5, intro: 'A river shapes its valley from source to mouth: erosion in the hills, meanders in the middle course, floodplains and deltas near the sea. Floods are natural; the damage depends on what we build.', teach: 'Explain how an oxbow lake forms, in four steps.', talk: 'On a walk by a river, ask {him} to find the fastest-flowing side of a bend.' },
+  { id: 'geography.coasts', title: 'Coasts: erosion, landforms and management', kind: 'facts', prereqs: ['geography.rivers'], batch: 5, intro: 'Waves attack the coast with hydraulic action and abrasion, carry sand along it by longshore drift, and build it back as beaches and spits. Deciding what to protect is a hard choice.', teach: 'Explain how a headland becomes a stack and then a stump.', talk: 'Ask {him} whether the government should protect every stretch of eroding coast, and why.' },
+  { id: 'geography.ice', title: 'Glaciers and the shape of upland Britain', kind: 'facts', prereqs: ['geography.rivers'], batch: 5, intro: 'Twenty thousand years ago ice covered much of Britain. The Lake District, Snowdonia and the Highlands are still shaped by it: corries, arêtes, U-shaped valleys and ribbon lakes.', teach: 'Explain how a corrie forms.', talk: 'Look at a photo of Striding Edge or Windermere together and ask {him} to name the glacial landform.' },
+  { id: 'geography.biomes', title: 'Ecosystems and biomes', kind: 'facts', prereqs: ['geography.weather'], batch: 5, intro: 'A biome is a huge ecosystem shaped by climate: rainforest, hot desert, tundra. Each has plants and animals adapted to it, and each faces its own threats.', teach: 'Explain why tropical rainforest soils are poor even though the forest is so lush.', talk: 'Ask {him} for three ways a camel or a cactus is adapted to the desert.' },
+  { id: 'geography.population', title: 'Population and migration', kind: 'facts', prereqs: [], batch: 5, intro: 'There are now about 8 billion people. Why do some countries grow fast while others shrink? And why do people move?', teach: 'Explain the five stages of the demographic transition model.', talk: 'Ask {him} for one push factor and one pull factor in a family or local migration story you know.' },
+  { id: 'geography.cities', title: 'Urbanisation and megacities', kind: 'facts', prereqs: ['geography.population'], batch: 5, intro: 'Since about 2007 more people have lived in towns and cities than in the countryside. Megacities such as Lagos and Mumbai grow by millions in a decade; London grew the same way 150 years ago.', teach: 'Explain the opportunities and challenges of living in a fast-growing city such as Lagos.', talk: 'Ask {him} what an informal settlement is, and why it is a mistake to call it just a slum.' },
+  { id: 'geography.development', title: 'Development and inequality', kind: 'facts', prereqs: ['geography.population'], batch: 5, intro: 'How do we compare countries fairly? Income alone hides too much, so geographers use measures like the Human Development Index, and ask why gaps open and how they close.', teach: 'Explain why HDI is a better measure of development than GNI per head alone.', talk: 'Ask {him} what the Brandt line was, and whether it still works today.' },
+  { id: 'geography.global', title: 'Globalisation and trade', kind: 'facts', prereqs: ['geography.development'], batch: 5, intro: 'Your phone was designed in one country, assembled in another from parts made in a dozen more. Containers, the internet and transnational companies tie the world together, for better and worse.', teach: 'Explain two advantages and two disadvantages of a transnational company opening a factory in a lower-income country.', talk: 'Check the labels on three things at home and ask {him} to map where they were made.' },
+  { id: 'geography.energy', title: 'Resources and energy', kind: 'facts', prereqs: ['geography.climate'], batch: 5, intro: 'Food, water and energy are unevenly shared. The big question for this generation: how to power the world without wrecking the climate.', teach: 'Explain the difference between renewable and non-renewable energy, with two examples of each.', talk: 'Ask {him} which renewable source suits your area best, and why.' },
+  { id: 'geography.russia', title: 'Regional study: Russia', kind: 'facts', prereqs: ['geography.biomes'], batch: 5, intro: 'The largest country on Earth spans two continents, eleven time zones and every cold biome from steppe to tundra. Its geography explains much of its history.', teach: 'Explain how permafrost affects building and living in Siberia.', talk: 'Ask {him} how long the Trans-Siberian Railway is, and how long the journey takes.' },
+  { id: 'geography.places', title: 'World places: countries and capitals', kind: 'facts', prereqs: [], batch: 6, intro: 'Beyond the obvious: thirty countries every well-informed person should be able to find, and their capitals (several of which are not the biggest city).', teach: 'Name three countries whose capital is not their largest city.', talk: 'When a country is in the news, ask {him} to find it on a map and name its capital.' },
+  { id: 'geography.aegean', title: 'Greece and the Mediterranean', kind: 'facts', prereqs: ['geography.tectonics'], batch: 6, intro: 'The world of the Greek myths is a real landscape: mountains, thousands of islands, earthquakes and volcanoes, and a climate of hot, dry summers. Mira and Theo are island-hopping across the Aegean.', teach: 'Explain why Greece has so many earthquakes.', talk: 'Ask {him} which Greek island {she} would visit first, and what landform {she} would see there.' },
   // GCSE tasters
-  { id: 'geography.hazard-management', title: 'Managing hazards (GCSE taster)', kind: 'facts', tier: 'stretch', prereqs: ['geography.hazards'], batch: 5, intro: 'We cannot stop earthquakes or eruptions, but we can predict, protect and prepare. GCSE questions ask you to compare how places at different levels of development respond.', teach: 'Explain the three Ps of hazard management with an example of each.', talk: 'Ask {her} what is in an earthquake kit in Japan, and why schools practise drills.' },
-  { id: 'geography.numbers', title: 'Numbers in geography (GCSE taster)', kind: 'facts', tier: 'stretch', prereqs: ['geography.population'], batch: 5, intro: 'GCSE geography expects real statistics: mean, median, mode, range and interquartile range, plus reading graphs and spotting correlation.', teach: 'Explain why the median can describe rainfall data better than the mean.', talk: 'Give {her} five daily temperatures and ask for the median and the range.' },
-  { id: 'geography.basins', title: 'The water cycle and drainage basins (GCSE taster)', kind: 'facts', tier: 'stretch', prereqs: ['geography.rivers'], batch: 5, intro: 'A drainage basin is a system of inputs, stores, flows and outputs. Storm hydrographs show how quickly rain reaches the river, which is the key to understanding floods.', teach: 'Explain why an urban drainage basin floods faster than a forested one.', talk: 'Ask {her} what “lag time” means on a storm hydrograph.' },
+  { id: 'geography.hazard-management', title: 'Managing hazards (GCSE taster)', kind: 'facts', tier: 'stretch', prereqs: ['geography.hazards'], batch: 5, intro: 'We cannot stop earthquakes or eruptions, but we can predict, protect and prepare. GCSE questions ask you to compare how places at different levels of development respond.', teach: 'Explain the three Ps of hazard management with an example of each.', talk: 'Ask {him} what is in an earthquake kit in Japan, and why schools practise drills.' },
+  { id: 'geography.numbers', title: 'Numbers in geography (GCSE taster)', kind: 'facts', tier: 'stretch', prereqs: ['geography.population'], batch: 5, intro: 'GCSE geography expects real statistics: mean, median, mode, range and interquartile range, plus reading graphs and spotting correlation.', teach: 'Explain why the median can describe rainfall data better than the mean.', talk: 'Give {him} five daily temperatures and ask for the median and the range.' },
+  { id: 'geography.basins', title: 'The water cycle and drainage basins (GCSE taster)', kind: 'facts', tier: 'stretch', prereqs: ['geography.rivers'], batch: 5, intro: 'A drainage basin is a system of inputs, stores, flows and outputs. Storm hydrographs show how quickly rain reaches the river, which is the key to understanding floods.', teach: 'Explain why an urban drainage basin floods faster than a forested one.', talk: 'Ask {him} what “lag time” means on a storm hydrograph.' },
 ];
 
 // [ISO3, name, capital, wrong capitals, note, extra accepted names, extra accepted capitals]
@@ -48,7 +48,7 @@ const PLACES = [
   ['TZA', 'Tanzania', 'Dodoma', ['Dar es Salaam', 'Zanzibar'], 'Dodoma is the official capital; Dar es Salaam is the largest city and main port.', [], []],
   ['MAR', 'Morocco', 'Rabat', ['Casablanca', 'Marrakesh'], 'Rabat, not Casablanca.', [], []],
   ['DZA', 'Algeria', 'Algiers', ['Tunis', 'Oran'], 'Africa’s largest country by area.', [], []],
-  ['COD', 'the Democratic Republic of the Congo', 'Kinshasa', ['Brazzaville', 'Lubumbashi'], 'Kinshasa and Brazzaville (capital of the Republic of the Congo) face each other across the Congo River.', ['DR Congo', 'DRC', 'Congo', 'Democratic Republic of the Congo'], []],
+  ['COD', 'the Democratic Republic of the Congo', 'Kinshasa', ['Brazzaville', 'Lubumbashi'], 'Kinshasa and Brazzaville (capital of the Republic of the Congo) face each other across the Congo River.', ['DR Congo', 'DRC', 'Democratic Republic of the Congo'], []],
   ['MDG', 'Madagascar', 'Antananarivo', ['Mombasa', 'Port Louis'], 'Most of its wildlife, such as lemurs, lives nowhere else on Earth.', [], []],
   ['SDN', 'Sudan', 'Khartoum', ['Cairo', 'Juba'], 'The Blue Nile and White Nile meet at Khartoum.', [], []],
   ['EGY', 'Egypt', 'Cairo', ['Alexandria', 'Luxor'], 'Alexandria was founded by Alexander the Great and became a centre of Greek learning.', [], []],
@@ -81,7 +81,7 @@ const MED = [
   ['HRV', 'Croatia', 'Its Adriatic coast has more than a thousand islands.'],
   ['ALB', 'Albania', 'Albania lies across the Strait of Otranto from the heel of Italy.'],
   ['MKD', 'North Macedonia', 'North Macedonia is landlocked; the ancient kingdom of Macedon, home of Alexander the Great, lies mostly in modern northern Greece.'],
-  ['BGR', 'Bulgaria', 'Bulgaria has a Black Sea coast.'],
+  ['BGR', 'Bulgaria', 'Bulgaria has a Black Sea coast, not a Mediterranean one.'],
   ['MNE', 'Montenegro', 'Its name means “black mountain”.'],
   ['ESP', 'Spain', 'Spain and Portugal share the Iberian Peninsula.'],
 ];
@@ -171,7 +171,7 @@ const items = [
   order('bm.layers', 'biomes', 'Put the layers of a tropical rainforest in order, from the top down.', ['emergent layer', 'canopy', 'understorey', 'forest floor'], null, 'Emergents tower above the canopy, which captures most of the light.'),
   mcq('bm.soil', 'biomes', 'Why are tropical rainforest soils surprisingly poor in nutrients?', [['Nutrients are locked up in the plants', true], ['Hardly any dead leaves fall to the ground', false, 'There are plenty, but they decompose very quickly.'], ['It is too cold for leaves to decompose', false, 'It is hot, so decomposition is fast.'], ['The roots grow on bare rock with no soil', false, 'They have soil, just thin and poor.']], 'This is why cleared rainforest land often becomes infertile within a few years.'),
   mcq('bm.amazon', 'biomes', 'What is the biggest single cause of deforestation in the Amazon?', [['Clearing land for cattle ranching', true], ['Building theme parks', false, 'Not a significant cause.'], ['Volcanic eruptions', false, 'There are no active volcanoes in the Amazon basin.'], ['Forest fires started by lightning', false, 'Most fires there are set by people to clear land.']], 'Soya farming, logging, mining and roads matter too.'),
-  fact('bm.desert', 'biomes', 'A hot desert receives less than about how much rain a year?', '250 mm', ['2,500 mm', '25 cm of snow', '1,000 mm'], 'The Sahara is the largest hot desert; some parts get almost no rain for years.', C),
+  fact('bm.desert', 'biomes', 'A hot desert receives less than about how much rain a year?', '250 mm', ['2,500 mm', '500 mm', '1,000 mm'], 'The Sahara is the largest hot desert; some parts get almost no rain for years.', C),
   mcq('bm.cactus', 'biomes', 'Which is an adaptation of a cactus to the desert?', [['Spines instead of leaves', true], ['Huge flat leaves to catch sunlight', false, 'Big leaves lose too much water.'], ['Deep roots used only in winter months', false, 'Many cactus roots spread widely and shallowly to catch brief rain.'], ['Bright flowers open all year round', false, 'Flowering is brief.']], 'Spines also shade the plant and protect its stored water from animals.'),
   fact('bm.permafrost', 'biomes', 'Ground in the tundra that stays frozen all year round is called…', 'permafrost', ['tarmac', 'ice cap', 'glacier'], 'As it thaws with climate change, it releases methane.', { accept: ['permafrost'] }),
   mcq('bm.foodweb', 'biomes', 'In an ecosystem, what is a producer?', [['A plant that makes its own food', true], ['An animal that eats only plants', false, 'That is a primary consumer.'], ['A decomposer such as fungi or bacteria', false, 'Decomposers break down dead matter.'], ['The top predator in the food web', false, 'Top predators are consumers.']], 'All food chains start with producers capturing the Sun’s energy.'),
@@ -184,7 +184,7 @@ const items = [
   mcq('pp.push', 'population', 'Which of these is a PUSH factor for migration?', [['War or persecution at home', true], ['Better-paid jobs abroad', false, 'That pulls people towards a place.'], ['Good schools in another country', false, 'A pull factor.'], ['Family already living abroad', false, 'Usually a pull factor.']], 'Push factors drive people away; pull factors attract them.'),
   mcq('pp.refugee', 'population', 'What is the difference between a refugee and an economic migrant?', [['Refugees flee danger; economic migrants seek work', true], ['They are two names for the same people', false, 'International law treats them differently.'], ['Refugees always move to a much richer country', false, 'Most refugees live in neighbouring, often poorer, countries.'], ['Economic migrants are never allowed to move', false, 'Many move legally for work.']], 'Under the 1951 Refugee Convention, refugees have a right to protection.'),
   fact('pp.density', 'population', 'The number of people per square kilometre is called the population…', 'density', ['distribution', 'pyramid', 'structure'], 'Distribution is where people live; density is how crowded it is.', { accept: ['population density'] }),
-  mcq('pp.pyramid', 'population', 'A population pyramid has a very wide base and narrow top. What does it suggest?', [['A high birth rate and a young population', true], ['An ageing population with few young people', false, 'An ageing population has a narrow base and wide top.'], ['A shrinking population with few births', false, 'A wide base shows many births.'], ['Very few people live beyond about 30', false, 'It shows fewer older people, not none.']], 'Niger’s pyramid looks like this; Japan’s looks almost like an upside-down pyramid.'),
+  mcq('pp.pyramid', 'population', 'A population pyramid has a very wide base and narrow top. What does it suggest?', [['A high birth rate and a young population', true], ['An ageing population with few young people', false, 'An ageing population has a narrow base and wide top.'], ['A shrinking population with few births', false, 'A wide base shows many births.'], ['Very few people live beyond about 30', false, 'It shows fewer older people, but many still live well beyond 30.']], 'Niger’s pyramid looks like this; Japan’s looks almost like an upside-down pyramid.'),
 
   // --- cities
   fact('ct.mega', 'cities', 'A city with more than 10 million people is called a…', 'megacity', ['village', 'capital', 'market town'], 'In 1950 there were two megacities; today there are more than thirty.', { accept: ['mega city', 'mega-city'] }),
@@ -205,7 +205,7 @@ const items = [
   // --- globalisation
   mcq('gb.what', 'global', 'What is globalisation?', [['Countries becoming more connected', true], ['Making accurate maps of the globe', false, 'That is cartography.'], ['Countries joining into one government', false, 'There is no single world government; globalisation is about connections.'], ['The whole planet warming up', false, 'Related, but not the definition.']], 'Containers, cheap flights and the internet have sped it up enormously since the 1970s.'),
   fact('gb.tnc', 'global', 'A company that operates in many countries, such as Apple or Toyota, is called a…', 'transnational corporation', ['registered charity', 'workers’ cooperative', 'nationalised industry'], 'TNCs often design products in one country and make them in others where costs are lower.', { accept: ['tnc', 'multinational', 'multinational company', 'transnational company'] }),
-  mcq('gb.container', 'global', 'Why did the shipping container (from the 1950s) transform world trade?', [['Standard boxes move between ships and lorries', true], ['They made ships faster than planes', false, 'Ships are still slower than planes.'], ['They let goods skip customs checks', false, 'Goods still pass through customs.'], ['They are light enough to fly by air', false, 'They are heavy steel boxes, carried by sea.']], 'About 90% of the world’s goods travel by sea; Shanghai is the busiest container port.'),
+  mcq('gb.container', 'global', 'Why did the shipping container (from the 1950s) transform world trade?', [['Standard boxes move between ships and lorries', true], ['They made ships faster than planes', false, 'Ships are still slower than planes.'], ['They let goods skip customs checks', false, 'Goods still pass through customs.'], ['They are light enough to fly by air', false, 'They are heavy steel boxes, carried by sea.']], 'Over 80% of the world’s goods, by volume, travel by sea; Shanghai is the busiest container port.'),
   mcq('gb.tnc-pros', 'global', 'Which is a DISADVANTAGE when a TNC builds a factory in a lower-income country?', [['Profits may go back to the home country', true], ['It creates jobs', false, 'That is an advantage.'], ['Local people learn new skills', false, 'An advantage.'], ['Roads and power supplies may be improved', false, 'Usually an advantage.']], 'The 2013 Rana Plaza factory collapse in Bangladesh led to stronger safety campaigns.'),
   mcq('gb.fair', 'global', 'What is Fairtrade?', [['A scheme guaranteeing farmers a fair price', true], ['Trade with no import taxes at all', false, 'That is free trade.'], ['Buying only from nearby farms', false, 'That is buying local; Fairtrade is about prices for farmers.'], ['A market where prices are fixed by law', false, 'Fairtrade is a certification scheme, not a law.']], 'It helps producers of coffee, cocoa and bananas, among others.'),
   mcq('gb.suez', 'global', 'In 2021 a container ship, the Ever Given, blocked the Suez Canal for six days. Why did it matter worldwide?', [['About 12% of world trade uses the canal', true], ['It flooded the towns along the canal', false, 'No flooding.'], ['It cut the undersea internet cables', false, 'Undersea cables were not affected.'], ['It stopped Egypt exporting its oil', false, 'Supply chains are global.']], 'Globalised supply chains are efficient, but fragile.'),
@@ -236,7 +236,7 @@ const items = [
   mcq('ae.quakes', 'aegean', 'Why does Greece have so many earthquakes?', [['The African Plate sinks beneath it', true], ['Poseidon strikes the ground with his trident', false, 'That was the ancient explanation; the evidence points to plate tectonics.'], ['Greece sits on the Mid-Atlantic Ridge', false, 'That runs through Iceland.'], ['Its old volcanoes are collapsing', false, 'Volcanoes like Thera exist, but most quakes come from the plates.']], 'This subduction zone (the Hellenic arc) also feeds the volcanoes of the southern Aegean, including Santorini.'),
   mcq('ae.olives', 'aegean', 'Why do olive trees grow so well in Greece?', [['They suit hot, dry summers', true], ['They need constant heavy rain', false, 'Far too dry in summer.'], ['They need cold, snowy winters', false, 'Olives hate long frosts.'], ['They grow best in volcanic ash', false, 'Some soils are volcanic, but the climate is the key.']], 'Small leathery leaves and deep roots help them survive summer drought. In myth, Athena gave the olive tree to Athens.'),
   mcq('ae.tourism', 'aegean', 'Mira notices that Santorini is packed with cruise passengers in summer. Which is a NEGATIVE impact of mass tourism on small islands?', [['Pressure on water and housing', true], ['More jobs in hotels and bars', false, 'That is a benefit, though often seasonal.'], ['More money for local restaurants', false, 'A benefit.'], ['Better ferry links to the mainland', false, 'Usually a benefit.']], 'Santorini has introduced limits on cruise ship visitors to manage the pressure.'),
-  ...MED.map(([id, name, note]) => ({ id: `geography.med.${id.toLowerCase()}`, topic: 'geography.aegean', kind: 'mapfact', map: 'europe', layer: 'countries', feature: id, answer: name, accept: [], choosePrompt: 'Which Mediterranean country is highlighted?', explain: `This is ${the(name)}. ${note}` })),
+  ...MED.map(([id, name, note]) => ({ id: `geography.med.${id.toLowerCase()}`, topic: 'geography.aegean', kind: 'mapfact', map: 'europe', layer: 'countries', feature: id, answer: name, accept: [], choosePrompt: ['MKD', 'BGR'].includes(id) ? 'Which of Greece’s northern neighbours is highlighted?' : 'Which Mediterranean country is highlighted?', explain: `This is ${the(name)}. ${note}` })),
 
   // --- world places
   ...PLACES.flatMap(([id, name, capital, wrong, note, acceptName, acceptCap]) => [
@@ -272,5 +272,241 @@ const items = [
   mcq('db.lag', 'basins', 'On a storm hydrograph, what is the lag time?', [['The gap between peak rain and peak flow', true], ['How long the storm lasts in total', false, 'That is the storm’s duration.'], ['How long the river stays in flood', false, 'Not quite.'], ['The time until the river level falls again', false, 'That is the falling limb, not the lag time.']], 'A short lag time means the river rises quickly: a higher flood risk.'),
   mcq('db.urban', 'basins', 'Why does an urban area usually have a shorter lag time than a forested area?', [['Concrete and drains speed up runoff', true], ['Cities get much less rain', false, 'They get similar or more.'], ['Trees make rain fall faster', false, 'Trees slow water down by interception.'], ['Rivers in cities are longer', false, 'Length is not the reason.']], 'Impermeable surfaces increase runoff; that is why sustainable drainage (SuDS) uses ponds and green roofs.'),
 ];
+
+// ---------------------------------------------------------------------------------------------
+// Memory hooks (separate block: merged into the topics and items above; ids must exist).
+// TOPIC_HOOKS is keyed by topic id without “geography.”; MEMORY by item id without “geography.”.
+// ---------------------------------------------------------------------------------------------
+const TOPIC_HOOKS = {
+  maps: '“Along the corridor, then up the stairs”: eastings first, then northings, every single time.',
+  tectonics: 'The name tells you what happens to the crust: constructive creates it, destructive destroys it, conservative conserves it.',
+  hazards: '“Earthquakes don’t kill people; buildings do”: wealth, planning and preparation decide the death toll.',
+  weather: '“Climate is what you expect, weather is what you get.”',
+  climate: 'Greenhouse gases are a blanket: the thicker the blanket, the more heat the Earth keeps in.',
+  rivers: 'Cut down in the hills, swing in the middle, drop the load near the sea.',
+  coasts: 'Crack, cave, arch, stack, stump: the sea carves a headland away one step at a time.',
+  ice: 'Rivers carve a V; glaciers carve a U.',
+  biomes: 'Climate chooses the biome: rainforest at the Equator, hot deserts near the tropics, tundra near the poles.',
+  population: 'Deaths fall first, births fall later: the gap between them is the population boom.',
+  cities: 'Pushed from the countryside, pulled to the city: rural–urban migration builds megacities.',
+  development: 'Development is more than money: HDI mixes a long life, a good education and a decent income.',
+  global: 'Designed in one country, made in another, sold everywhere: that is globalisation.',
+  energy: 'Renewables renew themselves (wind, sun, water); fossil fuels took millions of years to form and will run out.',
+  russia: 'Head north across Russia: grass (steppe), then trees (taiga), then too cold for trees (tundra).',
+  places: 'Capitals are often not the biggest city: Abuja not Lagos, Ankara not Istanbul, Abu Dhabi not Dubai.',
+  aegean: 'Hot, dry summers and mild, wet winters: the climate of olives, vines and the Greek myths.',
+  'hazard-management': 'The three Ps: Predict, Protect, Prepare.',
+  numbers: 'Mode is the most, median is the middle, mean is the fair share-out, range is the spread.',
+  basins: 'Follow a raindrop: inputs come in, stores hold it, flows move it, outputs let it leave.',
+};
+
+const MEMORY = {
+  // map skills
+  'mp.order': { hook: '“Along the corridor, then up the stairs”: you have to walk in before you can climb.' },
+  'mp.six': { hook: 'Six figures = three for along, three for up. Split it down the middle: 347 | 562.' },
+  'mp.accuracy': { hook: 'A grid square is 1 km, so a tenth of a square is 100 m: six figures = tenths = 100 m.' },
+  'mp.contours': { hook: 'Contours close together, climb is hard; contours far apart, easy walk.', example: 'Contours bunch tightly on the steep crags around Scafell Pike, England’s highest mountain, in the Lake District.' },
+  'mp.scale': { hook: '1:50 000 → 2 cm per km; 1:25 000 → 4 cm per km. The smaller the second number, the more detail.', example: 'OS Explorer maps (orange covers) are 1:25 000; OS Landranger maps (pink covers) are 1:50 000.' },
+  'mp.bearing-e': { hook: 'Bearings go clockwise from north, always with three figures: N 000°, E 090°, S 180°, W 270°.' },
+  'mp.bearing-sw': { hook: 'Each quarter turn is 90°; the halfway points add 45°: NE 045°, SE 135°, SW 225°, NW 315°.' },
+  'mp.trig': { hook: 'Trig is short for trigonometrical: surveyors measured angles between hilltop pillars to map Britain in triangles.', example: 'The OS built over 6,000 trig pillars from 1936; one stands on the summit of Snowdon (Yr Wyddfa).' },
+  'mp.spot': { hook: 'A spot height is one exact spot; a contour is a whole line of the same height.' },
+
+  // tectonics
+  'tc.layers': { hook: 'Like a peach: thin skin (crust), thick flesh (mantle) and a stone in the middle (core).', example: 'Oceanic crust is only about 7 km thick: less than the height of Everest above sea level (8,849 m).' },
+  'tc.core': { hook: 'Outer core runny, inner core rock-hard: the huge pressure keeps the inner core solid.', example: 'The swirling liquid outer core makes the magnetic field that turns a compass needle to point north.' },
+  'tc.move': { hook: 'Slab pull is a tablecloth sliding off a table: the heavy, hanging edge drags the rest after it.' },
+  'tc.destructive': { hook: 'Destructive: the dense ocean plate dives underneath and is destroyed.', example: 'The Nazca Plate dives under South America, building the Andes and volcanoes such as Cotopaxi in Ecuador.' },
+  'tc.constructive': { hook: 'Constructive: constructing new crust as the plates pull apart.', example: 'At Þingvellir in Iceland you can walk along the rift between the North American and Eurasian plates.' },
+  'tc.conservative': { hook: 'Conservative: crust is conserved, neither made nor destroyed; the plates just slide past.', example: 'San Francisco sits beside the San Andreas Fault; an earthquake and the fires that followed wrecked it in 1906.' },
+  'tc.himalayas': { hook: 'India drifted north and crashed into Asia in slow motion, crumpling the land like a car bonnet.', example: 'Fossils of sea creatures are found in rock near the top of Everest: its summit was once seabed.' },
+  'tc.ring': { hook: 'Ring of Fire = the rim of the Pacific: Japan, Indonesia, New Zealand, the Andes and Alaska.', example: 'Mount St Helens in the USA (1980) and Mount Fuji in Japan both sit on the Ring of Fire.' },
+  'tc.magnitude': { hook: 'One step up: about 10 times the shaking and 32 times the energy. Two steps: about 1,000 times the energy.' },
+
+  // hazards
+  'hz.nepal': { hook: 'Gorkha 2015: Nepal sits where India pushes into Asia, the same collision that builds the Himalayas.', example: 'The quake toppled historic temples in Kathmandu’s Durbar Square, part of a UNESCO World Heritage Site.' },
+  'hz.haiti': { hook: '“Earthquakes don’t kill people; buildings do.”', example: 'Weeks later, a far bigger magnitude 8.8 quake in Chile killed about 500 people: strict building codes helped.' },
+  'hz.iceland': { hook: 'Ash, not lava, was the problem: tiny glassy particles can melt inside jet engines and stop them.', example: 'UK airspace closed for several days in April 2010, leaving many thousands of British travellers stranded abroad.' },
+  'hz.thera': { hook: 'Caldera is Spanish for “cauldron”: the volcano’s middle collapsed and the sea poured into the pot.', example: 'Ferries to Santorini sail right into the caldera, beneath towering cliffs of layered ash and lava.' },
+  'hz.primary': { hook: 'Primary = at the moment of shaking; secondary = what follows second.', example: 'In San Francisco in 1906, fires from broken gas pipes did more damage than the shaking itself.' },
+  'hz.japan': { hook: 'Tsunami is Japanese for “harbour wave”.', example: 'In 2011 the tsunami reached around 40 m up hillsides in places and caused the Fukushima nuclear accident.' },
+  'hz.live': { hook: 'Old ash weathers into rich soil: vines and tomatoes thrive on the slopes of Vesuvius.', example: 'Hundreds of thousands of people live in the danger zone around Vesuvius, and Naples has detailed evacuation plans.' },
+
+  // weather
+  'wx.low': { hook: 'Highs are happy, lows are lousy: a low means rising air, cloud, wind and rain.', example: 'The Great Storm of October 1987, which felled about 15 million trees in southern England, was a deep depression.' },
+  'wx.high': { hook: 'High pressure = sinking air = sunny skies: sinking air warms up, so clouds dissolve.', example: 'Frosty, foggy winter mornings in the UK often come when a high sits over the country.' },
+  'wx.relief': { hook: 'Relief means the height and shape of the land: relief rain falls when moist air is forced up over hills and cools.', example: 'Seathwaite in Cumbria gets over 3 m of rain a year, one of the wettest places in England; London gets about 0.6 m.' },
+  'wx.convection': { hook: 'Convection is a pan of boiling soup: hot air bubbles up, cools, and clouds tower overhead.', example: 'In the UK, convectional thunderstorms often break out on hot, sticky summer afternoons.' },
+  'wx.frontal': { hook: 'Warm air is lighter, so at a front it always rides up over the cold air.', example: 'On a UK weather chart, red semicircles mark a warm front and blue triangles mark a cold front.' },
+  'wx.drift': { hook: 'The North Atlantic Drift is the UK’s central heating.', example: 'London is slightly further north than Calgary in Canada, yet its winters are far milder.' },
+  'wx.med': { hook: 'Mediterranean is Latin for “middle of the land”: a warm sea almost surrounded by land.', example: 'Athens gets almost no rain in July and August; most of its rain falls between November and February.' },
+  'wx.graph': { hook: 'Bars for rain, line for temperature: rain fills up the bars like water in a rain gauge.' },
+
+  // climate change
+  'cc.green': { hook: 'Greenhouse gases are a blanket: a thicker blanket keeps more heat in.', example: 'Without any natural greenhouse effect, the Earth’s average temperature would be about −18 °C instead of about 15 °C.' },
+  'cc.co2': { hook: '280 then, over 420 now: about 50% more carbon dioxide than before the Industrial Revolution.', example: 'Since 1958 it has been measured on Mauna Loa in Hawaii; the rising zigzag graph is called the Keeling Curve.' },
+  'cc.evidence': { hook: '“Climate is what you expect, weather is what you get”: one cold winter is only weather.', example: 'Glaciers in the Alps have shrunk dramatically since 1900: old photographs show how far they once reached.' },
+  'cc.natural': { hook: 'Natural causes come from space or deep underground: the Earth’s orbit, the Sun and volcanoes.', example: 'The 1815 eruption of Tambora in Indonesia made 1816 the “year without a summer” in Europe.' },
+  'cc.methane': { hook: 'Cows burp it, rice paddies bubble it, rubbish tips breathe it out: methane.' },
+  'cc.paris': { hook: 'Paris 2015: well below 2 °C, and trying for 1.5 °C.', example: 'The UK has set in law a target of net zero greenhouse gas emissions by 2050.' },
+  'cc.mitigate': { hook: 'Mitigate comes from the Latin for “soften”: cut the cause. Adapt means adjust: live with the effects.', example: 'Mitigation: offshore wind farms. Adaptation: the Thames Barrier, and higher flood defences as seas rise.' },
+  'cc.effects': { hook: 'For the UK think “summer drought, winter flood”: hotter, drier summers and warmer, wetter winters.', example: 'On 19 July 2022 the UK passed 40 °C for the first time, at Coningsby in Lincolnshire.' },
+
+  // rivers
+  'rv.course': { hook: 'Up high it cuts down; in the middle it swings from side to side; near the sea it spreads and drops its load.', example: 'The River Tees plunges over High Force near its source and loops round the town of Yarm before reaching the sea.' },
+  'rv.hydraulic': { hook: 'HAAS: Hydraulic action, Abrasion, Attrition, Solution.' },
+  'rv.saltation': { hook: 'Saltation comes from the Latin for “jump”, as in somersault: pebbles hop along the bed.' },
+  'rv.oxbow': { hook: 'Outside of the bend fast, inside slow: the outer bank erodes, the inner bank builds up.', example: 'From the air, the Mississippi’s floodplain is dotted with oxbow lakes: the ghosts of old meanders.' },
+  'rv.waterfall': { hook: 'Hard on top, soft underneath: the soft rock wears away, the hard cap collapses, the fall retreats.', example: 'High Force on the Tees drops about 21 m over hard dolerite, the Whin Sill, lying on softer rocks.' },
+  'rv.levee': { hook: 'Levee comes from the French lever, “to raise”: a raised bank.', example: 'New Orleans relies on huge artificial levees along the Mississippi to keep the river out.' },
+  'rv.hard': { hook: 'Hard engineering fights the river with concrete; soft engineering works with nature.', example: 'At Pickering in North Yorkshire, the “Slowing the Flow” scheme used tree planting and leaky dams to cut flooding.' },
+  'rv.barrier': { hook: 'The Thames Barrier’s gates lie flat on the riverbed and swing up only when a surge is coming.', example: 'It spans about 520 m of the Thames at Woolwich in east London.' },
+  'rv.nile': { hook: 'Length usually goes to the Nile (some measure the Amazon as longer); water goes to the Amazon, by far.', example: 'The Amazon pours out so much fresh water that the sea is less salty far out from its mouth.' },
+
+  // coasts
+  'cs.waves': { hook: 'Destructive: strong backwash drags the beach away. Constructive: strong swash builds it up.', example: 'Winter storms often strip the sand from UK beaches; gentler summer waves bring it back.' },
+  'cs.stack': { hook: 'Crack, cave, arch, stack, stump: the headland gets smaller at every step.', example: 'Durdle Door in Dorset is an arch; nearby Old Harry Rocks are stacks, and Old Harry’s Wife collapsed into a stump.' },
+  'cs.drift': { hook: 'Swash goes up at an angle, backwash comes straight down: a zigzag that walks the sand along the beach.', example: 'Longshore drift carries sediment south along the Holderness coast, building Spurn Head.' },
+  'cs.spit': { hook: 'A spit sticks out like a tongue: longshore drift carries on where the coast turns a corner.', example: 'Spurn Head curls about 5 km across the mouth of the Humber estuary.' },
+  'cs.holderness': { hook: 'Boulder clay is like soft cake: the waves slice it away fast.', example: 'More than 20 villages on the Holderness coast have been lost to the sea since Roman times.' },
+  'cs.groyne': { hook: 'Groynes catch sand like the teeth of a comb catch hair.', example: 'Rock groynes built at Mappleton in 1991 saved the village but starved the cliffs further south of sand.' },
+  'cs.retreat': { hook: 'Managed retreat: step back and let the sea take a little land, on purpose.', example: 'At Medmerry in West Sussex, the sea was let in behind new banks in 2013, creating a salt-marsh nature reserve.' },
+  'cs.choice': { hook: 'Cost–benefit: protect it only if what you save is worth more than what you spend.', example: 'At Happisburgh in Norfolk, the plan is not to build new defences, so cliff-top homes have been lost to the sea.' },
+
+  // ice
+  'ic.corrie': { hook: 'Corrie (Gaelic), cwm (Welsh), cirque (French): three names for one armchair-shaped hollow.', example: 'Red Tarn lies in a corrie below Helvellyn, between Striding Edge and Swirral Edge.' },
+  'ic.arete': { hook: 'Arête is French for a fish bone or a sharp ridge: a thin spine between two hollows.', example: 'Crib Goch, on Snowdon (Yr Wyddfa), is a famous knife-edge arête scramble.' },
+  'ic.ushape': { hook: 'Rivers carve a V; glaciers carve a U.', example: 'Nant Ffrancon in Snowdonia (Eryri) and Glen Coe in Scotland are classic U-shaped valleys.' },
+  'ic.ribbon': { hook: 'A ribbon lake is long and thin like a ribbon, lying in a hollow the glacier dug deeper.', example: 'Windermere is about 18 km long but at most about 1.5 km wide.' },
+  'ic.erratic': { hook: 'Erratic comes from the Latin for “wander”: a boulder that has wandered far from home.', example: 'The Norber erratics near Austwick in the Yorkshire Dales are dark boulders perched on paler limestone.' },
+  'ic.when': { hook: 'Twenty thousand years is recent in Earth’s history: that is why glacial landforms still look so fresh.', example: 'With so much water locked in ice, the sea was so low that dry land, Doggerland, joined Britain to Europe.' },
+
+  // biomes
+  'bm.layers': { hook: '“Every Cheeky Uncle Falls”: Emergent, Canopy, Understorey, Floor.' },
+  'bm.soil': { hook: 'The nutrient bank is in the trees, not the soil: cut them down and the bank is empty.', example: 'Cleared Amazon land is often farmed for only a few years before the soil is too poor to use.' },
+  'bm.amazon': { hook: 'Cattle first: most cleared Amazon land ends up as pasture for beef.', example: 'Brazil is one of the world’s biggest exporters of beef.' },
+  'bm.desert': { hook: 'Under 250 mm a year: less rain in a whole year than the length of a 30 cm ruler.', example: 'London gets about 600 mm a year, well over twice the desert limit.' },
+  'bm.cactus': { hook: 'Spines are leaves shrunk into needles: less surface, less water lost.' },
+  'bm.permafrost': { hook: 'Permafrost: PERMAnently FROzen ground.', example: 'The Batagaika “crater” in Siberia is a huge, growing scar where permafrost is thawing and collapsing.' },
+  'bm.foodweb': { hook: 'Producers produce their own food from sunlight; consumers consume it.', example: 'In a British oak wood, the oak is the producer, caterpillars eat its leaves and blue tits eat the caterpillars.' },
+
+  // population
+  'pp.eight': { hook: 'Counting to 8 billion, one number a second, would take over 250 years.', example: 'That is more than 100 times the UK’s population of about 69 million.' },
+  'pp.dtm': { hook: 'Deaths drop first, births follow later: the gap between them is the population boom.', example: 'The UK was in stage 2 in the 1800s, when cleaner water and better food cut the death rate.' },
+  'pp.japan': { hook: 'Stage 5 = shrinking: more funerals than births, so the population falls.', example: 'In Japan, nearly 3 people in 10 are aged 65 or over.' },
+  'pp.india': { hook: 'India overtook China in 2023: more than 1 person in 6 on Earth lives in India.' },
+  'pp.push': { hook: 'Push factors push you out; pull factors pull you in, like a magnet.', example: 'Most people who fled the war in Syria after 2011 went to neighbouring Turkey, Lebanon and Jordan.' },
+  'pp.refugee': { hook: 'A refugee seeks refuge (safety) from danger; an economic migrant seeks work.', example: 'After Russia’s full-scale invasion in 2022, millions of Ukrainians became refugees across Europe.' },
+  'pp.density': { hook: 'Density = how dense (crowded) a place is; distribution = how people are spread out.', example: 'England is far more crowded than Scotland, whose Highlands are among the emptiest places in Europe.' },
+  'pp.pyramid': { hook: 'Wide base = lots of babies; wide top = lots of grandparents.' },
+
+  // cities
+  'ct.mega': { hook: 'Mega is Greek for “great”: a megacity has more than 10 million people.', example: 'Tokyo, Delhi, Shanghai and Cairo are all megacities.' },
+  'ct.half': { hook: 'Half urban in 2007; two-thirds urban by 2050.' },
+  'ct.lagos': { hook: 'Lagos grows two ways: people arriving (migration) and babies being born (natural increase).', example: 'Lagos is Portuguese for “lakes”: the city sprawls round a lagoon on the Atlantic coast.' },
+  'ct.informal': { hook: 'Informal = built without official forms or permission, not “casual”.', example: 'Dharavi packs hundreds of thousands of people, and thousands of small workshops, into about 2 square kilometres.' },
+  'ct.london': { hook: 'Victorian London was the megacity of its day: for about a century it was the biggest city in the world.', example: 'Terraced streets in places like Hackney and Islington were built to house London’s booming workforce.' },
+  'ct.sustainable': { hook: 'A sustainable city wastes little, runs on clean energy and is easy to get around without a car.', example: 'London’s Ultra Low Emission Zone charges the most polluting vehicles, to clean up the air.' },
+
+  // development
+  'dv.hdi': { hook: 'HDI mixes three things: a long life, a good education and a decent income.', example: 'The UK usually ranks in the top 20 countries for HDI.' },
+  'dv.gni': { hook: 'GNI per head: slice a country’s total income like a cake, one equal slice for every person.', example: 'GNI per head in the UK is many times higher than in Niger or Chad.' },
+  'dv.brandt': { hook: 'Rich North, poorer South, with a big loop to put Australia and New Zealand in the North.' },
+  'dv.infant': { hook: 'Infant comes from the Latin for “unable to speak”: babies under one year old.', example: 'In the UK about 4 babies in every 1,000 die before their first birthday; in some countries it is over 50.' },
+  'dv.gap': { hook: 'Landlocked = locked out of the sea: every export has to cross someone else’s border.', example: 'Landlocked countries such as Chad, Niger and Mali must send their goods through neighbours’ ports.' },
+  'dv.aid': { hook: '“Give a man a fish and you feed him for a day; teach him to fish and you feed him for a lifetime.”', example: 'Charities such as WaterAid help villages build wells and taps that local people can repair themselves.' },
+
+  // globalisation
+  'gb.what': { hook: 'Globalisation shrinks the world: container ships, planes and the internet pull places closer.', example: 'A cotton T-shirt can be grown in one country, sewn in another and sold on a UK high street.' },
+  'gb.tnc': { hook: 'Trans is Latin for “across”: a transnational company works across nations.', example: 'The Japanese company Nissan has built cars at its factory in Sunderland since 1986.' },
+  'gb.container': { hook: 'One standard box fits every ship, train and lorry: no unpacking on the way.', example: 'Felixstowe in Suffolk is the UK’s busiest container port.' },
+  'gb.tnc-pros': { hook: 'The jobs and skills stay; the profits often fly home.' },
+  'gb.fair': { hook: 'Fairtrade = a fair price for the farmer, not just a cheap price for the shopper.', example: 'Garstang in Lancashire became the world’s first Fairtrade Town, starting a movement across the UK.' },
+  'gb.suez': { hook: 'A canal is a shortcut: Suez saves ships a voyage all the way round Africa.', example: 'Without the canal, ships from Asia to Europe must sail round the Cape of Good Hope, adding thousands of kilometres.' },
+
+  // energy
+  'en.renew': { hook: 'Renewables renew themselves: the wind blows again and the Sun rises again tomorrow.', example: 'Some of the world’s largest offshore wind farms, such as Hornsea, lie off the Yorkshire coast.' },
+  'en.geo': { hook: 'Geo = Earth, thermal = heat: geothermal is heat from the Earth.', example: 'Iceland’s Blue Lagoon is filled with warm water from a nearby geothermal power station.' },
+  'en.wind': { hook: 'No wind, no power: wind and solar come and go, so we need ways to store energy.', example: 'Dinorwig in Snowdonia pumps water uphill when power is spare and lets it rush down when demand surges.' },
+  'en.water': { hook: 'Water stress: a bath draining faster than the tap can fill it.', example: 'In 2018 Cape Town came close to “Day Zero”, when the city’s taps would have been turned off.' },
+  'en.food': { hook: 'Food miles: count the journey from field to fork.', example: 'Green beans flown in from Kenya have far more food miles than beans from a farm in Kent.' },
+  'en.mix': { hook: 'An energy mix is a recipe: how much coal, gas, nuclear, wind and solar goes in.', example: 'Ratcliffe-on-Soar in Nottinghamshire, the UK’s last coal power station, closed in September 2024.' },
+
+  // Russia
+  'ru.size': { hook: 'When Moscow wakes up at 8 am, it is already 5 pm in Kamchatka.', example: 'Russia is about 70 times the size of the UK.' },
+  'ru.urals': { hook: 'The Urals are an ancient seam, where two old continents were stitched together.', example: 'Monuments near Yekaterinburg mark the line between Europe and Asia.' },
+  'ru.baikal': { hook: 'Baikal is so deep that Ben Nevis could sink in it without a trace.' },
+  'ru.permafrost': { hook: 'Stilts keep the building’s heat away from the frozen ground, so it does not melt and sink.', example: 'Yakutsk, built on permafrost, is often called the coldest city in the world.' },
+  'ru.rail': { hook: 'About 9,300 km: over six times the road trip from Land’s End to John o’ Groats.' },
+  'ru.volga': { hook: 'The Volga flows into a lake: the Caspian Sea is really the world’s largest lake.', example: 'Volgograd, once called Stalingrad, stands on the Volga.' },
+  'ru.biomes': { hook: 'Heading north: grass (steppe), then trees (taiga), then too cold for trees (tundra).' },
+  'ru.resources': { hook: 'Russia is an energy giant: pipelines carry its gas thousands of kilometres from Siberia.' },
+
+  // the Aegean
+  'ae.capital': { hook: 'Athens is named after Athena, who in myth won the city by giving it the olive tree.' },
+  'ae.olympus': { hook: 'Olympus, home of the Olympian gods: about 2,918 m, more than twice the height of Ben Nevis.' },
+  'ae.sea': { hook: 'In myth, King Aegeus saw black sails, thought his son Theseus was dead, and leapt into the sea, which took his name.' },
+  'ae.crete': { hook: 'Crete: home of the Labyrinth in myth; the real palace of Knossos was itself a maze of rooms.' },
+  'ae.quakes': { hook: 'Africa dives under Greece: a destructive boundary, like the Andes on a smaller scale.', example: 'In 1956 a powerful earthquake near the island of Amorgos set off a tsunami that struck nearby islands.' },
+  'ae.olives': { hook: 'Olives love what Greece gives: dry heat in summer, rain in winter.', example: 'Olive groves cover huge areas of Crete and the Peloponnese.' },
+  'ae.tourism': { hook: 'Overtourism: visitors can love a place to death.' },
+
+  // hazard management
+  'hm.ps': { hook: 'The three Ps: Predict, Protect, Prepare.' },
+  'hm.predict': { hook: 'A volcano clears its throat before it erupts: small quakes, swelling ground and more gas.', example: 'Before Mount Pinatubo in the Philippines erupted in 1991, warnings let tens of thousands of people escape.' },
+  'hm.protect': { hook: 'Protect = build it to bend, not break.', example: 'Tokyo Skytree has a central concrete column inspired by old wooden pagodas that survived centuries of quakes.' },
+  'hm.compare': { hook: 'Richer countries lose more money; poorer countries lose more lives.' },
+  'hm.japan-drill': { hook: 'Prepare = practise: drills, kits and plans before the hazard strikes.', example: 'Japanese schoolchildren practise diving under their desks, and many homes keep an emergency bag by the door.' },
+  'hm.risk': { hook: 'Risk grows with the hazard and with vulnerability, and shrinks with the capacity to cope.' },
+
+  // numbers in geography
+  'nm.median': { hook: 'The median is in the middle, like the central reservation down the middle of a motorway.' },
+  'nm.mean': { hook: 'The mean is the fair share: add everything up, then share it out equally.' },
+  'nm.range': { hook: 'Range = top minus bottom: the gap from the smallest to the largest.' },
+  'nm.iqr': { hook: 'The IQR ignores the top and bottom quarters, so one freak storm cannot stretch it.' },
+  'nm.scatter': { hook: '“Correlation is not causation”: ice-cream sales and sunburn rise together, but ice cream does not cause sunburn.' },
+  'nm.choropleth': { hook: 'Choropleth comes from Greek choros, “place”, and plethos, “quantity”: an amount for each place.', example: 'Maps of UK election results or census population density are often choropleth maps.' },
+  'nm.mode': { hook: 'Mode is the most: both start with “mo”.' },
+
+  // drainage basins
+  'db.watershed': { hook: 'A watershed sheds water one way or the other, like the ridge of a roof.', example: 'Rain on the west of the Pennines flows to the Irish Sea; rain on the east flows to the North Sea.' },
+  'db.confluence': { hook: 'From the Latin con, “together”, and fluere, “to flow”: where rivers flow together.', example: 'The River Cherwell joins the Thames at Oxford.' },
+  'db.infiltration': { hook: 'To infiltrate is to sneak in: water sneaking into the soil.' },
+  'db.system': { hook: 'Like a bank account: inputs pay in, stores hold, flows move it, outputs pay out.' },
+  'db.lag': { hook: 'Lag time = how long the river lags behind the rain.', example: 'In 2004 a flash flood hit Boscastle in Cornwall within hours of torrential rain on its small, steep catchment.' },
+  'db.urban': { hook: 'Tarmac is a tin roof; a forest is a sponge.', example: 'Many new UK housing estates include ponds and grassy ditches (swales) to slow rainwater: a type of SuDS.' },
+
+  // maps of places (only where a link genuinely helps)
+  'med.ita': { hook: 'Italy is a boot, kicking Sicily like a football.' },
+  'pl.chl': { hook: 'Chile is long and thin, like a chilli pepper down the side of South America.' },
+
+  // capitals (only where a link genuinely helps)
+  'plc.kaz': { hook: 'Astana simply means “capital” in Kazakh.' },
+  'plc.mng': { hook: 'Ulaanbaatar means “red hero”.' },
+  'plc.nga': { hook: 'Abuja was built in the middle of Nigeria as a neutral capital; Lagos, on the coast, is far bigger.' },
+  'plc.eth': { hook: 'Addis Ababa means “new flower” in Amharic.' },
+  'plc.mar': { hook: 'Royal Rabat, not Casablanca: the king’s palace and the government are in Rabat.' },
+  'plc.dza': { hook: 'Algiers gave its name to the whole country: Algeria.' },
+  'plc.egy': { example: 'Cairo stands on the Nile, close to the pyramids of Giza.' },
+  'plc.per': { hook: 'Cusco in the mountains was the Inca capital; the Spanish founded Lima on the coast in 1535.' },
+  'plc.ecu': { hook: 'Quito sits only about 25 km south of the Equator, which gave Ecuador its name.' },
+  'plc.bol': { hook: 'Sucre is named after Antonio José de Sucre, a hero of independence; La Paz means “peace”.' },
+  'plc.jor': { example: 'In Roman times Amman was a city called Philadelphia; its Roman theatre still stands.' },
+  'plc.are': { hook: 'Dubai is the famous one, but Abu Dhabi is in charge.' },
+  'plc.mys': { hook: 'Kuala Lumpur means “muddy confluence” in Malay: it grew where two rivers meet.' },
+  'plc.tur': { hook: 'Istanbul was the old Ottoman capital; Atatürk made Ankara the capital in 1923.' },
+  'plc.isl': { hook: 'Reykjavík means “smoky bay”, after the steam rising from its hot springs.' },
+};
+
+for (const [id, hook] of Object.entries(TOPIC_HOOKS)) {
+  const topic = topics.find((t) => t.id === `geography.${id}`);
+  if (!topic) throw new Error(`TOPIC_HOOKS: no topic geography.${id}`);
+  topic.hook = hook;
+}
+for (const [id, extra] of Object.entries(MEMORY)) {
+  const item = items.find((it) => it.id === `geography.${id}`);
+  if (!item) throw new Error(`MEMORY: no item geography.${id}`);
+  Object.assign(item, extra);
+}
 
 export default [{ subject: 'geography', deck: 'y8', topics, items }];

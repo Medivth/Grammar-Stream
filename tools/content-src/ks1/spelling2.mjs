@@ -88,7 +88,7 @@ items.push(
   mcq('pf.which', 'prefixes', 'Which word has a prefix?', [['unkind', true], ['under', false, '“under” is a whole word: there is no “der” on its own.'], ['uncle', false, '“uncle” is a whole word, not un + cle.']], 'unkind = un + kind. A prefix is added to a word that makes sense on its own.'),
   // plurals
   fact('pl.box', 'plurals', 'What is the plural of “box”?', 'boxes', ['boxs', 'boxies', 'boxen'], 'Words ending -x add -es.', strict),
-  fact('pl.bus', 'plurals', 'What is the plural of “bus”?', 'buses', ['buss', 'busses', 'busies'], 'Words ending -s add -es.', strict),
+  fact('pl.bus', 'plurals', 'What is the plural of “bus”?', 'buses', ['buss', 'busess', 'busies'], 'Words ending -s add -es.', strict),
   fact('pl.wish', 'plurals', 'What is the plural of “wish”?', 'wishes', ['wishs', 'wishies', 'wish'], 'Words ending -sh add -es.', strict),
   fact('pl.lunch', 'plurals', 'What is the plural of “lunch”?', 'lunches', ['lunchs', 'lunchies', 'lunchen'], 'Words ending -ch add -es.', strict),
   fact('pl.lady', 'plurals', 'What is the plural of “lady”?', 'ladies', ['ladys', 'ladyes', 'ladis'], 'Consonant + y: change y to i and add -es.', strict),

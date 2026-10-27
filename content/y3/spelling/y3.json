@@ -181,7 +181,7 @@
     "spelling.y3-clauses"
    ],
    "batch": 5,
-   "intro": "A fronted adverbial comes at the start of a sentence and tells you when, where or how: “Later that night, the droid woke up.” It is followed by a comma.",
+   "intro": "A fronted adverbial comes at the start of a sentence and tells you when, where or how: “Later that night, the robot woke up.” It is followed by a comma.",
    "teach": "Explain where the comma goes after a fronted adverbial.",
    "talk": "Take turns starting sentences with “Without a sound,” or “At midnight,”."
   },
@@ -2621,7 +2621,7 @@
     {
      "text": "an",
      "correct": false,
-     "feedback": "“an” goes with the next word, huge, which starts with a consonant sound."
+     "feedback": "huge starts with a consonant sound (h), so use “a”."
     }
    ],
    "explain": "The a/an choice depends on the very next word: a huge asteroid, an asteroid."
@@ -2839,7 +2839,7 @@
     {
      "text": "because",
      "correct": false,
-     "feedback": "He wasn’t waiting because of it: it was happening at the same time."
+     "feedback": "“because” gives a reason. This sentence is about two things happening at the same time."
     }
    ],
    "explain": "“while” shows two things happening at the same time."
@@ -2945,16 +2945,16 @@
    "id": "spelling.y3.jn.prep",
    "topic": "spelling.y3-joining",
    "kind": "mcq",
-   "prompt": "Which word is a preposition? “The droid hid under the table.”",
+   "prompt": "Which word is a preposition? “The robot hid under the table.”",
    "options": [
     {
      "text": "under",
      "correct": true
     },
     {
-     "text": "droid",
+     "text": "robot",
      "correct": false,
-     "feedback": "droid is a noun."
+     "feedback": "robot is a noun."
     },
     {
      "text": "hid",
@@ -3056,7 +3056,7 @@
     {
      "text": "will finish",
      "correct": false,
-     "feedback": "If it was still to do, he couldn’t play yet!"
+     "feedback": "If it was still to do, you couldn’t play yet!"
     }
    ],
    "explain": "have finished: done, and that matters now."
@@ -3178,9 +3178,9 @@
      "feedback": "This can’t make sense on its own: it is the subordinate clause."
     },
     {
-     "text": "he practised",
+     "text": "won the race",
      "correct": false,
-     "feedback": "The main clause is the part that makes sense on its own and carries the main news."
+     "feedback": "Who won? Without “Turbo” this doesn’t make sense on its own."
     }
    ],
    "explain": "The main clause makes sense on its own: Turbo won the race."
@@ -3491,7 +3491,7 @@
    "prompt": "What is a fronted adverbial?",
    "options": [
     {
-     "text": "A phrase at the start saying when or how",
+     "text": "A word or phrase at the start saying when, where or how",
      "correct": true
     },
     {
@@ -3514,16 +3514,16 @@
    "prompt": "Which sentence starts with a fronted adverbial?",
    "options": [
     {
-     "text": "Later that night, the droid woke up.",
+     "text": "Later that night, the robot woke up.",
      "correct": true
     },
     {
-     "text": "The droid woke up later that night.",
+     "text": "The robot woke up later that night.",
      "correct": false,
      "feedback": "The adverbial is at the end here, not the front."
     },
     {
-     "text": "The droid woke up.",
+     "text": "The robot woke up.",
      "correct": false,
      "feedback": "There is no adverbial here."
     }
@@ -3960,7 +3960,7 @@
     {
      "text": "I haven’t got no fuel.",
      "correct": false,
-     "feedback": "Two negatives (haven’t + no) cancel out. Use any."
+     "feedback": "That uses two negatives (haven’t + no). Standard English uses only one: haven’t got any."
     }
    ],
    "explain": "Use only one negative: haven’t got any, or have got none."

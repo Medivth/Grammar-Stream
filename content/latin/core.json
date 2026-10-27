@@ -524,12 +524,12 @@
     "slave",
     "garden"
    ],
-   "explain": "filia = daughter. affiliate: to join as a “daughter” organisation.",
+   "explain": "filia = daughter. filial means to do with a son or daughter.",
    "accept": [
     "a daughter",
     "the daughter"
    ],
-   "learn": "**filia** = daughter\n_affiliate: to join as a “daughter” organisation._"
+   "learn": "**filia** = daughter\n_filial means to do with a son or daughter._"
   },
   {
    "id": "latin.w1.en.filia",
@@ -542,7 +542,7 @@
     "dominus",
     "canis"
    ],
-   "explain": "daughter = filia. affiliate: to join as a “daughter” organisation.",
+   "explain": "daughter = filia. filial means to do with a son or daughter.",
    "strict": true
   },
   {
@@ -621,12 +621,12 @@
     "table",
     "slave-girl"
    ],
-   "explain": "cibus = food. no common English word, but ciborium is a food vessel in churches.",
+   "explain": "cibus = food. no common English word comes from it, so learn this one by heart.",
    "accept": [
     "a food",
     "the food"
    ],
-   "learn": "**cibus** = food\n_no common English word, but ciborium is a food vessel in churches._"
+   "learn": "**cibus** = food\n_no common English word comes from it, so learn this one by heart._"
   },
   {
    "id": "latin.w2.en.cibus",
@@ -639,7 +639,7 @@
     "liber",
     "coquus"
    ],
-   "explain": "food = cibus. no common English word, but ciborium is a food vessel in churches.",
+   "explain": "food = cibus. no common English word comes from it, so learn this one by heart.",
    "strict": true
   },
   {
@@ -1165,9 +1165,9 @@
     "he sits",
     "she sits",
     "it sits",
-    "is siting",
-    "he is siting",
-    "she is siting",
+    "is sitting",
+    "he is sitting",
+    "she is sitting",
     "he/she sits"
    ],
    "learn": "**sedet** = he or she sits\n_sedentary, sediment._"
@@ -1280,8 +1280,8 @@
     "she carries",
     "it carries",
     "is carrying",
-    "he is carriing",
-    "she is carriing",
+    "he is carrying",
+    "she is carrying",
     "he/she carries"
    ],
    "learn": "**portat** = he or she carries\n_portable, transport, porter._"
@@ -1317,9 +1317,9 @@
     "he sees",
     "she sees",
     "it sees",
-    "is seing",
-    "he is seing",
-    "she is seing",
+    "is seeing",
+    "he is seeing",
+    "she is seeing",
     "he/she sees"
    ],
    "learn": "**videt** = he or she sees\n_video, evident, visible._"
@@ -1469,9 +1469,9 @@
     "he runs",
     "she runs",
     "it runs",
-    "is runing",
-    "he is runing",
-    "she is runing",
+    "is running",
+    "he is running",
+    "she is running",
     "he/she runs"
    ],
    "learn": "**currit** = he or she runs\n_current, courier, curriculum (a running course)._"
@@ -1833,10 +1833,10 @@
     {
      "text": "the girl → the slave",
      "correct": false,
-     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+     "feedback": "Look at the endings. The word ending in -m (puellam) is the accusative: the one the action is done TO."
     }
    ],
-   "explain": "servus puellam videt.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So the slave does it to the girl."
+   "explain": "servus puellam videt.: the subject (nominative) has its plain ending; the object (accusative) ends in -m: puellam. So the slave does it to the girl."
   },
   {
    "id": "latin.c.2",
@@ -1851,10 +1851,10 @@
     {
      "text": "the slave → the girl",
      "correct": false,
-     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+     "feedback": "Look at the endings. The word ending in -m (servum) is the accusative: the one the action is done TO."
     }
    ],
-   "explain": "puella servum videt.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So the girl does it to the slave."
+   "explain": "puella servum videt.: the subject (nominative) has its plain ending; the object (accusative) ends in -m: servum. So the girl does it to the slave."
   },
   {
    "id": "latin.c.3",
@@ -1869,10 +1869,10 @@
     {
      "text": "the dog → the master",
      "correct": false,
-     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+     "feedback": "Look at the endings. The word ending in -m (canem) is the accusative: the one the action is done TO."
     }
    ],
-   "explain": "dominus canem audit.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So the master does it to the dog."
+   "explain": "dominus canem audit.: the subject (nominative) has its plain ending; the object (accusative) ends in -m: canem. So the master does it to the dog."
   },
   {
    "id": "latin.c.4",
@@ -1887,10 +1887,10 @@
     {
      "text": "the master → the dog",
      "correct": false,
-     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+     "feedback": "Look at the endings. The word ending in -m (dominum) is the accusative: the one the action is done TO."
     }
    ],
-   "explain": "canis dominum audit.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So the dog does it to the master."
+   "explain": "canis dominum audit.: the subject (nominative) has its plain ending; the object (accusative) ends in -m: dominum. So the dog does it to the master."
   },
   {
    "id": "latin.c.5",
@@ -1905,10 +1905,10 @@
     {
      "text": "Iulia → Marcus",
      "correct": false,
-     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+     "feedback": "Look at the endings. The word ending in -m (Iuliam) is the accusative: the one the action is done TO."
     }
    ],
-   "explain": "Marcus Iuliam salutat.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So Marcus does it to Iulia."
+   "explain": "Marcus Iuliam salutat.: the subject (nominative) has its plain ending; the object (accusative) ends in -m: Iuliam. So Marcus does it to Iulia."
   },
   {
    "id": "latin.c.6",
@@ -1923,10 +1923,10 @@
     {
      "text": "the girl → the boy",
      "correct": false,
-     "feedback": "Look at the endings. The word ending in -am or -um is the one the action is done TO."
+     "feedback": "Look at the endings. The word ending in -m (puellam) is the accusative: the one the action is done TO."
     }
    ],
-   "explain": "puer puellam amat.: the subject (nominative) has its plain ending; the object (accusative) ends -am or -um. So the boy does it to the girl."
+   "explain": "puer puellam amat.: the subject (nominative) has its plain ending; the object (accusative) ends in -m: puellam. So the boy does it to the girl."
   },
   {
    "id": "latin.c.nom",
@@ -2029,7 +2029,7 @@
    ],
    "explain": "ambulas = you walk. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
    "accept": [
-    "you am walking"
+    "you are walking"
    ]
   },
   {
@@ -2062,7 +2062,7 @@
    ],
    "explain": "laboro = I work. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
    "accept": [
-    "I am work"
+    "I am working"
    ]
   },
   {
@@ -2078,7 +2078,7 @@
    ],
    "explain": "sedes = you sit. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
    "accept": [
-    "you am sit"
+    "you are sitting"
    ]
   },
   {
@@ -2094,7 +2094,7 @@
    ],
    "explain": "dormis = you sleep. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
    "accept": [
-    "you am sleep"
+    "you are sleeping"
    ]
   },
   {
@@ -2109,9 +2109,7 @@
     "he or she walks"
    ],
    "explain": "video = I see. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
-   "accept": [
-    "I am see"
-   ]
+   "accept": []
   },
   {
    "id": "latin.v2.audis",
@@ -2125,9 +2123,7 @@
     "I work"
    ],
    "explain": "audis = you hear. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
-   "accept": [
-    "you am hear"
-   ]
+   "accept": []
   },
   {
    "id": "latin.v2.clamo",
@@ -2142,7 +2138,7 @@
    ],
    "explain": "clamo = I shout. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
    "accept": [
-    "I am shout"
+    "I am shouting"
    ]
   },
   {
@@ -2156,10 +2152,8 @@
     "he or she walks",
     "you sleep"
    ],
-   "explain": "sum = I am. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
-   "accept": [
-    "I am am"
-   ]
+   "explain": "sum = I am. sum is irregular: it ends in -m, not -o, but es (you are) and est (he/she/it is) follow the -s and -t pattern.",
+   "accept": []
   },
   {
    "id": "latin.v2.es",
@@ -2173,9 +2167,7 @@
     "I see"
    ],
    "explain": "es = you are. The ending tells you the person: -o is I, -s is you, -t is he/she/it.",
-   "accept": [
-    "you am are"
-   ]
+   "accept": []
   },
   {
    "id": "latin.v2.est",
@@ -2288,7 +2280,7 @@
     "masters",
     "slaves"
    ],
-   "explain": "pueri = boys. -a words go to -ae; -us words go to -i.",
+   "explain": "pueri = boys. puer does not end in -us, but it still takes -i in the plural, like servus → servi.",
    "accept": [
     "the boys"
    ]
@@ -2393,7 +2385,7 @@
    "id": "latin.pl.ending",
    "topic": "latin.plurals",
    "kind": "fact",
-   "prompt": "When the subject is plural, what does the verb end in?",
+   "prompt": "When the subject is “they” or a plural noun like servi, what does the verb end in?",
    "answer": "-nt",
    "distractors": [
     "-t",
@@ -2414,7 +2406,7 @@
    "distractors": [
     "puellam",
     "puelli",
-    "puellas"
+    "puella"
    ],
    "explain": "-a becomes -ae: puella → puellae.",
    "strict": true
@@ -2428,7 +2420,7 @@
    "distractors": [
     "amicae",
     "amicum",
-    "amicos"
+    "amicus"
    ],
    "explain": "-us becomes -i: amicus → amici.",
    "strict": true
@@ -2478,11 +2470,11 @@
     "eight",
     "one"
    ],
-   "explain": "tres = three. trio, tripod, triangle.",
+   "explain": "tres = three. trio, triple, triangle.",
    "accept": [
     "3"
    ],
-   "learn": "**tres** = three\n_trio, tripod, triangle._"
+   "learn": "**tres** = three\n_trio, triple, triangle._"
   },
   {
    "id": "latin.n.quattuor",
@@ -2563,11 +2555,11 @@
     "three",
     "six"
    ],
-   "explain": "octo = eight. octopus, octagon, October (the eighth month).",
+   "explain": "octo = eight. October (once the eighth month of the Roman year), octave, octet.",
    "accept": [
     "8"
    ],
-   "learn": "**octo** = eight\n_octopus, octagon, October (the eighth month)._"
+   "learn": "**octo** = eight\n_October (once the eighth month of the Roman year), octave, octet._"
   },
   {
    "id": "latin.n.novem",
@@ -2580,11 +2572,11 @@
     "four",
     "seven"
    ],
-   "explain": "novem = nine. November (the ninth month).",
+   "explain": "novem = nine. November (once the ninth month of the Roman year).",
    "accept": [
     "9"
    ],
-   "learn": "**novem** = nine\n_November (the ninth month)._"
+   "learn": "**novem** = nine\n_November (once the ninth month of the Roman year)._"
   },
   {
    "id": "latin.n.decem",
@@ -2597,11 +2589,11 @@
     "five",
     "eight"
    ],
-   "explain": "decem = ten. December (the tenth month), decimal, decade.",
+   "explain": "decem = ten. December (once the tenth month of the Roman year), decimal.",
    "accept": [
     "10"
    ],
-   "learn": "**decem** = ten\n_December (the tenth month), decimal, decade._"
+   "learn": "**decem** = ten\n_December (once the tenth month of the Roman year), decimal._"
   },
   {
    "id": "latin.ph.1",
@@ -2727,7 +2719,7 @@
    "prompt": "How do you say **yes** in Latin?",
    "answer": "ita vero",
    "distractors": [
-    "ita vero, amice",
+    "minime",
     "vale, mi amice",
     "salvete, omnes"
    ],
@@ -2886,7 +2878,7 @@
    "answer": "pedal",
    "distractors": [
     "pest",
-    "pedigree",
+    "pebble",
     "petal"
    ],
    "explain": "pedal comes from pes, pedis (foot).",
@@ -2901,7 +2893,7 @@
    "prompt": "**caput** means “head”. Which English word comes from it?",
    "answer": "capital",
    "distractors": [
-    "cap",
+    "capture",
     "carpet",
     "capsule"
    ],
@@ -2918,7 +2910,7 @@
    "answer": "scribble",
    "distractors": [
     "scrub",
-    "script-free",
+    "scramble",
     "crisp"
    ],
    "explain": "scribble comes from scribo (I write).",
@@ -2966,7 +2958,7 @@
    "answer": "terrain",
    "distractors": [
     "terror",
-    "terrier",
+    "terrible",
     "tear"
    ],
    "explain": "terrain comes from terra (land, earth).",

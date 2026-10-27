@@ -120,7 +120,7 @@ export const MATHS3_GENERATORS = {
     if (level === 1) {
       const n = rng.pick([5, 6, 7, 8, 9, 10, 12]);
       return {
-        kind: 'typed', prompt: `What do the interior angles of a ${NAMES[n]} (${n} sides) add up to?`, numeric: { value: String((n - 2) * 180), form: 'any' }, unit: '°',
+        kind: 'typed', prompt: `What do the interior angles of ${/^[aeiou]/.test(NAMES[n]) ? 'an' : 'a'} ${NAMES[n]} (${n} sides) add up to?`, numeric: { value: String((n - 2) * 180), form: 'any' }, unit: '°',
         explain: `A ${NAMES[n]} splits into ${n - 2} triangles from one corner, each 180°: ${n - 2} × 180 = ${(n - 2) * 180}°.`,
         steps: [`From one vertex I can draw diagonals that cut the shape into ${n} − 2 = ${n - 2} triangles.`, 'Each triangle’s angles add up to 180°.', `${n - 2} × 180 = ${(n - 2) * 180}°.`],
       };
@@ -191,7 +191,7 @@ export const MATHS3_GENERATORS = {
       };
     }
     const g1 = rng.pick([250, 400, 500]), g2 = rng.pick([600, 750, 800, 1000]);
-    const u1 = rng.int(30, 60), u2 = u1 + rng.pick([-8, -6, -4, 4, 6, 8]); // pence per 100 g
+    const u1 = rng.int(15, 30) * 2, u2 = u1 + rng.pick([-8, -6, -4, 4, 6, 8]); // pence per 100 g (even, so prices are whole pence)
     const p1 = (g1 / 100) * u1, p2 = (g2 / 100) * u2;
     const best = u1 < u2 ? 1 : 2;
     const money = (p) => `£${(p / 100).toFixed(2)}`;
@@ -284,7 +284,7 @@ export const MATHS3_GENERATORS = {
       if (g(n1, d1) !== 1 || g(n2, d2) !== 1) return MATHS3_GENERATORS.fracMixed(2, rng);
       const [a, b] = simp(n1 * d2, d1 * n2);
       return {
-        kind: 'typed', prompt: `Work out {{${n1}/${d1}}} ÷ {{${n2}/${d2}}}. Give your answer in its simplest form.`, numeric: { value: `${a}/${b}`, form: 'simplest' },
+        kind: 'typed', prompt: `Work out {{${n1}/${d1}}} ÷ {{${n2}/${d2}}}. Give your answer in its simplest form.`, numeric: { value: b === 1 ? `${a}` : `${a}/${b}`, form: 'simplest' },
         explain: `Dividing by a fraction is the same as multiplying by its reciprocal (flip it): {{${n1}/${d1}}} × {{${d2}/${n2}}} = {{${n1 * d2}/${d1 * n2}}} = ${tex(n1 * d2, d1 * n2)}.`,
         steps: ['Keep the first fraction, change ÷ to ×, flip the second fraction.', `{{${n1}/${d1}}} × {{${d2}/${n2}}} = {{${n1 * d2}/${d1 * n2}}}.`, `Simplify: ${tex(n1 * d2, d1 * n2)}.`],
       };

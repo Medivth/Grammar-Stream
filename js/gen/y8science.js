@@ -3,6 +3,14 @@
 // equations and Punnett squares. Levels: secure Year 8, grammar-school depth, GCSE taster.
 
 const fmt = (x) => String(Math.round(x * 1000) / 1000);
+/** "a" or "an" before a number said aloud: an 8, an 11, an 18, an 80–89, an 800, an 11,000… */
+function an(x, cap = false) {
+  const whole = fmt(x).split('.')[0];
+  const vowel = whole.startsWith('8') || (/^1[18]/.test(whole) && whole.length % 3 === 2);
+  return vowel ? (cap ? 'An' : 'an') : cap ? 'A' : 'a';
+}
+/** One cell gives about 1.5 V, so bigger voltages come from a battery of cells or a power supply. */
+const source = (V) => (V <= 2 ? 'cell' : V <= 12 ? 'battery' : 'power supply');
 const typed = (prompt, value, unit, explain, steps, extra = {}) => ({ kind: 'typed', prompt, numeric: { value: fmt(value), form: 'any' }, unit, explain, steps, ...extra });
 function choice(prompt, correct, wrongs, rng, explain, steps) {
   const seen = new Set([correct]);
@@ -69,15 +77,15 @@ export const Y8_SCIENCE_GENERATORS = {
 
   y8sOhm(level, rng) {
     const R = rng.pick([2, 4, 5, 6, 10, 12, 20]), I = rng.pick([0.5, 1, 1.5, 2, 3]);
-    if (level === 1) return typed(`A current of ${I} A flows through a ${R} Ω resistor. What is the potential difference across it?`, I * R, 'V', `V = I × R = ${I} × ${R} = ${fmt(I * R)} V.`, ['V = I × R', `${I} A × ${R} Ω`, `= ${fmt(I * R)} V`]);
+    if (level === 1) return typed(`A current of ${I} A flows through ${an(R)} ${R} Ω resistor. What is the potential difference across it?`, I * R, 'V', `V = I × R = ${I} × ${R} = ${fmt(I * R)} V.`, ['V = I × R', `${I} A × ${R} Ω`, `= ${fmt(I * R)} V`]);
     if (level === 2) {
       const V = I * R;
-      return typed(`A ${fmt(V)} V cell drives a current of ${I} A through a lamp. What is the lamp’s resistance?`, R, 'Ω', `R = V ÷ I = ${fmt(V)} ÷ ${I} = ${R} Ω.`, ['rearrange V = IR to R = V ÷ I', `${fmt(V)} ÷ ${I}`, `= ${R} Ω`]);
+      return typed(`${an(V, true)} ${fmt(V)} V ${source(V)} drives a current of ${I} A through a lamp. What is the lamp’s resistance?`, R, 'Ω', `R = V ÷ I = ${fmt(V)} ÷ ${I} = ${R} Ω.`, ['rearrange V = IR to R = V ÷ I', `${fmt(V)} ÷ ${I}`, `= ${R} Ω`]);
     }
     const V = rng.pick([6, 12, 24]);
     const [R1, R2] = rng.pick([[2, 4], [3, 9], [2, 10], [4, 8], [5, 7], [1, 5], [3, 3], [2, 6], [4, 4]].filter(([a, b]) => Number.isInteger((V / (a + b)) * 4)));
     const total = R1 + R2, Ival = V / total;
-    return typed(`A ${R1} Ω and a ${R2} Ω resistor are in series with a ${V} V battery. What current flows?`, Ival, 'A', `In series, resistances add: ${R1} + ${R2} = ${total} Ω. I = V ÷ R = ${V} ÷ ${total} = ${fmt(Ival)} A (the same everywhere in a series circuit).`, [`total resistance = ${R1} + ${R2} = ${total} Ω`, 'I = V ÷ R', `${V} ÷ ${total} = ${fmt(Ival)} A`]);
+    return typed(`${an(R1, true)} ${R1} Ω and ${an(R2)} ${R2} Ω resistor are in series with ${an(V)} ${V} V battery. What current flows?`, Ival, 'A', `In series, resistances add: ${R1} + ${R2} = ${total} Ω. I = V ÷ R = ${V} ÷ ${total} = ${fmt(Ival)} A (the same everywhere in a series circuit).`, [`total resistance = ${R1} + ${R2} = ${total} Ω`, 'I = V ÷ R', `${V} ÷ ${total} = ${fmt(Ival)} A`]);
   },
 
   y8sPower(level, rng) {
@@ -107,9 +115,19 @@ export const Y8_SCIENCE_GENERATORS = {
 
   y8sWave(level, rng) {
     if (level < 3) {
-      const f = rng.pick([2, 5, 10, 20, 50, 100]), lam = rng.pick([0.5, 1, 2, 3, 4]);
-      if (level === 1) return typed(`A water wave has a frequency of ${f} Hz and a wavelength of ${lam} m. What is its speed?`, f * lam, 'm/s', `Wave speed = frequency × wavelength = ${f} × ${lam} = ${fmt(f * lam)} m/s.`, ['v = f × λ', `${f} Hz × ${lam} m`, `= ${fmt(f * lam)} m/s`]);
-      return typed(`A sound wave travels at ${fmt(f * lam * 10)} m/s with a frequency of ${f * 10} Hz. What is its wavelength?`, lam, 'm', `λ = v ÷ f = ${fmt(f * lam * 10)} ÷ ${f * 10} = ${lam} m.`, ['rearrange v = fλ to λ = v ÷ f', `${fmt(f * lam * 10)} ÷ ${f * 10}`, `= ${lam} m`]);
+      if (level === 1) {
+        // realistic pairs: sea waves (λ ≈ 1.56 m × T², as for real deep-water waves) or ripple-tank waves in cm
+        if (rng.chance(0.5)) {
+          const [f, lam] = rng.pick([[0.1, 150], [0.125, 100], [0.2, 40], [0.25, 25], [0.5, 6], [1, 1.5]]);
+          return typed(`A wave on the sea near Delos has a frequency of ${f} Hz and a wavelength of ${lam} m. What is its speed?`, f * lam, 'm/s', `Wave speed = frequency × wavelength = ${f} × ${lam} = ${fmt(f * lam)} m/s.`, ['v = f × λ', `${f} Hz × ${lam} m`, `= ${fmt(f * lam)} m/s`]);
+        }
+        const [f, lam] = rng.pick([[4, 5], [5, 4], [6, 4], [8, 3], [10, 2], [10, 2.5], [12, 2], [15, 1.5], [20, 1], [25, 1]]);
+        return typed(`Ripples in a ripple tank have a frequency of ${f} Hz and a wavelength of ${lam} cm. What is their speed, in cm/s?`, f * lam, 'cm/s', `Wave speed = frequency × wavelength = ${f} × ${lam} = ${fmt(f * lam)} cm/s. (Wavelength in cm gives speed in cm/s.)`, ['v = f × λ', `${f} Hz × ${lam} cm`, `= ${fmt(f * lam)} cm/s`]);
+      }
+      // sound: about 340 m/s in air, about 1500 m/s in water
+      const [medium, v, fs] = rng.pick([['air', 340, [20, 34, 68, 85, 170, 340, 680, 850, 1700]], ['water', 1500, [50, 75, 100, 150, 250, 300, 500, 750, 1500, 3000]]]);
+      const f = rng.pick(fs), lam = v / f;
+      return typed(`Sound travels at ${v} m/s in ${medium}. A sound wave in ${medium} has a frequency of ${f} Hz. What is its wavelength?`, lam, 'm', `λ = v ÷ f = ${v} ÷ ${f} = ${fmt(lam)} m.${medium === 'water' ? ' Sound travels over four times faster in water than in air (about 340 m/s), so the same note has a longer wavelength in water.' : ''}`, ['rearrange v = fλ to λ = v ÷ f', `${v} ÷ ${f}`, `= ${fmt(lam)} m`]);
     }
     const t = rng.pick([2, 3, 4, 5, 6]);
     return typed(`Kit sees lightning over Mount Olympus and hears the thunder ${t} s later. Sound travels at 340 m/s. Roughly how far away is the storm, in metres?`, 340 * t, 'm', `Light arrives almost instantly, so the delay is the time for the sound: distance = 340 × ${t} = ${340 * t} m.`, ['light travels so fast that its travel time is negligible', 'distance = speed of sound × time', `340 × ${t} = ${340 * t} m`]);

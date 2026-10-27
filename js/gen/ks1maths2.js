@@ -64,7 +64,7 @@ export const KS1_GENERATORS_2 = {
 
   k1Turns(level, rng) {
     const start = rng.int(0, 3), face = DIRS[start];
-    const [who, short] = rng.pick([['Bleep the droid', 'Bleep'], ['Turbo', 'Turbo'], ['{hero}', '{hero}']]);
+    const [who, short] = rng.pick([['Bleep the robot', 'Bleep'], ['Turbo', 'Turbo'], ['{hero}', '{hero}']]);
     if (level === 1) {
       const right = DIRS[(start + 2) % 4];
       return choice(`${who} is facing ${face} and makes a half turn. Which way is ${short} facing now?`, right, DIRS.filter((d) => d !== right), rng, { explain: `A half turn means turning to face the opposite way: ${face} → ${right}.`, steps: ['A half turn is two quarter turns.', 'You end up facing the opposite way.', `${face} → ${right}.`] });
@@ -117,7 +117,7 @@ export const KS1_GENERATORS_2 = {
     }
     if (level === 2) { const c = rng.pick([2, 5, 10, 20, 50]); return typed(`How many ${c}p coins make £1?`, 100 / c, `£1 = 100p. 100 ÷ ${c} = ${100 / c}.`, ['£1 is 100p.', `I count in ${c}s to 100.`, `That is ${100 / c} coins.`]); }
     const pay = rng.pick([200, 500]), cost = rng.int(5, pay / 5 - 5) * 5;
-    return typed(`A model rocket costs ${money(cost)}. You pay with ${money(pay)}. How much change, in pence?`, pay - cost, `${pay}p − ${cost}p = ${pay - cost}p (${money(pay - cost)}).`, [`Change pounds to pence: ${money(pay)} = ${pay}p, ${money(cost)} = ${cost}p.`, `Count on from ${cost} to ${pay}.`, `${pay - cost}p.`], { unit: 'p' });
+    return typed(`A model rocket costs ${money(cost)}. You pay with ${money(pay)}. How much change, in pence?`, pay - cost, `${pay}p − ${cost}p = ${pay - cost}p${pay - cost >= 100 ? ` (${money(pay - cost)})` : ''}.`, [`Change pounds to pence: ${money(pay)} = ${pay}p, ${money(cost)} = ${cost}p.`, `Count on from ${cost} to ${pay}.`, `${pay - cost}p.`], { unit: 'p' });
   },
 
   k1Durations(level, rng) {
@@ -135,7 +135,7 @@ export const KS1_GENERATORS_2 = {
     const h = rng.int(1, 10), m1 = rng.pick([5, 10, 15, 20]), dur = rng.pick([15, 20, 25, 30, 35]);
     const m2 = m1 + dur;
     if (m2 >= 60) return KS1_GENERATORS_2.k1Durations(3, rng);
-    return typed(`The film starts at ${timeWords(h, m1)} and finishes at ${timeWords(h, m2)}. How many minutes long is it?`, dur, `${m1} minutes past to ${m2} minutes past is ${dur} minutes.`, [`Start: ${m1} minutes past ${h}. Finish: ${m2} minutes past ${h} (${timeWords(h, m2)}).`, `${m2} − ${m1}.`, `${dur} minutes.`]);
+    return typed(`The film starts at ${timeWords(h, m1)} and finishes at ${timeWords(h, m2)}. How many minutes long is it?`, dur, `${m1} minutes past to ${m2} minutes past is ${dur} minutes.`, [`Start: ${m1} minutes past ${h}. Finish: ${m2} minutes past ${h}.`, `${m2} − ${m1}.`, `${dur} minutes.`]);
   },
 
   // --- Year 3 tasters ------------------------------------------------------------------
@@ -147,8 +147,7 @@ export const KS1_GENERATORS_2 = {
 
   k1Perimeter(level, rng) {
     if (level === 1) { const s = rng.int(2, 9); return typed(`A square has sides of ${s} cm. What is its perimeter?`, 4 * s, `A square has 4 equal sides: ${s} + ${s} + ${s} + ${s} = ${4 * s} cm.`, ['Perimeter is the distance all the way round.', `A square has 4 sides of ${s} cm.`, `4 × ${s} = ${4 * s} cm.`], { unit: 'cm' }); }
-    const w = rng.int(3, 12), hgt = rng.int(2, 8);
-    if (w === hgt) return KS1_GENERATORS_2.k1Perimeter(level, rng);
+    const w = rng.int(4, 12), hgt = rng.int(2, w - 1);
     if (level === 2) return typed('What is the perimeter of this rectangle?', 2 * (w + hgt), `${w} + ${hgt} + ${w} + ${hgt} = ${2 * (w + hgt)} cm.`, ['Perimeter: add all four sides.', `Two sides of ${w} and two of ${hgt}.`, `${2 * w} + ${2 * hgt} = ${2 * (w + hgt)} cm.`], { unit: 'cm', diagram: { type: 'rect', w, h: hgt } });
     const p = 2 * (w + hgt);
     return typed(`A race track is a rectangle ${w} m long. Its perimeter is ${p} m. How wide is it?`, hgt, `Two long sides make ${2 * w} m. ${p} − ${2 * w} = ${2 * hgt}, shared between two short sides: ${hgt} m.`, [`The two long sides: 2 × ${w} = ${2 * w} m.`, `What is left: ${p} − ${2 * w} = ${2 * hgt} m.`, `Half of that for each short side: ${hgt} m.`], { unit: 'm' });

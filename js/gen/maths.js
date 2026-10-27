@@ -86,8 +86,8 @@ export const GENERATORS = {
         kind: 'typed',
         prompt: `At 6 am the temperature is ${neg(start)}°C. By midday it has risen by ${rise} degrees. What is the temperature at midday?`,
         numeric: { value: String(end), form: 'any' },
-        explain: `Count up ${rise} from ${neg(start)}: it takes ${-start} to reach 0, then ${rise + start} more. The answer is ${neg(end)}°C.`,
-        steps: [`I start at ${neg(start)} on a number line.`, `${-start} steps up takes me to 0.`, `I have ${rise + start} more steps to go, so I land on ${neg(end)}.`],
+        explain: end < 0 ? `Count up ${rise} from ${neg(start)}: you stop ${-end} below 0, at ${neg(end)}°C.` : `Count up ${rise} from ${neg(start)}: it takes ${-start} to reach 0, then ${rise + start} more. The answer is ${neg(end)}°C.`,
+        steps: end < 0 ? [`I start at ${neg(start)} on a number line.`, `I count up ${rise} steps.`, `I stop before reaching 0, at ${neg(end)}.`] : [`I start at ${neg(start)} on a number line.`, `${-start} steps up takes me to 0.`, `I have ${rise + start} more steps to go, so I land on ${neg(end)}.`],
       };
     }
     if (level === 2) {
@@ -178,7 +178,7 @@ export const GENERATORS = {
       return {
         kind: 'typed', prompt: `Find the missing number: ${prompt}`, numeric: { value: String(ans), form: 'any' },
         explain: `The ${missingTop ? 'denominator' : 'numerator'} was multiplied by ${k}, so the ${missingTop ? 'numerator' : 'denominator'} must be too: ${missingTop ? n : d} × ${k} = ${ans}.`,
-        steps: [`I look at what happened to the ${missingTop ? 'denominator' : 'numerator'}: it was multiplied by ${k}.`, `Whatever I do to the bottom I do to the top, so I multiply the ${missingTop ? 'numerator' : 'denominator'} by ${k} too.`, `${missingTop ? n : d} × ${k} = ${ans}.`],
+        steps: [`I look at what happened to the ${missingTop ? 'denominator' : 'numerator'}: it was multiplied by ${k}.`, `Whatever I do to the ${missingTop ? 'bottom' : 'top'} I do to the ${missingTop ? 'top' : 'bottom'}, so I multiply the ${missingTop ? 'numerator' : 'denominator'} by ${k} too.`, `${missingTop ? n : d} × ${k} = ${ans}.`],
       };
     }
     const d = rng.pick([3, 4, 5, 6, 7, 8, 9]); let n = rng.int(1, d - 1);
@@ -384,7 +384,7 @@ export const GENERATORS = {
         steps: [`I replace a with ${a} and b with ${b}.`, `${m}a = ${m} × ${a} = ${m * a}.`, `${m * a} − ${b} = ${neg(v)}.`],
       };
     }
-    const v = rng.chance(0.5) ? { p: `a² + ${b}b`, v: a * a + b * b, s: [`a² = ${a} × ${a} = ${a * a} (not ${a} × 2).`, `${b}b = ${b} × ${b} = ${b * b}.`, `${a * a} + ${b * b} = ${a * a + b * b}.`] }
+    const v = rng.chance(0.5) ? { p: `a² + ${b}b`, v: a * a + b * b, s: [`a² = ${a} × ${a} = ${a * a}${a === 2 ? '' : ` (not ${a} × 2)`}.`, `${b}b = ${b} × ${b} = ${b * b}.`, `${a * a} + ${b * b} = ${a * a + b * b}.`] }
       : { p: `3(a + b)`, v: 3 * (a + b), s: [`Brackets first: a + b = ${a} + ${b} = ${a + b}.`, `3(…) means 3 × (…).`, `3 × ${a + b} = ${3 * (a + b)}.`] };
     return {
       kind: 'typed', prompt: `If a = ${a} and b = ${b}, what is ${v.p}?`, numeric: { value: String(v.v), form: 'any' },
@@ -416,8 +416,8 @@ export const GENERATORS = {
     const correct = rule(d, c);
     const wrongs = [...new Set([`n + ${d}`, rule(d, start), rule(start, d === start ? 1 : d - start)])].filter((w) => w !== correct).slice(0, 3);
     return choice(`What is the nth term of ${terms.join(', ')}, …?`, correct, wrongs.map((w) => (w === `n + ${d}` ? { text: w, feedback: `“Add ${d}” is the term-to-term rule. The nth term needs ${d}n because each term is ${d} more.` } : w)), rng, {
-      explain: `It goes up by ${d}, so it is linked to the ${d} times table: ${d}n gives ${d}, ${2 * d}, ${3 * d}… Each term is ${c < 0 ? `${-c} less` : `${c} more`}, so the rule is ${correct}.`,
-      steps: [`The difference is ${d}, so I start with ${d}n.`, `${d}n gives ${d}, ${2 * d}, ${3 * d}, … but the sequence is ${terms.slice(0, 3).join(', ')}, …`, `Each term is ${c < 0 ? `${-c} less` : `${c} more`}, so the nth term is ${correct}.`],
+      explain: `It goes up by ${d}, so it is linked to the ${d} times table: ${d}n gives ${d}, ${2 * d}, ${3 * d}… ${c === 0 ? 'That is exactly the sequence' : `Each term is ${c < 0 ? `${-c} less` : `${c} more`}`}, so the rule is ${correct}.`,
+      steps: [`The difference is ${d}, so I start with ${d}n.`, `${d}n gives ${d}, ${2 * d}, ${3 * d}, …${c === 0 ? ', which is exactly the sequence.' : ` but the sequence is ${terms.slice(0, 3).join(', ')}, …`}`, `${c === 0 ? 'Nothing needs adding' : `Each term is ${c < 0 ? `${-c} less` : `${c} more`}`}, so the nth term is ${correct}.`],
     });
   },
 

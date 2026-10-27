@@ -107,7 +107,7 @@ const items = [
   fact('db.boundary', 'debugging', 'A program accepts ages 11 to 18. Testing it with 11 and 18 is called using … test data.', 'boundary', ['normal', 'erroneous', 'random'], 'Boundary data sits on the edges of the valid range, where mistakes like > instead of >= hide.', { accept: ['extreme', 'boundary test'] }),
   fact('db.erroneous', 'debugging', 'Typing “banana” into a program that expects an age is … test data.', 'erroneous', ['boundary', 'normal', 'valid'], 'Erroneous (invalid) data should be rejected politely, not crash the program.', { accept: ['invalid'] }),
   mcq('db.dryrun', 'debugging', 'What is a “dry run”?', [['Working through code by hand, line by line', true], ['Running a program with no input data', false, 'It is done on paper, often with a trace table.'], ['Running a program once before it is finished', false, 'A dry run uses no computer at all: you trace the code by hand.']], 'Dry runs find logic errors that the computer can’t point out for you.'),
-  mcq('db.hopper', 'debugging', 'Why is fixing errors called “debugging”?', [['From a famous story of a moth stuck in an early computer', true], ['Early programmers were nicknamed “bugs” by engineers', false, 'It comes from a moth found in a computer in 1947.'], ['Errors look like tiny insects when printed out on paper', false, 'The word “bug” for a fault is older, but the moth story made it famous.']], 'Grace Hopper’s team found a moth in the Harvard Mark II in 1947. Engineers had called faults “bugs” before, but the logbook made it famous.'),
+  mcq('db.hopper', 'debugging', 'Which story made “debugging” a famous word for fixing errors?', [['From a famous story of a moth stuck in an early computer', true], ['Early programmers were nicknamed “bugs” by engineers', false, 'Engineers already called faults “bugs”; a moth found in a computer in 1947 made the word famous.'], ['Errors look like tiny insects when printed out on paper', false, 'The word “bug” for a fault is older, but the moth story made it famous.']], 'Operators of the Harvard Mark II found a moth in it in 1947, and Grace Hopper loved telling the story. Engineers had called faults “bugs” before, but the logbook made it famous.'),
 
   // --- searching
   tmpl('se.tmpl', 'searching', 'y8cSearch'),
@@ -162,7 +162,7 @@ const items = [
   fact('lg.xor', 'logic', 'Which gate gives 1 when exactly one input is 1, but not both?', 'XOR', ['OR', 'AND', 'NOT'], 'XOR means “exclusive or”. Computers use XOR gates when adding binary numbers.', { accept: ['exclusive or'] }),
   mcq('lg.real', 'logic', 'A lamp in the temple can be switched on from the door OR the altar, but turns off if both switches are on. Which gate is this?', [['XOR', true], ['OR', false, 'OR would stay on when both are on.'], ['AND', false, 'AND would need both on.']], 'Exactly one switch on: that is XOR. Landing lights with a switch at each end of the stairs work this way.'),
   mcq('lg.table', 'logic', 'In a truth table for A AND B, how many rows give an output of 1?', [['1', true], ['2', false, 'Only A = 1, B = 1 gives 1.'], ['3', false, 'That would be OR.']], 'Of the four rows (00, 01, 10, 11), only 11 gives 1.'),
-  mcq('lg.transistor', 'logic', 'What are logic gates built from inside a processor?', [['Transistors: tiny electronic switches', true], ['Tiny light bulbs that switch on and off', false, 'Early computers used valves; modern ones use transistors.'], ['Magnets that store a 1 or a 0', false, 'Transistors, billions of them.']], 'A modern processor contains billions of transistors, each smaller than a virus.'),
+  mcq('lg.transistor', 'logic', 'What are logic gates built from inside a processor?', [['Transistors: tiny electronic switches', true], ['Tiny light bulbs that switch on and off', false, 'Early computers used valves; modern ones use transistors.'], ['Magnets that store a 1 or a 0', false, 'Transistors, billions of them.']], 'A modern processor contains billions of transistors, each only tens of nanometres across, about the size of a virus.'),
 
   // --- hardware
   fact('hw.cpu', 'hardware', 'Which part of a computer fetches, decodes and executes instructions?', 'the CPU', ['the hard drive', 'the RAM', 'the monitor'], 'The Central Processing Unit is the computer’s brain.', { accept: ['cpu', 'processor', 'central processing unit'] }),
@@ -183,7 +183,7 @@ const items = [
   fact('sw.utility', 'software', 'Antivirus, backup and disk defragmentation programs are examples of … software.', 'utility', ['application', 'operating system', 'open-source'], 'Utility software helps keep the computer running well.', { accept: ['utilities', 'system utility'] }),
   mcq('sw.high', 'software', 'What is a high-level language?', [['A language like Python that must be translated for the CPU', true], ['The machine code the CPU runs directly, with no translation', false, 'That is the lowest level.'], ['A language only for advanced programmers', false, 'High-level means far from the hardware, not difficult.']], 'High-level languages are easy for people; low-level languages (assembly, machine code) are close to the hardware.'),
   mcq('sw.compiler', 'software', 'What does a compiler do?', [['Translates the whole program before it runs', true], ['Translates and runs the program one line at a time', false, 'That is an interpreter.'], ['Checks the program for viruses before it runs', false, 'That is antivirus software.']], 'Compiled programs run fast and can be shared without the source code; interpreters are handy while developing.'),
-  mcq('sw.interpreter', 'software', 'Python is usually run by an interpreter. What does that mean?', [['Each line is translated and run in turn', true], ['The whole program is translated before any of it runs', false, 'That is a compiler.'], ['It is translated into another human language', false, 'It is translated into instructions the CPU can carry out.']], 'That’s why a Python program can run its first part and then stop with an error on a later line.'),
+  mcq('sw.interpreter', 'software', 'Python is usually run by an interpreter. What does that mean?', [['Each line is translated and run in turn', true], ['The whole program is translated before any of it runs', false, 'That is a compiler.'], ['It is translated into another human language', false, 'It is translated into instructions the CPU can carry out.']], 'That’s why a Python program can run its first part and then stop with a runtime error on a later line.'),
   mcq('sw.open', 'software', 'What is open-source software?', [['Software whose code anyone can read, change and share', true], ['Software that is checked to be free of bugs', false, 'Open source can still have bugs, but anyone can fix them.'], ['Software that can only be used online, in a browser', false, 'It is about the source code being open.']], 'Linux, Firefox and Python itself are open source. Proprietary software keeps its code secret.'),
   fact('sw.machine', 'software', 'The binary instructions a CPU can carry out directly are called…', 'machine code', ['pseudocode', 'HTML', 'source code'], 'Every program must end up as machine code before the CPU can run it.', { accept: ['machine language'] }),
 
@@ -218,7 +218,7 @@ const items = [
   fact('hi.babbage', 'history', 'Which Victorian mathematician designed the Analytical Engine, a mechanical general-purpose computer?', 'Charles Babbage', ['Alan Turing', 'Tim Berners-Lee', 'Isaac Newton'], 'It was never finished in his lifetime, but its design had memory and a processor, like a modern computer.', { accept: ['babbage'] }),
   fact('hi.lovelace', 'history', 'Who wrote notes in 1843 including an algorithm for the Analytical Engine, often called the first computer program?', 'Ada Lovelace', ['Grace Hopper', 'Florence Nightingale', 'Mary Anning'], 'She also saw that computers could one day work with music and pictures, not just numbers.', { accept: ['lovelace', 'ada'] }),
   fact('hi.turing', 'history', 'Which mathematician worked at Bletchley Park breaking German codes and is called a father of computer science?', 'Alan Turing', ['Charles Babbage', 'Tommy Flowers', 'Bill Gates'], 'He described the “Turing machine” in 1936 and the Turing test for artificial intelligence in 1950.', { accept: ['turing'] }),
-  mcq('hi.colossus', 'history', 'Colossus (1944) is famous because it was…', [['an early electronic computer built to break codes', true], ['the first computer ever to connect to the internet', false, 'It filled a room!'], ['a giant calculator used to design the Spitfire', false, 'It was a code-breaking computer at Bletchley Park, not a design tool.']], 'It was designed by the engineer Tommy Flowers and used about 2,500 valves.'),
+  mcq('hi.colossus', 'history', 'Colossus (1944) is famous because it was…', [['an early electronic computer built to break codes', true], ['the first computer ever to connect to the internet', false, 'It filled a room!'], ['a giant calculator used to design the Spitfire', false, 'It was a code-breaking computer at Bletchley Park, not a design tool.']], 'It was designed by the engineer Tommy Flowers and used about 2,400 valves in its Mark 2 version (the first had about 1,600).'),
   mcq('hi.transistor', 'history', 'Why was the invention of the transistor in 1947 so important?', [['It replaced big, hot valves, so computers could shrink', true], ['It let computers connect to the internet for the first time', false, 'The internet came decades later.'], ['It made computers mechanical, with moving gears', false, 'It made them smaller electronic machines.']], 'A modern phone chip has billions of transistors.'),
   fact('hi.web', 'history', 'Who invented the World Wide Web in 1989?', 'Tim Berners-Lee', ['Alan Turing', 'Steve Jobs', 'Ada Lovelace'], 'He was working at CERN in Switzerland, and the web was given to the world free.', { accept: ['berners-lee', 'tim berners lee', 'sir tim berners-lee'] }),
   order('hi.timeline', 'history', 'Put these in order, earliest first.', ['the Antikythera mechanism', 'Babbage’s Analytical Engine', 'Colossus at Bletchley Park', 'the World Wide Web'], ['over 2,000 years ago', '1830s', '1944', '1989'], 'Computing ideas are very old; electronic computers are less than 100 years old.'),
@@ -259,5 +259,254 @@ const items = [
   order('tp.layers', 'topologies', 'Put the four layers of the TCP/IP model in order, from the top (nearest the user) down.', ['application', 'transport', 'internet', 'link'], null, 'Application (HTTP, email), transport (TCP: splits data into packets and checks they arrive), internet (IP: addressing and routing), link (the physical network: Wi-Fi, Ethernet).'),
   mcq('tp.layerwhy', 'topologies', 'Why are network protocols organised in layers?', [['Each layer does one job and can be changed alone', true], ['To make the internet slower but safer from hackers', false, 'Layers are about organisation, not speed.'], ['So each layer can use a different language', false, 'It is a design choice that makes networks easier to build.']], 'You can switch from Wi-Fi to cable (link layer) and websites (application layer) still work.'),
 ];
+
+// --- memory hooks and real-world examples ------------------------------------------------------
+// Kept apart from the questions above so corrections to prompts and answers never collide with
+// them. TOPIC_HOOKS adds `hook` to topics; MEMORY adds `hook` and/or `example` to items by id.
+const TOPIC_HOOKS = {
+  'computing.thinking': 'Four pillars: **break it down, leave out what doesn’t matter, spot patterns, write precise steps**.',
+  'computing.flowcharts': '**Oval = start or stop, rectangle = process, diamond = decision, parallelogram = input or output.**',
+  'computing.python': '**int, float, str, bool**: whole numbers, decimals, text and True/False.',
+  'computing.selection': '**if, elif, else**: Python takes the first path that is True and skips the rest.',
+  'computing.loops': '**for = I know how many times; while = keep going until something changes.**',
+  'computing.lists': '**A list starts counting at 0**: the first item is at index 0.',
+  'computing.debugging': '**Syntax error = bad grammar; runtime error = a crash; logic error = the wrong answer.**',
+  'computing.searching': '**Binary search: halve, halve, halve**, but only on a sorted list.',
+  'computing.sorting': '**Bubble swaps neighbours, insertion slides each item into place, merge splits then merges.**',
+  'computing.binary': '**Binary place values double**: 1, 2, 4, 8, 16, 32, 64, 128.',
+  'computing.binarymaths': '**1 + 1 = 10 in binary**: write 0, carry 1. Shift left to double, shift right to halve.',
+  'computing.media': '**More bits = better quality = bigger file.**',
+  'computing.logic': '**AND: both. OR: either or both. NOT: flip it. XOR: one or the other, not both.**',
+  'computing.hardware': '**Fetch, decode, execute**: the CPU’s heartbeat, billions of times a second.',
+  'computing.software': '**A compiler translates the whole program first; an interpreter goes line by line.**',
+  'computing.networks': '**The internet is the roads; the web is just one kind of traffic on them.**',
+  'computing.security': '**Think before you click**: urgency, odd links and requests for passwords are red flags.',
+  'computing.history': '**Antikythera, Babbage, Lovelace, Turing, Berners-Lee**: gears, engines, code, codebreaking, the web.',
+  'computing.ethics': 'Three UK laws: **Data Protection** (your data), **Computer Misuse** (hacking), **Copyright** (copying).',
+  'computing.trace': '**One column per variable, one new value each time it changes.**',
+  'computing.twos': '**Flip the bits and add 1** to make a number negative in two’s complement.',
+  'computing.sql': '**SELECT the fields, FROM the table, WHERE the condition is true.**',
+  'computing.topologies': 'Star: one hub. Mesh: many routes. TCP/IP layers, top down: **All Teachers Inspire Learners** (Application, Transport, Internet, Link).',
+};
+
+const MEMORY = {
+  // generated practice
+  'computing.py.tmpl': { hook: '**= stores, == compares**; / gives a float, // drops the remainder, % gives the remainder.', example: '17 sweets shared between 5 friends: 17 // 5 = 3 each, and 17 % 5 = 2 left over.' },
+  'computing.sel.tmpl': { hook: '**The first True branch wins**; elif and else are only reached if everything above was False.', example: 'A ticket machine: if age < 12, child price; elif age >= 65, senior price; else adult price.' },
+  'computing.lp.tmpl': { hook: '**range(start, stop, step) stops before stop**: range(2, 10, 3) gives 2, 5, 8.', example: 'A microwave counting down 30 seconds is a count-controlled loop; a kettle heating until it boils is condition-controlled.' },
+  'computing.ls.tmpl': { hook: '**A list starts counting at 0**, and a slice [1:4] stops just before index 4.', example: 'A playlist is a list: song 0 plays first, and the last song is at index len − 1.' },
+  'computing.se.tmpl': { hook: '**Binary search: look in the middle, throw half away**, and repeat.', example: 'Finding a word in a paper dictionary: open it in the middle, decide which half, and keep halving.' },
+  'computing.so.tmpl': { hook: '**Bubble sort: the biggest value bubbles to the end** on every pass.', example: 'Sorting playing cards one at a time into your hand is insertion sort; combining two sorted piles is a merge.' },
+  'computing.bn.tmpl': { hook: '**Binary place values double**: 128, 64, 32, 16, 8, 4, 2, 1. Add up the columns with a 1.', example: 'Each colour channel of a phone photo uses 8 bits, so it has 256 levels, from 0 to 255.' },
+  'computing.bn.tmpl2': { hook: '**One hex digit = 4 bits**: split the binary into nibbles; A = 10, B = 11 … F = 15.', example: 'Web colours are hex: #FF8800 is full red, about half green and no blue, which makes orange.' },
+  'computing.bm.tmpl': { hook: '**0 + 1 = 1, 1 + 1 = 10, 1 + 1 + 1 = 11**: write the right digit, carry the left one.', example: 'An 8-bit counter at 255 that adds 1 overflows to 0, like a car’s mileometer rolling over to zeros.' },
+  'computing.bm.tmpl2': { hook: '**Shift left = × 2 per place; shift right = ÷ 2 per place**, just as moving digits in denary is × or ÷ 10.', example: 'Shifting 00000101 (5) two places left gives 00010100 (20): four times as big.' },
+  'computing.md.tmpl': { hook: '**A = 65, a = 97**: each lowercase letter is exactly 32 more than its capital.', example: 'Every text message is stored as character codes: Hi is 72 then 105.' },
+  'computing.md.tmpl2': { hook: '**Bit, nibble (4 bits), byte (8 bits)**, then × 1000 each time: kilobyte, megabyte, gigabyte, terabyte.', example: 'A 64 GB phone holds 64 000 MB: room for about 16 000 photos of 4 MB each.' },
+  'computing.md.tmpl3': { hook: '**Image = width × height × colour depth**; sound = sample rate × bit depth × seconds. Then ÷ 8 for bytes.', example: 'A 12-megapixel photo at 24 bits per pixel is 36 MB before compression, which is why phones save JPEGs.' },
+  'computing.lg.tmpl': { hook: '**AND is like multiplying, OR is like adding (but never above 1)**: 1 AND 0 = 0, 1 OR 0 = 1.', example: 'A car alarm sounds if (a door opens OR a window breaks) AND the alarm is set.' },
+  'computing.sc.tmpl': { hook: '**Shift each letter along the alphabet**; to decode, shift back. After Z, wrap round to A.', example: 'ROT13, a Caesar shift of 13, was once used online to hide puzzle answers: doing it twice gets the text back.' },
+  'computing.tr.tmpl': { hook: '**One column per variable; write a new value every time it changes.**', example: 'Keeping score in a board game, writing each new total under the last, is a trace table in real life.' },
+  'computing.tw.tmpl': { hook: '**The leftmost bit is worth −128**: 11111111 is −128 + 127 = −1.', example: 'Computers usually store negative whole numbers, like a freezer’s −18 °C setting, in two’s complement.' },
+  'computing.sq.tmpl': { hook: '**SELECT fields FROM table WHERE condition**: what you want, where it lives, which rows.', example: 'An online shop’s price filter runs a query like SELECT name FROM Products WHERE price < 20.' },
+
+  // computational thinking
+  'computing.ct.decomp': { hook: '**De-compose = take apart**: split one big problem into smaller ones.', example: 'Planning a party: guests, food, music and games, each sorted out on its own.' },
+  'computing.ct.abstract': { hook: '**Abstraction = leave out what doesn’t matter**, like a map that ignores every tree.', example: 'A football formation diagram shows only where the players stand, not their faces or the weather.' },
+  'computing.ct.pattern': { hook: '**Seen it before?** Reuse the solution: that is pattern recognition.', example: 'Once you can follow a recipe for one cake, the same pattern works for muffins and brownies.' },
+  'computing.ct.algorithm': { hook: '**An algorithm is a recipe**: precise steps, in order, that anyone could follow.', example: 'A recipe, a flat-pack furniture leaflet and a sat nav’s directions are all algorithms.' },
+  'computing.ct.map': { hook: 'Abstraction **removes** detail; decomposition **divides** the problem.', example: 'A bus timetable leaves out the roads and traffic and keeps just the stops and the times.' },
+  'computing.ct.good': { hook: '**Computers can’t guess**: every step needs exact numbers or conditions.', example: '“Bake until golden” works for a person; a smart oven needs “bake at 180 °C for 25 minutes”.' },
+  'computing.ct.decompose': { hook: '**Small parts, each tested on its own**, then joined together.', example: 'Car factories build engines, seats and doors separately, then put them together.' },
+  'computing.ct.process': { hook: '**Understand, design, code, test**: think before you type.', example: 'Builders don’t start laying bricks before the architect has drawn the plans.' },
+
+  // flowcharts and pseudocode
+  'computing.fc.diamond': { hook: '**Diamond = decision**: its corners point to the different ways out.', example: 'In a getting-ready flowchart, “Is it raining?” is a diamond: yes leads to the umbrella, no to the sunglasses.' },
+  'computing.fc.para': { hook: '**Parallelogram = put in or print out**: the slanted box for input and output.', example: 'A cash machine asking for your PIN and then showing your balance: both are parallelograms.' },
+  'computing.fc.rect': { hook: '**Rectangle = do something**: a process step.', example: '“Add 1 to score” in a game, or “add the eggs” in a recipe, is a process box.' },
+  'computing.fc.oval': { hook: '**Oval = the ends**: every flowchart starts and stops in a rounded box.' },
+  'computing.fc.three': { hook: '**Sequence, Selection, Iteration**: steps in order, decisions, repeats.', example: 'Brushing teeth: steps in order (sequence), if the tube is empty get more (selection), brush each tooth (iteration).' },
+  'computing.fc.pseudo': { hook: '**Pseudo means pretend**: pseudocode is pretend code, plain English with structure.', example: '“IF the dough is sticky THEN add flour” is pseudocode for the kitchen.' },
+  'computing.fc.loop': { hook: '**An arrow going back up = a loop.**', example: 'Shampoo bottles once said “lather, rinse, repeat”: a loop with no condition to stop it!' },
+  'computing.fc.trace': { hook: '**Only one branch of an IF runs**: check the condition, then follow that branch alone.' },
+
+  // Python basics
+  'computing.py.str': { hook: '**Quotation marks mean string**: anything inside them is text, even digits.', example: 'Phone numbers are stored as strings: you never do maths with them, and the leading 0 must stay.' },
+  'computing.py.float': { hook: '**Float: the decimal point floats**, so it holds numbers with a fractional part.', example: 'Prices like 2.99 and body temperatures like 36.6 are floats.' },
+  'computing.py.bool': { hook: '**Boolean = two choices only**: True or False, named after George Boole.', example: 'A light switch, a dark-mode setting or a ticked checkbox is a Boolean.' },
+  'computing.py.input': { hook: '**input() always gives a string**; wrap it in int() before doing maths.', example: 'A web form treats your age as text until the program converts it into a number.' },
+  'computing.py.equals': { hook: '**One = sets it; two == checks it.**', example: 'Setting your alarm for 7:00 is =; the phone checking “is it 7:00 yet?” is ==.' },
+  'computing.py.divide': { hook: '**/ gives a decimal, // gives whole parts, % gives the leftovers.**', example: '7 campers and 2 tents: 7 / 2 = 3.5, but 7 // 2 = 3 per tent with 7 % 2 = 1 camper left over.' },
+  'computing.py.name': { hook: '**Names start with a letter or an underscore**, never a digit, and contain no spaces.' },
+  'computing.py.comment': { hook: '**# starts a note for humans**; Python ignores the rest of the line.', example: 'Comments are like sticky notes in a recipe book: “use less salt next time”.' },
+  'computing.py.cast': { hook: '**int(input()): convert the answer, not the question.**' },
+
+  // selection
+  'computing.sel.ne': { hook: '**!= means not equal**: the ! says “not”.', example: 'A login check: if the typed password != the saved password, refuse entry.' },
+  'computing.sel.indent': { hook: '**Indentation is Python’s brackets**: indented lines belong to the line above that ends with a colon.', example: 'Like notes with sub-points: the indented lines belong to the heading above them.' },
+  'computing.sel.elif': { hook: '**elif = else if**: only checked when everything above it was False.', example: 'A grade calculator: if score >= 70, A; elif score >= 60, B. A score of 75 gets only an A.' },
+  'computing.sel.and': { hook: '**and needs both to be True**: True and False is False.', example: 'You can ride the rollercoaster only if you are tall enough AND have a ticket: one is not enough.' },
+  'computing.sel.boundary': { hook: '**> leaves out the boundary; >= includes it.**', example: 'A film rated 12 needs age >= 12, so a 12-year-old gets in.' },
+
+  // loops
+  'computing.lp.range': { hook: '**range(n) starts at 0 and stops before n**: n numbers in total.', example: 'A list of 5 songs has positions 0 to 4: exactly range(5).' },
+  'computing.lp.kinds': { hook: '**while = keep going while the condition is True**: condition-controlled.', example: 'A kettle keeps heating while the water is below boiling point.' },
+  'computing.lp.infinite': { hook: '**Change the condition inside the loop**, or it runs for ever.', example: 'An app stuck on a spinning loading circle may be trapped in a loop that never ends.' },
+  'computing.lp.choose': { hook: '**Don’t know how many repeats? Use while.**', example: 'A cash machine keeps asking for your PIN until it is right, or until it locks you out.' },
+  'computing.lp.break': { hook: '**break is the emergency exit**: jump straight out of the loop.', example: 'A search can break out as soon as it finds the item, instead of checking the rest.' },
+
+  // lists, strings and functions
+  'computing.ls.zero': { hook: '**A list starts counting at 0**: muses[0] is the first item.', example: 'Like a UK lift: the ground floor is 0, so the first floor up is 1.' },
+  'computing.ls.range': { hook: '**Last index = length − 1**: 3 items have indexes 0, 1 and 2.', example: 'A three-storey UK house has floors 0, 1 and 2: there is no floor 3.' },
+  'computing.ls.append': { hook: '**append = add to the end**, like joining the back of a queue.', example: 'Adding a song to the end of a playlist is an append.' },
+  'computing.ls.param': { hook: '**Parameter = the placeholder name; argument = the actual value passed in.**', example: 'An oven dial labelled “temperature” is a parameter; turning it to 180 passes the argument.' },
+  'computing.ls.return': { hook: '**return hands the answer back; print only shows it.**', example: 'A calculator screen showing a result is print; storing it in memory for the next sum is return.' },
+  'computing.ls.why': { hook: '**Write it once, use it many times.**', example: 'A share button that works the same way on every page of an app is one function, reused.' },
+  'computing.ls.len': { hook: '**len counts every character**, including spaces.', example: 'Old-style text messages had a 160-character limit, checked by counting the length.' },
+
+  // errors, testing and debugging
+  'computing.db.syntax': { hook: '**Syntax = grammar**: break the language’s rules and nothing runs at all.', example: 'Like a sentence with a missing bracket or full stop: the reader can’t make sense of it.' },
+  'computing.db.logic': { hook: '**Logic error: it runs, but the answer is wrong.** BIDMAS bites in code too.', example: 'A sat nav that sends you the long way round: no crash, just the wrong result.' },
+  'computing.db.runtime': { hook: '**Runtime error = a crash while running**, such as dividing by zero.', example: 'An app that crashes when you open a photo it can’t read has hit a runtime error.' },
+  'computing.db.boundary': { hook: '**Normal, boundary, erroneous**: test inside the range, on its edges, and outside it.', example: 'For a club for ages 11 to 18: test 14 (normal), 11 and 18 (boundary) and banana (erroneous).' },
+  'computing.db.erroneous': { hook: '**Erroneous = full of error**: data that should be rejected, politely.', example: 'Typing letters into the card-number box on a shopping site should give a polite message, not a crash.' },
+  'computing.db.dryrun': { hook: '**Dry run = no computer, just pencil and paper.**', example: 'A fire drill is a dry run: practising the steps without a real fire.' },
+  'computing.db.hopper': { hook: '**Debugging = removing the bug**: a real moth, taped into a logbook in 1947.', example: 'The logbook page with the moth is kept at the Smithsonian’s history museum in Washington.' },
+
+  // searching
+  'computing.se.sorted': { hook: '**No order, no binary search**: halving only works when you know which half to keep.', example: 'You can halve your way through a dictionary because it is alphabetical; a shuffled pile of papers needs a linear search.' },
+  'computing.se.when': { hook: '**Small or unsorted? Go linear.**', example: 'Looking for your keys in a small bag, you just check everything.' },
+  'computing.se.million': { hook: '**2¹⁰ ≈ 1000, so 2²⁰ ≈ a million**: 20 halvings.', example: '“Guess my number” from 1 to a million takes at most 20 guesses if you always halve.' },
+  'computing.se.linear': { hook: '**Worst case = check them all.**', example: 'Hunting for one picture in an unsorted photo album might mean turning every page.' },
+
+  // sorting
+  'computing.so.bubble': { hook: '**A whole pass with no swaps means it is sorted.**' },
+  'computing.so.merge': { hook: '**Merge sort = divide and conquer**: split, split, split, then merge.', example: 'Two teachers each sort half the exam papers, then merge their piles: quicker than one sorting them all.' },
+  'computing.so.big': { hook: '**Bubble sort crawls on big lists; merge sort scales.**', example: 'Online shops sorting millions of products by price rely on fast methods like merge sort.' },
+  'computing.so.insertion': { hook: '**Insertion sort = sorting a hand of cards.**', example: 'Adding a new pupil to an alphabetical register: slide the name into the right place.' },
+
+  // binary and hexadecimal
+  'computing.bn.why': { hook: '**Two states: on/off, 1/0**. A transistor is just a tiny switch.', example: 'A light switch is the simplest bit: off is 0, on is 1.' },
+  'computing.bn.byte': { hook: '**A byte bites 8 bits.**', example: 'One byte stores one letter of plain English text, so HELLO takes 5 bytes.' },
+  'computing.bn.nibble': { hook: '**A nibble is a small bite**: half a byte, 4 bits, exactly one hex digit.' },
+  'computing.bn.hexwhy': { hook: '**Hex is shorthand**: one hex digit stands for exactly 4 bits.', example: 'Network MAC addresses are written in hex: 12 hex digits instead of 48 binary digits.' },
+  'computing.bn.colour': { hook: '**FF = 15 × 16 + 15 = 255**, the biggest value one byte can hold.', example: 'On any web page, #FFFFFF is white (every colour full on) and #000000 is black.' },
+
+  // binary addition, overflow and shifts
+  'computing.bm.onePlusOne': { hook: '**There is no digit 2 in binary**: 1 + 1 = 10, write 0, carry 1.', example: 'Like a mileometer: when a wheel passes its last digit it goes back to 0 and nudges the next wheel on.' },
+  'computing.bm.three': { hook: '**1 + 1 + 1 = 11**: write 1, carry 1.' },
+  'computing.bm.overflow': { hook: '**Too big for the bits = overflow**: 8 bits stop at 255.', example: 'The Year 2000 bug came from storing years with only two digits, so 2000 looked like 1900: not enough room.' },
+  'computing.bm.right': { hook: '**Right shift halves, left shift doubles.**' },
+
+  // representing text, images and sound
+  'computing.md.unicode': { hook: '**ASCII: 128 characters. Unicode: room for over a million**, enough for every alphabet and emoji.', example: 'An emoji in a text is a Unicode character, so any phone knows which emoji it is, though each maker draws it a little differently.' },
+  'computing.md.pixel': { hook: '**Pixel = picture element**: the tiny coloured squares that make up an image.', example: 'Zoom right in on a phone photo and you will see the separate coloured squares: pixels.' },
+  'computing.md.depth': { hook: '**Colour depth of n bits → 2ⁿ colours**: 24 bits give over 16 million.', example: 'A GIF can hold at most 256 colours (8 bits), which is why GIF photos can look blotchy.' },
+  'computing.md.resolution': { hook: '**Resolution = how many pixels**: width × height.', example: 'Full HD is 1920 × 1080, about 2 million pixels; 4K has four times as many.' },
+  'computing.md.sample': { hook: '**Sample rate = snapshots per second** of the sound wave.', example: 'CD audio takes 44 100 samples a second, more than twice the highest pitch people can hear.' },
+  'computing.md.lossy': { hook: '**Lossy loses it for good**: JPEG photos and MP3 music.', example: 'Messaging apps often shrink your photos with lossy compression, so your friend’s copy is lower quality.' },
+  'computing.md.lossless': { hook: '**Lossless = nothing lost**: a ZIP file gives back every bit.', example: 'Sending homework as a ZIP file is safe: every character comes back exactly.' },
+  'computing.md.rle': { hook: '**RLE = count, then value**: 5A means AAAAA.', example: 'Fax machines used run-length encoding, because a page is mostly long runs of white.' },
+  'computing.md.meta': { hook: '**Meta means about**: metadata is data about the data.', example: 'A photo’s metadata can include the exact GPS location where it was taken.' },
+
+  // Boolean logic
+  'computing.lg.and': { hook: '**AND = both**, like needing a ticket AND a passport to board a plane.', example: 'A microwave only runs if the door is shut AND the start button is pressed.' },
+  'computing.lg.or': { hook: '**OR = either, or both.**', example: 'A doorbell that rings when the front OR the back door button is pressed.' },
+  'computing.lg.not': { hook: '**NOT flips it**: 1 becomes 0 and 0 becomes 1.', example: 'An automatic night light: light on = NOT daylight.' },
+  'computing.lg.xor': { hook: '**XOR = exclusive or**: one or the other, but not both.', example: 'A meal deal of “chips or salad” means one, not both: that is XOR.' },
+  'computing.lg.real': { hook: '**Two switches, one light = XOR**: flipping either switch changes the light.', example: 'Long corridors often have a light switch at each end, wired in exactly this way.' },
+  'computing.lg.table': { hook: '**n inputs → 2ⁿ rows**; AND has just one 1, in the 1, 1 row.' },
+  'computing.lg.transistor': { hook: '**Transistors are switches**, and each gate is built from a handful of them.', example: 'A modern phone chip packs over 10 billion transistors into something the size of a fingernail.' },
+
+  // hardware
+  'computing.hw.cpu': { hook: '**CPU = Central Processing Unit**: the brain that fetches, decodes and executes.', example: 'When a phone gets warm during a game, much of that heat comes from its busy processor.' },
+  'computing.hw.cycle': { hook: '**Fetch, decode, execute**: get it, work out what it means, do it.', example: 'Like following a recipe: read the next step, work out what it means, then do it.' },
+  'computing.hw.ram': { hook: '**RAM forgets**: it is volatile, like writing on a steamed-up mirror.', example: 'Unsaved homework vanishes in a power cut because it was only in RAM.' },
+  'computing.hw.rom': { hook: '**ROM = Read-Only Memory**: it remembers the start-up steps even when the power is off.', example: 'When you switch on a laptop, the first instructions it runs come from ROM.' },
+  'computing.hw.cache': { hook: '**Cache = the pencil case on your desk**: what you use most, close at hand.', example: 'Web browsers keep a cache too: pictures from sites you visit load faster the next time.' },
+  'computing.hw.ghz': { hook: '**Giga = billion**: 3 GHz is 3 billion ticks a second.', example: 'A typical laptop processor runs at about 2 to 4 GHz.' },
+  'computing.hw.cores': { hook: '**More cores = more cooks in the kitchen**, but only if the recipe can be shared out.', example: 'Video-editing apps keep every core busy; a simple calculator app uses just one.' },
+  'computing.hw.ssd': { hook: '**SSD = solid-state drive**: no moving parts, so it is faster and tougher.', example: 'A laptop with an SSD is less likely to lose files if it is dropped than one with a spinning hard disk.' },
+  'computing.hw.storage': { hook: '**Magnetic spins, solid-state is silent, optical uses a laser.**', example: 'A Blu-ray player reads discs with a laser, while your phone keeps everything in solid-state storage.' },
+  'computing.hw.embedded': { hook: '**Embedded = built in to do one job.**', example: 'Traffic lights, smart doorbells and car engines all contain embedded systems.' },
+  'computing.hw.vonneumann': { hook: '**Von Neumann: programs and data share one memory.**', example: 'That is why installing a new app can turn your phone into a game, a map or a torch.' },
+
+  // software
+  'computing.sw.os': { hook: '**The OS is the manager**: it runs the hardware and every other program.', example: 'Phones run Android or iOS; laptops often run Windows, macOS or Linux.' },
+  'computing.sw.jobs': { hook: '**OS jobs: memory, multitasking, files, users, devices and security.**' },
+  'computing.sw.utility': { hook: '**Utilities are the computer’s maintenance crew.**', example: 'An antivirus scan, or an automatic backup each night, is utility software at work.' },
+  'computing.sw.high': { hook: '**High-level = close to human language; low-level = close to the hardware.**', example: 'Python reads almost like English: print(score) is far easier to read than machine code.' },
+  'computing.sw.compiler': { hook: '**Compiler = translate the whole book first; interpreter = a live translator, sentence by sentence.**', example: 'Big games are usually compiled, so they run fast on your device.' },
+  'computing.sw.interpreter': { hook: '**Interpreter = line by line**, so it stops at the first line with an error.', example: 'A live interpreter at a conference translates each sentence as it is spoken.' },
+  'computing.sw.open': { hook: '**Open source = an open recipe**: anyone can read, change and share the code.', example: 'Thousands of volunteers around the world help improve open-source projects such as Linux and Firefox.' },
+  'computing.sw.machine': { hook: '**Machine code = 1s and 0s**: the only language the CPU really speaks.' },
+
+  // networks and the internet
+  'computing.nw.lan': { hook: '**LAN = Local (one building); WAN = Wide (across a country or the world).**', example: 'Your home Wi-Fi is a LAN; the internet linking it to the rest of the world is a WAN.' },
+  'computing.nw.web': { hook: '**The internet is the roads; the web is the shops along them.**', example: 'Email and online gaming use the internet without using the web.' },
+  'computing.nw.packet': { hook: '**Packets are like numbered postcards**: each has an address and a number, so they can be put back in order.', example: 'A video call is chopped into hundreds of packets a second, and a few lost ones make the picture glitch.' },
+  'computing.nw.route': { hook: '**Packet switching: each packet finds its own way**, like cars avoiding a traffic jam.', example: 'If a cable under the sea is cut, packets are simply rerouted another way.' },
+  'computing.nw.dns': { hook: '**DNS = the internet’s phone book**: names go in, IP addresses come out.', example: 'Before loading a web page, your device looks up the site’s IP address with DNS.' },
+  'computing.nw.ip': { hook: '**An IP address is a postal address** for a device on a network.', example: 'Home routers often give devices addresses beginning 192.168.' },
+  'computing.nw.router': { hook: '**A router is a postal sorting office**: it sends each packet towards the right network.', example: 'The box your home Wi-Fi comes from is a router linking your LAN to the internet.' },
+  'computing.nw.https': { hook: '**S = Secure**: the data is encrypted on its way, but check the web address too, because scam sites can use HTTPS.', example: 'Online banking and shopping use HTTPS, so card numbers are scrambled on the way.' },
+  'computing.nw.protocol': { hook: '**Protocol = agreed rules**, like everyone driving on the left in the UK.', example: 'Wi-Fi, Bluetooth and email all follow protocols, so devices from different makers can talk.' },
+  'computing.nw.bandwidth': { hook: '**Bandwidth = the width of the pipe**: wider pipe, more data each second.', example: 'Streaming a 4K film needs far more bandwidth than streaming music.' },
+
+  // cybersecurity
+  'computing.sc.phishing': { hook: '**Phishing = fishing for your details** with bait.', example: 'A text saying your parcel is held and you must pay £1.99 through a link is a common phishing trick.' },
+  'computing.sc.spot': { hook: '**Urgent + a link + an odd address = red flag.** Check where a link really goes before clicking.', example: 'A message from your bank sent from a random free email address is a classic warning sign.' },
+  'computing.sc.password': { hook: '**Three random words** make a password that is strong and easy to remember.', example: 'The UK’s National Cyber Security Centre recommends three random words, like PurpleHydraSails.' },
+  'computing.sc.2fa': { hook: '**Something you know + something you have** (or something you are).', example: 'A code texted to your phone after you type your password is two-factor authentication.' },
+  'computing.sc.ransomware': { hook: '**Ransomware holds your files to ransom**; backups set you free.', example: 'In 2017 the WannaCry ransomware hit NHS hospitals, and thousands of appointments were cancelled.' },
+  'computing.sc.trojan': { hook: '“**Beware of Greeks bearing gifts**”: a Trojan hides harm inside something welcome.', example: 'A free game download that secretly installs spyware is a Trojan.' },
+  'computing.sc.worm': { hook: '**A worm wriggles about by itself**; a virus needs someone to open its host file.', example: 'A worm can spread across a whole company network overnight without anyone clicking anything.' },
+  'computing.sc.encrypt': { hook: '**Encryption = a locked box**: only the key holder can open it.', example: 'Many messaging apps use end-to-end encryption, so even the company running the app can’t read your chats.' },
+  'computing.sc.social': { hook: '**Social engineering hacks the human**, not the computer.', example: 'A caller pretending to be from your bank and asking for a code is social engineering.' },
+  'computing.sc.firewall': { hook: '**A firewall is the guard at the city gate**: it checks what comes in and goes out.', example: 'School networks use firewalls to block unsafe websites and attacks from outside.' },
+  'computing.sc.footprint': { hook: '**Your digital footprint is a trail** that is very hard to wash away.', example: 'Employers and universities sometimes search applicants’ names online.' },
+
+  // the story of computing
+  'computing.hi.antikythera': { hook: '**Antikythera: ancient gears that predicted the sky**, the oldest known analogue computer.', example: 'Divers found it in a shipwreck in 1901; X-ray scans later revealed about 30 surviving gears.' },
+  'computing.hi.babbage': { hook: '**Babbage designed the engine; Lovelace wrote its program.**', example: 'In 1991 London’s Science Museum built Babbage’s Difference Engine No. 2 from his plans, and it worked.' },
+  'computing.hi.lovelace': { hook: '**Ada Lovelace, 1843: the first published algorithm** for a computing machine.', example: 'Ada Lovelace Day, each October, celebrates women in science, technology, engineering and maths.' },
+  'computing.hi.turing': { hook: '**Turing: Bletchley Park, the Turing machine, the Turing test.**', example: 'Alan Turing’s portrait appears on the Bank of England £50 note.' },
+  'computing.hi.colossus': { hook: '**Colossus was colossal**: a room-sized electronic codebreaker.', example: 'A working rebuild of Colossus can be seen at the National Museum of Computing at Bletchley Park.' },
+  'computing.hi.transistor': { hook: '**The transistor replaced the valve**: smaller, cooler, cheaper and more reliable.', example: 'Pocket transistor radios of the 1950s were among the first gadgets the transistor made possible.' },
+  'computing.hi.web': { hook: '**Tim Berners-Lee, CERN, 1989: the World Wide Web.**', example: 'The first website, made at CERN, can still be visited today.' },
+  'computing.hi.timeline': { hook: '**Gears, then engines, then valves, then the web**: ancient Greece, the 1830s, 1944, 1989.' },
+
+  // ethics and law
+  'computing.et.cma': { hook: '**Computer Misuse Act 1990 = the hacking law.**', example: 'Logging into a friend’s account without permission, even as a joke, can break this law.' },
+  'computing.et.dpa': { hook: '**Data Protection Act = your data, your rights**: kept safe, accurate and no longer than needed.', example: 'You can ask any organisation for a copy of the personal data it holds about you.' },
+  'computing.et.copy': { hook: '**Copyright: the right to copy belongs to the creator.**', example: 'Using a song in your video without permission can get the video muted or taken down.' },
+  'computing.et.bias': { hook: '**Biased data in, biased decisions out.**' },
+  'computing.et.ewaste': { hook: '**Reduce, reuse, recycle**, old tech included.', example: 'A tonne of old phones holds far more gold than a tonne of gold ore, so recycling them really pays.' },
+  'computing.et.divide': { hook: '**The digital divide is the gap between the connected and the unconnected.**', example: 'When schools closed in 2020, some pupils had no laptop or internet for online lessons.' },
+  'computing.et.deepfake': { hook: '**Deepfake = deep learning + fake.**', example: 'Fraudsters have used AI-copied voices to pretend to be family members asking for money.' },
+
+  // trace tables, two’s complement, SQL, topologies (stretch)
+  'computing.tr.what': { hook: '**A trace table is an action replay** of every variable.' },
+  'computing.tr.row': { hook: '**New value? New row.**' },
+  'computing.tw.sign': { hook: '**Sign and magnitude has +0 and −0**: two zeros, one too many.' },
+  'computing.tw.msb': { hook: '**The top bit is −128**; the other seven bits are positive as usual.' },
+  'computing.tw.flip': { hook: '**Flip the bits, then add 1.**' },
+  'computing.sq.record': { hook: '**Record = row = one thing; field = column = one detail about it.**', example: 'In a school register, each pupil is a record and date of birth is a field.' },
+  'computing.sq.field': { hook: '**Field = column**, like a heading in a spreadsheet.' },
+  'computing.sq.pk': { hook: '**Primary key = a unique ID**, like a passport number.', example: 'Your NHS number is a primary key: no two people share one.' },
+  'computing.sq.select': { hook: '**SELECT what, FROM where, WHERE which.**' },
+  'computing.sq.star': { hook: 'The star is a wildcard: **SELECT star means every field.**' },
+  'computing.tp.star': { hook: '**Star = a hub in the middle**: if the centre fails, everything fails.', example: 'Most home networks are stars, with the router at the centre.' },
+  'computing.tp.mesh': { hook: '**Mesh = many routes**: one link breaks, take another.', example: 'Mesh Wi-Fi uses several units around a house that pass data between each other.' },
+  'computing.tp.client': { hook: '**The client asks; the server serves.**', example: 'Streaming a video: your phone is the client, and the company’s computers are the servers.' },
+  'computing.tp.mac': { hook: '**MAC sticks to the machine; IP changes with the place.**', example: 'Your laptop gets a different IP address at school and at home, but its network card keeps the same MAC address.' },
+  'computing.tp.layers': { hook: '**All Teachers Inspire Learners**: Application, Transport, Internet, Link.', example: 'Watching a video: the app asks (application), TCP splits it up (transport), IP routes it (internet), Wi-Fi carries it (link).' },
+  'computing.tp.layerwhy': { hook: '**Layers are a team where each member has one job.**', example: 'Like posting a letter: you write it, the post office sorts it, the van carries it; none needs the others’ job.' },
+};
+
+for (const t of topics) if (TOPIC_HOOKS[t.id]) t.hook = TOPIC_HOOKS[t.id];
+for (const id of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === id)) throw new Error(`memory hook for unknown topic ${id}`);
+for (const it of items) if (MEMORY[it.id]) Object.assign(it, MEMORY[it.id]);
+for (const id of Object.keys(MEMORY)) if (!items.some((it) => it.id === id)) throw new Error(`memory hook for unknown item ${id}`);
 
 export default [{ subject: 'computing', deck: 'y8', topics, items }];

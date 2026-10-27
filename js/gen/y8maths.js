@@ -15,8 +15,10 @@ const NAMES = { opp: 'opposite', adj: 'adjacent', hyp: 'hypotenuse' };
 const sup = (n) => (n < 0 ? '⁻' : '') + String(Math.abs(n)).split('').map((d) => SUP[+d]).join('');
 const F = (n, d = 1) => new Frac(n, d).simplify();
 const tex = (f, mixed = false) => show(f.toTex({ mixed }));
-const an = (n) => ([8, 11, 18, 80, 800].includes(n) ? 'an' : 'a');
+/** 'an' when the number is said with a vowel sound: an 8, an 11, an 18, an 80–89, an 800… */
+const an = (n) => (/^8/.test(String(n)) || (/^1[18]/.test(String(n)) && String(n).length % 3 === 2) ? 'an' : 'a');
 const plural = (n, one, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
+const nth = (n) => `${n}${[11, 12, 13].includes(n % 100) ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th'}`;
 const comma = (s) => String(s).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
 /** Exact decimal text from an integer count of 10^-scale units ("-12.5" style, ASCII minus). */
@@ -300,9 +302,10 @@ const G = {
     }
     const m = () => { const d = rng.pick([2, 3, 4, 6, 8]); return F(rng.int(1, 3) * d + rng.int(1, d - 1), d); };
     const a = m(), b = m(), c = F(rng.int(1, 5), 6);
-    const r = a.add(b).sub(c);
-    return fracQ(`${tex(a, true)} + ${tex(b, true)} − ${tex(c)} =`, r, `Whole numbers and fractions can be done separately, or convert everything to sixths, eighths or twenty-fourths. The answer is ${tex(r, true)}.`,
-      [`Find a common denominator for ${a.d}, ${b.d} and ${c.d}: ${lcm(lcm(a.d, b.d), c.d)}.`, `Add the mixed numbers: ${tex(a.add(b), true)}.`, `Subtract ${tex(c)}: ${tex(r, true)}.`], { placeholder: 'e.g. 3 5/8 or 29/8' });
+    const r = a.add(b).sub(c), L = lcm(lcm(a.d, b.d), c.d);
+    const parts = { 2: 'halves', 3: 'thirds', 4: 'quarters', 6: 'sixths', 8: 'eighths', 12: 'twelfths', 24: 'twenty-fourths' };
+    return fracQ(`${tex(a, true)} + ${tex(b, true)} − ${tex(c)} =`, r, `Whole numbers and fractions can be done separately, or convert everything to ${parts[L]}. The answer is ${tex(r, true)}.`,
+      [`Find a common denominator for ${a.d}, ${b.d} and ${c.d}: ${L}.`, `Add the mixed numbers: ${tex(a.add(b), true)}.`, `Subtract ${tex(c)}: ${tex(r, true)}.`], { placeholder: 'e.g. 3 5/8 or 29/8' });
   },
 
   // ---- percentages ----------------------------------------------------------------------
@@ -330,7 +333,7 @@ const G = {
         if (!Number.isInteger(now)) return G.y8mPercent(level, rng);
         return num(`After a ${p}% ${up ? 'increase' : 'discount'}, a shield costs £${now}. What did it cost before?`, o,
           `£${now} is ${up ? 100 + p : 100 - p}% of the original. Divide by the multiplier ${dp(up ? 100 + p : 100 - p, 2)}: £${o}. (Not ${money(now * (up ? 100 - p : 100 + p))}: the ${p}% was of the ORIGINAL price, not the new one.)`,
-          [`£${now} is ${up ? 100 + p : 100 - p}% of the original price.`, `1% of the original is £${now} ÷ ${up ? 100 + p : 100 - p} = ${money(o)}.`, `100% = ${money(o)} × 100 = £${o}.`], { unit: '£' });
+          [`£${now} is ${up ? 100 + p : 100 - p}% of the original price.`, `1% of the original is £${now} ÷ ${up ? 100 + p : 100 - p} = ${money(o)}.`, `100% = ${money(o)} × 100 = £${o}.`], { unit: '£', unitBefore: true });
       }
       const a = rng.pick([10, 20, 25, 50]), b = rng.pick([10, 20, 25, 50]);
       const overall = (100 + a) * (100 - b) - 10000; // in hundredths of a per cent
@@ -346,7 +349,7 @@ const G = {
       const thing = down ? `A merchant’s chariot is worth £${comma(P)}. It loses ${r}% of its value every year.` : `Mira puts £${comma(P)} in a savings account paying ${r}% compound interest each year.`;
       return num(`${thing} What is it worth after ${n} years? Give the exact amount in pounds.`, dp(pence, 2),
         `Multiply by ${dp(down ? 100 - r : 100 + r, 2)} once for each year: £${comma(P)} × ${dp(down ? 100 - r : 100 + r, 2)}${sup(n)} = ${money(pence)}.`,
-        [`Each year the value is multiplied by ${dp(down ? 100 - r : 100 + r, 2)}.`, `After ${n} years: £${comma(P)} × ${dp(down ? 100 - r : 100 + r, 2)}${sup(n)}.`, `= ${money(pence)}.`], { unit: '£' });
+        [`Each year the value is multiplied by ${dp(down ? 100 - r : 100 + r, 2)}.`, `After ${n} years: £${comma(P)} × ${dp(down ? 100 - r : 100 + r, 2)}${sup(n)}.`, `= ${money(pence)}.`], { unit: '£', unitBefore: true });
     }
     return G.y8mPercent(2, rng);
   },
@@ -395,7 +398,7 @@ const G = {
       }
       const n1 = rng.int(3, 8), u = rng.int(3, 40) * 5, n2 = rng.int(9, 20);
       return num(`${n1} jars of olive oil cost ${money(n1 * u)}. How much do ${n2} jars cost?`, dp(n2 * u, 2), `One jar costs ${money(n1 * u)} ÷ ${n1} = ${money(u)}. ${n2} jars: ${money(n2 * u)}.`,
-        [`Find the cost of one jar first (the unitary method).`, `${money(n1 * u)} ÷ ${n1} = ${money(u)}.`, `× ${n2} = ${money(n2 * u)}.`], { unit: '£' });
+        [`Find the cost of one jar first (the unitary method).`, `${money(n1 * u)} ÷ ${n1} = ${money(u)}.`, `× ${n2} = ${money(n2 * u)}.`], { unit: '£', unitBefore: true });
     }
     const kind = rng.pick(['inverse', 'combine']);
     if (kind === 'inverse') {
@@ -477,8 +480,8 @@ const G = {
       if (rng.chance(0.5)) {
         const a = rng.pick([-5, -4, -3, -2, -1, 2, 3, 4, 5]), b = rng.int(2, 6);
         const [txt, f] = rng.pick([[`2a² − 3b`, () => 2 * a * a - 3 * b], [`a² + ab`, () => a * a + a * b], [`(a − b)²`, () => (a - b) ** 2], [`3a − b²`, () => 3 * a - b * b], [`ab² − a`, () => a * b * b - a]]);
-        return num(`If a = ${neg(a)} and b = ${b}, work out ${txt}.`, f(), `Replace each letter with its value, using brackets round negatives: the answer is ${neg(f())}.`,
-          [`Put brackets round the negative: a = ${paren(a)}.`, `Indices first, then × and ÷, then + and −.`, `${txt} = ${neg(f())}.`]);
+        return num(`If a = ${neg(a)} and b = ${b}, work out ${txt}.`, f(), `Replace each letter with its value${a < 0 ? ', using brackets round negatives' : ''}: the answer is ${neg(f())}.`,
+          [a < 0 ? `Put brackets round the negative: a = ${paren(a)}.` : `Substitute a = ${a} and b = ${b}.`, `Indices first, then × and ÷, then + and −.`, `${txt} = ${neg(f())}.`]);
       }
       if (rng.chance(0.5)) {
         const u = rng.int(-5, 12), a = rng.pick([-3, -2, 2, 3, 4, 5]), t = rng.int(2, 9);
@@ -501,7 +504,7 @@ const G = {
       const right = `x = (y ${b < 0 ? '+' : '−'} ${Math.abs(b)})/${a}`;
       return choice(`Make x the subject of y = ${a}x${sgn(b)}`, right, [`x = (y ${b < 0 ? '−' : '+'} ${Math.abs(b)})/${a}`, `x = ${a}y${sgn(-b)}`, `x = y/${a}${sgn(-b)}`], rng, {
         explain: `Undo the operations in reverse: first ${b < 0 ? `add ${-b}` : `subtract ${b}`}, then divide by ${a}.`,
-        steps: [`y = ${a}x${sgn(b)}.`, `${b < 0 ? `Add ${-b}` : `Subtract ${b}`} from both sides: y${sgn(-b)} = ${a}x.`, `Divide by ${a}: ${right}.`],
+        steps: [`y = ${a}x${sgn(b)}.`, `${b < 0 ? `Add ${-b} to` : `Subtract ${b} from`} both sides: y${sgn(-b)} = ${a}x.`, `Divide by ${a}: ${right}.`],
       });
     }
     const bank = [
@@ -543,15 +546,19 @@ const G = {
         let a = rng.int(3, 11), c = rng.int(1, 9);
         if (a === c) a++;
         const b = rng.int(-15, 15), d = a * x + b - c * x;
-        return num(`Solve ${a}x${sgn(b)} = ${c === 1 ? '' : c}x${sgn(d)}`, x, `Get the x terms on one side: ${a - c > 0 ? `subtract ${c}x` : `subtract ${a}x`}. Then ${neg(a - c)}x = ${neg(d - b)}, so x = ${neg(x)}.`,
-          [`Subtract ${c === 1 ? '' : c}x from both sides: ${a - c}x${sgn(b)} = ${neg(d)}.`, `${b < 0 ? `Add ${-b}` : `Subtract ${b}`}: ${a - c}x = ${neg(d - b)}.`, `Divide by ${a - c}: x = ${neg(x)}.`]);
+        if (b === 0 || d === 0) return G.y8mEquations(level, rng);
+        // subtract the smaller x term, so the x coefficient left over is positive
+        const lo = Math.min(a, c), k = Math.abs(a - c), [keep, move] = a > c ? [b, d] : [d, b];
+        const after = a > c ? `${ex([[k, 'x']])}${sgn(b)} = ${neg(d)}` : `${neg(b)} = ${ex([[k, 'x']])}${sgn(d)}`;
+        return num(`Solve ${a}x${sgn(b)} = ${ex([[c, 'x']])}${sgn(d)}`, x, `Get the x terms on one side: subtract ${ex([[lo, 'x']])}. Then ${after}, so ${k === 1 ? '' : `${ex([[k, 'x']])} = ${neg(move - keep)} and `}x = ${neg(x)}.`,
+          [`Subtract ${ex([[lo, 'x']])} from both sides: ${after}.`, `${keep < 0 ? `Add ${-keep}` : `Subtract ${keep}`}: ${ex([[k, 'x']])} = ${neg(move - keep)}.`, `${k === 1 ? 'So' : `Divide by ${k}:`} x = ${neg(x)}.`]);
       }
       let k = rng.int(2, 6), m = rng.int(2, 6);
       if (k === m) m++;
       const p = rng.int(-6, 8), q = (k * (x + p)) / m - x;
-      if (!Number.isInteger(q)) return G.y8mEquations(level, rng);
-      return num(`Solve ${k}(x${sgn(p)}) = ${m}(x${sgn(q)})`, x, `Expand: ${ex([[k, 'x'], [k * p, '']])} = ${ex([[m, 'x'], [m * q, '']])}. Collect: ${neg(k - m)}x = ${neg(m * q - k * p)}. x = ${neg(x)}.`,
-        [`Expand both brackets: ${ex([[k, 'x'], [k * p, '']])} = ${ex([[m, 'x'], [m * q, '']])}.`, `Collect x terms one side, numbers the other: ${neg(k - m)}x = ${neg(m * q - k * p)}.`, `x = ${neg(x)}.`]);
+      if (!Number.isInteger(q) || p === 0 || q === 0) return G.y8mEquations(level, rng);
+      return num(`Solve ${k}(x${sgn(p)}) = ${m}(x${sgn(q)})`, x, `Expand: ${ex([[k, 'x'], [k * p, '']])} = ${ex([[m, 'x'], [m * q, '']])}. Collect: ${ex([[k - m, 'x']])} = ${neg(m * q - k * p)}. x = ${neg(x)}.`,
+        [`Expand both brackets: ${ex([[k, 'x'], [k * p, '']])} = ${ex([[m, 'x'], [m * q, '']])}.`, `Collect x terms one side, numbers the other: ${ex([[k - m, 'x']])} = ${neg(m * q - k * p)}.`, `x = ${neg(x)}.`]);
     }
     const kind = rng.pick(['fractions', 'nonint', 'triangle', 'rectangle']);
     if (kind === 'fractions') {
@@ -561,24 +568,25 @@ const G = {
       if (!Number.isInteger(c) || c === 0) return G.y8mEquations(level, rng);
       return num(`Solve {{x${sgn(a).replace(' ', '')}/${b}}} = {{x${sgn(c).replace(' ', '')}/${d}}}`.replace(/\{\{x([+−]) /g, '{{x $1 '), x,
         `Cross-multiply: ${d}(x${sgn(a)}) = ${b}(x${sgn(c)}), so ${ex([[d, 'x'], [d * a, '']])} = ${ex([[b, 'x'], [b * c, '']])}, giving x = ${neg(x)}.`,
-        [`Multiply both sides by ${b} × ${d} = ${b * d} (cross-multiplying).`, `${ex([[d, 'x'], [d * a, '']])} = ${ex([[b, 'x'], [b * c, '']])}.`, `${neg(d - b)}x = ${neg(b * c - d * a)}, so x = ${neg(x)}.`]);
+        [`Multiply both sides by ${b} × ${d} = ${b * d} (cross-multiplying).`, `${ex([[d, 'x'], [d * a, '']])} = ${ex([[b, 'x'], [b * c, '']])}.`, `${ex([[d - b, 'x']])} = ${neg(b * c - d * a)}, so x = ${neg(x)}.`]);
     }
     if (kind === 'nonint') {
       const a = rng.int(4, 9), c = rng.int(1, a - 1), b = rng.int(-9, 9), d = rng.int(-9, 9);
       const sol = F(d - b, a - c);
-      if (sol.d === 1) return G.y8mEquations(level, rng);
-      return fracQ(`Solve ${a}x${sgn(b)} = ${c === 1 ? '' : c}x${sgn(d)}. Give x as a fraction.`, sol, `${a - c}x = ${neg(d - b)}, so x = ${tex(sol, true)}.`,
-        [`Subtract ${c === 1 ? '' : c}x: ${a - c}x${sgn(b)} = ${neg(d)}.`, `${b < 0 ? `Add ${-b}` : `Subtract ${b}`}: ${a - c}x = ${neg(d - b)}.`, `x = ${neg(d - b)}/${a - c} = ${tex(sol, true)}.`], { placeholder: 'e.g. 7/4' });
+      if (sol.d === 1 || b === 0 || d === 0) return G.y8mEquations(level, rng);
+      return fracQ(`Solve ${a}x${sgn(b)} = ${ex([[c, 'x']])}${sgn(d)}. Give x as a fraction.`, sol, `${a - c}x = ${neg(d - b)}, so x = ${tex(sol, true)}.`,
+        [`Subtract ${ex([[c, 'x']])}: ${a - c}x${sgn(b)} = ${neg(d)}.`, `${b < 0 ? `Add ${-b}` : `Subtract ${b}`}: ${a - c}x = ${neg(d - b)}.`, `x = ${neg(d - b)}/${a - c} = ${tex(sol, true)}.`], { placeholder: 'e.g. 7/4' });
     }
     if (kind === 'triangle') {
       const p = rng.int(5, 30), q = rng.int(10, 40), xv = rng.int(20, 40);
       const third = 180 - xv - (2 * xv + p);
       const r = 3 * xv - third;
-      if (third <= 0 || r <= 0 || r >= 3 * xv) return G.y8mEquations(level, rng);
-      return num(`The angles of a triangle are x, 2x + ${p} and 3x − ${r} (in degrees). Find x.`, xv, `They add to 180: 6x + ${p - r} = 180, so 6x = ${180 - p + r} and x = ${xv}.`,
+      if (third <= 0 || r <= 0 || r >= 3 * xv || r === p) return G.y8mEquations(level, rng);
+      return num(`The angles of a triangle are x, 2x + ${p} and 3x − ${r} (in degrees). Find x.`, xv, `They add to 180: 6x${sgn(p - r)} = 180, so 6x = ${180 - p + r} and x = ${xv}.`,
         ['Angles in a triangle add up to 180°.', `x + 2x + ${p} + 3x − ${r} = 6x${sgn(p - r)} = 180.`, `6x = ${180 - p + r}, x = ${xv}.`], { unit: '°' });
     }
     const w = rng.int(3, 15), a = rng.int(2, 4), b = rng.pick([-2, -1, 1, 2, 3, 4, 5, 6]), c = rng.int(1, 9);
+    if (b + c === 0) return G.y8mEquations(level, rng);
     const L = a * w + b, W = w + c, P = 2 * (L + W);
     return num(`A rectangular racing track at Olympia measures (${a}x${sgn(b)}) m by (x + ${c}) m. Its perimeter is ${P} m. Find x.`, w, `2(${a}x${sgn(b)} + x + ${c}) = ${P}, so ${2 * (a + 1)}x${sgn(2 * (b + c))} = ${P}, and x = ${w}.`,
       ['Perimeter = 2 × (length + width).', `2(${a + 1}x${sgn(b + c)}) = ${P}.`, `${a + 1}x${sgn(b + c)} = ${P / 2}, so x = ${w}.`]);
@@ -608,7 +616,7 @@ const G = {
         return iq(`Solve ${neg(b)} − ${a}x ${sym} ${neg(c)}`, flip[sym], k, `−${a}x ${sym} ${neg(c - b)}. Dividing by a NEGATIVE number reverses the sign: x ${flip[sym]} ${neg(k)}.`,
           [`${b < 0 ? `Add ${-b}` : `Subtract ${b}`}: −${a}x ${sym} ${neg(c - b)}.`, `Divide by −${a}: dividing by a negative flips the inequality.`, `x ${flip[sym]} ${neg(k)}.`]);
       }
-      const a = rng.pick([2, 3, 4, 5]), b = rng.int(-7, 7), L = rng.int(-5, 2), H = L + rng.int(2, 6);
+      const a = rng.pick([2, 3, 4, 5]), b = rng.int(1, 7) * rng.pick([-1, 1]), L = rng.int(-5, 2), H = L + rng.int(2, 6);
       const count = H - L; // L < x ≤ H
       if (rng.chance(0.5)) {
         return alg(`Solve ${neg(a * L + b)} < ${a}x${sgn(b)} ≤ ${neg(a * H + b)}`, { answer: `${L} < x ≤ ${H}`, accept: [`${L} < x <= ${H}`, `${H} ≥ x > ${L}`, `${H} >= x > ${L}`] },
@@ -621,8 +629,8 @@ const G = {
     if (rng.chance(0.5)) {
       const a = rng.int(4, 9), c = rng.int(1, 3), k = rng.int(-3, 9), d = rng.pick([-9, -6, -4, -1, 2, 3, 5, 7, 9]), b = d + (c - a) * k, sym = rng.pick(['≥', '>', '≤']);
       if (b === 0) return G.y8mInequalities(level, rng);
-      return iq(`Solve ${a}x${sgn(b)} ${sym} ${c === 1 ? '' : c}x${sgn(d)}`, sym, k, `${a - c}x ${sym} ${neg(d - b)}, so x ${sym} ${neg(k)}.`,
-        [`Subtract ${c === 1 ? '' : c}x from both sides: ${a - c}x${sgn(b)} ${sym} ${neg(d)}.`, `${b < 0 ? `Add ${-b}` : `Subtract ${b}`}: ${a - c}x ${sym} ${neg(d - b)}.`, `Divide by ${a - c}: x ${sym} ${neg(k)}.`]);
+      return iq(`Solve ${a}x${sgn(b)} ${sym} ${c === 1 ? '' : c}x${sgn(d)}`, sym, k, `${ex([[a - c, 'x']])} ${sym} ${neg(d - b)}, so x ${sym} ${neg(k)}.`,
+        [`Subtract ${c === 1 ? '' : c}x from both sides: ${ex([[a - c, 'x']])}${sgn(b)} ${sym} ${neg(d)}.`, `${b < 0 ? `Add ${-b}` : `Subtract ${b}`}: ${ex([[a - c, 'x']])} ${sym} ${neg(d - b)}.`, a - c === 1 ? `So x ${sym} ${neg(k)}.` : `Divide by ${a - c}: x ${sym} ${neg(k)}.`]);
     }
     const M = rng.int(30, 120), a = rng.int(3, 9), f = rng.int(2, 9);
     const n = Math.floor((M - f) / a);
@@ -769,8 +777,9 @@ const G = {
           ['Co-interior angles (a C shape) add up to 180°.', `${a}x + ${p} + ${b}x${sgn(q)} = ${a + b}x${sgn(p + q)} = 180.`, `${a + b}x = ${180 - p - q}, x = ${x}.`]);
       }
       const q = a * x + p - b * x;
+      if (q === 0) return G.y8mAngles(level, rng);
       return num(`Two ${kind} angles between parallel lines are (${a}x + ${p})° and (${b}x${sgn(q)})°. Find x.`, x, `${kind === 'corresponding' ? 'Corresponding (F)' : 'Alternate (Z)'} angles are equal: ${a}x + ${p} = ${b}x${sgn(q)}, so x = ${x}.`,
-        [`${kind === 'corresponding' ? 'Corresponding angles (an F shape)' : 'Alternate angles (a Z shape)'} are equal.`, `${a}x + ${p} = ${b}x${sgn(q)}.`, `${b - a}x = ${p - q}, so x = ${x}.`]);
+        [`${kind === 'corresponding' ? 'Corresponding angles (an F shape)' : 'Alternate angles (a Z shape)'} are equal.`, `${a}x + ${p} = ${b}x${sgn(q)}.`, `${ex([[b - a, 'x']])} = ${p - q}, so x = ${x}.`]);
     }
     const kind = rng.pick(['ratio', 'pentagon', 'possible']);
     if (kind === 'ratio') {
@@ -783,7 +792,7 @@ const G = {
       const fifth = 540 - (x + 2 * x + (x + p) + 2 * x);
       if (fifth <= 0 || fifth >= 180) return G.y8mAngles(level, rng);
       const r = 3 * x - fifth;
-      if (r <= 0) return G.y8mAngles(level, rng);
+      if (r <= 0 || r === p) return G.y8mAngles(level, rng);
       return num(`A pentagon has angles x, 2x, x + ${p}, 2x and 3x − ${r} (in degrees). Find x.`, x, `Pentagon angles add up to 540°: 9x${sgn(p - r)} = 540, so x = ${x}.`,
         ['A pentagon splits into 3 triangles: 3 × 180 = 540°.', `x + 2x + x + ${p} + 2x + 3x − ${r} = 9x${sgn(p - r)}.`, `9x = ${540 - p + r}, x = ${x}.`], { unit: '°' });
     }
@@ -825,7 +834,7 @@ const G = {
     if (kind === 'semicircle') {
       const w = 2 * rng.int(2, 8), h = rng.int(4, 15), r = w / 2;
       const A = w * h * 100 + 157 * r * r;
-      return num(`A temple doorway is a ${w} m by ${h} m rectangle with a semicircle on top (its diameter is the ${w} m width). Using π = 3.14, what is the total area?`, dp(A, 2),
+      return num(`A temple doorway is ${an(w)} ${w} m by ${h} m rectangle with a semicircle on top (its diameter is the ${w} m width). Using π = 3.14, what is the total area?`, dp(A, 2),
         `Rectangle ${w * h} m². Semicircle ½ × 3.14 × ${r}² = ${dp(157 * r * r, 2)} m². Total ${dp(A, 2)} m².`,
         [`Rectangle: ${w} × ${h} = ${w * h} m².`, `Semicircle radius ${r}: ½ × 3.14 × ${r * r} = ${dp(157 * r * r, 2)} m².`, `Total: ${dp(A, 2)} m².`], { unit: 'm²' });
     }
@@ -1027,7 +1036,7 @@ const G = {
         const at = (k) => { let c2 = 0; for (let i = 0; i < 5; i++) { c2 += fs[i]; if (c2 >= k) return vals[i]; } return vals[4]; };
         const lo = at(Math.floor((N + 1) / 2)), hi = at(Math.ceil((N + 1) / 2));
         if (lo !== hi) continue;
-        return num(`Goals scored by the Athens team:\n${table}\nWhat is the median number of goals?`, lo, `There are ${N} matches, so the median is the ${N % 2 ? `${(N + 1) / 2}th` : `${N / 2}th and ${N / 2 + 1}th`} value. Counting up the frequencies, that is ${lo} ${lo === 1 ? 'goal' : 'goals'}.`,
+        return num(`Goals scored by the Athens team:\n${table}\nWhat is the median number of goals?`, lo, `There are ${N} matches, so the median is the ${N % 2 ? nth((N + 1) / 2) : `${nth(N / 2)} and ${nth(N / 2 + 1)}`} value. Counting up the frequencies, that is ${lo} ${lo === 1 ? 'goal' : 'goals'}.`,
           [`Total frequency: ${N}.`, `The middle position is ${(N + 1) / 2}.`, `Count along the frequencies until you reach it: ${lo}.`]);
       }
       return G.y8mStats(1, rng);
@@ -1042,7 +1051,8 @@ const G = {
       }
       const n1 = rng.int(10, 30), n2 = rng.int(10, 30), m1 = rng.int(40, 80), m2 = rng.int(40, 80);
       const S = n1 * m1 + n2 * m2;
-      if ((S * 10) % (n1 + n2)) continue;
+      // equal class sizes (or equal means) would make averaging the averages work, spoiling the point
+      if (n1 === n2 || m1 === m2 || (S * 10) % (n1 + n2)) continue;
       return num(`Class A (${n1} students) has a mean test score of ${m1}. Class B (${n2} students) has a mean of ${m2}. What is the mean score of all ${n1 + n2} students?`, dp((S * 10) / (n1 + n2), 1),
         `Totals: ${n1} × ${m1} = ${n1 * m1} and ${n2} × ${m2} = ${n2 * m2}. Combined ${S} ÷ ${n1 + n2} = ${dp((S * 10) / (n1 + n2), 1)}. (Not just the average of ${m1} and ${m2}: the classes are different sizes.)`,
         ['You can’t average the averages when the groups are different sizes.', `Total marks: ${n1 * m1} + ${n2 * m2} = ${S}.`, `${S} ÷ ${n1 + n2} = ${dp((S * 10) / (n1 + n2), 1)}.`]);
@@ -1083,8 +1093,8 @@ const G = {
       const a = rng.int(2, 5), b = rng.int(1, 4), c = rng.int(1, 4);
       if (a === c) return G.y8mSimultaneous(level, rng);
       return pairQ(`Solve: ${a}x + ${b}y = ${neg(a * x + b * y)} and ${c === 1 ? '' : c}x + ${b}y = ${neg(c * x + b * y)}. Give (x, y).`.replace(/ 1y/g, ' y'), [x, y],
-        `The y terms match, so subtract: ${a - c}x = ${neg((a - c) * x)}, x = ${neg(x)}. Then ${b === 1 ? '' : b}y = ${neg(a * x + b * y)} − ${paren(a * x)}, so y = ${neg(y)}.`,
-        ['Both equations have the same y term: subtract to eliminate it.', `${a - c}x = ${neg((a - c) * x)}, x = ${neg(x)}.`, `Substitute: y = ${neg(y)}.`]);
+        `The y terms match, so subtract: ${ex([[a - c, 'x']])} = ${neg((a - c) * x)}, x = ${neg(x)}. Then ${b === 1 ? '' : b}y = ${neg(a * x + b * y)} − ${paren(a * x)}, so y = ${neg(y)}.`,
+        ['Both equations have the same y term: subtract to eliminate it.', `${ex([[a - c, 'x']])} = ${neg((a - c) * x)}, x = ${neg(x)}.`, `Substitute: y = ${neg(y)}.`]);
     }
     if (rng.chance(0.5)) {
       const o = rng.int(2, 12), l = rng.int(2, 12), [p, q, r, s] = [rng.int(2, 5), rng.int(1, 4), rng.int(1, 3), rng.int(2, 6)];

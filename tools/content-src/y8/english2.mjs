@@ -22,7 +22,7 @@ const SCROOGE = X('scrooge', 'Scrooge’s business partner, Jacob Marley, has be
 const MORE = X('more', 'Oliver, an orphan of nine, lives in a workhouse, where the poor were given shelter and very little food in return for hard work. Dickens wrote partly to attack the new Poor Law of 1834.');
 const REDROOM = X('redroom', 'Jane, a ten-year-old orphan, lives with her cruel aunt, Mrs Reed. After fighting back against her bullying cousin John, she is locked in the red-room as a punishment. She tells the story as an adult, looking back.');
 const CATHERINE = X('catherine', 'Lady Catherine de Bourgh, a rich and proud aristocrat, has heard that her nephew Mr Darcy may propose to Elizabeth Bennet, whose family has less money and fewer grand connections. She has arrived uninvited to stop it.');
-const PEW = X('pew', 'Jim Hawkins helps run his family’s inn, the Admiral Benbow. An old sea captain staying there lives in fear of other sailors coming to find him. Jim’s father has just died.');
+const PEW = X('pew', 'Jim Hawkins helps run his family’s inn, the Admiral Benbow. An old sea captain staying there lives in fear of other sailors coming to find him. Jim’s father has just died. The visitor in this extract is a blind man called Pew.');
 const CLUB = X('club', 'Buck, a big, much-loved pet dog, has been stolen from his home in California and sold. A man in a red sweater has just beaten him with a club to break his spirit.');
 const MAGI = X('magi', 'Della and Jim are a young married couple in New York with very little money. Each owns one treasure: Jim’s gold watch and Della’s long, beautiful hair. Without telling Jim, Della has had her hair cut off and sold it to buy him a present.');
 const ANTONY = X('antony', 'Julius Caesar has been murdered by a group of senators led by Brutus, who claim Caesar was too ambitious and would have made himself king. Brutus has let Mark Antony, Caesar’s friend, speak at the funeral, as long as he does not blame the killers.');
@@ -71,7 +71,7 @@ const items = [
   mcq('ot.2', 'oliver', '“a long grace was said over the short commons.” What is the effect of this contrast?', [['Irony: a long prayer for very little food', true], ['It shows that the boys were deeply religious', false, 'Dickens is mocking the adults, not praising anyone’s faith.'], ['It tells us dinner took a long time', false, 'The gruel “disappeared” at once. Only the prayer was long.']], '“Commons” means a share of food. Long and short are set against each other to show the hypocrisy of the workhouse.', MORE),
   fact('ot.3', 'oliver', 'Find and copy the phrase that shows Oliver was frightened by his own daring.', 'somewhat alarmed at his own temerity', ['desperate with hunger, and reckless with misery', 'in stupefied astonishment', 'he turned very pale'], '“Temerity” means boldness. Oliver surprises himself.', { ...MORE, accept: ['alarmed at his own temerity'] }),
   mcq('ot.4', 'oliver', 'The tall boy hints that he might “eat the boy who slept next him”. What is Dickens’s tone here?', [['Dark comedy that makes the hunger shocking', true], ['Pure horror, with no humour at all', false, 'The phrase “a weakly youth of tender age” is mock-serious: we laugh, then wince.'], ['Admiration for the tall boy’s courage', false, 'Dickens is showing how desperate the boys have become.']], 'Dickens often makes us laugh at something terrible so that we notice it more.', MORE),
-  mcq('ot.5', 'oliver', 'How does the master react to Oliver’s request?', [['He turns pale, then hits Oliver with the ladle', true], ['He laughs and gives Oliver a second helping of gruel', false, 'He is horrified, not amused.'], ['He calmly explains the workhouse rules', false, 'He “shrieked aloud for the beadle”.']], 'The reaction is absurdly out of proportion: a polite request is treated like a crime.', MORE),
+  mcq('ot.5', 'oliver', 'How does the master react to Oliver’s request?', [['He turns pale, then aims a blow at Oliver with the ladle', true], ['He laughs and gives Oliver a second helping of gruel', false, 'He is horrified, not amused.'], ['He calmly explains the workhouse rules', false, 'He “shrieked aloud for the beadle”.']], 'The reaction is absurdly out of proportion: a polite request is treated like a crime.', MORE),
   mcq('ot.6', 'oliver', 'Why is it ironic that Dickens calls Oliver “the small rebel”?', [['Asking for food is treated like a revolution', true], ['Oliver is planning to lead the boys in a riot', false, 'He was chosen by drawing lots, and he asks politely.'], ['Oliver is the tallest boy in the workhouse', false, 'He is “small”, and he is a child.']], 'Dickens exposes how cruel the system is by showing the adults’ panic at a hungry child’s request.', MORE),
   written('ot.w1', 'oliver', 'How does Dickens use humour to criticise the workhouse? Use at least two quotations.', ['A clear point about satire', 'An example of irony or exaggeration', 'The adults’ reaction', 'What Dickens wants the reader to feel and do'], 'Dickens uses humour to make his readers see how cruel the workhouse is. He jokes that “the bowls never wanted washing”, because the boys lick them clean, so the humour itself reveals their starvation. He uses irony when a “long grace” is said over “short commons”, mocking the adults who thank God for food they barely give. Finally, the master’s horror at the “small rebel” is absurd: Oliver politely asks for more, and the adults react as if he had committed a crime. Because we laugh at the adults, we are on Oliver’s side, and Dickens leaves us angry at a system that treats hungry children as criminals.', MORE),
 
@@ -107,14 +107,14 @@ const items = [
   mcq('cw.2', 'wild', 'After the beating, the man speaks to Buck “in a genial voice”. What is the effect?', [['The friendliness after violence is chilling', true], ['It shows the man is sorry for what he did', false, 'He promises to beat Buck again if he is “a bad dog”.'], ['It makes the man seem weak and nervous', false, 'He “fearlessly patted the head”: he is completely in control.']], 'Genial means cheerful and friendly. The contrast shows how casually the man uses violence.', CLUB),
   fact('cw.3', 'wild', 'Find and copy the phrase Jack London uses for the harsh new rules Buck has discovered.', 'the reign of primitive law', ['the man in the red sweater', 'a generous meal', 'the dominion of the man'], 'Primitive law is the law of force: whoever has the club makes the rules.', { ...CLUB, accept: ['primitive law', 'reign of primitive law'] }),
   mcq('cw.4', 'wild', 'What lesson does Buck learn?', [['A man with a club must be obeyed', true], ['All men are kind if you are patient', false, 'The lesson is about power and force.'], ['He should run away at the first chance', false, 'He learns to obey, not to run.']], '“the lesson was driven home to Buck: a man with a club was a lawgiver”.', CLUB),
-  mcq('cw.5', 'wild', 'Buck obeys the man, “though not necessarily conciliated”. What does “conciliated” mean here?', [['Won over or made friendly', true], ['Frightened into silence', false, 'He is frightened enough to obey; the point is that he is not won over.'], ['Punished for disobeying', false, 'He has been punished already. Conciliated means made friendly.']], 'Buck obeys the man but does not love him.', CLUB),
+  mcq('cw.5', 'wild', 'Buck learns that a man with a club is “a master to be obeyed, though not necessarily conciliated”. What does “conciliated” mean here?', [['Won over or made friendly', true], ['Frightened into silence', false, 'Buck is frightened enough to obey; the point is that he need not try to win the man over.'], ['Punished for disobeying', false, 'He has been punished already. Conciliated means made friendly.']], 'Buck must obey the man with the club, but he need not try to please him or win his favour.', CLUB),
   mcq('cw.6', 'wild', 'Through whose eyes do we see the events?', [['Buck’s, though the narration is third-person', true], ['The man in the red sweater’s, in his own words', false, 'We are told what Buck “saw”, “knew” and “learned”.'], ['An unnamed first-person narrator who owns Buck', false, 'There is no “I” in this extract.']], 'Seeing the world from a dog’s viewpoint makes the cruelty of the men more striking.', CLUB),
-  written('cw.w1', 'wild', 'How does Jack London show that Buck has changed? Use at least two quotations.', ['Buck’s outward obedience', 'The difference between beaten and broken', 'The idea of primitive law', 'What he keeps that the man cannot control'], 'Jack London shows that Buck has learned to obey but has not given up his spirit. Outwardly he submits: although his hair “involuntarily bristled”, he “endured it without protest” and eats “from the man’s hand”. But the narrator insists that “he was beaten … but he was not broken”, and the brackets make his defeat sound like something he simply acknowledges. The club is “his introduction to the reign of primitive law”, and he faces it “with all the latent cunning of his nature aroused”, which suggests a wilder, more dangerous Buck is waking up. He obeys, but is “not necessarily conciliated”, so the reader senses that this change is only the beginning.', CLUB),
+  written('cw.w1', 'wild', 'How does Jack London show that Buck has changed? Use at least two quotations.', ['Buck’s outward obedience', 'The difference between beaten and broken', 'The idea of primitive law', 'What he keeps that the man cannot control'], 'Jack London shows that Buck has learned to obey but has not given up his spirit. Outwardly he submits: although his hair “involuntarily bristled”, he “endured it without protest” and eats “from the man’s hand”. But the narrator insists that “he was beaten … but he was not broken”, and the brackets make his defeat sound like something he simply acknowledges. The club is “his introduction to the reign of primitive law”, and he faces it “with all the latent cunning of his nature aroused”, which suggests a wilder, more dangerous Buck is waking up. He must obey the man, but need not try to please him (“not necessarily conciliated”), so the reader senses that this change is only the beginning.', CLUB),
 
   // --- The Gift of the Magi
   fact('gm.1', 'magi', 'How much money does Della have at the start?', 'one dollar and eighty-seven cents', ['eighty-seven dollars and one cent', 'one dollar and sixty cents', 'twenty dollars and seven cents'], 'And sixty cents of it is in pennies.', { ...MAGI, accept: ['$1.87', '1.87', '1 dollar 87 cents', 'a dollar eighty-seven'] }),
   mcq('gm.2', 'magi', 'Why does O. Henry repeat “One dollar and eighty-seven cents”?', [['It stresses how little money she has', true], ['He forgot that he had already said it', false, 'The repetition is deliberate: “Three times Della counted it.”'], ['It shows the money is slowly increasing', false, 'It stays exactly the same, which is the problem.']], 'The repetition makes us feel Della’s desperation.', MAGI),
-  mcq('gm.3', 'magi', 'What has Jim bought for Della?', [['A set of tortoise-shell combs', true], ['A gold chain for her watch', false, 'That is Della’s present for Jim.'], ['A new winter coat and hat', false, 'The present is The Combs.']], 'Beautiful combs “just the shade to wear in the beautiful vanished hair”.', MAGI),
+  mcq('gm.3', 'magi', 'What has Jim bought for Della?', [['A set of tortoise-shell combs', true], ['A platinum watch chain', false, 'That is Della’s present for Jim, for his gold watch.'], ['A new winter coat and hat', false, 'The present is The Combs.']], 'Beautiful combs “just the shade to wear in the beautiful vanished hair”.', MAGI),
   mcq('gm.4', 'magi', 'Why can Jim not use Della’s present?', [['He has sold his watch to buy her combs', true], ['It is the wrong size for his watch', false, 'The problem is that the watch is gone.'], ['He does not like the colour of gold', false, 'He sold his gold watch.']], '“Give me your watch. I want to see how it looks on it.” But: “I sold the watch to get the money to buy your combs.”', MAGI),
   mcq('gm.5', 'magi', 'What is the irony of the ending?', [['Each sold a treasure to buy for the other’s', true], ['Della is angry about the present Jim gave', false, 'She hugs the combs and smiles: “My hair grows so fast, Jim!”'], ['Jim and Della discover that they are rich', false, 'They are just as poor as before.']], 'Situational irony: the gifts cancel each other out, and yet the love behind them is what matters.', MAGI),
   mcq('gm.6', 'magi', 'The narrator calls them “two foolish children” and then “the wisest”. What does he mean?', [['Their self-sacrifice is the wisest kind of love', true], ['He is simply mocking them for being silly with money', false, 'He ends by calling them the magi: wise gift-givers.'], ['He changes his mind because they were lucky', false, 'They were not lucky; they were loving.']], 'The magi were the wise men who brought gifts to the infant Jesus. The final paragraph reverses the word “foolish”.', MAGI),
@@ -196,7 +196,7 @@ const items = [
   mcq('un.1', 'unseen', 'What should you do first with a poem you have never seen?', [['Read it twice; work out speaker and situation', true], ['Count the syllables in every single line of it', false, 'Metre matters, but understanding comes first.'], ['Write down every technique you can spot', false, 'Spotting techniques without understanding leads to weak answers.']], 'Meaning first, then methods, then effects.'),
   mcq('un.2', 'unseen', 'What is “the speaker” of a poem?', [['The voice of the poem, not always the poet', true], ['The person reading the poem aloud to you', false, 'The speaker is inside the poem.'], ['Always the poet, speaking as themselves', false, 'Poets often write in other voices, like Blake’s wanderer or Rossetti’s dying lover.']], 'Say “the speaker” unless you are sure the poem is autobiographical.'),
   mcq('un.3', 'unseen', 'You notice a poem has a very regular rhyme scheme. What is the best next step?', [['Ask what effect it has, and if it breaks', true], ['Write “the poem rhymes” and move on', false, 'That describes a feature but explains nothing.'], ['Ignore it, because rhyme never matters', false, 'Form often carries meaning.']], 'A break in a pattern is often the most important moment in a poem.'),
-  mcq('un.4', 'unseen', 'Which is the stronger point about structure?', [['“The final stanza shifts into the present tense.”', true], ['“The poem has four stanzas of equal length.”', false, 'That is a fact, not an interpretation.'], ['“The poem is written in English, in four parts.”', false, 'True, but it tells us nothing.']], 'Strong points about structure explain why a change happens.'),
+  mcq('un.4', 'unseen', 'Which is the stronger point about structure?', [['“The final stanza shifts into the present tense, making the ending feel urgent and immediate.”', true], ['“The poem has four stanzas of equal length.”', false, 'That is a fact, not an interpretation.'], ['“The poem is written in English, in four parts.”', false, 'True, but it tells us nothing.']], 'Strong points about structure explain why a change happens.'),
   mcq('un.5', 'unseen', 'Which sentence uses a quotation best?', [['The sea is “a hungry dog”, suggesting greed and danger.', true], ['The poet says the sea is like a dog. Quote: “The sea is a hungry dog”.', false, 'Embed short quotations in your own sentence.'], ['The sea is described in lines 1 to 8, in some detail.', false, 'Point to precise words, not line ranges.']], 'Short, embedded quotations followed by an explanation are the mark of a strong answer.'),
   mcq('un.6', 'unseen', 'What does “tone” mean in a poem?', [['The attitude or feeling of the voice', true], ['How loudly the poem is read aloud', false, 'Tone is about attitude, not volume.'], ['The number of lines in each stanza', false, 'That is length, not tone.']], 'Name the tone precisely: “wistful” is better than “sad”.'),
   mcq('un.7', 'unseen', 'Why is it worth looking at a poem’s title again after reading?', [['It may gain new meaning or irony', true], ['Titles are always the least important part', false, 'Think of “Anthem for Doomed Youth”: the title is ironic.'], ['To check the spelling is correct', false, 'The point is meaning.']], '“Remember”, “London” and “If—” all gain depth once you have read the poem.'),
@@ -207,7 +207,7 @@ const items = [
   // --- essay writing (skills)
   mcq('es.1', 'essay', 'Which is the strongest opening sentence for an essay on how Dickens presents Scrooge?', [['Dickens presents Scrooge as frozen by greed, but able to thaw.', true], ['In this essay I am going to write about the character of Scrooge.', false, 'Announcing your topic is not an argument.'], ['Charles Dickens was born in 1812 in Portsmouth, on the south coast.', false, 'Biography is not an answer to the question.']], 'A strong thesis makes an arguable claim that the essay will prove.'),
   mcq('es.2', 'essay', 'What should a good analytical paragraph contain?', [['Point, embedded evidence, analysis and effect', true], ['As many long quotations as you can fit in', false, 'Quality of analysis matters more than quantity.'], ['A clear summary of what happens in the plot', false, 'Retelling the story is not analysing it.']], 'Point, evidence, analysis, link: and the analysis is where the marks are.'),
-  mcq('es.3', 'essay', 'Which sentence uses context well?', [['Dickens, who opposed the Poor Law, makes the master’s horror absurd.', true], ['The Poor Law was passed in 1834, and it set up the workhouses.', false, 'A bare fact does not explain the text.'], ['In Victorian times life was very hard for most people.', false, 'Too vague, and not linked to the text.']], 'Context should explain a writer’s choices, not replace analysis.'),
+  mcq('es.3', 'essay', 'Which sentence uses context well?', [['Dickens, who opposed the Poor Law, makes the master’s horror absurd.', true], ['The Poor Law Amendment Act was passed in 1834, and it expanded the workhouse system.', false, 'A bare fact does not explain the text.'], ['In Victorian times life was very hard for most people.', false, 'Too vague, and not linked to the text.']], 'Context should explain a writer’s choices, not replace analysis.'),
   mcq('es.4', 'essay', 'What is usually the best length for a quotation?', [['A few precise words, embedded', true], ['A whole paragraph, copied out', false, 'Long quotations hide what you want to analyse.'], ['No quotations at all, just ideas', false, 'Evidence is essential.']], 'Short quotations let you zoom in on individual words.'),
   mcq('es.5', 'essay', 'Which phrase shows a tentative, evaluative interpretation?', [['“This perhaps suggests…”', true], ['“This definitely proves that…”', false, 'Literature rarely proves one thing. Tentative language shows thought.'], ['“This is a simile, which is…”', false, 'Identifying a technique is not interpreting it.']], 'Words like “perhaps”, “suggests” and “implies” show that you know texts can be read in more than one way.'),
   mcq('es.6', 'essay', 'What should a conclusion do?', [['Answer the question and draw the argument together', true], ['Introduce three new quotations to finish strongly', false, 'New evidence belongs in the main paragraphs.'], ['Repeat the introduction word for word to be clear', false, 'Develop your argument; don’t just repeat it.']], 'A good conclusion often makes a bigger point about the writer’s purpose.'),
@@ -216,5 +216,145 @@ const items = [
   mcq('es.9', 'essay', 'Which phrasing shows that the writer made deliberate choices?', [['“Brontë chooses the colour red to suggest…”', true], ['“The room just happens to be red.”', false, 'Nothing in a text “just happens”.'], ['“The author forgot to describe the window.”', false, 'Focus on what the writer did choose.']], 'Writing about choices keeps the focus on the writer’s methods.'),
   mcq('es.10', 'essay', 'Which tense should you usually use when writing about a text?', [['The present tense: “Dickens describes…”', true], ['The past tense: “Dickens described…”', false, 'Texts are discussed in the present because they still exist and act on readers.'], ['The future tense: “Dickens will describe…”', false, 'Use the present tense.']], 'The literary present: the text is always happening.'),
 ];
+
+// --- memory hooks -------------------------------------------------------------------------
+// Optional `hook` (a mnemonic or memory trick) and `example` (a real-world link) for each topic
+// and many items. Topics are keyed without “english.”, items without “english.l2.”. Kept apart
+// from the questions so edits to prompts and answers do not collide; an unknown id throws.
+const TOPIC_HOOKS = {
+  carol: 'Scrooge is cold from the inside out: every detail is ice and frost.',
+  oliver: 'Satire: make the reader laugh, then make them ashamed of laughing.',
+  'red-room': 'Red for blood and rage, white for ghosts and death: the colours do the haunting.',
+  'austen-wit': 'Rank against wit: Lady Catherine has the power; Elizabeth has the best lines.',
+  treasure: 'Soft voice, iron grip: the gentler Pew sounds, the more frightening he is.',
+  wild: 'Beaten, not broken: Buck obeys the club, but his spirit stays wild.',
+  magi: 'Two gifts, two sacrifices, one double twist: the love is the real present.',
+  caesar: 'Praise Brutus, then prove him wrong, again and again, until the crowd hears the opposite.',
+  blake: 'Blake asks questions he never answers: the gaps are where the fear lives.',
+  rossetti: 'One poet, two moods: a hushed farewell and a burst of joy.',
+  kipling: 'If… if… if… then: one long sentence, and the reward waits until the very end.',
+  darwin: 'Same climate, different creatures on every island: a puzzle that changed science.',
+  titania: 'When the rulers quarrel, the whole world suffers: even the seasons lose their way.',
+  ozymandias: 'Two sonnets look back: one finds dust, the other finds treasure.',
+  wuthering: 'A branch at the window becomes a hand: the ordinary turns into horror.',
+  unseen: 'What, how, why: what is happening, how it is written, and why it matters.',
+  essay: 'Argue, prove, explain: every paragraph is one step in your argument.',
+};
+const MEMORY = {
+  // A Christmas Carol
+  'cc.1': { hook: 'Asyndeton: no “and” between the words, so the greed piles up without a break.' },
+  'cc.2': { hook: 'An oyster clamps its shell shut: so does Scrooge, against the whole world.' },
+  'cc.3': { hook: 'He carries his own cold weather about with him: the chill is inside.' },
+  'cc.4': { hook: 'A pun holds two meanings at once: “came down” like rain, and gave generously.' },
+  'cc.5': { hook: 'Hyperbole: even blind men’s dogs steer clear. The exaggeration makes us laugh, then notice.' },
+  'cc.6': { example: 'Today “Bah! Humbug!” and “a Scrooge” are everyday words for a grumpy miser.' },
+  // Oliver Twist
+  'ot.1': { hook: 'Clean bowls = empty stomachs: the joke reveals the starvation.' },
+  'ot.2': { hook: 'Long grace, short commons: the prayer is longer than the meal.' },
+  'ot.3': { hook: 'Temerity = boldness, the opposite of being timid. Timid Oliver shows temerity.' },
+  'ot.5': { example: '“Please, sir, I want some more” is still quoted when someone asks for a second helping.' },
+  'ot.6': { hook: 'Irony: a hungry child is treated like a dangerous rebel.' },
+  // Jane Eyre
+  'rr.1': { hook: 'A grand room nobody uses, where the master died: perfect ground for a ghost.' },
+  'rr.2': { hook: 'Red = blood and anger; white = ghostly and deathly.' },
+  'rr.3': { hook: 'An empty throne waits for a ruler: a pale throne waits for a ghost.' },
+  'rr.4': { hook: 'In the mirror, Jane sees a stranger: she becomes the ghost.' },
+  'rr.5': { hook: '“Secure” here means locked in, not safe: a jail.' },
+  'rr.6': { hook: 'Two Janes at once: the frightened child, and the adult who looks back.', example: 'Jane Eyre was first published in 1847 under the male pen name Currer Bell.' },
+  // Pride and Prejudice
+  'au.2': { hook: 'Turn their weapon round: if Darcy is engaged, why come all this way to worry?' },
+  'au.3': { hook: 'When someone turns to insults, they have lost the argument.' },
+  'au.4': { hook: 'Commands, not conversation: Lady Catherine expects to be obeyed.' },
+  'au.5': { hook: 'Balanced clauses with semicolons between them: as calm and level as a pair of scales.' },
+  'au.6': { example: 'Pride and Prejudice (1813) did not carry Austen’s name: it was “by the author of Sense and Sensibility”.' },
+  // Treasure Island
+  'ti.1': { hook: 'Bitter, foggy, frosty: the weather sets the stage for menace.' },
+  'ti.2': { hook: 'The nicer the voice, the nastier the surprise.' },
+  'ti.3': { hook: 'A vice grips and does not let go: neither does Pew.', example: 'A vice is the clamp on a school workbench that holds wood still while you saw it.' },
+  'ti.4': { hook: '“Creature” strips Pew of his humanity: Jim sees a monster, not a man.' },
+  'ti.5': { hook: 'Tap-tap-tapping in, tap-tap-tapping out: sound frames the scene.' },
+  'ti.6': { example: 'Treasure Island shaped our picture of pirates: a treasure map, a parrot and a one-legged sea cook.' },
+  // The Call of the Wild
+  'cw.1': { hook: 'Beaten = lost the fight. Broken = lost the spirit. Buck is only the first.' },
+  'cw.2': { hook: 'Genial = cheerful and friendly. Friendliness straight after violence is chilling.' },
+  'cw.3': { hook: 'Primitive law = the law of the club: whoever holds the club makes the rules.' },
+  'cw.5': { hook: 'Conciliated = won over. It shares a Latin root with “reconcile”, to make friends again.' },
+  'cw.6': { example: 'Black Beauty (1877) is another famous story told from an animal’s point of view, by a horse.' },
+  // The Gift of the Magi
+  'gm.1': { hook: '$1.87, counted three times: you never forget how little she has.' },
+  'gm.3': { hook: 'Combs for hair she no longer has.' },
+  'gm.4': { hook: 'A chain for a watch he no longer has; combs for hair she no longer has.' },
+  'gm.5': { hook: 'Situational irony: each gift cancels out the other, yet the love survives.' },
+  'gm.6': { hook: 'The magi were the wise men who brought gold, frankincense and myrrh.' },
+  // Julius Caesar
+  'jc.1': { hook: '“Not to praise him”, then praise all the way: say one thing, do the other.', example: 'The speech begins “Friends, Romans, countrymen, lend me your ears”, a line still quoted today.' },
+  'jc.2': { hook: 'Repeat a compliment straight after evidence against it, and it turns to sarcasm.' },
+  'jc.3': { hook: 'One crown, offered three times and refused three times: the rule of three makes the evidence stick.' },
+  'jc.5': { hook: 'A pause is a power move: let the crowd fill the silence.' },
+  'jc.6': { hook: 'Ethos, pathos, logos: trust, feelings and logic. Evidence and reasons = logos.' },
+  // Blake
+  'bl.1': { hook: 'Count the question marks in “The Tiger”: nearly every line asks something.' },
+  'bl.2': { hook: 'Hammer, chain, furnace, anvil: the creator as a blacksmith, forging the tiger.' },
+  'bl.3': { hook: 'Could = is it possible? Dare = who would be brave enough? One word raises the stakes.' },
+  'bl.4': { hook: 'Innocence (the Lamb) and Experience (the Tiger): two sides of one creation.' },
+  'bl.5': { hook: 'Manacles = handcuffs. Mind-forged = made by the mind. Chains you cannot see.' },
+  'bl.6': { hook: 'Chartered = mapped, owned and controlled: even the river.' },
+  // Rossetti
+  'cr.1': { hook: 'A euphemism is a soft word for a hard thing: “the silent land” for death.', example: 'Everyday euphemisms for death: “passed away”, “no longer with us”, “at rest”.' },
+  'cr.2': { hook: 'The volta turns the sonnet: from “remember me” to “forget and smile”.' },
+  'cr.3': { hook: 'Petrarchan sonnet: an octave (8 lines) and a sestet (6 lines), with a turn between.' },
+  'cr.4': { hook: 'Anaphora: the same opening, again and again: “My heart is like…”' },
+  'cr.5': { hook: 'The day love arrives feels like being born again.' },
+  // Kipling
+  'ki.1': { hook: 'The main clause, “you’ll be a Man, my son”, is held back to the very last line.' },
+  'ki.2': { example: 'The lines about meeting Triumph and Disaster are written above the players’ entrance to Centre Court at Wimbledon.' },
+  'ki.3': { hook: 'Keep your head = stay calm. Lose your head = panic.', example: 'The wartime poster “Keep Calm and Carry On” gives the same advice.' },
+  'ki.4': { hook: 'Sixty seconds, sixty seconds’ worth of running: fill every minute to the brim.' },
+  // Darwin
+  'dw.2': { hook: 'Ante = before (as in ante-room); diluvium = flood (think deluge).' },
+  'dw.3': { hook: 'Each island, its own creatures: the clue that led to evolution.', example: 'The Galápagos finches, with different beaks on different islands, are now a textbook example of evolution.' },
+  'dw.5': { hook: 'Close together, alike in climate, yet with different creatures: that is the puzzle.' },
+  'dw.6': { hook: 'Admitting a mistake builds trust: good scientists show their working, errors and all.' },
+  // Titania
+  'tt.1': { hook: 'Order at the top, order below: when the fairy rulers fight, nature falls apart.' },
+  'tt.2': { hook: 'Continent comes from Latin “to contain”: here, the banks that hold a river in.' },
+  'tt.3': { hook: 'The corn is a young man who dies before his beard can grow.' },
+  'tt.4': { hook: 'Hoary = white-haired with age: old winter sitting in young summer’s lap.' },
+  'tt.6': { hook: 'Blank verse = unrhymed iambic pentameter. Blank means no rhyme.' },
+  // Ozymandias and Chapman’s Homer
+  'oz.1': { hook: 'Visage = face (think visor). Trunkless = without a body.' },
+  'oz.2': { hook: '“Look on my works… and despair!” The joke is on him: there are no works left.', example: 'Shelley and his friend Horace Smith each wrote a sonnet on this subject, as a friendly contest.' },
+  'oz.3': { hook: 'Count the layers: poet, traveller, sculptor, king. Each one pushes the king further away.' },
+  'oz.4': { hook: 'Realms of gold = the riches of literature: reading as travel.' },
+  'oz.5': { example: 'Uranus, discovered by William Herschel in 1781, was the first planet found with a telescope.' },
+  'oz.6': { hook: 'Balboa saw it; Keats wrote Cortez. The feeling matters more than the fact.' },
+  // Wuthering Heights
+  'wh.1': { hook: 'A branch tapping on glass: the most ordinary sound, waiting to become a hand.' },
+  'wh.3': { hook: 'Fear can make anyone cruel: the shock of the scene is Lockwood himself.' },
+  'wh.4': { hook: 'Waif = a homeless, neglected child. Twenty years of wandering.' },
+  'wh.5': { hook: 'Dream or real? The doubt is what makes it so unsettling.' },
+  'wh.6': { hook: 'Pathetic fallacy: the storm outside matches the terror inside.', example: 'Brontë explains that “wuthering” is a local Yorkshire word for the roar of wind in stormy weather.' },
+  // unseen poetry
+  'un.1': { hook: 'Read it twice before you write a word: first for sense, then for method.' },
+  'un.2': { hook: 'The poet writes; the speaker speaks, like an author and a character.' },
+  'un.3': { hook: 'Where a pattern breaks, put your finger on that line: something important is happening.' },
+  'un.5': { hook: 'Quote short, explain long.' },
+  'un.6': { hook: 'Tone = tone of voice: how would you read this line aloud?' },
+  'un.8': { hook: 'Two readings beat one: “Perhaps… alternatively…”' },
+  'un.9': { hook: 'What, how, why: meaning, method, effect.' },
+  // essay writing
+  'es.1': { hook: 'A thesis is an arguable claim: if no one could disagree, it is not an argument.' },
+  'es.2': { hook: 'PEEL: Point, Evidence, Explain, Link. PETAL adds the Technique: Point, Evidence, Technique, Analysis, Link.' },
+  'es.3': { hook: 'Context is the “why” behind a writer’s choice, never a history lesson on its own.' },
+  'es.4': { hook: 'Short quotations are tweezers: they let you pick out single words.' },
+  'es.5': { hook: 'Perhaps, suggests, implies, could: careful words show a thinking reader.' },
+  'es.7': { hook: 'If your comment would fit any text ever written, it says nothing about this one.' },
+  'es.9': { hook: 'Nothing in a text is an accident: writers choose.' },
+  'es.10': { hook: 'The literary present: Dickens describes, Brontë creates, Owen shows.' },
+};
+for (const t of topics) { const k = t.id.replace(/^english\./, ''); if (TOPIC_HOOKS[k]) t.hook = TOPIC_HOOKS[k]; }
+for (const k of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === `english.${k}`)) throw new Error(`topic hook for unknown topic ${k}`);
+for (const it of items) { const m = MEMORY[it.id.replace(/^english\.l2\./, '')]; if (m) Object.assign(it, m); }
+for (const k of Object.keys(MEMORY)) if (!items.some((it) => it.id === `english.l2.${k}`)) throw new Error(`memory hook for unknown item ${k}`);
 
 export default [{ subject: 'english', deck: 'y8-lit2', topics, items }];

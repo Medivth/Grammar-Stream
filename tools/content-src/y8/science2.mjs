@@ -16,9 +16,9 @@ const T = (id, title, kind, prereqs, intro, teach, talk, extra = {}) => ({ id: `
 
 // case studies: a short scenario or data set, shared by several questions and a written answer
 const CASES = {
-  enzymes: 'Case study: Kit tests how temperature affects amylase.\n\nKit mixes starch solution with amylase at different temperatures. Every 30 seconds she puts a drop of the mixture onto iodine. When the iodine stays orange-brown, all the starch has gone.\n\nTemperature (°C) | Time for starch to disappear (s)\n10 | 300\n20 | 180\n37 | 60\n50 | 150\n70 | starch never disappears',
+  enzymes: 'Case study: Kit tests how temperature affects amylase.\n\nKit mixes starch solution with amylase at different temperatures. Every 30 seconds he puts a drop of the mixture onto iodine. When the iodine stays orange-brown, all the starch has gone.\n\nTemperature (°C) | Time for starch to disappear (s)\n10 | 300\n20 | 180\n37 | 60\n50 | 150\n70 | starch never disappears',
   circulation: 'Case study: Theo’s heart rate.\n\nTheo measures his pulse at rest, then runs up and down the stairs at the Acropolis Museum for three minutes, then measures it again every minute while he rests.\n\nAt rest: 70 beats per minute\nStraight after exercise: 140\n1 minute later: 115\n2 minutes later: 95\n3 minutes later: 80\n4 minutes later: 72',
-  nervous: 'Case study: the ruler-drop test.\n\nMira holds a ruler just above Kit’s open fingers and drops it without warning. Kit catches it as fast as she can. The distance the ruler falls shows her reaction time.\n\nAttempt 1: 18 cm\nAttempt 2: 15 cm\nAttempt 3: 12 cm\nAttempt 4: 11 cm\nAttempt 5: 11 cm\n\nThen Kit repeats the test while Theo talks to her about the Olympic Games. Her catches get longer again: 16 cm, 17 cm, 15 cm.',
+  nervous: 'Case study: the ruler-drop test.\n\nMira holds a ruler just above Kit’s open fingers and drops it without warning. Kit catches it as fast as he can. The distance the ruler falls shows his reaction time.\n\nAttempt 1: 18 cm\nAttempt 2: 15 cm\nAttempt 3: 12 cm\nAttempt 4: 11 cm\nAttempt 5: 11 cm\n\nThen Kit repeats the test while Theo talks to him about the Olympic Games. His catches get longer again: 16 cm, 17 cm, 15 cm.',
   transport: 'Case study: a potometer experiment.\n\nA leafy shoot is set up in a potometer, which measures how fast the shoot takes up water. An air bubble in a thin tube moves as water is taken up.\n\nConditions | Distance bubble moved in 5 minutes (mm)\nStill air, room temperature | 12\nFan blowing on the leaves | 30\nPlastic bag over the leaves | 4\nLeaves smeared with petroleum jelly underneath | 2',
   immunity: 'Case study: from cowpox to vaccines.\n\nIn 1796 the English doctor Edward Jenner noticed that milkmaids who had caught cowpox, a mild disease, seemed not to catch smallpox, a deadly one. He scratched material from a cowpox sore into the arm of a boy, James Phipps. Weeks later he exposed the boy to smallpox, and the boy did not become ill.\n\nJenner called his method vaccination, from vacca, Latin for cow. After a worldwide vaccination campaign, smallpox was declared eradicated in 1980.',
   diet: 'Case study: testing a mystery lunch.\n\nTheo grinds up part of his lunch, adds water and tests it.\n\nTest | Result\nIodine | turned blue-black\nBenedict’s solution, heated | stayed blue\nBiuret solution | turned purple\nEthanol, then water | went cloudy white',
@@ -31,7 +31,7 @@ const CASES = {
   materials: 'Case study: choosing a material for a racing bike frame.\n\nMaterial | Density (g/cm³) | Strength | Cost\nSteel | 7.9 | high | low\nAluminium alloy | 2.7 | medium | medium\nCarbon-fibre composite | 1.6 | very high | high\nWood | 0.7 | low | low',
   motion: 'Case study: a skydiver’s jump.\n\nA skydiver jumps from a plane. At first she speeds up. After about 12 seconds she is falling at a steady 55 m/s. When she opens her parachute she slows down sharply, then falls at a steady 5 m/s until she lands.',
   heating: 'Case study: keeping soup hot.\n\nTheo fills three identical cans with 300 g of soup at 80 °C. One is bare, one is wrapped in bubble wrap and one is wrapped in aluminium foil. He measures the temperature after 20 minutes.\n\nBare can: 52 °C\nBubble wrap: 66 °C\nAluminium foil: 60 °C',
-  static: 'Case study: amber and the electron.\n\nAround 600 BC the Greek thinker Thales of Miletus is said to have noticed that amber, rubbed with fur, attracted feathers and dust. The Greek word for amber is ēlektron, which gives us “electricity” and “electron”. Today Kit rubs a balloon on her jumper: the balloon sticks to the wall, and her hair stands on end.',
+  static: 'Case study: amber and the electron.\n\nAround 600 BC the Greek thinker Thales of Miletus is said to have noticed that amber, rubbed with fur, attracted feathers and dust. The Greek word for amber is ēlektron, which gives us “electricity” and “electron”. Today Kit rubs a balloon on his jumper: the balloon sticks to the wall, and his hair stands on end.',
   light: 'Case study: a glass block experiment.\n\nMira shines a thin ray of light into a glass block at different angles and measures the angle of the ray inside the glass. All angles are measured from the normal.\n\nAngle in air (°) | Angle in glass (°)\n0 | 0\n20 | 13\n40 | 25\n60 | 35',
   stars: 'Case study: the life of the Sun.\n\nThe Sun formed about 4.6 billion years ago from a cloud of gas and dust. It is a main-sequence star, fusing hydrogen into helium in its core. In about 5 billion years it will run short of hydrogen, swell into a red giant, then shed its outer layers and shrink to a white dwarf. Stars much more massive than the Sun end in a supernova, leaving a neutron star or a black hole.',
   practicals: 'Case study: Kit’s pendulum results.\n\nKit times 10 swings of a pendulum for different string lengths, three times each.\n\nLength (cm) | Time 1 (s) | Time 2 (s) | Time 3 (s)\n20 | 9.0 | 8.9 | 9.1\n40 | 12.7 | 12.6 | 12.8\n60 | 15.5 | 18.9 | 15.6\n80 | 17.9 | 18.0 | 17.9',
@@ -43,7 +43,7 @@ const topics = [
   // biology
   T('enzymes', 'Enzymes: how they work', 'facts', ['organs'], 'Enzymes are biological catalysts: proteins that speed up reactions without being used up. Each has an active site with a precise shape, so it only fits its own substrate: the lock-and-key model.', 'Explain, using the lock-and-key model, why an enzyme stops working at high temperature.', 'Ask {him} why fresh pineapple stops jelly setting (an enzyme breaks down the protein), but tinned pineapple does not.'),
   T('circulation', 'The heart and circulation', 'facts', ['respiration'], 'The heart is two pumps side by side: the right side sends blood to the lungs, the left side to the rest of the body. Arteries, veins and capillaries each have a structure that fits their job.', 'Explain why the left ventricle has a thicker wall than the right.', 'Take each other’s pulse before and after running up the stairs.'),
-  T('nervous', 'Nerves, reflexes and reaction times', 'facts', ['organs'], 'Receptors detect a stimulus; electrical impulses travel along neurones to the brain or spinal cord; effectors (muscles and glands) respond. Reflexes skip the thinking part of the brain to protect you.', 'Explain the path of a reflex arc when you touch a hot pan.', 'Try the ruler-drop test with {her}, then try it while chatting.'),
+  T('nervous', 'Nerves, reflexes and reaction times', 'facts', ['organs'], 'Receptors detect a stimulus; electrical impulses travel along neurones to the brain or spinal cord; effectors (muscles and glands) respond. Reflexes skip the thinking part of the brain to protect you.', 'Explain the path of a reflex arc when you touch a hot pan.', 'Try the ruler-drop test with {him}, then try it while chatting.'),
   T('transport', 'Plant transport and stomata', 'facts', ['photosynthesis'], 'Water travels up from the roots through xylem and evaporates from the leaves through stomata: transpiration. Sugars made in the leaves travel through phloem to where they are needed.', 'Explain why a plant wilts on a hot, windy day.', 'Stand a white carnation or a celery stick in coloured water and watch the xylem.'),
   T('immunity', 'Microbes, immunity and vaccines', 'facts', ['health'], 'White blood cells defend the body: some engulf pathogens, others make antibodies that lock onto them. Vaccines train the immune system in advance, so it responds faster the next time.', 'Explain why a vaccinated person usually does not become ill when they meet the real pathogen.', 'Ask {him} why antibiotics don’t work on a cold.'),
   T('diet', 'Diet, food tests and energy', 'facts', ['organs'], 'A balanced diet has carbohydrates, proteins, fats, vitamins, minerals, fibre and water. Simple chemical tests show which nutrients a food contains.', 'Explain which test you would use to show a food contains protein, and the colour change.', 'Read a food label together and compare the energy per 100 g of two snacks.'),
@@ -75,7 +75,7 @@ const items = [
   mcq('ez.case1', 'enzymes', 'At which temperature did Kit’s amylase work fastest?', [['37 °C', true], ['10 °C', false, 'It took 300 s at 10 °C: the slowest that worked.'], ['70 °C', false, 'At 70 °C the starch never disappeared at all.']], 'Fastest means shortest time: 60 s at 37 °C, which is body temperature.', CS('enzymes')),
   mcq('ez.case2', 'enzymes', 'Why did the starch never disappear at 70 °C?', [['The enzyme was denatured by the heat', true], ['The heat killed the amylase, which was alive', false, 'Enzymes are proteins, not living things, so they cannot be killed.'], ['The starch boiled away before it could react', false, 'Starch does not boil at 70 °C; the enzyme stopped working.']], 'The high temperature changed the shape of the active site, so the enzyme was denatured. Denaturing is permanent: the substrate no longer fits the active site.', CS('enzymes')),
   mcq('ez.case3', 'enzymes', 'Why was the reaction slow at 10 °C?', [['Slow molecules meant fewer collisions', true], ['The cold had denatured the enzyme', false, 'Cold does not denature enzymes; it slows them down.'], ['There was less starch in the colder tube', false, 'The starch was there; it was broken down slowly.']], 'The molecules moved slowly, so the enzyme and starch collided less often. Low temperature means less kinetic energy, so fewer successful collisions.', CS('enzymes')),
-  mcq('ez.case4', 'enzymes', 'How could Kit make her timings more precise?', [['Test a drop every 10 seconds, not 30', true], ['Use a different enzyme for each temperature', false, 'That would make it unfair.'], ['Only test one temperature, but more often', false, 'She needs several temperatures to see the pattern.']], 'Test a drop every 10 seconds instead of every 30. Testing more often gives a time closer to the true value.', CS('enzymes')),
+  mcq('ez.case4', 'enzymes', 'How could Kit make his timings more precise?', [['Test a drop every 10 seconds, not 30', true], ['Use a different enzyme for each temperature', false, 'That would make it unfair.'], ['Only test one temperature, but more often', false, 'He needs several temperatures to see the pattern.']], 'Test a drop every 10 seconds instead of every 30. Testing every 10 s measures the time to the nearest 10 s instead of the nearest 30 s, so the timing is more precise.', CS('enzymes')),
   written('ez.w', 'enzymes', 'Using Kit’s results, explain how temperature affects the activity of amylase. Use the lock-and-key model in your answer. (6 marks)', ['Describe the pattern: faster up to 37 °C, then slower, then none at 70 °C', 'Use figures from the table', 'Explain the rise: more kinetic energy, more collisions', 'Explain the fall: active site changes shape, enzyme denatured', 'Mention that the optimum is body temperature'], 'As the temperature rises from 10 °C to 37 °C, the time for the starch to disappear falls from 300 s to 60 s, so the enzyme works faster. This is because the molecules have more kinetic energy, so starch collides with the active site more often. Above 37 °C the time rises again (150 s at 50 °C) and at 70 °C the starch never disappears. The high temperature changes the shape of the active site, so starch no longer fits like a key in a lock: the enzyme is denatured. The optimum is about 37 °C, body temperature, because this is a human enzyme.', CS('enzymes')),
   fact('ez.catalyst', 'enzymes', 'An enzyme is a biological…', 'catalyst', ['nutrient', 'hormone', 'antibody'], 'A catalyst speeds up a reaction without being used up.', { accept: ['catalysts'] }),
   mcq('ez.ph', 'enzymes', 'The protease pepsin works best at about pH 2. Where in the body does it work?', [['The stomach', true], ['The mouth', false, 'Saliva is close to neutral.'], ['The small intestine', false, 'The small intestine is slightly alkaline.']], 'The stomach contains hydrochloric acid, so stomach enzymes are adapted to acid.'),
@@ -96,10 +96,10 @@ const items = [
   mcq('ci.pa', 'circulation', 'The pulmonary artery is unusual because it carries…', [['deoxygenated blood', true], ['oxygenated blood', false, 'Most arteries do, but the pulmonary artery carries blood TO the lungs, before it collects oxygen.'], ['no blood at all', false, 'It carries blood from the right ventricle to the lungs.']], 'Arteries are defined by carrying blood AWAY from the heart, not by oxygen.'),
 
   // --- nervous system
-  mcq('nv.case1', 'nervous', 'Why did Kit’s catches get shorter over the first five attempts?', [['Practice made her response quicker', true], ['The ruler got lighter after a few drops', false, 'The ruler did not change.'], ['Mira dropped it from lower down each time', false, 'That would be an unfair test; the starting position should stay the same.']], 'She was improving with practice: her response got quicker. Practice improves reaction time, which is why practice goes are often allowed before recording.', CS('nervous')),
+  mcq('nv.case1', 'nervous', 'Why did Kit’s catches get shorter over the first five attempts?', [['Practice made his response quicker', true], ['The ruler got lighter after a few drops', false, 'The ruler did not change.'], ['Mira dropped it from lower down each time', false, 'That would be an unfair test; the starting position should stay the same.']], 'He was improving with practice: his response got quicker. Practice improves reaction time, which is why practice goes are often allowed before recording.', CS('nervous')),
   mcq('nv.case2', 'nervous', 'What was Kit’s mean catch distance for attempts 3 to 5?', [['11.3 cm', true], ['13.4 cm', false, 'That is the mean of all five, including the early ones.'], ['12.0 cm', false, '(12 + 11 + 11) ÷ 3 = 11.3 cm.']], '11.3 cm (to 1 decimal place). (12 + 11 + 11) ÷ 3 = 34 ÷ 3 = 11.3 cm.', CS('nervous')),
   mcq('nv.case3', 'nervous', 'What does the second set of catches suggest?', [['Distractions slow down reaction time', true], ['Talking speeds up reaction time', false, 'Her catches got LONGER: slower.'], ['The ruler test does not really work', false, 'The test shows a clear difference.']], 'Her brain was processing the conversation as well, so her response was slower.', CS('nervous')),
-  written('nv.w', 'nervous', 'Is catching a falling ruler a reflex? Explain your answer, describing the path the nerve impulses take in Kit’s catch. (6 marks)', ['It is NOT a reflex: it is a conscious response', 'The stimulus is detected by receptors in the eye', 'Sensory neurone to the brain, which decides', 'Motor neurone to the effector: hand muscles', 'Contrast with a reflex arc through the spinal cord, faster and automatic'], 'Catching the ruler is not a reflex, because Kit has to decide to catch it and she improves with practice. Light from the falling ruler is detected by receptors in her eyes. Impulses travel along sensory neurones to her brain, which processes the information and decides to respond. Impulses then travel along motor neurones to the effectors, the muscles in her hand, which contract. A true reflex, like pulling a hand off a hot pan, is automatic and goes through a relay neurone in the spinal cord without the conscious brain, so it is faster.', CS('nervous')),
+  written('nv.w', 'nervous', 'Is catching a falling ruler a reflex? Explain your answer, describing the path the nerve impulses take in Kit’s catch. (6 marks)', ['It is NOT a reflex: it is a conscious response', 'The stimulus is detected by receptors in the eye', 'Sensory neurone to the brain, which decides', 'Motor neurone to the effector: hand muscles', 'Contrast with a reflex arc through the spinal cord, faster and automatic'], 'Catching the ruler is not a reflex, because Kit has to decide to catch it and he improves with practice. Light from the falling ruler is detected by receptors in his eyes. Impulses travel along sensory neurones to his brain, which processes the information and decides to respond. Impulses then travel along motor neurones to the effectors, the muscles in his hand, which contract. A true reflex, like pulling a hand off a hot pan, is automatic and goes through a relay neurone in the spinal cord without the conscious brain, so it is faster.', CS('nervous')),
   order('nv.arc', 'nervous', 'Put the parts of a reflex arc in order.', ['stimulus', 'receptor', 'sensory neurone', 'relay neurone', 'motor neurone', 'effector'], null, 'In a reflex the relay neurone is in the spinal cord, so the conscious brain is bypassed and the response is very fast.'),
   mcq('nv.reflex', 'nervous', 'Why are reflexes faster than conscious responses?', [['They bypass the conscious brain', true], ['They use special, faster-flowing blood', false, 'Nerves, not blood, carry the message.'], ['They work without any neurones at all', false, 'Reflexes use sensory, relay and motor neurones.']], 'They bypass the conscious part of the brain. Speed protects you, for example from burns.'),
   mcq('nv.synapse', 'nervous', 'How does an impulse cross the tiny gap (synapse) between two neurones?', [['A chemical diffuses across', true], ['It jumps across as a spark', false, 'There is no spark: a chemical messenger carries the signal.'], ['The two neurones touch briefly', false, 'There is a real gap.']], 'This is why some drugs, which affect these chemicals, change how we react.'),
@@ -133,7 +133,7 @@ const items = [
   mcq('dt.case2', 'diet', 'Which of Theo’s tests needed heating?', [['Benedict’s test for sugars', true], ['The iodine test for starch', false, 'Iodine works cold.'], ['The biuret test for protein', false, 'Biuret works cold.']], 'Benedict’s turns green, yellow or brick red when heated with a reducing sugar.', CS('diet')),
   mcq('dt.case3', 'diet', 'Theo’s lunch could have been…', [['bread with cheese', true], ['a fizzy drink', false, 'That would contain sugar but no starch, protein or fat.'], ['a glass of water', false, 'Water would give no positive results.']], 'Bread gives starch; cheese gives protein and fat.', CS('diet')),
   written('dt.w', 'diet', 'Describe how to test a food for protein and for starch, including safety, and explain what Theo’s results show about his lunch. (6 marks)', ['Grind the food and mix with water', 'Starch: iodine, orange-brown to blue-black', 'Protein: biuret, blue to purple', 'Safety: eye protection; handle chemicals carefully', 'Interpret Theo’s results: starch, protein and fat, no sugar'], 'Grind the food with a pestle and mortar and mix it with a little water. For starch, add a few drops of iodine solution: it changes from orange-brown to blue-black if starch is present. For protein, add biuret solution to a sample in a test tube: it changes from blue to purple. Wear eye protection, because biuret contains copper sulfate and an alkali. Theo’s lunch turned blue-black with iodine and purple with biuret, so it contained starch and protein. It also went cloudy in the ethanol test, so it contained fat, but Benedict’s stayed blue, so there was no reducing sugar.', CS('diet')),
-  mcq('dt.scurvy', 'diet', 'Sailors on long voyages used to get scurvy. What was missing from their diet?', [['Vitamin C', true], ['Protein', false, 'They ate salted meat, so they had protein.'], ['Fibre', false, 'Fat deficiency is not the cause of scurvy.']], 'Fresh fruit, especially citrus, prevents scurvy.'),
+  mcq('dt.scurvy', 'diet', 'Sailors on long voyages used to get scurvy. What was missing from their diet?', [['Vitamin C', true], ['Protein', false, 'They ate salted meat, so they had protein.'], ['Fibre', false, 'Fibre keeps food moving through the gut; a lack of it does not cause scurvy.']], 'Fresh fruit, especially citrus, prevents scurvy.'),
   mcq('dt.iron', 'diet', 'A lack of iron in the diet can cause anaemia. Why does it make people tired?', [['Less haemoglobin, so less oxygen carried', true], ['Iron gives the muscles energy directly', false, 'Iron is needed for haemoglobin, which carries oxygen.'], ['Iron is needed to help people fall asleep', false, 'The tiredness comes from less oxygen reaching the cells.']], 'Iron is needed to make haemoglobin, so the blood carries less oxygen. Red meat, beans and green leafy vegetables are good sources of iron.'),
   mcq('dt.fibre', 'diet', 'What is the main job of fibre in the diet?', [['It keeps food moving through the gut', true], ['It provides most of our daily energy', false, 'Carbohydrates and fats provide energy.'], ['It builds and repairs our muscles', false, 'Protein builds muscle.']], 'It keeps food moving through the intestines and prevents constipation. Fibre is mostly cellulose from plants, which humans cannot digest.'),
   mcq('dt.energy', 'diet', 'Which nutrient releases the most energy per gram?', [['Fat', true], ['Carbohydrate', false, 'Carbohydrates release about 17 kJ per gram; fats about 37 kJ.'], ['Protein', false, 'Protein is similar to carbohydrate per gram.']], 'This is why animals store energy as fat.'),
@@ -175,7 +175,7 @@ const items = [
   // --- extraction
   mcq('ex.case1', 'extraction', 'Why was gold found as pure nuggets?', [['It is too unreactive to combine with others', true], ['It is the most common metal in the crust', false, 'Aluminium and iron are far more common.'], ['Ancient people purified it before burying it', false, 'Gold is found naturally as the metal.']], 'It is so unreactive that it does not combine with other elements. Very unreactive metals are found native: gold, platinum, sometimes silver and copper.', CS('extraction')),
   mcq('ex.case2', 'extraction', 'Why did the Iron Age come after the Bronze Age?', [['Iron needs hotter furnaces to extract', true], ['There was no iron on Earth before then', false, 'Iron was always there; extracting it was harder.'], ['People preferred the colour of bronze', false, 'Iron tools are better once you can make them.']], 'Extracting iron from its ore needs hotter furnaces than copper and tin do. Iron is more reactive than copper, so separating it from oxygen takes more energy.', CS('extraction')),
-  mcq('ex.case3', 'extraction', 'Why was aluminium once more precious than gold?', [['It was too reactive to extract with carbon', true], ['It is far rarer than gold in the crust', false, 'It is the most common metal in the crust.'], ['It is heavier than gold, so harder to mine', false, 'It is much lighter.']], 'It is too reactive to extract with carbon, and extraction by electricity was expensive. Cheap electricity and the Hall–Héroult process (1886) made aluminium cheap.', CS('extraction')),
+  mcq('ex.case3', 'extraction', 'Why was aluminium once more precious than gold?', [['It was too reactive to extract with carbon', true], ['It is far rarer than gold in the crust', false, 'It is the most common metal in the crust.'], ['It is heavier than gold, so harder to mine', false, 'It is much lighter.']], 'It is too reactive to extract with carbon, and the early methods, using reactive metals such as sodium, were very expensive. Cheap electricity and the Hall–Héroult process (1886) made aluminium cheap.', CS('extraction')),
   written('ex.w', 'extraction', 'Explain how the reactivity of a metal decides how it is extracted. Use gold, iron and aluminium as examples. (6 marks)', ['The more reactive the metal, the harder it is to extract', 'Gold: unreactive, found native', 'Iron: below carbon, so heated with carbon (reduction) in a blast furnace', 'Aluminium: above carbon, so electrolysis', 'Link to history: Bronze Age, Iron Age, aluminium in 1886'], 'The more reactive a metal is, the more strongly it holds on to other elements in its ore, so the harder it is to extract. Gold is so unreactive that it is found as the pure metal and just needs to be dug up. Iron is below carbon in the reactivity series, so heating iron oxide with carbon in a blast furnace removes the oxygen: carbon is more reactive and takes it. This is called reduction. Aluminium is above carbon, so carbon cannot take the oxygen away; it has to be extracted by electrolysis, which uses a lot of electricity. This explains why gold was used first, iron only once furnaces were hot enough, and aluminium only after 1886.', CS('extraction')),
   mcq('ex.ore', 'extraction', 'What is an ore?', [['A rock with enough metal to be worth extracting', true], ['Any rock that has some metal in it at all', false, 'Almost all rocks contain some metal; an ore has enough to make extraction worthwhile.'], ['A lump of pure metal found in the ground', false, 'That is a native metal, like gold.']], 'A rock that contains enough of a metal or metal compound to be worth extracting. Haematite is an iron ore; bauxite is an aluminium ore.'),
   order('ex.series', 'extraction', 'Put these in order of reactivity, most reactive first.', ['potassium', 'magnesium', 'carbon', 'iron', 'copper', 'gold'], null, 'Carbon is included as a guide: metals below it can be extracted by heating with carbon.'),
@@ -256,7 +256,7 @@ const items = [
   mcq('ht.flask', 'heating', 'Why does a vacuum flask keep drinks hot?', [['The vacuum stops conduction and convection', true], ['It contains a small heater in the base', false, 'It has no power supply.'], ['The vacuum itself heats the drink up', false, 'A vacuum just stops heat moving.']], 'The vacuum stops conduction and convection, and the silvered walls reduce radiation. Conduction and convection need particles; a vacuum has almost none.'),
 
   // --- static electricity
-  mcq('st.case1', 'static', 'When Kit rubs the balloon on her jumper, what actually moves?', [['Electrons, jumper to balloon', true], ['Protons, from the balloon to the jumper', false, 'Protons are fixed in the nucleus; only electrons move.'], ['Air, pushed out from the wool', false, 'Charge moves as electrons.']], 'Electrons, from the jumper to the balloon. The balloon gains electrons and becomes negatively charged.', CS('static')),
+  mcq('st.case1', 'static', 'When Kit rubs the balloon on his jumper, what actually moves?', [['Electrons, jumper to balloon', true], ['Protons, from the balloon to the jumper', false, 'Protons are fixed in the nucleus; only electrons move.'], ['Air, pushed out from the wool', false, 'Charge moves as electrons.']], 'Electrons, from the jumper to the balloon. The balloon gains electrons and becomes negatively charged.', CS('static')),
   mcq('st.case2', 'static', 'Why does Kit’s hair stand on end?', [['The hairs have like charges, which repel', true], ['The hairs are attracted to each other', false, 'Like charges repel, so they push apart.'], ['Static electricity makes hair grow longer', false, 'It pushes the hairs apart.']], 'Each hair gets the same charge, and like charges repel. Each hair is pushed away from the others.', CS('static')),
   mcq('st.case3', 'static', 'The word “electron” comes from the Greek word for…', [['amber', true], ['lightning', false, 'The Greek for a thunderbolt is keraunos.'], ['spark', false, 'It comes from ēlektron, amber.']], 'Rubbed amber was the first known example of static electricity.', CS('static')),
   written('st.w', 'static', 'Explain why a rubbed balloon becomes charged, and why it sticks to a wall even though the wall is not charged. (6 marks)', ['Friction transfers electrons', 'The balloon gains electrons: negative', 'The jumper loses electrons: positive', 'Near the wall, the balloon repels electrons in the wall’s surface', 'The surface of the wall becomes slightly positive, so it attracts the balloon'], 'When the balloon is rubbed on the jumper, friction transfers electrons from the jumper to the balloon. The balloon gains electrons, so it becomes negatively charged, and the jumper is left positively charged. When the negative balloon is held near the wall, it repels electrons in the surface of the wall, pushing them slightly away. This leaves the surface of the wall nearest the balloon with a small positive charge. Opposite charges attract, so the negative balloon is attracted to the positive surface and sticks to the wall, even though the wall as a whole has no overall charge.', CS('static')),
@@ -281,7 +281,7 @@ const items = [
   // --- stars
   mcq('sr.case1', 'stars', 'What keeps the Sun shining?', [['Fusion of hydrogen into helium', true], ['Burning coal and oil in its core', false, 'Burning could not last billions of years.'], ['Light reflected from other stars', false, 'The Sun makes its own light.']], 'Nuclear fusion of hydrogen into helium in its core. Fusion releases enormous amounts of energy.', CS('stars')),
   order('sr.case2', 'stars', 'Put the life of the Sun in order.', ['cloud of gas and dust', 'main-sequence star', 'red giant', 'white dwarf'], null, 'A star like the Sun ends quietly as a white dwarf.', CS('stars')),
-  mcq('sr.case3', 'stars', 'How will a star much more massive than the Sun end its life?', [['In a supernova', true], ['As a white dwarf, like the Sun', false, 'Only stars like the Sun end as white dwarfs.'], ['It will last for ever', false, 'Massive stars use their fuel faster than small ones.']], 'In a supernova explosion, leaving a neutron star or a black hole. Massive stars use up their fuel quickly and die violently, in a supernova that leaves a neutron star or a black hole.', CS('stars')),
+  mcq('sr.case3', 'stars', 'How will a star much more massive than the Sun end its life?', [['In a supernova', true], ['As a white dwarf, like the Sun', false, 'Only stars like the Sun end as white dwarfs.'], ['It will last for ever', false, 'Massive stars use their fuel faster than small ones.']], 'Massive stars use up their fuel quickly and die violently, in a supernova that leaves a neutron star or a black hole.', CS('stars')),
   written('sr.w', 'stars', 'Compare the life cycle of a star like the Sun with the life cycle of a star much more massive than the Sun. (6 marks)', ['Both form from a cloud of gas and dust (nebula)', 'Both spend most of their life on the main sequence, fusing hydrogen', 'Sun: red giant, then white dwarf', 'Massive star: red supergiant, then supernova', 'It ends as a neutron star or black hole; massive stars have shorter lives'], 'Both kinds of star begin in a cloud of gas and dust, which collapses under gravity until it is hot enough for nuclear fusion to start. Both then spend most of their lives as main-sequence stars, fusing hydrogen into helium. A star like the Sun, after about 10 billion years in total, swells into a red giant, then sheds its outer layers and shrinks into a white dwarf, which slowly cools. A much more massive star uses up its hydrogen far more quickly, swells into a red supergiant and then explodes as a supernova. What is left collapses into a neutron star or, if it is massive enough, a black hole.', CS('stars')),
   mcq('sr.fusion', 'stars', 'In a main-sequence star, what stops the star collapsing under its own gravity?', [['Outward pressure from fusion balances gravity', true], ['Its strong magnetic field holds it together', false, 'The balance is between gravity and outward pressure.'], ['Nothing: all stars are collapsing quickly', false, 'Main-sequence stars are stable for billions of years.']], 'The outward pressure from the energy released by fusion balances gravity. When the hydrogen runs short, the balance changes and the star swells into a giant.'),
   mcq('sr.ly', 'stars', 'A light year is a measure of…', [['distance', true], ['time', false, 'Despite the name, it is a distance.'], ['brightness', false, 'It measures distance.']], 'A light year is a distance: how far light travels in a year, about 9.5 million million kilometres.'),
@@ -292,8 +292,8 @@ const items = [
   // --- practical skills
   mcq('pr.case1', 'practicals', 'Which of Kit’s results is anomalous?', [['18.9 s for the 60 cm pendulum', true], ['9.0 s for the 20 cm pendulum', false, 'It is close to 8.9 and 9.1.'], ['12.6 s for the 40 cm pendulum', false, 'It fits with 12.7 and 12.8.']], 'It is far from the other two readings at that length (15.5 and 15.6).', CS('practicals')),
   mcq('pr.case2', 'practicals', 'What is the best mean time for 10 swings at 60 cm?', [['15.55 s', true], ['16.67 s', false, 'That includes the anomaly of 18.9 s.'], ['18.90 s', false, 'That is the anomaly.']], '15.55 s, leaving out the anomaly. (15.5 + 15.6) ÷ 2 = 15.55 s.', CS('practicals')),
-  mcq('pr.case3', 'practicals', 'Why did Kit time 10 swings instead of 1?', [['It reduces the effect of reaction time', true], ['One swing is far too fast to see', false, 'You can see it; the timing error is the problem.'], ['It makes the pendulum swing faster', false, 'It does not change the swing.']], 'Timing many swings reduces the effect of her reaction time, so the result is more accurate. Divide by 10 afterwards to get the time for one swing.', CS('practicals')),
-  written('pr.w', 'practicals', 'Evaluate Kit’s pendulum experiment. Comment on the anomaly, the repeats, and how far her results support the conclusion “longer pendulums swing more slowly”. (6 marks)', ['Identify the anomaly (18.9 s) and say it should be left out', 'The repeats are close, so the results are repeatable', 'Timing 10 swings reduces reaction-time error', 'Trend: time increases with length, but not in proportion', 'Improvements (more lengths, light gates or video) and a clear judgement'], 'Kit’s results are mostly repeatable: at each length, two or three readings are within 0.2 s of each other. The reading of 18.9 s at 60 cm is anomalous, probably a miscount of swings, so it should be left out, giving a mean of 15.55 s. Timing 10 swings and dividing by 10 reduced the effect of her reaction time. The results clearly support the conclusion: the time for 10 swings rises from about 9.0 s at 20 cm to about 17.9 s at 80 cm. However, the time does not double when the length doubles, so the relationship is not directly proportional. She could test more lengths, and use a light gate or a slow-motion video for more precise timing.', CS('practicals')),
+  mcq('pr.case3', 'practicals', 'Why did Kit time 10 swings instead of 1?', [['It reduces the effect of reaction time', true], ['One swing is far too fast to see', false, 'You can see it; the timing error is the problem.'], ['It makes the pendulum swing faster', false, 'It does not change the swing.']], 'Timing many swings reduces the effect of his reaction time, so the result is more accurate. Divide by 10 afterwards to get the time for one swing.', CS('practicals')),
+  written('pr.w', 'practicals', 'Evaluate Kit’s pendulum experiment. Comment on the anomaly, the repeats, and how far his results support the conclusion “longer pendulums swing more slowly”. (6 marks)', ['Identify the anomaly (18.9 s) and say it should be left out', 'The repeats are close, so the results are repeatable', 'Timing 10 swings reduces reaction-time error', 'Trend: time increases with length, but not in proportion', 'Improvements (more lengths, light gates or video) and a clear judgement'], 'Kit’s results are mostly repeatable: at each length, two or three readings are within 0.2 s of each other. The reading of 18.9 s at 60 cm is anomalous, probably a miscount of swings, so it should be left out, giving a mean of 15.55 s. Timing 10 swings and dividing by 10 reduced the effect of her reaction time. The results clearly support the conclusion: the time for 10 swings rises from about 9.0 s at 20 cm to about 17.9 s at 80 cm. However, the time does not double when the length doubles, so the relationship is not directly proportional. She could test more lengths, and use a light gate or a slow-motion video for more precise timing.', CS('practicals')),
   tmpl('pr.vars', 'practicals', 'y8tVariables'),
   mcq('pr.zero', 'practicals', 'What kind of error is caused by a balance that always reads 0.5 g too high?', [['A systematic error', true], ['A random error', false, 'A random error varies unpredictably; this one is always the same.'], ['An anomaly', false, 'Every reading is affected equally.']], 'A systematic error (a zero error). Systematic errors shift every result the same way, and repeats do not reveal them.'),
   mcq('pr.resolution', 'practicals', 'A thermometer marked every 1 °C has a resolution of…', [['1 °C', true], ['100 °C', false, 'That might be its range.'], ['0 °C', false, 'Resolution is the smallest change it can show.']], 'A digital thermometer reading to 0.1 °C has a finer resolution.'),
@@ -322,10 +322,290 @@ const items = [
   tmpl('mm.calc', 'momentum', 'y8tMomentum'),
   mcq('mm.crumple', 'momentum', 'Why do crumple zones make cars safer in a crash?', [['The collision lasts longer, so the force is smaller', true], ['They make the car heavier, so it stops sooner', false, 'The point is the longer collision time.'], ['They stop the car from crashing in the first place', false, 'They reduce injury once a crash happens.']], 'They make the collision last longer, so the force on the passengers is smaller. The same change in momentum over a longer time needs a smaller force.'),
   mcq('mm.conserve', 'momentum', 'In a collision with no outside forces, the total momentum…', [['stays the same', true], ['always increases', false, 'Momentum is conserved.'], ['always becomes zero', false, 'Only if it started at zero.']], 'Momentum before = momentum after.'),
-  mcq('mm.recoil', 'momentum', 'When a cannon fires a cannonball forwards, the cannon moves backwards. Why?', [['Momentum is conserved', true], ['The ball pushes air back at the cannon', false, 'It is conservation of momentum.'], ['The cannon is lighter than the ball', false, 'The cannon is much heavier, which is why it moves back slowly.']], 'The total momentum was zero before, so the cannon gets equal momentum the other way. The total momentum was zero before firing, so the cannon gets equal momentum in the opposite direction. This recoil is the same reason a rocket moves forwards.'),
+  mcq('mm.recoil', 'momentum', 'When a cannon fires a cannonball forwards, the cannon moves backwards. Why?', [['Momentum is conserved', true], ['The ball pushes air back at the cannon', false, 'It is conservation of momentum.'], ['The cannon is lighter than the ball', false, 'The cannon is much heavier, which is why it moves back slowly.']], 'The total momentum was zero before firing, so the cannon gets equal momentum in the opposite direction. This recoil is the same reason a rocket moves forwards.'),
   fact('mm.unit', 'momentum', 'What is the unit of momentum?', 'kg m/s', ['N', 'J', 'm/s²'], 'Mass (kg) × velocity (m/s).', { accept: ['kgm/s', 'kg m s-1', 'kg·m/s'] }),
   mcq('mm.vector', 'momentum', 'Why is momentum called a vector quantity?', [['It has a direction as well as a size', true], ['It is always positive, whatever happens', false, 'Momentum in the opposite direction is negative.'], ['It is measured using vectors and arrows', false, 'It is measured in kg m/s.']], 'Velocity is a vector, so momentum is too.'),
   mcq('mm.knees', 'momentum', 'Why do you bend your knees when you land after a jump?', [['It takes longer to stop, reducing the force', true], ['It makes you lighter as you land', false, 'Your mass does not change.'], ['It increases your momentum on impact', false, 'Your momentum falls to zero either way.']], 'It increases the time taken to stop, which reduces the force on your legs. The same idea as crumple zones and gym mats.'),
 ];
+
+// ---------------------------------------------------------------------------------------------
+// Memory hooks (optional): a topic hook, and per-item `hook` (a mnemonic or memory trick) and
+// `example` (a real-world connection). Kept in this separate block, keyed by id (without the
+// `science.m.` prefix), so corrections to the items above never collide with it. Unknown ids throw.
+const TOPIC_HOOKS = {
+  enzymes: 'Lock and key: only the **right substrate** fits the active site, and too much heat **bends the lock**.',
+  circulation: '**A**rteries carry blood **A**way from the heart; veins bring it back; capillaries swap in between.',
+  nervous: 'Stimulus → receptor → sensory → relay → motor → effector: a reflex takes the **spinal shortcut**.',
+  transport: '**Ph**loem carries **f**ood (sugar), up and down; xylem carries water, one way: up.',
+  immunity: 'Phagocytes **eat** invaders; lymphocytes make **antibodies**; memory cells **remember** them.',
+  diet: 'Iodine → **starch**, Benedict’s → **sugar**, biuret → **protein**, ethanol → **fat**.',
+  biodiversity: '**K**ing **P**hilip **C**ame **O**ver **F**or **G**ood **S**oup: kingdom, phylum, class, order, family, genus, species.',
+  geneng: 'Selective breeding **picks the parents**; genetic engineering **moves the gene**.',
+  formulae: 'Atoms in = atoms out: **balance** the equation and the mass balances too.',
+  extraction: 'Below carbon? Heat with **carbon**. Above carbon? **Electrolysis**. Gold? Just dig it up.',
+  rates: 'Speed it up: **heat it, crowd it, crush it, or catalyse it**.',
+  energychange: '**Ex**othermic: heat **ex**its. **En**dothermic: heat **en**ters.',
+  materials: 'Polymers = **chains**, ceramics = **hard but brittle**, composites = **teamwork**, alloys = **metal mixtures**.',
+  resources: '**Reduce** first, then **reuse**, then **recycle**.',
+  motion: 'Distance–time gradient = **speed**; velocity–time gradient = **acceleration**, area = **distance**.',
+  work: 'Work done = force × distance: no movement, **no work**.',
+  heating: 'Conduction **touches**, convection **flows**, radiation **flies** (it needs no particles).',
+  static: 'Only **electrons** move; like charges **repel**, opposite charges **attract**.',
+  light: '**FAST**: going **F**aster, bend **A**way from the normal; going **S**lower, bend **T**owards it.',
+  stars: 'Sun-sized: nebula → main sequence → red giant → white dwarf. Massive: → red supergiant → supernova.',
+  practicals: 'Random errors **scatter** results; systematic errors **shift** them all the same way.',
+  electrolysis: '**PANIC**: **P**ositive is **A**node, **N**egative **I**s **C**athode.',
+  induction: '**Move** a magnet in a coil and you get a voltage; stop moving and it stops.',
+  momentum: 'p = m × v: a heavy lorry crawling along has far **more momentum** than a speeding bullet, because its mass is so huge.',
+};
+
+const MEMORY = {
+  // --- enzymes
+  'ez.case1': { hook: 'Human enzymes work best at **body temperature**, about 37 °C.' },
+  'ez.case2': { hook: 'Too hot and the **lock is bent**: denatured for good.', example: 'Tinned pineapple lets jelly set: heating in the canning denatures its protein-digesting enzyme.' },
+  'ez.case3': { hook: 'Cold makes enzymes **sluggish**, not broken: warm them and they work again.', example: 'Food keeps longer in the fridge because microbes’ enzymes work slowly in the cold.' },
+  'ez.case4': { hook: 'Check **more often**, and your timing gets closer to the true moment.' },
+  'ez.catalyst': { hook: 'A catalyst is a **matchmaker**: it helps others react but stays unchanged itself.', example: 'A car’s catalytic converter uses metals such as platinum to clean its exhaust gases.' },
+  'ez.ph': { hook: 'Pepsin loves **acid**: it is the stomach’s protein digester.' },
+  'ez.specific': { hook: 'One enzyme, one **key shape**: amylase fits starch only.' },
+  'ez.catalase': { hook: 'Catalase is the **bubble-maker**: hydrogen peroxide → water + oxygen.', example: 'Hydrogen peroxide fizzes on a cut because body cells contain catalase.' },
+  'ez.washing': { hook: 'Biological powders: **warm, not boiling**, or the stain-eating enzymes denature.', example: 'A 30 °C wash uses much less energy than a 90 °C one, because less heating is needed.' },
+
+  // --- circulation
+  'ci.case1': { hook: 'Harder work = faster **deliveries** of oxygen and glucose to the muscles.' },
+  'ci.case2': { hook: 'Fitter hearts **bounce back faster** after exercise.', example: 'Fitness watches record your resting heart rate and how fast it recovers.' },
+  'ci.case3': { hook: 'Percentage increase = **change ÷ original × 100**.' },
+  'ci.route': { hook: '**A** comes before **V**: blood enters an **A**trium first, then the **V**entricle pumps it out.' },
+  'ci.left': { hook: 'The **left** ventricle has the **longest** trip, all round the body, so it has the thickest wall.' },
+  'ci.valves': { hook: 'Valves are **one-way doors**.', example: 'The “lub-dub” of a heartbeat is the sound of the heart valves snapping shut.' },
+  'ci.vessels': { hook: 'Capillary comes from Latin capillus, **hair**: these vessels are even thinner than a hair.' },
+  'ci.double': { hook: 'A **figure of eight**: heart → lungs → heart → body → heart.' },
+  'ci.pa': { hook: '**A**rteries go **A**way from the heart, even when their blood is low in oxygen.' },
+
+  // --- nervous system
+  'nv.case1': { hook: 'Practice makes **faster**: the brain gets better at the job.' },
+  'nv.case2': { hook: 'Mean: **add them up, then divide** by how many.' },
+  'nv.case3': { hook: 'A busy brain is a **slower** brain.', example: 'This is one reason why using a hand-held phone while driving is illegal in the UK.' },
+  'nv.arc': { hook: 'In through the **receptor**, round through the **spinal cord**, out to the **effector**.', example: 'Your hand jerks off a hot pan before you even feel the pain.' },
+  'nv.reflex': { hook: 'Reflexes take a **shortcut** through the spinal cord.', example: 'When a doctor taps below your knee, your leg kicks without you deciding to.' },
+  'nv.synapse': { hook: 'At a synapse the message changes from **electrical to chemical**, and back again.' },
+  'nv.effector': { hook: '**E**ffectors **e**ffect the response: muscles and glands.', example: 'Watering eyes when you chop onions: the tear glands are effectors.' },
+  'nv.cns': { hook: 'CNS = **brain + spinal cord**: the control room.', example: 'The skull and the backbone are bony armour for the CNS.' },
+
+  // --- plant transport
+  'tr.case1': { hook: 'Wind carries damp air away, so more water can **evaporate**.', example: 'Washing on the line dries faster on a breezy day for the same reason.' },
+  'tr.case2': { hook: 'Humid air = **slower** evaporation.', example: 'Towels dry slowly in a steamy bathroom.' },
+  'tr.case3': { hook: 'Stomata hide **underneath**, in the shade, to save water.' },
+  'tr.potometer': { hook: 'Poto- is from the Greek for **drink**: a potometer measures how fast a shoot drinks.' },
+  'tr.phloem': { hook: '**Ph**loem moves **f**ood, both ways.', example: 'Aphids feed by piercing the phloem and sucking out the sugary sap.' },
+  'tr.roothair': { hook: 'More **surface area**, more uptake: millions of tiny hairs.' },
+  'tr.guard': { hook: 'Guard cells are the **doormen** of the stomata.' },
+  'tr.wilt': { hook: 'Water out faster than water in = **floppy** cells and droopy leaves.', example: 'A wilted pot plant perks up within hours of a good watering.' },
+
+  // --- immunity
+  'im.case1': { hook: 'Cowpox was a **practice run** for smallpox.' },
+  'im.case2': { hook: 'Today: **consent, safety testing and ethics** before any trial.' },
+  'im.case3': { hook: 'Herd immunity: if nearly everyone is immune, the disease has **nowhere to go**.', example: 'Measles can spread again when too few children are vaccinated.' },
+  'im.phago': { hook: 'Phago-cyte = **eating cell** (Greek): it engulfs microbes.' },
+  'im.antibiotic': { hook: 'Antibiotics are **bacteria-killers**: useless against viruses.', example: 'For a cold, doctors usually advise rest and fluids, not antibiotics.' },
+  'im.resist': { hook: 'Antibiotics don’t create resistance; they **select** the bacteria that already have it.' },
+  'im.fleming': { hook: 'Fleming came back from holiday to a **mouldy dish**: penicillin.', example: 'Penicillin comes from Penicillium, a relative of the mould in blue cheese.' },
+  'im.skin': { hook: 'First line = **keep them out**: skin, mucus and cilia.', example: 'Sneezing and coughing blow trapped microbes out of the airways.' },
+
+  // --- diet
+  'dt.case1': { hook: 'Iodine **starch**, Benedict’s **sugar**, biuret **protein**, ethanol **fat**.' },
+  'dt.case2': { hook: '**B**enedict’s needs a **B**ath: a hot water bath.' },
+  'dt.case3': { hook: 'Bread = **starch**; cheese = **protein and fat**.' },
+  'dt.scurvy': { hook: 'Vitamin **C** for long voyages at **sea**.', example: 'British sailors were nicknamed “limeys” after the lime juice they drank.' },
+  'dt.iron': { hook: 'Iron is the core of **haemoglobin**: no iron, fewer oxygen carriers.', example: 'Spinach, lentils and red meat are all good sources of iron.' },
+  'dt.fibre': { hook: 'Fibre is the **broom** of the gut.', example: 'Wholemeal bread, oats and beans are high in fibre.' },
+  'dt.energy': { hook: 'Fat gives about **37 kJ/g**: more than double carbohydrate or protein (about 17).' },
+  'dt.cal': { hook: 'Heat lost to the air = an answer **too low** every time: a systematic error.' },
+
+  // --- biodiversity and classification
+  'bd.case1': { hook: 'Bio-diversity = **variety of life**: count the kinds, not just the number.' },
+  'bd.case2': { hook: 'Random placing beats **cherry-picking**.' },
+  'bd.case3': { hook: 'More kinds of flowers, more **food**, more insects.', example: 'Many councils now leave roadside verges unmown in spring to help bees.' },
+  'bd.ranks': { hook: '**K**ids **P**refer **C**heese **O**ver **F**ried **G**reen **S**pinach: kingdom down to species.', example: 'Humans: Animalia, Chordata, Mammalia, Primates, Hominidae, Homo, sapiens.' },
+  'bd.binomial': { hook: '**Genus** first, with a capital; **species** second, in lower case: Panthera leo.', example: 'Humans are Homo sapiens; the pet cat is Felis catus.' },
+  'bd.species': { hook: 'Same species = can have **fertile** young together.', example: 'A Great Dane and a Chihuahua look nothing alike, but they are the same species.' },
+  'bd.seedbank': { hook: 'A seed bank is a **back-up copy** of the world’s plants.', example: 'The Svalbard Global Seed Vault stores seeds deep inside an Arctic mountain in Norway.' },
+  'bd.threat': { hook: 'Habitat loss: **no home, no species**.', example: 'Clearing rainforest for farmland in Borneo destroys the homes of orangutans.' },
+
+  // --- genetic engineering
+  'ge.case1': { hook: 'GM = a **cut-and-paste** of genes from one species into another.' },
+  'ge.case2': { hook: 'Answer from the **text**: which worry does the case study actually mention?' },
+  'ge.case3': { hook: 'Beta-carotene is the orange pigment the body turns into **vitamin A**.', example: 'Carrots get their orange colour from beta-carotene too.' },
+  'ge.insulin': { hook: 'Given the human gene, bacteria become tiny **insulin factories**.', example: 'Human insulin made by GM bacteria went on sale in 1982, largely replacing insulin from pigs and cows.' },
+  'ge.selective': { hook: 'Selective breeding: **pick the parents**. Genetic engineering: **move the gene**.', example: 'Every dog breed, from pugs to greyhounds, came from selective breeding.' },
+  'ge.crispr': { hook: 'CRISPR is **molecular scissors** with a satnav: it finds one exact gene and cuts it there.' },
+  'ge.bt': { hook: 'Bt crops carry their own **built-in insecticide**.' },
+  'ge.dolly': { hook: 'A clone is an exact **genetic copy**.', example: 'Dolly was cloned in Scotland and named after the singer Dolly Parton.' },
+
+  // --- formulae and conservation of mass
+  'fm.case1': { hook: 'Change in mass = **after − before**.' },
+  'fm.case2': { hook: 'Burning metals **gain** mass: they grab oxygen from the air.' },
+  'fm.case3': { hook: 'Lid **on** to keep the smoke in; lifted **now and then** to let oxygen in.' },
+  'fm.mass': { hook: 'Mass of reactants = **mass of products**: nothing appears or disappears.' },
+  'fm.mr': { hook: 'Mr: **add up the Ar of every atom**; multiply everything in a bracket by the number outside it.' },
+  'fm.count': { hook: 'H₂SO₄: **2 + 1 + 4 = 7** atoms; each small number counts the atom just before it.' },
+  'fm.balanced': { hook: 'Balance with **big numbers in front**, never by changing the small ones.' },
+  'fm.diatomic': { hook: '**BrINClHOF** (say “brinkle-hoff”): Br, I, N, Cl, H, O and F go about in pairs.' },
+
+  // --- extraction
+  'ex.case1': { hook: 'Gold is too **lazy** to react, so it waits in the ground as nuggets.', example: 'People still pan for gold in some Scottish rivers.' },
+  'ex.case2': { hook: 'Stone → Bronze → Iron: each new age needed a **hotter furnace**.' },
+  'ex.case3': { hook: 'Aluminium is **common but clingy**: it holds its oxygen too tightly for carbon to take.', example: 'The French emperor Napoleon III is said to have kept aluminium cutlery for his most honoured guests.' },
+  'ex.ore': { hook: 'An ore is a rock that is **worth mining** for its metal.', example: 'Bauxite, the main aluminium ore, is mined in huge amounts in Australia and Guinea.' },
+  'ex.series': { hook: 'Please Stop Calling Me A Careless Zebra Instead Try Learning How Copper Saves Gold: K Na Ca Mg Al C Zn Fe Sn Pb H Cu Ag Au', example: 'Iron is below carbon, so blast furnaces make it with coke (carbon); aluminium is above, so it needs electrolysis.' },
+  'ex.displace': { hook: 'A more reactive metal **steals the place** of a less reactive one.' },
+  'ex.reduction': { hook: 'Reduction = **losing oxygen**; oxidation = gaining it. Here the iron oxide is reduced and the carbon oxidised.', example: 'Blast furnaces, like those that once roared at Port Talbot in Wales, make iron this way.' },
+  'ex.recycle': { hook: 'Recycling aluminium means **melting** it (cheap), not **electrolysing** ore (costly).', example: 'A recycled drinks can can be back on the shelf in as little as 60 days.' },
+
+  // --- rates of reaction
+  'rt.case1': { hook: 'Powder = **more surface**, so more collisions.', example: 'Small twigs catch fire much more easily than a big log.' },
+  'rt.case2': { hook: 'The curve goes **flat** when a reactant runs out.' },
+  'rt.case3': { hook: 'Mean rate = **total product ÷ total time**.' },
+  'rt.calc': { hook: 'Rate = amount of product ÷ time: watch the **units**, such as cm³/s or g/s.' },
+  'rt.method': { hook: 'Measure a rate: **catch the gas** or **watch the mass fall**, at regular times.' },
+  'rt.catalyst': { hook: 'A catalyst is a **lower route over the hill**: less activation energy, and it is not used up.', example: 'Catalytic converters in car exhausts speed up reactions that clean the gases.' },
+  'rt.conc': { hook: 'Concentration = **crowding**: a packed corridor means more bumps.' },
+  'rt.activation': { hook: 'Activation energy is the **hill to climb** before a reaction can start.', example: 'A match will not light until you strike it: the friction supplies the activation energy.' },
+
+  // --- energy changes
+  'ec.case1': { hook: '**Ex**othermic: heat **ex**its, so the temperature goes **up**.' },
+  'ec.case2': { hook: 'Cold pack = **endothermic**: it draws heat out of the injury.', example: 'Sports first-aid kits often carry instant cold packs you squeeze to start the reaction.' },
+  'ec.case3': { hook: 'Temperature change = **end − start**.' },
+  'ec.profile': { hook: 'An exothermic profile goes **downhill**: the products end lower.' },
+  'ec.combust': { hook: 'Photosynthesis **soaks up** light energy: endothermic.' },
+  'ec.bonds': { hook: '**MEXO BENDO**: **M**aking bonds is **EXO**thermic; **B**reaking bonds is **ENDO**thermic.' },
+  'ec.decomp': { hook: 'If it stops when the heating stops, it is **endothermic**.' },
+
+  // --- materials
+  'mt.case1': { hook: 'Strong **and** light wins races: carbon fibre.', example: 'Top racing bikes have carbon-fibre frames weighing only about a kilogram.' },
+  'mt.case2': { hook: 'Every material choice is a **trade-off**.' },
+  'mt.case3': { hook: 'Composite = **fibres + glue**, like straw in mud bricks.' },
+  'mt.alloy': { hook: 'Odd-sized atoms **jam the layers**, so they cannot slide: harder.', example: 'Pure gold is too soft for rings, so it is alloyed: 9 carat gold is only 37.5% gold.' },
+  'mt.polymer': { hook: 'Poly = **many**, mer = **part** (Greek): a polymer is many parts joined.', example: 'Plastic carrier bags are made of poly(ethene).' },
+  'mt.ceramic': { hook: 'Ceramics: **hard, brittle, heat-proof**, and they never rot.', example: 'The Space Shuttle was protected from the heat of re-entry by ceramic tiles.' },
+  'mt.concrete': { hook: 'Concrete takes the **squash**, steel takes the **stretch**.', example: 'Bridges, tower blocks and multi-storey car parks are built from reinforced concrete.' },
+
+  // --- resources
+  'rs2.finite': { hook: 'Finite = has a **finish**: once used, it is gone.', example: 'Coal, oil, natural gas and metal ores are all finite.' },
+  'rs2.lca': { hook: 'A life-cycle assessment runs from **cradle to grave**.' },
+  'rs2.potable': { hook: 'Potable = **drinkable** (from Latin potare, to drink), not pure.', example: 'Tap water and bottled mineral water are potable, but both contain dissolved minerals.' },
+  'rs2.desal': { hook: 'Desalination: **de-salt** the sea, but it costs lots of energy.', example: 'Dry countries such as Saudi Arabia and Israel get much of their drinking water this way.' },
+  'rs2.reduce': { hook: '**Reduce, reuse, recycle**, in that order.', example: 'Refilling one water bottle (reuse) beats recycling a new plastic one every day.' },
+  'rs2.landfill': { hook: 'Most plastics are **for-ever guests** in landfill.' },
+  'rs2.water': { hook: '**Filter** out the bits, then **sterilise** the bugs.', example: 'Chlorine is added to tap water and swimming pools to kill microbes.' },
+  'rs2.al': { hook: 'Recycling aluminium needs only **5%** of the energy, so it saves **95%**.' },
+
+  // --- motion and terminal velocity
+  'mo.case1': { hook: 'At first weight **wins**, so she speeds up.' },
+  'mo.case2': { hook: 'Air resistance **catches up** with weight: terminal velocity.' },
+  'mo.case3': { hook: 'Bigger area = **more air resistance** = a lower terminal velocity.', example: 'Sycamore seeds and dandelion clocks drift down slowly for the same reason.' },
+  'mo.graph': { hook: 'd–t gradient = **speed**; v–t gradient = **acceleration**; area under v–t = **distance**.' },
+  'mo.flat': { hook: 'Flat on a **distance**–time graph = **going nowhere**.' },
+  'mo.vt': { hook: 'Flat on a **velocity**–time graph = **steady speed**, not stopped.' },
+  'mo.moon': { hook: 'No air, no air resistance: **everything falls together**.', example: 'In a huge vacuum chamber, a feather and a bowling ball have been filmed landing together.' },
+
+  // --- work and power
+  'wk.case1': { hook: 'Ep = **m × g × h**: mass, gravity, height.' },
+  'wk.case2': { hook: 'Power = **energy ÷ time**: the same lift done faster is more powerful.' },
+  'wk.case3': { hook: 'No movement = **no work done**, however tired you feel.', example: 'Holding a heavy bag still makes your arms ache, but does no work on the bag.' },
+  'wk.calc': { hook: 'Formula triangle: **W** on top, **F × d** below: work done = force × distance.' },
+  'wk.ke': { hook: 'Ek = ½mv²: speed is **squared**, so double the speed means four times the energy.', example: 'A car at 40 mph has four times the kinetic energy of the same car at 20 mph.' },
+  'wk.eff': { hook: 'Efficiency = **useful ÷ total × 100**: never more than 100%.', example: 'LED bulbs are far more efficient than old filament bulbs, which wasted most energy as heat.' },
+  'wk.weight': { hook: 'W = mg: the Moon’s g is about **a sixth** of Earth’s.' },
+  'wk.watt': { hook: '1 watt = **1 joule per second**.', example: 'A 10 W LED bulb transfers 10 joules every second.' },
+
+  // --- heating
+  'ht.case1': { hook: 'No wrapping, **no protection**: the bare can cooled fastest.' },
+  'ht.case2': { hook: 'Trapped air is a **great insulator**: it cannot move to carry heat away.', example: 'A puffer jacket or a woolly jumper keeps you warm by trapping air.' },
+  'ht.case3': { hook: 'Shiny surfaces are **poor emitters** (and poor absorbers) of infrared.', example: 'Marathon runners are wrapped in shiny foil blankets at the finish.' },
+  'ht.calc': { hook: '**ΔE = m × c × Δθ**: mass × specific heat capacity × temperature change.' },
+  'ht.sea': { hook: 'Water is a **slow cooker**: its specific heat capacity is very high.', example: 'Coastal towns in Britain usually have milder winters than places far inland.' },
+  'ht.temp': { hook: 'Temperature is **how hot**; thermal energy also depends on **how much**.', example: 'Sparkler sparks are over 1000 °C but barely hurt, because each one holds so little energy.' },
+  'ht.flask': { hook: 'A vacuum has **no particles**, so no conduction or convection.' },
+
+  // --- static electricity
+  'st.case1': { hook: 'Only **electrons** jump: protons stay locked in the nucleus.' },
+  'st.case2': { hook: 'Same charge, **push apart**: every hair wants its own space.', example: 'A Van de Graaff generator makes long hair stand straight up.' },
+  'st.case3': { hook: 'Ēlektron = **amber**: rubbed amber was the first “electric” material.' },
+  'st.field': { hook: 'Fields let forces act **at a distance**, with no touching needed.' },
+  'st.dust': { hook: 'Charged surfaces pull dust in by **electric attraction**.' },
+  'st.like': { hook: 'Like charges **repel**; opposite charges **attract**.' },
+  'st.earth': { hook: 'Earthing gives charge a **safe path** to the ground.', example: 'Fuel tankers are earthed before they unload, to stop sparks.' },
+  'st.lightning': { hook: 'Lightning is a **giant spark**; thunder is the heated air **bursting** outwards.', example: 'Lightning conductors on church spires lead the charge safely into the ground.' },
+
+  // --- light, lenses, colour and ultrasound
+  'lt.case1': { hook: 'Along the normal: **no bend**, just a change of speed.' },
+  'lt.case2': { hook: '**FAST**: **F**aster, bend **A**way; **S**lower, bend **T**owards the normal.' },
+  'lt.case3': { hook: 'Always measure from the **normal**, the line at 90° to the surface.' },
+  'lt.echo': { hook: 'An echo goes **there and back**: halve the total distance.', example: 'Bats and dolphins find their food by echolocation.' },
+  'lt.straw': { hook: 'Your brain assumes light travels **straight**, so it is fooled.', example: 'People spearing fish must aim below where the fish seems to be.' },
+  'lt.convex': { hook: 'Con**vex** lenses bulge out and bring rays **together**; con**cave** lenses cave in and spread them out.', example: 'A magnifying glass can focus sunlight onto a tiny, hot spot.' },
+  'lt.filter': { hook: 'A filter **only lets its own colour through**.', example: 'Theatres use coloured filters, called gels, in front of stage lights.' },
+  'lt.prism': { hook: '**R**ichard **O**f **Y**ork **G**ave **B**attle **I**n **V**ain: red, orange, yellow, green, blue, indigo, violet.', example: 'Newton chose seven colours for the rainbow, to match the seven notes of a musical scale.' },
+  'lt.ultra': { hook: 'Ultra = **beyond**: beyond our hearing, above 20 000 Hz.', example: 'Dog whistles use frequencies too high for people to hear.' },
+
+  // --- stars
+  'sr.case1': { hook: 'The Sun is a **fusion furnace**: hydrogen → helium.' },
+  'sr.case2': { hook: 'Sun-sized star: cloud → **main sequence** → **red giant** → **white dwarf**.' },
+  'sr.case3': { hook: 'Big stars **live fast and die young**, in a supernova.' },
+  'sr.fusion': { hook: 'A star is a **tug of war**: gravity pulls in, pressure from fusion pushes out.' },
+  'sr.ly': { hook: 'A light **year** is a **distance**: about 9.5 million million km.', example: 'A star 100 light years away is seen as it was 100 years ago, when its light set off.' },
+  'sr.milky': { hook: 'Galaxy comes from Greek gala, **milk**: the Milky Way.', example: 'On a dark night far from streetlights, the Milky Way looks like a faint, misty band.' },
+  'sr.bigbang': { hook: 'Universe **13.8** billion years old; Sun and Earth about **4.6** billion.' },
+  'sr.orion': { hook: 'Orion the **hunter**: look for the three stars of his belt.', example: 'Follow Orion’s belt down and to the left to find Sirius, the brightest star in the night sky.' },
+
+  // --- practical skills
+  'pr.case1': { hook: 'An anomaly is the **odd one out**.' },
+  'pr.case2': { hook: 'Leave out the anomaly **first**, then take the mean.' },
+  'pr.case3': { hook: 'Time **many** swings, then divide: reaction-time errors shrink.', example: 'To weigh one sheet of paper, weigh 100 sheets and divide by 100.' },
+  'pr.vars': { hook: '**Cows Moo Softly**: **C**hange (independent), **M**easure (dependent), keep the rest the **S**ame (control).' },
+  'pr.zero': { hook: 'A zero error is **wrong before you start**.', example: 'Pressing the zero (tare) button on kitchen scales removes a zero error.' },
+  'pr.resolution': { hook: 'Resolution = the **smallest step** an instrument can show.', example: 'A ruler marked in millimetres has a resolution of 1 mm.' },
+  'pr.precise': { hook: '**P**recise = **P**acked together; **A**ccurate = **A**t the true value.' },
+  'pr.hazard': { hook: 'Hazard = **what** could hurt you; risk = **how likely** it is.', example: 'A wet floor is a hazard; the risk is the chance that someone slips on it.' },
+
+  // --- electrolysis (stretch)
+  'el2.solid': { hook: 'Ions must be **free to move**: melt it or dissolve it.' },
+  'el2.cathode': { hook: 'At the cathode, positive metal ions **gain** electrons: **OIL RIG**, **R**eduction **I**s **G**ain.' },
+  'el2.al': { hook: 'Cryolite is a **melting-point cutter**: it saves energy and money.' },
+  'el2.plating': { hook: 'The object to be plated is the **cathode**: metal ions land on it.', example: 'Cheap jewellery and cutlery are often silver- or gold-plated by electrolysis.' },
+  'el2.davy': { hook: 'Davy used **electricity** to split out sodium and potassium, too reactive for carbon to extract.', example: 'Davy also invented a safety lamp for coal miners.' },
+  'el2.brine': { hook: 'Brine gives **three products**: chlorine, hydrogen and sodium hydroxide.', example: 'Chlorine from brine is used to make bleach and to keep tap water safe.' },
+  'el2.anode': { hook: '**PANIC**: **P**ositive **A**node, **N**egative **I**s **C**athode, so negative bromide ions go to the anode.' },
+
+  // --- electromagnetic induction (stretch)
+  'in.basic': { hook: '**Move** a magnet in a coil, and a voltage appears.', example: 'A bike dynamo lights its lamp by spinning a magnet next to a coil.' },
+  'in.still': { hook: 'No movement, **no voltage**: the field must be changing.' },
+  'in.bigger': { hook: 'Bigger voltage: **more turns, faster movement, stronger magnet**.' },
+  'in.reverse': { hook: 'Reverse the motion, **reverse the current**.', example: 'Mains electricity in Britain is a.c. at 50 Hz: 50 back-and-forth cycles every second.' },
+  'in.transformer': { hook: 'Step **up** to send, step **down** to use: high voltage, low current, less heating.', example: 'The National Grid carries electricity across Britain at up to 400 000 V.' },
+  'in.uses': { hook: 'Spinning magnet + coil = a **generator**, in turbines, dynamos and power stations.', example: 'Solar panels are the odd one out: they turn light into electricity with no moving parts.' },
+  'in.faraday': { hook: 'Faraday, a blacksmith’s son, started out as **Davy’s assistant**.', example: 'Faraday appeared on the Bank of England £20 note from 1991 to 2001.' },
+
+  // --- momentum (stretch)
+  'mm.calc': { hook: 'Formula triangle: **p** on top, **m × v** below: momentum = mass × velocity.' },
+  'mm.crumple': { hook: 'Stretch out the stop: **longer time, smaller force**.', example: 'Seatbelts stretch slightly and airbags squash, so you slow down more gently.' },
+  'mm.conserve': { hook: 'Momentum before = **momentum after**: it just gets shared out.', example: 'In snooker, a cue ball can stop dead while the red it hits rolls on with its momentum.' },
+  'mm.recoil': { hook: 'Push forwards, **get pushed back**: the total momentum stays zero.', example: 'Jump forwards off a skateboard and the board shoots backwards.' },
+  'mm.unit': { hook: 'Units follow the formula: kg × m/s = **kg m/s**.' },
+  'mm.vector': { hook: 'Vectors have a **direction**: momenta in opposite directions can cancel out.' },
+  'mm.knees': { hook: 'Bend to **stretch out the stop**: more time, less force.', example: 'Gym crash mats and trampoline beds lengthen the stopping time too.' },
+};
+for (const t of topics) {
+  const key = t.id.replace(/^science\./, '');
+  if (TOPIC_HOOKS[key]) t.hook = TOPIC_HOOKS[key];
+}
+for (const key of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === `science.${key}`)) throw new Error(`y8/science2.mjs: topic hook for unknown topic ${key}`);
+for (const [id, memory] of Object.entries(MEMORY)) {
+  const item = items.find((it) => it.id === `science.m.${id}`);
+  if (!item) throw new Error(`y8/science2.mjs: memory hook for unknown item ${id}`);
+  Object.assign(item, memory);
+}
+// --- end of memory hooks
 
 export default [{ subject: 'science', deck: 'y8-more', topics, items }];

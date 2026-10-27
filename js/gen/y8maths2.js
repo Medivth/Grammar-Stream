@@ -16,6 +16,8 @@ const subs = (n) => String(n).split('').map((d) => SUB[+d]).join('');
 const F = (n, d = 1) => new Frac(n, d).simplify();
 const tex = (f) => show(f.toTex());
 const comma = (s) => String(s).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+/** 'an' when the number is said with a vowel sound: an 8, an 11, an 18, an 80–89, an 800… */
+const an = (n) => (/^8/.test(String(n)) || (/^1[18]/.test(String(n)) && String(n).length % 3 === 2) ? 'an' : 'a');
 
 /** Exact decimal text from an integer count of 10^-scale units ("-12.5" style, ASCII minus). */
 function dp(num, scale = 2) {
@@ -217,7 +219,7 @@ const G = {
       if (est.d !== 1 || est.n < 2 || est.n > 200000) continue;
       return num(`Estimate the value of (${at} × ${bt}) ÷ ${ct} by rounding each number to 1 significant figure.`, est.n,
         `${at} ≈ ${as}, ${bt} ≈ ${bs}, ${ct} ≈ ${cs}. (${as} × ${bs}) ÷ ${cs} = ${say(ar.mul(br))} ÷ ${cs} = ${comma(est.n)}.`,
-        ['Round every number to 1 significant figure.', `${as} × ${bs} = ${say(ar.mul(br))}.`, `÷ ${cs} = ${comma(est.n)}.${level === 3 ? ' (Dividing by a decimal less than 1 makes the answer bigger.)' : ''}`]);
+        ['Round every number to 1 significant figure.', `${as} × ${bs} = ${say(ar.mul(br))}.`, `÷ ${cs} = ${comma(est.n)}.${cr.cmp(1) < 0 ? ' (Dividing by a decimal less than 1 makes the answer bigger.)' : ''}`]);
     }
     return G.y8nEstimate(1, rng);
   },
@@ -243,8 +245,16 @@ const G = {
     const kind = rng.pick(['add', 'hex', 'shift']);
     if (kind === 'add') {
       const a = rng.int(9, 40), b = rng.int(9, 40), s = (a + b).toString(2);
-      return num(`Add these binary numbers, and give your answer in binary: ${a.toString(2)} + ${b.toString(2)}`, s, `${a.toString(2)} is ${a} and ${b.toString(2)} is ${b}. ${a} + ${b} = ${a + b} = ${s}${subs(2)}. (Or add column by column: 1 + 1 = 10, carry the 1.)`,
-        ['Add column by column from the right: 1 + 1 = 0 carry 1.', '1 + 1 + 1 = 1 carry 1.', `Answer: ${s}. Check in denary: ${a} + ${b} = ${a + b}.`], { placeholder: 'e.g. 101101' });
+      // the real column-by-column working, so carries are only mentioned when they happen
+      const A = a.toString(2), B = b.toString(2), w = Math.max(A.length, B.length), cols = [];
+      let carry = 0, carried = false;
+      for (let i = 1; i <= w; i++) {
+        const x = +(A[A.length - i] ?? 0), y = +(B[B.length - i] ?? 0), t = x + y + carry;
+        cols.push(`${x} + ${y}${carry ? ' + 1' : ''} = ${t % 2}${t > 1 ? ' carry 1' : ''}`);
+        carry = t > 1 ? 1 : 0; carried ||= t > 1;
+      }
+      return num(`Add these binary numbers, and give your answer in binary: ${A} + ${B}`, s, `${A} is ${a} and ${B} is ${b}. ${a} + ${b} = ${a + b} = ${s}${subs(2)}.${carried ? ' (Or add column by column: 1 + 1 = 10, so write 0 and carry the 1.)' : ' (Or add column by column: no column adds up to more than 1, so there are no carries.)'}`,
+        [`Line up the columns: ${A.padStart(w, '0')} + ${B.padStart(w, '0')}.`, `Add from the right: ${cols.join(', ')}.${carry ? ' The last carry starts a new column on the left.' : ''}${carried ? '' : ' No carries are needed here.'}`, `Answer: ${s}. Check in denary: ${a} + ${b} = ${a + b}.`], { placeholder: 'e.g. 101101' });
     }
     if (kind === 'hex') {
       const n = rng.int(26, 255), h = n.toString(16).toUpperCase();
@@ -313,11 +323,11 @@ const G = {
       const plus = rng.chance(0.6);
       const f = plus ? F(1, a).add(F(1, b)) : F(1, a).sub(F(1, b));
       const frx = (c, d) => `{{${c < 0 ? '−' : ''}${Math.abs(c) === 1 ? '' : Math.abs(c)}x/${d}}}`;
-      const right = frx(f.n, f.d);
+      const right = frx(f.n, f.d), raw = frx(plus ? a + b : b - a, a * b);
       const wrongs = plus ? [`{{2x/${a + b}}}`, `{{x/${a * b}}}`, `{{2x/${a * b}}}`, `{{x/${a + b}}}`] : [`{{x/${Math.abs(b - a)}}}`, frx(-f.n, f.d), `{{x/${a * b}}}`, `{{x/${a + b}}}`];
       return choice(`Write as a single fraction: {{x/${a}}} ${plus ? '+' : '−'} {{x/${b}}}`, right, wrongs.filter(Boolean), rng, {
-        explain: `Use a common denominator: {{x/${a}}} = {{${b}x/${a * b}}} and {{x/${b}}} = {{${a}x/${a * b}}}. ${b} ${plus ? '+' : '−'} ${a} = ${plus ? a + b : b - a}, so the result is {{${plus ? a + b : b - a}x/${a * b}}}, which simplifies to ${right}.`.replace('{{-', '{{−'),
-        steps: [`Common denominator ${a * b}.`, `{{${b}x/${a * b}}} ${plus ? '+' : '−'} {{${a}x/${a * b}}} = {{${plus ? a + b : b - a}x/${a * b}}}.`.replace('{{-', '{{−'), `Simplify if you can: ${right}.`],
+        explain: `Use a common denominator: {{x/${a}}} = {{${b}x/${a * b}}} and {{x/${b}}} = {{${a}x/${a * b}}}. ${b} ${plus ? '+' : '−'} ${a} = ${neg(plus ? a + b : b - a)}, so the result is ${raw}, which ${raw === right ? 'cannot be simplified' : `simplifies to ${right}`}.`,
+        steps: [`Common denominator ${a * b}.`, `{{${b}x/${a * b}}} ${plus ? '+' : '−'} {{${a}x/${a * b}}} = ${raw}.`, raw === right ? `Nothing cancels: ${right}.` : `Simplify: ${right}.`],
       });
     }
     const kind = rng.pick(['common', 'dots', 'quad', 'const']);
@@ -341,7 +351,7 @@ const G = {
       a *= g0; b *= g0;
       const g = gcd(a, b), A = a / g, B = b / g;
       const right = `${g === 1 ? '' : g}x(${A === 1 ? '' : A}x + ${B})`;
-      return choice(`Factorise fully: ${a}x² + ${b}x`, right, [`${g}(${A === 1 ? '' : A}x² + ${B}x)`, `x(${a}x + ${b})`, `${g}x(${A}x + ${b})`, `${g}x²(${A} + ${B}x)`].filter((t) => t !== right), rng, {
+      return choice(`Factorise fully: ${a}x² + ${b}x`, right, [`${g}(${co(A)}x² + ${co(B)}x)`, `x(${a}x + ${b})`, `${g}x(${co(A)}x + ${b})`, `${g}x²(${A} + ${co(B)}x)`].filter((t) => t !== right), rng, {
         explain: `The highest common factor of ${a}x² and ${b}x is ${g}x. ${a}x² ÷ ${g}x = ${A === 1 ? '' : A}x and ${b}x ÷ ${g}x = ${B}: ${right}.`, steps: [`HCF of ${a} and ${b} is ${g}; both terms contain x.`, `Take out ${g}x.`, `${right}. Expand to check.`],
       });
     }
@@ -376,13 +386,14 @@ const G = {
         let m = rng.int(2, 6), n = rng.int(2, 7);
         while (m === n) n = rng.int(2, 7);
         const k = rng.int(1, 6), x = rng.int(-4, 12), a = m * k - x, b = n * k - x;
-        return num(`Solve {{x + ${a}/${m}}} = {{x + ${b}/${n}}}.`.replace(/\+ -/g, '− '), x, `Cross-multiply: ${n}(x + ${a}) = ${m}(x + ${b}), so ${n}x + ${n * a} = ${m}x + ${m * b}. Then ${neg(n - m)}x = ${neg(m * b - n * a)}, x = ${neg(x)}.`.replace(/\+ -/g, '− '),
-          [`Multiply both sides by ${m} × ${n} (or cross-multiply).`, `${n}x + ${n * a} = ${m}x + ${m * b}.`.replace(/\+ -/g, '− '), `Collect: ${neg(n - m)}x = ${neg(m * b - n * a)}, so x = ${neg(x)}.`], { keypad: x >= 0 });
+        if (a === 0 || b === 0) return G.y8nEqFrac(level, rng);
+        return num(`Solve {{x + ${a}/${m}}} = {{x + ${b}/${n}}}.`.replace(/\+ -/g, '− '), x, `Cross-multiply: ${n}(x + ${a}) = ${m}(x + ${b}), so ${n}x + ${n * a} = ${m}x + ${m * b}. Then ${lin(n - m, 0)} = ${neg(m * b - n * a)}, x = ${neg(x)}.`.replace(/\+ -/g, '− '),
+          [`Multiply both sides by ${m} × ${n} (or cross-multiply).`, `${n}x + ${n * a} = ${m}x + ${m * b}.`.replace(/\+ -/g, '− '), `Collect: ${lin(n - m, 0)} = ${neg(m * b - n * a)}, so x = ${neg(x)}.`], { keypad: x >= 0 });
       }
       let a = rng.int(2, 6), b = rng.int(2, 8);
       while (a === b) b = rng.int(2, 8);
       const L = (a * b) / gcd(a, b), x = L * rng.int(1, 4), c = x / a + x / b;
-      return num(`Solve {{x/${a}}} + {{x/${b}}} = ${c}.`, x, `Multiply every term by ${L}: ${L / a}x + ${L / b}x = ${c * L}, so ${L / a + L / b}x = ${c * L} and x = ${x}.`, [`The LCM of ${a} and ${b} is ${L}.`, `× ${L}: ${L / a}x + ${L / b}x = ${c * L}.`, `${L / a + L / b}x = ${c * L}, x = ${x}.`]);
+      return num(`Solve {{x/${a}}} + {{x/${b}}} = ${c}.`, x, `Multiply every term by ${L}: ${co(L / a)}x + ${co(L / b)}x = ${c * L}, so ${L / a + L / b}x = ${c * L} and x = ${x}.`, [`The LCM of ${a} and ${b} is ${L}.`, `× ${L}: ${co(L / a)}x + ${co(L / b)}x = ${c * L}.`, `${L / a + L / b}x = ${c * L}, x = ${x}.`]);
     }
     const kind = rng.pick(['triangle', 'rectangle', 'ages']);
     if (kind === 'triangle') {
@@ -435,7 +446,7 @@ const G = {
       const k = rng.int(-5, 9);
       if (rng.chance(0.65)) return num(`${f}. Work out f(${neg(k)}).`, a * k + b, `Replace x with ${neg(k)}: ${a} × ${paren(k)} ${b < 0 ? '−' : '+'} ${Math.abs(b)} = ${neg(a * k + b)}.`, [`f(${neg(k)}) means put x = ${neg(k)}.`, `${a} × ${paren(k)} = ${neg(a * k)}.`, `${b < 0 ? '−' : '+'} ${Math.abs(b)} → ${neg(a * k + b)}.`], { keypad: a * k + b >= 0 });
       const c = rng.int(1, 20);
-      return num(`g(x) = x² − ${c}. Work out g(${neg(k)}).`, k * k - c, `${paren(k)}² = ${k * k}; ${k * k} − ${c} = ${neg(k * k - c)}.`, [`Square first: ${paren(k)}² = ${k * k} (a negative squared is positive).`, `Then subtract ${c}.`, `= ${neg(k * k - c)}.`], { keypad: k * k - c >= 0 });
+      return num(`g(x) = x² − ${c}. Work out g(${neg(k)}).`, k * k - c, `${paren(k)}² = ${k * k}; ${k * k} − ${c} = ${neg(k * k - c)}.`, [`Square first: ${paren(k)}² = ${k * k}${k < 0 ? ' (a negative squared is positive)' : ''}.`, `Then subtract ${c}.`, `= ${neg(k * k - c)}.`], { keypad: k * k - c >= 0 });
     }
     if (level === 2) {
       if (rng.chance(0.5)) {
@@ -510,7 +521,7 @@ const G = {
       const dg = { type: 'line', title: 'Theo’s journey to the games at Olympia', xs, ys, ylabel: 'km' };
       const v1 = d1 / t1, v3 = Math.abs(d3 - d1) / t3;
       if (level === 1) {
-        if (rng.chance(0.5)) return num('The graph shows Theo’s distance from home (km) against time (hours). For how many hours did he stop?', rest, `The flat part of the graph means his distance was not changing: from ${t1} to ${t1 + rest} hours, ${rest} hour${rest > 1 ? 's' : ''}.`, ['A horizontal line means no movement.', `It runs from ${t1} h to ${t1 + rest} h.`, `${rest} hour${rest > 1 ? 's' : ''}.`], { diagram: dg, unit: 'hours' });
+        if (rng.chance(0.5)) return num('The graph shows Theo’s distance from home (km) against time (hours). For how many hours did he stop?', rest, `The flat part of the graph means his distance was not changing: from ${t1} to ${t1 + rest} hours, ${rest} hour${rest > 1 ? 's' : ''}.`, ['A horizontal line means no movement.', `It runs from ${t1} h to ${t1 + rest} h.`, `${rest} hour${rest > 1 ? 's' : ''}.`], { diagram: dg, unit: rest > 1 ? 'hours' : 'hour' });
         return num('The graph shows Theo’s distance from home (km) against time (hours). How far from home was he when he stopped?', d1, `The flat section is at ${d1} km.`, ['Find the horizontal section.', 'Read across to the distance axis.', `${d1} km.`], { diagram: dg, unit: 'km' });
       }
       if (level === 2) {
@@ -541,10 +552,11 @@ const G = {
       return num(`Two similar shields have areas ${A} cm² and ${A * k * k} cm². What is the length scale factor from the smaller to the larger?`, k, `Area scale factor = ${A * k * k} ÷ ${A} = ${k * k}. Length scale factor = √${k * k} = ${k}.`, ['Find the area scale factor first.', `${A * k * k} ÷ ${A} = ${k * k}.`, `Square root it: ${k}.`]);
     }
     const [p, q] = rng.pick([[2, 1], [3, 1], [3, 2], [4, 3], [5, 2], [4, 1]]);
-    const unitV = rng.int(1, 4), Vs = unitV * q ** 3, Vl = unitV * p ** 3, hs = q * rng.int(2, 6);
-    if (rng.chance(0.5)) return num(`Two similar amphorae have volumes ${Vs} litres and ${Vl} litres. The smaller one is ${hs} cm tall. How tall is the larger one?`, (hs * p) / q, `Volume scale factor = {{${Vl}/${Vs}}} = {{${p ** 3}/${q ** 3}}}, so the length scale factor is the cube root: {{${p}/${q}}}. Height = ${hs} × {{${p}/${q}}} = ${(hs * p) / q} cm.`,
+    const unitV = rng.int(1, 4), Vs = unitV * q ** 3, Vl = unitV * p ** 3, hs = q * rng.int(3, 8) * 5; // realistic jar heights (15–40 cm per ratio unit)
+    const litres = (n) => `${n} litre${n === 1 ? '' : 's'}`;
+    if (rng.chance(0.5)) return num(`Two similar amphorae have volumes ${litres(Vs)} and ${litres(Vl)}. The smaller one is ${hs} cm tall. How tall is the larger one?`, (hs * p) / q, `Volume scale factor = {{${Vl}/${Vs}}} = {{${p ** 3}/${q ** 3}}}, so the length scale factor is the cube root: {{${p}/${q}}}. Height = ${hs} × {{${p}/${q}}} = ${(hs * p) / q} cm.`,
       [`Volume scale factor {{${Vl}/${Vs}}} = {{${p ** 3}/${q ** 3}}}.`, `Cube root for lengths: {{${p}/${q}}}.`, `${hs} × {{${p}/${q}}} = ${(hs * p) / q} cm.`], { unit: 'cm' });
-    return num(`Two similar statues have heights in the ratio ${q} : ${p}. The smaller one has a volume of ${Vs} litres. What is the volume of the larger one?`, Vl, `Length ratio ${q} : ${p}, so volume ratio ${q}³ : ${p}³ = ${q ** 3} : ${p ** 3}. ${Vs} × {{${p ** 3}/${q ** 3}}} = ${Vl} litres.`, [`Cube the length ratio: ${q ** 3} : ${p ** 3}.`, `Multiply ${Vs} by {{${p ** 3}/${q ** 3}}}.`, `= ${Vl} litres.`], { unit: 'litres' });
+    return num(`Two similar statues have heights in the ratio ${q} : ${p}. The smaller one has a volume of ${litres(Vs)}. What is the volume of the larger one?`, Vl, `Length ratio ${q} : ${p}, so volume ratio ${q}³ : ${p}³ = ${q ** 3} : ${p ** 3}. ${Vs} × {{${p ** 3}/${q ** 3}}} = ${litres(Vl)}.`, [`Cube the length ratio: ${q ** 3} : ${p ** 3}.`, `Multiply ${Vs} by {{${p ** 3}/${q ** 3}}}.`, `= ${litres(Vl)}.`], { unit: 'litres' });
   },
 
   // ---- circles: parts, arcs and sectors -------------------------------------------------------------
@@ -552,7 +564,9 @@ const G = {
     if (level === 1) {
       const parts = [['chord', 'a straight line joining two points on the circle'], ['tangent', 'a straight line that touches the circle at exactly one point'], ['arc', 'part of the circumference'], ['sector', 'a “pizza slice” between two radii and an arc'], ['segment', 'the region between a chord and an arc'], ['diameter', 'a chord through the centre'], ['circumference', 'the distance all the way round the circle']];
       const [name, def] = rng.pick(parts);
-      return choice(`What is the name for ${def}?`, `a${'aeiou'.includes(name[0]) ? 'n' : ''} ${name}`, parts.filter(([n]) => n !== name).map(([n]) => `a${'aeiou'.includes(n[0]) ? 'n' : ''} ${n}`), rng, {
+      // a diameter is a chord, so never offer one as a wrong answer for the other
+      const clash = { chord: 'diameter', diameter: 'chord' }[name];
+      return choice(`What is the name for ${def}?`, `a${'aeiou'.includes(name[0]) ? 'n' : ''} ${name}`, parts.filter(([n]) => n !== name && n !== clash).map(([n]) => `a${'aeiou'.includes(n[0]) ? 'n' : ''} ${n}`), rng, {
         explain: `${name[0].toUpperCase() + name.slice(1)}: ${def}.`, steps: ['Chord: line across; diameter: chord through the centre.', 'Tangent: touches once. Arc: part of the edge.', 'Sector: slice between radii. Segment: cut off by a chord.'],
       });
     }
@@ -590,7 +604,7 @@ const G = {
         const p = rng.int(1, 5), q = rng.int(1, 5), r = rng.int(1, 6), s = p + q + r;
         if (180 % s || p === q && q === r) continue;
         const x = 180 / s;
-        return num(`The angles of a triangle are ${lin(p, 0)}, ${lin(q, 0)} and ${lin(r, 0)}. Find x.`, x, `${lin(s, 0)} = 180, so x = ${x}°.`, ['Angles in a triangle add to 180°.', `${p}x + ${q}x + ${r}x = ${s}x.`, `${s}x = 180, x = ${x}.`], { unit: '°' });
+        return num(`The angles of a triangle are ${lin(p, 0)}, ${lin(q, 0)} and ${lin(r, 0)}. Find x.`, x, `${lin(s, 0)} = 180, so x = ${x}°.`, ['Angles in a triangle add to 180°.', `${co(p)}x + ${co(q)}x + ${co(r)}x = ${s}x.`, `${s}x = 180, x = ${x}.`], { unit: '°' });
       }
     }
     if (level === 2) {
@@ -658,7 +672,7 @@ const G = {
       const both = A.filter((x) => B.includes(x)), either = [...new Set([...A, ...B])];
       const inter = rng.chance(0.5);
       const ans = inter ? both.length : either.length;
-      return num(`ξ = {1, 2, …, ${N}}. A = multiples of ${m}, B = multiples of ${k}. How many elements are in A ${inter ? '∩' : '∪'} B?`, ans, `A = {${A.join(', ')}}, B = {${B.join(', ')}}. A ${inter ? '∩' : '∪'} B (${inter ? 'in both' : 'in either or both'}) = {${(inter ? both : either.sort((p, q) => p - q)).join(', ') || ' '}}: ${ans} elements.`,
+      return num(`ξ = {1, 2, …, ${N}}. A = multiples of ${m}, B = multiples of ${k}. How many elements are in A ${inter ? '∩' : '∪'} B?`, ans, `A = {${A.join(', ')}}, B = {${B.join(', ')}}. A ${inter ? '∩' : '∪'} B (${inter ? 'in both' : 'in either or both'}) = {${(inter ? both : either.sort((p, q) => p - q)).join(', ') || ' '}}: ${ans} element${ans === 1 ? '' : 's'}.`,
         [`List A and B.`, `∩ means “and” (in both); ∪ means “or” (in either).`, `${ans} element${ans === 1 ? '' : 's'}.`]);
     }
     const a = rng.int(2, 15), b = rng.int(2, 15), both = rng.int(1, 10), out = rng.int(1, 12), total = a + b + both + out;
@@ -669,9 +683,9 @@ const G = {
       return num(`The Venn diagram shows how many of the Argonauts are in sets A and B. How many are in ${q}?`, v2, `${q}: ${how} = ${v2}.`, ['Shade the region the symbol describes.', 'Add the numbers in the shaded regions.', `${v2}.`], { diagram: dg });
     }
     const kind = rng.pick(['inter', 'union', 'given']);
-    if (kind === 'given') { const f = F(both, both + b); return num(`From the Venn diagram, one person is chosen at random from those in B. What is the probability they are also in A?`, f.toString(), `Only look inside B: ${b + both} people. Of those, ${both} are also in A. P = {{${both}/${b + both}}}${f.d !== b + both ? ` = ${tex(f)}` : ''}.`, ['The “given B” narrows the choice to circle B.', `B contains ${b} + ${both} = ${b + both}.`, `${both} of them are in A: ${tex(f)}.`], { diagram: dg, placeholder: 'e.g. 3/8' }); }
+    if (kind === 'given') { const f = F(both, both + b); return num(`From the Venn diagram, one person is chosen at random from those in B. What is the probability they are also in A?`, f.toString(), `Only look inside B: ${b + both} people. Of those, ${both} ${both === 1 ? 'is' : 'are'} also in A. P = {{${both}/${b + both}}}${f.d !== b + both ? ` = ${tex(f)}` : ''}.`, ['The “given B” narrows the choice to circle B.', `B contains ${b} + ${both} = ${b + both}.`, `${both} of them ${both === 1 ? 'is' : 'are'} in A: ${tex(f)}.`], { diagram: dg, placeholder: 'e.g. 3/8' }); }
     const n = kind === 'inter' ? both : a + b + both, f = F(n, total);
-    return num(`One person is chosen at random. Using the Venn diagram, what is P(A ${kind === 'inter' ? '∩' : '∪'} B)?`, f.toString(), `There are ${total} people in total. ${kind === 'inter' ? `${both} are in both` : `${a} + ${both} + ${b} = ${a + b + both} are in A or B`}. P = {{${n}/${total}}}${f.d !== total ? ` = ${tex(f)}` : ''}.`, [`Total: ${total}.`, `${kind === 'inter' ? 'Both' : 'Either'}: ${n}.`, `P = ${tex(f)}.`], { diagram: dg, placeholder: 'e.g. 3/8' });
+    return num(`One person is chosen at random. Using the Venn diagram, what is P(A ${kind === 'inter' ? '∩' : '∪'} B)?`, f.toString(), `There are ${total} people in total. ${kind === 'inter' ? `${both} ${both === 1 ? 'is' : 'are'} in both` : `${a} + ${both} + ${b} = ${a + b + both} are in A or B`}. P = {{${n}/${total}}}${f.d !== total ? ` = ${tex(f)}` : ''}.`, [`Total: ${total}.`, `${kind === 'inter' ? 'Both' : 'Either'}: ${n}.`, `P = ${tex(f)}.`], { diagram: dg, placeholder: 'e.g. 3/8' });
   },
 
   // ---- systematic counting and the product rule -------------------------------------------------------
@@ -693,7 +707,7 @@ const G = {
     const kind = rng.pick(['handshake', 'diagonals', 'repeat', 'pairs']);
     const n = rng.int(5, 15);
     if (kind === 'handshake') return num(`At a council of ${n} heroes, everyone shakes hands with everyone else once. How many handshakes are there?`, (n * (n - 1)) / 2, `Each of the ${n} shakes ${n - 1} hands, but that counts every handshake twice: ${n} × ${n - 1} ÷ 2 = ${(n * (n - 1)) / 2}.`, [`Each person: ${n - 1} handshakes.`, `${n} × ${n - 1} = ${n * (n - 1)} counts each one twice.`, `÷ 2 = ${(n * (n - 1)) / 2}.`]);
-    if (kind === 'diagonals') return num(`How many diagonals does a ${n}-sided polygon have?`, (n * (n - 3)) / 2, `From each vertex you can draw a diagonal to ${n - 3} others (not itself or its two neighbours). ${n} × ${n - 3} ÷ 2 = ${(n * (n - 3)) / 2}.`, [`Each vertex: ${n - 3} diagonals.`, `${n} × ${n - 3} = ${n * (n - 3)} counts each twice.`, `÷ 2 = ${(n * (n - 3)) / 2}.`]);
+    if (kind === 'diagonals') return num(`How many diagonals does ${an(n)} ${n}-sided polygon have?`, (n * (n - 3)) / 2, `From each vertex you can draw a diagonal to ${n - 3} others (not itself or its two neighbours). ${n} × ${n - 3} ÷ 2 = ${(n * (n - 3)) / 2}.`, [`Each vertex: ${n - 3} diagonals.`, `${n} × ${n - 3} = ${n * (n - 3)} counts each twice.`, `÷ 2 = ${(n * (n - 3)) / 2}.`]);
     if (kind === 'pairs') { const k = Math.min(n, 9); return num(`A team of 2 is chosen from ${k} Argonauts. How many different pairs are possible?`, (k * (k - 1)) / 2, `${k} × ${k - 1} ordered choices, but each pair is counted twice: ${(k * (k - 1)) / 2}.`, [`First person ${k} ways, second ${k - 1}.`, 'The order doesn’t matter, so divide by 2.', `${(k * (k - 1)) / 2}.`]); }
     const [word, len, rep] = rng.pick([['ATHENA', 6, 2], ['ODYSSEUS', 8, 6], ['APOLLO', 6, 4], ['HELLAS', 6, 2], ['ARTEMIS', 7, 1]]);
     let f = 1; for (let i = 2; i <= len; i++) f *= i;
@@ -706,7 +720,7 @@ const G = {
       const p = F(rng.int(1, 4), 5), q = F(rng.int(1, 3), 4);
       const r = p.mul(q);
       const dg = { type: 'tree', a: [['Win race', p.toString()], ['Lose', F(1).sub(p).toString()]], b: [['Win', q.toString()], ['Lose', F(1).sub(q).toString()]] };
-      return num(`Kit runs two races. The probability she wins the first is ${tex(p)} and the second is ${tex(q)}, independently. What is the probability she wins both?`, r.toString(), `Multiply along the branches: ${tex(p)} × ${tex(q)} = ${tex(r)}.`, ['“And” means multiply along the branches.', `${tex(p)} × ${tex(q)}.`, `= ${tex(r)}.`], { diagram: dg, placeholder: 'e.g. 3/20' });
+      return num(`Kit runs two races. The probability he wins the first is ${tex(p)} and the second is ${tex(q)}, independently. What is the probability he wins both?`, r.toString(), `Multiply along the branches: ${tex(p)} × ${tex(q)} = ${tex(r)}.`, ['“And” means multiply along the branches.', `${tex(p)} × ${tex(q)}.`, `= ${tex(r)}.`], { diagram: dg, placeholder: 'e.g. 3/20' });
     }
     const r = rng.int(2, 7), b = rng.int(2, 7), n = r + b;
     if (level === 2) {
@@ -856,8 +870,8 @@ const G = {
     }
     const a = rng.int(1, 5), r = rng.int(2, 3), k = rng.pick([2, 3]);
     const u2 = a * r, uk = a * r ** (k + 1);
-    if (rng.chance(0.5)) return num(`In a geometric sequence the 2nd term is ${u2} and the ${k + 2}th term is ${uk}. What is the common ratio?`, r, `From the 2nd to the ${k + 2}th term you multiply by r ${k} times: r${sup(k)} = ${uk} ÷ ${u2} = ${r ** k}, so r = ${r}.`, [`${uk} ÷ ${u2} = ${r ** k}.`, `That is r${sup(k)}.`, `r = ${r}.`]);
-    return num(`In a geometric sequence the 2nd term is ${u2} and the ${k + 2}th term is ${uk}. What is the first term?`, a, `r${sup(k)} = ${uk} ÷ ${u2} = ${r ** k}, so r = ${r}. The first term is ${u2} ÷ ${r} = ${a}.`, [`Find r: r${sup(k)} = ${r ** k}, r = ${r}.`, 'Go back one step from the 2nd term.', `${u2} ÷ ${r} = ${a}.`]);
+    if (rng.chance(0.5)) return num(`In a geometric sequence of positive numbers, the 2nd term is ${u2} and the ${k + 2}th term is ${uk}. What is the common ratio?`, r, `From the 2nd to the ${k + 2}th term you multiply by r ${k} times: r${sup(k)} = ${uk} ÷ ${u2} = ${r ** k}, so r = ${r}.`, [`${uk} ÷ ${u2} = ${r ** k}.`, `That is r${sup(k)}.`, `r = ${r}.`]);
+    return num(`In a geometric sequence of positive numbers, the 2nd term is ${u2} and the ${k + 2}th term is ${uk}. What is the first term?`, a, `r${sup(k)} = ${uk} ÷ ${u2} = ${r ** k}, so r = ${r}. The first term is ${u2} ÷ ${r} = ${a}.`, [`Find r: r${sup(k)} = ${r ** k}, r = ${r}.`, 'Go back one step from the 2nd term.', `${u2} ÷ ${r} = ${a}.`]);
   },
 
   // ---- STRETCH: 3D Pythagoras and the cosine rule ------------------------------------------------------
