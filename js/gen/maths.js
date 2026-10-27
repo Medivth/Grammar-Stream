@@ -8,6 +8,7 @@ import { Frac, gcd, lcm } from '../core/fraction.js';
 const tex = (f, opts) => f.toTex(opts);
 const neg = (n) => (n < 0 ? `−${-n}` : String(n));
 const paren = (n) => (n < 0 ? `(−${-n})` : String(n));
+const pv = (n, unit) => `${n} ${unit}${n === 1 ? '' : 's'}`; // 1 ten, 2 tens
 
 /** Integer thousandths -> decimal string ("0.65", "3", "-1.2"). */
 function dec(th) {
@@ -45,9 +46,9 @@ export const GENERATORS = {
       const b2 = rng.int(1, 9);
       const A = a1 * 100, B = b1 * 100 + b2 * 10;
       const [x, y] = rng.chance(0.5) ? [A, B] : [B, A];
-      return choice(`Which is larger: ${dec(x)} or ${dec(y)}?`, dec(A), [{ text: dec(B), feedback: `${dec(B)} has more digits, but more digits doesn’t mean bigger. Compare tenths first: ${a1} tenths beats ${b1} tenth${b1 === 1 ? '' : 's'}.` }], rng, {
-        explain: `Compare the tenths digit first. ${dec(A)} has ${a1} tenths and ${dec(B)} has only ${b1} tenth${b1 === 1 ? '' : 's'}, so ${dec(A)} is larger.`,
-        steps: [`I line up the decimal points.`, `I compare the tenths: ${a1} tenths against ${b1} tenth${b1 === 1 ? '' : 's'}.`, `${a1} is more, so ${dec(A)} is larger, even though ${dec(B)} has more digits.`],
+      return choice(`Which is larger: ${dec(x)} or ${dec(y)}?`, dec(A), [{ text: dec(B), feedback: `${dec(B)} has more digits, but more digits doesn’t mean bigger. Compare tenths first: ${pv(a1, 'tenth')} beats ${b1} tenth${b1 === 1 ? '' : 's'}.` }], rng, {
+        explain: `Compare the tenths digit first. ${dec(A)} has ${pv(a1, 'tenth')} and ${dec(B)} has only ${b1} tenth${b1 === 1 ? '' : 's'}, so ${dec(A)} is larger.`,
+        steps: [`I line up the decimal points.`, `I compare the tenths: ${pv(a1, 'tenth')} against ${b1} tenth${b1 === 1 ? '' : 's'}.`, `${a1} is more, so ${dec(A)} is larger, even though ${dec(B)} has more digits.`],
       });
     }
     if (level === 2) {
@@ -87,7 +88,7 @@ export const GENERATORS = {
         prompt: `At 6 am the temperature is ${neg(start)}°C. By midday it has risen by ${rise} degrees. What is the temperature at midday?`,
         numeric: { value: String(end), form: 'any' },
         explain: end < 0 ? `Count up ${rise} from ${neg(start)}: you stop ${-end} below 0, at ${neg(end)}°C.` : `Count up ${rise} from ${neg(start)}: it takes ${-start} to reach 0, then ${rise + start} more. The answer is ${neg(end)}°C.`,
-        steps: end < 0 ? [`I start at ${neg(start)} on a number line.`, `I count up ${rise} steps.`, `I stop before reaching 0, at ${neg(end)}.`] : [`I start at ${neg(start)} on a number line.`, `${-start} steps up takes me to 0.`, `I have ${rise + start} more steps to go, so I land on ${neg(end)}.`],
+        steps: end < 0 ? [`I start at ${neg(start)} on a number line.`, `I count up ${rise} steps.`, `I stop before reaching 0, at ${neg(end)}.`] : [`I start at ${neg(start)} on a number line.`, `${-start} steps up takes me to 0.`, `I have ${rise + start} more step${rise + start === 1 ? '' : 's'} to go, so I land on ${neg(end)}.`],
       };
     }
     if (level === 2) {
@@ -104,7 +105,8 @@ export const GENERATORS = {
         steps: [rule, `I start at ${neg(a)} and move ${Math.abs(r - a)} ${r > a ? 'up' : 'down'}.`, `${neg(a)} ${op} ${paren(b)} = ${neg(r)}`],
       };
     }
-    const a = rng.int(2, 9) * (rng.chance(0.5) ? -1 : 1), b = rng.int(2, 9) * (rng.chance(0.6) ? -1 : 1);
+    let a = rng.int(2, 9) * (rng.chance(0.5) ? -1 : 1), b = rng.int(2, 9) * (rng.chance(0.6) ? -1 : 1);
+    if (a > 0 && b > 0) { if (rng.chance(0.5)) a = -a; else b = -b; } // every sign-rule question involves a negative number
     const divide = rng.chance(0.4);
     const prod = a * b;
     const [x, y, r] = divide ? [prod, a, b] : [a, b, prod];
@@ -164,8 +166,8 @@ export const GENERATORS = {
       kind: 'numberline',
       prompt: `Put ${label} on the number line.`,
       min, max, ticks: max - min, target: f.valueOf(), tolerance: (max - min) * 0.035, targetLabel: label,
-      explain: `${label} is ${f.n} lots of {{1/${f.d}}}. Split each whole into ${f.d} equal parts and count ${f.n} parts from 0.`,
-      steps: [`I split each whole into ${f.d} equal parts.`, `Each part is {{1/${f.d}}}.`, `I count ${f.n} parts from 0 to find ${label}.`],
+      explain: `${f.n === 1 ? `${label} is 1 part out of ${f.d}` : `${label} is ${f.n} lots of {{1/${f.d}}}`}. Split each whole into ${f.d} equal parts and count ${f.n} part${f.n === 1 ? '' : 's'} from 0.`,
+      steps: [`I split each whole into ${f.d} equal parts.`, `Each part is {{1/${f.d}}}.`, `I count ${f.n} part${f.n === 1 ? '' : 's'} from 0 to find ${label}.`],
     };
   },
 
@@ -264,8 +266,8 @@ export const GENERATORS = {
     }
     return {
       kind: 'typed', prompt: `${tex(new Frac(n, d))} of a number is ${part}. What is the number?`, numeric: { value: String(total), form: 'any' },
-      explain: `${n} parts make ${part}, so one part is ${part} ÷ ${n} = ${unit}. The whole is ${d} parts: ${unit} × ${d} = ${total}.`,
-      steps: [`${n} equal parts are worth ${part}.`, `So one part is ${part} ÷ ${n} = ${unit}.`, `The whole number is ${d} parts: ${unit} × ${d} = ${total}.`],
+      explain: n === 1 ? `One part is ${part}. The whole is ${d} parts: ${unit} × ${d} = ${total}.` : `${n} parts make ${part}, so one part is ${part} ÷ ${n} = ${unit}. The whole is ${d} parts: ${unit} × ${d} = ${total}.`,
+      steps: n === 1 ? [`${tex(new Frac(n, d))} is one of ${d} equal parts, and it is worth ${part}.`, `The whole is ${d} of those parts.`, `${unit} × ${d} = ${total}.`] : [`${n} equal parts are worth ${part}.`, `So one part is ${part} ÷ ${n} = ${unit}.`, `The whole number is ${d} parts: ${unit} × ${d} = ${total}.`],
     };
   },
 
@@ -294,7 +296,7 @@ export const GENERATORS = {
       return {
         kind: 'typed', prompt: `Write ${tex(new Frac(f[0], f[1]))} as a decimal.`, numeric: { value: decPlain(th), form: 'decimal' },
         explain: `${f[0]} ÷ ${f[1]} = ${dec(th)}.`,
-        steps: [`A fraction is a division: ${f[0]} ÷ ${f[1]}.`, f[1] === 8 ? `{{1/8}} = 0.125, so I multiply by ${f[0]}.` : `I scale to a denominator of 100 or 1000.`, `${tex(new Frac(f[0], f[1]))} = ${dec(th)}.`],
+        steps: [`A fraction is a division: ${f[0]} ÷ ${f[1]}.`, f[1] === 8 ? (f[0] === 1 ? `I divide 1 by 8: 1.000 ÷ 8 = 0.125.` : `{{1/8}} = 0.125, so I multiply by ${f[0]}: ${f[0]} × 0.125 = ${dec(th)}.`) : `I scale to a denominator of 100: ${tex(new Frac(f[0], f[1]))} = ${tex(new Frac((f[0] * 100) / f[1], 100))}.`, `${tex(new Frac(f[0], f[1]))} = ${dec(th)}.`],
       };
     }
     const pool = distinct(rng, 4, () => rng.int(5, 95));
@@ -384,7 +386,8 @@ export const GENERATORS = {
         steps: [`I replace a with ${a} and b with ${b}.`, `${m}a = ${m} × ${a} = ${m * a}.`, `${m * a} − ${b} = ${neg(v)}.`],
       };
     }
-    const v = rng.chance(0.5) ? { p: `a² + ${b}b`, v: a * a + b * b, s: [`a² = ${a} × ${a} = ${a * a}${a === 2 ? '' : ` (not ${a} × 2)`}.`, `${b}b = ${b} × ${b} = ${b * b}.`, `${a * a} + ${b * b} = ${a * a + b * b}.`] }
+    const bTerm = b === 1 ? 'b' : `${b}b`; // a coefficient of 1 is never written
+    const v = rng.chance(0.5) ? { p: `a² + ${bTerm}`, v: a * a + b * b, s: [`a² = ${a} × ${a} = ${a * a}${a === 2 ? '' : ` (not ${a} × 2)`}.`, b === 1 ? 'b = 1.' : `${b}b = ${b} × ${b} = ${b * b}.`, `${a * a} + ${b * b} = ${a * a + b * b}.`] }
       : { p: `3(a + b)`, v: 3 * (a + b), s: [`Brackets first: a + b = ${a} + ${b} = ${a + b}.`, `3(…) means 3 × (…).`, `3 × ${a + b} = ${3 * (a + b)}.`] };
     return {
       kind: 'typed', prompt: `If a = ${a} and b = ${b}, what is ${v.p}?`, numeric: { value: String(v.v), form: 'any' },
@@ -412,7 +415,7 @@ export const GENERATORS = {
       };
     }
     const c = start - d;
-    const rule = (k, cc) => `${k}n ${cc < 0 ? '−' : '+'} ${Math.abs(cc)}`.replace(/ \+ 0$/, '');
+    const rule = (k, cc) => `${k === 1 ? '' : k}n ${cc < 0 ? '−' : '+'} ${Math.abs(cc)}`.replace(/ \+ 0$/, '');
     const correct = rule(d, c);
     const wrongs = [...new Set([`n + ${d}`, rule(d, start), rule(start, d === start ? 1 : d - start)])].filter((w) => w !== correct).slice(0, 3);
     return choice(`What is the nth term of ${terms.join(', ')}, …?`, correct, wrongs.map((w) => (w === `n + ${d}` ? { text: w, feedback: `“Add ${d}” is the term-to-term rule. The nth term needs ${d}n because each term is ${d} more.` } : w)), rng, {
@@ -436,19 +439,28 @@ export const GENERATORS = {
       const rhs = m * x + c;
       const lhs = `${m}x ${c < 0 ? '−' : '+'} ${Math.abs(c)}`;
       return {
-        kind: 'typed', prompt: `Solve: ${lhs} = ${rhs}`, prefix: 'x =', numeric: { value: String(x), form: 'any' },
+        kind: 'typed', prompt: `Solve: ${lhs} = ${neg(rhs)}`, prefix: 'x =', numeric: { value: String(x), form: 'any' },
         explain: `${c < 0 ? 'Add' : 'Subtract'} ${Math.abs(c)}: ${m}x = ${m * x}. Divide by ${m}: x = ${x}.`,
-        steps: [`First I undo the ${c < 0 ? '−' : '+'} ${Math.abs(c)}: ${m}x = ${rhs} ${c < 0 ? '+' : '−'} ${Math.abs(c)} = ${m * x}.`, `Then I undo × ${m} by dividing by ${m}.`, `x = ${m * x} ÷ ${m} = ${x}.`],
+        steps: [`First I undo the ${c < 0 ? '−' : '+'} ${Math.abs(c)}: ${m}x = ${neg(rhs)} ${c < 0 ? '+' : '−'} ${Math.abs(c)} = ${m * x}.`, `Then I undo × ${m} by dividing by ${m}.`, `x = ${m * x} ÷ ${m} = ${x}.`],
       };
     }
     const a = rng.int(3, 8), b = rng.int(1, a - 1), c = rng.int(1, 9) * (rng.chance(0.5) ? -1 : 1);
     const d = (a - b) * x + c;
     const xs = (k) => (k === 1 ? 'x' : `${k}x`);
     const fmt = (k, k0) => `${xs(k)} ${k0 < 0 ? '−' : '+'} ${Math.abs(k0)}`;
+    const collect = `${xs(a - b)} ${c < 0 ? '−' : '+'} ${Math.abs(c)} = ${neg(d)}`;
+    if (a - b === 1) {
+      // One x is left over, so there is nothing to divide by.
+      return {
+        kind: 'typed', prompt: `Solve: ${fmt(a, c)} = ${d === 0 ? xs(b) : fmt(b, d)}`, prefix: 'x =', numeric: { value: String(x), form: 'any' },
+        explain: `Subtract ${xs(b)} from both sides: ${collect}. ${c < 0 ? 'Add' : 'Subtract'} ${Math.abs(c)}: x = ${neg(x)}.`,
+        steps: [`I collect the x terms on one side by subtracting ${xs(b)} from both sides: ${collect}.`, `I ${c < 0 ? 'add' : 'subtract'} ${Math.abs(c)}: x = ${neg(x)}.`, `Check: when x = ${neg(x)}, both sides are ${neg(a * x + c)}.`],
+      };
+    }
     return {
       kind: 'typed', prompt: `Solve: ${fmt(a, c)} = ${d === 0 ? xs(b) : fmt(b, d)}`, prefix: 'x =', numeric: { value: String(x), form: 'any' },
-      explain: `Subtract ${xs(b)} from both sides: ${xs(a - b)} ${c < 0 ? '−' : '+'} ${Math.abs(c)} = ${neg(d)}. Then ${a - b}x = ${neg(d - c)}, so x = ${neg(x)}.`,
-      steps: [`I collect the x terms on one side by subtracting ${xs(b)} from both sides: ${xs(a - b)} ${c < 0 ? '−' : '+'} ${Math.abs(c)} = ${neg(d)}.`, `I ${c < 0 ? 'add' : 'subtract'} ${Math.abs(c)}: ${a - b}x = ${neg(d - c)}.`, `I divide by ${a - b}: x = ${neg(x)}.`],
+      explain: `Subtract ${xs(b)} from both sides: ${collect}. Then ${a - b}x = ${neg(d - c)}, so x = ${neg(x)}.`,
+      steps: [`I collect the x terms on one side by subtracting ${xs(b)} from both sides: ${collect}.`, `I ${c < 0 ? 'add' : 'subtract'} ${Math.abs(c)}: ${a - b}x = ${neg(d - c)}.`, `I divide by ${a - b}: x = ${neg(x)}.`],
     };
   },
 
@@ -471,7 +483,8 @@ export const GENERATORS = {
         steps: [`I add the ratio parts: ${p} + ${q} = ${p + q} parts.`, `One part is £${total} ÷ ${p + q} = £${unit}.`, `The larger share is ${q} × £${unit} = £${q * unit}.`],
       };
     }
-    const p = rng.int(2, 5), q = rng.int(2, 7); const k = rng.int(2, 6);
+    let p = rng.int(2, 5), q = rng.int(2, 7); const k = rng.int(2, 6);
+    while (gcd(p, q) !== 1) { p = rng.int(2, 5); q = rng.int(2, 7); } // ratio given in simplest form (never 5 : 5)
     return {
       kind: 'typed', prompt: `In a club the ratio of boys to girls is ${p} : ${q}. There are ${p * k} boys. How many girls are there?`, numeric: { value: String(q * k), form: 'any' },
       explain: `${p * k} boys is ${k} lots of ${p}, so there are ${k} lots of ${q} girls: ${q * k}.`,

@@ -23,7 +23,7 @@ export const KS1_GENERATORS_2 = {
     const v = min + k * step;
     if (v % labelEvery === 0) return KS1_GENERATORS_2.k1NumberLine(level, rng);
     const labels = []; for (let x = min; x <= max; x += labelEvery) labels.push(x);
-    return typed('What number is the arrow pointing to?', v, `Each small step is worth ${step}. The arrow is ${k} steps from ${min}: ${k} × ${step} = ${v}.`,
+    return typed('What number is the arrow pointing to?', v, `Each small step is worth ${step}. The arrow is ${k} step${k === 1 ? '' : 's'} from ${min}: ${k} × ${step} = ${v}.`,
       [`First I work out what each step is worth: ${max - min} ÷ ${ticks} = ${step}.`, `I count the steps to the arrow: ${k}.`, `${k} × ${step} = ${v}.`], { diagram: { type: 'numline', min, max, step, labels, mark: v } });
   },
 
@@ -91,7 +91,7 @@ export const KS1_GENERATORS_2 = {
     if (level === 1) { const g = rng.pick([2, 5, 10]), n = rng.int(2, 6); return typed(`${g * n} children make teams of ${g}. How many teams are there?`, n, `${g * n} ÷ ${g} = ${n} teams.`, [`I count in ${g}s until I reach ${g * n}.`, Array.from({ length: n }, (_, i) => (i + 1) * g).join(', ') + '.', `That is ${n} teams.`]); }
     if (level === 2) { const g = rng.pick([2, 3, 4, 5]), n = rng.int(3, 10); return typed(`A car transporter carries ${g} cars. How many transporters are needed for ${g * n} cars?`, n, `${g * n} ÷ ${g} = ${n}.`, [`Each transporter takes ${g}.`, `${g * n} ÷ ${g}.`, `= ${n} transporters.`]); }
     const g = rng.pick([3, 4, 5]), n = rng.int(3, 8), r = rng.int(1, g - 1), total = g * n + r;
-    if (rng.chance(0.5)) return typed(`A car transporter carries ${g} cars. How many transporters are needed for ${total} cars? Every car must go!`, n + 1, `${total} ÷ ${g} = ${n} remainder ${r}. The ${r} left over need one more transporter: ${n + 1}.`, [`${g} × ${n} = ${g * n}, which leaves ${r} cars.`, `Those ${r} cars still need a transporter.`, `So ${n} + 1 = ${n + 1}.`]);
+    if (rng.chance(0.5)) return typed(`A car transporter carries ${g} cars. How many transporters are needed for ${total} cars? Every car must go!`, n + 1, `${total} ÷ ${g} = ${n} remainder ${r}. The ${r} left over need one more transporter: ${n + 1}.`, [`${g} × ${n} = ${g * n}, which leaves ${r} car${r === 1 ? '' : 's'}.`, `${r === 1 ? 'That 1 car still needs' : `Those ${r} cars still need`} a transporter.`, `So ${n} + 1 = ${n + 1}.`]);
     return typed(`${total} stickers are shared equally between ${g} friends. How many are left over?`, r, `${g} × ${n} = ${g * n}, and ${total} − ${g * n} = ${r} left over.`, [`Each friend gets ${n}: ${g} × ${n} = ${g * n}.`, `${total} − ${g * n} = ${r}.`, `${r} left over.`]);
   },
 

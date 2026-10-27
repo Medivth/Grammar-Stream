@@ -6,6 +6,7 @@ import { timeWords } from './ks1maths.js';
 
 const money = (p) => (p >= 100 ? `£${(p / 100).toFixed(2)}` : `${p}p`);
 const pad = (n) => String(n).padStart(2, '0');
+const pv = (n, unit) => `${n} ${unit}${n === 1 ? '' : 's'}`; // 1 ten, 2 tens
 const RACERS = ['Turbo', 'Blaze', 'Rosa', 'Captain Nova', 'Bleep the robot', '{hero}'];
 function choice(prompt, correct, wrongs, rng, extra = {}) {
   const seen = new Set([correct]);
@@ -31,6 +32,14 @@ function addSteps(a, b) {
 function subSteps(a, b) {
   const [ah, at, ao] = digits(a), [bh, bt, bo] = digits(b);
   const ex1 = ao < bo, t = at - (ex1 ? 1 : 0), ex2 = t < bt;
+  if (ex1 && at === 0) {
+    // No tens to exchange: a hundred becomes 10 tens first, then one of those tens becomes 10 ones.
+    return [
+      `Ones: ${ao} − ${bo} won’t go, and there are no tens, so I exchange a hundred for 10 tens, then a ten for 10 ones: ${ao + 10} − ${bo} = ${ao + 10 - bo}.`,
+      `Tens: 9 tens are left, and 9 − ${bt} = ${9 - bt}.`,
+      `Hundreds: ${ah - 1} − ${bh} = ${ah - 1 - bh}. The answer is ${a - b}. Check: ${a - b} + ${b} = ${a}.`,
+    ];
+  }
   return [
     ex1 ? `Ones: ${ao} − ${bo} won’t go, so I exchange a ten for 10 ones: ${ao + 10} − ${bo} = ${ao + 10 - bo}.` : `Ones: ${ao} − ${bo} = ${ao - bo}.`,
     ex2 ? `Tens: ${t} − ${bt} won’t go, so I exchange a hundred for 10 tens: ${t + 10} − ${bt} = ${t + 10 - bt}.` : `Tens: ${t} − ${bt} = ${t - bt}.`,
@@ -66,7 +75,7 @@ export const Y3_GENERATORS = {
       }
       if (kind === 'partition') {
         const h = rng.int(1, 9), t = rng.int(0, 9), o = rng.int(1, 9), n = h * 100 + t * 10 + o;
-        return typed(`${h * 100} + ${t * 10} + ${o} =`, n, `${h} hundreds, ${t} tens and ${o} ones make ${n}.`, [`${h * 100} is ${h} hundreds.`, `${t * 10} is ${t} tens, and ${o} is ${o} ones.`, `Together: ${n}.`]);
+        return typed(`${h * 100} + ${t * 10} + ${o} =`, n, `${pv(h, 'hundred')}, ${pv(t, 'ten')} and ${pv(o, 'one')} make ${n}.`, [`${h * 100} is ${pv(h, 'hundred')}.`, `${t * 10} is ${pv(t, 'ten')}, and ${o} is ${pv(o, 'one')}.`, `Together: ${n}.`]);
       }
       const k = rng.pick([10, 100]), up = rng.chance(0.5);
       let n; do n = rng.int(210, 789); while ((k === 10 && (up ? digits(n)[1] === 9 : digits(n)[1] === 0)));
@@ -87,8 +96,8 @@ export const Y3_GENERATORS = {
       }
       if (kind === 'missing') {
         const h = rng.int(2, 9), t = rng.int(1, 9), o = rng.int(1, 9), n = h * 100 + t * 10 + o;
-        if (rng.chance(0.5)) return typed(`${n} = ${h * 100} + ? + ${o}`, t * 10, `${n} is ${h} hundreds, ${t} tens and ${o} ones, so the missing part is ${t * 10}.`, [`${h * 100} is the hundreds part, ${o} is the ones.`, `The tens digit is ${t}.`, `So the missing number is ${t * 10}.`]);
-        return typed(`${n} = ${(h - 1) * 100} + ? + ${o}`, 100 + t * 10, `Only ${h - 1} hundreds are used, so one hundred moves into the middle part: 100 + ${t * 10} = ${100 + t * 10}.`, [`${n} − ${o} = ${n - o}.`, `${n - o} − ${(h - 1) * 100} = ${100 + t * 10}.`, `Check: ${(h - 1) * 100} + ${100 + t * 10} + ${o} = ${n}.`]);
+        if (rng.chance(0.5)) return typed(`${n} = ${h * 100} + ? + ${o}`, t * 10, `${n} is ${pv(h, 'hundred')}, ${pv(t, 'ten')} and ${pv(o, 'one')}, so the missing part is ${t * 10}.`, [`${h * 100} is the hundreds part, ${o} is the ones.`, `The tens digit is ${t}.`, `So the missing number is ${t * 10}.`]);
+        return typed(`${n} = ${(h - 1) * 100} + ? + ${o}`, 100 + t * 10, `Only ${pv(h - 1, 'hundred')} ${h - 1 === 1 ? 'is' : 'are'} used, so one hundred moves into the middle part: 100 + ${t * 10} = ${100 + t * 10}.`, [`${n} − ${o} = ${n - o}.`, `${n - o} − ${(h - 1) * 100} = ${100 + t * 10}.`, `Check: ${(h - 1) * 100} + ${100 + t * 10} + ${o} = ${n}.`]);
       }
       if (rng.chance(0.5)) { const n = rng.int(1, 8) * 100 + 90 + rng.int(0, 9); return typed(`What is 10 more than ${n}?`, n + 10, `The tens go from 9 to 10, which makes a new hundred: ${n} → ${n + 10}.`, [`${n} has 9 tens.`, '10 tens make a hundred, so the hundreds digit goes up by 1.', `${n + 10}.`]); }
       const n = rng.int(2, 9) * 100 + rng.int(0, 9); return typed(`What is 10 less than ${n}?`, n - 10, `There are no tens, so I exchange a hundred: ${n} → ${n - 10}.`, [`${n} has 0 tens.`, 'I take one hundred and make it 10 tens, then take one ten away.', `${n - 10}.`]);
@@ -111,13 +120,13 @@ export const Y3_GENERATORS = {
         const k = up ? rng.int(1, 9 - d) : rng.int(1, d);
         if (up ? d === 9 : d === 0) continue;
         const v = up ? a + k * place : a - k * place;
-        return typed(`${a} ${up ? '+' : '−'} ${k * place} =`, v, `Only the ${PLACE[i]} digit changes: ${d} ${up ? '+' : '−'} ${k} = ${up ? d + k : d - k}.`, [`${k * place} is ${k} ${PLACE[i]}.`, `The ${PLACE[i]} digit of ${a} is ${d}.`, `${d} ${up ? '+' : '−'} ${k} = ${up ? d + k : d - k}, so the answer is ${v}.`]);
+        return typed(`${a} ${up ? '+' : '−'} ${k * place} =`, v, `Only the ${PLACE[i]} digit changes: ${d} ${up ? '+' : '−'} ${k} = ${up ? d + k : d - k}.`, [`${k * place} is ${k} ${k === 1 ? PLACE[i].slice(0, -1) : PLACE[i]}.`, `The ${PLACE[i]} digit of ${a} is ${d}.`, `${d} ${up ? '+' : '−'} ${k} = ${up ? d + k : d - k}, so the answer is ${v}.`]);
       }
     }
     if (level === 2) {
       if (rng.chance(0.5)) {
         let a, k; do { a = rng.int(150, 880); k = rng.int(2, 9); } while (digits(a)[1] + k < 10 || a + k * 10 > 999);
-        return typed(`${a} + ${k * 10} =`, a + k * 10, `${digits(a)[1]} tens + ${k} tens = ${digits(a)[1] + k} tens, which crosses into the next hundred: ${a + k * 10}.`, [`${a} has ${digits(a)[1]} tens.`, `${digits(a)[1]} + ${k} = ${digits(a)[1] + k} tens: that is 1 hundred and ${digits(a)[1] + k - 10} tens.`, `${a + k * 10}.`]);
+        return typed(`${a} + ${k * 10} =`, a + k * 10, `${pv(digits(a)[1], 'ten')} + ${pv(k, 'ten')} = ${pv(digits(a)[1] + k, 'ten')}, which crosses into the next hundred: ${a + k * 10}.`, [`${a} has ${pv(digits(a)[1], 'ten')}.`, `${digits(a)[1]} + ${k} = ${pv(digits(a)[1] + k, 'ten')}: that is 1 hundred and ${pv(digits(a)[1] + k - 10, 'ten')}.`, `${a + k * 10}.`]);
       }
       let a, k; do { a = rng.int(120, 990); k = rng.int(2, 9); } while (digits(a)[2] >= k || digits(a)[2] === 0 || digits(a)[1] === 0);
       return typed(`${a} − ${k} =`, a - k, `There aren’t enough ones, so I cross back over a ten: ${a} − ${digits(a)[2]} = ${a - digits(a)[2]}, then − ${k - digits(a)[2]} more = ${a - k}.`, [`Split ${k} into ${digits(a)[2]} and ${k - digits(a)[2]}.`, `${a} − ${digits(a)[2]} = ${a - digits(a)[2]}.`, `${a - digits(a)[2]} − ${k - digits(a)[2]} = ${a - k}.`]);
@@ -176,7 +185,7 @@ export const Y3_GENERATORS = {
       const kind = rng.pick(['x10', 'div10', 'tens']);
       if (kind === 'x10') return typed(`${a} × ${b * 10} =`, a * b * 10, `${a} × ${b} = ${a * b}, so ${a} × ${b * 10} is ten times bigger: ${a * b * 10}.`, [`I know ${a} × ${b} = ${a * b}.`, `${b * 10} is ten times ${b}.`, `So the answer is ten times ${a * b}: ${a * b * 10}.`]);
       if (kind === 'div10') return typed(`${a * b * 10} ÷ ${a} =`, b * 10, `${a * b} ÷ ${a} = ${b}, so ${a * b * 10} ÷ ${a} = ${b * 10}.`, [`${a * b * 10} is ten times ${a * b}.`, `${a * b} ÷ ${a} = ${b}.`, `So the answer is ten times bigger: ${b * 10}.`]);
-      return typed(`${a * 10} × ${b} =`, a * b * 10, `${a} tens × ${b} = ${a * b} tens = ${a * b * 10}.`, [`${a * 10} is ${a} tens.`, `${a} × ${b} = ${a * b}, so ${a * b} tens.`, `${a * b * 10}.`]);
+      return typed(`${a * 10} × ${b} =`, a * b * 10, `${pv(a, 'ten')} × ${b} = ${pv(a * b, 'ten')} = ${a * b * 10}.`, [`${a * 10} is ${pv(a, 'ten')}.`, `${a} × ${b} = ${a * b}, so ${pv(a * b, 'ten')}.`, `${a * b * 10}.`]);
     }
     const kind = rng.pick(['missing', 'double', 'word']);
     if (kind === 'missing') { const c = rng.int(3, 12); return typed(`${a} × ? = ${a * c}`, c, `${a * c} ÷ ${a} = ${c}.`, ['I need the missing factor.', `Divide: ${a * c} ÷ ${a}.`, `${c}. Check: ${a} × ${c} = ${a * c}.`]); }
@@ -189,7 +198,7 @@ export const Y3_GENERATORS = {
 
   y3Multiply(level, rng) {
     if (level === 1) {
-      if (rng.chance(0.5)) { const t = rng.int(2, 9), k = rng.int(2, 5); return typed(`${t * 10} × ${k} =`, t * 10 * k, `${t} × ${k} = ${t * k}, so ${t} tens × ${k} = ${t * k} tens = ${t * 10 * k}.`, [`${t * 10} is ${t} tens.`, `${t} × ${k} = ${t * k}.`, `${t * k} tens = ${t * 10 * k}.`]); }
+      if (rng.chance(0.5)) { const t = rng.int(2, 9), k = rng.int(2, 5); return typed(`${t * 10} × ${k} =`, t * 10 * k, `${t} × ${k} = ${t * k}, so ${pv(t, 'ten')} × ${k} = ${pv(t * k, 'ten')} = ${t * 10 * k}.`, [`${t * 10} is ${pv(t, 'ten')}.`, `${t} × ${k} = ${t * k}.`, `${pv(t * k, 'ten')} = ${t * 10 * k}.`]); }
       let n, k; do { n = rng.int(11, 43); k = rng.int(2, 3); } while ((n % 10) * k >= 10 || Math.floor(n / 10) * k >= 10 || n % 10 === 0);
       const T = n - (n % 10), O = n % 10;
       return typed(`${n} × ${k} =`, n * k, `Split ${n} into ${T} and ${O}: ${T} × ${k} = ${T * k}, ${O} × ${k} = ${O * k}, total ${n * k}.`, [`${n} = ${T} + ${O}.`, `${T} × ${k} = ${T * k} and ${O} × ${k} = ${O * k}.`, `${T * k} + ${O * k} = ${n * k}.`]);
@@ -430,7 +439,7 @@ export const Y3_GENERATORS = {
       return typed(`At night the temperature on Mars Base is ${t}°C. It falls by ${drop} degrees. What is the temperature now?`, v, `${t} − ${drop}: ${t} down to 0, then ${drop - t} more below zero: ${neg(v)}°C.`, [`Fall ${t} to get to 0.`, `Then fall ${drop - t} more.`, `${neg(v)}°C.`], { unit: '°C', diagram: { type: 'numline', min: -10, max: 10, step: 1, labels: [-10, -5, 0, 5, 10], mark: v } });
     }
     const a = -rng.int(2, 9), b = rng.int(1, 9);
-    if (rng.chance(0.5)) return typed(`What is the difference between ${neg(a)}°C and ${b}°C, in degrees?`, b - a, `From ${neg(a)} up to 0 is ${-a}, and from 0 to ${b} is ${b}: ${-a} + ${b} = ${b - a} degrees.`, [`${neg(a)} up to 0: ${-a} degrees.`, `0 up to ${b}: ${b} degrees.`, `${-a} + ${b} = ${b - a}.`]);
+    if (rng.chance(0.5)) return typed(`What is the difference between ${neg(a)}°C and ${b}°C, in degrees?`, b - a, `From ${neg(a)} up to 0 is ${-a}, and from 0 to ${b} is ${b}: ${-a} + ${b} = ${b - a} degrees.`, [`${neg(a)} up to 0: ${-a} degrees.`, `0 up to ${b}: ${b} degree${b === 1 ? '' : 's'}.`, `${-a} + ${b} = ${b - a}.`]);
     const rise = rng.int(1, -a - 1), v = a + rise;
     return typed(`The temperature is ${neg(a)}°C. It rises by ${rise} degree${rise > 1 ? 's' : ''}. What is it now?`, v, `${neg(a)} + ${rise} = ${neg(v)}°C (still below zero).`, [`Start at ${neg(a)}.`, `Count up ${rise}.`, `${neg(v)}°C.`], { unit: '°C' });
   },
@@ -438,17 +447,17 @@ export const Y3_GENERATORS = {
   y3Decimals(level, rng) {
     if (level === 1) {
       const n = rng.int(1, 9);
-      if (rng.chance(0.5)) return typed(`Write {{${n}/10}} as a decimal.`, `0.${n}`, `${n} tenths is 0.${n}: the first digit after the decimal point shows tenths.`, ['The first place after the decimal point is tenths.', `${n} tenths: put ${n} in the tenths place.`, `0.${n}.`]);
-      return typed(`Write 0.${n} as a fraction: {{?/10}}`, n, `0.${n} means ${n} tenths: {{${n}/10}}.`, ['The digit after the point is tenths.', `0.${n} is ${n} tenths.`, `{{${n}/10}}.`]);
+      if (rng.chance(0.5)) return typed(`Write {{${n}/10}} as a decimal.`, `0.${n}`, `${pv(n, 'tenth')} is 0.${n}: the first digit after the decimal point shows tenths.`, ['The first place after the decimal point is tenths.', `${pv(n, 'tenth')}: put ${n} in the tenths place.`, `0.${n}.`]);
+      return typed(`Write 0.${n} as a fraction: {{?/10}}`, n, `0.${n} means ${pv(n, 'tenth')}: {{${n}/10}}.`, ['The digit after the point is tenths.', `0.${n} is ${pv(n, 'tenth')}.`, `{{${n}/10}}.`]);
     }
     if (level === 2) {
-      if (rng.chance(0.5)) { const n = rng.int(1, 9); return typed(`${n} ÷ 10 =`, `0.${n}`, `Dividing by 10 moves the digit one place to the right: ${n} → 0.${n}.`, ['÷ 10 makes a number ten times smaller.', `${n} ones become ${n} tenths.`, `0.${n}.`]); }
-      const a = rng.int(1, 7), b = rng.int(1, 9 - a); return typed(`0.${a} + 0.${b} =`, `0.${a + b}`, `${a} tenths + ${b} tenths = ${a + b} tenths = 0.${a + b}.`, [`0.${a} is ${a} tenths and 0.${b} is ${b} tenths.`, `${a} + ${b} = ${a + b} tenths.`, `0.${a + b}.`]);
+      if (rng.chance(0.5)) { const n = rng.int(1, 9); return typed(`${n} ÷ 10 =`, `0.${n}`, `Dividing by 10 moves the digit one place to the right: ${n} → 0.${n}.`, ['÷ 10 makes a number ten times smaller.', `${pv(n, 'one')} become ${pv(n, 'tenth')}.`, `0.${n}.`]); }
+      const a = rng.int(1, 7), b = rng.int(1, 9 - a); return typed(`0.${a} + 0.${b} =`, `0.${a + b}`, `${pv(a, 'tenth')} + ${pv(b, 'tenth')} = ${pv(a + b, 'tenth')} = 0.${a + b}.`, [`0.${a} is ${pv(a, 'tenth')} and 0.${b} is ${pv(b, 'tenth')}.`, `${a} + ${b} = ${pv(a + b, 'tenth')}.`, `0.${a + b}.`]);
     }
     const n = rng.int(11, 99);
     if (n % 10 === 0) return Y3_GENERATORS.y3Decimals(level, rng);
     const s = `0.${pad(n)}`;
-    if (rng.chance(0.5)) return typed(`Write {{${n}/100}} as a decimal.`, s, `${n} hundredths is ${s}.`, ['The second place after the point is hundredths.', `${n} hundredths = ${Math.floor(n / 10)} tenths and ${n % 10} hundredths.`, `${s}.`]);
+    if (rng.chance(0.5)) return typed(`Write {{${n}/100}} as a decimal.`, s, `${pv(n, 'hundredth')} is ${s}.`, ['The second place after the point is hundredths.', `${pv(n, 'hundredth')} = ${pv(Math.floor(n / 10), 'tenth')} and ${pv(n % 10, 'hundredth')}.`, `${s}.`]);
     return typed(`${n} ÷ 100 =`, s, `Dividing by 100 moves the digits two places to the right: ${n} → ${s}.`, ['÷ 100 makes a number a hundred times smaller.', 'The digits move two places to the right.', `${s}.`]);
   },
 

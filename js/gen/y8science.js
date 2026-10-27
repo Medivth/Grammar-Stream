@@ -21,12 +21,13 @@ function choice(prompt, correct, wrongs, rng, explain, steps) {
 export const Y8_SCIENCE_GENERATORS = {
   y8sSpeed(level, rng) {
     if (level === 1) {
-      const s = rng.pick([2, 3, 4, 5, 6, 8, 10, 12, 15, 20]), t = rng.pick([5, 10, 20, 30, 40, 60]);
-      const who = rng.pick(['Mira cycles', 'Theo runs', 'A chariot races', 'Kit skateboards']);
+      // realistic speeds for each mover: a child runs at up to about 6 m/s and cycles at up to about 8 m/s (30 km/h)
+      const [who, speeds] = rng.pick([['Mira cycles', [3, 4, 5, 6, 8]], ['Theo runs', [2, 3, 4, 5, 6]], ['A chariot races', [8, 10, 12, 15]], ['Kit skateboards', [2, 3, 4, 5, 6]]]);
+      const s = rng.pick(speeds), t = rng.pick([5, 10, 20, 30, 40, 60]);
       return typed(`${who} ${s * t} m in ${t} s. What is the average speed?`, s, 'm/s', `Speed = distance ÷ time = ${s * t} ÷ ${t} = ${s} m/s.`, ['speed = distance ÷ time', `distance = ${s * t} m, time = ${t} s`, `${s * t} ÷ ${t} = ${s} m/s`]);
     }
     if (level === 2) {
-      const v = rng.pick([12, 15, 18, 20, 24, 30]), mins = rng.pick([2, 5, 10, 15, 20]);
+      const v = rng.pick([8, 10, 12, 15, 18, 20]), mins = rng.pick([2, 5, 10, 15, 20]); // fast ferries cruise at up to about 20 m/s (40 knots)
       const d = v * mins * 60;
       return typed(`A ferry to the island of Delos travels at ${v} m/s for ${mins} minutes. How far does it go, in km?`, d / 1000, 'km', `Change minutes to seconds first: ${mins} × 60 = ${mins * 60} s. Distance = speed × time = ${v} × ${mins * 60} = ${d} m = ${fmt(d / 1000)} km.`, [`time = ${mins} × 60 = ${mins * 60} s`, `distance = speed × time = ${v} × ${mins * 60} = ${d} m`, `${d} m ÷ 1000 = ${fmt(d / 1000)} km`]);
     }
@@ -68,11 +69,16 @@ export const Y8_SCIENCE_GENERATORS = {
       const F = rng.pick([5, 10, 20, 25, 40, 50]), d = rng.pick([0.2, 0.5, 1, 1.5, 2]);
       return typed(`A force of ${F} N acts ${d} m from a pivot. What is its moment?`, F * d, 'N m', `Moment = force × perpendicular distance from the pivot = ${F} × ${d} = ${fmt(F * d)} N m.`, ['moment = force × distance from pivot', `${F} N × ${d} m`, `= ${fmt(F * d)} N m`]);
     }
-    const W1 = rng.pick([200, 300, 400, 500]), d1 = rng.pick([1, 1.5, 2]), d2 = rng.pick([0.5, 1, 2.5, 3, 4].filter((x) => x !== d1 && Number.isInteger((W1 * d1 * 2) / x)));
-    const W2 = (W1 * d1) / d2;
+    // children weigh about 250–600 N (25–60 kg), so both weights stay in that range
+    const SEATS = [];
+    for (const w1 of [300, 350, 400, 450, 500, 550, 600]) for (const x1 of [1, 1.5, 2, 2.5]) for (const x2 of [1, 1.2, 1.5, 2, 2.4, 2.5, 3]) {
+      const w2 = (w1 * x1) / x2;
+      if (x2 !== x1 && Number.isInteger(w2 / 10) && w2 >= 250 && w2 <= 600) SEATS.push([w1, x1, x2]);
+    }
+    const [W1, d1, d2] = rng.pick(SEATS), W2 = (W1 * d1) / d2;
     if (level === 2) return typed(`On a seesaw, Mira (${W1} N) sits ${d1} m from the pivot. How far from the pivot must Kit (${fmt(W2)} N) sit on the other side to balance it?`, d2, 'm', `Balanced when clockwise moment = anticlockwise moment: ${W1} × ${d1} = ${fmt(W2)} × d, so d = ${fmt(W1 * d1)} ÷ ${fmt(W2)} = ${d2} m.`, ['principle of moments: anticlockwise = clockwise', `${W1} × ${d1} = ${fmt(W1 * d1)} N m`, `d = ${fmt(W1 * d1)} ÷ ${fmt(W2)} = ${d2} m`]);
     const L = rng.pick([0.2, 0.25, 0.4, 0.5]), lever = rng.pick([1, 2, 4, 5]), load = rng.pick([400, 600, 800, 1000]);
-    return typed(`Archimedes said, “Give me a lever long enough and I will move the world.” A rock of weight ${load} N sits ${L} m from the pivot of a lever. What force is needed ${lever} m from the pivot on the other side?`, (load * L) / lever, 'N', `${load} × ${L} = F × ${lever}, so F = ${fmt(load * L)} ÷ ${lever} = ${fmt((load * L) / lever)} N. A long lever turns a small force into a big moment.`, ['moment of rock = moment of effort', `${load} × ${L} = ${fmt(load * L)} N m`, `F = ${fmt(load * L)} ÷ ${lever} = ${fmt((load * L) / lever)} N`]);
+    return typed(`Archimedes is said to have declared, “Give me a place to stand and I will move the Earth.” A rock of weight ${load} N sits ${L} m from the pivot of a lever. What force is needed ${lever} m from the pivot on the other side?`, (load * L) / lever, 'N', `${load} × ${L} = F × ${lever}, so F = ${fmt(load * L)} ÷ ${lever} = ${fmt((load * L) / lever)} N. A long lever turns a small force into a big moment.`, ['moment of rock = moment of effort', `${load} × ${L} = ${fmt(load * L)} N m`, `F = ${fmt(load * L)} ÷ ${lever} = ${fmt((load * L) / lever)} N`]);
   },
 
   y8sOhm(level, rng) {
@@ -156,7 +162,7 @@ export const Y8_SCIENCE_GENERATORS = {
     }
     if (level === 2) {
       const [p1, p2, pct] = rng.pick([['Bb', 'Bb', 25], ['Bb', 'bb', 50], ['BB', 'Bb', 0]]);
-      return typed(`Parents ${p1} × ${p2}. B (brown) is dominant over b (blue). What percentage of children are likely to have BLUE eyes?`, pct, '%', `Blue eyes need two recessive alleles (bb). In the Punnett square, ${pct / 25} of the 4 boxes are bb: ${pct}%.`, ['blue is recessive, so a child must be bb', 'fill in the four boxes of the Punnett square', `${pct / 25} of 4 boxes = ${pct}%`]);
+      return typed(`Parents ${p1} × ${p2}. B (brown) is dominant over b (blue). What percentage of children are likely to have BLUE eyes?`, pct, '%', `Blue eyes need two recessive alleles (bb). In the Punnett square, ${pct ? `${pct / 25} of the 4 boxes ${pct === 25 ? 'is' : 'are'}` : 'none of the 4 boxes is'} bb: ${pct}%.`, ['blue is recessive, so a child must be bb', 'fill in the four boxes of the Punnett square', `${pct / 25} of 4 boxes = ${pct}%`]);
     }
     const n = rng.pick([40, 80, 120, 200]);
     return typed(`Two pea plants that are both Tt (tall, T, is dominant over short, t) are crossed and produce ${n} seedlings. About how many would you expect to be short?`, n / 4, '', `Tt × Tt gives TT, Tt, Tt, tt: one in four is short (tt). ${n} ÷ 4 = ${n / 4}. Gregor Mendel found ratios like this with peas in the 1860s.`, ['Punnett square for Tt × Tt: TT, Tt, Tt, tt', 'short plants are tt: 1 in 4', `${n} ÷ 4 = ${n / 4}`]);

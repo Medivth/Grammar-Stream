@@ -23,6 +23,8 @@ function linear(a, b, v = 'x') {
   return { answer: main, accept: [flipped, `${b} + ${xs}`, `+${main}`] };
 }
 const show = (s) => s.replace(/-/g, '−');
+const xk = (k) => (k === 1 ? 'x' : `${k}x`); // a coefficient of 1 is never written
+const sgn0 = (n) => (n === 0 ? '' : sgn(n));
 
 export const MATHS3_GENERATORS = {
   expand(level, rng) {
@@ -30,9 +32,9 @@ export const MATHS3_GENERATORS = {
       const a = rng.int(2, 7), b = rng.int(1, 6), c = rng.int(1, 9), d = rng.pick([-6, -5, -4, -3, -2, 2, 3, 4]);
       const { answer, accept } = linear(a + b, c + d);
       return {
-        kind: 'typed', prompt: `Simplify: ${a}x + ${c} + ${b}x${sgn(d)}`, answer, accept, algebra: true, placeholder: 'e.g. 3x + 2',
-        explain: `Collect the x terms: ${a}x + ${b}x = ${a + b}x. Collect the numbers: ${c}${sgn(d)} = ${c + d}. So ${show(answer)}.`,
-        steps: ['Like terms can be added: x terms with x terms, numbers with numbers.', `${a}x + ${b}x = ${a + b}x, and ${c}${sgn(d)} = ${neg(c + d)}.`, `Answer: ${show(answer)}.`],
+        kind: 'typed', prompt: `Simplify: ${a}x + ${c} + ${xk(b)}${sgn(d)}`, answer, accept, algebra: true, placeholder: 'e.g. 3x + 2',
+        explain: `Collect the x terms: ${a}x + ${xk(b)} = ${a + b}x. Collect the numbers: ${c}${sgn(d)} = ${neg(c + d)}. So ${show(answer)}.`,
+        steps: ['Like terms can be added: x terms with x terms, numbers with numbers.', `${a}x + ${xk(b)} = ${a + b}x, and ${c}${sgn(d)} = ${neg(c + d)}.`, `Answer: ${show(answer)}.`],
       };
     }
     if (level === 2) {
@@ -66,25 +68,25 @@ export const MATHS3_GENERATORS = {
     if (level === 1) {
       const x = rng.int(2, 9), a = rng.int(3, 7), b = rng.int(1, a - 1), c = (a - b) * x;
       return {
-        kind: 'typed', prompt: `Solve: ${a}x = ${b === 1 ? '' : b}x + ${c}`, prefix: 'x =', numeric: { value: String(x), form: 'any' },
-        explain: `Subtract ${b}x from both sides: ${a - b}x = ${c}, so x = ${c} ÷ ${a - b} = ${x}.`,
-        steps: ['Get all the x terms on one side by subtracting the smaller one from both sides.', `${a}x − ${b}x = ${a - b}x, so ${a - b}x = ${c}.`, `x = ${c} ÷ ${a - b} = ${x}.`],
+        kind: 'typed', prompt: `Solve: ${a}x = ${xk(b)} + ${c}`, prefix: 'x =', numeric: { value: String(x), form: 'any' },
+        explain: a - b === 1 ? `Subtract ${xk(b)} from both sides: x = ${c}.` : `Subtract ${xk(b)} from both sides: ${a - b}x = ${c}, so x = ${c} ÷ ${a - b} = ${x}.`,
+        steps: ['Get all the x terms on one side by subtracting the smaller one from both sides.', `${a}x − ${xk(b)} = ${xk(a - b)}, so ${xk(a - b)} = ${c}.`, a - b === 1 ? `So x = ${x}. Check: ${a} × ${x} = ${a * x} and ${b === 1 ? '' : `${b} × ${x} + `}${b === 1 ? `${x} + ${c}` : c} = ${a * x}.` : `x = ${c} ÷ ${a - b} = ${x}.`],
       };
     }
     if (level === 2) {
       const x = rng.int(2, 9), a = rng.int(2, 6), b = rng.int(1, a - 1), c = rng.int(1, 9), d = (a - b) * x + c;
       return {
-        kind: 'typed', prompt: `Solve: ${a}x + ${c} = ${b === 1 ? '' : b}x + ${d}`, prefix: 'x =', numeric: { value: String(x), form: 'any' },
-        explain: `Subtract ${b}x from both sides: ${a - b}x + ${c} = ${d}. Subtract ${c}: ${a - b}x = ${d - c}. So x = ${x}.`,
-        steps: [`First the x terms: subtract ${b}x from both sides to get ${a - b}x + ${c} = ${d}.`, `Then the numbers: subtract ${c} from both sides to get ${a - b}x = ${d - c}.`, `x = ${d - c} ÷ ${a - b} = ${x}.`],
+        kind: 'typed', prompt: `Solve: ${a}x + ${c} = ${xk(b)} + ${d}`, prefix: 'x =', numeric: { value: String(x), form: 'any' },
+        explain: a - b === 1 ? `Subtract ${xk(b)} from both sides: x + ${c} = ${d}. Subtract ${c}: x = ${x}.` : `Subtract ${xk(b)} from both sides: ${a - b}x + ${c} = ${d}. Subtract ${c}: ${a - b}x = ${d - c}. So x = ${x}.`,
+        steps: [`First the x terms: subtract ${xk(b)} from both sides to get ${xk(a - b)} + ${c} = ${d}.`, `Then the numbers: subtract ${c} from both sides to get ${xk(a - b)} = ${d - c}.`, a - b === 1 ? `So x = ${x}. Check: both sides are ${a * x + c}.` : `x = ${d - c} ÷ ${a - b} = ${x}.`],
       };
     }
     const x = rng.pick([-4, -3, -2, 2, 3, 4, 5, 6]), a = rng.int(2, 4), b = rng.int(1, 5), c = rng.int(1, a - 1 || 1), d = a * (x + b) - c * x;
     if (a === c) return MATHS3_GENERATORS.equations2(3, rng);
     return {
-      kind: 'typed', prompt: `Solve: ${a}(x + ${b}) = ${c === 1 ? '' : c}x${sgn(d)}`, prefix: 'x =', numeric: { value: String(x), form: 'any' },
-      explain: `Expand: ${a}x + ${a * b} = ${c}x${sgn(d)}. Subtract ${c}x: ${a - c}x + ${a * b} = ${neg(d)}. Subtract ${a * b}: ${a - c}x = ${neg(d - a * b)}. x = ${neg(x)}.`,
-      steps: [`Expand the bracket first: ${a}x + ${a * b} = ${c}x${sgn(d)}.`, `Collect x terms on the left (subtract ${c}x) and numbers on the right (subtract ${a * b}): ${a - c}x = ${neg(d - a * b)}.`, `x = ${neg(d - a * b)} ÷ ${a - c} = ${neg(x)}.`],
+      kind: 'typed', prompt: `Solve: ${a}(x + ${b}) = ${xk(c)}${sgn0(d)}`, prefix: 'x =', numeric: { value: String(x), form: 'any' },
+      explain: `Expand: ${a}x + ${a * b} = ${xk(c)}${sgn0(d)}. Subtract ${xk(c)}: ${xk(a - c)} + ${a * b} = ${neg(d)}. Subtract ${a * b}: ${a - c === 1 ? `x = ${neg(x)}.` : `${a - c}x = ${neg(d - a * b)}. x = ${neg(x)}.`}`,
+      steps: [`Expand the bracket first: ${a}x + ${a * b} = ${xk(c)}${sgn0(d)}.`, `Collect x terms on the left (subtract ${xk(c)}) and numbers on the right (subtract ${a * b}): ${xk(a - c)} = ${neg(d - a * b)}.`, a - c === 1 ? `So x = ${neg(x)}. Check: both sides are ${neg(a * (x + b))}.` : `x = ${neg(d - a * b)} ÷ ${a - c} = ${neg(x)}.`],
     };
   },
 
@@ -111,7 +113,7 @@ export const MATHS3_GENERATORS = {
     return {
       kind: 'typed', prompt: up ? `After a ${p}% pay rise, Priya earns £${after} a week. What did she earn before?` : `In a sale with ${p}% off, a coat costs £${after}. What was the original price?`, numeric: { value: String(amt), form: 'any' }, unit: '£', unitBefore: true,
       explain: `£${after} is ${mult}% of the original. 1% = ${after} ÷ ${mult} = ${after / mult}. Original = ${after / mult} × 100 = £${amt}. (Not ${p}% of £${after} ${up ? 'taken off' : 'added back'}: that gives the wrong answer.)`,
-      steps: [`The ${up ? 'new' : 'sale'} price is ${mult}% of the original, not 100%.`, `So 1% of the original = ${after} ÷ ${mult} = ${after / mult}.`, `100% = ${after / mult} × 100 = £${amt}. Check: ${amt} × ${mult / 100} = ${after}.`],
+      steps: [`The ${up ? 'new pay' : 'sale price'} is ${mult}% of the original, not 100%.`, `So 1% of the original = ${after} ÷ ${mult} = ${after / mult}.`, `100% = ${after / mult} × 100 = £${amt}. Check: ${amt} × ${mult / 100} = ${after}.`],
     };
   },
 
@@ -178,8 +180,8 @@ export const MATHS3_GENERATORS = {
       const who = ['Ava', 'Ben', 'Cal'];
       return {
         kind: 'typed', prompt: `£${amount} is shared between Ava, Ben and Cal in the ratio ${parts.join(' : ')}. How much does ${who[k]} get?`, numeric: { value: String(parts[k] * unit), form: 'any' }, unit: '£', unitBefore: true,
-        explain: `${parts.join(' + ')} = ${tot} parts. One part = £${amount} ÷ ${tot} = £${unit}. ${who[k]} gets ${parts[k]} parts = £${parts[k] * unit}.`,
-        steps: [`Total parts: ${parts.join(' + ')} = ${tot}.`, `One part is £${amount} ÷ ${tot} = £${unit}.`, `${who[k]} has ${parts[k]} parts: ${parts[k]} × £${unit} = £${parts[k] * unit}.`],
+        explain: `${parts.join(' + ')} = ${tot} parts. One part = £${amount} ÷ ${tot} = £${unit}. ${who[k]} gets ${parts[k]} part${parts[k] === 1 ? '' : 's'} = £${parts[k] * unit}.`,
+        steps: [`Total parts: ${parts.join(' + ')} = ${tot}.`, `One part is £${amount} ÷ ${tot} = £${unit}.`, `${who[k]} has ${parts[k]} part${parts[k] === 1 ? '' : 's'}: ${parts[k]} × £${unit} = £${parts[k] * unit}.`],
       };
     }
     if (level === 2) {
@@ -272,10 +274,14 @@ export const MATHS3_GENERATORS = {
       const w1 = rng.int(1, 3), n1 = rng.int(1, d1 - 1), w2 = rng.int(1, 3), n2 = rng.int(1, d2 - 1);
       if (g(n1, d1) !== 1 || g(n2, d2) !== 1) return MATHS3_GENERATORS.fracMixed(1, rng);
       const L = d1 * d2 / g(d1, d2), top = (w1 * d1 + n1) * (L / d1) + (w2 * d2 + n2) * (L / d2);
+      const W = w1 + w2, fs = n1 * (L / d1) + n2 * (L / d2), sum = `{{${n1 * (L / d1)}/${L}}} + {{${n2 * (L / d2)}/${L}}} = {{${fs}/${L}}}`;
+      // When the fractions make 1 or more, show the extra whole being carried into the whole numbers.
+      const carry = fs < L ? `{{${fs}/${L}}}` : fs === L ? '1' : `1 {{${fs - L}/${L}}}`;
+      const raw = fs < L ? `${W} {{${fs}/${L}}}` : fs === L ? `${W + 1}` : `${W + 1} {{${fs - L}/${L}}}`, end = raw === tex(top, L) ? raw : `${raw} = ${tex(top, L)}`;
       return {
         kind: 'typed', prompt: `Work out ${w1} {{${n1}/${d1}}} + ${w2} {{${n2}/${d2}}}. Give your answer as a mixed number in its simplest form.`, numeric: { value: mixed(top, L), form: 'mixed' },
-        explain: `Whole numbers: ${w1} + ${w2} = ${w1 + w2}. Fractions with denominator ${L}: {{${n1 * (L / d1)}/${L}}} + {{${n2 * (L / d2)}/${L}}} = {{${n1 * (L / d1) + n2 * (L / d2)}/${L}}}. Altogether ${tex(top, L)}.`,
-        steps: [`Add the whole numbers: ${w1} + ${w2} = ${w1 + w2}.`, `Add the fractions using a common denominator of ${L}: {{${n1 * (L / d1)}/${L}}} + {{${n2 * (L / d2)}/${L}}} = {{${n1 * (L / d1) + n2 * (L / d2)}/${L}}}.`, `Put them together and simplify: ${tex(top, L)}.`],
+        explain: `Whole numbers: ${w1} + ${w2} = ${W}. Fractions with denominator ${L}: ${sum}${fs >= L ? ` = ${carry}` : ''}. Altogether ${W} + ${carry} = ${end}.`,
+        steps: [`Add the whole numbers: ${w1} + ${w2} = ${W}.`, `Add the fractions using a common denominator of ${L}: ${sum}.`, fs < L ? `Put them together and simplify: ${W} + ${carry} = ${end}.` : fs === L ? `{{${fs}/${L}}} is 1 whole, so ${W} + 1 = ${end}.` : `{{${fs}/${L}}} is more than 1: {{${fs}/${L}}} = ${carry}, so ${W} + ${carry} = ${end}.`],
       };
     }
     if (level === 2) {

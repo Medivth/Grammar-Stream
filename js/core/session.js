@@ -493,7 +493,7 @@ export function describeAnswer(q) {
       }
       return q.options.find((o) => o.correct)?.text ?? '';
     }
-    case 'typed': return q.numeric ? q.numeric.value : q.answer;
+    case 'typed': return q.numeric ? String(q.numeric.value).replace(/^-/, '−') : q.answer; // shown to the child: true minus sign
     case 'order': return q.items.join(' → ');
     case 'cloze': return q.blanks.map((b) => b.answer).join(' / ');
     case 'map': return q.answer;

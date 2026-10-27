@@ -66,7 +66,7 @@ export const MATHS2_GENERATORS = {
     return {
       kind: 'typed', prompt: `${fmtNum(a)} × ${b} = ?`, numeric: { value: String(a * b), form: 'any' },
       explain: `${fmtNum(a)} × ${bt} = ${fmtNum(a * bt)} and ${fmtNum(a)} × ${bo} = ${fmtNum(a * bo)}. Add: ${fmtNum(a * b)}.`,
-      steps: [`Long multiplication: I multiply by the ${bo} ones, then by the ${bt / 10} tens.`, `${fmtNum(a)} × ${bo} = ${fmtNum(a * bo)}, and ${fmtNum(a)} × ${bt} = ${fmtNum(a * bt)}.`, `${fmtNum(a * bo)} + ${fmtNum(a * bt)} = ${fmtNum(a * b)}.`],
+      steps: [`Long multiplication: I multiply by the ${bo} ${bo === 1 ? 'one' : 'ones'}, then by the ${bt / 10} ${bt === 10 ? 'ten' : 'tens'}.`, `${fmtNum(a)} × ${bo} = ${fmtNum(a * bo)}, and ${fmtNum(a)} × ${bt} = ${fmtNum(a * bt)}.`, `${fmtNum(a * bo)} + ${fmtNum(a * bt)} = ${fmtNum(a * b)}.`],
     };
   },
 
@@ -87,8 +87,9 @@ export const MATHS2_GENERATORS = {
       const qt = Math.floor(q / 10) * 10, qo = q % 10;
       return {
         kind: 'typed', prompt: `${n} ÷ ${d} = ?`, numeric: { value: String(q), form: 'any' },
-        explain: `${d} × ${qt} = ${qt * d}, leaving ${n - qt * d}; that is ${d} × ${qo}. So the answer is ${q}.`,
-        steps: [`Long division: first I take out ${qt} lots of ${d}: ${d} × ${qt} = ${qt * d}.`, `${n} − ${qt * d} = ${n - qt * d}, which is ${d} × ${qo}.`, `${qt} + ${qo} = ${q}, with nothing left over.`],
+        explain: qo ? `${d} × ${qt} = ${qt * d}, leaving ${n - qt * d}; that is ${d} × ${qo}. So the answer is ${q}.` : `${d} × ${qt} = ${n} exactly, so ${n} ÷ ${d} = ${q}, with nothing left over.`,
+        steps: qo ? [`Long division: first I take out ${qt} lots of ${d}: ${d} × ${qt} = ${qt * d}.`, `${n} − ${qt * d} = ${n - qt * d}, which is ${d} × ${qo}.`, `${qt} + ${qo} = ${q}, with nothing left over.`]
+          : [`Long division: first I take out ${qt} lots of ${d}: ${d} × ${qt} = ${qt * d}.`, `That is exactly ${n}, with nothing left over.`, `So ${n} ÷ ${d} = ${q}.`],
       };
     }
     const d = rng.int(12, 30), q = rng.int(8, 40), r = rng.int(1, d - 1), n = q * d + r;
@@ -97,14 +98,14 @@ export const MATHS2_GENERATORS = {
       return {
         kind: 'typed', prompt: `${n} children are going on a trip. Each coach seats ${d}. How many coaches are needed?`, numeric: { value: String(q + 1), form: 'any' },
         explain: `${n} ÷ ${d} = ${q} remainder ${r}. The ${r} left over still need a coach, so round UP: ${q + 1} coaches.`,
-        steps: [`${n} ÷ ${d} = ${q} remainder ${r}.`, `${q} full coaches leave ${r} children with no seat.`, `They need one more coach: ${q + 1}.`],
+        steps: [`${n} ÷ ${d} = ${q} remainder ${r}.`, `${q} full coaches leave ${r} ${r === 1 ? 'child' : 'children'} with no seat.`, `They need one more coach: ${q + 1}.`],
       };
     }
     if (kind === 'remainder') {
       return {
         kind: 'typed', prompt: `${n} sweets are shared equally between ${d} children. How many sweets are left over?`, numeric: { value: String(r), form: 'any' },
         explain: `${d} × ${q} = ${q * d}, and ${n} − ${q * d} = ${r}. Each child gets ${q} and ${r} are left over.`,
-        steps: [`How many ${d}s fit in ${n}? ${d} × ${q} = ${q * d}.`, `${n} − ${q * d} = ${r}.`, `So ${r} sweets are left over.`],
+        steps: [`How many ${d}s fit in ${n}? ${d} × ${q} = ${q * d}.`, `${n} − ${q * d} = ${r}.`, `So ${r} ${r === 1 ? 'sweet is' : 'sweets are'} left over.`],
       };
     }
     const g = (a, b) => (b ? g(b, a % b) : a), k = g(r, d);
