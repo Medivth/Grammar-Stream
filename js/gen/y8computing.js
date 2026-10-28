@@ -122,7 +122,7 @@ export const Y8_COMPUTING_GENERATORS = {
     if (level === 2) {
       const n = rng.int(17, 255);
       const [h, l] = [Math.floor(n / 16), n % 16];
-      const pic = pv([16, 1], [[hex(h), hex(l)]], `${digitSays(h)} sixteens and ${digitSays(l)} ones: ${h} × 16 + ${l} = ${n}.`);
+      const pic = pv([16, 1], [[hex(h), hex(l)]], [[h, 'sixteen'], [l, 'one']].map(([d, w]) => `${d > 9 ? `${hex(d)} is ${d}, so ` : ''}${d} ${w}${d === 1 ? '' : 's'}`).join(' and ') + `: ${h} × 16 + ${l} = ${n}.`);
       if (rng.chance(0.5)) return num(`Convert the hexadecimal number \`${hex(n)}\` to denary.`, n, `${hex(h)} sixteens and ${hex(l)} ones: ${h} × 16 + ${l} = ${n}.`, ['The place values in hex are 16 and 1.', `${hex(h)} = ${h} and ${hex(l)} = ${l}.`, `${h} × 16 + ${l} = ${n}.`], pic);
       return text(`Convert ${n} to hexadecimal.`, hex(n), `${n} ÷ 16 = ${h} remainder ${l}, so ${hex(h)}${hex(l)}.`, [`How many 16s fit in ${n}? ${h}, which is ${hex(h)}.`, `Remainder: ${n} − ${h * 16} = ${l}, which is ${hex(l)}.`, `So ${n} = ${hex(n)}.`], pic);
     }

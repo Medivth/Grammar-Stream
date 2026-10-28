@@ -96,7 +96,7 @@ const TOPIC_VISUALS = {
   'maths.y3-column': { kind: 'table', head: ['', 'H', 'T', 'O'], rows: [['exchange', '**4**', '**13**', '**13**'], ['', '5', '4', '3'], ['−', '2', '7', '8'], ['=', '2', '6', '5']], caption: '543 − 278. 3 − 8 won’t go: exchange a ten, so 13 − 8 = 5. 3 − 7 won’t go: exchange a hundred, so 13 − 7 = 6. Then 4 − 2 = 2.' },
   'maths.y3-tables': M({ type: 'barmodel', rows: [{ label: '4 × 3', parts: 4, text: '3' }, { label: '8 × 3', parts: 8, text: '3' }] }, { caption: 'Eight 3s are double four 3s: 4 × 3 = 12, so 8 × 3 = 24.' }),
   'maths.y3-multiply': M({ type: 'areamodel', across: [30, 4], down: [3] }, { caption: '34 × 3: split 34 into 30 and 4. 30 × 3 = 90 and 4 × 3 = 12, so 90 + 12 = 102.' }),
-  'maths.y3-divide': M({ type: 'barmodel', rows: [1, 2, 3, 4, 5].map((n) => ({ label: `bag ${n}`, parts: 3 })).concat([{ label: 'left over', parts: 2, shaded: 2 }]) }, { caption: '17 sweets shared into 5 bags: 3 in each bag and 2 left over. 17 ÷ 5 = 3 remainder 2.' }),
+  'maths.y3-divide': M({ type: 'barmodel', rows: [1, 2, 3, 4, 5].map((n) => ({ label: `bag ${n}`, parts: 3, shaded: 3 })).concat([{ label: 'left over', parts: 2, shaded: 2 }]) }, { caption: '17 sweets shared into 5 bags: 3 in each bag and 2 left over. 17 ÷ 5 = 3 remainder 2.' }),
   'maths.y3-fractions': [
     M({ type: 'barmodel', total: '24', rows: [{ parts: 4, shaded: 3, text: '6' }] }, { caption: '{{3/4}} of 24: share 24 into 4 equal parts of 6. Three parts make 18.' }),
     M({ type: 'barmodel', rows: [{ parts: 10, shaded: 3 }] }, { caption: 'One whole shared into 10 equal parts: each part is one tenth. 3 tenths are shaded.' }),

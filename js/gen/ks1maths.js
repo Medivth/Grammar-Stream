@@ -52,7 +52,9 @@ export const KS1_GENERATORS = {
         });
       }
       if (kind === 'value') {
-        const n = rng.int(21, 98), d = String(n)[0];
+        // no repeated digit (77): the question must point at one place
+        let n; do n = rng.int(21, 98); while (n % 11 === 0);
+        const d = String(n)[0];
         return typed(`In the number ${n}, what is the value of the digit ${d}?`, +d * 10, `The ${d} is in the tens place, so it is worth ${pv(d, 'ten')}: ${+d * 10}.`,
           [`${n} = ${+d * 10} + ${n % 10}.`, `The ${d} is in the tens column.`, `So it is worth ${+d * 10}.`], pic(pvWhole(['T', 'O'], [n]), `The ${d} is in the tens column: ${pv(+d, 'ten')} = ${+d * 10}.`));
       }

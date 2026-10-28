@@ -10,7 +10,8 @@ const PIE = ['#2f74e8', '#d97a12', '#0f9a6e', '#9a48d6'];
 const line = (x1, y1, x2, y2, extra = {}) => s('line', { x1, y1, x2, y2, stroke: INK, 'stroke-width': 2.5, 'stroke-linecap': 'round', ...extra });
 const dash = (x1, y1, x2, y2) => line(x1, y1, x2, y2, { 'stroke-dasharray': '6 5', 'stroke-width': 2 });
 const text = (x, y, t, extra = {}) => s('text', { x, y, fill: INK, 'font-size': 16, 'font-weight': 700, 'font-family': 'inherit', 'text-anchor': 'middle', ...extra }, t);
-const small = (x, y, t, extra = {}) => s('text', { x, y, fill: INK, 'font-size': 13, 'font-family': 'inherit', 'text-anchor': 'middle', ...extra }, t);
+const HALO = { stroke: 'var(--card, #fff)', 'stroke-width': 4, 'paint-order': 'stroke', 'stroke-linejoin': 'round' };
+const small = (x, y, t, extra = {}) => s('text', { x, y, fill: INK, 'font-size': 14.5, 'font-family': 'inherit', 'text-anchor': 'middle', ...extra }, t);
 const svg = (W, H, label, max = 360) => s('svg', { viewBox: `0 0 ${W} ${H}`, style: `max-width:${max}px;display:block;margin:0 auto 12px`, role: 'img', 'aria-label': label });
 const rightAngle = (x, y, dx, dy) => s('path', { d: `M${x + dx} ${y} L${x + dx} ${y + dy} L${x} ${y + dy}`, fill: 'none', stroke: INK, 'stroke-width': 1.5 });
 const unit = (v) => (typeof v === 'number' ? `${v} cm` : v);
@@ -25,7 +26,7 @@ export function mathsDiagram(d) {
     case 'axes': return axes(d);
     case 'bar': return bar(d);
     case 'pie': return pie(d);
-    case 'line': return lineGraph(d);
+    case 'line': return d.xs ? lineGraph(d) : null; // without data it is the straight-line angle drawing (qtypes)
     case 'parallel': return parallel(d);
     case 'clock': return clock(d);
     case 'tens': return tens(d);
@@ -180,7 +181,7 @@ function bar(d) {
     const x = m.l + slot * i + (slot - bw) / 2;
     el.append(s('rect', { x, y: Y(c.v), width: bw, height: Y(0) - Y(c.v), fill: BLUE, rx: 3 }), small(x + bw / 2, H - m.b + 18, c.label));
   });
-  el.append(small(m.l - 6, m.t - 8, d.ylabel, { 'text-anchor': 'end', 'font-size': 12 }));
+  el.append(small(m.l - 6, m.t - 8, d.ylabel, { 'text-anchor': 'end', 'font-size': 13.5 }));
   return el;
 }
 
@@ -218,7 +219,7 @@ function lineGraph(d) {
   const el = svg(W, H, d.title, 440);
   el.append(text(W / 2, 18, d.title, { 'font-size': 14, 'font-weight': 600 }));
   for (let v = bottom; v <= top + 1e-9; v += step) el.append(line(m.l, Y(v), W - m.r, Y(v), { 'stroke-width': v === 0 ? 1.5 : 0.6, opacity: v === 0 ? 1 : 0.4 }), small(m.l - 6, Y(v) + 4, String(+v.toFixed(6)), { 'text-anchor': 'end' }));
-  d.xs.forEach((x, i) => el.append(line(X(i), m.t, X(i), Y(bottom), { 'stroke-width': 0.6, opacity: 0.4 }), small(X(i), H - m.b + 18, x, { 'font-size': 12 })));
+  d.xs.forEach((x, i) => el.append(line(X(i), m.t, X(i), Y(bottom), { 'stroke-width': 0.6, opacity: 0.4 }), small(X(i), H - m.b + 19, x, { 'font-size': 13.5 })));
   series.forEach((sr, k) => {
     const colour = PIE[k % PIE.length];
     const pts = sr.ys.map((v, i) => (v == null ? null : [X(i), Y(v)])).filter(Boolean);
@@ -226,11 +227,11 @@ function lineGraph(d) {
     pts.forEach(([x, y]) => el.append(s('circle', { cx: x, cy: y, r: 4.5, fill: colour, stroke: 'var(--card, #fff)', 'stroke-width': 2 })));
     if (d.series) {
       const lx = m.l + k * 150;
-      el.append(line(lx, H - 14, lx + 22, H - 14, { stroke: colour, 'stroke-width': 3, 'stroke-dasharray': k % 2 ? '7 4' : null }), small(lx + 28, H - 10, sr.name, { 'text-anchor': 'start', 'font-size': 12 }));
+      el.append(line(lx, H - 14, lx + 22, H - 14, { stroke: colour, 'stroke-width': 3, 'stroke-dasharray': k % 2 ? '7 4' : null }), small(lx + 28, H - 10, sr.name, { 'text-anchor': 'start', 'font-size': 13.5 }));
     }
   });
-  el.append(small(m.l - 6, m.t - 8, d.ylabel, { 'text-anchor': 'end', 'font-size': 12 }));
-  if (d.xlabel) el.append(small(W - m.r, H - m.b + 34, d.xlabel, { 'text-anchor': 'end', 'font-size': 12 }));
+  el.append(small(m.l - 6, m.t - 8, d.ylabel, { 'text-anchor': 'end', 'font-size': 13.5 }));
+  if (d.xlabel) el.append(small(W - m.r, H - m.b + 36, d.xlabel, { 'text-anchor': 'end', 'font-size': 13.5 }));
   return el;
 }
 
@@ -388,20 +389,24 @@ function graph(d) {
     el.append(line(X(k), Y(lo), X(k), Y(hi), { 'stroke-width': 0.6, opacity: 0.45 }), line(X(lo), Y(k), X(hi), Y(k), { 'stroke-width': 0.6, opacity: 0.45 }));
   }
   el.append(line(X(lo), Y(0), X(hi), Y(0), { 'stroke-width': 2 }), line(X(0), Y(lo), X(0), Y(hi), { 'stroke-width': 2 }));
+  // axis numbers go on last, with a halo, so a line crossing them never hides them
+  const nums = [];
   for (let k = lo; k <= hi; k++) {
     if (k === 0 || (n > 10 && k % 2 !== 0)) continue;
-    el.append(small(X(k), Y(0) + 16, k < 0 ? `−${-k}` : String(k)), small(X(0) - 8, Y(k) + 4, k < 0 ? `−${-k}` : String(k), { 'text-anchor': 'end' }));
+    nums.push(small(X(k), Y(0) + 16, k < 0 ? `−${-k}` : String(k), HALO), small(X(0) - 8, Y(k) + 4, k < 0 ? `−${-k}` : String(k), { 'text-anchor': 'end', ...HALO }));
   }
   el.append(text(X(hi) + 10, Y(0) + 5, 'x', { 'font-size': 14, 'text-anchor': 'start', 'font-style': 'italic' }), text(X(0), Y(hi) - 10, 'y', { 'font-size': 14, 'font-style': 'italic' }));
-  for (const L of d.lines || []) {
+  (d.lines || []).forEach((L, k) => {
     // clip y = mx + c to the square [lo, hi] x [lo, hi]
     let x1 = lo, x2 = hi;
     if (L.m !== 0) {
       const a = (lo - L.c) / L.m, b = (hi - L.c) / L.m;
       x1 = Math.max(lo, Math.min(a, b)); x2 = Math.min(hi, Math.max(a, b));
     }
-    el.append(line(X(x1), Y(L.m * x1 + L.c), X(x2), Y(L.m * x2 + L.c), { stroke: BLUE, 'stroke-width': 3 }));
-  }
+    // two or more lines get their own colours, so the caption can say which is which
+    el.append(line(X(x1), Y(L.m * x1 + L.c), X(x2), Y(L.m * x2 + L.c), { stroke: (d.lines.length > 1 ? PIE : [BLUE])[k % 4], 'stroke-width': 3 }));
+  });
+  el.append(...nums);
   return el;
 }
 
@@ -457,13 +462,14 @@ function curve(d) {
   const W = n * cell + 2 * m, H = n * cell + 2 * m;
   const X = (x) => m + (x - lo) * cell, Y = (y) => m + (hi - y) * cell;
   const el = svg(W, H, 'Graph of a curve', 400);
+  const nums = []; // axis numbers drawn last, over the curves
   for (let k = lo; k <= hi; k++) {
     el.append(line(X(k), Y(lo), X(k), Y(hi), { 'stroke-width': 0.6, opacity: 0.45 }), line(X(lo), Y(k), X(hi), Y(k), { 'stroke-width': 0.6, opacity: 0.45 }));
   }
   el.append(line(X(lo), Y(0), X(hi), Y(0), { 'stroke-width': 2 }), line(X(0), Y(lo), X(0), Y(hi), { 'stroke-width': 2 }));
   for (let k = lo; k <= hi; k++) {
     if (k === 0 || (n > 10 && k % 2 !== 0)) continue;
-    el.append(small(X(k), Y(0) + 16, k < 0 ? `−${-k}` : String(k)), small(X(0) - 8, Y(k) + 4, k < 0 ? `−${-k}` : String(k), { 'text-anchor': 'end' }));
+    nums.push(small(X(k), Y(0) + 16, k < 0 ? `−${-k}` : String(k), HALO), small(X(0) - 8, Y(k) + 4, k < 0 ? `−${-k}` : String(k), { 'text-anchor': 'end', ...HALO }));
   }
   el.append(text(X(hi) + 10, Y(0) + 5, 'x', { 'font-size': 14, 'text-anchor': 'start', 'font-style': 'italic' }), text(X(0), Y(hi) - 10, 'y', { 'font-size': 14, 'font-style': 'italic' }));
   for (const path of d.paths || []) {
@@ -475,6 +481,7 @@ function curve(d) {
     }
     flush();
   }
+  el.append(...nums);
   return el;
 }
 
@@ -564,14 +571,14 @@ function barModel(d) {
   const el = svg(W, H, `Bar model: ${d.rows.map((r) => `${r.label || 'bar'} ${r.parts} parts`).join(', ')}`, 440);
   if (d.total) {
     const x2 = labelW + unitW * d.rows[0].parts;
-    el.append(s('path', { d: `M${labelW} ${top - 6} v-10 H${x2} v10`, fill: 'none', stroke: INK, 'stroke-width': 2 }), text((labelW + x2) / 2, top - 22, d.total, { 'font-size': 15 }));
+    el.append(s('path', { d: `M${labelW} ${top - 6} v-10 H${x2} v10`, fill: 'none', stroke: INK, 'stroke-width': 2 }), text((labelW + x2) / 2, top - 22, d.total, { 'font-size': 17 }));
   }
   d.rows.forEach((r, i) => {
     const y = rowY[i];
-    if (r.label) el.append(text(labelW - 10, y + rowH / 2 + 5, r.label, { 'text-anchor': 'end', 'font-size': 15 }));
+    if (r.label) el.append(text(labelW - 10, y + rowH / 2 + 5, r.label, { 'text-anchor': 'end', 'font-size': 16 }));
     for (let k = 0; k < r.parts; k++) {
       el.append(s('rect', { x: labelW + k * unitW, y, width: unitW, height: rowH, fill: k < (r.shaded || 0) ? BLUE : 'var(--card, #fff)', 'fill-opacity': k < (r.shaded || 0) ? 0.85 : 1, stroke: INK, 'stroke-width': 2 }));
-      if (r.text) el.append(text(labelW + k * unitW + unitW / 2, y + rowH / 2 + 5, r.text, { 'font-size': 14, fill: k < (r.shaded || 0) ? '#fff' : INK }));
+      if (r.text) el.append(text(labelW + k * unitW + unitW / 2, y + rowH / 2 + 5, r.text, { 'font-size': unitW < 40 ? 14 : 16.5, fill: k < (r.shaded || 0) ? '#fff' : INK }));
     }
     if (r.total) el.append(small(labelW + (r.parts * unitW) / 2, y + rowH + 16, r.total));
   });
@@ -612,6 +619,7 @@ function pvGrid(d) {
 }
 
 // Area model for multiplying: a rectangle split by place value. { across: [30, 4], down: [20, 3], show?: true }
+const fmt = (v) => (typeof v === 'number' ? v.toLocaleString('en-GB') : String(v)); // 3,696
 function areaModel(d) {
   const W = 380, H = 250, x0 = 50, y0 = 34, maxW = 300, maxH = 190;
   const sa = d.across.reduce((a, b) => a + b, 0), sd = d.down.reduce((a, b) => a + b, 0);
@@ -623,12 +631,12 @@ function areaModel(d) {
   d.down.forEach((dv, r) => {
     let x = x0;
     const hh = scaleY(dv);
-    el.append(text(x0 - 10, y + hh / 2 + 5, String(dv), { 'text-anchor': 'end' }));
+    el.append(text(x0 - 10, y + hh / 2 + 5, fmt(dv), { 'text-anchor': 'end' }));
     d.across.forEach((av, c) => {
       const ww = scaleX(av);
       el.append(s('rect', { x, y, width: ww, height: hh, fill: colors[(r + c) % 4], stroke: INK, 'stroke-width': 2 }));
-      if (r === 0) el.append(text(x + ww / 2, y0 - 10, String(av)));
-      if (d.show !== false) el.append(text(x + ww / 2, y + hh / 2 + 5, d.show === 'q' ? '?' : String(av * dv), { 'font-size': 14, 'font-weight': 600 }));
+      if (r === 0) el.append(text(x + ww / 2, y0 - 10, fmt(av)));
+      if (d.show !== false) el.append(text(x + ww / 2, y + hh / 2 + 5, d.show === 'q' ? '?' : fmt(av * dv), { 'font-size': 14, 'font-weight': 600 }));
       x += ww;
     });
     y += hh;
@@ -639,7 +647,7 @@ function areaModel(d) {
 
 // Fraction wall: one whole, then halves, thirds… { rows: [1, 2, 3, 4, 6, 8], shade?: { 4: 3 } }
 function fracWall(d) {
-  const W = 420, rowH = 30, x0 = 10, w = 400;
+  const W = 420, rowH = 34, x0 = 10, w = 400;
   const H = d.rows.length * (rowH + 4) + 8;
   const el = svg(W, H, `Fraction wall: ${d.rows.map((r) => (r === 1 ? 'one whole' : `${r}ths`)).join(', ')}`, 460);
   d.rows.forEach((n, i) => {
@@ -647,7 +655,7 @@ function fracWall(d) {
     for (let k = 0; k < n; k++) {
       const on = k < ((d.shade || {})[n] || 0);
       el.append(s('rect', { x: x0 + (k * w) / n, y, width: w / n, height: rowH, fill: on ? BLUE : PIE[(i + 1) % 4], 'fill-opacity': on ? 0.9 : 0.18, stroke: INK, 'stroke-width': 1.5 }));
-      el.append(text(x0 + (k * w) / n + w / n / 2, y + rowH / 2 + 5, n === 1 ? '1' : `1/${n}`, { 'font-size': n > 8 ? 10 : 13, 'font-weight': 600, fill: on ? '#fff' : INK }));
+      el.append(text(x0 + (k * w) / n + w / n / 2, y + rowH / 2 + 5, n === 1 ? '1' : `1/${n}`, { 'font-size': n > 10 ? 12 : n > 6 ? 14 : 16, 'font-weight': 600, fill: on ? '#fff' : INK }));
     }
   });
   return el;

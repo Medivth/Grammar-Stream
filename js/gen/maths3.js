@@ -265,7 +265,8 @@ export const MATHS3_GENERATORS = {
     if (level === 2) {
       const x = rng.int(-3, 5), on = rng.chance(0.5), y = m * x + c + (on ? 0 : rng.pick([-3, -2, -1, 1, 2, 3]));
       return choice(`Does the point (${neg(x)}, ${neg(y)}) lie on the line ${eq}?`, on ? 'Yes' : 'No', [on ? 'No' : 'Yes'], rng, {
-        diagram: { type: 'axes', range: [-8, 8], points: [{ x, y, label: 'P' }] },
+        // the point is drawn only when it fits on the grid; the question reads without it
+        diagram: Math.abs(y) <= 8 ? { type: 'axes', range: [-8, 8], points: [{ x, y, label: 'P' }] } : undefined,
         explain: `Put x = ${neg(x)} into the equation: y = ${neg(m * x + c)}. The point has y = ${neg(y)}, so it ${on ? 'DOES lie on the line' : 'does NOT lie on the line'}.`,
         steps: ['A point is on the line if its coordinates make the equation true.', `x = ${neg(x)} gives y = ${neg(m)} × ${neg(x)}${sgn(c).replace('-', '−')} = ${neg(m * x + c)}.`, `The point’s y is ${neg(y)}: ${on ? 'the same, so yes.' : 'different, so no.'}`],
       });
@@ -273,7 +274,7 @@ export const MATHS3_GENERATORS = {
     const x1 = rng.int(-4, 3), x2 = x1 + rng.int(1, 4), y1 = m * x1 + c, y2 = m * x2 + c;
     return {
       kind: 'typed', prompt: `A straight line passes through (${neg(x1)}, ${neg(y1)}) and (${neg(x2)}, ${neg(y2)}). What is its gradient?`, numeric: { value: String(m), form: 'any' },
-      diagram: { type: 'axes', range: [-8, 8], points: [{ x: x1, y: y1, label: 'A' }, { x: x2, y: y2, label: 'B' }] },
+      diagram: Math.max(Math.abs(y1), Math.abs(y2)) <= 8 ? { type: 'axes', range: [-8, 8], points: [{ x: x1, y: y1, label: 'A' }, { x: x2, y: y2, label: 'B' }] } : undefined,
       explain: `Gradient = change in y ÷ change in x = (${neg(y2)} − ${neg(y1)}) ÷ (${neg(x2)} − ${neg(x1)}) = ${neg(y2 - y1)} ÷ ${x2 - x1} = ${neg(m)}.`,
       steps: ['Gradient = rise ÷ run: how much y changes for each 1 that x changes.', `Rise: ${neg(y2)} − ${neg(y1)} = ${neg(y2 - y1)}. Run: ${neg(x2)} − ${neg(x1)} = ${x2 - x1}.`, `${neg(y2 - y1)} ÷ ${x2 - x1} = ${neg(m)}.${m < 0 ? ' Negative: the line slopes down.' : ''}`],
     };

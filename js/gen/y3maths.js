@@ -445,11 +445,11 @@ export const Y3_GENERATORS = {
   y3Negative(level, rng) {
     if (level === 1) {
       const s = rng.int(1, 3), seq = Array.from({ length: 4 }, (_, i) => s - i), v = s - 4;
-      return typed(`Count back in ones: ${seq.map(neg).join(', ')}, ?`, v, `Below 0 the numbers are negative: after ${neg(seq[3])} comes ${neg(v)}.`, ['Each step is 1 less.', `${neg(seq[3])} − 1 = ${neg(v)}.`, 'Negative numbers are less than zero.'], { diagram: { type: 'numline', min: -5, max: 5, step: 1, labels: [-5, 0, 5], mark: v } });
+      return typed(`Count back in ones: ${seq.map(neg).join(', ')}, ?`, v, `Below 0 the numbers are negative: after ${neg(seq[3])} comes ${neg(v)}.`, ['Each step is 1 less.', `${neg(seq[3])} − 1 = ${neg(v)}.`, 'Negative numbers are less than zero.'], { diagram: { type: 'numline', min: -5, max: 5, step: 1, labels: [-5, 0, 5] }, ...pic({ type: 'numline', min: -5, max: 5, step: 1, labels: [-5, 0, 5], mark: v }, `One step back from ${neg(seq[3])} is ${neg(v)}.`) });
     }
     if (level === 2) {
       const t = rng.int(1, 6), drop = rng.int(t + 1, t + 6), v = t - drop;
-      return typed(`At night the temperature on Mars Base is ${t}°C. It falls by ${drop} degrees. What is the temperature now?`, v, `${t} − ${drop}: ${t} down to 0, then ${drop - t} more below zero: ${neg(v)}°C.`, [`Fall ${t} to get to 0.`, `Then fall ${drop - t} more.`, `${neg(v)}°C.`], { unit: '°C', diagram: { type: 'numline', min: -10, max: 10, step: 1, labels: [-10, -5, 0, 5, 10], mark: v } });
+      return typed(`At night the temperature on Mars Base is ${t}°C. It falls by ${drop} degrees. What is the temperature now?`, v, `${t} − ${drop}: ${t} down to 0, then ${drop - t} more below zero: ${neg(v)}°C.`, [`Fall ${t} to get to 0.`, `Then fall ${drop - t} more.`, `${neg(v)}°C.`], { unit: '°C', diagram: { type: 'numline', min: -10, max: 10, step: 1, labels: [-10, -5, 0, 5, 10] }, ...pic({ type: 'numline', min: -10, max: 10, step: 1, labels: [-10, -5, 0, 5, 10], mark: v }, `${t} down ${drop} steps lands on ${neg(v)}.`) });
     }
     const a = -rng.int(2, 9), b = rng.int(1, 9);
     if (rng.chance(0.5)) return typed(`What is the difference between ${neg(a)}°C and ${b}°C, in degrees?`, b - a, `From ${neg(a)} up to 0 is ${-a}, and from 0 to ${b} is ${b}: ${-a} + ${b} = ${b - a} degrees.`, [`${neg(a)} up to 0: ${-a} degrees.`, `0 up to ${b}: ${b} degree${b === 1 ? '' : 's'}.`, `${-a} + ${b} = ${b - a}.`]);

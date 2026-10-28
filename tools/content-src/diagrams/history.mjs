@@ -323,7 +323,7 @@ function village() {
     ],
     features: [
       { id: 'fields', name: 'open fields', d: many(rect(8, 8, 186, 106, 4), rect(8, 212, 186, 100, 4)), fill: '#e6d38a', label: [20, -18], at: [14, 40] },
-      { id: 'common', name: 'common land', d: rect(216, 8, 146, 106, 4), fill: '#a3d184', label: [356, -18], at: [346, 26] },
+      { id: 'common', name: 'common land', d: rect(216, 8, 146, 106, 4), fill: '#a3d184', label: [410, 60], at: [350, 60] },
       { id: 'fallow', name: 'fallow field', d: rect(216, 212, 146, 100, 4), fill: '#c9bc93', label: [296, 336], at: [290, 290] },
       { id: 'church', name: 'church', d: many(rect(28, 116, 18, 46), poly([[26, 118], [37, 104], [48, 118]]), house(46, 162, 46, 22, 12)), fill: '#c8c3bc', label: [-10, 140], at: [30, 140] },
       { id: 'manor', name: 'manor house', d: many(house(206, 164, 46, 34, 16), rect(240, 118, 7, 16)), fill: '#dcc394', label: [218, -18], at: [211, 150] },

@@ -130,7 +130,8 @@ function percentBars(o, now, p, up, [l1, l2], pre) {
 }
 /** Two straight lines (ax + by = c) on a grid, crossing at the solution. */
 function crossing(eqs, x, y) {
-  return { visual: { kind: 'maths', diagram: { type: 'graph', range: [-10, 10], lines: eqs.map(([a, b, c]) => ({ m: -a / b, c: c / b })) }, caption: `The two lines cross at (${neg(x)}, ${neg(y)}): that point fits both equations.` } };
+  const hi = Math.max(10, Math.abs(x) + 4, Math.abs(y) + 4);
+  return { visual: { kind: 'maths', diagram: { type: 'graph', range: [-hi, hi], lines: eqs.map(([a, b, c]) => ({ m: -a / b, c: c / b })) }, caption: `The two lines cross at (${neg(x)}, ${neg(y)}): that point fits both equations.` } };
 }
 /** A multiplication grid for brackets: column terms across the top, row terms down the side
  * (rows: [[side term, ...products]]). Like terms (two or more boxes with the same letters) are shaded. */
@@ -1207,7 +1208,7 @@ const G = {
     const quad = ex([[1, 'x²'], [a + b, 'x'], [a * b, '']]);
     if (level === 2) {
       return alg(`Factorise: ${quad}`, { answer: `${fac(a)}${fac(b)}`, accept: [`${fac(b)}${fac(a)}`] }, `Find two numbers that multiply to ${neg(a * b)} and add to ${neg(a + b)}: ${neg(a)} and ${neg(b)}. So ${show(fac(a) + fac(b))}.`,
-        [`Look for a pair: product ${neg(a * b)}, sum ${neg(a + b)}.`, `${neg(a)} × ${paren(b)} = ${neg(a * b)} and ${neg(a)} + ${paren(b)} = ${neg(a + b)}.`, `${show(fac(a) + fac(b))}.`], { placeholder: 'e.g. (x + 2)(x + 3)', ...grid(`Read backwards: the corner boxes multiply to ${neg(a * b)} and the x boxes add to ${ex([[a + b, 'x']])}.`) });
+        [`Look for a pair: product ${neg(a * b)}, sum ${neg(a + b)}.`, `${neg(a)} × ${paren(b)} = ${neg(a * b)} and ${neg(a)} + ${paren(b)} = ${neg(a + b)}.`, `${show(fac(a) + fac(b))}.`], { placeholder: 'e.g. (x + 2)(x + 3)', ...grid(`Read backwards: the number box ${neg(a * b)} is ${neg(a)} × ${paren(b)}, and the two x boxes add to ${ex([[a + b, 'x']])}.`) });
     }
     if (rng.chance(0.3)) {
       const k = rng.int(2, 12);

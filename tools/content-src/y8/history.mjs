@@ -487,20 +487,20 @@ const withMemory = (it) => ({ ...it, ...memory[it.id.slice('history.'.length)] }
 
 // ---------------------------------------------------------------- pictures (js/ui/visuals.js)
 // Topics and items keyed without “history.”. An unknown id throws.
+// six wives side by side do not fit a phone as a tree, so this one is a table, in order of marriage
 const HENRY_VIII = {
-  kind: 'tree',
-  root: {
-    n: 'Henry VIII', note: 'r. 1509–47',
-    c: [
-      { n: 'Catherine of Aragon', note: 'marriage annulled', c: [{ n: 'Mary I', note: 'r. 1553–58', mark: true }] },
-      { n: 'Anne Boleyn', note: 'beheaded', c: [{ n: 'Elizabeth I', note: 'r. 1558–1603', mark: true }] },
-      { n: 'Jane Seymour', note: 'died', c: [{ n: 'Edward VI', note: 'r. 1547–53', mark: true }] },
-      { n: 'Anne of Cleves', note: 'marriage annulled' },
-      { n: 'Catherine Howard', note: 'beheaded' },
-      { n: 'Catherine Parr', note: 'survived' },
-    ],
-  },
-  caption: 'Six wives: divorced, beheaded, died; divorced, beheaded, survived (the “divorces” were annulments). His children reigned in turn: Edward, Mary, Elizabeth.',
+  kind: 'table',
+  head: ['Henry VIII’s wives', 'what happened', 'child who reigned'],
+  rows: [
+    ['Catherine of Aragon', 'marriage annulled', '**Mary I** (1553–58)'],
+    ['Anne Boleyn', 'beheaded', '**Elizabeth I** (1558–1603)'],
+    ['Jane Seymour', 'died', '**Edward VI** (1547–53)'],
+    ['Anne of Cleves', 'marriage annulled', ''],
+    ['Catherine Howard', 'beheaded', ''],
+    ['Catherine Parr', 'survived', ''],
+  ],
+  tint: 'rows',
+  caption: 'Henry VIII reigned 1509–47. Six wives: divorced, beheaded, died; divorced, beheaded, survived (the “divorces” were annulments). His children reigned in turn: Edward, Mary, Elizabeth.',
 };
 const FEUDAL = {
   kind: 'tree',

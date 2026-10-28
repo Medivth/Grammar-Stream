@@ -674,12 +674,12 @@ const TOPIC_VISUALS = {
   ], caption: 'Only a changing magnetic field induces a potential difference. Move faster, use a stronger magnet or more turns for a bigger one.' },
 };
 const ITEM_VISUALS = {
-  'ez.case1': { kind: 'maths', diagram: { type: 'line', title: 'Time for the starch to disappear', ylabel: 's', xlabel: 'temperature (°C)', xs: ['10', '20', '37', '50'], ys: [300, 180, 60, 150], step: 50, scaleX: true }, caption: 'The shortest time is the fastest reaction. At 70 °C the starch never disappeared: the enzyme was denatured.' },
+  'ez.case1': { kind: 'maths', diagram: { type: 'line', title: 'Time for the starch to disappear', ylabel: 's', xlabel: 'temperature (°C)', xs: ['10', '20', '37', '50'], ys: [300, 180, 60, 150], step: 50, scaleX: true }, caption: 'The shortest time is the fastest reaction. At 70 °C the starch never disappeared (so there is no point for it): the enzyme was denatured.' },
   'ci.case2': { kind: 'maths', diagram: { type: 'line', title: 'Theo’s heart rate after exercise', ylabel: 'bpm', xlabel: 'minutes after exercise', xs: ['0', '1', '2', '3', '4'], ys: [140, 115, 95, 80, 72], min: 60, step: 20 }, caption: 'Beats per minute. His resting rate was 70; by 4 minutes he was back within 2 beats of it.' },
   'rt.case1': RATES,
   'rt.case2': RATES,
   'ci.route': { kind: 'flow', across: true, steps: ['vena cava', 'right atrium', 'right ventricle', 'pulmonary artery', 'lungs'] },
-  'tr.case1': { ...bar('Bubble movement in 5 minutes (mm)', 'mm', 5, [['still air', 12], ['fan', 30], ['plastic bag', 4], ['jelly under', 2]]), caption: 'More movement means faster water uptake. Wind speeds up transpiration; humid air and blocked stomata slow it.' },
+  'tr.case1': { ...bar('Bubble movement in 5 minutes (mm)', 'mm', 5, [['still air', 12], ['fan', 30], ['plastic bag', 4], ['jelly on underside', 2]]), caption: 'More movement means faster water uptake. Wind speeds up transpiration; humid air and blocked stomata slow it.' },
   'bd.case1': { ...bar('Mean plant species per quadrat', '', 2, [['meadow', 9], ['playing field', 2]]) },
   'fm.case2': { kind: 'table', head: ['', 'Mass'], rows: [['magnesium', '0.24 g'], ['+ oxygen from the air', '0.16 g'], ['= magnesium oxide', '**0.40 g**']], caption: 'No atoms are made or lost: the extra 0.16 g is oxygen that joined the magnesium.' },
   'fm.balanced': { kind: 'table', head: ['Atoms', 'Left: 2H₂ + O₂', 'Right: 2H₂O'], rows: [['H', '4', '4'], ['O', '2', '2']] },

@@ -265,10 +265,10 @@ const G = {
       const n = rng.int(5, 63), bin = n.toString(2);
       if (rng.chance(0.5)) {
         const parts = bin.split('').map((b, i) => (b === '1' ? 2 ** (bin.length - 1 - i) : 0)).filter(Boolean);
-        return num(`Convert the binary number ${bin}${subs(2)} to denary (base 10).`, n, `Place values from the right are 1, 2, 4, 8, 16, 32. ${parts.join(' + ')} = ${n}.`, ['Write the place values above the digits: …, 16, 8, 4, 2, 1.', `Add the place values where there is a 1: ${parts.join(' + ')}.`, `= ${n}.`], pv(placeCols(bin.length), [bin], `${parts.join(' + ')} = ${n}.`));
+        return num(`Convert the binary number ${bin}${subs(2)} to denary (base 10).`, n, `Place values from the right are 1, 2, 4, 8, 16, 32. ${parts.join(' + ')} = ${n}.`, ['Write the place values above the digits: …, 16, 8, 4, 2, 1.', `Add the place values where there is a 1: ${parts.join(' + ')}.`, `= ${n}.`], pv(placeCols(bin.length), [bin], parts.length === 1 ? `Just one 1, in the ${n} column: ${n}.` : `${parts.join(' + ')} = ${n}.`));
       }
       const used = bin.split('').map((b, i) => (b === '1' ? 2 ** (bin.length - 1 - i) : 0)).filter(Boolean);
-      return num(`Write ${n} in binary.`, bin, `${n} = ${used.join(' + ')}, so ${n} = ${bin}${subs(2)}.`, ['Find the largest power of 2 that fits, and subtract it.', 'Repeat with what is left.', `Put 1s in those places: ${bin}.`], { placeholder: 'e.g. 10110', ...pv(placeCols(bin.length), [bin], `${used.join(' + ')} = ${n}.`) });
+      return num(`Write ${n} in binary.`, bin, `${n} = ${used.join(' + ')}, so ${n} = ${bin}${subs(2)}.`, ['Find the largest power of 2 that fits, and subtract it.', 'Repeat with what is left.', `Put 1s in those places: ${bin}.`], { placeholder: 'e.g. 10110', ...pv(placeCols(bin.length), [bin], used.length === 1 ? `Just one 1, in the ${n} column: ${n}.` : `${used.join(' + ')} = ${n}.`) });
     }
     if (level === 2) {
       const base = rng.pick([3, 5, 8]), n = rng.int(base + 2, base ** 3 - 1), s = n.toString(base);
@@ -295,7 +295,7 @@ const G = {
     }
     if (kind === 'hex') {
       const n = rng.int(26, 255), h = n.toString(16).toUpperCase();
-      return num(`Hexadecimal uses digits 0–9 and A–F (A = 10 … F = 15). Convert ${h}${subs(16)} to denary.`, n, `${h[0]} is worth ${parseInt(h[0], 16)} and ${h[1]} is worth ${parseInt(h[1], 16)}: ${parseInt(h[0], 16)} × 16 + ${parseInt(h[1], 16)} = ${n}.`, ['The left digit counts sixteens; the right digit counts ones.', `${h[0]} = ${parseInt(h[0], 16)}, so ${parseInt(h[0], 16)} × 16 = ${parseInt(h[0], 16) * 16}.`, `Add ${parseInt(h[1], 16)}: ${n}.`], pv([16, 1], [h], `${[...h].map((d, i) => `${/[A-F]/.test(d) ? `${d} = ` : ''}${parseInt(d, 16)} ${i ? 'ones' : 'sixteens'}`).join(' and ')}: ${parseInt(h[0], 16)} × 16 + ${parseInt(h[1], 16)} = ${n}.`));
+      return num(`Hexadecimal uses digits 0–9 and A–F (A = 10 … F = 15). Convert ${h}${subs(16)} to denary.`, n, `${h[0]} is worth ${parseInt(h[0], 16)} and ${h[1]} is worth ${parseInt(h[1], 16)}: ${parseInt(h[0], 16)} × 16 + ${parseInt(h[1], 16)} = ${n}.`, ['The left digit counts sixteens; the right digit counts ones.', `${h[0]} = ${parseInt(h[0], 16)}, so ${parseInt(h[0], 16)} × 16 = ${parseInt(h[0], 16) * 16}.`, `Add ${parseInt(h[1], 16)}: ${n}.`], pv([16, 1], [h], `${[...h].map((d, i) => `${/[A-F]/.test(d) ? `${d} (= ${parseInt(d, 16)}) means ` : ''}${parseInt(d, 16)} ${i ? 'one' : 'sixteen'}${parseInt(d, 16) === 1 ? '' : 's'}`).join(' and ')}: ${parseInt(h[0], 16)} × 16 + ${parseInt(h[1], 16)} = ${n}.`));
     }
     const n = rng.int(3, 31), k = rng.int(1, 3), s = (n * 2 ** k).toString(2);
     return num(`Shift the binary number ${n.toString(2)} left by ${k} place${k > 1 ? 's' : ''}. What is the result, in binary?`, s, `A left shift adds ${k} zero${k > 1 ? 's' : ''} on the right, multiplying by ${2 ** k}: ${n} × ${2 ** k} = ${n * 2 ** k} = ${s}${subs(2)}.`, ['Each left shift multiplies by 2.', `Add ${k} zero${k > 1 ? 's' : ''} on the right.`, `${s}.`], { placeholder: 'e.g. 101100', ...pv(placeCols(s.length), [n.toString(2), s], `Every digit moves ${k} place${k > 1 ? 's' : ''} left: ${n} × ${2 ** k} = ${n * 2 ** k}.`, { shift: k }) });
