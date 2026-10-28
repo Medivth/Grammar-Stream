@@ -28,6 +28,22 @@ test('typed answers: case, spacing, near misses, strict spelling', () => {
   assert.equal(normalise('It’s  FINE!'), "it's fine");
 });
 
+test('typed answers: numbers in words or digits, and titles before names', () => {
+  const five = { kind: 'typed', answer: '5', accept: [] };
+  assert.equal(check(five, 'five').correct, true);
+  assert.equal(check(five, 'six').correct, false);
+  const words = { kind: 'typed', answer: 'twenty-one', accept: [] };
+  assert.equal(check(words, '21').correct, true);
+  const num = { kind: 'typed', numeric: { value: '306', form: 'any' } };
+  assert.equal(check(num, 'three hundred and six').correct, true);
+  const spell = { kind: 'typed', answer: 'eight', strict: true };
+  assert.equal(check(spell, '8').correct, false, 'a spelling item wants the word');
+  const queen = { kind: 'typed', answer: 'Elizabeth I', accept: [] };
+  assert.equal(check(queen, 'Queen Elizabeth I').correct, true);
+  assert.equal(check({ kind: 'typed', answer: 'King Charles III', accept: [] }, 'Charles III').correct, true);
+  assert.equal(check(queen, 'Queen Victoria').correct, false);
+});
+
 test('numeric answers respect the required form', () => {
   const q = { kind: 'typed', numeric: { value: '3/4', form: 'simplest' } };
   assert.equal(check(q, '3/4').correct, true);

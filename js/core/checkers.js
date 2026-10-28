@@ -30,6 +30,23 @@ export function levenshtein(a, b) {
   return prev[n];
 }
 
+// whole numbers written in words, up to 9,999: "five", "twenty-one", "three hundred and six"
+const UNITS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+const TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+export function wordsToNumber(s) {
+  const words = String(s).toLowerCase().replace(/-/g, ' ').replace(/\band\b/g, ' ').trim().split(/\s+/);
+  if (!words[0]) return null;
+  let total = 0, part = 0;
+  for (const w of words) {
+    if (UNITS.includes(w)) part += UNITS.indexOf(w);
+    else if (TENS.includes(w) && w) part += TENS.indexOf(w) * 10;
+    else if (w === 'hundred') part = (part || 1) * 100;
+    else if (w === 'thousand') { total += (part || 1) * 1000; part = 0; }
+    else return null;
+  }
+  return total + part;
+}
+
 function checkTyped(q, response) {
   const r = normalise(response);
   if (!r) return { correct: false, score: 0, message: 'No answer given.' };
@@ -43,12 +60,18 @@ function checkTyped(q, response) {
   }
   const answers = [q.answer, ...(q.accept || [])].filter((a) => a !== '').map(normalise);
   if (answers.includes(r)) return { correct: true, score: 1 };
+  // "5" and "five" are the same answer (never for spelling items, where the word is the point)
+  if (!q.strict) {
+    const asNumber = (x) => (/^\d+$/.test(x) ? Number(x) : wordsToNumber(x));
+    const n = asNumber(r);
+    if (n != null && answers.some((a) => asNumber(a) === n)) return { correct: true, score: 1 };
+  }
   if (q.algebra) {
     const tight = (s) => s.replace(/\s+/g, '').replace(/\*/g, '');
     return { correct: answers.some((a) => tight(a) === tight(r)), score: answers.some((a) => tight(a) === tight(r)) ? 1 : 0 };
   }
-  // "the Nile" and "Nile" are both fine
-  const noThe = (x) => x.replace(/^the /, '');
+  // "the Nile" and "Nile" are both fine, and so are "Queen Elizabeth I" and "Elizabeth I"
+  const noThe = (x) => x.replace(/^the /, '').replace(/^(king|queen|saint|st\.?|sir|lady|lord|prince|princess|emperor|empress|pharaoh|president|captain) (?=\S)/, '');
   if (!q.strict && answers.map(noThe).includes(noThe(r))) return { correct: true, score: 1 };
   if (!q.strict) {
     // one slip allowed in longer answers (names, terms) — never for spelling items
@@ -59,7 +82,8 @@ function checkTyped(q, response) {
 }
 
 function checkNumeric(q, response) {
-  const parsed = parseNumber(response);
+  const word = wordsToNumber(normalise(response));
+  const parsed = parseNumber(word != null ? String(word) : response);
   if (!parsed) return { correct: false, score: 0, message: 'That doesn’t look like a number. Try digits, a decimal like 0.5 or a fraction like 3/4.' };
   const target = parseNumber(q.numeric.value).value;
   if (!parsed.value.eq(target)) return { correct: false, score: 0 };
