@@ -371,12 +371,12 @@ const SIMPLE = { kind: 'blocks', rows: [{ parts: [['The dog', 'subject', 'subjec
 const COMPOUND = { kind: 'blocks', rows: [{ parts: [['It was late,', 'clause', 'main clause'], ['so', 'conjunction', 'FANBOYS'], ['we took a taxi.', 'clause', 'main clause']] }], caption: 'Compound: two main clauses joined by for, and, nor, but, or, yet or so.' };
 const COMPLEX = { kind: 'blocks', rows: [{ parts: [['Because it was late,', 'subordinate', 'subordinate clause'], ['we took a taxi.', 'clause', 'main clause']] }], caption: 'Complex: a main clause plus a subordinate clause (because, when, although, if…).' };
 // Ozymandias: a caesura inside one line, then a sentence running over the line end
-const OZY_LINES = { kind: 'table', head: ['line', 'Ozymandias'], rows: [['3', 'Nothing beside remains. **‖** Round the decay **→**'], ['4', '**→** Of that colossal Wreck, boundless and bare']], caption: '‖ = a caesura: a pause in the middle of a line. → = enjambment: the sentence runs on over the line end, with no pause.' };
+const OZY_LINES = { kind: 'table', head: ['line', 'Ozymandias'], rows: [['12', 'Nothing beside remains. **‖** Round the decay **→**'], ['13', '**→** Of that colossal Wreck, boundless and bare']], caption: '‖ = a caesura: a pause in the middle of a line. → = enjambment: the sentence runs on over the line end, with no pause.' };
 const LOVERS_START = { kind: 'blocks', rows: [
   { join: '♥', parts: [['Hermia', 'verb', 'love each other'], ['Lysander', 'subject', '']] },
   { join: '→', parts: [['Helena', 'object', 'loves'], ['Demetrius', 'adverbial', '']] },
   { join: '→', parts: [['Demetrius', 'adverbial', 'wants to marry'], ['Hermia', 'verb', '']] },
-], caption: 'At the start: Hermia and Lysander love each other. Helena loves Demetrius, but he (and Hermia’s father, Egeus) wants him to marry Hermia.' };
+], caption: 'At the start: Hermia and Lysander love each other. Helena loves Demetrius, but he wants to marry Hermia, and Hermia’s father, Egeus, wants that too.' };
 const LOVERS_END = { kind: 'blocks', rows: [
   { join: '♥', parts: [['Hermia', 'verb', ''], ['Lysander', 'subject', '']] },
   { join: '♥', parts: [['Helena', 'object', ''], ['Demetrius', 'adverbial', '']] },

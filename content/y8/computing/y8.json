@@ -222,7 +222,7 @@
     "steps": [
      "Sorted list: 4 9 15 22 30 41 56",
      "Check the middle, **22**. 41 is bigger, so drop 22 and everything left of it",
-     "Left: 30 41 56. Check the middle, **41**: found!"
+     "Still in play: 30 41 56. Check the middle, **41**: found!"
     ],
     "caption": "Binary search for 41: found in 2 checks. A linear search, checking each item in turn, needs 6."
    }

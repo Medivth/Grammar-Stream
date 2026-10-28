@@ -3193,30 +3193,15 @@
    ],
    "explain": "The calendar jumps from 1 BC to AD 1.",
    "visual": {
-    "kind": "timeline",
-    "from": -10,
-    "to": 10,
-    "bands": [
-     [
-      -10,
-      0,
-      "BC"
-     ],
-     [
-      0,
-      10,
-      "AD"
-     ]
-    ],
-    "events": [
-     [
-      -1,
-      "the last year BC"
-     ],
-     [
-      1,
-      "the first year AD"
-     ]
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "3 BC",
+     "2 BC",
+     "1 BC",
+     "AD 1",
+     "AD 2",
+     "AD 3"
     ],
     "caption": "1 BC is followed straight away by AD 1. There is no year 0."
    }

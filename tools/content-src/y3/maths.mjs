@@ -102,7 +102,7 @@ const TOPIC_VISUALS = {
     M({ type: 'barmodel', rows: [{ parts: 10, shaded: 3 }] }, { caption: 'One whole shared into 10 equal parts: each part is one tenth. 3 tenths are shaded.' }),
   ],
   'maths.y3-fraccalc': M({ type: 'fracwall', rows: [1, 2, 3, 4, 6, 8], shade: { 2: 1, 4: 2, 8: 4 } }, { caption: '{{1/2}} = {{2/4}} = {{4/8}}: the shaded parts are the same length.' }),
-  'maths.y3-time': { kind: 'table', head: ['12-hour clock', '24-hour clock'], rows: [['midnight', '00:00'], ['7:15 a.m.', '07:15'], ['midday', '12:00'], ['3:20 p.m.', '**15**:20'], ['9:45 p.m.', '**21**:45']], caption: 'For p.m. times, add 12 to the hour: 3 p.m. is 15:00.' },
+  'maths.y3-time': { kind: 'table', head: ['12-hour clock', '24-hour clock'], rows: [['midnight', '00:00'], ['7:15 a.m.', '07:15'], ['midday', '12:00'], ['3:20 p.m.', '**15**:20'], ['9:45 p.m.', '**21**:45']], caption: 'For p.m. times from 1 p.m., add 12 to the hour: 3 p.m. is 15:00. (12:30 p.m. stays 12:30.)' },
   'maths.y3-shapes': [PRISM, PYRAMID],
   'maths.y3-tables-y4': M({ type: 'possgrid', a: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], b: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], op: 'product' }, { caption: 'Find 7 × 9: go along to 7 and down to 9. The answer is 63.' }),
   'maths.y3-decimals': [

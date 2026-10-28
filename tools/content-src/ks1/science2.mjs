@@ -121,7 +121,7 @@ const TOPIC_VISUALS = {
   'science.sound': { kind: 'flow', steps: ['The drum vibrates', 'The air around it vibrates', 'The vibrations reach your ear', 'You hear the sound'] },
 };
 const ITEM_VISUALS = {
-  'science.mb.ladybird': { kind: 'cycle', steps: ['egg', 'larva', 'pupa', 'adult ladybird'], centre: 'ladybird' },
+  'science.mb.ladybird': { kind: 'cycle', steps: ['egg', 'larva', 'pupa', 'adult ladybird'], centre: 'a ladybird’s life cycle' },
   'science.cs.source': RIVER,
   'science.cs.mouth': RIVER,
   'science.cs.flow': RIVER,

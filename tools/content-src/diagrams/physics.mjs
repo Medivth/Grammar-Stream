@@ -194,11 +194,11 @@ function solarSystem() {
   const moon = [163, 80];
   const labels = {
     mercury: [[64, 94], [70, 20]], venus: [[98, 109], [104, 178]], earth: [[136, 110], [142, 156]], mars: [[194, 107], [200, 178]],
-    jupiter: [[252, 72], [258, 20]], saturn: [[336, 121], [342, 156]], uranus: [[410, 87], [416, 44]], neptune: [[454, 113], [460, 178]],
+    jupiter: [[252, 72], [258, 20]], saturn: [[336, 121], [342, 150]], uranus: [[410, 87], [416, 44]], neptune: [[454, 113], [448, 188]],
   };
   return {
     id: 'solar-system', kind: 'diagram',
-    viewBox: [-6, 34, 482, 132], labelViewBox: [-6, 4, 546, 192], labelSize: 18,
+    viewBox: [-6, 34, 482, 132], labelViewBox: [-6, 4, 546, 202], labelSize: 23,
     decor: [
       { d: orbits, fill: 'rgba(141,156,184,0.5)', under: true },
       // Earth's land, Jupiter's bands and spot, Saturn's rings

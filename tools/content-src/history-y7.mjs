@@ -224,7 +224,7 @@ const TUDOR_TREE = {
 };
 const REVOLT_CHAIN = {
   kind: 'flow',
-  steps: ['Black Death kills a third to a half of the people', 'Fewer workers, so wages rise', 'Statute of Labourers (1351) holds wages down', 'Poll tax (1380) charges rich and poor the same', 'Trigger: tax collectors attacked in Essex', 'Peasants march on London (1381)'],
+  steps: ['Black Death kills a third to a half of the people', 'Fewer workers, so wages rise', 'Statute of Labourers (1351) holds wages down', 'Poll tax (1380) charges rich and poor the same', 'Trigger: poll tax collectors arrive in Essex', 'Peasants march on London (1381)'],
   caption: 'Long-term causes build up for thirty years; the poll tax is the spark.',
 };
 const TOPIC_VISUALS = {

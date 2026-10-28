@@ -73,19 +73,24 @@ export function yearLabel(y, bcad) {
   return bcad ? `AD ${y}` : String(y);
 }
 function timeline(v) {
-  const W = 640, PAD = 18, barH = 36, FS = 13.5, LH = 15;
+  // drawn to the screen's width (up to 640), so on a phone the words print at full size and
+  // labels stack into more rows instead of the whole line shrinking or scrolling off the side
+  const W = Math.round(Math.min(640, Math.max(320, (globalThis.innerWidth || 640) - 56))), PAD = 18, barH = 36, FS = 13.5, LH = 15;
   const from = v.from, to = v.to;
-  const X = (y) => PAD + ((y - from) / (to - from)) * (W - 2 * PAD);
+  // there is no year 0: 1 BC is followed by AD 1, so BC years shift up by one before spacing
+  const T = (y) => (y < 0 ? y + 1 : y);
+  const Xt = (t) => PAD + ((t - T(from)) / (T(to) - T(from))) * (W - 2 * PAD);
+  const X = (y) => Xt(T(y));
   const bcad = from < 0 || to < 1100;
   const bands = (v.bands || PERIODS[v.set] || []).map(([a, b, label], i) => ({ a: Math.max(a, from), b: Math.min(b, to), label, i })).filter((p) => p.b > p.a);
   const events = (v.events || []).filter(([y]) => y >= from && y <= to).sort((a, b) => a[0] - b[0]);
   // lay the event labels out in rows above and below the bar, each in the first row where it
   // does not overlap the label before it, so close dates never print on top of each other
-  const ROW = 3 * LH + 10;
+  const ROW = (W < 480 ? 4 : 3) * LH + 10;
   const rows = {}; // "up0" -> right edge of the last label placed there
   const placed = events.map(([y, label]) => {
     const x = X(y);
-    const lines = wrap(`${yearLabel(y, bcad)}: ${label}`, 22).slice(0, 3);
+    const lines = wrap(`${yearLabel(y, bcad)}: ${label}`, W < 480 ? 18 : 22).slice(0, 4);
     const w = Math.max(...lines.map((l) => l.length)) * FS * 0.53 + 6;
     const anchor = x - w / 2 < PAD ? 'start' : x + w / 2 > W - PAD ? 'end' : 'middle';
     const left = anchor === 'start' ? x - 4 : anchor === 'end' ? x - w + 4 : x - w / 2;
@@ -116,22 +121,25 @@ function timeline(v) {
   if (!bands.length) svg.append(s('rect', { x: PAD, y: barY + barH / 2 - 3, width: W - 2 * PAD, height: 6, rx: 3, fill: 'var(--line)' }));
   const small = (x, t, anchor, bold) => s('text', { x, y: barY + barH + 15, 'text-anchor': anchor, fill: bold ? INK : 'var(--muted)', 'font-size': 12.5, 'font-weight': bold ? 700 : 400, 'font-family': 'inherit' }, t);
   // the BC/AD boundary, when it is in view; an end year too close to it is left off
-  const xBoundary = from < 0 && to > 0 ? X(0.5) : null;
-  const clear = (x) => xBoundary == null || Math.abs(x - xBoundary) > 70;
+  const xBoundary = from < 0 && to > 0 ? Xt(0.5) : null;
+  const clear = (x) => (xBoundary == null || Math.abs(x - xBoundary) > 70) && !placed.some((p) => p.side === 'down' && Math.abs(p.x - x) < 40);
   if (clear(PAD)) svg.append(small(PAD, yearLabel(from, bcad), 'start'));
   if (clear(W - PAD)) svg.append(small(W - PAD, yearLabel(to, bcad), 'end'));
   if (from < 0 && to > 0) {
-    const x = X(0.5);
+    const x = xBoundary;
     svg.append(s('line', { x1: x, y1: barY - 6, x2: x, y2: barY + barH + 4, stroke: INK, 'stroke-width': 2.5 }), small(x, 'BC | AD', 'middle', true));
   }
+  const words = [];
   for (const p of placed) {
     const up = p.side === 'up';
     const yMid = up ? barY - 12 - p.level * ROW - (p.lines.length * LH) / 2 : below + 6 + p.level * ROW + (p.lines.length * LH) / 2;
     const yEnd = up ? yMid + (p.lines.length * LH) / 2 : yMid - (p.lines.length * LH) / 2;
     svg.append(s('line', { x1: p.x, y1: up ? barY : barY + barH, x2: p.x, y2: yEnd, stroke: INK, 'stroke-width': 1.3, 'stroke-dasharray': p.level ? '3 3' : null }));
     svg.append(s('circle', { cx: p.x, cy: up ? barY : barY + barH, r: 4.5, fill: INK }));
-    svg.append(textLines(p.x, yMid, p.lines, { 'font-size': FS, lh: LH, 'text-anchor': p.anchor }));
+    // a halo in the card colour, so a leader line from a label further out breaks behind these words
+    words.push(textLines(p.x, yMid, p.lines, { 'font-size': FS, lh: LH, 'text-anchor': p.anchor, stroke: 'var(--card)', 'stroke-width': 5, 'stroke-linejoin': 'round', 'paint-order': 'stroke' }));
   }
+  svg.append(...words);
   return h('div', { class: 'visual-scroll' }, svg);
 }
 
@@ -139,24 +147,29 @@ function timeline(v) {
 // { steps: [...] } drawn round a circle with arrows, so the last step leads back to the first
 function cycle(v) {
   const n = v.steps.length;
-  const W = 420, H = 380, cx = W / 2, cy = H / 2, R = n <= 4 ? 125 : 140;
-  const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': `Cycle: ${v.steps.join(', then ')}`, class: 'visual-svg' });
-  svg.append(s('defs', {}, s('marker', { id: 'vc-arrow', viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 7, markerHeight: 7, orient: 'auto-start-reverse' }, s('path', { d: 'M0,0 L10,5 L0,10 z', fill: 'var(--muted)' }))));
+  const cx = 0, cy = 0, R = n <= 4 ? 120 : n <= 6 ? 140 : 160;
+  const svg = s('svg', { role: 'img', 'aria-label': `Cycle: ${v.steps.join(', then ')}`, class: 'visual-svg' });
+  svg.append(s('defs', {}, s('marker', { id: 'vc-arrow', viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 6, markerHeight: 6, orient: 'auto-start-reverse' }, s('path', { d: 'M0,0 L10,5 L0,10 z', fill: 'var(--muted)' }))));
   const pos = (i) => { const a = -Math.PI / 2 + (2 * Math.PI * i) / n; return [cx + R * Math.cos(a), cy + R * Math.sin(a), a]; };
-  const gap = Math.min(0.5, (Math.PI / n) * 0.55);
+  const gap = Math.min(0.55, (Math.PI / n) * 0.6);
   for (let i = 0; i < n; i++) {
     const a1 = -Math.PI / 2 + (2 * Math.PI * i) / n + gap, a2 = -Math.PI / 2 + (2 * Math.PI * (i + 1)) / n - gap;
     const p1 = [cx + R * Math.cos(a1), cy + R * Math.sin(a1)], p2 = [cx + R * Math.cos(a2), cy + R * Math.sin(a2)];
-    svg.append(s('path', { d: `M${p1[0]},${p1[1]} A${R},${R} 0 0,1 ${p2[0]},${p2[1]}`, fill: 'none', stroke: 'var(--muted)', 'stroke-width': 2.5, 'marker-end': 'url(#vc-arrow)' }));
+    svg.append(s('path', { d: `M${p1[0]},${p1[1]} A${R},${R} 0 0,1 ${p2[0]},${p2[1]}`, fill: 'none', stroke: 'var(--muted)', 'stroke-width': 3, 'marker-end': 'url(#vc-arrow)' }));
   }
+  // the frame fits the step boxes, so the ring fills the card and the words read at phone size
+  let [x0, y0, x1, y1] = [-R, -R, R, R];
   v.steps.forEach((st, i) => {
     const [x, y] = pos(i);
-    const lines = wrap(st, 13).slice(0, 3);
-    const w = Math.max(...lines.map((l) => l.length)) * 7.6 + 22, hh = lines.length * 15 + 16;
-    svg.append(s('rect', { x: x - w / 2, y: y - hh / 2, width: w, height: hh, rx: 10, fill: toneSoft(i), stroke: tone(i), 'stroke-width': 1.5 }));
-    svg.append(textLines(x, y, lines, { 'font-weight': 700 }));
+    const lines = wrap(st, 12).slice(0, 3);
+    const w = Math.max(...lines.map((l) => l.length)) * 10.4 + 24, hh = lines.length * 21 + 16;
+    svg.append(s('rect', { x: x - w / 2, y: y - hh / 2, width: w, height: hh, rx: 12, fill: toneSoft(i), stroke: tone(i), 'stroke-width': 2 }));
+    svg.append(textLines(x, y, lines, { 'font-weight': 700, 'font-size': 18, lh: 21 }));
+    x0 = Math.min(x0, x - w / 2); x1 = Math.max(x1, x + w / 2); y0 = Math.min(y0, y - hh / 2); y1 = Math.max(y1, y + hh / 2);
   });
-  if (v.centre) svg.append(textLines(cx, cy, wrap(v.centre, 16), { 'font-size': 13, fill: 'var(--muted)' }));
+  if (v.centre) svg.append(textLines(cx, cy, wrap(v.centre, 14), { 'font-size': 16, lh: 19, fill: 'var(--muted)' }));
+  const pad = 6;
+  svg.setAttribute('viewBox', `${x0 - pad} ${y0 - pad} ${x1 - x0 + 2 * pad} ${y1 - y0 + 2 * pad}`);
   return svg;
 }
 

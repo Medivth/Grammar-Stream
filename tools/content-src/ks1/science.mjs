@@ -153,8 +153,8 @@ const items = [
 ];
 
 // ---------------------------------------------------------------- pictures (js/ui/visuals.js)
-const BUTTERFLY = { kind: 'cycle', steps: ['egg', 'caterpillar', 'chrysalis', 'butterfly'], centre: 'butterfly' };
-const FROG = { kind: 'cycle', steps: ['frogspawn', 'tadpole', 'froglet', 'frog'], centre: 'frog' };
+const BUTTERFLY = { kind: 'cycle', steps: ['egg', 'caterpillar', 'chrysalis', 'butterfly'], centre: 'a butterfly’s life cycle' };
+const FROG = { kind: 'cycle', steps: ['frogspawn', 'tadpole', 'froglet', 'frog'], centre: 'a frog’s life cycle' };
 const SEASONS = { kind: 'cycle', steps: ['spring', 'summer', 'autumn', 'winter'], caption: 'Spring: March to May. Summer: June to August (the longest days). Autumn: September to November. Winter: December to February (the shortest days).' };
 const COMPASS = { kind: 'cycle', steps: ['North', 'East', 'South', 'West'], centre: 'Never Eat Shredded Wheat', caption: 'Going clockwise from north: north, east, south, west.' };
 const TOPIC_VISUALS = {
@@ -178,7 +178,7 @@ const ITEM_VISUALS = {
   'science.lc.chrysalis': BUTTERFLY,
   'science.lc.frog': FROG,
   'science.lc.tadpole': FROG,
-  'science.lc.chicken': { kind: 'cycle', steps: ['egg', 'chick', 'young chicken', 'hen'], centre: 'chicken' },
+  'science.lc.chicken': { kind: 'cycle', steps: ['egg', 'chick', 'young chicken', 'hen'], centre: 'a chicken’s life cycle' },
   'science.lc.human': { kind: 'flow', across: true, steps: ['baby', 'toddler', 'child', 'teenager', 'adult'] },
   'science.hb.alive': { kind: 'tree', root: { n: 'Alive or not?', c: [{ n: 'Alive now', note: 'a dog, a tree' }, { n: 'Once alive', note: 'a dead leaf, a wooden spoon' }, { n: 'Never alive', note: 'a rock, metal' }] } },
   'science.ss.order': SEASONS,

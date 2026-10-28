@@ -181,7 +181,7 @@ const TOPIC_VISUALS = {
     M({ type: 'curve', range: [-3, 3], paths: [plot((x) => x ** 3, -3, 3)] }, 'y = x³: a cubic S-shape.'),
     M({ type: 'curve', range: [-3, 3], paths: [plot((x) => 1 / x, -3, -0.3), plot((x) => 1 / x, 0.3, 3)] }, 'y = {{1/x}}: two separate curves that never touch the axes.'),
   ],
-  'maths.similarity': { kind: 'table', rows: [['lengths × k', '× 2', '× 3'], ['areas × k²', '× 4', '× 9'], ['volumes × k³', '× 8', '× 27']], tint: 'cols', caption: 'Double every length of a cube and it needs 2³ = 8 times the material.' },
+  'maths.similarity': { kind: 'table', rows: [['lengths × k', '× 2', '× 3'], ['areas × k²', '× 4', '× 9'], ['volumes × k³', '× 8', '× 27']], tint: 'cols', caption: 'Double every length of a solid cube: its volume is 2³ = 8 times as big, but its surface (the paint) only 2² = 4 times.' },
   'maths.polygon-algebra': { kind: 'flow', steps: ['Pentagon: angles add to 3 × 180 = 540°', 'x + 2x + 100 + 110 + 120 = 540', '3x + 330 = 540', '3x = 210, so x = 70°', 'Check: 70 + 140 + 330 = 540 ✓'], caption: 'A pentagon has angles x, 2x, 100°, 110° and 120°. Write the angle sum as an equation, then solve.' },
   'maths.counting': M({ type: 'possgrid', a: ['R', 'B', 'G'], b: ['1', '2', '3', '4'] }, '3 tunics (red, blue, green) and 4 pairs of sandals: 3 × 4 = 12 outfits. That is the product rule.'),
   'maths.proportion': [

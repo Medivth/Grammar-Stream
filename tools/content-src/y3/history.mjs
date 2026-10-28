@@ -231,7 +231,7 @@ const ITEM_VISUALS = {
   'history.y3.civ.order': { kind: 'timeline', from: -3500, to: 1000, events: [[-3200, 'writing begins in Sumer'], [-2560, 'the Great Pyramid'], [-776, 'the first Olympic Games'], [43, 'the Romans invade Britain']] },
   'history.y3.bb.observer': { kind: 'flow', steps: ['Radar spots planes over the sea', 'The Observer Corps track them over land', 'WAAF plotters mark them on a map', 'Fighters are sent up to meet them'] },
   'history.y3.sk.bc': { kind: 'timeline', from: -600, to: 200, bands: [[-600, 0, 'BC'], [0, 200, 'AD']], events: [[-500, 'earlier'], [-200, 'later']], caption: 'The bigger the BC number, the longer ago.' },
-  'history.y3.sk.zero': { kind: 'timeline', from: -10, to: 10, bands: [[-10, 0, 'BC'], [0, 10, 'AD']], events: [[-1, 'the last year BC'], [1, 'the first year AD']], caption: '1 BC is followed straight away by AD 1. There is no year 0.' },
+  'history.y3.sk.zero': { kind: 'flow', across: true, steps: ['3 BC', '2 BC', '1 BC', 'AD 1', 'AD 2', 'AD 3'], caption: '1 BC is followed straight away by AD 1. There is no year 0.' },
   'history.y3.no.feudal': FEUDAL,
 };
 for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }

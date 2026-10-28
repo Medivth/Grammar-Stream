@@ -141,9 +141,9 @@ const RE = { join: '+', parts: [['re', 'prefix', 'again'], ['build', 'root']], r
 const TOPIC_VISUALS = {
   'spelling.prefixes': W(UN, DIS, RE),
   'spelling.compounds': { ...W(
-    { join: '+', parts: [['foot', 'root', 'word'], ['ball', 'suffix', 'word']], result: 'football' },
-    { join: '+', parts: [['sun', 'root', 'word'], ['flower', 'suffix', 'word']], result: 'sunflower' },
-    { join: '+', parts: [['rain', 'root', 'word'], ['bow', 'suffix', 'word']], result: 'rainbow' },
+    { join: '+', parts: [['foot', 'root', 'word'], ['ball', 'root', 'word']], result: 'football' },
+    { join: '+', parts: [['sun', 'root', 'word'], ['flower', 'root', 'word']], result: 'sunflower' },
+    { join: '+', parts: [['rain', 'root', 'word'], ['bow', 'root', 'word']], result: 'rainbow' },
   ), caption: 'Two whole words join together, with no gap.' },
   'spelling.speech': { ...W(
     { parts: [['“Blast off!”', 'clause', 'spoken words'], ['shouted the captain.', 'subject', 'who spoke']] },

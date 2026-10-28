@@ -558,7 +558,7 @@ const TOPIC_VISUALS = {
     ['Killed by antibiotics?', '**yes**', '**no**'],
     ['Example', 'Salmonella food poisoning', 'a cold, flu'],
   ], caption: 'Antibiotics attack parts of bacterial cells, such as the cell wall, which viruses do not have.' },
-  earth: { kind: 'cycle', steps: ['magma cools: igneous rock', 'weathered and eroded into sediment', 'deposited and compacted: sedimentary rock', 'heat and pressure: metamorphic rock', 'melts back into magma'], centre: 'the rock cycle', caption: 'A simplified loop: any rock can be weathered, or melted, and start again. Fossils survive only in sedimentary rock.' },
+  earth: { kind: 'cycle', steps: ['magma cools: igneous rock', 'weathered and eroded into sediment', 'deposited and compacted: sedimentary rock', 'heat and pressure: metamorphic rock', 'melts back into magma'], centre: 'the rock cycle', caption: 'A simplified loop: any rock can be weathered, or melted, and start again. Fossils are usually found in sedimentary rock.' },
   working: { kind: 'table', head: ['Variable', 'What it is', 'Mira’s ramp test'], rows: [
     ['Independent', 'what you change', 'the height of the ramp'],
     ['Dependent', 'what you measure', 'how far the car rolls'],

@@ -663,7 +663,7 @@ const TOPIC_VISUALS = {
       ['nom.', 'οὗτ**ος**', 'αὕτ**η**', 'τοῦτ**ο**'], ['acc.', 'τοῦτ**ον**', 'ταύτ**ην**', 'τοῦτ**ο**'], ['gen.', 'τούτ**ου**', 'ταύτ**ης**', 'τούτ**ου**'], ['dat.', 'τούτ**ῳ**', 'ταύτ**ῃ**', 'τούτ**ῳ**']] },
     { kind: 'table', tint: 'cols', head: ['pl', 'm.', 'f.', 'n.'], rows: [
       ['nom.', 'οὗτ**οι**', 'αὗτ**αι**', 'ταῦτ**α**'], ['acc.', 'τούτ**ους**', 'ταύτ**ας**', 'ταῦτ**α**'], ['gen.', 'τούτ**ων**', 'τούτ**ων**', 'τούτ**ων**'], ['dat.', 'τούτ**οις**', 'ταύτ**αις**', 'τούτ**οις**']],
-    caption: 'οὗτος, this: the endings of καλός, and a τ wherever the article has one.' },
+    caption: 'οὗτος, this: the endings of καλός (but neuter τοῦτο, like τό, has no -ν), and a τ wherever the article has one.' },
   ],
   'greek.comparison': { kind: 'table', head: ['', 'more (-er)', 'most (-est)'], rows: [
     ['σοφός, wise', 'σοφώ**τερος**', 'σοφώ**τατος**'], ['δεινός, terrible', 'δεινό**τερος**', 'δεινό**τατος**'],
@@ -677,7 +677,7 @@ const TOPIC_VISUALS = {
   'greek.aorist-strong': { kind: 'table', head: ['present', 'imperfect', 'aorist'], rows: [
     ['φεύγω', 'ἔ**φευγ**ον', 'ἔ**φυγ**ον'], ['λαμβάνω', 'ἐ**λάμβαν**ον', 'ἔ**λαβ**ον'], ['μανθάνω', 'ἐ**μάνθαν**ον', 'ἔ**μαθ**ον'], ['βάλλω', 'ἔ**βαλλ**ον', 'ἔ**βαλ**ον'],
     ['λέγω', 'ἔλεγον', 'εἶπον'], ['ὁράω', 'ἑώρων', 'εἶδον'],
-  ], caption: 'Same augment, same endings: only the stem changes. The imperfect (was …ing) keeps the present stem.' },
+  ], caption: 'Strong aorists: same augment, same endings, new stem. λέγω and ὁράω are irregular (εἶπον, εἶδον; imperfect ἑώρων is contracted). The imperfect keeps the present stem.' },
   'greek.contracted': { kind: 'table', head: ['', 'stem + ending', 'contracted'], rows: [
     ['I', 'φιλ**έ-ω**', 'φιλ**ῶ**'], ['you (sg)', 'φιλ**έ-ει**ς', 'φιλ**εῖ**ς'], ['he, she', 'φιλ**έ-ει**', 'φιλ**εῖ**'],
     ['we', 'φιλ**έ-ο**μεν', 'φιλ**οῦ**μεν'], ['you (pl)', 'φιλ**έ-ε**τε', 'φιλ**εῖ**τε'], ['they', 'φιλ**έ-ου**σι(ν)', 'φιλ**οῦ**σι(ν)'],
@@ -708,7 +708,7 @@ const ITEM_VISUALS = {
     { parts: [['αὐτὸς', 'pronoun', 'himself'], ['ὁ', 'article', 'the'], ['βασιλεύς', 'noun', 'king']], result: 'the king himself' },
     { parts: [['ὁ', 'article', 'the'], ['αὐτὸς', 'pronoun', 'same'], ['βασιλεύς', 'noun', 'king']], result: 'the same king' },
   ] },
-  'greek.g3.pt.labon': { kind: 'flow', across: true, steps: ['λαβών: Perseus takes the head', 'ἀπέφυγεν: then he escapes'], caption: 'The aorist participle happened first.' },
+  'greek.g3.pt.labon': { kind: 'flow', across: true, steps: ['λαβών: Perseus took the head', 'ἀπέφυγεν: then he escaped'], caption: 'The aorist participle happened first.' },
   'greek.g3.ic.6': { kind: 'flow', steps: ['Daedalus makes wings', 'Daedalus warns his son', 'Father and son fly out of Crete', 'The sun melts the wax', 'Icarus falls into the sea'] },
 };
 ITEM_VISUALS['greek.g3.pr.same'] = ITEM_VISUALS['greek.g3.pr.self'];

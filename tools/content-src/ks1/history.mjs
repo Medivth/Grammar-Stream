@@ -166,7 +166,7 @@ const LONG_AGO = { kind: 'timeline', from: 1, to: 2030, set: 'britain', events: 
 const FIRSTS = { kind: 'timeline', from: 1800, to: 2000, set: 'britain', events: [[1829, 'Stephenson’s Rocket'], [1903, 'Wright brothers fly'], [1930, 'Amy Johnson flies to Australia'], [1969, 'First people on the Moon']] };
 const TOPIC_VISUALS = {
   'history.past': LONG_AGO,
-  'history.romans': { kind: 'timeline', from: -100, to: 500, set: 'britain', mark: 'Roman Britain', events: [[43, 'Romans invade'], [60, 'Boudica’s rebellion'], [122, 'Hadrian’s Wall begun'], [410, 'Romans leave Britain']] },
+  'history.romans': { kind: 'timeline', from: -100, to: 500, set: 'britain', mark: 'Roman Britain', events: [[43, 'Romans invade'], [61, 'Boudica’s rebellion'], [122, 'Hadrian’s Wall begun'], [410, 'Romans leave Britain']] },
   'history.vikings': { kind: 'timeline', from: 700, to: 1100, set: 'britain', mark: 'Anglo-Saxons and Vikings', events: [[793, 'Vikings raid Lindisfarne'], [871, 'Alfred becomes king'], [1066, 'Battle of Hastings']] },
   'history.1066': { kind: 'flow', steps: ['January: Harold becomes king', 'September: Harold beats a Viking army', 'William sails over from Normandy', '14 October: Battle of Hastings', 'Christmas Day: William is crowned'], caption: 'The year 1066' },
   'history.fire': { kind: 'flow', steps: ['2 September: fire starts in a bakery', 'Wind spreads it through wooden houses', 'People pull down houses to make gaps', '6 September: the fire is out'], caption: 'The Great Fire of London, 1666' },

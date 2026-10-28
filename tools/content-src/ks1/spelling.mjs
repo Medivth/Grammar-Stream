@@ -227,9 +227,9 @@ const TOPIC_VISUALS = {
   'spelling.homophones': { kind: 'table', head: ['Sound the same', 'Mean different things'], rows: [['**sea** / **see**', 'the ocean / look with your eyes'], ['**knight** / **night**', 'a soldier in armour / when it is dark'], ['**hear** / **here**', 'with your ear / in this place'], ['**two** / **to** / **too**', '2 / towards / also']], tint: 'rows' },
   'spelling.word-classes': { ...W({ parts: [['Tiny', 'adjective'], ['robots', 'noun'], ['dance', 'verb'], ['happily.', 'adverbial', 'adverb']] }), caption: 'The adjective describes the noun. The adverb tells you HOW they dance.' },
   'spelling.apostrophes': { ...W(
-    { join: '+', parts: [['do', 'root', 'word'], ['not', 'suffix', 'the o goes']], result: 'don’t' },
-    { join: '+', parts: [['can', 'root', 'word'], ['not', 'suffix', 'the no goes']], result: 'can’t' },
-    { join: '+', parts: [['it', 'root', 'word'], ['is', 'suffix', 'the i goes']], result: 'it’s' },
+    { join: '+', parts: [['do', 'root', 'word'], ['not', 'root', 'the o goes']], result: 'don’t' },
+    { join: '+', parts: [['can', 'root', 'word'], ['not', 'root', 'the no goes']], result: 'can’t' },
+    { join: '+', parts: [['it', 'root', 'word'], ['is', 'root', 'the i goes']], result: 'it’s' },
   ), caption: 'The apostrophe goes where the missing letters were.' },
 };
 const ITEM_VISUALS = {

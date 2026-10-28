@@ -286,7 +286,7 @@ const ITEM_VISUALS = {
   'latin.r.13': build([['annu', 'root', 'year'], ['al', 'suffix']]),
   'latin.ro.triclinium': build([['tri', 'prefix', 'three'], ['clinium', 'root', 'couches']]),
   'latin.ro.amph': build([['amphi', 'prefix', 'all round'], ['theatrum', 'root', 'theatre']]),
-  'latin.ro.spqr': { kind: 'blocks', rows: [{ parts: [['S', 'subject', 'Senatus'], ['P', 'object', 'Populus'], ['Q', 'conjunction', '-que'], ['R', 'adjective', 'Romanus']] }, { parts: [['the Senate', 'subject'], ['and', 'conjunction'], ['the People', 'object'], ['of Rome', 'adjective']] }], caption: '-que (and) is glued to the end of Populus, but in English “and” comes before it.' },
+  'latin.ro.spqr': { kind: 'blocks', rows: [{ parts: [['S', 'subject', 'Senatus'], ['P', 'subject', 'Populus'], ['Q', 'conjunction', '-que'], ['R', 'adjective', 'Romanus']] }, { parts: [['the Senate', 'subject'], ['and', 'conjunction'], ['the People', 'subject'], ['of Rome', 'adjective']] }], caption: '-que (and) is glued to the end of Populus, but in English “and” comes before it.' },
   'latin.ro.num1': withResult(build([['X', 'noun', '10'], ['IV', 'verb', '4: one before 5']]), ['XIV = 14']),
   'latin.ro.num2': withResult(build([['XL', 'noun', '40: ten before 50'], ['II', 'verb', '2']]), ['XLII = 42']),
   'latin.ro.num3': withResult(build([['MM', 'noun', '2000'], ['XX', 'verb', '20'], ['VI', 'adjective', '6']]), ['MMXXVI = 2026']),

@@ -697,7 +697,7 @@ const PUNCT = {
     { parts: [['Athena was wise', 'clause', 'main clause'], [';', 'conjunction', 'semicolon'], ['Ares was reckless.', 'clause', 'main clause']] },
     { parts: [['The hero had one weakness', 'clause', 'main clause'], [':', 'conjunction', 'colon'], ['his heel.', 'object', 'what it introduces']] },
     { parts: [['He opened the box', 'clause', 'main clause'], ['–', 'conjunction', 'dash'], ['and instantly regretted it.', 'adverbial', 'dramatic addition']] },
-    { parts: [['a man-eating', 'adjective', 'hyphen joins two words'], ['shark', 'noun']] },
+    { parts: [['a', 'article'], ['man-eating', 'adjective', 'hyphen joins two words'], ['shark', 'noun']] },
   ],
   caption: 'A semicolon balances two main clauses; a colon needs a main clause before it; a dash interrupts; a hyphen joins.',
 };

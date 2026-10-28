@@ -795,7 +795,7 @@ const TOPIC_VISUALS = {
       ['nom.', '**ὁ**', '**ἡ**', 'τ**ό**'], ['acc.', 'τ**όν**', 'τ**ήν**', 'τ**ό**'], ['gen.', 'τ**οῦ**', 'τ**ῆς**', 'τ**οῦ**'], ['dat.', 'τ**ῷ**', 'τ**ῇ**', 'τ**ῷ**']] },
     { kind: 'table', tint: 'cols', head: ['plural', 'masc.', 'fem.', 'neut.'], rows: [
       ['nom.', '**οἱ**', '**αἱ**', 'τ**ά**'], ['acc.', 'τ**ούς**', 'τ**άς**', 'τ**ά**'], ['gen.', 'τ**ῶν**', 'τ**ῶν**', 'τ**ῶν**'], ['dat.', 'τ**οῖς**', 'τ**αῖς**', 'τ**οῖς**']],
-    caption: 'After the τ, the article has the same endings as its noun: τ-ὸν λόγ-ον, τ-ὴν τιμ-ήν.' },
+    caption: 'After the τ, the article mostly has the same endings as its noun: τ-ὸν λόγ-ον, τ-ὴν τιμ-ήν (but neuter τὸ δῶρον).' },
   ],
   'greek.nouns-2': [
     { kind: 'table', head: ['sg', 'word (m.)', 'gift (n.)'], rows: [
@@ -868,7 +868,7 @@ const ITEM_VISUALS = {
   'greek.s.6': { kind: 'blocks', rows: [{ parts: [G.o('τὸν φίλ**ον**'), G.s('ὁ ἀδελφ**ὸς**'), G.v('λύει')], result: 'The brother frees the friend.' }] },
   'greek.t.fut': { kind: 'blocks', rows: [{ join: '+', parts: [['πέμπ', 'stem'], ['σ', 'tense', 'future'], ['ω', 'ending', 'I']], result: 'πέμψω (π + σ = ψ)' }] },
   'greek.ao.lusa': { kind: 'blocks', rows: [{ join: '+', parts: [['ἔ', 'augment', 'past'], ['λυ', 'stem'], ['σ', 'tense', 'aorist'], ['α', 'ending', 'I']], result: 'ἔλυσα, I freed' }] },
-  'greek.my.th.8': { kind: 'flow', steps: ['The Athenians send young people to Crete', 'Ariadne gives Theseus a thread', 'Theseus kills the Minotaur', 'The thread leads him out', 'The Athenians rejoice'] },
+  'greek.my.th.8': { kind: 'flow', steps: ['The Athenians send young people to Crete', 'Ariadne gives Theseus a thread', 'Theseus kills the Minotaur', 'Theseus finds his way out', 'The Athenians rejoice'] },
   'greek.pc.lusas': { kind: 'flow', across: true, steps: ['λύσας: he frees his friends', 'φεύγει: then he flees'], caption: 'The aorist participle happened first.' },
 };
 // keep an article on the same line as its noun in a narrow table cell
