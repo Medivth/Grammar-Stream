@@ -12,7 +12,11 @@
    "batch": 5,
    "intro": "Every part of a plant has a job. Roots drink and hold on, the stem carries water up like a pipe, leaves make food from sunlight, and flowers make seeds.",
    "teach": "Explain how water gets from the soil to the leaves.",
-   "talk": "Put a white flower or a stick of celery in coloured water and watch it change colour over a day."
+   "talk": "Put a white flower or a stick of celery in coloured water and watch it change colour over a day.",
+   "visual": {
+    "kind": "diagram",
+    "id": "plant"
+   }
   },
   {
    "id": "science.y3-seeds",
@@ -61,7 +65,11 @@
    "batch": 5,
    "intro": "Your skeleton holds you up, protects your insides and helps you move. Muscles pull on bones to make them move. Some animals have no bones at all!",
    "teach": "Explain how muscles make your arm bend.",
-   "talk": "Ask {him} to feel the muscle at the front of {her} arm while bending and straightening it."
+   "talk": "Ask {him} to feel the muscle at the front of {her} arm while bending and straightening it.",
+   "visual": {
+    "kind": "diagram",
+    "id": "skeleton"
+   }
   },
   {
    "id": "science.y3-rocks",
@@ -97,7 +105,11 @@
    "batch": 5,
    "intro": "We see things when light bounces off them into our eyes. Shiny surfaces reflect light well. Shadows change size when the light source moves.",
    "teach": "Explain why your shadow gets bigger when you walk towards a torch.",
-   "talk": "Use a torch and a toy to make a shadow, then move the torch closer and further away."
+   "talk": "Use a torch and a toy to make a shadow, then move the torch closer and further away.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram"
+   }
   },
   {
    "id": "science.y3-forces",
@@ -181,7 +193,17 @@
    "batch": 5,
    "intro": "The Earth’s outer layer, the crust, is cracked into giant pieces called plates. Where plates push, pull or slide past each other, we get earthquakes and volcanoes.",
    "teach": "Explain why there are earthquakes in some places and not others.",
-   "talk": "Peel a satsuma and talk about how the Earth’s crust is broken into pieces like the peel."
+   "talk": "Peel a satsuma and talk about how the Earth’s crust is broken into pieces like the peel.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "earth-layers"
+    },
+    {
+     "kind": "diagram",
+     "id": "volcano"
+    }
+   ]
   },
   {
    "id": "science.y3-compass",
@@ -323,7 +345,17 @@
    "batch": 5,
    "intro": "Digestion breaks food into tiny pieces your body can use. It starts with your teeth and ends a long way later, after a journey through your stomach and intestines.",
    "teach": "Explain the job of each type of tooth.",
-   "talk": "Look in a mirror together and find {her} incisors, canines and molars."
+   "talk": "Look in a mirror together and find {her} incisors, canines and molars.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "teeth"
+    },
+    {
+     "kind": "diagram",
+     "id": "digestion"
+    }
+   ]
   },
   {
    "id": "science.y3-keys",
@@ -378,7 +410,11 @@
    "batch": 5,
    "intro": "A circuit is a complete loop. Add more batteries and a bulb gets brighter; add more bulbs and each one gets dimmer. Conductors let electricity through; insulators don’t.",
    "teach": "Explain why a bulb doesn’t light if there is a gap in the circuit.",
-   "talk": "Count the switches in your kitchen. What does each one complete?"
+   "talk": "Count the switches in your kitchen. What does each one complete?",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit"
+   }
   }
  ],
  "items": [
@@ -397,7 +433,12 @@
    "accept": [
     "roots",
     "root"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "plant",
+    "highlight": "roots"
+   }
   },
   {
    "id": "science.y3.pl.stem",
@@ -416,17 +457,24 @@
     "the trunk",
     "trunk"
    ],
-   "visual": {
-    "kind": "flow",
-    "steps": [
-     "soil",
-     "roots",
-     "stem",
-     "leaves"
-    ],
-    "across": true,
-    "caption": "Water travels from the soil, into the roots, up the stem and out to the leaves."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "plant",
+     "highlight": "stem"
+    },
+    {
+     "kind": "flow",
+     "steps": [
+      "soil",
+      "roots",
+      "stem",
+      "leaves"
+     ],
+     "across": true,
+     "caption": "Water travels from the soil, into the roots, up the stem and out to the leaves."
+    }
+   ]
   },
   {
    "id": "science.y3.pl.leaf",
@@ -443,7 +491,12 @@
    "accept": [
     "leaves",
     "leaf"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "plant",
+    "highlight": "leaves"
+   }
   },
   {
    "id": "science.y3.pl.flower",
@@ -459,7 +512,12 @@
    "explain": "Flowers attract insects so they can be pollinated and make seeds.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "plant",
+    "highlight": "flower"
+   }
   },
   {
    "id": "science.y3.pl.need",
@@ -505,7 +563,12 @@
      "feedback": "They turned blue because coloured water travelled up."
     }
    ],
-   "explain": "The coloured water travelled up tiny tubes in the stem all the way to the leaves."
+   "explain": "The coloured water travelled up tiny tubes in the stem all the way to the leaves.",
+   "visual": {
+    "kind": "diagram",
+    "id": "plant",
+    "highlight": "stem"
+   }
   },
   {
    "id": "science.y3.pl.dark",
@@ -544,7 +607,12 @@
    "explain": "Minerals in the soil keep the plant healthy. That is why gardeners add compost.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "plant",
+    "highlight": "roots"
+   }
   },
   {
    "id": "science.y3.pl.trunk",
@@ -567,7 +635,12 @@
      "feedback": "Leaves grow on the branches."
     }
    ],
-   "explain": "A trunk does the same job as a stem: it holds the tree up and carries water."
+   "explain": "A trunk does the same job as a stem: it holds the tree up and carries water.",
+   "visual": {
+    "kind": "diagram",
+    "id": "plant",
+    "highlight": "stem"
+   }
   },
   {
    "id": "science.y3.pl.photo",
@@ -583,7 +656,12 @@
    "explain": "Photo means light. Leaves use light to make sugar for the plant.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "plant",
+    "highlight": "leaves"
+   }
   },
   {
    "id": "science.y3.sd.cycle",
@@ -946,7 +1024,11 @@
    "explain": "Your skeleton supports you, protects organs (your skull protects your brain) and helps you move.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "skeleton"
+   }
   },
   {
    "id": "science.y3.sk.skull",
@@ -963,7 +1045,12 @@
    "accept": [
     "skull",
     "cranium"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "skeleton",
+    "highlight": "skull"
+   }
   },
   {
    "id": "science.y3.sk.ribs",
@@ -981,7 +1068,12 @@
     "ribs",
     "ribcage",
     "rib cage"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "skeleton",
+    "highlight": "ribs"
+   }
   },
   {
    "id": "science.y3.sk.spine",
@@ -1000,7 +1092,12 @@
     "backbone",
     "the backbone",
     "the spine"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "skeleton",
+    "highlight": "spine"
+   }
   },
   {
    "id": "science.y3.sk.femur",
@@ -1017,7 +1114,12 @@
    "accept": [
     "femur",
     "thigh bone"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "skeleton",
+    "highlight": "femur"
+   }
   },
   {
    "id": "science.y3.sk.muscle",
@@ -1103,7 +1205,12 @@
      "feedback": "That is about what it eats."
     }
    ],
-   "explain": "Fish, amphibians, reptiles, birds and mammals are vertebrates."
+   "explain": "Fish, amphibians, reptiles, birds and mammals are vertebrates.",
+   "visual": {
+    "kind": "diagram",
+    "id": "skeleton",
+    "highlight": "spine"
+   }
   },
   {
    "id": "science.y3.sk.invert",
@@ -1165,7 +1272,12 @@
    "explain": "Igneous comes from the Latin word for fire. Granite and basalt are igneous.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "volcano",
+    "highlight": "lava"
+   }
   },
   {
    "id": "science.y3.rk.sedimentary",
@@ -1399,7 +1511,12 @@
    "accept": [
     "reflecting",
     "reflected"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "reflection",
+    "highlight": "reflected"
+   }
   },
   {
    "id": "science.y3.li.shiny",
@@ -1468,7 +1585,12 @@
      "feedback": "There is still something blocking the light."
     }
    ],
-   "explain": "The closer the light source, the bigger the shadow."
+   "explain": "The closer the light source, the bigger the shadow.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram",
+    "highlight": "shadow"
+   }
   },
   {
    "id": "science.y3.li.opaque",
@@ -1491,7 +1613,12 @@
      "feedback": "Tissue lets some light through, so its shadow is faint."
     }
    ],
-   "explain": "Opaque materials block all light. Transparent ones let light through; translucent ones let some through."
+   "explain": "Opaque materials block all light. Transparent ones let light through; translucent ones let some through.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram",
+    "highlight": "object"
+   }
   },
   {
    "id": "science.y3.li.transparent",
@@ -1576,7 +1703,12 @@
      "feedback": "Light goes straight."
     }
    ],
-   "explain": "Because light travels in straight lines, an object blocking it makes a shadow behind."
+   "explain": "Because light travels in straight lines, an object blocking it makes a shadow behind.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram",
+    "highlight": "rays"
+   }
   },
   {
    "id": "science.y3.fo.contact",
@@ -2593,7 +2725,13 @@
    "explain": "The crust is broken into huge pieces called tectonic plates.",
    "accept": [
     "crust"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "earth-layers",
+    "highlight": "crust",
+    "question": true
+   }
   },
   {
    "id": "science.y3.vo.layers",
@@ -2607,7 +2745,11 @@
     "inner core"
    ],
    "labels": null,
-   "explain": "Like a peach: thin skin (crust), thick flesh (mantle), and a stone in the middle (core)."
+   "explain": "Like a peach: thin skin (crust), thick flesh (mantle), and a stone in the middle (core).",
+   "visual": {
+    "kind": "diagram",
+    "id": "earth-layers"
+   }
   },
   {
    "id": "science.y3.vo.plates",
@@ -2669,7 +2811,12 @@
      "feedback": "There are volcanoes all over the world, mostly at plate edges."
     }
    ],
-   "explain": "The “Ring of Fire” around the Pacific Ocean has hundreds of volcanoes."
+   "explain": "The “Ring of Fire” around the Pacific Ocean has hundreds of volcanoes.",
+   "visual": {
+    "kind": "diagram",
+    "id": "plate-boundary",
+    "highlight": "volcano"
+   }
   },
   {
    "id": "science.y3.vo.ring",
@@ -3280,7 +3427,12 @@
    "explain": "Incisors are flat and sharp, like little chisels.",
    "accept": [
     "incisor"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "teeth",
+    "highlight": "incisors"
+   }
   },
   {
    "id": "science.y3.dg.canine",
@@ -3296,7 +3448,12 @@
    "explain": "Canine means dog-like. Meat-eaters like wolves have big canines.",
    "accept": [
     "canine"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "teeth",
+    "highlight": "canines"
+   }
   },
   {
    "id": "science.y3.dg.molar",
@@ -3312,7 +3469,12 @@
    "explain": "Molars crush food. Plant-eaters like cows have lots of big molars.",
    "accept": [
     "molar"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "teeth",
+    "highlight": "molars"
+   }
   },
   {
    "id": "science.y3.dg.journey",
@@ -3328,17 +3490,23 @@
    ],
    "labels": null,
    "explain": "Mouth, food pipe, stomach, small intestine (nutrients absorbed), large intestine (water absorbed).",
-   "visual": {
-    "kind": "flow",
-    "steps": [
-     "mouth",
-     "oesophagus (food pipe)",
-     "stomach",
-     "small intestine",
-     "large intestine"
-    ],
-    "caption": "Nutrients pass into the blood in the small intestine; water is taken back in the large intestine."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "digestion"
+    },
+    {
+     "kind": "flow",
+     "steps": [
+      "mouth",
+      "oesophagus (food pipe)",
+      "stomach",
+      "small intestine",
+      "large intestine"
+     ],
+     "caption": "Nutrients pass into the blood in the small intestine; water is taken back in the large intestine."
+    }
+   ]
   },
   {
    "id": "science.y3.dg.stomach",
@@ -3361,7 +3529,12 @@
      "feedback": "The stomach is busy churning and mixing."
     }
    ],
-   "explain": "Stomach acid and churning muscles turn food into a soupy mush."
+   "explain": "Stomach acid and churning muscles turn food into a soupy mush.",
+   "visual": {
+    "kind": "diagram",
+    "id": "digestion",
+    "highlight": "stomach"
+   }
   },
   {
    "id": "science.y3.dg.small",
@@ -3384,7 +3557,12 @@
      "feedback": "Teeth break food up."
     }
    ],
-   "explain": "The small intestine is about 6 metres long, with a huge surface for absorbing nutrients."
+   "explain": "The small intestine is about 6 metres long, with a huge surface for absorbing nutrients.",
+   "visual": {
+    "kind": "diagram",
+    "id": "digestion",
+    "highlight": "small"
+   }
   },
   {
    "id": "science.y3.dg.brush",
@@ -3470,34 +3648,41 @@
     }
    ],
    "explain": "Insects have 6 legs. Ladybirds are insects.",
-   "visual": {
-    "kind": "tree",
-    "root": {
-     "n": "Does it have legs?",
-     "c": [
-      {
-       "n": "Does it have 6 legs?",
-       "note": "yes",
-       "c": [
-        {
-         "n": "ladybird",
-         "note": "yes",
-         "mark": true
-        },
-        {
-         "n": "spider",
-         "note": "no: 8 legs"
-        }
-       ]
-      },
-      {
-       "n": "snail",
-       "note": "no legs"
-      }
-     ]
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "insect",
+     "highlight": "legs"
     },
-    "caption": "A key asks one yes-or-no question at a time until only one living thing is left."
-   }
+    {
+     "kind": "tree",
+     "root": {
+      "n": "Does it have legs?",
+      "c": [
+       {
+        "n": "Does it have 6 legs?",
+        "note": "yes",
+        "c": [
+         {
+          "n": "ladybird",
+          "note": "yes",
+          "mark": true
+         },
+         {
+          "n": "spider",
+          "note": "no: 8 legs"
+         }
+        ]
+       },
+       {
+        "n": "snail",
+        "note": "no legs"
+       }
+      ]
+     },
+     "caption": "A key asks one yes-or-no question at a time until only one living thing is left."
+    }
+   ]
   },
   {
    "id": "science.y3.ky.good",
@@ -3646,7 +3831,12 @@
      "feedback": "The extra battery makes a difference."
     }
    ],
-   "explain": "More batteries (cells) make a bulb brighter, or a motor faster."
+   "explain": "More batteries (cells) make a bulb brighter, or a motor faster.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "battery"
+   }
   },
   {
    "id": "science.y3.ci.dimmer",
@@ -3669,7 +3859,12 @@
      "feedback": "Both light, but dimly."
     }
    ],
-   "explain": "The bulbs share the electricity from the battery."
+   "explain": "The bulbs share the electricity from the battery.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "bulb"
+   }
   },
   {
    "id": "science.y3.ci.insulator",
@@ -3692,7 +3887,12 @@
      "feedback": "Plastic does NOT conduct electricity."
     }
    ],
-   "explain": "Copper inside conducts electricity; plastic outside insulates."
+   "explain": "Copper inside conducts electricity; plastic outside insulates.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "wires"
+   }
   },
   {
    "id": "science.y3.ci.test",
@@ -3715,7 +3915,12 @@
      "feedback": "It lit, so it works!"
     }
    ],
-   "explain": "Testing materials in a circuit gap shows conductors and insulators."
+   "explain": "Testing materials in a circuit gap shows conductors and insulators.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-open",
+    "highlight": "switch"
+   }
   },
   {
    "id": "science.y3.ci.symbol",
@@ -3731,7 +3936,12 @@
    "explain": "The cell pushes electricity round the circuit.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "battery"
+   }
   },
   {
    "id": "science.y3.ci.motor",
@@ -3754,7 +3964,12 @@
      "feedback": "Red is fast-looking, but it doesn’t change the circuit!"
     }
    ],
-   "explain": "More cells give the motor more push."
+   "explain": "More cells give the motor more push.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "battery"
+   }
   }
  ]
 }

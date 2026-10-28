@@ -203,47 +203,53 @@
    "teach": "Explain the contrast between the two halves of “Anthem for Doomed Youth”.",
    "talk": "On Remembrance Sunday, read the poem aloud together.",
    "hook": "Owen wrote that his subject was “War, and the pity of War”.",
-   "visual": {
-    "kind": "table",
-    "head": [
-     "",
-     "Funeral rite",
-     "Owen’s replacement"
-    ],
-    "rows": [
-     [
-      "Octave",
-      "passing-bells",
-      "the anger of the **guns**"
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "trench"
+    },
+    {
+     "kind": "table",
+     "head": [
+      "",
+      "Funeral rite",
+      "Owen’s replacement"
      ],
-     [
-      "Octave",
-      "prayers",
-      "the **rifles**’ rapid rattle"
+     "rows": [
+      [
+       "Octave",
+       "passing-bells",
+       "the anger of the **guns**"
+      ],
+      [
+       "Octave",
+       "prayers",
+       "the **rifles**’ rapid rattle"
+      ],
+      [
+       "Octave",
+       "choirs",
+       "wailing **shells**"
+      ],
+      [
+       "Sestet",
+       "candles",
+       "glimmers in boys’ **eyes**"
+      ],
+      [
+       "Sestet",
+       "pall",
+       "the pallor of girls’ **brows**"
+      ],
+      [
+       "Sestet",
+       "flowers",
+       "the tenderness of **patient minds**"
+      ]
      ],
-     [
-      "Octave",
-      "choirs",
-      "wailing **shells**"
-     ],
-     [
-      "Sestet",
-      "candles",
-      "glimmers in boys’ **eyes**"
-     ],
-     [
-      "Sestet",
-      "pall",
-      "the pallor of girls’ **brows**"
-     ],
-     [
-      "Sestet",
-      "flowers",
-      "the tenderness of **patient minds**"
-     ]
-    ],
-    "caption": "Octave (lines 1–8): the noise of the front. The volta at line 9 turns to the sestet (lines 9–14): quiet grief at home."
-   }
+     "caption": "Octave (lines 1–8): the noise of the front. The volta at line 9 turns to the sestet (lines 9–14): quiet grief at home."
+    }
+   ]
   },
   {
    "id": "english.tennyson",
@@ -356,16 +362,22 @@
    "teach": "Explain what hubris and hamartia mean, using a myth as an example.",
    "talk": "Ask {him} which modern film follows the shape of a Greek tragedy.",
    "hook": "Pride comes before a fall: hubris, then nemesis. That is the shape of a Greek tragedy.",
-   "visual": {
-    "kind": "flow",
-    "steps": [
-     "**Hamartia**: the hero’s fatal error",
-     "**Peripeteia**: the reversal of fortune",
-     "**Anagnorisis**: the hero recognises the truth",
-     "**Catharsis**: the audience’s pity and fear released"
-    ],
-    "caption": "The shape Aristotle described. Hubris (pride against the gods) often drives the error; Nemesis punishes it."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "greek-theatre"
+    },
+    {
+     "kind": "flow",
+     "steps": [
+      "**Hamartia**: the hero’s fatal error",
+      "**Peripeteia**: the reversal of fortune",
+      "**Anagnorisis**: the hero recognises the truth",
+      "**Catharsis**: the audience’s pity and fear released"
+     ],
+     "caption": "The shape Aristotle described. Hubris (pride against the gods) often drives the error; Nemesis punishes it."
+    }
+   ]
   },
   {
    "id": "english.sonnet",
@@ -3401,7 +3413,12 @@
     "troupe"
    ],
    "explain": "Shakespeare borrowed the idea for the Prologue of Romeo and Juliet.",
-   "example": "The chorus of a pop song takes its name from the Greek chorus, who sang and danced."
+   "example": "The chorus of a pop song takes its name from the Greek chorus, who sang and danced.",
+   "visual": {
+    "kind": "diagram",
+    "id": "greek-theatre",
+    "highlight": "orchestra"
+   }
   },
   {
    "id": "english.tr.6",
@@ -3480,7 +3497,11 @@
     "Troy"
    ],
    "explain": "Plays were performed at festivals for the god Dionysus.",
-   "hook": "Dionysus was the god of wine and of theatre, so plays were part of his festival."
+   "hook": "Dionysus was the god of wine and of theatre, so plays were part of his festival.",
+   "visual": {
+    "kind": "diagram",
+    "id": "greek-theatre"
+   }
   },
   {
    "id": "english.tr.oed",

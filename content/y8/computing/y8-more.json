@@ -244,8 +244,8 @@
     "head": [
      "",
      "10 items",
-     "1,000 items",
-     "a million items"
+     "1000 items",
+     "10⁶ items"
     ],
     "rows": [
      [
@@ -263,14 +263,14 @@
      [
       "O(n)",
       "10",
-      "1,000",
-      "1,000,000"
+      "1000",
+      "10⁶"
      ],
      [
       "O(n²)",
       "100",
-      "1,000,000",
-      "**a million million**"
+      "10⁶",
+      "**10¹²**"
      ]
     ],
     "caption": "Steps needed as the data grows. Binary search is O(log n); linear search is O(n); comparing every pair is O(n²)."
@@ -730,43 +730,35 @@
    "tier": "stretch",
    "hook": "**Common letters get short codes**, just as Morse code gives E a single dot.",
    "visual": {
-    "kind": "tree",
-    "root": {
-     "n": "15",
-     "c": [
-      {
-       "n": "E",
-       "note": "8 → 0",
-       "mark": true
-      },
-      {
-       "n": "7",
-       "c": [
-        {
-         "n": "A",
-         "note": "4 → 10",
-         "mark": true
-        },
-        {
-         "n": "3",
-         "c": [
-          {
-           "n": "T",
-           "note": "2 → 110",
-           "mark": true
-          },
-          {
-           "n": "Z",
-           "note": "1 → 111",
-           "mark": true
-          }
-         ]
-        }
-       ]
-      }
+    "kind": "table",
+    "head": [
+     "letter",
+     "count",
+     "code"
+    ],
+    "rows": [
+     [
+      "E",
+      "8",
+      "**0**"
+     ],
+     [
+      "A",
+      "4",
+      "**10**"
+     ],
+     [
+      "T",
+      "2",
+      "**110**"
+     ],
+     [
+      "Z",
+      "1",
+      "**111**"
      ]
-    },
-    "caption": "Letter counts E 8, A 4, T 2, Z 1. Join the two rarest each time: Z + T = 3, + A = 7, + E = 15. Left = 0, right = 1, so E, the commonest, gets the shortest code."
+    ],
+    "caption": "Build the tree by joining the two rarest each time: Z + T = 3, then + A = 7, then + E = 15. Left = 0, right = 1, so E, the commonest, gets the shortest code."
    }
   }
  ],

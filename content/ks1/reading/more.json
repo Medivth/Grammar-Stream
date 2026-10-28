@@ -97,7 +97,11 @@
    "batch": 6,
    "intro": "Three fact files about amazing animals and our planet. Look for numbers, key words and headings.",
    "teach": "Explain the difference between magma and lava.",
-   "talk": "Ask {him} for the most surprising fact {she} learned."
+   "talk": "Ask {him} for the most surprising fact {she} learned.",
+   "visual": {
+    "kind": "diagram",
+    "id": "volcano"
+   }
   },
   {
    "id": "reading.facts-3",
@@ -1767,7 +1771,12 @@
    ],
    "explain": "“Once it comes out of the ground, we call it lava.”",
    "passage": "Fact file: Volcanoes\n\nDeep under the ground, it is so hot that rock melts. This melted rock is called magma.\n\nA volcano is an opening in the Earth’s surface. When a volcano erupts, magma bursts out. Once it comes out of the ground, we call it lava. Lava can be as hot as 1,000 degrees Celsius, ten times hotter than boiling water!\n\nVolcanoes can also throw out clouds of ash and gas. Long ago, in the year 79, a volcano in Italy called Vesuvius erupted. Its ash buried the Roman town of Pompeii. Today we can walk through its streets and see how the Romans lived.\n\nScientists who study volcanoes are called volcanologists. They watch for clues, like small earthquakes, that a volcano might be about to erupt.",
-   "passageSource": "A fact file written for this app"
+   "passageSource": "A fact file written for this app",
+   "visual": {
+    "kind": "diagram",
+    "id": "volcano",
+    "highlight": "chamber"
+   }
   },
   {
    "id": "reading.vol.2",
@@ -1785,7 +1794,12 @@
    "passageSource": "A fact file written for this app",
    "accept": [
     "pompei"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "volcano",
+    "highlight": "ash"
+   }
   },
   {
    "id": "reading.vol.3",

@@ -969,66 +969,72 @@
    "teach": "Explain the difference between the Iliad and the Odyssey.",
    "talk": "Ask {him} which Olympian god {she} would most like to meet, and why.",
    "hook": "**Olympia** held the Games; **Olympus** was the gods’ mountain home, far to the north.",
-   "visual": {
-    "kind": "table",
-    "head": [
-     "god",
-     "of…",
-     "symbol"
-    ],
-    "rows": [
-     [
-      "Zeus",
-      "king of the gods, the sky",
-      "thunderbolt"
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "greek-theatre"
+    },
+    {
+     "kind": "table",
+     "head": [
+      "god",
+      "of…",
+      "symbol"
      ],
-     [
-      "Hera",
-      "queen of the gods, marriage",
-      "peacock"
-     ],
-     [
-      "Poseidon",
-      "the sea, earthquakes",
-      "trident"
-     ],
-     [
-      "Athena",
-      "wisdom, crafts",
-      "owl"
-     ],
-     [
-      "Apollo",
-      "music, healing",
-      "lyre"
-     ],
-     [
-      "Artemis",
-      "hunting, the wild",
-      "bow and arrows"
-     ],
-     [
-      "Hermes",
-      "messenger of the gods",
-      "winged sandals"
-     ],
-     [
-      "Hephaestus",
-      "fire, the forge",
-      "hammer and anvil"
-     ],
-     [
-      "Demeter",
-      "the harvest",
-      "sheaf of wheat"
-     ],
-     [
-      "Dionysus",
-      "wine, the theatre",
-      "vine"
+     "rows": [
+      [
+       "Zeus",
+       "king of the gods, the sky",
+       "thunderbolt"
+      ],
+      [
+       "Hera",
+       "queen of the gods, marriage",
+       "peacock"
+      ],
+      [
+       "Poseidon",
+       "the sea, earthquakes",
+       "trident"
+      ],
+      [
+       "Athena",
+       "wisdom, crafts",
+       "owl"
+      ],
+      [
+       "Apollo",
+       "music, healing",
+       "lyre"
+      ],
+      [
+       "Artemis",
+       "hunting, the wild",
+       "bow and arrows"
+      ],
+      [
+       "Hermes",
+       "messenger of the gods",
+       "winged sandals"
+      ],
+      [
+       "Hephaestus",
+       "fire, the forge",
+       "hammer and anvil"
+      ],
+      [
+       "Demeter",
+       "the harvest",
+       "sheaf of wheat"
+      ],
+      [
+       "Dionysus",
+       "wine, the theatre",
+       "vine"
+      ]
      ]
-    ]
-   }
+    }
+   ]
   },
   {
    "id": "greek.myth-1",
@@ -7054,7 +7060,11 @@
     }
    ],
    "explain": "The City Dionysia, each spring: tragedies and comedies in the Theatre of Dionysus.",
-   "hook": "Dionysus is the god of the theatre: the City Dionysia was Athens’ drama festival."
+   "hook": "Dionysus is the god of the theatre: the City Dionysia was Athens’ drama festival.",
+   "visual": {
+    "kind": "diagram",
+    "id": "greek-theatre"
+   }
   },
   {
    "id": "greek.cu.chorus",
@@ -7079,7 +7089,12 @@
    ],
    "explain": "χορός = a dance, a band of dancers. It gives us “chorus” and “choreography”.",
    "hook": "χορός → **chorus** and **choreography**, the writing down of a dance.",
-   "example": "In a musical, the chorus sings and dances together, just as in Greek drama."
+   "example": "In a musical, the chorus sings and dances together, just as in Greek drama.",
+   "visual": {
+    "kind": "diagram",
+    "id": "greek-theatre",
+    "highlight": "orchestra"
+   }
   },
   {
    "id": "greek.cu.masks",

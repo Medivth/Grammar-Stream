@@ -16,7 +16,11 @@
    "intro": "Why do we have day and night? Why are there seasons? Let’s find out what you think first.",
    "teach": "Explain why we have day and night.",
    "talk": "Ask her why it is dark at night, then why it is colder in winter.",
-   "hook": "Spin gives a **day**, orbit gives a **year**, tilt gives the **seasons**."
+   "hook": "Spin gives a **day**, orbit gives a **year**, tilt gives the **seasons**.",
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system"
+   }
   },
   {
    "id": "science.forces",
@@ -47,7 +51,11 @@
    "intro": "How do we see things? The answer surprised scientists for centuries.",
    "teach": "Explain how you see a book on a table.",
    "talk": "Ask her why a shadow forms.",
-   "hook": "**Source → Object → Eye**, and always in straight lines."
+   "hook": "**Source → Object → Eye**, and always in straight lines.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram"
+   }
   },
   {
    "id": "science.electricity",
@@ -62,7 +70,11 @@
    "intro": "Circuits need a complete loop. Let’s check what you know about how they work.",
    "teach": "Explain why a bulb doesn’t light if the circuit has a gap.",
    "talk": "Ask her what a switch actually does inside a circuit.",
-   "hook": "**No loop, no flow**: a circuit must be complete, with no gaps."
+   "hook": "**No loop, no flow**: a circuit must be complete, with no gaps.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols"
+   }
   },
   {
    "id": "science.materials",
@@ -324,7 +336,12 @@
    ],
    "explain": "The Sun is a star: a huge ball of hot gas. It is the closest star to Earth.",
    "hook": "Stars make their own light; planets and moons only reflect it. The Sun shines, so it’s a star.",
-   "example": "Each twinkling star you see on a clear night is a sun, many of them bigger than ours, just very far away."
+   "example": "Each twinkling star you see on a clear night is a sun, many of them bigger than ours, just very far away.",
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system",
+    "highlight": "sun"
+   }
   },
   {
    "id": "science.sp.planets",
@@ -343,7 +360,11 @@
    ],
    "explain": "My Very Easy Method Just Speeds Up Naming: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.",
    "hook": "**M**y **V**ery **E**asy **M**ethod **J**ust **S**peeds **U**p **N**aming.",
-   "example": "The brightest “star” low in the west just after sunset is often not a star at all, but the planet Venus."
+   "example": "The brightest “star” low in the west just after sunset is often not a star at all, but the planet Venus.",
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system"
+   }
   },
   {
    "id": "science.sp.largest",
@@ -358,7 +379,12 @@
    ],
    "explain": "Jupiter is so big that more than 1000 Earths could fit inside it.",
    "hook": "**J**upiter is the **J**umbo planet.",
-   "example": "If the Earth were a pea, Jupiter would be about the size of a tennis ball."
+   "example": "If the Earth were a pea, Jupiter would be about the size of a tennis ball.",
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system",
+    "highlight": "jupiter"
+   }
   },
   {
    "id": "science.sp.spherical",
@@ -640,7 +666,12 @@
    ],
    "explain": "Because light travels in straight lines, an opaque object blocks it, leaving a dark area shaped like the object.",
    "hook": "A shadow is an object-shaped gap in the light, where straight-line light is blocked.",
-   "example": "Make shadow-puppet animals with your hands in front of a torch shining on a wall."
+   "example": "Make shadow-puppet animals with your hands in front of a torch shining on a wall.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram",
+    "highlight": "shadow"
+   }
   },
   {
    "id": "science.l.straight",
@@ -655,7 +686,12 @@
    ],
    "explain": "Light travels in straight lines (until it hits something and reflects or refracts).",
    "hook": "Light can’t turn corners: you can hear someone round a corner, but you can’t see them.",
-   "example": "Sunbeams through a gap in the curtains, or through clouds, make straight lines like a ruler."
+   "example": "Sunbeams through a gap in the curtains, or through clouds, make straight lines like a ruler.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram",
+    "highlight": "rays"
+   }
   },
   {
    "id": "science.l.opaque",
@@ -670,7 +706,12 @@
    ],
    "explain": "Opaque materials (wood, metal) block light. Transparent ones (clear glass) let it through. Translucent ones (frosted glass) let some through.",
    "hook": "**O**paque: “**O**h no, nothing gets through!”",
-   "example": "Blackout curtains are opaque, which is why they keep a bedroom dark on light summer evenings."
+   "example": "Blackout curtains are opaque, which is why they keep a bedroom dark on light summer evenings.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram",
+    "highlight": "object"
+   }
   },
   {
    "id": "science.l.translucent",
@@ -703,7 +744,12 @@
     "choice"
    ],
    "hook": "Mirrors bounce light back, like a ball bouncing off a wall.",
-   "example": "Ambulances have AMBULANCE written back-to-front on the bonnet so drivers ahead can read it in their mirrors."
+   "example": "Ambulances have AMBULANCE written back-to-front on the bonnet so drivers ahead can read it in their mirrors.",
+   "visual": {
+    "kind": "diagram",
+    "id": "reflection",
+    "highlight": "mirror"
+   }
   },
   {
    "id": "science.l.periscope",
@@ -739,7 +785,12 @@
     "choice"
    ],
    "hook": "Makes its own light? Source. Only bounces light? Reflector, like the Moon.",
-   "example": "Cat’s eyes on UK roads shine in headlights, but they are reflectors, not light sources."
+   "example": "Cat’s eyes on UK roads shine in headlights, but they are reflectors, not light sources.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram",
+    "highlight": "source"
+   }
   },
   {
    "id": "science.e.d1",
@@ -763,7 +814,12 @@
     }
    ],
    "explain": "Current is the flow of charge round the circuit. The cell pushes it; the bulb transfers energy as light and heat.",
-   "hook": "Current is like a bike chain: it moves all the way round, and none of it gets used up."
+   "hook": "Current is like a bike chain: it moves all the way round, and none of it gets used up.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "wires"
+   }
   },
   {
    "id": "science.e.d2",
@@ -788,7 +844,12 @@
    ],
    "explain": "More cells means a higher voltage, which pushes more current through the bulb, making it brighter. Adding more bulbs instead would make each one dimmer.",
    "hook": "More cells = more push = brighter bulb. More bulbs = push shared = dimmer bulbs.",
-   "example": "Torches often hold two or three cells in a row (in series) to give the bulb a bigger push."
+   "example": "Torches often hold two or three cells in a row (in series) to give the bulb a bigger push.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "battery"
+   }
   },
   {
    "id": "science.e.complete",
@@ -806,7 +867,12 @@
     "choice"
    ],
    "hook": "No loop, no flow!",
-   "example": "A broken wire inside a headphone cable leaves a gap, so the sound cuts out."
+   "example": "A broken wire inside a headphone cable leaves a gap, so the sound cuts out.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-open",
+    "highlight": "switch"
+   }
   },
   {
    "id": "science.e.switch",
@@ -824,7 +890,12 @@
     "choice"
    ],
    "hook": "Switch **C**losed = circuit **C**omplete = on.",
-   "example": "Pressing a light switch at home closes or opens a gap in the circuit to the light."
+   "example": "Pressing a light switch at home closes or opens a gap in the circuit to the light.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-open",
+    "highlight": "switch"
+   }
   },
   {
    "id": "science.e.conductor",
@@ -861,7 +932,12 @@
     "choice"
    ],
    "hook": "An insulator is a coat for the wire: it keeps the current in, like a coat keeps heat in.",
-   "example": "Look at a phone charger cable: copper wire inside, a plastic or rubber coating outside."
+   "example": "Look at a phone charger cable: copper wire inside, a plastic or rubber coating outside.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "wires"
+   }
   },
   {
    "id": "science.e.symbol",
@@ -878,7 +954,12 @@
    "formats": [
     "choice"
    ],
-   "hook": "The cross in the bulb symbol is like the glowing wire inside a glass bulb."
+   "hook": "The cross in the bulb symbol is like the glowing wire inside a glass bulb.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "bulb"
+   }
   },
   {
    "id": "science.e.volt",
@@ -897,7 +978,12 @@
     "v"
    ],
    "hook": "**V**olts measure **V**oltage: the push.",
-   "example": "AA and AAA batteries are printed with 1.5 V; a square smoke-alarm battery says 9 V."
+   "example": "AA and AAA batteries are printed with 1.5 V; a square smoke-alarm battery says 9 V.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "cell"
+   }
   },
   {
    "id": "science.m.d1",
@@ -1177,23 +1263,30 @@
    ],
    "hook": "**Vertebr**ate = has **vertebr**ae, the bones of a backbone.",
    "example": "Run a finger down the middle of your back: those bumps are your vertebrae.",
-   "visual": {
-    "kind": "tree",
-    "root": {
-     "n": "Animals",
-     "c": [
-      {
-       "n": "Vertebrates",
-       "note": "have a backbone",
-       "mark": true
-      },
-      {
-       "n": "Invertebrates",
-       "note": "no backbone: insects, spiders, worms"
-      }
-     ]
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "skeleton",
+     "highlight": "spine"
+    },
+    {
+     "kind": "tree",
+     "root": {
+      "n": "Animals",
+      "c": [
+       {
+        "n": "Vertebrates",
+        "note": "have a backbone",
+        "mark": true
+       },
+       {
+        "n": "Invertebrates",
+        "note": "no backbone: insects, spiders, worms"
+       }
+      ]
+     }
     }
-   }
+   ]
   },
   {
    "id": "science.lv.five",
@@ -1278,7 +1371,12 @@
    ],
    "explain": "Insects have six legs and three body parts. Spiders, with eight legs, are arachnids, not insects.",
    "hook": "Six legs and three body parts (head, thorax, abdomen) = insect. Eight legs = spider.",
-   "example": "Count the legs on a ladybird (6) and a garden spider (8) next time you find one."
+   "example": "Count the legs on a ladybird (6) and a garden spider (8) next time you find one.",
+   "visual": {
+    "kind": "diagram",
+    "id": "insect",
+    "highlight": "legs"
+   }
   },
   {
    "id": "science.lv.linnaeus",
@@ -1446,7 +1544,12 @@
     "choice"
    ],
    "hook": "Lungs are a swap shop: oxygen **in**, carbon dioxide **out**.",
-   "example": "Breathe into a balloon: the air inside has less oxygen and more carbon dioxide than room air."
+   "example": "Breathe into a balloon: the air inside has less oxygen and more carbon dioxide than room air.",
+   "visual": {
+    "kind": "diagram",
+    "id": "lungs",
+    "highlight": "lungs"
+   }
   },
   {
    "id": "science.b.plasma",

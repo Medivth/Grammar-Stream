@@ -13,23 +13,29 @@
    "intro": "Long before the Romans, people in Britain hunted with stone tools, built Stonehenge, and later learned to make bronze and iron.",
    "teach": "Explain the order of the Stone Age, Bronze Age and Iron Age, and why they have those names.",
    "talk": "Ask {him} what {she} would have eaten as a Stone Age hunter.",
-   "visual": {
-    "kind": "timeline",
-    "from": -4000,
-    "to": 200,
-    "set": "britain",
-    "events": [
-     [
-      -3000,
-      "Stonehenge begun"
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "hill-fort"
+    },
+    {
+     "kind": "timeline",
+     "from": -4000,
+     "to": 200,
+     "set": "britain",
+     "events": [
+      [
+       -3000,
+       "Stonehenge begun"
+      ],
+      [
+       43,
+       "Romans invade"
+      ]
      ],
-     [
-      43,
-      "Romans invade"
-     ]
-    ],
-    "caption": "Stone tools, then bronze, then iron."
-   }
+     "caption": "Stone tools, then bronze, then iron."
+    }
+   ]
   },
   {
    "id": "history.egypt",
@@ -345,7 +351,13 @@
    "explain": "Roundhouses had walls of woven sticks and mud, a thatched roof and a fire in the middle.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "hill-fort",
+    "highlight": "roundhouses",
+    "question": true
+   }
   },
   {
    "id": "history.sa.hillfort",
@@ -361,7 +373,11 @@
    "explain": "Maiden Castle in Dorset is one of the biggest hill forts.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "hill-fort"
+   }
   },
   {
    "id": "history.eg.river",

@@ -167,32 +167,38 @@
    "intro": "After 1066 a few thousand Normans ruled about two million English people. Castles, the feudal system, the Domesday Book and the Church all helped them keep control.",
    "teach": "Explain how the feudal system helped William keep control.",
    "talk": "Ask {him} why the murder of Thomas Becket shocked medieval Europe.",
-   "visual": {
-    "kind": "tree",
-    "root": {
-     "n": "The king",
-     "note": "owns all the land",
-     "c": [
-      {
-       "n": "Barons and bishops",
-       "note": "land, for loyalty and knights",
-       "c": [
-        {
-         "n": "Knights",
-         "note": "land, for fighting",
-         "c": [
-          {
-           "n": "Peasants (villeins)",
-           "note": "work the lord’s land, tied to it"
-          }
-         ]
-        }
-       ]
-      }
-     ]
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "motte-bailey"
     },
-    "caption": "The feudal system: land passed down, loyalty and service passed up."
-   },
+    {
+     "kind": "tree",
+     "root": {
+      "n": "The king",
+      "note": "owns all the land",
+      "c": [
+       {
+        "n": "Barons and bishops",
+        "note": "land, for loyalty and knights",
+        "c": [
+         {
+          "n": "Knights",
+          "note": "land, for fighting",
+          "c": [
+           {
+            "n": "Peasants (villeins)",
+            "note": "work the lord’s land, tied to it"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "caption": "The feudal system: land passed down, loyalty and service passed up."
+    }
+   ],
    "hook": "The Norman toolkit: **castles** to frighten, **feudal** land to reward, **Domesday** to count, the **Church** to teach."
   },
   {
@@ -498,17 +504,23 @@
    "intro": "The war that began in 1914 was fought on an industrial scale. Millions served in the trenches, women took on new work at home, and the world that came out of it in 1918 was very different.",
    "teach": "Explain the long-term causes of the First World War (militarism, alliances, imperialism, nationalism).",
    "talk": "On Remembrance Sunday, talk with {him} about why we still remember the war.",
-   "visual": {
-    "kind": "flow",
-    "steps": [
-     "Long-term causes: militarism, alliances, imperialism, nationalism",
-     "Trigger: Franz Ferdinand shot, 28 June 1914",
-     "Germany invades Belgium",
-     "Britain declares war, 4 August 1914",
-     "Trench warfare on the Western Front",
-     "Armistice: 11 a.m., 11 November 1918"
-    ]
-   },
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "trench"
+    },
+    {
+     "kind": "flow",
+     "steps": [
+      "Long-term causes: militarism, alliances, imperialism, nationalism",
+      "Trigger: Franz Ferdinand shot, 28 June 1914",
+      "Germany invades Belgium",
+      "Britain declares war, 4 August 1914",
+      "Trench warfare on the Western Front",
+      "Armistice: 11 a.m., 11 November 1918"
+     ]
+    }
+   ],
    "hook": "**MAIN** causes: Militarism, Alliances, Imperialism, Nationalism; the shots at Sarajevo were the spark."
   },
   {
@@ -1630,7 +1642,11 @@
    ],
    "explain": "By about 1100, around 500 castles had been built.",
    "hook": "**Motte** = the mound, **bailey** = the yard below it: think “mound and yard”.",
-   "example": "The White Tower at the Tower of London was begun by William the Conqueror."
+   "example": "The White Tower at the Tower of London was begun by William the Conqueror.",
+   "visual": {
+    "kind": "diagram",
+    "id": "motte-bailey"
+   }
   },
   {
    "id": "history.no.tithe",
@@ -3553,7 +3569,11 @@
     "choice"
    ],
    "hook": "**W**estern Front, **W**all of trenches: from the North Sea coast to Switzerland, for over four years.",
-   "example": "In Ypres, Belgium, the Last Post is played every evening at the Menin Gate memorial."
+   "example": "In Ypres, Belgium, the Last Post is played every evening at the Menin Gate memorial.",
+   "visual": {
+    "kind": "diagram",
+    "id": "trench"
+   }
   },
   {
    "id": "history.w1.somme",
@@ -3597,7 +3617,12 @@
     "tanks",
     "tank"
    ],
-   "hook": "“**Tank**” began as a code word: workers and spies were meant to think they were building water tanks."
+   "hook": "“**Tank**” began as a code word: workers and spies were meant to think they were building water tanks.",
+   "visual": {
+    "kind": "diagram",
+    "id": "trench",
+    "highlight": "wire"
+   }
   },
   {
    "id": "history.w1.home",

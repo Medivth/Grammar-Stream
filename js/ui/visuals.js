@@ -173,7 +173,10 @@ function flow(v) {
 function tree(v) {
   const node = (n) => h('li', {}, h('div', { class: `vtree-node${n.mark ? ' mark' : ''}` }, rich('strong', n.n), n.note ? rich('span', n.note) : null),
     n.c?.length ? h('ul', {}, n.c.map(node)) : null);
-  return h('div', { class: 'visual-scroll' }, h('ul', { class: 'vtree' }, node(v.root)));
+  const box = h('div', { class: 'visual-scroll' }, h('ul', { class: 'vtree' }, node(v.root)));
+  // a tree wider than the screen opens centred on its top, so the root is in view
+  requestAnimationFrame(() => { if (box.scrollWidth > box.clientWidth) box.scrollLeft = (box.scrollWidth - box.clientWidth) / 2; });
+  return box;
 }
 
 // ---------------------------------------------------------------- table (endings, comparisons)

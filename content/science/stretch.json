@@ -18,7 +18,6 @@
    "visual": {
     "kind": "table",
     "head": [
-     "",
      "1",
      "2",
      "3",
@@ -30,7 +29,6 @@
     ],
     "rows": [
      [
-      "1",
       "H",
       "",
       "",
@@ -41,7 +39,6 @@
       "He"
      ],
      [
-      "2",
       "**Li**",
       "**Be**",
       "B",
@@ -52,7 +49,6 @@
       "Ne"
      ],
      [
-      "3",
       "**Na**",
       "**Mg**",
       "**Al**",
@@ -63,7 +59,7 @@
       "Ar"
      ]
     ],
-    "caption": "Columns are **groups**; rows are **periods**. Metals (in colour) are on the left, non-metals on the right. Group 1: alkali metals; 7: halogens; 0: noble gases."
+    "caption": "Columns are **groups** (numbered 1–7 and 0); rows are **periods**. Metals (Li, Be, Na, Mg, Al) are on the left; non-metals on the right. Group 1: alkali metals; 7: halogens; 0: noble gases."
    }
   },
   {
@@ -97,7 +93,11 @@
    "intro": "Food is broken down by enzymes into molecules small enough to pass into the blood. Each nutrient has a job, and each organ has a role.",
    "teach": "Explain what enzymes do in digestion.",
    "talk": "Ask her which food test would show whether bread contains starch.",
-   "hook": "Enzymes are **chemical scissors**, cutting food into molecules small enough to pass into the blood."
+   "hook": "Enzymes are **chemical scissors**, cutting food into molecules small enough to pass into the blood.",
+   "visual": {
+    "kind": "diagram",
+    "id": "digestion"
+   }
   },
   {
    "id": "science.light-2",
@@ -111,7 +111,11 @@
    "intro": "Light travels in straight lines at 300,000 km per second, bounces off mirrors at the same angle it arrives, bends when it enters glass or water, and is made of all the colours of the rainbow.",
    "teach": "Explain why a straw in a glass of water looks bent.",
    "talk": "Shine a torch through a glass of water onto a wall and look for colours at the edge.",
-   "hook": "**Reflection bounces, refraction bends**, and white light is **R**ichard **O**f **Y**ork **G**ave **B**attle **I**n **V**ain."
+   "hook": "**Reflection bounces, refraction bends**, and white light is **R**ichard **O**f **Y**ork **G**ave **B**attle **I**n **V**ain.",
+   "visual": {
+    "kind": "diagram",
+    "id": "reflection"
+   }
   },
   {
    "id": "science.circuits",
@@ -129,7 +133,11 @@
    "intro": "Current is the flow of charge; voltage is the push; resistance is what slows it down. The three are linked by one equation, V = I × R, and series and parallel circuits follow different rules.",
    "teach": "Explain the difference between current and voltage.",
    "talk": "Ask her why the lights at home do not all go out when one bulb fails.",
-   "hook": "**V = I × R**. Series: one loop, same current. Parallel: separate branches, same voltage."
+   "hook": "**V = I × R**. Series: one loop, same current. Parallel: separate branches, same voltage.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols"
+   }
   }
  ],
  "items": [
@@ -197,7 +205,6 @@
    "visual": {
     "kind": "table",
     "head": [
-     "",
      "1",
      "2",
      "3",
@@ -209,7 +216,6 @@
     ],
     "rows": [
      [
-      "1",
       "H",
       "",
       "",
@@ -220,7 +226,6 @@
       "He"
      ],
      [
-      "2",
       "**Li**",
       "**Be**",
       "B",
@@ -231,7 +236,6 @@
       "Ne"
      ],
      [
-      "3",
       "**Na**",
       "**Mg**",
       "**Al**",
@@ -242,7 +246,7 @@
       "Ar"
      ]
     ],
-    "caption": "Columns are **groups**; rows are **periods**. Metals (in colour) are on the left, non-metals on the right. Group 1: alkali metals; 7: halogens; 0: noble gases."
+    "caption": "Columns are **groups** (numbered 1–7 and 0); rows are **periods**. Metals (Li, Be, Na, Mg, Al) are on the left; non-metals on the right. Group 1: alkali metals; 7: halogens; 0: noble gases."
    }
   },
   {
@@ -264,7 +268,6 @@
    "visual": {
     "kind": "table",
     "head": [
-     "",
      "1",
      "2",
      "3",
@@ -276,7 +279,6 @@
     ],
     "rows": [
      [
-      "1",
       "H",
       "",
       "",
@@ -287,7 +289,6 @@
       "He"
      ],
      [
-      "2",
       "**Li**",
       "**Be**",
       "B",
@@ -298,7 +299,6 @@
       "Ne"
      ],
      [
-      "3",
       "**Na**",
       "**Mg**",
       "**Al**",
@@ -309,7 +309,7 @@
       "Ar"
      ]
     ],
-    "caption": "Columns are **groups**; rows are **periods**. Metals (in colour) are on the left, non-metals on the right. Group 1: alkali metals; 7: halogens; 0: noble gases."
+    "caption": "Columns are **groups** (numbered 1–7 and 0); rows are **periods**. Metals (Li, Be, Na, Mg, Al) are on the left; non-metals on the right. Group 1: alkali metals; 7: halogens; 0: noble gases."
    }
   },
   {
@@ -374,7 +374,12 @@
     "choice"
    ],
    "hook": "Noble gases are like snooty nobles: they won’t mix (react) with anyone.",
-   "example": "Neon makes glowing red-orange shop signs; helium makes party balloons float."
+   "example": "Neon makes glowing red-orange shop signs; helium makes party balloons float.",
+   "visual": {
+    "kind": "diagram",
+    "id": "atom",
+    "highlight": "shells"
+   }
   },
   {
    "id": "science.pe.halogen",
@@ -771,7 +776,11 @@
    "labels": null,
    "explain": "Mouth → oesophagus (gullet) → stomach → small intestine (where most digestion and absorption happens) → large intestine (water absorbed) → rectum.",
    "hook": "“**M**y **O**ld **S**hoes **S**mell **L**ike **R**ubbish”: mouth, oesophagus, stomach, small and large intestine, rectum.",
-   "example": "Food usually takes between one and three days to make the whole journey."
+   "example": "Food usually takes between one and three days to make the whole journey.",
+   "visual": {
+    "kind": "diagram",
+    "id": "digestion"
+   }
   },
   {
    "id": "science.dg.enzyme",
@@ -859,7 +868,12 @@
     "choice"
    ],
    "hook": "Villi are like the loops on a fluffy towel: lots of surface for soaking things up.",
-   "example": "A fluffy towel soaks up more water than a smooth tea towel because its loops give a bigger surface area."
+   "example": "A fluffy towel soaks up more water than a smooth tea towel because its loops give a bigger surface area.",
+   "visual": {
+    "kind": "diagram",
+    "id": "digestion",
+    "highlight": "small"
+   }
   },
   {
    "id": "science.dg.large",
@@ -873,7 +887,12 @@
     "fat"
    ],
    "explain": "By the time food reaches the large intestine the nutrients are gone; water is reabsorbed and the rest becomes faeces.",
-   "hook": "**L**arge intestine: the **L**ast stop, where water is taken back."
+   "hook": "**L**arge intestine: the **L**ast stop, where water is taken back.",
+   "visual": {
+    "kind": "diagram",
+    "id": "digestion",
+    "highlight": "large"
+   }
   },
   {
    "id": "science.dg.iodine",
@@ -1007,7 +1026,12 @@
    ],
    "explain": "Both angles are measured from the normal, an imaginary line at 90° to the mirror.",
    "hook": "**Angle in = angle out**, like a snooker ball bouncing off the cushion.",
-   "example": "Bounce a ball against a wall at an angle: it comes off at the same angle it hit."
+   "example": "Bounce a ball against a wall at an angle: it comes off at the same angle it hit.",
+   "visual": {
+    "kind": "diagram",
+    "id": "reflection",
+    "highlight": "angle-r"
+   }
   },
   {
    "id": "science.li.normal",
@@ -1024,7 +1048,12 @@
    "accept": [
     "normal"
    ],
-   "hook": "The normal stands at 90° to the mirror, like a lamppost on a flat road."
+   "hook": "The normal stands at 90° to the mirror, like a lamppost on a flat road.",
+   "visual": {
+    "kind": "diagram",
+    "id": "reflection",
+    "highlight": "normal"
+   }
   },
   {
    "id": "science.li.refract",
@@ -1148,7 +1177,12 @@
    "accept": [
     "retina"
    ],
-   "hook": "The retina is the eye’s **screen**, like the sensor in a camera."
+   "hook": "The retina is the eye’s **screen**, like the sensor in a camera.",
+   "visual": {
+    "kind": "diagram",
+    "id": "eye",
+    "highlight": "retina"
+   }
   },
   {
    "id": "science.li.pupil",
@@ -1166,7 +1200,12 @@
     "pupil"
    ],
    "hook": "The pupil is the black hole in the middle; the iris is the coloured ring around it.",
-   "example": "Look in a mirror, then switch on a bright light: watch your pupils shrink."
+   "example": "Look in a mirror, then switch on a bright light: watch your pupils shrink.",
+   "visual": {
+    "kind": "diagram",
+    "id": "eye",
+    "highlight": "pupil"
+   }
   },
   {
    "id": "science.ci.ohm",
@@ -1201,7 +1240,12 @@
    ],
    "explain": "Current is the rate of flow of charge: how much charge passes a point each second.",
    "hook": "Current is the **flow**, like the current in a river, measured in **amps**.",
-   "example": "A phone charger’s small print might say “2 A”: that is the current it can supply."
+   "example": "A phone charger’s small print might say “2 A”: that is the current it can supply.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "ammeter"
+   }
   },
   {
    "id": "science.ci.voltage",
@@ -1239,7 +1283,12 @@
     "ohm"
    ],
    "hook": "Resistance is like a narrow, crowded corridor slowing the current down.",
-   "example": "The glowing wires in a toaster have a high resistance, so they get hot."
+   "example": "The glowing wires in a toaster have a high resistance, so they get hot.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "resistor"
+   }
   },
   {
    "id": "science.ci.series",
@@ -1312,7 +1361,12 @@
    "formats": [
     "choice"
    ],
-   "hook": "**A**mmeter goes **A**long the wire, in series: the current must flow through it."
+   "hook": "**A**mmeter goes **A**long the wire, in series: the current must flow through it.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "ammeter"
+   }
   },
   {
    "id": "science.ci.voltmeter",
@@ -1329,7 +1383,12 @@
    "formats": [
     "choice"
    ],
-   "hook": "A **V**oltmeter goes across a component, its two leads making a **V** over it."
+   "hook": "A **V**oltmeter goes across a component, its two leads making a **V** over it.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "voltmeter"
+   }
   },
   {
    "id": "science.ci.wire",
@@ -1374,7 +1433,12 @@
     "fuse"
    ],
    "hook": "A fuse sacrifices itself: it melts to protect the circuit (and you).",
-   "example": "Every UK plug contains a fuse, often 3 A or 13 A; the house’s fuse box has circuit breakers."
+   "example": "Every UK plug contains a fuse, often 3 A or 13 A; the house’s fuse box has circuit breakers.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "fuse"
+   }
   }
  ]
 }

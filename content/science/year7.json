@@ -17,7 +17,11 @@
    "intro": "Everything is made of tiny particles. The way they are arranged and move explains solids, liquids, gases, smells spreading and balloons bursting.",
    "teach": "Explain why you can smell perfume from across a room.",
    "talk": "Ask her why a balloon gets bigger in the sun.",
-   "hook": "Solids **vibrate**, liquids **slide**, gases **zoom**."
+   "hook": "Solids **vibrate**, liquids **slide**, gases **zoom**.",
+   "visual": {
+    "kind": "diagram",
+    "id": "particles"
+   }
   },
   {
    "id": "science.cells",
@@ -34,7 +38,21 @@
    "intro": "All living things are made of cells, the building blocks of life. Most are far too small to see without a microscope.",
    "teach": "Explain three differences between a plant cell and an animal cell.",
    "talk": "Ask her what mitochondria do.",
-   "hook": "Cells are the building blocks of life, and **mitochondria are the powerhouse of the cell**."
+   "hook": "Cells are the building blocks of life, and **mitochondria are the powerhouse of the cell**.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "microscope"
+    },
+    {
+     "kind": "diagram",
+     "id": "cell-plant"
+    },
+    {
+     "kind": "diagram",
+     "id": "cell-animal"
+    }
+   ]
   },
   {
    "id": "science.atoms",
@@ -107,34 +125,28 @@
     "kind": "table",
     "head": [
      "method",
-     "separates",
-     "for example"
+     "separates"
     ],
     "rows": [
      [
       "filtering",
-      "an insoluble solid from a liquid",
-      "sand and water"
+      "an insoluble solid from a liquid: **sand** from water"
      ],
      [
       "evaporating",
-      "a dissolved solid from its solution",
-      "salt water"
+      "a dissolved solid from its solution: **salt** from salt water"
      ],
      [
       "distillation",
-      "a pure liquid from a solution",
-      "sea water"
+      "a pure liquid from a solution: **drinking water** from sea water"
      ],
      [
       "chromatography",
-      "dyes mixed in an ink",
-      "felt-tip ink"
+      "the **dyes** mixed in an ink"
      ],
      [
       "a magnet",
-      "magnetic from non-magnetic",
-      "iron and sand"
+      "magnetic from non-magnetic: **iron** filings from sand"
      ]
     ]
    }
@@ -305,17 +317,23 @@
    "teach": "Explain what a light-year is.",
    "talk": "Ask her what causes a solar eclipse.",
    "hook": "Planet → solar system → galaxy → universe: like house → street → town → world.",
-   "visual": {
-    "kind": "flow",
-    "across": true,
-    "steps": [
-     "Earth",
-     "the Solar System",
-     "the Milky Way galaxy",
-     "the universe"
-    ],
-    "caption": "Zooming out: planet → solar system → galaxy → universe. The Milky Way has hundreds of billions of stars, and the universe billions of galaxies."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "solar-system"
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "Earth",
+      "the Solar System",
+      "the Milky Way galaxy",
+      "the universe"
+     ],
+     "caption": "Zooming out: planet → solar system → galaxy → universe. The Milky Way has hundreds of billions of stars, and the universe billions of galaxies."
+    }
+   ]
   },
   {
    "id": "science.ecosystems",
@@ -371,18 +389,24 @@
    "teach": "Explain the difference between pollination and fertilisation.",
    "talk": "Ask her how a sycamore seed travels.",
    "hook": "First **pollination** (pollen lands), then **fertilisation** (cells join), then **dispersal** (seeds travel).",
-   "visual": {
-    "kind": "cycle",
-    "steps": [
-     "pollination",
-     "fertilisation",
-     "seeds form",
-     "seed dispersal",
-     "germination",
-     "growth into a flowering plant"
-    ],
-    "centre": "life cycle of a flowering plant"
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "flower"
+    },
+    {
+     "kind": "cycle",
+     "steps": [
+      "pollination",
+      "fertilisation",
+      "seeds form",
+      "seed dispersal",
+      "germination",
+      "growth into a flowering plant"
+     ],
+     "centre": "life cycle of a flowering plant"
+    }
+   ]
   },
   {
    "id": "science.working",
@@ -824,7 +848,11 @@
    ],
    "explain": "Hooke thought the tiny boxes in cork looked like the small rooms (cells) monks lived in.",
    "hook": "**Hooke** looked at cork and saw rows of tiny rooms, like monks’ **cells**.",
-   "example": "A cork from a bottle is the same material Hooke looked at."
+   "example": "A cork from a bottle is the same material Hooke looked at.",
+   "visual": {
+    "kind": "diagram",
+    "id": "microscope"
+   }
   },
   {
    "id": "science.cl.mag",
@@ -842,7 +870,12 @@
     "choice"
    ],
    "hook": "Total magnification: **multiply**, don’t add. Eyepiece × objective.",
-   "example": "Under ×400, a hair about a tenth of a millimetre wide would look 4 centimetres wide."
+   "example": "Under ×400, a hair about a tenth of a millimetre wide would look 4 centimetres wide.",
+   "visual": {
+    "kind": "diagram",
+    "id": "microscope",
+    "highlight": "objective"
+   }
   },
   {
    "id": "science.cl.levels",
@@ -1306,34 +1339,28 @@
     "kind": "table",
     "head": [
      "method",
-     "separates",
-     "for example"
+     "separates"
     ],
     "rows": [
      [
       "filtering",
-      "an insoluble solid from a liquid",
-      "sand and water"
+      "an insoluble solid from a liquid: **sand** from water"
      ],
      [
       "evaporating",
-      "a dissolved solid from its solution",
-      "salt water"
+      "a dissolved solid from its solution: **salt** from salt water"
      ],
      [
       "distillation",
-      "a pure liquid from a solution",
-      "sea water"
+      "a pure liquid from a solution: **drinking water** from sea water"
      ],
      [
       "chromatography",
-      "dyes mixed in an ink",
-      "felt-tip ink"
+      "the **dyes** mixed in an ink"
      ],
      [
       "a magnet",
-      "magnetic from non-magnetic",
-      "iron and sand"
+      "magnetic from non-magnetic: **iron** filings from sand"
      ]
     ]
    }
@@ -1554,7 +1581,12 @@
    "formats": [
     "choice"
    ],
-   "example": "The burning feeling of heartburn is stomach acid creeping up into the food pipe."
+   "example": "The burning feeling of heartburn is stomach acid creeping up into the food pipe.",
+   "visual": {
+    "kind": "diagram",
+    "id": "digestion",
+    "highlight": "stomach"
+   }
   },
   {
    "id": "science.ac.indigestion",
@@ -2115,7 +2147,12 @@
     "friction"
    ],
    "explain": "The Sun’s gravity pulls on the planets, bending their paths into orbits.",
-   "hook": "Gravity is like an invisible string: swing a ball on a string, let go, and it flies off."
+   "hook": "Gravity is like an invisible string: swing a ball on a string, let go, and it flies off.",
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system",
+    "highlight": "sun"
+   }
   },
   {
    "id": "science.un.solar-eclipse",
@@ -2150,7 +2187,11 @@
    "formats": [
     "choice"
    ],
-   "hook": "The asteroid belt is a rocky fence between the four rocky planets and the four giants."
+   "hook": "The asteroid belt is a rocky fence between the four rocky planets and the four giants.",
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system"
+   }
   },
   {
    "id": "science.un.gas-giants",
@@ -2168,7 +2209,12 @@
     "choice"
    ],
    "hook": "Jupiter and Saturn: **gas giants**. Uranus and Neptune: **ice giants**.",
-   "example": "Through a small telescope or good binoculars you can spot Saturn’s rings and Jupiter’s moons."
+   "example": "Through a small telescope or good binoculars you can spot Saturn’s rings and Jupiter’s moons.",
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system",
+    "highlight": "jupiter"
+   }
   },
   {
    "id": "science.ec.d1",

@@ -100,7 +100,11 @@
    "intro": "Before we learn about weather, let’s check some ideas about air and water. Many adults get these wrong!",
    "hook": "The water cycle is a loop: up as vapour, cool into cloud, fall as rain, collect, and round again.",
    "teach": "Explain the water cycle using the words evaporation and condensation.",
-   "talk": "Ask her why puddles disappear on a sunny day."
+   "talk": "Ask her why puddles disappear on a sunny day.",
+   "visual": {
+    "kind": "diagram",
+    "id": "water-cycle"
+   }
   }
  ],
  "items": [
@@ -2124,7 +2128,13 @@
    ],
    "explain": "Evaporation: the Sun heats water and it turns into vapour.",
    "hook": "e-VAPOUR-ation: the water escapes as vapour.",
-   "example": "Washing dries on the line and puddles vanish on a sunny day."
+   "example": "Washing dries on the line and puddles vanish on a sunny day.",
+   "visual": {
+    "kind": "diagram",
+    "id": "water-cycle",
+    "highlight": "evaporation",
+    "question": true
+   }
   },
   {
    "id": "geography.w.cond",
@@ -2139,7 +2149,13 @@
    ],
    "explain": "Condensation forms clouds, and the droplets on a cold window.",
    "hook": "Condensation: when vapour cools, it comes together into droplets.",
-   "example": "Breathe on a cold mirror, or take a can out of the fridge: droplets appear on the cold surface."
+   "example": "Breathe on a cold mirror, or take a can out of the fridge: droplets appear on the cold surface.",
+   "visual": {
+    "kind": "diagram",
+    "id": "water-cycle",
+    "highlight": "condensation",
+    "question": true
+   }
   },
   {
    "id": "geography.w.precip",
@@ -2153,7 +2169,13 @@
     "collection"
    ],
    "explain": "Precipitation is any water falling from the sky.",
-   "example": "Rain gauges measure precipitation in millimetres: London gets about 600 mm a year."
+   "example": "Rain gauges measure precipitation in millimetres: London gets about 600 mm a year.",
+   "visual": {
+    "kind": "diagram",
+    "id": "water-cycle",
+    "highlight": "precipitation",
+    "question": true
+   }
   },
   {
    "id": "geography.w.trans",
@@ -2168,7 +2190,13 @@
    ],
    "explain": "Transpiration: water moves up through a plant and escapes from its leaves.",
    "hook": "TRANSpiration: plants TRANSfer water out through their leaves, like plant sweat.",
-   "example": "Tie a clear plastic bag over a leafy branch on a sunny day: droplets collect inside within hours."
+   "example": "Tie a clear plastic bag over a leafy branch on a sunny day: droplets collect inside within hours.",
+   "visual": {
+    "kind": "diagram",
+    "id": "water-cycle",
+    "highlight": "transpiration",
+    "question": true
+   }
   },
   {
    "id": "geography.w.weather-climate",
@@ -2202,7 +2230,11 @@
    "labels": null,
    "explain": "The Sun evaporates water; vapour condenses into clouds; water falls as precipitation; it collects in rivers, lakes and seas.",
    "hook": "“Every Cloud Pours Constantly”: Evaporation, Condensation, Precipitation, Collection.",
-   "example": "Rain that falls on the Welsh mountains runs down the Severn and back to the sea, ready to evaporate again."
+   "example": "Rain that falls on the Welsh mountains runs down the Severn and back to the sea, ready to evaporate again.",
+   "visual": {
+    "kind": "diagram",
+    "id": "water-cycle"
+   }
   }
  ]
 }

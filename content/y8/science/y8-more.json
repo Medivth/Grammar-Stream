@@ -35,7 +35,11 @@
    "intro": "The heart is two pumps side by side: the right side sends blood to the lungs, the left side to the rest of the body. Arteries, veins and capillaries each have a structure that fits their job.",
    "teach": "Explain why the left ventricle has a thicker wall than the right.",
    "talk": "Take each other’s pulse before and after running up the stairs.",
-   "hook": "**A**rteries carry blood **A**way from the heart; veins bring it back; capillaries swap in between."
+   "hook": "**A**rteries carry blood **A**way from the heart; veins bring it back; capillaries swap in between.",
+   "visual": {
+    "kind": "diagram",
+    "id": "heart"
+   }
   },
   {
    "id": "science.nervous",
@@ -75,16 +79,22 @@
    "teach": "Explain why a plant wilts on a hot, windy day.",
    "talk": "Stand a white carnation or a celery stick in coloured water and watch the xylem.",
    "hook": "**Ph**loem carries **f**ood (sugar), up and down; xylem carries water, one way: up.",
-   "visual": {
-    "kind": "flow",
-    "steps": [
-     "Water enters root hair cells by osmosis",
-     "It travels up the stem in the xylem",
-     "It reaches the leaves",
-     "It evaporates out through the stomata"
-    ],
-    "caption": "This loss of water is transpiration, and it pulls more water up behind it. Sugars travel in the phloem."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "leaf-section"
+    },
+    {
+     "kind": "flow",
+     "steps": [
+      "Water enters root hair cells by osmosis",
+      "It travels up the stem in the xylem",
+      "It reaches the leaves",
+      "It evaporates out through the stomata"
+     ],
+     "caption": "This loss of water is transpiration, and it pulls more water up behind it. Sugars travel in the phloem."
+    }
+   ]
   },
   {
    "id": "science.immunity",
@@ -1132,17 +1142,23 @@
    "labels": null,
    "explain": "Deoxygenated blood returns in the vena cava, enters the right atrium, and is pumped by the right ventricle along the pulmonary artery to the lungs.",
    "hook": "**A** comes before **V**: blood enters an **A**trium first, then the **V**entricle pumps it out.",
-   "visual": {
-    "kind": "flow",
-    "across": true,
-    "steps": [
-     "vena cava",
-     "right atrium",
-     "right ventricle",
-     "pulmonary artery",
-     "lungs"
-    ]
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "heart"
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "vena cava",
+      "right atrium",
+      "right ventricle",
+      "pulmonary artery",
+      "lungs"
+     ]
+    }
+   ]
   },
   {
    "id": "science.m.ci.left",
@@ -1166,7 +1182,12 @@
     }
    ],
    "explain": "It pumps blood all round the body, which needs a higher pressure. The right side only has to push blood the short distance to the lungs.",
-   "hook": "The **left** ventricle has the **longest** trip, all round the body, so it has the thickest wall."
+   "hook": "The **left** ventricle has the **longest** trip, all round the body, so it has the thickest wall.",
+   "visual": {
+    "kind": "diagram",
+    "id": "heart",
+    "highlight": "left-ventricle"
+   }
   },
   {
    "id": "science.m.ci.valves",
@@ -1191,7 +1212,12 @@
    ],
    "explain": "Veins have valves because the blood in them is at low pressure.",
    "hook": "Valves are **one-way doors**.",
-   "example": "The “lub-dub” of a heartbeat is the sound of the heart valves snapping shut."
+   "example": "The “lub-dub” of a heartbeat is the sound of the heart valves snapping shut.",
+   "visual": {
+    "kind": "diagram",
+    "id": "heart",
+    "highlight": "valves"
+   }
   },
   {
    "id": "science.m.ci.vessels",
@@ -1232,7 +1258,11 @@
    "formats": [
     "choice"
    ],
-   "hook": "A **figure of eight**: heart → lungs → heart → body → heart."
+   "hook": "A **figure of eight**: heart → lungs → heart → body → heart.",
+   "visual": {
+    "kind": "diagram",
+    "id": "heart"
+   }
   },
   {
    "id": "science.m.ci.pa",
@@ -1256,7 +1286,12 @@
     }
    ],
    "explain": "Arteries are defined by carrying blood AWAY from the heart, not by oxygen.",
-   "hook": "**A**rteries go **A**way from the heart, even when their blood is low in oxygen."
+   "hook": "**A**rteries go **A**way from the heart, even when their blood is low in oxygen.",
+   "visual": {
+    "kind": "diagram",
+    "id": "heart",
+    "highlight": "pulmonary-artery"
+   }
   },
   {
    "id": "science.m.nv.case1",
@@ -1573,7 +1608,12 @@
    "explain": "Most stomata are on the underside of the leaf. Stomata are mainly on the shaded lower surface, which reduces water loss.",
    "passage": "Case study: a potometer experiment.\n\nA leafy shoot is set up in a potometer, which measures how fast the shoot takes up water. An air bubble in a thin tube moves as water is taken up.\n\nConditions | Distance bubble moved in 5 minutes (mm)\nStill air, room temperature | 12\nFan blowing on the leaves | 30\nPlastic bag over the leaves | 4\nLeaves smeared with petroleum jelly underneath | 2",
    "passageSource": "A case study written for this app",
-   "hook": "Stomata hide **underneath**, in the shade, to save water."
+   "hook": "Stomata hide **underneath**, in the shade, to save water.",
+   "visual": {
+    "kind": "diagram",
+    "id": "leaf-section",
+    "highlight": "stomata"
+   }
   },
   {
    "id": "science.m.tr.w",
@@ -1642,7 +1682,12 @@
    ],
    "explain": "Dissolved sugars, both up and down the plant. Moving sugars in the phloem is called translocation.",
    "hook": "**Ph**loem moves **f**ood, both ways.",
-   "example": "Aphids feed by piercing the phloem and sucking out the sugary sap."
+   "example": "Aphids feed by piercing the phloem and sucking out the sugary sap.",
+   "visual": {
+    "kind": "diagram",
+    "id": "leaf-section",
+    "highlight": "phloem"
+   }
   },
   {
    "id": "science.m.tr.roothair",
@@ -1690,7 +1735,12 @@
     }
    ],
    "explain": "Stomata usually close at night or in drought to save water.",
-   "hook": "Guard cells are the **doormen** of the stomata."
+   "hook": "Guard cells are the **doormen** of the stomata.",
+   "visual": {
+    "kind": "diagram",
+    "id": "leaf-section",
+    "highlight": "guard-cells"
+   }
   },
   {
    "id": "science.m.tr.wilt",
@@ -4899,7 +4949,12 @@
    "explain": "The rules of refraction use angles measured from the normal. The normal is a line at 90° to the surface where the ray enters.",
    "passage": "Case study: a glass block experiment.\n\nMira shines a thin ray of light into a glass block at different angles and measures the angle of the ray inside the glass. All angles are measured from the normal.\n\nAngle in air (°) | Angle in glass (°)\n0 | 0\n20 | 13\n40 | 25\n60 | 35",
    "passageSource": "A case study written for this app",
-   "hook": "Always measure from the **normal**, the line at 90° to the surface."
+   "hook": "Always measure from the **normal**, the line at 90° to the surface.",
+   "visual": {
+    "kind": "diagram",
+    "id": "reflection",
+    "highlight": "normal"
+   }
   },
   {
    "id": "science.m.lt.w",

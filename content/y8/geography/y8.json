@@ -53,7 +53,17 @@
    "intro": "The Earth’s crust is broken into plates that move a few centimetres a year. What happens at their edges builds mountains, opens oceans and shakes cities. The Greeks blamed Poseidon, the Earth-shaker; we have better evidence.",
    "teach": "Explain the difference between a destructive and a constructive plate boundary, with an example of each.",
    "talk": "Ask {him} why Iceland is getting wider every year.",
-   "hook": "The name tells you what happens to the crust: constructive creates it, destructive destroys it, conservative conserves it."
+   "hook": "The name tells you what happens to the crust: constructive creates it, destructive destroys it, conservative conserves it.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "plate-boundary"
+    },
+    {
+     "kind": "diagram",
+     "id": "earth-layers"
+    }
+   ]
   },
   {
    "id": "geography.hazards",
@@ -109,32 +119,38 @@
    "teach": "Explain the three types of rainfall, with a place where each is common.",
    "talk": "Watch a weather forecast together and ask {him} to spot a depression (a low) and a high.",
    "hook": "“Climate is what you expect, weather is what you get.”",
-   "visual": {
-    "kind": "table",
-    "head": [
-     "Rainfall",
-     "Air rises because…",
-     "Common in"
-    ],
-    "rows": [
-     [
-      "Relief",
-      "winds are forced over hills",
-      "the west of Britain"
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "water-cycle"
+    },
+    {
+     "kind": "table",
+     "head": [
+      "Rainfall",
+      "Air rises because…",
+      "Common in"
      ],
-     [
-      "Convectional",
-      "hot ground heats it",
-      "the tropics"
+     "rows": [
+      [
+       "Relief",
+       "winds are forced over hills",
+       "the west of Britain"
+      ],
+      [
+       "Convectional",
+       "hot ground heats it",
+       "the tropics"
+      ],
+      [
+       "Frontal",
+       "warm air meets colder air",
+       "UK depressions"
+      ]
      ],
-     [
-      "Frontal",
-      "warm air meets colder air",
-      "UK depressions"
-     ]
-    ],
-    "caption": "In every type, rising air cools, its water vapour condenses into cloud, and rain falls."
-   }
+     "caption": "In every type, rising air cools, its water vapour condenses into cloud, and rain falls."
+    }
+   ]
   },
   {
    "id": "geography.climate",
@@ -170,7 +186,11 @@
    "intro": "A river shapes its valley from source to mouth: erosion in the hills, meanders in the middle course, floodplains and deltas near the sea. Floods are natural; the damage depends on what we build.",
    "teach": "Explain how an oxbow lake forms, in four steps.",
    "talk": "On a walk by a river, ask {him} to find the fastest-flowing side of a bend.",
-   "hook": "Cut down in the hills, swing in the middle, drop the load near the sea."
+   "hook": "Cut down in the hills, swing in the middle, drop the load near the sea.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river"
+   }
   },
   {
    "id": "geography.coasts",
@@ -183,7 +203,11 @@
    "intro": "Waves attack the coast with hydraulic action and abrasion, carry sand along it by longshore drift, and build it back as beaches and spits. Deciding what to protect is a hard choice.",
    "teach": "Explain how a headland becomes a stack and then a stump.",
    "talk": "Ask {him} whether the government should protect every stretch of eroding coast, and why.",
-   "hook": "Crack, cave, arch, stack, stump: the sea carves a headland away one step at a time."
+   "hook": "Crack, cave, arch, stack, stump: the sea carves a headland away one step at a time.",
+   "visual": {
+    "kind": "diagram",
+    "id": "coast"
+   }
   },
   {
    "id": "geography.ice",
@@ -196,7 +220,11 @@
    "intro": "Twenty thousand years ago ice covered much of Britain. The Lake District, Snowdonia and the Highlands are still shaped by it: corries, arêtes, U-shaped valleys and ribbon lakes.",
    "teach": "Explain how a corrie forms.",
    "talk": "Look at a photo of Striding Edge or Windermere together and ask {him} to name the glacial landform.",
-   "hook": "Rivers carve a V; glaciers carve a U."
+   "hook": "Rivers carve a V; glaciers carve a U.",
+   "visual": {
+    "kind": "diagram",
+    "id": "glacier"
+   }
   },
   {
    "id": "geography.biomes",
@@ -454,7 +482,11 @@
    "intro": "A drainage basin is a system of inputs, stores, flows and outputs. Storm hydrographs show how quickly rain reaches the river, which is the key to understanding floods.",
    "teach": "Explain why an urban drainage basin floods faster than a forested one.",
    "talk": "Ask {him} what “lag time” means on a storm hydrograph.",
-   "hook": "Follow a raindrop: inputs come in, stores hold it, flows move it, outputs let it leave."
+   "hook": "Follow a raindrop: inputs come in, stores hold it, flows move it, outputs let it leave.",
+   "visual": {
+    "kind": "diagram",
+    "id": "drainage-basin"
+   }
   }
  ],
  "items": [
@@ -793,7 +825,12 @@
     "crust"
    ],
    "hook": "Like a peach: thin skin (crust), thick flesh (mantle) and a stone in the middle (core).",
-   "example": "Oceanic crust is only about 7 km thick: less than the height of Everest above sea level (8,849 m)."
+   "example": "Oceanic crust is only about 7 km thick: less than the height of Everest above sea level (8,849 m).",
+   "visual": {
+    "kind": "diagram",
+    "id": "earth-layers",
+    "highlight": "crust"
+   }
   },
   {
    "id": "geography.tc.core",
@@ -823,7 +860,11 @@
    ],
    "explain": "The liquid iron and nickel of the outer core create the Earth’s magnetic field.",
    "hook": "Outer core runny, inner core rock-hard: the huge pressure keeps the inner core solid.",
-   "example": "The swirling liquid outer core makes the magnetic field that turns a compass needle to point north."
+   "example": "The swirling liquid outer core makes the magnetic field that turns a compass needle to point north.",
+   "visual": {
+    "kind": "diagram",
+    "id": "earth-layers"
+   }
   },
   {
    "id": "geography.tc.move",
@@ -852,7 +893,12 @@
     }
    ],
    "explain": "Older textbooks say convection currents; current thinking puts more weight on dense oceanic plates sinking (slab pull) and new rock pushing out from ridges (ridge push).",
-   "hook": "Slab pull is a tablecloth sliding off a table: the heavy, hanging edge drags the rest after it."
+   "hook": "Slab pull is a tablecloth sliding off a table: the heavy, hanging edge drags the rest after it.",
+   "visual": {
+    "kind": "diagram",
+    "id": "plate-boundary",
+    "highlight": "subduction"
+   }
   },
   {
    "id": "geography.tc.destructive",
@@ -882,7 +928,12 @@
    ],
    "explain": "The Nazca Plate subducts beneath the South American Plate, building the Andes.",
    "hook": "Destructive: the dense ocean plate dives underneath and is destroyed.",
-   "example": "The Nazca Plate dives under South America, building the Andes and volcanoes such as Cotopaxi in Ecuador."
+   "example": "The Nazca Plate dives under South America, building the Andes and volcanoes such as Cotopaxi in Ecuador.",
+   "visual": {
+    "kind": "diagram",
+    "id": "plate-boundary",
+    "highlight": "subduction"
+   }
   },
   {
    "id": "geography.tc.constructive",
@@ -1083,7 +1134,12 @@
    ],
    "explain": "About 100,000 flights were cancelled: a reminder that hazards have global, economic effects.",
    "hook": "Ash, not lava, was the problem: tiny glassy particles can melt inside jet engines and stop them.",
-   "example": "UK airspace closed for several days in April 2010, leaving many thousands of British travellers stranded abroad."
+   "example": "UK airspace closed for several days in April 2010, leaving many thousands of British travellers stranded abroad.",
+   "visual": {
+    "kind": "diagram",
+    "id": "volcano",
+    "highlight": "ash"
+   }
   },
   {
    "id": "geography.hz.thera",
@@ -1113,7 +1169,12 @@
    ],
    "explain": "The Minoan eruption buried the Bronze Age town of Akrotiri. Some people link it to the legend of Atlantis.",
    "hook": "Caldera is Spanish for “cauldron”: the volcano’s middle collapsed and the sea poured into the pot.",
-   "example": "Ferries to Santorini sail right into the caldera, beneath towering cliffs of layered ash and lava."
+   "example": "Ferries to Santorini sail right into the caldera, beneath towering cliffs of layered ash and lava.",
+   "visual": {
+    "kind": "diagram",
+    "id": "volcano",
+    "highlight": "crater"
+   }
   },
   {
    "id": "geography.hz.primary",
@@ -1662,7 +1723,11 @@
    ],
    "explain": "Erosion dominates high up; deposition dominates near the sea.",
    "hook": "Up high it cuts down; in the middle it swings from side to side; near the sea it spreads and drops its load.",
-   "example": "The River Tees plunges over High Force near its source and loops round the town of Yarm before reaching the sea."
+   "example": "The River Tees plunges over High Force near its source and loops round the town of Yarm before reaching the sea.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river"
+   }
   },
   {
    "id": "geography.rv.hydraulic",
@@ -1737,15 +1802,22 @@
    "explain": "Erosion on the outer bank and deposition on the inner bank make meanders migrate until the neck is breached.",
    "hook": "Outside of the bend fast, inside slow: the outer bank erodes, the inner bank builds up.",
    "example": "From the air, the Mississippi’s floodplain is dotted with oxbow lakes: the ghosts of old meanders.",
-   "visual": {
-    "kind": "flow",
-    "steps": [
-     "Erosion on the outside of bends makes the meander loop tighter",
-     "The neck of the meander narrows",
-     "In a flood the river cuts through the neck",
-     "Deposition seals off the old loop as an oxbow lake"
-    ]
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "river",
+     "highlight": "oxbow"
+    },
+    {
+     "kind": "flow",
+     "steps": [
+      "Erosion on the outside of bends makes the meander loop tighter",
+      "The neck of the meander narrows",
+      "In a flood the river cuts through the neck",
+      "Deposition seals off the old loop as an oxbow lake"
+     ]
+    }
+   ]
   },
   {
    "id": "geography.rv.waterfall",
@@ -1775,7 +1847,12 @@
    ],
    "explain": "The hard rock overhang collapses and the waterfall retreats upstream, leaving a gorge.",
    "hook": "Hard on top, soft underneath: the soft rock wears away, the hard cap collapses, the fall retreats.",
-   "example": "High Force on the Tees drops about 21 m over hard dolerite, the Whin Sill, lying on softer rocks."
+   "example": "High Force on the Tees drops about 21 m over hard dolerite, the Whin Sill, lying on softer rocks.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river",
+    "highlight": "waterfall"
+   }
   },
   {
    "id": "geography.rv.levee",
@@ -1914,17 +1991,23 @@
    "explain": "Hydraulic action and abrasion widen a crack into a cave; the cave breaks through as an arch; the arch collapses leaving a stack, which wears down to a stump. Old Harry Rocks in Dorset are famous chalk stacks.",
    "hook": "Crack, cave, arch, stack, stump: the headland gets smaller at every step.",
    "example": "Durdle Door in Dorset is an arch; nearby Old Harry Rocks are stacks, and Old Harry’s Wife collapsed into a stump.",
-   "visual": {
-    "kind": "flow",
-    "across": true,
-    "steps": [
-     "crack",
-     "cave",
-     "arch",
-     "stack",
-     "stump"
-    ]
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "coast"
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "crack",
+      "cave",
+      "arch",
+      "stack",
+      "stump"
+     ]
+    }
+   ]
   },
   {
    "id": "geography.cs.drift",
@@ -2122,7 +2205,12 @@
    ],
    "explain": "When the ice melts, many corries hold a small lake called a tarn.",
    "hook": "Corrie (Gaelic), cwm (Welsh), cirque (French): three names for one armchair-shaped hollow.",
-   "example": "Red Tarn lies in a corrie below Helvellyn, between Striding Edge and Swirral Edge."
+   "example": "Red Tarn lies in a corrie below Helvellyn, between Striding Edge and Swirral Edge.",
+   "visual": {
+    "kind": "diagram",
+    "id": "glacier",
+    "highlight": "corrie"
+   }
   },
   {
    "id": "geography.ic.arete",
@@ -2140,7 +2228,13 @@
     "arete"
    ],
    "hook": "Arête is French for a fish bone or a sharp ridge: a thin spine between two hollows.",
-   "example": "Crib Goch, on Snowdon (Yr Wyddfa), is a famous knife-edge arête scramble."
+   "example": "Crib Goch, on Snowdon (Yr Wyddfa), is a famous knife-edge arête scramble.",
+   "visual": {
+    "kind": "diagram",
+    "id": "glacier",
+    "highlight": "arete",
+    "question": true
+   }
   },
   {
    "id": "geography.ic.ushape",
@@ -2170,7 +2264,12 @@
    ],
    "explain": "Glaciers fill the whole valley and grind it into a U shape, cutting off spurs.",
    "hook": "Rivers carve a V; glaciers carve a U.",
-   "example": "Nant Ffrancon in Snowdonia (Eryri) and Glen Coe in Scotland are classic U-shaped valleys."
+   "example": "Nant Ffrancon in Snowdonia (Eryri) and Glen Coe in Scotland are classic U-shaped valleys.",
+   "visual": {
+    "kind": "diagram",
+    "id": "glacier",
+    "highlight": "valley"
+   }
   },
   {
    "id": "geography.ic.ribbon",
@@ -2188,7 +2287,13 @@
     "ribbon lake"
    ],
    "hook": "A ribbon lake is long and thin like a ribbon, lying in a hollow the glacier dug deeper.",
-   "example": "Windermere is about 18 km long but at most about 1.5 km wide."
+   "example": "Windermere is about 18 km long but at most about 1.5 km wide.",
+   "visual": {
+    "kind": "diagram",
+    "id": "glacier",
+    "highlight": "ribbon",
+    "question": true
+   }
   },
   {
    "id": "geography.ic.erratic",
@@ -5347,7 +5452,13 @@
     "the watershed"
    ],
    "hook": "A watershed sheds water one way or the other, like the ridge of a roof.",
-   "example": "Rain on the west of the Pennines flows to the Irish Sea; rain on the east flows to the North Sea."
+   "example": "Rain on the west of the Pennines flows to the Irish Sea; rain on the east flows to the North Sea.",
+   "visual": {
+    "kind": "diagram",
+    "id": "drainage-basin",
+    "highlight": "watershed",
+    "question": true
+   }
   },
   {
    "id": "geography.db.confluence",
@@ -5365,7 +5476,13 @@
     "a confluence"
    ],
    "hook": "From the Latin con, “together”, and fluere, “to flow”: where rivers flow together.",
-   "example": "The River Cherwell joins the Thames at Oxford."
+   "example": "The River Cherwell joins the Thames at Oxford.",
+   "visual": {
+    "kind": "diagram",
+    "id": "drainage-basin",
+    "highlight": "confluence",
+    "question": true
+   }
   },
   {
    "id": "geography.db.infiltration",
@@ -5414,7 +5531,11 @@
     "output"
    ],
    "explain": "Inputs enter, stores hold water for a while, flows move it, outputs leave the basin.",
-   "hook": "Like a bank account: inputs pay in, stores hold, flows move it, outputs pay out."
+   "hook": "Like a bank account: inputs pay in, stores hold, flows move it, outputs pay out.",
+   "visual": {
+    "kind": "diagram",
+    "id": "drainage-basin"
+   }
   },
   {
    "id": "geography.db.lag",

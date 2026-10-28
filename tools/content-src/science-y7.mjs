@@ -327,13 +327,13 @@ const SUBSTANCES = {
   caption: 'A compound’s elements are joined and hard to separate; a mixture can be separated again.',
 };
 const SEPARATING = {
-  kind: 'table', head: ['method', 'separates', 'for example'],
+  kind: 'table', head: ['method', 'separates'],
   rows: [
-    ['filtering', 'an insoluble solid from a liquid', 'sand and water'],
-    ['evaporating', 'a dissolved solid from its solution', 'salt water'],
-    ['distillation', 'a pure liquid from a solution', 'sea water'],
-    ['chromatography', 'dyes mixed in an ink', 'felt-tip ink'],
-    ['a magnet', 'magnetic from non-magnetic', 'iron and sand'],
+    ['filtering', 'an insoluble solid from a liquid: **sand** from water'],
+    ['evaporating', 'a dissolved solid from its solution: **salt** from salt water'],
+    ['distillation', 'a pure liquid from a solution: **drinking water** from sea water'],
+    ['chromatography', 'the **dyes** mixed in an ink'],
+    ['a magnet', 'magnetic from non-magnetic: **iron** filings from sand'],
   ],
 };
 const PH = {

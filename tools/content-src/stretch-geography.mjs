@@ -132,7 +132,7 @@ for (const [id, extra] of Object.entries(MEMORY)) {
 const HEADLAND = { kind: 'flow', across: true, steps: ['crack', 'cave', 'arch', 'stack', 'stump'], caption: 'Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack wears down to a stump.' };
 const TOPIC_VISUALS = {
   'geography.coasts': HEADLAND,
-  'geography.development': { kind: 'table', head: ['country', 'A', 'B', 'C'], rows: [['income per person', '$65,000', '$9,000', '$800'], ['life expectancy', '81', '73', '59'], ['adults who can read', '99%', '92%', '44%'], ['babies (in 1,000) dying before age 1', '6', '22', '70']], caption: 'No single indicator tells the whole story: compare several together.' },
+  'geography.development': { kind: 'table', head: ['country', 'A', 'B', 'C'], rows: [['income ($)', '65,000', '9,000', '800'], ['life expectancy', '81', '73', '59'], ['can read', '99%', '92%', '44%'], ['baby deaths per 1,000', '6', '22', '70']], caption: 'Income per person, life expectancy, adults who can read, babies (per 1,000) who die before age 1. No single indicator tells the whole story.' },
   'geography.weather-2': { kind: 'table', head: ['', 'low pressure', 'high pressure'], rows: [['air', 'rises', 'sinks'], ['sky', 'cloud and rain', 'clear skies'], ['wind', 'strong', 'light'], ['isobars', 'close together', 'far apart'], ['brings', 'changeable, wet weather', 'hot summer days, frosty winter nights']], tint: 'cols', caption: 'A low is a depression; a high is an anticyclone. Low is lousy; high is happy.' },
 };
 const ITEM_VISUALS = {

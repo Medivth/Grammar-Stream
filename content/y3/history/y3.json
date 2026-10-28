@@ -79,7 +79,11 @@
    "batch": 5,
    "intro": "From about 800 BC, people in Britain learned to make iron. Iron ore was much easier to find than the copper and tin needed for bronze, so more people could have strong tools. Iron Age tribes built hill forts, drove chariots and followed priests called druids.",
    "teach": "Explain why a hill fort was a good place to defend.",
-   "talk": "Ask {him} to design an Iron Age hill fort with ditches and a gate."
+   "talk": "Ask {him} to design an Iron Age hill fort with ditches and a gate.",
+   "visual": {
+    "kind": "diagram",
+    "id": "hill-fort"
+   }
   },
   {
    "id": "history.y3-legion",
@@ -92,37 +96,43 @@
    "intro": "The Roman army was one of the best-trained armies in history. Soldiers called legionaries trained every day, marched in step and fought as a team.",
    "teach": "Explain what a legionary carried and what each thing was for.",
    "talk": "Ask {him} which would be harder: marching 20 miles in armour, or building a fort at the end of it.",
-   "visual": {
-    "kind": "tree",
-    "root": {
-     "n": "a legion",
-     "note": "about 5,000 soldiers",
-     "c": [
-      {
-       "n": "a cohort",
-       "note": "10 in a legion",
-       "c": [
-        {
-         "n": "a century",
-         "note": "6 in a cohort",
-         "c": [
-          {
-           "n": "a centurion",
-           "note": "the officer in charge",
-           "c": [
-            {
-             "n": "about 80 legionaries",
-             "note": "foot soldiers"
-            }
-           ]
-          }
-         ]
-        }
-       ]
-      }
-     ]
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "roman-soldier"
+    },
+    {
+     "kind": "tree",
+     "root": {
+      "n": "a legion",
+      "note": "about 5,000 soldiers",
+      "c": [
+       {
+        "n": "a cohort",
+        "note": "10 in a legion",
+        "c": [
+         {
+          "n": "a century",
+          "note": "6 in a cohort",
+          "c": [
+           {
+            "n": "a centurion",
+            "note": "the officer in charge",
+            "c": [
+             {
+              "n": "about 80 legionaries",
+              "note": "foot soldiers"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
     }
-   }
+   ]
   },
   {
    "id": "history.y3-boudica",
@@ -282,26 +292,32 @@
    "intro": "About 2,500 years ago, the cities of Ancient Greece gave the world the Olympic Games, democracy, theatre and many great thinkers. Athens and Sparta were very different cities.",
    "teach": "Explain the difference between Athens and Sparta.",
    "talk": "Ask {him} which Greek god or goddess {she} would like to be, and why.",
-   "visual": {
-    "kind": "timeline",
-    "from": -900,
-    "to": -150,
-    "set": "greece",
-    "events": [
-     [
-      -776,
-      "first Olympic Games"
-     ],
-     [
-      -508,
-      "democracy begins in Athens"
-     ],
-     [
-      -490,
-      "Battle of Marathon"
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "greek-theatre"
+    },
+    {
+     "kind": "timeline",
+     "from": -900,
+     "to": -150,
+     "set": "greece",
+     "events": [
+      [
+       -776,
+       "first Olympic Games"
+      ],
+      [
+       -508,
+       "democracy begins in Athens"
+      ],
+      [
+       -490,
+       "Battle of Marathon"
+      ]
      ]
-    ]
-   }
+    }
+   ]
   },
   {
    "id": "history.y3-civilisations",
@@ -358,7 +374,11 @@
    "batch": 5,
    "intro": "Attacking a castle was very hard. Attackers used giant catapults, siege towers, battering rams and tunnels, and defenders kept making castles stronger.",
    "teach": "Explain why a concentric castle was so hard to attack.",
-   "talk": "Build a castle from cushions or blocks and ask {him} how {she} would defend it."
+   "talk": "Build a castle from cushions or blocks and ask {him} how {she} would defend it.",
+   "visual": {
+    "kind": "diagram",
+    "id": "castle"
+   }
   },
   {
    "id": "history.y3-britain1940",
@@ -455,32 +475,38 @@
    "intro": "After 1066, William the Conqueror and the Normans took control of England. They built castles everywhere, counted everything in the Domesday Book, and set up the feudal system.",
    "teach": "Explain how the feudal system worked, from the king down to the peasants.",
    "talk": "Ask {him} what the Domesday Book might have said about your town.",
-   "visual": {
-    "kind": "tree",
-    "root": {
-     "n": "the king",
-     "note": "owns all the land",
-     "c": [
-      {
-       "n": "barons",
-       "note": "given land by the king",
-       "c": [
-        {
-         "n": "knights",
-         "note": "given land by a baron; fight for him",
-         "c": [
-          {
-           "n": "peasants (villeins)",
-           "note": "work the lord’s land"
-          }
-         ]
-        }
-       ]
-      }
-     ]
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "motte-bailey"
     },
-    "caption": "The feudal system, from most powerful to least."
-   }
+    {
+     "kind": "tree",
+     "root": {
+      "n": "the king",
+      "note": "owns all the land",
+      "c": [
+       {
+        "n": "barons",
+        "note": "given land by the king",
+        "c": [
+         {
+          "n": "knights",
+          "note": "given land by a baron; fight for him",
+          "c": [
+           {
+            "n": "peasants (villeins)",
+            "note": "work the lord’s land"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "caption": "The feudal system, from most powerful to least."
+    }
+   ]
   },
   {
    "id": "history.y3-shang",
@@ -759,7 +785,12 @@
    "explain": "It is one of the largest hill forts in Europe. It was not a castle with stone walls, but earth banks.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "hill-fort",
+    "highlight": "ramparts"
+   }
   },
   {
    "id": "history.y3.ia.hillfort",
@@ -782,7 +813,11 @@
      "feedback": "Water was usually easier to find lower down."
     }
    ],
-   "explain": "Ditches and banks around the top made attackers climb uphill."
+   "explain": "Ditches and banks around the top made attackers climb uphill.",
+   "visual": {
+    "kind": "diagram",
+    "id": "hill-fort"
+   }
   },
   {
    "id": "history.y3.ia.druids",
@@ -869,7 +904,12 @@
    "explain": "The smoke drifted up through the thatched roof. Families cooked, ate and slept around it.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "hill-fort",
+    "highlight": "roundhouses"
+   }
   },
   {
    "id": "history.y3.ia.tribes",
@@ -941,7 +981,11 @@
    "accept": [
     "legionary",
     "legionnaire"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "roman-soldier"
+   }
   },
   {
    "id": "history.y3.leg.centurion",
@@ -1017,33 +1061,39 @@
     }
    ],
    "explain": "Longbows were used by English archers more than a thousand years later.",
-   "visual": {
-    "kind": "table",
-    "head": [
-     "Latin name",
-     "what it was"
-    ],
-    "rows": [
-     [
-      "gladius",
-      "short sword"
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "roman-soldier"
+    },
+    {
+     "kind": "table",
+     "head": [
+      "Latin name",
+      "what it was"
      ],
-     [
-      "scutum",
-      "large curved shield"
+     "rows": [
+      [
+       "gladius",
+       "short sword"
+      ],
+      [
+       "scutum",
+       "large curved shield"
+      ],
+      [
+       "pilum",
+       "throwing spear"
+      ],
+      [
+       "caligae",
+       "sandals with iron nails"
+      ]
      ],
-     [
-      "pilum",
-      "throwing spear"
-     ],
-     [
-      "caligae",
-      "sandals with iron nails"
-     ]
-    ],
-    "tint": "rows",
-    "caption": "A legionary’s kit."
-   }
+     "tint": "rows",
+     "caption": "A legionary’s kit."
+    }
+   ]
   },
   {
    "id": "history.y3.leg.testudo",
@@ -1066,7 +1116,12 @@
      "feedback": "Not in battle!"
     }
    ],
-   "explain": "The shell of shields protected them from arrows and stones as they moved forward."
+   "explain": "The shell of shields protected them from arrows and stones as they moved forward.",
+   "visual": {
+    "kind": "diagram",
+    "id": "roman-soldier",
+    "highlight": "scutum"
+   }
   },
   {
    "id": "history.y3.leg.camp",
@@ -1138,33 +1193,41 @@
    "formats": [
     "choice"
    ],
-   "visual": {
-    "kind": "table",
-    "head": [
-     "Latin name",
-     "what it was"
-    ],
-    "rows": [
-     [
-      "gladius",
-      "short sword"
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "roman-soldier",
+     "highlight": "caligae",
+     "question": true
+    },
+    {
+     "kind": "table",
+     "head": [
+      "Latin name",
+      "what it was"
      ],
-     [
-      "scutum",
-      "large curved shield"
+     "rows": [
+      [
+       "gladius",
+       "short sword"
+      ],
+      [
+       "scutum",
+       "large curved shield"
+      ],
+      [
+       "pilum",
+       "throwing spear"
+      ],
+      [
+       "caligae",
+       "sandals with iron nails"
+      ]
      ],
-     [
-      "pilum",
-      "throwing spear"
-     ],
-     [
-      "caligae",
-      "sandals with iron nails"
-     ]
-    ],
-    "tint": "rows",
-    "caption": "A legionary’s kit."
-   }
+     "tint": "rows",
+     "caption": "A legionary’s kit."
+    }
+   ]
   },
   {
    "id": "history.y3.bo.tribe",
@@ -2098,7 +2161,11 @@
      "feedback": "Modern football came from England much later."
     }
    ],
-   "explain": "Greek actors wore masks and performed in huge open-air theatres."
+   "explain": "Greek actors wore masks and performed in huge open-air theatres.",
+   "visual": {
+    "kind": "diagram",
+    "id": "greek-theatre"
+   }
   },
   {
    "id": "history.y3.civ.rivers",
@@ -2344,7 +2411,12 @@
    "explain": "Soldiers swung a huge tree trunk, often under a roof to protect them.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "castle",
+    "highlight": "gatehouse"
+   }
   },
   {
    "id": "history.y3.sg.mine",
@@ -2447,7 +2519,12 @@
    "explain": "Attackers who got through the gate were still not safe.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "castle",
+    "highlight": "gatehouse"
+   }
   },
   {
    "id": "history.y3.sg.slit",
@@ -2463,7 +2540,13 @@
    "explain": "They were wide on the inside and very narrow on the outside.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "castle",
+    "highlight": "slits",
+    "question": true
+   }
   },
   {
    "id": "history.y3.bb.year",
@@ -3175,7 +3258,12 @@
      "feedback": "It was a castle."
     }
    ],
-   "explain": "They could be built in a few weeks. Later many were rebuilt in stone."
+   "explain": "They could be built in a few weeks. Later many were rebuilt in stone.",
+   "visual": {
+    "kind": "diagram",
+    "id": "motte-bailey",
+    "highlight": "keep"
+   }
   },
   {
    "id": "history.y3.no.feudal",
@@ -3300,7 +3388,12 @@
      "feedback": "Stone castles were cold! It was about strength."
     }
    ],
-   "explain": "A wooden tower could be set on fire by attackers."
+   "explain": "A wooden tower could be set on fire by attackers.",
+   "visual": {
+    "kind": "diagram",
+    "id": "motte-bailey",
+    "highlight": "keep"
+   }
   },
   {
    "id": "history.y3.no.villein",

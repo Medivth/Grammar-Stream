@@ -178,7 +178,11 @@
    "batch": 5,
    "intro": "Plants need water, light and warmth to grow. They have roots, a stem, leaves and often flowers.",
    "teach": "Explain what roots do for a plant.",
-   "talk": "Grow a bean in a jar together and watch the roots appear."
+   "talk": "Grow a bean in a jar together and watch the roots appear.",
+   "visual": {
+    "kind": "diagram",
+    "id": "plant"
+   }
   },
   {
    "id": "science.habitats",
@@ -286,7 +290,11 @@
    "batch": 5,
    "intro": "Earth is one of eight planets going round the Sun. The Moon goes round the Earth. Real space is even more amazing than space stories!",
    "teach": "Explain why we have day and night.",
-   "talk": "Look at the Moon together on a clear night. What shape is it today?"
+   "talk": "Look at the Moon together on a clear night. What shape is it today?",
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system"
+   }
   },
   {
    "id": "science.world",
@@ -568,7 +576,12 @@
     "4",
     "10"
    ],
-   "explain": "All insects have 6 legs. Spiders have 8, so they are not insects!"
+   "explain": "All insects have 6 legs. Spiders have 8, so they are not insects!",
+   "visual": {
+    "kind": "diagram",
+    "id": "insect",
+    "highlight": "legs"
+   }
   },
   {
    "id": "science.fd.carn",
@@ -830,7 +843,12 @@
    "explain": "Our lungs take in air so our body gets oxygen.",
    "accept": [
     "the lungs"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "lungs",
+    "highlight": "lungs"
+   }
   },
   {
    "id": "science.bd.skeleton",
@@ -847,7 +865,11 @@
    "accept": [
     "your skeleton",
     "a skeleton"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "skeleton"
+   }
   },
   {
    "id": "science.lc.butterfly",
@@ -1032,7 +1054,12 @@
    "accept": [
     "the roots",
     "root"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "plant",
+    "highlight": "roots"
+   }
   },
   {
    "id": "science.pl.stem",
@@ -1049,7 +1076,12 @@
    "accept": [
     "the stem",
     "trunk"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "plant",
+    "highlight": "stem"
+   }
   },
   {
    "id": "science.pl.leaves",
@@ -1066,7 +1098,12 @@
    "accept": [
     "the leaves",
     "leaf"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "plant",
+    "highlight": "leaves"
+   }
   },
   {
    "id": "science.pl.needs",
@@ -1535,7 +1572,11 @@
     "7",
     "12"
    ],
-   "explain": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune."
+   "explain": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.",
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system"
+   }
   },
   {
    "id": "science.sp.order",
@@ -1551,20 +1592,26 @@
    ],
    "labels": null,
    "explain": "My Very Easy Method Just Speeds Up Naming planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.",
-   "visual": {
-    "kind": "flow",
-    "steps": [
-     "Mercury",
-     "Venus",
-     "Earth",
-     "Mars",
-     "Jupiter",
-     "Saturn",
-     "Uranus",
-     "Neptune"
-    ],
-    "caption": "The planets in order from the Sun: My Very Easy Method Just Speeds Up Naming planets."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "solar-system"
+    },
+    {
+     "kind": "flow",
+     "steps": [
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Mars",
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+     ],
+     "caption": "The planets in order from the Sun: My Very Easy Method Just Speeds Up Naming planets."
+    }
+   ]
   },
   {
    "id": "science.sp.biggest",
@@ -1580,7 +1627,12 @@
    "explain": "Jupiter is so big that all the other planets could fit inside it.",
    "accept": [
     "jupiter"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system",
+    "highlight": "jupiter"
+   }
   },
   {
    "id": "science.sp.red",
@@ -1596,7 +1648,12 @@
    "explain": "Mars is covered in red, rusty dust. Robots called rovers explore it.",
    "accept": [
     "mars"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system",
+    "highlight": "mars"
+   }
   },
   {
    "id": "science.sp.rings",
@@ -1612,7 +1669,12 @@
    "explain": "Saturn’s rings are made of billions of chunks of ice and rock.",
    "accept": [
     "saturn"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system",
+    "highlight": "saturn"
+   }
   },
   {
    "id": "science.sp.sun",
@@ -1628,7 +1690,12 @@
    "explain": "The Sun is a star: a giant ball of hot, glowing gas. It looks big because it is close.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system",
+    "highlight": "sun"
+   }
   },
   {
    "id": "science.sp.day",
@@ -1667,7 +1734,12 @@
    "explain": "The Moon goes round the Earth about once a month.",
    "accept": [
     "moon"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system",
+    "highlight": "moon"
+   }
   },
   {
    "id": "science.sp.astronaut",

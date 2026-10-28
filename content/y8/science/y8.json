@@ -11,7 +11,21 @@
    "intro": "Every living thing is built from cells. With a light microscope you can see the nucleus and the cell wall; an electron microscope shows far smaller parts, like ribosomes.",
    "teach": "Explain three differences between a plant cell and an animal cell, and what each extra part does.",
    "talk": "Ask {him} to explain how a microscope’s magnification is worked out.",
-   "hook": "Animal cells have the basic kit; plant cells add three extras: a **wall**, a **vacuole** and **chloroplasts**."
+   "hook": "Animal cells have the basic kit; plant cells add three extras: a **wall**, a **vacuole** and **chloroplasts**.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "microscope"
+    },
+    {
+     "kind": "diagram",
+     "id": "cell-plant"
+    },
+    {
+     "kind": "diagram",
+     "id": "cell-animal"
+    }
+   ]
   },
   {
    "id": "science.organs",
@@ -24,7 +38,11 @@
    "intro": "Cells → tissues → organs → organ systems. In digestion, enzymes act like molecular scissors, breaking big food molecules into small ones the blood can absorb.",
    "teach": "Explain the job of an enzyme, using amylase as an example, and why boiling stops it working.",
    "talk": "At dinner, ask {him} which nutrients in the meal will be broken down by which enzymes.",
-   "hook": "Cell → tissue → organ → organ system → organism; enzymes are the **scissors** that cut food small."
+   "hook": "Cell → tissue → organ → organ system → organism; enzymes are the **scissors** that cut food small.",
+   "visual": {
+    "kind": "diagram",
+    "id": "digestion"
+   }
   },
   {
    "id": "science.respiration",
@@ -37,7 +55,11 @@
    "intro": "Breathing moves air in and out; respiration is the chemical reaction in every cell that releases energy from glucose. They are not the same thing!",
    "teach": "Explain the difference between breathing and respiration, and write the word equation for aerobic respiration.",
    "talk": "After a sprint, ask {him} why {she} is panting even after stopping (oxygen debt).",
-   "hook": "Breathing **moves air**; respiration **releases energy**, in every living cell, day and night."
+   "hook": "Breathing **moves air**; respiration **releases energy**, in every living cell, day and night.",
+   "visual": {
+    "kind": "diagram",
+    "id": "lungs"
+   }
   },
   {
    "id": "science.photosynthesis",
@@ -50,7 +72,11 @@
    "intro": "Plants make their own food: in chloroplasts, light energy turns carbon dioxide and water into glucose and oxygen. Almost every food chain on Earth starts here.",
    "teach": "Explain the word equation for photosynthesis and three things that could limit its rate.",
    "talk": "Ask {him} why a plant left in a dark cupboard turns yellow and dies.",
-   "hook": "Photo = **light**, synthesis = **putting together** (Greek): plants use light to build glucose."
+   "hook": "Photo = **light**, synthesis = **putting together** (Greek): plants use light to build glucose.",
+   "visual": {
+    "kind": "diagram",
+    "id": "leaf-section"
+   }
   },
   {
    "id": "science.ecosystems",
@@ -154,7 +180,11 @@
    "intro": "Democritus, in ancient Greece, guessed that everything is made of tiny uncuttable pieces: atomos. The particle model explains solids, liquids and gases, diffusion and density.",
    "teach": "Explain, using particles, why a gas fills its container and a solid keeps its shape.",
    "talk": "Ask {him} why you can smell perfume across a room (diffusion).",
-   "hook": "Solids **vibrate**, liquids **slide**, gases **zoom**, and the particles themselves never change size."
+   "hook": "Solids **vibrate**, liquids **slide**, gases **zoom**, and the particles themselves never change size.",
+   "visual": {
+    "kind": "diagram",
+    "id": "particles"
+   }
   },
   {
    "id": "science.atoms",
@@ -268,7 +298,11 @@
    "intro": "Current is the flow of charge; potential difference is the push; resistance opposes the flow. In series, current is the same everywhere; in parallel, current splits. A current also makes a magnetic field.",
    "teach": "Explain what happens to the brightness of bulbs when you add more in series, and why.",
    "talk": "Ask {him} why lights in a house are wired in parallel, not series.",
-   "hook": "Series: one loop, **current the same** everywhere. Parallel: branches, **current splits**."
+   "hook": "Series: one loop, **current the same** everywhere. Parallel: branches, **current splits**.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols"
+   }
   },
   {
    "id": "science.waves",
@@ -281,7 +315,11 @@
    "intro": "Sound is a longitudinal wave that needs a medium; light is a transverse wave that can cross empty space at 300 000 km per second. Both reflect and refract.",
    "teach": "Explain why you see lightning before you hear thunder.",
    "talk": "Put a pencil in a glass of water and ask {him} to explain why it looks bent.",
-   "hook": "Sound needs **particles** to pass it on; light can cross **empty space**, almost a million times faster."
+   "hook": "Sound needs **particles** to pass it on; light can cross **empty space**, almost a million times faster.",
+   "visual": {
+    "kind": "diagram",
+    "id": "wave"
+   }
   },
   {
    "id": "science.space",
@@ -294,7 +332,11 @@
    "intro": "Gravity holds moons around planets and planets around the Sun. The seasons happen because the Earth’s axis is tilted, not because we are nearer the Sun. Eratosthenes measured the Earth’s size more than 2000 years ago using shadows.",
    "teach": "Explain why it is summer in Britain when the Earth is actually furthest from the Sun.",
    "talk": "Look for the Moon together and ask {him} what phase it is in and why.",
-   "hook": "Seasons come from the **tilt**, not the distance: the Earth is closest to the Sun in January."
+   "hook": "Seasons come from the **tilt**, not the distance: the Earth is closest to the Sun in January.",
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system"
+   }
   },
   {
    "id": "science.working",
@@ -344,7 +386,11 @@
    "teach": "Explain the difference between ionic and covalent bonding with an example of each.",
    "talk": "Ask {him} what carbon-12 and carbon-14 have in common, and what is different.",
    "tier": "stretch",
-   "hook": "**P**rotons **p**ositive, **n**eutrons **n**eutral, both in the nucleus; electrons whizz round in shells."
+   "hook": "**P**rotons **p**ositive, **n**eutrons **n**eutral, both in the nucleus; electrons whizz round in shells.",
+   "visual": {
+    "kind": "diagram",
+    "id": "atom"
+   }
   },
   {
    "id": "science.spectrum",
@@ -359,19 +405,25 @@
    "talk": "Ask {him} which electromagnetic waves {she} used today (radio, microwaves, visible light…).",
    "tier": "stretch",
    "hook": "**R**aging **M**artians **I**nvaded **V**enus **U**sing **X**-ray **G**uns: radio to gamma.",
-   "visual": {
-    "kind": "flow",
-    "steps": [
-     "radio",
-     "microwaves",
-     "infrared",
-     "visible light",
-     "ultraviolet",
-     "X-rays",
-     "gamma rays"
-    ],
-    "caption": "From radio to gamma the wavelength gets shorter and the frequency and energy higher. All travel at the speed of light."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "wave"
+    },
+    {
+     "kind": "flow",
+     "steps": [
+      "radio",
+      "microwaves",
+      "infrared",
+      "visible light",
+      "ultraviolet",
+      "X-rays",
+      "gamma rays"
+     ],
+     "caption": "From radio to gamma the wavelength gets shorter and the frequency and energy higher. All travel at the speed of light."
+    }
+   ]
   },
   {
    "id": "science.genetics",
@@ -613,7 +665,12 @@
     }
    ],
    "explain": "To make the parts of the cell easier to see. Most cell parts are colourless; stains colour them so they show up.",
-   "hook": "Stains add **contrast**: colourless cell parts suddenly show up."
+   "hook": "Stains add **contrast**: colourless cell parts suddenly show up.",
+   "visual": {
+    "kind": "diagram",
+    "id": "microscope",
+    "highlight": "stage"
+   }
   },
   {
    "id": "science.cl.em",
@@ -648,7 +705,12 @@
     0,
     1
    ],
-   "hook": "**I AM** triangle: **I**mage size = **A**ctual size × **M**agnification."
+   "hook": "**I AM** triangle: **I**mage size = **A**ctual size × **M**agnification.",
+   "visual": {
+    "kind": "diagram",
+    "id": "microscope",
+    "highlight": "objective"
+   }
   },
   {
    "id": "science.or.levels",
@@ -826,7 +888,12 @@
     }
    ],
    "explain": "Villi have thin walls and a good blood supply, so small molecules diffuse into the blood quickly.",
-   "hook": "Villi are like the loops on a **towel**: lots of folds give a huge surface to soak things up."
+   "hook": "Villi are like the loops on a **towel**: lots of folds give a huge surface to soak things up.",
+   "visual": {
+    "kind": "diagram",
+    "id": "digestion",
+    "highlight": "small"
+   }
   },
   {
    "id": "science.or.boil",
@@ -869,7 +936,12 @@
     "choice"
    ],
    "hook": "Stomach acid is a **microbe killer**, and pepsin likes it acidic.",
-   "example": "Heartburn is stomach acid escaping up into the gullet."
+   "example": "Heartburn is stomach acid escaping up into the gullet.",
+   "visual": {
+    "kind": "diagram",
+    "id": "digestion",
+    "highlight": "stomach"
+   }
   },
   {
    "id": "science.rs.eq",
@@ -973,7 +1045,12 @@
     }
    ],
    "explain": "Huge surface area, walls one cell thick, and a rich blood supply. Oxygen diffuses into the blood, and carbon dioxide out, across very thin walls.",
-   "hook": "Alveoli are tiny **air sacs**, like bunches of grapes, with walls one cell thick."
+   "hook": "Alveoli are tiny **air sacs**, like bunches of grapes, with walls one cell thick.",
+   "visual": {
+    "kind": "diagram",
+    "id": "lungs",
+    "highlight": "alveoli"
+   }
   },
   {
    "id": "science.rs.smoke",
@@ -998,7 +1075,12 @@
    ],
    "explain": "Tar and smoke damage the alveoli and cilia, and carbon monoxide reduces the oxygen blood can carry. Carbon monoxide binds to haemoglobin more strongly than oxygen does.",
    "hook": "Carbon monoxide **hijacks haemoglobin**, so the blood carries less oxygen.",
-   "example": "Homes have carbon monoxide alarms because the gas has no colour or smell."
+   "example": "Homes have carbon monoxide alarms because the gas has no colour or smell.",
+   "visual": {
+    "kind": "diagram",
+    "id": "lungs",
+    "highlight": "alveoli"
+   }
   },
   {
    "id": "science.rs.air",
@@ -1015,7 +1097,11 @@
    "labels": null,
    "explain": "Air goes down the trachea (windpipe), into a bronchus, through ever smaller bronchioles, to the alveoli.",
    "hook": "Nose → trachea → bronchus → bronchiole → alveolus: big pipes branching into ever tinier ones.",
-   "example": "The branching airways are called the bronchial tree: an upside-down tree in your chest."
+   "example": "The branching airways are called the bronchial tree: an upside-down tree in your chest.",
+   "visual": {
+    "kind": "diagram",
+    "id": "lungs"
+   }
   },
   {
    "id": "science.rs.mito",
@@ -1133,7 +1219,12 @@
     }
    ],
    "explain": "Tiny holes, mostly under the leaf, that let gases in and out. Guard cells open and close the stomata; carbon dioxide enters and water vapour escapes.",
-   "hook": "Stoma is Greek for **mouth**: stomata are the leaf’s tiny mouths."
+   "hook": "Stoma is Greek for **mouth**: stomata are the leaf’s tiny mouths.",
+   "visual": {
+    "kind": "diagram",
+    "id": "leaf-section",
+    "highlight": "stomata"
+   }
   },
   {
    "id": "science.ps.xylem",
@@ -1148,7 +1239,12 @@
    ],
    "explain": "Xylem carries water up; phloem carries dissolved sugars around the plant.",
    "hook": "**Ph**loem carries **f**ood (both start with an f sound), so xylem is the water pipe.",
-   "example": "Stand a celery stick in food colouring and its xylem vessels turn coloured."
+   "example": "Stand a celery stick in food colouring and its xylem vessels turn coloured.",
+   "visual": {
+    "kind": "diagram",
+    "id": "leaf-section",
+    "highlight": "xylem"
+   }
   },
   {
    "id": "science.ps.roothair",
@@ -2294,7 +2390,12 @@
     "inert gases"
    ],
    "hook": "Noble gases are **snobs**: full outer shells, so they hardly ever react with anyone.",
-   "example": "Neon glows red-orange in signs; helium fills party balloons."
+   "example": "Neon glows red-orange in signs; helium fills party balloons.",
+   "visual": {
+    "kind": "diagram",
+    "id": "atom",
+    "highlight": "shells"
+   }
   },
   {
    "id": "science.pd.metal",
@@ -3352,7 +3453,12 @@
    "formats": [
     "choice"
    ],
-   "hook": "An ammeter must **join the queue** (series) to count the charge going past; a voltmeter watches from the side."
+   "hook": "An ammeter must **join the queue** (series) to count the charge going past; a voltmeter watches from the side.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "ammeter"
+   }
   },
   {
    "id": "science.el.unit",
@@ -3370,7 +3476,12 @@
     "ohms",
     "Ω"
    ],
-   "hook": "The ohm’s symbol, Ω, is the Greek capital **omega**."
+   "hook": "The ohm’s symbol, Ω, is the Greek capital **omega**.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "resistor"
+   }
   },
   {
    "id": "science.el.static",
@@ -3513,7 +3624,12 @@
    ],
    "explain": "Frequency (Hz) is the number of waves per second.",
    "hook": "**Hi**gh frequency = **hi**gh pitch; bigger amplitude = louder.",
-   "example": "A flute plays higher notes than a tuba: its sound waves have a higher frequency."
+   "example": "A flute plays higher notes than a tuba: its sound waves have a higher frequency.",
+   "visual": {
+    "kind": "diagram",
+    "id": "wave",
+    "highlight": "amplitude"
+   }
   },
   {
    "id": "science.wv.reflect",
@@ -3538,7 +3654,12 @@
    ],
    "explain": "Angle of incidence equals angle of reflection. Both angles are measured from the normal, a line at 90° to the mirror.",
    "hook": "Angle in = angle out, both measured from the **normal**.",
-   "example": "Snooker players use the same rule to bounce a ball off the cushion."
+   "example": "Snooker players use the same rule to bounce a ball off the cushion.",
+   "visual": {
+    "kind": "diagram",
+    "id": "reflection",
+    "highlight": "angle-i"
+   }
   },
   {
    "id": "science.wv.refract",
@@ -3646,7 +3767,12 @@
     1
    ],
    "hook": "Wave speed = frequency × wavelength: **v = fλ**.",
-   "example": "On a pond, count the ripples passing each second and measure the gap between crests."
+   "example": "On a pond, count the ripples passing each second and measure the gap between crests.",
+   "visual": {
+    "kind": "diagram",
+    "id": "wave",
+    "highlight": "wavelength"
+   }
   },
   {
    "id": "science.sp.seasons",
@@ -3812,7 +3938,12 @@
    ],
    "explain": "Mars has less mass, so its gravitational field is weaker. On Mars g ≈ 3.7 N/kg, compared with about 10 N/kg on Earth.",
    "hook": "Weight depends on the **planet’s pull**: a weaker g means you weigh less.",
-   "example": "A 50 kg person weighs about 500 N on Earth but only about 185 N on Mars."
+   "example": "A 50 kg person weighs about 500 N on Earth but only about 185 N on Mars.",
+   "visual": {
+    "kind": "diagram",
+    "id": "solar-system",
+    "highlight": "mars"
+   }
   },
   {
    "id": "science.wk.iv",
@@ -4035,7 +4166,12 @@
    ],
    "explain": "Protons +1, neutrons 0, electrons −1. The nucleus is tiny but holds almost all the mass.",
    "hook": "**P**rotons **p**ositive and **n**eutrons **n**eutral sit in the nucleus; electrons orbit outside.",
-   "example": "If an atom were as wide as a football pitch, its nucleus would be about the size of a pinhead."
+   "example": "If an atom were as wide as a football pitch, its nucleus would be about the size of a pinhead.",
+   "visual": {
+    "kind": "diagram",
+    "id": "atom",
+    "highlight": "nucleus"
+   }
   },
   {
    "id": "science.am.number",
@@ -4053,7 +4189,12 @@
     "protons in the nucleus"
    ],
    "hook": "Atomic number = **proton number**: the element’s ID card.",
-   "example": "Carbon is number 6: every carbon atom anywhere has 6 protons."
+   "example": "Carbon is number 6: every carbon atom anywhere has 6 protons.",
+   "visual": {
+    "kind": "diagram",
+    "id": "atom",
+    "highlight": "protons"
+   }
   },
   {
    "id": "science.am.isotope",
@@ -4078,7 +4219,12 @@
    ],
    "explain": "Isotopes: same protons, different neutrons. Carbon-14 is radioactive and is used to date ancient remains.",
    "hook": "Isotope = **same place** (Greek isos + topos) in the periodic table: same protons, different neutrons.",
-   "example": "Carbon-14 dating showed that Ötzi the Iceman lived over 5000 years ago."
+   "example": "Carbon-14 dating showed that Ötzi the Iceman lived over 5000 years ago.",
+   "visual": {
+    "kind": "diagram",
+    "id": "atom",
+    "highlight": "neutrons"
+   }
   },
   {
    "id": "science.am.neutrons",
@@ -4092,7 +4238,12 @@
     "34"
    ],
    "explain": "23 − 11 = 12 neutrons.",
-   "hook": "Neutrons = **mass number − atomic number** (big number minus small number)."
+   "hook": "Neutrons = **mass number − atomic number** (big number minus small number).",
+   "visual": {
+    "kind": "diagram",
+    "id": "atom",
+    "highlight": "neutrons"
+   }
   },
   {
    "id": "science.am.rutherford",
@@ -4116,7 +4267,12 @@
     }
    ],
    "explain": "This replaced the “plum pudding” model in 1911.",
-   "hook": "Rutherford said it was like firing a shell at **tissue paper** and having it bounce back."
+   "hook": "Rutherford said it was like firing a shell at **tissue paper** and having it bounce back.",
+   "visual": {
+    "kind": "diagram",
+    "id": "atom",
+    "highlight": "nucleus"
+   }
   },
   {
    "id": "science.am.ionic",
@@ -4180,7 +4336,12 @@
     "1"
    ],
    "explain": "The first shell holds 2; the next ones hold 8 (for the first 20 elements).",
-   "hook": "Shells fill **2, 8, 8**: the first shell is a two-seater."
+   "hook": "Shells fill **2, 8, 8**: the first shell is a two-seater.",
+   "visual": {
+    "kind": "diagram",
+    "id": "atom",
+    "highlight": "shells"
+   }
   },
   {
    "id": "science.em.order",
@@ -4198,7 +4359,12 @@
    ],
    "labels": null,
    "explain": "Wavelength gets shorter (and frequency and energy higher) from radio to gamma.",
-   "hook": "**R**aging **M**artians **I**nvaded **V**enus **U**sing **X**-ray **G**uns: radio, micro, infrared, visible, UV, X, gamma."
+   "hook": "**R**aging **M**artians **I**nvaded **V**enus **U**sing **X**-ray **G**uns: radio, micro, infrared, visible, UV, X, gamma.",
+   "visual": {
+    "kind": "diagram",
+    "id": "wave",
+    "highlight": "wavelength"
+   }
   },
   {
    "id": "science.em.speed",

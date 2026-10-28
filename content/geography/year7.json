@@ -76,7 +76,11 @@
    "intro": "Rivers carve valleys, carry rocks to the sea and build new land. We’ll follow a river from its source to its mouth.",
    "hook": "Source to sea: V-shaped valleys and waterfalls up high, meanders in the middle, floodplains and an estuary near the mouth.",
    "teach": "Explain how a meander turns into an ox-bow lake.",
-   "talk": "Next time you cross a river, ask her which course it might be in: upper, middle or lower."
+   "talk": "Next time you cross a river, ask her which course it might be in: upper, middle or lower.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river"
+   }
   },
   {
    "id": "geography.tectonics",
@@ -93,7 +97,17 @@
    "intro": "The ground beneath us is moving, very slowly. Let’s find out what is inside the Earth and why volcanoes and earthquakes happen where they do.",
    "hook": "The Earth is like a peach: thin skin (crust), thick flesh (mantle) and a hard stone in the middle (core).",
    "teach": "Explain what happens at a destructive plate boundary.",
-   "talk": "Ask her why Iceland has so many volcanoes."
+   "talk": "Ask her why Iceland has so many volcanoes.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "plate-boundary"
+    },
+    {
+     "kind": "diagram",
+     "id": "earth-layers"
+    }
+   ]
   },
   {
    "id": "geography.biomes",
@@ -477,7 +491,11 @@
     }
    ],
    "explain": "This surprises most people! Steep upland streams lose lots of energy to friction. Downstream the channel is wider, deeper and smoother.",
-   "hook": "Smooth is speedy: rocks and shallow water slow mountain streams down with friction."
+   "hook": "Smooth is speedy: rocks and shallow water slow mountain streams down with friction.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river"
+   }
   },
   {
    "id": "geography.rv.source",
@@ -495,7 +513,13 @@
     "source"
    ],
    "hook": "Source = Start; Mouth = where it Meets the sea.",
-   "example": "The Thames begins at a stone marking its source in a field near Kemble, Gloucestershire."
+   "example": "The Thames begins at a stone marking its source in a field near Kemble, Gloucestershire.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river",
+    "highlight": "source",
+    "question": true
+   }
   },
   {
    "id": "geography.rv.mouth",
@@ -510,7 +534,13 @@
    ],
    "explain": "The mouth is where the river ends, at the sea or a lake.",
    "hook": "Source = Start; Mouth = where it Meets the sea.",
-   "example": "The Thames’s mouth is a wide estuary that meets the North Sea near Southend-on-Sea."
+   "example": "The Thames’s mouth is a wide estuary that meets the North Sea near Southend-on-Sea.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river",
+    "highlight": "mouth",
+    "question": true
+   }
   },
   {
    "id": "geography.rv.tributary",
@@ -525,7 +555,13 @@
    ],
    "explain": "Tributaries join the main river at a confluence.",
    "hook": "A tributary pays tribute: it gives its water to the main river.",
-   "example": "The River Kennet is a tributary of the Thames, joining it at Reading."
+   "example": "The River Kennet is a tributary of the Thames, joining it at Reading.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river",
+    "highlight": "tributary",
+    "question": true
+   }
   },
   {
    "id": "geography.rv.confluence",
@@ -540,7 +576,13 @@
    ],
    "explain": "Many towns grew at confluences, such as Pittsburgh, or Koblenz on the Rhine and Moselle.",
    "hook": "Con = together, fluence = flowing: two rivers flowing together.",
-   "example": "In York, the River Foss flows into the River Ouse."
+   "example": "In York, the River Foss flows into the River Ouse.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river",
+    "highlight": "confluence",
+    "question": true
+   }
   },
   {
    "id": "geography.rv.basin",
@@ -555,7 +597,13 @@
    ],
    "explain": "The edge of a drainage basin, usually high ground, is the watershed.",
    "hook": "Like a bathroom basin: all the water inside the rim drains to one plughole.",
-   "example": "Rain falling on Oxford, Reading or London all drains into the Thames basin."
+   "example": "Rain falling on Oxford, Reading or London all drains into the Thames basin.",
+   "visual": {
+    "kind": "diagram",
+    "id": "drainage-basin",
+    "highlight": "basin",
+    "question": true
+   }
   },
   {
    "id": "geography.rv.hydraulic",
@@ -617,7 +665,12 @@
     "choice"
    ],
    "hook": "V for vertical: rivers cut down into a V. Glaciers gouge out a U.",
-   "example": "Fast mountain streams in the Lake District and Snowdonia have cut steep-sided V-shaped valleys into the hills."
+   "example": "Fast mountain streams in the Lake District and Snowdonia have cut steep-sided V-shaped valleys into the hills.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river",
+    "highlight": "valley"
+   }
   },
   {
    "id": "geography.rv.oxbow",
@@ -637,7 +690,12 @@
     "an oxbow lake"
    ],
    "hook": "An ox-bow is the U-shaped collar of an ox’s yoke: a curved loop left behind.",
-   "example": "The Severn winds in great meanders around Shrewsbury; the Mississippi’s floodplain is dotted with ox-bow lakes."
+   "example": "The Severn winds in great meanders around Shrewsbury; the Mississippi’s floodplain is dotted with ox-bow lakes.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river",
+    "highlight": "oxbow"
+   }
   },
   {
    "id": "geography.rv.waterfall",
@@ -655,7 +713,12 @@
     "choice"
    ],
    "hook": "Hard on top, soft below: the soft rock is undercut, the hard ledge snaps off and the falls step back.",
-   "example": "High Force on the River Tees pours over hard whinstone sitting on softer limestone and shale."
+   "example": "High Force on the River Tees pours over hard whinstone sitting on softer limestone and shale.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river",
+    "highlight": "waterfall"
+   }
   },
   {
    "id": "geography.rv.floodplain",
@@ -670,7 +733,13 @@
    ],
    "explain": "Each flood deposits silt, making floodplains very fertile.",
    "hook": "The floodplain is the plain that floods, and every flood leaves fertile silt behind.",
-   "example": "Tewkesbury, where the Avon meets the Severn, was badly flooded in 2007."
+   "example": "Tewkesbury, where the Avon meets the Severn, was badly flooded in 2007.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river",
+    "highlight": "floodplain",
+    "question": true
+   }
   },
   {
    "id": "geography.rv.nile",
@@ -706,7 +775,11 @@
    "labels": null,
    "explain": "Waterfalls in the upper course; meanders in the middle course; ox-bow lakes on the floodplain; the estuary at the mouth.",
    "hook": "Up high it falls, in the middle it bends, low down it loops and leaves lakes, then it widens to the sea.",
-   "example": "On the Tees: High Force up high, a meander wrapped round Yarm, then the estuary at Middlesbrough."
+   "example": "On the Tees: High Force up high, a meander wrapped round Yarm, then the estuary at Middlesbrough.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river"
+   }
   },
   {
    "id": "geography.tc.d1",
@@ -730,7 +803,12 @@
     }
    ],
    "explain": "Magma forms only where rock partly melts, for example where plates move apart or one sinks under another.",
-   "hook": "The mantle is thick toffee, not soup: solid rock that creeps very slowly."
+   "hook": "The mantle is thick toffee, not soup: solid rock that creeps very slowly.",
+   "visual": {
+    "kind": "diagram",
+    "id": "earth-layers",
+    "highlight": "mantle"
+   }
   },
   {
    "id": "geography.tc.d2",
@@ -776,7 +854,12 @@
    ],
    "explain": "Crust, mantle, outer core (liquid), inner core (solid, about 5400°C).",
    "hook": "Like a peach: skin (crust), flesh (mantle) and a stone (core) in two parts, liquid outside and solid inside.",
-   "example": "Compared with the whole Earth, the crust is about as thin as the skin on an apple."
+   "example": "Compared with the whole Earth, the crust is about as thin as the skin on an apple.",
+   "visual": {
+    "kind": "diagram",
+    "id": "earth-layers",
+    "highlight": "crust"
+   }
   },
   {
    "id": "geography.tc.core",
@@ -793,7 +876,11 @@
    "accept": [
     "inner core"
    ],
-   "hook": "Squeezed so hard it cannot melt: the inner core stays solid even at about 5400°C."
+   "hook": "Squeezed so hard it cannot melt: the inner core stays solid even at about 5400°C.",
+   "visual": {
+    "kind": "diagram",
+    "id": "earth-layers"
+   }
   },
   {
    "id": "geography.tc.constructive",
@@ -823,7 +910,12 @@
    ],
    "explain": "Destructive boundaries cause violent volcanoes and earthquakes, as in the Andes and Japan.",
    "hook": "Destructive: the ocean plate is destroyed as it sinks and melts.",
-   "example": "Mount Fuji in Japan and the volcanoes of the Andes sit above destructive boundaries."
+   "example": "Mount Fuji in Japan and the volcanoes of the Andes sit above destructive boundaries.",
+   "visual": {
+    "kind": "diagram",
+    "id": "plate-boundary",
+    "highlight": "subduction"
+   }
   },
   {
    "id": "geography.tc.conservative",
@@ -887,7 +979,13 @@
    ],
    "explain": "Magma underground; lava above ground.",
    "hook": "Magma is in the Middle (underground); Lava has Left the volcano.",
-   "example": "Etna in Sicily and Kīlauea in Hawaii often send out rivers of glowing lava."
+   "example": "Etna in Sicily and Kīlauea in Hawaii often send out rivers of glowing lava.",
+   "visual": {
+    "kind": "diagram",
+    "id": "volcano",
+    "highlight": "lava",
+    "question": true
+   }
   },
   {
    "id": "geography.tc.ring",

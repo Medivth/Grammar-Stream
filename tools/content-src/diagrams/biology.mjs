@@ -265,7 +265,7 @@ function teeth() {
 function heart() {
   const blue = '#5a86c8', red = '#c8466a', blueV = '#4f7cc0', redV = '#c04064';
   return {
-    id: 'heart', kind: 'diagram', viewBox: [62, 12, 270, 368], labelViewBox: [-60, -62, 484, 504], labelSize: 18,
+    id: 'heart', kind: 'diagram', viewBox: [62, 12, 270, 368], labelViewBox: [-60, -36, 552, 480], labelSize: 18,
     decor: [
       { d: blob([[82, 112], [150, 100], [220, 104], [292, 114], [304, 170], [296, 240], [268, 304], [222, 356], [196, 374], [168, 352], [118, 296], [84, 236], [72, 170]]), fill: '#e7a7a0', under: true },
     ],
@@ -273,10 +273,10 @@ function heart() {
       { id: 'vena-cava', name: 'vena cava', d: tube([[104, 18], [106, 70], [110, 130]], 28, 28, false), fill: blueV, label: [76, 52], at: [94, 52] },
       { id: 'aorta', name: 'aorta', d: tube([[196, 214], [194, 150], [192, 90], [204, 50], [240, 34], [278, 46], [292, 80], [294, 120]], 26, 24, false), fill: redV, label: [258, -14], at: [252, 24] },
       { id: 'pulmonary-artery', name: 'pulmonary artery', d: many(tube([[164, 212], [164, 150], [166, 108], [180, 88], [220, 84], [262, 86], [324, 94]], 24, 20, false), tube([[172, 98], [154, 90], [136, 88]], 20, 18, false)), fill: blueV, label: [132, -14], at: [142, 88] },
-      { id: 'pulmonary-vein', name: 'pulmonary vein', d: many(tube([[276, 148], [328, 142]], 18, 18, false), tube([[276, 180], [328, 188]], 18, 18, false)), fill: redV, label: [320, -42], at: [324, 142] },
+      { id: 'pulmonary-vein', name: 'pulmonary vein', d: many(tube([[276, 148], [328, 142]], 18, 18, false), tube([[276, 180], [328, 188]], 18, 18, false)), fill: redV, label: [340, 145], at: [322, 145] },
       { id: 'right-atrium', name: 'right atrium', d: blob([[92, 122], [140, 116], [150, 150], [146, 190], [98, 194], [86, 160]]), fill: blue, label: [66, 156], at: [92, 156] },
       { id: 'right-ventricle', name: 'right ventricle', d: blob([[100, 210], [150, 206], [178, 216], [182, 262], [176, 318], [164, 330], [130, 296], [104, 252]]), fill: blue, label: [116, 384], at: [134, 286] },
-      { id: 'left-atrium', name: 'left atrium', d: blob([[220, 124], [276, 128], [286, 160], [280, 194], [226, 194], [214, 160]]), fill: red, label: [304, 404], at: [280, 184] },
+      { id: 'left-atrium', name: 'left atrium', d: blob([[220, 124], [276, 128], [286, 160], [280, 194], [226, 194], [214, 160]]), fill: red, label: [318, 234], at: [262, 186] },
       { id: 'left-ventricle', name: 'left ventricle', d: blob([[200, 212], [258, 208], [270, 242], [258, 290], [226, 334], [204, 344], [194, 300], [196, 252]]), fill: red, label: [246, 430], at: [238, 300] },
       { id: 'valves', name: 'valves', d: many(poly([[104, 196], [126, 196], [118, 214]]), poly([[122, 198], [144, 198], [132, 216]]), poly([[220, 198], [242, 198], [232, 216]]), poly([[238, 198], [262, 198], [250, 216]])), fill: '#f4ecd8', label: [66, 204], at: [108, 203] },
     ],
@@ -318,7 +318,7 @@ function lungs() {
       { id: 'bronchioles', name: 'bronchioles', d: many(...twigs(false), ...twigs(true)), fill: airway, label: [342, 214], at: [262, 200] },
       { id: 'trachea', name: 'trachea', d: tube([[180, 20], [180, 70], [180, 126]], 24, 24, false), fill: airway, label: [20, 60], at: [168, 60] },
       { id: 'bronchi', name: 'bronchi', d: many(tube(bL, 15, 11), tube(bR, 15, 11)), fill: airway, label: [342, 130], at: [206, 142] },
-      { id: 'ribs', name: 'ribs', d: ribs, fill: '#efe4c8', label: [20, 228], at: [37, 228] },
+      { id: 'ribs', name: 'ribs', d: ribs, fill: '#efe4c8', label: [20, 260], at: [38, 258] },
       { id: 'diaphragm', name: 'diaphragm', d: tube(dome, 12, 12), fill: '#b0607a', label: [20, 314], at: [42, 318] },
       { id: 'alveoli', name: 'alveoli', d: many(...alv), fill: '#e98ea4', label: [342, 50], at: [320, 50] },
     ],

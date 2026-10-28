@@ -107,24 +107,30 @@
    "intro": "Most people in medieval England were peasants who lived in villages, farmed strips of land and owed work to their lord.",
    "teach": "Describe a day in the life of a medieval peasant.",
    "talk": "Ask her what a villein had to do for the lord of the manor.",
-   "visual": {
-    "kind": "timeline",
-    "set": "britain",
-    "from": 900,
-    "to": 1600,
-    "mark": "Middle Ages",
-    "events": [
-     [
-      1086,
-      "Domesday survey"
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "village"
+    },
+    {
+     "kind": "timeline",
+     "set": "britain",
+     "from": 900,
+     "to": 1600,
+     "mark": "Middle Ages",
+     "events": [
+      [
+       1086,
+       "Domesday survey"
+      ],
+      [
+       1348,
+       "Black Death"
+      ]
      ],
-     [
-      1348,
-      "Black Death"
-     ]
-    ],
-    "caption": "Most people in the Middle Ages lived and farmed in villages."
-   },
+     "caption": "Most people in the Middle Ages lived and farmed in villages."
+    }
+   ],
    "hook": "“Some pray, some fight, some work”: and the ones who worked, the peasants, were almost everyone."
   },
   {
@@ -761,7 +767,12 @@
    ],
    "explain": "A manor included the lord’s house, his land (the demesne) and the villagers’ strips.",
    "hook": "**Manor** → “manor house”: the lord’s big house at the heart of the village.",
-   "example": "Many villages still have a Manor Farm or Manor House: a clue to the old lord of the manor."
+   "example": "Many villages still have a Manor Farm or Manor House: a clue to the old lord of the manor.",
+   "visual": {
+    "kind": "diagram",
+    "id": "village",
+    "highlight": "manor"
+   }
   },
   {
    "id": "history.v.villein",
@@ -780,7 +791,12 @@
     "a serf",
     "serf"
    ],
-   "hook": "A **villein** was tied to his **vill**age. Our word “villain” comes from it!"
+   "hook": "A **villein** was tied to his **vill**age. Our word “villain” comes from it!",
+   "visual": {
+    "kind": "diagram",
+    "id": "village",
+    "highlight": "houses"
+   }
   },
   {
    "id": "history.v.strips",
@@ -798,7 +814,12 @@
     "choice"
    ],
    "hook": "Three fields: one for winter crops, one for spring crops, one resting (**fallow**), taking turns each year.",
-   "example": "Wavy “ridge and furrow” lines left by medieval ploughing can still be seen in many fields today."
+   "example": "Wavy “ridge and furrow” lines left by medieval ploughing can still be seen in many fields today.",
+   "visual": {
+    "kind": "diagram",
+    "id": "village",
+    "highlight": "fields"
+   }
   },
   {
    "id": "history.v.reeve",

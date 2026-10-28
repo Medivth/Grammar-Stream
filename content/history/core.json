@@ -374,6 +374,10 @@
    "talk": "Ask her what the Domesday Book was for.",
    "visual": [
     {
+     "kind": "diagram",
+     "id": "motte-bailey"
+    },
+    {
      "kind": "timeline",
      "set": "britain",
      "from": 900,
@@ -1601,7 +1605,11 @@
     "choice"
    ],
    "hook": "**M**otte = **M**ound; **B**ailey = **B**ig yard.",
-   "example": "Clifford’s Tower in York stands on the motte William built in 1068; you can climb up to it today."
+   "example": "Clifford’s Tower in York stands on the motte William built in 1068; you can climb up to it today.",
+   "visual": {
+    "kind": "diagram",
+    "id": "motte-bailey"
+   }
   },
   {
    "id": "history.n.domesday",

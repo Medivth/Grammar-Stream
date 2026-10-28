@@ -12,7 +12,17 @@
    "batch": 5,
    "intro": "Minibeasts are small creatures like insects, spiders, snails and worms. Insects always have six legs and three body parts.",
    "teach": "Explain why a spider is not an insect.",
-   "talk": "Go on a minibeast hunt: look under stones and logs, then put them back gently."
+   "talk": "Go on a minibeast hunt: look under stones and logs, then put them back gently.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "spider"
+    },
+    {
+     "kind": "diagram",
+     "id": "insect"
+    }
+   ]
   },
   {
    "id": "science.dinosaurs",
@@ -108,7 +118,11 @@
    "batch": 5,
    "intro": "The UK is made of islands, so the sea is never far away. Rivers start in the hills as streams and flow down to the sea.",
    "teach": "Explain the journey of a river from the hills to the sea.",
-   "talk": "At the beach or a river, ask {him} to point out physical and human features."
+   "talk": "At the beach or a river, ask {him} to point out physical and human features.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river"
+   }
   },
   {
    "id": "science.explore",
@@ -159,7 +173,11 @@
    "talk": "Make shadow puppets on the wall with a torch.",
    "coreIn": [
     "y3"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram"
+   }
   },
   {
    "id": "science.sound",
@@ -200,7 +218,11 @@
    "talk": "Count the things in one room that use electricity. Which use batteries?",
    "coreIn": [
     "y3"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit"
+   }
   }
  ],
  "items": [
@@ -215,7 +237,12 @@
     "4",
     "10"
    ],
-   "explain": "All insects have 6 legs and 3 body parts: head, thorax and abdomen."
+   "explain": "All insects have 6 legs and 3 body parts: head, thorax and abdomen.",
+   "visual": {
+    "kind": "diagram",
+    "id": "insect",
+    "highlight": "legs"
+   }
   },
   {
    "id": "science.mb.spider",
@@ -228,7 +255,12 @@
     "10",
     "4"
    ],
-   "explain": "Spiders have 8 legs, so they are not insects. They are arachnids."
+   "explain": "Spiders have 8 legs, so they are not insects. They are arachnids.",
+   "visual": {
+    "kind": "diagram",
+    "id": "spider",
+    "highlight": "legs"
+   }
   },
   {
    "id": "science.mb.notinsect",
@@ -256,7 +288,11 @@
      "feedback": "Ladybirds are beetles: insects."
     }
    ],
-   "explain": "Spiders have 8 legs."
+   "explain": "Spiders have 8 legs.",
+   "visual": {
+    "kind": "diagram",
+    "id": "insect"
+   }
   },
   {
    "id": "science.mb.worm",
@@ -995,17 +1031,25 @@
     "bed"
    ],
    "explain": "Rivers often start as small streams in the hills.",
-   "visual": {
-    "kind": "flow",
-    "across": true,
-    "steps": [
-     "source in the hills",
-     "stream",
-     "river",
-     "mouth at the sea"
-    ],
-    "caption": "A river starts at its source and flows downhill to its mouth."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "river",
+     "highlight": "source",
+     "question": true
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "source in the hills",
+      "stream",
+      "river",
+      "mouth at the sea"
+     ],
+     "caption": "A river starts at its source and flows downhill to its mouth."
+    }
+   ]
   },
   {
    "id": "science.cs.mouth",
@@ -1019,17 +1063,25 @@
     "foot"
    ],
    "explain": "The mouth of the Thames is near the North Sea.",
-   "visual": {
-    "kind": "flow",
-    "across": true,
-    "steps": [
-     "source in the hills",
-     "stream",
-     "river",
-     "mouth at the sea"
-    ],
-    "caption": "A river starts at its source and flows downhill to its mouth."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "river",
+     "highlight": "mouth",
+     "question": true
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "source in the hills",
+      "stream",
+      "river",
+      "mouth at the sea"
+     ],
+     "caption": "A river starts at its source and flows downhill to its mouth."
+    }
+   ]
   },
   {
    "id": "science.cs.flow",
@@ -1053,17 +1105,23 @@
     }
    ],
    "explain": "Water always flows downhill, so rivers run from the hills to the sea.",
-   "visual": {
-    "kind": "flow",
-    "across": true,
-    "steps": [
-     "source in the hills",
-     "stream",
-     "river",
-     "mouth at the sea"
-    ],
-    "caption": "A river starts at its source and flows downhill to its mouth."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "river"
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "source in the hills",
+      "stream",
+      "river",
+      "mouth at the sea"
+     ],
+     "caption": "A river starts at its source and flows downhill to its mouth."
+    }
+   ]
   },
   {
    "id": "science.cs.cliff",
@@ -1313,7 +1371,12 @@
      "feedback": "Shadows need light!"
     }
    ],
-   "explain": "Light travels in straight lines. If something blocks it, there is a dark patch behind: a shadow."
+   "explain": "Light travels in straight lines. If something blocks it, there is a dark patch behind: a shadow.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram",
+    "highlight": "shadow"
+   }
   },
   {
    "id": "science.lt.source",
@@ -1336,7 +1399,12 @@
      "feedback": "A mirror reflects light; it doesn’t make it."
     }
    ],
-   "explain": "Light sources: the Sun, fire, a torch, a light bulb."
+   "explain": "Light sources: the Sun, fire, a torch, a light bulb.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram",
+    "highlight": "source"
+   }
   },
   {
    "id": "science.lt.sun",
@@ -1507,7 +1575,12 @@
      "feedback": "Batteries work any time."
     }
    ],
-   "explain": "Like cars on a track: if there is a gap, they can’t get round."
+   "explain": "Like cars on a track: if there is a gap, they can’t get round.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-open",
+    "highlight": "switch"
+   }
   },
   {
    "id": "science.el.conductor",
@@ -1546,7 +1619,12 @@
    "explain": "Batteries store electricity for things we carry about.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "battery"
+   }
   },
   {
    "id": "science.el.safe",
@@ -1585,7 +1663,12 @@
    "explain": "A switch breaks or completes the circuit.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-open",
+    "highlight": "switch"
+   }
   }
  ]
 }

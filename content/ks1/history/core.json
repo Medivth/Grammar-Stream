@@ -51,31 +51,37 @@
    "intro": "About 2,000 years ago, the Roman army marched into Britain. Roman soldiers had shields, helmets and clever battle tricks. They built roads, towns and a giant wall.",
    "teach": "Explain how the Roman “tortoise” formation worked.",
    "talk": "Ask {him} why Roman roads are so straight.",
-   "visual": {
-    "kind": "timeline",
-    "from": -100,
-    "to": 500,
-    "set": "britain",
-    "mark": "Roman Britain",
-    "events": [
-     [
-      43,
-      "Romans invade"
-     ],
-     [
-      60,
-      "Boudica’s rebellion"
-     ],
-     [
-      122,
-      "Hadrian’s Wall begun"
-     ],
-     [
-      410,
-      "Romans leave Britain"
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "roman-soldier"
+    },
+    {
+     "kind": "timeline",
+     "from": -100,
+     "to": 500,
+     "set": "britain",
+     "mark": "Roman Britain",
+     "events": [
+      [
+       43,
+       "Romans invade"
+      ],
+      [
+       60,
+       "Boudica’s rebellion"
+      ],
+      [
+       122,
+       "Hadrian’s Wall begun"
+      ],
+      [
+       410,
+       "Romans leave Britain"
+      ]
      ]
-    ]
-   }
+    }
+   ]
   },
   {
    "id": "history.vikings",
@@ -143,7 +149,11 @@
    "batch": 5,
    "intro": "After 1066, castles were built all over England. Knights in armour protected them. A castle had clever ways to keep enemies out.",
    "teach": "Explain three ways a castle kept enemies out.",
-   "talk": "Visit a castle, or design one together on paper with a moat and drawbridge."
+   "talk": "Visit a castle, or design one together on paper with a moat and drawbridge.",
+   "visual": {
+    "kind": "diagram",
+    "id": "castle"
+   }
   },
   {
    "id": "history.fire",
@@ -558,7 +568,11 @@
    "explain": "Legionaries were tough, trained soldiers who marched about 30 km a day.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "roman-soldier"
+   }
   },
   {
    "id": "history.ro.tortoise",
@@ -581,7 +595,12 @@
      "feedback": "That would be fun, but no!"
     }
    ],
-   "explain": "Locked shields made a shell that arrows and stones bounced off."
+   "explain": "Locked shields made a shell that arrows and stones bounced off.",
+   "visual": {
+    "kind": "diagram",
+    "id": "roman-soldier",
+    "highlight": "scutum"
+   }
   },
   {
    "id": "history.ro.wall",
@@ -854,7 +873,13 @@
    "explain": "A moat made it hard for attackers to reach the walls.",
    "accept": [
     "moat"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "castle",
+    "highlight": "moat",
+    "question": true
+   }
   },
   {
    "id": "history.ca.drawbridge",
@@ -870,7 +895,13 @@
    "explain": "Pulled up by chains, the drawbridge became an extra wall.",
    "accept": [
     "drawbridge"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "castle",
+    "highlight": "drawbridge",
+    "question": true
+   }
   },
   {
    "id": "history.ca.portcullis",
@@ -886,7 +917,13 @@
    "explain": "The portcullis dropped down to block the entrance.",
    "accept": [
     "portcullis"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "castle",
+    "highlight": "portcullis",
+    "question": true
+   }
   },
   {
    "id": "history.ca.keep",
@@ -902,7 +939,13 @@
    "explain": "The keep was the safest place, where the lord lived.",
    "accept": [
     "keep"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "castle",
+    "highlight": "keep",
+    "question": true
+   }
   },
   {
    "id": "history.ca.motte",
@@ -925,7 +968,12 @@
      "feedback": "They would melt!"
     }
    ],
-   "explain": "They were quick to build from wood and earth. Later, stronger castles were made of stone."
+   "explain": "They were quick to build from wood and earth. Later, stronger castles were made of stone.",
+   "visual": {
+    "kind": "diagram",
+    "id": "motte-bailey",
+    "highlight": "motte"
+   }
   },
   {
    "id": "history.ca.armour",
@@ -1388,7 +1436,11 @@
    "explain": "Trenches were muddy and cold. Soldiers took turns resting behind the front line.",
    "accept": [
     "trench"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "trench"
+   }
   },
   {
    "id": "history.w1.truce",

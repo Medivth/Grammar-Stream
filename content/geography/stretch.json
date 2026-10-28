@@ -15,18 +15,24 @@
    "hook": "Crack, cave, arch, stack, stump: the sea knocks a headland down, bump by bump.",
    "teach": "Explain how a cave becomes a stack.",
    "talk": "Next time you are at a beach, ask her which way the groynes show the sand is moving.",
-   "visual": {
-    "kind": "flow",
-    "across": true,
-    "steps": [
-     "crack",
-     "cave",
-     "arch",
-     "stack",
-     "stump"
-    ],
-    "caption": "Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack wears down to a stump."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "coast"
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "crack",
+      "cave",
+      "arch",
+      "stack",
+      "stump"
+     ],
+     "caption": "Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack wears down to a stump."
+    }
+   ]
   },
   {
    "id": "geography.development",
@@ -55,10 +61,10 @@
     ],
     "rows": [
      [
-      "income per person",
-      "$65,000",
-      "$9,000",
-      "$800"
+      "income ($)",
+      "65,000",
+      "9,000",
+      "800"
      ],
      [
       "life expectancy",
@@ -67,19 +73,19 @@
       "59"
      ],
      [
-      "adults who can read",
+      "can read",
       "99%",
       "92%",
       "44%"
      ],
      [
-      "babies (in 1,000) dying before age 1",
+      "baby deaths per 1,000",
       "6",
       "22",
       "70"
      ]
     ],
-    "caption": "No single indicator tells the whole story: compare several together."
+    "caption": "Income per person, life expectancy, adults who can read, babies (per 1,000) who die before age 1. No single indicator tells the whole story."
    }
   },
   {
@@ -241,18 +247,24 @@
    "explain": "Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack is worn down to a stump.",
    "hook": "Crack, cave, arch, stack, stump: say it like a drumbeat.",
    "example": "Durdle Door in Dorset is an arch; nearby Old Harry Rocks are chalk stacks, and Old Harry’s Wife is a stump.",
-   "visual": {
-    "kind": "flow",
-    "across": true,
-    "steps": [
-     "crack",
-     "cave",
-     "arch",
-     "stack",
-     "stump"
-    ],
-    "caption": "Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack wears down to a stump."
-   }
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "coast"
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "crack",
+      "cave",
+      "arch",
+      "stack",
+      "stump"
+     ],
+     "caption": "Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack wears down to a stump."
+    }
+   ]
   },
   {
    "id": "geography.co.headland",
@@ -280,7 +292,12 @@
     "choice"
    ],
    "hook": "Hard rock hangs on as headlands; soft rock is scooped out into bays.",
-   "example": "Swanage Bay is cut into soft clays and sands, between chalk at Ballard Point and limestone at Peveril Point."
+   "example": "Swanage Bay is cut into soft clays and sands, between chalk at Ballard Point and limestone at Peveril Point.",
+   "visual": {
+    "kind": "diagram",
+    "id": "coast",
+    "highlight": "headland"
+   }
   },
   {
    "id": "geography.co.longshore",

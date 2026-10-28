@@ -167,13 +167,13 @@ for (const [id, memory] of Object.entries(MEMORY)) {
 // ---------------------------------------------------------------- pictures (js/ui/visuals.js)
 // (Digestion, light and circuits get labelled diagrams separately.)
 const PERIODIC = {
-  kind: 'table', head: ['', '1', '2', '3', '4', '5', '6', '7', '0'],
+  kind: 'table', head: ['1', '2', '3', '4', '5', '6', '7', '0'],
   rows: [
-    ['1', 'H', '', '', '', '', '', '', 'He'],
-    ['2', '**Li**', '**Be**', 'B', 'C', 'N', 'O', 'F', 'Ne'],
-    ['3', '**Na**', '**Mg**', '**Al**', 'Si', 'P', 'S', 'Cl', 'Ar'],
+    ['H', '', '', '', '', '', '', 'He'],
+    ['**Li**', '**Be**', 'B', 'C', 'N', 'O', 'F', 'Ne'],
+    ['**Na**', '**Mg**', '**Al**', 'Si', 'P', 'S', 'Cl', 'Ar'],
   ],
-  caption: 'Columns are **groups**; rows are **periods**. Metals (in colour) are on the left, non-metals on the right. Group 1: alkali metals; 7: halogens; 0: noble gases.',
+  caption: 'Columns are **groups** (numbered 1–7 and 0); rows are **periods**. Metals (Li, Be, Na, Mg, Al) are on the left; non-metals on the right. Group 1: alkali metals; 7: halogens; 0: noble gases.',
 };
 const TOPIC_VISUALS = {
   'science.periodic': PERIODIC,

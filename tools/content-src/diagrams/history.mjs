@@ -248,7 +248,7 @@ function globe() {
       { id: 'roof', name: 'thatched roof', d: ell(cx, cy, ...RO) + ell(cx, cy, ...RH), rule: 'evenodd', fill: '#d2b166', label: [84, -16], at: [92, 42] },
       { id: 'galleries', name: 'galleries', d: galleries, fill: '#ebdcbc', label: [20, 140], at: [110, 140] },
       { id: 'yard', name: 'yard', d: yard, fill: '#c9b38a', label: [114, 386], at: [120, 206] },
-      { id: 'tiring', name: 'tiring house', d: tiring + hut, fill: '#c2a57a', label: [268, -16], at: [262, 48] },
+      { id: 'tiring', name: 'tiring house', d: tiring + hut, fill: '#c2a57a', label: [268, -16], at: [236, 50] },
       { id: 'stage', name: 'stage', d: rect(sx0, sBack, sx1 - sx0, sFront - sBack - 10), fill: '#d6b07a', label: [400, 166], at: [262, 166] },
       { id: 'heavens', name: 'the heavens', d: heavens, fill: '#3f5f9e', label: [182, -42], at: [176, 100] },
       { id: 'groundlings', name: 'groundlings', d: crowd.join(''), fill: '#5c6d99', label: [290, 386], at: [284, 224] },
@@ -272,9 +272,9 @@ function greekTheatre() {
   const chorus = [];
   for (const [x, y] of [[186, 118], [198, 128], [212, 132], [226, 126], [236, 116], [194, 108], [228, 104]]) chorus.push(ell(x, y - 7, 2.6, 2.6), poly([[x - 3.6, y + 3], [x - 2.2, y - 4], [x + 2.2, y - 4], [x + 3.6, y + 3]]));
   return {
-    id: 'greek-theatre', kind: 'diagram', viewBox: [12, 14, 396, 232], 
+    id: 'greek-theatre', kind: 'diagram', viewBox: [6, 6, 408, 246], 
     decor: [
-      { d: ell(cx, 132, 206, 118), fill: '#d3e6b1', under: true },
+      { d: ell(cx, 128, 202, 120), fill: '#d3e6b1', under: true },
       { d: many(...rows), fill: '#b3a283' },
       { d: many(...aisles), fill: '#9c8b6c' },
       // skene roof, doors and the altar in the middle of the orchestra
@@ -287,7 +287,7 @@ function greekTheatre() {
     ],
     features: [
       { id: 'theatron', name: 'theatron', short: 'theatron (seating)', d: theatron, fill: '#e4d9c3', label: [206, 270], at: [200, 212] },
-      { id: 'orchestra', name: 'orchestra', d: ell(cx, cy, 60, 36), fill: '#ead6a8', label: [184, 270], at: [188, 136] },
+      { id: 'orchestra', name: 'orchestra', d: ell(cx, cy, 60, 36), fill: '#ead6a8', label: [178, 270], at: [188, 136] },
       { id: 'skene', name: 'skene', short: 'skene (stage building)', d: rect(124, 36, 172, 46), fill: '#cdb48c', label: [156, -2], at: [150, 40] },
       { id: 'parodos', name: 'parodos', short: 'parodos (entrance)', d: parodos, fill: '#efe2c4', label: [40, -28], at: [34, 84] },
     ],
@@ -299,7 +299,7 @@ function greekTheatre() {
 function village() {
   const strips = (x0, y0, w, h, step, vertical) => range(Math.floor((vertical ? w : h) / step) - 1).map((i) => vertical ? rect(x0 + (i + 1) * step - 0.8, y0 + 3, 1.6, h - 6) : rect(x0 + 3, y0 + (i + 1) * step - 0.8, w - 6, 1.6)).join('');
   const sheep = (x, y) => many(ell(x, y, 6, 4.2));
-  const cottages = [[114, 160], [148, 160], [182, 160], [64, 198], [100, 198], [136, 198], [172, 198], [228, 198]];
+  const cottages = [[114, 160], [148, 160], [182, 160], [64, 198], [100, 198], [136, 198], [172, 198], [212, 198]];
   return {
     id: 'village', kind: 'diagram', viewBox: [0, 0, 420, 320], 
     decor: [
@@ -316,7 +316,7 @@ function village() {
       { d: many(ell(222, 24, 12, 11), ell(340, 30, 12, 11), ell(336, 96, 10, 9)), fill: '#5c9a4c' },
       // church tower's cross, windows and doors
       { d: many(rect(36, 104, 2.4, 12), rect(32.2, 107, 10, 2.4)), fill: '#5a5a5a' },
-      { d: many(rect(34, 128, 6, 9, 2), rect(56, 145, 6, 9, 2), rect(72, 145, 6, 9, 2), rect(225, 136, 8, 8), rect(247, 136, 8, 8), rect(236, 150, 9, 14)), fill: '#4f4038' },
+      { d: many(rect(34, 128, 6, 9, 2), rect(56, 145, 6, 9, 2), rect(72, 145, 6, 9, 2), rect(213, 136, 8, 8), rect(237, 136, 8, 8), rect(225, 150, 9, 14)), fill: '#4f4038' },
       { d: many(...cottages.map(([x, y]) => rect(x - 2.5, y - 8, 5, 8))), fill: '#4f4038' },
       // the mill's water wheel spokes
       { d: many(bar([374, 189], [374, 215], 2), bar([361, 202], [387, 202], 2)), fill: '#5a4636' },
@@ -326,8 +326,8 @@ function village() {
       { id: 'common', name: 'common land', d: rect(216, 8, 146, 106, 4), fill: '#a3d184', label: [356, -18], at: [346, 26] },
       { id: 'fallow', name: 'fallow field', d: rect(216, 212, 146, 100, 4), fill: '#c9bc93', label: [296, 336], at: [290, 290] },
       { id: 'church', name: 'church', d: many(rect(28, 116, 18, 46), poly([[26, 118], [37, 104], [48, 118]]), house(46, 162, 46, 22, 12)), fill: '#c8c3bc', label: [-10, 140], at: [30, 140] },
-      { id: 'manor', name: 'manor house', d: many(house(214, 164, 52, 34, 16), rect(254, 118, 7, 16)), fill: '#dcc394', label: [220, -18], at: [214, 152] },
-      { id: 'houses', name: 'villeins’ houses', d: many(...cottages.map(([x, y]) => house(x - 11, y, 22, 14, 9))), fill: '#d3b064', label: [222, 362], at: [217, 194] },
+      { id: 'manor', name: 'manor house', d: many(house(206, 164, 46, 34, 16), rect(240, 118, 7, 16)), fill: '#dcc394', label: [218, -18], at: [211, 150] },
+      { id: 'houses', name: 'villeins’ houses', d: many(...cottages.map(([x, y]) => house(x - 11, y, 22, 14, 9))), fill: '#d3b064', label: [210, 362], at: [204, 192] },
       { id: 'mill', name: 'mill', d: many(house(330, 212, 28, 22, 10), ell(374, 202, 15, 15)), fill: '#b08d62', label: [410, 202], at: [386, 202] },
     ],
   };
@@ -374,7 +374,7 @@ function hillFort() {
 function trench() {
   const soil = '#a07f58', G = 100; // ground level
   const bag = (x, y, w = 22) => rect(x, y, w, 11, 5);
-  const bags = [bag(250, 89), bag(273, 89), bag(296, 89), bag(260, 78), bag(283, 78), bag(272, 67, 22), bag(104, 89), bag(127, 89), bag(115, 78)];
+  const bags = [bag(242, 73), bag(265, 73), bag(288, 73), bag(253, 62), bag(276, 62), bag(104, 89), bag(127, 89), bag(115, 78)];
   const coil = (x, y) => many(ell(x, y, 11, 13), ellRev(x, y, 8.6, 10.6));
   return {
     id: 'trench', kind: 'diagram', viewBox: [0, 30, 440, 210], 
@@ -389,9 +389,9 @@ function trench() {
       // water under the duckboards
       { d: rect(150, 216, 90, 12), fill: '#6f8ea0' },
       // a soldier on the fire step, looking over the parapet
-      { d: many(ell(222, 76, 6.4, 7.4), rect(214, 82, 16, 34, 4), rect(214, 112, 7, 42, 3), rect(223, 112, 7, 42, 3), bar([226, 90], [244, 84], 6)), fill: '#7c7a52' },
-      { d: ell(222, 75, 6, 6.6), fill: '#e3bf98' },
-      { d: many(ell(222, 70, 12, 3), 'M212,70Q222,58 232,70Z'), fill: '#5e6a4c' },
+      { d: many(ell(222, 62, 6.4, 7.4), rect(214, 68, 16, 34, 4), rect(214, 98, 7, 42, 3), rect(223, 98, 7, 42, 3), bar([226, 76], [240, 72], 6)), fill: '#7c7a52' },
+      { d: ell(222, 61, 6, 6.6), fill: '#e3bf98' },
+      { d: many(ell(222, 56, 12, 3), 'M212,56Q222,44 232,56Z'), fill: '#5e6a4c' },
       // the dugout's props, bunk and lantern
       { d: many(rect(62, 160, 6, 46), rect(130, 160, 6, 46), rect(60, 156, 78, 6), rect(70, 186, 40, 5)), fill: '#8a6a44' },
       { d: many(ell(100, 172, 4, 5), rect(98.6, 162, 2.8, 6)), fill: '#f2d36b' },
@@ -402,10 +402,10 @@ function trench() {
       // a shell hole in no man's land
     ],
     features: [
-      { id: 'nomansland', name: 'no man’s land', d: 'M334,100H362Q378,120 392,118Q404,116 410,100H440V128H334Z', fill: '#8c7a62', label: [418, 288], at: [424, 112] },
-      { id: 'parapet', name: 'parapet', d: poly([[240, G], [240, 92], [250, 86], [320, 86], [334, G]]), fill: '#7d6043', label: [312, 42], at: [306, 92] },
-      { id: 'sandbags', name: 'sandbags', d: many(...bags), fill: '#dcc79c', label: [150, 42], at: [262, 72] },
-      { id: 'firestep', name: 'fire step', d: rect(206, 154, 34, 74), fill: '#a8865a', label: [236, 262], at: [230, 200] },
+      { id: 'nomansland', name: 'no man’s land', d: 'M352,100H362Q378,120 392,118Q404,116 410,100H440V128H352Z', fill: '#8c7a62', label: [418, 288], at: [424, 112] },
+      { id: 'parapet', name: 'parapet', d: poly([[240, G], [240, 84], [304, 82], [326, 88], [352, G]]), fill: '#7d6043', label: [322, 42], at: [330, 92] },
+      { id: 'sandbags', name: 'sandbags', d: many(...bags), fill: '#dcc79c', label: [150, 42], at: [276, 78] },
+      { id: 'firestep', name: 'fire step', d: rect(206, 140, 34, 88), fill: '#a8865a', label: [236, 262], at: [230, 196] },
       { id: 'duckboards', name: 'duckboards', d: many(rect(150, 210, 56, 8), ...range(5).map((i) => rect(153 + i * 11, 218, 4, 8))), fill: '#c39b62', label: [130, 262], at: [176, 214] },
       { id: 'dugout', name: 'dugout', d: rect(56, 150, 94, 58, 6), fill: '#4b3826', label: [-10, 200], at: [70, 200] },
       { id: 'wire', name: 'barbed wire', d: many(coil(350, 84), coil(366, 86), coil(382, 84), coil(398, 86), coil(414, 84), coil(430, 86), rect(344, 82, 96, 2.4)), rule: 'nonzero', fill: '#5f6470', label: [398, 16], at: [404, 74] },

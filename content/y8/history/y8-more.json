@@ -256,56 +256,62 @@
    "intro": "Elizabeth I reigned for 44 years, survived plots and a Spanish invasion fleet, and presided over Shakespeare’s England. But was it really a golden age, and for whom?",
    "teach": "Explain why Mary, Queen of Scots, was such a danger to Elizabeth.",
    "talk": "Ask {him} why Elizabeth never married, in {her} opinion.",
-   "visual": {
-    "kind": "tree",
-    "root": {
-     "n": "Henry VII",
-     "note": "r. 1485–1509",
-     "c": [
-      {
-       "n": "Henry VIII",
-       "note": "r. 1509–47",
-       "c": [
-        {
-         "n": "Mary I",
-         "note": "r. 1553–58"
-        },
-        {
-         "n": "Elizabeth I",
-         "note": "r. 1558–1603",
-         "mark": true
-        },
-        {
-         "n": "Edward VI",
-         "note": "r. 1547–53"
-        }
-       ]
-      },
-      {
-       "n": "Margaret Tudor",
-       "note": "married James IV of Scotland",
-       "c": [
-        {
-         "n": "James V of Scotland",
-         "c": [
-          {
-           "n": "Mary, Queen of Scots",
-           "note": "executed 1587",
-           "c": [
-            {
-             "n": "James VI of Scotland",
-             "note": "James I of England from 1603"
-            }
-           ]
-          }
-         ]
-        }
-       ]
-      }
-     ]
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "globe-theatre"
     },
-    "caption": "Mary, Queen of Scots, was Henry VIII’s great-niece: a Catholic with a strong claim. Her son James inherited Elizabeth’s throne in 1603."
-   },
+    {
+     "kind": "tree",
+     "root": {
+      "n": "Henry VII",
+      "note": "r. 1485–1509",
+      "c": [
+       {
+        "n": "Henry VIII",
+        "note": "r. 1509–47",
+        "c": [
+         {
+          "n": "Mary I",
+          "note": "r. 1553–58"
+         },
+         {
+          "n": "Elizabeth I",
+          "note": "r. 1558–1603",
+          "mark": true
+         },
+         {
+          "n": "Edward VI",
+          "note": "r. 1547–53"
+         }
+        ]
+       },
+       {
+        "n": "Margaret Tudor",
+        "note": "married James IV of Scotland",
+        "c": [
+         {
+          "n": "James V of Scotland",
+          "c": [
+           {
+            "n": "Mary, Queen of Scots",
+            "note": "executed 1587",
+            "c": [
+             {
+              "n": "James VI of Scotland",
+              "note": "James I of England from 1603"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "caption": "Mary, Queen of Scots, was Henry VIII’s great-niece: a Catholic with a strong claim. Her son James inherited Elizabeth’s throne in 1603."
+    }
+   ],
    "hook": "**1558–1603**: the Virgin Queen, also called Gloriana, reigned for 44 years."
   },
   {
@@ -2489,7 +2495,11 @@
     "globe theatre"
    ],
    "hook": "**Globe** = round: Shakespeare called a round theatre “this wooden O”, in Henry V.",
-   "example": "Shakespeare’s Globe, rebuilt on the South Bank, stages his plays in the open air."
+   "example": "Shakespeare’s Globe, rebuilt on the South Bank, stages his plays in the open air.",
+   "visual": {
+    "kind": "diagram",
+    "id": "globe-theatre"
+   }
   },
   {
    "id": "history.m.el.w",
