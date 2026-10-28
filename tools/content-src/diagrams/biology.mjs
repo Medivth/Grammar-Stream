@@ -248,7 +248,7 @@ function teeth() {
   const arch = [];
   for (let p = 0; p <= 1.6; p += 0.1) arch.push(at(p));
   return {
-    id: 'teeth', kind: 'diagram', viewBox: [22, 22, 276, 240], labelViewBox: [-70, 22, 446, 240], labelSize: 17,
+    id: 'teeth', kind: 'diagram', viewBox: [22, 22, 276, 262], labelViewBox: [-70, 22, 446, 262], labelSize: 17,
     decor: [{ d: many(tube([...arch].reverse(), 50, 34), tube(mirror([...arch].reverse(), cx), 50, 34)), fill: '#e79aa8', under: true }],
     features: [
       { id: 'incisors', name: 'incisors', d: many(...shapes.i), fill: '#dcebf7', label: [40, 40], at: avg(mid['i-1']) },
@@ -339,11 +339,11 @@ function leafSection() {
     [70, 224], [124, 224], [178, 224], [232, 224], [362, 228],
     [44, 262], [166, 262], [276, 262]];
   const spongy = sp.map(([x, y], i) => ellR(x, y, 21 + (i % 3) * 2, 15, ((i * 37) % 50) - 25));
-  for (let x = x0; x < x1 - 1; x += 30) if (!stomata.some((s) => Math.abs(x + 15 - s) < 28)) lower.push(rect(x + 1.5, 287, 27, 26, 6));
+  for (let x = x0; x + 30 <= x1 + 1; x += 30) if (!stomata.some((s) => Math.abs(x + 15 - s) < 28)) lower.push(rect(x + 1.5, 287, 27, 26, 6));
   const guard = many(...stomata.map((s) => many(ellR(s - 12, 300, 12, 16, 0), ellR(s + 12, 300, 12, 16, 0))));
   const pores = many(...stomata.map((s) => rect(s - 4, 283, 8, 34, 3)));
   return {
-    id: 'leaf-section', kind: 'diagram', viewBox: [12, 12, 380, 312], labelViewBox: [12, 12, 584, 340], labelSize: 22,
+    id: 'leaf-section', kind: 'diagram', viewBox: [12, 12, 380, 312], labelViewBox: [4, 12, 592, 342], labelSize: 22,
     decor: [
       { d: rect(18, 18, 368, 9, 4), fill: '#d6e6a8', under: true },
       { d: many(...chl, ...[[352, 182], [368, 192], [372, 178], [36, 258], [52, 266], [356, 230]].map(([x, y]) => ell(x, y, 4, 2.8))), fill: '#2f7a2b' },
