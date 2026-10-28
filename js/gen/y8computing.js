@@ -164,7 +164,7 @@ export const Y8_COMPUTING_GENERATORS = {
     if (level === 2) {
       if (rng.chance(0.5)) {
         const d = rng.int(1, 8);
-        return num(`An image uses a colour depth of ${d} bit${d > 1 ? 's' : ''} per pixel. How many different colours can it show?`, 2 ** d, `n bits give 2^{n} patterns: 2^{${d}} = ${2 ** d} colours.`, ['Each pixel stores a binary pattern.', `${d} bit${d > 1 ? 's' : ''} make 2^{${d}} different patterns.`, `= ${2 ** d} colours.`]);
+        return num(`An image uses a colour depth of ${d} bit${d > 1 ? 's' : ''} per pixel. How many different colours can it show?`, 2 ** d, `n bits give 2^{n} patterns: 2^{${d}} = ${2 ** d} colours.`, ['Each pixel stores a binary pattern.', `${d} bit${d > 1 ? 's make' : ' makes'} 2^{${d}} different patterns.`, `= ${2 ** d} colours.`]);
       }
       const w = rng.pick([8, 10, 16, 20, 40, 50]), h = rng.pick([8, 10, 12, 20, 25]), d = rng.pick([4, 8, 16, 24]);
       const bits = w * h * d;
@@ -232,14 +232,16 @@ export const Y8_COMPUTING_GENERATORS = {
         const key = rng.int(0, 1), asleep = rng.int(0, 1), out = key & asleep;
         return num(`The labyrinth door opens (D = 1) if Theo has the thread (T) AND the Minotaur is asleep (M). T = ${key}, M = ${asleep}. What is D?`, out, `D = T AND M = ${key} AND ${asleep} = ${out}.`, ['This is an AND gate: both conditions must be true.', `T = ${key}, M = ${asleep}.`, `D = ${out}.`]);
       }
-      const [expr, v] = rng.pick([
-        ['(A AND B) OR C', (a & b) | c],
-        ['A AND (NOT B)', a & (1 - b)],
-        ['NOT (A OR B)', 1 - (a | b)],
-        ['A XOR B', a ^ b],
-        ['(A OR B) AND (NOT C)', (a | b) & (1 - c)],
+      // [expression, value, the working with these inputs]
+      const [expr, v, work] = rng.pick([
+        ['(A AND B) OR C', (a & b) | c, `A AND B = ${a & b}, so ${a & b} OR ${c} = ${(a & b) | c}`],
+        ['A AND (NOT B)', a & (1 - b), `NOT B = ${1 - b}, so ${a} AND ${1 - b} = ${a & (1 - b)}`],
+        ['NOT (A OR B)', 1 - (a | b), `A OR B = ${a | b}, so NOT ${a | b} = ${1 - (a | b)}`],
+        ['A XOR B', a ^ b, `${a} XOR ${b} = ${a ^ b}`],
+        ['(A OR B) AND (NOT C)', (a | b) & (1 - c), `A OR B = ${a | b} and NOT C = ${1 - c}, so ${a | b} AND ${1 - c} = ${(a | b) & (1 - c)}`],
       ]);
-      return num(`A = ${a}, B = ${b}, C = ${c}. What is ${expr}?`, v, `Work out the brackets first. ${expr} = ${v}. (XOR is 1 when exactly one input is 1.)`, ['Do the brackets and NOTs first.', `With A = ${a}, B = ${b}, C = ${c}, work through each part.`, `${expr} = ${v}.`]);
+      const xor = expr.includes('XOR');
+      return num(`A = ${a}, B = ${b}, C = ${c}. What is ${expr}?`, v, `${xor ? 'XOR is 1 when exactly one input is 1' : 'Work out the brackets first'}: ${work}.`, [xor ? 'XOR is 1 when exactly one input is 1.' : 'Do the brackets and NOTs first.', `With A = ${a}, B = ${b}, C = ${c}: ${work}.`, `${expr} = ${v}.`]);
     }
     if (rng.chance(0.4)) {
       const n = rng.pick([2, 3, 4]);

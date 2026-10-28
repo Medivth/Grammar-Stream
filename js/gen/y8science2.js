@@ -52,7 +52,7 @@ export const Y8_SCIENCE2_GENERATORS = {
     }
     if (level === 2) {
       const start = rng.int(150, 250), lost = rng.int(2, 9) + rng.pick([0, 0.5]);
-      return typed(`Marble chips and acid are mixed in an open flask on a balance. The reading starts at ${start}.0 g and ends at ${fmt(start - lost)} g. What mass of carbon dioxide escaped?`, lost, 'g', `The mass seems to fall because a gas escaped into the air. ${start} − ${fmt(start - lost)} = ${fmt(lost)} g of carbon dioxide. In a sealed flask the reading would not change.`, ['Mass is conserved, so any loss must have left the flask', 'The only thing that can leave is the gas made (carbon dioxide)', `${start} − ${fmt(start - lost)} = ${fmt(lost)} g`]);
+      return typed(`Marble chips and acid are mixed in an open flask on a balance. The reading starts at ${start}.0 g and ends at ${(start - lost).toFixed(1)} g. What mass of carbon dioxide escaped?`, lost, 'g', `The mass seems to fall because a gas escaped into the air. ${start} − ${fmt(start - lost)} = ${fmt(lost)} g of carbon dioxide. In a sealed flask the reading would not change.`, ['Mass is conserved, so any loss must have left the flask', 'The only thing that can leave is the gas made (carbon dioxide)', `${start} − ${fmt(start - lost)} = ${fmt(lost)} g`]);
     }
     // reacting masses by proportion
     const [r, p, mr, mp] = rng.pick([['magnesium', 'magnesium oxide', 24, 40], ['calcium carbonate', 'calcium oxide', 100, 56], ['copper', 'copper oxide', 64, 80], ['carbon', 'carbon dioxide', 12, 44]]);
@@ -117,6 +117,7 @@ export const Y8_SCIENCE2_GENERATORS = {
       return typed(`A velocity–time graph is a straight line from ${u} m/s at 0 s to ${u + a * t} m/s at ${t} s. What is the acceleration?`, a, 'm/s²', `The gradient of a velocity–time graph is the acceleration: (${u + a * t} − ${u}) ÷ ${t} = ${a} m/s².`, ['acceleration = gradient of a velocity–time graph', `change in velocity = ${a * t} m/s over ${t} s`, `${a * t} ÷ ${t} = ${a} m/s²`]);
     }
     const v = rng.pick([4, 6, 8, 10, 12, 20]), t = rng.pick([2, 4, 5, 6, 10]);
+    if (v / t > 3) return Y8_SCIENCE2_GENERATORS.y8tMotion(level, rng); // keep a horse-drawn chariot's acceleration realistic (≤ 3 m/s²)
     return typed(`A chariot accelerates steadily from rest to ${v} m/s in ${t} s. Using the area under its velocity–time graph, how far does it travel in that time?`, 0.5 * v * t, 'm', `The area under a velocity–time graph is the distance. Here it is a triangle: ½ × base × height = ½ × ${t} × ${v} = ${fmt(0.5 * v * t)} m.`, ['distance = area under the velocity–time graph', 'the graph is a triangle from 0 to the final speed', `½ × ${t} × ${v} = ${fmt(0.5 * v * t)} m`]);
   },
 

@@ -519,7 +519,7 @@ const G = {
     if (rng.chance(0.5)) return pairQ(`What are the coordinates of the turning point of y = (x ${a < 0 ? '+' : '−'} ${Math.abs(a)})² ${bq < 0 ? '−' : '+'} ${Math.abs(bq)}?`, [a, bq], `(x ${a < 0 ? '+' : '−'} ${Math.abs(a)})² is smallest (zero) when x = ${neg(a)}, giving y = ${neg(bq)}. Turning point (${neg(a)}, ${neg(bq)}).`, ['A square is never negative, so its smallest value is 0.', `That happens when x = ${neg(a)}.`, `Then y = ${neg(bq)}: the minimum point is (${neg(a)}, ${neg(bq)}).`]);
     const c = bq + a * a;
     return pairQ(`By completing the square, find the turning point of y = x² ${a > 0 ? '−' : '+'} ${Math.abs(2 * a)}x ${c < 0 ? '−' : '+'} ${Math.abs(c)}.`, [a, bq], `x² ${a > 0 ? '−' : '+'} ${Math.abs(2 * a)}x = (x ${a > 0 ? '−' : '+'} ${Math.abs(a)})² − ${a * a}. So y = (x ${a > 0 ? '−' : '+'} ${Math.abs(a)})² ${bq < 0 ? '−' : '+'} ${Math.abs(bq)}, with turning point (${neg(a)}, ${neg(bq)}).`,
-      [`Halve the x coefficient: ${neg(-a)}.`, `(x ${a > 0 ? '−' : '+'} ${Math.abs(a)})² = x² ${a > 0 ? '−' : '+'} ${Math.abs(2 * a)}x + ${a * a}, so subtract ${a * a}.`, `${c} − ${a * a} = ${neg(bq)}: turning point (${neg(a)}, ${neg(bq)}).`]);
+      [`Halve the x coefficient: ${neg(-a)}.`, `(x ${a > 0 ? '−' : '+'} ${Math.abs(a)})² = x² ${a > 0 ? '−' : '+'} ${Math.abs(2 * a)}x + ${a * a}, so subtract ${a * a}.`, `${neg(c)} − ${a * a} = ${neg(bq)}: turning point (${neg(a)}, ${neg(bq)}).`]);
   },
 
   // ---- distance–time and real-life graphs ----------------------------------------------------------
@@ -756,7 +756,7 @@ const G = {
     const kind = rng.pick(['both', 'atleast', 'same']);
     const dg = { type: 'tree', a: [['Red', F(r, n).toString()], ['Blue', F(b, n).toString()]], b2: [[['Red', F(r - 1, n - 1).toString()], ['Blue', F(b, n - 1).toString()]], [['Red', F(r, n - 1).toString()], ['Blue', F(b - 1, n - 1).toString()]]] };
     const rr = F(r * (r - 1), n * (n - 1)), bb = F(b * (b - 1), n * (n - 1));
-    if (kind === 'both') return num(`A bag holds ${r} red and ${b} blue counters. Two are taken WITHOUT replacement. What is P(both red)?`, rr.toString(), `First red: {{${r}/${n}}}. Then ${r - 1} red are left out of ${n - 1}: {{${r - 1}/${n - 1}}}. Multiply: ${tex(rr)}.`, ['Without replacement, the second branch changes.', `{{${r}/${n}}} × {{${r - 1}/${n - 1}}}.`, `= ${tex(rr)}.`], { diagram: dg, placeholder: 'e.g. 2/15' });
+    if (kind === 'both') return num(`A bag holds ${r} red and ${b} blue counters. Two are taken WITHOUT replacement. What is P(both red)?`, rr.toString(), `First red: {{${r}/${n}}}. Then ${r - 1} red ${r - 1 === 1 ? 'is' : 'are'} left out of ${n - 1}: {{${r - 1}/${n - 1}}}. Multiply: ${tex(rr)}.`, ['Without replacement, the second branch changes.', `{{${r}/${n}}} × {{${r - 1}/${n - 1}}}.`, `= ${tex(rr)}.`], { diagram: dg, placeholder: 'e.g. 2/15' });
     if (kind === 'atleast') { const ans = F(1).sub(rr); return num(`A bag holds ${r} red and ${b} blue counters. Two are taken without replacement. What is P(at least one blue)?`, ans.toString(), `P(at least one blue) = 1 − P(both red) = 1 − ${tex(rr)} = ${tex(ans)}.`, ['“At least one” is everything except “none”.', `P(both red) = {{${r}/${n}}} × {{${r - 1}/${n - 1}}} = ${tex(rr)}.`, `1 − ${tex(rr)} = ${tex(ans)}.`], { diagram: dg, placeholder: 'e.g. 13/15' }); }
     const ans = rr.add(bb);
     return num(`A bag holds ${r} red and ${b} blue counters. Two are taken without replacement. What is the probability they are the same colour?`, ans.toString(), `P(RR) = ${tex(rr)}, P(BB) = ${tex(bb)}. Add: ${tex(ans)}.`, [`Both red: {{${r}/${n}}} × {{${r - 1}/${n - 1}}}.`, `Both blue: {{${b}/${n}}} × {{${b - 1}/${n - 1}}}.`, `Add the two routes: ${tex(ans)}.`], { diagram: dg, placeholder: 'e.g. 7/15' });
@@ -861,7 +861,7 @@ const G = {
     }
     if (rng.chance(0.5)) {
       const a = rng.int(2, 9), b = rng.pick([2, 3, 5, 7, 11]);
-      return num(`Expand and simplify (${a} + √${b})(${a} − √${b}).`, a * a - b, `Difference of two squares: ${a}² − (√${b})² = ${a * a} − ${b} = ${a * a - b}.`, ['(p + q)(p − q) = p² − q².', `${a}² = ${a * a} and (√${b})² = ${b}.`, `${a * a} − ${b} = ${a * a - b}.`], { keypad: a * a - b >= 0 });
+      return num(`Expand and simplify (${a} + √${b})(${a} − √${b}).`, a * a - b, `Difference of two squares: ${a}² − (√${b})² = ${a * a} − ${b} = ${neg(a * a - b)}.`, ['(p + q)(p − q) = p² − q².', `${a}² = ${a * a} and (√${b})² = ${b}.`, `${a * a} − ${b} = ${neg(a * a - b)}.`], { keypad: a * a - b >= 0 });
     }
     const b = rng.pick([2, 3, 5, 6, 7]), k = rng.int(1, 4) * b;
     const c = k / b;

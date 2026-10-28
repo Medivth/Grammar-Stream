@@ -110,7 +110,9 @@ export const Y8_SCIENCE_GENERATORS = {
 
   y8sMagnify(level, rng) {
     if (level === 1) {
-      const obj = rng.pick([5, 10, 20]), eye = rng.pick([10, 20, 40]);
+      // school light microscopes have a ×10 eyepiece and ×4, ×10 and ×40 objectives on the turret
+      const obj = rng.pick([4, 10, 40]), eye = 10;
+      if (rng.chance(0.5)) return typed(`A microscope has a ×${eye} eyepiece lens. The total magnification is ×${eye * obj}. What is the magnification of the objective lens?`, obj, '', `Total magnification = eyepiece × objective, so objective = ${eye * obj} ÷ ${eye} = ×${obj}.`, ['total = eyepiece × objective', `objective = ${eye * obj} ÷ ${eye}`, `= ${obj}`]);
       return typed(`A microscope has a ×${eye} eyepiece lens and a ×${obj} objective lens. What is the total magnification?`, eye * obj, '', `Total magnification = eyepiece × objective = ${eye} × ${obj} = ×${eye * obj}.`, ['multiply the two lens magnifications', `${eye} × ${obj}`, `= ${eye * obj}`]);
     }
     const actual = rng.pick([0.01, 0.02, 0.05, 0.1]), mag = rng.pick([100, 200, 400, 500]);

@@ -111,7 +111,7 @@ export const MATHS2_GENERATORS = {
     const g = (a, b) => (b ? g(b, a % b) : a), k = g(r, d);
     const simp = k > 1 ? ` = ${q} {{${r / k}/${d / k}}}` : '';
     return {
-      kind: 'typed', prompt: `${n} ÷ ${d}. Give your answer as a mixed number.`, numeric: { value: `${q} ${r}/${d}`, form: 'mixed' },
+      kind: 'typed', prompt: `${n} ÷ ${d}. Give your answer as a mixed number.`, numeric: { value: `${q} ${r / k}/${d / k}`, form: 'mixed' },
       explain: `${n} ÷ ${d} = ${q} remainder ${r}. The remainder becomes the fraction ${r}/${d}: ${q} {{${r}/${d}}}${simp}.`,
       steps: [`${d} × ${q} = ${q * d}, so the whole-number part is ${q}.`, `${n} − ${q * d} = ${r} left over.`, `The remainder over the divisor gives the fraction: ${q} {{${r}/${d}}}${simp}.`],
     };

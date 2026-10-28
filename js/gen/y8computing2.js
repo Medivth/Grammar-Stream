@@ -28,7 +28,8 @@ const text = (prompt, answer, explain, steps, extra = {}) => ({ kind: 'typed', p
 
 const HEROES = ['Perseus', 'Theseus', 'Jason', 'Atalanta', 'Odysseus', 'Achilles', 'Hippolyta', 'Orpheus', 'Cadmus', 'Penelope'];
 const GODS = ['Zeus', 'Hera', 'Athena', 'Apollo', 'Artemis', 'Hermes', 'Poseidon', 'Hades', 'Demeter', 'Ares', 'Hestia'];
-const MONSTERS = ['Medusa', 'Minotaur', 'Hydra', 'Cyclops', 'Chimera', 'Cerberus', 'Sphinx', 'Scylla'];
+// each hero with a monster from their own myth
+const HERO_MONSTERS = [['Theseus', 'Minotaur'], ['Perseus', 'Medusa'], ['Heracles', 'Hydra'], ['Odysseus', 'Cyclops'], ['Bellerophon', 'Chimera'], ['Jason', 'dragon']];
 const WORDS = ['ATHENA', 'HERMES', 'OLYMPUS', 'LABYRINTH', 'ODYSSEY', 'PEGASUS', 'TRIDENT', 'ORACLE', 'SPARTA', 'DELPHI', 'MINOTAUR', 'ARGONAUT'];
 const KIDS = ['Mira', 'Theo', 'Kit'];
 const sample = (rng, arr, k) => rng.shuffle(arr).slice(0, k);
@@ -81,7 +82,7 @@ export const Y8_COMPUTING2_GENERATORS = {
 
   // --- dictionaries --------------------------------------------------------------------------
   y8dDicts(level, rng) {
-    const hero = rng.pick(HEROES), monster = rng.pick(MONSTERS), q = rng.int(2, 9);
+    const [hero, monster] = rng.pick(HERO_MONSTERS), q = rng.int(2, 9);
     if (level === 1) {
       const key = rng.pick(['name', 'monster']);
       const ans = key === 'name' ? hero : monster;
@@ -320,7 +321,7 @@ export const Y8_COMPUTING2_GENERATORS = {
   y8dHTML(level, rng) {
     if (level === 1) {
       const [g, b, title] = rng.pick([['Zeus', 'thunder', 'God'], ['Athena', 'wisdom', 'Goddess'], ['Poseidon', 'the sea', 'God'], ['Apollo', 'the sun', 'God'], ['Hermes', 'messages', 'God'], ['Demeter', 'the harvest', 'Goddess'], ['Artemis', 'the hunt', 'Goddess']]);
-      if (rng.chance(0.5)) return text(`Which words appear in **bold** when this page is shown?\n${code(`<h1>${g}</h1>`, `<p>${title} of <b>${b}</b> and much more.</p>`)}`, b, `<b>…</b> makes the text between the tags bold: “${b}”.`, ['Tags come in pairs: <b> opens, </b> closes.', 'Only text between them is bold.', `“${b}”.`]);
+      if (rng.chance(0.5)) return text(`Which words does the \`<b>\` tag make **bold** on this page?\n${code(`<h1>${g}</h1>`, `<p>${title} of <b>${b}</b> and much more.</p>`)}`, b, `<b>…</b> makes the text between the tags bold: “${b}”. (The heading “${g}” shows in bold too, because browsers make <h1> headings bold by default, but that is not the <b> tag.)`, ['Tags come in pairs: <b> opens, </b> closes.', 'Only text between them is bold.', `“${b}”.`]);
       const n = rng.int(3, 5), items = sample(rng, HEROES, n);
       return num(`How many bullet points does this page show?\n${code('<ul>', ...items.map((x) => `  <li>${x}</li>`), '</ul>')}`, n, `<ul> is an unordered (bulleted) list; each <li> is one item: ${n}.`, ['<ul> starts a bulleted list.', 'Each <li>…</li> is one bullet point.', `${n} bullets.`]);
     }

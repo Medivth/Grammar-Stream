@@ -331,8 +331,9 @@ export const GENERATORS = {
       const r = (p * amt) / 100;
       return {
         kind: 'typed', prompt: `What is ${p}% of ${amt}?`, numeric: { value: String(r), form: 'any' },
-        explain: `10% of ${amt} is ${amt / 10}. Build ${p}% from 10%s and 5%s: ${r}.`,
-        steps: [`10% of ${amt} is ${amt / 10}, and 5% is half of that: ${amt / 20}.`, p < 10 ? `So 5% of ${amt} is ${amt / 20}.` : `${p}% = ${Math.floor(p / 10)} × 10%${p % 10 ? ' + 5%' : ''} = ${Math.floor(p / 10) * amt / 10}${p % 10 ? ` + ${amt / 20}` : ''}.`, `So ${p}% of ${amt} = ${r}.`],
+        explain: p === 5 ? `10% of ${amt} is ${amt / 10}, and 5% is half of that: ${r}.` : `10% of ${amt} is ${amt / 10}. Build ${p}% from 10%s${p % 10 ? ' and 5%s' : ''}: ${r}.`,
+        steps: p === 5 ? [`10% of ${amt} is ${amt / 10}.`, `5% is half of that: ${amt / 20}.`, `So 5% of ${amt} = ${r}.`]
+          : [p % 10 ? `10% of ${amt} is ${amt / 10}, and 5% is half of that: ${amt / 20}.` : `10% of ${amt} is ${amt / 10}.`, `${p}% = ${Math.floor(p / 10)} × 10%${p % 10 ? ' + 5%' : ''} = ${Math.floor(p / 10) * amt / 10}${p % 10 ? ` + ${amt / 20}` : ''}.`, `So ${p}% of ${amt} = ${r}.`],
       };
     }
     const p = rng.pick([10, 20, 25, 50, 15]); const amt = rng.int(2, 20) * 20; const up = rng.chance(0.5);

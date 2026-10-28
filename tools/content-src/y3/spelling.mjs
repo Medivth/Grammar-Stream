@@ -183,7 +183,7 @@ items.push(
   fact('sh.magician', 'y3-shun', 'Add the “shun” ending to “magic” to make a job.', 'magician', ['magition', 'magission', 'magisian'], 'magic ends in c, so -cian.', strict),
   fact('sh.electrician', 'y3-shun', 'Add the “shun” ending to “electric” to make a job.', 'electrician', ['electrition', 'electrision', 'electricion'], 'electric ends in c, so -cian: electrician.', strict),
   fact('sh.musician', 'y3-shun', 'Add the “shun” ending to “music” to make a job.', 'musician', ['musition', 'musicion', 'musision'], 'music ends in c, so -cian: musician.', strict),
-  mcq('sh.station', 'y3-shun', 'Which is spelt correctly?', [['station', true], ['stasion', false, '-tion is the most common “shun” spelling.'], ['stassion', false, 'Only words with ss in the root use -ssion.']], '-tion is the most common way to spell “shun”.'),
+  mcq('sh.station', 'y3-shun', 'Which is spelt correctly?', [['station', true], ['stasion', false, '-tion is the most common “shun” spelling.'], ['stassion', false, '-ssion is only for roots ending in ss or -mit (discuss, permit).']], '-tion is the most common way to spell “shun”.'),
 
   // --- unusual sounds
   fact('so.myth', 'y3-sounds', 'In “myth”, which letter makes the short “i” sound?', 'y', ['i', 'e', 'h'], 'y can say a short “i” in the middle of words: myth, gym, pyramid, Egypt.', choiceOnly),

@@ -222,8 +222,8 @@ const G = {
     }
     const b = rng.pick(['x', 'a', 'y']), m = rng.int(3, 7), k = rng.int(-4, -1), n = rng.int(1, 6);
     const r = m + k - n;
-    return num(`(${b}${sup(m)} × ${b}${sup(k)}) ÷ ${b}${sup(n)} = ${b}ⁿ. What is n?`, r, `Add for ×, subtract for ÷: ${m} + ${paren(k)} − ${n} = ${neg(r)}.${r < 0 ? ` (So the answer is 1/${b}${sup(-r)}.)` : ''}`,
-      ['The index laws work for negative indices too.', `Inside the bracket: ${m} + ${paren(k)} = ${m + k}.`, `Then ${m + k} − ${n} = ${neg(r)}.`]);
+    return num(`(${b}${sup(m)} × ${b}${sup(k)}) ÷ ${b}${sup(n)} = ${b}ⁿ. What is n?`, r, `Add for ×, subtract for ÷: ${m} + ${paren(k)} − ${n} = ${neg(r)}.${r < 0 ? ` (So the answer is 1/${b}${r === -1 ? '' : sup(-r)}.)` : ''}`,
+      ['The index laws work for negative indices too.', `Inside the bracket: ${m} + ${paren(k)} = ${neg(m + k)}.`, `Then ${neg(m + k)} − ${n} = ${neg(r)}.`]);
   },
 
   // ---- standard form --------------------------------------------------------------------
@@ -973,14 +973,14 @@ const G = {
           ['Expected frequency = probability × number of trials.', `${tex(F(n, d))} × ${T}.`, `= ${(T * F(n, d).n) / F(n, d).d}.`]);
       }
       const r = rng.int(1, 9), b = rng.int(1, 9), g = rng.int(1, 9), T = r + b + g, col = rng.pick([['red', r], ['blue', b], ['green', g]]);
-      return fracQ(`A bag holds ${r} red, ${b} blue and ${g} green gems. One is picked at random. What is the probability it is ${col[0]}?`, F(col[1], T), `${col[1]} of the ${T} gems are ${col[0]}: ${tex(F(col[1], T))}.`, [`Total gems: ${T}.`, `${col[0]}: ${col[1]}.`, `P = ${col[1]}/${T}${gcd(col[1], T) > 1 ? ` = ${tex(F(col[1], T))}` : ''}.`]);
+      return fracQ(`A bag holds ${r} red, ${b} blue and ${g} green gems. One is picked at random. What is the probability it is ${col[0]}?`, F(col[1], T), `${col[1]} of the ${T} gems ${col[1] === 1 ? 'is' : 'are'} ${col[0]}: ${tex(F(col[1], T))}.`, [`Total gems: ${T}.`, `${col[0]}: ${col[1]}.`, `P = ${col[1]}/${T}${gcd(col[1], T) > 1 ? ` = ${tex(F(col[1], T))}` : ''}.`]);
     }
     if (level === 2) {
       const kind = rng.pick(['dice', 'table', 'relfreq']);
       if (kind === 'dice') {
         const s = rng.int(3, 11), over = rng.chance(0.4);
         let count = 0; for (let a = 1; a <= 6; a++) for (let b = 1; b <= 6; b++) if (over ? a + b > s : a + b === s) count++;
-        return fracQ(`Two fair dice are rolled and the scores added. What is the probability the total is ${over ? `more than ${s}` : s}?`, F(count, 36), `There are 36 equally likely outcomes; ${count} of them give ${over ? `more than ${s}` : `a total of ${s}`}: ${tex(F(count, 36))}.`,
+        return fracQ(`Two fair dice are rolled and the scores added. What is the probability the total is ${over ? `more than ${s}` : s}?`, F(count, 36), `There are 36 equally likely outcomes; ${count} of them ${count === 1 ? 'gives' : 'give'} ${over ? `more than ${s}` : `a total of ${s}`}: ${tex(F(count, 36))}.`,
           ['Draw a 6 × 6 sample space: 36 outcomes.', `Count the outcomes that work: ${count}.`, `${count}/36${gcd(count, 36) > 1 ? ` = ${tex(F(count, 36))}` : ''}.`]);
       }
       if (kind === 'table') {
@@ -1002,7 +1002,7 @@ const G = {
       const [cnt, desc] = { Aonly: [a - c, 'study astronomy but NOT Greek'], neither: [out, 'study neither subject'], either: [a + b - c, 'study astronomy or Greek (or both)'], both: [c, 'study both'] }[kind];
       const showVenn = rng.chance(0.5);
       return fracQ(`${showVenn ? 'The Venn diagram shows' : `In a class of ${N},`} ${showVenn ? `a class of ${N}: A = astronomy, G = Greek.` : `${a} study astronomy, ${b} study Greek and ${c} study both.`} One student is chosen at random. What is the probability they ${desc}?`, F(cnt, N),
-        `${showVenn ? '' : `Astronomy only: ${a} − ${c} = ${a - c}; Greek only: ${b} − ${c} = ${b - c}; neither: ${N} − ${a + b - c} = ${out}. `}${cnt} of the ${N} students ${desc}: ${tex(F(cnt, N))}.`,
+        `${showVenn ? '' : `Astronomy only: ${a} − ${c} = ${a - c}; Greek only: ${b} − ${c} = ${b - c}; neither: ${N} − ${a + b - c} = ${out}. `}${cnt} of the ${N} students ${cnt === 1 ? desc.replace(/^study/, 'studies') : desc}: ${tex(F(cnt, N))}.`,
         [showVenn ? 'Read the regions of the diagram.' : `Put the ${c} in the middle first, then fill the rest: ${a - c} astronomy only, ${b - c} Greek only, ${out} outside.`, `The students who ${desc}: ${cnt}.`, `P = ${cnt}/${N}${gcd(cnt, N) > 1 ? ` = ${tex(F(cnt, N))}` : ''}.`],
         showVenn ? { diagram: { type: 'venn', labels: ['A', 'G'], only: [a - c, b - c], both: c, out } } : {});
     }
@@ -1124,9 +1124,12 @@ const G = {
     }
     const a = rng.int(2, 5), b = rng.int(2, 5), c = rng.int(2, 5), d = rng.int(-4, -1);
     if (a * d === b * c) return G.y8mSimultaneous(level, rng);
+    // scale each equation only as far as the lowest common multiple of the x coefficients (not at all when they already match)
+    const L = lcm(a, c), m1 = L / a, m2 = L / c, co = m1 * b - m2 * d;
+    const match = a === c ? `The x terms are already both ${a}x.` : m1 === 1 ? `Multiply the second by ${m2}, so the x terms are both ${L}x.` : m2 === 1 ? `Multiply the first by ${m1}, so the x terms are both ${L}x.` : `Multiply the first by ${m1} and the second by ${m2}, so the x terms are both ${L}x.`;
     return pairQ(`Solve: ${a}x + ${b}y = ${neg(a * x + b * y)} and ${c}x${sgn(d)}y = ${neg(c * x + d * y)}. Give (x, y).`.replace(/ − 1y/, ' − y'), [x, y],
-      `Multiply to make one pair of coefficients match, then add or subtract. x = ${neg(x)}, y = ${neg(y)}.`,
-      [`Multiply the first by ${c} and the second by ${a}, so the x terms are both ${a * c}x.`, `Subtract to find y = ${neg(y)}.`, `Substitute back: x = ${neg(x)}.`]);
+      `${a === c ? 'The x terms already match, so subtract' : 'Multiply to make the x coefficients match, then subtract'}: ${co}y = ${neg(co * y)}, so y = ${neg(y)}. Then x = ${neg(x)}.`,
+      [match, `Subtract to find ${co}y = ${neg(co * y)}, so y = ${neg(y)}.`, `Substitute back: x = ${neg(x)}.`]);
   },
 
   y8mQuadratics(level, rng) {

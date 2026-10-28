@@ -207,7 +207,7 @@ const MEMORY = {
   'at.compound': { hook: '**Com**pound = **com**bined: different atoms bonded into a new substance.', example: 'Table salt is sodium (a metal that fizzes on water) joined to chlorine (a poisonous gas), yet you sprinkle it on chips.' },
   'at.count': { example: 'Everything you can see, from your desk to your dinner to you, is built from combinations of these elements.' },
   'at.mendeleev': { hook: 'Mendeleev is said to have sorted cards of the elements like a game of patience, leaving gaps for missing ones.' },
-  'at.o': { hook: 'Most symbols are first letters: **O**xygen, **H**ydrogen, **C**arbon, **N**itrogen.', example: 'Oxygen cylinders in hospitals and ambulances are labelled O₂.' },
+  'at.o': { hook: 'Many symbols start with the element’s first letter: **O**xygen, **H**ydrogen, **C**arbon, **N**itrogen.', example: 'Oxygen cylinders in hospitals and ambulances are labelled O₂.' },
   'at.na': { hook: '**Na** from **na**trium. Sodium is the Na in NaCl, table salt.', example: 'Old orange street lights in the UK were sodium lamps.' },
   'at.fe': { hook: '**Fe** from **fe**rrum. “Ferrous” metals contain iron.', example: 'Breakfast cereal boxes often say “fortified with iron”: check the label.' },
   'at.au': { hook: '**Au**: “**A**y, yo**u**! Give me back my gold!”', example: 'Olympic gold medals are mostly silver with a coating of gold.' },
