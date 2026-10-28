@@ -434,13 +434,16 @@ const SONNET_FORM = {
   caption: 'The Prologue: 4 + 4 + 4 + 2 = 14 lines of iambic pentameter, clinched by a rhyming couplet.',
 };
 const ANTHEM_FORM = {
-  kind: 'table', head: ['', 'Octave: lines 1–8', 'Sestet: lines 9–14'], tint: 'cols',
+  kind: 'table', head: ['', 'Funeral rite', 'Owen’s replacement'],
   rows: [
-    ['Where', 'the battlefield', 'home'],
-    ['Mood', 'loud and angry', 'quiet and tender'],
-    ['Funeral rites', 'bells → **guns**; prayers → **rifles**; choirs → **shells**', 'candles → **eyes**; pall → **pale brows**; flowers → **patient minds**'],
+    ['Octave', 'passing-bells', 'the anger of the **guns**'],
+    ['Octave', 'prayers', 'the **rifles**’ rapid rattle'],
+    ['Octave', 'choirs', 'wailing **shells**'],
+    ['Sestet', 'candles', 'glimmers in boys’ **eyes**'],
+    ['Sestet', 'pall', 'the pallor of girls’ **brows**'],
+    ['Sestet', 'flowers', 'the tenderness of **patient minds**'],
   ],
-  caption: 'The volta comes at line 9: from the noise of the front to grief at home.',
+  caption: 'Octave (lines 1–8): the noise of the front. The volta at line 9 turns to the sestet (lines 9–14): quiet grief at home.',
 };
 const TOPIC_VISUALS = {
   myths: SEASONS,

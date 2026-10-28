@@ -256,7 +256,7 @@ export const Y3_GENERATORS = {
     if (kind === 'nonunit-whole') { const d = rng.pick([4, 5, 8]), n = rng.int(2, d - 1), k = rng.int(2, 9); return typed(`{{${n}/${d}}} of a number is ${n * k}. What is the number?`, d * k, `${n} parts make ${n * k}, so one part is ${k}, and ${d} parts make ${d * k}.`, [`${n} parts = ${n * k}, so 1 part = ${n * k} ÷ ${n} = ${k}.`, `The whole is ${d} parts.`, `${d} × ${k} = ${d * k}.`], fracBar(n, d, k)); }
     const [what, total, unit] = rng.pick([['1 hour', 60, 'minutes'], ['£1', 100, 'pence'], ['1 metre', 100, 'centimetres']]);
     const d = rng.pick([2, 4, 5, 10].filter((x) => total % x === 0)), n = rng.int(1, d - 1);
-    return typed(`How many ${unit} are in {{${n}/${d}}} of ${what}?`, (total * n) / d, n === 1 ? `${what} = ${total} ${unit}. {{1/${d}}} of ${total} is ${total} ÷ ${d} = ${total / d}.` : `${what} = ${total} ${unit}. {{1/${d}}} is ${total / d}, so {{${n}/${d}}} is ${(total * n) / d}.`, [`${what} is ${total} ${unit}.`, `{{1/${d}}} of ${total} = ${total / d}.`, `${n} × ${total / d} = ${(total * n) / d}.`], fracBar(n, d, total / d, `${what} = ${total} ${unit}`));
+    return typed(`How many ${unit} are in {{${n}/${d}}} of ${what}?`, (total * n) / d, n === 1 ? `${what} = ${total} ${unit}. {{1/${d}}} of ${total} is ${total} ÷ ${d} = ${total / d}.` : `${what} = ${total} ${unit}. {{1/${d}}} is ${total / d}, so {{${n}/${d}}} is ${(total * n) / d}.`, [`${what} is ${total} ${unit}.`, `{{1/${d}}} of ${total} = ${total / d}.`, `${n} × ${total / d} = ${(total * n) / d}.`], fracBar(n, d, total / d, `${total} ${unit}`));
   },
 
   y3FracCalc(level, rng) {

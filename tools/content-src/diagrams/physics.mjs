@@ -186,23 +186,23 @@ function symbols() {
 function solarSystem() {
   const S = [-70, 100], SR = 112, y = 100;
   const P = [
-    ['mercury', 'Mercury', 62, 5, '#a7a29c'], ['venus', 'Venus', 96, 9, '#e3c27a'], ['earth', 'Earth', 134, 10, '#3d7fd6'],
-    ['mars', 'Mars', 194, 7, '#b0452f'], ['jupiter', 'Jupiter', 252, 28, '#d8b48a'], ['saturn', 'Saturn', 336, 21, '#e2cd8c'],
-    ['uranus', 'Uranus', 410, 13, '#8fd6de'], ['neptune', 'Neptune', 452, 13, '#4867d6'],
+    ['mercury', 'Mercury', 64, 8, '#a7a29c'], ['venus', 'Venus', 98, 11, '#e3c27a'], ['earth', 'Earth', 136, 12, '#3d7fd6'],
+    ['mars', 'Mars', 194, 9.5, '#b0452f'], ['jupiter', 'Jupiter', 252, 28, '#d8b48a'], ['saturn', 'Saturn', 336, 21, '#e2cd8c'],
+    ['uranus', 'Uranus', 410, 15, '#8fd6de'], ['neptune', 'Neptune', 454, 15, '#4867d6'],
   ];
   const orbits = P.map(([, , x]) => { const R = x - S[0]; const a = Math.asin(Math.min(0.99, 92 / R)) / D; return arcBand(S[0], S[1], R, -a, a, 1.2); }).join('');
-  const moon = [158, 84];
+  const moon = [163, 80];
   const labels = {
-    mercury: [[62, 95], [68, 20]], venus: [[96, 109], [102, 178]], earth: [[134, 110], [140, 156]], mars: [[194, 106], [200, 178]],
-    jupiter: [[252, 72], [258, 20]], saturn: [[336, 121], [342, 156]], uranus: [[410, 87], [416, 44]], neptune: [[452, 113], [458, 178]],
+    mercury: [[64, 94], [70, 20]], venus: [[98, 109], [104, 178]], earth: [[136, 110], [142, 156]], mars: [[194, 107], [200, 178]],
+    jupiter: [[252, 72], [258, 20]], saturn: [[336, 121], [342, 156]], uranus: [[410, 87], [416, 44]], neptune: [[454, 113], [460, 178]],
   };
   return {
     id: 'solar-system', kind: 'diagram',
-    viewBox: [-6, 34, 478, 132], labelViewBox: [-6, 4, 540, 192], labelSize: 18,
+    viewBox: [-6, 34, 482, 132], labelViewBox: [-6, 4, 546, 192], labelSize: 18,
     decor: [
       { d: orbits, fill: 'rgba(141,156,184,0.5)', under: true },
       // Earth's land, Jupiter's bands and spot, Saturn's rings
-      { d: many(pg([[128, 94], [134, 92], [137, 98], [132, 103], [129, 100]]), pg([[137, 104], [141, 103], [140, 108], [136, 109]])), fill: '#5aa35a' },
+      { d: many(pg([[129, 93], [136, 91], [139, 98], [134, 104], [130, 100]]), pg([[140, 104], [145, 103], [143, 109], [138, 110]])), fill: '#5aa35a' },
       { d: many(box(226, 88, 52, 4), box(225, 102, 54, 5), box(229, 113, 46, 3)), fill: '#b4865a' },
       { d: oval(262, 108, 5, 3), fill: '#a8513a' },
       { d: ovalBand(336, 100, 42, 10, 29, 6, 180, 360), fill: '#b39a5e' },
@@ -212,7 +212,7 @@ function solarSystem() {
     features: [
       { id: 'sun', name: 'Sun', d: circ(...S, SR), fill: '#ffcd29', label: [18, 188], at: [12, 150] },
       ...P.map(([id, name, x, r, fill]) => ({ id, name, d: circ(x, y, r), fill, label: labels[id][1], at: labels[id][0] })),
-      { id: 'moon', name: 'Moon', d: circ(...moon, 4), fill: '#c9c6c0', label: [164, 44], at: [158, 81] },
+      { id: 'moon', name: 'Moon', d: circ(...moon, 6), fill: '#c9c6c0', label: [169, 44], at: [163, 76] },
     ],
   };
 }
@@ -221,8 +221,9 @@ function solarSystem() {
 // 4. A carbon atom: 6 protons and 6 neutrons in the nucleus, 6 electrons in shells (2, 4).
 function atom() {
   const C = [150, 150];
-  const ball = [[0, 0], [15, 2], [-14, 4], [6, -13], [-7, -12], [4, 15], [-8, 15], [17, -11], [-18, -9], [20, 11], [-20, 13], [1, -24]];
-  const protons = [0, 2, 4, 5, 7, 10], neutrons = [1, 3, 6, 8, 9, 11];
+  // three particles in the middle and nine round them, touching but not overlapping
+  const ball = [...[90, 210, 330].map((a) => pt(0, 0, 9.6, a)), ...Array.from({ length: 9 }, (_, k) => pt(0, 0, 26.5, 100 + k * 40))];
+  const protons = [0, 3, 5, 7, 9, 11], neutrons = [1, 2, 4, 6, 8, 10];
   const at = (i) => [C[0] + ball[i][0], C[1] + ball[i][1]];
   const e1 = [90, 270].map((a) => pt(...C, 58, a)), e2 = [45, 135, 225, 315].map((a) => pt(...C, 106, a));
   return {
@@ -234,9 +235,9 @@ function atom() {
     ],
     features: [
       { id: 'shells', name: 'electron shells', d: ring(...C, 58, 5) + ring(...C, 106, 5), fill: '#8d9cb8', label: [292, 236], at: [...pt(...C, 106, -32)] },
-      { id: 'nucleus', name: 'nucleus', d: circ(...C, 36), fill: '#f6d5e2', label: [24, 108], at: [126, 124] },
-      { id: 'protons', name: 'protons', d: many(...protons.map((i) => circ(...at(i), 9))), fill: '#d6336c', label: [24, 192], at: [130, 163] },
-      { id: 'neutrons', name: 'neutrons', d: many(...neutrons.map((i) => circ(...at(i), 9))), fill: '#7d8ba3', label: [24, 150], at: [132, 141] },
+      { id: 'nucleus', name: 'nucleus', d: circ(...C, 38), fill: '#f6d5e2', label: [24, 108], at: [...pt(...C, 36, 125)] },
+      { id: 'protons', name: 'protons', d: many(...protons.map((i) => circ(...at(i), 8.3))), fill: '#d6336c', label: [24, 150], at: [...at(5)] },
+      { id: 'neutrons', name: 'neutrons', d: many(...neutrons.map((i) => circ(...at(i), 8.3))), fill: '#7d8ba3', label: [24, 192], at: [...at(6)] },
       { id: 'electrons', name: 'electrons', d: many(...[...e1, ...e2].map(([x, y]) => circ(x, y, 9))), fill: '#2f8fd8', label: [292, 60], at: [...e2[0]] },
     ],
   };
@@ -317,20 +318,20 @@ function reflection() {
   const mid = (a, f) => pt(...P, L * f, a);
   return {
     id: 'reflection', kind: 'diagram',
-    viewBox: [110, 16, 216, 268], labelViewBox: [16, 0, 372, 290], labelSize: 18,
+    viewBox: [110, 16, 216, 268], labelViewBox: [16, -6, 372, 296], labelSize: 18,
     decor: [
       { d: hatch.join(''), fill: '#7a8aa6', under: true },
       { d: dash(P[0] - 4, P[1], 122, P[1], 2.5, 8, 6), fill: '#4f5d78' },
       // rays, each with an arrow showing which way the light goes
-      { d: many(ln(...A, ...P, 4), head(...mid(180 - i, 0.45), -i, 15, 13), ln(...P, ...B, 4), head(...mid(180 + i, 0.6), 180 + i, 15, 13)), fill: RAY },
+      { d: many(head(...mid(180 - i, 0.42), -i, 17, 15), head(...mid(180 + i, 0.62), 180 + i, 17, 15)), fill: '#8a5a00' },
     ],
     features: [
-      { id: 'mirror', name: 'mirror', d: box(296, mirrorTop, 10, mirrorBot - mirrorTop, 3), fill: '#9cc3e4', label: [314, 8], at: [301, mirrorTop + 8] },
+      { id: 'mirror', name: 'mirror', d: box(296, mirrorTop, 10, mirrorBot - mirrorTop, 3), fill: '#9cc3e4', label: [314, 10], at: [301, mirrorTop + 10] },
       { id: 'normal', name: 'normal', d: box(118, P[1] - 9, P[0] - 120, 18, 6), fill: 'rgba(79,93,120,0.16)', label: [110, 150], at: [124, 150] },
       { id: 'angle-i', name: 'angle of incidence', d: sector(...P, 64, 180 - i, 180), fill: 'rgba(122,92,214,0.38)', label: [226, 120], at: [258, 138] },
       { id: 'angle-r', name: 'angle of reflection', d: sector(...P, 64, 180, 180 + i), fill: 'rgba(47,158,143,0.38)', label: [226, 180], at: [258, 162] },
-      { id: 'incident', name: 'incident ray', d: ln(...A, ...P, 12), fill: 'rgba(217,154,0,0.2)', label: [160, 34], at: [...mid(180 - i, 0.88)] },
-      { id: 'reflected', name: 'reflected ray', d: ln(...P, ...B, 12), fill: 'rgba(217,154,0,0.2)', label: [160, 266], at: [...mid(180 + i, 0.88)] },
+      { id: 'incident', name: 'incident ray', d: ln(...A, ...pt(...P, 2, 180 - i), 7), fill: RAY, label: [160, 34], at: [...mid(180 - i, 0.88)] },
+      { id: 'reflected', name: 'reflected ray', d: ln(...pt(...P, 2, 180 + i), ...B, 7), fill: RAY, label: [160, 266], at: [...mid(180 + i, 0.88)] },
     ],
   };
 }

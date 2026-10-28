@@ -53,6 +53,9 @@
       { kind: 'maths', diagram: { type: 'solid', shape: 'cylinder' } },
       { kind: 'maths', diagram: { type: 'solid', shape: 'cone' } },
       { kind: 'maths', diagram: { type: 'solid', shape: 'sphere' } },
+      { kind: 'maths', diagram: { type: 'line', title: 'Gas given off', xs: ['0', '10', '20', '30', '40', '50'], series: [{ name: 'large chips', ys: [0, 22, 38, 50, 56, 58] }, { name: 'powder', ys: [0, 48, 72, 84, 88, 90] }], ylabel: 'cm³', xlabel: 'time (s)' } },
+      { kind: 'maths', diagram: { type: 'line', title: 'CO₂ in the air', xs: ['1800', '1900', '1960', '2000', '2025'], ys: [280, 296, 317, 369, 427], min: 260, scaleX: true, ylabel: 'ppm' } },
+      { kind: 'maths', diagram: { type: 'line', title: 'Temperature during one day', xs: ['6', '9', '12', '15', '18'], ys: [4, 9, 14, 13, 8], ylabel: '°C' } },
     ];
     if (q.get('sample')) SAMPLES.forEach((v, i) => card(`sample ${i} ${v.kind}`, renderVisual(v)));
     else if (q.get('diagrams')) {

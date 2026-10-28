@@ -30,29 +30,24 @@
      "kind": "table",
      "head": [
       "shape",
-      "used for",
-      "example"
+      "used for"
      ],
      "rows": [
       [
        "oval",
-       "Start and Stop",
-       "Start"
+       "Start and Stop"
       ],
       [
        "parallelogram",
-       "input or output",
-       "Ask for a name"
+       "input or output: Ask for a name"
       ],
       [
        "rectangle",
-       "a process",
-       "add 1 to score"
+       "a process: add 1 to score"
       ],
       [
        "diamond",
-       "a decision (Yes/No)",
-       "Is score > 10?"
+       "a decision, with Yes and No exits"
       ]
      ]
     },
@@ -172,23 +167,25 @@
    "hook": "**A list starts counting at 0**: the first item is at index 0.",
    "visual": {
     "kind": "table",
+    "head": [
+     "index",
+     "item",
+     "from the end"
+    ],
     "rows": [
      [
-      "index",
       "0",
-      "1",
-      "2"
-     ],
-     [
-      "item",
       "\"Clio\"",
-      "\"Calliope\"",
-      "\"Urania\""
+      "−3"
      ],
      [
-      "from the end",
-      "−3",
-      "−2",
+      "1",
+      "\"Calliope\"",
+      "−2"
+     ],
+     [
+      "2",
+      "\"Urania\"",
       "−1"
      ]
     ],
@@ -221,40 +218,13 @@
    "talk": "Play “I’m thinking of a number from 1 to 100” and count how many guesses halving takes.",
    "hook": "**Binary search: halve, halve, halve**, but only on a sorted list.",
    "visual": {
-    "kind": "table",
-    "rows": [
-     [
-      "index",
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6"
-     ],
-     [
-      "check 1",
-      "4",
-      "9",
-      "15",
-      "**22**",
-      "30",
-      "41",
-      "56"
-     ],
-     [
-      "check 2",
-      "",
-      "",
-      "",
-      "",
-      "30",
-      "**41**",
-      "56"
-     ]
+    "kind": "flow",
+    "steps": [
+     "Sorted list: 4 9 15 22 30 41 56",
+     "Check the middle, **22**. 41 is bigger, so drop 22 and everything left of it",
+     "Left: 30 41 56. Check the middle, **41**: found!"
     ],
-    "caption": "Binary search for 41. Check the middle (22): 41 is bigger, so drop 22 and everything left of it. The middle of what is left is 41: found in 2 checks. A linear search needs 6."
+    "caption": "Binary search for 41: found in 2 checks. A linear search, checking each item in turn, needs 6."
    }
   },
   {
@@ -933,7 +903,7 @@
    "visual": {
     "kind": "table",
     "head": [
-     "heroID",
+     "id",
      "name",
      "home",
      "strength"
@@ -964,8 +934,7 @@
       "88"
      ]
     ],
-    "tint": "rows",
-    "caption": "Table Heroes. Each row is a record; each column is a field. heroID is the primary key: unique for every record."
+    "caption": "Table Heroes. Each row is a record; each column is a field. id is the primary key: unique for every record."
    }
   },
   {
@@ -1162,29 +1131,24 @@
     "kind": "table",
     "head": [
      "shape",
-     "used for",
-     "example"
+     "used for"
     ],
     "rows": [
      [
       "oval",
-      "Start and Stop",
-      "Start"
+      "Start and Stop"
      ],
      [
       "parallelogram",
-      "input or output",
-      "Ask for a name"
+      "input or output: Ask for a name"
      ],
      [
       "rectangle",
-      "a process",
-      "add 1 to score"
+      "a process: add 1 to score"
      ],
      [
       "diamond",
-      "a decision (Yes/No)",
-      "Is score > 10?"
+      "a decision, with Yes and No exits"
      ]
     ]
    }
@@ -1210,29 +1174,24 @@
     "kind": "table",
     "head": [
      "shape",
-     "used for",
-     "example"
+     "used for"
     ],
     "rows": [
      [
       "oval",
-      "Start and Stop",
-      "Start"
+      "Start and Stop"
      ],
      [
       "parallelogram",
-      "input or output",
-      "Ask for a name"
+      "input or output: Ask for a name"
      ],
      [
       "rectangle",
-      "a process",
-      "add 1 to score"
+      "a process: add 1 to score"
      ],
      [
       "diamond",
-      "a decision (Yes/No)",
-      "Is score > 10?"
+      "a decision, with Yes and No exits"
      ]
     ]
    }
@@ -1913,20 +1872,26 @@
    "example": "A three-storey UK house has floors 0, 1 and 2: there is no floor 3.",
    "visual": {
     "kind": "table",
+    "head": [
+     "index",
+     "item"
+    ],
     "rows": [
      [
-      "index",
       "0",
-      "1",
-      "2",
-      "3"
+      "\"Clio\""
      ],
      [
-      "item",
-      "\"Clio\"",
-      "\"Calliope\"",
-      "\"Urania\"",
-      "**nothing: IndexError**"
+      "1",
+      "\"Calliope\""
+     ],
+     [
+      "2",
+      "\"Urania\""
+     ],
+     [
+      "3",
+      "**nothing there: IndexError**"
      ]
     ]
    }
@@ -2802,9 +2767,9 @@
        "0"
       ],
       [
-       "0",
-       "0",
-       "0",
+       "",
+       "",
+       "",
        "1",
        "0",
        "1",

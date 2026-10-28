@@ -118,7 +118,7 @@ function insect() {
     return poly([[150 - hw(y0), y0], [150 + hw(y0), y0], [150 + hw(y1), y1], [150 - hw(y1), y1]]);
   };
   return {
-    id: 'insect', kind: 'diagram', viewBox: [40, 8, 220, 228], labelViewBox: [-30, 8, 360, 228], labelSize: 14,
+    id: 'insect', kind: 'diagram', viewBox: [40, 8, 220, 228], labelViewBox: [-38, 8, 368, 228], labelSize: 14,
     decor: [
       { d: many(band(156, 165), band(177, 186), band(198, 207)), fill: '#5a3f26' },
       { d: many(ellR(138, 58, 6, 10, -25), ellR(162, 58, 6, 10, 25)), fill: '#3a2c3f' },
@@ -145,7 +145,7 @@ function spider() {
   const legs = [...legL, ...legL.map((l) => mirror(l, 150))].map((l) => tube(l, 6, 3));
   const palp = [[142, 72], [137, 60], [140, 52]];
   return {
-    id: 'spider', kind: 'diagram', viewBox: [30, 4, 240, 236], labelViewBox: [-14, 4, 410, 236], labelSize: 16,
+    id: 'spider', kind: 'diagram', viewBox: [30, 4, 240, 236], labelViewBox: [-14, 4, 420, 236], labelSize: 16,
     decor: [
       { d: many(tube(palp, 5, 4), tube(mirror(palp, 150), 5, 4)), fill: '#6e523e', under: true },
       { d: many(ell(144, 78, 3, 3), ell(156, 78, 3, 3), ell(139, 84, 2.4, 2.4), ell(161, 84, 2.4, 2.4), ell(147, 72, 2.4, 2.4), ell(153, 72, 2.4, 2.4)), fill: '#2b2230' },
@@ -185,7 +185,7 @@ function skeleton() {
     blob(side(r, [[138, 536], [153, 536], [166, 550], [171, 560], [140, 561]])));
   const clav = [[134, 123], [156, 118], [178, 125]];
   return {
-    id: 'skeleton', kind: 'diagram', viewBox: [52, 4, 156, 562], labelViewBox: [-12, 4, 284, 562], labelSize: 16,
+    id: 'skeleton', kind: 'diagram', viewBox: [52, 4, 156, 562], labelViewBox: [-12, 4, 296, 562], labelSize: 16,
     decor: [
       { d: many(arm(true), arm(false), leg(true), leg(false), tube(clav, 6, 5), tube(mirror(clav, 130), 6, 5)), fill: '#d9c9a2', under: true },
       { d: many(ell(119, 50, 8, 9), ell(141, 50, 8, 9), poly([[130, 59], [125, 71], [135, 71]])), fill: '#6b5d4a' },
@@ -248,7 +248,7 @@ function teeth() {
   const arch = [];
   for (let p = -1.5; p <= 1.501; p += 0.1) arch.push(at(p));
   return {
-    id: 'teeth', kind: 'diagram', viewBox: [22, 22, 276, 240], labelViewBox: [-50, 22, 420, 240], labelSize: 16,
+    id: 'teeth', kind: 'diagram', viewBox: [22, 22, 276, 240], labelViewBox: [-70, 22, 446, 240], labelSize: 17,
     decor: [{ d: tube(arch, 46, 46), fill: '#e79aa8', under: true }],
     features: [
       { id: 'incisors', name: 'incisors', d: many(...shapes.i), fill: '#dcebf7', label: [40, 40], at: avg(mid['i-1']) },
@@ -265,14 +265,14 @@ function teeth() {
 function heart() {
   const blue = '#5a86c8', red = '#c8466a', blueV = '#4f7cc0', redV = '#c04064';
   return {
-    id: 'heart', kind: 'diagram', viewBox: [62, 12, 270, 368], labelViewBox: [-36, -62, 432, 504], labelSize: 17,
+    id: 'heart', kind: 'diagram', viewBox: [62, 12, 270, 368], labelViewBox: [-60, -62, 484, 504], labelSize: 18,
     decor: [
       { d: blob([[82, 112], [150, 100], [220, 104], [292, 114], [304, 170], [296, 240], [268, 304], [222, 356], [196, 374], [168, 352], [118, 296], [84, 236], [72, 170]]), fill: '#e7a7a0', under: true },
     ],
     features: [
       { id: 'vena-cava', name: 'vena cava', d: tube([[104, 18], [106, 70], [110, 130]], 28, 28, false), fill: blueV, label: [76, 52], at: [94, 52] },
       { id: 'aorta', name: 'aorta', d: tube([[196, 214], [194, 150], [192, 90], [204, 50], [240, 34], [278, 46], [292, 80], [294, 120]], 26, 24, false), fill: redV, label: [258, -14], at: [252, 24] },
-      { id: 'pulmonary-artery', name: 'pulmonary artery', d: many(tube([[164, 212], [164, 150], [166, 108], [180, 88], [220, 84], [262, 86], [304, 92]], 24, 20, false), tube([[166, 112], [152, 92], [138, 84]], 20, 18, false)), fill: blueV, label: [132, -14], at: [140, 84] },
+      { id: 'pulmonary-artery', name: 'pulmonary artery', d: many(tube([[164, 212], [164, 150], [166, 108], [180, 88], [220, 84], [262, 86], [324, 94]], 24, 20, false), tube([[166, 112], [152, 92], [138, 84]], 20, 18, false)), fill: blueV, label: [132, -14], at: [140, 84] },
       { id: 'pulmonary-vein', name: 'pulmonary vein', d: many(tube([[276, 148], [328, 142]], 18, 18, false), tube([[276, 180], [328, 188]], 18, 18, false)), fill: redV, label: [320, -42], at: [324, 142] },
       { id: 'right-atrium', name: 'right atrium', d: blob([[92, 122], [140, 116], [150, 150], [146, 190], [98, 194], [86, 160]]), fill: blue, label: [66, 156], at: [92, 156] },
       { id: 'right-ventricle', name: 'right ventricle', d: blob([[100, 210], [150, 206], [178, 216], [182, 262], [176, 318], [164, 330], [130, 296], [104, 252]]), fill: blue, label: [116, 384], at: [134, 286] },
@@ -302,7 +302,7 @@ function lungs() {
   const dome = [[30, 322], [80, 308], [130, 298], [180, 294], [230, 298], [280, 308], [330, 322]];
   const lungL = [[150, 92], [162, 120], [166, 190], [164, 262], [154, 290], [110, 296], [66, 304], [58, 240], [64, 160], [88, 112], [120, 90]];
   return {
-    id: 'lungs', kind: 'diagram', viewBox: [16, 6, 330, 330], labelViewBox: [-78, 6, 530, 330], labelSize: 20,
+    id: 'lungs', kind: 'diagram', viewBox: [16, 6, 330, 330], labelViewBox: [-88, 6, 562, 330], labelSize: 21,
     decor: [
       // chest wall: the muscles between the ribs
       { d: many(tube(wall, 14, 14), tube(mirror(wall, 180), 14, 14)), fill: '#d79a8a', under: true },
@@ -314,13 +314,13 @@ function lungs() {
       { d: many(...[34, 52, 70, 88, 106].map((y) => rect(169, y, 22, 4, 2))), fill: '#f6e4e0' },
     ],
     features: [
-      { id: 'lungs', name: 'lungs', d: many(blob(lungL), blob([[210, 92], [240, 90], [272, 112], [296, 160], [302, 240], [294, 304], [250, 296], [212, 290], [206, 270], [222, 240], [198, 220], [196, 150]])), fill: pink, label: [4, 196], at: [70, 196] },
-      { id: 'bronchioles', name: 'bronchioles', d: many(...twigs(false), ...twigs(true)), fill: airway, label: [352, 214], at: [262, 200] },
-      { id: 'trachea', name: 'trachea', d: tube([[180, 20], [180, 70], [180, 126]], 24, 24, false), fill: airway, label: [4, 60], at: [168, 60] },
-      { id: 'bronchi', name: 'bronchi', d: many(tube(bL, 15, 11), tube(bR, 15, 11)), fill: airway, label: [352, 130], at: [206, 142] },
-      { id: 'ribs', name: 'ribs', d: ribs, fill: '#efe4c8', label: [4, 250], at: [37, 243] },
-      { id: 'diaphragm', name: 'diaphragm', d: tube(dome, 12, 12), fill: '#b0607a', label: [4, 314], at: [42, 318] },
-      { id: 'alveoli', name: 'alveoli', d: many(...alv), fill: '#e98ea4', label: [352, 50], at: [320, 50] },
+      { id: 'lungs', name: 'lungs', d: many(blob(lungL), blob([[210, 92], [240, 90], [272, 112], [296, 160], [302, 240], [294, 304], [250, 296], [212, 290], [206, 270], [222, 240], [198, 220], [196, 150]])), fill: pink, label: [20, 196], at: [70, 196] },
+      { id: 'bronchioles', name: 'bronchioles', d: many(...twigs(false), ...twigs(true)), fill: airway, label: [342, 214], at: [262, 200] },
+      { id: 'trachea', name: 'trachea', d: tube([[180, 20], [180, 70], [180, 126]], 24, 24, false), fill: airway, label: [20, 60], at: [168, 60] },
+      { id: 'bronchi', name: 'bronchi', d: many(tube(bL, 15, 11), tube(bR, 15, 11)), fill: airway, label: [342, 130], at: [206, 142] },
+      { id: 'ribs', name: 'ribs', d: ribs, fill: '#efe4c8', label: [20, 228], at: [37, 228] },
+      { id: 'diaphragm', name: 'diaphragm', d: tube(dome, 12, 12), fill: '#b0607a', label: [20, 314], at: [42, 318] },
+      { id: 'alveoli', name: 'alveoli', d: many(...alv), fill: '#e98ea4', label: [342, 50], at: [320, 50] },
     ],
   };
 }
@@ -343,7 +343,7 @@ function leafSection() {
   const guard = many(...stomata.map((s) => many(ellR(s - 9, 259, 9, 12, 0), ellR(s + 9, 259, 9, 12, 0))));
   const pores = many(...stomata.map((s) => rect(s - 3, 246, 6, 26, 2)));
   return {
-    id: 'leaf-section', kind: 'diagram', viewBox: [12, 14, 376, 262], labelViewBox: [12, 14, 532, 300], labelSize: 21,
+    id: 'leaf-section', kind: 'diagram', viewBox: [12, 14, 376, 262], labelViewBox: [12, 14, 580, 300], labelSize: 22,
     decor: [
       { d: rect(18, 20, 364, 8, 4), fill: '#d6e6a8', under: true },
       { d: many(...chl, ...[[352, 156], [366, 166], [372, 154], [44, 226], [30, 232]].map(([x, y]) => ell(x, y, 3.2, 2.2))), fill: '#2f7a2b' },

@@ -725,12 +725,12 @@ const MEMORY = {
 // ---------------------------------------------------------------- pictures (js/ui/visuals.js)
 // Forms as in the word lists above; **…** marks the Greek inside the English word.
 const TOPIC_VISUALS = {
-  'greek.words-4': { kind: 'tree', root: { n: 'ὁ πατήρ + ἡ μήτηρ', note: 'father (πατρός) + mother (μητρός)', c: [
+  'greek.words-4': { kind: 'tree', root: { n: 'ὁ\u00a0πατήρ + ἡ\u00a0μήτηρ', note: 'father (πατρός) + mother (μητρός)', c: [
     { n: 'οἱ παῖδες', note: 'the children (ὁ παῖς, παιδός)', c: [{ n: 'ὁ υἱός', note: 'son (υἱοῦ)' }, { n: 'ἡ θυγάτηρ', note: 'daughter (θυγατρός)' }] },
   ] } },
   'greek.words-9': { kind: 'table', head: ['Greek', 'means', 'doctors say'], rows: [
-    ['ἡ κεφαλή', 'head', 'en**cephal**itis'], ['ὁ ὀφθαλμός', 'eye', '**ophthalm**ologist'], ['ἡ καρδία', 'heart', '**cardi**ology'],
-    ['ἡ χείρ', 'hand', '**chir**opractor'], ['ὁ πούς, ποδός', 'foot', 'tri**pod**, octo**pus**'], ['τὸ αἷμα', 'blood', '**haem**oglobin'], ['τὸ σῶμα', 'body', 'psycho**som**atic'],
+    ['κεφαλή', 'head', 'en**cephal**itis'], ['ὀφθαλμός', 'eye', '**ophthalm**ologist'], ['καρδία', 'heart', '**cardi**ology'],
+    ['χείρ', 'hand', '**chir**opractor'], ['πούς, ποδός', 'foot', 'tri**pod**, octo**pus**'], ['αἷμα', 'blood', '**haem**oglobin'], ['σῶμα', 'body', 'psycho**som**atic'],
   ] },
   'greek.words-16': { kind: 'table', head: ['', 'with the case…, means'], rows: [
     ['ὑπό', '**+ gen.** by (a person) · **+ dat./acc.** under'],
@@ -744,11 +744,8 @@ const TOPIC_VISUALS = {
     ['ἀντί', '**+ gen.** instead of'],
   ] },
 };
-// no line break inside “ὁ πατήρ” or “+ gen.”
-const nb = (s) => s.replace(/(^|[ +]|\*\*)(ὁ|ἡ|τὸ|οἱ|\+) /g, '$1$2 ');
-TOPIC_VISUALS['greek.words-4'].root.n = nb(TOPIC_VISUALS['greek.words-4'].root.n);
-TOPIC_VISUALS['greek.words-9'].rows = TOPIC_VISUALS['greek.words-9'].rows.map((r) => r.map(nb));
-TOPIC_VISUALS['greek.words-16'].rows = TOPIC_VISUALS['greek.words-16'].rows.map((r) => r.map(nb));
+// no line break inside “+ gen.”
+TOPIC_VISUALS['greek.words-16'].rows = TOPIC_VISUALS['greek.words-16'].rows.map((r) => r.map((c) => c.replace(/\+ /g, '+\u00a0')));
 for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
 
 export default [{ subject: 'greek', deck: 'y8-vocab', topics, items }];

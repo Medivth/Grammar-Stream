@@ -13,39 +13,30 @@
    "hook": "Primes are the building blocks: **HCF** takes the primes both numbers share; **LCM** takes every prime, at its highest power.",
    "visual": [
     {
-     "kind": "tree",
-     "root": {
-      "n": "84",
-      "c": [
-       {
-        "n": "2",
-        "mark": true
-       },
-       {
-        "n": "42",
-        "c": [
-         {
-          "n": "2",
-          "mark": true
-         },
-         {
-          "n": "21",
-          "c": [
-           {
-            "n": "3",
-            "mark": true
-           },
-           {
-            "n": "7",
-            "mark": true
-           }
-          ]
-         }
-        ]
-       }
+     "kind": "table",
+     "rows": [
+      [
+       "84",
+       "÷ **2**"
+      ],
+      [
+       "42",
+       "÷ **2**"
+      ],
+      [
+       "21",
+       "÷ **3**"
+      ],
+      [
+       "7",
+       "÷ **7**"
+      ],
+      [
+       "1",
+       ""
       ]
-     },
-     "caption": "A factor tree: keep splitting until every branch ends in a prime. 84 = 2² × 3 × 7."
+     ],
+     "caption": "Divide by primes until you reach 1: 84 = 2 × 2 × 3 × 7 = 2² × 3 × 7."
     },
     {
      "kind": "maths",
@@ -126,32 +117,32 @@
     "kind": "table",
     "head": [
      "",
-     "in metres",
+     "metres",
      "standard form"
     ],
     "rows": [
      [
-      "an atom (about)",
+      "atom",
       "0.0000000001",
       "1 × 10⁻¹⁰"
      ],
      [
-      "a hair’s width (about)",
+      "hair",
       "0.0001",
       "1 × 10⁻⁴"
      ],
      [
-      "a person",
+      "person",
       "1.7",
       "1.7 × 10⁰"
      ],
      [
-      "Earth to the Sun",
+      "Earth to Sun",
       "150,000,000,000",
       "1.5 × 10¹¹"
      ]
     ],
-    "caption": "A × 10ⁿ with 1 ≤ A < 10. Big numbers have positive powers; tiny ones negative."
+    "caption": "Rough sizes (the width of an atom and of a hair). A × 10ⁿ with 1 ≤ A < 10: big numbers have positive powers, tiny ones negative."
    }
   },
   {
@@ -199,23 +190,23 @@
     "kind": "maths",
     "diagram": {
      "type": "barmodel",
+     "total": "100% = £50",
      "rows": [
       {
        "label": "before",
-       "parts": 10,
-       "text": "£5",
-       "total": "100% = £50"
+       "parts": 5,
+       "text": "£10"
       },
       {
        "label": "after",
-       "parts": 12,
-       "shaded": 10,
-       "text": "£5",
+       "parts": 6,
+       "shaded": 5,
+       "text": "£10",
        "total": "120% = £60"
       }
      ]
     },
-    "caption": "Each box is 10%. A 20% rise adds 2 boxes: × 1.2. Reverse: if the new price is £60, then 12 boxes = £60, so 1 box = £5 and the original was £50."
+    "caption": "Each box is 20%. A 20% rise adds 1 box: × 1.2. Reverse: if the new price is £60, then 6 boxes = £60, so 1 box = £10 and the original was 5 boxes = £50."
    }
   },
   {
@@ -439,9 +430,9 @@
     "kind": "table",
     "head": [
      "",
-     "sides",
+     "n",
      "angle sum",
-     "exterior (regular)"
+     "exterior"
     ],
     "rows": [
      [
@@ -475,7 +466,7 @@
       "45°"
      ]
     ],
-    "caption": "Interior angles add to (n − 2) × 180°. Exterior angles always add to 360°."
+    "caption": "Interior angles add to (n − 2) × 180°. Exterior angles add to 360°, so each exterior angle of a regular polygon is 360° ÷ n."
    }
   },
   {

@@ -202,19 +202,35 @@ function pie(d) {
 }
 
 function lineGraph(d) {
-  const W = 400, H = 270, m = { l: 44, r: 16, t: 30, b: 44 };
-  const max = Math.max(...d.ys), min = Math.min(0, ...d.ys);
-  const step = max - min > 16 ? 4 : 2;
-  const top = Math.ceil((max + 1) / step) * step, bottom = Math.floor(min / step) * step;
+  // one line ({ xs, ys }) or several ({ xs, series: [{ name, ys }] }); optional step and min for the y axis
+  const series = d.series || [{ ys: d.ys }];
+  const all = series.flatMap((x) => x.ys).filter((v) => v != null);
+  const W = 400, H = 270 + (d.series ? 22 : 0), m = { l: 48, r: 16, t: 30, b: 44 + (d.series ? 22 : 0) };
+  const max = Math.max(...all), min = d.min ?? Math.min(0, ...all);
+  // gridlines: the old 2s and 4s for small values (generated questions rely on them), a round step for larger ones
+  const nice = (span) => { const raw = span / 6, p = 10 ** Math.floor(Math.log10(raw)); return [1, 2, 5, 10].map((k) => k * p).find((k) => k >= raw); };
+  const step = d.step || (max - min > 60 || d.min != null ? nice(max - min) : max - min > 16 ? 4 : 2);
+  const top = Math.ceil((max + (d.step || max - min > 60 ? 0 : 1)) / step) * step, bottom = Math.floor(min / step) * step;
   const pw = W - m.l - m.r, ph = H - m.t - m.b;
-  const X = (i) => m.l + (i / (d.xs.length - 1)) * pw, Y = (v) => m.t + ph - ((v - bottom) / (top - bottom)) * ph;
+  // scaleX: space the points by their x values (years, times) rather than evenly
+  const xv = d.scaleX ? d.xs.map(Number) : null;
+  const X = (i) => m.l + (xv ? (xv[i] - xv[0]) / (xv.at(-1) - xv[0]) : i / (d.xs.length - 1)) * pw, Y = (v) => m.t + ph - ((v - bottom) / (top - bottom)) * ph;
   const el = svg(W, H, d.title, 440);
   el.append(text(W / 2, 18, d.title, { 'font-size': 14, 'font-weight': 600 }));
-  for (let v = bottom; v <= top; v += step) el.append(line(m.l, Y(v), W - m.r, Y(v), { 'stroke-width': v === 0 ? 1.5 : 0.6, opacity: v === 0 ? 1 : 0.4 }), small(m.l - 6, Y(v) + 4, String(v), { 'text-anchor': 'end' }));
+  for (let v = bottom; v <= top + 1e-9; v += step) el.append(line(m.l, Y(v), W - m.r, Y(v), { 'stroke-width': v === 0 ? 1.5 : 0.6, opacity: v === 0 ? 1 : 0.4 }), small(m.l - 6, Y(v) + 4, String(+v.toFixed(6)), { 'text-anchor': 'end' }));
   d.xs.forEach((x, i) => el.append(line(X(i), m.t, X(i), Y(bottom), { 'stroke-width': 0.6, opacity: 0.4 }), small(X(i), H - m.b + 18, x, { 'font-size': 12 })));
-  el.append(s('polyline', { points: d.ys.map((v, i) => `${X(i)},${Y(v)}`).join(' '), fill: 'none', stroke: BLUE, 'stroke-width': 2.5, 'stroke-linejoin': 'round' }));
-  d.ys.forEach((v, i) => el.append(s('circle', { cx: X(i), cy: Y(v), r: 4.5, fill: BLUE, stroke: 'var(--card, #fff)', 'stroke-width': 2 })));
+  series.forEach((sr, k) => {
+    const colour = PIE[k % PIE.length];
+    const pts = sr.ys.map((v, i) => (v == null ? null : [X(i), Y(v)])).filter(Boolean);
+    el.append(s('polyline', { points: pts.map((p) => p.join(',')).join(' '), fill: 'none', stroke: colour, 'stroke-width': 2.5, 'stroke-linejoin': 'round', 'stroke-dasharray': k % 2 ? '7 4' : null }));
+    pts.forEach(([x, y]) => el.append(s('circle', { cx: x, cy: y, r: 4.5, fill: colour, stroke: 'var(--card, #fff)', 'stroke-width': 2 })));
+    if (d.series) {
+      const lx = m.l + k * 150;
+      el.append(line(lx, H - 14, lx + 22, H - 14, { stroke: colour, 'stroke-width': 3, 'stroke-dasharray': k % 2 ? '7 4' : null }), small(lx + 28, H - 10, sr.name, { 'text-anchor': 'start', 'font-size': 12 }));
+    }
+  });
   el.append(small(m.l - 6, m.t - 8, d.ylabel, { 'text-anchor': 'end', 'font-size': 12 }));
+  if (d.xlabel) el.append(small(W - m.r, H - m.b + 34, d.xlabel, { 'text-anchor': 'end', 'font-size': 12 }));
   return el;
 }
 

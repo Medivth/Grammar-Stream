@@ -130,8 +130,8 @@ const WIVES_TABLE = {
 const SUCCESSION = {
   kind: 'tree',
   root: { n: 'Henry VIII', note: '1509–1547', c: [
-    { n: 'Edward VI', note: '1547–1553 · strongly Protestant', mark: true },
-    { n: 'Mary I', note: '1553–1558 · Catholic again', mark: true },
+    { n: 'Edward VI', note: '1547–1553 · Protestant', mark: true },
+    { n: 'Mary I', note: '1553–1558 · Catholic', mark: true },
     { n: 'Elizabeth I', note: '1558–1603 · a middle way', mark: true },
   ] },
   caption: 'Henry’s three children reigned in turn, and each changed England’s religion again.',

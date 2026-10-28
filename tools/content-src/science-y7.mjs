@@ -327,13 +327,13 @@ const SUBSTANCES = {
   caption: 'A compound’s elements are joined and hard to separate; a mixture can be separated again.',
 };
 const SEPARATING = {
-  kind: 'table', head: ['method', 'separates', 'example'],
+  kind: 'table', head: ['method', 'separates', 'for example'],
   rows: [
-    ['filtering', 'an insoluble solid from a liquid', 'sand from water'],
-    ['evaporating', 'a dissolved solid from its solution', 'salt from salt water'],
-    ['distillation', 'a pure liquid from a solution', 'drinking water from sea water'],
-    ['chromatography', 'dyes mixed in an ink', 'the colours in a felt-tip pen'],
-    ['a magnet', 'magnetic from non-magnetic', 'iron filings from sand'],
+    ['filtering', 'an insoluble solid from a liquid', 'sand and water'],
+    ['evaporating', 'a dissolved solid from its solution', 'salt water'],
+    ['distillation', 'a pure liquid from a solution', 'sea water'],
+    ['chromatography', 'dyes mixed in an ink', 'felt-tip ink'],
+    ['a magnet', 'magnetic from non-magnetic', 'iron and sand'],
   ],
 };
 const PH = {
@@ -348,12 +348,12 @@ const PH = {
   tint: 'rows', caption: 'The pH scale: below 7 is an **acid**, 7 is **neutral**, above 7 is an **alkali**.',
 };
 const RESULTANT = { kind: 'blocks', rows: [{ parts: [['← 4 N', 'object', 'friction'], ['box', 'noun', 'the box'], ['10 N →', 'verb', 'push']], result: '6 N →' }], caption: 'Opposite forces subtract: 10 − 4 = 6 N, in the direction of the bigger force.' };
-const DISTANCE_TIME = { kind: 'maths', diagram: { type: 'line', title: 'Distance–time graph', ylabel: 'distance (m)', xs: ['0 s', '1 s', '2 s', '3 s', '4 s', '5 s', '6 s'], ys: [0, 10, 20, 20, 20, 30, 40] }, caption: 'A sloping straight line: moving at a steady speed (steeper = faster). A flat line: stationary.' };
+const DISTANCE_TIME = { kind: 'maths', diagram: { type: 'line', title: 'Distance (m) against time (s)', ylabel: 'm', xs: ['0 s', '1 s', '2 s', '3 s', '4 s', '5 s', '6 s'], ys: [0, 10, 20, 20, 20, 30, 40] }, caption: 'A sloping straight line: moving at a steady speed (steeper = faster). A flat line: stationary.' };
 const ENERGY_BALL = { kind: 'flow', steps: ['Chemical store (in your muscles)', 'Kinetic store (ball moving up)', 'Gravitational potential store (ball at the top)', 'Kinetic store (ball falling)'], caption: 'Energy is never used up: it moves between stores. Some is dissipated to the surroundings.' };
 const FOOD_CHAIN = { kind: 'flow', across: true, steps: ['grass (producer)', 'rabbit', 'fox'], caption: 'The arrows show the direction energy flows: from the food to the animal that eats it.' };
 const PHOTOSYNTHESIS = { kind: 'flow', across: true, steps: ['carbon dioxide + water', 'light, absorbed by chlorophyll', 'glucose + oxygen'], caption: 'Photosynthesis in a leaf.' };
 const PLANT_CYCLE = { kind: 'cycle', steps: ['pollination', 'fertilisation', 'seeds form', 'seed dispersal', 'germination', 'growth into a flowering plant'], centre: 'life cycle of a flowering plant' };
-const VARIABLES = { kind: 'table', head: ['variable', 'what you do', 'example: does sugar dissolve faster in warm water?'], rows: [['independent', '**change** it', 'the water temperature'], ['dependent', '**measure** it', 'the time the sugar takes to dissolve'], ['control', '**keep** it the same', 'amount of water and sugar, stirring']], caption: 'A fair test: change one thing, measure one thing, keep everything else the same.' };
+const VARIABLES = { kind: 'table', head: ['variable', 'what you do', 'example'], rows: [['independent', '**change** it', 'the water temperature'], ['dependent', '**measure** it', 'the time the sugar takes to dissolve'], ['control', '**keep** it the same', 'amount of water and sugar, stirring']], caption: 'Does sugar dissolve faster in warm water? A fair test: change one thing, measure one thing, keep everything else the same.' };
 const ACCURATE = { kind: 'table', rows: [['accurate', 'close to the **true value**'], ['precise', 'repeat readings close to **each other**']], caption: 'A scale that always reads 2 g too high is precise but not accurate.' };
 const TOPIC_VISUALS = {
   'science.atoms': SUBSTANCES,

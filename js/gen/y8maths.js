@@ -125,15 +125,22 @@ const primeTableOf = (a, b, want) => primeTable([String(a), factorise(a)], [Stri
 function percentBars(o, now, p, up, [l1, l2], pre) {
   const g = gcd(p, 100), N = 100 / g, M = (up ? 100 + p : 100 - p) / g, per = (o * g) / 100;
   if (Math.max(N, M) > 8 || !Number.isInteger(per)) return {};
-  return { visual: { kind: 'maths', diagram: { type: 'barmodel', rows: [{ label: l1, parts: N, text: `${pre}${per}`, total: `100% = ${pre}${o}` }, { label: l2, parts: M, shaded: M, text: `${pre}${per}`, total: `${up ? 100 + p : 100 - p}% = ${pre}${now}` }] },
+  return { visual: { kind: 'maths', diagram: { type: 'barmodel', total: `100% = ${pre}${o}`, rows: [{ label: l1, parts: N, text: `${pre}${per}` }, { label: l2, parts: M, shaded: M, text: `${pre}${per}`, total: `${up ? 100 + p : 100 - p}% = ${pre}${now}` }] },
     caption: `Each box is ${g}% of ${pre}${o}, which is ${pre}${per}. ${up ? 'Up' : 'Down'} ${Math.abs(M - N)} box${Math.abs(M - N) === 1 ? '' : 'es'} = ${p}%.` } };
 }
 /** Two straight lines (ax + by = c) on a grid, crossing at the solution. */
 function crossing(eqs, x, y) {
   return { visual: { kind: 'maths', diagram: { type: 'graph', range: [-10, 10], lines: eqs.map(([a, b, c]) => ({ m: -a / b, c: c / b })) }, caption: `The two lines cross at (${neg(x)}, ${neg(y)}): that point fits both equations.` } };
 }
-/** A multiplication grid for brackets: column terms across the top, row terms down the side. */
-const mulGrid = (cols, rows, caption) => cap({ kind: 'table', head: ['×', ...cols], rows }, caption);
+/** A multiplication grid for brackets: column terms across the top, row terms down the side
+ * (rows: [[side term, ...products]]). Like terms (two or more boxes with the same letters) are shaded. */
+function mulGrid(cols, rows, caption) {
+  const cells = rows.map((r) => r.slice(1)), letters = (t) => t.replace(/^[−-]?\d*/, '');
+  const count = {};
+  for (const c of cells.flat()) if (letters(c)) count[letters(c)] = (count[letters(c)] || 0) + 1;
+  const shade = cells.flat().filter((c) => count[letters(c)] > 1);
+  return cap({ kind: 'maths', diagram: { type: 'possgrid', op: 'product', a: cols, b: rows.map((r) => r[0]), cells, shade } }, caption);
+}
 
 const G = {
   // ---- primes, HCF and LCM -------------------------------------------------------------
@@ -419,7 +426,7 @@ const G = {
         return num(`${names.join(', ').replace(/, ([^,]*)$/, ' and $1')} share ${S * k} drachmae in the ratio ${parts.join(' : ')}. How much does ${who} get?`, big * k,
           `${parts.join(' + ')} = ${S} parts. One part is ${S * k} ÷ ${S} = ${k}. ${who} gets ${big} parts: ${big * k}.`,
           [`Total parts: ${parts.join(' + ')} = ${S}.`, `One part: ${S * k} ÷ ${S} = ${k}.`, `${who}: ${big} × ${k} = ${big * k} drachmae.`],
-          { visual: { kind: 'maths', diagram: { type: 'barmodel', rows: parts.map((n, i) => ({ label: names[i], parts: n, text: String(k), total: String(n * k), shaded: names[i] === who ? n : 0 })) }, caption: `${S} parts = ${S * k} drachmae, so one part is ${k}.` } });
+          { visual: { kind: 'maths', diagram: { type: 'barmodel', rows: parts.map((n, i) => ({ label: names[i], parts: n, text: String(k), shaded: names[i] === who ? n : 0 })) }, caption: `${S} parts = ${S * k} drachmae, so one part is ${k}. ${who}: ${big} × ${k} = ${big * k}.` } });
       }
       if (kind === 'simplify') {
         let a = rng.int(1, 9), b = rng.int(1, 9);
@@ -451,7 +458,7 @@ const G = {
         return num(`Kit and Theo share some sweets in the ratio ${a} : ${b}. Theo gets ${(b - a) * k} more than Kit. How many sweets are there altogether?`, (a + b) * k,
           `The difference is ${b} − ${a} = ${b - a} part${b - a === 1 ? '' : 's'} = ${(b - a) * k}, so one part is ${k}. Altogether ${a + b} parts = ${(a + b) * k}.`,
           [`The difference in parts is ${b - a}.`, b - a === 1 ? `1 part = ${k}.` : `${b - a} parts = ${(b - a) * k}, so 1 part = ${k}.`, `Total = ${a + b} × ${k} = ${(a + b) * k}.`],
-          { visual: { kind: 'maths', diagram: { type: 'barmodel', rows: [{ label: 'Kit', parts: a, text: String(k), total: String(a * k) }, { label: 'Theo', parts: b, text: String(k), total: String(b * k) }] }, caption: `Theo has ${b - a} more part${b - a === 1 ? '' : 's'} = ${(b - a) * k} sweets, so one part is ${k}.` } });
+          { visual: { kind: 'maths', diagram: { type: 'barmodel', rows: [{ label: 'Kit', parts: a, text: String(k) }, { label: 'Theo', parts: b, text: String(k) }] }, caption: `Theo has ${b - a} more part${b - a === 1 ? '' : 's'} = ${(b - a) * k} sweets, so one part is ${k}. Altogether: ${a + b} × ${k} = ${(a + b) * k}.` } });
       }
       const n1 = rng.int(3, 8), u = rng.int(3, 40) * 5, n2 = rng.int(9, 20);
       return num(`${n1} jars of olive oil cost ${money(n1 * u)}. How much do ${n2} jars cost?`, pounds(n2 * u), `One jar costs ${money(n1 * u)} ÷ ${n1} = ${money(u)}. ${n2} jars: ${money(n2 * u)}.`,

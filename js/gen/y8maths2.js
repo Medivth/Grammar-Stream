@@ -99,8 +99,15 @@ const cap = (v, caption) => (caption ? { ...v, caption } : v);
 /** Place values for a w-digit number in base b: [b^(w−1), …, b, 1]. */
 const placeCols = (w, b = 2) => Array.from({ length: w }, (_, i) => b ** (w - 1 - i));
 const pv = (cols, rows, caption, extra = {}) => ({ visual: cap({ kind: 'maths', diagram: { type: 'pvgrid', cols, rows: rows.map((r) => [...r]), ...extra } }, caption) });
-/** A multiplication grid for brackets: column terms across the top, row terms down the side. */
-const mulGrid = (cols, rows, caption) => cap({ kind: 'table', head: ['×', ...cols], rows }, caption);
+/** A multiplication grid for brackets: column terms across the top, row terms down the side
+ * (rows: [[side term, ...products]]). Like terms (two or more boxes with the same letters) are shaded. */
+function mulGrid(cols, rows, caption) {
+  const cells = rows.map((r) => r.slice(1)), letters = (t) => t.replace(/^[−-]?\d*/, '');
+  const count = {};
+  for (const c of cells.flat()) if (letters(c)) count[letters(c)] = (count[letters(c)] || 0) + 1;
+  const shade = cells.flat().filter((c) => count[letters(c)] > 1);
+  return cap({ kind: 'maths', diagram: { type: 'possgrid', op: 'product', a: cols, b: rows.map((r) => r[0]), cells, shade } }, caption);
+}
 
 const G = {
   // ---- compound measures --------------------------------------------------------------------

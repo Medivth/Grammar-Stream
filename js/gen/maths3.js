@@ -14,7 +14,7 @@ const PI = 314; // 3.14 in hundredths
 function reverseBar(p, amt, up) {
   const N = pctBoxes(p), k = (p * N) / 100, now = up ? N + k : N - k, box = amt / N;
   return pic(bar([{ label: 'now', parts: now, text: `£${box}`, total: `£${box * now}` }, { label: 'before', parts: N, text: `£${box}`, total: `£${amt}` }]),
-    `Each box is ${100 / N}% of the original. £${box * now} is ${now} boxes, so one box is £${box}. The original is ${N} boxes: £${amt}.`);
+    `Each box is ${100 / N}% of the original. £${box * now} is ${now} box${now === 1 ? '' : 'es'}, so one box is £${box}. The original is ${N} boxes: £${amt}.`);
 }
 
 function choice(prompt, correct, wrongs, rng, extra = {}) {

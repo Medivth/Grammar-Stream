@@ -176,7 +176,7 @@ const card = (spec) => ({ kind: 'blocks', rows: [{ parts: chunks(spec) }, { part
 const SPELL_CARDS = {
   separate: 'sep|arat^a rat|e',
   definitely: 'de|finite^finite|ly',
-  occasionally: 'o|cc=double|a|s=single|iona|ll=double|y',
+  occasionally: 'o|cc=×2|a|s=×1|iona|ll=×2|y',
   independence: 'in|depend^depend|ence=-ence',
   knowledge: 'k~silent|now|ledge^ledge',
   argument: 'ar|gum^gum|ent',
@@ -196,12 +196,11 @@ const PASSIVE = { kind: 'blocks', rows: [
   { parts: [['The cat', 'object', 'subject'], ['was chased', 'verb', 'was + verb'], ['by the dog.', 'subject', 'by + the doer']] },
 ], caption: 'Active (top), then passive. The colours follow the dog and the cat: the object moves to the front, and the doer moves to the end after “by” (or vanishes).' };
 const SONNET_SHAPE = { kind: 'blocks', rows: [
-  { parts: [['1–4', null, 'quatrain'], ['day', 'subject', 'A'], ['temperate', 'verb', 'B'], ['May', 'subject', 'A'], ['date', 'verb', 'B']] },
-  { parts: [['5–8', null, 'quatrain'], ['shines', 'object', 'C'], ['dimm’d', 'adverbial', 'D'], ['declines', 'object', 'C'], ['untrimm’d', 'adverbial', 'D']] },
-  { parts: [['9–12', null, 'quatrain'], ['fade', 'conjunction', 'E'], ['ow’st', 'clause', 'F'], ['shade', 'conjunction', 'E'], ['grow’st', 'clause', 'F']] },
-  { parts: [['13–14', null, 'couplet'], ['see', 'verb', 'G'], ['thee', 'verb', 'G']] },
-], caption: 'Sonnet 18’s line endings: same colour = same rhyme. ABAB CDCD EFEF GG. The volta (turn) comes at line 9: “But thy eternal summer shall not fade”.' };
-
+  { parts: [['A', 'subject', 'day'], ['B', 'verb', 'temperate'], ['A', 'subject', 'May'], ['B', 'verb', 'date']] },
+  { parts: [['C', 'object', 'shines'], ['D', 'adverbial', 'dimm’d'], ['C', 'object', 'declines'], ['D', 'adverbial', 'untrimm’d']] },
+  { parts: [['E', 'conjunction', 'fade'], ['F', 'clause', 'ow’st'], ['E', 'conjunction', 'shade'], ['F', 'clause', 'grow’st']] },
+  { parts: [['G', 'verb', 'see'], ['G', 'verb', 'thee']] },
+], caption: 'Sonnet 18’s line endings: three quatrains (4 lines each) and a couplet. Same letter = same rhyme. The volta (turn) is at line 9: “But thy eternal summer…”' };
 const TOPIC_VISUALS = {
   'english.grammar-8': PASSIVE,
   'english.spell-8': { kind: 'blocks', rows: [{ parts: chunks(SPELL_CARDS.separate) }, { parts: chunks(SPELL_CARDS.definitely) }], caption: 'There’s a rat in separate; definitely has finite in it.' },

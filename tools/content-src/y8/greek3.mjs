@@ -631,10 +631,10 @@ const MEMORY = {
 // marks the ending (or the part to notice). In a phrase the article takes a grave: τὸν φύλακα.
 const TOPIC_VISUALS = {
   'greek.decl3-stems': [
-    { kind: 'table', head: ['singular', 'guard', 'giant'], rows: [
-      ['nominative', 'ὁ φύλαξ', 'ὁ γίγας'], ['accusative', 'τὸν φύλακ**α**', 'τὸν γίγαντ**α**'], ['genitive', 'τοῦ φύλακ**ος**', 'τοῦ γίγαντ**ος**'], ['dative', 'τῷ φύλακ**ι**', 'τῷ γίγαντ**ι**']] },
-    { kind: 'table', head: ['plural', 'guard', 'giant'], rows: [
-      ['nominative', 'οἱ φύλακ**ες**', 'οἱ γίγαντ**ες**'], ['accusative', 'τοὺς φύλακ**ας**', 'τοὺς γίγαντ**ας**'], ['genitive', 'τῶν φυλάκ**ων**', 'τῶν γιγάντ**ων**'], ['dative', 'τοῖς φύλα**ξι(ν)**', 'τοῖς γίγα**σι(ν)**']],
+    { kind: 'table', head: ['sg', 'guard (m.)', 'giant (m.)'], rows: [
+      ['nom.', 'φύλαξ', 'γίγας'], ['acc.', 'φύλακ**α**', 'γίγαντ**α**'], ['gen.', 'φύλακ**ος**', 'γίγαντ**ος**'], ['dat.', 'φύλακ**ι**', 'γίγαντ**ι**']] },
+    { kind: 'table', head: ['pl', 'guard (m.)', 'giant (m.)'], rows: [
+      ['nom.', 'φύλακ**ες**', 'γίγαντ**ες**'], ['acc.', 'φύλακ**ας**', 'γίγαντ**ας**'], ['gen.', 'φυλάκ**ων**', 'γιγάντ**ων**'], ['dat.', 'φύλα**ξι(ν)**', 'γίγα**σι(ν)**']],
     caption: 'Dative plural: κ + σι makes ξι, and ντ drops out before σ.' },
   ],
   'greek.decl3-more': [
@@ -659,9 +659,9 @@ const TOPIC_VISUALS = {
       { parts: [['ὁ', 'article', 'the'], ['ἀνὴρ', 'noun', 'man'], ['οὗτος', 'pronoun', 'this']], result: 'this man' },
       { parts: [['ἐκείνη', 'pronoun', 'that'], ['ἡ', 'article', 'the'], ['κόρη', 'noun', 'girl']], result: 'that girl' },
     ] },
-    { kind: 'table', tint: 'cols', head: ['singular', 'm.', 'f.', 'n.'], rows: [
+    { kind: 'table', tint: 'cols', head: ['sg', 'm.', 'f.', 'n.'], rows: [
       ['nom.', 'οὗτ**ος**', 'αὕτ**η**', 'τοῦτ**ο**'], ['acc.', 'τοῦτ**ον**', 'ταύτ**ην**', 'τοῦτ**ο**'], ['gen.', 'τούτ**ου**', 'ταύτ**ης**', 'τούτ**ου**'], ['dat.', 'τούτ**ῳ**', 'ταύτ**ῃ**', 'τούτ**ῳ**']] },
-    { kind: 'table', tint: 'cols', head: ['plural', 'm.', 'f.', 'n.'], rows: [
+    { kind: 'table', tint: 'cols', head: ['pl', 'm.', 'f.', 'n.'], rows: [
       ['nom.', 'οὗτ**οι**', 'αὗτ**αι**', 'ταῦτ**α**'], ['acc.', 'τούτ**ους**', 'ταύτ**ας**', 'ταῦτ**α**'], ['gen.', 'τούτ**ων**', 'τούτ**ων**', 'τούτ**ων**'], ['dat.', 'τούτ**οις**', 'ταύτ**αις**', 'τούτ**οις**']],
     caption: 'οὗτος, this: the endings of καλός, and a τ wherever the article has one.' },
   ],
@@ -712,9 +712,6 @@ const ITEM_VISUALS = {
   'greek.g3.ic.6': { kind: 'flow', steps: ['Daedalus makes wings', 'Daedalus warns his son', 'Father and son fly out of Crete', 'The sun melts the wax', 'Icarus falls into the sea'] },
 };
 ITEM_VISUALS['greek.g3.pr.same'] = ITEM_VISUALS['greek.g3.pr.self'];
-// keep an article on the same line as its noun in a narrow table cell
-const tight = (v) => ({ ...v, rows: v.rows.map((r) => r.map((c, i) => (i ? c.replace(/ /g, ' ') : c))) });
-TOPIC_VISUALS['greek.decl3-stems'] = TOPIC_VISUALS['greek.decl3-stems'].map(tight);
 for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
 for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
 

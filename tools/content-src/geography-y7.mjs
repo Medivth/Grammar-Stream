@@ -252,7 +252,7 @@ const RAINFOREST_LAYERS = { kind: 'flow', steps: ['Emergent: the tallest trees p
 const SETTLEMENTS = { kind: 'flow', across: true, steps: ['hamlet', 'village', 'town', 'city', 'conurbation'], caption: 'Settlements, smallest first. A city of more than 10 million people is a megacity.' };
 const TOPIC_VISUALS = {
   'geography.map-skills': { kind: 'cycle', steps: ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'], centre: 'clockwise from north', caption: 'Never Eat Shredded Wheat: N, E, S, W clockwise. North-east (NE) is halfway between north and east.' },
-  'geography.scale': { kind: 'table', head: ['scale', '1 cm on the map is', 'so 1 km on the map is'], rows: [['1 : 25 000', '250 m', '**4 cm**'], ['1 : 50 000', '500 m', '**2 cm**']], caption: 'Contour lines close together = steep slope; far apart = gentle slope.' },
+  'geography.scale': { kind: 'table', head: ['scale', '1 cm on the map is', 'so 1 km on the map is'], rows: [['1 : 25 000', '250 m', '**4 cm**'], ['1 : 50 000', '500 m', '**2 cm**']], caption: 'Contour lines close together = steep slope; far apart = gentle slope.' },
   'geography.biomes': [
     { kind: 'table', head: ['biome', 'where', 'what it is like'], rows: [
       ['tropical rainforest', 'near the Equator', 'hot and wet all year'],

@@ -51,27 +51,21 @@
    "hook": "Lengths scale by 10, areas by **10²**, volumes by **10³**: square for area, cube for volume.",
    "visual": {
     "kind": "table",
-    "head": [
-     "",
-     "length",
-     "area",
-     "volume"
-    ],
     "rows": [
      [
-      "m → cm",
-      "× 100",
-      "× 100² = × 10,000",
-      "× 100³ = × 1,000,000"
+      "length",
+      "1 m = 100 cm"
      ],
      [
-      "cm → mm",
-      "× 10",
-      "× 10² = × 100",
-      "× 10³ = × 1000"
+      "area",
+      "1 m² = 100 × 100 = 10,000 cm²"
+     ],
+     [
+      "volume",
+      "1 m³ = 100 × 100 × 100 = 1,000,000 cm³"
      ]
     ],
-    "caption": "Square the length factor for area, cube it for volume. 1 m³ = 1,000,000 cm³ = 1000 litres."
+    "caption": "Square the length factor for area, cube it for volume. 1 m³ = 1000 litres."
    }
   },
   {
@@ -87,29 +81,24 @@
    "hook": "Rounded to the nearest unit? The true value is **up to half a unit either way**.",
    "visual": {
     "kind": "table",
-    "head": [
-     "34 cm to the nearest cm",
-     "value",
-     ""
-    ],
     "rows": [
      [
       "lower bound",
       "33.5 cm",
-      "included (≤)"
+      "included: ≤"
      ],
      [
-      "rounded value",
-      "34 cm",
+      "rounded",
+      "**34 cm**",
       ""
      ],
      [
       "upper bound",
       "34.5 cm",
-      "not included (<)"
+      "not included: <"
      ]
     ],
-    "caption": "Error interval: 33.5 ≤ l < 34.5. Every length in it rounds to 34 cm."
+    "caption": "A length of 34 cm to the nearest cm has error interval 33.5 ≤ l < 34.5. Every length in it rounds to 34 cm."
    }
   },
   {
@@ -2209,28 +2198,21 @@
    "hook": "“**x equals minus b, plus or minus the square root of b squared minus 4ac, all over 2a.**”",
    "visual": {
     "kind": "table",
-    "head": [
-     "discriminant",
-     "the parabola",
-     "solutions"
-    ],
     "rows": [
      [
       "b² − 4ac > 0",
-      "crosses the x-axis twice",
-      "2"
+      "the curve crosses the x-axis twice: **2** solutions"
      ],
      [
       "b² − 4ac = 0",
-      "touches the x-axis once",
-      "1"
+      "it touches the x-axis once: **1** solution"
      ],
      [
       "b² − 4ac < 0",
-      "misses the x-axis",
-      "0"
+      "it misses the x-axis: **no** solutions"
      ]
-    ]
+    ],
+    "caption": "The discriminant, b² − 4ac, is the part under the square root in the formula."
    }
   },
   {
@@ -2275,11 +2257,11 @@
     "kind": "maths",
     "diagram": {
      "type": "cuboid",
-     "l": 12,
+     "l": 4,
      "w": 4,
-     "h": 3
+     "h": 7
     },
-    "caption": "The longest rod in this box runs corner to opposite corner: d² = 12² + 4² + 3² = 169, so d = 13 cm."
+    "caption": "The longest rod in this box runs corner to opposite corner: d² = 4² + 4² + 7² = 81, so d = 9 cm."
    }
   },
   {
@@ -2300,24 +2282,20 @@
     "kind": "table",
     "head": [
      "",
-     "in algebra",
-     "why"
+     "in algebra"
     ],
     "rows": [
      [
-      "an even number",
-      "2n",
-      "a whole number of pairs"
+      "any even number",
+      "2n (n pairs)"
      ],
      [
-      "an odd number",
-      "2n + 1",
-      "pairs and one spare"
+      "any odd number",
+      "2n + 1 (pairs and one spare)"
      ],
      [
       "consecutive integers",
-      "n, n + 1, n + 2",
-      "each 1 more than the last"
+      "n, n + 1, n + 2"
      ]
     ],
     "caption": "Odd + odd = (2a + 1) + (2b + 1) = 2(a + b + 1): the two spares make a pair, so the answer is even."

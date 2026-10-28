@@ -798,17 +798,17 @@ const TOPIC_VISUALS = {
     caption: 'After the τ, the article has the same endings as its noun: τ-ὸν λόγ-ον, τ-ὴν τιμ-ήν.' },
   ],
   'greek.nouns-2': [
-    { kind: 'table', head: ['singular', 'word (m.)', 'gift (n.)'], rows: [
-      ['nominative', 'ὁ λόγ**ος**', 'τὸ δῶρ**ον**'], ['accusative', 'τὸν λόγ**ον**', 'τὸ δῶρ**ον**'], ['genitive', 'τοῦ λόγ**ου**', 'τοῦ δώρ**ου**'], ['dative', 'τῷ λόγ**ῳ**', 'τῷ δώρ**ῳ**']] },
-    { kind: 'table', head: ['plural', 'word (m.)', 'gift (n.)'], rows: [
-      ['nominative', 'οἱ λόγ**οι**', 'τὰ δῶρ**α**'], ['accusative', 'τοὺς λόγ**ους**', 'τὰ δῶρ**α**'], ['genitive', 'τῶν λόγ**ων**', 'τῶν δώρ**ων**'], ['dative', 'τοῖς λόγ**οις**', 'τοῖς δώρ**οις**']],
+    { kind: 'table', head: ['sg', 'word (m.)', 'gift (n.)'], rows: [
+      ['nom.', 'ὁ λόγ**ος**', 'τὸ δῶρ**ον**'], ['acc.', 'τὸν λόγ**ον**', 'τὸ δῶρ**ον**'], ['gen.', 'τοῦ λόγ**ου**', 'τοῦ δώρ**ου**'], ['dat.', 'τῷ λόγ**ῳ**', 'τῷ δώρ**ῳ**']] },
+    { kind: 'table', head: ['pl', 'word (m.)', 'gift (n.)'], rows: [
+      ['nom.', 'οἱ λόγ**οι**', 'τὰ δῶρ**α**'], ['acc.', 'τοὺς λόγ**ους**', 'τὰ δῶρ**α**'], ['gen.', 'τῶν λόγ**ων**', 'τῶν δώρ**ων**'], ['dat.', 'τοῖς λόγ**οις**', 'τοῖς δώρ**οις**']],
     caption: 'δῶρον only differs from λόγος where it is neuter: nominative and accusative.' },
   ],
   'greek.nouns-1': [
-    { kind: 'table', head: ['singular', 'honour', 'land'], rows: [
-      ['nominative', 'ἡ τιμ**ή**', 'ἡ χώρ**α**'], ['accusative', 'τὴν τιμ**ήν**', 'τὴν χώρ**αν**'], ['genitive', 'τῆς τιμ**ῆς**', 'τῆς χώρ**ας**'], ['dative', 'τῇ τιμ**ῇ**', 'τῇ χώρ**ᾳ**']] },
-    { kind: 'table', head: ['plural', 'honour', 'land'], rows: [
-      ['nominative', 'αἱ τιμ**αί**', 'αἱ χῶρ**αι**'], ['accusative', 'τὰς τιμ**άς**', 'τὰς χώρ**ας**'], ['genitive', 'τῶν τιμ**ῶν**', 'τῶν χωρ**ῶν**'], ['dative', 'ταῖς τιμ**αῖς**', 'ταῖς χώρ**αις**']],
+    { kind: 'table', head: ['sg', 'honour', 'land'], rows: [
+      ['nom.', 'ἡ τιμ**ή**', 'ἡ χώρ**α**'], ['acc.', 'τὴν τιμ**ήν**', 'τὴν χώρ**αν**'], ['gen.', 'τῆς τιμ**ῆς**', 'τῆς χώρ**ας**'], ['dat.', 'τῇ τιμ**ῇ**', 'τῇ χώρ**ᾳ**']] },
+    { kind: 'table', head: ['pl', 'honour', 'land'], rows: [
+      ['nom.', 'αἱ τιμ**αί**', 'αἱ χῶρ**αι**'], ['acc.', 'τὰς τιμ**άς**', 'τὰς χώρ**ας**'], ['gen.', 'τῶν τιμ**ῶν**', 'τῶν χωρ**ῶν**'], ['dat.', 'ταῖς τιμ**αῖς**', 'ταῖς χώρ**αις**']],
     caption: 'Two singulars, one shared plural.' },
   ],
   'greek.verbs-1': { kind: 'table', head: ['', 'I free', 'I am'], rows: [
@@ -872,7 +872,7 @@ const ITEM_VISUALS = {
   'greek.pc.lusas': { kind: 'flow', across: true, steps: ['λύσας: he frees his friends', 'φεύγει: then he flees'], caption: 'The aorist participle happened first.' },
 };
 // keep an article on the same line as its noun in a narrow table cell
-const tight = (v) => ({ ...v, rows: v.rows.map((r) => r.map((c, i) => (i ? c.replace(/ /g, ' ') : c))) });
+const tight = (v) => ({ ...v, rows: v.rows.map((r) => r.map((c, i) => (i ? c.replace(/ /g, '\u00a0') : c))) });
 for (const id of ['greek.nouns-2', 'greek.nouns-1']) TOPIC_VISUALS[id] = TOPIC_VISUALS[id].map(tight);
 for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
 for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }

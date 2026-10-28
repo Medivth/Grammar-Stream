@@ -89,47 +89,33 @@
    "talk": "Ask {him} to find a perfect number and explain what makes it perfect.",
    "hook": "**Factors come in pairs**, except for square numbers, which have one in the middle.",
    "visual": {
-    "kind": "tree",
-    "root": {
-     "n": "72",
-     "c": [
-      {
-       "n": "8",
-       "c": [
-        {
-         "n": "2",
-         "mark": true
-        },
-        {
-         "n": "4",
-         "c": [
-          {
-           "n": "2",
-           "mark": true
-          },
-          {
-           "n": "2",
-           "mark": true
-          }
-         ]
-        }
-       ]
-      },
-      {
-       "n": "9",
-       "c": [
-        {
-         "n": "3",
-         "mark": true
-        },
-        {
-         "n": "3",
-         "mark": true
-        }
-       ]
-      }
+    "kind": "table",
+    "rows": [
+     [
+      "72",
+      "÷ **2**"
+     ],
+     [
+      "36",
+      "÷ **2**"
+     ],
+     [
+      "18",
+      "÷ **2**"
+     ],
+     [
+      "9",
+      "÷ **3**"
+     ],
+     [
+      "3",
+      "÷ **3**"
+     ],
+     [
+      "1",
+      ""
      ]
-    },
+    ],
     "caption": "72 = 2³ × 3². Its factors are 2ᵃ × 3ᵇ with a = 0–3 and b = 0–2, so it has 4 × 3 = 12 factors."
    }
   },
@@ -479,10 +465,10 @@
     "across": true,
     "steps": [
      "ends with 11",
-     "+ 7 = 18",
-     "÷ 2 = 9",
-     "+ 7 = 16",
-     "÷ 2 = 8"
+     "11 + 7 = 18",
+     "18 ÷ 2 = 9",
+     "9 + 7 = 16",
+     "16 ÷ 2 = 8 at the start"
     ],
     "caption": "Work backwards, undoing each step: spending becomes adding, doubling becomes halving."
    }
@@ -599,9 +585,9 @@
     "kind": "flow",
     "across": true,
     "steps": [
-     "1 left",
-     "+ 1, × 2 = 4",
-     "+ 1, × 2 = 10"
+     "1 fig left at the end",
+     "before Mira: (1 + 1) × 2 = 4",
+     "before Theo: (4 + 1) × 2 = 10"
     ],
     "caption": "Undo Mira first, then Theo: add the 1 back, then double."
    }
@@ -4855,11 +4841,11 @@
     "across": true,
     "steps": [
      "start: white",
-     "1: black",
-     "2: white",
-     "3: black",
-     "…",
-     "7: black"
+     "after move 1: black",
+     "after move 2: white",
+     "after move 3: black",
+     "every odd move: black",
+     "after move 7: black"
     ],
     "caption": "Every knight move lands on the other colour, so after an odd number of moves it is on black."
    }

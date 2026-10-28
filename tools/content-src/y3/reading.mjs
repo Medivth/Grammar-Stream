@@ -264,7 +264,7 @@ const TOPIC_VISUALS = {
 };
 const ITEM_VISUALS = {
   'reading.y3.ro.2': { kind: 'tree', root: { n: 'a legion', note: 'about 5,000 soldiers', c: [{ n: 'groups of about 80 legionaries', note: 'each led by a centurion' }] } },
-  'reading.y3.pl.5': { kind: 'flow', steps: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'], across: true, caption: 'Out from the Sun: four small, rocky planets, then four giants made mostly of gas and ice.' },
+  'reading.y3.pl.5': { kind: 'table', head: ['', 'small and rocky', 'giants of gas and ice'], rows: [['1', 'Mercury', 'Jupiter'], ['2', 'Venus', 'Saturn'], ['3', 'Earth', 'Uranus'], ['4', 'Mars', 'Neptune']], tint: 'cols', caption: 'The eight planets in order out from the Sun: down the first list, then down the second.' },
 };
 for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
 for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }

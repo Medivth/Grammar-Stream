@@ -640,7 +640,7 @@ const build = (word, ...parts) => ({ join: '+', parts, result: word });
 const words = (...rows) => ({ kind: 'blocks', rows });
 const G = {
   telephone: build('telephone', ['tele', 'prefix', 'far'], ['phone', 'root', 'sound']),
-  democracy: build('democracy', ['demo', 'root', 'demos: people'], ['cracy', 'suffix', 'kratos: power']),
+  democracy: build('democracy', ['demo', 'root', 'people'], ['cracy', 'suffix', 'power']),
   autobiography: build('autobiography', ['auto', 'prefix', 'self'], ['bio', 'root', 'life'], ['graphy', 'suffix', 'writing']),
   chronology: build('chronology', ['chrono', 'root', 'time'], ['logy', 'suffix', 'study']),
   philanthropy: build('philanthropy', ['phil', 'prefix', 'love'], ['anthrop', 'root', 'human being'], ['y', 'suffix']),
@@ -655,7 +655,7 @@ const L = {
   predict: build('predict', ['pre', 'prefix', 'before'], ['dict', 'root', 'say']),
   interrupt: build('interrupt', ['inter', 'prefix', 'between'], ['rupt', 'root', 'break']),
   incredible: build('incredible', ['in', 'prefix', 'not'], ['cred', 'root', 'believe'], ['ible', 'suffix', 'able to be']),
-  subterranean: build('subterranean', ['sub', 'prefix', 'under'], ['terran', 'root', 'terra: land'], ['ean', 'suffix']),
+  subterranean: build('subterranean', ['sub', 'prefix', 'under'], ['terran', 'root', 'land'], ['ean', 'suffix']),
   television: build('television', ['tele', 'prefix', 'Greek: far'], ['vision', 'root', 'Latin: seeing']),
 };
 const CLAUSES = {

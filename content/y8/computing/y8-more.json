@@ -115,36 +115,36 @@
    "visual": {
     "kind": "table",
     "head": [
-     "",
-     "col 0",
-     "col 1",
-     "col 2",
-     "col 3"
+     "r \\ c",
+     "0",
+     "1",
+     "2",
+     "3"
     ],
     "rows": [
      [
-      "row 0",
+      "0",
+      "1st",
+      "2nd",
+      "3rd",
+      "4th"
+     ],
+     [
       "1",
+      "5th",
+      "6th",
+      "7th",
+      "8th"
+     ],
+     [
       "2",
-      "3",
-      "4"
-     ],
-     [
-      "row 1",
-      "5",
-      "6",
-      "7",
-      "8"
-     ],
-     [
-      "row 2",
-      "9",
-      "10",
-      "11",
-      "**12: grid[2][3]**"
+      "9th",
+      "10th",
+      "11th",
+      "**12th**"
      ]
     ],
-    "caption": "for r in range(3): for c in range(4): visits the squares in the order numbered, row by row. grid[2][3] is row 2, then column 3."
+    "caption": "Rows r down the side, columns c along the top. `for r in range(3):` with `for c in range(4):` inside visits the squares in this order, row by row. The last, grid[2][3], is row 2, column 3."
    }
   },
   {
@@ -241,37 +241,38 @@
    "hook": "**O(log n) < O(n) < O(n²)**: how fast the work grows as the data grows.",
    "visual": {
     "kind": "table",
+    "head": [
+     "",
+     "10 items",
+     "1,000 items",
+     "a million items"
+    ],
     "rows": [
      [
-      "items (n)",
       "O(1)",
+      "1",
+      "1",
+      "1"
+     ],
+     [
       "O(log n)",
+      "≈ 3",
+      "≈ 10",
+      "≈ 20"
+     ],
+     [
       "O(n)",
-      "O(n²)"
-     ],
-     [
       "10",
-      "1",
-      "about 3",
-      "10",
-      "100"
-     ],
-     [
-      "1,000",
-      "1",
-      "about 10",
       "1,000",
       "1,000,000"
      ],
      [
+      "O(n²)",
+      "100",
       "1,000,000",
-      "1",
-      "about 20",
-      "1,000,000",
-      "a million million"
+      "**a million million**"
      ]
     ],
-    "tint": "cols",
     "caption": "Steps needed as the data grows. Binary search is O(log n); linear search is O(n); comparing every pair is O(n²)."
    }
   },
@@ -337,19 +338,16 @@
     "kind": "table",
     "head": [
      "data",
-     "run-length code",
-     "characters"
+     "run-length code"
     ],
     "rows": [
      [
       "WWWWBBBW",
-      "4W 3B 1W",
-      "8 → 6"
+      "4W3B1W: 8 → 6 characters"
      ],
      [
       "ABCDEFG",
-      "1A 1B 1C 1D 1E 1F 1G",
-      "**7 → 14**"
+      "1A1B1C1D1E1F1G: 7 → **14** characters"
      ]
     ],
     "caption": "Run-length encoding shrinks long runs of the same value, but makes data with no runs bigger."
@@ -371,7 +369,7 @@
     "kind": "table",
     "rows": [
      [
-      "plaintext",
+      "plain",
       "A",
       "T",
       "H",
@@ -398,7 +396,7 @@
       "11"
      ],
      [
-      "ciphertext",
+      "cipher",
       "**O**",
       "P",
       "S",
@@ -735,34 +733,31 @@
     "kind": "tree",
     "root": {
      "n": "15",
-     "note": "all letters",
      "c": [
       {
        "n": "E",
-       "note": "8 times: code 0",
+       "note": "8 → 0",
        "mark": true
       },
       {
        "n": "7",
-       "note": "codes start 1",
        "c": [
         {
          "n": "A",
-         "note": "4 times: code 10",
+         "note": "4 → 10",
          "mark": true
         },
         {
          "n": "3",
-         "note": "codes start 11",
          "c": [
           {
            "n": "T",
-           "note": "2 times: code 110",
+           "note": "2 → 110",
            "mark": true
           },
           {
            "n": "Z",
-           "note": "1 time: code 111",
+           "note": "1 → 111",
            "mark": true
           }
          ]
@@ -771,7 +766,7 @@
       }
      ]
     },
-    "caption": "Join the two rarest each time: Z + T = 3, then + A = 7, then + E = 15. Left = 0, right = 1. The commonest letter gets the shortest code."
+    "caption": "Letter counts E 8, A 4, T 2, Z 1. Join the two rarest each time: Z + T = 3, + A = 7, + E = 15. Left = 0, right = 1, so E, the commonest, gets the shortest code."
    }
   }
  ],
@@ -1943,40 +1938,13 @@
    "explain": "If the list is not in order, the half that is thrown away might contain the target.",
    "hook": "**Binary search trusts the order**: with no order, there is no safe half to throw away.",
    "visual": {
-    "kind": "table",
-    "rows": [
-     [
-      "index",
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6"
-     ],
-     [
-      "check 1",
-      "4",
-      "9",
-      "15",
-      "**22**",
-      "30",
-      "41",
-      "56"
-     ],
-     [
-      "check 2",
-      "",
-      "",
-      "",
-      "",
-      "30",
-      "**41**",
-      "56"
-     ]
+    "kind": "flow",
+    "steps": [
+     "Sorted list: 4 9 15 22 30 41 56",
+     "Check the middle, **22**. 41 is bigger, so drop 22 and everything left of it",
+     "Left: 30 41 56. Check the middle, **41**: found!"
     ],
-    "caption": "Binary search for 41: the middle is 22, too small, so drop the left half. The middle of what is left is 41: found."
+    "caption": "Binary search for 41. Each check throws away half of what is left, which only works because the list is sorted."
    }
   },
   {
@@ -2057,40 +2025,13 @@
    "hook": "**Middle, compare, keep half, repeat.**",
    "example": "Guessing a number from 1 to 100 with “higher” or “lower” clues takes at most 7 guesses.",
    "visual": {
-    "kind": "table",
-    "rows": [
-     [
-      "index",
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6"
-     ],
-     [
-      "check 1",
-      "4",
-      "9",
-      "15",
-      "**22**",
-      "30",
-      "41",
-      "56"
-     ],
-     [
-      "check 2",
-      "",
-      "",
-      "",
-      "",
-      "30",
-      "**41**",
-      "56"
-     ]
+    "kind": "flow",
+    "steps": [
+     "Sorted list: 4 9 15 22 30 41 56",
+     "Check the middle, **22**. 41 is bigger, so drop 22 and everything left of it",
+     "Left: 30 41 56. Check the middle, **41**: found!"
     ],
-    "caption": "Binary search for 41: the middle is 22, too small, so drop the left half. The middle of what is left is 41: found."
+    "caption": "Binary search for 41. Each check throws away half of what is left, which only works because the list is sorted."
    }
   },
   {
@@ -2472,11 +2413,11 @@
     "rows": [
      [
       "WWWWBBBW",
-      "4W 3B 1W (shorter)"
+      "4W3B1W (shorter)"
      ],
      [
       "ABCDEFG",
-      "1A 1B 1C 1D 1E 1F 1G (twice as long)"
+      "1A1B1C1D1E1F1G (**twice as long**)"
      ]
     ]
    }
