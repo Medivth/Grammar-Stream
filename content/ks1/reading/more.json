@@ -25,7 +25,31 @@
    "batch": 5,
    "intro": "More exciting words to use in your writing: swift, ferocious, triumphant…",
    "teach": "Use “ferocious” and “swift” in a sentence about a race.",
-   "talk": "Ask {him} to describe the family pet (or a toy) using a new word."
+   "talk": "Ask {him} to describe the family pet (or a toy) using a new word.",
+   "visual": [
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "whisper",
+      "say",
+      "shout",
+      "bellow"
+     ],
+     "caption": "Ways to speak, from quietest to loudest."
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "crept",
+      "walked",
+      "ran",
+      "dashed"
+     ],
+     "caption": "Ways to move, from slowest to fastest."
+    }
+   ]
   },
   {
    "id": "reading.words-3",
@@ -409,7 +433,18 @@
    "formats": [
     "choice"
    ],
-   "learn": "**whisper** means to speak very quietly.\n_The spy had to whisper the secret password._"
+   "learn": "**whisper** means to speak very quietly.\n_The spy had to whisper the secret password._",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "whisper",
+     "say",
+     "shout",
+     "bellow"
+    ],
+    "caption": "Ways to speak, from quietest to loudest."
+   }
   },
   {
    "id": "reading.w2.bellow",
@@ -426,7 +461,18 @@
    "formats": [
     "choice"
    ],
-   "learn": "**bellow** means to shout in a loud, deep voice.\n_The giant began to bellow with rage._"
+   "learn": "**bellow** means to shout in a loud, deep voice.\n_The giant began to bellow with rage._",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "whisper",
+     "say",
+     "shout",
+     "bellow"
+    ],
+    "caption": "Ways to speak, from quietest to loudest."
+   }
   },
   {
    "id": "reading.w2.dash",
@@ -443,7 +489,18 @@
    "formats": [
     "choice"
    ],
-   "learn": "**dash** means to run very quickly.\n_The hero made a dash for the door._"
+   "learn": "**dash** means to run very quickly.\n_The hero made a dash for the door._",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "crept",
+     "walked",
+     "ran",
+     "dashed"
+    ],
+    "caption": "Ways to move, from slowest to fastest."
+   }
   },
   {
    "id": "reading.w2.crept",
@@ -460,7 +517,18 @@
    "formats": [
     "choice"
    ],
-   "learn": "**crept** means moved slowly and quietly.\n_The wolf crept out of the forest._"
+   "learn": "**crept** means moved slowly and quietly.\n_The wolf crept out of the forest._",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "crept",
+     "walked",
+     "ran",
+     "dashed"
+    ],
+    "caption": "Ways to move, from slowest to fastest."
+   }
   },
   {
    "id": "reading.w2.shimmering",

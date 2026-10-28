@@ -203,6 +203,40 @@ const items = [
   fact('y3.shang.fuhao', 'y3-shang', 'Which Shang queen was also a general who led armies? Her tomb was found in 1976.', 'Fu Hao', ['Boudica', 'Cleopatra', 'Elizabeth I'], 'Her tomb was full of bronze, jade and weapons.', C),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// (the labelled drawings of a hill fort, a castle and a motte and bailey are attached separately)
+const BCAD = [[-600, 0, 'BC: years count down'], [0, 500, 'AD: years count up']];
+const FEUDAL = { kind: 'tree', root: { n: 'the king', note: 'owns all the land', c: [{ n: 'barons', note: 'given land by the king', c: [{ n: 'knights', note: 'given land by a baron; fight for him', c: [{ n: 'peasants (villeins)', note: 'work the lord’s land' }] }] }] }, caption: 'The feudal system, from most powerful to least.' };
+const LEGION = { kind: 'tree', root: { n: 'a legion', note: 'about 5,000 soldiers', c: [{ n: 'a cohort', note: '10 in a legion', c: [{ n: 'a century', note: '6 in a cohort', c: [{ n: 'a centurion', note: 'the officer in charge', c: [{ n: 'about 80 legionaries', note: 'foot soldiers' }] }] }] }] } };
+const KIT = { kind: 'table', head: ['Latin name', 'what it was'], rows: [['gladius', 'short sword'], ['scutum', 'large curved shield'], ['pilum', 'throwing spear'], ['caligae', 'sandals with iron nails']], tint: 'rows', caption: 'A legionary’s kit.' };
+const TOPIC_VISUALS = {
+  'history.y3-stoneage': { kind: 'timeline', from: -12000, to: -1, bands: [[-12000, -10000, 'Old Stone Age'], [-10000, -4000, 'Middle Stone Age'], [-4000, -2500, 'New Stone Age'], [-2500, -800, 'Bronze Age'], [-800, 43, 'Iron Age']], events: [[-8000, 'Cheddar Man'], [-4000, 'farming reaches Britain'], [-3000, 'Stonehenge begun'], [-2300, 'the Amesbury Archer'], [-800, 'iron reaches Britain']], caption: 'All the dates are “about”. The Old Stone Age began hundreds of thousands of years before this line starts, and the Iron Age lasted until the Romans came in AD 43.' },
+  'history.y3-legion': LEGION,
+  'history.y3-boudica': { kind: 'flow', steps: ['The Romans take the Iceni lands', 'Boudica leads a rebellion', 'Colchester, London and St Albans destroyed', 'A smaller Roman army defeats her'], caption: 'Boudica’s revolt, AD 60 or 61.' },
+  'history.y3-roman-life': { kind: 'timeline', from: -100, to: 450, set: 'britain', mark: 'Roman Britain', events: [[-55, 'Julius Caesar visits'], [43, 'Claudius invades'], [61, 'Boudica’s revolt'], [122, 'Hadrian’s Wall begun'], [410, 'the Romans leave']], caption: 'The Romans ruled Britain for nearly 400 years.' },
+  'history.y3-saxons': { kind: 'timeline', from: 380, to: 820, set: 'britain', mark: 'Anglo-Saxons and Vikings', events: [[410, 'the Romans leave'], [450, 'Angles, Saxons and Jutes arrive'], [597, 'Augustine arrives in Kent'], [624, 'Sutton Hoo burial'], [793, 'Vikings raid Lindisfarne']], caption: 'Some of these dates are “about”: 450 and 624.' },
+  'history.y3-vikings': { kind: 'timeline', from: 760, to: 1100, set: 'britain', events: [[793, 'Vikings raid Lindisfarne'], [878, 'Alfred defeats Guthrum'], [927, 'Athelstan, first king of England'], [1016, 'Cnut becomes king'], [1066, 'Battle of Hastings']] },
+  'history.y3-greece': { kind: 'timeline', from: -900, to: -150, set: 'greece', events: [[-776, 'first Olympic Games'], [-508, 'democracy begins in Athens'], [-490, 'Battle of Marathon']] },
+  'history.y3-civilisations': { kind: 'timeline', from: -3600, to: -500, set: 'britain', events: [[-3500, 'Sumerians use the wheel'], [-3200, 'writing begins in Sumer'], [-2560, 'Great Pyramid built'], [-2500, 'Indus Valley cities'], [-1600, 'Shang China begins'], [-776, 'first Olympic Games']], caption: 'All the dates are “about”. When the first cities grew, Britain was still in the Stone Age.' },
+  'history.y3-britain1940': { kind: 'flow', steps: ['Radar spots planes over the sea', 'The Observer Corps track them over land', 'WAAF plotters mark them on a map', 'Fighters are sent up to meet them'], caption: 'Fighter Command’s warning and control system, 1940.' },
+  'history.y3-skills': { kind: 'timeline', from: -600, to: 500, bands: BCAD, events: [[-490, 'Battle of Marathon'], [-55, 'Caesar visits Britain'], [43, 'Romans invade Britain'], [410, 'Romans leave Britain']], caption: 'BC years count down to 1 BC; then AD years count up from AD 1. There is no year 0.' },
+  'history.y3-normans': FEUDAL,
+  'history.y3-shang': { kind: 'timeline', from: -3200, to: -800, set: 'britain', events: [[-3000, 'Stonehenge begun'], [-2560, 'Great Pyramid built'], [-1600, 'Shang dynasty begins'], [-1046, 'Shang dynasty ends']], caption: 'All the dates are “about”. The Shang ruled China while Britain was in the Bronze Age.' },
+};
+const ITEM_VISUALS = {
+  'history.y3.sa.periods': { kind: 'flow', steps: ['Palaeolithic (Old Stone Age)', 'Mesolithic (Middle Stone Age)', 'Neolithic (New Stone Age)'], caption: 'Palaeo = old, meso = middle, neo = new; lithic = stone.' },
+  'history.y3.leg.centurion': LEGION,
+  'history.y3.leg.kit': KIT,
+  'history.y3.leg.caligae': KIT,
+  'history.y3.civ.order': { kind: 'timeline', from: -3500, to: 1000, events: [[-3200, 'writing begins in Sumer'], [-2560, 'the Great Pyramid'], [-776, 'the first Olympic Games'], [43, 'the Romans invade Britain']] },
+  'history.y3.bb.observer': { kind: 'flow', steps: ['Radar spots planes over the sea', 'The Observer Corps track them over land', 'WAAF plotters mark them on a map', 'Fighters are sent up to meet them'] },
+  'history.y3.sk.bc': { kind: 'timeline', from: -600, to: 200, bands: [[-600, 0, 'BC'], [0, 200, 'AD']], events: [[-500, 'earlier'], [-200, 'later']], caption: 'The bigger the BC number, the longer ago.' },
+  'history.y3.sk.zero': { kind: 'timeline', from: -10, to: 10, bands: [[-10, 0, 'BC'], [0, 10, 'AD']], events: [[-1, 'the last year BC'], [1, 'the first year AD']], caption: '1 BC is followed straight away by AD 1. There is no year 0.' },
+  'history.y3.no.feudal': FEUDAL,
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 // the one timeline for the course: Year 2’s, with Year 3 periods split out and new events added
 const PERIODS_Y3 = [['Stone Age', -3500, -2500], ['Bronze Age', -2500, -800], ['Iron Age', -800, 43]];
 const EVENTS_Y3 = [

@@ -199,4 +199,32 @@ for (const [id, memory] of Object.entries(MEMORY)) {
   Object.assign(item, memory);
 }
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// (Space, light, circuits and the heart get labelled diagrams separately.)
+const VERTEBRATES = {
+  kind: 'table', head: ['group', 'key features', 'example'],
+  rows: [
+    ['fish', 'live in water; gills, scales and fins', 'salmon'],
+    ['amphibians', 'moist skin; young live in water (gills), adults on land (lungs)', 'frog'],
+    ['reptiles', 'dry, scaly skin; most lay eggs on land', 'snake'],
+    ['birds', 'feathers and a beak; lay hard-shelled eggs', 'robin'],
+    ['mammals', 'hair or fur; breathe air; feed their babies milk', '**whale**, human'],
+  ],
+  tint: 'rows', caption: 'The five vertebrate groups. A whale lives in water, but it breathes air and feeds its babies milk: it is a mammal.',
+};
+const ANIMALS = { kind: 'tree', root: { n: 'Animals', c: [{ n: 'Vertebrates', note: 'have a backbone', mark: true }, { n: 'Invertebrates', note: 'no backbone: insects, spiders, worms' }] } };
+const NATURAL_SELECTION = { kind: 'flow', steps: ['Giraffes vary: some have longer necks', 'Longer necks reach more leaves', 'Those giraffes survive and breed more', 'Their young inherit long necks', 'Over many generations, necks get longer'], caption: 'Natural selection: nobody stretches their neck. The giraffes that happen to suit their habitat best survive and pass their features on.' };
+const TOPIC_VISUALS = {
+  'science.living': [ANIMALS, VERTEBRATES],
+  'science.evolution': NATURAL_SELECTION,
+};
+const ITEM_VISUALS = {
+  'science.lv.d1': VERTEBRATES,
+  'science.lv.five': VERTEBRATES,
+  'science.lv.vertebrate': ANIMALS,
+  'science.ev.d1': NATURAL_SELECTION,
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = t.visual ? [].concat(t.visual, v) : v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = it.visual ? [].concat(it.visual, v) : v; }
+
 export default [{ subject: 'science', deck: 'core', topics, items }];

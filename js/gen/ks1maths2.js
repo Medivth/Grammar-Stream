@@ -3,6 +3,7 @@
 // perimeter, Roman numerals). Same contract as ks1maths.js.
 
 import { timeWords } from './ks1maths.js';
+import { pic, bar, pvWhole } from './pictures.js';
 
 const money = (p) => (p >= 100 ? `£${(p / 100).toFixed(2)}` : `${p}p`);
 function choice(prompt, correct, wrongs, rng, extra = {}) {
@@ -13,6 +14,8 @@ function choice(prompt, correct, wrongs, rng, extra = {}) {
 const typed = (prompt, value, explain, steps, extra = {}) => ({ kind: 'typed', prompt, numeric: { value: String(value), form: 'any' }, explain, steps, ...extra });
 
 const DIRS = ['north', 'east', 'south', 'west'];
+const double = (a) => pic(bar([{ parts: 2, text: a }], 2 * a), `Double ${a} is two boxes of ${a}: ${2 * a}.`);
+const half = (a) => pic(bar([{ parts: 2, shaded: 1, text: a / 2 }], a), `${a} in 2 equal boxes: ${a / 2} in each. Half is one box.`);
 const ROMAN = (n) => [[50, 'L'], [40, 'XL'], [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']].reduce((acc, [v, s]) => { while (n >= v) { acc += s; n -= v; } return acc; }, '');
 
 export const KS1_GENERATORS_2 = {
@@ -30,7 +33,8 @@ export const KS1_GENERATORS_2 = {
   k1FactFamily(level, rng) {
     if (level === 1) {
       const a = rng.int(3, 9), b = rng.int(3, 9), c = a + b;
-      return typed(`${a} + ${b} = ${c}. So what is ${c} − ${b}?`, a, `Adding and taking away undo each other: ${c} − ${b} = ${a}.`, ['These numbers belong to the same fact family.', `If ${a} + ${b} = ${c}, then taking ${b} away again gets back to ${a}.`, `${c} − ${b} = ${a}.`]);
+      return typed(`${a} + ${b} = ${c}. So what is ${c} − ${b}?`, a, `Adding and taking away undo each other: ${c} − ${b} = ${a}.`, ['These numbers belong to the same fact family.', `If ${a} + ${b} = ${c}, then taking ${b} away again gets back to ${a}.`, `${c} − ${b} = ${a}.`],
+        pic(bar([{ parts: c, shaded: a }], c), `${a} shaded and ${b} white make ${c}. Take away the ${b} white ones and ${a} are left.`));
     }
     if (level === 2) {
       const a = rng.int(21, 54), b = rng.int(12, 35), c = a + b;
@@ -38,28 +42,31 @@ export const KS1_GENERATORS_2 = {
     }
     if (rng.chance(0.5)) {
       const a = rng.pick([2, 3, 4, 5, 10]), b = rng.int(2, 10);
-      return typed(`${b} × ${a} = ${a * b}. So what is ${a * b} ÷ ${b}?`, a, `Multiplying and dividing undo each other: ${a * b} ÷ ${b} = ${a}.`, ['× and ÷ are inverses.', `${b} lots of ${a} make ${a * b}.`, `So ${a * b} shared into ${b} groups is ${a}.`]);
+      return typed(`${b} × ${a} = ${a * b}. So what is ${a * b} ÷ ${b}?`, a, `Multiplying and dividing undo each other: ${a * b} ÷ ${b} = ${a}.`, ['× and ÷ are inverses.', `${b} lots of ${a} make ${a * b}.`, `So ${a * b} shared into ${b} groups is ${a}.`],
+        pic(bar([{ parts: b, text: a }], a * b), `${b} boxes of ${a} make ${a * b}, so ${a * b} ÷ ${b} = ${a}.`));
     }
     const a = rng.int(5, 9), b = rng.int(2, a - 1), c = a + b;
     return choice(`Which one is NOT in the fact family for ${a}, ${b} and ${c}?`, `${a} − ${b} = ${c}`, [`${b} + ${a} = ${c}`, `${c} − ${a} = ${b}`, `${c} − ${b} = ${a}`], rng, {
       explain: `The family is ${a} + ${b} = ${c}, ${b} + ${a} = ${c}, ${c} − ${a} = ${b} and ${c} − ${b} = ${a}. You always take away FROM the biggest number.`,
       steps: ['In a fact family the biggest number is the total.', `You add to make ${c}, or take away from ${c}.`, `${a} − ${b} = ${c} is wrong: it takes away from the wrong number.`],
+      ...pic(bar([{ parts: c, shaded: a }], c), `${a} shaded and ${b} white make ${c}. ${c} is the whole, so you take away from ${c}.`),
     });
   },
 
   k1Doubles(level, rng) {
     if (level === 1) {
-      if (rng.chance(0.5)) { const a = rng.int(2, 10); return typed(`Double ${a} =`, 2 * a, `${a} + ${a} = ${2 * a}.`, ['Double means add the number to itself.', `${a} + ${a}.`, `= ${2 * a}.`]); }
-      const a = rng.int(1, 10) * 2; return typed(`Half of ${a} =`, a / 2, `Share ${a} into 2 equal groups: ${a / 2}. Check: ${a / 2} + ${a / 2} = ${a}.`, ['Half means 2 equal groups.', `${a / 2} + ${a / 2} = ${a}.`, `So half of ${a} is ${a / 2}.`]);
+      if (rng.chance(0.5)) { const a = rng.int(2, 10); return typed(`Double ${a} =`, 2 * a, `${a} + ${a} = ${2 * a}.`, ['Double means add the number to itself.', `${a} + ${a}.`, `= ${2 * a}.`], double(a)); }
+      const a = rng.int(1, 10) * 2; return typed(`Half of ${a} =`, a / 2, `Share ${a} into 2 equal groups: ${a / 2}. Check: ${a / 2} + ${a / 2} = ${a}.`, ['Half means 2 equal groups.', `${a / 2} + ${a / 2} = ${a}.`, `So half of ${a} is ${a / 2}.`], half(a));
     }
     if (level === 2) {
       if (rng.chance(0.5)) { const a = rng.int(4, 9); return typed(`${a} + ${a + 1} =`, 2 * a + 1, `Near double: double ${a} is ${2 * a}, plus 1 more is ${2 * a + 1}.`, [`${a + 1} is one more than ${a}.`, `So ${a} + ${a + 1} is double ${a}, plus 1.`, `${2 * a} + 1 = ${2 * a + 1}.`]); }
-      const a = rng.int(11, 25); return typed(`Double ${a} =`, 2 * a, `Double the tens: ${(a - (a % 10)) * 2}. Double the ones: ${(a % 10) * 2}. Together ${2 * a}.`, [`I split ${a} into ${a - (a % 10)} and ${a % 10}.`, `Double ${a - (a % 10)} = ${(a - (a % 10)) * 2}; double ${a % 10} = ${(a % 10) * 2}.`, `${(a - (a % 10)) * 2} + ${(a % 10) * 2} = ${2 * a}.`]);
+      const a = rng.int(11, 25); return typed(`Double ${a} =`, 2 * a, `Double the tens: ${(a - (a % 10)) * 2}. Double the ones: ${(a % 10) * 2}. Together ${2 * a}.`, [`I split ${a} into ${a - (a % 10)} and ${a % 10}.`, `Double ${a - (a % 10)} = ${(a - (a % 10)) * 2}; double ${a % 10} = ${(a % 10) * 2}.`, `${(a - (a % 10)) * 2} + ${(a % 10) * 2} = ${2 * a}.`], double(a));
     }
     const kind = rng.pick(['half-tens', 'double-big', 'quarter']);
-    if (kind === 'half-tens') { const a = rng.pick([30, 50, 70, 90, 110, 130]); return typed(`Half of ${a} =`, a / 2, `Half of ${a - 10} is ${(a - 10) / 2}, and half of 10 is 5: ${a / 2}.`, [`${a} is ${a - 10} + 10.`, `Half of ${a - 10} = ${(a - 10) / 2}, half of 10 = 5.`, `${(a - 10) / 2} + 5 = ${a / 2}.`]); }
-    if (kind === 'double-big') { const a = rng.int(26, 49); return typed(`Double ${a} =`, 2 * a, `Double ${a - (a % 10)} = ${(a - (a % 10)) * 2}, double ${a % 10} = ${(a % 10) * 2}: ${2 * a}.`, [`Split: ${a - (a % 10)} and ${a % 10}.`, `${(a - (a % 10)) * 2} and ${(a % 10) * 2}.`, `Total ${2 * a}.`]); }
-    const a = rng.int(2, 12) * 4; return typed(`A quarter of ${a} =`, a / 4, `A quarter is half of a half: half of ${a} is ${a / 2}, half again is ${a / 4}.`, ['To find a quarter I can halve twice.', `Half of ${a} = ${a / 2}.`, `Half of ${a / 2} = ${a / 4}.`]);
+    if (kind === 'half-tens') { const a = rng.pick([30, 50, 70, 90, 110, 130]); return typed(`Half of ${a} =`, a / 2, `Half of ${a - 10} is ${(a - 10) / 2}, and half of 10 is 5: ${a / 2}.`, [`${a} is ${a - 10} + 10.`, `Half of ${a - 10} = ${(a - 10) / 2}, half of 10 = 5.`, `${(a - 10) / 2} + 5 = ${a / 2}.`], half(a)); }
+    if (kind === 'double-big') { const a = rng.int(26, 49); return typed(`Double ${a} =`, 2 * a, `Double ${a - (a % 10)} = ${(a - (a % 10)) * 2}, double ${a % 10} = ${(a % 10) * 2}: ${2 * a}.`, [`Split: ${a - (a % 10)} and ${a % 10}.`, `${(a - (a % 10)) * 2} and ${(a % 10) * 2}.`, `Total ${2 * a}.`], double(a)); }
+    const a = rng.int(2, 12) * 4; return typed(`A quarter of ${a} =`, a / 4, `A quarter is half of a half: half of ${a} is ${a / 2}, half again is ${a / 4}.`, ['To find a quarter I can halve twice.', `Half of ${a} = ${a / 2}.`, `Half of ${a / 2} = ${a / 4}.`],
+      pic(bar([{ parts: 4, shaded: 1, text: a / 4 }], a), `${a} in 4 equal boxes: ${a / 4} in each. A quarter is one box.`));
   },
 
   k1Turns(level, rng) {
@@ -88,8 +95,8 @@ export const KS1_GENERATORS_2 = {
   },
 
   k1Grouping(level, rng) {
-    if (level === 1) { const g = rng.pick([2, 5, 10]), n = rng.int(2, 6); return typed(`${g * n} children make teams of ${g}. How many teams are there?`, n, `${g * n} ÷ ${g} = ${n} teams.`, [`I count in ${g}s until I reach ${g * n}.`, Array.from({ length: n }, (_, i) => (i + 1) * g).join(', ') + '.', `That is ${n} teams.`]); }
-    if (level === 2) { const g = rng.pick([2, 3, 4, 5]), n = rng.int(3, 10); return typed(`A car transporter carries ${g} cars. How many transporters are needed for ${g * n} cars?`, n, `${g * n} ÷ ${g} = ${n}.`, [`Each transporter takes ${g}.`, `${g * n} ÷ ${g}.`, `= ${n} transporters.`]); }
+    if (level === 1) { const g = rng.pick([2, 5, 10]), n = rng.int(2, 6); return typed(`${g * n} children make teams of ${g}. How many teams are there?`, n, `${g * n} ÷ ${g} = ${n} teams.`, [`I count in ${g}s until I reach ${g * n}.`, Array.from({ length: n }, (_, i) => (i + 1) * g).join(', ') + '.', `That is ${n} teams.`], pic(bar([{ parts: n, text: g }], g * n), `${g * n} children in teams of ${g}: ${n} boxes of ${g}.`)); }
+    if (level === 2) { const g = rng.pick([2, 3, 4, 5]), n = rng.int(3, 10); return typed(`A car transporter carries ${g} cars. How many transporters are needed for ${g * n} cars?`, n, `${g * n} ÷ ${g} = ${n}.`, [`Each transporter takes ${g}.`, `${g * n} ÷ ${g}.`, `= ${n} transporters.`], pic(bar([{ parts: n, text: g }], g * n), `${g * n} cars, ${g} on each transporter: ${n} boxes of ${g}.`)); }
     const g = rng.pick([3, 4, 5]), n = rng.int(3, 8), r = rng.int(1, g - 1), total = g * n + r;
     if (rng.chance(0.5)) return typed(`A car transporter carries ${g} cars. How many transporters are needed for ${total} cars? Every car must go!`, n + 1, `${total} ÷ ${g} = ${n} remainder ${r}. The ${r} left over need one more transporter: ${n + 1}.`, [`${g} × ${n} = ${g * n}, which leaves ${r} car${r === 1 ? '' : 's'}.`, `${r === 1 ? 'That 1 car still needs' : `Those ${r} cars still need`} a transporter.`, `So ${n} + 1 = ${n + 1}.`]);
     return typed(`${total} stickers are shared equally between ${g} friends. How many are left over?`, r, `${g} × ${n} = ${g * n}, and ${total} − ${g * n} = ${r} left over.`, [`Each friend gets ${n}: ${g} × ${n} = ${g * n}.`, `${total} − ${g * n} = ${r}.`, `${r} left over.`]);
@@ -140,13 +147,13 @@ export const KS1_GENERATORS_2 = {
 
   // --- Year 3 tasters ------------------------------------------------------------------
   k1Times10(level, rng) {
-    if (level === 1) { const a = rng.int(2, 12); return typed(`${a} × 10 =`, a * 10, `Multiplying by 10 moves every digit one place bigger: ${a} → ${a * 10}.`, ['× 10 makes a number ten times bigger.', 'The digits move one place to the left, and a 0 fills the ones.', `${a * 10}.`]); }
-    if (level === 2) { const a = rng.int(2, 9) * 10; return typed(`${a} ÷ 10 =`, a / 10, `Dividing by 10 moves the digits one place smaller: ${a} → ${a / 10}.`, ['÷ 10 makes a number ten times smaller.', 'The digits move one place to the right.', `${a / 10}.`]); }
-    const a = rng.int(2, 9); return typed(`${a} × 100 =`, a * 100, `× 100 moves the digits two places: ${a} → ${a * 100}.`, ['× 100 is × 10, then × 10 again.', `${a} × 10 = ${a * 10}, × 10 again = ${a * 100}.`, `${a * 100}.`]);
+    if (level === 1) { const a = rng.int(2, 12); return typed(`${a} × 10 =`, a * 10, `Multiplying by 10 moves every digit one place bigger: ${a} → ${a * 10}.`, ['× 10 makes a number ten times bigger.', 'The digits move one place to the left, and a 0 fills the ones.', `${a * 10}.`], pic(pvWhole(['H', 'T', 'O'], [a, a * 10], { shift: 1 }), '× 10: every digit moves one place to the left, and a 0 fills the ones.')); }
+    if (level === 2) { const a = rng.int(2, 9) * 10; return typed(`${a} ÷ 10 =`, a / 10, `Dividing by 10 moves the digits one place smaller: ${a} → ${a / 10}.`, ['÷ 10 makes a number ten times smaller.', 'The digits move one place to the right.', `${a / 10}.`], pic(pvWhole(['T', 'O'], [a, a / 10], { shift: -1 }), '÷ 10: every digit moves one place to the right.')); }
+    const a = rng.int(2, 9); return typed(`${a} × 100 =`, a * 100, `× 100 moves the digits two places: ${a} → ${a * 100}.`, ['× 100 is × 10, then × 10 again.', `${a} × 10 = ${a * 10}, × 10 again = ${a * 100}.`, `${a * 100}.`], pic(pvWhole(['H', 'T', 'O'], [a, a * 100], { shift: 2 }), '× 100: every digit moves two places to the left, and 0s fill the tens and ones.'));
   },
 
   k1Perimeter(level, rng) {
-    if (level === 1) { const s = rng.int(2, 9); return typed(`A square has sides of ${s} cm. What is its perimeter?`, 4 * s, `A square has 4 equal sides: ${s} + ${s} + ${s} + ${s} = ${4 * s} cm.`, ['Perimeter is the distance all the way round.', `A square has 4 sides of ${s} cm.`, `4 × ${s} = ${4 * s} cm.`], { unit: 'cm' }); }
+    if (level === 1) { const s = rng.int(2, 9); return typed(`A square has sides of ${s} cm. What is its perimeter?`, 4 * s, `A square has 4 equal sides: ${s} + ${s} + ${s} + ${s} = ${4 * s} cm.`, ['Perimeter is the distance all the way round.', `A square has 4 sides of ${s} cm.`, `4 × ${s} = ${4 * s} cm.`], { unit: 'cm', ...pic({ type: 'rect', w: s, h: s }, `All 4 sides are ${s} cm: ${s} + ${s} + ${s} + ${s} = ${4 * s} cm.`) }); }
     const w = rng.int(4, 12), hgt = rng.int(2, w - 1);
     if (level === 2) return typed('What is the perimeter of this rectangle?', 2 * (w + hgt), `${w} + ${hgt} + ${w} + ${hgt} = ${2 * (w + hgt)} cm.`, ['Perimeter: add all four sides.', `Two sides of ${w} and two of ${hgt}.`, `${2 * w} + ${2 * hgt} = ${2 * (w + hgt)} cm.`], { unit: 'cm', diagram: { type: 'rect', w, h: hgt } });
     const p = 2 * (w + hgt);

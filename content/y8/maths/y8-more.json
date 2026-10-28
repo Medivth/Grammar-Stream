@@ -12,7 +12,33 @@
    "intro": "Speed, density and pressure each combine two measurements: distance per hour, mass per cm³, force per m². Learn one formula and you can rearrange it for the other two quantities.",
    "teach": "Explain how to change 72 km/h into metres per second.",
    "talk": "On a car journey, ask {him} to work out the average speed from the distance and the time taken.",
-   "hook": "**Speed = distance ÷ time**: in the triangle, D sits on top of S × T. Cover the one you want."
+   "hook": "**Speed = distance ÷ time**: in the triangle, D sits on top of S × T. Cover the one you want.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "measure",
+     "formula",
+     "units"
+    ],
+    "rows": [
+     [
+      "speed",
+      "distance ÷ time",
+      "km/h, m/s"
+     ],
+     [
+      "density",
+      "mass ÷ volume",
+      "g/cm³"
+     ],
+     [
+      "pressure",
+      "force ÷ area",
+      "N/m²"
+     ]
+    ],
+    "caption": "Rearrange for the other two: distance = speed × time; time = distance ÷ speed. 72 km/h = 72,000 m ÷ 3600 s = 20 m/s."
+   }
   },
   {
    "id": "maths.units",
@@ -22,7 +48,31 @@
    "intro": "Length units scale by 10, 100 or 1000. Area units scale by the square of that, and volume units by the cube: 1 m² is 10,000 cm², and 1 m³ is a million cm³.",
    "teach": "Explain why 1 m² is not 100 cm².",
    "talk": "Ask {him} how many litres a 1 m by 1 m by 1 m box would hold.",
-   "hook": "Lengths scale by 10, areas by **10²**, volumes by **10³**: square for area, cube for volume."
+   "hook": "Lengths scale by 10, areas by **10²**, volumes by **10³**: square for area, cube for volume.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "length",
+     "area",
+     "volume"
+    ],
+    "rows": [
+     [
+      "m → cm",
+      "× 100",
+      "× 100² = × 10,000",
+      "× 100³ = × 1,000,000"
+     ],
+     [
+      "cm → mm",
+      "× 10",
+      "× 10² = × 100",
+      "× 10³ = × 1000"
+     ]
+    ],
+    "caption": "Square the length factor for area, cube it for volume. 1 m³ = 1,000,000 cm³ = 1000 litres."
+   }
   },
   {
    "id": "maths.bounds",
@@ -34,7 +84,33 @@
    "intro": "A measurement rounded to the nearest unit could be up to half a unit either side. Bounds tell you the range a true value could lie in, and how big or small an answer could really be.",
    "teach": "Explain why the upper bound of 34 cm (to the nearest cm) is 34.5 cm even though 34.5 itself would round up.",
    "talk": "Ask {him} the shortest a 1.6 m tall person could really be, if the height is given to 1 decimal place.",
-   "hook": "Rounded to the nearest unit? The true value is **up to half a unit either way**."
+   "hook": "Rounded to the nearest unit? The true value is **up to half a unit either way**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "34 cm to the nearest cm",
+     "value",
+     ""
+    ],
+    "rows": [
+     [
+      "lower bound",
+      "33.5 cm",
+      "included (≤)"
+     ],
+     [
+      "rounded value",
+      "34 cm",
+      ""
+     ],
+     [
+      "upper bound",
+      "34.5 cm",
+      "not included (<)"
+     ]
+    ],
+    "caption": "Error interval: 33.5 ≤ l < 34.5. Every length in it rounds to 34 cm."
+   }
   },
   {
    "id": "maths.estimate",
@@ -58,7 +134,76 @@
    "intro": "We count in tens because we have ten fingers. Computers count in twos, the Babylonians in sixties. In any base, each column is worth the base times the column to its right.",
    "teach": "Explain how to convert 45 into binary.",
    "talk": "Ask {him} what 10 means in binary, and why.",
-   "hook": "In base b the columns are 1, b, b², b³ …: in binary they **double**, 1, 2, 4, 8, 16."
+   "hook": "In base b the columns are 1, b, b², b³ …: in binary they **double**, 1, 2, 4, 8, 16.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "pvgrid",
+      "cols": [
+       128,
+       64,
+       32,
+       16,
+       8,
+       4,
+       2,
+       1
+      ],
+      "rows": [
+       [
+        "0",
+        "0",
+        "1",
+        "0",
+        "1",
+        "1",
+        "0",
+        "1"
+       ]
+      ]
+     },
+     "caption": "45 in binary: 32 + 8 + 4 + 1, so 101101."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "pvgrid",
+      "cols": [
+       125,
+       25,
+       5,
+       1
+      ],
+      "rows": [
+       [
+        "1",
+        "4",
+        "0"
+       ]
+      ]
+     },
+     "caption": "45 in base 5: 1 × 25 + 4 × 5 + 0 = 140."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "pvgrid",
+      "cols": [
+       256,
+       16,
+       1
+      ],
+      "rows": [
+       [
+        "2",
+        "D"
+       ]
+      ]
+     },
+     "caption": "45 in hexadecimal: 2 × 16 + 13 = 2D (D stands for 13)."
+    }
+   ]
   },
   {
    "id": "maths.index-laws",
@@ -96,7 +241,28 @@
    "intro": "Factorise fully by taking out the highest common factor, letters included. Watch for the difference of two squares: a² − b² = (a + b)(a − b).",
    "teach": "Explain how to factorise x² − 81 and why it works.",
    "talk": "Ask {him} to work out 99 × 101 in {her} head using the difference of two squares.",
-   "hook": "**Difference of two squares**: a² − b² = (a + b)(a − b)."
+   "hook": "**Difference of two squares**: a² − b² = (a + b)(a − b).",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "×",
+      "a",
+      "+b"
+     ],
+     [
+      "a",
+      "a²",
+      "**+ab**"
+     ],
+     [
+      "−b",
+      "**−ab**",
+      "−b²"
+     ]
+    ],
+    "caption": "(a + b)(a − b) = a² + ab − ab − b² = a² − b²: the middle terms cancel. So x² − 81 = (x + 9)(x − 9)."
+   }
   },
   {
    "id": "maths.eq-fractions",
@@ -133,7 +299,31 @@
    "intro": "A function is a machine: put x in, get f(x) out. The inverse function undoes it, and a composite function feeds one machine into another.",
    "teach": "Explain how to find the inverse of f(x) = 3x − 5.",
    "talk": "Play “guess my function”: {she} gives inputs, you give outputs.",
-   "hook": "A function is a machine; the inverse runs it **backwards**, undoing each step in reverse order."
+   "hook": "A function is a machine; the inverse runs it **backwards**, undoing each step in reverse order.",
+   "visual": [
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "x",
+      "× 3",
+      "− 5",
+      "f(x) = 3x − 5"
+     ],
+     "caption": "A function machine: f(x) = 3x − 5."
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "x",
+      "+ 5",
+      "÷ 3",
+      "f⁻¹(x) = {{x + 5/3}}"
+     ],
+     "caption": "The inverse undoes each step in reverse order: add 5 first, then divide by 3."
+    }
+   ]
   },
   {
    "id": "maths.curves",
@@ -145,7 +335,1464 @@
    "intro": "Not every graph is a straight line. Quadratics make U-shaped parabolas, cubics make S-shapes and reciprocals make two separate curves that never touch the axes.",
    "teach": "Explain how to find the turning point of y = (x − 3)² + 1.",
    "talk": "Throw a ball and ask {him} what shape its path makes.",
-   "hook": "**x² smiles (U), −x² frowns (∩), x³ wiggles (S), and 1/x never touches the axes.**"
+   "hook": "**x² smiles (U), −x² frowns (∩), x³ wiggles (S), and 1/x never touches the axes.**",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "curve",
+      "range": [
+       -3,
+       3
+      ],
+      "paths": [
+       [
+        [
+         -3,
+         9
+        ],
+        [
+         -2.95,
+         8.703
+        ],
+        [
+         -2.9,
+         8.41
+        ],
+        [
+         -2.85,
+         8.123
+        ],
+        [
+         -2.8,
+         7.84
+        ],
+        [
+         -2.75,
+         7.563
+        ],
+        [
+         -2.7,
+         7.29
+        ],
+        [
+         -2.65,
+         7.023
+        ],
+        [
+         -2.6,
+         6.76
+        ],
+        [
+         -2.55,
+         6.503
+        ],
+        [
+         -2.5,
+         6.25
+        ],
+        [
+         -2.45,
+         6.003
+        ],
+        [
+         -2.4,
+         5.76
+        ],
+        [
+         -2.35,
+         5.523
+        ],
+        [
+         -2.3,
+         5.29
+        ],
+        [
+         -2.25,
+         5.063
+        ],
+        [
+         -2.2,
+         4.84
+        ],
+        [
+         -2.15,
+         4.623
+        ],
+        [
+         -2.1,
+         4.41
+        ],
+        [
+         -2.05,
+         4.203
+        ],
+        [
+         -2,
+         4
+        ],
+        [
+         -1.95,
+         3.803
+        ],
+        [
+         -1.9,
+         3.61
+        ],
+        [
+         -1.85,
+         3.423
+        ],
+        [
+         -1.8,
+         3.24
+        ],
+        [
+         -1.75,
+         3.063
+        ],
+        [
+         -1.7,
+         2.89
+        ],
+        [
+         -1.65,
+         2.723
+        ],
+        [
+         -1.6,
+         2.56
+        ],
+        [
+         -1.55,
+         2.403
+        ],
+        [
+         -1.5,
+         2.25
+        ],
+        [
+         -1.45,
+         2.103
+        ],
+        [
+         -1.4,
+         1.96
+        ],
+        [
+         -1.35,
+         1.823
+        ],
+        [
+         -1.3,
+         1.69
+        ],
+        [
+         -1.25,
+         1.563
+        ],
+        [
+         -1.2,
+         1.44
+        ],
+        [
+         -1.15,
+         1.323
+        ],
+        [
+         -1.1,
+         1.21
+        ],
+        [
+         -1.05,
+         1.103
+        ],
+        [
+         -1,
+         1
+        ],
+        [
+         -0.95,
+         0.903
+        ],
+        [
+         -0.9,
+         0.81
+        ],
+        [
+         -0.85,
+         0.723
+        ],
+        [
+         -0.8,
+         0.64
+        ],
+        [
+         -0.75,
+         0.563
+        ],
+        [
+         -0.7,
+         0.49
+        ],
+        [
+         -0.65,
+         0.423
+        ],
+        [
+         -0.6,
+         0.36
+        ],
+        [
+         -0.55,
+         0.303
+        ],
+        [
+         -0.5,
+         0.25
+        ],
+        [
+         -0.45,
+         0.203
+        ],
+        [
+         -0.4,
+         0.16
+        ],
+        [
+         -0.35,
+         0.123
+        ],
+        [
+         -0.3,
+         0.09
+        ],
+        [
+         -0.25,
+         0.063
+        ],
+        [
+         -0.2,
+         0.04
+        ],
+        [
+         -0.15,
+         0.023
+        ],
+        [
+         -0.1,
+         0.01
+        ],
+        [
+         -0.05,
+         0.003
+        ],
+        [
+         0,
+         0
+        ],
+        [
+         0.05,
+         0.002
+        ],
+        [
+         0.1,
+         0.01
+        ],
+        [
+         0.15,
+         0.022
+        ],
+        [
+         0.2,
+         0.04
+        ],
+        [
+         0.25,
+         0.062
+        ],
+        [
+         0.3,
+         0.09
+        ],
+        [
+         0.35,
+         0.122
+        ],
+        [
+         0.4,
+         0.16
+        ],
+        [
+         0.45,
+         0.202
+        ],
+        [
+         0.5,
+         0.25
+        ],
+        [
+         0.55,
+         0.302
+        ],
+        [
+         0.6,
+         0.36
+        ],
+        [
+         0.65,
+         0.422
+        ],
+        [
+         0.7,
+         0.49
+        ],
+        [
+         0.75,
+         0.562
+        ],
+        [
+         0.8,
+         0.64
+        ],
+        [
+         0.85,
+         0.722
+        ],
+        [
+         0.9,
+         0.81
+        ],
+        [
+         0.95,
+         0.902
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         1.05,
+         1.102
+        ],
+        [
+         1.1,
+         1.21
+        ],
+        [
+         1.15,
+         1.322
+        ],
+        [
+         1.2,
+         1.44
+        ],
+        [
+         1.25,
+         1.562
+        ],
+        [
+         1.3,
+         1.69
+        ],
+        [
+         1.35,
+         1.822
+        ],
+        [
+         1.4,
+         1.96
+        ],
+        [
+         1.45,
+         2.102
+        ],
+        [
+         1.5,
+         2.25
+        ],
+        [
+         1.55,
+         2.402
+        ],
+        [
+         1.6,
+         2.56
+        ],
+        [
+         1.65,
+         2.722
+        ],
+        [
+         1.7,
+         2.89
+        ],
+        [
+         1.75,
+         3.062
+        ],
+        [
+         1.8,
+         3.24
+        ],
+        [
+         1.85,
+         3.422
+        ],
+        [
+         1.9,
+         3.61
+        ],
+        [
+         1.95,
+         3.802
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         2.05,
+         4.202
+        ],
+        [
+         2.1,
+         4.41
+        ],
+        [
+         2.15,
+         4.622
+        ],
+        [
+         2.2,
+         4.84
+        ],
+        [
+         2.25,
+         5.062
+        ],
+        [
+         2.3,
+         5.29
+        ],
+        [
+         2.35,
+         5.522
+        ],
+        [
+         2.4,
+         5.76
+        ],
+        [
+         2.45,
+         6.002
+        ],
+        [
+         2.5,
+         6.25
+        ],
+        [
+         2.55,
+         6.502
+        ],
+        [
+         2.6,
+         6.76
+        ],
+        [
+         2.65,
+         7.022
+        ],
+        [
+         2.7,
+         7.29
+        ],
+        [
+         2.75,
+         7.562
+        ],
+        [
+         2.8,
+         7.84
+        ],
+        [
+         2.85,
+         8.122
+        ],
+        [
+         2.9,
+         8.41
+        ],
+        [
+         2.95,
+         8.702
+        ],
+        [
+         3,
+         9
+        ]
+       ]
+      ]
+     },
+     "caption": "y = x²: a U-shaped parabola."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "curve",
+      "range": [
+       -3,
+       3
+      ],
+      "paths": [
+       [
+        [
+         -3,
+         -27
+        ],
+        [
+         -2.95,
+         -25.672
+        ],
+        [
+         -2.9,
+         -24.389
+        ],
+        [
+         -2.85,
+         -23.149
+        ],
+        [
+         -2.8,
+         -21.952
+        ],
+        [
+         -2.75,
+         -20.797
+        ],
+        [
+         -2.7,
+         -19.683
+        ],
+        [
+         -2.65,
+         -18.61
+        ],
+        [
+         -2.6,
+         -17.576
+        ],
+        [
+         -2.55,
+         -16.581
+        ],
+        [
+         -2.5,
+         -15.625
+        ],
+        [
+         -2.45,
+         -14.706
+        ],
+        [
+         -2.4,
+         -13.824
+        ],
+        [
+         -2.35,
+         -12.978
+        ],
+        [
+         -2.3,
+         -12.167
+        ],
+        [
+         -2.25,
+         -11.391
+        ],
+        [
+         -2.2,
+         -10.648
+        ],
+        [
+         -2.15,
+         -9.938
+        ],
+        [
+         -2.1,
+         -9.261
+        ],
+        [
+         -2.05,
+         -8.615
+        ],
+        [
+         -2,
+         -8
+        ],
+        [
+         -1.95,
+         -7.415
+        ],
+        [
+         -1.9,
+         -6.859
+        ],
+        [
+         -1.85,
+         -6.332
+        ],
+        [
+         -1.8,
+         -5.832
+        ],
+        [
+         -1.75,
+         -5.359
+        ],
+        [
+         -1.7,
+         -4.913
+        ],
+        [
+         -1.65,
+         -4.492
+        ],
+        [
+         -1.6,
+         -4.096
+        ],
+        [
+         -1.55,
+         -3.724
+        ],
+        [
+         -1.5,
+         -3.375
+        ],
+        [
+         -1.45,
+         -3.049
+        ],
+        [
+         -1.4,
+         -2.744
+        ],
+        [
+         -1.35,
+         -2.46
+        ],
+        [
+         -1.3,
+         -2.197
+        ],
+        [
+         -1.25,
+         -1.953
+        ],
+        [
+         -1.2,
+         -1.728
+        ],
+        [
+         -1.15,
+         -1.521
+        ],
+        [
+         -1.1,
+         -1.331
+        ],
+        [
+         -1.05,
+         -1.158
+        ],
+        [
+         -1,
+         -1
+        ],
+        [
+         -0.95,
+         -0.857
+        ],
+        [
+         -0.9,
+         -0.729
+        ],
+        [
+         -0.85,
+         -0.614
+        ],
+        [
+         -0.8,
+         -0.512
+        ],
+        [
+         -0.75,
+         -0.422
+        ],
+        [
+         -0.7,
+         -0.343
+        ],
+        [
+         -0.65,
+         -0.275
+        ],
+        [
+         -0.6,
+         -0.216
+        ],
+        [
+         -0.55,
+         -0.166
+        ],
+        [
+         -0.5,
+         -0.125
+        ],
+        [
+         -0.45,
+         -0.091
+        ],
+        [
+         -0.4,
+         -0.064
+        ],
+        [
+         -0.35,
+         -0.043
+        ],
+        [
+         -0.3,
+         -0.027
+        ],
+        [
+         -0.25,
+         -0.016
+        ],
+        [
+         -0.2,
+         -0.008
+        ],
+        [
+         -0.15,
+         -0.003
+        ],
+        [
+         -0.1,
+         -0.001
+        ],
+        [
+         -0.05,
+         0
+        ],
+        [
+         0,
+         0
+        ],
+        [
+         0.05,
+         0
+        ],
+        [
+         0.1,
+         0.001
+        ],
+        [
+         0.15,
+         0.003
+        ],
+        [
+         0.2,
+         0.008
+        ],
+        [
+         0.25,
+         0.016
+        ],
+        [
+         0.3,
+         0.027
+        ],
+        [
+         0.35,
+         0.043
+        ],
+        [
+         0.4,
+         0.064
+        ],
+        [
+         0.45,
+         0.091
+        ],
+        [
+         0.5,
+         0.125
+        ],
+        [
+         0.55,
+         0.166
+        ],
+        [
+         0.6,
+         0.216
+        ],
+        [
+         0.65,
+         0.275
+        ],
+        [
+         0.7,
+         0.343
+        ],
+        [
+         0.75,
+         0.422
+        ],
+        [
+         0.8,
+         0.512
+        ],
+        [
+         0.85,
+         0.614
+        ],
+        [
+         0.9,
+         0.729
+        ],
+        [
+         0.95,
+         0.857
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         1.05,
+         1.158
+        ],
+        [
+         1.1,
+         1.331
+        ],
+        [
+         1.15,
+         1.521
+        ],
+        [
+         1.2,
+         1.728
+        ],
+        [
+         1.25,
+         1.953
+        ],
+        [
+         1.3,
+         2.197
+        ],
+        [
+         1.35,
+         2.46
+        ],
+        [
+         1.4,
+         2.744
+        ],
+        [
+         1.45,
+         3.049
+        ],
+        [
+         1.5,
+         3.375
+        ],
+        [
+         1.55,
+         3.724
+        ],
+        [
+         1.6,
+         4.096
+        ],
+        [
+         1.65,
+         4.492
+        ],
+        [
+         1.7,
+         4.913
+        ],
+        [
+         1.75,
+         5.359
+        ],
+        [
+         1.8,
+         5.832
+        ],
+        [
+         1.85,
+         6.332
+        ],
+        [
+         1.9,
+         6.859
+        ],
+        [
+         1.95,
+         7.415
+        ],
+        [
+         2,
+         8
+        ],
+        [
+         2.05,
+         8.615
+        ],
+        [
+         2.1,
+         9.261
+        ],
+        [
+         2.15,
+         9.938
+        ],
+        [
+         2.2,
+         10.648
+        ],
+        [
+         2.25,
+         11.391
+        ],
+        [
+         2.3,
+         12.167
+        ],
+        [
+         2.35,
+         12.978
+        ],
+        [
+         2.4,
+         13.824
+        ],
+        [
+         2.45,
+         14.706
+        ],
+        [
+         2.5,
+         15.625
+        ],
+        [
+         2.55,
+         16.581
+        ],
+        [
+         2.6,
+         17.576
+        ],
+        [
+         2.65,
+         18.61
+        ],
+        [
+         2.7,
+         19.683
+        ],
+        [
+         2.75,
+         20.797
+        ],
+        [
+         2.8,
+         21.952
+        ],
+        [
+         2.85,
+         23.149
+        ],
+        [
+         2.9,
+         24.389
+        ],
+        [
+         2.95,
+         25.672
+        ],
+        [
+         3,
+         27
+        ]
+       ]
+      ]
+     },
+     "caption": "y = x³: a cubic S-shape."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "curve",
+      "range": [
+       -3,
+       3
+      ],
+      "paths": [
+       [
+        [
+         -3,
+         -0.333
+        ],
+        [
+         -2.95,
+         -0.339
+        ],
+        [
+         -2.9,
+         -0.345
+        ],
+        [
+         -2.85,
+         -0.351
+        ],
+        [
+         -2.8,
+         -0.357
+        ],
+        [
+         -2.75,
+         -0.364
+        ],
+        [
+         -2.7,
+         -0.37
+        ],
+        [
+         -2.65,
+         -0.377
+        ],
+        [
+         -2.6,
+         -0.385
+        ],
+        [
+         -2.55,
+         -0.392
+        ],
+        [
+         -2.5,
+         -0.4
+        ],
+        [
+         -2.45,
+         -0.408
+        ],
+        [
+         -2.4,
+         -0.417
+        ],
+        [
+         -2.35,
+         -0.426
+        ],
+        [
+         -2.3,
+         -0.435
+        ],
+        [
+         -2.25,
+         -0.444
+        ],
+        [
+         -2.2,
+         -0.455
+        ],
+        [
+         -2.15,
+         -0.465
+        ],
+        [
+         -2.1,
+         -0.476
+        ],
+        [
+         -2.05,
+         -0.488
+        ],
+        [
+         -2,
+         -0.5
+        ],
+        [
+         -1.95,
+         -0.513
+        ],
+        [
+         -1.9,
+         -0.526
+        ],
+        [
+         -1.85,
+         -0.541
+        ],
+        [
+         -1.8,
+         -0.556
+        ],
+        [
+         -1.75,
+         -0.571
+        ],
+        [
+         -1.7,
+         -0.588
+        ],
+        [
+         -1.65,
+         -0.606
+        ],
+        [
+         -1.6,
+         -0.625
+        ],
+        [
+         -1.55,
+         -0.645
+        ],
+        [
+         -1.5,
+         -0.667
+        ],
+        [
+         -1.45,
+         -0.69
+        ],
+        [
+         -1.4,
+         -0.714
+        ],
+        [
+         -1.35,
+         -0.741
+        ],
+        [
+         -1.3,
+         -0.769
+        ],
+        [
+         -1.25,
+         -0.8
+        ],
+        [
+         -1.2,
+         -0.833
+        ],
+        [
+         -1.15,
+         -0.87
+        ],
+        [
+         -1.1,
+         -0.909
+        ],
+        [
+         -1.05,
+         -0.952
+        ],
+        [
+         -1,
+         -1
+        ],
+        [
+         -0.95,
+         -1.053
+        ],
+        [
+         -0.9,
+         -1.111
+        ],
+        [
+         -0.85,
+         -1.176
+        ],
+        [
+         -0.8,
+         -1.25
+        ],
+        [
+         -0.75,
+         -1.333
+        ],
+        [
+         -0.7,
+         -1.429
+        ],
+        [
+         -0.65,
+         -1.538
+        ],
+        [
+         -0.6,
+         -1.667
+        ],
+        [
+         -0.55,
+         -1.818
+        ],
+        [
+         -0.5,
+         -2
+        ],
+        [
+         -0.45,
+         -2.222
+        ],
+        [
+         -0.4,
+         -2.5
+        ],
+        [
+         -0.35,
+         -2.857
+        ],
+        [
+         -0.3,
+         -3.333
+        ]
+       ],
+       [
+        [
+         0.3,
+         3.333
+        ],
+        [
+         0.35,
+         2.857
+        ],
+        [
+         0.4,
+         2.5
+        ],
+        [
+         0.45,
+         2.222
+        ],
+        [
+         0.5,
+         2
+        ],
+        [
+         0.55,
+         1.818
+        ],
+        [
+         0.6,
+         1.667
+        ],
+        [
+         0.65,
+         1.538
+        ],
+        [
+         0.7,
+         1.429
+        ],
+        [
+         0.75,
+         1.333
+        ],
+        [
+         0.8,
+         1.25
+        ],
+        [
+         0.85,
+         1.176
+        ],
+        [
+         0.9,
+         1.111
+        ],
+        [
+         0.95,
+         1.053
+        ],
+        [
+         1,
+         1
+        ],
+        [
+         1.05,
+         0.952
+        ],
+        [
+         1.1,
+         0.909
+        ],
+        [
+         1.15,
+         0.87
+        ],
+        [
+         1.2,
+         0.833
+        ],
+        [
+         1.25,
+         0.8
+        ],
+        [
+         1.3,
+         0.769
+        ],
+        [
+         1.35,
+         0.741
+        ],
+        [
+         1.4,
+         0.714
+        ],
+        [
+         1.45,
+         0.69
+        ],
+        [
+         1.5,
+         0.667
+        ],
+        [
+         1.55,
+         0.645
+        ],
+        [
+         1.6,
+         0.625
+        ],
+        [
+         1.65,
+         0.606
+        ],
+        [
+         1.7,
+         0.588
+        ],
+        [
+         1.75,
+         0.571
+        ],
+        [
+         1.8,
+         0.556
+        ],
+        [
+         1.85,
+         0.541
+        ],
+        [
+         1.9,
+         0.526
+        ],
+        [
+         1.95,
+         0.513
+        ],
+        [
+         2,
+         0.5
+        ],
+        [
+         2.05,
+         0.488
+        ],
+        [
+         2.1,
+         0.476
+        ],
+        [
+         2.15,
+         0.465
+        ],
+        [
+         2.2,
+         0.455
+        ],
+        [
+         2.25,
+         0.444
+        ],
+        [
+         2.3,
+         0.435
+        ],
+        [
+         2.35,
+         0.426
+        ],
+        [
+         2.4,
+         0.417
+        ],
+        [
+         2.45,
+         0.408
+        ],
+        [
+         2.5,
+         0.4
+        ],
+        [
+         2.55,
+         0.392
+        ],
+        [
+         2.6,
+         0.385
+        ],
+        [
+         2.65,
+         0.377
+        ],
+        [
+         2.7,
+         0.37
+        ],
+        [
+         2.75,
+         0.364
+        ],
+        [
+         2.8,
+         0.357
+        ],
+        [
+         2.85,
+         0.351
+        ],
+        [
+         2.9,
+         0.345
+        ],
+        [
+         2.95,
+         0.339
+        ],
+        [
+         3,
+         0.333
+        ]
+       ]
+      ]
+     },
+     "caption": "y = {{1/x}}: two separate curves that never touch the axes."
+    }
+   ]
   },
   {
    "id": "maths.real-graphs",
@@ -169,7 +1816,29 @@
    "intro": "Similar shapes are enlargements of each other. If lengths are multiplied by k, areas are multiplied by k² and volumes by k³: double a statue’s height and it needs eight times the bronze.",
    "teach": "Explain why doubling the lengths of a cube multiplies its volume by 8.",
    "talk": "Ask {him} how much more paint a model twice the size would need.",
-   "hook": "Scale factor k: **lengths × k, areas × k², volumes × k³**."
+   "hook": "Scale factor k: **lengths × k, areas × k², volumes × k³**.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "lengths × k",
+      "× 2",
+      "× 3"
+     ],
+     [
+      "areas × k²",
+      "× 4",
+      "× 9"
+     ],
+     [
+      "volumes × k³",
+      "× 8",
+      "× 27"
+     ]
+    ],
+    "tint": "cols",
+    "caption": "Double every length of a cube and it needs 2³ = 8 times the material."
+   }
   },
   {
    "id": "maths.sectors",
@@ -194,7 +1863,18 @@
    "intro": "Combine angle facts with algebra: write the angle sum as an equation, solve for x, then check that every angle makes sense.",
    "teach": "Explain how to find the number of sides of a regular polygon from one interior angle.",
    "talk": "Ask {him} why a regular polygon can’t have an interior angle of 100°.",
-   "hook": "**Interior + exterior = 180°**, and the exterior angles of any polygon add to 360°."
+   "hook": "**Interior + exterior = 180°**, and the exterior angles of any polygon add to 360°.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Pentagon: angles add to 3 × 180 = 540°",
+     "x + 2x + 100 + 110 + 120 = 540",
+     "3x + 330 = 540",
+     "3x = 210, so x = 70°",
+     "Check: 70 + 140 + 330 = 540 ✓"
+    ],
+    "caption": "A pentagon has angles x, 2x, 100°, 110° and 120°. Write the angle sum as an equation, then solve."
+   }
   },
   {
    "id": "maths.vectors",
@@ -230,7 +1910,25 @@
    "intro": "If one choice can be made in m ways and the next in n ways, there are m × n ways altogether. Count carefully when order matters, and divide when it doesn’t.",
    "teach": "Explain why 5 people can stand in a line in 120 different orders.",
    "talk": "Ask {him} how many different 4-digit PINs there are, and how long it would take to try them all.",
-   "hook": "Product rule: **m ways, then n ways, gives m × n ways**."
+   "hook": "Product rule: **m ways, then n ways, gives m × n ways**.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "possgrid",
+     "a": [
+      "R",
+      "B",
+      "G"
+     ],
+     "b": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ]
+    },
+    "caption": "3 tunics (red, blue, green) and 4 pairs of sandals: 3 × 4 = 12 outfits. That is the product rule."
+   }
   },
   {
    "id": "maths.tree-diagrams",
@@ -268,7 +1966,221 @@
    "intro": "Direct proportion: y = kx (double one, double the other). Inverse proportion: y = {{k/x}} (double one, halve the other). Find k first, then use it.",
    "teach": "Explain how to tell from a table whether two quantities are in inverse proportion.",
    "talk": "Ask {him}: if 4 people paint a fence in 6 hours, how long would 3 people take?",
-   "hook": "Direct: **y = kx**, double one and you double the other. Inverse: **y = k/x**, double one and you halve the other."
+   "hook": "Direct: **y = kx**, double one and you double the other. Inverse: **y = k/x**, double one and you halve the other.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "graph",
+      "range": [
+       0,
+       10
+      ],
+      "lines": [
+       {
+        "m": 2,
+        "c": 0
+       }
+      ]
+     },
+     "caption": "Direct proportion, y = 2x: a straight line through the origin. Double x and y doubles."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "curve",
+      "range": [
+       0,
+       12
+      ],
+      "paths": [
+       [
+        [
+         1,
+         12
+        ],
+        [
+         1.25,
+         9.6
+        ],
+        [
+         1.5,
+         8
+        ],
+        [
+         1.75,
+         6.857
+        ],
+        [
+         2,
+         6
+        ],
+        [
+         2.25,
+         5.333
+        ],
+        [
+         2.5,
+         4.8
+        ],
+        [
+         2.75,
+         4.364
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         3.25,
+         3.692
+        ],
+        [
+         3.5,
+         3.429
+        ],
+        [
+         3.75,
+         3.2
+        ],
+        [
+         4,
+         3
+        ],
+        [
+         4.25,
+         2.824
+        ],
+        [
+         4.5,
+         2.667
+        ],
+        [
+         4.75,
+         2.526
+        ],
+        [
+         5,
+         2.4
+        ],
+        [
+         5.25,
+         2.286
+        ],
+        [
+         5.5,
+         2.182
+        ],
+        [
+         5.75,
+         2.087
+        ],
+        [
+         6,
+         2
+        ],
+        [
+         6.25,
+         1.92
+        ],
+        [
+         6.5,
+         1.846
+        ],
+        [
+         6.75,
+         1.778
+        ],
+        [
+         7,
+         1.714
+        ],
+        [
+         7.25,
+         1.655
+        ],
+        [
+         7.5,
+         1.6
+        ],
+        [
+         7.75,
+         1.548
+        ],
+        [
+         8,
+         1.5
+        ],
+        [
+         8.25,
+         1.455
+        ],
+        [
+         8.5,
+         1.412
+        ],
+        [
+         8.75,
+         1.371
+        ],
+        [
+         9,
+         1.333
+        ],
+        [
+         9.25,
+         1.297
+        ],
+        [
+         9.5,
+         1.263
+        ],
+        [
+         9.75,
+         1.231
+        ],
+        [
+         10,
+         1.2
+        ],
+        [
+         10.25,
+         1.171
+        ],
+        [
+         10.5,
+         1.143
+        ],
+        [
+         10.75,
+         1.116
+        ],
+        [
+         11,
+         1.091
+        ],
+        [
+         11.25,
+         1.067
+        ],
+        [
+         11.5,
+         1.043
+        ],
+        [
+         11.75,
+         1.021
+        ],
+        [
+         12,
+         1
+        ]
+       ]
+      ]
+     },
+     "caption": "Inverse proportion, y = {{12/x}}: double x and y halves, e.g. (2, 6) and (4, 3)."
+    }
+   ]
   },
   {
    "id": "maths.constructions",
@@ -294,7 +2206,32 @@
    "intro": "When a quadratic won’t factorise, complete the square or use the formula x = {{−b ± √(b² − 4ac)/2a}}. The part under the square root, the discriminant, tells you how many solutions there are.",
    "teach": "Explain how completing the square proves the quadratic formula.",
    "talk": "Ask {him} what happens to the formula when b² − 4ac is negative.",
-   "hook": "“**x equals minus b, plus or minus the square root of b squared minus 4ac, all over 2a.**”"
+   "hook": "“**x equals minus b, plus or minus the square root of b squared minus 4ac, all over 2a.**”",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "discriminant",
+     "the parabola",
+     "solutions"
+    ],
+    "rows": [
+     [
+      "b² − 4ac > 0",
+      "crosses the x-axis twice",
+      "2"
+     ],
+     [
+      "b² − 4ac = 0",
+      "touches the x-axis once",
+      "1"
+     ],
+     [
+      "b² − 4ac < 0",
+      "misses the x-axis",
+      "0"
+     ]
+    ]
+   }
   },
   {
    "id": "maths.surds",
@@ -333,7 +2270,17 @@
    "intro": "Pythagoras works in three dimensions too: the space diagonal of a cuboid satisfies d² = a² + b² + c². For triangles without a right angle, the cosine rule extends Pythagoras.",
    "teach": "Explain how to find the longest rod that fits in a box.",
    "talk": "Measure a shoebox and ask {him} to predict the length of its space diagonal before measuring it.",
-   "hook": "Space diagonal of a cuboid: **d² = a² + b² + c²**, Pythagoras with one more square."
+   "hook": "Space diagonal of a cuboid: **d² = a² + b² + c²**, Pythagoras with one more square.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "cuboid",
+     "l": 12,
+     "w": 4,
+     "h": 3
+    },
+    "caption": "The longest rod in this box runs corner to opposite corner: d² = 12² + 4² + 3² = 169, so d = 13 cm."
+   }
   },
   {
    "id": "maths.proof",
@@ -348,7 +2295,33 @@
    "intro": "A proof shows something is true for every number, not just the ones you tried. Use 2n for an even number, 2n + 1 for an odd one and n, n + 1 for consecutive integers.",
    "teach": "Prove that the difference between the squares of two consecutive integers is always odd.",
    "talk": "Ask {him} to prove that the sum of any two odd numbers is even.",
-   "hook": "**Even = 2n, odd = 2n + 1, consecutive = n, n + 1**, and different numbers need different letters."
+   "hook": "**Even = 2n, odd = 2n + 1, consecutive = n, n + 1**, and different numbers need different letters.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "in algebra",
+     "why"
+    ],
+    "rows": [
+     [
+      "an even number",
+      "2n",
+      "a whole number of pairs"
+     ],
+     [
+      "an odd number",
+      "2n + 1",
+      "pairs and one spare"
+     ],
+     [
+      "consecutive integers",
+      "n, n + 1, n + 2",
+      "each 1 more than the last"
+     ]
+    ],
+    "caption": "Odd + odd = (2a + 1) + (2b + 1) = 2(a + b + 1): the two spares make a pair, so the answer is even."
+   }
   }
  ],
  "items": [
@@ -1147,7 +3120,27 @@
    ],
    "explain": "(n + 1)² − n² = n² + 2n + 1 − n² = 2n + 1. Any integer of the form 2n + 1 is odd.",
    "hook": "Expand carefully: (n + 1)² = n² + 2n + 1, so the difference is **2n + 1, always odd**.",
-   "example": "Growing a 4 × 4 square of tiles into a 5 × 5 square takes 9 more tiles: 4 + 5."
+   "example": "Growing a 4 × 4 square of tiles into a 5 × 5 square takes 9 more tiles: 4 + 5.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "n",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     [
+      "(n + 1)² − n²",
+      "3",
+      "5",
+      "7",
+      "9"
+     ]
+    ],
+    "caption": "Examples suggest the pattern; the algebra (n + 1)² − n² = 2n + 1 proves it for every n."
+   }
   },
   {
    "id": "maths.m2.pf.oddsum",

@@ -34,7 +34,66 @@
    "intro": "Science words are built from Greek and Latin parts. Knowing the parts helps you spell them and work out what they mean.",
    "teach": "Pick a science word and explain what each part of it means.",
    "talk": "Ask her what “photo” means in photosynthesis and photograph.",
-   "hook": "Science words are built like Lego: **photo** (light) + **synthesis** (putting together)."
+   "hook": "Science words are built like Lego: **photo** (light) + **synthesis** (putting together).",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "photo",
+        "prefix",
+        "light"
+       ],
+       [
+        "synthesis",
+        "root",
+        "putting together"
+       ]
+      ],
+      "result": "photosynthesis"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "chloro",
+        "prefix",
+        "green"
+       ],
+       [
+        "phyll",
+        "root",
+        "leaf"
+       ]
+      ],
+      "result": "chlorophyll"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "therm",
+        "prefix",
+        "heat"
+       ],
+       [
+        "o",
+        "ending",
+        "joins"
+       ],
+       [
+        "meter",
+        "root",
+        "measure"
+       ]
+      ],
+      "result": "thermometer"
+     }
+    ],
+    "caption": "Science words are built from Greek and Latin parts."
+   }
   }
  ],
  "items": [
@@ -67,7 +126,28 @@
    "clue": "how plants make glucose using light",
    "explain": "photo (light) + synthesis (putting together). The “f” sound is spelt ph.",
    "learn": "**photosynthesis**: photo (light) + synthesis (putting together). The “f” sound is spelt ph.",
-   "hook": "Photo (light) + synthesis (making): plants make their food with light."
+   "hook": "Photo (light) + synthesis (making): plants make their food with light.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "photo",
+        "prefix",
+        "light"
+       ],
+       [
+        "synthesis",
+        "root",
+        "putting together"
+       ]
+      ],
+      "result": "photosynthesis"
+     }
+    ]
+   }
   },
   {
    "id": "science.sw.respiration",
@@ -89,7 +169,28 @@
    "clue": "the green substance that absorbs light",
    "explain": "chloro (green, with a hard “ch” as in chorus) + phyll (leaf): ph and a double l.",
    "learn": "**chlorophyll**: chloro (green, with a hard “ch” as in chorus) + phyll (leaf): ph and a double l.",
-   "hook": "Chloro (green) + phyll (leaf): the green stuff in leaves."
+   "hook": "Chloro (green) + phyll (leaf): the green stuff in leaves.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "chloro",
+        "prefix",
+        "green"
+       ],
+       [
+        "phyll",
+        "root",
+        "leaf"
+       ]
+      ],
+      "result": "chlorophyll"
+     }
+    ]
+   }
   },
   {
    "id": "science.sw.hypothesis",
@@ -157,7 +258,33 @@
    "explain": "therm (heat) + o + meter (measure).",
    "learn": "**thermometer**: therm (heat) + o + meter (measure).",
    "hook": "Therm (heat) + meter (measure): a heat measurer.",
-   "example": "Doctors use a thermometer to check for a fever: about 37°C is normal."
+   "example": "Doctors use a thermometer to check for a fever: about 37°C is normal.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "therm",
+        "prefix",
+        "heat"
+       ],
+       [
+        "o",
+        "ending",
+        "joins"
+       ],
+       [
+        "meter",
+        "root",
+        "measure"
+       ]
+      ],
+      "result": "thermometer"
+     }
+    ]
+   }
   },
   {
    "id": "science.sw.nucleus",
@@ -183,7 +310,28 @@
    ],
    "explain": "Photo = light, as in photograph (“light drawing”).",
    "hook": "Photo = light: a photograph is a “light drawing”.",
-   "example": "Solar panels on roofs are photovoltaic: they turn light into electricity."
+   "example": "Solar panels on roofs are photovoltaic: they turn light into electricity.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "photo",
+        "prefix",
+        "light"
+       ],
+       [
+        "synthesis",
+        "root",
+        "putting together"
+       ]
+      ],
+      "result": "photosynthesis"
+     }
+    ]
+   }
   },
   {
    "id": "science.sw.chloro",
@@ -198,7 +346,28 @@
    ],
    "explain": "Chlorine gas is a pale yellow-green. Chlorophyll is the green in leaves.",
    "hook": "Chloro = green: chlorophyll makes leaves green.",
-   "example": "Swimming-pool chlorine is named after the yellow-green colour of chlorine gas."
+   "example": "Swimming-pool chlorine is named after the yellow-green colour of chlorine gas.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "chloro",
+        "prefix",
+        "green"
+       ],
+       [
+        "phyll",
+        "root",
+        "leaf"
+       ]
+      ],
+      "result": "chlorophyll"
+     }
+    ]
+   }
   },
   {
    "id": "science.sw.therm",
@@ -213,7 +382,33 @@
    ],
    "explain": "Therm = heat. A thermal store is energy stored as heat.",
    "hook": "Therm = heat: a thermal flask keeps the heat in your hot chocolate.",
-   "example": "The thermostat on the wall at home controls the heating: therm (heat) + stat (stay)."
+   "example": "The thermostat on the wall at home controls the heating: therm (heat) + stat (stay).",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "therm",
+        "prefix",
+        "heat"
+       ],
+       [
+        "o",
+        "ending",
+        "joins"
+       ],
+       [
+        "meter",
+        "root",
+        "measure"
+       ]
+      ],
+      "result": "thermometer"
+     }
+    ]
+   }
   }
  ]
 }

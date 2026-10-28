@@ -13,7 +13,18 @@
    "intro": "A function is a named, reusable block of code. You pass values in through parameters and get a result back with return. Variables made inside a function are local: they vanish when it ends, which stops one part of a program accidentally breaking another.",
    "teach": "Explain the difference between a parameter and an argument.",
    "talk": "Ask {him} which jobs in a game {she} would turn into functions.",
-   "hook": "**Parameters in, return value out**; local variables stay inside the function."
+   "hook": "**Parameters in, return value out**; local variables stay inside the function.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "argument: launch(50)",
+     "parameter: ships = 50",
+     "return ships * 2",
+     "result: 100"
+    ],
+    "caption": "The argument is the value passed in; the parameter is the name it gets inside the function. ships is local: it vanishes when the function ends."
+   }
   },
   {
    "id": "computing.dicts",
@@ -26,7 +37,30 @@
    "intro": "A dictionary stores pairs: a key and its value, like a word and its meaning, or a god and their symbol. Instead of remembering a position, you look things up by name.",
    "teach": "Explain when a dictionary is better than a list.",
    "talk": "Ask {him} how {she} would store everyone’s phone numbers in Python.",
-   "hook": "**Key → value**: look things up by name, not by position."
+   "hook": "**Key → value**: look things up by name, not by position.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "key",
+     "value"
+    ],
+    "rows": [
+     [
+      "\"Zeus\"",
+      "\"thunderbolt\""
+     ],
+     [
+      "\"Athena\"",
+      "\"owl\""
+     ],
+     [
+      "\"Poseidon\"",
+      "\"trident\""
+     ]
+    ],
+    "tint": "cols",
+    "caption": "symbols[\"Athena\"] looks up the key and gives \"owl\". Keys are unique: setting a key again replaces its value."
+   }
   },
   {
    "id": "computing.strings",
@@ -39,7 +73,31 @@
    "intro": "Strings come with built-in methods: count, find, replace, split, join. Slicing picks out parts, and f-strings drop values neatly into text. Most real programs spend a lot of time handling text.",
    "teach": "Explain what split() and join() do.",
    "talk": "Ask {him} to reverse a word in Python in one line.",
-   "hook": "**Strings count from 0 too**, and a slice stops just before its end index."
+   "hook": "**Strings count from 0 too**, and a slice stops just before its end index.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "index",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     [
+      "character",
+      "M",
+      "**E**",
+      "**D**",
+      "**U**",
+      "S",
+      "A"
+     ]
+    ],
+    "caption": "name = \"MEDUSA\". The slice name[1:4] is \"EDU\": from index 1 up to, but not including, index 4."
+   }
   },
   {
    "id": "computing.grids",
@@ -53,7 +111,41 @@
    "intro": "A list of lists makes a grid: a game board, a seating plan, Daedalus’s labyrinth or the pixels of an image. A loop inside a loop visits every square, row by row.",
    "teach": "Explain how grid[2][3] finds one square.",
    "talk": "Draw a 3 × 3 noughts-and-crosses board as a Python list of lists together.",
-   "hook": "**grid[row][column]**: pick the row first, then the column, both counted from 0."
+   "hook": "**grid[row][column]**: pick the row first, then the column, both counted from 0.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "col 0",
+     "col 1",
+     "col 2",
+     "col 3"
+    ],
+    "rows": [
+     [
+      "row 0",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     [
+      "row 1",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     [
+      "row 2",
+      "9",
+      "10",
+      "11",
+      "**12: grid[2][3]**"
+     ]
+    ],
+    "caption": "for r in range(3): for c in range(4): visits the squares in the order numbered, row by row. grid[2][3] is row 2, then column 3."
+   }
   },
   {
    "id": "computing.robust",
@@ -120,7 +212,20 @@
    "intro": "Knowing the name of an algorithm is not enough: you need to be able to follow it step by step, like a computer would. Trace tables and careful notes make it reliable.",
    "teach": "Explain the steps of a binary search for one number.",
    "talk": "Ask {him} to sort a shuffled hand of cards using insertion sort and narrate it.",
-   "hook": "**Be the computer**: one step at a time, writing every change down."
+   "hook": "**Be the computer**: one step at a time, writing every change down.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "8 3 5 1 7 2 6 4",
+     "split: 8 3 5 1 | 7 2 6 4",
+     "split: 8 3 | 5 1 | 7 2 | 6 4",
+     "split into single items",
+     "merge: 3 8 | 1 5 | 2 7 | 4 6",
+     "merge: 1 3 5 8 | 2 4 6 7",
+     "merge: 1 2 3 4 5 6 7 8"
+    ],
+    "caption": "Merge sort: split in half until every piece has one item, then merge pairs of sorted pieces."
+   }
   },
   {
    "id": "computing.efficiency",
@@ -133,7 +238,42 @@
    "intro": "Two algorithms can give the same answer but take wildly different times. Computer scientists count steps and describe how the work grows as the data grows, using Big-O notation: O(n), O(n²), O(log n).",
    "teach": "Explain why an O(n²) algorithm gets slow on big lists.",
    "talk": "Ask {him} how many handshakes there are if everyone in a class shakes hands once.",
-   "hook": "**O(log n) < O(n) < O(n²)**: how fast the work grows as the data grows."
+   "hook": "**O(log n) < O(n) < O(n²)**: how fast the work grows as the data grows.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "items (n)",
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n²)"
+     ],
+     [
+      "10",
+      "1",
+      "about 3",
+      "10",
+      "100"
+     ],
+     [
+      "1,000",
+      "1",
+      "about 10",
+      "1,000",
+      "1,000,000"
+     ],
+     [
+      "1,000,000",
+      "1",
+      "about 20",
+      "1,000,000",
+      "a million million"
+     ]
+    ],
+    "tint": "cols",
+    "caption": "Steps needed as the data grows. Binary search is O(log n); linear search is O(n); comparing every pair is O(n²)."
+   }
   },
   {
    "id": "computing.structures",
@@ -146,7 +286,40 @@
    "intro": "A stack is last in, first out, like a pile of plates. A queue is first in, first out, like the line at a ticket office. These simple structures power undo buttons, printers and even how a program calls functions.",
    "teach": "Explain the difference between a stack and a queue, with an example of each.",
    "talk": "Ask {him} whether the “back” button in a web browser is a stack or a queue.",
-   "hook": "**Stack = LIFO, like a pile of plates. Queue = FIFO, like a bus queue.**"
+   "hook": "**Stack = LIFO, like a pile of plates. Queue = FIFO, like a bus queue.**",
+   "visual": [
+    {
+     "kind": "table",
+     "rows": [
+      [
+       "top",
+       "**edit 3** ← push and pop here"
+      ],
+      [
+       "",
+       "edit 2"
+      ],
+      [
+       "bottom",
+       "edit 1"
+      ]
+     ],
+     "caption": "A stack (last in, first out): undo pops edit 3, the most recent, first."
+    },
+    {
+     "kind": "table",
+     "rows": [
+      [
+       "front →",
+       "Kit",
+       "Mira",
+       "Theo",
+       "← back"
+      ]
+     ],
+     "caption": "A queue (first in, first out): join at the back, leave from the front. Kit arrived first, so Kit is served first."
+    }
+   ]
   },
   {
    "id": "computing.compression",
@@ -159,7 +332,28 @@
    "intro": "Compression makes files smaller so they download faster and take less space. Lossless compression gives back exactly the original; lossy compression throws away detail people will not notice.",
    "teach": "Explain the difference between lossy and lossless compression.",
    "talk": "Compare the file size of a photo and a screenshot on your phone together.",
-   "hook": "**Lossy loses detail for good; lossless gives back every bit.**"
+   "hook": "**Lossy loses detail for good; lossless gives back every bit.**",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "data",
+     "run-length code",
+     "characters"
+    ],
+    "rows": [
+     [
+      "WWWWBBBW",
+      "4W 3B 1W",
+      "8 → 6"
+     ],
+     [
+      "ABCDEFG",
+      "1A 1B 1C 1D 1E 1F 1G",
+      "**7 → 14**"
+     ]
+    ],
+    "caption": "Run-length encoding shrinks long runs of the same value, but makes data with no runs bigger."
+   }
   },
   {
    "id": "computing.encryption",
@@ -172,7 +366,49 @@
    "intro": "The Caesar cipher has only 25 keys, so it is easy to crack. The Vigenère cipher uses a key word, so each letter is shifted by a different amount. Modern public-key encryption lets strangers send secrets without ever meeting to share a key.",
    "teach": "Explain why the Vigenère cipher is harder to crack than the Caesar cipher.",
    "talk": "Send each other a Vigenère message at dinner.",
-   "hook": "**The public key locks; only the private key unlocks.**"
+   "hook": "**The public key locks; only the private key unlocks.**",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "plaintext",
+      "A",
+      "T",
+      "H",
+      "E",
+      "N",
+      "A"
+     ],
+     [
+      "key",
+      "O",
+      "W",
+      "L",
+      "O",
+      "W",
+      "L"
+     ],
+     [
+      "shift",
+      "14",
+      "22",
+      "11",
+      "14",
+      "22",
+      "11"
+     ],
+     [
+      "ciphertext",
+      "**O**",
+      "P",
+      "S",
+      "S",
+      "J",
+      "**L**"
+     ]
+    ],
+    "caption": "Vigenère with the key word OWL: each letter is shifted by its key letter (A = 0). The two As become O and L, so letter counts give little away."
+   }
   },
   {
    "id": "computing.internet",
@@ -185,7 +421,18 @@
    "intro": "When you visit a website, your device asks a DNS server for the site’s IP address, then sends a request in packets that hop between routers across the world. The answer comes back the same way, often in under a second.",
    "teach": "Explain what happens, step by step, when you type a web address.",
    "talk": "Ask {him} how a message gets from your house to a server in another country.",
-   "hook": "**Name → DNS → IP address → packets → routers → server**, and back again."
+   "hook": "**Name → DNS → IP address → packets → routers → server**, and back again.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "You type the web address",
+     "DNS finds the IP address",
+     "Your browser sends an HTTP request in packets",
+     "Routers forward the packets across networks",
+     "The server sends the page back",
+     "The browser displays the page"
+    ]
+   }
   },
   {
    "id": "computing.web",
@@ -211,7 +458,61 @@
    "intro": "Databases answer questions about huge amounts of data in moments. SQL can count, total, sort and search, and a primary key makes sure every record can be found exactly.",
    "teach": "Explain what COUNT(*) and ORDER BY do.",
    "talk": "Ask {him} what tables a school database would need.",
-   "hook": "**WHERE filters, ORDER BY sorts, and COUNT, SUM, MAX, MIN and AVG summarise.**"
+   "hook": "**WHERE filters, ORDER BY sorts, and COUNT, SUM, MAX, MIN and AVG summarise.**",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "name",
+      "home",
+      "strength"
+     ],
+     "rows": [
+      [
+       "Perseus",
+       "Argos",
+       "78"
+      ],
+      [
+       "Theseus",
+       "Athens",
+       "84"
+      ],
+      [
+       "Jason",
+       "Iolcus",
+       "71"
+      ],
+      [
+       "Atalanta",
+       "Arcadia",
+       "88"
+      ]
+     ],
+     "caption": "Table Heroes."
+    },
+    {
+     "kind": "table",
+     "head": [
+      "name"
+     ],
+     "rows": [
+      [
+       "Atalanta"
+      ],
+      [
+       "Theseus"
+      ],
+      [
+       "Perseus"
+      ],
+      [
+       "Jason"
+      ]
+     ],
+     "caption": "`SELECT name FROM Heroes ORDER BY strength DESC;` gives the strongest first. `SELECT COUNT(*) FROM Heroes;` gives 4."
+    }
+   ]
   },
   {
    "id": "computing.ai",
@@ -237,7 +538,37 @@
    "intro": "Inside the CPU, a clock ticks billions of times a second, registers hold the values being worked on, and fast cache memory keeps useful data close. More cores let a CPU work on several things at once.",
    "teach": "Explain three things that affect how fast a CPU is.",
    "talk": "Look up the clock speed and number of cores of a device at home.",
-   "hook": "**Clock speed, cores and cache**: the three Cs of CPU performance."
+   "hook": "**Clock speed, cores and cache**: the three Cs of CPU performance.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "part",
+     "job"
+    ],
+    "rows": [
+     [
+      "control unit",
+      "directs the fetch–decode–execute cycle"
+     ],
+     [
+      "ALU",
+      "does arithmetic and logic"
+     ],
+     [
+      "registers",
+      "tiny, very fast stores for the values in use"
+     ],
+     [
+      "cache",
+      "fast memory for data used often"
+     ],
+     [
+      "clock",
+      "ticks to keep every step in time"
+     ]
+    ],
+    "caption": "Faster clock, more cache and more cores usually mean a faster CPU."
+   }
   },
   {
    "id": "computing.os",
@@ -278,7 +609,17 @@
    "teach": "Explain why every recursive function needs a base case.",
    "talk": "Ask {him} to explain recursion using a recursive explanation.",
    "tier": "stretch",
-   "hook": "“**To understand recursion, you must first understand recursion**”, and every recursive function needs a base case to stop."
+   "hook": "“**To understand recursion, you must first understand recursion**”, and every recursive function needs a base case to stop.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "factorial(4) = 4 × factorial(3)",
+     "factorial(3) = 3 × factorial(2)",
+     "factorial(2) = 2 × factorial(1)",
+     "factorial(1) = 1: the base case",
+     "Back up: 2 × 1 = 2, 3 × 2 = 6, 4 × 6 = 24"
+    ]
+   }
   },
   {
    "id": "computing.paths",
@@ -306,7 +647,76 @@
    "teach": "Explain how to build a truth table for a three-input expression.",
    "talk": "Ask {him} to design a circuit for a door alarm.",
    "tier": "stretch",
-   "hook": "**n inputs → 2ⁿ rows** in the truth table: list every combination."
+   "hook": "**n inputs → 2ⁿ rows** in the truth table: list every combination.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "A",
+     "B",
+     "C",
+     "A AND B",
+     "(A AND B) OR C"
+    ],
+    "rows": [
+     [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ],
+     [
+      "0",
+      "0",
+      "1",
+      "0",
+      "1"
+     ],
+     [
+      "0",
+      "1",
+      "0",
+      "0",
+      "0"
+     ],
+     [
+      "0",
+      "1",
+      "1",
+      "0",
+      "1"
+     ],
+     [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0"
+     ],
+     [
+      "1",
+      "0",
+      "1",
+      "0",
+      "1"
+     ],
+     [
+      "1",
+      "1",
+      "0",
+      "1",
+      "**1**"
+     ],
+     [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+     ]
+    ],
+    "caption": "3 inputs give 2³ = 8 rows. Work out the brackets first, then the OR."
+   }
   },
   {
    "id": "computing.huffman",
@@ -320,7 +730,49 @@
    "teach": "Explain why common letters get short Huffman codes.",
    "talk": "Count the commonest letter in a page of a book together.",
    "tier": "stretch",
-   "hook": "**Common letters get short codes**, just as Morse code gives E a single dot."
+   "hook": "**Common letters get short codes**, just as Morse code gives E a single dot.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "15",
+     "note": "all letters",
+     "c": [
+      {
+       "n": "E",
+       "note": "8 times: code 0",
+       "mark": true
+      },
+      {
+       "n": "7",
+       "note": "codes start 1",
+       "c": [
+        {
+         "n": "A",
+         "note": "4 times: code 10",
+         "mark": true
+        },
+        {
+         "n": "3",
+         "note": "codes start 11",
+         "c": [
+          {
+           "n": "T",
+           "note": "2 times: code 110",
+           "mark": true
+          },
+          {
+           "n": "Z",
+           "note": "1 time: code 111",
+           "mark": true
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Join the two rarest each time: Z + T = 3, then + A = 7, then + E = 15. Left = 0, right = 1. The commonest letter gets the shortest code."
+   }
   }
  ],
  "items": [
@@ -577,7 +1029,28 @@
    ],
    "explain": "Keys in a dictionary are unique, so assigning to an existing key overwrites its value.",
    "hook": "**Keys are unique**: assign to one again and the old value is overwritten.",
-   "example": "Like a locker: put a new bag in locker 12 and the old contents have to come out."
+   "example": "Like a locker: put a new bag in locker 12 and the old contents have to come out.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "key",
+     "value before",
+     "value after"
+    ],
+    "rows": [
+     [
+      "\"Zeus\"",
+      "90",
+      "90"
+     ],
+     [
+      "\"Hera\"",
+      "80",
+      "**50**"
+     ]
+    ],
+    "caption": "power[\"Hera\"] = 50 replaces Hera’s old value. A key can only appear once."
+   }
   },
   {
    "id": "computing.m.dc.missing",
@@ -1468,7 +1941,43 @@
     }
    ],
    "explain": "If the list is not in order, the half that is thrown away might contain the target.",
-   "hook": "**Binary search trusts the order**: with no order, there is no safe half to throw away."
+   "hook": "**Binary search trusts the order**: with no order, there is no safe half to throw away.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "index",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     [
+      "check 1",
+      "4",
+      "9",
+      "15",
+      "**22**",
+      "30",
+      "41",
+      "56"
+     ],
+     [
+      "check 2",
+      "",
+      "",
+      "",
+      "",
+      "30",
+      "**41**",
+      "56"
+     ]
+    ],
+    "caption": "Binary search for 41: the middle is 22, too small, so drop the left half. The middle of what is left is 41: found."
+   }
   },
   {
    "id": "computing.m.at.insertion",
@@ -1517,7 +2026,20 @@
     }
    ],
    "explain": "Single items are sorted by definition; merge sort then merges them back in order: divide and conquer.",
-   "hook": "**Split down to single items, then merge**: one item on its own is already sorted."
+   "hook": "**Split down to single items, then merge**: one item on its own is already sorted.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "8 3 5 1 7 2 6 4",
+     "split: 8 3 5 1 | 7 2 6 4",
+     "split: 8 3 | 5 1 | 7 2 | 6 4",
+     "split into single items",
+     "merge: 3 8 | 1 5 | 2 7 | 4 6",
+     "merge: 1 3 5 8 | 2 4 6 7",
+     "merge: 1 2 3 4 5 6 7 8"
+    ],
+    "caption": "Merge sort: split in half until every piece has one item, then merge pairs of sorted pieces."
+   }
   },
   {
    "id": "computing.m.at.binary",
@@ -1533,7 +2055,43 @@
    "labels": null,
    "explain": "Middle, compare, stop if found, otherwise halve and repeat.",
    "hook": "**Middle, compare, keep half, repeat.**",
-   "example": "Guessing a number from 1 to 100 with “higher” or “lower” clues takes at most 7 guesses."
+   "example": "Guessing a number from 1 to 100 with “higher” or “lower” clues takes at most 7 guesses.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "index",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     [
+      "check 1",
+      "4",
+      "9",
+      "15",
+      "**22**",
+      "30",
+      "41",
+      "56"
+     ],
+     [
+      "check 2",
+      "",
+      "",
+      "",
+      "",
+      "30",
+      "**41**",
+      "56"
+     ]
+    ],
+    "caption": "Binary search for 41: the middle is 22, too small, so drop the left half. The middle of what is left is 41: found."
+   }
   },
   {
    "id": "computing.m.ef.tmpl",
@@ -1727,7 +2285,24 @@
    ],
    "explain": "Each action is pushed onto a stack; undo pops the most recent.",
    "hook": "**Undo = pop the stack**: the newest change comes off first.",
-   "example": "Pressing Ctrl+Z in a word processor removes your most recent change first."
+   "example": "Pressing Ctrl+Z in a word processor removes your most recent change first.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "top",
+      "**edit 3** ← undo pops this first"
+     ],
+     [
+      "",
+      "edit 2"
+     ],
+     [
+      "bottom",
+      "edit 1"
+     ]
+    ]
+   }
   },
   {
    "id": "computing.m.sk.printer",
@@ -1887,7 +2462,24 @@
     }
    ],
    "explain": "With no repeated runs, ABCDEFG becomes 1A1B1C1D1E1F1G: twice as long.",
-   "hook": "**RLE needs runs**: with no repeats, the file gets bigger."
+   "hook": "**RLE needs runs**: with no repeats, the file gets bigger.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "data",
+     "run-length code"
+    ],
+    "rows": [
+     [
+      "WWWWBBBW",
+      "4W 3B 1W (shorter)"
+     ],
+     [
+      "ABCDEFG",
+      "1A 1B 1C 1D 1E 1F 1G (twice as long)"
+     ]
+    ]
+   }
   },
   {
    "id": "computing.m.cm.why",
@@ -2233,7 +2825,18 @@
    ],
    "labels": null,
    "explain": "Name → address → request → response → display.",
-   "hook": "**Name, address, request, response, display.**"
+   "hook": "**Name, address, request, response, display.**",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "You type the web address",
+     "DNS finds the IP address",
+     "Your browser sends an HTTP request in packets",
+     "Routers forward the packets across networks",
+     "The server sends the page back",
+     "The browser displays the page"
+    ]
+   }
   },
   {
    "id": "computing.m.in.w",
@@ -3304,7 +3907,27 @@
     "9"
    ],
    "explain": "2 × 2 × 2 = 2^{3} = 8 combinations.",
-   "hook": "**Each extra input doubles the rows**: 2³ = 8 for three inputs."
+   "hook": "**Each extra input doubles the rows**: 2³ = 8 for three inputs.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "inputs",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     [
+      "rows",
+      "2",
+      "4",
+      "**8**",
+      "16"
+     ]
+    ],
+    "caption": "Each extra input doubles the rows: 2ⁿ."
+   }
   },
   {
    "id": "computing.m.lc.half",
@@ -3329,7 +3952,43 @@
    ],
    "explain": "0+0 = 00, 0+1 = 01, 1+1 = 10: the sum bit is XOR and the carry bit is AND.",
    "hook": "**Half adder: XOR gives the sum, AND gives the carry.**",
-   "example": "Every sum your phone works out is built from chains of adders like this one."
+   "example": "Every sum your phone works out is built from chains of adders like this one.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "A",
+     "B",
+     "sum (XOR)",
+     "carry (AND)"
+    ],
+    "rows": [
+     [
+      "0",
+      "0",
+      "0",
+      "0"
+     ],
+     [
+      "0",
+      "1",
+      "1",
+      "0"
+     ],
+     [
+      "1",
+      "0",
+      "1",
+      "0"
+     ],
+     [
+      "1",
+      "1",
+      "0",
+      "**1**"
+     ]
+    ],
+    "caption": "1 + 1 = 10 in binary: sum 0, carry 1."
+   }
   },
   {
    "id": "computing.m.lc.nand",

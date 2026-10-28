@@ -66,7 +66,39 @@
    "passage": "Weekly earnings of five households on one street:\n£400   £420   £450   £480   £2,250",
    "passageSource": "Invented data",
    "hook": "One giant value drags the mean up; the median ignores it.",
-   "example": "House prices in the news are often given as medians, so a few mansions don’t make homes look dearer."
+   "example": "House prices in the news are often given as medians, so a few mansions don’t make homes look dearer.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "bar",
+     "title": "Weekly earnings of five households (£)",
+     "ylabel": "£",
+     "step": 500,
+     "cats": [
+      {
+       "label": "1",
+       "v": 400
+      },
+      {
+       "label": "2",
+       "v": 420
+      },
+      {
+       "label": "3",
+       "v": 450
+      },
+      {
+       "label": "4",
+       "v": 480
+      },
+      {
+       "label": "5",
+       "v": 2250
+      }
+     ]
+    },
+    "caption": "One very high earner pulls the mean up to £800; the median (the middle household) is £450."
+   }
   },
   {
    "id": "geography.gn.density",
@@ -120,7 +152,67 @@
    "passage": "Rainfall (mm) in a coastal town\nJan 110 · Feb 95 · Mar 70 · Apr 40 · May 20 · Jun 5\nJul 2 · Aug 5 · Sep 25 · Oct 70 · Nov 100 · Dec 120",
    "passageSource": "Invented data",
    "hook": "Read the pattern, not each number: which months are high, and which are low?",
-   "example": "Summer holidays in Spain or Greece are dry and sunny: that is the Mediterranean climate."
+   "example": "Summer holidays in Spain or Greece are dry and sunny: that is the Mediterranean climate.",
+   "visual": {
+    "kind": "maths",
+    "question": true,
+    "diagram": {
+     "type": "bar",
+     "title": "Rainfall (mm) in a coastal town",
+     "ylabel": "mm",
+     "step": 20,
+     "cats": [
+      {
+       "label": "J",
+       "v": 110
+      },
+      {
+       "label": "F",
+       "v": 95
+      },
+      {
+       "label": "M",
+       "v": 70
+      },
+      {
+       "label": "A",
+       "v": 40
+      },
+      {
+       "label": "M",
+       "v": 20
+      },
+      {
+       "label": "J",
+       "v": 5
+      },
+      {
+       "label": "J",
+       "v": 2
+      },
+      {
+       "label": "A",
+       "v": 5
+      },
+      {
+       "label": "S",
+       "v": 25
+      },
+      {
+       "label": "O",
+       "v": 70
+      },
+      {
+       "label": "N",
+       "v": 100
+      },
+      {
+       "label": "D",
+       "v": 120
+      }
+     ]
+    }
+   }
   },
   {
    "id": "geography.gn.anomaly",
@@ -147,7 +239,34 @@
    "passage": "Midday temperature (°C) in a UK town, one week in July\nMon 21 · Tue 23 · Wed 22 · Thu 4 · Fri 24 · Sat 22 · Sun 23",
    "passageSource": "Invented data",
    "hook": "An anomaly is the odd one out: it doesn’t fit the pattern of the rest.",
-   "example": "In a science experiment, one result far from all the others is an anomaly: repeat it to check."
+   "example": "In a science experiment, one result far from all the others is an anomaly: repeat it to check.",
+   "visual": {
+    "kind": "maths",
+    "question": true,
+    "diagram": {
+     "type": "line",
+     "title": "Midday temperature (°C), one week in July",
+     "ylabel": "°C",
+     "xs": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+     ],
+     "ys": [
+      21,
+      23,
+      22,
+      4,
+      24,
+      22,
+      23
+     ]
+    }
+   }
   },
   {
    "id": "geography.gn.survey",

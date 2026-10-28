@@ -13,7 +13,18 @@
    "intro": "Hurricanes, typhoons and cyclones are the same thing in different oceans: giant spinning storms fed by warm seas. Poseidon got the blame for storms at sea; today satellites track them days in advance.",
    "teach": "Explain the conditions a tropical storm needs to form.",
    "talk": "Ask {him} why tropical storms never form right on the Equator.",
-   "hook": "Same storm, different names: hurricane (Atlantic), typhoon (north-west Pacific), cyclone (Indian Ocean and South Pacific)."
+   "hook": "Same storm, different names: hurricane (Atlantic), typhoon (north-west Pacific), cyclone (Indian Ocean and South Pacific).",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Sea water above about 27 °C",
+     "Warm, moist air rises quickly",
+     "It cools: huge clouds and heavy rain",
+     "The Earth’s spin sets the storm turning",
+     "A calm eye forms; the strongest winds are in the eyewall"
+    ],
+    "caption": "Within about 5° of the Equator there is too little spin, so tropical storms almost never form there."
+   }
   },
   {
    "id": "geography.uk-extremes",
@@ -39,7 +50,33 @@
    "intro": "Under every British landscape is its rock. Hard, old rocks make the uplands of the north and west; younger, softer rocks make the lowlands of the south and east.",
    "teach": "Explain the Tees–Exe line and what it divides.",
    "talk": "Next time you are on a walk, ask {him} what rock might be underneath and how {she} could tell.",
-   "hook": "Old, hard rocks in the north and west make the uplands; younger, softer rocks in the south and east make the lowlands."
+   "hook": "Old, hard rocks in the north and west make the uplands; younger, softer rocks in the south and east make the lowlands.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Rock",
+     "Landscape",
+     "Example"
+    ],
+    "rows": [
+     [
+      "Granite: igneous, hard, impermeable",
+      "high moorland, bogs, tors",
+      "Dartmoor"
+     ],
+     [
+      "Chalk: sedimentary, soft, porous",
+      "rolling hills, dry valleys, white cliffs",
+      "South Downs, Dover"
+     ],
+     [
+      "Carboniferous limestone",
+      "limestone pavement, caves, gorges",
+      "Malham"
+     ]
+    ],
+    "caption": "The Tees–Exe line divides upland Britain (older, harder rocks) from lowland Britain (younger, softer rocks)."
+   }
   },
   {
    "id": "geography.farming",
@@ -52,7 +89,39 @@
    "intro": "Farming depends on soil, climate and relief. That is why eastern England grows wheat and the wet hills of the west raise sheep.",
    "teach": "Explain why arable farming is common in East Anglia.",
    "talk": "Look at where the food in your fridge comes from and ask {him} about food miles.",
-   "hook": "Dry and flat in the east: crops. Wet and hilly in the west: sheep."
+   "hook": "Dry and flat in the east: crops. Wet and hilly in the west: sheep.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "East Anglia",
+     "Western uplands"
+    ],
+    "tint": "cols",
+    "caption": "The western uplands: Wales and the Lake District.",
+    "rows": [
+     [
+      "Relief",
+      "flat",
+      "steep slopes"
+     ],
+     [
+      "Rain a year",
+      "about 600 mm",
+      "over 1,500 mm in places"
+     ],
+     [
+      "Soils",
+      "fertile",
+      "thin, acidic"
+     ],
+     [
+      "Main farming",
+      "**arable**: cereals, sugar beet",
+      "**pastoral**: sheep, some cattle"
+     ]
+    ]
+   }
   },
   {
    "id": "geography.water-food",
@@ -78,7 +147,19 @@
    "intro": "Tourism is one of the world’s biggest industries. It brings jobs and money, but too many visitors can damage the very places they come to see, from Venice to the Acropolis.",
    "teach": "Explain the stages of Butler’s tourism life cycle.",
    "talk": "Ask {him} whether {she} thinks famous places should limit visitors.",
-   "hook": "Tourism can love a place to death: the trick is sharing the benefits without wrecking the place."
+   "hook": "Tourism can love a place to death: the trick is sharing the benefits without wrecking the place.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Exploration: a few visitors discover it",
+     "Involvement: local people get involved",
+     "Development: outside companies build it up",
+     "Consolidation: growth slows",
+     "Stagnation: visitor numbers stop growing",
+     "Decline, or rejuvenation by reinventing itself"
+    ],
+    "caption": "Butler’s tourism area life cycle. Blackpool boomed, declined, and has tried to rejuvenate."
+   }
   },
   {
    "id": "geography.deserts",
@@ -104,7 +185,43 @@
    "intro": "The Arctic is an ocean surrounded by land; Antarctica is a continent surrounded by ocean. Both are warming fast, and what happens there affects everyone.",
    "teach": "Explain how Antarctica is protected by international agreement.",
    "talk": "Ask {him} why melting Arctic sea ice does not raise sea levels much but melting Antarctic ice does.",
-   "hook": "Arctic: an ocean ringed by land, with polar bears. Antarctica: land ringed by ocean, with penguins."
+   "hook": "Arctic: an ocean ringed by land, with polar bears. Antarctica: land ringed by ocean, with penguins.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Arctic",
+     "Antarctica"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "What it is",
+      "an ocean surrounded by land",
+      "a continent surrounded by ocean"
+     ],
+     [
+      "Pole",
+      "North",
+      "South"
+     ],
+     [
+      "Its ice",
+      "floating sea ice",
+      "a thick ice sheet on land: about 90% of the world’s ice"
+     ],
+     [
+      "If the ice melts",
+      "sea level barely rises",
+      "sea level rises"
+     ],
+     [
+      "Wildlife",
+      "polar bears",
+      "penguins"
+     ]
+    ]
+   }
   },
   {
    "id": "geography.oceans",
@@ -221,7 +338,20 @@
    "intro": "Geographers go out and measure. Good fieldwork starts with a question, uses fair sampling and ends by asking how reliable the results are. GIS layers data on maps to reveal patterns.",
    "teach": "Explain the difference between random, systematic and stratified sampling.",
    "talk": "Plan a mini fieldwork question with {him}: is our street busier at 8 am or 11 am?",
-   "hook": "Ask, collect, present, analyse, conclude, then evaluate: examiners love that last step."
+   "hook": "Ask, collect, present, analyse, conclude, then evaluate: examiners love that last step.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "Ask a question",
+     "Collect data",
+     "Present the data",
+     "Analyse the results",
+     "Draw a conclusion",
+     "Evaluate"
+    ],
+    "centre": "geographical enquiry",
+    "caption": "Evaluating often raises a new question, and the enquiry starts again."
+   }
   },
   {
    "id": "geography.sustainability",
@@ -275,7 +405,38 @@
    "intro": "Cities are not random. Models like Burgess’s rings show how land use, building age and wealth change as you travel out from the centre.",
    "teach": "Explain the zones of the Burgess model.",
    "talk": "On a drive into town, ask {him} to spot when you move from suburbs to inner city to the CBD.",
-   "hook": "Burgess is a dartboard with the CBD as the bullseye; Hoyt slices the city like a pizza along its transport routes."
+   "hook": "Burgess is a dartboard with the CBD as the bullseye; Hoyt slices the city like a pizza along its transport routes.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Zone, from the centre",
+     "What you find"
+    ],
+    "tint": "rows",
+    "rows": [
+     [
+      "1. CBD",
+      "offices, shops, tall buildings (London: the City)"
+     ],
+     [
+      "2. Inner city",
+      "factories and 1800s terraced housing (Hackney)"
+     ],
+     [
+      "3. Inner suburbs",
+      "newer houses with gardens"
+     ],
+     [
+      "4. Outer suburbs",
+      "newer, larger homes and gardens (Bromley)"
+     ],
+     [
+      "5. Rural–urban fringe",
+      "retail parks, golf courses, then countryside"
+     ]
+    ],
+    "caption": "Burgess’s rings (1920s): housing gets newer and greener further out. Real cities fit only roughly."
+   }
   },
   {
    "id": "geography.resources-conflict",
@@ -368,7 +529,29 @@
    "accept": [
     "a typhoon"
    ],
-   "hook": "Typhoon for Tokyo (north-west Pacific); hurricane for the Atlantic; cyclone for the Indian Ocean."
+   "hook": "Typhoon for Tokyo (north-west Pacific); hurricane for the Atlantic; cyclone for the Indian Ocean.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Name",
+     "Where"
+    ],
+    "rows": [
+     [
+      "Hurricane",
+      "Atlantic and north-east Pacific"
+     ],
+     [
+      "Typhoon",
+      "north-west Pacific, near Japan and the Philippines"
+     ],
+     [
+      "Cyclone",
+      "Indian Ocean and South Pacific"
+     ]
+    ],
+    "caption": "Same storm, different names."
+   }
   },
   {
    "id": "geography.m.ts.eye",
@@ -3560,7 +3743,32 @@
     }
    ],
    "explain": "Systematic: at regular intervals. Random: chosen by chance. Stratified: in proportion to groups.",
-   "hook": "Systematic = a system: every 50 cm, every tenth house, every 200 m."
+   "hook": "Systematic = a system: every 50 cm, every tenth house, every 200 m.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Sampling",
+     "How chosen",
+     "Example"
+    ],
+    "rows": [
+     [
+      "Random",
+      "by chance (random numbers)",
+      "quadrats placed at random"
+     ],
+     [
+      "Systematic",
+      "at regular intervals",
+      "river depth every 50 cm"
+     ],
+     [
+      "Stratified",
+      "in proportion to groups",
+      "70% houses: 70 of 100 interviews"
+     ]
+    ]
+   }
   },
   {
    "id": "geography.m.fw.stratified",

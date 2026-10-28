@@ -149,6 +149,40 @@ const factItems = FACTS.map(([prompt, answer, distractors, memory], i) => ({
   ...(answer.endsWith('%') ? { accept: [answer.slice(0, -1)] } : {}), ...memory,
 }));
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const M = (diagram, caption) => ({ kind: 'maths', diagram, ...(caption ? { caption } : {}) });
+const TOPIC_VISUALS = {
+  'maths.place-value': [
+    M({ type: 'pvgrid', cols: ['Th', 'H', 'T', 'O', 't', 'h', 'th'], point: 4, rows: [['', '', '', '3', '4', '7', '5']] }, '3.475: the 7 is in the **hundredths** column, so it is worth 7 hundredths (0.07).'),
+    M({ type: 'pvgrid', cols: ['Th', 'H', 'T', 'O', 't', 'h', 'th'], point: 4, shift: 1, rows: [['', '', '', '3', '4', '7', '5'], ['', '', '3', '4', '7', '5', '']] }, '× 10: every digit moves **one place left**. 3.475 × 10 = 34.75. (÷ 10 moves them one place right.)'),
+  ],
+  'maths.negatives': M({ type: 'numline', min: -6, max: 6, step: 1, labels: [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6] }, 'Further left is smaller (colder): −5 is less than −2. From −4, rising 9 means 9 steps right, to 5.'),
+  'maths.frac-compare': M({ type: 'fracwall', rows: [1, 2, 3, 4, 5, 6, 8], shade: { 3: 2, 5: 3 } }, 'Fraction wall: the more parts, the smaller each part. 2/3 is longer than 3/5, so 2/3 is bigger.'),
+  'maths.frac-equiv': M({ type: 'fracwall', rows: [1, 3, 6, 12], shade: { 3: 2, 6: 4, 12: 8 } }, '2/3 = 4/6 = 8/12: the shaded lengths match. Multiply the top and the bottom by the same number.'),
+  'maths.frac-addsub': M({ type: 'fracwall', rows: [3, 4, 12], shade: { 3: 1, 4: 1, 12: 7 } }, '1/3 + 1/4: change both into twelfths first. 4/12 + 3/12 = 7/12.'),
+  'maths.frac-multiply': M({ type: 'fracwall', rows: [1, 4, 8], shade: { 4: 1, 8: 1 } }, 'Half of a quarter is an eighth: 1/2 × 1/4 = 1/8.'),
+  'maths.frac-amount': M({ type: 'barmodel', total: '40', rows: [{ parts: 5, shaded: 3, text: '8' }] }, '3/5 of 40: split 40 into 5 equal parts (40 ÷ 5 = 8), then take 3 of them: 3 × 8 = 24.'),
+  'maths.fdp': M({ type: 'hundredsq', shade: Array.from({ length: 25 }, (_, i) => i + 1) }, '25 out of 100 squares: 25/100 = 1/4 = 0.25 = 25%.'),
+  'maths.percent': M({ type: 'barmodel', total: '£60 = 100%', rows: [{ parts: 10, shaded: 3, text: '£6' }] }, '10% of £60 is £6 (divide by 10). So 30% is 3 × £6 = £18.'),
+  'maths.ratio': M({ type: 'barmodel', rows: [{ label: 'Sam', parts: 3, text: '£5' }, { label: 'Jo', parts: 5, text: '£5' }] }, 'Share £40 in the ratio 3 : 5. That is 8 equal parts, so one part is £40 ÷ 8 = £5. Sam gets 3 × £5 = £15; Jo gets 5 × £5 = £25.'),
+  'maths.primes': { kind: 'tree', root: { n: '60', c: [{ n: '6', c: [{ n: '2', mark: true }, { n: '3', mark: true }] }, { n: '10', c: [{ n: '2', mark: true }, { n: '5', mark: true }] }] }, caption: 'A factor tree: keep splitting until every branch ends in a prime. 60 = 2 × 2 × 3 × 5.' },
+  'maths.sequences': { kind: 'table', head: ['term number (n)', '1', '2', '3', '4', 'n'], rows: [['term', '3', '5', '7', '9', '**2n + 1**']], caption: 'It goes up in 2s, so it is linked to the 2 times table: 2n, then add 1.' },
+  'maths.equations': { kind: 'flow', steps: ['3x + 5 = 20', 'Take 5 from both sides: 3x = 15', 'Divide both sides by 3: x = 5', 'Check: 3 × 5 + 5 = 20 ✓'], caption: 'Keep the scales balanced: do the same to both sides.' },
+  'maths.units': { kind: 'table', head: ['', 'is the same as'], rows: [['1 km', '1000 m'], ['1 m', '100 cm'], ['1 cm', '10 mm'], ['1 kg', '1000 g'], ['1 litre', '1000 ml']], caption: 'To a smaller unit, multiply (you need more of them): 2.3 km = 2.3 × 1000 = 2300 m. To a bigger unit, divide.' },
+  'maths.probability': { kind: 'flow', across: true, steps: ['impossible (0)', 'unlikely', 'even chance (½)', 'likely', 'certain (1)'], caption: 'Every probability sits on this scale from 0 to 1.' },
+};
+const ITEM_VISUALS = {
+  'maths.shape.12': M({ type: 'solid', shape: 'cube' }),
+  'maths.shape.13': M({ type: 'solid', shape: 'cylinder' }),
+  'maths.shape.14': M({ type: 'solid', shape: 'pyramid' }),
+  'maths.fact.21': M({ type: 'polygon', sides: 6, name: 'hexagon' }),
+  'maths.fact.22': M({ type: 'polygon', sides: 8, name: 'octagon' }),
+};
+const allTopics = TOPICS;
+const allItems = [...items, ...factItems, ...shapeItems];
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = allTopics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = t.visual ? [].concat(t.visual, v) : v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = allItems.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = it.visual ? [].concat(it.visual, v) : v; }
+
 export default [{
   subject: 'maths', deck: 'core',
   topics: [

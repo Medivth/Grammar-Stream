@@ -626,4 +626,96 @@ const MEMORY = {
   }
 }
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Forms are copied from the course's own tables (js/gen/y8greek2.js and the items above); **…**
+// marks the ending (or the part to notice). In a phrase the article takes a grave: τὸν φύλακα.
+const TOPIC_VISUALS = {
+  'greek.decl3-stems': [
+    { kind: 'table', head: ['singular', 'guard', 'giant'], rows: [
+      ['nominative', 'ὁ φύλαξ', 'ὁ γίγας'], ['accusative', 'τὸν φύλακ**α**', 'τὸν γίγαντ**α**'], ['genitive', 'τοῦ φύλακ**ος**', 'τοῦ γίγαντ**ος**'], ['dative', 'τῷ φύλακ**ι**', 'τῷ γίγαντ**ι**']] },
+    { kind: 'table', head: ['plural', 'guard', 'giant'], rows: [
+      ['nominative', 'οἱ φύλακ**ες**', 'οἱ γίγαντ**ες**'], ['accusative', 'τοὺς φύλακ**ας**', 'τοὺς γίγαντ**ας**'], ['genitive', 'τῶν φυλάκ**ων**', 'τῶν γιγάντ**ων**'], ['dative', 'τοῖς φύλα**ξι(ν)**', 'τοῖς γίγα**σι(ν)**']],
+    caption: 'Dative plural: κ + σι makes ξι, and ντ drops out before σ.' },
+  ],
+  'greek.decl3-more': [
+    { kind: 'table', head: ['', 'body', 'city'], rows: [
+      ['nom. sg', 'σῶμα', 'πόλ**ις**'], ['acc. sg', 'σῶμα', 'πόλ**ιν**'], ['gen. sg', 'σώμα**τος**', 'πόλ**εως**'], ['dat. sg', 'σώμα**τι**', 'πόλ**ει**'],
+      ['nom. pl', 'σώμα**τα**', 'πόλ**εις**'], ['acc. pl', 'σώμα**τα**', 'πόλ**εις**'], ['gen. pl', 'σωμά**των**', 'πόλ**εων**'], ['dat. pl', 'σώμα**σι(ν)**', 'πόλ**εσι(ν)**']],
+    caption: 'σῶμα shows its hidden τ as soon as an ending is added. πόλις has ι in the nominative and accusative singular, and ε everywhere else.' },
+    { kind: 'table', head: ['singular', 'king', 'father'], rows: [
+      ['nom.', 'βασιλ**εύς**', 'πατ**ήρ**'], ['acc.', 'βασιλ**έα**', 'πατ**έρα**'], ['gen.', 'βασιλ**έως**', 'πατ**ρός**'], ['dat.', 'βασιλ**εῖ**', 'πατ**ρί**']],
+    caption: 'βασιλεύς keeps βασιλ- and changes the vowel after it; πατήρ loses its ε in the genitive and dative.' },
+  ],
+  'greek.pronouns': [
+    { kind: 'table', head: ['singular', 'I', 'you'], rows: [
+      ['nominative', 'ἐγώ', 'σύ'], ['accusative', 'ἐμέ, με', 'σέ, σε'], ['genitive', 'ἐμοῦ, μου', 'σοῦ, σου'], ['dative', 'ἐμοί, μοι', 'σοί, σοι']] },
+    { kind: 'table', head: ['plural', 'we', 'you'], rows: [
+      ['nominative', '**ἡ**μεῖς', '**ὑ**μεῖς'], ['accusative', '**ἡ**μᾶς', '**ὑ**μᾶς'], ['genitive', '**ἡ**μῶν', '**ὑ**μῶν'], ['dative', '**ἡ**μῖν', '**ὑ**μῖν']],
+    caption: 'Only the first letter tells “we” (ἡ-) from “you” (ὑ-).' },
+  ],
+  'greek.demonstratives': [
+    { kind: 'blocks', rows: [
+      { parts: [['οὗτος', 'pronoun', 'this'], ['ὁ', 'article', 'the'], ['ἀνήρ', 'noun', 'man']], result: 'this man' },
+      { parts: [['ὁ', 'article', 'the'], ['ἀνὴρ', 'noun', 'man'], ['οὗτος', 'pronoun', 'this']], result: 'this man' },
+      { parts: [['ἐκείνη', 'pronoun', 'that'], ['ἡ', 'article', 'the'], ['κόρη', 'noun', 'girl']], result: 'that girl' },
+    ] },
+    { kind: 'table', tint: 'cols', head: ['singular', 'm.', 'f.', 'n.'], rows: [
+      ['nom.', 'οὗτ**ος**', 'αὕτ**η**', 'τοῦτ**ο**'], ['acc.', 'τοῦτ**ον**', 'ταύτ**ην**', 'τοῦτ**ο**'], ['gen.', 'τούτ**ου**', 'ταύτ**ης**', 'τούτ**ου**'], ['dat.', 'τούτ**ῳ**', 'ταύτ**ῃ**', 'τούτ**ῳ**']] },
+    { kind: 'table', tint: 'cols', head: ['plural', 'm.', 'f.', 'n.'], rows: [
+      ['nom.', 'οὗτ**οι**', 'αὗτ**αι**', 'ταῦτ**α**'], ['acc.', 'τούτ**ους**', 'ταύτ**ας**', 'ταῦτ**α**'], ['gen.', 'τούτ**ων**', 'τούτ**ων**', 'τούτ**ων**'], ['dat.', 'τούτ**οις**', 'ταύτ**αις**', 'τούτ**οις**']],
+    caption: 'οὗτος, this: the endings of καλός, and a τ wherever the article has one.' },
+  ],
+  'greek.comparison': { kind: 'table', head: ['', 'more (-er)', 'most (-est)'], rows: [
+    ['σοφός, wise', 'σοφώ**τερος**', 'σοφώ**τατος**'], ['δεινός, terrible', 'δεινό**τερος**', 'δεινό**τατος**'],
+    ['ἀγαθός, good', 'ἀμείνων', 'ἄριστος'], ['κακός, bad', 'κακίων', 'κάκιστος'], ['μέγας, big', 'μείζων', 'μέγιστος'], ['πολύς, much', 'πλείων', 'πλεῖστος'],
+  ], caption: 'The top two follow the rule; the four common ones below are irregular, like good, better, best.' },
+  'greek.aorist-weak': { kind: 'blocks', rows: [
+    { join: '+', parts: [['ἔ', 'augment', 'past'], ['λυ', 'stem'], ['σ', 'tense', 'aorist'], ['α', 'ending', 'I']], result: 'ἔλυσα, I freed' },
+    { join: '+', parts: [['ἐ', 'augment', 'past'], ['λύ', 'stem'], ['σ', 'tense', 'aorist'], ['αμεν', 'ending', 'we']], result: 'ἐλύσαμεν, we freed' },
+    { join: '+', parts: [['ἔ', 'augment', 'past'], ['πεμπ', 'stem'], ['σ', 'tense', 'aorist'], ['α', 'ending', 'I']], result: 'ἔπεμψα (π + σ = ψ)' },
+  ] },
+  'greek.aorist-strong': { kind: 'table', head: ['present', 'imperfect', 'aorist'], rows: [
+    ['φεύγω', 'ἔ**φευγ**ον', 'ἔ**φυγ**ον'], ['λαμβάνω', 'ἐ**λάμβαν**ον', 'ἔ**λαβ**ον'], ['μανθάνω', 'ἐ**μάνθαν**ον', 'ἔ**μαθ**ον'], ['βάλλω', 'ἔ**βαλλ**ον', 'ἔ**βαλ**ον'],
+    ['λέγω', 'ἔλεγον', 'εἶπον'], ['ὁράω', 'ἑώρων', 'εἶδον'],
+  ], caption: 'Same augment, same endings: only the stem changes. The imperfect (was …ing) keeps the present stem.' },
+  'greek.contracted': { kind: 'table', head: ['', 'stem + ending', 'contracted'], rows: [
+    ['I', 'φιλ**έ-ω**', 'φιλ**ῶ**'], ['you (sg)', 'φιλ**έ-ει**ς', 'φιλ**εῖ**ς'], ['he, she', 'φιλ**έ-ει**', 'φιλ**εῖ**'],
+    ['we', 'φιλ**έ-ο**μεν', 'φιλ**οῦ**μεν'], ['you (pl)', 'φιλ**έ-ε**τε', 'φιλ**εῖ**τε'], ['they', 'φιλ**έ-ου**σι(ν)', 'φιλ**οῦ**σι(ν)'],
+  ], caption: 'ε + ω = ω; ε + ε and ε + ει = ει; ε + ο and ε + ου = ου.' },
+  'greek.middle': { kind: 'blocks', rows: [
+    { parts: [['ὁ δοῦλος', 'subject', 'the slave'], ['τὸν ἵππον', 'object', 'the horse'], ['λύει', 'verb', 'frees (active)']], result: 'The slave frees the horse.' },
+    { parts: [['ὁ ἵππος', 'subject', 'the horse'], ['ὑπὸ τοῦ δούλου', 'adverbial', 'by the slave'], ['λύεται', 'verb', 'is freed (passive)']], result: 'The horse is freed by the slave.' },
+  ], caption: 'Passive: the subject has the action done to it; ὑπό + genitive names who did it.' },
+  'greek.participles-full': { kind: 'table', head: ['', 'masc.', 'fem.', 'neut.'], rows: [
+    ['present: freeing', 'λύ**ων**', 'λύ**ουσα**', 'λῦ**ον**'], ['aorist: having freed', 'λύ**σας**', 'λύ**σασα**', 'λῦ**σαν**'],
+  ], caption: 'Like an adjective, the participle takes the gender, case and number of its noun.' },
+  'greek.cases': { kind: 'table', head: ['', 'job', 'example'], rows: [
+    ['accusative', 'how long', 'δέκα ἔτη, for ten years'], ['dative', 'means: with', 'τῷ ξίφει, with the sword'], ['dative', 'when', 'τῇ ὑστεραίᾳ, on the next day'],
+    ['genitive', 'whose', 'τοῦ βασιλέως, the king’s'], ['genitive', 'time within which', 'νυκτός, by night'], ['vocative', 'calling', 'ὦ φίλε, O friend!'],
+  ] },
+  'greek.genabs': { kind: 'blocks', rows: [
+    { parts: [['τῆς νυκτὸς γενομένης,', 'subordinate', 'genitive absolute'], ['οἱ στρατιῶται', 'subject'], ['ἐξῆλθον', 'verb']], result: 'When night had fallen, the soldiers came out.' },
+    { parts: [['τῶν Γοργόνων καθευδουσῶν,', 'subordinate', 'genitive absolute'], ['ὁ Περσεὺς', 'subject'], ['προσῆλθεν', 'verb']], result: 'While the Gorgons were sleeping, Perseus approached.' },
+  ], caption: 'The genitive pair stands apart: neither word is the subject or object of the main verb.' },
+};
+const ITEM_VISUALS = {
+  'greek.g3.d3.gigas': { kind: 'blocks', rows: [{ join: '+', parts: [['γίγαντ', 'stem'], ['ος', 'ending', 'genitive']], result: 'γίγαντος' }] },
+  'greek.g3.aw.akouo': { kind: 'blocks', rows: [{ join: '+', parts: [['ἤ', 'augment', 'ἀ → ἠ'], ['κου', 'stem'], ['σ', 'tense', 'aorist'], ['α', 'ending', 'I']], result: 'ἤκουσα, I heard' }] },
+  'greek.g3.aw.apo': { kind: 'blocks', rows: [{ join: '+', parts: [['ἀπ', 'prefix', 'away'], ['έ', 'augment', 'past'], ['πεμπ', 'stem'], ['σα', 'tense', 'aorist: I']], result: 'ἀπέπεμψα, I sent away' }] },
+  'greek.g3.mp.ontai': { kind: 'table', head: ['', 'active', 'middle/passive'], rows: [
+    ['I', 'λύ**ω**', 'λύ**ομαι**'], ['you (sg)', 'λύ**εις**', 'λύ**ῃ**'], ['he, she', 'λύ**ει**', 'λύ**εται**'], ['we', 'λύ**ομεν**', 'λυ**όμεθα**'], ['you (pl)', 'λύ**ετε**', 'λύ**εσθε**'], ['they', 'λύ**ουσι(ν)**', 'λύ**ονται**']] },
+  'greek.g3.pr.self': { kind: 'blocks', rows: [
+    { parts: [['αὐτὸς', 'pronoun', 'himself'], ['ὁ', 'article', 'the'], ['βασιλεύς', 'noun', 'king']], result: 'the king himself' },
+    { parts: [['ὁ', 'article', 'the'], ['αὐτὸς', 'pronoun', 'same'], ['βασιλεύς', 'noun', 'king']], result: 'the same king' },
+  ] },
+  'greek.g3.pt.labon': { kind: 'flow', across: true, steps: ['λαβών: Perseus takes the head', 'ἀπέφυγεν: then he escapes'], caption: 'The aorist participle happened first.' },
+  'greek.g3.ic.6': { kind: 'flow', steps: ['Daedalus makes wings', 'Daedalus warns his son', 'Father and son fly out of Crete', 'The sun melts the wax', 'Icarus falls into the sea'] },
+};
+ITEM_VISUALS['greek.g3.pr.same'] = ITEM_VISUALS['greek.g3.pr.self'];
+// keep an article on the same line as its noun in a narrow table cell
+const tight = (v) => ({ ...v, rows: v.rows.map((r) => r.map((c, i) => (i ? c.replace(/ /g, ' ') : c))) });
+TOPIC_VISUALS['greek.decl3-stems'] = TOPIC_VISUALS['greek.decl3-stems'].map(tight);
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'greek', deck: 'y8-grammar', topics, items }];

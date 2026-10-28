@@ -24,7 +24,19 @@
    "batch": 5,
    "intro": "Flowers are a plant’s way of making seeds. Insects carry pollen from flower to flower, seeds form, and then the seeds travel to new places to grow.",
    "teach": "Explain three ways seeds travel away from the parent plant.",
-   "talk": "Blow a dandelion clock together and count how far the seeds fly."
+   "talk": "Blow a dandelion clock together and count how far the seeds fly.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "seed",
+     "germination (it sprouts)",
+     "young plant grows",
+     "flower is pollinated",
+     "new seeds form",
+     "seeds are spread"
+    ],
+    "centre": "life cycle of a flowering plant"
+   }
   },
   {
    "id": "science.y3-nutrition",
@@ -61,7 +73,19 @@
    "batch": 5,
    "intro": "There are three families of rock: igneous rocks made from cooled lava or magma, sedimentary rocks made from layers squashed together, and metamorphic rocks changed by heat and pressure.",
    "teach": "Explain how a sedimentary rock forms.",
-   "talk": "Collect a few pebbles and test which ones soak up drops of water."
+   "talk": "Collect a few pebbles and test which ones soak up drops of water.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "magma cools: igneous",
+     "rock worn into tiny bits",
+     "layers squashed: sedimentary",
+     "heat and squeeze: metamorphic",
+     "rock melts into magma"
+    ],
+    "centre": "the rock cycle",
+    "caption": "Over millions of years, igneous, sedimentary and metamorphic rocks change from one family into another, round and round."
+   }
   },
   {
    "id": "science.y3-light",
@@ -97,7 +121,30 @@
    "batch": 4,
    "intro": "Scientists ask questions, make predictions and carry out fair tests. In a fair test you change only ONE thing and keep everything else the same.",
    "teach": "Explain what makes a test fair.",
-   "talk": "Plan a test together: which paper aeroplane flies furthest? What must stay the same?"
+   "talk": "Plan a test together: which paper aeroplane flies furthest? What must stay the same?",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "ramp test"
+    ],
+    "rows": [
+     [
+      "change ONE thing",
+      "the surface (wood, carpet, grass)"
+     ],
+     [
+      "measure",
+      "how far the car rolls"
+     ],
+     [
+      "keep the same",
+      "the car, the ramp height, the start line"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "A fair test: change only one thing, so you know what made the difference."
+   }
   },
   {
    "id": "science.y3-europe",
@@ -146,7 +193,67 @@
    "batch": 5,
    "intro": "The 8 points of the compass are north, north-east, east, south-east, south, south-west, west and north-west. Grid references help you find a square on a map: along the corridor, then up the stairs!",
    "teach": "Explain how to find the square at grid reference C3.",
-   "talk": "Draw a treasure map of the garden with a grid, and give {him} a grid reference to find the treasure."
+   "talk": "Draw a treasure map of the garden with a grid, and give {him} a grid reference to find the treasure.",
+   "visual": [
+    {
+     "kind": "table",
+     "rows": [
+      [
+       "",
+       "NW",
+       "**N**",
+       "NE"
+      ],
+      [
+       "",
+       "W",
+       "✛",
+       "E"
+      ],
+      [
+       "",
+       "SW",
+       "S",
+       "SE"
+      ]
+     ],
+     "caption": "The 8 compass points. Clockwise from north: N, NE, E, SE, S, SW, W, NW."
+    },
+    {
+     "kind": "table",
+     "rows": [
+      [
+       "3",
+       "",
+       "",
+       "lake",
+       ""
+      ],
+      [
+       "2",
+       "",
+       "castle",
+       "",
+       ""
+      ],
+      [
+       "1",
+       "wood",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "A",
+       "B",
+       "C",
+       "D"
+      ]
+     ],
+     "caption": "Grid references: along the corridor (letters), then up the stairs (numbers). The castle is in B2."
+    }
+   ]
   },
   {
    "id": "science.y3-climate",
@@ -171,7 +278,39 @@
    "batch": 5,
    "intro": "Everything is a solid, a liquid or a gas. Heating and cooling can change one into another: ice melts into water, and water evaporates into water vapour.",
    "teach": "Explain the journey of a raindrop round the water cycle.",
-   "talk": "Watch an ice cube melt on a plate, then talk about where puddles go on a sunny day."
+   "talk": "Watch an ice cube melt on a plate, then talk about where puddles go on a sunny day.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "change",
+     "what happens",
+     "heat or cool?"
+    ],
+    "rows": [
+     [
+      "melting",
+      "ice (solid) → water (liquid)",
+      "heat"
+     ],
+     [
+      "freezing",
+      "water (liquid) → ice (solid)",
+      "cool"
+     ],
+     [
+      "evaporating",
+      "water (liquid) → water vapour (gas)",
+      "heat"
+     ],
+     [
+      "condensing",
+      "water vapour (gas) → water (liquid)",
+      "cool"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "Heating and cooling change water from one state into another. Water freezes at 0 °C and boils at 100 °C."
+   }
   },
   {
    "id": "science.y3-digestion",
@@ -198,7 +337,35 @@
    "batch": 5,
    "intro": "Scientists sort living things into groups. A classification key asks yes-or-no questions, one at a time, until only one answer is left.",
    "teach": "Explain how a key helps you name an animal you don’t know.",
-   "talk": "Make a yes/no key together for four toys or four family members."
+   "talk": "Make a yes/no key together for four toys or four family members.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Does it have legs?",
+     "c": [
+      {
+       "n": "Does it have 6 legs?",
+       "note": "yes",
+       "c": [
+        {
+         "n": "ladybird",
+         "note": "yes",
+         "mark": true
+        },
+        {
+         "n": "spider",
+         "note": "no: 8 legs"
+        }
+       ]
+      },
+      {
+       "n": "snail",
+       "note": "no legs"
+      }
+     ]
+    },
+    "caption": "A key asks one yes-or-no question at a time until only one living thing is left."
+   }
   },
   {
    "id": "science.y3-circuits",
@@ -248,7 +415,18 @@
     "stem",
     "the trunk",
     "trunk"
-   ]
+   ],
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "soil",
+     "roots",
+     "stem",
+     "leaves"
+    ],
+    "across": true,
+    "caption": "Water travels from the soil, into the roots, up the stem and out to the leaves."
+   }
   },
   {
    "id": "science.y3.pl.leaf",
@@ -420,7 +598,19 @@
     "new seeds form and are spread"
    ],
    "labels": null,
-   "explain": "Seed, sprouting, growing, pollination, seeds again: a cycle."
+   "explain": "Seed, sprouting, growing, pollination, seeds again: a cycle.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "seed",
+     "germination (it sprouts)",
+     "young plant grows",
+     "flower is pollinated",
+     "new seeds form",
+     "seeds are spread"
+    ],
+    "centre": "life cycle of a flowering plant"
+   }
   },
   {
    "id": "science.y3.sd.pollen",
@@ -1091,7 +1281,17 @@
     "the rock wears away and the fossil is found"
    ],
    "labels": null,
-   "explain": "Death, burial, rotting, rock forms, discovery."
+   "explain": "Death, burial, rotting, rock forms, discovery.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "an animal dies",
+     "it is buried by mud or sand",
+     "the soft parts rot away",
+     "over millions of years the layers turn to rock",
+     "the rock wears away and the fossil is found"
+    ]
+   }
   },
   {
    "id": "science.y3.rk.soil",
@@ -1576,7 +1776,29 @@
      "feedback": "Magnets always attract or repel each other."
     }
    ],
-   "explain": "Opposite poles attract; like poles (N and N, or S and S) repel."
+   "explain": "Opposite poles attract; like poles (N and N, or S and S) repel.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "poles facing",
+     "what happens"
+    ],
+    "rows": [
+     [
+      "N and S",
+      "**attract** (pull together)"
+     ],
+     [
+      "N and N",
+      "repel (push apart)"
+     ],
+     [
+      "S and S",
+      "repel (push apart)"
+     ]
+    ],
+    "caption": "Opposite poles attract; like poles repel."
+   }
   },
   {
    "id": "science.y3.fo.compass",
@@ -3008,7 +3230,18 @@
     "rivers carry water back to the sea"
    ],
    "labels": null,
-   "explain": "Evaporation, condensation, precipitation, collection: round and round."
+   "explain": "Evaporation, condensation, precipitation, collection: round and round.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "water evaporates from the sea",
+     "water vapour rises and cools",
+     "it condenses into clouds",
+     "rain falls (precipitation)",
+     "rivers carry water back to the sea"
+    ],
+    "centre": "the water cycle"
+   }
   },
   {
    "id": "science.y3.st.gas",
@@ -3094,7 +3327,18 @@
     "large intestine"
    ],
    "labels": null,
-   "explain": "Mouth, food pipe, stomach, small intestine (nutrients absorbed), large intestine (water absorbed)."
+   "explain": "Mouth, food pipe, stomach, small intestine (nutrients absorbed), large intestine (water absorbed).",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "mouth",
+     "oesophagus (food pipe)",
+     "stomach",
+     "small intestine",
+     "large intestine"
+    ],
+    "caption": "Nutrients pass into the blood in the small intestine; water is taken back in the large intestine."
+   }
   },
   {
    "id": "science.y3.dg.stomach",
@@ -3225,7 +3469,35 @@
      "feedback": "Snails have no legs."
     }
    ],
-   "explain": "Insects have 6 legs. Ladybirds are insects."
+   "explain": "Insects have 6 legs. Ladybirds are insects.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Does it have legs?",
+     "c": [
+      {
+       "n": "Does it have 6 legs?",
+       "note": "yes",
+       "c": [
+        {
+         "n": "ladybird",
+         "note": "yes",
+         "mark": true
+        },
+        {
+         "n": "spider",
+         "note": "no: 8 legs"
+        }
+       ]
+      },
+      {
+       "n": "snail",
+       "note": "no legs"
+      }
+     ]
+    },
+    "caption": "A key asks one yes-or-no question at a time until only one living thing is left."
+   }
   },
   {
    "id": "science.y3.ky.good",
@@ -3271,7 +3543,24 @@
      "feedback": "They are all alive."
     }
    ],
-   "explain": "Legs: bird and dog. No legs: fish and snake. Then ask another question for each pair."
+   "explain": "Legs: bird and dog. No legs: fish and snake. Then ask another question for each pair.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Does it have legs?",
+     "c": [
+      {
+       "n": "bird, dog",
+       "note": "yes"
+      },
+      {
+       "n": "fish, snake",
+       "note": "no"
+      }
+     ]
+    },
+    "caption": "One question splits the four animals into two groups of two."
+   }
   },
   {
    "id": "science.y3.ky.vert",
@@ -3294,7 +3583,24 @@
      "feedback": "Penguins are birds: they have a backbone."
     }
    ],
-   "explain": "Jellyfish are invertebrates."
+   "explain": "Jellyfish are invertebrates.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Does it have a backbone?",
+     "c": [
+      {
+       "n": "shark, penguin",
+       "note": "yes: vertebrates"
+      },
+      {
+       "n": "jellyfish",
+       "note": "no: an invertebrate",
+       "mark": true
+      }
+     ]
+    }
+   }
   },
   {
    "id": "science.y3.ky.flower",

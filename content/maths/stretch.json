@@ -26,7 +26,17 @@
    "hook": "Move the smaller x term across to join the bigger one, then solve as usual.",
    "intro": "When x appears on both sides, move the smaller x term across first. Then it is an equation you already know how to solve.",
    "teach": "Explain how to solve 5x + 2 = 2x + 14.",
-   "talk": "I think of a number, treble it and add 4. That is the same as doubling it and adding 9. What is my number?"
+   "talk": "I think of a number, treble it and add 4. That is the same as doubling it and adding 9. What is my number?",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "5x + 2 = 2x + 14",
+     "Take 2x from both sides: 3x + 2 = 14",
+     "Take 2 from both sides: 3x = 12",
+     "Divide both sides by 3: x = 4"
+    ],
+    "caption": "Move the smaller x term first, then solve as usual."
+   }
   },
   {
    "id": "maths.percent-change",
@@ -39,7 +49,27 @@
    "hook": "Always work from the ORIGINAL: 20% off means you pay 80%, so divide by 0.8 to go back.",
    "intro": "Shops, banks and newspapers all talk in percentage changes. The trap: a percentage is always OF the original amount.",
    "teach": "Explain why a 20% rise followed by a 20% cut does not get you back where you started.",
-   "talk": "A game is £48 after 20% off. Ask her what it cost before (not £57.60!)."
+   "talk": "A game is £48 after 20% off. Ask her what it cost before (not £57.60!).",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "barmodel",
+     "rows": [
+      {
+       "label": "100%",
+       "parts": 5,
+       "text": "£12"
+      },
+      {
+       "label": "120%",
+       "parts": 6,
+       "text": "£12",
+       "total": "£72"
+      }
+     ]
+    },
+    "caption": "After a 20% rise a coat costs £72. That is 120%: 6 blocks of 20%. One block = £72 ÷ 6 = £12, so the original (100%) was 5 × £12 = £60."
+   }
   },
   {
    "id": "maths.polygons",
@@ -52,7 +82,49 @@
    "hook": "Interior angles add up to (n − 2) × 180°; exterior angles always add up to 360°.",
    "intro": "Every polygon can be cut into triangles, which is why we can work out its angles. Walking round the outside of any shape, you always turn 360°.",
    "teach": "Explain why the interior angles of a hexagon add up to 720°.",
-   "talk": "Count the sides on a 50p coin. What is each interior angle of a regular heptagon?"
+   "talk": "Count the sides on a 50p coin. What is each interior angle of a regular heptagon?",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "shape",
+     "sides",
+     "triangles inside",
+     "interior angles add to"
+    ],
+    "rows": [
+     [
+      "triangle",
+      "3",
+      "1",
+      "180°"
+     ],
+     [
+      "quadrilateral",
+      "4",
+      "2",
+      "360°"
+     ],
+     [
+      "pentagon",
+      "5",
+      "3",
+      "540°"
+     ],
+     [
+      "hexagon",
+      "6",
+      "4",
+      "**720°**"
+     ],
+     [
+      "octagon",
+      "8",
+      "6",
+      "1080°"
+     ]
+    ],
+    "caption": "Diagonals from one corner cut a polygon into (n − 2) triangles, each 180°. Exterior angles always add up to 360°."
+   }
   },
   {
    "id": "maths.parallel",
@@ -78,7 +150,26 @@
    "hook": "Best buy: compare the price of the SAME amount, such as pence per 100 g.",
    "intro": "Harder ratio problems hide the total: sometimes you are told the difference instead. Best-buy questions are ratio in disguise: compare the price of the same amount.",
    "teach": "Explain how you compare value for money between two pack sizes.",
-   "talk": "In the supermarket, ask her which size of a product is better value per 100 g."
+   "talk": "In the supermarket, ask her which size of a product is better value per 100 g.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "barmodel",
+     "rows": [
+      {
+       "label": "Ali",
+       "parts": 5,
+       "text": "£5"
+      },
+      {
+       "label": "Ben",
+       "parts": 2,
+       "text": "£5"
+      }
+     ]
+    },
+    "caption": "Ratio 5 : 2, and Ali has £15 more. Ali’s 3 extra parts are worth £15, so one part is £5: Ali has £25 and Ben £10."
+   }
   },
   {
    "id": "maths.indices",
@@ -119,7 +210,21 @@
    "hook": "Dividing by a fraction: Keep, Change, Flip (KCF). 3 ÷ ½ = 3 × 2 = 6.",
    "intro": "The last fraction skills: adding mixed numbers, and dividing by a fraction (which means flipping it and multiplying).",
    "teach": "Explain why dividing by a half is the same as doubling.",
-   "talk": "How many quarter-pizzas in 3½ pizzas?"
+   "talk": "How many quarter-pizzas in 3½ pizzas?",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "barmodel",
+     "total": "3 wholes",
+     "rows": [
+      {
+       "parts": 12,
+       "text": "¼"
+      }
+     ]
+    },
+    "caption": "3 ÷ ¼ asks “how many quarters fit into 3?” Four in each whole, so 12. Keep, change, flip: 3 × 4 = 12."
+   }
   },
   {
    "id": "maths.circles",
@@ -132,7 +237,38 @@
    "hook": "Cherry pie’s delicious: C = πd. Apple pies are too: A = πr².",
    "intro": "π is the same for every circle in the universe: the circumference is always a little more than three times the diameter. Two formulas and you can measure any circle.",
    "teach": "Explain the difference between the formulas for circumference and area.",
-   "talk": "Measure round a mug with string and across it with a ruler. Divide. Did you get about 3.14?"
+   "talk": "Measure round a mug with string and across it with a ruler. Divide. Did you get about 3.14?",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "part",
+     "what it is",
+     "formula"
+    ],
+    "rows": [
+     [
+      "radius (r)",
+      "centre to the edge",
+      ""
+     ],
+     [
+      "diameter (d)",
+      "edge to edge through the centre",
+      "d = 2r"
+     ],
+     [
+      "circumference (C)",
+      "the distance all the way round",
+      "**C = πd**"
+     ],
+     [
+      "area (A)",
+      "the space inside",
+      "**A = πr²**"
+     ]
+    ],
+    "caption": "π ≈ 3.14. A circle with radius 5 cm has diameter 10 cm, so C = π × 10 ≈ 31.4 cm."
+   }
   }
  ],
  "items": [

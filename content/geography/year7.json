@@ -11,7 +11,22 @@
    "intro": "Ordnance Survey maps use a grid of numbered lines. Remember: along the corridor, then up the stairs.",
    "hook": "“Never Eat Shredded Wheat” for the compass; “along the corridor, then up the stairs” for grid references.",
    "teach": "Explain how to give a 4-figure grid reference.",
-   "talk": "On a walk, ask her which direction you’re heading using the 8 compass points."
+   "talk": "On a walk, ask her which direction you’re heading using the 8 compass points.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "N",
+     "NE",
+     "E",
+     "SE",
+     "S",
+     "SW",
+     "W",
+     "NW"
+    ],
+    "centre": "clockwise from north",
+    "caption": "Never Eat Shredded Wheat: N, E, S, W clockwise. North-east (NE) is halfway between north and east."
+   }
   },
   {
    "id": "geography.scale",
@@ -24,7 +39,28 @@
    "intro": "A map’s scale tells you how much smaller it is than real life. On a 1:25 000 map, 4 cm is 1 km.",
    "hook": "On a 1:25 000 map, 4 cm = 1 km; on a 1:50 000 map, 2 cm = 1 km.",
    "teach": "Explain what 1:25 000 means.",
-   "talk": "Look at an OS map together and find a pub, a school and a church."
+   "talk": "Look at an OS map together and find a pub, a school and a church.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "scale",
+     "1 cm on the map is",
+     "so 1 km on the map is"
+    ],
+    "rows": [
+     [
+      "1 : 25 000",
+      "250 m",
+      "**4 cm**"
+     ],
+     [
+      "1 : 50 000",
+      "500 m",
+      "**2 cm**"
+     ]
+    ],
+    "caption": "Contour lines close together = steep slope; far apart = gentle slope."
+   }
   },
   {
    "id": "geography.rivers",
@@ -73,7 +109,60 @@
    "intro": "Why are there rainforests near the Equator and deserts a little further away? Climate decides which plants and animals live where.",
    "hook": "Wet at 0°, dry at 30°: rainforests hug the Equator and hot deserts lie near the tropics.",
    "teach": "Explain why tropical rainforests are near the Equator.",
-   "talk": "Ask her which biome the UK is in."
+   "talk": "Ask her which biome the UK is in.",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "biome",
+      "where",
+      "what it is like"
+     ],
+     "rows": [
+      [
+       "tropical rainforest",
+       "near the Equator",
+       "hot and wet all year"
+      ],
+      [
+       "hot desert",
+       "about 30° north and south",
+       "very dry"
+      ],
+      [
+       "savanna",
+       "between rainforest and desert",
+       "grassland with wet and dry seasons"
+      ],
+      [
+       "temperate deciduous forest",
+       "the UK and western Europe",
+       "mild; trees lose their leaves in winter"
+      ],
+      [
+       "taiga (boreal forest)",
+       "Canada, Scandinavia, Russia",
+       "cold; evergreen conifers"
+      ],
+      [
+       "tundra",
+       "near the Arctic",
+       "very cold, no trees, frozen ground (permafrost)"
+      ]
+     ],
+     "caption": "From the Equator towards the poles."
+    },
+    {
+     "kind": "flow",
+     "steps": [
+      "Emergent: the tallest trees poke out",
+      "Canopy: a thick roof of leaves",
+      "Understorey: dim and shady",
+      "Forest floor: only about 2% of the sunlight"
+     ],
+     "caption": "The layers of a rainforest, from the top down."
+    }
+   ]
   },
   {
    "id": "geography.people",
@@ -86,7 +175,19 @@
    "intro": "Where do people live, and why? Why do people move? And how do we measure whether a country is rich or poor?",
    "hook": "Settlements grew where life was easier: by water (wet point), at a crossing (bridging point) or somewhere safe (defensive site).",
    "teach": "Explain the difference between a push factor and a pull factor.",
-   "talk": "Ask her why your town grew where it did."
+   "talk": "Ask her why your town grew where it did.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "hamlet",
+     "village",
+     "town",
+     "city",
+     "conurbation"
+    ],
+    "caption": "Settlements, smallest first. A city of more than 10 million people is a megacity."
+   }
   },
   {
    "id": "geography.americas",
@@ -162,7 +263,22 @@
    "labels": null,
    "explain": "Clockwise: N, NE, E, SE, S, SW, W, NW. “Never Eat Shredded Wheat” helps with N, E, S, W.",
    "hook": "“Never Eat Shredded Wheat”: N, E, S, W clockwise. The in-between points join their neighbours: NE, SE, SW, NW.",
-   "example": "The Sun rises roughly in the east and sets roughly in the west, so you can use it to find your bearings."
+   "example": "The Sun rises roughly in the east and sets roughly in the west, so you can use it to find your bearings.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "N",
+     "NE",
+     "E",
+     "SE",
+     "S",
+     "SW",
+     "W",
+     "NW"
+    ],
+    "centre": "clockwise from north",
+    "caption": "Never Eat Shredded Wheat: N, E, S, W clockwise. North-east (NE) is halfway between north and east."
+   }
   },
   {
    "id": "geography.ms.nnw",
@@ -880,7 +996,17 @@
    ],
    "labels": null,
    "explain": "Emergent trees poke above the canopy; the canopy is a thick roof of leaves; the understorey is dim; the forest floor gets only about 2% of the sunlight.",
-   "hook": "“Every Cheeky Uncle Falls”: Emergent, Canopy, Understorey, Floor. Think eagles, monkeys, jaguars, ants."
+   "hook": "“Every Cheeky Uncle Falls”: Emergent, Canopy, Understorey, Floor. Think eagles, monkeys, jaguars, ants.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Emergent: the tallest trees poke out",
+     "Canopy: a thick roof of leaves",
+     "Understorey: dim and shady",
+     "Forest floor: only about 2% of the sunlight"
+    ],
+    "caption": "The layers of a rainforest, from the top down."
+   }
   },
   {
    "id": "geography.bi.sahara",
@@ -1035,7 +1161,19 @@
    "labels": null,
    "explain": "A conurbation is where towns and cities have grown together, like Greater Manchester.",
    "hook": "“Happy Villagers Take City Coaches”: hamlet, village, town, city, conurbation.",
-   "example": "Greater Manchester is a conurbation: Manchester, Salford, Bolton, Stockport and more grew into one."
+   "example": "Greater Manchester is a conurbation: Manchester, Salford, Bolton, Stockport and more grew into one.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "hamlet",
+     "village",
+     "town",
+     "city",
+     "conurbation"
+    ],
+    "caption": "Settlements, smallest first. A city of more than 10 million people is a megacity."
+   }
   },
   {
    "id": "geography.pp.megacity",

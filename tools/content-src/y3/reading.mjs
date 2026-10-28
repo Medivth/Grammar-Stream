@@ -252,4 +252,21 @@ const items = [
   fact('bt.5', 'classics', 'At which races did Black Beauty’s grandfather win the cup?', 'Newmarket', ['Silverstone', 'London', 'the meadow'], '“Your grandfather won the cup two years at the Newmarket races.”', { ...P('beauty'), accept: ['the newmarket races', 'newmarket races'] }),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const TOPIC_VISUALS = {
+  'reading.y3-texttypes': { kind: 'table', head: ['kind of writing', 'look out for'], rows: [
+    ['instructions', 'a title, a list of equipment, numbered steps starting with verbs like “Mix” or “Cut”'],
+    ['letter', 'starts with “Dear…”, ends with “Yours sincerely” or “Love from”'],
+    ['recount', 'the past tense and time words: First, Next, After that, Finally'],
+    ['report (fact file)', 'organised by topic, with headings, facts and a glossary'],
+    ['persuasive writing', 'strong opinions and exciting words to make you do or believe something'],
+  ], tint: 'rows' },
+};
+const ITEM_VISUALS = {
+  'reading.y3.ro.2': { kind: 'tree', root: { n: 'a legion', note: 'about 5,000 soldiers', c: [{ n: 'groups of about 80 legionaries', note: 'each led by a centurion' }] } },
+  'reading.y3.pl.5': { kind: 'flow', steps: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'], across: true, caption: 'Out from the Sun: four small, rocky planets, then four giants made mostly of gas and ice.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'reading', deck: 'y3', topics, items }];

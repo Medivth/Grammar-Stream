@@ -92,6 +92,16 @@ function sfText(r, scale, sf) {
 /** Text of n × 10^-scale, tidied. */
 const decText = (n, scale) => (scale <= 0 ? String(n * 10 ** -scale) : dp(n, scale));
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Shown on the worked example and after a wrong answer, never in the question. Each one is built
+// from the question's own numbers.
+const cap = (v, caption) => (caption ? { ...v, caption } : v);
+/** Place values for a w-digit number in base b: [b^(w−1), …, b, 1]. */
+const placeCols = (w, b = 2) => Array.from({ length: w }, (_, i) => b ** (w - 1 - i));
+const pv = (cols, rows, caption, extra = {}) => ({ visual: cap({ kind: 'maths', diagram: { type: 'pvgrid', cols, rows: rows.map((r) => [...r]), ...extra } }, caption) });
+/** A multiplication grid for brackets: column terms across the top, row terms down the side. */
+const mulGrid = (cols, rows, caption) => cap({ kind: 'table', head: ['×', ...cols], rows }, caption);
+
 const G = {
   // ---- compound measures --------------------------------------------------------------------
   y8nCompound(level, rng) {
@@ -248,17 +258,19 @@ const G = {
       const n = rng.int(5, 63), bin = n.toString(2);
       if (rng.chance(0.5)) {
         const parts = bin.split('').map((b, i) => (b === '1' ? 2 ** (bin.length - 1 - i) : 0)).filter(Boolean);
-        return num(`Convert the binary number ${bin}${subs(2)} to denary (base 10).`, n, `Place values from the right are 1, 2, 4, 8, 16, 32. ${parts.join(' + ')} = ${n}.`, ['Write the place values above the digits: …, 16, 8, 4, 2, 1.', `Add the place values where there is a 1: ${parts.join(' + ')}.`, `= ${n}.`]);
+        return num(`Convert the binary number ${bin}${subs(2)} to denary (base 10).`, n, `Place values from the right are 1, 2, 4, 8, 16, 32. ${parts.join(' + ')} = ${n}.`, ['Write the place values above the digits: …, 16, 8, 4, 2, 1.', `Add the place values where there is a 1: ${parts.join(' + ')}.`, `= ${n}.`], pv(placeCols(bin.length), [bin], `${parts.join(' + ')} = ${n}.`));
       }
-      return num(`Write ${n} in binary.`, bin, `${n} = ${bin.split('').map((b, i) => (b === '1' ? 2 ** (bin.length - 1 - i) : 0)).filter(Boolean).join(' + ')}, so ${n} = ${bin}${subs(2)}.`, ['Find the largest power of 2 that fits, and subtract it.', 'Repeat with what is left.', `Put 1s in those places: ${bin}.`], { placeholder: 'e.g. 10110' });
+      const used = bin.split('').map((b, i) => (b === '1' ? 2 ** (bin.length - 1 - i) : 0)).filter(Boolean);
+      return num(`Write ${n} in binary.`, bin, `${n} = ${used.join(' + ')}, so ${n} = ${bin}${subs(2)}.`, ['Find the largest power of 2 that fits, and subtract it.', 'Repeat with what is left.', `Put 1s in those places: ${bin}.`], { placeholder: 'e.g. 10110', ...pv(placeCols(bin.length), [bin], `${used.join(' + ')} = ${n}.`) });
     }
     if (level === 2) {
       const base = rng.pick([3, 5, 8]), n = rng.int(base + 2, base ** 3 - 1), s = n.toString(base);
       if (rng.chance(0.55)) {
         const terms = s.split('').map((d, i) => `${d} × ${base ** (s.length - 1 - i)}`);
-        return num(`The Babylonians counted in base 60; computers use base 2. Convert ${s}${subs(base)} (base ${base}) to denary.`, n, `Place values in base ${base} are 1, ${base}, ${base * base}… So ${terms.join(' + ')} = ${n}.`, [`Columns in base ${base}: ${[base * base, base, 1].join(', ')}.`, `${terms.join(' + ')}.`, `= ${n}.`]);
+        return num(`The Babylonians counted in base 60; computers use base 2. Convert ${s}${subs(base)} (base ${base}) to denary.`, n, `Place values in base ${base} are 1, ${base}, ${base * base}… So ${terms.join(' + ')} = ${n}.`, [`Columns in base ${base}: ${[base * base, base, 1].join(', ')}.`, `${terms.join(' + ')}.`, `= ${n}.`], pv(placeCols(s.length, base), [s], `${terms.join(' + ')} = ${n}.`));
       }
-      return num(`Write ${n} in base ${base}.`, s, `${n} = ${s.split('').map((d, i) => `${d} × ${base ** (s.length - 1 - i)}`).join(' + ')}, so it is ${s}${subs(base)}.`, [`Column values: ${[base * base, base, 1].filter((v) => v <= n || v === 1).join(', ')}.`, 'See how many of each column value fit, largest first.', `${s}${subs(base)}.`], { placeholder: 'digits only' });
+      const terms = s.split('').map((d, i) => `${d} × ${base ** (s.length - 1 - i)}`);
+      return num(`Write ${n} in base ${base}.`, s, `${n} = ${terms.join(' + ')}, so it is ${s}${subs(base)}.`, [`Column values: ${[base * base, base, 1].filter((v) => v <= n || v === 1).join(', ')}.`, 'See how many of each column value fit, largest first.', `${s}${subs(base)}.`], { placeholder: 'digits only', ...pv(placeCols(s.length, base), [s], `${terms.join(' + ')} = ${n}.`) });
     }
     const kind = rng.pick(['add', 'hex', 'shift']);
     if (kind === 'add') {
@@ -272,14 +284,14 @@ const G = {
         carry = t > 1 ? 1 : 0; carried ||= t > 1;
       }
       return num(`Add these binary numbers, and give your answer in binary: ${A} + ${B}`, s, `${A} is ${a} and ${B} is ${b}. ${a} + ${b} = ${a + b} = ${s}${subs(2)}.${carried ? ' (Or add column by column: 1 + 1 = 10, so write 0 and carry the 1.)' : ' (Or add column by column: no column adds up to more than 1, so there are no carries.)'}`,
-        [`Line up the columns: ${A.padStart(w, '0')} + ${B.padStart(w, '0')}.`, `Add from the right: ${cols.join(', ')}.${carry ? ' The last carry starts a new column on the left.' : ''}${carried ? '' : ' No carries are needed here.'}`, `Answer: ${s}. Check in denary: ${a} + ${b} = ${a + b}.`], { placeholder: 'e.g. 101101' });
+        [`Line up the columns: ${A.padStart(w, '0')} + ${B.padStart(w, '0')}.`, `Add from the right: ${cols.join(', ')}.${carry ? ' The last carry starts a new column on the left.' : ''}${carried ? '' : ' No carries are needed here.'}`, `Answer: ${s}. Check in denary: ${a} + ${b} = ${a + b}.`], { placeholder: 'e.g. 101101', ...pv(placeCols(s.length), [A, B, s], `Rows 1 and 2: ${a} and ${b}. Row 3: their sum, ${a + b}.`) });
     }
     if (kind === 'hex') {
       const n = rng.int(26, 255), h = n.toString(16).toUpperCase();
-      return num(`Hexadecimal uses digits 0–9 and A–F (A = 10 … F = 15). Convert ${h}${subs(16)} to denary.`, n, `${h[0]} is worth ${parseInt(h[0], 16)} and ${h[1]} is worth ${parseInt(h[1], 16)}: ${parseInt(h[0], 16)} × 16 + ${parseInt(h[1], 16)} = ${n}.`, ['The left digit counts sixteens; the right digit counts ones.', `${h[0]} = ${parseInt(h[0], 16)}, so ${parseInt(h[0], 16)} × 16 = ${parseInt(h[0], 16) * 16}.`, `Add ${parseInt(h[1], 16)}: ${n}.`]);
+      return num(`Hexadecimal uses digits 0–9 and A–F (A = 10 … F = 15). Convert ${h}${subs(16)} to denary.`, n, `${h[0]} is worth ${parseInt(h[0], 16)} and ${h[1]} is worth ${parseInt(h[1], 16)}: ${parseInt(h[0], 16)} × 16 + ${parseInt(h[1], 16)} = ${n}.`, ['The left digit counts sixteens; the right digit counts ones.', `${h[0]} = ${parseInt(h[0], 16)}, so ${parseInt(h[0], 16)} × 16 = ${parseInt(h[0], 16) * 16}.`, `Add ${parseInt(h[1], 16)}: ${n}.`], pv([16, 1], [h], `${[...h].map((d, i) => `${/[A-F]/.test(d) ? `${d} = ` : ''}${parseInt(d, 16)} ${i ? 'ones' : 'sixteens'}`).join(' and ')}: ${parseInt(h[0], 16)} × 16 + ${parseInt(h[1], 16)} = ${n}.`));
     }
     const n = rng.int(3, 31), k = rng.int(1, 3), s = (n * 2 ** k).toString(2);
-    return num(`Shift the binary number ${n.toString(2)} left by ${k} place${k > 1 ? 's' : ''}. What is the result, in binary?`, s, `A left shift adds ${k} zero${k > 1 ? 's' : ''} on the right, multiplying by ${2 ** k}: ${n} × ${2 ** k} = ${n * 2 ** k} = ${s}${subs(2)}.`, ['Each left shift multiplies by 2.', `Add ${k} zero${k > 1 ? 's' : ''} on the right.`, `${s}.`], { placeholder: 'e.g. 101100' });
+    return num(`Shift the binary number ${n.toString(2)} left by ${k} place${k > 1 ? 's' : ''}. What is the result, in binary?`, s, `A left shift adds ${k} zero${k > 1 ? 's' : ''} on the right, multiplying by ${2 ** k}: ${n} × ${2 ** k} = ${n * 2 ** k} = ${s}${subs(2)}.`, ['Each left shift multiplies by 2.', `Add ${k} zero${k > 1 ? 's' : ''} on the right.`, `${s}.`], { placeholder: 'e.g. 101100', ...pv(placeCols(s.length), [n.toString(2), s], `Every digit moves ${k} place${k > 1 ? 's' : ''} left: ${n} × ${2 ** k} = ${n * 2 ** k}.`, { shift: k }) });
   },
 
   // ---- laws of indices with algebra --------------------------------------------------------------
@@ -371,14 +383,15 @@ const G = {
       const right = `${g === 1 ? '' : g}x(${A === 1 ? '' : A}x + ${B})`;
       return choice(`Factorise fully: ${a}x² + ${b}x`, right, [`${g}(${co(A)}x² + ${co(B)}x)`, `x(${a}x + ${b})`, `${g}x(${co(A)}x + ${b})`, `${g}x²(${A} + ${co(B)}x)`].filter((t) => t !== right), rng, {
         explain: `The highest common factor of ${a}x² and ${b}x is ${g}x. ${a}x² ÷ ${g}x = ${A === 1 ? '' : A}x and ${b}x ÷ ${g}x = ${B}: ${right}.`, steps: [`HCF of ${a} and ${b} is ${g}; both terms contain x.`, `Take out ${g}x.`, `${right}. Expand to check.`],
+        visual: mulGrid([`${co(A)}x`, String(B)], [[`${co(g)}x`, `${a}x²`, `${b}x`]], `Read backwards: ${co(g)}x goes into both boxes.`),
       });
     }
     if (level === 2) {
       const k = rng.int(2, 12);
-      if (rng.chance(0.6)) return alg(`Factorise x² − ${k * k}.`, `(x + ${k})(x - ${k})`, [`(x - ${k})(x + ${k})`, `(${k} + x)(x - ${k})`, `(x - ${k})(${k} + x)`], `This is a difference of two squares: a² − b² = (a + b)(a − b), with a = x and b = ${k}.`, [`x² − ${k * k} = x² − ${k}².`, 'a² − b² = (a + b)(a − b).', `(x + ${k})(x − ${k}).`], { placeholder: 'e.g. (x + 3)(x − 3)' });
+      if (rng.chance(0.6)) return alg(`Factorise x² − ${k * k}.`, `(x + ${k})(x - ${k})`, [`(x - ${k})(x + ${k})`, `(${k} + x)(x - ${k})`, `(x - ${k})(${k} + x)`], `This is a difference of two squares: a² − b² = (a + b)(a − b), with a = x and b = ${k}.`, [`x² − ${k * k} = x² − ${k}².`, 'a² − b² = (a + b)(a − b).', `(x + ${k})(x − ${k}).`], { placeholder: 'e.g. (x + 3)(x − 3)', visual: mulGrid(['x', `−${k}`], [['x', 'x²', `−${k}x`], [String(k), `${k}x`, `−${k * k}`]], `The x boxes cancel, leaving x² − ${k * k}.`) });
       let a = rng.int(2, 5), b = rng.int(1, 9);
       while (gcd(a, b) !== 1) b = rng.int(1, 9);
-      return alg(`Factorise ${a * a}x² − ${b * b}.`, `(${a}x + ${b})(${a}x - ${b})`, [`(${a}x - ${b})(${a}x + ${b})`], `${a * a}x² = (${a}x)² and ${b * b} = ${b}², so it is a difference of two squares: (${a}x + ${b})(${a}x − ${b}).`, [`${a * a}x² = (${a}x)².`, `${b * b} = ${b}².`, `(${a}x + ${b})(${a}x − ${b}).`], { placeholder: 'e.g. (2x + 3)(2x − 3)' });
+      return alg(`Factorise ${a * a}x² − ${b * b}.`, `(${a}x + ${b})(${a}x - ${b})`, [`(${a}x - ${b})(${a}x + ${b})`], `${a * a}x² = (${a}x)² and ${b * b} = ${b}², so it is a difference of two squares: (${a}x + ${b})(${a}x − ${b}).`, [`${a * a}x² = (${a}x)².`, `${b * b} = ${b}².`, `(${a}x + ${b})(${a}x − ${b}).`], { placeholder: 'e.g. (2x + 3)(2x − 3)', visual: mulGrid([`${a}x`, `−${b}`], [[`${a}x`, `${a * a}x²`, `−${a * b}x`], [String(b), `${a * b}x`, `−${b * b}`]], `The x boxes cancel, leaving ${a * a}x² − ${b * b}.`) });
     }
     const a = rng.int(2, 6), b = rng.int(-9, 9) || 4, c = rng.int(2, 5), d = rng.int(1, 4), e = rng.int(-8, 8) || -3;
     const p = rng.int(-6, 6) || 2;
@@ -388,7 +401,8 @@ const G = {
     const { answer, accept } = expr([[xc, 'x'], [kc, '']]);
     return alg(`Expand and simplify ${a}(${lin(b, e)}) − ${c}(${lin(d, p)}).`, answer, accept,
       `${a}(${lin(b, e)}) = ${lin(a * b, a * e)}. −${c}(${lin(d, p)}) = ${lin(-c * d, -c * p)} (the minus multiplies both terms). Collect: ${show(answer)}.`,
-      [`${a} × each term: ${lin(a * b, a * e)}.`, `−${c} × each term: ${lin(-c * d, -c * p)}.`, `Collect like terms: ${show(answer)}.`]);
+      [`${a} × each term: ${lin(a * b, a * e)}.`, `−${c} × each term: ${lin(-c * d, -c * p)}.`, `Collect like terms: ${show(answer)}.`],
+      { visual: [mulGrid([ex([[b, 'x']]), neg(e)], [[String(a), ex([[a * b, 'x']]), neg(a * e)]]), mulGrid([ex([[d, 'x']]), neg(p)], [[`−${c}`, ex([[-c * d, 'x']]), neg(-c * p)]], `Add the four boxes and collect like terms: ${show(answer)}.`)] });
   },
 
   // ---- equations with fractions, and forming equations ---------------------------------------------
@@ -695,7 +709,8 @@ const G = {
       const inter = rng.chance(0.5);
       const ans = inter ? both.length : either.length;
       return num(`ξ = {1, 2, …, ${N}}. A = multiples of ${m}, B = multiples of ${k}. How many elements are in A ${inter ? '∩' : '∪'} B?`, ans, `A = {${A.join(', ')}}, B = {${B.join(', ')}}. A ${inter ? '∩' : '∪'} B (${inter ? 'in both' : 'in either or both'}) = {${(inter ? both : either.sort((p, q) => p - q)).join(', ') || ' '}}: ${ans} element${ans === 1 ? '' : 's'}.`,
-        [`List A and B.`, `∩ means “and” (in both); ∪ means “or” (in either).`, `${ans} element${ans === 1 ? '' : 's'}.`]);
+        [`List A and B.`, `∩ means “and” (in both); ∪ means “or” (in either).`, `${ans} element${ans === 1 ? '' : 's'}.`],
+        { visual: { kind: 'maths', diagram: { type: 'venn', labels: ['A', 'B'], only: [A.length - both.length, B.length - both.length], both: both.length, out: N - either.length }, caption: `How many numbers from 1 to ${N} are in each region.` } });
     }
     const a = rng.int(2, 15), b = rng.int(2, 15), both = rng.int(1, 10), out = rng.int(1, 12), total = a + b + both + out;
     const dg = { type: 'venn', labels: ['A', 'B'], only: [a, b], both, out };

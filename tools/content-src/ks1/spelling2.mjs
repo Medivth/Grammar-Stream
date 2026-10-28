@@ -133,4 +133,30 @@ const SENTENCES = [
   { id: 'k1s.and-but', title: 'Two joining words', prompt: 'Write ONE sentence about a castle that uses both “and” and “but”.', checks: [{ type: 'includesAll', words: ['and', 'but'], msg: 'Use both “and” and “but”.' }, { type: 'capital' }, { type: 'endPunct' }, { type: 'minWords', n: 9, msg: 'Write a longer sentence.' }], model: 'The castle was big and strong, but the dragon was stronger.', tip: '“and” adds an idea; “but” adds a surprise.' },
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const W = (...rows) => ({ kind: 'blocks', rows });
+const UN = { join: '+', parts: [['un', 'prefix', 'not'], ['happy', 'root']], result: 'unhappy' };
+const DIS = { join: '+', parts: [['dis', 'prefix', 'not'], ['like', 'root']], result: 'dislike' };
+const RE = { join: '+', parts: [['re', 'prefix', 'again'], ['build', 'root']], result: 'rebuild' };
+const TOPIC_VISUALS = {
+  'spelling.prefixes': W(UN, DIS, RE),
+  'spelling.compounds': { ...W(
+    { join: '+', parts: [['foot', 'root', 'word'], ['ball', 'suffix', 'word']], result: 'football' },
+    { join: '+', parts: [['sun', 'root', 'word'], ['flower', 'suffix', 'word']], result: 'sunflower' },
+    { join: '+', parts: [['rain', 'root', 'word'], ['bow', 'suffix', 'word']], result: 'rainbow' },
+  ), caption: 'Two whole words join together, with no gap.' },
+  'spelling.speech': { ...W(
+    { parts: [['“Blast off!”', 'clause', 'spoken words'], ['shouted the captain.', 'subject', 'who spoke']] },
+    { parts: [['The captain said,', 'subject', 'who spoke'], ['“Get ready.”', 'clause', 'spoken words']] },
+  ), caption: 'Speech marks go round the words someone actually says, with their punctuation inside.' },
+};
+const ITEM_VISUALS = {
+  'spelling.pf.unhappy': W(UN),
+  'spelling.pf.dislike': W(DIS),
+  'spelling.pf.rebuild': W(RE),
+  'spelling.pf.disappear': { ...W({ join: '+', parts: [['dis', 'prefix', 'not'], ['appear', 'root']], result: 'disappear' }), caption: 'One s from dis, and the double p from appear.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'spelling', deck: 'more', topics, items, sentences: SENTENCES }];

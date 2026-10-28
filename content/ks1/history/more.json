@@ -12,7 +12,24 @@
    "batch": 5,
    "intro": "Long before the Romans, people in Britain hunted with stone tools, built Stonehenge, and later learned to make bronze and iron.",
    "teach": "Explain the order of the Stone Age, Bronze Age and Iron Age, and why they have those names.",
-   "talk": "Ask {him} what {she} would have eaten as a Stone Age hunter."
+   "talk": "Ask {him} what {she} would have eaten as a Stone Age hunter.",
+   "visual": {
+    "kind": "timeline",
+    "from": -4000,
+    "to": 200,
+    "set": "britain",
+    "events": [
+     [
+      -3000,
+      "Stonehenge begun"
+     ],
+     [
+      43,
+      "Romans invade"
+     ]
+    ],
+    "caption": "Stone tools, then bronze, then iron."
+   }
   },
   {
    "id": "history.egypt",
@@ -36,7 +53,31 @@
    "batch": 5,
    "intro": "Before cars, people travelled by horse. The first petrol car was built in 1885. Since then, cars have got faster and faster, and one has even broken the sound barrier!",
    "teach": "Explain how travel changed from horses to cars.",
-   "talk": "Ask a grandparent what their first car was like."
+   "talk": "Ask a grandparent what their first car was like.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1850,
+    "to": 2026,
+    "set": "britain",
+    "events": [
+     [
+      1885,
+      "First petrol car (Karl Benz)"
+     ],
+     [
+      1908,
+      "Ford Model T"
+     ],
+     [
+      1950,
+      "First Formula One race"
+     ],
+     [
+      1997,
+      "Thrust SSC beats the speed of sound"
+     ]
+    ]
+   }
   },
   {
    "id": "history.inventors",
@@ -48,7 +89,31 @@
    "batch": 5,
    "intro": "Inventors are people who come up with new ideas that change the world: telephones, television, the World Wide Web…",
    "teach": "Explain which invention you think changed the world the most, and why.",
-   "talk": "Ask {him} to invent something to solve a problem at home, and draw it."
+   "talk": "Ask {him} to invent something to solve a problem at home, and draw it.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1830,
+    "to": 2000,
+    "set": "britain",
+    "events": [
+     [
+      1843,
+      "Ada Lovelace’s computer program"
+     ],
+     [
+      1876,
+      "The telephone"
+     ],
+     [
+      1926,
+      "The television"
+     ],
+     [
+      1989,
+      "The World Wide Web"
+     ]
+    ]
+   }
   },
   {
    "id": "history.sea",
@@ -72,7 +137,31 @@
    "batch": 5,
    "intro": "Explorers travel to places no one from their country has been before: across oceans, to the frozen South Pole and to the top of the world’s highest mountain.",
    "teach": "Explain why exploring Antarctica was so dangerous.",
-   "talk": "Ask {him} where in the world {she} would most like to explore."
+   "talk": "Ask {him} where in the world {she} would most like to explore.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1450,
+    "to": 2000,
+    "set": "britain",
+    "events": [
+     [
+      1492,
+      "Columbus reaches the Americas"
+     ],
+     [
+      1769,
+      "Cook maps New Zealand"
+     ],
+     [
+      1914,
+      "Shackleton sails for Antarctica"
+     ],
+     [
+      1953,
+      "Hillary and Tenzing climb Everest"
+     ]
+    ]
+   }
   },
   {
    "id": "history.victorians",
@@ -98,6 +187,35 @@
    "intro": "The Tudors ruled England from 1485 to 1603. Their kings and queens included Henry VIII and Elizabeth I. It was a time of great ships, explorers and plays.",
    "teach": "Explain what happened to the Mary Rose.",
    "talk": "Ask {him} why the Tudor rose is red and white.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Henry VII",
+     "note": "first Tudor king, 1485–1509",
+     "c": [
+      {
+       "n": "Henry VIII",
+       "note": "1509–1547; six wives",
+       "c": [
+        {
+         "n": "Mary I",
+         "note": "1553–1558"
+        },
+        {
+         "n": "Elizabeth I",
+         "note": "1558–1603; last Tudor",
+         "mark": true
+        },
+        {
+         "n": "Edward VI",
+         "note": "1547–1553"
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "The dates show when each one reigned. Henry VIII’s children all reigned: Edward, then Mary, then Elizabeth."
+   },
    "coreIn": [
     "y3"
    ]
@@ -115,7 +233,16 @@
     "Iron Age"
    ],
    "labels": null,
-   "explain": "Stone tools came first, then bronze (copper mixed with tin), then iron, which was much easier to find and, once smiths learned to harden it, made tougher tools."
+   "explain": "Stone tools came first, then bronze (copper mixed with tin), then iron, which was much easier to find and, once smiths learned to harden it, made tougher tools.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "Stone Age: flint tools",
+     "Bronze Age: bronze tools",
+     "Iron Age: iron tools"
+    ]
+   }
   },
   {
    "id": "history.sa.tools",
@@ -378,7 +505,22 @@
      "feedback": "Over 2,500 years apart!"
     }
    ],
-   "explain": "The Great Pyramid is about 4,500 years old. Roman Britain began about 2,000 years ago."
+   "explain": "The Great Pyramid is about 4,500 years old. Roman Britain began about 2,000 years ago.",
+   "visual": {
+    "kind": "timeline",
+    "from": -3000,
+    "to": 500,
+    "events": [
+     [
+      -2560,
+      "Great Pyramid built"
+     ],
+     [
+      43,
+      "Romans invade Britain"
+     ]
+    ]
+   }
   },
   {
    "id": "history.car.before",
@@ -984,7 +1126,36 @@
    "accept": [
     "henry the seventh",
     "henry 7"
-   ]
+   ],
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Henry VII",
+     "note": "first Tudor king, 1485–1509",
+     "c": [
+      {
+       "n": "Henry VIII",
+       "note": "1509–1547; six wives",
+       "c": [
+        {
+         "n": "Mary I",
+         "note": "1553–1558"
+        },
+        {
+         "n": "Elizabeth I",
+         "note": "1558–1603; last Tudor",
+         "mark": true
+        },
+        {
+         "n": "Edward VI",
+         "note": "1547–1553"
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "The dates show when each one reigned. Henry VIII’s children all reigned: Edward, then Mary, then Elizabeth."
+   }
   },
   {
    "id": "history.tu.rose",
@@ -1073,7 +1244,36 @@
    "accept": [
     "elizabeth the first",
     "queen elizabeth i"
-   ]
+   ],
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Henry VII",
+     "note": "first Tudor king, 1485–1509",
+     "c": [
+      {
+       "n": "Henry VIII",
+       "note": "1509–1547; six wives",
+       "c": [
+        {
+         "n": "Mary I",
+         "note": "1553–1558"
+        },
+        {
+         "n": "Elizabeth I",
+         "note": "1558–1603; last Tudor",
+         "mark": true
+        },
+        {
+         "n": "Edward VI",
+         "note": "1547–1553"
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "The dates show when each one reigned. Henry VIII’s children all reigned: Edward, then Mary, then Elizabeth."
+   }
   }
  ]
 }

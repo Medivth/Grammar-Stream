@@ -313,4 +313,78 @@ for (const [id, memory] of Object.entries(MEMORY)) {
   Object.assign(item, memory);
 }
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// (Particles, cells, the microscope and the flower get labelled diagrams separately.)
+const SUBSTANCES = {
+  kind: 'table', head: ['', 'what it is', 'examples'],
+  rows: [
+    ['atom', 'the smallest part of an element', 'one atom of gold'],
+    ['element', 'only **one type** of atom', 'gold (Au), carbon (C)'],
+    ['molecule', 'two or more atoms joined together', 'O₂, H₂O'],
+    ['compound', 'two or more elements **chemically joined**', 'water (H₂O), salt (NaCl)'],
+    ['mixture', 'substances mixed but **not joined**', 'air, sea water'],
+  ],
+  caption: 'A compound’s elements are joined and hard to separate; a mixture can be separated again.',
+};
+const SEPARATING = {
+  kind: 'table', head: ['method', 'separates', 'example'],
+  rows: [
+    ['filtering', 'an insoluble solid from a liquid', 'sand from water'],
+    ['evaporating', 'a dissolved solid from its solution', 'salt from salt water'],
+    ['distillation', 'a pure liquid from a solution', 'drinking water from sea water'],
+    ['chromatography', 'dyes mixed in an ink', 'the colours in a felt-tip pen'],
+    ['a magnet', 'magnetic from non-magnetic', 'iron filings from sand'],
+  ],
+};
+const PH = {
+  kind: 'table', head: ['pH', 'universal indicator', 'examples'],
+  rows: [
+    ['0–2', 'red', 'stomach acid (1), lemon juice (2)'],
+    ['3–6', 'orange, yellow', 'vinegar (3), cola (3)'],
+    ['7', 'green', 'pure water: **neutral**'],
+    ['8–10', 'blue', 'baking soda (8), soap (10)'],
+    ['11–14', 'purple', 'bleach (13)'],
+  ],
+  tint: 'rows', caption: 'The pH scale: below 7 is an **acid**, 7 is **neutral**, above 7 is an **alkali**.',
+};
+const RESULTANT = { kind: 'blocks', rows: [{ parts: [['← 4 N', 'object', 'friction'], ['box', 'noun', 'the box'], ['10 N →', 'verb', 'push']], result: '6 N →' }], caption: 'Opposite forces subtract: 10 − 4 = 6 N, in the direction of the bigger force.' };
+const DISTANCE_TIME = { kind: 'maths', diagram: { type: 'line', title: 'Distance–time graph', ylabel: 'distance (m)', xs: ['0 s', '1 s', '2 s', '3 s', '4 s', '5 s', '6 s'], ys: [0, 10, 20, 20, 20, 30, 40] }, caption: 'A sloping straight line: moving at a steady speed (steeper = faster). A flat line: stationary.' };
+const ENERGY_BALL = { kind: 'flow', steps: ['Chemical store (in your muscles)', 'Kinetic store (ball moving up)', 'Gravitational potential store (ball at the top)', 'Kinetic store (ball falling)'], caption: 'Energy is never used up: it moves between stores. Some is dissipated to the surroundings.' };
+const FOOD_CHAIN = { kind: 'flow', across: true, steps: ['grass (producer)', 'rabbit', 'fox'], caption: 'The arrows show the direction energy flows: from the food to the animal that eats it.' };
+const PHOTOSYNTHESIS = { kind: 'flow', across: true, steps: ['carbon dioxide + water', 'light, absorbed by chlorophyll', 'glucose + oxygen'], caption: 'Photosynthesis in a leaf.' };
+const PLANT_CYCLE = { kind: 'cycle', steps: ['pollination', 'fertilisation', 'seeds form', 'seed dispersal', 'germination', 'growth into a flowering plant'], centre: 'life cycle of a flowering plant' };
+const VARIABLES = { kind: 'table', head: ['variable', 'what you do', 'example: does sugar dissolve faster in warm water?'], rows: [['independent', '**change** it', 'the water temperature'], ['dependent', '**measure** it', 'the time the sugar takes to dissolve'], ['control', '**keep** it the same', 'amount of water and sugar, stirring']], caption: 'A fair test: change one thing, measure one thing, keep everything else the same.' };
+const ACCURATE = { kind: 'table', rows: [['accurate', 'close to the **true value**'], ['precise', 'repeat readings close to **each other**']], caption: 'A scale that always reads 2 g too high is precise but not accurate.' };
+const TOPIC_VISUALS = {
+  'science.atoms': SUBSTANCES,
+  'science.separating': SEPARATING,
+  'science.acids': PH,
+  'science.forces7': [RESULTANT, DISTANCE_TIME],
+  'science.energy': ENERGY_BALL,
+  'science.universe': { kind: 'flow', across: true, steps: ['Earth', 'the Solar System', 'the Milky Way galaxy', 'the universe'], caption: 'Zooming out: planet → solar system → galaxy → universe. The Milky Way has hundreds of billions of stars, and the universe billions of galaxies.' },
+  'science.ecosystems': [FOOD_CHAIN, PHOTOSYNTHESIS],
+  'science.reproduction': PLANT_CYCLE,
+  'science.working': VARIABLES,
+};
+const ITEM_VISUALS = {
+  'science.at.d1': SUBSTANCES,
+  'science.at.h2o': { kind: 'blocks', rows: [{ join: '+', parts: [['H', 'noun', 'hydrogen'], ['H', 'noun', 'hydrogen'], ['O', 'verb', 'oxygen']], result: 'H₂O' }], caption: 'The small 2 counts the atom just before it: two hydrogen atoms, one oxygen atom.' },
+  'science.at.co2': { kind: 'blocks', rows: [{ join: '+', parts: [['C', 'clause', 'carbon'], ['O', 'verb', 'oxygen'], ['O', 'verb', 'oxygen']], result: 'CO₂' }], caption: 'Carbon dioxide: one carbon atom and two (di-) oxygen atoms.' },
+  'science.sp7.distil': SEPARATING,
+  'science.sp7.order': { kind: 'flow', steps: ['Crush the rock salt', 'Stir it into warm water: the salt dissolves', 'Filter out the sand', 'Evaporate the water: salt is left'] },
+  'science.ac.range': PH,
+  'science.f7.resultant': RESULTANT,
+  'science.f7.flat': DISTANCE_TIME,
+  'science.f7.steep': DISTANCE_TIME,
+  'science.en.ball': ENERGY_BALL,
+  'science.ec.d2': FOOD_CHAIN,
+  'science.ec.chain': { kind: 'flow', across: true, steps: ['seaweed (producer)', 'periwinkle', 'crab', 'gull'], caption: 'Producer, then primary, secondary and tertiary consumers. Energy flows along the arrows.' },
+  'science.ec.photosynthesis': PHOTOSYNTHESIS,
+  'science.rp.pollination': PLANT_CYCLE,
+  'science.wk.accurate': ACCURATE,
+  'science.wk.precise': ACCURATE,
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = t.visual ? [].concat(t.visual, v) : v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = it.visual ? [].concat(it.visual, v) : v; }
+
 export default [{ subject: 'science', deck: 'year7', topics, items }];

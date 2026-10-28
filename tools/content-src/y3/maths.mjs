@@ -84,6 +84,45 @@ const items = [
   mcq('r.angles', 'reasoning', 'A square has 4 right angles. Can a triangle have 2 right angles?', [['No: its sides could never meet', true], ['Yes, any triangle can', false, 'Try drawing it: the two lines go straight up side by side and never join.'], ['Only a really big triangle', false, 'Size doesn’t matter: two right angles means the sides can’t meet.']], 'Two right angles at the ends of one side make two parallel lines, so no third corner can form.'),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const M = (diagram, extra = {}) => ({ kind: 'maths', diagram, ...extra });
+const PRISM = M({ type: 'solid', shape: 'prism' }, { caption: 'A triangular prism: 2 triangle ends and 3 rectangle sides. 5 faces, 9 edges, 6 vertices.' });
+const PYRAMID = M({ type: 'solid', shape: 'pyramid' }, { caption: 'A square-based pyramid: 1 square base and 4 triangles. 5 faces, 8 edges, 5 vertices.' });
+const TOPIC_VISUALS = {
+  'maths.y3-place': [
+    M({ type: 'tens', hundreds: 5, tens: 7, ones: 2 }),
+    M({ type: 'pvgrid', cols: ['H', 'T', 'O'], rows: [['5', '7', '2']] }, { caption: '5 hundreds, 7 tens and 2 ones make 572. It can also be split as 400 + 170 + 2.' }),
+  ],
+  'maths.y3-column': { kind: 'table', head: ['', 'H', 'T', 'O'], rows: [['exchange', '**4**', '**13**', '**13**'], ['', '5', '4', '3'], ['−', '2', '7', '8'], ['=', '2', '6', '5']], caption: '543 − 278. 3 − 8 won’t go: exchange a ten, so 13 − 8 = 5. 3 − 7 won’t go: exchange a hundred, so 13 − 7 = 6. Then 4 − 2 = 2.' },
+  'maths.y3-tables': M({ type: 'barmodel', rows: [{ label: '4 × 3', parts: 4, text: '3' }, { label: '8 × 3', parts: 8, text: '3' }] }, { caption: 'Eight 3s are double four 3s: 4 × 3 = 12, so 8 × 3 = 24.' }),
+  'maths.y3-multiply': M({ type: 'areamodel', across: [30, 4], down: [3] }, { caption: '34 × 3: split 34 into 30 and 4. 30 × 3 = 90 and 4 × 3 = 12, so 90 + 12 = 102.' }),
+  'maths.y3-divide': M({ type: 'barmodel', rows: [1, 2, 3, 4, 5].map((n) => ({ label: `bag ${n}`, parts: 3 })).concat([{ label: 'left over', parts: 2, shaded: 2 }]) }, { caption: '17 sweets shared into 5 bags: 3 in each bag and 2 left over. 17 ÷ 5 = 3 remainder 2.' }),
+  'maths.y3-fractions': [
+    M({ type: 'barmodel', total: '24', rows: [{ parts: 4, shaded: 3, text: '6' }] }, { caption: '{{3/4}} of 24: share 24 into 4 equal parts of 6. Three parts make 18.' }),
+    M({ type: 'barmodel', rows: [{ parts: 10, shaded: 3 }] }, { caption: 'One whole shared into 10 equal parts: each part is one tenth. 3 tenths are shaded.' }),
+  ],
+  'maths.y3-fraccalc': M({ type: 'fracwall', rows: [1, 2, 3, 4, 6, 8], shade: { 2: 1, 4: 2, 8: 4 } }, { caption: '{{1/2}} = {{2/4}} = {{4/8}}: the shaded parts are the same length.' }),
+  'maths.y3-time': { kind: 'table', head: ['12-hour clock', '24-hour clock'], rows: [['midnight', '00:00'], ['7:15 a.m.', '07:15'], ['midday', '12:00'], ['3:20 p.m.', '**15**:20'], ['9:45 p.m.', '**21**:45']], caption: 'For p.m. times, add 12 to the hour: 3 p.m. is 15:00.' },
+  'maths.y3-shapes': [PRISM, PYRAMID],
+  'maths.y3-tables-y4': M({ type: 'possgrid', a: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], b: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], op: 'product' }, { caption: 'Find 7 × 9: go along to 7 and down to 9. The answer is 63.' }),
+  'maths.y3-decimals': [
+    M({ type: 'hundredsq', shade: [1, 11, 21, 31, 41, 51, 61, 71, 81, 91, 2, 12, 22, 32, 42, 52, 62, 72, 82, 92, 3, 13, 23, 33, 43] }, { caption: '25 of the 100 squares are shaded: 2 whole columns (2 tenths) and 5 more squares (5 hundredths).' }),
+    M({ type: 'pvgrid', cols: ['O', '1/10', '1/100'], rows: [['0', '2', '5']], point: 1 }, { caption: '25 hundredths is written 0.25.' }),
+  ],
+  'maths.y3-rounding': M({ type: 'numline', min: 480, max: 490, step: 1, labels: [480, 485, 487, 490], mark: 487 }, { caption: '487 is past the halfway point (485), so it is nearer to 490. 487 rounds to 490.' }),
+};
+const ITEM_VISUALS = {
+  'maths.y3.sh.1': PRISM,
+  'maths.y3.sh.2': PYRAMID,
+  'maths.y3.sh.3': PYRAMID,
+  'maths.y3.sh.4': M({ type: 'solid', shape: 'cuboid' }, { caption: 'A cuboid: 4 vertices on top and 4 underneath. 8 vertices.' }),
+  'maths.y3.sh.5': PRISM,
+  'maths.y3.sh.10': M({ type: 'polygon', sides: 7, name: 'heptagon' }, { caption: 'A heptagon has 7 sides.' }),
+  'maths.y3.r.mistake': { kind: 'table', head: ['', 'H', 'T', 'O'], rows: [['exchange', '', '**4**', '**12**'], ['', '4', '5', '2'], ['−', '1', '2', '7'], ['=', '3', '2', '5']], caption: '2 − 7 won’t go, so exchange a ten: 12 − 7 = 5. Now there are only 4 tens: 4 − 2 = 2. 452 − 127 = 325.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = TOPICS.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{
   subject: 'maths', deck: 'y3',
   topics: TOPICS.map(({ gen, ...t }) => ({ kind: gen ? 'skill' : 'facts', ...t })),

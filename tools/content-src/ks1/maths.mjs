@@ -72,6 +72,39 @@ const items = [
   mcq('r.both', 'reasoning', 'I am a number between 20 and 30. I am in the 2 times table AND the 5 times table. What am I?', [['20', false, '20 is in both tables, but it is not BETWEEN 20 and 30.'], ['25', false, '25 is in the 5 times table but it is odd, so not in the 2 times table.'], ['30', false, '30 is in both tables, but it is not BETWEEN 20 and 30.'], ['No number', true]], 'Numbers in both the 2 and 5 times tables are in the 10 times table: 10, 20, 30… None is strictly between 20 and 30!'),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const M = (diagram, caption) => ({ kind: 'maths', diagram, ...(caption ? { caption } : {}) });
+const TOPIC_VISUALS = {
+  'maths.place': [M({ type: 'tens', tens: 4, ones: 7 }), M({ type: 'pvgrid', cols: ['T', 'O'], rows: [['4', '7']] }, '4 tens and 7 ones make 47.')],
+  'maths.bonds': [
+    { kind: 'tree', root: { n: '10', note: 'the whole', c: [{ n: '7', note: 'a part' }, { n: '3', note: 'a part' }] } },
+    M({ type: 'barmodel', rows: [{ label: '7 + 3', parts: 10, shaded: 7, text: '1' }, { label: '70 + 30', parts: 10, shaded: 7, text: '10' }] }, '7 + 3 = 10, so 70 + 30 = 100.'),
+  ],
+  'maths.count': M({ type: 'hundredsq', shade: Array.from({ length: 50 }, (_, i) => (i + 1) * 2) }, 'Counting in 2s lands on the even numbers (shaded). The odd numbers are the ones in between.'),
+  'maths.measure': { kind: 'table', head: ['We measure', 'small unit', 'big unit'], rows: [['length', 'centimetres (cm)', 'metres (m)'], ['mass', 'grams (g)', 'kilograms (kg)'], ['capacity', 'millilitres (ml)', 'litres (l)']], tint: 'rows', caption: '100 cm = 1 m. 1000 g = 1 kg. 1000 ml = 1 litre.' },
+  'maths.problems': { kind: 'flow', across: true, steps: ['Read it', 'Draw it', 'Choose + − × ÷', 'Work it out', 'Check it'] },
+  'maths.shapes': [M({ type: 'polygon', sides: 6, name: 'hexagon', corners: true }, 'A hexagon: 6 sides and 6 corners (vertices).'), M({ type: 'solid', shape: 'cube' }, 'A cube: 6 faces, 12 edges and 8 vertices.')],
+  'maths.times-8': [M({ type: 'array', rows: 2, cols: 6 }, '2 × 6 = 12'), M({ type: 'array', rows: 4, cols: 6, colour: '#1f5cc4' }, '4 × 6 = 24: double 12. Double again for 8 × 6 = 48.')],
+  'maths.hundreds': [M({ type: 'tens', hundreds: 3, tens: 6, ones: 5 }), M({ type: 'pvgrid', cols: ['H', 'T', 'O'], rows: [['3', '6', '5']] }, '3 hundreds, 6 tens and 5 ones make 365.')],
+  'maths.column': M({ type: 'pvgrid', cols: ['H', 'T', 'O'], rows: [['2', '4', '6'], ['1', '3', '2'], ['3', '7', '8']] }, '246 + 132: add the ones (6 + 2 = 8), then the tens (4 + 3 = 7), then the hundreds (2 + 1 = 3). 378.'),
+};
+const shape = (sides, name) => M({ type: 'polygon', sides, name, corners: true });
+const ITEM_VISUALS = {
+  'maths.sh.1': shape(3, 'triangle'),
+  'maths.sh.2': shape(5, 'pentagon'),
+  'maths.sh.3': shape(6, 'hexagon'),
+  'maths.sh.4': shape(8, 'octagon'),
+  'maths.sh.5': M({ type: 'polygon', sides: 4, name: 'square', numbered: false, corners: true }, 'The red dots are the vertices (corners).'),
+  'maths.sh.6': M({ type: 'solid', shape: 'cube' }, '6 square faces, like a dice.'),
+  'maths.sh.7': M({ type: 'solid', shape: 'cube' }, '4 vertices on the top and 4 on the bottom: 8.'),
+  'maths.sh.8': M({ type: 'solid', shape: 'sphere' }, 'A sphere'),
+  'maths.sh.9': M({ type: 'solid', shape: 'cylinder' }, 'A cylinder: 2 circle faces and a curved surface.'),
+  'maths.sh.10': M({ type: 'solid', shape: 'cone' }, 'A cone: a circle face and a point.'),
+  'maths.sh.11': M({ type: 'polygon', sides: 4, name: 'square', corners: true }, 'A square: 4 equal sides and 4 right angles.'),
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = TOPICS.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{
   subject: 'maths', deck: 'core',
   topics: TOPICS.map(({ gen, ...t }) => ({ kind: gen ? 'skill' : 'facts', ...t })),

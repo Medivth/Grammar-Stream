@@ -9,7 +9,74 @@
    "prereqs": [],
    "hook": "A prefix goes at the front (pre- means before!) and changes the meaning: happy → unhappy.",
    "teach": "Explain how knowing one word part helps you work out a new word.",
-   "talk": "Ask her what “tele” means, and to name three words that use it."
+   "talk": "Ask her what “tele” means, and to name three words that use it.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "un",
+        "prefix",
+        "not"
+       ],
+       [
+        "happy",
+        "root"
+       ]
+      ],
+      "result": "unhappy"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "re",
+        "prefix",
+        "again"
+       ],
+       [
+        "build",
+        "root"
+       ]
+      ],
+      "result": "rebuild"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "pre",
+        "prefix",
+        "before"
+       ],
+       [
+        "view",
+        "root"
+       ]
+      ],
+      "result": "preview"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "sub",
+        "prefix",
+        "under"
+       ],
+       [
+        "marine",
+        "root",
+        "sea"
+       ]
+      ],
+      "result": "submarine"
+     }
+    ],
+    "caption": "A prefix goes at the front and changes the meaning."
+   }
   },
   {
    "id": "english.morph-2",
@@ -20,7 +87,77 @@
    ],
    "hook": "Learn one root, unlock many words: port (carry) gives transport, export, portable and porter.",
    "teach": "Explain how knowing one word part helps you work out a new word.",
-   "talk": "Ask her what “tele” means, and to name three words that use it."
+   "talk": "Ask her what “tele” means, and to name three words that use it.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "trans",
+        "prefix",
+        "across"
+       ],
+       [
+        "port",
+        "root",
+        "carry"
+       ]
+      ],
+      "result": "transport"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ex",
+        "prefix",
+        "out"
+       ],
+       [
+        "port",
+        "root",
+        "carry"
+       ]
+      ],
+      "result": "export"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "port",
+        "root",
+        "carry"
+       ],
+       [
+        "able",
+        "suffix",
+        "can be"
+       ]
+      ],
+      "result": "portable"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "port",
+        "root",
+        "carry"
+       ],
+       [
+        "er",
+        "suffix",
+        "person who"
+       ]
+      ],
+      "result": "porter"
+     }
+    ],
+    "caption": "Learn one root, unlock many words."
+   }
   }
  ],
  "items": [
@@ -40,7 +177,42 @@
    ],
    "explain": "“un-” means not: unhappy, unfair.",
    "learn": "**un-** means **not**. Examples: unhappy, unfair.",
-   "example": "Unlock, unhappy, unfair: un- flips the meaning to the opposite."
+   "example": "Unlock, unhappy, unfair: un- flips the meaning to the opposite.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "un",
+        "prefix",
+        "not"
+       ],
+       [
+        "happy",
+        "root"
+       ]
+      ],
+      "result": "unhappy"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "un",
+        "prefix",
+        "not"
+       ],
+       [
+        "fair",
+        "root"
+       ]
+      ],
+      "result": "unfair"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.dis",
@@ -76,7 +248,27 @@
    ],
    "explain": "“mis-” means wrongly or badly: misspell, misunderstand.",
    "learn": "**mis-** means **wrongly or badly**. Examples: misspell, misunderstand.",
-   "hook": "Misspell has double s: mis + spell. Don’t misspell it!"
+   "hook": "Misspell has double s: mis + spell. Don’t misspell it!",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "mis",
+        "prefix",
+        "wrongly"
+       ],
+       [
+        "spell",
+        "root"
+       ]
+      ],
+      "result": "misspell"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.re",
@@ -130,7 +322,43 @@
    ],
    "explain": "“sub-” means under or below: submarine, subway.",
    "learn": "**sub-** means **under or below**. Examples: submarine, subway.",
-   "example": "A submarine goes under the sea; a subway goes under the road."
+   "example": "A submarine goes under the sea; a subway goes under the road.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "sub",
+        "prefix",
+        "under"
+       ],
+       [
+        "marine",
+        "root",
+        "sea"
+       ]
+      ],
+      "result": "submarine"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "sub",
+        "prefix",
+        "under"
+       ],
+       [
+        "way",
+        "root"
+       ]
+      ],
+      "result": "subway"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.inter",
@@ -148,7 +376,28 @@
    ],
    "explain": "“inter-” means between: international, interrupt.",
    "learn": "**inter-** means **between**. Examples: international, interrupt.",
-   "example": "An international match is played between nations; the internet links computers between countries."
+   "example": "An international match is played between nations; the internet links computers between countries.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "inter",
+        "prefix",
+        "between"
+       ],
+       [
+        "national",
+        "root",
+        "nations"
+       ]
+      ],
+      "result": "international"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.super",
@@ -184,7 +433,28 @@
    ],
    "explain": "“anti-” means against: antiseptic, antisocial.",
    "learn": "**anti-** means **against**. Examples: antiseptic, antisocial.",
-   "example": "Antiseptic cream works against germs."
+   "example": "Antiseptic cream works against germs.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "anti",
+        "prefix",
+        "against"
+       ],
+       [
+        "septic",
+        "root",
+        "germs"
+       ]
+      ],
+      "result": "antiseptic"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.auto",
@@ -202,7 +472,28 @@
    ],
    "explain": "“auto-” means self: autobiography, automatic.",
    "learn": "**auto-** means **self**. Examples: autobiography, automatic.",
-   "example": "An autograph is your own name, written by you yourself."
+   "example": "An autograph is your own name, written by you yourself.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "auto",
+        "prefix",
+        "self"
+       ],
+       [
+        "graph",
+        "root",
+        "write"
+       ]
+      ],
+      "result": "autograph"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.trans",
@@ -220,7 +511,28 @@
    ],
    "explain": "“trans-” means across: transport, transatlantic.",
    "learn": "**trans-** means **across**. Examples: transport, transatlantic.",
-   "example": "Transatlantic flights go across the Atlantic Ocean."
+   "example": "Transatlantic flights go across the Atlantic Ocean.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "trans",
+        "prefix",
+        "across"
+       ],
+       [
+        "atlantic",
+        "root",
+        "the Atlantic"
+       ]
+      ],
+      "result": "transatlantic"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.tele",
@@ -238,7 +550,28 @@
    ],
    "explain": "“tele-” means far away: telephone, telescope.",
    "learn": "**tele-** means **far away**. Examples: telephone, telescope.",
-   "hook": "Television = tele (far) + vision (seeing): seeing things far away."
+   "hook": "Television = tele (far) + vision (seeing): seeing things far away.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "tele",
+        "prefix",
+        "far away"
+       ],
+       [
+        "vision",
+        "root",
+        "seeing"
+       ]
+      ],
+      "result": "television"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.bi",
@@ -256,7 +589,28 @@
    ],
    "explain": "“bi-” means two: bicycle, bilingual.",
    "learn": "**bi-** means **two**. Examples: bicycle, bilingual.",
-   "example": "A bicycle has two wheels; binoculars use two eyes."
+   "example": "A bicycle has two wheels; binoculars use two eyes.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "bi",
+        "prefix",
+        "two"
+       ],
+       [
+        "cycle",
+        "root",
+        "wheel"
+       ]
+      ],
+      "result": "bicycle"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.micro",
@@ -329,7 +683,44 @@
    ],
    "explain": "“spect” means look: inspect, spectator.",
    "learn": "**spect** means **look**. Examples: inspect, spectator.",
-   "example": "Spectacles help you look; spectators look at the match."
+   "example": "Spectacles help you look; spectators look at the match.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "in",
+        "prefix",
+        "into"
+       ],
+       [
+        "spect",
+        "root",
+        "look"
+       ]
+      ],
+      "result": "inspect"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "spect",
+        "root",
+        "look"
+       ],
+       [
+        "ator",
+        "suffix",
+        "person who"
+       ]
+      ],
+      "result": "spectator"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.dict",
@@ -347,7 +738,44 @@
    ],
    "explain": "“dict” means say or speak: dictionary, predict, contradict.",
    "learn": "**dict** means **say or speak**. Examples: dictionary, predict, contradict.",
-   "example": "A dictator says what everyone must do."
+   "example": "A dictator says what everyone must do.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "pre",
+        "prefix",
+        "before"
+       ],
+       [
+        "dict",
+        "root",
+        "say"
+       ]
+      ],
+      "result": "predict"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "contra",
+        "prefix",
+        "against"
+       ],
+       [
+        "dict",
+        "root",
+        "say"
+       ]
+      ],
+      "result": "contradict"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.rupt",
@@ -365,7 +793,44 @@
    ],
    "explain": "“rupt” means break: erupt, interrupt, disrupt.",
    "learn": "**rupt** means **break**. Examples: erupt, interrupt, disrupt.",
-   "example": "A volcano erupts: the rock breaks out."
+   "example": "A volcano erupts: the rock breaks out.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "e",
+        "prefix",
+        "out"
+       ],
+       [
+        "rupt",
+        "root",
+        "break"
+       ]
+      ],
+      "result": "erupt"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "inter",
+        "prefix",
+        "between"
+       ],
+       [
+        "rupt",
+        "root",
+        "break"
+       ]
+      ],
+      "result": "interrupt"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.struct",
@@ -383,7 +848,28 @@
    ],
    "explain": "“struct” means build: construct, structure.",
    "learn": "**struct** means **build**. Examples: construct, structure.",
-   "example": "On a construction site, builders build."
+   "example": "On a construction site, builders build.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "con",
+        "prefix",
+        "together"
+       ],
+       [
+        "struct",
+        "root",
+        "build"
+       ]
+      ],
+      "result": "construct"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.aud",
@@ -401,7 +887,28 @@
    ],
    "explain": "“aud” means hear: audience, audible.",
    "learn": "**aud** means **hear**. Examples: audience, audible.",
-   "example": "Turn up the audio so the audience can hear."
+   "example": "Turn up the audio so the audience can hear.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "aud",
+        "root",
+        "hear"
+       ],
+       [
+        "ible",
+        "suffix",
+        "can be"
+       ]
+      ],
+      "result": "audible"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.vis-vid",
@@ -419,7 +926,28 @@
    ],
    "explain": "“vis / vid” means see: visible, video.",
    "learn": "**vis / vid** means **see**. Examples: visible, video.",
-   "example": "A video is something you see; in fog, visibility is poor."
+   "example": "A video is something you see; in fog, visibility is poor.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "vis",
+        "root",
+        "see"
+       ],
+       [
+        "ible",
+        "suffix",
+        "can be"
+       ]
+      ],
+      "result": "visible"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.graph",
@@ -455,7 +983,28 @@
    ],
    "explain": "“phon” means sound: telephone, phonics.",
    "learn": "**phon** means **sound**. Examples: telephone, phonics.",
-   "example": "Headphones bring sound to your ears."
+   "example": "Headphones bring sound to your ears.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "tele",
+        "prefix",
+        "far"
+       ],
+       [
+        "phone",
+        "root",
+        "sound"
+       ]
+      ],
+      "result": "telephone"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.geo",
@@ -473,7 +1022,28 @@
    ],
    "explain": "“geo” means earth: geography, geology.",
    "learn": "**geo** means **earth**. Examples: geography, geology.",
-   "example": "Geography is writing about the Earth; geology is the study of its rocks."
+   "example": "Geography is writing about the Earth; geology is the study of its rocks.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "geo",
+        "root",
+        "earth"
+       ],
+       [
+        "logy",
+        "suffix",
+        "study of"
+       ]
+      ],
+      "result": "geology"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.bio",
@@ -491,7 +1061,28 @@
    ],
    "explain": "“bio” means life: biology, biography.",
    "learn": "**bio** means **life**. Examples: biology, biography.",
-   "example": "A biography is the written story of someone’s life."
+   "example": "A biography is the written story of someone’s life.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "bio",
+        "root",
+        "life"
+       ],
+       [
+        "graphy",
+        "suffix",
+        "writing"
+       ]
+      ],
+      "result": "biography"
+     }
+    ]
+   }
   },
   {
    "id": "english.m.chron",

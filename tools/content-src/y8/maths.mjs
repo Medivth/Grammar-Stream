@@ -165,4 +165,45 @@ for (const id of Object.keys(TOPIC_HOOKS)) if (!TOPICS.some((t) => t.id === id))
 for (const it of items) if (MEMORY[it.id]) Object.assign(it, MEMORY[it.id]);
 for (const id of Object.keys(MEMORY)) if (!items.some((it) => it.id === id)) throw new Error(`memory hook for unknown item ${id}`);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Algebra grids are tables, not the areamodel diagram, because that one only takes numbers.
+const M = (diagram, caption) => ({ kind: 'maths', diagram, ...(caption ? { caption } : {}) });
+const DICE = [1, 2, 3, 4, 5, 6];
+const TOPIC_VISUALS = {
+  'maths.primes': [
+    { kind: 'table', rows: [['84', '÷ **2**'], ['42', '÷ **2**'], ['21', '÷ **3**'], ['7', '÷ **7**'], ['1', '']], caption: 'Divide by primes until you reach 1: 84 = 2 × 2 × 3 × 7 = 2² × 3 × 7.' },
+    M({ type: 'venn', labels: ['84', '90'], only: ['2 × 7', '3 × 5'], both: '2 × 3', out: '' }, 'Primes of 84 and 90. The overlap gives the HCF: 2 × 3 = 6. Everything in the circles gives the LCM: 2 × 7 × 2 × 3 × 3 × 5 = 1260.'),
+  ],
+  'maths.indices': { kind: 'table', head: ['rule', 'example'], rows: [['multiply: add the indices', 'a³ × a⁴ = a⁷'], ['divide: subtract them', 'a⁵ ÷ a² = a³'], ['power of a power: multiply', '(a²)³ = a⁶'], ['index 0', 'a⁰ = 1'], ['negative index', 'a⁻² = {{1/a²}}'], ['index ½', 'a^{½} = √a']] },
+  'maths.standard-form': { kind: 'table', head: ['', 'metres', 'standard form'], rows: [['atom', '0.0000000001', '1 × 10⁻¹⁰'], ['hair', '0.0001', '1 × 10⁻⁴'], ['person', '1.7', '1.7 × 10⁰'], ['Earth to Sun', '150,000,000,000', '1.5 × 10¹¹']], caption: 'Rough sizes (the width of an atom and of a hair). A × 10ⁿ with 1 ≤ A < 10: big numbers have positive powers, tiny ones negative.' },
+  'maths.fractions': M({ type: 'fracwall', rows: [1, 2, 3, 4, 6, 12], shade: { 3: 2, 6: 4, 12: 8 } }, '{{2/3}} = {{4/6}} = {{8/12}}: equivalent fractions line up on the fraction wall.'),
+  'maths.percentages': M({ type: 'barmodel', total: '100% = £50', rows: [{ label: 'before', parts: 5, text: '£10' }, { label: 'after', parts: 6, shaded: 5, text: '£10', total: '120% = £60' }] }, 'Each box is 20%. A 20% rise adds 1 box: × 1.2. Reverse: if the new price is £60, then 6 boxes = £60, so 1 box = £10 and the original was 5 boxes = £50.'),
+  'maths.ratio': M({ type: 'barmodel', rows: [{ label: 'Kit', parts: 3, shaded: 3, text: '8' }, { label: 'Mira', parts: 2, text: '8' }] }, 'Share 40 drachmae in the ratio 3 : 2. 5 equal parts = 40, so 1 part = 8: Kit gets 24 and Mira 16.'),
+  'maths.algebra': { kind: 'table', rows: [['×', '2x', '+5'], ['3', '**6x**', '**+15**']], caption: 'The grid (area) method: 3(2x + 5) = 6x + 15. Read it backwards to factorise: 6x + 15 = 3(2x + 5).' },
+  'maths.equations': { kind: 'flow', steps: ['5(x − 2) = 3(x + 4)', 'Expand: 5x − 10 = 3x + 12', 'Subtract 3x: 2x − 10 = 12', 'Add 10: 2x = 22', 'Divide by 2: x = 11'], caption: 'Do the same to both sides. Check: 5 × 9 = 45 and 3 × 15 = 45.' },
+  'maths.inequalities': { kind: 'table', head: ['inequality', 'on a number line'], rows: [['x > 2', 'open circle ○ at 2, arrow right'], ['x ≥ 2', 'filled circle ● at 2, arrow right'], ['x < 2', 'open circle ○ at 2, arrow left'], ['x ≤ 2', 'filled circle ● at 2, arrow left']], caption: 'Open: 2 is not included. Filled: it is. Multiply or divide by a negative and the sign flips: −2x > 6 gives x < −3.' },
+  'maths.sequences': { kind: 'table', rows: [['n', '1', '2', '3', '4'], ['term', '5', '8', '11', '14'], ['3n', '3', '6', '9', '12']], caption: 'Up by 3 each time, so compare with 3n: every term is 2 more. nth term = 3n + 2.' },
+  'maths.graphs': M({ type: 'graph', range: [-5, 5], lines: [{ m: 2, c: 1 }, { m: 2, c: -3 }, { m: -0.5, c: 2 }] }, 'y = 2x + 1 and y = 2x − 3 are parallel: both have gradient 2. y = −½x + 2 is perpendicular to them, because 2 × −½ = −1.'),
+  'maths.angles': { kind: 'table', head: ['', 'n', 'angle sum', 'exterior'], rows: [['triangle', '3', '180°', '120°'], ['quadrilateral', '4', '360°', '90°'], ['pentagon', '5', '540°', '72°'], ['hexagon', '6', '720°', '60°'], ['octagon', '8', '1080°', '45°']], caption: 'Interior angles add to (n − 2) × 180°. Exterior angles add to 360°, so each exterior angle of a regular polygon is 360° ÷ n.' },
+  'maths.area': M({ type: 'trap', a: 4, b: 10, h: 5 }, 'Area = ½(a + b)h = ½ × (4 + 10) × 5 = 35 cm².'),
+  'maths.volume': M({ type: 'solid', shape: 'prism' }, 'Any prism: volume = area of cross-section × length. A cylinder is a prism with a circle for its cross-section: V = πr²h.'),
+  'maths.transformations': { kind: 'table', head: ['transformation', 'to describe it, give'], rows: [['reflection', 'the mirror line, e.g. y = x'], ['rotation', 'the angle, direction and centre'], ['translation', 'a column vector'], ['enlargement', 'the scale factor and centre']], caption: 'Bearings are measured clockwise from north, with three figures: east is 090°.' },
+  'maths.probability': M({ type: 'possgrid', a: DICE, b: DICE, op: 'sum', shade: [7] }, 'Two dice: 36 equally likely outcomes. A total of 7 happens in 6 of them, so P(7) = {{6/36}} = {{1/6}}.'),
+  'maths.statistics': { kind: 'table', head: ['goals', 'matches (f)', 'goals × f'], rows: [['0', '4', '0'], ['1', '6', '6'], ['2', '7', '14'], ['3', '3', '9'], ['total', '**20**', '**29**']], caption: 'Multiply before you add: mean = 29 ÷ 20 = 1.45 goals a match.' },
+  'maths.pythagoras': M({ type: 'righttri', left: 'a', bottom: 'b', hyp: 'c' }, 'a² + b² = c², where c is the hypotenuse, opposite the right angle. 3² + 4² = 9 + 16 = 25 = 5².'),
+  'maths.simultaneous': M({ type: 'graph', range: [-2, 8], lines: [{ m: 1, c: 1 }, { m: -1, c: 7 }] }, 'y = x + 1 and x + y = 7 cross at (3, 4): x = 3, y = 4 is the one pair that fits both equations.'),
+  'maths.quadratics': { kind: 'table', rows: [['×', 'x', '+3'], ['x', '**x²**', '**+3x**'], ['+4', '**+4x**', '**+12**']], caption: '(x + 3)(x + 4) = x² + 7x + 12: the two numbers add to the middle (3 + 4 = 7) and multiply to the end (3 × 4 = 12).' },
+  'maths.trigonometry': [
+    M({ type: 'righttri', left: 'opp', bottom: 'adj', hyp: 'hyp', angle: true }, 'Name the sides from the angle θ: opposite it, next to it (adjacent), and the hypotenuse.'),
+    { kind: 'table', rows: [['SOH', 'sin θ = {{opp/hyp}}'], ['CAH', 'cos θ = {{adj/hyp}}'], ['TOA', 'tan θ = {{opp/adj}}']] },
+  ],
+};
+const ITEM_VISUALS = {
+  'maths.rs.square': { kind: 'table', rows: [['×', 'a', '+b'], ['a', 'a²', '**+ab**'], ['+b', '**+ab**', 'b²']], caption: '(a + b)² has four parts: a² + 2ab + b². The two ab pieces are what a² + b² leaves out.' },
+  'maths.rs.irrational': { kind: 'tree', root: { n: 'real numbers', c: [{ n: 'rational', note: '3, −2, {{3/4}}, 0.3̇' }, { n: 'irrational', note: '√2, π', mark: true }] } },
+  'maths.lg.hypotenuse': M({ type: 'righttri', left: '', bottom: '', hyp: 'hypotenuse' }, 'The hypotenuse is the longest side, opposite the right angle.'),
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = TOPICS.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'maths', deck: 'y8', topics: TOPICS.map(({ gen, ...t }) => t), items }];

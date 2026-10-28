@@ -188,4 +188,12 @@ const items = [
   mcq('esc.3', 'poems-2', 'What does “the stars going round in my head” mean at the end?', [['The child keeps thinking of the stars', true], ['The child has a bad headache', false, 'It means the stars are still in their thoughts.'], ['Real stars are inside the bedroom', false, 'They are in the child’s mind.']], 'Something amazing stays in your mind after you have seen it.', P('escape')),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const LOUD = { kind: 'flow', across: true, steps: ['whisper', 'say', 'shout', 'bellow'], caption: 'Ways to speak, from quietest to loudest.' };
+const MOVE = { kind: 'flow', across: true, steps: ['crept', 'walked', 'ran', 'dashed'], caption: 'Ways to move, from slowest to fastest.' };
+const TOPIC_VISUALS = { 'reading.words-2': [LOUD, MOVE] };
+const ITEM_VISUALS = { 'reading.w2.whisper': LOUD, 'reading.w2.bellow': LOUD, 'reading.w2.crept': MOVE, 'reading.w2.dash': MOVE };
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'reading', deck: 'more', topics, items }];

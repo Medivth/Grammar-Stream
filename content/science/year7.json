@@ -50,7 +50,43 @@
    "intro": "There are only about 118 elements, but they combine to make everything in the universe.",
    "teach": "Explain the difference between an element and a compound.",
    "talk": "Ask her what H₂O means.",
-   "hook": "Element: one kind of atom. Compound: different atoms **chemically joined**. Mixture: just **mixed**."
+   "hook": "Element: one kind of atom. Compound: different atoms **chemically joined**. Mixture: just **mixed**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "what it is",
+     "examples"
+    ],
+    "rows": [
+     [
+      "atom",
+      "the smallest part of an element",
+      "one atom of gold"
+     ],
+     [
+      "element",
+      "only **one type** of atom",
+      "gold (Au), carbon (C)"
+     ],
+     [
+      "molecule",
+      "two or more atoms joined together",
+      "O₂, H₂O"
+     ],
+     [
+      "compound",
+      "two or more elements **chemically joined**",
+      "water (H₂O), salt (NaCl)"
+     ],
+     [
+      "mixture",
+      "substances mixed but **not joined**",
+      "air, sea water"
+     ]
+    ],
+    "caption": "A compound’s elements are joined and hard to separate; a mixture can be separated again."
+   }
   },
   {
    "id": "science.separating",
@@ -66,7 +102,42 @@
    "intro": "Sea water, ink and air are all mixtures. Scientists have clever ways to separate them.",
    "teach": "Explain how you could get pure water from sea water.",
    "talk": "Ask her what “pure” means to a scientist.",
-   "hook": "**Filter** out bits, **evaporate** to get a solid back, **distil** to get a liquid back, **chromatography** for colours."
+   "hook": "**Filter** out bits, **evaporate** to get a solid back, **distil** to get a liquid back, **chromatography** for colours.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "method",
+     "separates",
+     "example"
+    ],
+    "rows": [
+     [
+      "filtering",
+      "an insoluble solid from a liquid",
+      "sand from water"
+     ],
+     [
+      "evaporating",
+      "a dissolved solid from its solution",
+      "salt from salt water"
+     ],
+     [
+      "distillation",
+      "a pure liquid from a solution",
+      "drinking water from sea water"
+     ],
+     [
+      "chromatography",
+      "dyes mixed in an ink",
+      "the colours in a felt-tip pen"
+     ],
+     [
+      "a magnet",
+      "magnetic from non-magnetic",
+      "iron filings from sand"
+     ]
+    ]
+   }
   },
   {
    "id": "science.acids",
@@ -82,7 +153,44 @@
    "intro": "Lemon juice, soap, vinegar and toothpaste: some are acids and some are alkalis. Indicators tell them apart.",
    "teach": "Explain what happens when an acid and an alkali are mixed.",
    "talk": "Ask her why indigestion tablets help with heartburn.",
-   "hook": "pH **7** is neutral: below 7 is acid (sour), above 7 is alkali (soapy)."
+   "hook": "pH **7** is neutral: below 7 is acid (sour), above 7 is alkali (soapy).",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "pH",
+     "universal indicator",
+     "examples"
+    ],
+    "rows": [
+     [
+      "0–2",
+      "red",
+      "stomach acid (1), lemon juice (2)"
+     ],
+     [
+      "3–6",
+      "orange, yellow",
+      "vinegar (3), cola (3)"
+     ],
+     [
+      "7",
+      "green",
+      "pure water: **neutral**"
+     ],
+     [
+      "8–10",
+      "blue",
+      "baking soda (8), soap (10)"
+     ],
+     [
+      "11–14",
+      "purple",
+      "bleach (13)"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "The pH scale: below 7 is an **acid**, 7 is **neutral**, above 7 is an **alkali**."
+   }
   },
   {
    "id": "science.forces7",
@@ -98,7 +206,62 @@
    "intro": "Forces change how things move. Now we’ll calculate speed and weight, and read distance–time graphs.",
    "teach": "Explain what balanced forces do to a moving object.",
    "talk": "Ask her what your speed is if you drive 120 km in 2 hours.",
-   "hook": "**Balanced** forces: no change in motion. **Unbalanced**: speed up, slow down or change direction."
+   "hook": "**Balanced** forces: no change in motion. **Unbalanced**: speed up, slow down or change direction.",
+   "visual": [
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "← 4 N",
+         "object",
+         "friction"
+        ],
+        [
+         "box",
+         "noun",
+         "the box"
+        ],
+        [
+         "10 N →",
+         "verb",
+         "push"
+        ]
+       ],
+       "result": "6 N →"
+      }
+     ],
+     "caption": "Opposite forces subtract: 10 − 4 = 6 N, in the direction of the bigger force."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "line",
+      "title": "Distance–time graph",
+      "ylabel": "distance (m)",
+      "xs": [
+       "0 s",
+       "1 s",
+       "2 s",
+       "3 s",
+       "4 s",
+       "5 s",
+       "6 s"
+      ],
+      "ys": [
+       0,
+       10,
+       20,
+       20,
+       20,
+       30,
+       40
+      ]
+     },
+     "caption": "A sloping straight line: moving at a steady speed (steeper = faster). A flat line: stationary."
+    }
+   ]
   },
   {
    "id": "science.energy",
@@ -114,7 +277,17 @@
    "intro": "Energy is never used up. It moves between stores: kinetic, thermal, chemical and more.",
    "teach": "Explain the energy changes when you throw a ball up in the air.",
    "talk": "Ask her which energy resources are renewable.",
-   "hook": "Energy is never used up, only **moved between stores**, like money moved between bank accounts."
+   "hook": "Energy is never used up, only **moved between stores**, like money moved between bank accounts.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Chemical store (in your muscles)",
+     "Kinetic store (ball moving up)",
+     "Gravitational potential store (ball at the top)",
+     "Kinetic store (ball falling)"
+    ],
+    "caption": "Energy is never used up: it moves between stores. Some is dissipated to the surroundings."
+   }
   },
   {
    "id": "science.universe",
@@ -131,7 +304,18 @@
    "intro": "Our Sun is one of hundreds of billions of stars in the Milky Way, and the Milky Way is one of billions of galaxies.",
    "teach": "Explain what a light-year is.",
    "talk": "Ask her what causes a solar eclipse.",
-   "hook": "Planet → solar system → galaxy → universe: like house → street → town → world."
+   "hook": "Planet → solar system → galaxy → universe: like house → street → town → world.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "Earth",
+     "the Solar System",
+     "the Milky Way galaxy",
+     "the universe"
+    ],
+    "caption": "Zooming out: planet → solar system → galaxy → universe. The Milky Way has hundreds of billions of stars, and the universe billions of galaxies."
+   }
   },
   {
    "id": "science.ecosystems",
@@ -148,7 +332,29 @@
    "intro": "Every living thing depends on others. Energy flows from the Sun through plants to animals.",
    "teach": "Explain what would happen to a food web if all the bees disappeared.",
    "talk": "Ask her where a tree gets the stuff to build its trunk.",
-   "hook": "Sun → plant → animal: the arrows point to the **eater**, following the energy."
+   "hook": "Sun → plant → animal: the arrows point to the **eater**, following the energy.",
+   "visual": [
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "grass (producer)",
+      "rabbit",
+      "fox"
+     ],
+     "caption": "The arrows show the direction energy flows: from the food to the animal that eats it."
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "carbon dioxide + water",
+      "light, absorbed by chlorophyll",
+      "glucose + oxygen"
+     ],
+     "caption": "Photosynthesis in a leaf."
+    }
+   ]
   },
   {
    "id": "science.reproduction",
@@ -164,7 +370,19 @@
    "intro": "All living things reproduce. Flowers are a plant’s way of making seeds.",
    "teach": "Explain the difference between pollination and fertilisation.",
    "talk": "Ask her how a sycamore seed travels.",
-   "hook": "First **pollination** (pollen lands), then **fertilisation** (cells join), then **dispersal** (seeds travel)."
+   "hook": "First **pollination** (pollen lands), then **fertilisation** (cells join), then **dispersal** (seeds travel).",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "pollination",
+     "fertilisation",
+     "seeds form",
+     "seed dispersal",
+     "germination",
+     "growth into a flowering plant"
+    ],
+    "centre": "life cycle of a flowering plant"
+   }
   },
   {
    "id": "science.working",
@@ -175,7 +393,33 @@
    "intro": "Scientists test ideas with fair tests: change one thing, measure another, and keep everything else the same.",
    "teach": "Explain how to make an investigation a fair test.",
    "talk": "Plan a kitchen experiment together: which variable will you change?",
-   "hook": "**Cows Moo Softly**: **C**hange one thing, **M**easure one thing, keep everything else the **S**ame."
+   "hook": "**Cows Moo Softly**: **C**hange one thing, **M**easure one thing, keep everything else the **S**ame.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "variable",
+     "what you do",
+     "example: does sugar dissolve faster in warm water?"
+    ],
+    "rows": [
+     [
+      "independent",
+      "**change** it",
+      "the water temperature"
+     ],
+     [
+      "dependent",
+      "**measure** it",
+      "the time the sugar takes to dissolve"
+     ],
+     [
+      "control",
+      "**keep** it the same",
+      "amount of water and sugar, stirring"
+     ]
+    ],
+    "caption": "A fair test: change one thing, measure one thing, keep everything else the same."
+   }
   }
  ],
  "items": [
@@ -695,7 +939,43 @@
    ],
    "explain": "Water (H₂O) is a compound: hydrogen and oxygen are chemically bonded. Air is a mixture of different gases.",
    "hook": "Mixture = just **mixed**, easy to separate. Compound = **chemically joined**: a new substance.",
-   "example": "Iron filings and sulfur separate with a magnet; heat them and they make iron sulfide, which won’t."
+   "example": "Iron filings and sulfur separate with a magnet; heat them and they make iron sulfide, which won’t.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "what it is",
+     "examples"
+    ],
+    "rows": [
+     [
+      "atom",
+      "the smallest part of an element",
+      "one atom of gold"
+     ],
+     [
+      "element",
+      "only **one type** of atom",
+      "gold (Au), carbon (C)"
+     ],
+     [
+      "molecule",
+      "two or more atoms joined together",
+      "O₂, H₂O"
+     ],
+     [
+      "compound",
+      "two or more elements **chemically joined**",
+      "water (H₂O), salt (NaCl)"
+     ],
+     [
+      "mixture",
+      "substances mixed but **not joined**",
+      "air, sea water"
+     ]
+    ],
+    "caption": "A compound’s elements are joined and hard to separate; a mixture can be separated again."
+   }
   },
   {
    "id": "science.at.element",
@@ -844,7 +1124,34 @@
     "choice"
    ],
    "hook": "The little number belongs to the atom **just before** it: H₂O = two H, one O.",
-   "example": "People often call water “H-two-O” in everyday speech."
+   "example": "People often call water “H-two-O” in everyday speech.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "H",
+        "noun",
+        "hydrogen"
+       ],
+       [
+        "H",
+        "noun",
+        "hydrogen"
+       ],
+       [
+        "O",
+        "verb",
+        "oxygen"
+       ]
+      ],
+      "result": "H₂O"
+     }
+    ],
+    "caption": "The small 2 counts the atom just before it: two hydrogen atoms, one oxygen atom."
+   }
   },
   {
    "id": "science.at.co2",
@@ -862,7 +1169,34 @@
     "choice"
    ],
    "hook": "**Di-** means two: carbon **di**oxide has two oxygens, just as a **di**lemma has two options.",
-   "example": "The bubbles in fizzy drinks are carbon dioxide."
+   "example": "The bubbles in fizzy drinks are carbon dioxide.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "C",
+        "clause",
+        "carbon"
+       ],
+       [
+        "O",
+        "verb",
+        "oxygen"
+       ],
+       [
+        "O",
+        "verb",
+        "oxygen"
+       ]
+      ],
+      "result": "CO₂"
+     }
+    ],
+    "caption": "Carbon dioxide: one carbon atom and two (di-) oxygen atoms."
+   }
   },
   {
    "id": "science.at.air",
@@ -967,7 +1301,42 @@
    ],
    "explain": "Distillation boils the water off and condenses the steam, leaving the salt behind.",
    "hook": "Distillation: **boil it, cool it, collect it**.",
-   "example": "Sea water evaporates in the sunshine and falls as fresh rain: the water cycle is nature’s distillation."
+   "example": "Sea water evaporates in the sunshine and falls as fresh rain: the water cycle is nature’s distillation.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "method",
+     "separates",
+     "example"
+    ],
+    "rows": [
+     [
+      "filtering",
+      "an insoluble solid from a liquid",
+      "sand from water"
+     ],
+     [
+      "evaporating",
+      "a dissolved solid from its solution",
+      "salt from salt water"
+     ],
+     [
+      "distillation",
+      "a pure liquid from a solution",
+      "drinking water from sea water"
+     ],
+     [
+      "chromatography",
+      "dyes mixed in an ink",
+      "the colours in a felt-tip pen"
+     ],
+     [
+      "a magnet",
+      "magnetic from non-magnetic",
+      "iron filings from sand"
+     ]
+    ]
+   }
   },
   {
    "id": "science.sp7.chrom",
@@ -1034,7 +1403,16 @@
    "labels": null,
    "explain": "The salt dissolves but the sand does not. Filter, then evaporate the filtrate to get the salt back.",
    "hook": "Crush, Dissolve, Filter, Evaporate: “**C**ats **D**on’t **F**ancy **E**lephants”.",
-   "example": "The rock salt spread on icy UK roads in winter is mined in Cheshire: salt mixed with sand and clay."
+   "example": "The rock salt spread on icy UK roads in winter is mined in Cheshire: salt mixed with sand and clay.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Crush the rock salt",
+     "Stir it into warm water: the salt dissolves",
+     "Filter out the sand",
+     "Evaporate the water: salt is left"
+    ]
+   }
   },
   {
    "id": "science.ac.d1",
@@ -1092,7 +1470,44 @@
    ],
    "explain": "pH 0 to 14: below 7 acid, 7 neutral, above 7 alkali.",
    "hook": "0 to 14, with **7** right in the middle for neutral.",
-   "example": "Lemon juice is about pH 2, pure water pH 7 and soap about pH 9 to 10."
+   "example": "Lemon juice is about pH 2, pure water pH 7 and soap about pH 9 to 10.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "pH",
+     "universal indicator",
+     "examples"
+    ],
+    "rows": [
+     [
+      "0–2",
+      "red",
+      "stomach acid (1), lemon juice (2)"
+     ],
+     [
+      "3–6",
+      "orange, yellow",
+      "vinegar (3), cola (3)"
+     ],
+     [
+      "7",
+      "green",
+      "pure water: **neutral**"
+     ],
+     [
+      "8–10",
+      "blue",
+      "baking soda (8), soap (10)"
+     ],
+     [
+      "11–14",
+      "purple",
+      "bleach (13)"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "The pH scale: below 7 is an **acid**, 7 is **neutral**, above 7 is an **alkali**."
+   }
   },
   {
    "id": "science.ac.litmus",
@@ -1251,7 +1666,33 @@
     "choice"
    ],
    "hook": "Same direction: **add**. Opposite directions: **subtract**, and it goes the way of the bigger force.",
-   "example": "In tug of war, the team pulling harder wins: the resultant force points their way."
+   "example": "In tug of war, the team pulling harder wins: the resultant force points their way.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "← 4 N",
+        "object",
+        "friction"
+       ],
+       [
+        "box",
+        "noun",
+        "the box"
+       ],
+       [
+        "10 N →",
+        "verb",
+        "push"
+       ]
+      ],
+      "result": "6 N →"
+     }
+    ],
+    "caption": "Opposite forces subtract: 10 − 4 = 6 N, in the direction of the bigger force."
+   }
   },
   {
    "id": "science.f7.flat",
@@ -1269,7 +1710,34 @@
     "choice"
    ],
    "hook": "Flat line: time ticks on but distance doesn’t, so it has **stopped**.",
-   "example": "A bus waiting at a stop makes a flat line on its distance–time graph."
+   "example": "A bus waiting at a stop makes a flat line on its distance–time graph.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "line",
+     "title": "Distance–time graph",
+     "ylabel": "distance (m)",
+     "xs": [
+      "0 s",
+      "1 s",
+      "2 s",
+      "3 s",
+      "4 s",
+      "5 s",
+      "6 s"
+     ],
+     "ys": [
+      0,
+      10,
+      20,
+      20,
+      20,
+      30,
+      40
+     ]
+    },
+    "caption": "A sloping straight line: moving at a steady speed (steeper = faster). A flat line: stationary."
+   }
   },
   {
    "id": "science.f7.steep",
@@ -1287,7 +1755,34 @@
     "choice"
    ],
    "hook": "**Steeper = speedier.**",
-   "example": "A cyclist racing downhill makes a steeper line than someone pushing a bike uphill."
+   "example": "A cyclist racing downhill makes a steeper line than someone pushing a bike uphill.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "line",
+     "title": "Distance–time graph",
+     "ylabel": "distance (m)",
+     "xs": [
+      "0 s",
+      "1 s",
+      "2 s",
+      "3 s",
+      "4 s",
+      "5 s",
+      "6 s"
+     ],
+     "ys": [
+      0,
+      10,
+      20,
+      20,
+      20,
+      30,
+      40
+     ]
+    },
+    "caption": "A sloping straight line: moving at a steady speed (steeper = faster). A flat line: stationary."
+   }
   },
   {
    "id": "science.f7.hooke",
@@ -1497,7 +1992,17 @@
    "labels": null,
    "explain": "Chemical → kinetic → gravitational potential → kinetic. Some energy is dissipated to the surroundings by air resistance.",
    "hook": "Muscles → rising → top → falling: **chemical, kinetic, gravitational, kinetic**.",
-   "example": "Throw a ball up in the garden: it slows, pauses for a split second at the top, then speeds up as it falls."
+   "example": "Throw a ball up in the garden: it slows, pauses for a split second at the top, then speeds up as it falls.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Chemical store (in your muscles)",
+     "Kinetic store (ball moving up)",
+     "Gravitational potential store (ball at the top)",
+     "Kinetic store (ball falling)"
+    ],
+    "caption": "Energy is never used up: it moves between stores. Some is dissipated to the surroundings."
+   }
   },
   {
    "id": "science.un.d1",
@@ -1712,7 +2217,17 @@
     }
    ],
    "explain": "Arrows always point from the thing eaten to the eater.",
-   "hook": "Arrows point to the **eater**: read them as “gives energy to”."
+   "hook": "Arrows point to the **eater**: read them as “gives energy to”.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "grass (producer)",
+     "rabbit",
+     "fox"
+    ],
+    "caption": "The arrows show the direction energy flows: from the food to the animal that eats it."
+   }
   },
   {
    "id": "science.ec.producer",
@@ -1745,7 +2260,17 @@
    ],
    "explain": "Photosynthesis releases the oxygen we breathe.",
    "hook": "**Photo** = light, **synthesis** = making: making food with light.",
-   "example": "Pondweed in sunlight gives off tiny bubbles: that is oxygen from photosynthesis."
+   "example": "Pondweed in sunlight gives off tiny bubbles: that is oxygen from photosynthesis.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "carbon dioxide + water",
+     "light, absorbed by chlorophyll",
+     "glucose + oxygen"
+    ],
+    "caption": "Photosynthesis in a leaf."
+   }
   },
   {
    "id": "science.ec.chlorophyll",
@@ -1856,7 +2381,18 @@
    ],
    "explain": "Energy flows from the producer through each consumer in turn.",
    "hook": "Every food chain starts with a **producer**, then the arrows point to whoever eats it.",
-   "example": "In a seaside rock pool: seaweed → periwinkles → shore crabs → gulls."
+   "example": "In a seaside rock pool: seaweed → periwinkles → shore crabs → gulls.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "seaweed (producer)",
+     "periwinkle",
+     "crab",
+     "gull"
+    ],
+    "caption": "Producer, then primary, secondary and tertiary consumers. Energy flows along the arrows."
+   }
   },
   {
    "id": "science.rp.d1",
@@ -1997,7 +2533,19 @@
    ],
    "explain": "Pollination comes first; fertilisation happens later, when the pollen nucleus joins the ovule nucleus.",
    "hook": "**P**ollen lands first (**p**ollination); **f**usion of the cells comes later (**f**ertilisation).",
-   "example": "Hay fever is caused by wind-pollinated plants, like grasses, releasing clouds of pollen."
+   "example": "Hay fever is caused by wind-pollinated plants, like grasses, releasing clouds of pollen.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "pollination",
+     "fertilisation",
+     "seeds form",
+     "seed dispersal",
+     "germination",
+     "growth into a flowering plant"
+    ],
+    "centre": "life cycle of a flowering plant"
+   }
   },
   {
    "id": "science.rp.sycamore",
@@ -2132,7 +2680,21 @@
    ],
    "explain": "Accurate = close to the true value. Precise = repeat readings are close to each other.",
    "hook": "**A**ccurate = **A**t the target (the true value).",
-   "example": "Darts all in the bullseye are accurate; darts all clumped together somewhere else are precise but not accurate."
+   "example": "Darts all in the bullseye are accurate; darts all clumped together somewhere else are precise but not accurate.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "accurate",
+      "close to the **true value**"
+     ],
+     [
+      "precise",
+      "repeat readings close to **each other**"
+     ]
+    ],
+    "caption": "A scale that always reads 2 g too high is precise but not accurate."
+   }
   },
   {
    "id": "science.wk.precise",
@@ -2147,7 +2709,21 @@
    ],
    "explain": "Readings can be precise but not accurate, for example if a scale always reads 2 g too high.",
    "hook": "**P**recise = readings **P**acked closely together.",
-   "example": "Kitchen scales that always read 2 g too high give precise but inaccurate results."
+   "example": "Kitchen scales that always read 2 g too high give precise but inaccurate results.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "accurate",
+      "close to the **true value**"
+     ],
+     [
+      "precise",
+      "repeat readings close to **each other**"
+     ]
+    ],
+    "caption": "A scale that always reads 2 g too high is precise but not accurate."
+   }
   },
   {
    "id": "science.wk.anomaly",

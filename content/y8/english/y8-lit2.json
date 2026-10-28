@@ -91,7 +91,34 @@
    "intro": "O. Henry was famous for twist endings. This one is a double twist, and the narrator steps in at the end to tell us what it means.",
    "teach": "Explain the irony of the two Christmas presents.",
    "talk": "Ask {him} what {she} would sacrifice to buy a present for someone {she} loves.",
-   "hook": "Two gifts, two sacrifices, one double twist: the love is the real present."
+   "hook": "Two gifts, two sacrifices, one double twist: the love is the real present.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Della",
+     "Jim"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "Sells",
+      "her long hair",
+      "his gold watch"
+     ],
+     [
+      "Buys",
+      "a chain for his watch",
+      "combs for her hair"
+     ],
+     [
+      "So",
+      "he has no watch",
+      "she has no long hair"
+     ]
+    ],
+    "caption": "A double twist: each gift is cancelled by the other’s sacrifice, yet the love is the real present."
+   }
   },
   {
    "id": "english.caesar",
@@ -130,7 +157,29 @@
    "intro": "Two poems by the same writer, in opposite moods. One is quiet and controlled, about being remembered after death; the other bursts with colour and joy.",
    "teach": "Explain how the speaker’s request changes at the turn in “Remember”.",
    "talk": "Ask {him} which of the two poems {she} would rather have written.",
-   "hook": "One poet, two moods: a hushed farewell and a burst of joy."
+   "hook": "One poet, two moods: a hushed farewell and a burst of joy.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Octave: lines 1–8",
+     "Sestet: lines 9–14"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "Rhyme",
+      "**ABBA ABBA**",
+      "**CDDECE**"
+     ],
+     [
+      "Request",
+      "“Remember me”",
+      "better to forget and smile than remember and be sad"
+     ]
+    ],
+    "caption": "A Petrarchan sonnet. The volta comes at line 9: “Yet if you should forget me for a while”."
+   }
   },
   {
    "id": "english.kipling",
@@ -143,7 +192,54 @@
    "intro": "“If—” is one long sentence that keeps you waiting until the final two lines for its reward. As you read, ask whether the advice still works today.",
    "teach": "Explain why Kipling calls Triumph and Disaster “impostors”.",
    "talk": "Ask {him} which line of the poem would be the best advice before an exam.",
-   "hook": "If… if… if… then: one long sentence, and the reward waits until the very end."
+   "hook": "If… if… if… then: one long sentence, and the reward waits until the very end.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "If you can keep your head…",
+        "subordinate",
+        "if-clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "If you can dream…",
+        "subordinate",
+        "if-clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "If you can fill the unforgiving minute…",
+        "subordinate",
+        "if-clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Yours is the Earth…",
+        "clause",
+        "main clause"
+       ],
+       [
+        "and… you’ll be a Man, my son!",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "One long sentence: a chain of “If” clauses, with the main clause, the reward, held back to the very end."
+   }
   },
   {
    "id": "english.darwin",
@@ -170,7 +266,19 @@
    "intro": "When the fairy king and queen quarrel, the whole natural world falls into chaos. The speech is dense with images, so read it slowly and picture each one.",
    "teach": "Explain how Shakespeare links a private quarrel to the disorder of the seasons.",
    "talk": "Ask {him} to find the most striking image in the speech and explain it.",
-   "hook": "When the rulers quarrel, the whole world suffers: even the seasons lose their way."
+   "hook": "When the rulers quarrel, the whole world suffers: even the seasons lose their way.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Titania and Oberon quarrel",
+     "Winds suck up fogs from the sea",
+     "Rivers flood their banks",
+     "The green corn rots",
+     "Frosts fall on the crimson rose",
+     "The seasons are confused"
+    ],
+    "caption": "“We are their parents and original”: a private quarrel throws the whole natural world into disorder."
+   }
   },
   {
    "id": "english.ozymandias",
@@ -185,7 +293,34 @@
    "intro": "Two of the most famous sonnets in English look back at the ancient world. One finds only ruins and arrogance; the other finds a whole new world of wonder.",
    "teach": "Explain the irony of the words on Ozymandias’s pedestal.",
    "talk": "Ask {him} what ruin today might make a traveller feel as Shelley’s did.",
-   "hook": "Two sonnets look back: one finds dust, the other finds treasure."
+   "hook": "Two sonnets look back: one finds dust, the other finds treasure.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Shelley’s speaker",
+     "note": "“I met a traveller”",
+     "c": [
+      {
+       "n": "The traveller",
+       "note": "describes the ruined statue",
+       "c": [
+        {
+         "n": "The sculptor",
+         "note": "carved the king’s sneer",
+         "c": [
+          {
+           "n": "Ozymandias",
+           "note": "“Look on my works…”",
+           "mark": true
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Voices inside voices: the king’s boast reaches us only through the sculptor, the traveller and the poet."
+   }
   },
   {
    "id": "english.wuthering",
@@ -226,7 +361,18 @@
    "intro": "A top literature essay argues. It makes a clear claim, supports it with short embedded quotations, explains effects precisely, and considers more than one reading.",
    "teach": "Explain what makes a strong first sentence for a literature essay.",
    "talk": "Ask {him} to turn one of {her} written answers into an essay plan.",
-   "hook": "Argue, prove, explain: every paragraph is one step in your argument."
+   "hook": "Argue, prove, explain: every paragraph is one step in your argument.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "**Point**: a clear claim",
+     "**Evidence**: a short, embedded quotation",
+     "**Analysis**: zoom in on a word",
+     "**Effect**: on the reader",
+     "**Link**: context or another reading"
+    ],
+    "caption": "An analytical paragraph. The analysis is where the marks are."
+   }
   }
  ],
  "items": [
@@ -1331,7 +1477,34 @@
    "explain": "“Give me your watch. I want to see how it looks on it.” But: “I sold the watch to get the money to buy your combs.”",
    "passage": "(Della and Jim are a young married couple in New York with very little money. Each owns one treasure: Jim’s gold watch and Della’s long, beautiful hair. Without telling Jim, Della has had her hair cut off and sold it to buy him a present.)\n\nOne dollar and eighty-seven cents. That was all. And sixty cents of it was in pennies. Pennies saved one and two at a time by bulldozing the grocer and the vegetable man and the butcher until one’s cheeks burned with the silent imputation of parsimony that such close dealing implied. Three times Della counted it. One dollar and eighty-seven cents. And the next day would be Christmas.\n\n[…]\n\nFor there lay The Combs—the set of combs, side and back, that Della had worshipped long in a Broadway window. Beautiful combs, pure tortoise shell, with jewelled rims—just the shade to wear in the beautiful vanished hair. They were expensive combs, she knew, and her heart had simply craved and yearned over them without the least hope of possession. And now, they were hers, but the tresses that should have adorned the coveted adornments were gone.\n\nBut she hugged them to her bosom, and at length she was able to look up with dim eyes and a smile and say: “My hair grows so fast, Jim!”\n\nAnd then Della leaped up like a little singed cat and cried, “Oh, oh!”\n\nJim had not yet seen his beautiful present. She held it out to him eagerly upon her open palm. The dull precious metal seemed to flash with a reflection of her bright and ardent spirit.\n\n“Isn’t it a dandy, Jim? I hunted all over town to find it. You’ll have to look at the time a hundred times a day now. Give me your watch. I want to see how it looks on it.”\n\nInstead of obeying, Jim tumbled down on the couch and put his hands under the back of his head and smiled.\n\n“Dell,” said he, “let’s put our Christmas presents away and keep ’em a while. They’re too nice to use just at present. I sold the watch to get the money to buy your combs. And now suppose you put the chops on.”\n\nThe magi, as you know, were wise men—wonderfully wise men—who brought gifts to the Babe in the manger. They invented the art of giving Christmas presents. Being wise, their gifts were no doubt wise ones, possibly bearing the privilege of exchange in case of duplication. And here I have lamely related to you the uneventful chronicle of two foolish children in a flat who most unwisely sacrificed for each other the greatest treasures of their house. But in a last word to the wise of these days let it be said that of all who give gifts these two were the wisest. Of all who give and receive gifts, such as they are wisest. Everywhere they are wisest. They are the magi.",
    "passageSource": "O. Henry, “The Gift of the Magi”, The Four Million (1906)",
-   "hook": "A chain for a watch he no longer has; combs for hair she no longer has."
+   "hook": "A chain for a watch he no longer has; combs for hair she no longer has.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Della",
+     "Jim"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "Sells",
+      "her long hair",
+      "his gold watch"
+     ],
+     [
+      "Buys",
+      "a chain for his watch",
+      "combs for her hair"
+     ],
+     [
+      "So",
+      "he has no watch",
+      "she has no long hair"
+     ]
+    ],
+    "caption": "A double twist: each gift is cancelled by the other’s sacrifice, yet the love is the real present."
+   }
   },
   {
    "id": "english.l2.gm.5",
@@ -1357,7 +1530,34 @@
    "explain": "Situational irony: the gifts cancel each other out, and yet the love behind them is what matters.",
    "passage": "(Della and Jim are a young married couple in New York with very little money. Each owns one treasure: Jim’s gold watch and Della’s long, beautiful hair. Without telling Jim, Della has had her hair cut off and sold it to buy him a present.)\n\nOne dollar and eighty-seven cents. That was all. And sixty cents of it was in pennies. Pennies saved one and two at a time by bulldozing the grocer and the vegetable man and the butcher until one’s cheeks burned with the silent imputation of parsimony that such close dealing implied. Three times Della counted it. One dollar and eighty-seven cents. And the next day would be Christmas.\n\n[…]\n\nFor there lay The Combs—the set of combs, side and back, that Della had worshipped long in a Broadway window. Beautiful combs, pure tortoise shell, with jewelled rims—just the shade to wear in the beautiful vanished hair. They were expensive combs, she knew, and her heart had simply craved and yearned over them without the least hope of possession. And now, they were hers, but the tresses that should have adorned the coveted adornments were gone.\n\nBut she hugged them to her bosom, and at length she was able to look up with dim eyes and a smile and say: “My hair grows so fast, Jim!”\n\nAnd then Della leaped up like a little singed cat and cried, “Oh, oh!”\n\nJim had not yet seen his beautiful present. She held it out to him eagerly upon her open palm. The dull precious metal seemed to flash with a reflection of her bright and ardent spirit.\n\n“Isn’t it a dandy, Jim? I hunted all over town to find it. You’ll have to look at the time a hundred times a day now. Give me your watch. I want to see how it looks on it.”\n\nInstead of obeying, Jim tumbled down on the couch and put his hands under the back of his head and smiled.\n\n“Dell,” said he, “let’s put our Christmas presents away and keep ’em a while. They’re too nice to use just at present. I sold the watch to get the money to buy your combs. And now suppose you put the chops on.”\n\nThe magi, as you know, were wise men—wonderfully wise men—who brought gifts to the Babe in the manger. They invented the art of giving Christmas presents. Being wise, their gifts were no doubt wise ones, possibly bearing the privilege of exchange in case of duplication. And here I have lamely related to you the uneventful chronicle of two foolish children in a flat who most unwisely sacrificed for each other the greatest treasures of their house. But in a last word to the wise of these days let it be said that of all who give gifts these two were the wisest. Of all who give and receive gifts, such as they are wisest. Everywhere they are wisest. They are the magi.",
    "passageSource": "O. Henry, “The Gift of the Magi”, The Four Million (1906)",
-   "hook": "Situational irony: each gift cancels out the other, yet the love survives."
+   "hook": "Situational irony: each gift cancels out the other, yet the love survives.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Della",
+     "Jim"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "Sells",
+      "her long hair",
+      "his gold watch"
+     ],
+     [
+      "Buys",
+      "a chain for his watch",
+      "combs for her hair"
+     ],
+     [
+      "So",
+      "he has no watch",
+      "she has no long hair"
+     ]
+    ],
+    "caption": "A double twist: each gift is cancelled by the other’s sacrifice, yet the love is the real present."
+   }
   },
   {
    "id": "english.l2.gm.6",
@@ -1791,7 +1991,29 @@
    "explain": "This turn in the sonnet, the volta, changes the poem from a plea into an act of selfless love.",
    "passage": "(Christina Rossetti, 1830–94, was one of the great Victorian poets. “Remember” is a sonnet spoken to someone the speaker loves; “A Birthday” celebrates love arriving.)\n\nRemember\n\nRemember me when I am gone away,\nGone far away into the silent land;\nWhen you can no more hold me by the hand,\nNor I half turn to go yet turning stay.\nRemember me when no more day by day\nYou tell me of our future that you planned:\nOnly remember me; you understand\nIt will be late to counsel then or pray.\nYet if you should forget me for a while\nAnd afterwards remember, do not grieve:\nFor if the darkness and corruption leave\nA vestige of the thoughts that once I had,\nBetter by far you should forget and smile\nThan that you should remember and be sad.\n\n* * *\n\nA Birthday\n\nMy heart is like a singing bird\nWhose nest is in a watered shoot;\nMy heart is like an apple-tree\nWhose boughs are bent with thickset fruit;\nMy heart is like a rainbow shell\nThat paddles in a halcyon sea;\nMy heart is gladder than all these\nBecause my love is come to me.\n\nRaise me a dais of silk and down;\nHang it with vair and purple dyes;\nCarve it in doves, and pomegranates,\nAnd peacocks with a hundred eyes;\nWork it in gold and silver grapes,\nIn leaves, and silver fleurs-de-lys;\nBecause the birthday of my life\nIs come, my love is come to me.",
    "passageSource": "Christina Rossetti, “Remember” and “A Birthday”, Goblin Market and Other Poems (1862)",
-   "hook": "The volta turns the sonnet: from “remember me” to “forget and smile”."
+   "hook": "The volta turns the sonnet: from “remember me” to “forget and smile”.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Octave: lines 1–8",
+     "Sestet: lines 9–14"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "Rhyme",
+      "**ABBA ABBA**",
+      "**CDDECE**"
+     ],
+     [
+      "Request",
+      "“Remember me”",
+      "better to forget and smile than remember and be sad"
+     ]
+    ],
+    "caption": "A Petrarchan sonnet. The volta comes at line 9: “Yet if you should forget me for a while”."
+   }
   },
   {
    "id": "english.l2.cr.3",
@@ -1812,7 +2034,29 @@
     "petrarchan sonnet",
     "a petrarchan sonnet"
    ],
-   "hook": "Petrarchan sonnet: an octave (8 lines) and a sestet (6 lines), with a turn between."
+   "hook": "Petrarchan sonnet: an octave (8 lines) and a sestet (6 lines), with a turn between.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Octave: lines 1–8",
+     "Sestet: lines 9–14"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "Rhyme",
+      "**ABBA ABBA**",
+      "**CDDECE**"
+     ],
+     [
+      "Request",
+      "“Remember me”",
+      "better to forget and smile than remember and be sad"
+     ]
+    ],
+    "caption": "A Petrarchan sonnet. The volta comes at line 9: “Yet if you should forget me for a while”."
+   }
   },
   {
    "id": "english.l2.cr.4",
@@ -1934,7 +2178,54 @@
    "explain": "Holding back the main clause keeps the reader waiting, like the patience the poem recommends.",
    "passage": "(Kipling’s poem, published in 1910, is addressed to “my son”, but its advice is for any young reader. In a BBC poll in 1995 it was voted Britain’s favourite poem.)\n\nIf—\n\nIf you can keep your head when all about you\nAre losing theirs and blaming it on you;\nIf you can trust yourself when all men doubt you,\nBut make allowance for their doubting too;\nIf you can wait and not be tired by waiting,\nOr being lied about, don’t deal in lies,\nOr being hated, don’t give way to hating,\nAnd yet don’t look too good, nor talk too wise;\n\nIf you can dream—and not make dreams your master;\nIf you can think—and not make thoughts your aim,\nIf you can meet with Triumph and Disaster\nAnd treat those two impostors just the same;\nIf you can bear to hear the truth you’ve spoken\nTwisted by knaves to make a trap for fools,\nOr watch the things you gave your life to, broken,\nAnd stoop and build ’em up with worn-out tools;\n\nIf you can make one heap of all your winnings\nAnd risk it on one turn of pitch-and-toss,\nAnd lose, and start again at your beginnings\nAnd never breathe a word about your loss;\nIf you can force your heart and nerve and sinew\nTo serve your turn long after they are gone,\nAnd so hold on when there is nothing in you\nExcept the Will which says to them: ‘Hold on!’\n\nIf you can talk with crowds and keep your virtue,\nOr walk with Kings—nor lose the common touch,\nIf neither foes nor loving friends can hurt you,\nIf all men count with you, but none too much;\nIf you can fill the unforgiving minute\nWith sixty seconds’ worth of distance run,\nYours is the Earth and everything that’s in it,\nAnd—which is more—you’ll be a Man, my son!",
    "passageSource": "Rudyard Kipling, “If—”, Rewards and Fairies (1910)",
-   "hook": "The main clause, “you’ll be a Man, my son”, is held back to the very last line."
+   "hook": "The main clause, “you’ll be a Man, my son”, is held back to the very last line.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "If you can keep your head…",
+        "subordinate",
+        "if-clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "If you can dream…",
+        "subordinate",
+        "if-clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "If you can fill the unforgiving minute…",
+        "subordinate",
+        "if-clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Yours is the Earth…",
+        "clause",
+        "main clause"
+       ],
+       [
+        "and… you’ll be a Man, my son!",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "One long sentence: a chain of “If” clauses, with the main clause, the reward, held back to the very end."
+   }
   },
   {
    "id": "english.l2.ki.2",
@@ -2275,7 +2566,19 @@
    "explain": "“The seasons alter… the maz’d world… now knows not which is which.”",
    "passage": "(Titania, queen of the fairies, has quarrelled with her husband Oberon, the fairy king. She tells him what their argument has done to the human world.)\n\nThese are the forgeries of jealousy:\nAnd never, since the middle summer’s spring,\nMet we on hill, in dale, forest, or mead,\nBy paved fountain, or by rushy brook,\nOr in the beached margent of the sea,\nTo dance our ringlets to the whistling wind,\nBut with thy brawls thou hast disturb’d our sport.\nTherefore the winds, piping to us in vain,\nAs in revenge, have suck’d up from the sea\nContagious fogs; which, falling in the land,\nHath every pelting river made so proud\nThat they have overborne their continents:\nThe ox hath therefore stretch’d his yoke in vain,\nThe ploughman lost his sweat; and the green corn\nHath rotted ere his youth attain’d a beard:\nThe fold stands empty in the drowned field,\nAnd crows are fatted with the murrion flock;\nThe nine men’s morris is fill’d up with mud;\nAnd the quaint mazes in the wanton green,\nFor lack of tread, are undistinguishable:\nThe human mortals want their winter here;\nNo night is now with hymn or carol blest:—\nTherefore the moon, the governess of floods,\nPale in her anger, washes all the air,\nThat rheumatic diseases do abound:\nAnd thorough this distemperature we see\nThe seasons alter: hoary-headed frosts\nFall in the fresh lap of the crimson rose;\nAnd on old Hiems’ thin and icy crown\nAn odorous chaplet of sweet summer buds\nIs, as in mockery, set: the spring, the summer,\nThe childing autumn, angry winter, change\nTheir wonted liveries; and the maz’d world,\nBy their increase, now knows not which is which:\nAnd this same progeny of evils comes\nFrom our debate, from our dissension:\nWe are their parents and original.",
    "passageSource": "William Shakespeare, A Midsummer Night’s Dream (about 1595), Act 2 Scene 1",
-   "hook": "Order at the top, order below: when the fairy rulers fight, nature falls apart."
+   "hook": "Order at the top, order below: when the fairy rulers fight, nature falls apart.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Titania and Oberon quarrel",
+     "Winds suck up fogs from the sea",
+     "Rivers flood their banks",
+     "The green corn rots",
+     "Frosts fall on the crimson rose",
+     "The seasons are confused"
+    ],
+    "caption": "“We are their parents and original”: a private quarrel throws the whole natural world into disorder."
+   }
   },
   {
    "id": "english.l2.tt.2",
@@ -2496,7 +2799,34 @@
    "explain": "The layers make the king seem far away and long dead.",
    "passage": "(Two Romantic sonnets about the ancient world. In “Ozymandias” a traveller describes the ruins of a statue of a mighty king of Egypt: Ozymandias is the Greek name for the pharaoh Ramesses II. In the second poem Keats describes reading Homer for the first time, in George Chapman’s translation of 1616.)\n\nOzymandias\n\nI met a traveller from an antique land\nWho said: Two vast and trunkless legs of stone\nStand in the desert…Near them, on the sand,\nHalf sunk, a shattered visage lies, whose frown,\nAnd wrinkled lip, and sneer of cold command,\nTell that its sculptor well those passions read\nWhich yet survive, stamped on these lifeless things,\nThe hand that mocked them, and the heart that fed:\nAnd on the pedestal these words appear:\n‘My name is Ozymandias, king of kings:\nLook on my works, ye Mighty, and despair!’\nNothing beside remains. Round the decay\nOf that colossal wreck, boundless and bare\nThe lone and level sands stretch far away.\n\n* * *\n\nOn First Looking into Chapman’s Homer\n\nMuch have I travell’d in the realms of gold,\nAnd many goodly states and kingdoms seen;\nRound many western islands have I been\nWhich bards in fealty to Apollo hold.\nOft of one wide expanse had I been told\nThat deep-brow’d Homer ruled as his demesne;\nYet did I never breathe its pure serene\nTill I heard Chapman speak out loud and bold:\nThen felt I like some watcher of the skies\nWhen a new planet swims into his ken;\nOr like stout Cortez when with eagle eyes\nHe star’d at the Pacific—and all his men\nLook’d at each other with a wild surmise—\nSilent, upon a peak in Darien.",
    "passageSource": "Percy Bysshe Shelley, “Ozymandias” (1818); John Keats, “On First Looking into Chapman’s Homer” (1816)",
-   "hook": "Count the layers: poet, traveller, sculptor, king. Each one pushes the king further away."
+   "hook": "Count the layers: poet, traveller, sculptor, king. Each one pushes the king further away.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Shelley’s speaker",
+     "note": "“I met a traveller”",
+     "c": [
+      {
+       "n": "The traveller",
+       "note": "describes the ruined statue",
+       "c": [
+        {
+         "n": "The sculptor",
+         "note": "carved the king’s sneer",
+         "c": [
+          {
+           "n": "Ozymandias",
+           "note": "“Look on my works…”",
+           "mark": true
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Voices inside voices: the king’s boast reaches us only through the sculptor, the traveller and the poet."
+   }
   },
   {
    "id": "english.l2.oz.4",
@@ -3048,7 +3378,18 @@
     }
    ],
    "explain": "Point, evidence, analysis, link: and the analysis is where the marks are.",
-   "hook": "PEEL: Point, Evidence, Explain, Link. PETAL adds the Technique: Point, Evidence, Technique, Analysis, Link."
+   "hook": "PEEL: Point, Evidence, Explain, Link. PETAL adds the Technique: Point, Evidence, Technique, Analysis, Link.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "**Point**: a clear claim",
+     "**Evidence**: a short, embedded quotation",
+     "**Analysis**: zoom in on a word",
+     "**Effect**: on the reader",
+     "**Link**: context or another reading"
+    ],
+    "caption": "An analytical paragraph. The analysis is where the marks are."
+   }
   },
   {
    "id": "english.l2.es.3",

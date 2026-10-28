@@ -76,7 +76,19 @@
    "intro": "DNA in the nucleus carries the genetic code, arranged in genes on chromosomes. Variation, plus natural selection over many generations, explains how species evolve.",
    "teach": "Explain natural selection using the peppered moth or antibiotic-resistant bacteria.",
    "talk": "Ask {him} which of {her} features are inherited, which are environmental, and which are both.",
-   "hook": "Nucleus = **library**, chromosome = **book**, gene = **recipe**, base = **letter**."
+   "hook": "Nucleus = **library**, chromosome = **book**, gene = **recipe**, base = **letter**.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "cell",
+     "nucleus",
+     "chromosome",
+     "gene",
+     "DNA bases"
+    ],
+    "caption": "Largest to smallest: each holds the next. A chromosome is one long DNA molecule carrying many genes."
+   }
   },
   {
    "id": "science.health",
@@ -89,7 +101,49 @@
    "intro": "Bacteria, viruses and fungi can cause disease. Our bodies fight back with white blood cells; vaccines train the immune system in advance. Hippocrates, the Greek “father of medicine”, insisted that diseases have natural causes.",
    "teach": "Explain how a vaccine protects you without making you ill.",
    "talk": "Ask {him} why antibiotics do not work against a cold.",
-   "hook": "Antibiotics kill **bacteria**, never viruses; vaccines **train** the immune system before the fight."
+   "hook": "Antibiotics kill **bacteria**, never viruses; vaccines **train** the immune system before the fight.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Bacteria",
+     "Viruses"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "Size",
+      "tiny cells",
+      "far smaller; not cells at all"
+     ],
+     [
+      "Genetic material",
+      "loose DNA, no nucleus",
+      "genes inside a protein coat"
+     ],
+     [
+      "Reproduce",
+      "by dividing",
+      "only inside our own cells"
+     ],
+     [
+      "Cell wall",
+      "yes",
+      "no"
+     ],
+     [
+      "Killed by antibiotics?",
+      "**yes**",
+      "**no**"
+     ],
+     [
+      "Example",
+      "Salmonella food poisoning",
+      "a cold, flu"
+     ]
+    ],
+    "caption": "Antibiotics attack parts of bacterial cells, such as the cell wall, which viruses do not have."
+   }
   },
   {
    "id": "science.particles",
@@ -165,7 +219,19 @@
    "intro": "Rocks are recycled over millions of years in the rock cycle; carbon is recycled between air, living things, oceans and rocks. Burning fossil fuels adds carbon dioxide faster than it is removed.",
    "teach": "Explain how burning fossil fuels contributes to climate change, using the carbon cycle.",
    "talk": "Ask {him} which rock type a fossil is most likely to be found in, and why.",
-   "hook": "**Igneous** from fire (Latin ignis), **sedimentary** from settling (Latin sedimentum), **metamorphic** from change."
+   "hook": "**Igneous** from fire (Latin ignis), **sedimentary** from settling (Latin sedimentum), **metamorphic** from change.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "magma cools: igneous rock",
+     "weathered and eroded into sediment",
+     "deposited and compacted: sedimentary rock",
+     "heat and pressure: metamorphic rock",
+     "melts back into magma"
+    ],
+    "centre": "the rock cycle",
+    "caption": "A simplified loop: any rock can be weathered, or melted, and start again. Fossils survive only in sedimentary rock."
+   }
   },
   {
    "id": "science.forces",
@@ -239,7 +305,32 @@
    "intro": "Good science is about fair tests, careful measurement and honest conclusions. Know your variables, and the difference between accurate, precise and repeatable results.",
    "teach": "Explain the independent, dependent and control variables in an experiment of your choice.",
    "talk": "Ask {him} to design a fair test to find the best paper for a paper aeroplane.",
-   "hook": "**Cows Moo Softly**: **C**hange one thing, **M**easure one thing, keep everything else the **S**ame."
+   "hook": "**Cows Moo Softly**: **C**hange one thing, **M**easure one thing, keep everything else the **S**ame.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Variable",
+     "What it is",
+     "Mira’s ramp test"
+    ],
+    "rows": [
+     [
+      "Independent",
+      "what you change",
+      "the height of the ramp"
+     ],
+     [
+      "Dependent",
+      "what you measure",
+      "how far the car rolls"
+     ],
+     [
+      "Control",
+      "what you keep the same",
+      "the same car each time"
+     ]
+    ]
+   }
   },
   {
    "id": "science.atomic",
@@ -267,7 +358,20 @@
    "teach": "Explain why X-rays are useful but dangerous.",
    "talk": "Ask {him} which electromagnetic waves {she} used today (radio, microwaves, visible light…).",
    "tier": "stretch",
-   "hook": "**R**aging **M**artians **I**nvaded **V**enus **U**sing **X**-ray **G**uns: radio to gamma."
+   "hook": "**R**aging **M**artians **I**nvaded **V**enus **U**sing **X**-ray **G**uns: radio to gamma.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "radio",
+     "microwaves",
+     "infrared",
+     "visible light",
+     "ultraviolet",
+     "X-rays",
+     "gamma rays"
+    ],
+    "caption": "From radio to gamma the wavelength gets shorter and the frequency and energy higher. All travel at the speed of light."
+   }
   },
   {
    "id": "science.genetics",
@@ -281,7 +385,35 @@
    "teach": "Explain why two brown-eyed parents can have a blue-eyed child (using a simplified model).",
    "talk": "Ask {him} to draw a Punnett square for two parents who are both Bb.",
    "tier": "stretch",
-   "hook": "A **capital** letter (dominant) shows with one copy; a **small** letter (recessive) needs two."
+   "hook": "A **capital** letter (dominant) shows with one copy; a **small** letter (recessive) needs two.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "possgrid",
+     "a": [
+      "B",
+      "b"
+     ],
+     "b": [
+      "B",
+      "b"
+     ],
+     "cells": [
+      [
+       "BB",
+       "Bb"
+      ],
+      [
+       "Bb",
+       "bb"
+      ]
+     ],
+     "shade": [
+      "bb"
+     ]
+    },
+    "caption": "Two Bb parents (brown eyes, simplified model): 1 box in 4 is bb, so a 25% chance of a blue-eyed child."
+   }
   }
  ],
  "items": [
@@ -533,7 +665,18 @@
    "labels": null,
    "explain": "Cells form tissues, tissues form organs, organs work together in organ systems, and those make up the organism.",
    "hook": "Smallest to largest: cell, tissue, organ, organ system, organism, each built from the one before.",
-   "example": "Muscle cell → muscle tissue → heart → circulatory system → you."
+   "example": "Muscle cell → muscle tissue → heart → circulatory system → you.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "cell",
+     "tissue",
+     "organ",
+     "organ system",
+     "organism"
+    ]
+   }
   },
   {
    "id": "science.or.sperm",
@@ -1117,7 +1260,17 @@
    ],
    "explain": "The direction energy flows: from the eaten to the eater. grass → rabbit → fox: energy passes from grass to rabbit to fox.",
    "hook": "Arrows point to the **eater**: read each arrow as “is eaten by”.",
-   "example": "grass → rabbit → fox: grass is eaten by rabbit, rabbit is eaten by fox."
+   "example": "grass → rabbit → fox: grass is eaten by rabbit, rabbit is eaten by fox.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "grass",
+     "rabbit",
+     "fox"
+    ],
+    "caption": "Each arrow points from the eaten to the eater: the way energy flows."
+   }
   },
   {
    "id": "science.ec.producer",
@@ -1370,7 +1523,17 @@
    ],
    "explain": "On soot-covered trees, dark moths were better hidden from birds, so more survived to breed. Natural selection: variation, a survival advantage, and passing the useful gene on.",
    "hook": "Natural selection: **variation**, **survival** of the best suited, **passing on** the genes.",
-   "example": "Since Britain’s air was cleaned up, pale peppered moths have become common again."
+   "example": "Since Britain’s air was cleaned up, pale peppered moths have become common again.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Moths vary: some pale, some dark",
+     "On sooty trees, dark moths are better hidden",
+     "More dark moths survive and breed",
+     "They pass on the gene for dark wings",
+     "Over many generations, dark moths become common"
+    ]
+   }
   },
   {
    "id": "science.in.darwin",
@@ -1943,7 +2106,16 @@
    "labels": null,
    "explain": "Salt dissolves; sand doesn’t. Filter, then evaporate the water from the solution to leave crystals.",
    "hook": "Salt dissolves, sand doesn’t: **dissolve, filter, evaporate**.",
-   "example": "Sea salt is made by evaporating sea water in shallow pans."
+   "example": "Sea salt is made by evaporating sea water in shallow pans.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Crush the rock salt",
+     "Dissolve it in warm water",
+     "Filter out the sand",
+     "Evaporate the water: salt crystals"
+    ]
+   }
   },
   {
    "id": "science.at.formula",
@@ -2610,7 +2782,29 @@
     }
    ],
    "explain": "Nitrogen 78%, oxygen 21%, argon about 0.9%, carbon dioxide about 0.04%.",
-   "hook": "Air is about **four-fifths nitrogen** and one-fifth oxygen."
+   "hook": "Air is about **four-fifths nitrogen** and one-fifth oxygen.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "pie",
+     "title": "Gases in dry air",
+     "sectors": [
+      {
+       "label": "nitrogen 78%",
+       "deg": 280.8
+      },
+      {
+       "label": "oxygen 21%",
+       "deg": 75.6
+      },
+      {
+       "label": "others 1%",
+       "deg": 3.6
+      }
+     ]
+    },
+    "caption": "The others are mostly argon (about 0.9%); carbon dioxide is only about 0.04%."
+   }
   },
   {
    "id": "science.er.co2",
@@ -2676,7 +2870,18 @@
    "labels": null,
    "explain": "Carbon cycles between the air, living things, oceans and rocks.",
    "hook": "Carbon goes **round and round**: air → plants → animals → air.",
-   "example": "The carbon in your toast was carbon dioxide in the air only months ago."
+   "example": "The carbon in your toast was carbon dioxide in the air only months ago.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "CO₂ in the air",
+     "plants absorb it (photosynthesis)",
+     "animals eat the plants",
+     "respiration releases CO₂"
+    ],
+    "centre": "the carbon cycle",
+    "caption": "Decay and burning also release CO₂. Burning fossil fuels adds it faster than it is removed."
+   }
   },
   {
    "id": "science.er.weather",
@@ -2981,7 +3186,18 @@
    ],
    "explain": "Some energy is transferred to the surroundings as heat and sound at each bounce. Less energy remains in the ball’s gravitational store at the top of each bounce.",
    "hook": "Every bounce **leaks** a little energy as heat and sound.",
-   "example": "Squash players warm the ball up before a game, because a warm ball bounces higher."
+   "example": "Squash players warm the ball up before a game, because a warm ball bounces higher.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Held up: gravitational store",
+     "Falling: gravitational → kinetic store",
+     "Hits the ground: elastic store (squashed)",
+     "Bounces up: kinetic → gravitational store",
+     "Lower each time: energy dissipated"
+    ],
+    "caption": "At every bounce some energy is transferred to the surroundings by heating and sound."
+   }
   },
   {
    "id": "science.en.renew",
@@ -4208,7 +4424,35 @@
     }
    ],
    "explain": "Whether the sperm carries an X or a Y chromosome. XX: female; XY: male. The chance is 50:50.",
-   "hook": "Eggs always carry **X**; the sperm decides: **X → girl, Y → boy**."
+   "hook": "Eggs always carry **X**; the sperm decides: **X → girl, Y → boy**.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "possgrid",
+     "a": [
+      "X",
+      "Y"
+     ],
+     "b": [
+      "X",
+      "X"
+     ],
+     "cells": [
+      [
+       "XX",
+       "XY"
+      ],
+      [
+       "XX",
+       "XY"
+      ]
+     ],
+     "shade": [
+      "XY"
+     ]
+    },
+    "caption": "Sperm (top) carry X or Y; eggs (side) always carry X. Half the boxes are XX (girl), half XY (boy): 50:50."
+   }
   },
   {
    "id": "science.gn.punnett",

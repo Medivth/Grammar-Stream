@@ -3,6 +3,7 @@
 // an explanation and worked steps. "{hero}" becomes the child's own superhero name in present().
 
 import { timeWords } from './ks1maths.js';
+import { pic, bar, pvWhole, fracWall, areaModel } from './pictures.js';
 
 const money = (p) => (p >= 100 ? `£${(p / 100).toFixed(2)}` : `${p}p`);
 const pad = (n) => String(n).padStart(2, '0');
@@ -18,6 +19,8 @@ const neg = (n) => (n < 0 ? `−${-n}` : String(n));
 const digits = (n) => String(n).split('').map(Number);
 const distinctDigits = (n) => new Set(String(n)).size === String(n).length;
 const PLACE = ['hundreds', 'tens', 'ones'];
+const HTO = ['H', 'T', 'O'], THTO = ['Th', 'H', 'T', 'O'];
+const hto = (n) => `${n} = ${digits(n).map((d, i, a) => d * 10 ** (a.length - 1 - i)).filter((v, i, a) => v || a.length === 1).join(' + ')}`;
 
 // column steps for a + b or a − b (3-digit)
 function addSteps(a, b) {
@@ -46,6 +49,14 @@ function subSteps(a, b) {
     `Hundreds: ${ah - (ex2 ? 1 : 0)} − ${bh} = ${ah - (ex2 ? 1 : 0) - bh}. The answer is ${a - b}. Check: ${a - b} + ${b} = ${a}.`,
   ];
 }
+// the column method in a place-value grid: the two numbers and the answer, lined up
+// the grid method for a 2-digit number times a 1-digit number
+const grid = (T, O, k) => pic(areaModel([T, O], [k]), `${T} × ${k} = ${T * k} and ${O} × ${k} = ${O * k}. Add the parts: ${T * k} + ${O * k} = ${(T + O) * k}.`);
+// a fraction of an amount as a bar model: d equal boxes of k, n of them shaded
+const fracBar = (n, d, k, whole = d * k) => pic(bar([{ parts: d, shaded: n, text: k }], whole), `The whole is ${d} equal boxes of ${k}. {{${n}/${d}}} is ${n === 1 ? 'one box' : `${n} boxes`}: ${n * k}.`);
+// equivalent fractions on a fraction wall (only when the pieces are big enough to label)
+const equivWall = (n, d, k) => (d * k <= 12 ? pic(fracWall([[n, d], [n * k, d * k]]), `{{${n}/${d}}} covers the same length as {{${n * k}/${d * k}}}.`) : {});
+const columns = (a, b, op) => pic(pvWhole(HTO, [a, b, op === '+' ? a + b : a - b]), `${a} ${op} ${b} = ${op === '+' ? a + b : a - b}. Line up the hundreds, tens and ones, and start with the ones.`);
 // an a + b with exactly the exchanges asked for (ones and/or tens), answer below 1000
 function addPair(rng, onesCarry, tensCarry) {
   for (;;) {
@@ -71,16 +82,16 @@ export const Y3_GENERATORS = {
       if (kind === 'value') {
         let n; do n = rng.int(111, 999); while (!distinctDigits(n) || String(n).includes('0'));
         const i = rng.int(0, 2), d = digits(n)[i], v = d * [100, 10, 1][i];
-        return typed(`In ${n}, what is the value of the digit ${d}?`, v, `The ${d} is in the ${PLACE[i]} place, so it is worth ${v}.`, [`${n} = ${digits(n)[0] * 100} + ${digits(n)[1] * 10} + ${digits(n)[2]}.`, `The ${d} is in the ${PLACE[i]} column.`, `So it is worth ${v}.`]);
+        return typed(`In ${n}, what is the value of the digit ${d}?`, v, `The ${d} is in the ${PLACE[i]} place, so it is worth ${v}.`, [`${n} = ${digits(n)[0] * 100} + ${digits(n)[1] * 10} + ${digits(n)[2]}.`, `The ${d} is in the ${PLACE[i]} column.`, `So it is worth ${v}.`], pic(pvWhole(HTO, [n]), `The ${d} is in the ${PLACE[i]} column: ${hto(n)}.`));
       }
       if (kind === 'partition') {
         const h = rng.int(1, 9), t = rng.int(0, 9), o = rng.int(1, 9), n = h * 100 + t * 10 + o;
-        return typed(`${h * 100} + ${t * 10} + ${o} =`, n, `${pv(h, 'hundred')}, ${pv(t, 'ten')} and ${pv(o, 'one')} make ${n}.`, [`${h * 100} is ${pv(h, 'hundred')}.`, `${t * 10} is ${pv(t, 'ten')}, and ${o} is ${pv(o, 'one')}.`, `Together: ${n}.`]);
+        return typed(`${h * 100} + ${t * 10} + ${o} =`, n, `${pv(h, 'hundred')}, ${pv(t, 'ten')} and ${pv(o, 'one')} make ${n}.`, [`${h * 100} is ${pv(h, 'hundred')}.`, `${t * 10} is ${pv(t, 'ten')}, and ${o} is ${pv(o, 'one')}.`, `Together: ${n}.`], pic(pvWhole(HTO, [n]), `${pv(h, 'hundred')}, ${pv(t, 'ten')} and ${pv(o, 'one')}: ${n}.`));
       }
       const k = rng.pick([10, 100]), up = rng.chance(0.5);
       let n; do n = rng.int(210, 789); while ((k === 10 && (up ? digits(n)[1] === 9 : digits(n)[1] === 0)));
       const v = up ? n + k : n - k;
-      return typed(`What is ${k} ${up ? 'more' : 'less'} than ${n}?`, v, `Only the ${k === 10 ? 'tens' : 'hundreds'} digit changes: ${n} → ${v}.`, [`${k} is one ${k === 10 ? 'ten' : 'hundred'}.`, `The ${k === 10 ? 'tens' : 'hundreds'} digit goes ${up ? 'up' : 'down'} by 1.`, `${v}.`]);
+      return typed(`What is ${k} ${up ? 'more' : 'less'} than ${n}?`, v, `Only the ${k === 10 ? 'tens' : 'hundreds'} digit changes: ${n} → ${v}.`, [`${k} is one ${k === 10 ? 'ten' : 'hundred'}.`, `The ${k === 10 ? 'tens' : 'hundreds'} digit goes ${up ? 'up' : 'down'} by 1.`, `${v}.`], pic(pvWhole(HTO, [n, v]), `${n} ${up ? '+' : '−'} ${k} = ${v}: only the ${k === 10 ? 'tens' : 'hundreds'} digit changes.`));
     }
     if (level === 2) {
       const kind = rng.pick(['order', 'missing', 'cross']);
@@ -92,25 +103,26 @@ export const Y3_GENERATORS = {
         return choice(`${rng.pick(RACERS)} made these numbers from the digits ${ds.join(', ')}. Which is the ${big ? 'greatest' : 'smallest'}?`, String(right), nums.filter((x) => x !== right).map(String), rng, {
           explain: `Compare the hundreds first, then the tens, then the ones. The ${big ? 'greatest' : 'smallest'} is ${right}.`,
           steps: ['I look at the hundreds digits first.', 'If two are the same, I look at the tens.', `${[...nums].sort((x, y) => (big ? y - x : x - y)).join(', ')}.`],
+          ...pic(pvWhole(HTO, nums), 'Line the numbers up. Compare the hundreds first, then the tens, then the ones.'),
         });
       }
       if (kind === 'missing') {
         const h = rng.int(2, 9), t = rng.int(1, 9), o = rng.int(1, 9), n = h * 100 + t * 10 + o;
-        if (rng.chance(0.5)) return typed(`${n} = ${h * 100} + ? + ${o}`, t * 10, `${n} is ${pv(h, 'hundred')}, ${pv(t, 'ten')} and ${pv(o, 'one')}, so the missing part is ${t * 10}.`, [`${h * 100} is the hundreds part, ${o} is the ones.`, `The tens digit is ${t}.`, `So the missing number is ${t * 10}.`]);
-        return typed(`${n} = ${(h - 1) * 100} + ? + ${o}`, 100 + t * 10, `Only ${pv(h - 1, 'hundred')} ${h - 1 === 1 ? 'is' : 'are'} used, so one hundred moves into the middle part: 100 + ${t * 10} = ${100 + t * 10}.`, [`${n} − ${o} = ${n - o}.`, `${n - o} − ${(h - 1) * 100} = ${100 + t * 10}.`, `Check: ${(h - 1) * 100} + ${100 + t * 10} + ${o} = ${n}.`]);
+        if (rng.chance(0.5)) return typed(`${n} = ${h * 100} + ? + ${o}`, t * 10, `${n} is ${pv(h, 'hundred')}, ${pv(t, 'ten')} and ${pv(o, 'one')}, so the missing part is ${t * 10}.`, [`${h * 100} is the hundreds part, ${o} is the ones.`, `The tens digit is ${t}.`, `So the missing number is ${t * 10}.`], pic(pvWhole(HTO, [n]), `${hto(n)}.`));
+        return typed(`${n} = ${(h - 1) * 100} + ? + ${o}`, 100 + t * 10, `Only ${pv(h - 1, 'hundred')} ${h - 1 === 1 ? 'is' : 'are'} used, so one hundred moves into the middle part: 100 + ${t * 10} = ${100 + t * 10}.`, [`${n} − ${o} = ${n - o}.`, `${n - o} − ${(h - 1) * 100} = ${100 + t * 10}.`, `Check: ${(h - 1) * 100} + ${100 + t * 10} + ${o} = ${n}.`], pic(pvWhole(HTO, [n]), `${hto(n)}. Take one hundred from the ${h * 100} and it joins the tens: ${(h - 1) * 100} + ${100 + t * 10} + ${o}.`));
       }
-      if (rng.chance(0.5)) { const n = rng.int(1, 8) * 100 + 90 + rng.int(0, 9); return typed(`What is 10 more than ${n}?`, n + 10, `The tens go from 9 to 10, which makes a new hundred: ${n} → ${n + 10}.`, [`${n} has 9 tens.`, '10 tens make a hundred, so the hundreds digit goes up by 1.', `${n + 10}.`]); }
-      const n = rng.int(2, 9) * 100 + rng.int(0, 9); return typed(`What is 10 less than ${n}?`, n - 10, `There are no tens, so I exchange a hundred: ${n} → ${n - 10}.`, [`${n} has 0 tens.`, 'I take one hundred and make it 10 tens, then take one ten away.', `${n - 10}.`]);
+      if (rng.chance(0.5)) { const n = rng.int(1, 8) * 100 + 90 + rng.int(0, 9); return typed(`What is 10 more than ${n}?`, n + 10, `The tens go from 9 to 10, which makes a new hundred: ${n} → ${n + 10}.`, [`${n} has 9 tens.`, '10 tens make a hundred, so the hundreds digit goes up by 1.', `${n + 10}.`], pic(pvWhole(HTO, [n, n + 10]), `9 tens and 1 more ten make 10 tens, which is 1 hundred: ${n} → ${n + 10}.`)); }
+      const n = rng.int(2, 9) * 100 + rng.int(0, 9); return typed(`What is 10 less than ${n}?`, n - 10, `There are no tens, so I exchange a hundred: ${n} → ${n - 10}.`, [`${n} has 0 tens.`, 'I take one hundred and make it 10 tens, then take one ten away.', `${n - 10}.`], pic(pvWhole(HTO, [n, n - 10]), `No tens, so 1 hundred becomes 10 tens. Take 1 ten away and 9 tens are left: ${n} → ${n - 10}.`));
     }
     const kind = rng.pick(['thousand', 'fourdigit', 'between']);
-    if (kind === 'thousand') { const n = rng.int(901, 999); return typed(`What is 100 more than ${n}?`, n + 100, `10 hundreds make a thousand: ${n} + 100 = ${n + 100}.`, [`${n} has 9 hundreds.`, 'One more hundred makes 10 hundreds, which is 1000.', `${n + 100}.`]); }
+    if (kind === 'thousand') { const n = rng.int(901, 999); return typed(`What is 100 more than ${n}?`, n + 100, `10 hundreds make a thousand: ${n} + 100 = ${n + 100}.`, [`${n} has 9 hundreds.`, 'One more hundred makes 10 hundreds, which is 1000.', `${n + 100}.`], pic(pvWhole(THTO, [n, n + 100]), `10 hundreds make 1 thousand: ${n} → ${n + 100}.`)); }
     if (kind === 'fourdigit') {
       let n; do n = rng.int(1234, 9876); while (!distinctDigits(n) || String(n).includes('0'));
       const i = rng.int(0, 1), d = digits(n)[i], v = d * [1000, 100][i];
-      return typed(`In ${n}, what is the value of the digit ${d}?`, v, `The ${d} is in the ${['thousands', 'hundreds'][i]} place: ${v}.`, ['Four-digit numbers have thousands, hundreds, tens and ones.', `The ${d} is in the ${['thousands', 'hundreds'][i]} column.`, `So it is worth ${v}.`]);
+      return typed(`In ${n}, what is the value of the digit ${d}?`, v, `The ${d} is in the ${['thousands', 'hundreds'][i]} place: ${v}.`, ['Four-digit numbers have thousands, hundreds, tens and ones.', `The ${d} is in the ${['thousands', 'hundreds'][i]} column.`, `So it is worth ${v}.`], pic(pvWhole(THTO, [n]), `The ${d} is in the ${['thousands', 'hundreds'][i]} column: ${hto(n)}.`));
     }
     const gap = rng.pick([20, 200]), a = gap === 20 ? rng.int(1, 9) * 100 + rng.int(0, 7) * 10 : rng.int(1, 7) * 100, b = a + gap;
-    return typed(`What number is exactly halfway between ${a} and ${b}?`, a + gap / 2, `The gap is ${gap}, and half of ${gap} is ${gap / 2}: ${a} + ${gap / 2} = ${a + gap / 2}.`, [`${b} − ${a} = ${gap}.`, `Half of ${gap} is ${gap / 2}.`, `${a} + ${gap / 2} = ${a + gap / 2}.`]);
+    return typed(`What number is exactly halfway between ${a} and ${b}?`, a + gap / 2, `The gap is ${gap}, and half of ${gap} is ${gap / 2}: ${a} + ${gap / 2} = ${a + gap / 2}.`, [`${b} − ${a} = ${gap}.`, `Half of ${gap} is ${gap / 2}.`, `${a} + ${gap / 2} = ${a + gap / 2}.`], pic({ type: 'numline', min: a, max: b, step: gap / 10, labels: [a, b], mark: a + gap / 2 }, `Each small step is ${gap / 10}. Halfway is 5 steps from ${a}: ${a + gap / 2}.`));
   },
 
   y3Mental(level, rng) {
@@ -120,7 +132,7 @@ export const Y3_GENERATORS = {
         const k = up ? rng.int(1, 9 - d) : rng.int(1, d);
         if (up ? d === 9 : d === 0) continue;
         const v = up ? a + k * place : a - k * place;
-        return typed(`${a} ${up ? '+' : '−'} ${k * place} =`, v, `Only the ${PLACE[i]} digit changes: ${d} ${up ? '+' : '−'} ${k} = ${up ? d + k : d - k}.`, [`${k * place} is ${k} ${k === 1 ? PLACE[i].slice(0, -1) : PLACE[i]}.`, `The ${PLACE[i]} digit of ${a} is ${d}.`, `${d} ${up ? '+' : '−'} ${k} = ${up ? d + k : d - k}, so the answer is ${v}.`]);
+        return typed(`${a} ${up ? '+' : '−'} ${k * place} =`, v, `Only the ${PLACE[i]} digit changes: ${d} ${up ? '+' : '−'} ${k} = ${up ? d + k : d - k}.`, [`${k * place} is ${k} ${k === 1 ? PLACE[i].slice(0, -1) : PLACE[i]}.`, `The ${PLACE[i]} digit of ${a} is ${d}.`, `${d} ${up ? '+' : '−'} ${k} = ${up ? d + k : d - k}, so the answer is ${v}.`], pic(pvWhole(HTO, [a, v]), `${a} ${up ? '+' : '−'} ${k * place} = ${v}: only the ${PLACE[i]} digit changes.`));
       }
     }
     if (level === 2) {
@@ -146,13 +158,13 @@ export const Y3_GENERATORS = {
 
   y3Column(level, rng) {
     if (level === 1) {
-      if (rng.chance(0.5)) { const [a, b] = addPair(rng, true, false); return typed(`${a} + ${b} =`, a + b, `Line the numbers up in columns and start with the ones: ${a + b}.`, addSteps(a, b)); }
-      const [a, b] = subPair(rng, true, false); return typed(`${a} − ${b} =`, a - b, `Use the column method, exchanging a ten for 10 ones: ${a - b}.`, subSteps(a, b));
+      if (rng.chance(0.5)) { const [a, b] = addPair(rng, true, false); return typed(`${a} + ${b} =`, a + b, `Line the numbers up in columns and start with the ones: ${a + b}.`, addSteps(a, b), columns(a, b, '+')); }
+      const [a, b] = subPair(rng, true, false); return typed(`${a} − ${b} =`, a - b, `Use the column method, exchanging a ten for 10 ones: ${a - b}.`, subSteps(a, b), columns(a, b, '−'));
     }
     if (level === 2) {
       const kind = rng.pick(['add', 'sub', 'check', 'estimate']);
-      if (kind === 'add') { const [a, b] = addPair(rng, true, true); return typed(`${a} + ${b} =`, a + b, `Two exchanges: the ones and the tens both carry. ${a + b}.`, addSteps(a, b)); }
-      if (kind === 'sub') { const [a, b] = subPair(rng, true, true); return typed(`${a} − ${b} =`, a - b, `Two exchanges: a ten for ones, then a hundred for tens. ${a - b}.`, subSteps(a, b)); }
+      if (kind === 'add') { const [a, b] = addPair(rng, true, true); return typed(`${a} + ${b} =`, a + b, `Two exchanges: the ones and the tens both carry. ${a + b}.`, addSteps(a, b), columns(a, b, '+')); }
+      if (kind === 'sub') { const [a, b] = subPair(rng, true, true); return typed(`${a} − ${b} =`, a - b, `Two exchanges: a ten for ones, then a hundred for tens. ${a - b}.`, subSteps(a, b), columns(a, b, '−')); }
       if (kind === 'check') {
         const [a, b] = subPair(rng, true, rng.chance(0.5)), c = a - b, who = rng.pick(RACERS);
         return choice(`${who} works out ${a} − ${b} = ${c}. Which calculation checks the answer?`, `${c} + ${b}`, [`${c} − ${b}`, `${a} + ${b}`, `${a} + ${c}`], rng, {
@@ -167,10 +179,10 @@ export const Y3_GENERATORS = {
     }
     if (rng.chance(0.5)) {
       const h = rng.int(4, 9), o = rng.int(0, 4), a = h * 100 + o; let b; do b = rng.int(111, a - 100); while (digits(b)[2] <= o || digits(b)[1] === 0);
-      return typed(`${a} − ${b} =`, a - b, `There are no tens to exchange, so a hundred becomes 10 tens first, then a ten becomes 10 ones. ${a - b}.`, [`${a} has 0 tens, so I exchange 1 hundred for 10 tens.`, `Then I exchange 1 ten for 10 ones: ones ${o + 10} − ${digits(b)[2]} = ${o + 10 - digits(b)[2]}.`, `Tens 9 − ${digits(b)[1]} = ${9 - digits(b)[1]}, hundreds ${h - 1} − ${digits(b)[0]} = ${h - 1 - digits(b)[0]}. Answer: ${a - b}.`]);
+      return typed(`${a} − ${b} =`, a - b, `There are no tens to exchange, so a hundred becomes 10 tens first, then a ten becomes 10 ones. ${a - b}.`, [`${a} has 0 tens, so I exchange 1 hundred for 10 tens.`, `Then I exchange 1 ten for 10 ones: ones ${o + 10} − ${digits(b)[2]} = ${o + 10 - digits(b)[2]}.`, `Tens 9 − ${digits(b)[1]} = ${9 - digits(b)[1]}, hundreds ${h - 1} − ${digits(b)[0]} = ${h - 1 - digits(b)[0]}. Answer: ${a - b}.`], columns(a, b, '−'));
     }
     const [a, b] = addPair(rng, rng.chance(0.5), true), [h, t, o] = digits(a), s = a + b;
-    return typed(`Find the missing digit: ${h}?${o} + ${b} = ${s}`, t, `${s} − ${b} = ${a}, so the missing digit is ${t}.`, ['I can use the inverse: take away to find the missing number.', `${s} − ${b} = ${a}.`, `The tens digit of ${a} is ${t}.`]);
+    return typed(`Find the missing digit: ${h}?${o} + ${b} = ${s}`, t, `${s} − ${b} = ${a}, so the missing digit is ${t}.`, ['I can use the inverse: take away to find the missing number.', `${s} − ${b} = ${a}.`, `The tens digit of ${a} is ${t}.`], columns(a, b, '+'));
   },
 
   y3Tables(level, rng) {
@@ -201,25 +213,25 @@ export const Y3_GENERATORS = {
       if (rng.chance(0.5)) { const t = rng.int(2, 9), k = rng.int(2, 5); return typed(`${t * 10} × ${k} =`, t * 10 * k, `${t} × ${k} = ${t * k}, so ${pv(t, 'ten')} × ${k} = ${pv(t * k, 'ten')} = ${t * 10 * k}.`, [`${t * 10} is ${pv(t, 'ten')}.`, `${t} × ${k} = ${t * k}.`, `${pv(t * k, 'ten')} = ${t * 10 * k}.`]); }
       let n, k; do { n = rng.int(11, 43); k = rng.int(2, 3); } while ((n % 10) * k >= 10 || Math.floor(n / 10) * k >= 10 || n % 10 === 0);
       const T = n - (n % 10), O = n % 10;
-      return typed(`${n} × ${k} =`, n * k, `Split ${n} into ${T} and ${O}: ${T} × ${k} = ${T * k}, ${O} × ${k} = ${O * k}, total ${n * k}.`, [`${n} = ${T} + ${O}.`, `${T} × ${k} = ${T * k} and ${O} × ${k} = ${O * k}.`, `${T * k} + ${O * k} = ${n * k}.`]);
+      return typed(`${n} × ${k} =`, n * k, `Split ${n} into ${T} and ${O}: ${T} × ${k} = ${T * k}, ${O} × ${k} = ${O * k}, total ${n * k}.`, [`${n} = ${T} + ${O}.`, `${T} × ${k} = ${T * k} and ${O} × ${k} = ${O * k}.`, `${T * k} + ${O * k} = ${n * k}.`], grid(T, O, k));
     }
     const [lo, hi, ks] = level === 2 ? [13, 49, [3, 4, 5, 8]] : [26, 99, [6, 7, 8, 9]];
     let n; do n = rng.int(lo, hi); while (n % 10 === 0);
     const k = rng.pick(ks), T = n - (n % 10), O = n % 10;
     const steps = [`Split ${n} into ${T} and ${O} (a grid helps).`, `${T} × ${k} = ${T * k} and ${O} × ${k} = ${O * k}.`, `${T * k} + ${O * k} = ${n * k}.`];
-    if (level === 3 && rng.chance(0.4)) return typed(`A car transporter carries ${k} cars. How many cars are on ${n} transporters?`, n * k, `${n} × ${k} = ${n * k}.`, steps);
-    return typed(`${n} × ${k} =`, n * k, `${T} × ${k} = ${T * k}, ${O} × ${k} = ${O * k}, so ${n} × ${k} = ${n * k}.`, steps);
+    if (level === 3 && rng.chance(0.4)) return typed(`A car transporter carries ${k} cars. How many cars are on ${n} transporters?`, n * k, `${n} × ${k} = ${n * k}.`, steps, grid(T, O, k));
+    return typed(`${n} × ${k} =`, n * k, `${T} × ${k} = ${T * k}, ${O} × ${k} = ${O * k}, so ${n} × ${k} = ${n * k}.`, steps, grid(T, O, k));
   },
 
   y3Divide(level, rng) {
     if (level === 1) {
       const d = rng.pick([2, 3, 4, 5, 8, 10]), q = rng.int(2, 12), who = rng.pick(['Captain Nova', '{hero}', 'Rosa']);
-      return typed(`${who} shares ${d * q} space crystals equally between ${d} robots. How many does each robot get?`, q, `${d * q} ÷ ${d} = ${q}, because ${q} × ${d} = ${d * q}.`, ['Sharing equally means dividing.', `${d * q} ÷ ${d}.`, `${q} each. Check: ${q} × ${d} = ${d * q}.`]);
+      return typed(`${who} shares ${d * q} space crystals equally between ${d} robots. How many does each robot get?`, q, `${d * q} ÷ ${d} = ${q}, because ${q} × ${d} = ${d * q}.`, ['Sharing equally means dividing.', `${d * q} ÷ ${d}.`, `${q} each. Check: ${q} × ${d} = ${d * q}.`], pic(bar([{ parts: d, text: q }], d * q), `${d * q} shared into ${d} equal boxes: ${q} in each.`));
     }
     if (level === 2) {
       let d, q; do { d = rng.pick([2, 3, 4, 5]); q = rng.int(13, 24); } while (d * q >= 100);
       const n = d * q, first = d * 10, rest = n - first;
-      return typed(`${n} ÷ ${d} =`, q, `Split ${n} into ${first} and ${rest}: ${first} ÷ ${d} = 10 and ${rest} ÷ ${d} = ${rest / d}, so ${q}.`, [`${n} = ${first} + ${rest} (both share easily by ${d}).`, `${first} ÷ ${d} = 10 and ${rest} ÷ ${d} = ${rest / d}.`, `10 + ${rest / d} = ${q}.`]);
+      return typed(`${n} ÷ ${d} =`, q, `Split ${n} into ${first} and ${rest}: ${first} ÷ ${d} = 10 and ${rest} ÷ ${d} = ${rest / d}, so ${q}.`, [`${n} = ${first} + ${rest} (both share easily by ${d}).`, `${first} ÷ ${d} = 10 and ${rest} ÷ ${d} = ${rest / d}.`, `10 + ${rest / d} = ${q}.`], pic(bar([{ parts: d, text: q }], n), `${n} shared into ${d} equal boxes: ${q} in each, because ${d} × ${q} = ${n}.`));
     }
     let d, q, r; do { d = rng.pick([3, 4, 5, 6]); q = rng.int(4, 15); r = rng.int(1, d - 1); } while (d * q + r >= 100);
     const n = d * q + r, kind = rng.pick(['rem', 'up', 'down']);
@@ -231,42 +243,43 @@ export const Y3_GENERATORS = {
 
   y3Fractions(level, rng) {
     if (level === 1) {
-      if (rng.chance(0.6)) { const d = rng.pick([2, 3, 4, 5, 8, 10]), k = rng.int(2, 10); return typed(`{{1/${d}}} of ${d * k} =`, k, `To find {{1/${d}}}, divide by ${d}: ${d * k} ÷ ${d} = ${k}.`, [`{{1/${d}}} means ${d} equal parts.`, `${d * k} ÷ ${d} = ${k}.`, `So {{1/${d}}} of ${d * k} is ${k}.`]); }
+      if (rng.chance(0.6)) { const d = rng.pick([2, 3, 4, 5, 8, 10]), k = rng.int(2, 10); return typed(`{{1/${d}}} of ${d * k} =`, k, `To find {{1/${d}}}, divide by ${d}: ${d * k} ÷ ${d} = ${k}.`, [`{{1/${d}}} means ${d} equal parts.`, `${d * k} ÷ ${d} = ${k}.`, `So {{1/${d}}} of ${d * k} is ${k}.`], fracBar(1, d, k)); }
       const start = rng.int(1, 6);
       return typed(`Count up in tenths: {{${start}/10}}, {{${start + 1}/10}}, {{${start + 2}/10}}, ?`, `${start + 3}/10`, `Each step adds one tenth: {{${start + 3}/10}}.`, ['Tenths: the whole is split into 10 equal parts.', 'Each step is one more tenth.', `{{${start + 2}/10}} + {{1/10}} = {{${start + 3}/10}}.`]);
     }
     if (level === 2) {
       const d = rng.pick([3, 4, 5, 8, 10]), n = rng.int(2, d - 1), k = rng.int(2, 10);
-      return typed(`{{${n}/${d}}} of ${d * k} =`, n * k, n === 1 ? `{{1/${d}}} of ${d * k} is ${d * k} ÷ ${d} = ${k}.` : `{{1/${d}}} of ${d * k} is ${k}, so {{${n}/${d}}} is ${n} × ${k} = ${n * k}.`, [`First find {{1/${d}}}: ${d * k} ÷ ${d} = ${k}.`, `I need ${n} of those parts.`, `${n} × ${k} = ${n * k}.`]);
+      return typed(`{{${n}/${d}}} of ${d * k} =`, n * k, n === 1 ? `{{1/${d}}} of ${d * k} is ${d * k} ÷ ${d} = ${k}.` : `{{1/${d}}} of ${d * k} is ${k}, so {{${n}/${d}}} is ${n} × ${k} = ${n * k}.`, [`First find {{1/${d}}}: ${d * k} ÷ ${d} = ${k}.`, `I need ${n} of those parts.`, `${n} × ${k} = ${n * k}.`], fracBar(n, d, k));
     }
     const kind = rng.pick(['whole', 'nonunit-whole', 'measure']);
-    if (kind === 'whole') { const d = rng.pick([3, 4, 5, 6, 8]), k = rng.int(3, 12); return typed(`{{1/${d}}} of a number is ${k}. What is the number?`, d * k, `If one part is ${k}, all ${d} parts are ${d} × ${k} = ${d * k}.`, [`The whole has ${d} equal parts.`, `Each part is ${k}.`, `${d} × ${k} = ${d * k}.`]); }
-    if (kind === 'nonunit-whole') { const d = rng.pick([4, 5, 8]), n = rng.int(2, d - 1), k = rng.int(2, 9); return typed(`{{${n}/${d}}} of a number is ${n * k}. What is the number?`, d * k, `${n} parts make ${n * k}, so one part is ${k}, and ${d} parts make ${d * k}.`, [`${n} parts = ${n * k}, so 1 part = ${n * k} ÷ ${n} = ${k}.`, `The whole is ${d} parts.`, `${d} × ${k} = ${d * k}.`]); }
+    if (kind === 'whole') { const d = rng.pick([3, 4, 5, 6, 8]), k = rng.int(3, 12); return typed(`{{1/${d}}} of a number is ${k}. What is the number?`, d * k, `If one part is ${k}, all ${d} parts are ${d} × ${k} = ${d * k}.`, [`The whole has ${d} equal parts.`, `Each part is ${k}.`, `${d} × ${k} = ${d * k}.`], fracBar(1, d, k)); }
+    if (kind === 'nonunit-whole') { const d = rng.pick([4, 5, 8]), n = rng.int(2, d - 1), k = rng.int(2, 9); return typed(`{{${n}/${d}}} of a number is ${n * k}. What is the number?`, d * k, `${n} parts make ${n * k}, so one part is ${k}, and ${d} parts make ${d * k}.`, [`${n} parts = ${n * k}, so 1 part = ${n * k} ÷ ${n} = ${k}.`, `The whole is ${d} parts.`, `${d} × ${k} = ${d * k}.`], fracBar(n, d, k)); }
     const [what, total, unit] = rng.pick([['1 hour', 60, 'minutes'], ['£1', 100, 'pence'], ['1 metre', 100, 'centimetres']]);
     const d = rng.pick([2, 4, 5, 10].filter((x) => total % x === 0)), n = rng.int(1, d - 1);
-    return typed(`How many ${unit} are in {{${n}/${d}}} of ${what}?`, (total * n) / d, n === 1 ? `${what} = ${total} ${unit}. {{1/${d}}} of ${total} is ${total} ÷ ${d} = ${total / d}.` : `${what} = ${total} ${unit}. {{1/${d}}} is ${total / d}, so {{${n}/${d}}} is ${(total * n) / d}.`, [`${what} is ${total} ${unit}.`, `{{1/${d}}} of ${total} = ${total / d}.`, `${n} × ${total / d} = ${(total * n) / d}.`]);
+    return typed(`How many ${unit} are in {{${n}/${d}}} of ${what}?`, (total * n) / d, n === 1 ? `${what} = ${total} ${unit}. {{1/${d}}} of ${total} is ${total} ÷ ${d} = ${total / d}.` : `${what} = ${total} ${unit}. {{1/${d}}} is ${total / d}, so {{${n}/${d}}} is ${(total * n) / d}.`, [`${what} is ${total} ${unit}.`, `{{1/${d}}} of ${total} = ${total / d}.`, `${n} × ${total / d} = ${(total * n) / d}.`], fracBar(n, d, total / d, `${what} = ${total} ${unit}`));
   },
 
   y3FracCalc(level, rng) {
     if (level === 1) {
-      if (rng.chance(0.5)) { const d = rng.int(5, 12), n1 = rng.int(1, d - 3), n2 = rng.int(1, d - 1 - n1); return typed(`{{${n1}/${d}}} + {{${n2}/${d}}} =`, `${n1 + n2}/${d}`, `The parts are the same size (${d}ths), so add the tops: ${n1} + ${n2} = ${n1 + n2}. {{${n1 + n2}/${d}}}.`, ['The denominators are the same.', `Add the numerators: ${n1} + ${n2} = ${n1 + n2}.`, `The denominator stays ${d}: {{${n1 + n2}/${d}}}.`]); }
+      if (rng.chance(0.5)) { const d = rng.int(5, 12), n1 = rng.int(1, d - 3), n2 = rng.int(1, d - 1 - n1); return typed(`{{${n1}/${d}}} + {{${n2}/${d}}} =`, `${n1 + n2}/${d}`, `The parts are the same size (${d}ths), so add the tops: ${n1} + ${n2} = ${n1 + n2}. {{${n1 + n2}/${d}}}.`, ['The denominators are the same.', `Add the numerators: ${n1} + ${n2} = ${n1 + n2}.`, `The denominator stays ${d}: {{${n1 + n2}/${d}}}.`], pic(fracWall([[n1 + n2, d]]), `${n1} pieces of {{1/${d}}} and ${n2} more make ${n1 + n2} pieces: {{${n1 + n2}/${d}}}.`)); }
       const k = rng.pick([2, 3, 4, 5]); const [n, d] = rng.pick([[1, 2], [1, 4], [1, 3], [3, 4]].filter(([, dd]) => dd * k <= 16));
-      return typed(`{{${n}/${d}}} = {{?/${d * k}}}`, n * k, `The bottom was multiplied by ${k}, so the top is too: ${n} × ${k} = ${n * k}.`, [`${d} × ${k} = ${d * k}.`, `Do the same to the top: ${n} × ${k} = ${n * k}.`, `{{${n}/${d}}} = {{${n * k}/${d * k}}}.`]);
+      return typed(`{{${n}/${d}}} = {{?/${d * k}}}`, n * k, `The bottom was multiplied by ${k}, so the top is too: ${n} × ${k} = ${n * k}.`, [`${d} × ${k} = ${d * k}.`, `Do the same to the top: ${n} × ${k} = ${n * k}.`, `{{${n}/${d}}} = {{${n * k}/${d * k}}}.`], equivWall(n, d, k));
     }
     if (level === 2) {
       const kind = rng.pick(['sub', 'compare-same', 'compare-unit']);
-      if (kind === 'sub') { const d = rng.int(5, 12), n1 = rng.int(3, d - 1), n2 = rng.int(1, n1 - 1); return typed(`{{${n1}/${d}}} − {{${n2}/${d}}} =`, `${n1 - n2}/${d}`, `Same denominators: take away the tops. ${n1} − ${n2} = ${n1 - n2}, so {{${n1 - n2}/${d}}}.`, ['The parts are the same size.', `${n1} − ${n2} = ${n1 - n2}.`, `{{${n1 - n2}/${d}}}.`]); }
+      if (kind === 'sub') { const d = rng.int(5, 12), n1 = rng.int(3, d - 1), n2 = rng.int(1, n1 - 1); return typed(`{{${n1}/${d}}} − {{${n2}/${d}}} =`, `${n1 - n2}/${d}`, `Same denominators: take away the tops. ${n1} − ${n2} = ${n1 - n2}, so {{${n1 - n2}/${d}}}.`, ['The parts are the same size.', `${n1} − ${n2} = ${n1 - n2}.`, `{{${n1 - n2}/${d}}}.`], pic(fracWall([[n1 - n2, d]]), `${n1} pieces of {{1/${d}}} take away ${n2} pieces leaves ${n1 - n2}: {{${n1 - n2}/${d}}}.`)); }
       if (kind === 'compare-same') { const d = rng.int(5, 12); let a, b; do { a = rng.int(1, d - 1); b = rng.int(1, d - 1); } while (a === b); return choice(`Which fraction is greater?`, `{{${Math.max(a, b)}/${d}}}`, [`{{${Math.min(a, b)}/${d}}}`], rng, { explain: `The parts are the same size, so more parts is more: {{${Math.max(a, b)}/${d}}}.`, steps: ['Both are cut into the same size pieces.', `${Math.max(a, b)} pieces is more than ${Math.min(a, b)}.`, `{{${Math.max(a, b)}/${d}}} is greater.`] }); }
       let a, b; do { a = rng.int(2, 10); b = rng.int(2, 10); } while (a === b);
-      return choice('Which fraction is greater?', `{{1/${Math.min(a, b)}}}`, [`{{1/${Math.max(a, b)}}}`], rng, { explain: `Cutting into fewer pieces makes each piece bigger, so {{1/${Math.min(a, b)}}} is greater.`, steps: ['Both fractions are one piece.', `Sharing a pizza between ${Math.min(a, b)} gives bigger slices than sharing between ${Math.max(a, b)}.`, `{{1/${Math.min(a, b)}}} > {{1/${Math.max(a, b)}}}.`] });
+      return choice('Which fraction is greater?', `{{1/${Math.min(a, b)}}}`, [`{{1/${Math.max(a, b)}}}`], rng, { explain: `Cutting into fewer pieces makes each piece bigger, so {{1/${Math.min(a, b)}}} is greater.`, steps: ['Both fractions are one piece.', `Sharing a pizza between ${Math.min(a, b)} gives bigger slices than sharing between ${Math.max(a, b)}.`, `{{1/${Math.min(a, b)}}} > {{1/${Math.max(a, b)}}}.`], ...pic(fracWall([[1, a], [1, b]]), `The shaded {{1/${Math.min(a, b)}}} is longer than the shaded {{1/${Math.max(a, b)}}}.`) });
     }
     const kind = rng.pick(['whole', 'equiv', 'order']);
-    if (kind === 'whole') { const d = rng.int(4, 10), n1 = rng.int(1, d - 1); return typed(`{{${n1}/${d}}} + {{${d - n1}/${d}}} =`, 1, `${n1} + ${d - n1} = ${d}, and {{${d}/${d}}} is one whole: 1.`, [`Add the tops: ${n1} + ${d - n1} = ${d}.`, `{{${d}/${d}}} means all ${d} parts.`, 'That is 1 whole.']); }
-    if (kind === 'equiv') { const [n, d] = rng.pick([[2, 3], [3, 4], [2, 5], [3, 5], [5, 6]]), k = rng.int(2, 4); return typed(`{{${n}/${d}}} = {{?/${d * k}}}`, n * k, `${d} × ${k} = ${d * k}, so ${n} × ${k} = ${n * k}.`, [`The denominator was multiplied by ${k}.`, `Multiply the numerator by ${k} too.`, `${n * k}.`]); }
+    if (kind === 'whole') { const d = rng.int(4, 10), n1 = rng.int(1, d - 1); return typed(`{{${n1}/${d}}} + {{${d - n1}/${d}}} =`, 1, `${n1} + ${d - n1} = ${d}, and {{${d}/${d}}} is one whole: 1.`, [`Add the tops: ${n1} + ${d - n1} = ${d}.`, `{{${d}/${d}}} means all ${d} parts.`, 'That is 1 whole.'], pic(fracWall([[d, d]]), `All ${d} pieces of {{1/${d}}} fill the whole: {{${d}/${d}}} = 1.`)); }
+    if (kind === 'equiv') { const [n, d] = rng.pick([[2, 3], [3, 4], [2, 5], [3, 5], [5, 6]]), k = rng.int(2, 4); return typed(`{{${n}/${d}}} = {{?/${d * k}}}`, n * k, `${d} × ${k} = ${d * k}, so ${n} × ${k} = ${n * k}.`, [`The denominator was multiplied by ${k}.`, `Multiply the numerator by ${k} too.`, `${n * k}.`], equivWall(n, d, k)); }
     const ds = rng.shuffle([2, 3, 4, 5, 6, 8, 10]).slice(0, 3), small = rng.chance(0.5);
     const right = small ? Math.max(...ds) : Math.min(...ds);
     return choice(`Which is the ${small ? 'smallest' : 'greatest'}: ${ds.map((d) => `{{1/${d}}}`).join(', ')}?`, `{{1/${right}}}`, ds.filter((d) => d !== right).map((d) => `{{1/${d}}}`), rng, {
       explain: `With unit fractions, the bigger the denominator, the smaller the piece. {{1/${right}}} is the ${small ? 'smallest' : 'greatest'}.`, steps: ['All of these are one piece of a whole.', 'More pieces means smaller pieces.', `{{1/${right}}} is the ${small ? 'smallest' : 'greatest'}.`],
+      ...pic(fracWall(ds.map((d) => [1, d])), `The more pieces the whole is cut into, the smaller each piece: {{1/${right}}} is the ${small ? 'smallest' : 'greatest'}.`),
     });
   },
 
@@ -414,7 +427,7 @@ export const Y3_GENERATORS = {
     }
     if (rng.chance(0.5)) {
       const d = rng.pick([3, 4, 5]), each = rng.int(12, 19), give = rng.int(2, 9);
-      return typed(`Captain Nova has ${d * each} space crystals. She shares them equally between ${d} robots. Each robot then gives ${give} away. How many does each robot have now?`, each - give, `${d * each} ÷ ${d} = ${each}, then ${each} − ${give} = ${each - give}.`, [`Share: ${d * each} ÷ ${d} = ${each} each.`, `Each gives away ${give}.`, `${each} − ${give} = ${each - give}.`]);
+      return typed(`Captain Nova has ${d * each} space crystals. She shares them equally between ${d} robots. Each robot then gives ${give} away. How many does each robot have now?`, each - give, `${d * each} ÷ ${d} = ${each}, then ${each} − ${give} = ${each - give}.`, [`Share: ${d * each} ÷ ${d} = ${each} each.`, `Each gives away ${give}.`, `${each} − ${give} = ${each - give}.`], pic(bar([{ parts: d, text: each }], d * each), `${d * each} shared into ${d} equal boxes: ${each} in each. Then ${each} − ${give} = ${each - give}.`));
     }
     const n = rng.int(3, 8), price = rng.int(3, 9), pay = Math.ceil((n * price + 1) / 10) * 10;
     return typed(`Grand Prix tickets cost £${price} each. Turbo buys ${n} tickets and pays with £${pay}. How many pounds change does he get?`, pay - n * price, `${n} × £${price} = £${n * price}. £${pay} − £${n * price} = £${pay - n * price}.`, [`Cost: ${n} × ${price} = ${n * price} pounds.`, `Change from £${pay}.`, `${pay} − ${n * price} = ${pay - n * price} pounds.`]);
@@ -447,18 +460,20 @@ export const Y3_GENERATORS = {
   y3Decimals(level, rng) {
     if (level === 1) {
       const n = rng.int(1, 9);
-      if (rng.chance(0.5)) return typed(`Write {{${n}/10}} as a decimal.`, `0.${n}`, `${pv(n, 'tenth')} is 0.${n}: the first digit after the decimal point shows tenths.`, ['The first place after the decimal point is tenths.', `${pv(n, 'tenth')}: put ${n} in the tenths place.`, `0.${n}.`]);
-      return typed(`Write 0.${n} as a fraction: {{?/10}}`, n, `0.${n} means ${pv(n, 'tenth')}: {{${n}/10}}.`, ['The digit after the point is tenths.', `0.${n} is ${pv(n, 'tenth')}.`, `{{${n}/10}}.`]);
+      const tenths = pic({ type: 'pvgrid', cols: ['O', '1/10'], rows: [['0', String(n)]], point: 1 }, `0.${n} is 0 ones and ${pv(n, 'tenth')}: {{${n}/10}}.`);
+      if (rng.chance(0.5)) return typed(`Write {{${n}/10}} as a decimal.`, `0.${n}`, `${pv(n, 'tenth')} is 0.${n}: the first digit after the decimal point shows tenths.`, ['The first place after the decimal point is tenths.', `${pv(n, 'tenth')}: put ${n} in the tenths place.`, `0.${n}.`], tenths);
+      return typed(`Write 0.${n} as a fraction: {{?/10}}`, n, `0.${n} means ${pv(n, 'tenth')}: {{${n}/10}}.`, ['The digit after the point is tenths.', `0.${n} is ${pv(n, 'tenth')}.`, `{{${n}/10}}.`], tenths);
     }
     if (level === 2) {
-      if (rng.chance(0.5)) { const n = rng.int(1, 9); return typed(`${n} ÷ 10 =`, `0.${n}`, `Dividing by 10 moves the digit one place to the right: ${n} → 0.${n}.`, ['÷ 10 makes a number ten times smaller.', `${pv(n, 'one')} become${n === 1 ? 's' : ''} ${pv(n, 'tenth')}.`, `0.${n}.`]); }
-      const a = rng.int(1, 7), b = rng.int(1, 9 - a); return typed(`0.${a} + 0.${b} =`, `0.${a + b}`, `${pv(a, 'tenth')} + ${pv(b, 'tenth')} = ${pv(a + b, 'tenth')} = 0.${a + b}.`, [`0.${a} is ${pv(a, 'tenth')} and 0.${b} is ${pv(b, 'tenth')}.`, `${a} + ${b} = ${pv(a + b, 'tenth')}.`, `0.${a + b}.`]);
+      if (rng.chance(0.5)) { const n = rng.int(1, 9); return typed(`${n} ÷ 10 =`, `0.${n}`, `Dividing by 10 moves the digit one place to the right: ${n} → 0.${n}.`, ['÷ 10 makes a number ten times smaller.', `${pv(n, 'one')} become${n === 1 ? 's' : ''} ${pv(n, 'tenth')}.`, `0.${n}.`], pic({ type: 'pvgrid', cols: ['O', '1/10'], rows: [[String(n), ''], ['0', String(n)]], point: 1, shift: -1 }, `÷ 10: the ${n} moves one place to the right, from the ones to the tenths. A 0 holds the ones place.`)); }
+      const a = rng.int(1, 7), b = rng.int(1, 9 - a); return typed(`0.${a} + 0.${b} =`, `0.${a + b}`, `${pv(a, 'tenth')} + ${pv(b, 'tenth')} = ${pv(a + b, 'tenth')} = 0.${a + b}.`, [`0.${a} is ${pv(a, 'tenth')} and 0.${b} is ${pv(b, 'tenth')}.`, `${a} + ${b} = ${pv(a + b, 'tenth')}.`, `0.${a + b}.`], pic(fracWall([[a + b, 10]]), `${pv(a, 'tenth')} and ${pv(b, 'tenth')} more make ${pv(a + b, 'tenth')}: 0.${a + b}.`));
     }
     const n = rng.int(11, 99);
     if (n % 10 === 0) return Y3_GENERATORS.y3Decimals(level, rng);
     const s = `0.${pad(n)}`;
-    if (rng.chance(0.5)) return typed(`Write {{${n}/100}} as a decimal.`, s, `${pv(n, 'hundredth')} is ${s}.`, ['The second place after the point is hundredths.', `${pv(n, 'hundredth')} = ${pv(Math.floor(n / 10), 'tenth')} and ${pv(n % 10, 'hundredth')}.`, `${s}.`]);
-    return typed(`${n} ÷ 100 =`, s, `Dividing by 100 moves the digits two places to the right: ${n} → ${s}.`, ['÷ 100 makes a number a hundred times smaller.', 'The digits move two places to the right.', `${s}.`]);
+    const [t, o] = digits(n);
+    if (rng.chance(0.5)) return typed(`Write {{${n}/100}} as a decimal.`, s, `${pv(n, 'hundredth')} is ${s}.`, ['The second place after the point is hundredths.', `${pv(n, 'hundredth')} = ${pv(Math.floor(n / 10), 'tenth')} and ${pv(n % 10, 'hundredth')}.`, `${s}.`], pic({ type: 'pvgrid', cols: ['O', '1/10', '1/100'], rows: [['0', String(t), String(o)]], point: 1 }, `{{${n}/100}} is ${pv(t, 'tenth')} and ${pv(o, 'hundredth')}: ${s}.`));
+    return typed(`${n} ÷ 100 =`, s, `Dividing by 100 moves the digits two places to the right: ${n} → ${s}.`, ['÷ 100 makes a number a hundred times smaller.', 'The digits move two places to the right.', `${s}.`], pic({ type: 'pvgrid', cols: ['T', 'O', '1/10', '1/100'], rows: [[String(t), String(o), '', ''], ['', '0', String(t), String(o)]], point: 2, shift: -2 }, `÷ 100: each digit moves two places to the right. A 0 holds the ones place.`));
   },
 
   y3Area(level, rng) {

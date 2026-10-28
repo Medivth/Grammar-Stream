@@ -204,4 +204,50 @@ const memory = {
 for (const id of Object.keys(memory)) if (!items.some((it) => it.id === `history.${id}`)) throw new Error(`history memory hook for unknown item ${id}`);
 const withMemory = (it) => ({ ...it, ...memory[it.id.slice('history.'.length)] });
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// The same colour-banded timeline of Britain (set 'britain') appears in every history topic, each
+// marking its own period, so the periods settle into one mental picture.
+const britain = (from, to, mark, events, caption) => ({ kind: 'timeline', set: 'britain', from, to, ...(mark ? { mark } : {}), events, ...(caption ? { caption } : {}) });
+const FEUDAL = {
+  kind: 'tree',
+  root: { n: 'The king', note: 'owns all the land', c: [{ n: 'Barons', note: 'given land; loyal to the king, send him knights', c: [{ n: 'Knights', note: 'given land; fight for their lord', c: [{ n: 'Peasants', note: 'farm the land; work for their lord' }] }] }] },
+  caption: 'The feudal system: land is handed **down**; loyalty and service are owed back **up**.',
+};
+const TOPIC_VISUALS = {
+  'history.words': {
+    kind: 'timeline', from: -300, to: 300,
+    bands: [[-300, -200, '3rd century BC'], [-200, -100, '2nd century BC'], [-100, 0, '1st century BC'], [0, 100, '1st century AD'], [100, 200, '2nd century AD'], [200, 300, '3rd century AD']],
+    events: [[-55, 'Julius Caesar visits Britain'], [43, 'Romans invade Britain']],
+    caption: 'BC years count **down** to 1 BC; AD years count **up** from AD 1. There is no year 0. So 300 BC is longer ago than 100 BC.',
+  },
+  'history.century': {
+    kind: 'timeline', from: 1000, to: 1700,
+    bands: [[1000, 1100, '11th century'], [1100, 1200, '12th century'], [1200, 1300, '13th century'], [1300, 1400, '14th century'], [1400, 1500, '15th century'], [1500, 1600, '16th century'], [1600, 1700, '17th century']],
+    events: [[1066, 'Hastings'], [1215, 'Magna Carta'], [1348, 'Black Death'], [1485, 'Bosworth'], [1588, 'Armada'], [1666, 'Great Fire of London']],
+    caption: 'Add one to the hundreds: 1066 is in the **11th** century (1001–1100) and 1666 in the **17th**.',
+  },
+  'history.timeline': [
+    britain(-3500, 2025, null, [[-3000, 'Stonehenge begun'], [43, 'Romans invade'], [1066, 'Battle of Hastings'], [1837, 'Victoria becomes queen']], 'The whole story of Britain, from the Stone Age to today.'),
+    britain(43, 2025, null, [[410, 'Romans leave'], [793, 'Vikings raid Lindisfarne'], [1066, 'Battle of Hastings'], [1215, 'Magna Carta'], [1485, 'Battle of Bosworth'], [1837, 'Victoria becomes queen'], [1914, 'First World War begins']], 'Zoomed in: the last 2000 years, from the Romans to today.'),
+  ],
+  'history.ancient': [
+    britain(-3500, 500, null, [[-2600, 'Indus Valley cities'], [-2560, 'Great Pyramid finished'], [-1600, 'Shang dynasty begins'], [-776, 'first Olympic Games'], [-508, 'democracy in Athens'], [43, 'Romans invade Britain']], 'While Britain was in the Stone and Bronze Ages, great cities grew up by rivers far away. (Early dates are approximate.)'),
+    { kind: 'table', head: ['civilisation', 'river'], rows: [['Ancient Egypt', '**Nile**'], ['Mesopotamia (Iraq)', '**Tigris** and **Euphrates**'], ['Indus Valley (Pakistan)', '**Indus**'], ['Shang China', '**Yellow River**']], tint: 'rows', caption: 'Civilisations are born by rivers.' },
+  ],
+  'history.world': britain(200, 1950, 'Anglo-Saxons and Vikings', [[250, 'Maya classic period begins'], [762, 'Baghdad founded'], [900, 'Maya classic period ends'], [1897, 'British soldiers take the Benin Bronzes']], 'While Britain was Anglo-Saxon, Baghdad and the Maya cities were at their height.'),
+  'history.1066': { kind: 'flow', steps: ['5 January: Edward the Confessor dies', '6 January: Harold Godwinson crowned', '20 September: Hardrada wins at Fulford', '25 September: Harold wins at Stamford Bridge', '14 October: William wins at Hastings', '25 December: William crowned'], caption: '1066: three kings and three battles.' },
+  'history.normans': [
+    britain(900, 1600, 'Middle Ages', [[1066, 'Battle of Hastings'], [1086, 'Domesday survey']], 'On our timeline, the Norman Conquest of 1066 starts the Middle Ages.'),
+    FEUDAL,
+  ],
+};
+const ITEM_VISUALS = {
+  'history.w.cent-now': britain(1800, 2025, null, [[1901, '20th century begins'], [2001, '21st century begins']], 'The 20th century was 1901–2000; we live in the 21st (2001–2100).'),
+  'history.t.o2': britain(1, 1100, null, [[43, 'Romans invade'], [410, 'Romans leave'], [793, 'Vikings raid Lindisfarne'], [1066, 'Norman Conquest']]),
+  'history.t.o3': britain(1000, 1950, null, [[1066, 'Normans'], [1485, 'first Tudor'], [1603, 'first Stuart'], [1714, 'first Georgian'], [1837, 'Victoria']]),
+  'history.n.feudal': FEUDAL,
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = t.visual ? [].concat(t.visual, v) : v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = it.visual ? [].concat(it.visual, v) : v; }
+
 export default [{ subject: 'history', deck: 'core', topics: topics.map((t) => ({ ...t, hook: topicHooks[t.id] })), items: [...items.map(withMemory), { id: 'history.century.tmpl', topic: 'history.century', kind: 'template', gen: 'century', levels: [1, 2, 3], seed: [-0.8, 0.2, 1] }] }];

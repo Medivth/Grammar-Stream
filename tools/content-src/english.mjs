@@ -697,4 +697,140 @@ function techniqueDeck() {
   };
 }
 
-export default [spellingDeck(), vocabDeck(), morphDeck(), techniqueDeck()];
+const DECKS = [spellingDeck(), vocabDeck(), morphDeck(), techniqueDeck()];
+
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Tricky-part spelling cards: 'ne|c=collar|e|ss=sleeves|ary'. Plain chunks are left
+// uncoloured; "=" marks the tricky letters (red), "^" a smaller word hiding inside (blue) and
+// "~" a silent or hidden letter (orange). The text after the mark is the small label.
+const MARKS = { '=': 'ending', '^': 'root', '~': 'tense' };
+const cardRow = (spec) => {
+  const parts = spec.split('|').map((seg) => { const m = seg.match(/^([^=^~]+)([=^~])(.+)$/); return m ? [m[1], MARKS[m[2]], m[3]] : [seg]; });
+  return { parts, word: parts.map((p) => p[0]).join('') };
+};
+// one word: the chunks, then the whole word underneath; several words (topic intros): chunks only
+const card = (...specs) => ({ kind: 'blocks', rows: specs.length > 1 ? specs.map((x) => ({ parts: cardRow(x).parts })) : [{ parts: cardRow(specs[0]).parts }, { parts: [[cardRow(specs[0]).word]] }] });
+// word builder: build(['un', 'prefix', 'not'], ['happy', 'root']) -> un + happy = unhappy
+const buildRow = (...parts) => ({ join: '+', parts, result: parts.map((p) => p[0]).join('') });
+const build = (...rows) => ({ kind: 'blocks', rows: rows.map((parts) => buildRow(...parts)) });
+
+const SPELL_CARDS = {
+  accommodate: 'a|cc=double|o|mm=double|odate',
+  aggressive: 'a|gg=double|re|ss=double|ive',
+  apparent: 'a|pp=double|a|r=single|ent',
+  committee: 'co|mm=double|i|tt=double|ee=double',
+  correspond: 'co|rr=double|espond',
+  embarrass: 'emba|rr=double|a|ss=double',
+  exaggerate: 'exa|gg=double|erate',
+  necessary: 'ne|c=collar|e|ss=sleeves|ary',
+  harass: 'ha|r=single|a|ss=double',
+  interrupt: 'inte|rr=double|upt',
+  marvellous: 'marve|ll=double|ous',
+  occur: 'o|cc=double|u|r=single',
+  programme: 'progra|mme=for TV',
+  recommend: 're|c=single|o|mm=double|end',
+  sufficient: 'su|ff=double|icient',
+  yacht: 'ya|ch~silent|t',
+  muscle: 'mus|c~silent|le',
+  rhythm: 'r|h~silent|y=only vowel|thm',
+  foreign: 'forei|g~silent|n',
+  government: 'gover|n~hidden n|ment',
+  environment: 'env|iron^iron|ment',
+  parliament: 'parl|iam^I am|ent',
+  stomach: 's|tom^Tom|ach',
+  queue: 'q|ueue=u-e-u-e',
+  lightning: 'light|n=no e|ing',
+  guarantee: 'g|u~silent|arantee',
+  nuisance: 'nuis|ance=-ance',
+  hindrance: 'hind|r=no e|ance',
+  relevant: 'relev|ant=elephant',
+  mischievous: 'mischie|vous=no i',
+  disastrous: 'disast|r=no e|ous',
+  curiosity: 'curi|os=no u|ity',
+  privilege: 'pri|vile^vile|ge',
+  definite: 'de|finite^finite',
+  desperate: 'desp|e=e …|r|a=… then a|te',
+  cemetery: 'c|e=one|m|e=two|t|e=three|ry',
+  vegetable: 'veg|e=e|table^table',
+  secretary: 'secret^secret|ary',
+  explanation: 'ex|plan^plan|ation',
+  pronunciation: 'pro|nun^a nun|ciation',
+  achieve: 'ach|ie=i before e|ve',
+  awkward: 'a|w=1st w|k|w=2nd w|ard',
+  bruise: 'br|ui=like fruit|se',
+  especially: 'e|special^special|ly',
+  familiar: 'famil^family|iar',
+  forty: 'fo|r=no u|ty',
+  equipment: 'equi|p=single|ment',
+  neighbour: 'n|eigh=like eight|bour',
+  language: 'lang|u=add u|age^age',
+  recognise: 're|cog^cog|nise',
+  signature: 'sign^sign|ature',
+  vehicle: 've|hi^say hi|cle',
+  shoulder: 'sh|ould=like should|er',
+  profession: 'pro|f=single|e|ss=double|ion',
+};
+
+const TOPIC_VISUALS = {
+  'english.spell-1': { ...card(SPELL_CARDS.accommodate, SPELL_CARDS.committee), caption: 'Accommodate, committee. Red = the tricky letters. Look, say the chunks, cover, write, check.' },
+  'english.spell-2': { ...card(SPELL_CARDS.necessary, SPELL_CARDS.harass), caption: 'Necessary: one collar (c), two sleeves (ss). Harass: single r, double s.' },
+  'english.spell-3': { ...card(SPELL_CARDS.yacht, SPELL_CARDS.muscle, SPELL_CARDS.government), caption: 'Yacht, muscle, government. Orange = a letter you don’t hear but must write.' },
+  'english.spell-4': { ...build([['relev', 'stem'], ['ant', 'ending']], [['relev', 'stem'], ['ance', 'ending']], [['conveni', 'stem'], ['ent', 'ending']], [['conveni', 'stem'], ['ence', 'ending']]), caption: '-ant goes with -ance; -ent goes with -ence.' },
+  'english.spell-5': { ...card('def|i=hear it|nite', 'comp|e=hear it|tition'), caption: 'Definite, competition. Can’t hear the vowel? Find a relative where you can: definition, compete.' },
+  'english.spell-6': { ...card(SPELL_CARDS.especially, SPELL_CARDS.familiar, 'critic^critic|ise'), caption: 'Especially, familiar, criticise. Blue = a smaller word hiding inside.' },
+  'english.spell-7': { ...card(SPELL_CARDS.recognise, SPELL_CARDS.signature, SPELL_CARDS.vehicle), caption: 'Recognise, signature, vehicle. Chop it into chunks and spot a word you know.' },
+  'english.morph-1': { ...build([['un', 'prefix', 'not'], ['happy', 'root']], [['re', 'prefix', 'again'], ['build', 'root']], [['pre', 'prefix', 'before'], ['view', 'root']], [['sub', 'prefix', 'under'], ['marine', 'root', 'sea']]), caption: 'A prefix goes at the front and changes the meaning.' },
+  'english.morph-2': { ...build([['trans', 'prefix', 'across'], ['port', 'root', 'carry']], [['ex', 'prefix', 'out'], ['port', 'root', 'carry']], [['port', 'root', 'carry'], ['able', 'suffix', 'can be']], [['port', 'root', 'carry'], ['er', 'suffix', 'person who']]), caption: 'Learn one root, unlock many words.' },
+  'english.punctuation': [
+    { kind: 'blocks', rows: [{ parts: [['The rain fell', 'clause', 'main clause'], [';', 'conjunction', 'semi-colon'], ['the river burst its banks', 'clause', 'main clause']] }], caption: 'Semi-colon: a soft full stop between two main clauses.' },
+    { kind: 'blocks', rows: [{ parts: [['You need three things', 'clause', 'main clause'], [':', 'conjunction', 'colon'], ['a torch, a map and a coat', 'object', 'the list']] }], caption: 'Colon: a complete clause, then a drumroll: “here it comes”.' },
+    { kind: 'blocks', rows: [{ parts: [['My uncle', 'clause', 'main clause'], ['(who lives in Wales)', 'subordinate', 'extra: lift it out'], ['keeps bees.', 'clause', 'main clause']] }], caption: 'Brackets, dashes or a pair of commas: lift out the extra and the sentence still works.' },
+  ],
+};
+
+const ACTIVE_PASSIVE = (doer, verb, passiveVerb, receiver) => ({
+  kind: 'blocks',
+  rows: [
+    { parts: [[doer, 'subject', 'subject: the doer'], [verb, 'verb', 'verb'], [receiver.toLowerCase(), 'object', 'object']] },
+    { parts: [[receiver, 'object', 'subject'], [passiveVerb, 'verb', 'was + verb'], [`by ${doer.toLowerCase()}`, 'subject', 'by + the doer']] },
+  ],
+  caption: 'Active (top), then passive. The colours follow the two things: in the passive the doer moves to the end, after “by”, or vanishes.',
+});
+
+const ITEM_VISUALS = {
+  ...Object.fromEntries(Object.entries(SPELL_CARDS).map(([word, spec]) => [`english.sp.${word}`, card(spec)])),
+  'english.m.un': build([['un', 'prefix', 'not'], ['happy', 'root']], [['un', 'prefix', 'not'], ['fair', 'root']]),
+  'english.m.mis': build([['mis', 'prefix', 'wrongly'], ['spell', 'root']]),
+  'english.m.sub': build([['sub', 'prefix', 'under'], ['marine', 'root', 'sea']], [['sub', 'prefix', 'under'], ['way', 'root']]),
+  'english.m.inter': build([['inter', 'prefix', 'between'], ['national', 'root', 'nations']]),
+  'english.m.anti': build([['anti', 'prefix', 'against'], ['septic', 'root', 'germs']]),
+  'english.m.auto': build([['auto', 'prefix', 'self'], ['graph', 'root', 'write']]),
+  'english.m.trans': build([['trans', 'prefix', 'across'], ['atlantic', 'root', 'the Atlantic']]),
+  'english.m.tele': build([['tele', 'prefix', 'far away'], ['vision', 'root', 'seeing']]),
+  'english.m.bi': build([['bi', 'prefix', 'two'], ['cycle', 'root', 'wheel']]),
+  'english.m.spect': build([['in', 'prefix', 'into'], ['spect', 'root', 'look']], [['spect', 'root', 'look'], ['ator', 'suffix', 'person who']]),
+  'english.m.dict': build([['pre', 'prefix', 'before'], ['dict', 'root', 'say']], [['contra', 'prefix', 'against'], ['dict', 'root', 'say']]),
+  'english.m.rupt': build([['e', 'prefix', 'out'], ['rupt', 'root', 'break']], [['inter', 'prefix', 'between'], ['rupt', 'root', 'break']]),
+  'english.m.struct': build([['con', 'prefix', 'together'], ['struct', 'root', 'build']]),
+  'english.m.aud': build([['aud', 'root', 'hear'], ['ible', 'suffix', 'can be']]),
+  'english.m.vis-vid': build([['vis', 'root', 'see'], ['ible', 'suffix', 'can be']]),
+  'english.m.phon': build([['tele', 'prefix', 'far'], ['phone', 'root', 'sound']]),
+  'english.m.geo': build([['geo', 'root', 'earth'], ['logy', 'suffix', 'study of']]),
+  'english.m.bio': build([['bio', 'root', 'life'], ['graphy', 'suffix', 'writing']]),
+  'english.punct.1': { kind: 'blocks', rows: [{ parts: [['The rain fell', 'clause', 'main clause'], [';', 'conjunction', 'semi-colon'], ['the river burst its banks.', 'clause', 'main clause']] }], caption: 'Both sides could be a sentence on their own, so a semi-colon can join them.' },
+  'english.punct.2': { kind: 'blocks', rows: [{ parts: [['You need three things', 'clause', 'complete clause'], [':', 'conjunction', 'colon'], ['a torch, a map and a coat.', 'object', 'the list']] }], caption: 'A complete clause comes before the colon.' },
+  'english.punct.3': { kind: 'blocks', rows: [{ parts: [['My uncle', 'clause', 'main clause'], ['(who lives in Wales)', 'subordinate', 'extra: lift it out'], ['keeps bees.', 'clause', 'main clause']] }], caption: 'Cover the brackets: “My uncle keeps bees.” still makes sense.' },
+  'english.punct.4': { kind: 'blocks', rows: [{ parts: [['The castle', 'clause', 'main clause'], ['– built over 800 years ago –', 'subordinate', 'extra: lift it out'], ['still stands.', 'clause', 'main clause']] }], caption: 'Two dashes hold the extra bit, like two hands.' },
+  'english.punct.5': ACTIVE_PASSIVE('A football', 'smashed', 'was smashed', 'The window'),
+  'english.punct.8': { kind: 'blocks', rows: [{ parts: [['a'], ['man-eating', 'adjective', 'one describing word'], ['shark', 'noun', 'noun']] }, { parts: [['a'], ['man', 'noun', 'noun'], ['eating', 'verb', 'verb'], ['shark', 'noun', 'noun']] }], caption: 'With the hyphen, a shark that eats people. Without it, a man eating some shark!' },
+  'english.punct.9': { kind: 'blocks', rows: [{ parts: [['The boy', 'clause', 'main clause'], ['who won the race', 'subordinate', 'relative clause'], ['was beaming.', 'clause', 'main clause']] }], caption: '“who” relates back to “the boy”.' },
+  'english.punct.10': { kind: 'blocks', rows: [{ join: '→', parts: [['will', 'verb', 'certain'], ['should', 'verb', 'likely'], ['might, could, may', 'verb', 'maybe']] }], caption: 'Modal verbs are a certainty scale.' },
+};
+
+const topics = DECKS.flatMap((d) => d.topics), items = DECKS.flatMap((d) => d.items);
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+// every spelling card must spell its word
+for (const [word, spec] of Object.entries(SPELL_CARDS)) if (cardRow(spec).word !== word) throw new Error(`spelling card for ${word} spells ${cardRow(spec).word}`);
+
+export default DECKS;

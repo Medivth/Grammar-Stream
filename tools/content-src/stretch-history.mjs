@@ -118,4 +118,39 @@ const memory = {
 for (const id of Object.keys(memory)) if (!items.some((it) => it.id === `history.${id}`)) throw new Error(`history memory hook for unknown item ${id}`);
 const withMemory = (it) => ({ ...it, ...memory[it.id.slice('history.'.length)] });
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// The same colour-banded timeline of Britain as every other history topic, in the Tudor and
+// Stuart window (1400–1750), plus Henry VIII's family.
+const britain = (from, to, mark, events, caption) => ({ kind: 'timeline', set: 'britain', from, to, ...(mark ? { mark } : {}), events, ...(caption ? { caption } : {}) });
+const WIVES_TABLE = {
+  kind: 'table', head: ['', 'wife', 'what happened', 'child'],
+  rows: [['1', 'Catherine of Aragon', '**divorced**', 'Mary I'], ['2', 'Anne Boleyn', '**beheaded**', 'Elizabeth I'], ['3', 'Jane Seymour', '**died**', 'Edward VI'], ['4', 'Anne of Cleves', '**divorced**', '–'], ['5', 'Catherine Howard', '**beheaded**', '–'], ['6', 'Catherine Parr', '**survived**', '–']],
+  caption: 'Henry VIII’s six wives: “divorced, beheaded, died; divorced, beheaded, survived”. (The two divorces were really annulments.)',
+};
+const SUCCESSION = {
+  kind: 'tree',
+  root: { n: 'Henry VIII', note: '1509–1547', c: [
+    { n: 'Edward VI', note: '1547–1553 · strongly Protestant', mark: true },
+    { n: 'Mary I', note: '1553–1558 · Catholic again', mark: true },
+    { n: 'Elizabeth I', note: '1558–1603 · a middle way', mark: true },
+  ] },
+  caption: 'Henry’s three children reigned in turn, and each changed England’s religion again.',
+};
+const TOPIC_VISUALS = {
+  'history.reformation': [britain(1400, 1750, 'Tudors', [[1509, 'Henry VIII king'], [1534, 'Act of Supremacy'], [1559, 'Religious Settlement']]), WIVES_TABLE, SUCCESSION],
+  'history.armada': [
+    britain(1400, 1750, 'Tudors', [[1558, 'Elizabeth I queen'], [1588, 'Spanish Armada']]),
+    { kind: 'flow', steps: ['The Armada sails from Spain', 'It anchors off Calais', 'English fireships at night: the Spanish scatter', 'Battle of Gravelines', 'Storms wreck ships sailing home round Scotland'], caption: 'The Armada, 1588.' },
+  ],
+  'history.civil-war': britain(1400, 1750, 'Stuarts', [[1605, 'Gunpowder Plot'], [1642, 'Civil War begins'], [1649, 'Charles I executed'], [1660, 'Restoration']]),
+};
+const ITEM_VISUALS = {
+  'history.rf.d1': WIVES_TABLE,
+  'history.rf.wives': WIVES_TABLE,
+  'history.rf.children': SUCCESSION,
+  'history.cw.order': britain(1400, 1750, 'Stuarts', [[1605, 'Gunpowder Plot'], [1642, 'war begins'], [1645, 'Naseby'], [1649, 'Charles I executed'], [1660, 'Restoration']]),
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = t.visual ? [].concat(t.visual, v) : v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = it.visual ? [].concat(it.visual, v) : v; }
+
 export default [{ subject: 'history', deck: 'stretch', topics: topics.map((t) => ({ ...t, hook: topicHooks[t.id] })), items: items.map(withMemory) }];

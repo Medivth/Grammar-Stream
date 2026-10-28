@@ -9,7 +9,34 @@
    "prereqs": [],
    "intro": "Every number is built from tens and ones, like a race car is built from parts. 47 is 4 tens and 7 ones.",
    "teach": "Explain why 52 is bigger than 25.",
-   "talk": "Ask {him} what the 3 is worth in 35, and in 53."
+   "talk": "Ask {him} what the 3 is worth in 35, and in 53.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "tens",
+      "tens": 4,
+      "ones": 7
+     }
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "pvgrid",
+      "cols": [
+       "T",
+       "O"
+      ],
+      "rows": [
+       [
+        "4",
+        "7"
+       ]
+      ]
+     },
+     "caption": "4 tens and 7 ones make 47."
+    }
+   ]
   },
   {
    "kind": "skill",
@@ -18,7 +45,47 @@
    "prereqs": [],
    "intro": "Number bonds are pairs that make a total. If you know 7 + 3 = 10, you also know 70 + 30 = 100!",
    "teach": "Explain how 6 + 4 = 10 helps you work out 60 + 40.",
-   "talk": "Quick-fire in the car: “I say 7, you say the number that makes 10.”"
+   "talk": "Quick-fire in the car: “I say 7, you say the number that makes 10.”",
+   "visual": [
+    {
+     "kind": "tree",
+     "root": {
+      "n": "10",
+      "note": "the whole",
+      "c": [
+       {
+        "n": "7",
+        "note": "a part"
+       },
+       {
+        "n": "3",
+        "note": "a part"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "barmodel",
+      "rows": [
+       {
+        "label": "7 + 3",
+        "parts": 10,
+        "shaded": 7,
+        "text": "1"
+       },
+       {
+        "label": "70 + 30",
+        "parts": 10,
+        "shaded": 7,
+        "text": "10"
+       }
+      ]
+     },
+     "caption": "7 + 3 = 10, so 70 + 30 = 100."
+    }
+   ]
   },
   {
    "kind": "skill",
@@ -39,7 +106,66 @@
    "prereqs": [],
    "intro": "Counting in 2s, 3s, 5s and 10s is a superpower for times tables. Spot the rule and you can find any number in a pattern.",
    "teach": "Explain how you can tell if a number is odd or even.",
-   "talk": "Count in 3s together up the stairs."
+   "talk": "Count in 3s together up the stairs.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "hundredsq",
+     "shade": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      48,
+      50,
+      52,
+      54,
+      56,
+      58,
+      60,
+      62,
+      64,
+      66,
+      68,
+      70,
+      72,
+      74,
+      76,
+      78,
+      80,
+      82,
+      84,
+      86,
+      88,
+      90,
+      92,
+      94,
+      96,
+      98,
+      100
+     ]
+    },
+    "caption": "Counting in 2s lands on the even numbers (shaded). The odd numbers are the ones in between."
+   }
   },
   {
    "kind": "skill",
@@ -94,7 +220,34 @@
    ],
    "intro": "We measure length in centimetres and metres, mass in grams and kilograms, and capacity in millilitres and litres.",
    "teach": "Explain which unit you would use to measure a race track, and why.",
-   "talk": "Guess how many centimetres long a toy car is, then measure it."
+   "talk": "Guess how many centimetres long a toy car is, then measure it.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "We measure",
+     "small unit",
+     "big unit"
+    ],
+    "rows": [
+     [
+      "length",
+      "centimetres (cm)",
+      "metres (m)"
+     ],
+     [
+      "mass",
+      "grams (g)",
+      "kilograms (kg)"
+     ],
+     [
+      "capacity",
+      "millilitres (ml)",
+      "litres (l)"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "100 cm = 1 m. 1000 g = 1 kg. 1000 ml = 1 litre."
+   }
   },
   {
    "kind": "skill",
@@ -117,7 +270,18 @@
    ],
    "intro": "Word problems hide the maths inside a story. Read carefully, decide what to do first, then check your answer makes sense.",
    "teach": "Explain the two steps you would use to solve a problem about racing laps.",
-   "talk": "Make up a word problem about superheroes for each other."
+   "talk": "Make up a word problem about superheroes for each other.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "Read it",
+     "Draw it",
+     "Choose + − × ÷",
+     "Work it out",
+     "Check it"
+    ]
+   }
   },
   {
    "kind": "facts",
@@ -127,7 +291,27 @@
    "batch": 5,
    "intro": "Every shape has properties: sides and corners (vertices) for flat shapes, faces, edges and vertices for solid ones.",
    "teach": "Explain the difference between a cube and a square.",
-   "talk": "Find a cylinder, a cuboid and a sphere in the kitchen."
+   "talk": "Find a cylinder, a cuboid and a sphere in the kitchen.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "polygon",
+      "sides": 6,
+      "name": "hexagon",
+      "corners": true
+     },
+     "caption": "A hexagon: 6 sides and 6 corners (vertices)."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cube"
+     },
+     "caption": "A cube: 6 faces, 12 edges and 8 vertices."
+    }
+   ]
   },
   {
    "kind": "facts",
@@ -163,6 +347,27 @@
    "intro": "The 4 times table is double the 2s, and the 8 times table is double the 4s!",
    "teach": "Explain how the 4 times table helps you with the 8 times table.",
    "talk": "Ask {him} for 6 × 4, then 6 × 8.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "array",
+      "rows": 2,
+      "cols": 6
+     },
+     "caption": "2 × 6 = 12"
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "array",
+      "rows": 4,
+      "cols": 6,
+      "colour": "#1f5cc4"
+     },
+     "caption": "4 × 6 = 24: double 12. Double again for 8 × 6 = 48."
+    }
+   ],
    "coreIn": [
     "y3"
    ]
@@ -178,6 +383,36 @@
    "intro": "Three-digit numbers have hundreds, tens and ones. 365 is 3 hundreds, 6 tens and 5 ones.",
    "teach": "Explain what happens to 299 when you add 1.",
    "talk": "Find a three-digit number on a sign and ask what each digit is worth.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "tens",
+      "hundreds": 3,
+      "tens": 6,
+      "ones": 5
+     }
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "pvgrid",
+      "cols": [
+       "H",
+       "T",
+       "O"
+      ],
+      "rows": [
+       [
+        "3",
+        "6",
+        "5"
+       ]
+      ]
+     },
+     "caption": "3 hundreds, 6 tens and 5 ones make 365."
+    }
+   ],
    "coreIn": [
     "y3"
    ]
@@ -194,6 +429,35 @@
    "intro": "For big numbers, line them up in columns: hundreds, tens, ones. Add or take away one column at a time.",
    "teach": "Explain what “carrying” means when you add.",
    "talk": "Ask {him} to add two house numbers on your street.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "pvgrid",
+     "cols": [
+      "H",
+      "T",
+      "O"
+     ],
+     "rows": [
+      [
+       "2",
+       "4",
+       "6"
+      ],
+      [
+       "1",
+       "3",
+       "2"
+      ],
+      [
+       "3",
+       "7",
+       "8"
+      ]
+     ]
+    },
+    "caption": "246 + 132: add the ones (6 + 2 = 8), then the tens (4 + 3 = 7), then the hundreds (2 + 1 = 3). 378."
+   },
    "coreIn": [
     "y3"
    ]
@@ -435,7 +699,16 @@
     "5",
     "6"
    ],
-   "explain": "Tri means three: 3 sides and 3 corners."
+   "explain": "Tri means three: 3 sides and 3 corners.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "polygon",
+     "sides": 3,
+     "name": "triangle",
+     "corners": true
+    }
+   }
   },
   {
    "id": "maths.sh.2",
@@ -448,7 +721,16 @@
     "6",
     "8"
    ],
-   "explain": "Pent means five."
+   "explain": "Pent means five.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "polygon",
+     "sides": 5,
+     "name": "pentagon",
+     "corners": true
+    }
+   }
   },
   {
    "id": "maths.sh.3",
@@ -461,7 +743,16 @@
     "8",
     "4"
    ],
-   "explain": "Hex means six. Bees build hexagons in their honeycomb."
+   "explain": "Hex means six. Bees build hexagons in their honeycomb.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "polygon",
+     "sides": 6,
+     "name": "hexagon",
+     "corners": true
+    }
+   }
   },
   {
    "id": "maths.sh.4",
@@ -474,7 +765,16 @@
     "10",
     "7"
    ],
-   "explain": "Oct means eight, like an octopus with 8 arms."
+   "explain": "Oct means eight, like an octopus with 8 arms.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "polygon",
+     "sides": 8,
+     "name": "octagon",
+     "corners": true
+    }
+   }
   },
   {
    "id": "maths.sh.5",
@@ -490,7 +790,18 @@
    "explain": "A corner is a vertex. More than one are vertices.",
    "accept": [
     "vertex"
-   ]
+   ],
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "polygon",
+     "sides": 4,
+     "name": "square",
+     "numbered": false,
+     "corners": true
+    },
+    "caption": "The red dots are the vertices (corners)."
+   }
   },
   {
    "id": "maths.sh.6",
@@ -503,7 +814,15 @@
     "8",
     "12"
    ],
-   "explain": "A dice is a cube: 6 square faces."
+   "explain": "A dice is a cube: 6 square faces.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "cube"
+    },
+    "caption": "6 square faces, like a dice."
+   }
   },
   {
    "id": "maths.sh.7",
@@ -516,7 +835,15 @@
     "12",
     "4"
    ],
-   "explain": "4 on the top and 4 on the bottom: 8."
+   "explain": "4 on the top and 4 on the bottom: 8.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "cube"
+    },
+    "caption": "4 vertices on the top and 4 on the bottom: 8."
+   }
   },
   {
    "id": "maths.sh.8",
@@ -532,7 +859,15 @@
    "explain": "A sphere is perfectly round with one curved surface.",
    "accept": [
     "sphere"
-   ]
+   ],
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "sphere"
+    },
+    "caption": "A sphere"
+   }
   },
   {
    "id": "maths.sh.9",
@@ -548,7 +883,15 @@
    "explain": "Two circle faces and a curved surface.",
    "accept": [
     "cylinder"
-   ]
+   ],
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "cylinder"
+    },
+    "caption": "A cylinder: 2 circle faces and a curved surface."
+   }
   },
   {
    "id": "maths.sh.10",
@@ -564,7 +907,15 @@
    "explain": "A circle face and a point at the top.",
    "accept": [
     "cone"
-   ]
+   ],
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "cone"
+    },
+    "caption": "A cone: a circle face and a point."
+   }
   },
   {
    "id": "maths.sh.11",
@@ -580,7 +931,17 @@
    "explain": "A rectangle also has 4 right angles, but its sides are not all equal.",
    "accept": [
     "square"
-   ]
+   ],
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "polygon",
+     "sides": 4,
+     "name": "square",
+     "corners": true
+    },
+    "caption": "A square: 4 equal sides and 4 right angles."
+   }
   },
   {
    "id": "maths.sh.12",

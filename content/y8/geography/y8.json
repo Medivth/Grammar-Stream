@@ -11,7 +11,38 @@
    "intro": "Ordnance Survey maps reward precision. A six-figure grid reference pins a place to within 100 metres; contours show the shape of the land; bearings give an exact direction.",
    "teach": "Explain how to give a six-figure grid reference, and why eastings come first.",
    "talk": "Plan a walk together on an OS map (or the OS app) and ask {him} to read the contours along the route.",
-   "hook": "“Along the corridor, then up the stairs”: eastings first, then northings, every single time."
+   "hook": "“Along the corridor, then up the stairs”: eastings first, then northings, every single time.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "25",
+        "noun",
+        "easting"
+       ],
+       [
+        "3",
+        "noun",
+        "tenths"
+       ],
+       [
+        "81",
+        "verb",
+        "northing"
+       ],
+       [
+        "6",
+        "verb",
+        "tenths"
+       ]
+      ],
+      "result": "253816"
+     }
+    ],
+    "caption": "A six-figure grid reference: eastings first (along the corridor), then northings (up the stairs). It pins a place to within 100 m."
+   }
   },
   {
    "id": "geography.tectonics",
@@ -35,7 +66,38 @@
    "intro": "The same size of earthquake can kill a hundred people in one country and a hundred thousand in another. Case studies show why: wealth, buildings, planning and luck.",
    "teach": "Explain why the 2010 Haiti earthquake killed far more people than many larger earthquakes in richer countries.",
    "talk": "Ask {him} what happened to the island of Thera (Santorini) about 3,600 years ago.",
-   "hook": "“Earthquakes don’t kill people; buildings do”: wealth, planning and preparation decide the death toll."
+   "hook": "“Earthquakes don’t kill people; buildings do”: wealth, planning and preparation decide the death toll.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Magnitude",
+     "What happened"
+    ],
+    "rows": [
+     [
+      "Haiti earthquake, 2010",
+      "7.0",
+      "**well over 100,000** died: weak, crowded buildings"
+     ],
+     [
+      "Nepal earthquake, 2015",
+      "7.8",
+      "about 9,000 died; avalanches on Everest"
+     ],
+     [
+      "Japan earthquake, 2011",
+      "9.0",
+      "most deaths from the tsunami; strict building rules"
+     ],
+     [
+      "Iceland eruption, 2010",
+      "–",
+      "no deaths, but ash closed European airspace"
+     ]
+    ],
+    "caption": "A bigger hazard is not always deadlier: wealth, buildings and preparation decide the death toll."
+   }
   },
   {
    "id": "geography.weather",
@@ -46,7 +108,33 @@
    "intro": "Weather is what is happening in the sky today; climate is the pattern over thirty years or more. Air pressure, the ocean and the shape of the land explain most of what the UK gets.",
    "teach": "Explain the three types of rainfall, with a place where each is common.",
    "talk": "Watch a weather forecast together and ask {him} to spot a depression (a low) and a high.",
-   "hook": "“Climate is what you expect, weather is what you get.”"
+   "hook": "“Climate is what you expect, weather is what you get.”",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Rainfall",
+     "Air rises because…",
+     "Common in"
+    ],
+    "rows": [
+     [
+      "Relief",
+      "winds are forced over hills",
+      "the west of Britain"
+     ],
+     [
+      "Convectional",
+      "hot ground heats it",
+      "the tropics"
+     ],
+     [
+      "Frontal",
+      "warm air meets colder air",
+      "UK depressions"
+     ]
+    ],
+    "caption": "In every type, rising air cools, its water vapour condenses into cloud, and rain falls."
+   }
   },
   {
    "id": "geography.climate",
@@ -59,7 +147,17 @@
    "intro": "The climate has always changed, but never this fast in human history. Separate the evidence, the natural causes, the human causes and the choices we can still make.",
    "teach": "Explain the enhanced greenhouse effect in four steps.",
    "talk": "Ask {him} which response to climate change {she} thinks matters most: changing energy, food, transport or something else.",
-   "hook": "Greenhouse gases are a blanket: the thicker the blanket, the more heat the Earth keeps in."
+   "hook": "Greenhouse gases are a blanket: the thicker the blanket, the more heat the Earth keeps in.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Sunlight passes through the atmosphere",
+     "The Earth’s surface warms and gives off heat",
+     "Greenhouse gases absorb and re-emit that heat",
+     "More gases from burning fuels: more heat trapped"
+    ],
+    "caption": "The enhanced greenhouse effect. CO₂ has risen from about 280 parts per million before the Industrial Revolution to about 427 today."
+   }
   },
   {
    "id": "geography.rivers",
@@ -122,7 +220,50 @@
    "intro": "There are now about 8 billion people. Why do some countries grow fast while others shrink? And why do people move?",
    "teach": "Explain the five stages of the demographic transition model.",
    "talk": "Ask {him} for one push factor and one pull factor in a family or local migration story you know.",
-   "hook": "Deaths fall first, births fall later: the gap between them is the population boom."
+   "hook": "Deaths fall first, births fall later: the gap between them is the population boom.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Stage",
+     "Birth rate",
+     "Death rate",
+     "Population"
+    ],
+    "tint": "rows",
+    "rows": [
+     [
+      "1",
+      "high",
+      "high",
+      "slow growth"
+     ],
+     [
+      "2",
+      "high",
+      "falls fast",
+      "**rapid growth**"
+     ],
+     [
+      "3",
+      "falls",
+      "low",
+      "growth slows"
+     ],
+     [
+      "4",
+      "low",
+      "low",
+      "stable"
+     ],
+     [
+      "5",
+      "low",
+      "above birth rate",
+      "**declines**"
+     ]
+    ],
+    "caption": "The demographic transition model. Medicine and clean water cut deaths first; birth rates fall later."
+   }
   },
   {
    "id": "geography.cities",
@@ -148,7 +289,42 @@
    "intro": "How do we compare countries fairly? Income alone hides too much, so geographers use measures like the Human Development Index, and ask why gaps open and how they close.",
    "teach": "Explain why HDI is a better measure of development than GNI per head alone.",
    "talk": "Ask {him} what the Brandt line was, and whether it still works today.",
-   "hook": "Development is more than money: HDI mixes a long life, a good education and a decent income."
+   "hook": "Development is more than money: HDI mixes a long life, a good education and a decent income.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Indicator",
+     "What it measures",
+     "More developed"
+    ],
+    "rows": [
+     [
+      "GNI per head",
+      "income per person (US$)",
+      "higher"
+     ],
+     [
+      "Life expectancy",
+      "average years a baby will live",
+      "higher"
+     ],
+     [
+      "Infant mortality",
+      "deaths before age 1, per 1,000 births",
+      "lower"
+     ],
+     [
+      "Birth rate",
+      "births per 1,000 people a year",
+      "lower"
+     ],
+     [
+      "HDI",
+      "life expectancy, education, income (0 to 1)",
+      "closer to 1"
+     ]
+    ]
+   }
   },
   {
    "id": "geography.global",
@@ -225,7 +401,32 @@
    "intro": "We cannot stop earthquakes or eruptions, but we can predict, protect and prepare. GCSE questions ask you to compare how places at different levels of development respond.",
    "teach": "Explain the three Ps of hazard management with an example of each.",
    "talk": "Ask {him} what is in an earthquake kit in Japan, and why schools practise drills.",
-   "hook": "The three Ps: Predict, Protect, Prepare."
+   "hook": "The three Ps: Predict, Protect, Prepare.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "What it means",
+     "Example"
+    ],
+    "rows": [
+     [
+      "Prediction",
+      "watching for warning signs",
+      "tiny earthquakes and gas before eruptions"
+     ],
+     [
+      "Protection",
+      "building to resist it",
+      "buildings with shock absorbers"
+     ],
+     [
+      "Preparation",
+      "drills, kits and plans",
+      "Japan’s Disaster Prevention Day drills"
+     ]
+    ]
+   }
   },
   {
    "id": "geography.numbers",
@@ -308,7 +509,37 @@
     }
    ],
    "explain": "Easting 34 + 7 tenths = 347; northing 56 + 2 tenths = 562. So 347562.",
-   "hook": "Six figures = three for along, three for up. Split it down the middle: 347 | 562."
+   "hook": "Six figures = three for along, three for up. Split it down the middle: 347 | 562.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "34",
+        "noun",
+        "easting"
+       ],
+       [
+        "7",
+        "noun",
+        "tenths"
+       ],
+       [
+        "56",
+        "verb",
+        "northing"
+       ],
+       [
+        "2",
+        "verb",
+        "tenths"
+       ]
+      ],
+      "result": "347562"
+     }
+    ]
+   }
   },
   {
    "id": "geography.mp.accuracy",
@@ -389,7 +620,49 @@
     "90",
     "90°"
    ],
-   "hook": "Bearings go clockwise from north, always with three figures: N 000°, E 090°, S 180°, W 270°."
+   "hook": "Bearings go clockwise from north, always with three figures: N 000°, E 090°, S 180°, W 270°.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Direction",
+     "Bearing"
+    ],
+    "rows": [
+     [
+      "north",
+      "000°"
+     ],
+     [
+      "north-east",
+      "045°"
+     ],
+     [
+      "east",
+      "090°"
+     ],
+     [
+      "south-east",
+      "135°"
+     ],
+     [
+      "south",
+      "180°"
+     ],
+     [
+      "south-west",
+      "225°"
+     ],
+     [
+      "west",
+      "270°"
+     ],
+     [
+      "north-west",
+      "315°"
+     ]
+    ],
+    "caption": "Measured clockwise from north, always with three figures."
+   }
   },
   {
    "id": "geography.mp.bearing-sw",
@@ -406,7 +679,49 @@
    "accept": [
     "225"
    ],
-   "hook": "Each quarter turn is 90°; the halfway points add 45°: NE 045°, SE 135°, SW 225°, NW 315°."
+   "hook": "Each quarter turn is 90°; the halfway points add 45°: NE 045°, SE 135°, SW 225°, NW 315°.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Direction",
+     "Bearing"
+    ],
+    "rows": [
+     [
+      "north",
+      "000°"
+     ],
+     [
+      "north-east",
+      "045°"
+     ],
+     [
+      "east",
+      "090°"
+     ],
+     [
+      "south-east",
+      "135°"
+     ],
+     [
+      "south",
+      "180°"
+     ],
+     [
+      "south-west",
+      "225°"
+     ],
+     [
+      "west",
+      "270°"
+     ],
+     [
+      "north-west",
+      "315°"
+     ]
+    ],
+    "caption": "Measured clockwise from north, always with three figures."
+   }
   },
   {
    "id": "geography.mp.trig",
@@ -1421,7 +1736,16 @@
    "labels": null,
    "explain": "Erosion on the outer bank and deposition on the inner bank make meanders migrate until the neck is breached.",
    "hook": "Outside of the bend fast, inside slow: the outer bank erodes, the inner bank builds up.",
-   "example": "From the air, the Mississippi’s floodplain is dotted with oxbow lakes: the ghosts of old meanders."
+   "example": "From the air, the Mississippi’s floodplain is dotted with oxbow lakes: the ghosts of old meanders.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Erosion on the outside of bends makes the meander loop tighter",
+     "The neck of the meander narrows",
+     "In a flood the river cuts through the neck",
+     "Deposition seals off the old loop as an oxbow lake"
+    ]
+   }
   },
   {
    "id": "geography.rv.waterfall",
@@ -1589,7 +1913,18 @@
    "labels": null,
    "explain": "Hydraulic action and abrasion widen a crack into a cave; the cave breaks through as an arch; the arch collapses leaving a stack, which wears down to a stump. Old Harry Rocks in Dorset are famous chalk stacks.",
    "hook": "Crack, cave, arch, stack, stump: the headland gets smaller at every step.",
-   "example": "Durdle Door in Dorset is an arch; nearby Old Harry Rocks are stacks, and Old Harry’s Wife collapsed into a stump."
+   "example": "Durdle Door in Dorset is an arch; nearby Old Harry Rocks are stacks, and Old Harry’s Wife collapsed into a stump.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "crack",
+     "cave",
+     "arch",
+     "stack",
+     "stump"
+    ]
+   }
   },
   {
    "id": "geography.cs.drift",
@@ -1905,7 +2240,18 @@
    ],
    "labels": null,
    "explain": "Emergents tower above the canopy, which captures most of the light.",
-   "hook": "“Every Cheeky Uncle Falls”: Emergent, Canopy, Understorey, Floor."
+   "hook": "“Every Cheeky Uncle Falls”: Emergent, Canopy, Understorey, Floor.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "emergent layer",
+     "canopy",
+     "understorey",
+     "forest floor"
+    ],
+    "caption": "From the top down."
+   }
   },
   {
    "id": "geography.bm.soil",
@@ -2697,7 +3043,29 @@
     }
    ],
    "explain": "The 2013 Rana Plaza factory collapse in Bangladesh led to stronger safety campaigns.",
-   "hook": "The jobs and skills stay; the profits often fly home."
+   "hook": "The jobs and skills stay; the profits often fly home.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Advantages",
+     "Disadvantages"
+    ],
+    "rows": [
+     [
+      "jobs for local people",
+      "profits may go back to the home country"
+     ],
+     [
+      "new skills",
+      "factories can be unsafe (Rana Plaza, Bangladesh, 2013)"
+     ],
+     [
+      "better roads and power supplies",
+      "jobs can be low-paid"
+     ]
+    ],
+    "caption": "A TNC opening a factory in a lower-income country."
+   }
   },
   {
    "id": "geography.gb.fair",
@@ -3083,7 +3451,17 @@
     }
    ],
    "explain": "The taiga is the largest forest on Earth.",
-   "hook": "Heading north: grass (steppe), then trees (taiga), then too cold for trees (tundra)."
+   "hook": "Heading north: grass (steppe), then trees (taiga), then too cold for trees (tundra).",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "steppe (grassland)",
+     "taiga (forest)",
+     "tundra (too cold for trees)"
+    ],
+    "caption": "Travelling north through Russia."
+   }
   },
   {
    "id": "geography.ru.resources",
@@ -4779,7 +5157,34 @@
     "3"
    ],
    "explain": "Order them: 0, 1, 2, 3, 15. The middle value is 2. (The mean, 4.2, is dragged up by the one wet day.)",
-   "hook": "The median is in the middle, like the central reservation down the middle of a motorway."
+   "hook": "The median is in the middle, like the central reservation down the middle of a motorway.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "0"
+       ],
+       [
+        "1"
+       ],
+       [
+        "2",
+        "object",
+        "median"
+       ],
+       [
+        "3"
+       ],
+       [
+        "15"
+       ]
+      ]
+     }
+    ],
+    "caption": "In order, the middle value is the median. The mean (4.2) is dragged up by the one wet day."
+   }
   },
   {
    "id": "geography.nm.mean",

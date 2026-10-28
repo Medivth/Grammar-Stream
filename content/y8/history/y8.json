@@ -11,6 +11,36 @@
    "intro": "In about 508 BC the Athenians began an experiment: government by the citizens themselves. It was the world’s first democracy, but “the people” meant far fewer people than you might think.",
    "teach": "Explain how Athenian democracy was different from democracy in Britain today.",
    "talk": "Ask {him} who could NOT vote in Athens, and whether that makes it a real democracy.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Living in Athens",
+     "Could vote?"
+    ],
+    "rows": [
+     [
+      "Adult male citizens",
+      "**yes**, rich or poor"
+     ],
+     [
+      "Women",
+      "no"
+     ],
+     [
+      "Children",
+      "no"
+     ],
+     [
+      "Metics (foreign residents)",
+      "no"
+     ],
+     [
+      "Enslaved people",
+      "no"
+     ]
+    ],
+    "caption": "Perhaps only 10–20% of the people of Athens could vote, but those who could voted on laws themselves."
+   },
    "hook": "**Demos** + **kratos** = people + power: Athens began rule by the people in about **508 BC**."
   },
   {
@@ -24,6 +54,31 @@
    "intro": "Sparta was Athens’ great rival: ruled by two kings, its boys trained for war from the age of seven, and its economy rested on the forced labour of the helots.",
    "teach": "Explain why Sparta needed such a powerful army.",
    "talk": "Ask {him} whether {she} would rather have grown up in Athens or Sparta, and why.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Two kings",
+     "note": "with a council of elders and the ephors",
+     "c": [
+      {
+       "n": "Spartiates",
+       "note": "citizens: full-time soldiers",
+       "c": [
+        {
+         "n": "Perioikoi",
+         "note": "free, but not citizens: traders and craftsmen",
+         "c": [
+          {
+           "n": "Helots",
+           "note": "enslaved; farmed the land; far more numerous"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
    "hook": "Spartans were famous for saying little: our word **laconic** comes from Laconia, their homeland."
   },
   {
@@ -38,6 +93,31 @@
    "intro": "Twice the vast Persian Empire invaded Greece, and twice the quarrelsome Greek cities beat it: at Marathon in 490 BC, and at Salamis and Plataea in 480–479 BC.",
    "teach": "Explain why the Greeks won at Salamis even though the Persian fleet was larger.",
    "talk": "Ask {him} what Herodotus is famous for, and why historians call him the “father of history”.",
+   "visual": {
+    "kind": "timeline",
+    "from": -510,
+    "to": -470,
+    "set": "greece",
+    "events": [
+     [
+      -508,
+      "Democracy begins in Athens"
+     ],
+     [
+      -490,
+      "Marathon"
+     ],
+     [
+      -480,
+      "Thermopylae and Salamis"
+     ],
+     [
+      -479,
+      "Plataea"
+     ]
+    ],
+    "caption": "In BC dates, bigger numbers are earlier."
+   },
    "hook": "**490** Marathon, **480** Thermopylae and Salamis, **479** Plataea: in BC the numbers shrink as time goes on."
   },
   {
@@ -51,6 +131,31 @@
    "intro": "Alexander of Macedon became king at 20 and in thirteen years built an empire from Greece to India. His conquests spread Greek language and ideas across the known world.",
    "teach": "Explain one reason why Alexander’s empire broke up so quickly after his death.",
    "talk": "Ask {him} what Alexander had in common with the heroes of Greek myth.",
+   "visual": {
+    "kind": "timeline",
+    "from": -360,
+    "to": -320,
+    "set": "greece",
+    "events": [
+     [
+      -356,
+      "Alexander born"
+     ],
+     [
+      -336,
+      "King of Macedon, aged 20"
+     ],
+     [
+      -331,
+      "Founds Alexandria"
+     ],
+     [
+      -323,
+      "Dies in Babylon, aged 32"
+     ]
+    ],
+    "caption": "Thirteen years as king, from Greece to India."
+   },
    "hook": "King at **20**, dead at **32**: in thirteen years Alexander built an empire from Greece to India."
   },
   {
@@ -62,6 +167,32 @@
    "intro": "After 1066 a few thousand Normans ruled about two million English people. Castles, the feudal system, the Domesday Book and the Church all helped them keep control.",
    "teach": "Explain how the feudal system helped William keep control.",
    "talk": "Ask {him} why the murder of Thomas Becket shocked medieval Europe.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "The king",
+     "note": "owns all the land",
+     "c": [
+      {
+       "n": "Barons and bishops",
+       "note": "land, for loyalty and knights",
+       "c": [
+        {
+         "n": "Knights",
+         "note": "land, for fighting",
+         "c": [
+          {
+           "n": "Peasants (villeins)",
+           "note": "work the lord’s land, tied to it"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "The feudal system: land passed down, loyalty and service passed up."
+   },
    "hook": "The Norman toolkit: **castles** to frighten, **feudal** land to reward, **Domesday** to count, the **Church** to teach."
   },
   {
@@ -88,6 +219,17 @@
    "intro": "In 1348 the plague reached England and killed perhaps a third to a half of the people. The survivors found their labour was suddenly precious, and in 1381 the peasants rose up.",
    "teach": "Explain how the Black Death helped cause the Peasants’ Revolt.",
    "talk": "Ask {him} what medieval people thought caused the plague, and what really did.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Black Death, 1348: a third to a half die",
+     "Labour is scarce: peasants demand higher wages",
+     "Statute of Labourers (1351) tries to freeze wages",
+     "Anger at low wages and serfdom grows",
+     "A third poll tax, on everyone over 15",
+     "The Peasants’ Revolt, 1381"
+    ]
+   },
    "hook": "**1348** plague, **1351** wages frozen, **1381** revolt: death, then anger, then rebellion."
   },
   {
@@ -101,6 +243,61 @@
    "intro": "In sixteenth-century Europe the Church split into Catholic and Protestant. In England, Henry VIII broke with Rome, and his three children took the country in three different religious directions.",
    "teach": "Explain why Henry VIII broke with the Catholic Church.",
    "talk": "Ask {him} what the “middle way” of Elizabeth I was.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Henry VIII",
+     "note": "r. 1509–47",
+     "c": [
+      {
+       "n": "Catherine of Aragon",
+       "note": "marriage annulled",
+       "c": [
+        {
+         "n": "Mary I",
+         "note": "r. 1553–58",
+         "mark": true
+        }
+       ]
+      },
+      {
+       "n": "Anne Boleyn",
+       "note": "beheaded",
+       "c": [
+        {
+         "n": "Elizabeth I",
+         "note": "r. 1558–1603",
+         "mark": true
+        }
+       ]
+      },
+      {
+       "n": "Jane Seymour",
+       "note": "died",
+       "c": [
+        {
+         "n": "Edward VI",
+         "note": "r. 1547–53",
+         "mark": true
+        }
+       ]
+      },
+      {
+       "n": "Anne of Cleves",
+       "note": "marriage annulled"
+      },
+      {
+       "n": "Catherine Howard",
+       "note": "beheaded"
+      },
+      {
+       "n": "Catherine Parr",
+       "note": "survived"
+      }
+     ]
+    },
+    "caption": "Six wives: divorced, beheaded, died; divorced, beheaded, survived (the “divorces” were annulments). His children reigned in turn: Edward, Mary, Elizabeth."
+   },
    "hook": "“Divorced, beheaded, died; divorced, beheaded, survived”: Henry VIII’s six wives, and his break with Rome."
   },
   {
@@ -114,6 +311,38 @@
    "intro": "A king who believed God had chosen him clashed with a Parliament that controlled the money. The result was civil war, a king’s execution, eleven years without a monarch, and in 1688 a revolution that put Parliament in charge.",
    "teach": "Explain the main causes of the English Civil War.",
    "talk": "Ask {him} whether Oliver Cromwell was a hero or a villain.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1600,
+    "to": 1700,
+    "set": "britain",
+    "events": [
+     [
+      1605,
+      "Gunpowder Plot"
+     ],
+     [
+      1642,
+      "Civil War begins"
+     ],
+     [
+      1649,
+      "Charles I executed"
+     ],
+     [
+      1653,
+      "Cromwell becomes Lord Protector"
+     ],
+     [
+      1660,
+      "Restoration: Charles II"
+     ],
+     [
+      1688,
+      "Glorious Revolution"
+     ]
+    ]
+   },
    "hook": "**42** war begins, **49** a king beheaded, **60** a king restored, **88** a king replaced: the 1600s in four dates."
   },
   {
@@ -127,6 +356,17 @@
    "intro": "Enlightenment thinkers argued that reason, not tradition, should decide how people are governed. In 1789 France put the idea into practice, with dramatic and violent results.",
    "teach": "Explain how Enlightenment ideas helped cause the French Revolution.",
    "talk": "Ask {him} what “Liberty, Equality, Fraternity” means.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Enlightenment ideas: reason, not tradition",
+     "France nearly bankrupt; bread very dear",
+     "The Bastille stormed, 14 July 1789",
+     "Louis XVI guillotined, January 1793",
+     "The Reign of Terror, 1793–94",
+     "Napoleon seizes power, 1799"
+    ]
+   },
    "hook": "**Liberté, égalité, fraternité**: Enlightenment ideas of reason and rights, taken onto the streets of Paris in 1789."
   },
   {
@@ -140,6 +380,38 @@
    "intro": "From about 1750, Britain became the first country to industrialise: steam power, factories, canals and railways transformed how people lived and worked, for better and for worse.",
    "teach": "Explain why Britain industrialised first.",
    "talk": "Ask {him} what life was like for a child working in a cotton mill around 1800.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1750,
+    "to": 1860,
+    "set": "britain",
+    "events": [
+     [
+      1769,
+      "Watt patents his steam engine"
+     ],
+     [
+      1771,
+      "Arkwright’s mill at Cromford"
+     ],
+     [
+      1811,
+      "Luddites smash machines"
+     ],
+     [
+      1830,
+      "Liverpool to Manchester railway"
+     ],
+     [
+      1833,
+      "Factory Act"
+     ],
+     [
+      1854,
+      "Snow and the Broad Street pump"
+     ]
+    ]
+   },
    "hook": "**Coal, cotton, canals and railways**: steam power made Britain the “workshop of the world”."
   },
   {
@@ -153,6 +425,16 @@
    "intro": "Britain built the largest empire in history. For more than two centuries part of its wealth came from the transatlantic trade in enslaved Africans, until enslaved people’s resistance and a long campaign brought it to an end.",
    "teach": "Explain the different groups who helped bring about abolition, including enslaved people themselves.",
    "talk": "Ask {him} why the British government paid compensation to slave owners but not to the people who had been enslaved.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "Goods from Britain to Africa",
+     "Enslaved people to the Americas",
+     "Sugar and cotton to Britain"
+    ],
+    "centre": "the triangular trade",
+    "caption": "The voyage of enslaved Africans across the Atlantic was the Middle Passage. About 12 million people were forced onto the ships."
+   },
    "hook": "**1807** the trade banned, **1833** slavery itself abolished: the trade ended first, slavery later."
   },
   {
@@ -166,6 +448,43 @@
    "intro": "In 1830 only about one adult man in ten could vote, and no women. A century of campaigning, from the Chartists to the suffragists and suffragettes, changed that.",
    "teach": "Explain the difference between the suffragists and the suffragettes.",
    "talk": "Ask {him} which was more effective: peaceful persuasion or direct action?",
+   "visual": {
+    "kind": "timeline",
+    "from": 1825,
+    "to": 1935,
+    "set": "britain",
+    "events": [
+     [
+      1832,
+      "Great Reform Act"
+     ],
+     [
+      1838,
+      "The Chartists begin"
+     ],
+     [
+      1867,
+      "Second Reform Act"
+     ],
+     [
+      1884,
+      "Third Reform Act"
+     ],
+     [
+      1903,
+      "WSPU founded"
+     ],
+     [
+      1918,
+      "Women over 30 (with property)"
+     ],
+     [
+      1928,
+      "Equal votes at 21"
+     ]
+    ],
+    "caption": "Step by step: in 1830 only about one man in ten could vote, and no women."
+   },
    "hook": "From **1832** to **1928**: almost a century, from a few men voting to every adult at 21."
   },
   {
@@ -179,6 +498,17 @@
    "intro": "The war that began in 1914 was fought on an industrial scale. Millions served in the trenches, women took on new work at home, and the world that came out of it in 1918 was very different.",
    "teach": "Explain the long-term causes of the First World War (militarism, alliances, imperialism, nationalism).",
    "talk": "On Remembrance Sunday, talk with {him} about why we still remember the war.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Long-term causes: militarism, alliances, imperialism, nationalism",
+     "Trigger: Franz Ferdinand shot, 28 June 1914",
+     "Germany invades Belgium",
+     "Britain declares war, 4 August 1914",
+     "Trench warfare on the Western Front",
+     "Armistice: 11 a.m., 11 November 1918"
+    ]
+   },
    "hook": "**MAIN** causes: Militarism, Alliances, Imperialism, Nationalism; the shots at Sarajevo were the spark."
   },
   {
@@ -192,6 +522,19 @@
    "intro": "From 1939 to 1945 the world was at war again. In the shadow of the war, Nazi Germany murdered six million Jews and persecuted many others: the Holocaust. We study it to remember the victims and to understand how it could happen.",
    "teach": "Explain how Nazi persecution of Jewish people grew step by step from 1933.",
    "talk": "Ask {him} why Holocaust Memorial Day is held on 27 January.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Germany invades Poland, 1 September 1939",
+     "Britain and France declare war",
+     "Dunkirk and the Battle of Britain, 1940",
+     "Pearl Harbor brings in the USA, 1941",
+     "A German army destroyed at Stalingrad, 1942–43",
+     "D-Day landings, June 1944",
+     "VE Day, 8 May 1945"
+    ],
+    "caption": "In the shadow of the war, Nazi Germany murdered six million Jews: the Holocaust."
+   },
    "hook": "**1939–1945**: six years of war. Every **27 January**, Holocaust Memorial Day remembers the victims."
   },
   {
@@ -203,6 +546,34 @@
    "intro": "Historians don’t just know facts. They explain causes and consequences, judge change and significance, and question their sources: who made this, when, and why?",
    "teach": "Explain what “provenance” means and why it matters.",
    "talk": "Show {him} a newspaper headline and ask what its purpose is, and whether that makes it unreliable.",
+   "visual": {
+    "kind": "timeline",
+    "from": -500,
+    "to": 500,
+    "events": [
+     [
+      -490,
+      "Battle of Marathon"
+     ],
+     [
+      -323,
+      "Alexander dies"
+     ],
+     [
+      -44,
+      "Julius Caesar killed"
+     ],
+     [
+      43,
+      "Romans invade Britain"
+     ],
+     [
+      410,
+      "Romans leave Britain"
+     ]
+    ],
+    "caption": "BC years count down towards 1 BC; AD years count up from AD 1. There is no year 0."
+   },
    "hook": "**NOP**: Nature, Origin, Purpose: three questions to ask of every source."
   },
   {
@@ -231,6 +602,43 @@
    "teach": "Explain why the Cuban Missile Crisis was the most dangerous moment of the Cold War.",
    "talk": "Ask {him} why it was called a “cold” war.",
    "tier": "stretch",
+   "visual": {
+    "kind": "timeline",
+    "from": 1940,
+    "to": 1995,
+    "set": "twentieth",
+    "mark": "Cold War",
+    "events": [
+     [
+      1946,
+      "“Iron curtain” speech"
+     ],
+     [
+      1948,
+      "Berlin Airlift"
+     ],
+     [
+      1957,
+      "Sputnik"
+     ],
+     [
+      1961,
+      "Berlin Wall built"
+     ],
+     [
+      1962,
+      "Cuban Missile Crisis"
+     ],
+     [
+      1989,
+      "Berlin Wall falls"
+     ],
+     [
+      1991,
+      "USSR breaks up"
+     ]
+    ]
+   },
    "hook": "**Cold** because the superpowers never fought each other directly; the Berlin Wall went up in **1961** and fell in **1989**."
   },
   {
@@ -245,6 +653,31 @@
    "teach": "Explain how Greek learning reached medieval Europe through the Islamic world.",
    "talk": "Ask {him} which English words come from Arabic (algebra, algorithm, alchemy…).",
    "tier": "stretch",
+   "visual": {
+    "kind": "timeline",
+    "from": 700,
+    "to": 1300,
+    "set": "britain",
+    "events": [
+     [
+      762,
+      "Baghdad founded"
+     ],
+     [
+      1025,
+      "Ibn Sina’s Canon of Medicine"
+     ],
+     [
+      1066,
+      "Meanwhile: Normans conquer England"
+     ],
+     [
+      1258,
+      "Mongols sack Baghdad"
+     ]
+    ],
+    "caption": "Baghdad’s golden age set against Britain’s own history."
+   },
    "hook": "**Al-jabr** gave us algebra and **al-Khwarizmi** gave us algorithm: Baghdad’s House of Wisdom lives on in our maths words."
   }
  ],
@@ -309,6 +742,36 @@
     }
    ],
    "explain": "Perhaps only 10–20% of the people of Athens were adult male citizens.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Living in Athens",
+     "Could vote?"
+    ],
+    "rows": [
+     [
+      "Adult male citizens",
+      "**yes**, rich or poor"
+     ],
+     [
+      "Women",
+      "no"
+     ],
+     [
+      "Children",
+      "no"
+     ],
+     [
+      "Metics (foreign residents)",
+      "no"
+     ],
+     [
+      "Enslaved people",
+      "no"
+     ]
+    ],
+    "caption": "Perhaps only 10–20% of the people of Athens could vote, but those who could voted on laws themselves."
+   },
    "hook": "Not women, not slaves, not metics: only adult male **citizens**, perhaps one person in ten to one in five."
   },
   {
@@ -497,6 +960,31 @@
    "formats": [
     "choice"
    ],
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Two kings",
+     "note": "with a council of elders and the ephors",
+     "c": [
+      {
+       "n": "Spartiates",
+       "note": "citizens: full-time soldiers",
+       "c": [
+        {
+         "n": "Perioikoi",
+         "note": "free, but not citizens: traders and craftsmen",
+         "c": [
+          {
+           "n": "Helots",
+           "note": "enslaved; farmed the land; far more numerous"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
    "hook": "Herodotus says seven helots marched beside each Spartan at Plataea: a clue to how many there were."
   },
   {
@@ -521,6 +1009,31 @@
     }
    ],
    "explain": "Sparta mixed kingship, an elite council and elected officials: rule by the few.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Two kings",
+     "note": "with a council of elders and the ephors",
+     "c": [
+      {
+       "n": "Spartiates",
+       "note": "citizens: full-time soldiers",
+       "c": [
+        {
+         "n": "Perioikoi",
+         "note": "free, but not citizens: traders and craftsmen",
+         "c": [
+          {
+           "n": "Helots",
+           "note": "enslaved; farmed the land; far more numerous"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
    "hook": "**Two** kings so neither could rule alone, plus five elected **ephors** to keep watch on them."
   },
   {
@@ -629,6 +1142,31 @@
     "490",
     "490bc"
    ],
+   "visual": {
+    "kind": "timeline",
+    "from": -510,
+    "to": -470,
+    "set": "greece",
+    "events": [
+     [
+      -508,
+      "Democracy begins in Athens"
+     ],
+     [
+      -490,
+      "Marathon"
+     ],
+     [
+      -480,
+      "Thermopylae and Salamis"
+     ],
+     [
+      -479,
+      "Plataea"
+     ]
+    ],
+    "caption": "In BC dates, bigger numbers are earlier."
+   },
    "hook": "**490 BC** Marathon; ten years later, in **480**, the Persians came back for revenge.",
    "example": "Marathon races are named after the battle; the 2004 Athens Olympic marathon started at Marathon itself."
   },
@@ -997,6 +1535,32 @@
     }
    ],
    "explain": "Land was exchanged for loyalty and service: king, barons, knights, peasants.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "The king",
+     "note": "owns all the land",
+     "c": [
+      {
+       "n": "Barons and bishops",
+       "note": "land, for loyalty and knights",
+       "c": [
+        {
+         "n": "Knights",
+         "note": "land, for fighting",
+         "c": [
+          {
+           "n": "Peasants (villeins)",
+           "note": "work the lord’s land, tied to it"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "The feudal system: land passed down, loyalty and service passed up."
+   },
    "hook": "Picture a **pyramid**: king at the top, then barons, knights, and peasants at the base. Land goes down, loyalty goes up."
   },
   {
@@ -1389,6 +1953,17 @@
     }
    ],
    "explain": "The government tried to freeze wages with the Statute of Labourers (1351), which caused resentment.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Black Death, 1348: a third to a half die",
+     "Labour is scarce: peasants demand higher wages",
+     "Statute of Labourers (1351) tries to freeze wages",
+     "Anger at low wages and serfdom grows",
+     "A third poll tax, on everyone over 15",
+     "The Peasants’ Revolt, 1381"
+    ]
+   },
    "hook": "Fewer workers = each worker worth more: scarce things cost more.",
    "example": "Today too, when employers cannot find enough workers, wages tend to rise."
   },
@@ -1428,6 +2003,17 @@
     }
    ],
    "explain": "Long-term causes included anger over wages and serfdom; the poll tax was the spark.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Black Death, 1348: a third to a half die",
+     "Labour is scarce: peasants demand higher wages",
+     "Statute of Labourers (1351) tries to freeze wages",
+     "Anger at low wages and serfdom grows",
+     "A third poll tax, on everyone over 15",
+     "The Peasants’ Revolt, 1381"
+    ]
+   },
    "hook": "**Poll** is an old word for **head**: a tax on every head, the same for rich and poor.",
    "example": "A new “poll tax” in 1990 also caused huge protests: history echoing 1381."
   },
@@ -1531,6 +2117,61 @@
     }
    ],
    "explain": "The break was about Henry’s marriage, his need for a son, power and money, more than belief.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Henry VIII",
+     "note": "r. 1509–47",
+     "c": [
+      {
+       "n": "Catherine of Aragon",
+       "note": "marriage annulled",
+       "c": [
+        {
+         "n": "Mary I",
+         "note": "r. 1553–58",
+         "mark": true
+        }
+       ]
+      },
+      {
+       "n": "Anne Boleyn",
+       "note": "beheaded",
+       "c": [
+        {
+         "n": "Elizabeth I",
+         "note": "r. 1558–1603",
+         "mark": true
+        }
+       ]
+      },
+      {
+       "n": "Jane Seymour",
+       "note": "died",
+       "c": [
+        {
+         "n": "Edward VI",
+         "note": "r. 1547–53",
+         "mark": true
+        }
+       ]
+      },
+      {
+       "n": "Anne of Cleves",
+       "note": "marriage annulled"
+      },
+      {
+       "n": "Catherine Howard",
+       "note": "beheaded"
+      },
+      {
+       "n": "Catherine Parr",
+       "note": "survived"
+      }
+     ]
+    },
+    "caption": "Six wives: divorced, beheaded, died; divorced, beheaded, survived (the “divorces” were annulments). His children reigned in turn: Edward, Mary, Elizabeth."
+   },
    "hook": "No son → Henry wants an annulment → the Pope says no → Henry makes himself head of his own Church."
   },
   {
@@ -1595,6 +2236,61 @@
    ],
    "explain": "Henry’s three children ruled in turn: Edward, Mary, then Elizabeth.",
    "axis": "time",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Henry VIII",
+     "note": "r. 1509–47",
+     "c": [
+      {
+       "n": "Catherine of Aragon",
+       "note": "marriage annulled",
+       "c": [
+        {
+         "n": "Mary I",
+         "note": "r. 1553–58",
+         "mark": true
+        }
+       ]
+      },
+      {
+       "n": "Anne Boleyn",
+       "note": "beheaded",
+       "c": [
+        {
+         "n": "Elizabeth I",
+         "note": "r. 1558–1603",
+         "mark": true
+        }
+       ]
+      },
+      {
+       "n": "Jane Seymour",
+       "note": "died",
+       "c": [
+        {
+         "n": "Edward VI",
+         "note": "r. 1547–53",
+         "mark": true
+        }
+       ]
+      },
+      {
+       "n": "Anne of Cleves",
+       "note": "marriage annulled"
+      },
+      {
+       "n": "Catherine Howard",
+       "note": "beheaded"
+      },
+      {
+       "n": "Catherine Parr",
+       "note": "survived"
+      }
+     ]
+    },
+    "caption": "Six wives: divorced, beheaded, died; divorced, beheaded, survived (the “divorces” were annulments). His children reigned in turn: Edward, Mary, Elizabeth."
+   },
    "hook": "Boys came first in Tudor law: young **Edward** reigned before his older sisters, **Mary** and then **Elizabeth**."
   },
   {
@@ -2254,6 +2950,16 @@
     }
    ],
    "explain": "Each leg made profits for British merchants, built on the suffering of enslaved people.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "Goods from Britain to Africa",
+     "Enslaved people to the Americas",
+     "Sugar and cotton to Britain"
+    ],
+    "centre": "the triangular trade",
+    "caption": "The voyage of enslaved Africans across the Atlantic was the Middle Passage. About 12 million people were forced onto the ships."
+   },
    "hook": "Trace the **triangle**: Britain → Africa → the Americas → Britain, with a profit at each corner.",
    "example": "The International Slavery Museum in Liverpool, once a major slaving port, tells this story."
   },
@@ -2272,6 +2978,16 @@
    "formats": [
     "choice"
    ],
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "Goods from Britain to Africa",
+     "Enslaved people to the Americas",
+     "Sugar and cotton to Britain"
+    ],
+    "centre": "the triangular trade",
+    "caption": "The voyage of enslaved Africans across the Atlantic was the Middle Passage. About 12 million people were forced onto the ships."
+   },
    "hook": "The **Middle** Passage was the middle side of the triangle: Africa to the Americas."
   },
   {
@@ -2346,6 +3062,16 @@
     "1865"
    ],
    "explain": "The trade was banned in 1807; slavery itself in the British Empire was abolished by the 1833 Act.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "1789: Equiano’s autobiography",
+     "1807: Britain bans the slave trade",
+     "1831: rebellion in Jamaica",
+     "1833: Slavery Abolition Act"
+    ],
+    "caption": "Enslaved people’s resistance and a long campaign in Britain ended it. In 1833 slave owners, not the enslaved, were paid compensation."
+   },
    "hook": "**Trade** first (1807), **slavery** itself later (1833): stopping the ships came before freeing the people."
   },
   {
@@ -2363,6 +3089,16 @@
    "formats": [
     "choice"
    ],
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "1789: Equiano’s autobiography",
+     "1807: Britain bans the slave trade",
+     "1831: rebellion in Jamaica",
+     "1833: Slavery Abolition Act"
+    ],
+    "caption": "Enslaved people’s resistance and a long campaign in Britain ended it. In 1833 slave owners, not the enslaved, were paid compensation."
+   },
    "hook": "Passed **1833**, in force **1834**, “apprenticeship” ended **1838**: one long road to freedom.",
    "example": "Emancipation Day, 1 August, is still a public holiday in Jamaica and other Caribbean countries."
   },
@@ -2413,6 +3149,16 @@
     }
    ],
    "explain": "Historians now stress that abolition was won by enslaved people as well as by British campaigners.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "1789: Equiano’s autobiography",
+     "1807: Britain bans the slave trade",
+     "1831: rebellion in Jamaica",
+     "1833: Slavery Abolition Act"
+    ],
+    "caption": "Enslaved people’s resistance and a long campaign in Britain ended it. In 1833 slave owners, not the enslaved, were paid compensation."
+   },
    "hook": "**Haiti** (1791–1804) and **Sharpe** in Jamaica (1831): enslaved people fought for their own freedom.",
    "example": "Samuel Sharpe is a National Hero of Jamaica, and Sam Sharpe Square in Montego Bay is named after him."
   },
@@ -2538,6 +3284,33 @@
     }
    ],
    "explain": "Millicent Fawcett led the suffragists (NUWSS); Emmeline Pankhurst the suffragettes (WSPU).",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Suffragists (NUWSS)",
+     "Suffragettes (WSPU)"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "Leader",
+      "Millicent Fawcett",
+      "Emmeline Pankhurst"
+     ],
+     [
+      "Founded",
+      "1897",
+      "1903"
+     ],
+     [
+      "Tactics",
+      "peaceful: petitions, marches, meetings",
+      "direct action: “Deeds not words”"
+     ]
+    ],
+    "caption": "Both wanted votes for women; they disagreed about how to win them."
+   },
    "hook": "Suffra**gists** were gentle; suffra**gettes** got going with direct action."
   },
   {
@@ -2716,6 +3489,17 @@
     }
    ],
    "explain": "Long-term causes made war likely; the assassination was the spark.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Long-term causes: militarism, alliances, imperialism, nationalism",
+     "Trigger: Franz Ferdinand shot, 28 June 1914",
+     "Germany invades Belgium",
+     "Britain declares war, 4 August 1914",
+     "Trench warfare on the Western Front",
+     "Armistice: 11 a.m., 11 November 1918"
+    ]
+   },
    "hook": "**MAIN**: Militarism, Alliances, Imperialism, Nationalism, the four long-term causes."
   },
   {
@@ -2740,6 +3524,17 @@
     }
    ],
    "explain": "The 1839 Treaty of London guaranteed Belgian neutrality.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Long-term causes: militarism, alliances, imperialism, nationalism",
+     "Trigger: Franz Ferdinand shot, 28 June 1914",
+     "Germany invades Belgium",
+     "Britain declares war, 4 August 1914",
+     "Trench warfare on the Western Front",
+     "Armistice: 11 a.m., 11 November 1918"
+    ]
+   },
    "hook": "A “**scrap of paper**”: the German Chancellor’s scornful name for the 1839 treaty that brought Britain in."
   },
   {
@@ -2983,6 +3778,19 @@
     }
    ],
    "explain": "American industry and soldiers transformed the war.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Germany invades Poland, 1 September 1939",
+     "Britain and France declare war",
+     "Dunkirk and the Battle of Britain, 1940",
+     "Pearl Harbor brings in the USA, 1941",
+     "A German army destroyed at Stalingrad, 1942–43",
+     "D-Day landings, June 1944",
+     "VE Day, 8 May 1945"
+    ],
+    "caption": "In the shadow of the war, Nazi Germany murdered six million Jews: the Holocaust."
+   },
    "hook": "**7 December 1941**: President Roosevelt called it “a date which will live in infamy”."
   },
   {
@@ -3153,6 +3961,32 @@
     "11th century",
     "eleventh century"
    ],
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Years",
+     "Century"
+    ],
+    "rows": [
+     [
+      "1–100",
+      "1st century"
+     ],
+     [
+      "1001–1100",
+      "**11th** century: 1066 is here"
+     ],
+     [
+      "1901–2000",
+      "20th century"
+     ],
+     [
+      "2001–2100",
+      "21st century"
+     ]
+    ],
+    "caption": "The century number is one more than the hundreds: the 1000s are the 11th century."
+   },
    "hook": "**Add one** to the hundreds: 1066 → 10 + 1 = the 11th century."
   },
   {
@@ -3177,6 +4011,34 @@
     }
    ],
    "explain": "BC years count backwards: 490 BC came 167 years before 323 BC.",
+   "visual": {
+    "kind": "timeline",
+    "from": -500,
+    "to": 500,
+    "events": [
+     [
+      -490,
+      "Battle of Marathon"
+     ],
+     [
+      -323,
+      "Alexander dies"
+     ],
+     [
+      -44,
+      "Julius Caesar killed"
+     ],
+     [
+      43,
+      "Romans invade Britain"
+     ],
+     [
+      410,
+      "Romans leave Britain"
+     ]
+    ],
+    "caption": "BC years count down towards 1 BC; AD years count up from AD 1. There is no year 0."
+   },
    "hook": "BC counts **down**, like a rocket countdown: the bigger number comes first."
   },
   {

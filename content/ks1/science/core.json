@@ -13,7 +13,43 @@
    ],
    "intro": "Scientists sort animals into groups: mammals, birds, fish, reptiles and amphibians. Each group has special features.",
    "teach": "Explain how you know a dolphin is a mammal, not a fish.",
-   "talk": "At the zoo or in a book, ask {him} which group each animal belongs to."
+   "talk": "At the zoo or in a book, ask {him} which group each animal belongs to.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Group",
+     "Look for",
+     "For example"
+    ],
+    "rows": [
+     [
+      "mammals",
+      "hair or fur; babies drink milk",
+      "dog, bat, whale"
+     ],
+     [
+      "birds",
+      "feathers, wings, a beak",
+      "robin, penguin"
+     ],
+     [
+      "fish",
+      "scales, gills, live in water",
+      "goldfish, shark"
+     ],
+     [
+      "reptiles",
+      "dry, scaly skin",
+      "snake, crocodile"
+     ],
+     [
+      "amphibians",
+      "smooth, damp skin",
+      "frog, newt"
+     ]
+    ],
+    "tint": "rows"
+   }
   },
   {
    "id": "science.food",
@@ -25,7 +61,39 @@
    "batch": 5,
    "intro": "Carnivores eat meat, herbivores eat plants, and omnivores eat both. A food chain shows who eats whom.",
    "teach": "Explain a food chain that starts with grass.",
-   "talk": "Ask {him} whether {she} is a carnivore, herbivore or omnivore."
+   "talk": "Ask {him} whether {she} is a carnivore, herbivore or omnivore.",
+   "visual": [
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "grass",
+      "rabbit",
+      "fox"
+     ],
+     "caption": "A food chain. Each arrow means “is eaten by”. It always starts with a plant."
+    },
+    {
+     "kind": "tree",
+     "root": {
+      "n": "What do animals eat?",
+      "c": [
+       {
+        "n": "Herbivores",
+        "note": "only plants: rabbit, cow"
+       },
+       {
+        "n": "Carnivores",
+        "note": "only meat: lion, owl"
+       },
+       {
+        "n": "Omnivores",
+        "note": "plants and meat: bear, pig"
+       }
+      ]
+     }
+    }
+   ]
   },
   {
    "id": "science.body",
@@ -35,7 +103,38 @@
    "batch": 5,
    "intro": "Our bodies need food, water, exercise, sleep and clean hands to stay healthy. Our five senses tell us about the world.",
    "teach": "Explain why we wash our hands.",
-   "talk": "Ask {him} which sense {she} would least like to lose, and why."
+   "talk": "Ask {him} which sense {she} would least like to lose, and why.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Sense",
+     "We use our…"
+    ],
+    "rows": [
+     [
+      "sight",
+      "eyes"
+     ],
+     [
+      "hearing",
+      "ears"
+     ],
+     [
+      "smell",
+      "nose"
+     ],
+     [
+      "taste",
+      "tongue"
+     ],
+     [
+      "touch",
+      "skin"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "Our five senses."
+   }
   },
   {
    "id": "science.lifecycles",
@@ -47,7 +146,29 @@
    "batch": 5,
    "intro": "Animals grow and change. A caterpillar becomes a butterfly; frogspawn becomes a frog; babies become grown-ups.",
    "teach": "Explain the life cycle of a butterfly.",
-   "talk": "Look at baby photos together and talk about how {she} has changed."
+   "talk": "Look at baby photos together and talk about how {she} has changed.",
+   "visual": [
+    {
+     "kind": "cycle",
+     "steps": [
+      "egg",
+      "caterpillar",
+      "chrysalis",
+      "butterfly"
+     ],
+     "centre": "butterfly"
+    },
+    {
+     "kind": "cycle",
+     "steps": [
+      "frogspawn",
+      "tadpole",
+      "froglet",
+      "frog"
+     ],
+     "centre": "frog"
+    }
+   ]
   },
   {
    "id": "science.plants",
@@ -69,7 +190,27 @@
    "batch": 5,
    "intro": "A habitat is the home where an animal or plant lives. It gives them food, water and shelter.",
    "teach": "Explain why a polar bear could not live in a desert.",
-   "talk": "Look under a log or stone together for minibeasts."
+   "talk": "Look under a log or stone together for minibeasts.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Habitats",
+     "c": [
+      {
+       "n": "Icy Arctic",
+       "note": "polar bear"
+      },
+      {
+       "n": "Hot desert",
+       "note": "camel"
+      },
+      {
+       "n": "Ocean",
+       "note": "shark"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "science.materials",
@@ -79,7 +220,43 @@
    "batch": 5,
    "intro": "Everything is made from materials: wood, metal, plastic, glass, rock, fabric. We choose materials because of what they are like.",
    "teach": "Explain why windows are made of glass, not wood.",
-   "talk": "Ask {him} what {her} raincoat is made of and why."
+   "talk": "Ask {him} what {her} raincoat is made of and why.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Material",
+     "What it is like",
+     "Good for"
+    ],
+    "rows": [
+     [
+      "glass",
+      "transparent (see-through)",
+      "windows"
+     ],
+     [
+      "metal",
+      "strong and hard",
+      "spoons, cars"
+     ],
+     [
+      "rubber",
+      "waterproof and bendy",
+      "raincoats, wellies"
+     ],
+     [
+      "wood",
+      "natural and strong",
+      "pencils, tables"
+     ],
+     [
+      "fabric",
+      "soft and bendy",
+      "clothes"
+     ]
+    ],
+    "tint": "rows"
+   }
   },
   {
    "id": "science.seasons",
@@ -89,7 +266,17 @@
    "batch": 5,
    "intro": "The year has four seasons: spring, summer, autumn and winter. Each brings different weather and different length days.",
    "teach": "Explain how the trees change through the seasons.",
-   "talk": "Ask {him} what season it is and how {she} can tell."
+   "talk": "Ask {him} what season it is and how {she} can tell.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "spring",
+     "summer",
+     "autumn",
+     "winter"
+    ],
+    "caption": "Spring: March to May. Summer: June to August (the longest days). Autumn: September to November. Winter: December to February (the shortest days)."
+   }
   },
   {
    "id": "science.space",
@@ -133,7 +320,18 @@
    "batch": 5,
    "intro": "North, south, east and west help us find our way. Hot places are near the Equator; cold places are near the North and South Poles.",
    "teach": "Explain why it is cold at the North Pole.",
-   "talk": "Use a compass app to find north from your front door."
+   "talk": "Use a compass app to find north from your front door.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "North",
+     "East",
+     "South",
+     "West"
+    ],
+    "centre": "Never Eat Shredded Wheat",
+    "caption": "Going clockwise from north: north, east, south, west."
+   }
   },
   {
    "id": "science.forces",
@@ -147,6 +345,29 @@
    "intro": "A force is a push or a pull. Racing cars slow down because of friction. Magnets can pull without even touching!",
    "teach": "Explain why a toy car goes further on a smooth floor than on carpet.",
    "talk": "Race toy cars down a ramp onto different floors.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Magnet ends",
+     "What happens"
+    ],
+    "rows": [
+     [
+      "N and S",
+      "pull together (attract)"
+     ],
+     [
+      "N and N",
+      "push apart (repel)"
+     ],
+     [
+      "S and S",
+      "push apart (repel)"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "Opposite poles attract. The same poles repel."
+   },
    "coreIn": [
     "y3"
    ]
@@ -163,6 +384,16 @@
    "intro": "Rocks are under our feet everywhere. Some hold fossils: the remains of plants and animals from millions of years ago, like dinosaurs!",
    "teach": "Explain how a fossil forms.",
    "talk": "Look for fossils on a beach or in a museum.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "An animal dies",
+     "Mud and sand bury it",
+     "Slowly, it turns to rock",
+     "Millions of years later, it is found"
+    ],
+    "caption": "How most fossils form."
+   },
    "coreIn": [
     "y3"
    ]
@@ -403,7 +634,17 @@
     "polar bear"
    ],
    "labels": null,
-   "explain": "Seaweed → fish → seal → polar bear."
+   "explain": "Seaweed → fish → seal → polar bear.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "seaweed",
+     "fish",
+     "seal",
+     "polar bear"
+    ]
+   }
   },
   {
    "id": "science.fd.start",
@@ -620,7 +861,17 @@
     "butterfly"
    ],
    "labels": null,
-   "explain": "Egg → caterpillar → chrysalis (pupa) → butterfly, which lays more eggs."
+   "explain": "Egg → caterpillar → chrysalis (pupa) → butterfly, which lays more eggs.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "egg",
+     "caterpillar",
+     "chrysalis",
+     "butterfly"
+    ],
+    "centre": "butterfly"
+   }
   },
   {
    "id": "science.lc.frog",
@@ -634,7 +885,17 @@
     "frog"
    ],
    "labels": null,
-   "explain": "Frogspawn (eggs) → tadpole → froglet (with legs) → frog."
+   "explain": "Frogspawn (eggs) → tadpole → froglet (with legs) → frog.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "frogspawn",
+     "tadpole",
+     "froglet",
+     "frog"
+    ],
+    "centre": "frog"
+   }
   },
   {
    "id": "science.lc.human",
@@ -649,7 +910,18 @@
     "adult"
    ],
    "labels": null,
-   "explain": "Baby → toddler → child → teenager → adult."
+   "explain": "Baby → toddler → child → teenager → adult.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "baby",
+     "toddler",
+     "child",
+     "teenager",
+     "adult"
+    ]
+   }
   },
   {
    "id": "science.lc.chicken",
@@ -663,7 +935,17 @@
     "hen"
    ],
    "labels": null,
-   "explain": "Egg → chick → young chicken → hen, which lays eggs."
+   "explain": "Egg → chick → young chicken → hen, which lays eggs.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "egg",
+     "chick",
+     "young chicken",
+     "hen"
+    ],
+    "centre": "chicken"
+   }
   },
   {
    "id": "science.lc.tadpole",
@@ -679,7 +961,17 @@
    "explain": "Tadpoles live in water and breathe with gills, like fish.",
    "accept": [
     "a tadpole"
-   ]
+   ],
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "frogspawn",
+     "tadpole",
+     "froglet",
+     "frog"
+    ],
+    "centre": "frog"
+   }
   },
   {
    "id": "science.lc.calf",
@@ -713,7 +1005,17 @@
     "a chrysalis",
     "pupa",
     "a pupa"
-   ]
+   ],
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "egg",
+     "caterpillar",
+     "chrysalis",
+     "butterfly"
+    ],
+    "centre": "butterfly"
+   }
   },
   {
    "id": "science.pl.roots",
@@ -868,7 +1170,27 @@
      "feedback": "Wood came from a tree, which was alive."
     }
    ],
-   "explain": "Rocks, metal and plastic have never been alive. Wood and leaves come from living things."
+   "explain": "Rocks, metal and plastic have never been alive. Wood and leaves come from living things.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Alive or not?",
+     "c": [
+      {
+       "n": "Alive now",
+       "note": "a dog, a tree"
+      },
+      {
+       "n": "Once alive",
+       "note": "a dead leaf, a wooden spoon"
+      },
+      {
+       "n": "Never alive",
+       "note": "a rock, metal"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "science.hb.polar",
@@ -1106,7 +1428,17 @@
     "winter"
    ],
    "labels": null,
-   "explain": "Spring, summer, autumn, winter, then spring again."
+   "explain": "Spring, summer, autumn, winter, then spring again.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "spring",
+     "summer",
+     "autumn",
+     "winter"
+    ],
+    "caption": "Spring: March to May. Summer: June to August (the longest days). Autumn: September to November. Winter: December to February (the shortest days)."
+   }
   },
   {
    "id": "science.ss.longest",
@@ -1218,7 +1550,21 @@
     "Jupiter"
    ],
    "labels": null,
-   "explain": "My Very Easy Method Just Speeds Up Naming planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune."
+   "explain": "My Very Easy Method Just Speeds Up Naming planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Mercury",
+     "Venus",
+     "Earth",
+     "Mars",
+     "Jupiter",
+     "Saturn",
+     "Uranus",
+     "Neptune"
+    ],
+    "caption": "The planets in order from the Sun: My Very Easy Method Just Speeds Up Naming planets."
+   }
   },
   {
    "id": "science.sp.biggest",
@@ -1714,7 +2060,18 @@
    "explain": "North, East, South, West.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "North",
+     "East",
+     "South",
+     "West"
+    ],
+    "centre": "Never Eat Shredded Wheat",
+    "caption": "Going clockwise from north: north, east, south, west."
+   }
   },
   {
    "id": "science.mp.equator",
@@ -1890,7 +2247,29 @@
      "feedback": "You can feel them pushing!"
     }
    ],
-   "explain": "Opposite poles attract; like poles repel."
+   "explain": "Opposite poles attract; like poles repel.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Magnet ends",
+     "What happens"
+    ],
+    "rows": [
+     [
+      "N and S",
+      "pull together (attract)"
+     ],
+     [
+      "N and N",
+      "push apart (repel)"
+     ],
+     [
+      "S and S",
+      "push apart (repel)"
+     ]
+    ],
+    "tint": "rows"
+   }
   },
   {
    "id": "science.fo.ramp",
@@ -1968,7 +2347,16 @@
      "feedback": "Fossils are natural."
     }
    ],
-   "explain": "Bones are buried in mud or sand; over millions of years the layers become rock."
+   "explain": "Bones are buried in mud or sand; over millions of years the layers become rock.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "An animal dies",
+     "Mud and sand bury it",
+     "Slowly, it turns to rock",
+     "Millions of years later, it is found"
+    ]
+   }
   },
   {
    "id": "science.rk.soil",

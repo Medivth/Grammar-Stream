@@ -18,6 +18,15 @@ function choice(prompt, correct, wrongs, rng, explain, steps) {
   return { kind: 'choice', prompt, options: rng.shuffle([{ text: correct, correct: true }, ...ws.map((text) => ({ text }))]), explain, steps };
 }
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+/** A Punnett square: parent 1's alleles across the top, parent 2's down the side. Each box is
+ * written dominant allele first (Bb, never bB). Empty boxes in the question (she fills them in her
+ * head); filled, with the boxes that answer it shaded, on the worked example and after a wrong answer. */
+const punnettGrid = (p1, p2, fill, shade = []) => ({ type: 'possgrid', a: [...p1], b: [...p2], cells: [...p2].map((y) => [...p1].map((x) => (fill ? [x, y].sort().join('') : ''))), shade });
+function punnett(p1, p2, shade, caption) {
+  return { diagram: punnettGrid(p1, p2, false), visual: { kind: 'maths', diagram: punnettGrid(p1, p2, true, shade), caption } };
+}
+
 export const Y8_SCIENCE_GENERATORS = {
   y8sSpeed(level, rng) {
     if (level === 1) {
@@ -160,13 +169,16 @@ export const Y8_SCIENCE_GENERATORS = {
     if (level === 1) {
       const pairs = [['Bb', 'Bb', 75, 'brown eyes (in a simple model, B for brown is dominant over b for blue)'], ['Bb', 'bb', 50, 'brown eyes (in a simple model, B for brown is dominant over b for blue)'], ['BB', 'bb', 100, 'brown eyes (in a simple model, B for brown is dominant over b for blue)']];
       const [p1, p2, pct, trait] = rng.pick(pairs);
-      return typed(`Parents ${p1} × ${p2}. What percentage of children are likely to have ${trait}?`, pct, '%', `Draw a Punnett square: each parent gives one allele. Any child with at least one B has brown eyes: ${pct}%.`, [`alleles from parent 1: ${p1.split('').join(', ')}; parent 2: ${p2.split('').join(', ')}`, 'fill the four boxes and count those with a B', `${pct}% (${pct / 25} out of 4)`]);
+      return typed(`Parents ${p1} × ${p2}. What percentage of children are likely to have ${trait}?`, pct, '%', `Draw a Punnett square: each parent gives one allele. Any child with at least one B has brown eyes: ${pct}%.`, [`alleles from parent 1: ${p1.split('').join(', ')}; parent 2: ${p2.split('').join(', ')}`, 'fill the four boxes and count those with a B', `${pct}% (${pct / 25} out of 4)`],
+        punnett(p1, p2, ['BB', 'Bb'], `${pct / 25} of the 4 boxes have a B (shaded): ${pct}% brown eyes.`));
     }
     if (level === 2) {
       const [p1, p2, pct] = rng.pick([['Bb', 'Bb', 25], ['Bb', 'bb', 50], ['BB', 'Bb', 0]]);
-      return typed(`Parents ${p1} × ${p2}. B (brown) is dominant over b (blue). What percentage of children are likely to have BLUE eyes?`, pct, '%', `Blue eyes need two recessive alleles (bb). In the Punnett square, ${pct ? `${pct / 25} of the 4 boxes ${pct === 25 ? 'is' : 'are'}` : 'none of the 4 boxes is'} bb: ${pct}%.`, ['blue is recessive, so a child must be bb', 'fill in the four boxes of the Punnett square', `${pct / 25} of 4 boxes = ${pct}%`]);
+      return typed(`Parents ${p1} × ${p2}. B (brown) is dominant over b (blue). What percentage of children are likely to have BLUE eyes?`, pct, '%', `Blue eyes need two recessive alleles (bb). In the Punnett square, ${pct ? `${pct / 25} of the 4 boxes ${pct === 25 ? 'is' : 'are'}` : 'none of the 4 boxes is'} bb: ${pct}%.`, ['blue is recessive, so a child must be bb', 'fill in the four boxes of the Punnett square', `${pct / 25} of 4 boxes = ${pct}%`],
+        punnett(p1, p2, ['bb'], pct ? `${pct / 25} of the 4 boxes ${pct === 25 ? 'is' : 'are'} bb (shaded): ${pct}% blue eyes.` : 'No box is bb, so no child is likely to have blue eyes: 0%.'));
     }
     const n = rng.pick([40, 80, 120, 200]);
-    return typed(`Two pea plants that are both Tt (tall, T, is dominant over short, t) are crossed and produce ${n} seedlings. About how many would you expect to be short?`, n / 4, '', `Tt × Tt gives TT, Tt, Tt, tt: one in four is short (tt). ${n} ÷ 4 = ${n / 4}. Gregor Mendel found ratios like this with peas in the 1860s.`, ['Punnett square for Tt × Tt: TT, Tt, Tt, tt', 'short plants are tt: 1 in 4', `${n} ÷ 4 = ${n / 4}`]);
+    return typed(`Two pea plants that are both Tt (tall, T, is dominant over short, t) are crossed and produce ${n} seedlings. About how many would you expect to be short?`, n / 4, '', `Tt × Tt gives TT, Tt, Tt, tt: one in four is short (tt). ${n} ÷ 4 = ${n / 4}. Gregor Mendel found ratios like this with peas in the 1860s.`, ['Punnett square for Tt × Tt: TT, Tt, Tt, tt', 'short plants are tt: 1 in 4', `${n} ÷ 4 = ${n / 4}`],
+      punnett('Tt', 'Tt', ['tt'], `1 of the 4 boxes is tt (shaded): about ${n} ÷ 4 = ${n / 4} short plants.`));
   },
 };

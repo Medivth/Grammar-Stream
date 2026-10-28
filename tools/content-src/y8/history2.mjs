@@ -635,7 +635,98 @@ for (const id of Object.keys(topicHooks)) if (!topics.some((t) => t.id === id)) 
 const withMemory = (it) => ({ ...it, ...memory[it.id.slice('history.'.length)] });
 // --- end of memory hooks
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Topics and items keyed without “history.”. An unknown id throws.
+const ROSES = {
+  kind: 'tree',
+  root: {
+    n: 'Edward III', note: 'r. 1327–77',
+    c: [
+      { n: 'John of Gaunt', note: 'Duke of Lancaster: red rose', c: [
+        { n: 'Henry IV', note: 'r. 1399–1413', c: [{ n: 'Henry V', note: 'r. 1413–22', c: [{ n: 'Henry VI', note: 'r. 1422–61, 1470–71' }] }] },
+        { n: 'Margaret Beaufort', note: 'his great-granddaughter', c: [{ n: 'Henry VII', note: 'Tudor; r. 1485–1509', mark: true }] },
+      ] },
+      { n: 'Edmund of Langley', note: 'Duke of York: white rose', c: [
+        { n: 'Richard, Duke of York', note: 'his grandson; killed 1460', c: [
+          { n: 'Edward IV', note: 'r. 1461–70, 1471–83', c: [{ n: 'Edward V', note: 'r. 1483' }, { n: 'Elizabeth of York', note: 'married Henry VII, 1486', mark: true }] },
+          { n: 'Richard III', note: 'r. 1483–85' },
+        ] },
+      ] },
+    ],
+  },
+  caption: 'Two branches from two of Edward III’s sons. Henry VII (Lancaster, through his mother) married Elizabeth of York, joining the red rose and the white.',
+};
+const TUDORS = {
+  kind: 'tree',
+  root: {
+    n: 'Henry VII', note: 'r. 1485–1509',
+    c: [
+      { n: 'Henry VIII', note: 'r. 1509–47', c: [{ n: 'Mary I', note: 'r. 1553–58' }, { n: 'Elizabeth I', note: 'r. 1558–1603', mark: true }, { n: 'Edward VI', note: 'r. 1547–53' }] },
+      { n: 'Margaret Tudor', note: 'married James IV of Scotland', c: [{ n: 'James V of Scotland', c: [{ n: 'Mary, Queen of Scots', note: 'executed 1587', c: [{ n: 'James VI of Scotland', note: 'James I of England from 1603' }] }] }] },
+    ],
+  },
+  caption: 'Mary, Queen of Scots, was Henry VIII’s great-niece: a Catholic with a strong claim. Her son James inherited Elizabeth’s throne in 1603.',
+};
+const ELIZABETH_TIMES = { kind: 'timeline', from: 1555, to: 1605, set: 'britain', events: [[1558, 'Elizabeth becomes queen'], [1586, 'Babington Plot'], [1587, 'Mary, Queen of Scots, executed'], [1588, 'The Spanish Armada'], [1599, 'The Globe built'], [1601, 'Poor Law'], [1603, 'Elizabeth dies']] };
+const SKY = {
+  kind: 'table', head: ['', 'Geocentric model', 'Heliocentric model'], tint: 'cols',
+  rows: [['At the centre', 'the **Earth**', 'the **Sun**'], ['The Earth', 'stays still', 'spins, and orbits the Sun'], ['Backed by', 'Ptolemy, and the Church', 'Copernicus (1543), then Galileo']],
+};
+const SUFFRAGE = {
+  kind: 'table', head: ['', 'Suffragists (NUWSS)', 'Suffragettes (WSPU)'], tint: 'cols',
+  rows: [['Leader', 'Millicent Fawcett', 'Emmeline Pankhurst'], ['Founded', '1897', '1903'], ['Tactics', 'petitions, marches, meetings', '“Deeds not words”: window-smashing, hunger strikes']],
+  caption: 'The same goal, very different methods. Historians still argue about which mattered more.',
+};
+const FAMINE = {
+  kind: 'maths', diagram: { type: 'line', title: 'Population of Ireland', ylabel: 'millions', xs: ['1841', '1851', '1861', '1871', '1881', '1891', '1901'], ys: [8.2, 6.6, 5.8, 5.4, 5.2, 4.7, 4.5] },
+  caption: 'Census figures. About a million died in the famine and over a million emigrated; emigration went on for decades after.',
+};
+const PUBLIC_HEALTH = { kind: 'flow', steps: ['Crowded, filthy industrial towns', 'Chadwick’s report, 1842', 'Public Health Act, 1848: voluntary', 'Snow traces cholera to a pump, 1854', 'The Great Stink, 1858', 'Bazalgette builds London’s sewers', 'Public Health Act, 1875: compulsory'] };
+const AMERICA = { kind: 'flow', steps: ['Parliament taxes the colonies', '“No taxation without representation”', 'Boston Tea Party, 1773', 'Declaration of Independence, 4 July 1776', 'British army surrenders at Yorktown, 1781', 'Treaty of Paris, 1783: independence'] };
+const RUSSIA = { kind: 'flow', steps: ['The Tsar rules alone; most Russians are poor', 'Bloody Sunday, January 1905', 'War defeats and food shortages, 1914–17', 'February 1917: the Tsar abdicates', 'October 1917: Lenin’s Bolsheviks seize power', 'Civil war: Reds against Whites, 1918–21'] };
+const ROAD_TO_WAR = { kind: 'flow', steps: ['Treaty of Versailles, 1919: blame and reparations', 'Mussolini takes power in Italy, 1922', 'Wall Street Crash, 1929: the Great Depression', 'Hitler becomes Chancellor, 1933', 'Troops into the Rhineland, 1936', 'Appeasement: the Munich Agreement, 1938', 'Germany invades Poland, September 1939'] };
+const TOPIC_VISUALS = {
+  rome: { kind: 'timeline', from: -800, to: 500, bands: [[-753, -509, 'Kings'], [-509, -27, 'Republic'], [-27, 476, 'Empire']], events: [[-753, 'Rome founded (legend)'], [-509, 'Last king expelled'], [-218, 'Hannibal crosses the Alps'], [-44, 'Caesar assassinated'], [-27, 'Augustus, first emperor'], [476, 'Western empire ends']] },
+  crusades: { kind: 'timeline', from: 1080, to: 1220, set: 'britain', events: [[1095, 'Urban II calls the First Crusade'], [1099, 'Crusaders capture Jerusalem'], [1187, 'Saladin retakes Jerusalem'], [1192, 'Richard I’s truce with Saladin'], [1204, 'Constantinople looted']] },
+  roses: ROSES,
+  exploration: { kind: 'timeline', from: 1480, to: 1530, set: 'britain', events: [[1492, 'Columbus reaches the Caribbean'], [1494, 'Treaty of Tordesillas'], [1498, 'Da Gama reaches India'], [1519, 'Magellan sets out; Cortés in Mexico'], [1522, 'Elcano completes the voyage round the world']] },
+  elizabeth: TUDORS,
+  'science-rev': { kind: 'timeline', from: 1530, to: 1700, set: 'britain', events: [[1543, 'Copernicus: the Earth orbits the Sun'], [1628, 'Harvey: the blood circulates'], [1633, 'Galileo’s trial'], [1660, 'Royal Society founded'], [1687, 'Newton’s Principia']] },
+  restoration: { kind: 'timeline', from: 1655, to: 1680, set: 'britain', events: [[1660, 'Charles II returns'], [1665, 'The Great Plague'], [1666, 'The Great Fire'], [1675, 'Wren begins the new St Paul’s']] },
+  'american-rev': AMERICA,
+  napoleon: { kind: 'timeline', from: 1795, to: 1825, set: 'britain', events: [[1799, 'Napoleon seizes power'], [1804, 'Crowns himself emperor'], [1805, 'Trafalgar'], [1812, 'Invades Russia'], [1815, 'Waterloo'], [1819, 'Peterloo'], [1821, 'Dies on St Helena']] },
+  famine: FAMINE,
+  'public-health': PUBLIC_HEALTH,
+  suffrage: SUFFRAGE,
+  'civil-rights': { kind: 'timeline', from: 1945, to: 1970, events: [[1948, 'Empire Windrush arrives'], [1954, 'Brown v Board of Education'], [1955, 'Montgomery Bus Boycott begins'], [1957, 'Little Rock Nine'], [1963, 'Bristol Bus Boycott; “I have a dream”'], [1964, 'US Civil Rights Act'], [1965, 'UK Race Relations Act']] },
+  'end-empire': { kind: 'timeline', from: 1915, to: 1970, set: 'twentieth', events: [[1919, 'Amritsar massacre'], [1930, 'Gandhi’s Salt March'], [1947, 'India and Pakistan independent'], [1956, 'Suez Crisis'], [1957, 'Ghana independent']] },
+  byzantium: { kind: 'timeline', from: 300, to: 1500, bands: [[330, 1453, 'The Byzantine Empire']], events: [[330, 'Constantinople becomes capital'], [476, 'Western empire ends'], [537, 'Hagia Sophia finished'], [1204, 'Fourth Crusade loots the city'], [1453, 'Falls to the Ottoman Turks']] },
+  russia: RUSSIA,
+  dictators: ROAD_TO_WAR,
+};
+const ITEM_VISUALS = {
+  'm.rr.republic': TOPIC_VISUALS.rome,
+  'm.wr.houses': ROSES,
+  'm.wr.rose': ROSES,
+  'm.wr.edward4': ROSES,
+  'm.el.mother': TUDORS,
+  'm.el.mary': TUDORS,
+  'm.el.year': ELIZABETH_TIMES,
+  'm.el.babington': ELIZABETH_TIMES,
+  'm.sr.copernicus': SKY,
+  'm.sr.galileo': SKY,
+  'm.if.deaths': FAMINE,
+  'm.if.emigration': FAMINE,
+  'm.ph.acts': PUBLIC_HEALTH,
+  'm.sf.deeds': SUFFRAGE,
+  'm.am.slogan': AMERICA,
+  'm.ru.ww1': RUSSIA,
+  'm.dc.appeasement': ROAD_TO_WAR,
+};
+for (const [k, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === `history.${k}`); if (!t) throw new Error(`picture for unknown topic ${k}`); t.visual = v; }
+for (const [k, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === `history.${k}`); if (!it) throw new Error(`picture for unknown item ${k}`); it.visual = v; }
+
 export default [
-  { subject: 'history', deck: 'y8-more', topics: topics.map((t) => ({ ...t, hook: topicHooks[t.id] })), items: items.map(withMemory) },
+  { subject: 'history', deck: 'y8-more',topics: topics.map((t) => ({ ...t, hook: topicHooks[t.id] })), items: items.map(withMemory) },
   { subject: 'history', deck: 'y8-timeline2', topics: [], items: [], timeline },
 ];

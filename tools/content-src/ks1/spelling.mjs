@@ -210,4 +210,37 @@ const SENTENCES = [
   { id: 'k1s.but', title: 'Use “but”', prompt: 'Write a sentence using “but”: “The robot was small but…”', checks: [{ type: 'includesAll', words: ['but'], msg: 'Use the word “but”.' }, { type: 'capital' }, { type: 'endPunct' }, { type: 'minWords', n: 6, msg: 'Finish the idea after “but”.' }], model: 'The robot was small but very clever.', tip: '“but” shows a surprise: two ideas that don’t usually go together.' },
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const HOP = { join: '+', parts: [['hop', 'root'], ['p', 'ending', 'double it'], ['ing', 'suffix']], result: 'hopping' };
+const SMILE = { join: '+', parts: [['smil', 'root', 'smile: drop the e'], ['ing', 'suffix']], result: 'smiling' };
+const CRY = { join: '+', parts: [['cr', 'root', 'cry'], ['i', 'ending', 'y becomes i'], ['ed', 'suffix']], result: 'cried' };
+const HAPPY = { join: '+', parts: [['happ', 'root', 'happy'], ['i', 'ending', 'y becomes i'], ['er', 'suffix']], result: 'happier' };
+const BIG = { join: '+', parts: [['big', 'root'], ['g', 'ending', 'double it'], ['est', 'suffix']], result: 'biggest' };
+const W = (...rows) => ({ kind: 'blocks', rows });
+const TOPIC_VISUALS = {
+  'spelling.suffixes': W(HOP, SMILE, CRY),
+  'spelling.suffixes-2': W(
+    { join: '+', parts: [['help', 'root'], ['ful', 'suffix', 'full of']], result: 'helpful' },
+    { join: '+', parts: [['help', 'root'], ['less', 'suffix', 'without']], result: 'helpless' },
+    { join: '+', parts: [['kind', 'root'], ['ness', 'suffix']], result: 'kindness' },
+  ),
+  'spelling.homophones': { kind: 'table', head: ['Sound the same', 'Mean different things'], rows: [['**sea** / **see**', 'the ocean / look with your eyes'], ['**knight** / **night**', 'a soldier in armour / when it is dark'], ['**hear** / **here**', 'with your ear / in this place'], ['**two** / **to** / **too**', '2 / towards / also']], tint: 'rows' },
+  'spelling.word-classes': { ...W({ parts: [['Tiny', 'adjective'], ['robots', 'noun'], ['dance', 'verb'], ['happily.', 'adverbial', 'adverb']] }), caption: 'The adjective describes the noun. The adverb tells you HOW they dance.' },
+  'spelling.apostrophes': { ...W(
+    { join: '+', parts: [['do', 'root', 'word'], ['not', 'suffix', 'the o goes']], result: 'don’t' },
+    { join: '+', parts: [['can', 'root', 'word'], ['not', 'suffix', 'the no goes']], result: 'can’t' },
+    { join: '+', parts: [['it', 'root', 'word'], ['is', 'suffix', 'the i goes']], result: 'it’s' },
+  ), caption: 'The apostrophe goes where the missing letters were.' },
+};
+const ITEM_VISUALS = {
+  'spelling.sx.hop': W(HOP),
+  'spelling.sx.smile': W(SMILE),
+  'spelling.sx.cry': W(CRY),
+  'spelling.sx.happy': W(HAPPY),
+  'spelling.sx.big': W(BIG),
+  'spelling.sx2.happy': W({ join: '+', parts: [['happ', 'root', 'happy'], ['i', 'ending', 'y becomes i'], ['ness', 'suffix']], result: 'happiness' }),
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'spelling', deck: 'core', topics, items, sentences: SENTENCES }];

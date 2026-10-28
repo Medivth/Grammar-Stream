@@ -95,6 +95,46 @@ function ordinary(t, e) {
   return `0.${'0'.repeat(-e - 1)}${digits}`;
 }
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Shown on the worked example and after a wrong answer, never in the question (they would do the
+// working for her). Each one is built from the question's own numbers.
+const cap = (v, caption) => (caption ? { ...v, caption } : v);
+/** The division ladder: divide by the smallest prime again and again until 1 is left. */
+function primeLadder(n) {
+  const rows = [];
+  for (let m = n; m > 1;) { const p = factorise(m)[0][0]; rows.push([`**${p}**`, String(m)]); m /= p; }
+  rows.push(['', '1']);
+  return { kind: 'table', head: ['÷', 'number'], rows };
+}
+/** Prime factors of two numbers in index form, one column per prime, then the HCF (lower power of
+ * each prime) or the LCM (higher power of each). fx, fy: [[p, k]]. */
+function primeTable([nx, fx], [ny, fy], want) {
+  const kx = Object.fromEntries(fx), ky = Object.fromEntries(fy);
+  const primes = [...new Set([...fx, ...fy].map(([p]) => p))].sort((u, v) => u - v);
+  const pw = (p, k) => (!k ? '–' : k === 1 ? String(p) : `${p}${sup(k)}`);
+  const res = primes.map((p) => [p, (want === 'hcf' ? Math.min : Math.max)(kx[p] || 0, ky[p] || 0)]).filter(([, k]) => k);
+  const value = valueOf(res), name = want.toUpperCase();
+  return {
+    kind: 'table', tint: 'cols', head: ['', ...primes.map(String)],
+    rows: [[nx, ...primes.map((p) => pw(p, kx[p]))], [ny, ...primes.map((p) => pw(p, ky[p]))], [name, ...primes.map((p) => { const k = (want === 'hcf' ? Math.min : Math.max)(kx[p] || 0, ky[p] || 0); return k ? `**${pw(p, k)}**` : '–'; })]],
+    caption: `${name}: the ${want === 'hcf' ? 'lower' : 'higher'} power of each prime${want === 'hcf' ? ' they share' : ''}. ${res.length === 1 && res[0][1] === 1 ? `${name} = ${value}` : `${name} = ${indexForm(res)} = ${value}`}.`,
+  };
+}
+const primeTableOf = (a, b, want) => primeTable([String(a), factorise(a)], [String(b), factorise(b)], want);
+/** Percentage change as two bars of equal boxes (each box the same % of the original), when the boxes are few enough to read. */
+function percentBars(o, now, p, up, [l1, l2], pre) {
+  const g = gcd(p, 100), N = 100 / g, M = (up ? 100 + p : 100 - p) / g, per = (o * g) / 100;
+  if (Math.max(N, M) > 8 || !Number.isInteger(per)) return {};
+  return { visual: { kind: 'maths', diagram: { type: 'barmodel', rows: [{ label: l1, parts: N, text: `${pre}${per}`, total: `100% = ${pre}${o}` }, { label: l2, parts: M, shaded: M, text: `${pre}${per}`, total: `${up ? 100 + p : 100 - p}% = ${pre}${now}` }] },
+    caption: `Each box is ${g}% of ${pre}${o}, which is ${pre}${per}. ${up ? 'Up' : 'Down'} ${Math.abs(M - N)} box${Math.abs(M - N) === 1 ? '' : 'es'} = ${p}%.` } };
+}
+/** Two straight lines (ax + by = c) on a grid, crossing at the solution. */
+function crossing(eqs, x, y) {
+  return { visual: { kind: 'maths', diagram: { type: 'graph', range: [-10, 10], lines: eqs.map(([a, b, c]) => ({ m: -a / b, c: c / b })) }, caption: `The two lines cross at (${neg(x)}, ${neg(y)}): that point fits both equations.` } };
+}
+/** A multiplication grid for brackets: column terms across the top, row terms down the side. */
+const mulGrid = (cols, rows, caption) => cap({ kind: 'table', head: ['×', ...cols], rows }, caption);
+
 const G = {
   // ---- primes, HCF and LCM -------------------------------------------------------------
   y8mPrimes(level, rng) {
@@ -107,9 +147,10 @@ const G = {
       const ladder = [];
       let m = n;
       for (const [p, k] of f) for (let i = 0; i < k; i++) { ladder.push(`${m} ÷ ${p} = ${m / p}`); m /= p; }
+      const pic = { visual: cap(primeLadder(n), `Divide by primes until 1 is left: ${n} = ${indexForm(f)}.`) };
       if (rng.chance(0.4)) {
         return num(`${indexForm(f)} = ?`, n, `Multiply it out: ${f.map(([p, k]) => (k === 1 ? `${p} is just ${p}` : `${p}${sup(k)} = ${p ** k}`)).join(', ').replace(/, ([^,]*)$/, ' and $1')}. The product is ${f.map(([p, k]) => p ** k).join(' × ')} = ${n}.`,
-          ['A small raised number (an index) says how many times to multiply the prime by itself.', f.map(([p, k]) => `${p}${sup(k)} = ${p ** k}`).join(', ') + '.', `Multiply them together: ${n}.`]);
+          ['A small raised number (an index) says how many times to multiply the prime by itself.', f.map(([p, k]) => `${p}${sup(k)} = ${p ** k}`).join(', ') + '.', `Multiply them together: ${n}.`], pic);
       }
       const swapped = f.length >= 2 && f[0][1] !== f[1][1] ? indexForm([[f[0][0], f[1][1]], [f[1][0], f[0][1]], ...f.slice(2)]) : null;
       const bumped = indexForm([[f[0][0], f[0][1] + 1], ...f.slice(1)]);
@@ -117,6 +158,7 @@ const G = {
       return choice(`Which shows ${n} as a product of its prime factors?`, indexForm(f), [swapped, bumped, { text: composite, feedback: `That multiplies to ${n}, but ${f[0][0] * (f[0][1] >= 2 ? f[0][0] : f[1][0])} is not prime.` }].filter(Boolean), rng, {
         explain: `Keep dividing by primes: ${ladder.join(', ')}. So ${n} = ${indexForm(f)}.`,
         steps: ['Divide by the smallest prime that goes in, again and again.', ladder.join('; ') + '.', `Collect repeated primes as powers: ${indexForm(f)}.`],
+        ...pic,
       });
     }
     if (level === 2) {
@@ -127,10 +169,10 @@ const G = {
       const fa = indexForm(factorise(a)), fb = indexForm(factorise(b));
       if (rng.chance(0.5)) {
         return num(`What is the highest common factor (HCF) of ${a} and ${b}?`, g, `${a} = ${fa} and ${b} = ${fb}. The primes they share multiply to ${g}.`,
-          [`Write each as a product of primes: ${a} = ${fa}, ${b} = ${fb}.`, 'The HCF uses the primes in BOTH lists (the lower power of each).', `HCF = ${g}.`]);
+          [`Write each as a product of primes: ${a} = ${fa}, ${b} = ${fb}.`, 'The HCF uses the primes in BOTH lists (the lower power of each).', `HCF = ${g}.`], { visual: primeTableOf(a, b, 'hcf') });
       }
       return num(`What is the lowest common multiple (LCM) of ${a} and ${b}?`, a * y, `${a} = ${fa} and ${b} = ${fb}. The LCM uses every prime, at its highest power: ${a * y}.`,
-        [`Write each as a product of primes: ${a} = ${fa}, ${b} = ${fb}.`, 'The LCM uses every prime that appears, at its highest power.', `LCM = ${a * y}. (Check: HCF × LCM = ${g} × ${a * y} = ${a} × ${b}.)`]);
+        [`Write each as a product of primes: ${a} = ${fa}, ${b} = ${fb}.`, 'The LCM uses every prime that appears, at its highest power.', `LCM = ${a * y}. (Check: HCF × LCM = ${g} × ${a * y} = ${a} × ${b}.)`], { visual: primeTableOf(a, b, 'lcm') });
     }
     const kind = rng.pick(['beacons', 'bags', 'index']);
     if (kind === 'beacons') {
@@ -138,7 +180,7 @@ const G = {
       const L = lcm(a, b);
       return num(`The beacon on Mount Ida flashes every ${a} seconds and the beacon on Lemnos every ${b} seconds. They flash together now. How many seconds until they next flash together?`, L,
         `They meet again at the lowest common multiple of ${a} and ${b}: ${L} seconds.`,
-        ['“Together again” means a multiple of both numbers: the LCM.', `${a} = ${indexForm(factorise(a))}, ${b} = ${indexForm(factorise(b))}.`, `LCM = ${L} seconds.`]);
+        ['“Together again” means a multiple of both numbers: the LCM.', `${a} = ${indexForm(factorise(a))}, ${b} = ${indexForm(factorise(b))}.`, `LCM = ${L} seconds.`], { visual: primeTableOf(a, b, 'lcm') });
     }
     if (kind === 'bags') {
       const g = rng.pick([6, 8, 9, 12, 14, 15, 16, 18]);
@@ -146,7 +188,7 @@ const G = {
       while (x === y || gcd(x, y) !== 1) { x = rng.int(3, 9); y = rng.int(3, 9); }
       return num(`Mira has ${g * x} olives and ${g * y} figs to pack into identical bags for the athletes at Olympia, using every piece of fruit. What is the greatest number of bags she can make?`, g,
         `Each bag gets the same share of both, so the number of bags must divide ${g * x} and ${g * y}: the HCF, ${g}. (Each bag holds ${x} olives and ${y} figs.)`,
-        ['Identical bags with nothing left over: the number of bags is a common factor.', '“Greatest” means the highest common factor.', `HCF(${g * x}, ${g * y}) = ${g}.`]);
+        ['Identical bags with nothing left over: the number of bags is a common factor.', '“Greatest” means the highest common factor.', `HCF(${g * x}, ${g * y}) = ${g}.`], { visual: primeTableOf(g * x, g * y, 'hcf') });
     }
     const e = [[2, rng.int(1, 4)], [3, rng.int(0, 3)], [5, rng.int(0, 2)]], f2 = [[2, rng.int(1, 4)], [3, rng.int(0, 3)], [5, rng.int(0, 2)]];
     const A = e.filter(([, k]) => k), B = f2.filter(([, k]) => k);
@@ -156,7 +198,8 @@ const G = {
     const hcf = h.length === 1 && h[0][1] === 1 ? `the only shared prime is ${h[0][0]}, and its lower power is just ${h[0][0]}, so HCF = ${h[0][0]}` : `${indexForm(h)} = ${valueOf(h)}`;
     return num(`A = ${indexForm(A)} and B = ${indexForm(B)}. What is the HCF of A and B?`, valueOf(h),
       `Take each shared prime at the LOWER of its two powers: ${hcf}.`,
-      ['For the HCF, use only primes in both numbers.', 'Take the lower power of each shared prime.', h.length === 1 && h[0][1] === 1 ? `Only ${h[0][0]} is shared, so HCF = ${h[0][0]}.` : `HCF = ${indexForm(h)} = ${valueOf(h)}.`]);
+      ['For the HCF, use only primes in both numbers.', 'Take the lower power of each shared prime.', h.length === 1 && h[0][1] === 1 ? `Only ${h[0][0]} is shared, so HCF = ${h[0][0]}.` : `HCF = ${indexForm(h)} = ${valueOf(h)}.`],
+      { visual: primeTable(['A', A], ['B', B], 'hcf') });
   },
 
   // ---- powers, roots and order of operations ---------------------------------------------
@@ -328,7 +371,7 @@ const G = {
         const what = rng.pick([['visitors came to the games at Olympia', 'visitors'], ['drachmae was the price of a bronze helmet', 'drachmae'], ['ships sailed for Troy', 'ships']]);
         return num(`Last year ${o} ${what[0]}. This year it is ${n}. What is the percentage ${up ? 'increase' : 'decrease'}?`, p,
           `Change ÷ original × 100: ${Math.abs(n - o)} ÷ ${o} × 100 = ${p}%.`,
-          [`The change is ${Math.abs(n - o)} ${what[1]}.`, `Divide by the ORIGINAL amount: ${Math.abs(n - o)} ÷ ${o} = ${dp(p, 2)}.`, `× 100 gives ${p}%.`], { unit: '%' });
+          [`The change is ${Math.abs(n - o)} ${what[1]}.`, `Divide by the ORIGINAL amount: ${Math.abs(n - o)} ÷ ${o} = ${dp(p, 2)}.`, `× 100 gives ${p}%.`], { unit: '%', ...percentBars(o, n, p, up, ['Last year', 'This year'], '') });
       }
       const p = rng.pick([3, 7, 12, 15, 35, 4, 17, 60]), up = rng.chance(0.5);
       const right = up ? dp(100 + p, 2) : dp(100 - p, 2);
@@ -344,7 +387,7 @@ const G = {
         if (!Number.isInteger(now)) return G.y8mPercent(level, rng);
         return num(`After a ${p}% ${up ? 'increase' : 'discount'}, a shield costs £${now}. What did it cost before?`, o,
           `£${now} is ${up ? 100 + p : 100 - p}% of the original. Divide by the multiplier ${dp(up ? 100 + p : 100 - p, 2)}: £${o}. (Not ${money(now * (up ? 100 - p : 100 + p))}: the ${p}% was of the ORIGINAL price, not the new one.)`,
-          [`£${now} is ${up ? 100 + p : 100 - p}% of the original price.`, `1% of the original is £${now} ÷ ${up ? 100 + p : 100 - p} = ${money(o)}.`, `100% = ${money(o)} × 100 = £${o}.`], { unit: '£', unitBefore: true });
+          [`£${now} is ${up ? 100 + p : 100 - p}% of the original price.`, `1% of the original is £${now} ÷ ${up ? 100 + p : 100 - p} = ${money(o)}.`, `100% = ${money(o)} × 100 = £${o}.`], { unit: '£', unitBefore: true, ...percentBars(o, now, p, up, ['Before', 'After'], '£') });
       }
       const a = rng.pick([10, 20, 25, 50]), b = rng.pick([10, 20, 25, 50]);
       const overall = (100 + a) * (100 - b) - 10000; // in hundredths of a per cent
@@ -375,7 +418,8 @@ const G = {
         const big = Math.max(...parts), who = names[parts.indexOf(big)];
         return num(`${names.join(', ').replace(/, ([^,]*)$/, ' and $1')} share ${S * k} drachmae in the ratio ${parts.join(' : ')}. How much does ${who} get?`, big * k,
           `${parts.join(' + ')} = ${S} parts. One part is ${S * k} ÷ ${S} = ${k}. ${who} gets ${big} parts: ${big * k}.`,
-          [`Total parts: ${parts.join(' + ')} = ${S}.`, `One part: ${S * k} ÷ ${S} = ${k}.`, `${who}: ${big} × ${k} = ${big * k} drachmae.`]);
+          [`Total parts: ${parts.join(' + ')} = ${S}.`, `One part: ${S * k} ÷ ${S} = ${k}.`, `${who}: ${big} × ${k} = ${big * k} drachmae.`],
+          { visual: { kind: 'maths', diagram: { type: 'barmodel', rows: parts.map((n, i) => ({ label: names[i], parts: n, text: String(k), total: String(n * k), shaded: names[i] === who ? n : 0 })) }, caption: `${S} parts = ${S * k} drachmae, so one part is ${k}.` } });
       }
       if (kind === 'simplify') {
         let a = rng.int(1, 9), b = rng.int(1, 9);
@@ -387,7 +431,8 @@ const G = {
       }
       const a = rng.int(1, 7), b = rng.int(1, 9);
       return fracQ(`Owls and snakes on a temple frieze are in the ratio ${a} : ${b}. What fraction of the animals are owls?`, F(a, a + b), `${a} out of every ${a + b} animals are owls: ${tex(F(a, a + b))}.`,
-        [`A ratio ${a} : ${b} means ${a + b} parts in total.`, `Owls are ${a} of those parts.`, `Fraction = ${a}/${a + b}${gcd(a, a + b) > 1 ? ` = ${tex(F(a, a + b))}` : ''}.`]);
+        [`A ratio ${a} : ${b} means ${a + b} parts in total.`, `Owls are ${a} of those parts.`, `Fraction = ${a}/${a + b}${gcd(a, a + b) > 1 ? ` = ${tex(F(a, a + b))}` : ''}.`],
+        { visual: { kind: 'maths', diagram: { type: 'barmodel', rows: [{ label: 'Owls', parts: a, shaded: a }, { label: 'Snakes', parts: b }] }, caption: `Owls are ${a} of the ${a + b} equal parts.` } });
     }
     if (level === 2) {
       const kind = rng.pick(['best', 'diff', 'direct']);
@@ -405,7 +450,8 @@ const G = {
         const a = rng.int(2, 6), b = a + rng.int(1, 5), k = rng.int(3, 15);
         return num(`Kit and Theo share some sweets in the ratio ${a} : ${b}. Theo gets ${(b - a) * k} more than Kit. How many sweets are there altogether?`, (a + b) * k,
           `The difference is ${b} − ${a} = ${b - a} part${b - a === 1 ? '' : 's'} = ${(b - a) * k}, so one part is ${k}. Altogether ${a + b} parts = ${(a + b) * k}.`,
-          [`The difference in parts is ${b - a}.`, b - a === 1 ? `1 part = ${k}.` : `${b - a} parts = ${(b - a) * k}, so 1 part = ${k}.`, `Total = ${a + b} × ${k} = ${(a + b) * k}.`]);
+          [`The difference in parts is ${b - a}.`, b - a === 1 ? `1 part = ${k}.` : `${b - a} parts = ${(b - a) * k}, so 1 part = ${k}.`, `Total = ${a + b} × ${k} = ${(a + b) * k}.`],
+          { visual: { kind: 'maths', diagram: { type: 'barmodel', rows: [{ label: 'Kit', parts: a, text: String(k), total: String(a * k) }, { label: 'Theo', parts: b, text: String(k), total: String(b * k) }] }, caption: `Theo has ${b - a} more part${b - a === 1 ? '' : 's'} = ${(b - a) * k} sweets, so one part is ${k}.` } });
       }
       const n1 = rng.int(3, 8), u = rng.int(3, 40) * 5, n2 = rng.int(9, 20);
       return num(`${n1} jars of olive oil cost ${money(n1 * u)}. How much do ${n2} jars cost?`, pounds(n2 * u), `One jar costs ${money(n1 * u)} ÷ ${n1} = ${money(u)}. ${n2} jars: ${money(n2 * u)}.`,
@@ -449,7 +495,8 @@ const G = {
       if (k === 1) return G.y8mAlgebra(level, rng);
       const e = expr([[k * p, 'x'], [k * q, '']]);
       return alg(`Expand: ${neg(k)}(${ex([[p, 'x'], [q, '']])})`, e, `Multiply every term inside by ${neg(k)}: ${neg(k)} × ${p === 1 ? 'x' : `${p}x`} = ${ex([[k * p, 'x']])} and ${neg(k)} × ${paren(q)} = ${neg(k * q)}.`,
-        [`The ${neg(k)} multiplies BOTH terms in the bracket.`, `${neg(k)} × ${p === 1 ? 'x' : `${p}x`} = ${ex([[k * p, 'x']])}; ${neg(k)} × ${paren(q)} = ${neg(k * q)}.`, `${show(e.answer)}.`]);
+        [`The ${neg(k)} multiplies BOTH terms in the bracket.`, `${neg(k)} × ${p === 1 ? 'x' : `${p}x`} = ${ex([[k * p, 'x']])}; ${neg(k)} × ${paren(q)} = ${neg(k * q)}.`, `${show(e.answer)}.`],
+        { visual: mulGrid([ex([[p, 'x']]), neg(q)], [[neg(k), ex([[k * p, 'x']]), neg(k * q)]], `Each box is its row × its column: ${show(e.answer)}.`) });
     }
     if (level === 2) {
       if (rng.chance(0.5)) {
@@ -458,14 +505,16 @@ const G = {
         const e = expr([[k1 + k2, 'x'], [k1 * a + k2 * b, '']]);
         return alg(`Expand and simplify: ${k1}(${ex([[1, 'x'], [a, '']])})${k2 < 0 ? ' − ' : ' + '}${Math.abs(k2)}(${ex([[1, 'x'], [b, '']])})`, e,
           `${k1}(${ex([[1, 'x'], [a, '']])}) = ${ex([[k1, 'x'], [k1 * a, '']])}; ${neg(k2)}(${ex([[1, 'x'], [b, '']])}) = ${ex([[k2, 'x'], [k2 * b, '']])}. Together: ${show(e.answer)}.`,
-          ['Expand each bracket separately, watching the sign in front of the second.', `${ex([[k1, 'x'], [k1 * a, '']])} and ${ex([[k2, 'x'], [k2 * b, '']])}.`, `Collect like terms: ${show(e.answer)}.`]);
+          ['Expand each bracket separately, watching the sign in front of the second.', `${ex([[k1, 'x'], [k1 * a, '']])} and ${ex([[k2, 'x'], [k2 * b, '']])}.`, `Collect like terms: ${show(e.answer)}.`],
+          { visual: [mulGrid(['x', neg(a)], [[String(k1), ex([[k1, 'x']]), neg(k1 * a)]]), mulGrid(['x', neg(b)], [[neg(k2), ex([[k2, 'x']]), neg(k2 * b)]], `Add the four boxes and collect like terms: ${show(e.answer)}.`)] });
       }
       const g = rng.int(2, 9); let p = rng.int(1, 7), q = nz(-9, 9);
       while (gcd(p, Math.abs(q)) !== 1) { p = rng.int(1, 7); q = nz(-9, 9); }
       const inner = expr([[p, 'x'], [q, '']]);
       const ans = { answer: `${g}(${inner.answer})`, accept: inner.accept.map((i) => `${g}(${i})`) };
       return alg(`Factorise fully: ${ex([[g * p, 'x'], [g * q, '']])}`, ans, `The HCF of ${g * p} and ${Math.abs(g * q)} is ${g}: ${g}(${show(inner.answer)}). Check by expanding.`,
-        [`Find the highest common factor of ${g * p} and ${Math.abs(g * q)}: ${g}.`, `Divide each term by ${g}: ${ex([[p, 'x']])} and ${neg(q)}.`, `${g}(${show(inner.answer)}).`], { placeholder: 'e.g. 3(2x + 5)' });
+        [`Find the highest common factor of ${g * p} and ${Math.abs(g * q)}: ${g}.`, `Divide each term by ${g}: ${ex([[p, 'x']])} and ${neg(q)}.`, `${g}(${show(inner.answer)}).`], { placeholder: 'e.g. 3(2x + 5)',
+          visual: mulGrid([ex([[p, 'x']]), neg(q)], [[String(g), ex([[g * p, 'x']]), neg(g * q)]], `Factorising runs the grid backwards: the boxes are ${ex([[g * p, 'x']])} and ${neg(g * q)}, and ${g} goes into both.`) });
     }
     if (rng.chance(0.5)) {
       const a = nz(-4, 5), b = rng.int(1, 5), c = nz(-7, 7), d = nz(-9, 9);
@@ -474,18 +523,21 @@ const G = {
       const outer = a === 1 ? 'x' : a === -1 ? '−x' : `${neg(a)}x`, tail = d === 1 ? ' + x' : d === -1 ? ' − x' : `${sgn(d)}x`;
       return alg(`Expand and simplify: ${outer}(${ex([[b, 'x'], [c, '']])})${tail}`, e,
         `${ex([[a, 'x']])} × ${ex([[b, 'x']])} = ${ex([[a * b, 'x²']])} and ${ex([[a, 'x']])} × ${paren(c)} = ${ex([[a * c, 'x']])}. Then add ${ex([[d, 'x']])}: ${show(e.answer)}.`,
-        ['x × x = x².', `${ex([[a, 'x']])}(${ex([[b, 'x'], [c, '']])}) = ${ex([[a * b, 'x²'], [a * c, 'x']])}.`, `Collect the x terms: ${show(e.answer)}.`], { placeholder: 'e.g. 3x² + 2x' });
+        ['x × x = x².', `${ex([[a, 'x']])}(${ex([[b, 'x'], [c, '']])}) = ${ex([[a * b, 'x²'], [a * c, 'x']])}.`, `Collect the x terms: ${show(e.answer)}.`], { placeholder: 'e.g. 3x² + 2x',
+          visual: mulGrid([ex([[b, 'x']]), neg(c)], [[ex([[a, 'x']]), ex([[a * b, 'x²']]), ex([[a * c, 'x']])]], `Then add ${ex([[d, 'x']])}: ${show(e.answer)}.`) });
     }
     const g = rng.int(2, 6); let p = rng.int(1, 5), q = rng.int(1, 7);
     while (gcd(p, q) !== 1) { p = rng.int(1, 5); q = rng.int(1, 7); }
     if (rng.chance(0.5)) {
       const inner = expr([[p, 'x'], [q, '']]);
       return alg(`Factorise fully: ${ex([[g * p, 'x²'], [g * q, 'x']])}`, { answer: `${g}x(${inner.answer})`, accept: inner.accept.map((i) => `${g}x(${i})`) },
-        `Both terms have a factor ${g} AND a factor x: ${g}x(${show(inner.answer)}).`, [`The HCF of ${g * p}x² and ${g * q}x is ${g}x.`, `${g * p}x² ÷ ${g}x = ${ex([[p, 'x']])}; ${g * q}x ÷ ${g}x = ${q}.`, `${g}x(${show(inner.answer)}).`], { placeholder: 'e.g. 2x(3x + 4)' });
+        `Both terms have a factor ${g} AND a factor x: ${g}x(${show(inner.answer)}).`, [`The HCF of ${g * p}x² and ${g * q}x is ${g}x.`, `${g * p}x² ÷ ${g}x = ${ex([[p, 'x']])}; ${g * q}x ÷ ${g}x = ${q}.`, `${g}x(${show(inner.answer)}).`], { placeholder: 'e.g. 2x(3x + 4)',
+        visual: mulGrid([ex([[p, 'x']]), String(q)], [[`${g}x`, ex([[g * p, 'x²']]), ex([[g * q, 'x']])]], `Read backwards: ${g}x goes into both boxes.`) });
     }
     const inner = expr([[p, 'x'], [q, 'y']]);
     return alg(`Factorise fully: ${ex([[g * p, 'x²y'], [g * q, 'xy²']])}`, { answer: `${g}xy(${inner.answer})`, accept: inner.accept.map((i) => `${g}xy(${i})`) },
-      `The HCF is ${g}xy: ${g}xy(${show(inner.answer)}).`, [`Common number: ${g}. Common letters: x and y (the lowest power of each).`, `Divide each term by ${g}xy.`, `${g}xy(${show(inner.answer)}).`], { placeholder: 'e.g. 2xy(3x + y)' });
+      `The HCF is ${g}xy: ${g}xy(${show(inner.answer)}).`, [`Common number: ${g}. Common letters: x and y (the lowest power of each).`, `Divide each term by ${g}xy.`, `${g}xy(${show(inner.answer)}).`], { placeholder: 'e.g. 2xy(3x + y)',
+      visual: mulGrid([ex([[p, 'x']]), ex([[q, 'y']])], [[`${g}xy`, ex([[g * p, 'x²y']]), ex([[g * q, 'xy²']])]], `Read backwards: ${g}xy goes into both boxes.`) });
   },
 
   // ---- substitution and rearranging --------------------------------------------------------
@@ -981,7 +1033,8 @@ const G = {
         const s = rng.int(3, 11), over = rng.chance(0.4);
         let count = 0; for (let a = 1; a <= 6; a++) for (let b = 1; b <= 6; b++) if (over ? a + b > s : a + b === s) count++;
         return fracQ(`Two fair dice are rolled and the scores added. What is the probability the total is ${over ? `more than ${s}` : s}?`, F(count, 36), `There are 36 equally likely outcomes; ${count} of them ${count === 1 ? 'gives' : 'give'} ${over ? `more than ${s}` : `a total of ${s}`}: ${tex(F(count, 36))}.`,
-          ['Draw a 6 × 6 sample space: 36 outcomes.', `Count the outcomes that work: ${count}.`, `${count}/36${gcd(count, 36) > 1 ? ` = ${tex(F(count, 36))}` : ''}.`]);
+          ['Draw a 6 × 6 sample space: 36 outcomes.', `Count the outcomes that work: ${count}.`, `${count}/36${gcd(count, 36) > 1 ? ` = ${tex(F(count, 36))}` : ''}.`],
+          { visual: { kind: 'maths', diagram: { type: 'possgrid', a: [1, 2, 3, 4, 5, 6], b: [1, 2, 3, 4, 5, 6], op: 'sum', shade: over ? Array.from({ length: 12 - s }, (_, i) => s + 1 + i) : [s] }, caption: `${count} of the 36 totals are shaded.` } });
       }
       if (kind === 'table') {
         const a = rng.int(5, 30), b = rng.int(5, 30), rest = 100 - a - b;
@@ -1007,12 +1060,13 @@ const G = {
         showVenn ? { diagram: { type: 'venn', labels: ['A', 'G'], only: [a - c, b - c], both: c, out } } : {});
     }
     const p = F(rng.int(1, 4), rng.int(5, 8)), q = F(rng.int(1, 3), rng.int(4, 6));
+    const races = { visual: { kind: 'maths', diagram: { type: 'tree', a: [['Wins', p.toString()], ['Loses', F(1).sub(p).toString()]], b: [['Wins', q.toString()], ['Loses', F(1).sub(q).toString()]] }, caption: 'First branches: Mira’s race. Second branches: Theo’s race.' } };
     if (rng.chance(0.5)) return fracQ(`The probability Mira wins her race is ${tex(p)}, and the probability Theo wins his (a separate race) is ${tex(q)}. What is the probability they BOTH win?`, p.mul(q), `Independent events: multiply. ${tex(p)} × ${tex(q)} = ${tex(p.mul(q))}.`,
-      ['The races don’t affect each other: independent events.', 'P(A and B) = P(A) × P(B).', `${tex(p)} × ${tex(q)} = ${tex(p.mul(q))}.`]);
+      ['The races don’t affect each other: independent events.', 'P(A and B) = P(A) × P(B).', `${tex(p)} × ${tex(q)} = ${tex(p.mul(q))}.`], races);
     const atLeast = F(1).sub(F(1).sub(p).mul(F(1).sub(q)));
     return fracQ(`The probability Mira wins her race is ${tex(p)}, and the probability Theo wins his (a separate race) is ${tex(q)}. What is the probability at least one of them wins?`, atLeast,
       `P(neither) = ${tex(F(1).sub(p))} × ${tex(F(1).sub(q))} = ${tex(F(1).sub(p).mul(F(1).sub(q)))}. So P(at least one) = 1 − that = ${tex(atLeast)}.`,
-      ['“At least one” is everything except “neither”.', `P(neither) = ${tex(F(1).sub(p))} × ${tex(F(1).sub(q))} = ${tex(F(1).sub(p).mul(F(1).sub(q)))}.`, `1 − ${tex(F(1).sub(p).mul(F(1).sub(q)))} = ${tex(atLeast)}.`]);
+      ['“At least one” is everything except “neither”.', `P(neither) = ${tex(F(1).sub(p))} × ${tex(F(1).sub(q))} = ${tex(F(1).sub(p).mul(F(1).sub(q)))}.`, `1 − ${tex(F(1).sub(p).mul(F(1).sub(q)))} = ${tex(atLeast)}.`], races);
   },
 
   // ---- statistics ----------------------------------------------------------------------------
@@ -1103,7 +1157,7 @@ const G = {
     if (x === 0 && y === 0) return G.y8mSimultaneous(level, rng); // x + y = 0 and x − y = 0 is no puzzle
     if (level === 1) {
       return pairQ(`Solve: x + y = ${neg(x + y)} and x − y = ${neg(x - y)}. Give your answer as (x, y).`, [x, y], `Add the equations: 2x = ${neg(2 * x)}, so x = ${neg(x)}. Then y = ${neg(x + y)} − ${paren(x)} = ${neg(y)}.`,
-        ['Adding the two equations cancels y.', `2x = ${neg(2 * x)}, x = ${neg(x)}.`, `Substitute back: y = ${neg(y)}.`]);
+        ['Adding the two equations cancels y.', `2x = ${neg(2 * x)}, x = ${neg(x)}.`, `Substitute back: y = ${neg(y)}.`], crossing([[1, 1, x + y], [1, -1, x - y]], x, y));
     }
     if (level === 2) {
       const a = rng.int(2, 5), b = rng.int(1, 4), c = rng.int(1, 4);
@@ -1113,7 +1167,7 @@ const G = {
       const solveX = k === 1 ? `x = ${neg(x)}` : `${k}x = ${neg(k * x)}, so x = ${neg(x)}`;
       return pairQ(`Solve: ${a}x + ${b}y = ${neg(a * x + b * y)} and ${c === 1 ? '' : c}x + ${b}y = ${neg(c * x + b * y)}. Give (x, y).`.replace(/ 1y/g, ' y'), [x, y],
         `The y terms match, so subtract ${sub}: ${solveX}. Then ${b === 1 ? '' : b}y = ${neg(a * x + b * y)} − ${paren(a * x)}, so y = ${neg(y)}.`,
-        [`Both equations have the same y term: subtract ${sub} to eliminate it.`, `${solveX}.`, `Substitute: y = ${neg(y)}.`]);
+        [`Both equations have the same y term: subtract ${sub} to eliminate it.`, `${solveX}.`, `Substitute: y = ${neg(y)}.`], crossing([[a, b, a * x + b * y], [c, b, c * x + b * y]], x, y));
     }
     if (rng.chance(0.5)) {
       const o = rng.int(2, 12), l = rng.int(2, 12), [p, q, r, s] = [rng.int(2, 5), rng.int(1, 4), rng.int(1, 3), rng.int(2, 6)];
@@ -1129,27 +1183,30 @@ const G = {
     const match = a === c ? `The x terms are already both ${a}x.` : m1 === 1 ? `Multiply the second by ${m2}, so the x terms are both ${L}x.` : m2 === 1 ? `Multiply the first by ${m1}, so the x terms are both ${L}x.` : `Multiply the first by ${m1} and the second by ${m2}, so the x terms are both ${L}x.`;
     return pairQ(`Solve: ${a}x + ${b}y = ${neg(a * x + b * y)} and ${c}x${sgn(d)}y = ${neg(c * x + d * y)}. Give (x, y).`.replace(/ − 1y/, ' − y'), [x, y],
       `${a === c ? 'The x terms already match, so subtract' : 'Multiply to make the x coefficients match, then subtract'}: ${co}y = ${neg(co * y)}, so y = ${neg(y)}. Then x = ${neg(x)}.`,
-      [match, `Subtract to find ${co}y = ${neg(co * y)}, so y = ${neg(y)}.`, `Substitute back: x = ${neg(x)}.`]);
+      [match, `Subtract to find ${co}y = ${neg(co * y)}, so y = ${neg(y)}.`, `Substitute back: x = ${neg(x)}.`], crossing([[a, b, a * x + b * y], [c, d, c * x + d * y]], x, y));
   },
 
   y8mQuadratics(level, rng) {
     const nz = () => rng.pick([-7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8]);
     const a = nz(), b = nz();
     const fac = (p) => `(x ${p < 0 ? '-' : '+'} ${Math.abs(p)})`;
+    // grid for (x + a)(x + b): the second bracket across the top, the first down the side
+    const grid = (caption) => ({ visual: mulGrid(['x', neg(b)], [['x', 'x²', ex([[b, 'x']])], [neg(a), ex([[a, 'x']]), neg(a * b)]], caption) });
     if (level === 1) {
       const e = expr([[1, 'x²'], [a + b, 'x'], [a * b, '']]);
       return alg(`Expand and simplify: ${show(fac(a))}${show(fac(b))}`, e, `Multiply every term by every term: x², ${ex([[b, 'x']])}, ${ex([[a, 'x']])} and ${neg(a * b)}. Collect the x terms: ${show(e.answer)}.`,
-        [`x × x = x²; x × ${paren(b)} + ${paren(a)} × x = ${ex([[a + b, 'x']]) || '0'}.`, `${paren(a)} × ${paren(b)} = ${neg(a * b)}.`, `${show(e.answer)}.`], { placeholder: 'e.g. x^2 + 5x + 6' });
+        [`x × x = x²; x × ${paren(b)} + ${paren(a)} × x = ${ex([[a + b, 'x']]) || '0'}.`, `${paren(a)} × ${paren(b)} = ${neg(a * b)}.`, `${show(e.answer)}.`], { placeholder: 'e.g. x^2 + 5x + 6', ...grid(`The two x boxes make ${ex([[a + b, 'x']])}: ${show(e.answer)}.`) });
     }
     const quad = ex([[1, 'x²'], [a + b, 'x'], [a * b, '']]);
     if (level === 2) {
       return alg(`Factorise: ${quad}`, { answer: `${fac(a)}${fac(b)}`, accept: [`${fac(b)}${fac(a)}`] }, `Find two numbers that multiply to ${neg(a * b)} and add to ${neg(a + b)}: ${neg(a)} and ${neg(b)}. So ${show(fac(a) + fac(b))}.`,
-        [`Look for a pair: product ${neg(a * b)}, sum ${neg(a + b)}.`, `${neg(a)} × ${paren(b)} = ${neg(a * b)} and ${neg(a)} + ${paren(b)} = ${neg(a + b)}.`, `${show(fac(a) + fac(b))}.`], { placeholder: 'e.g. (x + 2)(x + 3)' });
+        [`Look for a pair: product ${neg(a * b)}, sum ${neg(a + b)}.`, `${neg(a)} × ${paren(b)} = ${neg(a * b)} and ${neg(a)} + ${paren(b)} = ${neg(a + b)}.`, `${show(fac(a) + fac(b))}.`], { placeholder: 'e.g. (x + 2)(x + 3)', ...grid(`Read backwards: the corner boxes multiply to ${neg(a * b)} and the x boxes add to ${ex([[a + b, 'x']])}.`) });
     }
     if (rng.chance(0.3)) {
       const k = rng.int(2, 12);
       return choice(`Factorise x² − ${k * k}`, `(x − ${k})(x + ${k})`, [`(x − ${k})²`, `(x + ${k})²`, `(x − ${k * k})(x + 1)`], rng, {
         explain: `The difference of two squares: x² − ${k}² = (x − ${k})(x + ${k}).`, steps: [`${k * k} = ${k}².`, 'a² − b² = (a − b)(a + b).', `(x − ${k})(x + ${k}).`],
+        visual: mulGrid(['x', String(k)], [['x', 'x²', `${k}x`], [`−${k}`, `−${k}x`, `−${k * k}`]], `The x boxes cancel (${k}x − ${k}x = 0), leaving x² − ${k * k}.`),
       });
     }
     if (a === b) return G.y8mQuadratics(level, rng);
@@ -1157,6 +1214,7 @@ const G = {
     return choice(`Solve ${quad} = 0`, sol(-a, -b), [sol(a, b), sol(-a, b), sol(a * b, a + b)], rng, {
       explain: `Factorise: ${show(fac(a) + fac(b))} = 0. One bracket must be zero, so x = ${neg(-a)} or x = ${neg(-b)}.`,
       steps: [`Factorise: ${show(fac(a) + fac(b))}.`, 'If two things multiply to 0, one of them is 0.', `${show(fac(a))} = 0 gives x = ${neg(-a)}; ${show(fac(b))} = 0 gives x = ${neg(-b)}.`],
+      ...grid(`${show(fac(a) + fac(b))} = ${quad}`),
     });
   },
 

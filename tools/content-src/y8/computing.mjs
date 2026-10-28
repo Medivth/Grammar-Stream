@@ -509,4 +509,58 @@ for (const id of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === id))
 for (const it of items) if (MEMORY[it.id]) Object.assign(it, MEMORY[it.id]);
 for (const id of Object.keys(MEMORY)) if (!items.some((it) => it.id === id)) throw new Error(`memory hook for unknown item ${id}`);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Network shapes (star, mesh, bus) and logic-gate symbols cannot be drawn yet, so topologies has
+// none and logic shows truth tables.
+const M = (diagram, caption) => ({ kind: 'maths', diagram, ...(caption ? { caption } : {}) });
+const BITS = [128, 64, 32, 16, 8, 4, 2, 1];
+const TWOS = ['−128', 64, 32, 16, 8, 4, 2, 1];
+const bits = (s) => s.split('');
+const SHAPES = { kind: 'table', head: ['shape', 'used for', 'example'], rows: [['oval', 'Start and Stop', 'Start'], ['parallelogram', 'input or output', 'Ask for a name'], ['rectangle', 'a process', 'add 1 to score'], ['diamond', 'a decision (Yes/No)', 'Is score > 10?']] };
+const FDE = { kind: 'cycle', steps: ['Fetch the next instruction from RAM', 'Decode: work out what it means', 'Execute: carry it out'], centre: 'CPU' };
+const HEROES = { kind: 'table', head: ['heroID', 'name', 'home', 'strength'], rows: [['1', 'Perseus', 'Argos', '78'], ['2', 'Theseus', 'Athens', '84'], ['3', 'Jason', 'Iolcus', '71'], ['4', 'Atalanta', 'Arcadia', '88']], tint: 'rows', caption: 'Table Heroes. Each row is a record; each column is a field. heroID is the primary key: unique for every record.' };
+const TOPIC_VISUALS = {
+  'computing.flowcharts': [SHAPES, { kind: 'flow', steps: ['Start', 'Input heads', 'Decision: is heads > 7?', 'Yes: output “Hydra!” / No: output “Just a snake”', 'Stop'], caption: 'Sequence, then selection: the decision diamond has two exits.' }],
+  'computing.python': { kind: 'table', head: ['variable', 'value', 'type'], rows: [['name', '"Athena"', 'str'], ['heads', '9', 'int'], ['price', '3.14', 'float'], ['alive', 'True', 'bool']], caption: 'Each variable is a named box. The type matters: "3" + "4" gives "34", but 3 + 4 gives 7.' },
+  'computing.selection': { kind: 'flow', steps: ['if heads > 7: True? print “Hydra!” and skip the rest', 'elif heads > 1: checked only if the if was False', 'else: runs only if everything above was False'], caption: 'Python checks the conditions in order and runs only the first one that is True.' },
+  'computing.loops': { kind: 'cycle', steps: ['Check: is lives > 0?', 'True: run the loop body', 'Update: lives = lives − 1'], centre: 'False? Leave the loop', caption: 'A while loop. Leave out the update and the check never becomes False: an infinite loop.' },
+  'computing.lists': { kind: 'table', rows: [['index', '0', '1', '2'], ['item', '"Clio"', '"Calliope"', '"Urania"'], ['from the end', '−3', '−2', '−1']], caption: 'muses = ["Clio", "Calliope", "Urania"]. Counting starts at 0, so muses[0] is "Clio" and muses[3] does not exist.' },
+  'computing.searching': { kind: 'table', rows: [['index', '0', '1', '2', '3', '4', '5', '6'], ['check 1', '4', '9', '15', '**22**', '30', '41', '56'], ['check 2', '', '', '', '', '30', '**41**', '56']], caption: 'Binary search for 41. Check the middle (22): 41 is bigger, so drop 22 and everything left of it. The middle of what is left is 41: found in 2 checks. A linear search needs 6.' },
+  'computing.sorting': { kind: 'table', rows: [['start', '5', '1', '4', '2', '8'], ['after pass 1', '1', '4', '2', '5', '**8**'], ['after pass 2', '1', '2', '4', '**5**', '**8**'], ['pass 3', '1', '2', '4', '5', '8']], caption: 'Bubble sort: compare neighbours and swap if they are in the wrong order. The biggest bubbles to the end each pass. Pass 3 makes no swaps, so it stops.' },
+  'computing.binary': M({ type: 'pvgrid', cols: BITS, rows: [bits('00101101')] }, '00101101 = 32 + 8 + 4 + 1 = 45. Split it into two nibbles: 0010 = 2 and 1101 = 13 = D, so 45 is 2D in hex.'),
+  'computing.binarymaths': [
+    { kind: 'table', head: ['add', 'write', 'carry'], rows: [['0 + 0', '0', '0'], ['0 + 1', '1', '0'], ['1 + 1', '0', '**1**'], ['1 + 1 + 1', '1', '**1**']] },
+    M({ type: 'pvgrid', cols: BITS, rows: [['', '', '', '', '1', '1', '', ''], bits('00100110'), bits('00010011'), bits('00111001')] }, 'Top row: the carries. 00100110 (38) + 00010011 (19) = 00111001 (57).'),
+  ],
+  'computing.media': M({ type: 'squares', cols: 7, rows: 6, cells: ['0110110', '1111111', '1111111', '0111110', '0011100', '0001000'].flatMap((row, r) => [...row].flatMap((b, c) => (b === '1' ? [[r, c]] : []))) }, 'With 1 bit per pixel, each pixel is 1 (coloured) or 0 (blank): the top row is 0110110. 7 × 6 pixels × 1 bit = 42 bits.'),
+  'computing.logic': [
+    { kind: 'table', head: ['A', 'B', 'A AND B', 'A OR B', 'A XOR B'], rows: [['0', '0', '0', '0', '0'], ['0', '1', '0', '1', '1'], ['1', '0', '0', '1', '1'], ['1', '1', '**1**', '1', '**0**']], caption: 'AND needs both; OR needs at least one; XOR needs exactly one.' },
+    { kind: 'table', head: ['A', 'NOT A'], rows: [['0', '1'], ['1', '0']], caption: 'NOT has one input and flips it.' },
+  ],
+  'computing.hardware': FDE,
+  'computing.software': [
+    { kind: 'flow', steps: ['You, the user', 'Applications: browser, games, Python', 'Operating system: memory, files, devices', 'Hardware: CPU, RAM, storage'], caption: 'Layers: each one uses the one below.' },
+    { kind: 'flow', across: true, steps: ['Python code (high-level)', 'compiler or interpreter', 'machine code (binary)'], caption: 'A translator turns the code we write into machine code the CPU can run.' },
+  ],
+  'computing.networks': { kind: 'flow', steps: ['The email is split into numbered packets', 'Each packet carries the destination IP address', 'Routers send each packet on the best route now', 'Packets may arrive out of order', 'They are put back in order by number'] },
+  'computing.history': { kind: 'timeline', from: 1820, to: 2000, events: [[1837, 'Babbage’s Analytical Engine'], [1843, 'Lovelace’s program'], [1936, 'Turing machine'], [1944, 'Colossus'], [1947, 'the transistor'], [1989, 'the World Wide Web']], caption: 'The Antikythera mechanism, a Greek geared calculator, is far older: over 2,000 years old.' },
+  'computing.trace': { kind: 'table', head: ['step', 'i', 'total'], rows: [['total = 0', '', '0'], ['loop, i = 1', '1', '1'], ['loop, i = 2', '2', '3'], ['loop, i = 3', '3', '**6**']], caption: 'Tracing `total = 0` then `for i in range(1, 4): total = total + i`: one new row each time a value changes.' },
+  'computing.twos': M({ type: 'pvgrid', cols: TWOS, rows: [bits('00010100'), bits('11101011'), bits('11101100')] }, '20 = 00010100. Flip every bit: 11101011. Add 1: 11101100 = −128 + 64 + 32 + 8 + 4 = −20.'),
+  'computing.sql': HEROES,
+};
+const ITEM_VISUALS = {
+  'computing.fc.diamond': SHAPES,
+  'computing.fc.para': SHAPES,
+  'computing.ls.range': { kind: 'table', rows: [['index', '0', '1', '2', '3'], ['item', '"Clio"', '"Calliope"', '"Urania"', '**nothing: IndexError**']] },
+  'computing.so.merge': { kind: 'flow', steps: ['6 2 7 3', 'split: 6 2 | 7 3', 'split: 6 | 2 | 7 | 3', 'merge pairs: 2 6 | 3 7', 'merge: 2 3 6 7'], caption: 'Divide and conquer: split until each piece has one item, then merge the sorted pieces.' },
+  'computing.bn.colour': M({ type: 'pvgrid', cols: [16, 1], rows: [['F', 'F']] }, 'F = 15, so FF = 15 × 16 + 15 = 255, the biggest number one byte can hold.'),
+  'computing.bm.overflow': M({ type: 'pvgrid', cols: ['9th', ...BITS], rows: [['', ...bits('11001000')], ['', ...bits('01100100')], ['1', ...bits('00101100')]] }, '200 + 100 = 300 needs 9 bits. The 1 that spills into a 9th column is lost: overflow. The byte keeps 00101100 = 44.'),
+  'computing.bm.right': M({ type: 'pvgrid', cols: BITS, rows: [['', '', '1', '0', '1', '1', '0', '0'], bits('00010110')], shift: -1 }, 'Right shift by 1: every bit moves one place right, so 44 becomes 22 (halved).'),
+  'computing.hw.cycle': FDE,
+  'computing.tw.msb': M({ type: 'pvgrid', cols: TWOS, rows: [bits('10000000'), bits('01111111'), bits('11111111')] }, '10000000 = −128 (the smallest); 01111111 = 127 (the largest); 11111111 = −128 + 127 = −1.'),
+  'computing.sq.select': { kind: 'table', head: ['name', 'home'], rows: [['Perseus', 'Argos'], ['**Theseus**', '**Athens**'], ['Jason', 'Iolcus'], ['Atalanta', 'Arcadia']], caption: '`SELECT name FROM Heroes WHERE home = \'Athens\';` keeps only the rows where home is Athens, and shows their name field: Theseus.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'computing', deck: 'y8', topics, items }];

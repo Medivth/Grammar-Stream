@@ -1,6 +1,8 @@
 // Cross-curricular (synoptic) generators: maths used inside geography, history and science.
 // Data sets are invented for the questions (fictional places) unless they are well-known dates.
 
+import { pic, bar } from './pictures.js';
+
 const fmtNum = (n) => n.toLocaleString('en-GB');
 const neg = (n) => (n < 0 ? `−${-n}` : String(n));
 
@@ -163,6 +165,7 @@ export const SYNOPTIC_GENERATORS = {
       numeric: { value: String(died), form: 'any' }, unit: 'million',
       explain: `${num}/${den} of ${pop} million = ${pop} ÷ ${den} × ${num} = ${died} million. Historians think somewhere between a third and a half of England’s people died in 1348–50.`,
       steps: [`To find ${num}/${den} of an amount, I divide by ${den} and multiply by ${num}.`, `${pop} ÷ ${den} = ${pop / den}.`, `${pop / den} × ${num} = ${died} million people.`],
+      ...pic(bar([{ parts: den, shaded: num, text: pop / den }], `${pop} million`), `${pop} million in ${den} equal boxes: ${pop / den} million in each. {{${num}/${den}}} is ${num === 1 ? 'one box' : `${num} boxes`}: ${died} million.`),
     };
   },
 
@@ -193,6 +196,7 @@ export const SYNOPTIC_GENERATORS = {
           numeric: { value: String(part * r), form: 'any' }, unit: 'ml',
           explain: `For every 1 part squash there are ${r} parts water: ${part} × ${r} = ${part * r} ml.`,
           steps: [`The ratio 1 : ${r} means ${r} times as much water as squash.`, `I have ${part} ml of squash.`, `${part} × ${r} = ${part * r} ml of water.`],
+          ...pic(bar([{ label: 'squash', parts: 1, text: part, total: `${part} ml` }, { label: 'water', parts: r, text: part, total: `${part * r} ml` }]), `1 box of squash to ${r} boxes of water. Each box is ${part} ml, so the water is ${r} × ${part} = ${part * r} ml.`),
         };
       }
       const r = rng.pick([10, 20, 25]);

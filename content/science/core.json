@@ -92,7 +92,63 @@
    "intro": "Scientists sort living things into groups by their features.",
    "teach": "Explain how you could tell a mammal from a reptile.",
    "talk": "Ask her whether a whale is a fish or a mammal, and why.",
-   "hook": "**K**ing **P**hilip **C**ame **O**ver **F**or **G**ood **S**oup: kingdom, phylum, class, order, family, genus, species."
+   "hook": "**K**ing **P**hilip **C**ame **O**ver **F**or **G**ood **S**oup: kingdom, phylum, class, order, family, genus, species.",
+   "visual": [
+    {
+     "kind": "tree",
+     "root": {
+      "n": "Animals",
+      "c": [
+       {
+        "n": "Vertebrates",
+        "note": "have a backbone",
+        "mark": true
+       },
+       {
+        "n": "Invertebrates",
+        "note": "no backbone: insects, spiders, worms"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "table",
+     "head": [
+      "group",
+      "key features",
+      "example"
+     ],
+     "rows": [
+      [
+       "fish",
+       "live in water; gills, scales and fins",
+       "salmon"
+      ],
+      [
+       "amphibians",
+       "moist skin; young live in water (gills), adults on land (lungs)",
+       "frog"
+      ],
+      [
+       "reptiles",
+       "dry, scaly skin; most lay eggs on land",
+       "snake"
+      ],
+      [
+       "birds",
+       "feathers and a beak; lay hard-shelled eggs",
+       "robin"
+      ],
+      [
+       "mammals",
+       "hair or fur; breathe air; feed their babies milk",
+       "**whale**, human"
+      ]
+     ],
+     "tint": "rows",
+     "caption": "The five vertebrate groups. A whale lives in water, but it breathes air and feeds its babies milk: it is a mammal."
+    }
+   ]
   },
   {
    "id": "science.body",
@@ -124,7 +180,18 @@
    "intro": "How did giraffes get long necks? Darwin had an answer that changed science.",
    "teach": "Explain how natural selection works using the giraffe.",
    "talk": "Ask her what Mary Anning discovered.",
-   "hook": "“Survival of the fittest”: the best-suited survive, breed and pass on their features."
+   "hook": "“Survival of the fittest”: the best-suited survive, breed and pass on their features.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Giraffes vary: some have longer necks",
+     "Longer necks reach more leaves",
+     "Those giraffes survive and breed more",
+     "Their young inherit long necks",
+     "Over many generations, necks get longer"
+    ],
+    "caption": "Natural selection: nobody stretches their neck. The giraffes that happen to suit their habitat best survive and pass their features on."
+   }
   }
  ],
  "items": [
@@ -1054,7 +1121,44 @@
    ],
    "explain": "Classification is based on features, not habitat. Whales are mammals.",
    "hook": "Breathes air and feeds its baby milk? Mammal, wherever it lives.",
-   "example": "Dolphins and grey seals around UK coasts are mammals too: watch them come up to breathe."
+   "example": "Dolphins and grey seals around UK coasts are mammals too: watch them come up to breathe.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "group",
+     "key features",
+     "example"
+    ],
+    "rows": [
+     [
+      "fish",
+      "live in water; gills, scales and fins",
+      "salmon"
+     ],
+     [
+      "amphibians",
+      "moist skin; young live in water (gills), adults on land (lungs)",
+      "frog"
+     ],
+     [
+      "reptiles",
+      "dry, scaly skin; most lay eggs on land",
+      "snake"
+     ],
+     [
+      "birds",
+      "feathers and a beak; lay hard-shelled eggs",
+      "robin"
+     ],
+     [
+      "mammals",
+      "hair or fur; breathe air; feed their babies milk",
+      "**whale**, human"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "The five vertebrate groups. A whale lives in water, but it breathes air and feeds its babies milk: it is a mammal."
+   }
   },
   {
    "id": "science.lv.vertebrate",
@@ -1072,7 +1176,24 @@
     "vertebrate"
    ],
    "hook": "**Vertebr**ate = has **vertebr**ae, the bones of a backbone.",
-   "example": "Run a finger down the middle of your back: those bumps are your vertebrae."
+   "example": "Run a finger down the middle of your back: those bumps are your vertebrae.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Animals",
+     "c": [
+      {
+       "n": "Vertebrates",
+       "note": "have a backbone",
+       "mark": true
+      },
+      {
+       "n": "Invertebrates",
+       "note": "no backbone: insects, spiders, worms"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "science.lv.five",
@@ -1090,7 +1211,44 @@
     "choice"
    ],
    "hook": "**MR FAB**: **M**ammals, **R**eptiles, **F**ish, **A**mphibians, **B**irds.",
-   "example": "A garden can hold all five: a hedgehog, a slow-worm, goldfish in the pond, a frog and a robin."
+   "example": "A garden can hold all five: a hedgehog, a slow-worm, goldfish in the pond, a frog and a robin.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "group",
+     "key features",
+     "example"
+    ],
+    "rows": [
+     [
+      "fish",
+      "live in water; gills, scales and fins",
+      "salmon"
+     ],
+     [
+      "amphibians",
+      "moist skin; young live in water (gills), adults on land (lungs)",
+      "frog"
+     ],
+     [
+      "reptiles",
+      "dry, scaly skin; most lay eggs on land",
+      "snake"
+     ],
+     [
+      "birds",
+      "feathers and a beak; lay hard-shelled eggs",
+      "robin"
+     ],
+     [
+      "mammals",
+      "hair or fur; breathe air; feed their babies milk",
+      "**whale**, human"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "The five vertebrate groups. A whale lives in water, but it breathes air and feeds its babies milk: it is a mammal."
+   }
   },
   {
    "id": "science.lv.amphibian",
@@ -1349,7 +1507,18 @@
    ],
    "explain": "Natural selection: random variation, then the best-suited individuals survive and reproduce more, so the trait becomes common over many generations.",
    "hook": "“Survival of the fittest”: giraffes didn’t stretch; the longer-necked ones survived more.",
-   "example": "Peppered moths: when soot blackened trees near Victorian factories, dark moths were better hidden and became common."
+   "example": "Peppered moths: when soot blackened trees near Victorian factories, dark moths were better hidden and became common.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Giraffes vary: some have longer necks",
+     "Longer necks reach more leaves",
+     "Those giraffes survive and breed more",
+     "Their young inherit long necks",
+     "Over many generations, necks get longer"
+    ],
+    "caption": "Natural selection: nobody stretches their neck. The giraffes that happen to suit their habitat best survive and pass their features on."
+   }
   },
   {
    "id": "science.ev.d2",

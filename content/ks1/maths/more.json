@@ -23,7 +23,25 @@
    ],
    "intro": "If you know one fact, you know four! 7 + 3 = 10, so 3 + 7 = 10, 10 − 3 = 7 and 10 − 7 = 3.",
    "teach": "Explain how 8 + 5 = 13 helps you work out 13 − 5.",
-   "talk": "Give {him} one fact and ask for the other three in the family."
+   "talk": "Give {him} one fact and ask for the other three in the family.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "10",
+     "note": "the whole",
+     "c": [
+      {
+       "n": "7",
+       "note": "a part"
+      },
+      {
+       "n": "3",
+       "note": "a part"
+      }
+     ]
+    },
+    "caption": "One family, four facts: 7 + 3 = 10, 3 + 7 = 10, 10 − 3 = 7, 10 − 7 = 3."
+   }
   },
   {
    "kind": "skill",
@@ -35,7 +53,16 @@
    ],
    "intro": "Double means two lots of the same. Half means two equal parts. They undo each other: double 6 is 12, half of 12 is 6.",
    "teach": "Explain how to double 34 by splitting it into tens and ones.",
-   "talk": "Ask {him} to halve the number of grapes in a bowl, then check by doubling."
+   "talk": "Ask {him} to halve the number of grapes in a bowl, then check by doubling.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "array",
+     "rows": 2,
+     "cols": 6
+    },
+    "caption": "Two rows of 6: double 6 is 12. Split them into the two rows: half of 12 is 6."
+   }
   },
   {
    "kind": "skill",
@@ -44,7 +71,18 @@
    "prereqs": [],
    "intro": "A full turn takes you all the way round. A half turn faces you the opposite way. Clockwise is the way clock hands go: north, east, south, west.",
    "teach": "Explain the difference between clockwise and anticlockwise.",
-   "talk": "Play robots: give {him} instructions like “quarter turn clockwise, 3 steps forward”."
+   "talk": "Play robots: give {him} instructions like “quarter turn clockwise, 3 steps forward”.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "North",
+     "East",
+     "South",
+     "West"
+    ],
+    "centre": "clockwise",
+    "caption": "Each arrow is a quarter turn clockwise. Two quarter turns make a half turn; four make a full turn."
+   }
   },
   {
    "kind": "skill",
@@ -56,7 +94,22 @@
    ],
    "intro": "Rulers, jugs and thermometers all have scales. Not every mark has a number, so first work out what each mark is worth.",
    "teach": "Explain how to read a jug when the marks go up in 100s but only some are numbered.",
-   "talk": "Ask {him} to read the temperature on a thermometer or the oven dial."
+   "talk": "Ask {him} to read the temperature on a thermometer or the oven dial.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "numline",
+     "min": 0,
+     "max": 100,
+     "step": 10,
+     "labels": [
+      0,
+      50,
+      100
+     ]
+    },
+    "caption": "Only some marks have numbers. 10 steps from 0 to 100, so each step is worth 10."
+   }
   },
   {
    "kind": "skill",
@@ -67,7 +120,41 @@
    ],
    "intro": "Dividing can mean sharing equally, or making equal groups. Sometimes there are some left over: these are called the remainder.",
    "teach": "Explain why 13 cars need 4 transporters if each carries 4.",
-   "talk": "Share some biscuits equally and ask {him} how many are left over."
+   "talk": "Share some biscuits equally and ask {him} how many are left over.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "barmodel",
+      "total": "15",
+      "rows": [
+       {
+        "parts": 3,
+        "text": "5"
+       }
+      ]
+     },
+     "caption": "15 shared into 3 equal groups: 5 in each. 15 ÷ 3 = 5."
+    },
+    {
+     "kind": "tree",
+     "root": {
+      "n": "13 cars",
+      "note": "4 on each transporter",
+      "c": [
+       {
+        "n": "12 cars",
+        "note": "3 full transporters"
+       },
+       {
+        "n": "1 car",
+        "note": "left over"
+       }
+      ]
+     },
+     "caption": "13 ÷ 4 = 3 remainder 1. The car left over needs a 4th transporter."
+    }
+   ]
   },
   {
    "kind": "skill",
@@ -89,7 +176,31 @@
    ],
    "intro": "There are lots of ways to make the same amount with coins. Finding change means counting on from what it costs to what you paid.",
    "teach": "Explain two different ways to make 50p.",
-   "talk": "Play shops with real coins: price toys and give change."
+   "talk": "Play shops with real coins: price toys and give change.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "coins",
+      "coins": [
+       50
+      ]
+     },
+     "caption": "One way to make 50p…"
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "coins",
+      "coins": [
+       20,
+       20,
+       10
+      ]
+     },
+     "caption": "…and another: 20p + 20p + 10p = 50p."
+    }
+   ]
   },
   {
    "kind": "skill",
@@ -100,7 +211,27 @@
    ],
    "intro": "Time passes in minutes and hours. To find how long something takes, count on from the start time to the finish time.",
    "teach": "Explain how to work out when a 30-minute race finishes if it starts at quarter past 2.",
-   "talk": "Ask {him} how long until dinner, or how long the car journey took."
+   "talk": "Ask {him} how long until dinner, or how long the car journey took.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "clock",
+      "h": 2,
+      "m": 15
+     },
+     "caption": "The race starts at quarter past 2…"
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "clock",
+      "h": 2,
+      "m": 45
+     },
+     "caption": "…and finishes at quarter to 3. That is 30 minutes."
+    }
+   ]
   },
   {
    "kind": "facts",
@@ -139,6 +270,30 @@
    "intro": "Multiplying by 10 makes a number ten times bigger: the digits shift one place to the left. Dividing by 10 shifts them back.",
    "teach": "Explain what happens to the digits of 7 when you multiply by 100.",
    "talk": "Ask {him} how many pence are in £3, £5 and £10.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "pvgrid",
+     "cols": [
+      "H",
+      "T",
+      "O"
+     ],
+     "rows": [
+      [
+       "3",
+       "4"
+      ],
+      [
+       "3",
+       "4",
+       "0"
+      ]
+     ],
+     "shift": 1
+    },
+    "caption": "34 × 10 = 340. Each digit moves one place to the left, and a 0 fills the ones."
+   },
    "coreIn": [
     "y3"
    ]
@@ -170,6 +325,47 @@
    "intro": "The Romans wrote numbers with letters: I = 1, V = 5, X = 10. You still see them on clocks and in film titles.",
    "teach": "Explain why 4 is written IV, not IIII.",
    "talk": "Find Roman numerals on a clock face, a building or a book.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Roman",
+     "Number"
+    ],
+    "rows": [
+     [
+      "I",
+      "1"
+     ],
+     [
+      "II",
+      "2"
+     ],
+     [
+      "III",
+      "3"
+     ],
+     [
+      "IV",
+      "4 (one before five)"
+     ],
+     [
+      "V",
+      "5"
+     ],
+     [
+      "VI",
+      "6 (one after five)"
+     ],
+     [
+      "IX",
+      "9 (one before ten)"
+     ],
+     [
+      "X",
+      "10"
+     ]
+    ]
+   },
    "coreIn": [
     "y3"
    ]
@@ -418,7 +614,29 @@
     "28",
     "29"
    ],
-   "explain": "“Thirty days has September, April, June and November…”"
+   "explain": "“Thirty days has September, April, June and November…”",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Days",
+     "Months"
+    ],
+    "rows": [
+     [
+      "31",
+      "January, March, May, July, August, October, December"
+     ],
+     [
+      "30",
+      "April, June, September, November"
+     ],
+     [
+      "28 (29 in a leap year)",
+      "February"
+     ]
+    ],
+    "tint": "rows"
+   }
   },
   {
    "id": "maths.f2.5",
@@ -435,7 +653,29 @@
    "accept": [
     "february",
     "feb"
-   ]
+   ],
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Days",
+     "Months"
+    ],
+    "rows": [
+     [
+      "31",
+      "January, March, May, July, August, October, December"
+     ],
+     [
+      "30",
+      "April, June, September, November"
+     ],
+     [
+      "28 (29 in a leap year)",
+      "February"
+     ]
+    ],
+    "tint": "rows"
+   }
   },
   {
    "id": "maths.f2.6",
@@ -519,7 +759,16 @@
     "5",
     "6"
    ],
-   "explain": "Quad means four. Squares, rectangles and kites are all quadrilaterals."
+   "explain": "Quad means four. Squares, rectangles and kites are all quadrilaterals.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "polygon",
+     "sides": 4,
+     "name": "quadrilateral"
+    },
+    "caption": "Quad means four: 4 sides."
+   }
   },
   {
    "id": "maths.f2.12",
@@ -532,7 +781,15 @@
     "8",
     "4"
    ],
-   "explain": "4 round the top, 4 round the bottom and 4 going up: 12."
+   "explain": "4 round the top, 4 round the bottom and 4 going up: 12.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "cube"
+    },
+    "caption": "4 edges round the top, 4 round the bottom and 4 going up: 12."
+   }
   },
   {
    "id": "maths.f2.13",
@@ -548,7 +805,15 @@
    "explain": "Like the pyramids in Egypt!",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "pyramid"
+    },
+    "caption": "A square-based pyramid"
+   }
   },
   {
    "id": "maths.f2.14",

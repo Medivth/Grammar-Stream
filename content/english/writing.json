@@ -26,7 +26,84 @@
    ],
    "intro": "Greater-depth writers use semi-colons, colons, dashes and brackets precisely. Let’s check what you already know.",
    "teach": "Explain when to use a colon and when to use a semi-colon.",
-   "talk": "Ask her to find a semi-colon in a book and explain why it is there."
+   "talk": "Ask her to find a semi-colon in a book and explain why it is there.",
+   "visual": [
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "The rain fell",
+         "clause",
+         "main clause"
+        ],
+        [
+         ";",
+         "conjunction",
+         "semi-colon"
+        ],
+        [
+         "the river burst its banks",
+         "clause",
+         "main clause"
+        ]
+       ]
+      }
+     ],
+     "caption": "Semi-colon: a soft full stop between two main clauses."
+    },
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "You need three things",
+         "clause",
+         "main clause"
+        ],
+        [
+         ":",
+         "conjunction",
+         "colon"
+        ],
+        [
+         "a torch, a map and a coat",
+         "object",
+         "the list"
+        ]
+       ]
+      }
+     ],
+     "caption": "Colon: a complete clause, then a drumroll: “here it comes”."
+    },
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "My uncle",
+         "clause",
+         "main clause"
+        ],
+        [
+         "(who lives in Wales)",
+         "subordinate",
+         "extra: lift it out"
+        ],
+        [
+         "keeps bees.",
+         "clause",
+         "main clause"
+        ]
+       ]
+      }
+     ],
+     "caption": "Brackets, dashes or a pair of commas: lift out the extra and the sentence still works."
+    }
+   ]
   }
  ],
  "items": [
@@ -380,7 +457,32 @@
     }
    ],
    "explain": "A semi-colon joins two closely linked main clauses that could each be a sentence.",
-   "hook": "A semi-colon is a soft full stop: only use one where a full stop would also work."
+   "hook": "A semi-colon is a soft full stop: only use one where a full stop would also work.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The rain fell",
+        "clause",
+        "main clause"
+       ],
+       [
+        ";",
+        "conjunction",
+        "semi-colon"
+       ],
+       [
+        "the river burst its banks.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "Both sides could be a sentence on their own, so a semi-colon can join them."
+   }
   },
   {
    "id": "english.punct.2",
@@ -410,7 +512,32 @@
    ],
    "explain": "A colon comes after a complete clause and introduces a list, an example or an explanation.",
    "hook": "A colon is a drumroll: a complete clause, then “here it comes…”.",
-   "example": "Recipe cards: “You will need the following: flour, eggs and milk.”"
+   "example": "Recipe cards: “You will need the following: flour, eggs and milk.”",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "You need three things",
+        "clause",
+        "complete clause"
+       ],
+       [
+        ":",
+        "conjunction",
+        "colon"
+       ],
+       [
+        "a torch, a map and a coat.",
+        "object",
+        "the list"
+       ]
+      ]
+     }
+    ],
+    "caption": "A complete clause comes before the colon."
+   }
   },
   {
    "id": "english.punct.3",
@@ -439,7 +566,32 @@
     }
    ],
    "explain": "Parenthesis adds extra information. The sentence must still make sense if you remove it.",
-   "hook": "The finger test: cover the brackets and what’s inside. The sentence must still make sense."
+   "hook": "The finger test: cover the brackets and what’s inside. The sentence must still make sense.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "My uncle",
+        "clause",
+        "main clause"
+       ],
+       [
+        "(who lives in Wales)",
+        "subordinate",
+        "extra: lift it out"
+       ],
+       [
+        "keeps bees.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "Cover the brackets: “My uncle keeps bees.” still makes sense."
+   }
   },
   {
    "id": "english.punct.4",
@@ -468,7 +620,32 @@
     }
    ],
    "explain": "A pair of dashes works like brackets: the sentence makes sense without the part between them.",
-   "hook": "Dashes for parenthesis come in pairs, like two hands holding the extra bit."
+   "hook": "Dashes for parenthesis come in pairs, like two hands holding the extra bit.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The castle",
+        "clause",
+        "main clause"
+       ],
+       [
+        "– built over 800 years ago –",
+        "subordinate",
+        "extra: lift it out"
+       ],
+       [
+        "still stands.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "Two dashes hold the extra bit, like two hands."
+   }
   },
   {
    "id": "english.punct.5",
@@ -498,7 +675,51 @@
    ],
    "explain": "In the passive voice the thing that the action happens to comes first: “The window was smashed (by …)”.",
    "hook": "The zombie test: if you can add “by zombies” after the verb, it’s passive. “The window was smashed by zombies.”",
-   "example": "News reports say “A man was arrested”: the passive leaves out the police because we can guess who did it."
+   "example": "News reports say “A man was arrested”: the passive leaves out the police because we can guess who did it.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "A football",
+        "subject",
+        "subject: the doer"
+       ],
+       [
+        "smashed",
+        "verb",
+        "verb"
+       ],
+       [
+        "the window",
+        "object",
+        "object"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "The window",
+        "object",
+        "subject"
+       ],
+       [
+        "was smashed",
+        "verb",
+        "was + verb"
+       ],
+       [
+        "by a football",
+        "subject",
+        "by + the doer"
+       ]
+      ]
+     }
+    ],
+    "caption": "Active (top), then passive. The colours follow the two things: in the passive the doer moves to the end, after “by”, or vanishes."
+   }
   },
   {
    "id": "english.punct.6",
@@ -588,7 +809,52 @@
    ],
    "explain": "A hyphen joins words to show they work together as one description: “man-eating”.",
    "hook": "A hyphen hugs words that work together as one describing word: man-eating, well-known.",
-   "example": "A “little-used car” has hardly been driven; a “little used car” is a small second-hand car."
+   "example": "A “little-used car” has hardly been driven; a “little used car” is a small second-hand car.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "a"
+       ],
+       [
+        "man-eating",
+        "adjective",
+        "one describing word"
+       ],
+       [
+        "shark",
+        "noun",
+        "noun"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "a"
+       ],
+       [
+        "man",
+        "noun",
+        "noun"
+       ],
+       [
+        "eating",
+        "verb",
+        "verb"
+       ],
+       [
+        "shark",
+        "noun",
+        "noun"
+       ]
+      ]
+     }
+    ],
+    "caption": "With the hyphen, a shark that eats people. Without it, a man eating some shark!"
+   }
   },
   {
    "id": "english.punct.9",
@@ -617,7 +883,32 @@
     }
    ],
    "explain": "A relative clause adds information about a noun and starts with a relative pronoun such as who, which, that or whose.",
-   "hook": "Relative pronouns relate back to a noun: who (people), which (things), that, whose, where, when."
+   "hook": "Relative pronouns relate back to a noun: who (people), which (things), that, whose, where, when.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The boy",
+        "clause",
+        "main clause"
+       ],
+       [
+        "who won the race",
+        "subordinate",
+        "relative clause"
+       ],
+       [
+        "was beaming.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "“who” relates back to “the boy”."
+   }
   },
   {
    "id": "english.punct.10",
@@ -647,7 +938,33 @@
    ],
    "explain": "Modal verbs (might, could, should, will, must, may, can, would) show how likely or necessary something is.",
    "hook": "Modal verbs are a certainty scale: will (sure) → should → might, could, may (maybe).",
-   "example": "Weather forecasts: “It might rain” is a maybe; “It will rain” means take your coat."
+   "example": "Weather forecasts: “It might rain” is a maybe; “It will rain” means take your coat.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "→",
+      "parts": [
+       [
+        "will",
+        "verb",
+        "certain"
+       ],
+       [
+        "should",
+        "verb",
+        "likely"
+       ],
+       [
+        "might, could, may",
+        "verb",
+        "maybe"
+       ]
+      ]
+     }
+    ],
+    "caption": "Modal verbs are a certainty scale."
+   }
   }
  ],
  "sentences": [

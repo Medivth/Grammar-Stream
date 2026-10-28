@@ -128,4 +128,18 @@ for (const [id, extra] of Object.entries(MEMORY)) {
   Object.assign(item, extra);
 }
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const HEADLAND = { kind: 'flow', across: true, steps: ['crack', 'cave', 'arch', 'stack', 'stump'], caption: 'Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack wears down to a stump.' };
+const TOPIC_VISUALS = {
+  'geography.coasts': HEADLAND,
+  'geography.development': { kind: 'table', head: ['', 'Country A', 'Country B', 'Country C'], rows: [['income per person', '$65,000', '$9,000', '$800'], ['life expectancy', '81', '73', '59'], ['adults who can read', '99%', '92%', '44%'], ['babies in 1,000 who die before age 1', '6', '22', '70']], caption: 'No single indicator tells the whole story: compare several together.' },
+  'geography.weather-2': { kind: 'table', head: ['', 'low pressure (depression)', 'high pressure (anticyclone)'], rows: [['air', 'rises', 'sinks'], ['sky', 'cloud and rain', 'clear skies'], ['wind', 'strong', 'light'], ['isobars', 'close together', 'far apart'], ['brings', 'changeable, wet weather', 'hot summer days, frosty winter nights']], tint: 'cols', caption: 'Low is lousy; high is happy.' },
+};
+const ITEM_VISUALS = {
+  'geography.co.stack': HEADLAND,
+  'geography.ws.wind': { kind: 'table', head: ['isobars', 'wind'], rows: [['close together', '**strong**'], ['far apart', 'light']] },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = t.visual ? [].concat(t.visual, v) : v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = it.visual ? [].concat(it.visual, v) : v; }
+
 export default [{ subject: 'geography', deck: 'stretch', topics, items }];

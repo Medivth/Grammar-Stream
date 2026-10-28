@@ -13,7 +13,16 @@
    "intro": "Enzymes are biological catalysts: proteins that speed up reactions without being used up. Each has an active site with a precise shape, so it only fits its own substrate: the lock-and-key model.",
    "teach": "Explain, using the lock-and-key model, why an enzyme stops working at high temperature.",
    "talk": "Ask {him} why fresh pineapple stops jelly setting (an enzyme breaks down the protein), but tinned pineapple does not.",
-   "hook": "Lock and key: only the **right substrate** fits the active site, and too much heat **bends the lock**."
+   "hook": "Lock and key: only the **right substrate** fits the active site, and too much heat **bends the lock**.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Substrate fits the active site",
+     "Enzyme breaks the substrate down",
+     "Products leave; enzyme is unchanged"
+    ],
+    "caption": "Lock and key: only the right substrate fits. Too hot, and the active site changes shape: the enzyme is denatured."
+   }
   },
   {
    "id": "science.circulation",
@@ -39,7 +48,20 @@
    "intro": "Receptors detect a stimulus; electrical impulses travel along neurones to the brain or spinal cord; effectors (muscles and glands) respond. Reflexes skip the thinking part of the brain to protect you.",
    "teach": "Explain the path of a reflex arc when you touch a hot pan.",
    "talk": "Try the ruler-drop test with {him}, then try it while chatting.",
-   "hook": "Stimulus → receptor → sensory → relay → motor → effector: a reflex takes the **spinal shortcut**."
+   "hook": "Stimulus → receptor → sensory → relay → motor → effector: a reflex takes the **spinal shortcut**.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Stimulus: a hot pan",
+     "Receptors in the skin",
+     "Sensory neurone",
+     "Relay neurone in the spinal cord",
+     "Motor neurone",
+     "Effector: a muscle contracts",
+     "Response: the hand pulls away"
+    ],
+    "caption": "A reflex arc bypasses the conscious brain, so the response is very fast."
+   }
   },
   {
    "id": "science.transport",
@@ -52,7 +74,17 @@
    "intro": "Water travels up from the roots through xylem and evaporates from the leaves through stomata: transpiration. Sugars made in the leaves travel through phloem to where they are needed.",
    "teach": "Explain why a plant wilts on a hot, windy day.",
    "talk": "Stand a white carnation or a celery stick in coloured water and watch the xylem.",
-   "hook": "**Ph**loem carries **f**ood (sugar), up and down; xylem carries water, one way: up."
+   "hook": "**Ph**loem carries **f**ood (sugar), up and down; xylem carries water, one way: up.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Water enters root hair cells by osmosis",
+     "It travels up the stem in the xylem",
+     "It reaches the leaves",
+     "It evaporates out through the stomata"
+    ],
+    "caption": "This loss of water is transpiration, and it pulls more water up behind it. Sugars travel in the phloem."
+   }
   },
   {
    "id": "science.immunity",
@@ -65,7 +97,17 @@
    "intro": "White blood cells defend the body: some engulf pathogens, others make antibodies that lock onto them. Vaccines train the immune system in advance, so it responds faster the next time.",
    "teach": "Explain why a vaccinated person usually does not become ill when they meet the real pathogen.",
    "talk": "Ask {him} why antibiotics don’t work on a cold.",
-   "hook": "Phagocytes **eat** invaders; lymphocytes make **antibodies**; memory cells **remember** them."
+   "hook": "Phagocytes **eat** invaders; lymphocytes make **antibodies**; memory cells **remember** them.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Vaccine: a dead or weakened pathogen",
+     "White blood cells make matching antibodies",
+     "Memory cells stay in the blood",
+     "Later, the real pathogen gets in",
+     "Antibodies made fast: no illness"
+    ]
+   }
   },
   {
    "id": "science.diet",
@@ -78,7 +120,37 @@
    "intro": "A balanced diet has carbohydrates, proteins, fats, vitamins, minerals, fibre and water. Simple chemical tests show which nutrients a food contains.",
    "teach": "Explain which test you would use to show a food contains protein, and the colour change.",
    "talk": "Read a food label together and compare the energy per 100 g of two snacks.",
-   "hook": "Iodine → **starch**, Benedict’s → **sugar**, biuret → **protein**, ethanol → **fat**."
+   "hook": "Iodine → **starch**, Benedict’s → **sugar**, biuret → **protein**, ethanol → **fat**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Test",
+     "For",
+     "Positive result"
+    ],
+    "rows": [
+     [
+      "Iodine",
+      "starch",
+      "orange-brown → **blue-black**"
+     ],
+     [
+      "Benedict’s (heated)",
+      "reducing sugar",
+      "blue → **green, yellow or brick red**"
+     ],
+     [
+      "Biuret",
+      "protein",
+      "blue → **purple**"
+     ],
+     [
+      "Ethanol, then water",
+      "fat (lipid)",
+      "**cloudy white**"
+     ]
+    ]
+   }
   },
   {
    "id": "science.biodiversity",
@@ -91,7 +163,66 @@
    "intro": "Linnaeus sorted living things into a hierarchy, from kingdom down to species, and gave each species a two-part Latin name. Biodiversity is the variety of life in an area, and it is under pressure from human activity.",
    "teach": "Explain why biodiversity matters, with two reasons.",
    "talk": "Ask {him} what Homo sapiens means (“wise human”).",
-   "hook": "**K**ing **P**hilip **C**ame **O**ver **F**or **G**ood **S**oup: kingdom, phylum, class, order, family, genus, species."
+   "hook": "**K**ing **P**hilip **C**ame **O**ver **F**or **G**ood **S**oup: kingdom, phylum, class, order, family, genus, species.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Animalia",
+     "note": "kingdom",
+     "c": [
+      {
+       "n": "Chordata",
+       "note": "phylum",
+       "c": [
+        {
+         "n": "Mammalia",
+         "note": "class",
+         "c": [
+          {
+           "n": "Carnivora",
+           "note": "order",
+           "c": [
+            {
+             "n": "Felidae",
+             "note": "family: cats",
+             "c": [
+              {
+               "n": "Panthera",
+               "note": "genus",
+               "c": [
+                {
+                 "n": "Panthera leo",
+                 "note": "lion",
+                 "mark": true
+                },
+                {
+                 "n": "Panthera tigris",
+                 "note": "tiger"
+                }
+               ]
+              },
+              {
+               "n": "Felis",
+               "note": "genus",
+               "c": [
+                {
+                 "n": "Felis catus",
+                 "note": "pet cat"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "King Philip Came Over For Good Soup: kingdom, phylum, class, order, family, genus, species. A species name is genus + species."
+   }
   },
   {
    "id": "science.geneng",
@@ -104,7 +235,18 @@
    "intro": "Genetic engineering moves a gene from one organism into another, so it makes something new: bacteria that make human insulin, crops that resist pests. It raises big questions about safety and fairness.",
    "teach": "Explain one benefit and one concern about GM crops.",
    "talk": "Discuss with {him}: should we bring back extinct animals if we could?",
-   "hook": "Selective breeding **picks the parents**; genetic engineering **moves the gene**."
+   "hook": "Selective breeding **picks the parents**; genetic engineering **moves the gene**.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Cut the insulin gene out of human DNA",
+     "Insert it into a bacterial plasmid",
+     "Put the plasmid into a bacterium",
+     "Bacteria multiply in huge tanks",
+     "Collect and purify the insulin"
+    ],
+    "caption": "Enzymes cut and join the DNA. Each time the bacteria divide, they copy the gene."
+   }
   },
   {
    "id": "science.formulae",
@@ -130,7 +272,45 @@
    "intro": "How a metal is extracted depends on its reactivity. Metals below carbon in the reactivity series can be extracted by heating their ores with carbon; more reactive metals need electrolysis.",
    "teach": "Explain why iron can be extracted with carbon but aluminium cannot.",
    "talk": "Ask {him} why gold jewellery from ancient Greece still shines.",
-   "hook": "Below carbon? Heat with **carbon**. Above carbon? **Electrolysis**. Gold? Just dig it up."
+   "hook": "Below carbon? Heat with **carbon**. Above carbon? **Electrolysis**. Gold? Just dig it up.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Most reactive first",
+     "Extracted by"
+    ],
+    "rows": [
+     [
+      "potassium",
+      "electrolysis"
+     ],
+     [
+      "magnesium",
+      "electrolysis"
+     ],
+     [
+      "aluminium",
+      "electrolysis"
+     ],
+     [
+      "carbon",
+      "**the dividing line** (a non-metal)"
+     ],
+     [
+      "iron",
+      "heating the ore with carbon"
+     ],
+     [
+      "copper",
+      "heating the ore with carbon"
+     ],
+     [
+      "gold",
+      "found as the metal: just dig it up"
+     ]
+    ],
+    "caption": "Metals below carbon can be extracted by heating with carbon; metals above it need electrolysis."
+   }
   },
   {
    "id": "science.rates",
@@ -143,7 +323,32 @@
    "intro": "Particles must collide with enough energy to react. More frequent or more energetic collisions mean a faster reaction: raise the temperature, concentration or surface area, or add a catalyst.",
    "teach": "Explain, using collision theory, why powder reacts faster than lumps.",
    "talk": "Drop a whole antacid tablet and a crushed one into water and compare.",
-   "hook": "Speed it up: **heat it, crowd it, crush it, or catalyse it**."
+   "hook": "Speed it up: **heat it, crowd it, crush it, or catalyse it**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Change",
+     "Why the reaction is faster"
+    ],
+    "rows": [
+     [
+      "Higher temperature",
+      "particles move faster: more frequent, more energetic collisions"
+     ],
+     [
+      "Higher concentration",
+      "more particles in the same volume: more collisions"
+     ],
+     [
+      "Larger surface area (powder)",
+      "more particles exposed: more collisions"
+     ],
+     [
+      "A catalyst",
+      "a route with a lower activation energy"
+     ]
+    ]
+   }
   },
   {
    "id": "science.energychange",
@@ -156,7 +361,39 @@
    "intro": "Exothermic reactions give out energy to the surroundings, so the temperature rises. Endothermic reactions take energy in, so the surroundings get colder.",
    "teach": "Explain, in terms of bonds, why combustion is exothermic.",
    "talk": "Look at how a reusable hand warmer works.",
-   "hook": "**Ex**othermic: heat **ex**its. **En**dothermic: heat **en**ters."
+   "hook": "**Ex**othermic: heat **ex**its. **En**dothermic: heat **en**ters.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Exothermic",
+     "Endothermic"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "Energy",
+      "given out",
+      "taken in"
+     ],
+     [
+      "Feels",
+      "**warmer**",
+      "**colder**"
+     ],
+     [
+      "Bonds",
+      "making bonds releases more",
+      "breaking bonds takes in more"
+     ],
+     [
+      "e.g.",
+      "combustion, hand warmers",
+      "photosynthesis, cold packs"
+     ]
+    ],
+    "caption": "On a reaction profile, the products of an exothermic reaction end lower in energy than the reactants; endothermic, higher."
+   }
   },
   {
    "id": "science.materials",
@@ -182,7 +419,18 @@
    "intro": "Many resources are finite: once used, they are gone. Recycling, reusing and life-cycle assessments help us use them more wisely.",
    "teach": "Explain why recycling aluminium saves so much energy.",
    "talk": "Sort the recycling together and ask {him} which item saves the most energy to recycle.",
-   "hook": "**Reduce** first, then **reuse**, then **recycle**."
+   "hook": "**Reduce** first, then **reuse**, then **recycle**.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "getting raw materials",
+     "manufacture",
+     "use",
+     "disposal or recycling"
+    ],
+    "centre": "life-cycle assessment",
+    "caption": "An LCA weighs the environmental impact of every stage. Recycling sends materials back to the start."
+   }
   },
   {
    "id": "science.motion",
@@ -195,7 +443,18 @@
    "intro": "Distance–time graphs show speed as the gradient. Velocity–time graphs show acceleration as the gradient and distance as the area underneath. A falling object reaches terminal velocity when air resistance balances its weight.",
    "teach": "Explain why a skydiver reaches a steady speed.",
    "talk": "Drop a flat sheet of paper and a scrunched-up one together, and compare.",
-   "hook": "Distance–time gradient = **speed**; velocity–time gradient = **acceleration**, area = **distance**."
+   "hook": "Distance–time gradient = **speed**; velocity–time gradient = **acceleration**, area = **distance**.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Weight > air resistance: she speeds up",
+     "Faster, so air resistance increases",
+     "Forces balance: steady 55 m/s",
+     "Parachute opens: air resistance > weight, she slows",
+     "Forces balance again: steady 5 m/s"
+    ],
+    "caption": "Terminal velocity: air resistance has risen to equal her weight."
+   }
   },
   {
    "id": "science.work",
@@ -208,7 +467,17 @@
    "intro": "Work is done when a force moves something: work done = force × distance. Lifting stores energy as gravitational potential energy; moving objects have kinetic energy.",
    "teach": "Explain the energy transfers when a weightlifter lifts and drops a bar.",
    "talk": "Ask {him} how much work {she} does climbing the stairs (weight × height).",
-   "hook": "Work done = force × distance: no movement, **no work**."
+   "hook": "Work done = force × distance: no movement, **no work**.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Chemical store in her muscles",
+     "Lifting: the bar’s gravitational store fills",
+     "Falling: gravitational → kinetic store",
+     "Landing: dissipated by sound and heating"
+    ],
+    "caption": "A weightlifter lifts a bar, then drops it. Energy is transferred, never used up."
+   }
   },
   {
    "id": "science.heating",
@@ -221,7 +490,32 @@
    "intro": "Energy moves from hot to cold by conduction, convection and radiation. Specific heat capacity tells you how much energy it takes to warm 1 kg of a material by 1 °C; water’s is very high.",
    "teach": "Explain why the sea warms up more slowly than the sand in summer.",
    "talk": "Feel a metal spoon and a wooden spoon from the same drawer: which feels colder, and why?",
-   "hook": "Conduction **touches**, convection **flows**, radiation **flies** (it needs no particles)."
+   "hook": "Conduction **touches**, convection **flows**, radiation **flies** (it needs no particles).",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "How the energy moves",
+     "Reduce it with"
+    ],
+    "rows": [
+     [
+      "Conduction",
+      "particles vibrate and pass energy on (best in metals)",
+      "insulators, trapped air"
+     ],
+     [
+      "Convection",
+      "warm fluid rises, cooler fluid sinks",
+      "trapping air so it cannot move"
+     ],
+     [
+      "Radiation",
+      "infrared waves; can cross a vacuum",
+      "shiny surfaces"
+     ]
+    ]
+   }
   },
   {
    "id": "science.static",
@@ -260,7 +554,51 @@
    "intro": "Stars are born in clouds of dust and gas, shine by nuclear fusion, and die in different ways depending on their mass. Our Sun is one of hundreds of billions of stars in the Milky Way.",
    "teach": "Explain how the life cycle of a massive star differs from the Sun’s.",
    "talk": "Find Orion and Cassiopeia in the night sky, and tell each other their myths.",
-   "hook": "Sun-sized: nebula → main sequence → red giant → white dwarf. Massive: → red supergiant → supernova."
+   "hook": "Sun-sized: nebula → main sequence → red giant → white dwarf. Massive: → red supergiant → supernova.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Cloud of gas and dust",
+     "note": "a nebula",
+     "c": [
+      {
+       "n": "Main-sequence star",
+       "note": "fusing hydrogen into helium",
+       "c": [
+        {
+         "n": "Red giant",
+         "note": "if like the Sun",
+         "c": [
+          {
+           "n": "White dwarf",
+           "mark": true
+          }
+         ]
+        },
+        {
+         "n": "Red supergiant",
+         "note": "if much more massive",
+         "c": [
+          {
+           "n": "Supernova",
+           "c": [
+            {
+             "n": "Neutron star"
+            },
+            {
+             "n": "Black hole",
+             "note": "if massive enough"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Mass decides the ending. The Sun will become a red giant in about 5 billion years, then a white dwarf."
+   }
   },
   {
    "id": "science.practicals",
@@ -273,7 +611,33 @@
    "intro": "Good practical work means planning a fair test, taking repeat readings, spotting anomalies, calculating means and judging how far the evidence supports a conclusion.",
    "teach": "Explain the difference between a random error and a systematic error.",
    "talk": "Ask {him} to plan a fair test for which paper towel is most absorbent.",
-   "hook": "Random errors **scatter** results; systematic errors **shift** them all the same way."
+   "hook": "Random errors **scatter** results; systematic errors **shift** them all the same way.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Random error",
+     "Systematic error"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "What happens",
+      "readings vary unpredictably",
+      "every reading shifts the same way"
+     ],
+     [
+      "Example",
+      "reaction time when timing",
+      "a balance reading 0.5 g with nothing on it"
+     ],
+     [
+      "What helps",
+      "repeat and take a mean",
+      "repeats do not show it: zero or fix the instrument"
+     ]
+    ]
+   }
   },
   {
    "id": "science.electrolysis",
@@ -287,7 +651,28 @@
    "teach": "Explain why solid salt cannot be electrolysed but salt solution can.",
    "talk": "Ask {him} how the aluminium in a drinks can was made.",
    "tier": "stretch",
-   "hook": "**PANIC**: **P**ositive is **A**node, **N**egative **I**s **C**athode."
+   "hook": "**PANIC**: **P**ositive is **A**node, **N**egative **I**s **C**athode.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Electrode",
+     "Attracts",
+     "Molten lead bromide gives"
+    ],
+    "rows": [
+     [
+      "Cathode (−)",
+      "positive ions (metals)",
+      "lead"
+     ],
+     [
+      "Anode (+)",
+      "negative ions (non-metals)",
+      "bromine"
+     ]
+    ],
+    "caption": "The ions must be free to move, so the compound has to be melted or dissolved."
+   }
   },
   {
    "id": "science.induction",
@@ -301,7 +686,29 @@
    "teach": "Explain three ways to make a generator produce a bigger voltage.",
    "talk": "Look at a wind turbine and talk about where its electricity comes from.",
    "tier": "stretch",
-   "hook": "**Move** a magnet in a coil and you get a voltage; stop moving and it stops."
+   "hook": "**Move** a magnet in a coil and you get a voltage; stop moving and it stops.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "The magnet…",
+     "The meter shows…"
+    ],
+    "rows": [
+     [
+      "is pushed into the coil",
+      "a reading one way"
+     ],
+     [
+      "is held still inside",
+      "**zero**"
+     ],
+     [
+      "is pulled out",
+      "a reading the other way"
+     ]
+    ],
+    "caption": "Only a changing magnetic field induces a potential difference. Move faster, use a stronger magnet or more turns for a bigger one."
+   }
   },
   {
    "id": "science.momentum",
@@ -343,7 +750,35 @@
    "explain": "Fastest means shortest time: 60 s at 37 °C, which is body temperature.",
    "passage": "Case study: Kit tests how temperature affects amylase.\n\nKit mixes starch solution with amylase at different temperatures. Every 30 seconds he puts a drop of the mixture onto iodine. When the iodine stays orange-brown, all the starch has gone.\n\nTemperature (°C) | Time for starch to disappear (s)\n10 | 300\n20 | 180\n37 | 60\n50 | 150\n70 | starch never disappears",
    "passageSource": "A case study written for this app",
-   "hook": "Human enzymes work best at **body temperature**, about 37 °C."
+   "hook": "Human enzymes work best at **body temperature**, about 37 °C.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "bar",
+     "title": "Time for the starch to disappear (s)",
+     "ylabel": "s",
+     "step": 50,
+     "cats": [
+      {
+       "label": "10 °C",
+       "v": 300
+      },
+      {
+       "label": "20 °C",
+       "v": 180
+      },
+      {
+       "label": "37 °C",
+       "v": 60
+      },
+      {
+       "label": "50 °C",
+       "v": 150
+      }
+     ]
+    },
+    "caption": "The shortest time is the fastest reaction. At 70 °C the starch never disappeared: the enzyme was denatured."
+   }
   },
   {
    "id": "science.m.ez.case2",
@@ -612,7 +1047,43 @@
    "passage": "Case study: Theo’s heart rate.\n\nTheo measures his pulse at rest, then runs up and down the stairs at the Acropolis Museum for three minutes, then measures it again every minute while he rests.\n\nAt rest: 70 beats per minute\nStraight after exercise: 140\n1 minute later: 115\n2 minutes later: 95\n3 minutes later: 80\n4 minutes later: 72",
    "passageSource": "A case study written for this app",
    "hook": "Fitter hearts **bounce back faster** after exercise.",
-   "example": "Fitness watches record your resting heart rate and how fast it recovers."
+   "example": "Fitness watches record your resting heart rate and how fast it recovers.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "bar",
+     "title": "Theo’s heart rate (beats per minute)",
+     "ylabel": "bpm",
+     "step": 20,
+     "cats": [
+      {
+       "label": "rest",
+       "v": 70
+      },
+      {
+       "label": "after",
+       "v": 140
+      },
+      {
+       "label": "1 min",
+       "v": 115
+      },
+      {
+       "label": "2 min",
+       "v": 95
+      },
+      {
+       "label": "3 min",
+       "v": 80
+      },
+      {
+       "label": "4 min",
+       "v": 72
+      }
+     ]
+    },
+    "caption": "Minutes after the exercise ended. By 4 minutes he was within 2 beats of his resting rate."
+   }
   },
   {
    "id": "science.m.ci.case3",
@@ -674,7 +1145,18 @@
    ],
    "labels": null,
    "explain": "Deoxygenated blood returns in the vena cava, enters the right atrium, and is pumped by the right ventricle along the pulmonary artery to the lungs.",
-   "hook": "**A** comes before **V**: blood enters an **A**trium first, then the **V**entricle pumps it out."
+   "hook": "**A** comes before **V**: blood enters an **A**trium first, then the **V**entricle pumps it out.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "vena cava",
+     "right atrium",
+     "right ventricle",
+     "pulmonary artery",
+     "lungs"
+    ]
+   }
   },
   {
    "id": "science.m.ci.left",
@@ -1024,7 +1506,35 @@
    "passage": "Case study: a potometer experiment.\n\nA leafy shoot is set up in a potometer, which measures how fast the shoot takes up water. An air bubble in a thin tube moves as water is taken up.\n\nConditions | Distance bubble moved in 5 minutes (mm)\nStill air, room temperature | 12\nFan blowing on the leaves | 30\nPlastic bag over the leaves | 4\nLeaves smeared with petroleum jelly underneath | 2",
    "passageSource": "A case study written for this app",
    "hook": "Wind carries damp air away, so more water can **evaporate**.",
-   "example": "Washing on the line dries faster on a breezy day for the same reason."
+   "example": "Washing on the line dries faster on a breezy day for the same reason.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "bar",
+     "title": "Bubble movement in 5 minutes (mm)",
+     "ylabel": "mm",
+     "step": 5,
+     "cats": [
+      {
+       "label": "still air",
+       "v": 12
+      },
+      {
+       "label": "fan",
+       "v": 30
+      },
+      {
+       "label": "plastic bag",
+       "v": 4
+      },
+      {
+       "label": "jelly under",
+       "v": 2
+      }
+     ]
+    },
+    "caption": "More movement means faster water uptake. Wind speeds up transpiration; humid air and blocked stomata slow it."
+   }
   },
   {
    "id": "science.m.tr.case2",
@@ -1681,7 +2191,26 @@
    "explain": "Biodiversity means the variety of species in an area.",
    "passage": "Case study: a survey of the meadow behind the school.\n\nMira’s class places ten 1 m² quadrats at random in a meadow and in a mown playing field next to it, and counts the plant species in each.\n\nMeadow: a mean of 9 species per quadrat, including buttercups, clover, knapweed and three kinds of grass.\nPlaying field: a mean of 2 species per quadrat, mostly one kind of grass.\n\nThe meadow also had many more butterflies and bees.",
    "passageSource": "A case study written for this app",
-   "hook": "Bio-diversity = **variety of life**: count the kinds, not just the number."
+   "hook": "Bio-diversity = **variety of life**: count the kinds, not just the number.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "bar",
+     "title": "Mean plant species per quadrat",
+     "ylabel": "",
+     "step": 2,
+     "cats": [
+      {
+       "label": "meadow",
+       "v": 9
+      },
+      {
+       "label": "playing field",
+       "v": 2
+      }
+     ]
+    }
+   }
   },
   {
    "id": "science.m.bd.case2",
@@ -2147,7 +2676,29 @@
    "explain": "Oxygen from the air combined with the magnesium. Magnesium + oxygen → magnesium oxide. Mass is conserved: the oxygen atoms add mass.",
    "passage": "Case study: heating magnesium.\n\nMira heats a strip of magnesium ribbon in a crucible with a lid, lifting the lid now and then to let air in. It glows brightly and turns into a white powder.\n\nMass of crucible and lid: 24.00 g\nMass of crucible, lid and magnesium: 24.24 g\nMass of crucible, lid and white powder at the end: 24.40 g",
    "passageSource": "A case study written for this app",
-   "hook": "Burning metals **gain** mass: they grab oxygen from the air."
+   "hook": "Burning metals **gain** mass: they grab oxygen from the air.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Mass"
+    ],
+    "rows": [
+     [
+      "magnesium",
+      "0.24 g"
+     ],
+     [
+      "+ oxygen from the air",
+      "0.16 g"
+     ],
+     [
+      "= magnesium oxide",
+      "**0.40 g**"
+     ]
+    ],
+    "caption": "No atoms are made or lost: the extra 0.16 g is oxygen that joined the magnesium."
+   }
   },
   {
    "id": "science.m.fm.case3",
@@ -2275,7 +2826,27 @@
     }
    ],
    "explain": "Count each kind of atom on both sides: 4 H and 2 O each side.",
-   "hook": "Balance with **big numbers in front**, never by changing the small ones."
+   "hook": "Balance with **big numbers in front**, never by changing the small ones.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Atoms",
+     "Left: 2H₂ + O₂",
+     "Right: 2H₂O"
+    ],
+    "rows": [
+     [
+      "H",
+      "4",
+      "4"
+     ],
+     [
+      "O",
+      "2",
+      "2"
+     ]
+    ]
+   }
   },
   {
    "id": "science.m.fm.diatomic",
@@ -3744,7 +4315,31 @@
    "explain": "The bare can dropped by 28 °C in 20 minutes.",
    "passage": "Case study: keeping soup hot.\n\nTheo fills three identical cans with 300 g of soup at 80 °C. One is bare, one is wrapped in bubble wrap and one is wrapped in aluminium foil. He measures the temperature after 20 minutes.\n\nBare can: 52 °C\nBubble wrap: 66 °C\nAluminium foil: 60 °C",
    "passageSource": "A case study written for this app",
-   "hook": "No wrapping, **no protection**: the bare can cooled fastest."
+   "hook": "No wrapping, **no protection**: the bare can cooled fastest.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "bar",
+     "title": "Soup temperature after 20 minutes (°C)",
+     "ylabel": "°C",
+     "step": 10,
+     "cats": [
+      {
+       "label": "bare",
+       "v": 52
+      },
+      {
+       "label": "bubble wrap",
+       "v": 66
+      },
+      {
+       "label": "foil",
+       "v": 60
+      }
+     ]
+    },
+    "caption": "All three cans started at 80 °C. The bare can lost most heat."
+   }
   },
   {
    "id": "science.m.ht.case2",
@@ -3935,7 +4530,16 @@
    "explain": "Electrons, from the jumper to the balloon. The balloon gains electrons and becomes negatively charged.",
    "passage": "Case study: amber and the electron.\n\nAround 600 BC the Greek thinker Thales of Miletus is said to have noticed that amber, rubbed with fur, attracted feathers and dust. The Greek word for amber is ēlektron, which gives us “electricity” and “electron”. Today Kit rubs a balloon on his jumper, and the balloon sticks to the wall. When he rubs it on his hair, his hair stands on end.",
    "passageSource": "A case study written for this app",
-   "hook": "Only **electrons** jump: protons stay locked in the nucleus."
+   "hook": "Only **electrons** jump: protons stay locked in the nucleus.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Rub the balloon on a jumper",
+     "Electrons move from jumper to balloon",
+     "Balloon negative; jumper positive",
+     "Opposite charges attract"
+    ]
+   }
   },
   {
    "id": "science.m.st.case2",
@@ -4182,7 +4786,28 @@
    "explain": "Light bends towards the normal when it slows down entering glass. Entering a denser material, light slows and bends towards the normal.",
    "passage": "Case study: a glass block experiment.\n\nMira shines a thin ray of light into a glass block at different angles and measures the angle of the ray inside the glass. All angles are measured from the normal.\n\nAngle in air (°) | Angle in glass (°)\n0 | 0\n20 | 13\n40 | 25\n60 | 35",
    "passageSource": "A case study written for this app",
-   "hook": "**FAST**: **F**aster, bend **A**way; **S**lower, bend **T**owards the normal."
+   "hook": "**FAST**: **F**aster, bend **A**way; **S**lower, bend **T**owards the normal.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "line",
+     "title": "Angle in glass (°) for each angle in air",
+     "ylabel": "°",
+     "xs": [
+      "0°",
+      "20°",
+      "40°",
+      "60°"
+     ],
+     "ys": [
+      0,
+      13,
+      25,
+      35
+     ]
+    },
+    "caption": "Angle in air along the bottom. The angle in glass is always smaller: the ray bends towards the normal."
+   }
   },
   {
    "id": "science.m.lt.case3",
@@ -4609,7 +5234,43 @@
    "explain": "It is far from the other two readings at that length (15.5 and 15.6).",
    "passage": "Case study: Kit’s pendulum results.\n\nKit times 10 swings of a pendulum for different string lengths, three times each.\n\nLength (cm) | Time 1 (s) | Time 2 (s) | Time 3 (s)\n20 | 9.0 | 8.9 | 9.1\n40 | 12.7 | 12.6 | 12.8\n60 | 15.5 | 18.9 | 15.6\n80 | 17.9 | 18.0 | 17.9",
    "passageSource": "A case study written for this app",
-   "hook": "An anomaly is the **odd one out**."
+   "hook": "An anomaly is the **odd one out**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Length",
+     "Time 1",
+     "Time 2",
+     "Time 3"
+    ],
+    "rows": [
+     [
+      "20 cm",
+      "9.0 s",
+      "8.9 s",
+      "9.1 s"
+     ],
+     [
+      "40 cm",
+      "12.7 s",
+      "12.6 s",
+      "12.8 s"
+     ],
+     [
+      "60 cm",
+      "15.5 s",
+      "**18.9 s**",
+      "15.6 s"
+     ],
+     [
+      "80 cm",
+      "17.9 s",
+      "18.0 s",
+      "17.9 s"
+     ]
+    ],
+    "caption": "Times for 10 swings. 18.9 s is far from the other two readings at 60 cm: an anomaly."
+   }
   },
   {
    "id": "science.m.pr.case2",
@@ -4682,7 +5343,28 @@
     200
    ],
    "passage": "Case study: Kit’s pendulum results.\n\nKit times 10 swings of a pendulum for different string lengths, three times each.\n\nLength (cm) | Time 1 (s) | Time 2 (s) | Time 3 (s)\n20 | 9.0 | 8.9 | 9.1\n40 | 12.7 | 12.6 | 12.8\n60 | 15.5 | 18.9 | 15.6\n80 | 17.9 | 18.0 | 17.9",
-   "passageSource": "A case study written for this app"
+   "passageSource": "A case study written for this app",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "line",
+     "title": "Mean time for 10 swings (s)",
+     "ylabel": "s",
+     "xs": [
+      "20 cm",
+      "40 cm",
+      "60 cm",
+      "80 cm"
+     ],
+     "ys": [
+      9,
+      12.7,
+      15.55,
+      17.9
+     ]
+    },
+    "caption": "Means of Kit’s repeats, leaving out the anomaly. Time rises with length, but does not double when the length doubles."
+   }
   },
   {
    "id": "science.m.pr.vars",

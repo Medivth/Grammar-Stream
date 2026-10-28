@@ -332,4 +332,79 @@ const SENTENCES = [
   { id: 'k3s.because-of', title: 'Use “because of”', prompt: 'Write a sentence using “because of”, like “The race was stopped because of the rain.”', checks: [{ type: 'includesAll', words: ['because of'], msg: 'Use “because of”.' }, { type: 'capital' }, { type: 'endPunct' }, { type: 'minWords', n: 6, msg: 'Write at least 6 words.' }], model: 'The rocket launch was delayed because of the storm.', tip: '“because of” is followed by a noun: because of the storm.' },
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const build = (parts, result) => ({ join: '+', parts, result });
+const W = (...rows) => ({ kind: 'blocks', rows });
+const PREFIXES = W(
+  build([['il', 'prefix', 'not'], ['legal', 'root']], 'illegal'),
+  build([['im', 'prefix', 'not'], ['possible', 'root']], 'impossible'),
+  build([['ir', 'prefix', 'not'], ['regular', 'root']], 'irregular'),
+  build([['sub', 'prefix', 'under'], ['marine', 'root']], 'submarine'),
+);
+PREFIXES.caption = 'in- (not) becomes il- before l, im- before m or p, and ir- before r. That is why illegal has two l’s.';
+const SUFFIXES = W(
+  build([['happi', 'root', 'happy: y → i'], ['ly', 'suffix']], 'happily'),
+  build([['gent', 'root', 'gentle: le → ly'], ['ly', 'suffix']], 'gently'),
+  build([['basic', 'root'], ['ally', 'suffix']], 'basically'),
+  build([['fam', 'root', 'fame: drop the e'], ['ous', 'suffix']], 'famous'),
+);
+const SHUN = { kind: 'table', head: ['root word ends in', 'ending', 'example'], rows: [['t or te', '**-tion**', 'invent → invention'], ['ss or mit', '**-ssion**', 'discuss → discussion'], ['d or se', '**-sion**', 'expand → expansion'], ['c (a job)', '**-cian**', 'magic → magician']], tint: 'rows', caption: 'Look at the end of the root word to choose the “shun” spelling.' };
+const TIME_ROW = { parts: [['Put on your helmet', 'clause', 'happens 1st'], ['before', 'conjunction', 'when?'], ['you start the engine.', 'subordinate', 'happens 2nd']] };
+const CAUSE = W(
+  { parts: [['It was pouring with rain,', 'clause', 'cause'], ['so', 'conjunction'], ['the race was stopped.', 'clause', 'result']] },
+  { parts: [['The race was stopped', 'clause', 'result'], ['because', 'conjunction'], ['it was pouring with rain.', 'subordinate', 'cause']] },
+);
+CAUSE.caption = '“so” comes before the result; “because” comes before the cause.';
+const MAIN_SUB = { parts: [['Turbo won the race', 'clause', 'main clause'], ['because he practised.', 'subordinate', 'subordinate clause']] };
+const SUB_MAIN = { parts: [['When the lights turned green,', 'subordinate', 'subordinate clause'], ['Rosa pressed the pedal.', 'clause', 'main clause']] };
+const FRONTED = W(
+  { parts: [['Later that night,', 'adverbial', 'when?'], ['the robot woke up.', 'clause', 'main clause']] },
+  { parts: [['Behind the castle wall,', 'adverbial', 'where?'], ['the knights waited.', 'clause', 'main clause']] },
+  { parts: [['Without a sound,', 'adverbial', 'how?'], ['Bleep crept forward.', 'clause', 'main clause']] },
+);
+FRONTED.caption = 'A fronted adverbial comes first and tells you when, where or how. A comma follows it.';
+const OWNERS = { kind: 'table', head: ['owners', 'add', 'example'], rows: [['one driver', '**’s**', 'the driver**’s** helmet'], ['three drivers', '**’** after the s', 'the drivers**’** helmets'], ['the children', '**’s**', 'the children**’s** toys']], caption: 'If the plural already ends in s, just add the apostrophe after it. If it doesn’t (children, women, men), add ’s.' };
+const TOPIC_VISUALS = {
+  'spelling.y3-prefixes': PREFIXES,
+  'spelling.y3-suffixes': SUFFIXES,
+  'spelling.y3-shun': SHUN,
+  'spelling.y3-word-families': { ...W(
+    build([['help', 'root'], ['ful', 'suffix']], 'helpful'),
+    build([['help', 'root'], ['less', 'suffix']], 'helpless'),
+    build([['help', 'root'], ['er', 'suffix']], 'helper'),
+    build([['un', 'prefix'], ['help', 'root'], ['ful', 'suffix']], 'unhelpful'),
+  ), caption: 'A word family shares a root word and its meaning: help.' },
+  'spelling.y3-joining': { ...W(TIME_ROW, ...CAUSE.rows), caption: '“before” tells you WHEN. “so” and “because” tell you WHY: “so” comes before the result, “because” before the cause.' },
+  'spelling.y3-clauses': { ...W(MAIN_SUB, SUB_MAIN), caption: 'A main clause makes sense on its own. A subordinate clause needs a main clause.' },
+  'spelling.y3-fronted': FRONTED,
+  'spelling.y3-possessive': OWNERS,
+};
+const ITEM_VISUALS = {
+  'spelling.y3.pf.misspell': W(build([['mis', 'prefix', 'wrongly'], ['spell', 'root']], 'misspell')),
+  'spelling.y3.pf.illegal': W(build([['il', 'prefix', 'not'], ['legal', 'root']], 'illegal')),
+  'spelling.y3.pf.impossible': W(build([['im', 'prefix', 'not'], ['possible', 'root']], 'impossible')),
+  'spelling.y3.pf.irregular': W(build([['ir', 'prefix', 'not'], ['regular', 'root']], 'irregular')),
+  'spelling.y3.pf.anticlockwise': W(build([['anti', 'prefix', 'against'], ['clockwise', 'root']], 'anticlockwise')),
+  'spelling.y3.sx.adoration': W(build([['ador', 'root', 'adore: drop the e'], ['ation', 'suffix']], 'adoration')),
+  'spelling.y3.sx.happily': W(build([['happi', 'root', 'happy: y → i'], ['ly', 'suffix']], 'happily')),
+  'spelling.y3.sx.gently': W(build([['gent', 'root', 'gentle: le → ly'], ['ly', 'suffix']], 'gently')),
+  'spelling.y3.sx.famous': W(build([['fam', 'root', 'fame: drop the e'], ['ous', 'suffix']], 'famous')),
+  'spelling.y3.sx.courageous': W(build([['courage', 'root', 'keep the e'], ['ous', 'suffix']], 'courageous')),
+  'spelling.y3.sh.which-tion': SHUN,
+  'spelling.y3.sh.which-cian': SHUN,
+  'spelling.y3.wf.root-unhelpful': W(build([['un', 'prefix'], ['help', 'root'], ['ful', 'suffix']], 'unhelpful')),
+  'spelling.y3.wf.root-disappearing': W(build([['dis', 'prefix'], ['appear', 'root'], ['ing', 'suffix']], 'disappearing')),
+  'spelling.y3.jn.before': W(TIME_ROW),
+  'spelling.y3.jn.so': CAUSE,
+  'spelling.y3.jn.because': CAUSE,
+  'spelling.y3.cl.main': W(MAIN_SUB),
+  'spelling.y3.cl.sub': W(SUB_MAIN),
+  'spelling.y3.fa.what': FRONTED,
+  'spelling.y3.fa.comma': W({ parts: [['As fast as lightning,', 'adverbial', 'how?'], ['Turbo zoomed past.', 'clause', 'main clause']] }),
+  'spelling.y3.po.three': OWNERS,
+  'spelling.y3.po.children': OWNERS,
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'spelling', deck: 'y3', topics, items, sentences: SENTENCES }];

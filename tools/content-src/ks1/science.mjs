@@ -152,4 +152,42 @@ const items = [
   fact('rk.dino', 'rocks', 'How do we know dinosaurs existed?', 'from their fossil bones', ['from old photographs', 'from films about them', 'from people who saw them'], 'No people lived at the same time as dinosaurs. Fossils are our evidence.', C),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const BUTTERFLY = { kind: 'cycle', steps: ['egg', 'caterpillar', 'chrysalis', 'butterfly'], centre: 'butterfly' };
+const FROG = { kind: 'cycle', steps: ['frogspawn', 'tadpole', 'froglet', 'frog'], centre: 'frog' };
+const SEASONS = { kind: 'cycle', steps: ['spring', 'summer', 'autumn', 'winter'], caption: 'Spring: March to May. Summer: June to August (the longest days). Autumn: September to November. Winter: December to February (the shortest days).' };
+const COMPASS = { kind: 'cycle', steps: ['North', 'East', 'South', 'West'], centre: 'Never Eat Shredded Wheat', caption: 'Going clockwise from north: north, east, south, west.' };
+const TOPIC_VISUALS = {
+  'science.animals': { kind: 'table', head: ['Group', 'Look for', 'For example'], rows: [['mammals', 'hair or fur; babies drink milk', 'dog, bat, whale'], ['birds', 'feathers, wings, a beak', 'robin, penguin'], ['fish', 'scales, gills, live in water', 'goldfish, shark'], ['reptiles', 'dry, scaly skin', 'snake, crocodile'], ['amphibians', 'smooth, damp skin', 'frog, newt']], tint: 'rows' },
+  'science.food': [
+    { kind: 'flow', across: true, steps: ['grass', 'rabbit', 'fox'], caption: 'A food chain. Each arrow means “is eaten by”. It always starts with a plant.' },
+    { kind: 'tree', root: { n: 'What do animals eat?', c: [{ n: 'Herbivores', note: 'only plants: rabbit, cow' }, { n: 'Carnivores', note: 'only meat: lion, owl' }, { n: 'Omnivores', note: 'plants and meat: bear, pig' }] } },
+  ],
+  'science.body': { kind: 'table', head: ['Sense', 'We use our…'], rows: [['sight', 'eyes'], ['hearing', 'ears'], ['smell', 'nose'], ['taste', 'tongue'], ['touch', 'skin']], tint: 'rows', caption: 'Our five senses.' },
+  'science.lifecycles': [BUTTERFLY, FROG],
+  'science.habitats': { kind: 'tree', root: { n: 'Habitats', c: [{ n: 'Icy Arctic', note: 'polar bear' }, { n: 'Hot desert', note: 'camel' }, { n: 'Ocean', note: 'shark' }] } },
+  'science.materials': { kind: 'table', head: ['Material', 'What it is like', 'Good for'], rows: [['glass', 'transparent (see-through)', 'windows'], ['metal', 'strong and hard', 'spoons, cars'], ['rubber', 'waterproof and bendy', 'raincoats, wellies'], ['wood', 'natural and strong', 'pencils, tables'], ['fabric', 'soft and bendy', 'clothes']], tint: 'rows' },
+  'science.seasons': SEASONS,
+  'science.maps': COMPASS,
+  'science.forces': { kind: 'table', head: ['Magnet ends', 'What happens'], rows: [['N and S', 'pull together (attract)'], ['N and N', 'push apart (repel)'], ['S and S', 'push apart (repel)']], tint: 'rows', caption: 'Opposite poles attract. The same poles repel.' },
+  'science.rocks': { kind: 'flow', steps: ['An animal dies', 'Mud and sand bury it', 'Slowly, it turns to rock', 'Millions of years later, it is found'], caption: 'How most fossils form.' },
+};
+const ITEM_VISUALS = {
+  'science.fd.chain2': { kind: 'flow', across: true, steps: ['seaweed', 'fish', 'seal', 'polar bear'] },
+  'science.lc.butterfly': BUTTERFLY,
+  'science.lc.chrysalis': BUTTERFLY,
+  'science.lc.frog': FROG,
+  'science.lc.tadpole': FROG,
+  'science.lc.chicken': { kind: 'cycle', steps: ['egg', 'chick', 'young chicken', 'hen'], centre: 'chicken' },
+  'science.lc.human': { kind: 'flow', across: true, steps: ['baby', 'toddler', 'child', 'teenager', 'adult'] },
+  'science.hb.alive': { kind: 'tree', root: { n: 'Alive or not?', c: [{ n: 'Alive now', note: 'a dog, a tree' }, { n: 'Once alive', note: 'a dead leaf, a wooden spoon' }, { n: 'Never alive', note: 'a rock, metal' }] } },
+  'science.ss.order': SEASONS,
+  'science.sp.order': { kind: 'flow', steps: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'], caption: 'The planets in order from the Sun: My Very Easy Method Just Speeds Up Naming planets.' },
+  'science.mp.never': COMPASS,
+  'science.fo.poles': { kind: 'table', head: ['Magnet ends', 'What happens'], rows: [['N and S', 'pull together (attract)'], ['N and N', 'push apart (repel)'], ['S and S', 'push apart (repel)']], tint: 'rows' },
+  'science.rk.form': { kind: 'flow', steps: ['An animal dies', 'Mud and sand bury it', 'Slowly, it turns to rock', 'Millions of years later, it is found'] },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'science', deck: 'core', topics, items }];

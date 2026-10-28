@@ -203,4 +203,49 @@ const memory = {
 for (const id of Object.keys(memory)) if (!items.some((it) => it.id === `history.${id}`)) throw new Error(`history memory hook for unknown item ${id}`);
 const withMemory = (it) => ({ ...it, ...memory[it.id.slice('history.'.length)] });
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// The same colour-banded timeline of Britain (set 'britain') in every topic, each marking its own
+// period; medieval topics share one window (900–1600) and Tudor ones another (1400–1750).
+const britain = (from, to, mark, events, caption) => ({ kind: 'timeline', set: 'britain', from, to, ...(mark ? { mark } : {}), events, ...(caption ? { caption } : {}) });
+const medieval = (events, caption) => britain(900, 1600, 'Middle Ages', events, caption);
+const TUDOR_WIVES = {
+  kind: 'table', head: ['', 'wife', 'what happened', 'child'],
+  rows: [['1', 'Catherine of Aragon', '**divorced**', 'Mary I'], ['2', 'Anne Boleyn', '**beheaded**', 'Elizabeth I'], ['3', 'Jane Seymour', '**died**', 'Edward VI'], ['4', 'Anne of Cleves', '**divorced**', '–'], ['5', 'Catherine Howard', '**beheaded**', '–'], ['6', 'Catherine Parr', '**survived**', '–']],
+  caption: 'Henry VIII’s six wives: “divorced, beheaded, died; divorced, beheaded, survived”. (The two divorces were really annulments.)',
+};
+const TUDOR_TREE = {
+  kind: 'tree',
+  root: { n: 'Henry VII', note: '1485–1509', c: [{ n: 'Henry VIII', note: '1509–1547', c: [
+    { n: 'Edward VI', note: '1547–1553', mark: true },
+    { n: 'Mary I', note: '1553–1558', mark: true },
+    { n: 'Elizabeth I', note: '1558–1603', mark: true },
+  ] }] },
+  caption: 'The Tudor succession: Henry VIII’s three children reigned in turn, Edward first (a son came before his older sisters), then Mary, then Elizabeth.',
+};
+const REVOLT_CHAIN = {
+  kind: 'flow',
+  steps: ['Black Death kills a third to a half of the people', 'Fewer workers, so wages rise', 'Statute of Labourers (1351) holds wages down', 'Poll tax (1380) charges rich and poor the same', 'Trigger: tax collectors attacked in Essex', 'Peasants march on London (1381)'],
+  caption: 'Long-term causes build up for thirty years; the poll tax is the spark.',
+};
+const TOPIC_VISUALS = {
+  'history.church': medieval([[1095, 'Pope calls the First Crusade'], [1187, 'Saladin retakes Jerusalem']]),
+  'history.becket': medieval([[1154, 'Henry II becomes king'], [1170, 'Becket murdered']]),
+  'history.magna-carta': medieval([[1204, 'John loses Normandy'], [1215, 'Magna Carta'], [1265, 'de Montfort’s parliament']]),
+  'history.village': medieval([[1086, 'Domesday survey'], [1348, 'Black Death']], 'Most people in the Middle Ages lived and farmed in villages.'),
+  'history.black-death': medieval([[1348, 'Black Death reaches England'], [1381, 'Peasants’ Revolt']]),
+  'history.peasants-revolt': [medieval([[1348, 'Black Death'], [1381, 'Peasants’ Revolt']]), REVOLT_CHAIN],
+  'history.war-france': medieval([[1337, 'Hundred Years War begins'], [1415, 'Agincourt'], [1453, 'Hundred Years War ends'], [1485, 'Bosworth: the first Tudor king']]),
+  'history.tudors': [britain(1400, 1750, 'Tudors', [[1485, 'Bosworth'], [1534, 'break with Rome'], [1588, 'Spanish Armada'], [1603, 'Elizabeth I dies']]), TUDOR_TREE, TUDOR_WIVES],
+};
+const ITEM_VISUALS = {
+  'history.td.henry8': TUDOR_WIVES,
+  'history.td.wives': TUDOR_WIVES,
+  'history.td.order': TUDOR_TREE,
+  'history.td.edward': TUDOR_TREE,
+  'history.pr.trigger': REVOLT_CHAIN,
+  'history.wf.tudor-rose': { kind: 'tree', root: { n: 'Henry VII + Elizabeth of York', note: 'Lancaster (red rose) + York (white rose), married 1486', c: [{ n: 'Henry VIII', note: 'heir to both families: the red and white Tudor rose', mark: true }] } },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = t.visual ? [].concat(t.visual, v) : v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = it.visual ? [].concat(it.visual, v) : v; }
+
 export default [{ subject: 'history', deck: 'year7', topics: topics.map((t) => ({ ...t, hook: topicHooks[t.id] })), items: items.map(withMemory) }];

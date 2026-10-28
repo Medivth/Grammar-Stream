@@ -555,4 +555,56 @@ for (const [id, extra] of Object.entries(MEMORY)) {
   Object.assign(item, extra);
 }
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Keyed like the memory hooks (topics without “geography.”, items without “geography.m.”).
+// A picture added here joins any already attached.
+const TOPIC_VISUALS = {
+  storms: { kind: 'flow', steps: ['Sea water above about 27 °C', 'Warm, moist air rises quickly', 'It cools: huge clouds and heavy rain', 'The Earth’s spin sets the storm turning', 'A calm eye forms; the strongest winds are in the eyewall'], caption: 'Within about 5° of the Equator there is too little spin, so tropical storms almost never form there.' },
+  'uk-landscapes': { kind: 'table', head: ['Rock', 'Landscape', 'Example'], rows: [
+    ['Granite: igneous, hard, impermeable', 'high moorland, bogs, tors', 'Dartmoor'],
+    ['Chalk: sedimentary, soft, porous', 'rolling hills, dry valleys, white cliffs', 'South Downs, Dover'],
+    ['Carboniferous limestone', 'limestone pavement, caves, gorges', 'Malham'],
+  ], caption: 'The Tees–Exe line divides upland Britain (older, harder rocks) from lowland Britain (younger, softer rocks).' },
+  farming: { kind: 'table', head: ['', 'East Anglia', 'Western uplands'], tint: 'cols', caption: 'The western uplands: Wales and the Lake District.', rows: [
+    ['Relief', 'flat', 'steep slopes'],
+    ['Rain a year', 'about 600 mm', 'over 1,500 mm in places'],
+    ['Soils', 'fertile', 'thin, acidic'],
+    ['Main farming', '**arable**: cereals, sugar beet', '**pastoral**: sheep, some cattle'],
+  ] },
+  tourism: { kind: 'flow', steps: ['Exploration: a few visitors discover it', 'Involvement: local people get involved', 'Development: outside companies build it up', 'Consolidation: growth slows', 'Stagnation: visitor numbers stop growing', 'Decline, or rejuvenation by reinventing itself'], caption: 'Butler’s tourism area life cycle. Blackpool boomed, declined, and has tried to rejuvenate.' },
+  polar: { kind: 'table', head: ['', 'Arctic', 'Antarctica'], tint: 'cols', rows: [
+    ['What it is', 'an ocean surrounded by land', 'a continent surrounded by ocean'],
+    ['Pole', 'North', 'South'],
+    ['Its ice', 'floating sea ice', 'a thick ice sheet on land: about 90% of the world’s ice'],
+    ['If the ice melts', 'sea level barely rises', 'sea level rises'],
+    ['Wildlife', 'polar bears', 'penguins'],
+  ] },
+  fieldwork: { kind: 'cycle', steps: ['Ask a question', 'Collect data', 'Present the data', 'Analyse the results', 'Draw a conclusion', 'Evaluate'], centre: 'geographical enquiry', caption: 'Evaluating often raises a new question, and the enquiry starts again.' },
+  'urban-models': { kind: 'table', head: ['Zone, from the centre', 'What you find'], tint: 'rows', rows: [
+    ['1. CBD', 'offices, shops, tall buildings (London: the City)'],
+    ['2. Inner city', 'factories and 1800s terraced housing (Hackney)'],
+    ['3. Inner suburbs', 'newer houses with gardens'],
+    ['4. Outer suburbs', 'newer, larger homes and gardens (Bromley)'],
+    ['5. Rural–urban fringe', 'retail parks, golf courses, then countryside'],
+  ], caption: 'Burgess’s rings (1920s): housing gets newer and greener further out. Real cities fit only roughly.' },
+};
+const ITEM_VISUALS = {
+  'ts.names': { kind: 'table', head: ['Name', 'Where'], rows: [['Hurricane', 'Atlantic and north-east Pacific'], ['Typhoon', 'north-west Pacific, near Japan and the Philippines'], ['Cyclone', 'Indian Ocean and South Pacific']], caption: 'Same storm, different names.' },
+  'fw.systematic': { kind: 'table', head: ['Sampling', 'How chosen', 'Example'], rows: [
+    ['Random', 'by chance (random numbers)', 'quadrats placed at random'],
+    ['Systematic', 'at regular intervals', 'river depth every 50 cm'],
+    ['Stratified', 'in proportion to groups', '70% houses: 70 of 100 interviews'],
+  ] },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) {
+  const t = topics.find((x) => x.id === `geography.${id}`);
+  if (!t) throw new Error(`TOPIC_VISUALS: no topic geography.${id}`);
+  t.visual = t.visual ? [].concat(t.visual, v) : v;
+}
+for (const [id, v] of Object.entries(ITEM_VISUALS)) {
+  const it = items.find((x) => x.id === `geography.m.${id}`);
+  if (!it) throw new Error(`ITEM_VISUALS: no item geography.m.${id}`);
+  it.visual = it.visual ? [].concat(it.visual, v) : v;
+}
+
 export default [{ subject: 'geography', deck: 'y8-more', topics, items }];
