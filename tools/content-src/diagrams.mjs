@@ -1,11 +1,11 @@
 // Labelled science diagrams, built into content/maps/<id>.json and used exactly like maps:
 // highlight a part ("which part is this?"), tap a part ("tap the nucleus"), or name it.
 
-const ell = (cx, cy, rx, ry) => `M${cx - rx},${cy}a${rx},${ry} 0 1,0 ${2 * rx},0a${rx},${ry} 0 1,0 ${-2 * rx},0Z`;
-const rect = (x, y, w, h, r = 0) => r
+export const ell = (cx, cy, rx, ry) => `M${cx - rx},${cy}a${rx},${ry} 0 1,0 ${2 * rx},0a${rx},${ry} 0 1,0 ${-2 * rx},0Z`;
+export const rect = (x, y, w, h, r = 0) => r
   ? `M${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h - r}Q${x + w},${y + h} ${x + w - r},${y + h}H${x + r}Q${x},${y + h} ${x},${y + h - r}V${y + r}Q${x},${y} ${x + r},${y}Z`
   : `M${x},${y}H${x + w}V${y + h}H${x}Z`;
-const many = (...ds) => ds.join('');
+export const many = (...ds) => ds.join('');
 
 const animalCell = {
   id: 'cell-animal', kind: 'diagram', viewBox: [0, 0, 420, 300],
@@ -64,4 +64,12 @@ function particles() {
   };
 }
 
-export const DIAGRAMS = [animalCell, plantCell, flower, particles()];
+// more labelled diagrams, one file per group: tools/content-src/diagrams/*.mjs, each exporting a list
+import { readdirSync } from 'node:fs';
+const dir = new URL('./diagrams/', import.meta.url);
+const more = [];
+for (const f of readdirSync(dir).filter((x) => x.endsWith('.mjs')).sort()) more.push(...(await import(new URL(f, dir))).default);
+
+export const DIAGRAMS = [animalCell, plantCell, flower, particles(), ...more];
+const ids = DIAGRAMS.map((d) => d.id);
+if (new Set(ids).size !== ids.length) throw new Error(`diagram ids must be unique: ${ids.join(', ')}`);
