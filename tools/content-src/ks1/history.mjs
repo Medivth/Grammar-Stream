@@ -150,7 +150,7 @@ const EVENTS = [
   [1588, 'The Spanish Armada', ['history.am.year', 'history.am.what']],
   [1666, 'Great Fire of London', ['history.gf.year', 'history.gf.where']],
   [1829, 'Stephenson’s Rocket', ['history.fi.rocket']],
-  [1854, 'Florence Nightingale in the Crimea', ['history.nu.lamp']],
+  [1854, 'Florence Nightingale goes to the Crimean War', ['history.nu.lamp']],
   [1903, 'First aeroplane flight', ['history.fi.wright']],
   [1914, 'First World War begins', ['history.w1.years']],
   [1918, 'Armistice: the war ends', ['history.w1.end']],

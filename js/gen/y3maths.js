@@ -451,7 +451,7 @@ export const Y3_GENERATORS = {
       return typed(`Write 0.${n} as a fraction: {{?/10}}`, n, `0.${n} means ${pv(n, 'tenth')}: {{${n}/10}}.`, ['The digit after the point is tenths.', `0.${n} is ${pv(n, 'tenth')}.`, `{{${n}/10}}.`]);
     }
     if (level === 2) {
-      if (rng.chance(0.5)) { const n = rng.int(1, 9); return typed(`${n} ÷ 10 =`, `0.${n}`, `Dividing by 10 moves the digit one place to the right: ${n} → 0.${n}.`, ['÷ 10 makes a number ten times smaller.', `${pv(n, 'one')} become ${pv(n, 'tenth')}.`, `0.${n}.`]); }
+      if (rng.chance(0.5)) { const n = rng.int(1, 9); return typed(`${n} ÷ 10 =`, `0.${n}`, `Dividing by 10 moves the digit one place to the right: ${n} → 0.${n}.`, ['÷ 10 makes a number ten times smaller.', `${pv(n, 'one')} become${n === 1 ? 's' : ''} ${pv(n, 'tenth')}.`, `0.${n}.`]); }
       const a = rng.int(1, 7), b = rng.int(1, 9 - a); return typed(`0.${a} + 0.${b} =`, `0.${a + b}`, `${pv(a, 'tenth')} + ${pv(b, 'tenth')} = ${pv(a + b, 'tenth')} = 0.${a + b}.`, [`0.${a} is ${pv(a, 'tenth')} and 0.${b} is ${pv(b, 'tenth')}.`, `${a} + ${b} = ${pv(a + b, 'tenth')}.`, `0.${a + b}.`]);
     }
     const n = rng.int(11, 99);

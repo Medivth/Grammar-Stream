@@ -55,7 +55,7 @@ const items = [
     ['symbolism', 'using an object or colour to stand for a bigger idea', 'The dove is a symbol of peace.'],
     ['connotation', 'the ideas or feelings a word suggests beyond its basic meaning', '“Home” has connotations of warmth and safety.'],
     ['juxtaposition', 'placing two contrasting things side by side for effect', 'The juxtaposition of the bright party and the cold street shows inequality.'],
-    ['characterisation', 'how a writer creates and develops a character', 'Dickens’ characterisation of Scrooge uses a list of harsh verbs.'],
+    ['characterisation', 'how a writer creates and develops a character', 'Dickens’ characterisation of Scrooge uses a list of harsh describing words.'],
     ['pathetic fallacy', 'weather or setting that reflects a character’s mood', 'The storm raged as the hero despaired.'],
     ['genre', 'a type or category of story, such as Gothic, adventure or mystery', 'Sherlock Holmes stories belong to the detective genre.'],
     ['context', 'the time, place and situation in which a text was written', 'The Victorian context helps explain Dickens’ anger about poverty.'],

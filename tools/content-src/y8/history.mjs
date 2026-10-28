@@ -391,7 +391,7 @@ const memory = {
   // Industrial Revolution
   'ir.why': { hook: 'Britain had the **ingredients**: coal and iron underground, money to invest, markets abroad and clever inventors.' },
   'ir.watt': { hook: 'Every light bulb is rated in **watts**: James Watt’s name is printed on it.' },
-  'ir.arkwright': { hook: 'Arkwright’s **water frame** ran on water power: that is why his mill stands beside a river at Cromford.', example: 'Cromford Mill in Derbyshire is part of the Derwent Valley Mills World Heritage Site.' },
+  'ir.arkwright': { hook: 'Arkwright’s **water frame** ran on water power: that is why he built his mill at Cromford, where a brook and a warm mine-drainage channel gave a steady flow of water.', example: 'Cromford Mill in Derbyshire is part of the Derwent Valley Mills World Heritage Site.' },
   'ir.railway': { hook: '**Rocket** won at **Rainhill** in **1829**; the line opened in **1830**.', example: 'Its first Manchester station, on Liverpool Road, is now part of the city’s Science and Industry Museum.' },
   'ir.children': { hook: '**1833**: no children under **9** in textile mills, and shorter hours for older children.' },
   'ir.cholera': { hook: 'Snow had the **handle** taken off the pump, though the outbreak was already fading: his map of deaths was the real proof.', example: 'Disease detectives today still map cases as Snow did: he is called a father of epidemiology.' },

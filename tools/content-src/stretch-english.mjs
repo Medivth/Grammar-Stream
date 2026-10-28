@@ -44,7 +44,7 @@ const SPELL = [
   ['humorous', 'He told a ___ story.', 'funny', 'Humour loses its u before -ous: hum-or-ous.'],
   ['manoeuvre', 'The driver made a tricky ___.', 'a skilful movement', 'A French word: man-oeu-vre. Say “man-oh-ee-u-vre” to remember the vowels.'],
   ['parallel', 'Railway tracks are ___.', 'always the same distance apart', 'par-all-el: double l in the middle, single at the end.'],
-  ['perseverance', 'Learning an instrument takes ___.', 'keeping going despite difficulty', 'per-sever-ance: no “r” after the e (not perserverance).'],
+  ['perseverance', 'Learning an instrument takes ___.', 'keeping going despite difficulty', 'per-sever-ance: no extra r after “per-se” (not perserverance).'],
   ['questionnaire', 'Please fill in the ___.', 'a list of questions', 'question + naire: double n.'],
   ['vacuum', 'Space is almost a perfect ___.', 'a space with nothing in it', 'Double u, single c: vac-uum.'],
   ['truly', 'I am ___ sorry.', 'genuinely', 'True drops its e: tru-ly.'],
