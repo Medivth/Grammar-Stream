@@ -225,7 +225,7 @@ function digestion() {
 // ---------------------------------------------------------------- teeth: a lower jaw from above
 function teeth() {
   // teeth along half an ellipse, front teeth at the top; each side from the middle: I I C P P M M M
-  const cx = 160, cy = 254, rx = 112, ry = 200, k = 1.15;
+  const cx = 160, cy = 250, rx = 118, ry = 190, k = 1.25;
   const at = (phi) => [cx + rx * Math.sin(phi), cy - ry * Math.cos(phi)];
   const seq = [['i', 20, 10], ['i', 17, 10], ['c', 19, 15], ['p', 20, 17], ['p', 20, 18], ['m', 30, 26], ['m', 29, 25], ['m', 27, 24]];
   const step = 0.002, gap = 2.5;
@@ -246,10 +246,10 @@ function teeth() {
   }
   const avg = (l) => [r1(l.reduce((a, p) => a + p[0], 0) / l.length), r1(l.reduce((a, p) => a + p[1], 0) / l.length)];
   const arch = [];
-  for (let p = -1.5; p <= 1.501; p += 0.1) arch.push(at(p));
+  for (let p = 0; p <= 1.6; p += 0.1) arch.push(at(p));
   return {
     id: 'teeth', kind: 'diagram', viewBox: [22, 22, 276, 240], labelViewBox: [-70, 22, 446, 240], labelSize: 17,
-    decor: [{ d: tube(arch, 46, 46), fill: '#e79aa8', under: true }],
+    decor: [{ d: many(tube([...arch].reverse(), 50, 34), tube(mirror([...arch].reverse(), cx), 50, 34)), fill: '#e79aa8', under: true }],
     features: [
       { id: 'incisors', name: 'incisors', d: many(...shapes.i), fill: '#dcebf7', label: [40, 40], at: avg(mid['i-1']) },
       { id: 'canines', name: 'canines', d: many(...shapes.c), fill: '#f6d9e8', label: [300, 96], at: mid.c1[0] },
@@ -272,7 +272,7 @@ function heart() {
     features: [
       { id: 'vena-cava', name: 'vena cava', d: tube([[104, 18], [106, 70], [110, 130]], 28, 28, false), fill: blueV, label: [76, 52], at: [94, 52] },
       { id: 'aorta', name: 'aorta', d: tube([[196, 214], [194, 150], [192, 90], [204, 50], [240, 34], [278, 46], [292, 80], [294, 120]], 26, 24, false), fill: redV, label: [258, -14], at: [252, 24] },
-      { id: 'pulmonary-artery', name: 'pulmonary artery', d: many(tube([[164, 212], [164, 150], [166, 108], [180, 88], [220, 84], [262, 86], [324, 94]], 24, 20, false), tube([[166, 112], [152, 92], [138, 84]], 20, 18, false)), fill: blueV, label: [132, -14], at: [140, 84] },
+      { id: 'pulmonary-artery', name: 'pulmonary artery', d: many(tube([[164, 212], [164, 150], [166, 108], [180, 88], [220, 84], [262, 86], [324, 94]], 24, 20, false), tube([[172, 98], [154, 90], [136, 88]], 20, 18, false)), fill: blueV, label: [132, -14], at: [142, 88] },
       { id: 'pulmonary-vein', name: 'pulmonary vein', d: many(tube([[276, 148], [328, 142]], 18, 18, false), tube([[276, 180], [328, 188]], 18, 18, false)), fill: redV, label: [320, -42], at: [324, 142] },
       { id: 'right-atrium', name: 'right atrium', d: blob([[92, 122], [140, 116], [150, 150], [146, 190], [98, 194], [86, 160]]), fill: blue, label: [66, 156], at: [92, 156] },
       { id: 'right-ventricle', name: 'right ventricle', d: blob([[100, 210], [150, 206], [178, 216], [182, 262], [176, 318], [164, 330], [130, 296], [104, 252]]), fill: blue, label: [116, 384], at: [134, 286] },
@@ -327,38 +327,38 @@ function lungs() {
 
 // ---------------------------------------------------------------- a leaf in cross-section (Year 8)
 function leafSection() {
-  const x0 = 20, x1 = 380, stomata = [120, 220];
+  const x0 = 20, x1 = 384, stomata = [110, 222];
   const upper = [], pal = [], chl = [], lower = [];
-  for (let x = x0; x < x1 - 1; x += 30) upper.push(rect(x + 1, 26, 28, 22, 5));
-  for (let x = x0; x < x1 - 1; x += 20) {
-    pal.push(rect(x + 1.5, 51, 17, 88, 7));
-    for (let y = 60; y < 134; y += 13) chl.push(ell(x + 7 + (Math.round(y / 13) % 2) * 5, y, 3.2, 2.2));
+  for (let x = x0; x < x1 - 1; x += 36.4) upper.push(rect(r1(x + 1.5), 25, 33.4, 28, 6));
+  for (let x = x0; x < x1 - 1; x += 28) {
+    pal.push(rect(x + 2, 57, 24, 104, 9));
+    for (let y = 68; y < 156; y += 15) chl.push(ell(x + 9 + (Math.round(y / 15) % 2) * 9, y, 4, 2.8));
   }
-  // spongy cells with air spaces between; none over the stomata or in the vein
-  const sp = [[36, 160], [84, 158], [132, 162], [180, 158], [228, 162], [276, 158], [364, 160],
-    [58, 194], [106, 196], [154, 192], [202, 196], [250, 194],
-    [36, 228], [84, 230], [168, 228], [266, 230]];
-  const spongy = sp.map(([x, y], i) => ellR(x, y, 18 + (i % 3) * 2, 13, ((i * 37) % 50) - 25));
-  for (let x = x0; x < x1 - 1; x += 26) if (!stomata.some((s) => Math.abs(x + 13 - s) < 22)) lower.push(rect(x + 1, 248, 24, 22, 5));
-  const guard = many(...stomata.map((s) => many(ellR(s - 9, 259, 9, 12, 0), ellR(s + 9, 259, 9, 12, 0))));
-  const pores = many(...stomata.map((s) => rect(s - 3, 246, 6, 26, 2)));
+  // spongy cells with air spaces between them; none just above the stomata or in the vein
+  const sp = [[44, 186], [98, 186], [152, 186], [206, 186], [260, 186], [362, 188],
+    [70, 224], [124, 224], [178, 224], [232, 224], [362, 228],
+    [44, 262], [166, 262], [276, 262]];
+  const spongy = sp.map(([x, y], i) => ellR(x, y, 21 + (i % 3) * 2, 15, ((i * 37) % 50) - 25));
+  for (let x = x0; x < x1 - 1; x += 30) if (!stomata.some((s) => Math.abs(x + 15 - s) < 28)) lower.push(rect(x + 1.5, 287, 27, 26, 6));
+  const guard = many(...stomata.map((s) => many(ellR(s - 12, 300, 12, 16, 0), ellR(s + 12, 300, 12, 16, 0))));
+  const pores = many(...stomata.map((s) => rect(s - 4, 283, 8, 34, 3)));
   return {
-    id: 'leaf-section', kind: 'diagram', viewBox: [12, 14, 376, 262], labelViewBox: [12, 14, 580, 300], labelSize: 22,
+    id: 'leaf-section', kind: 'diagram', viewBox: [12, 12, 380, 312], labelViewBox: [12, 12, 584, 340], labelSize: 22,
     decor: [
-      { d: rect(18, 20, 364, 8, 4), fill: '#d6e6a8', under: true },
-      { d: many(...chl, ...[[352, 156], [366, 166], [372, 154], [44, 226], [30, 232]].map(([x, y]) => ell(x, y, 3.2, 2.2))), fill: '#2f7a2b' },
-      { d: many(ell(306, 181, 5, 5), ell(318, 176, 5, 5), ell(330, 181, 5, 5)), fill: '#c9d8f0' },
+      { d: rect(18, 18, 368, 9, 4), fill: '#d6e6a8', under: true },
+      { d: many(...chl, ...[[352, 182], [368, 192], [372, 178], [36, 258], [52, 266], [356, 230]].map(([x, y]) => ell(x, y, 4, 2.8))), fill: '#2f7a2b' },
+      { d: many(ell(300, 210, 6, 6), ell(316, 204, 6, 6), ell(332, 210, 6, 6)), fill: '#c9d8f0' },
     ],
     features: [
-      { id: 'air-spaces', name: 'air spaces', d: rect(x0, 142, x1 - x0, 104), fill: '#eef6fb', label: [396, 240], at: [312, 236] },
-      { id: 'upper-epidermis', name: 'upper epidermis', d: many(...upper), fill: '#e8f1d4', label: [396, 30], at: [366, 37] },
-      { id: 'palisade', name: 'palisade cells', d: many(...pal), fill: '#8cc56a', label: [396, 84], at: [372, 95] },
-      { id: 'spongy', name: 'spongy layer', d: many(...spongy), fill: '#bcdc97', label: [396, 140], at: [366, 158] },
-      { id: 'xylem', name: 'xylem', d: ell(318, 180, 24, 14), fill: '#7d9bd2', label: [396, 174], at: [338, 178] },
-      { id: 'phloem', name: 'phloem', d: ell(318, 208, 20, 11), fill: '#d8c26a', label: [396, 206], at: [334, 210] },
-      { id: 'lower-epidermis', name: 'lower epidermis', d: many(...lower), fill: '#e8f1d4', label: [396, 272], at: [366, 260] },
-      { id: 'guard-cells', name: 'guard cells', d: guard, fill: '#7fbf5c', label: [236, 300], at: [229, 266] },
-      { id: 'stomata', name: 'stomata', d: pores, fill: '#4b5a48', label: [112, 300], at: [120, 268] },
+      { id: 'air-spaces', name: 'air spaces', d: rect(x0, 164, x1 - x0, 120), fill: '#eef6fb', label: [402, 268], at: [322, 270] },
+      { id: 'upper-epidermis', name: 'upper epidermis', d: many(...upper), fill: '#e8f1d4', label: [402, 34], at: [372, 40] },
+      { id: 'palisade', name: 'palisade cells', d: many(...pal), fill: '#8cc56a', label: [402, 98], at: [378, 110] },
+      { id: 'spongy', name: 'spongy layer', d: many(...spongy), fill: '#bcdc97', label: [402, 152], at: [368, 184] },
+      { id: 'xylem', name: 'xylem', d: ell(316, 208, 26, 16), fill: '#7d9bd2', label: [402, 194], at: [340, 202] },
+      { id: 'phloem', name: 'phloem', d: ell(316, 240, 22, 12), fill: '#d8c26a', label: [402, 232], at: [336, 242] },
+      { id: 'lower-epidermis', name: 'lower epidermis', d: many(...lower), fill: '#e8f1d4', label: [402, 306], at: [372, 300] },
+      { id: 'guard-cells', name: 'guard cells', d: guard, fill: '#7fbf5c', label: [242, 340], at: [234, 308] },
+      { id: 'stomata', name: 'stomata', d: pores, fill: '#4b5a48', label: [100, 340], at: [110, 312] },
     ],
   };
 }

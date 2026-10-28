@@ -173,7 +173,7 @@ const PERIODIC = {
     ['2', '**Li**', '**Be**', 'B', 'C', 'N', 'O', 'F', 'Ne'],
     ['3', '**Na**', '**Mg**', '**Al**', 'Si', 'P', 'S', 'Cl', 'Ar'],
   ],
-  caption: 'The first 18 elements. Columns are **groups** (numbered along the top); rows are **periods** (1, 2, 3 down the side). Metals (in colour) are on the left; non-metals on the right. Group 1: alkali metals; group 7: halogens; group 0: noble gases.',
+  caption: 'Columns are **groups**; rows are **periods**. Metals (in colour) are on the left, non-metals on the right. Group 1: alkali metals; 7: halogens; 0: noble gases.',
 };
 const TOPIC_VISUALS = {
   'science.periodic': PERIODIC,

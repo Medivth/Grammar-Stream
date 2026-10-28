@@ -376,7 +376,7 @@ export const MATHS2_GENERATORS = {
         kind: 'typed', prompt: `A pack of ${packs} ${item} costs ${money(packs * unit)}. How much would ${want} ${item} cost at the same price each?`, numeric: { value: pence(want * unit), form: 'any' }, unit: '£', unitBefore: true,
         explain: `One costs ${money(packs * unit)} ÷ ${packs} = ${money(unit)}. ${want} × ${money(unit)} = ${money(want * unit)}.`,
         steps: [`First find the price of ONE: ${money(packs * unit)} ÷ ${packs} = ${money(unit)}.`, `Then multiply by ${want}.`, `${want} × ${money(unit)} = ${money(want * unit)}.`],
-        ...pic(bar([{ label: 'pack', parts: packs, text: money(unit), total: money(packs * unit) }, { label: `${want} ${item}`, parts: want, text: money(unit), total: money(want * unit) }]), `One box is one of the ${item}: ${money(packs * unit)} ÷ ${packs} = ${money(unit)}. ${want} boxes cost ${want} × ${money(unit)} = ${money(want * unit)}.`),
+        ...pic(bar([{ label: 'pack', parts: packs, text: money(unit), total: money(packs * unit) }, { label: 'wanted', parts: want, text: money(unit), total: money(want * unit) }]), `One box is one of the ${item}: ${money(packs * unit)} ÷ ${packs} = ${money(unit)}. ${want} boxes cost ${want} × ${money(unit)} = ${money(want * unit)}.`),
       };
     }
     const kind = rng.pick(['family', 'inverse', 'saving']);

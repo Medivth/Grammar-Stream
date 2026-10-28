@@ -612,6 +612,7 @@ for (const [id, memory] of Object.entries(MEMORY)) {
 // Keyed like the memory hooks (topics without “science.”, items without “science.m.”). Labelled
 // diagrams (heart, leaf, waves…) are attached separately; a picture added here joins any already there.
 const bar = (title, ylabel, step, cats) => ({ kind: 'maths', diagram: { type: 'bar', title, ylabel, step, cats: cats.map(([label, v]) => ({ label, v })) } });
+const RATES = { kind: 'maths', diagram: { type: 'line', title: 'Carbon dioxide made', ylabel: 'cm³', xlabel: 'time (min)', xs: ['1', '2', '3', '4', '5'], series: [{ name: 'powder', ys: [55, 80, 88, 90, 90] }, { name: 'large chips', ys: [20, 36, 49, 60, 68] }], step: 20 }, caption: 'Same mass of marble. The powder reacts faster at first, then levels off at 90 cm³ when a reactant is used up.' };
 const TOPIC_VISUALS = {
   enzymes: { kind: 'flow', steps: ['Substrate fits the active site', 'Enzyme breaks the substrate down', 'Products leave; enzyme is unchanged'], caption: 'Lock and key: only the right substrate fits. Too hot, and the active site changes shape: the enzyme is denatured.' },
   nervous: { kind: 'flow', steps: ['Stimulus: a hot pan', 'Receptors in the skin', 'Sensory neurone', 'Relay neurone in the spinal cord', 'Motor neurone', 'Effector: a muscle contracts', 'Response: the hand pulls away'], caption: 'A reflex arc bypasses the conscious brain, so the response is very fast.' },
@@ -673,8 +674,10 @@ const TOPIC_VISUALS = {
   ], caption: 'Only a changing magnetic field induces a potential difference. Move faster, use a stronger magnet or more turns for a bigger one.' },
 };
 const ITEM_VISUALS = {
-  'ez.case1': { ...bar('Time for the starch to disappear (s)', 's', 50, [['10 °C', 300], ['20 °C', 180], ['37 °C', 60], ['50 °C', 150]]), caption: 'The shortest time is the fastest reaction. At 70 °C the starch never disappeared: the enzyme was denatured.' },
-  'ci.case2': { ...bar('Theo’s heart rate (beats per minute)', 'bpm', 20, [['rest', 70], ['after', 140], ['1 min', 115], ['2 min', 95], ['3 min', 80], ['4 min', 72]]), caption: 'Minutes after the exercise ended. By 4 minutes he was within 2 beats of his resting rate.' },
+  'ez.case1': { kind: 'maths', diagram: { type: 'line', title: 'Time for the starch to disappear', ylabel: 's', xlabel: 'temperature (°C)', xs: ['10', '20', '37', '50'], ys: [300, 180, 60, 150], step: 50, scaleX: true }, caption: 'The shortest time is the fastest reaction. At 70 °C the starch never disappeared: the enzyme was denatured.' },
+  'ci.case2': { kind: 'maths', diagram: { type: 'line', title: 'Theo’s heart rate after exercise', ylabel: 'bpm', xlabel: 'minutes after exercise', xs: ['0', '1', '2', '3', '4'], ys: [140, 115, 95, 80, 72], min: 60, step: 20 }, caption: 'Beats per minute. His resting rate was 70; by 4 minutes he was back within 2 beats of it.' },
+  'rt.case1': RATES,
+  'rt.case2': RATES,
   'ci.route': { kind: 'flow', across: true, steps: ['vena cava', 'right atrium', 'right ventricle', 'pulmonary artery', 'lungs'] },
   'tr.case1': { ...bar('Bubble movement in 5 minutes (mm)', 'mm', 5, [['still air', 12], ['fan', 30], ['plastic bag', 4], ['jelly under', 2]]), caption: 'More movement means faster water uptake. Wind speeds up transpiration; humid air and blocked stomata slow it.' },
   'bd.case1': { ...bar('Mean plant species per quadrat', '', 2, [['meadow', 9], ['playing field', 2]]) },

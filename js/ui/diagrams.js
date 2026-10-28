@@ -557,14 +557,17 @@ function barModel(d) {
   const unitW = Math.min(64, (420 - labelW - 20) / maxParts);
   const W = labelW + unitW * maxParts + 20, rowH = 46;
   const top = d.total ? 40 : 14;
-  const H = top + d.rows.length * (rowH + 12) + (d.rows.some((r) => r.total) ? 26 : 8);
+  // a row with its own total needs room underneath for it
+  const gapAfter = (r) => (r.total ? 30 : 12);
+  const rowY = d.rows.map((_, i) => top + d.rows.slice(0, i).reduce((a, r) => a + rowH + gapAfter(r), 0));
+  const H = top + d.rows.reduce((a, r) => a + rowH + gapAfter(r), 0) + 4;
   const el = svg(W, H, `Bar model: ${d.rows.map((r) => `${r.label || 'bar'} ${r.parts} parts`).join(', ')}`, 440);
   if (d.total) {
     const x2 = labelW + unitW * d.rows[0].parts;
     el.append(s('path', { d: `M${labelW} ${top - 6} v-10 H${x2} v10`, fill: 'none', stroke: INK, 'stroke-width': 2 }), text((labelW + x2) / 2, top - 22, d.total, { 'font-size': 15 }));
   }
   d.rows.forEach((r, i) => {
-    const y = top + i * (rowH + 12);
+    const y = rowY[i];
     if (r.label) el.append(text(labelW - 10, y + rowH / 2 + 5, r.label, { 'text-anchor': 'end', 'font-size': 15 }));
     for (let k = 0; k < r.parts; k++) {
       el.append(s('rect', { x: labelW + k * unitW, y, width: unitW, height: rowH, fill: k < (r.shaded || 0) ? BLUE : 'var(--card, #fff)', 'fill-opacity': k < (r.shaded || 0) ? 0.85 : 1, stroke: INK, 'stroke-width': 2 }));

@@ -667,7 +667,7 @@ const TUDORS = {
   },
   caption: 'Mary, Queen of Scots, was Henry VIII’s great-niece: a Catholic with a strong claim. Her son James inherited Elizabeth’s throne in 1603.',
 };
-const ELIZABETH_TIMES = { kind: 'timeline', from: 1555, to: 1605, set: 'britain', events: [[1558, 'Elizabeth becomes queen'], [1586, 'Babington Plot'], [1587, 'Mary, Queen of Scots, executed'], [1588, 'The Spanish Armada'], [1599, 'The Globe built'], [1601, 'Poor Law'], [1603, 'Elizabeth dies']] };
+const ELIZABETH_TIMES = { kind: 'timeline', from: 1550, to: 1610, set: 'britain', events: [[1558, 'Elizabeth becomes queen'], [1586, 'Babington Plot'], [1588, 'The Spanish Armada'], [1599, 'The Globe built'], [1603, 'Elizabeth dies']], caption: 'Mary, Queen of Scots, was executed in 1587, after the Babington Plot.' };
 const SKY = {
   kind: 'table', head: ['', 'Geocentric model', 'Heliocentric model'], tint: 'cols',
   rows: [['At the centre', 'the **Earth**', 'the **Sun**'], ['The Earth', 'stays still', 'spins, and orbits the Sun'], ['Backed by', 'Ptolemy, and the Church', 'Copernicus (1543), then Galileo']],
@@ -698,7 +698,7 @@ const TOPIC_VISUALS = {
   famine: FAMINE,
   'public-health': PUBLIC_HEALTH,
   suffrage: SUFFRAGE,
-  'civil-rights': { kind: 'timeline', from: 1945, to: 1970, events: [[1948, 'Empire Windrush arrives'], [1954, 'Brown v Board of Education'], [1955, 'Montgomery Bus Boycott begins'], [1957, 'Little Rock Nine'], [1963, 'Bristol Bus Boycott; “I have a dream”'], [1964, 'US Civil Rights Act'], [1965, 'UK Race Relations Act']] },
+  'civil-rights': { kind: 'timeline', from: 1945, to: 1970, events: [[1948, 'Empire Windrush arrives'], [1954, 'Brown v Board of Education'], [1955, 'Montgomery Bus Boycott begins'], [1957, 'Little Rock Nine'], [1963, 'Bristol Bus Boycott; March on Washington'], [1965, 'UK Race Relations Act']] },
   'end-empire': { kind: 'timeline', from: 1915, to: 1970, set: 'twentieth', events: [[1919, 'Amritsar massacre'], [1930, 'Gandhi’s Salt March'], [1947, 'India and Pakistan independent'], [1956, 'Suez Crisis'], [1957, 'Ghana independent']] },
   byzantium: { kind: 'timeline', from: 300, to: 1500, bands: [[330, 1453, 'The Byzantine Empire']], events: [[330, 'Constantinople becomes capital'], [476, 'Western empire ends'], [537, 'Hagia Sophia finished'], [1204, 'Fourth Crusade loots the city'], [1453, 'Falls to the Ottoman Turks']] },
   russia: RUSSIA,

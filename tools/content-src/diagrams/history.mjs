@@ -12,6 +12,8 @@ const ellRev = (cx, cy, rx, ry) => `M${r1(cx - rx)},${r1(cy)}a${rx},${ry} 0 1,1 
 const rect = (x, y, w, h, r = 0) => r
   ? `M${r1(x + r)},${r1(y)}H${r1(x + w - r)}Q${r1(x + w)},${r1(y)} ${r1(x + w)},${r1(y + r)}V${r1(y + h - r)}Q${r1(x + w)},${r1(y + h)} ${r1(x + w - r)},${r1(y + h)}H${r1(x + r)}Q${r1(x)},${r1(y + h)} ${r1(x)},${r1(y + h - r)}V${r1(y + r)}Q${r1(x)},${r1(y)} ${r1(x + r)},${r1(y)}Z`
   : `M${r1(x)},${r1(y)}H${r1(x + w)}V${r1(y + h)}H${r1(x)}Z`;
+// a rectangle drawn the other way round: a hole in a nonzero shape (decor has no fill-rule)
+const rectRev = (x, y, w, h) => `M${r1(x)},${r1(y)}V${r1(y + h)}H${r1(x + w)}V${r1(y)}Z`;
 const many = (...ds) => ds.join('');
 const poly = (pts) => `M${pts.map(pt).join('L')}Z`;
 const range = (n) => Array.from({ length: n }, (_, i) => i);
@@ -35,7 +37,22 @@ const house = (x, y, w, h, roof = 10) => poly([[x, y], [x, y - h], [x - 3, y - h
 // a pointed wooden stake standing on (x, y)
 const stake = (x, y, h = 14, w = 5) => poly([[x - w / 2, y + 1], [x - w / 2, y - h + 3], [x, y - h], [x + w / 2, y - h + 3], [x + w / 2, y + 1]]);
 
-const INK = '#4a3b2e';
+// The frame drawn with labels: the drawing plus every label's estimated extent, with a label size
+// that reads at about 13px when the frame is drawn ~350px wide.
+function fit(d) {
+  let S = 18, box;
+  for (let i = 0; i < 8; i++) {
+    let [x0, y0, w, h] = d.viewBox, x1 = x0 + w, y1 = y0 + h;
+    for (const f of d.features) {
+      const [lx, ly] = f.label, [ax] = f.at, tw = (f.short || f.name).length * 0.58 * S;
+      const l = lx < ax - 4 ? lx - tw : lx > ax + 4 ? lx : lx - tw / 2;
+      x0 = Math.min(x0, l - 6); x1 = Math.max(x1, l + tw + 6); y0 = Math.min(y0, ly - S * 0.75); y1 = Math.max(y1, ly + S * 0.75);
+    }
+    box = [x0, y0, x1 - x0, y1 - y0];
+    S = Math.max(14, Math.min(26, 0.037 * box[2]));
+  }
+  return { ...d, labelViewBox: box.map(r1), labelSize: r1(S) };
+}
 
 // ---------------------------------------------------------------------------------------------
 // A stone castle, front on, for Years 2–3.

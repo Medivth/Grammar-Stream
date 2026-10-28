@@ -109,12 +109,17 @@ function timeline(v) {
     const on = v.mark && p.label === v.mark;
     svg.append(s('rect', { x: x1, y: barY, width: Math.max(w, 1), height: barH, fill: on ? tone(p.i) : toneSoft(p.i), stroke: tone(p.i), 'stroke-width': 1 }));
     const lines = wrap(p.label, Math.max(4, Math.floor(w / 7.2)));
-    if (w > 30 && lines.length <= 2 && Math.max(...lines.map((l) => l.length)) * (lines.length > 1 ? 6.4 : 7.2) <= w - 4) svg.append(textLines(x1 + w / 2, barY + barH / 2, lines, { 'font-size': lines.length > 1 ? 11.5 : 13, lh: 12.5, 'font-weight': on ? 800 : 600, fill: on ? 'var(--card)' : INK }));
+    const longest = Math.max(...lines.map((l) => l.length));
+    const size = longest * (lines.length > 1 ? 6.4 : 7.2) <= w - 4 ? (lines.length > 1 ? 11.5 : 13) : longest * 5.6 <= w - 2 ? 10 : 0;
+    if (w > 26 && lines.length <= 2 && size) svg.append(textLines(x1 + w / 2, barY + barH / 2, lines, { 'font-size': size, lh: size - 0.5, 'font-weight': on ? 800 : 600, fill: on ? 'var(--card)' : INK }));
   }
   if (!bands.length) svg.append(s('rect', { x: PAD, y: barY + barH / 2 - 3, width: W - 2 * PAD, height: 6, rx: 3, fill: 'var(--line)' }));
   const small = (x, t, anchor, bold) => s('text', { x, y: barY + barH + 15, 'text-anchor': anchor, fill: bold ? INK : 'var(--muted)', 'font-size': 12.5, 'font-weight': bold ? 700 : 400, 'font-family': 'inherit' }, t);
-  svg.append(small(PAD, yearLabel(from, bcad), 'start'), small(W - PAD, yearLabel(to, bcad), 'end'));
-  // the BC/AD boundary, when it is in view
+  // the BC/AD boundary, when it is in view; an end year too close to it is left off
+  const xBoundary = from < 0 && to > 0 ? X(0.5) : null;
+  const clear = (x) => xBoundary == null || Math.abs(x - xBoundary) > 70;
+  if (clear(PAD)) svg.append(small(PAD, yearLabel(from, bcad), 'start'));
+  if (clear(W - PAD)) svg.append(small(W - PAD, yearLabel(to, bcad), 'end'));
   if (from < 0 && to > 0) {
     const x = X(0.5);
     svg.append(s('line', { x1: x, y1: barY - 6, x2: x, y2: barY + barH + 4, stroke: INK, 'stroke-width': 2.5 }), small(x, 'BC | AD', 'middle', true));
@@ -158,7 +163,9 @@ function cycle(v) {
 // ---------------------------------------------------------------- flow chart / sequence
 // { steps: [...] } top to bottom, or { steps, across: true } left to right where there is room
 function flow(v) {
-  return h('ol', { class: `vflow${v.across ? ' across' : ''}` }, v.steps.map((st, i) => h('li', { style: { '--c': tone(i), '--cs': toneSoft(i) } }, rich('span', st))));
+  // side by side only while the steps fit across a tablet; longer sequences run down the page
+  const across = v.across && v.steps.length <= 6 && v.steps.every((x) => x.length <= 18);
+  return h('ol', { class: `vflow${across ? ' across' : ''}` }, v.steps.map((st, i) => h('li', { style: { '--c': tone(i), '--cs': toneSoft(i) } }, rich('span', st))));
 }
 
 // ---------------------------------------------------------------- tree (family tree, hierarchy)
