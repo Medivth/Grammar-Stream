@@ -357,4 +357,54 @@ for (const k of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === `engl
 for (const it of items) { const m = MEMORY[it.id.replace(/^english\.l2\./, '')]; if (m) Object.assign(it, m); }
 for (const k of Object.keys(MEMORY)) if (!items.some((it) => it.id === `english.l2.${k}`)) throw new Error(`memory hook for unknown item ${k}`);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Topics keyed without “english.”, items without “english.l2.”. An unknown id throws.
+const MAGI_GIFTS = {
+  kind: 'table', head: ['', 'Della', 'Jim'], tint: 'cols',
+  rows: [['Sells', 'her long hair', 'his gold watch'], ['Buys', 'a chain for his watch', 'combs for her hair'], ['So', 'he has no watch', 'she has no long hair']],
+  caption: 'A double twist: each gift is cancelled by the other’s sacrifice, yet the love is the real present.',
+};
+const REMEMBER_FORM = {
+  kind: 'table', head: ['', 'Octave: lines 1–8', 'Sestet: lines 9–14'], tint: 'cols',
+  rows: [['Rhyme', '**ABBA ABBA**', '**CDDECE**'], ['Request', '“Remember me”', 'better to forget and smile than remember and be sad']],
+  caption: 'A Petrarchan sonnet. The volta comes at line 9: “Yet if you should forget me for a while”.',
+};
+const IF_SENTENCE = {
+  kind: 'blocks',
+  rows: [
+    { parts: [['If you can keep your head…', 'subordinate', 'if-clause']] },
+    { parts: [['If you can dream…', 'subordinate', 'if-clause']] },
+    { parts: [['If you can fill the unforgiving minute…', 'subordinate', 'if-clause']] },
+    { parts: [['Yours is the Earth…', 'clause', 'main clause'], ['and… you’ll be a Man, my son!', 'clause', 'main clause']] },
+  ],
+  caption: 'One long sentence: a chain of “If” clauses, with the main clause, the reward, held back to the very end.',
+};
+const OZY_FRAMES = {
+  kind: 'tree',
+  root: { n: 'Shelley’s speaker', note: '“I met a traveller”', c: [{ n: 'The traveller', note: 'describes the ruined statue', c: [{ n: 'The sculptor', note: 'carved the king’s sneer', c: [{ n: 'Ozymandias', note: '“Look on my works…”', mark: true }] }] }] },
+  caption: 'Voices inside voices: the king’s boast reaches us only through the sculptor, the traveller and the poet.',
+};
+const TITANIA_CHAIN = { kind: 'flow', steps: ['Titania and Oberon quarrel', 'Winds suck up fogs from the sea', 'Rivers flood their banks', 'The green corn rots', 'Frosts fall on the crimson rose', 'The seasons are confused'], caption: '“We are their parents and original”: a private quarrel throws the whole natural world into disorder.' };
+const PARAGRAPH = { kind: 'flow', steps: ['**Point**: a clear claim', '**Evidence**: a short, embedded quotation', '**Analysis**: zoom in on a word', '**Effect**: on the reader', '**Link**: context or another reading'], caption: 'An analytical paragraph. The analysis is where the marks are.' };
+const TOPIC_VISUALS = {
+  magi: MAGI_GIFTS,
+  rossetti: REMEMBER_FORM,
+  kipling: IF_SENTENCE,
+  titania: TITANIA_CHAIN,
+  ozymandias: OZY_FRAMES,
+  essay: PARAGRAPH,
+};
+const ITEM_VISUALS = {
+  'gm.4': MAGI_GIFTS,
+  'gm.5': MAGI_GIFTS,
+  'cr.2': REMEMBER_FORM,
+  'cr.3': REMEMBER_FORM,
+  'ki.1': IF_SENTENCE,
+  'tt.1': TITANIA_CHAIN,
+  'oz.3': OZY_FRAMES,
+  'es.2': PARAGRAPH,
+};
+for (const [k, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === `english.${k}`); if (!t) throw new Error(`picture for unknown topic ${k}`); t.visual = v; }
+for (const [k, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === `english.l2.${k}`); if (!it) throw new Error(`picture for unknown item ${k}`); it.visual = v; }
+
 export default [{ subject: 'english', deck: 'y8-lit2', topics, items }];

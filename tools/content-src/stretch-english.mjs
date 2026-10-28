@@ -167,4 +167,62 @@ for (const it of items) Object.assign(it, MEMORY[it.id.replace(/^english\./, '')
 
 for (const it of items) if (!it.passage && it.id.startsWith('english.rd.')) Object.assign(it, it.id.includes('.pp') ? PIP : JANE);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Tricky-part spelling cards, as in english.mjs: "=" tricky letters (red), "^" a word hiding inside
+// (blue), "~" a silent letter (orange); the chunks, then the whole word underneath.
+const MARKS = { '=': 'ending', '^': 'root', '~': 'tense' };
+const chunks = (spec) => spec.split('|').map((seg) => { const m = seg.match(/^([^=^~]+)([=^~])(.+)$/); return m ? [m[1], MARKS[m[2]], m[3]] : [seg]; });
+const card = (spec) => ({ kind: 'blocks', rows: [{ parts: chunks(spec) }, { parts: [[chunks(spec).map((p) => p[0]).join('')]] }] });
+const SPELL_CARDS = {
+  separate: 'sep|arat^a rat|e',
+  definitely: 'de|finite^finite|ly',
+  occasionally: 'o|cc=×2|a|s=×1|iona|ll=×2|y',
+  independence: 'in|depend^depend|ence=-ence',
+  knowledge: 'k~silent|now|ledge^ledge',
+  argument: 'ar|gum^gum|ent',
+  business: 'bus^bus|i=y → i|ness',
+  colleague: 'co|ll=double|eague',
+  humorous: 'hum|or=no u|ous',
+  parallel: 'para|ll=parallel!|el',
+  perseverance: 'per|sever^severe|ance',
+  questionnaire: 'questio|nn=double|aire',
+  vacuum: 'va|c=single|uu=double|m',
+  manoeuvre: 'man|oeu=French|vre',
+};
+for (const [word, spec] of Object.entries(SPELL_CARDS)) if (chunks(spec).map((p) => p[0]).join('') !== word) throw new Error(`spelling card for ${word} is wrong`);
+
+const PASSIVE = { kind: 'blocks', rows: [
+  { parts: [['The dog', 'subject', 'subject: the doer'], ['chased', 'verb', 'verb'], ['the cat.', 'object', 'object']] },
+  { parts: [['The cat', 'object', 'subject'], ['was chased', 'verb', 'was + verb'], ['by the dog.', 'subject', 'by + the doer']] },
+], caption: 'Active (top), then passive. The colours follow the dog and the cat: the object moves to the front, and the doer moves to the end after “by” (or vanishes).' };
+const SONNET_SHAPE = { kind: 'blocks', rows: [
+  { parts: [['A', 'subject', 'day'], ['B', 'verb', 'temperate'], ['A', 'subject', 'May'], ['B', 'verb', 'date']] },
+  { parts: [['C', 'object', 'shines'], ['D', 'adverbial', 'dimm’d'], ['C', 'object', 'declines'], ['D', 'adverbial', 'untrimm’d']] },
+  { parts: [['E', 'conjunction', 'fade'], ['F', 'clause', 'ow’st'], ['E', 'conjunction', 'shade'], ['F', 'clause', 'grow’st']] },
+  { parts: [['G', 'verb', 'see'], ['G', 'verb', 'thee']] },
+], caption: 'Sonnet 18’s line endings: three quatrains (4 lines each) and a couplet. Same letter = same rhyme. The volta (turn) is at line 9: “But thy eternal summer…”' };
+const TOPIC_VISUALS = {
+  'english.grammar-8': PASSIVE,
+  'english.spell-8': { kind: 'blocks', rows: [{ parts: chunks(SPELL_CARDS.separate) }, { parts: chunks(SPELL_CARDS.definitely) }], caption: 'There’s a rat in separate; definitely has finite in it.' },
+  'english.poetry-2': SONNET_SHAPE,
+};
+const ITEM_VISUALS = {
+  ...Object.fromEntries(Object.entries(SPELL_CARDS).map(([word, spec]) => [`english.sp8.${word}`, card(spec)])),
+  'english.g8.passive1': { kind: 'blocks', rows: [
+    { parts: [['The ball', 'subject', 'subject: the doer'], ['broke', 'verb', 'verb'], ['the window.', 'object', 'object']] },
+    { parts: [['The window', 'object', 'subject'], ['was broken', 'verb', 'was + verb'], ['by the ball.', 'subject', 'by + the doer']] },
+  ], caption: 'Active, then passive: the window moves to the front.' },
+  'english.g8.passive3': PASSIVE,
+  'english.g8.semi': { kind: 'blocks', rows: [{ parts: [['The rain stopped', 'clause', 'main clause'], [';', 'conjunction', 'semicolon'], ['we went outside.', 'clause', 'main clause']] }], caption: 'Each side could be a sentence on its own.' },
+  'english.g8.dash': { kind: 'blocks', rows: [{ parts: [['My brother', 'clause', 'main clause'], ['– who never reads –', 'subordinate', 'extra: lift it out'], ['finished the book in a day.', 'clause', 'main clause']] }], caption: 'Lift out the part between the dashes: the sentence still works.' },
+  'english.g8.relative': { kind: 'blocks', rows: [{ parts: [['The book', 'clause', 'main clause'], ['that I lost', 'subordinate', 'relative clause'], ['was a present.', 'clause', 'main clause']] }], caption: '“that I lost” tells you which book.' },
+  'english.g8.hyphen': { kind: 'blocks', rows: [{ parts: [['a'], ['man-eating', 'adjective', 'one describing word'], ['shark', 'noun', 'noun']] }, { parts: [['a'], ['man', 'noun', 'noun'], ['eating', 'verb', 'verb'], ['shark', 'noun', 'noun']] }], caption: 'With the hyphen, a shark that eats people. Without it, a man eating some shark!' },
+  'english.p2.lines': SONNET_SHAPE,
+  'english.p2.scheme': SONNET_SHAPE,
+  'english.p2.volta': SONNET_SHAPE,
+  'english.p2.pent': { kind: 'blocks', rows: [{ parts: [['shall I', 'tense', 'da-DUM'], ['com-PARE', 'tense', 'da-DUM'], ['thee TO', 'tense', 'da-DUM'], ['a SUM', 'tense', 'da-DUM'], ['mer’s DAY', 'tense', 'da-DUM']] }], caption: 'Five iambs (da-DUM) = iambic pentameter: ten syllables, every second one stressed.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'english', deck: 'stretch', topics, items }];

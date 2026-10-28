@@ -509,4 +509,68 @@ for (const [id, extra] of Object.entries(MEMORY)) {
   Object.assign(item, extra);
 }
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Keyed like the memory hooks (without “geography.”). Labelled diagrams (rivers, coasts, glaciers,
+// plate boundaries…) are attached separately; a picture added here joins any already there.
+const BEARINGS = { kind: 'table', head: ['Direction', 'Bearing'], rows: [['north', '000°'], ['north-east', '045°'], ['east', '090°'], ['south-east', '135°'], ['south', '180°'], ['south-west', '225°'], ['west', '270°'], ['north-west', '315°']], caption: 'Measured clockwise from north, always with three figures.' };
+const TOPIC_VISUALS = {
+  maps: { kind: 'blocks', rows: [{ parts: [['25', 'noun', 'easting'], ['3', 'noun', 'tenths'], ['81', 'verb', 'northing'], ['6', 'verb', 'tenths']], result: '253816' }], caption: 'A six-figure grid reference: eastings first (along the corridor), then northings (up the stairs). It pins a place to within 100 m.' },
+  hazards: { kind: 'table', head: ['', 'Magnitude', 'What happened'], rows: [
+    ['Haiti earthquake, 2010', '7.0', '**well over 100,000** died: weak, crowded buildings'],
+    ['Nepal earthquake, 2015', '7.8', 'about 9,000 died; avalanches on Everest'],
+    ['Japan earthquake, 2011', '9.0', 'most deaths from the tsunami; strict building rules'],
+    ['Iceland eruption, 2010', '–', 'no deaths, but ash closed European airspace'],
+  ], caption: 'A bigger hazard is not always deadlier: wealth, buildings and preparation decide the death toll.' },
+  weather: { kind: 'table', head: ['Rainfall', 'Air rises because…', 'Common in'], rows: [
+    ['Relief', 'winds are forced over hills', 'the west of Britain'],
+    ['Convectional', 'hot ground heats it', 'the tropics'],
+    ['Frontal', 'warm air meets colder air', 'UK depressions'],
+  ], caption: 'In every type, rising air cools, its water vapour condenses into cloud, and rain falls.' },
+  climate: { kind: 'flow', steps: ['Sunlight passes through the atmosphere', 'The Earth’s surface warms and gives off heat', 'Greenhouse gases absorb and re-emit that heat', 'More gases from burning fuels: more heat trapped'], caption: 'The enhanced greenhouse effect. CO₂ has risen from about 280 parts per million before the Industrial Revolution to about 427 today.' },
+  population: { kind: 'table', head: ['Stage', 'Birth rate', 'Death rate', 'Population'], tint: 'rows', rows: [
+    ['1', 'high', 'high', 'slow growth'],
+    ['2', 'high', 'falls fast', '**rapid growth**'],
+    ['3', 'falls', 'low', 'growth slows'],
+    ['4', 'low', 'low', 'stable'],
+    ['5', 'low', 'above birth rate', '**declines**'],
+  ], caption: 'The demographic transition model. Medicine and clean water cut deaths first; birth rates fall later.' },
+  development: { kind: 'table', head: ['Indicator', 'What it measures', 'More developed'], rows: [
+    ['GNI per head', 'income per person (US$)', 'higher'],
+    ['Life expectancy', 'average years a baby will live', 'higher'],
+    ['Infant mortality', 'deaths before age 1, per 1,000 births', 'lower'],
+    ['Birth rate', 'births per 1,000 people a year', 'lower'],
+    ['HDI', 'life expectancy, education, income (0 to 1)', 'closer to 1'],
+  ] },
+  'hazard-management': { kind: 'table', head: ['', 'What it means', 'Example'], rows: [
+    ['Prediction', 'watching for warning signs', 'tiny earthquakes and gas before eruptions'],
+    ['Protection', 'building to resist it', 'buildings with shock absorbers'],
+    ['Preparation', 'drills, kits and plans', 'Japan’s Disaster Prevention Day drills'],
+  ] },
+};
+const ITEM_VISUALS = {
+  'mp.six': { kind: 'blocks', rows: [{ parts: [['34', 'noun', 'easting'], ['7', 'noun', 'tenths'], ['56', 'verb', 'northing'], ['2', 'verb', 'tenths']], result: '347562' }] },
+  'mp.bearing-e': BEARINGS,
+  'mp.bearing-sw': BEARINGS,
+  'rv.oxbow': { kind: 'flow', steps: ['Erosion on the outside of bends makes the meander loop tighter', 'The neck of the meander narrows', 'In a flood the river cuts through the neck', 'Deposition seals off the old loop as an oxbow lake'] },
+  'cs.stack': { kind: 'flow', across: true, steps: ['crack', 'cave', 'arch', 'stack', 'stump'] },
+  'bm.layers': { kind: 'flow', across: true, steps: ['emergent layer', 'canopy', 'understorey', 'forest floor'], caption: 'From the top down.' },
+  'ru.biomes': { kind: 'flow', across: true, steps: ['steppe (grassland)', 'taiga (forest)', 'tundra (too cold for trees)'], caption: 'Travelling north through Russia.' },
+  'gb.tnc-pros': { kind: 'table', head: ['Advantages', 'Disadvantages'], rows: [
+    ['jobs for local people', 'profits may go back to the home country'],
+    ['new skills', 'factories can be unsafe (Rana Plaza, Bangladesh, 2013)'],
+    ['better roads and power supplies', 'jobs can be low-paid'],
+  ], caption: 'A TNC opening a factory in a lower-income country.' },
+  'nm.median': { kind: 'blocks', rows: [{ parts: [['0'], ['1'], ['2', 'object', 'median'], ['3'], ['15']] }], caption: 'In order, the middle value is the median. The mean (4.2) is dragged up by the one wet day.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) {
+  const t = topics.find((x) => x.id === `geography.${id}`);
+  if (!t) throw new Error(`TOPIC_VISUALS: no topic geography.${id}`);
+  t.visual = t.visual ? [].concat(t.visual, v) : v;
+}
+for (const [id, v] of Object.entries(ITEM_VISUALS)) {
+  const it = items.find((x) => x.id === `geography.${id}`);
+  if (!it) throw new Error(`ITEM_VISUALS: no item geography.${id}`);
+  it.visual = it.visual ? [].concat(it.visual, v) : v;
+}
+
 export default [{ subject: 'geography', deck: 'y8', topics, items }];

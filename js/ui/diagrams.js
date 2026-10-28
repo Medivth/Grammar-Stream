@@ -10,7 +10,8 @@ const PIE = ['#2f74e8', '#d97a12', '#0f9a6e', '#9a48d6'];
 const line = (x1, y1, x2, y2, extra = {}) => s('line', { x1, y1, x2, y2, stroke: INK, 'stroke-width': 2.5, 'stroke-linecap': 'round', ...extra });
 const dash = (x1, y1, x2, y2) => line(x1, y1, x2, y2, { 'stroke-dasharray': '6 5', 'stroke-width': 2 });
 const text = (x, y, t, extra = {}) => s('text', { x, y, fill: INK, 'font-size': 16, 'font-weight': 700, 'font-family': 'inherit', 'text-anchor': 'middle', ...extra }, t);
-const small = (x, y, t, extra = {}) => s('text', { x, y, fill: INK, 'font-size': 13, 'font-family': 'inherit', 'text-anchor': 'middle', ...extra }, t);
+const HALO = { stroke: 'var(--card, #fff)', 'stroke-width': 4, 'paint-order': 'stroke', 'stroke-linejoin': 'round' };
+const small = (x, y, t, extra = {}) => s('text', { x, y, fill: INK, 'font-size': 14.5, 'font-family': 'inherit', 'text-anchor': 'middle', ...extra }, t);
 const svg = (W, H, label, max = 360) => s('svg', { viewBox: `0 0 ${W} ${H}`, style: `max-width:${max}px;display:block;margin:0 auto 12px`, role: 'img', 'aria-label': label });
 const rightAngle = (x, y, dx, dy) => s('path', { d: `M${x + dx} ${y} L${x + dx} ${y + dy} L${x} ${y + dy}`, fill: 'none', stroke: INK, 'stroke-width': 1.5 });
 const unit = (v) => (typeof v === 'number' ? `${v} cm` : v);
@@ -25,7 +26,7 @@ export function mathsDiagram(d) {
     case 'axes': return axes(d);
     case 'bar': return bar(d);
     case 'pie': return pie(d);
-    case 'line': return lineGraph(d);
+    case 'line': return d.xs ? lineGraph(d) : null; // without data it is the straight-line angle drawing (qtypes)
     case 'parallel': return parallel(d);
     case 'clock': return clock(d);
     case 'tens': return tens(d);
@@ -45,6 +46,14 @@ export function mathsDiagram(d) {
     case 'colvec': return colvec(d);
     case 'tree': return tree(d);
     case 'boxplot': return boxplot(d);
+    case 'barmodel': return barModel(d);
+    case 'pvgrid': return pvGrid(d);
+    case 'areamodel': return areaModel(d);
+    case 'fracwall': return fracWall(d);
+    case 'hundredsq': return hundredSquare(d);
+    case 'possgrid': return possGrid(d);
+    case 'polygon': return polygonSides(d);
+    case 'solid': return solid(d);
     default: return null;
   }
 }
@@ -172,7 +181,7 @@ function bar(d) {
     const x = m.l + slot * i + (slot - bw) / 2;
     el.append(s('rect', { x, y: Y(c.v), width: bw, height: Y(0) - Y(c.v), fill: BLUE, rx: 3 }), small(x + bw / 2, H - m.b + 18, c.label));
   });
-  el.append(small(m.l - 6, m.t - 8, d.ylabel, { 'text-anchor': 'end', 'font-size': 12 }));
+  el.append(small(m.l - 6, m.t - 8, d.ylabel, { 'text-anchor': 'end', 'font-size': 13.5 }));
   return el;
 }
 
@@ -194,19 +203,35 @@ function pie(d) {
 }
 
 function lineGraph(d) {
-  const W = 400, H = 270, m = { l: 44, r: 16, t: 30, b: 44 };
-  const max = Math.max(...d.ys), min = Math.min(0, ...d.ys);
-  const step = max - min > 16 ? 4 : 2;
-  const top = Math.ceil((max + 1) / step) * step, bottom = Math.floor(min / step) * step;
+  // one line ({ xs, ys }) or several ({ xs, series: [{ name, ys }] }); optional step and min for the y axis
+  const series = d.series || [{ ys: d.ys }];
+  const all = series.flatMap((x) => x.ys).filter((v) => v != null);
+  const W = 400, H = 270 + (d.series ? 22 : 0), m = { l: 48, r: 16, t: 30, b: 44 + (d.series ? 22 : 0) };
+  const max = Math.max(...all), min = d.min ?? Math.min(0, ...all);
+  // gridlines: the old 2s and 4s for small values (generated questions rely on them), a round step for larger ones
+  const nice = (span) => { const raw = span / 6, p = 10 ** Math.floor(Math.log10(raw)); return [1, 2, 5, 10].map((k) => k * p).find((k) => k >= raw); };
+  const step = d.step || (max - min > 60 || d.min != null ? nice(max - min) : max - min > 16 ? 4 : 2);
+  const top = Math.ceil((max + (d.step || max - min > 60 ? 0 : 1)) / step) * step, bottom = Math.floor(min / step) * step;
   const pw = W - m.l - m.r, ph = H - m.t - m.b;
-  const X = (i) => m.l + (i / (d.xs.length - 1)) * pw, Y = (v) => m.t + ph - ((v - bottom) / (top - bottom)) * ph;
+  // scaleX: space the points by their x values (years, times) rather than evenly
+  const xv = d.scaleX ? d.xs.map(Number) : null;
+  const X = (i) => m.l + (xv ? (xv[i] - xv[0]) / (xv.at(-1) - xv[0]) : i / (d.xs.length - 1)) * pw, Y = (v) => m.t + ph - ((v - bottom) / (top - bottom)) * ph;
   const el = svg(W, H, d.title, 440);
   el.append(text(W / 2, 18, d.title, { 'font-size': 14, 'font-weight': 600 }));
-  for (let v = bottom; v <= top; v += step) el.append(line(m.l, Y(v), W - m.r, Y(v), { 'stroke-width': v === 0 ? 1.5 : 0.6, opacity: v === 0 ? 1 : 0.4 }), small(m.l - 6, Y(v) + 4, String(v), { 'text-anchor': 'end' }));
-  d.xs.forEach((x, i) => el.append(line(X(i), m.t, X(i), Y(bottom), { 'stroke-width': 0.6, opacity: 0.4 }), small(X(i), H - m.b + 18, x, { 'font-size': 12 })));
-  el.append(s('polyline', { points: d.ys.map((v, i) => `${X(i)},${Y(v)}`).join(' '), fill: 'none', stroke: BLUE, 'stroke-width': 2.5, 'stroke-linejoin': 'round' }));
-  d.ys.forEach((v, i) => el.append(s('circle', { cx: X(i), cy: Y(v), r: 4.5, fill: BLUE, stroke: 'var(--card, #fff)', 'stroke-width': 2 })));
-  el.append(small(m.l - 6, m.t - 8, d.ylabel, { 'text-anchor': 'end', 'font-size': 12 }));
+  for (let v = bottom; v <= top + 1e-9; v += step) el.append(line(m.l, Y(v), W - m.r, Y(v), { 'stroke-width': v === 0 ? 1.5 : 0.6, opacity: v === 0 ? 1 : 0.4 }), small(m.l - 6, Y(v) + 4, String(+v.toFixed(6)), { 'text-anchor': 'end' }));
+  d.xs.forEach((x, i) => el.append(line(X(i), m.t, X(i), Y(bottom), { 'stroke-width': 0.6, opacity: 0.4 }), small(X(i), H - m.b + 19, x, { 'font-size': 13.5 })));
+  series.forEach((sr, k) => {
+    const colour = PIE[k % PIE.length];
+    const pts = sr.ys.map((v, i) => (v == null ? null : [X(i), Y(v)])).filter(Boolean);
+    el.append(s('polyline', { points: pts.map((p) => p.join(',')).join(' '), fill: 'none', stroke: colour, 'stroke-width': 2.5, 'stroke-linejoin': 'round', 'stroke-dasharray': k % 2 ? '7 4' : null }));
+    pts.forEach(([x, y]) => el.append(s('circle', { cx: x, cy: y, r: 4.5, fill: colour, stroke: 'var(--card, #fff)', 'stroke-width': 2 })));
+    if (d.series) {
+      const lx = m.l + k * 150;
+      el.append(line(lx, H - 14, lx + 22, H - 14, { stroke: colour, 'stroke-width': 3, 'stroke-dasharray': k % 2 ? '7 4' : null }), small(lx + 28, H - 10, sr.name, { 'text-anchor': 'start', 'font-size': 13.5 }));
+    }
+  });
+  el.append(small(m.l - 6, m.t - 8, d.ylabel, { 'text-anchor': 'end', 'font-size': 13.5 }));
+  if (d.xlabel) el.append(small(W - m.r, H - m.b + 36, d.xlabel, { 'text-anchor': 'end', 'font-size': 13.5 }));
   return el;
 }
 
@@ -364,20 +389,24 @@ function graph(d) {
     el.append(line(X(k), Y(lo), X(k), Y(hi), { 'stroke-width': 0.6, opacity: 0.45 }), line(X(lo), Y(k), X(hi), Y(k), { 'stroke-width': 0.6, opacity: 0.45 }));
   }
   el.append(line(X(lo), Y(0), X(hi), Y(0), { 'stroke-width': 2 }), line(X(0), Y(lo), X(0), Y(hi), { 'stroke-width': 2 }));
+  // axis numbers go on last, with a halo, so a line crossing them never hides them
+  const nums = [];
   for (let k = lo; k <= hi; k++) {
     if (k === 0 || (n > 10 && k % 2 !== 0)) continue;
-    el.append(small(X(k), Y(0) + 16, k < 0 ? `−${-k}` : String(k)), small(X(0) - 8, Y(k) + 4, k < 0 ? `−${-k}` : String(k), { 'text-anchor': 'end' }));
+    nums.push(small(X(k), Y(0) + 16, k < 0 ? `−${-k}` : String(k), HALO), small(X(0) - 8, Y(k) + 4, k < 0 ? `−${-k}` : String(k), { 'text-anchor': 'end', ...HALO }));
   }
   el.append(text(X(hi) + 10, Y(0) + 5, 'x', { 'font-size': 14, 'text-anchor': 'start', 'font-style': 'italic' }), text(X(0), Y(hi) - 10, 'y', { 'font-size': 14, 'font-style': 'italic' }));
-  for (const L of d.lines || []) {
+  (d.lines || []).forEach((L, k) => {
     // clip y = mx + c to the square [lo, hi] x [lo, hi]
     let x1 = lo, x2 = hi;
     if (L.m !== 0) {
       const a = (lo - L.c) / L.m, b = (hi - L.c) / L.m;
       x1 = Math.max(lo, Math.min(a, b)); x2 = Math.min(hi, Math.max(a, b));
     }
-    el.append(line(X(x1), Y(L.m * x1 + L.c), X(x2), Y(L.m * x2 + L.c), { stroke: BLUE, 'stroke-width': 3 }));
-  }
+    // two or more lines get their own colours, so the caption can say which is which
+    el.append(line(X(x1), Y(L.m * x1 + L.c), X(x2), Y(L.m * x2 + L.c), { stroke: (d.lines.length > 1 ? PIE : [BLUE])[k % 4], 'stroke-width': 3 }));
+  });
+  el.append(...nums);
   return el;
 }
 
@@ -433,13 +462,14 @@ function curve(d) {
   const W = n * cell + 2 * m, H = n * cell + 2 * m;
   const X = (x) => m + (x - lo) * cell, Y = (y) => m + (hi - y) * cell;
   const el = svg(W, H, 'Graph of a curve', 400);
+  const nums = []; // axis numbers drawn last, over the curves
   for (let k = lo; k <= hi; k++) {
     el.append(line(X(k), Y(lo), X(k), Y(hi), { 'stroke-width': 0.6, opacity: 0.45 }), line(X(lo), Y(k), X(hi), Y(k), { 'stroke-width': 0.6, opacity: 0.45 }));
   }
   el.append(line(X(lo), Y(0), X(hi), Y(0), { 'stroke-width': 2 }), line(X(0), Y(lo), X(0), Y(hi), { 'stroke-width': 2 }));
   for (let k = lo; k <= hi; k++) {
     if (k === 0 || (n > 10 && k % 2 !== 0)) continue;
-    el.append(small(X(k), Y(0) + 16, k < 0 ? `−${-k}` : String(k)), small(X(0) - 8, Y(k) + 4, k < 0 ? `−${-k}` : String(k), { 'text-anchor': 'end' }));
+    nums.push(small(X(k), Y(0) + 16, k < 0 ? `−${-k}` : String(k), HALO), small(X(0) - 8, Y(k) + 4, k < 0 ? `−${-k}` : String(k), { 'text-anchor': 'end', ...HALO }));
   }
   el.append(text(X(hi) + 10, Y(0) + 5, 'x', { 'font-size': 14, 'text-anchor': 'start', 'font-style': 'italic' }), text(X(0), Y(hi) - 10, 'y', { 'font-size': 14, 'font-style': 'italic' }));
   for (const path of d.paths || []) {
@@ -451,6 +481,7 @@ function curve(d) {
     }
     flush();
   }
+  el.append(...nums);
   return el;
 }
 
@@ -521,5 +552,204 @@ function boxplot(d) {
   const step = d.hi - d.lo > 60 ? 10 : 5;
   for (let v = d.lo; v <= d.hi; v += step) el.append(line(X(v), ay, X(v), ay + 6, { 'stroke-width': 1.2 }), small(X(v), ay + 22, String(v), { 'font-size': 12 }));
   if (d.label) el.append(small(R, ay - 8, d.label, { 'text-anchor': 'end', 'font-size': 12 }));
+  return el;
+}
+
+// ---------------------------------------------------------------- models for reasoning
+// Bar model: rows of equal-sized boxes, so ratios and fractions of amounts can be seen.
+// { rows: [{ label, parts, shaded?, text?, total? }], total?: 'whole label' }
+function barModel(d) {
+  const maxParts = Math.max(...d.rows.map((r) => r.parts));
+  const labelW = d.rows.some((r) => r.label) ? 86 : 10;
+  const unitW = Math.min(64, (420 - labelW - 20) / maxParts);
+  const W = labelW + unitW * maxParts + 20, rowH = 46;
+  const top = d.total ? 40 : 14;
+  // a row with its own total needs room underneath for it
+  const gapAfter = (r) => (r.total ? 30 : 12);
+  const rowY = d.rows.map((_, i) => top + d.rows.slice(0, i).reduce((a, r) => a + rowH + gapAfter(r), 0));
+  const H = top + d.rows.reduce((a, r) => a + rowH + gapAfter(r), 0) + 4;
+  const el = svg(W, H, `Bar model: ${d.rows.map((r) => `${r.label || 'bar'} ${r.parts} parts`).join(', ')}`, 440);
+  if (d.total) {
+    const x2 = labelW + unitW * d.rows[0].parts;
+    el.append(s('path', { d: `M${labelW} ${top - 6} v-10 H${x2} v10`, fill: 'none', stroke: INK, 'stroke-width': 2 }), text((labelW + x2) / 2, top - 22, d.total, { 'font-size': 17 }));
+  }
+  d.rows.forEach((r, i) => {
+    const y = rowY[i];
+    if (r.label) el.append(text(labelW - 10, y + rowH / 2 + 5, r.label, { 'text-anchor': 'end', 'font-size': 16 }));
+    for (let k = 0; k < r.parts; k++) {
+      el.append(s('rect', { x: labelW + k * unitW, y, width: unitW, height: rowH, fill: k < (r.shaded || 0) ? BLUE : 'var(--card, #fff)', 'fill-opacity': k < (r.shaded || 0) ? 0.85 : 1, stroke: INK, 'stroke-width': 2 }));
+      if (r.text) el.append(text(labelW + k * unitW + unitW / 2, y + rowH / 2 + 5, r.text, { 'font-size': unitW < 40 ? 14 : 16.5, fill: k < (r.shaded || 0) ? '#fff' : INK }));
+    }
+    if (r.total) el.append(small(labelW + (r.parts * unitW) / 2, y + rowH + 16, r.total));
+  });
+  return el;
+}
+
+// Place-value grid: column headings and digits; shift: 1 or -1 draws arrows for ×10 / ÷10.
+// { cols: ['H','T','O'], rows: [['3','4','5'], ['3','4','5','0']], shift?: 1, point?: index of the column after the decimal point }
+function pvGrid(d) {
+  const n = d.cols.length, cw = n > 6 ? 40 : 54, ch = 42;
+  const W = n * cw + 24, H = 34 + d.rows.length * ch + (d.shift ? 10 : 6);
+  const el = svg(W, H, `Place-value grid with columns ${d.cols.join(', ')}`, Math.min(460, W * 1.15));
+  const x0 = 12;
+  d.cols.forEach((c, i) => {
+    el.append(s('rect', { x: x0 + i * cw, y: 6, width: cw, height: 28, fill: i >= (d.point ?? n) ? 'var(--v4-soft, #fdeed8)' : 'var(--v1-soft, #e3edfc)', stroke: INK, 'stroke-width': 1.5 }));
+    el.append(text(x0 + i * cw + cw / 2, 25, String(c), { 'font-size': String(c).length > 3 ? 12 : 15 }));
+  });
+  d.rows.forEach((row, r) => {
+    const y = 34 + r * ch;
+    for (let i = 0; i < n; i++) el.append(s('rect', { x: x0 + i * cw, y, width: cw, height: ch, fill: 'none', stroke: INK, 'stroke-width': 1.5 }));
+    // digits are right-aligned to the ones column (or to the end of the grid)
+    const offset = d.align === 'left' ? 0 : n - row.length;
+    row.forEach((dg, i) => { if (dg !== '' && dg != null) el.append(text(x0 + (i + offset) * cw + cw / 2, y + ch / 2 + 7, String(dg), { 'font-size': 22 })); });
+  });
+  if (d.point != null) el.append(s('circle', { cx: x0 + d.point * cw, cy: 34 + d.rows.length * ch - 6, r: 4, fill: INK }));
+  if (d.shift && d.rows.length >= 2) {
+    // each digit of the first row moves d.shift columns to the left (×10) or right (÷10)
+    const r0 = d.rows[0], off0 = d.align === 'left' ? 0 : n - r0.length, yA = 34 + ch - 9, yB = 34 + ch + 9;
+    el.append(s('defs', {}, s('marker', { id: 'pv-head', viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 6, markerHeight: 6, orient: 'auto' }, s('path', { d: 'M0,0 L10,5 L0,10 z', fill: '#d97a12' }))));
+    r0.forEach((dg, i) => {
+      if (dg === '' || dg == null) return;
+      const xa = x0 + (i + off0) * cw + cw / 2, xb = xa - d.shift * cw;
+      if (xb < x0 || xb > x0 + n * cw) return;
+      el.append(s('line', { x1: xa, y1: yA, x2: xb, y2: yB, stroke: '#d97a12', 'stroke-width': 2.2, 'marker-end': 'url(#pv-head)' }));
+    });
+  }
+  return el;
+}
+
+// Area model for multiplying: a rectangle split by place value. { across: [30, 4], down: [20, 3], show?: true }
+const fmt = (v) => (typeof v === 'number' ? v.toLocaleString('en-GB') : String(v)); // 3,696
+function areaModel(d) {
+  const W = 380, H = 250, x0 = 50, y0 = 34, maxW = 300, maxH = 190;
+  const sa = d.across.reduce((a, b) => a + b, 0), sd = d.down.reduce((a, b) => a + b, 0);
+  const kx = maxW / sa, ky = maxH / sd, k = Math.min(kx, ky, 999);
+  const scaleX = (v) => Math.max(34, v * kx), scaleY = (v) => Math.max(30, v * ky);
+  const el = svg(W, H, `Area model: ${d.across.join(' + ')} by ${d.down.join(' + ')}`, 400);
+  let y = y0;
+  const colors = ['var(--v1-soft, #e3edfc)', 'var(--v4-soft, #fdeed8)', 'var(--v3-soft, #dcf3e7)', 'var(--v5-soft, #efe5fc)'];
+  d.down.forEach((dv, r) => {
+    let x = x0;
+    const hh = scaleY(dv);
+    el.append(text(x0 - 10, y + hh / 2 + 5, fmt(dv), { 'text-anchor': 'end' }));
+    d.across.forEach((av, c) => {
+      const ww = scaleX(av);
+      el.append(s('rect', { x, y, width: ww, height: hh, fill: colors[(r + c) % 4], stroke: INK, 'stroke-width': 2 }));
+      if (r === 0) el.append(text(x + ww / 2, y0 - 10, fmt(av)));
+      if (d.show !== false) el.append(text(x + ww / 2, y + hh / 2 + 5, d.show === 'q' ? '?' : fmt(av * dv), { 'font-size': 14, 'font-weight': 600 }));
+      x += ww;
+    });
+    y += hh;
+  });
+  el.setAttribute('viewBox', `0 0 ${W} ${Math.max(H, y + 10)}`);
+  return el;
+}
+
+// Fraction wall: one whole, then halves, thirds… { rows: [1, 2, 3, 4, 6, 8], shade?: { 4: 3 } }
+function fracWall(d) {
+  const W = 420, rowH = 34, x0 = 10, w = 400;
+  const H = d.rows.length * (rowH + 4) + 8;
+  const el = svg(W, H, `Fraction wall: ${d.rows.map((r) => (r === 1 ? 'one whole' : `${r}ths`)).join(', ')}`, 460);
+  d.rows.forEach((n, i) => {
+    const y = 4 + i * (rowH + 4);
+    for (let k = 0; k < n; k++) {
+      const on = k < ((d.shade || {})[n] || 0);
+      el.append(s('rect', { x: x0 + (k * w) / n, y, width: w / n, height: rowH, fill: on ? BLUE : PIE[(i + 1) % 4], 'fill-opacity': on ? 0.9 : 0.18, stroke: INK, 'stroke-width': 1.5 }));
+      el.append(text(x0 + (k * w) / n + w / n / 2, y + rowH / 2 + 5, n === 1 ? '1' : `1/${n}`, { 'font-size': n > 10 ? 12 : n > 6 ? 14 : 16, 'font-weight': 600, fill: on ? '#fff' : INK }));
+    }
+  });
+  return el;
+}
+
+// Hundred square with some numbers shaded. { start: 1, shade: [..], ring?: [..] }
+function hundredSquare(d) {
+  const c = 30, W = c * 10 + 8, H = c * 10 + 8, start = d.start ?? 1;
+  const el = svg(W, H, `Hundred square from ${start}`, 340);
+  const shade = new Set(d.shade || []), ring = new Set(d.ring || []);
+  for (let i = 0; i < 100; i++) {
+    const v = start + i, x = 4 + (i % 10) * c, y = 4 + Math.floor(i / 10) * c;
+    el.append(s('rect', { x, y, width: c, height: c, fill: shade.has(v) ? 'var(--v4, #c46d0c)' : 'var(--card, #fff)', 'fill-opacity': shade.has(v) ? 0.45 : 1, stroke: INK, 'stroke-width': 0.8 }));
+    el.append(small(x + c / 2, y + c / 2 + 4.5, String(v), { 'font-size': 11.5, 'font-weight': ring.has(v) || shade.has(v) ? 700 : 400 }));
+    if (ring.has(v)) el.append(s('circle', { cx: x + c / 2, cy: y + c / 2, r: c / 2 - 2, fill: 'none', stroke: '#d62f3a', 'stroke-width': 2 }));
+  }
+  return el;
+}
+
+// Two-way grid of outcomes (two dice, coin and dice, Punnett square). { a: [...], b: [...], op?: 'sum'|'product', cells?: [[..]], shade?: [values] }
+function possGrid(d) {
+  const n = d.a.length, m = d.b.length, c = Math.min(46, 300 / Math.max(n, m));
+  const W = (n + 1) * c + 12, H = (m + 1) * c + 12;
+  const el = svg(W, H, `Grid of outcomes: ${d.a.length} by ${d.b.length}`, Math.min(380, W * 1.25));
+  const val = (i, j) => (d.cells ? d.cells[j][i] : d.op === 'product' ? d.a[i] * d.b[j] : d.op === 'sum' ? d.a[i] + d.b[j] : `${d.a[i]}${d.b[j]}`);
+  const shade = new Set((d.shade || []).map(String));
+  for (let i = 0; i < n; i++) { el.append(s('rect', { x: 6 + (i + 1) * c, y: 6, width: c, height: c, fill: 'var(--v1-soft, #e3edfc)', stroke: INK, 'stroke-width': 1.5 }), text(6 + (i + 1.5) * c, 6 + c / 2 + 6, String(d.a[i]))); }
+  for (let j = 0; j < m; j++) { el.append(s('rect', { x: 6, y: 6 + (j + 1) * c, width: c, height: c, fill: 'var(--v4-soft, #fdeed8)', stroke: INK, 'stroke-width': 1.5 }), text(6 + c / 2, 6 + (j + 1.5) * c + 6, String(d.b[j]))); }
+  el.append(text(6 + c / 2, 6 + c / 2 + 6, d.op === 'product' ? '×' : d.op === 'sum' ? '+' : '', { 'font-size': 18 }));
+  for (let i = 0; i < n; i++) for (let j = 0; j < m; j++) {
+    const v = val(i, j);
+    el.append(s('rect', { x: 6 + (i + 1) * c, y: 6 + (j + 1) * c, width: c, height: c, fill: shade.has(String(v)) ? 'var(--v4, #c46d0c)' : 'var(--card, #fff)', 'fill-opacity': shade.has(String(v)) ? 0.45 : 1, stroke: INK, 'stroke-width': 1 }));
+    el.append(text(6 + (i + 1.5) * c, 6 + (j + 1.5) * c + 5, String(v), { 'font-size': c < 40 ? 13 : 15, 'font-weight': shade.has(String(v)) ? 800 : 500 }));
+  }
+  return el;
+}
+
+// A regular polygon with its sides numbered and corners marked, for counting sides and vertices.
+// { sides: 5, name?: 'pentagon', numbered?: true, corners?: true }
+function polygonSides(d) {
+  const W = 240, H = 230, cx = 120, cy = 118, R = 86, n = d.sides;
+  const el = svg(W, H, `${d.name || 'A shape'} with ${n} sides`, 260);
+  const pts = Array.from({ length: n }, (_, i) => { const a = -Math.PI / 2 + (Math.PI * 2 * i) / n + (n % 2 ? 0 : Math.PI / n); return [cx + R * Math.cos(a), cy + R * Math.sin(a)]; });
+  el.append(s('path', { d: `M${pts.map((p) => p.map((v) => v.toFixed(1)).join(' ')).join(' L')} Z`, fill: 'var(--v1-soft, #e3edfc)', stroke: BLUE, 'stroke-width': 3.5, 'stroke-linejoin': 'round' }));
+  if (d.numbered !== false) pts.forEach((p, i) => {
+    const q = pts[(i + 1) % n], mx = (p[0] + q[0]) / 2, my = (p[1] + q[1]) / 2;
+    const ox = (mx - cx) * 0.22, oy = (my - cy) * 0.22;
+    el.append(s('circle', { cx: mx + ox, cy: my + oy, r: 11, fill: '#d97a12' }), text(mx + ox, my + oy + 5, String(i + 1), { 'font-size': 13, fill: '#fff' }));
+  });
+  if (d.corners) pts.forEach((p) => el.append(s('circle', { cx: p[0], cy: p[1], r: 5.5, fill: '#d62f3a' })));
+  return el;
+}
+
+// 3D solids as line drawings, hidden edges dashed. { shape: 'cube'|'cuboid'|'pyramid'|'prism'|'cylinder'|'cone'|'sphere', faces?: true }
+function solid(d) {
+  const W = 220, H = 200;
+  const el = svg(W, H, `A ${d.shape}`, 230);
+  const st = { fill: 'none', stroke: INK, 'stroke-width': 2.5, 'stroke-linejoin': 'round' };
+  const hid = { ...st, 'stroke-dasharray': '6 5', 'stroke-width': 1.6 };
+  const P = (pts, attrs = st) => s('path', { d: pts, ...attrs });
+  const face = (pts, fill) => s('path', { d: pts, fill, 'fill-opacity': 0.35, stroke: 'none' });
+  switch (d.shape) {
+    case 'cube': case 'cuboid': {
+      const w = d.shape === 'cube' ? 100 : 130, h = d.shape === 'cube' ? 100 : 80, dx = 40, dy = -34, x = 30, y = 70;
+      el.append(face(`M${x} ${y} h${w} v${h} h${-w} Z`, BLUE), face(`M${x} ${y} l${dx} ${dy} h${w} l${-dx} ${-dy} Z`, '#d97a12'), face(`M${x + w} ${y} l${dx} ${dy} v${h} l${-dx} ${-dy} Z`, '#0f9a6e'));
+      el.append(P(`M${x} ${y} h${w} v${h} h${-w} Z M${x} ${y} l${dx} ${dy} h${w} l${-dx} ${-dy} M${x + w + dx} ${y + dy} v${h} l${-dx} ${-dy}`),
+        P(`M${x + dx} ${y + dy} v${h} h${w} M${x + dx} ${y + dy + h} l${-dx} ${-dy}`, hid));
+      break;
+    }
+    case 'pyramid': {
+      const A = [40, 160], B = [150, 160], C = [190, 130], D = [80, 130], T = [112, 26];
+      el.append(face(`M${A} L${B} L${T} Z`, BLUE), face(`M${B} L${C} L${T} Z`, '#0f9a6e'));
+      el.append(P(`M${A} L${B} L${C} M${A} L${T} L${B} M${T} L${C}`), P(`M${A} L${D} L${C} M${D} L${T}`, hid));
+      break;
+    }
+    case 'prism': {
+      const A = [30, 160], B = [110, 160], C = [70, 92], dx = 80, dy = -40;
+      el.append(face(`M${A} L${B} L${C} Z`, BLUE), face(`M${B} l${dx} ${dy} L${C[0] + dx} ${C[1] + dy} L${C} Z`, '#0f9a6e'));
+      el.append(P(`M${A} L${B} L${C} Z M${B} l${dx} ${dy} L${C[0] + dx} ${C[1] + dy} L${C}`), P(`M${A} l${dx} ${dy} L${B[0] + dx} ${B[1] + dy} M${A[0] + dx} ${A[1] + dy} L${C[0] + dx} ${C[1] + dy}`, hid));
+      break;
+    }
+    case 'cylinder': {
+      el.append(face('M50 50 A60 18 0 0 0 170 50 V150 A60 18 0 0 1 50 150 Z', BLUE), face('M50 50 A60 18 0 0 1 170 50 A60 18 0 0 1 50 50 Z', '#d97a12'));
+      el.append(P('M50 50 A60 18 0 0 1 170 50 A60 18 0 0 1 50 50 M50 50 V150 A60 18 0 0 0 170 150 V50'), P('M50 150 A60 18 0 0 1 170 150', hid));
+      break;
+    }
+    case 'cone': {
+      el.append(face('M110 24 L50 150 A60 18 0 0 0 170 150 Z', BLUE));
+      el.append(P('M110 24 L50 150 A60 18 0 0 0 170 150 Z'), P('M50 150 A60 18 0 0 1 170 150', hid));
+      break;
+    }
+    default: { // sphere
+      el.append(s('circle', { cx: 110, cy: 100, r: 72, fill: BLUE, 'fill-opacity': 0.3, stroke: INK, 'stroke-width': 2.5 }), P('M38 100 A72 22 0 0 0 182 100'), P('M38 100 A72 22 0 0 1 182 100', hid));
+    }
+  }
   return el;
 }

@@ -84,7 +84,73 @@
    "batch": 5,
    "intro": "A prefix changes a word’s meaning. in- means “not”, but it changes before some letters: il- before l (illegal), im- before m or p (impossible), ir- before r (irregular).",
    "teach": "Explain why “illegal” has two l’s.",
-   "talk": "Ask {him} what a superhero, a submarine and an autopilot have to do with prefixes."
+   "talk": "Ask {him} what a superhero, a submarine and an autopilot have to do with prefixes.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "il",
+        "prefix",
+        "not"
+       ],
+       [
+        "legal",
+        "root"
+       ]
+      ],
+      "result": "illegal"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "im",
+        "prefix",
+        "not"
+       ],
+       [
+        "possible",
+        "root"
+       ]
+      ],
+      "result": "impossible"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ir",
+        "prefix",
+        "not"
+       ],
+       [
+        "regular",
+        "root"
+       ]
+      ],
+      "result": "irregular"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "sub",
+        "prefix",
+        "under"
+       ],
+       [
+        "marine",
+        "root"
+       ]
+      ],
+      "result": "submarine"
+     }
+    ],
+    "caption": "in- (not) becomes il- before l, im- before m or p, and ir- before r. That is why illegal has two l’s."
+   }
   },
   {
    "id": "spelling.y3-suffixes",
@@ -96,7 +162,71 @@
    "batch": 5,
    "intro": "Adding a suffix can change a word: happy → happily (y becomes i), gentle → gently (le becomes ly), basic → basically (-ic adds -ally), fame → famous (drop the e).",
    "teach": "Explain how to add -ly to “gentle” and to “basic”.",
-   "talk": "Ask {him} to turn “danger”, “fame” and “mountain” into -ous words."
+   "talk": "Ask {him} to turn “danger”, “fame” and “mountain” into -ous words.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "happi",
+        "root",
+        "happy: y → i"
+       ],
+       [
+        "ly",
+        "suffix"
+       ]
+      ],
+      "result": "happily"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "gent",
+        "root",
+        "gentle: le → ly"
+       ],
+       [
+        "ly",
+        "suffix"
+       ]
+      ],
+      "result": "gently"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "basic",
+        "root"
+       ],
+       [
+        "ally",
+        "suffix"
+       ]
+      ],
+      "result": "basically"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "fam",
+        "root",
+        "fame: drop the e"
+       ],
+       [
+        "ous",
+        "suffix"
+       ]
+      ],
+      "result": "famous"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3-shun",
@@ -108,7 +238,39 @@
    "batch": 5,
    "intro": "Four ways to spell “shun”! Look at the root word: invent → invention (-tion), discuss → discussion (-ssion), expand → expansion (-sion), magic → magician (-cian, for jobs).",
    "teach": "Explain why “musician” ends in -cian.",
-   "talk": "Ask {him} which ending a magician, an electrician and a musician all share."
+   "talk": "Ask {him} which ending a magician, an electrician and a musician all share.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "root word ends in",
+     "ending",
+     "example"
+    ],
+    "rows": [
+     [
+      "t or te",
+      "**-tion**",
+      "invent → invention"
+     ],
+     [
+      "ss or mit",
+      "**-ssion**",
+      "discuss → discussion"
+     ],
+     [
+      "d or se",
+      "**-sion**",
+      "expand → expansion"
+     ],
+     [
+      "c (a job)",
+      "**-cian**",
+      "magic → magician"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "Look at the end of the root word to choose the “shun” spelling."
+   }
   },
   {
    "id": "spelling.y3-sounds",
@@ -144,7 +306,73 @@
    "batch": 5,
    "intro": "Use “an” before a vowel SOUND (an astronaut, an hour) and “a” before a consonant sound (a rocket, a unicorn). Words in a family share a root: solve, solution, dissolve.",
    "teach": "Explain why we say “an hour” but “a unicorn”.",
-   "talk": "Ask {him} to find three words in the “help” family."
+   "talk": "Ask {him} to find three words in the “help” family.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "help",
+        "root"
+       ],
+       [
+        "ful",
+        "suffix"
+       ]
+      ],
+      "result": "helpful"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "help",
+        "root"
+       ],
+       [
+        "less",
+        "suffix"
+       ]
+      ],
+      "result": "helpless"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "help",
+        "root"
+       ],
+       [
+        "er",
+        "suffix"
+       ]
+      ],
+      "result": "helper"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "un",
+        "prefix"
+       ],
+       [
+        "help",
+        "root"
+       ],
+       [
+        "ful",
+        "suffix"
+       ]
+      ],
+      "result": "unhelpful"
+     }
+    ],
+    "caption": "A word family shares a root word and its meaning: help."
+   }
   },
   {
    "id": "spelling.y3-joining",
@@ -157,7 +385,68 @@
    "batch": 5,
    "intro": "Conjunctions (when, before, after, while, so, because), adverbs (then, next, soon) and prepositions (before, after, during, because of) show WHEN and WHY things happen. “Has” and “have” make the present perfect: I have finished.",
    "teach": "Explain the difference between “because” and “because of”.",
-   "talk": "Ask {him} to tell you about {her} day using “before”, “after” and “while”."
+   "talk": "Ask {him} to tell you about {her} day using “before”, “after” and “while”.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Put on your helmet",
+        "clause",
+        "happens 1st"
+       ],
+       [
+        "before",
+        "conjunction",
+        "when?"
+       ],
+       [
+        "you start the engine.",
+        "subordinate",
+        "happens 2nd"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "It was pouring with rain,",
+        "clause",
+        "cause"
+       ],
+       [
+        "so",
+        "conjunction"
+       ],
+       [
+        "the race was stopped.",
+        "clause",
+        "result"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "The race was stopped",
+        "clause",
+        "result"
+       ],
+       [
+        "because",
+        "conjunction"
+       ],
+       [
+        "it was pouring with rain.",
+        "subordinate",
+        "cause"
+       ]
+      ]
+     }
+    ],
+    "caption": "“before” tells you WHEN. “so” and “because” tell you WHY: “so” comes before the result, “because” before the cause."
+   }
   },
   {
    "id": "spelling.y3-clauses",
@@ -170,7 +459,41 @@
    "batch": 5,
    "intro": "A clause is a group of words with a verb. A main clause makes sense on its own; a subordinate clause (because the engine was hot) needs a main clause. Paragraphs group ideas, and inverted commas show direct speech.",
    "teach": "Explain what a subordinate clause is, with an example.",
-   "talk": "Ask {him} when a writer should start a new paragraph."
+   "talk": "Ask {him} when a writer should start a new paragraph.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Turbo won the race",
+        "clause",
+        "main clause"
+       ],
+       [
+        "because he practised.",
+        "subordinate",
+        "subordinate clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "When the lights turned green,",
+        "subordinate",
+        "subordinate clause"
+       ],
+       [
+        "Rosa pressed the pedal.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "A main clause makes sense on its own. A subordinate clause needs a main clause."
+   }
   },
   {
    "id": "spelling.y3-fronted",
@@ -183,7 +506,55 @@
    "batch": 5,
    "intro": "A fronted adverbial comes at the start of a sentence and tells you when, where or how: “Later that night, the robot woke up.” It is followed by a comma.",
    "teach": "Explain where the comma goes after a fronted adverbial.",
-   "talk": "Take turns starting sentences with “Without a sound,” or “At midnight,”."
+   "talk": "Take turns starting sentences with “Without a sound,” or “At midnight,”.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Later that night,",
+        "adverbial",
+        "when?"
+       ],
+       [
+        "the robot woke up.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Behind the castle wall,",
+        "adverbial",
+        "where?"
+       ],
+       [
+        "the knights waited.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Without a sound,",
+        "adverbial",
+        "how?"
+       ],
+       [
+        "Bleep crept forward.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "A fronted adverbial comes first and tells you when, where or how. A comma follows it."
+   }
   },
   {
    "id": "spelling.y3-possessive",
@@ -196,7 +567,33 @@
    "batch": 5,
    "intro": "One driver’s helmet: the apostrophe goes before the s. Three drivers’ helmets: the plural already ends in s, so the apostrophe goes after it. But children’s and women’s add ’s.",
    "teach": "Explain the difference between “the driver’s cars” and “the drivers’ cars”.",
-   "talk": "Find apostrophes on shop signs and decide: one owner or many?"
+   "talk": "Find apostrophes on shop signs and decide: one owner or many?",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "owners",
+     "add",
+     "example"
+    ],
+    "rows": [
+     [
+      "one driver",
+      "**’s**",
+      "the driver**’s** helmet"
+     ],
+     [
+      "three drivers",
+      "**’** after the s",
+      "the drivers**’** helmets"
+     ],
+     [
+      "the children",
+      "**’s**",
+      "the children**’s** toys"
+     ]
+    ],
+    "caption": "If the plural already ends in s, just add the apostrophe after it. If it doesn’t (children, women, men), add ’s."
+   }
   },
   {
    "id": "spelling.y3-standard",
@@ -1089,7 +1486,27 @@
     "mispel"
    ],
    "explain": "mis + spell: keep both s’s, one from the prefix and one from the word.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "mis",
+        "prefix",
+        "wrongly"
+       ],
+       [
+        "spell",
+        "root"
+       ]
+      ],
+      "result": "misspell"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.pf.in",
@@ -1119,7 +1536,27 @@
     "unlegal"
    ],
    "explain": "il + legal = illegal: two l’s.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "il",
+        "prefix",
+        "not"
+       ],
+       [
+        "legal",
+        "root"
+       ]
+      ],
+      "result": "illegal"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.pf.impossible",
@@ -1133,7 +1570,27 @@
     "dispossible"
    ],
    "explain": "im + possible = impossible.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "im",
+        "prefix",
+        "not"
+       ],
+       [
+        "possible",
+        "root"
+       ]
+      ],
+      "result": "impossible"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.pf.impatient",
@@ -1163,7 +1620,27 @@
     "unregular"
    ],
    "explain": "ir + regular = irregular: two r’s.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ir",
+        "prefix",
+        "not"
+       ],
+       [
+        "regular",
+        "root"
+       ]
+      ],
+      "result": "irregular"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.pf.irresponsible",
@@ -1273,7 +1750,27 @@
     "antiklockwise"
    ],
    "explain": "anti + clockwise: just join them.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "anti",
+        "prefix",
+        "against"
+       ],
+       [
+        "clockwise",
+        "root"
+       ]
+      ],
+      "result": "anticlockwise"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.pf.under",
@@ -1329,7 +1826,27 @@
     "adortion"
    ],
    "explain": "Drop the e before -ation: adore → adoration.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ador",
+        "root",
+        "adore: drop the e"
+       ],
+       [
+        "ation",
+        "suffix"
+       ]
+      ],
+      "result": "adoration"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.sx.preparation",
@@ -1385,7 +1902,27 @@
     "hapily"
    ],
    "explain": "A consonant + y: change the y to i, then add -ly.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "happi",
+        "root",
+        "happy: y → i"
+       ],
+       [
+        "ly",
+        "suffix"
+       ]
+      ],
+      "result": "happily"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.sx.gently",
@@ -1399,7 +1936,27 @@
     "gentily"
    ],
    "explain": "Words ending -le: change the le to ly. gentle → gently.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "gent",
+        "root",
+        "gentle: le → ly"
+       ],
+       [
+        "ly",
+        "suffix"
+       ]
+      ],
+      "result": "gently"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.sx.simply",
@@ -1485,7 +2042,27 @@
     "fameus"
    ],
    "explain": "Drop the e before -ous: fame → famous.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "fam",
+        "root",
+        "fame: drop the e"
+       ],
+       [
+        "ous",
+        "suffix"
+       ]
+      ],
+      "result": "famous"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.sx.mountainous",
@@ -1531,7 +2108,27 @@
    "explain": "Keep the e after the g so it still says “j”: courage → courageous.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "courage",
+        "root",
+        "keep the e"
+       ],
+       [
+        "ous",
+        "suffix"
+       ]
+      ],
+      "result": "courageous"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.sx.enormous",
@@ -1563,7 +2160,39 @@
    "explain": "If the root ends in t or te, use -tion: invent → invention, complete → completion.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "table",
+    "head": [
+     "root word ends in",
+     "ending",
+     "example"
+    ],
+    "rows": [
+     [
+      "t or te",
+      "**-tion**",
+      "invent → invention"
+     ],
+     [
+      "ss or mit",
+      "**-ssion**",
+      "discuss → discussion"
+     ],
+     [
+      "d or se",
+      "**-sion**",
+      "expand → expansion"
+     ],
+     [
+      "c (a job)",
+      "**-cian**",
+      "magic → magician"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "Look at the end of the root word to choose the “shun” spelling."
+   }
   },
   {
    "id": "spelling.y3.sh.action",
@@ -1691,7 +2320,39 @@
    "explain": "music → musician, magic → magician, electric → electrician.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "table",
+    "head": [
+     "root word ends in",
+     "ending",
+     "example"
+    ],
+    "rows": [
+     [
+      "t or te",
+      "**-tion**",
+      "invent → invention"
+     ],
+     [
+      "ss or mit",
+      "**-ssion**",
+      "discuss → discussion"
+     ],
+     [
+      "d or se",
+      "**-sion**",
+      "expand → expansion"
+     ],
+     [
+      "c (a job)",
+      "**-cian**",
+      "magic → magician"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "Look at the end of the root word to choose the “shun” spelling."
+   }
   },
   {
    "id": "spelling.y3.sh.magician",
@@ -2759,7 +3420,30 @@
     "helpful"
    ],
    "explain": "Take away the prefix un- and the suffix -ful: help.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "un",
+        "prefix"
+       ],
+       [
+        "help",
+        "root"
+       ],
+       [
+        "ful",
+        "suffix"
+       ]
+      ],
+      "result": "unhelpful"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.wf.root-disappearing",
@@ -2773,7 +3457,30 @@
     "pear"
    ],
    "explain": "Take away the prefix dis- and the suffix -ing: appear.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "dis",
+        "prefix"
+       ],
+       [
+        "appear",
+        "root"
+       ],
+       [
+        "ing",
+        "suffix"
+       ]
+      ],
+      "result": "disappearing"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.jn.before",
@@ -2796,7 +3503,31 @@
      "feedback": "“because” gives a reason, which doesn’t fit here."
     }
    ],
-   "explain": "“before” shows which thing happens first."
+   "explain": "“before” shows which thing happens first.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Put on your helmet",
+        "clause",
+        "happens 1st"
+       ],
+       [
+        "before",
+        "conjunction",
+        "when?"
+       ],
+       [
+        "you start the engine.",
+        "subordinate",
+        "happens 2nd"
+       ]
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.jn.after",
@@ -2865,7 +3596,49 @@
      "feedback": "This is about cause and result, not time."
     }
    ],
-   "explain": "“so” shows the result."
+   "explain": "“so” shows the result.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "It was pouring with rain,",
+        "clause",
+        "cause"
+       ],
+       [
+        "so",
+        "conjunction"
+       ],
+       [
+        "the race was stopped.",
+        "clause",
+        "result"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "The race was stopped",
+        "clause",
+        "result"
+       ],
+       [
+        "because",
+        "conjunction"
+       ],
+       [
+        "it was pouring with rain.",
+        "subordinate",
+        "cause"
+       ]
+      ]
+     }
+    ],
+    "caption": "“so” comes before the result; “because” comes before the cause."
+   }
   },
   {
    "id": "spelling.y3.jn.because",
@@ -2888,7 +3661,49 @@
      "feedback": "The point is WHY it stopped."
     }
    ],
-   "explain": "“because” gives the reason (the cause)."
+   "explain": "“because” gives the reason (the cause).",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "It was pouring with rain,",
+        "clause",
+        "cause"
+       ],
+       [
+        "so",
+        "conjunction"
+       ],
+       [
+        "the race was stopped.",
+        "clause",
+        "result"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "The race was stopped",
+        "clause",
+        "result"
+       ],
+       [
+        "because",
+        "conjunction"
+       ],
+       [
+        "it was pouring with rain.",
+        "subordinate",
+        "cause"
+       ]
+      ]
+     }
+    ],
+    "caption": "“so” comes before the result; “because” comes before the cause."
+   }
   },
   {
    "id": "spelling.y3.jn.time-adverb",
@@ -3183,7 +3998,26 @@
      "feedback": "Who won? Without “Turbo” this doesn’t make sense on its own."
     }
    ],
-   "explain": "The main clause makes sense on its own: Turbo won the race."
+   "explain": "The main clause makes sense on its own: Turbo won the race.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Turbo won the race",
+        "clause",
+        "main clause"
+       ],
+       [
+        "because he practised.",
+        "subordinate",
+        "subordinate clause"
+       ]
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.cl.sub",
@@ -3206,7 +4040,26 @@
      "feedback": "That has no verb, so it isn’t a clause."
     }
    ],
-   "explain": "A subordinate clause starts with a word like when, because or if, and needs the main clause."
+   "explain": "A subordinate clause starts with a word like when, because or if, and needs the main clause.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "When the lights turned green,",
+        "subordinate",
+        "subordinate clause"
+       ],
+       [
+        "Rosa pressed the pedal.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.cl.which-sub",
@@ -3505,7 +4358,55 @@
      "feedback": "That is a noun."
     }
    ],
-   "explain": "Later that night, Behind the wall, Without a sound: these are fronted adverbials."
+   "explain": "Later that night, Behind the wall, Without a sound: these are fronted adverbials.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Later that night,",
+        "adverbial",
+        "when?"
+       ],
+       [
+        "the robot woke up.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Behind the castle wall,",
+        "adverbial",
+        "where?"
+       ],
+       [
+        "the knights waited.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Without a sound,",
+        "adverbial",
+        "how?"
+       ],
+       [
+        "Bleep crept forward.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "A fronted adverbial comes first and tells you when, where or how. A comma follows it."
+   }
   },
   {
    "id": "spelling.y3.fa.which",
@@ -3551,7 +4452,26 @@
      "feedback": "The comma goes before Turbo, where the adverbial ends."
     }
    ],
-   "explain": "The comma comes straight after the fronted adverbial."
+   "explain": "The comma comes straight after the fronted adverbial.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "As fast as lightning,",
+        "adverbial",
+        "how?"
+       ],
+       [
+        "Turbo zoomed past.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "spelling.y3.fa.where",
@@ -3712,7 +4632,33 @@
      "feedback": "The apostrophe shows who owns, so it goes on drivers."
     }
    ],
-   "explain": "The plural “drivers” already ends in s, so just add the apostrophe after it: drivers’."
+   "explain": "The plural “drivers” already ends in s, so just add the apostrophe after it: drivers’.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "owners",
+     "add",
+     "example"
+    ],
+    "rows": [
+     [
+      "one driver",
+      "**’s**",
+      "the driver**’s** helmet"
+     ],
+     [
+      "three drivers",
+      "**’** after the s",
+      "the drivers**’** helmets"
+     ],
+     [
+      "the children",
+      "**’s**",
+      "the children**’s** toys"
+     ]
+    ],
+    "caption": "If the plural already ends in s, just add the apostrophe after it. If it doesn’t (children, women, men), add ’s."
+   }
   },
   {
    "id": "spelling.y3.po.racers",
@@ -3758,7 +4704,33 @@
      "feedback": "You need an apostrophe."
     }
    ],
-   "explain": "Plurals that don’t end in s add ’s: children’s, women’s, men’s."
+   "explain": "Plurals that don’t end in s add ’s: children’s, women’s, men’s.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "owners",
+     "add",
+     "example"
+    ],
+    "rows": [
+     [
+      "one driver",
+      "**’s**",
+      "the driver**’s** helmet"
+     ],
+     [
+      "three drivers",
+      "**’** after the s",
+      "the drivers**’** helmets"
+     ],
+     [
+      "the children",
+      "**’s**",
+      "the children**’s** toys"
+     ]
+    ],
+    "caption": "If the plural already ends in s, just add the apostrophe after it. If it doesn’t (children, women, men), add ’s."
+   }
   },
   {
    "id": "spelling.y3.po.women",

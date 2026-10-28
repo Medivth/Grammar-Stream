@@ -25,7 +25,31 @@
    "batch": 5,
    "intro": "More exciting words to use in your writing: swift, ferocious, triumphant…",
    "teach": "Use “ferocious” and “swift” in a sentence about a race.",
-   "talk": "Ask {him} to describe the family pet (or a toy) using a new word."
+   "talk": "Ask {him} to describe the family pet (or a toy) using a new word.",
+   "visual": [
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "whisper",
+      "say",
+      "shout",
+      "bellow"
+     ],
+     "caption": "Ways to speak, from quietest to loudest."
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "crept",
+      "walked",
+      "ran",
+      "dashed"
+     ],
+     "caption": "Ways to move, from slowest to fastest."
+    }
+   ]
   },
   {
    "id": "reading.words-3",
@@ -73,7 +97,11 @@
    "batch": 6,
    "intro": "Three fact files about amazing animals and our planet. Look for numbers, key words and headings.",
    "teach": "Explain the difference between magma and lava.",
-   "talk": "Ask {him} for the most surprising fact {she} learned."
+   "talk": "Ask {him} for the most surprising fact {she} learned.",
+   "visual": {
+    "kind": "diagram",
+    "id": "volcano"
+   }
   },
   {
    "id": "reading.facts-3",
@@ -409,7 +437,18 @@
    "formats": [
     "choice"
    ],
-   "learn": "**whisper** means to speak very quietly.\n_The spy had to whisper the secret password._"
+   "learn": "**whisper** means to speak very quietly.\n_The spy had to whisper the secret password._",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "whisper",
+     "say",
+     "shout",
+     "bellow"
+    ],
+    "caption": "Ways to speak, from quietest to loudest."
+   }
   },
   {
    "id": "reading.w2.bellow",
@@ -426,7 +465,18 @@
    "formats": [
     "choice"
    ],
-   "learn": "**bellow** means to shout in a loud, deep voice.\n_The giant began to bellow with rage._"
+   "learn": "**bellow** means to shout in a loud, deep voice.\n_The giant began to bellow with rage._",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "whisper",
+     "say",
+     "shout",
+     "bellow"
+    ],
+    "caption": "Ways to speak, from quietest to loudest."
+   }
   },
   {
    "id": "reading.w2.dash",
@@ -443,7 +493,18 @@
    "formats": [
     "choice"
    ],
-   "learn": "**dash** means to run very quickly.\n_The hero made a dash for the door._"
+   "learn": "**dash** means to run very quickly.\n_The hero made a dash for the door._",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "crept",
+     "walked",
+     "ran",
+     "dashed"
+    ],
+    "caption": "Ways to move, from slowest to fastest."
+   }
   },
   {
    "id": "reading.w2.crept",
@@ -460,7 +521,18 @@
    "formats": [
     "choice"
    ],
-   "learn": "**crept** means moved slowly and quietly.\n_The wolf crept out of the forest._"
+   "learn": "**crept** means moved slowly and quietly.\n_The wolf crept out of the forest._",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "crept",
+     "walked",
+     "ran",
+     "dashed"
+    ],
+    "caption": "Ways to move, from slowest to fastest."
+   }
   },
   {
    "id": "reading.w2.shimmering",
@@ -1699,7 +1771,12 @@
    ],
    "explain": "“Once it comes out of the ground, we call it lava.”",
    "passage": "Fact file: Volcanoes\n\nDeep under the ground, it is so hot that rock melts. This melted rock is called magma.\n\nA volcano is an opening in the Earth’s surface. When a volcano erupts, magma bursts out. Once it comes out of the ground, we call it lava. Lava can be as hot as 1,000 degrees Celsius, ten times hotter than boiling water!\n\nVolcanoes can also throw out clouds of ash and gas. Long ago, in the year 79, a volcano in Italy called Vesuvius erupted. Its ash buried the Roman town of Pompeii. Today we can walk through its streets and see how the Romans lived.\n\nScientists who study volcanoes are called volcanologists. They watch for clues, like small earthquakes, that a volcano might be about to erupt.",
-   "passageSource": "A fact file written for this app"
+   "passageSource": "A fact file written for this app",
+   "visual": {
+    "kind": "diagram",
+    "id": "volcano",
+    "highlight": "chamber"
+   }
   },
   {
    "id": "reading.vol.2",
@@ -1717,7 +1794,12 @@
    "passageSource": "A fact file written for this app",
    "accept": [
     "pompei"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "volcano",
+    "highlight": "ash"
+   }
   },
   {
    "id": "reading.vol.3",

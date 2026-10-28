@@ -485,7 +485,94 @@ for (const id of Object.keys(topicHooks)) if (!topics.some((t) => t.id === id)) 
 const withMemory = (it) => ({ ...it, ...memory[it.id.slice('history.'.length)] });
 // --- end of memory hooks
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Topics and items keyed without “history.”. An unknown id throws.
+// six wives side by side do not fit a phone as a tree, so this one is a table, in order of marriage
+const HENRY_VIII = {
+  kind: 'table',
+  head: ['Henry VIII’s wives', 'what happened', 'child who reigned'],
+  rows: [
+    ['Catherine of Aragon', 'marriage annulled', '**Mary I** (1553–58)'],
+    ['Anne Boleyn', 'beheaded', '**Elizabeth I** (1558–1603)'],
+    ['Jane Seymour', 'died', '**Edward VI** (1547–53)'],
+    ['Anne of Cleves', 'marriage annulled', ''],
+    ['Catherine Howard', 'beheaded', ''],
+    ['Catherine Parr', 'survived', ''],
+  ],
+  tint: 'rows',
+  caption: 'Henry VIII reigned 1509–47. Six wives: divorced, beheaded, died; divorced, beheaded, survived (the “divorces” were annulments). His children reigned in turn: Edward, Mary, Elizabeth.',
+};
+const FEUDAL = {
+  kind: 'tree',
+  root: { n: 'The king', note: 'owns all the land', c: [{ n: 'Barons and bishops', note: 'land, for loyalty and knights', c: [{ n: 'Knights', note: 'land, for fighting', c: [{ n: 'Peasants (villeins)', note: 'work the lord’s land, tied to it' }] }] }] },
+  caption: 'The feudal system: land passed down, loyalty and service passed up.',
+};
+const SPARTA = {
+  kind: 'tree',
+  root: { n: 'Two kings', note: 'with a council of elders and the ephors', c: [{ n: 'Spartiates', note: 'citizens: full-time soldiers', c: [{ n: 'Perioikoi', note: 'free, but not citizens: traders and craftsmen', c: [{ n: 'Helots', note: 'enslaved; farmed the land; far more numerous' }] }] }] },
+};
+const VOTERS = {
+  kind: 'table', head: ['Living in Athens', 'Could vote?'],
+  rows: [['Adult male citizens', '**yes**, rich or poor'], ['Women', 'no'], ['Children', 'no'], ['Metics (foreign residents)', 'no'], ['Enslaved people', 'no']],
+  caption: 'Perhaps only 10–20% of the people of Athens could vote, but those who could voted on laws themselves.',
+};
+const PERSIAN_WARS = { kind: 'timeline', from: -510, to: -470, set: 'greece', events: [[-508, 'Democracy begins in Athens'], [-490, 'Marathon'], [-480, 'Thermopylae and Salamis'], [-479, 'Plataea']], caption: 'In BC dates, bigger numbers are earlier.' };
+const BLACK_DEATH = { kind: 'flow', steps: ['Black Death, 1348: a third to a half die', 'Labour is scarce: peasants demand higher wages', 'Statute of Labourers (1351) tries to freeze wages', 'Anger at low wages and serfdom grows', 'A third poll tax, on everyone over 15', 'The Peasants’ Revolt, 1381'] };
+const EMPIRE_TRADE = { kind: 'cycle', steps: ['Goods from Britain to Africa', 'Enslaved people to the Americas', 'Sugar and cotton to Britain'], centre: 'the triangular trade', caption: 'The voyage of enslaved Africans across the Atlantic was the Middle Passage. About 12 million people were forced onto the ships.' };
+const ABOLITION = { kind: 'flow', steps: ['1789: Equiano’s autobiography', '1807: Britain bans the slave trade', '1831: rebellion in Jamaica', '1833: Slavery Abolition Act'], caption: 'Enslaved people’s resistance and a long campaign in Britain ended it. In 1833 slave owners, not the enslaved, were paid compensation.' };
+const SUFFRAGE = {
+  kind: 'table', head: ['', 'Suffragists (NUWSS)', 'Suffragettes (WSPU)'], tint: 'cols',
+  rows: [['Leader', 'Millicent Fawcett', 'Emmeline Pankhurst'], ['Founded', '1897', '1903'], ['Tactics', 'peaceful: petitions, marches, meetings', 'direct action: “Deeds not words”']],
+  caption: 'Both wanted votes for women; they disagreed about how to win them.',
+};
+const WW1 = { kind: 'flow', steps: ['Long-term causes: militarism, alliances, imperialism, nationalism', 'Trigger: Franz Ferdinand shot, 28 June 1914', 'Germany invades Belgium', 'Britain declares war, 4 August 1914', 'Trench warfare on the Western Front', 'Armistice: 11 a.m., 11 November 1918'] };
+const WW2 = { kind: 'flow', steps: ['Germany invades Poland, 1 September 1939', 'Britain and France declare war', 'Dunkirk and the Battle of Britain, 1940', 'Pearl Harbor brings in the USA, 1941', 'A German army destroyed at Stalingrad, 1942–43', 'D-Day landings, June 1944', 'VE Day, 8 May 1945'], caption: 'In the shadow of the war, Nazi Germany murdered six million Jews: the Holocaust.' };
+const BC_AD = { kind: 'timeline', from: -500, to: 500, events: [[-490, 'Battle of Marathon'], [-323, 'Alexander dies'], [-44, 'Julius Caesar killed'], [43, 'Romans invade Britain'], [410, 'Romans leave Britain']], caption: 'BC years count down towards 1 BC; AD years count up from AD 1. There is no year 0.' };
+const TOPIC_VISUALS = {
+  athens: VOTERS,
+  sparta: SPARTA,
+  'persian-wars': PERSIAN_WARS,
+  alexander: { kind: 'timeline', from: -360, to: -320, set: 'greece', events: [[-356, 'Alexander born'], [-336, 'King of Macedon, aged 20'], [-331, 'Founds Alexandria'], [-323, 'Dies in Babylon, aged 32']], caption: 'Thirteen years as king, from Greece to India.' },
+  normans: FEUDAL,
+  'black-death': BLACK_DEATH,
+  reformation: HENRY_VIII,
+  'civil-war': { kind: 'timeline', from: 1600, to: 1700, set: 'britain', events: [[1605, 'Gunpowder Plot'], [1642, 'Civil War begins'], [1649, 'Charles I executed'], [1653, 'Cromwell becomes Lord Protector'], [1660, 'Restoration: Charles II'], [1688, 'Glorious Revolution']] },
+  revolutions: { kind: 'flow', steps: ['Enlightenment ideas: reason, not tradition', 'France nearly bankrupt; bread very dear', 'The Bastille stormed, 14 July 1789', 'Louis XVI guillotined, January 1793', 'The Reign of Terror, 1793–94', 'Napoleon seizes power, 1799'] },
+  industrial: { kind: 'timeline', from: 1750, to: 1860, set: 'britain', events: [[1769, 'Watt patents his steam engine'], [1771, 'Arkwright’s mill at Cromford'], [1811, 'Luddites smash machines'], [1830, 'Liverpool to Manchester railway'], [1833, 'Factory Act'], [1854, 'Snow and the Broad Street pump']] },
+  empire: EMPIRE_TRADE,
+  vote: { kind: 'timeline', from: 1825, to: 1935, set: 'britain', events: [[1832, 'Great Reform Act'], [1838, 'The Chartists begin'], [1867, 'Second Reform Act'], [1884, 'Third Reform Act'], [1903, 'WSPU founded'], [1918, 'Women over 30 (with property)'], [1928, 'Equal votes at 21']], caption: 'Step by step: in 1830 only about one man in ten could vote, and no women.' },
+  ww1: WW1,
+  ww2: WW2,
+  skills: BC_AD,
+  'cold-war': { kind: 'timeline', from: 1940, to: 1995, set: 'twentieth', mark: 'Cold War', events: [[1946, '“Iron curtain” speech'], [1948, 'Berlin Airlift'], [1957, 'Sputnik'], [1961, 'Berlin Wall built'], [1962, 'Cuban Missile Crisis'], [1989, 'Berlin Wall falls'], [1991, 'USSR breaks up']] },
+  'golden-age': { kind: 'timeline', from: 700, to: 1300, set: 'britain', events: [[762, 'Baghdad founded'], [1025, 'Ibn Sina’s Canon of Medicine'], [1066, 'Meanwhile: Normans conquer England'], [1258, 'Mongols sack Baghdad']], caption: 'Baghdad’s golden age set against Britain’s own history.' },
+};
+const ITEM_VISUALS = {
+  'ath.who': VOTERS,
+  'sp.kings': SPARTA,
+  'sp.helots': SPARTA,
+  'pw.marathon': PERSIAN_WARS,
+  'no.feudal': FEUDAL,
+  'bd.effect': BLACK_DEATH,
+  'pr.trigger': BLACK_DEATH,
+  'rf.why': HENRY_VIII,
+  'rf.rulers': HENRY_VIII,
+  'em.triangle': EMPIRE_TRADE,
+  'em.middle': EMPIRE_TRADE,
+  'em.1807': ABOLITION,
+  'em.1833': ABOLITION,
+  'em.resist': ABOLITION,
+  'vt.groups': SUFFRAGE,
+  'w1.main': WW1,
+  'w1.belgium': WW1,
+  'w2.pearl': WW2,
+  'sk.bc': BC_AD,
+  'sk.century': { kind: 'table', head: ['Years', 'Century'], rows: [['1–100', '1st century'], ['1001–1100', '**11th** century: 1066 is here'], ['1901–2000', '20th century'], ['2001–2100', '21st century']], caption: 'The century number is one more than the hundreds: the 1000s are the 11th century.' },
+};
+for (const [k, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === `history.${k}`); if (!t) throw new Error(`picture for unknown topic ${k}`); t.visual = v; }
+for (const [k, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === `history.${k}`); if (!it) throw new Error(`picture for unknown item ${k}`); it.visual = v; }
+
 export default [
-  { subject: 'history', deck: 'y8', topics: topics.map((t) => ({ ...t, hook: topicHooks[t.id] })), items: items.map(withMemory) },
+  { subject: 'history', deck: 'y8',topics: topics.map((t) => ({ ...t, hook: topicHooks[t.id] })), items: items.map(withMemory) },
   { subject: 'history', deck: 'y8-timeline', topics: [], items: [], timeline: { periods: PERIODS.map(([name, from, to]) => ({ name, from, to })), events: EVENTS.map(([year, label, ids]) => ({ year, label, items: ids })) } },
 ];

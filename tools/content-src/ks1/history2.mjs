@@ -105,4 +105,22 @@ export const EVENTS_2 = [
   [1997, 'Thrust SSC breaks the sound barrier', ['history.car.thrust']],
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const TUDORS = { kind: 'tree', root: { n: 'Henry VII', note: 'first Tudor king, 1485–1509', c: [{ n: 'Henry VIII', note: '1509–1547; six wives', c: [{ n: 'Mary I', note: '1553–1558' }, { n: 'Elizabeth I', note: '1558–1603; last Tudor', mark: true }, { n: 'Edward VI', note: '1547–1553' }] }] }, caption: 'The dates show when each one reigned. Henry VIII’s children all reigned: Edward, then Mary, then Elizabeth.' };
+const TOPIC_VISUALS = {
+  'history.stoneage': { kind: 'timeline', from: -4000, to: 200, set: 'britain', events: [[-3000, 'Stonehenge begun'], [43, 'Romans invade']], caption: 'Stone tools, then bronze, then iron.' },
+  'history.cars': { kind: 'timeline', from: 1850, to: 2026, set: 'britain', events: [[1885, 'First petrol car (Karl Benz)'], [1908, 'Ford Model T'], [1950, 'First Formula One race'], [1997, 'Thrust SSC beats the speed of sound']] },
+  'history.inventors': { kind: 'timeline', from: 1830, to: 2000, set: 'britain', events: [[1843, 'Ada Lovelace’s computer program'], [1876, 'The telephone'], [1926, 'The television'], [1989, 'The World Wide Web']] },
+  'history.explorers': { kind: 'timeline', from: 1450, to: 2000, set: 'britain', events: [[1492, 'Columbus reaches the Americas'], [1769, 'Cook maps New Zealand'], [1914, 'Shackleton sails for Antarctica'], [1953, 'Hillary and Tenzing climb Everest']] },
+  'history.tudors': TUDORS,
+};
+const ITEM_VISUALS = {
+  'history.sa.ages': { kind: 'flow', across: true, steps: ['Stone Age: flint tools', 'Bronze Age: bronze tools', 'Iron Age: iron tools'] },
+  'history.eg.when': { kind: 'timeline', from: -3000, to: 500, events: [[-2560, 'Great Pyramid built'], [43, 'Romans invade Britain']] },
+  'history.tu.henry7': TUDORS,
+  'history.tu.elizabeth': TUDORS,
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'history', deck: 'more', topics, items }];

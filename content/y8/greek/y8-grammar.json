@@ -13,7 +13,70 @@
    "intro": "The third declension is the biggest noun family: φύλαξ (guard), γίγας (giant), ἀγών (contest), ῥήτωρ (speaker), παῖς (child), Ἕλλην (a Greek). The nominative can look odd, so always learn the genitive too: take off -ος and you have the stem. After that the endings are regular: singular -α, -ος, -ι; plural -ες, -ας, -ων, -σι(ν).",
    "teach": "Explain how to find the stem of a third-declension noun, using φύλαξ, φύλακος.",
    "talk": "Ask {him} to decline ἀγών aloud, singular and plural, and to name an English word that comes from it.",
-   "hook": "Genitive minus **-ος** = the stem; then add **-α, -ος, -ι** and **-ες, -ας, -ων, -σι(ν)**."
+   "hook": "Genitive minus **-ος** = the stem; then add **-α, -ος, -ι** and **-ες, -ας, -ων, -σι(ν)**.",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "sg",
+      "guard (m.)",
+      "giant (m.)"
+     ],
+     "rows": [
+      [
+       "nom.",
+       "φύλαξ",
+       "γίγας"
+      ],
+      [
+       "acc.",
+       "φύλακ**α**",
+       "γίγαντ**α**"
+      ],
+      [
+       "gen.",
+       "φύλακ**ος**",
+       "γίγαντ**ος**"
+      ],
+      [
+       "dat.",
+       "φύλακ**ι**",
+       "γίγαντ**ι**"
+      ]
+     ]
+    },
+    {
+     "kind": "table",
+     "head": [
+      "pl",
+      "guard (m.)",
+      "giant (m.)"
+     ],
+     "rows": [
+      [
+       "nom.",
+       "φύλακ**ες**",
+       "γίγαντ**ες**"
+      ],
+      [
+       "acc.",
+       "φύλακ**ας**",
+       "γίγαντ**ας**"
+      ],
+      [
+       "gen.",
+       "φυλάκ**ων**",
+       "γιγάντ**ων**"
+      ],
+      [
+       "dat.",
+       "φύλα**ξι(ν)**",
+       "γίγα**σι(ν)**"
+      ]
+     ],
+     "caption": "Dative plural: κ + σι makes ξι, and ντ drops out before σ."
+    }
+   ]
   },
   {
    "id": "greek.decl3-more",
@@ -26,7 +89,91 @@
    "intro": "Three more patterns. Neuters ending -μα have a stem in -ματ- (σῶμα, σώματος). πόλις (city) and βασιλεύς (king) change their stem vowel. Family words such as πατήρ (father), μήτηρ (mother) and ἀνήρ (man) drop a vowel in some cases, and γυνή (woman) uses a stem γυναικ-.",
    "teach": "Explain why τὰ σώματα could be either the subject or the object.",
    "talk": "Ask {him} which English words come from σῶμα, πόλις and γυνή.",
-   "hook": "**-μα** neuters hide a **τ**: σῶμα, σώματος; ὄνομα, ὀνόματος."
+   "hook": "**-μα** neuters hide a **τ**: σῶμα, σώματος; ὄνομα, ὀνόματος.",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "",
+      "body",
+      "city"
+     ],
+     "rows": [
+      [
+       "nom. sg",
+       "σῶμα",
+       "πόλ**ις**"
+      ],
+      [
+       "acc. sg",
+       "σῶμα",
+       "πόλ**ιν**"
+      ],
+      [
+       "gen. sg",
+       "σώμα**τος**",
+       "πόλ**εως**"
+      ],
+      [
+       "dat. sg",
+       "σώμα**τι**",
+       "πόλ**ει**"
+      ],
+      [
+       "nom. pl",
+       "σώμα**τα**",
+       "πόλ**εις**"
+      ],
+      [
+       "acc. pl",
+       "σώμα**τα**",
+       "πόλ**εις**"
+      ],
+      [
+       "gen. pl",
+       "σωμά**των**",
+       "πόλ**εων**"
+      ],
+      [
+       "dat. pl",
+       "σώμα**σι(ν)**",
+       "πόλ**εσι(ν)**"
+      ]
+     ],
+     "caption": "σῶμα shows its hidden τ as soon as an ending is added. πόλις has ι in the nominative and accusative singular, and ε everywhere else."
+    },
+    {
+     "kind": "table",
+     "head": [
+      "singular",
+      "king",
+      "father"
+     ],
+     "rows": [
+      [
+       "nom.",
+       "βασιλ**εύς**",
+       "πατ**ήρ**"
+      ],
+      [
+       "acc.",
+       "βασιλ**έα**",
+       "πατ**έρα**"
+      ],
+      [
+       "gen.",
+       "βασιλ**έως**",
+       "πατ**ρός**"
+      ],
+      [
+       "dat.",
+       "βασιλ**εῖ**",
+       "πατ**ρί**"
+      ]
+     ],
+     "caption": "βασιλεύς keeps βασιλ- and changes the vowel after it; πατήρ loses its ε in the genitive and dative."
+    }
+   ]
   },
   {
    "id": "greek.pronouns",
@@ -40,7 +187,70 @@
    "intro": "Personal pronouns: ἐγώ (I), σύ (you), ἡμεῖς (we), ὑμεῖς (you all). Greek uses ἐγώ or σύ as a subject only for emphasis, because the verb ending already says who. The busy word αὐτός has three jobs: “him, her, it, them” on its own (in every case except the nominative); “-self” next to a noun (αὐτὸς ὁ βασιλεύς, the king himself); and “the same” after the article (ὁ αὐτὸς βασιλεύς, the same king).",
    "teach": "Explain the three meanings of αὐτός, with an example of each.",
    "talk": "Ask {him} the difference between αὐτὸς ὁ βασιλεύς and ὁ αὐτὸς βασιλεύς.",
-   "hook": "**αὐτός** has three jobs: alone = him; outside the article = self; inside it = same."
+   "hook": "**αὐτός** has three jobs: alone = him; outside the article = self; inside it = same.",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "singular",
+      "I",
+      "you"
+     ],
+     "rows": [
+      [
+       "nominative",
+       "ἐγώ",
+       "σύ"
+      ],
+      [
+       "accusative",
+       "ἐμέ, με",
+       "σέ, σε"
+      ],
+      [
+       "genitive",
+       "ἐμοῦ, μου",
+       "σοῦ, σου"
+      ],
+      [
+       "dative",
+       "ἐμοί, μοι",
+       "σοί, σοι"
+      ]
+     ]
+    },
+    {
+     "kind": "table",
+     "head": [
+      "plural",
+      "we",
+      "you"
+     ],
+     "rows": [
+      [
+       "nominative",
+       "**ἡ**μεῖς",
+       "**ὑ**μεῖς"
+      ],
+      [
+       "accusative",
+       "**ἡ**μᾶς",
+       "**ὑ**μᾶς"
+      ],
+      [
+       "genitive",
+       "**ἡ**μῶν",
+       "**ὑ**μῶν"
+      ],
+      [
+       "dative",
+       "**ἡ**μῖν",
+       "**ὑ**μῖν"
+      ]
+     ],
+     "caption": "Only the first letter tells “we” (ἡ-) from “you” (ὑ-)."
+    }
+   ]
   },
   {
    "id": "greek.demonstratives",
@@ -54,7 +264,147 @@
    "intro": "οὗτος (this) and ἐκεῖνος (that) stand outside the article: οὗτος ὁ ἀνήρ or ὁ ἀνὴρ οὗτος, “this man”. The relative pronoun ὅς, ἥ, ὅ means “who” or “which”: it takes its gender and number from the noun it refers to, but its case from its own clause.",
    "teach": "Explain why the relative in ὁ ἀνὴρ ὃν ὁρῶ is accusative.",
    "talk": "Ask {him} to translate “this girl” and “that city” into Greek.",
-   "hook": "This and that stand outside the article: **οὗτος ὁ ἀνήρ**, this man."
+   "hook": "This and that stand outside the article: **οὗτος ὁ ἀνήρ**, this man.",
+   "visual": [
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "οὗτος",
+         "pronoun",
+         "this"
+        ],
+        [
+         "ὁ",
+         "article",
+         "the"
+        ],
+        [
+         "ἀνήρ",
+         "noun",
+         "man"
+        ]
+       ],
+       "result": "this man"
+      },
+      {
+       "parts": [
+        [
+         "ὁ",
+         "article",
+         "the"
+        ],
+        [
+         "ἀνὴρ",
+         "noun",
+         "man"
+        ],
+        [
+         "οὗτος",
+         "pronoun",
+         "this"
+        ]
+       ],
+       "result": "this man"
+      },
+      {
+       "parts": [
+        [
+         "ἐκείνη",
+         "pronoun",
+         "that"
+        ],
+        [
+         "ἡ",
+         "article",
+         "the"
+        ],
+        [
+         "κόρη",
+         "noun",
+         "girl"
+        ]
+       ],
+       "result": "that girl"
+      }
+     ]
+    },
+    {
+     "kind": "table",
+     "tint": "cols",
+     "head": [
+      "sg",
+      "m.",
+      "f.",
+      "n."
+     ],
+     "rows": [
+      [
+       "nom.",
+       "οὗτ**ος**",
+       "αὕτ**η**",
+       "τοῦτ**ο**"
+      ],
+      [
+       "acc.",
+       "τοῦτ**ον**",
+       "ταύτ**ην**",
+       "τοῦτ**ο**"
+      ],
+      [
+       "gen.",
+       "τούτ**ου**",
+       "ταύτ**ης**",
+       "τούτ**ου**"
+      ],
+      [
+       "dat.",
+       "τούτ**ῳ**",
+       "ταύτ**ῃ**",
+       "τούτ**ῳ**"
+      ]
+     ]
+    },
+    {
+     "kind": "table",
+     "tint": "cols",
+     "head": [
+      "pl",
+      "m.",
+      "f.",
+      "n."
+     ],
+     "rows": [
+      [
+       "nom.",
+       "οὗτ**οι**",
+       "αὗτ**αι**",
+       "ταῦτ**α**"
+      ],
+      [
+       "acc.",
+       "τούτ**ους**",
+       "ταύτ**ας**",
+       "ταῦτ**α**"
+      ],
+      [
+       "gen.",
+       "τούτ**ων**",
+       "τούτ**ων**",
+       "τούτ**ων**"
+      ],
+      [
+       "dat.",
+       "τούτ**οις**",
+       "ταύτ**αις**",
+       "τούτ**οις**"
+      ]
+     ],
+     "caption": "οὗτος, this: the endings of καλός (but neuter τοῦτο, like τό, has no -ν), and a τ wherever the article has one."
+    }
+   ]
   },
   {
    "id": "greek.comparison",
@@ -67,7 +417,48 @@
    "intro": "Comparatives (“wiser”) and superlatives (“wisest”) usually add -τερος and -τατος: σοφός, σοφώτερος, σοφώτατος. The commonest adjectives are irregular, just as in English (good, better, best): ἀγαθός, ἀμείνων, ἄριστος. “Than” is ἤ, or the genitive on its own.",
    "teach": "Explain two ways of saying “than” in Greek.",
    "talk": "Ask {him} where “aristocracy” comes from.",
-   "hook": "**-τερος** = -er, **-τατος** = -est: σοφώτερος, wiser; σοφώτατος, wisest."
+   "hook": "**-τερος** = -er, **-τατος** = -est: σοφώτερος, wiser; σοφώτατος, wisest.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "more (-er)",
+     "most (-est)"
+    ],
+    "rows": [
+     [
+      "σοφός, wise",
+      "σοφώ**τερος**",
+      "σοφώ**τατος**"
+     ],
+     [
+      "δεινός, terrible",
+      "δεινό**τερος**",
+      "δεινό**τατος**"
+     ],
+     [
+      "ἀγαθός, good",
+      "ἀμείνων",
+      "ἄριστος"
+     ],
+     [
+      "κακός, bad",
+      "κακίων",
+      "κάκιστος"
+     ],
+     [
+      "μέγας, big",
+      "μείζων",
+      "μέγιστος"
+     ],
+     [
+      "πολύς, much",
+      "πλείων",
+      "πλεῖστος"
+     ]
+    ],
+    "caption": "The top two follow the rule; the four common ones below are irregular, like good, better, best."
+   }
   },
   {
    "id": "greek.aorist-weak",
@@ -80,7 +471,87 @@
    "intro": "The aorist is the storytelling tense: a single action in the past. The weak (first) aorist adds the augment ἐ- at the front and -σα at the end: ἔλυσα, ἔλυσας, ἔλυσε(ν), ἐλύσαμεν, ἐλύσατε, ἔλυσαν. A verb starting with a vowel lengthens it instead (ἀκούω → ἤκουσα), and a compound verb puts the augment after its prefix (ἀποπέμπω → ἀπέπεμψα).",
    "teach": "Explain how to tell ἐπαίδευε (imperfect) from ἐπαίδευσε (aorist).",
    "talk": "Ask {him} to tell you the aorist of λύω, all six persons.",
-   "hook": "Augment at the front, **σα** at the back: ἔλυσα, I freed."
+   "hook": "Augment at the front, **σα** at the back: ἔλυσα, I freed.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ἔ",
+        "augment",
+        "past"
+       ],
+       [
+        "λυ",
+        "stem"
+       ],
+       [
+        "σ",
+        "tense",
+        "aorist"
+       ],
+       [
+        "α",
+        "ending",
+        "I"
+       ]
+      ],
+      "result": "ἔλυσα, I freed"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ἐ",
+        "augment",
+        "past"
+       ],
+       [
+        "λύ",
+        "stem"
+       ],
+       [
+        "σ",
+        "tense",
+        "aorist"
+       ],
+       [
+        "αμεν",
+        "ending",
+        "we"
+       ]
+      ],
+      "result": "ἐλύσαμεν, we freed"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ἔ",
+        "augment",
+        "past"
+       ],
+       [
+        "πεμπ",
+        "stem"
+       ],
+       [
+        "σ",
+        "tense",
+        "aorist"
+       ],
+       [
+        "α",
+        "ending",
+        "I"
+       ]
+      ],
+      "result": "ἔπεμψα (π + σ = ψ)"
+     }
+    ]
+   }
   },
   {
    "id": "greek.aorist-strong",
@@ -93,7 +564,48 @@
    "intro": "Many of the commonest verbs have a strong (second) aorist: a different stem with imperfect-style endings. φεύγω → ἔφυγον (I fled), λαμβάνω → ἔλαβον (I took), μανθάνω → ἔμαθον (I learned). A few must simply be learned as new words: λέγω → εἶπον, ὁράω → εἶδον, ἔρχομαι → ἦλθον.",
    "teach": "Explain how to tell ἔφευγον from ἔφυγον.",
    "talk": "Ask {him} for the aorists of λέγω, ὁράω and ἔρχομαι.",
-   "hook": "Strong aorists swap the stem, not the endings, like English run and ran: φεύγω → ἔφυγον."
+   "hook": "Strong aorists swap the stem, not the endings, like English run and ran: φεύγω → ἔφυγον.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "present",
+     "imperfect",
+     "aorist"
+    ],
+    "rows": [
+     [
+      "φεύγω",
+      "ἔ**φευγ**ον",
+      "ἔ**φυγ**ον"
+     ],
+     [
+      "λαμβάνω",
+      "ἐ**λάμβαν**ον",
+      "ἔ**λαβ**ον"
+     ],
+     [
+      "μανθάνω",
+      "ἐ**μάνθαν**ον",
+      "ἔ**μαθ**ον"
+     ],
+     [
+      "βάλλω",
+      "ἔ**βαλλ**ον",
+      "ἔ**βαλ**ον"
+     ],
+     [
+      "λέγω",
+      "ἔλεγον",
+      "εἶπον"
+     ],
+     [
+      "ὁράω",
+      "ἑώρων",
+      "εἶδον"
+     ]
+    ],
+    "caption": "Strong aorists: same augment, same endings, new stem. λέγω and ὁράω are irregular (εἶπον, εἶδον; imperfect ἑώρων is contracted). The imperfect keeps the present stem."
+   }
   },
   {
    "id": "greek.infinitives",
@@ -119,7 +631,48 @@
    "intro": "Verbs like φιλέω (I love) and ποιέω (I make, do) have stems ending in ε, which merges with the ending: φιλέ-ω → φιλῶ, φιλέ-ει → φιλεῖ, φιλέ-ομεν → φιλοῦμεν. The rules: ε + ω = ω, ε + ε = ει, ε + ει = ει, ε + ο = ου, ε + ου = ου. Verbs in -άω, like τιμάω (I honour) and ὁράω (I see), contract to α and ω sounds instead: τιμᾷ, ὁρῶμεν.",
    "teach": "Explain how φιλέομεν becomes φιλοῦμεν.",
    "talk": "Ask {him} what φιλοσοφία has to do with φιλέω.",
-   "hook": "**ε + ο = ου**, **ε + ε = ει**: φιλέομεν → φιλοῦμεν."
+   "hook": "**ε + ο = ου**, **ε + ε = ει**: φιλέομεν → φιλοῦμεν.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "stem + ending",
+     "contracted"
+    ],
+    "rows": [
+     [
+      "I",
+      "φιλ**έ-ω**",
+      "φιλ**ῶ**"
+     ],
+     [
+      "you (sg)",
+      "φιλ**έ-ει**ς",
+      "φιλ**εῖ**ς"
+     ],
+     [
+      "he, she",
+      "φιλ**έ-ει**",
+      "φιλ**εῖ**"
+     ],
+     [
+      "we",
+      "φιλ**έ-ο**μεν",
+      "φιλ**οῦ**μεν"
+     ],
+     [
+      "you (pl)",
+      "φιλ**έ-ε**τε",
+      "φιλ**εῖ**τε"
+     ],
+     [
+      "they",
+      "φιλ**έ-ου**σι(ν)",
+      "φιλ**οῦ**σι(ν)"
+     ]
+    ],
+    "caption": "ε + ω = ω; ε + ε and ε + ει = ει; ε + ο and ε + ου = ου."
+   }
   },
   {
    "id": "greek.middle",
@@ -132,7 +685,53 @@
    "intro": "Greek verbs have a third set of endings: λύομαι, λύῃ, λύεται, λυόμεθα, λύεσθε, λύονται. In the present these can be passive (“I am being freed”) or middle (“I free for myself”). Some verbs have only these endings but active meanings, like βούλομαι (I want) and γίγνομαι (I become): these are called deponents. “By” a person is ὑπό + genitive.",
    "teach": "Explain what a deponent verb is, with an example.",
    "talk": "Ask {him} to translate “the horse is freed by the slave” into Greek.",
-   "hook": "Middle and passive endings: **-ομαι, -ῃ, -εται, -ομεθα, -εσθε, -ονται**."
+   "hook": "Middle and passive endings: **-ομαι, -ῃ, -εται, -ομεθα, -εσθε, -ονται**.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "ὁ δοῦλος",
+        "subject",
+        "the slave"
+       ],
+       [
+        "τὸν ἵππον",
+        "object",
+        "the horse"
+       ],
+       [
+        "λύει",
+        "verb",
+        "frees (active)"
+       ]
+      ],
+      "result": "The slave frees the horse."
+     },
+     {
+      "parts": [
+       [
+        "ὁ ἵππος",
+        "subject",
+        "the horse"
+       ],
+       [
+        "ὑπὸ τοῦ δούλου",
+        "adverbial",
+        "by the slave"
+       ],
+       [
+        "λύεται",
+        "verb",
+        "is freed (passive)"
+       ]
+      ],
+      "result": "The horse is freed by the slave."
+     }
+    ],
+    "caption": "Passive: the subject has the action done to it; ὑπό + genitive names who did it."
+   }
   },
   {
    "id": "greek.participles-full",
@@ -146,7 +745,31 @@
    "intro": "A participle is an adjective made from a verb. The present participle (λύων, λύουσα, λῦον: “freeing”) describes something happening at the same time; the aorist participle (λύσας, λύσασα, λῦσαν: “having freed”) something that happened first. Strong aorists have their own: λαβών (having taken), ἰδών (having seen), ἐλθών (having come). Participles agree with their noun like adjectives, which is how you know who is doing what.",
    "teach": "Explain how the case of a participle tells you who is doing the action.",
    "talk": "Ask {him} to translate ταῦτα εἰπών, and say why it is “having said”.",
-   "hook": "Present participle = **while**; aorist participle = **having**: λύων, λύσας."
+   "hook": "Present participle = **while**; aorist participle = **having**: λύων, λύσας.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "masc.",
+     "fem.",
+     "neut."
+    ],
+    "rows": [
+     [
+      "present: freeing",
+      "λύ**ων**",
+      "λύ**ουσα**",
+      "λῦ**ον**"
+     ],
+     [
+      "aorist: having freed",
+      "λύ**σας**",
+      "λύ**σασα**",
+      "λῦ**σαν**"
+     ]
+    ],
+    "caption": "Like an adjective, the participle takes the gender, case and number of its noun."
+   }
   },
   {
    "id": "greek.cases",
@@ -160,7 +783,47 @@
    "intro": "The cases do more than subject and object. The dative can mean “with” or “by means of” (τῷ ξίφει, with the sword) and “on” a day (τῇ ὑστεραίᾳ, on the next day). The accusative can mean “for” a length of time (δέκα ἔτη, for ten years). The genitive shows possession (ἡ τοῦ βασιλέως θυγάτηρ) and “during” a time (νυκτός, by night). And ὦ + the vocative calls someone: ὦ φίλε!",
    "teach": "Explain how Greek says “for ten years” and “on the third day”.",
    "talk": "Ask {him} how an Athenian speaker would begin a speech: ὦ ἄνδρες Ἀθηναῖοι.",
-   "hook": "Time: accusative = how long; dative = when; genitive = within which."
+   "hook": "Time: accusative = how long; dative = when; genitive = within which.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "job",
+     "example"
+    ],
+    "rows": [
+     [
+      "accusative",
+      "how long",
+      "δέκα ἔτη, for ten years"
+     ],
+     [
+      "dative",
+      "means: with",
+      "τῷ ξίφει, with the sword"
+     ],
+     [
+      "dative",
+      "when",
+      "τῇ ὑστεραίᾳ, on the next day"
+     ],
+     [
+      "genitive",
+      "whose",
+      "τοῦ βασιλέως, the king’s"
+     ],
+     [
+      "genitive",
+      "time within which",
+      "νυκτός, by night"
+     ],
+     [
+      "vocative",
+      "calling",
+      "ὦ φίλε, O friend!"
+     ]
+    ]
+   }
   },
   {
    "id": "greek.questions",
@@ -245,7 +908,49 @@
    "intro": "A noun and a participle in the genitive, standing apart from the rest of the sentence, set the scene: τῆς νυκτὸς γενομένης, “when night had fallen”; τῶν Γοργόνων καθευδουσῶν, “while the Gorgons were sleeping”. Translate it with “when”, “while”, “after” or “because”.",
    "teach": "Explain how to spot a genitive absolute and how to translate it.",
    "talk": "Ask {him} to make up an English sentence that starts “While the Cyclops was sleeping…”, then try it in Greek.",
-   "hook": "Noun + participle, both genitive, set the scene: **τῆς νυκτὸς γενομένης**, when night had fallen."
+   "hook": "Noun + participle, both genitive, set the scene: **τῆς νυκτὸς γενομένης**, when night had fallen.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "τῆς νυκτὸς γενομένης,",
+        "subordinate",
+        "genitive absolute"
+       ],
+       [
+        "οἱ στρατιῶται",
+        "subject"
+       ],
+       [
+        "ἐξῆλθον",
+        "verb"
+       ]
+      ],
+      "result": "When night had fallen, the soldiers came out."
+     },
+     {
+      "parts": [
+       [
+        "τῶν Γοργόνων καθευδουσῶν,",
+        "subordinate",
+        "genitive absolute"
+       ],
+       [
+        "ὁ Περσεὺς",
+        "subject"
+       ],
+       [
+        "προσῆλθεν",
+        "verb"
+       ]
+      ],
+      "result": "While the Gorgons were sleeping, Perseus approached."
+     }
+    ],
+    "caption": "The genitive pair stands apart: neither word is the subject or object of the main verb."
+   }
   }
  ],
  "items": [
@@ -337,7 +1042,27 @@
    ],
    "explain": "Genitive minus -ος = stem: γίγαντ-ος → γιγαντ-. “Gigantic” keeps the -ντ-.",
    "hook": "γίγας, γίγαντος: the stem keeps its ντ.",
-   "example": "Gigantic still keeps the -nt- of γιγαντ-."
+   "example": "Gigantic still keeps the -nt- of γιγαντ-.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "γίγαντ",
+        "stem"
+       ],
+       [
+        "ος",
+        "ending",
+        "genitive"
+       ]
+      ],
+      "result": "γίγαντος"
+     }
+    ]
+   }
   },
   {
    "id": "greek.g3.d3.xi",
@@ -1011,7 +1736,52 @@
     }
    ],
    "explain": "Use 2 of αὐτός: outside the article it means “-self”.",
-   "hook": "αὐτὸς ὁ βασιλεύς: outside the article sandwich = self."
+   "hook": "αὐτὸς ὁ βασιλεύς: outside the article sandwich = self.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "αὐτὸς",
+        "pronoun",
+        "himself"
+       ],
+       [
+        "ὁ",
+        "article",
+        "the"
+       ],
+       [
+        "βασιλεύς",
+        "noun",
+        "king"
+       ]
+      ],
+      "result": "the king himself"
+     },
+     {
+      "parts": [
+       [
+        "ὁ",
+        "article",
+        "the"
+       ],
+       [
+        "αὐτὸς",
+        "pronoun",
+        "same"
+       ],
+       [
+        "βασιλεύς",
+        "noun",
+        "king"
+       ]
+      ],
+      "result": "the same king"
+     }
+    ]
+   }
   },
   {
    "id": "greek.g3.pr.same",
@@ -1035,7 +1805,52 @@
     }
    ],
    "explain": "Use 3 of αὐτός: inside the article (ὁ αὐτός) it means “the same”.",
-   "hook": "ὁ αὐτός: inside the article sandwich = same."
+   "hook": "ὁ αὐτός: inside the article sandwich = same.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "αὐτὸς",
+        "pronoun",
+        "himself"
+       ],
+       [
+        "ὁ",
+        "article",
+        "the"
+       ],
+       [
+        "βασιλεύς",
+        "noun",
+        "king"
+       ]
+      ],
+      "result": "the king himself"
+     },
+     {
+      "parts": [
+       [
+        "ὁ",
+        "article",
+        "the"
+       ],
+       [
+        "αὐτὸς",
+        "pronoun",
+        "same"
+       ],
+       [
+        "βασιλεύς",
+        "noun",
+        "king"
+       ]
+      ],
+      "result": "the same king"
+     }
+    ]
+   }
   },
   {
    "id": "greek.g3.pr.autes",
@@ -1709,7 +2524,37 @@
     }
    ],
    "explain": "Augment on a vowel: α → η, ε → η, ο → ω. ἀκούω → ἤκουσα.",
-   "hook": "Vowel verbs lengthen instead: α → η, ἀκούω → ἤκουσα."
+   "hook": "Vowel verbs lengthen instead: α → η, ἀκούω → ἤκουσα.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ἤ",
+        "augment",
+        "ἀ → ἠ"
+       ],
+       [
+        "κου",
+        "stem"
+       ],
+       [
+        "σ",
+        "tense",
+        "aorist"
+       ],
+       [
+        "α",
+        "ending",
+        "I"
+       ]
+      ],
+      "result": "ἤκουσα, I heard"
+     }
+    ]
+   }
   },
   {
    "id": "greek.g3.aw.apo",
@@ -1733,7 +2578,37 @@
     }
    ],
    "explain": "ἀπο- + ἐ + πεμψα → ἀπέπεμψα (the ο of ἀπο- drops out before the ε).",
-   "hook": "A compound puts the augment after its prefix: ἀπ-έ-πεμψα."
+   "hook": "A compound puts the augment after its prefix: ἀπ-έ-πεμψα.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ἀπ",
+        "prefix",
+        "away"
+       ],
+       [
+        "έ",
+        "augment",
+        "past"
+       ],
+       [
+        "πεμπ",
+        "stem"
+       ],
+       [
+        "σα",
+        "tense",
+        "aorist: I"
+       ]
+      ],
+      "result": "ἀπέπεμψα, I sent away"
+     }
+    ]
+   }
   },
   {
    "id": "greek.g3.aw.psi",
@@ -2858,7 +3733,47 @@
     }
    ],
    "explain": "Middle/passive: -ομαι, -ει (or -ῃ), -εται, -ομεθα, -εσθε, -ονται.",
-   "hook": "-ονται = they."
+   "hook": "-ονται = they.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "active",
+     "middle/passive"
+    ],
+    "rows": [
+     [
+      "I",
+      "λύ**ω**",
+      "λύ**ομαι**"
+     ],
+     [
+      "you (sg)",
+      "λύ**εις**",
+      "λύ**ῃ**"
+     ],
+     [
+      "he, she",
+      "λύ**ει**",
+      "λύ**εται**"
+     ],
+     [
+      "we",
+      "λύ**ομεν**",
+      "λυ**όμεθα**"
+     ],
+     [
+      "you (pl)",
+      "λύ**ετε**",
+      "λύ**εσθε**"
+     ],
+     [
+      "they",
+      "λύ**ουσι(ν)**",
+      "λύ**ονται**"
+     ]
+    ]
+   }
   },
   {
    "id": "greek.g3.mp.lithoi",
@@ -3043,7 +3958,16 @@
     }
    ],
    "explain": "λαβών = having taken: the taking happens first, then the escape.",
-   "hook": "λαβών happens first, then the main verb."
+   "hook": "λαβών happens first, then the main verb.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "λαβών: Perseus took the head",
+     "ἀπέφυγεν: then he escaped"
+    ],
+    "caption": "The aorist participle happened first."
+   }
   },
   {
    "id": "greek.g3.pt.agree",
@@ -4090,7 +5014,17 @@
    "explain": "Wings, warning, escape, the melting wax, the fall.",
    "passage": "ὁ Δαίδαλος καὶ ὁ Ἴκαρος\n\nὁ Δαίδαλος τεχνίτης σοφός ἐστιν. ἐν τῇ Κρήτῃ μένει μετὰ τοῦ Ἰκάρου, τοῦ υἱοῦ. ὁ δὲ Μίνως, ὁ βασιλεύς, οὐκ ἐθέλει αὐτοὺς ἀπολύειν.\n\nὁ οὖν Δαίδαλος ἐκ κηροῦ καὶ πτερῶν πτέρυγας ποιεῖ. τὸν δὲ υἱὸν κελεύει μὴ ἐγγὺς τοῦ ἡλίου πέτεσθαι. ἔπειτα ὁ πατὴρ καὶ ὁ υἱὸς ἐκ τῆς Κρήτης πέτονται.\n\nὁ δὲ Ἴκαρος μάλα χαίρει καὶ πρὸς τὸν ἥλιον πέτεται. ὁ οὖν ἥλιος τὸν κηρὸν λύει, καὶ ὁ παῖς εἰς τὴν θάλασσαν πίπτει. ὁ δὲ Δαίδαλος δακρύει.\n\nGlossary: τεχνίτης = craftsman; υἱός = son; ἀπολύειν = to let go; κηρός = wax; πτερόν = feather; πτέρυξ (accusative plural πτέρυγας) = wing; ποιεῖ = makes; κελεύει = orders; μή = not; ἐγγύς (+ genitive) = near; πέτεσθαι = to fly; πέτονται = they fly; πέτεται = he flies; χαίρει = enjoys himself; πίπτει = falls; δακρύει = weeps.",
    "passageSource": "Adapted for this app from the myth of Daedalus and Icarus",
-   "hook": "Wings, warning, flight, melting, fall."
+   "hook": "Wings, warning, flight, melting, fall.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Daedalus makes wings",
+     "Daedalus warns his son",
+     "Father and son fly out of Crete",
+     "The sun melts the wax",
+     "Icarus falls into the sea"
+    ]
+   }
   },
   {
    "id": "greek.g3.ar.1",

@@ -10,7 +10,52 @@
    "intro": "Every whole number above 1 is built from primes in exactly one way: its prime factorisation. Once you have it, HCFs and LCMs fall out almost for free.",
    "teach": "Explain how prime factorisation helps you find the LCM of 84 and 90.",
    "talk": "Ask {him} why 1 is not counted as a prime number.",
-   "hook": "Primes are the building blocks: **HCF** takes the primes both numbers share; **LCM** takes every prime, at its highest power."
+   "hook": "Primes are the building blocks: **HCF** takes the primes both numbers share; **LCM** takes every prime, at its highest power.",
+   "visual": [
+    {
+     "kind": "table",
+     "rows": [
+      [
+       "84",
+       "÷ **2**"
+      ],
+      [
+       "42",
+       "÷ **2**"
+      ],
+      [
+       "21",
+       "÷ **3**"
+      ],
+      [
+       "7",
+       "÷ **7**"
+      ],
+      [
+       "1",
+       ""
+      ]
+     ],
+     "caption": "Divide by primes until you reach 1: 84 = 2 × 2 × 3 × 7 = 2² × 3 × 7."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "venn",
+      "labels": [
+       "84",
+       "90"
+      ],
+      "only": [
+       "2 × 7",
+       "3 × 5"
+      ],
+      "both": "2 × 3",
+      "out": ""
+     },
+     "caption": "Primes of 84 and 90. The overlap gives the HCF: 2 × 3 = 6. Everything in the circles gives the LCM: 2 × 7 × 2 × 3 × 3 × 5 = 1260."
+    }
+   ]
   },
   {
    "id": "maths.indices",
@@ -22,7 +67,40 @@
    "intro": "Powers are repeated multiplication, and the index laws (add, subtract, multiply the little numbers) follow from that. Negative and fractional indices are the same idea pushed further.",
    "teach": "Explain why 5⁰ = 1 using the division law.",
    "talk": "Ask {him} what 2⁻¹ means, and why.",
-   "hook": "**BIDMAS** sets the order; for powers, **multiply → add** the indices, **divide → subtract**, **power of a power → multiply**."
+   "hook": "**BIDMAS** sets the order; for powers, **multiply → add** the indices, **divide → subtract**, **power of a power → multiply**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "rule",
+     "example"
+    ],
+    "rows": [
+     [
+      "multiply: add the indices",
+      "a³ × a⁴ = a⁷"
+     ],
+     [
+      "divide: subtract them",
+      "a⁵ ÷ a² = a³"
+     ],
+     [
+      "power of a power: multiply",
+      "(a²)³ = a⁶"
+     ],
+     [
+      "index 0",
+      "a⁰ = 1"
+     ],
+     [
+      "negative index",
+      "a⁻² = {{1/a²}}"
+     ],
+     [
+      "index ½",
+      "a^{½} = √a"
+     ]
+    ]
+   }
   },
   {
    "id": "maths.standard-form",
@@ -34,7 +112,38 @@
    "intro": "Astronomers and atom-scientists both need standard form: A × 10ⁿ with A at least 1 and less than 10. Big numbers have positive powers; tiny ones negative.",
    "teach": "Explain how to multiply two numbers written in standard form.",
    "talk": "The Sun is about 1.5 × 10⁸ km away. Ask {him} to write it out in full.",
-   "hook": "**A × 10ⁿ with 1 ≤ A < 10**: big numbers get a positive power, tiny ones a negative power."
+   "hook": "**A × 10ⁿ with 1 ≤ A < 10**: big numbers get a positive power, tiny ones a negative power.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "metres",
+     "standard form"
+    ],
+    "rows": [
+     [
+      "atom",
+      "0.0000000001",
+      "1 × 10⁻¹⁰"
+     ],
+     [
+      "hair",
+      "0.0001",
+      "1 × 10⁻⁴"
+     ],
+     [
+      "person",
+      "1.7",
+      "1.7 × 10⁰"
+     ],
+     [
+      "Earth to Sun",
+      "150,000,000,000",
+      "1.5 × 10¹¹"
+     ]
+    ],
+    "caption": "Rough sizes (the width of an atom and of a hair). A × 10ⁿ with 1 ≤ A < 10: big numbers have positive powers, tiny ones negative."
+   }
   },
   {
    "id": "maths.fractions",
@@ -44,7 +153,27 @@
    "intro": "Adding needs a common denominator; multiplying doesn’t; dividing means multiplying by the reciprocal. Mixed numbers become improper fractions first.",
    "teach": "Explain why dividing by {{2/3}} is the same as multiplying by {{3/2}}.",
    "talk": "Ask {him} how many {{3/4}}-hour lessons fit into 4½ hours.",
-   "hook": "Adding? Find a common denominator. Dividing? **Keep, Change, Flip**."
+   "hook": "Adding? Find a common denominator. Dividing? **Keep, Change, Flip**.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "fracwall",
+     "rows": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      12
+     ],
+     "shade": {
+      "3": 2,
+      "6": 4,
+      "12": 8
+     }
+    },
+    "caption": "{{2/3}} = {{4/6}} = {{8/12}}: equivalent fractions line up on the fraction wall."
+   }
   },
   {
    "id": "maths.percentages",
@@ -56,7 +185,29 @@
    "intro": "Multipliers make percentages quick: a 15% increase is × 1.15. Reverse percentages divide by the multiplier; compound interest multiplies again and again.",
    "teach": "Explain why a 20% rise followed by a 20% fall leaves you worse off.",
    "talk": "Find a sale price in a shop and ask {him} for the original price.",
-   "hook": "Percentages are multipliers: **+15% is × 1.15, −15% is × 0.85**. Reverse a change by dividing."
+   "hook": "Percentages are multipliers: **+15% is × 1.15, −15% is × 0.85**. Reverse a change by dividing.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "barmodel",
+     "total": "100% = £50",
+     "rows": [
+      {
+       "label": "before",
+       "parts": 5,
+       "text": "£10"
+      },
+      {
+       "label": "after",
+       "parts": 6,
+       "shaded": 5,
+       "text": "£10",
+       "total": "120% = £60"
+      }
+     ]
+    },
+    "caption": "Each box is 20%. A 20% rise adds 1 box: × 1.2. Reverse: if the new price is £60, then 6 boxes = £60, so 1 box = £10 and the original was 5 boxes = £50."
+   }
   },
   {
    "id": "maths.ratio",
@@ -68,7 +219,27 @@
    "intro": "Ratio compares parts; proportion scales them. Direct proportion goes up together, inverse proportion trades off: more workers, fewer days.",
    "teach": "Explain how to tell whether a problem is direct or inverse proportion.",
    "talk": "Ask {him} which pack of something in the cupboard is the better value per 100 g.",
-   "hook": "**Add the parts, share the total, multiply back**: find what one part is worth first."
+   "hook": "**Add the parts, share the total, multiply back**: find what one part is worth first.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "barmodel",
+     "rows": [
+      {
+       "label": "Kit",
+       "parts": 3,
+       "shaded": 3,
+       "text": "8"
+      },
+      {
+       "label": "Mira",
+       "parts": 2,
+       "text": "8"
+      }
+     ]
+    },
+    "caption": "Share 40 drachmae in the ratio 3 : 2. 5 equal parts = 40, so 1 part = 8: Kit gets 24 and Mira 16."
+   }
   },
   {
    "id": "maths.algebra",
@@ -78,7 +249,23 @@
    "intro": "Algebra is arithmetic with the numbers left unknown. Expanding multiplies out brackets; factorising puts them back. Each undoes the other.",
    "teach": "Explain how you know you have factorised fully.",
    "talk": "Ask {him} to factorise 12x + 18 and check by expanding.",
-   "hook": "Expanding and factorising are opposites, like zipping and unzipping a coat."
+   "hook": "Expanding and factorising are opposites, like zipping and unzipping a coat.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "×",
+      "2x",
+      "+5"
+     ],
+     [
+      "3",
+      "**6x**",
+      "**+15**"
+     ]
+    ],
+    "caption": "The grid (area) method: 3(2x + 5) = 6x + 15. Read it backwards to factorise: 6x + 15 = 3(2x + 5)."
+   }
   },
   {
    "id": "maths.formulae",
@@ -103,7 +290,18 @@
    "intro": "An equation is a balance: do the same to both sides. With unknowns on both sides, gather the x terms first; with fractions, multiply them away.",
    "teach": "Explain how to solve 5(x − 2) = 3(x + 4).",
    "talk": "I think of a number, multiply by 4 and subtract 7. I get the same as doubling it and adding 9. Ask {him} for the number.",
-   "hook": "An equation is a balance: **whatever you do to one side, do to the other**."
+   "hook": "An equation is a balance: **whatever you do to one side, do to the other**.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "5(x − 2) = 3(x + 4)",
+     "Expand: 5x − 10 = 3x + 12",
+     "Subtract 3x: 2x − 10 = 12",
+     "Add 10: 2x = 22",
+     "Divide by 2: x = 11"
+    ],
+    "caption": "Do the same to both sides. Check: 5 × 9 = 45 and 3 × 15 = 45."
+   }
   },
   {
    "id": "maths.inequalities",
@@ -115,7 +313,33 @@
    "intro": "Inequalities are solved like equations, with one twist: multiplying or dividing by a negative number flips the sign.",
    "teach": "Explain why −2x > 6 gives x < −3, not x > −3.",
    "talk": "Ask {him} for all the integers that satisfy −2 < n ≤ 3.",
-   "hook": "Solve like an equation, but **multiply or divide by a negative and the sign flips**."
+   "hook": "Solve like an equation, but **multiply or divide by a negative and the sign flips**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "inequality",
+     "on a number line"
+    ],
+    "rows": [
+     [
+      "x > 2",
+      "open circle ○ at 2, arrow right"
+     ],
+     [
+      "x ≥ 2",
+      "filled circle ● at 2, arrow right"
+     ],
+     [
+      "x < 2",
+      "open circle ○ at 2, arrow left"
+     ],
+     [
+      "x ≤ 2",
+      "filled circle ● at 2, arrow left"
+     ]
+    ],
+    "caption": "Open: 2 is not included. Filled: it is. Multiply or divide by a negative and the sign flips: −2x > 6 gives x < −3."
+   }
   },
   {
    "id": "maths.sequences",
@@ -127,7 +351,34 @@
    "intro": "A linear sequence goes up by the same amount each time, so its nth term is dn + c. If the differences themselves go up steadily, it is quadratic.",
    "teach": "Explain how to decide whether 100 is in the sequence 4, 11, 18, …",
    "talk": "Ask {him} for the nth term of 5, 8, 11, 14, … and its 100th term.",
-   "hook": "Linear nth term = **difference × n + the zero term** (the term before the first)."
+   "hook": "Linear nth term = **difference × n + the zero term** (the term before the first).",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "n",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     [
+      "term",
+      "5",
+      "8",
+      "11",
+      "14"
+     ],
+     [
+      "3n",
+      "3",
+      "6",
+      "9",
+      "12"
+     ]
+    ],
+    "caption": "Up by 3 each time, so compare with 3n: every term is 2 more. nth term = 3n + 2."
+   }
   },
   {
    "id": "maths.graphs",
@@ -139,7 +390,32 @@
    "intro": "In y = mx + c, m is the gradient (steepness) and c is where the line crosses the y-axis. Parallel lines share a gradient; perpendicular gradients multiply to −1.",
    "teach": "Explain how to find the equation of a line from its graph.",
    "talk": "Ask {him} which is steeper: y = 3x − 1 or y = −4x + 2.",
-   "hook": "**y = mx + c**: m is the gradient (rise ÷ run), c is where the line cuts the y-axis."
+   "hook": "**y = mx + c**: m is the gradient (rise ÷ run), c is where the line cuts the y-axis.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "graph",
+     "range": [
+      -5,
+      5
+     ],
+     "lines": [
+      {
+       "m": 2,
+       "c": 1
+      },
+      {
+       "m": 2,
+       "c": -3
+      },
+      {
+       "m": -0.5,
+       "c": 2
+      }
+     ]
+    },
+    "caption": "y = 2x + 1 and y = 2x − 3 are parallel: both have gradient 2. y = −½x + 2 is perpendicular to them, because 2 × −½ = −1."
+   }
   },
   {
    "id": "maths.angles",
@@ -149,7 +425,49 @@
    "intro": "Exterior angles of any polygon add to 360°; interior angles add to (n − 2) × 180°. Between parallel lines, F angles and Z angles are equal and C angles add to 180°.",
    "teach": "Explain why the interior angles of a hexagon add up to 720°.",
    "talk": "Count the sides of a 50p coin and ask {him} for its exterior angle.",
-   "hook": "**F angles are equal, Z angles are equal, C angles add to 180°**. Exterior angles of any polygon total 360°."
+   "hook": "**F angles are equal, Z angles are equal, C angles add to 180°**. Exterior angles of any polygon total 360°.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "n",
+     "angle sum",
+     "each exterior (if regular)"
+    ],
+    "rows": [
+     [
+      "triangle",
+      "3",
+      "180°",
+      "120°"
+     ],
+     [
+      "quadrilateral",
+      "4",
+      "360°",
+      "90°"
+     ],
+     [
+      "pentagon",
+      "5",
+      "540°",
+      "72°"
+     ],
+     [
+      "hexagon",
+      "6",
+      "720°",
+      "60°"
+     ],
+     [
+      "octagon",
+      "8",
+      "1080°",
+      "45°"
+     ]
+    ],
+    "caption": "Interior angles add to (n − 2) × 180°. Exterior angles add to 360°, so each exterior angle of a regular polygon is 360° ÷ n."
+   }
   },
   {
    "id": "maths.area",
@@ -159,7 +477,17 @@
    "intro": "A trapezium’s area is the average of the parallel sides times the height. For circles, Archimedes showed that π links the radius to both the circumference and the area.",
    "teach": "Explain why the area of a trapezium is ½(a + b)h.",
    "talk": "Measure round a plate and across it: ask {him} to estimate π.",
-   "hook": "“**Cherry pie’s delicious; apple pies are too**”: C = πd and A = πr²."
+   "hook": "“**Cherry pie’s delicious; apple pies are too**”: C = πd and A = πr².",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "trap",
+     "a": 4,
+     "b": 10,
+     "h": 5
+    },
+    "caption": "Area = ½(a + b)h = ½ × (4 + 10) × 5 = 35 cm²."
+   }
   },
   {
    "id": "maths.volume",
@@ -171,7 +499,15 @@
    "intro": "Every prism has volume = cross-section × length; a cylinder is a prism with a circle for its cross-section. Surface area means unfolding the solid into a net.",
    "teach": "Explain how to find the surface area of a cylinder.",
    "talk": "Ask {him} to estimate how many litres a bath holds by measuring it.",
-   "hook": "Prism volume = **cross-section × length**, like a loaf of bread: every slice is the same shape."
+   "hook": "Prism volume = **cross-section × length**, like a loaf of bread: every slice is the same shape.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "prism"
+    },
+    "caption": "Any prism: volume = area of cross-section × length. A cylinder is a prism with a circle for its cross-section: V = πr²h."
+   }
   },
   {
    "id": "maths.transformations",
@@ -183,7 +519,33 @@
    "intro": "Reflections, rotations, translations and enlargements move shapes on a grid. Bearings measure direction clockwise from north; scales turn maps into real distances.",
    "teach": "Explain what happens to the area of a shape enlarged by scale factor 3.",
    "talk": "Use a map app together: ask {him} for the bearing from home to school.",
-   "hook": "Bearings: **from North, Clockwise, in Three figures** (045°, not 45°)."
+   "hook": "Bearings: **from North, Clockwise, in Three figures** (045°, not 45°).",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "transformation",
+     "to describe it, give"
+    ],
+    "rows": [
+     [
+      "reflection",
+      "the mirror line, e.g. y = x"
+     ],
+     [
+      "rotation",
+      "the angle, direction and centre"
+     ],
+     [
+      "translation",
+      "a column vector"
+     ],
+     [
+      "enlargement",
+      "the scale factor and centre"
+     ]
+    ],
+    "caption": "To describe a transformation fully, give everything in its row: a rotation needs all three."
+   }
   },
   {
    "id": "maths.probability",
@@ -195,7 +557,34 @@
    "intro": "Probabilities run from 0 to 1. Sample spaces list every outcome; Venn diagrams sort overlapping groups; for independent events, multiply.",
    "teach": "Explain why the probability of “at least one” is 1 − P(none).",
    "talk": "Roll two dice 36 times and compare how often you get a total of 7 with the theory.",
-   "hook": "All the outcomes add to 1, so **P(not A) = 1 − P(A)**. Independent events: **AND means multiply**."
+   "hook": "All the outcomes add to 1, so **P(not A) = 1 − P(A)**. Independent events: **AND means multiply**.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "possgrid",
+     "a": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "b": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "op": "sum",
+     "shade": [
+      7
+     ]
+    },
+    "caption": "Two dice: 36 equally likely outcomes. A total of 7 happens in 6 of them, so P(7) = {{6/36}} = {{1/6}}."
+   }
   },
   {
    "id": "maths.statistics",
@@ -207,7 +596,43 @@
    "intro": "Mean, median and mode each answer “what is typical?” differently. From frequency tables, multiply before you add; for grouped data, midpoints give an estimate.",
    "teach": "Explain when the median is a better average than the mean.",
    "talk": "Ask {him} to find the mean and median of the family’s shoe sizes.",
-   "hook": "**Mo**de = **mo**st, **med**ian = **mid**dle, mean = add them up and share fairly."
+   "hook": "**Mo**de = **mo**st, **med**ian = **mid**dle, mean = add them up and share fairly.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "goals",
+     "matches (f)",
+     "goals × f"
+    ],
+    "rows": [
+     [
+      "0",
+      "4",
+      "0"
+     ],
+     [
+      "1",
+      "6",
+      "6"
+     ],
+     [
+      "2",
+      "7",
+      "14"
+     ],
+     [
+      "3",
+      "3",
+      "9"
+     ],
+     [
+      "total",
+      "**20**",
+      "**29**"
+     ]
+    ],
+    "caption": "Multiply before you add: mean = 29 ÷ 20 = 1.45 goals a match."
+   }
   },
   {
    "id": "maths.reasoning",
@@ -245,7 +670,17 @@
    "intro": "In a right-angled triangle, a² + b² = c², where c is the hypotenuse. Pythagoras’ followers in ancient Croton treated numbers almost as sacred.",
    "teach": "Explain how to tell whether you add or subtract the squares.",
    "talk": "Ask {him} whether a 6, 8, 10 triangle is right-angled, and why.",
-   "hook": "**a² + b² = c²**, where c, the hypotenuse, is always the longest side, opposite the right angle."
+   "hook": "**a² + b² = c²**, where c, the hypotenuse, is always the longest side, opposite the right angle.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "righttri",
+     "left": "a",
+     "bottom": "b",
+     "hyp": "c"
+    },
+    "caption": "a² + b² = c², where c is the hypotenuse, opposite the right angle. 3² + 4² = 9 + 16 = 25 = 5²."
+   }
   },
   {
    "id": "maths.simultaneous",
@@ -258,7 +693,28 @@
    "intro": "Two equations, two unknowns: add or subtract the equations to eliminate one letter, solve for the other, then substitute back.",
    "teach": "Explain why you might multiply one equation before eliminating.",
    "talk": "Two lyres and an owl cost 17 drachmae; one lyre and an owl cost 11. Ask {him} the price of each.",
-   "hook": "**Same Signs Subtract**: if the terms you want to eliminate have the same sign, subtract; if not, add."
+   "hook": "**Same Signs Subtract**: if the terms you want to eliminate have the same sign, subtract; if not, add.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "graph",
+     "range": [
+      -2,
+      8
+     ],
+     "lines": [
+      {
+       "m": 1,
+       "c": 1
+      },
+      {
+       "m": -1,
+       "c": 7
+      }
+     ]
+    },
+    "caption": "y = x + 1 and x + y = 7 cross at (3, 4): x = 3, y = 4 is the one pair that fits both equations."
+   }
   },
   {
    "id": "maths.quadratics",
@@ -271,7 +727,28 @@
    "intro": "Multiplying (x + a)(x + b) gives x² + (a + b)x + ab. Factorising runs this backwards: find two numbers that multiply to the constant and add to the middle number.",
    "teach": "Explain how to factorise x² + 7x + 12.",
    "talk": "Ask {him} to expand (x + 3)² and spot why it is not x² + 9.",
-   "hook": "For x² + bx + c, find two numbers that **multiply to c and add to b**."
+   "hook": "For x² + bx + c, find two numbers that **multiply to c and add to b**.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "×",
+      "x",
+      "+3"
+     ],
+     [
+      "x",
+      "**x²**",
+      "**+3x**"
+     ],
+     [
+      "+4",
+      "**+4x**",
+      "**+12**"
+     ]
+    ],
+    "caption": "(x + 3)(x + 4) = x² + 7x + 12: the two numbers add to the middle (3 + 4 = 7) and multiply to the end (3 × 4 = 12)."
+   }
   },
   {
    "id": "maths.trigonometry",
@@ -284,7 +761,37 @@
    "intro": "In a right-angled triangle the ratios of the sides depend only on the angle. Hipparchus of Nicaea built the first trigonometric tables over 2,000 years ago to track the stars.",
    "teach": "Explain how to choose between sin, cos and tan.",
    "talk": "Ask {him} what tan 45° must be, and why.",
-   "hook": "**SOH CAH TOA**: Sin = Opposite ÷ Hypotenuse, Cos = Adjacent ÷ Hypotenuse, Tan = Opposite ÷ Adjacent."
+   "hook": "**SOH CAH TOA**: Sin = Opposite ÷ Hypotenuse, Cos = Adjacent ÷ Hypotenuse, Tan = Opposite ÷ Adjacent.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "righttri",
+      "left": "opp",
+      "bottom": "adj",
+      "hyp": "hyp",
+      "angle": true
+     },
+     "caption": "Name the sides from the angle θ: opposite it, next to it (adjacent), and the hypotenuse."
+    },
+    {
+     "kind": "table",
+     "rows": [
+      [
+       "SOH",
+       "sin θ = {{opp/hyp}}"
+      ],
+      [
+       "CAH",
+       "cos θ = {{adj/hyp}}"
+      ],
+      [
+       "TOA",
+       "tan θ = {{opp/adj}}"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "maths.recurring",
@@ -839,7 +1346,28 @@
    ],
    "explain": "Expanding (a + b)(a + b) gives four terms: a² + ab + ab + b².",
    "hook": "(a + b)² means (a + b)(a + b): **four terms, two of them ab**. Don’t lose the middle!",
-   "example": "Grow a 10 cm square tile by 2 cm each way: 12² = 144 = 100 + 40 + 4, not 100 + 4."
+   "example": "Grow a 10 cm square tile by 2 cm each way: 12² = 144 = 100 + 40 + 4, not 100 + 4.",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "×",
+      "a",
+      "+b"
+     ],
+     [
+      "a",
+      "a²",
+      "**+ab**"
+     ],
+     [
+      "+b",
+      "**+ab**",
+      "b²"
+     ]
+    ],
+    "caption": "(a + b)² has four parts: a² + 2ab + b². The two ab pieces are what a² + b² leaves out."
+   }
   },
   {
    "id": "maths.rs.percent",
@@ -964,7 +1492,24 @@
    ],
    "explain": "Irrational numbers (√2, π) have decimals that never end and never repeat. Legend says the discovery shocked the Pythagoreans.",
    "hook": "Irrational = **can’t be written as a ratio**: its decimal never ends and never repeats.",
-   "example": "An A4 sheet’s long side is √2 times its short side, so halving it keeps the same shape; √2 is irrational."
+   "example": "An A4 sheet’s long side is √2 times its short side, so halving it keeps the same shape; √2 is irrational.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "real numbers",
+     "c": [
+      {
+       "n": "rational",
+       "note": "3, −2, {{3/4}}, 0.3̇"
+      },
+      {
+       "n": "irrational",
+       "note": "√2, π",
+       "mark": true
+      }
+     ]
+    }
+   }
   },
   {
    "id": "maths.rs.eratosthenes",
@@ -1215,7 +1760,17 @@
     "hypotenuse"
    ],
    "hook": "The hypotenuse is **always opposite the right angle**, and always the longest side.",
-   "example": "On a wheelchair ramp, the sloping surface is the hypotenuse; the ground and the rise are the other two sides."
+   "example": "On a wheelchair ramp, the sloping surface is the hypotenuse; the ground and the rise are the other two sides.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "righttri",
+     "left": "",
+     "bottom": "",
+     "hyp": "hypotenuse"
+    },
+    "caption": "The hypotenuse is the longest side, opposite the right angle."
+   }
   },
   {
    "id": "maths.lg.polygon",

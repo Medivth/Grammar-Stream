@@ -13,7 +13,19 @@
    "batch": 5,
    "intro": "You know the Speed Sounds. Now for the tricky spellings! The “ay” sound can be ay, ai, a-e, but also eigh (eight), ey (they) and even ea (great).",
    "teach": "Teach me three different ways to spell the “or” sound.",
-   "talk": "This carries on from the Read Write Inc. Set 3 Speed Sounds. Ask {him} how many ways {she} can spell the “ay” sound."
+   "talk": "This carries on from the Read Write Inc. Set 3 Speed Sounds. Ask {him} how many ways {she} can spell the “ay” sound.",
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "p.l.ay",
+     "r.ai.n",
+     "m.a_e.k",
+     "eigh.t",
+     "th.ey",
+     "g.r.ea.t"
+    ],
+    "caption": "One sound, many spellings: the “ay” sound in play, rain, make, eight, they and great."
+   }
   },
   {
    "id": "reading.y3-longwords",
@@ -26,7 +38,60 @@
    "batch": 5,
    "intro": "Long words are easy if you take them in chunks. Clap the beats (syllables): ad-ven-ture. Read each chunk with Fred in your head, then put them together.",
    "teach": "Clap the beats in “caterpillar” and tell me how many there are.",
-   "talk": "When {she} gets stuck on a long word, cover all but the first chunk, then reveal one chunk at a time."
+   "talk": "When {she} gets stuck on a long word, cover all but the first chunk, then reveal one chunk at a time.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ad",
+        "subject",
+        "beat 1"
+       ],
+       [
+        "ven",
+        "verb",
+        "beat 2"
+       ],
+       [
+        "ture",
+        "object",
+        "beat 3"
+       ]
+      ],
+      "result": "adventure"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "cat",
+        "subject",
+        "beat 1"
+       ],
+       [
+        "er",
+        "verb",
+        "beat 2"
+       ],
+       [
+        "pil",
+        "object",
+        "beat 3"
+       ],
+       [
+        "lar",
+        "adverbial",
+        "beat 4"
+       ]
+      ],
+      "result": "caterpillar"
+     }
+    ],
+    "caption": "Clap each chunk: one beat each. Each chunk has one vowel sound."
+   }
   }
  ],
  "items": [
@@ -44,7 +109,13 @@
    "explain": "In eight, the “ay” sound is spelt eigh: eight, weigh, neighbour.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "eigh.t"
+    ]
+   }
   },
   {
    "id": "reading.y3.ss.they",
@@ -60,7 +131,13 @@
    "explain": "In they, the “ay” sound is spelt ey: they, grey, obey.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "th.ey"
+    ]
+   }
   },
   {
    "id": "reading.y3.ss.great",
@@ -108,7 +185,13 @@
    "explain": "In field, the “ee” sound is spelt ie: field, chief, shield.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "f.ie.l.d"
+    ]
+   }
   },
   {
    "id": "reading.y3.ss.key",
@@ -252,7 +335,13 @@
    "explain": "In caught, the “or” sound is spelt augh: caught, taught, daughter.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "c.augh.t"
+    ]
+   }
   },
   {
    "id": "reading.y3.ss.bought",
@@ -268,7 +357,13 @@
    "explain": "In bought, the “or” sound is spelt ough: bought, thought, brought.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "b.ough.t"
+    ]
+   }
   },
   {
    "id": "reading.y3.ss.walk",
@@ -412,7 +507,13 @@
    "explain": "In station, the “sh” sound is spelt ti: station, action, potion.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "s.t.a.ti.o.n"
+    ]
+   }
   },
   {
    "id": "reading.y3.ss.chef",
@@ -428,7 +529,13 @@
    "explain": "In chef, the “sh” sound is spelt ch: chef, machine, parachute.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "ch.e.f"
+    ]
+   }
   },
   {
    "id": "reading.y3.ss.science",
@@ -460,7 +567,13 @@
    "explain": "In gnome, the “n” sound is spelt gn: gnome, gnaw, sign.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "gn.o_e.m"
+    ]
+   }
   },
   {
    "id": "reading.y3.ss.dolphin",
@@ -540,7 +653,38 @@
    "explain": "caterpillar has 4 beats.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "cat",
+        "subject",
+        "beat 1"
+       ],
+       [
+        "er",
+        "verb",
+        "beat 2"
+       ],
+       [
+        "pil",
+        "object",
+        "beat 3"
+       ],
+       [
+        "lar",
+        "adverbial",
+        "beat 4"
+       ]
+      ],
+      "result": "caterpillar"
+     }
+    ]
+   }
   },
   {
    "id": "reading.y3.beats.astronaut",
@@ -588,7 +732,38 @@
    "explain": "helicopter has 4 beats.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "hel",
+        "subject",
+        "beat 1"
+       ],
+       [
+        "i",
+        "verb",
+        "beat 2"
+       ],
+       [
+        "cop",
+        "object",
+        "beat 3"
+       ],
+       [
+        "ter",
+        "adverbial",
+        "beat 4"
+       ]
+      ],
+      "result": "helicopter"
+     }
+    ]
+   }
   },
   {
    "id": "reading.y3.beats.remember",
@@ -636,7 +811,38 @@
    "explain": "television has 4 beats.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "tel",
+        "subject",
+        "beat 1"
+       ],
+       [
+        "e",
+        "verb",
+        "beat 2"
+       ],
+       [
+        "vi",
+        "object",
+        "beat 3"
+       ],
+       [
+        "sion",
+        "adverbial",
+        "beat 4"
+       ]
+      ],
+      "result": "television"
+     }
+    ]
+   }
   },
   {
    "id": "reading.y3.beats.champion",
@@ -684,7 +890,33 @@
    "explain": "fan-tas-tic: each chunk has one vowel sound.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "fan",
+        "subject",
+        "beat 1"
+       ],
+       [
+        "tas",
+        "verb",
+        "beat 2"
+       ],
+       [
+        "tic",
+        "object",
+        "beat 3"
+       ]
+      ],
+      "result": "fantastic"
+     }
+    ]
+   }
   },
   {
    "id": "reading.y3.chunks.dinosaur",
@@ -700,7 +932,33 @@
    "explain": "di-no-saur: each chunk has one vowel sound.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "di",
+        "subject",
+        "beat 1"
+       ],
+       [
+        "no",
+        "verb",
+        "beat 2"
+       ],
+       [
+        "saur",
+        "object",
+        "beat 3"
+       ]
+      ],
+      "result": "dinosaur"
+     }
+    ]
+   }
   },
   {
    "id": "reading.y3.chunks.remember",
@@ -780,7 +1038,33 @@
    "explain": "as-tro-naut: astronaut.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "as",
+        "subject",
+        "beat 1"
+       ],
+       [
+        "tro",
+        "verb",
+        "beat 2"
+       ],
+       [
+        "naut",
+        "object",
+        "beat 3"
+       ]
+      ],
+      "result": "astronaut"
+     }
+    ]
+   }
   },
   {
    "id": "reading.y3.chunkspell.helicopter",

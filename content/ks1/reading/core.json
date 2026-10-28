@@ -11,7 +11,30 @@
    "batch": 5,
    "intro": "The same sound can be spelt in different ways. ay (may I play), ai (snail in the rain) and a-e (make a cake) all make the same sound. Let’s spot them!",
    "teach": "Explain two different ways to spell the sound in “rain”.",
-   "talk": "Ask {him} to find three words with “ay” on a cereal box or in a book."
+   "talk": "Ask {him} to find three words with “ay” on a cereal box or in a book.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Sound",
+     "Ways to spell it"
+    ],
+    "rows": [
+     [
+      "ay",
+      "pl**ay**, r**ai**n, c**a**k**e**"
+     ],
+     [
+      "ee",
+      "tr**ee**, b**ea**ch, h**e**"
+     ],
+     [
+      "igh",
+      "n**igh**t, p**ie**, b**i**k**e**, fl**y**"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "ay usually comes at the end of a word; ai comes in the middle."
+   }
   },
   {
    "id": "reading.phonics-2",
@@ -24,7 +47,41 @@
    "batch": 5,
    "intro": "More sounds with more than one spelling: blow the snow and goat in a boat, poo at the zoo and chew the stew, whirl and twirl and nurse for a purse.",
    "teach": "Explain why “ow” can be tricky (cow or snow?).",
-   "talk": "Play “I spy” with sounds: I spy something with an “oo” sound."
+   "talk": "Play “I spy” with sounds: I spy something with an “oo” sound.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Sound",
+     "Ways to spell it"
+    ],
+    "rows": [
+     [
+      "oa",
+      "b**oa**t, sn**ow**, h**o**m**e**"
+     ],
+     [
+      "oo",
+      "m**oo**n, n**ew**, bl**ue**, t**u**n**e**"
+     ],
+     [
+      "or",
+      "f**or**k, s**aw**"
+     ],
+     [
+      "ir",
+      "b**ir**d, t**ur**n, h**er**"
+     ],
+     [
+      "ou",
+      "cl**ou**d, t**ow**n"
+     ],
+     [
+      "oy",
+      "b**oy**, c**oi**n"
+     ]
+    ],
+    "tint": "rows"
+   }
   },
   {
    "id": "reading.phonics-3",
@@ -37,7 +94,16 @@
    "batch": 5,
    "intro": "Some letters play tricks: ph says “f”, the k in knight is silent, and c says “s” in city.",
    "teach": "Explain what a silent letter is, with an example.",
-   "talk": "Find a silent letter in a word on a sign."
+   "talk": "Find a silent letter in a word on a sign.",
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "ph.o_e.n",
+     "kn.igh.t",
+     "wr.i_e.t"
+    ],
+    "caption": "ph says “f”. In kn and wr, the k and the w are silent: kn says “n” and wr says “r”."
+   }
   },
   {
    "id": "reading.words",
@@ -47,7 +113,30 @@
    "batch": 5,
    "intro": "Great readers and writers use exciting words. Instead of “big”, why not “enormous” or “gigantic”?",
    "teach": "Use three of today’s words in a sentence about your favourite superhero.",
-   "talk": "Ask {him} to describe dinner using one of the wonderful words."
+   "talk": "Ask {him} to describe dinner using one of the wonderful words.",
+   "visual": [
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "tiny",
+      "small",
+      "big",
+      "enormous"
+     ],
+     "caption": "Size words, from smallest to biggest."
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "cross",
+      "angry",
+      "furious"
+     ],
+     "caption": "Angry words, from a little bit angry to very angry."
+    }
+   ]
   },
   {
    "id": "reading.fables",
@@ -450,7 +539,14 @@
    "accept": [
     "f sound",
     "ff"
-   ]
+   ],
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "ph.o_e.n"
+    ],
+    "caption": "ph says “f”."
+   }
   },
   {
    "id": "reading.ph3.2",
@@ -509,7 +605,14 @@
     "g",
     "h"
    ],
-   "explain": "The k in kn- words is silent: knee, knock, knight, know."
+   "explain": "The k in kn- words is silent: knee, knock, knight, know.",
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "kn.igh.t"
+    ],
+    "caption": "kn says “n”: the k is silent."
+   }
   },
   {
    "id": "reading.ph3.6",
@@ -522,7 +625,14 @@
     "i",
     "t"
    ],
-   "explain": "The w in wr- words is silent: write, wrong, wrap."
+   "explain": "The w in wr- words is silent: write, wrong, wrap.",
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "wr.i_e.t"
+    ],
+    "caption": "wr says “r”: the w is silent."
+   }
   },
   {
    "id": "reading.ph3.7",

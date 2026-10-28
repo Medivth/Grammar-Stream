@@ -2,11 +2,20 @@
 // ratio, indices, graphs, fraction arithmetic and circles. Same contract as maths.js.
 // Algebraic answers set `algebra: true` so the checker ignores spacing and accepts listed forms.
 
+import { pic, bar, pctChangeBar, pctBoxes } from './pictures.js';
+
 const neg = (n) => (n < 0 ? `−${-n}` : String(n));
 const sgn = (n) => (n < 0 ? ` − ${-n}` : ` + ${n}`);
 const g = (a, b) => (b ? g(b, a % b) : a);
 const hund = (h) => (h / 100).toString(); // integer hundredths -> "21.98"
 const PI = 314; // 3.14 in hundredths
+
+// reverse percentage: the price now is some boxes of the original; find one box, then all of them
+function reverseBar(p, amt, up) {
+  const N = pctBoxes(p), k = (p * N) / 100, now = up ? N + k : N - k, box = amt / N;
+  return pic(bar([{ label: 'now', parts: now, text: `£${box}`, total: `£${box * now}` }, { label: 'before', parts: N, text: `£${box}`, total: `£${amt}` }]),
+    `Each box is ${100 / N}% of the original. £${box * now} is ${now} box${now === 1 ? '' : 'es'}, so one box is £${box}. The original is ${N} boxes: £${amt}.`);
+}
 
 function choice(prompt, correct, wrongs, rng, extra = {}) {
   const options = rng.shuffle([{ text: correct, correct: true }, ...wrongs.map((w) => (typeof w === 'string' ? { text: w } : w))]);
@@ -99,6 +108,7 @@ export const MATHS3_GENERATORS = {
         kind: 'typed', prompt: `${thing[0]}${amt}${thing[1]}${p}%. What is the new price?`, numeric: { value: String(res), form: 'any' }, unit: '£', unitBefore: true,
         explain: `${p}% of ${amt} = ${(amt * p) / 100}. ${up ? 'Add' : 'Subtract'} it: ${amt} ${up ? '+' : '−'} ${(amt * p) / 100} = £${res}. (Or multiply by ${up ? 1 + p / 100 : 1 - p / 100}.)`,
         steps: [`Find ${p}% of £${amt}: ${amt} ÷ 100 × ${p} = £${(amt * p) / 100}.`, `A ${up ? 'rise' : 'reduction'} means I ${up ? 'add it on' : 'take it off'}.`, `${amt} ${up ? '+' : '−'} ${(amt * p) / 100} = £${res}. Quicker: ${amt} × ${up ? 1 + p / 100 : 1 - p / 100}.`],
+        ...pctChangeBar(p, amt, up, '£'),
       };
     }
     if (level === 2) {
@@ -107,6 +117,7 @@ export const MATHS3_GENERATORS = {
         kind: 'typed', prompt: `A town’s population ${up ? 'grew' : 'fell'} from ${amt * 10} to ${to * 10}. What was the percentage ${up ? 'increase' : 'decrease'}?`, numeric: { value: String(p), form: 'any' }, unit: '%',
         explain: `Change = ${Math.abs(to - amt) * 10}. Divide by the ORIGINAL: ${Math.abs(to - amt) * 10} ÷ ${amt * 10} × 100 = ${p}%.`,
         steps: [`Change: ${to * 10} − ${amt * 10} = ${(to - amt) * 10 < 0 ? '−' : ''}${Math.abs(to - amt) * 10}.`, 'Percentage change = change ÷ original × 100. Always the original, never the new value.', `${Math.abs(to - amt) * 10} ÷ ${amt * 10} × 100 = ${p}%.`],
+        ...pctChangeBar(p, amt * 10, up),
       };
     }
     const up = rng.chance(0.4), mult = up ? 100 + p : 100 - p, after = (amt * mult) / 100;
@@ -114,6 +125,7 @@ export const MATHS3_GENERATORS = {
       kind: 'typed', prompt: up ? `After a ${p}% pay rise, Priya earns £${after} a week. What did she earn before?` : `In a sale with ${p}% off, a coat costs £${after}. What was the original price?`, numeric: { value: String(amt), form: 'any' }, unit: '£', unitBefore: true,
       explain: `£${after} is ${mult}% of the original. 1% = ${after} ÷ ${mult} = ${after / mult}. Original = ${after / mult} × 100 = £${amt}. (Not ${p}% of £${after} ${up ? 'taken off' : 'added back'}: that gives the wrong answer.)`,
       steps: [`The ${up ? 'new pay' : 'sale price'} is ${mult}% of the original, not 100%.`, `So 1% of the original = ${after} ÷ ${mult} = ${after / mult}.`, `100% = ${after / mult} × 100 = £${amt}. Check: ${amt} × ${mult / 100} = ${after}.`],
+      ...reverseBar(p, amt, up),
     };
   },
 
@@ -182,6 +194,7 @@ export const MATHS3_GENERATORS = {
         kind: 'typed', prompt: `£${amount} is shared between Ava, Ben and Cal in the ratio ${parts.join(' : ')}. How much does ${who[k]} get?`, numeric: { value: String(parts[k] * unit), form: 'any' }, unit: '£', unitBefore: true,
         explain: `${parts.join(' + ')} = ${tot} parts. One part = £${amount} ÷ ${tot} = £${unit}. ${who[k]} gets ${parts[k]} part${parts[k] === 1 ? '' : 's'} = £${parts[k] * unit}.`,
         steps: [`Total parts: ${parts.join(' + ')} = ${tot}.`, `One part is £${amount} ÷ ${tot} = £${unit}.`, `${who[k]} has ${parts[k]} part${parts[k] === 1 ? '' : 's'}: ${parts[k]} × £${unit} = £${parts[k] * unit}.`],
+        ...pic(bar(parts.map((n, i) => ({ label: who[i], parts: n, text: `£${unit}`, total: `£${n * unit}` }))), `${tot} boxes share £${amount}, so each box is £${unit}. ${who[k]} has ${parts[k]} box${parts[k] === 1 ? '' : 'es'}: £${parts[k] * unit}.`),
       };
     }
     if (level === 2) {
@@ -190,6 +203,7 @@ export const MATHS3_GENERATORS = {
         kind: 'typed', prompt: `Two friends share some money in the ratio ${a} : ${b}. The second friend gets £${diff} more than the first. How much money is there altogether?`, numeric: { value: String((a + b) * unit), form: 'any' }, unit: '£', unitBefore: true,
         explain: `The difference is ${b} − ${a} = ${b - a} part${b - a > 1 ? 's' : ''} = £${diff}, so one part = £${unit}. Total = ${a + b} parts = £${(a + b) * unit}.`,
         steps: [`The difference between their shares is ${b} − ${a} = ${b - a} part${b - a > 1 ? 's' : ''}.`, `${b - a} part${b - a > 1 ? 's' : ''} = £${diff}, so one part = £${unit}.`, `Altogether there are ${a + b} parts: ${a + b} × £${unit} = £${(a + b) * unit}.`],
+        ...pic(bar([{ label: 'first', parts: a, text: `£${unit}`, total: `£${a * unit}` }, { label: 'second', parts: b, text: `£${unit}`, total: `£${b * unit}` }]), `The second friend has ${b - a} more box${b - a === 1 ? '' : 'es'}, worth £${diff}, so each box is £${unit}. ${a + b} boxes altogether: £${(a + b) * unit}.`),
       };
     }
     const g1 = rng.pick([250, 400, 500]), g2 = rng.pick([600, 750, 800, 1000]);
@@ -251,7 +265,8 @@ export const MATHS3_GENERATORS = {
     if (level === 2) {
       const x = rng.int(-3, 5), on = rng.chance(0.5), y = m * x + c + (on ? 0 : rng.pick([-3, -2, -1, 1, 2, 3]));
       return choice(`Does the point (${neg(x)}, ${neg(y)}) lie on the line ${eq}?`, on ? 'Yes' : 'No', [on ? 'No' : 'Yes'], rng, {
-        diagram: { type: 'axes', range: [-8, 8], points: [{ x, y, label: 'P' }] },
+        // the point is drawn only when it fits on the grid; the question reads without it
+        diagram: Math.abs(y) <= 8 ? { type: 'axes', range: [-8, 8], points: [{ x, y, label: 'P' }] } : undefined,
         explain: `Put x = ${neg(x)} into the equation: y = ${neg(m * x + c)}. The point has y = ${neg(y)}, so it ${on ? 'DOES lie on the line' : 'does NOT lie on the line'}.`,
         steps: ['A point is on the line if its coordinates make the equation true.', `x = ${neg(x)} gives y = ${neg(m)} × ${neg(x)}${sgn(c).replace('-', '−')} = ${neg(m * x + c)}.`, `The point’s y is ${neg(y)}: ${on ? 'the same, so yes.' : 'different, so no.'}`],
       });
@@ -259,7 +274,7 @@ export const MATHS3_GENERATORS = {
     const x1 = rng.int(-4, 3), x2 = x1 + rng.int(1, 4), y1 = m * x1 + c, y2 = m * x2 + c;
     return {
       kind: 'typed', prompt: `A straight line passes through (${neg(x1)}, ${neg(y1)}) and (${neg(x2)}, ${neg(y2)}). What is its gradient?`, numeric: { value: String(m), form: 'any' },
-      diagram: { type: 'axes', range: [-8, 8], points: [{ x: x1, y: y1, label: 'A' }, { x: x2, y: y2, label: 'B' }] },
+      diagram: Math.max(Math.abs(y1), Math.abs(y2)) <= 8 ? { type: 'axes', range: [-8, 8], points: [{ x: x1, y: y1, label: 'A' }, { x: x2, y: y2, label: 'B' }] } : undefined,
       explain: `Gradient = change in y ÷ change in x = (${neg(y2)} − ${neg(y1)}) ÷ (${neg(x2)} − ${neg(x1)}) = ${neg(y2 - y1)} ÷ ${x2 - x1} = ${neg(m)}.`,
       steps: ['Gradient = rise ÷ run: how much y changes for each 1 that x changes.', `Rise: ${neg(y2)} − ${neg(y1)} = ${neg(y2 - y1)}. Run: ${neg(x2)} − ${neg(x1)} = ${x2 - x1}.`, `${neg(y2 - y1)} ÷ ${x2 - x1} = ${neg(m)}.${m < 0 ? ' Negative: the line slopes down.' : ''}`],
     };

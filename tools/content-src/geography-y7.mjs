@@ -246,4 +246,32 @@ for (const [id, extra] of Object.entries(MEMORY)) {
   Object.assign(item, extra);
 }
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// (Rivers and tectonics get labelled diagrams separately.)
+const RAINFOREST_LAYERS = { kind: 'flow', steps: ['Emergent: the tallest trees poke out', 'Canopy: a thick roof of leaves', 'Understorey: dim and shady', 'Forest floor: only about 2% of the sunlight'], caption: 'The layers of a rainforest, from the top down.' };
+const SETTLEMENTS = { kind: 'flow', across: true, steps: ['hamlet', 'village', 'town', 'city', 'conurbation'], caption: 'Settlements, smallest first. A city of more than 10 million people is a megacity.' };
+const TOPIC_VISUALS = {
+  'geography.map-skills': { kind: 'cycle', steps: ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'], centre: 'clockwise from north', caption: 'Never Eat Shredded Wheat: N, E, S, W clockwise. North-east (NE) is halfway between north and east.' },
+  'geography.scale': { kind: 'table', head: ['scale', '1 cm on the map is', 'so 1 km in real life is'], rows: [['1 : 25 000', '250 m', '**4 cm**'], ['1 : 50 000', '500 m', '**2 cm**']], caption: 'Contour lines close together = steep slope; far apart = gentle slope.' },
+  'geography.biomes': [
+    { kind: 'table', head: ['biome', 'where', 'what it is like'], rows: [
+      ['tropical rainforest', 'near the Equator', 'hot and wet all year'],
+      ['hot desert', 'about 30° north and south', 'very dry'],
+      ['savanna', 'between rainforest and desert', 'grassland with wet and dry seasons'],
+      ['temperate deciduous forest', 'the UK and western Europe', 'mild; trees lose their leaves in winter'],
+      ['taiga (boreal forest)', 'Canada, Scandinavia, Russia', 'cold; evergreen conifers'],
+      ['tundra', 'near the Arctic', 'very cold, no trees, frozen ground (permafrost)'],
+    ], caption: 'From the Equator towards the poles.' },
+    RAINFOREST_LAYERS,
+  ],
+  'geography.people': SETTLEMENTS,
+};
+const ITEM_VISUALS = {
+  'geography.ms.compass': TOPIC_VISUALS['geography.map-skills'],
+  'geography.bi.layers': RAINFOREST_LAYERS,
+  'geography.pp.hierarchy': SETTLEMENTS,
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = t.visual ? [].concat(t.visual, v) : v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = it.visual ? [].concat(it.visual, v) : v; }
+
 export default [{ subject: 'geography', deck: 'year7', topics, items }];

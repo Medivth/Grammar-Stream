@@ -257,4 +257,37 @@ const items = [
   mcq('ci.motor', 'circuits', 'Turbo’s team builds a toy car with a motor and a battery. How could they make it go faster?', [['Add another battery', true], ['Add another bulb in the circuit', false, 'That would share the electricity and slow the motor.'], ['Paint it red', false, 'Red is fast-looking, but it doesn’t change the circuit!']], 'More cells give the motor more push.'),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// (the labelled drawings of a plant, skeleton, light rays, volcano, Earth’s layers, digestion,
+// teeth and circuits are attached separately)
+const SEED_CYCLE = { kind: 'cycle', steps: ['seed', 'germination (it sprouts)', 'young plant grows', 'flower is pollinated', 'new seeds form', 'seeds are spread'], centre: 'life cycle of a flowering plant' };
+const BUG_KEY = { kind: 'tree', root: { n: 'Does it have legs?', c: [
+  { n: 'Does it have 6 legs?', note: 'yes', c: [{ n: 'ladybird', note: 'yes', mark: true }, { n: 'spider', note: 'no: 8 legs' }] },
+  { n: 'snail', note: 'no legs' },
+] }, caption: 'A key asks one yes-or-no question at a time until only one living thing is left.' };
+const TOPIC_VISUALS = {
+  'science.y3-seeds': SEED_CYCLE,
+  'science.y3-rocks': { kind: 'cycle', steps: ['magma cools: igneous', 'rock worn into tiny bits', 'layers squashed: sedimentary', 'heat and squeeze: metamorphic', 'rock melts into magma'], centre: 'the rock cycle', caption: 'Over millions of years, igneous, sedimentary and metamorphic rocks change from one family into another, round and round.' },
+  'science.y3-scientist': { kind: 'table', head: ['', 'ramp test'], rows: [['change ONE thing', 'the surface (wood, carpet, grass)'], ['measure', 'how far the car rolls'], ['keep the same', 'the car, the ramp height, the start line']], tint: 'rows', caption: 'A fair test: change only one thing, so you know what made the difference.' },
+  'science.y3-compass': [
+    { kind: 'table', rows: [['', 'NW', '**N**', 'NE'], ['', 'W', '✛', 'E'], ['', 'SW', 'S', 'SE']], caption: 'The 8 compass points. Clockwise from north: N, NE, E, SE, S, SW, W, NW.' },
+    { kind: 'table', rows: [['3', '', '', 'lake', ''], ['2', '', 'castle', '', ''], ['1', 'wood', '', '', ''], ['', 'A', 'B', 'C', 'D']], caption: 'Grid references: along the corridor (letters), then up the stairs (numbers). The castle is in B2.' },
+  ],
+  'science.y3-states': { kind: 'table', head: ['change', 'what happens', 'heat or cool?'], rows: [['melting', 'ice (solid) → water (liquid)', 'heat'], ['freezing', 'water (liquid) → ice (solid)', 'cool'], ['evaporating', 'water (liquid) → water vapour (gas)', 'heat'], ['condensing', 'water vapour (gas) → water (liquid)', 'cool']], tint: 'rows', caption: 'Heating and cooling change water from one state into another. Water freezes at 0 °C and boils at 100 °C.' },
+  'science.y3-keys': BUG_KEY,
+};
+const ITEM_VISUALS = {
+  'science.y3.pl.stem': { kind: 'flow', steps: ['soil', 'roots', 'stem', 'leaves'], across: true, caption: 'Water travels from the soil, into the roots, up the stem and out to the leaves.' },
+  'science.y3.sd.cycle': SEED_CYCLE,
+  'science.y3.rk.fossil': { kind: 'flow', steps: ['an animal dies', 'it is buried by mud or sand', 'the soft parts rot away', 'over millions of years the layers turn to rock', 'the rock wears away and the fossil is found'] },
+  'science.y3.fo.poles': { kind: 'table', head: ['poles facing', 'what happens'], rows: [['N and S', '**attract** (pull together)'], ['N and N', 'repel (push apart)'], ['S and S', 'repel (push apart)']], caption: 'Opposite poles attract; like poles repel.' },
+  'science.y3.st.cycle': { kind: 'cycle', steps: ['water evaporates from the sea', 'water vapour rises and cools', 'it condenses into clouds', 'rain falls (precipitation)', 'rivers carry water back to the sea'], centre: 'the water cycle' },
+  'science.y3.dg.journey': { kind: 'flow', steps: ['mouth', 'oesophagus (food pipe)', 'stomach', 'small intestine', 'large intestine'], caption: 'Nutrients pass into the blood in the small intestine; water is taken back in the large intestine.' },
+  'science.y3.ky.legs': BUG_KEY,
+  'science.y3.ky.vert': { kind: 'tree', root: { n: 'Does it have a backbone?', c: [{ n: 'shark, penguin', note: 'yes: vertebrates' }, { n: 'jellyfish', note: 'no: an invertebrate', mark: true }] } },
+  'science.y3.ky.split': { kind: 'tree', root: { n: 'Does it have legs?', c: [{ n: 'bird, dog', note: 'yes' }, { n: 'fish, snake', note: 'no' }] }, caption: 'One question splits the four animals into two groups of two.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'science', deck: 'y3', topics, items }];

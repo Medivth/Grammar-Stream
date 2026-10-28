@@ -11,7 +11,58 @@
    "intro": "A main clause makes sense on its own. A subordinate clause (because the storm rose, although Theo was tired) depends on it. Controlling clauses lets you build sentences that carry real thought.",
    "teach": "Explain the difference between a compound and a complex sentence, with an example of each.",
    "talk": "Ask {him} to turn two short sentences about a myth into one complex sentence.",
-   "hook": "A main clause can stand alone; a subordinate clause leans on it and cannot."
+   "hook": "A main clause can stand alone; a subordinate clause leans on it and cannot.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The Cyclops",
+        "subject"
+       ],
+       [
+        "slept.",
+        "verb"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Theo opened the door,",
+        "clause",
+        "main clause"
+       ],
+       [
+        "but",
+        "conjunction",
+        "FANBOYS"
+       ],
+       [
+        "the room was empty.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Although the sea was wild,",
+        "subordinate",
+        "subordinate clause"
+       ],
+       [
+        "Odysseus kept sailing.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "Simple: one main clause. Compound: two main clauses joined by a FANBOYS word. Complex: a main clause plus a subordinate clause that cannot stand alone."
+   }
   },
   {
    "id": "english.lang-relative",
@@ -24,7 +75,49 @@
    "intro": "Relative clauses (who, which, that, whose, where) add detail to a noun. Parenthesis adds an extra idea with commas, brackets or dashes, and each choice changes the tone.",
    "teach": "Explain the difference between a defining and a non-defining relative clause.",
    "talk": "Find a sentence with brackets in a newspaper and ask {him} why the writer used brackets rather than commas.",
-   "hook": "Brackets whisper, commas talk, dashes shout: choose the volume of your extra detail."
+   "hook": "Brackets whisper, commas talk, dashes shout: choose the volume of your extra detail.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The goddess",
+        "noun"
+       ],
+       [
+        "who was born from Zeus’s head",
+        "subordinate",
+        "defining: no commas"
+       ],
+       [
+        "was Athena.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Athena,",
+        "noun"
+       ],
+       [
+        "who was born from Zeus’s head,",
+        "subordinate",
+        "non-defining: in commas"
+       ],
+       [
+        "was goddess of wisdom.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "A defining clause tells you which one. A non-defining clause adds extra information and could be lifted out."
+   }
   },
   {
    "id": "english.lang-verbs",
@@ -37,7 +130,51 @@
    "intro": "The passive voice puts the receiver of the action first (the Minotaur was slain). Modal verbs show certainty or possibility. The subjunctive (if I were, I insist that she be) marks formal or hypothetical writing.",
    "teach": "Explain when a writer might choose the passive voice on purpose.",
    "talk": "Ask {him} to rewrite “Theseus killed the Minotaur” in the passive, then explain what changes.",
-   "hook": "In the passive, the doer can vanish: “Mistakes were made.” By whom?"
+   "hook": "In the passive, the doer can vanish: “Mistakes were made.” By whom?",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The storm",
+        "subject",
+        "subject (the doer)"
+       ],
+       [
+        "wrecked",
+        "verb",
+        "active verb"
+       ],
+       [
+        "the ship.",
+        "object",
+        "object"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "The ship",
+        "object",
+        "subject"
+       ],
+       [
+        "was wrecked",
+        "verb",
+        "passive verb"
+       ],
+       [
+        "by the storm.",
+        "subject",
+        "agent"
+       ]
+      ]
+     }
+    ],
+    "caption": "Active to passive: the receiver moves to the front, the verb becomes “was” + past participle, and the doer becomes the agent after “by”."
+   }
   },
   {
    "id": "english.lang-punct",
@@ -50,7 +187,87 @@
    "intro": "Semicolons join closely related main clauses; colons introduce what follows; dashes interrupt; hyphens join words. Accurate punctuation is what separates good writing from excellent writing.",
    "teach": "Explain the difference between a semicolon and a colon, with an example of each.",
    "talk": "Write a sentence with a deliberate punctuation mistake and let {him} find and fix it.",
-   "hook": "A semicolon is a soft full stop; a colon is a drum roll before the reveal."
+   "hook": "A semicolon is a soft full stop; a colon is a drum roll before the reveal.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Athena was wise",
+        "clause",
+        "main clause"
+       ],
+       [
+        ";",
+        "conjunction",
+        "semicolon"
+       ],
+       [
+        "Ares was reckless.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "The hero had one weakness",
+        "clause",
+        "main clause"
+       ],
+       [
+        ":",
+        "conjunction",
+        "colon"
+       ],
+       [
+        "his heel.",
+        "object",
+        "what it introduces"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "He opened the box",
+        "clause",
+        "main clause"
+       ],
+       [
+        "–",
+        "conjunction",
+        "dash"
+       ],
+       [
+        "and instantly regretted it.",
+        "adverbial",
+        "dramatic addition"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "a",
+        "article"
+       ],
+       [
+        "man-eating",
+        "adjective",
+        "hyphen joins two words"
+       ],
+       [
+        "shark",
+        "noun"
+       ]
+      ]
+     }
+    ],
+    "caption": "A semicolon balances two main clauses; a colon needs a main clause before it; a dash interrupts; a hyphen joins."
+   }
   },
   {
    "id": "english.lang-speech",
@@ -63,7 +280,28 @@
    "intro": "Direct speech quotes the words; reported speech retells them and usually shifts the tense back. Standard English and the right register (formal or informal) matter in every exam answer.",
    "teach": "Explain how “I am leaving tomorrow,” said Kit changes in reported speech.",
    "talk": "Ask {him} to say the same request formally and informally.",
-   "hook": "Reported speech steps back in time: “I am tired” becomes “he said he was tired”."
+   "hook": "Reported speech steps back in time: “I am tired” becomes “he said he was tired”.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Direct speech",
+     "Reported speech"
+    ],
+    "rows": [
+     [
+      "am → was",
+      "“I **am** tired,” said Theo.",
+      "Theo said that he **was** tired."
+     ],
+     [
+      "will → would",
+      "“We **will** sail tomorrow,” said the captain.",
+      "The captain said that they **would** sail the next day."
+     ]
+    ],
+    "caption": "No speech marks; the tense shifts back, and pronouns and time words change (we → they, tomorrow → the next day)."
+   }
   },
   {
    "id": "english.lang-greek-roots",
@@ -74,7 +312,66 @@
    "intro": "Thousands of English words are built from Ancient Greek: tele (far) + phone (sound), demos (people) + kratos (power). Knowing the roots means you can decode words you have never seen.",
    "teach": "Work out the meaning of “chronophobia” from its roots.",
    "talk": "Pick a long word on a cereal box or in the news and decode its Greek roots together.",
-   "hook": "Learn one root, unlock a dozen words: tele (far) gives telephone, telescope and television."
+   "hook": "Learn one root, unlock a dozen words: tele (far) gives telephone, telescope and television.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "tele",
+        "prefix",
+        "far"
+       ],
+       [
+        "phone",
+        "root",
+        "sound"
+       ]
+      ],
+      "result": "telephone"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "demo",
+        "root",
+        "people"
+       ],
+       [
+        "cracy",
+        "suffix",
+        "power"
+       ]
+      ],
+      "result": "democracy"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "auto",
+        "prefix",
+        "self"
+       ],
+       [
+        "bio",
+        "root",
+        "life"
+       ],
+       [
+        "graphy",
+        "suffix",
+        "writing"
+       ]
+      ],
+      "result": "autobiography"
+     }
+    ],
+    "caption": "Greek building blocks: learn the parts and you can decode words you have never seen."
+   }
   },
   {
    "id": "english.lang-latin-roots",
@@ -87,7 +384,61 @@
    "intro": "English also borrowed thousands of Latin roots: port (carry), spect (look), scrib (write). Some words even mix Greek and Latin.",
    "teach": "Explain why “television” is called a hybrid word.",
    "talk": "Ask {him} for three words containing “port” and what each one has to do with carrying.",
-   "hook": "Port means carry: a porter carries your bags, and portable things can be carried."
+   "hook": "Port means carry: a porter carries your bags, and portable things can be carried.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "trans",
+        "prefix",
+        "across"
+       ],
+       [
+        "port",
+        "root",
+        "carry"
+       ]
+      ],
+      "result": "transport"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "in",
+        "prefix",
+        "into"
+       ],
+       [
+        "spect",
+        "root",
+        "look"
+       ]
+      ],
+      "result": "inspect"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "pre",
+        "prefix",
+        "before"
+       ],
+       [
+        "dict",
+        "root",
+        "say"
+       ]
+      ],
+      "result": "predict"
+     }
+    ],
+    "caption": "Latin roots with prefixes snapped on the front."
+   }
   },
   {
    "id": "english.lang-myth-words",
@@ -126,7 +477,34 @@
    "intro": "Aristotle named the three appeals: ethos (trust), pathos (emotion) and logos (logic). Great speakers combine them with devices such as anaphora, antithesis and the rule of three.",
    "teach": "Explain the difference between ethos, pathos and logos, with an example of each.",
    "talk": "Watch a short political speech or advert together and ask {him} which appeal it relies on most.",
-   "hook": "Ethos, pathos, logos: trust me, feel this, think about it."
+   "hook": "Ethos, pathos, logos: trust me, feel this, think about it.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Appeal",
+     "Persuades through",
+     "Example"
+    ],
+    "tint": "rows",
+    "rows": [
+     [
+      "**Ethos**",
+      "trust in the speaker",
+      "“As a doctor for twenty years, I have seen…”"
+     ],
+     [
+      "**Pathos**",
+      "emotion",
+      "“Imagine a child, cold and alone…”"
+     ],
+     [
+      "**Logos**",
+      "logic and evidence",
+      "“Three in five rivers fail safety tests…”"
+     ]
+    ],
+    "caption": "Aristotle’s three appeals. The best speakers combine all three."
+   }
   },
   {
    "id": "english.lang-craft",
@@ -139,7 +517,18 @@
    "intro": "Strong narrative writing is designed: an opening that hooks, sentences that vary for effect, tension that builds, and details that show rather than tell.",
    "teach": "Explain how a writer can build tension using sentence length.",
    "talk": "Ask {him} to describe the room using only details, without naming a single emotion.",
-   "hook": "Show, don’t tell: trembling hands beat “she was scared”."
+   "hook": "Show, don’t tell: trembling hands beat “she was scared”.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "**Exposition**: the set-up",
+     "**Rising action**: the build-up",
+     "**Climax**: the turning point",
+     "**Falling action**: the consequences",
+     "**Resolution**: the ending"
+    ],
+    "caption": "Freytag’s pyramid: tension rises to the climax, then falls away."
+   }
   },
   {
    "id": "english.lang-spelling",
@@ -244,7 +633,27 @@
     }
    ],
    "explain": "The subordinating conjunction “although” makes the first clause depend on the main clause.",
-   "hook": "A subordinating conjunction (although, because, when) makes a clause lean on another."
+   "hook": "A subordinating conjunction (although, because, when) makes a clause lean on another.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Although the sea was wild,",
+        "subordinate",
+        "subordinate clause"
+       ],
+       [
+        "Odysseus kept sailing.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "The subordinate clause depends on the main clause: on its own it is not a sentence."
+   }
   },
   {
    "id": "english.lang.cl.compound",
@@ -268,7 +677,32 @@
     }
    ],
    "explain": "A compound sentence joins two main clauses with a coordinating conjunction (for, and, nor, but, or, yet, so).",
-   "hook": "FANBOYS join two equals: for, and, nor, but, or, yet, so."
+   "hook": "FANBOYS join two equals: for, and, nor, but, or, yet, so.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Theo opened the door,",
+        "clause",
+        "main clause"
+       ],
+       [
+        "but",
+        "conjunction",
+        "FANBOYS"
+       ],
+       [
+        "the room was empty.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "Two main clauses joined by a coordinating conjunction."
+   }
   },
   {
    "id": "english.lang.cl.complex",
@@ -292,7 +726,58 @@
     }
    ],
    "explain": "A complex sentence contains a main clause and at least one subordinate clause.",
-   "hook": "Complex = main clause + subordinate clause. Compound = two main clauses."
+   "hook": "Complex = main clause + subordinate clause. Compound = two main clauses.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The Cyclops",
+        "subject"
+       ],
+       [
+        "slept.",
+        "verb"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Theo opened the door,",
+        "clause",
+        "main clause"
+       ],
+       [
+        "but",
+        "conjunction",
+        "FANBOYS"
+       ],
+       [
+        "the room was empty.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Although the sea was wild,",
+        "subordinate",
+        "subordinate clause"
+       ],
+       [
+        "Odysseus kept sailing.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "Simple: one main clause. Compound: two main clauses joined by a FANBOYS word. Complex: a main clause plus a subordinate clause that cannot stand alone."
+   }
   },
   {
    "id": "english.lang.cl.fanboys",
@@ -522,7 +1007,49 @@
     }
    ],
    "explain": "A non-defining clause adds extra information and sits inside commas; you could remove it and still know who is meant.",
-   "hook": "Non-defining = extra information in commas: lift it out and the sentence still works."
+   "hook": "Non-defining = extra information in commas: lift it out and the sentence still works.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The goddess",
+        "noun"
+       ],
+       [
+        "who was born from Zeus’s head",
+        "subordinate",
+        "defining: no commas"
+       ],
+       [
+        "was Athena.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Athena,",
+        "noun"
+       ],
+       [
+        "who was born from Zeus’s head,",
+        "subordinate",
+        "non-defining: in commas"
+       ],
+       [
+        "was goddess of wisdom.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "A defining clause tells you which one. A non-defining clause adds extra information and could be lifted out."
+   }
   },
   {
    "id": "english.lang.rl.that",
@@ -570,7 +1097,48 @@
     }
    ],
    "explain": "Commas turn a defining clause (which soldiers?) into extra information about all of them.",
-   "hook": "No commas = only some of them; commas = all of them."
+   "hook": "No commas = only some of them; commas = all of them.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The soldiers",
+        "noun"
+       ],
+       [
+        "who were exhausted",
+        "subordinate",
+        "defining: only these"
+       ],
+       [
+        "surrendered.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "The soldiers,",
+        "noun"
+       ],
+       [
+        "who were exhausted,",
+        "subordinate",
+        "non-defining: all of them"
+       ],
+       [
+        "surrendered.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "english.lang.rl.where",
@@ -705,7 +1273,51 @@
     }
    ],
    "explain": "In the passive, the thing affected becomes the subject, often with “was/were … by”.",
-   "hook": "The zombie test: if you can add “by zombies” after the verb, it is passive. “The ship was wrecked by zombies.”"
+   "hook": "The zombie test: if you can add “by zombies” after the verb, it is passive. “The ship was wrecked by zombies.”",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The storm",
+        "subject",
+        "subject (the doer)"
+       ],
+       [
+        "wrecked",
+        "verb",
+        "active verb"
+       ],
+       [
+        "the ship.",
+        "object",
+        "object"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "The ship",
+        "object",
+        "subject"
+       ],
+       [
+        "was wrecked",
+        "verb",
+        "passive verb"
+       ],
+       [
+        "by the storm.",
+        "subject",
+        "agent"
+       ]
+      ]
+     }
+    ],
+    "caption": "Active to passive: the receiver moves to the front, the verb becomes “was” + past participle, and the doer becomes the agent after “by”."
+   }
   },
   {
    "id": "english.lang.vb.passive-why",
@@ -729,7 +1341,46 @@
     }
    ],
    "explain": "The passive can leave out the agent entirely, which can dodge responsibility.",
-   "example": "“Mistakes were made” has been used by so many politicians that it has become a famous dodge."
+   "example": "“Mistakes were made” has been used by so many politicians that it has become a famous dodge.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The minister",
+        "subject",
+        "subject (the doer)"
+       ],
+       [
+        "made",
+        "verb",
+        "active verb"
+       ],
+       [
+        "mistakes.",
+        "object",
+        "object"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Mistakes",
+        "object",
+        "subject"
+       ],
+       [
+        "were made.",
+        "verb",
+        "passive verb"
+       ]
+      ]
+     }
+    ],
+    "caption": "In the passive the agent can simply disappear: nobody is named."
+   }
   },
   {
    "id": "english.lang.vb.agent",
@@ -743,7 +1394,51 @@
     "subject"
    ],
    "explain": "The agent is the doer of the action in a passive sentence, introduced by “by”.",
-   "hook": "The agent is the doer, like an agent who does the job. In the passive, it comes after “by”."
+   "hook": "The agent is the doer, like an agent who does the job. In the passive, it comes after “by”.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The storm",
+        "subject",
+        "subject (the doer)"
+       ],
+       [
+        "wrecked",
+        "verb",
+        "active verb"
+       ],
+       [
+        "the ship.",
+        "object",
+        "object"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "The ship",
+        "object",
+        "subject"
+       ],
+       [
+        "was wrecked",
+        "verb",
+        "passive verb"
+       ],
+       [
+        "by the storm.",
+        "subject",
+        "agent"
+       ]
+      ]
+     }
+    ],
+    "caption": "Active to passive: the receiver moves to the front, the verb becomes “was” + past participle, and the doer becomes the agent after “by”."
+   }
   },
   {
    "id": "english.lang.vb.modal",
@@ -935,7 +1630,31 @@
     }
    ],
    "explain": "A semicolon joins two closely related main clauses without a conjunction.",
-   "hook": "A semicolon is a soft full stop: both halves must be full sentences."
+   "hook": "A semicolon is a soft full stop: both halves must be full sentences.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Athena was wise",
+        "clause",
+        "main clause"
+       ],
+       [
+        ";",
+        "conjunction",
+        "semicolon"
+       ],
+       [
+        "Ares was reckless.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "english.lang.pn.semi-list",
@@ -1000,7 +1719,32 @@
    "formats": [
     "choice"
    ],
-   "hook": "Cover everything after the colon: what is left must stand as a sentence."
+   "hook": "Cover everything after the colon: what is left must stand as a sentence.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The hero had one weakness",
+        "clause",
+        "main clause"
+       ],
+       [
+        ":",
+        "conjunction",
+        "colon"
+       ],
+       [
+        "his heel.",
+        "object",
+        "what it introduces"
+       ]
+      ]
+     }
+    ],
+    "caption": "Before a colon: a complete main clause."
+   }
   },
   {
    "id": "english.lang.pn.dash",
@@ -1047,7 +1791,30 @@
     }
    ],
    "explain": "Hyphens join compound adjectives before a noun: a well-known myth, a six-headed monster.",
-   "example": "A man-eating shark is dangerous; a man eating shark is just having lunch."
+   "example": "A man-eating shark is dangerous; a man eating shark is just having lunch.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "a",
+        "article"
+       ],
+       [
+        "man-eating",
+        "adjective",
+        "hyphen joins two words"
+       ],
+       [
+        "shark",
+        "noun"
+       ]
+      ]
+     }
+    ],
+    "caption": "With the hyphen, the shark eats men."
+   }
   },
   {
    "id": "english.lang.pn.hyphen2",
@@ -1301,7 +2068,28 @@
     }
    ],
    "explain": "Reported speech shifts pronouns and usually moves the tense back (am → was).",
-   "hook": "Reported speech: change the person, step back the tense, drop the speech marks."
+   "hook": "Reported speech: change the person, step back the tense, drop the speech marks.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Direct speech",
+     "Reported speech"
+    ],
+    "rows": [
+     [
+      "am → was",
+      "“I **am** tired,” said Theo.",
+      "Theo said that he **was** tired."
+     ],
+     [
+      "will → would",
+      "“We **will** sail tomorrow,” said the captain.",
+      "The captain said that they **would** sail the next day."
+     ]
+    ],
+    "caption": "No speech marks; the tense shifts back, and pronouns and time words change (we → they, tomorrow → the next day)."
+   }
   },
   {
    "id": "english.lang.sp.reported2",
@@ -1325,7 +2113,28 @@
     }
    ],
    "explain": "will → would; tomorrow → the next day; we → they.",
-   "hook": "Backshift: will → would, tomorrow → the next day, we → they."
+   "hook": "Backshift: will → would, tomorrow → the next day, we → they.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Direct speech",
+     "Reported speech"
+    ],
+    "rows": [
+     [
+      "am → was",
+      "“I **am** tired,” said Theo.",
+      "Theo said that he **was** tired."
+     ],
+     [
+      "will → would",
+      "“We **will** sail tomorrow,” said the captain.",
+      "The captain said that they **would** sail the next day."
+     ]
+    ],
+    "caption": "No speech marks; the tense shifts back, and pronouns and time words change (we → they, tomorrow → the next day)."
+   }
   },
   {
    "id": "english.lang.sp.standard",
@@ -1463,7 +2272,44 @@
    "formats": [
     "choice"
    ],
-   "example": "A telescope sees far; television shows far-off pictures; telepathy is feeling at a distance."
+   "example": "A telescope sees far; television shows far-off pictures; telepathy is feeling at a distance.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "tele",
+        "prefix",
+        "far"
+       ],
+       [
+        "phone",
+        "root",
+        "sound"
+       ]
+      ],
+      "result": "telephone"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "tele",
+        "prefix",
+        "Greek: far"
+       ],
+       [
+        "vision",
+        "root",
+        "Latin: seeing"
+       ]
+      ],
+      "result": "television"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang.gr.chron",
@@ -1549,7 +2395,28 @@
    "formats": [
     "choice"
    ],
-   "example": "An epidemic spreads among the people: epi (upon) + demos (people)."
+   "example": "An epidemic spreads among the people: epi (upon) + demos (people).",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "demo",
+        "root",
+        "people"
+       ],
+       [
+        "cracy",
+        "suffix",
+        "power"
+       ]
+      ],
+      "result": "democracy"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang.gr.kratos",
@@ -1736,7 +2603,28 @@
    "formats": [
     "choice"
    ],
-   "hook": "Phobos (fear) was a son of Ares, god of war, and one of the moons of Mars is named after him."
+   "hook": "Phobos (fear) was a son of Ares, god of war, and one of the moons of Mars is named after him.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "arachno",
+        "root",
+        "spider"
+       ],
+       [
+        "phobia",
+        "suffix",
+        "fear"
+       ]
+      ],
+      "result": "arachnophobia"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang.gr.phone",
@@ -1811,7 +2699,28 @@
     }
    ],
    "explain": "chronos (time) + phobos (fear).",
-   "hook": "Build it root by root: chronos (time) + phobos (fear) = fear of time."
+   "hook": "Build it root by root: chronos (time) + phobos (fear) = fear of time.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "chrono",
+        "root",
+        "time"
+       ],
+       [
+        "phobe",
+        "suffix",
+        "one who fears"
+       ]
+      ],
+      "result": "chronophobe"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang.gr.decode2",
@@ -1858,7 +2767,28 @@
      "feedback": "That is an anthropologist."
     }
    ],
-   "explain": "miso (hate) + anthropos (human)."
+   "explain": "miso (hate) + anthropos (human).",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "mis",
+        "prefix",
+        "hatred"
+       ],
+       [
+        "anthrope",
+        "root",
+        "human being"
+       ]
+      ],
+      "result": "misanthrope"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang.gr.decode4",
@@ -1882,7 +2812,28 @@
     }
    ],
    "explain": "dys (difficult) + lexis (word).",
-   "example": "Lexis (word) also gives us “lexicon”, another word for a dictionary."
+   "example": "Lexis (word) also gives us “lexicon”, another word for a dictionary.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "dys",
+        "prefix",
+        "difficult"
+       ],
+       [
+        "lexia",
+        "root",
+        "words"
+       ]
+      ],
+      "result": "dyslexia"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang.la.port",
@@ -1899,7 +2850,28 @@
    "formats": [
     "choice"
    ],
-   "example": "A porter carries bags; imports are carried in and exports carried out."
+   "example": "A porter carries bags; imports are carried in and exports carried out.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "trans",
+        "prefix",
+        "across"
+       ],
+       [
+        "port",
+        "root",
+        "carry"
+       ]
+      ],
+      "result": "transport"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang.la.spect",
@@ -1967,7 +2939,28 @@
    "formats": [
     "choice"
    ],
-   "example": "A volcano erupts (bursts out); someone who interrupts breaks into a conversation."
+   "example": "A volcano erupts (bursts out); someone who interrupts breaks into a conversation.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "inter",
+        "prefix",
+        "between"
+       ],
+       [
+        "rupt",
+        "root",
+        "break"
+       ]
+      ],
+      "result": "interrupt"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang.la.aud",
@@ -2110,7 +3103,29 @@
     }
    ],
    "explain": "Television = Greek tele + Latin visio. “Automobile” is another hybrid.",
-   "example": "Automobile is another hybrid: Greek autos (self) + Latin mobilis (movable)."
+   "example": "Automobile is another hybrid: Greek autos (self) + Latin mobilis (movable).",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "tele",
+        "prefix",
+        "Greek: far"
+       ],
+       [
+        "vision",
+        "root",
+        "Latin: seeing"
+       ]
+      ],
+      "result": "television"
+     }
+    ],
+    "caption": "A hybrid: a Greek root joined to a Latin one."
+   }
   },
   {
    "id": "english.lang.la.ped",
@@ -2182,7 +3197,32 @@
     }
    ],
    "explain": "sub (under) + terra (earth): Hades’ realm is subterranean.",
-   "example": "Submarines go under the sea; subterranean creatures live under the ground."
+   "example": "Submarines go under the sea; subterranean creatures live under the ground.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "sub",
+        "prefix",
+        "under"
+       ],
+       [
+        "terran",
+        "root",
+        "land"
+       ],
+       [
+        "ean",
+        "suffix"
+       ]
+      ],
+      "result": "subterranean"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang.mw.1",
@@ -2760,7 +3800,34 @@
    ],
    "explain": "Aristotle’s three appeals: ethos (trust), pathos (emotion), logos (logic).",
    "hook": "Ethos, pathos, logos: trust in the speaker, feelings, and logic.",
-   "example": "Adverts that feature a famous athlete or a doctor in a white coat are relying on ethos."
+   "example": "Adverts that feature a famous athlete or a doctor in a white coat are relying on ethos.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Appeal",
+     "Persuades through",
+     "Example"
+    ],
+    "tint": "rows",
+    "rows": [
+     [
+      "**Ethos**",
+      "trust in the speaker",
+      "“As a doctor for twenty years, I have seen…”"
+     ],
+     [
+      "**Pathos**",
+      "emotion",
+      "“Imagine a child, cold and alone…”"
+     ],
+     [
+      "**Logos**",
+      "logic and evidence",
+      "“Three in five rivers fail safety tests…”"
+     ]
+    ],
+    "caption": "Aristotle’s three appeals. The best speakers combine all three."
+   }
   },
   {
    "id": "english.lang.rh.pathos",
@@ -3295,7 +4362,18 @@
    ],
    "labels": null,
    "explain": "Set-up, build-up, the turning point, the consequences, and the ending.",
-   "hook": "A story mountain: climb up (rising action), reach the top (climax), come down (falling action)."
+   "hook": "A story mountain: climb up (rising action), reach the top (climax), come down (falling action).",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "**Exposition**: the set-up",
+     "**Rising action**: the build-up",
+     "**Climax**: the turning point",
+     "**Falling action**: the consequences",
+     "**Resolution**: the ending"
+    ],
+    "caption": "Freytag’s pyramid: tension rises to the climax, then falls away."
+   }
   },
   {
    "id": "english.lang.wc.opening",

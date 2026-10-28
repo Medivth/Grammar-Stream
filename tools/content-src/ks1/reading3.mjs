@@ -123,4 +123,10 @@ const items = [
   order('tom.5', 'potter-2', 'Put these in order.', ['Mrs. Tabitha sends them outside', 'Moppet and Mittens fall on their noses', 'Tom climbs the rockery', 'The Puddle-Ducks arrive'], 'Out, fall, climb, ducks.', P('tom')),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const ITEM_VISUALS = {
+  'reading.s3.crow.4': { kind: 'flow', steps: ['The crow finds a jug', 'She cannot reach the water', 'She drops in pebbles, one by one', 'The water rises: she drinks at last'] },
+};
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'reading', deck: 'stories3', topics, items }];

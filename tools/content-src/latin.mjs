@@ -231,4 +231,68 @@ const TOPIC_HOOKS = {
 };
 for (const t of topics) t.hook = TOPIC_HOOKS[t.id];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Case colours, the same everywhere in Latin: blue = nominative (the doer), red = accusative
+// (the receiver), grey = the verb.
+const DOER = 'subject', RECEIVER = 'ending', VERB = 'clause';
+// one Latin sentence in blocks, its English underneath as the caption
+const said = (words, english) => ({ kind: 'blocks', rows: [{ parts: words }], caption: english });
+const ENDINGS = { kind: 'table', head: ['', 'nominative: doer', 'accusative: receiver'], rows: [['girl', 'puell**a**', 'puell**am**'], ['slave', 'serv**us**', 'serv**um**'], ['dog', 'can**is**', 'can**em**']], tint: 'cols', caption: 'The receiver (accusative) ends in -m.' };
+const build = (...rows) => ({ kind: 'blocks', rows: rows.map((parts) => ({ join: '+', parts, result: parts.map((p) => p[0]).join('') })) });
+const withResult = (v, results) => ({ ...v, rows: v.rows.map((r, i) => ({ ...r, result: results[i] })) });
+const VERB_TABLE = { kind: 'table', head: ['', 'walk', 'be'], rows: [['I', 'ambul**o**', 'su**m**'], ['you', 'ambula**s**', 'e**s**'], ['he, she, it', 'ambula**t**', 'es**t**'], ['we', 'ambula**mus**', 'su**mus**'], ['you (all)', 'ambula**tis**', 'es**tis**'], ['they', 'ambula**nt**', 'su**nt**']], caption: 'The ending tells you who: -o, -s, -t, -mus, -tis, -nt. “To be” is irregular: sum ends in -m, not -o, but es and est still end in -s and -t.' };
+const MONTHS = { kind: 'table', head: ['from March', 'month', 'named from'], rows: [['5th', 'July (once **Quint**ilis)', 'quinque, 5'], ['6th', 'August (once **Sext**ilis)', 'sex, 6'], ['7th', '**Sept**ember', 'septem, 7'], ['8th', '**Oct**ober', 'octo, 8'], ['9th', '**Nov**ember', 'novem, 9'], ['10th', '**Dec**ember', 'decem, 10']], caption: 'The old Roman year began in March. Quintilis and Sextilis were renamed after Julius Caesar and Augustus.' };
+
+const TOPIC_VISUALS = {
+  'latin.words-1': { kind: 'tree', root: { n: 'pater + mater', note: 'father + mother', c: [{ n: 'filius', note: 'son' }, { n: 'filia', note: 'daughter' }] }, caption: 'filius and filia differ only in the ending: -us for the son, -a for the daughter.' },
+  'latin.verbs-1': { ...build([['labora', 'stem', 'work'], ['t', 'person', 'he or she']], [['dormi', 'stem', 'sleep'], ['t', 'person', 'he or she']], [['sede', 'stem', 'sit'], ['t', 'person', 'he or she']]), caption: 'The -t on the end means “he or she”: laborat = he or she works.' },
+  'latin.cases': [
+    said([['servus', DOER, 'doer'], ['puellam', RECEIVER, 'receiver'], ['videt', VERB, 'sees']], '**The slave sees the girl.**'),
+    said([['puellam', RECEIVER, 'receiver'], ['servus', DOER, 'doer'], ['videt', VERB, 'sees']], '**The slave sees the girl** (new order, same endings, same meaning).'),
+    said([['puella', DOER, 'doer'], ['servum', RECEIVER, 'receiver'], ['videt', VERB, 'sees']], '**The girl sees the slave** (the endings swapped, so the meaning swapped).'),
+    { ...ENDINGS, caption: 'Blue = nominative, the doer. Red = accusative, the receiver: it ends in -m.' },
+  ],
+  'latin.verbs-2': VERB_TABLE,
+  'latin.plurals': { kind: 'table', head: ['', 'one', 'more than one'], rows: [['girl', 'puell**a**', 'puell**ae**'], ['slave', 'serv**us**', 'serv**i**'], ['boy', 'puer', 'puer**i**'], ['works', 'labora**t**', 'labora**nt**'], ['is / are', 'es**t**', 'su**nt**']], caption: '-a words go to -ae, -us words go to -i, and the verb takes -nt: servi laborant.' },
+  'latin.numbers': [
+    { kind: 'table', head: ['', 'Latin', 'Roman', 'in English'], rows: [['1', 'unus', 'I', 'unicorn'], ['2', 'duo', 'II', 'duet'], ['3', 'tres', 'III', 'triangle'], ['4', 'quattuor', 'IV', 'quartet'], ['5', 'quinque', 'V', 'quintet'], ['6', 'sex', 'VI', 'sextet'], ['7', 'septem', 'VII', 'September'], ['8', 'octo', 'VIII', 'October'], ['9', 'novem', 'IX', 'November'], ['10', 'decem', 'X', 'December']] },
+    MONTHS,
+  ],
+  'latin.roots': { kind: 'tree', root: { n: 'porto', note: 'I carry', mark: true, c: [{ n: 'portable', note: 'can be carried' }, { n: 'transport', note: 'carry across' }, { n: 'porter', note: 'carries bags' }] }, caption: 'One Latin word, many English relatives.' },
+  'latin.romans': { kind: 'flow', steps: ['**fauces**: the entrance passage', '**atrium**: the hall, open to the sky over the **impluvium** pool', '**tablinum**: the master’s office', '**peristylium**: a garden with columns all round'], caption: 'Walking into a rich Roman house (domus). The triclinium (dining room) and culina (kitchen) opened off these spaces.' },
+};
+
+const ITEM_VISUALS = {
+  'latin.s1.order': said([['puella', DOER, 'the girl'], ['in horto', 'preposition', 'in the garden'], ['sedet', VERB, 'sits']], '**The girl sits in the garden.** The verb usually comes last.'),
+  'latin.c.1': said([['servus', DOER, 'doer'], ['puellam', RECEIVER, 'receiver'], ['videt', VERB, 'sees']], '**The slave sees the girl.** puellam ends in -m: she is the receiver.'),
+  'latin.c.2': said([['puella', DOER, 'doer'], ['servum', RECEIVER, 'receiver'], ['videt', VERB, 'sees']], '**The girl sees the slave.** servum ends in -m: he is the receiver.'),
+  'latin.c.4': said([['canis', DOER, 'doer'], ['dominum', RECEIVER, 'receiver'], ['audit', VERB, 'hears']], '**The dog hears the master.** dominum ends in -m: he is the receiver.'),
+  'latin.c.order': said([['canem', RECEIVER, 'receiver'], ['puer', DOER, 'doer'], ['videt', VERB, 'sees']], '**The boy sees the dog.** canem comes first, but its -m ending makes it the receiver.'),
+  'latin.c.am': ENDINGS,
+  'latin.c.um': ENDINGS,
+  'latin.v2.o': build([['ambul', 'stem', 'walk'], ['o', 'person', 'I']]),
+  'latin.v2.s': build([['ambula', 'stem', 'walk'], ['s', 'person', 'you']]),
+  'latin.v2.t': build([['ambula', 'stem', 'walk'], ['t', 'person', 'he or she']], [['ambula', 'stem', 'walk'], ['nt', 'person', 'they']]),
+  'latin.v2.sum': VERB_TABLE,
+  'latin.pl.make': build([['puell', 'stem', 'girl'], ['ae', 'ending', 'more than one']]),
+  'latin.pl.make2': build([['amic', 'stem', 'friend'], ['i', 'ending', 'more than one']]),
+  'latin.pl.ant': said([['servi', DOER, 'slaves: -i'], ['laborant', VERB, 'they work: -nt']], '**The slaves work.**'),
+  'latin.n.months': MONTHS,
+  'latin.r.3': build([['port', 'root', 'carry'], ['able', 'suffix', 'can be']]),
+  'latin.r.4': build([['e', 'prefix', 'out'], ['vid', 'root', 'see'], ['ence', 'suffix']]),
+  'latin.r.6': build([['manu', 'root', 'hand'], ['al', 'suffix']]),
+  'latin.r.7': build([['ped', 'root', 'foot'], ['al', 'suffix']]),
+  'latin.r.8': build([['capit', 'root', 'head'], ['al', 'suffix']]),
+  'latin.r.13': build([['annu', 'root', 'year'], ['al', 'suffix']]),
+  'latin.ro.triclinium': build([['tri', 'prefix', 'three'], ['clinium', 'root', 'couches']]),
+  'latin.ro.amph': build([['amphi', 'prefix', 'all round'], ['theatrum', 'root', 'theatre']]),
+  'latin.ro.spqr': { kind: 'blocks', rows: [{ parts: [['S', 'subject', 'Senatus'], ['P', 'subject', 'Populus'], ['Q', 'conjunction', '-que'], ['R', 'adjective', 'Romanus']] }, { parts: [['the Senate', 'subject'], ['and', 'conjunction'], ['the People', 'subject'], ['of Rome', 'adjective']] }], caption: '-que (and) is glued to the end of Populus, but in English “and” comes before it.' },
+  'latin.ro.num1': withResult(build([['X', 'noun', '10'], ['IV', 'verb', '4: one before 5']]), ['XIV = 14']),
+  'latin.ro.num2': withResult(build([['XL', 'noun', '40: ten before 50'], ['II', 'verb', '2']]), ['XLII = 42']),
+  'latin.ro.num3': withResult(build([['MM', 'noun', '2000'], ['XX', 'verb', '20'], ['VI', 'adjective', '6']]), ['MMXXVI = 2026']),
+};
+
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'latin', deck: 'core', topics, items }];

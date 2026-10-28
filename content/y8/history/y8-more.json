@@ -13,6 +13,54 @@
    "intro": "Rome began, legend says, in 753 BC. Its people threw out their kings and ran a republic for nearly 500 years, until ambitious generals with loyal armies turned it into an empire.",
    "teach": "Explain why the Roman Republic became an empire.",
    "talk": "Ask {him} which Greek gods the Romans renamed, and what they called Athena.",
+   "visual": {
+    "kind": "timeline",
+    "from": -800,
+    "to": 500,
+    "bands": [
+     [
+      -753,
+      -509,
+      "Kings"
+     ],
+     [
+      -509,
+      -27,
+      "Republic"
+     ],
+     [
+      -27,
+      476,
+      "Empire"
+     ]
+    ],
+    "events": [
+     [
+      -753,
+      "Rome founded (legend)"
+     ],
+     [
+      -509,
+      "Last king expelled"
+     ],
+     [
+      -218,
+      "Hannibal crosses the Alps"
+     ],
+     [
+      -44,
+      "Caesar assassinated"
+     ],
+     [
+      -27,
+      "Augustus, first emperor"
+     ],
+     [
+      476,
+      "Western empire ends"
+     ]
+    ]
+   },
    "hook": "Kings, then a Republic (**509 BC**), then an Empire (**27 BC**): Rome tried three kinds of government in turn."
   },
   {
@@ -26,6 +74,34 @@
    "intro": "In 1095 the Pope called on Christians to march to the Holy Land and take Jerusalem. For two centuries crusades brought war, faith, trade and terrible violence to the Middle East and to Europe.",
    "teach": "Explain two different reasons why people joined the First Crusade.",
    "talk": "Ask {him} what {she} thinks of Saladin and Richard the Lionheart, and why.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1080,
+    "to": 1220,
+    "set": "britain",
+    "events": [
+     [
+      1095,
+      "Urban II calls the First Crusade"
+     ],
+     [
+      1099,
+      "Crusaders capture Jerusalem"
+     ],
+     [
+      1187,
+      "Saladin retakes Jerusalem"
+     ],
+     [
+      1192,
+      "Richard I’s truce with Saladin"
+     ],
+     [
+      1204,
+      "Constantinople looted"
+     ]
+    ]
+   },
    "hook": "**1095** called, **1099** captured, **1187** lost again: the First Crusade and its undoing."
   },
   {
@@ -39,6 +115,80 @@
    "intro": "From 1455 to 1487 the royal families of Lancaster and York fought for the English crown. It ended at Bosworth in 1485 with a new dynasty: the Tudors.",
    "teach": "Explain why Henry Tudor won the Battle of Bosworth.",
    "talk": "Ask {him} what {she} thinks happened to the Princes in the Tower, and what evidence {she} would want.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Edward III",
+     "note": "r. 1327–77",
+     "c": [
+      {
+       "n": "John of Gaunt",
+       "note": "Duke of Lancaster: red rose",
+       "c": [
+        {
+         "n": "Henry IV",
+         "note": "r. 1399–1413",
+         "c": [
+          {
+           "n": "Henry V",
+           "note": "r. 1413–22",
+           "c": [
+            {
+             "n": "Henry VI",
+             "note": "r. 1422–61, 1470–71"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "n": "Margaret Beaufort",
+         "note": "his great-granddaughter",
+         "c": [
+          {
+           "n": "Henry VII",
+           "note": "Tudor; r. 1485–1509",
+           "mark": true
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "n": "Edmund of Langley",
+       "note": "Duke of York: white rose",
+       "c": [
+        {
+         "n": "Richard, Duke of York",
+         "note": "his grandson; killed 1460",
+         "c": [
+          {
+           "n": "Edward IV",
+           "note": "r. 1461–70, 1471–83",
+           "c": [
+            {
+             "n": "Edward V",
+             "note": "r. 1483"
+            },
+            {
+             "n": "Elizabeth of York",
+             "note": "married Henry VII, 1486",
+             "mark": true
+            }
+           ]
+          },
+          {
+           "n": "Richard III",
+           "note": "r. 1483–85"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Two branches from two of Edward III’s sons. Henry VII (Lancaster, through his mother) married Elizabeth of York, joining the red rose and the white."
+   },
    "hook": "**Red** rose for Lancaster, **white** rose for York, joined in the **Tudor** rose after Bosworth in 1485."
   },
   {
@@ -65,6 +215,34 @@
    "intro": "From the 1490s European sailors crossed oceans to the Americas, round Africa to India and right round the world. It brought new knowledge and trade, and conquest, disease and enslavement for millions.",
    "teach": "Explain one positive and one terrible consequence of European exploration.",
    "talk": "Ask {him} whether “discovery” is the right word for Columbus reaching the Caribbean.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1480,
+    "to": 1530,
+    "set": "britain",
+    "events": [
+     [
+      1492,
+      "Columbus reaches the Caribbean"
+     ],
+     [
+      1494,
+      "Treaty of Tordesillas"
+     ],
+     [
+      1498,
+      "Da Gama reaches India"
+     ],
+     [
+      1519,
+      "Magellan sets out; Cortés in Mexico"
+     ],
+     [
+      1522,
+      "Elcano completes the voyage round the world"
+     ]
+    ]
+   },
    "hook": "Columbus went west (**1492**), da Gama went east (**1498**), Magellan and Elcano went right round (**1519–22**)."
   },
   {
@@ -78,6 +256,62 @@
    "intro": "Elizabeth I reigned for 44 years, survived plots and a Spanish invasion fleet, and presided over Shakespeare’s England. But was it really a golden age, and for whom?",
    "teach": "Explain why Mary, Queen of Scots, was such a danger to Elizabeth.",
    "talk": "Ask {him} why Elizabeth never married, in {her} opinion.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "globe-theatre"
+    },
+    {
+     "kind": "tree",
+     "root": {
+      "n": "Henry VII",
+      "note": "r. 1485–1509",
+      "c": [
+       {
+        "n": "Henry VIII",
+        "note": "r. 1509–47",
+        "c": [
+         {
+          "n": "Mary I",
+          "note": "r. 1553–58"
+         },
+         {
+          "n": "Elizabeth I",
+          "note": "r. 1558–1603",
+          "mark": true
+         },
+         {
+          "n": "Edward VI",
+          "note": "r. 1547–53"
+         }
+        ]
+       },
+       {
+        "n": "Margaret Tudor",
+        "note": "married James IV of Scotland",
+        "c": [
+         {
+          "n": "James V of Scotland",
+          "c": [
+           {
+            "n": "Mary, Queen of Scots",
+            "note": "executed 1587",
+            "c": [
+             {
+              "n": "James VI of Scotland",
+              "note": "James I of England from 1603"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "caption": "Mary, Queen of Scots, was Henry VIII’s great-niece: a Catholic with a strong claim. Her son James inherited Elizabeth’s throne in 1603."
+    }
+   ],
    "hook": "**1558–1603**: the Virgin Queen, also called Gloriana, reigned for 44 years."
   },
   {
@@ -91,6 +325,34 @@
    "intro": "Between Copernicus in 1543 and Newton in 1687, thinkers replaced ancient authority with observation and experiment, and changed how we see the universe and our own bodies.",
    "teach": "Explain why Galileo’s ideas alarmed the Church.",
    "talk": "Ask {him} which scientist {she} would most like to meet, and what {she} would ask.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1530,
+    "to": 1700,
+    "set": "britain",
+    "events": [
+     [
+      1543,
+      "Copernicus: the Earth orbits the Sun"
+     ],
+     [
+      1628,
+      "Harvey: the blood circulates"
+     ],
+     [
+      1633,
+      "Galileo’s trial"
+     ],
+     [
+      1660,
+      "Royal Society founded"
+     ],
+     [
+      1687,
+      "Newton’s Principia"
+     ]
+    ]
+   },
    "hook": "**1543 to 1687**: from Copernicus moving the Earth to Newton explaining why it moves."
   },
   {
@@ -104,6 +366,30 @@
    "intro": "In 1660 the monarchy returned. Within six years London had suffered its last great plague and a fire that destroyed most of the old city, and began to rebuild in brick and stone.",
    "teach": "Explain why the Great Fire spread so far.",
    "talk": "Ask {him} what {she} would have buried in the garden, like Samuel Pepys.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1655,
+    "to": 1680,
+    "set": "britain",
+    "events": [
+     [
+      1660,
+      "Charles II returns"
+     ],
+     [
+      1665,
+      "The Great Plague"
+     ],
+     [
+      1666,
+      "The Great Fire"
+     ],
+     [
+      1675,
+      "Wren begins the new St Paul’s"
+     ]
+    ]
+   },
    "hook": "King back in **1660**, plague in **1665**, fire in **1666**: two disasters in two years."
   },
   {
@@ -117,6 +403,17 @@
    "intro": "Thirteen British colonies in North America objected to taxes set by a Parliament they had no vote in. By 1783 they had won a war and their independence as the United States.",
    "teach": "Explain what “no taxation without representation” meant.",
    "talk": "Ask {him} whether the Declaration’s words “all men are created equal” were true in 1776.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Parliament taxes the colonies",
+     "“No taxation without representation”",
+     "Boston Tea Party, 1773",
+     "Declaration of Independence, 4 July 1776",
+     "British army surrenders at Yorktown, 1781",
+     "Treaty of Paris, 1783: independence"
+    ]
+   },
    "hook": "“**No taxation without representation**”: the slogan that turned a quarrel over tax into a revolution."
   },
   {
@@ -130,6 +427,42 @@
    "intro": "Out of the French Revolution came a brilliant general who made himself emperor and conquered much of Europe. Britain fought him at sea and on land for over a decade, while facing unrest at home.",
    "teach": "Explain why Napoleon was eventually defeated.",
    "talk": "Ask {him} why Nelson is on top of a column in Trafalgar Square.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1795,
+    "to": 1825,
+    "set": "britain",
+    "events": [
+     [
+      1799,
+      "Napoleon seizes power"
+     ],
+     [
+      1804,
+      "Crowns himself emperor"
+     ],
+     [
+      1805,
+      "Trafalgar"
+     ],
+     [
+      1812,
+      "Invades Russia"
+     ],
+     [
+      1815,
+      "Waterloo"
+     ],
+     [
+      1819,
+      "Peterloo"
+     ],
+     [
+      1821,
+      "Dies on St Helena"
+     ]
+    ]
+   },
    "hook": "**Trafalgar 1805** at sea, **Waterloo 1815** on land: Nelson, then Wellington."
   },
   {
@@ -143,6 +476,33 @@
    "intro": "From 1845 a plant disease destroyed Ireland’s potato crop year after year. About a million people died and another million or more emigrated. How the government responded is still argued about today.",
    "teach": "Explain why the potato blight caused a famine on such a scale.",
    "talk": "Ask {him} why so many Americans and British people have Irish ancestors.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "line",
+     "title": "Population of Ireland",
+     "ylabel": "millions",
+     "xs": [
+      "1841",
+      "1851",
+      "1861",
+      "1871",
+      "1881",
+      "1891",
+      "1901"
+     ],
+     "ys": [
+      8.2,
+      6.6,
+      5.8,
+      5.4,
+      5.2,
+      4.7,
+      4.5
+     ]
+    },
+    "caption": "Census figures. About a million died in the famine and over a million emigrated; emigration went on for decades after."
+   },
    "hook": "**1845 to 1851**: about a million died and over a million left; Ireland lost about a quarter of its people."
   },
   {
@@ -156,6 +516,18 @@
    "intro": "Fast-growing industrial towns were crowded, filthy and deadly. Cholera, a doctor with a map, a summer stink and the germ theory finally pushed Parliament into cleaning them up.",
    "teach": "Explain how John Snow showed that cholera spread through water.",
    "talk": "Ask {him} what {she} would do first if {she} were in charge of a Victorian town.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Crowded, filthy industrial towns",
+     "Chadwick’s report, 1842",
+     "Public Health Act, 1848: voluntary",
+     "Snow traces cholera to a pump, 1854",
+     "The Great Stink, 1858",
+     "Bazalgette builds London’s sewers",
+     "Public Health Act, 1875: compulsory"
+    ]
+   },
    "hook": "**Snow’s map** (1854), the **Stink** (1858), Bazalgette’s **sewers**: evidence, then crisis, then action."
   },
   {
@@ -169,6 +541,33 @@
    "intro": "Suffragists and suffragettes wanted the same thing but argued fiercely about how to get it. Hunger strikes, window-smashing, a census boycott and war work all played a part, but which mattered most?",
    "teach": "Explain the arguments for and against militant tactics.",
    "talk": "Ask {him} whether breaking the law can ever be right to win a vote.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Suffragists (NUWSS)",
+     "Suffragettes (WSPU)"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "Leader",
+      "Millicent Fawcett",
+      "Emmeline Pankhurst"
+     ],
+     [
+      "Founded",
+      "1897",
+      "1903"
+     ],
+     [
+      "Tactics",
+      "petitions, marches, meetings",
+      "“Deeds not words”: window-smashing, hunger strikes"
+     ]
+    ],
+    "caption": "The same goal, very different methods. Historians still argue about which mattered more."
+   },
    "hook": "Suffra**gists** were gentle; suffra**gettes** got going with direct action. Same goal, different tactics."
   },
   {
@@ -195,6 +594,37 @@
    "intro": "After 1945 Black Americans and Black Britons campaigned against segregation and discrimination. Boycotts, marches and court cases won new laws, though the struggle for equality went on.",
    "teach": "Explain why the Montgomery Bus Boycott was significant.",
    "talk": "Ask {him} why Rosa Parks’ decision on one bus mattered so much.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1945,
+    "to": 1970,
+    "events": [
+     [
+      1948,
+      "Empire Windrush arrives"
+     ],
+     [
+      1954,
+      "Brown v Board of Education"
+     ],
+     [
+      1955,
+      "Montgomery Bus Boycott begins"
+     ],
+     [
+      1957,
+      "Little Rock Nine"
+     ],
+     [
+      1963,
+      "Bristol Bus Boycott; March on Washington"
+     ],
+     [
+      1965,
+      "UK Race Relations Act"
+     ]
+    ]
+   },
    "hook": "**1954** schools, **1955** buses, **1963** the dream, **1964** the law: a decade that changed America."
   },
   {
@@ -208,6 +638,34 @@
    "intro": "Within twenty-five years of 1945 most of Britain’s empire had become independent, beginning with India and Pakistan in 1947. Independence movements, war and money all played a part.",
    "teach": "Explain why Gandhi’s methods were effective.",
    "talk": "Ask {him} which countries in the Commonwealth {she} can name.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1915,
+    "to": 1970,
+    "set": "twentieth",
+    "events": [
+     [
+      1919,
+      "Amritsar massacre"
+     ],
+     [
+      1930,
+      "Gandhi’s Salt March"
+     ],
+     [
+      1947,
+      "India and Pakistan independent"
+     ],
+     [
+      1956,
+      "Suez Crisis"
+     ],
+     [
+      1957,
+      "Ghana independent"
+     ]
+    ]
+   },
    "hook": "India and Pakistan in **1947**, Ghana in **1957**: ten years apart, as the empire began to unwind."
   },
   {
@@ -222,6 +680,40 @@
    "teach": "Explain how Byzantium helped to preserve Greek learning.",
    "talk": "Ask {him} what Constantinople is called today.",
    "tier": "stretch",
+   "visual": {
+    "kind": "timeline",
+    "from": 300,
+    "to": 1500,
+    "bands": [
+     [
+      330,
+      1453,
+      "The Byzantine Empire"
+     ]
+    ],
+    "events": [
+     [
+      330,
+      "Constantinople becomes capital"
+     ],
+     [
+      476,
+      "Western empire ends"
+     ],
+     [
+      537,
+      "Hagia Sophia finished"
+     ],
+     [
+      1204,
+      "Fourth Crusade loots the city"
+     ],
+     [
+      1453,
+      "Falls to the Ottoman Turks"
+     ]
+    ]
+   },
    "hook": "**330** founded, **476** the West falls, **1453** Constantinople falls: the East lasted almost a thousand years longer."
   },
   {
@@ -236,6 +728,17 @@
    "teach": "Explain why the Tsar lost power in February 1917.",
    "talk": "Ask {him} why the “October” Revolution happened in November.",
    "tier": "stretch",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "The Tsar rules alone; most Russians are poor",
+     "Bloody Sunday, January 1905",
+     "War defeats and food shortages, 1914–17",
+     "February 1917: the Tsar abdicates",
+     "October 1917: Lenin’s Bolsheviks seize power",
+     "Civil war: Reds against Whites, 1918–21"
+    ]
+   },
    "hook": "**February**: the Tsar falls. **October**: the Bolsheviks take over. Two revolutions in **1917**."
   },
   {
@@ -250,6 +753,18 @@
    "teach": "Explain what appeasement was and why Chamberlain chose it.",
    "talk": "Ask {him} whether {she} thinks appeasement was cowardly or sensible.",
    "tier": "stretch",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Treaty of Versailles, 1919: blame and reparations",
+     "Mussolini takes power in Italy, 1922",
+     "Wall Street Crash, 1929: the Great Depression",
+     "Hitler becomes Chancellor, 1933",
+     "Troops into the Rhineland, 1936",
+     "Appeasement: the Munich Agreement, 1938",
+     "Germany invades Poland, September 1939"
+    ]
+   },
    "hook": "**1919, 1929, 1933, 1938**: Versailles, Wall Street, Hitler, Munich: twenty years from war to war."
   }
  ],
@@ -294,6 +809,54 @@
     }
    ],
    "explain": "The last king, Tarquin the Proud, was driven out. “Res publica” means “the public thing”: the state belonged to the people.",
+   "visual": {
+    "kind": "timeline",
+    "from": -800,
+    "to": 500,
+    "bands": [
+     [
+      -753,
+      -509,
+      "Kings"
+     ],
+     [
+      -509,
+      -27,
+      "Republic"
+     ],
+     [
+      -27,
+      476,
+      "Empire"
+     ]
+    ],
+    "events": [
+     [
+      -753,
+      "Rome founded (legend)"
+     ],
+     [
+      -509,
+      "Last king expelled"
+     ],
+     [
+      -218,
+      "Hannibal crosses the Alps"
+     ],
+     [
+      -44,
+      "Caesar assassinated"
+     ],
+     [
+      -27,
+      "Augustus, first emperor"
+     ],
+     [
+      476,
+      "Western empire ends"
+     ]
+    ]
+   },
    "hook": "**Res publica** = “the public thing”, which gives us the word **republic**.",
    "example": "France, Ireland and the USA are republics today: countries with no king or queen."
   },
@@ -734,6 +1297,80 @@
     }
    ],
    "explain": "Both were branches of the royal Plantagenet family.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Edward III",
+     "note": "r. 1327–77",
+     "c": [
+      {
+       "n": "John of Gaunt",
+       "note": "Duke of Lancaster: red rose",
+       "c": [
+        {
+         "n": "Henry IV",
+         "note": "r. 1399–1413",
+         "c": [
+          {
+           "n": "Henry V",
+           "note": "r. 1413–22",
+           "c": [
+            {
+             "n": "Henry VI",
+             "note": "r. 1422–61, 1470–71"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "n": "Margaret Beaufort",
+         "note": "his great-granddaughter",
+         "c": [
+          {
+           "n": "Henry VII",
+           "note": "Tudor; r. 1485–1509",
+           "mark": true
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "n": "Edmund of Langley",
+       "note": "Duke of York: white rose",
+       "c": [
+        {
+         "n": "Richard, Duke of York",
+         "note": "his grandson; killed 1460",
+         "c": [
+          {
+           "n": "Edward IV",
+           "note": "r. 1461–70, 1471–83",
+           "c": [
+            {
+             "n": "Edward V",
+             "note": "r. 1483"
+            },
+            {
+             "n": "Elizabeth of York",
+             "note": "married Henry VII, 1486",
+             "mark": true
+            }
+           ]
+          },
+          {
+           "n": "Richard III",
+           "note": "r. 1483–85"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Two branches from two of Edward III’s sons. Henry VII (Lancaster, through his mother) married Elizabeth of York, joining the red rose and the white."
+   },
    "hook": "**Red** rose = Lancaster, **white** rose = York. Both families were branches of the Plantagenets.",
    "example": "The white rose is still Yorkshire’s emblem, flown on Yorkshire Day, 1 August; Lancashire keeps the red rose."
   },
@@ -776,6 +1413,80 @@
    "formats": [
     "choice"
    ],
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Edward III",
+     "note": "r. 1327–77",
+     "c": [
+      {
+       "n": "John of Gaunt",
+       "note": "Duke of Lancaster: red rose",
+       "c": [
+        {
+         "n": "Henry IV",
+         "note": "r. 1399–1413",
+         "c": [
+          {
+           "n": "Henry V",
+           "note": "r. 1413–22",
+           "c": [
+            {
+             "n": "Henry VI",
+             "note": "r. 1422–61, 1470–71"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "n": "Margaret Beaufort",
+         "note": "his great-granddaughter",
+         "c": [
+          {
+           "n": "Henry VII",
+           "note": "Tudor; r. 1485–1509",
+           "mark": true
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "n": "Edmund of Langley",
+       "note": "Duke of York: white rose",
+       "c": [
+        {
+         "n": "Richard, Duke of York",
+         "note": "his grandson; killed 1460",
+         "c": [
+          {
+           "n": "Edward IV",
+           "note": "r. 1461–70, 1471–83",
+           "c": [
+            {
+             "n": "Edward V",
+             "note": "r. 1483"
+            },
+            {
+             "n": "Elizabeth of York",
+             "note": "married Henry VII, 1486",
+             "mark": true
+            }
+           ]
+          },
+          {
+           "n": "Richard III",
+           "note": "r. 1483–85"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Two branches from two of Edward III’s sons. Henry VII (Lancaster, through his mother) married Elizabeth of York, joining the red rose and the white."
+   },
    "hook": "**Towton**, **1461**: fought in a snowstorm on Palm Sunday, it won Edward IV the crown."
   },
   {
@@ -882,6 +1593,80 @@
     }
    ],
    "explain": "The Tudor rose, red and white together, was his symbol of the united houses.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Edward III",
+     "note": "r. 1327–77",
+     "c": [
+      {
+       "n": "John of Gaunt",
+       "note": "Duke of Lancaster: red rose",
+       "c": [
+        {
+         "n": "Henry IV",
+         "note": "r. 1399–1413",
+         "c": [
+          {
+           "n": "Henry V",
+           "note": "r. 1413–22",
+           "c": [
+            {
+             "n": "Henry VI",
+             "note": "r. 1422–61, 1470–71"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "n": "Margaret Beaufort",
+         "note": "his great-granddaughter",
+         "c": [
+          {
+           "n": "Henry VII",
+           "note": "Tudor; r. 1485–1509",
+           "mark": true
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "n": "Edmund of Langley",
+       "note": "Duke of York: white rose",
+       "c": [
+        {
+         "n": "Richard, Duke of York",
+         "note": "his grandson; killed 1460",
+         "c": [
+          {
+           "n": "Edward IV",
+           "note": "r. 1461–70, 1471–83",
+           "c": [
+            {
+             "n": "Edward V",
+             "note": "r. 1483"
+            },
+            {
+             "n": "Elizabeth of York",
+             "note": "married Henry VII, 1486",
+             "mark": true
+            }
+           ]
+          },
+          {
+           "n": "Richard III",
+           "note": "r. 1483–85"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Two branches from two of Edward III’s sons. Henry VII (Lancaster, through his mother) married Elizabeth of York, joining the red rose and the white."
+   },
    "hook": "Red + white = the **Tudor rose**: Lancaster married York in **1486**.",
    "example": "Tudor roses are carved all over King’s College Chapel in Cambridge and Hampton Court Palace."
   },
@@ -1379,6 +2164,35 @@
     "1603"
    ],
    "explain": "She reigned from 1558 until her death in 1603.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1550,
+    "to": 1610,
+    "set": "britain",
+    "events": [
+     [
+      1558,
+      "Elizabeth becomes queen"
+     ],
+     [
+      1586,
+      "Babington Plot"
+     ],
+     [
+      1588,
+      "The Spanish Armada"
+     ],
+     [
+      1599,
+      "The Globe built"
+     ],
+     [
+      1603,
+      "Elizabeth dies"
+     ]
+    ],
+    "caption": "Mary, Queen of Scots, was executed in 1587, after the Babington Plot."
+   },
    "hook": "**1558**: Elizabeth became queen at **25**, and reigned until **1603**."
   },
   {
@@ -1396,6 +2210,56 @@
    "accept": [
     "boleyn"
    ],
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Henry VII",
+     "note": "r. 1485–1509",
+     "c": [
+      {
+       "n": "Henry VIII",
+       "note": "r. 1509–47",
+       "c": [
+        {
+         "n": "Mary I",
+         "note": "r. 1553–58"
+        },
+        {
+         "n": "Elizabeth I",
+         "note": "r. 1558–1603",
+         "mark": true
+        },
+        {
+         "n": "Edward VI",
+         "note": "r. 1547–53"
+        }
+       ]
+      },
+      {
+       "n": "Margaret Tudor",
+       "note": "married James IV of Scotland",
+       "c": [
+        {
+         "n": "James V of Scotland",
+         "c": [
+          {
+           "n": "Mary, Queen of Scots",
+           "note": "executed 1587",
+           "c": [
+            {
+             "n": "James VI of Scotland",
+             "note": "James I of England from 1603"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Mary, Queen of Scots, was Henry VIII’s great-niece: a Catholic with a strong claim. Her son James inherited Elizabeth’s throne in 1603."
+   },
    "hook": "Anne Boleyn: wife number **2** in “divorced, **beheaded**…”, executed when Elizabeth was **2**.",
    "example": "Hever Castle in Kent, Anne Boleyn’s childhood home, can be visited today."
   },
@@ -1439,6 +2303,35 @@
    "formats": [
     "choice"
    ],
+   "visual": {
+    "kind": "timeline",
+    "from": 1550,
+    "to": 1610,
+    "set": "britain",
+    "events": [
+     [
+      1558,
+      "Elizabeth becomes queen"
+     ],
+     [
+      1586,
+      "Babington Plot"
+     ],
+     [
+      1588,
+      "The Spanish Armada"
+     ],
+     [
+      1599,
+      "The Globe built"
+     ],
+     [
+      1603,
+      "Elizabeth dies"
+     ]
+    ],
+    "caption": "Mary, Queen of Scots, was executed in 1587, after the Babington Plot."
+   },
    "hook": "**B**abington, **b**eheading: Walsingham’s men cracked Mary’s coded letters, and she was executed in **1587**."
   },
   {
@@ -1464,6 +2357,56 @@
     }
    ],
    "explain": "Mary was executed in 1587, which helped persuade Philip II of Spain to send the Armada.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Henry VII",
+     "note": "r. 1485–1509",
+     "c": [
+      {
+       "n": "Henry VIII",
+       "note": "r. 1509–47",
+       "c": [
+        {
+         "n": "Mary I",
+         "note": "r. 1553–58"
+        },
+        {
+         "n": "Elizabeth I",
+         "note": "r. 1558–1603",
+         "mark": true
+        },
+        {
+         "n": "Edward VI",
+         "note": "r. 1547–53"
+        }
+       ]
+      },
+      {
+       "n": "Margaret Tudor",
+       "note": "married James IV of Scotland",
+       "c": [
+        {
+         "n": "James V of Scotland",
+         "c": [
+          {
+           "n": "Mary, Queen of Scots",
+           "note": "executed 1587",
+           "c": [
+            {
+             "n": "James VI of Scotland",
+             "note": "James I of England from 1603"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Mary, Queen of Scots, was Henry VIII’s great-niece: a Catholic with a strong claim. Her son James inherited Elizabeth’s throne in 1603."
+   },
    "hook": "**Two Marys**: Mary I was Elizabeth’s half-sister; Mary, Queen of Scots, was the granddaughter of Henry VIII’s sister."
   },
   {
@@ -1552,7 +2495,11 @@
     "globe theatre"
    ],
    "hook": "**Globe** = round: Shakespeare called a round theatre “this wooden O”, in Henry V.",
-   "example": "Shakespeare’s Globe, rebuilt on the South Bank, stages his plays in the open air."
+   "example": "Shakespeare’s Globe, rebuilt on the South Bank, stages his plays in the open air.",
+   "visual": {
+    "kind": "diagram",
+    "id": "globe-theatre"
+   }
   },
   {
    "id": "history.m.el.w",
@@ -1590,6 +2537,32 @@
    "accept": [
     "copernicus"
    ],
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Geocentric model",
+     "Heliocentric model"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "At the centre",
+      "the **Earth**",
+      "the **Sun**"
+     ],
+     [
+      "The Earth",
+      "stays still",
+      "spins, and orbits the Sun"
+     ],
+     [
+      "Backed by",
+      "Ptolemy, and the Church",
+      "Copernicus (1543), then Galileo"
+     ]
+    ]
+   },
    "hook": "Copernicus put the **Sun** at the centre in **1543**, the year he died.",
    "example": "We call it the Solar System after Sol, the Latin name for the Sun at its centre."
   },
@@ -1615,6 +2588,32 @@
     }
    ],
    "explain": "His telescope observations, like the moons of Jupiter, supported Copernicus.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Geocentric model",
+     "Heliocentric model"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "At the centre",
+      "the **Earth**",
+      "the **Sun**"
+     ],
+     [
+      "The Earth",
+      "stays still",
+      "spins, and orbits the Sun"
+     ],
+     [
+      "Backed by",
+      "Ptolemy, and the Church",
+      "Copernicus (1543), then Galileo"
+     ]
+    ]
+   },
    "hook": "“**And yet it moves**”: words that legend says Galileo muttered about the Earth after his trial.",
    "example": "The four large moons of Jupiter that he discovered are still called the Galilean moons."
   },
@@ -2014,6 +3013,17 @@
     }
    ],
    "explain": "Taxes like the Stamp Act (1765) and duties on tea were set in London without colonial consent.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Parliament taxes the colonies",
+     "“No taxation without representation”",
+     "Boston Tea Party, 1773",
+     "Declaration of Independence, 4 July 1776",
+     "British army surrenders at Yorktown, 1781",
+     "Treaty of Paris, 1783: independence"
+    ]
+   },
    "hook": "The **Stamp Act** of **1765** taxed paper itself: newspapers, legal documents, even playing cards.",
    "example": "Car number plates in Washington DC carry a protest about taxation without representation, as its people lack a full vote in Congress."
   },
@@ -2439,6 +3449,33 @@
    "formats": [
     "choice"
    ],
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "line",
+     "title": "Population of Ireland",
+     "ylabel": "millions",
+     "xs": [
+      "1841",
+      "1851",
+      "1861",
+      "1871",
+      "1881",
+      "1891",
+      "1901"
+     ],
+     "ys": [
+      8.2,
+      6.6,
+      5.8,
+      5.4,
+      5.2,
+      4.7,
+      4.5
+     ]
+    },
+    "caption": "Census figures. About a million died in the famine and over a million emigrated; emigration went on for decades after."
+   },
    "hook": "**A million** died and **a million** left: two millions to remember.",
    "example": "The island of Ireland still has fewer people today than it had in 1841, before the Famine."
   },
@@ -2464,6 +3501,33 @@
     }
    ],
    "explain": "Ireland’s population fell by about a quarter between 1845 and 1851 and kept falling for decades.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "line",
+     "title": "Population of Ireland",
+     "ylabel": "millions",
+     "xs": [
+      "1841",
+      "1851",
+      "1861",
+      "1871",
+      "1881",
+      "1891",
+      "1901"
+     ],
+     "ys": [
+      8.2,
+      6.6,
+      5.8,
+      5.4,
+      5.2,
+      4.7,
+      4.5
+     ]
+    },
+    "caption": "Census figures. About a million died in the famine and over a million emigrated; emigration went on for decades after."
+   },
    "hook": "“**Coffin ships**”: the crowded, dangerous ships that carried many emigrants.",
    "example": "About 30 million Americans say they have Irish ancestors; St Patrick’s Day parades in New York show it."
   },
@@ -2718,6 +3782,18 @@
     }
    ],
    "explain": "Governments slowly accepted that public health was their responsibility.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Crowded, filthy industrial towns",
+     "Chadwick’s report, 1842",
+     "Public Health Act, 1848: voluntary",
+     "Snow traces cholera to a pump, 1854",
+     "The Great Stink, 1858",
+     "Bazalgette builds London’s sewers",
+     "Public Health Act, 1875: compulsory"
+    ]
+   },
    "hook": "**1848** = may (voluntary); **1875** = must (compulsory)."
   },
   {
@@ -2774,6 +3850,33 @@
    "accept": [
     "deeds, not words"
    ],
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Suffragists (NUWSS)",
+     "Suffragettes (WSPU)"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "Leader",
+      "Millicent Fawcett",
+      "Emmeline Pankhurst"
+     ],
+     [
+      "Founded",
+      "1897",
+      "1903"
+     ],
+     [
+      "Tactics",
+      "petitions, marches, meetings",
+      "“Deeds not words”: window-smashing, hunger strikes"
+     ]
+    ],
+    "caption": "The same goal, very different methods. Historians still argue about which mattered more."
+   },
    "hook": "Words had failed for forty years, so: “**Deeds not words**”."
   },
   {
@@ -3905,6 +5008,17 @@
     }
    ],
    "explain": "Nicholas took command of the army in 1915, leaving the government to the unpopular Tsarina and Rasputin.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "The Tsar rules alone; most Russians are poor",
+     "Bloody Sunday, January 1905",
+     "War defeats and food shortages, 1914–17",
+     "February 1917: the Tsar abdicates",
+     "October 1917: Lenin’s Bolsheviks seize power",
+     "Civil war: Reds against Whites, 1918–21"
+    ]
+   },
    "hook": "In command = **to blame**: once Nicholas led the army in 1915, every defeat was his fault."
   },
   {
@@ -4220,6 +5334,18 @@
     }
    ],
    "explain": "At Munich in 1938 Chamberlain agreed that Germany could take the Sudetenland from Czechoslovakia.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Treaty of Versailles, 1919: blame and reparations",
+     "Mussolini takes power in Italy, 1922",
+     "Wall Street Crash, 1929: the Great Depression",
+     "Hitler becomes Chancellor, 1933",
+     "Troops into the Rhineland, 1936",
+     "Appeasement: the Munich Agreement, 1938",
+     "Germany invades Poland, September 1939"
+    ]
+   },
    "hook": "“**Peace for our time**”: Chamberlain’s words on returning from Munich in **1938**."
   },
   {

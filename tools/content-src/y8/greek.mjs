@@ -770,4 +770,111 @@ const MEMORY = {
   for (const [id, v] of Object.entries(MEMORY)) put(`greek.${id}`, v);
 }
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Forms are copied from the course's own tables (js/gen/y8greek.js, y8greek2.js); **…** marks the
+// ending (or the part to notice). In a phrase the article takes a grave accent: τὸν λόγον.
+const G = { s: (t) => [t, 'subject'], o: (t) => [t, 'object'], v: (t) => [t, 'verb'] };
+const TOPIC_VISUALS = {
+  'greek.alphabet-1': { kind: 'table', head: ['letter', 'name', 'English'], rows: ALPHA_1.map(([lo, up, name, , tr]) => [`${lo}  ${up}`, name, tr]) },
+  'greek.alphabet-2': [
+    { kind: 'table', head: ['letter', 'looks like', 'actually'], rows: [['ρ  Ρ', 'p  P', '**r** (rho)'], ['ν', 'v', '**n** (nu)'], ['η  Η', 'n  H', '**long e** (eta)'], ['χ  Χ', 'x  X', '**ch** (chi)'], ['ω', 'w', '**long o** (omega)']], caption: 'False friends: they look English but are not.' },
+    { kind: 'table', head: ['letter', 'name', 'English'], rows: ALPHA_2.map(([lo, up, name, , tr]) => [`${lo}  ${up}`, name, tr]) },
+  ],
+  'greek.reading': { kind: 'table', head: ['', 'example', 'say it'], rows: [
+    ['rough breathing ʽ', '**ἵ**ππος', '**h**ippos'],
+    ['smooth breathing ʼ', '**ἀ**δελφός', 'adelphos (no h)'],
+    ['ου', 'Μέδ**ου**σα', 'Med**ou**sa: “oo”'],
+    ['αι', 'κ**αί**', 'k**ai**: “eye”'],
+    ['αυ', 'ν**αύ**της', 'n**au**tēs: “ow”'],
+    ['γγ', 'ἄ**γγ**ελος', 'a**ng**elos: “ng”'],
+    ['iota subscript', 'λόγ**ῳ**', 'a small ι under the ω'],
+    ['accent', 'λ**ό**γος', '**LO**gos'],
+  ] },
+  'greek.article': [
+    { kind: 'table', tint: 'cols', head: ['singular', 'masc.', 'fem.', 'neut.'], rows: [
+      ['nom.', '**ὁ**', '**ἡ**', 'τ**ό**'], ['acc.', 'τ**όν**', 'τ**ήν**', 'τ**ό**'], ['gen.', 'τ**οῦ**', 'τ**ῆς**', 'τ**οῦ**'], ['dat.', 'τ**ῷ**', 'τ**ῇ**', 'τ**ῷ**']] },
+    { kind: 'table', tint: 'cols', head: ['plural', 'masc.', 'fem.', 'neut.'], rows: [
+      ['nom.', '**οἱ**', '**αἱ**', 'τ**ά**'], ['acc.', 'τ**ούς**', 'τ**άς**', 'τ**ά**'], ['gen.', 'τ**ῶν**', 'τ**ῶν**', 'τ**ῶν**'], ['dat.', 'τ**οῖς**', 'τ**αῖς**', 'τ**οῖς**']],
+    caption: 'After the τ, the article mostly has the same endings as its noun: τ-ὸν λόγ-ον, τ-ὴν τιμ-ήν (but neuter τὸ δῶρον).' },
+  ],
+  'greek.nouns-2': [
+    { kind: 'table', head: ['sg', 'word (m.)', 'gift (n.)'], rows: [
+      ['nom.', 'ὁ λόγ**ος**', 'τὸ δῶρ**ον**'], ['acc.', 'τὸν λόγ**ον**', 'τὸ δῶρ**ον**'], ['gen.', 'τοῦ λόγ**ου**', 'τοῦ δώρ**ου**'], ['dat.', 'τῷ λόγ**ῳ**', 'τῷ δώρ**ῳ**']] },
+    { kind: 'table', head: ['pl', 'word (m.)', 'gift (n.)'], rows: [
+      ['nom.', 'οἱ λόγ**οι**', 'τὰ δῶρ**α**'], ['acc.', 'τοὺς λόγ**ους**', 'τὰ δῶρ**α**'], ['gen.', 'τῶν λόγ**ων**', 'τῶν δώρ**ων**'], ['dat.', 'τοῖς λόγ**οις**', 'τοῖς δώρ**οις**']],
+    caption: 'δῶρον only differs from λόγος where it is neuter: nominative and accusative.' },
+  ],
+  'greek.nouns-1': [
+    { kind: 'table', head: ['sg', 'honour', 'land'], rows: [
+      ['nom.', 'ἡ τιμ**ή**', 'ἡ χώρ**α**'], ['acc.', 'τὴν τιμ**ήν**', 'τὴν χώρ**αν**'], ['gen.', 'τῆς τιμ**ῆς**', 'τῆς χώρ**ας**'], ['dat.', 'τῇ τιμ**ῇ**', 'τῇ χώρ**ᾳ**']] },
+    { kind: 'table', head: ['pl', 'honour', 'land'], rows: [
+      ['nom.', 'αἱ τιμ**αί**', 'αἱ χῶρ**αι**'], ['acc.', 'τὰς τιμ**άς**', 'τὰς χώρ**ας**'], ['gen.', 'τῶν τιμ**ῶν**', 'τῶν χωρ**ῶν**'], ['dat.', 'ταῖς τιμ**αῖς**', 'ταῖς χώρ**αις**']],
+    caption: 'Two singulars, one shared plural.' },
+  ],
+  'greek.verbs-1': { kind: 'table', head: ['', 'I free', 'I am'], rows: [
+    ['I', 'λύ**ω**', 'εἰμί'], ['you (sg)', 'λύ**εις**', 'εἶ'], ['he, she, it', 'λύ**ει**', 'ἐστί(ν)'],
+    ['we', 'λύ**ομεν**', 'ἐσμέν'], ['you (pl)', 'λύ**ετε**', 'ἐστέ'], ['they', 'λύ**ουσι(ν)**', 'εἰσί(ν)']],
+    caption: 'λύω keeps its stem λυ- and changes the ending; εἰμί is irregular and is learned whole.' },
+  'greek.sentences': { kind: 'blocks', rows: [
+    { parts: [G.s('ὁ δοῦλ**ος**'), G.o('τὸν ἵππ**ον**'), G.v('ἄγει')], result: 'The slave leads the horse.' },
+    { parts: [G.o('τὸν ἵππ**ον**'), G.s('ὁ δοῦλ**ος**'), G.v('ἄγει')], result: 'The slave leads the horse.' },
+    { parts: [G.s('ὁ ἵππ**ος**'), G.o('τὸν δοῦλ**ον**'), G.v('ἄγει')], result: 'The horse leads the slave.' },
+  ], caption: 'Rows 1 and 2 swap the order but mean the same. Row 3 swaps the endings, and the meaning flips.' },
+  'greek.prepositions': { kind: 'table', head: ['', 'means', 'example'], rows: [
+    ['ἐν + dat.', 'in, on', 'ἐν τῷ οἴκ**ῳ**'],
+    ['εἰς + acc.', 'into, to', 'εἰς τὸν ποταμ**όν**'],
+    ['ἐκ + gen.', 'out of', 'ἐκ τῆς χώρ**ας**'],
+    ['ἀπό + gen.', 'away from', 'ἀπὸ τῆς ἀγορ**ᾶς**'],
+    ['πρός + acc.', 'towards', 'πρὸς τὸν στρατηγ**όν**'],
+    ['μετά + gen.', 'with', 'μετὰ τῶν φίλ**ων**'],
+    ['μετά + acc.', 'after', 'μετὰ τὴν μάχ**ην**'],
+    ['διά + gen.', 'through', 'διὰ τῆς χώρ**ας**'],
+    ['διά + acc.', 'because of', 'διὰ τὸν πόλεμ**ον**'],
+  ], caption: 'μετά and διά change their meaning with the case.' },
+  'greek.adjectives': { kind: 'blocks', rows: [
+    { parts: [['ὁ', 'article', 'the'], ['καλὸς', 'adjective', 'beautiful'], ['ἵππος', 'noun', 'horse']], result: 'the beautiful horse' },
+    { parts: [['ὁ', 'article', 'the'], ['ἵππος', 'noun', 'horse'], ['καλός', 'adjective', '(is) beautiful']], result: 'the horse is beautiful' },
+  ] },
+  'greek.tenses': { kind: 'blocks', rows: [
+    { join: '+', parts: [['λύ', 'stem'], ['ω', 'ending', 'I']], result: 'λύω, I free' },
+    { join: '+', parts: [['ἔ', 'augment', 'past'], ['λυ', 'stem'], ['ον', 'ending', 'I']], result: 'ἔλυον, I was freeing' },
+    { join: '+', parts: [['λύ', 'stem'], ['σ', 'tense', 'future'], ['ω', 'ending', 'I']], result: 'λύσω, I will free' },
+  ] },
+  'greek.culture': { kind: 'table', head: ['god', 'of…', 'symbol'], rows: GODS.map(([god, , symbol]) => [god, {
+    Zeus: 'king of the gods, the sky', Hera: 'queen of the gods, marriage', Poseidon: 'the sea, earthquakes', Athena: 'wisdom, crafts', Apollo: 'music, healing',
+    Artemis: 'hunting, the wild', Hermes: 'messenger of the gods', Hephaestus: 'fire, the forge', Demeter: 'the harvest', Dionysus: 'wine, the theatre',
+  }[god], symbol.replace(/^an? /, '')]) },
+  'greek.aorist': { kind: 'table', head: ['', 'imperfect', 'aorist'], rows: [
+    ['form', 'ἔλυ**ον**', 'ἔλυ**σα**'], ['means', 'I was freeing', 'I freed'],
+    ['timeline', '━━━━━━━━━━▸', '●'], ['shows', 'an action going on, or repeated', 'one action, finished'],
+  ], caption: 'Both have the augment ἐ- because both are past. The difference is how the action is seen.' },
+  'greek.third-decl': { kind: 'blocks', rows: [
+    { join: '+', parts: [['φύλακ', 'stem'], ['ος', 'ending', 'genitive']], result: 'φύλακος' },
+    { join: '+', parts: [['φύλακ', 'stem'], ['α', 'ending', 'accusative']], result: 'φύλακα' },
+    { join: '+', parts: [['φύλακ', 'stem'], ['ι', 'ending', 'dative']], result: 'φύλακι' },
+    { join: '+', parts: [['φύλακ', 'stem'], ['ς', 'ending', 'nominative']], result: 'φύλαξ (κ + ς = ξ)' },
+  ], caption: 'The nominative φύλαξ hides the κ; the genitive φύλακος shows the real stem.' },
+  'greek.participles': { kind: 'table', head: ['', 'present', 'aorist'], rows: [
+    ['form', 'λύ**ων**', 'λύ**σας**'], ['English', 'freeing', 'having freed'], ['when?', 'at the same time as the main verb', 'before the main verb'],
+  ] },
+  'greek.roots': { kind: 'blocks', rows: [
+    { join: '+', parts: [['τῆλε', 'root', 'far'], ['σκοπέω', 'root', 'look at']], result: 'telescope' },
+    { join: '+', parts: [['φῶς', 'root', 'light'], ['γράφω', 'root', 'write, draw']], result: 'photograph' },
+    { join: '+', parts: [['ζῷον', 'root', 'animal'], ['λόγος', 'root', 'study']], result: 'zoology' },
+  ] },
+};
+const ITEM_VISUALS = {
+  'greek.ar.clue': { kind: 'blocks', rows: [{ parts: [G.o('τοὺς ἵππ**ους**'), G.s('ὁ δοῦλ**ος**'), G.v('ἄγει')], result: 'The slave leads the horses.' }] },
+  'greek.s.6': { kind: 'blocks', rows: [{ parts: [G.o('τὸν φίλ**ον**'), G.s('ὁ ἀδελφ**ὸς**'), G.v('λύει')], result: 'The brother frees the friend.' }] },
+  'greek.t.fut': { kind: 'blocks', rows: [{ join: '+', parts: [['πέμπ', 'stem'], ['σ', 'tense', 'future'], ['ω', 'ending', 'I']], result: 'πέμψω (π + σ = ψ)' }] },
+  'greek.ao.lusa': { kind: 'blocks', rows: [{ join: '+', parts: [['ἔ', 'augment', 'past'], ['λυ', 'stem'], ['σ', 'tense', 'aorist'], ['α', 'ending', 'I']], result: 'ἔλυσα, I freed' }] },
+  'greek.my.th.8': { kind: 'flow', steps: ['The Athenians send young people to Crete', 'Ariadne gives Theseus a thread', 'Theseus kills the Minotaur', 'Theseus finds his way out', 'The Athenians rejoice'] },
+  'greek.pc.lusas': { kind: 'flow', across: true, steps: ['λύσας: he frees his friends', 'φεύγει: then he flees'], caption: 'The aorist participle happened first.' },
+};
+// keep an article on the same line as its noun in a narrow table cell
+const tight = (v) => ({ ...v, rows: v.rows.map((r) => r.map((c, i) => (i ? c.replace(/ /g, '\u00a0') : c))) });
+for (const id of ['greek.nouns-2', 'greek.nouns-1']) TOPIC_VISUALS[id] = TOPIC_VISUALS[id].map(tight);
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'greek', deck: 'y8', topics, items }];

@@ -612,4 +612,113 @@ for (const k of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === `engl
 for (const it of items) { const m = MEMORY[it.id.replace(/^english\.lang2\./, '')]; if (m) Object.assign(it, m); }
 for (const k of Object.keys(MEMORY)) if (!items.some((it) => it.id === `english.lang2.${k}`)) throw new Error(`memory hook for unknown item ${k}`);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Topics keyed without “english.lang2-”, items without “english.lang2.”. An unknown id throws.
+const build = (word, ...parts) => ({ join: '+', parts, result: word });
+const words = (...rows) => ({ kind: 'blocks', rows });
+const W = {
+  monarchy: build('monarchy', ['mon', 'prefix', 'one'], ['archy', 'suffix', 'rule']),
+  astronomy: build('astronomy', ['astro', 'root', 'star'], ['nomy', 'suffix', 'law']),
+  autonomy: build('autonomy', ['auto', 'prefix', 'self'], ['nomy', 'suffix', 'law']),
+  metamorphosis: build('metamorphosis', ['meta', 'prefix', 'change'], ['morph', 'root', 'shape'], ['osis', 'suffix', 'process']),
+  amorphous: build('amorphous', ['a', 'prefix', 'without'], ['morph', 'root', 'shape'], ['ous', 'suffix', 'having']),
+  photograph: build('photograph', ['photo', 'prefix', 'light'], ['graph', 'root', 'write or draw']),
+  cryptography: build('cryptography', ['crypto', 'prefix', 'hidden'], ['graphy', 'root', 'writing']),
+  isosceles: build('isosceles', ['iso', 'prefix', 'equal'], ['sceles', 'root', 'leg']),
+  xenophobia: build('xenophobia', ['xeno', 'root', 'stranger'], ['phobia', 'suffix', 'fear']),
+  dystopia: build('dystopia', ['dys', 'prefix', 'bad'], ['topia', 'root', 'place']),
+  euphemism: build('euphemism', ['eu', 'prefix', 'good'], ['phemism', 'root', 'speech']),
+  hypothermia: build('hypothermia', ['hypo', 'prefix', 'under'], ['therm', 'root', 'heat'], ['ia', 'suffix', 'condition']),
+  heterogeneous: build('heterogeneous', ['hetero', 'prefix', 'other'], ['gene', 'root', 'kind'], ['ous', 'suffix', 'having']),
+  panacea: build('panacea', ['pan', 'prefix', 'all'], ['acea', 'root', 'cure']),
+  transmit: build('transmit', ['trans', 'prefix', 'across'], ['mit', 'root', 'send']),
+  conduct: build('conduct', ['con', 'prefix', 'together'], ['duct', 'root', 'lead']),
+  provoke: build('provoke', ['pro', 'prefix', 'forth'], ['voke', 'root', 'call']),
+  omnivore: build('omnivore', ['omni', 'prefix', 'all'], ['vore', 'root', 'eat']),
+  visible: build('visible', ['vis', 'root', 'see'], ['ible', 'suffix', 'able to be']),
+  reverse: build('reverse', ['re', 'prefix', 'back'], ['verse', 'root', 'turn']),
+  loquacious: build('loquacious', ['loqu', 'root', 'speak'], ['acious', 'suffix', 'full of']),
+  ambidextrous: build('ambidextrous', ['ambi', 'prefix', 'both'], ['dextr', 'root', 'right hand'], ['ous', 'suffix', 'having']),
+  mortal: build('mortal', ['mort', 'root', 'death'], ['al', 'suffix', 'relating to']),
+};
+const OPPOSITES = {
+  kind: 'table', head: ['', 'One end', 'The opposite end'], tint: 'cols',
+  rows: [['good / bad', '**eu-** (good): euphoria', '**dys-** (bad): dystopia'], ['over / under', '**hyper-** (over): hyperactive', '**hypo-** (under): hypothermia'], ['same / other', '**homo-** (same): homogeneous', '**hetero-** (other): heterogeneous']],
+  caption: 'Greek prefixes in opposite pairs: learn one and you know its partner.',
+};
+const NOUN_PHRASE = {
+  kind: 'blocks',
+  rows: [
+    { parts: [['the', 'article', 'determiner'], ['ancient, crumbling', 'adjective', 'pre-modifiers'], ['temple', 'noun', 'head noun'], ['on the hill', 'preposition', 'post-modifier']] },
+    { parts: [['Medusa,', 'noun'], ['a Gorgon with snakes for hair,', 'noun', 'apposition: renames her'], ['lived', 'verb'], ['alone.', 'adverbial']] },
+  ],
+  caption: 'An expanded noun phrase packs detail round its head noun; apposition places a second noun phrase beside the first.',
+};
+const ZOOM = { kind: 'flow', steps: ['**Wide shot**: the whole stormy sea', '**Mid shot**: the ship', '**Close-up**: one sailor’s hands'], caption: 'Design description like a film: wide, then closer, then one telling detail.' };
+const FORMS = {
+  kind: 'table', head: ['Form', 'Conventions'], tint: 'rows',
+  rows: [
+    ['Newspaper article', 'headline, standfirst, byline, subheadings, quotations'],
+    ['Formal letter', 'addresses and date; “Dear Sir or Madam” → Yours faithfully; “Dear Mr Hughes” → Yours sincerely'],
+    ['Speech', 'direct address to the audience; rhetorical devices'],
+    ['Report', 'impersonal tone, subheadings, recommendations'],
+    ['Leaflet', 'headings, short sections, bullet points'],
+    ['Blog', 'personal and chatty, in the first person'],
+  ],
+  caption: 'Before you write: form, audience and purpose.',
+};
+const SIGN_OFF = { kind: 'table', head: ['If you begin…', '…end with'], rows: [['Dear Sir or Madam (no name)', 'Yours **faithfully**'], ['Dear Mr Hughes (a name)', 'Yours **sincerely**']] };
+const NARRATORS = {
+  kind: 'table', head: ['Narrator', 'Uses', 'What we learn'], tint: 'rows',
+  rows: [['First person', '“I”', 'only what the narrator sees, thinks and chooses to tell'], ['Third person limited', '“he”, “she”', 'one character’s view: a camera on their shoulder'], ['Third person omniscient', '“he”, “she”, “they”', 'every character’s thoughts and feelings'], ['Second person', '“you”', 'the reader is placed inside the story']],
+};
+const CHIASMUS = {
+  kind: 'blocks',
+  rows: [
+    { parts: [['Ask not what'], ['your country', 'subject', 'A'], ['can do for'], ['you;', 'object', 'B']] },
+    { parts: [['ask what'], ['you', 'object', 'B'], ['can do for'], ['your country.', 'subject', 'A']] },
+  ],
+  caption: 'Chiasmus: A B, then B A. The words cross like the Greek letter chi (X).',
+};
+const TOPIC_VISUALS = {
+  'roots-1': { ...words(W.astronomy, W.metamorphosis, W.photograph), caption: 'Greek parts snap together into English words.' },
+  'roots-2': OPPOSITES,
+  'latin-2': { ...words(W.transmit, W.conduct, W.provoke, W.omnivore), caption: 'Latin roots with prefixes snapped on.' },
+  'grammar-3': NOUN_PHRASE,
+  description: ZOOM,
+  nonfiction: FORMS,
+  voice: NARRATORS,
+  'rhetoric-2': CHIASMUS,
+};
+const ITEM_VISUALS = {
+  'r1.arche': words(W.monarchy),
+  'r1.nomos': words(W.astronomy, W.autonomy),
+  'r1.morphe': words(W.metamorphosis),
+  'r1.dec1': words(W.cryptography),
+  'r1.dec4': words(W.amorphous),
+  'r2.dys': OPPOSITES,
+  'r2.hetero': OPPOSITES,
+  'r2.dec1': words(W.dystopia),
+  'r2.dec3': words(W.panacea),
+  'la2.mit': words(W.transmit),
+  'la2.voc': words(W.provoke),
+  'la2.loqu': words(W.loquacious),
+  'la2.dec2': words(W.omnivore),
+  'la2.dec3': words(W.ambidextrous),
+  'g3.premod': { kind: 'blocks', rows: [NOUN_PHRASE.rows[0]] },
+  'g3.postmod': { kind: 'blocks', rows: [NOUN_PHRASE.rows[0]] },
+  'g3.apposition': { kind: 'blocks', rows: [NOUN_PHRASE.rows[1]] },
+  'g3.nonfinite': { kind: 'blocks', rows: [{ parts: [['Gripping the thread,', 'subordinate', 'non-finite clause'], ['Theseus entered the labyrinth.', 'clause', 'main clause']] }], caption: 'A non-finite clause has no tense of its own: it leans on the main clause.' },
+  'g3.passive-hide': { kind: 'blocks', rows: [{ parts: [['The minister', 'subject', 'subject (the doer)'], ['made', 'verb', 'active verb'], ['mistakes.', 'object', 'object']] }, { parts: [['Mistakes', 'object', 'subject'], ['were made.', 'verb', 'passive verb']] }], caption: 'In the passive the agent can simply disappear: nobody is named.' },
+  'ds.zoom': ZOOM,
+  'nf.faithfully': SIGN_OFF,
+  'nf.sincerely': SIGN_OFF,
+  'vo.omniscient': NARRATORS,
+  'c2.thirdlimited': NARRATORS,
+  'rh2.chiasmus': CHIASMUS,
+  'rh2.epistrophe': { kind: 'blocks', rows: [{ parts: [['government of'], ['the people,', 'noun', 'repeated end'], ['by'], ['the people,', 'noun', 'repeated end'], ['for'], ['the people.', 'noun', 'repeated end']] }], caption: 'Epistrophe: the same words at the end of each phrase (Lincoln).' },
+};
+for (const [k, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === `english.lang2-${k}`); if (!t) throw new Error(`picture for unknown topic ${k}`); t.visual = v; }
+for (const [k, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === `english.lang2.${k}`); if (!it) throw new Error(`picture for unknown item ${k}`); it.visual = v; }
+
 export default [{ subject: 'english', deck: 'y8-lang2', topics, items, sentences: SENTENCES, pieces: PIECES }];

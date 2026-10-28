@@ -32,4 +32,16 @@ const TMPL_MEMORY = {
 
 const items = TOPICS.map((t, i) => ({ id: `${t.id}.tmpl`, topic: t.id, kind: 'template', gen: ['expand', 'equations2', 'percentChange', 'polygons', 'parallelAngles', 'ratio2', 'indices', 'linearGraphs', 'fracMixed', 'circles'][i], levels: [1, 2, 3], seed: [-0.6, 0.2, 1], ...TMPL_MEMORY[t.id.replace(/^maths\./, '')] }));
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const M = (diagram, caption) => ({ kind: 'maths', diagram, ...(caption ? { caption } : {}) });
+const TOPIC_VISUALS = {
+  'maths.percent-change': M({ type: 'barmodel', rows: [{ label: '100%', parts: 5, text: '£12' }, { label: '120%', parts: 6, text: '£12', total: '£72' }] }, 'After a 20% rise a coat costs £72. That is 120%: 6 blocks of 20%. One block = £72 ÷ 6 = £12, so the original (100%) was 5 × £12 = £60.'),
+  'maths.polygons': { kind: 'table', head: ['sides', 'triangles', 'angles add to'], rows: [['3 (triangle)', '1', '180°'], ['4 (quadrilateral)', '2', '360°'], ['5 (pentagon)', '3', '540°'], ['6 (hexagon)', '4', '**720°**'], ['8 (octagon)', '6', '1080°']], caption: 'Diagonals from one corner cut a polygon into (n − 2) triangles, each 180°. Exterior angles always add up to 360°.' },
+  'maths.ratio-2': M({ type: 'barmodel', rows: [{ label: 'Ali', parts: 5, text: '£5' }, { label: 'Ben', parts: 2, text: '£5' }] }, 'Ratio 5 : 2, and Ali has £15 more. Ali’s 3 extra parts are worth £15, so one part is £5: Ali has £25 and Ben £10.'),
+  'maths.equations-2': { kind: 'flow', steps: ['5x + 2 = 2x + 14', 'Take 2x from both sides: 3x + 2 = 14', 'Take 2 from both sides: 3x = 12', 'Divide both sides by 3: x = 4'], caption: 'Move the smaller x term first, then solve as usual.' },
+  'maths.frac-mixed': M({ type: 'barmodel', rows: [1, 2, 3].map((k) => ({ label: `whole ${k}`, parts: 4, text: '¼' })) }, '3 ÷ ¼ asks “how many quarters fit into 3?” Four in each whole, so 12. Keep, change, flip: 3 × 4 = 12.'),
+  'maths.circles': { kind: 'table', head: ['part', 'what it is', 'formula'], rows: [['radius (r)', 'centre to edge', ''], ['diameter (d)', 'edge to edge through the centre', 'd = 2r'], ['circumference (C)', 'all the way round', '**C = πd**'], ['area (A)', 'the space inside', '**A = πr²**']], caption: 'π ≈ 3.14. A circle with radius 5 cm has diameter 10 cm, so C = π × 10 ≈ 31.4 cm.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = TOPICS.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = t.visual ? [].concat(t.visual, v) : v; }
+
 export default [{ subject: 'maths', deck: 'stretch', topics: TOPICS, items }];

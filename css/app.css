@@ -450,8 +450,7 @@ pre.code code { border: 0; padding: 0; background: none; font-size: 0.95rem; }
 .visual-group { display: grid; gap: 10px; }
 .visual-svg { width: 100%; max-width: 460px; height: auto; display: block; }
 .visual-timeline .visual-svg { max-width: 640px; }
-.visual-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.visual-scroll > .visual-svg { min-width: 520px; }
+.visual-scroll { width: 100%; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .visual-diagram-box { width: 100%; max-width: 520px; min-height: 60px; }
 .visual-diagram-box .map-box svg { width: 100%; height: auto; display: block; }
 .dg-leader { stroke: var(--muted); stroke-width: 1.2; }
@@ -467,6 +466,8 @@ pre.code code { border: 0; padding: 0; background: none; font-size: 0.95rem; }
   .vflow.across li:not(:last-child)::after { content: '→'; left: auto; right: -21px; bottom: auto; top: 50%; transform: translateY(-50%); }
 }
 .vtree, .vtree ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+/* a tree wider than the screen scrolls from its left edge instead of being cut off */
+.vtree { width: max-content; min-width: 100%; }
 .vtree ul { padding-top: 18px; position: relative; }
 .vtree li { position: relative; padding: 18px 6px 0; display: flex; flex-direction: column; align-items: center; }
 .vtree > li { padding-top: 0; }
@@ -483,16 +484,20 @@ pre.code code { border: 0; padding: 0; background: none; font-size: 0.95rem; }
 .vtree-node { border: 2px solid var(--v1); background: var(--v1-soft); border-radius: 10px; padding: 5px 9px; text-align: center; display: grid; font-size: 0.88rem; min-width: 74px; max-width: 150px; }
 .vtree-node span { font-size: 0.76rem; color: var(--muted); }
 .vtree-node.mark { border-color: var(--v4); background: var(--v4-soft); }
+/* phones: narrower nodes, so a three-way split fits without scrolling */
+@media (max-width: 440px) { .vtree li { padding-left: 2px; padding-right: 2px; } .vtree-node { max-width: 110px; min-width: 60px; padding: 4px 5px; font-size: 0.8rem; hyphens: manual; } }
 .vtable { border-collapse: separate; border-spacing: 0; font-size: 0.95rem; }
 .vtable th, .vtable td { padding: 6px 12px; border-bottom: 1px solid var(--line); text-align: left; }
-.vtable thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+.vtable thead th { font-size: 0.85rem; letter-spacing: 0.02em; color: var(--muted); }
 .vtable tbody th { color: var(--muted); font-weight: 600; font-size: 0.88rem; }
 .vtable td strong { color: var(--v2); }
 .vblocks { display: grid; gap: 12px; justify-items: center; }
-.vblocks-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: flex-start; justify-content: center; }
+.vblocks-row { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: flex-start; justify-content: center; }
+.vblock-l.as-written { text-transform: none; letter-spacing: 0; font-size: 0.82rem; }
+.vblocks-res { display: inline-flex; gap: 10px; align-items: flex-start; max-width: 100%; }
 .vblock { display: grid; justify-items: center; gap: 2px; }
 .vblock-t { border: 2px solid var(--c, var(--line)); background: var(--cs, var(--card)); border-radius: 8px; padding: 4px 9px; font-weight: 700; font-size: 1.05rem; }
-.vblock-l { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--c, var(--muted)); font-weight: 700; }
+.vblock-l { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--c, var(--muted)); font-weight: 700; text-align: center; line-height: 1.15; max-width: 8.5em; }
 .vblocks-join { font-weight: 800; color: var(--muted); padding-top: 6px; }
 .vblocks-result { font-size: 1.15rem; padding-top: 4px; }
 .vsounds { display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: center; }

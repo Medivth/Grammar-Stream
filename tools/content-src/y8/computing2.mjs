@@ -448,4 +448,46 @@ for (const id of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === id))
 for (const it of items) if (MEMORY[it.id]) Object.assign(it, MEMORY[it.id]);
 for (const id of Object.keys(MEMORY)) if (!items.some((it) => it.id === id)) throw new Error(`memory hook for unknown item ${id}`);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Graphs of nodes and edges (shortest paths) and logic-gate symbols cannot be drawn yet, so paths
+// has none and circuits shows truth tables.
+const MERGE = { kind: 'flow', steps: ['8 3 5 1 7 2 6 4', 'split: 8 3 5 1 | 7 2 6 4', 'split: 8 3 | 5 1 | 7 2 | 6 4', 'split into single items', 'merge: 3 8 | 1 5 | 2 7 | 4 6', 'merge: 1 3 5 8 | 2 4 6 7', 'merge: 1 2 3 4 5 6 7 8'], caption: 'Merge sort: split in half until every piece has one item, then merge pairs of sorted pieces.' };
+const BSEARCH = { kind: 'flow', steps: ['Sorted list: 4 9 15 22 30 41 56', 'Check the middle, **22**. 41 is bigger, so drop 22 and everything left of it', 'Still in play: 30 41 56. Check the middle, **41**: found!'], caption: 'Binary search for 41. Each check throws away half of what is left, which only works because the list is sorted.' };
+const TOPIC_VISUALS = {
+  'computing.functions': { kind: 'flow', across: true, steps: ['argument: launch(50)', 'parameter: ships = 50', 'return ships * 2', 'result: 100'], caption: 'The argument is the value passed in; the parameter is the name it gets inside the function. ships is local: it vanishes when the function ends.' },
+  'computing.dicts': { kind: 'table', head: ['key', 'value'], rows: [['"Zeus"', '"thunderbolt"'], ['"Athena"', '"owl"'], ['"Poseidon"', '"trident"']], tint: 'cols', caption: 'symbols["Athena"] looks up the key and gives "owl". Keys are unique: setting a key again replaces its value.' },
+  'computing.strings': { kind: 'table', rows: [['index', '0', '1', '2', '3', '4', '5'], ['character', 'M', '**E**', '**D**', '**U**', 'S', 'A']], caption: 'name = "MEDUSA". The slice name[1:4] is "EDU": from index 1 up to, but not including, index 4.' },
+  'computing.grids': { kind: 'table', head: ['', '0', '1', '2', '3'], rows: [['0', '1st', '2nd', '3rd', '4th'], ['1', '5th', '6th', '7th', '8th'], ['2', '9th', '10th', '11th', '**12th**']], caption: 'Rows r down the side, columns c along the top. A loop over c inside a loop over r visits the squares in this order, row by row. The last is grid[2][3]: row 2, column 3.' },
+  'computing.algotrace': MERGE,
+  'computing.efficiency': { kind: 'table', head: ['', '10 items', '1000 items', '10⁶ items'], rows: [['O(1)', '1', '1', '1'], ['O(log n)', '≈ 3', '≈ 10', '≈ 20'], ['O(n)', '10', '1000', '10⁶'], ['O(n²)', '100', '10⁶', '**10¹²**']], caption: 'Steps needed as the data grows. Binary search is O(log n); linear search is O(n); comparing every pair is O(n²).' },
+  'computing.structures': [
+    { kind: 'table', rows: [['top', '**edit 3** ← push and pop here'], ['', 'edit 2'], ['bottom', 'edit 1']], caption: 'A stack (last in, first out): undo pops edit 3, the most recent, first.' },
+    { kind: 'table', rows: [['front →', 'Kit', 'Mira', 'Theo', '← back']], caption: 'A queue (first in, first out): join at the back, leave from the front. Kit arrived first, so Kit is served first.' },
+  ],
+  'computing.compression': { kind: 'table', head: ['data', 'run-length code'], rows: [['WWWWBBBW', '4W3B1W: 8 → 6 characters'], ['ABCDEFG', '1A1B1C1D1E1F1G: 7 → **14** characters']], caption: 'Run-length encoding shrinks long runs of the same value, but makes data with no runs bigger.' },
+  'computing.encryption': { kind: 'table', rows: [['plain', 'A', 'T', 'H', 'E', 'N', 'A'], ['key', 'O', 'W', 'L', 'O', 'W', 'L'], ['shift', '14', '22', '11', '14', '22', '11'], ['cipher', '**O**', 'P', 'S', 'S', 'J', '**L**']], caption: 'Vigenère with the key word OWL: each letter is shifted by its key letter (A = 0). The two As become O and L, so letter counts give little away.' },
+  'computing.internet': { kind: 'flow', steps: ['You type the web address', 'DNS finds the IP address', 'Your browser sends an HTTP request in packets', 'Routers forward the packets across networks', 'The server sends the page back', 'The browser displays the page'] },
+  'computing.databases': [
+    { kind: 'table', head: ['name', 'home', 'strength'], rows: [['Perseus', 'Argos', '78'], ['Theseus', 'Athens', '84'], ['Jason', 'Iolcus', '71'], ['Atalanta', 'Arcadia', '88']], caption: 'Table Heroes.' },
+    { kind: 'table', head: ['name'], rows: [['Atalanta'], ['Theseus'], ['Perseus'], ['Jason']], caption: '`SELECT name FROM Heroes ORDER BY strength DESC;` gives the strongest first. `SELECT COUNT(*) FROM Heroes;` gives 4.' },
+  ],
+  'computing.architecture': { kind: 'table', head: ['part', 'job'], rows: [['control unit', 'directs the fetch–decode–execute cycle'], ['ALU', 'does arithmetic and logic'], ['registers', 'tiny, very fast stores for the values in use'], ['cache', 'fast memory for data used often'], ['clock', 'ticks to keep every step in time']], caption: 'Faster clock, more cache and more cores usually mean a faster CPU.' },
+  'computing.recursion': { kind: 'flow', steps: ['factorial(4) = 4 × factorial(3)', 'factorial(3) = 3 × factorial(2)', 'factorial(2) = 2 × factorial(1)', 'factorial(1) = 1: the base case', 'Back up: 2 × 1 = 2, 3 × 2 = 6, 4 × 6 = 24'] },
+  'computing.circuits': { kind: 'table', head: ['A', 'B', 'C', 'A AND B', '(A AND B) OR C'], rows: [['0', '0', '0', '0', '0'], ['0', '0', '1', '0', '1'], ['0', '1', '0', '0', '0'], ['0', '1', '1', '0', '1'], ['1', '0', '0', '0', '0'], ['1', '0', '1', '0', '1'], ['1', '1', '0', '1', '**1**'], ['1', '1', '1', '1', '1']], caption: '3 inputs give 2³ = 8 rows. Work out the brackets first, then the OR.' },
+  'computing.huffman': { kind: 'table', head: ['letter', 'count', 'code'], rows: [['E', '8', '**0**'], ['A', '4', '**10**'], ['T', '2', '**110**'], ['Z', '1', '**111**']], caption: 'Build the tree by joining the two rarest each time: Z + T = 3, then + A = 7, then + E = 15. Left = 0, right = 1, so E, the commonest, gets the shortest code.' },
+};
+const ITEM_VISUALS = {
+  'computing.m.at.merge': MERGE,
+  'computing.m.at.binary': BSEARCH,
+  'computing.m.at.sorted': BSEARCH,
+  'computing.m.dc.unique': { kind: 'table', head: ['key', 'value before', 'value after'], rows: [['"Zeus"', '90', '90'], ['"Hera"', '80', '**50**']], caption: 'power["Hera"] = 50 replaces Hera’s old value. A key can only appear once.' },
+  'computing.m.sk.undo': { kind: 'table', rows: [['top', '**edit 3** ← undo pops this first'], ['', 'edit 2'], ['bottom', 'edit 1']] },
+  'computing.m.cm.rlebad': { kind: 'table', head: ['data', 'run-length code'], rows: [['WWWWBBBW', '4W3B1W (shorter)'], ['ABCDEFG', '1A1B1C1D1E1F1G (**twice as long**)']] },
+  'computing.m.lc.half': { kind: 'table', head: ['A', 'B', 'sum (XOR)', 'carry (AND)'], rows: [['0', '0', '0', '0'], ['0', '1', '1', '0'], ['1', '0', '1', '0'], ['1', '1', '0', '**1**']], caption: '1 + 1 = 10 in binary: sum 0, carry 1.' },
+  'computing.m.lc.rows': { kind: 'table', rows: [['inputs', '1', '2', '3', '4'], ['rows', '2', '4', '**8**', '16']], caption: 'Each extra input doubles the rows: 2ⁿ.' },
+  'computing.m.in.visit': TOPIC_VISUALS['computing.internet'],
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'computing', deck: 'y8-more', topics, items }];

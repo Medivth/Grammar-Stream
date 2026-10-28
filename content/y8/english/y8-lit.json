@@ -11,7 +11,18 @@
    "intro": "Greek myths explain the world (why winter comes, where spiders came from) and test human beings against the gods. Read each one closely: who breaks a rule, and what does it cost them?",
    "teach": "Explain how the Persephone myth explains the seasons.",
    "talk": "Ask {him} which myth {she} would retell in a modern setting, and how.",
-   "hook": "Every myth asks the same two questions: who broke the rule, and what did it cost them?"
+   "hook": "Every myth asks the same two questions: who broke the rule, and what did it cost them?",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "Spring: Persephone returns",
+     "Summer: the crops ripen",
+     "Autumn: she goes below",
+     "Winter: Demeter mourns"
+    ],
+    "centre": "six seeds, six months below",
+    "caption": "Persephone above ground: spring and summer. Below with Hades: autumn and winter."
+   }
   },
   {
    "id": "english.homer",
@@ -35,7 +46,38 @@
    "intro": "A first page has to hook the reader, set up the world and hint at what is to come. Dickens and Austen begin with two of the most famous sentences in English, and both are being slyly ironic.",
    "teach": "Explain why Austen’s first sentence is ironic.",
    "talk": "Read the first lines of the book {she} is reading now together. What do they promise?",
-   "hook": "A great first line is a promise: it hooks the reader and hints at the whole book."
+   "hook": "A great first line is a promise: it hooks the reader and hints at the whole book.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "It was the…",
+     "…it was the…"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "best of times",
+      "worst of times"
+     ],
+     [
+      "age of wisdom",
+      "age of foolishness"
+     ],
+     [
+      "epoch of belief",
+      "epoch of incredulity"
+     ],
+     [
+      "season of Light",
+      "season of Darkness"
+     ],
+     [
+      "spring of hope",
+      "winter of despair"
+     ]
+    ],
+    "caption": "Dickens’s antithesis: each idea paired with its opposite, an age pulled in two directions."
+   }
   },
   {
    "id": "english.gothic",
@@ -61,7 +103,33 @@
    "intro": "Detective stories are built on inference: clues, deductions, and a narrator who sees less than the detective. Read Watson’s reasoning carefully. Is he as clever as he thinks?",
    "teach": "Explain the difference between an observation and a deduction.",
    "talk": "Play a game of deductions: what can you infer about a stranger from their shoes?",
-   "hook": "Observe, then deduce: what you see is the clue; what you work out from it is the answer."
+   "hook": "Observe, then deduce: what you see is the clue; what you work out from it is the answer.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Observation: what you see",
+     "Deduction: what you work out"
+    ],
+    "rows": [
+     [
+      "a silver band “from his friends”",
+      "he is well respected"
+     ],
+     [
+      "the stick is badly knocked about",
+      "a country doctor, not a town one"
+     ],
+     [
+      "the iron ferrule is worn down",
+      "he walks a great deal"
+     ],
+     [
+      "a shiny coffee-pot (Holmes)",
+      "he can see what Watson is doing"
+     ]
+    ],
+    "caption": "Watson’s reasoning about Dr Mortimer’s stick, and Holmes’s trick."
+   }
   },
   {
    "id": "english.havisham",
@@ -74,7 +142,32 @@
    "intro": "Dickens builds one of the strangest characters in fiction from objects: a dress, a shoe, a veil. As you read, ask what each detail suggests about her past.",
    "teach": "Explain how Dickens uses the colour white in this extract.",
    "talk": "Ask {him} what Miss Havisham’s room says about her, and what {her} own room would say about {him}.",
-   "hook": "Stopped clocks, one shoe, a rotting wedding cake: Miss Havisham is a woman frozen at one moment."
+   "hook": "Stopped clocks, one shoe, a rotting wedding cake: Miss Havisham is a woman frozen at one moment.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Detail",
+     "What it suggests"
+    ],
+    "rows": [
+     [
+      "wedding dress, veil, bridal flowers",
+      "dressed for a wedding that never came"
+     ],
+     [
+      "one shoe on, veil half arranged",
+      "time stopped mid-dressing"
+     ],
+     [
+      "white turned yellow",
+      "hope gone stale"
+     ],
+     [
+      "a waxwork, a skeleton",
+      "a living corpse"
+     ]
+    ]
+   }
   },
   {
    "id": "english.tempest",
@@ -109,7 +202,54 @@
    "intro": "Wilfred Owen wrote about the First World War from inside it. His poems are angry and tender at once. “Anthem for Doomed Youth” is a sonnet that asks what funeral rites these soldiers will have.",
    "teach": "Explain the contrast between the two halves of “Anthem for Doomed Youth”.",
    "talk": "On Remembrance Sunday, read the poem aloud together.",
-   "hook": "Owen wrote that his subject was “War, and the pity of War”."
+   "hook": "Owen wrote that his subject was “War, and the pity of War”.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "trench"
+    },
+    {
+     "kind": "table",
+     "head": [
+      "",
+      "Funeral rite",
+      "Owen’s replacement"
+     ],
+     "rows": [
+      [
+       "Octave",
+       "passing-bells",
+       "the anger of the **guns**"
+      ],
+      [
+       "Octave",
+       "prayers",
+       "the **rifles**’ rapid rattle"
+      ],
+      [
+       "Octave",
+       "choirs",
+       "wailing **shells**"
+      ],
+      [
+       "Sestet",
+       "candles",
+       "glimmers in boys’ **eyes**"
+      ],
+      [
+       "Sestet",
+       "pall",
+       "the pallor of girls’ **brows**"
+      ],
+      [
+       "Sestet",
+       "flowers",
+       "the tenderness of **patient minds**"
+      ]
+     ],
+     "caption": "Octave (lines 1–8): the noise of the front. The volta at line 9 turns to the sestet (lines 9–14): quiet grief at home."
+    }
+   ]
   },
   {
    "id": "english.tennyson",
@@ -135,7 +275,19 @@
    "intro": "A short story has no room to waste. Every detail should matter, and the best ones plant clues that only make sense at the end. Read this story twice: once for the plot, once for the clues.",
    "teach": "Explain how the writer foreshadows who the guard really is.",
    "talk": "Ask {him} to plan a short story with a twist in five sentences.",
-   "hook": "In a short story nothing is wasted: every clue is planted to pay off at the end."
+   "hook": "In a short story nothing is wasted: every clue is planted to pay off at the end.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Forty-five steps, not forty-four",
+     "A guard with an owl brooch",
+     "“Her work was better”",
+     "Clear, cold grey eyes",
+     "The chair is empty",
+     "Reveal: a single grey feather"
+    ],
+    "caption": "Planted clues, then the payoff. The owl and grey eyes belong to Athena."
+   }
   },
   {
    "id": "english.terms",
@@ -159,7 +311,44 @@
    "intro": "Context means the world a text was written in. Knowing it helps you understand why a writer chose what they did, but always use it to explain the text, not instead of it.",
    "teach": "Explain how knowing that Owen was a soldier changes how you read his poems.",
    "talk": "Ask {him} which writer {she} would most like to interview, and what {she} would ask.",
-   "hook": "Context explains the text; it never replaces it."
+   "hook": "Context explains the text; it never replaces it.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1550,
+    "to": 1950,
+    "set": "britain",
+    "events": [
+     [
+      1606,
+      "Shakespeare’s Macbeth"
+     ],
+     [
+      1764,
+      "first Gothic novel"
+     ],
+     [
+      1813,
+      "Pride and Prejudice"
+     ],
+     [
+      1818,
+      "Frankenstein"
+     ],
+     [
+      1859,
+      "A Tale of Two Cities"
+     ],
+     [
+      1886,
+      "Jekyll and Hyde"
+     ],
+     [
+      1917,
+      "Owen’s war poems"
+     ]
+    ],
+    "caption": "Homer is far older: the Iliad and the Odyssey date from the 700s BC, about 2,700 years ago."
+   }
   },
   {
    "id": "english.tragedy",
@@ -172,7 +361,23 @@
    "intro": "The Greeks invented tragedy and named its parts: the hero’s fatal error (hamartia), the chorus, the reversal of fortune. Shakespeare, and every crime drama on television, still use their ideas.",
    "teach": "Explain what hubris and hamartia mean, using a myth as an example.",
    "talk": "Ask {him} which modern film follows the shape of a Greek tragedy.",
-   "hook": "Pride comes before a fall: hubris, then nemesis. That is the shape of a Greek tragedy."
+   "hook": "Pride comes before a fall: hubris, then nemesis. That is the shape of a Greek tragedy.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "greek-theatre"
+    },
+    {
+     "kind": "flow",
+     "steps": [
+      "**Hamartia**: the hero’s fatal error",
+      "**Peripeteia**: the reversal of fortune",
+      "**Anagnorisis**: the hero recognises the truth",
+      "**Catharsis**: the audience’s pity and fear released"
+     ],
+     "caption": "The shape Aristotle described. Hubris (pride against the gods) often drives the error; Nemesis punishes it."
+    }
+   ]
   },
   {
    "id": "english.sonnet",
@@ -187,7 +392,39 @@
    "intro": "The play opens with a sonnet that gives away the ending. GCSE examiners love form: how a poem’s shape and rhyme carry its meaning.",
    "teach": "Explain why Shakespeare tells the audience the ending before the play starts.",
    "talk": "Ask {him} what changes when you know how a story ends.",
-   "hook": "Shakespearean sonnet: three quatrains and a couplet, 4 + 4 + 4 + 2 = 14 lines."
+   "hook": "Shakespearean sonnet: three quatrains and a couplet, 4 + 4 + 4 + 2 = 14 lines.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "rhyme words",
+     "rhyme"
+    ],
+    "tint": "rows",
+    "rows": [
+     [
+      "Quatrain 1 (lines 1–4)",
+      "dignity, scene, mutiny, unclean",
+      "**ABAB**"
+     ],
+     [
+      "Quatrain 2 (lines 5–8)",
+      "foes, life, overthrows, strife",
+      "**CDCD**"
+     ],
+     [
+      "Quatrain 3 (lines 9–12)",
+      "love, rage, remove, stage",
+      "**EFEF**"
+     ],
+     [
+      "Couplet (lines 13–14)",
+      "attend, mend",
+      "**GG**"
+     ]
+    ],
+    "caption": "The Prologue: 4 + 4 + 4 + 2 = 14 lines of iambic pentameter, clinched by a rhyming couplet."
+   }
   },
   {
    "id": "english.exposure",
@@ -298,7 +535,18 @@
    "explain": "One month in the Underworld for each seed: six months of winter.",
    "passage": "Persephone and the Six Seeds\n\nPersephone was gathering narcissus flowers in a meadow when the ground split open. Out of the dark came a chariot pulled by black horses, and in it stood Hades, lord of the dead. Before she could scream for her mother, he had swept her down into the Underworld, and the earth closed over them like a mouth.\n\nHer mother was Demeter, goddess of the harvest. She searched for nine days without eating or sleeping, carrying a torch through every valley. When at last the Sun, who sees everything, told her the truth, her grief turned to fury. She left Olympus and walked the earth disguised as an old woman, and wherever she went, nothing grew. Wheat withered in the fields. Fruit shrivelled on the branch. People began to starve, and the gods, who loved the smoke of their offerings, grew afraid.\n\nZeus sent Hermes down to bring Persephone home. Hades did not argue. He only smiled, and offered her a pomegranate before she left. She had eaten nothing in the Underworld, but the journey was long, and the seeds glowed like rubies. She ate six.\n\nThose six seeds bound her. Anyone who eats the food of the dead must return to them. So it was agreed: for six months of every year Persephone lives with her mother, and the world blossoms; for six months she sits beside Hades as queen of the Underworld, and Demeter mourns, and the fields lie bare beneath the frost.\n\nThat, the Greeks said, is why we have winter.",
    "passageSource": "A Greek myth, retold for this app",
-   "hook": "Six seeds, six months: one month below for every seed she ate."
+   "hook": "Six seeds, six months: one month below for every seed she ate.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "Spring: Persephone returns",
+     "Summer: the crops ripen",
+     "Autumn: she goes below",
+     "Winter: Demeter mourns"
+    ],
+    "centre": "six seeds, six months below",
+    "caption": "Persephone above ground: spring and summer. Below with Hades: autumn and winter."
+   }
   },
   {
    "id": "english.my.p4",
@@ -319,7 +567,18 @@
     "winter",
     "the changing seasons"
    ],
-   "hook": "Persephone above = spring and summer; Persephone below = autumn and winter."
+   "hook": "Persephone above = spring and summer; Persephone below = autumn and winter.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "Spring: Persephone returns",
+     "Summer: the crops ripen",
+     "Autumn: she goes below",
+     "Winter: Demeter mourns"
+    ],
+    "centre": "six seeds, six months below",
+    "caption": "Persephone above ground: spring and summer. Below with Hades: autumn and winter."
+   }
   },
   {
    "id": "english.my.o1",
@@ -510,7 +769,18 @@
    "passage": "Arachne’s Tapestry\n\nIn a small town in Lydia lived a girl called Arachne, the finest weaver in the world. People travelled for days to watch her fingers fly across the loom. “Surely,” they said, “the goddess Athena herself taught you.”\n\n“No one taught me,” said Arachne. “I am better than Athena. Let her come and prove otherwise.”\n\nAthena came, disguised as an old woman, and gently warned her to ask the goddess’s forgiveness. Arachne laughed in her face. So the old woman threw off her disguise, and there stood Athena, grey-eyed and tall, and the contest began.\n\nAthena wove the gods of Olympus in their glory, and in each corner she showed a mortal who had challenged the gods and been punished. It was a warning, woven in thread.\n\nArachne ignored it. She wove the gods at their worst: tricking, lying, chasing and quarrelling. Her work was so perfect that the figures seemed to breathe. Even Athena could find no fault in it, and that, more than the insult, was what she could not bear. She tore the tapestry to pieces and struck Arachne with her shuttle.\n\nArachne’s body began to shrink. Her hair fell away. Her fingers grew long and thin and became legs, and her body became small and round. Athena had turned her into the first spider.\n\n“Live, then,” said the goddess, “and weave for ever.”\n\nAnd Arachne does. Look in any corner.",
    "passageSource": "A Greek myth (as told by the Roman poet Ovid), retold for this app",
    "hook": "A hubris myth runs Boast, Warning, Contest, Punishment.",
-   "example": "Arachne is the Greek word for spider: hence “arachnid” and “arachnophobia”."
+   "example": "Arachne is the Greek word for spider: hence “arachnid” and “arachnophobia”.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "Boast",
+     "Warning",
+     "Contest",
+     "Punishment"
+    ],
+    "caption": "The pattern of a hubris myth."
+   }
   },
   {
    "id": "english.my.w1",
@@ -861,7 +1131,38 @@
    "passage": "(The opening of the novel, which is set in London and Paris at the time of the French Revolution.)\n\nIt was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way— in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.\n\nThere were a king with a large jaw and a queen with a plain face, on the throne of England; there were a king with a large jaw and a queen with a fair face, on the throne of France. In both countries it was clearer than crystal to the lords of the State preserves of loaves and fishes, that things in general were settled for ever.",
    "passageSource": "Charles Dickens, A Tale of Two Cities (1859)",
    "hook": "Antithesis comes from Greek for “setting against”: opposites placed side by side.",
-   "example": "“One small step for man, one giant leap for mankind” uses antithesis too."
+   "example": "“One small step for man, one giant leap for mankind” uses antithesis too.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "It was the…",
+     "…it was the…"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "best of times",
+      "worst of times"
+     ],
+     [
+      "age of wisdom",
+      "age of foolishness"
+     ],
+     [
+      "epoch of belief",
+      "epoch of incredulity"
+     ],
+     [
+      "season of Light",
+      "season of Darkness"
+     ],
+     [
+      "spring of hope",
+      "winter of despair"
+     ]
+    ],
+    "caption": "Dickens’s antithesis: each idea paired with its opposite, an age pulled in two directions."
+   }
   },
   {
    "id": "english.op.t2",
@@ -1349,7 +1650,33 @@
    "passage": "(The narrator is Dr Watson, the friend and assistant of the detective Sherlock Holmes. A visitor has left his walking stick behind.)\n\nMr. Sherlock Holmes, who was usually very late in the mornings, save upon those not infrequent occasions when he was up all night, was seated at the breakfast table. I stood upon the hearth-rug and picked up the stick which our visitor had left behind him the night before. It was a fine, thick piece of wood, bulbous-headed, of the sort which is known as a “Penang lawyer.” Just under the head was a broad silver band nearly an inch across. “To James Mortimer, M.R.C.S., from his friends of the C.C.H.,” was engraved upon it, with the date “1884.” It was just such a stick as the old-fashioned family practitioner used to carry—dignified, solid, and reassuring.\n\n“Well, Watson, what do you make of it?”\n\nHolmes was sitting with his back to me, and I had given him no sign of my occupation.\n\n“How did you know what I was doing? I believe you have eyes in the back of your head.”\n\n“I have, at least, a well-polished, silver-plated coffee-pot in front of me,” said he. “But, tell me, Watson, what do you make of our visitor’s stick? Since we have been so unfortunate as to miss him and have no notion of his errand, this accidental souvenir becomes of importance. Let me hear you reconstruct the man by an examination of it.”\n\n“I think,” said I, following as far as I could the methods of my companion, “that Dr. Mortimer is a successful, elderly medical man, well-esteemed since those who know him give him this mark of their appreciation.”\n\n“Good!” said Holmes. “Excellent!”\n\n“I think also that the probability is in favour of his being a country practitioner who does a great deal of his visiting on foot.”\n\n“Why so?”\n\n“Because this stick, though originally a very handsome one has been so knocked about that I can hardly imagine a town practitioner carrying it. The thick-iron ferrule is worn down, so it is evident that he has done a great amount of walking with it.”\n\n“Perfectly sound!” said Holmes.\n\n[…]\n\n“Really, Watson, you excel yourself,” said Holmes, pushing back his chair and lighting a cigarette. “I am bound to say that in all the accounts which you have been so good as to give of my own small achievements you have habitually underrated your own abilities. It may be that you are not yourself luminous, but you are a conductor of light.",
    "passageSource": "Arthur Conan Doyle, The Hound of the Baskervilles (1902)",
    "hook": "Observation = what you SEE. Deduction = what you WORK OUT from it.",
-   "example": "A doctor sees spots (observation) and concludes it is chickenpox (deduction)."
+   "example": "A doctor sees spots (observation) and concludes it is chickenpox (deduction).",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Observation: what you see",
+     "Deduction: what you work out"
+    ],
+    "rows": [
+     [
+      "a silver band “from his friends”",
+      "he is well respected"
+     ],
+     [
+      "the stick is badly knocked about",
+      "a country doctor, not a town one"
+     ],
+     [
+      "the iron ferrule is worn down",
+      "he walks a great deal"
+     ],
+     [
+      "a shiny coffee-pot (Holmes)",
+      "he can see what Watson is doing"
+     ]
+    ],
+    "caption": "Watson’s reasoning about Dr Mortimer’s stick, and Holmes’s trick."
+   }
   },
   {
    "id": "english.de.3",
@@ -1524,7 +1851,32 @@
    "explain": "“Everything within my view which ought to be white, had been white long ago.”",
    "passage": "(Pip, a poor village boy, has been sent to play at the house of the rich and mysterious Miss Havisham.)\n\nShe was dressed in rich materials,—satins, and lace, and silks,—all of white. Her shoes were white. And she had a long white veil dependent from her hair, and she had bridal flowers in her hair, but her hair was white. Some bright jewels sparkled on her neck and on her hands, and some other jewels lay sparkling on the table. Dresses, less splendid than the dress she wore, and half-packed trunks, were scattered about. She had not quite finished dressing, for she had but one shoe on,—the other was on the table near her hand,—her veil was but half arranged, her watch and chain were not put on, and some lace for her bosom lay with those trinkets, and with her handkerchief, and gloves, and some flowers, and a Prayer-Book all confusedly heaped about the looking-glass.\n\nIt was not in the first few moments that I saw all these things, though I saw more of them in the first moments than might be supposed. But I saw that everything within my view which ought to be white, had been white long ago, and had lost its lustre and was faded and yellow. I saw that the bride within the bridal dress had withered like the dress, and like the flowers, and had no brightness left but the brightness of her sunken eyes. I saw that the dress had been put upon the rounded figure of a young woman, and that the figure upon which it now hung loose had shrunk to skin and bone. Once, I had been taken to see some ghastly waxwork at the Fair, representing I know not what impossible personage lying in state. Once, I had been taken to one of our old marsh churches to see a skeleton in the ashes of a rich dress that had been dug out of a vault under the church pavement. Now, waxwork and skeleton seemed to have dark eyes that moved and looked at me. I should have cried out, if I could.",
    "passageSource": "Charles Dickens, Great Expectations (1861)",
-   "hook": "White, then yellow: hope that has gone stale."
+   "hook": "White, then yellow: hope that has gone stale.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Detail",
+     "What it suggests"
+    ],
+    "rows": [
+     [
+      "wedding dress, veil, bridal flowers",
+      "dressed for a wedding that never came"
+     ],
+     [
+      "one shoe on, veil half arranged",
+      "time stopped mid-dressing"
+     ],
+     [
+      "white turned yellow",
+      "hope gone stale"
+     ],
+     [
+      "a waxwork, a skeleton",
+      "a living corpse"
+     ]
+    ]
+   }
   },
   {
    "id": "english.hv.4",
@@ -2028,7 +2380,48 @@
    "explain": "The guns are their only “passing-bells” and the shells their “choirs”.",
    "passage": "(Wilfred Owen fought as an officer in the First World War. He wrote this poem in 1917 and was killed in France a week before the war ended.)\n\nWhat passing-bells for these who die as cattle?\nOnly the monstrous anger of the guns.\nOnly the stuttering rifles’ rapid rattle\nCan patter out their hasty orisons.\nNo mockeries now for them; no prayers nor bells,\nNor any voice of mourning save the choirs,—\nThe shrill, demented choirs of wailing shells;\nAnd bugles calling for them from sad shires.\n\nWhat candles may be held to speed them all?\nNot in the hands of boys, but in their eyes\nShall shine the holy glimmers of goodbyes.\nThe pallor of girls’ brows shall be their pall;\nTheir flowers the tenderness of patient minds,\nAnd each slow dusk a drawing-down of blinds.",
    "passageSource": "Wilfred Owen, “Anthem for Doomed Youth” (written 1917)",
-   "example": "A passing-bell was the church bell rung to mark a death."
+   "example": "A passing-bell was the church bell rung to mark a death.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Funeral rite",
+     "Owen’s replacement"
+    ],
+    "rows": [
+     [
+      "Octave",
+      "passing-bells",
+      "the anger of the **guns**"
+     ],
+     [
+      "Octave",
+      "prayers",
+      "the **rifles**’ rapid rattle"
+     ],
+     [
+      "Octave",
+      "choirs",
+      "wailing **shells**"
+     ],
+     [
+      "Sestet",
+      "candles",
+      "glimmers in boys’ **eyes**"
+     ],
+     [
+      "Sestet",
+      "pall",
+      "the pallor of girls’ **brows**"
+     ],
+     [
+      "Sestet",
+      "flowers",
+      "the tenderness of **patient minds**"
+     ]
+    ],
+    "caption": "Octave (lines 1–8): the noise of the front. The volta at line 9 turns to the sestet (lines 9–14): quiet grief at home."
+   }
   },
   {
    "id": "english.wp.4",
@@ -2054,7 +2447,48 @@
    "explain": "The last six lines turn to the families: tears, pale faces, blinds drawn.",
    "passage": "(Wilfred Owen fought as an officer in the First World War. He wrote this poem in 1917 and was killed in France a week before the war ended.)\n\nWhat passing-bells for these who die as cattle?\nOnly the monstrous anger of the guns.\nOnly the stuttering rifles’ rapid rattle\nCan patter out their hasty orisons.\nNo mockeries now for them; no prayers nor bells,\nNor any voice of mourning save the choirs,—\nThe shrill, demented choirs of wailing shells;\nAnd bugles calling for them from sad shires.\n\nWhat candles may be held to speed them all?\nNot in the hands of boys, but in their eyes\nShall shine the holy glimmers of goodbyes.\nThe pallor of girls’ brows shall be their pall;\nTheir flowers the tenderness of patient minds,\nAnd each slow dusk a drawing-down of blinds.",
    "passageSource": "Wilfred Owen, “Anthem for Doomed Youth” (written 1917)",
-   "hook": "The sonnet turns (the volta) after line 8: from the noise of the front to the silence at home."
+   "hook": "The sonnet turns (the volta) after line 8: from the noise of the front to the silence at home.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Funeral rite",
+     "Owen’s replacement"
+    ],
+    "rows": [
+     [
+      "Octave",
+      "passing-bells",
+      "the anger of the **guns**"
+     ],
+     [
+      "Octave",
+      "prayers",
+      "the **rifles**’ rapid rattle"
+     ],
+     [
+      "Octave",
+      "choirs",
+      "wailing **shells**"
+     ],
+     [
+      "Sestet",
+      "candles",
+      "glimmers in boys’ **eyes**"
+     ],
+     [
+      "Sestet",
+      "pall",
+      "the pallor of girls’ **brows**"
+     ],
+     [
+      "Sestet",
+      "flowers",
+      "the tenderness of **patient minds**"
+     ]
+    ],
+    "caption": "Octave (lines 1–8): the noise of the front. The volta at line 9 turns to the sestet (lines 9–14): quiet grief at home."
+   }
   },
   {
    "id": "english.wp.5",
@@ -2312,7 +2746,19 @@
    "passage": "The Forty-Fifth Step\n\nMira counted the steps of the British Museum every time she came, and there were always forty-four. Today there were forty-five.\n\nShe stopped. Her brother Theo walked straight into her and dropped his sketchbook. Their friend Kit, who never noticed anything that was not on a screen, kept going until the shadow of the great columns swallowed him.\n\n“There’s an extra step,” Mira said.\n\n“There’s an extra sister,” said Theo, picking up his pencils. “One who counts things.”\n\nInside, the Greek galleries were cool and almost empty. A guard with silver hair and a grey cardigan sat beside the case of painted pots, reading a paperback so old its cover had worn white. She looked up as they passed, and Mira had the odd feeling of being weighed, like fruit on a market stall. On the guard’s collar was a small brooch: an owl.\n\nThe pot Mira loved best showed a woman at a loom. “Arachne,” said Kit, reading the label on his phone. “She beat Athena at weaving. Legend.”\n\n“She didn’t beat her,” said the guard, without looking up. “She was punished for being proud. Different thing.” She turned a page. “Though, between you and me, her work was better.”\n\nKit laughed. Mira didn’t. The guard’s eyes were grey, the clear, cold grey of a winter sea, and they were looking at Mira now.\n\n“You count things,” said the guard. “Good. Most people only look.”\n\nWhen Mira glanced back from the doorway, the chair was empty. The paperback lay closed on the seat.\n\nOutside, the light was already fading. Mira counted the steps on the way down. Forty-four.\n\nOn the place where the forty-fifth had been lay a single grey feather.",
    "passageSource": "A short story written for this app",
    "hook": "Athena’s calling cards: the owl, her sacred bird, and grey eyes.",
-   "example": "Athena’s owl was stamped on the silver coins of ancient Athens."
+   "example": "Athena’s owl was stamped on the silver coins of ancient Athens.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Forty-five steps, not forty-four",
+     "A guard with an owl brooch",
+     "“Her work was better”",
+     "Clear, cold grey eyes",
+     "The chair is empty",
+     "Reveal: a single grey feather"
+    ],
+    "caption": "Planted clues, then the payoff. The owl and grey eyes belong to Athena."
+   }
   },
   {
    "id": "english.ss.3",
@@ -2889,7 +3335,17 @@
     "nemesis"
    ],
    "explain": "Aristotle used the word in his Poetics, written in the 300s BC.",
-   "hook": "Hamartia comes from a Greek verb meaning “to miss the mark”, like an arrow going astray."
+   "hook": "Hamartia comes from a Greek verb meaning “to miss the mark”, like an arrow going astray.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "**Hamartia**: the hero’s fatal error",
+     "**Peripeteia**: the reversal of fortune",
+     "**Anagnorisis**: the hero recognises the truth",
+     "**Catharsis**: the audience’s pity and fear released"
+    ],
+    "caption": "The shape Aristotle described. Hubris (pride against the gods) often drives the error; Nemesis punishes it."
+   }
   },
   {
    "id": "english.tr.2",
@@ -2919,7 +3375,17 @@
    ],
    "explain": "Aristotle said tragedy purges us of pity and fear.",
    "hook": "Catharsis is Greek for “cleansing”: the lighter feeling after a good cry.",
-   "example": "The feeling at the end of a sad film, when you have cried and feel calmer, is catharsis."
+   "example": "The feeling at the end of a sad film, when you have cried and feel calmer, is catharsis.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "**Hamartia**: the hero’s fatal error",
+     "**Peripeteia**: the reversal of fortune",
+     "**Anagnorisis**: the hero recognises the truth",
+     "**Catharsis**: the audience’s pity and fear released"
+    ],
+    "caption": "The shape Aristotle described. Hubris (pride against the gods) often drives the error; Nemesis punishes it."
+   }
   },
   {
    "id": "english.tr.4",
@@ -2947,7 +3413,12 @@
     "troupe"
    ],
    "explain": "Shakespeare borrowed the idea for the Prologue of Romeo and Juliet.",
-   "example": "The chorus of a pop song takes its name from the Greek chorus, who sang and danced."
+   "example": "The chorus of a pop song takes its name from the Greek chorus, who sang and danced.",
+   "visual": {
+    "kind": "diagram",
+    "id": "greek-theatre",
+    "highlight": "orchestra"
+   }
   },
   {
    "id": "english.tr.6",
@@ -3026,7 +3497,11 @@
     "Troy"
    ],
    "explain": "Plays were performed at festivals for the god Dionysus.",
-   "hook": "Dionysus was the god of wine and of theatre, so plays were part of his festival."
+   "hook": "Dionysus was the god of wine and of theatre, so plays were part of his festival.",
+   "visual": {
+    "kind": "diagram",
+    "id": "greek-theatre"
+   }
   },
   {
    "id": "english.tr.oed",
@@ -3076,7 +3551,39 @@
    "explain": "Three quatrains and a final couplet.",
    "passage": "(The Prologue is spoken by the Chorus before the play begins.)\n\nTwo households, both alike in dignity,\nIn fair Verona, where we lay our scene,\nFrom ancient grudge break to new mutiny,\nWhere civil blood makes civil hands unclean.\nFrom forth the fatal loins of these two foes\nA pair of star-cross’d lovers take their life;\nWhose misadventur’d piteous overthrows\nDoth with their death bury their parents’ strife.\nThe fearful passage of their death-mark’d love,\nAnd the continuance of their parents’ rage,\nWhich but their children’s end naught could remove,\nIs now the two hours’ traffic of our stage;\nThe which, if you with patient ears attend,\nWhat here shall miss, our toil shall strive to mend.",
    "passageSource": "William Shakespeare, Romeo and Juliet (about 1595), the Prologue",
-   "hook": "Shakespearean sonnet: ABAB CDCD EFEF GG, three quatrains and a clinching couplet."
+   "hook": "Shakespearean sonnet: ABAB CDCD EFEF GG, three quatrains and a clinching couplet.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "rhyme words",
+     "rhyme"
+    ],
+    "tint": "rows",
+    "rows": [
+     [
+      "Quatrain 1 (lines 1–4)",
+      "dignity, scene, mutiny, unclean",
+      "**ABAB**"
+     ],
+     [
+      "Quatrain 2 (lines 5–8)",
+      "foes, life, overthrows, strife",
+      "**CDCD**"
+     ],
+     [
+      "Quatrain 3 (lines 9–12)",
+      "love, rage, remove, stage",
+      "**EFEF**"
+     ],
+     [
+      "Couplet (lines 13–14)",
+      "attend, mend",
+      "**GG**"
+     ]
+    ],
+    "caption": "The Prologue: 4 + 4 + 4 + 2 = 14 lines of iambic pentameter, clinched by a rhyming couplet."
+   }
   },
   {
    "id": "english.so.2",

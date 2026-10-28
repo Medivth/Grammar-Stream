@@ -450,4 +450,35 @@ for (const id of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === id))
 for (const it of items) if (MEMORY[it.id]) Object.assign(it, MEMORY[it.id]);
 for (const id of Object.keys(MEMORY)) if (!items.some((it) => it.id === id)) throw new Error(`memory hook for unknown item ${id}`);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const M = (diagram, caption) => ({ kind: 'maths', diagram, ...(caption ? { caption } : {}) });
+const DICE = [1, 2, 3, 4, 5, 6];
+const TOPIC_VISUALS = {
+  'maths.ps-divisibility': { kind: 'table', head: ['divisible by', 'test'], rows: [['2', 'the last digit is even'], ['3', 'the digit sum is a multiple of 3'], ['4', 'the last two digits make a multiple of 4'], ['5', 'the last digit is 0 or 5'], ['9', 'the digit sum is a multiple of 9'], ['11', 'the alternating sum (+ − + …) of the digits is a multiple of 11']], caption: '3A7 is a multiple of 9 only when 3 + A + 7 is: A = 8 gives 18.' },
+  'maths.ps-primes': { kind: 'table', rows: [['72', '÷ **2**'], ['36', '÷ **2**'], ['18', '÷ **2**'], ['9', '÷ **3**'], ['3', '÷ **3**'], ['1', '']], caption: '72 = 2³ × 3². Its factors are 2ᵃ × 3ᵇ with a = 0–3 and b = 0–2, so it has 4 × 3 = 12 factors.' },
+  'maths.ps-fractions': M({ type: 'barmodel', rows: [{ label: 'boys', parts: 3, shaded: 3, text: '3' }, { label: 'girls', parts: 5, shaded: 3, text: '3' }] }, 'Boys : girls = 3 : 5. The 2 unshaded boxes are the 6 extra girls, so each box is 3 pupils and the class is 8 × 3 = 24.'),
+  'maths.ps-patterns': { kind: 'table', rows: [['n', '1', '2', '3', '4', '5'], ['matchsticks in a row of n squares', '4', '7', '10', '13', '16'], ['triangular numbers', '1', '3', '6', '10', '15']], caption: 'Matchsticks: 1 to start, then 3 more for each square, so 3n + 1. Triangular numbers: n(n + 1) ÷ 2.' },
+  'maths.ps-probability': M({ type: 'possgrid', a: DICE, b: DICE, op: 'product', shade: [12] }, 'Two dice multiplied: 36 equally likely outcomes. A product of 12 happens 4 ways, so P(12) = {{4/36}} = {{1/9}}.'),
+  'maths.ps-geometry': { kind: 'table', head: ['fact', ''], rows: [['angles on a straight line', '180°'], ['angles in a triangle', '180°'], ['angles in a quadrilateral', '360°'], ['interior angles of an n-sided polygon', '(n − 2) × 180°'], ['exterior angles of any polygon', '360°'], ['area of a circle', 'πr²']] },
+  'maths.ps-invariants': { kind: 'table', head: ['', 'dark squares', 'light squares'], rows: [['full chessboard', '32', '32'], ['two opposite corners removed', '**30**', '32'], ['what 31 dominoes cover', '31', '31']], caption: 'Opposite corners are the same colour, and every domino covers one dark and one light square. The colour count never balances, so it is impossible.' },
+};
+const ITEM_VISUALS = {
+  'maths.ps.st.hermes': { kind: 'flow', across: true, steps: ['ends with 11', '11 + 7 = 18', '18 ÷ 2 = 9', '9 + 7 = 16', '16 ÷ 2 = 8 at the start'], caption: 'Work backwards, undoing each step: spending becomes adding, doubling becomes halving.' },
+  'maths.ps.st.figs': { kind: 'flow', across: true, steps: ['1 fig left at the end', 'before Mira: (1 + 1) × 2 = 4', 'before Theo: (4 + 1) × 2 = 10'], caption: 'Undo Mira first, then Theo: add the 1 back, then double.' },
+  'maths.ps.dv.or': M({ type: 'venn', labels: ['×3', '×5'], only: [27, 14], both: 6, out: 53 }, 'From 1 to 100: 33 multiples of 3, 20 of 5, and 6 of both (multiples of 15). 27 + 6 + 14 = 47.'),
+  'maths.ps.pr.hcflcm': M({ type: 'venn', labels: ['18', '24'], only: ['3', '2 × 2'], both: '2 × 3', out: '' }, '18 = 2 × 3 × 3 and 24 = 2 × 2 × 2 × 3. Overlap: HCF = 6. Everything: LCM = 3 × 2 × 3 × 2 × 2 = 72.'),
+  'maths.ps.fr.jar': M({ type: 'barmodel', rows: [{ label: 'before', parts: 4, shaded: 3 }, { label: 'after', parts: 4, shaded: 2 }] }, '¾ full to ½ full: one quarter of the jar is 15 litres, so it holds 4 × 15 = 60 litres.'),
+  'maths.ps.fr.crown': M({ type: 'barmodel', rows: [{ label: 'gold', parts: 1, text: '50 g' }, { label: 'silver', parts: 2, shaded: 2, text: '50 g' }, { label: 'bronze', parts: 4, text: '50 g' }] }, '1 + 2 + 4 = 7 parts = 350 g, so 1 part = 50 g. Silver is 2 parts = 100 g.'),
+  'maths.ps.mn.gauss': { kind: 'table', rows: [['1', '2', '3', '…', '25'], ['50', '49', '48', '…', '26'], ['**51**', '**51**', '**51**', '…', '**51**']], caption: 'Pair the first and last: 25 pairs, each adding to 51. 25 × 51 = 1275.' },
+  'maths.ps.lg.pets': { kind: 'table', head: ['', 'owl', 'snake', 'dog'], rows: [['Kit', '✗', '?', '?'], ['Mira', '✗', '?', '?'], ['Theo', '**✓**', '✗', '✗']], caption: 'Theo: not the snake (it is Kit’s or Mira’s) and not the dog (allergic), so the owl. Kit’s and Mira’s pets cannot be decided.' },
+  'maths.ps.ct.medals': { kind: 'flow', across: true, steps: ['gold: 7 choices', 'silver: 6 left', 'bronze: 5 left', '7 × 6 × 5 = 210'] },
+  'maths.ps.pb.even': M({ type: 'possgrid', a: DICE, b: DICE, op: 'product', shade: [2, 4, 6, 8, 10, 12, 16, 18, 20, 24, 30, 36] }, 'Only odd × odd is odd (9 cells). The other 27 of the 36 products are even: {{27/36}} = {{3/4}}.'),
+  'maths.ps.pb.bigger': M({ type: 'possgrid', a: DICE, b: DICE, cells: DICE.map((second) => DICE.map((first) => (second > first ? '✓' : ''))), shade: ['✓'] }, 'First roll across the top, second roll down the side. The second is bigger in 15 of the 36 cells: {{15/36}} = {{5/12}}.'),
+  'maths.ps.pb.total': M({ type: 'possgrid', a: DICE, b: DICE, op: 'sum', shade: [7] }, 'A total of 7 has the most cells (6 of the 36): every diagonal from bottom-left to top-right shares a total.'),
+  'maths.ps.gm.clock': M({ type: 'clock', h: 3, m: 30 }, 'At 3:30 the minute hand is at 180° and the hour hand halfway between 3 and 4, at 105°. The angle between them is 75°.'),
+  'maths.ps.iv.knight': { kind: 'flow', across: true, steps: ['start: white', 'after move 1: black', 'after move 2: white', 'after move 3: black', 'every odd move: black', 'after move 7: black'], caption: 'Every knight move lands on the other colour, so after an odd number of moves it is on black.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'maths', deck: 'y8-problems', topics, items }];

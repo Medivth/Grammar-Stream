@@ -164,4 +164,25 @@ for (const [id, memory] of Object.entries(MEMORY)) {
   Object.assign(item, memory);
 }
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// (Digestion, light and circuits get labelled diagrams separately.)
+const PERIODIC = {
+  kind: 'table', head: ['1', '2', '3', '4', '5', '6', '7', '0'],
+  rows: [
+    ['H', '', '', '', '', '', '', 'He'],
+    ['**Li**', '**Be**', 'B', 'C', 'N', 'O', 'F', 'Ne'],
+    ['**Na**', '**Mg**', '**Al**', 'Si', 'P', 'S', 'Cl', 'Ar'],
+  ],
+  caption: 'Columns are **groups** (numbered 1–7 and 0); rows are **periods**. Metals (Li, Be, Na, Mg, Al) are on the left; non-metals on the right. Group 1 (not H): alkali metals; 7: halogens; 0: noble gases.',
+};
+const TOPIC_VISUALS = {
+  'science.periodic': PERIODIC,
+};
+const ITEM_VISUALS = {
+  'science.pe.group': PERIODIC,
+  'science.pe.period': PERIODIC,
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = t.visual ? [].concat(t.visual, v) : v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = it.visual ? [].concat(it.visual, v) : v; }
+
 export default [{ subject: 'science', deck: 'stretch', topics, items }];

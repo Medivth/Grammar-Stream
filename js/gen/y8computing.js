@@ -35,6 +35,30 @@ const WORDS = ['ZEUS', 'HERA', 'ARGO', 'TROY', 'HYDRA', 'ATHENA', 'HERMES', 'MED
 
 const sample = (rng, arr, k) => rng.shuffle(arr).slice(0, k);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Place-value grids for binary, shown on the worked example and after a wrong answer (never in
+// the question, where they would do the conversion for her). Digits are right-aligned.
+const PV8 = [128, 64, 32, 16, 8, 4, 2, 1];
+const TWOS = ['−128', 64, 32, 16, 8, 4, 2, 1];
+/** Place values for w bits: [2^(w−1), …, 2, 1]. */
+const placeCols = (w) => Array.from({ length: w }, (_, i) => 2 ** (w - 1 - i));
+const bits = (n, w) => [...bin(n, w)];
+const pv = (cols, rows, caption, extra = {}) => ({ visual: { kind: 'maths', diagram: { type: 'pvgrid', cols, rows, ...extra }, caption } });
+/** An 8-bit shift of k places (k > 0 left, k < 0 right): arrows for one place, otherwise one row per place. */
+function shiftPic(n, k, tail) {
+  const step = (m) => (k > 0 ? (m << 1) & 255 : m >> 1), rows = [n];
+  for (let i = 0; i < Math.abs(k); i++) rows.push(step(rows[rows.length - 1]));
+  const dir = k > 0 ? 'left' : 'right';
+  return pv(PV8, rows.map((m) => bits(m, 8)), Math.abs(k) === 1 ? `Every bit moves one place ${dir}. ${tail}` : `Each row moves every bit one more place ${dir}. ${tail}`, Math.abs(k) === 1 ? { shift: k } : {});
+}
+/** A hex digit and its value: "B = 11", or just "7". */
+const digitSays = (d) => (d > 9 ? `${hex(d)} = ${d}` : String(d));
+/** "64 + 16 + 4 = 84", or the one column used. */
+function sumCap(n, w) {
+  const ps = placeCols(w).filter((v) => Math.floor(n / v) % 2 === 1);
+  return ps.length === 1 ? `Just one 1, in the ${ps[0]} column: ${n}.` : `${ps.join(' + ')} = ${n}.`;
+}
+
 function caesar(word, k) {
   return [...word].map((c) => String.fromCharCode(((c.charCodeAt(0) - 65 + k + 26 * 4) % 26) + 65)).join('');
 }
@@ -64,27 +88,29 @@ export const Y8_COMPUTING_GENERATORS = {
   y8cBinary(level, rng) {
     if (level === 1) {
       const n = rng.int(1, 15);
-      if (rng.chance(0.5)) return num(`Convert the 4-bit binary number \`${bin(n, 4)}\` to denary.`, n, `The column values are 8, 4, 2, 1. Add the columns with a 1: ${n}.`, ['The place values for 4 bits are 8, 4, 2 and 1.', `${bin(n, 4)}: add the place values under each 1.`, `That makes ${n}.`]);
-      return binAnswer(`Write the denary number ${n} as a 4-bit binary number.`, n, 4, `${n} = ${[8, 4, 2, 1].filter((v) => n & v).join(' + ')}, so it is ${bin(n, 4)}.`, ['Use the place values 8, 4, 2, 1.', `Make ${n} from them: ${[8, 4, 2, 1].filter((v) => n & v).join(' + ')}.`, `Put a 1 under each used column: ${bin(n, 4)}.`]);
+      const pic = pv(placeCols(4), [bits(n, 4)], sumCap(n, 4));
+      if (rng.chance(0.5)) return num(`Convert the 4-bit binary number \`${bin(n, 4)}\` to denary.`, n, `The column values are 8, 4, 2, 1. Add the columns with a 1: ${n}.`, ['The place values for 4 bits are 8, 4, 2 and 1.', `${bin(n, 4)}: add the place values under each 1.`, `That makes ${n}.`], pic);
+      return binAnswer(`Write the denary number ${n} as a 4-bit binary number.`, n, 4, `${n} = ${[8, 4, 2, 1].filter((v) => n & v).join(' + ')}, so it is ${bin(n, 4)}.`, ['Use the place values 8, 4, 2, 1.', `Make ${n} from them: ${[8, 4, 2, 1].filter((v) => n & v).join(' + ')}.`, `Put a 1 under each used column: ${bin(n, 4)}.`], pic);
     }
     if (level === 2) {
       const n = rng.int(16, 255);
       const parts = [128, 64, 32, 16, 8, 4, 2, 1].filter((v) => n & v);
-      if (rng.chance(0.5)) return num(`Convert \`${bin(n, 8)}\` to denary.`, n, `${parts.join(' + ')} = ${n}.`, ['The 8 place values are 128, 64, 32, 16, 8, 4, 2, 1.', `The 1s are under ${parts.join(', ')}.`, `${parts.join(' + ')} = ${n}.`]);
-      return binAnswer(`Write ${n} as an 8-bit binary number.`, n, 8, `${n} = ${parts.join(' + ')}, so it is ${bin(n, 8)}.`, ['Start from the biggest place value, 128, and work down.', `${n} = ${parts.join(' + ')}.`, `A 1 under each of those, 0 elsewhere: ${bin(n, 8)}.`]);
+      const pic = pv(PV8, [bits(n, 8)], sumCap(n, 8));
+      if (rng.chance(0.5)) return num(`Convert \`${bin(n, 8)}\` to denary.`, n, `${parts.join(' + ')} = ${n}.`, ['The 8 place values are 128, 64, 32, 16, 8, 4, 2, 1.', `The 1s are under ${parts.join(', ')}.`, `${parts.join(' + ')} = ${n}.`], pic);
+      return binAnswer(`Write ${n} as an 8-bit binary number.`, n, 8, `${n} = ${parts.join(' + ')}, so it is ${bin(n, 8)}.`, ['Start from the biggest place value, 128, and work down.', `${n} = ${parts.join(' + ')}.`, `A 1 under each of those, 0 elsewhere: ${bin(n, 8)}.`], pic);
     }
     const kind = rng.pick(['largest', 'bits', 'odd']);
     if (kind === 'largest') {
       const b = rng.pick([3, 5, 6, 7, 8, 10, 12, 16]);
-      return num(`What is the largest denary number you can store in ${b} bits?`, 2 ** b - 1, `With ${b} bits all set to 1 you get 2^{${b}} − 1 = ${2 ** b - 1}.`, [`${b} bits give 2^{${b}} = ${2 ** b} different patterns.`, 'One of them is 0, so the patterns go from 0 upwards.', `The largest is ${2 ** b} − 1 = ${2 ** b - 1}.`]);
+      return num(`What is the largest denary number you can store in ${b} bits?`, 2 ** b - 1, `With ${b} bits all set to 1 you get 2^{${b}} − 1 = ${2 ** b - 1}.`, [`${b} bits give 2^{${b}} = ${2 ** b} different patterns.`, 'One of them is 0, so the patterns go from 0 upwards.', `The largest is ${2 ** b} − 1 = ${2 ** b - 1}.`], b <= 8 ? pv(placeCols(b), [Array(b).fill('1')], `All ${b} bits are 1: ${placeCols(b).join(' + ')} = ${2 ** b - 1}.`) : {});
     }
     if (kind === 'bits') {
       const n = rng.int(70, 1000);
       const b = n.toString(2).length;
-      return num(`What is the smallest number of bits needed to store the denary number ${n}?`, b, `${2 ** (b - 1)} ≤ ${n} < ${2 ** b}, so ${b} bits are needed.`, [`With ${b - 1} bits the largest number is ${2 ** (b - 1) - 1}, which is too small.`, `With ${b} bits the largest is ${2 ** b - 1}, which is enough.`, `So ${b} bits.`]);
+      return num(`What is the smallest number of bits needed to store the denary number ${n}?`, b, `${2 ** (b - 1)} ≤ ${n} < ${2 ** b}, so ${b} bits are needed.`, [`With ${b - 1} bits the largest number is ${2 ** (b - 1) - 1}, which is too small.`, `With ${b} bits the largest is ${2 ** b - 1}, which is enough.`, `So ${b} bits.`], pv(placeCols(b), [bits(n, b)], `${n} needs the ${2 ** (b - 1)} column, the ${b}th from the right: ${b} bits.`));
     }
     const n = rng.int(16, 255);
-    return choice(`Without converting, is \`${bin(n, 8)}\` odd or even?`, n % 2 ? 'odd: the last bit is 1' : 'even: the last bit is 0', [n % 2 ? 'even: the last bit is 1' : 'odd: the last bit is 0', 'you cannot tell without converting'], rng, { explain: 'Only the last bit (worth 1) can make a binary number odd. All the other place values are even.', steps: ['Every place value except the last is even.', `The last bit here is ${n % 2}.`, `So the number is ${n % 2 ? 'odd' : 'even'}.`] });
+    return choice(`Without converting, is \`${bin(n, 8)}\` odd or even?`, n % 2 ? 'odd: the last bit is 1' : 'even: the last bit is 0', [n % 2 ? 'even: the last bit is 1' : 'odd: the last bit is 0', 'you cannot tell without converting'], rng, { explain: 'Only the last bit (worth 1) can make a binary number odd. All the other place values are even.', steps: ['Every place value except the last is even.', `The last bit here is ${n % 2}.`, `So the number is ${n % 2 ? 'odd' : 'even'}.`], ...pv(PV8, [bits(n, 8)], `Only the 1 column is odd. Here it holds ${n % 2}, so ${n} is ${n % 2 ? 'odd' : 'even'}.`) });
   },
 
   y8cHex(level, rng) {
@@ -96,37 +122,40 @@ export const Y8_COMPUTING_GENERATORS = {
     if (level === 2) {
       const n = rng.int(17, 255);
       const [h, l] = [Math.floor(n / 16), n % 16];
-      if (rng.chance(0.5)) return num(`Convert the hexadecimal number \`${hex(n)}\` to denary.`, n, `${hex(h)} sixteens and ${hex(l)} ones: ${h} × 16 + ${l} = ${n}.`, ['The place values in hex are 16 and 1.', `${hex(h)} = ${h} and ${hex(l)} = ${l}.`, `${h} × 16 + ${l} = ${n}.`]);
-      return text(`Convert ${n} to hexadecimal.`, hex(n), `${n} ÷ 16 = ${h} remainder ${l}, so ${hex(h)}${hex(l)}.`, [`How many 16s fit in ${n}? ${h}, which is ${hex(h)}.`, `Remainder: ${n} − ${h * 16} = ${l}, which is ${hex(l)}.`, `So ${n} = ${hex(n)}.`]);
+      const pic = pv([16, 1], [[hex(h), hex(l)]], [[h, 'sixteen'], [l, 'one']].map(([d, w]) => `${d > 9 ? `${hex(d)} is ${d}, so ` : ''}${d} ${w}${d === 1 ? '' : 's'}`).join(' and ') + `: ${h} × 16 + ${l} = ${n}.`);
+      if (rng.chance(0.5)) return num(`Convert the hexadecimal number \`${hex(n)}\` to denary.`, n, `${hex(h)} sixteens and ${hex(l)} ones: ${h} × 16 + ${l} = ${n}.`, ['The place values in hex are 16 and 1.', `${hex(h)} = ${h} and ${hex(l)} = ${l}.`, `${h} × 16 + ${l} = ${n}.`], pic);
+      return text(`Convert ${n} to hexadecimal.`, hex(n), `${n} ÷ 16 = ${h} remainder ${l}, so ${hex(h)}${hex(l)}.`, [`How many 16s fit in ${n}? ${h}, which is ${hex(h)}.`, `Remainder: ${n} − ${h * 16} = ${l}, which is ${hex(l)}.`, `So ${n} = ${hex(n)}.`], pic);
     }
     const n = rng.int(17, 255);
     const [h, l] = [n >> 4, n & 15];
-    if (rng.chance(0.5)) return text(`Convert \`${bin(n, 8)}\` to hexadecimal.`, hex(n).padStart(2, '0'), `Split into nibbles: ${bin(h, 4)} = ${hex(h)} and ${bin(l, 4)} = ${hex(l)}.`, ['Split the byte into two 4-bit nibbles.', `${bin(h, 4)} is ${h} = ${hex(h)}; ${bin(l, 4)} is ${l} = ${hex(l)}.`, `Together: ${hex(n).padStart(2, '0')}.`], { accept: [hex(n)] });
-    return binAnswer(`Convert the hexadecimal number \`${hex(n).padStart(2, '0')}\` to 8-bit binary.`, n, 8, `Each hex digit is one nibble: ${hex(h)} = ${bin(h, 4)}, ${hex(l)} = ${bin(l, 4)}.`, ['Convert each hex digit to 4 bits.', `${hex(h)} → ${bin(h, 4)}, ${hex(l)} → ${bin(l, 4)}.`, `Join them: ${bin(n, 8)}.`]);
+    const pic = pv([8, 4, 2, 1, 8, 4, 2, 1], [bits(n, 8)], `Two nibbles: ${bin(h, 4)} = ${digitSays(h)} and ${bin(l, 4)} = ${digitSays(l)}.`);
+    if (rng.chance(0.5)) return text(`Convert \`${bin(n, 8)}\` to hexadecimal.`, hex(n).padStart(2, '0'), `Split into nibbles: ${bin(h, 4)} = ${hex(h)} and ${bin(l, 4)} = ${hex(l)}.`, ['Split the byte into two 4-bit nibbles.', `${bin(h, 4)} is ${h} = ${hex(h)}; ${bin(l, 4)} is ${l} = ${hex(l)}.`, `Together: ${hex(n).padStart(2, '0')}.`], { accept: [hex(n)], ...pic });
+    return binAnswer(`Convert the hexadecimal number \`${hex(n).padStart(2, '0')}\` to 8-bit binary.`, n, 8, `Each hex digit is one nibble: ${hex(h)} = ${bin(h, 4)}, ${hex(l)} = ${bin(l, 4)}.`, ['Convert each hex digit to 4 bits.', `${hex(h)} → ${bin(h, 4)}, ${hex(l)} → ${bin(l, 4)}.`, `Join them: ${bin(n, 8)}.`], pic);
   },
 
   y8cBinAdd(level, rng) {
     if (level === 1) {
       const a = rng.int(1, 9), b = rng.int(1, 15 - a);
-      return binAnswer(`Add the 4-bit binary numbers \`${bin(a, 4)}\` + \`${bin(b, 4)}\`.`, a + b, 4, `${a} + ${b} = ${a + b}, which is ${bin(a + b, 4)}. Remember 1 + 1 = 10 in binary (write 0, carry 1).`, ['Add from the right, column by column.', 'In binary 1 + 1 = 10: write 0 and carry 1. 1 + 1 + 1 = 11: write 1, carry 1.', `The answer is ${bin(a + b, 4)} (check: ${a} + ${b} = ${a + b}).`]);
+      return binAnswer(`Add the 4-bit binary numbers \`${bin(a, 4)}\` + \`${bin(b, 4)}\`.`, a + b, 4, `${a} + ${b} = ${a + b}, which is ${bin(a + b, 4)}. Remember 1 + 1 = 10 in binary (write 0, carry 1).`, ['Add from the right, column by column.', 'In binary 1 + 1 = 10: write 0 and carry 1. 1 + 1 + 1 = 11: write 1, carry 1.', `The answer is ${bin(a + b, 4)} (check: ${a} + ${b} = ${a + b}).`], pv(placeCols(4), [bits(a, 4), bits(b, 4), bits(a + b, 4)], `Rows 1 and 2: ${a} and ${b}. Row 3: their sum, ${a + b}.`));
     }
     if (level === 2) {
       const a = rng.int(20, 180), b = rng.int(10, 255 - a);
-      return binAnswer(`Add \`${bin(a, 8)}\` + \`${bin(b, 8)}\`. Give an 8-bit answer.`, a + b, 8, `Check in denary: ${a} + ${b} = ${a + b} = ${bin(a + b, 8)}.`, ['Work from the right-hand column, carrying 1 whenever a column makes 2 or 3.', '0+0 = 0, 0+1 = 1, 1+1 = 10, 1+1+1 = 11.', `Result: ${bin(a + b, 8)}.`]);
+      return binAnswer(`Add \`${bin(a, 8)}\` + \`${bin(b, 8)}\`. Give an 8-bit answer.`, a + b, 8, `Check in denary: ${a} + ${b} = ${a + b} = ${bin(a + b, 8)}.`, ['Work from the right-hand column, carrying 1 whenever a column makes 2 or 3.', '0+0 = 0, 0+1 = 1, 1+1 = 10, 1+1+1 = 11.', `Result: ${bin(a + b, 8)}.`], pv(PV8, [bits(a, 8), bits(b, 8), bits(a + b, 8)], `Rows 1 and 2: ${a} and ${b}. Row 3: their sum, ${a + b}.`));
     }
     const a = rng.int(130, 250), b = rng.int(256 - a, 255);
-    if (rng.chance(0.5)) return choice(`Adding \`${bin(a, 8)}\` + \`${bin(b, 8)}\` in an 8-bit register. What happens?`, 'An overflow error: the answer needs 9 bits', ['It works: the answer fits in 8 bits', 'The answer becomes negative', 'The register adds an extra bit automatically'], rng, { explain: `${a} + ${b} = ${a + b}, but 8 bits can only hold up to 255. The carry out of the last column is lost: an overflow.`, steps: [`In denary: ${a} + ${b} = ${a + b}.`, 'The largest 8-bit number is 255.', 'The carry out of the leftmost column has nowhere to go: overflow.'] });
-    return binAnswer(`\`${bin(a, 8)}\` + \`${bin(b, 8)}\` overflows. Which 8 bits are left in the register (ignoring the lost carry)?`, a + b - 256, 8, `${a} + ${b} = ${a + b} = ${bin(a + b, 9)} in 9 bits. The 9th bit (256) is lost, leaving ${bin(a + b - 256, 8)} = ${a + b - 256}.`, [`${a} + ${b} = ${a + b}.`, `In binary that is ${bin(a + b, 9)}: 9 bits.`, `Only the right-hand 8 bits stay: ${bin(a + b - 256, 8)}.`]);
+    const over = pv([256, ...PV8], [bits(a, 8), bits(b, 8), bits(a + b, 9)], `Rows 1 and 2: ${a} and ${b}. Row 3: their sum, ${a + b}, needs a 9th bit (the 256 column), which an 8-bit register does not have.`);
+    if (rng.chance(0.5)) return choice(`Adding \`${bin(a, 8)}\` + \`${bin(b, 8)}\` in an 8-bit register. What happens?`, 'An overflow error: the answer needs 9 bits', ['It works: the answer fits in 8 bits', 'The answer becomes negative', 'The register adds an extra bit automatically'], rng, { explain: `${a} + ${b} = ${a + b}, but 8 bits can only hold up to 255. The carry out of the last column is lost: an overflow.`, steps: [`In denary: ${a} + ${b} = ${a + b}.`, 'The largest 8-bit number is 255.', 'The carry out of the leftmost column has nowhere to go: overflow.'], ...over });
+    return binAnswer(`\`${bin(a, 8)}\` + \`${bin(b, 8)}\` overflows. Which 8 bits are left in the register (ignoring the lost carry)?`, a + b - 256, 8, `${a} + ${b} = ${a + b} = ${bin(a + b, 9)} in 9 bits. The 9th bit (256) is lost, leaving ${bin(a + b - 256, 8)} = ${a + b - 256}.`, [`${a} + ${b} = ${a + b}.`, `In binary that is ${bin(a + b, 9)}: 9 bits.`, `Only the right-hand 8 bits stay: ${bin(a + b - 256, 8)}.`], over);
   },
 
   y8cShift(level, rng) {
     if (level === 1) {
       const n = rng.int(3, 60);
-      return binAnswer(`Apply a left shift of 1 place to \`${bin(n, 8)}\`. What is the new 8-bit number?`, n * 2, 8, `Every bit moves one place left and a 0 fills the right: ${bin(n * 2, 8)}. It has doubled: ${n} → ${n * 2}.`, ['Move every bit one place to the left.', 'Fill the empty right-hand place with 0.', `${bin(n, 8)} → ${bin(n * 2, 8)} (${n} × 2 = ${n * 2}).`]);
+      return binAnswer(`Apply a left shift of 1 place to \`${bin(n, 8)}\`. What is the new 8-bit number?`, n * 2, 8, `Every bit moves one place left and a 0 fills the right: ${bin(n * 2, 8)}. It has doubled: ${n} → ${n * 2}.`, ['Move every bit one place to the left.', 'Fill the empty right-hand place with 0.', `${bin(n, 8)} → ${bin(n * 2, 8)} (${n} × 2 = ${n * 2}).`], pv(PV8, [bits(n, 8), bits(n * 2, 8)], `Every bit moves one place left: ${n} × 2 = ${n * 2}.`, { shift: 1 }));
     }
     if (level === 2) {
       const n = rng.int(20, 255), k = rng.pick([1, 2, 3]);
-      return num(`\`${bin(n, 8)}\` is ${n}. Apply a right shift of ${k} place${k > 1 ? 's' : ''}. What is the result in denary?`, n >> k, `A right shift of ${k} divides by ${2 ** k} and drops any remainder: ${n} ÷ ${2 ** k} = ${n >> k}${n % 2 ** k ? ` remainder ${n % 2 ** k}, which is lost` : ''}.`, [`Each place to the right halves the number.`, `${k} place${k > 1 ? 's' : ''} divides by ${2 ** k}.`, `The new number is ${bin(n >> k, 8)} = ${n >> k}${n % 2 ** k ? ' (the bits that fell off the end are lost)' : ''}.`]);
+      return num(`\`${bin(n, 8)}\` is ${n}. Apply a right shift of ${k} place${k > 1 ? 's' : ''}. What is the result in denary?`, n >> k, `A right shift of ${k} divides by ${2 ** k} and drops any remainder: ${n} ÷ ${2 ** k} = ${n >> k}${n % 2 ** k ? ` remainder ${n % 2 ** k}, which is lost` : ''}.`, [`Each place to the right halves the number.`, `${k} place${k > 1 ? 's' : ''} divides by ${2 ** k}.`, `The new number is ${bin(n >> k, 8)} = ${n >> k}${n % 2 ** k ? ' (the bits that fell off the end are lost)' : ''}.`], shiftPic(n, -k, `${n % 2 ** k ? 'The bits that fall off the right-hand end are lost: ' : ''}${n} → ${n >> k}.`));
     }
     if (rng.chance(0.5)) {
       const k = rng.pick([2, 3, 4]);
@@ -134,7 +163,7 @@ export const Y8_COMPUTING_GENERATORS = {
     }
     const n = rng.int(129, 250), k = rng.pick([1, 2]);
     const r = (n << k) & 255;
-    return binAnswer(`An 8-bit register holds \`${bin(n, 8)}\`. After a left shift of ${k} place${k > 1 ? 's' : ''}, what does it hold?`, r, 8, `The leftmost bit${k > 1 ? 's fall' : ' falls'} off the end, so the answer is not ${n} × ${2 ** k} = ${n << k} (too big for 8 bits) but ${bin(r, 8)} = ${r}.`, ['Shift every bit left, filling with 0s on the right.', `Bits pushed past the 8th place are lost.`, `What is left: ${bin(r, 8)}.`]);
+    return binAnswer(`An 8-bit register holds \`${bin(n, 8)}\`. After a left shift of ${k} place${k > 1 ? 's' : ''}, what does it hold?`, r, 8, `The leftmost bit${k > 1 ? 's fall' : ' falls'} off the end, so the answer is not ${n} × ${2 ** k} = ${n << k} (too big for 8 bits) but ${bin(r, 8)} = ${r}.`, ['Shift every bit left, filling with 0s on the right.', `Bits pushed past the 8th place are lost.`, `What is left: ${bin(r, 8)}.`], shiftPic(n, k, `Bits pushed past the 128 column are lost: ${bin(r, 8)} = ${r}.`));
   },
 
   y8cUnits(level, rng) {
@@ -454,19 +483,19 @@ export const Y8_COMPUTING_GENERATORS = {
     if (level === 1) {
       const n = -rng.int(1, 20);
       const b = bin((n + 256) % 256, 8);
-      return num(`In 8-bit two’s complement the leftmost bit is worth −128. What denary number is \`${b}\`?`, n, `−128 + ${128 + n} = ${minus(n)}.`, ['The place values are −128, 64, 32, 16, 8, 4, 2, 1.', `The other 1s add up to ${128 + n}.`, `−128 + ${128 + n} = ${minus(n)}.`]);
+      return num(`In 8-bit two’s complement the leftmost bit is worth −128. What denary number is \`${b}\`?`, n, `−128 + ${128 + n} = ${minus(n)}.`, ['The place values are −128, 64, 32, 16, 8, 4, 2, 1.', `The other 1s add up to ${128 + n}.`, `−128 + ${128 + n} = ${minus(n)}.`], pv(TWOS, [[...b]], `−128 + ${128 + n} = ${minus(n)}.`));
     }
     if (level === 2) {
       const n = -rng.int(2, 100);
       const pos = bin(-n, 8), flipped = [...pos].map((c) => (c === '0' ? '1' : '0')).join('');
-      return binAnswer(`Write ${minus(n)} in 8-bit two’s complement.`, n + 256, 8, `Write ${-n} in binary (${pos}), flip every bit (${flipped}), then add 1: ${bin(n + 256, 8)}.`, [`${-n} = ${pos}.`, `Flip the bits: ${flipped}.`, `Add 1: ${bin(n + 256, 8)}.`]);
+      return binAnswer(`Write ${minus(n)} in 8-bit two’s complement.`, n + 256, 8, `Write ${-n} in binary (${pos}), flip every bit (${flipped}), then add 1: ${bin(n + 256, 8)}.`, [`${-n} = ${pos}.`, `Flip the bits: ${flipped}.`, `Add 1: ${bin(n + 256, 8)}.`], pv(TWOS, [[...pos], [...flipped], bits(n + 256, 8)], `Row 1: ${-n}. Row 2: every bit flipped. Row 3: add 1 to get ${minus(n)}.`));
     }
     if (rng.chance(0.4)) {
       const [q, v] = rng.pick([['smallest', -128], ['largest', 127]]);
-      return num(`What is the ${q} number an 8-bit two’s complement byte can hold?`, v, `The range is −128 (10000000) to 127 (01111111).`, ['The leftmost bit is worth −128.', q === 'smallest' ? 'Only that bit set: 10000000 = −128.' : 'Every bit except that one: 01111111 = 127.', `So ${minus(v)}.`]);
+      return num(`What is the ${q} number an 8-bit two’s complement byte can hold?`, v, `The range is −128 (10000000) to 127 (01111111).`, ['The leftmost bit is worth −128.', q === 'smallest' ? 'Only that bit set: 10000000 = −128.' : 'Every bit except that one: 01111111 = 127.', `So ${minus(v)}.`], pv(TWOS, [bits((v + 256) % 256, 8)], v < 0 ? 'Only the −128 bit is 1: −128.' : 'Every bit except the −128 bit: 64 + 32 + 16 + 8 + 4 + 2 + 1 = 127.'));
     }
     const a = rng.int(20, 100), b = -rng.int(5, a - 1);
-    return num(`Add \`${bin(a, 8)}\` (${a}) and \`${bin(b + 256, 8)}\` (two’s complement). Ignoring the carry out of the 8th bit, what is the answer in denary?`, a + b, `${bin(b + 256, 8)} is ${minus(b)}, so the sum is ${a} + (${minus(b)}) = ${a + b}. The carry out of the top bit is simply discarded.`, [`${bin(b + 256, 8)} = −128 + ${128 + b} = ${minus(b)}.`, `${a} + (${minus(b)}) = ${a + b}.`, 'In two’s complement, subtraction is just adding a negative number.']);
+    return num(`Add \`${bin(a, 8)}\` (${a}) and \`${bin(b + 256, 8)}\` (two’s complement). Ignoring the carry out of the 8th bit, what is the answer in denary?`, a + b, `${bin(b + 256, 8)} is ${minus(b)}, so the sum is ${a} + (${minus(b)}) = ${a + b}. The carry out of the top bit is simply discarded.`, [`${bin(b + 256, 8)} = −128 + ${128 + b} = ${minus(b)}.`, `${a} + (${minus(b)}) = ${a + b}.`, 'In two’s complement, subtraction is just adding a negative number.'], pv(TWOS, [bits(a, 8), bits(b + 256, 8), bits(a + b, 8)], `Row 1: ${a}. Row 2: −128 + ${128 + b} = ${minus(b)}. Row 3: the sum, ${a + b} (the carry out of the −128 column is dropped).`));
   },
 
   y8cSQL(level, rng) {

@@ -112,4 +112,21 @@ const items = [
   fact('el.switch', 'electricity', 'What does a switch do in a circuit?', 'it opens or closes a gap', ['it makes the battery bigger', 'it changes the colour of the light', 'it stores spare electricity'], 'A switch breaks or completes the circuit.', C),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const RIVER = { kind: 'flow', across: true, steps: ['source in the hills', 'stream', 'river', 'mouth at the sea'], caption: 'A river starts at its source and flows downhill to its mouth.' };
+const TOPIC_VISUALS = {
+  'science.dinosaurs': { kind: 'tree', root: { n: 'Dinosaurs', c: [{ n: 'Meat-eaters', note: 'sharp, pointed teeth: T. rex' }, { n: 'Plant-eaters', note: 'flat or peg-like teeth: Triceratops, Stegosaurus, Diplodocus' }] } },
+  'science.hotcold': { kind: 'table', head: ['Place', 'What it is like', 'Who lives there'], rows: [['Arctic (North Pole)', 'freezing and icy', 'polar bears'], ['rainforest (near the Equator)', 'hot and wet', 'monkeys, parrots'], ['desert', 'hot and very dry', 'camels'], ['Antarctic (South Pole)', 'freezing and icy', 'penguins']], tint: 'rows', caption: 'Hot near the Equator, cold near the Poles.' },
+  'science.explore': { kind: 'timeline', from: 1955, to: 2020, events: [[1961, 'Yuri Gagarin: first person in space'], [1969, 'Neil Armstrong walks on the Moon'], [1991, 'Helen Sharman: first British astronaut'], [2015, 'Tim Peake goes to the space station']] },
+  'science.sound': { kind: 'flow', steps: ['The drum vibrates', 'The air around it vibrates', 'The vibrations reach your ear', 'You hear the sound'] },
+};
+const ITEM_VISUALS = {
+  'science.mb.ladybird': { kind: 'cycle', steps: ['egg', 'larva', 'pupa', 'adult ladybird'], centre: 'a ladybird’s life cycle' },
+  'science.cs.source': RIVER,
+  'science.cs.mouth': RIVER,
+  'science.cs.flow': RIVER,
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'science', deck: 'more', topics, items }];

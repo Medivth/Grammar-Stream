@@ -13,7 +13,66 @@
    "intro": "More Greek building blocks: arche (rule), nomos (law), morphe (shape), phos (light), aster (star), kryptos (hidden). Many of them are words you will meet in your Greek lessons.",
    "teach": "Decode “cryptography” and “autonomy” from their roots.",
    "talk": "Ask {him} to find a word with “-archy” or “-nomy” in the news and decode it.",
-   "hook": "Greek roots click together like building bricks: astron (star) + nomos (law) = astronomy."
+   "hook": "Greek roots click together like building bricks: astron (star) + nomos (law) = astronomy.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "astro",
+        "root",
+        "star"
+       ],
+       [
+        "nomy",
+        "suffix",
+        "law"
+       ]
+      ],
+      "result": "astronomy"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "meta",
+        "prefix",
+        "change"
+       ],
+       [
+        "morph",
+        "root",
+        "shape"
+       ],
+       [
+        "osis",
+        "suffix",
+        "process"
+       ]
+      ],
+      "result": "metamorphosis"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "photo",
+        "prefix",
+        "light"
+       ],
+       [
+        "graph",
+        "root",
+        "write or draw"
+       ]
+      ],
+      "result": "photograph"
+     }
+    ],
+    "caption": "Greek parts snap together into English words."
+   }
   },
   {
    "id": "english.lang2-roots-2",
@@ -26,7 +85,34 @@
    "intro": "Greek prefixes change a word’s meaning at a stroke: eu- (good), dys- (bad), hyper- (over), hypo- (under), syn- (together), pan- (all), meta- (beyond).",
    "teach": "Explain the difference between “utopia” and “dystopia”.",
    "talk": "Play “prefix tennis”: one of you names a Greek prefix, the other gives a word that uses it.",
-   "hook": "One Greek prefix can flip a word: euphoria feels good; dysfunction works badly."
+   "hook": "One Greek prefix can flip a word: euphoria feels good; dysfunction works badly.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "One end",
+     "The opposite end"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "good / bad",
+      "**eu-** (good): euphoria",
+      "**dys-** (bad): dystopia"
+     ],
+     [
+      "over / under",
+      "**hyper-** (over): hyperactive",
+      "**hypo-** (under): hypothermia"
+     ],
+     [
+      "same / other",
+      "**homo-** (same): homogeneous",
+      "**hetero-** (other): heterogeneous"
+     ]
+    ],
+    "caption": "Greek prefixes in opposite pairs: learn one and you know its partner."
+   }
   },
   {
    "id": "english.lang2-latin-2",
@@ -39,7 +125,77 @@
    "intro": "More Latin roots that run through English: vid (see), mit (send), duc (lead), voc (call), vert (turn), loqu (speak), mort (death), omni (all).",
    "teach": "Use roots to explain what “loquacious” and “omnivore” mean.",
    "talk": "Ask {him} how many words {she} can make from “duct” or “vert” in a minute.",
-   "hook": "Vid, voc, vert, mort: Latin roots hide inside words you use every day."
+   "hook": "Vid, voc, vert, mort: Latin roots hide inside words you use every day.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "trans",
+        "prefix",
+        "across"
+       ],
+       [
+        "mit",
+        "root",
+        "send"
+       ]
+      ],
+      "result": "transmit"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "con",
+        "prefix",
+        "together"
+       ],
+       [
+        "duct",
+        "root",
+        "lead"
+       ]
+      ],
+      "result": "conduct"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "pro",
+        "prefix",
+        "forth"
+       ],
+       [
+        "voke",
+        "root",
+        "call"
+       ]
+      ],
+      "result": "provoke"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "omni",
+        "prefix",
+        "all"
+       ],
+       [
+        "vore",
+        "root",
+        "eat"
+       ]
+      ],
+      "result": "omnivore"
+     }
+    ],
+    "caption": "Latin roots with prefixes snapped on."
+   }
   },
   {
    "id": "english.lang2-vocab-2",
@@ -92,7 +248,58 @@
    "intro": "Grammar is a toolkit for meaning: noun phrases that pack in detail, apposition, non-finite clauses, inversion, minor sentences and lists with or without “and”.",
    "teach": "Explain the effect of starting a sentence with “Into the darkness crept…”.",
    "talk": "Read a paragraph from {her} book together and find one sentence built for effect.",
-   "hook": "Grammar is a camera: it decides what the reader sees first and what comes last."
+   "hook": "Grammar is a camera: it decides what the reader sees first and what comes last.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "the",
+        "article",
+        "determiner"
+       ],
+       [
+        "ancient, crumbling",
+        "adjective",
+        "pre-modifiers"
+       ],
+       [
+        "temple",
+        "noun",
+        "head noun"
+       ],
+       [
+        "on the hill",
+        "preposition",
+        "post-modifier"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Medusa,",
+        "noun"
+       ],
+       [
+        "a Gorgon with snakes for hair,",
+        "noun",
+        "apposition: renames her"
+       ],
+       [
+        "lived",
+        "verb"
+       ],
+       [
+        "alone.",
+        "adverbial"
+       ]
+      ]
+     }
+    ],
+    "caption": "An expanded noun phrase packs detail round its head noun; apposition places a second noun phrase beside the first."
+   }
   },
   {
    "id": "english.lang2-craft-2",
@@ -118,7 +325,16 @@
    "intro": "Good description is designed like a film: wide shot, zoom in, one telling detail. Precise nouns and verbs beat strings of adjectives, and every sense counts.",
    "teach": "Explain why “the oak groaned” is stronger than “the big old tree made a noise”.",
    "talk": "Describe the view from a window together using one sound, one smell and one texture.",
-   "hook": "Wide shot, close-up, one telling detail: describe like a film director."
+   "hook": "Wide shot, close-up, one telling detail: describe like a film director.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "**Wide shot**: the whole stormy sea",
+     "**Mid shot**: the ship",
+     "**Close-up**: one sailor’s hands"
+    ],
+    "caption": "Design description like a film: wide, then closer, then one telling detail."
+   }
   },
   {
    "id": "english.lang2-nonfiction",
@@ -131,7 +347,42 @@
    "intro": "Articles, letters, speeches, reviews and reports each have conventions. Exam tasks reward the right form for the audience and purpose.",
    "teach": "Explain when you would sign a letter “Yours faithfully” rather than “Yours sincerely”.",
    "talk": "Look at a newspaper together and find the headline, standfirst and byline.",
-   "hook": "PAF: Purpose, Audience, Form. Know all three before you write a word."
+   "hook": "PAF: Purpose, Audience, Form. Know all three before you write a word.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Form",
+     "Conventions"
+    ],
+    "tint": "rows",
+    "rows": [
+     [
+      "Newspaper article",
+      "headline, standfirst, byline, subheadings, quotations"
+     ],
+     [
+      "Formal letter",
+      "addresses and date; “Dear Sir or Madam” → Yours faithfully; “Dear Mr Hughes” → Yours sincerely"
+     ],
+     [
+      "Speech",
+      "direct address to the audience; rhetorical devices"
+     ],
+     [
+      "Report",
+      "impersonal tone, subheadings, recommendations"
+     ],
+     [
+      "Leaflet",
+      "headings, short sections, bullet points"
+     ],
+     [
+      "Blog",
+      "personal and chatty, in the first person"
+     ]
+    ],
+    "caption": "Before you write: form, audience and purpose."
+   }
   },
   {
    "id": "english.lang2-spelling-2",
@@ -158,7 +409,38 @@
    "teach": "Explain the difference between dramatic irony and situational irony.",
    "talk": "Ask {him} whether the narrator of {her} current book can be trusted, and why.",
    "tier": "stretch",
-   "hook": "Who sees, who speaks, and can we trust them?"
+   "hook": "Who sees, who speaks, and can we trust them?",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Narrator",
+     "Uses",
+     "What we learn"
+    ],
+    "tint": "rows",
+    "rows": [
+     [
+      "First person",
+      "“I”",
+      "only what the narrator sees, thinks and chooses to tell"
+     ],
+     [
+      "Third person limited",
+      "“he”, “she”",
+      "one character’s view: a camera on their shoulder"
+     ],
+     [
+      "Third person omniscient",
+      "“he”, “she”, “they”",
+      "every character’s thoughts and feelings"
+     ],
+     [
+      "Second person",
+      "“you”",
+      "the reader is placed inside the story"
+     ]
+    ]
+   }
   },
   {
    "id": "english.lang2-structure",
@@ -187,7 +469,53 @@
    "teach": "Explain chiasmus using a famous example.",
    "talk": "Listen to a short speech together and count the rhetorical devices.",
    "tier": "stretch",
-   "hook": "The Greeks had a name for every trick: chiasmus, litotes, zeugma."
+   "hook": "The Greeks had a name for every trick: chiasmus, litotes, zeugma.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Ask not what"
+       ],
+       [
+        "your country",
+        "subject",
+        "A"
+       ],
+       [
+        "can do for"
+       ],
+       [
+        "you;",
+        "object",
+        "B"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "ask what"
+       ],
+       [
+        "you",
+        "object",
+        "B"
+       ],
+       [
+        "can do for"
+       ],
+       [
+        "your country.",
+        "subject",
+        "A"
+       ]
+      ]
+     }
+    ],
+    "caption": "Chiasmus: A B, then B A. The words cross like the Greek letter chi (X)."
+   }
   }
  ],
  "items": [
@@ -207,7 +535,28 @@
     "choice"
    ],
    "hook": "An archbishop is a chief bishop; an archenemy is your chief enemy.",
-   "example": "Monarchy is rule by one (monos); anarchy is having no ruler at all."
+   "example": "Monarchy is rule by one (monos); anarchy is having no ruler at all.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "mon",
+        "prefix",
+        "one"
+       ],
+       [
+        "archy",
+        "suffix",
+        "rule"
+       ]
+      ],
+      "result": "monarchy"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.r1.nomos",
@@ -224,7 +573,44 @@
    "formats": [
     "choice"
    ],
-   "example": "Astronomy is the “law of the stars”: astron (star) + nomos (law)."
+   "example": "Astronomy is the “law of the stars”: astron (star) + nomos (law).",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "astro",
+        "root",
+        "star"
+       ],
+       [
+        "nomy",
+        "suffix",
+        "law"
+       ]
+      ],
+      "result": "astronomy"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "auto",
+        "prefix",
+        "self"
+       ],
+       [
+        "nomy",
+        "suffix",
+        "law"
+       ]
+      ],
+      "result": "autonomy"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.r1.kinesis",
@@ -258,7 +644,33 @@
    "formats": [
     "choice"
    ],
-   "example": "A caterpillar turning into a butterfly is a metamorphosis: a change of shape."
+   "example": "A caterpillar turning into a butterfly is a metamorphosis: a change of shape.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "meta",
+        "prefix",
+        "change"
+       ],
+       [
+        "morph",
+        "root",
+        "shape"
+       ],
+       [
+        "osis",
+        "suffix",
+        "process"
+       ]
+      ],
+      "result": "metamorphosis"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.r1.phos",
@@ -487,7 +899,28 @@
     }
    ],
    "explain": "kryptos (hidden) + graphein (to write): writing in code.",
-   "example": "In the Second World War, codebreakers at Bletchley Park cracked enemy codes."
+   "example": "In the Second World War, codebreakers at Bletchley Park cracked enemy codes.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "crypto",
+        "prefix",
+        "hidden"
+       ],
+       [
+        "graphy",
+        "root",
+        "writing"
+       ]
+      ],
+      "result": "cryptography"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.r1.dec2",
@@ -559,7 +992,33 @@
     }
    ],
    "explain": "a- (without) + morphe (shape).",
-   "hook": "A- (without) + morphe (shape): amorphous means shapeless, like a blob of jelly."
+   "hook": "A- (without) + morphe (shape): amorphous means shapeless, like a blob of jelly.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "a",
+        "prefix",
+        "without"
+       ],
+       [
+        "morph",
+        "root",
+        "shape"
+       ],
+       [
+        "ous",
+        "suffix",
+        "having"
+       ]
+      ],
+      "result": "amorphous"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.r2.dys",
@@ -576,7 +1035,34 @@
    "formats": [
     "choice"
    ],
-   "example": "Dystopian novels imagine a terrible future society, like Orwell’s Nineteen Eighty-Four."
+   "example": "Dystopian novels imagine a terrible future society, like Orwell’s Nineteen Eighty-Four.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "One end",
+     "The opposite end"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "good / bad",
+      "**eu-** (good): euphoria",
+      "**dys-** (bad): dystopia"
+     ],
+     [
+      "over / under",
+      "**hyper-** (over): hyperactive",
+      "**hypo-** (under): hypothermia"
+     ],
+     [
+      "same / other",
+      "**homo-** (same): homogeneous",
+      "**hetero-** (other): heterogeneous"
+     ]
+    ],
+    "caption": "Greek prefixes in opposite pairs: learn one and you know its partner."
+   }
   },
   {
    "id": "english.lang2.r2.eu",
@@ -610,7 +1096,34 @@
    "formats": [
     "choice"
    ],
-   "example": "A bowl of mixed nuts is heterogeneous; a glass of milk looks homogeneous."
+   "example": "A bowl of mixed nuts is heterogeneous; a glass of milk looks homogeneous.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "One end",
+     "The opposite end"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "good / bad",
+      "**eu-** (good): euphoria",
+      "**dys-** (bad): dystopia"
+     ],
+     [
+      "over / under",
+      "**hyper-** (over): hyperactive",
+      "**hypo-** (under): hypothermia"
+     ],
+     [
+      "same / other",
+      "**homo-** (same): homogeneous",
+      "**hetero-** (other): heterogeneous"
+     ]
+    ],
+    "caption": "Greek prefixes in opposite pairs: learn one and you know its partner."
+   }
   },
   {
    "id": "english.lang2.r2.homo",
@@ -856,7 +1369,28 @@
     }
    ],
    "explain": "dys- (bad) + topos (place). Utopia was coined from ou (no) + topos: nowhere.",
-   "hook": "Thomas More’s Utopia (1516) described an ideal island whose name means “no place”."
+   "hook": "Thomas More’s Utopia (1516) described an ideal island whose name means “no place”.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "dys",
+        "prefix",
+        "bad"
+       ],
+       [
+        "topia",
+        "root",
+        "place"
+       ]
+      ],
+      "result": "dystopia"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.r2.dec2",
@@ -904,7 +1438,28 @@
     }
    ],
    "explain": "pan- (all) + akos (cure). Panakeia was a Greek goddess of healing.",
-   "example": "People say “there is no panacea” for a complicated problem: no single cure-all."
+   "example": "People say “there is no panacea” for a complicated problem: no single cure-all.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "pan",
+        "prefix",
+        "all"
+       ],
+       [
+        "acea",
+        "root",
+        "cure"
+       ]
+      ],
+      "result": "panacea"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.r2.dec4",
@@ -961,7 +1516,28 @@
    "formats": [
     "choice"
    ],
-   "example": "A missile is sent through the air; a mission is a task you are sent on."
+   "example": "A missile is sent through the air; a mission is a task you are sent on.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "trans",
+        "prefix",
+        "across"
+       ],
+       [
+        "mit",
+        "root",
+        "send"
+       ]
+      ],
+      "result": "transmit"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.la2.duc",
@@ -995,7 +1571,28 @@
    "formats": [
     "choice"
    ],
-   "example": "Your vocal cords make your voice; an advocate is someone called in to speak for you."
+   "example": "Your vocal cords make your voice; an advocate is someone called in to speak for you.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "pro",
+        "prefix",
+        "forth"
+       ],
+       [
+        "voke",
+        "root",
+        "call"
+       ]
+      ],
+      "result": "provoke"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.la2.fract",
@@ -1131,7 +1728,28 @@
    "formats": [
     "choice"
    ],
-   "example": "A ventriloquist “speaks from the belly”: venter (belly) + loqui (to speak)."
+   "example": "A ventriloquist “speaks from the belly”: venter (belly) + loqui (to speak).",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "loqu",
+        "root",
+        "speak"
+       ],
+       [
+        "acious",
+        "suffix",
+        "full of"
+       ]
+      ],
+      "result": "loquacious"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.la2.mort",
@@ -1247,7 +1865,28 @@
     }
    ],
    "explain": "omni (all) + vorare (to swallow).",
-   "example": "Humans, bears and pigs are omnivores: they eat both plants and meat."
+   "example": "Humans, bears and pigs are omnivores: they eat both plants and meat.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "omni",
+        "prefix",
+        "all"
+       ],
+       [
+        "vore",
+        "root",
+        "eat"
+       ]
+      ],
+      "result": "omnivore"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.la2.dec3",
@@ -1271,7 +1910,33 @@
     }
    ],
    "explain": "ambi (both) + dexter (right hand): both hands as skilled as a right hand.",
-   "hook": "Dexter = right (as in dexterity); sinister was Latin for left."
+   "hook": "Dexter = right (as in dexterity); sinister was Latin for left.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ambi",
+        "prefix",
+        "both"
+       ],
+       [
+        "dextr",
+        "root",
+        "right hand"
+       ],
+       [
+        "ous",
+        "suffix",
+        "having"
+       ]
+      ],
+      "result": "ambidextrous"
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.v2.melancholy",
@@ -2229,7 +2894,36 @@
     }
    ],
    "explain": "Pre-modifiers come before the head noun in a noun phrase.",
-   "hook": "Pre = before: pre-modifiers come before the noun, like an opening act."
+   "hook": "Pre = before: pre-modifiers come before the noun, like an opening act.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "the",
+        "article",
+        "determiner"
+       ],
+       [
+        "ancient, crumbling",
+        "adjective",
+        "pre-modifiers"
+       ],
+       [
+        "temple",
+        "noun",
+        "head noun"
+       ],
+       [
+        "on the hill",
+        "preposition",
+        "post-modifier"
+       ]
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.g3.postmod",
@@ -2253,7 +2947,36 @@
     }
    ],
    "explain": "Post-modifiers come after the noun: prepositional phrases or relative clauses.",
-   "hook": "Post = after: post-modifiers come after the noun, like a PS after a letter."
+   "hook": "Post = after: post-modifiers come after the noun, like a PS after a letter.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "the",
+        "article",
+        "determiner"
+       ],
+       [
+        "ancient, crumbling",
+        "adjective",
+        "pre-modifiers"
+       ],
+       [
+        "temple",
+        "noun",
+        "head noun"
+       ],
+       [
+        "on the hill",
+        "preposition",
+        "post-modifier"
+       ]
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.g3.apposition",
@@ -2277,7 +3000,33 @@
     }
    ],
    "explain": "Apposition places two noun phrases side by side, the second renaming the first.",
-   "example": "News reports use apposition constantly: “Big Ben, the Great Bell of Westminster, rang out.”"
+   "example": "News reports use apposition constantly: “Big Ben, the Great Bell of Westminster, rang out.”",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Medusa,",
+        "noun"
+       ],
+       [
+        "a Gorgon with snakes for hair,",
+        "noun",
+        "apposition: renames her"
+       ],
+       [
+        "lived",
+        "verb"
+       ],
+       [
+        "alone.",
+        "adverbial"
+       ]
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "english.lang2.g3.nonfinite",
@@ -2301,7 +3050,27 @@
     }
    ],
    "explain": "Non-finite clauses (-ing or -ed openers) add action without starting a new sentence.",
-   "hook": "Non-finite = no tense and no subject: “Gripping the thread” needs a main clause to finish it."
+   "hook": "Non-finite = no tense and no subject: “Gripping the thread” needs a main clause to finish it.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Gripping the thread,",
+        "subordinate",
+        "non-finite clause"
+       ],
+       [
+        "Theseus entered the labyrinth.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "A non-finite clause has no tense of its own: it leans on the main clause."
+   }
   },
   {
    "id": "english.lang2.g3.dangling",
@@ -2493,7 +3262,46 @@
     }
    ],
    "explain": "The passive can leave out the agent, avoiding blame.",
-   "hook": "The zombie test: “Mistakes were made (by zombies).” If zombies fit, it is passive."
+   "hook": "The zombie test: “Mistakes were made (by zombies).” If zombies fit, it is passive.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The minister",
+        "subject",
+        "subject (the doer)"
+       ],
+       [
+        "made",
+        "verb",
+        "active verb"
+       ],
+       [
+        "mistakes.",
+        "object",
+        "object"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "Mistakes",
+        "object",
+        "subject"
+       ],
+       [
+        "were made.",
+        "verb",
+        "passive verb"
+       ]
+      ]
+     }
+    ],
+    "caption": "In the passive the agent can simply disappear: nobody is named."
+   }
   },
   {
    "id": "english.lang2.c2.pathetic",
@@ -2654,7 +3462,38 @@
     }
    ],
    "explain": "Third person limited keeps us close to one character while keeping some distance.",
-   "hook": "Third person limited: a camera on one character’s shoulder."
+   "hook": "Third person limited: a camera on one character’s shoulder.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Narrator",
+     "Uses",
+     "What we learn"
+    ],
+    "tint": "rows",
+    "rows": [
+     [
+      "First person",
+      "“I”",
+      "only what the narrator sees, thinks and chooses to tell"
+     ],
+     [
+      "Third person limited",
+      "“he”, “she”",
+      "one character’s view: a camera on their shoulder"
+     ],
+     [
+      "Third person omniscient",
+      "“he”, “she”, “they”",
+      "every character’s thoughts and feelings"
+     ],
+     [
+      "Second person",
+      "“you”",
+      "the reader is placed inside the story"
+     ]
+    ]
+   }
   },
   {
    "id": "english.lang2.c2.symbol",
@@ -2783,7 +3622,16 @@
     }
    ],
    "explain": "Moving from wide to close focus guides the reader’s eye, as a film director would.",
-   "hook": "Wide shot, mid shot, close-up: write like a camera zooming in."
+   "hook": "Wide shot, mid shot, close-up: write like a camera zooming in.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "**Wide shot**: the whole stormy sea",
+     "**Mid shot**: the ship",
+     "**Close-up**: one sailor’s hands"
+    ],
+    "caption": "Design description like a film: wide, then closer, then one telling detail."
+   }
   },
   {
    "id": "english.lang2.ds.verbs",
@@ -3023,7 +3871,24 @@
     }
    ],
    "explain": "Unknown name: Yours faithfully. Named person: Yours sincerely.",
-   "hook": "Never put two s’s together: Sir does not go with sincerely. Dear Sir or Madam → Yours faithfully."
+   "hook": "Never put two s’s together: Sir does not go with sincerely. Dear Sir or Madam → Yours faithfully.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "If you begin…",
+     "…end with"
+    ],
+    "rows": [
+     [
+      "Dear Sir or Madam (no name)",
+      "Yours **faithfully**"
+     ],
+     [
+      "Dear Mr Hughes (a name)",
+      "Yours **sincerely**"
+     ]
+    ]
+   }
   },
   {
    "id": "english.lang2.nf.sincerely",
@@ -3047,7 +3912,24 @@
     }
    ],
    "explain": "Named person: Yours sincerely.",
-   "hook": "Named person → sincerely. Unnamed “Sir or Madam” → faithfully."
+   "hook": "Named person → sincerely. Unnamed “Sir or Madam” → faithfully.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "If you begin…",
+     "…end with"
+    ],
+    "rows": [
+     [
+      "Dear Sir or Madam (no name)",
+      "Yours **faithfully**"
+     ],
+     [
+      "Dear Mr Hughes (a name)",
+      "Yours **sincerely**"
+     ]
+    ]
+   }
   },
   {
    "id": "english.lang2.nf.standfirst",
@@ -3767,7 +4649,38 @@
      "feedback": "They can reveal everything."
     }
    ],
-   "explain": "From Latin omni (all) + sciens (knowing)."
+   "explain": "From Latin omni (all) + sciens (knowing).",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Narrator",
+     "Uses",
+     "What we learn"
+    ],
+    "tint": "rows",
+    "rows": [
+     [
+      "First person",
+      "“I”",
+      "only what the narrator sees, thinks and chooses to tell"
+     ],
+     [
+      "Third person limited",
+      "“he”, “she”",
+      "one character’s view: a camera on their shoulder"
+     ],
+     [
+      "Third person omniscient",
+      "“he”, “she”, “they”",
+      "every character’s thoughts and feelings"
+     ],
+     [
+      "Second person",
+      "“you”",
+      "the reader is placed inside the story"
+     ]
+    ]
+   }
   },
   {
    "id": "english.lang2.vo.epistolary",
@@ -4079,7 +4992,53 @@
    ],
    "explain": "Chiasmus (from the Greek letter chi, X) crosses the structure: A B, B A.",
    "hook": "Chi is the Greek letter X: the words cross over, A B, B A.",
-   "example": "“When the going gets tough, the tough get going” is an everyday chiasmus."
+   "example": "“When the going gets tough, the tough get going” is an everyday chiasmus.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Ask not what"
+       ],
+       [
+        "your country",
+        "subject",
+        "A"
+       ],
+       [
+        "can do for"
+       ],
+       [
+        "you;",
+        "object",
+        "B"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "ask what"
+       ],
+       [
+        "you",
+        "object",
+        "B"
+       ],
+       [
+        "can do for"
+       ],
+       [
+        "your country.",
+        "subject",
+        "A"
+       ]
+      ]
+     }
+    ],
+    "caption": "Chiasmus: A B, then B A. The words cross like the Greek letter chi (X)."
+   }
   },
   {
    "id": "english.lang2.rh2.epistrophe",
@@ -4104,7 +5063,41 @@
    ],
    "explain": "Epistrophe: repetition at the end; anaphora: at the beginning.",
    "hook": "Anaphora at the start, epistrophe at the end.",
-   "example": "Lincoln spoke these words at Gettysburg in 1863, in a speech of only about 270 words."
+   "example": "Lincoln spoke these words at Gettysburg in 1863, in a speech of only about 270 words.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "government of"
+       ],
+       [
+        "the people,",
+        "noun",
+        "repeated end"
+       ],
+       [
+        "by"
+       ],
+       [
+        "the people,",
+        "noun",
+        "repeated end"
+       ],
+       [
+        "for"
+       ],
+       [
+        "the people.",
+        "noun",
+        "repeated end"
+       ]
+      ]
+     }
+    ],
+    "caption": "Epistrophe: the same words at the end of each phrase (Lincoln)."
+   }
   },
   {
    "id": "english.lang2.rh2.hypophora",

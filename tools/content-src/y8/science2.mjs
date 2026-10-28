@@ -608,4 +608,96 @@ for (const [id, memory] of Object.entries(MEMORY)) {
 }
 // --- end of memory hooks
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Keyed like the memory hooks (topics without “science.”, items without “science.m.”). Labelled
+// diagrams (heart, leaf, waves…) are attached separately; a picture added here joins any already there.
+const bar = (title, ylabel, step, cats) => ({ kind: 'maths', diagram: { type: 'bar', title, ylabel, step, cats: cats.map(([label, v]) => ({ label, v })) } });
+const RATES = { kind: 'maths', diagram: { type: 'line', title: 'Carbon dioxide made', ylabel: 'cm³', xlabel: 'time (min)', xs: ['1', '2', '3', '4', '5'], series: [{ name: 'powder', ys: [55, 80, 88, 90, 90] }, { name: 'large chips', ys: [20, 36, 49, 60, 68] }], step: 20 }, caption: 'Same mass of marble. The powder reacts faster at first, then levels off at 90 cm³ when a reactant is used up.' };
+const TOPIC_VISUALS = {
+  enzymes: { kind: 'flow', steps: ['Substrate fits the active site', 'Enzyme breaks the substrate down', 'Products leave; enzyme is unchanged'], caption: 'Lock and key: only the right substrate fits. Too hot, and the active site changes shape: the enzyme is denatured.' },
+  nervous: { kind: 'flow', steps: ['Stimulus: a hot pan', 'Receptors in the skin', 'Sensory neurone', 'Relay neurone in the spinal cord', 'Motor neurone', 'Effector: a muscle contracts', 'Response: the hand pulls away'], caption: 'A reflex arc bypasses the conscious brain, so the response is very fast.' },
+  transport: { kind: 'flow', steps: ['Water enters root hair cells by osmosis', 'It travels up the stem in the xylem', 'It reaches the leaves', 'It evaporates out through the stomata'], caption: 'This loss of water is transpiration, and it pulls more water up behind it. Sugars travel in the phloem.' },
+  immunity: { kind: 'flow', steps: ['Vaccine: a dead or weakened pathogen', 'White blood cells make matching antibodies', 'Memory cells stay in the blood', 'Later, the real pathogen gets in', 'Antibodies made fast: no illness'] },
+  diet: { kind: 'table', head: ['Test', 'For', 'Positive result'], rows: [
+    ['Iodine', 'starch', 'orange-brown → **blue-black**'],
+    ['Benedict’s (heated)', 'reducing sugar', 'blue → **green, yellow or brick red**'],
+    ['Biuret', 'protein', 'blue → **purple**'],
+    ['Ethanol, then water', 'fat (lipid)', '**cloudy white**'],
+  ] },
+  biodiversity: { kind: 'tree', root: { n: 'Animalia', note: 'kingdom', c: [{ n: 'Chordata', note: 'phylum', c: [{ n: 'Mammalia', note: 'class', c: [{ n: 'Carnivora', note: 'order', c: [{ n: 'Felidae', note: 'family: cats', c: [
+    { n: 'Panthera', note: 'genus', c: [{ n: 'Panthera leo', note: 'lion', mark: true }, { n: 'Panthera tigris', note: 'tiger' }] },
+    { n: 'Felis', note: 'genus', c: [{ n: 'Felis catus', note: 'pet cat' }] },
+  ] }] }] }] }] }, caption: 'King Philip Came Over For Good Soup: kingdom, phylum, class, order, family, genus, species. A species name is genus + species.' },
+  geneng: { kind: 'flow', steps: ['Cut the insulin gene out of human DNA', 'Insert it into a bacterial plasmid', 'Put the plasmid into a bacterium', 'Bacteria multiply in huge tanks', 'Collect and purify the insulin'], caption: 'Enzymes cut and join the DNA. Each time the bacteria divide, they copy the gene.' },
+  extraction: { kind: 'table', head: ['Most reactive first', 'Extracted by'], rows: [
+    ['potassium', 'electrolysis'], ['magnesium', 'electrolysis'], ['aluminium', 'electrolysis'],
+    ['carbon', '**the dividing line** (a non-metal)'],
+    ['iron', 'heating the ore with carbon'], ['copper', 'heating the ore with carbon'], ['gold', 'found as the metal: just dig it up'],
+  ], caption: 'Metals below carbon can be extracted by heating with carbon; metals above it need electrolysis.' },
+  rates: { kind: 'table', head: ['Change', 'Why the reaction is faster'], rows: [
+    ['Higher temperature', 'particles move faster: more frequent, more energetic collisions'],
+    ['Higher concentration', 'more particles in the same volume: more collisions'],
+    ['Larger surface area (powder)', 'more particles exposed: more collisions'],
+    ['A catalyst', 'a route with a lower activation energy'],
+  ] },
+  energychange: { kind: 'table', head: ['', 'Exothermic', 'Endothermic'], tint: 'cols', rows: [
+    ['Energy', 'given out', 'taken in'],
+    ['Feels', '**warmer**', '**colder**'],
+    ['Bonds', 'making bonds releases more', 'breaking bonds takes in more'],
+    ['e.g.', 'combustion, hand warmers', 'photosynthesis, cold packs'],
+  ], caption: 'On a reaction profile, the products of an exothermic reaction end lower in energy than the reactants; endothermic, higher.' },
+  resources: { kind: 'cycle', steps: ['getting raw materials', 'manufacture', 'use', 'disposal or recycling'], centre: 'life-cycle assessment', caption: 'An LCA weighs the environmental impact of every stage. Recycling sends materials back to the start.' },
+  motion: { kind: 'flow', steps: ['Weight > air resistance: she speeds up', 'Faster, so air resistance increases', 'Forces balance: steady 55\u00a0m/s', 'Parachute opens: air resistance > weight, she slows', 'Forces balance again: steady 5\u00a0m/s'], caption: 'Terminal velocity: air resistance has risen to equal her weight.' },
+  work: { kind: 'flow', steps: ['Chemical store in her muscles', 'Lifting: the bar’s gravitational store fills', 'Falling: gravitational → kinetic store', 'Landing: dissipated by sound and heating'], caption: 'A weightlifter lifts a bar, then drops it. Energy is transferred, never used up.' },
+  heating: { kind: 'table', head: ['', 'How the energy moves', 'Reduce it with'], rows: [
+    ['Conduction', 'particles vibrate and pass energy on (best in metals)', 'insulators, trapped air'],
+    ['Convection', 'warm fluid rises, cooler fluid sinks', 'trapping air so it cannot move'],
+    ['Radiation', 'infrared waves; can cross a vacuum', 'shiny surfaces'],
+  ] },
+  stars: { kind: 'tree', root: { n: 'Cloud of gas and dust', note: 'a nebula', c: [{ n: 'Main-sequence star', note: 'fusing hydrogen into helium', c: [
+    { n: 'Red giant', note: 'if like the Sun', c: [{ n: 'White dwarf', mark: true }] },
+    { n: 'Red supergiant', note: 'if much more massive', c: [{ n: 'Supernova', c: [{ n: 'Neutron star' }, { n: 'Black hole', note: 'if massive enough' }] }] },
+  ] }] }, caption: 'Mass decides the ending. The Sun will become a red giant in about 5 billion years, then a white dwarf.' },
+  practicals: { kind: 'table', head: ['', 'Random error', 'Systematic error'], tint: 'cols', rows: [
+    ['What happens', 'readings vary unpredictably', 'every reading shifts the same way'],
+    ['Example', 'reaction time when timing', 'a balance reading 0.5 g with nothing on it'],
+    ['What helps', 'repeat and take a mean', 'repeats do not show it: zero or fix the instrument'],
+  ] },
+  electrolysis: { kind: 'table', head: ['Electrode', 'Attracts', 'Molten lead bromide gives'], rows: [
+    ['Cathode (−)', 'positive ions (metals)', 'lead'],
+    ['Anode (+)', 'negative ions (non-metals)', 'bromine'],
+  ], caption: 'The ions must be free to move, so the compound has to be melted or dissolved.' },
+  induction: { kind: 'table', head: ['The magnet…', 'The meter shows…'], rows: [
+    ['is pushed into the coil', 'a reading one way'],
+    ['is held still inside', '**zero**'],
+    ['is pulled out', 'a reading the other way'],
+  ], caption: 'Only a changing magnetic field induces a potential difference. Move faster, use a stronger magnet or more turns for a bigger one.' },
+};
+const ITEM_VISUALS = {
+  'ez.case1': { kind: 'maths', diagram: { type: 'line', title: 'Time for the starch to disappear', ylabel: 's', xlabel: 'temperature (°C)', xs: ['10', '20', '37', '50'], ys: [300, 180, 60, 150], step: 50, scaleX: true }, caption: 'The shortest time is the fastest reaction. At 70 °C the starch never disappeared (so there is no point for it): the enzyme was denatured.' },
+  'ci.case2': { kind: 'maths', diagram: { type: 'line', title: 'Theo’s heart rate after exercise', ylabel: 'bpm', xlabel: 'minutes after exercise', xs: ['0', '1', '2', '3', '4'], ys: [140, 115, 95, 80, 72], min: 60, step: 20 }, caption: 'Beats per minute. His resting rate was 70; by 4 minutes he was back within 2 beats of it.' },
+  'rt.case1': RATES,
+  'rt.case2': RATES,
+  'ci.route': { kind: 'flow', across: true, steps: ['vena cava', 'right atrium', 'right ventricle', 'pulmonary artery', 'lungs'] },
+  'tr.case1': { ...bar('Bubble movement in 5 minutes (mm)', 'mm', 5, [['still air', 12], ['fan', 30], ['plastic bag', 4], ['jelly on underside', 2]]), caption: 'More movement means faster water uptake. Wind speeds up transpiration; humid air and blocked stomata slow it.' },
+  'bd.case1': { ...bar('Mean plant species per quadrat', '', 2, [['meadow', 9], ['playing field', 2]]) },
+  'fm.case2': { kind: 'table', head: ['', 'Mass'], rows: [['magnesium', '0.24 g'], ['+ oxygen from the air', '0.16 g'], ['= magnesium oxide', '**0.40 g**']], caption: 'No atoms are made or lost: the extra 0.16 g is oxygen that joined the magnesium.' },
+  'fm.balanced': { kind: 'table', head: ['Atoms', 'Left: 2H₂ + O₂', 'Right: 2H₂O'], rows: [['H', '4', '4'], ['O', '2', '2']] },
+  'ht.case1': { ...bar('Soup temperature after 20 minutes (°C)', '°C', 10, [['bare', 52], ['bubble wrap', 66], ['foil', 60]]), caption: 'All three cans started at 80 °C. The bare can lost most heat.' },
+  'st.case1': { kind: 'flow', steps: ['Rub the balloon on a jumper', 'Electrons move from jumper to balloon', 'Balloon negative; jumper positive', 'Opposite charges attract'] },
+  'lt.case2': { kind: 'maths', diagram: { type: 'line', title: 'Angle in glass (°) for each angle in air', ylabel: '°', xs: ['0°', '20°', '40°', '60°'], ys: [0, 13, 25, 35] }, caption: 'Angle in air along the bottom. The angle in glass is always smaller: the ray bends towards the normal.' },
+  'pr.case1': { kind: 'table', head: ['Length', 'Time 1', 'Time 2', 'Time 3'], rows: [['20 cm', '9.0 s', '8.9 s', '9.1 s'], ['40 cm', '12.7 s', '12.6 s', '12.8 s'], ['60 cm', '15.5 s', '**18.9 s**', '15.6 s'], ['80 cm', '17.9 s', '18.0 s', '17.9 s']], caption: 'Times for 10 swings. 18.9 s is far from the other two readings at 60 cm: an anomaly.' },
+  'pr.w': { kind: 'maths', diagram: { type: 'line', title: 'Mean time for 10 swings (s)', ylabel: 's', xs: ['20 cm', '40 cm', '60 cm', '80 cm'], ys: [9.0, 12.7, 15.55, 17.9] }, caption: 'Means of Kit’s repeats, leaving out the anomaly. Time rises with length, but does not double when the length doubles.' },
+};
+for (const [key, v] of Object.entries(TOPIC_VISUALS)) {
+  const t = topics.find((x) => x.id === `science.${key}`);
+  if (!t) throw new Error(`y8/science2.mjs: picture for unknown topic ${key}`);
+  t.visual = t.visual ? [].concat(t.visual, v) : v;
+}
+for (const [key, v] of Object.entries(ITEM_VISUALS)) {
+  const it = items.find((x) => x.id === `science.m.${key}`);
+  if (!it) throw new Error(`y8/science2.mjs: picture for unknown item ${key}`);
+  it.visual = it.visual ? [].concat(it.visual, v) : v;
+}
+
 export default [{ subject: 'science', deck: 'y8-more', topics, items }];

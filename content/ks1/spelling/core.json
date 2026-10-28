@@ -86,7 +86,66 @@
    "batch": 5,
    "intro": "When you add an ending, sometimes the word changes: hop → hopping (double the p), happy → happier (y becomes i).",
    "teach": "Explain why “hopping” has two p’s.",
-   "talk": "Ask {him}: what is the -ing word for “run”? For “smile”?"
+   "talk": "Ask {him}: what is the -ing word for “run”? For “smile”?",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "hop",
+        "root"
+       ],
+       [
+        "p",
+        "ending",
+        "double it"
+       ],
+       [
+        "ing",
+        "suffix"
+       ]
+      ],
+      "result": "hopping"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "smil",
+        "root",
+        "smile: drop the e"
+       ],
+       [
+        "ing",
+        "suffix"
+       ]
+      ],
+      "result": "smiling"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "cr",
+        "root",
+        "cry"
+       ],
+       [
+        "i",
+        "ending",
+        "y becomes i"
+       ],
+       [
+        "ed",
+        "suffix"
+       ]
+      ],
+      "result": "cried"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.suffixes-2",
@@ -98,7 +157,56 @@
    "batch": 5,
    "intro": "Suffixes change what a word means: help → helpful → helpless. Watch out: -ful has only one l!",
    "teach": "Explain the difference between “careful” and “careless”.",
-   "talk": "Make as many words as you can from “play” (playful, player, playing…)."
+   "talk": "Make as many words as you can from “play” (playful, player, playing…).",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "help",
+        "root"
+       ],
+       [
+        "ful",
+        "suffix",
+        "full of"
+       ]
+      ],
+      "result": "helpful"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "help",
+        "root"
+       ],
+       [
+        "less",
+        "suffix",
+        "without"
+       ]
+      ],
+      "result": "helpless"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "kind",
+        "root"
+       ],
+       [
+        "ness",
+        "suffix"
+       ]
+      ],
+      "result": "kindness"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.homophones",
@@ -110,7 +218,33 @@
    "batch": 5,
    "intro": "Homophones sound the same but are spelt differently and mean different things: sea and see, knight and night.",
    "teach": "Explain the difference between “there” and “their”.",
-   "talk": "Ask {him} to spell “night” and “knight” and explain which is which."
+   "talk": "Ask {him} to spell “night” and “knight” and explain which is which.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Sound the same",
+     "Mean different things"
+    ],
+    "rows": [
+     [
+      "**sea** / **see**",
+      "the ocean / look with your eyes"
+     ],
+     [
+      "**knight** / **night**",
+      "a soldier in armour / when it is dark"
+     ],
+     [
+      "**hear** / **here**",
+      "with your ear / in this place"
+     ],
+     [
+      "**two** / **to** / **too**",
+      "2 / towards / also"
+     ]
+    ],
+    "tint": "rows"
+   }
   },
   {
    "id": "spelling.word-classes",
@@ -120,7 +254,34 @@
    "batch": 5,
    "intro": "Words have jobs. Nouns name things. Verbs are doing words. Adjectives describe nouns. Adverbs describe how something is done.",
    "teach": "Find a noun, a verb and an adjective in: “The red car zoomed.”",
-   "talk": "Ask {him} for three adjectives to describe a superhero."
+   "talk": "Ask {him} for three adjectives to describe a superhero.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Tiny",
+        "adjective"
+       ],
+       [
+        "robots",
+        "noun"
+       ],
+       [
+        "dance",
+        "verb"
+       ],
+       [
+        "happily.",
+        "adverbial",
+        "adverb"
+       ]
+      ]
+     }
+    ],
+    "caption": "The adjective describes the noun. The adverb tells you HOW they dance."
+   }
   },
   {
    "id": "spelling.punctuation",
@@ -144,7 +305,61 @@
    "batch": 5,
    "intro": "An apostrophe can show missing letters (do not → don’t) or that something belongs to someone (the dog’s bone).",
    "teach": "Explain why “can’t” has an apostrophe.",
-   "talk": "Find an apostrophe on a shop sign and ask what it is doing."
+   "talk": "Find an apostrophe on a shop sign and ask what it is doing.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "do",
+        "root",
+        "word"
+       ],
+       [
+        "not",
+        "root",
+        "the o goes"
+       ]
+      ],
+      "result": "don’t"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "can",
+        "root",
+        "word"
+       ],
+       [
+        "not",
+        "root",
+        "the no goes"
+       ]
+      ],
+      "result": "can’t"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "it",
+        "root",
+        "word"
+       ],
+       [
+        "is",
+        "root",
+        "the i goes"
+       ]
+      ],
+      "result": "it’s"
+     }
+    ],
+    "caption": "The apostrophe goes where the missing letters were."
+   }
   },
   {
    "id": "spelling.joining",
@@ -1132,7 +1347,31 @@
     "hopeing"
    ],
    "explain": "Short vowel + one consonant: double the consonant. hop → hopping.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "hop",
+        "root"
+       ],
+       [
+        "p",
+        "ending",
+        "double it"
+       ],
+       [
+        "ing",
+        "suffix"
+       ]
+      ],
+      "result": "hopping"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.sx.run",
@@ -1160,7 +1399,27 @@
     "smilin"
    ],
    "explain": "Drop the e before adding -ing.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "smil",
+        "root",
+        "smile: drop the e"
+       ],
+       [
+        "ing",
+        "suffix"
+       ]
+      ],
+      "result": "smiling"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.sx.race",
@@ -1188,7 +1447,32 @@
     "cryd"
    ],
    "explain": "Consonant + y: change y to i, then add -ed.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "cr",
+        "root",
+        "cry"
+       ],
+       [
+        "i",
+        "ending",
+        "y becomes i"
+       ],
+       [
+        "ed",
+        "suffix"
+       ]
+      ],
+      "result": "cried"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.sx.happy",
@@ -1202,7 +1486,32 @@
     "happyier"
    ],
    "explain": "Consonant + y: change y to i, then add -er.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "happ",
+        "root",
+        "happy"
+       ],
+       [
+        "i",
+        "ending",
+        "y becomes i"
+       ],
+       [
+        "er",
+        "suffix"
+       ]
+      ],
+      "result": "happier"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.sx.big",
@@ -1216,7 +1525,31 @@
     "biggst"
    ],
    "explain": "Short vowel + g: double the g.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "big",
+        "root"
+       ],
+       [
+        "g",
+        "ending",
+        "double it"
+       ],
+       [
+        "est",
+        "suffix"
+       ]
+      ],
+      "result": "biggest"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.sx.fast",
@@ -1288,7 +1621,32 @@
     "happines"
    ],
    "explain": "Consonant + y: y becomes i. happy → happiness.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "happ",
+        "root",
+        "happy"
+       ],
+       [
+        "i",
+        "ending",
+        "y becomes i"
+       ],
+       [
+        "ness",
+        "suffix"
+       ]
+      ],
+      "result": "happiness"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.sx2.enjoy",

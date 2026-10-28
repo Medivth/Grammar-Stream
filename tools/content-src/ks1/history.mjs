@@ -161,6 +161,29 @@ const EVENTS = [
   [1969, 'First people on the Moon', ['history.fi.moon']],
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const LONG_AGO = { kind: 'timeline', from: 1, to: 2030, set: 'britain', events: [[43, 'Romans in Britain'], [1066, 'Battle of Hastings'], [1666, 'Great Fire of London'], [1914, 'First World War'], [1969, 'First people on the Moon']] };
+const FIRSTS = { kind: 'timeline', from: 1800, to: 2000, set: 'britain', events: [[1829, 'Stephenson’s Rocket'], [1903, 'Wright brothers fly'], [1930, 'Amy Johnson flies to Australia'], [1969, 'First people on the Moon']] };
+const TOPIC_VISUALS = {
+  'history.past': LONG_AGO,
+  'history.romans': { kind: 'timeline', from: -100, to: 500, set: 'britain', mark: 'Roman Britain', events: [[43, 'Romans invade'], [61, 'Boudica’s rebellion'], [122, 'Hadrian’s Wall begun'], [410, 'Romans leave Britain']] },
+  'history.vikings': { kind: 'timeline', from: 700, to: 1100, set: 'britain', mark: 'Anglo-Saxons and Vikings', events: [[793, 'Vikings raid Lindisfarne'], [871, 'Alfred becomes king'], [1066, 'Battle of Hastings']] },
+  'history.1066': { kind: 'flow', steps: ['January: Harold becomes king', 'September: Harold beats a Viking army', 'William sails over from Normandy', '14 October: Battle of Hastings', 'Christmas Day: William is crowned'], caption: 'The year 1066' },
+  'history.fire': { kind: 'flow', steps: ['2 September: fire starts in a bakery', 'Wind spreads it through wooden houses', 'People pull down houses to make gaps', '6 September: the fire is out'], caption: 'The Great Fire of London, 1666' },
+  'history.armada': { kind: 'flow', steps: ['The Armada sails from Spain', 'Beacons warn all of England', 'Fireships scatter the Spanish ships', 'Storms wreck many of them'], caption: 'The Spanish Armada, 1588' },
+  'history.ww1': { kind: 'timeline', from: 1905, to: 1925, set: 'twentieth', mark: 'First World War', events: [[1914, 'The war begins'], [1916, 'First tanks'], [1918, '11 November: Armistice']] },
+  'history.ww2': { kind: 'timeline', from: 1935, to: 1946, set: 'twentieth', mark: 'Second World War', events: [[1939, 'War begins; children evacuated'], [1940, 'Battle of Britain and the Blitz'], [1945, 'VE Day, 8 May']] },
+  'history.firsts': FIRSTS,
+  'history.monarchs': { kind: 'maths', diagram: { type: 'bar', title: 'How long they reigned', ylabel: 'years', step: 10, cats: [{ label: 'Elizabeth I', v: 44 }, { label: 'Victoria', v: 63 }, { label: 'Elizabeth II', v: 70 }] }, caption: 'Elizabeth II reigned for 70 years (1952–2022), longer than any other British monarch.' },
+};
+const ITEM_VISUALS = {
+  'history.pa.order': LONG_AGO,
+  'history.fi.order': FIRSTS,
+  'history.ca.squire': { kind: 'flow', across: true, steps: ['page', 'squire', 'knight'], caption: 'How a boy became a knight.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [
   { subject: 'history', deck: 'core', topics, items },
   { subject: 'history', deck: 'timeline', topics: [], items: [], timeline: { periods: [...PERIODS_2, ...PERIODS].sort((a, b) => a[1] - b[1]).map(([name, from, to]) => ({ name, from, to })), events: [...EVENTS, ...EVENTS_2].sort((a, b) => a[0] - b[0]).map(([year, label, ids]) => ({ year, label, items: ids })) } },

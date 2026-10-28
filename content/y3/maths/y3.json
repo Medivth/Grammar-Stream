@@ -11,7 +11,37 @@
    ],
    "intro": "Every 3-digit number is built from hundreds, tens and ones. 572 is 5 hundreds, 7 tens and 2 ones, and it can be split in other ways too: 400 + 170 + 2.",
    "teach": "Explain what happens to 395 when you add 10.",
-   "talk": "Read the numbers on car number plates or house doors and ask {him} what each digit is worth."
+   "talk": "Read the numbers on car number plates or house doors and ask {him} what each digit is worth.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "tens",
+      "hundreds": 5,
+      "tens": 7,
+      "ones": 2
+     }
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "pvgrid",
+      "cols": [
+       "H",
+       "T",
+       "O"
+      ],
+      "rows": [
+       [
+        "5",
+        "7",
+        "2"
+       ]
+      ]
+     },
+     "caption": "5 hundreds, 7 tens and 2 ones make 572. It can also be split as 400 + 170 + 2."
+    }
+   ]
   },
   {
    "kind": "skill",
@@ -34,7 +64,43 @@
    ],
    "intro": "Line the digits up in columns: hundreds, tens, ones. Start with the ones. When a column is too big (or too small), exchange with the next column.",
    "teach": "Explain how you would check 532 − 278 using addition.",
-   "talk": "Ask {him} to estimate first, then work it out, then check."
+   "talk": "Ask {him} to estimate first, then work it out, then check.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "H",
+     "T",
+     "O"
+    ],
+    "rows": [
+     [
+      "exchange",
+      "**4**",
+      "**13**",
+      "**13**"
+     ],
+     [
+      "",
+      "5",
+      "4",
+      "3"
+     ],
+     [
+      "−",
+      "2",
+      "7",
+      "8"
+     ],
+     [
+      "=",
+      "2",
+      "6",
+      "5"
+     ]
+    ],
+    "caption": "543 − 278. 3 − 8 won’t go: exchange a ten, so 13 − 8 = 5. 3 − 7 won’t go: exchange a hundred, so 13 − 7 = 6. Then 4 − 2 = 2."
+   }
   },
   {
    "kind": "skill",
@@ -45,7 +111,26 @@
    ],
    "intro": "The 4 times table is double the 2s, and the 8 times table is double the 4s. If you know 3 × 4 = 12, you also know 30 × 4 = 120!",
    "teach": "Explain how 3 × 8 = 24 helps you work out 30 × 8.",
-   "talk": "Quick-fire 8 times table on the way to school."
+   "talk": "Quick-fire 8 times table on the way to school.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "barmodel",
+     "rows": [
+      {
+       "label": "4 × 3",
+       "parts": 4,
+       "text": "3"
+      },
+      {
+       "label": "8 × 3",
+       "parts": 8,
+       "text": "3"
+      }
+     ]
+    },
+    "caption": "Eight 3s are double four 3s: 4 × 3 = 12, so 8 × 3 = 24."
+   }
   },
   {
    "kind": "skill",
@@ -57,7 +142,21 @@
    ],
    "intro": "To multiply 34 × 3, split 34 into 30 and 4. Multiply each part, then add: 90 + 12 = 102. A grid helps you keep track.",
    "teach": "Explain how to work out 26 × 4 with a grid.",
-   "talk": "Ask {him} how many wheels on 23 cars."
+   "talk": "Ask {him} how many wheels on 23 cars.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "areamodel",
+     "across": [
+      30,
+      4
+     ],
+     "down": [
+      3
+     ]
+    },
+    "caption": "34 × 3: split 34 into 30 and 4. 30 × 3 = 90 and 4 × 3 = 12, so 90 + 12 = 102."
+   }
   },
   {
    "kind": "skill",
@@ -69,7 +168,46 @@
    ],
    "intro": "Dividing shares into equal groups. Sometimes there are some left over: the remainder. In stories, think carefully about what to do with it!",
    "teach": "Explain why 26 children need 7 tables of 4, not 6.",
-   "talk": "Share some sweets or grapes equally and talk about the remainder."
+   "talk": "Share some sweets or grapes equally and talk about the remainder.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "barmodel",
+     "rows": [
+      {
+       "label": "bag 1",
+       "parts": 3,
+       "shaded": 3
+      },
+      {
+       "label": "bag 2",
+       "parts": 3,
+       "shaded": 3
+      },
+      {
+       "label": "bag 3",
+       "parts": 3,
+       "shaded": 3
+      },
+      {
+       "label": "bag 4",
+       "parts": 3,
+       "shaded": 3
+      },
+      {
+       "label": "bag 5",
+       "parts": 3,
+       "shaded": 3
+      },
+      {
+       "label": "left over",
+       "parts": 2,
+       "shaded": 2
+      }
+     ]
+    },
+    "caption": "17 sweets shared into 5 bags: 3 in each bag and 2 left over. 17 ÷ 5 = 3 remainder 2."
+   }
   },
   {
    "kind": "skill",
@@ -81,7 +219,37 @@
    ],
    "intro": "To find a fraction of an amount, divide by the bottom number and multiply by the top. Tenths come from sharing something into 10 equal parts.",
    "teach": "Explain how to find {{3/4}} of 20.",
-   "talk": "Ask {him} what {{1/4}} of an hour is in minutes."
+   "talk": "Ask {him} what {{1/4}} of an hour is in minutes.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "barmodel",
+      "total": "24",
+      "rows": [
+       {
+        "parts": 4,
+        "shaded": 3,
+        "text": "6"
+       }
+      ]
+     },
+     "caption": "{{3/4}} of 24: share 24 into 4 equal parts of 6. Three parts make 18."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "barmodel",
+      "rows": [
+       {
+        "parts": 10,
+        "shaded": 3
+       }
+      ]
+     },
+     "caption": "One whole shared into 10 equal parts: each part is one tenth. 3 tenths are shaded."
+    }
+   ]
   },
   {
    "kind": "skill",
@@ -92,7 +260,27 @@
    ],
    "intro": "Fractions that look different can be equal: {{1/2}} = {{2/4}} = {{4/8}}. When the bottom numbers are the same, just add or take away the top numbers.",
    "teach": "Explain why {{1/3}} is bigger than {{1/5}}.",
-   "talk": "Fold paper into halves, quarters and eighths and compare."
+   "talk": "Fold paper into halves, quarters and eighths and compare.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "fracwall",
+     "rows": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8
+     ],
+     "shade": {
+      "2": 1,
+      "4": 2,
+      "8": 4
+     }
+    },
+    "caption": "{{1/2}} = {{2/4}} = {{4/8}}: the shaded parts are the same length."
+   }
   },
   {
    "kind": "skill",
@@ -129,7 +317,37 @@
    ],
    "intro": "Read the long hand to the exact minute by counting in 5s, then 1s. a.m. is before midday, p.m. is after. 24-hour clocks carry on after 12: 3 p.m. is 15:00.",
    "teach": "Explain how to change 4:30 p.m. into 24-hour time.",
-   "talk": "Ask {him} to read train or cinema times in 24-hour clock."
+   "talk": "Ask {him} to read train or cinema times in 24-hour clock.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "12-hour clock",
+     "24-hour clock"
+    ],
+    "rows": [
+     [
+      "midnight",
+      "00:00"
+     ],
+     [
+      "7:15 a.m.",
+      "07:15"
+     ],
+     [
+      "midday",
+      "12:00"
+     ],
+     [
+      "3:20 p.m.",
+      "**15**:20"
+     ],
+     [
+      "9:45 p.m.",
+      "**21**:45"
+     ]
+    ],
+    "caption": "For p.m. times from 1 p.m., add 12 to the hour: 3 p.m. is 15:00. (12:30 p.m. stays 12:30.)"
+   }
   },
   {
    "kind": "skill",
@@ -176,7 +394,25 @@
    "batch": 5,
    "intro": "Year 3 shape facts: prisms, pyramids, faces, edges and vertices, and the special names for lines.",
    "teach": "Explain the difference between a prism and a pyramid.",
-   "talk": "Find a prism and a pyramid in the kitchen or at the shops."
+   "talk": "Find a prism and a pyramid in the kitchen or at the shops.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "prism"
+     },
+     "caption": "A triangular prism: 2 triangle ends and 3 rectangle sides. 5 faces, 9 edges, 6 vertices."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "pyramid"
+     },
+     "caption": "A square-based pyramid: 1 square base and 4 triangles. 5 faces, 8 edges, 5 vertices."
+    }
+   ]
   },
   {
    "kind": "facts",
@@ -213,7 +449,43 @@
    "tier": "stretch",
    "intro": "Year 4 learns every table up to 12 × 12. Use tricks: 6s are double 3s, 9s are 10s take away one lot, 12s are 10s plus 2s.",
    "teach": "Explain the trick for the 9 times table.",
-   "talk": "Ask {him} for 7 × 8 at breakfast every day for a week."
+   "talk": "Ask {him} for 7 × 8 at breakfast every day for a week.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "possgrid",
+     "a": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "b": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "op": "product"
+    },
+    "caption": "Find 7 × 9: go along to 7 and down to 9. The answer is 63."
+   }
   },
   {
    "kind": "skill",
@@ -239,7 +511,63 @@
    "tier": "stretch",
    "intro": "A decimal point separates whole numbers from parts. 0.3 means 3 tenths; 0.25 means 25 hundredths. Racing times use them: 1.25 seconds!",
    "teach": "Explain why 0.5 is the same as {{1/2}}.",
-   "talk": "Look at prices or race times with decimal points together."
+   "talk": "Look at prices or race times with decimal points together.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "hundredsq",
+      "shade": [
+       1,
+       11,
+       21,
+       31,
+       41,
+       51,
+       61,
+       71,
+       81,
+       91,
+       2,
+       12,
+       22,
+       32,
+       42,
+       52,
+       62,
+       72,
+       82,
+       92,
+       3,
+       13,
+       23,
+       33,
+       43
+      ]
+     },
+     "caption": "25 of the 100 squares are shaded: 2 whole columns (2 tenths) and 5 more squares (5 hundredths)."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "pvgrid",
+      "cols": [
+       "O",
+       "1/10",
+       "1/100"
+      ],
+      "rows": [
+       [
+        "0",
+        "2",
+        "5"
+       ]
+      ],
+      "point": 1
+     },
+     "caption": "25 hundredths is written 0.25."
+    }
+   ]
   },
   {
    "kind": "skill",
@@ -264,7 +592,24 @@
    "tier": "stretch",
    "intro": "Rounding gives a friendly number that is close: 487 rounds to 490 (nearest 10) or 500 (nearest 100). Exactly halfway rounds up.",
    "teach": "Explain how to round 650 to the nearest 100.",
-   "talk": "Round the prices in a shop to the nearest pound."
+   "talk": "Round the prices in a shop to the nearest pound.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "numline",
+     "min": 480,
+     "max": 490,
+     "step": 1,
+     "labels": [
+      480,
+      485,
+      487,
+      490
+     ],
+     "mark": 487
+    },
+    "caption": "487 is past the halfway point (485), so it is nearer to 490. 487 rounds to 490."
+   }
   }
  ],
  "items": [
@@ -583,7 +928,15 @@
     "3",
     "4"
    ],
-   "explain": "Two triangle ends and three rectangle sides: 5 faces."
+   "explain": "Two triangle ends and three rectangle sides: 5 faces.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "prism"
+    },
+    "caption": "A triangular prism: 2 triangle ends and 3 rectangle sides. 5 faces, 9 edges, 6 vertices."
+   }
   },
   {
    "id": "maths.y3.sh.2",
@@ -596,7 +949,15 @@
     "6",
     "8"
    ],
-   "explain": "One square base and four triangles meeting at the top."
+   "explain": "One square base and four triangles meeting at the top.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "pyramid"
+    },
+    "caption": "A square-based pyramid: 1 square base and 4 triangles. 5 faces, 8 edges, 5 vertices."
+   }
   },
   {
    "id": "maths.y3.sh.3",
@@ -609,7 +970,15 @@
     "6",
     "12"
    ],
-   "explain": "4 round the base and 4 going up to the point."
+   "explain": "4 round the base and 4 going up to the point.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "pyramid"
+    },
+    "caption": "A square-based pyramid: 1 square base and 4 triangles. 5 faces, 8 edges, 5 vertices."
+   }
   },
   {
    "id": "maths.y3.sh.4",
@@ -622,7 +991,15 @@
     "12",
     "4"
    ],
-   "explain": "Like a cube: 4 on top and 4 underneath."
+   "explain": "Like a cube: 4 on top and 4 underneath.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "cuboid"
+    },
+    "caption": "A cuboid: 4 vertices on top and 4 underneath. 8 vertices."
+   }
   },
   {
    "id": "maths.y3.sh.5",
@@ -641,7 +1018,15 @@
    ],
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "prism"
+    },
+    "caption": "A triangular prism: 2 triangle ends and 3 rectangle sides. 5 faces, 9 edges, 6 vertices."
+   }
   },
   {
    "id": "maths.y3.sh.6",
@@ -718,7 +1103,16 @@
     "8",
     "9"
    ],
-   "explain": "Hepta means seven. A 50p coin is a heptagon with curved sides."
+   "explain": "Hepta means seven. A 50p coin is a heptagon with curved sides.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "polygon",
+     "sides": 7,
+     "name": "heptagon"
+    },
+    "caption": "A heptagon has 7 sides."
+   }
   },
   {
    "id": "maths.y3.sh.11",
@@ -1007,7 +1401,43 @@
      "feedback": "It is a subtraction; the mistake is in the ones column."
     }
    ],
-   "explain": "In the ones, 2 − 7 won’t go, so exchange a ten: 12 − 7 = 5, then 4 − 2 = 2 tens, 4 − 1 = 3 hundreds. 325."
+   "explain": "In the ones, 2 − 7 won’t go, so exchange a ten: 12 − 7 = 5, then 4 − 2 = 2 tens, 4 − 1 = 3 hundreds. 325.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "H",
+     "T",
+     "O"
+    ],
+    "rows": [
+     [
+      "exchange",
+      "",
+      "**4**",
+      "**12**"
+     ],
+     [
+      "",
+      "4",
+      "5",
+      "2"
+     ],
+     [
+      "−",
+      "1",
+      "2",
+      "7"
+     ],
+     [
+      "=",
+      "3",
+      "2",
+      "5"
+     ]
+    ],
+    "caption": "2 − 7 won’t go, so exchange a ten: 12 − 7 = 5. Now there are only 4 tens: 4 − 2 = 2. 452 − 127 = 325."
+   }
   },
   {
    "id": "maths.y3.r.digits",

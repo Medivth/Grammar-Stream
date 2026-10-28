@@ -2,6 +2,8 @@
 // Same contract as maths.js: (level 1..3, rng) -> { kind, prompt, numeric | answer | pair, explain, steps }.
 // Diagrams are plain data (`diagram: { type, ... }`) drawn by js/ui/qtypes.js.
 
+import { pic, bar, areaModel } from './pictures.js';
+
 const fmtNum = (n) => n.toLocaleString('en-GB');
 const money = (p) => `£${(p / 100).toFixed(2)}`; // pence -> "£3.45"
 const pence = (p) => (p / 100).toFixed(2);
@@ -22,6 +24,10 @@ function timeAccepts(m) {
   return [`${pad(h)}.${mm}`, `${pad(h)}${mm}`, `${h}:${mm}`, `${h}.${mm}`, `${h12}:${mm} ${ap}`, `${h12}:${mm}${ap}`, `${h12}.${mm} ${ap}`, `${h12}.${mm}${ap}`, `${h12}:${mm}`];
 }
 
+// long multiplication as an area: a across, the two-digit number split into tens and ones down
+// (the two rows are the two lines of the written method)
+const longGrid = (a, bt, bo) => pic(areaModel([a], [bt, bo]), `${fmtNum(a)} × ${bt} = ${fmtNum(a * bt)} and ${fmtNum(a)} × ${bo} = ${fmtNum(a * bo)}. Add the two parts: ${fmtNum(a * (bt + bo))}.`);
+
 const PETS = ['dog', 'cat', 'rabbit', 'hamster', 'fish'];
 const TRAVEL = ['walk', 'car', 'bus', 'bike', 'train'];
 const COLOURS = ['red', 'blue', 'green', 'yellow'];
@@ -37,6 +43,7 @@ export const MATHS2_GENERATORS = {
         kind: 'typed', prompt: `${a} × ${b} = ?`, numeric: { value: String(a * b), form: 'any' },
         explain: `Split ${a} into ${t} and ${o}: ${t} × ${b} = ${t * b} and ${o} × ${b} = ${o * b}. Add them: ${a * b}.`,
         steps: [`I split ${a} into ${t} + ${o}.`, `${t} × ${b} = ${t * b}, and ${o} × ${b} = ${o * b}.`, `${t * b} + ${o * b} = ${a * b}.`],
+        ...pic(areaModel([t, o], [b]), `${t} × ${b} = ${t * b} and ${o} × ${b} = ${o * b}. Add the parts: ${t * b} + ${o * b} = ${a * b}.`),
       };
     }
     if (level === 2) {
@@ -58,6 +65,7 @@ export const MATHS2_GENERATORS = {
         kind: 'typed', prompt: `${a} × ${b} = ?`, numeric: { value: String(a * b), form: 'any' },
         explain: `${a} × ${bt} = ${a * bt} and ${a} × ${bo} = ${a * bo}. Add: ${a * bt} + ${a * bo} = ${fmtNum(a * b)}.`,
         steps: [`I split ${b} into ${bt} + ${bo}.`, `${a} × ${bt} = ${fmtNum(a * bt)}, and ${a} × ${bo} = ${a * bo}.`, `${fmtNum(a * bt)} + ${a * bo} = ${fmtNum(a * b)}.`],
+        ...longGrid(a, bt, bo),
       };
     }
     const a = rng.chance(0.5) ? rng.int(112, 999) : rng.int(1012, 4999), b = rng.int(12, 39);
@@ -67,6 +75,7 @@ export const MATHS2_GENERATORS = {
       kind: 'typed', prompt: `${fmtNum(a)} × ${b} = ?`, numeric: { value: String(a * b), form: 'any' },
       explain: `${fmtNum(a)} × ${bt} = ${fmtNum(a * bt)} and ${fmtNum(a)} × ${bo} = ${fmtNum(a * bo)}. Add: ${fmtNum(a * b)}.`,
       steps: [`Long multiplication: I multiply by the ${bo} ${bo === 1 ? 'one' : 'ones'}, then by the ${bt / 10} ${bt === 10 ? 'ten' : 'tens'}.`, `${fmtNum(a)} × ${bo} = ${fmtNum(a * bo)}, and ${fmtNum(a)} × ${bt} = ${fmtNum(a * bt)}.`, `${fmtNum(a * bo)} + ${fmtNum(a * bt)} = ${fmtNum(a * b)}.`],
+      ...longGrid(a, bt, bo),
     };
   },
 
@@ -367,6 +376,7 @@ export const MATHS2_GENERATORS = {
         kind: 'typed', prompt: `A pack of ${packs} ${item} costs ${money(packs * unit)}. How much would ${want} ${item} cost at the same price each?`, numeric: { value: pence(want * unit), form: 'any' }, unit: '£', unitBefore: true,
         explain: `One costs ${money(packs * unit)} ÷ ${packs} = ${money(unit)}. ${want} × ${money(unit)} = ${money(want * unit)}.`,
         steps: [`First find the price of ONE: ${money(packs * unit)} ÷ ${packs} = ${money(unit)}.`, `Then multiply by ${want}.`, `${want} × ${money(unit)} = ${money(want * unit)}.`],
+        ...pic(bar([{ label: 'pack', parts: packs, text: money(unit), total: money(packs * unit) }, { label: 'wanted', parts: want, text: money(unit), total: money(want * unit) }]), `One box is one of the ${item}: ${money(packs * unit)} ÷ ${packs} = ${money(unit)}. ${want} boxes cost ${want} × ${money(unit)} = ${money(want * unit)}.`),
       };
     }
     const kind = rng.pick(['family', 'inverse', 'saving']);
@@ -377,6 +387,7 @@ export const MATHS2_GENERATORS = {
         kind: 'typed', prompt: `An adult ticket costs £${A / 100} and a child ticket is half price. How much do ${adults} adults and ${kids} children pay altogether?`, numeric: { value: pence(total), form: 'any' }, unit: '£', unitBefore: true,
         explain: `Adults: ${adults} × £${A / 100} = £${(adults * A) / 100}. Children: ${kids} × ${money(A / 2)} = ${money((kids * A) / 2)}. Total ${money(total)}.`,
         steps: [`Adults: ${adults} × £${A / 100} = £${(adults * A) / 100}.`, `A child ticket is £${A / 100} ÷ 2 = ${money(A / 2)}, so ${kids} children pay ${money((kids * A) / 2)}.`, `£${(adults * A) / 100} + ${money((kids * A) / 2)} = ${money(total)}.`],
+        ...pic(bar([{ label: 'adults', parts: 2 * adults, text: money(A / 2), total: money(adults * A) }, { label: 'children', parts: kids, text: money(A / 2), total: money((kids * A) / 2) }]), `Each box is a child ticket, ${money(A / 2)}. An adult ticket is 2 boxes. ${2 * adults + kids} boxes: ${money(total)}.`),
       };
     }
     if (kind === 'inverse') {
@@ -386,6 +397,7 @@ export const MATHS2_GENERATORS = {
         kind: 'typed', prompt: `Jo spends {{${num}/${den}}} of her money and has £${left} left. How much did she start with?`, numeric: { value: String(start), form: 'any' }, unit: '£', unitBefore: true,
         explain: `If ${num}/${den} is spent, ${den - num}/${den} is left. ${den - num === 1 ? `That 1/${den} is £${left}, so` : `${den - num}/${den} = £${left}, so 1/${den} = £${left / (den - num)} and`} the whole is ${den} × £${left / (den - num)} = £${start}.`,
         steps: [`Spending ${num}/${den} leaves ${den - num}/${den}. That is the £${left}.`, den - num === 1 ? `So one ${NTH[den]} is £${left}.` : `One ${NTH[den]} is £${left} ÷ ${den - num} = £${left / (den - num)}.`, `The whole amount is ${den} × £${left / (den - num)} = £${start}.`],
+        ...pic(bar([{ parts: den, shaded: num, text: `£${left / (den - num)}` }], `£${start}`), `The shaded ${num} boxes are spent. The ${den - num} white box${den - num === 1 ? ' is' : 'es are'} the £${left} left, so each box is £${left / (den - num)}. All ${den} boxes: £${start}.`),
       };
     }
     const weekly = rng.int(3, 12) * 50, weeks = rng.int(4, 12), spend = rng.int(5, 30) * 100;

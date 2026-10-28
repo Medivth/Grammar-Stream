@@ -634,4 +634,123 @@ for (const k of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === `engl
 for (const it of items) { const m = MEMORY[it.id.replace(/^english\.lang\./, '')]; if (m) Object.assign(it, m); }
 for (const k of Object.keys(MEMORY)) if (!items.some((it) => it.id === `english.lang.${k}`)) throw new Error(`memory hook for unknown item ${k}`);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Topics keyed without “english.lang-”, items without “english.lang.”. An unknown id throws.
+const build = (word, ...parts) => ({ join: '+', parts, result: word });
+const words = (...rows) => ({ kind: 'blocks', rows });
+const G = {
+  telephone: build('telephone', ['tele', 'prefix', 'far'], ['phone', 'root', 'sound']),
+  democracy: build('democracy', ['demo', 'root', 'people'], ['cracy', 'suffix', 'power']),
+  autobiography: build('autobiography', ['auto', 'prefix', 'self'], ['bio', 'root', 'life'], ['graphy', 'suffix', 'writing']),
+  chronology: build('chronology', ['chrono', 'root', 'time'], ['logy', 'suffix', 'study']),
+  philanthropy: build('philanthropy', ['phil', 'prefix', 'love'], ['anthrop', 'root', 'human being'], ['y', 'suffix']),
+  arachnophobia: build('arachnophobia', ['arachno', 'root', 'spider'], ['phobia', 'suffix', 'fear']),
+  chronophobe: build('chronophobe', ['chrono', 'root', 'time'], ['phobe', 'suffix', 'one who fears']),
+  misanthrope: build('misanthrope', ['mis', 'prefix', 'hatred'], ['anthrope', 'root', 'human being']),
+  dyslexia: build('dyslexia', ['dys', 'prefix', 'difficult'], ['lexia', 'root', 'words']),
+};
+const L = {
+  transport: build('transport', ['trans', 'prefix', 'across'], ['port', 'root', 'carry']),
+  inspect: build('inspect', ['in', 'prefix', 'into'], ['spect', 'root', 'look']),
+  predict: build('predict', ['pre', 'prefix', 'before'], ['dict', 'root', 'say']),
+  interrupt: build('interrupt', ['inter', 'prefix', 'between'], ['rupt', 'root', 'break']),
+  incredible: build('incredible', ['in', 'prefix', 'not'], ['cred', 'root', 'believe'], ['ible', 'suffix', 'able to be']),
+  subterranean: build('subterranean', ['sub', 'prefix', 'under'], ['terran', 'root', 'land'], ['ean', 'suffix']),
+  television: build('television', ['tele', 'prefix', 'Greek: far'], ['vision', 'root', 'Latin: seeing']),
+};
+const CLAUSES = {
+  kind: 'blocks',
+  rows: [
+    { parts: [['The Cyclops', 'subject'], ['slept.', 'verb']] },
+    { parts: [['Theo opened the door,', 'clause', 'main clause'], ['but', 'conjunction', 'FANBOYS'], ['the room was empty.', 'clause', 'main clause']] },
+    { parts: [['Although the sea was wild,', 'subordinate', 'subordinate clause'], ['Odysseus kept sailing.', 'clause', 'main clause']] },
+  ],
+  caption: 'Simple: one main clause. Compound: two main clauses joined by a FANBOYS word. Complex: a main clause plus a subordinate clause that cannot stand alone.',
+};
+const RELATIVE = {
+  kind: 'blocks',
+  rows: [
+    { parts: [['The goddess', 'noun'], ['who was born from Zeus’s head', 'subordinate', 'defining: no commas'], ['was Athena.', 'clause', 'main clause']] },
+    { parts: [['Athena,', 'noun'], ['who was born from Zeus’s head,', 'subordinate', 'non-defining: in commas'], ['was goddess of wisdom.', 'clause', 'main clause']] },
+  ],
+  caption: 'A defining clause tells you which one. A non-defining clause adds extra information and could be lifted out.',
+};
+const ACTIVE_PASSIVE = {
+  kind: 'blocks',
+  rows: [
+    { parts: [['The storm', 'subject', 'subject (the doer)'], ['wrecked', 'verb', 'active verb'], ['the ship.', 'object', 'object']] },
+    { parts: [['The ship', 'object', 'subject'], ['was wrecked', 'verb', 'passive verb'], ['by the storm.', 'subject', 'agent']] },
+  ],
+  caption: 'Active to passive: the receiver moves to the front, the verb becomes “was” + past participle, and the doer becomes the agent after “by”.',
+};
+const HIDDEN_AGENT = {
+  kind: 'blocks',
+  rows: [
+    { parts: [['The minister', 'subject', 'subject (the doer)'], ['made', 'verb', 'active verb'], ['mistakes.', 'object', 'object']] },
+    { parts: [['Mistakes', 'object', 'subject'], ['were made.', 'verb', 'passive verb']] },
+  ],
+  caption: 'In the passive the agent can simply disappear: nobody is named.',
+};
+const PUNCT = {
+  kind: 'blocks',
+  rows: [
+    { parts: [['Athena was wise', 'clause', 'main clause'], [';', 'conjunction', 'semicolon'], ['Ares was reckless.', 'clause', 'main clause']] },
+    { parts: [['The hero had one weakness', 'clause', 'main clause'], [':', 'conjunction', 'colon'], ['his heel.', 'object', 'what it introduces']] },
+    { parts: [['He opened the box', 'clause', 'main clause'], ['–', 'conjunction', 'dash'], ['and instantly regretted it.', 'adverbial', 'dramatic addition']] },
+    { parts: [['a', 'article'], ['man-eating', 'adjective', 'hyphen joins two words'], ['shark', 'noun']] },
+  ],
+  caption: 'A semicolon balances two main clauses; a colon needs a main clause before it; a dash interrupts; a hyphen joins.',
+};
+const REPORTED = {
+  kind: 'table', head: ['', 'Direct speech', 'Reported speech'],
+  rows: [['am → was', '“I **am** tired,” said Theo.', 'Theo said that he **was** tired.'], ['will → would', '“We **will** sail tomorrow,” said the captain.', 'The captain said that they **would** sail the next day.']],
+  caption: 'No speech marks; the tense shifts back, and pronouns and time words change (we → they, tomorrow → the next day).',
+};
+const APPEALS = {
+  kind: 'table', head: ['Appeal', 'Persuades through', 'Example'], tint: 'rows',
+  rows: [['**Ethos**', 'trust in the speaker', '“As a doctor for twenty years, I have seen…”'], ['**Pathos**', 'emotion', '“Imagine a child, cold and alone…”'], ['**Logos**', 'logic and evidence', '“Three in five rivers fail safety tests…”']],
+  caption: 'Aristotle’s three appeals. The best speakers combine all three.',
+};
+const FREYTAG = { kind: 'flow', steps: ['**Exposition**: the set-up', '**Rising action**: the build-up', '**Climax**: the turning point', '**Falling action**: the consequences', '**Resolution**: the ending'], caption: 'Freytag’s pyramid: tension rises to the climax, then falls away.' };
+const TOPIC_VISUALS = {
+  clauses: CLAUSES,
+  relative: RELATIVE,
+  verbs: ACTIVE_PASSIVE,
+  punct: PUNCT,
+  speech: REPORTED,
+  'greek-roots': { ...words(G.telephone, G.democracy, G.autobiography), caption: 'Greek building blocks: learn the parts and you can decode words you have never seen.' },
+  'latin-roots': { ...words(L.transport, L.inspect, L.predict), caption: 'Latin roots with prefixes snapped on the front.' },
+  rhetoric: APPEALS,
+  craft: FREYTAG,
+};
+const ITEM_VISUALS = {
+  'cl.sub': { kind: 'blocks', rows: [CLAUSES.rows[2]], caption: 'The subordinate clause depends on the main clause: on its own it is not a sentence.' },
+  'cl.compound': { kind: 'blocks', rows: [CLAUSES.rows[1]], caption: 'Two main clauses joined by a coordinating conjunction.' },
+  'cl.complex': CLAUSES,
+  'rl.defining': RELATIVE,
+  'rl.meaning': { kind: 'blocks', rows: [{ parts: [['The soldiers', 'noun'], ['who were exhausted', 'subordinate', 'defining: only these'], ['surrendered.', 'clause', 'main clause']] }, { parts: [['The soldiers,', 'noun'], ['who were exhausted,', 'subordinate', 'non-defining: all of them'], ['surrendered.', 'clause', 'main clause']] }] },
+  'vb.passive': ACTIVE_PASSIVE,
+  'vb.agent': ACTIVE_PASSIVE,
+  'vb.passive-why': HIDDEN_AGENT,
+  'pn.semi': { kind: 'blocks', rows: [PUNCT.rows[0]] },
+  'pn.colon-rule': { kind: 'blocks', rows: [PUNCT.rows[1]], caption: 'Before a colon: a complete main clause.' },
+  'pn.hyphen': { kind: 'blocks', rows: [PUNCT.rows[3]], caption: 'With the hyphen, the shark eats men.' },
+  'sp.reported': REPORTED,
+  'sp.reported2': REPORTED,
+  'gr.tele': words(G.telephone, L.television),
+  'gr.demos': words(G.democracy),
+  'gr.phobos': words(G.arachnophobia),
+  'gr.decode1': words(G.chronophobe),
+  'gr.decode3': words(G.misanthrope),
+  'gr.decode4': words(G.dyslexia),
+  'la.port': words(L.transport),
+  'la.rupt': words(L.interrupt),
+  'la.decode': words(L.subterranean),
+  'la.hybrid': { ...words(L.television), caption: 'A hybrid: a Greek root joined to a Latin one.' },
+  'rh.ethos': APPEALS,
+  'wc.freytag': FREYTAG,
+};
+for (const [k, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === `english.lang-${k}`); if (!t) throw new Error(`picture for unknown topic ${k}`); t.visual = v; }
+for (const [k, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === `english.lang.${k}`); if (!it) throw new Error(`picture for unknown item ${k}`); it.visual = v; }
+
 export default [{ subject: 'english', deck: 'y8-lang', topics, items, sentences: SENTENCES, pieces: PIECES }];

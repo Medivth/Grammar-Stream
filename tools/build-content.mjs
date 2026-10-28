@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 const SOURCES = ['english', 'english-y7', 'maths', 'history', 'history-y7', 'geography', 'geography-y7', 'science', 'science-y7', 'reading-writing', 'timeline', 'synoptic', 'reading', 'stretch-maths', 'stretch-english', 'stretch-history', 'stretch-geography', 'stretch-science', 'latin'];
 const MAPS = { world: 'maps/world.json', europe: 'maps/europe.json', uk: 'maps/uk.json' };
 const { DIAGRAMS } = await import(new URL('./content-src/diagrams.mjs', import.meta.url));
+const { attachDiagrams } = await import(new URL('./content-src/attach-diagrams.mjs', import.meta.url));
 
 // the Year 2 course: tools/content-src/ks1/*.mjs -> content/ks1/<subject>/<deck>.json, content/index-ks1.json
 const KS1_SOURCES = ['maths', 'maths2', 'phonics', 'reading', 'reading2', 'reading3', 'spelling', 'spelling2', 'science', 'science2', 'history', 'history2', 'books'];
@@ -29,6 +30,7 @@ export async function buildAll() {
       for (const deck of mod.default) {
         if (dir === 'ks1/') for (const t of deck.topics || []) if (t.tier === 'stretch') t.coreIn = ['y3'];
         if (dir === 'y3/' && deck.ladder) y3Ladder = true;
+        attachDiagrams(deck, dir ? dir.slice(0, -1) : 'y6');
         const path = `${dir}${deck.subject}/${deck.deck}.json`;
         files[path] = JSON.stringify(deck, null, 1) + '\n';
         out.push(path);

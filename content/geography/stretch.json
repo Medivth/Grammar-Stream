@@ -14,7 +14,25 @@
    "intro": "The sea is a sculptor. Waves attack cliffs in four ways, carve caves into arches and stacks, and carry sand along the beach grain by grain.",
    "hook": "Crack, cave, arch, stack, stump: the sea knocks a headland down, bump by bump.",
    "teach": "Explain how a cave becomes a stack.",
-   "talk": "Next time you are at a beach, ask her which way the groynes show the sand is moving."
+   "talk": "Next time you are at a beach, ask her which way the groynes show the sand is moving.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "coast"
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "crack",
+      "cave",
+      "arch",
+      "stack",
+      "stump"
+     ],
+     "caption": "Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack wears down to a stump."
+    }
+   ]
   },
   {
    "id": "geography.development",
@@ -32,7 +50,43 @@
    "intro": "How do we compare rich and poor countries fairly? Geographers use indicators: income, life expectancy, literacy, infant mortality. Each tells part of the story.",
    "hook": "One number can mislead: the HDI combines a long life, education and income.",
    "teach": "Explain why income alone is not a good measure of development.",
-   "talk": "Ask her which single number she would use to decide how well a country looks after its people."
+   "talk": "Ask her which single number she would use to decide how well a country looks after its people.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "country",
+     "A",
+     "B",
+     "C"
+    ],
+    "rows": [
+     [
+      "income ($)",
+      "65,000",
+      "9,000",
+      "800"
+     ],
+     [
+      "life expectancy",
+      "81",
+      "73",
+      "59"
+     ],
+     [
+      "can read",
+      "99%",
+      "92%",
+      "44%"
+     ],
+     [
+      "baby deaths per 1,000",
+      "6",
+      "22",
+      "70"
+     ]
+    ],
+    "caption": "Income per person, life expectancy, adults who can read, babies (per 1,000) who die before age 1. No single indicator tells the whole story."
+   }
   },
   {
    "id": "geography.weather-2",
@@ -47,7 +101,44 @@
    "intro": "Why does the UK get so much changeable weather? Low pressure brings cloud and rain; high pressure brings clear skies. Fronts are the battle lines between warm and cold air.",
    "hook": "Low is lousy (rising air, cloud and rain); high is happy (sinking air, clear skies).",
    "teach": "Explain the difference between high and low pressure weather.",
-   "talk": "Look at tonight’s weather map together and find the fronts."
+   "talk": "Look at tonight’s weather map together and find the fronts.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "low pressure",
+     "high pressure"
+    ],
+    "rows": [
+     [
+      "air",
+      "rises",
+      "sinks"
+     ],
+     [
+      "sky",
+      "cloud and rain",
+      "clear skies"
+     ],
+     [
+      "wind",
+      "strong",
+      "light"
+     ],
+     [
+      "isobars",
+      "close together",
+      "far apart"
+     ],
+     [
+      "brings",
+      "changeable, wet weather",
+      "hot summer days, frosty winter nights"
+     ]
+    ],
+    "tint": "cols",
+    "caption": "A low is a depression; a high is an anticyclone. Low is lousy; high is happy."
+   }
   },
   {
    "id": "geography.world-2",
@@ -155,7 +246,25 @@
    "labels": null,
    "explain": "Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack is worn down to a stump.",
    "hook": "Crack, cave, arch, stack, stump: say it like a drumbeat.",
-   "example": "Durdle Door in Dorset is an arch; nearby Old Harry Rocks are chalk stacks, and Old Harry’s Wife is a stump."
+   "example": "Durdle Door in Dorset is an arch; nearby Old Harry Rocks are chalk stacks, and Old Harry’s Wife is a stump.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "coast"
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "crack",
+      "cave",
+      "arch",
+      "stack",
+      "stump"
+     ],
+     "caption": "Waves widen a crack into a cave; the cave breaks through the headland into an arch; the arch roof collapses, leaving a stack; the stack wears down to a stump."
+    }
+   ]
   },
   {
    "id": "geography.co.headland",
@@ -183,7 +292,12 @@
     "choice"
    ],
    "hook": "Hard rock hangs on as headlands; soft rock is scooped out into bays.",
-   "example": "Swanage Bay is cut into soft clays and sands, between chalk at Ballard Point and limestone at Peveril Point."
+   "example": "Swanage Bay is cut into soft clays and sands, between chalk at Ballard Point and limestone at Peveril Point.",
+   "visual": {
+    "kind": "diagram",
+    "id": "coast",
+    "highlight": "headland"
+   }
   },
   {
    "id": "geography.co.longshore",
@@ -547,7 +661,24 @@
    "formats": [
     "choice"
    ],
-   "hook": "Squashed isobars, strong winds; wide gaps, gentle breezes."
+   "hook": "Squashed isobars, strong winds; wide gaps, gentle breezes.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "isobars",
+     "wind"
+    ],
+    "rows": [
+     [
+      "close together",
+      "**strong**"
+     ],
+     [
+      "far apart",
+      "light"
+     ]
+    ]
+   }
   },
   {
    "id": "geography.ws.uk",

@@ -157,4 +157,45 @@ for (const id of Object.keys(TOPIC_HOOKS)) if (!TOPICS.some((t) => t.id === id))
 for (const it of items) if (MEMORY[it.id]) Object.assign(it, MEMORY[it.id]);
 for (const id of Object.keys(MEMORY)) if (!items.some((it) => it.id === id)) throw new Error(`memory hook for unknown item ${id}`);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Algebra grids are tables, not the areamodel diagram, because that one only takes numbers.
+// Constructions and loci are left without a picture: compass-and-ruler drawings are not available.
+const M = (diagram, caption) => ({ kind: 'maths', diagram, ...(caption ? { caption } : {}) });
+const plot = (f, lo, hi, step = 0.05) => { const pts = []; for (let x = lo; x <= hi + 1e-9; x += step) { const y = f(x); if (Number.isFinite(y)) pts.push([+x.toFixed(2), +y.toFixed(3)]); } return pts; };
+const TOPIC_VISUALS = {
+  'maths.compound': { kind: 'table', head: ['measure', 'formula', 'units'], rows: [['speed', 'distance ÷ time', 'km/h, m/s'], ['density', 'mass ÷ volume', 'g/cm³'], ['pressure', 'force ÷ area', 'N/m²']], caption: 'Rearrange for the other two: distance = speed × time; time = distance ÷ speed. 72 km/h = 72,000 m ÷ 3600 s = 20 m/s.' },
+  'maths.units': { kind: 'table', rows: [['length', '1 m = 100 cm'], ['area', '1 m² = 100 × 100 = 10,000 cm²'], ['volume', '1 m³ = 100 × 100 × 100 = 1,000,000 cm³']], caption: 'Square the length factor for area, cube it for volume. 1 m³ = 1000 litres.' },
+  'maths.bounds': { kind: 'table', rows: [['lower bound', '33.5 cm', 'included: ≤'], ['rounded', '**34 cm**', ''], ['upper bound', '34.5 cm', 'not included: <']], caption: 'A length of 34 cm to the nearest cm has error interval 33.5 ≤ l < 34.5. Every length in it rounds to 34 cm.' },
+  'maths.bases': [
+    M({ type: 'pvgrid', cols: [128, 64, 32, 16, 8, 4, 2, 1], rows: [['0', '0', '1', '0', '1', '1', '0', '1']] }, '45 in binary: 32 + 8 + 4 + 1, so 101101.'),
+    M({ type: 'pvgrid', cols: [125, 25, 5, 1], rows: [['1', '4', '0']] }, '45 in base 5: 1 × 25 + 4 × 5 + 0 = 140.'),
+    M({ type: 'pvgrid', cols: [256, 16, 1], rows: [['2', 'D']] }, '45 in hexadecimal: 2 × 16 + 13 = 2D (D stands for 13).'),
+  ],
+  'maths.factorising-2': { kind: 'table', rows: [['×', 'a', '+b'], ['a', 'a²', '**+ab**'], ['−b', '**−ab**', '−b²']], caption: '(a + b)(a − b) = a² + ab − ab − b² = a² − b²: the middle terms cancel. So x² − 81 = (x + 9)(x − 9).' },
+  'maths.functions': [
+    { kind: 'flow', across: true, steps: ['x', '× 3', '− 5', 'f(x) = 3x − 5'], caption: 'A function machine: f(x) = 3x − 5.' },
+    { kind: 'flow', across: true, steps: ['x', '+ 5', '÷ 3', 'f⁻¹(x) = {{x + 5/3}}'], caption: 'The inverse undoes each step in reverse order: add 5 first, then divide by 3.' },
+  ],
+  'maths.curves': [
+    M({ type: 'curve', range: [-3, 3], paths: [plot((x) => x * x, -3, 3)] }, 'y = x²: a U-shaped parabola.'),
+    M({ type: 'curve', range: [-3, 3], paths: [plot((x) => x ** 3, -3, 3)] }, 'y = x³: a cubic S-shape.'),
+    M({ type: 'curve', range: [-3, 3], paths: [plot((x) => 1 / x, -3, -0.3), plot((x) => 1 / x, 0.3, 3)] }, 'y = {{1/x}}: two separate curves that never touch the axes.'),
+  ],
+  'maths.similarity': { kind: 'table', rows: [['lengths × k', '× 2', '× 3'], ['areas × k²', '× 4', '× 9'], ['volumes × k³', '× 8', '× 27']], tint: 'cols', caption: 'Double every length of a solid cube: its volume is 2³ = 8 times as big, but its surface (the paint) only 2² = 4 times.' },
+  'maths.polygon-algebra': { kind: 'flow', steps: ['Pentagon: angles add to 3 × 180 = 540°', 'x + 2x + 100 + 110 + 120 = 540', '3x + 330 = 540', '3x = 210, so x = 70°', 'Check: 70 + 140 + 330 = 540 ✓'], caption: 'A pentagon has angles x, 2x, 100°, 110° and 120°. Write the angle sum as an equation, then solve.' },
+  'maths.counting': M({ type: 'possgrid', a: ['R', 'B', 'G'], b: ['1', '2', '3', '4'] }, '3 tunics (red, blue, green) and 4 pairs of sandals: 3 × 4 = 12 outfits. That is the product rule.'),
+  'maths.proportion': [
+    M({ type: 'graph', range: [0, 10], lines: [{ m: 2, c: 0 }] }, 'Direct proportion, y = 2x: a straight line through the origin. Double x and y doubles.'),
+    M({ type: 'curve', range: [0, 12], paths: [plot((x) => 12 / x, 1, 12, 0.25)] }, 'Inverse proportion, y = {{12/x}}: double x and y halves, e.g. (2, 6) and (4, 3).'),
+  ],
+  'maths.quadratic-formula': { kind: 'table', rows: [['b² − 4ac > 0', 'the curve crosses the x-axis twice: **2** solutions'], ['b² − 4ac = 0', 'it touches the x-axis once: **1** solution'], ['b² − 4ac < 0', 'it misses the x-axis: **no** solutions']], caption: 'The discriminant, b² − 4ac, is the part under the square root in the formula.' },
+  'maths.pythagoras-3d': M({ type: 'cuboid', l: 4, w: 4, h: 7 }, 'The longest rod in this box runs corner to opposite corner: d² = 4² + 4² + 7² = 81, so d = 9 cm.'),
+  'maths.proof': { kind: 'table', head: ['', 'in algebra'], rows: [['any even number', '2n (n pairs)'], ['any odd number', '2n + 1 (pairs and one spare)'], ['consecutive integers', 'n, n + 1, n + 2']], caption: 'Odd + odd = (2a + 1) + (2b + 1) = 2(a + b + 1): the two spares make a pair, so the answer is even.' },
+};
+const ITEM_VISUALS = {
+  'maths.m2.pf.consec': { kind: 'table', rows: [['n', '1', '2', '3', '4'], ['(n + 1)² − n²', '3', '5', '7', '9']], caption: 'Examples suggest the pattern; the algebra (n + 1)² − n² = 2n + 1 proves it for every n.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = TOPICS.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'maths', deck: 'y8-more', topics: TOPICS.map(({ gen, ...t }) => t), items }];

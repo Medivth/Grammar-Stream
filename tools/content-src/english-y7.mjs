@@ -364,4 +364,73 @@ const PIECES = [
   },
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const buildRow = (...parts) => ({ join: '+', parts, result: parts.map((p) => p[0]).join('') });
+const build = (...rows) => ({ kind: 'blocks', rows: rows.map((parts) => buildRow(...parts)) });
+const SIMPLE = { kind: 'blocks', rows: [{ parts: [['The dog', 'subject', 'subject'], ['barked.', 'verb', 'verb']] }], caption: 'Simple: one main clause (one subject, one main verb).' };
+const COMPOUND = { kind: 'blocks', rows: [{ parts: [['It was late,', 'clause', 'main clause'], ['so', 'conjunction', 'FANBOYS'], ['we took a taxi.', 'clause', 'main clause']] }], caption: 'Compound: two main clauses joined by for, and, nor, but, or, yet or so.' };
+const COMPLEX = { kind: 'blocks', rows: [{ parts: [['Because it was late,', 'subordinate', 'subordinate clause'], ['we took a taxi.', 'clause', 'main clause']] }], caption: 'Complex: a main clause plus a subordinate clause (because, when, although, if…).' };
+// Ozymandias: a caesura inside one line, then a sentence running over the line end
+const OZY_LINES = { kind: 'table', head: ['line', 'Ozymandias'], rows: [['12', 'Nothing beside remains. **‖** Round the decay **→**'], ['13', '**→** Of that colossal Wreck, boundless and bare']], caption: '‖ = a caesura: a pause in the middle of a line. → = enjambment: the sentence runs on over the line end, with no pause.' };
+const LOVERS_START = { kind: 'blocks', rows: [
+  { join: '♥', parts: [['Hermia', 'verb', 'love each other'], ['Lysander', 'subject', '']] },
+  { join: '→', parts: [['Helena', 'object', 'loves'], ['Demetrius', 'adverbial', '']] },
+  { join: '→', parts: [['Demetrius', 'adverbial', 'wants to marry'], ['Hermia', 'verb', '']] },
+], caption: 'At the start: Hermia and Lysander love each other. Helena loves Demetrius, but he wants to marry Hermia, and Hermia’s father, Egeus, wants that too.' };
+const LOVERS_END = { kind: 'blocks', rows: [
+  { join: '♥', parts: [['Hermia', 'verb', ''], ['Lysander', 'subject', '']] },
+  { join: '♥', parts: [['Helena', 'object', ''], ['Demetrius', 'adverbial', '']] },
+], caption: 'At the end: happily paired off. Demetrius still has the love-juice on his eyes.' };
+const CAROL = { kind: 'flow', steps: ['Marley’s ghost, in chains, warns Scrooge', 'Christmas Past: his lonely boyhood', 'Christmas Present: the Cratchits and Tiny Tim', 'Christmas Yet to Come: a death nobody mourns', 'Christmas morning: a kind, generous Scrooge'], caption: 'A Christmas Carol (1843): one night, Marley’s ghost and three spirits.' };
+const TEMPEST_STORY = { kind: 'flow', steps: ['Antonio steals Prospero’s dukedom', 'Prospero and Miranda set adrift', 'Twelve years on the island', 'The storm brings his enemies ashore', 'Ferdinand and Miranda fall in love', 'Prospero forgives his enemies, frees Ariel'] };
+const PETAL = { kind: 'flow', steps: ['**Point**: what you are arguing', '**Evidence**: a short quotation', '**Technique**: the method used', '**Analysis**: the effect on the reader', '**Link**: back to the question'], caption: 'PETAL: five petals make one paragraph.' };
+
+const TOPIC_VISUALS = {
+  'english.grammar7': [SIMPLE, COMPOUND, COMPLEX],
+  'english.roots-3': { ...build([['bio', 'root', 'life'], ['logy', 'suffix', 'study of']], [['fear', 'root'], ['less', 'suffix', 'without']], [['danger', 'root'], ['ous', 'suffix', 'full of']]), caption: 'A suffix at the end changes the meaning (and often the word class).' },
+  'english.poetry-terms': OZY_LINES,
+  'english.dream': [LOVERS_START, { kind: 'table', head: ['who', 'the characters'], rows: [['the court of Athens', 'Theseus (the Duke), Hippolyta, Egeus (Hermia’s father)'], ['the lovers', 'Hermia, Lysander, Helena, Demetrius'], ['the fairies', 'Oberon (king), Titania (queen), Puck (Oberon’s servant)'], ['the workmen', 'Bottom (a weaver), Quince, Flute, Snout']], tint: 'rows' }],
+  'english.tempest': { kind: 'tree', root: { n: 'Prospero', note: 'magician; rightful Duke of Milan', mark: true, c: [{ n: 'Miranda', note: 'his daughter' }, { n: 'Ariel', note: 'spirit; wants freedom' }, { n: 'Caliban', note: 'Sycorax’s son; enslaved' }] }, caption: 'Prospero’s island. His enemies on the ship: his brother Antonio, who stole his dukedom, and Alonso, King of Naples, with his son Ferdinand.' },
+  'english.victorian': CAROL,
+  'english.analysis': PETAL,
+  'english.rhetoric': { kind: 'table', head: ['', 'persuades through', 'for example'], rows: [['ethos', 'trust in the speaker', '“As a doctor, I…”'], ['pathos', 'emotion', '“Innocent puppies…”'], ['logos', 'facts and logic', '“Nine out of ten…”']], tint: 'rows' },
+};
+
+const ITEM_VISUALS = {
+  'english.gr7.simple': SIMPLE,
+  'english.gr7.complex': [COMPLEX, COMPOUND],
+  'english.gr7.subordinate': { kind: 'blocks', rows: [{ parts: [['Although she was tired,', 'subordinate', 'subordinate clause'], ['Maya finished the race.', 'clause', 'main clause']] }], caption: '“Maya finished the race.” makes sense alone; “Although she was tired” does not.' },
+  'english.gr7.clause': [
+    { kind: 'blocks', rows: [{ parts: [['the bus', 'subject', 'subject'], ['came', 'verb', 'verb']] }], caption: 'A clause: it has a verb.' },
+    { kind: 'blocks', rows: [{ parts: [['in', 'preposition', 'preposition'], ['the morning', 'noun', 'noun']] }], caption: 'A phrase: no verb.' },
+  ],
+  'english.gr7.compound': { kind: 'blocks', rows: [{ parts: [['for', 'conjunction', 'F'], ['and', 'conjunction', 'A'], ['nor', 'conjunction', 'N'], ['but', 'conjunction', 'B'], ['or', 'conjunction', 'O'], ['yet', 'conjunction', 'Y'], ['so', 'conjunction', 'S']] }], caption: 'FANBOYS: the joining words for a compound sentence.' },
+  'english.rt3.ology': build([['bio', 'root', 'life'], ['logy', 'suffix', 'study of']], [['geo', 'root', 'earth'], ['logy', 'suffix', 'study of']]),
+  'english.rt3.phobia': build([['arachno', 'root', 'spider'], ['phobia', 'suffix', 'fear of']]),
+  'english.rt3.less': build([['fear', 'root'], ['less', 'suffix', 'without']], [['care', 'root'], ['less', 'suffix', 'without']]),
+  'english.rt3.ous': build([['danger', 'root'], ['ous', 'suffix', 'full of']], [['fame → fam', 'root'], ['ous', 'suffix', 'full of']]),
+  'english.rt3.cracy': build([['demo', 'root', 'people'], ['cracy', 'suffix', 'rule by']]),
+  'english.rt3.meter': build([['thermo', 'root', 'heat'], ['meter', 'suffix', 'measure']]),
+  'english.rt3.scope': build([['tele', 'prefix', 'far'], ['scope', 'suffix', 'look']], [['peri', 'prefix', 'around'], ['scope', 'suffix', 'look']]),
+  'english.rt3.ped': build([['ped', 'root', 'foot'], ['al', 'suffix']]),
+  'english.rt3.manu': build([['manu', 'root', 'hand'], ['al', 'suffix']]),
+  'english.rt3.mal': build([['mal', 'prefix', 'bad'], ['function', 'root']]),
+  'english.pt7.rhyme': { kind: 'table', head: ['line ends', 'rhyme'], rows: [['cat', '**A**'], ['dog', '**B**'], ['hat', '**A**'], ['log', '**B**']], caption: 'New end sound, new letter: ABAB.' },
+  'english.pt7.caesura': OZY_LINES,
+  'english.pt7.enjambment': OZY_LINES,
+  'english.sh.born': { kind: 'timeline', from: 1550, to: 1630, set: 'britain', events: [[1564, 'born in Stratford-upon-Avon'], [1599, 'the Globe is built'], [1603, 'Elizabeth I dies'], [1616, 'dies in Stratford']] },
+  'english.sh.pentameter': { kind: 'blocks', rows: [{ parts: [['but SOFT', 'tense', 'da-DUM'], ['what LIGHT', 'tense', 'da-DUM'], ['through YON', 'tense', 'da-DUM'], ['der WIN', 'tense', 'da-DUM'], ['dow BREAKS', 'tense', 'da-DUM']] }], caption: 'Five da-DUMs: ten syllables, every second one stressed.' },
+  'english.sh.thou': { kind: 'table', head: ['Shakespeare', 'means'], rows: [['thou', 'you (doing it)'], ['thee', 'you (it’s done to you)'], ['thy', 'your'], ['thine', 'yours']] },
+  'english.dr.hermia': [LOVERS_START, LOVERS_END],
+  'english.dr.helena': [LOVERS_START, LOVERS_END],
+  'english.dr.puck': { kind: 'flow', steps: ['Oberon: put love-juice on the Athenian’s eyes', 'Puck finds Lysander (Athenian clothes!)', 'Lysander wakes, sees Helena, loves her', 'Oberon fixes Demetrius: he loves Helena too', 'Hermia is left with nobody'], caption: 'Puck’s mistake: Oberon meant Demetrius, so that he would love Helena.' },
+  'english.tp.storm': TEMPEST_STORY,
+  'english.tp.theme': TEMPEST_STORY,
+  'english.vc.carol-ghosts': CAROL,
+  'english.an.petal': PETAL,
+};
+
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'english', deck: 'year7', topics, items, sentences: SENTENCES, pieces: PIECES }];

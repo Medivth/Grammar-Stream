@@ -11,6 +11,54 @@
    "intro": "Historians use special words to talk about time. Knowing them makes every history topic easier.",
    "teach": "Explain what BC and AD mean.",
    "talk": "Ask her which century we are in, and why it isn’t the 20th.",
+   "visual": {
+    "kind": "timeline",
+    "from": -300,
+    "to": 300,
+    "bands": [
+     [
+      -300,
+      -200,
+      "3rd century BC"
+     ],
+     [
+      -200,
+      -100,
+      "2nd century BC"
+     ],
+     [
+      -100,
+      0,
+      "1st century BC"
+     ],
+     [
+      0,
+      100,
+      "1st century AD"
+     ],
+     [
+      100,
+      200,
+      "2nd century AD"
+     ],
+     [
+      200,
+      300,
+      "3rd century AD"
+     ]
+    ],
+    "events": [
+     [
+      -55,
+      "Julius Caesar visits Britain"
+     ],
+     [
+      43,
+      "Romans invade Britain"
+     ]
+    ],
+    "caption": "BC years count **down** to 1 BC; AD years count **up** from AD 1. There is no year 0. So 300 BC is longer ago than 100 BC."
+   },
    "hook": "**BC** counts down towards year 1, **AD** counts up from it. There is no year 0: 1 BC is followed straight by AD 1."
   },
   {
@@ -22,6 +70,75 @@
    ],
    "teach": "Explain why 1900 is in the 19th century.",
    "talk": "Ask her which century the Great Fire of London (1666) was in.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1000,
+    "to": 1700,
+    "bands": [
+     [
+      1000,
+      1100,
+      "11th century"
+     ],
+     [
+      1100,
+      1200,
+      "12th century"
+     ],
+     [
+      1200,
+      1300,
+      "13th century"
+     ],
+     [
+      1300,
+      1400,
+      "14th century"
+     ],
+     [
+      1400,
+      1500,
+      "15th century"
+     ],
+     [
+      1500,
+      1600,
+      "16th century"
+     ],
+     [
+      1600,
+      1700,
+      "17th century"
+     ]
+    ],
+    "events": [
+     [
+      1066,
+      "Hastings"
+     ],
+     [
+      1215,
+      "Magna Carta"
+     ],
+     [
+      1348,
+      "Black Death"
+     ],
+     [
+      1485,
+      "Bosworth"
+     ],
+     [
+      1588,
+      "Armada"
+     ],
+     [
+      1666,
+      "Great Fire of London"
+     ]
+    ],
+    "caption": "Add one to the hundreds: 1066 is in the **11th** century (1001–1100) and 1666 in the **17th**."
+   },
    "hook": "Add one to the hundreds: 1666 → 16 + 1 = **17th** century. A year ending in 00 belongs to the century that is just finishing."
   },
   {
@@ -35,6 +152,70 @@
    "intro": "A secure mental timeline is the backbone of history. We’ll build it period by period, from the Stone Age to today.",
    "teach": "Put the Romans, Vikings and Tudors in order and say roughly when each was.",
    "talk": "Ask her to put three periods in order: Victorians, Romans, Tudors.",
+   "visual": [
+    {
+     "kind": "timeline",
+     "set": "britain",
+     "from": -3500,
+     "to": 2025,
+     "events": [
+      [
+       -3000,
+       "Stonehenge begun"
+      ],
+      [
+       43,
+       "Romans invade"
+      ],
+      [
+       1066,
+       "Battle of Hastings"
+      ],
+      [
+       1837,
+       "Victoria becomes queen"
+      ]
+     ],
+     "caption": "The whole story of Britain, from the Stone Age to today."
+    },
+    {
+     "kind": "timeline",
+     "set": "britain",
+     "from": 43,
+     "to": 2025,
+     "events": [
+      [
+       410,
+       "Romans leave"
+      ],
+      [
+       793,
+       "Vikings raid Lindisfarne"
+      ],
+      [
+       1066,
+       "Battle of Hastings"
+      ],
+      [
+       1215,
+       "Magna Carta"
+      ],
+      [
+       1485,
+       "Battle of Bosworth"
+      ],
+      [
+       1837,
+       "Victoria becomes queen"
+      ],
+      [
+       1914,
+       "First World War begins"
+      ]
+     ],
+     "caption": "Zoomed in: the last 2000 years, from the Romans to today."
+    }
+   ],
    "hook": "“Willie, Willie, Harry, Stee, Harry, Dick, John, Harry three…”: the old rhyme that lists England’s monarchs since 1066, in order."
   },
   {
@@ -48,6 +229,68 @@
    "intro": "Long before Roman Britain, great civilisations grew up along rivers: in Egypt, Mesopotamia, India and China. Ancient Greece came a little later.",
    "teach": "Explain why early civilisations grew up near rivers.",
    "talk": "Ask her what the Greeks gave us that we still use today.",
+   "visual": [
+    {
+     "kind": "timeline",
+     "set": "britain",
+     "from": -3500,
+     "to": 500,
+     "events": [
+      [
+       -2600,
+       "Indus Valley cities"
+      ],
+      [
+       -2560,
+       "Great Pyramid finished"
+      ],
+      [
+       -1600,
+       "Shang dynasty begins"
+      ],
+      [
+       -776,
+       "first Olympic Games"
+      ],
+      [
+       -508,
+       "democracy in Athens"
+      ],
+      [
+       43,
+       "Romans invade Britain"
+      ]
+     ],
+     "caption": "While Britain was in the Stone and Bronze Ages, great cities grew up by rivers far away. (Early dates are approximate.)"
+    },
+    {
+     "kind": "table",
+     "head": [
+      "civilisation",
+      "river"
+     ],
+     "rows": [
+      [
+       "Ancient Egypt",
+       "**Nile**"
+      ],
+      [
+       "Mesopotamia (Iraq)",
+       "**Tigris** and **Euphrates**"
+      ],
+      [
+       "Indus Valley (Pakistan)",
+       "**Indus**"
+      ],
+      [
+       "Shang China",
+       "**Yellow River**"
+      ]
+     ],
+     "tint": "rows",
+     "caption": "Civilisations are born by rivers."
+    }
+   ],
    "hook": "Civilisations are born by rivers: **Nile** (Egypt), **Tigris and Euphrates** (Mesopotamia), **Indus** (Pakistan), **Yellow River** (China)."
   },
   {
@@ -61,6 +304,32 @@
    "intro": "While Britain was in the Anglo-Saxon and medieval periods, other parts of the world had great cities and kingdoms.",
    "teach": "Explain why Baghdad around AD 900 was a centre of learning.",
    "talk": "Ask her what the House of Wisdom was.",
+   "visual": {
+    "kind": "timeline",
+    "set": "britain",
+    "from": 200,
+    "to": 1950,
+    "mark": "Anglo-Saxons and Vikings",
+    "events": [
+     [
+      250,
+      "Maya classic period begins"
+     ],
+     [
+      762,
+      "Baghdad founded"
+     ],
+     [
+      900,
+      "Maya classic period ends"
+     ],
+     [
+      1897,
+      "British soldiers take the Benin Bronzes"
+     ]
+    ],
+    "caption": "While Britain was Anglo-Saxon, Baghdad and the Maya cities were at their height."
+   },
    "hook": "Books, maths and brass: Baghdad’s **House of Wisdom**, the **Maya** zero and the **Benin** Bronzes."
   },
   {
@@ -78,6 +347,18 @@
    "intro": "When Edward the Confessor died in January 1066 without a child, several men claimed the English throne. This is the start of Year 7 history.",
    "teach": "Explain the most important reason William won at Hastings.",
    "talk": "Ask her who the claimants to the throne were in 1066.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "5 January: Edward the Confessor dies",
+     "6 January: Harold Godwinson crowned",
+     "20 September: Hardrada wins at Fulford",
+     "25 September: Harold wins at Stamford Bridge",
+     "14 October: William wins at Hastings",
+     "25 December: William crowned"
+    ],
+    "caption": "1066: three kings and three battles."
+   },
    "hook": "1066: the year of **three kings** (Edward, Harold, William) and **three battles** (Fulford, Stamford Bridge, Hastings)."
   },
   {
@@ -91,6 +372,56 @@
    "intro": "William had won a battle, but now he had to control a whole country of about two million English people.",
    "teach": "Explain how castles helped William control England.",
    "talk": "Ask her what the Domesday Book was for.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "motte-bailey"
+    },
+    {
+     "kind": "timeline",
+     "set": "britain",
+     "from": 900,
+     "to": 1600,
+     "mark": "Middle Ages",
+     "events": [
+      [
+       1066,
+       "Battle of Hastings"
+      ],
+      [
+       1086,
+       "Domesday survey"
+      ]
+     ],
+     "caption": "On our timeline, the Norman Conquest of 1066 starts the Middle Ages."
+    },
+    {
+     "kind": "tree",
+     "root": {
+      "n": "The king",
+      "note": "owns all the land",
+      "c": [
+       {
+        "n": "Barons",
+        "note": "given land; loyal to the king, send him knights",
+        "c": [
+         {
+          "n": "Knights",
+          "note": "given land; fight for their lord",
+          "c": [
+           {
+            "n": "Peasants",
+            "note": "farm the land; work for their lord"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "caption": "The feudal system: land is handed **down**; loyalty and service are owed back **up**."
+    }
+   ],
    "hook": "William’s toolkit: **castles** to frighten, the **feudal system** to bind everyone to the king, **Domesday** to count it all."
   }
  ],
@@ -294,6 +625,23 @@
     }
    ],
    "explain": "The 21st century runs from 2001 to 2100.",
+   "visual": {
+    "kind": "timeline",
+    "set": "britain",
+    "from": 1800,
+    "to": 2025,
+    "events": [
+     [
+      1901,
+      "20th century begins"
+     ],
+     [
+      2001,
+      "21st century begins"
+     ]
+    ],
+    "caption": "The 20th century was 1901–2000; we live in the 21st (2001–2100)."
+   },
    "hook": "Like birthdays: when you are 10, you are in your 11th year. So the years 2001–2100 are the **21st** century.",
    "example": "The year 2000 was the last year of the 20th century; you were born in the 21st."
   },
@@ -338,6 +686,30 @@
    ],
    "explain": "After the Romans left (c. 410), Anglo-Saxons settled. Vikings first raided in 793. The Normans conquered in 1066.",
    "axis": "time",
+   "visual": {
+    "kind": "timeline",
+    "set": "britain",
+    "from": 1,
+    "to": 1100,
+    "events": [
+     [
+      43,
+      "Romans invade"
+     ],
+     [
+      410,
+      "Romans leave"
+     ],
+     [
+      793,
+      "Vikings raid Lindisfarne"
+     ],
+     [
+      1066,
+      "Norman Conquest"
+     ]
+    ]
+   },
    "hook": "“**R**omans **A**lways **V**isit **N**ormandy”: Romans, Anglo-Saxons, Vikings, Normans.",
    "example": "Hadrian’s Wall (Roman), Sutton Hoo (Anglo-Saxon), Jorvik in York (Viking), the Tower of London (Norman)."
   },
@@ -362,6 +734,34 @@
    ],
    "explain": "Normans, then (after many medieval kings) the Tudors, Stuarts, Georgians and Victorians.",
    "axis": "time",
+   "visual": {
+    "kind": "timeline",
+    "set": "britain",
+    "from": 1000,
+    "to": 1950,
+    "events": [
+     [
+      1066,
+      "Normans"
+     ],
+     [
+      1485,
+      "first Tudor"
+     ],
+     [
+      1603,
+      "first Stuart"
+     ],
+     [
+      1714,
+      "first Georgian"
+     ],
+     [
+      1837,
+      "Victoria"
+     ]
+    ]
+   },
    "hook": "“**N**o **T**iny **S**quirrel **G**ets **V**exed”: Normans, Tudors, Stuarts, Georgians, Victorians.",
    "example": "Hampton Court Palace has Tudor rooms built for Henry VIII and grand Stuart rooms added for William and Mary."
   },
@@ -1205,7 +1605,11 @@
     "choice"
    ],
    "hook": "**M**otte = **M**ound; **B**ailey = **B**ig yard.",
-   "example": "Clifford’s Tower in York stands on the motte William built in 1068; you can climb up to it today."
+   "example": "Clifford’s Tower in York stands on the motte William built in 1068; you can climb up to it today.",
+   "visual": {
+    "kind": "diagram",
+    "id": "motte-bailey"
+   }
   },
   {
    "id": "history.n.domesday",
@@ -1256,6 +1660,32 @@
     "feudal system",
     "feudalism"
    ],
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "The king",
+     "note": "owns all the land",
+     "c": [
+      {
+       "n": "Barons",
+       "note": "given land; loyal to the king, send him knights",
+       "c": [
+        {
+         "n": "Knights",
+         "note": "given land; fight for their lord",
+         "c": [
+          {
+           "n": "Peasants",
+           "note": "farm the land; work for their lord"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "The feudal system: land is handed **down**; loyalty and service are owed back **up**."
+   },
    "hook": "Picture a pyramid: the **king** at the top, then **barons**, **knights**, and lots of **peasants** at the bottom.",
    "example": "Titles such as “baron” and “lord”, still used in the House of Lords, come from feudal times."
   },

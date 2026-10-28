@@ -182,4 +182,33 @@ const items = [
   ...ALIENS,
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Sound buttons as in Read Write Inc.: a dot under a single-letter sound, a dash under special
+// friends, and an arc for a split special friend (a-e). "n-igh-t" in the data becomes "n.igh.t".
+const SB = (words, caption) => ({ kind: 'sounds', words, ...(caption ? { caption } : {}) });
+const dots = (fred) => fred.replace(/-/g, '.');
+const TOPIC_VISUALS = {
+  'reading.rwi-set2': SB(['s.t.ay', 'sh.ee.p', 'n.igh.t', 'g.r.ow', 'm.oo.n', 'f.oo.t', 'p.ar.k', 's.p.or.t', 'ch.air', 'sh.ir.t', 'c.l.ou.d', 'e.n.j.oy'], 'A dash means special friends: two or three letters making one sound.'),
+  'reading.rwi-set3a': SB(['d.r.ea.m', 'p.oi.n.t', 's.n.a_e.k', 's.l.i_e.d', 's.t.o_e.n', 'f.l.u_e.t', 'c.r.aw.l', 's.c.are', 'b.ur.n', 's.i.s.t.er'], 'In snake, the a and the e are split special friends: the arc joins them.'),
+  'reading.rwi-set3b': SB(['t.ow.n', 'p.ai.n.t', 't.oa.s.t', 'f.l.ew', 'w.ire', 'n.ear', 'c.ure', 'a.c.tion', 'sh.e']),
+  'reading.rwi-fred': SB(['sh.i.p', 'n.igh.t', 'ch.air', 's.p.l.a.sh'], 'One Fred Finger for each sound button: ship 3, night 3, chair 2, splash 5.'),
+  'reading.rwi-alien': SB(['b.l.ai.n', 'z.or.t', 'v.igh.t', 'qu.oo.p'], 'Alien words still have sound buttons. Say the sounds, then push them together.'),
+};
+const ITEM_VISUALS = {
+  // split special friends and the sounds with two pronunciations
+  'reading.rwi.set3a.ae.word': SB(['s.n.a_e.k']),
+  'reading.rwi.set3a.ie.word': SB(['s.l.i_e.d']),
+  'reading.rwi.set3a.oe.word': SB(['s.t.o_e.n']),
+  'reading.rwi.set3a.ue.word': SB(['f.l.u_e.t']),
+  'reading.rwi.set2.oo-zoo.word': SB(['m.oo.n', 'z.oo'], 'oo: poo at the zoo'),
+  'reading.rwi.set2.oo-book.word': SB(['f.oo.t', 'b.oo.k'], 'oo: look at a book'),
+  'reading.rwi.set2.ow.word': SB(['g.r.ow', 's.n.ow'], 'ow: blow the snow'),
+  'reading.rwi.set3b.ow-cow.word': SB(['t.ow.n', 'c.ow'], 'ow: brown cow'),
+  ...Object.fromEntries(COUNT.map(([word, sounds]) => [`reading.rwi.fred.count.${word}`, SB([dots(sounds)])])),
+  ...Object.fromEntries(BUTTONS.map(([word, sounds]) => [`reading.rwi.fred.buttons.${word}`, SB([dots(sounds)])])),
+  ...Object.fromEntries(ALIEN_COUNT.map(([word, sounds]) => [`reading.rwi.alien.count.${word}`, SB([dots(sounds)])])),
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'reading', deck: 'phonics', topics, items }];

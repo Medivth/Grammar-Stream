@@ -163,4 +163,31 @@ for (const deck of [maths, geography, history, science]) {
 }
 for (const id of Object.keys(MEMORY)) if (![maths, geography, history, science].some((d) => d.items.some((it) => it.id === id))) throw new Error(`memory hook for unknown item ${id}`);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const WORD_PARTS = {
+  photosynthesis: { join: '+', parts: [['photo', 'prefix', 'light'], ['synthesis', 'root', 'putting together']], result: 'photosynthesis' },
+  chlorophyll: { join: '+', parts: [['chloro', 'prefix', 'green'], ['phyll', 'root', 'leaf']], result: 'chlorophyll' },
+  thermometer: { join: '+', parts: [['therm', 'prefix', 'heat'], ['o', 'ending', 'joins'], ['meter', 'root', 'measure']], result: 'thermometer' },
+};
+const parts = (...words) => ({ kind: 'blocks', rows: words.map((w) => WORD_PARTS[w]) });
+const TOPIC_VISUALS = {
+  'history.by-numbers': { kind: 'timeline', set: 'britain', from: -100, to: 100, events: [[-55, 'Julius Caesar’s first visit'], [43, 'the Roman invasion']], caption: 'From 55 BC to AD 43 is 55 + 43 − 1 = 97 years: the calendar goes straight from 1 BC to AD 1, with no year 0.' },
+  'science.words': { ...parts('photosynthesis', 'chlorophyll', 'thermometer'), caption: 'Science words are built from Greek and Latin parts.' },
+};
+const ITEM_VISUALS = {
+  'science.sw.photo': parts('photosynthesis'),
+  'science.sw.chloro': parts('chlorophyll'),
+  'science.sw.therm': parts('thermometer'),
+  'science.sw.photosynthesis': parts('photosynthesis'),
+  'science.sw.chlorophyll': parts('chlorophyll'),
+  'science.sw.thermometer': parts('thermometer'),
+  'geography.gn.median': { kind: 'maths', diagram: { type: 'bar', title: 'Weekly earnings of five households (£)', ylabel: '£', step: 500, cats: [{ label: '1', v: 400 }, { label: '2', v: 420 }, { label: '3', v: 450 }, { label: '4', v: 480 }, { label: '5', v: 2250 }] }, caption: 'One very high earner pulls the mean up to £800; the median (the middle household) is £450.' },
+  'geography.gn.climate': { kind: 'maths', question: true, diagram: { type: 'bar', title: 'Rainfall (mm) in a coastal town', ylabel: 'mm', step: 20, cats: [['J', 110], ['F', 95], ['M', 70], ['A', 40], ['M', 20], ['J', 5], ['J', 2], ['A', 5], ['S', 25], ['O', 70], ['N', 100], ['D', 120]].map(([label, v]) => ({ label, v })) } },
+  'geography.gn.anomaly': { kind: 'maths', question: true, diagram: { type: 'line', title: 'Midday temperature (°C), one week in July', ylabel: '°C', xs: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], ys: [21, 23, 22, 4, 24, 22, 23] } },
+};
+const synopticTopics = [maths, geography, history, science].flatMap((d) => d.topics);
+const synopticItems = [maths, geography, history, science].flatMap((d) => d.items);
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = synopticTopics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = t.visual ? [].concat(t.visual, v) : v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = synopticItems.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = it.visual ? [].concat(it.visual, v) : v; }
+
 export default [maths, geography, history, science];

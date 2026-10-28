@@ -58,6 +58,33 @@ const items = [
   mcq('pz.half', 'puzzles', 'Half of a number is 9. What is a quarter of the number?', [['4 and a half', true], ['18', false, '18 is the whole number. A quarter is half of 9.'], ['3', false, 'A quarter is half of a half: half of 9 is 4 and a half.'], ['2 and a quarter', false, 'That is half of 4 and a half. The whole is 18, so a quarter is 4 and a half.']], 'The whole is 18. A quarter is half of half: half of 9 = 4½. Greater depth answers can be halves!'),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const M = (diagram, caption) => ({ kind: 'maths', diagram, ...(caption ? { caption } : {}) });
+const MONTHS = { kind: 'table', head: ['Days', 'Months'], rows: [['31', 'January, March, May, July, August, October, December'], ['30', 'April, June, September, November'], ['28 (29 in a leap year)', 'February']], tint: 'rows' };
+const TOPIC_VISUALS = {
+  'maths.factfamilies': { kind: 'tree', root: { n: '10', note: 'the whole', c: [{ n: '7', note: 'a part' }, { n: '3', note: 'a part' }] }, caption: 'One family, four facts: 7 + 3 = 10, 3 + 7 = 10, 10 − 3 = 7, 10 − 7 = 3.' },
+  'maths.doubles': M({ type: 'array', rows: 2, cols: 6 }, 'Two rows of 6: double 6 is 12. Split them into the two rows: half of 12 is 6.'),
+  'maths.turns': { kind: 'cycle', steps: ['North', 'East', 'South', 'West'], centre: 'clockwise', caption: 'Each arrow is a quarter turn clockwise. Two quarter turns make a half turn; four make a full turn.' },
+  'maths.scales': M({ type: 'numline', min: 0, max: 100, step: 10, labels: [0, 50, 100] }, 'Only some marks have numbers. 10 steps from 0 to 100, so each step is worth 10.'),
+  'maths.grouping': [
+    M({ type: 'barmodel', total: '15', rows: [{ parts: 3, text: '5' }] }, '15 shared into 3 equal groups: 5 in each. 15 ÷ 3 = 5.'),
+    { kind: 'tree', root: { n: '13 cars', note: '4 on each transporter', c: [{ n: '12 cars', note: '3 full transporters' }, { n: '1 car', note: 'left over' }] }, caption: '13 ÷ 4 = 3 remainder 1. The car left over needs a 4th transporter.' },
+  ],
+  'maths.amounts': [M({ type: 'coins', coins: [50] }, 'One way to make 50p…'), M({ type: 'coins', coins: [20, 20, 10] }, '…and another: 20p + 20p + 10p = 50p.')],
+  'maths.durations': [M({ type: 'clock', h: 2, m: 15 }, 'The race starts at quarter past 2…'), M({ type: 'clock', h: 2, m: 45 }, '…and finishes at quarter to 3. That is 30 minutes.')],
+  'maths.times10': M({ type: 'pvgrid', cols: ['H', 'T', 'O'], rows: [['3', '4'], ['3', '4', '0']], shift: 1 }, '34 × 10 = 340. Each digit moves one place to the left, and a 0 fills the ones.'),
+  'maths.roman': { kind: 'table', head: ['Roman', 'Number'], rows: [['I', '1'], ['II', '2'], ['III', '3'], ['IV', '4 (one before five)'], ['V', '5'], ['VI', '6 (one after five)'], ['IX', '9 (one before ten)'], ['X', '10']] },
+};
+const ITEM_VISUALS = {
+  'maths.f2.4': MONTHS,
+  'maths.f2.5': MONTHS,
+  'maths.f2.11': M({ type: 'polygon', sides: 4, name: 'quadrilateral' }, 'Quad means four: 4 sides.'),
+  'maths.f2.12': M({ type: 'solid', shape: 'cube' }, '4 edges round the top, 4 round the bottom and 4 going up: 12.'),
+  'maths.f2.13': M({ type: 'solid', shape: 'pyramid' }, 'A square-based pyramid'),
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = TOPICS.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{
   subject: 'maths', deck: 'more',
   topics: TOPICS.map(({ gen, ...t }) => ({ kind: gen ? 'skill' : 'facts', ...t })),

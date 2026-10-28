@@ -48,7 +48,57 @@
    "batch": 5,
    "intro": "A prefix goes at the start of a word and changes its meaning. un- and dis- mean “not”; re- means “again”.",
    "teach": "Explain what “unhappy” and “rebuild” mean.",
-   "talk": "Ask {him} for the opposite of “lock”, “like” and “tidy” using a prefix."
+   "talk": "Ask {him} for the opposite of “lock”, “like” and “tidy” using a prefix.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "un",
+        "prefix",
+        "not"
+       ],
+       [
+        "happy",
+        "root"
+       ]
+      ],
+      "result": "unhappy"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "dis",
+        "prefix",
+        "not"
+       ],
+       [
+        "like",
+        "root"
+       ]
+      ],
+      "result": "dislike"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "re",
+        "prefix",
+        "again"
+       ],
+       [
+        "build",
+        "root"
+       ]
+      ],
+      "result": "rebuild"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.plurals",
@@ -72,7 +122,61 @@
    "batch": 5,
    "intro": "A compound word is two words joined together: foot + ball = football, sun + flower = sunflower.",
    "teach": "Explain what a compound word is, with two examples.",
-   "talk": "Race to find compound words around the house (toothbrush, cupboard…)."
+   "talk": "Race to find compound words around the house (toothbrush, cupboard…).",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "foot",
+        "root",
+        "word"
+       ],
+       [
+        "ball",
+        "root",
+        "word"
+       ]
+      ],
+      "result": "football"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "sun",
+        "root",
+        "word"
+       ],
+       [
+        "flower",
+        "root",
+        "word"
+       ]
+      ],
+      "result": "sunflower"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "rain",
+        "root",
+        "word"
+       ],
+       [
+        "bow",
+        "root",
+        "word"
+       ]
+      ],
+      "result": "rainbow"
+     }
+    ],
+    "caption": "Two whole words join together, with no gap."
+   }
   },
   {
    "id": "spelling.grammar-2",
@@ -100,6 +204,40 @@
    "intro": "Inverted commas (speech marks) go around the words someone actually says: “Ready for launch!” said the captain.",
    "teach": "Explain where the speech marks go in a sentence.",
    "talk": "Write a comic strip together and turn the speech bubbles into sentences with speech marks.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "“Blast off!”",
+        "clause",
+        "spoken words"
+       ],
+       [
+        "shouted the captain.",
+        "subject",
+        "who spoke"
+       ]
+      ]
+     },
+     {
+      "parts": [
+       [
+        "The captain said,",
+        "subject",
+        "who spoke"
+       ],
+       [
+        "“Get ready.”",
+        "clause",
+        "spoken words"
+       ]
+      ]
+     }
+    ],
+    "caption": "Speech marks go round the words someone actually says, with their punctuation inside."
+   },
    "coreIn": [
     "y3"
    ]
@@ -538,7 +676,27 @@
     "onhappy"
    ],
    "explain": "un- means not: unhappy = not happy.",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "un",
+        "prefix",
+        "not"
+       ],
+       [
+        "happy",
+        "root"
+       ]
+      ],
+      "result": "unhappy"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.pf.undo",
@@ -570,7 +728,27 @@
    "explain": "dis- + like = dislike. (“unlike” means “different from”.)",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "dis",
+        "prefix",
+        "not"
+       ],
+       [
+        "like",
+        "root"
+       ]
+      ],
+      "result": "dislike"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.pf.disappear",
@@ -584,7 +762,28 @@
     "disappeer"
    ],
    "explain": "dis + appear: one s, double p (because appear has a double p).",
-   "strict": true
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "dis",
+        "prefix",
+        "not"
+       ],
+       [
+        "appear",
+        "root"
+       ]
+      ],
+      "result": "disappear"
+     }
+    ],
+    "caption": "One s from dis, and the double p from appear."
+   }
   },
   {
    "id": "spelling.pf.rebuild",
@@ -600,7 +799,27 @@
    "explain": "re- means again.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "re",
+        "prefix",
+        "again"
+       ],
+       [
+        "build",
+        "root"
+       ]
+      ],
+      "result": "rebuild"
+     }
+    ]
+   }
   },
   {
    "id": "spelling.pf.replay",

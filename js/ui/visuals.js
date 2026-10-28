@@ -73,19 +73,24 @@ export function yearLabel(y, bcad) {
   return bcad ? `AD ${y}` : String(y);
 }
 function timeline(v) {
-  const W = 640, PAD = 18, barH = 36, FS = 13.5, LH = 15;
+  // drawn to the screen's width (up to 640), so on a phone the words print at full size and
+  // labels stack into more rows instead of the whole line shrinking or scrolling off the side
+  const W = Math.round(Math.min(640, Math.max(320, (globalThis.innerWidth || 640) - 64))), PAD = 18, barH = 38, FS = 14.5, LH = 16;
   const from = v.from, to = v.to;
-  const X = (y) => PAD + ((y - from) / (to - from)) * (W - 2 * PAD);
+  // there is no year 0: 1 BC is followed by AD 1, so BC years shift up by one before spacing
+  const T = (y) => (y < 0 ? y + 1 : y);
+  const Xt = (t) => PAD + ((t - T(from)) / (T(to) - T(from))) * (W - 2 * PAD);
+  const X = (y) => Xt(T(y));
   const bcad = from < 0 || to < 1100;
   const bands = (v.bands || PERIODS[v.set] || []).map(([a, b, label], i) => ({ a: Math.max(a, from), b: Math.min(b, to), label, i })).filter((p) => p.b > p.a);
   const events = (v.events || []).filter(([y]) => y >= from && y <= to).sort((a, b) => a[0] - b[0]);
   // lay the event labels out in rows above and below the bar, each in the first row where it
   // does not overlap the label before it, so close dates never print on top of each other
-  const ROW = 3 * LH + 10;
+  const ROW = (W < 480 ? 4 : 3) * LH + 10;
   const rows = {}; // "up0" -> right edge of the last label placed there
   const placed = events.map(([y, label]) => {
     const x = X(y);
-    const lines = wrap(`${yearLabel(y, bcad)}: ${label}`, 22).slice(0, 3);
+    const lines = wrap(`${yearLabel(y, bcad)}: ${label}`, W < 480 ? 18 : 22).slice(0, 4);
     const w = Math.max(...lines.map((l) => l.length)) * FS * 0.53 + 6;
     const anchor = x - w / 2 < PAD ? 'start' : x + w / 2 > W - PAD ? 'end' : 'middle';
     const left = anchor === 'start' ? x - 4 : anchor === 'end' ? x - w + 4 : x - w / 2;
@@ -109,24 +114,32 @@ function timeline(v) {
     const on = v.mark && p.label === v.mark;
     svg.append(s('rect', { x: x1, y: barY, width: Math.max(w, 1), height: barH, fill: on ? tone(p.i) : toneSoft(p.i), stroke: tone(p.i), 'stroke-width': 1 }));
     const lines = wrap(p.label, Math.max(4, Math.floor(w / 7.2)));
-    if (w > 30 && lines.length <= 2 && Math.max(...lines.map((l) => l.length)) * (lines.length > 1 ? 6.4 : 7.2) <= w - 4) svg.append(textLines(x1 + w / 2, barY + barH / 2, lines, { 'font-size': lines.length > 1 ? 11.5 : 13, lh: 12.5, 'font-weight': on ? 800 : 600, fill: on ? 'var(--card)' : INK }));
+    const longest = Math.max(...lines.map((l) => l.length));
+    const size = longest * (lines.length > 1 ? 6.9 : 7.7) <= w - 4 ? (lines.length > 1 ? 12.5 : 14) : longest * 6.2 <= w - 2 ? 11 : 0;
+    if (w > 26 && lines.length <= 2 && size) svg.append(textLines(x1 + w / 2, barY + barH / 2, lines, { 'font-size': size, lh: size - 0.5, 'font-weight': on ? 800 : 600, fill: on ? 'var(--card)' : INK }));
   }
   if (!bands.length) svg.append(s('rect', { x: PAD, y: barY + barH / 2 - 3, width: W - 2 * PAD, height: 6, rx: 3, fill: 'var(--line)' }));
-  const small = (x, t, anchor, bold) => s('text', { x, y: barY + barH + 15, 'text-anchor': anchor, fill: bold ? INK : 'var(--muted)', 'font-size': 12.5, 'font-weight': bold ? 700 : 400, 'font-family': 'inherit' }, t);
-  svg.append(small(PAD, yearLabel(from, bcad), 'start'), small(W - PAD, yearLabel(to, bcad), 'end'));
-  // the BC/AD boundary, when it is in view
+  const small = (x, t, anchor, bold) => s('text', { x, y: barY + barH + 15, 'text-anchor': anchor, fill: bold ? INK : 'var(--muted)', 'font-size': 13.5, 'font-weight': bold ? 700 : 400, 'font-family': 'inherit' }, t);
+  // the BC/AD boundary, when it is in view; an end year too close to it is left off
+  const xBoundary = from < 0 && to > 0 ? Xt(0.5) : null;
+  const clear = (x) => (xBoundary == null || Math.abs(x - xBoundary) > 70) && !placed.some((p) => p.side === 'down' && Math.abs(p.x - x) < 40);
+  if (clear(PAD)) svg.append(small(PAD, yearLabel(from, bcad), 'start'));
+  if (clear(W - PAD)) svg.append(small(W - PAD, yearLabel(to, bcad), 'end'));
   if (from < 0 && to > 0) {
-    const x = X(0.5);
+    const x = xBoundary;
     svg.append(s('line', { x1: x, y1: barY - 6, x2: x, y2: barY + barH + 4, stroke: INK, 'stroke-width': 2.5 }), small(x, 'BC | AD', 'middle', true));
   }
+  const words = [];
   for (const p of placed) {
     const up = p.side === 'up';
     const yMid = up ? barY - 12 - p.level * ROW - (p.lines.length * LH) / 2 : below + 6 + p.level * ROW + (p.lines.length * LH) / 2;
     const yEnd = up ? yMid + (p.lines.length * LH) / 2 : yMid - (p.lines.length * LH) / 2;
     svg.append(s('line', { x1: p.x, y1: up ? barY : barY + barH, x2: p.x, y2: yEnd, stroke: INK, 'stroke-width': 1.3, 'stroke-dasharray': p.level ? '3 3' : null }));
     svg.append(s('circle', { cx: p.x, cy: up ? barY : barY + barH, r: 4.5, fill: INK }));
-    svg.append(textLines(p.x, yMid, p.lines, { 'font-size': FS, lh: LH, 'text-anchor': p.anchor }));
+    // a halo in the card colour, so a leader line from a label further out breaks behind these words
+    words.push(textLines(p.x, yMid, p.lines, { 'font-size': FS, lh: LH, 'text-anchor': p.anchor, stroke: 'var(--card)', 'stroke-width': 5, 'stroke-linejoin': 'round', 'paint-order': 'stroke' }));
   }
+  svg.append(...words);
   return h('div', { class: 'visual-scroll' }, svg);
 }
 
@@ -134,31 +147,44 @@ function timeline(v) {
 // { steps: [...] } drawn round a circle with arrows, so the last step leads back to the first
 function cycle(v) {
   const n = v.steps.length;
-  const W = 420, H = 380, cx = W / 2, cy = H / 2, R = n <= 4 ? 125 : 140;
-  const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': `Cycle: ${v.steps.join(', then ')}`, class: 'visual-svg' });
-  svg.append(s('defs', {}, s('marker', { id: 'vc-arrow', viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 7, markerHeight: 7, orient: 'auto-start-reverse' }, s('path', { d: 'M0,0 L10,5 L0,10 z', fill: 'var(--muted)' }))));
-  const pos = (i) => { const a = -Math.PI / 2 + (2 * Math.PI * i) / n; return [cx + R * Math.cos(a), cy + R * Math.sin(a), a]; };
-  const gap = Math.min(0.5, (Math.PI / n) * 0.55);
-  for (let i = 0; i < n; i++) {
-    const a1 = -Math.PI / 2 + (2 * Math.PI * i) / n + gap, a2 = -Math.PI / 2 + (2 * Math.PI * (i + 1)) / n - gap;
-    const p1 = [cx + R * Math.cos(a1), cy + R * Math.sin(a1)], p2 = [cx + R * Math.cos(a2), cy + R * Math.sin(a2)];
-    svg.append(s('path', { d: `M${p1[0]},${p1[1]} A${R},${R} 0 0,1 ${p2[0]},${p2[1]}`, fill: 'none', stroke: 'var(--muted)', 'stroke-width': 2.5, 'marker-end': 'url(#vc-arrow)' }));
-  }
-  v.steps.forEach((st, i) => {
-    const [x, y] = pos(i);
-    const lines = wrap(st, 13).slice(0, 3);
-    const w = Math.max(...lines.map((l) => l.length)) * 7.6 + 22, hh = lines.length * 15 + 16;
-    svg.append(s('rect', { x: x - w / 2, y: y - hh / 2, width: w, height: hh, rx: 10, fill: toneSoft(i), stroke: tone(i), 'stroke-width': 1.5 }));
-    svg.append(textLines(x, y, lines, { 'font-weight': 700 }));
+  const wraps = v.steps.map((st) => wrap(st, 13));
+  const big = Math.max(...wraps.map((l) => Math.max(...l.map((x) => x.length)) * 10.4 + 24));
+  const R = (n <= 4 ? 120 : n <= 6 ? 140 : 160) + Math.max(0, big - 120) * 0.45 + (v.centre ? 12 : 0);
+  const svg = s('svg', { role: 'img', 'aria-label': `Cycle: ${v.steps.join(', then ')}`, class: 'visual-svg' });
+  svg.append(s('defs', {}, s('marker', { id: 'vc-arrow', viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 6, markerHeight: 6, orient: 'auto-start-reverse' }, s('path', { d: 'M0,0 L10,5 L0,10 z', fill: 'var(--muted)' }))));
+  const angle = (i) => -Math.PI / 2 + (2 * Math.PI * i) / n;
+  const boxes = v.steps.map((st, i) => {
+    const a = angle(i), lines = wraps[i];
+    const w = Math.max(...lines.map((l) => l.length)) * 10.4 + 24, hh = lines.length * 21 + 16;
+    // how far the box reaches along the ring, as an angle: the arrows start and stop clear of it
+    const reach = (Math.abs((w / 2) * Math.sin(a)) + Math.abs((hh / 2) * Math.cos(a)) + 10) / R;
+    return { x: R * Math.cos(a), y: R * Math.sin(a), lines, w, hh, a, reach };
   });
-  if (v.centre) svg.append(textLines(cx, cy, wrap(v.centre, 16), { 'font-size': 13, fill: 'var(--muted)' }));
+  boxes.forEach((b, i) => {
+    const next = boxes[(i + 1) % n];
+    let a1 = b.a + b.reach, a2 = angle(i + 1) - next.reach;
+    if (a2 - a1 < 0.12) { const mid = (b.a + angle(i + 1)) / 2; a1 = mid - 0.06; a2 = mid + 0.06; } // always a visible arrowhead
+    svg.append(s('path', { d: `M${R * Math.cos(a1)},${R * Math.sin(a1)} A${R},${R} 0 0,1 ${R * Math.cos(a2)},${R * Math.sin(a2)}`, fill: 'none', stroke: 'var(--muted)', 'stroke-width': 3, 'marker-end': 'url(#vc-arrow)' }));
+  });
+  // the frame fits the step boxes, so the ring fills the card and the words read at phone size
+  let [x0, y0, x1, y1] = [-R, -R, R, R];
+  boxes.forEach(({ x, y, lines, w, hh }, i) => {
+    svg.append(s('rect', { x: x - w / 2, y: y - hh / 2, width: w, height: hh, rx: 12, fill: toneSoft(i), stroke: tone(i), 'stroke-width': 2 }));
+    svg.append(textLines(x, y, lines, { 'font-weight': 700, 'font-size': 18, lh: 21 }));
+    x0 = Math.min(x0, x - w / 2); x1 = Math.max(x1, x + w / 2); y0 = Math.min(y0, y - hh / 2); y1 = Math.max(y1, y + hh / 2);
+  });
+  if (v.centre) svg.append(textLines(0, 0, wrap(v.centre, 14), { 'font-size': 16, lh: 19, fill: 'var(--muted)' }));
+  const pad = 6;
+  svg.setAttribute('viewBox', `${x0 - pad} ${y0 - pad} ${x1 - x0 + 2 * pad} ${y1 - y0 + 2 * pad}`);
   return svg;
 }
 
 // ---------------------------------------------------------------- flow chart / sequence
 // { steps: [...] } top to bottom, or { steps, across: true } left to right where there is room
 function flow(v) {
-  return h('ol', { class: `vflow${v.across ? ' across' : ''}` }, v.steps.map((st, i) => h('li', { style: { '--c': tone(i), '--cs': toneSoft(i) } }, rich('span', st))));
+  // side by side only while the steps fit across a tablet; longer sequences run down the page
+  const across = v.across && v.steps.length <= 6 && v.steps.every((x) => x.length <= 18);
+  return h('ol', { class: `vflow${across ? ' across' : ''}` }, v.steps.map((st, i) => h('li', { style: { '--c': tone(i), '--cs': toneSoft(i) } }, rich('span', st))));
 }
 
 // ---------------------------------------------------------------- tree (family tree, hierarchy)
@@ -166,16 +192,27 @@ function flow(v) {
 function tree(v) {
   const node = (n) => h('li', {}, h('div', { class: `vtree-node${n.mark ? ' mark' : ''}` }, rich('strong', n.n), n.note ? rich('span', n.note) : null),
     n.c?.length ? h('ul', {}, n.c.map(node)) : null);
-  return h('div', { class: 'visual-scroll' }, h('ul', { class: 'vtree' }, node(v.root)));
+  const box = h('div', { class: 'visual-scroll' }, h('ul', { class: 'vtree' }, node(v.root)));
+  // a tree wider than the card is shrunk to fit (down to 75%, still readable), so most families show at once;
+  // wider still, it opens centred on its top and scrolls
+  requestAnimationFrame(() => {
+    const ul = box.firstChild, need = ul.scrollWidth, have = box.clientWidth;
+    if (need > have && have) ul.style.zoom = Math.max(0.75, have / need).toFixed(3);
+    if (box.scrollWidth > box.clientWidth) box.scrollLeft = (box.scrollWidth - box.clientWidth) / 2;
+  });
+  return box;
 }
 
 // ---------------------------------------------------------------- table (endings, comparisons)
 // { head: [...], rows: [[...]], tint?: 'rows' | 'cols' } cells may use **bold** for the part to notice
+// keep short pieces together in narrow cells: "Elizabeth I", "8–10", "decem, 10", and short sums
+// and measures ("a³ × a⁴ = a⁷", "0.5 g") whole; ordinary words still wrap
+const keep = (x) => (String(x).length <= 16 && /\d|[=×÷+−]/.test(String(x)) && !/\*\*/.test(String(x)) ? String(x).replace(/ /g, '\u00a0') : String(x)).replace(/ (?=[IVX]+\b)/g, '\u00a0').replace(/(\d)[–-](?=\d)/g, '$1\u2060–\u2060').replace(/, (?=\d)/g, ',\u00a0');
 function table(v) {
   const tint = (r, c) => (v.tint === 'cols' && c > 0 ? { background: toneSoft(c - 1) } : v.tint === 'rows' ? { background: toneSoft(r) } : undefined);
   return h('div', { class: 'visual-scroll' }, h('table', { class: 'vtable' },
-    v.head ? h('thead', {}, h('tr', {}, v.head.map((x, c) => rich('th', String(x), { style: tint(-1, c) && c ? { background: tone(c - 1), color: 'var(--card)' } : undefined })))) : null,
-    h('tbody', {}, v.rows.map((row, r) => h('tr', {}, row.map((x, c) => rich(c === 0 ? 'th' : 'td', String(x), { style: tint(r, c) })))))));
+    v.head ? h('thead', {}, h('tr', {}, v.head.map((x, c) => rich('th', keep(x), { style: tint(-1, c) && c ? { background: tone(c - 1), color: 'var(--card)' } : undefined })))) : null,
+    h('tbody', {}, v.rows.map((row, r) => h('tr', {}, row.map((x, c) => rich(c === 0 ? 'th' : 'td', keep(x), { style: tint(r, c) })))))));
 }
 
 // ---------------------------------------------------------------- blocks (word parts, sentence parts)
@@ -189,9 +226,10 @@ function blocks(v) {
     row.parts.map(([t, role, label], i) => [
       i && row.join ? h('span', { class: 'vblocks-join', 'aria-hidden': 'true' }, row.join) : null,
       h('span', { class: 'vblock', style: role ? { '--c': tone(ROLES[role] ?? 5), '--cs': toneSoft(ROLES[role] ?? 5) } : undefined },
-        rich('span', t, { class: 'vblock-t' }), label || role ? h('span', { class: 'vblock-l' }, label ?? role) : null),
+        rich('span', t, { class: 'vblock-t' }), label || role ? h('span', { class: `vblock-l${/[\u0370-\u03ff\u1f00-\u1fff]/.test(label ?? '') ? ' as-written' : ''}` }, label ?? role) : null),
     ]),
-    row.result ? [h('span', { class: 'vblocks-join', 'aria-hidden': 'true' }, '='), rich('strong', row.result, { class: 'vblocks-result' })] : null));
+    // "= result" moves to the next line as one piece, never leaving the = behind
+    row.result ? h('span', { class: 'vblocks-res' }, h('span', { class: 'vblocks-join', 'aria-hidden': 'true' }, '='), rich('strong', row.result, { class: 'vblocks-result' })) : null));
   return h('div', { class: 'vblocks' }, rows);
 }
 

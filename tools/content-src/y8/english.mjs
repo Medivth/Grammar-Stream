@@ -419,4 +419,73 @@ for (const k of Object.keys(TOPIC_HOOKS)) if (!topics.some((t) => t.id === `engl
 for (const it of items) { const m = MEMORY[it.id.replace(/^english\./, '')]; if (m) Object.assign(it, m); }
 for (const k of Object.keys(MEMORY)) if (!items.some((it) => it.id === `english.${k}`)) throw new Error(`memory hook for unknown item ${k}`);
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Keyed like the hooks: topics without “english.”, items without “english.”. An unknown id throws.
+const SEASONS = { kind: 'cycle', steps: ['Spring: Persephone returns', 'Summer: the crops ripen', 'Autumn: she goes below', 'Winter: Demeter mourns'], centre: 'six seeds, six months below', caption: 'Persephone above ground: spring and summer. Below with Hades: autumn and winter.' };
+const TRAGIC_ARC = { kind: 'flow', steps: ['**Hamartia**: the hero’s fatal error', '**Peripeteia**: the reversal of fortune', '**Anagnorisis**: the hero recognises the truth', '**Catharsis**: the audience’s pity and fear released'], caption: 'The shape Aristotle described. Hubris (pride against the gods) often drives the error; Nemesis punishes it.' };
+const SONNET_FORM = {
+  kind: 'table', head: ['', 'rhyme words', 'rhyme'], tint: 'rows',
+  rows: [
+    ['Quatrain 1 (lines 1–4)', 'dignity, scene, mutiny, unclean', '**ABAB**'],
+    ['Quatrain 2 (lines 5–8)', 'foes, life, overthrows, strife', '**CDCD**'],
+    ['Quatrain 3 (lines 9–12)', 'love, rage, remove, stage', '**EFEF**'],
+    ['Couplet (lines 13–14)', 'attend, mend', '**GG**'],
+  ],
+  caption: 'The Prologue: 4 + 4 + 4 + 2 = 14 lines of iambic pentameter, clinched by a rhyming couplet.',
+};
+const ANTHEM_FORM = {
+  kind: 'table', head: ['', 'Funeral rite', 'Owen’s replacement'],
+  rows: [
+    ['Octave', 'passing-bells', 'the anger of the **guns**'],
+    ['Octave', 'prayers', 'the **rifles**’ rapid rattle'],
+    ['Octave', 'choirs', 'wailing **shells**'],
+    ['Sestet', 'candles', 'glimmers in boys’ **eyes**'],
+    ['Sestet', 'pall', 'the pallor of girls’ **brows**'],
+    ['Sestet', 'flowers', 'the tenderness of **patient minds**'],
+  ],
+  caption: 'Octave (lines 1–8): the noise of the front. The volta at line 9 turns to the sestet (lines 9–14): quiet grief at home.',
+};
+const TOPIC_VISUALS = {
+  myths: SEASONS,
+  openings: {
+    kind: 'table', head: ['It was the…', '…it was the…'], tint: 'cols',
+    rows: [['best of times', 'worst of times'], ['age of wisdom', 'age of foolishness'], ['epoch of belief', 'epoch of incredulity'], ['season of Light', 'season of Darkness'], ['spring of hope', 'winter of despair']],
+    caption: 'Dickens’s antithesis: each idea paired with its opposite, an age pulled in two directions.',
+  },
+  detective: {
+    kind: 'table', head: ['Observation: what you see', 'Deduction: what you work out'],
+    rows: [['a silver band “from his friends”', 'he is well respected'], ['the stick is badly knocked about', 'a country doctor, not a town one'], ['the iron ferrule is worn down', 'he walks a great deal'], ['a shiny coffee-pot (Holmes)', 'he can see what Watson is doing']],
+    caption: 'Watson’s reasoning about Dr Mortimer’s stick, and Holmes’s trick.',
+  },
+  havisham: {
+    kind: 'table', head: ['Detail', 'What it suggests'],
+    rows: [['wedding dress, veil, bridal flowers', 'dressed for a wedding that never came'], ['one shoe on, veil half arranged', 'time stopped mid-dressing'], ['white turned yellow', 'hope gone stale'], ['a waxwork, a skeleton', 'a living corpse']],
+  },
+  'war-poetry': ANTHEM_FORM,
+  'short-story': { kind: 'flow', steps: ['Forty-five steps, not forty-four', 'A guard with an owl brooch', '“Her work was better”', 'Clear, cold grey eyes', 'The chair is empty', 'Reveal: a single grey feather'], caption: 'Planted clues, then the payoff. The owl and grey eyes belong to Athena.' },
+  context: {
+    kind: 'timeline', from: 1550, to: 1950, set: 'britain',
+    events: [[1606, 'Shakespeare’s Macbeth'], [1764, 'first Gothic novel'], [1813, 'Pride and Prejudice'], [1818, 'Frankenstein'], [1859, 'A Tale of Two Cities'], [1886, 'Jekyll and Hyde'], [1917, 'Owen’s war poems']],
+    caption: 'Homer is far older: the Iliad and the Odyssey date from the 700s BC, about 2,700 years ago.',
+  },
+  tragedy: TRAGIC_ARC,
+  sonnet: SONNET_FORM,
+};
+const ITEM_VISUALS = {
+  'my.p3': SEASONS,
+  'my.p4': SEASONS,
+  'my.a4': { kind: 'flow', across: true, steps: ['Boast', 'Warning', 'Contest', 'Punishment'], caption: 'The pattern of a hubris myth.' },
+  'op.t1': TOPIC_VISUALS.openings,
+  'de.2': TOPIC_VISUALS.detective,
+  'hv.3': TOPIC_VISUALS.havisham,
+  'wp.3': ANTHEM_FORM,
+  'wp.4': ANTHEM_FORM,
+  'ss.2': TOPIC_VISUALS['short-story'],
+  'tr.1': TRAGIC_ARC,
+  'tr.3': TRAGIC_ARC,
+  'so.1': SONNET_FORM,
+};
+for (const [k, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === `english.${k}`); if (!t) throw new Error(`picture for unknown topic ${k}`); t.visual = v; }
+for (const [k, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === `english.${k}`); if (!it) throw new Error(`picture for unknown item ${k}`); it.visual = v; }
+
 export default [{ subject: 'english', deck: 'y8-lit', topics, items }];

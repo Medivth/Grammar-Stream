@@ -11,7 +11,74 @@
    "intro": "In Year 7 your teachers will expect you to name word classes and sentence types so you can talk about how writers build sentences.",
    "hook": "FANBOYS join equals (compound); because, when, although and if start a clause that can’t stand alone (complex).",
    "teach": "Explain the difference between an adjective and an adverb.",
-   "talk": "Pick a sentence from a book and ask her to find the verb."
+   "talk": "Pick a sentence from a book and ask her to find the verb.",
+   "visual": [
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "The dog",
+         "subject",
+         "subject"
+        ],
+        [
+         "barked.",
+         "verb",
+         "verb"
+        ]
+       ]
+      }
+     ],
+     "caption": "Simple: one main clause (one subject, one main verb)."
+    },
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "It was late,",
+         "clause",
+         "main clause"
+        ],
+        [
+         "so",
+         "conjunction",
+         "FANBOYS"
+        ],
+        [
+         "we took a taxi.",
+         "clause",
+         "main clause"
+        ]
+       ]
+      }
+     ],
+     "caption": "Compound: two main clauses joined by for, and, nor, but, or, yet or so."
+    },
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "Because it was late,",
+         "subordinate",
+         "subordinate clause"
+        ],
+        [
+         "we took a taxi.",
+         "clause",
+         "main clause"
+        ]
+       ]
+      }
+     ],
+     "caption": "Complex: a main clause plus a subordinate clause (because, when, although, if…)."
+    }
+   ]
   },
   {
    "id": "english.lit-words",
@@ -35,7 +102,59 @@
    "batch": 6,
    "hook": "-ology is the study of, -phobia is the fear of: biology, arachnophobia.",
    "teach": "Explain how “-ology” helps you understand new subjects at secondary school.",
-   "talk": "Ask her what a “phobia” is, and what “arachnophobia” might mean."
+   "talk": "Ask her what a “phobia” is, and what “arachnophobia” might mean.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "bio",
+        "root",
+        "life"
+       ],
+       [
+        "logy",
+        "suffix",
+        "study of"
+       ]
+      ],
+      "result": "biology"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "fear",
+        "root"
+       ],
+       [
+        "less",
+        "suffix",
+        "without"
+       ]
+      ],
+      "result": "fearless"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "danger",
+        "root"
+       ],
+       [
+        "ous",
+        "suffix",
+        "full of"
+       ]
+      ],
+      "result": "dangerous"
+     }
+    ],
+    "caption": "A suffix at the end changes the meaning (and often the word class)."
+   }
   },
   {
    "id": "english.poetry-terms",
@@ -48,7 +167,25 @@
    "intro": "Poets choose form, sound and structure as carefully as words. Knowing the terms lets you explain how a poem works.",
    "hook": "Stanza = paragraph, couplet = a couple of rhyming lines, sonnet = 14 lines.",
    "teach": "Explain the difference between enjambment and a caesura.",
-   "talk": "Ask her what makes a sonnet a sonnet."
+   "talk": "Ask her what makes a sonnet a sonnet.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "line",
+     "Ozymandias"
+    ],
+    "rows": [
+     [
+      "12",
+      "Nothing beside remains. **‖** Round the decay **→**"
+     ],
+     [
+      "13",
+      "**→** Of that colossal Wreck, boundless and bare"
+     ]
+    ],
+    "caption": "‖ = a caesura: a pause in the middle of a line. → = enjambment: the sentence runs on over the line end, with no pause."
+   }
   },
   {
    "id": "english.poems",
@@ -72,7 +209,11 @@
    "intro": "William Shakespeare wrote over 400 years ago, yet his plays are still performed every day. Most grammar schools study a whole play in Year 7.",
    "hook": "1564 to 1616, Stratford to the Globe: comedies end in weddings, tragedies in deaths.",
    "teach": "Explain what a soliloquy is and why playwrights use them.",
-   "talk": "Ask her what the groundlings were."
+   "talk": "Ask her what the groundlings were.",
+   "visual": {
+    "kind": "diagram",
+    "id": "globe-theatre"
+   }
   },
   {
    "id": "english.dream",
@@ -85,7 +226,86 @@
    "intro": "Four young lovers run away into an enchanted forest, where fairies are quarrelling and a group of workmen are rehearsing a play. What could possibly go wrong?",
    "hook": "Strict Athens, magic forest: Puck mixes up the lovers, then everyone wakes up happily paired off.",
    "teach": "Explain how Puck’s mistake causes chaos for the lovers.",
-   "talk": "Ask her who gets turned into a donkey, and why."
+   "talk": "Ask her who gets turned into a donkey, and why.",
+   "visual": [
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "join": "♥",
+       "parts": [
+        [
+         "Hermia",
+         "verb",
+         "love each other"
+        ],
+        [
+         "Lysander",
+         "subject",
+         ""
+        ]
+       ]
+      },
+      {
+       "join": "→",
+       "parts": [
+        [
+         "Helena",
+         "object",
+         "loves"
+        ],
+        [
+         "Demetrius",
+         "adverbial",
+         ""
+        ]
+       ]
+      },
+      {
+       "join": "→",
+       "parts": [
+        [
+         "Demetrius",
+         "adverbial",
+         "wants to marry"
+        ],
+        [
+         "Hermia",
+         "verb",
+         ""
+        ]
+       ]
+      }
+     ],
+     "caption": "At the start: Hermia and Lysander love each other. Helena loves Demetrius, but he wants to marry Hermia, and Hermia’s father, Egeus, wants that too."
+    },
+    {
+     "kind": "table",
+     "head": [
+      "who",
+      "the characters"
+     ],
+     "rows": [
+      [
+       "the court of Athens",
+       "Theseus (the Duke), Hippolyta, Egeus (Hermia’s father)"
+      ],
+      [
+       "the lovers",
+       "Hermia, Lysander, Helena, Demetrius"
+      ],
+      [
+       "the fairies",
+       "Oberon (king), Titania (queen), Puck (Oberon’s servant)"
+      ],
+      [
+       "the workmen",
+       "Bottom (a weaver), Quince, Flute, Snout"
+      ]
+     ],
+     "tint": "rows"
+    }
+   ]
   },
   {
    "id": "english.tempest",
@@ -98,7 +318,30 @@
    "intro": "Prospero, a magician and the rightful Duke of Milan, has lived on an island for twelve years. When his enemies sail past, he raises a storm.",
    "hook": "A tempest is a storm: Prospero raises one to bring his enemies to his island, then forgives them.",
    "teach": "Explain why Prospero creates the storm.",
-   "talk": "Ask her whether she thinks Caliban is a villain or a victim."
+   "talk": "Ask her whether she thinks Caliban is a villain or a victim.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Prospero",
+     "note": "magician; rightful Duke of Milan",
+     "mark": true,
+     "c": [
+      {
+       "n": "Miranda",
+       "note": "his daughter"
+      },
+      {
+       "n": "Ariel",
+       "note": "spirit; wants freedom"
+      },
+      {
+       "n": "Caliban",
+       "note": "Sycorax’s son; enslaved"
+      }
+     ]
+    },
+    "caption": "Prospero’s island. His enemies on the ship: his brother Antonio, who stole his dukedom, and Alonso, King of Naples, with his son Ferdinand."
+   }
   },
   {
    "id": "english.victorian",
@@ -109,7 +352,18 @@
    "intro": "19th-century writing can look hard at first: long sentences and old words. Knowing the context and the genre makes it much easier.",
    "hook": "Dickens fights poverty, Gothic brings the gloom, and Holmes observes what others only see.",
    "teach": "Explain what Dickens wanted readers to learn from Scrooge.",
-   "talk": "Ask her what pathetic fallacy is, and to spot some in a film."
+   "talk": "Ask her what pathetic fallacy is, and to spot some in a film.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Marley’s ghost, in chains, warns Scrooge",
+     "Christmas Past: his lonely boyhood",
+     "Christmas Present: the Cratchits and Tiny Tim",
+     "Christmas Yet to Come: a death nobody mourns",
+     "Christmas morning: a kind, generous Scrooge"
+    ],
+    "caption": "A Christmas Carol (1843): one night, Marley’s ghost and three spirits."
+   }
   },
   {
    "id": "english.unseen",
@@ -136,7 +390,18 @@
    "intro": "The big step in Year 7 English: not just spotting a technique, but explaining its effect on the reader, using a short quotation.",
    "hook": "PETAL: Point, Evidence, Technique, Analysis, Link.",
    "teach": "Explain what makes a quotation “embedded”.",
-   "talk": "Ask her to explain the effect of one word in a song lyric or advert."
+   "talk": "Ask her to explain the effect of one word in a song lyric or advert.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "**Point**: what you are arguing",
+     "**Evidence**: a short quotation",
+     "**Technique**: the method used",
+     "**Analysis**: the effect on the reader",
+     "**Link**: back to the question"
+    ],
+    "caption": "PETAL: five petals make one paragraph."
+   }
   },
   {
    "id": "english.rhetoric",
@@ -148,7 +413,33 @@
    "batch": 5,
    "hook": "Ethos, pathos, logos: trust the speaker, feel the emotion, follow the logic.",
    "teach": "Explain three ways a speaker can persuade an audience.",
-   "talk": "Watch a short speech or advert together and spot the persuasive techniques."
+   "talk": "Watch a short speech or advert together and spot the persuasive techniques.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "persuades through",
+     "for example"
+    ],
+    "rows": [
+     [
+      "ethos",
+      "trust in the speaker",
+      "“As a doctor, I…”"
+     ],
+     [
+      "pathos",
+      "emotion",
+      "“Innocent puppies…”"
+     ],
+     [
+      "logos",
+      "facts and logic",
+      "“Nine out of ten…”"
+     ]
+    ],
+    "tint": "rows"
+   }
   }
  ],
  "items": [
@@ -191,7 +482,27 @@
     }
    ],
    "explain": "A simple sentence has one main clause: one subject and one main verb.",
-   "hook": "Simple = one subject + one main verb: “The dog barked.”"
+   "hook": "Simple = one subject + one main verb: “The dog barked.”",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "The dog",
+        "subject",
+        "subject"
+       ],
+       [
+        "barked.",
+        "verb",
+        "verb"
+       ]
+      ]
+     }
+    ],
+    "caption": "Simple: one main clause (one subject, one main verb)."
+   }
   },
   {
    "id": "english.gr7.complex",
@@ -215,7 +526,54 @@
     }
    ],
    "explain": "A complex sentence has a main clause and at least one subordinate clause (starting with because, when, although, if…).",
-   "hook": "AAAWWUBBIS starts a subordinate clause: after, although, as, when, while, until, because, before, if, since."
+   "hook": "AAAWWUBBIS starts a subordinate clause: after, although, as, when, while, until, because, before, if, since.",
+   "visual": [
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "Because it was late,",
+         "subordinate",
+         "subordinate clause"
+        ],
+        [
+         "we took a taxi.",
+         "clause",
+         "main clause"
+        ]
+       ]
+      }
+     ],
+     "caption": "Complex: a main clause plus a subordinate clause (because, when, although, if…)."
+    },
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "It was late,",
+         "clause",
+         "main clause"
+        ],
+        [
+         "so",
+         "conjunction",
+         "FANBOYS"
+        ],
+        [
+         "we took a taxi.",
+         "clause",
+         "main clause"
+        ]
+       ]
+      }
+     ],
+     "caption": "Compound: two main clauses joined by for, and, nor, but, or, yet or so."
+    }
+   ]
   },
   {
    "id": "english.gr7.subordinate",
@@ -239,7 +597,27 @@
     }
    ],
    "explain": "A subordinate clause adds information but can’t stand on its own as a sentence.",
-   "hook": "Sub = under (like a submarine): a subordinate clause works under the main clause and can’t stand alone."
+   "hook": "Sub = under (like a submarine): a subordinate clause works under the main clause and can’t stand alone.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "Although she was tired,",
+        "subordinate",
+        "subordinate clause"
+       ],
+       [
+        "Maya finished the race.",
+        "clause",
+        "main clause"
+       ]
+      ]
+     }
+    ],
+    "caption": "“Maya finished the race.” makes sense alone; “Although she was tired” does not."
+   }
   },
   {
    "id": "english.gr7.clause",
@@ -253,7 +631,49 @@
     "stanza"
    ],
    "explain": "A phrase has no main verb; a clause does.",
-   "hook": "A clause has a verb in it (“the bus came”); a phrase has no verb (“in the morning”)."
+   "hook": "A clause has a verb in it (“the bus came”); a phrase has no verb (“in the morning”).",
+   "visual": [
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "the bus",
+         "subject",
+         "subject"
+        ],
+        [
+         "came",
+         "verb",
+         "verb"
+        ]
+       ]
+      }
+     ],
+     "caption": "A clause: it has a verb."
+    },
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "parts": [
+        [
+         "in",
+         "preposition",
+         "preposition"
+        ],
+        [
+         "the morning",
+         "noun",
+         "noun"
+        ]
+       ]
+      }
+     ],
+     "caption": "A phrase: no verb."
+    }
+   ]
   },
   {
    "id": "english.gr7.compound",
@@ -270,7 +690,52 @@
    "formats": [
     "choice"
    ],
-   "hook": "FANBOYS: for, and, nor, but, or, yet, so, the coordinating conjunctions that join two main clauses."
+   "hook": "FANBOYS: for, and, nor, but, or, yet, so, the coordinating conjunctions that join two main clauses.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "for",
+        "conjunction",
+        "F"
+       ],
+       [
+        "and",
+        "conjunction",
+        "A"
+       ],
+       [
+        "nor",
+        "conjunction",
+        "N"
+       ],
+       [
+        "but",
+        "conjunction",
+        "B"
+       ],
+       [
+        "or",
+        "conjunction",
+        "O"
+       ],
+       [
+        "yet",
+        "conjunction",
+        "Y"
+       ],
+       [
+        "so",
+        "conjunction",
+        "S"
+       ]
+      ]
+     }
+    ],
+    "caption": "FANBOYS: the joining words for a compound sentence."
+   }
   },
   {
    "id": "english.gr7.fragment",
@@ -461,7 +926,44 @@
     "choice"
    ],
    "learn": "**-ology** means **the study of**. Examples: biology, geology.",
-   "example": "Biology is the study of life, zoology of animals and geology of rocks."
+   "example": "Biology is the study of life, zoology of animals and geology of rocks.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "bio",
+        "root",
+        "life"
+       ],
+       [
+        "logy",
+        "suffix",
+        "study of"
+       ]
+      ],
+      "result": "biology"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "geo",
+        "root",
+        "earth"
+       ],
+       [
+        "logy",
+        "suffix",
+        "study of"
+       ]
+      ],
+      "result": "geology"
+     }
+    ]
+   }
   },
   {
    "id": "english.rt3.phobia",
@@ -479,7 +981,28 @@
     "choice"
    ],
    "learn": "**-phobia** means **fear of**. Examples: arachnophobia, claustrophobia.",
-   "example": "Arachnophobia is fear of spiders; claustrophobia is fear of small, enclosed spaces."
+   "example": "Arachnophobia is fear of spiders; claustrophobia is fear of small, enclosed spaces.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "arachno",
+        "root",
+        "spider"
+       ],
+       [
+        "phobia",
+        "suffix",
+        "fear of"
+       ]
+      ],
+      "result": "arachnophobia"
+     }
+    ]
+   }
   },
   {
    "id": "english.rt3.less",
@@ -497,7 +1020,42 @@
     "choice"
    ],
    "learn": "**-less** means **without**. Examples: fearless, careless.",
-   "hook": "-less means none at all: careless = without care, hopeless = without hope."
+   "hook": "-less means none at all: careless = without care, hopeless = without hope.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "fear",
+        "root"
+       ],
+       [
+        "less",
+        "suffix",
+        "without"
+       ]
+      ],
+      "result": "fearless"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "care",
+        "root"
+       ],
+       [
+        "less",
+        "suffix",
+        "without"
+       ]
+      ],
+      "result": "careless"
+     }
+    ]
+   }
   },
   {
    "id": "english.rt3.ous",
@@ -515,7 +1073,42 @@
     "choice"
    ],
    "learn": "**-ous** means **full of**. Examples: dangerous, courageous.",
-   "hook": "-ous = full of: famous is full of fame, dangerous is full of danger."
+   "hook": "-ous = full of: famous is full of fame, dangerous is full of danger.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "danger",
+        "root"
+       ],
+       [
+        "ous",
+        "suffix",
+        "full of"
+       ]
+      ],
+      "result": "dangerous"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "fame → fam",
+        "root"
+       ],
+       [
+        "ous",
+        "suffix",
+        "full of"
+       ]
+      ],
+      "result": "fame → famous"
+     }
+    ]
+   }
   },
   {
    "id": "english.rt3.cracy",
@@ -533,7 +1126,28 @@
     "choice"
    ],
    "learn": "**-cracy** means **rule by**. Examples: democracy, autocracy.",
-   "example": "Democracy is rule by the people (Greek demos = people): we vote for who governs us."
+   "example": "Democracy is rule by the people (Greek demos = people): we vote for who governs us.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "demo",
+        "root",
+        "people"
+       ],
+       [
+        "cracy",
+        "suffix",
+        "rule by"
+       ]
+      ],
+      "result": "democracy"
+     }
+    ]
+   }
   },
   {
    "id": "english.rt3.meter",
@@ -551,7 +1165,28 @@
     "choice"
    ],
    "learn": "**-meter** means **a measuring instrument**. Examples: thermometer, speedometer.",
-   "example": "A thermometer measures temperature; a speedometer measures a car’s speed."
+   "example": "A thermometer measures temperature; a speedometer measures a car’s speed.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "thermo",
+        "root",
+        "heat"
+       ],
+       [
+        "meter",
+        "suffix",
+        "measure"
+       ]
+      ],
+      "result": "thermometer"
+     }
+    ]
+   }
   },
   {
    "id": "english.rt3.scope",
@@ -569,7 +1204,44 @@
     "choice"
    ],
    "learn": "**-scope** means **an instrument for looking**. Examples: telescope, periscope.",
-   "example": "A periscope lets a submarine crew look above the waves."
+   "example": "A periscope lets a submarine crew look above the waves.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "tele",
+        "prefix",
+        "far"
+       ],
+       [
+        "scope",
+        "suffix",
+        "look"
+       ]
+      ],
+      "result": "telescope"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "peri",
+        "prefix",
+        "around"
+       ],
+       [
+        "scope",
+        "suffix",
+        "look"
+       ]
+      ],
+      "result": "periscope"
+     }
+    ]
+   }
   },
   {
    "id": "english.rt3.philphile",
@@ -605,7 +1277,27 @@
     "choice"
    ],
    "learn": "**ped** means **foot**. Examples: pedal, pedestrian.",
-   "example": "A pedestrian crossing is for people on foot; you push bike pedals with your feet."
+   "example": "A pedestrian crossing is for people on foot; you push bike pedals with your feet.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ped",
+        "root",
+        "foot"
+       ],
+       [
+        "al",
+        "suffix"
+       ]
+      ],
+      "result": "pedal"
+     }
+    ]
+   }
   },
   {
    "id": "english.rt3.manu",
@@ -623,7 +1315,27 @@
     "choice"
    ],
    "learn": "**manu** means **hand**. Examples: manual, manuscript.",
-   "example": "In a manual car you change gear by hand."
+   "example": "In a manual car you change gear by hand.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "manu",
+        "root",
+        "hand"
+       ],
+       [
+        "al",
+        "suffix"
+       ]
+      ],
+      "result": "manual"
+     }
+    ]
+   }
   },
   {
    "id": "english.rt3.mal",
@@ -641,7 +1353,27 @@
     "choice"
    ],
    "learn": "**mal-** means **bad or badly**. Examples: malfunction, malicious.",
-   "example": "Malware is bad software that harms your computer."
+   "example": "Malware is bad software that harms your computer.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "mal",
+        "prefix",
+        "bad"
+       ],
+       [
+        "function",
+        "root"
+       ]
+      ],
+      "result": "malfunction"
+     }
+    ]
+   }
   },
   {
    "id": "english.rt3.bene",
@@ -705,7 +1437,25 @@
     "refrain"
    ],
    "explain": "Enjambment can create a sense of speed, flow or surprise.",
-   "hook": "From French “to stride over”: the sentence strides over the line break."
+   "hook": "From French “to stride over”: the sentence strides over the line break.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "line",
+     "Ozymandias"
+    ],
+    "rows": [
+     [
+      "12",
+      "Nothing beside remains. **‖** Round the decay **→**"
+     ],
+     [
+      "13",
+      "**→** Of that colossal Wreck, boundless and bare"
+     ]
+    ],
+    "caption": "‖ = a caesura: a pause in the middle of a line. → = enjambment: the sentence runs on over the line end, with no pause."
+   }
   },
   {
    "id": "english.pt7.caesura",
@@ -719,7 +1469,25 @@
     "stanza"
    ],
    "explain": "A caesura slows the reader down and can emphasise the words around it.",
-   "hook": "Caesura comes from Latin “to cut”: it cuts a line in the middle."
+   "hook": "Caesura comes from Latin “to cut”: it cuts a line in the middle.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "line",
+     "Ozymandias"
+    ],
+    "rows": [
+     [
+      "12",
+      "Nothing beside remains. **‖** Round the decay **→**"
+     ],
+     [
+      "13",
+      "**→** Of that colossal Wreck, boundless and bare"
+     ]
+    ],
+    "caption": "‖ = a caesura: a pause in the middle of a line. → = enjambment: the sentence runs on over the line end, with no pause."
+   }
   },
   {
    "id": "english.pt7.sonnet",
@@ -798,7 +1566,33 @@
    "formats": [
     "choice"
    ],
-   "hook": "New end sound, new letter: cat A, dog B, hat A, log B."
+   "hook": "New end sound, new letter: cat A, dog B, hat A, log B.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "line ends",
+     "rhyme"
+    ],
+    "rows": [
+     [
+      "cat",
+      "**A**"
+     ],
+     [
+      "dog",
+      "**B**"
+     ],
+     [
+      "hat",
+      "**A**"
+     ],
+     [
+      "log",
+      "**B**"
+     ]
+    ],
+    "caption": "New end sound, new letter: ABAB."
+   }
   },
   {
    "id": "english.pt7.speaker",
@@ -1085,7 +1879,31 @@
    "accept": [
     "stratford"
    ],
-   "hook": "’64 to ’16: Shakespeare was born and died in Stratford-upon-Avon (1564–1616)."
+   "hook": "’64 to ’16: Shakespeare was born and died in Stratford-upon-Avon (1564–1616).",
+   "visual": {
+    "kind": "timeline",
+    "from": 1550,
+    "to": 1630,
+    "set": "britain",
+    "events": [
+     [
+      1564,
+      "born in Stratford-upon-Avon"
+     ],
+     [
+      1599,
+      "the Globe is built"
+     ],
+     [
+      1603,
+      "Elizabeth I dies"
+     ],
+     [
+      1616,
+      "dies in Stratford"
+     ]
+    ]
+   }
   },
   {
    "id": "english.sh.globe",
@@ -1104,7 +1922,11 @@
     "the globe theatre",
     "globe theatre"
    ],
-   "hook": "The Globe was round like the world, and in As You Like It Shakespeare wrote “All the world’s a stage”."
+   "hook": "The Globe was round like the world, and in As You Like It Shakespeare wrote “All the world’s a stage”.",
+   "visual": {
+    "kind": "diagram",
+    "id": "globe-theatre"
+   }
   },
   {
    "id": "english.sh.groundlings",
@@ -1119,7 +1941,13 @@
    ],
    "explain": "Groundlings stood around the stage in the open air, and could be noisy!",
    "hook": "Groundlings stood on the ground in the yard, for a penny.",
-   "example": "Shakespeare’s Globe in London still sells cheap standing tickets in the yard today."
+   "example": "Shakespeare’s Globe in London still sells cheap standing tickets in the yard today.",
+   "visual": {
+    "kind": "diagram",
+    "id": "globe-theatre",
+    "highlight": "groundlings",
+    "question": true
+   }
   },
   {
    "id": "english.sh.actors",
@@ -1199,7 +2027,42 @@
    "formats": [
     "choice"
    ],
-   "hook": "Penta = five (a pentagon has five sides): five da-DUMs to a line, like a heartbeat."
+   "hook": "Penta = five (a pentagon has five sides): five da-DUMs to a line, like a heartbeat.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "but SOFT",
+        "tense",
+        "da-DUM"
+       ],
+       [
+        "what LIGHT",
+        "tense",
+        "da-DUM"
+       ],
+       [
+        "through YON",
+        "tense",
+        "da-DUM"
+       ],
+       [
+        "der WIN",
+        "tense",
+        "da-DUM"
+       ],
+       [
+        "dow BREAKS",
+        "tense",
+        "da-DUM"
+       ]
+      ]
+     }
+    ],
+    "caption": "Five da-DUMs: ten syllables, every second one stressed."
+   }
   },
   {
    "id": "english.sh.prose",
@@ -1230,7 +2093,32 @@
     "them"
    ],
    "explain": "“Thou” was used for friends, family and inferiors; “you” was more formal. “Thy” means your.",
-   "hook": "thou = you (doing it), thee = you (it’s done to you), thy = your, thine = yours."
+   "hook": "thou = you (doing it), thee = you (it’s done to you), thy = your, thine = yours.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Shakespeare",
+     "means"
+    ],
+    "rows": [
+     [
+      "thou",
+      "you (doing it)"
+     ],
+     [
+      "thee",
+      "you (it’s done to you)"
+     ],
+     [
+      "thy",
+      "your"
+     ],
+     [
+      "thine",
+      "yours"
+     ]
+    ]
+   }
   },
   {
    "id": "english.sh.wherefore",
@@ -1292,7 +2180,96 @@
     "Bottom"
    ],
    "explain": "Hermia and Lysander run away to the forest to escape Athenian law.",
-   "hook": "The pairs: Hermia loves Lysander; Helena loves Demetrius."
+   "hook": "The pairs: Hermia loves Lysander; Helena loves Demetrius.",
+   "visual": [
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "join": "♥",
+       "parts": [
+        [
+         "Hermia",
+         "verb",
+         "love each other"
+        ],
+        [
+         "Lysander",
+         "subject",
+         ""
+        ]
+       ]
+      },
+      {
+       "join": "→",
+       "parts": [
+        [
+         "Helena",
+         "object",
+         "loves"
+        ],
+        [
+         "Demetrius",
+         "adverbial",
+         ""
+        ]
+       ]
+      },
+      {
+       "join": "→",
+       "parts": [
+        [
+         "Demetrius",
+         "adverbial",
+         "wants to marry"
+        ],
+        [
+         "Hermia",
+         "verb",
+         ""
+        ]
+       ]
+      }
+     ],
+     "caption": "At the start: Hermia and Lysander love each other. Helena loves Demetrius, but he wants to marry Hermia, and Hermia’s father, Egeus, wants that too."
+    },
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "join": "♥",
+       "parts": [
+        [
+         "Hermia",
+         "verb",
+         ""
+        ],
+        [
+         "Lysander",
+         "subject",
+         ""
+        ]
+       ]
+      },
+      {
+       "join": "♥",
+       "parts": [
+        [
+         "Helena",
+         "object",
+         ""
+        ],
+        [
+         "Demetrius",
+         "adverbial",
+         ""
+        ]
+       ]
+      }
+     ],
+     "caption": "At the end: happily paired off. Demetrius still has the love-juice on his eyes."
+    }
+   ]
   },
   {
    "id": "english.dr.helena",
@@ -1306,7 +2283,96 @@
     "Hippolyta"
    ],
    "explain": "Helena follows Demetrius into the forest.",
-   "hook": "The pairs: Helena loves Demetrius; Hermia loves Lysander."
+   "hook": "The pairs: Helena loves Demetrius; Hermia loves Lysander.",
+   "visual": [
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "join": "♥",
+       "parts": [
+        [
+         "Hermia",
+         "verb",
+         "love each other"
+        ],
+        [
+         "Lysander",
+         "subject",
+         ""
+        ]
+       ]
+      },
+      {
+       "join": "→",
+       "parts": [
+        [
+         "Helena",
+         "object",
+         "loves"
+        ],
+        [
+         "Demetrius",
+         "adverbial",
+         ""
+        ]
+       ]
+      },
+      {
+       "join": "→",
+       "parts": [
+        [
+         "Demetrius",
+         "adverbial",
+         "wants to marry"
+        ],
+        [
+         "Hermia",
+         "verb",
+         ""
+        ]
+       ]
+      }
+     ],
+     "caption": "At the start: Hermia and Lysander love each other. Helena loves Demetrius, but he wants to marry Hermia, and Hermia’s father, Egeus, wants that too."
+    },
+    {
+     "kind": "blocks",
+     "rows": [
+      {
+       "join": "♥",
+       "parts": [
+        [
+         "Hermia",
+         "verb",
+         ""
+        ],
+        [
+         "Lysander",
+         "subject",
+         ""
+        ]
+       ]
+      },
+      {
+       "join": "♥",
+       "parts": [
+        [
+         "Helena",
+         "object",
+         ""
+        ],
+        [
+         "Demetrius",
+         "adverbial",
+         ""
+        ]
+       ]
+      }
+     ],
+     "caption": "At the end: happily paired off. Demetrius still has the love-juice on his eyes."
+    }
+   ]
   },
   {
    "id": "english.dr.oberon",
@@ -1351,7 +2417,18 @@
    "accept": [
     "robin goodfellow"
    ],
-   "hook": "Oberon tells Puck to look for a man in Athenian clothes. Both young men are wearing them, so Puck picks the wrong one!"
+   "hook": "Oberon tells Puck to look for a man in Athenian clothes. Both young men are wearing them, so Puck picks the wrong one!",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Oberon: put love-juice on the Athenian’s eyes",
+     "Puck finds Lysander (Athenian clothes!)",
+     "Lysander wakes, sees Helena, loves her",
+     "Oberon fixes Demetrius: he loves Helena too",
+     "Hermia is left with nobody"
+    ],
+    "caption": "Puck’s mistake: Oberon meant Demetrius, so that he would love Helena."
+   }
   },
   {
    "id": "english.dr.bottom",
@@ -1552,7 +2629,18 @@
    "formats": [
     "choice"
    ],
-   "hook": "A tempest is a storm: the title tells you how the play begins."
+   "hook": "A tempest is a storm: the title tells you how the play begins.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Antonio steals Prospero’s dukedom",
+     "Prospero and Miranda set adrift",
+     "Twelve years on the island",
+     "The storm brings his enemies ashore",
+     "Ferdinand and Miranda fall in love",
+     "Prospero forgives his enemies, frees Ariel"
+    ]
+   }
   },
   {
    "id": "english.tp.brave",
@@ -1632,7 +2720,18 @@
     }
    ],
    "explain": "Themes of forgiveness, freedom and power come together at the end.",
-   "hook": "“The rarer action is in virtue than in vengeance”: forgiveness beats revenge."
+   "hook": "“The rarer action is in virtue than in vengeance”: forgiveness beats revenge.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Antonio steals Prospero’s dukedom",
+     "Prospero and Miranda set adrift",
+     "Twelve years on the island",
+     "The storm brings his enemies ashore",
+     "Ferdinand and Miranda fall in love",
+     "Prospero forgives his enemies, frees Ariel"
+    ]
+   }
   },
   {
    "id": "english.vc.carol-scrooge",
@@ -1664,7 +2763,18 @@
     "5"
    ],
    "explain": "The Ghosts of Christmas Past, Present and Yet to Come.",
-   "hook": "Past, Present, Yet to Come: three spirits after Marley’s ghost."
+   "hook": "Past, Present, Yet to Come: three spirits after Marley’s ghost.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Marley’s ghost, in chains, warns Scrooge",
+     "Christmas Past: his lonely boyhood",
+     "Christmas Present: the Cratchits and Tiny Tim",
+     "Christmas Yet to Come: a death nobody mourns",
+     "Christmas morning: a kind, generous Scrooge"
+    ],
+    "caption": "A Christmas Carol (1843): one night, Marley’s ghost and three spirits."
+   }
   },
   {
    "id": "english.vc.carol-tim",
@@ -2066,7 +3176,18 @@
     "back to the question"
    ],
    "explain": "PETAL: Point, Evidence, Technique, Analysis, Link.",
-   "hook": "PETAL: Point, Evidence, Technique, Analysis, Link: five petals make one paragraph."
+   "hook": "PETAL: Point, Evidence, Technique, Analysis, Link: five petals make one paragraph.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "**Point**: what you are arguing",
+     "**Evidence**: a short quotation",
+     "**Technique**: the method used",
+     "**Analysis**: the effect on the reader",
+     "**Link**: back to the question"
+    ],
+    "caption": "PETAL: five petals make one paragraph."
+   }
   },
   {
    "id": "english.an.embed",

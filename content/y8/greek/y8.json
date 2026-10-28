@@ -11,7 +11,77 @@
    "intro": "Ancient Greek uses its own alphabet: 24 letters, many of which you already know from maths and science (π, θ, Δ). Our word “alphabet” is just its first two letters, alpha and beta. Learn twelve now: say each name aloud.",
    "teach": "Write your initials in Greek letters and explain which letters you used.",
    "talk": "Ask {him} to read the Greek letters in a maths or science textbook.",
-   "hook": "α + β = **alphabet**. You already use θ, λ, μ and Δ in maths and science."
+   "hook": "α + β = **alphabet**. You already use θ, λ, μ and Δ in maths and science.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "letter",
+     "name",
+     "English"
+    ],
+    "rows": [
+     [
+      "α  Α",
+      "alpha",
+      "a"
+     ],
+     [
+      "β  Β",
+      "beta",
+      "b"
+     ],
+     [
+      "γ  Γ",
+      "gamma",
+      "g"
+     ],
+     [
+      "δ  Δ",
+      "delta",
+      "d"
+     ],
+     [
+      "ε  Ε",
+      "epsilon",
+      "e"
+     ],
+     [
+      "ζ  Ζ",
+      "zeta",
+      "z"
+     ],
+     [
+      "η  Η",
+      "eta",
+      "e (or ē)"
+     ],
+     [
+      "θ  Θ",
+      "theta",
+      "th"
+     ],
+     [
+      "ι  Ι",
+      "iota",
+      "i"
+     ],
+     [
+      "κ  Κ",
+      "kappa",
+      "k (or c)"
+     ],
+     [
+      "λ  Λ",
+      "lambda",
+      "l"
+     ],
+     [
+      "μ  Μ",
+      "mu",
+      "m"
+     ]
+    ]
+   }
   },
   {
    "id": "greek.alphabet-2",
@@ -24,7 +94,115 @@
    "intro": "The second twelve letters, ending with omega, “big o”. Watch for false friends: ρ is r, ν is n, η is e, χ is ch and ω is o. They look like our letters but they are not.",
    "teach": "Explain which Greek letters look like English ones but make a different sound.",
    "talk": "Ask {him} to write your name in Greek letters.",
-   "hook": "O-**micron** is little o (as in microscope); o-**mega** is big o (as in megaphone)."
+   "hook": "O-**micron** is little o (as in microscope); o-**mega** is big o (as in megaphone).",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "letter",
+      "looks like",
+      "actually"
+     ],
+     "rows": [
+      [
+       "ρ  Ρ",
+       "p  P",
+       "**r** (rho)"
+      ],
+      [
+       "ν",
+       "v",
+       "**n** (nu)"
+      ],
+      [
+       "η  Η",
+       "n  H",
+       "**long e** (eta)"
+      ],
+      [
+       "χ  Χ",
+       "x  X",
+       "**ch** (chi)"
+      ],
+      [
+       "ω",
+       "w",
+       "**long o** (omega)"
+      ]
+     ],
+     "caption": "False friends: they look English but are not."
+    },
+    {
+     "kind": "table",
+     "head": [
+      "letter",
+      "name",
+      "English"
+     ],
+     "rows": [
+      [
+       "ν  Ν",
+       "nu",
+       "n"
+      ],
+      [
+       "ξ  Ξ",
+       "xi",
+       "x"
+      ],
+      [
+       "ο  Ο",
+       "omicron",
+       "o"
+      ],
+      [
+       "π  Π",
+       "pi",
+       "p"
+      ],
+      [
+       "ρ  Ρ",
+       "rho",
+       "r"
+      ],
+      [
+       "σ  Σ",
+       "sigma",
+       "s"
+      ],
+      [
+       "τ  Τ",
+       "tau",
+       "t"
+      ],
+      [
+       "υ  Υ",
+       "upsilon",
+       "u (or y)"
+      ],
+      [
+       "φ  Φ",
+       "phi",
+       "ph"
+      ],
+      [
+       "χ  Χ",
+       "chi",
+       "ch (or kh)"
+      ],
+      [
+       "ψ  Ψ",
+       "psi",
+       "ps"
+      ],
+      [
+       "ω  Ω",
+       "omega",
+       "o (or ō)"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "greek.reading",
@@ -37,7 +215,57 @@
    "intro": "Now put the letters together. Every word that starts with a vowel has a breathing: the rough one (ʽ) adds an h, the smooth one (ʼ) adds nothing. Pairs of vowels (diphthongs) make one sound, and the accents show which syllable to stress.",
    "teach": "Explain what a rough breathing is, using ἵππος as an example.",
    "talk": "Ask {him} to read the names of the Olympian gods aloud in Greek.",
-   "hook": "Rough breathing ʽ = **h**: ἵππος is hippos. Smooth breathing ʼ = nothing at all."
+   "hook": "Rough breathing ʽ = **h**: ἵππος is hippos. Smooth breathing ʼ = nothing at all.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "example",
+     "say it"
+    ],
+    "rows": [
+     [
+      "rough breathing ʽ",
+      "**ἵ**ππος",
+      "**h**ippos"
+     ],
+     [
+      "smooth breathing ʼ",
+      "**ἀ**δελφός",
+      "adelphos (no h)"
+     ],
+     [
+      "ου",
+      "Μέδ**ου**σα",
+      "Med**ou**sa: “oo”"
+     ],
+     [
+      "αι",
+      "κ**αί**",
+      "k**ai**: “eye”"
+     ],
+     [
+      "αυ",
+      "ν**αύ**της",
+      "n**au**tēs: “ow”"
+     ],
+     [
+      "γγ",
+      "ἄ**γγ**ελος",
+      "a**ng**elos: “ng”"
+     ],
+     [
+      "iota subscript",
+      "λόγ**ῳ**",
+      "a small ι under the ω"
+     ],
+     [
+      "accent",
+      "λ**ό**γος",
+      "**LO**gos"
+     ]
+    ]
+   }
   },
   {
    "id": "greek.words-1",
@@ -89,7 +317,82 @@
    "intro": "Greek has a word for “the” (the article), but none for “a”. The article changes to match its noun in gender, case and number, so it is a great clue to what a noun is doing in the sentence.",
    "teach": "Recite the singular article in all three genders.",
    "talk": "Ask {him} to chant the article table: ὁ, τόν, τοῦ, τῷ…",
-   "hook": "Chant it: **ὁ, τόν, τοῦ, τῷ**; **ἡ, τήν, τῆς, τῇ**; **τό, τό, τοῦ, τῷ**."
+   "hook": "Chant it: **ὁ, τόν, τοῦ, τῷ**; **ἡ, τήν, τῆς, τῇ**; **τό, τό, τοῦ, τῷ**.",
+   "visual": [
+    {
+     "kind": "table",
+     "tint": "cols",
+     "head": [
+      "singular",
+      "masc.",
+      "fem.",
+      "neut."
+     ],
+     "rows": [
+      [
+       "nom.",
+       "**ὁ**",
+       "**ἡ**",
+       "τ**ό**"
+      ],
+      [
+       "acc.",
+       "τ**όν**",
+       "τ**ήν**",
+       "τ**ό**"
+      ],
+      [
+       "gen.",
+       "τ**οῦ**",
+       "τ**ῆς**",
+       "τ**οῦ**"
+      ],
+      [
+       "dat.",
+       "τ**ῷ**",
+       "τ**ῇ**",
+       "τ**ῷ**"
+      ]
+     ]
+    },
+    {
+     "kind": "table",
+     "tint": "cols",
+     "head": [
+      "plural",
+      "masc.",
+      "fem.",
+      "neut."
+     ],
+     "rows": [
+      [
+       "nom.",
+       "**οἱ**",
+       "**αἱ**",
+       "τ**ά**"
+      ],
+      [
+       "acc.",
+       "τ**ούς**",
+       "τ**άς**",
+       "τ**ά**"
+      ],
+      [
+       "gen.",
+       "τ**ῶν**",
+       "τ**ῶν**",
+       "τ**ῶν**"
+      ],
+      [
+       "dat.",
+       "τ**οῖς**",
+       "τ**αῖς**",
+       "τ**οῖς**"
+      ]
+     ],
+     "caption": "After the τ, the article mostly has the same endings as its noun: τ-ὸν λόγ-ον, τ-ὴν τιμ-ήν (but neuter τὸ δῶρον)."
+    }
+   ]
   },
   {
    "id": "greek.nouns-2",
@@ -102,7 +405,70 @@
    "intro": "In Greek the ending of a noun tells you its job. Nominative: the subject. Accusative: the object. Genitive: “of”. Dative: “to” or “for”. λόγος, λόγον, λόγου, λόγῳ…",
    "teach": "Explain the four cases using ὁ ἵππος as the example.",
    "talk": "Ask {him} which case the words for “of the god” would be in.",
-   "hook": "Nominative does it, accusative gets it, genitive is “of”, dative is “to” or “for”."
+   "hook": "Nominative does it, accusative gets it, genitive is “of”, dative is “to” or “for”.",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "sg",
+      "word (m.)",
+      "gift (n.)"
+     ],
+     "rows": [
+      [
+       "nom.",
+       "ὁ λόγ**ος**",
+       "τὸ δῶρ**ον**"
+      ],
+      [
+       "acc.",
+       "τὸν λόγ**ον**",
+       "τὸ δῶρ**ον**"
+      ],
+      [
+       "gen.",
+       "τοῦ λόγ**ου**",
+       "τοῦ δώρ**ου**"
+      ],
+      [
+       "dat.",
+       "τῷ λόγ**ῳ**",
+       "τῷ δώρ**ῳ**"
+      ]
+     ]
+    },
+    {
+     "kind": "table",
+     "head": [
+      "pl",
+      "word (m.)",
+      "gift (n.)"
+     ],
+     "rows": [
+      [
+       "nom.",
+       "οἱ λόγ**οι**",
+       "τὰ δῶρ**α**"
+      ],
+      [
+       "acc.",
+       "τοὺς λόγ**ους**",
+       "τὰ δῶρ**α**"
+      ],
+      [
+       "gen.",
+       "τῶν λόγ**ων**",
+       "τῶν δώρ**ων**"
+      ],
+      [
+       "dat.",
+       "τοῖς λόγ**οις**",
+       "τοῖς δώρ**οις**"
+      ]
+     ],
+     "caption": "δῶρον only differs from λόγος where it is neuter: nominative and accusative."
+    }
+   ]
   },
   {
    "id": "greek.nouns-1",
@@ -115,7 +481,70 @@
    "intro": "Feminine nouns ending -η or -α. The same four cases, different endings: τιμή, τιμήν, τιμῆς, τιμῇ. Words ending -α after ε, ι or ρ keep the α all the way through the singular.",
    "teach": "Explain the difference between the τιμή and χώρα patterns.",
    "talk": "Ask {him} to decline “the voice” (ἡ φωνή) in the singular.",
-   "hook": "After **ε, ι** or **ρ** the α stays: χώρα, χώρας. Otherwise η: τιμή, τιμῆς."
+   "hook": "After **ε, ι** or **ρ** the α stays: χώρα, χώρας. Otherwise η: τιμή, τιμῆς.",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "sg",
+      "honour",
+      "land"
+     ],
+     "rows": [
+      [
+       "nom.",
+       "ἡ τιμ**ή**",
+       "ἡ χώρ**α**"
+      ],
+      [
+       "acc.",
+       "τὴν τιμ**ήν**",
+       "τὴν χώρ**αν**"
+      ],
+      [
+       "gen.",
+       "τῆς τιμ**ῆς**",
+       "τῆς χώρ**ας**"
+      ],
+      [
+       "dat.",
+       "τῇ τιμ**ῇ**",
+       "τῇ χώρ**ᾳ**"
+      ]
+     ]
+    },
+    {
+     "kind": "table",
+     "head": [
+      "pl",
+      "honour",
+      "land"
+     ],
+     "rows": [
+      [
+       "nom.",
+       "αἱ τιμ**αί**",
+       "αἱ χῶρ**αι**"
+      ],
+      [
+       "acc.",
+       "τὰς τιμ**άς**",
+       "τὰς χώρ**ας**"
+      ],
+      [
+       "gen.",
+       "τῶν τιμ**ῶν**",
+       "τῶν χωρ**ῶν**"
+      ],
+      [
+       "dat.",
+       "ταῖς τιμ**αῖς**",
+       "ταῖς χώρ**αις**"
+      ]
+     ],
+     "caption": "Two singulars, one shared plural."
+    }
+   ]
   },
   {
    "id": "greek.verbs-1",
@@ -128,7 +557,48 @@
    "intro": "The ending of a verb tells you who is doing it: λύω (I free), λύεις (you free), λύει (he/she frees), λύομεν, λύετε, λύουσι(ν). “To be” is irregular, as in English: εἰμί, εἶ, ἐστί(ν)…",
    "teach": "Chant the present tense of λύω and explain each ending.",
    "talk": "Ask {him} the Greek for “we are” and “they are”.",
-   "hook": "Chant the endings: **-ω, -εις, -ει, -ομεν, -ετε, -ουσι(ν)**: I, you, he or she, we, you all, they."
+   "hook": "Chant the endings: **-ω, -εις, -ει, -ομεν, -ετε, -ουσι(ν)**: I, you, he or she, we, you all, they.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "I free",
+     "I am"
+    ],
+    "rows": [
+     [
+      "I",
+      "λύ**ω**",
+      "εἰμί"
+     ],
+     [
+      "you (sg)",
+      "λύ**εις**",
+      "εἶ"
+     ],
+     [
+      "he, she, it",
+      "λύ**ει**",
+      "ἐστί(ν)"
+     ],
+     [
+      "we",
+      "λύ**ομεν**",
+      "ἐσμέν"
+     ],
+     [
+      "you (pl)",
+      "λύ**ετε**",
+      "ἐστέ"
+     ],
+     [
+      "they",
+      "λύ**ουσι(ν)**",
+      "εἰσί(ν)"
+     ]
+    ],
+    "caption": "λύω keeps its stem λυ- and changes the ending; εἰμί is irregular and is learned whole."
+   }
   },
   {
    "id": "greek.sentences",
@@ -142,7 +612,64 @@
    "intro": "Now read whole sentences. Find the verb first, then the nominative (who does it), then the accusative (to whom). Greek word order is flexible: the endings carry the meaning.",
    "teach": "Translate a sentence and explain how you found the subject.",
    "talk": "Ask {him} to translate a Greek sentence aloud for you.",
-   "hook": "Find the verb first, then the nominative, then the accusative: the endings, not the order, say who does what."
+   "hook": "Find the verb first, then the nominative, then the accusative: the endings, not the order, say who does what.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "ὁ δοῦλ**ος**",
+        "subject"
+       ],
+       [
+        "τὸν ἵππ**ον**",
+        "object"
+       ],
+       [
+        "ἄγει",
+        "verb"
+       ]
+      ],
+      "result": "The slave leads the horse."
+     },
+     {
+      "parts": [
+       [
+        "τὸν ἵππ**ον**",
+        "object"
+       ],
+       [
+        "ὁ δοῦλ**ος**",
+        "subject"
+       ],
+       [
+        "ἄγει",
+        "verb"
+       ]
+      ],
+      "result": "The slave leads the horse."
+     },
+     {
+      "parts": [
+       [
+        "ὁ ἵππ**ος**",
+        "subject"
+       ],
+       [
+        "τὸν δοῦλ**ον**",
+        "object"
+       ],
+       [
+        "ἄγει",
+        "verb"
+       ]
+      ],
+      "result": "The horse leads the slave."
+     }
+    ],
+    "caption": "Rows 1 and 2 swap the order but mean the same. Row 3 swaps the endings, and the meaning flips."
+   }
   },
   {
    "id": "greek.prepositions",
@@ -155,7 +682,63 @@
    "intro": "Prepositions (in, into, out of, from, towards…) each take a particular case. ἐν takes the dative, εἰς the accusative, ἐκ the genitive. Some change meaning with the case.",
    "teach": "Explain the difference between ἐν τῷ οἴκῳ and εἰς τὸν οἶκον.",
    "talk": "Ask {him}: which case follows ἐκ, and what does it mean?",
-   "hook": "Rest **in** a place: dative (ἐν). Motion **into**: accusative (εἰς). Motion **out of**: genitive (ἐκ)."
+   "hook": "Rest **in** a place: dative (ἐν). Motion **into**: accusative (εἰς). Motion **out of**: genitive (ἐκ).",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "means",
+     "example"
+    ],
+    "rows": [
+     [
+      "ἐν + dat.",
+      "in, on",
+      "ἐν τῷ οἴκ**ῳ**"
+     ],
+     [
+      "εἰς + acc.",
+      "into, to",
+      "εἰς τὸν ποταμ**όν**"
+     ],
+     [
+      "ἐκ + gen.",
+      "out of",
+      "ἐκ τῆς χώρ**ας**"
+     ],
+     [
+      "ἀπό + gen.",
+      "away from",
+      "ἀπὸ τῆς ἀγορ**ᾶς**"
+     ],
+     [
+      "πρός + acc.",
+      "towards",
+      "πρὸς τὸν στρατηγ**όν**"
+     ],
+     [
+      "μετά + gen.",
+      "with",
+      "μετὰ τῶν φίλ**ων**"
+     ],
+     [
+      "μετά + acc.",
+      "after",
+      "μετὰ τὴν μάχ**ην**"
+     ],
+     [
+      "διά + gen.",
+      "through",
+      "διὰ τῆς χώρ**ας**"
+     ],
+     [
+      "διά + acc.",
+      "because of",
+      "διὰ τὸν πόλεμ**ον**"
+     ]
+    ],
+    "caption": "μετά and διά change their meaning with the case."
+   }
   },
   {
    "id": "greek.adjectives",
@@ -168,7 +751,52 @@
    "intro": "Adjectives agree with their nouns: καλός, καλή, καλόν. The position of the article matters too: ὁ καλὸς ἵππος is “the beautiful horse”, but ὁ ἵππος καλός is “the horse is beautiful”.",
    "teach": "Explain the difference between ὁ σοφὸς στρατηγός and ὁ στρατηγὸς σοφός.",
    "talk": "Ask {him} which English words come from καλός and μικρός.",
-   "hook": "Sandwiched (ὁ καλὸς ἵππος), it describes; left outside (ὁ ἵππος καλός), add “is”."
+   "hook": "Sandwiched (ὁ καλὸς ἵππος), it describes; left outside (ὁ ἵππος καλός), add “is”.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "ὁ",
+        "article",
+        "the"
+       ],
+       [
+        "καλὸς",
+        "adjective",
+        "beautiful"
+       ],
+       [
+        "ἵππος",
+        "noun",
+        "horse"
+       ]
+      ],
+      "result": "the beautiful horse"
+     },
+     {
+      "parts": [
+       [
+        "ὁ",
+        "article",
+        "the"
+       ],
+       [
+        "ἵππος",
+        "noun",
+        "horse"
+       ],
+       [
+        "καλός",
+        "adjective",
+        "(is) beautiful"
+       ]
+      ],
+      "result": "the horse is beautiful"
+     }
+    ]
+   }
   },
   {
    "id": "greek.tenses",
@@ -181,7 +809,67 @@
    "intro": "The imperfect (“I was freeing”) adds an augment, ἐ-, to the front: ἔλυον. The future (“I will free”) adds a σ before the ending: λύσω. Spot the clue, then read the ending for the person.",
    "teach": "Explain how to tell ἔλυον from λύσω at a glance.",
    "talk": "Ask {him} what the augment is.",
-   "hook": "ε- at the front is the **past-tense flag**; σ before the ending is the **future flag**: ἔλυον, λύσω."
+   "hook": "ε- at the front is the **past-tense flag**; σ before the ending is the **future flag**: ἔλυον, λύσω.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "λύ",
+        "stem"
+       ],
+       [
+        "ω",
+        "ending",
+        "I"
+       ]
+      ],
+      "result": "λύω, I free"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ἔ",
+        "augment",
+        "past"
+       ],
+       [
+        "λυ",
+        "stem"
+       ],
+       [
+        "ον",
+        "ending",
+        "I"
+       ]
+      ],
+      "result": "ἔλυον, I was freeing"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "λύ",
+        "stem"
+       ],
+       [
+        "σ",
+        "tense",
+        "future"
+       ],
+       [
+        "ω",
+        "ending",
+        "I"
+       ]
+      ],
+      "result": "λύσω, I will free"
+     }
+    ]
+   }
   },
   {
    "id": "greek.particles",
@@ -211,7 +899,60 @@
    "intro": "Science, medicine and technology speak Greek: telephone, biology, democracy, dinosaur. Knowing the roots lets you work out words you have never seen before.",
    "teach": "Take a long scientific word and break it into its Greek parts.",
    "talk": "Pick a word from the news and ask {him} whether it has Greek inside it.",
-   "hook": "Greek is the Lego of science: **τῆλε** (far) + **φωνή** (voice) = telephone."
+   "hook": "Greek is the Lego of science: **τῆλε** (far) + **φωνή** (voice) = telephone.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "τῆλε",
+        "root",
+        "far"
+       ],
+       [
+        "σκοπέω",
+        "root",
+        "look at"
+       ]
+      ],
+      "result": "telescope"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "φῶς",
+        "root",
+        "light"
+       ],
+       [
+        "γράφω",
+        "root",
+        "write, draw"
+       ]
+      ],
+      "result": "photograph"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ζῷον",
+        "root",
+        "animal"
+       ],
+       [
+        "λόγος",
+        "root",
+        "study"
+       ]
+      ],
+      "result": "zoology"
+     }
+    ]
+   }
   },
   {
    "id": "greek.culture",
@@ -227,7 +968,73 @@
    "intro": "The language comes with a world: twelve Olympian gods, the first Olympic Games, theatres seating thousands, and Homer’s two great poems, the Iliad and the Odyssey.",
    "teach": "Explain the difference between the Iliad and the Odyssey.",
    "talk": "Ask {him} which Olympian god {she} would most like to meet, and why.",
-   "hook": "**Olympia** held the Games; **Olympus** was the gods’ mountain home, far to the north."
+   "hook": "**Olympia** held the Games; **Olympus** was the gods’ mountain home, far to the north.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "greek-theatre"
+    },
+    {
+     "kind": "table",
+     "head": [
+      "god",
+      "of…",
+      "symbol"
+     ],
+     "rows": [
+      [
+       "Zeus",
+       "king of the gods, the sky",
+       "thunderbolt"
+      ],
+      [
+       "Hera",
+       "queen of the gods, marriage",
+       "peacock"
+      ],
+      [
+       "Poseidon",
+       "the sea, earthquakes",
+       "trident"
+      ],
+      [
+       "Athena",
+       "wisdom, crafts",
+       "owl"
+      ],
+      [
+       "Apollo",
+       "music, healing",
+       "lyre"
+      ],
+      [
+       "Artemis",
+       "hunting, the wild",
+       "bow and arrows"
+      ],
+      [
+       "Hermes",
+       "messenger of the gods",
+       "winged sandals"
+      ],
+      [
+       "Hephaestus",
+       "fire, the forge",
+       "hammer and anvil"
+      ],
+      [
+       "Demeter",
+       "the harvest",
+       "sheaf of wheat"
+      ],
+      [
+       "Dionysus",
+       "wine, the theatre",
+       "vine"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "greek.myth-1",
@@ -268,7 +1075,38 @@
    "intro": "The aorist is the most common past tense in stories: a single completed action. The weak aorist adds an augment and -σα: ἔλυσα, “I freed”. Some common verbs have strong aorists you just learn: ἔφυγον, “I fled”.",
    "teach": "Explain the difference between ἔλυον and ἔλυσα.",
    "talk": "Ask {him} the aorist of λύω and what it means.",
-   "hook": "Augment + **σα** = one completed action: ἔλυσα, I freed (once, and done)."
+   "hook": "Augment + **σα** = one completed action: ἔλυσα, I freed (once, and done).",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "imperfect",
+     "aorist"
+    ],
+    "rows": [
+     [
+      "form",
+      "ἔλυ**ον**",
+      "ἔλυ**σα**"
+     ],
+     [
+      "means",
+      "I was freeing",
+      "I freed"
+     ],
+     [
+      "timeline",
+      "━━━━━━━━━━▸",
+      "●"
+     ],
+     [
+      "shows",
+      "an action going on, or repeated",
+      "one action, finished"
+     ]
+    ],
+    "caption": "Both have the augment ἐ- because both are past. The difference is how the action is seen."
+   }
   },
   {
    "id": "greek.third-decl",
@@ -281,7 +1119,73 @@
    "intro": "The third declension is the big, varied family: φύλαξ (guard), ὄνομα (name), ἀνήρ (man), πόλις (city). Find the stem from the genitive, then add the endings.",
    "teach": "Explain why you need the genitive to decline φύλαξ.",
    "talk": "Ask {him} which English words come from πόλις and ὄνομα.",
-   "hook": "Take **-ος** off the genitive to find the stem: φύλακος → φυλακ-."
+   "hook": "Take **-ος** off the genitive to find the stem: φύλακος → φυλακ-.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "φύλακ",
+        "stem"
+       ],
+       [
+        "ος",
+        "ending",
+        "genitive"
+       ]
+      ],
+      "result": "φύλακος"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "φύλακ",
+        "stem"
+       ],
+       [
+        "α",
+        "ending",
+        "accusative"
+       ]
+      ],
+      "result": "φύλακα"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "φύλακ",
+        "stem"
+       ],
+       [
+        "ι",
+        "ending",
+        "dative"
+       ]
+      ],
+      "result": "φύλακι"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "φύλακ",
+        "stem"
+       ],
+       [
+        "ς",
+        "ending",
+        "nominative"
+       ]
+      ],
+      "result": "φύλαξ (κ + ς = ξ)"
+     }
+    ],
+    "caption": "The nominative φύλαξ hides the κ; the genitive φύλακος shows the real stem."
+   }
   },
   {
    "id": "greek.participles",
@@ -295,7 +1199,32 @@
    "intro": "A participle is a verb used as an adjective: λύων means “freeing”. Greek uses them everywhere, often where English would use “who”, “while” or “after”.",
    "teach": "Translate ὁ φεύγων στρατηγός two different ways.",
    "talk": "Ask {him} what ὁ λύων means.",
-   "hook": "A participle is a verb-adjective: ὁ λύων, **the one who** frees."
+   "hook": "A participle is a verb-adjective: ὁ λύων, **the one who** frees.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "present",
+     "aorist"
+    ],
+    "rows": [
+     [
+      "form",
+      "λύ**ων**",
+      "λύ**σας**"
+     ],
+     [
+      "English",
+      "freeing",
+      "having freed"
+     ],
+     [
+      "when?",
+      "at the same time as the main verb",
+      "before the main verb"
+     ]
+    ]
+   }
   }
  ],
  "items": [
@@ -3743,7 +4672,29 @@
     }
    ],
    "explain": "ὁ δοῦλος is nominative: the slave leads the horses, even though the horses come first.",
-   "hook": "ὁ, ἡ, οἱ, αἱ flag the subject, wherever it stands in the sentence."
+   "hook": "ὁ, ἡ, οἱ, αἱ flag the subject, wherever it stands in the sentence.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "τοὺς ἵππ**ους**",
+        "object"
+       ],
+       [
+        "ὁ δοῦλ**ος**",
+        "subject"
+       ],
+       [
+        "ἄγει",
+        "verb"
+       ]
+      ],
+      "result": "The slave leads the horses."
+     }
+    ]
+   }
   },
   {
    "id": "greek.nouns-2.tmpl",
@@ -4209,7 +5160,29 @@
    "formats": [
     "choice"
    ],
-   "hook": "The object can come first: τὸν φίλον is still the one being freed."
+   "hook": "The object can come first: τὸν φίλον is still the one being freed.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "parts": [
+       [
+        "τὸν φίλ**ον**",
+        "object"
+       ],
+       [
+        "ὁ ἀδελφ**ὸς**",
+        "subject"
+       ],
+       [
+        "λύει",
+        "verb"
+       ]
+      ],
+      "result": "The brother frees the friend."
+     }
+    ]
+   }
   },
   {
    "id": "greek.s.7",
@@ -5122,7 +6095,32 @@
     }
    ],
    "explain": "π, β, φ + σ → ψ (πέμψω, γράψω). κ, γ, χ + σ → ξ (ἄξω).",
-   "hook": "π + σ = ψ and κ + σ = ξ: πέμψω, ἄξω."
+   "hook": "π + σ = ψ and κ + σ = ξ: πέμψω, ἄξω.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "πέμπ",
+        "stem"
+       ],
+       [
+        "σ",
+        "tense",
+        "future"
+       ],
+       [
+        "ω",
+        "ending",
+        "I"
+       ]
+      ],
+      "result": "πέμψω (π + σ = ψ)"
+     }
+    ]
+   }
   },
   {
    "id": "greek.t.impf",
@@ -6062,7 +7060,11 @@
     }
    ],
    "explain": "The City Dionysia, each spring: tragedies and comedies in the Theatre of Dionysus.",
-   "hook": "Dionysus is the god of the theatre: the City Dionysia was Athens’ drama festival."
+   "hook": "Dionysus is the god of the theatre: the City Dionysia was Athens’ drama festival.",
+   "visual": {
+    "kind": "diagram",
+    "id": "greek-theatre"
+   }
   },
   {
    "id": "greek.cu.chorus",
@@ -6087,7 +7089,12 @@
    ],
    "explain": "χορός = a dance, a band of dancers. It gives us “chorus” and “choreography”.",
    "hook": "χορός → **chorus** and **choreography**, the writing down of a dance.",
-   "example": "In a musical, the chorus sings and dances together, just as in Greek drama."
+   "example": "In a musical, the chorus sings and dances together, just as in Greek drama.",
+   "visual": {
+    "kind": "diagram",
+    "id": "greek-theatre",
+    "highlight": "orchestra"
+   }
   },
   {
    "id": "greek.cu.masks",
@@ -6361,7 +7368,17 @@
    "explain": "Sent, helped, kills, escapes, rejoicing.",
    "passage": "ὁ Θησεὺς καὶ ὁ Μινώταυρος\n\nἐν τῇ Κρήτῃ ὁ Μίνως βασιλεύει. ἐν δὲ τῷ λαβυρίνθῳ μένει ὁ Μινώταυρος· δεινὸς γάρ ἐστιν. οἱ Ἀθηναῖοι ἑπτὰ νεανίας καὶ ἑπτὰ κόρας εἰς τὴν Κρήτην πέμπουσιν. ὁ δὲ Θησεὺς ἀνδρεῖός ἐστιν· ἐθέλει οὖν τοὺς φίλους λύειν.\n\nἡ Ἀριάδνη, ἡ τοῦ βασιλέως θυγάτηρ, τὸν Θησέα φιλεῖ καὶ λίνον αὐτῷ δίδωσιν. ὁ Θησεὺς εἰς τὸν λαβύρινθον βαίνει καὶ τὸν Μινώταυρον ἀποκτείνει. ἔπειτα τῷ λίνῳ τὴν ὁδὸν εὑρίσκει καὶ ἐκ τοῦ λαβυρίνθου φεύγει. οἱ οὖν Ἀθηναῖοι μάλα χαίρουσιν.\n\nGlossary: βασιλεύει = is king; λαβύρινθος = labyrinth, maze; νεανίας (accusative plural νεανίας) = young man; θυγάτηρ = daughter; φιλεῖ = loves; λίνον = thread; αὐτῷ = to him; δίδωσιν = gives; βαίνει = goes; ἀποκτείνει = kills; ἔπειτα = then; ὁδός (accusative ὁδόν) = way, road; εὑρίσκει = finds; μάλα = very much; χαίρουσιν = rejoice.",
    "passageSource": "Adapted for this app from the myth of Theseus",
-   "hook": "Sent, helped, kills, escapes, rejoicing."
+   "hook": "Sent, helped, kills, escapes, rejoicing.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "The Athenians send young people to Crete",
+     "Ariadne gives Theseus a thread",
+     "Theseus kills the Minotaur",
+     "Theseus finds his way out",
+     "The Athenians rejoice"
+    ]
+   }
   },
   {
    "id": "greek.my.cy.1",
@@ -6634,7 +7651,37 @@
     "i set free",
     "i loosened"
    ],
-   "hook": "Past flag ἐ- at the front, σα at the end: ἔλυσα."
+   "hook": "Past flag ἐ- at the front, σα at the end: ἔλυσα.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "ἔ",
+        "augment",
+        "past"
+       ],
+       [
+        "λυ",
+        "stem"
+       ],
+       [
+        "σ",
+        "tense",
+        "aorist"
+       ],
+       [
+        "α",
+        "ending",
+        "I"
+       ]
+      ],
+      "result": "ἔλυσα, I freed"
+     }
+    ]
+   }
   },
   {
    "id": "greek.ao.forms",
@@ -6994,7 +8041,16 @@
     }
    ],
    "explain": "Aorist participle = an action completed before the main verb: “having freed”, “after freeing”.",
-   "hook": "Aorist participle = having: λύσας, having freed."
+   "hook": "Aorist participle = having: λύσας, having freed.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "λύσας: he frees his friends",
+     "φεύγει: then he flees"
+    ],
+    "caption": "The aorist participle happened first."
+   }
   }
  ]
 }

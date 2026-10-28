@@ -12,7 +12,62 @@
    "batch": 5,
    "intro": "The Stone Age lasted for hundreds of thousands of years. People went from hunting mammoths with flint spears to farming, building villages like Skara Brae and raising Stonehenge. Then they learned to make bronze.",
    "teach": "Explain the difference between the Old Stone Age and the New Stone Age.",
-   "talk": "Ask {him} what {she} would miss most if {she} lived in the Stone Age."
+   "talk": "Ask {him} what {she} would miss most if {she} lived in the Stone Age.",
+   "visual": {
+    "kind": "timeline",
+    "from": -12000,
+    "to": -1,
+    "bands": [
+     [
+      -12000,
+      -10000,
+      "Old Stone Age"
+     ],
+     [
+      -10000,
+      -4000,
+      "Middle Stone Age"
+     ],
+     [
+      -4000,
+      -2500,
+      "New Stone Age"
+     ],
+     [
+      -2500,
+      -800,
+      "Bronze Age"
+     ],
+     [
+      -800,
+      43,
+      "Iron Age"
+     ]
+    ],
+    "events": [
+     [
+      -8000,
+      "Cheddar Man"
+     ],
+     [
+      -4000,
+      "farming reaches Britain"
+     ],
+     [
+      -3000,
+      "Stonehenge begun"
+     ],
+     [
+      -2300,
+      "the Amesbury Archer"
+     ],
+     [
+      -800,
+      "iron reaches Britain"
+     ]
+    ],
+    "caption": "All the dates are “about”. The Old Stone Age began hundreds of thousands of years before this line starts, and the Iron Age lasted until the Romans came in AD 43."
+   }
   },
   {
    "id": "history.y3-ironage",
@@ -24,7 +79,11 @@
    "batch": 5,
    "intro": "From about 800 BC, people in Britain learned to make iron. Iron ore was much easier to find than the copper and tin needed for bronze, so more people could have strong tools. Iron Age tribes built hill forts, drove chariots and followed priests called druids.",
    "teach": "Explain why a hill fort was a good place to defend.",
-   "talk": "Ask {him} to design an Iron Age hill fort with ditches and a gate."
+   "talk": "Ask {him} to design an Iron Age hill fort with ditches and a gate.",
+   "visual": {
+    "kind": "diagram",
+    "id": "hill-fort"
+   }
   },
   {
    "id": "history.y3-legion",
@@ -36,7 +95,44 @@
    "batch": 5,
    "intro": "The Roman army was one of the best-trained armies in history. Soldiers called legionaries trained every day, marched in step and fought as a team.",
    "teach": "Explain what a legionary carried and what each thing was for.",
-   "talk": "Ask {him} which would be harder: marching 20 miles in armour, or building a fort at the end of it."
+   "talk": "Ask {him} which would be harder: marching 20 miles in armour, or building a fort at the end of it.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "roman-soldier"
+    },
+    {
+     "kind": "tree",
+     "root": {
+      "n": "a legion",
+      "note": "about 5,000 soldiers",
+      "c": [
+       {
+        "n": "a cohort",
+        "note": "10 in a legion",
+        "c": [
+         {
+          "n": "a century",
+          "note": "6 in a cohort",
+          "c": [
+           {
+            "n": "a centurion",
+            "note": "the officer in charge",
+            "c": [
+             {
+              "n": "about 80 legionaries",
+              "note": "foot soldiers"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ]
   },
   {
    "id": "history.y3-boudica",
@@ -48,7 +144,17 @@
    "batch": 5,
    "intro": "In about AD 60 or 61, Boudica, queen of the Iceni tribe, led a huge rebellion against the Romans. Her army destroyed three Roman towns before the Romans finally defeated her.",
    "teach": "Explain why Boudica rebelled against the Romans.",
-   "talk": "Ask {him} whether {she} thinks Boudica was a hero, and why."
+   "talk": "Ask {him} whether {she} thinks Boudica was a hero, and why.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "The Romans take the Iceni lands",
+     "Boudica leads a rebellion",
+     "Colchester, London and St Albans destroyed",
+     "A smaller Roman army defeats her"
+    ],
+    "caption": "Boudica’s revolt, AD 60 or 61."
+   }
   },
   {
    "id": "history.y3-roman-life",
@@ -60,7 +166,37 @@
    "batch": 5,
    "intro": "The Romans ruled Britain for nearly 400 years. They built towns, villas, baths and straight roads, and left behind words, numbers and even letters written on wood.",
    "teach": "Explain three things the Romans left behind that we still use.",
-   "talk": "Look for a Roman road, a Roman numeral or a Latin word together this week."
+   "talk": "Look for a Roman road, a Roman numeral or a Latin word together this week.",
+   "visual": {
+    "kind": "timeline",
+    "from": -100,
+    "to": 450,
+    "set": "britain",
+    "mark": "Roman Britain",
+    "events": [
+     [
+      -55,
+      "Julius Caesar visits"
+     ],
+     [
+      43,
+      "Claudius invades"
+     ],
+     [
+      61,
+      "Boudica’s revolt"
+     ],
+     [
+      122,
+      "Hadrian’s Wall begun"
+     ],
+     [
+      410,
+      "the Romans leave"
+     ]
+    ],
+    "caption": "The Romans ruled Britain for nearly 400 years."
+   }
   },
   {
    "id": "history.y3-saxons",
@@ -72,7 +208,37 @@
    "batch": 5,
    "intro": "After the Romans left, Angles, Saxons and Jutes sailed over from northern Europe and set up kingdoms. In the north, the Scots and Picts lived. England gets its name from the Angles!",
    "teach": "Explain what was found at Sutton Hoo and why it matters.",
-   "talk": "Ask {him} which day of the week is named after an Anglo-Saxon god."
+   "talk": "Ask {him} which day of the week is named after an Anglo-Saxon god.",
+   "visual": {
+    "kind": "timeline",
+    "from": 380,
+    "to": 820,
+    "set": "britain",
+    "mark": "Anglo-Saxons and Vikings",
+    "events": [
+     [
+      410,
+      "the Romans leave"
+     ],
+     [
+      450,
+      "Angles, Saxons and Jutes arrive"
+     ],
+     [
+      597,
+      "Augustine arrives in Kent"
+     ],
+     [
+      624,
+      "Sutton Hoo burial"
+     ],
+     [
+      793,
+      "Vikings raid Lindisfarne"
+     ]
+    ],
+    "caption": "Some of these dates are “about”: 450 and 624."
+   }
   },
   {
    "id": "history.y3-vikings",
@@ -85,7 +251,35 @@
    "batch": 5,
    "intro": "For about 250 years, Vikings and Anglo-Saxons raided, fought, made peace and traded. In the end, England became one kingdom.",
    "teach": "Explain how Alfred the Great defended Wessex from the Vikings.",
-   "talk": "Ask {him} to write {her} name in Viking runes (find a rune alphabet in a library book)."
+   "talk": "Ask {him} to write {her} name in Viking runes (find a rune alphabet in a library book).",
+   "visual": {
+    "kind": "timeline",
+    "from": 760,
+    "to": 1100,
+    "set": "britain",
+    "events": [
+     [
+      793,
+      "Vikings raid Lindisfarne"
+     ],
+     [
+      878,
+      "Alfred defeats Guthrum"
+     ],
+     [
+      927,
+      "Athelstan, first king of England"
+     ],
+     [
+      1016,
+      "Cnut becomes king"
+     ],
+     [
+      1066,
+      "Battle of Hastings"
+     ]
+    ]
+   }
   },
   {
    "id": "history.y3-greece",
@@ -97,7 +291,33 @@
    "batch": 5,
    "intro": "About 2,500 years ago, the cities of Ancient Greece gave the world the Olympic Games, democracy, theatre and many great thinkers. Athens and Sparta were very different cities.",
    "teach": "Explain the difference between Athens and Sparta.",
-   "talk": "Ask {him} which Greek god or goddess {she} would like to be, and why."
+   "talk": "Ask {him} which Greek god or goddess {she} would like to be, and why.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "greek-theatre"
+    },
+    {
+     "kind": "timeline",
+     "from": -900,
+     "to": -150,
+     "set": "greece",
+     "events": [
+      [
+       -776,
+       "first Olympic Games"
+      ],
+      [
+       -508,
+       "democracy begins in Athens"
+      ],
+      [
+       -490,
+       "Battle of Marathon"
+      ]
+     ]
+    }
+   ]
   },
   {
    "id": "history.y3-civilisations",
@@ -109,7 +329,40 @@
    "batch": 5,
    "intro": "More than 4,000 years ago, the first great civilisations grew up beside rivers: in Sumer, in the Indus Valley and in Egypt. They built cities and invented writing.",
    "teach": "Explain why the first cities were built beside rivers.",
-   "talk": "Ask {him} what {she} would need to build a city from nothing."
+   "talk": "Ask {him} what {she} would need to build a city from nothing.",
+   "visual": {
+    "kind": "timeline",
+    "from": -3600,
+    "to": -500,
+    "set": "britain",
+    "events": [
+     [
+      -3500,
+      "Sumerians use the wheel"
+     ],
+     [
+      -3200,
+      "writing begins in Sumer"
+     ],
+     [
+      -2560,
+      "Great Pyramid built"
+     ],
+     [
+      -2500,
+      "Indus Valley cities"
+     ],
+     [
+      -1600,
+      "Shang China begins"
+     ],
+     [
+      -776,
+      "first Olympic Games"
+     ]
+    ],
+    "caption": "All the dates are “about”. When the first cities grew, Britain was still in the Stone Age."
+   }
   },
   {
    "id": "history.y3-sieges",
@@ -121,7 +374,11 @@
    "batch": 5,
    "intro": "Attacking a castle was very hard. Attackers used giant catapults, siege towers, battering rams and tunnels, and defenders kept making castles stronger.",
    "teach": "Explain why a concentric castle was so hard to attack.",
-   "talk": "Build a castle from cushions or blocks and ask {him} how {she} would defend it."
+   "talk": "Build a castle from cushions or blocks and ask {him} how {she} would defend it.",
+   "visual": {
+    "kind": "diagram",
+    "id": "castle"
+   }
   },
   {
    "id": "history.y3-britain1940",
@@ -133,7 +390,17 @@
    "batch": 5,
    "intro": "In the summer of 1940, the German air force tried to defeat Britain’s Royal Air Force. Radar, brave pilots from many countries and a clever control system helped Britain hold on.",
    "teach": "Explain how radar helped the RAF.",
-   "talk": "Ask {him} why Churchill called the pilots “the Few”."
+   "talk": "Ask {him} why Churchill called the pilots “the Few”.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Radar spots planes over the sea",
+     "The Observer Corps track them over land",
+     "WAAF plotters mark them on a map",
+     "Fighters are sent up to meet them"
+    ],
+    "caption": "Fighter Command’s warning and control system, 1940."
+   }
   },
   {
    "id": "history.y3-homefront",
@@ -157,7 +424,43 @@
    "batch": 5,
    "intro": "Historians use dates, put events in order, and look at evidence from the past. Some evidence was made at the time; some was made much later.",
    "teach": "Explain the difference between a primary source and a secondary source.",
-   "talk": "Find something old at home (a photo, a coin) and ask {him} what it tells you about the past."
+   "talk": "Find something old at home (a photo, a coin) and ask {him} what it tells you about the past.",
+   "visual": {
+    "kind": "timeline",
+    "from": -600,
+    "to": 500,
+    "bands": [
+     [
+      -600,
+      0,
+      "BC: years count down"
+     ],
+     [
+      0,
+      500,
+      "AD: years count up"
+     ]
+    ],
+    "events": [
+     [
+      -490,
+      "Battle of Marathon"
+     ],
+     [
+      -55,
+      "Caesar visits Britain"
+     ],
+     [
+      43,
+      "Romans invade Britain"
+     ],
+     [
+      410,
+      "Romans leave Britain"
+     ]
+    ],
+    "caption": "BC years count down to 1 BC; then AD years count up from AD 1. There is no year 0."
+   }
   },
   {
    "id": "history.y3-normans",
@@ -171,7 +474,39 @@
    "batch": 5,
    "intro": "After 1066, William the Conqueror and the Normans took control of England. They built castles everywhere, counted everything in the Domesday Book, and set up the feudal system.",
    "teach": "Explain how the feudal system worked, from the king down to the peasants.",
-   "talk": "Ask {him} what the Domesday Book might have said about your town."
+   "talk": "Ask {him} what the Domesday Book might have said about your town.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "motte-bailey"
+    },
+    {
+     "kind": "tree",
+     "root": {
+      "n": "the king",
+      "note": "owns all the land",
+      "c": [
+       {
+        "n": "barons",
+        "note": "given land by the king",
+        "c": [
+         {
+          "n": "knights",
+          "note": "given land by a baron; fight for him",
+          "c": [
+           {
+            "n": "peasants (villeins)",
+            "note": "work the lord’s land"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "caption": "The feudal system, from most powerful to least."
+    }
+   ]
   },
   {
    "id": "history.y3-shang",
@@ -182,9 +517,34 @@
     "history.y3-civilisations"
    ],
    "batch": 5,
-   "intro": "About 3,500 years ago, the Shang dynasty ruled part of China beside the Yellow River. They made beautiful bronze and wrote questions to their ancestors on bones.",
+   "intro": "About 3,600 years ago, the Shang dynasty ruled part of China beside the Yellow River. They made beautiful bronze and wrote questions to their ancestors on bones.",
    "teach": "Explain what oracle bones were.",
-   "talk": "Ask {him} what question {she} would write on an oracle bone."
+   "talk": "Ask {him} what question {she} would write on an oracle bone.",
+   "visual": {
+    "kind": "timeline",
+    "from": -3200,
+    "to": -800,
+    "set": "britain",
+    "events": [
+     [
+      -3000,
+      "Stonehenge begun"
+     ],
+     [
+      -2560,
+      "Great Pyramid built"
+     ],
+     [
+      -1600,
+      "Shang dynasty begins"
+     ],
+     [
+      -1046,
+      "Shang dynasty ends"
+     ]
+    ],
+    "caption": "All the dates are “about”. The Shang ruled China while Britain was in the Bronze Age."
+   }
   }
  ],
  "items": [
@@ -199,7 +559,16 @@
     "Neolithic (New Stone Age)"
    ],
    "labels": null,
-   "explain": "Palaeo means old, meso means middle and neo means new. “Lithic” means stone."
+   "explain": "Palaeo means old, meso means middle and neo means new. “Lithic” means stone.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Palaeolithic (Old Stone Age)",
+     "Mesolithic (Middle Stone Age)",
+     "Neolithic (New Stone Age)"
+    ],
+    "caption": "Palaeo = old, meso = middle, neo = new; lithic = stone."
+   }
   },
   {
    "id": "history.y3.sa.neolithic",
@@ -416,7 +785,12 @@
    "explain": "It is one of the largest hill forts in Europe. It was not a castle with stone walls, but earth banks.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "hill-fort",
+    "highlight": "ramparts"
+   }
   },
   {
    "id": "history.y3.ia.hillfort",
@@ -439,7 +813,11 @@
      "feedback": "Water was usually easier to find lower down."
     }
    ],
-   "explain": "Ditches and banks around the top made attackers climb uphill."
+   "explain": "Ditches and banks around the top made attackers climb uphill.",
+   "visual": {
+    "kind": "diagram",
+    "id": "hill-fort"
+   }
   },
   {
    "id": "history.y3.ia.druids",
@@ -526,7 +904,12 @@
    "explain": "The smoke drifted up through the thatched roof. Families cooked, ate and slept around it.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "hill-fort",
+    "highlight": "roundhouses"
+   }
   },
   {
    "id": "history.y3.ia.tribes",
@@ -598,7 +981,11 @@
    "accept": [
     "legionary",
     "legionnaire"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "roman-soldier"
+   }
   },
   {
    "id": "history.y3.leg.centurion",
@@ -614,7 +1001,38 @@
    "explain": "The name comes from the Latin for a hundred, though a century usually had 80 men.",
    "accept": [
     "centurion"
-   ]
+   ],
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "a legion",
+     "note": "about 5,000 soldiers",
+     "c": [
+      {
+       "n": "a cohort",
+       "note": "10 in a legion",
+       "c": [
+        {
+         "n": "a century",
+         "note": "6 in a cohort",
+         "c": [
+          {
+           "n": "a centurion",
+           "note": "the officer in charge",
+           "c": [
+            {
+             "n": "about 80 legionaries",
+             "note": "foot soldiers"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   }
   },
   {
    "id": "history.y3.leg.kit",
@@ -642,7 +1060,40 @@
      "feedback": "He threw his pilum before the armies met."
     }
    ],
-   "explain": "Longbows were used by English archers more than a thousand years later."
+   "explain": "Longbows were used by English archers more than a thousand years later.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "roman-soldier"
+    },
+    {
+     "kind": "table",
+     "head": [
+      "Latin name",
+      "what it was"
+     ],
+     "rows": [
+      [
+       "gladius",
+       "short sword"
+      ],
+      [
+       "scutum",
+       "large curved shield"
+      ],
+      [
+       "pilum",
+       "throwing spear"
+      ],
+      [
+       "caligae",
+       "sandals with iron nails"
+      ]
+     ],
+     "tint": "rows",
+     "caption": "A legionary’s kit."
+    }
+   ]
   },
   {
    "id": "history.y3.leg.testudo",
@@ -665,7 +1116,12 @@
      "feedback": "Not in battle!"
     }
    ],
-   "explain": "The shell of shields protected them from arrows and stones as they moved forward."
+   "explain": "The shell of shields protected them from arrows and stones as they moved forward.",
+   "visual": {
+    "kind": "diagram",
+    "id": "roman-soldier",
+    "highlight": "scutum"
+   }
   },
   {
    "id": "history.y3.leg.camp",
@@ -736,6 +1192,41 @@
    "explain": "The nails gave grip, a bit like football boots.",
    "formats": [
     "choice"
+   ],
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "roman-soldier",
+     "highlight": "caligae",
+     "question": true
+    },
+    {
+     "kind": "table",
+     "head": [
+      "Latin name",
+      "what it was"
+     ],
+     "rows": [
+      [
+       "gladius",
+       "short sword"
+      ],
+      [
+       "scutum",
+       "large curved shield"
+      ],
+      [
+       "pilum",
+       "throwing spear"
+      ],
+      [
+       "caligae",
+       "sandals with iron nails"
+      ]
+     ],
+     "tint": "rows",
+     "caption": "A legionary’s kit."
+    }
    ]
   },
   {
@@ -1670,7 +2161,11 @@
      "feedback": "Modern football came from England much later."
     }
    ],
-   "explain": "Greek actors wore masks and performed in huge open-air theatres."
+   "explain": "Greek actors wore masks and performed in huge open-air theatres.",
+   "visual": {
+    "kind": "diagram",
+    "id": "greek-theatre"
+   }
   },
   {
    "id": "history.y3.civ.rivers",
@@ -1806,7 +2301,30 @@
     "776 BC",
     "AD 43"
    ],
-   "explain": "About 3200 BC, about 2560 BC, 776 BC, AD 43."
+   "explain": "About 3200 BC, about 2560 BC, 776 BC, AD 43.",
+   "visual": {
+    "kind": "timeline",
+    "from": -3500,
+    "to": 1000,
+    "events": [
+     [
+      -3200,
+      "writing begins in Sumer"
+     ],
+     [
+      -2560,
+      "the Great Pyramid"
+     ],
+     [
+      -776,
+      "the first Olympic Games"
+     ],
+     [
+      43,
+      "the Romans invade Britain"
+     ]
+    ]
+   }
   },
   {
    "id": "history.y3.civ.surplus",
@@ -1893,7 +2411,12 @@
    "explain": "Soldiers swung a huge tree trunk, often under a roof to protect them.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "castle",
+    "highlight": "gatehouse"
+   }
   },
   {
    "id": "history.y3.sg.mine",
@@ -1996,7 +2519,12 @@
    "explain": "Attackers who got through the gate were still not safe.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "castle",
+    "highlight": "gatehouse"
+   }
   },
   {
    "id": "history.y3.sg.slit",
@@ -2012,7 +2540,13 @@
    "explain": "They were wide on the inside and very narrow on the outside.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "castle",
+    "highlight": "slits",
+    "question": true
+   }
   },
   {
    "id": "history.y3.bb.year",
@@ -2087,7 +2621,16 @@
    "explain": "Thousands of volunteers watched the skies from posts all over the country.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Radar spots planes over the sea",
+     "The Observer Corps track them over land",
+     "WAAF plotters mark them on a map",
+     "Fighters are sent up to meet them"
+    ]
+   }
   },
   {
    "id": "history.y3.bb.hurricane",
@@ -2446,7 +2989,35 @@
      "feedback": "They are 300 years apart."
     }
    ],
-   "explain": "BC years count backwards: the bigger the number, the longer ago."
+   "explain": "BC years count backwards: the bigger the number, the longer ago.",
+   "visual": {
+    "kind": "timeline",
+    "from": -600,
+    "to": 200,
+    "bands": [
+     [
+      -600,
+      0,
+      "BC"
+     ],
+     [
+      0,
+      200,
+      "AD"
+     ]
+    ],
+    "events": [
+     [
+      -500,
+      "earlier"
+     ],
+     [
+      -200,
+      "later"
+     ]
+    ],
+    "caption": "The bigger the BC number, the longer ago."
+   }
   },
   {
    "id": "history.y3.sk.ad",
@@ -2620,7 +3191,20 @@
      "feedback": "2 BC came BEFORE 1 BC."
     }
    ],
-   "explain": "The calendar jumps from 1 BC to AD 1."
+   "explain": "The calendar jumps from 1 BC to AD 1.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "3 BC",
+     "2 BC",
+     "1 BC",
+     "AD 1",
+     "AD 2",
+     "AD 3"
+    ],
+    "caption": "1 BC is followed straight away by AD 1. There is no year 0."
+   }
   },
   {
    "id": "history.y3.no.domesday",
@@ -2659,7 +3243,12 @@
      "feedback": "It was a castle."
     }
    ],
-   "explain": "They could be built in a few weeks. Later many were rebuilt in stone."
+   "explain": "They could be built in a few weeks. Later many were rebuilt in stone.",
+   "visual": {
+    "kind": "diagram",
+    "id": "motte-bailey",
+    "highlight": "keep"
+   }
   },
   {
    "id": "history.y3.no.feudal",
@@ -2673,7 +3262,33 @@
     "peasants"
    ],
    "labels": null,
-   "explain": "The king gave land to barons, barons gave land to knights, and peasants worked the land."
+   "explain": "The king gave land to barons, barons gave land to knights, and peasants worked the land.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "the king",
+     "note": "owns all the land",
+     "c": [
+      {
+       "n": "barons",
+       "note": "given land by the king",
+       "c": [
+        {
+         "n": "knights",
+         "note": "given land by a baron; fight for him",
+         "c": [
+          {
+           "n": "peasants (villeins)",
+           "note": "work the lord’s land"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "The feudal system, from most powerful to least."
+   }
   },
   {
    "id": "history.y3.no.tower",
@@ -2758,7 +3373,12 @@
      "feedback": "Stone castles were cold! It was about strength."
     }
    ],
-   "explain": "A wooden tower could be set on fire by attackers."
+   "explain": "A wooden tower could be set on fire by attackers.",
+   "visual": {
+    "kind": "diagram",
+    "id": "motte-bailey",
+    "highlight": "keep"
+   }
   },
   {
    "id": "history.y3.no.villein",

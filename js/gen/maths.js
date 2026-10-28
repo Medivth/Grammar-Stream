@@ -4,6 +4,7 @@
 // Prompts use {{n/d}} for stacked fractions.
 
 import { Frac, gcd, lcm } from '../core/fraction.js';
+import { pic, bar, pvDecimal, fracWall, pctBoxes, pctChangeBar } from './pictures.js';
 
 const tex = (f, opts) => f.toTex(opts);
 const neg = (n) => (n < 0 ? `−${-n}` : String(n));
@@ -19,6 +20,18 @@ function dec(th) {
   return sign + (frac ? `${whole}.${frac}` : String(whole));
 }
 const decPlain = (th) => dec(th).replace('−', '-');
+
+// optional picture: nothing when the diagram could not be drawn
+const picIf = (diagram, caption) => (diagram ? pic(diagram, caption) : {});
+// p% of amt: 100% is cut into equal boxes, p% of them shaded
+function pctBar(p, amt) {
+  const N = pctBoxes(p), k = (p * N) / 100;
+  return pic(bar([{ parts: N, shaded: k, text: amt / N }], amt), `100% is ${N} equal boxes, so each box is ${100 / N}% = ${amt / N}. ${p}% is ${k} box${k === 1 ? '' : 'es'}: ${(amt * p) / 100}.`);
+}
+// equivalent fractions on a fraction wall, while the smaller pieces are still big enough to label
+const equivWall = (n, d, k) => (d * k <= 16 ? pic(fracWall([[n, d], [n * k, d * k]]), `{{${n}/${d}}} covers the same length as {{${n * k}/${d * k}}}.`) : {});
+// a fraction of an amount: d equal boxes of `unit`, n of them shaded
+const fracBar = (n, d, unit) => pic(bar([{ parts: d, shaded: n, text: unit }], d * unit), `${d * unit} in ${d} equal boxes: ${unit} in each. {{${n}/${d}}} is ${n === 1 ? 'one box' : `${n} boxes`}: ${n * unit}.`);
 
 function choice(prompt, correctText, wrongs, rng, extra = {}) {
   const opts = rng.shuffle([{ text: correctText, correct: true }, ...wrongs.map((w) => (typeof w === 'string' ? { text: w } : w))]);
@@ -49,6 +62,7 @@ export const GENERATORS = {
       return choice(`Which is larger: ${dec(x)} or ${dec(y)}?`, dec(A), [{ text: dec(B), feedback: `${dec(B)} has more digits, but more digits doesn’t mean bigger. Compare tenths first: ${pv(a1, 'tenth')} beats ${b1} tenth${b1 === 1 ? '' : 's'}.` }], rng, {
         explain: `Compare the tenths digit first. ${dec(A)} has ${pv(a1, 'tenth')} and ${dec(B)} has only ${b1} tenth${b1 === 1 ? '' : 's'}, so ${dec(A)} is larger.`,
         steps: [`I line up the decimal points.`, `I compare the tenths: ${pv(a1, 'tenth')} against ${b1} tenth${b1 === 1 ? '' : 's'}.`, `${a1} is more, so ${dec(A)} is larger, even though ${dec(B)} has more digits.`],
+        ...picIf(pvDecimal([x, y], 3), `Line up the decimal points and compare the tenths first: ${a1} tenths beats ${b1}.`),
       });
     }
     if (level === 2) {
@@ -61,6 +75,7 @@ export const GENERATORS = {
       return choice(`Which number is the largest?`, dec(max), uniq.filter((v) => v !== max).map(dec), rng, {
         explain: `All have ${whole} ${whole === 1 ? 'one' : 'ones'}, so compare tenths, then hundredths, then thousandths. ${dec(max)} is largest.`,
         steps: [`All the numbers have ${whole} ${whole === 1 ? 'one' : 'ones'}, so I look at the tenths.`, `I keep comparing digit by digit, left to right.`, `${dec(max)} wins at the first place where they differ.`],
+        ...picIf(pvDecimal(uniq, 3), 'Line up the decimal points, then compare the columns from the left.'),
       });
     }
     const n = rng.pick([rng.int(11, 99) * 10, rng.int(101, 999), rng.int(1, 9) * 100 + rng.int(1, 9)]); // thousandths
@@ -75,6 +90,8 @@ export const GENERATORS = {
       numeric: { value: ans, form: 'any' },
       explain: `${mul ? 'Multiplying' : 'Dividing'} by ${p} moves every digit ${shift} place${shift > 1 ? 's' : ''} to the ${mul ? 'left' : 'right'}. The decimal point stays still.`,
       steps: [`${mul ? 'Multiplying' : 'Dividing'} by ${p} makes the number ${p} times ${mul ? 'bigger' : 'smaller'}.`, `So every digit moves ${shift} place${shift > 1 ? 's' : ''} to the ${mul ? 'left' : 'right'}.`, `${dec(n)} ${mul ? '×' : '÷'} ${p} = ${ans}`],
+      // in millionths, so both numbers are whole: n thousandths = n × 1000 millionths
+      ...picIf(pvDecimal([n * 1000, mul ? n * 1000 * p : (n * 1000) / p], 6, { shift: mul ? shift : -shift }), `${mul ? '×' : '÷'} ${p}: every digit moves ${shift} place${shift > 1 ? 's' : ''} to the ${mul ? 'left' : 'right'}. The decimal point stays still.`),
     };
   },
 
@@ -153,6 +170,7 @@ export const GENERATORS = {
     return choice(`Which is larger: ${tex(a)} or ${tex(b)}?`, tex(big), [{ text: tex(small), feedback: wrongFb }, { text: 'They are equal', feedback: `They are not equal. Rewrite both over ${L} to check.` }], rng, {
       explain: steps.join(' '),
       steps,
+      ...(a.d !== b.d ? pic(fracWall([[a.n, a.d], [b.n, b.d]]), `The shaded ${tex(big)} is longer than the shaded ${tex(small)}.`) : {}),
     });
   },
 
@@ -181,6 +199,7 @@ export const GENERATORS = {
         kind: 'typed', prompt: `Find the missing number: ${prompt}`, numeric: { value: String(ans), form: 'any' },
         explain: `The ${missingTop ? 'denominator' : 'numerator'} was multiplied by ${k}, so the ${missingTop ? 'numerator' : 'denominator'} must be too: ${missingTop ? n : d} × ${k} = ${ans}.`,
         steps: [`I look at what happened to the ${missingTop ? 'denominator' : 'numerator'}: it was multiplied by ${k}.`, `Whatever I do to the ${missingTop ? 'bottom' : 'top'} I do to the ${missingTop ? 'top' : 'bottom'}, so I multiply the ${missingTop ? 'numerator' : 'denominator'} by ${k} too.`, `${missingTop ? n : d} × ${k} = ${ans}.`],
+        ...equivWall(n, d, k),
       };
     }
     const d = rng.pick([3, 4, 5, 6, 7, 8, 9]); let n = rng.int(1, d - 1);
@@ -191,6 +210,7 @@ export const GENERATORS = {
       kind: 'typed', prompt: `Simplify ${tex(big)} fully.`, numeric: { value: `${n}/${d}`, form: 'simplest' },
       explain: `The highest common factor of ${n * k} and ${d * k} is ${k}. Divide both by ${k}: ${tex(new Frac(n, d))}.`,
       steps: [`I look for the highest common factor of ${n * k} and ${d * k}. It is ${k}.`, `I divide top and bottom by ${k}.`, `${tex(big)} = ${tex(new Frac(n, d))}.`],
+      ...equivWall(n, d, k),
     };
   },
 
@@ -253,6 +273,7 @@ export const GENERATORS = {
         kind: 'typed', prompt: `What is {{1/${d}}} of ${total}?`, numeric: { value: String(unit), form: 'any' },
         explain: `To find {{1/${d}}}, divide by ${d}: ${total} ÷ ${d} = ${unit}.`,
         steps: [`{{1/${d}}} means one of ${d} equal parts.`, `I divide ${total} by ${d}.`, `${total} ÷ ${d} = ${unit}.`],
+        ...fracBar(1, d, unit),
       };
     }
     const n = d === 2 ? 1 : rng.int(2, d - 1);
@@ -262,12 +283,14 @@ export const GENERATORS = {
         kind: 'typed', prompt: `What is ${tex(new Frac(n, d))} of ${total}?`, numeric: { value: String(part), form: 'any' },
         explain: `Divide by the denominator, then multiply by the numerator: ${total} ÷ ${d} = ${unit}, and ${unit} × ${n} = ${part}.`,
         steps: [`First I find {{1/${d}}}: ${total} ÷ ${d} = ${unit}.`, `I need ${n} of those parts.`, `${unit} × ${n} = ${part}.`],
+        ...fracBar(n, d, unit),
       };
     }
     return {
       kind: 'typed', prompt: `${tex(new Frac(n, d))} of a number is ${part}. What is the number?`, numeric: { value: String(total), form: 'any' },
       explain: n === 1 ? `One part is ${part}. The whole is ${d} parts: ${unit} × ${d} = ${total}.` : `${n} parts make ${part}, so one part is ${part} ÷ ${n} = ${unit}. The whole is ${d} parts: ${unit} × ${d} = ${total}.`,
       steps: n === 1 ? [`${tex(new Frac(n, d))} is one of ${d} equal parts, and it is worth ${part}.`, `The whole is ${d} of those parts.`, `${unit} × ${d} = ${total}.`] : [`${n} equal parts are worth ${part}.`, `So one part is ${part} ÷ ${n} = ${unit}.`, `The whole number is ${d} parts: ${unit} × ${d} = ${total}.`],
+      ...pic(bar([{ parts: d, shaded: n, text: unit }], total), `The ${n === 1 ? 'shaded box is' : `${n} shaded boxes are`} ${part}, so one box is ${unit}. The whole is ${d} boxes: ${total}.`),
     };
   },
 
@@ -279,6 +302,7 @@ export const GENERATORS = {
         kind: 'typed', prompt: `Write ${tex(new Frac(f[0], f[1]))} as a percentage.`, numeric: { value: String(pct), form: 'any' }, unit: '%',
         explain: `Per cent means out of 100. ${tex(new Frac(f[0], f[1]))} = ${tex(new Frac(pct, 100))} = ${pct}%.`,
         steps: [`Per cent means “out of 100”.`, `I make the denominator 100: ${tex(new Frac(f[0], f[1]))} = ${tex(new Frac(pct, 100))}.`, `So it is ${pct}%.`],
+        ...pic({ type: 'hundredsq', shade: Array.from({ length: pct }, (_, i) => i + 1) }, `${tex(new Frac(f[0], f[1]))} of the hundred square is ${pct} squares out of 100: ${pct}%.`),
       };
     }
     if (level === 2) {
@@ -324,6 +348,7 @@ export const GENERATORS = {
         kind: 'typed', prompt: `What is ${p}% of ${amt}?`, numeric: { value: String(r), form: 'any' },
         explain: `To find ${p}%, ${how}: ${r}.`,
         steps: [`${p}% means ${p} out of every 100.`, `A quick way: ${how}.`, `${p}% of ${amt} = ${r}.`],
+        ...(p > 1 ? pctBar(p, amt) : {}),
       };
     }
     if (level === 2) {
@@ -334,6 +359,7 @@ export const GENERATORS = {
         explain: p === 5 ? `10% of ${amt} is ${amt / 10}, and 5% is half of that: ${r}.` : `10% of ${amt} is ${amt / 10}. Build ${p}% from 10%s${p % 10 ? ' and 5%s' : ''}: ${r}.`,
         steps: p === 5 ? [`10% of ${amt} is ${amt / 10}.`, `5% is half of that: ${amt / 20}.`, `So 5% of ${amt} = ${r}.`]
           : [p % 10 ? `10% of ${amt} is ${amt / 10}, and 5% is half of that: ${amt / 20}.` : `10% of ${amt} is ${amt / 10}.`, `${p}% = ${Math.floor(p / 10)} × 10%${p % 10 ? ' + 5%' : ''} = ${Math.floor(p / 10) * amt / 10}${p % 10 ? ` + ${amt / 20}` : ''}.`, `So ${p}% of ${amt} = ${r}.`],
+        ...pctBar(p, amt),
       };
     }
     const p = rng.pick([10, 20, 25, 50, 15]); const amt = rng.int(2, 20) * 20; const up = rng.chance(0.5);
@@ -342,6 +368,7 @@ export const GENERATORS = {
       kind: 'typed', prompt: `A game costs £${amt}. Its price ${up ? 'rises' : 'is reduced'} by ${p}%. What is the new price in pounds?`, numeric: { value: String(r), form: 'any' }, unit: '£', unitBefore: true,
       explain: `${p}% of £${amt} is £${change}. ${up ? 'Add it' : 'Take it away'}: £${r}.`,
       steps: [`First I find ${p}% of £${amt}: £${change}.`, `The price ${up ? 'goes up, so I add' : 'goes down, so I subtract'}.`, `£${amt} ${up ? '+' : '−'} £${change} = £${r}.`],
+      ...pctChangeBar(p, amt, up, '£'),
     };
   },
 
@@ -482,6 +509,7 @@ export const GENERATORS = {
         kind: 'typed', prompt: `Share £${total} in the ratio ${p} : ${q}. How much is the larger share?`, numeric: { value: String(q * unit), form: 'any' }, unit: '£', unitBefore: true,
         explain: `There are ${p} + ${q} = ${p + q} parts. One part is £${total} ÷ ${p + q} = £${unit}. The larger share is ${q} parts: £${q * unit}.`,
         steps: [`I add the ratio parts: ${p} + ${q} = ${p + q} parts.`, `One part is £${total} ÷ ${p + q} = £${unit}.`, `The larger share is ${q} × £${unit} = £${q * unit}.`],
+        ...pic(bar([{ label: 'smaller', parts: p, text: `£${unit}`, total: `£${p * unit}` }, { label: 'larger', parts: q, text: `£${unit}`, total: `£${q * unit}` }]), `${p} + ${q} = ${p + q} boxes share £${total}, so each box is £${unit}. The larger share is ${q} boxes: £${q * unit}.`),
       };
     }
     let p = rng.int(2, 5), q = rng.int(2, 7); const k = rng.int(2, 6);
@@ -490,6 +518,7 @@ export const GENERATORS = {
       kind: 'typed', prompt: `In a club the ratio of boys to girls is ${p} : ${q}. There are ${p * k} boys. How many girls are there?`, numeric: { value: String(q * k), form: 'any' },
       explain: `${p * k} boys is ${k} lots of ${p}, so there are ${k} lots of ${q} girls: ${q * k}.`,
       steps: [`${p} parts are boys, and ${p} parts = ${p * k} boys.`, `So one part is ${p * k} ÷ ${p} = ${k}.`, `Girls are ${q} parts: ${q} × ${k} = ${q * k}.`],
+      ...pic(bar([{ label: 'boys', parts: p, text: k, total: `${p * k} boys` }, { label: 'girls', parts: q, text: k, total: `${q * k} girls` }]), `${p} boxes are ${p * k} boys, so each box is ${k}. The girls are ${q} boxes: ${q * k}.`),
     };
   },
 

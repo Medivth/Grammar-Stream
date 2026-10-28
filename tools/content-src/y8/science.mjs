@@ -545,4 +545,47 @@ for (const [id, memory] of Object.entries(MEMORY)) {
 }
 // --- end of memory hooks
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// Keyed like the memory hooks (without “science.”). Labelled diagrams (cells, heart, lungs, leaf,
+// atom, waves, circuits…) are attached separately; a picture added here joins any already there.
+const TOPIC_VISUALS = {
+  inheritance: { kind: 'flow', across: true, steps: ['cell', 'nucleus', 'chromosome', 'gene', 'DNA bases'], caption: 'Largest to smallest: each holds the next. A chromosome is one long DNA molecule carrying many genes.' },
+  health: { kind: 'table', head: ['', 'Bacteria', 'Viruses'], tint: 'cols', rows: [
+    ['Size', 'tiny cells', 'far smaller; not cells at all'],
+    ['Genetic material', 'loose DNA, no nucleus', 'genes inside a protein coat'],
+    ['Reproduce', 'by dividing', 'only inside our own cells'],
+    ['Cell wall', 'yes', 'no'],
+    ['Killed by antibiotics?', '**yes**', '**no**'],
+    ['Example', 'Salmonella food poisoning', 'a cold, flu'],
+  ], caption: 'Antibiotics attack parts of bacterial cells, such as the cell wall, which viruses do not have.' },
+  earth: { kind: 'cycle', steps: ['magma cools: igneous rock', 'weathered and eroded into sediment', 'deposited and compacted: sedimentary rock', 'heat and pressure: metamorphic rock', 'melts back into magma'], centre: 'the rock cycle', caption: 'A simplified loop: any rock can be weathered, or melted, and start again. Fossils are usually found in sedimentary rock.' },
+  working: { kind: 'table', head: ['Variable', 'What it is', 'Mira’s ramp test'], rows: [
+    ['Independent', 'what you change', 'the height of the ramp'],
+    ['Dependent', 'what you measure', 'how far the car rolls'],
+    ['Control', 'what you keep the same', 'the same car each time'],
+  ] },
+  spectrum: { kind: 'flow', steps: ['radio', 'microwaves', 'infrared', 'visible light', 'ultraviolet', 'X-rays', 'gamma rays'], caption: 'From radio to gamma the wavelength gets shorter and the frequency and energy higher. All travel at the speed of light.' },
+  genetics: { kind: 'maths', diagram: { type: 'possgrid', a: ['B', 'b'], b: ['B', 'b'], cells: [['BB', 'Bb'], ['Bb', 'bb']], shade: ['bb'] }, caption: 'Two Bb parents (brown eyes, simplified model): 1 box in 4 is bb, so a 25% chance of a blue-eyed child.' },
+};
+const ITEM_VISUALS = {
+  'or.levels': { kind: 'flow', across: true, steps: ['cell', 'tissue', 'organ', 'organ system', 'organism'] },
+  'ec.arrow': { kind: 'flow', across: true, steps: ['grass', 'rabbit', 'fox'], caption: 'Each arrow points from the eaten to the eater: the way energy flows.' },
+  'in.ns': { kind: 'flow', steps: ['Moths vary: some pale, some dark', 'On sooty trees, dark moths are better hidden', 'More dark moths survive and breed', 'They pass on the gene for dark wings', 'Over many generations, dark moths become common'] },
+  'at.salt': { kind: 'flow', steps: ['Crush the rock salt', 'Dissolve it in warm water', 'Filter out the sand', 'Evaporate the water: salt crystals'] },
+  'er.carbon': { kind: 'cycle', steps: ['CO₂ in the air', 'plants absorb it (photosynthesis)', 'animals eat the plants', 'respiration releases CO₂'], centre: 'the carbon cycle', caption: 'Decay and burning also release CO₂. Burning fossil fuels adds it faster than it is removed.' },
+  'er.air': { kind: 'maths', diagram: { type: 'pie', title: 'Gases in dry air', sectors: [{ label: 'nitrogen 78%', deg: 280.8 }, { label: 'oxygen 21%', deg: 75.6 }, { label: 'others 1%', deg: 3.6 }] }, caption: 'The others are mostly argon (about 0.9%); carbon dioxide is only about 0.04%.' },
+  'en.bounce': { kind: 'flow', steps: ['Held up: gravitational store', 'Falling: gravitational → kinetic store', 'Hits the ground: elastic store (squashed)', 'Bounces up: kinetic → gravitational store', 'Lower each time: energy dissipated'], caption: 'At every bounce some energy is transferred to the surroundings by heating and sound.' },
+  'gn.sex': { kind: 'maths', diagram: { type: 'possgrid', a: ['X', 'Y'], b: ['X', 'X'], cells: [['XX', 'XY'], ['XX', 'XY']], shade: ['XY'] }, caption: 'Sperm (top) carry X or Y; eggs (side) always carry X. Half the boxes are XX (girl), half XY (boy): 50:50.' },
+};
+for (const [key, v] of Object.entries(TOPIC_VISUALS)) {
+  const t = topics.find((x) => x.id === `science.${key}`);
+  if (!t) throw new Error(`y8/science.mjs: picture for unknown topic ${key}`);
+  t.visual = t.visual ? [].concat(t.visual, v) : v;
+}
+for (const [key, v] of Object.entries(ITEM_VISUALS)) {
+  const it = items.find((x) => x.id === `science.${key}`);
+  if (!it) throw new Error(`y8/science.mjs: picture for unknown item ${key}`);
+  it.visual = it.visual ? [].concat(it.visual, v) : v;
+}
+
 export default [{ subject: 'science', deck: 'y8', topics, items }];

@@ -161,4 +161,22 @@ const items = [
   mcq('wn.2', 'poems', 'Why do you think the child imagines a galloping rider?', [['The wind sounds like hooves', true], ['They can see a real horse outside', false, 'It is dark and late. They can only hear.'], ['They are dreaming about racing', false, 'It is the sound of the wind.']], 'Poets often turn sounds into pictures. The “gallop” matches the wind’s rhythm.', P('windy')),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+const TOPIC_VISUALS = {
+  'reading.phonics-1': { kind: 'table', head: ['Sound', 'Ways to spell it'], rows: [['ay', 'pl**ay**, r**ai**n, c**a**k**e**'], ['ee', 'tr**ee**, b**ea**ch, h**e**'], ['igh', 'n**igh**t, p**ie**, b**i**k**e**, fl**y**']], tint: 'rows', caption: 'ay usually comes at the end of a word; ai comes in the middle.' },
+  'reading.phonics-2': { kind: 'table', head: ['Sound', 'Ways to spell it'], rows: [['oa', 'b**oa**t, sn**ow**, h**o**m**e**'], ['oo', 'm**oo**n, n**ew**, bl**ue**, t**u**n**e**'], ['or', 'f**or**k, s**aw**'], ['ir', 'b**ir**d, t**ur**n, h**er**'], ['ou', 'cl**ou**d, t**ow**n'], ['oy', 'b**oy**, c**oi**n']], tint: 'rows' },
+  'reading.phonics-3': { kind: 'sounds', words: ['ph.o_e.n', 'kn.igh.t', 'wr.i_e.t'], caption: 'ph says “f”. In kn and wr, the k and the w are silent: kn says “n” and wr says “r”.' },
+  'reading.words': [
+    { kind: 'flow', across: true, steps: ['tiny', 'small', 'big', 'enormous'], caption: 'Size words, from smallest to biggest.' },
+    { kind: 'flow', across: true, steps: ['cross', 'angry', 'furious'], caption: 'Angry words, from a little bit angry to very angry.' },
+  ],
+};
+const ITEM_VISUALS = {
+  'reading.ph3.1': { kind: 'sounds', words: ['ph.o_e.n'], caption: 'ph says “f”.' },
+  'reading.ph3.5': { kind: 'sounds', words: ['kn.igh.t'], caption: 'kn says “n”: the k is silent.' },
+  'reading.ph3.6': { kind: 'sounds', words: ['wr.i_e.t'], caption: 'wr says “r”: the w is silent.' },
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'reading', deck: 'core', topics, items }];

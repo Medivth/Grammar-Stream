@@ -12,7 +12,17 @@
    "batch": 5,
    "intro": "Minibeasts are small creatures like insects, spiders, snails and worms. Insects always have six legs and three body parts.",
    "teach": "Explain why a spider is not an insect.",
-   "talk": "Go on a minibeast hunt: look under stones and logs, then put them back gently."
+   "talk": "Go on a minibeast hunt: look under stones and logs, then put them back gently.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "spider"
+    },
+    {
+     "kind": "diagram",
+     "id": "insect"
+    }
+   ]
   },
   {
    "id": "science.dinosaurs",
@@ -24,7 +34,23 @@
    "batch": 5,
    "intro": "Dinosaurs ruled the Earth for millions of years, long before people. We know about them from fossils.",
    "teach": "Explain how we can tell what a dinosaur ate from its teeth.",
-   "talk": "Visit a museum (or a book) and ask {him} which dinosaur {she} would most like to meet."
+   "talk": "Visit a museum (or a book) and ask {him} which dinosaur {she} would most like to meet.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "Dinosaurs",
+     "c": [
+      {
+       "n": "Meat-eaters",
+       "note": "sharp, pointed teeth: T. rex"
+      },
+      {
+       "n": "Plant-eaters",
+       "note": "flat or peg-like teeth: Triceratops, Stegosaurus, Diplodocus"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "science.hotcold",
@@ -36,7 +62,39 @@
    "batch": 5,
    "intro": "Places near the Equator are hot. Places near the Poles are cold. Animals and people have clever ways to live in each.",
    "teach": "Explain how a camel is suited to the desert.",
-   "talk": "Ask {him} what {she} would pack for a trip to the Arctic, and to the Sahara."
+   "talk": "Ask {him} what {she} would pack for a trip to the Arctic, and to the Sahara.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Place",
+     "What it is like",
+     "Who lives there"
+    ],
+    "rows": [
+     [
+      "Arctic (North Pole)",
+      "freezing and icy",
+      "polar bears"
+     ],
+     [
+      "rainforest (near the Equator)",
+      "hot and wet",
+      "monkeys, parrots"
+     ],
+     [
+      "desert",
+      "hot and very dry",
+      "camels"
+     ],
+     [
+      "Antarctic (South Pole)",
+      "freezing and icy",
+      "penguins"
+     ]
+    ],
+    "tint": "rows",
+    "caption": "Hot near the Equator, cold near the Poles."
+   }
   },
   {
    "id": "science.countries",
@@ -60,7 +118,11 @@
    "batch": 5,
    "intro": "The UK is made of islands, so the sea is never far away. Rivers start in the hills as streams and flow down to the sea.",
    "teach": "Explain the journey of a river from the hills to the sea.",
-   "talk": "At the beach or a river, ask {him} to point out physical and human features."
+   "talk": "At the beach or a river, ask {him} to point out physical and human features.",
+   "visual": {
+    "kind": "diagram",
+    "id": "river"
+   }
   },
   {
    "id": "science.explore",
@@ -72,7 +134,30 @@
    "batch": 5,
    "intro": "People have walked on the Moon, lived on space stations and sent robots to Mars. Space exploration is one of humanity’s greatest adventures.",
    "teach": "Explain why astronauts need spacesuits.",
-   "talk": "Look up when the International Space Station flies over your home, and watch for it together."
+   "talk": "Look up when the International Space Station flies over your home, and watch for it together.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1955,
+    "to": 2020,
+    "events": [
+     [
+      1961,
+      "Yuri Gagarin: first person in space"
+     ],
+     [
+      1969,
+      "Neil Armstrong walks on the Moon"
+     ],
+     [
+      1991,
+      "Helen Sharman: first British astronaut"
+     ],
+     [
+      2015,
+      "Tim Peake goes to the space station"
+     ]
+    ]
+   }
   },
   {
    "id": "science.light",
@@ -88,7 +173,11 @@
    "talk": "Make shadow puppets on the wall with a torch.",
    "coreIn": [
     "y3"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram"
+   }
   },
   {
    "id": "science.sound",
@@ -102,6 +191,15 @@
    "intro": "Every sound is made by something vibrating (shaking very fast). The vibrations travel to our ears.",
    "teach": "Explain how a drum makes a sound.",
    "talk": "Put rice on a drum or a tin lid and watch it jump when you make a noise.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "The drum vibrates",
+     "The air around it vibrates",
+     "The vibrations reach your ear",
+     "You hear the sound"
+    ]
+   },
    "coreIn": [
     "y3"
    ]
@@ -120,7 +218,11 @@
    "talk": "Count the things in one room that use electricity. Which use batteries?",
    "coreIn": [
     "y3"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit"
+   }
   }
  ],
  "items": [
@@ -135,7 +237,12 @@
     "4",
     "10"
    ],
-   "explain": "All insects have 6 legs and 3 body parts: head, thorax and abdomen."
+   "explain": "All insects have 6 legs and 3 body parts: head, thorax and abdomen.",
+   "visual": {
+    "kind": "diagram",
+    "id": "insect",
+    "highlight": "legs"
+   }
   },
   {
    "id": "science.mb.spider",
@@ -148,7 +255,12 @@
     "10",
     "4"
    ],
-   "explain": "Spiders have 8 legs, so they are not insects. They are arachnids."
+   "explain": "Spiders have 8 legs, so they are not insects. They are arachnids.",
+   "visual": {
+    "kind": "diagram",
+    "id": "spider",
+    "highlight": "legs"
+   }
   },
   {
    "id": "science.mb.notinsect",
@@ -176,7 +288,11 @@
      "feedback": "Ladybirds are beetles: insects."
     }
    ],
-   "explain": "Spiders have 8 legs."
+   "explain": "Spiders have 8 legs.",
+   "visual": {
+    "kind": "diagram",
+    "id": "insect"
+   }
   },
   {
    "id": "science.mb.worm",
@@ -268,7 +384,17 @@
     "adult ladybird"
    ],
    "labels": null,
-   "explain": "Like butterflies, ladybirds go egg, larva, pupa, adult."
+   "explain": "Like butterflies, ladybirds go egg, larva, pupa, adult.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "egg",
+     "larva",
+     "pupa",
+     "adult ladybird"
+    ],
+    "centre": "a ladybird’s life cycle"
+   }
   },
   {
    "id": "science.mb.camouflage",
@@ -904,7 +1030,26 @@
     "bank",
     "bed"
    ],
-   "explain": "Rivers often start as small streams in the hills."
+   "explain": "Rivers often start as small streams in the hills.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "river",
+     "highlight": "source",
+     "question": true
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "source in the hills",
+      "stream",
+      "river",
+      "mouth at the sea"
+     ],
+     "caption": "A river starts at its source and flows downhill to its mouth."
+    }
+   ]
   },
   {
    "id": "science.cs.mouth",
@@ -917,7 +1062,26 @@
     "head",
     "foot"
    ],
-   "explain": "The mouth of the Thames is near the North Sea."
+   "explain": "The mouth of the Thames is near the North Sea.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "river",
+     "highlight": "mouth",
+     "question": true
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "source in the hills",
+      "stream",
+      "river",
+      "mouth at the sea"
+     ],
+     "caption": "A river starts at its source and flows downhill to its mouth."
+    }
+   ]
   },
   {
    "id": "science.cs.flow",
@@ -940,7 +1104,24 @@
      "feedback": "Rivers flow downhill to the sea or a lake."
     }
    ],
-   "explain": "Water always flows downhill, so rivers run from the hills to the sea."
+   "explain": "Water always flows downhill, so rivers run from the hills to the sea.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "river"
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "source in the hills",
+      "stream",
+      "river",
+      "mouth at the sea"
+     ],
+     "caption": "A river starts at its source and flows downhill to its mouth."
+    }
+   ]
   },
   {
    "id": "science.cs.cliff",
@@ -1190,7 +1371,12 @@
      "feedback": "Shadows need light!"
     }
    ],
-   "explain": "Light travels in straight lines. If something blocks it, there is a dark patch behind: a shadow."
+   "explain": "Light travels in straight lines. If something blocks it, there is a dark patch behind: a shadow.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram",
+    "highlight": "shadow"
+   }
   },
   {
    "id": "science.lt.source",
@@ -1213,7 +1399,12 @@
      "feedback": "A mirror reflects light; it doesn’t make it."
     }
    ],
-   "explain": "Light sources: the Sun, fire, a torch, a light bulb."
+   "explain": "Light sources: the Sun, fire, a torch, a light bulb.",
+   "visual": {
+    "kind": "diagram",
+    "id": "ray-diagram",
+    "highlight": "source"
+   }
   },
   {
    "id": "science.lt.sun",
@@ -1384,7 +1575,12 @@
      "feedback": "Batteries work any time."
     }
    ],
-   "explain": "Like cars on a track: if there is a gap, they can’t get round."
+   "explain": "Like cars on a track: if there is a gap, they can’t get round.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-open",
+    "highlight": "switch"
+   }
   },
   {
    "id": "science.el.conductor",
@@ -1423,7 +1619,12 @@
    "explain": "Batteries store electricity for things we carry about.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "battery"
+   }
   },
   {
    "id": "science.el.safe",
@@ -1462,7 +1663,12 @@
    "explain": "A switch breaks or completes the circuit.",
    "formats": [
     "choice"
-   ]
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-open",
+    "highlight": "switch"
+   }
   }
  ]
 }

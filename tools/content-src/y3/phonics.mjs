@@ -71,4 +71,34 @@ const items = [
   ...SPELL.map(([chunks, w, wrong]) => fact(`chunkspell.${w}`, 'longwords', `Spell it chunk by chunk: ${chunks}. Which spelling is right?`, w, wrong, `${chunks}: ${w}.`, choiceOnly)),
 ];
 
+// ---------------------------------------------------------------- pictures (js/ui/visuals.js)
+// sound buttons: graphemes split by "."; "o_e" is a split digraph
+const SB = (word) => ({ kind: 'sounds', words: [word] });
+// a long word in coloured chunks, numbered by beat
+const BEAT_ROLES = ['subject', 'verb', 'object', 'adverbial'];
+const CHUNKED = (chunks) => ({ join: '+', parts: chunks.split('-').map((c, i) => [c, BEAT_ROLES[i % 4], `beat ${i + 1}`]), result: chunks.replace(/-/g, '') });
+const beats = (...words) => ({ kind: 'blocks', rows: words.map(CHUNKED) });
+const TOPIC_VISUALS = {
+  'reading.y3-speedsounds': { kind: 'sounds', words: ['p.l.ay', 'r.ai.n', 'm.a_e.k', 'eigh.t', 'th.ey', 'g.r.ea.t'], caption: 'One sound, many spellings: the “ay” sound in play, rain, make, eight, they and great.' },
+  'reading.y3-longwords': { ...beats('ad-ven-ture', 'cat-er-pil-lar'), caption: 'Clap each chunk: one beat each. Each chunk has one vowel sound.' },
+};
+const ITEM_VISUALS = {
+  'reading.y3.ss.eight': SB('eigh.t'),
+  'reading.y3.ss.they': SB('th.ey'),
+  'reading.y3.ss.field': SB('f.ie.l.d'),
+  'reading.y3.ss.caught': SB('c.augh.t'),
+  'reading.y3.ss.bought': SB('b.ough.t'),
+  'reading.y3.ss.station': SB('s.t.a.ti.o.n'),
+  'reading.y3.ss.chef': SB('ch.e.f'),
+  'reading.y3.ss.gnome': SB('gn.o_e.m'),
+  'reading.y3.beats.caterpillar': beats('cat-er-pil-lar'),
+  'reading.y3.beats.helicopter': beats('hel-i-cop-ter'),
+  'reading.y3.beats.television': beats('tel-e-vi-sion'),
+  'reading.y3.chunks.fantastic': beats('fan-tas-tic'),
+  'reading.y3.chunks.dinosaur': beats('di-no-saur'),
+  'reading.y3.chunkspell.astronaut': beats('as-tro-naut'),
+};
+for (const [id, v] of Object.entries(TOPIC_VISUALS)) { const t = topics.find((x) => x.id === id); if (!t) throw new Error(`picture for unknown topic ${id}`); t.visual = v; }
+for (const [id, v] of Object.entries(ITEM_VISUALS)) { const it = items.find((x) => x.id === id); if (!it) throw new Error(`picture for unknown item ${id}`); it.visual = v; }
+
 export default [{ subject: 'reading', deck: 'y3-phonics', topics, items }];

@@ -37,13 +37,32 @@
       { kind: 'blocks', rows: [{ parts: [['The cat', 'subject'], ['chased', 'verb'], ['the mouse', 'object'], ['across the kitchen', 'adverbial']] }] },
       { kind: 'blocks', rows: [{ join: '+', parts: [['un', 'prefix'], ['happy', 'root'], ['ness', 'suffix']], result: 'unhappiness' }] },
       { kind: 'sounds', words: ['sh.i.p', 'r.ai.n', 'c.a_e.k', 'n.igh.t'] },
+      { kind: 'maths', diagram: { type: 'barmodel', total: '40 children', rows: [{ label: 'boys', parts: 2, shaded: 2 }, { label: 'girls', parts: 3 }] } },
+      { kind: 'maths', diagram: { type: 'barmodel', total: '£40', rows: [{ parts: 5, shaded: 3, text: '£8' }] } },
+      { kind: 'maths', diagram: { type: 'pvgrid', cols: ['Th', 'H', 'T', 'O'], rows: [['3', '4', '5'], ['3', '4', '5', '0']], shift: 1 } },
+      { kind: 'maths', diagram: { type: 'pvgrid', cols: [128, 64, 32, 16, 8, 4, 2, 1], rows: [['0', '1', '0', '1', '1', '0', '1', '0']] } },
+      { kind: 'maths', diagram: { type: 'areamodel', across: [30, 4], down: [20, 3] } },
+      { kind: 'maths', diagram: { type: 'fracwall', rows: [1, 2, 3, 4, 6, 8], shade: { 4: 3, 8: 6 } } },
+      { kind: 'maths', diagram: { type: 'hundredsq', shade: [3, 6, 9, 12, 15, 18, 21, 24, 27, 30], ring: [42] } },
+      { kind: 'maths', diagram: { type: 'possgrid', a: [1, 2, 3, 4, 5, 6], b: [1, 2, 3, 4, 5, 6], op: 'sum', shade: [7] } },
+      { kind: 'maths', diagram: { type: 'possgrid', a: ['B', 'b'], b: ['B', 'b'] } },
+      { kind: 'maths', diagram: { type: 'polygon', sides: 5, name: 'pentagon', corners: true } },
+      { kind: 'maths', diagram: { type: 'solid', shape: 'cuboid' } },
+      { kind: 'maths', diagram: { type: 'solid', shape: 'pyramid' } },
+      { kind: 'maths', diagram: { type: 'solid', shape: 'prism' } },
+      { kind: 'maths', diagram: { type: 'solid', shape: 'cylinder' } },
+      { kind: 'maths', diagram: { type: 'solid', shape: 'cone' } },
+      { kind: 'maths', diagram: { type: 'solid', shape: 'sphere' } },
+      { kind: 'maths', diagram: { type: 'line', title: 'Gas given off', xs: ['0', '10', '20', '30', '40', '50'], series: [{ name: 'large chips', ys: [0, 22, 38, 50, 56, 58] }, { name: 'powder', ys: [0, 48, 72, 84, 88, 90] }], ylabel: 'cm³', xlabel: 'time (s)' } },
+      { kind: 'maths', diagram: { type: 'line', title: 'CO₂ in the air', xs: ['1800', '1900', '1960', '2000', '2025'], ys: [280, 296, 317, 369, 427], min: 260, scaleX: true, ylabel: 'ppm' } },
+      { kind: 'maths', diagram: { type: 'line', title: 'Temperature during one day', xs: ['6', '9', '12', '15', '18'], ys: [4, 9, 14, 13, 8], ylabel: '°C' } },
     ];
     if (q.get('sample')) SAMPLES.forEach((v, i) => card(`sample ${i} ${v.kind}`, renderVisual(v)));
     else if (q.get('diagrams')) {
       const idx = await read('index.json');
       for (const [id, path] of Object.entries(idx.maps)) {
         const map = await read(path);
-        if (map.kind !== 'diagram') continue;
+        if (map.kind !== 'diagram' || (q.get('only') && !q.get('only').split(',').includes(id))) continue;
         card(`diagram ${id} (labels)`, renderVisual({ kind: 'diagram', id }));
         if (q.get('parts')) for (const f of map.features) card(`diagram ${id} → ${f.id} (question view)`, renderVisual({ kind: 'diagram', id, highlight: f.id, question: true }, { inQuestion: true }));
       }
@@ -56,7 +75,7 @@
           const d = await read(p);
           for (const x of [...(d.topics || []), ...(d.items || [])]) {
             if (!x.visual) continue;
-            if (q.get('only') && !x.id.includes(q.get('only'))) continue;
+            if (q.get('only') && !q.get('only').split(',').some((o) => x.id.includes(o))) continue;
             errors.push(...visualErrors(x.visual, x.id));
             card(`${course} ${x.id}`, renderVisual(x.visual));
           }

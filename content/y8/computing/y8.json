@@ -24,7 +24,45 @@
    "intro": "Algorithms can be drawn as flowcharts or written in pseudocode: structured English that is easy to turn into any programming language. Every algorithm is built from sequence, selection and iteration.",
    "teach": "Explain what each flowchart shape means.",
    "talk": "Ask {him} to describe the algorithm {she} uses to get ready in the morning, including one decision.",
-   "hook": "**Oval = start or stop, rectangle = process, diamond = decision, parallelogram = input or output.**"
+   "hook": "**Oval = start or stop, rectangle = process, diamond = decision, parallelogram = input or output.**",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "shape",
+      "used for"
+     ],
+     "rows": [
+      [
+       "oval",
+       "Start and Stop"
+      ],
+      [
+       "parallelogram",
+       "input or output: Ask for a name"
+      ],
+      [
+       "rectangle",
+       "a process: add 1 to score"
+      ],
+      [
+       "diamond",
+       "a decision, with Yes and No exits"
+      ]
+     ]
+    },
+    {
+     "kind": "flow",
+     "steps": [
+      "Start",
+      "Input heads",
+      "Decision: is heads > 7?",
+      "Yes: output “Hydra!” / No: output “Just a snake”",
+      "Stop"
+     ],
+     "caption": "Sequence, then selection: the decision diamond has two exits."
+    }
+   ]
   },
   {
    "id": "computing.python",
@@ -37,7 +75,38 @@
    "intro": "A variable is a named box in memory. Python knows the difference between whole numbers (int), decimals (float), text (str) and True/False (bool), and the type changes what operators do: \"3\" + \"4\" is \"34\"!",
    "teach": "Explain why input() needs int() around it before you can do maths with the answer.",
    "talk": "Ask {him} what 17 // 5 and 17 % 5 give, and why both are useful.",
-   "hook": "**int, float, str, bool**: whole numbers, decimals, text and True/False."
+   "hook": "**int, float, str, bool**: whole numbers, decimals, text and True/False.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "variable",
+     "value",
+     "type"
+    ],
+    "rows": [
+     [
+      "name",
+      "\"Athena\"",
+      "str"
+     ],
+     [
+      "heads",
+      "9",
+      "int"
+     ],
+     [
+      "price",
+      "3.14",
+      "float"
+     ],
+     [
+      "alive",
+      "True",
+      "bool"
+     ]
+    ],
+    "caption": "Each variable is a named box. The type matters: \"3\" + \"4\" gives \"34\", but 3 + 4 gives 7."
+   }
   },
   {
    "id": "computing.selection",
@@ -50,7 +119,16 @@
    "intro": "Selection lets a program make decisions, like the Oracle answering differently depending on the question. Python checks conditions in order and runs the first one that is True.",
    "teach": "Explain the difference between using elif and using several separate if statements.",
    "talk": "Ask {him} to write (on paper) an if/elif/else that turns a test score into a grade.",
-   "hook": "**if, elif, else**: Python takes the first path that is True and skips the rest."
+   "hook": "**if, elif, else**: Python takes the first path that is True and skips the rest.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "if heads > 7: True? print “Hydra!” and skip the rest",
+     "elif heads > 1: checked only if the if was False",
+     "else: runs only if everything above was False"
+    ],
+    "caption": "Python checks the conditions in order and runs only the first one that is True."
+   }
   },
   {
    "id": "computing.loops",
@@ -63,7 +141,17 @@
    "intro": "Loops repeat code. A for loop repeats a set number of times (count-controlled); a while loop repeats until a condition becomes False (condition-controlled). Forget to change the condition and it loops for ever, like Sisyphus and his boulder.",
    "teach": "Explain when you would choose a while loop instead of a for loop.",
    "talk": "Ask {him} what range(2, 10, 3) produces.",
-   "hook": "**for = I know how many times; while = keep going until something changes.**"
+   "hook": "**for = I know how many times; while = keep going until something changes.**",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "Check: is lives > 0?",
+     "True: run the loop body",
+     "Update: lives = lives − 1"
+    ],
+    "centre": "False? Leave the loop",
+    "caption": "A while loop. Leave out the update and the check never becomes False: an infinite loop."
+   }
   },
   {
    "id": "computing.lists",
@@ -76,7 +164,33 @@
    "intro": "Lists store many values under one name, and strings are really sequences of characters. Both count positions from 0. Functions package up code so it can be reused, which is decomposition in action.",
    "teach": "Explain the difference between a parameter and a return value.",
    "talk": "Ask {him} what \"ODYSSEY\"[1:4] would give, and why.",
-   "hook": "**A list starts counting at 0**: the first item is at index 0."
+   "hook": "**A list starts counting at 0**: the first item is at index 0.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "index",
+     "item",
+     "from the end"
+    ],
+    "rows": [
+     [
+      "0",
+      "\"Clio\"",
+      "−3"
+     ],
+     [
+      "1",
+      "\"Calliope\"",
+      "−2"
+     ],
+     [
+      "2",
+      "\"Urania\"",
+      "−1"
+     ]
+    ],
+    "caption": "muses = [\"Clio\", \"Calliope\", \"Urania\"]. Counting starts at 0, so muses[0] is \"Clio\" and muses[3] does not exist."
+   }
   },
   {
    "id": "computing.debugging",
@@ -102,7 +216,16 @@
    "intro": "Linear search checks every item in turn. Binary search keeps halving a SORTED list, so it can find one item among a million in about 20 checks. Choosing the right algorithm matters.",
    "teach": "Explain why binary search only works on a sorted list.",
    "talk": "Play “I’m thinking of a number from 1 to 100” and count how many guesses halving takes.",
-   "hook": "**Binary search: halve, halve, halve**, but only on a sorted list."
+   "hook": "**Binary search: halve, halve, halve**, but only on a sorted list.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Sorted list: 4 9 15 22 30 41 56",
+     "Check the middle, **22**. 41 is bigger, so drop 22 and everything left of it",
+     "Still in play: 30 41 56. Check the middle, **41**: found!"
+    ],
+    "caption": "Binary search for 41: found in 2 checks. A linear search, checking each item in turn, needs 6."
+   }
   },
   {
    "id": "computing.sorting",
@@ -115,7 +238,45 @@
    "intro": "Bubble sort swaps neighbours until nothing moves; insertion sort builds a sorted section one item at a time; merge sort splits the list in half again and again, then merges the pieces: divide and conquer.",
    "teach": "Explain how one pass of a bubble sort works.",
    "talk": "Ask {him} to sort a hand of playing cards using insertion sort, then explain each step.",
-   "hook": "**Bubble swaps neighbours, insertion slides each item into place, merge splits then merges.**"
+   "hook": "**Bubble swaps neighbours, insertion slides each item into place, merge splits then merges.**",
+   "visual": {
+    "kind": "table",
+    "rows": [
+     [
+      "start",
+      "5",
+      "1",
+      "4",
+      "2",
+      "8"
+     ],
+     [
+      "after pass 1",
+      "1",
+      "4",
+      "2",
+      "5",
+      "**8**"
+     ],
+     [
+      "after pass 2",
+      "1",
+      "2",
+      "4",
+      "**5**",
+      "**8**"
+     ],
+     [
+      "pass 3",
+      "1",
+      "2",
+      "4",
+      "5",
+      "8"
+     ]
+    ],
+    "caption": "Bubble sort: compare neighbours and swap if they are in the wrong order. The biggest bubbles to the end each pass. Pass 3 makes no swaps, so it stops."
+   }
   },
   {
    "id": "computing.binary",
@@ -128,7 +289,36 @@
    "intro": "Inside a computer, everything is binary: billions of tiny switches that are on (1) or off (0). Hexadecimal is a shorthand programmers use, because one hex digit stands for exactly four bits.",
    "teach": "Explain why programmers use hexadecimal instead of long binary numbers.",
    "talk": "Ask {him} to count to 15 in binary on {her} fingers.",
-   "hook": "**Binary place values double**: 1, 2, 4, 8, 16, 32, 64, 128."
+   "hook": "**Binary place values double**: 1, 2, 4, 8, 16, 32, 64, 128.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "pvgrid",
+     "cols": [
+      128,
+      64,
+      32,
+      16,
+      8,
+      4,
+      2,
+      1
+     ],
+     "rows": [
+      [
+       "0",
+       "0",
+       "1",
+       "0",
+       "1",
+       "1",
+       "0",
+       "1"
+      ]
+     ]
+    },
+    "caption": "00101101 = 32 + 8 + 4 + 1 = 45. Split it into two nibbles: 0010 = 2 and 1101 = 13 = D, so 45 is 2D in hex."
+   }
   },
   {
    "id": "computing.binarymaths",
@@ -141,7 +331,98 @@
    "intro": "Binary addition works like column addition, but 1 + 1 = 10. When an answer is too big for the bits available, an overflow error happens. Shifting the bits left or right multiplies or divides by 2.",
    "teach": "Explain what causes an overflow error.",
    "talk": "Ask {him} why shifting 00000101 two places left gives 20.",
-   "hook": "**1 + 1 = 10 in binary**: write 0, carry 1. Shift left to double, shift right to halve."
+   "hook": "**1 + 1 = 10 in binary**: write 0, carry 1. Shift left to double, shift right to halve.",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "add",
+      "write",
+      "carry"
+     ],
+     "rows": [
+      [
+       "0 + 0",
+       "0",
+       "0"
+      ],
+      [
+       "0 + 1",
+       "1",
+       "0"
+      ],
+      [
+       "1 + 1",
+       "0",
+       "**1**"
+      ],
+      [
+       "1 + 1 + 1",
+       "1",
+       "**1**"
+      ]
+     ]
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "pvgrid",
+      "cols": [
+       128,
+       64,
+       32,
+       16,
+       8,
+       4,
+       2,
+       1
+      ],
+      "rows": [
+       [
+        "",
+        "",
+        "",
+        "",
+        "1",
+        "1",
+        "",
+        ""
+       ],
+       [
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1",
+        "1",
+        "0"
+       ],
+       [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1",
+        "1"
+       ],
+       [
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "1"
+       ]
+      ]
+     },
+     "caption": "Top row: the carries. 00100110 (38) + 00010011 (19) = 00111001 (57)."
+    }
+   ]
   },
   {
    "id": "computing.media",
@@ -154,7 +435,126 @@
    "intro": "Text, pictures and music all become binary. Characters use codes like ASCII and Unicode; images are grids of pixels; sound is sampled thousands of times a second. More bits mean better quality, and bigger files.",
    "teach": "Explain how colour depth and resolution affect an image’s file size.",
    "talk": "Look at the size of a photo on a phone together and work out why it is so big.",
-   "hook": "**More bits = better quality = bigger file.**"
+   "hook": "**More bits = better quality = bigger file.**",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "squares",
+     "cols": 7,
+     "rows": 6,
+     "cells": [
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       0,
+       4
+      ],
+      [
+       0,
+       5
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       4
+      ],
+      [
+       1,
+       5
+      ],
+      [
+       1,
+       6
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       2,
+       5
+      ],
+      [
+       2,
+       6
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       3,
+       4
+      ],
+      [
+       3,
+       5
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       4,
+       4
+      ],
+      [
+       5,
+       3
+      ]
+     ]
+    },
+    "caption": "With 1 bit per pixel, each pixel is 1 (coloured) or 0 (blank): the top row is 0110110. 7 × 6 pixels × 1 bit = 42 bits."
+   }
   },
   {
    "id": "computing.logic",
@@ -167,7 +567,68 @@
    "intro": "Every decision a computer makes comes down to logic gates: AND, OR, NOT and XOR, built from transistors. A truth table lists every possible input and the output it gives.",
    "teach": "Explain the difference between OR and XOR with a real-life example.",
    "talk": "Ask {him} to make up a rule for opening a door that needs an AND and a NOT.",
-   "hook": "**AND: both. OR: either or both. NOT: flip it. XOR: one or the other, not both.**"
+   "hook": "**AND: both. OR: either or both. NOT: flip it. XOR: one or the other, not both.**",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "A",
+      "B",
+      "A AND B",
+      "A OR B",
+      "A XOR B"
+     ],
+     "rows": [
+      [
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "0",
+       "1",
+       "0",
+       "1",
+       "1"
+      ],
+      [
+       "1",
+       "0",
+       "0",
+       "1",
+       "1"
+      ],
+      [
+       "1",
+       "1",
+       "**1**",
+       "1",
+       "**0**"
+      ]
+     ],
+     "caption": "AND needs both; OR needs at least one; XOR needs exactly one."
+    },
+    {
+     "kind": "table",
+     "head": [
+      "A",
+      "NOT A"
+     ],
+     "rows": [
+      [
+       "0",
+       "1"
+      ],
+      [
+       "1",
+       "0"
+      ]
+     ],
+     "caption": "NOT has one input and flips it."
+    }
+   ]
   },
   {
    "id": "computing.hardware",
@@ -180,7 +641,16 @@
    "intro": "The CPU is the brain: it fetches, decodes and executes billions of instructions a second. RAM holds what is running now and forgets it when the power goes; storage keeps files safe.",
    "teach": "Explain the fetch–decode–execute cycle.",
    "talk": "Ask {him} to find out how much RAM and storage the family computer or phone has.",
-   "hook": "**Fetch, decode, execute**: the CPU’s heartbeat, billions of times a second."
+   "hook": "**Fetch, decode, execute**: the CPU’s heartbeat, billions of times a second.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "Fetch the next instruction from RAM",
+     "Decode: work out what it means",
+     "Execute: carry it out"
+    ],
+    "centre": "CPU"
+   }
   },
   {
    "id": "computing.software",
@@ -193,7 +663,29 @@
    "intro": "Software tells the hardware what to do. The operating system manages everything; applications do jobs for us; translators turn the code we write into the machine code the CPU understands.",
    "teach": "Explain the difference between a compiler and an interpreter.",
    "talk": "Ask {him} to name three jobs the operating system does while {she} is using a laptop.",
-   "hook": "**A compiler translates the whole program first; an interpreter goes line by line.**"
+   "hook": "**A compiler translates the whole program first; an interpreter goes line by line.**",
+   "visual": [
+    {
+     "kind": "flow",
+     "steps": [
+      "You, the user",
+      "Applications: browser, games, Python",
+      "Operating system: memory, files, devices",
+      "Hardware: CPU, RAM, storage"
+     ],
+     "caption": "Layers: each one uses the one below."
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "Python code (high-level)",
+      "compiler or interpreter",
+      "machine code (binary)"
+     ],
+     "caption": "A translator turns the code we write into machine code the CPU can run."
+    }
+   ]
   },
   {
    "id": "computing.networks",
@@ -206,7 +698,17 @@
    "intro": "A network connects devices so they can share. The internet is a network of networks; the World Wide Web is just one service that runs on it. Data travels in small packets that can take different routes.",
    "teach": "Explain the difference between the internet and the World Wide Web.",
    "talk": "Ask {him} what happens, step by step, when {she} types a website address.",
-   "hook": "**The internet is the roads; the web is just one kind of traffic on them.**"
+   "hook": "**The internet is the roads; the web is just one kind of traffic on them.**",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "The email is split into numbered packets",
+     "Each packet carries the destination IP address",
+     "Routers send each packet on the best route now",
+     "Packets may arrive out of order",
+     "They are put back in order by number"
+    ]
+   }
   },
   {
    "id": "computing.security",
@@ -230,7 +732,39 @@
    "intro": "From an ancient Greek bronze gearbox that predicted eclipses, to Babbage, Lovelace and Turing, to the phone in your pocket: computing has a surprisingly long history.",
    "teach": "Explain why Ada Lovelace is sometimes called the first computer programmer.",
    "talk": "Look up a photo of the Antikythera mechanism together.",
-   "hook": "**Antikythera, Babbage, Lovelace, Turing, Berners-Lee**: gears, engines, code, codebreaking, the web."
+   "hook": "**Antikythera, Babbage, Lovelace, Turing, Berners-Lee**: gears, engines, code, codebreaking, the web.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1820,
+    "to": 2000,
+    "events": [
+     [
+      1837,
+      "Babbage’s Analytical Engine"
+     ],
+     [
+      1843,
+      "Lovelace’s program"
+     ],
+     [
+      1936,
+      "Turing machine"
+     ],
+     [
+      1944,
+      "Colossus"
+     ],
+     [
+      1947,
+      "the transistor"
+     ],
+     [
+      1989,
+      "the World Wide Web"
+     ]
+    ],
+    "caption": "The Antikythera mechanism, a Greek geared calculator, is far older: over 2,000 years old."
+   }
   },
   {
    "id": "computing.ethics",
@@ -257,7 +791,38 @@
    "teach": "Explain how to fill in a trace table for a loop.",
    "talk": "Ask {him} to trace a Fibonacci loop on paper.",
    "tier": "stretch",
-   "hook": "**One column per variable, one new value each time it changes.**"
+   "hook": "**One column per variable, one new value each time it changes.**",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "step",
+     "i",
+     "total"
+    ],
+    "rows": [
+     [
+      "total = 0",
+      "",
+      "0"
+     ],
+     [
+      "loop, i = 1",
+      "1",
+      "1"
+     ],
+     [
+      "loop, i = 2",
+      "2",
+      "3"
+     ],
+     [
+      "loop, i = 3",
+      "3",
+      "**6**"
+     ]
+    ],
+    "caption": "Tracing `total = 0` then `for i in range(1, 4): total = total + i`: one new row each time a value changes."
+   }
   },
   {
    "id": "computing.twos",
@@ -271,7 +836,56 @@
    "teach": "Explain how to turn −20 into 8-bit two’s complement.",
    "talk": "Ask {him} what the smallest number in 8-bit two’s complement is.",
    "tier": "stretch",
-   "hook": "**Flip the bits and add 1** to make a number negative in two’s complement."
+   "hook": "**Flip the bits and add 1** to make a number negative in two’s complement.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "pvgrid",
+     "cols": [
+      "−128",
+      64,
+      32,
+      16,
+      8,
+      4,
+      2,
+      1
+     ],
+     "rows": [
+      [
+       "0",
+       "0",
+       "0",
+       "1",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "1",
+       "1",
+       "1",
+       "0",
+       "1",
+       "0",
+       "1",
+       "1"
+      ],
+      [
+       "1",
+       "1",
+       "1",
+       "0",
+       "1",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "caption": "20 = 00010100. Flip every bit: 11101011. Add 1: 11101100 = −128 + 64 + 32 + 8 + 4 = −20."
+   }
   },
   {
    "id": "computing.sql",
@@ -285,7 +899,43 @@
    "teach": "Explain what a primary key is and why every table needs one.",
    "talk": "Ask {him} to design a table of the Olympian gods: what fields would it need?",
    "tier": "stretch",
-   "hook": "**SELECT the fields, FROM the table, WHERE the condition is true.**"
+   "hook": "**SELECT the fields, FROM the table, WHERE the condition is true.**",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "id",
+     "name",
+     "home",
+     "strength"
+    ],
+    "rows": [
+     [
+      "1",
+      "Perseus",
+      "Argos",
+      "78"
+     ],
+     [
+      "2",
+      "Theseus",
+      "Athens",
+      "84"
+     ],
+     [
+      "3",
+      "Jason",
+      "Iolcus",
+      "71"
+     ],
+     [
+      "4",
+      "Atalanta",
+      "Arcadia",
+      "88"
+     ]
+    ],
+    "caption": "Table Heroes. Each row is a record; each column is a field. id is the primary key: unique for every record."
+   }
   },
   {
    "id": "computing.topologies",
@@ -476,7 +1126,32 @@
     "choice"
    ],
    "hook": "**Diamond = decision**: its corners point to the different ways out.",
-   "example": "In a getting-ready flowchart, “Is it raining?” is a diamond: yes leads to the umbrella, no to the sunglasses."
+   "example": "In a getting-ready flowchart, “Is it raining?” is a diamond: yes leads to the umbrella, no to the sunglasses.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "shape",
+     "used for"
+    ],
+    "rows": [
+     [
+      "oval",
+      "Start and Stop"
+     ],
+     [
+      "parallelogram",
+      "input or output: Ask for a name"
+     ],
+     [
+      "rectangle",
+      "a process: add 1 to score"
+     ],
+     [
+      "diamond",
+      "a decision, with Yes and No exits"
+     ]
+    ]
+   }
   },
   {
    "id": "computing.fc.para",
@@ -494,7 +1169,32 @@
     "choice"
    ],
    "hook": "**Parallelogram = put in or print out**: the slanted box for input and output.",
-   "example": "A cash machine asking for your PIN and then showing your balance: both are parallelograms."
+   "example": "A cash machine asking for your PIN and then showing your balance: both are parallelograms.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "shape",
+     "used for"
+    ],
+    "rows": [
+     [
+      "oval",
+      "Start and Stop"
+     ],
+     [
+      "parallelogram",
+      "input or output: Ask for a name"
+     ],
+     [
+      "rectangle",
+      "a process: add 1 to score"
+     ],
+     [
+      "diamond",
+      "a decision, with Yes and No exits"
+     ]
+    ]
+   }
   },
   {
    "id": "computing.fc.rect",
@@ -1169,7 +1869,32 @@
    ],
    "explain": "A list of 3 items has indexes 0 to 2. Asking for index 3 is a runtime error.",
    "hook": "**Last index = length − 1**: 3 items have indexes 0, 1 and 2.",
-   "example": "A three-storey UK house has floors 0, 1 and 2: there is no floor 3."
+   "example": "A three-storey UK house has floors 0, 1 and 2: there is no floor 3.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "index",
+     "item"
+    ],
+    "rows": [
+     [
+      "0",
+      "\"Clio\""
+     ],
+     [
+      "1",
+      "\"Calliope\""
+     ],
+     [
+      "2",
+      "\"Urania\""
+     ],
+     [
+      "3",
+      "**nothing there: IndexError**"
+     ]
+    ]
+   }
   },
   {
    "id": "computing.ls.append",
@@ -1620,7 +2345,18 @@
    ],
    "explain": "It splits the list into halves until each piece has one item, then merges the pieces in order.",
    "hook": "**Merge sort = divide and conquer**: split, split, split, then merge.",
-   "example": "Two teachers each sort half the exam papers, then merge their piles: quicker than one sorting them all."
+   "example": "Two teachers each sort half the exam papers, then merge their piles: quicker than one sorting them all.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "6 2 7 3",
+     "split: 6 2 | 7 3",
+     "split: 6 | 2 | 7 | 3",
+     "merge pairs: 2 6 | 3 7",
+     "merge: 2 3 6 7"
+    ],
+    "caption": "Divide and conquer: split until each piece has one item, then merge the sorted pieces."
+   }
   },
   {
    "id": "computing.so.big",
@@ -1814,7 +2550,24 @@
    ],
    "explain": "Each pair of hex digits is one byte: 0 to 255 for red, green and blue.",
    "hook": "**FF = 15 × 16 + 15 = 255**, the biggest value one byte can hold.",
-   "example": "On any web page, #FFFFFF is white (every colour full on) and #000000 is black."
+   "example": "On any web page, #FFFFFF is white (every colour full on) and #000000 is black.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "pvgrid",
+     "cols": [
+      16,
+      1
+     ],
+     "rows": [
+      [
+       "F",
+       "F"
+      ]
+     ]
+    },
+    "caption": "F = 15, so FF = 15 × 16 + 15 = 255, the biggest number one byte can hold."
+   }
   },
   {
    "id": "computing.bm.tmpl",
@@ -1910,7 +2663,60 @@
    ],
    "explain": "With 8 bits, anything over 255 overflows: the extra carry is lost.",
    "hook": "**Too big for the bits = overflow**: 8 bits stop at 255.",
-   "example": "The Year 2000 bug came from storing years with only two digits, so 2000 looked like 1900: not enough room."
+   "example": "The Year 2000 bug came from storing years with only two digits, so 2000 looked like 1900: not enough room.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "pvgrid",
+     "cols": [
+      "9th",
+      128,
+      64,
+      32,
+      16,
+      8,
+      4,
+      2,
+      1
+     ],
+     "rows": [
+      [
+       "",
+       "1",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "",
+       "0",
+       "1",
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "1",
+       "0",
+       "0",
+       "1",
+       "0",
+       "1",
+       "1",
+       "0",
+       "0"
+      ]
+     ]
+    },
+    "caption": "200 + 100 = 300 needs 9 bits. The 1 that spills into a 9th column is lost: overflow. The byte keeps 00101100 = 44."
+   }
   },
   {
    "id": "computing.bm.right",
@@ -1934,7 +2740,47 @@
     }
    ],
    "explain": "Each place to the right is worth half as much.",
-   "hook": "**Right shift halves, left shift doubles.**"
+   "hook": "**Right shift halves, left shift doubles.**",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "pvgrid",
+     "cols": [
+      128,
+      64,
+      32,
+      16,
+      8,
+      4,
+      2,
+      1
+     ],
+     "rows": [
+      [
+       "",
+       "",
+       "1",
+       "0",
+       "1",
+       "1",
+       "0",
+       "0"
+      ],
+      [
+       "",
+       "",
+       "",
+       "1",
+       "0",
+       "1",
+       "1",
+       "0"
+      ]
+     ],
+     "shift": -1
+    },
+    "caption": "Right shift by 1: every bit moves one place right, so 44 becomes 22 (halved)."
+   }
   },
   {
    "id": "computing.md.tmpl",
@@ -2371,7 +3217,16 @@
    "labels": null,
    "explain": "Fetch the instruction from memory, decode what it means, execute it. Then repeat, billions of times a second.",
    "hook": "**Fetch, decode, execute**: get it, work out what it means, do it.",
-   "example": "Like following a recipe: read the next step, work out what it means, then do it."
+   "example": "Like following a recipe: read the next step, work out what it means, then do it.",
+   "visual": {
+    "kind": "cycle",
+    "steps": [
+     "Fetch the next instruction from RAM",
+     "Decode: work out what it means",
+     "Execute: carry it out"
+    ],
+    "centre": "CPU"
+   }
   },
   {
    "id": "computing.hw.ram",
@@ -3692,7 +4547,56 @@
     "minus 128",
     "negative 128"
    ],
-   "hook": "**The top bit is −128**; the other seven bits are positive as usual."
+   "hook": "**The top bit is −128**; the other seven bits are positive as usual.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "pvgrid",
+     "cols": [
+      "−128",
+      64,
+      32,
+      16,
+      8,
+      4,
+      2,
+      1
+     ],
+     "rows": [
+      [
+       "1",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0",
+       "0"
+      ],
+      [
+       "0",
+       "1",
+       "1",
+       "1",
+       "1",
+       "1",
+       "1",
+       "1"
+      ],
+      [
+       "1",
+       "1",
+       "1",
+       "1",
+       "1",
+       "1",
+       "1",
+       "1"
+      ]
+     ]
+    },
+    "caption": "10000000 = −128 (the smallest); 01111111 = 127 (the largest); 11111111 = −128 + 127 = −1."
+   }
   },
   {
    "id": "computing.tw.flip",
@@ -3812,7 +4716,33 @@
     }
    ],
    "explain": "SELECT fields FROM table WHERE condition;",
-   "hook": "**SELECT what, FROM where, WHERE which.**"
+   "hook": "**SELECT what, FROM where, WHERE which.**",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "name",
+     "home"
+    ],
+    "rows": [
+     [
+      "Perseus",
+      "Argos"
+     ],
+     [
+      "**Theseus**",
+      "**Athens**"
+     ],
+     [
+      "Jason",
+      "Iolcus"
+     ],
+     [
+      "Atalanta",
+      "Arcadia"
+     ]
+    ],
+    "caption": "`SELECT name FROM Heroes WHERE home = 'Athens';` keeps only the rows where home is Athens, and shows their name field: Theseus."
+   }
   },
   {
    "id": "computing.sq.star",

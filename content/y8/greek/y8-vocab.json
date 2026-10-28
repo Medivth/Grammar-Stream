@@ -13,7 +13,30 @@
    "intro": "Sixteen people words. Several are third declension: the genitive (μητρός, ἀνδρός, παιδός) shows the stem. Learn each noun with its article and genitive, the way a dictionary gives it.",
    "teach": "Teach the words for mother, father, son and daughter, with their genitives.",
    "talk": "Ask {him} the Greek for “child” and which English word for a doctor comes from it.",
-   "hook": "Learn people words with their genitive: **μήτηρ, μητρός** → metropolis, a mother city."
+   "hook": "Learn people words with their genitive: **μήτηρ, μητρός** → metropolis, a mother city.",
+   "visual": {
+    "kind": "tree",
+    "root": {
+     "n": "ὁ πατήρ + ἡ μήτηρ",
+     "note": "father (πατρός) + mother (μητρός)",
+     "c": [
+      {
+       "n": "οἱ παῖδες",
+       "note": "the children (ὁ παῖς, παιδός)",
+       "c": [
+        {
+         "n": "ὁ υἱός",
+         "note": "son (υἱοῦ)"
+        },
+        {
+         "n": "ἡ θυγάτηρ",
+         "note": "daughter (θυγατρός)"
+        }
+       ]
+      }
+     ]
+    }
+   }
   },
   {
    "id": "greek.words-5",
@@ -78,7 +101,52 @@
    "intro": "Body parts (doctors still use them), and the feelings that drive every myth: fear, anger, hope and love.",
    "teach": "Pick three medical words and explain the Greek inside each.",
    "talk": "Ask {him} what an ophthalmologist and a cardiologist look after.",
-   "hook": "Doctors speak Greek: **καρδία** → cardiology, **ὀφθαλμός** → ophthalmologist."
+   "hook": "Doctors speak Greek: **καρδία** → cardiology, **ὀφθαλμός** → ophthalmologist.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Greek",
+     "means",
+     "doctors say"
+    ],
+    "rows": [
+     [
+      "κεφαλή",
+      "head",
+      "en**cephal**itis"
+     ],
+     [
+      "ὀφθαλμός",
+      "eye",
+      "**ophthalm**ologist"
+     ],
+     [
+      "καρδία",
+      "heart",
+      "**cardi**ology"
+     ],
+     [
+      "χείρ",
+      "hand",
+      "**chir**opractor"
+     ],
+     [
+      "πούς, ποδός",
+      "foot",
+      "tri**pod**, octo**pus**"
+     ],
+     [
+      "αἷμα",
+      "blood",
+      "**haem**oglobin"
+     ],
+     [
+      "σῶμα",
+      "body",
+      "psycho**som**atic"
+     ]
+    ]
+   }
   },
   {
    "id": "greek.words-10",
@@ -169,7 +237,52 @@
    "intro": "Nine more prepositions (each with its cases) and the conjunctions that join clauses: since, that, if, as, both… and.",
    "teach": "Explain the difference between οὐ and μή.",
    "talk": "Ask {him} to find a Greek preposition hiding in “hypodermic”, “perimeter” and “synthesis”.",
-   "hook": "Prepositions hide in English: **hypo**dermic, **peri**meter, **syn**thesis."
+   "hook": "Prepositions hide in English: **hypo**dermic, **peri**meter, **syn**thesis.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "with the case…, means"
+    ],
+    "rows": [
+     [
+      "ὑπό",
+      "**+ gen.** by (a person) · **+ dat./acc.** under"
+     ],
+     [
+      "παρά",
+      "**+ gen.** from · **+ dat.** beside · **+ acc.** to"
+     ],
+     [
+      "ἐπί",
+      "**+ gen./dat.** on · **+ acc.** onto, against"
+     ],
+     [
+      "κατά",
+      "**+ gen.** down from · **+ acc.** down, according to"
+     ],
+     [
+      "περί",
+      "**+ gen.** about · **+ acc.** around"
+     ],
+     [
+      "ὑπέρ",
+      "**+ gen.** over, on behalf of · **+ acc.** beyond"
+     ],
+     [
+      "πρό",
+      "**+ gen.** before, in front of"
+     ],
+     [
+      "σύν",
+      "**+ dat.** with"
+     ],
+     [
+      "ἀντί",
+      "**+ gen.** instead of"
+     ]
+    ]
+   }
   },
   {
    "id": "greek.words-17",
