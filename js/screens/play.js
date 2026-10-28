@@ -2,6 +2,7 @@
 
 import { h, rich, richHTML, mount, plain, spoken } from '../ui/dom.js';
 import { renderQuestion, sayButton, diagram } from '../ui/qtypes.js';
+import { renderVisual } from '../ui/visuals.js';
 import { capybaraEl } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
 import { speak } from '../platform/tts.js';
@@ -230,8 +231,8 @@ function introTopicStep(app, root, step) {
     h('h2', {}, t.title),
     t.links ? h('p', { class: 'joined' }, icon('link'), ` A joined-up topic: it uses your ${t.links.map((l) => SUBJECT_BY_ID[l].name).join(' and ')} skills too.`) : null,
     t.intro ? (COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(t.intro), rich('p', t.intro, { class: 'learn' })) : rich('p', t.intro, { class: 'learn' })) : null,
-    // with a diagnostic first, the hook would give its answers away: it comes after instead
-    (() => { const plan = activePlan(app.state); return plan.steps[plan.pos + 1]?.t === 'diag'; })() ? null : hookCard({ hook: t.hook }),
+    // with a diagnostic first, the hook and picture would give its answers away: they come after instead
+    (() => { const plan = activePlan(app.state); return plan.steps[plan.pos + 1]?.t === 'diag'; })() ? null : [renderVisual(t.visual), hookCard({ hook: t.hook })],
     t.diagnostic?.length ? h('p', { class: 'muted' }, 'First, a few questions to see what you think already. Just answer honestly: it’s fine not to know yet.') : null,
     h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'Let’s go')));
 }
@@ -240,6 +241,7 @@ function diagSummaryStep(app, root, step) {
   mount(root, header(app), h('div', { class: 'q-wrap stack' },
     h('h2', {}, 'Thanks!'),
     h('p', { class: 'learn' }, 'Those answers show what you think right now. Lots of people believe some of the wrong ideas, even adults. Now let’s learn the science properly.'),
+    renderVisual(app.db.topics[step.topic]?.visual),
     hookCard({ hook: app.db.topics[step.topic]?.hook }),
     h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'Carry on')));
 }
@@ -268,6 +270,8 @@ async function introStep(app, root, step) {
     parts.push(COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(`${learnText(item)} ${item.explain && !item.learn ? item.explain : ''}`), rich('div', learnText(item), { class: 'learn' })) : rich('div', learnText(item), { class: 'learn' }));
     if (item.explain && !item.learn) parts.push(rich('p', item.explain, { class: 'muted' }));
   }
+  const pic = renderVisual(item.visual);
+  if (pic) parts.splice(1, 0, pic);
   const hk = hookCard(item);
   if (hk) parts.push(hk);
   mount(root, header(app, subj.name), h('div', { class: 'q-wrap stack card pop' }, parts,
@@ -291,6 +295,7 @@ function workedStep(app, root, step) {
     h('p', { class: 'muted' }, 'Watch how I solve this one. Read each step.'),
     COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(q.prompt), rich('div', q.prompt, { class: 'q-prompt' })) : rich('div', q.prompt, { class: 'q-prompt' }),
     q.diagram ? diagram(q.diagram) : null,
+    renderVisual(q.visual),
     list,
     hookCard(q),
     COURSE.readAloud ? h('div', {}, h('button', { class: 'btn-ghost', type: 'button', onclick: () => speak(spoken(steps.slice(0, shown).at(-1) || '')) }, icon('speaker'), ' Read this step')) : null,
@@ -384,6 +389,8 @@ function feedbackPanel(q, res, step, conf) {
     if (q.explain) parts.push(rich('p', q.explain, { class: 'muted' }));
     if (q.steps && (step.t === 'practice' || step.t === 'faded')) parts.push(h('ol', { class: 'steps' }, q.steps.map((t) => rich('li', t))));
   }
+  const pic = renderVisual(q.visual);
+  if (pic) parts.push(pic);
   const hk = hookCard(q);
   if (hk) parts.push(hk);
   if (COURSE.readAloud) parts.splice(1, 0, h('div', {}, sayButton(`The answer is ${answerText}. ${q.explain || ''}`, 'Read it to me')));

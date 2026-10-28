@@ -50,6 +50,7 @@ export function validateDB(db, generators) {
     for (const d of t.diagnostic || []) if (db.items[d]?.topic !== t.id) errs.push(`topic ${t.id}: diagnostic ${d} is not an item of this topic`);
     if (!(db.itemsByTopic[t.id] || []).length) errs.push(`topic ${t.id}: has no items`);
     if (t.hook != null && (typeof t.hook !== 'string' || !t.hook.trim())) errs.push(`topic ${t.id}: hook must be text`);
+    if (t.visual != null) errs.push(...visualErrors(t.visual, `topic ${t.id}`));
   }
   // prerequisite cycles
   const state = {};
@@ -103,6 +104,7 @@ export function validateDB(db, generators) {
     }
     if (!['template', 'written'].includes(it.kind) && !it.explain) errs.push(`${where}: missing explain`);
     for (const k of ['hook', 'example']) if (it[k] != null && (typeof it[k] !== 'string' || !it[k].trim() || it[k].length > 220)) errs.push(`${where}: ${k} must be short text`);
+    if (it.visual != null) errs.push(...visualErrors(it.visual, where));
   }
   for (const s of db.sentences) {
     if (!s.model || !s.checks?.length) errs.push(`sentence ${s.id}: needs model and checks`);
@@ -115,5 +117,32 @@ export function validateDB(db, generators) {
   for (const b of db.ladder) if (!(b.rung >= 1 && b.rung <= 5) || !b.title || !b.author) errs.push(`book ${b.id}: needs rung 1-5, title, author`);
   if (db.ladder.length && db.rungs.length !== 5) errs.push('reading ladder needs 5 rung names');
   for (const e of db.timeline?.events || []) for (const i of e.items) if (!db.items[i]) errs.push(`timeline event ${e.label}: unknown item ${i}`);
+  return errs;
+}
+
+// ---------------------------------------------------------------- visuals
+// The shape each kind of picture needs (drawn by js/ui/visuals.js). Diagram ids are checked
+// against content/maps by the tests, which can see the files.
+const strs = (a, min) => Array.isArray(a) && a.length >= min && a.every((x) => typeof x === 'string' && x.trim());
+const VISUAL_SHAPES = {
+  diagram: (v) => typeof v.id === 'string' && (v.highlight == null || typeof v.highlight === 'string'),
+  maths: (v) => typeof v.diagram?.type === 'string',
+  timeline: (v) => Number.isFinite(v.from) && Number.isFinite(v.to) && v.from < v.to && (v.events || []).every((e) => Number.isFinite(e[0]) && typeof e[1] === 'string'),
+  cycle: (v) => strs(v.steps, 3) && v.steps.length <= 8,
+  flow: (v) => strs(v.steps, 2),
+  tree: (v) => { const ok = (n) => n && typeof n.n === 'string' && (n.c || []).every(ok); return ok(v.root); },
+  table: (v) => Array.isArray(v.rows) && v.rows.length && v.rows.every((r) => Array.isArray(r) && r.length),
+  blocks: (v) => Array.isArray(v.rows) && v.rows.length && v.rows.every((r) => Array.isArray(r.parts) && r.parts.length && r.parts.every((p) => Array.isArray(p) && typeof p[0] === 'string')),
+  sounds: (v) => strs(v.words, 1),
+};
+export const VISUAL_KINDS = Object.keys(VISUAL_SHAPES);
+export function visualErrors(visual, where) {
+  const errs = [];
+  for (const v of Array.isArray(visual) ? visual : [visual]) {
+    if (!v || typeof v !== 'object') { errs.push(`${where}: visual must be an object`); continue; }
+    if (!VISUAL_SHAPES[v.kind]) { errs.push(`${where}: unknown visual kind ${v.kind}`); continue; }
+    if (!VISUAL_SHAPES[v.kind](v)) errs.push(`${where}: ${v.kind} visual is missing what it needs`);
+    if (v.caption != null && (typeof v.caption !== 'string' || v.caption.length > 200)) errs.push(`${where}: visual caption must be short text`);
+  }
   return errs;
 }

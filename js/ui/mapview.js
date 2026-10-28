@@ -4,7 +4,7 @@ import { s, h } from './dom.js';
 
 const cache = {};
 export async function loadMap(id) {
-  if (!cache[id]) cache[id] = fetch(`content/maps/${id}.json`).then((r) => r.json());
+  if (!cache[id]) cache[id] = fetch(new URL(`../../content/maps/${id}.json`, import.meta.url)).then((r) => r.json());
   return cache[id];
 }
 
@@ -23,6 +23,8 @@ export function featureNames(map, layer) {
  */
 export function mapSVG(map, opts) {
   const { layer, highlight, locate, onPick, markerType, zoom } = opts;
+  // a diagram drawn with its labels needs the wider frame that leaves room for them
+  if (map.kind === 'diagram' && opts.labels && map.labelViewBox) map = { ...map, viewBox: map.labelViewBox };
   const svg = s('svg', { viewBox: viewBoxFor(map, zoom).join(' '), role: 'img', 'aria-label': 'Map' });
   const byId = {};
   const add = (el, id) => { if (id) (byId[id] ||= []).push(el); return el; };
@@ -35,6 +37,19 @@ export function mapSVG(map, opts) {
       svg.append(add(s('path', { d: f.d, fill: f.fill, 'fill-rule': f.rule || 'nonzero', class: cls, 'data-id': f.id, ...(locate ? { tabindex: '0', role: 'button' } : {}) }), f.id));
     }
     for (const dc of (map.decor || []).filter((x) => !x.under)) svg.append(s('path', { d: dc.d, fill: dc.fill, 'pointer-events': 'none' }));
+    // labels with leader lines, for learning: [x, y] of the text and the point on the part it names.
+    // In a question the part being asked about keeps its label hidden.
+    if (opts.labels) {
+      const size = map.labelSize || 14;
+      for (const f of map.features.filter((x) => x.label && x.id !== opts.hideLabel)) {
+        const [lx, ly] = f.label, [ax, ay] = f.at || f.label;
+        const anchor = f.anchor || (lx < ax - 4 ? 'end' : lx > ax + 4 ? 'start' : 'middle');
+        const hi = f.id === highlight;
+        svg.append(s('line', { x1: ax, y1: ay, x2: lx + (anchor === 'end' ? 3 : anchor === 'start' ? -3 : 0), y2: ly, class: 'dg-leader' }));
+        svg.append(s('circle', { cx: ax, cy: ay, r: size / 5, class: 'dg-dot' }));
+        svg.append(s('text', { x: lx, y: ly, 'text-anchor': anchor, 'dominant-baseline': 'middle', 'font-size': size, class: `dg-label${hi ? ' hi' : ''}` }, f.short || f.name));
+      }
+    }
   } else if (map.sphere) svg.append(s('path', { d: map.sphere, fill: 'var(--map-sea)' }));
   if (map.sea) svg.append(s('path', { d: map.sea, fill: 'var(--map-sea)' }));
   if (map.graticule) svg.append(s('path', { d: map.graticule, class: 'map-grat' }));

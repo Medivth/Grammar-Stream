@@ -79,7 +79,7 @@ function tidyGenerated(q) {
 }
 
 export function present(item, card, { db, state, rng, level, format }) {
-  const base = { itemId: item.id, topicId: item.topic, subject: item.subject, explain: item.explain, source: item.source, passage: item.passage, passageSource: item.passageSource, hook: item.hook, example: item.example, layer: item.layer || (item.map === 'europe' ? 'countries' : item.map === 'uk' ? 'features' : undefined), group: item.group };
+  const base = { itemId: item.id, topicId: item.topic, subject: item.subject, explain: item.explain, source: item.source, passage: item.passage, passageSource: item.passageSource, hook: item.hook, example: item.example, visual: item.visual, layer: item.layer || (item.map === 'europe' ? 'countries' : item.map === 'uk' ? 'features' : undefined), group: item.group };
   let q;
   switch (item.kind) {
     case 'fact': {

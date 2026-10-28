@@ -6,6 +6,7 @@ import { icon } from './icons.js';
 import { mapSVG, loadMap, featureNames } from './mapview.js';
 import { speak, ttsAvailable } from '../platform/tts.js';
 import { mathsDiagram } from './diagrams.js';
+import { renderVisual } from './visuals.js';
 
 export async function renderQuestion(q, { onChange = () => {}, settings = {} } = {}) {
   const parts = [];
@@ -33,6 +34,8 @@ export async function renderQuestion(q, { onChange = () => {}, settings = {} } =
     parts.push(mapView.el);
   }
   if (q.diagram) parts.push(diagram(q.diagram));
+  const pic = renderVisual(q.visual, { inQuestion: true });
+  if (pic) parts.push(pic);
 
   let view;
   switch (q.kind) {

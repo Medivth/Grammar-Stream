@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visual gallery</title>
+  <link rel="stylesheet" href="../css/app.css">
+  <style>
+    body { padding: 16px; }
+    .g-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; margin: 0 auto 14px; max-width: 760px; }
+    .g-id { font: 600 12px/1.4 ui-monospace, monospace; color: var(--muted); margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <!-- Developer page: every visual in the content, drawn as the app draws it. Used by tools/visual-gallery.mjs.
+       ?course=y6|ks1|y3|y8 (default all), ?diagrams=1 shows every labelled diagram with labels and each part picked out. -->
+  <main id="g"></main>
+  <script type="module">
+    import { renderVisual } from '../js/ui/visuals.js';
+    import { visualErrors } from '../js/core/content.js';
+    const q = new URLSearchParams(location.search);
+    const root = document.getElementById('g');
+    const card = (id, el) => { const c = document.createElement('section'); c.className = 'g-card'; c.dataset.id = id; const t = document.createElement('div'); t.className = 'g-id'; t.textContent = id; c.append(t, el || document.createTextNode('(nothing drawn)')); root.append(c); };
+    const errors = [];
+    const read = (p) => fetch('../content/' + p).then((r) => r.json());
+    const SAMPLES = [
+      { kind: 'diagram', id: 'flower', highlight: 'stigma' },
+      { kind: 'maths', diagram: { type: 'fracshape', shape: 'circle', parts: 4, shaded: 3 } },
+      { kind: 'timeline', from: -800, to: 1100, set: 'britain', mark: 'Roman Britain', events: [[43, 'Romans invade'], [61, 'Boudica’s revolt'], [122, 'Hadrian’s Wall begun'], [410, 'Romans leave'], [793, 'Vikings raid Lindisfarne'], [1066, 'Battle of Hastings']] },
+      { kind: 'timeline', from: 1066, to: 2026, set: 'britain', mark: 'Tudors', events: [[1485, 'Bosworth'], [1588, 'Armada'], [1666, 'Great Fire of London']] },
+      { kind: 'cycle', steps: ['egg', 'caterpillar', 'chrysalis', 'butterfly'], caption: 'The life cycle of a butterfly' },
+      { kind: 'cycle', steps: ['evaporation', 'condensation', 'precipitation', 'collection'], centre: 'the water cycle' },
+      { kind: 'flow', steps: ['Food is chewed in the mouth', 'It goes down the oesophagus', 'The stomach churns it with acid', 'The small intestine absorbs nutrients', 'The large intestine absorbs water'] },
+      { kind: 'flow', across: true, steps: ['crack', 'cave', 'arch', 'stack', 'stump'] },
+      { kind: 'tree', root: { n: 'Henry VIII', note: '1491–1547', c: [{ n: 'Mary I', note: 'mother: Catherine of Aragon' }, { n: 'Elizabeth I', note: 'mother: Anne Boleyn', mark: true }, { n: 'Edward VI', note: 'mother: Jane Seymour' }] } },
+      { kind: 'table', head: ['', 'singular', 'plural'], tint: 'cols', rows: [['nominative', 'ὁ λόγ**ος**', 'οἱ λόγ**οι**'], ['accusative', 'τὸν λόγ**ον**', 'τοὺς λόγ**ους**'], ['genitive', 'τοῦ λόγ**ου**', 'τῶν λόγ**ων**'], ['dative', 'τῷ λόγ**ῳ**', 'τοῖς λόγ**οις**']] },
+      { kind: 'blocks', rows: [{ parts: [['The cat', 'subject'], ['chased', 'verb'], ['the mouse', 'object'], ['across the kitchen', 'adverbial']] }] },
+      { kind: 'blocks', rows: [{ join: '+', parts: [['un', 'prefix'], ['happy', 'root'], ['ness', 'suffix']], result: 'unhappiness' }] },
+      { kind: 'sounds', words: ['sh.i.p', 'r.ai.n', 'c.a_e.k', 'n.igh.t'] },
+    ];
+    if (q.get('sample')) SAMPLES.forEach((v, i) => card(`sample ${i} ${v.kind}`, renderVisual(v)));
+    else if (q.get('diagrams')) {
+      const idx = await read('index.json');
+      for (const [id, path] of Object.entries(idx.maps)) {
+        const map = await read(path);
+        if (map.kind !== 'diagram') continue;
+        card(`diagram ${id} (labels)`, renderVisual({ kind: 'diagram', id }));
+        if (q.get('parts')) for (const f of map.features) card(`diagram ${id} → ${f.id} (question view)`, renderVisual({ kind: 'diagram', id, highlight: f.id, question: true }, { inQuestion: true }));
+      }
+    } else {
+      const seen = new Set();
+      for (const [course, file] of [['y6', 'index.json'], ['ks1', 'index-ks1.json'], ['y3', 'index-y3.json'], ['y8', 'index-y8.json']]) {
+        if (q.get('course') && q.get('course') !== course) continue;
+        for (const p of (await read(file)).decks) {
+          if (seen.has(p)) continue; seen.add(p);
+          const d = await read(p);
+          for (const x of [...(d.topics || []), ...(d.items || [])]) {
+            if (!x.visual) continue;
+            if (q.get('only') && !x.id.includes(q.get('only'))) continue;
+            errors.push(...visualErrors(x.visual, x.id));
+            card(`${course} ${x.id}`, renderVisual(x.visual));
+          }
+        }
+      }
+    }
+    window.__gallery = { errors, count: root.children.length };
+  </script>
+</body>
+</html>
