@@ -482,7 +482,7 @@ export const KS1_DEPTH_GENERATORS = {
       return choice('What time does the clock show?', right, [
         { text: m > 30 ? `${WORD[60 - m]} past ${h}` : `${WORD[m]} to ${next}`, feedback: m > 30 ? 'The long hand is on the left of the clock: it is “to” the next hour.' : 'The long hand is on the right of the clock: it is “past” the hour.' },
         { text: m > 30 ? `${WORD[60 - m]} to ${h}` : `${WORD[m]} past ${next}`, feedback: m > 30 ? `The short hand is nearly at ${next}, so it is ${WORD[60 - m]} to ${next}.` : `The short hand has just gone past ${h}.` },
-        { text: m > 30 ? `${m / 5} minutes to ${next}` : `${m / 5} minutes past ${h}`, feedback: `Each number on the clock is worth 5 minutes. The long hand points to ${m / 5}.` },
+        { text: m > 30 ? `${m / 5} minutes to ${next}` : `${m / 5} minute${m === 5 ? '' : 's'} past ${h}`, feedback: `Each number on the clock is worth 5 minutes. The long hand points to ${m / 5}.` },
       ], rng, { diagram: { type: 'clock', h, m }, explain: handsExplain(h, m), steps: ['The long hand shows the minutes.', m > 30 ? `It points to ${m / 5}: ${60 - m} minutes before the next hour.` : `It points to ${m / 5}: ${m} minutes past.`, `So it is ${right}.`] });
     }
     const m = rng.int(0, 11) * 5, dur = rng.pick([5, 10, 15, 20, 25, 30]), kind = rng.pick(['later', 'earlier', 'gap', 'gap']);
