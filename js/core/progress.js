@@ -89,6 +89,10 @@ export const KS1_MILESTONES = [
   { id: 'regular', title: 'Regular', desc: 'Practise on 12 days in one month', goal: 12, measure: (s) => { const m = {}; for (const x of s.sessions) if (x.completed) (m[monthKey(x.day)] ||= new Set()).add(x.day); return Math.max(0, ...Object.values(m).map((v) => v.size)); }, unlock: 'wings' },
   { id: 'hundred', title: 'Century', desc: 'Know 100 things', goal: 100, measure: (s) => learnedCount(s), unlock: 'gradcap' },
   { id: 'stretch', title: 'Beyond Year 2', desc: 'Secure 3 stretch topics', goal: 3, measure: (s, db) => secureIn(s, db, (t) => isStretch(t)), unlock: 'crown' },
+  // the greater-depth habits: talking about books, reading alone, and writing
+  { id: 'book-talker', title: 'Book talker', desc: 'Have 10 book talks with your grown-up', goal: 10, measure: (s) => (s.talks || []).length, unlock: 'owl' },
+  { id: 'own-reader', title: 'Reading on my own', desc: 'Read 300 minutes on your own', goal: 300, measure: (s) => (s.reading || []).filter((r) => r.solo).reduce((a, r) => a + r.minutes, 0), unlock: 'surfboard' },
+  { id: 'author', title: 'Author', desc: 'Hand in 3 pieces of writing', goal: 3, measure: (s) => (s.pieces || []).filter((p) => p.submittedDay).length, unlock: 'bowtie' },
 ];
 
 // Year 3: the Year 2 badges (so nothing he has earned goes away), with Year 3 goals added

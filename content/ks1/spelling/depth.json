@@ -1,0 +1,2275 @@
+{
+ "subject": "spelling",
+ "deck": "depth",
+ "topics": [
+  {
+   "id": "spelling.proofread",
+   "title": "Proof-reading: spot it, fix it",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.punctuation",
+    "spelling.suffixes-2",
+    "spelling.cew-2"
+   ],
+   "batch": 5,
+   "intro": "Good writers read their work again to find mistakes. Look for capital letters, full stops, question marks, tricky words and word endings. Spot it, then fix it!",
+   "teach": "Explain how you check a sentence for mistakes, one thing at a time.",
+   "talk": "Write a sentence with one mistake for {him} to find, then swap: {she} writes one for you."
+  },
+  {
+   "id": "spelling.suffix-use",
+   "title": "Adding endings in my writing: -ment, -ness, -ful, -less, -ly",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.suffixes-2"
+   ],
+   "batch": 5,
+   "intro": "Most words stay the same when you add -ment, -ness, -ful, -less or -ly: enjoy → enjoyment. Two rules: a y after a consonant changes to i (happy → happiness), and -le words swap le for ly (gentle → gently). And -ful has only one l!",
+   "teach": "Explain why happy + ness is spelt “happiness”.",
+   "talk": "Pick a root word and see how many endings {she} can add: care → careful, careless, carefully.",
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "enjoy",
+        "root",
+        "stays the same"
+       ],
+       [
+        "ment",
+        "suffix"
+       ]
+      ],
+      "result": "enjoyment"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "happ",
+        "root",
+        "happy"
+       ],
+       [
+        "i",
+        "ending",
+        "y becomes i"
+       ],
+       [
+        "ness",
+        "suffix"
+       ]
+      ],
+      "result": "happiness"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "gent",
+        "root",
+        "gentle"
+       ],
+       [
+        "ly",
+        "suffix",
+        "le becomes ly"
+       ]
+      ],
+      "result": "gently"
+     },
+     {
+      "join": "+",
+      "parts": [
+       [
+        "care",
+        "root"
+       ],
+       [
+        "ful",
+        "suffix",
+        "one l"
+       ]
+      ],
+      "result": "careful"
+     }
+    ],
+    "caption": "Usually just add the ending. Watch for y → i, le → ly, and -ful with one l."
+   }
+  },
+  {
+   "id": "spelling.cew-extra",
+   "title": "Spelling: the little words from Years 1 and 2",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.cew-1"
+   ],
+   "batch": 5,
+   "intro": "These are the rest of the tricky words from the Year 1 and Year 2 lists. You use them in nearly every sentence, so they need to be spot on!",
+   "teach": "Explain the tricky part of “our”, and why “I” is always a capital letter.",
+   "talk": "Ask {him} to write one sentence using “our”, “your” and “Mrs”."
+  },
+  {
+   "id": "spelling.cew-use",
+   "title": "Tricky words in sentences",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.cew-3"
+   ],
+   "batch": 5,
+   "intro": "Now use the tricky words in proper sentences, just like in your own writing. Listen to the word, then write it.",
+   "teach": "Choose one tricky word and say a new sentence that uses it.",
+   "talk": "Read one of these sentences aloud for {him} to write on paper, like a little dictation: tricky words and all."
+  },
+  {
+   "id": "spelling.cew-use-2",
+   "title": "Tricky words in sentences 2",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.cew-use",
+    "spelling.cew-5"
+   ],
+   "batch": 5,
+   "intro": "More tricky words from the Year 2 list, in sentences from the stories you have read.",
+   "teach": "Choose one tricky word and say a new sentence that uses it.",
+   "talk": "Dictate a sentence with two tricky words in it, such as “Who could find the money?”, for {him} to write."
+  },
+  {
+   "id": "spelling.punct-use",
+   "title": "Punctuation in my sentences",
+   "kind": "facts",
+   "prereqs": [
+    "spelling.apostrophes"
+   ],
+   "batch": 5,
+   "intro": "Punctuation helps your reader. Capital letters start sentences and names (and I). End with . or ? or !. Commas go between things in a list. Apostrophes show missing letters (can’t) or that something belongs to someone (Peter’s jacket).",
+   "teach": "Explain the difference between “the knights” and “the knight’s shield”.",
+   "talk": "Spot an apostrophe on a sign or a book cover, and ask {him} what job it is doing.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "Mark",
+     "Its job"
+    ],
+    "rows": [
+     [
+      "Capital letter",
+      "Starts a sentence; names, places, days and I"
+     ],
+     [
+      "**.**  **?**  **!**",
+      "Ends a sentence: telling, asking, or strong feeling"
+     ],
+     [
+      "Comma **,**",
+      "Between things in a list: sticks, string and a torch"
+     ],
+     [
+      "Apostrophe **’**",
+      "Missing letters (can’t) or belonging (Peter’s jacket)"
+     ]
+    ],
+    "tint": "rows"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "spelling.pr.cap",
+   "topic": "spelling.proofread",
+   "kind": "mcq",
+   "prompt": "Spot the mistake: “turbo raced round the track.”",
+   "options": [
+    {
+     "text": "A capital letter is missing.",
+     "correct": true
+    },
+    {
+     "text": "A full stop is missing.",
+     "correct": false,
+     "feedback": "Look at the end: the full stop is there."
+    },
+    {
+     "text": "It needs a question mark.",
+     "correct": false,
+     "feedback": "It tells you something: it isn’t asking."
+    }
+   ],
+   "explain": "Turbo starts the sentence, and it is a name too: it needs a capital T."
+  },
+  {
+   "id": "spelling.pr.stop",
+   "topic": "spelling.proofread",
+   "kind": "mcq",
+   "prompt": "Spot the mistake: “Bleep switched on his signal beam”",
+   "options": [
+    {
+     "text": "A full stop is missing.",
+     "correct": true
+    },
+    {
+     "text": "A capital letter is missing.",
+     "correct": false,
+     "feedback": "Bleep has its capital: it starts the sentence and it is a name."
+    },
+    {
+     "text": "A comma is missing.",
+     "correct": false,
+     "feedback": "There is no list here, so no comma is needed."
+    }
+   ],
+   "explain": "A sentence that tells you something ends with a full stop."
+  },
+  {
+   "id": "spelling.pr.q",
+   "topic": "spelling.proofread",
+   "kind": "mcq",
+   "prompt": "Spot the mistake: “Where did the rocket land.”",
+   "options": [
+    {
+     "text": "It should end with a question mark.",
+     "correct": true
+    },
+    {
+     "text": "A capital letter is missing.",
+     "correct": false,
+     "feedback": "Where starts with a capital W already."
+    },
+    {
+     "text": "A comma is missing from the list.",
+     "correct": false,
+     "feedback": "There is no list in this sentence."
+    }
+   ],
+   "explain": "It asks something (Where…?), so it ends with a question mark."
+  },
+  {
+   "id": "spelling.pr.i",
+   "topic": "spelling.proofread",
+   "kind": "mcq",
+   "prompt": "Spot the mistake: “On Saturday i went to the castle.”",
+   "options": [
+    {
+     "text": "A capital letter is missing.",
+     "correct": true
+    },
+    {
+     "text": "A full stop is missing.",
+     "correct": false,
+     "feedback": "The full stop is there at the end."
+    },
+    {
+     "text": "It should end with a question mark.",
+     "correct": false,
+     "feedback": "It isn’t asking anything."
+    }
+   ],
+   "explain": "When you write about yourself, I is always a capital letter."
+  },
+  {
+   "id": "spelling.pr.name",
+   "topic": "spelling.proofread",
+   "kind": "mcq",
+   "prompt": "Spot the mistake: “We had a picnic with sam and Maya.”",
+   "options": [
+    {
+     "text": "A capital letter is missing.",
+     "correct": true
+    },
+    {
+     "text": "An apostrophe is missing.",
+     "correct": false,
+     "feedback": "Nothing belongs to anyone, and no letters are missed out."
+    },
+    {
+     "text": "It should end with an exclamation mark.",
+     "correct": false,
+     "feedback": "A full stop is fine for a calm statement."
+    }
+   ],
+   "explain": "Sam is a name, so it needs a capital S."
+  },
+  {
+   "id": "spelling.pr.exclaim",
+   "topic": "spelling.proofread",
+   "kind": "mcq",
+   "prompt": "Spot the mistake: “What a huge dragon it was.”",
+   "options": [
+    {
+     "text": "It should end with an exclamation mark.",
+     "correct": true
+    },
+    {
+     "text": "It should end with a question mark.",
+     "correct": false,
+     "feedback": "It starts with What, but it isn’t asking: it shows surprise."
+    },
+    {
+     "text": "A capital letter is missing.",
+     "correct": false,
+     "feedback": "What has its capital already."
+    }
+   ],
+   "explain": "A “What a…” sentence that shows surprise is an exclamation: What a huge dragon it was!"
+  },
+  {
+   "id": "spelling.pr.list",
+   "topic": "spelling.proofread",
+   "kind": "mcq",
+   "prompt": "Spot the mistake: “We saw lions tigers and bears.”",
+   "options": [
+    {
+     "text": "A comma is missing from the list.",
+     "correct": true
+    },
+    {
+     "text": "It should end with a question mark.",
+     "correct": false,
+     "feedback": "It tells you something: it isn’t asking."
+    },
+    {
+     "text": "A capital letter is missing.",
+     "correct": false,
+     "feedback": "The capital W is there, and none of these words are names."
+    }
+   ],
+   "explain": "Put a comma between the things in a list: lions, tigers and bears."
+  },
+  {
+   "id": "spelling.pr.clean",
+   "topic": "spelling.proofread",
+   "kind": "mcq",
+   "prompt": "Which sentence has NO mistakes?",
+   "options": [
+    {
+     "text": "The children were very happy.",
+     "correct": true
+    },
+    {
+     "text": "The childen were very happy.",
+     "correct": false,
+     "feedback": "Look at “childen”: it is spelt children."
+    },
+    {
+     "text": "The children was very happy.",
+     "correct": false,
+     "feedback": "More than one child: they were, not was."
+    },
+    {
+     "text": "the children were very happy.",
+     "correct": false,
+     "feedback": "Every sentence starts with a capital letter."
+    }
+   ],
+   "explain": "Read every word, then check the capital letter and the full stop."
+  },
+  {
+   "id": "spelling.pr.clean2",
+   "topic": "spelling.proofread",
+   "kind": "mcq",
+   "prompt": "Which sentence has NO mistakes?",
+   "options": [
+    {
+     "text": "Sir Rowan pulled the thorn out carefully.",
+     "correct": true
+    },
+    {
+     "text": "Sir Rowan pulled the thorn out carefuly.",
+     "correct": false,
+     "feedback": "careful + ly = carefully, with two l’s."
+    },
+    {
+     "text": "Sir rowan pulled the thorn out carefully.",
+     "correct": false,
+     "feedback": "Rowan is a name, so it needs a capital R."
+    },
+    {
+     "text": "Sir Rowan pulled the thorn out carefully",
+     "correct": false,
+     "feedback": "A full stop is missing at the end."
+    }
+   ],
+   "explain": "Check each thing in turn: spelling, capital letters, the end of the sentence."
+  },
+  {
+   "id": "spelling.pr.because",
+   "topic": "spelling.proofread",
+   "kind": "fact",
+   "prompt": "Spot it, fix it! One word is spelt wrong. Write that word correctly: “I wore my coat becos it was cold.”",
+   "answer": "because",
+   "distractors": [
+    "becos",
+    "becuase",
+    "becauze"
+   ],
+   "explain": "because: Big Elephants Can Always Understand Small Elephants.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pr.said",
+   "topic": "spelling.proofread",
+   "kind": "fact",
+   "prompt": "Spot it, fix it! One word is spelt wrong. Write that word correctly: “The knight sed hello to the dragon.”",
+   "answer": "said",
+   "distractors": [
+    "sed",
+    "siad",
+    "sayd"
+   ],
+   "explain": "said sounds like “sed”, but it is spelt s-a-i-d.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pr.people",
+   "topic": "spelling.proofread",
+   "kind": "fact",
+   "prompt": "Spot it, fix it! One word is spelt wrong. Write that word correctly: “Lots of peeple came to watch the race.”",
+   "answer": "people",
+   "distractors": [
+    "peeple",
+    "pepole",
+    "peopel"
+   ],
+   "explain": "people: peo-ple, with an o after the e.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pr.could",
+   "topic": "spelling.proofread",
+   "kind": "fact",
+   "prompt": "Spot it, fix it! One word is spelt wrong. Write that word correctly: “I cud see the Moon from my window.”",
+   "answer": "could",
+   "distractors": [
+    "cud",
+    "coud",
+    "cowld"
+   ],
+   "explain": "could: O U Lucky Duck (o-u-l-d), like would and should.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pr.friend",
+   "topic": "spelling.proofread",
+   "kind": "fact",
+   "prompt": "Spot it, fix it! One word is spelt wrong. Write that word correctly: “My best frend is coming to tea.”",
+   "answer": "friend",
+   "distractors": [
+    "frend",
+    "freind",
+    "frind"
+   ],
+   "explain": "friend: i before e here. “A friend to the end.”",
+   "strict": true
+  },
+  {
+   "id": "spelling.pr.happiness",
+   "topic": "spelling.proofread",
+   "kind": "fact",
+   "prompt": "Spot it, fix it! One word is spelt wrong. Write that word correctly: “Winning the cup filled Blaze with happyness.”",
+   "answer": "happiness",
+   "distractors": [
+    "happyness",
+    "hapiness",
+    "happines"
+   ],
+   "explain": "happy + ness: the y changes to i, so it is happiness.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pr.hopeful",
+   "topic": "spelling.proofread",
+   "kind": "fact",
+   "prompt": "Spot it, fix it! One word is spelt wrong. Write that word correctly: “Rosa felt hopefull before the race.”",
+   "answer": "hopeful",
+   "distractors": [
+    "hopefull",
+    "hopful",
+    "hoppeful"
+   ],
+   "explain": "The ending -ful has only one l: hopeful.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pr.enjoyment",
+   "topic": "spelling.proofread",
+   "kind": "fact",
+   "prompt": "Spot it, fix it! One word is spelt wrong. Write that word correctly: “The fair gave us lots of enjoiment.”",
+   "answer": "enjoyment",
+   "distractors": [
+    "enjoiment",
+    "enjoymant",
+    "enjoyement"
+   ],
+   "explain": "Keep the root word the same: enjoy + ment = enjoyment.",
+   "strict": true
+  },
+  {
+   "id": "spelling.pr.carefully",
+   "topic": "spelling.proofread",
+   "kind": "fact",
+   "prompt": "Spot it, fix it! One word is spelt wrong. Write that word correctly: “Bleep turned the bolt very carefuly.”",
+   "answer": "carefully",
+   "distractors": [
+    "carefuly",
+    "carfully",
+    "carefullly"
+   ],
+   "explain": "careful + ly = carefully: one l from -ful, one from -ly.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.happiness",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ness to “happy” to finish the sentence: “Winning the cup filled Turbo with ___.”",
+   "answer": "happiness",
+   "distractors": [
+    "happyness",
+    "hapiness",
+    "happines"
+   ],
+   "explain": "happy ends in a consonant then y, so the y changes to i: happiness.",
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "happ",
+        "root",
+        "happy"
+       ],
+       [
+        "i",
+        "ending",
+        "y becomes i"
+       ],
+       [
+        "ness",
+        "suffix"
+       ]
+      ],
+      "result": "happiness"
+     }
+    ]
+   }
+  },
+  {
+   "id": "spelling.su.happily",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ly to “happy” to finish the sentence: “Bleep beeped ___ all the way home.”",
+   "answer": "happily",
+   "distractors": [
+    "happyly",
+    "happly",
+    "happilly"
+   ],
+   "explain": "Consonant + y: the y changes to i before -ly. happy → happily.",
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "happ",
+        "root",
+        "happy"
+       ],
+       [
+        "i",
+        "ending",
+        "y becomes i"
+       ],
+       [
+        "ly",
+        "suffix"
+       ]
+      ],
+      "result": "happily"
+     }
+    ]
+   }
+  },
+  {
+   "id": "spelling.su.easily",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ly to “easy” to finish the sentence: “Bleep was small, so he fitted through the hatch ___.”",
+   "answer": "easily",
+   "distractors": [
+    "easyly",
+    "easly",
+    "easilly"
+   ],
+   "explain": "easy → easily: the y changes to i.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.angrily",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ly to “angry” to finish the sentence: “The farmer grumbled ___ about the slow golden eggs.”",
+   "answer": "angrily",
+   "distractors": [
+    "angryly",
+    "angerly",
+    "angrilly"
+   ],
+   "explain": "angry → angrily: the y changes to i.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.gently",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ly to “gentle” to finish the sentence: “The dragon landed ___ and bowed its head.”",
+   "answer": "gently",
+   "distractors": [
+    "gentlely",
+    "gentley",
+    "gentally"
+   ],
+   "explain": "Words ending -le swap the le for ly: gentle → gently.",
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "gent",
+        "root",
+        "gentle"
+       ],
+       [
+        "ly",
+        "suffix",
+        "le becomes ly"
+       ]
+      ],
+      "result": "gently"
+     }
+    ]
+   }
+  },
+  {
+   "id": "spelling.su.simply",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ly to “simple” to finish the sentence: “It was ___ the best race ever!”",
+   "answer": "simply",
+   "distractors": [
+    "simplely",
+    "simpley",
+    "simplly"
+   ],
+   "explain": "Words ending -le swap the le for ly: simple → simply.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.careful",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ful to “care” to finish the sentence: “Be ___ on the icy corner!”",
+   "answer": "careful",
+   "distractors": [
+    "carefull",
+    "carful",
+    "caerful"
+   ],
+   "explain": "Keep the e of care and add -ful, with only one l.",
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "care",
+        "root"
+       ],
+       [
+        "ful",
+        "suffix",
+        "one l"
+       ]
+      ],
+      "result": "careful"
+     }
+    ]
+   }
+  },
+  {
+   "id": "spelling.su.hopeful",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ful to “hope” to finish the sentence: “Rosa felt ___ as the car came into the pit lane.”",
+   "answer": "hopeful",
+   "distractors": [
+    "hopefull",
+    "hopful",
+    "hopefel"
+   ],
+   "explain": "hope + ful: keep the e, and -ful has one l.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.playful",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ful to “play” to finish the sentence: “The ___ kittens jumped up the rockery.”",
+   "answer": "playful",
+   "distractors": [
+    "playfull",
+    "plaiful",
+    "playfal"
+   ],
+   "explain": "play ends in a vowel then y, so the y stays: playful.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.beautiful",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ful to “beauty” to finish the sentence: “What a ___ golden desert it was!”",
+   "answer": "beautiful",
+   "distractors": [
+    "beautyful",
+    "beautifull",
+    "beutiful"
+   ],
+   "explain": "Consonant + y: the y changes to i. beauty → beautiful, with one l.",
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "beaut",
+        "root",
+        "beauty"
+       ],
+       [
+        "i",
+        "ending",
+        "y becomes i"
+       ],
+       [
+        "ful",
+        "suffix",
+        "one l"
+       ]
+      ],
+      "result": "beautiful"
+     }
+    ]
+   }
+  },
+  {
+   "id": "spelling.su.plentiful",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ful to “plenty” to finish the sentence: “In summer, food was ___ for the grasshopper.”",
+   "answer": "plentiful",
+   "distractors": [
+    "plentyful",
+    "plentifull",
+    "plentefull"
+   ],
+   "explain": "plenty → plentiful: the y changes to i, and -ful has one l.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.helpless",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -less to “help” to finish the sentence: “Caught in the hunter’s net, the lion was ___.”",
+   "answer": "helpless",
+   "distractors": [
+    "helpliss",
+    "helples",
+    "helpeless"
+   ],
+   "explain": "help + less: just add the ending.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.fearless",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -less to “fear” to finish the sentence: “The ___ astronaut stepped onto the Moon.”",
+   "answer": "fearless",
+   "distractors": [
+    "fearliss",
+    "fearles",
+    "feerless"
+   ],
+   "explain": "fear + less: just add the ending. -less means “without”.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.penniless",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -less to “penny” to finish the sentence: “The greedy farmer lost his goose and was nearly ___.”",
+   "answer": "penniless",
+   "distractors": [
+    "pennyless",
+    "peniless",
+    "pennilless"
+   ],
+   "explain": "penny → penniless: the y changes to i.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.kindness",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ness to “kind” to finish the sentence: “The Sun showed that ___ can win where force fails.”",
+   "answer": "kindness",
+   "distractors": [
+    "kindnes",
+    "kindniss",
+    "kindeness"
+   ],
+   "explain": "kind + ness: just add the ending.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.darkness",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ness to “dark” to finish the sentence: “Bleep switched on his headlight in the ___.”",
+   "answer": "darkness",
+   "distractors": [
+    "darknes",
+    "darkniss",
+    "darckness"
+   ],
+   "explain": "dark + ness: just add the ending.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.sadness",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ness to “sad” to finish the sentence: “The dog walked home in ___, with no bone at all.”",
+   "answer": "sadness",
+   "distractors": [
+    "saddness",
+    "sadnes",
+    "sadniss"
+   ],
+   "explain": "sad + ness: the root stays the same, so there is only one d.",
+   "strict": true
+  },
+  {
+   "id": "spelling.su.excitement",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ment to “excite” to finish the sentence: “The sparrows flew to Peter in great ___.”",
+   "answer": "excitement",
+   "distractors": [
+    "excitment",
+    "excitemant",
+    "exsitement"
+   ],
+   "explain": "excite + ment: keep the e. Beatrix Potter wrote “in great excitement”.",
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "excite",
+        "root",
+        "keep the e"
+       ],
+       [
+        "ment",
+        "suffix"
+       ]
+      ],
+      "result": "excitement"
+     }
+    ]
+   }
+  },
+  {
+   "id": "spelling.su.enjoyment",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ment to “enjoy” to finish the sentence: “The crowd clapped and cheered with ___.”",
+   "answer": "enjoyment",
+   "distractors": [
+    "enjoiment",
+    "enjoyement",
+    "enjoymant"
+   ],
+   "explain": "enjoy ends in a vowel then y, so the y stays: enjoyment.",
+   "strict": true,
+   "visual": {
+    "kind": "blocks",
+    "rows": [
+     {
+      "join": "+",
+      "parts": [
+       [
+        "enjoy",
+        "root",
+        "stays the same"
+       ],
+       [
+        "ment",
+        "suffix"
+       ]
+      ],
+      "result": "enjoyment"
+     }
+    ]
+   }
+  },
+  {
+   "id": "spelling.su.movement",
+   "topic": "spelling.suffix-use",
+   "kind": "fact",
+   "prompt": "Add -ment to “move” to finish the sentence: “Sir Rowan saw a ___ in the dark cave.”",
+   "answer": "movement",
+   "distractors": [
+    "movment",
+    "movemant",
+    "moovement"
+   ],
+   "explain": "move + ment: keep the e. movement.",
+   "strict": true
+  },
+  {
+   "id": "spelling.sp.the",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "the",
+   "sentence": "___ rocket blasted off into space.",
+   "clue": "the most common word of all",
+   "explain": "t-h-e: the e makes a quick “uh” sound.",
+   "learn": "**the**: t-h-e: the e makes a quick “uh” sound."
+  },
+  {
+   "id": "spelling.sp.a",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "a",
+   "sentence": "I spy ___ big red bus!",
+   "clue": "one (before a word)",
+   "explain": "Just one letter: a.",
+   "learn": "**a**: Just one letter: a."
+  },
+  {
+   "id": "spelling.sp.do",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "do",
+   "sentence": "What ___ you want to be when you grow up?",
+   "clue": "I ___ my best",
+   "explain": "The o says “oo”: d-o.",
+   "learn": "**do**: The o says “oo”: d-o."
+  },
+  {
+   "id": "spelling.sp.to",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "to",
+   "sentence": "We went ___ the race track.",
+   "clue": "towards",
+   "explain": "The o says “oo”: t-o. (two is 2; too means also.)",
+   "learn": "**to**: The o says “oo”: t-o. (two is 2; too means also.)"
+  },
+  {
+   "id": "spelling.sp.today",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "today",
+   "sentence": "___ is my birthday!",
+   "clue": "this day",
+   "explain": "to + day.",
+   "learn": "**today**: to + day."
+  },
+  {
+   "id": "spelling.sp.of",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "of",
+   "sentence": "Captain Nova drank a cup ___ tea.",
+   "clue": "a bag ___ sweets",
+   "explain": "It sounds like “ov”, but it is spelt o-f.",
+   "learn": "**of**: It sounds like “ov”, but it is spelt o-f."
+  },
+  {
+   "id": "spelling.sp.are",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "are",
+   "sentence": "We ___ going to win!",
+   "clue": "we ___, they ___",
+   "explain": "a-r-e: the e is silent.",
+   "learn": "**are**: a-r-e: the e is silent."
+  },
+  {
+   "id": "spelling.sp.is",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "is",
+   "sentence": "The sky on Mars ___ orange in a dust storm.",
+   "clue": "it ___",
+   "explain": "The s says “z”: i-s.",
+   "learn": "**is**: The s says “z”: i-s."
+  },
+  {
+   "id": "spelling.sp.his",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "his",
+   "sentence": "The knight polished ___ shield.",
+   "clue": "belonging to him",
+   "explain": "The s says “z”: h-i-s.",
+   "learn": "**his**: The s says “z”: h-i-s."
+  },
+  {
+   "id": "spelling.sp.has",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "has",
+   "sentence": "Bleep ___ a signal beam.",
+   "clue": "owns or holds",
+   "explain": "The s says “z”: h-a-s.",
+   "learn": "**has**: The s says “z”: h-a-s."
+  },
+  {
+   "id": "spelling.sp.i",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "I",
+   "sentence": "___ love to zoom round the track.",
+   "clue": "me, when I talk about myself",
+   "explain": "I is always a capital letter.",
+   "learn": "**I**: I is always a capital letter."
+  },
+  {
+   "id": "spelling.sp.you",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "you",
+   "sentence": "Thank ___ for helping me!",
+   "clue": "the person I am talking to",
+   "explain": "y-o-u: three letters for “yoo”.",
+   "learn": "**you**: y-o-u: three letters for “yoo”."
+  },
+  {
+   "id": "spelling.sp.your",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "your",
+   "sentence": "Put on ___ helmet.",
+   "clue": "belonging to you",
+   "explain": "you + r.",
+   "learn": "**your**: you + r."
+  },
+  {
+   "id": "spelling.sp.be",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "be",
+   "sentence": "I want to ___ an astronaut.",
+   "clue": "I ___, you are, he is",
+   "explain": "b-e: the e says its name.",
+   "learn": "**be**: b-e: the e says its name."
+  },
+  {
+   "id": "spelling.sp.he",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "he",
+   "sentence": "___ zoomed past Blaze to win!",
+   "clue": "a boy or a man",
+   "explain": "h-e: the e says its name.",
+   "learn": "**he**: h-e: the e says its name."
+  },
+  {
+   "id": "spelling.sp.me",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "me",
+   "sentence": "Can you help ___, please?",
+   "clue": "I want you to help ___",
+   "explain": "m-e: the e says its name.",
+   "learn": "**me**: m-e: the e says its name."
+  },
+  {
+   "id": "spelling.sp.she",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "she",
+   "sentence": "___ found the glowing crystal.",
+   "clue": "a girl or a woman",
+   "explain": "sh-e: the e says its name.",
+   "learn": "**she**: sh-e: the e says its name."
+  },
+  {
+   "id": "spelling.sp.we",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "we",
+   "sentence": "___ won the cup together!",
+   "clue": "you and I",
+   "explain": "w-e: the e says its name.",
+   "learn": "**we**: w-e: the e says its name."
+  },
+  {
+   "id": "spelling.sp.no",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "no",
+   "sentence": "There is ___ air on the Moon.",
+   "clue": "not any",
+   "explain": "n-o. (know, with a silent k, means to have it in your head.)",
+   "learn": "**no**: n-o. (know, with a silent k, means to have it in your head.)"
+  },
+  {
+   "id": "spelling.sp.go",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "go",
+   "sentence": "Ready, steady, ___!",
+   "clue": "start moving",
+   "explain": "g-o: the o says its name.",
+   "learn": "**go**: g-o: the o says its name."
+  },
+  {
+   "id": "spelling.sp.so",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "so",
+   "sentence": "It was ___ cold on the frosty planet.",
+   "clue": "very",
+   "explain": "s-o. (sew is what you do with a needle.)",
+   "learn": "**so**: s-o. (sew is what you do with a needle.)"
+  },
+  {
+   "id": "spelling.sp.by",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "by",
+   "sentence": "The castle stood ___ the river.",
+   "clue": "next to",
+   "explain": "The y says “igh”: b-y. (buy is shopping; bye is goodbye.)",
+   "learn": "**by**: The y says “igh”: b-y. (buy is shopping; bye is goodbye.)"
+  },
+  {
+   "id": "spelling.sp.my",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "my",
+   "sentence": "This is ___ racing car.",
+   "clue": "belonging to me",
+   "explain": "The y says “igh”: m-y.",
+   "learn": "**my**: The y says “igh”: m-y."
+  },
+  {
+   "id": "spelling.sp.here",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "here",
+   "sentence": "Come over ___ and look!",
+   "clue": "in this place",
+   "explain": "h-e-r-e. It hides inside there and where: all three are place words.",
+   "learn": "**here**: h-e-r-e. It hides inside there and where: all three are place words."
+  },
+  {
+   "id": "spelling.sp.ask",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "ask",
+   "sentence": "Can I ___ a question?",
+   "clue": "want to know something",
+   "explain": "a-s-k: in many accents the a says “ar”.",
+   "learn": "**ask**: a-s-k: in many accents the a says “ar”."
+  },
+  {
+   "id": "spelling.sp.put",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "put",
+   "sentence": "___ the book back on the shelf.",
+   "clue": "place it",
+   "explain": "The u says “oo” as in book: p-u-t.",
+   "learn": "**put**: The u says “oo” as in book: p-u-t."
+  },
+  {
+   "id": "spelling.sp.our",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "our",
+   "sentence": "This is ___ den in the woods.",
+   "clue": "belonging to us",
+   "explain": "o-u-r. It sounds like hour, but has no h.",
+   "learn": "**our**: o-u-r. It sounds like hour, but has no h."
+  },
+  {
+   "id": "spelling.sp.mr",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "Mr",
+   "sentence": "___ Patel cleans the dinosaur museum.",
+   "clue": "a title before a man’s name",
+   "explain": "Short for Mister: capital M, then r.",
+   "learn": "**Mr**: Short for Mister: capital M, then r.",
+   "accept": [
+    "Mr."
+   ]
+  },
+  {
+   "id": "spelling.sp.mrs",
+   "topic": "spelling.cew-extra",
+   "kind": "spell",
+   "word": "Mrs",
+   "sentence": "___ Rabbit had four little bunnies.",
+   "clue": "a title before a married woman’s name",
+   "explain": "Short for Missus: capital M, then r and s.",
+   "learn": "**Mrs**: Short for Missus: capital M, then r and s.",
+   "accept": [
+    "Mrs."
+   ]
+  },
+  {
+   "id": "spelling.cu.door",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "door",
+   "sentence": "Bleep knocked on the spaceship ___ three times.",
+   "clue": "you open it to go in",
+   "explain": "Two o’s: d-o-o-r, like floor and poor.",
+   "learn": "**door**: Two o’s: d-o-o-r, like floor and poor."
+  },
+  {
+   "id": "spelling.cu.floor",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "floor",
+   "sentence": "The kitten’s ball rolled across the kitchen ___.",
+   "clue": "what you walk on",
+   "explain": "f-l-o-o-r: the same “oor” as door.",
+   "learn": "**floor**: f-l-o-o-r: the same “oor” as door."
+  },
+  {
+   "id": "spelling.cu.poor",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "poor",
+   "sentence": "The ___ dragon had a thorn stuck in its toe.",
+   "clue": "not lucky",
+   "explain": "p-o-o-r: the same “oor” as door.",
+   "learn": "**poor**: p-o-o-r: the same “oor” as door."
+  },
+  {
+   "id": "spelling.cu.because",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "because",
+   "sentence": "The hare lost the race ___ he fell asleep.",
+   "clue": "for the reason that",
+   "explain": "Big Elephants Can Always Understand Small Elephants.",
+   "learn": "**because**: Big Elephants Can Always Understand Small Elephants."
+  },
+  {
+   "id": "spelling.cu.find",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "find",
+   "sentence": "Captain Nova needed to ___ the glowing crystal.",
+   "clue": "discover",
+   "explain": "The i says its name before nd: f-i-n-d.",
+   "learn": "**find**: The i says its name before nd: f-i-n-d."
+  },
+  {
+   "id": "spelling.cu.kind",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "kind",
+   "sentence": "Pip was ___ to everyone on the dark, stormy night.",
+   "clue": "friendly and helpful",
+   "explain": "The i says its name before nd: k-i-n-d.",
+   "learn": "**kind**: The i says its name before nd: k-i-n-d."
+  },
+  {
+   "id": "spelling.cu.mind",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "mind",
+   "sentence": "Turbo did not ___ being the smallest car.",
+   "clue": "be bothered by",
+   "explain": "The i says its name before nd: m-i-n-d.",
+   "learn": "**mind**: The i says its name before nd: m-i-n-d."
+  },
+  {
+   "id": "spelling.cu.behind",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "behind",
+   "sentence": "The tortoise was far ___, but she kept going.",
+   "clue": "at the back",
+   "explain": "be + hind.",
+   "learn": "**behind**: be + hind."
+  },
+  {
+   "id": "spelling.cu.child",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "child",
+   "sentence": "Every ___ in the class wrote a poem.",
+   "clue": "a young person",
+   "explain": "The i says its name before ld: c-h-i-l-d.",
+   "learn": "**child**: The i says its name before ld: c-h-i-l-d."
+  },
+  {
+   "id": "spelling.cu.children",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "children",
+   "sentence": "The ___ cheered when the dragon bowed its head.",
+   "clue": "more than one child",
+   "explain": "child + ren: here the i says “i” as in pin.",
+   "learn": "**children**: child + ren: here the i says “i” as in pin."
+  },
+  {
+   "id": "spelling.cu.wild",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "wild",
+   "sentence": "Lions are ___ animals, but this one let the mouse go.",
+   "clue": "not tame",
+   "explain": "The i says its name before ld: w-i-l-d.",
+   "learn": "**wild**: The i says its name before ld: w-i-l-d."
+  },
+  {
+   "id": "spelling.cu.climb",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "climb",
+   "sentence": "The hero had to ___ the tall ladder.",
+   "clue": "go up using hands and feet",
+   "explain": "Silent b at the end: c-l-i-m-b.",
+   "learn": "**climb**: Silent b at the end: c-l-i-m-b."
+  },
+  {
+   "id": "spelling.cu.most",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "most",
+   "sentence": "Blaze was the ___ famous car in the league.",
+   "clue": "more than any other",
+   "explain": "The o says its name before st: m-o-s-t.",
+   "learn": "**most**: The o says its name before st: m-o-s-t."
+  },
+  {
+   "id": "spelling.cu.only",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "only",
+   "sentence": "There was ___ a little water at the bottom of the jug.",
+   "clue": "just",
+   "explain": "The o says its name: o-n-l-y.",
+   "learn": "**only**: The o says its name: o-n-l-y."
+  },
+  {
+   "id": "spelling.cu.both",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "both",
+   "sentence": "Turbo and Blaze ___ crossed the line together.",
+   "clue": "the two of them",
+   "explain": "b-o-t-h.",
+   "learn": "**both**: b-o-t-h."
+  },
+  {
+   "id": "spelling.cu.old",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "old",
+   "sentence": "The ___ owl shut his eyes and went to sleep.",
+   "clue": "not young",
+   "explain": "The o says its name before ld: o-l-d.",
+   "learn": "**old**: The o says its name before ld: o-l-d."
+  },
+  {
+   "id": "spelling.cu.cold",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "cold",
+   "sentence": "Bleep did not like the ___ purple planet.",
+   "clue": "not hot",
+   "explain": "The o says its name before ld: c-o-l-d.",
+   "learn": "**cold**: The o says its name before ld: c-o-l-d."
+  },
+  {
+   "id": "spelling.cu.gold",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "gold",
+   "sentence": "Every morning the goose laid an egg made of ___.",
+   "clue": "a shiny yellow metal",
+   "explain": "The o says its name before ld: g-o-l-d.",
+   "learn": "**gold**: The o says its name before ld: g-o-l-d."
+  },
+  {
+   "id": "spelling.cu.hold",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "hold",
+   "sentence": "Rosa tied on a rope to ___ in the sandstorm.",
+   "clue": "keep in your hands",
+   "explain": "The o says its name before ld: h-o-l-d.",
+   "learn": "**hold**: The o says its name before ld: h-o-l-d."
+  },
+  {
+   "id": "spelling.cu.told",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "told",
+   "sentence": "Sam ___ Rosa to keep practising.",
+   "clue": "past of tell",
+   "explain": "The o says its name before ld: t-o-l-d.",
+   "learn": "**told**: The o says its name before ld: t-o-l-d."
+  },
+  {
+   "id": "spelling.cu.every",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "every",
+   "sentence": "The tortoise kept going, one step after another, ___ minute of the race.",
+   "clue": "each one",
+   "explain": "Say it in three parts to spell it: ev-er-y.",
+   "learn": "**every**: Say it in three parts to spell it: ev-er-y."
+  },
+  {
+   "id": "spelling.cu.everybody",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "everybody",
+   "sentence": "___ in Brickton came to the warm bakery.",
+   "clue": "all the people",
+   "explain": "every + body.",
+   "learn": "**everybody**: every + body."
+  },
+  {
+   "id": "spelling.cu.even",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "even",
+   "sentence": "Pip helped the whole town, ___ though she had no superpowers.",
+   "clue": "still; also",
+   "explain": "The first e says its name: e-v-e-n.",
+   "learn": "**even**: The first e says its name: e-v-e-n."
+  },
+  {
+   "id": "spelling.cu.great",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "great",
+   "sentence": "The little mouse was a ___ help to the lion.",
+   "clue": "very good, or very big",
+   "explain": "g-r-e-a-t: the ea says “ay”.",
+   "learn": "**great**: g-r-e-a-t: the ea says “ay”."
+  },
+  {
+   "id": "spelling.cu.break",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "break",
+   "sentence": "Be careful not to ___ the satellite.",
+   "clue": "smash or snap",
+   "explain": "b-r-e-a-k: the ea says “ay”, like great.",
+   "learn": "**break**: b-r-e-a-k: the ea says “ay”, like great."
+  },
+  {
+   "id": "spelling.cu.steak",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "steak",
+   "sentence": "The hungry dog wished his bone was a juicy ___.",
+   "clue": "a thick slice of meat",
+   "explain": "s-t-e-a-k: the ea says “ay”, like great.",
+   "learn": "**steak**: s-t-e-a-k: the ea says “ay”, like great."
+  },
+  {
+   "id": "spelling.cu.pretty",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "pretty",
+   "sentence": "The garden was ___, but Mr. McGregor was cross.",
+   "clue": "lovely to look at",
+   "explain": "It says “prit”, but it is spelt p-r-e-t-t-y, with double t.",
+   "learn": "**pretty**: It says “prit”, but it is spelt p-r-e-t-t-y, with double t."
+  },
+  {
+   "id": "spelling.cu.beautiful",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "beautiful",
+   "sentence": "The sky over the desert was a ___ bright blue.",
+   "clue": "very lovely",
+   "explain": "beau-ti-ful: b-e-a-u, and -ful has one l.",
+   "learn": "**beautiful**: beau-ti-ful: b-e-a-u, and -ful has one l."
+  },
+  {
+   "id": "spelling.cu.after",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "after",
+   "sentence": "___ fifty pebbles, the water was right at the top.",
+   "clue": "later than",
+   "explain": "a-f-t-e-r.",
+   "learn": "**after**: a-f-t-e-r."
+  },
+  {
+   "id": "spelling.cu.fast",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "fast",
+   "sentence": "The hare could run very ___.",
+   "clue": "quick",
+   "explain": "f-a-s-t.",
+   "learn": "**fast**: f-a-s-t."
+  },
+  {
+   "id": "spelling.cu.last",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "last",
+   "sentence": "On the ___ lap, Blaze’s tyres were worn out.",
+   "clue": "at the end",
+   "explain": "l-a-s-t.",
+   "learn": "**last**: l-a-s-t."
+  },
+  {
+   "id": "spelling.cu.past",
+   "topic": "spelling.cew-use",
+   "kind": "spell",
+   "word": "past",
+   "sentence": "Turbo crept ___ Blaze near the end of the race.",
+   "clue": "going by",
+   "explain": "p-a-s-t. (passed is the past tense of pass.)",
+   "learn": "**past**: p-a-s-t. (passed is the past tense of pass.)"
+  },
+  {
+   "id": "spelling.cu.father",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "father",
+   "sentence": "Peter’s ___ had an accident in Mr. McGregor’s garden.",
+   "clue": "dad",
+   "explain": "The a says “ar”: f-a-t-h-e-r.",
+   "learn": "**father**: The a says “ar”: f-a-t-h-e-r."
+  },
+  {
+   "id": "spelling.cu.class",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "class",
+   "sentence": "Our ___ read a fable about a clever crow.",
+   "clue": "a group at school",
+   "explain": "Double s at the end.",
+   "learn": "**class**: Double s at the end."
+  },
+  {
+   "id": "spelling.cu.grass",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "grass",
+   "sentence": "The tortoise plodded slowly over the ___.",
+   "clue": "green plants on the ground",
+   "explain": "Double s at the end.",
+   "learn": "**grass**: Double s at the end."
+  },
+  {
+   "id": "spelling.cu.pass",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "pass",
+   "sentence": "Please ___ me the wheel gun.",
+   "clue": "hand it to someone",
+   "explain": "Double s at the end.",
+   "learn": "**pass**: Double s at the end."
+  },
+  {
+   "id": "spelling.cu.plant",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "plant",
+   "sentence": "Stegosaurus ate leaves, so it was a ___ eater.",
+   "clue": "something green that grows",
+   "explain": "p-l-a-n-t.",
+   "learn": "**plant**: p-l-a-n-t."
+  },
+  {
+   "id": "spelling.cu.path",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "path",
+   "sentence": "The ant carried her corn up and down the ___.",
+   "clue": "a little track to walk on",
+   "explain": "p-a-t-h.",
+   "learn": "**path**: p-a-t-h."
+  },
+  {
+   "id": "spelling.cu.bath",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "bath",
+   "sentence": "After the muddy race, Turbo needed a ___.",
+   "clue": "where you wash",
+   "explain": "b-a-t-h.",
+   "learn": "**bath**: b-a-t-h."
+  },
+  {
+   "id": "spelling.cu.hour",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "hour",
+   "sentence": "The ride to the castle took an ___.",
+   "clue": "60 minutes",
+   "explain": "Silent h: h-o-u-r.",
+   "learn": "**hour**: Silent h: h-o-u-r."
+  },
+  {
+   "id": "spelling.cu.move",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "move",
+   "sentence": "Dot the rover did not ___ for weeks after the dust storm.",
+   "clue": "change position",
+   "explain": "The o says “oo”: m-o-v-e.",
+   "learn": "**move**: The o says “oo”: m-o-v-e."
+  },
+  {
+   "id": "spelling.cu.prove",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "prove",
+   "sentence": "Fossils ___ that dinosaurs lived long ago.",
+   "clue": "show that it is true",
+   "explain": "The o says “oo”, like move: p-r-o-v-e.",
+   "learn": "**prove**: The o says “oo”, like move: p-r-o-v-e."
+  },
+  {
+   "id": "spelling.cu.improve",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "improve",
+   "sentence": "Rosa practised every day to ___.",
+   "clue": "get better",
+   "explain": "im + prove.",
+   "learn": "**improve**: im + prove."
+  },
+  {
+   "id": "spelling.cu.sure",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "sure",
+   "sentence": "The hare was ___ he would win.",
+   "clue": "certain",
+   "explain": "The s says “sh”: s-u-r-e.",
+   "learn": "**sure**: The s says “sh”: s-u-r-e."
+  },
+  {
+   "id": "spelling.cu.sugar",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "sugar",
+   "sentence": "Pip sprinkled ___ on the hot buns.",
+   "clue": "sweet stuff",
+   "explain": "The s says “sh”: s-u-g-a-r.",
+   "learn": "**sugar**: The s says “sh”: s-u-g-a-r."
+  },
+  {
+   "id": "spelling.cu.eye",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "eye",
+   "sentence": "The dragon opened one sleepy ___.",
+   "clue": "you see with it",
+   "explain": "e-y-e: it looks like a face!",
+   "learn": "**eye**: e-y-e: it looks like a face!"
+  },
+  {
+   "id": "spelling.cu.could",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "could",
+   "sentence": "The lion ___ not get free from the net.",
+   "clue": "was able to",
+   "explain": "O U Lucky Duck: c-o-u-l-d.",
+   "learn": "**could**: O U Lucky Duck: c-o-u-l-d."
+  },
+  {
+   "id": "spelling.cu.should",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "should",
+   "sentence": "The ant said the grasshopper ___ store food for the winter.",
+   "clue": "ought to",
+   "explain": "Like could: sh-o-u-l-d.",
+   "learn": "**should**: Like could: sh-o-u-l-d."
+  },
+  {
+   "id": "spelling.cu.would",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "would",
+   "sentence": "The villagers thought the boy ___ trick them again.",
+   "clue": "was going to",
+   "explain": "Like could: w-o-u-l-d.",
+   "learn": "**would**: Like could: w-o-u-l-d."
+  },
+  {
+   "id": "spelling.cu.who",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "who",
+   "sentence": "___ won the race: the hare or the tortoise?",
+   "clue": "which person",
+   "explain": "w-h-o.",
+   "learn": "**who**: w-h-o."
+  },
+  {
+   "id": "spelling.cu.whole",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "whole",
+   "sentence": "The ___ town went dark when the power went out.",
+   "clue": "all of it",
+   "explain": "Silent w: w-h-o-l-e. (A hole is a gap.)",
+   "learn": "**whole**: Silent w: w-h-o-l-e. (A hole is a gap.)"
+  },
+  {
+   "id": "spelling.cu.any",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "any",
+   "sentence": "There was not ___ food left for the grasshopper.",
+   "clue": "some, even one",
+   "explain": "The a says “e”: a-n-y.",
+   "learn": "**any**: The a says “e”: a-n-y."
+  },
+  {
+   "id": "spelling.cu.many",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "many",
+   "sentence": "How ___ pebbles did the crow drop into the jug?",
+   "clue": "what number of",
+   "explain": "Like any: m-a-n-y.",
+   "learn": "**many**: Like any: m-a-n-y."
+  },
+  {
+   "id": "spelling.cu.clothes",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "clothes",
+   "sentence": "Peter’s ___ were on the scarecrow.",
+   "clue": "what you wear",
+   "explain": "cloth + es: c-l-o-t-h-e-s.",
+   "learn": "**clothes**: cloth + es: c-l-o-t-h-e-s."
+  },
+  {
+   "id": "spelling.cu.busy",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "busy",
+   "sentence": "The ant was ___ all summer long.",
+   "clue": "with lots to do",
+   "explain": "The u says “i”: b-u-s-y.",
+   "learn": "**busy**: The u says “i”: b-u-s-y."
+  },
+  {
+   "id": "spelling.cu.people",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "people",
+   "sentence": "The ___ of Brickton were frightened of the dark.",
+   "clue": "more than one person",
+   "explain": "peo-ple: e then o.",
+   "learn": "**people**: peo-ple: e then o."
+  },
+  {
+   "id": "spelling.cu.water",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "water",
+   "sentence": "The crow dropped pebbles into the ___.",
+   "clue": "you drink it",
+   "explain": "The a says “or”: w-a-t-e-r.",
+   "learn": "**water**: The a says “or”: w-a-t-e-r."
+  },
+  {
+   "id": "spelling.cu.again",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "again",
+   "sentence": "The boy cried “Wolf!” ___, but nobody came.",
+   "clue": "one more time",
+   "explain": "a-g-a-i-n.",
+   "learn": "**again**: a-g-a-i-n."
+  },
+  {
+   "id": "spelling.cu.half",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "half",
+   "sentence": "Rosa cut her sandwich in ___.",
+   "clue": "one of two equal parts",
+   "explain": "Silent l: h-a-l-f.",
+   "learn": "**half**: Silent l: h-a-l-f."
+  },
+  {
+   "id": "spelling.cu.money",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "money",
+   "sentence": "People gave ___ to help build more Spitfires.",
+   "clue": "coins and notes",
+   "explain": "The o says “u”: m-o-n-e-y.",
+   "learn": "**money**: The o says “u”: m-o-n-e-y."
+  },
+  {
+   "id": "spelling.cu.mr",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "Mr",
+   "sentence": "___ Patel showed Maya a real fossil footprint.",
+   "clue": "a title before a man’s name",
+   "explain": "Short for Mister: capital M, then r.",
+   "learn": "**Mr**: Short for Mister: capital M, then r.",
+   "accept": [
+    "Mr."
+   ]
+  },
+  {
+   "id": "spelling.cu.mrs",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "Mrs",
+   "sentence": "___ Tabitha Twitchit made hot buttered toast.",
+   "clue": "a title before a married woman’s name",
+   "explain": "Short for Missus: capital M, then r and s.",
+   "learn": "**Mrs**: Short for Missus: capital M, then r and s.",
+   "accept": [
+    "Mrs."
+   ]
+  },
+  {
+   "id": "spelling.cu.parents",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "parents",
+   "sentence": "Maya’s ___ waved goodbye at the museum door.",
+   "clue": "mum and dad",
+   "explain": "par-ents.",
+   "learn": "**parents**: par-ents."
+  },
+  {
+   "id": "spelling.cu.christmas",
+   "topic": "spelling.cew-use-2",
+   "kind": "spell",
+   "word": "Christmas",
+   "sentence": "At ___ the dragon lit the fires in the great hall.",
+   "clue": "a winter festival",
+   "explain": "Capital C, a silent h and a t you don’t hear: Christ-mas.",
+   "learn": "**Christmas**: Capital C, a silent h and a t you don’t hear: Christ-mas."
+  },
+  {
+   "id": "spelling.pc.names",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which sentence has all the capital letters it needs?",
+   "options": [
+    {
+     "text": "Maya and Sam went to London on Monday.",
+     "correct": true
+    },
+    {
+     "text": "Maya and sam went to London on monday.",
+     "correct": false,
+     "feedback": "Sam is a name and Monday is a day: both need capitals."
+    },
+    {
+     "text": "maya and Sam went to london on Monday.",
+     "correct": false,
+     "feedback": "Start the sentence with a capital, and London is a place, so it needs one too."
+    }
+   ],
+   "explain": "Capitals for the start of a sentence, names, places and days of the week."
+  },
+  {
+   "id": "spelling.pc.i",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which sentence is correct?",
+   "options": [
+    {
+     "text": "Rosa and I raced to the gate.",
+     "correct": true
+    },
+    {
+     "text": "Rosa and i raced to the gate.",
+     "correct": false,
+     "feedback": "When you write about yourself, I is always a capital."
+    },
+    {
+     "text": "rosa and I raced to the gate.",
+     "correct": false,
+     "feedback": "Rosa starts the sentence and is a name: capital R."
+    }
+   ],
+   "explain": "I is always a capital letter, wherever it is in the sentence."
+  },
+  {
+   "id": "spelling.pc.two",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which is written as two correct sentences?",
+   "options": [
+    {
+     "text": "The dragon roared. It was huge.",
+     "correct": true
+    },
+    {
+     "text": "The dragon roared it was huge.",
+     "correct": false,
+     "feedback": "There are two ideas here. Put a full stop and a capital letter between them."
+    },
+    {
+     "text": "The dragon roared. it was huge.",
+     "correct": false,
+     "feedback": "After a full stop, the next sentence starts with a capital letter."
+    }
+   ],
+   "explain": "Each sentence starts with a capital letter and ends with a full stop."
+  },
+  {
+   "id": "spelling.pc.question",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which sentence ends with the right mark?",
+   "options": [
+    {
+     "text": "Where is the glowing crystal?",
+     "correct": true
+    },
+    {
+     "text": "Where is the glowing crystal.",
+     "correct": false,
+     "feedback": "It asks something, so it needs a question mark."
+    },
+    {
+     "text": "Where is the glowing crystal!",
+     "correct": false,
+     "feedback": "It isn’t an exclamation: it asks a question."
+    }
+   ],
+   "explain": "A question ends with a question mark."
+  },
+  {
+   "id": "spelling.pc.exclaim",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which sentence ends with the right mark?",
+   "options": [
+    {
+     "text": "What a fast car that is!",
+     "correct": true
+    },
+    {
+     "text": "What a fast car that is?",
+     "correct": false,
+     "feedback": "It starts with What, but it isn’t asking anything: it shows surprise."
+    },
+    {
+     "text": "What a fast car that is.",
+     "correct": false,
+     "feedback": "This shows strong feeling, so it needs an exclamation mark."
+    }
+   ],
+   "explain": "A “What a…” sentence that shows strong feeling is an exclamation: it ends with !"
+  },
+  {
+   "id": "spelling.pc.how",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which one needs a question mark at the end?",
+   "options": [
+    {
+     "text": "How fast can a cheetah run",
+     "correct": true
+    },
+    {
+     "text": "How fast that cheetah runs",
+     "correct": false,
+     "feedback": "This shows surprise, so it is an exclamation: How fast that cheetah runs!"
+    },
+    {
+     "text": "That cheetah runs very fast",
+     "correct": false,
+     "feedback": "This tells you something: it is a statement."
+    }
+   ],
+   "explain": "Both start with How, but only one asks something you could answer: How fast can a cheetah run?"
+  },
+  {
+   "id": "spelling.pc.list",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which sentence uses commas correctly?",
+   "options": [
+    {
+     "text": "We need sticks, string and a blanket.",
+     "correct": true
+    },
+    {
+     "text": "We need sticks string and a blanket.",
+     "correct": false,
+     "feedback": "Put a comma between the first things in the list."
+    },
+    {
+     "text": "We need, sticks, string, and, a blanket.",
+     "correct": false,
+     "feedback": "Commas go between the things in the list, not after every word."
+    }
+   ],
+   "explain": "Use commas between the things in a list, and “and” before the last one."
+  },
+  {
+   "id": "spelling.pc.list2",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which sentence uses commas correctly?",
+   "options": [
+    {
+     "text": "Triceratops had horns, a frill and a beak.",
+     "correct": true
+    },
+    {
+     "text": "Triceratops had horns a frill, and a beak.",
+     "correct": false,
+     "feedback": "The comma goes after “horns”, and no comma is needed before “and”."
+    },
+    {
+     "text": "Triceratops had, horns, a frill and a beak.",
+     "correct": false,
+     "feedback": "The list starts after “had”: no comma before horns."
+    }
+   ],
+   "explain": "horns, a frill and a beak: a comma between the first things, then “and”."
+  },
+  {
+   "id": "spelling.pc.where",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Where does the comma go? “I saw a rocket a planet and a star.”",
+   "options": [
+    {
+     "text": "after “rocket”",
+     "correct": true
+    },
+    {
+     "text": "after “planet”",
+     "correct": false,
+     "feedback": "In a simple list, there is no comma before “and”."
+    },
+    {
+     "text": "after “saw”",
+     "correct": false,
+     "feedback": "The list starts after “saw”, so no comma there."
+    }
+   ],
+   "explain": "I saw a rocket, a planet and a star."
+  },
+  {
+   "id": "spelling.pc.mixed",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which sentence is punctuated correctly?",
+   "options": [
+    {
+     "text": "Can Bleep fix the bolt, the wire and the hatch?",
+     "correct": true
+    },
+    {
+     "text": "Can Bleep fix the bolt the wire, and the hatch?",
+     "correct": false,
+     "feedback": "The comma goes after “bolt”, and not before “and”."
+    },
+    {
+     "text": "can Bleep fix the bolt, the wire and the hatch?",
+     "correct": false,
+     "feedback": "Start the sentence with a capital letter."
+    },
+    {
+     "text": "Can Bleep fix the bolt, the wire and the hatch.",
+     "correct": false,
+     "feedback": "It asks something, so it ends with a question mark."
+    }
+   ],
+   "explain": "Capital letter, commas in the list, and a question mark because it asks something."
+  },
+  {
+   "id": "spelling.pc.couldnt",
+   "topic": "spelling.punct-use",
+   "kind": "fact",
+   "prompt": "Write the short form of the words in bold: “I **could not** find my helmet.”",
+   "answer": "couldn’t",
+   "distractors": [
+    "could’nt",
+    "couldnt",
+    "coul’dnt"
+   ],
+   "explain": "could n(o)t → couldn’t: the apostrophe goes where the o was.",
+   "strict": true,
+   "accept": [
+    "couldn't"
+   ]
+  },
+  {
+   "id": "spelling.pc.didnt",
+   "topic": "spelling.punct-use",
+   "kind": "fact",
+   "prompt": "Write the short form of the words in bold: “We **did not** see the wolf.”",
+   "answer": "didn’t",
+   "distractors": [
+    "did’nt",
+    "didnt",
+    "dident"
+   ],
+   "explain": "did n(o)t → didn’t: the apostrophe goes where the o was.",
+   "strict": true,
+   "accept": [
+    "didn't"
+   ]
+  },
+  {
+   "id": "spelling.pc.its",
+   "topic": "spelling.punct-use",
+   "kind": "fact",
+   "prompt": "Write the short form of the words in bold: “**It is** time for the race.”",
+   "answer": "It’s",
+   "distractors": [
+    "Its",
+    "It’is",
+    "Its’"
+   ],
+   "explain": "It (i)s → It’s: the apostrophe takes the place of the i.",
+   "strict": true,
+   "accept": [
+    "It's"
+   ]
+  },
+  {
+   "id": "spelling.pc.wont",
+   "topic": "spelling.punct-use",
+   "kind": "fact",
+   "prompt": "Write the short form of the words in bold: “I **will not** give up!”",
+   "answer": "won’t",
+   "distractors": [
+    "willn’t",
+    "wont",
+    "wo’nt"
+   ],
+   "explain": "will not → won’t. This one changes shape, so learn it by heart.",
+   "strict": true,
+   "accept": [
+    "won't"
+   ]
+  },
+  {
+   "id": "spelling.pc.own",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which sentence is correct?",
+   "options": [
+    {
+     "text": "Peter’s jacket had brass buttons.",
+     "correct": true
+    },
+    {
+     "text": "Peters jacket had brass buttons.",
+     "correct": false,
+     "feedback": "The jacket belongs to Peter, so add ’s: Peter’s."
+    },
+    {
+     "text": "Peters’ jacket had brass buttons.",
+     "correct": false,
+     "feedback": "There is one owner, so the apostrophe goes before the s."
+    }
+   ],
+   "explain": "Add ’s to show that something belongs to someone: Peter’s jacket."
+  },
+  {
+   "id": "spelling.pc.own2",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which shows that the shield belongs to one knight?",
+   "options": [
+    {
+     "text": "the knight’s shield",
+     "correct": true
+    },
+    {
+     "text": "the knights shield",
+     "correct": false,
+     "feedback": "With no apostrophe, it looks like more than one knight."
+    },
+    {
+     "text": "the knight’s’ shield",
+     "correct": false,
+     "feedback": "Just one apostrophe, before the s."
+    }
+   ],
+   "explain": "One knight owns it: the knight’s shield."
+  },
+  {
+   "id": "spelling.pc.plural",
+   "topic": "spelling.punct-use",
+   "kind": "mcq",
+   "prompt": "Which sentence is correct?",
+   "options": [
+    {
+     "text": "The cars raced round the track.",
+     "correct": true
+    },
+    {
+     "text": "The car’s raced round the track.",
+     "correct": false,
+     "feedback": "“cars” just means more than one car: a plural needs no apostrophe."
+    },
+    {
+     "text": "The cars’ raced round the track.",
+     "correct": false,
+     "feedback": "Nothing belongs to the cars here, so there is no apostrophe."
+    }
+   ],
+   "explain": "Never use an apostrophe just to make a plural."
+  }
+ ]
+}

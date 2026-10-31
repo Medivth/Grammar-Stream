@@ -94,4 +94,4 @@ CI (`.github/workflows/pages.yml`) runs the tests and freshness checks on every 
 
 - Curriculum structure: DfE National Curriculum programmes of study and STA frameworks (Open Government Licence). Questions are written for this app.
 - Maps: [Natural Earth](https://www.naturalearthdata.com/) (public domain). Borders follow UK government recognition.
-- Fonts: Atkinson Hyperlegible, OpenDyslexic and Outfit (SIL Open Font Licence; see `fonts/`).
+- Fonts: Atkinson Hyperlegible, OpenDyslexic, Outfit, and Playwrite GB J and GB S for handwriting practice (SIL Open Font Licence; see `fonts/`).

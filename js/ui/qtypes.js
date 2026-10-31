@@ -172,7 +172,8 @@ async function mapLocateView(q, onChange) {
 }
 
 function numberLineView(q, onChange) {
-  const W = 640, H = 120, pad = 40, y = 60;
+  // a scale with many marks is drawn narrower, so its numbers stay big enough on a phone
+  const W = q.labels ? 440 : 640, H = 120, pad = q.labels ? 28 : 40, y = 60;
   const xOf = (v) => pad + ((v - q.min) / (q.max - q.min)) * (W - 2 * pad);
   const vOf = (x) => q.min + ((x - pad) / (W - 2 * pad)) * (q.max - q.min);
   let value = null;
@@ -180,10 +181,14 @@ function numberLineView(q, onChange) {
   const svg = s('svg', { viewBox: `0 0 ${W} ${H}`, role: 'slider', 'aria-label': 'Number line', 'aria-valuemin': q.min, 'aria-valuemax': q.max, tabindex: '0' },
     s('rect', { x: 0, y: 0, width: W, height: H, fill: 'transparent' }),
     s('line', { x1: pad, y1: y, x2: W - pad, y2: y, class: 'nl-axis' }),
-    ...Array.from({ length: q.ticks + 1 }, (_, i) => [
-      s('line', { x1: xOf(q.min + i), y1: y - 14, x2: xOf(q.min + i), y2: y + 14, class: 'nl-tick' }),
-      s('text', { x: xOf(q.min + i), y: y + 40, class: 'nl-label' }, String(q.min + i)),
-    ]),
+    // a scale can step in 2s, 5s, 10s… with only some marks numbered (labels)
+    ...Array.from({ length: q.ticks + 1 }, (_, i) => {
+      const v = q.min + i * ((q.max - q.min) / q.ticks);
+      return [
+        s('line', { x1: xOf(v), y1: y - 14, x2: xOf(v), y2: y + 14, class: 'nl-tick' }),
+        !q.labels || q.labels.includes(v) ? s('text', { x: xOf(v), y: y + 40, class: 'nl-label' }, String(v)) : null,
+      ];
+    }),
     marker);
   const set = (v) => {
     value = Math.min(q.max, Math.max(q.min, v));

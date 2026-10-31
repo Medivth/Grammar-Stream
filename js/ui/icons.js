@@ -34,6 +34,7 @@ const P = {
   paper: 'M6 3h9l4 4v14H6zM15 3v4h4M9 12h6M9 16h6',
   swap: 'M7 7h11l-3-3M17 17H6l3 3M18 7l-3 3M6 17l3-3',
   speaker: 'M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11',
+  joins: 'M2 17c2.5 0 3.5-8 6-8s1 8 3.5 8 2-8 4.5-8 1 8 3.5 8 2.5-2 2.5-2M3 21h18',
 };
 
 export const SUBJECT_ICON = { english: 'quill', maths: 'calc', history: 'hourglass', geography: 'compass', science: 'flask', latin: 'column', greek: 'column', computing: 'code', reading: 'book', spelling: 'pen' };

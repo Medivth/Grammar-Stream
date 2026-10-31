@@ -6,11 +6,14 @@ import { weekStart, formatDay } from '../core/dates.js';
 import { calibration, daysPractisedThisMonth, PLACEMENT_ORDER } from '../core/session.js';
 import { exportFile, pickBackupFile, removeProfile } from '../platform/storage.js';
 import { emptyState } from '../core/store.js';
-import { SUBJECTS, SUBJECT_BY_ID, COURSES } from '../core/subjects.js';
-import { piecesToMark, markPiece, wordCount, answersToMark, markAnswer, ANSWER_LEVELS } from '../core/writing.js';
+import { SUBJECTS, SUBJECT_BY_ID, COURSES, COURSE } from '../core/subjects.js';
+import { piecesToMark, markPiece, markTotal, filledPrompt, wordCount, answersToMark, markAnswer, ANSWER_LEVELS } from '../core/writing.js';
 import { needsPlacement } from '../core/placement.js';
+import { talksThisWeek } from '../core/booktalk.js';
+import { readingThisWeek } from '../core/writing.js';
 import { sprintSeconds } from '../core/sprint.js';
 import { paperSpec } from '../gen/paper.js';
+import { handwritingSummary } from '../core/handwriting.js';
 
 let unlockedUntil = 0;
 
@@ -89,11 +92,14 @@ function dashboard(app) {
         h('h2', {}, `This week (from ${formatDay(w.ws, { weekday: 'short', day: 'numeric', month: 'short' })})`),
         h('div', { class: 'grid three' },
           stat(w.days, 'days practised'), stat(w.minutes, 'minutes on the app'), stat(w.reading, 'minutes reading')),
+        // young readers: how much was independent, and how often a grown-up talked about the book with {him}
+        COURSE.young ? h('p', { class: 'muted small', style: { marginTop: '10px' } }, `Last 7 days: ${readingThisWeek(state, app.today(), { solo: true })} minutes read on {her} own · ${talksThisWeek(state, app.today())} book talk${talksThisWeek(state, app.today()) === 1 ? '' : 's'} (questions on {her} Reading page).`) : null,
         h('p', { style: { marginTop: '12px' } }, `${w.answered} questions answered. Started ${w.started.length} topic${w.started.length === 1 ? '' : 's'}; ${w.secured.length} became secure.`),
         w.started.length ? h('p', { class: 'muted' }, 'New this week: ', w.started.map((id) => db.topics[id]?.title).filter(Boolean).join(', ')) : null,
         h('p', { class: 'muted small' }, SUBJECTS.map((s) => `${s.name} ${w.bySubject[s.id] || 0}`).join(' · ')),
         w.sprintBest ? h('p', { class: 'muted small' }, `Arithmetic sprint: best this week ${w.sprintBest.correct} right in ${sprintSeconds()} seconds (level ${w.sprintBest.level} of 5).`) : null,
-        (state.papers || []).length ? h('p', { class: 'muted small' }, `Arithmetic papers: ${state.papers.length} done, best ${Math.max(...state.papers.map((p) => p.score))} / ${paperSpec().marks}, latest ${state.papers.at(-1).score} / ${paperSpec().marks}.`) : null),
+        (state.papers || []).length ? h('p', { class: 'muted small' }, `Arithmetic papers: ${state.papers.length} done, best ${Math.max(...state.papers.map((p) => p.score))} / ${paperSpec().marks}, latest ${state.papers.at(-1).score} / ${paperSpec().marks}.`) : null,
+        handwritingSummary(state.handwriting) ? h('p', { class: 'muted small' }, handwritingSummary(state.handwriting)) : null),
 
       prompts.length ? h('div', { class: 'card' }, h('h2', {}, 'Things to talk about'), h('p', { class: 'muted' }, 'Interest helps more than checking. Try one of these at dinner or in the car:'), h('ul', {}, prompts.map((p) => h('li', {}, p)))) : null,
 
@@ -163,6 +169,11 @@ const PHRASES = {
   worked: ['Your opening really hooked me.', 'Your paragraphs flowed well.', 'You used precise evidence.', 'You explained WHY, not just what.', 'Brilliant word choices.', 'You kept going on a hard task.'],
   next: ['Vary your sentence lengths: add one very short sentence for impact.', 'Use a quotation in every paragraph.', 'Start each paragraph with a clear point.', 'Explain the effect on the reader of one specific word.', 'Use linking words like “As a result” and “However”.', 'Check capital letters and full stops.'],
 };
+// Years 2 and 3: short enough to read aloud to him
+const YOUNG_PHRASES = {
+  worked: ['You borrowed brilliant words from your reading.', 'Your ideas were in a really good order.', 'Super capital letters and full stops!', 'You made it better when you edited it.', 'Your joined-up letters are looking great.', 'You kept going until the end.'],
+  next: ['Use “because” to give a reason.', 'Read it aloud and put in the missing full stops.', 'Check your tricky words with your word list.', 'Take care with endings: -ful has one l.', 'Add a describing word before a noun.', 'Join two letters in every word, like th or ing.'],
+};
 
 function markingCard(app) {
   const { state, db } = app;
@@ -170,11 +181,14 @@ function markingCard(app) {
   const marked = state.pieces.filter((p) => p.mark).slice(-3).reverse();
   if (!todo.length && !marked.length) {
     if (!COURSES[state.course]?.writing) return null;
-    return h('div', { class: 'card' }, h('h2', {}, 'Weekly writing'), h('p', { class: 'muted' }, 'Once a week {she} writes a longer piece (a story, a speech, a history essay…). When {she} hands it in, you mark it here with a four-line guide. It takes about 10 minutes, and your interest in it matters more than the marks.'));
+    return h('div', { class: 'card' }, h('h2', {}, 'Weekly writing'), h('p', { class: 'muted' }, COURSE.young
+      ? 'Once a week {she} writes a short piece on paper (a story, a letter, a fact file, a poem…) built on something {she} has read here. When {she} hands it in, read it together and mark it here with a six-line guide based on the Year 2 “greater depth” standard. About 10 minutes: praise first.'
+      : 'Once a week {she} writes a longer piece (a story, a speech, a history essay…). When {she} hands it in, you mark it here with a four-line guide. It takes about 10 minutes, and your interest in it matters more than the marks.'));
   }
+  const total = (m) => { const t = markTotal(m); return `${t.got}/${t.out}`; };
   return h('div', { class: 'card stack' }, h('h2', {}, todo.length ? `Writing to read (${todo.length})` : 'Weekly writing'),
-    todo.map((p) => markForm(app, p, db.pieceById[p.promptId])),
-    marked.length ? h('div', {}, h('h3', {}, 'Recently marked'), marked.map((p) => h('p', { class: 'muted small' }, `${db.pieceById[p.promptId]?.title}: ${p.mark.scores.reduce((a, b) => a + b, 0)}/8 · next step: ${p.mark.next || '–'}`))) : null);
+    todo.map((p) => markForm(app, p, filledPrompt(db.pieceById[p.promptId], state))),
+    marked.length ? h('div', {}, h('h3', {}, 'Recently marked'), marked.map((p) => h('p', { class: 'muted small' }, `${filledPrompt(db.pieceById[p.promptId], state)?.title}: ${total(p.mark)} · next step: ${p.mark.next || '–'}`))) : null);
 }
 
 // Short written reading answers: a three-level verdict and one line of comment.
@@ -207,26 +221,42 @@ function answersCard(app) {
 }
 
 function markForm(app, piece, prompt) {
+  const young = !!prompt.edit;
+  const phrases = young ? YOUNG_PHRASES : PHRASES;
+  // handwriting can only be marked on paper
+  const skip = (r) => r.paper && piece.mode !== 'paper';
   const scores = prompt.rubric.map(() => null);
   const worked = h('textarea', { placeholder: 'One thing that worked well', style: { minHeight: '70px' } });
   const next = h('textarea', { placeholder: 'One next step (just one!)', style: { minHeight: '70px' } });
   const chips = (list, ta) => h('div', { class: 'row', style: { gap: '6px' } }, list.map((t) => h('button', { type: 'button', class: 'btn-ghost small', style: { minHeight: '40px', padding: '6px 12px' }, onclick: () => { ta.value = t; } }, t)));
   const lines = prompt.rubric.map((r, i) => {
+    if (skip(r)) return h('div', { class: 'field' }, h('label', {}, `${i + 1}. ${r.name}`), h('p', { class: 'muted small', style: { margin: 0 } }, 'Not marked: this piece was typed.'));
     const btns = r.levels.map((desc, lv) => h('button', { type: 'button', class: 'option', 'aria-pressed': 'false', style: { minHeight: '48px', padding: '8px 12px' }, onclick: () => {
       scores[i] = lv;
       btns.forEach((b, j) => b.setAttribute('aria-pressed', String(j === lv)));
-    } }, h('strong', {}, `${lv} `), desc));
+    } }, h('strong', {}, `${lv} `), desc.replace(/(^|[\s(])-(?=[a-z])/g, '$1\u2011')));
     return h('div', { class: 'field' }, h('label', {}, `${i + 1}. ${r.name}`), h('div', { class: 'options plain' }, btns));
   });
+  const ticks = (from, list) => h('ul', { style: { margin: '4px 0 8px' } }, list.map((c, k) => (prompt.paperOnly?.includes(from + k) && piece.mode !== 'paper' ? null : h('li', {}, `${piece.checked.includes(from + k) ? '✓' : '○'} ${c.replace(/(^|\s)-(?=[a-z])/g, '$1\u2011')}`))));
+  const aiming = young
+    ? h('details', {}, h('summary', { style: { cursor: 'pointer' } }, 'What {she} was aiming for, and {her} own check'),
+      h('p', { class: 'small', style: { margin: '8px 0 4px' } }, h('strong', {}, 'Built on: '), prompt.text, h('br'), h('strong', {}, 'Words to borrow: '), prompt.borrow.join(', '), h('br'), h('strong', {}, 'Sentence trick: '), `${prompt.trick.name} (${prompt.trick.example.replace(/\*\*/g, '')})`),
+      h('strong', { class: 'small' }, 'Add'), ticks(0, prompt.edit.add),
+      h('strong', { class: 'small' }, 'Change'), ticks(prompt.edit.add.length, prompt.edit.change),
+      h('strong', { class: 'small' }, 'Check'), ticks(prompt.edit.add.length + prompt.edit.change.length, prompt.edit.check),
+      h('p', { class: 'muted small' }, '✓ = {she} ticked it. On paper, look for changes in a different colour: additions, better words and corrections all count towards line 6.'))
+    : h('details', {}, h('summary', { style: { cursor: 'pointer' } }, 'What {she} was aiming for'), h('ul', {}, prompt.criteria.map((c, i) => h('li', {}, `${piece.checked.includes(i) ? '✓' : '○'} ${c}`))), h('p', { class: 'muted small' }, '✓ = {she} ticked it in {her} self-check.'));
+  const required = prompt.rubric.filter((r) => !skip(r)).length;
   return h('div', { class: 'card stack', style: { background: 'var(--bg)' } },
-    h('h3', {}, prompt.title), h('p', { class: 'muted small' }, prompt.task),
+    h('h3', {}, prompt.title), rich('p', prompt.task, { class: 'muted small' }),
     piece.mode === 'paper' ? h('p', { class: 'chip' }, 'Written on paper: ask {him} for it') : h('div', {}, h('p', { class: 'muted small' }, `${wordCount(piece.text)} words`), h('div', { class: 'card', style: { whiteSpace: 'pre-wrap', maxHeight: '50vh', overflow: 'auto' } }, piece.text)),
-    h('details', {}, h('summary', { style: { cursor: 'pointer' } }, 'What {she} was aiming for'), h('ul', {}, prompt.criteria.map((c, i) => h('li', {}, `${piece.checked.includes(i) ? '✓' : '○'} ${c}`))), h('p', { class: 'muted small' }, '✓ = {she} ticked it in {her} self-check.')),
+    aiming,
+    young ? h('p', { class: 'muted small', style: { margin: 0 } }, '0 = not yet · 1 = the expected standard for the end of Year 2 · 2 = Year 2 greater depth. Read it together first, and let {him} tell you what {she} is proudest of.') : null,
     lines,
-    h('div', { class: 'field' }, h('label', {}, 'What worked'), worked, chips(PHRASES.worked, worked)),
-    h('div', { class: 'field' }, h('label', {}, 'One next step'), next, chips(PHRASES.next, next)),
+    h('div', { class: 'field' }, h('label', {}, 'What worked'), worked, chips(phrases.worked, worked)),
+    h('div', { class: 'field' }, h('label', {}, 'One next step'), next, chips(phrases.next, next)),
     h('button', { class: 'btn-primary', onclick: () => {
-      if (scores.some((s) => s == null)) return toast('Choose a level for all four lines.');
+      if (prompt.rubric.some((r, i) => !skip(r) && scores[i] == null)) return toast(`Choose a level for all ${['', 'one', 'two', 'three', 'four', 'five', 'six'][required] || required} lines.`);
       if (!worked.value.trim()) return toast('Write one thing that worked. It is the most important part!');
       markPiece(piece, { scores, worked: worked.value, next: next.value }, app.today());
       app.save();
