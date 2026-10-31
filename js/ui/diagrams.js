@@ -569,7 +569,9 @@ function barModel(d) {
   const labelW = d.rows.some((r) => r.label) ? 86 : 10;
   const sideW = d.side ? 26 + String(d.side).length * 9.5 : 0;
   const longest = Math.max(...d.rows.map(sum));
-  const unitW = segs ? (420 - labelW - 20 - sideW) / longest : Math.min(64, (420 - labelW - 20) / longest);
+  // sized bars are only as wide as their pieces need, so a short sum is not shrunk to fit a phone
+  const pieces = Math.max(...d.rows.map((r) => (r.segs ? r.segs.length : 0)));
+  const unitW = segs ? Math.min(420 - labelW - 20 - sideW, Math.max(230, 60 * pieces)) / longest : Math.min(64, (420 - labelW - 20) / longest);
   const W = labelW + unitW * longest + 20 + sideW, rowH = 46;
   const top = d.total ? 40 : 14;
   // a row with its own total needs room underneath for it
