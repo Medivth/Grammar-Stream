@@ -17,6 +17,7 @@ import { progressScreen } from './screens/progress.js';
 import { paperScreen } from './screens/paper.js';
 import { typingScreen } from './screens/typing.js';
 import { speedScreen } from './screens/speed.js';
+import { handwritingScreen } from './screens/handwriting.js';
 
 const root = document.getElementById('app');
 
@@ -99,6 +100,7 @@ async function route() {
     case 'paper': return paperScreen(app);
     case 'typing': return typingScreen(app);
     case 'speed': return speedScreen(app);
+    case 'handwriting': return handwritingScreen(app);
     default: return homeScreen(app);
   }
 }

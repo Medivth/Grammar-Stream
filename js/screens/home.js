@@ -2,7 +2,8 @@
 // Subject pages show each subject as a journey of topics.
 
 import { h, s, mount } from '../ui/dom.js';
-import { capybaraEl, COMPANION_FACTS, speciesOf, companionNoun } from '../ui/capybara.js';
+import { COMPANION_FACTS, speciesOf, companionNoun } from '../ui/capybara.js';
+import { companionEl } from '../ui/scenes.js';
 import { icon, iconPath, SUBJECT_ICON } from '../ui/icons.js';
 import { SUBJECTS, SUBJECT_BY_ID, COURSE, isStretch } from '../core/subjects.js';
 import { paperSpec } from '../gen/paper.js';
@@ -11,7 +12,8 @@ import { daysPractisedThisMonth, planDay, extraStatus } from '../core/session.js
 import { learnedCount, subjectStats, planSummary, isKnown } from '../core/progress.js';
 import { formatDay } from '../core/dates.js';
 import { restTime } from './util.js';
-import { pieceDue, currentPiece, unseenFeedback, currentBooks, readingThisWeek } from '../core/writing.js';
+import { pieceDue, currentPiece, nextPrompt, filledPrompt, unseenFeedback, currentBooks, readingThisWeek } from '../core/writing.js';
+import { handwritingLine, emptyHandwriting } from '../core/handwriting.js';
 
 
 export function subjectProgress(state, db, subject) {
@@ -151,7 +153,7 @@ function todayCard(app) {
     btn = h('button', { class: 'btn-start', onclick: () => app.go('#/play') }, icon('play'), ' Start today’s session');
   }
   return h('section', { class: cls, 'aria-label': 'Today' }, h('div', { class: 'inner' },
-    capybaraEl({ ...c, mood }, 'capy bob'),
+    companionEl({ ...c, mood }, 'capy bob'),
     h('div', {},
       h('div', { class: 'eyebrow' }, eyebrow),
       h('h1', {}, title),
@@ -179,10 +181,11 @@ function homeCards(app, rest) {
   const cards = [];
   const card = (ico, tint, title, text, go, isNew) => h('button', { class: 'choice-card home-card', style: { '--tint': `color-mix(in srgb, ${tint} 14%, var(--card))`, '--tint-ink': tint }, onclick: () => app.go(go) },
     h('span', { class: 'ico' }, icon(ico)), h('span', { class: 'txt' }, h('h3', {}, title, isNew ? h('span', { class: 'badge-new' }, 'NEW') : null), h('p', {}, text)));
-  for (const p of unseenFeedback(state)) cards.push(card('star', '#11855a', 'Feedback on your writing', db.pieceById[p.promptId]?.title || '', `#/feedback/${encodeURIComponent(p.id)}`, true));
-  if (COURSE.writing && !rest && pieceDue(state, today)) {
+  for (const p of unseenFeedback(state)) cards.push(card('star', '#11855a', 'Feedback on your writing', filledPrompt(db.pieceById[p.promptId], state)?.title || '', `#/feedback/${encodeURIComponent(p.id)}`, true));
+  // Year 2 and 3 tasks wait until he has read the text they build on
+  if (COURSE.writing && !rest && pieceDue(state, today) && (currentPiece(state) || nextPrompt(state, db))) {
     const cur = currentPiece(state);
-    cards.push(card('pen', SUBJECT_BY_ID.english.colour, cur ? 'Carry on writing' : 'Weekly writing', cur ? db.pieceById[cur.promptId]?.title : 'A longer piece, about 30 minutes', '#/writing'));
+    cards.push(card('pen', (SUBJECT_BY_ID.english || SUBJECT_BY_ID.reading).colour, cur ? 'Carry on writing' : 'Weekly writing', cur ? filledPrompt(db.pieceById[cur.promptId], state)?.title : COURSE.young ? 'A story, letter, fact file or poem' : 'A longer piece, about 30 minutes', '#/writing'));
   }
   const book = currentBooks(state)[0];
   cards.push(card('book', '#c84a14', book ? book.title : 'Choose a book', `${readingThisWeek(state, today)} minutes read this week`, '#/reading'));
@@ -192,6 +195,7 @@ function homeCards(app, rest) {
   const TOOLS = {
     paper: () => card('paper', SUBJECT_BY_ID.maths.colour, COURSE.young ? 'Maths test' : 'Arithmetic paper', best ? `${spec.questions} questions in ${spec.minutes} minutes · best ${best}/${spec.marks}` : `${spec.questions} questions in ${spec.minutes} minutes, like the real test`, '#/paper'),
     typing: () => card('keyboard', '#5143d9', 'Touch typing', state.typing?.best ? `best ${state.typing.best.wpm} words a minute` : 'Ten lessons, then race the river', '#/typing'),
+    handwriting: () => card('joins', '#0f9a6e', 'Handwriting joins', handwritingLine(state.handwriting || emptyHandwriting()), '#/handwriting'),
     speed: () => card('eye', '#d63d74', 'Speed reading', (state.speed || []).length ? `last read at ${state.speed.at(-1).wpm} words a minute` : 'Read faster without losing the thread', '#/speed'),
   };
   // Latin or Greek any time, as often as she likes, whether or not today's session is done

@@ -110,7 +110,8 @@ export function validateDB(db, generators) {
     if (!s.model || !s.checks?.length) errs.push(`sentence ${s.id}: needs model and checks`);
   }
   for (const p of db.pieces) {
-    if (p.rubric?.length !== 4 || !p.rubric.every((r) => r.name && r.levels?.length === 3)) errs.push(`piece ${p.id}: rubric needs 4 lines of 3 levels`);
+    if (!(p.rubric?.length >= 4 && p.rubric.length <= 6) || !p.rubric.every((r) => r.name && r.levels?.length === 3)) errs.push(`piece ${p.id}: rubric needs 4 to 6 lines of 3 levels`);
+    if (p.edit && p.criteria.length !== p.edit.add.length + p.edit.change.length + p.edit.check.length) errs.push(`piece ${p.id}: criteria must be the add, change and check lists in order`);
     if (!p.plan?.length || !p.criteria?.length || !p.task || !p.starter) errs.push(`piece ${p.id}: needs task, plan, criteria and starter`);
     for (const t of p.needsTopics || []) if (!db.topics[t]) errs.push(`piece ${p.id}: unknown topic ${t}`);
   }

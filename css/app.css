@@ -502,3 +502,78 @@ pre.code code { border: 0; padding: 0; background: none; font-size: 0.95rem; }
 .vblocks-result { font-size: 1.15rem; padding-top: 4px; }
 .vsounds { display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: center; }
 .vsound-svg { height: 70px; width: auto; }
+
+/* --- scenes: backdrops the companion stands in (js/ui/scenes.js) --- */
+.capy.in-scene { border-radius: 18px; overflow: hidden; line-height: 0; }
+.capy.in-scene svg { display: block; width: 100%; height: auto; }
+.in-scene .bob { transform-box: view-box; }
+.today .capy.in-scene { width: min(100%, 270px); border: 3px solid rgba(255, 255, 255, 0.4); filter: none; box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25); }
+@media (min-width: 640px) {
+  .today .inner:has(.in-scene) { grid-template-columns: 1fr 250px; }
+  .today .capy.in-scene { width: 250px; }
+}
+.wardrobe-preview { max-width: 240px; margin: 0 auto 8px; }
+.wardrobe-preview.with-scene { max-width: 340px; }
+.wardrobe-preview .in-scene { box-shadow: var(--shadow-sm); }
+.wardrobe-title { margin: 22px 0 6px; text-align: center; }
+.scenes { margin: 14px 0 6px; }
+.scenes-head { display: flex; align-items: baseline; justify-content: center; gap: 10px; margin-bottom: 4px; }
+.scenes-head h3 { margin: 0; }
+.scene-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 10px; }
+@media (max-width: 420px) { .scene-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; } }
+.scene-tile { padding: 5px 5px 7px; border-radius: 16px; display: grid; justify-items: center; align-content: start; gap: 3px; min-height: 0; font-size: 0.78rem; line-height: 1.2; }
+.scene-tile[aria-pressed='true'] { border-color: var(--accent); box-shadow: 0 3px 0 var(--accent); }
+.scene-thumb { position: relative; width: 100%; aspect-ratio: 4 / 3; border-radius: 11px; overflow: hidden; background: var(--bg-2); line-height: 0; }
+.scene-thumb > svg { width: 100%; height: 100%; display: block; }
+/* the "no scene" tile shows the companion on its own, smaller */
+.scene-tile:first-child .scene-thumb > svg { width: 86%; height: 86%; margin: 7% auto 0; }
+.scene-tile.locked .scene-thumb > svg { filter: grayscale(0.85) brightness(0.8); opacity: 0.55; }
+.scene-lock { position: absolute; inset: 0; display: grid; place-items: center; }
+.scene-lock svg { width: 30px; height: 30px; padding: 7px; box-sizing: content-box; border-radius: 50%; background: rgba(28, 26, 51, 0.72); color: #fff; }
+.scene-name { font-family: var(--display); font-weight: 600; text-align: center; }
+.scene-hint { color: var(--muted); font-size: 0.7rem; text-align: center; }
+
+/* ---------------------------------------------------------------- handwriting joins (js/screens/handwriting.js) */
+@font-face { font-family: 'Playwrite GB J'; src: url('../fonts/playwrite-gb-j-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Playwrite GB S'; src: url('../fonts/playwrite-gb-s-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+.hw-j { font-family: 'Playwrite GB J', cursive; font-weight: 400; }
+/* the same letter shapes without the contextual joins */
+.hw-u, .hw-a { font-family: 'Playwrite GB J', cursive; font-weight: 400; font-feature-settings: 'calt' 0; }
+/* spaced a little, so the comparison shows clearly where the joins would go */
+.hw-a { letter-spacing: 12px; }
+.hw-s { font-family: 'Playwrite GB S', cursive; font-weight: 400; }
+.hw-measure { position: absolute; left: -9999px; top: 0; visibility: hidden; white-space: pre; font-size: 100px; line-height: 1; }
+.hw-svg { display: block; margin: 0 auto; height: auto; overflow: hidden; }
+.hw-lines line { stroke-width: 2; vector-effect: non-scaling-stroke; }
+.hw-lines .base { stroke: var(--muted); stroke-width: 2.5; }
+.hw-lines .xh { stroke: var(--muted); stroke-dasharray: 6 5; opacity: 0.7; }
+.hw-lines .asc, .hw-lines .desc { stroke: color-mix(in srgb, var(--muted) 45%, transparent); }
+.hw-text { fill: var(--ink); }
+.hw-svg.faint .hw-text { fill: color-mix(in srgb, var(--ink) 20%, transparent); }
+.hw-end { fill: var(--v3); }
+.hw-join { fill: none; stroke-width: 9; stroke-linecap: round; }
+.hw-join.diag { stroke: var(--v1); }
+.hw-join.horiz { stroke: var(--v4); }
+.hw-join.lift { stroke: var(--v5); stroke-dasharray: 3 16; stroke-width: 7; }
+.hw-tip.diag, .hw-dot.diag { fill: var(--v1); }
+.hw-tip.horiz, .hw-dot.horiz { fill: var(--v4); }
+.hw-tip.lift { fill: var(--v5); }
+.hw-fig { margin: 0; display: grid; gap: 6px; justify-items: center; min-width: 0; }
+.hw-fig figcaption { font-size: 0.9rem; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.hw-key { display: inline-block; width: 26px; height: 6px; border-radius: 3px; background: var(--v1); }
+.hw-key.horiz { background: var(--v4); }
+.hw-key.lift { background: repeating-linear-gradient(90deg, var(--v5) 0 5px, transparent 5px 9px); }
+.hw-key.end { background: var(--v3); }
+.hw-say { display: flex; gap: 12px; align-items: flex-start; }
+.hw-say p { margin: 0; font-size: 1.1rem; }
+.hw-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: end; }
+.hw-trace { position: relative; margin: 0 auto; border-radius: 12px; background: color-mix(in srgb, var(--accent-soft) 45%, var(--card)); }
+.hw-canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; cursor: crosshair; color: var(--accent); -webkit-user-select: none; user-select: none; }
+.hw-row { justify-content: space-between; }
+.hw-praise { margin: 0; color: var(--good); font-weight: 700; }
+.hw-paper { display: flex; gap: 12px; align-items: center; }
+.hw-paper p { margin: 0; font-weight: 700; }
+.hw-paper .ico { flex: 0 0 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; background: var(--warm-soft); color: var(--warn); }
+.hw-paper .ico svg { width: 24px; height: 24px; }
+.hw-chip { font-size: 1.05rem; color: var(--ink); }
+.hw-done { font-size: 1.15rem; max-width: 34ch; margin: 0 auto; }

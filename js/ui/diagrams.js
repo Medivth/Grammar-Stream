@@ -54,6 +54,7 @@ export function mathsDiagram(d) {
     case 'possgrid': return possGrid(d);
     case 'polygon': return polygonSides(d);
     case 'solid': return solid(d);
+    case 'flat': return flatShapes(d);
     default: return null;
   }
 }
@@ -558,30 +559,51 @@ function boxplot(d) {
 // ---------------------------------------------------------------- models for reasoning
 // Bar model: rows of equal-sized boxes, so ratios and fractions of amounts can be seen.
 // { rows: [{ label, parts, shaded?, text?, total? }], total?: 'whole label' }
+// Rows may instead be cut into sized pieces, all on one scale, so two amounts can be compared
+// and the extra bit marked: { label, segs: [{ v, text?, shaded?, mark?, out? }] } (mark: the extra
+// bit, in orange; out: a part taken away, dashed). side: 'label' brackets all the rows together.
 function barModel(d) {
-  const maxParts = Math.max(...d.rows.map((r) => r.parts));
+  const segs = d.rows.some((r) => r.segs);
+  const sum = (r) => (r.segs ? r.segs.reduce((a, g) => a + g.v, 0) : r.parts);
   const labelW = d.rows.some((r) => r.label) ? 86 : 10;
-  const unitW = Math.min(64, (420 - labelW - 20) / maxParts);
-  const W = labelW + unitW * maxParts + 20, rowH = 46;
+  const sideW = d.side ? 26 + String(d.side).length * 9.5 : 0;
+  const longest = Math.max(...d.rows.map(sum));
+  const unitW = segs ? (420 - labelW - 20 - sideW) / longest : Math.min(64, (420 - labelW - 20) / longest);
+  const W = labelW + unitW * longest + 20 + sideW, rowH = 46;
   const top = d.total ? 40 : 14;
   // a row with its own total needs room underneath for it
   const gapAfter = (r) => (r.total ? 30 : 12);
   const rowY = d.rows.map((_, i) => top + d.rows.slice(0, i).reduce((a, r) => a + rowH + gapAfter(r), 0));
   const H = top + d.rows.reduce((a, r) => a + rowH + gapAfter(r), 0) + 4;
-  const el = svg(W, H, `Bar model: ${d.rows.map((r) => `${r.label || 'bar'} ${r.parts} parts`).join(', ')}`, 440);
+  const el = svg(W, H, `Bar model: ${d.rows.map((r) => `${r.label || 'bar'} ${r.segs ? r.segs.length : r.parts} parts`).join(', ')}`, 440);
   if (d.total) {
-    const x2 = labelW + unitW * d.rows[0].parts;
+    const x2 = labelW + unitW * sum(d.rows[0]);
     el.append(s('path', { d: `M${labelW} ${top - 6} v-10 H${x2} v10`, fill: 'none', stroke: INK, 'stroke-width': 2 }), text((labelW + x2) / 2, top - 22, d.total, { 'font-size': 17 }));
   }
+  const box = (x, y, w, t, { shaded, mark, out } = {}, fit = false) => {
+    const fill = shaded ? BLUE : mark ? '#d97a12' : 'var(--card, #fff)';
+    el.append(s('rect', { x, y, width: w, height: rowH, fill, 'fill-opacity': shaded || mark ? 0.85 : 1, stroke: INK, 'stroke-width': 2, ...(out ? { 'stroke-dasharray': '5 4', opacity: 0.6 } : {}) }));
+    if (t == null || t === '') return;
+    const str = String(t), size = w < 40 ? 14 : 16.5;
+    // a sized piece too small for its text leaves it out (the caption gives the value)
+    if (fit && str.length * size * 0.5 + 6 > w) return;
+    el.append(text(x + w / 2, y + rowH / 2 + 5, str, { 'font-size': size, fill: shaded || mark ? '#fff' : INK, ...(out ? { opacity: 0.7 } : {}) }));
+  };
   d.rows.forEach((r, i) => {
     const y = rowY[i];
     if (r.label) el.append(text(labelW - 10, y + rowH / 2 + 5, r.label, { 'text-anchor': 'end', 'font-size': 16 }));
-    for (let k = 0; k < r.parts; k++) {
-      el.append(s('rect', { x: labelW + k * unitW, y, width: unitW, height: rowH, fill: k < (r.shaded || 0) ? BLUE : 'var(--card, #fff)', 'fill-opacity': k < (r.shaded || 0) ? 0.85 : 1, stroke: INK, 'stroke-width': 2 }));
-      if (r.text) el.append(text(labelW + k * unitW + unitW / 2, y + rowH / 2 + 5, r.text, { 'font-size': unitW < 40 ? 14 : 16.5, fill: k < (r.shaded || 0) ? '#fff' : INK }));
+    if (r.segs) {
+      let x = labelW;
+      for (const g of r.segs) { box(x, y, g.v * unitW, g.text, g, true); x += g.v * unitW; }
+    } else {
+      for (let k = 0; k < r.parts; k++) box(labelW + k * unitW, y, unitW, r.text, { shaded: k < (r.shaded || 0) });
     }
-    if (r.total) el.append(small(labelW + (r.parts * unitW) / 2, y + rowH + 16, r.total));
+    if (r.total) el.append(small(labelW + (sum(r) * unitW) / 2, y + rowH + 16, r.total));
   });
+  if (d.side) {
+    const x = labelW + unitW * longest + 10, y0 = rowY[0], y1 = rowY.at(-1) + rowH;
+    el.append(s('path', { d: `M${x} ${y0} h8 V${y1} h-8`, fill: 'none', stroke: INK, 'stroke-width': 2 }), text(x + 14, (y0 + y1) / 2 + 6, d.side, { 'text-anchor': 'start', 'font-size': 17 }));
+  }
   return el;
 }
 
@@ -706,6 +728,40 @@ function polygonSides(d) {
     el.append(s('circle', { cx: mx + ox, cy: my + oy, r: 11, fill: '#d97a12' }), text(mx + ox, my + oy + 5, String(i + 1), { 'font-size': 13, fill: '#fff' }));
   });
   if (d.corners) pts.forEach((p) => el.append(s('circle', { cx: p[0], cy: p[1], r: 5.5, fill: '#d62f3a' })));
+  return el;
+}
+
+// Flat shapes side by side, each named underneath; lines: true draws every line of symmetry
+// (dashed red). A circle's lines never end, so it shows a few. { shapes: ['kite', 'isosceles'], lines? }
+const FLAT = {
+  square: ['square', () => [[-50, -50], [50, -50], [50, 50], [-50, 50]], [[[0, -62], [0, 62]], [[-62, 0], [62, 0]], [[-58, -58], [58, 58]], [[58, -58], [-58, 58]]]],
+  rectangle: ['rectangle', () => [[-62, -36], [62, -36], [62, 36], [-62, 36]], [[[0, -48], [0, 48]], [[-74, 0], [74, 0]]]],
+  isosceles: ['isosceles triangle', () => [[0, -55], [40, 52], [-40, 52]], [[[0, -66], [0, 62]]]],
+  equilateral: ['equilateral triangle', () => [[0, -50], [55, 45.3], [-55, 45.3]], null],
+  kite: ['kite', () => [[0, -55], [45, -15], [0, 55], [-45, -15]], [[[0, -66], [0, 66]]]],
+  scalene: ['right-angled triangle', () => [[-50, -40], [60, 45], [-50, 45]], []],
+  semicircle: ['semicircle', null, [[[0, -44], [0, 42]]]],
+  circle: ['circle', null, [0, 45, 90, 135].map((a) => { const r = 66, t = (a * Math.PI) / 180; return [[-r * Math.cos(t), -r * Math.sin(t)], [r * Math.cos(t), r * Math.sin(t)]]; })],
+  letterA: ['letter A', null, [[[0, -68], [0, 66]]]],
+};
+function flatShapes(d) {
+  const n = d.shapes.length, cw = 160, W = cw * n, H = 178, cy = 72;
+  const el = svg(W, H, d.shapes.map((k) => FLAT[k]?.[0] || k).join(' and '), Math.min(440, W * 1.15));
+  const st = { fill: 'var(--v1-soft, #e3edfc)', stroke: BLUE, 'stroke-width': 3.5, 'stroke-linejoin': 'round' };
+  d.shapes.forEach((k, i) => {
+    const [name, pts, lines] = FLAT[k], cx = cw * i + cw / 2;
+    const P = ([x, y]) => `${(cx + x).toFixed(1)} ${(cy + y).toFixed(1)}`;
+    if (pts) el.append(s('path', { d: `M${pts().map(P).join(' L')} Z`, ...st }));
+    else if (k === 'semicircle') el.append(s('path', { d: `M${P([-62, 30])} A62 62 0 0 1 ${P([62, 30])} Z`, ...st }));
+    else if (k === 'circle') el.append(s('circle', { cx, cy, r: 55, ...st }));
+    else el.append(s('path', { d: `M${P([-44, 58])} L${P([0, -44])} L${P([44, 58])} M${P([-27, 20])} L${P([27, 20])}`, fill: 'none', stroke: BLUE, 'stroke-width': 15, 'stroke-linejoin': 'miter' }));
+    if (d.lines) {
+      // an equilateral triangle's lines run from each corner to the middle of the side opposite
+      const ls = lines || pts().map((p, j, a) => { const q = a[(j + 1) % 3], r = a[(j + 2) % 3], m = [(q[0] + r[0]) / 2, (q[1] + r[1]) / 2]; return [[p[0] - (m[0] - p[0]) * 0.12, p[1] - (m[1] - p[1]) * 0.12], [m[0] + (m[0] - p[0]) * 0.14, m[1] + (m[1] - p[1]) * 0.14]]; });
+      for (const [a, b] of ls) el.append(s('path', { d: `M${P(a)} L${P(b)}`, stroke: '#d62f3a', 'stroke-width': 2.5, 'stroke-dasharray': '7 5', fill: 'none' }));
+    }
+    el.append(small(cx, H - 12, name, { 'font-size': name.length > 16 ? 13 : 14.5 }));
+  });
   return el;
 }
 

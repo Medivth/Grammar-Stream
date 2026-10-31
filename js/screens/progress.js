@@ -2,8 +2,9 @@
 
 import { h, s, mount, toast } from '../ui/dom.js';
 import { icon } from '../ui/icons.js';
-import { capybaraEl, ACCESSORIES, wornList, toggleWear } from '../ui/capybara.js';
+import { capybaraEl, capybaraSVG, ACCESSORIES, wornList, toggleWear } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
+import { sceneSVG, sceneStatus, companionEl, SCENES } from '../ui/scenes.js';
 import { SUBJECTS } from '../core/subjects.js';
 import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, unlockedAccessories, milestoneDefs, wardrobeAccessories } from '../core/progress.js';
 import { daysPractisedThisMonth } from '../core/session.js';
@@ -155,7 +156,40 @@ function badgesTab(app, body) {
     h('div', { class: 'section-title' }, h('h2', {}, 'Badges'), h('span', { class: 'muted small' }, `${ms.filter((m) => m.done).length} of ${ms.length} earned`)),
     h('div', { class: 'badge-grid' }, ms.map(badge)),
     h('div', { class: 'section-title' }, h('h2', {}, `${c.name || 'Your companion'}’s wardrobe`)),
-    h('div', { style: { maxWidth: '240px', margin: '0 auto 8px' } }, capybaraEl({ ...c, mood: 'happy' })),
+    h('div', { class: `wardrobe-preview${c.scene ? ' with-scene' : ''}` }, companionEl({ ...c, mood: 'happy' })),
+    scenePicker(app, body, ms.filter((m) => m.done).length),
+    h('h3', { class: 'wardrobe-title' }, 'Things to wear'),
     h('p', { class: 'muted center' }, 'Tap to put something on, and tap again to take it off. You can wear one thing on your head, one on your face, one round your neck, one on your back, hold one, and ride one, all at once. Locked ones are earned with badges.'),
     wardrobe);
+}
+
+// Scenes to stand in: a few open from the start, one more with each badge (see js/ui/scenes.js).
+function scenePicker(app, body, earned) {
+  const { state } = app;
+  const c = state.profile?.companion || {};
+  const list = sceneStatus(earned);
+  const choose = (id) => {
+    const next = { ...c };
+    if (id && id !== c.scene) next.scene = id; else delete next.scene;
+    state.profile.companion = next;
+    app.save();
+    const y = window.scrollY;
+    badgesTab(app, body.replaceChildren() || body);
+    window.scrollTo(0, y);
+    // show the companion in its new place if the preview has scrolled out of sight
+    const p = body.querySelector('.wardrobe-preview');
+    if (p && p.getBoundingClientRect().top < 0) p.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  };
+  const tile = (id, label, inner, { open = true, on = false, hint = '', need = 0 } = {}) => h('button', {
+    type: 'button', class: `scene-tile${open ? '' : ' locked'}`, 'aria-pressed': String(on),
+    'aria-label': open ? label : `${label}: locked. ${hint}`,
+    onclick: () => (open ? choose(on ? null : id) : toast(`Earn ${need} more badge${need === 1 ? '' : 's'} to open the ${label.toLowerCase()}.`)),
+  }, h('div', { class: 'scene-thumb', html: inner }, open ? null : h('span', { class: 'scene-lock' }, icon('lock'))), h('span', { class: 'scene-name' }, label), open ? null : h('span', { class: 'scene-hint' }, hint));
+  const opened = list.filter((x) => x.open).length;
+  return h('div', { class: 'scenes' },
+    h('div', { class: 'scenes-head' }, h('h3', {}, 'Scenes'), h('span', { class: 'muted small' }, `${opened} of ${SCENES.length} open`)),
+    h('p', { class: 'muted center' }, `Choose a place for ${c.name || 'your companion'} to stand. Tap it again to go back to plain. A new scene opens with every badge you earn.`),
+    h('div', { class: 'scene-grid' },
+      tile(null, 'No scene', capybaraSVG({ ...c, mood: 'happy' }), { on: !c.scene }),
+      list.map((x) => tile(x.id, x.name, sceneSVG(x.id), { open: x.open, on: c.scene === x.id, need: x.need, hint: `Earn ${x.need} more badge${x.need === 1 ? '' : 's'}` }))));
 }

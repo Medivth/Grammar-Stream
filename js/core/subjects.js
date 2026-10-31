@@ -40,9 +40,9 @@ export const COURSES = {
     minutes: 12,
     sprint: 'ks1', sprintSeconds: 60,
     paper: 'ks1',
-    tools: ['paper', 'typing', 'speed'],
+    tools: ['paper', 'handwriting', 'typing', 'speed'],
     speedRange: [50, 30, 200], // start, slowest, fastest words a minute
-    writing: false,
+    writing: true, // weekly pieces built on his reading (tools/content-src/ks1/writing.mjs)
     readAloud: true,
     young: true, sprintUp: 12, next: 'y3',
     starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird', 'astronaut', 'scooter', 'partyhat'],
@@ -64,9 +64,9 @@ export const COURSES = {
     minutes: 15,
     sprint: 'y3', sprintSeconds: 60,
     paper: 'y3',
-    tools: ['paper', 'typing', 'speed'],
+    tools: ['paper', 'handwriting', 'typing', 'speed'],
     speedRange: [70, 40, 260],
-    writing: false,
+    writing: true,
     readAloud: true,
     young: true, sprintUp: 14, prev: 'ks1',
     starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird', 'astronaut', 'scooter', 'partyhat'],

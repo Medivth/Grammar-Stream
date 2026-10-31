@@ -23,7 +23,7 @@ export function emptyState(today) {
   return {
     created: today,
     course: 'y6', // which course this child follows (see js/core/subjects.js)
-    profile: null, // { childName, companion: { name, fur, accessory }, parentPin }
+    profile: null, // { childName, companion: { name, fur, wear, scene }, parentPin }; no scene = plain
     settings: {
       sessionMinutes: 25,
       bedtime: '20:30',
@@ -51,6 +51,7 @@ export function emptyState(today) {
     papers: [], // arithmetic papers: { day, score, max, seconds, wrong }
     typing: { lessons: {}, best: null }, // touch typing: lessons[id] = { wpm, acc }, best = { wpm, acc, day }
     speed: [], // speed reading: { day, passage, wpm, correct, total }
+    handwriting: { lessons: {}, days: [] }, // joins: lessons[id] = { day, last, times }, days practised (older saves gain it on first use)
     plan: null, // the in-progress day plan
     lastBackup: null,
   };

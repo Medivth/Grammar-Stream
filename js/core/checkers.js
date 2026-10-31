@@ -86,6 +86,11 @@ function checkNumeric(q, response) {
   const parsed = parseNumber(word != null ? String(word) : response);
   if (!parsed) return { correct: false, score: 0, message: 'That doesn’t look like a number. Try digits, a decimal like 0.5 or a fraction like 3/4.' };
   const target = parseNumber(q.numeric.value).value;
+  // an estimate ("about how much?"): anything within tol of the value is right
+  if (q.numeric.tol != null) {
+    const ok = Math.abs(parsed.value.valueOf() - target.valueOf()) <= q.numeric.tol;
+    return { correct: ok, score: ok ? 1 : 0, message: ok && !parsed.value.eq(target) ? `Good estimate! The best answer is ${q.numeric.value}.` : undefined };
+  }
   if (!parsed.value.eq(target)) return { correct: false, score: 0 };
   const form = q.numeric.form || 'any';
   if (form === 'simplest' && parsed.form === 'fraction' && !parsed.raw.isSimplest()) {
