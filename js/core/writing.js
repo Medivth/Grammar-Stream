@@ -71,12 +71,13 @@ export function finishBook(state, book, today) {
   book.endDay = today;
 }
 
-export function logReading(state, minutes, today, book = null) {
-  state.reading.push({ day: today, minutes, title: book?.title ?? null });
+// solo: read on their own (rather than together with a grown-up)
+export function logReading(state, minutes, today, book = null, solo = false) {
+  state.reading.push({ day: today, minutes, title: book?.title ?? null, ...(solo ? { solo: true } : {}) });
 }
 
-export function readingThisWeek(state, today) {
-  return state.reading.filter((r) => r.day > today - 7).reduce((a, r) => a + r.minutes, 0);
+export function readingThisWeek(state, today, { solo = false } = {}) {
+  return state.reading.filter((r) => r.day > today - 7 && (!solo || r.solo)).reduce((a, r) => a + r.minutes, 0);
 }
 
 // --- written reading answers -----------------------------------------------------------

@@ -6,9 +6,11 @@ import { weekStart, formatDay } from '../core/dates.js';
 import { calibration, daysPractisedThisMonth, PLACEMENT_ORDER } from '../core/session.js';
 import { exportFile, pickBackupFile, removeProfile } from '../platform/storage.js';
 import { emptyState } from '../core/store.js';
-import { SUBJECTS, SUBJECT_BY_ID, COURSES } from '../core/subjects.js';
+import { SUBJECTS, SUBJECT_BY_ID, COURSES, COURSE } from '../core/subjects.js';
 import { piecesToMark, markPiece, wordCount, answersToMark, markAnswer, ANSWER_LEVELS } from '../core/writing.js';
 import { needsPlacement } from '../core/placement.js';
+import { talksThisWeek } from '../core/booktalk.js';
+import { readingThisWeek } from '../core/writing.js';
 import { sprintSeconds } from '../core/sprint.js';
 import { paperSpec } from '../gen/paper.js';
 
@@ -89,6 +91,8 @@ function dashboard(app) {
         h('h2', {}, `This week (from ${formatDay(w.ws, { weekday: 'short', day: 'numeric', month: 'short' })})`),
         h('div', { class: 'grid three' },
           stat(w.days, 'days practised'), stat(w.minutes, 'minutes on the app'), stat(w.reading, 'minutes reading')),
+        // young readers: how much was independent, and how often a grown-up talked about the book with {him}
+        COURSE.young ? h('p', { class: 'muted small', style: { marginTop: '10px' } }, `Last 7 days: ${readingThisWeek(state, app.today(), { solo: true })} minutes read on {her} own · ${talksThisWeek(state, app.today())} book talk${talksThisWeek(state, app.today()) === 1 ? '' : 's'} (questions on {her} Reading page).`) : null,
         h('p', { style: { marginTop: '12px' } }, `${w.answered} questions answered. Started ${w.started.length} topic${w.started.length === 1 ? '' : 's'}; ${w.secured.length} became secure.`),
         w.started.length ? h('p', { class: 'muted' }, 'New this week: ', w.started.map((id) => db.topics[id]?.title).filter(Boolean).join(', ')) : null,
         h('p', { class: 'muted small' }, SUBJECTS.map((s) => `${s.name} ${w.bySubject[s.id] || 0}`).join(' · ')),
