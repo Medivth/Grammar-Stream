@@ -13,6 +13,7 @@ import { talksThisWeek } from '../core/booktalk.js';
 import { readingThisWeek } from '../core/writing.js';
 import { sprintSeconds } from '../core/sprint.js';
 import { paperSpec } from '../gen/paper.js';
+import { handwritingSummary } from '../core/handwriting.js';
 
 let unlockedUntil = 0;
 
@@ -97,7 +98,8 @@ function dashboard(app) {
         w.started.length ? h('p', { class: 'muted' }, 'New this week: ', w.started.map((id) => db.topics[id]?.title).filter(Boolean).join(', ')) : null,
         h('p', { class: 'muted small' }, SUBJECTS.map((s) => `${s.name} ${w.bySubject[s.id] || 0}`).join(' · ')),
         w.sprintBest ? h('p', { class: 'muted small' }, `Arithmetic sprint: best this week ${w.sprintBest.correct} right in ${sprintSeconds()} seconds (level ${w.sprintBest.level} of 5).`) : null,
-        (state.papers || []).length ? h('p', { class: 'muted small' }, `Arithmetic papers: ${state.papers.length} done, best ${Math.max(...state.papers.map((p) => p.score))} / ${paperSpec().marks}, latest ${state.papers.at(-1).score} / ${paperSpec().marks}.`) : null),
+        (state.papers || []).length ? h('p', { class: 'muted small' }, `Arithmetic papers: ${state.papers.length} done, best ${Math.max(...state.papers.map((p) => p.score))} / ${paperSpec().marks}, latest ${state.papers.at(-1).score} / ${paperSpec().marks}.`) : null,
+        handwritingSummary(state.handwriting) ? h('p', { class: 'muted small' }, handwritingSummary(state.handwriting)) : null),
 
       prompts.length ? h('div', { class: 'card' }, h('h2', {}, 'Things to talk about'), h('p', { class: 'muted' }, 'Interest helps more than checking. Try one of these at dinner or in the car:'), h('ul', {}, prompts.map((p) => h('li', {}, p)))) : null,
 

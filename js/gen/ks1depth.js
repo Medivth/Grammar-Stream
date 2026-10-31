@@ -58,6 +58,7 @@ export function saidTime(h, m) {
   return m < 30 ? `${WORD[m]} past ${h}` : `${WORD[60 - m]} to ${next}`;
 }
 const digital = (h, m) => `${h}:${pad(m)}`;
+const cap = (t) => t[0].toUpperCase() + t.slice(1);
 const addMins = (h, m, d) => { const t = (((h % 12) * 60 + m + d) % 720 + 720) % 720; return [Math.floor(t / 60) || 12, t % 60]; };
 function handsExplain(h, m) {
   const next = (h % 12) + 1;
@@ -314,7 +315,7 @@ export const KS1_DEPTH_GENERATORS = {
       const kind = rng.pick(['more', 'fewer', 'difference']), x = rng.int(8, 30), d = rng.int(2, 9);
       if (kind === 'more') return typed(`${B} has ${amt(x, cash)}${of}. ${A} has ${amt(d, cash)} more than ${B}. ${many} does ${A} have?`, x + d, `${A} has the same as ${B} and ${amt(d, cash)} more: ${x} + ${d} = ${x + d}.`, [`“More than” means ${A} has the bigger amount.`, `${A} = ${x} + ${d}.`, `= ${amt(x + d, cash)}.`],
         { ...unitX, ...two([seg(x, amt(x, cash)), seg(d, amt(d, cash), { mark: true })], [seg(x, amt(x, cash))], {}, `${A}’s bar is ${B}’s bar plus the extra ${amt(d, cash)}: ${amt(x + d, cash)}.`) });
-      if (kind === 'fewer') return typed(`${B} has ${amt(x + d, cash)}${of}. ${A} has ${cash ? `£${d} less` : `${d} fewer`} than ${B}. ${many} does ${A} have?`, x, `${A} has ${amt(d, cash)} less than ${B}: ${x + d} − ${d} = ${x}.`, [`${cash ? '“Less than”' : '“Fewer than”'} means ${A} has the smaller amount.`, `${A} = ${x + d} − ${d}.`, `= ${amt(x, cash)}.`],
+      if (kind === 'fewer') return typed(`${B} has ${amt(x + d, cash)}${of}. ${A} has ${cash ? `£${d} less` : `${d} fewer`} than ${B}. ${many} does ${A} have?`, x, `${A} has ${cash ? `£${d} less` : `${d} fewer`} than ${B}: ${x + d} − ${d} = ${x}.`, [`${cash ? '“Less than”' : '“Fewer than”'} means ${A} has the smaller amount.`, `${A} = ${x + d} − ${d}.`, `= ${amt(x, cash)}.`],
         { ...unitX, ...two([seg(x, amt(x, cash))], [seg(x, amt(x, cash)), seg(d, amt(d, cash), { mark: true })], {}, `${B}’s bar has an extra ${amt(d, cash)}. Without it, ${A} has ${amt(x, cash)}.`) });
       return typed(`${A} has ${amt(x + d, cash)}${of}. ${B} has ${amt(x, cash)}. ${cash ? 'How much more money' : `How many more ${thing}`} does ${A} have than ${B}?`, d, `Find the difference: ${x + d} − ${x} = ${d}.`, ['“How many more” means find the difference.', `Line the two amounts up: ${x + d} and ${x}.`, `${x + d} − ${x} = ${d}.`],
         { ...unitX, ...two([seg(x, amt(x, cash)), seg(d, '?', { mark: true })], [seg(x, amt(x, cash))], {}, `The bars match up to ${amt(x, cash)}. The extra bit is the difference: ${amt(d, cash)}.`) });
@@ -362,7 +363,7 @@ export const KS1_DEPTH_GENERATORS = {
     // two amounts of equal groups; sometimes the same, so "the same" is a real answer
     const pair = () => {
       if (rng.chance(0.15)) return rng.pick(SAME);
-      const sizes = level === 1 ? [2, 5, 10] : [2, 3, 4, 5, 10], s1 = rng.pick(sizes);
+      const sizes = [2, 5, 10], s1 = rng.pick(sizes);
       return [rng.int(2, level === 1 ? 6 : 9), s1, rng.int(2, level === 1 ? 6 : 9), rng.pick(sizes.filter((x) => x !== s1))];
     };
     const packBars = (rows, caption) => pic(segBar(rows.map(([n, sz, lab]) => ({ label: lab ?? `${n} × ${sz}`, segs: groups(n, sz) }))), caption);
@@ -387,7 +388,8 @@ export const KS1_DEPTH_GENERATORS = {
     if (kind === 'cheaper') {
       const thing = rng.pick(['dinosaur stickers', 'rocket badges', 'toy cars', 'knight cards']);
       let n1, c1, n2, c2;
-      do { [c1, c2] = rng.sample([5, 10, 20, 50], 2); n1 = rng.int(2, 6); n2 = rng.int(2, 6); } while (n1 * c1 === n2 * c2 && rng.chance(0.7));
+      // more of the cheaper thing, so neither amount is plainly the smaller
+      do { [c1, c2] = rng.sample([5, 10, 20, 50], 2); n1 = rng.int(2, 6); n2 = rng.int(2, 6); } while (n1 === n2 || (n1 > n2) === (c1 > c2) || (n1 * c1 === n2 * c2 && rng.chance(0.7)));
       const p1 = n1 * c1, p2 = n2 * c2, o1 = `${n1} ${thing} at ${c1}p each`, o2 = `${n2} ${thing} at ${c2}p each`;
       const right = p1 === p2 ? 'They cost the same' : p1 < p2 ? o1 : o2;
       const fb = { [o1]: `${o1} costs ${n1} × ${c1}p = ${money(p1)}, but ${o2} costs ${money(p2)}.`, [o2]: `${o2} costs ${n2} × ${c2}p = ${money(p2)}, but ${o1} costs ${money(p1)}.`, 'They cost the same': `${money(p1)} and ${money(p2)} are not the same.` };
@@ -401,7 +403,7 @@ export const KS1_DEPTH_GENERATORS = {
       // three racers, each driving laps of a different length; who goes furthest?
       const names = rng.shuffle(['Rosa', 'Turbo', 'Blaze']);
       let laps;
-      do laps = [[rng.int(2, 6), 5], [rng.int(2, 5), 10], [rng.int(3, 9), rng.pick([2, 3, 4])]]; while (new Set(laps.map(([n, l]) => n * l)).size < 3);
+      do laps = [[rng.int(2, 6), 5], [rng.int(2, 5), 10], [rng.int(3, 9), rng.pick([2, 3])]]; while (new Set(laps.map(([n, l]) => n * l)).size < 3);
       laps = rng.shuffle(laps);
       const km = laps.map(([n, l]) => n * l), best = km.indexOf(Math.max(...km));
       const said = laps.map(([n, l], i) => `${names[i]} drives ${n} laps of a ${l} km track.`).join(' ');
@@ -457,7 +459,7 @@ export const KS1_DEPTH_GENERATORS = {
         { text: `${plural(m / 5, 'minute')} past ${h}`, feedback: `The long hand points to ${m / 5}, but each number is worth 5 minutes: ${m / 5} × 5 = ${m}.` },
       ], rng, {
         diagram: { type: 'clock', h, m }, explain: handsExplain(h, m),
-        steps: ['The long hand shows the minutes; count in 5s.', `It points to ${m / 5}: ${m} minutes past.`, `The short hand is just past ${h}: ${right}.`],
+        steps: ['The long hand shows the minutes; count in 5s.', `It points to ${m / 5}: ${m} minutes past.`, `The short hand is just past ${h}, so it is ${right}.`],
       });
     }
     if (level === 2) {
@@ -473,7 +475,7 @@ export const KS1_DEPTH_GENERATORS = {
           { text: m > 30 ? `${WORD[60 - m]} past ${h}` : `${WORD[m]} to ${h}`, feedback: m > 30 ? `${WORD[60 - m]} past ${h} is ${digital(h, 60 - m)}.` : `${WORD[m]} to ${h} is before ${h} o’clock.` },
         ], rng, {
           explain: `${digital(h, m)} means ${m} minutes after ${h} o’clock.${m > 30 ? ` There are ${60 - m} minutes left until ${next} o’clock, so we say ${right}.` : ` We say ${right}.`}`,
-          steps: [`${digital(h, m)}: the hour is ${h} and the minutes are ${m}.`, m > 30 ? `${m} minutes past is more than half past, so count on to the next hour: 60 − ${m} = ${60 - m}.` : `${m} minutes past ${h}.`, `${right}.`],
+          steps: [`${digital(h, m)}: the hour is ${h} and the minutes are ${m}.`, m > 30 ? `${m} minutes past is more than half past, so count on to the next hour: 60 − ${m} = ${60 - m}.` : `${m} minutes past ${h}.`, `So it is ${right}.`],
           ...pic({ type: 'clock', h, m }, `${digital(h, m)} is ${right}.`),
         });
       }
@@ -481,12 +483,13 @@ export const KS1_DEPTH_GENERATORS = {
         { text: m > 30 ? `${WORD[60 - m]} past ${h}` : `${WORD[m]} to ${next}`, feedback: m > 30 ? 'The long hand is on the left of the clock: it is “to” the next hour.' : 'The long hand is on the right of the clock: it is “past” the hour.' },
         { text: m > 30 ? `${WORD[60 - m]} to ${h}` : `${WORD[m]} past ${next}`, feedback: m > 30 ? `The short hand is nearly at ${next}, so it is ${WORD[60 - m]} to ${next}.` : `The short hand has just gone past ${h}.` },
         { text: m > 30 ? `${m / 5} minutes to ${next}` : `${m / 5} minutes past ${h}`, feedback: `Each number on the clock is worth 5 minutes. The long hand points to ${m / 5}.` },
-      ], rng, { diagram: { type: 'clock', h, m }, explain: handsExplain(h, m), steps: ['The long hand shows the minutes.', m > 30 ? `It points to ${m / 5}: ${60 - m} minutes before the next hour.` : `It points to ${m / 5}: ${m} minutes past.`, `${right}.`] });
+      ], rng, { diagram: { type: 'clock', h, m }, explain: handsExplain(h, m), steps: ['The long hand shows the minutes.', m > 30 ? `It points to ${m / 5}: ${60 - m} minutes before the next hour.` : `It points to ${m / 5}: ${m} minutes past.`, `So it is ${right}.`] });
     }
     const m = rng.int(0, 11) * 5, dur = rng.pick([5, 10, 15, 20, 25, 30]), kind = rng.pick(['later', 'earlier', 'gap', 'gap']);
     if (kind === 'gap') {
       const [eh, em] = addMins(h, m, dur + 5 * rng.int(0, 2)), mins = ((eh % 12) * 60 + em - (h % 12) * 60 - m + 720) % 720;
-      return typed(`How many minutes is it from ${saidTime(h, m)} to ${saidTime(eh, em)}?`, mins, `${saidTime(h, m)} is ${digital(h, m)} and ${saidTime(eh, em)} is ${digital(eh, em)}. Counting on in 5s: ${mins} minutes.`,
+      const [what, start, end] = rng.pick([['The space walk', 'starts', 'ends'], ['The knights’ feast', 'starts', 'ends'], ['The dinosaur film', 'starts', 'finishes'], ['The go-kart race', 'starts', 'finishes']]);
+      return typed(`${what} ${start} at ${saidTime(h, m)} and ${end} at ${saidTime(eh, em)}. How many minutes does it last?`, mins, `${cap(saidTime(h, m))} is ${digital(h, m)} and ${saidTime(eh, em)} is ${digital(eh, em)}. Counting on in 5s: ${mins} minutes.`,
         [`Start: ${digital(h, m)}. End: ${digital(eh, em)}.`, `${em < m || eh !== h ? `From ${digital(h, m)} to ${(h % 12) + 1} o’clock is ${60 - m} minutes, then ${em} more.` : `${em} − ${m} = ${mins}.`}`, `${mins} minutes.`],
         { unit: 'minutes', visual: [{ kind: 'maths', diagram: { type: 'clock', h, m }, caption: `Start: ${saidTime(h, m)}` }, { kind: 'maths', diagram: { type: 'clock', h: eh, m: em }, caption: `End: ${saidTime(eh, em)}. ${mins} minutes later.` }] });
     }
@@ -501,7 +504,7 @@ export const KS1_DEPTH_GENERATORS = {
     ], rng, {
       diagram: { type: 'clock', h, m },
       explain: `The clock shows ${saidTime(h, m)} (${digital(h, m)}). ${later ? 'Count on' : 'Count back'} ${dur} minutes in 5s: ${right} (${digital(eh, em)}).`,
-      steps: [`The clock shows ${saidTime(h, m)}.`, `${later ? 'Count on' : 'Count back'} ${dur / 5} jump${dur === 5 ? '' : 's'} of 5 minutes${(later ? em < m : em > m) ? `, going ${later ? 'past' : 'back past'} the hour` : ''}.`, `${right}.`],
+      steps: [`The clock shows ${saidTime(h, m)}.`, `${later ? 'Count on' : 'Count back'} ${dur / 5} jump${dur === 5 ? '' : 's'} of 5 minutes${(later ? em < m : em > m) ? `, going ${later ? 'past' : 'back past'} the hour` : ''}.`, `So it is ${right}.`],
       visual: [{ kind: 'maths', diagram: { type: 'clock', h, m }, caption: later ? `Start: ${saidTime(h, m)}` : `Landing: ${saidTime(h, m)}` }, { kind: 'maths', diagram: { type: 'clock', h: eh, m: em }, caption: `${later ? 'Finish' : 'Take-off'}: ${right}, ${dur} minutes ${later ? 'later' : 'earlier'}.` }],
     });
   },

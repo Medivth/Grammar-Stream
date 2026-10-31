@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { COURSES } from '../js/core/subjects.js';
 import { emptyState } from '../js/core/store.js';
-import { HANDWRITING_LESSONS, LESSON_BY_ID, emptyHandwriting, unlockedHandwriting, nextHandwriting, recordHandwriting, handwritingStreak, warmup, handwritingLine } from '../js/core/handwriting.js';
+import { HANDWRITING_LESSONS, LESSON_BY_ID, emptyHandwriting, unlockedHandwriting, nextHandwriting, recordHandwriting, handwritingStreak, warmup, handwritingLine, handwritingSummary } from '../js/core/handwriting.js';
 
 const src = (p) => readFileSync(new URL(`../${p}`, import.meta.url), 'utf8');
 const ASCENDER = /[bdfhklt]/;
@@ -66,6 +66,8 @@ test('progress: lessons open in order, are recorded with dates, and feed the dai
   for (const l of HANDWRITING_LESSONS) recordHandwriting(hw, l.id, 103);
   assert.equal(nextHandwriting(hw), null);
   assert.match(handwritingLine(hw), /^All 6 lessons done · 4 days of practice$/);
+  assert.match(handwritingSummary(hw), /^Handwriting joins: 6 of 6 lessons done, 4 days of practice\./);
+  assert.equal(handwritingSummary(emptyHandwriting()), null);
   assert.deepEqual(emptyState(1).handwriting, emptyHandwriting());
 });
 

@@ -1,6 +1,1150 @@
 {
  "subject": "maths",
  "deck": "depth",
- "topics": [],
- "items": []
+ "topics": [
+  {
+   "kind": "skill",
+   "id": "maths.scales-2",
+   "title": "Tricky scales: reading between the marks",
+   "prereqs": [
+    "maths.scales"
+   ],
+   "intro": "On real scales most marks have no number. Work out what each mark is worth first, then count. If the arrow is between two marks, make a sensible estimate.",
+   "teach": "Explain how you worked out what each mark is worth on a scale numbered 0, 100, 200 with 5 jumps between the numbers.",
+   "talk": "Read the kitchen scales or a measuring jug together. Ask {him} what each little mark is worth.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "numline",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "labels": [
+       0,
+       10,
+       20,
+       30,
+       40,
+       50
+      ],
+      "mark": 34
+     },
+     "caption": "5 jumps from 0 to 10, so each mark is worth 2. The arrow is 2 marks after 30: 34."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "numline",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "labels": [
+       0,
+       50,
+       100
+      ],
+      "mark": 35
+     },
+     "caption": "Each mark is worth 10. This arrow is halfway between 30 and 40: about 35."
+    }
+   ]
+  },
+  {
+   "kind": "skill",
+   "id": "maths.tables-deduce",
+   "title": "Using 2, 5 and 10 facts to find new ones",
+   "prereqs": [
+    "maths.times",
+    "maths.doubles"
+   ],
+   "intro": "If you know your 2, 5 and 10 times tables, you can work out lots more. 5 × 12 is 5 × 10 and 5 × 2. 5 × 8 is half of 10 × 8!",
+   "teach": "Explain how knowing 10 × 14 = 140 helps you work out 5 × 14.",
+   "talk": "Ask {him}: “If 6 × 5 = 30, what is 12 × 5? How do you know?”",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "barmodel",
+     "total": "60",
+     "rows": [
+      {
+       "label": "5 × 12",
+       "segs": [
+        {
+         "v": 50,
+         "text": "5 × 10 = 50"
+        },
+        {
+         "v": 10,
+         "text": "10",
+         "shaded": true
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "5 × 12 is 5 × 10 and 5 × 2: 50 + 10 = 60."
+   }
+  },
+  {
+   "kind": "skill",
+   "id": "maths.balance",
+   "title": "Balancing number sentences",
+   "prereqs": [
+    "maths.addsub",
+    "maths.factfamilies"
+   ],
+   "intro": "The = sign means “is the same as”, like a balance. Both sides must make the same amount. Look at how the numbers change, and you often don’t need to work out the total.",
+   "teach": "Explain how you know 45 + 38 = 40 + 43 without adding.",
+   "talk": "Ask {him} to make up a balancing puzzle, like 10 + 6 = 12 + ?",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "barmodel",
+     "total": "46",
+     "rows": [
+      {
+       "label": "left",
+       "segs": [
+        {
+         "v": 29,
+         "text": "29"
+        },
+        {
+         "v": 17,
+         "text": "17"
+        }
+       ]
+      },
+      {
+       "label": "right",
+       "segs": [
+        {
+         "v": 15,
+         "text": "15"
+        },
+        {
+         "v": 4,
+         "text": "4"
+        },
+        {
+         "v": 27,
+         "text": "?",
+         "shaded": true
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "29 + 17 = 15 + 4 + ?  Both sides make 46. 15 + 4 = 19, which is 10 less than 29, so ? is 10 more than 17: 27."
+   }
+  },
+  {
+   "kind": "skill",
+   "id": "maths.think-problems",
+   "title": "Thinking problems: totals and differences",
+   "prereqs": [
+    "maths.problems",
+    "maths.doubles"
+   ],
+   "intro": "Draw it! A bar for each person, with the extra bit marked, shows what to do. Take away the extra, and the rest splits into equal bars.",
+   "teach": "Explain how drawing bars helps you solve: “Together Jack and Sam have £14. Jack has £2 more than Sam. How much does Sam have?”",
+   "talk": "Share 14 sweets so one person has 2 more. Ask {him} how {she} worked it out.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "barmodel",
+     "side": "£14",
+     "rows": [
+      {
+       "label": "Jack",
+       "segs": [
+        {
+         "v": 6,
+         "text": "£6"
+        },
+        {
+         "v": 2,
+         "text": "£2",
+         "mark": true
+        }
+       ]
+      },
+      {
+       "label": "Sam",
+       "segs": [
+        {
+         "v": 6,
+         "text": "£6"
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Take away Jack’s extra £2: £14 − £2 = £12. Two equal bars: £12 ÷ 2 = £6. Sam has £6 and Jack has £8."
+   }
+  },
+  {
+   "kind": "skill",
+   "id": "maths.which-more",
+   "title": "Which is more? Multi-step problems",
+   "prereqs": [
+    "maths.times",
+    "maths.problems"
+   ],
+   "intro": "Some problems need two or three steps. Work out each amount first, then compare. Don’t trust your first guess: more packets does not always mean more biscuits!",
+   "teach": "Explain which has more biscuits, 4 packets of 5 or 3 packets of 10, and how you know.",
+   "talk": "At the shop, ask {him} which is cheaper: one big packet or two small ones.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "barmodel",
+     "rows": [
+      {
+       "label": "4 × 5",
+       "segs": [
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        }
+       ]
+      },
+      {
+       "label": "3 × 10",
+       "segs": [
+        {
+         "v": 10,
+         "text": "10"
+        },
+        {
+         "v": 10,
+         "text": "10"
+        },
+        {
+         "v": 10,
+         "text": "10"
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "4 packets of 5 = 20 biscuits. 3 packets of 10 = 30 biscuits. Fewer packets, but more biscuits!"
+   }
+  },
+  {
+   "kind": "skill",
+   "id": "maths.clock-5",
+   "title": "Time to 5 minutes",
+   "prereqs": [
+    "maths.time"
+   ],
+   "intro": "Every number on the clock is 5 minutes for the long hand. When the long hand is on the right side, it is “past” the hour; on the left side it is “to” the next hour.",
+   "teach": "Explain why 3:40 is “twenty to 4”.",
+   "talk": "Ask {him} the time on an analogue clock at different times of day, and how long until the next meal.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "clock",
+      "h": 3,
+      "m": 40
+     },
+     "caption": "3:40. The long hand is on 8: 4 jumps of 5 before 12, so it is twenty to 4."
+    }
+   ]
+  },
+  {
+   "kind": "facts",
+   "id": "maths.shape-compare",
+   "title": "Same and different: comparing shapes",
+   "prereqs": [
+    "maths.shapes"
+   ],
+   "batch": 4,
+   "intro": "Mathematicians compare shapes: what is the same, and what is different? Count faces, edges and vertices, check the sides, and look for lines of symmetry.",
+   "teach": "Explain what is the same and what is different about a cube and a cuboid.",
+   "talk": "Find two boxes at home. Ask {him} what is the same and what is different about them.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cube"
+     },
+     "caption": "A cube: 6 square faces, 12 edges, 8 vertices."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cuboid"
+     },
+     "caption": "A cuboid: also 6 faces, 12 edges, 8 vertices, but its faces can be rectangles."
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "maths.scales-2.tmpl",
+   "topic": "maths.scales-2",
+   "kind": "template",
+   "gen": "k2Scales",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.tables-deduce.tmpl",
+   "topic": "maths.tables-deduce",
+   "kind": "template",
+   "gen": "k2Deduce",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.balance.tmpl",
+   "topic": "maths.balance",
+   "kind": "template",
+   "gen": "k2Balance",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.think-problems.tmpl",
+   "topic": "maths.think-problems",
+   "kind": "template",
+   "gen": "k2Think",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.which-more.tmpl",
+   "topic": "maths.which-more",
+   "kind": "template",
+   "gen": "k2WhichMore",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.clock-5.tmpl",
+   "topic": "maths.clock-5",
+   "kind": "template",
+   "gen": "k2Clock5",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "maths.sc.cube1",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "A cube and a cuboid. What is the SAME about them?",
+   "options": [
+    {
+     "text": "They both have 6 faces, 12 edges and 8 vertices",
+     "correct": true
+    },
+    {
+     "text": "All their edges are the same length",
+     "correct": false,
+     "feedback": "Only the cube’s edges are all the same length. A cuboid can be long and thin."
+    },
+    {
+     "text": "All their faces are squares",
+     "correct": false,
+     "feedback": "A cube’s faces are all squares, but a cuboid can have rectangle faces."
+    }
+   ],
+   "explain": "Count them: both have 6 faces, 12 edges and 8 vertices. What is different is their size and shape: a cube’s edges are all equal.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cube"
+     },
+     "caption": "Cube: 6 faces, 12 edges, 8 vertices. All edges equal."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cuboid"
+     },
+     "caption": "Cuboid: 6 faces, 12 edges, 8 vertices. Faces can be rectangles."
+    }
+   ]
+  },
+  {
+   "id": "maths.sc.cube2",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "What is DIFFERENT about a cube and a cuboid?",
+   "options": [
+    {
+     "text": "A cube’s faces are all squares; a cuboid can have rectangle faces",
+     "correct": true
+    },
+    {
+     "text": "A cuboid has more faces",
+     "correct": false,
+     "feedback": "Both have 6 faces."
+    },
+    {
+     "text": "A cube has more vertices",
+     "correct": false,
+     "feedback": "Both have 8 vertices: 4 on the top and 4 on the bottom."
+    }
+   ],
+   "explain": "They have the same number of faces, edges and vertices, but different dimensions: every edge of a cube is the same length.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cube"
+     },
+     "caption": "Cube: 6 faces, 12 edges, 8 vertices. All edges equal."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cuboid"
+     },
+     "caption": "Cuboid: 6 faces, 12 edges, 8 vertices. Faces can be rectangles."
+    }
+   ]
+  },
+  {
+   "id": "maths.sc.cuboid-edges",
+   "topic": "maths.shape-compare",
+   "kind": "fact",
+   "prompt": "How many edges does a cuboid have?",
+   "answer": "12",
+   "distractors": [
+    "6",
+    "8",
+    "10"
+   ],
+   "explain": "The same as a cube: 4 round the top, 4 round the bottom and 4 going up.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "cuboid"
+    },
+    "caption": "4 edges round the top, 4 round the bottom, 4 going up: 12."
+   }
+  },
+  {
+   "id": "maths.sc.cuboid-vertices",
+   "topic": "maths.shape-compare",
+   "kind": "fact",
+   "prompt": "How many vertices (corners) does a cuboid have?",
+   "answer": "8",
+   "distractors": [
+    "6",
+    "12",
+    "4"
+   ],
+   "explain": "The same as a cube: 4 on the top and 4 on the bottom.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "cuboid"
+    },
+    "caption": "4 vertices on the top and 4 on the bottom: 8."
+   }
+  },
+  {
+   "id": "maths.sc.cube-is",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "Turbo says: “A cube is a special kind of cuboid.” Is he right?",
+   "options": [
+    {
+     "text": "Yes: it is a cuboid whose faces are all squares",
+     "correct": true
+    },
+    {
+     "text": "No: a cuboid’s faces must be rectangles",
+     "correct": false,
+     "feedback": "A square is a special rectangle, with all 4 sides equal. So a cube still counts as a cuboid."
+    },
+    {
+     "text": "No: a cube has more edges",
+     "correct": false,
+     "feedback": "Both have 12 edges."
+    }
+   ],
+   "explain": "A cuboid has 6 rectangle faces. A square is a special rectangle, so a cube (6 square faces) is a special cuboid.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cube"
+     },
+     "caption": "Cube: 6 faces, 12 edges, 8 vertices. All edges equal."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cuboid"
+     },
+     "caption": "Cuboid: 6 faces, 12 edges, 8 vertices. Faces can be rectangles."
+    }
+   ]
+  },
+  {
+   "id": "maths.sc.sq-rect",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "What do a square and a rectangle BOTH have?",
+   "options": [
+    {
+     "text": "4 sides and 4 right angles",
+     "correct": true
+    },
+    {
+     "text": "4 equal sides",
+     "correct": false,
+     "feedback": "Only the square has 4 equal sides. A rectangle has 2 long sides and 2 short sides."
+    },
+    {
+     "text": "4 lines of symmetry",
+     "correct": false,
+     "feedback": "A square has 4 lines of symmetry, but a rectangle (that is not a square) has only 2."
+    }
+   ],
+   "explain": "Both have 4 sides and 4 right angles. A square’s sides are all equal; a rectangle’s are not.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "flat",
+     "shapes": [
+      "square",
+      "rectangle"
+     ],
+     "lines": true
+    },
+    "caption": "Dashed red lines are lines of symmetry: 4 for the square, 2 for the rectangle."
+   }
+  },
+  {
+   "id": "maths.sc.rect-lines",
+   "topic": "maths.shape-compare",
+   "kind": "fact",
+   "prompt": "How many lines of symmetry does a rectangle have (one that is not a square)?",
+   "answer": "2",
+   "distractors": [
+    "4",
+    "1",
+    "0"
+   ],
+   "explain": "One down the middle and one across the middle. The diagonals are not lines of symmetry: fold along one and the corners do not match.",
+   "feedback": {
+    "4": "A square has 4. Fold a rectangle along a diagonal and the corners do not meet."
+   },
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "flat",
+     "shapes": [
+      "rectangle"
+     ],
+     "lines": true
+    },
+    "caption": "Down the middle and across the middle: 2 lines of symmetry."
+   }
+  },
+  {
+   "id": "maths.sc.one-line",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "Which shape has exactly ONE line of symmetry?",
+   "options": [
+    {
+     "text": "a kite",
+     "correct": true
+    },
+    {
+     "text": "a square",
+     "correct": false,
+     "feedback": "A square has 4 lines of symmetry."
+    },
+    {
+     "text": "a rectangle",
+     "correct": false,
+     "feedback": "A rectangle has 2 lines of symmetry."
+    },
+    {
+     "text": "a circle",
+     "correct": false,
+     "feedback": "A circle has lots and lots: any line through the middle."
+    }
+   ],
+   "explain": "A kite folds exactly in half only down the middle, from its top point to its bottom point.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "flat",
+     "shapes": [
+      "kite",
+      "rectangle"
+     ],
+     "lines": true
+    },
+    "caption": "The kite has 1 line of symmetry. The rectangle has 2."
+   }
+  },
+  {
+   "id": "maths.sc.iso-kite",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "An isosceles triangle (2 equal sides) and a kite. What is the SAME about them?",
+   "options": [
+    {
+     "text": "They both have exactly one line of symmetry",
+     "correct": true
+    },
+    {
+     "text": "They both have 4 sides",
+     "correct": false,
+     "feedback": "The kite has 4 sides, but a triangle has 3."
+    },
+    {
+     "text": "They both have 4 vertices",
+     "correct": false,
+     "feedback": "A triangle has 3 vertices; the kite has 4."
+    }
+   ],
+   "explain": "Each one folds exactly in half down the middle, and nowhere else: one line of symmetry each.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "flat",
+     "shapes": [
+      "isosceles",
+      "kite"
+     ],
+     "lines": true
+    },
+    "caption": "Each has exactly 1 line of symmetry, straight down the middle."
+   }
+  },
+  {
+   "id": "maths.sc.semi",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "Which has only ONE line of symmetry: a semicircle or a circle?",
+   "options": [
+    {
+     "text": "a semicircle",
+     "correct": true
+    },
+    {
+     "text": "a circle",
+     "correct": false,
+     "feedback": "A circle can be folded in half along any line through its middle: it has lots of lines of symmetry."
+    },
+    {
+     "text": "They both have one",
+     "correct": false,
+     "feedback": "A circle has lots of lines of symmetry. Only the semicircle has just one."
+    }
+   ],
+   "explain": "A semicircle only folds in half down the middle. A circle folds in half along any line through its centre.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "flat",
+     "shapes": [
+      "semicircle",
+      "circle"
+     ],
+     "lines": true
+    },
+    "caption": "A semicircle has 1 line of symmetry. A circle has lots: any line through its centre."
+   }
+  },
+  {
+   "id": "maths.sc.letter-a",
+   "topic": "maths.shape-compare",
+   "kind": "fact",
+   "prompt": "How many lines of symmetry does the capital letter A have?",
+   "answer": "1",
+   "distractors": [
+    "2",
+    "0",
+    "3"
+   ],
+   "explain": "One, straight down the middle. The two sloping sides match when you fold it.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "flat",
+     "shapes": [
+      "letterA"
+     ],
+     "lines": true
+    },
+    "caption": "Fold the A down the middle and the two sides match."
+   }
+  },
+  {
+   "id": "maths.sc.letters",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "The letter A has exactly one line of symmetry. Which of these letters ALSO has exactly one?",
+   "options": [
+    {
+     "text": "T",
+     "correct": true
+    },
+    {
+     "text": "H",
+     "correct": false,
+     "feedback": "H has 2 lines of symmetry: one down and one across."
+    },
+    {
+     "text": "F",
+     "correct": false,
+     "feedback": "F has no line of symmetry: it does not match when folded."
+    },
+    {
+     "text": "N",
+     "correct": false,
+     "feedback": "N has no line of symmetry. It looks the same upside down, but that is not a fold."
+    }
+   ],
+   "explain": "T folds in half straight down the middle, just like A."
+  },
+  {
+   "id": "maths.sc.tri-one",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "Which triangle has exactly ONE line of symmetry?",
+   "options": [
+    {
+     "text": "a triangle with exactly 2 equal sides (isosceles)",
+     "correct": true
+    },
+    {
+     "text": "a triangle with 3 equal sides",
+     "correct": false,
+     "feedback": "A triangle with 3 equal sides (equilateral) has 3 lines of symmetry."
+    },
+    {
+     "text": "a triangle with no equal sides",
+     "correct": false,
+     "feedback": "A triangle with no equal sides has no line of symmetry."
+    }
+   ],
+   "explain": "An isosceles triangle folds in half down the middle, between its 2 equal sides.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "flat",
+     "shapes": [
+      "isosceles",
+      "equilateral",
+      "scalene"
+     ],
+     "lines": true
+    },
+    "caption": "Isosceles: 1 line. Equilateral: 3 lines. A triangle with no equal sides: none."
+   }
+  },
+  {
+   "id": "maths.sc.more-lines",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "Which shape has MORE than one line of symmetry?",
+   "options": [
+    {
+     "text": "a rectangle",
+     "correct": true
+    },
+    {
+     "text": "a kite",
+     "correct": false,
+     "feedback": "A kite has just 1 line of symmetry."
+    },
+    {
+     "text": "a semicircle",
+     "correct": false,
+     "feedback": "A semicircle has just 1 line of symmetry."
+    },
+    {
+     "text": "an isosceles triangle",
+     "correct": false,
+     "feedback": "An isosceles triangle has just 1 line of symmetry."
+    }
+   ],
+   "explain": "A rectangle has 2: down the middle and across the middle. The others have just 1.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "flat",
+     "shapes": [
+      "rectangle",
+      "kite"
+     ],
+     "lines": true
+    },
+    "caption": "The rectangle has 2 lines of symmetry; the kite has 1."
+   }
+  },
+  {
+   "id": "maths.sc.pyr-faces",
+   "topic": "maths.shape-compare",
+   "kind": "fact",
+   "prompt": "How many faces does a square-based pyramid have?",
+   "answer": "5",
+   "distractors": [
+    "4",
+    "6",
+    "8"
+   ],
+   "explain": "1 square on the bottom and 4 triangles: 5 faces.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "pyramid"
+    },
+    "caption": "1 square face on the bottom and 4 triangle faces: 5."
+   }
+  },
+  {
+   "id": "maths.sc.prism-faces",
+   "topic": "maths.shape-compare",
+   "kind": "fact",
+   "prompt": "How many faces does a triangular prism have?",
+   "answer": "5",
+   "distractors": [
+    "3",
+    "6",
+    "9"
+   ],
+   "explain": "2 triangles at the ends and 3 rectangles: 5 faces.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "solid",
+     "shape": "prism"
+    },
+    "caption": "2 triangle faces at the ends and 3 rectangle faces: 5."
+   }
+  },
+  {
+   "id": "maths.sc.pyr-prism",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "A square-based pyramid and a triangular prism both have 5 faces. What else is the SAME?",
+   "options": [
+    {
+     "text": "All their faces are flat",
+     "correct": true
+    },
+    {
+     "text": "They both have 8 edges",
+     "correct": false,
+     "feedback": "The pyramid has 8 edges, but the prism has 9."
+    },
+    {
+     "text": "They both have 6 vertices",
+     "correct": false,
+     "feedback": "The prism has 6 vertices, but the pyramid has 5."
+    }
+   ],
+   "explain": "Both have only flat faces. But the pyramid has 8 edges and 5 vertices, and the prism has 9 edges and 6 vertices.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "pyramid"
+     },
+     "caption": "Square-based pyramid: 5 faces, 8 edges, 5 vertices."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "prism"
+     },
+     "caption": "Triangular prism: 5 faces, 9 edges, 6 vertices."
+    }
+   ]
+  },
+  {
+   "id": "maths.sc.pyr-diff",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "What is DIFFERENT about a square-based pyramid and a triangular prism?",
+   "options": [
+    {
+     "text": "The pyramid’s triangle faces meet at a point; the prism is the same shape all the way along",
+     "correct": true
+    },
+    {
+     "text": "Only the prism has triangle faces",
+     "correct": false,
+     "feedback": "The pyramid has 4 triangle faces too."
+    },
+    {
+     "text": "The prism has a curved surface",
+     "correct": false,
+     "feedback": "A prism has only flat faces."
+    }
+   ],
+   "explain": "A pyramid comes to a point (an apex) at the top. A prism has the same shape at both ends, joined by rectangles.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "pyramid"
+     },
+     "caption": "Square-based pyramid: 5 faces, 8 edges, 5 vertices."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "prism"
+     },
+     "caption": "Triangular prism: 5 faces, 9 edges, 6 vertices."
+    }
+   ]
+  },
+  {
+   "id": "maths.sc.cone-cyl",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "What do a cone and a cylinder BOTH have?",
+   "options": [
+    {
+     "text": "A circle face and a curved surface",
+     "correct": true
+    },
+    {
+     "text": "Two circle faces",
+     "correct": false,
+     "feedback": "Only the cylinder has two circle faces. A cone has one."
+    },
+    {
+     "text": "A point at the top (an apex)",
+     "correct": false,
+     "feedback": "Only the cone has an apex."
+    }
+   ],
+   "explain": "A cone has 1 circle face, a curved surface and a point. A cylinder has 2 circle faces and a curved surface.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cone"
+     },
+     "caption": "Cone: 1 circle face, a curved surface and a point (apex)."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cylinder"
+     },
+     "caption": "Cylinder: 2 circle faces and a curved surface."
+    }
+   ]
+  },
+  {
+   "id": "maths.sc.cone-diff",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "What is DIFFERENT about a cone and a cylinder?",
+   "options": [
+    {
+     "text": "A cone has 1 circle face and a point; a cylinder has 2 circle faces",
+     "correct": true
+    },
+    {
+     "text": "A cylinder has no curved surface",
+     "correct": false,
+     "feedback": "A cylinder has a curved surface all the way round, like a tin of beans."
+    },
+    {
+     "text": "A cone cannot roll",
+     "correct": false,
+     "feedback": "Both can roll on their curved surface."
+    }
+   ],
+   "explain": "Both have a curved surface. The cone has 1 circle face and comes to a point; the cylinder has a circle face at each end.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cone"
+     },
+     "caption": "Cone: 1 circle face, a curved surface and a point (apex)."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cylinder"
+     },
+     "caption": "Cylinder: 2 circle faces and a curved surface."
+    }
+   ]
+  },
+  {
+   "id": "maths.sc.sph-cyl",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "What do a sphere and a cylinder BOTH have?",
+   "options": [
+    {
+     "text": "A curved surface, so they can roll",
+     "correct": true
+    },
+    {
+     "text": "Flat circle faces",
+     "correct": false,
+     "feedback": "A cylinder has 2 flat circle faces, but a sphere has none: it is curved all over."
+    },
+    {
+     "text": "Vertices",
+     "correct": false,
+     "feedback": "Neither has a vertex (corner)."
+    }
+   ],
+   "explain": "Both have a curved surface. A sphere is curved all over; a cylinder also has 2 flat circle faces.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "sphere"
+     },
+     "caption": "Sphere: one curved surface, no flat faces."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cylinder"
+     },
+     "caption": "Cylinder: 2 circle faces and a curved surface."
+    }
+   ]
+  },
+  {
+   "id": "maths.sc.cube-pyr",
+   "topic": "maths.shape-compare",
+   "kind": "mcq",
+   "prompt": "A cube and a square-based pyramid both have a square face. What is DIFFERENT?",
+   "options": [
+    {
+     "text": "A cube has 6 faces; the pyramid has 5",
+     "correct": true
+    },
+    {
+     "text": "The pyramid has more vertices",
+     "correct": false,
+     "feedback": "The pyramid has 5 vertices and the cube has 8: the pyramid has fewer."
+    },
+    {
+     "text": "The cube has triangle faces",
+     "correct": false,
+     "feedback": "A cube’s faces are all squares. The pyramid has the triangle faces."
+    }
+   ],
+   "explain": "A cube has 6 square faces, 12 edges and 8 vertices. A square-based pyramid has 5 faces (1 square, 4 triangles), 8 edges and 5 vertices.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "cube"
+     },
+     "caption": "Cube: 6 faces, 12 edges, 8 vertices."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "solid",
+      "shape": "pyramid"
+     },
+     "caption": "Square-based pyramid: 5 faces, 8 edges, 5 vertices."
+    }
+   ]
+  }
+ ]
 }

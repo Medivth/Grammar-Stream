@@ -51,7 +51,7 @@ function lined(text, style, { height = 110, cls = '' } = {}) {
 
 /** A canvas over a faint model. Strokes are kept in font units, so a resize just redraws them. */
 function traceBox(text, style, onInk) {
-  const { svg, vb } = lined(text, style, { height: 200, cls: 'faint' });
+  const { svg, vb } = lined(text, style, { height: window.matchMedia('(min-width: 640px)').matches ? 300 : 200, cls: 'faint' });
   const canvas = h('canvas', { class: 'hw-canvas', 'aria-label': `Trace ${text} with your finger` });
   const box = h('div', { class: 'hw-trace' }, svg, canvas);
   box.style.width = svg.style.width;

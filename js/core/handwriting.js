@@ -102,3 +102,10 @@ export function handwritingLine(hw) {
   const n = hw.days.length;
   return `All ${HANDWRITING_LESSONS.length} lessons done · ${n} day${n === 1 ? '' : 's'} of practice`;
 }
+
+/** For the grown-ups' page, or null before the first lesson. */
+export function handwritingSummary(hw) {
+  if (!hw?.days?.length) return null;
+  const done = HANDWRITING_LESSONS.filter((l) => hw.lessons[l.id]).length, n = hw.days.length;
+  return `Handwriting joins: ${done} of ${HANDWRITING_LESSONS.length} lessons done, ${n} day${n === 1 ? '' : 's'} of practice. Look at the paper copies together: smooth joins, letters sitting on the line.`;
+}
