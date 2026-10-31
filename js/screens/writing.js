@@ -166,13 +166,15 @@ function tickBox(app, piece, i, text) {
     piece.checked = cb.checked ? [...new Set([...piece.checked, i])] : piece.checked.filter((x) => x !== i);
     app.save();
   } });
-  return h('div', { class: 'row', style: { flexWrap: 'nowrap', alignItems: 'flex-start', marginBottom: '10px' } }, cb, h('label', { for: `crit-${i}`, style: { fontWeight: 400, margin: 0 } }, text));
+  // non-breaking hyphens keep "-ment" and "-ly" in one piece
+  return h('div', { class: 'row', style: { flexWrap: 'nowrap', alignItems: 'flex-start', marginBottom: '10px' } }, cb, h('label', { for: `crit-${i}`, style: { fontWeight: 400, margin: 0 } }, text.replace(/(^|\s)-(?=[a-z])/g, '$1\u2011')));
 }
 
 /** Years 2 and 3: read it aloud, then add, change and check, ticking each thing done. */
 function editSteps(app, piece, prompt) {
   const c = app.state.profile?.companion || {};
-  const pal = c.name || `your ${companionNoun(speciesOf(c, COURSE.young))}`;
+  const noun = companionNoun(speciesOf(c, COURSE.young));
+  const pal = c.name ? `${c.name}, your ${noun}` : `your ${noun}`;
   const paper = piece.mode === 'paper';
   let i = 0;
   const group = (title, lead, list, extra) => {

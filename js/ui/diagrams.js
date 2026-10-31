@@ -246,14 +246,15 @@ function clock(d) {
     const a = (i / 60) * Math.PI * 2, big = i % 5 === 0;
     el.append(line(c + Math.sin(a) * (R - (big ? 12 : 6)), c - Math.cos(a) * (R - (big ? 12 : 6)), c + Math.sin(a) * (R - 2), c - Math.cos(a) * (R - 2), { 'stroke-width': big ? 3 : 1.2 }));
   }
-  for (let n = 1; n <= 12; n++) {
-    const a = (n / 12) * Math.PI * 2;
-    el.append(text(c + Math.sin(a) * (R - 28), c - Math.cos(a) * (R - 28) + 6, String(n), { 'font-size': 18 }));
-  }
   const ma = (d.m / 60) * Math.PI * 2, ha = (((d.h % 12) + d.m / 60) / 12) * Math.PI * 2;
   el.append(line(c, c, c + Math.sin(ha) * 50, c - Math.cos(ha) * 50, { 'stroke-width': 7 }),
     line(c, c, c + Math.sin(ma) * 76, c - Math.cos(ma) * 76, { 'stroke-width': 4, stroke: BLUE }),
     s('circle', { cx: c, cy: c, r: 6, fill: INK }));
+  // numbers on top of the hands (with a halo), so the number the long hand points at can be read
+  for (let n = 1; n <= 12; n++) {
+    const a = (n / 12) * Math.PI * 2;
+    el.append(text(c + Math.sin(a) * (R - 28), c - Math.cos(a) * (R - 28) + 6, String(n), { 'font-size': 18, ...HALO }));
+  }
   return el;
 }
 
@@ -742,11 +743,21 @@ const FLAT = {
   scalene: ['right-angled triangle', () => [[-50, -40], [60, 45], [-50, 45]], []],
   semicircle: ['semicircle', null, [[[0, -44], [0, 42]]]],
   circle: ['circle', null, [0, 45, 90, 135].map((a) => { const r = 66, t = (a * Math.PI) / 180; return [[-r * Math.cos(t), -r * Math.sin(t)], [r * Math.cos(t), r * Math.sin(t)]]; })],
-  letterA: ['letter A', null, [[[0, -68], [0, 66]]]],
+  letterA: ['', null, [[[0, -68], [0, 66]]]],
+  letterT: ['', null, [[[0, -68], [0, 66]]]],
+  letterH: ['', null, [[[0, -68], [0, 66]], [[-62, 0], [62, 0]]]],
+  letterF: ['', null, []],
+};
+// capital letters drawn as thick strokes, each a list of points
+const LETTER = {
+  letterA: [[[-44, 58], [0, -44], [44, 58]], [[-27, 20], [27, 20]]],
+  letterT: [[[-44, -50], [44, -50]], [[0, -50], [0, 58]]],
+  letterH: [[[-36, -54], [-36, 58]], [[36, -54], [36, 58]], [[-36, 2], [36, 2]]],
+  letterF: [[[-28, 58], [-28, -50], [34, -50]], [[-28, 2], [24, 2]]],
 };
 function flatShapes(d) {
-  const n = d.shapes.length, cw = 160, W = cw * n, H = 178, cy = 72;
-  const el = svg(W, H, d.shapes.map((k) => FLAT[k]?.[0] || k).join(' and '), Math.min(440, W * 1.15));
+  const n = d.shapes.length, cw = 160, W = cw * n, H = d.shapes.every((k) => !FLAT[k][0]) ? 150 : n > 2 ? 206 : 190, cy = 72;
+  const el = svg(W, H, d.shapes.map((k) => FLAT[k]?.[0] || `letter ${k.slice(-1)}`).join(' and '), Math.min(440, W * 1.15));
   const st = { fill: 'var(--v1-soft, #e3edfc)', stroke: BLUE, 'stroke-width': 3.5, 'stroke-linejoin': 'round' };
   d.shapes.forEach((k, i) => {
     const [name, pts, lines] = FLAT[k], cx = cw * i + cw / 2;
@@ -754,13 +765,17 @@ function flatShapes(d) {
     if (pts) el.append(s('path', { d: `M${pts().map(P).join(' L')} Z`, ...st }));
     else if (k === 'semicircle') el.append(s('path', { d: `M${P([-62, 30])} A62 62 0 0 1 ${P([62, 30])} Z`, ...st }));
     else if (k === 'circle') el.append(s('circle', { cx, cy, r: 55, ...st }));
-    else el.append(s('path', { d: `M${P([-44, 58])} L${P([0, -44])} L${P([44, 58])} M${P([-27, 20])} L${P([27, 20])}`, fill: 'none', stroke: BLUE, 'stroke-width': 15, 'stroke-linejoin': 'miter' }));
+    else el.append(s('path', { d: LETTER[k].map((ps) => `M${ps.map(P).join(' L')}`).join(' '), fill: 'none', stroke: BLUE, 'stroke-width': 15, 'stroke-linejoin': 'miter' }));
     if (d.lines) {
       // an equilateral triangle's lines run from each corner to the middle of the side opposite
       const ls = lines || pts().map((p, j, a) => { const q = a[(j + 1) % 3], r = a[(j + 2) % 3], m = [(q[0] + r[0]) / 2, (q[1] + r[1]) / 2]; return [[p[0] - (m[0] - p[0]) * 0.12, p[1] - (m[1] - p[1]) * 0.12], [m[0] + (m[0] - p[0]) * 0.14, m[1] + (m[1] - p[1]) * 0.14]]; });
       for (const [a, b] of ls) el.append(s('path', { d: `M${P(a)} L${P(b)}`, stroke: '#d62f3a', 'stroke-width': 2.5, 'stroke-dasharray': '7 5', fill: 'none' }));
     }
-    el.append(small(cx, H - 12, name, { 'font-size': name.length > 16 ? 13 : 14.5 }));
+    // long names go on two lines ("isosceles / triangle") so they stay readable when three share a row
+    const words = name.length > 12 ? [name.slice(0, name.lastIndexOf(' ')), name.slice(name.lastIndexOf(' ') + 1)] : [name];
+    // three in a row are drawn smaller on a phone, so their names are set bigger
+    const fs = n > 2 ? 21 : 16;
+    words.forEach((w, j) => el.append(small(cx, H - 30 + j * (fs + 3) - (words.length - 1) * 6, w, { 'font-size': fs })));
   });
   return el;
 }

@@ -234,10 +234,10 @@ function markForm(app, piece, prompt) {
     const btns = r.levels.map((desc, lv) => h('button', { type: 'button', class: 'option', 'aria-pressed': 'false', style: { minHeight: '48px', padding: '8px 12px' }, onclick: () => {
       scores[i] = lv;
       btns.forEach((b, j) => b.setAttribute('aria-pressed', String(j === lv)));
-    } }, h('strong', {}, `${lv} `), desc));
+    } }, h('strong', {}, `${lv} `), desc.replace(/(^|[\s(])-(?=[a-z])/g, '$1\u2011')));
     return h('div', { class: 'field' }, h('label', {}, `${i + 1}. ${r.name}`), h('div', { class: 'options plain' }, btns));
   });
-  const ticks = (from, list) => h('ul', { style: { margin: '4px 0 8px' } }, list.map((c, k) => (prompt.paperOnly?.includes(from + k) && piece.mode !== 'paper' ? null : h('li', {}, `${piece.checked.includes(from + k) ? '✓' : '○'} ${c}`))));
+  const ticks = (from, list) => h('ul', { style: { margin: '4px 0 8px' } }, list.map((c, k) => (prompt.paperOnly?.includes(from + k) && piece.mode !== 'paper' ? null : h('li', {}, `${piece.checked.includes(from + k) ? '✓' : '○'} ${c.replace(/(^|\s)-(?=[a-z])/g, '$1\u2011')}`))));
   const aiming = young
     ? h('details', {}, h('summary', { style: { cursor: 'pointer' } }, 'What {she} was aiming for, and {her} own check'),
       h('p', { class: 'small', style: { margin: '8px 0 4px' } }, h('strong', {}, 'Built on: '), prompt.text, h('br'), h('strong', {}, 'Words to borrow: '), prompt.borrow.join(', '), h('br'), h('strong', {}, 'Sentence trick: '), `${prompt.trick.name} (${prompt.trick.example.replace(/\*\*/g, '')})`),

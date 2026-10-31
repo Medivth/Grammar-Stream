@@ -172,7 +172,8 @@ async function mapLocateView(q, onChange) {
 }
 
 function numberLineView(q, onChange) {
-  const W = 640, H = 120, pad = 40, y = 60;
+  // a scale with many marks is drawn narrower, so its numbers stay big enough on a phone
+  const W = q.labels ? 440 : 640, H = 120, pad = q.labels ? 28 : 40, y = 60;
   const xOf = (v) => pad + ((v - q.min) / (q.max - q.min)) * (W - 2 * pad);
   const vOf = (x) => q.min + ((x - pad) / (W - 2 * pad)) * (q.max - q.min);
   let value = null;

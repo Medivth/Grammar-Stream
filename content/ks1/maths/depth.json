@@ -404,14 +404,19 @@
      "correct": true
     },
     {
-     "text": "All their edges are the same length",
+     "text": "All of their edges are exactly the same length",
      "correct": false,
      "feedback": "Only the cube’s edges are all the same length. A cuboid can be long and thin."
     },
     {
-     "text": "All their faces are squares",
+     "text": "All of their faces are squares, like a dice",
      "correct": false,
      "feedback": "A cube’s faces are all squares, but a cuboid can have rectangle faces."
+    },
+    {
+     "text": "They both have 8 faces, 12 edges and 6 vertices",
+     "correct": false,
+     "feedback": "Count again: faces and vertices are swapped. Both have 6 faces and 8 vertices."
     }
    ],
    "explain": "Count them: both have 6 faces, 12 edges and 8 vertices. What is different is their size and shape: a cube’s edges are all equal.",
@@ -441,16 +446,16 @@
    "prompt": "What is DIFFERENT about a cube and a cuboid?",
    "options": [
     {
-     "text": "A cube’s faces are all squares; a cuboid can have rectangle faces",
+     "text": "A cube’s faces are all squares; a cuboid’s can be rectangles",
      "correct": true
     },
     {
-     "text": "A cuboid has more faces",
+     "text": "A cuboid has more faces and edges than a cube does",
      "correct": false,
-     "feedback": "Both have 6 faces."
+     "feedback": "Both have 6 faces and 12 edges."
     },
     {
-     "text": "A cube has more vertices",
+     "text": "A cube has more vertices, because it is taller",
      "correct": false,
      "feedback": "Both have 8 vertices: 4 on the top and 4 on the bottom."
     }
@@ -671,14 +676,14 @@
      "correct": true
     },
     {
-     "text": "They both have 4 sides",
+     "text": "They both have exactly 4 sides and 4 vertices",
      "correct": false,
-     "feedback": "The kite has 4 sides, but a triangle has 3."
+     "feedback": "The kite has 4 sides and 4 vertices, but a triangle has 3 of each."
     },
     {
-     "text": "They both have 4 vertices",
+     "text": "They both have exactly 2 lines of symmetry",
      "correct": false,
-     "feedback": "A triangle has 3 vertices; the kite has 4."
+     "feedback": "Each one folds in half only down the middle: 1 line of symmetry each."
     }
    ],
    "explain": "Each one folds exactly in half down the middle, and nowhere else: one line of symmetry each.",
@@ -780,7 +785,20 @@
      "feedback": "N has no line of symmetry. It looks the same upside down, but that is not a fold."
     }
    ],
-   "explain": "T folds in half straight down the middle, just like A."
+   "explain": "T folds in half straight down the middle, just like A.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "flat",
+     "shapes": [
+      "letterT",
+      "letterH",
+      "letterF"
+     ],
+     "lines": true
+    },
+    "caption": "T has 1 line of symmetry, like A. H has 2. F has none."
+   }
   },
   {
    "id": "maths.sc.tri-one",
@@ -789,21 +807,21 @@
    "prompt": "Which triangle has exactly ONE line of symmetry?",
    "options": [
     {
-     "text": "a triangle with exactly 2 equal sides (isosceles)",
+     "text": "a triangle with exactly 2 equal sides",
      "correct": true
     },
     {
-     "text": "a triangle with 3 equal sides",
+     "text": "a triangle with all 3 sides equal",
      "correct": false,
      "feedback": "A triangle with 3 equal sides (equilateral) has 3 lines of symmetry."
     },
     {
-     "text": "a triangle with no equal sides",
+     "text": "a triangle with no sides the same length",
      "correct": false,
      "feedback": "A triangle with no equal sides has no line of symmetry."
     }
    ],
-   "explain": "An isosceles triangle folds in half down the middle, between its 2 equal sides.",
+   "explain": "A triangle with exactly 2 equal sides is called isosceles. It folds in half down the middle, between its 2 equal sides.",
    "visual": {
     "kind": "maths",
     "diagram": {
@@ -948,21 +966,26 @@
    "prompt": "What is DIFFERENT about a square-based pyramid and a triangular prism?",
    "options": [
     {
-     "text": "The pyramid’s triangle faces meet at a point; the prism is the same shape all the way along",
+     "text": "Only the pyramid comes to a point (an apex)",
      "correct": true
     },
     {
-     "text": "Only the prism has triangle faces",
+     "text": "Only the prism has triangle faces on it",
      "correct": false,
      "feedback": "The pyramid has 4 triangle faces too."
     },
     {
-     "text": "The prism has a curved surface",
+     "text": "Only the prism has a curved surface",
      "correct": false,
-     "feedback": "A prism has only flat faces."
+     "feedback": "Neither has a curved surface: all their faces are flat."
+    },
+    {
+     "text": "Only the pyramid has rectangle faces",
+     "correct": false,
+     "feedback": "The prism has 3 rectangle faces. The pyramid has a square and 4 triangles."
     }
    ],
-   "explain": "A pyramid comes to a point (an apex) at the top. A prism has the same shape at both ends, joined by rectangles.",
+   "explain": "A pyramid’s triangle faces meet at a point (an apex) at the top. A prism is the same shape all the way along: a triangle at each end, joined by rectangles.",
    "visual": [
     {
      "kind": "maths",
@@ -1030,16 +1053,16 @@
    "prompt": "What is DIFFERENT about a cone and a cylinder?",
    "options": [
     {
-     "text": "A cone has 1 circle face and a point; a cylinder has 2 circle faces",
+     "text": "A cone has 1 circle face; a cylinder has 2",
      "correct": true
     },
     {
-     "text": "A cylinder has no curved surface",
+     "text": "A cylinder has no curved surface at all",
      "correct": false,
      "feedback": "A cylinder has a curved surface all the way round, like a tin of beans."
     },
     {
-     "text": "A cone cannot roll",
+     "text": "A cone cannot roll, but a cylinder can",
      "correct": false,
      "feedback": "Both can roll on their curved surface."
     }
@@ -1075,12 +1098,12 @@
      "correct": true
     },
     {
-     "text": "Flat circle faces",
+     "text": "Flat circle faces at both ends",
      "correct": false,
      "feedback": "A cylinder has 2 flat circle faces, but a sphere has none: it is curved all over."
     },
     {
-     "text": "Vertices",
+     "text": "Vertices where their edges meet",
      "correct": false,
      "feedback": "Neither has a vertex (corner)."
     }

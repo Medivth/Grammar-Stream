@@ -94,7 +94,7 @@ export const KS1_DEPTH_GENERATORS = {
         kind: 'numberline', prompt: `Put the arrow where ${unitSay(v, sc.unit)} would be on this ${SCALE_NAME[sc.thing]}.`,
         min: 0, max: sc.max, ticks: sc.marks, labels: sc.labels, target: v, tolerance: sc.step * 0.4, targetLabel: unitSay(v, sc.unit),
         explain: `${worthSteps(sc)} ${v} is ${plural(j, 'mark')} after ${base}.`,
-        steps: [`First I work out what each mark is worth: ${sc.gap} ÷ ${sc.every} = ${sc.step}.`, `${v} comes after ${base}.`, `I count on ${j} mark${j === 1 ? '' : 's'} from ${base} in ${sc.step}s: ${Array.from({ length: j }, (_, i) => base + (i + 1) * sc.step).join(', ')}.`],
+        steps: [`First I work out what each mark is worth: ${sc.gap} ÷ ${sc.every} = ${sc.step}.`, `${v} is between ${base} and ${base + sc.gap}.`, `I count on ${j} mark${j === 1 ? '' : 's'} from ${base} in ${sc.step}s: ${Array.from({ length: j }, (_, i) => base + (i + 1) * sc.step).join(', ')}.`],
       };
     }
     if (kind === 'between') {
@@ -283,7 +283,7 @@ export const KS1_DEPTH_GENERATORS = {
     const rule = sub ? 'For taking away, BOTH numbers must move the same way to keep the difference the same.' : 'For adding, if one number goes down and the other goes up by the same amount, the total stays the same.';
     const tfPic = pic(segBar([{ label: 'left', segs: sub ? [seg(L, L, { shaded: true })] : [seg(a), seg(b)] }, { label: 'right', segs: sub ? [seg(R, R, { shaded: true })] : (holds ? [seg(a - k), seg(b + k)] : [seg(a + k), seg(b + k)]) }]), `${why} ${L === R ? 'The bars match.' : 'The bars are different lengths.'}`);
     if (kind === 'tf') {
-      return choice(`True or false?   ${eq}`, holds ? 'True' : 'False', [holds ? 'False' : 'True'], rng, {
+      return choice(`True or false? ${eq}`, holds ? 'True' : 'False', [holds ? 'False' : 'True'], rng, {
         explain: `${why} ${holds ? 'They are the same, so it is true.' : 'They are different, so it is false.'} ${rule}`,
         steps: ['Work out each side, or look at how the numbers changed.', why, holds ? 'Same: true.' : 'Different: false.'], ...tfPic,
       });
@@ -302,7 +302,7 @@ export const KS1_DEPTH_GENERATORS = {
       right = `False: ${a} went up but ${b} went down, so the difference grew by ${2 * k}`;
       wrongs = [{ text: `True: one number went up ${k} and the other went down ${k}`, feedback: `That trick works for adding, not taking away. ${why}` }, { text: 'True: both sides use nearly the same numbers', feedback: `Nearly the same is not the same. ${why}` }, { text: 'False: you can never change the numbers', feedback: `You can, if both numbers move the same way: ${a + k} − ${b + k} = ${L}.` }];
     }
-    return choice(`${eq}   Is it true or false, and why?`, right, wrongs, rng, {
+    return choice(`Is ${eq} true or false? Choose the reason.`, right, wrongs, rng, {
       explain: `${why} ${rule}`, steps: [`Look at how ${a} and ${b} changed.`, rule, `${why} ${L === R ? 'True.' : 'False.'}`], ...tfPic,
     });
   },
@@ -495,7 +495,7 @@ export const KS1_DEPTH_GENERATORS = {
     }
     const later = kind === 'later', [eh, em] = addMins(h, m, later ? dur : -dur), right = saidTime(eh, em);
     const [wh, wm] = addMins(h, m, later ? -dur : dur), hourSlip = later ? addMins(eh, em, em < m ? -60 : 60) : addMins(eh, em, em > m ? 60 : -60);
-    const [sh, sm] = addMins(eh, em, 5);
+    const [sh, sm] = addMins(eh, em, later ? 5 : -5); // one jump of 5 too many
     const prompt = later ? `The race starts at the time on the clock. It lasts ${dur} minutes. What time does it finish?` : `The rocket landed at the time on the clock. It had been flying for ${dur} minutes. What time did it take off?`;
     return choice(prompt, right, [
       { text: saidTime(wh, wm), feedback: later ? `That is ${dur} minutes EARLIER. The race finishes later than it starts.` : `That is ${dur} minutes LATER. Take-off was before landing.` },
