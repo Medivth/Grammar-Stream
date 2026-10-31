@@ -419,7 +419,7 @@
      "feedback": "Count again: faces and vertices are swapped. Both have 6 faces and 8 vertices."
     }
    ],
-   "explain": "Count them: both have 6 faces, 12 edges and 8 vertices. What is different is their size and shape: a cube’s edges are all equal.",
+   "explain": "Count them: both have 6 faces, 12 edges and 8 vertices. What can be different is how long their edges are: a cube’s length, width and height are all the same.",
    "visual": [
     {
      "kind": "maths",
@@ -460,7 +460,7 @@
      "feedback": "Both have 8 vertices: 4 on the top and 4 on the bottom."
     }
    ],
-   "explain": "They have the same number of faces, edges and vertices, but different dimensions: every edge of a cube is the same length.",
+   "explain": "They have the same number of faces, edges and vertices. But a cube’s faces are all squares, because its length, width and height are all the same. A cuboid’s faces can be rectangles: it can be longer one way than another.",
    "visual": [
     {
      "kind": "maths",
@@ -576,7 +576,7 @@
     {
      "text": "4 equal sides",
      "correct": false,
-     "feedback": "Only the square has 4 equal sides. A rectangle has 2 long sides and 2 short sides."
+     "feedback": "Only the square has to have 4 equal sides. A rectangle can have 2 long sides and 2 short sides."
     },
     {
      "text": "4 lines of symmetry",
@@ -584,7 +584,7 @@
      "feedback": "A square has 4 lines of symmetry, but a rectangle (that is not a square) has only 2."
     }
    ],
-   "explain": "Both have 4 sides and 4 right angles. A square’s sides are all equal; a rectangle’s are not.",
+   "explain": "Both have 4 sides and 4 right angles. A square has all 4 sides equal; a rectangle can have 2 long and 2 short sides.",
    "visual": {
     "kind": "maths",
     "diagram": {
@@ -611,7 +611,7 @@
    ],
    "explain": "One down the middle and one across the middle. The diagonals are not lines of symmetry: fold along one and the corners do not match.",
    "feedback": {
-    "4": "A square has 4. Fold a rectangle along a diagonal and the corners do not meet."
+    "4": "A square has 4. Fold this rectangle along a diagonal and the corners do not meet."
    },
    "visual": {
     "kind": "maths",
@@ -669,7 +669,7 @@
    "id": "maths.sc.iso-kite",
    "topic": "maths.shape-compare",
    "kind": "mcq",
-   "prompt": "An isosceles triangle (2 equal sides) and a kite. What is the SAME about them?",
+   "prompt": "An isosceles triangle (exactly 2 equal sides) and a kite. What is the SAME about them?",
    "options": [
     {
      "text": "They both have exactly one line of symmetry",
@@ -982,7 +982,7 @@
     {
      "text": "Only the pyramid has rectangle faces",
      "correct": false,
-     "feedback": "The prism has 3 rectangle faces. The pyramid has a square and 4 triangles."
+     "feedback": "The prism has 3 rectangle faces, so the pyramid is not the only one."
     }
    ],
    "explain": "A pyramid’s triangle faces meet at a point (an apex) at the top. A prism is the same shape all the way along: a triangle at each end, joined by rectangles.",
