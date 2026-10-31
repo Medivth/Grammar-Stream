@@ -208,7 +208,7 @@ const CAREFUL = { join: '+', parts: [['care', 'root'], ['ful', 'suffix', 'one l'
 const ENJOYMENT = { join: '+', parts: [['enjoy', 'root', 'stays the same'], ['ment', 'suffix']], result: 'enjoyment' };
 const TOPIC_VISUALS = {
   'spelling.suffix-use': { ...W(ENJOYMENT, HAPPINESS, GENTLY, CAREFUL), caption: 'Usually just add the ending. Watch for y → i, le → ly, and -ful with one l.' },
-  'spelling.punct-use': { kind: 'table', head: ['Mark', 'Its job'], rows: [['Capital letter', 'Starts a sentence; names, places, days and I'], ['**.**  **?**  **!**', 'Ends a sentence: telling, asking, or strong feeling'], ['Comma **,**', 'Between things in a list: sticks, string and a torch'], ['Apostrophe **’**', 'Missing letters (can’t) or belonging (Peter’s jacket)']], tint: 'rows' },
+  'spelling.punct-use': { kind: 'table', head: ['Mark', 'Its job'], rows: [['Capital letter', 'Starts a sentence; names, places, days and I'], ['**.**  **?**  **!**', 'Ends a sentence: telling, asking, or strong feeling'], ['Comma\u00a0**,**', 'Between things in a list: sticks, string and a torch'], ['Apostrophe\u00a0**’**', 'Missing letters (can’t) or belonging (Peter’s jacket)']], tint: 'rows' },
 };
 const ITEM_VISUALS = {
   'spelling.su.happiness': W(HAPPINESS),
