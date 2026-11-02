@@ -103,7 +103,23 @@ export const Y3_MILESTONES = [
   { id: 'three-hundred', title: 'Three hundred', desc: 'Know 300 things', goal: 300, measure: (s) => learnedCount(s), unlock: 'scarf' },
 ];
 
-export const milestoneDefs = () => (COURSE.id === 'y3' ? Y3_MILESTONES : COURSE.young ? KS1_MILESTONES : MILESTONES.filter((m) => m.id !== 'paper' || COURSE.tools.includes('paper')));
+// Year 8: the main badges, plus five classical ones that unlock the best Greek and Roman pieces
+const ANCIENT_WORLD = ['history.athens', 'history.sparta', 'history.persian-wars', 'history.alexander', 'history.rome', 'history.byzantium'];
+const secure = (t) => ['proficient', 'mastered'].includes(t?.state);
+export const Y8_MILESTONES = [
+  { id: 'alpha-omega', title: 'Alpha to omega', desc: 'Secure 5 Ancient Greek topics', goal: 5, measure: (s, db) => secureIn(s, db, (t) => t.subject === 'greek'), unlock: 'linothorax' },
+  { id: 'word-hoard', title: 'Word hoard', desc: 'Know 250 things in Ancient Greek', goal: 250, measure: (s, db) => Object.entries(s.cards).filter(([id, c]) => isKnown(c) && db.topics[db.items[id]?.topic]?.subject === 'greek').length, unlock: 'cloak' },
+  { id: 'clio', title: 'Hall of Clio', desc: 'Secure 4 ancient-world history topics: Athens, Sparta, the Persian Wars, Alexander, Rome or Byzantium', goal: 4, measure: (s) => ANCIENT_WORLD.filter((id) => secure(s.topics[id])).length, unlock: 'galea' },
+  { id: 'centurion', title: 'Centurion', desc: 'Practise on 100 different days', goal: 100, measure: (s) => new Set(s.sessions.filter((x) => x.completed).map((x) => x.day)).size, unlock: 'lorica' },
+  { id: 'charioteer', title: 'Charioteer', desc: 'Get 30 right in one sprint', goal: 30, measure: bestSprint, unlock: 'chariot' },
+];
+
+export const milestoneDefs = () => {
+  if (COURSE.id === 'y3') return Y3_MILESTONES;
+  if (COURSE.young) return KS1_MILESTONES;
+  const main = MILESTONES.filter((m) => m.id !== 'paper' || COURSE.tools.includes('paper'));
+  return COURSE.id === 'y8' ? [...main, ...Y8_MILESTONES] : main;
+};
 
 export function milestones(state, db) {
   return milestoneDefs().map((m) => {

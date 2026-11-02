@@ -229,12 +229,16 @@ function eyes(mood) {
 }
 
 /** Returns an SVG string for the companion (species from opts.species, default capybara). */
-export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = 'none', wear, mood = 'neutral', title } = {}) {
+export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = 'none', wear, mood = 'neutral', title, fit = false } = {}) {
   species ||= COURSE.young ? 'lion' : 'capybara';
   const worn = wornList({ wear, accessory: acc });
   const layer = (slots) => worn.filter((a) => slots.includes(slotOf(a)));
   if (species === 'lion') return lionSVG(LION_FURS[fur] || LION_FURS.caramel, worn, layer, mood, title || 'Lion');
-  if (species === 'heroine') return heroineSVG(LOOKS[look] || LOOKS.braid, worn, layer, mood, title || 'Heroine');
+  if (species === 'heroine') {
+    const svg = heroineSVG(LOOKS[look] || LOOKS.braid, worn, layer, mood, title || 'Heroine');
+    // standing, she is narrow: on her own (not in a scene) she is framed more closely, unless the chariot needs the room
+    return fit && !worn.includes('chariot') ? svg.replace('viewBox="0 0 200 160"', 'viewBox="30 0 140 160"') : svg;
+  }
   const f = FURS[fur] || FURS.caramel;
   const draw = (slots) => layer(slots).filter((a) => a !== 'chariot').map((a) => accessory(a, f)).join('');
   return `<svg viewBox="0 0 200 160" role="img" aria-label="${title || 'Capybara'}" xmlns="http://www.w3.org/2000/svg">
@@ -348,7 +352,7 @@ const n1 = (v) => +v.toFixed(1);
 // A centurion's galea: an iron bowl with brass trim, cheek guards, and a crest worn side to side.
 const GALEA = `<g><path d="M16 44 Q20 15 64 16 Q108 15 112 44 Q64 31 16 44 Z" fill="#c4302b"/>${[[30, 37, 25, 23], [42, 33, 39, 19], [54, 31, 53, 17], [74, 31, 75, 17], [86, 33, 89, 19], [98, 37, 103, 23]].map(([x1, y1, x2, y2]) => `<path d="M${x1} ${y1} L${x2} ${y2}" stroke="#e5675c" stroke-width="2.2" stroke-linecap="round"/>`).join('')}<path d="M26 64 Q14 70 12 80 L30 75 Z M102 64 Q114 70 116 80 L98 75 Z" fill="#8d96a3"/><path d="M28 68 Q28 30 64 30 Q100 30 100 68 Z" fill="#b9c1cb"/><path d="M42 36 Q64 27 86 36" stroke="#e3e8ee" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="59" y="26" width="10" height="9" rx="2" fill="#d4a64a"/><path d="M26 64 Q64 54 102 64 L102 71 Q64 61 26 71 Z" fill="#d4a64a"/><path d="M30 67 L30 94 Q35 99 42 93 L42 70 Z M98 67 L98 94 Q93 99 86 93 L86 70 Z" fill="#b9c1cb" stroke="#8d96a3" stroke-width="1.5"/><circle cx="36" cy="84" r="2.2" fill="#d4a64a"/><circle cx="92" cy="84" r="2.2" fill="#d4a64a"/></g>`;
 // An olive wreath (the Olympic prize): narrow two-tone leaves and a few olives.
-const OLIVE = `<g>${[194, 208, 222, 236, 250, 264, 276, 290, 304, 318, 332, 346].map((a, i) => { const t = (a * Math.PI) / 180, r = i % 2 ? 44 : 39, x = n1(64 + Math.cos(t) * r), y = n1(71 + Math.sin(t) * (r - 9)); return `<ellipse cx="${x}" cy="${y}" rx="8.5" ry="2.6" transform="rotate(${a + 90 + (i % 2 ? 22 : -22)} ${x} ${y})" fill="${i % 2 ? '#a9b98a' : '#6f8a4c'}"/>`; }).join('')}<circle cx="34" cy="50" r="3" fill="#4b3b4f"/><circle cx="96" cy="48" r="3" fill="#4b3b4f"/><circle cx="58" cy="38" r="2.6" fill="#5d6b2a"/></g>`;
+const OLIVE = `<g><path d="M28 66 Q30 40 64 39 Q98 40 100 66" stroke="#6b4a2a" stroke-width="2" fill="none"/>${[200, 214, 228, 242, 256, 284, 298, 312, 326, 340].flatMap((a) => [-1, 1].map((side) => { const t = (a * Math.PI) / 180, x = n1(64 + Math.cos(t) * (39 + side * 3)), y = n1(70 + Math.sin(t) * (30 + side * 3)), toFront = a < 270 ? 1 : -1; return `<ellipse cx="${x}" cy="${y}" rx="7.5" ry="2.3" transform="rotate(${a + 90 + side * toFront * 28} ${x} ${y})" fill="${side < 0 ? '#a9b98a' : '#6f8a4c'}"/>`; })).join('')}<circle cx="38" cy="47" r="2.8" fill="#4b3b4f"/><circle cx="91" cy="46" r="2.8" fill="#4b3b4f"/><circle cx="64" cy="37" r="2.6" fill="#5d6b2a"/></g>`;
 
 // shields, centred on (0, 0) at the capybara's size
 const SHIELDS = {
@@ -402,12 +406,12 @@ function capyBody(kind) {
   }
 }
 // the capybara's cloak lies over its back, pinned near the neck
-const CAPY_CLOAK_OVER = `<g><path d="M${onBody(222).join(' ')} Q118 56 ${onBody(330).join(' ')} L188 112 Q150 104 124 90 Q110 84 96 84 Z" fill="#9e1f1f"/><path d="M132 70 Q150 86 182 96 M118 66 Q130 84 160 98" stroke="#7a1414" stroke-width="2.4" fill="none"/><circle cx="107" cy="80" r="4.5" fill="#e0b13a" stroke="#b8862a" stroke-width="1.5"/></g>`;
+const CAPY_CLOAK_OVER = `<g><path d="M${onBody(222).join(' ')} Q104 58 ${onBody(276).join(' ')} Q140 64 146 74 L134 100 Q118 90 96 88 Z" fill="#9e1f1f"/><path d="M118 66 Q126 80 124 94 M132 70 Q138 82 136 96" stroke="#7a1414" stroke-width="2.2" fill="none"/><circle cx="107" cy="80" r="4.5" fill="#e0b13a" stroke="#b8862a" stroke-width="1.5"/></g>`;
 
 // --- a two-wheeled chariot, side on, with the pole and yoke out in front
 const wheel = (cx, cy, r) => `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#6b4226" stroke-width="4"/>${[0, 30, 60, 90, 120, 150].map((a) => { const t = (a * Math.PI) / 180, dx = n1(Math.cos(t) * r), dy = n1(Math.sin(t) * r); return `<path d="M${cx - dx} ${cy - dy} L${cx + dx} ${cy + dy}" stroke="#8a5a35" stroke-width="2"/>`; }).join('')}<circle cx="${cx}" cy="${cy}" r="4" fill="#e0b13a" stroke="#b8862a" stroke-width="1.5"/>`;
-const UPRIGHT_CHARIOT = `<g><path d="M70 142 Q44 142 14 128" stroke="#6b4226" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M4 124 Q12 116 22 124" stroke="#6b4226" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M64 146 L64 120 Q64 106 80 107 Q92 108 96 116 L128 119 Q136 121 136 130 L136 146 Z" fill="#b3261e"/><path d="M64 146 L64 120 Q64 106 80 107 Q92 108 96 116 L128 119 Q136 121 136 130 L136 146" fill="none" stroke="#e0b13a" stroke-width="2.5" stroke-linejoin="round"/><path d="M68 134 H133" stroke="#e0b13a" stroke-width="1.6"/>${meander(70, 132, 139.5, '#e0b13a')}<circle cx="77" cy="119" r="4" fill="#e0b13a"/>${wheel(110, 143, 14)}</g>`;
-const CAPY_CHARIOT = `<g><path d="M44 142 Q30 140 8 130" stroke="#6b4226" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M38 116 Q38 104 52 104 Q64 104 68 112 L176 112 Q190 113 190 126 L190 148 L38 148 Z" fill="#b3261e"/><path d="M38 148 L38 116 Q38 104 52 104 Q64 104 68 112 L176 112 Q190 113 190 126 L190 148" fill="none" stroke="#e0b13a" stroke-width="2.5" stroke-linejoin="round"/><path d="M42 134 H186" stroke="#e0b13a" stroke-width="1.6"/>${meander(44, 186, 140, '#e0b13a')}${wheel(132, 144, 15)}</g>`;
+const UPRIGHT_CHARIOT = `<g><path d="M70 142 Q44 141 12 128" stroke="#6b4226" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="11" cy="127.5" r="3.6" fill="#e0b13a"/><path d="M64 146 L64 120 Q64 106 80 107 Q92 108 96 116 L128 119 Q136 121 136 130 L136 146 Z" fill="#b3261e"/><path d="M64 146 L64 120 Q64 106 80 107 Q92 108 96 116 L128 119 Q136 121 136 130 L136 146" fill="none" stroke="#e0b13a" stroke-width="2.5" stroke-linejoin="round"/><path d="M68 134 H133" stroke="#e0b13a" stroke-width="1.6"/>${meander(70, 132, 139.5, '#e0b13a')}<circle cx="77" cy="119" r="4" fill="#e0b13a"/>${wheel(110, 143, 14)}</g>`;
+const CAPY_CHARIOT = `<g><path d="M44 142 Q30 140 8 130" stroke="#6b4226" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="7" cy="129.5" r="3.6" fill="#e0b13a"/><path d="M38 116 Q38 104 52 104 Q64 104 68 112 L176 112 Q190 113 190 126 L190 148 L38 148 Z" fill="#b3261e"/><path d="M38 148 L38 116 Q38 104 52 104 Q64 104 68 112 L176 112 Q190 113 190 126 L190 148" fill="none" stroke="#e0b13a" stroke-width="2.5" stroke-linejoin="round"/><path d="M42 134 H186" stroke="#e0b13a" stroke-width="1.6"/>${meander(44, 186, 140, '#e0b13a')}${wheel(132, 144, 15)}</g>`;
 
 // --- clothes on the lion's round body (drawn under its arms; the mane hides the neckline)
 const LT = 'M76 102 Q100 96 124 102 L129 136 Q100 141 71 136 Z';
@@ -436,7 +440,8 @@ function lionClothes(kind) {
 // --- the heroine ---------------------------------------------------------------------------------
 // A young woman in a plain tunic, standing, drawn in the same 200×160 box with her feet at y 150.
 // Head and face accessories are the capybara's, scaled onto her head (eyes land on her eyes).
-const HERO_HEAD = 'translate(61 3.5) scale(.62)';
+const HERO_FACE = 'translate(61 3.5) scale(.62)';
+const HERO_HAT = 'translate(56.5 -0.8) scale(.68)'; // a little bigger, to sit over her hair
 // her head is drawn at a larger size and scaled down about the chin, which keeps her grown-up proportions
 const HEAD_T = 'translate(100 70.5) scale(.86) translate(-100 -72)';
 const shade = (hex, k) => `#${[1, 3, 5].map((i) => Math.max(0, Math.min(255, Math.round(parseInt(hex.slice(i, i + 2), 16) * k))).toString(16).padStart(2, '0')).join('')}`;
@@ -576,7 +581,7 @@ function heroineSVG(L, worn, layer, mood, title) {
   const top = !headThing || KEEP_TOP.has(headThing);
   const skin = L.skin, skinD = shade(skin, 0.86);
   const riding = !!ride;
-  const scaled = (slots) => layer(slots).map((a) => `<g transform="${HERO_HEAD}">${accessory(a, {})}</g>`).join('');
+  const scaled = (slots) => layer(slots).map((a) => `<g transform="${slots[0] === 'face' ? HERO_FACE : HERO_HAT}">${accessory(a, {})}</g>`).join('');
   const shield = hand ? (hand === 'shield' ? `<g transform="translate(129 108) scale(.8) translate(-152 -104)">${accessory('shield', {})}</g>` : `<g transform="translate(129 108) scale(.8)">${SHIELDS[hand]}</g>`) : '';
   return `<svg viewBox="0 0 200 160" role="img" aria-label="${title}" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="100" cy="${riding ? 158 : 151}" rx="${riding ? 52 : 30}" ry="${riding ? 5 : 4}" fill="#000" opacity=".08"/>
@@ -613,7 +618,8 @@ export const lookThumb = (look) => capybaraSVG({ species: 'heroine', look, mood:
 export function capybaraEl(opts, className = 'capy') {
   const wrap = document.createElement('div');
   wrap.className = className;
-  wrap.innerHTML = capybaraSVG(opts);
+  wrap.innerHTML = capybaraSVG({ fit: true, ...opts });
+
   return wrap;
 }
 

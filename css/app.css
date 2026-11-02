@@ -577,3 +577,10 @@ pre.code code { border: 0; padding: 0; background: none; font-size: 0.95rem; }
 .hw-paper .ico svg { width: 24px; height: 24px; }
 .hw-chip { font-size: 1.05rem; color: var(--ink); }
 .hw-done { font-size: 1.15rem; max-width: 34ch; margin: 0 auto; }
+
+/* --- Year 8 companions: the heroine's looks and the wardrobe grouped by slot (js/ui/capybara.js) --- */
+.capy-pick .look-pick { padding: 3px; min-width: 0; border-radius: 50%; }
+.look-thumb { display: block; width: 54px; height: 54px; border-radius: 50%; overflow: hidden; background: #efe8da; }
+.look-thumb svg { width: 100%; height: 100%; display: block; }
+.wardrobe-group { margin-top: 16px; }
+.wardrobe-group h4 { margin: 0 0 8px; font-family: var(--display); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
