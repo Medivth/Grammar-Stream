@@ -294,6 +294,255 @@ function library() {
     + R(210, 152, 18, 18, '#c8643a', 3) + E(212, 146, 8, 4, '#3f9a4a', ' transform="rotate(-30 212 146)"') + E(226, 144, 8, 4, '#3f9a4a', ' transform="rotate(30 226 144)"') + E(219, 140, 4, 8, '#4caf50');
 }
 
+// --- the classical world (Year 8 learns Ancient Greek; Year 6 learns Latin) -------------------
+
+const cypress = (x, y, h, col = '#2f5a35') => E(x, y - h / 2, h / 7, h / 2, col);
+const pine = (x, y, h) => L(`M${x} ${y} q2 ${-h / 2} -2 ${-h}`, '#6b4e33', 3) + E(x - 2, y - h, 15, 5, '#3d6b3a') + E(x + 3, y - h - 4, 10, 4, '#4a7d45');
+// a run of fluted columns: x positions, top and bottom, width, colour, shade
+const columns = (xs, y0, y1, w, col, shade) => xs.map((x) => R(x, y0, w, y1 - y0, col) + L(`M${n1(x + w / 3)} ${y0 + 2} V${y1 - 1} M${n1(x + (2 * w) / 3)} ${y0 + 2} V${y1 - 1}`, shade, 0.7)
+  + R(x - 1.5, y0 - 3, w + 3, 3, col) + R(x - 1, y1, w + 2, 2, shade)).join('');
+const steam = (pts, col = '#fff') => pts.map(([x, y, s]) => L(`M${x} ${y} q${-4 * s} ${-6 * s} 0 ${-12 * s} q${4 * s} ${-6 * s} 0 ${-12 * s}`, col, 2.5 * s, ' opacity=".55"')).join('');
+
+// The Colosseum from outside: the curving travertine wall with three arcaded storeys and the attic
+// on top, and on the left the broken outer ring, where you see the lower inner ring behind it.
+function colosseum() {
+  const D = 3, K = 186, H0 = 124, deg = Math.PI / 180;
+  // a point on a ring (r = 1 is the outer wall) seen from in front, so the walls curve away from us
+  const at = (t, y, r = 1) => { const s = (D - 1) / (D - r * Math.cos(t)); return [n1(120 + K * r * Math.sin(t) * s), n1(H0 + (y - H0) * s)]; };
+  const ring = (r, t0, t1, n, top, storeys, attic, wall, hole, trim) => {
+    const ts = Array.from({ length: n + 1 }, (_, i) => (t0 + ((t1 - t0) * i) / n) * deg), dt = ts[1] - ts[0];
+    const tops = ts.map((t, i) => top(t / deg, i));
+    let sil = '', holes = '', lines = '';
+    ts.forEach((t, i) => { const [x, y] = at(t, tops[i], r); sil += `${i ? 'L' : 'M'}${x} ${y}`; });
+    sil += `L${at(ts[n], 134, r)[0]} 134 L${at(ts[0], 134, r)[0]} 134Z`;
+    for (let i = 0; i < n; i++) {
+      const tm = ts[i] + dt / 2, cut = Math.max(tops[i], tops[i + 1]);
+      const [xa] = at(ts[i] + dt * 0.21, 0, r), [xb] = at(ts[i + 1] - dt * 0.21, 0, r), rr = n1((xb - xa) / 2);
+      for (const [yb, yt] of storeys) {
+        if (cut > yb - 6) continue;
+        const b = at(tm, yb, r)[1], tp = at(tm, yt, r)[1], c = at(tm, cut, r)[1];
+        holes += cut < yt ? `M${xa} ${b}V${n1(tp + rr)}A${rr} ${rr} 0 0 1 ${xb} ${n1(tp + rr)}V${b}Z` : `M${xa} ${b}V${n1(c + 2)}H${xb}V${b}Z`;
+      }
+      if (attic && cut <= attic[1] && i % 2) { const [x1, y1] = at(tm - dt * 0.15, attic[0], r), [x2, y2] = at(tm + dt * 0.15, attic[0] + 6, r); holes += `M${x1} ${y1}H${x2}V${y2}H${x1}Z`; }
+      // the cornices between the storeys, where the wall still stands
+      for (const y of [...storeys.map(([, yt]) => yt - 3), ...(attic ? [attic[1] - 22] : [])]) if (cut <= y) { const a = at(ts[i], y, r), b2 = at(ts[i + 1], y, r); lines += `M${a[0]} ${a[1]}L${b2[0]} ${b2[1]}`; }
+    }
+    // half-columns between the arches
+    let piers = '';
+    ts.forEach((t, i) => { if (i === 0 || i === n) return; for (const [yb, yt] of storeys) { const lim = Math.max(tops[i], yt - 2); if (lim < yb - 4) { const a = at(t, yb, r), b = at(t, lim, r); piers += `M${a[0]} ${a[1]}V${b[1]}`; } } });
+    return P(sil, wall) + L(piers, trim, 2.4) + P(holes, hole) + L(lines, trim, 3.2, ' stroke-linecap="butt"');
+  };
+  const out = (t, i) => (t > -14 ? 12 : Math.min(88, 12 + (-14 - t) * 4) + (i % 2 ? 6 : -2));
+  return sky('#8fcdf0') + C(206, 20, 11, '#fff2b0') + cloud(30, 22, 0.7)
+    + G('translate(150 14)', L('M0 0 q3 -3 6 0 q3 -3 6 0 M14 8 q2.5 -2.5 5 0 q2.5 -2.5 5 0', '#4b5a6a', 1.3))
+    // the inner ring, seen through the broken part
+    + ring(0.84, -64, 6, 10, () => 36, [[126, 98], [92, 72], [64, 48]], null, '#d6bd92', '#5b4331', '#e6d1a9')
+    // the outer wall: three storeys of arches, then the attic with its small windows
+    + ring(1, -66, 66, 22, out, [[127, 96], [90, 68], [62, 44]], [22, 38], '#e9d5ab', '#6e5238', '#f7ead0')
+    + floor('#d9ccb2', '#e8dcc4')
+    + L(`M0 152 H${W} M0 170 H${W} M40 132 L34 152 M120 132 V152 M200 132 L206 152 M14 152 L6 170 M80 152 L76 170 M160 152 L164 170 M226 152 L234 170`, '#c6b796', 1.5)
+    // a broken column and a capital
+    + E(24, 166, 15, 4, '#c9b48c') + R(13, 138, 22, 28, '#ecdcb8') + L('M18 141 V165 M24 140 V165 M30 141 V165', '#d2bf98', 1.2) + P('M13 140 l5 -4 l4 3 l6 -5 l7 4 v2z', '#ecdcb8') + E(24, 140, 11, 2.5, '#d9c7a0')
+    + R(206, 150, 26, 6, '#e3d3b0') + P('M208 150 l4 -8 h18 l4 8z', '#ead9b5') + C(211, 144, 3, '#d2bf98') + C(229, 144, 3, '#d2bf98');
+}
+
+// The Roman Forum: the Temple of Saturn's columns, three tall columns of Castor and Pollux, the
+// triple Arch of Septimius Severus, the Palatine with its umbrella pines, and the basalt paving.
+function forum() {
+  const r = rng(41);
+  let slabs = '';
+  for (let y = FLOOR + 4, row = 0; y < H; y += 11, row++) for (let x = -10 + (row % 2) * 9; x < W; x += 18 + r() * 8) slabs += `M${n1(x)} ${y}l${n1(2 + r() * 3)} 10`;
+  return sky('#a9daf3') + cloud(176, 14, 0.8) + cloud(56, 30, 0.6)
+    + P('M0 92 Q40 64 92 74 Q140 58 180 72 Q214 64 240 78 V132 H0Z', '#9cbf6e')
+    // brick ruins of the palaces on the Palatine
+    + R(150, 56, 50, 30, '#b9785a') + [154, 166, 178, 190].map((x) => P(`M${x} 86 V70 a4 4 0 0 1 8 0 V86Z`, '#6d3f2c')).join('')
+    + pine(96, 76, 20) + pine(140, 66, 18) + pine(214, 72, 22) + cypress(122, 76, 26) + cypress(206, 80, 22)
+    // three tall Corinthian columns with their bit of entablature
+    + columns([92, 106, 120], 22, 96, 7, '#efe6d2', '#cfc2a6') + R(88, 12, 42, 10, '#e9dfc8') + R(88, 18, 42, 2, '#cfc2a6') + R(84, 22, 12, 3, '#d8ccb2')
+    + P('M0 98 Q60 88 120 96 Q180 86 240 96 V132 H0Z', '#c9b896')
+    // the Temple of Saturn on its high podium
+    + R(0, 92, 74, 40, '#d8c9a6') + R(0, 92, 74, 4, '#e8dcc2') + L('M0 104 H74 M0 116 H74', '#c4b38e', 1.2)
+    + columns([2, 18, 34, 50], 40, 92, 9, '#d4c5b6', '#ab9a8c') + [6.5, 22.5, 38.5, 54.5].map((x) => C(x - 3, 37, 2, '#e8dcc2') + C(x + 3, 37, 2, '#e8dcc2')).join('')
+    + R(0, 22, 66, 13, '#e8dcc2') + R(0, 26, 66, 5, '#d5c7a8') + R(0, 20, 70, 3, '#f2e8d4')
+    // the Arch of Septimius Severus: three arches, columns in front, the tall attic
+    + R(162, 40, 80, 92, '#e6d8b8') + R(162, 22, 80, 18, '#ddcfae') + R(168, 26, 68, 10, '#d3c3a0') + R(160, 38, 84, 4, '#f2e8d2')
+    + P('M190 132 V82 a14 14 0 0 1 28 0 V132Z M168 132 V96 a7 7 0 0 1 14 0 V132Z M226 132 V96 a7 7 0 0 1 14 0 V132Z', '#5f4a3a')
+    + columns([164, 183, 220, 238], 50, 116, 5, '#f2ead6', '#cfc0a0') + [164, 183, 220, 238].map((x) => R(x - 2, 116, 9, 16, '#d8caa8')).join('')
+    + L('M174 60 h10 M226 60 h10 M196 56 h16', '#cbbb98', 1.5)
+    + floor('#8e8b86', '#a3a09a') + L(`M0 143 H${W} M0 154 H${W} M0 165 H${W} M0 176 H${W}`, '#77746f', 1.4) + L(slabs, '#77746f', 1.4)
+    // a fallen column and a broken capital on the paving
+    + R(4, 150, 40, 11, '#ece3cf', 5) + L('M10 151 V160 M18 151 V160 M26 151 V160 M34 151 V160', '#d3c7ab', 1) + E(44, 155.5, 3, 5.5, '#d8ccb2')
+    + P('M206 168 l5 -12 h22 l5 12z', '#ece3cf') + C(210, 157, 3.5, '#d8ccb2') + C(234, 157, 3.5, '#d8ccb2') + R(204, 168, 36, 4, '#d3c7ab');
+}
+
+// A Greek theatre like Epidaurus, seen from the round orchestra: rows of stone seats curving up the
+// hillside with stairways and the walkway across them, the gateway on the left and the skene on the right.
+function theatre() {
+  const cx = 120, cy = 152, half = (rx, ry) => `M${n1(cx - rx)} ${cy}A${n1(rx)} ${n1(ry)} 0 0 1 ${n1(cx + rx)} ${cy}Z`;
+  let rows = '';
+  for (let k = 16; k >= 0; k--) {
+    const rx = 112 + k * 9.5, ry = 30 + k * 6.2;
+    rows += k === 10 ? P(half(rx, ry), '#c4b291') + P(half(rx - 4, ry - 5), '#e6dbc2') : P(half(rx, ry), '#b9a681') + P(half(rx - 1.5, ry - 2.6), '#ece3cf');
+  }
+  // stairways: more in the upper tier than the lower one
+  const stair = (a, k0, k1) => { const p = (k) => [n1(cx + Math.cos(a) * (112 + k * 9.5)), n1(cy - Math.sin(a) * (30 + k * 6.2))]; const [x0, y0] = p(k0), [x1, y1] = p(k1); return `M${x0} ${y0}L${x1} ${y1}`; };
+  let stairs = '';
+  for (let i = 1; i < 12; i++) stairs += stair((i * Math.PI) / 12, 0, 10);
+  for (let i = 1; i < 24; i += 2) stairs += stair((i * Math.PI) / 24, 10.4, 16.6);
+  return sky('#a6d8f2') + C(30, 14, 9, '#fff2b0')
+    + P('M0 40 Q40 14 90 24 Q140 8 190 22 Q220 14 240 26 V70 H0Z', '#7fae5e')
+    + [[10, 44, 18], [58, 30, 16], [178, 28, 16], [230, 38, 18], [100, 24, 14], [146, 22, 12]].map(([x, y, h]) => cypress(x, y, h)).join('')
+    + [[32, 34], [124, 22], [204, 30]].map(([x, y]) => C(x, y, 7, '#5f8f47') + C(x + 7, y + 2, 6, '#6a9b50')).join('')
+    + rows + L(stairs, '#b29f7a', 2.2)
+    // the gateway into the orchestra, on the left
+    + R(0, 76, 52, 8, '#e3d7bd') + R(0, 84, 52, 48, '#d9cdb0') + P('M8 132 V92 H22 V132Z M30 132 V92 H44 V132Z', '#8a7a62') + R(4, 88, 4, 44, '#efe6d2') + R(22, 88, 8, 44, '#efe6d2') + R(44, 88, 6, 44, '#efe6d2') + R(0, 72, 54, 4, '#f2eadb')
+    // the skene: the stage building with its columns, on the right
+    + R(196, 84, 44, 48, '#c9b28c') + R(194, 80, 46, 5, '#ddc9a5') + columns([200, 212, 224, 236], 96, 130, 4, '#efe6d2', '#cbbd9e') + R(196, 92, 44, 4, '#ddc9a5')
+    + P('M206 132 V112 h8 V132Z M228 132 V112 h8 V132Z', '#6d5a44', ' opacity=".6"')
+    // the round orchestra: beaten earth inside a ring of stone, the altar at its centre
+    + floor('#dcc596', '#e7d4aa')
+    + E(cx, 158, 136, 26, 'none', ' stroke="#f1e8d4" stroke-width="5"') + E(cx, 158, 128, 22, 'none', ' stroke="#cbb27e" stroke-width="1.5"')
+    + R(12, 160, 18, 10, '#e9dfc8') + R(10, 158, 22, 3, '#f4ecdb') + steam([[21, 156, 0.5]], '#9a8f80')
+    + E(222, 168, 10, 3, '#c3a876') + R(216, 156, 12, 12, '#cfa45e', 3) + R(214, 154, 16, 3, '#e0b873');
+}
+
+// Mount Olympus at sunrise: rocky peaks above a sea of cloud, the gods' hall gleaming on a summit,
+// Zeus's eagle in the sky, and a marble terrace to stand on.
+function olympus() {
+  return sky('#55579e') + R(0, 22, W, 22, '#7d64ad') + R(0, 44, W, 22, '#c46f9f') + R(0, 66, W, 22, '#f08c86') + R(0, 88, W, 44, '#ffb877')
+    + starfield(37, 8, 0, 0, W, 20)
+    + C(198, 92, 26, '#ffd98a', ' opacity=".5"') + C(198, 92, 17, '#fff1bf')
+    // the peaks, lit pink on the sunrise side, with snow on top
+    + P('M60 112 L104 30 L118 44 L134 22 L170 84 L190 112Z', '#8a7f9e') + P('M134 22 L170 84 L150 90 L138 56Z', '#a596b2')
+    + P('M104 30 L112 44 L118 44 L126 34 L134 22 L142 36 L136 42 L128 38 L120 50 L112 48 L106 40 L98 42Z', '#fff4f6')
+    + P('M-12 112 L8 54 L50 54 L70 112Z', '#7a7092') + P('M8 54 L50 54 L54 66 L44 62 L36 68 L24 62 L14 68 L5 62Z', '#fff4f6')
+    + P('M176 112 L210 64 L250 112Z', '#7a7092') + P('M210 64 L218 76 L206 76Z', '#fff4f6')
+    // the hall of the gods on the left summit: white marble and gold
+    + L('M29 6 V0 M12 12 L6 6 M46 12 L52 6 M60 22 H68', '#fff3c4', 1.6, ' opacity=".8"')
+    + R(4, 46, 50, 4, '#f2c14e') + columns([8, 18, 28, 38, 48], 30, 46, 4, '#fffaf0', '#e8dcc0') + R(4, 24, 50, 5, '#fffaf0') + P('M4 24 L29 12 L54 24Z', '#f2c14e') + P('M11 22 L29 15 L47 22Z', '#ffe08a') + C(29, 10, 2.5, '#f2c14e')
+    // Zeus's eagle
+    + G('translate(80 18)', P('M-14 -2 Q-6 -8 0 0 Q6 -8 14 -2 Q6 -2 0 4 Q-6 -2 -14 -2Z', '#4a3a5c') + C(0, -1, 2, '#4a3a5c'))
+    // the sea of cloud
+    + P('M0 104 q12 -12 26 -4 q10 -14 26 -4 q14 -10 26 0 q12 -12 28 -2 q14 -12 28 0 q12 -10 26 -2 q14 -12 28 0 q12 -10 24 -2 q12 -10 24 2 V132 H0Z', '#fde7ef')
+    + P('M0 116 q14 -10 28 -2 q14 -12 30 0 q14 -10 30 0 q16 -12 32 0 q14 -10 30 0 q16 -12 32 0 q14 -10 30 0 q12 -8 28 0 V132 H0Z', '#ffffff')
+    // the marble terrace with a golden edge
+    + floor('#f6f1e7', '#f2c14e') + R(0, FLOOR + 3, W, 2, '#d9a93a')
+    + L(`M0 154 H${W} M60 135 L50 154 M180 135 L190 154 M120 154 V180 M20 154 L10 180 M220 154 L230 180`, '#e4dccb', 1.5)
+    + cloud(18, 172, 0.9) + cloud(222, 176, 1)
+    // a golden tripod and a laurel bough on the terrace
+    + L('M206 158 l-6 16 M214 158 V176 M222 158 l6 16', '#d9a93a', 2.2) + P('M202 150 h24 q-2 9 -12 9 q-10 0 -12 -9z', '#f2c14e') + steam([[214, 148, 0.6]], '#ffffff');
+}
+
+// A trireme on the blue Aegean: three banks of oars, a square sail, an eye painted on the bow and a
+// bronze ram, seen from a stone quay.
+function trireme() {
+  let oars = '';
+  for (let i = 0; i < 16; i++) for (const [dy, dx] of [[0, 0], [5, 4], [10, 8]]) { const x = 32 + i * 11.4 + dx, y = 80 + dy; oars += `M${n1(x)} ${y}l-9 ${24 - dy}`; }
+  return sky('#9fd8f7') + C(36, 22, 11, '#fff2b0') + cloud(200, 18, 0.8)
+    + R(0, 62, W, 70, '#1f7fc0') + R(0, 62, W, 4, '#4aa3d6')
+    // an island on the horizon with a little white temple
+    + P('M150 64 Q170 46 196 52 Q214 50 236 64Z', '#7c9a8a') + R(188, 44, 14, 6, '#ffffff') + P('M186 44 L195 39 L204 44Z', '#ffffff')
+    // the sail on its yard and mast, lined with brails
+    + L('M126 82 V8', '#6b4e33', 3) + L('M86 12 Q126 6 166 12', '#6b4e33', 3)
+    + P('M90 13 Q126 8 162 13 L158 56 Q126 50 94 56Z', '#f4ead2') + L('M106 12 V54 M118 11 V52 M134 11 V52 M146 12 V54 M93 26 Q126 20 160 26 M93 40 Q126 34 159 40', '#d9c9a4', 1.1)
+    + P('M120 22 l6 -6 l6 6 l-6 14z', '#c0453a')
+    // the oars dipping into the water, under the outrigger
+    + L(oars, '#c7a273', 1.4)
+    // the hull: black with a red stripe, the ram at the bow, the curling stern
+    + P('M12 92 L22 78 L216 78 Q228 76 232 62 Q236 48 226 40 Q238 42 240 56 Q240 80 222 96 L24 96Z', '#3a2a24')
+    + R(22, 77, 196, 4, '#b8432f') + R(28, 81, 184, 5, '#7a5236')
+    + P('M12 92 L2 94 L2 97 L14 97Z', '#c58b3b') + L('M2 94.5 H10', '#8c5f25', 1) + L('M20 80 Q12 76 14 66', '#3a2a24', 4)
+    + E(30, 87, 6, 3.4, '#ffffff') + C(31, 87, 2.2, '#1c1a33') + L('M24 84 q6 -3 12 0', '#b8432f', 1.2)
+    + L('M222 96 l12 16 M228 90 l10 20', '#6b4e33', 2.5)
+    + L('M60 102 q4 -2 8 0 M110 104 q4 -2 8 0 M170 102 q4 -2 8 0 M20 110 q5 -3 10 0 M200 116 q5 -3 10 0 M40 122 q5 -3 10 0', '#d6efff', 1.6)
+    // the stone quay
+    + floor('#d6c6a2', '#e7d9b8') + L(`M0 148 H${W} M0 164 H${W} M30 132 V148 M90 132 V148 M150 132 V148 M210 132 V148 M10 148 V164 M60 148 V164 M120 148 V164 M180 148 V164 M230 148 V164 M40 164 V180 M100 164 V180 M160 164 V180 M220 164 V180`, '#bfae88', 1.5)
+    // a bollard with its rope, and an amphora
+    + R(12, 146, 14, 18, '#6b6f78', 4) + R(10, 144, 18, 5, '#7d828c', 2) + E(19, 168, 14, 4, '#a7804e') + E(19, 166, 9, 2.5, '#8d6a3f')
+    + G('translate(222 142)', P('M-4 0 h8 v4 q10 4 10 16 q0 12 -8 18 h-12 q-8 -6 -8 -18 q0 -12 10 -16z', '#c8643a') + L('M-4 4 q-8 -2 -8 6 M4 4 q8 -2 8 6', '#c8643a', 2) + R(-9, 16, 18, 3, '#2b2a33'));
+}
+
+// The atrium of a Roman house: red painted walls, the opening in the roof above the impluvium pool,
+// four columns, a little household shrine and a black-and-white mosaic floor.
+function atrium() {
+  const panel = (x, w, col) => R(x, 46, w, 56, col) + R(x + 4, 50, w - 8, 48, 'none', 0, ' stroke="#e9c46a" stroke-width="1.2"');
+  return sky('#b23a2b')
+    // the ceiling and the opening in the roof, with the sky above
+    + R(0, 0, W, 34, '#5a3a2c') + P('M64 0 H176 L160 22 H80Z', '#9fd8f7') + P('M60 0 L80 22 L72 26 L50 0Z M180 0 L160 22 L168 26 L190 0Z', '#c0643a')
+    + L('M80 22 H160', '#7a4a2c', 3) + [86, 98, 110, 122, 134, 146, 158].map((x) => P(`M${x - 2} 22 l2 4 l2 -4z`, '#c0643a')).join('')
+    + P('M80 22 H160 L196 132 H44Z', '#fff7d6', ' opacity=".16"')
+    // painted walls: panels framed in gold, a white frieze, a black dado
+    + R(0, 34, W, 8, '#f3ead8') + L(`M0 38 H${W}`, '#b23a2b', 1.4, ' stroke-dasharray="4 4"')
+    + panel(30, 30, '#b23a2b') + panel(178, 30, '#b23a2b') + panel(64, 18, '#e2b14e') + panel(158, 18, '#e2b14e')
+    + R(0, 102, W, 30, '#2b2324') + L(`M0 104 H${W}`, '#e9c46a', 1.4)
+    + C(45, 72, 5, '#3f9a4a') + E(45, 79, 2, 3, '#f3ead8') + C(193, 72, 5, '#5b8fd6') + E(193, 79, 2, 3, '#f3ead8')
+    // the household shrine on the left wall
+    + R(4, 70, 22, 22, '#f3ead8') + P('M2 70 L15 60 L28 70Z', '#f3ead8') + R(8, 74, 14, 14, '#8a5a35') + C(15, 81, 3, '#ffd166') + R(2, 92, 26, 3, '#d9cdb7')
+    // back columns at the far corners of the pool
+    + columns([78, 156], 26, 128, 6, '#f6f0e2', '#d8ccb2') + R(78, 100, 6, 28, '#b23a2b') + R(156, 100, 6, 28, '#b23a2b')
+    // the mosaic floor
+    + floor('#efe6d2', '#d9cdb7')
+    + L(`M0 172 H${W} M0 176 H${W}`, '#2b2324', 1.4) + Array.from({ length: 24 }, (_, i) => P(`M${i * 10 + 5} 170 l4 4 l-4 4 l-4 -4z`, '#2b2324')).join('')
+    // the impluvium: a shallow pool in a marble kerb, with the light from above on the water
+    + P('M58 136 H182 L196 156 H44Z', '#f6f0e2') + P('M64 138 H176 L187 153 H53Z', '#3f95c4') + P('M96 140 H140 L130 150 H84Z', '#8fd0ee', ' opacity=".7"')
+    // the front columns, painted red below, framing the room
+    + columns([14, 216], 30, 166, 10, '#f6f0e2', '#d8ccb2') + R(14, 124, 10, 42, '#b23a2b') + R(216, 124, 10, 42, '#b23a2b')
+    // a marble table with a bronze bowl, and a pot plant
+    + R(30, 152, 22, 4, '#f6f0e2') + R(34, 156, 4, 12, '#d8ccb2') + R(44, 156, 4, 12, '#d8ccb2') + P('M33 152 q8 -8 16 0z', '#b8863b')
+    + R(194, 158, 14, 12, '#c8643a', 3) + E(196, 152, 6, 3, '#3f9a4a', ' transform="rotate(-30 196 152)"') + E(206, 151, 6, 3, '#3f9a4a', ' transform="rotate(30 206 151)"') + E(201, 148, 3, 6, '#4caf50');
+}
+
+// Delphi: the grey-pink cliffs of Parnassus, the Temple of Apollo on its terrace, the round tholos,
+// the Pythia's bronze tripod with smoke rising and the omphalos, the navel stone of the world.
+function delphi() {
+  return sky('#b9dff5') + cloud(206, 16, 0.6)
+    + P('M0 0 H240 V40 Q220 52 200 46 Q180 58 160 50 Q130 62 110 54 Q80 64 60 52 Q36 60 0 50Z', '#c8a894')
+    + L('M14 6 V44 M32 2 V50 M50 8 V46 M78 0 V52 M100 6 V50 M130 2 V54 M152 8 V48 M176 0 V46 M196 6 V42 M220 2 V44', '#a88b79', 1.6)
+    + P('M0 50 Q36 60 60 52 Q80 64 110 54 Q130 62 160 50 Q180 58 200 46 Q220 52 240 40 V132 H0Z', '#93ad6c')
+    + [[96, 74], [130, 66], [150, 80], [186, 64], [112, 92]].map(([x, y]) => C(x, y, 6, '#7d9a58') + C(x + 6, y + 2, 5, '#869f60')).join('')
+    + cypress(84, 96, 26) + cypress(168, 74, 22) + cypress(232, 74, 24)
+    // the Temple of Apollo on its terrace
+    + R(0, 98, 76, 8, '#d8ccb2') + R(0, 94, 72, 4, '#ece3cf') + columns([2, 15, 28, 41, 54, 67], 66, 94, 6, '#f4ede0', '#d8ccb2') + R(0, 58, 76, 8, '#ece3cf') + P('M0 58 L38 44 L76 58Z', '#f4ede0') + P('M8 56 L38 46 L68 56Z', '#e3d8c2')
+    // the tholos: a ring of columns with a conical roof
+    + R(176, 112, 60, 6, '#d8ccb2') + R(180, 108, 52, 4, '#ece3cf') + R(184, 82, 44, 26, '#cbbd9f')
+    + columns([182, 191, 200, 209, 218, 227], 80, 108, 4.5, '#f4ede0', '#d8ccb2') + R(178, 72, 56, 8, '#ece3cf') + P('M178 72 Q206 46 234 72Z', '#b77a5c') + L('M186 66 Q206 52 226 66', '#9e6449', 1.2)
+    + floor('#ddd2bb', '#ece3cf') + L(`M0 150 H${W} M0 168 H${W} M44 132 L40 150 M110 132 V150 M196 132 L200 150 M20 150 L16 168 M80 150 L78 168 M160 150 L162 168 M226 150 L230 168`, '#c8bb9f', 1.5)
+    // the Pythia's tripod, smoking, with a laurel sprig
+    + steam([[30, 116, 1], [38, 110, 0.8]], '#ffffff')
+    + L('M24 128 l-8 40 M34 128 V170 M44 128 l8 40', '#a8742f', 3) + P('M18 116 h32 q-2 14 -16 14 q-14 0 -16 -14z', '#c58b3b') + R(16, 114, 36, 4, '#d8a24a', 2)
+    + L('M54 128 q8 -6 14 -2', '#4f7d3a', 2) + [[58, 125], [62, 122], [66, 124]].map(([x, y]) => E(x, y - 2, 1.8, 3.4, '#5f9446')).join('')
+    // the omphalos, wrapped in its knotted net
+    + R(204, 164, 32, 6, '#c8bb9f') + P('M206 164 Q206 136 220 134 Q234 136 234 164Z', '#e6dccb')
+    + L('M209 156 L222 140 L233 152 M207 146 L226 162 M213 138 L231 158 M210 162 L225 146', '#b8a98a', 1.3) + [[216, 148], [222, 154], [226, 146], [214, 158]].map(([x, y]) => C(x, y, 1.6, '#b8a98a')).join('');
+}
+
+// The great bath: a barrel-vaulted hall with a big half-moon window, a warm green pool with steam
+// rising, a lion-head spout, and the stone edge of the pool to stand on.
+function baths() {
+  let coffers = '';
+  for (let i = 1; i < 12; i++) { const a = (i * Math.PI) / 12; coffers += `M${n1(120 - Math.cos(a) * 104)} ${n1(104 - Math.sin(a) * 100)}L${n1(120 - Math.cos(a) * 118)} ${n1(104 - Math.sin(a) * 114)}`; }
+  return sky('#8a6a4c')
+    // the vault, ribbed with coffers, over the back wall
+    + P('M2 104 A118 114 0 0 1 238 104Z', '#c9a77a') + L(coffers, '#9c7a52', 3) + P('M16 104 A104 100 0 0 1 224 104Z', '#e8d8b8')
+    // the half-moon window, in three lights
+    + P('M64 76 A56 50 0 0 1 176 76Z', '#a7dbf5') + L('M64 76 A56 50 0 0 1 176 76Z M101 76 V30 M139 76 V30', '#c9a77a', 4)
+    // arches into the rooms on either side, and columns
+    + P('M30 104 V76 a12 12 0 0 1 24 0 V104Z M186 104 V76 a12 12 0 0 1 24 0 V104Z', '#7a5a3e') + R(26, 76, 4, 28, '#f3ead6') + R(54, 76, 4, 28, '#f3ead6') + R(182, 76, 4, 28, '#f3ead6') + R(210, 76, 4, 28, '#f3ead6')
+    // the warm green pool with steam rising
+    + R(0, 100, W, 32, '#3fa79a') + R(0, 100, W, 3, '#2d8a7f') + L('M20 112 q6 -3 12 0 M90 118 q6 -3 12 0 M150 110 q6 -3 12 0 M200 120 q6 -3 12 0 M50 124 q6 -3 12 0', '#a4e6dc', 1.6)
+    + steam([[40, 104, 1.1], [76, 100, 0.9], [168, 102, 1], [204, 100, 1.2], [120, 96, 0.8]])
+    // great piers with a lion-head spout pouring into the pool
+    + R(0, 0, 18, 132, '#d9c39c') + R(222, 0, 18, 132, '#d9c39c') + R(0, 92, 20, 6, '#ecdcbc') + R(220, 92, 20, 6, '#ecdcbc') + L('M9 0 V92 M231 0 V92', '#c4ad86', 1.5)
+    + C(18, 112, 7, '#b8863b') + C(18, 112, 4, '#d8a24a') + C(20, 113, 1.6, '#5c4022') + L('M24 115 q6 2 6 16', '#bfeee6', 3)
+    + floor('#ece2cc', '#f6efe0')
+    + L(`M0 172 H${W}`, '#2b5a6a', 3) + Array.from({ length: 12 }, (_, i) => P(`M${i * 20 + 4} 176 q6 -6 12 0`, 'none', ' stroke="#2b5a6a" stroke-width="2"')).join('')
+    + L(`M0 150 H${W} M40 135 V150 M120 135 V150 M200 135 V150 M80 150 V170 M160 150 V170`, '#d6c9ad', 1.5)
+    // a folded towel, an oil flask and a strigil
+    + R(8, 152, 34, 10, '#e46a5a', 3) + L('M8 157 H42', '#c94f3f', 1.2)
+    + G('translate(214 152)', C(0, 6, 8, '#3f7fb5') + R(-2, -6, 4, 6, '#3f7fb5') + R(-4, -8, 8, 3, '#2b5a8a'))
+    + L('M190 168 q-2 -12 8 -10 q6 2 2 6', '#b8863b', 2.4);
+}
+
 // The full list, in the order the oldest course meets them; sceneOrder() reorders per course.
 export const SCENES = [
   { id: 'space', name: 'Space station', draw: space },
@@ -308,25 +557,47 @@ export const SCENES = [
   { id: 'rocket', name: 'Launch pad', draw: rocket },
   { id: 'temple', name: 'Greek temple', draw: temple },
   { id: 'library', name: 'Cosy library', draw: library },
+  { id: 'colosseum', name: 'Colosseum', draw: colosseum },
+  { id: 'forum', name: 'Roman Forum', draw: forum },
+  { id: 'theatre', name: 'Greek theatre', draw: theatre },
+  { id: 'olympus', name: 'Mount Olympus', draw: olympus },
+  { id: 'trireme', name: 'Trireme harbour', draw: trireme },
+  { id: 'atrium', name: 'Roman villa', draw: atrium },
+  { id: 'delphi', name: 'Oracle at Delphi', draw: delphi },
+  { id: 'baths', name: 'Roman baths', draw: baths },
 ];
 export const SCENE_BY_ID = Object.fromEntries(SCENES.map((s) => [s.id, s]));
 
 // Unlocking: the first FREE scenes are open from the start, then one more for every PER_SCENE
-// badges. Every course has 14–18 badges, so the last scene needs 9 of them: a few months' work.
-export const FREE = 3, PER_SCENE = 1;
+// badge. Every course has 17 or more badges; a course with more scenes than LAST opens a few of them
+// in pairs, so its last scene still needs only LAST badges.
+export const FREE = 3, PER_SCENE = 1, LAST = 14;
 const ORDER = {
   young: ['space', 'racetrack', 'underwater', 'dino', 'city', 'castle', 'rocket', 'volcano', 'jungle', 'arctic', 'library', 'temple'],
-  y8: ['space', 'underwater', 'temple', 'library', 'castle', 'arctic', 'jungle', 'volcano', 'rocket', 'city', 'dino', 'racetrack'],
-  y6: ['space', 'underwater', 'library', 'castle', 'jungle', 'temple', 'arctic', 'volcano', 'rocket', 'city', 'dino', 'racetrack'],
+  // Year 8 learns Ancient Greek: the classical scenes come early, taking turns with the others
+  y8: ['space', 'underwater', 'temple', 'colosseum', 'library', 'trireme', 'castle', 'forum', 'arctic', 'theatre', 'jungle', 'olympus', 'volcano', 'atrium', 'rocket', 'delphi', 'city', 'baths', 'dino', 'racetrack'],
+  // Year 6 learns Latin: the Roman scenes come a little sooner than the Greek ones
+  y6: ['space', 'underwater', 'library', 'castle', 'jungle', 'temple', 'colosseum', 'arctic', 'forum', 'volcano', 'trireme', 'rocket', 'atrium', 'city', 'theatre', 'olympus', 'dino', 'baths', 'delphi', 'racetrack'],
 };
 /** The order this course's scenes unlock in: what this child likes most comes first. */
 export const sceneOrder = (course = COURSE) => ORDER[course.young ? 'young' : course.id] || ORDER.y6;
 
+// The orders as first released (12 scenes, one per badge): a scene a child had open then stays open
+// now that the classical scenes have joined the queue in front of it.
+const RELEASED = {
+  y8: ['space', 'underwater', 'temple', 'library', 'castle', 'arctic', 'jungle', 'volcano', 'rocket', 'city', 'dino', 'racetrack'],
+  y6: ['space', 'underwater', 'library', 'castle', 'jungle', 'temple', 'arctic', 'volcano', 'rocket', 'city', 'dino', 'racetrack'],
+};
+
 /** Each scene in unlock order, with whether it is open and how many more badges it needs. */
-export function sceneStatus(earned, order = sceneOrder()) {
+export function sceneStatus(earned, order = sceneOrder(), released = order === sceneOrder() ? RELEASED[COURSE.id] : null) {
+  const locked = order.length - FREE;
+  const before = new Set((released || []).filter((_, i) => earned >= Math.max(0, i - FREE + 1)));
   return order.map((id, i) => {
-    const goal = Math.max(0, i - FREE + 1) * PER_SCENE;
-    return { id, name: SCENE_BY_ID[id].name, open: earned >= goal, need: Math.max(0, goal - earned) };
+    const k = Math.max(0, i - FREE + 1);
+    const goal = locked * PER_SCENE > LAST ? Math.ceil((k * LAST) / locked) : k * PER_SCENE;
+    const open = earned >= goal || before.has(id);
+    return { id, name: SCENE_BY_ID[id].name, open, need: open ? 0 : goal - earned };
   });
 }
 

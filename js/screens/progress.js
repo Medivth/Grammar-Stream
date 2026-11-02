@@ -2,15 +2,17 @@
 
 import { h, s, mount, toast } from '../ui/dom.js';
 import { icon } from '../ui/icons.js';
-import { capybaraEl, capybaraSVG, ACCESSORIES, wornList, toggleWear } from '../ui/capybara.js';
+import { capybaraEl, capybaraSVG, ACCESSORIES, SLOT_GROUPS, slotOf, wornList, toggleWear } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
-import { sceneSVG, sceneStatus, companionEl, SCENES } from '../ui/scenes.js';
+import { sceneSVG, sceneStatus, companionEl } from '../ui/scenes.js';
 import { SUBJECTS } from '../core/subjects.js';
 import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, unlockedAccessories, milestoneDefs, wardrobeAccessories } from '../core/progress.js';
 import { daysPractisedThisMonth } from '../core/session.js';
 
 const TABS = [['overview', 'Stats'], ['timeline', 'Timeline'], ['places', 'Places'], ['badges', 'Badges']];
-const BADGE_ICON = { 'speed-racer': 'bolt', fifty: 'star', explorer: 'globe', scientist: 'flask', 'first-session': 'flag', 'first-mastered': 'star', hundred: 'bolt', 'all-rounder': 'target', globetrotter: 'globe', 'time-traveller': 'clock', 'lab-ready': 'flask', 'joined-up': 'link', sprinter: 'hourglass', paper: 'paper', typist: 'keyboard', 'speed-reader': 'eye', stretch: 'spark', wordsmith: 'pen', bookworm: 'book', calibrated: 'target', regular: 'check', 'five-hundred': 'trophy', 'book-talker': 'book', 'own-reader': 'eye', author: 'pen' };
+const BADGE_ICON = { 'speed-racer': 'bolt', fifty: 'star', explorer: 'globe', scientist: 'flask', 'first-session': 'flag', 'first-mastered': 'star', hundred: 'bolt', 'all-rounder': 'target', globetrotter: 'globe', 'time-traveller': 'clock', 'lab-ready': 'flask', 'joined-up': 'link', sprinter: 'hourglass', paper: 'paper', typist: 'keyboard', 'speed-reader': 'eye', stretch: 'spark', wordsmith: 'pen', bookworm: 'book', calibrated: 'target', regular: 'check', 'five-hundred': 'trophy', 'book-talker': 'book', 'own-reader': 'eye', author: 'pen', 'alpha-omega': 'quill', 'word-hoard': 'text', clio: 'column', centurion: 'flag', charioteer: 'hourglass' };
+// "the centurion armour", but "the Greek aspis"
+const lower = (label) => (/^(Greek|Roman)\b/.test(label) ? label : label[0].toLowerCase() + label.slice(1));
 
 export async function progressScreen(app, tab = 'overview') {
   const body = h('div', {});
@@ -142,24 +144,37 @@ function badgesTab(app, body) {
   const lockedBy = Object.fromEntries(milestoneDefs().filter((m) => m.unlock).map((m) => [m.unlock, m]));
   const shown = wardrobeAccessories();
   const worn = new Set(wornList(c));
-  const wardrobe = h('div', { class: 'wardrobe' }, Object.entries(ACCESSORIES).filter(([id]) => shown.has(id)).map(([id, label]) => {
+  const item = ([id, label]) => {
     const open = unlocked.has(id);
     const on = id === 'none' ? worn.size === 0 : worn.has(id);
     return h('button', { type: 'button', class: open ? '' : 'locked', 'aria-pressed': String(on), 'aria-label': open ? `${on && id !== 'none' ? 'Take off' : 'Wear'} ${label}` : `${label}: locked`, onclick: () => {
-      if (!open) return toast(`Earn “${lockedBy[id]?.title}” to unlock the ${label.toLowerCase()}.`);
+      if (!open) return toast(`Earn “${lockedBy[id]?.title}” to unlock the ${lower(label)}.`);
       state.profile.companion = toggleWear(c, id);
       app.save();
+      const y = window.scrollY;
       badgesTab(app, body.replaceChildren() || body);
+      window.scrollTo(0, y);
     } }, capybaraEl({ ...c, wear: undefined, accessory: id, mood: open ? 'happy' : 'neutral' }), h('span', {}, open ? label : '🔒 ' + label));
-  }));
+  };
+  // grouped by where it is worn, so a big wardrobe stays tidy
+  const items = Object.entries(ACCESSORIES).filter(([id]) => shown.has(id) && id !== 'none');
+  const groups = SLOT_GROUPS.map(([name, slots]) => [name, items.filter(([id]) => slots.includes(slotOf(id)))]).filter(([, list]) => list.length);
+  const PLACE = { head: 'on your head', face: 'on your face', body: 'on your body', front: 'round your neck', back: 'on your back', hold: 'in one hand', hand: 'a shield on the other arm', ride: 'something to ride' };
+  const inUse = new Set(items.map(([id]) => slotOf(id)));
+  const places = Object.keys(PLACE).filter((k) => inUse.has(k)).map((k) => PLACE[k]);
+  if (places.length > 1) places.push(`and ${places.pop()}`);
+  const wardrobe = h('div', { class: 'wardrobe-groups' },
+    shown.has('none') ? h('div', { class: 'wardrobe' }, item(['none', 'Take everything off'])) : null,
+    groups.map(([name, list]) => h('section', { class: 'wardrobe-group' }, h('h4', {}, name), h('div', { class: 'wardrobe' }, list.map(item)))));
   body.append(
     h('div', { class: 'section-title' }, h('h2', {}, 'Badges'), h('span', { class: 'muted small' }, `${ms.filter((m) => m.done).length} of ${ms.length} earned`)),
     h('div', { class: 'badge-grid' }, ms.map(badge)),
     h('div', { class: 'section-title' }, h('h2', {}, `${c.name || 'Your companion'}’s wardrobe`)),
     h('div', { class: `wardrobe-preview${c.scene ? ' with-scene' : ''}` }, companionEl({ ...c, mood: 'happy' })),
+    h('div', { class: 'center' }, h('button', { type: 'button', class: 'btn-ghost', onclick: () => app.go('#/companion') }, 'Change companion')),
     scenePicker(app, body, ms.filter((m) => m.done).length),
     h('h3', { class: 'wardrobe-title' }, 'Things to wear'),
-    h('p', { class: 'muted center' }, 'Tap to put something on, and tap again to take it off. You can wear one thing on your head, one on your face, one round your neck, one on your back, hold one, and ride one, all at once. Locked ones are earned with badges.'),
+    h('p', { class: 'muted center' }, `Tap to put something on, and tap again to take it off. You can wear one thing in each place at once: ${places.join(', ')}. Locked ones are earned with badges.`),
     wardrobe);
 }
 
@@ -187,7 +202,7 @@ function scenePicker(app, body, earned) {
   }, h('div', { class: 'scene-thumb', html: inner }, open ? null : h('span', { class: 'scene-lock' }, icon('lock'))), h('span', { class: 'scene-name' }, label), open ? null : h('span', { class: 'scene-hint' }, hint));
   const opened = list.filter((x) => x.open).length;
   return h('div', { class: 'scenes' },
-    h('div', { class: 'scenes-head' }, h('h3', {}, 'Scenes'), h('span', { class: 'muted small' }, `${opened} of ${SCENES.length} open`)),
+    h('div', { class: 'scenes-head' }, h('h3', {}, 'Scenes'), h('span', { class: 'muted small' }, `${opened} of ${list.length} open`)),
     h('p', { class: 'muted center' }, `Choose a place for ${c.name || 'your companion'} to stand. Tap it again to go back to plain. A new scene opens with every badge you earn.`),
     h('div', { class: 'scene-grid' },
       tile(null, 'No scene', capybaraSVG({ ...c, mood: 'happy' }), { on: !c.scene }),

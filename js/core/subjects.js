@@ -94,7 +94,10 @@ export const COURSES = {
     extra: ['greek'], // practise any time, outside the daily session
     writing: true,
     readAloud: false,
-    starter: ['none', 'glasses', 'scarf', 'bird', 'yuzu', 'flower', 'bow', 'laurel', 'corinthian', 'shield', 'owl'],
+    starter: ['none', 'glasses', 'scarf', 'bird', 'yuzu', 'flower', 'bow', 'laurel', 'corinthian', 'shield', 'owl',
+      // Greek and Roman things to start with; the armour, the centurion's helmet, the cloak and the chariot are earned
+      'olive', 'chiton', 'himation', 'toga', 'stola', 'aspis', 'scutum', 'dory', 'xiphos', 'gladius', 'lyre', 'scroll', 'olivebranch', 'torch'],
+    companions: ['capybara', 'lion', 'heroine'], // she can keep her lion, or choose a young heroine
   },
 };
 
