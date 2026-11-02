@@ -4,7 +4,7 @@ import { h, s, mount, toast } from '../ui/dom.js';
 import { icon } from '../ui/icons.js';
 import { capybaraEl, capybaraSVG, ACCESSORIES, wornList, toggleWear } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
-import { sceneSVG, sceneStatus, companionEl, SCENES } from '../ui/scenes.js';
+import { sceneSVG, sceneStatus, companionEl } from '../ui/scenes.js';
 import { SUBJECTS } from '../core/subjects.js';
 import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, unlockedAccessories, milestoneDefs, wardrobeAccessories } from '../core/progress.js';
 import { daysPractisedThisMonth } from '../core/session.js';
@@ -187,7 +187,7 @@ function scenePicker(app, body, earned) {
   }, h('div', { class: 'scene-thumb', html: inner }, open ? null : h('span', { class: 'scene-lock' }, icon('lock'))), h('span', { class: 'scene-name' }, label), open ? null : h('span', { class: 'scene-hint' }, hint));
   const opened = list.filter((x) => x.open).length;
   return h('div', { class: 'scenes' },
-    h('div', { class: 'scenes-head' }, h('h3', {}, 'Scenes'), h('span', { class: 'muted small' }, `${opened} of ${SCENES.length} open`)),
+    h('div', { class: 'scenes-head' }, h('h3', {}, 'Scenes'), h('span', { class: 'muted small' }, `${opened} of ${list.length} open`)),
     h('p', { class: 'muted center' }, `Choose a place for ${c.name || 'your companion'} to stand. Tap it again to go back to plain. A new scene opens with every badge you earn.`),
     h('div', { class: 'scene-grid' },
       tile(null, 'No scene', capybaraSVG({ ...c, mood: 'happy' }), { on: !c.scene }),
