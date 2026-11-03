@@ -104,7 +104,8 @@ export function companionScreen(app) {
       const furs = c.species === 'lion' ? LION_FURS : FURS;
       furRow.replaceChildren(...Object.entries(furs).map(([k, f]) => h('button', { type: 'button', 'aria-pressed': String(c.fur === k), 'aria-label': k, onclick: () => { c.fur = k; draw(); drawPickers(); } }, h('span', { class: 'swatch', style: { background: f.mane ? `linear-gradient(135deg, ${f.mane} 50%, ${f.body} 50%)` : f.body } }))));
     }
-    accRow.replaceChildren(...Object.entries(ACCESSORIES).filter(([k]) => starterAccessories().includes(k)).map(([k, label]) => h('button', { type: 'button', 'aria-pressed': String(c.accessory === k), onclick: () => { c.accessory = k; delete c.wear; draw(); drawPickers(); } }, label)));
+    // a short first choice: the course's first ten starters (the rest wait in the wardrobe)
+    accRow.replaceChildren(...Object.entries(ACCESSORIES).filter(([k]) => starterAccessories().slice(0, 10).includes(k) || k === c.accessory).map(([k, label]) => h('button', { type: 'button', 'aria-pressed': String(c.accessory === k), onclick: () => { c.accessory = k; delete c.wear; draw(); drawPickers(); } }, label)));
   };
   const name = h('input', { type: 'text', id: 'capy-name', maxlength: 20, value: c.name, oninput: () => { c.name = name.value; draw(); } });
   const heroIn = h('input', { type: 'text', id: 'hero-name', placeholder: 'e.g. Captain Thunder', maxlength: 24, value: app.state.profile?.hero || '' });
@@ -119,7 +120,7 @@ export function companionScreen(app) {
       h('div', { class: 'card stack' }, preview,
         h('div', { class: 'field' }, h('label', {}, kinds.includes('heroine') ? 'Companion' : 'Animal'), kindRow),
         h('div', { class: 'field' }, furLabel, furRow),
-        editing ? null : h('div', { class: 'field' }, h('label', {}, 'Something special'), accRow),
+        editing ? null : h('div', { class: 'field' }, h('label', {}, 'Something special'), accRow, h('p', { class: 'muted small', style: { margin: '6px 0 0' } }, 'Lots more to wear later, on the Badges page.')),
         h('div', { class: 'field' }, h('label', { for: 'capy-name' }, 'Name'), name),
         h('button', { class: 'btn-primary btn-big', onclick: () => {
           if (!c.name.trim()) return toast(`Your ${noun()} needs a name!`);

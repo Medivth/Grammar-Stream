@@ -13,6 +13,7 @@ import { parentScreen } from './screens/parent.js';
 import { welcomeScreen, companionScreen, displayScreen, whoScreen } from './screens/onboarding.js';
 import { writingScreen, feedbackScreen } from './screens/writing.js';
 import { readingScreen } from './screens/reading.js';
+import { bookScreen } from './screens/book.js';
 import { progressScreen } from './screens/progress.js';
 import { paperScreen } from './screens/paper.js';
 import { typingScreen } from './screens/typing.js';
@@ -96,6 +97,7 @@ async function route() {
     case 'writing': return writingScreen(app);
     case 'feedback': return feedbackScreen(app, arg);
     case 'reading': return readingScreen(app);
+    case 'book': return bookScreen(app, decodeURIComponent(arg || ''));
     case 'progress': return progressScreen(app, arg);
     case 'paper': return paperScreen(app);
     case 'typing': return typingScreen(app);
