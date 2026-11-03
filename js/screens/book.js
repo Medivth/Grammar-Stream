@@ -189,6 +189,8 @@ export async function bookScreen(app, id) {
     textEl.style.setProperty('--book-size', size());
     textEl.replaceChildren(...[
       meta(),
+      // a short word for the reader about language of its time, before the first chapter
+      ch === 0 && book.before ? h('div', { class: 'card book-before' }, h('strong', {}, 'Before you read'), h('p', { style: { margin: '6px 0 0' } }, book.before)) : null,
       c.part ? h('p', { class: 'eyebrow book-part' }, c.part) : null,
       h('h2', { class: 'book-ch-title' }, c.title),
       ...paras,

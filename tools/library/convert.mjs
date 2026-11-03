@@ -8,7 +8,7 @@ import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { BOOKS } from './books.mjs';
+import { BOOKS, BEFORE } from './books.mjs';
 import { chaptersFrom } from './se.mjs';
 import { countWords } from '../../js/core/library.js';
 import { buildIndex } from '../build-library.mjs';
@@ -40,7 +40,7 @@ export function convert(recipe, dir) {
   const left = (recipe.omit || []).map((o) => `“${o.title}” (${o.reason})`);
   const note = [recipe.onlyNote, left.length ? `Left out: ${left.join('; ')}.` : '', recipe.note].filter(Boolean).join(' ');
   const { id, title, author, year, kind, courses, level, blurb, source, sourceUrl } = recipe;
-  return { id, title, author, year, kind, courses, level, blurb, note, source, sourceUrl, words: countWords(chapters), chapters };
+  return { id, title, author, year, kind, courses, level, blurb, note, ...(BEFORE[id] ? { before: BEFORE[id] } : {}), source, sourceUrl, words: countWords(chapters), chapters };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

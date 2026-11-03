@@ -39,7 +39,7 @@ export function readingScreen(app) {
   const SHOW = 6;
   const card = (b) => {
     const pl = state.library?.[b.id];
-    const status = pl?.done ? 'Finished ✓' : pl?.opened != null ? `Chapter ${Math.min(pl.ch + 1, b.chapters)} of ${b.chapters}` : null;
+    const status = pl?.done ? 'Finished ✓' : pl?.opened == null ? null : b.chapters > 1 ? `Reading: chapter ${Math.min(pl.ch + 1, b.chapters)} of ${b.chapters}` : 'Reading';
     return h('a', { class: 'shelf-book', href: `#/book/${encodeURIComponent(b.id)}` },
       h('span', { class: 'shelf-title' }, b.title),
       h('span', { class: 'muted small' }, `${b.author}, ${b.year}`),
@@ -57,8 +57,8 @@ export function readingScreen(app) {
     shelfEl.replaceChildren(h('h2', {}, 'Library: books you can read here'),
       h('p', { class: 'muted', style: { margin: 0 } }, COURSE.young ? 'Free books to read in the app. “Read together” books are for sharing with your grown-up; “On my own” books are ones you can try by yourself.'
         : 'Classic books, free to read in the app. Each one keeps your place, and works offline once you have opened it.'),
-      books.length ? [h('div', { class: 'shelf' }, books.slice(0, SHOW).map(card)), books.length > SHOW ? h('details', { class: 'shelf-more' }, h('summary', {}, `${books.length - SHOW} more books`), h('div', { class: 'shelf' }, books.slice(SHOW).map(card))) : null]
-        : h('p', { class: 'muted' }, index ? 'No library books for this course yet.' : 'The library could not load. Connect to the internet once, and it will be here offline after that.'));
+      ...(books.length ? [h('div', { class: 'shelf' }, books.slice(0, SHOW).map(card)), books.length > SHOW ? h('details', { class: 'shelf-more' }, h('summary', {}, `${books.length - SHOW} more books`), h('div', { class: 'shelf' }, books.slice(SHOW).map(card))) : '']
+        : [h('p', { class: 'muted' }, index ? 'No library books for this course yet.' : 'The library could not load. Connect to the internet once, and it will be here offline after that.')]));
   };
   if (app.library) renderShelf(app.library);
   else {

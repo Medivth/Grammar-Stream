@@ -210,3 +210,14 @@ export const DIED = {
   'dickens-tale-of-two-cities': { 'Charles Dickens': 1870 },
   'wells-war-of-the-worlds': { 'H. G. Wells': 1946 },
 };
+
+// A short "Before you read" note shown above the first chapter, for books with language of their time.
+export const BEFORE = {
+  "nesbit-railway-children": "This book was written in 1906. A few words and ideas in it about people from other countries and backgrounds were common then, but they are unkind and wrong. If you meet one, it is worth talking about with a grown-up.",
+  "stevenson-treasure-island": "This book was written in 1883. A few words and ideas in it about people from other countries and backgrounds were common then, but they are unkind and wrong. If you meet one, it is worth talking about with a grown-up.",
+  "grahame-wind-in-the-willows": "This book was written in 1908. A few words and ideas in it about people from other countries and backgrounds were common then, but they are unkind and wrong. If you meet one, it is worth talking about with a grown-up.",
+  "doyle-adventures-of-sherlock-holmes": "This book was written in 1892. A few words and ideas in it about people from other countries and backgrounds were common then, but they are unkind and wrong. If you meet one, it is worth talking about with a grown-up.",
+  "sewell-black-beauty": "This book was written in 1877. A few words in it about people, and one horse’s name, were common then but are unkind today. If you meet one, it is worth talking about with a grown-up.",
+  "doyle-hound-of-the-baskervilles": "Written in 1902. Some characters talk about skulls and “races” in ways that were thought scientific then and are now known to be wrong and racist. It is a good thing to notice and discuss.",
+  "shelley-frankenstein": "Written in 1818. A few descriptions of people from other countries reflect the prejudices of the time. It is a good thing to notice and discuss."
+};
