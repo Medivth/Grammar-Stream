@@ -783,7 +783,7 @@ function horseParts(c) {
     front: `<ellipse cx="112" cy="104" rx="48" ry="21" fill="${c.coat}"/>${leg(84, 112, c.coat)}${leg(150, 110, c.coat)}<path d="M150 92 Q158 100 156 112" stroke="${c.dark}" stroke-width="1.6" fill="none" opacity=".6"/>`,
   };
 }
-const KNIGHT_HORSE = horseParts({ coat: '#cfd4dc', dark: '#a4acb8', mane: '#f4f6f9', hoof: '#5f6772' }); // a grey charger
+const KNIGHT_HORSE = horseParts({ coat: '#cfd4dc', dark: '#a4acb8', mane: '#7d8692', hoof: '#5f6772' }); // a grey charger
 const PONY = horseParts({ coat: '#e3b169', dark: '#c38f4b', mane: '#f7ecd0', hoof: '#6b4e33', blaze: true });
 const PONY_T = 'translate(10 15) scale(.9)'; // a pony is smaller: the horse, shrunk about its hooves
 const caparison = `<path d="M70 92 Q112 76 158 92 L161 127 ${Array.from({ length: 11 }, (_, i) => `L${n1(161 - (i + 0.5) * 8.4)} ${i % 2 ? 127 : 132}`).join(' ')} L68 127 Z" fill="#2f5fa8"/><path d="M161 127 ${Array.from({ length: 11 }, (_, i) => `L${n1(161 - (i + 0.5) * 8.4)} ${i % 2 ? 127 : 132}`).join(' ')} L68 127" stroke="#d4a64a" stroke-width="2" fill="none" stroke-linejoin="round"/>${star(84, 110, 5, '#ffd166')}${star(142, 110, 5, '#ffd166')}<path d="M94 84 Q110 78 126 84 L124 92 Q110 96 96 92 Z" fill="#b3261e"/>`;
