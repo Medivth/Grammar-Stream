@@ -7,7 +7,8 @@ import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
-const INCLUDE = ['index.html', 'manifest.webmanifest', 'css', 'js', 'content', 'fonts', 'icons'];
+// library/index.json only: each book file is cached when it is first opened (see sw-template.js)
+const INCLUDE = ['index.html', 'manifest.webmanifest', 'css', 'js', 'content', 'fonts', 'icons', 'library/index.json'];
 const SKIP = /(^|\/)\.|LICENSE|\.md$/;
 
 function walk(p, out) {

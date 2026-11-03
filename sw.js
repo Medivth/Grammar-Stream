@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = 'c5aa803b940b';
+const VERSION = 'a9ce63f1cccf';
 const FILES = [
  "./",
  "./index.html",
@@ -14,6 +14,7 @@ const FILES = [
  "./js/core/fraction.js",
  "./js/core/fsrs.js",
  "./js/core/handwriting.js",
+ "./js/core/library.js",
  "./js/core/mastery.js",
  "./js/core/periods.js",
  "./js/core/placement.js",
@@ -55,6 +56,7 @@ const FILES = [
  "./js/main.js",
  "./js/platform/storage.js",
  "./js/platform/tts.js",
+ "./js/screens/book.js",
  "./js/screens/handwriting.js",
  "./js/screens/home.js",
  "./js/screens/onboarding.js",
@@ -204,9 +206,15 @@ const FILES = [
  "./icons/icon-192.png",
  "./icons/icon-512.png",
  "./icons/icon-maskable-512.png",
- "./icons/icon.svg"
+ "./icons/icon.svg",
+ "./library/index.json"
 ];
 const CACHE = `grammar-stream-${VERSION}`;
+// Library books (library/<id>.json, all but the precached index) are big, so each is cached the
+// first time it is opened, in a cache that survives app updates. Served from the cache at once,
+// and refreshed in the background when online.
+const LIBRARY = 'gs-library-v1';
+const isBook = (url) => /\/library\/(?!index\.json$)[^/]+\.json$/.test(url.pathname);
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
@@ -222,7 +230,19 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const req = event.request;
-  if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
+  const url = new URL(req.url);
+  if (req.method !== 'GET' || url.origin !== self.location.origin) return;
+  if (isBook(url)) {
+    event.respondWith(
+      caches.open(LIBRARY).then(async (cache) => {
+        const hit = await cache.match(req, { ignoreSearch: true });
+        const fresh = fetch(req).then((res) => { if (res.ok) cache.put(req, res.clone()); return res; });
+        if (hit) { event.waitUntil(fresh.catch(() => {})); return hit; }
+        return fresh;
+      }),
+    );
+    return;
+  }
   event.respondWith(
     caches.open(CACHE).then(async (cache) => {
       const hit = await cache.match(req, { ignoreSearch: true });

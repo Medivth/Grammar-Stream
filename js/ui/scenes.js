@@ -543,6 +543,447 @@ function baths() {
     + L('M190 168 q-2 -12 8 -10 q6 2 2 6', '#b8863b', 2.4);
 }
 
+// --- Years 2 and 3: space, racing, heroes, dinosaurs, knights, pirates and pharaohs -----------
+
+const wheel = (cx, cy, r, tyre = '#2b2a33', rim = '#8d96a3') => C(cx, cy, r, tyre) + C(cx, cy, r * 0.58, rim) + C(cx, cy, r * 0.22, '#d9dde6');
+
+// The Moon: the Earth half in shadow in a black sky, grey hills, a domed base with a dish, solar
+// panels, craters, and a moon buggy with its umbrella aerial leaving tracks in the dust.
+function moon() {
+  const crater = (x, y, rx) => E(x, y, rx, rx * 0.32, '#c4c3ce') + E(x, y + rx * 0.04, rx * 0.8, rx * 0.22, '#8c8b9a') + E(x, y + rx * 0.1, rx * 0.6, rx * 0.12, '#9c9baa');
+  const panel = (x, y) => L(`M${x + 11} ${y + 4} V${y + 20}`, '#9aa0ae', 2) + P(`M${x} ${y} l22 -8 v12 l-22 8z`, '#2c4fa0') + L(`M${x + 7} ${y - 2.5} v12 M${x + 14} ${y - 5} v12 M${x} ${y + 6} l22 -8`, '#7fa6ff', 0.8);
+  return sky('#0b0e2a') + starfield(51, 40, 0, 0, W, 96, (x, y) => (x - 40) ** 2 + (y - 34) ** 2 > 22 ** 2)
+    + C(40, 34, 19, '#8fd0ff', ' opacity=".25"') + C(40, 34, 16, '#2f7fd6')
+    + P('M29 24 q6 -6 12 -2 q4 4 -2 8 q-2 6 -8 4 q-5 -3 -2 -10z M41 40 q6 -2 8 4 q-2 6 -7 5 q-3 -4 -1 -9z', '#4caf50')
+    + L('M27 32 q5 -2 10 0 M36 21 q4 -2 8 0 M31 45 q5 2 9 0', '#ffffff', 1.6, ' opacity=".8"')
+    + P('M40 18 A16 16 0 0 1 40 50 A9 16 0 0 0 40 18Z', '#0b0e2a', ' opacity=".55"')
+    + P('M0 106 L16 92 L30 100 L54 84 L80 102 L112 94 L140 104 L168 88 L196 100 L220 90 L240 98 V132 H0Z', '#6f6e80')
+    + P('M0 114 Q60 106 120 114 Q180 106 240 112 V132 H0Z', '#9897a6')
+    + panel(2, 106) + panel(28, 98)
+    // the base: a dish on a mast, an airlock and a dome with lit windows
+    + L('M176 116 V72', '#c3c7d3', 2) + E(176, 70, 10, 3.5, '#e8eaf0', ' transform="rotate(-25 176 70)"') + C(176, 64, 2, '#ff5f6d')
+    + R(168, 112, 22, 16, '#d6d9e2', 4) + C(175, 120, 4, '#7a8090')
+    + P('M184 128 A29 27 0 0 1 242 128Z', '#eceef3') + L('M188 116 Q213 108 238 116 M197 104 Q213 99 229 104 M213 101 V128', '#c3c7d3', 1.2)
+    + R(193, 118, 8, 6, '#ffd166', 2) + R(225, 118, 8, 6, '#ffd166', 2) + R(182, 126, 60, 4, '#9aa0ae')
+    + floor('#aeadba', '#c7c6d1')
+    + crater(110, 142, 22) + crater(206, 160, 28) + crater(30, 177, 20) + crater(150, 175, 16)
+    + L('M64 168 Q120 156 176 150 M62 176 Q120 164 184 158', '#9897a6', 4, ' stroke-dasharray="2 2"')
+    // the moon buggy
+    + L('M12 148 V124', '#9aa0ae', 1.6) + P('M1 127 Q12 113 23 127Z', '#e8eaf0') + L('M48 148 V134', '#9aa0ae', 2) + R(43, 130, 10, 6, '#9aa0ae', 1)
+    + R(20, 136, 8, 12, '#5a6b8c', 2) + R(31, 136, 8, 12, '#5a6b8c', 2)
+    + P('M3 158 a11 11 0 0 1 22 0z M37 158 a11 11 0 0 1 22 0z', '#d9b44a') + R(4, 147, 54, 6, '#c9ccd6', 2)
+    + wheel(14, 162, 8, '#5f6070') + wheel(48, 162, 8, '#5f6070');
+}
+
+// Mars: a butterscotch sky with the little moons Phobos and Deimos, a mesa and a great volcano,
+// red dunes, and a six-wheeled rover with its camera mast and drill arm.
+function mars() {
+  const r = rng(61);
+  let pebbles = '';
+  for (let i = 0; i < 30; i++) { const x = r() * W, y = FLOOR + 6 + r() * 44, w = 1.5 + r() * 3, h = 1 + r() * 1.6, col = pick(r, ['#9e4a2a', '#b2583a', '#e08a5e']); if (x > 64 && x < 176) continue; pebbles += E(x, y, w, h, col); }
+  return sky('#e7a47c') + R(0, 0, W, 24, '#cf8462') + R(0, 24, W, 24, '#db9470')
+    + C(40, 30, 13, '#fff2dc', ' opacity=".35"') + C(40, 30, 8, '#fff5e4')
+    + P('M180 20 q6 -6 13 -2 q5 5 -1 10 q-7 3 -11 -2 q-3 -3 -1 -6z', '#8a6656') + C(186, 21, 1.6, '#735246') + C(190, 25, 1.1, '#735246') + E(216, 42, 3.6, 2.8, '#9a7766')
+    // a flat-topped mesa and the gentle slope of a giant volcano
+    + P('M0 100 V74 L12 70 H42 L52 80 L62 100Z', '#b65c3c') + L('M0 80 H48 M0 89 H56', '#9f4d32', 1.6)
+    + P('M140 102 Q196 66 250 94 V102Z', '#c06a4a') + L('M186 78 Q196 74 206 77', '#a75a3c', 2)
+    + P('M0 112 Q40 94 80 108 Q120 120 160 104 Q200 90 240 106 V132 H0Z', '#d56d40') + L('M0 112 Q40 94 80 108 M160 104 Q200 90 240 106', '#ee9563', 2)
+    + P('M0 124 Q60 110 120 122 Q180 110 240 120 V132 H0Z', '#c45d35')
+    + floor('#c9653b', '#d97a4b') + pebbles
+    + P('M2 158 q4 -18 20 -20 q16 0 20 16 q2 8 -6 10 h-28 q-8 -2 -6 -6z', '#8f4a30') + L('M10 146 q6 -6 14 -6', '#b8664a', 2)
+    + L('M150 176 Q172 168 190 166', '#a8542f', 4, ' stroke-dasharray="2 2"')
+    // the rover
+    + L('M198 104 V134', '#e8e6e0', 3) + R(190, 94, 16, 10, '#f0eee8', 2) + C(194, 99, 2.2, '#2b2a33') + C(201, 99, 2.2, '#2b2a33')
+    + R(226, 126, 10, 14, '#5a5a62', 2) + L('M228 128 v10 M231 128 v10 M234 128 v10', '#3c3c44', 1)
+    + R(184, 134, 46, 4, '#d8d4cc', 1) + R(186, 138, 42, 12, '#f0eee8', 2) + R(190, 141, 12, 5, '#c58b3b', 1)
+    + L('M186 146 L178 150 L176 158', '#9a9ca4', 2.2) + R(171, 157, 9, 6, '#d8d4cc', 1)
+    + L('M190 162 L198 152 L206 162 M198 152 L214 148 L224 162', '#9a9ca4', 2.4)
+    + wheel(190, 164, 6) + wheel(206, 164, 6) + wheel(224, 164, 6);
+}
+
+// A racing team's pit garage: the team's stripes on the wall, timing screens hanging from the roof,
+// a pegboard of tools, helmets, a red tool chest, stacks of tyres and the nose of the car.
+function pitlane() {
+  const stack = (x, n, band) => Array.from({ length: n }, (_, i) => { const y = 160 - i * 10; return R(x, y, 32, 9.5, '#1f1f24', 4) + L(`M${x + 3} ${y + 4.75} H${x + 29}`, band, 1.6); }).join('');
+  const helmet = (x, col) => P(`M${x - 10} 44 Q${x - 10} 28 ${x + 1} 28 Q${x + 11} 28 ${x + 11} 40 L${x + 11} 44Z`, col) + P(`M${x - 2} 34 H${x + 11} V40 H${x - 1} Q${x - 4} 37 ${x - 2} 34Z`, '#1c1a33');
+  return sky('#353a47')
+    + R(0, 0, W, 10, '#24272f') + [10, 70, 130, 190].map((x) => R(x, 3, 40, 3, '#eaf4ff', 1.5)).join('')
+    + P('M0 66 L240 36 V54 L0 84Z', '#d62f3a') + P('M0 88 L240 58 V63 L0 93Z', '#ffffff')
+    // the timing screens
+    + L('M76 10 V18 M164 10 V18', '#5a5f6c', 2) + R(66, 18, 108, 26, '#1b1e26', 3)
+    + R(70, 21, 32, 20, '#0f2a3f', 1) + R(104, 21, 32, 20, '#0f2a3f', 1) + R(138, 21, 32, 20, '#0f2a3f', 1)
+    + L('M73 25 h20 M73 29 h26 M73 33 h14 M73 37 h22', '#5fd6a0', 1.4) + L('M141 25 h12 M141 29 h24 M141 33 h18 M141 37 h8', '#ffd166', 1.4)
+    + L('M110 36 q-4 -10 6 -12 q6 -1 10 3 q6 4 2 8 q-4 3 -9 1 q-6 2 -9 0z', '#9fe8ff', 1.4) + C(126, 27, 1.8, '#ff5f6d')
+    // tools on a pegboard, helmets on a shelf, a red tool chest
+    + R(6, 18, 48, 34, '#454b59', 3) + L('M14 27 V46 M24 29 V44 M34 24 V44 M30 24 H38 M44 26 l-4 16 M44 26 l4 16', '#c3c9d6', 2.4) + C(14, 24, 3, 'none', ' stroke="#c3c9d6" stroke-width="2"') + C(24, 26, 3, 'none', ' stroke="#c3c9d6" stroke-width="2"')
+    + R(186, 44, 52, 3, '#5a5f6c') + helmet(200, '#ffd166') + helmet(226, '#d62f3a')
+    + R(4, 92, 40, 40, '#c8262f', 3) + L('M6 102 H42 M6 112 H42 M6 122 H42', '#8e1b22', 1.4) + L('M18 97 h12 M18 107 h12 M18 117 h12 M18 127 h12', '#d9dde6', 2)
+    // the shiny floor with the pit box lines
+    + floor('#a5abb5', '#c4c9d1') + R(0, 135, W, 3, '#ffffff', 0, ' opacity=".3"') + L('M0 146 H240', '#ffd166', 2.5) + L('M60 132 L40 180 M180 132 L200 180', '#ffffff', 2, ' opacity=".7"')
+    + stack(4, 4, '#ff4b4b') + stack(38, 2, '#ffd166')
+    // the front of the car, side on: nose, front wing, the driver's helmet under the halo, a front wheel
+    + P('M170 160 L206 146 L224 138 L244 136 V164 L172 166Z', '#d62f3a') + P('M176 160 L208 150 L244 148 V152 L210 155 L178 163Z', '#ffffff')
+    + C(232, 130, 7, '#ffd166') + P('M226 128 H238 V133 H227Z', '#1c1a33') + L('M216 136 Q226 118 244 122', '#1c1a24', 2.6)
+    + R(164, 162, 30, 4, '#1c1a24', 1) + R(164, 152, 4, 14, '#1c1a24', 1)
+    + L('M196 156 L214 144', '#1c1a24', 1.6) + wheel(204, 156, 13, '#1f1f24', '#5a5f6c') + C(204, 156, 10, 'none', ' stroke="#ffd166" stroke-width="1.4"');
+}
+
+// A superhero headquarters: a shield-and-lightning emblem, a radar screen and a world map with an
+// alert, a control desk, the hero suit in its glass tube and a glowing launch pad.
+function herohq() {
+  return sky('#151b3d') + R(0, 0, W, 132, '#1c2450') + L('M60 0 V132 M180 0 V132', '#151b3d', 2)
+    + R(0, 0, W, 6, '#101531') + [20, 80, 140, 200].map((x) => R(x, 2, 20, 2, '#9fe8ff', 1)).join('')
+    // the emblem
+    + P('M98 8 H142 L140 24 Q133 36 120 41 Q107 36 100 24Z', '#ffd166') + P('M102 11 H138 L136 24 Q130 33 120 37 Q110 33 104 24Z', '#e5373f')
+    + P('M124 13 L111 26 H119 L114 35 L130 20 H122Z', '#ffd166')
+    // the radar
+    + R(6, 18, 52, 44, '#3a4685', 4) + R(9, 21, 46, 38, '#06122a', 2) + C(32, 40, 16, 'none', ' stroke="#3fd98a" stroke-width="1"') + C(32, 40, 9, 'none', ' stroke="#3fd98a" stroke-width="1"')
+    + P('M32 40 L32 24 A16 16 0 0 1 46 32Z', '#3fd98a', ' opacity=".35"') + [[30, 44], [44, 36], [22, 30]].map(([x, y]) => C(x, y, 1.6, '#9dffb0')).join('')
+    // the world map with an alert
+    + R(182, 18, 52, 44, '#3a4685', 4) + R(185, 21, 46, 38, '#06122a', 2)
+    + P('M189 28 q6 -4 12 0 q2 6 -4 10 q-2 6 -6 4 q-4 -6 -2 -14z M205 26 q8 -2 14 2 q4 6 -2 8 q-2 8 -6 10 q-4 -4 -2 -10 q-6 -4 -4 -10z M218 46 q5 -1 6 3 q-2 4 -6 2z', '#2f8fd0')
+    + C(211, 37, 5, 'none', ' stroke="#ff5f6d" stroke-width="1.5"') + C(211, 37, 1.6, '#ff5f6d')
+    + R(8, 66, 48, 22, '#06122a', 2) + L('M14 84 V76 M21 84 V70 M28 84 V78 M35 84 V72 M42 84 V80 M49 84 V74', '#ffd166', 3, ' stroke-linecap="butt"')
+    // the hero suit, ready in its tube
+    + R(190, 70, 46, 7, '#3a4685', 3) + R(190, 125, 46, 7, '#3a4685', 3)
+    + P('M203 90 L225 90 L232 125 L196 125Z', '#2f74e8') + R(206, 88, 16, 22, '#e5373f', 6) + R(206, 103, 16, 3, '#ffd166') + R(207, 108, 6, 17, '#e5373f', 2) + R(215, 108, 6, 17, '#e5373f', 2)
+    + C(214, 82, 6, '#c9cfe0') + R(208, 79, 12, 3.5, '#1c1a33', 1.7) + P('M215 92 l-4 5 h3 l-2 5 l5 -6 h-3z', '#ffd166')
+    + R(194, 77, 38, 48, '#9fe8ff', 0, ' opacity=".18"') + L('M199 82 V120', '#ffffff', 2, ' opacity=".35"')
+    // the control desk
+    + P('M0 104 H54 L62 132 H0Z', '#2a3570') + R(0, 101, 56, 4, '#4a58a8') + ['#ff5f6d', '#ffd166', '#5fd6a0', '#9fe8ff'].map((col, i) => C(10 + i * 12, 114, 3, col)).join('') + R(8, 122, 40, 3, '#9fe8ff', 1.5)
+    // the floor and the launch pad
+    + floor('#1a1f3d', '#3a4685')
+    + E(120, 160, 82, 14, '#2fd0ff', ' opacity=".14"') + E(120, 160, 70, 11, 'none', ' stroke="#2fd0ff" stroke-width="2" opacity=".7"') + E(120, 160, 50, 7.5, 'none', ' stroke="#2fd0ff" stroke-width="1.2" opacity=".5"')
+    + L('M0 150 H30 M210 150 H240 M0 170 H20 M220 170 H240', '#2a3570', 1.5);
+}
+
+// A natural history museum hall: tall arched windows, and a T. rex skeleton on its plinth, jaws
+// open, with an ammonite on a stand and red ropes on brass posts.
+function museum() {
+  const bone = '#f4ecd8', hole = '#8a9bb0';
+  const arch = (x) => P(`M${x} 66 V30 a13 13 0 0 1 26 0 V66Z`, '#cfe4ef') + L(`M${x + 13} 17 V66 M${x} 44 H${x + 26}`, '#73859b', 2);
+  const post = (x) => R(x - 2, 142, 4, 26, '#c9a227', 1) + E(x, 168, 6, 2, '#b08a1e') + C(x, 142, 3, '#e0bb3c');
+  return sky(hole) + R(0, 0, W, 8, '#73859b')
+    + arch(8) + arch(46) + arch(168) + arch(206) + [40, 78, 162, 200].map((x) => R(x - 3, 8, 6, 62, '#b9c4d1')).join('')
+    + R(0, 70, W, 6, '#b9c4d1') + R(0, 76, W, 2, '#73859b')
+    // the plinth and the skeleton
+    + R(4, 120, 232, 12, '#6d5040') + R(4, 118, 232, 3, '#8f6c55')
+    + L('M10 106 Q36 72 74 62 Q112 54 150 60 Q168 62 182 52', bone, 5)
+    + L('M30 86 l-3 -5 M44 76 l-2 -6 M58 68 l-1 -6 M74 62 v-6 M90 59 v-6 M106 57 v-6 M122 57 v-6 M138 58 v-6 M152 60 l1 -6', bone, 2.4)
+    + L('M100 60 q-8 18 0 36 M112 59 q-8 20 0 40 M124 59 q-8 20 0 38 M136 60 q-6 18 0 32 M148 62 q-4 14 0 24', bone, 2.6)
+    + L('M74 62 L58 90 L68 112 L84 118 M80 64 L92 90 L86 112 L100 118', bone, 5) + E(76, 63, 9, 6, bone)
+    + L('M160 66 l8 10 l6 -2 M164 64 l6 12', bone, 2.4)
+    + P('M176 52 Q182 34 204 32 Q226 32 236 44 L232 52 H214 L210 48 L194 54 Q182 58 176 52Z', bone) + P('M190 58 L230 58 Q226 70 208 70 Q194 68 190 58Z', bone)
+    + L('M214 52 l2 4 l2 -4 l2 4 l2 -4 l2 4 l2 -4 M200 58 l2 -4 l2 4 l2 -4 l2 4 l2 -4 l2 4 l2 -4 l2 4', '#c9b48e', 1)
+    + C(198, 42, 4, hole) + E(214, 40, 4, 3, hole) + E(186, 48, 3, 2.4, hole) + C(198, 42, 1.4, '#1c1a33')
+    // an ammonite on a stand
+    + R(204, 98, 28, 20, '#8f6c55', 2) + C(218, 90, 10, '#d9bf8f') + L('M217 90 a1 1 0 0 1 2 0 a2.5 2.5 0 0 1 -5 0 a4 4 0 0 1 8 0 a5.5 5.5 0 0 1 -11 0 a7 7 0 0 1 14 0', '#8a6a44', 1.3)
+    + floor('#d8cbb2', '#e6dbc6') + L(`M0 150 H${W} M0 168 H${W} M40 132 L30 180 M120 132 V180 M200 132 L210 180`, '#c5b697', 1.2)
+    + post(10) + post(46) + post(194) + post(230) + L('M10 146 Q28 160 46 146 M194 146 Q212 160 230 146', '#b0263a', 3);
+}
+
+// A jousting tournament: bunting, two striped pavilions with pennants, the painted tilt barrier,
+// lances leaning ready and a knight's great helm on a hay bale.
+function joust() {
+  const flags = Array.from({ length: 13 }, (_, i) => { const t = (i + 0.5) / 13, x = t * W, y = 6 + 48 * t * (1 - t); return P(`M${n1(x - 5)} ${n1(y)} L${n1(x + 5)} ${n1(y)} L${n1(x)} ${n1(y + 10)}Z`, ['#d62f3a', '#ffd166', '#2f74e8', '#ffffff'][i % 4]); }).join('');
+  // a heater shield with a chevron
+  const shield = (x, y, field, mark) => P(`M${x - 7} ${y} H${x + 7} V${y + 7} Q${x + 7} ${y + 13} ${x} ${y + 16} Q${x - 7} ${y + 13} ${x - 7} ${y + 7}Z`, field) + L(`M${x - 6} ${y + 11} L${x} ${y + 5} L${x + 6} ${y + 11}`, mark, 2.4);
+  const tent = (x, a, b) => {
+    let o = '';
+    o += R(x, 76, 56, 56, a) + R(x + 10, 76, 8, 56, b) + R(x + 38, 76, 8, 56, b);
+    o += P(`M${x + 20} 132 L${x + 28} 100 L${x + 36} 132Z`, '#5a3a2c') + shield(x + 28, 82, b, a);
+    o += P(`M${x - 4} 78 L${x + 28} 38 L${x + 60} 78Z`, a) + L(`M${x + 28} 40 L${x + 14} 78 M${x + 28} 40 L${x + 42} 78`, b, 1.4);
+    for (let i = 0; i < 8; i++) o += P(`M${x - 4 + i * 8} 78 a4 4 0 0 0 8 0z`, b);
+    return o + L(`M${x + 28} 38 V22`, '#5c4332', 2) + P(`M${x + 28} 22 L${x + 44} 26 L${x + 28} 31Z`, b);
+  };
+  const lance = (x0, y0, x1, y1, col) => L(`M${x0} ${y0} L${x1} ${y1}`, '#f3ead6', 4) + L(`M${x0} ${y0} L${x1} ${y1}`, col, 4, ' stroke-dasharray="6 6" stroke-linecap="butt"');
+  return sky('#9fd8f7') + cloud(120, 30, 1) + cloud(196, 52, 0.6)
+    + L('M0 6 Q120 30 240 6', '#5c4332', 1.2) + flags
+    + P('M0 86 Q60 70 120 82 Q180 70 240 84 V132 H0Z', '#8cc265')
+    + G('translate(150 58)', R(0, 8, 30, 18, '#a9a193') + R(-4, 0, 9, 26, '#9a9284') + R(25, 0, 9, 26, '#9a9284') + P('M-5 0 L0.5 -8 L6 0Z M24 0 L29.5 -8 L35 0Z', '#c0453a') + R(12, 16, 6, 10, '#6d665c', 3))
+    // the tilt: a painted barrier down the middle of the field
+    + R(0, 100, W, 10, '#f3ead6') + L(`M0 105 H${W}`, '#d62f3a', 10, ' stroke-dasharray="6 6" stroke-linecap="butt"') + R(0, 97, W, 3, '#8a5a35') + [30, 90, 150, 210].map((x) => R(x, 97, 4, 35, '#8a5a35')).join('')
+    + tent(4, '#c62a36', '#ffd166') + tent(180, '#2f74e8', '#ffffff')
+    + floor('#86c25e', '#9ad46e') + L('M20 150 l2 -4 l2 4 M70 170 l2 -4 l2 4 M170 160 l2 -4 l2 4 M120 176 l2 -4 l2 4', '#5f9a3a', 1.4)
+    // lances leaning on the right, with a pennon
+    + lance(232, 174, 200, 52, '#2f74e8') + lance(238, 168, 222, 46, '#d62f3a') + shield(220, 150, '#ffffff', '#d62f3a') + P('M200 52 L188 47 L192 56Z', '#ffd166') + P('M226 138 l-12 6 l14 2z M232 132 l-12 5 l14 3z', '#c3c9d6')
+    // a great helm on a hay bale
+    + R(4, 150, 46, 22, '#e3c063', 4) + L('M6 157 H48 M6 164 H48', '#c9a445', 1.4)
+    + R(14, 124, 26, 28, '#b6bec9', 5) + R(14, 132, 26, 3, '#2b2a33') + L('M27 124 V152', '#8d96a3', 1.6) + [20, 24, 30, 34].map((x) => C(x, 142, 1, '#2b2a33')).join('')
+    + P('M27 124 q-6 -14 6 -20 q-1 8 5 12 q-7 0 -11 8z', '#d62f3a');
+}
+
+// On deck: the mast with its rigging and crow's nest, a skull-and-crossbones flag, the ship's wheel,
+// the sea and an island over the rail, a cannon, cannonballs and a chest of gold.
+function pirate() {
+  let rig = '';
+  for (let i = 0; i < 5; i++) rig += `M${2 + i * 14} 108L35 30`;
+  for (let y = 44; y < 108; y += 12) rig += `M${n1(2 + ((108 - y) * 33) / 78)} ${y}H${n1(58 - ((108 - y) * 23) / 78)}`;
+  return sky('#9fd8f7') + cloud(196, 18, 0.8)
+    + R(0, 84, W, 26, '#2a86c0') + R(0, 84, W, 3, '#4aa3d6') + L('M80 96 q5 -3 10 0 M140 92 q5 -3 10 0 M160 102 q5 -3 10 0 M100 104 q5 -3 10 0', '#d6efff', 1.5)
+    + E(222, 86, 22, 4, '#f2d98d') + palm(222, 85, 22, -1)
+    + L('M150 30 q4 -4 8 0 q4 -4 8 0 M170 46 q3 -3 6 0 q3 -3 6 0', '#4b5a6a', 1.3)
+    // the mast, rigging, crow's nest and the flag
+    + L(rig, '#4a3524', 1.3) + R(30, 0, 10, 112, '#7a4f2c') + R(22, 22, 26, 10, '#6b4226', 2) + L('M22 26 H48', '#4a3524', 1.2)
+    + P('M40 2 Q52 0 62 4 Q72 8 82 4 L82 26 Q72 30 62 26 Q52 22 40 24Z', '#1c1a24')
+    + C(61, 12, 4.5, '#f4f1e8') + R(58.5, 14, 5, 3, '#f4f1e8', 1) + C(59.3, 11.6, 1.2, '#1c1a24') + C(62.7, 11.6, 1.2, '#1c1a24') + L('M53 17 L69 23 M69 17 L53 23', '#f4f1e8', 2)
+    // the rail and the side of the ship
+    + R(0, 112, W, 20, '#7a4f2c') + R(0, 108, W, 5, '#a8743f') + L('M0 120 H240 M0 127 H240', '#5f3d22', 1)
+    // the ship's wheel
+    + R(192, 104, 10, 28, '#6b4226', 2)
+    + L(Array.from({ length: 8 }, (_, i) => { const a = (i * Math.PI) / 4; return `M${n1(197 + Math.cos(a) * 4)} ${n1(96 + Math.sin(a) * 4)}L${n1(197 + Math.cos(a) * 25)} ${n1(96 + Math.sin(a) * 25)}`; }).join(''), '#8a5a35', 3)
+    + C(197, 96, 17, 'none', ' stroke="#a8743f" stroke-width="4"') + C(197, 96, 5, '#a8743f') + C(197, 96, 2, '#ffd166')
+    // the deck
+    + floor('#b8824b', '#cf9a5f') + [-60, -10, 40, 90, 140, 190, 240, 290].map((x) => L(`M${n1(120 + (x - 120) * 0.55)} ${FLOOR + 3} L${x} ${H}`, '#9a6a3c', 1.4)).join('')
+    // a cannon and cannonballs
+    + R(8, 152, 36, 10, '#6b4226', 2) + P('M2 144 L44 141 Q52 146 44 152 L2 150Z', '#2b2a33') + R(1, 143, 4, 8, '#3c3b46', 1) + C(14, 164, 5, '#5a3a2c') + C(38, 164, 5, '#5a3a2c')
+    + C(52, 170, 4, '#2b2a33') + C(60, 170, 4, '#2b2a33') + C(56, 164, 4, '#2b2a33')
+    // the treasure chest
+    + R(196, 128, 38, 16, '#a8743f', 4) + R(198, 130, 34, 4, '#8a5a35') + E(215, 146, 18, 6, '#ffd166') + [[204, 144], [212, 141], [222, 143], [228, 146]].map(([x, y]) => C(x, y, 2.4, '#ffe08a')).join('')
+    + R(196, 146, 38, 24, '#8a5a35', 2) + R(196, 152, 38, 3, '#d9a93a') + R(212, 150, 6, 8, '#d9a93a', 1) + C(230, 174, 2.6, '#ffd166') + C(188, 172, 2.4, '#ffd166');
+}
+
+// Inside a deep-sea submarine: a great window on the dark ocean with an anglerfish and its glowing
+// lure, jellyfish and tube worms, a sonar screen and dials, a brass diving helmet and air tanks.
+function deepsea() {
+  let rivets = '';
+  for (let x = 22; x < 222; x += 12) rivets += C(x, 10, 1.4, '#8a9aa8') + C(x, 102, 1.4, '#8a9aa8');
+  const jelly = (x, y, s) => G(`translate(${x} ${y}) scale(${s})`, C(0, 0, 13, '#ff8ad8', ' opacity=".2"') + P('M-12 2 Q-12 -12 0 -12 Q12 -12 12 2 Q6 -1 0 2 Q-6 -1 -12 2Z', '#ff9ae0') + L('M-8 2 q-3 6 0 12 q3 6 0 12 M-2 2 q-3 7 0 14 q3 6 0 12 M4 2 q-3 6 0 12 q3 6 0 10 M9 2 q-2 6 0 10', '#ff9ae0', 1.3, ' opacity=".8"'));
+  return sky('#4b5966') + R(0, 0, W, 4, '#3a4652')
+    + R(8, 4, 224, 102, '#2b3640', 24) + R(16, 14, 208, 84, '#082445', 18)
+    + P('M120 14 L50 98 H190Z', '#9fe8ff', ' opacity=".07"') + starfield(83, 26, 20, 18, 200, 76, () => true, '#7ff0ff')
+    // the anglerfish and its lure
+    + L('M48 28 Q42 12 28 16', '#3b2f4a', 1.6) + C(27, 17, 7, '#c8ff7a', ' opacity=".3"') + C(27, 17, 2.8, '#eaff9a')
+    + P('M74 42 L90 32 L88 54Z', '#3b2f4a') + P('M30 44 Q32 26 54 26 Q74 28 76 44 Q72 60 52 60 Q34 60 30 44Z', '#4a3b5c')
+    + P('M30 44 Q40 52 56 47 Q42 46 30 44Z', '#1c1430') + L('M33 45 l2 3 l2 -3 l2 3 l2 -3 l2 3 l2 -3 l2 3 l2 -3', '#f4f1e8', 1)
+    + C(46, 36, 3.6, '#e8f3ff') + C(45, 36, 1.7, '#1c1a33') + P('M58 46 l8 4 l-8 3z', '#3b2f4a')
+    + jelly(194, 28, 1) + jelly(212, 66, 0.6)
+    // the sea floor and tube worms
+    + P('M26 98 Q34 86 50 90 Q70 84 90 92 Q130 86 160 92 Q186 84 214 98Z', '#173a5a')
+    + L('M190 96 V82 M196 96 V78 M202 96 V84', '#f4f1e8', 3) + C(190, 81, 2.6, '#ff4b4b') + C(196, 77, 2.6, '#ff4b4b') + C(202, 83, 2.6, '#ff4b4b')
+    + R(78, 14, 4, 84, '#2b3640') + R(158, 14, 4, 84, '#2b3640') + rivets
+    // sonar and dials
+    + R(4, 108, 42, 22, '#2b3640', 3) + C(25, 119, 9, '#062a1c') + C(25, 119, 5, 'none', ' stroke="#3fd98a" stroke-width=".8"') + L('M25 119 L32 113', '#5fffa0', 1.4) + C(21, 115, 1.3, '#9dffb0')
+    + [204, 224].map((x) => C(x, 119, 8, '#e9edf0') + C(x, 119, 8, 'none', ' stroke="#2b3640" stroke-width="2"') + L(`M${x} 119 l4 -4`, '#e5373f', 1.4)).join('')
+    + L('M50 112 H190', '#8a9aa8', 4) + C(120, 112, 5, 'none', ' stroke="#e5373f" stroke-width="2"')
+    + floor('#2e3944', '#4b5966') + L(`M0 146 H${W} M0 162 H${W} M30 132 L20 180 M90 132 L86 180 M150 132 L154 180 M210 132 L220 180`, '#3e4a56', 1.6)
+    // a brass diving helmet, and two air tanks
+    + R(10, 164, 34, 8, '#a8742f', 2) + C(27, 150, 15, '#c58b3b') + C(26, 152, 8, '#7fb6c8') + C(26, 152, 8, 'none', ' stroke="#8a5a20" stroke-width="2"') + L('M20 152 H32 M26 146 V158', '#8a5a20', 1)
+    + [[14, 142], [40, 142], [27, 136]].map(([x, y]) => C(x, y, 1.6, '#e0b060')).join('') + R(24, 132, 6, 4, '#a8742f', 1)
+    + R(206, 138, 11, 32, '#ffd166', 5) + R(220, 141, 11, 29, '#ffd166', 5) + R(209, 134, 5, 5, '#8d96a3') + R(223, 137, 5, 5, '#8d96a3') + L('M206 150 h11 M220 152 h11', '#e0a83a', 2);
+}
+
+// The pyramids of Giza and the Sphinx: the Great Pyramid in front, Khafre's with the casing still
+// on its tip, Menkaure's smaller one, a camel on a dune and palms.
+function pyramids() {
+  const pyr = (ax, ay, half, lit, shade) => P(`M${ax - half} 112 L${ax} ${ay} L${ax + half} 112Z`, lit) + P(`M${ax} ${ay} L${ax + half} 112 L${n1(ax + half * 0.25)} 112Z`, shade);
+  let courses = '';
+  for (let y = 30; y < 112; y += 6) { const f = (y - 22) / 90; courses += `M${n1(70 - 88 * f)} ${y}H${n1(70 + 22 * f)}M${n1(70 + 22 * f + 1)} ${y}H${n1(70 + 88 * f)}`; }
+  return sky('#8fd0f2') + R(0, 74, W, 38, '#c4e4f0') + C(206, 24, 13, '#fff2b0')
+    + pyr(176, 40, 72, '#e6bd70', '#c4954c') + P('M176 40 L166 50 Q176 48 182 50Z', '#f6e6c2')
+    + pyr(226, 78, 34, '#e3b86a', '#c08f48')
+    + pyr(70, 22, 88, '#ecc67e', '#cc9d50') + L(courses, '#c9a05a', 0.8, ' opacity=".7"')
+    + P('M0 112 Q60 100 120 110 Q180 100 240 108 V132 H0Z', '#e7c07a')
+    // a camel on the dune
+    + G('translate(186 118) scale(1.15)', L('M-7 2 V13 M-3 2 V13 M4 2 V13 M8 2 V13', '#9a6a3c', 1.6) + E(0, 0, 10, 5, '#a8743f') + E(-1, -5, 5, 4, '#a8743f') + L('M8 -1 Q14 -6 13 -12', '#a8743f', 3) + E(15, -12, 3.5, 2, '#a8743f') + L('M-10 0 q-3 3 -2 7', '#9a6a3c', 1.2))
+    // the Sphinx, facing the sunrise
+    + G('translate(0 84) scale(1.3)', E(62, 26, 12, 10, '#b98443') + R(22, 18, 48, 18, '#c08a48', 8) + R(0, 29, 36, 8, '#c08a48', 4) + L('M4 33 H34', '#a8743a', 1)
+      + P('M16 4 Q22 -4 32 0 L37 28 L18 30Z', '#a8743a') + L('M22 2 L33 4 M20 9 L34 10 M20 16 L35 17 M19 23 L36 24', '#c99a55', 1.2)
+      + P('M12 4 Q16 0 22 1 L23 24 Q18 26 14 23 L13 18 L9.5 16 L12 12Z', '#d6a35c') + E(16, 9, 1.8, 1.1, '#5a3a20') + L('M13 21 h4', '#a8743a', 1))
+    + palm(234, 134, 40, -1)
+    + floor('#ecc988', '#f3d9a0') + L('M10 150 q20 -4 40 0 M170 164 q24 -4 48 0 M70 174 q30 -4 60 0 M190 146 q16 -3 32 0', '#dcb46e', 2);
+}
+
+// --- Year 6: Latin, Roman Britain, science, art and the wide world -----------------------------
+
+// A street in Pompeii under Vesuvius: roofless houses painted red and yellow, a portico of columns,
+// raised pavements, stepping stones across the road and a street fountain.
+function pompeii() {
+  const r = rng(91);
+  let stones = '';
+  for (let y = 146, row = 0; y < H; y += 10, row++) for (let x = -6 + (row % 2) * 8; x < W; x += 14 + r() * 8) stones += `M${n1(x)} ${y}l${n1(1 + r() * 3)} 9`;
+  return sky('#a8d8f2') + cloud(30, 22, 0.6)
+    // Vesuvius, with the old rim of Monte Somma on its left and a wisp of smoke
+    + P('M30 104 L74 48 L88 54 L104 38 L122 30 L138 32 L196 104Z', '#8f8ea6') + P('M122 30 L138 32 L196 104 L150 104Z', '#7e7d96')
+    + [[132, 22, 5], [140, 15, 6], [150, 9, 7]].map(([x, y, s]) => C(x, y, s, '#dcdce6', ' opacity=".85"')).join('')
+    + P('M10 104 Q60 82 104 88 Q150 80 214 104Z', '#7f9a6a') + pine(100, 92, 10) + cypress(150, 96, 16)
+    // a roofless house: plaster painted red below and yellow above, bricks where it has fallen
+    + P('M0 132 V50 L10 46 L22 52 L34 44 L48 50 L62 46 V132Z', '#e7cf9a') + R(0, 94, 62, 38, '#a8392c') + R(0, 91, 62, 3, '#f3ead6')
+    + L('M4 56 h8 M14 60 h8 M40 54 h10 M46 58 h8', '#b97a52', 1.5) + R(18, 82, 18, 50, '#4e3426') + R(44, 62, 10, 12, '#4e3426')
+    // a portico, the columns stuccoed red at the foot
+    + R(166, 120, 74, 12, '#d8c7a3') + R(166, 118, 74, 3, '#e8dcc2') + columns([172, 188, 204, 220], 56, 118, 8, '#efe1c4', '#cdb894')
+    + [172, 188, 204, 220].map((x) => R(x, 96, 8, 22, '#b23a2b')).join('') + R(168, 46, 44, 8, '#e6d6b4') + R(168, 52, 44, 2, '#cdb894')
+    // the road: raised pavements, basalt blocks with cart ruts, stepping stones
+    + floor('#77736d') + R(0, FLOOR, W, 8, '#cdbf9f') + R(0, FLOOR + 8, W, 2, '#5d5a55')
+    + L(stones, '#5d5a55', 1.2) + L(`M0 158 H${W} M0 166 H${W}`, '#58554f', 2.2)
+    + R(20, 146, 22, 9, '#c8bca4', 4) + R(18, 159, 24, 9, '#c8bca4', 4) + R(16, 172, 26, 9, '#c8bca4', 4)
+    // a street fountain
+    + R(196, 152, 40, 18, '#d8cbb0', 2) + R(199, 152, 34, 4, '#7cc3e8') + R(210, 126, 12, 26, '#cfc0a0', 2) + C(216, 134, 3.5, '#b8a888') + L('M214 138 q-4 5 -6 14', '#bfe6f7', 2);
+}
+
+// Hadrian's Wall: the wall riding the crest of the crags across green hills, a turret, sheep,
+// a stretch of the wall close by and a legionary's shield and spear.
+function hadrian() {
+  const ridge = (dy) => `M0 ${74 + dy} Q30 ${56 + dy} 60 ${66 + dy} Q90 ${76 + dy} 120 ${58 + dy} Q150 ${42 + dy} 180 ${56 + dy} Q210 ${70 + dy} 240 ${52 + dy}`;
+  const sheep = (x, y) => L(`M${x - 3} ${y + 2} v4 M${x + 3} ${y + 2} v4`, '#2b2a33', 1.2) + E(x, y, 6, 4, '#f4f2ea') + C(x + 6, y - 1, 2, '#2b2a33');
+  const blocks = (x, y, w, h) => { let o = R(x, y, w, h, '#b9ad93'); for (let yy = y + 6, k = 0; yy < y + h; yy += 6, k++) o += L(`M${x} ${yy} H${x + w}`, '#978b73', 1); for (let yy = y, k = 0; yy < y + h; yy += 6, k++) for (let xx = x + (k % 2 ? 6 : 12); xx < x + w; xx += 12) o += L(`M${xx} ${yy} v6`, '#978b73', 1); return o; };
+  return sky('#b5dcf0') + cloud(60, 18, 0.9) + cloud(196, 26, 0.7)
+    + P('M0 60 Q60 46 120 54 Q180 42 240 50 V100 H0Z', '#a7c98a')
+    + P(`${ridge(0)} V132 H0Z`, '#86b562') + P(`${ridge(0)} V${70} Q210 ${86} 180 ${72} Q150 ${58} 120 ${76} Q90 ${94} 60 ${84} Q30 ${74} 0 ${92}Z`, '#8d8d7d')
+    + L('M10 78 v10 M24 72 v12 M44 70 v10 M70 74 v12 M96 70 v14 M190 64 v10 M214 66 v12 M230 60 v10', '#6f6f62', 1.4)
+    + L(ridge(-4), '#c8bda4', 7, ' stroke-linecap="butt"') + L(ridge(-7), '#ddd3bd', 1.5) + L(ridge(-4), '#9a8f78', 1, ' stroke-dasharray="3 2"')
+    + R(203, 48, 15, 12, '#c8bda4') + R(208, 53, 5, 7, '#6f6f62')
+    + P('M0 100 Q60 88 120 98 Q180 88 240 96 V132 H0Z', '#8fc066') + sheep(24, 104) + sheep(40, 110) + sheep(206, 104)
+    // the wall close by, and a shield and spear
+    + blocks(0, 96, 54, 36) + P('M0 96 h12 v-6 h14 v6 h28 v-0Z', '#b9ad93') + R(0, 90, 26, 6, '#b9ad93') + L('M12 90 v6', '#978b73', 1)
+    + blocks(180, 114, 60, 18)
+    + floor('#77ad50', '#8cc266') + P('M92 132 H148 L172 180 H68Z', '#c8b48a', ' opacity=".6"')
+    + L('M234 154 L226 66', '#8a5a35', 2.2) + P('M226 66 l-3 -10 l5 9z', '#8d96a3')
+    + R(200, 112, 26, 42, '#b23a2b', 6) + R(202, 114, 22, 38, 'none', 5, ' stroke="#e2b14e" stroke-width="1.4"') + L('M207 120 l12 26 M219 120 l-12 26', '#e2b14e', 1.4) + C(213, 133, 4, '#e2b14e')
+    + [[16, 150], [30, 168], [200, 172], [224, 162]].map(([x, y]) => C(x, y, 2, '#9b5fb0') + C(x + 3, y + 1, 1.6, '#b07ac4')).join('');
+}
+
+// An observatory on a hill at night: the Plough among the stars and the Milky Way, a crescent
+// Moon, a shooting star, the white dome open with its telescope, and a small telescope on a tripod.
+function observatory() {
+  const plough = [[10, 22], [24, 17], [37, 21], [49, 28], [53, 42], [73, 44], [76, 28]];
+  return sky('#0f1440') + E(120, 132, 210, 46, '#18205a', ' opacity=".6"') + E(120, 132, 170, 30, '#1f2a6c', ' opacity=".6"')
+    + P('M80 0 L130 0 L240 70 L240 100 Z', '#c9d6ff', ' opacity=".07"') + starfield(71, 46, 0, 0, W, 112) + starfield(73, 30, 120, 0, 120, 90, (x, y) => Math.abs(y - (x - 105) * 0.62) < 14)
+    + L(`M${plough.map(([x, y]) => `${x} ${y}`).join(' L')} L49 28`, '#9fb4ff', 0.8, ' opacity=".6"') + plough.map(([x, y]) => C(x, y, 1.8, '#ffffff')).join('')
+    + C(214, 22, 9, '#fff4c9') + C(218, 19, 8, '#0f1440')
+    + L('M152 12 L130 24', '#ffffff', 1.4, ' opacity=".7"') + C(130, 24, 1.6, '#ffffff')
+    + P('M0 112 Q60 98 120 108 Q170 98 240 90 V132 H0Z', '#1b2c3e')
+    // the observatory dome, open, with its telescope
+    + R(180, 78, 50, 40, '#cfd5e0') + R(178, 116, 54, 4, '#9aa3b5') + P('M178 80 A27 25 0 0 1 232 80Z', '#eef1f6')
+    + P('M200 57 L210 56 L210 80 L200 80Z', '#0f1440') + L('M205 74 L192 52', '#9aa3b5', 5) + R(196, 98, 12, 18, '#5a6276', 2) + R(214, 92, 10, 8, '#ffd166', 1)
+    + floor('#22382f', '#2d4a3d') + L('M20 150 q10 -3 20 0 M170 166 q12 -3 24 0 M90 174 q14 -3 28 0', '#335244', 2)
+    // a small telescope on its tripod, a red torch and a book of star maps
+    + L('M30 116 L14 168 M30 116 V170 M30 116 L46 168', '#8d96a3', 2) + R(26, 112, 8, 8, '#5a6276', 1)
+    + L('M10 128 L52 104', '#e9ecf2', 7, ' stroke-linecap="butt"') + L('M46 107.5 L54 103', '#5a6276', 8, ' stroke-linecap="butt"') + L('M24 116 L32 112', '#5a6276', 2.4)
+    + R(196, 164, 26, 6, '#2f74e8', 1) + R(198, 160, 22, 4, '#f3ead6', 1) + C(224, 160, 7, '#ff5f6d', ' opacity=".25"') + R(220, 158, 8, 5, '#b8403a', 2);
+}
+
+// A Victorian glasshouse full of plants: the white iron ribs of the glass vault, tall palms, a
+// hanging fern, big leaves, a pond with giant water-lily pads and a pink lily.
+function glasshouse() {
+  let ribs = '';
+  for (let i = 1; i < 12; i++) { const a = (i * Math.PI) / 12; ribs += `M${n1(120 - Math.cos(a) * 30)} ${n1(132 - Math.sin(a) * 32)}L${n1(120 - Math.cos(a) * 118)} ${n1(132 - Math.sin(a) * 128)}`; }
+  const arc = (k) => `M${n1(120 - 118 * k)} 132A${n1(118 * k)} ${n1(128 * k)} 0 0 1 ${n1(120 + 118 * k)} 132`;
+  const leaf = (x, y, rx, ry, rot, col) => E(x, y, rx, ry, col, ` transform="rotate(${rot} ${x} ${y})"`) + L(`M${x - rx * 0.85} ${y} H${x + rx * 0.85}`, '#1f6b3c', 1.2, ` transform="rotate(${rot} ${x} ${y})"`);
+  const pad = (x, y, rr) => E(x, y, rr, rr * 0.36, '#4f9a3f') + E(x, y - 0.6, rr * 0.86, rr * 0.28, '#6cbc4f') + L(`M${x} ${y} L${n1(x + rr * 0.8)} ${n1(y + rr * 0.2)}`, '#3f95a8', 1.6);
+  return sky('#eef3ef') + P('M2 132 A118 128 0 0 1 238 132Z', '#cfeee4') + P('M30 132 Q60 60 120 50 Q180 60 210 132Z', '#bfe6da')
+    + L(`${ribs}${arc(0.5)}${arc(0.75)}`, '#ffffff', 1.6) + L(arc(1), '#ffffff', 4) + L(arc(0.25), '#ffffff', 1.2)
+    // palms, a hanging fern and big leaves
+    + G('translate(24 134) scale(1.5)', palm(0, 0, 58, 1)) + G('translate(218 134) scale(1.3)', palm(0, 0, 54, -1))
+    + L('M120 4 V14', '#5a5f6c', 1.2) + E(120, 18, 9, 5, '#8a5a35') + L('M112 20 q-4 10 -2 20 M117 21 q-2 12 0 22 M123 21 q2 12 0 22 M128 20 q4 10 2 20', '#3f9a4a', 2.4)
+    + leaf(10, 112, 22, 8, -40, '#2f8a52') + leaf(30, 118, 20, 7, -10, '#3fa060') + leaf(230, 110, 22, 8, 40, '#2f8a52') + leaf(210, 118, 20, 7, 10, '#3fa060')
+    + floor('#e3d6bb', '#efe5cf') + L(`M0 150 H${W} M60 132 L44 180 M180 132 L196 180`, '#cdbd9c', 1.4)
+    // the lily pond
+    + E(26, 168, 46, 13, '#7a6a52') + E(26, 168, 42, 11, '#3f95a8') + pad(14, 166, 14) + pad(42, 172, 10) + pad(46, 161, 7)
+    + [0, 60, 120, 180, 240, 300].map((a) => E(26, 160, 2, 4.5, '#ff8ab8', ` transform="rotate(${a} 26 162)"`)).join('') + C(26, 162, 1.8, '#ffd166')
+    + R(196, 150, 26, 20, '#c8643a', 3) + R(194, 148, 30, 4, '#d9784a', 2) + leaf(202, 140, 12, 5, -50, '#3fa060') + leaf(216, 140, 12, 5, 50, '#2f8a52') + leaf(209, 136, 11, 4.5, 90, '#4caf50');
+}
+
+// An artist's studio in an attic: a skylight, paintings on the wall, an easel with a landscape on
+// it, a table of brushes in jars and a palette, and floorboards splashed with paint.
+function studio() {
+  const r = rng(101);
+  let splats = '';
+  for (let i = 0; i < 16; i++) { const x = r() * W, y = FLOOR + 6 + r() * 42, s = 1.2 + r() * 2.4, col = pick(r, ['#e5373f', '#2f74e8', '#ffd166', '#3fae5a', '#b06ad6']); if (x > 66 && x < 174 && y < 172) continue; splats += E(x, y, s * 1.4, s * 0.6, col); }
+  const brushes = (x, y) => R(x, y, 9, 12, '#9fd3e8', 2) + L(`M${x + 2} ${y} l-2 -12 M${x + 4.5} ${y} v-14 M${x + 7} ${y} l2 -11`, '#8a5a35', 1.4) + C(x, y - 12, 1.4, '#e5373f') + C(x + 4.5, y - 14, 1.4, '#2f74e8') + C(x + 9, y - 11, 1.4, '#ffd166');
+  return sky('#f1e4cf') + P('M0 0 H240 V18 L180 0 H60 L0 18Z', '#c79a72') + P('M70 0 H170 L160 14 H80Z', '#9fd8f7') + L('M120 0 V14 M75 7 H165', '#c79a72', 2) + cloud(98, 9, 0.35)
+    // paintings: hills under a sun, and bright shapes
+    + R(8, 26, 46, 34, '#8a5a35', 2) + R(11, 29, 40, 28, '#cfeefe') + P('M11 57 Q22 40 34 50 Q42 42 51 50 V57Z', '#6dbb5a') + C(42, 36, 4, '#ffd166')
+    + R(184, 22, 40, 30, '#2b2a33', 2) + R(187, 25, 34, 24, '#fff7e8') + C(198, 34, 6, '#e5373f') + R(206, 30, 10, 10, '#2f74e8') + P('M190 47 L200 38 L212 47Z', '#ffd166') + L('M206 44 L220 34', '#2b2a33', 1.2)
+    + R(198, 60, 26, 22, '#b88a5e', 2) + R(201, 63, 20, 16, '#f7d9a8') + C(211, 69, 3.5, '#8a5a35') + P('M205 79 q6 -8 12 0z', '#2f74e8')
+    + floor('#c49a6c', '#d6ad80') + L(`M0 146 H${W} M0 162 H${W} M30 132 V146 M110 146 V162 M190 132 V146 M60 162 V180 M170 162 V180`, '#a97f55', 1.4) + splats
+    // the easel and its painting
+    + L('M12 176 L34 64 M56 176 L34 64 M34 64 V150', '#9a6a3c', 3.2) + R(10, 120, 48, 4, '#9a6a3c')
+    + R(13, 78, 42, 40, '#ffffff') + R(15, 80, 38, 22, '#a8dcf5') + P('M15 102 Q26 88 36 96 Q44 90 53 98 V116 H15Z', '#7cc35a') + C(44, 88, 4, '#ffd166') + E(26, 106, 5, 3, '#2f74e8')
+    // a table of brushes, tubes and the palette
+    + R(184, 116, 54, 5, '#8a5a35') + L('M190 121 V170 M232 121 V170', '#8a5a35', 3) + brushes(190, 104) + brushes(204, 104)
+    + R(218, 110, 12, 4, '#e5373f', 2) + R(220, 104, 12, 4, '#2f74e8', 2)
+    + P('M182 160 q4 -14 22 -14 q18 0 22 10 q0 8 -12 6 q-4 -6 -10 0 q-8 6 -16 4 q-6 -1 -6 -6z', '#e8c99a') + C(190, 152, 2.6, '#e5373f') + C(198, 150, 2.6, '#ffd166') + C(208, 150, 2.6, '#2f74e8') + C(216, 153, 2.6, '#3fae5a');
+}
+
+// A school science lab: the periodic table on the wall, a clock, flasks bubbling on the bench, a
+// burner under a round flask, test tubes in a rack, a microscope and a molecule model.
+function lab() {
+  // the periodic table: rows of little squares in its famous shape, coloured by block
+  const row = (y, a, b, col) => L(`M${n1(9 + a * 3.3)} ${y} H${n1(9 + (b + 1) * 3.3 - 0.8)}`, col, 2.5, ' stroke-dasharray="2.5 .8" stroke-linecap="butt"');
+  const S = '#ff6b6b', D = '#4f8fe8', Pb = '#f5b82e', N = '#9a6ae0', F = '#3fbf7f';
+  let table = R(5, 7, 66, 42, '#2b2f36', 3) + R(7, 9, 62, 38, '#ffffff', 2) + row(13, 0, 0, S) + row(13, 17, 17, N);
+  for (let i = 1; i < 7; i++) { const y = 13 + i * 3.3; table += row(n1(y), 0, 1, S) + row(n1(y), 12, 16, Pb) + row(n1(y), 17, 17, N) + (i > 2 ? row(n1(y), 2, 11, D) : ''); }
+  table += row(38, 3, 16, F) + row(41.3, 3, 16, F);
+  const flask = (x, liquid) => P(`M${x - 3} 70 h6 v8 l10 16 q1 3 -3 3 h-20 q-4 0 -3 -3 l10 -16z`, '#e8f6fb') + P(`M${x - 8} 87 h16 l4 7 q1 3 -3 3 h-18 q-4 0 -3 -3z`, liquid) + C(x - 2, 82, 1.4, liquid) + C(x + 1, 77, 1, liquid);
+  return sky('#dfeef0') + R(0, 46, W, 50, '#eaf4f5') + L('M0 58 H240 M0 70 H240 M0 82 H240', '#d3e3e5', 1)
+    + table + C(120, 18, 11, '#ffffff') + C(120, 18, 11, 'none', ' stroke="#2b2f36" stroke-width="2"') + L('M120 18 V11 M120 18 L125 21', '#2b2f36', 1.6)
+    + R(176, 34, 60, 3, '#8a5a35') + [[180, '#8a5a35'], [190, '#2f74e8'], [200, '#8a5a35'], [212, '#11855a'], [224, '#8a5a35']].map(([x, col]) => R(x, 20, 8, 14, col, 2) + R(x + 2, 17, 4, 3, '#2b2f36')).join('')
+    // the bench, with test tubes and a bubbling flask on the left
+    + R(0, 96, W, 5, '#2b2f36') + R(0, 101, W, 31, '#cfd9de') + L('M60 101 V132 M180 101 V132', '#b5c2c8', 1.5) + L('M24 112 h12 M204 112 h12', '#8d96a3', 2)
+    + R(4, 86, 30, 4, '#c8a26a') + R(6, 90, 3, 6, '#c8a26a') + R(29, 90, 3, 6, '#c8a26a')
+    + ['#ff6f91', '#5fd6a0', '#ffd166', '#4d8fd6'].map((col, i) => R(8 + i * 6.5, 70, 4, 18, '#e8f6fb', 2) + R(8 + i * 6.5, 80, 4, 8, col, 2)).join('')
+    + flask(50, '#5fd6a0')
+    // a round flask over a burner, and a microscope, on the right
+    + L('M180 96 l4 -22 M200 96 l-4 -22 M180 74 H200', '#5a5f6c', 1.6) + R(187, 84, 6, 12, '#8d96a3', 1) + P('M190 84 q-3 -5 0 -9 q3 4 0 9z', '#4d8fd6')
+    + C(190, 64, 9, '#e8f6fb') + P('M181 65 A9 9 0 0 0 199 65Z', '#b06ad6') + R(187, 48, 6, 9, '#e8f6fb') + steam([[190, 46, 0.5]], '#ffffff')
+    + R(208, 92, 26, 4, '#2b2f36', 1) + L('M228 92 Q234 76 222 64', '#2b2f36', 4) + L('M214 48 L224 76', '#5a5f6c', 6, ' stroke-linecap="butt"') + R(210, 78, 20, 3, '#2b2f36') + R(212, 44, 6, 5, '#2b2f36', 1)
+    + floor('#c5ced3', '#d8e0e4') + L(`M0 150 H${W} M0 168 H${W} M40 132 L30 180 M120 132 V180 M200 132 L210 180`, '#b2bcc2', 1.2)
+    // a lab stool, and a molecule model on a stand
+    + E(26, 146, 16, 4, '#2f74e8') + L('M16 148 L12 176 M36 148 L40 176 M26 150 V176 M15 166 H37', '#8d96a3', 2)
+    + R(204, 168, 30, 4, '#5a5f6c', 1) + L('M219 168 V156', '#8d96a3', 2)
+    + L('M219 146 L204 140 M219 146 L233 136 M219 146 L224 158 M219 146 L212 130 M233 136 L238 124', '#8d96a3', 2.4)
+    + C(204, 140, 4, '#ffffff') + C(224, 158, 4, '#ffffff') + C(212, 130, 4, '#ffffff') + C(238, 124, 3.4, '#ffffff') + C(233, 136, 5, '#e5373f') + C(219, 146, 6, '#2b2f36');
+}
+
+// A park in cherry-blossom time: two trees heavy with pink flowers framing the picture, petals
+// falling, a pond with a red arched bridge, a bench and a picnic rug with a basket.
+function blossom() {
+  const r = rng(111);
+  let petals = '';
+  for (let i = 0; i < 34; i++) { const x = r() * W, y = r() * 176; if (x > 70 && x < 170 && y > 46) continue; petals += E(x, y, 1.8, 1, pick(r, ['#ff9ec4', '#ffc2da', '#ffffff']), ` transform="rotate(${Math.floor(r() * 180)} ${n1(x)} ${n1(y)})"`); }
+  const crown = (pts) => pts.map(([x, y, s], i) => C(x, y, s, ['#f7a1c4', '#ffc2da', '#f48bb5'][i % 3])).join('');
+  return sky('#cfe9fb') + cloud(120, 22, 0.9)
+    + P('M0 96 Q60 82 120 90 Q180 80 240 92 V132 H0Z', '#b8dc8a')
+    + R(0, 100, W, 14, '#8fcbe8') + L('M90 106 q5 -2 10 0 M140 110 q5 -2 10 0', '#d6efff', 1.4)
+    + L('M156 112 Q188 82 220 112', '#d8342c', 4) + L('M162 104 Q188 78 214 104', '#d8342c', 2) + L('M168 98 V106 M178 92 V101 M188 89 V98 M198 92 V101 M208 98 V106', '#d8342c', 1.6)
+    + P('M0 114 Q60 106 120 112 Q180 104 240 112 V132 H0Z', '#9fd06a')
+    // the two trees
+    + L('M18 132 Q22 92 10 60 M20 96 Q36 76 52 66 M14 74 Q4 56 -4 48', '#5c3b33', 6) + L('M222 132 Q216 94 228 62 M220 100 Q204 80 190 70', '#5c3b33', 6)
+    + crown([[6, 40, 22], [34, 30, 20], [58, 50, 16], [20, 62, 16], [60, 22, 14], [-6, 70, 14], [44, 64, 12]])
+    + crown([[232, 38, 22], [204, 26, 20], [184, 48, 16], [218, 64, 16], [182, 18, 13], [244, 70, 14], [196, 66, 12]])
+    + [[16, 44], [40, 28], [56, 52], [222, 36], [200, 30], [188, 50]].map(([x, y]) => C(x, y, 2, '#ffffff', ' opacity=".8"')).join('')
+    + floor('#9ccf68', '#b0dc7c') + P('M96 132 H144 L176 180 H64Z', '#e9dcc0')
+    // a bench on the left, a picnic rug and basket on the right
+    + R(4, 140, 46, 4, '#3f8a5a', 1) + R(4, 146, 46, 4, '#3f8a5a', 1) + R(2, 152, 50, 4, '#2f6b45', 1) + L('M8 156 V170 M46 156 V170 M8 140 V152 M46 140 V152', '#2b2a33', 2)
+    + P('M178 156 L238 152 L244 178 L184 180Z', '#e5373f') + L('M190 155 L196 180 M204 154 L210 180 M218 153 L224 180 M232 152 L238 179 M180 162 L240 158 M182 170 L242 166', '#ffffff', 2, ' opacity=".8"')
+    + R(204, 150, 22, 14, '#c8954e', 3) + L('M206 150 Q215 138 224 150', '#8a5a35', 2) + L('M204 156 H226', '#a8743f', 1.4) + petals;
+}
+
+// The Northern Lights over a frozen lake: green and pink curtains of light among the stars, snowy
+// mountains, a dark pine forest, a red wooden cabin with lit windows, and a sledge in the snow.
+function aurora() {
+  let rays = '';
+  for (let x = 4; x < W; x += 6) rays += `M${x} ${n1(30 + 14 * Math.sin(x / 26))}v${n1(26 + 10 * Math.cos(x / 19))}`;
+  const fir = (x, y, h, col = '#0e2433') => P(`M${x} ${y - h} L${n1(x + h * 0.3)} ${y} H${n1(x - h * 0.3)}Z`, col);
+  return sky('#0b1a33') + starfield(121, 34, 0, 0, W, 90)
+    + P('M0 62 Q30 30 70 40 T150 30 T240 22 V48 Q200 56 160 60 T80 70 T0 86Z', '#45f0a0', ' opacity=".35"') + L(rays, '#7dffc2', 2, ' opacity=".22"')
+    + P('M0 40 Q40 18 90 26 T180 14 T240 8 V22 Q200 26 170 30 T90 40 T0 52Z', '#ff7ad9', ' opacity=".22"')
+    + P('M40 80 Q100 50 170 66 T240 54 V64 Q200 70 170 76 T100 70 T40 86Z', '#45f0a0', ' opacity=".3"')
+    // mountains, the lake and the forest on the far shore
+    + P('M0 104 L34 66 L58 86 L96 52 L136 94 L170 62 L206 90 L240 70 V104Z', '#2a3b5c')
+    + P('M34 66 L42 76 L36 78 L30 72Z M96 52 L106 64 L98 66 L90 62Z M170 62 L178 72 L170 74 L164 70Z', '#dce8f5')
+    + R(0, 104, W, 20, '#14304f') + P('M60 106 Q120 104 190 110 L180 114 Q120 108 70 110Z', '#45f0a0', ' opacity=".2"')
+    + Array.from({ length: 30 }, (_, i) => fir(i * 8 + 2, 106, 8 + (i % 3) * 3)).join('')
+    // the cabin
+    + R(4, 98, 54, 34, '#a8332b') + L('M4 106 H58 M4 114 H58 M4 122 H58', '#8a2822', 1) + P('M0 100 L31 80 L62 100Z', '#eef4fb') + R(44, 80, 6, 12, '#5a3a2c')
+    + R(12, 106, 12, 10, '#ffd166', 1) + R(36, 112, 12, 20, '#5a2420', 1) + L('M18 106 V116 M12 111 H24', '#a8332b', 1.2) + steam([[47, 78, 0.7]], '#c9d6e4')
+    + fir(226, 132, 56, '#123a2e') + fir(206, 132, 40, '#164536') + P('M226 76 L232 92 L220 92Z', '#eef4fb') + P('M206 92 L210 104 L202 104Z', '#eef4fb')
+    + floor('#e6eef8', '#ffffff') + E(30, 136, 40, 5, '#ffffff') + L('M10 156 q30 -6 60 0 M150 170 q34 -6 68 0 M80 176 q30 -4 60 0', '#c9d8ea', 2.5)
+    // a wooden sledge
+    + L('M176 160 H222 q8 0 8 -6', '#5a3a2c', 2.2) + R(180, 148, 40, 5, '#b8743a', 1) + L('M186 153 V160 M214 153 V160', '#5a3a2c', 2);
+}
+
 // The full list, in the order the oldest course meets them; sceneOrder() reorders per course.
 export const SCENES = [
   { id: 'space', name: 'Space station', draw: space },
@@ -565,38 +1006,73 @@ export const SCENES = [
   { id: 'atrium', name: 'Roman villa', draw: atrium },
   { id: 'delphi', name: 'Oracle at Delphi', draw: delphi },
   { id: 'baths', name: 'Roman baths', draw: baths },
+  // Years 2 and 3
+  { id: 'moon', name: 'Moon base', draw: moon },
+  { id: 'mars', name: 'Mars', draw: mars },
+  { id: 'pitlane', name: 'Pit garage', draw: pitlane },
+  { id: 'herohq', name: 'Hero headquarters', draw: herohq },
+  { id: 'museum', name: 'Dinosaur museum', draw: museum },
+  { id: 'joust', name: 'Jousting tournament', draw: joust },
+  { id: 'pirate', name: 'Pirate ship', draw: pirate },
+  { id: 'deepsea', name: 'Deep-sea submarine', draw: deepsea },
+  { id: 'pyramids', name: 'Pyramids of Giza', draw: pyramids },
+  // Year 6
+  { id: 'pompeii', name: 'Pompeii', draw: pompeii },
+  { id: 'hadrian', name: 'Hadrian’s Wall', draw: hadrian },
+  { id: 'observatory', name: 'Observatory', draw: observatory },
+  { id: 'glasshouse', name: 'Glasshouse', draw: glasshouse },
+  { id: 'studio', name: 'Artist’s studio', draw: studio },
+  { id: 'lab', name: 'Science lab', draw: lab },
+  { id: 'blossom', name: 'Cherry-blossom park', draw: blossom },
+  { id: 'aurora', name: 'Northern Lights', draw: aurora },
 ];
 export const SCENE_BY_ID = Object.fromEntries(SCENES.map((s) => [s.id, s]));
 
 // Unlocking: the first FREE scenes are open from the start, then one more for every PER_SCENE
-// badge. Every course has 17 or more badges; a course with more scenes than LAST opens a few of them
+// badge. Every course has 17 or more badges; a course with more scenes than LAST opens some of them
 // in pairs, so its last scene still needs only LAST badges.
 export const FREE = 3, PER_SCENE = 1, LAST = 14;
 const ORDER = {
-  young: ['space', 'racetrack', 'underwater', 'dino', 'city', 'castle', 'rocket', 'volcano', 'jungle', 'arctic', 'library', 'temple'],
+  // Years 2 and 3: space, racing, heroes, dinosaurs and knights first, the new ones early
+  young: ['space', 'racetrack', 'underwater', 'moon', 'dino', 'pitlane', 'city', 'herohq', 'castle', 'museum', 'rocket', 'joust', 'mars', 'volcano', 'pirate', 'deepsea', 'jungle', 'pyramids', 'arctic', 'library', 'temple'],
   // Year 8 learns Ancient Greek: the classical scenes come early, taking turns with the others
-  y8: ['space', 'underwater', 'temple', 'colosseum', 'library', 'trireme', 'castle', 'forum', 'arctic', 'theatre', 'jungle', 'olympus', 'volcano', 'atrium', 'rocket', 'delphi', 'city', 'baths', 'dino', 'racetrack'],
-  // Year 6 learns Latin: the Roman scenes come a little sooner than the Greek ones
-  y6: ['space', 'underwater', 'library', 'castle', 'jungle', 'temple', 'colosseum', 'arctic', 'forum', 'volcano', 'trireme', 'rocket', 'atrium', 'city', 'theatre', 'olympus', 'dino', 'baths', 'delphi', 'racetrack'],
+  y8: ['space', 'underwater', 'temple', 'colosseum', 'library', 'trireme', 'castle', 'forum', 'arctic', 'theatre', 'jungle', 'olympus', 'volcano', 'atrium', 'rocket', 'delphi', 'city', 'baths', 'dino', 'racetrack', 'pompeii', 'observatory', 'hadrian', 'aurora'],
+  // Year 6 learns Latin: Roman scenes a little sooner than the Greek ones, with art, science and nature between
+  y6: ['space', 'underwater', 'library', 'pompeii', 'castle', 'observatory', 'colosseum', 'blossom', 'temple', 'hadrian', 'jungle', 'studio', 'forum', 'aurora', 'arctic', 'lab', 'trireme', 'glasshouse', 'moon', 'volcano', 'atrium', 'pyramids', 'rocket', 'theatre', 'city', 'olympus', 'dino', 'baths', 'delphi', 'racetrack'],
 };
+const orderKey = (course) => (course.young ? 'young' : course.id);
 /** The order this course's scenes unlock in: what this child likes most comes first. */
-export const sceneOrder = (course = COURSE) => ORDER[course.young ? 'young' : course.id] || ORDER.y6;
+export const sceneOrder = (course = COURSE) => ORDER[orderKey(course)] || ORDER.y6;
 
-// The orders as first released (12 scenes, one per badge): a scene a child had open then stays open
-// now that the classical scenes have joined the queue in front of it.
+// Every order released before this one: a scene a child had open under any of them stays open (and
+// keeps its earlier badge count) after new scenes join the queue in front of it. Never edit or drop one.
 const RELEASED = {
-  y8: ['space', 'underwater', 'temple', 'library', 'castle', 'arctic', 'jungle', 'volcano', 'rocket', 'city', 'dino', 'racetrack'],
-  y6: ['space', 'underwater', 'library', 'castle', 'jungle', 'temple', 'arctic', 'volcano', 'rocket', 'city', 'dino', 'racetrack'],
+  young: [
+    ['space', 'racetrack', 'underwater', 'dino', 'city', 'castle', 'rocket', 'volcano', 'jungle', 'arctic', 'library', 'temple'],
+  ],
+  y8: [
+    ['space', 'underwater', 'temple', 'library', 'castle', 'arctic', 'jungle', 'volcano', 'rocket', 'city', 'dino', 'racetrack'],
+    ['space', 'underwater', 'temple', 'colosseum', 'library', 'trireme', 'castle', 'forum', 'arctic', 'theatre', 'jungle', 'olympus', 'volcano', 'atrium', 'rocket', 'delphi', 'city', 'baths', 'dino', 'racetrack'],
+  ],
+  y6: [
+    ['space', 'underwater', 'library', 'castle', 'jungle', 'temple', 'arctic', 'volcano', 'rocket', 'city', 'dino', 'racetrack'],
+    ['space', 'underwater', 'library', 'castle', 'jungle', 'temple', 'colosseum', 'arctic', 'forum', 'volcano', 'trireme', 'rocket', 'atrium', 'city', 'theatre', 'olympus', 'dino', 'baths', 'delphi', 'racetrack'],
+  ],
 };
+
+/** How many badges the scene at place i of an order of n scenes needs. */
+function goalAt(i, n) {
+  const k = Math.max(0, i - FREE + 1), locked = n - FREE;
+  return locked * PER_SCENE > LAST ? Math.ceil((k * LAST) / locked) : k * PER_SCENE;
+}
 
 /** Each scene in unlock order, with whether it is open and how many more badges it needs. */
-export function sceneStatus(earned, order = sceneOrder(), released = order === sceneOrder() ? RELEASED[COURSE.id] : null) {
-  const locked = order.length - FREE;
-  const before = new Set((released || []).filter((_, i) => earned >= Math.max(0, i - FREE + 1)));
+export function sceneStatus(earned, order = sceneOrder(), released = order === sceneOrder() ? RELEASED[orderKey(COURSE)] : null) {
+  const earlier = {};
+  for (const old of released || []) old.forEach((id, i) => { earlier[id] = Math.min(earlier[id] ?? Infinity, goalAt(i, old.length)); });
   return order.map((id, i) => {
-    const k = Math.max(0, i - FREE + 1);
-    const goal = locked * PER_SCENE > LAST ? Math.ceil((k * LAST) / locked) : k * PER_SCENE;
-    const open = earned >= goal || before.has(id);
+    const goal = Math.min(goalAt(i, order.length), earlier[id] ?? Infinity);
+    const open = earned >= goal;
     return { id, name: SCENE_BY_ID[id].name, open, need: open ? 0 : goal - earned };
   });
 }

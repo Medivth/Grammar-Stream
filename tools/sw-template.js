@@ -3,6 +3,11 @@
 const VERSION = '__VERSION__';
 const FILES = __FILES__;
 const CACHE = `grammar-stream-${VERSION}`;
+// Library books (library/<id>.json, all but the precached index) are big, so each is cached the
+// first time it is opened, in a cache that survives app updates. Served from the cache at once,
+// and refreshed in the background when online.
+const LIBRARY = 'gs-library-v1';
+const isBook = (url) => /\/library\/(?!index\.json$)[^/]+\.json$/.test(url.pathname);
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
@@ -18,7 +23,19 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const req = event.request;
-  if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
+  const url = new URL(req.url);
+  if (req.method !== 'GET' || url.origin !== self.location.origin) return;
+  if (isBook(url)) {
+    event.respondWith(
+      caches.open(LIBRARY).then(async (cache) => {
+        const hit = await cache.match(req, { ignoreSearch: true });
+        const fresh = fetch(req).then((res) => { if (res.ok) cache.put(req, res.clone()); return res; });
+        if (hit) { event.waitUntil(fresh.catch(() => {})); return hit; }
+        return fresh;
+      }),
+    );
+    return;
+  }
   event.respondWith(
     caches.open(CACHE).then(async (cache) => {
       const hit = await cache.match(req, { ignoreSearch: true });

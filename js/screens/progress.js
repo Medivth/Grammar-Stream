@@ -10,7 +10,7 @@ import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, u
 import { daysPractisedThisMonth } from '../core/session.js';
 
 const TABS = [['overview', 'Stats'], ['timeline', 'Timeline'], ['places', 'Places'], ['badges', 'Badges']];
-const BADGE_ICON = { 'speed-racer': 'bolt', fifty: 'star', explorer: 'globe', scientist: 'flask', 'first-session': 'flag', 'first-mastered': 'star', hundred: 'bolt', 'all-rounder': 'target', globetrotter: 'globe', 'time-traveller': 'clock', 'lab-ready': 'flask', 'joined-up': 'link', sprinter: 'hourglass', paper: 'paper', typist: 'keyboard', 'speed-reader': 'eye', stretch: 'spark', wordsmith: 'pen', bookworm: 'book', calibrated: 'target', regular: 'check', 'five-hundred': 'trophy', 'book-talker': 'book', 'own-reader': 'eye', author: 'pen', 'alpha-omega': 'quill', 'word-hoard': 'text', clio: 'column', centurion: 'flag', charioteer: 'hourglass' };
+const BADGE_ICON = { 'speed-racer': 'bolt', fifty: 'star', explorer: 'globe', scientist: 'flask', 'first-session': 'flag', 'first-mastered': 'star', hundred: 'bolt', 'all-rounder': 'target', globetrotter: 'globe', 'time-traveller': 'clock', 'lab-ready': 'flask', 'joined-up': 'link', sprinter: 'hourglass', paper: 'paper', typist: 'keyboard', 'speed-reader': 'eye', stretch: 'spark', wordsmith: 'pen', bookworm: 'book', calibrated: 'target', regular: 'check', 'five-hundred': 'trophy', 'book-talker': 'book', 'own-reader': 'eye', author: 'pen', 'alpha-omega': 'quill', 'word-hoard': 'text', clio: 'column', centurion: 'flag', charioteer: 'hourglass', speedway: 'trophy', 'space-ace': 'spark', 'dino-expert': 'flask', 'knight-realm': 'clock', 'super-writer': 'pen', 'latin-scholar': 'column', legionary: 'text', 'poet-laureate': 'quill', 'circus-maximus': 'hourglass', 'pony-club': 'check' };
 // "the centurion armour", but "the Greek aspis"
 const lower = (label) => (/^(Greek|Roman)\b/.test(label) ? label : label[0].toLowerCase() + label.slice(1));
 
@@ -159,7 +159,7 @@ function badgesTab(app, body) {
   // grouped by where it is worn, so a big wardrobe stays tidy
   const items = Object.entries(ACCESSORIES).filter(([id]) => shown.has(id) && id !== 'none');
   const groups = SLOT_GROUPS.map(([name, slots]) => [name, items.filter(([id]) => slots.includes(slotOf(id)))]).filter(([, list]) => list.length);
-  const PLACE = { head: 'on your head', face: 'on your face', body: 'on your body', front: 'round your neck', back: 'on your back', hold: 'in one hand', hand: 'a shield on the other arm', ride: 'something to ride' };
+  const PLACE = { head: 'on your head', face: 'on your face', body: 'on your body', front: 'round your neck', back: 'on your back', hold: 'in one hand', hand: 'a shield or palette on the other arm', friend: 'a friend beside you', ride: 'something to ride' };
   const inUse = new Set(items.map(([id]) => slotOf(id)));
   const places = Object.keys(PLACE).filter((k) => inUse.has(k)).map((k) => PLACE[k]);
   if (places.length > 1) places.push(`and ${places.pop()}`);

@@ -6,6 +6,16 @@ import { COURSES, setCourse } from '../js/core/subjects.js';
 import { milestoneDefs } from '../js/core/progress.js';
 
 const CLASSICAL = ['colosseum', 'forum', 'theatre', 'olympus', 'trireme', 'atrium', 'delphi', 'baths'];
+const FIRST = ['space', 'underwater', 'racetrack', 'city', 'dino', 'castle', 'jungle', 'arctic', 'volcano', 'rocket', 'temple', 'library'];
+// added for the boy in Years 2 and 3, and for the girl in Year 6
+const BOY = ['moon', 'mars', 'pitlane', 'herohq', 'museum', 'joust', 'pirate', 'deepsea', 'pyramids'];
+const GIRL = ['pompeii', 'hadrian', 'observatory', 'glasshouse', 'studio', 'lab', 'blossom', 'aurora'];
+// which scenes each course has
+const WANT = {
+  ks1: [...FIRST, ...BOY], y3: [...FIRST, ...BOY],
+  y6: [...FIRST, ...CLASSICAL, ...GIRL, 'moon', 'pyramids'],
+  y8: [...FIRST, ...CLASSICAL, 'pompeii', 'observatory', 'hadrian', 'aurora'],
+};
 
 /** Tags balance, attributes are quoted, and no number came out as NaN or undefined. */
 function svgErrors(svg) {
@@ -23,9 +33,10 @@ function svgErrors(svg) {
 }
 
 test('every scene draws well-formed, compact SVG, alone and with either companion', () => {
-  assert.ok(SCENES.length >= 10 && SCENES.length <= 24);
+  assert.ok(SCENES.length >= 10 && SCENES.length <= 40);
   assert.equal(new Set(SCENES.map((s) => s.id)).size, SCENES.length, 'ids are unique');
-  for (const id of ['space', 'underwater', ...CLASSICAL]) assert.ok(SCENE_BY_ID[id], `has ${id}`);
+  assert.deepEqual(SCENES.map((s) => s.id).sort(), [...new Set([...FIRST, ...CLASSICAL, ...BOY, ...GIRL])].sort(), 'every scene is listed here');
+  assert.equal(new Set(SCENES.map((s) => s.name)).size, SCENES.length, 'names are unique');
   for (const sc of SCENES) {
     const plain = sceneSVG(sc.id);
     assert.deepEqual(svgErrors(plain), [], sc.id);
@@ -48,9 +59,8 @@ test('three scenes are free (the space station among them), then at least one mo
     const order = sceneOrder();
     assert.equal(new Set(order).size, order.length, `${id}: no scene twice`);
     assert.ok(order.every((s) => SCENE_BY_ID[s]), `${id}: only real scenes`);
-    // the younger courses keep the original twelve; the older ones get the classical world too
-    const want = COURSES[id].young ? SCENES.filter((s) => !CLASSICAL.includes(s.id)) : SCENES;
-    assert.deepEqual([...order].sort(), want.map((s) => s.id).sort(), `${id}: every scene once`);
+    // each course has the first twelve and its own: the boy's for Years 2/3, the classical world and the girl's for 6 and 8
+    assert.deepEqual([...order].sort(), [...WANT[id]].sort(), `${id}: its scenes, each once`);
     // the new order's own pace (scenes kept open from the first release are tested below)
     const pace = (n) => sceneStatus(n, order, null);
     const start = pace(0);
@@ -68,28 +78,52 @@ test('three scenes are free (the space station among them), then at least one mo
     assert.ok(pace(all).every((s) => s.open && s.need === 0));
     assert.ok(!pace(all - 1).every((s) => s.open));
   }
+  // every scene is in some course
+  const used = new Set(Object.keys(COURSES).flatMap((id) => { setCourse(id); return sceneOrder(); }));
+  assert.deepEqual(SCENES.filter((s) => !used.has(s.id)), []);
   setCourse('ks1');
   assert.deepEqual(sceneStatus(0).filter((s) => s.open).map((s) => s.id), ['space', 'racetrack', 'underwater']);
-  assert.equal(sceneStatus(2).find((s) => s.id === 'jungle').need, 4); // unchanged for the younger courses
+  assert.equal(sceneStatus(2).find((s) => s.id === 'jungle').need, 4); // kept from the first release
+  // the new scenes for Years 2/3 come early: the Moon base is the first one earned, and most of them within ten badges
+  assert.equal(sceneOrder()[FREE], 'moon');
+  assert.ok(sceneStatus(0).filter((s) => BOY.includes(s.id) && s.need <= 10).length >= 6);
+  setCourse('y6');
+  assert.equal(sceneOrder()[FREE], 'pompeii');
+  assert.ok(sceneStatus(0).filter((s) => GIRL.includes(s.id) && s.need <= 10).length >= 6);
   setCourse('y8');
   assert.deepEqual(sceneStatus(0).filter((s) => s.open).map((s) => s.id), ['space', 'underwater', 'temple']);
   // the Colosseum is the first one earned, and the classical scenes take turns with the others
   assert.equal(sceneOrder()[FREE], 'colosseum');
   assert.equal(sceneStatus(0).find((s) => s.id === 'colosseum').need, 1);
   assert.ok(sceneOrder().slice(FREE, FREE + 10).filter((s) => CLASSICAL.includes(s)).length >= 4);
-  assert.equal(sceneStatus(2).find((s) => s.id === 'jungle').need, 5);
+  assert.equal(sceneStatus(2).find((s) => s.id === 'jungle').need, 2); // it opened with 4 badges in the first release
+  assert.deepEqual(sceneOrder().slice(-4), ['pompeii', 'observatory', 'hadrian', 'aurora']); // her new ones come at the end
   setCourse('y6');
 });
 
-test('a scene open under the first released order never locks again', async () => {
-  const { setCourse } = await import('../js/core/subjects.js');
-  const { sceneStatus } = await import('../js/ui/scenes.js');
-  const old = { y8: ['space', 'underwater', 'temple', 'library', 'castle', 'arctic', 'jungle', 'volcano', 'rocket', 'city', 'dino', 'racetrack'], y6: ['space', 'underwater', 'library', 'castle', 'jungle', 'temple', 'arctic', 'volcano', 'rocket', 'city', 'dino', 'racetrack'] };
-  for (const course of ['y8', 'y6']) {
+test('a scene open under any released order never locks again', () => {
+  // the first release: twelve scenes, one per badge
+  const first = {
+    young: ['space', 'racetrack', 'underwater', 'dino', 'city', 'castle', 'rocket', 'volcano', 'jungle', 'arctic', 'library', 'temple'],
+    y8: ['space', 'underwater', 'temple', 'library', 'castle', 'arctic', 'jungle', 'volcano', 'rocket', 'city', 'dino', 'racetrack'],
+    y6: ['space', 'underwater', 'library', 'castle', 'jungle', 'temple', 'arctic', 'volcano', 'rocket', 'city', 'dino', 'racetrack'],
+  };
+  // the second (Years 6 and 8): the classical world joined, 20 scenes, some opening in pairs
+  const second = {
+    y8: ['space', 'underwater', 'temple', 'colosseum', 'library', 'trireme', 'castle', 'forum', 'arctic', 'theatre', 'jungle', 'olympus', 'volcano', 'atrium', 'rocket', 'delphi', 'city', 'baths', 'dino', 'racetrack'],
+    y6: ['space', 'underwater', 'library', 'castle', 'jungle', 'temple', 'colosseum', 'arctic', 'forum', 'volcano', 'trireme', 'rocket', 'atrium', 'city', 'theatre', 'olympus', 'dino', 'baths', 'delphi', 'racetrack'],
+  };
+  for (const course of ['ks1', 'y3', 'y8', 'y6']) {
     setCourse(course);
-    for (let earned = 0; earned <= 12; earned++) {
-      const open = new Set(sceneStatus(earned).filter((x) => x.open).map((x) => x.id));
-      old[course].forEach((id, i) => { if (earned >= Math.max(0, i - 2)) assert.ok(open.has(id), `${course}: ${id} with ${earned} badges`); });
+    const key = COURSES[course].young ? 'young' : course;
+    for (let earned = 0; earned <= 20; earned++) {
+      const now = sceneStatus(earned), open = new Set(now.filter((x) => x.open).map((x) => x.id));
+      first[key].forEach((id, i) => { if (earned >= Math.max(0, i - 2)) assert.ok(open.has(id), `${course}: ${id} with ${earned} badges`); });
+      if (second[key]) sceneStatus(earned, second[key], null).forEach((x) => { if (x.open) assert.ok(open.has(x.id), `${course}: ${x.id} with ${earned} badges (second release)`); });
+      // the badges a locked scene says it needs are exactly what opens it
+      const at = (n, id) => sceneStatus(n).find((y) => y.id === id).open;
+      for (const x of now) if (!x.open) assert.ok(at(earned + x.need, x.id) && !at(earned + x.need - 1, x.id), `${course}: ${x.id} opens after ${x.need} more`);
     }
   }
+  setCourse('y6');
 });

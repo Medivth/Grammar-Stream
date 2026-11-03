@@ -584,3 +584,50 @@ pre.code code { border: 0; padding: 0; background: none; font-size: 0.95rem; }
 .look-thumb svg { width: 100%; height: 100%; display: block; }
 .wardrobe-group { margin-top: 16px; }
 .wardrobe-group h4 { margin: 0 0 8px; font-family: var(--display); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+
+/* --- library: the shelf on the Reading page and the book reader (js/screens/reading.js, book.js) --- */
+.shelf { display: grid; gap: 12px; }
+@media (min-width: 640px) { .shelf { grid-template-columns: 1fr 1fr; } }
+.shelf-book { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 16px; border: 2px solid var(--line); background: var(--card); box-shadow: 0 3px 0 var(--line); color: var(--ink); text-decoration: none; }
+.shelf-book:hover { border-color: var(--accent); }
+.shelf-book:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.shelf-title { font-family: var(--display); font-weight: 800; font-size: 1.1rem; line-height: 1.2; }
+.shelf-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0; }
+.shelf-blurb { color: var(--muted); }
+.shelf-status { font-weight: 700; color: var(--accent); }
+.shelf-status.done { color: var(--good); }
+
+.book-head { position: sticky; top: 0; z-index: 5; margin: -16px -16px 16px; background: var(--bg); }
+.book-top { margin: 0; padding: 8px 16px; min-height: 60px; }
+.book-top-title { flex: 1; min-width: 0; font-size: 1.1rem !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.book-aa { font-family: var(--display); font-weight: 800; font-size: 1.05rem; }
+.book-progress { height: 4px; border-radius: 0; }
+.book-panels { position: absolute; top: 100%; right: 8px; left: 8px; display: flex; justify-content: flex-end; pointer-events: none; }
+.book-panels > .card { pointer-events: auto; width: 100%; max-width: 480px; max-height: calc(100vh - 90px); overflow-y: auto; margin-top: 6px; box-shadow: var(--shadow); }
+.book-pref-row { display: grid; grid-template-columns: 5.2em 1fr; gap: 10px; align-items: center; }
+.book-pref-row + .book-pref-row, .book-prefs > p { margin-top: 12px; }
+.book-pref-label { font-weight: 700; }
+.book-seg { display: flex; gap: 8px; align-items: center; }
+.book-seg > button { flex: 1 1 0; min-width: 0; padding: 8px 10px; }
+.book-size-now { min-width: 3.2em; text-align: center; }
+.book-toc h2 { font-size: 1.15rem; }
+.book-toc-list { list-style: none; margin: 0; padding: 0; }
+.book-toc-part { font-family: var(--display); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding: 12px 4px 4px; }
+.book-toc-item { width: 100%; text-align: left; border: none; box-shadow: none; border-radius: 10px; min-height: 44px; padding: 8px 10px; background: transparent; }
+.book-toc-item:hover { background: var(--bg-2); }
+.book-toc-item.cur { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.book-meta { margin-bottom: 8px; font-size: 1rem; line-height: 1.5; }
+.book-who { margin: 6px 0 0; }
+.book-text { --book-size: 1; font-size: calc(1.1rem * var(--book-size)); line-height: 1.7; max-width: 34em; margin: 0 auto; overflow-wrap: break-word; hyphens: auto; }
+.book-text p { margin: 0 0 0.95em; }
+.book-text p.verse { white-space: pre-line; padding-left: 1.2em; }
+.book-text .book-ch-title { font-size: 1.5em; margin: 0.4em 0 0.9em; }
+.book-text .book-part { margin: 0.6em 0 0; }
+.book-text .book-break { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.2em 0; }
+.book-say-row { display: flex; gap: 10px; align-items: flex-start; }
+.book-say-row p { flex: 1; min-width: 0; }
+.book-say-row .say-btn { margin-top: 0.1em; width: 40px; height: 40px; min-height: 40px; }
+.book-end { margin-top: 28px; font-size: 1rem; line-height: 1.5; }
+.book-nav { justify-content: space-between; margin: 16px 0 8px; }
+.book-finish { margin-bottom: 8px; }
+.book-source { margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--line); }

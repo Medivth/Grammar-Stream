@@ -70,6 +70,7 @@ export const MILESTONES = [
   { id: 'five-hundred', title: 'Scholar', desc: 'Know 500 things', goal: 500, measure: (s) => learnedCount(s), unlock: 'gradcap' },
 ];
 
+const secure = (t) => ['proficient', 'mastered'].includes(t?.state);
 const secureIn = (s, db, pred) => Object.entries(s.topics).filter(([id, t]) => db.topics[id] && pred(db.topics[id]) && ['proficient', 'mastered'].includes(t.state)).length;
 const bestSprint = (s) => Math.max(0, ...(s.sprints || []).map((x) => x.correct));
 
@@ -93,6 +94,12 @@ export const KS1_MILESTONES = [
   { id: 'book-talker', title: 'Book talker', desc: 'Have 10 book talks with your grown-up', goal: 10, measure: (s) => (s.talks || []).length, unlock: 'owl' },
   { id: 'own-reader', title: 'Reading on my own', desc: 'Read 300 minutes on your own', goal: 300, measure: (s) => (s.reading || []).filter((r) => r.solo).reduce((a, r) => a + r.minutes, 0), unlock: 'surfboard' },
   { id: 'author', title: 'Author', desc: 'Hand in 3 pieces of writing', goal: 3, measure: (s) => (s.pieces || []).filter((p) => p.submittedDay).length, unlock: 'bowtie' },
+  // racing, space, dinosaurs, knights and superheroes: the big rides and the hero suit
+  { id: 'speedway', title: 'Speedway champion', desc: 'Get 25 right in one sprint', goal: 25, measure: bestSprint, unlock: 'trophy' },
+  { id: 'space-ace', title: 'Space ace', desc: 'Secure both space topics: the Sun, Moon and planets, and exploring space', goal: 2, measure: (s) => ['science.space', 'science.explore'].filter((id) => secure(s.topics[id])).length, unlock: 'rocket' },
+  { id: 'dino-expert', title: 'Dino expert', desc: 'Secure the dinosaurs topic and the rocks and fossils topic', goal: 2, measure: (s) => ['science.dinosaurs', 'science.rocks'].filter((id) => secure(s.topics[id])).length, unlock: 'dinoride' },
+  { id: 'knight-realm', title: 'Knight of the realm', desc: 'Secure 4 history topics', goal: 4, measure: (s, db) => secureIn(s, db, (t) => t.subject === 'history'), unlock: 'horse' },
+  { id: 'super-writer', title: 'Super writer', desc: 'Hand in 8 pieces of writing', goal: 8, measure: (s) => (s.pieces || []).filter((p) => p.submittedDay).length, unlock: 'herosuit' },
 ];
 
 // Year 3: the Year 2 badges (so nothing he has earned goes away), with Year 3 goals added
@@ -103,14 +110,24 @@ export const Y3_MILESTONES = [
   { id: 'three-hundred', title: 'Three hundred', desc: 'Know 300 things', goal: 300, measure: (s) => learnedCount(s), unlock: 'scarf' },
 ];
 
+// Year 6: the main badges, plus five that unlock the best Roman pieces and the pony
+const knownIn = (s, db, subject) => Object.entries(s.cards).filter(([id, c]) => isKnown(c) && db.topics[db.items[id]?.topic]?.subject === subject).length;
+const daysPractised = (s) => new Set(s.sessions.filter((x) => x.completed).map((x) => x.day)).size;
+export const Y6_MILESTONES = [
+  { id: 'latin-scholar', title: 'Latin scholar', desc: 'Secure 5 Latin topics', goal: 5, measure: (s, db) => secureIn(s, db, (t) => t.subject === 'latin'), unlock: 'galea' },
+  { id: 'legionary', title: 'Legionary', desc: 'Know 100 things in Latin', goal: 100, measure: (s, db) => knownIn(s, db, 'latin'), unlock: 'lorica' },
+  { id: 'poet-laureate', title: 'Poet laureate', desc: 'Hand in 10 weekly writing pieces', goal: 10, measure: (s) => (s.pieces || []).filter((p) => p.submittedDay).length, unlock: 'laurel' },
+  { id: 'circus-maximus', title: 'Circus Maximus', desc: 'Get 30 right in one arithmetic sprint', goal: 30, measure: (s) => Math.max(0, ...(s.sprints || []).map((x) => x.correct)), unlock: 'chariot' },
+  { id: 'pony-club', title: 'Pony club', desc: 'Practise on 40 different days', goal: 40, measure: daysPractised, unlock: 'pony' },
+];
+
 // Year 8: the main badges, plus five classical ones that unlock the best Greek and Roman pieces
 const ANCIENT_WORLD = ['history.athens', 'history.sparta', 'history.persian-wars', 'history.alexander', 'history.rome', 'history.byzantium'];
-const secure = (t) => ['proficient', 'mastered'].includes(t?.state);
 export const Y8_MILESTONES = [
   { id: 'alpha-omega', title: 'Alpha to omega', desc: 'Secure 5 Ancient Greek topics', goal: 5, measure: (s, db) => secureIn(s, db, (t) => t.subject === 'greek'), unlock: 'linothorax' },
-  { id: 'word-hoard', title: 'Word hoard', desc: 'Know 250 things in Ancient Greek', goal: 250, measure: (s, db) => Object.entries(s.cards).filter(([id, c]) => isKnown(c) && db.topics[db.items[id]?.topic]?.subject === 'greek').length, unlock: 'cloak' },
+  { id: 'word-hoard', title: 'Word hoard', desc: 'Know 250 things in Ancient Greek', goal: 250, measure: (s, db) => knownIn(s, db, 'greek'), unlock: 'cloak' },
   { id: 'clio', title: 'Hall of Clio', desc: 'Secure 4 ancient-world history topics: Athens, Sparta, the Persian Wars, Alexander, Rome or Byzantium', goal: 4, measure: (s) => ANCIENT_WORLD.filter((id) => secure(s.topics[id])).length, unlock: 'galea' },
-  { id: 'centurion', title: 'Centurion', desc: 'Practise on 100 different days', goal: 100, measure: (s) => new Set(s.sessions.filter((x) => x.completed).map((x) => x.day)).size, unlock: 'lorica' },
+  { id: 'centurion', title: 'Centurion', desc: 'Practise on 100 different days', goal: 100, measure: daysPractised, unlock: 'lorica' },
   { id: 'charioteer', title: 'Charioteer', desc: 'Get 30 right in one sprint', goal: 30, measure: bestSprint, unlock: 'chariot' },
 ];
 
@@ -118,7 +135,8 @@ export const milestoneDefs = () => {
   if (COURSE.id === 'y3') return Y3_MILESTONES;
   if (COURSE.young) return KS1_MILESTONES;
   const main = MILESTONES.filter((m) => m.id !== 'paper' || COURSE.tools.includes('paper'));
-  return COURSE.id === 'y8' ? [...main, ...Y8_MILESTONES] : main;
+  if (COURSE.id === 'y8') return [...main, ...Y8_MILESTONES];
+  return COURSE.id === 'y6' ? [...main, ...Y6_MILESTONES] : main;
 };
 
 export function milestones(state, db) {

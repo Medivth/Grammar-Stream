@@ -2,6 +2,9 @@
 // SUBJECTS, SUBJECT_BY_ID and PLACEMENT_ORDER are filled in place by setCourse(), so modules
 // that imported them see the active course. Subject order is the rotation order for new learning.
 
+// racing, space, superheroes, dinosaurs and knights for Years 2 and 3 (the trophy, the hero suit and the big rides are earned)
+const YOUNG_STARTER = ['racesuit', 'flag', 'gokart', 'spacesuit', 'saturn', 'alien', 'heroshield', 'dinohood', 'fossilhammer', 'babydino', 'armour', 'sword', 'crestshield'];
+
 export const COURSES = {
   y6: {
     id: 'y6', title: 'Year 6 to grammar school', short: 'Year 6 → 7',
@@ -23,7 +26,10 @@ export const COURSES = {
     extra: ['latin'], // practise any time, outside the daily session
     writing: true,
     readAloud: false,
-    starter: ['none', 'yuzu', 'flower', 'bow', 'glasses', 'scarf', 'bird', 'chef', 'partyhat'],
+    starter: ['none', 'yuzu', 'flower', 'bow', 'glasses', 'scarf', 'bird', 'chef', 'partyhat',
+      // art, science, books, music, friends and wheels; then a Roman set (the helmet, armour, laurel, chariot and pony are earned)
+      'beret', 'palette', 'paintbrush', 'flowercrown', 'sunhat', 'headband', 'camera', 'telescope', 'microscope', 'book', 'violin', 'cat', 'fox', 'rollerskates', 'bicycle',
+      'toga', 'stola', 'scroll', 'scutum', 'gladius', 'olivebranch'],
   },
   ks1: {
     id: 'ks1', title: 'Year 2 greater depth', short: 'Year 2+',
@@ -45,7 +51,7 @@ export const COURSES = {
     writing: true, // weekly pieces built on his reading (tools/content-src/ks1/writing.mjs)
     readAloud: true,
     young: true, sprintUp: 12, next: 'y3',
-    starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird', 'astronaut', 'scooter', 'partyhat'],
+    starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird', 'astronaut', 'scooter', 'partyhat', ...YOUNG_STARTER],
   },
   // Year 3 includes all of Year 2 (same subjects and item ids), so moving up keeps every card.
   // Year 2's stretch topics are core here (they carry coreIn: ['y3']); Year 4 tasters are the stretch.
@@ -69,7 +75,7 @@ export const COURSES = {
     writing: true,
     readAloud: true,
     young: true, sprintUp: 14, prev: 'ks1',
-    starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird', 'astronaut', 'scooter', 'partyhat'],
+    starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird', 'astronaut', 'scooter', 'partyhat', ...YOUNG_STARTER],
   },
   // Year 8 at a selective school, aiming above the top fifth: KS3 at depth with GCSE tasters,
   // Ancient Greek towards GCSE, and Greek myth as the theme (original characters, not Riordan's).
