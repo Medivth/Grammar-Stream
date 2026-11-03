@@ -631,3 +631,5 @@ pre.code code { border: 0; padding: 0; background: none; font-size: 0.95rem; }
 .book-nav { justify-content: space-between; margin: 16px 0 8px; }
 .book-finish { margin-bottom: 8px; }
 .book-source { margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--line); }
+.shelf-more summary { cursor: pointer; font-weight: 700; padding: 10px 0; }
+.shelf-more[open] summary { margin-bottom: 8px; }

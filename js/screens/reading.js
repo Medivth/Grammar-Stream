@@ -36,24 +36,29 @@ export function readingScreen(app) {
   // the library: free books to read right here, for this course
   const shelfEl = h('div', { class: 'card stack' });
   const libBook = (id) => app.library?.books.find((b) => b.id === id);
+  const SHOW = 6;
+  const card = (b) => {
+    const pl = state.library?.[b.id];
+    const status = pl?.done ? 'Finished ✓' : pl?.opened != null ? `Chapter ${Math.min(pl.ch + 1, b.chapters)} of ${b.chapters}` : null;
+    return h('a', { class: 'shelf-book', href: `#/book/${encodeURIComponent(b.id)}` },
+      h('span', { class: 'shelf-title' }, b.title),
+      h('span', { class: 'muted small' }, `${b.author}, ${b.year}`),
+      h('span', { class: 'shelf-chips' },
+        COURSE.young ? h('span', { class: `chip ${b.level === 'read-together' ? 'proficient' : 'mastered'}` }, LEVELS[b.level]) : null,
+        b.kind === 'retold' ? h('span', { class: 'chip stretch' }, 'Retold') : null,
+        h('span', { class: 'chip' }, aboutTime(b.words))),
+      h('span', { class: 'small shelf-blurb' }, b.blurb),
+      status ? h('span', { class: `small shelf-status${pl?.done ? ' done' : ''}` }, status) : null);
+  };
   const renderShelf = (index) => {
-    const books = shelfFor(index, COURSE.id);
+    // books already started come first
+    const started = (b) => (state.library?.[b.id]?.opened != null && !state.library[b.id].done ? 0 : 1);
+    const books = shelfFor(index, COURSE.id).map((b, i) => [b, i]).sort((x, y) => started(x[0]) - started(y[0]) || x[1] - y[1]).map(([b]) => b);
     shelfEl.replaceChildren(h('h2', {}, 'Library: books you can read here'),
       h('p', { class: 'muted', style: { margin: 0 } }, COURSE.young ? 'Free books to read in the app. “Read together” books are for sharing with your grown-up; “On my own” books are ones you can try by yourself.'
         : 'Classic books, free to read in the app. Each one keeps your place, and works offline once you have opened it.'),
-      books.length ? h('div', { class: 'shelf' }, books.map((b) => {
-        const pl = state.library?.[b.id];
-        const status = pl?.done ? 'Finished ✓' : pl?.opened != null ? `Chapter ${Math.min(pl.ch + 1, b.chapters)} of ${b.chapters}` : null;
-        return h('a', { class: 'shelf-book', href: `#/book/${encodeURIComponent(b.id)}` },
-          h('span', { class: 'shelf-title' }, b.title),
-          h('span', { class: 'muted small' }, `${b.author}, ${b.year < 0 ? `${-b.year} BC` : b.year}`),
-          h('span', { class: 'shelf-chips' },
-            COURSE.young ? h('span', { class: `chip ${b.level === 'read-together' ? 'proficient' : 'mastered'}` }, LEVELS[b.level]) : null,
-            b.kind === 'retold' ? h('span', { class: 'chip stretch' }, 'Retold') : null,
-            h('span', { class: 'chip' }, aboutTime(b.words))),
-          h('span', { class: 'small shelf-blurb' }, b.blurb),
-          status ? h('span', { class: `small shelf-status${pl?.done ? ' done' : ''}` }, status) : null);
-      })) : h('p', { class: 'muted' }, index ? 'No library books for this course yet.' : 'The library could not load. Connect to the internet once, and it will be here offline after that.'));
+      books.length ? [h('div', { class: 'shelf' }, books.slice(0, SHOW).map(card)), books.length > SHOW ? h('details', { class: 'shelf-more' }, h('summary', {}, `${books.length - SHOW} more books`), h('div', { class: 'shelf' }, books.slice(SHOW).map(card))) : null]
+        : h('p', { class: 'muted' }, index ? 'No library books for this course yet.' : 'The library could not load. Connect to the internet once, and it will be here offline after that.'));
   };
   if (app.library) renderShelf(app.library);
   else {
