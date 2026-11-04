@@ -2,13 +2,13 @@
 // Subject pages show each subject as a journey of topics.
 
 import { h, s, mount } from '../ui/dom.js';
-import { COMPANION_FACTS, speciesOf, companionNoun } from '../ui/capybara.js';
+import { COMPANION_FACTS, speciesOf, companionNoun, capybaraEl, slotOf } from '../ui/capybara.js';
 import { companionEl } from '../ui/scenes.js';
 import { icon, iconPath, SUBJECT_ICON } from '../ui/icons.js';
 import { SUBJECTS, SUBJECT_BY_ID, COURSE, isStretch } from '../core/subjects.js';
 import { paperSpec } from '../gen/paper.js';
 import { topicStatus, stretchReady } from '../core/mastery.js';
-import { daysPractisedThisMonth, planDay, extraStatus } from '../core/session.js';
+import { daysPractisedThisMonth, planDay, extraStatus, bonusProgress, bonusStatusLine } from '../core/session.js';
 import { learnedCount, subjectStats, planSummary, isKnown } from '../core/progress.js';
 import { formatDay } from '../core/dates.js';
 import { restTime } from './util.js';
@@ -163,6 +163,48 @@ function todayCard(app) {
       h('p', { class: 'small', style: { margin: btn ? '14px 0 0' : '0', opacity: 0.85 } }, h('strong', {}, `${c.name || 'Your companion'}’s fact: `), fact))));
 }
 
+/** What the bonus card says: progress, what is ready, and the prize (pure, so it can be tested). */
+export function bonusCardInfo(state, db, today) {
+  const bp = bonusProgress(state, db);
+  if (!bp || !bp.total) return null;
+  const st = bonusStatusLine(state, db, today);
+  const ready = [st.due ? `${st.due} to review` : null, st.lesson ? (bp.started ? 'next lesson ready' : null) : null, st.practice ? 'a practice round ready' : null].filter(Boolean).join(' · ');
+  const progress = `${bp.done} of ${bp.total} part${bp.total === 1 ? '' : 's'} finished`;
+  if (bp.prized) {
+    return { bp, complete: true, eyebrow: 'Bonus topic complete ✓', progress, ready, prize: `You won ${bp.def.prizeText}!`, button: st.empty ? null : 'Review it' };
+  }
+  return { bp, complete: false, eyebrow: 'Bonus topic', progress: bp.started ? progress : `${bp.total} parts`, ready, prize: `Finish it to win ${bp.def.prizeText}.`, button: !bp.started ? 'Start the bonus topic' : st.empty ? null : 'Carry on', waiting: st.empty ? 'More to do tomorrow, when some questions are ready to review.' : null };
+}
+
+/** The bonus topic, near the top of the page: open any time (not in the rest before bedtime). */
+function bonusCard(app, rest) {
+  const { state, db } = app;
+  if (rest) return null;
+  const info = bonusCardInfo(state, db, app.today());
+  if (!info) return null;
+  const { bp } = info;
+  const c = state.profile?.companion || {};
+  const subj = SUBJECT_BY_ID[bp.def.subject];
+  const wear = { ...(c.wear || (c.accessory && c.accessory !== 'none' ? { [slotOf(c.accessory)]: c.accessory } : {})) };
+  for (const id of bp.def.prize) wear[slotOf(id)] = id;
+  const pct = Math.round((100 * bp.done) / bp.total);
+  const go = () => app.go('#/play/bonus');
+  return h('section', { class: `bonus-card${info.complete ? ' complete' : ''}`, style: { '--bonus': subj?.colour || 'var(--accent)' }, 'aria-label': `Bonus topic: ${bp.def.title}` },
+    // a picture of the companion with the prize (just a preview: its lamp is not a switch here)
+    h('div', { class: 'bonus-art', 'data-no-lamp': '', 'aria-hidden': 'true' }, capybaraEl({ ...c, wear, accessory: bp.def.prize.at(-1), mood: 'happy', scene: undefined }, 'capy')),
+    h('div', { class: 'bonus-txt' },
+      h('div', { class: 'eyebrow' }, icon(info.complete ? 'check' : 'star'), ` ${info.eyebrow}`),
+      h('h2', {}, bp.def.title),
+      info.complete ? null : h('p', { class: 'bonus-blurb' }, bp.def.blurb),
+      h('div', { class: 'bonus-progress' },
+        h('span', { class: 'bonus-bar', role: 'progressbar', 'aria-valuenow': pct, 'aria-valuemin': 0, 'aria-valuemax': 100, 'aria-label': info.progress }, h('i', { style: { width: `${pct}%` } })),
+        h('span', {}, info.progress)),
+      h('p', { class: 'bonus-prize' }, icon('trophy'), h('span', {}, info.prize)),
+      info.ready && info.button ? h('p', { class: 'bonus-ready' }, info.ready) : null,
+      info.button ? h('button', { class: 'btn-bonus', type: 'button', onclick: go }, icon('play'), ` ${info.button}`)
+        : h('p', { class: 'bonus-ready' }, info.complete ? 'All reviewed for now. Its questions come back in your daily sessions.' : info.waiting)));
+}
+
 function statStrip(app) {
   const { state, db } = app;
   const topics = Object.values(state.topics).filter((t) => t.state === 'proficient' || t.state === 'mastered').length;
@@ -220,6 +262,7 @@ export function homeScreen(app) {
       h('button', { class: 'btn-icon', 'aria-label': 'How it looks', title: 'How it looks', onclick: () => app.go('#/display') }, icon('text')),
       h('button', { class: 'btn-icon', 'aria-label': 'Grown-ups', title: 'Grown-ups', onclick: () => app.go('#/parent') }, icon('lock'))),
     todayCard(app),
+    bonusCard(app, rest),
     statStrip(app),
     homeCards(app, rest),
     h('div', { class: 'section-title' }, h('h2', {}, 'Your world'), h('span', { class: 'muted small' }, 'Tap an island')),
