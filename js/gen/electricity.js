@@ -38,13 +38,15 @@ const typed = (prompt, value, unit, explain, steps, extra = {}) => ({ kind: 'typ
 const C = (bottom, top, extra = {}) => ({ type: 'circuit', bottom, top, ...extra });
 const P = (bottom, branches, extra = {}) => ({ type: 'circuit', bottom, branches, ...extra });
 const pic = (diagram, caption) => ({ kind: 'maths', diagram, ...(caption ? { caption } : {}) });
-/** How a bulb is drawn glowing: 1 dim, 2 as with one cell for one bulb, 3 bright. */
-export const glowFor = (perBulb) => (perBulb >= 1.5 ? 3 : perBulb >= 1 ? 2 : 1);
-/** The same circuit drawn working: bulbs glowing as brightly as their share of the push, buzzers sounding, motors spinning. */
+/** How a bulb is drawn glowing, from its share of the push (in cells): 1 dim, 2 as with one cell for one bulb, 3 bright. */
+export const glowFor = (share) => (share >= 1.5 ? 3 : share >= 1 ? 2 : 1);
+const LOADS = ['bulb', 'buzzer', 'motor'];
+/** The same circuit drawn working: buzzers sounding, motors spinning, and bulbs glowing as brightly as
+ * their share of the push. Every bulb, buzzer and motor in a loop shares the push, not just the bulbs. */
 function working(d, spin = 1) {
   const v = Math.abs(push(d.bottom));
   const on = (row, live) => {
-    const per = v / Math.max(1, count(row, 'bulb'));
+    const per = v / Math.max(1, row.map(part).filter((p) => LOADS.includes(p.k)).length);
     return row.map(part).map((p) => {
       if (!live) return p;
       if (p.k === 'bulb') return { ...p, lit: glowFor(per) };
@@ -57,7 +59,7 @@ function working(d, spin = 1) {
   if (d.branches) return { ...d, bottom: d.bottom.map(part), branches: d.branches.map((b) => on(b, live && !broken(b))) };
   return { ...d, bottom: d.bottom.map(part), top: on(d.top, live && !broken(d.top)) };
 }
-const TRACE = 'Trace the loop: start at one end of the cell, follow the wire all the way round and back to the other end.';
+const TRACE = 'Trace the loop: start at one end of the cell or battery, follow the wire all the way round and back to the other end.';
 const VERB = { bulb: 'light', buzzer: 'sound', motor: 'spin' };
 
 // ---------------------------------------------------------------- will it work?
@@ -93,9 +95,12 @@ function willItWork(level, rng) {
       { diagram: d, elec: { ask: 'works', target: 'bulb' }, ...(lights ? { visual: pic(working(d), 'Complete loop: the bulb lights.') } : {}) });
   }
   if (level === 2) {
+    // two components share one loop only as a bulb and a motor: a school buzzer lets so little
+    // current through that a bulb or motor in series with it barely works
     const target = rng.pick(['bulb', 'buzzer', 'motor']);
-    const extra = rng.pick([null, ...['bulb', 'buzzer', 'motor'].filter((k) => k !== target)]);
-    const cells = rng.pick(['cell', 'battery-2', 'battery-3']);
+    const extra = target === 'buzzer' ? null : rng.pick([null, target === 'bulb' ? 'motor' : 'bulb']);
+    const cells = extra ? rng.pick(['battery-2', 'battery-3']) : rng.pick(['cell', 'battery-2', 'battery-3']);
+    const src = cells === 'cell' ? 'the cell' : 'the battery';
     const kinds = ['complete', 'open', 'gap', 'two-switches'];
     if (target === 'bulb' && !extra) kinds.push('reversed', 'reversed');
     const kind = rng.pick(kinds);
@@ -115,14 +120,14 @@ function willItWork(level, rng) {
     const NR = 'No: the bulb only works one way round';
     const YR = 'Yes: a bulb works either way round';
     let right, wrongs, see, works;
-    if (kind === 'reversed') { right = YR; wrongs = [NR, NS]; works = true; see = 'The cell has been turned round. That changes the direction of the current, but the loop is still complete.'; }
+    if (kind === 'reversed') { right = YR; wrongs = [NR, NS]; works = true; see = `${cap(src)} has been turned round. That changes the direction of the current, but the loop is still complete.`; }
     else if (kind === 'complete') { right = Y; wrongs = [NS, rng.pick([NG, 'No: each part needs its own cell'])]; works = true; see = `The switch is closed and there are no gaps, so everything${extra ? ` (the ${target} and the ${extra})` : ''} is in one complete loop.`; }
     else if (kind === 'gap') { right = NG; wrongs = [Y, NS]; works = false; see = 'Two wire ends are not joined: there is a gap in the loop.'; }
     else { right = NS; wrongs = [Y, NG]; works = false; see = kind === 'two-switches' ? 'One switch is closed, but the other is **open**. One gap is enough to break the loop.' : 'The switch is **open**: there is a gap between its contacts.'; }
     const does = `${name} ${VERB[target]}s`;
     return choice(`${who} builds this circuit. ${q}`, right, wrongs, rng,
       works ? `The loop is complete, so a current flows all the way round and ${does}.${kind === 'reversed' ? ' A filament bulb lights whichever way the current flows through it.' : ''}` : `A gap anywhere in a series circuit stops the current everywhere, so nothing in the loop works.`,
-      [TRACE, see, works ? `**Predict:** ${does}. **Explain:** the cell pushes a current all the way round the loop${extra ? ', through both components' : ''}.` : `**Predict:** ${name} does not ${VERB[target]}. **Explain:** a current can only flow round a complete loop, and the gap breaks it.`],
+      [TRACE, see, works ? `**Predict:** ${does}. **Explain:** ${src} pushes a current all the way round the loop${extra ? ', through both components, which share its push' : ''}.` : `**Predict:** ${name} does not ${VERB[target]}. **Explain:** a current can only flow round a complete loop, and the gap breaks it.`],
       { diagram: d, elec: { ask: 'works', target }, ...(works ? { visual: pic(working(d)) } : {}) });
   }
   const kind = rng.pick(['oppose', 'three-one', 'motor', 'tagged-switches', 'bulb-turned']);
@@ -361,7 +366,7 @@ function seriesParallel(level, rng) {
         { diagram: d, elec: { ask: 'break', broken: tags[k] } });
     }
     const d = P(['battery-2'], bulbs.map((b) => [b]));
-    const after = P(['battery-2'], bulbs.map((b, i) => [i === k ? b : { ...b, lit: 2 }]));
+    const after = P(['battery-2'], bulbs.map((b, i) => [i === k ? b : { ...b, lit: glowFor(2) }]));
     return choice(`In this parallel circuit, the filament in bulb ${tags[k]} breaks. What happens to the other bulb${n > 2 ? 's' : ''}?`, `${n > 2 ? 'They stay' : 'It stays'} lit, just as bright`, [`${n > 2 ? 'They go' : 'It goes'} out too`, `${n > 2 ? 'They get' : 'It gets'} much dimmer`], rng,
       'Each bulb is on its own branch, its own loop through the battery. Breaking one branch leaves the others complete, and each still gets the full push of the battery.',
       ['A parallel circuit has separate branches: each bulb has its own path back to the battery.', `Bulb ${tags[k]}’s branch now has a gap, but the other branch${n > 2 ? 'es are' : ' is'} still complete.`, '**Predict:** the other bulbs stay lit, just as bright. **Explain:** each branch still gets the whole push of the battery.'],
@@ -381,7 +386,7 @@ function seriesParallel(level, rng) {
       const branches = tags.slice(0, n).map((t, i) => (i === where ? [{ k: 'bulb', tag: t }, S] : [{ k: 'bulb', tag: t }]));
       d = P(where === -1 ? ['battery-2', S] : ['battery-2'], branches);
       right = where === -1 ? 'All the bulbs go out' : `Only bulb ${tags[where]} goes out`;
-      after = P(where === -1 ? ['battery-2', { ...S, open: true }] : ['battery-2'], branches.map((b, i) => b.map((p) => (p.k === 'switch' ? { ...p, open: true } : where !== -1 && i !== where && p.k === 'bulb' ? { ...p, lit: 2 } : p))));
+      after = P(where === -1 ? ['battery-2', { ...S, open: true }] : ['battery-2'], branches.map((b, i) => b.map((p) => (p.k === 'switch' ? { ...p, open: true } : where !== -1 && i !== where && p.k === 'bulb' ? { ...p, lit: glowFor(2) } : p))));
     }
     const pool = ['All the bulbs go out', ...tags.slice(0, n).map((t) => `Only bulb ${t} goes out`), 'Nothing changes at all'];
     const wrongs = rng.shuffle(pool.filter((t) => t !== right)).slice(0, 2);
@@ -429,11 +434,11 @@ export function oddOneOut(ys) {
 }
 // [question, change, measure, keep the same, wrong (not a variable that matters), heading for the results, values for 1..5, unit, rising?]
 const INVESTIGATIONS = [
-  { q: 'Does the number of cells affect how bright a bulb is?', change: 'the number of cells', measure: 'the brightness of the bulb', same: 'the same bulb and wires', silly: 'the colour of the wires', iv: 'Number of cells', dv: 'Light level (lux)', xs: [1, 2, 3, 4], base: [40, 150, 330, 590], up: true, concl: ['The more cells, the brighter the bulb', 'The more cells, the dimmer the bulb', 'The number of cells makes no difference'] },
-  { q: 'Does the number of cells affect how loud a buzzer is?', change: 'the number of cells', measure: 'the loudness of the buzzer', same: 'the same buzzer, the same distance from the sound meter', silly: 'the time of day', iv: 'Number of cells', dv: 'Loudness (dB)', xs: [1, 2, 3, 4], base: [58, 64, 69, 73], up: true, concl: ['The more cells, the louder the buzzer', 'The more cells, the quieter the buzzer', 'The number of cells makes no difference'] },
-  { q: 'Does the number of bulbs in a series circuit affect how bright they are?', change: 'the number of bulbs', measure: 'the brightness of a bulb', same: 'the same battery and wires', silly: 'the shape of the table', iv: 'Number of bulbs', dv: 'Light level (lux)', xs: [1, 2, 3, 4], base: [590, 240, 120, 70], up: false, concl: ['The more bulbs, the dimmer each one', 'The more bulbs, the brighter each one', 'The number of bulbs makes no difference'] },
-  { q: 'Does the length of a thin wire in the circuit affect how bright a bulb is?', change: 'the length of the thin wire', measure: 'the brightness of the bulb', same: 'the same thickness and type of wire, and the same cells', silly: 'the colour of the bulb holder', iv: 'Length of wire (cm)', dv: 'Light level (lux)', xs: [10, 20, 30, 40, 50], base: [400, 310, 240, 190, 150], up: false, concl: ['The longer the wire, the dimmer the bulb', 'The longer the wire, the brighter the bulb', 'The length of the wire makes no difference'] },
-  { q: 'Does the number of cells affect how quickly a motor winds up a small weight?', change: 'the number of cells', measure: 'the time to lift the weight 50 cm', same: 'the same motor and the same weight', silly: 'the name of the motor', iv: 'Number of cells', dv: 'Time to lift (s)', xs: [1, 2, 3, 4], base: [24, 12, 8, 6], up: false, concl: ['The more cells, the faster the motor lifts it', 'The more cells, the slower the motor lifts it', 'The number of cells makes no difference'] },
+  { q: 'Does the number of cells affect how bright a bulb is?', change: 'the number of cells', measure: 'the brightness of the bulb', same: 'the same bulb and wires', silly: 'the colour of the wires', xu: 'cell', iv: 'Number of cells', dv: 'Light level (lux)', xs: [1, 2, 3, 4], base: [40, 150, 330, 590], up: true, concl: ['The more cells, the brighter the bulb', 'The more cells, the dimmer the bulb', 'The number of cells makes no difference'] },
+  { q: 'Does the number of cells affect how loud a buzzer is?', change: 'the number of cells', measure: 'the loudness of the buzzer', same: 'the same buzzer, the same distance from the sound meter', silly: 'the time of day', xu: 'cell', iv: 'Number of cells', dv: 'Loudness (dB)', xs: [1, 2, 3, 4], base: [58, 64, 69, 73], up: true, concl: ['The more cells, the louder the buzzer', 'The more cells, the quieter the buzzer', 'The number of cells makes no difference'] },
+  { q: 'Does the number of bulbs in a series circuit affect how bright they are?', change: 'the number of bulbs', measure: 'the brightness of a bulb', same: 'the same battery and wires', silly: 'the shape of the table', xu: 'bulb', iv: 'Number of bulbs', dv: 'Light level (lux)', xs: [1, 2, 3, 4], base: [590, 240, 120, 70], up: false, concl: ['The more bulbs, the dimmer each one', 'The more bulbs, the brighter each one', 'The number of bulbs makes no difference'] },
+  { q: 'Does the length of a thin wire in the circuit affect how bright a bulb is?', change: 'the length of the thin wire', measure: 'the brightness of the bulb', same: 'the same thickness and type of wire, and the same cells', silly: 'the colour of the bulb holder', xu: 'cm', iv: 'Length of wire (cm)', dv: 'Light level (lux)', xs: [10, 20, 30, 40, 50], base: [400, 310, 240, 190, 150], up: false, concl: ['The longer the wire, the dimmer the bulb', 'The longer the wire, the brighter the bulb', 'The length of the wire makes no difference'] },
+  { q: 'Does the number of cells affect how quickly a motor winds up a small weight?', change: 'the number of cells', measure: 'the time to lift the weight 50 cm', same: 'the same motor and the same weight', silly: 'the name of the motor', xu: 'cell', iv: 'Number of cells', dv: 'Time to lift (s)', xs: [1, 2, 3, 4], base: [24, 12, 8, 6], up: false, concl: ['The more cells, the faster the motor lifts it', 'The more cells, the slower the motor lifts it', 'The number of cells makes no difference'] },
 ];
 function fairTest(level, rng) {
   const inv = rng.pick(INVESTIGATIONS), who = rng.pick(NAMES);
@@ -465,7 +470,7 @@ function fairTest(level, rng) {
     const odd = ys.slice();
     odd[k] = Math.round(ys[k - 2] * (inv.up ? rng.pick([0.5, 0.6, 0.7]) : rng.pick([1.3, 1.4, 1.5])));
     const qTable = { kind: 'table', head, rows: inv.xs.map((x, i) => [String(x), String(odd[i])]), tint: 'cols', question: true };
-    const xs = inv.xs.map(String);
+    const xs = inv.xs.map((x) => (inv.xu === 'cm' ? `${x} cm` : `${x} ${inv.xu}${x === 1 ? '' : 's'}`));
     return choice(`${who} investigated: “${inv.q}” Which result does not fit the pattern?`, `The result for ${xs[k]}`, rng.shuffle(xs.filter((_, i) => i !== k)).slice(0, 2).map((x) => `The result for ${x}`), rng,
       `The readings ${inv.up ? 'go up' : 'go down'} steadily, except for ${xs[k]}, where the reading is ${odd[k]}. That anomalous result should be measured again.`,
       [`Find the pattern: as ${inv.iv.toLowerCase().replace(/ \(.*\)/, '')} increases, the readings ${inv.up ? 'go up' : 'go down'}.`, 'Check each reading against its neighbours to find one that breaks the pattern.', `The result for **${xs[k]}** (${odd[k]}) does not fit: it is anomalous, so ${who} should repeat it.`],
@@ -497,7 +502,7 @@ const SAFETY = {
     ['Someone is touching a faulty kettle and getting an electric shock.', 'Switch off at the socket before touching them', ['Pull them away with your bare hands', 'Throw a cup of water over the kettle'], 'A person in contact with a live appliance.', 'While the current is flowing, it could flow through you too if you touch them, and water conducts.', 'Switch off at the socket or the fuse box first, then call 999. Only touch them once the power is off.'],
   ],
   3: [
-    ['Why is a 230 V mains socket dangerous when a 1.5 V cell is not?', 'Its bigger push drives a bigger current through you', ['Mains electricity is made of a different kind of energy', 'Cells contain no electricity, only chemicals'], 'Comparing voltages.', 'Voltage is the push. 230 V is enough to push a dangerous current through a human body; 1.5 V is not.', 'Never experiment with mains. Use cells and batteries.'],
+    ['Why is a 230 V mains socket dangerous when a 1.5 V cell is not?', 'Its bigger push drives a bigger current through you', ['Mains electricity is made of a different kind of energy', 'Mains wires are thicker, so they hold more electricity'], 'Comparing voltages.', 'Voltage is the push. 230 V is enough to push a dangerous current through a human body; 1.5 V is not.', 'Never experiment with mains. Use cells and batteries.'],
     ['Why can a bird sit safely on a single overhead power line?', 'It touches one wire only, so no current flows through it', ['Its feathers are thick enough to block the current', 'Power lines only carry electricity at night'], 'A bird on a live wire.', 'A current only flows through something that is part of a complete path. Both of the bird’s feet are on the same wire, so there is no path through its body.', 'People are not so lucky: a ladder, kite or person touching a line and the ground does complete a path.'],
     ['Why do the wires on pylons hang from strings of glass or ceramic discs?', 'The discs insulate the wires from the metal pylon', ['The discs store spare electricity for later', 'The discs make the current flow faster'], 'Keeping high-voltage wires apart from the pylon.', 'Glass and ceramic are insulators. Without them the current could flow down the steel pylon into the ground.', 'Never climb a pylon: the voltages are high enough to jump gaps.'],
     ['Why is it dangerous to shelter under a tall, lone tree in a thunderstorm?', 'Lightning tends to strike the tallest thing around', ['Trees attract rain, which makes lightning', 'Leaves hold static that makes thunder'], 'A tall object in a storm.', 'Lightning is a giant spark of static electricity. It usually strikes the tallest thing around, and the current can jump from the tree to a person.', 'Go indoors or into a car. Stay away from tall, lone trees, water and metal fences.'],

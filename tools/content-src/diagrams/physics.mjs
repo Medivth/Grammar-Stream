@@ -98,7 +98,7 @@ function ovalBand(cx, cy, rx, ry, rx2, ry2, a0, a1) {
 }
 
 // ---------------------------------------------------------------------------------------------
-// 1. A simple circuit, as a picture (Years 2–3): battery, wires, bulb, switch and buzzer.
+// 1. A simple circuit, as a picture (Years 2–3): a battery (two cells joined), wires, bulb, switch and buzzer.
 const WIRE = '#3f86d8';
 function circuit(open) {
   const L = 60, R = 340, T = 110, B = 270, w = 9;
@@ -118,9 +118,9 @@ function circuit(open) {
       { d: box(166, 98, 68, 22, 6), fill: '#5f6f8f' },
       { d: many(pl([[193, 80], [193, 58], [197, 50], [200, 58], [203, 50], [207, 58], [207, 80]], 2.4)), fill: bulbOn ? '#8a6100' : '#6b7486' },
       { d: rays, fill: '#f2c200' },
-      // battery: gold positive end, terminal, + sign
-      { d: many(box(232, 252, 20, 36, 6), box(232, 252, 10, 36), box(252, 262, 7, 16, 2)), fill: '#e8c547' },
-      { d: many(box(238, 268.5, 10, 3), box(241.5, 265, 3, 10), box(162, 268.5, 10, 3)), fill: '#4a3b07' },
+      // battery of two cells joined end to end: each has a gold positive end and terminal, and − and + signs
+      { d: many(...[148, 204].map((x) => many(box(x + 36, 252, 14, 36, 6), box(x + 36, 252, 7, 36), box(x + 50, 262, 6, 16, 2)))), fill: '#e8c547' },
+      { d: many(...[148, 204].map((x) => many(box(x + 39, 268.5, 8, 3), box(x + 41.5, 265, 3, 10), box(x + 8, 268.5, 8, 3)))), fill: '#4a3b07' },
       // switch: wire ends, contacts, lever and its knob
       { d: many(ln(60, 148, 60, 164, w), ln(60, 216, 60, 232, w)), fill: WIRE },
       { d: many(circ(60, 162, 6), circ(60, 218, 6), ln(...lever[0], ...lever[1], 7)), fill: '#4d5868' },
@@ -131,7 +131,7 @@ function circuit(open) {
     ],
     features: [
       { id: 'wires', name: 'wires', d: box(L - w / 2, T - w / 2, R - L + w, B - T + w, 12) + box(L + w / 2, T + w / 2, R - L - w, B - T - w, 6), rule: 'evenodd', fill: WIRE, label: [-6, 128], at: [58, 128] },
-      { id: 'battery', name: 'battery', d: box(150, 252, 100, 36, 6), fill: '#3c9a5f', label: [394, 300], at: [246, 286] },
+      { id: 'battery', name: 'battery', d: box(148, 252, 50, 36, 6) + box(204, 252, 50, 36, 6), fill: '#3c9a5f', label: [394, 300], at: [246, 286] },
       { id: 'bulb', name: 'bulb', d: circ(200, 50, 30) + pg([[184, 70], [216, 70], [214, 84], [186, 84]]), fill: bulbOn ? '#ffe45c' : '#e8edf3', label: [262, 26], at: [222, 34] },
       { id: 'switch', name: 'switch', d: box(38, 148, 44, 84, 7), fill: '#c9a878', label: [-6, 196], at: [40, 196] },
       { id: 'buzzer', name: 'buzzer', d: circ(340, 190, 27), fill: '#7d5bd0', label: [394, 248], at: [356, 210] },

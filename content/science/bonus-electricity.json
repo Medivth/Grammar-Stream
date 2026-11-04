@@ -16,7 +16,7 @@
    "intro": "Electricity lights your room, charges your phone and boils the kettle. An electric current is a flow of tiny charged particles, pushed round a loop by a cell, a battery or the mains. Mains electricity is powerful and can kill; cells are gentle enough to explore with.",
    "teach": "Explain the difference between mains electricity and a battery, and give two safety rules for mains.",
    "talk": "Walk round the house together: which things plug in, and which run on batteries? Ask her why.",
-   "hook": "Mains is **230 V**: never experiment with it. A cell is **1.5 V**: safe to explore. **Water and mains never mix.**",
+   "hook": "Mains is **230 V**: never experiment with it. An ordinary AA cell is **1.5 V**: safe to explore. **Water and mains never mix.**",
    "visual": [
     {
      "kind": "table",
@@ -30,7 +30,7 @@
       [
        "voltage",
        "**230 V**",
-       "1.5 V for each cell"
+       "1.5 V for each ordinary cell (AA, AAA, C, D)"
       ],
       [
        "current",
@@ -95,7 +95,7 @@
      "diagram": {
       "type": "circuit",
       "bottom": [
-       "cell",
+       "battery-2",
        "switch"
       ],
       "top": [
@@ -104,16 +104,12 @@
         "lit": 2
        },
        {
-        "k": "buzzer",
-        "sound": true
-       },
-       {
         "k": "motor",
         "spin": 1
        }
       ]
      },
-     "caption": "One complete loop: a cell, a closed switch, a bulb, a buzzer and a motor. The same current flows through every one of them."
+     "caption": "One complete loop: a battery of two cells, a closed switch, a bulb and a motor. The same current flows through both, and they share the battery’s push."
     }
    ]
   },
@@ -647,7 +643,7 @@
      [
       "voltage",
       "**230 V**",
-      "1.5 V for each cell"
+      "1.5 V for each ordinary cell (AA, AAA, C, D)"
      ],
      [
       "current",
@@ -1306,7 +1302,7 @@
     "the motor spins faster",
     "the motor makes a buzzing sound"
    ],
-   "explain": "Reversing the current reverses the motor. Electric cars and toy cars can go backwards this way.",
+   "explain": "Reversing the current reverses the motor. Toy cars and model trains go backwards this way.",
    "formats": [
     "choice"
    ],
@@ -1793,7 +1789,7 @@
      "top": [
       {
        "k": "bulb",
-       "lit": 3
+       "lit": 2
       },
       {
        "k": "motor",
@@ -1801,7 +1797,7 @@
       }
      ]
     },
-    "caption": "Switch closed: one complete loop, so both work."
+    "caption": "Switch closed: one complete loop, so both work, sharing the battery’s push."
    }
   },
   {
@@ -2075,7 +2071,7 @@
     }
    ],
    "explain": "Silver conducts slightly better, but copper is far cheaper. Copper can also be drawn out into thin, bendy wire.",
-   "hook": "**Cu**pper carries current: copper inside, plastic outside.",
+   "hook": "**Cu** is copper’s chemical symbol: copper carries the current inside, plastic keeps it in outside.",
    "example": "Strip the end of an old cable and you see shiny orange-brown copper strands."
   },
   {
@@ -3340,16 +3336,16 @@
    "id": "science.eb.g.steps",
    "topic": "science.elec-generating",
    "kind": "order",
-   "prompt": "Put the stages of a gas power station in order.",
+   "prompt": "Put the stages of a power station that burns fuel to make steam in order.",
    "items": [
-    "gas is burned",
+    "fuel (such as wood pellets) is burned",
     "water is heated into steam",
     "the steam spins a turbine",
     "the turbine turns a generator",
     "electricity goes out to the National Grid"
    ],
    "labels": null,
-   "explain": "Burning fuel heats water into steam; the steam spins the turbine, which turns the generator. Coal, oil and nuclear power stations work the same way: only the source of the heat is different.",
+   "explain": "Burning fuel heats water into steam; the steam spins the turbine, which turns the generator. Nuclear power stations work the same way: only the source of the heat is different. (Most UK gas power stations also spin a gas turbine directly with the hot burning gas.)",
    "hook": "**Fuel → steam → turbine → generator → grid.**",
    "visual": {
     "kind": "flow",
@@ -3879,18 +3875,18 @@
    "id": "science.eb.h.lectures",
    "topic": "science.elec-scientists",
    "kind": "fact",
-   "prompt": "Which famous lectures for young people did Faraday start at the Royal Institution in London in 1825?",
+   "prompt": "Which famous lectures for young people, begun at the Royal Institution in London in 1825, did Michael Faraday give nineteen times?",
    "answer": "the Christmas Lectures",
    "distractors": [
     "the Nobel Lectures",
     "the Reith Lectures",
     "the Easter Lectures"
    ],
-   "explain": "Faraday gave nineteen series of the Christmas Lectures himself. They still run every year and are shown on television.",
+   "explain": "Faraday gave his first series in 1827 and nineteen series in all, more than anyone else. They still run every year and are shown on television.",
    "formats": [
     "choice"
    ],
-   "hook": "Faraday loved explaining science to children, and the lectures go on today."
+   "hook": "Faraday loved explaining science to children, and the lectures he made famous go on today."
   },
   {
    "id": "science.eb.h.swan",
@@ -3920,14 +3916,14 @@
    "id": "science.eb.h.edison",
    "topic": "science.elec-scientists",
    "kind": "fact",
-   "prompt": "Which American inventor made a long-lasting carbon-filament light bulb in 1879 and built power stations to light cities?",
+   "prompt": "Which American inventor made a working carbon-filament light bulb in 1879 and built power stations to light cities?",
    "answer": "Thomas Edison",
    "distractors": [
     "Nikola Tesla",
     "Lewis Latimer",
     "Benjamin Franklin"
    ],
-   "explain": "Edison and Swan later joined forces in Britain as the Edison and Swan company, nicknamed “Ediswan”, in 1883.",
+   "explain": "By 1880 he and Swan had both made bulbs that lasted hundreds of hours. They later joined forces in Britain as the Edison and Swan company, nicknamed “Ediswan”, in 1883.",
    "accept": [
     "edison"
    ]
@@ -4041,7 +4037,7 @@
     "Volta builds the first battery",
     "Faraday shows the first electric motor",
     "Faraday finds how to generate a current",
-    "Swan and Edison make long-lasting bulbs"
+    "Swan and Edison make working light bulbs"
    ],
    "labels": null,
    "explain": "1752 Franklin, 1800 Volta, 1821 and 1831 Faraday, 1879 Swan and Edison.",

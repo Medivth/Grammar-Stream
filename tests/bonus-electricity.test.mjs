@@ -128,8 +128,9 @@ function analyse(d, testConducts = null) {
   const gap = (r) => r.some((p) => (p.k === 'switch' && p.open) || p.k === 'gap' || (p.k === 'test' && !testConducts));
   const mainOk = !gap(bottom) && push !== 0;
   const live = rows.map((r) => mainOk && !gap(r));
-  const bulbs = rows.map((r) => r.filter((p) => p.k === 'bulb').length);
-  return { bottom, rows, push, cells, live, perBulb: rows.map((r, i) => (live[i] ? Math.abs(push) / Math.max(1, bulbs[i]) : 0)), parallel: !!d.branches };
+  // every bulb, buzzer and motor in a loop shares its push
+  const loads = rows.map((r) => r.filter((p) => ['bulb', 'buzzer', 'motor'].includes(p.k)).length);
+  return { bottom, rows, push, cells, live, perBulb: rows.map((r, i) => (live[i] ? Math.abs(push) / Math.max(1, loads[i]) : 0)), parallel: !!d.branches };
 }
 const right = (q) => q.options.find((o) => o.correct).text;
 const near = (a, b) => Math.abs(a - b) < 1e-9;
@@ -256,7 +257,7 @@ function verify(q, label) {
       } else {
         const fits = ys.map((_, i) => steady(ys.filter((__, j) => j !== i)));
         assert.ok(!steady(ys) && fits.filter(Boolean).length === 1, `${label}: one odd result in ${ys}`);
-        assert.equal(right(q), `The result for ${t.rows[fits.indexOf(true)][0]}`, label);
+        assert.match(right(q), new RegExp(`^The result for ${t.rows[fits.indexOf(true)][0]} (cm|cells?|bulbs?)$`), label);
       }
       break;
     }
@@ -321,6 +322,9 @@ function drawsCircuit(d, label) {
     const parts = [...c.bottom, ...(c.branches || [c.top]).flat()].map(norm);
     // the description read out by screen readers names what is drawn
     for (const k of ['bulb', 'motor', 'buzzer', 'ammeter', 'resistor']) if (parts.some((p) => p.k === k)) assert.match(s.attrs['aria-label'], new RegExp(k), `${label}: ${k}`);
+    // a glowing bulb is drawn as brightly as its loop's share of the push: dim below one cell each, bright from 1.5
+    const a = analyse(c, true);
+    a.rows.forEach((r, i) => { for (const p of r) if (p.k === 'bulb' && p.lit) assert.equal(p.lit, a.perBulb[i] >= 1.5 ? 3 : a.perBulb[i] >= 1 ? 2 : 1, `${label}: glow of bulb ${p.tag || ''}`); });
     // each tag letter and reading is drawn as text
     for (const p of parts) for (const t of [p.tag, p.read]) if (t) assert.ok(walk(s).texts.includes(t), `${label}: label ${t}`);
   }

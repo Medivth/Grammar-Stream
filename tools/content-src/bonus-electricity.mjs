@@ -26,7 +26,7 @@ const topics = [
     intro: 'Electricity lights your room, charges your phone and boils the kettle. An electric current is a flow of tiny charged particles, pushed round a loop by a cell, a battery or the mains. Mains electricity is powerful and can kill; cells are gentle enough to explore with.',
     teach: 'Explain the difference between mains electricity and a battery, and give two safety rules for mains.',
     talk: 'Walk round the house together: which things plug in, and which run on batteries? Ask her why.',
-    hook: 'Mains is **230 V**: never experiment with it. A cell is **1.5 V**: safe to explore. **Water and mains never mix.**',
+    hook: 'Mains is **230 V**: never experiment with it. An ordinary AA cell is **1.5 V**: safe to explore. **Water and mains never mix.**',
   }),
   T('circuits', 'Circuits and components', ['what'], {
     diagnostic: ['science.eb.c.d1', 'science.eb.c.d2'],
@@ -155,7 +155,7 @@ const items = [
     ['It needs no circuit to light up', false, 'An LED needs a complete circuit like any other component.'],
     ['It works only on mains electricity', false, 'LEDs work on cells too: think of bike lights.'],
   ], 'LED stands for light-emitting diode. A diode only lets current through one way, so an LED must be connected the right way round. LEDs also waste much less energy as heat.'),
-  fact('c.reverse', 'circuits', 'You turn the cell round in a circuit with a motor. What happens?', 'the motor spins the other way', ['the motor stops for good', 'the motor spins faster', 'the motor makes a buzzing sound'], 'Reversing the current reverses the motor. Electric cars and toy cars can go backwards this way.', choiceOnly),
+  fact('c.reverse', 'circuits', 'You turn the cell round in a circuit with a motor. What happens?', 'the motor spins the other way', ['the motor stops for good', 'the motor spins faster', 'the motor makes a buzzing sound'], 'Reversing the current reverses the motor. Toy cars and model trains go backwards this way.', choiceOnly),
   mcq('c.buzzway', 'circuits', 'A buzzer sounds. When Jo turns the cell round, it goes silent. Why?', [
     ['Many buzzers only work one way round', true],
     ['The cell is now pushing too hard', false, 'Turning the cell round does not change how hard it pushes.'],
@@ -373,7 +373,7 @@ const items = [
     ['In the light switch on the wall', false, 'A switch only opens and closes a gap.'],
   ], 'Mains electricity is generated at power stations, wind farms and solar farms, and reaches your home through the National Grid.'),
   fact('g.generator', 'generating', 'In a power station, which machine turns movement into electricity?', 'a generator', ['a boiler', 'a transformer', 'a cooling tower'], 'The turbine spins the generator, which has magnets and coils of wire inside.', { accept: ['generator', 'an electric generator', 'dynamo'] }),
-  order('g.steps', 'generating', 'Put the stages of a gas power station in order.', ['gas is burned', 'water is heated into steam', 'the steam spins a turbine', 'the turbine turns a generator', 'electricity goes out to the National Grid'], 'Burning fuel heats water into steam; the steam spins the turbine, which turns the generator. Coal, oil and nuclear power stations work the same way: only the source of the heat is different.'),
+  order('g.steps', 'generating', 'Put the stages of a power station that burns fuel to make steam in order.', ['fuel (such as wood pellets) is burned', 'water is heated into steam', 'the steam spins a turbine', 'the turbine turns a generator', 'electricity goes out to the National Grid'], 'Burning fuel heats water into steam; the steam spins the turbine, which turns the generator. Nuclear power stations work the same way: only the source of the heat is different. (Most UK gas power stations also spin a gas turbine directly with the hot burning gas.)'),
   mcq('g.induction', 'generating', 'How does a generator make a current?', [
     ['Magnets spin near coils of wire', true],
     ['Fuel is burned inside its wires', false, 'Fuel is burned in a boiler, away from the generator.'],
@@ -426,13 +426,13 @@ const items = [
   ], 'Volta stacked discs of zinc and copper (or silver), separated by card or cloth soaked in salty water. Each zinc-card-copper layer is a cell, so the pile was a battery.'),
   fact('h.motor', 'scientists', 'In 1821, Michael Faraday showed the first…', 'electric motor', ['light bulb', 'battery', 'telephone'], 'He made a wire carrying a current spin round a magnet: electricity making movement. Faraday was a blacksmith’s son who left school at 13.', { accept: ['electric motor', 'motor', 'an electric motor'] }),
   fact('h.generator', 'scientists', 'In 1831, Faraday found he could make a current by moving a magnet near a coil of wire. This led to the…', 'generator', ['battery', 'light bulb', 'solar cell'], 'Nearly all mains electricity is still made this way, with spinning magnets and coils in generators.', { accept: ['generator', 'electric generator', 'dynamo', 'the generator'] }),
-  fact('h.lectures', 'scientists', 'Which famous lectures for young people did Faraday start at the Royal Institution in London in 1825?', 'the Christmas Lectures', ['the Nobel Lectures', 'the Reith Lectures', 'the Easter Lectures'], 'Faraday gave nineteen series of the Christmas Lectures himself. They still run every year and are shown on television.', choiceOnly),
+  fact('h.lectures', 'scientists', 'Which famous lectures for young people, begun at the Royal Institution in London in 1825, did Michael Faraday give nineteen times?', 'the Christmas Lectures', ['the Nobel Lectures', 'the Reith Lectures', 'the Easter Lectures'], 'Faraday gave his first series in 1827 and nineteen series in all, more than anyone else. They still run every year and are shown on television.', choiceOnly),
   mcq('h.swan', 'scientists', 'Joseph Swan from Sunderland showed a working light bulb in 1878–79. What was its glowing filament made of?', [
     ['Carbon', true],
     ['Copper', false, 'Copper melts too easily to glow white-hot.'],
     ['Plastic', false, 'Plastic would melt and burn.'],
   ], 'Swan and Edison both used carbon filaments in glass bulbs with the air taken out, so the filament could not burn. Later bulbs used tungsten.'),
-  fact('h.edison', 'scientists', 'Which American inventor made a long-lasting carbon-filament light bulb in 1879 and built power stations to light cities?', 'Thomas Edison', ['Nikola Tesla', 'Lewis Latimer', 'Benjamin Franklin'], 'Edison and Swan later joined forces in Britain as the Edison and Swan company, nicknamed “Ediswan”, in 1883.', { accept: ['edison'] }),
+  fact('h.edison', 'scientists', 'Which American inventor made a working carbon-filament light bulb in 1879 and built power stations to light cities?', 'Thomas Edison', ['Nikola Tesla', 'Lewis Latimer', 'Benjamin Franklin'], 'By 1880 he and Swan had both made bulbs that lasted hundreds of hours. They later joined forces in Britain as the Edison and Swan company, nicknamed “Ediswan”, in 1883.', { accept: ['edison'] }),
   fact('h.savoy', 'scientists', 'In 1881, which London building became the first public building in the world to be lit entirely by electric light, using Swan’s bulbs?', 'the Savoy Theatre', ['Buckingham Palace', 'the Tower of London', 'St Paul’s Cathedral'], 'At one show, the theatre’s owner broke a glowing bulb in front of the audience to prove electric light was safer than gas.', choiceOnly),
   mcq('h.latimer', 'scientists', 'What did Lewis Latimer, an African American inventor, improve in 1881–82?', [
     ['The way carbon filaments were made', true],
@@ -446,7 +446,7 @@ const items = [
     ['Faraday and Edison', false, 'Faraday has a unit too, the farad, but not these.'],
     ['Tesla and Newton', false, 'The tesla and the newton are other units.'],
   ], 'Volt after Alessandro Volta; amp (ampere) after André-Marie Ampère, a French scientist who studied currents and magnetism.'),
-  order('h.order', 'scientists', 'Put these discoveries in order, earliest first.', ['Franklin shows lightning is electrical', 'Volta builds the first battery', 'Faraday shows the first electric motor', 'Faraday finds how to generate a current', 'Swan and Edison make long-lasting bulbs'], '1752 Franklin, 1800 Volta, 1821 and 1831 Faraday, 1879 Swan and Edison.'),
+  order('h.order', 'scientists', 'Put these discoveries in order, earliest first.', ['Franklin shows lightning is electrical', 'Volta builds the first battery', 'Faraday shows the first electric motor', 'Faraday finds how to generate a current', 'Swan and Edison make working light bulbs'], '1752 Franklin, 1800 Volta, 1821 and 1831 Faraday, 1879 Swan and Edison.'),
 ];
 
 // ---------------------------------------------------------------- memory hooks and real-world examples
@@ -478,7 +478,7 @@ const MEMORY = {
   's.wire': { hook: 'Draw circuits with a **ruler**: straight lines and square corners.' },
   'm.d1': { hook: '**All metals conduct; only a few are magnetic.**', example: 'A magnet will not pick up an aluminium can, but aluminium foil still completes a circuit.' },
   'm.d2': { hook: 'Graphite is the **odd one out**: a non-metal that conducts.', example: 'Some science kits light an LED through a thick pencil line drawn on paper.' },
-  'm.copper': { hook: '**Cu**pper carries current: copper inside, plastic outside.', example: 'Strip the end of an old cable and you see shiny orange-brown copper strands.' },
+  'm.copper': { hook: '**Cu** is copper’s chemical symbol: copper carries the current inside, plastic keeps it in outside.', example: 'Strip the end of an old cable and you see shiny orange-brown copper strands.' },
   'm.screwdriver': { hook: 'Insulators are a **safety coat** between you and the current.' },
   'm.water': { hook: 'It is what is **dissolved** in water that lets it conduct.' },
   'm.air': { hook: 'Air is an insulator, which is why a gap stops a circuit.', example: 'The gaps between the pins of a plug are filled with air and plastic, both insulators.' },
@@ -512,7 +512,7 @@ const MEMORY = {
   'h.volta': { hook: '**Volta → volt**: the man who made the first battery, in **1800**.', example: 'Every “1.5 V” printed on a battery honours Volta.' },
   'h.motor': { hook: 'Faraday **1821**: electricity made it **move**. **1831**: movement made electricity.', example: 'Faraday was on the back of the Bank of England £20 note from 1991 to 2001.' },
   'h.generator': { hook: '**Faraday’s magnet trick** is still how power stations work.' },
-  'h.lectures': { hook: 'Faraday loved explaining science to children, and the lectures go on today.' },
+  'h.lectures': { hook: 'Faraday loved explaining science to children, and the lectures he made famous go on today.' },
   'h.swan': { hook: '**Swan in Sunderland, Edison in America**: both lit up carbon filaments around 1879.' },
   'h.savoy': { hook: 'The **Savoy** saved the audience from smoky gas lamps.' },
   'h.latimer': { hook: 'Latimer made light bulbs **last** and cost less.' },
@@ -546,12 +546,12 @@ const M = (diagram, caption) => ({ kind: 'maths', diagram, ...(caption ? { capti
 const SYM = (highlight) => ({ kind: 'diagram', id: 'circuit-symbols', highlight });
 const MAINS_VS_CELLS = {
   kind: 'table', head: ['', 'mains', 'cells and batteries'], tint: 'cols',
-  rows: [['voltage', '**230 V**', '1.5 V for each cell'], ['current', 'AC: changes direction', 'DC: one way only'], ['used for', 'kettles, fridges, TVs', 'torches, remotes, toys'], ['safe to experiment?', '**never**', 'yes'], ['comes from', 'power stations, wind and solar farms', 'chemicals inside'],
+  rows: [['voltage', '**230 V**', '1.5 V for each ordinary cell (AA, AAA, C, D)'], ['current', 'AC: changes direction', 'DC: one way only'], ['used for', 'kettles, fridges, TVs', 'torches, remotes, toys'], ['safe to experiment?', '**never**', 'yes'], ['comes from', 'power stations, wind and solar farms', 'chemicals inside'],
   ],
   caption: 'Mains electricity is generated far away and carried to us by the National Grid; cells carry their energy with them.',
 };
 const GRID = { kind: 'flow', across: true, steps: ['power station', 'National Grid', 'transformer', 'your home'], caption: 'Mains electricity travels from power stations and wind farms through the National Grid; a transformer near your home steps the voltage down to 230 V.' };
-const SIMPLE = M({ type: 'circuit', bottom: ['cell', 'switch'], top: [{ k: 'bulb', lit: 2 }, { k: 'buzzer', sound: true }, { k: 'motor', spin: 1 }] }, 'One complete loop: a cell, a closed switch, a bulb, a buzzer and a motor. The same current flows through every one of them.');
+const SIMPLE = M({ type: 'circuit', bottom: ['battery-2', 'switch'], top: [{ k: 'bulb', lit: 2 }, { k: 'motor', spin: 1 }] }, 'One complete loop: a battery of two cells, a closed switch, a bulb and a motor. The same current flows through both, and they share the battery’s push.');
 const CONDUCTORS = {
   kind: 'table', head: ['material', 'conducts?', 'used for'], tint: 'cols',
   rows: [['copper', '**yes**', 'the wires inside cables'], ['aluminium', '**yes**', 'overhead power lines'], ['steel', '**yes**', 'paper clips, spoons'], ['gold', '**yes**', 'contacts inside phones'], ['graphite', '**yes** (not a metal!)', 'pencil “lead”'],
@@ -609,7 +609,7 @@ const ITEM_VISUALS = {
   'science.eb.s.ammeter': SYM('ammeter'),
   'science.eb.s.voltmeter': SYM('voltmeter'),
   'science.eb.s.resistor': SYM('resistor'),
-  'science.eb.s.close': M({ type: 'circuit', bottom: ['battery-2', 'switch'], top: [{ k: 'bulb', lit: 3 }, { k: 'motor', spin: 1 }] }, 'Switch closed: one complete loop, so both work.'),
+  'science.eb.s.close': M({ type: 'circuit', bottom: ['battery-2', 'switch'], top: [{ k: 'bulb', lit: 2 }, { k: 'motor', spin: 1 }] }, 'Switch closed: one complete loop, so both work, sharing the battery’s push.'),
   'science.eb.m.d1': CONDUCTORS,
   'science.eb.m.steps': TEST_RIG,
   'science.eb.m.insulators': CONDUCTORS,
