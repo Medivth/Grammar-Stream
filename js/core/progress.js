@@ -3,7 +3,7 @@
 import { topicStatus } from './mastery.js';
 import { SUBJECTS, COURSE, isStretch } from './subjects.js';
 import { monthKey } from './dates.js';
-import { calibration } from './session.js';
+import { calibration, bonusProgress } from './session.js';
 
 /** An item counts as known once it is in review and has been recalled at least once. */
 export const isKnown = (c) => !!c && c.state === 'review' && (c.assumed || c.s >= 2);
@@ -150,11 +150,19 @@ export const starterAccessories = () => COURSE.starter;
 
 export function unlockedAccessories(state, db) {
   const done = new Set(milestones(state, db).filter((m) => m.done).map((m) => m.id));
-  return new Set([...COURSE.starter, ...milestoneDefs().filter((m) => m.unlock && done.has(m.id)).map((m) => m.unlock)]);
+  return new Set([...COURSE.starter, ...milestoneDefs().filter((m) => m.unlock && done.has(m.id)).map((m) => m.unlock), ...bonusPrizes(state, db)]);
 }
 
-/** Every accessory this course can ever show: starters plus milestone rewards. */
-export const wardrobeAccessories = () => new Set([...COURSE.starter, ...milestoneDefs().filter((m) => m.unlock).map((m) => m.unlock)]);
+/** The bonus topic's prize, once won (every part finished): never taken away again. */
+export function bonusPrizes(state, db) {
+  return bonusProgress(state, db)?.prized ? COURSE.bonus.prize : [];
+}
+
+/** The bonus topic whose prize this accessory is, if it is one (for the wardrobe's "how to unlock" hint). */
+export const prizeOf = (id) => (COURSE.bonus?.prize?.includes(id) ? COURSE.bonus : null);
+
+/** Every accessory this course can ever show: starters, milestone rewards and the bonus topic's prize. */
+export const wardrobeAccessories = () => new Set([...COURSE.starter, ...milestoneDefs().filter((m) => m.unlock).map((m) => m.unlock), ...(COURSE.bonus?.prize || [])]);
 
 /** A short plan summary for the home screen ("18 reviews · 1 new topic · writing"). */
 export function planSummary(plan) {

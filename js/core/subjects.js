@@ -5,6 +5,13 @@
 // racing, space, superheroes, dinosaurs and knights for Years 2 and 3 (the trophy, the hero suit and the big rides are earned)
 const YOUNG_STARTER = ['racesuit', 'flag', 'gokart', 'spacesuit', 'saturn', 'alien', 'heroshield', 'dinohood', 'fossilhammer', 'babydino', 'armour', 'sword', 'crestshield'];
 
+// Years 2 and 3: a special history module chosen from the home page any time (its topics carry bonus: 'nightingale')
+const NIGHTINGALE = {
+  id: 'nightingale', subject: 'history', title: 'Florence Nightingale',
+  blurb: 'The nurse who carried a lamp through the hospital at night, and changed hospitals for ever.',
+  prize: ['firstaid', 'oillamp'], prizeText: 'Florence’s lamp and a first-aid kit',
+};
+
 export const COURSES = {
   y6: {
     id: 'y6', title: 'Year 6 to grammar school', short: 'Year 6 → 7',
@@ -24,6 +31,12 @@ export const COURSES = {
     paper: 'ks2',
     tools: ['paper', 'typing', 'speed'],
     extra: ['latin'], // practise any time, outside the daily session
+    // a special module chosen from the home page any time: its topics carry bonus: 'electricity'
+    bonus: {
+      id: 'electricity', subject: 'science', title: 'Electricity',
+      blurb: 'Circuits, switches, conductors and circuit diagrams, with lots of worked examples. Ready for when you do it at school.',
+      prize: ['lamp'], prizeText: 'a desk lamp you can switch on and off',
+    },
     writing: true,
     readAloud: false,
     starter: ['none', 'yuzu', 'flower', 'bow', 'glasses', 'scarf', 'bird', 'chef', 'partyhat',
@@ -51,6 +64,7 @@ export const COURSES = {
     writing: true, // weekly pieces built on his reading (tools/content-src/ks1/writing.mjs)
     readAloud: true,
     young: true, sprintUp: 12, next: 'y3',
+    bonus: NIGHTINGALE,
     starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird', 'astronaut', 'scooter', 'partyhat', ...YOUNG_STARTER],
   },
   // Year 3 includes all of Year 2 (same subjects and item ids), so moving up keeps every card.
@@ -75,6 +89,7 @@ export const COURSES = {
     writing: true,
     readAloud: true,
     young: true, sprintUp: 14, prev: 'ks1',
+    bonus: NIGHTINGALE,
     starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird', 'astronaut', 'scooter', 'partyhat', ...YOUNG_STARTER],
   },
   // Year 8 at a selective school, aiming above the top fifth: KS3 at depth with GCSE tasters,
