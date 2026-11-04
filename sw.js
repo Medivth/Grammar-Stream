@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = 'a9b6c0440803';
+const VERSION = '5df02db04477';
 const FILES = [
  "./",
  "./index.html",
@@ -28,6 +28,7 @@ const FILES = [
  "./js/core/store.js",
  "./js/core/subjects.js",
  "./js/core/writing.js",
+ "./js/gen/electricity.js",
  "./js/gen/english.js",
  "./js/gen/geography.js",
  "./js/gen/history.js",
@@ -73,6 +74,7 @@ const FILES = [
  "./js/ui/diagrams.js",
  "./js/ui/dom.js",
  "./js/ui/icons.js",
+ "./js/ui/lamp.js",
  "./js/ui/mapview.js",
  "./js/ui/qtypes.js",
  "./js/ui/scenes.js",
@@ -98,6 +100,7 @@ const FILES = [
  "./content/index-y3.json",
  "./content/index-y8.json",
  "./content/index.json",
+ "./content/ks1/history/bonus-nightingale.json",
  "./content/ks1/history/core.json",
  "./content/ks1/history/more.json",
  "./content/ks1/history/timeline.json",
@@ -162,6 +165,7 @@ const FILES = [
  "./content/maths/averages.json",
  "./content/maths/core.json",
  "./content/maths/stretch.json",
+ "./content/science/bonus-electricity.json",
  "./content/science/core.json",
  "./content/science/joined-up.json",
  "./content/science/stretch.json",

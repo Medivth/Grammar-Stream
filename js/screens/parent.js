@@ -3,7 +3,7 @@
 
 import { h, mount, toast, rich } from '../ui/dom.js';
 import { weekStart, formatDay } from '../core/dates.js';
-import { calibration, daysPractisedThisMonth, PLACEMENT_ORDER } from '../core/session.js';
+import { calibration, daysPractisedThisMonth, PLACEMENT_ORDER, bonusProgress } from '../core/session.js';
 import { exportFile, pickBackupFile, removeProfile } from '../platform/storage.js';
 import { emptyState } from '../core/store.js';
 import { SUBJECTS, SUBJECT_BY_ID, COURSES, COURSE } from '../core/subjects.js';
@@ -63,6 +63,17 @@ function weekStats(state, db, today) {
   return { ws, days: new Set(sessions.map((s) => s.day)).size, minutes, answered: log.length, topicsTouched, started, secured, reading, old: old.length, oldRate, bySubject, sprintBest };
 }
 
+/** The bonus topic, for grown-ups: how far {she} has got, and the prize. */
+export function bonusLine(state, db) {
+  const bp = bonusProgress(state, db);
+  if (!bp?.total) return null;
+  const day = state.bonusWon?.[bp.def.id];
+  const head = `Bonus topic, ${bp.def.title}: ${bp.done} of ${bp.total} parts finished (every lesson done and secure)`;
+  const more = bp.started > bp.done ? `, ${bp.started - bp.done} more under way` : '';
+  const prize = bp.prized ? `Prize won${day != null ? ` on ${formatDay(day, { weekday: 'short', day: 'numeric', month: 'short' })}` : ''}: ${bp.def.prizeText}.` : `Finishing every part wins ${bp.def.prizeText}.`;
+  return `${head}${more}. ${prize} {She} chooses it from the card on {her} home page, any time; its reviews also come back in the daily session.`;
+}
+
 function dashboard(app) {
   const { state, db } = app;
   const today = app.today();
@@ -99,7 +110,8 @@ function dashboard(app) {
         h('p', { class: 'muted small' }, SUBJECTS.map((s) => `${s.name} ${w.bySubject[s.id] || 0}`).join(' · ')),
         w.sprintBest ? h('p', { class: 'muted small' }, `Arithmetic sprint: best this week ${w.sprintBest.correct} right in ${sprintSeconds()} seconds (level ${w.sprintBest.level} of 5).`) : null,
         (state.papers || []).length ? h('p', { class: 'muted small' }, `Arithmetic papers: ${state.papers.length} done, best ${Math.max(...state.papers.map((p) => p.score))} / ${paperSpec().marks}, latest ${state.papers.at(-1).score} / ${paperSpec().marks}.`) : null,
-        handwritingSummary(state.handwriting) ? h('p', { class: 'muted small' }, handwritingSummary(state.handwriting)) : null),
+        handwritingSummary(state.handwriting) ? h('p', { class: 'muted small' }, handwritingSummary(state.handwriting)) : null,
+        bonusLine(state, db) ? h('p', { class: 'muted small' }, bonusLine(state, db)) : null),
 
       prompts.length ? h('div', { class: 'card' }, h('h2', {}, 'Things to talk about'), h('p', { class: 'muted' }, 'Interest helps more than checking. Try one of these at dinner or in the car:'), h('ul', {}, prompts.map((p) => h('li', {}, p)))) : null,
 

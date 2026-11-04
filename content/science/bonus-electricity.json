@@ -1,0 +1,4079 @@
+{
+ "subject": "science",
+ "deck": "bonus-electricity",
+ "topics": [
+  {
+   "id": "science.elec-what",
+   "title": "Electricity: what it is and where it comes from",
+   "kind": "mixed",
+   "prereqs": [],
+   "batch": 5,
+   "bonus": "electricity",
+   "diagnostic": [
+    "science.eb.w.d1",
+    "science.eb.w.d2"
+   ],
+   "intro": "Electricity lights your room, charges your phone and boils the kettle. An electric current is a flow of tiny charged particles, pushed round a loop by a cell, a battery or the mains. Mains electricity is powerful and can kill; cells are gentle enough to explore with.",
+   "teach": "Explain the difference between mains electricity and a battery, and give two safety rules for mains.",
+   "talk": "Walk round the house together: which things plug in, and which run on batteries? Ask her why.",
+   "hook": "Mains is **230 V**: never experiment with it. An ordinary AA cell is **1.5 V**: safe to explore. **Water and mains never mix.**",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "",
+      "mains",
+      "cells and batteries"
+     ],
+     "tint": "cols",
+     "rows": [
+      [
+       "voltage",
+       "**230 V**",
+       "1.5 V for each ordinary cell (AA, AAA, C, D)"
+      ],
+      [
+       "current",
+       "AC: changes direction",
+       "DC: one way only"
+      ],
+      [
+       "used for",
+       "kettles, fridges, TVs",
+       "torches, remotes, toys"
+      ],
+      [
+       "safe to experiment?",
+       "**never**",
+       "yes"
+      ],
+      [
+       "comes from",
+       "power stations, wind and solar farms",
+       "chemicals inside"
+      ]
+     ],
+     "caption": "Mains electricity is generated far away and carried to us by the National Grid; cells carry their energy with them."
+    },
+    {
+     "kind": "flow",
+     "across": true,
+     "steps": [
+      "power station",
+      "National Grid",
+      "transformer",
+      "your home"
+     ],
+     "caption": "Mains electricity travels from power stations and wind farms through the National Grid; a transformer near your home steps the voltage down to 230 V."
+    }
+   ]
+  },
+  {
+   "id": "science.elec-circuits",
+   "title": "Circuits and components",
+   "kind": "mixed",
+   "prereqs": [
+    "science.elec-what"
+   ],
+   "batch": 5,
+   "bonus": "electricity",
+   "diagnostic": [
+    "science.eb.c.d1",
+    "science.eb.c.d2"
+   ],
+   "intro": "A circuit is a complete loop: from one end of a cell, through the components, and back to the other end. Bulbs give light, buzzers make sound and motors spin. You will learn to predict whether a circuit works before you build it, and to explain why.",
+   "teach": "Explain why a bulb lights whichever way round the cell is, but a motor changes direction.",
+   "talk": "Look inside a torch together: find the cells, the switch and the bulb, and trace the loop.",
+   "hook": "**Push, path, part**: a cell to push, a complete loop for the path, and a part (bulb, buzzer, motor) to do the work.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "circuit"
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "circuit",
+      "bottom": [
+       "battery-2",
+       "switch"
+      ],
+      "top": [
+       {
+        "k": "bulb",
+        "lit": 2
+       },
+       {
+        "k": "motor",
+        "spin": 1
+       }
+      ]
+     },
+     "caption": "One complete loop: a battery of two cells, a closed switch, a bulb and a motor. The same current flows through both, and they share the battery’s push."
+    }
+   ]
+  },
+  {
+   "id": "science.elec-symbols",
+   "title": "Circuit symbols and diagrams",
+   "kind": "mixed",
+   "prereqs": [
+    "science.elec-circuits"
+   ],
+   "batch": 5,
+   "bonus": "electricity",
+   "intro": "Scientists everywhere draw circuits with the same symbols, joined by straight lines with square corners. A diagram is quicker to draw than a picture and shows exactly how the parts are connected. Learn the symbols and you can read any circuit.",
+   "teach": "Draw a circuit diagram with two cells, a switch and a bulb, and explain each symbol.",
+   "talk": "Ask her to draw the circuit of a torch from memory, using symbols.",
+   "hook": "Cell: the **long line is +**. Bulb: a cross in a circle, like the glowing filament. Motor: **M** in a circle. Battery: cells side by side.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "circuit-symbols"
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "circuit",
+      "bottom": [
+       "battery-2",
+       "switch-open"
+      ],
+      "top": [
+       "bulb",
+       "buzzer"
+      ]
+     },
+     "caption": "Two cells (a battery), an open switch, a bulb and a buzzer: straight lines and square corners."
+    }
+   ]
+  },
+  {
+   "id": "science.elec-materials",
+   "title": "Conductors and insulators",
+   "kind": "mixed",
+   "prereqs": [
+    "science.elec-circuits"
+   ],
+   "batch": 5,
+   "bonus": "electricity",
+   "diagnostic": [
+    "science.eb.m.d1",
+    "science.eb.m.d2"
+   ],
+   "intro": "Some materials let electricity flow through them (conductors) and some do not (insulators). You can find out which is which with a simple circuit with a gap. Metals conduct; so does one surprising non-metal. A cable uses both kinds.",
+   "teach": "Explain why electrical wires are made of copper with a plastic coating.",
+   "talk": "Hunt for conductors and insulators in the kitchen: cutlery, a wooden spoon, foil, a plastic cup.",
+   "hook": "**Metals conduct, and so does graphite.** Plastic, rubber, wood, glass and air insulate.",
+   "visual": [
+    {
+     "kind": "table",
+     "head": [
+      "material",
+      "conducts?",
+      "used for"
+     ],
+     "tint": "cols",
+     "rows": [
+      [
+       "copper",
+       "**yes**",
+       "the wires inside cables"
+      ],
+      [
+       "aluminium",
+       "**yes**",
+       "overhead power lines"
+      ],
+      [
+       "steel",
+       "**yes**",
+       "paper clips, spoons"
+      ],
+      [
+       "gold",
+       "**yes**",
+       "contacts inside phones"
+      ],
+      [
+       "graphite",
+       "**yes** (not a metal!)",
+       "pencil “lead”"
+      ],
+      [
+       "plastic",
+       "no",
+       "coating wires, plug cases"
+      ],
+      [
+       "rubber",
+       "no",
+       "electricians’ gloves"
+      ],
+      [
+       "glass, ceramics",
+       "no",
+       "insulators on pylons"
+      ],
+      [
+       "wood",
+       "no",
+       "rulers, handles"
+      ],
+      [
+       "air",
+       "no",
+       "the gap in an open switch"
+      ]
+     ],
+     "caption": "All metals conduct. Graphite is the surprising non-metal that conducts too."
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "circuit",
+      "bottom": [
+       "cell",
+       "switch"
+      ],
+      "top": [
+       {
+        "k": "test",
+        "text": "?"
+       },
+       "bulb"
+      ]
+     },
+     "caption": "Clip each material into the gap. If the bulb lights, it is a conductor."
+    }
+   ]
+  },
+  {
+   "id": "science.elec-changing",
+   "title": "Changing a circuit and fair tests",
+   "kind": "mixed",
+   "prereqs": [
+    "science.elec-symbols"
+   ],
+   "batch": 5,
+   "bonus": "electricity",
+   "diagnostic": [
+    "science.eb.ch.d1",
+    "science.eb.ch.d2"
+   ],
+   "intro": "Add cells and a bulb gets brighter, a buzzer louder and a motor faster. Add bulbs to the loop and each gets dimmer. Scientists find out things like this with fair tests: change one thing, measure another, keep everything else the same.",
+   "teach": "Explain why adding a second bulb to a series circuit makes both bulbs dimmer.",
+   "talk": "Ask her to plan a fair test: does the number of cells change how loud a buzzer is?",
+   "hook": "**More cells, more push**: brighter, louder, faster. **More bulbs in a loop share the push**: dimmer.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "circuit",
+      "many": [
+       {
+        "name": "A",
+        "bottom": [
+         "cell"
+        ],
+        "top": [
+         {
+          "k": "bulb",
+          "lit": 2
+         }
+        ]
+       },
+       {
+        "name": "B",
+        "bottom": [
+         "battery-2"
+        ],
+        "top": [
+         {
+          "k": "bulb",
+          "lit": 3
+         }
+        ]
+       },
+       {
+        "name": "C",
+        "bottom": [
+         "cell"
+        ],
+        "top": [
+         {
+          "k": "bulb",
+          "lit": 1
+         },
+         {
+          "k": "bulb",
+          "lit": 1
+         }
+        ]
+       }
+      ]
+     },
+     "caption": "B: two cells push harder, so the bulb is brighter than A. C: two bulbs share one cell’s push, so both are dimmer."
+    },
+    {
+     "kind": "table",
+     "head": [
+      "in a fair test",
+      "example: cells and a buzzer"
+     ],
+     "tint": "rows",
+     "rows": [
+      [
+       "change **one** thing",
+       "the number of cells"
+      ],
+      [
+       "measure",
+       "the loudness (sound meter, dB)"
+      ],
+      [
+       "keep the same",
+       "the buzzer, wires, distance to the meter"
+      ],
+      [
+       "repeat",
+       "take each reading three times"
+      ],
+      [
+       "conclude",
+       "more cells, louder buzzer"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "science.elec-parallel",
+   "title": "Series and parallel circuits",
+   "kind": "mixed",
+   "prereqs": [
+    "science.elec-changing"
+   ],
+   "batch": 5,
+   "bonus": "electricity",
+   "diagnostic": [
+    "science.eb.p.d1",
+    "science.eb.p.d2"
+   ],
+   "intro": "In a series circuit everything is in one loop, so one break stops it all. In a parallel circuit the current splits into branches, and each branch gets the full push of the battery. This is how your home is wired, and it is a big step into secondary-school science.",
+   "teach": "Explain why the lights in a house are wired in parallel and not in series.",
+   "talk": "Ask her what happens to the other lights at home when one bulb blows, and what that tells her about the wiring.",
+   "hook": "**Series: one road**, one current; break it anywhere and everything stops. **Parallel: separate roads**; each branch gets the full push.",
+   "visual": [
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "circuit",
+      "many": [
+       {
+        "name": "A (series)",
+        "bottom": [
+         "battery-2"
+        ],
+        "top": [
+         {
+          "k": "bulb",
+          "lit": 2
+         },
+         {
+          "k": "bulb",
+          "lit": 2
+         }
+        ]
+       },
+       {
+        "name": "B (parallel)",
+        "bottom": [
+         "battery-2"
+        ],
+        "branches": [
+         [
+          {
+           "k": "bulb",
+           "lit": 3
+          }
+         ],
+         [
+          {
+           "k": "bulb",
+           "lit": 3
+          }
+         ]
+        ]
+       }
+      ]
+     },
+     "caption": "Same battery, same two bulbs. In parallel each bulb gets the full push, so both are brighter than in series."
+    },
+    {
+     "kind": "table",
+     "head": [
+      "",
+      "series",
+      "parallel"
+     ],
+     "tint": "cols",
+     "rows": [
+      [
+       "paths",
+       "one loop",
+       "separate branches"
+      ],
+      [
+       "one bulb breaks",
+       "all go **out**",
+       "others stay **lit**"
+      ],
+      [
+       "adding bulbs",
+       "each gets dimmer",
+       "each stays as bright"
+      ],
+      [
+       "current",
+       "the same everywhere",
+       "splits, then adds up again"
+      ],
+      [
+       "used in",
+       "some old fairy lights",
+       "house lights and sockets"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "science.elec-generating",
+   "title": "Generating and saving electricity",
+   "kind": "mixed",
+   "prereqs": [
+    "science.elec-what"
+   ],
+   "batch": 5,
+   "bonus": "electricity",
+   "intro": "Mains electricity is generated in power stations, wind farms and solar farms, then sent round the country by the National Grid. Some energy resources will run out; others are renewable. Every one of us can help by wasting less.",
+   "teach": "Explain how a power station generates electricity, from fuel to your plug.",
+   "talk": "Read the electricity meter together, then again after a day. Which appliances does she think used the most?",
+   "hook": "**Fuel → steam → turbine → generator → grid → home.** Wind and falling water turn the turbine themselves.",
+   "visual": [
+    {
+     "kind": "flow",
+     "steps": [
+      "Fuel is burned (or uranium split) to heat water",
+      "Steam spins a turbine",
+      "The turbine turns a generator: magnets and coils",
+      "Transformers step the voltage up",
+      "The National Grid carries it across the country",
+      "Transformers step it down to 230 V for homes"
+     ],
+     "caption": "Wind, tidal and hydroelectric power skip the steam: moving air or water turns the turbine directly. Solar cells have no turbine at all."
+    },
+    {
+     "kind": "table",
+     "head": [
+      "resource",
+      "renewable?",
+      "why"
+     ],
+     "tint": "cols",
+     "rows": [
+      [
+       "wind",
+       "**yes**",
+       "the wind keeps blowing"
+      ],
+      [
+       "solar",
+       "**yes**",
+       "the Sun keeps shining"
+      ],
+      [
+       "hydroelectric",
+       "**yes**",
+       "rain refills the reservoirs"
+      ],
+      [
+       "tidal",
+       "**yes**",
+       "the tides come in twice a day"
+      ],
+      [
+       "coal, oil, gas",
+       "no",
+       "took millions of years to form"
+      ],
+      [
+       "nuclear",
+       "no",
+       "its uranium will run out"
+      ]
+     ],
+     "caption": "Fossil fuels (coal, oil, gas) also give off carbon dioxide when burned."
+    }
+   ]
+  },
+  {
+   "id": "science.elec-scientists",
+   "title": "Electrical scientists and inventors",
+   "kind": "facts",
+   "prereqs": [
+    "science.elec-circuits"
+   ],
+   "batch": 5,
+   "bonus": "electricity",
+   "intro": "Electricity was a mystery until about 250 years ago. Then, step by step, scientists showed what lightning is, built the first battery, made electricity move a motor, generated it with magnets and made it glow in a light bulb.",
+   "teach": "Tell the story of electricity from Volta’s battery to Tesla’s alternating current, with dates.",
+   "talk": "Ask her which inventor she would most like to meet, and what she would ask them.",
+   "hook": "**Volta** made the push (1800); **Faraday** made it move (1821) and generated it (1831); **Swan and Edison** made it glow (1879); **Tesla** sent it far with AC.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1740,
+    "to": 1900,
+    "set": "britain",
+    "events": [
+     [
+      1752,
+      "Franklin’s kite"
+     ],
+     [
+      1800,
+      "Volta’s battery"
+     ],
+     [
+      1821,
+      "Faraday’s motor"
+     ],
+     [
+      1831,
+      "Faraday’s generator"
+     ],
+     [
+      1879,
+      "Swan and Edison’s bulbs"
+     ],
+     [
+      1888,
+      "Tesla’s AC motor"
+     ]
+    ],
+    "caption": "From lightning to light bulbs in about 130 years."
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "science.eb.w.safety",
+   "topic": "science.elec-what",
+   "kind": "template",
+   "gen": "elecSafety",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.8,
+    -0.1,
+    0.7
+   ],
+   "example": "UK plugs have a fuse and sockets have their own switches, so appliances can be switched off before you touch them."
+  },
+  {
+   "id": "science.eb.w.d1",
+   "topic": "science.elec-what",
+   "kind": "mcq",
+   "prompt": "When a torch battery goes flat, what has happened?",
+   "options": [
+    {
+     "text": "Its store of chemical energy has run down",
+     "correct": true
+    },
+    {
+     "text": "The electricity inside it has been used up",
+     "correct": false,
+     "feedback": "A very common idea! The charges that flow are not used up: they are in the wires all along. What runs down is the energy stored in the battery’s chemicals."
+    },
+    {
+     "text": "All of its electric charge has leaked out",
+     "correct": false,
+     "feedback": "Charge does not leak away. The chemicals inside have reacted, so there is no energy left to transfer."
+    }
+   ],
+   "explain": "A battery stores energy in chemicals. As they react, the energy is transferred round the circuit. When the reactions are done, the battery is flat.",
+   "hook": "Batteries store **energy**, not electricity: the charges are in the wires all along.",
+   "example": "A phone battery warms up as it charges and as it works: energy being transferred."
+  },
+  {
+   "id": "science.eb.w.d2",
+   "topic": "science.elec-what",
+   "kind": "mcq",
+   "prompt": "Which of these could give you a dangerous electric shock?",
+   "options": [
+    {
+     "text": "A mains socket at home",
+     "correct": true
+    },
+    {
+     "text": "A single 1.5 V AA cell",
+     "correct": false,
+     "feedback": "A 1.5 V cell cannot push a harmful current through your body. That is why we explore circuits with cells."
+    },
+    {
+     "text": "The two AA cells in a TV remote",
+     "correct": false,
+     "feedback": "Two cells give only 3 V: far too little to harm you."
+    }
+   ],
+   "explain": "Mains electricity is 230 V, over 150 times the push of one cell: enough to drive a deadly current through a person.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "mains",
+     "cells and batteries"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "voltage",
+      "**230 V**",
+      "1.5 V for each ordinary cell (AA, AAA, C, D)"
+     ],
+     [
+      "current",
+      "AC: changes direction",
+      "DC: one way only"
+     ],
+     [
+      "used for",
+      "kettles, fridges, TVs",
+      "torches, remotes, toys"
+     ],
+     [
+      "safe to experiment?",
+      "**never**",
+      "yes"
+     ],
+     [
+      "comes from",
+      "power stations, wind and solar farms",
+      "chemicals inside"
+     ]
+    ],
+    "caption": "Mains electricity is generated far away and carried to us by the National Grid; cells carry their energy with them."
+   }
+  },
+  {
+   "id": "science.eb.w.current",
+   "topic": "science.elec-what",
+   "kind": "fact",
+   "prompt": "What is an electric current?",
+   "answer": "a flow of electric charge",
+   "distractors": [
+    "a store of heat energy",
+    "a kind of magnetism",
+    "a flow of metal atoms"
+   ],
+   "explain": "In metal wires the charge is carried by electrons, tiny particles from inside atoms. They are in the wire all along: the cell pushes them round.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "Current = a **flow** of charge, like water flowing in a pipe.",
+   "example": "A phone charger cable carries a current of about 1 to 3 amps."
+  },
+  {
+   "id": "science.eb.w.electron",
+   "topic": "science.elec-what",
+   "kind": "fact",
+   "prompt": "In a metal wire, which tiny particles move to carry the electric current?",
+   "answer": "electrons",
+   "distractors": [
+    "protons",
+    "atoms of copper",
+    "neutrons"
+   ],
+   "explain": "Electrons are far smaller than atoms. Billions of billions of them drift through a wire every second when a current flows.",
+   "accept": [
+    "electron",
+    "the electrons"
+   ]
+  },
+  {
+   "id": "science.eb.w.mains",
+   "topic": "science.elec-what",
+   "kind": "fact",
+   "prompt": "What is the voltage of UK mains electricity?",
+   "answer": "230 V",
+   "distractors": [
+    "1.5 V",
+    "12 V",
+    "400,000 V"
+   ],
+   "explain": "230 V is over 150 times the push of a 1.5 V cell. It can kill, so never experiment with mains.",
+   "accept": [
+    "230",
+    "230 volts",
+    "230v"
+   ],
+   "strict": true,
+   "hook": "**230** for the walls; **1.5** for the cells.",
+   "example": "Look at a phone charger plug: it says something like “Input 100–240 V”."
+  },
+  {
+   "id": "science.eb.w.which",
+   "topic": "science.elec-what",
+   "kind": "mcq",
+   "prompt": "Which of these runs on mains electricity, not batteries?",
+   "options": [
+    {
+     "text": "A fridge",
+     "correct": true
+    },
+    {
+     "text": "A TV remote",
+     "correct": false,
+     "feedback": "A remote runs on two small cells."
+    },
+    {
+     "text": "A digital watch",
+     "correct": false,
+     "feedback": "A watch runs on a tiny button cell."
+    }
+   ],
+   "explain": "Things that need a lot of energy, like fridges, kettles and washing machines, plug into the mains. Small things we carry about use cells."
+  },
+  {
+   "id": "science.eb.w.portable",
+   "topic": "science.elec-what",
+   "kind": "fact",
+   "prompt": "Why do torches and phones use batteries instead of plugging into the mains?",
+   "answer": "so they can be carried around",
+   "distractors": [
+    "batteries give a much bigger voltage",
+    "mains electricity cannot make light",
+    "batteries never run out"
+   ],
+   "explain": "Batteries store energy so things can work away from a socket. Their voltage is much lower than the mains.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.w.ac",
+   "topic": "science.elec-what",
+   "kind": "fact",
+   "prompt": "Mains electricity is AC. What does AC stand for?",
+   "answer": "alternating current",
+   "distractors": [
+    "always charged",
+    "amps of current",
+    "active circuit"
+   ],
+   "explain": "In AC the current keeps changing direction, flowing back and forth 50 times a second in the UK. A cell gives DC, direct current, which always flows the same way.",
+   "accept": [
+    "alternating current",
+    "alternating"
+   ],
+   "hook": "**A**C **a**lternates: back and forth. **D**C goes in one **d**irection.",
+   "example": "UK mains goes back and forth 50 times every second: a frequency of 50 hertz (Hz)."
+  },
+  {
+   "id": "science.eb.w.rechargeable",
+   "topic": "science.elec-what",
+   "kind": "fact",
+   "prompt": "A phone has a rechargeable battery. What does charging it do?",
+   "answer": "stores energy in it again",
+   "distractors": [
+    "fills it up with electrons",
+    "pumps electricity in like water",
+    "cleans its metal contacts"
+   ],
+   "explain": "Charging runs the battery’s chemical reactions backwards, so its chemical store fills up with energy again.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.w.grid",
+   "topic": "science.elec-what",
+   "kind": "fact",
+   "prompt": "What is the network of cables and pylons that carries electricity from power stations to homes across Great Britain called?",
+   "answer": "the National Grid",
+   "distractors": [
+    "the Power Web",
+    "the Mains Road",
+    "the Energy Line"
+   ],
+   "explain": "The National Grid links power stations, wind farms and solar farms to every town, with overhead lines on pylons and cables underground.",
+   "accept": [
+    "national grid",
+    "the national grid",
+    "grid"
+   ],
+   "hook": "The National **Grid** is a giant **net** of cables over the whole country.",
+   "example": "Pylons striding across fields carry the National Grid’s overhead lines.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "power station",
+     "National Grid",
+     "transformer",
+     "your home"
+    ],
+    "caption": "Mains electricity travels from power stations and wind farms through the National Grid; a transformer near your home steps the voltage down to 230 V."
+   }
+  },
+  {
+   "id": "science.eb.w.water",
+   "topic": "science.elec-what",
+   "kind": "fact",
+   "prompt": "Why must you never use mains appliances near water?",
+   "answer": "tap water conducts electricity",
+   "distractors": [
+    "water makes the voltage bigger",
+    "water turns electricity into steam",
+    "water makes appliances explode"
+   ],
+   "explain": "Pure water hardly conducts, but tap water, bath water and rain have substances dissolved in them, so they do. Wet skin lets current through more easily too.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "Water and mains **never mix**.",
+   "example": "Most UK bathrooms have pull-cord light switches so wet hands never touch a switch."
+  },
+  {
+   "id": "science.eb.w.kite",
+   "topic": "science.elec-what",
+   "kind": "mcq",
+   "prompt": "Your kite gets tangled on an overhead power line. What should you do?",
+   "options": [
+    {
+     "text": "Let go, keep away and tell an adult",
+     "correct": true
+    },
+    {
+     "text": "Pull hard on the string to free it",
+     "correct": false,
+     "feedback": "The line may be at up to 400,000 V. A current could travel down the string to you."
+    },
+    {
+     "text": "Climb the pylon to untangle it",
+     "correct": false,
+     "feedback": "Never climb a pylon: the voltages are high enough to jump through the air to you."
+    }
+   ],
+   "explain": "Overhead lines carry very high voltages. Let go of the string, stay well away, and an adult can call 105, the free number for the electricity network in Great Britain.",
+   "hook": "**Look up and live**: check for overhead lines before flying a kite or fishing.",
+   "example": "Signs on pylons show a lightning bolt with the words “Danger of death”."
+  },
+  {
+   "id": "science.eb.w.static",
+   "topic": "science.elec-what",
+   "kind": "fact",
+   "prompt": "Rub a balloon on your hair and it sticks to the wall. What kind of electricity is this?",
+   "answer": "static electricity",
+   "distractors": [
+    "mains electricity",
+    "current electricity",
+    "solar electricity"
+   ],
+   "explain": "Rubbing moves electrons from your hair onto the balloon. The charge builds up and stays put: “static” means not moving.",
+   "accept": [
+    "static"
+   ],
+   "hook": "**Static** = **stays** put, until it jumps.",
+   "example": "Pulling a jumper over your head in the dark can make tiny crackling sparks."
+  },
+  {
+   "id": "science.eb.w.charges",
+   "topic": "science.elec-what",
+   "kind": "mcq",
+   "prompt": "Two balloons are rubbed on the same jumper, so they get the same kind of charge. What happens when you hold them close together?",
+   "options": [
+    {
+     "text": "They push each other away",
+     "correct": true
+    },
+    {
+     "text": "They pull together and stick",
+     "correct": false,
+     "feedback": "Opposite charges attract; the same charges repel."
+    },
+    {
+     "text": "Nothing happens at all",
+     "correct": false,
+     "feedback": "Charged objects push or pull each other without touching."
+    }
+   ],
+   "explain": "Like charges repel; opposite charges attract. A rubbed balloon sticks to a wall because it pulls on opposite charges in the wall.",
+   "hook": "**Like charges repel, opposites attract**: just like magnet poles.",
+   "example": "A rubbed balloon can make your hair stand on end, or bend a thin stream of tap water."
+  },
+  {
+   "id": "science.eb.w.door",
+   "topic": "science.elec-what",
+   "kind": "mcq",
+   "prompt": "Why do you sometimes get a tiny shock from a metal door handle after walking across a carpet?",
+   "options": [
+    {
+     "text": "Static built up on you jumps to it",
+     "correct": true
+    },
+    {
+     "text": "The handle is wired to the mains",
+     "correct": false,
+     "feedback": "Door handles are not wired up. The charge came from you."
+    },
+    {
+     "text": "The carpet makes the metal magnetic",
+     "correct": false,
+     "feedback": "Magnetism is different: this is static electricity."
+    }
+   ],
+   "explain": "Your shoes rubbing on the carpet build up static charge on you. Touch metal, a conductor, and the charge jumps across in a tiny spark."
+  },
+  {
+   "id": "science.eb.w.lightning",
+   "topic": "science.elec-what",
+   "kind": "mcq",
+   "prompt": "What is lightning?",
+   "options": [
+    {
+     "text": "A giant spark of static electricity",
+     "correct": true
+    },
+    {
+     "text": "Burning gas escaping from a cloud",
+     "correct": false,
+     "feedback": "Nothing is burning: lightning is electrical."
+    },
+    {
+     "text": "Sunlight reflected off big raindrops",
+     "correct": false,
+     "feedback": "That makes a rainbow, not lightning."
+    }
+   ],
+   "explain": "Inside a storm cloud, ice and water rubbing together build up huge static charges. When the charge is big enough it jumps, to another cloud or to the ground.",
+   "hook": "Lightning is static on a giant scale.",
+   "example": "Count the seconds between flash and thunder and divide by 3 to find roughly how many kilometres away the storm is."
+  },
+  {
+   "id": "science.eb.w.hot",
+   "topic": "science.elec-what",
+   "kind": "fact",
+   "prompt": "Roughly how hot can a lightning bolt be?",
+   "answer": "about 30,000 °C",
+   "distractors": [
+    "about 100 °C",
+    "about 1,000 °C",
+    "about 3 million °C"
+   ],
+   "explain": "About five times hotter than the surface of the Sun. The air heats and expands so fast that it makes the boom of thunder.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "Lightning is about **5×** hotter than the Sun’s surface."
+  },
+  {
+   "id": "science.eb.c.works",
+   "topic": "science.elec-circuits",
+   "kind": "template",
+   "gen": "elecWillItWork",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.8,
+    -0.1,
+    0.8
+   ],
+   "example": "When a torch will not light, think like a scientist: is there a gap (a loose spring, a broken filament), or are the cells flat or the wrong way round?"
+  },
+  {
+   "id": "science.eb.c.d1",
+   "topic": "science.elec-circuits",
+   "kind": "mcq",
+   "prompt": "A bulb lights in a circuit with one cell. You take the cell out and put it back the other way round. What happens?",
+   "options": [
+    {
+     "text": "The bulb still lights",
+     "correct": true
+    },
+    {
+     "text": "The bulb goes out",
+     "correct": false,
+     "feedback": "A filament bulb lights whichever way round the cell is: the current just flows the other way."
+    },
+    {
+     "text": "It flickers on and off",
+     "correct": false,
+     "feedback": "It lights steadily, just as before."
+    }
+   ],
+   "explain": "Turning the cell round reverses the direction of the current. A filament bulb lights either way, so it looks just the same.",
+   "hook": "A filament bulb is not fussy: it lights **either way round**.",
+   "example": "In an LED bike lamp the cells must go in the right way round, because LEDs only light one way.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "circuit",
+     "many": [
+      {
+       "name": "A",
+       "bottom": [
+        "cell"
+       ],
+       "top": [
+        {
+         "k": "bulb",
+         "lit": 2
+        }
+       ]
+      },
+      {
+       "name": "B",
+       "bottom": [
+        "cell-r"
+       ],
+       "top": [
+        {
+         "k": "bulb",
+         "lit": 2
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "B has the cell turned round: the current flows the other way, and the bulb lights just the same."
+   }
+  },
+  {
+   "id": "science.eb.c.d2",
+   "topic": "science.elec-circuits",
+   "kind": "mcq",
+   "prompt": "Some people think the current comes out of BOTH ends of the cell and the two currents meet in the bulb. Are they right?",
+   "options": [
+    {
+     "text": "No: it flows round, out and back in",
+     "correct": true
+    },
+    {
+     "text": "Yes: the currents clash and make light",
+     "correct": false,
+     "feedback": "This “clashing currents” idea is very common, but if it were true, current would not need a loop."
+    },
+    {
+     "text": "Yes, but only in circuits with switches",
+     "correct": false,
+     "feedback": "Switches don’t change it: current always flows one way round the loop."
+    }
+   ],
+   "explain": "Current flows out of one end of the cell, all the way round the circuit, and back into the other end. Ammeters show the current is the same in both wires.",
+   "hook": "Current goes **out and back**, round the loop, like a racing car on a track."
+  },
+  {
+   "id": "science.eb.c.terminals",
+   "topic": "science.elec-circuits",
+   "kind": "fact",
+   "prompt": "What are the two ends of a cell called?",
+   "answer": "positive and negative terminals",
+   "distractors": [
+    "the north and south poles",
+    "the live and the neutral wires",
+    "the input and the output plugs"
+   ],
+   "explain": "The positive (+) terminal and the negative (−) terminal. A complete circuit joins one to the other.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.c.plus",
+   "topic": "science.elec-circuits",
+   "kind": "fact",
+   "prompt": "On an AA cell, how can you tell which end is positive (+)?",
+   "answer": "it has a raised bump",
+   "distractors": [
+    "it is the flat end",
+    "it is always painted red",
+    "it is the heavier end"
+   ],
+   "explain": "The + end has a small raised bump; the − end is flat. Battery compartments show which way round the cells go.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.c.cellbattery",
+   "topic": "science.elec-circuits",
+   "kind": "fact",
+   "prompt": "What is the difference between a cell and a battery?",
+   "answer": "a battery is cells joined together",
+   "distractors": [
+    "a cell is just a small battery",
+    "only a battery can be recharged",
+    "a cell gives more voltage than a battery"
+   ],
+   "explain": "Scientists call one unit a cell, so an AA “battery” is really a cell. Join two or more cells and you have a battery.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "One **c**ell; a **b**attery is a **b**unch of cells.",
+   "example": "A TV remote takes 2 AA cells: together they are a 3 V battery.",
+   "visual": [
+    {
+     "kind": "diagram",
+     "id": "circuit-symbols",
+     "highlight": "battery"
+    },
+    {
+     "kind": "maths",
+     "diagram": {
+      "type": "circuit",
+      "many": [
+       {
+        "name": "A",
+        "bottom": [
+         "cell"
+        ],
+        "top": [
+         "bulb"
+        ]
+       },
+       {
+        "name": "B",
+        "bottom": [
+         "battery-3"
+        ],
+        "top": [
+         "bulb"
+        ]
+       }
+      ]
+     },
+     "caption": "A has one cell. B has a battery: three cells joined together."
+    }
+   ]
+  },
+  {
+   "id": "science.eb.c.ninevolt",
+   "topic": "science.elec-circuits",
+   "kind": "fact",
+   "prompt": "An ordinary 9 V battery has 1.5 V cells packed inside it. How many?",
+   "answer": "6",
+   "distractors": [
+    "9",
+    "3",
+    "4"
+   ],
+   "explain": "6 × 1.5 V = 9 V: six small cells joined in a row inside the case.",
+   "accept": [
+    "six"
+   ],
+   "strict": true,
+   "hook": "**6 × 1.5 = 9**.",
+   "example": "The rectangular 9 V battery in a smoke alarm has six small cells inside."
+  },
+  {
+   "id": "science.eb.c.buzzer",
+   "topic": "science.elec-circuits",
+   "kind": "fact",
+   "prompt": "Which component transfers energy as sound?",
+   "answer": "a buzzer",
+   "distractors": [
+    "a bulb",
+    "a motor",
+    "a switch"
+   ],
+   "explain": "A buzzer vibrates when a current flows through it, making a sound.",
+   "accept": [
+    "buzzer",
+    "a bell",
+    "bell"
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "buzzer"
+   }
+  },
+  {
+   "id": "science.eb.c.motor",
+   "topic": "science.elec-circuits",
+   "kind": "fact",
+   "prompt": "Which component spins round, and can turn a fan or the wheels of a toy car?",
+   "answer": "a motor",
+   "distractors": [
+    "a buzzer",
+    "a cell",
+    "a bulb"
+   ],
+   "explain": "A motor transfers energy so that it turns: movement.",
+   "accept": [
+    "motor",
+    "an electric motor",
+    "electric motor"
+   ]
+  },
+  {
+   "id": "science.eb.c.filament",
+   "topic": "science.elec-circuits",
+   "kind": "fact",
+   "prompt": "What is the thin coiled wire inside an old-style bulb, which glows, called?",
+   "answer": "the filament",
+   "distractors": [
+    "the fuse",
+    "the terminal",
+    "the element"
+   ],
+   "explain": "The current makes the thin filament so hot that it glows white. Most of the energy heats the surroundings, so these bulbs are wasteful.",
+   "accept": [
+    "filament",
+    "a filament"
+   ],
+   "hook": "The **filament** is a fine thread of wire that glows white-hot.",
+   "example": "Old-style “clear” bulbs in cafés and restaurants show the glowing filament."
+  },
+  {
+   "id": "science.eb.c.blown",
+   "topic": "science.elec-circuits",
+   "kind": "mcq",
+   "prompt": "A bulb has “blown”. What has happened inside it?",
+   "options": [
+    {
+     "text": "Its filament has snapped, leaving a gap",
+     "correct": true
+    },
+    {
+     "text": "It has used up all its electricity",
+     "correct": false,
+     "feedback": "Bulbs don’t store or use up electricity. The filament has broken, so there is a gap."
+    },
+    {
+     "text": "Its glass has filled up with smoke",
+     "correct": false,
+     "feedback": "Sometimes it looks dark, but the real problem is the broken filament."
+    }
+   ],
+   "explain": "A broken filament is a gap in the circuit, so no current can flow through the bulb."
+  },
+  {
+   "id": "science.eb.c.led",
+   "topic": "science.elec-circuits",
+   "kind": "mcq",
+   "prompt": "How is an LED different from a filament bulb?",
+   "options": [
+    {
+     "text": "It only lights one way round",
+     "correct": true
+    },
+    {
+     "text": "It needs no circuit to light up",
+     "correct": false,
+     "feedback": "An LED needs a complete circuit like any other component."
+    },
+    {
+     "text": "It works only on mains electricity",
+     "correct": false,
+     "feedback": "LEDs work on cells too: think of bike lights."
+    }
+   ],
+   "explain": "LED stands for light-emitting diode. A diode only lets current through one way, so an LED must be connected the right way round. LEDs also waste much less energy as heat.",
+   "hook": "An LED is a one-way street for current.",
+   "example": "Bike lights, TV remotes’ little lights and new street lamps are all LEDs."
+  },
+  {
+   "id": "science.eb.c.reverse",
+   "topic": "science.elec-circuits",
+   "kind": "fact",
+   "prompt": "You turn the cell round in a circuit with a motor. What happens?",
+   "answer": "the motor spins the other way",
+   "distractors": [
+    "the motor stops for good",
+    "the motor spins faster",
+    "the motor makes a buzzing sound"
+   ],
+   "explain": "Reversing the current reverses the motor. Toy cars and model trains go backwards this way.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "Flip the cell, flip the spin.",
+   "example": "A remote-control car reverses by reversing the current to its motor.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "circuit",
+     "many": [
+      {
+       "name": "A",
+       "bottom": [
+        "cell"
+       ],
+       "top": [
+        {
+         "k": "motor",
+         "spin": 1
+        }
+       ]
+      },
+      {
+       "name": "B",
+       "bottom": [
+        "cell-r"
+       ],
+       "top": [
+        {
+         "k": "motor",
+         "spin": -1
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "Turn the cell round and the motor spins the other way."
+   }
+  },
+  {
+   "id": "science.eb.c.buzzway",
+   "topic": "science.elec-circuits",
+   "kind": "mcq",
+   "prompt": "A buzzer sounds. When Jo turns the cell round, it goes silent. Why?",
+   "options": [
+    {
+     "text": "Many buzzers only work one way round",
+     "correct": true
+    },
+    {
+     "text": "The cell is now pushing too hard",
+     "correct": false,
+     "feedback": "Turning the cell round does not change how hard it pushes."
+    },
+    {
+     "text": "A circuit only works one way round",
+     "correct": false,
+     "feedback": "Bulbs and motors work either way round. It is the buzzer that is fussy."
+    }
+   ],
+   "explain": "Many buzzers in school kits are electronic and only sound when their red wire goes to the + side. A bulb lights either way; a motor spins the other way."
+  },
+  {
+   "id": "science.eb.c.where",
+   "topic": "science.elec-circuits",
+   "kind": "mcq",
+   "prompt": "Does it matter where in a single loop you put the switch?",
+   "options": [
+    {
+     "text": "No: it breaks the loop wherever it is",
+     "correct": true
+    },
+    {
+     "text": "Yes: it must be next to the + end",
+     "correct": false,
+     "feedback": "Any gap anywhere in the loop stops the current everywhere."
+    },
+    {
+     "text": "Yes: it must be right next to the bulb",
+     "correct": false,
+     "feedback": "The switch works anywhere in the loop."
+    }
+   ],
+   "explain": "In a series circuit, a switch anywhere in the loop controls everything in it, because one gap stops the whole current."
+  },
+  {
+   "id": "science.eb.c.short",
+   "topic": "science.elec-circuits",
+   "kind": "mcq",
+   "prompt": "A wire is joined straight from one end of a cell to the other, with no component in between. What happens?",
+   "options": [
+    {
+     "text": "The cell gets hot and soon runs flat",
+     "correct": true
+    },
+    {
+     "text": "Nothing: the wire just sits there",
+     "correct": false,
+     "feedback": "A big current flows through the wire, which is dangerous with a big battery."
+    },
+    {
+     "text": "The wire stores the spare electricity",
+     "correct": false,
+     "feedback": "Wires don’t store electricity."
+    }
+   ],
+   "explain": "This is a short circuit: a big current flows straight through the wire, so the wire and the cell heat up and the cell runs flat fast. Never do it with a big battery.",
+   "hook": "A short circuit **skips** the work: big current, hot wire, flat cell.",
+   "example": "Never carry loose batteries in a pocket with coins or keys: they can short-circuit and get hot.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "circuit",
+     "bottom": [
+      "cell"
+     ],
+     "top": [
+      "wire"
+     ]
+    },
+    "caption": "A short circuit: a wire straight from one end of the cell to the other. Don’t do it!"
+   }
+  },
+  {
+   "id": "science.eb.c.bypass",
+   "topic": "science.elec-circuits",
+   "kind": "mcq",
+   "prompt": "In a circuit with one cell and one bulb, a spare wire is clipped from one side of the bulb to the other. Does the bulb light?",
+   "options": [
+    {
+     "text": "No: current takes the easy path round it",
+     "correct": true
+    },
+    {
+     "text": "Yes: now it gets current from two directions",
+     "correct": false,
+     "feedback": "Current takes the easiest path: almost all of it goes through the spare wire."
+    },
+    {
+     "text": "Yes, but twice as brightly",
+     "correct": false,
+     "feedback": "The bulb is “shorted out”, so it stays dark."
+    }
+   ],
+   "explain": "The spare wire is a much easier path than the filament, so the current goes round the bulb, not through it. The bulb is short-circuited.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "circuit",
+     "bottom": [
+      "cell"
+     ],
+     "branches": [
+      [
+       "bulb"
+      ],
+      [
+       "wire"
+      ]
+     ]
+    },
+    "caption": "The wire underneath gives the current an easy way round, so the bulb stays dark."
+   }
+  },
+  {
+   "id": "science.eb.c.instant",
+   "topic": "science.elec-circuits",
+   "kind": "mcq",
+   "prompt": "You flick on a switch. How soon does a bulb at the end of long wires light up?",
+   "options": [
+    {
+     "text": "Almost at once",
+     "correct": true
+    },
+    {
+     "text": "After the current travels from the cell",
+     "correct": false,
+     "feedback": "The charges are already in every part of the wire, and they all start moving together."
+    },
+    {
+     "text": "Only after a minute or so",
+     "correct": false,
+     "feedback": "It is far quicker than that."
+    }
+   ],
+   "explain": "The charges are in the wires all along, like a loop of rope: pull it anywhere and the whole loop moves at once."
+  },
+  {
+   "id": "science.eb.c.torch",
+   "topic": "science.elec-circuits",
+   "kind": "order",
+   "prompt": "Put the energy story of a torch in order.",
+   "items": [
+    "energy stored in the chemicals of the cells",
+    "transferred electrically round the circuit",
+    "transferred by the bulb as light and heat",
+    "absorbed by the surroundings, warming them"
+   ],
+   "labels": null,
+   "explain": "Energy is never used up. It moves from the cells’ chemical store, round the circuit, out of the bulb as light and heat, and ends up warming the surroundings.",
+   "hook": "Energy moves, it is never used up: **chemical → electrical → light and heat → surroundings**.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "chemical store",
+     "electrical",
+     "light and heat",
+     "warm surroundings"
+    ]
+   }
+  },
+  {
+   "id": "science.eb.s.read",
+   "topic": "science.elec-symbols",
+   "kind": "template",
+   "gen": "elecSymbols",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.7,
+    -0.1,
+    0.7
+   ],
+   "example": "Electricians follow circuit diagrams to wire houses, cars and aeroplanes."
+  },
+  {
+   "id": "science.eb.s.why",
+   "topic": "science.elec-symbols",
+   "kind": "mcq",
+   "prompt": "Why do scientists draw circuit diagrams with symbols instead of pictures?",
+   "options": [
+    {
+     "text": "Quick to draw and understood worldwide",
+     "correct": true
+    },
+    {
+     "text": "Pictures of circuits are not allowed",
+     "correct": false,
+     "feedback": "Pictures are allowed, just slow to draw and unclear."
+    },
+    {
+     "text": "Symbols make the circuit work better",
+     "correct": false,
+     "feedback": "The drawing doesn’t change how the real circuit works."
+    }
+   ],
+   "explain": "The same symbols are used all over the world, so any scientist or electrician can read a diagram, and it shows exactly what is connected to what."
+  },
+  {
+   "id": "science.eb.s.cell",
+   "topic": "science.elec-symbols",
+   "kind": "fact",
+   "prompt": "In the symbol for a cell, which line stands for the positive (+) terminal?",
+   "answer": "the longer, thinner line",
+   "distractors": [
+    "the shorter, thicker line",
+    "the line nearest the bulb",
+    "neither: cells have no sides"
+   ],
+   "explain": "Long line = positive (+), short thick line = negative (−).",
+   "formats": [
+    "choice"
+   ],
+   "hook": "**Long line, plus sign**: the longer line is the bigger one, +.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "cell"
+   }
+  },
+  {
+   "id": "science.eb.s.battery",
+   "topic": "science.elec-symbols",
+   "kind": "fact",
+   "prompt": "How is a battery drawn in a circuit diagram?",
+   "answer": "two or more cell symbols joined",
+   "distractors": [
+    "a circle with a letter B inside",
+    "one cell symbol drawn extra large",
+    "a rectangle with a + sign on it"
+   ],
+   "explain": "A battery is cells joined together, so it is drawn as cell symbols side by side, all facing the same way.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "A battery symbol is a **row of cells**, all facing the same way.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "battery"
+   }
+  },
+  {
+   "id": "science.eb.s.motor",
+   "topic": "science.elec-symbols",
+   "kind": "fact",
+   "prompt": "Which component is drawn as a circle with an M inside?",
+   "answer": "a motor",
+   "distractors": [
+    "a meter",
+    "a magnet",
+    "a bulb"
+   ],
+   "explain": "M for motor. An ammeter (A) and a voltmeter (V) are also letters in circles.",
+   "accept": [
+    "motor"
+   ],
+   "hook": "**M** for **m**otor, **A** for **a**mmeter, **V** for **v**oltmeter.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "motor"
+   }
+  },
+  {
+   "id": "science.eb.s.buzzer",
+   "topic": "science.elec-symbols",
+   "kind": "fact",
+   "prompt": "Which component is drawn as a dome shape on a flat base?",
+   "answer": "a buzzer",
+   "distractors": [
+    "a bulb",
+    "a switch",
+    "a motor"
+   ],
+   "explain": "The buzzer symbol looks a bit like a bell or a little dome.",
+   "accept": [
+    "buzzer"
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "buzzer"
+   }
+  },
+  {
+   "id": "science.eb.s.open",
+   "topic": "science.elec-symbols",
+   "kind": "fact",
+   "prompt": "In a circuit diagram, how do you show a switch that is open (off)?",
+   "answer": "a line hinged up, leaving a gap",
+   "distractors": [
+    "a straight line joining both contacts",
+    "a circle with a cross inside it",
+    "a dashed line drawn across the gap"
+   ],
+   "explain": "Open switch: the line is lifted away from one contact, leaving a gap. Closed switch: the line joins both contacts.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "Open switch: the drawbridge is **up**, so nothing can cross.",
+   "example": "A light switch on the wall opens and closes a gap just like the symbol shows.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "switch-open"
+   }
+  },
+  {
+   "id": "science.eb.s.wire",
+   "topic": "science.elec-symbols",
+   "kind": "fact",
+   "prompt": "How are wires drawn in a circuit diagram?",
+   "answer": "as straight lines with corners",
+   "distractors": [
+    "as wiggly lines, like real wires",
+    "as dotted lines with arrows",
+    "as curves round the outside"
+   ],
+   "explain": "Use a ruler: straight lines and square corners, with no gaps unless the real circuit has one.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "Draw circuits with a **ruler**: straight lines and square corners."
+  },
+  {
+   "id": "science.eb.s.ammeter",
+   "topic": "science.elec-symbols",
+   "kind": "fact",
+   "prompt": "What does a circle with an A inside stand for?",
+   "answer": "an ammeter",
+   "distractors": [
+    "an amplifier",
+    "a motor",
+    "a cell"
+   ],
+   "explain": "An ammeter measures current in amps (A). It goes in the loop, in series, so the current flows through it.",
+   "accept": [
+    "ammeter"
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "ammeter"
+   }
+  },
+  {
+   "id": "science.eb.s.voltmeter",
+   "topic": "science.elec-symbols",
+   "kind": "fact",
+   "prompt": "What does a circle with a V inside stand for?",
+   "answer": "a voltmeter",
+   "distractors": [
+    "an ammeter",
+    "a motor",
+    "a bulb"
+   ],
+   "explain": "A voltmeter measures voltage in volts (V). It is connected across a component, in parallel.",
+   "accept": [
+    "voltmeter"
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "voltmeter"
+   }
+  },
+  {
+   "id": "science.eb.s.resistor",
+   "topic": "science.elec-symbols",
+   "kind": "fact",
+   "prompt": "Which component is drawn as a plain rectangle?",
+   "answer": "a resistor",
+   "distractors": [
+    "a cell",
+    "a battery",
+    "a switch"
+   ],
+   "explain": "A resistor makes it harder for current to flow, so less current flows. Resistors control the brightness of lights and the speed of motors.",
+   "accept": [
+    "resistor"
+   ],
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit-symbols",
+    "highlight": "resistor"
+   }
+  },
+  {
+   "id": "science.eb.s.close",
+   "topic": "science.elec-symbols",
+   "kind": "mcq",
+   "prompt": "Look at the circuit diagram. What will happen when the switch is closed?",
+   "options": [
+    {
+     "text": "The bulb lights and the motor spins",
+     "correct": true
+    },
+    {
+     "text": "The bulb lights but the motor stays still",
+     "correct": false,
+     "feedback": "They are in the same loop, so once it is complete, both work."
+    },
+    {
+     "text": "Nothing, as the battery is the wrong way",
+     "correct": false,
+     "feedback": "Both cells face the same way, and a bulb works either way round anyway."
+    }
+   ],
+   "explain": "Closing the switch completes the single loop, so the current flows through both the bulb and the motor.",
+   "diagram": {
+    "type": "circuit",
+    "bottom": [
+     "battery-2",
+     "switch-open"
+    ],
+    "top": [
+     "bulb",
+     "motor"
+    ]
+   },
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "circuit",
+     "bottom": [
+      "battery-2",
+      "switch"
+     ],
+     "top": [
+      {
+       "k": "bulb",
+       "lit": 2
+      },
+      {
+       "k": "motor",
+       "spin": 1
+      }
+     ]
+    },
+    "caption": "Switch closed: one complete loop, so both work, sharing the battery’s push."
+   }
+  },
+  {
+   "id": "science.eb.s.count",
+   "topic": "science.elec-symbols",
+   "kind": "mcq",
+   "prompt": "How many cells and bulbs does this circuit diagram show?",
+   "options": [
+    {
+     "text": "1 cell and 2 bulbs",
+     "correct": true
+    },
+    {
+     "text": "2 cells and 1 bulb",
+     "correct": false,
+     "feedback": "Look again: one long-and-short pair of lines is one cell; the two crossed circles are bulbs."
+    },
+    {
+     "text": "1 cell and 1 bulb",
+     "correct": false,
+     "feedback": "There are two crossed circles: two bulbs."
+    }
+   ],
+   "explain": "One pair of long and short lines is one cell. Each circle with a cross is a bulb.",
+   "diagram": {
+    "type": "circuit",
+    "bottom": [
+     "cell"
+    ],
+    "top": [
+     "bulb",
+     "bulb"
+    ]
+   }
+  },
+  {
+   "id": "science.eb.s.picbuzzer",
+   "topic": "science.elec-symbols",
+   "kind": "mcq",
+   "prompt": "Which circuit symbol would you draw for the part picked out in this picture?",
+   "options": [
+    {
+     "text": "A dome shape on a flat base",
+     "correct": true
+    },
+    {
+     "text": "A circle with a cross inside",
+     "correct": false,
+     "feedback": "That is a bulb."
+    },
+    {
+     "text": "A circle with an M inside",
+     "correct": false,
+     "feedback": "That is a motor."
+    }
+   ],
+   "explain": "The part picked out is a buzzer. Its symbol is a dome on a flat base.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "buzzer",
+    "question": true
+   }
+  },
+  {
+   "id": "science.eb.s.picswitch",
+   "topic": "science.elec-symbols",
+   "kind": "mcq",
+   "prompt": "Which circuit symbol would you draw for the part picked out in this picture?",
+   "options": [
+    {
+     "text": "A line joining two contacts",
+     "correct": true
+    },
+    {
+     "text": "A long line and a short line",
+     "correct": false,
+     "feedback": "That is a cell."
+    },
+    {
+     "text": "A circle with a cross inside",
+     "correct": false,
+     "feedback": "That is a bulb."
+    }
+   ],
+   "explain": "The part picked out is a closed switch: its lever touches both contacts, so its symbol is a line joining two contacts.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "switch",
+    "question": true
+   }
+  },
+  {
+   "id": "science.eb.s.picbulb",
+   "topic": "science.elec-symbols",
+   "kind": "mcq",
+   "prompt": "Which circuit symbol would you draw for the part picked out in this picture?",
+   "options": [
+    {
+     "text": "A circle with a cross inside",
+     "correct": true
+    },
+    {
+     "text": "A dome shape on a flat base",
+     "correct": false,
+     "feedback": "That is a buzzer."
+    },
+    {
+     "text": "A circle with a V inside",
+     "correct": false,
+     "feedback": "That is a voltmeter."
+    }
+   ],
+   "explain": "The part picked out is a bulb. Its symbol is a circle with a cross, like the glowing filament inside.",
+   "visual": {
+    "kind": "diagram",
+    "id": "circuit",
+    "highlight": "bulb",
+    "question": true
+   }
+  },
+  {
+   "id": "science.eb.m.test",
+   "topic": "science.elec-materials",
+   "kind": "template",
+   "gen": "elecConductor",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.8,
+    -0.2,
+    0.6
+   ],
+   "example": "A cable is copper (a conductor) wrapped in plastic (an insulator): one material to carry the current, one to keep it in."
+  },
+  {
+   "id": "science.eb.m.d1",
+   "topic": "science.elec-materials",
+   "kind": "mcq",
+   "prompt": "Are all metals good conductors of electricity?",
+   "options": [
+    {
+     "text": "Yes: all metals conduct electricity",
+     "correct": true
+    },
+    {
+     "text": "No: only iron and steel conduct",
+     "correct": false,
+     "feedback": "You may be thinking of magnetism: only a few metals (iron, nickel, cobalt and steel) are magnetic, but all metals conduct."
+    },
+    {
+     "text": "No: only shiny metals conduct",
+     "correct": false,
+     "feedback": "Dull or shiny, every metal conducts."
+    }
+   ],
+   "explain": "All metals conduct electricity, some better than others. Do not mix this up with magnetism: most metals are not magnetic.",
+   "hook": "**All metals conduct; only a few are magnetic.**",
+   "example": "A magnet will not pick up an aluminium can, but aluminium foil still completes a circuit.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "material",
+     "conducts?",
+     "used for"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "copper",
+      "**yes**",
+      "the wires inside cables"
+     ],
+     [
+      "aluminium",
+      "**yes**",
+      "overhead power lines"
+     ],
+     [
+      "steel",
+      "**yes**",
+      "paper clips, spoons"
+     ],
+     [
+      "gold",
+      "**yes**",
+      "contacts inside phones"
+     ],
+     [
+      "graphite",
+      "**yes** (not a metal!)",
+      "pencil “lead”"
+     ],
+     [
+      "plastic",
+      "no",
+      "coating wires, plug cases"
+     ],
+     [
+      "rubber",
+      "no",
+      "electricians’ gloves"
+     ],
+     [
+      "glass, ceramics",
+      "no",
+      "insulators on pylons"
+     ],
+     [
+      "wood",
+      "no",
+      "rulers, handles"
+     ],
+     [
+      "air",
+      "no",
+      "the gap in an open switch"
+     ]
+    ],
+    "caption": "All metals conduct. Graphite is the surprising non-metal that conducts too."
+   }
+  },
+  {
+   "id": "science.eb.m.d2",
+   "topic": "science.elec-materials",
+   "kind": "mcq",
+   "prompt": "Is the graphite (the “lead”) in a pencil a conductor or an insulator?",
+   "options": [
+    {
+     "text": "A conductor, though not a metal",
+     "correct": true
+    },
+    {
+     "text": "An insulator, as it is not a metal",
+     "correct": false,
+     "feedback": "Graphite is the surprising exception: a non-metal that conducts."
+    },
+    {
+     "text": "Neither: it blocks only some current",
+     "correct": false,
+     "feedback": "It conducts, though less well than metals."
+    }
+   ],
+   "explain": "Graphite is a form of carbon. It is not a metal, but it conducts electricity. Draw a thick pencil line and it can complete a circuit.",
+   "hook": "Graphite is the **odd one out**: a non-metal that conducts.",
+   "example": "Some science kits light an LED through a thick pencil line drawn on paper."
+  },
+  {
+   "id": "science.eb.m.copper",
+   "topic": "science.elec-materials",
+   "kind": "mcq",
+   "prompt": "Why are most electrical wires made of copper?",
+   "options": [
+    {
+     "text": "It conducts well and bends easily",
+     "correct": true
+    },
+    {
+     "text": "It is the cheapest metal there is",
+     "correct": false,
+     "feedback": "Iron is much cheaper, but it does not conduct as well."
+    },
+    {
+     "text": "It is the only metal that conducts",
+     "correct": false,
+     "feedback": "All metals conduct."
+    }
+   ],
+   "explain": "Silver conducts slightly better, but copper is far cheaper. Copper can also be drawn out into thin, bendy wire.",
+   "hook": "**Cu** is copper’s chemical symbol: copper carries the current inside, plastic keeps it in outside.",
+   "example": "Strip the end of an old cable and you see shiny orange-brown copper strands."
+  },
+  {
+   "id": "science.eb.m.silver",
+   "topic": "science.elec-materials",
+   "kind": "fact",
+   "prompt": "Which metal is the best conductor of electricity of all?",
+   "answer": "silver",
+   "distractors": [
+    "iron",
+    "lead",
+    "aluminium"
+   ],
+   "explain": "Silver is the best, with copper close behind. Copper is used for wires because it is much cheaper.",
+   "accept": [
+    "silver"
+   ]
+  },
+  {
+   "id": "science.eb.m.screwdriver",
+   "topic": "science.elec-materials",
+   "kind": "fact",
+   "prompt": "Electricians’ screwdrivers have handles made of plastic or rubber. Why?",
+   "answer": "to insulate the electrician’s hand",
+   "distractors": [
+    "to make the screwdriver lighter",
+    "to conduct the current away",
+    "to stop the screwdriver rusting"
+   ],
+   "explain": "Plastic and rubber are insulators, so if the metal touches a live wire, the current cannot reach the hand.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "Insulators are a **safety coat** between you and the current."
+  },
+  {
+   "id": "science.eb.m.pylon",
+   "topic": "science.elec-materials",
+   "kind": "fact",
+   "prompt": "Overhead power cables are bare metal. What stops the current flowing down into the steel pylon?",
+   "answer": "glass or ceramic insulators",
+   "distractors": [
+    "rubber tyres under the pylon",
+    "the air inside the cables",
+    "magnets at the very top"
+   ],
+   "explain": "The cables hang from strings of glass or ceramic discs, which are insulators. The air around the bare cables insulates them too.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.m.alu",
+   "topic": "science.elec-materials",
+   "kind": "fact",
+   "prompt": "Overhead power lines are made mostly of which light metal?",
+   "answer": "aluminium",
+   "distractors": [
+    "gold",
+    "lead",
+    "silver"
+   ],
+   "explain": "Aluminium is light and conducts well, so long spans can hang between pylons. Many have a steel core for strength.",
+   "accept": [
+    "aluminium",
+    "aluminum"
+   ]
+  },
+  {
+   "id": "science.eb.m.gold",
+   "topic": "science.elec-materials",
+   "kind": "mcq",
+   "prompt": "Why are the tiny contacts inside phones and computers often coated with gold?",
+   "options": [
+    {
+     "text": "Gold conducts well and never corrodes",
+     "correct": true
+    },
+    {
+     "text": "Gold makes the current flow much faster",
+     "correct": false,
+     "feedback": "Gold does not speed the current up. Its advantage is that it never tarnishes, so it keeps conducting."
+    },
+    {
+     "text": "Gold is the only metal that conducts",
+     "correct": false,
+     "feedback": "All metals conduct."
+    }
+   ],
+   "explain": "Gold does not rust or tarnish, so the contacts stay clean and keep conducting for years."
+  },
+  {
+   "id": "science.eb.m.water",
+   "topic": "science.elec-materials",
+   "kind": "mcq",
+   "prompt": "Is pure water a good conductor of electricity?",
+   "options": [
+    {
+     "text": "No, but tap water conducts a little",
+     "correct": true
+    },
+    {
+     "text": "Yes: all water is a good conductor",
+     "correct": false,
+     "feedback": "Pure water conducts very poorly. It is what is dissolved in it that makes the difference."
+    },
+    {
+     "text": "No: no kind of water ever conducts",
+     "correct": false,
+     "feedback": "Tap water, rain and seawater all conduct, because of the substances dissolved in them."
+    }
+   ],
+   "explain": "Pure water conducts very poorly. Tap water, rain and seawater contain dissolved substances such as salts, so they conduct. That is why water and electricity are a dangerous mix.",
+   "hook": "It is what is **dissolved** in water that lets it conduct."
+  },
+  {
+   "id": "science.eb.m.salt",
+   "topic": "science.elec-materials",
+   "kind": "fact",
+   "prompt": "Which conducts electricity better: tap water or salty seawater?",
+   "answer": "salty seawater",
+   "distractors": [
+    "tap water",
+    "they are exactly the same",
+    "neither of them conducts"
+   ],
+   "explain": "Dissolved salt lets water conduct: the more salt, the better it conducts.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.m.body",
+   "topic": "science.elec-materials",
+   "kind": "fact",
+   "prompt": "Why can a current from the mains flow through a person?",
+   "answer": "the body is mostly salty water",
+   "distractors": [
+    "our bones are made of metal",
+    "blood is strongly magnetic",
+    "muscles store up electricity"
+   ],
+   "explain": "Your body is about 60% water with salts dissolved in it, so it conducts. That is why mains electricity is so dangerous.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.m.air",
+   "topic": "science.elec-materials",
+   "kind": "fact",
+   "prompt": "Is air a conductor or an insulator?",
+   "answer": "an insulator",
+   "distractors": [
+    "a conductor",
+    "a conductor only at night",
+    "neither of these"
+   ],
+   "explain": "Air insulates, which is why any gap stops a circuit. But a huge voltage can force a spark through it, like lightning.",
+   "accept": [
+    "insulator"
+   ],
+   "hook": "Air is an insulator, which is why a gap stops a circuit.",
+   "example": "The gaps between the pins of a plug are filled with air and plastic, both insulators."
+  },
+  {
+   "id": "science.eb.m.steps",
+   "topic": "science.elec-materials",
+   "kind": "order",
+   "prompt": "Put the steps for testing whether a material conducts electricity in order.",
+   "items": [
+    "Build a circuit with a cell and a bulb",
+    "Leave a gap between two crocodile clips",
+    "Clip the material into the gap",
+    "Watch whether the bulb lights"
+   ],
+   "labels": null,
+   "explain": "If the bulb lights, the material completed the circuit: it is a conductor. If not, it is an insulator. Test each material in the same circuit to keep it fair.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "circuit",
+     "bottom": [
+      "cell",
+      "switch"
+     ],
+     "top": [
+      {
+       "k": "test",
+       "text": "?"
+      },
+      "bulb"
+     ]
+    },
+    "caption": "Clip each material into the gap. If the bulb lights, it is a conductor."
+   }
+  },
+  {
+   "id": "science.eb.m.insulators",
+   "topic": "science.elec-materials",
+   "kind": "mcq",
+   "prompt": "Which list contains only insulators?",
+   "options": [
+    {
+     "text": "plastic, rubber, wood, glass",
+     "correct": true
+    },
+    {
+     "text": "plastic, copper, wood, glass",
+     "correct": false,
+     "feedback": "Copper is a metal: a conductor."
+    },
+    {
+     "text": "rubber, steel, wood, cork",
+     "correct": false,
+     "feedback": "Steel is a metal: a conductor."
+    }
+   ],
+   "explain": "Plastic, rubber, wood, glass, cork, paper, ceramics and air are all insulators.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "material",
+     "conducts?",
+     "used for"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "copper",
+      "**yes**",
+      "the wires inside cables"
+     ],
+     [
+      "aluminium",
+      "**yes**",
+      "overhead power lines"
+     ],
+     [
+      "steel",
+      "**yes**",
+      "paper clips, spoons"
+     ],
+     [
+      "gold",
+      "**yes**",
+      "contacts inside phones"
+     ],
+     [
+      "graphite",
+      "**yes** (not a metal!)",
+      "pencil “lead”"
+     ],
+     [
+      "plastic",
+      "no",
+      "coating wires, plug cases"
+     ],
+     [
+      "rubber",
+      "no",
+      "electricians’ gloves"
+     ],
+     [
+      "glass, ceramics",
+      "no",
+      "insulators on pylons"
+     ],
+     [
+      "wood",
+      "no",
+      "rulers, handles"
+     ],
+     [
+      "air",
+      "no",
+      "the gap in an open switch"
+     ]
+    ],
+    "caption": "All metals conduct. Graphite is the surprising non-metal that conducts too."
+   }
+  },
+  {
+   "id": "science.eb.m.conductors",
+   "topic": "science.elec-materials",
+   "kind": "mcq",
+   "prompt": "Which list contains only conductors?",
+   "options": [
+    {
+     "text": "copper, steel, gold, graphite",
+     "correct": true
+    },
+    {
+     "text": "copper, plastic, gold, silver",
+     "correct": false,
+     "feedback": "Plastic is an insulator."
+    },
+    {
+     "text": "iron, brass, wood, aluminium",
+     "correct": false,
+     "feedback": "Wood is an insulator."
+    }
+   ],
+   "explain": "All metals conduct, and so does graphite, the one common non-metal that does."
+  },
+  {
+   "id": "science.eb.m.dimmer",
+   "topic": "science.elec-materials",
+   "kind": "mcq",
+   "prompt": "Why might a bulb glow more dimly with a pencil’s graphite in the gap than with a steel spoon?",
+   "options": [
+    {
+     "text": "Graphite conducts less well than steel",
+     "correct": true
+    },
+    {
+     "text": "Graphite uses up some of the current",
+     "correct": false,
+     "feedback": "Current is never used up. A poorer conductor makes the current smaller all the way round the loop."
+    },
+    {
+     "text": "Graphite is a metal, but a weak one",
+     "correct": false,
+     "feedback": "Graphite is not a metal at all: it is a form of carbon."
+    }
+   ],
+   "explain": "Graphite has more resistance than metals, so a smaller current flows round the whole loop and the bulb is dimmer."
+  },
+  {
+   "id": "science.eb.ch.change",
+   "topic": "science.elec-changing",
+   "kind": "template",
+   "gen": "elecChange",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.6,
+    0,
+    0.8
+   ],
+   "example": "A torch with 3 cells shines brighter than one with 2, if its bulb is made for the bigger voltage."
+  },
+  {
+   "id": "science.eb.ch.fair",
+   "topic": "science.elec-changing",
+   "kind": "template",
+   "gen": "elecFairTest",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.7,
+    -0.1,
+    0.6
+   ],
+   "example": "Battery makers run fair tests: same torch, same bulb, different batteries, timing how long each lasts."
+  },
+  {
+   "id": "science.eb.ch.d1",
+   "topic": "science.elec-changing",
+   "kind": "mcq",
+   "prompt": "A series circuit has one cell and one bulb. You add a second, identical bulb to the loop. What happens?",
+   "options": [
+    {
+     "text": "Both bulbs are dimmer than one was",
+     "correct": true
+    },
+    {
+     "text": "Both stay as bright as one was",
+     "correct": false,
+     "feedback": "The two bulbs share the push of the one cell, so each gets less."
+    },
+    {
+     "text": "The first is bright, the second dim",
+     "correct": false,
+     "feedback": "The current is the same all round the loop, so identical bulbs are equally bright."
+    }
+   ],
+   "explain": "The two bulbs share the push of the cell, so a smaller current flows and both are dimmer, and equally bright.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "circuit",
+     "many": [
+      {
+       "name": "A",
+       "bottom": [
+        "cell"
+       ],
+       "top": [
+        {
+         "k": "bulb",
+         "lit": 2
+        }
+       ]
+      },
+      {
+       "name": "B",
+       "bottom": [
+        "cell"
+       ],
+       "top": [
+        {
+         "k": "bulb",
+         "lit": 1
+        },
+        {
+         "k": "bulb",
+         "lit": 1
+        }
+       ]
+      }
+     ]
+    },
+    "caption": "B: the two bulbs share the cell’s push, so both are dimmer than the one in A, and equally bright."
+   }
+  },
+  {
+   "id": "science.eb.ch.d2",
+   "topic": "science.elec-changing",
+   "kind": "mcq",
+   "prompt": "A big D cell and a small AA cell are both labelled 1.5 V. Which gives the bigger push?",
+   "options": [
+    {
+     "text": "Neither: both push with 1.5 V",
+     "correct": true
+    },
+    {
+     "text": "The D cell, because it is bigger",
+     "correct": false,
+     "feedback": "A bigger cell stores more energy, so it lasts longer, but its push (voltage) is the same."
+    },
+    {
+     "text": "The AA cell, because it is newer",
+     "correct": false,
+     "feedback": "The label tells you the push: both are 1.5 V."
+    }
+   ],
+   "explain": "Voltage depends on the chemicals inside, not the size. Ordinary AAA, AA, C and D cells are all 1.5 V; bigger ones just last longer.",
+   "hook": "**Size = how long it lasts; voltage = how hard it pushes.**",
+   "example": "Ordinary AAA, AA, C and D cells are all 1.5 V: a D cell just lasts much longer in a big torch."
+  },
+  {
+   "id": "science.eb.ch.louder",
+   "topic": "science.elec-changing",
+   "kind": "fact",
+   "prompt": "What happens to a buzzer when you add more cells, all facing the same way?",
+   "answer": "it gets louder",
+   "distractors": [
+    "it gets quieter",
+    "it stops working",
+    "nothing changes at all"
+   ],
+   "explain": "A bigger voltage pushes a bigger current through the buzzer, so it transfers more energy as sound.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.ch.faster",
+   "topic": "science.elec-changing",
+   "kind": "fact",
+   "prompt": "Adding more cells, all the same way round, to a circuit with a motor makes the motor…",
+   "answer": "spin faster",
+   "distractors": [
+    "spin slower",
+    "spin the other way",
+    "stop spinning"
+   ],
+   "explain": "More push, more current, more energy each second: the motor speeds up.",
+   "accept": [
+    "faster",
+    "go faster",
+    "spin faster",
+    "speed up"
+   ]
+  },
+  {
+   "id": "science.eb.ch.blow",
+   "topic": "science.elec-changing",
+   "kind": "mcq",
+   "prompt": "Mo adds more and more cells to a circuit with one small bulb. What will happen in the end?",
+   "options": [
+    {
+     "text": "The bulb blows: its filament breaks",
+     "correct": true
+    },
+    {
+     "text": "The bulb gets dimmer and dimmer",
+     "correct": false,
+     "feedback": "More cells push harder, so the bulb gets brighter, until it is too much."
+    },
+    {
+     "text": "The bulb keeps getting brighter forever",
+     "correct": false,
+     "feedback": "Each bulb can only take so much voltage before the filament overheats."
+    }
+   ],
+   "explain": "Each bulb is made for a certain voltage, often printed on it. Too much voltage drives so much current that the filament overheats and breaks.",
+   "hook": "Match the cells to the voltage printed on the bulb.",
+   "example": "Torch bulbs are marked with their voltage, like 3 V or 4.5 V."
+  },
+  {
+   "id": "science.eb.ch.why",
+   "topic": "science.elec-changing",
+   "kind": "mcq",
+   "prompt": "Why does a bulb get brighter when you add another cell the same way round?",
+   "options": [
+    {
+     "text": "A bigger push drives a bigger current",
+     "correct": true
+    },
+    {
+     "text": "More cells add more bulbs to the loop",
+     "correct": false,
+     "feedback": "Adding cells adds no bulbs. It adds push (voltage)."
+    },
+    {
+     "text": "Each cell lights a part of the filament",
+     "correct": false,
+     "feedback": "The whole filament carries the same current."
+    }
+   ],
+   "explain": "Voltage is the push. More cells give more voltage, which drives a bigger current, so the bulb transfers more energy as light each second."
+  },
+  {
+   "id": "science.eb.ch.share",
+   "topic": "science.elec-changing",
+   "kind": "mcq",
+   "prompt": "Why are two identical bulbs in series dimmer than one bulb on its own with the same cell?",
+   "options": [
+    {
+     "text": "They share the push of the cell",
+     "correct": true
+    },
+    {
+     "text": "The first bulb uses up the current",
+     "correct": false,
+     "feedback": "Current is never used up: the same current flows through both bulbs."
+    },
+    {
+     "text": "The second bulb gets no current",
+     "correct": false,
+     "feedback": "Both bulbs get the same current: they are equally bright."
+    }
+   ],
+   "explain": "Two bulbs in series make it harder for the current to flow, and the cell’s push is shared between them, so each bulb gets less.",
+   "hook": "Bulbs in series **share** the push like friends sharing one pizza."
+  },
+  {
+   "id": "science.eb.ch.wire",
+   "topic": "science.elec-changing",
+   "kind": "fact",
+   "prompt": "Making a thin wire in a circuit longer makes the bulb…",
+   "answer": "dimmer",
+   "distractors": [
+    "brighter",
+    "flash on and off",
+    "go off for ever"
+   ],
+   "explain": "A longer thin wire has more resistance: it is harder for the current to get through, so less current flows. This is the idea behind a variable resistor.",
+   "accept": [
+    "dimmer",
+    "less bright",
+    "go dimmer",
+    "dim"
+   ],
+   "hook": "A long thin wire is like a long thin straw: harder to get through.",
+   "example": "Some old dimmer switches worked by changing the length of resistance wire in the circuit."
+  },
+  {
+   "id": "science.eb.ch.fairone",
+   "topic": "science.elec-changing",
+   "kind": "fact",
+   "prompt": "In a fair test, how many things (variables) should you change on purpose?",
+   "answer": "one",
+   "distractors": [
+    "two",
+    "all of them",
+    "none"
+   ],
+   "explain": "Change one thing, measure one thing, keep everything else the same. Then you know what caused any difference.",
+   "accept": [
+    "1",
+    "just one",
+    "only one"
+   ],
+   "hook": "**Change one, measure one, keep the rest the same.**",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "in a fair test",
+     "example: cells and a buzzer"
+    ],
+    "tint": "rows",
+    "rows": [
+     [
+      "change **one** thing",
+      "the number of cells"
+     ],
+     [
+      "measure",
+      "the loudness (sound meter, dB)"
+     ],
+     [
+      "keep the same",
+      "the buzzer, wires, distance to the meter"
+     ],
+     [
+      "repeat",
+      "take each reading three times"
+     ],
+     [
+      "conclude",
+      "more cells, louder buzzer"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "science.eb.ch.predict",
+   "topic": "science.elec-changing",
+   "kind": "mcq",
+   "prompt": "Which of these is the best scientific prediction?",
+   "options": [
+    {
+     "text": "“More cells will make it brighter: a bigger push”",
+     "correct": true
+    },
+    {
+     "text": "“The bulb will look nice, because bulbs are bright”",
+     "correct": false,
+     "feedback": "A prediction says what will change, and why, using science."
+    },
+    {
+     "text": "“Something will change when I add more cells”",
+     "correct": false,
+     "feedback": "Too vague: say what will change and give a reason."
+    }
+   ],
+   "explain": "A good prediction says what you think will happen and gives a scientific reason."
+  },
+  {
+   "id": "science.eb.ch.table",
+   "topic": "science.elec-changing",
+   "kind": "fact",
+   "prompt": "In a results table, which column comes first?",
+   "answer": "what you changed",
+   "distractors": [
+    "what you measured",
+    "what you kept the same",
+    "your prediction"
+   ],
+   "explain": "The first column is what you changed (the independent variable); the next is what you measured, with units in the heading.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "First column: what I **changed**. Second: what I **measured**, with units."
+  },
+  {
+   "id": "science.eb.ch.repeat",
+   "topic": "science.elec-changing",
+   "kind": "fact",
+   "prompt": "Why do scientists repeat their measurements?",
+   "answer": "to make results more reliable",
+   "distractors": [
+    "to make the test take longer",
+    "to change the answer they got",
+    "because the first try never counts"
+   ],
+   "explain": "Repeats show whether results are consistent and help you spot odd ones. Then you can work out an average (the mean).",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.ch.anomaly",
+   "topic": "science.elec-changing",
+   "kind": "fact",
+   "prompt": "A result that does not fit the pattern of the others is called…",
+   "answer": "an anomalous result",
+   "distractors": [
+    "a variable",
+    "a prediction",
+    "a conclusion"
+   ],
+   "explain": "Check it and repeat it: maybe a clip was loose or a reading was misread.",
+   "accept": [
+    "anomalous result",
+    "anomaly",
+    "an anomaly",
+    "anomalous",
+    "an anomalous result"
+   ],
+   "hook": "**Anomalous** means “out of line”: the odd one out."
+  },
+  {
+   "id": "science.eb.ch.sensor",
+   "topic": "science.elec-changing",
+   "kind": "fact",
+   "prompt": "What is the fairest way to compare how bright two bulbs are?",
+   "answer": "use a light sensor",
+   "distractors": [
+    "judge it by eye from far away",
+    "ask which bulb looks nicest",
+    "feel how warm the glass is"
+   ],
+   "explain": "A light sensor (or data logger) gives a number, so the results do not depend on someone’s opinion.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.ch.car",
+   "topic": "science.elec-changing",
+   "kind": "fact",
+   "prompt": "A car battery gives 12 V. It is made of lead-acid cells of 2 V each. How many cells are inside?",
+   "answer": "6",
+   "distractors": [
+    "12",
+    "2",
+    "24"
+   ],
+   "explain": "6 × 2 V = 12 V.",
+   "accept": [
+    "six"
+   ],
+   "strict": true
+  },
+  {
+   "id": "science.eb.p.circuits",
+   "topic": "science.elec-parallel",
+   "kind": "template",
+   "gen": "elecSeriesParallel",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.4,
+    0.3,
+    1.1
+   ],
+   "example": "In a car, the headlights are in parallel: if one bulb fails, the other still lights the road."
+  },
+  {
+   "id": "science.eb.p.d1",
+   "topic": "science.elec-parallel",
+   "kind": "mcq",
+   "prompt": "Two identical bulbs are in series with a battery. Which is brighter?",
+   "options": [
+    {
+     "text": "They are equally bright",
+     "correct": true
+    },
+    {
+     "text": "The one nearer + is brighter",
+     "correct": false,
+     "feedback": "The current is the same everywhere in a series loop, so identical bulbs are equally bright."
+    },
+    {
+     "text": "The one the current reaches first",
+     "correct": false,
+     "feedback": "The current doesn’t get used up along the way: it is the same through both."
+    }
+   ],
+   "explain": "Current is the same all the way round a series circuit, so identical bulbs in series are equally bright.",
+   "hook": "In series the current is like one queue: everyone moves at the same speed."
+  },
+  {
+   "id": "science.eb.p.d2",
+   "topic": "science.elec-parallel",
+   "kind": "mcq",
+   "prompt": "Two identical bulbs are connected in parallel to a cell. Compared with one bulb on its own, each is…",
+   "options": [
+    {
+     "text": "Just as bright",
+     "correct": true
+    },
+    {
+     "text": "Half as bright",
+     "correct": false,
+     "feedback": "That happens in series. In parallel each bulb gets the full push of the cell."
+    },
+    {
+     "text": "Twice as bright",
+     "correct": false,
+     "feedback": "Each bulb gets the same push as a single bulb would, no more."
+    }
+   ],
+   "explain": "Each branch gets the full push of the cell, so each bulb is as bright as one bulb on its own. The cell has to supply both currents, so it runs flat sooner.",
+   "hook": "Parallel: every branch gets the **full push**.",
+   "example": "Turning on the kitchen light does not dim the lights in the other rooms.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "circuit",
+     "many": [
+      {
+       "name": "A (series)",
+       "bottom": [
+        "battery-2"
+       ],
+       "top": [
+        {
+         "k": "bulb",
+         "lit": 2
+        },
+        {
+         "k": "bulb",
+         "lit": 2
+        }
+       ]
+      },
+      {
+       "name": "B (parallel)",
+       "bottom": [
+        "battery-2"
+       ],
+       "branches": [
+        [
+         {
+          "k": "bulb",
+          "lit": 3
+         }
+        ],
+        [
+         {
+          "k": "bulb",
+          "lit": 3
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    "caption": "Same battery, same two bulbs. In parallel each bulb gets the full push, so both are brighter than in series."
+   }
+  },
+  {
+   "id": "science.eb.p.series",
+   "topic": "science.elec-parallel",
+   "kind": "fact",
+   "prompt": "A circuit with all its components in one single loop is called a…",
+   "answer": "series circuit",
+   "distractors": [
+    "parallel circuit",
+    "short circuit",
+    "branch circuit"
+   ],
+   "explain": "Series: one after another, in one loop, like carriages in a train.",
+   "accept": [
+    "series",
+    "a series circuit"
+   ],
+   "hook": "**Series** = one after another, like episodes of a TV series.",
+   "example": "Some old Christmas lights were wired in series: one broken bulb and the whole set went dark."
+  },
+  {
+   "id": "science.eb.p.parallel",
+   "topic": "science.elec-parallel",
+   "kind": "fact",
+   "prompt": "A circuit in which the current splits into separate branches is called a…",
+   "answer": "parallel circuit",
+   "distractors": [
+    "series circuit",
+    "short circuit",
+    "single circuit"
+   ],
+   "explain": "Parallel: side by side, each component on its own branch.",
+   "accept": [
+    "parallel",
+    "a parallel circuit"
+   ],
+   "hook": "**Parallel** lines run side by side: so do parallel branches.",
+   "example": "Every socket and light in your home is on a parallel branch."
+  },
+  {
+   "id": "science.eb.p.junction",
+   "topic": "science.elec-parallel",
+   "kind": "fact",
+   "prompt": "What is the point where a circuit splits into branches called?",
+   "answer": "a junction",
+   "distractors": [
+    "a terminal",
+    "a switch",
+    "a filament"
+   ],
+   "explain": "At a junction the current splits; where the branches meet again, it joins back together.",
+   "accept": [
+    "junction"
+   ]
+  },
+  {
+   "id": "science.eb.p.home",
+   "topic": "science.elec-parallel",
+   "kind": "mcq",
+   "prompt": "Why are the lights in a house wired in parallel?",
+   "options": [
+    {
+     "text": "So each light can be switched on its own",
+     "correct": true
+    },
+    {
+     "text": "So that all the lights share one switch",
+     "correct": false,
+     "feedback": "That is the opposite: parallel branches can each have their own switch."
+    },
+    {
+     "text": "So the bulbs glow half as brightly",
+     "correct": false,
+     "feedback": "In parallel each light gets the full mains voltage."
+    }
+   ],
+   "explain": "Each light is on its own branch, with its own switch, and gets the full 230 V. If one bulb blows, the others stay on.",
+   "hook": "At home, **every light is its own loop** through the mains.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "series",
+     "parallel"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "paths",
+      "one loop",
+      "separate branches"
+     ],
+     [
+      "one bulb breaks",
+      "all go **out**",
+      "others stay **lit**"
+     ],
+     [
+      "adding bulbs",
+      "each gets dimmer",
+      "each stays as bright"
+     ],
+     [
+      "current",
+      "the same everywhere",
+      "splits, then adds up again"
+     ],
+     [
+      "used in",
+      "some old fairy lights",
+      "house lights and sockets"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "science.eb.p.fairy",
+   "topic": "science.elec-parallel",
+   "kind": "mcq",
+   "prompt": "In an old set of Christmas lights, one bulb broke and the whole set went out. How were the bulbs connected?",
+   "options": [
+    {
+     "text": "In series",
+     "correct": true
+    },
+    {
+     "text": "In parallel",
+     "correct": false,
+     "feedback": "In parallel, the others would have stayed lit."
+    },
+    {
+     "text": "Not connected at all",
+     "correct": false,
+     "feedback": "They must be connected to light at all."
+    }
+   ],
+   "explain": "In series there is only one path, so one broken filament stops the current to every bulb. Hunting for the broken one could take ages!"
+  },
+  {
+   "id": "science.eb.p.same",
+   "topic": "science.elec-parallel",
+   "kind": "fact",
+   "prompt": "In a series circuit, how does the current compare at different points?",
+   "answer": "it is the same everywhere",
+   "distractors": [
+    "it is biggest near the cell",
+    "it gets smaller after each bulb",
+    "it is zero after the last bulb"
+   ],
+   "explain": "Current is not used up. Put an ammeter anywhere in a series loop and it shows the same reading.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.p.split",
+   "topic": "science.elec-parallel",
+   "kind": "mcq",
+   "prompt": "At a junction, 0.6 A splits equally between two identical branches. How much flows in each branch?",
+   "options": [
+    {
+     "text": "0.3 A",
+     "correct": true
+    },
+    {
+     "text": "0.6 A",
+     "correct": false,
+     "feedback": "The 0.6 A is shared between the branches."
+    },
+    {
+     "text": "1.2 A",
+     "correct": false,
+     "feedback": "Splitting shares the current: it cannot make more."
+    }
+   ],
+   "explain": "0.6 ÷ 2 = 0.3 A in each branch. Where the branches join again, 0.3 + 0.3 = 0.6 A flows back to the cell.",
+   "hook": "Currents **split** at a junction and **add up** where branches meet.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "circuit",
+     "bottom": [
+      "cell",
+      {
+       "k": "ammeter",
+       "read": "0.6 A"
+      }
+     ],
+     "branches": [
+      [
+       "bulb",
+       {
+        "k": "ammeter",
+        "read": "0.3 A"
+       }
+      ],
+      [
+       "bulb",
+       {
+        "k": "ammeter",
+        "read": "0.3 A"
+       }
+      ]
+     ]
+    },
+    "caption": "The current splits at the junction and joins again: 0.3 + 0.3 = 0.6 A."
+   }
+  },
+  {
+   "id": "science.eb.p.flat",
+   "topic": "science.elec-parallel",
+   "kind": "mcq",
+   "prompt": "Which runs a battery flat sooner: two bulbs in series, or the same two bulbs in parallel?",
+   "options": [
+    {
+     "text": "Two bulbs in parallel",
+     "correct": true
+    },
+    {
+     "text": "Two bulbs in series",
+     "correct": false,
+     "feedback": "In series the bulbs share the push, so less current flows and the battery lasts longer."
+    },
+    {
+     "text": "Both run it flat equally fast",
+     "correct": false,
+     "feedback": "The parallel bulbs are brighter and draw much more current."
+    }
+   ],
+   "explain": "In parallel each bulb gets the full push, so the battery supplies two full currents and transfers its energy faster."
+  },
+  {
+   "id": "science.eb.p.switch",
+   "topic": "science.elec-parallel",
+   "kind": "fact",
+   "prompt": "In a parallel circuit, where should you put a switch to control just one bulb?",
+   "answer": "on that bulb’s own branch",
+   "distractors": [
+    "next to the cell",
+    "anywhere in the circuit",
+    "on a different branch"
+   ],
+   "explain": "A switch on a branch controls only that branch. A switch next to the cell controls everything.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.p.rope",
+   "topic": "science.elec-parallel",
+   "kind": "fact",
+   "prompt": "In the “rope loop” model of a circuit, a loop of rope is pulled round through people’s hands. What does the moving rope stand for?",
+   "answer": "the current",
+   "distractors": [
+    "the voltage",
+    "the battery",
+    "the bulb"
+   ],
+   "explain": "The rope moves everywhere at once and none of it is used up, like current. The person pulling is the cell (the push); a person gripping the rope feels their hands warm up, like a bulb.",
+   "accept": [
+    "current",
+    "the charge",
+    "charge"
+   ],
+   "hook": "Rope loop: moves everywhere at once, none used up, warms the hands that grip it."
+  },
+  {
+   "id": "science.eb.p.usedup",
+   "topic": "science.elec-parallel",
+   "kind": "mcq",
+   "prompt": "Why is it wrong to say a bulb “uses up” current?",
+   "options": [
+    {
+     "text": "The same current flows in as flows out",
+     "correct": true
+    },
+    {
+     "text": "Bulbs actually make extra current",
+     "correct": false,
+     "feedback": "Bulbs make no current: the cell pushes it."
+    },
+    {
+     "text": "Current only flows when bulbs are off",
+     "correct": false,
+     "feedback": "Current flows when the circuit is complete and the bulb is on."
+    }
+   ],
+   "explain": "Ammeters on either side of a bulb read the same. What the bulb takes from the circuit is energy, not current.",
+   "hook": "Current in = current out. **Energy** is what gets transferred."
+  },
+  {
+   "id": "science.eb.p.energy",
+   "topic": "science.elec-parallel",
+   "kind": "fact",
+   "prompt": "If current is not used up in a bulb, what does the bulb take from the circuit?",
+   "answer": "energy",
+   "distractors": [
+    "electrons",
+    "current",
+    "wire"
+   ],
+   "explain": "The bulb transfers energy carried by the current, as light and heat. The charges carry on round the loop.",
+   "accept": [
+    "energy",
+    "some energy"
+   ]
+  },
+  {
+   "id": "science.eb.p.three",
+   "topic": "science.elec-parallel",
+   "kind": "fact",
+   "prompt": "Three identical bulbs are in parallel with a cell, all lit. One breaks. How many stay lit?",
+   "answer": "2",
+   "distractors": [
+    "0",
+    "1",
+    "3"
+   ],
+   "explain": "Each bulb has its own branch. The other two branches are still complete, so those two bulbs stay lit, just as bright.",
+   "accept": [
+    "two"
+   ],
+   "strict": true,
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "circuit",
+     "bottom": [
+      "cell"
+     ],
+     "branches": [
+      [
+       {
+        "k": "bulb",
+        "tag": "A",
+        "lit": 2
+       }
+      ],
+      [
+       {
+        "k": "bulb",
+        "tag": "B"
+       }
+      ],
+      [
+       {
+        "k": "bulb",
+        "tag": "C",
+        "lit": 2
+       }
+      ]
+     ]
+    },
+    "caption": "Bulb B has broken. Branches A and C are still complete loops, so they stay lit."
+   }
+  },
+  {
+   "id": "science.eb.g.energy",
+   "topic": "science.elec-generating",
+   "kind": "template",
+   "gen": "elecEnergy",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -0.7,
+    0.1,
+    0.9
+   ],
+   "example": "A 10-minute electric shower transfers about as much energy as an LED bulb left on day and night for a whole week."
+  },
+  {
+   "id": "science.eb.g.d1",
+   "topic": "science.elec-generating",
+   "kind": "mcq",
+   "prompt": "When you switch on a lamp at home, where was its electricity generated?",
+   "options": [
+    {
+     "text": "At a power station or wind farm",
+     "correct": true
+    },
+    {
+     "text": "Inside the plug socket in the wall",
+     "correct": false,
+     "feedback": "A socket is just a connection to the cables that come from the National Grid."
+    },
+    {
+     "text": "In the light switch on the wall",
+     "correct": false,
+     "feedback": "A switch only opens and closes a gap."
+    }
+   ],
+   "explain": "Mains electricity is generated at power stations, wind farms and solar farms, and reaches your home through the National Grid."
+  },
+  {
+   "id": "science.eb.g.generator",
+   "topic": "science.elec-generating",
+   "kind": "fact",
+   "prompt": "In a power station, which machine turns movement into electricity?",
+   "answer": "a generator",
+   "distractors": [
+    "a boiler",
+    "a transformer",
+    "a cooling tower"
+   ],
+   "explain": "The turbine spins the generator, which has magnets and coils of wire inside.",
+   "accept": [
+    "generator",
+    "an electric generator",
+    "dynamo"
+   ],
+   "hook": "A **gen**erator **gen**erates: spinning magnets, coils of wire.",
+   "example": "A bicycle dynamo is a tiny generator: pedal and the lamp lights."
+  },
+  {
+   "id": "science.eb.g.steps",
+   "topic": "science.elec-generating",
+   "kind": "order",
+   "prompt": "Put the stages of a power station that burns fuel to make steam in order.",
+   "items": [
+    "fuel (such as wood pellets) is burned",
+    "water is heated into steam",
+    "the steam spins a turbine",
+    "the turbine turns a generator",
+    "electricity goes out to the National Grid"
+   ],
+   "labels": null,
+   "explain": "Burning fuel heats water into steam; the steam spins the turbine, which turns the generator. Nuclear power stations work the same way: only the source of the heat is different. (Most UK gas power stations also spin a gas turbine directly with the hot burning gas.)",
+   "hook": "**Fuel → steam → turbine → generator → grid.**",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Fuel is burned (or uranium split) to heat water",
+     "Steam spins a turbine",
+     "The turbine turns a generator: magnets and coils",
+     "Transformers step the voltage up",
+     "The National Grid carries it across the country",
+     "Transformers step it down to 230 V for homes"
+    ],
+    "caption": "Wind, tidal and hydroelectric power skip the steam: moving air or water turns the turbine directly. Solar cells have no turbine at all."
+   }
+  },
+  {
+   "id": "science.eb.g.induction",
+   "topic": "science.elec-generating",
+   "kind": "mcq",
+   "prompt": "How does a generator make a current?",
+   "options": [
+    {
+     "text": "Magnets spin near coils of wire",
+     "correct": true
+    },
+    {
+     "text": "Fuel is burned inside its wires",
+     "correct": false,
+     "feedback": "Fuel is burned in a boiler, away from the generator."
+    },
+    {
+     "text": "It releases electricity from tanks",
+     "correct": false,
+     "feedback": "Electricity is not stored: it is generated as the magnets move."
+    }
+   ],
+   "explain": "Moving a magnet near a coil of wire makes a current flow: Michael Faraday discovered this in 1831. A bicycle dynamo works the same way.",
+   "hook": "**Move a magnet, make a current.**",
+   "example": "Wind-up torches have a little generator inside: wind the handle and the magnet spins."
+  },
+  {
+   "id": "science.eb.g.renewable",
+   "topic": "science.elec-generating",
+   "kind": "mcq",
+   "prompt": "Which of these lists contains only renewable energy resources?",
+   "options": [
+    {
+     "text": "wind, solar, tidal",
+     "correct": true
+    },
+    {
+     "text": "wind, coal, solar",
+     "correct": false,
+     "feedback": "Coal is a fossil fuel: it will run out."
+    },
+    {
+     "text": "oil, gas, tidal",
+     "correct": false,
+     "feedback": "Oil and gas are fossil fuels."
+    }
+   ],
+   "explain": "Renewable resources (wind, solar, tidal, wave, hydroelectric, geothermal, biomass) are topped up by nature. Fossil fuels and uranium will run out.",
+   "hook": "**Re-new-able**: nature keeps topping it up.",
+   "example": "Offshore wind farms in the North Sea now generate a large share of the UK’s electricity.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "resource",
+     "renewable?",
+     "why"
+    ],
+    "tint": "cols",
+    "rows": [
+     [
+      "wind",
+      "**yes**",
+      "the wind keeps blowing"
+     ],
+     [
+      "solar",
+      "**yes**",
+      "the Sun keeps shining"
+     ],
+     [
+      "hydroelectric",
+      "**yes**",
+      "rain refills the reservoirs"
+     ],
+     [
+      "tidal",
+      "**yes**",
+      "the tides come in twice a day"
+     ],
+     [
+      "coal, oil, gas",
+      "no",
+      "took millions of years to form"
+     ],
+     [
+      "nuclear",
+      "no",
+      "its uranium will run out"
+     ]
+    ],
+    "caption": "Fossil fuels (coal, oil, gas) also give off carbon dioxide when burned."
+   }
+  },
+  {
+   "id": "science.eb.g.nuclear",
+   "topic": "science.elec-generating",
+   "kind": "fact",
+   "prompt": "Nuclear power stations release energy from which fuel?",
+   "answer": "uranium",
+   "distractors": [
+    "coal",
+    "hydrogen gas",
+    "oil"
+   ],
+   "explain": "Uranium atoms are split, releasing heat that boils water into steam. Nuclear power gives off no carbon dioxide while running, but uranium will run out and the waste is dangerous for thousands of years.",
+   "accept": [
+    "uranium"
+   ]
+  },
+  {
+   "id": "science.eb.g.solar",
+   "topic": "science.elec-generating",
+   "kind": "fact",
+   "prompt": "What does a solar cell do?",
+   "answer": "makes a current using light",
+   "distractors": [
+    "stores sunlight for night-time",
+    "heats up water to make steam",
+    "only works on hot days"
+   ],
+   "explain": "Light falling on a solar cell makes a current directly, with no moving parts and no fuel. Solar panels are made of many cells; they work on cool, bright days too.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "Solar cell: light in, current out, no moving parts.",
+   "example": "Calculators, garden lights and roof panels use solar cells."
+  },
+  {
+   "id": "science.eb.g.wind",
+   "topic": "science.elec-generating",
+   "kind": "fact",
+   "prompt": "In a wind turbine, what turns the generator?",
+   "answer": "the blades, turned by the wind",
+   "distractors": [
+    "a petrol engine in the tower",
+    "steam from a boiler",
+    "a big battery in the base"
+   ],
+   "explain": "The wind pushes the blades round, and they turn the generator inside the box at the top.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.g.hydro",
+   "topic": "science.elec-generating",
+   "kind": "fact",
+   "prompt": "Hydroelectric power stations use the energy of…",
+   "answer": "falling water",
+   "distractors": [
+    "burning coal",
+    "hot rocks underground",
+    "sunlight on panels"
+   ],
+   "explain": "Water from a reservoir flows down through turbines, spinning the generators. Rain keeps refilling the reservoir.",
+   "accept": [
+    "water",
+    "moving water",
+    "flowing water",
+    "falling water"
+   ],
+   "hook": "**Hydro** is Greek for water.",
+   "example": "Scotland has many hydroelectric dams in the Highlands."
+  },
+  {
+   "id": "science.eb.g.windproblem",
+   "topic": "science.elec-generating",
+   "kind": "mcq",
+   "prompt": "What is one problem with relying only on wind turbines?",
+   "options": [
+    {
+     "text": "The wind does not always blow",
+     "correct": true
+    },
+    {
+     "text": "Wind will run out in a few years",
+     "correct": false,
+     "feedback": "Wind is renewable: it will not run out."
+    },
+    {
+     "text": "They give off lots of carbon dioxide",
+     "correct": false,
+     "feedback": "Wind turbines give off no carbon dioxide while they run."
+    }
+   ],
+   "explain": "On calm days wind farms make little electricity, so the grid also needs other sources and ways of storing energy."
+  },
+  {
+   "id": "science.eb.g.coal",
+   "topic": "science.elec-generating",
+   "kind": "fact",
+   "prompt": "In which year did the UK close its last coal-fired power station, Ratcliffe-on-Soar?",
+   "answer": "2024",
+   "distractors": [
+    "1990",
+    "2008",
+    "2015"
+   ],
+   "explain": "Ratcliffe-on-Soar in Nottinghamshire closed on 30 September 2024, about 140 years after Britain’s first coal-fired power stations opened in 1882.",
+   "strict": true,
+   "formats": [
+    "choice"
+   ],
+   "hook": "From 1882 to 2024: about 140 years of British coal power."
+  },
+  {
+   "id": "science.eb.g.highv",
+   "topic": "science.elec-generating",
+   "kind": "mcq",
+   "prompt": "Why does the National Grid carry electricity at very high voltages, like 400,000 V?",
+   "options": [
+    {
+     "text": "Less energy is wasted heating the cables",
+     "correct": true
+    },
+    {
+     "text": "It makes the electricity travel faster",
+     "correct": false,
+     "feedback": "The voltage is about how much energy is wasted, not speed."
+    },
+    {
+     "text": "Homes need 400,000 V to work",
+     "correct": false,
+     "feedback": "Homes use 230 V: transformers step the voltage down before it reaches you."
+    }
+   ],
+   "explain": "At a high voltage, a smaller current carries the same energy, so the cables waste less energy heating up. Transformers step the voltage up at the power station and down again near homes.",
+   "hook": "**High voltage, low current, less heat wasted.**"
+  },
+  {
+   "id": "science.eb.g.transformer",
+   "topic": "science.elec-generating",
+   "kind": "fact",
+   "prompt": "Which device steps the voltage down from the National Grid to 230 V for homes?",
+   "answer": "a transformer",
+   "distractors": [
+    "a generator",
+    "a turbine",
+    "a fuse"
+   ],
+   "explain": "Transformers only work with alternating current (AC), one reason mains electricity is AC.",
+   "accept": [
+    "transformer",
+    "step-down transformer",
+    "a step-down transformer"
+   ]
+  },
+  {
+   "id": "science.eb.g.save",
+   "topic": "science.elec-generating",
+   "kind": "mcq",
+   "prompt": "Which of these saves electricity at home?",
+   "options": [
+    {
+     "text": "Switching off lights in empty rooms",
+     "correct": true
+    },
+    {
+     "text": "Leaving the TV on standby all night",
+     "correct": false,
+     "feedback": "Standby still takes a little energy, all night long."
+    },
+    {
+     "text": "Filling the kettle to the top each time",
+     "correct": false,
+     "feedback": "Boil only the water you need: heating extra water wastes energy."
+    }
+   ],
+   "explain": "Switch off what you are not using, boil only the water you need and choose LED bulbs. It saves money and means less fuel is burned.",
+   "hook": "**Off, not standby.** Boil what you need. LEDs, not old bulbs."
+  },
+  {
+   "id": "science.eb.g.led",
+   "topic": "science.elec-generating",
+   "kind": "fact",
+   "prompt": "Why do LED bulbs save energy compared with old filament bulbs?",
+   "answer": "they waste far less energy as heat",
+   "distractors": [
+    "they are only switched on at night",
+    "they give out a dimmer light",
+    "they store energy for later"
+   ],
+   "explain": "An LED gives the same light as a filament bulb for about a sixth of the power, or less: a filament bulb wastes most of its energy heating the room.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.g.kwh",
+   "topic": "science.elec-generating",
+   "kind": "fact",
+   "prompt": "Electricity bills charge for energy in units called…",
+   "answer": "kilowatt-hours (kWh)",
+   "distractors": [
+    "kilovolts (kV)",
+    "amp-hours (Ah)",
+    "newton-metres (Nm)"
+   ],
+   "explain": "One kilowatt-hour is the energy a 1,000 W appliance transfers in one hour. The meter counts them.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "A **unit** on your bill = 1 kWh = a 1,000 W heater on for 1 hour."
+  },
+  {
+   "id": "science.eb.g.standby",
+   "topic": "science.elec-generating",
+   "kind": "fact",
+   "prompt": "A TV left on standby…",
+   "answer": "still takes a little energy",
+   "distractors": [
+    "takes no energy at all",
+    "stores energy for later",
+    "takes more than when on"
+   ],
+   "explain": "The little standby light and the circuits waiting for the remote still need energy. Switching off at the plug saves it.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "science.eb.h.amber",
+   "topic": "science.elec-scientists",
+   "kind": "fact",
+   "prompt": "The word “electricity” comes from the ancient Greek word for which material, which attracts fluff when it is rubbed?",
+   "answer": "amber",
+   "distractors": [
+    "glass",
+    "gold",
+    "silk"
+   ],
+   "explain": "The Greek ēlektron means amber, hardened tree resin. Rubbed amber picks up bits of fluff and straw: static electricity.",
+   "accept": [
+    "amber"
+   ],
+   "hook": "**Elektron** (amber) → **electr**icity, **electr**on.",
+   "example": "Amber jewellery is made from tree resin that hardened millions of years ago."
+  },
+  {
+   "id": "science.eb.h.franklin",
+   "topic": "science.elec-scientists",
+   "kind": "mcq",
+   "prompt": "What is Benjamin Franklin famous for showing, in 1752?",
+   "options": [
+    {
+     "text": "That lightning is electricity",
+     "correct": true
+    },
+    {
+     "text": "That magnets can attract iron",
+     "correct": false,
+     "feedback": "People had known that for thousands of years."
+    },
+    {
+     "text": "That light travels in straight lines",
+     "correct": false,
+     "feedback": "That was known long before Franklin."
+    }
+   ],
+   "explain": "Franklin is said to have flown a kite in a thunderstorm to show that lightning is electrical (extremely dangerous: never try it).",
+   "hook": "Franklin flew a kite to catch the lightning’s secret.",
+   "example": "Franklin’s face is on the American $100 bill."
+  },
+  {
+   "id": "science.eb.h.rod",
+   "topic": "science.elec-scientists",
+   "kind": "fact",
+   "prompt": "What did Benjamin Franklin invent to protect buildings from lightning?",
+   "answer": "the lightning rod",
+   "distractors": [
+    "the electric fuse",
+    "the storm barometer",
+    "the battery"
+   ],
+   "explain": "A metal rod on the roof, joined by a thick wire to the ground, carries a lightning strike safely down. Church spires and tall buildings still have them.",
+   "accept": [
+    "lightning rod",
+    "a lightning rod",
+    "lightning conductor",
+    "a lightning conductor"
+   ]
+  },
+  {
+   "id": "science.eb.h.galvani",
+   "topic": "science.elec-scientists",
+   "kind": "fact",
+   "prompt": "Whose experiments in the 1780s, in which dead frogs’ legs twitched when touched with metal, led Volta to invent the battery?",
+   "answer": "Luigi Galvani",
+   "distractors": [
+    "Michael Faraday",
+    "Thomas Edison",
+    "Nikola Tesla"
+   ],
+   "explain": "Galvani thought the electricity came from the frog. Volta showed it came from the two different metals and the moist frog between them, and built a battery to prove it.",
+   "accept": [
+    "galvani"
+   ]
+  },
+  {
+   "id": "science.eb.h.volta",
+   "topic": "science.elec-scientists",
+   "kind": "fact",
+   "prompt": "Who built the first battery, the “voltaic pile”, in 1800?",
+   "answer": "Alessandro Volta",
+   "distractors": [
+    "Michael Faraday",
+    "Benjamin Franklin",
+    "Thomas Edison"
+   ],
+   "explain": "Volta was an Italian scientist. The volt, the unit of voltage, is named after him.",
+   "accept": [
+    "volta"
+   ],
+   "hook": "**Volta → volt**: the man who made the first battery, in **1800**.",
+   "example": "Every “1.5 V” printed on a battery honours Volta."
+  },
+  {
+   "id": "science.eb.h.pile",
+   "topic": "science.elec-scientists",
+   "kind": "mcq",
+   "prompt": "What was Volta’s first battery made from?",
+   "options": [
+    {
+     "text": "Stacked metal discs and salty card",
+     "correct": true
+    },
+    {
+     "text": "A jar of water with a magnet inside",
+     "correct": false,
+     "feedback": "No magnets: Volta’s pile was chemical."
+    },
+    {
+     "text": "Coils of copper wire round an iron bar",
+     "correct": false,
+     "feedback": "That sounds like an electromagnet, which came later."
+    }
+   ],
+   "explain": "Volta stacked discs of zinc and copper (or silver), separated by card or cloth soaked in salty water. Each zinc-card-copper layer is a cell, so the pile was a battery."
+  },
+  {
+   "id": "science.eb.h.motor",
+   "topic": "science.elec-scientists",
+   "kind": "fact",
+   "prompt": "In 1821, Michael Faraday showed the first…",
+   "answer": "electric motor",
+   "distractors": [
+    "light bulb",
+    "battery",
+    "telephone"
+   ],
+   "explain": "He made a wire carrying a current spin round a magnet: electricity making movement. Faraday was a blacksmith’s son who left school at 13.",
+   "accept": [
+    "electric motor",
+    "motor",
+    "an electric motor"
+   ],
+   "hook": "Faraday **1821**: electricity made it **move**. **1831**: movement made electricity.",
+   "example": "Faraday was on the back of the Bank of England £20 note from 1991 to 2001.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1740,
+    "to": 1900,
+    "set": "britain",
+    "events": [
+     [
+      1752,
+      "Franklin’s kite"
+     ],
+     [
+      1800,
+      "Volta’s battery"
+     ],
+     [
+      1821,
+      "Faraday’s motor"
+     ],
+     [
+      1831,
+      "Faraday’s generator"
+     ],
+     [
+      1879,
+      "Swan and Edison’s bulbs"
+     ],
+     [
+      1888,
+      "Tesla’s AC motor"
+     ]
+    ],
+    "caption": "From lightning to light bulbs in about 130 years."
+   }
+  },
+  {
+   "id": "science.eb.h.generator",
+   "topic": "science.elec-scientists",
+   "kind": "fact",
+   "prompt": "In 1831, Faraday found he could make a current by moving a magnet near a coil of wire. This led to the…",
+   "answer": "generator",
+   "distractors": [
+    "battery",
+    "light bulb",
+    "solar cell"
+   ],
+   "explain": "Nearly all mains electricity is still made this way, with spinning magnets and coils in generators.",
+   "accept": [
+    "generator",
+    "electric generator",
+    "dynamo",
+    "the generator"
+   ],
+   "hook": "**Faraday’s magnet trick** is still how power stations work."
+  },
+  {
+   "id": "science.eb.h.lectures",
+   "topic": "science.elec-scientists",
+   "kind": "fact",
+   "prompt": "Which famous lectures for young people, begun at the Royal Institution in London in 1825, did Michael Faraday give nineteen times?",
+   "answer": "the Christmas Lectures",
+   "distractors": [
+    "the Nobel Lectures",
+    "the Reith Lectures",
+    "the Easter Lectures"
+   ],
+   "explain": "Faraday gave his first series in 1827 and nineteen series in all, more than anyone else. They still run every year and are shown on television.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "Faraday loved explaining science to children, and the lectures he made famous go on today."
+  },
+  {
+   "id": "science.eb.h.swan",
+   "topic": "science.elec-scientists",
+   "kind": "mcq",
+   "prompt": "Joseph Swan from Sunderland showed a working light bulb in 1878–79. What was its glowing filament made of?",
+   "options": [
+    {
+     "text": "Carbon",
+     "correct": true
+    },
+    {
+     "text": "Copper",
+     "correct": false,
+     "feedback": "Copper melts too easily to glow white-hot."
+    },
+    {
+     "text": "Plastic",
+     "correct": false,
+     "feedback": "Plastic would melt and burn."
+    }
+   ],
+   "explain": "Swan and Edison both used carbon filaments in glass bulbs with the air taken out, so the filament could not burn. Later bulbs used tungsten.",
+   "hook": "**Swan in Sunderland, Edison in America**: both lit up carbon filaments around 1879."
+  },
+  {
+   "id": "science.eb.h.edison",
+   "topic": "science.elec-scientists",
+   "kind": "fact",
+   "prompt": "Which American inventor made a working carbon-filament light bulb in 1879 and built power stations to light cities?",
+   "answer": "Thomas Edison",
+   "distractors": [
+    "Nikola Tesla",
+    "Lewis Latimer",
+    "Benjamin Franklin"
+   ],
+   "explain": "By 1880 he and Swan had both made bulbs that lasted hundreds of hours. They later joined forces in Britain as the Edison and Swan company, nicknamed “Ediswan”, in 1883.",
+   "accept": [
+    "edison"
+   ]
+  },
+  {
+   "id": "science.eb.h.savoy",
+   "topic": "science.elec-scientists",
+   "kind": "fact",
+   "prompt": "In 1881, which London building became the first public building in the world to be lit entirely by electric light, using Swan’s bulbs?",
+   "answer": "the Savoy Theatre",
+   "distractors": [
+    "Buckingham Palace",
+    "the Tower of London",
+    "St Paul’s Cathedral"
+   ],
+   "explain": "At one show, the theatre’s owner broke a glowing bulb in front of the audience to prove electric light was safer than gas.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "The **Savoy** saved the audience from smoky gas lamps."
+  },
+  {
+   "id": "science.eb.h.latimer",
+   "topic": "science.elec-scientists",
+   "kind": "mcq",
+   "prompt": "What did Lewis Latimer, an African American inventor, improve in 1881–82?",
+   "options": [
+    {
+     "text": "The way carbon filaments were made",
+     "correct": true
+    },
+    {
+     "text": "The magnets inside electric motors",
+     "correct": false,
+     "feedback": "Latimer worked on lighting."
+    },
+    {
+     "text": "The design of the very first battery",
+     "correct": false,
+     "feedback": "Volta made the first battery in 1800."
+    }
+   ],
+   "explain": "His method made filaments last longer and cost less, so electric light became affordable. Earlier, he had drawn the patent drawings for Alexander Graham Bell’s telephone.",
+   "hook": "Latimer made light bulbs **last** and cost less."
+  },
+  {
+   "id": "science.eb.h.tesla",
+   "topic": "science.elec-scientists",
+   "kind": "fact",
+   "prompt": "Which inventor developed the alternating current (AC) motor and system that power our homes today?",
+   "answer": "Nikola Tesla",
+   "distractors": [
+    "Thomas Edison",
+    "Alessandro Volta",
+    "Joseph Swan"
+   ],
+   "explain": "In the “war of the currents” of the late 1880s, Edison backed direct current (DC); Tesla and George Westinghouse backed AC. AC won, because transformers can change its voltage to send it long distances.",
+   "accept": [
+    "tesla"
+   ],
+   "hook": "**T**esla’s **a**lternating **c**urrent travels far: transformers change its voltage.",
+   "example": "The tesla, a unit for measuring magnetic fields, is named after him."
+  },
+  {
+   "id": "science.eb.h.ayrton",
+   "topic": "science.elec-scientists",
+   "kind": "fact",
+   "prompt": "Which British engineer studied the electric arc lamp and in 1899 became the first woman member of the Institution of Electrical Engineers?",
+   "answer": "Hertha Ayrton",
+   "distractors": [
+    "Ada Lovelace",
+    "Marie Curie",
+    "Rosalind Franklin"
+   ],
+   "explain": "Her book The Electric Arc (1902) explained why arc lamps hissed and flickered.",
+   "accept": [
+    "ayrton"
+   ]
+  },
+  {
+   "id": "science.eb.h.units",
+   "topic": "science.elec-scientists",
+   "kind": "mcq",
+   "prompt": "The volt and the amp are named after which two scientists?",
+   "options": [
+    {
+     "text": "Volta and Ampère",
+     "correct": true
+    },
+    {
+     "text": "Faraday and Edison",
+     "correct": false,
+     "feedback": "Faraday has a unit too, the farad, but not these."
+    },
+    {
+     "text": "Tesla and Newton",
+     "correct": false,
+     "feedback": "The tesla and the newton are other units."
+    }
+   ],
+   "explain": "Volt after Alessandro Volta; amp (ampere) after André-Marie Ampère, a French scientist who studied currents and magnetism.",
+   "hook": "Volt → **Volta**, amp → **Ampère**, watt → **Watt**, ohm → **Ohm**."
+  },
+  {
+   "id": "science.eb.h.order",
+   "topic": "science.elec-scientists",
+   "kind": "order",
+   "prompt": "Put these discoveries in order, earliest first.",
+   "items": [
+    "Franklin shows lightning is electrical",
+    "Volta builds the first battery",
+    "Faraday shows the first electric motor",
+    "Faraday finds how to generate a current",
+    "Swan and Edison make working light bulbs"
+   ],
+   "labels": null,
+   "explain": "1752 Franklin, 1800 Volta, 1821 and 1831 Faraday, 1879 Swan and Edison.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1740,
+    "to": 1900,
+    "set": "britain",
+    "events": [
+     [
+      1752,
+      "Franklin’s kite"
+     ],
+     [
+      1800,
+      "Volta’s battery"
+     ],
+     [
+      1821,
+      "Faraday’s motor"
+     ],
+     [
+      1831,
+      "Faraday’s generator"
+     ],
+     [
+      1879,
+      "Swan and Edison’s bulbs"
+     ],
+     [
+      1888,
+      "Tesla’s AC motor"
+     ]
+    ],
+    "caption": "From lightning to light bulbs in about 130 years."
+   }
+  }
+ ]
+}

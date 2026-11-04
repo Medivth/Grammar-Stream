@@ -14,13 +14,14 @@ export const PLACEMENT_CAP = 24;
 const PROBE_LEVEL = 2; // greater-depth Year 6 for generated skills
 
 /** A subject's topics in an order where prerequisites come first. Topics that build on another
- * subject (joined-up topics) are left out: they unlock through that subject's own progress. */
+ * subject (joined-up topics) are left out: they unlock through that subject’s own progress.
+ * Bonus topics are left out too: they are open any time from their own card. */
 export function topoOrder(db, subject) {
   const ids = db.topicOrder[subject] || [];
   const out = [], seen = new Set();
   const visit = (id) => {
     const t = db.topics[id];
-    if (seen.has(id) || !t || t.subject !== subject || isStretch(t) || t.prereqs.some((p) => db.topics[p]?.subject !== subject)) return;
+    if (seen.has(id) || !t || t.subject !== subject || isStretch(t) || t.bonus || t.prereqs.some((p) => db.topics[p]?.subject !== subject)) return;
     seen.add(id);
     for (const p of db.topics[id].prereqs) visit(p);
     out.push(id);

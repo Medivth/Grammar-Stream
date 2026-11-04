@@ -2,17 +2,17 @@
 
 import { h, s, mount, toast } from '../ui/dom.js';
 import { icon } from '../ui/icons.js';
-import { capybaraEl, capybaraSVG, ACCESSORIES, SLOT_GROUPS, slotOf, wornList, toggleWear } from '../ui/capybara.js';
+import { capybaraEl, capybaraSVG, ACCESSORIES, WARDROBE_GROUPS, wardrobeGroup, slotOf, wornList, toggleWear } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
 import { sceneSVG, sceneStatus, companionEl } from '../ui/scenes.js';
-import { SUBJECTS } from '../core/subjects.js';
-import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, unlockedAccessories, milestoneDefs, wardrobeAccessories } from '../core/progress.js';
+import { SUBJECTS, COURSE } from '../core/subjects.js';
+import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, unlockedAccessories, milestoneDefs, wardrobeAccessories, prizeOf, unlocksOf } from '../core/progress.js';
 import { daysPractisedThisMonth } from '../core/session.js';
 
 const TABS = [['overview', 'Stats'], ['timeline', 'Timeline'], ['places', 'Places'], ['badges', 'Badges']];
-const BADGE_ICON = { 'speed-racer': 'bolt', fifty: 'star', explorer: 'globe', scientist: 'flask', 'first-session': 'flag', 'first-mastered': 'star', hundred: 'bolt', 'all-rounder': 'target', globetrotter: 'globe', 'time-traveller': 'clock', 'lab-ready': 'flask', 'joined-up': 'link', sprinter: 'hourglass', paper: 'paper', typist: 'keyboard', 'speed-reader': 'eye', stretch: 'spark', wordsmith: 'pen', bookworm: 'book', calibrated: 'target', regular: 'check', 'five-hundred': 'trophy', 'book-talker': 'book', 'own-reader': 'eye', author: 'pen', 'alpha-omega': 'quill', 'word-hoard': 'text', clio: 'column', centurion: 'flag', charioteer: 'hourglass', speedway: 'trophy', 'space-ace': 'spark', 'dino-expert': 'flask', 'knight-realm': 'clock', 'super-writer': 'pen', 'latin-scholar': 'column', legionary: 'text', 'poet-laureate': 'quill', 'circus-maximus': 'hourglass', 'pony-club': 'check' };
-// "the centurion armour", but "the Greek aspis"
-const lower = (label) => (/^(Greek|Roman)\b/.test(label) ? label : label[0].toLowerCase() + label.slice(1));
+const BADGE_ICON = { 'speed-racer': 'bolt', fifty: 'star', explorer: 'globe', scientist: 'flask', 'first-session': 'flag', 'first-mastered': 'star', hundred: 'bolt', 'all-rounder': 'target', globetrotter: 'globe', 'time-traveller': 'clock', 'lab-ready': 'flask', 'joined-up': 'link', sprinter: 'hourglass', paper: 'paper', typist: 'keyboard', 'speed-reader': 'eye', stretch: 'spark', wordsmith: 'pen', bookworm: 'book', calibrated: 'target', regular: 'check', 'five-hundred': 'trophy', 'book-talker': 'book', 'own-reader': 'eye', author: 'pen', 'alpha-omega': 'quill', 'word-hoard': 'text', clio: 'column', centurion: 'flag', charioteer: 'hourglass', speedway: 'trophy', 'space-ace': 'spark', 'dino-expert': 'flask', 'knight-realm': 'clock', 'super-writer': 'pen', 'latin-scholar': 'column', legionary: 'text', 'poet-laureate': 'quill', 'circus-maximus': 'hourglass', 'pony-club': 'check', 'sword-school': 'spark', lightning: 'bolt', 'space-trooper': 'check', 'viking-voyager': 'book', 'samurai-scribe': 'quill', 'dragon-rider': 'star', 'golden-champion': 'trophy', 'costume-historian': 'hourglass', 'great-detective': 'eye', 'chief-scientist': 'flask', 'grand-tour': 'globe', 'prima-ballerina': 'star', storyteller: 'pen' };
+// "the centurion armour", but "the Greek aspis" and "the Viking helmet"
+const lower = (label) => (/^(Greek|Roman|Viking|Samurai|Tudor|Regency|Victorian|Florence)\b/.test(label) ? label : label[0].toLowerCase() + label.slice(1));
 
 export async function progressScreen(app, tab = 'overview') {
   const body = h('div', {});
@@ -53,8 +53,9 @@ function badge(m) {
     h('div', { class: 'medal' }, icon(BADGE_ICON[m.id] || 'star')),
     h('h3', {}, m.title), h('p', {}, m.desc),
     m.done ? h('div', { class: 'chip mastered' }, icon('check'), ' Earned') : h('div', {}, h('span', { class: 'mini-bar' }, h('i', { style: { width: `${Math.round((100 * m.value) / m.goal)}%` } })), h('div', { class: 'small muted' }, `${m.value} / ${m.goal}`)),
-    m.unlock ? h('div', { class: 'reward' }, m.done ? `Unlocked: ${ACCESSORIES[m.unlock]}` : `Unlocks: ${ACCESSORIES[m.unlock]}`) : null);
+    m.unlock ? h('div', { class: 'reward' }, `${m.done ? 'Unlocked' : 'Unlocks'}: ${andList(unlocksOf(m).map((id, i) => (i ? lower(ACCESSORIES[id]) : ACCESSORIES[id])))}`) : null);
 }
+const andList = (xs) => (xs.length > 1 ? `${xs.slice(0, -1).join(', ')} and ${xs.at(-1)}` : xs[0]);
 
 // --- timeline ---------------------------------------------------------------
 // A piecewise scale gives room to recent history without a huge empty BC stretch.
@@ -141,14 +142,14 @@ function badgesTab(app, body) {
   const ms = milestones(state, db);
   const unlocked = unlockedAccessories(state, db);
   const c = state.profile?.companion || {};
-  const lockedBy = Object.fromEntries(milestoneDefs().filter((m) => m.unlock).map((m) => [m.unlock, m]));
+  const lockedBy = Object.fromEntries(milestoneDefs().flatMap((m) => unlocksOf(m).map((id) => [id, m])));
   const shown = wardrobeAccessories();
   const worn = new Set(wornList(c));
   const item = ([id, label]) => {
     const open = unlocked.has(id);
     const on = id === 'none' ? worn.size === 0 : worn.has(id);
     return h('button', { type: 'button', class: open ? '' : 'locked', 'aria-pressed': String(on), 'aria-label': open ? `${on && id !== 'none' ? 'Take off' : 'Wear'} ${label}` : `${label}: locked`, onclick: () => {
-      if (!open) return toast(`Earn “${lockedBy[id]?.title}” to unlock the ${lower(label)}.`);
+      if (!open) return toast(prizeOf(id) && !lockedBy[id] ? `Finish the bonus topic, ${prizeOf(id).title}, to win the ${lower(label)}.` : prizeOf(id) ? `Earn “${lockedBy[id].title}”, or finish the bonus topic, ${prizeOf(id).title}, to unlock the ${lower(label)}.` : `Earn “${lockedBy[id]?.title}” to unlock the ${lower(label)}.`);
       state.profile.companion = toggleWear(c, id);
       app.save();
       const y = window.scrollY;
@@ -156,10 +157,10 @@ function badgesTab(app, body) {
       window.scrollTo(0, y);
     } }, capybaraEl({ ...c, wear: undefined, accessory: id, mood: open ? 'happy' : 'neutral' }), h('span', {}, open ? label : '🔒 ' + label));
   };
-  // grouped by where it is worn, so a big wardrobe stays tidy
+  // grouped by where it is worn (prizes, armour, dressing up and laser swords on their own), so a big wardrobe stays tidy
   const items = Object.entries(ACCESSORIES).filter(([id]) => shown.has(id) && id !== 'none');
-  const groups = SLOT_GROUPS.map(([name, slots]) => [name, items.filter(([id]) => slots.includes(slotOf(id)))]).filter(([, list]) => list.length);
-  const PLACE = { head: 'on your head', face: 'on your face', body: 'on your body', front: 'round your neck', back: 'on your back', hold: 'in one hand', hand: 'a shield or palette on the other arm', friend: 'a friend beside you', ride: 'something to ride' };
+  const groups = WARDROBE_GROUPS.map((name) => [name, items.filter(([id]) => wardrobeGroup(id) === name)]).filter(([, list]) => list.length);
+  const PLACE = { head: 'on your head', face: 'on your face', body: 'on your body', front: 'round your neck', back: 'on your back', hold: 'in one hand', hand: 'a shield or kit on the other arm', friend: 'a friend beside you', beside: 'a lamp beside you', ride: 'something to ride' };
   const inUse = new Set(items.map(([id]) => slotOf(id)));
   const places = Object.keys(PLACE).filter((k) => inUse.has(k)).map((k) => PLACE[k]);
   if (places.length > 1) places.push(`and ${places.pop()}`);
@@ -174,7 +175,7 @@ function badgesTab(app, body) {
     h('div', { class: 'center' }, h('button', { type: 'button', class: 'btn-ghost', onclick: () => app.go('#/companion') }, 'Change companion')),
     scenePicker(app, body, ms.filter((m) => m.done).length),
     h('h3', { class: 'wardrobe-title' }, 'Things to wear'),
-    h('p', { class: 'muted center' }, `Tap to put something on, and tap again to take it off. You can wear one thing in each place at once: ${places.join(', ')}. Locked ones are earned with badges.`),
+    h('p', { class: 'muted center' }, `Tap to put something on, and tap again to take it off. You can wear one thing in each place at once: ${places.join(', ')}. Locked ones are earned with badges${COURSE.bonus ? ', and a special prize with the bonus topic' : ''}.`),
     wardrobe);
 }
 

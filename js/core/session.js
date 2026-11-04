@@ -133,7 +133,7 @@ export function rampBonus(state, today) {
 export function topUpItems(state, db, n) {
   if (n <= 0) return [];
   const bySubject = SUBJECTS.map((s) => (db.topicOrder[s.id] || [])
-    .filter((tid) => ['proficient', 'mastered'].includes(state.topics[tid]?.state))
+    .filter((tid) => ['proficient', 'mastered'].includes(state.topics[tid]?.state) && !db.topics[tid].bonus) // bonus parts are taught in bonus sessions
     .flatMap((tid) => unintroduced(state, db, tid).slice(0, 3)));
   return alternate(...bySubject).slice(0, n);
 }
@@ -147,6 +147,7 @@ export function topicChoices(state, db, subject) {
   const continuing = [], fresh = [], unfinished = [];
   for (const tid of db.topicOrder[subject] || []) {
     const t = db.topics[tid];
+    if (t.bonus) continue; // the bonus topic is chosen from its own card on the home page
     const st = topicStatus(t, state.topics, db);
     if (st === 'locked') continue;
     const hasNewFacts = unintroduced(state, db, tid).length > 0;
@@ -323,6 +324,108 @@ export function extraStatus(state, db, today, subject) {
   return { due: dueItems(state, db, today).filter((d) => d.subject === subject).length, fresh: topicChoices(state, db, subject).length > 0 };
 }
 
+// ---------------------------------------------------------------- bonus topic
+// A special module for the course (Year 6's electricity, Years 2/3's Florence Nightingale),
+// chosen from a card on the home page, any time. Its parts are ordinary topics carrying
+// `bonus: '<id>'`. They are never offered as new learning in the daily session (the child
+// picks them through the card), but their reviews come back in the daily session like any
+// other: spaced retrieval is what makes them stick. Prerequisites in the main course never
+// block them; prerequisites between the parts set the order they are taught in.
+
+const SECURE = ['proficient', 'mastered'];
+
+/** Every question in a topic has been taught: facts introduced, worked skills practised. */
+export function topicLearned(state, db, topicId) {
+  if (!state.topics[topicId]) return false;
+  const tmpl = templatesOf(db, topicId);
+  const factsTaught = db.topics[topicId]?.kind === 'skill' && tmpl.length ? true : unintroduced(state, db, topicId).length === 0;
+  return factsTaught && tmpl.every((id) => state.cards[id]);
+}
+
+/** The bonus topic's parts, prerequisites first (otherwise in the deck's order). */
+export function bonusTopics(db, def = COURSE.bonus) {
+  if (!def) return [];
+  const ids = Object.values(db.topicOrder).flat().filter((id) => db.topics[id]?.bonus === def.id);
+  const set = new Set(ids), out = [], seen = new Set();
+  const visit = (id) => {
+    if (seen.has(id)) return;
+    seen.add(id);
+    for (const p of db.topics[id].prereqs || []) if (set.has(p)) visit(p);
+    out.push(id);
+  };
+  ids.forEach(visit);
+  return out;
+}
+
+/** A bonus part's status: as stored once started; otherwise open when the parts it builds on have all been taught (or are secure). */
+export function bonusStatus(state, db, topicId) {
+  const st = state.topics[topicId];
+  if (st) return st.state;
+  const t = db.topics[topicId];
+  const ready = (t.prereqs || []).every((p) => db.topics[p]?.bonus !== t.bonus || SECURE.includes(state.topics[p]?.state) || topicLearned(state, db, p));
+  return ready ? 'available' : 'locked';
+}
+
+/** What the bonus session offers to learn: the part under way (if any is unfinished), then the next one that is open. */
+export function bonusChoices(state, db) {
+  const ids = bonusTopics(db);
+  const going = ids.filter((id) => state.topics[id] && !topicLearned(state, db, id));
+  const fresh = ids.filter((id) => !state.topics[id] && bonusStatus(state, db, id) === 'available');
+  return [...going.slice(0, 1), ...fresh].slice(0, 2);
+}
+
+/**
+ * How far through the bonus topic: a part is finished when every lesson in it is done and it
+ * is secure. The prize is won when every part is finished (the win is then remembered in
+ * state.bonusWon, so it is never taken away again).
+ */
+export function bonusProgress(state, db) {
+  const def = COURSE.bonus;
+  if (!def) return null;
+  const ids = bonusTopics(db);
+  const learned = ids.filter((id) => topicLearned(state, db, id));
+  const secure = ids.filter((id) => SECURE.includes(state.topics[id]?.state));
+  const done = learned.filter((id) => secure.includes(id));
+  const complete = ids.length > 0 && done.length === ids.length;
+  const won = state.bonusWon?.[def.id] != null;
+  return { def, ids, total: ids.length, started: ids.filter((id) => state.topics[id]).length, learned: learned.length, secure: secure.length, done: done.length, complete, won, prized: won || complete };
+}
+
+/**
+ * A bonus session, open any time of day: reviews due in the bonus topic (not ones still waiting
+ * in today's session), then its next lesson. When every lesson is done but a part is not yet
+ * secure, a short practice round instead (questions not already answered today), so there is
+ * always a way to finish. Today's main session is untouched.
+ */
+export function planBonus(state, db, today) {
+  const def = COURSE.bonus;
+  const ids = new Set(bonusTopics(db));
+  const daily = state.plan?.day === today && !state.plan.finished ? state.plan : null;
+  const waiting = new Set((daily ? daily.steps.slice(daily.pos) : []).map((s) => s.id).filter(Boolean));
+  const rng = makeRng(`bonus:${today}:${state.sessions.length}:${state.log.length}`);
+  const due = dueItems(state, db, today).filter((d) => ids.has(d.topic) && !waiting.has(d.id));
+  const steps = interleave(due.slice(0, 12), rng).map((r) => ({ t: 'review', id: r.id }));
+  const options = bonusChoices(state, db);
+  if (options.length) steps.push({ t: 'choose', subject: def.subject, bonus: true, options });
+  else if (!due.length) {
+    const shaky = [...ids].filter((id) => state.topics[id] && !SECURE.includes(state.topics[id].state));
+    const pool = Object.entries(state.cards)
+      .filter(([id, c]) => shaky.includes(db.items[id]?.topic) && db.items[id].kind !== 'written' && c.state !== 'new' && c.lastDay < today && !waiting.has(id))
+      .map(([id, c]) => ({ id, subject: db.items[id].subject, topic: db.items[id].topic, r: fsrsFor(db.items[id].subject).retrievability(c.s, today - c.lastDay) }))
+      .sort((a, b) => a.r - b.r);
+    interleave(pool.slice(0, 8), rng).forEach((r) => steps.push({ t: 'review', id: r.id, practice: true }));
+  }
+  steps.push({ t: 'done' });
+  return { day: today, extra: true, bonus: def.id, subject: def.subject, steps, pos: 0, results: [], yesterday: [], reasks: 0, started: Date.now() };
+}
+
+/** What the bonus card can promise: reviews due now, whether a lesson is ready, and whether there is anything to do at all. */
+export function bonusStatusLine(state, db, today) {
+  const plan = planBonus(state, db, today);
+  const due = plan.steps.filter((s) => s.t === 'review' && !s.practice).length;
+  return { due, lesson: plan.steps.some((s) => s.t === 'choose'), practice: plan.steps.some((s) => s.practice), empty: plan.steps.length === 1 };
+}
+
 /** Expand the chosen topic into lesson steps inserted after the choose step. */
 export function chooseTopic(state, db, topicId, today) {
   const plan = activePlan(state);
@@ -371,7 +474,7 @@ export function chooseTopic(state, db, topicId, today) {
   (plan.topics ||= []).push(topicId);
   state.topics[topicId] ||= { ema: 0.5, n: 0, state: 'learning', profDay: null, delayed: 0, started: today };
   const subj = (state.subjects[topic.subject] ||= { ability: 0, attempts: 0, lastNew: null });
-  subj.lastNew = today;
+  if (!plan.bonus) subj.lastNew = today; // a bonus lesson is extra: the subject keeps its turn for new learning
   return steps.length + recall.length;
 }
 

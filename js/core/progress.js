@@ -3,7 +3,7 @@
 import { topicStatus } from './mastery.js';
 import { SUBJECTS, COURSE, isStretch } from './subjects.js';
 import { monthKey } from './dates.js';
-import { calibration } from './session.js';
+import { calibration, bonusProgress } from './session.js';
 
 /** An item counts as known once it is in review and has been recalled at least once. */
 export const isKnown = (c) => !!c && c.state === 'review' && (c.assumed || c.s >= 2);
@@ -71,6 +71,8 @@ export const MILESTONES = [
 ];
 
 const secure = (t) => ['proficient', 'mastered'].includes(t?.state);
+const masteredCount = (s) => Object.values(s.topics).filter((t) => t.state === 'mastered').length;
+const booksFinished = (s, match) => (s.books || []).filter((b) => b.endDay && (!match || match.test(`${b.bookId || ''} ${b.title || ''}`))).length;
 const secureIn = (s, db, pred) => Object.entries(s.topics).filter(([id, t]) => db.topics[id] && pred(db.topics[id]) && ['proficient', 'mastered'].includes(t.state)).length;
 const bestSprint = (s) => Math.max(0, ...(s.sprints || []).map((x) => x.correct));
 
@@ -100,6 +102,14 @@ export const KS1_MILESTONES = [
   { id: 'dino-expert', title: 'Dino expert', desc: 'Secure the dinosaurs topic and the rocks and fossils topic', goal: 2, measure: (s) => ['science.dinosaurs', 'science.rocks'].filter((id) => secure(s.topics[id])).length, unlock: 'dinoride' },
   { id: 'knight-realm', title: 'Knight of the realm', desc: 'Secure 4 history topics', goal: 4, measure: (s, db) => secureIn(s, db, (t) => t.subject === 'history'), unlock: 'horse' },
   { id: 'super-writer', title: 'Super writer', desc: 'Hand in 8 pieces of writing', goal: 8, measure: (s) => (s.pieces || []).filter((p) => p.submittedDay).length, unlock: 'herosuit' },
+  // laser swords, armour and a dragon for real effort (each badge unlocks `unlock` and everything in `also`)
+  { id: 'sword-school', title: 'Laser sword school', desc: 'Master 5 topics', goal: 5, measure: (s) => masteredCount(s), unlock: 'laserblue', also: ['lasergreen'] },
+  { id: 'lightning', title: 'Lightning fast', desc: 'Get 30 right in one sprint', goal: 30, measure: bestSprint, unlock: 'laserred', also: ['laserpurple', 'hoverboard'] },
+  { id: 'space-trooper', title: 'Space trooper', desc: 'Practise on 30 different days', goal: 30, measure: (s) => daysPractised(s), unlock: 'troopersuit', also: ['mecharmour', 'energyshield'] },
+  { id: 'viking-voyager', title: 'Viking voyager', desc: 'Finish 10 books', goal: 10, measure: (s) => booksFinished(s), unlock: 'vikingarmour', also: ['vikinghelmet'] },
+  { id: 'samurai-scribe', title: 'Samurai scribe', desc: 'Hand in 12 pieces of writing', goal: 12, measure: (s) => (s.pieces || []).filter((p) => p.submittedDay).length, unlock: 'samurai', also: ['kabuto'] },
+  { id: 'dragon-rider', title: 'Dragon rider', desc: 'Know 200 things', goal: 200, measure: (s) => learnedCount(s), unlock: 'dragon', also: ['dragonarmour'] },
+  { id: 'golden-champion', title: 'Golden champion', desc: 'Secure 25 topics', goal: 25, measure: (s, db) => secureIn(s, db, () => true), unlock: 'goldarmour' },
 ];
 
 // Year 3: the Year 2 badges (so nothing he has earned goes away), with Year 3 goals added
@@ -112,7 +122,17 @@ export const Y3_MILESTONES = [
 
 // Year 6: the main badges, plus five that unlock the best Roman pieces and the pony
 const knownIn = (s, db, subject) => Object.entries(s.cards).filter(([id, c]) => isKnown(c) && db.topics[db.items[id]?.topic]?.subject === subject).length;
-const daysPractised = (s) => new Set(s.sessions.filter((x) => x.completed).map((x) => x.day)).size;
+function daysPractised(s) { return new Set(s.sessions.filter((x) => x.completed).map((x) => x.day)).size; }
+const countriesKnown = (s, db) => { const p = placesStatus(s, db); return p.known.world.size + [...p.known.europe].filter((x) => !p.known.world.has(x)).length; };
+// Year 6 dressing up: six more badges, each for real effort
+export const Y6_DRESS_UP = [
+  { id: 'costume-historian', title: 'Costume historian', desc: 'Secure 6 history topics', goal: 6, measure: (s, db) => secureIn(s, db, (t) => t.subject === 'history'), unlock: 'tudorgown', also: ['regency'] },
+  { id: 'great-detective', title: 'The great detective', desc: 'Finish 2 Sherlock Holmes books', goal: 2, measure: (s) => booksFinished(s, /holmes|sherlock|baskerville/i), unlock: 'detective', also: ['deerstalker'] },
+  { id: 'chief-scientist', title: 'Chief scientist', desc: 'Secure 10 science topics', goal: 10, measure: (s, db) => secureIn(s, db, (t) => t.subject === 'science'), unlock: 'labcoat', also: ['spacesuit'] },
+  { id: 'grand-tour', title: 'Grand tour', desc: 'Know 50 countries', goal: 50, measure: countriesKnown, unlock: 'explorerkit', also: ['victorian', 'bonnet'] },
+  { id: 'prima-ballerina', title: 'Prima ballerina', desc: 'Practise on 60 different days', goal: 60, measure: (s) => daysPractised(s), unlock: 'tutu', also: ['ballgown', 'tiara'] },
+  { id: 'storyteller', title: 'Spellbinding storyteller', desc: 'Hand in 15 weekly writing pieces', goal: 15, measure: (s) => (s.pieces || []).filter((p) => p.submittedDay).length, unlock: 'wizardrobe', also: ['fairywings'] },
+];
 export const Y6_MILESTONES = [
   { id: 'latin-scholar', title: 'Latin scholar', desc: 'Secure 5 Latin topics', goal: 5, measure: (s, db) => secureIn(s, db, (t) => t.subject === 'latin'), unlock: 'galea' },
   { id: 'legionary', title: 'Legionary', desc: 'Know 100 things in Latin', goal: 100, measure: (s, db) => knownIn(s, db, 'latin'), unlock: 'lorica' },
@@ -136,8 +156,10 @@ export const milestoneDefs = () => {
   if (COURSE.young) return KS1_MILESTONES;
   const main = MILESTONES.filter((m) => m.id !== 'paper' || COURSE.tools.includes('paper'));
   if (COURSE.id === 'y8') return [...main, ...Y8_MILESTONES];
-  return COURSE.id === 'y6' ? [...main, ...Y6_MILESTONES] : main;
+  return COURSE.id === 'y6' ? [...main, ...Y6_MILESTONES, ...Y6_DRESS_UP] : main;
 };
+/** Everything a badge unlocks: its main reward, then any others. */
+export const unlocksOf = (m) => (m.unlock ? [m.unlock, ...(m.also || [])] : []);
 
 export function milestones(state, db) {
   return milestoneDefs().map((m) => {
@@ -150,11 +172,19 @@ export const starterAccessories = () => COURSE.starter;
 
 export function unlockedAccessories(state, db) {
   const done = new Set(milestones(state, db).filter((m) => m.done).map((m) => m.id));
-  return new Set([...COURSE.starter, ...milestoneDefs().filter((m) => m.unlock && done.has(m.id)).map((m) => m.unlock)]);
+  return new Set([...COURSE.starter, ...milestoneDefs().filter((m) => done.has(m.id)).flatMap(unlocksOf), ...bonusPrizes(state, db)]);
 }
 
-/** Every accessory this course can ever show: starters plus milestone rewards. */
-export const wardrobeAccessories = () => new Set([...COURSE.starter, ...milestoneDefs().filter((m) => m.unlock).map((m) => m.unlock)]);
+/** The bonus topic's prize, once won (every part finished): never taken away again. */
+export function bonusPrizes(state, db) {
+  return bonusProgress(state, db)?.prized ? COURSE.bonus.prize : [];
+}
+
+/** The bonus topic whose prize this accessory is, if it is one (for the wardrobe's "how to unlock" hint). */
+export const prizeOf = (id) => (COURSE.bonus?.prize?.includes(id) ? COURSE.bonus : null);
+
+/** Every accessory this course can ever show: starters, milestone rewards and the bonus topic's prize. */
+export const wardrobeAccessories = () => new Set([...COURSE.starter, ...milestoneDefs().flatMap(unlocksOf), ...(COURSE.bonus?.prize || [])]);
 
 /** A short plan summary for the home screen ("18 reviews · 1 new topic · writing"). */
 export function planSummary(plan) {

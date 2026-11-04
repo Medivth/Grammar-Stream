@@ -6,18 +6,20 @@ import { renderVisual } from '../ui/visuals.js';
 import { capybaraEl } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
 import { speak } from '../platform/tts.js';
-import { planDay, planExtra, activePlan, chooseTopic, topicChoices, questionFor, submit, startSession, finishSession, daysPractisedThisMonth, CONF } from '../core/session.js';
+import { planDay, planExtra, planBonus, bonusChoices, bonusProgress, activePlan, chooseTopic, topicChoices, questionFor, submit, startSession, finishSession, daysPractisedThisMonth, CONF } from '../core/session.js';
 import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement } from '../core/placement.js';
 import { checkSentence } from '../core/checkers.js';
 import { learnText, present } from '../core/present.js';
 import { makeRng } from '../core/rng.js';
 import { currentBooks, logReading, submitAnswer, unseenMarks, ANSWER_LEVELS, wordCount } from '../core/writing.js';
-import { milestones } from '../core/progress.js';
+import { milestones, unlocksOf } from '../core/progress.js';
+// "a", "a and b", "a, b and c"
+const listing = (xs) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs.at(-1)}`);
 import { sprintLevel, sprintBest, recordSprint, sprintSeconds } from '../core/sprint.js';
 import { freshSprintQuestion, SPRINT_LEVELS } from '../gen/sprint.js';
 import { parseNumber } from '../core/fraction.js';
 import { icon, SUBJECT_ICON } from '../ui/icons.js';
-import { ACCESSORIES } from '../ui/capybara.js';
+import { ACCESSORIES, slotOf } from '../ui/capybara.js';
 import { SUBJECT_BY_ID, COURSE } from '../core/subjects.js';
 
 const GRADED = new Set(['review', 'quiz', 'diag', 'practice', 'faded', 'recall']);
@@ -27,9 +29,15 @@ export async function playScreen(app, arg) {
   const today = app.today();
   // extra practice in a language (#/play/latin, #/play/greek): any time, alongside today's session
   const lang = arg && (COURSE.extra || []).includes(arg) ? arg : null;
-  state.extraOn = !!lang;
-  if (lang) {
-    if (!state.extra || state.extra.day !== today || state.extra.subject !== lang || state.extra.finished) state.extra = planExtra(state, db, today, lang);
+  // the bonus topic (#/play/bonus): any time too, from its card on the home page
+  const bonus = arg === 'bonus' && COURSE.bonus ? COURSE.bonus.id : null;
+  state.extraOn = !!(lang || bonus);
+  if (bonus) {
+    if (!state.extra || state.extra.day !== today || state.extra.bonus !== bonus || state.extra.finished) state.extra = planBonus(state, db, today);
+  } else if (lang) {
+    if (!state.extra || state.extra.day !== today || state.extra.subject !== lang || state.extra.bonus || state.extra.finished) state.extra = planExtra(state, db, today, lang);
+  }
+  if (lang || bonus) {
     if (!state.extra.badgesBefore) state.extra.badgesBefore = milestones(state, db).filter((m) => m.done).map((m) => m.id);
     app.save();
     return renderStep(app);
@@ -207,18 +215,18 @@ function sprintStep(app, root) {
 function chooseStep(app, root, step) {
   const { db, state } = app;
   // worked out now, not when the day was planned, so placement results count
-  const opts = topicChoices(state, db, step.subject);
+  const opts = step.bonus ? bonusChoices(state, db) : topicChoices(state, db, step.subject);
   if (!opts.length) return next(app);
   const subj = SUBJECT_BY_ID[step.subject];
-  mount(root, header(app, 'Choose'), h('div', { class: 'q-wrap stack' },
-    h('h2', {}, `Something new in ${subj.name}`),
-    h('p', { class: 'muted' }, 'Pick what you’d like to learn next.'),
+  mount(root, header(app, step.bonus ? 'Bonus' : 'Choose'), h('div', { class: 'q-wrap stack' },
+    h('h2', {}, step.bonus ? `${COURSE.bonus.title}: the next part` : `Something new in ${subj.name}`),
+    h('p', { class: 'muted' }, step.bonus && opts.length === 1 ? 'Here’s your next lesson in the bonus topic.' : 'Pick what you’d like to learn next.'),
     opts.map((id) => {
       const t = db.topics[id];
       const started = !!state.topics[id];
       return h('button', { class: 'choice-card home-card', type: 'button', style: { '--tint': `color-mix(in srgb, ${subj.colour} 14%, var(--card))`, '--tint-ink': subj.colour }, onclick: async () => { chooseTopic(state, db, id, app.today()); await next(app); } },
         h('span', { class: 'ico' }, icon(SUBJECT_ICON[subj.id])),
-        h('span', { class: 'txt' }, h('div', { class: 'subj', style: { color: subj.colour } }, started ? `Continue · ${subj.name}` : `New · ${subj.name}`, linkBits(t.links)),
+        h('span', { class: 'txt' }, h('div', { class: 'subj', style: { color: subj.colour } }, started ? `Continue · ${step.bonus ? 'Bonus' : subj.name}` : `New · ${step.bonus ? 'Bonus' : subj.name}`, linkBits(t.links)),
           h('h3', { style: { margin: '2px 0 0' } }, t.title)));
     })));
 }
@@ -285,8 +293,12 @@ function workedStep(app, root, step) {
   let shown = 1;
   const list = h('ol', { class: 'steps' });
   const btn = h('button', { class: 'btn-primary btn-big' });
+  // the answer picture (a lit circuit, a finished bar model) waits for the last step, so the
+  // child can predict first; with no steps to wait for it shows straight away
+  const after = h('div');
   const draw = () => {
     list.replaceChildren(...steps.slice(0, shown).map((t) => rich('li', t)));
+    after.replaceChildren(...[shown >= steps.length ? renderVisual(q.visual) : null].filter(Boolean));
     btn.textContent = shown < steps.length ? 'Next step' : 'I see how it works';
   };
   btn.onclick = () => { if (shown < steps.length) { shown++; draw(); } else next(app); };
@@ -295,8 +307,8 @@ function workedStep(app, root, step) {
     h('p', { class: 'muted' }, 'Watch how I solve this one. Read each step.'),
     COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(q.prompt), rich('div', q.prompt, { class: 'q-prompt' })) : rich('div', q.prompt, { class: 'q-prompt' }),
     q.diagram ? diagram(q.diagram) : null,
-    renderVisual(q.visual),
     list,
+    after,
     hookCard(q),
     COURSE.readAloud ? h('div', {}, h('button', { class: 'btn-ghost', type: 'button', onclick: () => speak(spoken(steps.slice(0, shown).at(-1) || '')) }, icon('speaker'), ' Read this step')) : null,
     btn));
@@ -556,7 +568,60 @@ function ritualStep(app, root) {
 }
 
 // ---------------------------------------------------------------- done
-/** The end of an extra language practice: a short summary, then back home (today's session is untouched). */
+/** Badges earned during this session (with the accessory each one unlocks). */
+function newBadges(app, plan) {
+  const { state, db } = app;
+  const c = state.profile?.companion || {};
+  const before = new Set(plan.badgesBefore || []);
+  return milestones(state, db).filter((m) => m.done && !before.has(m.id)).map((m) => h('div', { class: 'unlock pop' },
+    m.unlock ? capybaraEl({ ...c, accessory: m.unlock, mood: 'happy' }) : h('div', { class: 'medal', style: { width: '56px', height: '56px', borderRadius: '50%', display: 'grid', placeItems: 'center', background: 'radial-gradient(circle at 35% 30%, #ffd88a, #ff9d3d 60%, #e0731d)', color: '#fff' } }, icon('star')),
+    h('div', {}, h('div', { class: 'eyebrow', style: { color: 'var(--warn)' } }, 'New badge'), h('h3', { style: { margin: 0 } }, m.title), h('p', { style: { margin: '2px 0 0' } }, m.unlock ? `You unlocked ${listing(unlocksOf(m).map((id) => `the ${ACCESSORIES[id].toLowerCase()}`))} for ${c.name || 'your companion'}!` : m.desc))));
+}
+
+/** The companion wearing (or holding) the bonus prize, on top of what it already wears. */
+export function wearingPrize(c, prize) {
+  const wear = { ...(c.wear || (c.accessory && c.accessory !== 'none' ? { [slotOf(c.accessory)]: c.accessory } : {})) };
+  for (const id of prize) wear[slotOf(id)] = id;
+  return { ...c, wear, accessory: prize.at(-1) };
+}
+
+/**
+ * The bonus prize, the first time every part of the bonus topic is finished: shown once, on the
+ * finished screen of whichever session finished it (a bonus session, or a review in today's).
+ */
+function prizeCelebration(app) {
+  const { state, db } = app;
+  const bp = bonusProgress(state, db);
+  if (!bp?.complete || bp.won) return null;
+  (state.bonusWon ||= {})[bp.def.id] = app.today();
+  app.save();
+  const c = state.profile?.companion || {};
+  const name = c.name || 'your companion';
+  const plural = bp.def.prize.length > 1;
+  const pic = capybaraEl({ ...wearingPrize(c, bp.def.prize), mood: 'happy' }, 'capy bob');
+  const burst = h('div', { class: 'celebrate prize-pic' }, pic);
+  const COLS = ['#ffd166', '#ff8a3d', '#0f9a6e', '#2f74e8', '#d63d74'];
+  for (let i = 0; i < 14; i++) {
+    const a = (i / 14) * Math.PI * 2;
+    burst.append(h('span', { class: 'spark', style: { left: '50%', top: '45%', background: COLS[i % COLS.length], '--dx': `${Math.cos(a) * 100}px`, '--dy': `${Math.sin(a) * 70}px`, animationDelay: `${(i % 4) * 50}ms` } }));
+  }
+  const wearIt = h('button', { class: 'btn-primary', type: 'button', onclick: () => {
+    state.profile.companion = wearingPrize(state.profile.companion || {}, bp.def.prize);
+    app.save();
+    app.go('#/progress/badges');
+    // straight to the wardrobe, where the lamp can be tried
+    setTimeout(() => document.querySelector('.wardrobe-preview')?.scrollIntoView({ block: 'center' }), 60);
+  } }, plural ? `Put them on ${name}` : `Give it to ${name}`);
+  return h('div', { class: 'prize pop', role: 'status' },
+    burst,
+    h('div', { class: 'prize-txt' },
+      h('div', { class: 'eyebrow' }, `Bonus topic: ${bp.def.title}`),
+      h('h2', {}, 'You finished the bonus topic!'),
+      h('p', {}, `You won ${bp.def.prizeText}. ${plural ? 'They’re' : 'It’s'} in ${name}’s wardrobe now.${bp.def.prize.some((id) => ['lamp', 'oillamp'].includes(id)) ? (/switch/.test(bp.def.prizeText) ? ' Tap the lamp to try it.' : ' Tap the lamp to switch it on and off.') : ''}`),
+      wearIt));
+}
+
+/** The end of an extra practice (a language, or the bonus topic): a short summary, then back home (today's session is untouched). */
 function extraDoneStep(app, root, plan) {
   const { state, db } = app;
   plan.finished = true;
@@ -566,13 +631,21 @@ function extraDoneStep(app, root, plan) {
   const right = plan.results.filter((r) => r.correct).length;
   const learned = (plan.topics || []).map((t) => db.topics[t]?.title).filter(Boolean);
   const c = state.profile?.companion || {};
+  const prize = prizeCelebration(app);
+  const bp = plan.bonus ? bonusProgress(state, db) : null;
+  const again = plan.bonus ? '#/play/bonus' : `#/play/${plan.subject}`;
+  const nothing = plan.bonus
+    ? (bp.complete ? `You’ve finished ${bp.def.title}. Its reviews will come back in your daily sessions, so you keep it.` : `Nothing to do in ${bp.def.title} just now. Come back tomorrow, when some questions are ready to review.`)
+    : `Nothing to review in ${subj?.name || 'this subject'} just now, and no new topic is ready yet. Come back tomorrow, or try today’s session.`;
   mount(root, h('div', { class: 'q-wrap stack center' },
-    capybaraEl({ ...c, mood: 'happy' }, 'capy bob'),
-    h('div', { class: 'eyebrow' }, `${subj?.name || ''} practice`), h('h1', {}, plan.results.length || learned.length ? 'Well done!' : 'All caught up'),
-    plan.results.length ? h('p', {}, `${right} of ${plan.results.length} right.${learned.length ? ` New: ${learned.join(', ')}.` : ''}`) : h('p', { class: 'muted' }, `Nothing to review in ${subj?.name || 'this subject'} just now, and no new topic is ready yet. Come back tomorrow, or try today’s session.`),
+    prize || capybaraEl({ ...c, mood: 'happy' }, 'capy bob'),
+    prize ? null : h('div', { class: 'eyebrow' }, plan.bonus ? `Bonus topic: ${bp.def.title}` : `${subj?.name || ''} practice`), prize ? null : h('h1', {}, plan.results.length || learned.length ? 'Well done!' : 'All caught up'),
+    plan.results.length ? h('p', {}, `${right} of ${plan.results.length} right.${learned.length ? ` ${plan.bonus ? 'Today' : 'New'}: ${learned.join(', ')}.` : ''}`) : prize ? null : h('p', { class: 'muted' }, nothing),
+    plan.bonus && !bp.complete && bp.total ? h('p', { class: 'muted' }, `${bp.done} of ${bp.total} parts finished. Finish them all to win ${bp.def.prizeText}.`) : null,
+    newBadges(app, plan),
     h('div', { class: 'row', style: { justifyContent: 'center' } },
-      h('button', { class: 'btn-primary btn-big', onclick: () => app.go('#/home') }, 'Back home'),
-      plan.results.length ? h('button', { class: 'btn-ghost btn-big', onclick: () => { state.extra = null; app.go(`#/play/${plan.subject}`); } }, 'A bit more') : null)));
+      h('button', { class: prize ? 'btn-ghost btn-big' : 'btn-primary btn-big', onclick: () => app.go('#/home') }, 'Back home'),
+      plan.results.length && !prize ? h('button', { class: 'btn-ghost btn-big', onclick: () => { state.extra = null; app.go(again); } }, 'A bit more') : null)));
 }
 
 function doneStep(app, root) {
@@ -602,8 +675,6 @@ function doneStep(app, root) {
   readBox.append(alreadyRead ? h('p', {}, '📚 Reading logged for today.') : h('div', {}, h('p', { style: { fontWeight: 700 } }, book ? `Did you read ${book.title} today?` : 'Did you read a book today?'),
     h('div', { class: 'row' }, [10, 20, 30, 45].map((m) => h('button', { class: 'btn-ghost', onclick: () => logRead(m) }, `${m}${m === 45 ? '+' : ''} min`)), h('button', { class: 'btn-ghost', onclick: () => readBox.replaceChildren(h('p', { class: 'muted' }, 'Maybe tonight, then!')) }, 'Not yet'))));
 
-  const before = new Set(plan.badgesBefore || []);
-  const fresh = milestones(state, db).filter((m) => m.done && !before.has(m.id));
   const right = res.filter((r) => r.correct).length;
   const capy = capybaraEl({ ...c, mood: 'happy' }, 'capy bob');
   const burst = h('div', { class: 'celebrate', style: { width: '200px', margin: '0 auto' } }, capy);
@@ -617,9 +688,8 @@ function doneStep(app, root) {
     burst,
     h('div', { class: 'center' }, h('div', { class: 'eyebrow' }, 'Session complete'), h('h1', {}, 'Finished for today!')),
     h('div', { class: 'stat-strip', style: { margin: 0 } }, tile(right, 'answers right', 'var(--good)'), remembered ? tile(remembered, 'remembered from before', 'var(--accent)') : tile(res.length, 'questions answered', 'var(--accent)'), tile(days, `day${days === 1 ? '' : 's'} this month`, 'var(--warm)')),
-    fresh.map((m) => h('div', { class: 'unlock pop' },
-      m.unlock ? capybaraEl({ ...c, accessory: m.unlock, mood: 'happy' }) : h('div', { class: 'medal', style: { width: '56px', height: '56px', borderRadius: '50%', display: 'grid', placeItems: 'center', background: 'radial-gradient(circle at 35% 30%, #ffd88a, #ff9d3d 60%, #e0731d)', color: '#fff' } }, icon('star')),
-      h('div', {}, h('div', { class: 'eyebrow', style: { color: 'var(--warn)' } }, 'New badge'), h('h3', { style: { margin: 0 } }, m.title), h('p', { style: { margin: '2px 0 0' } }, m.unlock ? `You unlocked the ${ACCESSORIES[m.unlock].toLowerCase()} for ${c.name || 'your companion'}!` : m.desc)))),
+    prizeCelebration(app),
+    newBadges(app, plan),
     h('div', { class: 'card stack' },
       h('h3', {}, 'What you did'),
       h('ul', { style: { margin: 0, paddingLeft: '1.2em' } },

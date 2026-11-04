@@ -1,7 +1,9 @@
-// The companion, drawn as SVG: a capybara, an upright cartoon lion, or (Year 8) a young heroine.
-// Never decays, never dies; just changes mood. Accessories sit in slots (head, face, body, front,
-// back, hold, hand, ride), one per slot, so a helmet, armour, a cloak, a sword and a shield can be
-// worn together. Riders (a horse, a rocket, a go-kart…) carry the whole companion: see MOUNTS.
+// The companion, drawn as SVG: a capybara, an upright cartoon lion, a young heroine (Years 6 and 8)
+// or a boy hero (Years 2 and 3). Never decays, never dies; just changes mood. Accessories sit in
+// slots (head, face, body, front, back, hold, hand, friend, beside, ride), one per slot, so a helmet,
+// armour, a cloak, a sword and a shield can be worn together. Riders (a horse, a rocket, a dragon…)
+// carry the whole companion: see MOUNTS. The prize lamps (`lamp`, `oillamp`) light up unless
+// `lit: false`, and sit in a `.companion-lamp` group so a screen can catch a tap on them.
 
 import { COURSE } from '../core/subjects.js';
 
@@ -19,8 +21,10 @@ export const LION_FURS = {
   cocoa: { body: '#c98a45', mane: '#3d2416', dark: '#3d2416', light: '#efcf9e' },
 };
 
-export const SPECIES = { capybara: 'Capybara', lion: 'Lion', heroine: 'Heroine' };
-/** The companions a course offers at setup (Year 8 adds the heroine). */
+export const SPECIES = { capybara: 'Capybara', lion: 'Lion', heroine: 'Heroine', hero: 'Hero' };
+/** The two people (the others are animals): they have looks instead of fur. */
+export const isPerson = (species) => species === 'heroine' || species === 'hero';
+/** The companions a course offers at setup (Years 6 and 8 add the heroine, Years 2 and 3 the hero). */
 export const speciesChoices = (course = COURSE) => course.companions || ['capybara', 'lion'];
 
 // The heroine's looks: skin tone, hair colour and style. Saved as `look`, so the animals keep their fur.
@@ -34,6 +38,21 @@ export const LOOKS = {
   puff: { label: 'Curly puff', skin: '#5f3c28', hair: '#17110e', style: 'puff' },
   ponytail: { label: 'Black ponytail', skin: '#eecfb0', hair: '#1b1517', style: 'ponytail' },
 };
+// The hero's looks: a boy of about nine, a little older than the child who chooses him.
+export const HERO_LOOKS = {
+  crop: { label: 'Brown crop', skin: '#f1c9a5', hair: '#6b4226', style: 'crop' },
+  spiky: { label: 'Blond spikes', skin: '#f6d8c0', hair: '#d9a84e', style: 'spiky' },
+  curly: { label: 'Black curls', skin: '#7a4a2e', hair: '#1d1411', style: 'curly' },
+  mop: { label: 'Ginger mop', skin: '#f7dcc6', hair: '#b5562a', style: 'mop', freckles: true },
+  side: { label: 'Side parting', skin: '#d9a47a', hair: '#231915', style: 'side' },
+  buzz: { label: 'Buzz cut', skin: '#5c3a26', hair: '#17110e', style: 'buzz' },
+  quiff: { label: 'Brown quiff', skin: '#c98d62', hair: '#3a2419', style: 'quiff' },
+  twists: { label: 'Short coils', skin: '#8d5838', hair: '#2a1a12', style: 'twists' },
+};
+/** The looks for a person companion, and the one to fall back on. */
+export const looksOf = (species) => (species === 'hero' ? HERO_LOOKS : LOOKS);
+const lookOf = (species, look) => looksOf(species)[look] || Object.values(looksOf(species))[0];
+
 /** A companion's species: chosen at setup, or by course (younger courses get the lion). */
 export const speciesOf = (c, young = false) => c?.species || (young ? 'lion' : 'capybara');
 
@@ -131,6 +150,40 @@ export const ACCESSORIES = {
   rollerskates: 'Roller skates',
   bicycle: 'Bicycle',
   pony: 'Pony',
+  // Years 2 and 3, all earned: laser swords, armour from space, robots, dragons and history, and more
+  laserblue: 'Blue laser sword',
+  lasergreen: 'Green laser sword',
+  laserred: 'Red laser sword',
+  laserpurple: 'Purple laser sword',
+  troopersuit: 'Space trooper armour',
+  mecharmour: 'Robot armour',
+  dragonarmour: 'Dragon-scale armour',
+  vikingarmour: 'Viking armour',
+  vikinghelmet: 'Viking helmet',
+  samurai: 'Samurai armour',
+  kabuto: 'Kabuto helmet',
+  goldarmour: 'Golden champion armour',
+  energyshield: 'Energy shield',
+  hoverboard: 'Hoverboard',
+  dragon: 'Dragon to ride',
+  // Year 6, all earned: dressing up through history, on stage, in the lab and beyond
+  tudorgown: 'Tudor gown',
+  regency: 'Regency dress',
+  victorian: 'Victorian dress',
+  bonnet: 'Victorian bonnet',
+  ballgown: 'Ball gown',
+  tutu: 'Ballet tutu',
+  labcoat: 'Lab coat',
+  detective: 'Detective’s coat',
+  deerstalker: 'Deerstalker cap',
+  explorerkit: 'Explorer’s outfit',
+  wizardrobe: 'Wizard’s robe',
+  fairywings: 'Fairy wings',
+  tiara: 'Tiara',
+  // prizes for finishing a bonus topic (the lamps light up when tapped)
+  lamp: 'Desk lamp',
+  firstaid: 'First-aid kit',
+  oillamp: 'Florence’s lantern',
 };
 
 export const SLOT = {
@@ -138,6 +191,10 @@ export const SLOT = {
   scarf: 'front', bowtie: 'front', medal: 'front', camera: 'front',
   chiton: 'body', himation: 'body', toga: 'body', stola: 'body', linothorax: 'body', lorica: 'body',
   racesuit: 'body', spacesuit: 'body', herosuit: 'body', armour: 'body',
+  troopersuit: 'body', mecharmour: 'body', dragonarmour: 'body', vikingarmour: 'body', samurai: 'body', goldarmour: 'body',
+  tudorgown: 'body', regency: 'body', victorian: 'body', ballgown: 'body', tutu: 'body', labcoat: 'body', detective: 'body', explorerkit: 'body', wizardrobe: 'body',
+  fairywings: 'back', energyshield: 'hand', firstaid: 'hand', hoverboard: 'ride', dragon: 'ride',
+  laserblue: 'hold', lasergreen: 'hold', laserred: 'hold', laserpurple: 'hold', oillamp: 'hold', lamp: 'beside',
   cape: 'back', backpack: 'back', wings: 'back', jetpack: 'back', cloak: 'back',
   shield: 'hand', aspis: 'hand', scutum: 'hand', heroshield: 'hand', crestshield: 'hand', palette: 'hand',
   dory: 'hold', xiphos: 'hold', gladius: 'hold', lyre: 'hold', scroll: 'hold', olivebranch: 'hold', torch: 'hold',
@@ -149,7 +206,21 @@ export const SLOT = {
 };
 export const slotOf = (id) => SLOT[id] || 'head';
 /** How the wardrobe groups its slots. */
-export const SLOT_GROUPS = [['Head', ['head']], ['Face', ['face']], ['Clothes', ['body', 'front']], ['Hands', ['hold', 'hand']], ['Back', ['back']], ['Friends', ['friend']], ['Ride', ['ride']]];
+export const SLOT_GROUPS = [['Head', ['head']], ['Face', ['face']], ['Clothes', ['body', 'front']], ['Hands', ['hold', 'hand']], ['Back', ['back']], ['Friends', ['friend']], ['Beside you', ['beside']], ['Ride', ['ride']]];
+// a big wardrobe is split a little further: prizes first, then armour and dressing-up apart from everyday clothes
+export const PRIZES = new Set(['lamp', 'firstaid', 'oillamp']);
+const ARMOUR = new Set(['armour', 'lorica', 'linothorax', 'troopersuit', 'mecharmour', 'dragonarmour', 'vikingarmour', 'samurai', 'goldarmour']);
+const DRESSING_UP = new Set(['tudorgown', 'regency', 'victorian', 'ballgown', 'tutu', 'labcoat', 'detective', 'explorerkit', 'wizardrobe']);
+const LASERS = new Set(['laserblue', 'lasergreen', 'laserred', 'laserpurple']);
+export const WARDROBE_GROUPS = ['Prizes', 'Head', 'Face', 'Clothes', 'Dressing up', 'Armour', 'Laser swords', 'Hands', 'Back', 'Friends', 'Beside you', 'Ride'];
+/** Which wardrobe group an accessory is shown in. */
+export function wardrobeGroup(id) {
+  if (PRIZES.has(id)) return 'Prizes';
+  if (ARMOUR.has(id)) return 'Armour';
+  if (DRESSING_UP.has(id)) return 'Dressing up';
+  if (LASERS.has(id)) return 'Laser swords';
+  return SLOT_GROUPS.find(([, slots]) => slots.includes(slotOf(id)))[0];
+}
 
 /** What the companion is wearing, one accessory per slot (older saves have a single `accessory`). */
 export function wornList(c) {
@@ -246,6 +317,12 @@ function accessory(kind, f) {
         : `<g><ellipse cx="114" cy="150" rx="88" ry="7" fill="#4fc3f7"/><path d="M30 150 h168" stroke="#fff" stroke-width="2" opacity=".8"/><path d="M100 144 v12" stroke="#ff8a3d" stroke-width="6"/></g>`;
     case 'backpack':
       return `<g><rect x="126" y="56" width="42" height="48" rx="12" fill="#2f74e8"/><rect x="134" y="80" width="26" height="16" rx="5" fill="#1f5cc4"/><path d="M128 66 Q118 80 120 100" stroke="#1f5cc4" stroke-width="5" fill="none"/></g>`;
+    case 'hoverboard':
+      return hoverboard(f.lion);
+    case 'fairywings':
+      return `<g>${FAIRY_WING}<path d="M126 68 Q140 40 152 26 M128 70 Q152 58 174 52" stroke="#a58be0" stroke-width="1.2" fill="none"/></g>`;
+    case 'lamp':
+      return `<g transform="translate(128 149) scale(.8)">${deskLamp()}</g>`;
     case 'galea':
       return GALEA;
     case 'olive':
@@ -273,18 +350,22 @@ function eyes(mood) {
   return `<circle cx="50" cy="76" r="3.8" fill="#2b2a33"/><circle cx="76" cy="76" r="3.8" fill="#2b2a33"/><circle cx="51" cy="75" r="1.2" fill="#fff"/><circle cx="77" cy="75" r="1.2" fill="#fff"/>`;
 }
 
+// whether the prize lamps are on (set for the length of one capybaraSVG call)
+let LIT = true;
+
 /** Returns an SVG string for the companion (species from opts.species, default capybara). */
-export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = 'none', wear, mood = 'neutral', title, fit = false } = {}) {
+export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = 'none', wear, mood = 'neutral', title, fit = false, lit = true } = {}) {
   species ||= COURSE.young ? 'lion' : 'capybara';
+  LIT = lit !== false;
   const worn = wornList({ wear, accessory: acc });
   const mount = worn.find((a) => MOUNTS[a]);
-  if (mount) return mountedSVG(mount, species, { fur, look, mood, title, wear: Object.fromEntries(worn.filter((a) => a !== mount).map((a) => [slotOf(a), a])) }, fit);
+  if (mount) return mountedSVG(mount, species, { fur, look, mood, title, lit, wear: Object.fromEntries(worn.filter((a) => a !== mount).map((a) => [slotOf(a), a])) }, fit);
   const layer = (slots) => worn.filter((a) => slots.includes(slotOf(a)));
   if (species === 'lion') return lionSVG(LION_FURS[fur] || LION_FURS.caramel, worn, layer, mood, title || 'Lion');
-  if (species === 'heroine') {
-    const svg = heroineSVG(LOOKS[look] || LOOKS.braid, worn, layer, mood, title || 'Heroine');
-    // standing, she is narrow: on her own (not in a scene) she is framed more closely, unless the chariot needs the room
-    return fit && !worn.includes('chariot') ? svg.replace('viewBox="0 0 200 160"', 'viewBox="30 0 140 160"') : svg;
+  if (isPerson(species)) {
+    const svg = heroineSVG(lookOf(species, look), worn, layer, mood, title || SPECIES[species], species === 'hero');
+    // standing, a person is narrow: on their own (not in a scene) they are framed more closely, unless the chariot or the lamp needs the room
+    return fit && !worn.includes('chariot') && !worn.includes('lamp') ? svg.replace('viewBox="0 0 200 160"', 'viewBox="30 0 140 160"') : svg;
   }
   const f = FURS[fur] || FURS.caramel;
   const draw = (slots) => layer(slots).filter((a) => a !== 'chariot').map((a) => accessory(a, f)).join('');
@@ -300,7 +381,7 @@ export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = '
   ${draw(['body'])}
   ${worn.includes('cloak') ? CAPY_CLOAK_OVER : ''}
   ${worn.includes('chariot') ? CAPY_CHARIOT : ''}
-  ${draw(['front', 'hand', 'hold'])}
+  ${draw(['front', 'hand', 'hold', 'beside'])}
   ${draw(['friend'])}
   <ellipse cx="46" cy="52" rx="8" ry="7" fill="${f.dark}"/>
   <ellipse cx="82" cy="52" rx="8" ry="7" fill="${f.dark}"/>
@@ -342,7 +423,7 @@ function lionSVG(f, worn, layer, mood, title) {
   <path d="M121 104 Q134 116 130 128" stroke="${f.body}" stroke-width="10" fill="none" stroke-linecap="round"/>
   <circle cx="70" cy="129" r="6" fill="${f.light}"/>
   <circle cx="130" cy="129" r="6" fill="${f.light}"/>
-  ${draw(['front', 'hand'])}
+  ${draw(['front', 'hand', 'beside'])}
   <g fill="${f.mane}">${mane}<circle cx="100" cy="64" r="36"/></g>
   ${held}
   <circle cx="76" cy="38" r="9" fill="${f.body}"/><circle cx="76" cy="38" r="4.5" fill="${f.light}"/>
@@ -371,7 +452,12 @@ function lionBody(kind, f) {
     case 'skateboard':
     case 'scooter':
     case 'surfboard':
+    case 'hoverboard':
       return accessory(kind, { ...f, lion: true });
+    case 'fairywings':
+      return `<g>${FAIRY_PAIR}<g transform="translate(200 0) scale(-1 1)">${FAIRY_PAIR}</g></g>`;
+    case 'lamp':
+      return `<g transform="translate(38 150) scale(.85)">${deskLamp()}</g>`;
     case 'bowtie':
       return `<g transform="translate(100 108)"><path d="M0 0 L-11 -7 L-11 7 Z M0 0 L11 -7 L11 7 Z" fill="#d62f3a"/><circle r="3.5" fill="#a51d28"/></g>`;
     case 'medal':
@@ -576,7 +662,9 @@ const BODICE = 'M83 81 Q100 77 117 81 L113.5 104 L86.5 104 Z';
 const SKIRT = { mid: 'M86.5 102 L113.5 102 L121 135 Q100 138 79 135 Z', long: 'M86.5 102 L113.5 102 L123 146 Q100 149 77 146 Z', short: 'M86.5 102 L113.5 102 L120 128 Q100 131 80 128 Z' };
 const sleeves = (fill, long = false, which = 'both') => (which !== 'left' ? `<path d="${long ? 'M84 80 Q76 82 74 103 L83 105 Q85 90 88 84 Z' : 'M84 80 Q77 82 76 96 L84.5 98 Q86 88 88 84 Z'}" fill="${fill}"/>` : '') + (which !== 'right' ? `<path d="${long ? 'M116 80 Q124 82 126 103 L117 105 Q115 90 112 84 Z' : 'M116 80 Q123 82 124 96 L115.5 98 Q114 88 112 84 Z'}" fill="${fill}"/>` : '');
 const greaves = (fill, line) => `<path d="M93.5 130 V143 M106.5 130 V143" stroke="${fill}" stroke-width="7.5" stroke-linecap="round"/><path d="M92 132 V141 M105 132 V141" stroke="${line}" stroke-width="1.2" stroke-linecap="round"/>`;
-function heroClothes(kind) {
+function heroClothes(kind, boy = false) {
+  if (SUITS[kind]) return SUITS[kind].heroine();
+  if (!kind && boy) return TEE_AND_SHORTS;
   const chiton = (sl = true) => `${sl ? sleeves('#f3ecdc', true) : ''}<path d="${SKIRT.long}" fill="#f3ecdc"/><path d="${BODICE}" fill="#f3ecdc"/><path d="M92 107 L89 145 M100 108 V147 M108 107 L111 145" stroke="#d9cdb2" stroke-width="1.2" fill="none"/><path d="M86.5 99 Q100 106 113.5 99 L114 104 Q100 110 86 104 Z" fill="#e6dcc4"/><path d="M86.5 101 Q100 107 113.5 101" stroke="#b08a4a" stroke-width="1.8" fill="none"/><path d="M77.6 141.4 Q100 144.4 122.4 141.4" stroke="#3b5ea8" stroke-width="4" fill="none"/>${meander(80, 121, 142.6, '#f3ecdc')}<circle cx="83" cy="82.5" r="1.3" fill="#e0b13a"/><circle cx="79" cy="90" r="1.3" fill="#e0b13a"/><circle cx="117" cy="82.5" r="1.3" fill="#e0b13a"/><circle cx="121" cy="90" r="1.3" fill="#e0b13a"/>`;
   switch (kind) {
     case 'chiton':
@@ -591,8 +679,6 @@ function heroClothes(kind) {
       return `${greaves('#c7ced6', '#eef1f5')}${sleeves('#b3261e')}<path d="${SKIRT.short}" fill="#b3261e"/><path d="M92 106 L90 127 M100 107 V129 M108 106 L110 127" stroke="#8f1c16" stroke-width="1.2"/><path d="${BODICE}" fill="#b9c1cb"/>${[88, 92.5, 97, 101.5].map((y) => `<path d="M${n1(83.4 + (y - 81) * 0.07)} ${y} Q100 ${y + 2} ${n1(116.6 - (y - 81) * 0.07)} ${y}" stroke="#7d8692" stroke-width="1.1" fill="none"/>`).join('')}<path d="M100 80 V87" stroke="#7d8692" stroke-width="1.1"/><path d="M83 79 Q75 81 75 93 L86 92 Q86 85 91 80 Z M117 79 Q125 81 125 93 L114 92 Q114 85 109 80 Z" fill="#c7ced6" stroke="#7d8692" stroke-width="1"/><path d="M77 86 L86 85.5 M123 86 L114 85.5" stroke="#7d8692" stroke-width="1"/>${[[93.5, 91], [100, 93.5], [106.5, 91]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="2.2" fill="#e0b13a" stroke="#b8862a" stroke-width=".9"/>`).join('')}<rect x="86.5" y="102" width="27" height="4" rx="1" fill="#5a3a20"/>${[95, 98.5, 102, 105.5].map((x) => `<rect x="${x - 1}" y="106" width="2" height="13" fill="#5a3a20"/><circle cx="${x}" cy="110" r=".9" fill="#e0b13a"/><circle cx="${x}" cy="115" r=".9" fill="#e0b13a"/>`).join('')}<circle cx="90" cy="104" r="1" fill="#e0b13a"/><circle cx="110" cy="104" r="1" fill="#e0b13a"/>`;
     case 'linothorax':
       return `${greaves('#c8913a', '#e8c26a')}${sleeves('#2f4f8f')}<path d="${SKIRT.short}" fill="#2f4f8f"/><path d="${BODICE}" fill="#efe7d2"/><path d="M85 95 L115 95 L113.5 104 L86.5 104 Z" fill="#c8913a"/>${[87, 92, 97, 102, 107, 112].map((x) => `<path d="M${x - 2.5} 98 q2.5 2.6 5 0 M${x} 101.5 q2.5 2.6 5 0" stroke="#a46f24" stroke-width=".8" fill="none"/>`).join('')}<path d="M85 80 L91 79.5 L92 90 L86 91 Z M115 80 L109 79.5 L108 90 L114 91 Z" fill="#e3d8bc" stroke="#c9b98f" stroke-width=".8"/><circle cx="89" cy="89" r="1.1" fill="#3b5ea8"/><circle cx="111" cy="89" r="1.1" fill="#3b5ea8"/><path d="M86.5 104 L113.5 104" stroke="#3b5ea8" stroke-width="1.6"/>${[85, 89.4, 93.8, 98.2, 102.6, 107, 111.4].map((x) => `<rect x="${x}" y="104.5" width="3.9" height="13" rx=".8" fill="#efe7d2" stroke="#c9b98f" stroke-width=".7"/>`).join('')}`;
-    case 'racesuit': case 'spacesuit': case 'herosuit': case 'armour':
-      return SUITS[kind].heroine();
     default: // the plain tunic she wears when nothing is chosen
       return `${sleeves('#3f7f99')}<path d="${SKIRT.mid}" fill="#3f7f99"/><path d="${BODICE}" fill="#3f7f99"/><path d="M93 106 L91 134 M107 106 L109 134" stroke="#326a80" stroke-width="1.2"/><path d="M93 80 Q100 86 107 80" stroke="#e8c26a" stroke-width="1.6" fill="none"/><path d="M79.4 132.6 Q100 135.6 120.6 132.6" stroke="#e8c26a" stroke-width="2" fill="none"/><rect x="86.5" y="101" width="27" height="4" rx="1.5" fill="#7a4a2a"/>`;
   }
@@ -605,6 +691,7 @@ function heroBack(kind) {
     case 'cloak': return '<path d="M84 80 Q68 112 64 148 Q100 154 136 148 Q132 112 116 80 Z" fill="#9e1f1f"/><path d="M73 112 Q69 130 70 146 M127 112 Q131 130 130 146" stroke="#7a1414" stroke-width="2.4" fill="none"/>';
     case 'backpack': return '<rect x="77" y="84" width="46" height="36" rx="10" fill="#2f74e8"/>';
     case 'wings': return `<g transform="translate(0 -14)">${lionBody('wings')}</g>`;
+    case 'fairywings': return `<g transform="translate(100 84) scale(.78) translate(-100 -106)">${lionBody('fairywings')}</g>`;
     case 'jetpack': return '<g><rect x="72" y="80" width="12" height="30" rx="5" fill="#c7ced6" stroke="#8d96a3" stroke-width="2"/><rect x="116" y="80" width="12" height="30" rx="5" fill="#c7ced6" stroke="#8d96a3" stroke-width="2"/><path d="M73 110 l5 14 l5 -14 Z M117 110 l5 14 l5 -14 Z" fill="#ff8a3d"/><path d="M75.5 110 l2.5 8 l2.5 -8 Z M119.5 110 l2.5 8 l2.5 -8 Z" fill="#ffd166"/></g>';
     default: return '';
   }
@@ -630,40 +717,50 @@ function heroRide(kind) {
   return accessory(kind, { lion: true });
 }
 
-function heroineSVG(L, worn, layer, mood, title) {
+// the hero, a boy of about nine: a slightly bigger head on the same body, so everything she wears fits him too
+const BOY_HEAD_T = 'translate(100 71) scale(.92) translate(-100 -72)';
+const BOY_FACE = 'M81 48 Q81 29 100 29 Q119 29 119 48 Q119.5 62 110.5 69 Q100 74.5 89.5 69 Q80.5 62 81 48 Z';
+
+function heroineSVG(L, worn, layer, mood, title, boy = false) {
   const one = (slot) => layer([slot])[0];
-  const body = one('body'), hold = one('hold'), hand = one('hand'), back = one('back'), ride = one('ride'), headThing = one('head'), friend = one('friend');
+  const body = one('body'), hold = one('hold'), hand = one('hand'), back = one('back'), ride = one('ride'), headThing = one('head'), friend = one('friend'), beside = one('beside');
   const top = !headThing || KEEP_TOP.has(headThing);
   const skin = L.skin, skinD = shade(skin, 0.86);
   const riding = !!ride;
+  const headT = boy ? BOY_HEAD_T : HEAD_T;
   const scaled = (slots) => layer(slots).map((a) => `<g transform="${slots[0] === 'face' ? HERO_FACE : HERO_HAT}">${accessory(a, {})}</g>`).join('');
   const shield = hand ? (hand === 'shield' ? `<g transform="translate(129 108) scale(.8) translate(-152 -104)">${accessory('shield', {})}</g>` : `<g transform="translate(129 108) scale(.8)">${SHIELDS[hand]}</g>`) : '';
+  const legs = boy
+    ? `<path d="M94 120 V143 M106 120 V143" stroke="${skin}" stroke-width="7" stroke-linecap="round"/><path d="M94 138.5 V143 M106 138.5 V143" stroke="#f4f7ff" stroke-width="7.4"/>${BOOTS[body] || body === 'detective' ? '' : TRAINERS}`
+    : `<path d="M94 126 V145 M106 126 V145" stroke="${skin}" stroke-width="6.5" stroke-linecap="round"/>
+  <ellipse cx="93" cy="146.6" rx="4.6" ry="2.4" fill="${skin}"/><ellipse cx="107" cy="146.6" rx="4.6" ry="2.4" fill="${skin}"/>
+  <path d="M88 149 h10 M102 149 h10" stroke="#7a4a2a" stroke-width="2.2" stroke-linecap="round"/><path d="M90 146.5 L96 144 M104 144 L110 146.5 M94 142 v3 M106 142 v3" stroke="#7a4a2a" stroke-width="1.2" stroke-linecap="round"/>`;
+  const hairOf = boy ? boyHair : hair;
   return `<svg viewBox="0 0 200 160" role="img" aria-label="${title}" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="100" cy="${riding ? 158 : 151}" rx="${riding ? 52 : 30}" ry="${riding ? 5 : 4}" fill="#000" opacity=".08"/>
   ${back ? heroBack(back) : ''}
   ${ride ? heroRide(ride) : ''}
-  <g transform="${HEAD_T}">${hair(L, 'back', top)}</g>
-  <path d="M94 126 V145 M106 126 V145" stroke="${skin}" stroke-width="6.5" stroke-linecap="round"/>
-  <ellipse cx="93" cy="146.6" rx="4.6" ry="2.4" fill="${skin}"/><ellipse cx="107" cy="146.6" rx="4.6" ry="2.4" fill="${skin}"/>
-  <path d="M88 149 h10 M102 149 h10" stroke="#7a4a2a" stroke-width="2.2" stroke-linecap="round"/><path d="M90 146.5 L96 144 M104 144 L110 146.5 M94 142 v3 M106 142 v3" stroke="#7a4a2a" stroke-width="1.2" stroke-linecap="round"/>
+  <g transform="${headT}">${hairOf(L, 'back', top)}</g>
+  ${legs}
   <path d="M85 83 Q78 99 74.5 116" stroke="${skin}" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M115 83 Q122 99 125.5 116" stroke="${skin}" stroke-width="7" fill="none" stroke-linecap="round"/>
   <circle cx="74.5" cy="117.5" r="4.3" fill="${skin}"/><circle cx="125.5" cy="117.5" r="4.3" fill="${skin}"/>
   <rect x="95.5" y="64" width="9" height="18" rx="3" fill="${skinD}"/>
-  ${heroClothes(body)}
+  ${heroClothes(body, boy)}
   ${back && HERO_OVER[back] ? HERO_OVER[back] : ''}
   ${ride === 'chariot' ? UPRIGHT_CHARIOT : ''}
   ${layer(['front']).map(heroFront).join('')}
-  <g transform="${HEAD_T}">
-  <ellipse cx="81.6" cy="52" rx="2.8" ry="4.2" fill="${skinD}"/><ellipse cx="118.4" cy="52" rx="2.8" ry="4.2" fill="${skinD}"/>
-  <path d="${FACE}" fill="${skin}"/>
-  ${heroFace(mood, L)}
-  ${hair(L, 'front', top)}
-  ${hair(L, 'over', top)}
+  <g transform="${headT}">
+  <ellipse cx="${boy ? 81.2 : 81.6}" cy="52" rx="${boy ? 3.2 : 2.8}" ry="4.4" fill="${skinD}"/><ellipse cx="${boy ? 118.8 : 118.4}" cy="52" rx="${boy ? 3.2 : 2.8}" ry="4.4" fill="${skinD}"/>
+  <path d="${boy ? BOY_FACE : FACE}" fill="${skin}"/>
+  ${boy ? boyFace(mood, L) : heroFace(mood, L)}
+  ${hairOf(L, 'front', top)}
+  ${hairOf(L, 'over', top)}
   ${scaled(['face'])}
   ${scaled(['head'])}
   </g>
   ${hold ? `<g transform="translate(74.5 117.5)">${HOLD[hold]}</g><circle cx="74.5" cy="117.5" r="4.3" fill="${skin}"/><path d="M71 116 h6" stroke="${skinD}" stroke-width="1" stroke-linecap="round"/>` : ''}
   ${shield}
+  ${beside === 'lamp' ? `<g transform="translate(158 150) scale(.8)">${deskLamp()}</g>` : ''}
   ${friend ? `<g transform="${FRIEND_AT.heroine}">${FRIENDS[friend]}</g>` : ''}
 </svg>`;
 }
@@ -725,7 +822,7 @@ const FRIENDS = {
   fox: `<path d="M6 -2 Q25 1 23 -16 Q22 -25 15 -27 Q19 -14 6 -11 Z" fill="#e8742c"/><path d="M15 -27 Q22 -25.5 23 -17 Q19.5 -21 15 -22 Z" fill="#fff"/><path d="M-10 0 Q-12 -14 -6 -21 L6 -21 Q12 -14 10 0 Z" fill="#e8742c"/><path d="M-5 -2 Q-6 -13 0 -18 Q6 -13 5 -2 Z" fill="#fff"/><path d="M-5 0 v-6 M5 0 v-6" stroke="#4a2c1d" stroke-width="3.8" stroke-linecap="round"/><path d="M-12.5 -30 L-10.5 -44 L-2 -36 Z M12.5 -30 L10.5 -44 L2 -36 Z" fill="#e8742c"/><path d="M-11 -40 L-10.5 -44 L-6.8 -40.6 Z M11 -40 L10.5 -44 L6.8 -40.6 Z" fill="#4a2c1d"/><path d="M-13.5 -31 Q-12 -38.5 0 -38.5 Q12 -38.5 13.5 -31 Q10 -22 0 -18 Q-10 -22 -13.5 -31 Z" fill="#e8742c"/><path d="M-13.5 -31 Q-7 -26 0 -24.5 Q7 -26 13.5 -31 Q10 -22 0 -18 Q-10 -22 -13.5 -31 Z" fill="#fff"/><circle cx="-5" cy="-30.5" r="2" fill="#2b2a33"/><circle cx="5" cy="-30.5" r="2" fill="#2b2a33"/><circle cx="-4.4" cy="-31.2" r=".7" fill="#fff"/><circle cx="5.6" cy="-31.2" r=".7" fill="#fff"/><ellipse cy="-19.8" rx="2.2" ry="1.6" fill="#2b2a33"/>`,
 };
 // where a friend goes: on the capybara's back, beside the lion, at the heroine's feet
-const FRIEND_AT = { capybara: 'translate(142 66) scale(.85)', lion: 'translate(168 150) scale(.9)', heroine: 'translate(50 150) scale(.75)' };
+const FRIEND_AT = { capybara: 'translate(142 66) scale(.85)', lion: 'translate(168 150) scale(.9)', heroine: 'translate(50 150) scale(.75)', hero: 'translate(50 150) scale(.75)' };
 
 function camera(cx, cy, s, strap = `M${cx - 13 * s} ${cy - 24 * s} L${cx - 9 * s} ${cy - 6 * s} M${cx + 13 * s} ${cy - 24 * s} L${cx + 9 * s} ${cy - 6 * s}`) {
   return `<g><path d="${strap}" stroke="#d63d74" stroke-width="${n1(2.6 * s + 0.6)}" fill="none" stroke-linecap="round"/><g transform="translate(${cx} ${cy}) scale(${s})"><rect x="-9" y="-11.5" width="8" height="4" rx="1.5" fill="#3b3a4a"/><rect x="-13" y="-8" width="26" height="17" rx="3.5" fill="#3b3a4a"/><path d="M-13 -3 h26" stroke="#2b2a33" stroke-width="1.5"/><circle cy=".5" r="6.8" fill="#c7ced6"/><circle cy=".5" r="4.6" fill="#3b5ea8"/><circle cx="-1.6" cy="-1" r="1.5" fill="#fff" opacity=".8"/><rect x="7" y="-6" width="4" height="3" rx="1" fill="#ffd166"/><circle cx="9" cy="-9.6" r="1.7" fill="#d62f3a"/></g></g>`;
@@ -763,16 +860,251 @@ const SUITS = {
   },
 };
 
+// --- the hero: his hair, face, and the T-shirt and shorts he wears when nothing else is chosen ---
+function boyHair(L, part, top) {
+  const c = L.hair, d = shade(c, 0.72), hi = mix(c, '#ffffff', 0.22);
+  const back = `<ellipse cx="100" cy="45" rx="21" ry="19.5" fill="${c}"/>`;
+  switch (L.style) {
+    case 'crop':
+      if (part === 'back') return back;
+      if (part === 'front') return `<path d="M80.8 51 Q78.6 26.5 100 25.4 Q121.4 26.5 119.2 51 Q118.4 41 113.5 37.6 Q109 40.4 104.2 37.8 Q100 40.6 95.8 37.8 Q91 40.4 86.5 37.6 Q81.6 41 80.8 51 Z" fill="${c}"/><path d="M90 29.5 Q96 27.4 101 29 M104 29 Q110 28 113 31" stroke="${hi}" stroke-width="1" fill="none"/>`;
+      return '';
+    case 'spiky':
+      if (part === 'back') return back;
+      if (part === 'front') return `${top ? `<path d="M83 36 L81.5 23 L89 30 L91 17.5 L97.5 27 L101 15 L105.5 26.5 L110.5 18 L112 29.5 L119 23.5 L117 37 Z" fill="${c}"/>` : ''}<path d="M80.8 50 Q79 27.5 100 26.5 Q121 27.5 119.2 50 Q117.5 40.5 111 39 L107 42.4 L103 38.8 L98.5 42.4 L94 38.8 L89.5 41.6 Q82.5 41.5 80.8 50 Z" fill="${c}"/><path d="M92 31 L95 24 M103 30 L105 22" stroke="${hi}" stroke-width="1" fill="none"/>`;
+      return '';
+    case 'curly': {
+      if (part === 'back') return `<g fill="${c}">${(top ? [[79.5, 45], [80, 35], [86.5, 27], [100, 24], [113.5, 27], [120, 35], [120.5, 45]] : [[80, 46], [83, 37], [117, 37], [120, 46]]).map(([x, y]) => `<circle cx="${x}" cy="${y}" r="7"/>`).join('')}<ellipse cx="100" cy="45" rx="21" ry="19"/></g>`;
+      if (part !== 'front') return '';
+      const ring = top ? [[83, 37, 5.2], [88, 30, 6], [95.5, 26.5, 6.4], [104.5, 26.5, 6.4], [112, 30, 6], [117, 37, 5.2]] : [[85, 37, 4], [92, 33, 4.2], [100, 32, 4.2], [108, 33, 4.2], [115, 37, 4]];
+      return `<g fill="${c}"><path d="M81 49 Q79 28 100 26 Q121 28 119 49 Q116 38.5 100 37.5 Q84 38.5 81 49 Z"/>${ring.map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}"/>`).join('')}</g><path d="${top ? 'M86 29 q3 -3 6 0 M98 24.5 q3 -3 6 0 M109 28 q3 -3 6 0' : 'M90 32 q3 -2.4 6 0 M104 32 q3 -2.4 6 0'}" stroke="${hi}" stroke-width="1" fill="none"/>`;
+    }
+    case 'mop':
+      if (part === 'back') return `<g fill="${c}"><ellipse cx="100" cy="45" rx="22.5" ry="21"/><path d="M78 44 Q75.5 55 79.5 61 L82 50 Z M122 44 Q124.5 55 120.5 61 L118 50 Z"/></g>`;
+      if (part === 'front') return `<path d="M79.8 55 Q76.5 24 100 23 Q123.5 24 120.2 55 Q119 46 116 43.6 L111.5 45.6 L107.5 42.4 L103 45.4 L98.5 42.4 L94 45.4 L89.5 42.4 L85 44.6 Q81 46.5 79.8 55 Z" fill="${c}"/><path d="M90 28 Q98 25.5 106 28.5" stroke="${hi}" stroke-width="1" fill="none"/><path d="M96 38.5 L98.5 42.4 M106 38.5 L107.5 42.4 M88 39 L89.5 42.4" stroke="${d}" stroke-width=".9"/>`;
+      return '';
+    case 'side':
+      if (part === 'back') return back;
+      if (part === 'front') return `<path d="M80.6 52 Q78 25.5 101 25 Q122 26 119.4 52 Q118.6 40 112 36 Q100 32.5 88 39.5 Q83 43 80.6 52 Z" fill="${c}"/><path d="M89 27.5 Q91.5 31 90.5 37" stroke="${d}" stroke-width="1.1" fill="none"/><path d="M95 30 Q106 28 114 33" stroke="${hi}" stroke-width="1" fill="none"/>`;
+      return '';
+    case 'buzz':
+      if (part === 'back') return `<ellipse cx="100" cy="45.5" rx="19.6" ry="18" fill="${c}"/>`;
+      if (part === 'front') return `<path d="M81.4 47.5 Q80 28 100 27.6 Q120 28 118.6 47.5 Q117 38.5 100 37.4 Q83 38.5 81.4 47.5 Z" fill="${c}"/>`;
+      return '';
+    case 'quiff':
+      if (part === 'back') return back;
+      if (part === 'front') return `${top ? `<path d="M85 36 Q82 21 97 18 Q111 15.5 117 25 Q113 22.5 108 23.5 Q114 27 113 34 Q101 27 85 36 Z" fill="${c}"/><path d="M92 22 Q101 18.5 109 21" stroke="${hi}" stroke-width="1.1" fill="none"/>` : ''}<path d="M80.8 51 Q79 29 93 26.5 Q100 25.5 107 26.5 Q121 29 119.2 51 Q118 41 112 38 Q100 35.5 88 38 Q82 41 80.8 51 Z" fill="${c}"/>`;
+      return '';
+    case 'twists': {
+      if (part === 'back') return back;
+      if (part !== 'front') return '';
+      // little coils in two rows over a close crop
+      const coil = (a, r, rr) => { const t = (a * Math.PI) / 180; return `<circle cx="${n1(100 + Math.cos(t) * r * 1.05)}" cy="${n1(44 + Math.sin(t) * r)}" r="${rr}"/>`; };
+      const coils = top ? [...range(196, 344, 16).map((a) => coil(a, 18.5, 3.3)), ...range(212, 328, 19).map((a) => coil(a, 13.5, 3.1))].join('') : '';
+      return `<g fill="${c}"><path d="M81.2 48.5 Q79.6 27.6 100 27 Q120.4 27.6 118.8 48.5 Q117 38.5 100 37.2 Q83 38.5 81.2 48.5 Z"/>${coils}</g>${top ? range(212, 328, 38).map((a) => { const t = (a * Math.PI) / 180, x = n1(100 + Math.cos(t) * 14.2), y = n1(44 + Math.sin(t) * 13.5); return `<path d="M${n1(x - 1.4)} ${n1(y - 0.6)} q1.4 -1.4 2.8 0" stroke="${hi}" stroke-width=".8" fill="none"/>`; }).join('') : ''}`;
+    }
+    default:
+      return '';
+  }
+}
+
+function boyFace(mood, L) {
+  const ink = '#2b2a33', lip = '#8e3f3f', brow = shade(L.hair === '#d9a84e' ? '#9a6a2a' : L.hair, 0.9);
+  const eye = (x, dy = 0, dx = 0) => `<ellipse cx="${x + dx}" cy="${51 + dy}" rx="2.5" ry="3" fill="${ink}"/><circle cx="${x + dx + 0.8}" cy="${50 + dy}" r=".95" fill="#fff"/>`;
+  let eyes, brows, mouth, extra = '';
+  if (mood === 'happy') {
+    eyes = `<path d="M89 51.5 q3 -3.6 6 0 M105 51.5 q3 -3.6 6 0" stroke="${ink}" stroke-width="1.8" fill="none" stroke-linecap="round"/>`;
+    brows = 'M87.5 44 q4.5 -2.4 9 -.2 M103.5 43.8 q4.5 -2.2 9 .2';
+    mouth = `<path d="M93.6 59.6 q6.4 8.2 12.8 0 Z" fill="${lip}"/><path d="M95.2 60 h9.6 q-.6 1.7 -1.4 2 h-6.8 q-.8 -.3 -1.4 -2 Z" fill="#fff"/>`;
+  } else if (mood === 'thinking') {
+    eyes = eye(92, -1.2, 1) + eye(108, -1.2, 1);
+    brows = 'M87.5 42.5 q4.5 -3 9 -.4 M103.5 44.5 q4.5 -1.6 9 0';
+    mouth = `<path d="M97.5 62 q3.5 -1.4 7 .4" stroke="${lip}" stroke-width="1.6" fill="none" stroke-linecap="round"/>`;
+  } else if (mood === 'oops') {
+    eyes = `<circle cx="92" cy="51.5" r="2.9" fill="${ink}"/><circle cx="108" cy="51.5" r="2.9" fill="${ink}"/><circle cx="92.9" cy="50.6" r="1" fill="#fff"/><circle cx="108.9" cy="50.6" r="1" fill="#fff"/>`;
+    brows = 'M88 43 q4 -2 8.5 .4 M103.5 43.4 q4.5 -2.4 8.5 -.4';
+    mouth = `<ellipse cx="100" cy="62.5" rx="2.4" ry="2.8" fill="${lip}"/>`;
+    extra = '<path d="M124 36 q3 6 0 9 q-3 -3 0 -9z" fill="#7cc0ea"/>';
+  } else {
+    eyes = eye(92) + eye(108);
+    brows = 'M87.5 44.5 q4.5 -2 9 0 M103.5 44.5 q4.5 -2 9 0';
+    mouth = `<path d="M95.6 60.8 q4.4 3.6 8.8 0" stroke="${lip}" stroke-width="1.7" fill="none" stroke-linecap="round"/>`;
+  }
+  const freckles = L.freckles ? [[85.5, 56.5], [88, 58.4], [86.4, 59.8], [114.5, 56.5], [112, 58.4], [113.6, 59.8]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r=".7" fill="${shade(L.skin, 0.72)}"/>`).join('') : '';
+  return `${eyes}<path d="${brows}" stroke="${brow}" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M100 53.5 q1.8 3 -.8 4.6" stroke="${shade(L.skin, 0.76)}" stroke-width="1.2" fill="none" stroke-linecap="round"/><ellipse cx="87" cy="58.5" rx="3.6" ry="2.1" fill="#f08a8a" opacity=".28"/><ellipse cx="113" cy="58.5" rx="3.6" ry="2.1" fill="#f08a8a" opacity=".28"/>${freckles}${mouth}${extra}`;
+}
+
+const TEE_AND_SHORTS = `<path d="M84.6 104 L115.4 104 L117 124.5 L102.5 124.5 L100 113 L97.5 124.5 L83 124.5 Z" fill="#2b3a67"/><path d="M100 104 V112" stroke="#1f2b4f" stroke-width="1"/>${sleeves('#e8743a')}<path d="M83 81 Q100 77 117 81 L115.6 107.5 Q100 109.5 84.4 107.5 Z" fill="#e8743a"/><path d="M93 80 Q100 85.5 107 80" stroke="#c75a26" stroke-width="1.8" fill="none"/>${star(100, 94, 5.4, '#ffd166')}<path d="M76.5 94.5 L84.4 96.4 M123.5 94.5 L115.6 96.4" stroke="#c75a26" stroke-width="1.4"/>`;
+const TRAINERS = '<g><ellipse cx="92.4" cy="146.6" rx="5.9" ry="3.3" fill="#f4f7ff" stroke="#b9c1cb" stroke-width=".8"/><ellipse cx="107.6" cy="146.6" rx="5.9" ry="3.3" fill="#f4f7ff" stroke="#b9c1cb" stroke-width=".8"/><path d="M86.8 148.6 h11.2 M102 148.6 h11.2" stroke="#2f74e8" stroke-width="1.8" stroke-linecap="round"/><path d="M90 145 l3 -1.6 M105 143.4 l3 1.6" stroke="#2f74e8" stroke-width="1.2" stroke-linecap="round"/></g>';
+
+// --- new hats, in the capybara's head coordinates like the others ---
+KEEP_TOP.add('tiara');
+Object.assign(HEADWEAR, {
+  // an iron helmet with a nose guard: real Viking helmets had no horns
+  vikinghelmet: `<g><path d="M28 66 Q28 24 64 24 Q100 24 100 66 Z" fill="#8d96a3"/><path d="M40 36 Q50 29 62 28" stroke="#c7ced6" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M64 25 V62 M30 47 Q64 39 98 47" stroke="#6f7782" stroke-width="4" fill="none"/><path d="M26 60 Q64 51 102 60 L102 68 Q64 59 26 68 Z" fill="#6f7782"/><path d="M60 62 H68 V80 L64 84 L60 80 Z" fill="#6f7782" stroke="#5f6772" stroke-width="1"/>${[[36, 63], [50, 59.5], [78, 59.5], [92, 63], [64, 34]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.8" fill="#c7ced6"/>`).join('')}</g>`,
+  // a samurai's kabuto: a lacquered bowl, laced neck guard, turn-backs and a crescent at the front
+  kabuto: `<g><path d="M30 58 Q16 66 12 84 L24 86 Q25 72 34 64 Z M98 58 Q112 66 116 84 L104 86 Q103 72 94 64 Z" fill="#2b2a3a"/><path d="M16 74 L28 71 M13.5 80.5 L25 80 M112 74 L100 71 M114.5 80.5 L103 80" stroke="#c0392b" stroke-width="2"/><path d="M30 62 Q30 24 64 24 Q98 24 98 62 Z" fill="#2b2a3a"/>${[38, 47, 56, 72, 81, 90].map((x) => `<path d="M${x} 59 Q${n1((x + 64) / 2)} 32 64 26" stroke="#4a4960" stroke-width="1.4" fill="none"/>`).join('')}<path d="M27 58 Q64 50 101 58 L101 64 Q64 56 27 64 Z" fill="#d4a64a"/><path d="M28 59 L18 50 L22 66 Z M100 59 L110 50 L106 66 Z" fill="#c0392b" stroke="#d4a64a" stroke-width="1.2" stroke-linejoin="round"/><path d="M46 20 Q64 52 82 20 Q64 40 46 20 Z" fill="#e8c26a" stroke="#b8862a" stroke-width="1"/></g>`,
+  // a straw bonnet that frames the face, tied with a ribbon under the chin
+  bonnet: `<g><path d="M22 86 Q20 24 64 22 Q108 24 106 86 L97 86 Q98 38 64 36 Q30 38 31 86 Z" fill="#e8d3a2" stroke="#c9ad6e" stroke-width="1.5"/><path d="M31 84 Q30 39 64 37.5 Q98 39 97 84" stroke="#f4b6c8" stroke-width="2.6" fill="none"/><path d="M25 68 Q24 40 42 30 M103 68 Q104 40 86 30" stroke="#c9ad6e" stroke-width="1.2" fill="none"/><path d="M26 84 Q30 104 58 113 M102 84 Q98 104 70 113" stroke="#e5737f" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(64 113)"><path d="M0 0 L-10 -6 L-10 6 Z M0 0 L10 -6 L10 6 Z" fill="#e5737f"/><path d="M-2 2 L-6 12 M2 2 L6 12" stroke="#e5737f" stroke-width="2.4" stroke-linecap="round"/><circle r="3" fill="#c94f5c"/></g>${flower5(94, 30, 4, '#f48fb1')}${flower5(102, 40, 3.2, '#fff')}</g>`,
+  // Sherlock Holmes's cap: peaks at the front and back, the ear flaps tied up on top
+  deerstalker: `<g><path d="M30 58 L19 45 Q23 39 32 42 Z M98 58 L109 45 Q105 39 96 42 Z" fill="#8a6a45" stroke="#6b5034" stroke-width="1"/><path d="M30 62 Q29 26 64 25 Q99 26 98 62 Z" fill="#8a6a45"/><path d="M41 33 V60 M52 28 V60 M64 26 V60 M76 28 V60 M87 33 V60 M33 42 H95 M30 52 H98" stroke="#6b5034" stroke-width="1" opacity=".7"/><path d="M28 58 Q64 50 100 58 L100 63 Q64 55 28 63 Z" fill="#7a5c3b"/><path d="M40 61 Q64 55 88 61 Q86 71 64 73 Q42 71 40 61 Z" fill="#7a5c3b"/><path d="M24 43 Q40 26 61 24.5 M104 43 Q88 26 67 24.5" stroke="#4a3520" stroke-width="1.4" fill="none"/><circle cx="64" cy="24.5" r="3" fill="#4a3520"/></g>`,
+  tiara: `<g><path d="M36 58 Q64 48 92 58" stroke="#c7ced6" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M42 55 L45 45 L51 51 L57 41 L64 32 L71 41 L77 51 L83 45 L86 55 Q64 48 42 55 Z" fill="#e6ebf2" stroke="#b9c1cb" stroke-width="1.5" stroke-linejoin="round"/><circle cx="64" cy="43" r="3.6" fill="#f06292"/><circle cx="51" cy="51" r="2.2" fill="#64b5f6"/><circle cx="77" cy="51" r="2.2" fill="#64b5f6"/><circle cx="45" cy="45" r="1.6" fill="#fff"/><circle cx="83" cy="45" r="1.6" fill="#fff"/><circle cx="64" cy="32" r="2" fill="#fff"/></g>`,
+});
+
+// --- laser swords (an original design: a winged gold guard and a pointed, glowing blade) and the lantern
+const laser = (col, glow) => `<path d="M0 -13 V-60" stroke="${glow}" stroke-width="11" stroke-linecap="round" opacity=".28"/><path d="M-2.9 -12 L-2.9 -56 L0 -64 L2.9 -56 L2.9 -12 Z" fill="${col}"/><path d="M0 -14 V-57" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity=".9"/><path d="M-10 -7 Q-9 -14 -3.5 -12.5 L3.5 -12.5 Q9 -14 10 -7 L6 -8.5 L-6 -8.5 Z" fill="#d4a64a" stroke="#b8862a" stroke-width=".8" stroke-linejoin="round"/><rect x="-2.6" y="-8.5" width="5.2" height="14" rx="1.6" fill="#3b3a4a"/><path d="M-2.6 -4.5 h5.2 M-2.6 -1.5 h5.2 M-2.6 1.5 h5.2" stroke="#8d96a3" stroke-width=".8"/><circle cy="8" r="3" fill="${col}" stroke="#d4a64a" stroke-width="1.2"/>`;
+Object.assign(HOLD, {
+  laserblue: laser('#7fd6ff', '#2f9bff'),
+  lasergreen: laser('#8cff9e', '#22c55e'),
+  laserred: laser('#ff7a7a', '#ef2b2b'),
+  laserpurple: laser('#d4a8ff', '#9a48d6'),
+});
+// Florence Nightingale's folding Turkish lantern: a pleated cylinder between metal caps, with a candle
+// inside; it hangs from its handle at (0, 0)
+function oilLamp(lit = LIT) {
+  const paper = lit ? '#ffe08a' : '#efe6d2', pleat = lit ? '#eaa73c' : '#cdbf9f';
+  return `<g class="companion-lamp" data-lamp="oillamp" data-lit="${lit ? 1 : 0}">${lit ? '<circle cy="14" r="24" fill="#ffc84a" opacity=".16"/><circle cy="14" r="16" fill="#ffd36b" opacity=".24"/><circle cy="14" r="10" fill="#fff0a8" opacity=".35"/>' : ''}<path d="M-3.6 4.5 Q-3.6 -1.2 0 -1.2 Q3.6 -1.2 3.6 4.5" stroke="#8a6a40" stroke-width="1.6" fill="none"/><path d="M-4.6 4 H4.6 L6 7.5 H-6 Z" fill="#b8862a"/><rect x="-5.6" y="7" width="11.2" height="14" rx="2" fill="${paper}" stroke="${pleat}" stroke-width=".8"/>${[9.5, 12, 14.5, 17, 19.5].map((y) => `<path d="M-5.6 ${y} Q0 ${n1(y + 0.9)} 5.6 ${y}" stroke="${pleat}" stroke-width=".8" fill="none"/>`).join('')}${lit ? '<path d="M0 10.2 Q2.3 13.3 0 16 Q-2.3 13.3 0 10.2 Z" fill="#ff8a3d" opacity=".85"/><ellipse cy="14.2" rx="1" ry="1.6" fill="#fff6c9"/>' : '<rect x="-1.3" y="13" width="2.6" height="6" fill="#d8ccb2"/>'}<path d="M-6 21 H6 L4.8 24 H-4.8 Z" fill="#b8862a"/><rect x="-9" y="-3" width="18" height="29" fill="#fff" fill-opacity="0"/></g>`;
+}
+Object.defineProperty(HOLD, 'oillamp', { get: () => oilLamp(), enumerable: true });
+Object.assign(CAPY_HOLD, { laserblue: 'translate(114 138) rotate(-8)', lasergreen: 'translate(114 138) rotate(-8)', laserred: 'translate(114 138) rotate(-8)', laserpurple: 'translate(114 138) rotate(-8)', oillamp: 'translate(122 124)' });
+
+/** A desk lamp on a little table, standing on the ground at (0, 0); tapping it turns it on and off. */
+function deskLamp(lit = LIT) {
+  return `<g class="companion-lamp" data-lamp="lamp" data-lit="${lit ? 1 : 0}">${lit ? '<circle cy="-38" r="30" fill="#ffd36b" opacity=".16"/><circle cy="-38" r="19" fill="#ffd36b" opacity=".22"/><path d="M-10 -32 L-19 -18 L19 -18 L10 -32 Z" fill="#fff3b0" opacity=".5"/>' : ''}<path d="M-11 -14 L-13 0 M11 -14 L13 0" stroke="#7a4f2a" stroke-width="3" stroke-linecap="round"/><path d="M-12 -6 H12" stroke="#7a4f2a" stroke-width="2"/><rect x="-16" y="-18.5" width="32" height="4.5" rx="2" fill="#a0703f"/><ellipse cy="-19.5" rx="7.5" ry="2.4" fill="#3b5ea8"/><rect x="-1.5" y="-33" width="3" height="13.5" fill="#8d96a3"/><path d="M6 -32 V-25" stroke="#8d96a3" stroke-width=".9"/><circle cx="6" cy="-24.5" r="1.4" fill="#8d96a3"/><path d="M-4.2 -32.5 Q0 -27 4.2 -32.5 Z" fill="${lit ? '#fffbe0' : '#d9dde3'}" stroke="${lit ? '#ffe9a0' : '#b9c1cb'}" stroke-width=".8"/><path d="M-11 -32 L-6.5 -47 L6.5 -47 L11 -32 Z" fill="${lit ? '#ffd166' : '#c9b48a'}" stroke="${lit ? '#e8a93a' : '#a8946a'}" stroke-width="1.2" stroke-linejoin="round"/>${lit ? '<path d="M-7.6 -34.5 L-4.6 -44.5" stroke="#fff6c9" stroke-width="2" stroke-linecap="round" opacity=".85"/>' : ''}<rect x="-20" y="-52" width="40" height="52" fill="#fff" fill-opacity="0"/></g>`;
+}
+
+// --- an energy shield and the first-aid kit (a white cross on green, the first-aid sign), centred like the shields
+const hexPath = (r) => `M${Array.from({ length: 6 }, (_, i) => { const t = ((i * 60 - 90) * Math.PI) / 180; return `${n1(Math.cos(t) * r)} ${n1(Math.sin(t) * r)}`; }).join(' L')} Z`;
+Object.assign(SHIELDS, {
+  energyshield: `<path d="${hexPath(30)}" fill="#7cf2ff" opacity=".22"/><path d="${hexPath(26)}" fill="#7cf2ff" fill-opacity=".35" stroke="#22c3ee" stroke-width="2.6" stroke-linejoin="round"/><path d="${hexPath(16)}" fill="none" stroke="#c9fbff" stroke-width="1.4"/><path d="M0 -26 V-16 M0 16 V26 M-22.5 -13 L-13.9 -8 M22.5 -13 L13.9 -8 M-22.5 13 L-13.9 8 M22.5 13 L13.9 8" stroke="#c9fbff" stroke-width="1.2"/><circle r="6" fill="#3b3a4a"/><circle r="3.2" fill="#c9fbff"/><path d="M-14 -18 Q-6 -23 2 -22" stroke="#fff" stroke-width="2" fill="none" opacity=".8" stroke-linecap="round"/>`,
+  // carried by its handle, which sits at the hand
+  firstaid: '<path d="M-11 18 Q-11 9.5 -4 9.5 Q3 9.5 3 18" stroke="#2b2a33" stroke-width="2.8" fill="none"/><rect x="-21" y="17" width="34" height="25" rx="4" fill="#1f9d55" stroke="#157a41" stroke-width="1.5"/><path d="M-21 23 H13" stroke="#157a41" stroke-width="1.2"/><rect x="-7" y="20.6" width="6" height="2.4" rx="1" fill="#d4a64a"/><path d="M-6.5 25.5 H-1.5 V30 H3 V35 H-1.5 V39.5 H-6.5 V35 H-11 V30 H-6.5 Z" fill="#fff"/>',
+});
+
+// --- a hoverboard, floating on two glowing pads
+function hoverboard(upright) {
+  const [x0, x1, y] = upright ? [58, 142, 145] : [46, 190, 145];
+  const w = x1 - x0, mid = (x0 + x1) / 2;
+  return `<g><ellipse cx="${mid}" cy="157.5" rx="${n1(w * 0.42)}" ry="1.8" fill="#5ef0ff" opacity=".35"/>${[x0 + 10, x1 - 26].map((x) => `<ellipse cx="${x + 8}" cy="156" rx="9" ry="2.2" fill="#5ef0ff" opacity=".6"/><rect x="${x}" y="${y + 6}" width="16" height="4.4" rx="2" fill="#3b3a4a"/>`).join('')}<rect x="${x0}" y="${y}" width="${w}" height="7.5" rx="3.75" fill="#7a3fd1"/><path d="M${x0 + 6} ${y + 2.6} H${x1 - 6}" stroke="#5ef0ff" stroke-width="1.8" stroke-linecap="round"/>${bolt(mid, y + 4, 0.5, '#ffd166')}</g>`;
+}
+
+// --- fairy wings: see-through and veined
+const FAIRY_WING = `<g fill="#e3d4ff" fill-opacity=".75" stroke="#a58be0" stroke-width="1.6" stroke-linejoin="round"><path d="M124 70 Q112 34 136 18 Q154 10 158 26 Q160 46 124 70 Z"/><path d="M128 72 Q150 46 174 46 Q190 50 182 64 Q170 78 128 72 Z"/></g><g fill="#fff">${[[142, 30], [168, 58], [136, 48]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.6"/>`).join('')}</g>`;
+const FAIRY_PAIR = `<g fill="#e3d4ff" fill-opacity=".75" stroke="#a58be0" stroke-width="1.6" stroke-linejoin="round"><path d="M86 102 Q60 62 40 70 Q28 78 40 92 Q56 104 86 108 Z"/><path d="M86 110 Q58 108 46 122 Q44 134 58 132 Q76 126 88 114 Z"/></g><path d="M84 104 Q62 82 46 78 M86 112 Q66 116 54 126" stroke="#a58be0" stroke-width="1.1" fill="none"/><circle cx="50" cy="80" r="1.5" fill="#fff"/><circle cx="56" cy="126" r="1.3" fill="#fff"/>`;
+
+// --- armour (Years 2 and 3) and dressing up (Year 6), on all four companions
+const capyRows = (step, maxY = 124, minY = 68) => range(minY, maxY, step).map((y) => { const half = y < 102 ? 72 * Math.sqrt(Math.max(0, 1 - ((102 - y) / 42) ** 2)) - 5 : 64; return [y, Math.max(62, 118 - half), Math.min(176, 118 + half)]; });
+const lionRows = (y0, y1, step) => range(y0, y1, step).map((y) => [y, n1(77 - (y - 102) * 0.12), n1(123 + (y - 102) * 0.12)]);
+const heroRows = (y0, y1, step) => range(y0, y1, step).map((y) => [y, n1(84 + (y - 81) * 0.1), n1(116 - (y - 81) * 0.1)]);
+const backY = (x, d) => n1(topY(x) + d * Math.sqrt(Math.max(0.15, 1 - ((x - 118) / 72) ** 2)));
+const PADS = (fill, line) => `<path d="M83 79 Q75 81 75 93 L86 92 Q86 85 91 80 Z M117 79 Q125 81 125 93 L114 92 Q114 85 109 80 Z" fill="${fill}" stroke="${line}" stroke-width="1"/>`;
+const puffs = (fill, line) => `<path d="M84 79.5 Q74.5 79.5 75.5 89.5 Q79 94 86 90.5 Z M116 79.5 Q125.5 79.5 124.5 89.5 Q121 94 114 90.5 Z" fill="${fill}" stroke="${line}" stroke-width=".8"/>`;
+const bowAt = (x, y, s, col, knot) => `<g transform="translate(${x} ${y}) scale(${s})"><path d="M0 0 L-9 -6 L-9 6 Z M0 0 L9 -6 L9 6 Z" fill="${col}"/><path d="M-1 1 L-4 11 M1 1 L4 11" stroke="${col}" stroke-width="2.2" stroke-linecap="round"/><circle r="2.6" fill="${knot}"/></g>`;
+const moon = (x, y, r, bg) => `<circle cx="${x}" cy="${y}" r="${r}" fill="#fff3c4"/><circle cx="${n1(x + r * 0.45)}" cy="${n1(y - r * 0.3)}" r="${n1(r * 0.85)}" fill="${bg}"/>`;
+const stars = (list, fill) => list.map(([x, y, r]) => star(x, y, r, fill)).join('');
+const dots = (list, fill, r = 1.5) => list.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}"/>`).join('');
+const tutuDisc = (cx, cy, rx, ry) => { const pts = (k) => Array.from({ length: 32 }, (_, i) => { const t = (i / 32) * Math.PI * 2, r = i % 2 ? k * 0.8 : k; return `${n1(cx + Math.cos(t) * rx * r)} ${n1(cy + Math.sin(t) * ry * r)}`; }).join(' L'); return `<path d="M${pts(1)} Z" fill="#f7b6d2"/><path d="M${pts(0.8)} Z" fill="#fbd3e4"/>`; };
+const capyTutu = () => { const pts = Array.from({ length: 27 }, (_, i) => { const x = 186 - i * 5, b = 8 * (1 - ((x - 118) / 70) ** 2); return `${x} ${n1((i % 2 ? 124 : 130) + b)}`; }); return `<path d="M54 112 Q118 126 186 112 L${pts.join(' L')} Z" fill="#f7b6d2"/><path d="M58 114 Q118 128 182 114 L182 119 Q118 133 58 119 Z" fill="#fbd3e4"/>`; };
+const LWIDE = 'M76 102 Q100 96 124 102 Q134 124 138 146 Q100 152 62 146 Q66 124 76 102 Z';
+const GOWN = 'M86.5 102 L113.5 102 Q127 118 133 147 Q100 153 67 147 Q73 118 86.5 102 Z';
+const capyTweed = `${[78, 92, 106, 120, 134, 148, 162].map((x) => `<path d="M${x} ${n1(topY(x) + 3)} V126" stroke="#6b5034" stroke-width="1" opacity=".6"/>`).join('')}${[12, 24, 36].map((d) => `<path d="${backLine(d)}" stroke="#6b5034" stroke-width="1" fill="none" opacity=".6"/>`).join('')}`;
+const forepartDots = (cx, y0) => dots([[cx, y0], [cx - 4, y0 + 10], [cx + 4, y0 + 10], [cx, y0 + 20], [cx - 7, y0 + 30], [cx + 7, y0 + 30], [cx, y0 + 30]], '#8e1f2f', 1.4);
+
+Object.assign(SUITS, {
+  troopersuit: {
+    capy: () => `<g>${capyBoots('#2b3a67')}${cloth('#2b4c8c', 126)}${cloth('#e6ebf2', 100, 224, 320)}${[100, 118, 136].map((x) => `<path d="M${x} ${n1(topY(x) + 2)} V${n1(topY(x) + 16)}" stroke="#c7ced9" stroke-width="1.4"/>`).join('')}<circle cx="130" cy="110" r="7" fill="#5ef0ff" stroke="#ff8a3d" stroke-width="2.4"/><circle cx="130" cy="110" r="2.6" fill="#fff"/>${hemLine(115, '#5ef0ff', 1.4)}${hemLine(121, '#ff8a3d', 3)}</g>`,
+    lion: () => `<g>${lionLegs('#2b4c8c', '#e6ebf2')}<path d="${LT}" fill="#2b4c8c"/><path d="M77 103 Q100 98 123 103 L124 120 Q100 125 76 120 Z" fill="#e6ebf2"/><path d="M100 104 V121" stroke="#c7ced9" stroke-width="1.2"/><circle cx="100" cy="113" r="4.6" fill="#5ef0ff" stroke="#ff8a3d" stroke-width="1.8"/><path d="M72.5 129 Q100 134 127.5 129" stroke="#ff8a3d" stroke-width="3" fill="none"/><circle cx="90" cy="138.5" r="3" fill="#e6ebf2"/><circle cx="110" cy="138.5" r="3" fill="#e6ebf2"/></g>`,
+    heroine: () => `${sleeves('#2b4c8c', true)}${heroPants('#2b4c8c')}<path d="${BODICE}" fill="#2b4c8c"/>${PADS('#e6ebf2', '#c7ced9')}<path d="M85.5 82 Q100 79 114.5 82 L113.6 96 Q100 99 86.4 96 Z" fill="#e6ebf2"/><circle cx="100" cy="89" r="3.2" fill="#5ef0ff" stroke="#ff8a3d" stroke-width="1.3"/><rect x="86.5" y="100.5" width="27" height="3.6" rx="1.5" fill="#ff8a3d"/><circle cx="93.4" cy="124" r="3" fill="#e6ebf2"/><circle cx="106.6" cy="124" r="3" fill="#e6ebf2"/>${heroBoots('#e6ebf2')}`,
+  },
+  mecharmour: {
+    capy: () => `<g>${capyBoots('#4a5566')}${cloth('#9aa8b8', 126, 208, 336, ' stroke="#6f7d8f" stroke-width="1.5"')}${[86, 106, 126, 146, 166].map((x) => `<path d="M${x} ${n1(topY(x) + 3)} V118" stroke="#6f7d8f" stroke-width="1.4"/>`).join('')}<path d="${backLine(16)}" stroke="#6f7d8f" stroke-width="1.4" fill="none"/>${[96, 116, 136, 156].map((x) => `<circle cx="${x}" cy="${backY(x, 9)}" r="1.6" fill="#4a5566"/>`).join('')}<circle cx="128" cy="104" r="8.5" fill="#4a5566"/><circle cx="128" cy="104" r="5.6" fill="#7cf2ff"/><circle cx="126.4" cy="102.4" r="1.6" fill="#fff"/>${hemLine(120, '#ffcc33', 4.5)}${hemLine(120, '#2b2a33', 4.5, ' stroke-dasharray="5 5"')}</g>`,
+    lion: () => `<g>${lionLegs('#9aa8b8', '#4a5566', '#6f7d8f')}<path d="${LT}" fill="#9aa8b8" stroke="#6f7d8f" stroke-width="1.2"/><path d="M75 116 Q100 121 125 116 M100 104 V128" stroke="#6f7d8f" stroke-width="1.3" fill="none"/>${dots([[84, 108], [116, 108], [84, 124], [116, 124]], '#4a5566', 1.3)}<circle cx="100" cy="110" r="5.6" fill="#4a5566"/><circle cx="100" cy="110" r="3.6" fill="#7cf2ff"/><path d="M72.5 130 Q100 135 127.5 130" stroke="#ffcc33" stroke-width="4" fill="none"/><path d="M72.5 130 Q100 135 127.5 130" stroke="#2b2a33" stroke-width="4" fill="none" stroke-dasharray="4 4"/><circle cx="90" cy="138.5" r="3" fill="#4a5566"/><circle cx="110" cy="138.5" r="3" fill="#4a5566"/></g>`,
+    heroine: () => `${sleeves('#4a5566', true)}${heroPants('#9aa8b8', 1)}<path d="M82 80 H118 L116 104 H84 Z" fill="#9aa8b8" stroke="#6f7d8f" stroke-width="1"/><path d="M84.5 93 H115.5 M100 80 V93" stroke="#6f7d8f" stroke-width="1"/><circle cx="100" cy="98" r="3.8" fill="#4a5566"/><circle cx="100" cy="98" r="2.4" fill="#7cf2ff"/><rect x="72.5" y="77.5" width="14" height="12" rx="2.5" fill="#9aa8b8" stroke="#6f7d8f" stroke-width="1"/><rect x="113.5" y="77.5" width="14" height="12" rx="2.5" fill="#9aa8b8" stroke="#6f7d8f" stroke-width="1"/>${dots([[76, 81], [83, 81], [117, 81], [124, 81], [88, 86], [112, 86]], '#4a5566', 1)}<rect x="84" y="101" width="32" height="4" fill="#ffcc33"/><path d="M84 103 H116" stroke="#2b2a33" stroke-width="4" stroke-dasharray="3 3"/><circle cx="93.4" cy="124" r="3" fill="#4a5566"/><circle cx="106.6" cy="124" r="3" fill="#4a5566"/>${heroBoots('#4a5566')}`,
+  },
+  dragonarmour: {
+    capy: () => `<g>${capyBoots('#1f5f44')}${cloth('#2e9e6e', 126)}${mail(capyRows(5, 122), '#1f7a52', 7)}${[88, 104, 120, 136, 152].map((x) => { const y = topY(x); return `<path d="M${x - 4.5} ${n1(y + 2)} L${x} ${n1(y - 7)} L${x + 4.5} ${n1(y + 2)} Z" fill="#e0b13a"/>`; }).join('')}${hemLine(120, '#e0b13a', 3)}</g>`,
+    lion: () => `<g>${lionLegs('#2e9e6e', '#1f5f44')}${mail([[130, 84, 97], [134, 84, 97], [138, 84, 97], [130, 104, 117], [134, 104, 117], [138, 104, 117]], '#1f7a52', 4.5)}<path d="${LT}" fill="#2e9e6e"/>${mail(lionRows(104, 132, 4.5), '#1f7a52', 6)}<path d="M74 104 Q100 112 126 104" stroke="#e0b13a" stroke-width="2.4" fill="none"/><path d="M72.5 129 Q100 134 127.5 129" stroke="#e0b13a" stroke-width="3.4" fill="none"/></g>`,
+    heroine: () => `${sleeves('#2e9e6e', true)}${heroPants('#2e9e6e')}${mail(range(106, 140, 4).flatMap((y) => [[y, 88.5, 98], [y, 102, 111.5]]), '#1f7a52', 4)}<path d="${BODICE}" fill="#2e9e6e"/>${mail(heroRows(83, 99, 3.4), '#1f7a52', 4)}${PADS('#2e9e6e', '#1f7a52')}<path d="M90 80 Q100 86 110 80" stroke="#e0b13a" stroke-width="2" fill="none"/><rect x="86.5" y="100.5" width="27" height="3.6" rx="1.5" fill="#e0b13a"/>${heroBoots('#1f5f44')}`,
+  },
+  vikingarmour: {
+    capy: () => `<g>${capyBoots('#5a3a20')}${cloth('#7a2e2e', 128)}${cloth('#a9b1bb', 116, 212, 332)}${mail(capyRows(4, 114))}${hemLine(112, '#6b4226', 4.5)}<circle cx="118" cy="117" r="3.4" fill="#d4a64a" stroke="#8a5a1c" stroke-width="1"/></g>`,
+    lion: () => `<g>${lionLegs('#6b5a45', '#5a3a20')}<path d="M84 137 l12 3 M104 137 l12 3" stroke="#8a7a60" stroke-width="1.4"/><path d="${LT}" fill="#7a2e2e"/><path d="M76 102 Q100 96 124 102 L126.5 126 Q100 131 73.5 126 Z" fill="#a9b1bb"/>${mail(lionRows(104, 124, 4))}<path d="M74.5 119 Q100 124 125.5 119" stroke="#6b4226" stroke-width="3.6" fill="none"/><circle cx="100" cy="121.5" r="2.8" fill="#d4a64a" stroke="#8a5a1c" stroke-width="1"/></g>`,
+    heroine: () => `${sleeves('#7a2e2e', true)}${heroPants('#6b5a45')}<path d="M89 126 l9 3 M89 131 l9 3 M89 136 l9 3 M102 126 l9 3 M102 131 l9 3 M102 136 l9 3" stroke="#8a7a60" stroke-width="1.2"/><path d="M83 81 Q100 77 117 81 L117.5 119 Q100 122 82.5 119 Z" fill="#a9b1bb"/>${mail(range(83, 117, 3.4).map((y) => [y, 84.5, 115.5]), '#7d8692', 3.6)}<path d="M84 101 H116" stroke="#6b4226" stroke-width="3.6"/><circle cx="100" cy="101" r="2.4" fill="#d4a64a" stroke="#8a5a1c" stroke-width=".8"/>${heroBoots('#5a3a20')}`,
+  },
+  samurai: {
+    capy: () => `<g>${capyBoots('#2b2a33')}${cloth('#2f3e6b', 128)}${cloth('#2b2a3a', 118)}${[7, 14, 21, 28].map((d) => `<path d="${backLine(d, 70, 178)}" stroke="#c0392b" stroke-width="2" fill="none"/>`).join('')}${[86, 102, 118, 134, 150, 166].map((x) => `<path d="M${x} ${n1(topY(x) + 2)} V${backY(x, 30)}" stroke="#e5675c" stroke-width=".9" stroke-dasharray="2 2"/>`).join('')}${hemLine(106, '#d4a64a', 2)}${hemLine(116, '#c0392b', 1.6)}${[84, 106, 128, 150].map((x) => `<path d="M${x} ${n1(113 + 4 * (1 - ((x - 118) / 56) ** 2))} V126" stroke="#14131c" stroke-width="2"/>`).join('')}</g>`,
+    lion: () => `<g>${lionLegs('#2f3e6b', '#2b2a33')}<path d="${LT}" fill="#2b2a3a"/>${[106, 111, 116].map((y) => `<path d="M76 ${y} Q100 ${y + 5} 124 ${y}" stroke="#c0392b" stroke-width="1.8" fill="none"/>`).join('')}<path d="M75 120 Q100 125 125 120" stroke="#d4a64a" stroke-width="2" fill="none"/>${[[74, 122], [88, 124], [100, 124], [114, 122]].map(([x, y]) => `<rect x="${x}" y="${y}" width="12" height="13" rx="1" fill="#2b2a3a" stroke="#14131c" stroke-width="1"/><path d="M${x} ${y + 4.5} h12 M${x} ${y + 9} h12" stroke="#c0392b" stroke-width="1.2"/>`).join('')}</g>`,
+    heroine: () => `${heroPants('#2f3e6b', 3)}${sleeves('#2f3e6b', true)}<path d="${BODICE}" fill="#2b2a3a"/>${[85, 90, 95].map((y) => `<path d="M${n1(83.6 + (y - 81) * 0.15)} ${y} Q100 ${y + 2} ${n1(116.4 - (y - 81) * 0.15)} ${y}" stroke="#c0392b" stroke-width="1.4" fill="none"/>`).join('')}<path d="M86.5 99 H113.5" stroke="#d4a64a" stroke-width="1.6"/>${[85.5, 93, 100.5, 108].map((x) => `<rect x="${x}" y="102.5" width="7" height="17" rx="1" fill="#2b2a3a" stroke="#14131c" stroke-width=".8"/><path d="M${x} 108 h7 M${x} 113 h7" stroke="#c0392b" stroke-width="1"/>`).join('')}<path d="M82 79 L89 79.5 L88 95 L76 94 Z M118 79 L111 79.5 L112 95 L124 94 Z" fill="#2b2a3a" stroke="#14131c" stroke-width=".8"/><path d="M80 84 l8.5 .5 M78.5 89 l9.5 .5 M120 84 l-8.5 .5 M121.5 89 l-9.5 .5" stroke="#c0392b" stroke-width="1.1"/>${heroBoots('#2b2a33')}`,
+  },
+  goldarmour: {
+    capy: () => `<g>${capyBoots('#d9a21b')}${cloth('#f2c14e', 126, 208, 336, ' stroke="#d9a21b" stroke-width="1.5"')}<path d="${backLine(6)}" stroke="#fff3c4" stroke-width="3" fill="none" opacity=".9"/>${hemLine(108, '#d9a21b', 1.6)}${star(130, 100, 9, '#d62f3a')}${star(130, 100, 4, '#ffd166')}${hemLine(121, '#d62f3a', 3.5)}</g>`,
+    lion: () => `<g>${lionLegs('#f2c14e', '#d9a21b', '#d9a21b')}<path d="${LT}" fill="#f2c14e" stroke="#d9a21b" stroke-width="1.2"/><path d="M80 107 Q90 103 100 103" stroke="#fff3c4" stroke-width="2.4" fill="none" stroke-linecap="round"/>${star(100, 115, 6.5, '#d62f3a')}${star(100, 115, 2.8, '#ffd166')}<path d="M73.5 126 Q100 131 126.5 126" stroke="#d9a21b" stroke-width="1.4" fill="none"/><path d="M72.5 130.5 Q100 135.5 127.5 130.5" stroke="#d62f3a" stroke-width="3.4" fill="none"/></g>`,
+    heroine: () => `${sleeves('#f2c14e', true)}${heroPants('#f2c14e')}<path d="${BODICE}" fill="#f2c14e" stroke="#d9a21b" stroke-width="1"/>${PADS('#ffd166', '#d9a21b')}<path d="M88 84 Q94 82 100 82" stroke="#fff3c4" stroke-width="1.8" fill="none" stroke-linecap="round"/>${star(100, 91, 4.8, '#d62f3a')}<rect x="86.5" y="100.5" width="27" height="3.6" rx="1.5" fill="#d62f3a"/><path d="M89 124 h8.5 M102.5 124 h8.5" stroke="#d9a21b" stroke-width="1.4"/>${heroBoots('#d9a21b')}`,
+  },
+  // Year 6: square-necked Tudor velvet with a gold forepart
+  tudorgown: {
+    capy: () => `<g>${cloth('#8e1f2f', 132)}<path d="M110 98 L128 98 L138 138 Q119 142 100 138 Z" fill="#e0b13a"/>${forepartDots(119, 106)}<path d="${backLine(4)}" stroke="#f4ead0" stroke-width="2.6" fill="none" stroke-dasharray=".1 4.4" stroke-linecap="round"/>${hemLine(130, '#e0b13a', 2.4)}</g>`,
+    lion: () => `<g><path d="M76 102 Q100 96 124 102 L134 145 Q100 150 66 145 Z" fill="#8e1f2f"/><path d="M100 104 L113 147 Q100 148.6 87 147 Z" fill="#e0b13a"/>${forepartDots(100, 112)}<path d="M77 104 Q100 109 123 104" stroke="#f4ead0" stroke-width="2.4" fill="none" stroke-dasharray=".1 3.6" stroke-linecap="round"/><path d="M66.5 143 Q100 148 133.5 143" stroke="#e0b13a" stroke-width="2" fill="none"/></g>`,
+    heroine: () => `${sleeves('#8e1f2f', true)}<path d="M74 100 Q71.5 106 72.5 110.5 L84 110.5 Q83.5 105.5 83 102 Z M126 100 Q128.5 106 127.5 110.5 L116 110.5 Q116.5 105.5 117 102 Z" fill="#e0b13a" stroke="#b8862a" stroke-width=".8"/><path d="M86.5 102 L113.5 102 L126 147 Q100 151 74 147 Z" fill="#8e1f2f"/><path d="M100 103 L111 148 Q100 149.6 89 148 Z" fill="#e0b13a"/>${forepartDots(100, 112)}<path d="${BODICE}" fill="#8e1f2f"/><path d="M91.5 80 H108.5 L108 86 H92 Z" fill="#f4ead0"/><path d="M91.2 80 V86.6 H108.8 V80" stroke="#fff" stroke-width="1.6" fill="none" stroke-dasharray=".1 2.6" stroke-linecap="round"/><path d="M100 104 V117" stroke="#b8862a" stroke-width="1"/><circle cx="100" cy="119" r="2.4" fill="#b8862a"/>`,
+  },
+  // the high-waisted white muslin of Jane Austen's day
+  regency: {
+    capy: () => `<g>${cloth('#f4f1ea', 132, 208, 336, ' stroke="#ddd6c6" stroke-width="1.2"')}${capyFolds('#e3dccb', 132)}<path d="${backLine(15)}" stroke="#7fa7d9" stroke-width="5" fill="none"/>${bowAt(150, backY(150, 15), 1, '#7fa7d9', '#5a86c0')}</g>`,
+    lion: () => `<g><path d="${LLONG}" fill="#f4f1ea" stroke="#ddd6c6" stroke-width="1"/><path d="M88 112 L85 142 M100 113 V146 M112 112 L115 142" stroke="#e3dccb" stroke-width="1.4" fill="none"/><path d="M75.6 105 Q100 111 124.4 105 L125 110 Q100 116 75 110 Z" fill="#7fa7d9"/>${bowAt(112, 110, 0.8, '#7fa7d9', '#5a86c0')}</g>`,
+    heroine: () => `${puffs('#f4f1ea', '#ddd6c6')}<path d="M87 92 L113 92 L117.5 147 Q100 149.5 82.5 147 Z" fill="#f4f1ea" stroke="#ddd6c6" stroke-width=".8"/><path d="M93 96 L91 146 M100 96 V148 M107 96 L109 146" stroke="#e3dccb" stroke-width="1.1"/><path d="M83 81 Q100 77 117 81 L114.5 93 L85.5 93 Z" fill="#f4f1ea"/><path d="M92 80 Q100 85 108 80" stroke="#ddd6c6" stroke-width="1.2" fill="none"/><path d="M85.5 91 H114.5 V94.6 H85.5 Z" fill="#7fa7d9"/>${bowAt(100, 93, 0.55, '#7fa7d9', '#5a86c0')}`,
+  },
+  // a mid-Victorian day dress over a crinoline, with a lace collar
+  victorian: {
+    capy: () => `<g>${cloth('#6b3b6b', 134)}${hemLine(119, '#55295a', 3)}${hemLine(127, '#55295a', 3)}<path d="${backLine(3)}" stroke="#fff" stroke-width="2.4" fill="none" stroke-dasharray="2 2"/><path d="${backLine(17)}" stroke="#c9a0c9" stroke-width="3.5" fill="none"/>${bowAt(162, backY(162, 17), 1, '#c9a0c9', '#a77aa7')}</g>`,
+    lion: () => `<g><path d="M77 102 Q100 96 123 102 Q132 122 136 145 Q100 151 64 145 Q68 122 77 102 Z" fill="#6b3b6b"/><path d="M68 128 Q100 134 132 128 M65.5 138 Q100 144 134.5 138" stroke="#55295a" stroke-width="3" fill="none"/>${dots([[100, 107], [100, 112], [100, 117], [100, 122]], '#e0b13a', 1.3)}<path d="M76 104 Q100 110 124 104" stroke="#fff" stroke-width="2.2" fill="none"/></g>`,
+    heroine: () => `${sleeves('#6b3b6b', true)}<path d="M87 102 L113 102 Q122 118 127 146 Q100 151 73 146 Q78 118 87 102 Z" fill="#6b3b6b"/><path d="M79 126 Q100 130 121 126 M75.5 137 Q100 141.5 124.5 137" stroke="#55295a" stroke-width="2.6" fill="none"/><path d="${BODICE}" fill="#6b3b6b"/>${dots([[100, 86], [100, 90], [100, 94], [100, 98]], '#e0b13a', 1)}<path d="M91 79 Q100 86 109 79 L110 82 Q100 90 90 82 Z" fill="#fff"/><path d="M86.5 101.5 H113.5" stroke="#55295a" stroke-width="2"/><path d="M74 102.5 L83 104.5 M126 102.5 L117 104.5" stroke="#fff" stroke-width="2"/>`,
+  },
+  ballgown: {
+    capy: () => `<g>${cloth('#e9a3c9', 134)}${hemLine(128, '#f7d1e5', 4)}<path d="${backLine(16)}" stroke="#c2185b" stroke-width="4" fill="none"/>${stars([[96, 92, 4], [124, 84, 3.4], [150, 96, 4.4], [112, 114, 3.6], [166, 110, 3.2], [140, 122, 3]], '#fff')}</g>`,
+    lion: () => `<g><path d="${LWIDE}" fill="#e9a3c9"/><path d="M76 103 Q100 108 124 103 L127 124 Q118 130 112 124 Q106 131 100 125 Q94 131 88 124 Q82 130 73 124 Z" fill="#f3c1dc"/><path d="M75.5 106 Q100 112 124.5 106" stroke="#c2185b" stroke-width="3" fill="none"/>${stars([[82, 134, 2.6], [96, 141, 2.2], [112, 136, 2.6], [124, 142, 2], [90, 117, 2], [114, 115, 2]], '#fff')}</g>`,
+    heroine: () => `${puffs('#f3c1dc', '#e9a3c9')}<path d="${GOWN}" fill="#e9a3c9"/><path d="M86.5 102 L113.5 102 Q121 114 124 128 Q118 132 112 128 Q106 133 100 128 Q94 133 88 128 Q82 132 76 128 Q79 114 86.5 102 Z" fill="#f3c1dc"/><path d="${BODICE}" fill="#e9a3c9"/><path d="M90 80 Q100 85 110 80" stroke="#c2185b" stroke-width="1.2" fill="none"/><path d="M86.5 100 H113.5 V104 H86.5 Z" fill="#c2185b"/>${bowAt(108, 102, 0.5, '#c2185b', '#8f1244')}${stars([[80, 140, 2.2], [94, 144, 1.8], [110, 141, 2.2], [122, 145, 1.8], [90, 116, 1.6], [109, 114, 1.6]], '#fff')}`,
+  },
+  tutu: {
+    capy: () => `<g>${capyBoots('#f48fb1')}${cloth('#f7b6d2', 116)}${capyTutu()}</g>`,
+    lion: () => `<g>${lionLegs('#f7c6d9', '#f48fb1')}<path d="${LSHORT}" fill="#f7b6d2"/>${tutuDisc(100, 125, 35, 8)}</g>`,
+    heroine: () => `<path d="M94 104 V145 M106 104 V145" stroke="#f9d3e2" stroke-width="6.6" stroke-linecap="round"/><ellipse cx="92.8" cy="146.8" rx="6.2" ry="3.5" fill="#f48fb1"/><ellipse cx="107.2" cy="146.8" rx="6.2" ry="3.5" fill="#f48fb1"/><path d="M91 140 L96 144 M96 140 L91 144 M104 140 L109 144 M109 140 L104 144" stroke="#f48fb1" stroke-width="1"/>${sleeves('#f7b6d2')}<path d="M83 81 Q100 77 117 81 L114 106 L86 106 Z" fill="#f7b6d2"/>${tutuDisc(100, 105, 26, 6.5)}<path d="M92 80 Q100 85 108 80" stroke="#e98ab2" stroke-width="1.2" fill="none"/>`,
+  },
+  labcoat: {
+    capy: () => `<g>${cloth('#fbfcfd', 130, 208, 336, ' stroke="#c7ced9" stroke-width="1.5"')}${capyFolds('#e3e7ee', 128)}<path d="M136 98 V108" stroke="#2f74e8" stroke-width="2.6" stroke-linecap="round"/><path d="M143 100 V108" stroke="#d62f3a" stroke-width="2.6" stroke-linecap="round"/><rect x="132" y="104" width="16" height="13" rx="2" fill="#fbfcfd" stroke="#c7ced9" stroke-width="1.4"/></g>`,
+    lion: () => `<g><path d="${LT}" fill="#fbfcfd" stroke="#c7ced9" stroke-width="1.4"/><path d="M91 101 L100 117 L109 101 Z" fill="#5b8fd6"/><path d="M89 100 L100 118 L111 100 M100 118 V137" stroke="#c7ced9" stroke-width="1.4" fill="none"/><path d="M110 116 V124" stroke="#2f74e8" stroke-width="2" stroke-linecap="round"/><rect x="106" y="121" width="11" height="9" rx="1.5" fill="#fbfcfd" stroke="#c7ced9" stroke-width="1.2"/>${dots([[96.5, 124], [96.5, 131]], '#c7ced9', 1.2)}</g>`,
+    heroine: () => `${heroPants('#3b4a6b')}${sleeves('#fbfcfd', true)}<path d="${BODICE}" fill="#5b8fd6"/><path d="M83 80 L100 94 L100 134 Q90 135 79.5 133 Z" fill="#fbfcfd" stroke="#c7ced9" stroke-width="1"/><path d="M117 80 L100 94 L100 134 Q110 135 120.5 133 Z" fill="#fbfcfd" stroke="#c7ced9" stroke-width="1"/><path d="M90 81 L95 91 L89 89 Z M110 81 L105 91 L111 89 Z" fill="#eef1f5" stroke="#c7ced9" stroke-width=".8"/><path d="M108 85 V92" stroke="#2f74e8" stroke-width="1.6" stroke-linecap="round"/><rect x="105.5" y="89" width="7" height="6" rx="1" fill="#fbfcfd" stroke="#c7ced9" stroke-width=".9"/><rect x="104" y="112" width="9" height="8" rx="1.2" fill="#fbfcfd" stroke="#c7ced9" stroke-width=".9"/><rect x="87" y="112" width="9" height="8" rx="1.2" fill="#fbfcfd" stroke="#c7ced9" stroke-width=".9"/><path d="M74 102.5 L83 104.5 M126 102.5 L117 104.5" stroke="#c7ced9" stroke-width="1.2"/>`,
+  },
+  // a tweed coat with a short cape over the shoulders, like Sherlock Holmes's
+  detective: {
+    capy: () => `<g>${cloth('#8a6a45', 130)}${capyTweed}${cloth('#7a5c3b', 104, 214, 330)}${hemLine(103, '#5e452c', 1.6)}</g>`,
+    lion: () => `<g><path d="${LLONG}" fill="#8a6a45"/>${[84, 92, 100, 108, 116].map((x) => `<path d="M${x} 104 V144" stroke="#6b5034" stroke-width=".9" opacity=".6"/>`).join('')}${[112, 122, 132].map((y) => `<path d="M72 ${y} Q100 ${y + 5} 128 ${y}" stroke="#6b5034" stroke-width=".9" fill="none" opacity=".6"/>`).join('')}<path d="M73 100 Q100 94 127 100 L131 119 Q100 125 69 119 Z" fill="#7a5c3b"/><path d="M69 119 Q100 125 131 119" stroke="#5e452c" stroke-width="1.6" fill="none"/>${dots([[100, 127], [100, 134], [100, 141]], '#3d2a18')}</g>`,
+    heroine: () => `${heroPants('#4a3b2e')}${sleeves('#8a6a45', true)}<path d="M83 80 L117 80 L121 138 Q100 141 79 138 Z" fill="#8a6a45"/><path d="M88 90 V139 M94 90 V140 M106 90 V140 M112 90 V139 M80 112 H120 M80 124 H121" stroke="#6b5034" stroke-width=".8" opacity=".6"/><path d="M81 80 Q100 74 119 80 L125 100 Q100 106 75 100 Z" fill="#7a5c3b"/><path d="M75 100 Q100 106 125 100" stroke="#5e452c" stroke-width="1.4" fill="none"/><path d="M93 79 L100 85 L107 79" stroke="#5e452c" stroke-width="1.4" fill="none"/>${dots([[100, 110], [100, 118], [100, 126]], '#3d2a18', 1.1)}${heroBoots('#5a3a20')}`,
+  },
+  explorerkit: {
+    capy: () => `<g>${capyBoots('#6b4226')}${cloth('#c8a96a', 124)}${[[104, 94], [138, 92]].map(([x, y]) => `<rect x="${x}" y="${y}" width="14" height="12" rx="2" fill="#b8975a" stroke="#a2834a" stroke-width="1"/><path d="M${x} ${y + 3.6} h14" stroke="#a2834a" stroke-width="1"/>`).join('')}${hemLine(112, '#6b4226', 4)}<rect x="114" y="113" width="8" height="7" rx="1.4" fill="#d4a64a"/></g>`,
+    lion: () => `<g>${lionLegs('#9c7f4a', '#6b4226')}<path d="${LT}" fill="#c8a96a"/><path d="M92 101 L100 108 L108 101" stroke="#a2834a" stroke-width="1.6" fill="none"/><path d="M100 108 V124" stroke="#a2834a" stroke-width="1.2"/>${[[84, 110], [106, 110]].map(([x, y]) => `<rect x="${x}" y="${y}" width="10" height="8" rx="1.2" fill="#b8975a" stroke="#a2834a" stroke-width="1"/><path d="M${x} ${y + 2.6} h10" stroke="#a2834a" stroke-width="1"/>`).join('')}<path d="M73.5 126 Q100 131 126.5 126" stroke="#6b4226" stroke-width="3.6" fill="none"/><rect x="97" y="126.5" width="6" height="5" rx="1" fill="#d4a64a"/></g>`,
+    heroine: () => `${heroPants('#9c7f4a')}${sleeves('#c8a96a')}<path d="M76 94.5 L84.5 96.5 M124 94.5 L115.5 96.5" stroke="#a2834a" stroke-width="2.4"/><path d="${BODICE}" fill="#c8a96a"/><path d="M93 79.5 L100 86 L107 79.5 L105 83.5 L100 87 L95 83.5 Z" fill="#b8975a"/>${[[88, 88], [104, 88]].map(([x, y]) => `<rect x="${x}" y="${y}" width="8" height="7" rx="1" fill="#b8975a" stroke="#a2834a" stroke-width=".8"/><path d="M${x} ${y + 2.2} h8" stroke="#a2834a" stroke-width=".8"/>`).join('')}<path d="M100 87 V101" stroke="#a2834a" stroke-width=".9"/><rect x="86.5" y="100.5" width="27" height="4" rx="1.4" fill="#6b4226"/><rect x="97.5" y="100" width="5" height="5" rx="1" fill="#d4a64a"/>${heroBoots('#6b4226')}`,
+  },
+  // a starry robe for any wizard
+  wizardrobe: {
+    capy: () => `<g>${cloth('#3b2fb0', 134)}${stars([[96, 92, 4], [124, 84, 3.4], [150, 98, 4.4], [112, 114, 3.6], [140, 122, 3]], '#ffd166')}${moon(166, 104, 6, '#3b2fb0')}${hemLine(129, '#e0b13a', 3)}</g>`,
+    lion: () => `<g><path d="${LWIDE}" fill="#3b2fb0"/><path d="M100 103 V148" stroke="#e0b13a" stroke-width="2.4"/>${stars([[86, 114, 3.4], [114, 124, 3.6], [84, 136, 3], [118, 140, 2.6], [110, 108, 2.4]], '#ffd166')}${moon(90, 126, 3.6, '#3b2fb0')}</g>`,
+    heroine: () => `<path d="M84 80 Q73 84 69 109 L84 109 Q85 92 88 84 Z M116 80 Q127 84 131 109 L116 109 Q115 92 112 84 Z" fill="#3b2fb0"/><path d="M69 109 L84 109 M131 109 L116 109" stroke="#e0b13a" stroke-width="2"/><path d="M83 80 L117 80 L125 147 Q100 151 75 147 Z" fill="#3b2fb0"/><path d="M100 84 V149" stroke="#e0b13a" stroke-width="2"/><path d="M91 80 Q100 87 109 80" stroke="#e0b13a" stroke-width="2" fill="none"/>${stars([[90, 112, 3.4], [110, 98, 3], [86, 134, 3], [113, 128, 3.6], [93, 95, 2.4]], '#ffd166')}${moon(108, 140, 3.6, '#3b2fb0')}<path d="M85 102 Q100 106 115 102" stroke="#e0b13a" stroke-width="1.6" fill="none"/>`,
+  },
+});
+
 // --- things to ride on or in. The whole companion is lifted (and shrunk) onto the seat, between
 // what is drawn behind it and what is drawn in front of it; everything stays inside the 200×160 box,
 // with the wheels, hooves or feet on the ground at y 150, so scenes place it as usual.
 const LEGWEAR = { racesuit: '#d62f3a', spacesuit: '#eef1f5', herosuit: '#2f74e8', armour: '#a9b1bb' };
 const BOOTS = { racesuit: '#2b2a33', spacesuit: '#9aa3ad', herosuit: '#d62f3a', armour: '#7d8692' };
+Object.assign(LEGWEAR, { troopersuit: '#2b4c8c', mecharmour: '#9aa8b8', dragonarmour: '#2e9e6e', vikingarmour: '#6b5a45', samurai: '#2f3e6b', goldarmour: '#f2c14e', explorerkit: '#9c7f4a', tutu: '#f7c6d9' });
+Object.assign(BOOTS, { troopersuit: '#e6ebf2', mecharmour: '#4a5566', dragonarmour: '#1f5f44', vikingarmour: '#5a3a20', samurai: '#2b2a33', goldarmour: '#d9a21b', explorerkit: '#6b4226', tutu: '#f48fb1' });
 /** The rider's near leg, hanging down the side of the animal (the capybara lies along its back instead). */
 function dangle(sp, f, worn, x, y, len = 20) {
   const suit = worn.find((a) => LEGWEAR[a]);
   if (sp === 'lion') return `<rect x="${x - 6}" y="${y}" width="12" height="${len}" rx="6" fill="${LEGWEAR[suit] || f.body}"/><ellipse cx="${x - 1}" cy="${y + len}" rx="8" ry="4.4" fill="${BOOTS[suit] || f.light}"/>`;
-  if (sp === 'heroine') return `<path d="M${x} ${y} V${y + len}" stroke="${LEGWEAR[suit] || f.skin}" stroke-width="5.5" stroke-linecap="round"/><ellipse cx="${x - 2}" cy="${y + len + 1.5}" rx="4.6" ry="2.6" fill="${BOOTS[suit] || '#7a4a2a'}"/>`;
+  if (isPerson(sp)) return `<path d="M${x} ${y} V${y + len}" stroke="${LEGWEAR[suit] || f.skin}" stroke-width="5.5" stroke-linecap="round"/><ellipse cx="${x - 2}" cy="${y + len + 1.5}" rx="4.6" ry="2.6" fill="${BOOTS[suit] || '#7a4a2a'}"/>`;
   return '';
 }
 
@@ -799,53 +1131,65 @@ const skateSide = (x, w, bottom) => `<rect x="${x - 1}" y="${bottom - 10}" width
 // seat: per companion, [scale, x, y] for its whole drawing; friendAt: where a friend rides along
 export const MOUNTS = {
   horse: {
-    seat: { lion: [0.66, 42, 1], capybara: [0.6, 39, 4], heroine: [0.72, 36, 2] }, shadow: [104, 151, 74],
+    seat: { lion: [0.66, 42, 1], capybara: [0.6, 39, 4], heroine: [0.72, 36, 2], hero: [0.72, 36, 2] }, shadow: [104, 151, 74],
     back: () => KNIGHT_HORSE.back + plume,
     front: (sp, f, worn) => KNIGHT_HORSE.front + caparison + dangle(sp, f, worn, sp === 'lion' ? 113 : 109, 88, 24),
     friendAt: 'translate(150 90) scale(.7)',
   },
   pony: {
-    seat: { lion: [0.62, 46, 12], capybara: [0.56, 45, 15], heroine: [0.68, 41, 13] }, shadow: [104, 151, 66],
+    seat: { lion: [0.62, 46, 12], capybara: [0.56, 45, 15], heroine: [0.68, 41, 13], hero: [0.68, 41, 13] }, shadow: [104, 151, 66],
     back: () => `<g transform="${PONY_T}">${PONY.back}</g>`,
     front: (sp, f, worn) => `<g transform="${PONY_T}">${PONY.front}${saddle}</g>${dangle(sp, f, worn, sp === 'lion' ? 114 : 110, 95, 20)}`,
     friendAt: 'translate(146 97) scale(.66)',
   },
   dinoride: {
-    seat: { lion: [0.64, 46, 0], capybara: [0.58, 44, 4], heroine: [0.7, 40, 2] }, shadow: [110, 151, 82],
+    seat: { lion: [0.64, 46, 0], capybara: [0.58, 44, 4], heroine: [0.7, 40, 2], hero: [0.7, 40, 2] }, shadow: [110, 151, 82],
     back: () => `${dinoLeg(78, DINO.dark)}${dinoLeg(144, DINO.dark)}<path d="M150 92 Q186 100 199 134 Q188 130 180 122 Q166 110 150 118 Z" fill="${DINO.body}"/><path d="M76 102 Q56 76 50 54 Q46 38 32 33" stroke="${DINO.body}" stroke-width="19" fill="none" stroke-linecap="round"/><ellipse cx="25" cy="33" rx="15" ry="11" fill="${DINO.body}"/><circle cx="25" cy="28" r="3" fill="#2b2a33"/><circle cx="25.9" cy="27.1" r="1" fill="#fff"/><path d="M13 37 Q20 42 29 39" stroke="#2b2a33" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="13" cy="30" r="1.3" fill="#2b2a33"/><ellipse cx="33" cy="37" rx="3" ry="1.8" fill="#f2a0a0" opacity=".7"/><circle cx="52" cy="60" r="3" fill="${DINO.spot}"/><circle cx="62" cy="80" r="3.6" fill="${DINO.spot}"/>`,
     front: (sp, f, worn) => `<ellipse cx="112" cy="108" rx="50" ry="27" fill="${DINO.body}"/><path d="M68 118 Q112 142 156 118 Q150 133 112 135 Q74 133 68 118 Z" fill="${DINO.belly}"/><circle cx="136" cy="96" r="5" fill="${DINO.spot}"/><circle cx="150" cy="108" r="3.6" fill="${DINO.spot}"/><circle cx="80" cy="98" r="4" fill="${DINO.spot}"/>${dinoLeg(92, DINO.body)}${dinoLeg(150, DINO.body)}<path d="M96 83 Q112 78 128 83 L127 91 Q112 95 97 91 Z" fill="#d62f3a"/>${dangle(sp, f, worn, sp === 'lion' ? 115 : 111, 86, 24)}`,
     friendAt: 'translate(152 86) scale(.7)',
   },
   rocket: {
-    seat: { lion: [0.7, 42, 6], capybara: [0.6, 42, 10], heroine: [0.74, 38, 8] }, shadow: [104, 156, 60],
+    seat: { lion: [0.7, 42, 6], capybara: [0.6, 42, 10], heroine: [0.74, 38, 8], hero: [0.74, 38, 8] }, shadow: [104, 156, 60],
     back: () => '<path d="M168 99 Q190 104 199 110 Q190 116 168 121 Z" fill="#ff8a3d"/><path d="M168 103.5 Q182 107 189 110 Q182 113 168 116.5 Z" fill="#ffd166"/><path d="M136 96 L155 74 Q161 71 163 78 L166 96 Z" fill="#d62f3a"/>',
     front: (sp, f, worn) => `<path d="M36 110 Q40 95 66 94 L164 94 Q170 94 170 100 L170 120 Q170 126 164 126 L66 126 Q40 125 36 110 Z" fill="#eef1f5" stroke="#c7ced9" stroke-width="1.5"/><path d="M36 110 Q40 95 66 94 L66 126 Q40 125 36 110 Z" fill="#d62f3a"/><rect x="150" y="94.8" width="6" height="30.4" fill="#2f74e8"/><circle cx="84" cy="110" r="7.5" fill="#bfe6ff" stroke="#9aa3ad" stroke-width="3"/><path d="M80.5 107 q2 -2 4.5 -2" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M136 124 L156 144 Q161 147 164 141 L166 124 Z" fill="#d62f3a"/>${dangle(sp, f, worn, sp === 'lion' ? 117 : 113, 120, 16)}${star(26, 70, 4, '#ffd166')}${star(182, 82, 3, '#ffd166')}`,
     friendAt: 'translate(148 95) scale(.68)',
   },
   gokart: {
-    seat: { lion: [0.78, 44, 22], capybara: [0.62, 48, 32], heroine: [0.8, 42, 20] }, shadow: [100, 151, 82],
+    seat: { lion: [0.78, 44, 22], capybara: [0.62, 48, 32], heroine: [0.8, 42, 20], hero: [0.8, 42, 20] }, shadow: [100, 151, 82],
     back: () => '<path d="M161 112 L163 97 M173 112 L175 97" stroke="#2b2a33" stroke-width="3"/><rect x="154" y="90" width="29" height="7" rx="2.5" fill="#d62f3a"/>',
     front: () => `<path d="M172 120 h12" stroke="#8d96a3" stroke-width="4.5" stroke-linecap="round"/><path d="M22 130 Q20 120 34 118 L80 116 Q86 108 96 108 L148 110 Q170 112 174 124 L176 135 Q176 141 170 141 L28 141 Q22 141 22 135 Z" fill="#d62f3a"/><path d="M30 127 H168" stroke="#fff" stroke-width="3"/><path d="M58 117 L68 104" stroke="#2b2a33" stroke-width="3" stroke-linecap="round"/><ellipse cx="69" cy="102" rx="3.6" ry="8" transform="rotate(32 69 102)" fill="none" stroke="#2b2a33" stroke-width="3"/><rect x="15" y="127" width="15" height="7" rx="3.5" fill="#2b2a33"/><circle cx="126" cy="123" r="8" fill="#fff"/>${numberSeven(126, 127.5, 12, '#d62f3a')}<circle cx="50" cy="139" r="11" fill="#2b2a33"/><circle cx="50" cy="139" r="4.4" fill="#c7ced6"/><circle cx="148" cy="138" r="12" fill="#2b2a33"/><circle cx="148" cy="138" r="4.8" fill="#c7ced6"/>`,
     friendAt: 'translate(162 112) scale(.62)',
   },
   bicycle: {
-    seat: { lion: [0.7, 46, 4], capybara: [0.55, 51, 15], heroine: [0.74, 42, 6] }, shadow: [100, 151, 76],
+    seat: { lion: [0.7, 46, 4], capybara: [0.55, 51, 15], heroine: [0.74, 42, 6], hero: [0.74, 42, 6] }, shadow: [100, 151, 76],
     back: () => `${bikeWheel(48, 133)}${bikeWheel(150, 133)}<path d="M150 133 L104 134 L66 98 M104 134 L114 96 L150 133 M68 100 L114 101" stroke="#2e9e8f" stroke-width="4.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/><path d="M66 98 L48 133" stroke="#2e9e8f" stroke-width="4" stroke-linecap="round"/><path d="M66 98 L62 84 Q70 79 80 83" stroke="#5f6772" stroke-width="3.4" fill="none" stroke-linecap="round"/><path d="M76 82.4 L83 84" stroke="#2b2a33" stroke-width="5" stroke-linecap="round"/><path d="M104 94 Q115 90 127 94 Q122 98.5 108 98 Z" fill="#2b2a33"/><path d="M33 80 L59 80 L56 98 L36 98 Z" fill="#c9a26d" stroke="#a27e4d" stroke-width="1.5" stroke-linejoin="round"/><path d="M34.5 86 H57.5 M35.3 92 H56.7 M42 80 L42.5 98 M50 80 L49.5 98" stroke="#a27e4d" stroke-width="1"/>${flower5(40, 76, 3.6, '#f48fb1')}${flower5(52, 75, 3.2, '#fff')}`,
     front: () => '<circle cx="104" cy="134" r="5" fill="#5f6772"/><path d="M104 134 L112 144" stroke="#5f6772" stroke-width="3" stroke-linecap="round"/><rect x="107" y="142.4" width="11" height="3.6" rx="1.6" fill="#2b2a33"/>',
     friendAt: 'translate(46 80) scale(.55)', // in the basket
   },
   rollerskates: {
-    seat: { lion: [0.96, 4, 0], capybara: [0.96, 4, 0], heroine: [0.96, 4, 0] }, shadow: [104, 157, 46], narrow: true,
+    seat: { lion: [0.96, 4, 0], capybara: [0.96, 4, 0], heroine: [0.96, 4, 0], hero: [0.96, 4, 0] }, shadow: [104, 157, 46], narrow: true,
     back: () => '',
-    front: (sp) => (sp === 'lion' ? skateFront(89.4, 139.2) + skateFront(110.6, 139.2) : sp === 'heroine' ? skateFront(93.3, 141, 0.55) + skateFront(106.7, 141, 0.55) : [[63.5, 15.4, 142], [80.8, 15.4, 142], [144.2, 15.4, 142], [161.4, 14.4, 140]].map(([x, w, b]) => skateSide(x, w, b)).join('')),
+    front: (sp) => (sp === 'lion' ? skateFront(89.4, 139.2) + skateFront(110.6, 139.2) : isPerson(sp) ? skateFront(93.3, 141, 0.55) + skateFront(106.7, 141, 0.55) : [[63.5, 15.4, 142], [80.8, 15.4, 142], [144.2, 15.4, 142], [161.4, 14.4, 140]].map(([x, w, b]) => skateSide(x, w, b)).join('')),
   },
+};
+
+// a friendly dragon, wings raised behind the rider
+const DRAGON = { body: '#d8452f', dark: '#a8321f', belly: '#ffcf7a', stripe: '#e8a94a', wing: '#ef7f5f', horn: '#f4e3c1' };
+const dragonLeg = (x, fill) => `<rect x="${x - 9}" y="114" width="18" height="34" rx="8" fill="${fill}"/><path d="M${x - 9} 150 L${x - 6.5} 144 L${x - 4} 150 Z M${x - 2.5} 150 L${x} 144 L${x + 2.5} 150 Z M${x + 4} 150 L${x + 6.5} 144 L${x + 9} 150 Z" fill="${DRAGON.horn}"/>`;
+const spike = (x, y, a, fill = DRAGON.dark) => `<path d="M-5 2 L0 -8 L5 2 Z" transform="translate(${x} ${y}) rotate(${a})" fill="${fill}"/>`;
+MOUNTS.dragon = {
+  seat: { lion: [0.64, 46, 0], capybara: [0.58, 44, 4], heroine: [0.7, 40, 2], hero: [0.7, 40, 2] }, shadow: [110, 151, 82],
+  back: () => `<path d="M118 92 Q110 52 132 30 Q146 16 170 11 Q163 26 173 32 Q160 38 167 50 Q152 50 157 64 Q141 64 141 84 Z" fill="${DRAGON.wing}" stroke="${DRAGON.dark}" stroke-width="2" stroke-linejoin="round"/><path d="M121 88 Q126 52 169 12 M131 62 L166 50 M135 76 L156 64 M127 44 L172 32" stroke="${DRAGON.dark}" stroke-width="2" fill="none" stroke-linecap="round"/>${dragonLeg(78, DRAGON.dark)}${dragonLeg(144, DRAGON.dark)}${[[160, 96, 20], [172, 102, 35], [182, 111, 50]].map(([x, y, a]) => spike(x, y, a)).join('')}<path d="M150 92 Q184 99 192 126 Q183 124 177 118 Q165 110 150 118 Z" fill="${DRAGON.body}"/><path d="M186 120 L199 124 L193 136 Z" fill="${DRAGON.dark}"/>${[[66, 81, -40], [58, 66, -25], [54, 50, -10], [46, 38, 15]].map(([x, y, a]) => spike(x + 8, y, a + 60)).join('')}<path d="M76 102 Q56 76 50 54 Q46 38 32 33" stroke="${DRAGON.body}" stroke-width="19" fill="none" stroke-linecap="round"/><path d="M34 20 Q40 6 50 2 Q44 12 41 22 Z M26 19 Q28 8 34 4 Q32 12 31.5 19 Z" fill="${DRAGON.horn}"/><path d="M10 29 Q12 19 26 18.5 Q40 18.5 44 30 Q46 40 34 44 L16 44 Q6 43 6 36 Q6 31 10 29 Z" fill="${DRAGON.body}"/><path d="M41 26 L51 23 L45 33 Z" fill="${DRAGON.dark}"/><circle cx="29" cy="27.5" r="3.6" fill="#fff"/><circle cx="28.4" cy="28" r="2.2" fill="#2b2a33"/><circle cx="29.2" cy="27.2" r=".8" fill="#fff"/><circle cx="11" cy="32" r="1.3" fill="#7a2416"/><path d="M8 38.5 Q18 44 31 40.5" stroke="#7a2416" stroke-width="1.6" fill="none" stroke-linecap="round"/><ellipse cx="36" cy="38" rx="3" ry="1.8" fill="#f2a0a0" opacity=".7"/><path d="M55 64 Q62 80 72 92" stroke="${DRAGON.belly}" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"/>`,
+  front: (sp, f, worn) => `<ellipse cx="112" cy="108" rx="50" ry="27" fill="${DRAGON.body}"/><path d="M68 118 Q112 142 156 118 Q150 133 112 135 Q74 133 68 118 Z" fill="${DRAGON.belly}"/>${[84, 98, 112, 126, 140].map((x) => `<path d="M${x} ${n1(122 + 6 * (1 - ((x - 112) / 44) ** 2))} V${n1(129 + 5 * (1 - ((x - 112) / 44) ** 2))}" stroke="${DRAGON.stripe}" stroke-width="1.6"/>`).join('')}${dots([[136, 96], [150, 108], [80, 98]], DRAGON.dark, 3)}${dragonLeg(92, DRAGON.body)}${dragonLeg(150, DRAGON.body)}<path d="M96 83 Q112 78 128 83 L127 91 Q112 95 97 91 Z" fill="#2f5fa8"/><path d="M97 91 Q112 95 127 91" stroke="#ffd166" stroke-width="1.6" fill="none"/>${dangle(sp, f, worn, sp === 'lion' ? 115 : 111, 86, 24)}`,
+  friendAt: 'translate(152 86) scale(.7)',
 };
 
 /** The companion carried by (or sitting in) something it rides. */
 function mountedSVG(id, species, opts, fit) {
   const M = MOUNTS[id], sp = SPECIES[species] ? species : 'capybara';
-  const f = sp === 'lion' ? LION_FURS[opts.fur] || LION_FURS.caramel : sp === 'heroine' ? LOOKS[opts.look] || LOOKS.braid : FURS[opts.fur] || FURS.caramel;
+  const f = sp === 'lion' ? LION_FURS[opts.fur] || LION_FURS.caramel : isPerson(sp) ? lookOf(sp, opts.look) : FURS[opts.fur] || FURS.caramel;
   const wear = { ...opts.wear };
+  delete wear.beside; // the lamp stays at home while the companion rides
   // a friend rides along on the back of it (the capybara keeps carrying its own)
   const friend = sp !== 'capybara' && M.friendAt ? wear.friend : null;
   if (friend) delete wear.friend;
@@ -859,22 +1203,22 @@ function mountedSVG(id, species, opts, fit) {
   ${M.front(sp, f, worn)}
   ${friend ? `<g transform="${M.friendAt}">${FRIENDS[friend]}</g>` : ''}
 </svg>`;
-  return fit && sp === 'heroine' && M.narrow ? svg.replace('viewBox="0 0 200 160"', 'viewBox="30 0 140 160"') : svg;
+  return fit && isPerson(sp) && M.narrow ? svg.replace('viewBox="0 0 200 160"', 'viewBox="30 0 140 160"') : svg;
 }
 
-/** A head-and-shoulders picture of one of the heroine's looks, for the picker. */
-export const lookThumb = (look) => capybaraSVG({ species: 'heroine', look, mood: 'happy', title: LOOKS[look]?.label }).replace('viewBox="0 0 200 160"', 'viewBox="68 4 64 64"');
+/** A head-and-shoulders picture of one of a person's looks, for the picker. */
+export const lookThumb = (look, species = HERO_LOOKS[look] && !LOOKS[look] ? 'hero' : 'heroine') => capybaraSVG({ species, look, mood: 'happy', title: looksOf(species)[look]?.label }).replace('viewBox="0 0 200 160"', species === 'hero' ? 'viewBox="68 10 64 64"' : 'viewBox="68 4 64 64"');
 
 export function capybaraEl(opts, className = 'capy') {
   const wrap = document.createElement('div');
   wrap.className = className;
   wrap.innerHTML = capybaraSVG({ fit: true, ...opts });
-
+  wrap.companion = { opts, className, make: capybaraEl }; // so a tapped lamp can redraw it (js/ui/lamp.js)
   return wrap;
 }
 
 // friendly names and facts for whichever animal it is
-export const companionNoun = (species) => ({ lion: 'lion', heroine: 'heroine' })[species] || 'capybara';
+export const companionNoun = (species) => ({ lion: 'lion', heroine: 'heroine', hero: 'hero' })[species] || 'capybara';
 export const COMPANION_FACTS = {
   capybara: [
     'Capybaras are the largest rodents in the world.',
@@ -905,5 +1249,17 @@ export const COMPANION_FACTS = {
     'Six short poems by Sulpicia, written in Rome over 2,000 years ago, are among the very few by a Roman woman to survive.',
     'At Olympia, girls ran their own races at the Heraia, a festival for the goddess Hera, on a track a little shorter than the men’s.',
     'The Greek writer Pausanias tells how the poet Telesilla led the women of Argos to defend their city against Sparta.',
+  ],
+  // true stories of young people who did remarkable things
+  hero: [
+    'Louis Braille was 15 when he invented a way for blind people like him to read by touch, using raised dots.',
+    'Blaise Pascal was still a teenager when he built a calculating machine to help his father, a tax official, with his sums.',
+    'Wolfgang Amadeus Mozart was making up his own music by the time he was five.',
+    'Tutankhamun became pharaoh of Ancient Egypt when he was only about nine years old.',
+    'Pelé was 17 when he helped Brazil win the football World Cup in 1958.',
+    'Jordan Romero was 13 when he climbed to the top of Mount Everest in 2010.',
+    'Laura Dekker was 16 when she finished sailing all the way around the world on her own.',
+    'Philo Farnsworth said he first had the idea for electronic television at 14, while ploughing a field.',
+    'In 2021 Oliver Daemen, aged 18, became the youngest person to fly into space.',
   ],
 };
