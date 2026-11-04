@@ -293,8 +293,12 @@ function workedStep(app, root, step) {
   let shown = 1;
   const list = h('ol', { class: 'steps' });
   const btn = h('button', { class: 'btn-primary btn-big' });
+  // the answer picture (a lit circuit, a finished bar model) waits for the last step, so the
+  // child can predict first; with no steps to wait for it shows straight away
+  const after = h('div');
   const draw = () => {
     list.replaceChildren(...steps.slice(0, shown).map((t) => rich('li', t)));
+    after.replaceChildren(...[shown >= steps.length ? renderVisual(q.visual) : null].filter(Boolean));
     btn.textContent = shown < steps.length ? 'Next step' : 'I see how it works';
   };
   btn.onclick = () => { if (shown < steps.length) { shown++; draw(); } else next(app); };
@@ -303,8 +307,8 @@ function workedStep(app, root, step) {
     h('p', { class: 'muted' }, 'Watch how I solve this one. Read each step.'),
     COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(q.prompt), rich('div', q.prompt, { class: 'q-prompt' })) : rich('div', q.prompt, { class: 'q-prompt' }),
     q.diagram ? diagram(q.diagram) : null,
-    renderVisual(q.visual),
     list,
+    after,
     hookCard(q),
     COURSE.readAloud ? h('div', {}, h('button', { class: 'btn-ghost', type: 'button', onclick: () => speak(spoken(steps.slice(0, shown).at(-1) || '')) }, icon('speaker'), ' Read this step')) : null,
     btn));
