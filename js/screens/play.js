@@ -12,7 +12,9 @@ import { checkSentence } from '../core/checkers.js';
 import { learnText, present } from '../core/present.js';
 import { makeRng } from '../core/rng.js';
 import { currentBooks, logReading, submitAnswer, unseenMarks, ANSWER_LEVELS, wordCount } from '../core/writing.js';
-import { milestones } from '../core/progress.js';
+import { milestones, unlocksOf } from '../core/progress.js';
+// "a", "a and b", "a, b and c"
+const listing = (xs) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs.at(-1)}`);
 import { sprintLevel, sprintBest, recordSprint, sprintSeconds } from '../core/sprint.js';
 import { freshSprintQuestion, SPRINT_LEVELS } from '../gen/sprint.js';
 import { parseNumber } from '../core/fraction.js';
@@ -569,7 +571,7 @@ function newBadges(app, plan) {
   const before = new Set(plan.badgesBefore || []);
   return milestones(state, db).filter((m) => m.done && !before.has(m.id)).map((m) => h('div', { class: 'unlock pop' },
     m.unlock ? capybaraEl({ ...c, accessory: m.unlock, mood: 'happy' }) : h('div', { class: 'medal', style: { width: '56px', height: '56px', borderRadius: '50%', display: 'grid', placeItems: 'center', background: 'radial-gradient(circle at 35% 30%, #ffd88a, #ff9d3d 60%, #e0731d)', color: '#fff' } }, icon('star')),
-    h('div', {}, h('div', { class: 'eyebrow', style: { color: 'var(--warn)' } }, 'New badge'), h('h3', { style: { margin: 0 } }, m.title), h('p', { style: { margin: '2px 0 0' } }, m.unlock ? `You unlocked the ${ACCESSORIES[m.unlock].toLowerCase()} for ${c.name || 'your companion'}!` : m.desc))));
+    h('div', {}, h('div', { class: 'eyebrow', style: { color: 'var(--warn)' } }, 'New badge'), h('h3', { style: { margin: 0 } }, m.title), h('p', { style: { margin: '2px 0 0' } }, m.unlock ? `You unlocked ${listing(unlocksOf(m).map((id) => `the ${ACCESSORIES[id].toLowerCase()}`))} for ${c.name || 'your companion'}!` : m.desc))));
 }
 
 /** The companion wearing (or holding) the bonus prize, on top of what it already wears. */

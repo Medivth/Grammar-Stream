@@ -18,7 +18,7 @@ const secure = (day) => ({ ema: 0.9, n: 6, state: 'proficient', profDay: day, de
 
 test('every subject has a stretch tier, and it stays locked until most of the subject is secure', () => {
   for (const subject of ['english', 'maths', 'history', 'geography', 'science']) {
-    const all = db.topicOrder[subject], stretch = all.filter((id) => db.topics[id].tier === 'stretch'), base = all.filter((id) => db.topics[id].tier !== 'stretch');
+    const all = db.topicOrder[subject], stretch = all.filter((id) => db.topics[id].tier === 'stretch'), base = all.filter((id) => db.topics[id].tier !== 'stretch' && !db.topics[id].bonus); // bonus topics sit outside the course's own tiers
     assert.ok(stretch.length >= 4, `${subject}: ${stretch.length} stretch topics`);
     const s = emptyState(500);
     // all prerequisites secure, but only half the subject: still locked

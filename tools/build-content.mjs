@@ -4,13 +4,13 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 
-const SOURCES = ['bonus-electricity', 'english', 'english-y7', 'maths', 'history', 'history-y7', 'geography', 'geography-y7', 'science', 'science-y7', 'reading-writing', 'timeline', 'synoptic', 'reading', 'stretch-maths', 'stretch-english', 'stretch-history', 'stretch-geography', 'stretch-science', 'latin'];
+const SOURCES = ['english', 'english-y7', 'maths', 'history', 'history-y7', 'geography', 'geography-y7', 'science', 'science-y7', 'reading-writing', 'timeline', 'synoptic', 'reading', 'stretch-maths', 'stretch-english', 'stretch-history', 'stretch-geography', 'stretch-science', 'latin', 'bonus-electricity'];
 const MAPS = { world: 'maps/world.json', europe: 'maps/europe.json', uk: 'maps/uk.json' };
 const { DIAGRAMS } = await import(new URL('./content-src/diagrams.mjs', import.meta.url));
 const { attachDiagrams } = await import(new URL('./content-src/attach-diagrams.mjs', import.meta.url));
 
 // the Year 2 course: tools/content-src/ks1/*.mjs -> content/ks1/<subject>/<deck>.json, content/index-ks1.json
-const KS1_SOURCES = ['bonus-nightingale', 'maths', 'maths2', 'maths3', 'phonics', 'reading', 'reading2', 'reading3', 'reading4', 'spelling', 'spelling2', 'spelling3', 'writing', 'science', 'science2', 'history', 'history2', 'books'];
+const KS1_SOURCES = ['maths', 'maths2', 'maths3', 'phonics', 'reading', 'reading2', 'reading3', 'reading4', 'spelling', 'spelling2', 'spelling3', 'writing', 'science', 'science2', 'history', 'history2', 'bonus-nightingale', 'books'];
 // the Year 3 course: every Year 2 deck (Year 2 stretch topics count as core there) plus
 // tools/content-src/y3/*.mjs -> content/y3/...; its own reading ladder and the merged timeline come last.
 const Y3_SOURCES = ['maths', 'phonics', 'reading', 'spelling', 'science', 'history', 'books'];

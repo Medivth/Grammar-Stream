@@ -64,13 +64,13 @@ function bonusSession(state, db, today, right) {
 const newState = (course, today) => { const s = emptyState(today); s.course = course; s.profile = { childName: 'Sam', companion: { name: 'Leo' } }; return s; };
 
 test('Year 6 has an electricity bonus in science; Years 2 and 3 a Florence Nightingale bonus in history; Year 8 none', () => {
-  assert.deepEqual({ ...COURSES.y6.bonus, blurb: undefined, prizeText: undefined }, { id: 'electricity', subject: 'science', title: 'Electricity', blurb: undefined, prize: ['lamp'], prizeText: undefined });
+  assert.deepEqual({ ...COURSES.y6.bonus, blurb: undefined, prizeText: undefined }, { id: 'electricity', subject: 'science', title: 'Electricity', blurb: undefined, prize: ['lamp', 'labcoat'], prizeText: undefined });
   for (const c of ['ks1', 'y3']) {
     const b = COURSES[c].bonus;
     assert.equal(b.id, 'nightingale');
     assert.equal(b.subject, 'history');
     assert.equal(b.title, 'Florence Nightingale');
-    assert.deepEqual(b.prize, ['firstaid', 'oillamp']);
+    assert.deepEqual(b.prize, ['firstaid', 'oillamp', 'goldarmour']);
   }
   assert.equal(COURSES.y8.bonus, undefined);
   for (const c of ['y6', 'ks1', 'y3']) {

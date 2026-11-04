@@ -9,7 +9,7 @@ const YOUNG_STARTER = ['racesuit', 'flag', 'gokart', 'spacesuit', 'saturn', 'ali
 const NIGHTINGALE = {
   id: 'nightingale', subject: 'history', title: 'Florence Nightingale',
   blurb: 'The nurse who carried a lamp through the hospital at night, and changed hospitals for ever.',
-  prize: ['firstaid', 'oillamp'], prizeText: 'Florence’s lamp and a first-aid kit',
+  prize: ['firstaid', 'oillamp', 'goldarmour'], prizeText: 'Florence’s lantern, a first-aid kit and the golden champion armour',
 };
 
 export const COURSES = {
@@ -35,7 +35,7 @@ export const COURSES = {
     bonus: {
       id: 'electricity', subject: 'science', title: 'Electricity',
       blurb: 'Circuits, switches, conductors and circuit diagrams, with lots of worked examples. Ready for when you do it at school.',
-      prize: ['lamp'], prizeText: 'a desk lamp you can switch on and off',
+      prize: ['lamp', 'labcoat'], prizeText: 'a desk lamp you can switch on and off, and a lab coat',
     },
     writing: true,
     readAloud: false,
@@ -43,6 +43,7 @@ export const COURSES = {
       // art, science, books, music, friends and wheels; then a Roman set (the helmet, armour, laurel, chariot and pony are earned)
       'beret', 'palette', 'paintbrush', 'flowercrown', 'sunhat', 'headband', 'camera', 'telescope', 'microscope', 'book', 'violin', 'cat', 'fox', 'rollerskates', 'bicycle',
       'toga', 'stola', 'scroll', 'scutum', 'gladius', 'olivebranch'],
+    companions: ['capybara', 'lion', 'heroine'], // the capybara stays the default; she can choose a heroine instead
   },
   ks1: {
     id: 'ks1', title: 'Year 2 greater depth', short: 'Year 2+',
@@ -66,6 +67,7 @@ export const COURSES = {
     young: true, sprintUp: 12, next: 'y3',
     bonus: NIGHTINGALE,
     starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird', 'astronaut', 'scooter', 'partyhat', ...YOUNG_STARTER],
+    companions: ['capybara', 'lion', 'hero'], // the lion stays the default; he can choose a boy hero instead
   },
   // Year 3 includes all of Year 2 (same subjects and item ids), so moving up keeps every card.
   // Year 2's stretch topics are core here (they carry coreIn: ['y3']); Year 4 tasters are the stretch.
@@ -91,6 +93,7 @@ export const COURSES = {
     young: true, sprintUp: 14, prev: 'ks1',
     bonus: NIGHTINGALE,
     starter: ['none', 'racehelmet', 'skateboard', 'cape', 'mask', 'glasses', 'yuzu', 'bird', 'astronaut', 'scooter', 'partyhat', ...YOUNG_STARTER],
+    companions: ['capybara', 'lion', 'hero'], // the lion stays the default; he can choose a boy hero instead
   },
   // Year 8 at a selective school, aiming above the top fifth: KS3 at depth with GCSE tasters,
   // Ancient Greek towards GCSE, and Greek myth as the theme (original characters, not Riordan's).

@@ -161,7 +161,7 @@ export const ACCESSORIES = {
   vikingarmour: 'Viking armour',
   vikinghelmet: 'Viking helmet',
   samurai: 'Samurai armour',
-  kabuto: 'Samurai kabuto helmet',
+  kabuto: 'Kabuto helmet',
   goldarmour: 'Golden champion armour',
   energyshield: 'Energy shield',
   hoverboard: 'Hoverboard',
@@ -1207,7 +1207,7 @@ function mountedSVG(id, species, opts, fit) {
 }
 
 /** A head-and-shoulders picture of one of a person's looks, for the picker. */
-export const lookThumb = (look, species = HERO_LOOKS[look] && !LOOKS[look] ? 'hero' : 'heroine') => capybaraSVG({ species, look, mood: 'happy', title: looksOf(species)[look]?.label }).replace('viewBox="0 0 200 160"', species === 'hero' ? 'viewBox="66 2 68 68"' : 'viewBox="68 4 64 64"');
+export const lookThumb = (look, species = HERO_LOOKS[look] && !LOOKS[look] ? 'hero' : 'heroine') => capybaraSVG({ species, look, mood: 'happy', title: looksOf(species)[look]?.label }).replace('viewBox="0 0 200 160"', species === 'hero' ? 'viewBox="68 10 64 64"' : 'viewBox="68 4 64 64"');
 
 export function capybaraEl(opts, className = 'capy') {
   const wrap = document.createElement('div');

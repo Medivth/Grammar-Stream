@@ -1,8 +1,9 @@
-// First run: a grown-up sets up, then the child creates their companion (a capybara, a lion or, in
-// Year 8, a young heroine). The same screen changes the companion later. Also: who's learning?
+// First run: a grown-up sets up, then the child creates their companion (a capybara, a lion, or a
+// person: a young heroine in Years 6 and 8, a boy hero in Years 2 and 3). The same screen changes the
+// companion later, keeping everything earned. Also: who's learning?
 
 import { h, mount, toast } from '../ui/dom.js';
-import { capybaraSVG, FURS, LION_FURS, LOOKS, lookThumb, ACCESSORIES, SPECIES, speciesOf, speciesChoices, companionNoun } from '../ui/capybara.js';
+import { capybaraSVG, FURS, LION_FURS, looksOf, isPerson, lookThumb, ACCESSORIES, SPECIES, speciesOf, speciesChoices, companionNoun } from '../ui/capybara.js';
 import { requestPersistence } from '../platform/storage.js';
 import { COURSES } from '../core/subjects.js';
 import { setPronoun } from '../core/pronoun.js';
@@ -85,19 +86,23 @@ export function companionScreen(app) {
   const kinds = speciesChoices(course);
   if (!kinds.includes(c.species)) kinds.unshift(c.species);
   const noun = () => companionNoun(c.species);
+  // the heroine and the hero have different looks: keep the saved one only if it is this kind's
+  const fixLook = () => { if (isPerson(c.species) && !looksOf(c.species)[c.look]) c.look = Object.keys(looksOf(c.species))[0]; };
+  fixLook();
   const preview = h('div', { class: 'capy', style: { maxWidth: '260px', margin: '0 auto' } });
   const title = h('h1', { class: 'center' });
-  const draw = () => { preview.innerHTML = capybaraSVG({ ...c, mood: 'happy', fit: true, title: c.name || `Your ${noun()}` }); preview.style.maxWidth = c.species === 'heroine' ? '210px' : '260px'; title.textContent = `Hi ${app.state.profile?.childName || ''}! Meet your ${noun()}`; name.placeholder = `Give your ${noun()} a name`; };
-  const kindRow = h('div', { class: 'capy-pick', role: 'group', 'aria-label': kinds.includes('heroine') ? 'Companion' : 'Animal' });
+  const draw = () => { preview.innerHTML = capybaraSVG({ ...c, mood: 'happy', fit: true, title: c.name || `Your ${noun()}` }); preview.style.maxWidth = isPerson(c.species) ? '210px' : '260px'; title.textContent = `Hi ${app.state.profile?.childName || ''}! Meet your ${noun()}`; name.placeholder = `Give your ${noun()} a name`; };
+  const people = kinds.some(isPerson);
+  const kindRow = h('div', { class: 'capy-pick', role: 'group', 'aria-label': people ? 'Companion' : 'Animal' });
   const furLabel = h('label', {});
   const furRow = h('div', { class: 'capy-pick', role: 'group' });
   const accRow = h('div', { class: 'capy-pick', role: 'group', 'aria-label': 'Accessory' });
   const drawPickers = () => {
-    kindRow.replaceChildren(...kinds.map((k) => h('button', { type: 'button', 'aria-pressed': String(c.species === k), onclick: () => { c.species = k; draw(); drawPickers(); } }, SPECIES[k])));
-    if (c.species === 'heroine') {
+    kindRow.replaceChildren(...kinds.map((k) => h('button', { type: 'button', 'aria-pressed': String(c.species === k), onclick: () => { c.species = k; fixLook(); draw(); drawPickers(); } }, SPECIES[k])));
+    if (isPerson(c.species)) {
       furLabel.textContent = 'Look';
       furRow.setAttribute('aria-label', 'Look');
-      furRow.replaceChildren(...Object.entries(LOOKS).map(([k, L]) => h('button', { type: 'button', class: 'look-pick', 'aria-pressed': String(c.look === k), 'aria-label': L.label, title: L.label, onclick: () => { c.look = k; draw(); drawPickers(); } }, h('span', { class: 'look-thumb', html: lookThumb(k) }))));
+      furRow.replaceChildren(...Object.entries(looksOf(c.species)).map(([k, L]) => h('button', { type: 'button', class: 'look-pick', 'aria-pressed': String(c.look === k), 'aria-label': L.label, title: L.label, onclick: () => { c.look = k; draw(); drawPickers(); } }, h('span', { class: 'look-thumb', html: lookThumb(k, c.species) }))));
     } else {
       furLabel.textContent = 'Fur';
       furRow.setAttribute('aria-label', 'Fur colour');
@@ -118,7 +123,7 @@ export function companionScreen(app) {
       h('p', { class: 'center muted' }, editing ? `Everything ${c.name} has unlocked stays: outfits, scenes and badges carry over to whichever companion you choose.` : 'Your companion will learn alongside you. Sometimes you’ll teach it, and sometimes it will get things wrong for you to fix. You’ll unlock more outfits as you hit milestones.'),
       young && !editing ? h('div', { class: 'card stack' }, h('div', { class: 'field' }, h('label', { for: 'hero-name' }, 'And your superhero name? (it will appear in your maths adventures)'), heroIn)) : null,
       h('div', { class: 'card stack' }, preview,
-        h('div', { class: 'field' }, h('label', {}, kinds.includes('heroine') ? 'Companion' : 'Animal'), kindRow),
+        h('div', { class: 'field' }, h('label', {}, people ? 'Companion' : 'Animal'), kindRow),
         h('div', { class: 'field' }, furLabel, furRow),
         editing ? null : h('div', { class: 'field' }, h('label', {}, 'Something special'), accRow, h('p', { class: 'muted small', style: { margin: '6px 0 0' } }, 'Lots more to wear later, on the Badges page.')),
         h('div', { class: 'field' }, h('label', { for: 'capy-name' }, 'Name'), name),
