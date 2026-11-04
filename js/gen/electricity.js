@@ -464,8 +464,7 @@ function fairTest(level, rng) {
     const k = rng.int(2, ys.length - 1);
     const odd = ys.slice();
     odd[k] = Math.round(ys[k - 2] * (inv.up ? rng.pick([0.5, 0.6, 0.7]) : rng.pick([1.3, 1.4, 1.5])));
-    const table = { kind: 'table', head, rows: inv.xs.map((x, i) => [String(x), i === k ? `**${odd[i]}**` : String(odd[i])]), tint: 'cols' };
-    const qTable = { ...table, rows: inv.xs.map((x, i) => [String(x), String(odd[i])]), question: true };
+    const qTable = { kind: 'table', head, rows: inv.xs.map((x, i) => [String(x), String(odd[i])]), tint: 'cols', question: true };
     const xs = inv.xs.map(String);
     return choice(`${who} investigated: “${inv.q}” Which result does not fit the pattern?`, `The result for ${xs[k]}`, rng.shuffle(xs.filter((_, i) => i !== k)).slice(0, 2).map((x) => `The result for ${x}`), rng,
       `The readings ${inv.up ? 'go up' : 'go down'} steadily, except for ${xs[k]}, where the reading is ${odd[k]}. That anomalous result should be measured again.`,

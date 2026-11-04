@@ -880,15 +880,17 @@ function circuitLabel(d) {
 function circuitLayout(d, mini, minInner = 0) {
   const rows = d.branches ? d.branches.map((r) => r.map(circuitPart)) : [(d.top || []).map(circuitPart)];
   const bottom = (d.bottom || []).map(circuitPart);
-  const slot = (p) => Math.max(mini ? 44 : 52, 2 * partSpan(p)[1] + (mini ? 16 : 24));
+  // a meter reading sits to the right of its meter, so the slot is wider on that side
+  const base = (p) => Math.max(mini ? 44 : 52, 2 * partSpan(p)[1] + (mini ? 16 : 24));
+  const slot = (p) => base(p) + (p.read ? 8.5 * String(p.read).length + 4 : 0);
   const rowW = (r) => r.reduce((a, p) => a + slot(p), 0);
-  return { rows, bottom, slot, rowW, innerW: Math.max(mini ? 130 : 170, minInner, ...rows.map(rowW), rowW(bottom)) };
+  return { rows, bottom, base, slot, rowW, innerW: Math.max(mini ? 130 : 170, minInner, ...rows.map(rowW), rowW(bottom)) };
 }
 function circuitDrawing(d, mini = false, minInner = 0) {
-  const { rows, bottom, slot, rowW, innerW } = circuitLayout(d, mini, minInner);
+  const { rows, bottom, base, slot, rowW, innerW } = circuitLayout(d, mini, minInner);
   const padX = 26, x0 = padX, x1 = padX + innerW, W = innerW + 2 * padX;
   const above = (r) => r.some((p) => p.tag || p.lit || p.spin || p.sound);
-  const topPad = above(rows[0]) ? 44 : 22, gapY = rows.some((r) => r.some((p) => p.read)) ? 100 : 74;
+  const topPad = above(rows[0]) ? 44 : 22, gapY = 74;
   const ys = rows.map((_, i) => topPad + i * gapY);
   const yb = ys.at(-1) + (d.branches ? 84 : 100);
   const H = yb + (bottom.some((p) => p.tag) ? 46 : 22);
@@ -898,7 +900,7 @@ function circuitDrawing(d, mini = false, minInner = 0) {
   const place = (r) => {
     const free = (innerW - rowW(r)) / (r.length + 1);
     let x = x0;
-    return r.map((p) => { x += free; const cx = x + slot(p) / 2; x += slot(p); return cx; });
+    return r.map((p) => { x += free; const cx = x + base(p) / 2; x += slot(p); return cx; });
   };
   const drawRow = (r, y, side) => {
     const cxs = place(r);
@@ -944,9 +946,11 @@ function drawPart(el, p, cx, y, side, L) {
           el.append(L(cx + 17 * Math.cos(t), y - 17 * Math.sin(t), cx + (17 + len) * Math.cos(t), y - (17 + len) * Math.sin(t), { stroke: GLOW, 'stroke-width': 2.5 }));
         }
       }
-      el.append(ring(13));
-      if (p.lit) el.append(s('circle', { cx, cy: y, r: 11.5, fill: GLOW, 'fill-opacity': [0, 0.3, 0.55, 0.85][Math.min(3, p.lit)] }));
-      el.append(L(cx - k, y - k, cx + k, y + k), L(cx - k, y + k, cx + k, y - k));
+      // solid fills (not see-through) so a glowing bulb looks the same on light and dark cards
+      const lit = p.lit ? ['#fff3c4', '#ffe066', '#ffc928'][Math.min(3, p.lit) - 1] : null;
+      el.append(lit ? s('circle', { cx, cy: y, r: 13, fill: lit, stroke: INK, 'stroke-width': 2.5 }) : ring(13));
+      const cross = lit ? { stroke: '#5c4500' } : {};
+      el.append(L(cx - k, y - k, cx + k, y + k, cross), L(cx - k, y + k, cx + k, y - k, cross));
       break;
     }
     case 'motor': case 'ammeter': case 'voltmeter':
@@ -959,7 +963,7 @@ function drawPart(el, p, cx, y, side, L) {
         el.append(s('path', { d: `M${sx} ${sy} A${r} ${r} 0 0 ${p.spin > 0 ? 1 : 0} ${ex} ${ey}`, fill: 'none', stroke: BLUE, 'stroke-width': 2.5, 'stroke-linecap': 'round' }),
           s('path', { d: `M${tip[0]} ${tip[1]} L${ex} ${ey} L${tip[2]} ${tip[3]}`, fill: 'none', stroke: BLUE, 'stroke-width': 2.5, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
       }
-      if (p.read) el.append(text(cx, side === 'below' ? y - 26 : y + 36, p.read, { 'font-size': 15, fill: BLUE }));
+      if (p.read) el.append(text(cx + 19, y - 8, p.read, { 'font-size': 15, fill: BLUE, 'text-anchor': 'start' }));
       break;
     case 'buzzer':
       el.append(L(cx - 8, y, cx - 8, y - 7), L(cx + 8, y, cx + 8, y - 7), s('path', { d: `M${cx - 16} ${y - 7} A16 16 0 0 1 ${cx + 16} ${y - 7} Z`, ...{ fill: 'var(--card, #fff)', stroke: INK, 'stroke-width': 2.5, 'stroke-linejoin': 'round' } }));

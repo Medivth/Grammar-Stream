@@ -23,7 +23,7 @@ const T = (id, title, prereqs, extra) => ({ id: `science.elec-${id}`, title, kin
 const topics = [
   T('what', 'Electricity: what it is and where it comes from', [], {
     diagnostic: ['science.eb.w.d1', 'science.eb.w.d2'],
-    intro: 'Electricity lights your room, charges your phone and boils the kettle. An electric current is a flow of tiny charged particles, pushed round a loop by a cell, a battery or the mains. Mains electricity is powerful and can kill; cells are gentle enough to explore with. First, a couple of questions to see what you think.',
+    intro: 'Electricity lights your room, charges your phone and boils the kettle. An electric current is a flow of tiny charged particles, pushed round a loop by a cell, a battery or the mains. Mains electricity is powerful and can kill; cells are gentle enough to explore with.',
     teach: 'Explain the difference between mains electricity and a battery, and give two safety rules for mains.',
     talk: 'Walk round the house together: which things plug in, and which run on batteries? Ask her why.',
     hook: 'Mains is **230 V**: never experiment with it. A cell is **1.5 V**: safe to explore. **Water and mains never mix.**',
@@ -553,8 +553,9 @@ const MAINS_VS_CELLS = {
 const GRID = { kind: 'flow', across: true, steps: ['power station', 'National Grid', 'transformer', 'your home'], caption: 'Mains electricity travels from power stations and wind farms through the National Grid; a transformer near your home steps the voltage down to 230 V.' };
 const SIMPLE = M({ type: 'circuit', bottom: ['cell', 'switch'], top: [{ k: 'bulb', lit: 2 }, { k: 'buzzer', sound: true }, { k: 'motor', spin: 1 }] }, 'One complete loop: a cell, a closed switch, a bulb, a buzzer and a motor. The same current flows through every one of them.');
 const CONDUCTORS = {
-  kind: 'table', head: ['conductors', 'insulators'], tint: 'cols',
-  rows: [['copper', 'plastic'], ['aluminium', 'rubber'], ['steel and iron', 'wood'], ['gold and silver', 'glass and ceramics'], ['**graphite** (not a metal!)', 'air, paper, cotton'], ['salty or tap water', 'pure water (almost)']],
+  kind: 'table', head: ['material', 'conducts?', 'used for'], tint: 'cols',
+  rows: [['copper', '**yes**', 'the wires inside cables'], ['aluminium', '**yes**', 'overhead power lines'], ['steel', '**yes**', 'paper clips, spoons'], ['gold', '**yes**', 'contacts inside phones'], ['graphite', '**yes** (not a metal!)', 'pencil “lead”'],
+    ['plastic', 'no', 'coating wires, plug cases'], ['rubber', 'no', 'electricians’ gloves'], ['glass, ceramics', 'no', 'insulators on pylons'], ['wood', 'no', 'rulers, handles'], ['air', 'no', 'the gap in an open switch']],
   caption: 'All metals conduct. Graphite is the surprising non-metal that conducts too.',
 };
 const TEST_RIG = M({ type: 'circuit', bottom: ['cell', 'switch'], top: [{ k: 'test', text: '?' }, 'bulb'] }, 'Clip each material into the gap. If the bulb lights, it is a conductor.');
@@ -570,9 +571,10 @@ const SP_TABLE = {
 };
 const POWER = { kind: 'flow', steps: ['Fuel is burned (or uranium split) to heat water', 'Steam spins a turbine', 'The turbine turns a generator: magnets and coils', 'Transformers step the voltage up', 'The National Grid carries it across the country', 'Transformers step it down to 230 V for homes'], caption: 'Wind, tidal and hydroelectric power skip the steam: moving air or water turns the turbine directly. Solar cells have no turbine at all.' };
 const RESOURCES = {
-  kind: 'table', head: ['renewable', 'non-renewable'], tint: 'cols',
-  rows: [['wind', 'coal'], ['solar', 'oil'], ['hydroelectric', 'natural gas'], ['tidal and wave', 'uranium (nuclear)'], ['geothermal, biomass', '']],
-  caption: 'Fossil fuels (coal, oil, gas) took millions of years to form and give off carbon dioxide when burned.',
+  kind: 'table', head: ['resource', 'renewable?', 'why'], tint: 'cols',
+  rows: [['wind', '**yes**', 'the wind keeps blowing'], ['solar', '**yes**', 'the Sun keeps shining'], ['hydroelectric', '**yes**', 'rain refills the reservoirs'], ['tidal', '**yes**', 'the tides come in twice a day'],
+    ['coal, oil, gas', 'no', 'took millions of years to form'], ['nuclear', 'no', 'its uranium will run out']],
+  caption: 'Fossil fuels (coal, oil, gas) also give off carbon dioxide when burned.',
 };
 const HISTORY = {
   kind: 'timeline', from: 1740, to: 1900, set: 'britain',
