@@ -145,5 +145,9 @@ export function learnText(item) {
   if (item.kind === 'fact') return `${item.prompt} **${item.answer}**`;
   if (item.kind === 'mapfact') return `This is **${item.answer}**.`;
   if (item.kind === 'spell') return `**${item.word}**`;
+  // a choice question's card states the right answer; the explanation follows underneath
+  const right = item.kind === 'mcq' ? item.options?.find((o) => o.correct)?.text : null;
+  if (right) return `${item.prompt} **${right}**`;
+  if (item.kind === 'order' && item.items?.length) return `${item.prompt} **${item.items.join(' → ')}**`;
   return item.explain || '';
 }

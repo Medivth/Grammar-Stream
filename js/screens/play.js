@@ -603,6 +603,8 @@ function prizeCelebration(app) {
     state.profile.companion = wearingPrize(state.profile.companion || {}, bp.def.prize);
     app.save();
     app.go('#/progress/badges');
+    // straight to the wardrobe, where the lamp can be tried
+    setTimeout(() => document.querySelector('.wardrobe-preview')?.scrollIntoView({ block: 'center' }), 60);
   } }, plural ? `Put them on ${name}` : `Give it to ${name}`);
   return h('div', { class: 'prize pop', role: 'status' },
     burst,
@@ -631,8 +633,8 @@ function extraDoneStep(app, root, plan) {
     : `Nothing to review in ${subj?.name || 'this subject'} just now, and no new topic is ready yet. Come back tomorrow, or try today’s session.`;
   mount(root, h('div', { class: 'q-wrap stack center' },
     prize || capybaraEl({ ...c, mood: 'happy' }, 'capy bob'),
-    h('div', { class: 'eyebrow' }, plan.bonus ? `Bonus topic: ${bp.def.title}` : `${subj?.name || ''} practice`), prize ? null : h('h1', {}, plan.results.length || learned.length ? 'Well done!' : 'All caught up'),
-    plan.results.length ? h('p', {}, `${right} of ${plan.results.length} right.${learned.length ? ` ${plan.bonus ? 'Today' : 'New'}: ${learned.join(', ')}.` : ''}`) : h('p', { class: 'muted' }, nothing),
+    prize ? null : h('div', { class: 'eyebrow' }, plan.bonus ? `Bonus topic: ${bp.def.title}` : `${subj?.name || ''} practice`), prize ? null : h('h1', {}, plan.results.length || learned.length ? 'Well done!' : 'All caught up'),
+    plan.results.length ? h('p', {}, `${right} of ${plan.results.length} right.${learned.length ? ` ${plan.bonus ? 'Today' : 'New'}: ${learned.join(', ')}.` : ''}`) : prize ? null : h('p', { class: 'muted' }, nothing),
     plan.bonus && !bp.complete && bp.total ? h('p', { class: 'muted' }, `${bp.done} of ${bp.total} parts finished. Finish them all to win ${bp.def.prizeText}.`) : null,
     newBadges(app, plan),
     h('div', { class: 'row', style: { justifyContent: 'center' } },

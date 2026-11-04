@@ -8,7 +8,7 @@ import { icon, iconPath, SUBJECT_ICON } from '../ui/icons.js';
 import { SUBJECTS, SUBJECT_BY_ID, COURSE, isStretch } from '../core/subjects.js';
 import { paperSpec } from '../gen/paper.js';
 import { topicStatus, stretchReady } from '../core/mastery.js';
-import { daysPractisedThisMonth, planDay, extraStatus, bonusProgress, bonusStatusLine } from '../core/session.js';
+import { daysPractisedThisMonth, planDay, extraStatus, bonusProgress, bonusStatusLine, bonusStatus } from '../core/session.js';
 import { learnedCount, subjectStats, planSummary, isKnown } from '../core/progress.js';
 import { formatDay } from '../core/dates.js';
 import { restTime } from './util.js';
@@ -86,7 +86,7 @@ function islandMap(app) {
     const [cx, cy] = posOf(sub.id);
     const r = L.r;
     const ids = db.topicOrder[sub.id] || [];
-    const states = ids.map((id) => topicStatus(db.topics[id], state.topics, db));
+    const states = ids.map((id) => (db.topics[id].bonus ? bonusStatus(state, db, id) : topicStatus(db.topics[id], state.topics, db)));
     const done = states.filter((x) => x === 'proficient' || x === 'mastered').length;
     const g = s('g', { class: 'region', tabindex: '0', role: 'link', 'aria-label': `${sub.name}: ${done} of ${ids.length} topics secure`, onclick: () => app.go(`#/subject/${sub.id}`), onkeydown: (e) => { if (e.key === 'Enter') app.go(`#/subject/${sub.id}`); } });
     g.append(
@@ -193,7 +193,7 @@ function bonusCard(app, rest) {
     // a picture of the companion with the prize (just a preview: its lamp is not a switch here)
     h('div', { class: 'bonus-art', 'data-no-lamp': '', 'aria-hidden': 'true' }, capybaraEl({ ...c, wear, accessory: bp.def.prize.at(-1), mood: 'happy', scene: undefined }, 'capy')),
     h('div', { class: 'bonus-txt' },
-      h('div', { class: 'eyebrow' }, icon(info.complete ? 'check' : 'star'), ` ${info.eyebrow}`),
+      h('div', { class: 'eyebrow' }, info.complete ? null : icon('star'), info.complete ? info.eyebrow : ` ${info.eyebrow}`),
       h('h2', {}, bp.def.title),
       info.complete ? null : h('p', { class: 'bonus-blurb' }, bp.def.blurb),
       h('div', { class: 'bonus-progress' },
@@ -283,7 +283,8 @@ export function subjectScreen(app, subjectId) {
   const ICON = { locked: 'lock', available: 'spark', learning: 'play', proficient: 'check', mastered: 'star' };
   const rows = ids.map((id) => {
     const t = db.topics[id];
-    const status = topicStatus(t, state.topics, db);
+    // a bonus part is open any time (from the bonus card); only the parts before it set its order
+    const status = t.bonus ? bonusStatus(state, db, id) : topicStatus(t, state.topics, db);
     const items = (db.itemsByTopic[id] || []).filter((i) => !['template', 'written'].includes(db.items[i].kind));
     const known = items.filter((i) => isKnown(state.cards[i])).length;
     return h('li', {},
@@ -294,7 +295,9 @@ export function subjectScreen(app, subjectId) {
           h('span', { class: `chip ${status}` }, LABEL[status]),
           t.links ? h('span', { class: 'chip uses' }, icon('link'), ` uses ${t.links.map((l) => SUBJECT_BY_ID[l].name).join(' & ')}`) : null,
           isStretch(t) ? h('span', { class: 'chip stretch' }, icon('spark'), ' stretch') : null,
-          status === 'locked' && isStretch(t) && !stretchReady(db, state.topics, subjectId) ? h('span', {}, `when most of ${subj.name} is secure`)
+          t.bonus ? h('span', { class: 'chip stretch' }, icon('star'), ' bonus') : null,
+          status === 'locked' && t.bonus ? h('span', {}, `after ${t.prereqs.filter((p) => db.topics[p]?.bonus === t.bonus).map((p) => db.topics[p]?.title).join(' and ')}`)
+            : status === 'locked' && isStretch(t) && !stretchReady(db, state.topics, subjectId) ? h('span', {}, `when most of ${subj.name} is secure`)
             : status === 'locked' ? h('span', {}, `after ${t.prereqs.map((p) => db.topics[p]?.title).join(' and ')}`)
             : items.length ? [h('span', { class: 'mini-bar', 'aria-hidden': 'true' }, h('i', { style: { width: `${Math.round((100 * known) / items.length)}%` } })), h('span', {}, `${known} / ${items.length} known`)]
               : h('span', {}, 'a skill you practise'))));

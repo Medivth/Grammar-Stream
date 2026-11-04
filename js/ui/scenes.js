@@ -1094,5 +1094,6 @@ export function companionEl(opts, className = 'capy') {
   const wrap = document.createElement('div');
   wrap.className = `${className.replace(/\bbob\b/, '').trim()} in-scene`;
   wrap.innerHTML = sceneSVG(opts.scene, opts, { bob });
+  wrap.companion = { opts, className, make: companionEl }; // so a tapped lamp can redraw it (js/ui/lamp.js)
   return wrap;
 }

@@ -5,8 +5,8 @@ import { icon } from '../ui/icons.js';
 import { capybaraEl, capybaraSVG, ACCESSORIES, SLOT_GROUPS, slotOf, wornList, toggleWear } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
 import { sceneSVG, sceneStatus, companionEl } from '../ui/scenes.js';
-import { SUBJECTS } from '../core/subjects.js';
-import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, unlockedAccessories, milestoneDefs, wardrobeAccessories } from '../core/progress.js';
+import { SUBJECTS, COURSE } from '../core/subjects.js';
+import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, unlockedAccessories, milestoneDefs, wardrobeAccessories, prizeOf } from '../core/progress.js';
 import { daysPractisedThisMonth } from '../core/session.js';
 
 const TABS = [['overview', 'Stats'], ['timeline', 'Timeline'], ['places', 'Places'], ['badges', 'Badges']];
@@ -148,7 +148,7 @@ function badgesTab(app, body) {
     const open = unlocked.has(id);
     const on = id === 'none' ? worn.size === 0 : worn.has(id);
     return h('button', { type: 'button', class: open ? '' : 'locked', 'aria-pressed': String(on), 'aria-label': open ? `${on && id !== 'none' ? 'Take off' : 'Wear'} ${label}` : `${label}: locked`, onclick: () => {
-      if (!open) return toast(`Earn “${lockedBy[id]?.title}” to unlock the ${lower(label)}.`);
+      if (!open) return toast(prizeOf(id) && !lockedBy[id] ? `Finish the bonus topic, ${prizeOf(id).title}, to win the ${lower(label)}.` : `Earn “${lockedBy[id]?.title}” to unlock the ${lower(label)}.`);
       state.profile.companion = toggleWear(c, id);
       app.save();
       const y = window.scrollY;
@@ -174,7 +174,7 @@ function badgesTab(app, body) {
     h('div', { class: 'center' }, h('button', { type: 'button', class: 'btn-ghost', onclick: () => app.go('#/companion') }, 'Change companion')),
     scenePicker(app, body, ms.filter((m) => m.done).length),
     h('h3', { class: 'wardrobe-title' }, 'Things to wear'),
-    h('p', { class: 'muted center' }, `Tap to put something on, and tap again to take it off. You can wear one thing in each place at once: ${places.join(', ')}. Locked ones are earned with badges.`),
+    h('p', { class: 'muted center' }, `Tap to put something on, and tap again to take it off. You can wear one thing in each place at once: ${places.join(', ')}. Locked ones are earned with badges${COURSE.bonus ? ', and a special prize with the bonus topic' : ''}.`),
     wardrobe);
 }
 

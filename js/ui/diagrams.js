@@ -2,7 +2,7 @@
 // Everything is drawn in currentColor so it works in light and dark mode. Data charts use the
 // maths blue for a single series and the subject palette (labelled) for pie sectors.
 
-import { s } from './dom.js';
+import { h, s } from './dom.js';
 
 const INK = 'currentColor';
 const BLUE = '#2f74e8';
@@ -55,6 +55,7 @@ export function mathsDiagram(d) {
     case 'polygon': return polygonSides(d);
     case 'solid': return solid(d);
     case 'flat': return flatShapes(d);
+    case 'circuit': return d.many ? circuitSet(d) : circuit(d);
     default: return null;
   }
 }
@@ -825,4 +826,176 @@ function solid(d) {
     }
   }
   return el;
+}
+
+// ---------------------------------------------------------------- circuit diagrams
+// Standard circuit symbols drawn in one loop: a bottom row (usually the cells) and either a top
+// row (a series circuit) or several branch rows (parallel), joined at junction dots.
+// { type: 'circuit', bottom: [parts], top?: [parts], branches?: [[parts], [parts]] }
+// { type: 'circuit', many: [{ name: 'A', bottom, top | branches }, …] } draws several, side by side.
+// A part is a name or { k, tag?, lit?, spin?, sound?, read?, text?, n?, rev?, open? }:
+//   'cell' (long line = + on the left), 'cell-r' (turned round), { k: 'battery', n } (n cells joined),
+//   'bulb' (lit: 1 dim, 2, 3 bright: drawn glowing), 'buzzer' (sound: true), 'motor' (spin: 1 | -1),
+//   'switch' (closed), 'switch-open', 'gap' (loose wire ends), 'test' (an object clipped into a gap,
+//   text: '?'), 'ammeter' / 'voltmeter' (read: '0.2 A'), 'resistor', 'wire' (a plain stretch of wire).
+// tag: a letter in a blue disc beside the part, so a question can point at it.
+const GLOW = '#f0b400';
+const CIRCUIT_NAMES = { cell: ['a cell', 'cells'], battery: ['a battery', 'batteries'], bulb: ['a bulb', 'bulbs'], buzzer: ['a buzzer', 'buzzers'], motor: ['a motor', 'motors'], switch: ['a closed switch', 'closed switches'], 'switch-open': ['an open switch', 'open switches'], gap: ['a gap', 'gaps'], test: ['an object in a gap', 'objects in gaps'], ammeter: ['an ammeter', 'ammeters'], voltmeter: ['a voltmeter', 'voltmeters'], resistor: ['a resistor', 'resistors'] };
+export function circuitPart(p) {
+  if (typeof p !== 'string') return { ...p };
+  if (p === 'cell-r') return { k: 'cell', rev: true };
+  if (p === 'switch-open') return { k: 'switch', open: true };
+  const m = /^battery-(\d)(-r)?$/.exec(p);
+  if (m) return { k: 'battery', n: +m[1], rev: !!m[2] };
+  return { k: p };
+}
+// the half-width where the wire meets the symbol, and how far the drawing reaches either side
+function partSpan(p) {
+  switch (p.k) {
+    case 'cell': return [4, 6];
+    case 'battery': return [(p.n - 1) * 8 + 4, (p.n - 1) * 8 + 6];
+    case 'bulb': return [13, p.lit ? 26 : 14];
+    case 'motor': case 'ammeter': case 'voltmeter': return [15, 16];
+    case 'buzzer': return [8, 17];
+    case 'switch': return [17, 18];
+    case 'gap': return [16, 17];
+    case 'test': return [26, 28];
+    case 'resistor': return [16, 17];
+    default: return [0, 8];
+  }
+}
+function circuitWords(parts) {
+  const counts = {};
+  for (const p of parts.map(circuitPart)) {
+    const k = p.k === 'switch' && p.open ? 'switch-open' : p.k;
+    if (CIRCUIT_NAMES[k]) counts[k] = (counts[k] || 0) + 1;
+  }
+  return Object.entries(counts).map(([k, n]) => (n === 1 ? CIRCUIT_NAMES[k][0] : `${n} ${CIRCUIT_NAMES[k][1]}`)).join(', ');
+}
+function circuitLabel(d) {
+  const top = d.branches ? d.branches.map((b, i) => `branch ${i + 1}: ${circuitWords(b) || 'wire'}`).join('; ') : circuitWords(d.top || []);
+  return `Circuit diagram${d.branches ? ' with parallel branches' : ''}: ${[circuitWords(d.bottom || []), top].filter(Boolean).join('; ')}`;
+}
+
+function circuitLayout(d, mini, minInner = 0) {
+  const rows = d.branches ? d.branches.map((r) => r.map(circuitPart)) : [(d.top || []).map(circuitPart)];
+  const bottom = (d.bottom || []).map(circuitPart);
+  const slot = (p) => Math.max(mini ? 44 : 52, 2 * partSpan(p)[1] + (mini ? 16 : 24));
+  const rowW = (r) => r.reduce((a, p) => a + slot(p), 0);
+  return { rows, bottom, slot, rowW, innerW: Math.max(mini ? 130 : 170, minInner, ...rows.map(rowW), rowW(bottom)) };
+}
+function circuitDrawing(d, mini = false, minInner = 0) {
+  const { rows, bottom, slot, rowW, innerW } = circuitLayout(d, mini, minInner);
+  const padX = 26, x0 = padX, x1 = padX + innerW, W = innerW + 2 * padX;
+  const above = (r) => r.some((p) => p.tag || p.lit || p.spin || p.sound);
+  const topPad = above(rows[0]) ? 44 : 22, gapY = rows.some((r) => r.some((p) => p.read)) ? 100 : 74;
+  const ys = rows.map((_, i) => topPad + i * gapY);
+  const yb = ys.at(-1) + (d.branches ? 84 : 100);
+  const H = yb + (bottom.some((p) => p.tag) ? 46 : 22);
+  const el = s('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': circuitLabel(d), ...(mini ? { style: 'width:100%;display:block' } : { style: `max-width:${Math.min(400, Math.round(W * 1.12))}px;width:100%;display:block;margin:0 auto 12px` }) });
+  const st = { stroke: INK, 'stroke-width': 2.5, 'stroke-linecap': 'round', fill: 'none' };
+  const L = (xa, ya, xb, yb2, extra = {}) => s('line', { x1: xa, y1: ya, x2: xb, y2: yb2, ...st, ...extra });
+  const place = (r) => {
+    const free = (innerW - rowW(r)) / (r.length + 1);
+    let x = x0;
+    return r.map((p) => { x += free; const cx = x + slot(p) / 2; x += slot(p); return cx; });
+  };
+  const drawRow = (r, y, side) => {
+    const cxs = place(r);
+    let from = x0;
+    r.forEach((p, i) => {
+      const [hw] = partSpan(p);
+      if (cxs[i] - hw > from) el.append(L(from, y, cxs[i] - hw, y));
+      from = cxs[i] + hw;
+      drawPart(el, p, cxs[i], y, side, L);
+    });
+    if (x1 > from) el.append(L(from, y, x1, y));
+  };
+  // the loop's sides, then each row
+  el.append(L(x0, ys[0], x0, yb), L(x1, ys[0], x1, yb));
+  rows.forEach((r, i) => drawRow(r, ys[i], 'above'));
+  drawRow(bottom, yb, 'below');
+  if (d.branches) for (const y of ys.slice(1)) el.append(s('circle', { cx: x0, cy: y, r: 4.5, fill: INK }), s('circle', { cx: x1, cy: y, r: 4.5, fill: INK }));
+  return el;
+}
+
+function drawPart(el, p, cx, y, side, L) {
+  const ring = (r) => s('circle', { cx, cy: y, r, fill: 'var(--card, #fff)', stroke: INK, 'stroke-width': 2.5 });
+  const letter = (t, size = 17) => text(cx, y + size * 0.36, t, { 'font-size': size });
+  const cell = (x, rev) => {
+    const [a, b] = rev ? [x + 4, x - 4] : [x - 4, x + 4];
+    el.append(L(a, y - 16, a, y + 16), L(b, y - 8, b, y + 8, { 'stroke-width': 5, 'stroke-linecap': 'butt' }));
+  };
+  switch (p.k) {
+    case 'cell': cell(cx, p.rev); break;
+    case 'battery':
+      for (let j = 0; j < p.n; j++) {
+        const x = cx + (j - (p.n - 1) / 2) * 16;
+        cell(x, p.rev);
+        if (j < p.n - 1) el.append(L(x + 4, y, x + 12, y));
+      }
+      break;
+    case 'bulb': {
+      const k = 13 * Math.SQRT1_2;
+      if (p.lit) {
+        const len = [0, 4, 7, 10][Math.min(3, p.lit)];
+        for (const a of [40, 65, 90, 115, 140, 220, 245, 270, 295, 320]) {
+          const t = (a * Math.PI) / 180;
+          el.append(L(cx + 17 * Math.cos(t), y - 17 * Math.sin(t), cx + (17 + len) * Math.cos(t), y - (17 + len) * Math.sin(t), { stroke: GLOW, 'stroke-width': 2.5 }));
+        }
+      }
+      el.append(ring(13));
+      if (p.lit) el.append(s('circle', { cx, cy: y, r: 11.5, fill: GLOW, 'fill-opacity': [0, 0.3, 0.55, 0.85][Math.min(3, p.lit)] }));
+      el.append(L(cx - k, y - k, cx + k, y + k), L(cx - k, y + k, cx + k, y - k));
+      break;
+    }
+    case 'motor': case 'ammeter': case 'voltmeter':
+      el.append(ring(15), letter({ motor: 'M', ammeter: 'A', voltmeter: 'V' }[p.k]));
+      if (p.spin) {
+        const r = 23, a0 = p.spin > 0 ? 140 : 40, a1 = p.spin > 0 ? 50 : 130;
+        const P = (a) => [cx + r * Math.cos((a * Math.PI) / 180), y - r * Math.sin((a * Math.PI) / 180)];
+        const [sx, sy] = P(a0), [ex, ey] = P(a1);
+        const tip = p.spin > 0 ? [ex + 1, ey + 8, ex - 8, ey - 1] : [ex - 1, ey + 8, ex + 8, ey - 1];
+        el.append(s('path', { d: `M${sx} ${sy} A${r} ${r} 0 0 ${p.spin > 0 ? 1 : 0} ${ex} ${ey}`, fill: 'none', stroke: BLUE, 'stroke-width': 2.5, 'stroke-linecap': 'round' }),
+          s('path', { d: `M${tip[0]} ${tip[1]} L${ex} ${ey} L${tip[2]} ${tip[3]}`, fill: 'none', stroke: BLUE, 'stroke-width': 2.5, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
+      }
+      if (p.read) el.append(text(cx, side === 'below' ? y - 26 : y + 36, p.read, { 'font-size': 15, fill: BLUE }));
+      break;
+    case 'buzzer':
+      el.append(L(cx - 8, y, cx - 8, y - 7), L(cx + 8, y, cx + 8, y - 7), s('path', { d: `M${cx - 16} ${y - 7} A16 16 0 0 1 ${cx + 16} ${y - 7} Z`, ...{ fill: 'var(--card, #fff)', stroke: INK, 'stroke-width': 2.5, 'stroke-linejoin': 'round' } }));
+      if (p.sound) for (const r of [24, 31]) el.append(s('path', { d: `M${cx + r * Math.cos(1.05)} ${y - 7 - r * Math.sin(1.05)} A${r} ${r} 0 0 1 ${cx + r * Math.cos(0.35)} ${y - 7 - r * Math.sin(0.35)}`, fill: 'none', stroke: BLUE, 'stroke-width': 2.2, 'stroke-linecap': 'round' }));
+      break;
+    case 'switch':
+      el.append(p.open ? L(cx - 14, y, cx + 12, y - 16) : L(cx - 14, y, cx + 14, y - 1));
+      for (const x of [cx - 14, cx + 14]) el.append(s('circle', { cx: x, cy: y, r: 3.2, fill: 'var(--card, #fff)', stroke: INK, 'stroke-width': 2 }));
+      break;
+    case 'gap':
+      for (const x of [cx - 16, cx + 16]) el.append(s('circle', { cx: x, cy: y, r: 3, fill: INK }));
+      break;
+    case 'test':
+      el.append(s('rect', { x: cx - 20, y: y - 12, width: 40, height: 24, rx: 5, fill: 'none', stroke: BLUE, 'stroke-width': 2, 'stroke-dasharray': '4 3' }),
+        text(cx, y + 6, p.text || '?', { 'font-size': 16, fill: BLUE }));
+      for (const x of [cx - 26, cx + 26]) el.append(s('circle', { cx: x, cy: y, r: 3.5, fill: INK }));
+      break;
+    case 'resistor':
+      el.append(s('rect', { x: cx - 16, y: y - 7, width: 32, height: 14, fill: 'var(--card, #fff)', stroke: INK, 'stroke-width': 2.5 }));
+      break;
+    default: break;
+  }
+  if (p.tag) {
+    const ty = side === 'below' ? y + 33 : y - 31;
+    el.append(s('circle', { cx, cy: ty, r: 11, fill: BLUE }), text(cx, ty + 5, p.tag, { 'font-size': 14.5, fill: '#fff' }));
+  }
+}
+
+function circuit(d) {
+  return circuitDrawing(d);
+}
+
+function circuitSet(d) {
+  // one scale for the whole set, so the circuits can be compared by eye
+  const same = Math.max(...d.many.map((c) => circuitLayout(c, true).innerW));
+  return h('div', { class: 'circuit-set', role: 'group', 'aria-label': `${d.many.length} circuits`, style: 'display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:10px 16px;margin:0 auto 12px;max-width:640px' },
+    d.many.map((c) => h('div', { style: 'flex:0 1 142px;min-width:130px;max-width:200px;text-align:center' },
+      circuitDrawing(c, true, same), c.name ? h('div', { style: 'font-weight:700;margin-top:2px' }, `Circuit ${c.name}`) : null)));
 }

@@ -1,6 +1,2912 @@
 {
  "subject": "history",
  "deck": "bonus-nightingale",
- "topics": [],
- "items": []
+ "topics": [
+  {
+   "id": "history.fn-life",
+   "title": "Who was Florence Nightingale?",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 7,
+   "bonus": "nightingale",
+   "intro": "Florence Nightingale was born more than 200 years ago, into a rich family. Rich girls were not expected to have jobs, but Florence wanted to be a nurse. She would not give up, and in the end she changed hospitals for ever.",
+   "teach": "Explain why Florence’s family did not want her to be a nurse, and what she did about it.",
+   "talk": "Ask {him} what {she} would like to be when {she} grows up, and what {she} would do if someone said no.",
+   "hook": "Florence was born in Florence: her parents named her after the Italian city.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1800,
+    "to": 1930,
+    "set": "britain",
+    "events": [
+     [
+      1820,
+      "Florence is born"
+     ],
+     [
+      1851,
+      "Trains as a nurse"
+     ],
+     [
+      1854,
+      "Goes to Scutari"
+     ],
+     [
+      1860,
+      "Opens her nursing school"
+     ],
+     [
+      1910,
+      "Florence dies"
+     ]
+    ],
+    "caption": "Florence Nightingale lived from 1820 to 1910, through all of Queen Victoria’s reign."
+   }
+  },
+  {
+   "id": "history.fn-crimea",
+   "title": "The Crimean War and the hospital at Scutari",
+   "kind": "facts",
+   "prereqs": [
+    "history.fn-life"
+   ],
+   "batch": 7,
+   "bonus": "nightingale",
+   "intro": "In 1854 Britain was at war with Russia, far away in the Crimea, by the Black Sea. Many soldiers fell ill and were sent to a big army hospital at Scutari. It was dirty and crowded, so Florence took a team of nurses to help.",
+   "teach": "Explain what was wrong with the hospital at Scutari, and three things Florence and her nurses did to make it better.",
+   "talk": "When {she} washes {her} hands before tea, ask {him} why Florence Nightingale would approve.",
+   "hook": "Say it: Scutari is SKOO-tuh-ree and the Crimea is cry-MEE-uh.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Soldiers fall ill in the Crimea",
+     "Ships take them to Scutari",
+     "The hospital is dirty and crowded",
+     "Florence and 38 nurses arrive",
+     "Scrubbing, laundry, food, care"
+    ],
+    "caption": "Scutari, November 1854"
+   }
+  },
+  {
+   "id": "history.fn-seacole",
+   "title": "Mary Seacole too",
+   "kind": "facts",
+   "prereqs": [
+    "history.fn-crimea"
+   ],
+   "batch": 7,
+   "bonus": "nightingale",
+   "intro": "Mary Seacole was born in Jamaica in 1805. Her mother taught her to heal people with medicines made from plants. When the Crimean War began, Mary wanted to help the soldiers. She was not chosen to go, so she went anyway and paid for the journey herself!",
+   "teach": "Explain one way Mary Seacole and Florence Nightingale were alike, and one way they were different.",
+   "talk": "Find Jamaica, London and the Black Sea on a map or globe with {him}. How far did Mary travel?",
+   "hook": "Mary from Jamaica, Florence from Florence: two brave women, one war.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Florence Nightingale",
+     "Mary Seacole"
+    ],
+    "rows": [
+     [
+      "Born",
+      "1820, in **Italy**",
+      "1805, in **Jamaica**"
+     ],
+     [
+      "Got to the war",
+      "sent by the government",
+      "paid her **own way**"
+     ],
+     [
+      "Worked at",
+      "a big **hospital** at Scutari",
+      "her **British Hotel**, and battlefields"
+     ],
+     [
+      "Known as",
+      "the Lady with the Lamp",
+      "Mother Seacole"
+     ],
+     [
+      "Both",
+      "brave and determined",
+      "brave and determined"
+     ]
+    ],
+    "tint": "rows"
+   }
+  },
+  {
+   "id": "history.fn-stories",
+   "title": "Stories from the Crimean War",
+   "kind": "reading",
+   "prereqs": [
+    "history.fn-crimea",
+    "history.fn-seacole"
+   ],
+   "batch": 5,
+   "bonus": "nightingale",
+   "intro": "Three short stories based on true events: young Florence, a soldier in the hospital at Scutari, and a cold soldier who visits Mary Seacole. Read each one carefully, then be a history detective: what do the clues tell you?",
+   "teach": "Tell your grown-up which story you liked best, and one clue that showed how a person felt.",
+   "talk": "Ask {him} why {she} thinks the soldiers loved Florence and Mary so much."
+  },
+  {
+   "id": "history.fn-numbers",
+   "title": "Counting to save lives: Florence’s rose diagram",
+   "kind": "facts",
+   "prereqs": [
+    "history.fn-crimea"
+   ],
+   "batch": 7,
+   "bonus": "nightingale",
+   "intro": "Florence loved numbers. She counted how many soldiers died, and what they died of. Then she turned her numbers into pictures, so that busy people could see the problem at a glance. Her most famous picture looks a little like a rose.",
+   "teach": "Explain what the blue parts of Florence’s rose diagram showed, and why her picture helped persuade people to make hospitals cleaner.",
+   "talk": "Keep a tally of the weather for a week together, then draw it as a bar chart. Ask {him} what the chart shows at a glance.",
+   "hook": "Big blue wedges meant a big problem: illnesses that could have been stopped.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "In the rose diagram",
+     "What it shows"
+    ],
+    "rows": [
+     [
+      "each **wedge**",
+      "one month of the war"
+     ],
+     [
+      "a **bigger** wedge",
+      "more soldiers died"
+     ],
+     [
+      "**blue**",
+      "illnesses that could be prevented"
+     ],
+     [
+      "**red**",
+      "wounds from battle"
+     ],
+     [
+      "**black**",
+      "other causes"
+     ]
+    ],
+    "caption": "Florence’s rose diagram (1858) had two roses: the war’s first year, and the year after the hospitals were cleaned up. The second was much smaller."
+   }
+  },
+  {
+   "id": "history.fn-later",
+   "title": "After the war: a school for nurses",
+   "kind": "facts",
+   "prereqs": [
+    "history.fn-numbers"
+   ],
+   "batch": 7,
+   "bonus": "nightingale",
+   "intro": "Florence came home from the war a hero, but she did not want parties. For the rest of her long life she worked to make hospitals safer and to turn nursing into a proper job, with training.",
+   "teach": "Explain how Florence changed nursing after the war, and how we still remember her today.",
+   "talk": "On 12 May (International Nurses Day), ask {him} to think of a nurse {she} could say thank you to.",
+   "hook": "A book in 1859, a school in 1860: _Notes on Nursing_, then the Nightingale School.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1850,
+    "to": 1930,
+    "set": "britain",
+    "events": [
+     [
+      1858,
+      "Her rose diagram"
+     ],
+     [
+      1859,
+      "Notes on Nursing"
+     ],
+     [
+      1860,
+      "Nursing school opens"
+     ],
+     [
+      1907,
+      "Order of Merit"
+     ],
+     [
+      1910,
+      "Florence dies"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "history.fn-thennow",
+   "title": "Then and now: hospitals and nursing",
+   "kind": "facts",
+   "prereqs": [
+    "history.fn-later",
+    "history.fn-seacole"
+   ],
+   "batch": 7,
+   "bonus": "nightingale",
+   "intro": "Hospitals in Victorian times were very different from hospitals today. Some of the biggest changes began with Florence’s ideas about cleanliness and training. How do we know what her hospitals were like? From clues the past has left behind.",
+   "teach": "Explain three ways hospitals today are different from Florence’s hospital, and one way they are the same.",
+   "talk": "If {she} has visited a doctor or a hospital, ask {him} what was clean, what the nurses wore and what machines {she} saw.",
+   "hook": "Then: lanterns, buckets and scrubbing brushes. Now: electric lights, machines and hand gel.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "In Florence’s time",
+     "Today"
+    ],
+    "rows": [
+     [
+      "Light at night",
+      "candles and lanterns",
+      "electric lights"
+     ],
+     [
+      "Getting to hospital",
+      "carts, stretchers, ships",
+      "ambulances"
+     ],
+     [
+      "Fighting germs",
+      "scrubbing, fresh air",
+      "hand gel, **antibiotics**"
+     ],
+     [
+      "Checking patients",
+      "looking and listening",
+      "looking, listening, **machines**"
+     ],
+     [
+      "Trained nurses",
+      "women",
+      "women **and men**"
+     ]
+    ],
+    "tint": "rows"
+   }
+  },
+  {
+   "id": "history.fn-stories-2",
+   "title": "Stories: a clever picture and a museum visit",
+   "kind": "reading",
+   "prereqs": [
+    "history.fn-thennow",
+    "history.fn-stories"
+   ],
+   "batch": 5,
+   "bonus": "nightingale",
+   "intro": "Two more stories: how Florence turned numbers into a picture that changed people’s minds, and a girl who visits the Florence Nightingale Museum with her grandma. Find the clues, then answer.",
+   "teach": "Tell your grown-up how we know about Florence today: name two clues from the past.",
+   "talk": "Ask {him} which object from Florence’s life {she} would most like to see in a museum, and why."
+  }
+ ],
+ "items": [
+  {
+   "id": "history.fn.born-city",
+   "topic": "history.fn-life",
+   "kind": "fact",
+   "prompt": "Florence Nightingale was named after the city where she was born. Which city?",
+   "answer": "Florence, in Italy",
+   "distractors": [
+    "London, in England",
+    "Paris, in France",
+    "Athens, in Greece"
+   ],
+   "explain": "Her parents were travelling in Italy when she was born. Her big sister was born in Naples and was named Parthenope, an old Greek name for Naples!",
+   "formats": [
+    "choice"
+   ],
+   "feedback": {
+    "London, in England": "She grew up in England, but she was born in Italy."
+   }
+  },
+  {
+   "id": "history.fn.born-year",
+   "topic": "history.fn-life",
+   "kind": "fact",
+   "prompt": "In which year was Florence Nightingale born?",
+   "answer": "1820",
+   "distractors": [
+    "1066",
+    "1920",
+    "1666"
+   ],
+   "explain": "She was born on 12 May 1820, more than 200 years ago. Queen Victoria was still a baby then.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "12 May 1820. Her birthday, 12 May, is now International Nurses Day."
+  },
+  {
+   "id": "history.fn.rich",
+   "topic": "history.fn-life",
+   "kind": "mcq",
+   "prompt": "What was Florence’s family like?",
+   "options": [
+    {
+     "text": "Rich, with two big country houses",
+     "correct": true
+    },
+    {
+     "text": "Poor, living in one small room",
+     "correct": false,
+     "feedback": "Her family was rich. They had servants and two big houses."
+    },
+    {
+     "text": "A family of nurses and doctors",
+     "correct": false,
+     "feedback": "Nobody in her family was a nurse, and they did not want her to be one!"
+    }
+   ],
+   "explain": "The Nightingales had a house called Lea Hurst in Derbyshire and another called Embley Park in Hampshire.",
+   "learn": "What was Florence’s family like? **Rich, with two big country houses**\n\nThe Nightingales had a house called Lea Hurst in Derbyshire and another called Embley Park in Hampshire."
+  },
+  {
+   "id": "history.fn.lessons",
+   "topic": "history.fn-life",
+   "kind": "mcq",
+   "prompt": "Who taught Florence when she was a girl?",
+   "options": [
+    {
+     "text": "Her father, at home",
+     "correct": true
+    },
+    {
+     "text": "Teachers at a big school",
+     "correct": false,
+     "feedback": "Rich girls then were usually taught at home, not at school."
+    },
+    {
+     "text": "Nurses at a hospital",
+     "correct": false,
+     "feedback": "She did not work in hospitals until she was grown up."
+    }
+   ],
+   "explain": "Her father taught her history, languages such as Latin and Greek, and maths. Florence loved maths and facts.",
+   "example": "Florence’s love of maths later helped her save lives. Numbers can be a superpower!",
+   "learn": "Who taught Florence when she was a girl? **Her father, at home**\n\nHer father taught her history, languages such as Latin and Greek, and maths. Florence loved maths and facts."
+  },
+  {
+   "id": "history.fn.notjob",
+   "topic": "history.fn-life",
+   "kind": "mcq",
+   "prompt": "Why didn’t Florence’s family want her to be a nurse?",
+   "options": [
+    {
+     "text": "Nursing was not seen as a good job",
+     "correct": true
+    },
+    {
+     "text": "They thought nurses got paid too much",
+     "correct": false,
+     "feedback": "Nurses were paid very little."
+    },
+    {
+     "text": "There were no hospitals in Britain",
+     "correct": false,
+     "feedback": "There were hospitals, but they were often dirty and the nurses were not trained."
+    }
+   ],
+   "explain": "In those days nurses had no proper training, and nursing was not thought respectable for a rich young lady. Her family expected her to marry instead.",
+   "learn": "Why didn’t Florence’s family want her to be a nurse? **Nursing was not seen as a good job**\n\nIn those days nurses had no proper training, and nursing was not thought respectable for a rich young lady. Her family expected her to marry instead."
+  },
+  {
+   "id": "history.fn.called",
+   "topic": "history.fn-life",
+   "kind": "fact",
+   "prompt": "How old was Florence when she first felt sure that she had important work to do in life?",
+   "answer": "16",
+   "distractors": [
+    "6",
+    "60",
+    "36"
+   ],
+   "explain": "At 16 she wrote that she felt God was calling her to do His work. Some years later she decided that her work was nursing.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.determined",
+   "topic": "history.fn-life",
+   "kind": "mcq",
+   "prompt": "Florence kept asking her family for years, until at last they let her train. What does this show about her?",
+   "options": [
+    {
+     "text": "She was determined",
+     "correct": true
+    },
+    {
+     "text": "She was easily bored",
+     "correct": false,
+     "feedback": "Bored people give up! Florence kept on asking for years."
+    },
+    {
+     "text": "She was very forgetful",
+     "correct": false,
+     "feedback": "She never forgot her dream of nursing."
+    }
+   ],
+   "explain": "Determined means you keep going even when it is hard. That is a big part of why Florence is remembered.",
+   "learn": "Florence kept asking her family for years, until at last they let her train. What does this show about her? **She was determined**\n\nDetermined means you keep going even when it is hard. That is a big part of why Florence is remembered."
+  },
+  {
+   "id": "history.fn.kaiserswerth",
+   "topic": "history.fn-life",
+   "kind": "fact",
+   "prompt": "Where did Florence go to train as a nurse, in 1851?",
+   "answer": "Kaiserswerth, in Germany",
+   "distractors": [
+    "Edinburgh, in Scotland",
+    "Florence, in Italy",
+    "Cardiff, in Wales"
+   ],
+   "explain": "At Kaiserswerth (say KY-zers-vairt) a pastor and his wife ran a hospital and a school where women trained as nurses. Florence stayed for about three months.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.harley",
+   "topic": "history.fn-life",
+   "kind": "fact",
+   "prompt": "In 1853, before the war, Florence got her first big nursing job. What was it?",
+   "answer": "running a hospital in London",
+   "distractors": [
+    "teaching at a school in Paris",
+    "driving a train in Wales",
+    "sailing a ship to India"
+   ],
+   "explain": "She ran a small hospital for sick ladies in Harley Street, London, and made it clean and well organised. People began to hear how good she was.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.owl",
+   "topic": "history.fn-life",
+   "kind": "mcq",
+   "prompt": "Florence had an unusual pet that she carried in her pocket. What was it?",
+   "options": [
+    {
+     "text": "A small owl called Athena",
+     "correct": true
+    },
+    {
+     "text": "A hamster called Nibbles",
+     "correct": false,
+     "feedback": "Good guess, but it was a bird: a little owl."
+    },
+    {
+     "text": "A white mouse called Snowy",
+     "correct": false,
+     "feedback": "It was a little owl that she rescued in Athens, in Greece."
+    }
+   ],
+   "explain": "She rescued the baby owl in Athens and named it Athena. Athena is still kept (stuffed) at the Florence Nightingale Museum in London.",
+   "learn": "Florence had an unusual pet that she carried in her pocket. What was it? **A small owl called Athena**\n\nShe rescued the baby owl in Athens and named it Athena. Athena is still kept (stuffed) at the Florence Nightingale Museum in London."
+  },
+  {
+   "id": "history.fn.bird",
+   "topic": "history.fn-life",
+   "kind": "fact",
+   "prompt": "A nightingale is also a small brown bird. What is it famous for?",
+   "answer": "singing at night",
+   "distractors": [
+    "swimming underwater",
+    "building huge nests",
+    "running very fast"
+   ],
+   "explain": "Nightingales sing beautifully, often at night. Florence did some of her most famous work at night too.",
+   "formats": [
+    "choice"
+   ],
+   "visual": {
+    "kind": "sounds",
+    "words": [
+     "n.igh.t",
+     "i.n",
+     "g.a_e.l"
+    ],
+    "caption": "Night-in-gale: say her name in three beats."
+   }
+  },
+  {
+   "id": "history.fn.tf-first",
+   "topic": "history.fn-life",
+   "kind": "mcq",
+   "prompt": "True or false? Florence Nightingale was the very first nurse.",
+   "options": [
+    {
+     "text": "True",
+     "correct": false,
+     "feedback": "People have cared for the sick for thousands of years. Florence made nursing a proper, trained job."
+    },
+    {
+     "text": "False",
+     "correct": true
+    }
+   ],
+   "explain": "Nursing is very old. Florence did not invent it, but she showed how training, cleanliness and care could save many lives.",
+   "keepOrder": true,
+   "learn": "True or false? Florence Nightingale was the very first nurse. **False**\n\nNursing is very old. Florence did not invent it, but she showed how training, cleanliness and care could save many lives."
+  },
+  {
+   "id": "history.fn.life-order",
+   "topic": "history.fn-life",
+   "kind": "order",
+   "prompt": "Put Florence’s life in order, earliest first.",
+   "items": [
+    "She is born in Italy",
+    "She trains in Germany",
+    "She goes to the war",
+    "She opens a nursing school"
+   ],
+   "labels": null,
+   "explain": "Born in 1820, trained at Kaiserswerth in 1851, went to Scutari in 1854 and opened her nursing school in 1860.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1800,
+    "to": 1930,
+    "set": "britain",
+    "events": [
+     [
+      1820,
+      "Florence is born"
+     ],
+     [
+      1851,
+      "Trains as a nurse"
+     ],
+     [
+      1854,
+      "Goes to Scutari"
+     ],
+     [
+      1860,
+      "Opens her nursing school"
+     ],
+     [
+      1910,
+      "Florence dies"
+     ]
+    ],
+    "caption": "Florence Nightingale lived from 1820 to 1910, through all of Queen Victoria’s reign."
+   }
+  },
+  {
+   "id": "history.fn.war",
+   "topic": "history.fn-crimea",
+   "kind": "fact",
+   "prompt": "In the Crimean War, Britain, France and Turkey fought against which country?",
+   "answer": "Russia",
+   "distractors": [
+    "Germany",
+    "Spain",
+    "America"
+   ],
+   "explain": "The war lasted from 1853 to 1856. Britain and France joined in 1854 to help Turkey, which was then called the Ottoman Empire.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.where",
+   "topic": "history.fn-crimea",
+   "kind": "fact",
+   "prompt": "The Crimea (say cry-MEE-uh) is a piece of land that sticks out into which sea?",
+   "answer": "the Black Sea",
+   "distractors": [
+    "the Red Sea",
+    "the North Sea",
+    "the Dead Sea"
+   ],
+   "explain": "The Crimea is a peninsula: land with sea on almost every side. The Black Sea lies between Europe and Asia.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.scutari",
+   "topic": "history.fn-crimea",
+   "kind": "fact",
+   "prompt": "The army hospital at Scutari was across the water from which great city, today called Istanbul?",
+   "answer": "Constantinople",
+   "distractors": [
+    "Jerusalem",
+    "St Petersburg",
+    "Alexandria"
+   ],
+   "explain": "Scutari is now called Üsküdar, part of Istanbul in Turkey. The hospital was hundreds of miles across the Black Sea from the fighting, so the soldiers came by ship.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "Constantinople was the old name, Istanbul is the new one: the same city."
+  },
+  {
+   "id": "history.fn.dirty",
+   "topic": "history.fn-crimea",
+   "kind": "mcq",
+   "prompt": "What was the hospital at Scutari like when Florence arrived?",
+   "options": [
+    {
+     "text": "Dirty, crowded and full of rats",
+     "correct": true
+    },
+    {
+     "text": "Clean, quiet and full of doctors",
+     "correct": false,
+     "feedback": "Sadly not. It was dirty, and there were not enough doctors."
+    },
+    {
+     "text": "Empty, with no soldiers in it",
+     "correct": false,
+     "feedback": "It was packed with soldiers who were ill or hurt."
+    }
+   ],
+   "explain": "There were rats and fleas, broken drains, and not enough beds, blankets, soap or clean water.",
+   "learn": "What was the hospital at Scutari like when Florence arrived? **Dirty, crowded and full of rats**\n\nThere were rats and fleas, broken drains, and not enough beds, blankets, soap or clean water."
+  },
+  {
+   "id": "history.fn.nurses38",
+   "topic": "history.fn-crimea",
+   "kind": "fact",
+   "prompt": "How many nurses did Florence take with her to Scutari?",
+   "answer": "38",
+   "distractors": [
+    "3",
+    "380",
+    "8"
+   ],
+   "explain": "She set out in October 1854 with a team of 38 nurses. Some were nuns, and some were nurses from hospitals.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.arrive",
+   "topic": "history.fn-crimea",
+   "kind": "fact",
+   "prompt": "In which month and year did Florence arrive at Scutari?",
+   "answer": "November 1854",
+   "distractors": [
+    "November 1066",
+    "May 1820",
+    "July 1940"
+   ],
+   "explain": "She arrived on 4 November 1854, just as a terrible winter was beginning.",
+   "formats": [
+    "choice"
+   ],
+   "feedback": {
+    "May 1820": "That is when she was born!"
+   }
+  },
+  {
+   "id": "history.fn.asked",
+   "topic": "history.fn-crimea",
+   "kind": "mcq",
+   "prompt": "Who asked Florence to lead the nurses going to the war?",
+   "options": [
+    {
+     "text": "A friend in the government",
+     "correct": true
+    },
+    {
+     "text": "A general in the Russian army",
+     "correct": false,
+     "feedback": "Russia was on the other side in the war!"
+    },
+    {
+     "text": "A doctor from her nursing school",
+     "correct": false,
+     "feedback": "Her nursing school did not open until 1860, after the war."
+    }
+   ],
+   "explain": "Sidney Herbert, who looked after the army’s money and supplies, asked her to go. He knew how good she was at running a hospital.",
+   "learn": "Who asked Florence to lead the nurses going to the war? **A friend in the government**\n\nSidney Herbert, who looked after the army’s money and supplies, asked her to go. He knew how good she was at running a hospital."
+  },
+  {
+   "id": "history.fn.news",
+   "topic": "history.fn-crimea",
+   "kind": "mcq",
+   "prompt": "How did people in Britain find out about the terrible army hospital?",
+   "options": [
+    {
+     "text": "From reports in a newspaper",
+     "correct": true
+    },
+    {
+     "text": "From the television news",
+     "correct": false,
+     "feedback": "There was no television then: it was invented in 1926."
+    },
+    {
+     "text": "From messages on the internet",
+     "correct": false,
+     "feedback": "No internet then! News came in newspapers."
+    }
+   ],
+   "explain": "Reporters for The Times newspaper wrote about how badly the sick and wounded soldiers were looked after. People at home were shocked.",
+   "learn": "How did people in Britain find out about the terrible army hospital? **From reports in a newspaper**\n\nReporters for The Times newspaper wrote about how badly the sick and wounded soldiers were looked after. People at home were shocked."
+  },
+  {
+   "id": "history.fn.laundry",
+   "topic": "history.fn-crimea",
+   "kind": "mcq",
+   "prompt": "Florence set up a laundry to wash the soldiers’ sheets and shirts. Why did that help?",
+   "options": [
+    {
+     "text": "Clean sheets spread less illness",
+     "correct": true
+    },
+    {
+     "text": "The soldiers enjoyed doing washing",
+     "correct": false,
+     "feedback": "The soldiers were too ill to work. Think about dirt and illness."
+    },
+    {
+     "text": "It made the hospital much quieter",
+     "correct": false,
+     "feedback": "A laundry is noisy and steamy! Think about dirt and illness."
+    }
+   ],
+   "explain": "Shirts and sheets had hardly been washed. Clean bedding and clothes helped to stop illness spreading.",
+   "example": "Hospitals today still wash sheets very hot, and change them for every new patient.",
+   "learn": "Florence set up a laundry to wash the soldiers’ sheets and shirts. Why did that help? **Clean sheets spread less illness**\n\nShirts and sheets had hardly been washed. Clean bedding and clothes helped to stop illness spreading.",
+   "visual": {
+    "kind": "flow",
+    "across": true,
+    "steps": [
+     "dirty sheets",
+     "germs spread",
+     "more illness"
+    ],
+    "caption": "Dirty sheets spread illness, so clean ones help stop it."
+   }
+  },
+  {
+   "id": "history.fn.food",
+   "topic": "history.fn-crimea",
+   "kind": "mcq",
+   "prompt": "What else did Florence do to help the soldiers get better?",
+   "options": [
+    {
+     "text": "Gave them better food",
+     "correct": true
+    },
+    {
+     "text": "Gave them all medals",
+     "correct": false,
+     "feedback": "Medals come from the army, not from nurses."
+    },
+    {
+     "text": "Sent them into battle",
+     "correct": false,
+     "feedback": "Nurses help soldiers get better, not fight."
+    }
+   ],
+   "explain": "She set up kitchens to cook healthy food for the sickest soldiers. Later a famous French chef, Alexis Soyer, came to help.",
+   "learn": "What else did Florence do to help the soldiers get better? **Gave them better food**\n\nShe set up kitchens to cook healthy food for the sickest soldiers. Later a famous French chef, Alexis Soyer, came to help."
+  },
+  {
+   "id": "history.fn.loved",
+   "topic": "history.fn-crimea",
+   "kind": "mcq",
+   "prompt": "Why do you think the soldiers loved Florence’s night-time visits?",
+   "options": [
+    {
+     "text": "She showed them someone cared",
+     "correct": true
+    },
+    {
+     "text": "She woke them up to play noisy games",
+     "correct": false,
+     "feedback": "The soldiers needed rest. Her visits were quiet and kind."
+    },
+    {
+     "text": "She brought them their medals",
+     "correct": false,
+     "feedback": "Nurses do not give out medals. Think about how a kind visit feels."
+    }
+   ],
+   "explain": "Many soldiers were far from home, ill and lonely. A kind word in the dark made them feel cared for. One soldier wrote that they kissed her shadow as it passed.",
+   "learn": "Why do you think the soldiers loved Florence’s night-time visits? **She showed them someone cared**\n\nMany soldiers were far from home, ill and lonely. A kind word in the dark made them feel cared for. One soldier wrote that they kissed her shadow as it passed."
+  },
+  {
+   "id": "history.fn.lamp",
+   "topic": "history.fn-crimea",
+   "kind": "fact",
+   "prompt": "Pictures often show Florence holding a lamp like a little teapot. What did she really carry?",
+   "answer": "a Turkish lantern",
+   "distractors": [
+    "a battery torch",
+    "a candle in a jar",
+    "an electric lamp"
+   ],
+   "explain": "It was a folding lantern called a fanoos, with a candle inside. The Florence Nightingale Museum in London has one that is thought to have been carried by her.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "A lantern from Turkey, because Scutari is in Turkey.",
+   "feedback": {
+    "a battery torch": "Battery torches had not been invented!",
+    "an electric lamp": "There was no electric light in 1854."
+   }
+  },
+  {
+   "id": "history.fn.tf-illness",
+   "topic": "history.fn-crimea",
+   "kind": "mcq",
+   "prompt": "True or false? In the Crimean War, more British soldiers died of illness than of wounds from battle.",
+   "options": [
+    {
+     "text": "True",
+     "correct": true
+    },
+    {
+     "text": "False",
+     "correct": false,
+     "feedback": "Sadly, illnesses such as cholera and typhus killed far more soldiers than wounds did."
+    }
+   ],
+   "explain": "Dirt, bad water and crowding spread illness. That is why cleaning up the hospitals mattered so much.",
+   "keepOrder": true,
+   "learn": "True or false? In the Crimean War, more British soldiers died of illness than of wounds from battle. **True**\n\nDirt, bad water and crowding spread illness. That is why cleaning up the hospitals mattered so much.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "pie",
+     "title": "How British soldiers died in the war",
+     "sectors": [
+      {
+       "label": "illness",
+       "deg": 279
+      },
+      {
+       "label": "fighting",
+       "deg": 81
+      }
+     ]
+    },
+    "caption": "About 16,000 died of illness. About 5,000 were killed in battle or died of their wounds. So roughly 3 out of every 4 died of illness."
+   }
+  },
+  {
+   "id": "history.fn.ill",
+   "topic": "history.fn-crimea",
+   "kind": "mcq",
+   "prompt": "In 1855 Florence caught a fever and became very ill herself. What happened next?",
+   "options": [
+    {
+     "text": "She got better and kept working",
+     "correct": true
+    },
+    {
+     "text": "She went home and gave up nursing",
+     "correct": false,
+     "feedback": "She did not give up! She stayed until the war was over."
+    },
+    {
+     "text": "She stopped helping the soldiers",
+     "correct": false,
+     "feedback": "As soon as she was well enough, she went back to work."
+    }
+   ],
+   "explain": "She got better and stayed until the summer of 1856, after the war had ended. Being ill did not stop her.",
+   "learn": "In 1855 Florence caught a fever and became very ill herself. What happened next? **She got better and kept working**\n\nShe got better and stayed until the summer of 1856, after the war had ended. Being ill did not stop her."
+  },
+  {
+   "id": "history.fn.ms-born",
+   "topic": "history.fn-seacole",
+   "kind": "fact",
+   "prompt": "Where was Mary Seacole born?",
+   "answer": "Jamaica",
+   "distractors": [
+    "Scotland",
+    "Italy",
+    "Russia"
+   ],
+   "explain": "Mary was born in Kingston, Jamaica, an island in the Caribbean. Her father was a Scottish soldier and her mother was Jamaican.",
+   "formats": [
+    "choice"
+   ],
+   "feedback": {
+    "Italy": "That was Florence! Mary was born in Jamaica.",
+    "Scotland": "Her father was Scottish, but Mary was born in Jamaica."
+   }
+  },
+  {
+   "id": "history.fn.ms-older",
+   "topic": "history.fn-seacole",
+   "kind": "fact",
+   "prompt": "Mary Seacole was born in 1805. Florence was born in 1820. Who was older?",
+   "answer": "Mary Seacole",
+   "distractors": [
+    "Florence Nightingale",
+    "neither: the same age"
+   ],
+   "explain": "Mary was born 15 years before Florence. In the Crimea, Mary was about 50 years old.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "1805 comes before 1820, so Mary was born first."
+  },
+  {
+   "id": "history.fn.ms-herbs",
+   "topic": "history.fn-seacole",
+   "kind": "mcq",
+   "prompt": "What did Mary’s mother teach her?",
+   "options": [
+    {
+     "text": "To heal with plant medicines",
+     "correct": true
+    },
+    {
+     "text": "To sail a ship across the sea",
+     "correct": false,
+     "feedback": "Mary sailed a lot, but her mother taught her about medicines."
+    },
+    {
+     "text": "To bake bread for the army",
+     "correct": false,
+     "feedback": "She did cook for soldiers later, but her mother taught her healing."
+    }
+   ],
+   "explain": "Her mother was a “doctress”: a healer who used herbs and plants. She cared for sick soldiers and sailors in her boarding house.",
+   "learn": "What did Mary’s mother teach her? **To heal with plant medicines**\n\nHer mother was a “doctress”: a healer who used herbs and plants. She cared for sick soldiers and sailors in her boarding house."
+  },
+  {
+   "id": "history.fn.ms-cholera",
+   "topic": "history.fn-seacole",
+   "kind": "mcq",
+   "prompt": "Before the war, Mary nursed people in Jamaica and Panama who had a dangerous illness. Which one?",
+   "options": [
+    {
+     "text": "Cholera",
+     "correct": true
+    },
+    {
+     "text": "Measles",
+     "correct": false,
+     "feedback": "It was cholera, an illness spread by dirty water."
+    },
+    {
+     "text": "Mumps",
+     "correct": false,
+     "feedback": "It was cholera, an illness spread by dirty water."
+    }
+   ],
+   "explain": "Cholera spreads through dirty water. Mary learned a lot by nursing people through it, and that helped her in the Crimea.",
+   "learn": "Before the war, Mary nursed people in Jamaica and Panama who had a dangerous illness. Which one? **Cholera**\n\nCholera spreads through dirty water. Mary learned a lot by nursing people through it, and that helped her in the Crimea."
+  },
+  {
+   "id": "history.fn.ms-refused",
+   "topic": "history.fn-seacole",
+   "kind": "mcq",
+   "prompt": "Mary asked to join the nurses going to the war. What happened?",
+   "options": [
+    {
+     "text": "She was turned down",
+     "correct": true
+    },
+    {
+     "text": "She was put in charge",
+     "correct": false,
+     "feedback": "Florence was in charge of the army nurses. Mary was not chosen."
+    },
+    {
+     "text": "She was too busy to go",
+     "correct": false,
+     "feedback": "She wanted to go so much that she went anyway!"
+    }
+   ],
+   "explain": "She went to London to offer her help, but she was not chosen. Mary wondered whether it was because of the colour of her skin.",
+   "learn": "Mary asked to join the nurses going to the war. What happened? **She was turned down**\n\nShe went to London to offer her help, but she was not chosen. Mary wondered whether it was because of the colour of her skin."
+  },
+  {
+   "id": "history.fn.ms-ownway",
+   "topic": "history.fn-seacole",
+   "kind": "mcq",
+   "prompt": "How did Mary get to the Crimea?",
+   "options": [
+    {
+     "text": "She paid for the trip herself",
+     "correct": true
+    },
+    {
+     "text": "The army sent her there on a ship",
+     "correct": false,
+     "feedback": "The army did not send her. She paid her own way."
+    },
+    {
+     "text": "She rode there on a camel",
+     "correct": false,
+     "feedback": "She sailed there, and paid for it herself."
+    }
+   ],
+   "explain": "She travelled with a business partner, Thomas Day, and paid with her own money. That shows how much she wanted to help.",
+   "learn": "How did Mary get to the Crimea? **She paid for the trip herself**\n\nShe travelled with a business partner, Thomas Day, and paid with her own money. That shows how much she wanted to help."
+  },
+  {
+   "id": "history.fn.ms-balaclava",
+   "topic": "history.fn-seacole",
+   "kind": "fact",
+   "prompt": "Mary built her British Hotel near which harbour town in the Crimea?",
+   "answer": "Balaclava",
+   "distractors": [
+    "Scutari",
+    "Kingston",
+    "Florence"
+   ],
+   "explain": "Balaclava (say bal-uh-KLAH-vuh) was the British army’s harbour. Her hotel was a few miles away, close to the soldiers’ camp.",
+   "formats": [
+    "choice"
+   ],
+   "feedback": {
+    "Scutari": "Scutari was where Florence’s hospital was, far across the sea."
+   },
+   "hook": "A balaclava is also a woolly hat: soldiers wore them to keep warm in the Crimea!"
+  },
+  {
+   "id": "history.fn.ms-hotel",
+   "topic": "history.fn-seacole",
+   "kind": "mcq",
+   "prompt": "What was the British Hotel?",
+   "options": [
+    {
+     "text": "A place for food, rest and care",
+     "correct": true
+    },
+    {
+     "text": "A grand hotel for rich visitors",
+     "correct": false,
+     "feedback": "It was built from old wood and metal, for soldiers."
+    },
+    {
+     "text": "A castle where the generals lived",
+     "correct": false,
+     "feedback": "It was a simple building where soldiers could eat and rest."
+    }
+   ],
+   "explain": "Mary built it from old wood and sheets of iron. She sold food and drink, and gave soldiers medicine and comfort.",
+   "learn": "What was the British Hotel? **A place for food, rest and care**\n\nMary built it from old wood and sheets of iron. She sold food and drink, and gave soldiers medicine and comfort."
+  },
+  {
+   "id": "history.fn.ms-battle",
+   "topic": "history.fn-seacole",
+   "kind": "mcq",
+   "prompt": "How was Mary’s work different from Florence’s?",
+   "options": [
+    {
+     "text": "Mary went near the fighting",
+     "correct": true
+    },
+    {
+     "text": "Mary only worked in England",
+     "correct": false,
+     "feedback": "Mary travelled all the way to the Crimea."
+    },
+    {
+     "text": "Mary never helped any soldiers",
+     "correct": false,
+     "feedback": "She helped lots of soldiers, sometimes on the battlefield itself."
+    }
+   ],
+   "explain": "Florence ran a big hospital at Scutari, far from the battles. Mary rode out to the battlefields with bandages, medicines and food.",
+   "learn": "How was Mary’s work different from Florence’s? **Mary went near the fighting**\n\nFlorence ran a big hospital at Scutari, far from the battles. Mary rode out to the battlefields with bandages, medicines and food.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Florence Nightingale",
+     "Mary Seacole"
+    ],
+    "rows": [
+     [
+      "Born",
+      "1820, in **Italy**",
+      "1805, in **Jamaica**"
+     ],
+     [
+      "Got to the war",
+      "sent by the government",
+      "paid her **own way**"
+     ],
+     [
+      "Worked at",
+      "a big **hospital** at Scutari",
+      "her **British Hotel**, and battlefields"
+     ],
+     [
+      "Known as",
+      "the Lady with the Lamp",
+      "Mother Seacole"
+     ],
+     [
+      "Both",
+      "brave and determined",
+      "brave and determined"
+     ]
+    ],
+    "tint": "rows"
+   }
+  },
+  {
+   "id": "history.fn.ms-mother",
+   "topic": "history.fn-seacole",
+   "kind": "fact",
+   "prompt": "What did the soldiers call Mary Seacole?",
+   "answer": "Mother Seacole",
+   "distractors": [
+    "Lady Lantern",
+    "Captain Mary",
+    "Queen Mary"
+   ],
+   "explain": "She looked after the soldiers like a mother, with food, care and kindness.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.ms-met",
+   "topic": "history.fn-seacole",
+   "kind": "mcq",
+   "prompt": "Did Mary Seacole and Florence Nightingale ever meet?",
+   "options": [
+    {
+     "text": "Yes, once, at Scutari",
+     "correct": true
+    },
+    {
+     "text": "No, never",
+     "correct": false,
+     "feedback": "They did meet: Mary stopped at Scutari on her way to the Crimea."
+    },
+    {
+     "text": "Yes, they worked together every day",
+     "correct": false,
+     "feedback": "They met once, then worked in different places."
+    }
+   ],
+   "explain": "On her way to the Crimea, Mary stayed a night at Scutari and spoke to Florence. After that they worked in different places.",
+   "learn": "Did Mary Seacole and Florence Nightingale ever meet? **Yes, once, at Scutari**\n\nOn her way to the Crimea, Mary stayed a night at Scutari and spoke to Florence. After that they worked in different places."
+  },
+  {
+   "id": "history.fn.ms-book",
+   "topic": "history.fn-seacole",
+   "kind": "mcq",
+   "prompt": "How do we know so much about Mary Seacole’s life?",
+   "options": [
+    {
+     "text": "She wrote a book about it",
+     "correct": true
+    },
+    {
+     "text": "She made a video diary",
+     "correct": false,
+     "feedback": "There were no video cameras then."
+    },
+    {
+     "text": "She kept a website",
+     "correct": false,
+     "feedback": "There was no internet then!"
+    }
+   ],
+   "explain": "Her book, _Wonderful Adventures of Mrs Seacole in Many Lands_, came out in 1857. Soldiers’ letters tell us about her too.",
+   "learn": "How do we know so much about Mary Seacole’s life? **She wrote a book about it**\n\nHer book, _Wonderful Adventures of Mrs Seacole in Many Lands_, came out in 1857. Soldiers’ letters tell us about her too."
+  },
+  {
+   "id": "history.fn.ms-alike",
+   "topic": "history.fn-seacole",
+   "kind": "mcq",
+   "prompt": "Which is true of BOTH Mary and Florence?",
+   "options": [
+    {
+     "text": "Both cared for ill soldiers",
+     "correct": true
+    },
+    {
+     "text": "Both were born in Jamaica",
+     "correct": false,
+     "feedback": "Only Mary was. Florence was born in Italy."
+    },
+    {
+     "text": "Both ran a hotel in the war",
+     "correct": false,
+     "feedback": "Only Mary ran a hotel. Florence ran a hospital."
+    }
+   ],
+   "explain": "They were different in many ways, but both were brave, both were determined, and both cared for soldiers in the Crimean War.",
+   "learn": "Which is true of BOTH Mary and Florence? **Both cared for ill soldiers**\n\nThey were different in many ways, but both were brave, both were determined, and both cared for soldiers in the Crimean War.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "Florence Nightingale",
+     "Mary Seacole"
+    ],
+    "rows": [
+     [
+      "Born",
+      "1820, in **Italy**",
+      "1805, in **Jamaica**"
+     ],
+     [
+      "Got to the war",
+      "sent by the government",
+      "paid her **own way**"
+     ],
+     [
+      "Worked at",
+      "a big **hospital** at Scutari",
+      "her **British Hotel**, and battlefields"
+     ],
+     [
+      "Known as",
+      "the Lady with the Lamp",
+      "Mother Seacole"
+     ],
+     [
+      "Both",
+      "brave and determined",
+      "brave and determined"
+     ]
+    ],
+    "tint": "rows"
+   }
+  },
+  {
+   "id": "history.fn.ms-statue",
+   "topic": "history.fn-seacole",
+   "kind": "mcq",
+   "prompt": "In 2016, how was Mary Seacole remembered in London?",
+   "options": [
+    {
+     "text": "A statue of her was put up",
+     "correct": true
+    },
+    {
+     "text": "A palace was named after her",
+     "correct": false,
+     "feedback": "Not a palace: a statue."
+    },
+    {
+     "text": "Her face went on the Moon",
+     "correct": false,
+     "feedback": "Not the Moon! A statue was put up in London."
+    }
+   ],
+   "explain": "Her statue stands outside St Thomas’ Hospital, the same hospital where Florence opened her nursing school.",
+   "learn": "In 2016, how was Mary Seacole remembered in London? **A statue of her was put up**\n\nHer statue stands outside St Thomas’ Hospital, the same hospital where Florence opened her nursing school."
+  },
+  {
+   "id": "history.fn.st-young-1",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "How did Florence’s mother feel when Florence said she wanted to be a nurse?",
+   "options": [
+    {
+     "text": "Horrified and upset",
+     "correct": true
+    },
+    {
+     "text": "Proud and pleased",
+     "correct": false,
+     "feedback": "Look at the word “horrified”. She was not pleased at all."
+    },
+    {
+     "text": "Bored and sleepy",
+     "correct": false,
+     "feedback": "She was very upset. Florence’s sister even cried."
+    }
+   ],
+   "explain": "“Her mother was horrified.” Horrified means very shocked and upset.",
+   "passage": "The Girl Who Would Not Give Up\n\nFlorence Nightingale grew up in a big house with servants, horses and beautiful gardens. Her parents expected her to go to parties, marry a rich man and never have a job.\n\nBut Florence wanted something different. She liked visiting poor families in the village when they were ill, and she was good at caring for them. When she was in her twenties, she told her family that she wanted to be a nurse.\n\nHer mother was horrified. Her sister cried. In those days hospitals were dirty places, and nurses had no proper training. It was not thought a suitable job for a lady.\n\nFlorence did not give up. Every morning she woke before dawn, while the house was still quiet, and read reports about hospitals by candlelight. She filled notebooks with facts and numbers.\n\nYear after year, she kept asking. At last, when she was 30, she visited a hospital and nursing school at Kaiserswerth in Germany. The next year she went back to train there. Now Florence felt she was doing the work she was born to do.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-young-2",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "Why did Florence’s family think nursing was not a suitable job?",
+   "options": [
+    {
+     "text": "Nurses had no proper training",
+     "correct": true
+    },
+    {
+     "text": "Nurses were paid far too much",
+     "correct": false,
+     "feedback": "The story does not say that. Look at what it says about hospitals and nurses."
+    },
+    {
+     "text": "Nurses had to fight in wars",
+     "correct": false,
+     "feedback": "Nurses care for people. Look at what the story says about training."
+    }
+   ],
+   "explain": "“In those days hospitals were dirty places, and nurses had no proper training.”",
+   "passage": "The Girl Who Would Not Give Up\n\nFlorence Nightingale grew up in a big house with servants, horses and beautiful gardens. Her parents expected her to go to parties, marry a rich man and never have a job.\n\nBut Florence wanted something different. She liked visiting poor families in the village when they were ill, and she was good at caring for them. When she was in her twenties, she told her family that she wanted to be a nurse.\n\nHer mother was horrified. Her sister cried. In those days hospitals were dirty places, and nurses had no proper training. It was not thought a suitable job for a lady.\n\nFlorence did not give up. Every morning she woke before dawn, while the house was still quiet, and read reports about hospitals by candlelight. She filled notebooks with facts and numbers.\n\nYear after year, she kept asking. At last, when she was 30, she visited a hospital and nursing school at Kaiserswerth in Germany. The next year she went back to train there. Now Florence felt she was doing the work she was born to do.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-young-3",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "Why did Florence read about hospitals before dawn?",
+   "options": [
+    {
+     "text": "It was quiet, so she could study",
+     "correct": true
+    },
+    {
+     "text": "She was not allowed any lights",
+     "correct": false,
+     "feedback": "She read by candlelight, so she did have a light."
+    },
+    {
+     "text": "Her teacher made her get up early",
+     "correct": false,
+     "feedback": "Nobody made her. She chose to."
+    }
+   ],
+   "explain": "The house was still quiet. Getting up so early also shows how much she wanted to learn.",
+   "passage": "The Girl Who Would Not Give Up\n\nFlorence Nightingale grew up in a big house with servants, horses and beautiful gardens. Her parents expected her to go to parties, marry a rich man and never have a job.\n\nBut Florence wanted something different. She liked visiting poor families in the village when they were ill, and she was good at caring for them. When she was in her twenties, she told her family that she wanted to be a nurse.\n\nHer mother was horrified. Her sister cried. In those days hospitals were dirty places, and nurses had no proper training. It was not thought a suitable job for a lady.\n\nFlorence did not give up. Every morning she woke before dawn, while the house was still quiet, and read reports about hospitals by candlelight. She filled notebooks with facts and numbers.\n\nYear after year, she kept asking. At last, when she was 30, she visited a hospital and nursing school at Kaiserswerth in Germany. The next year she went back to train there. Now Florence felt she was doing the work she was born to do.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-young-4",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "How do you know Florence was determined?",
+   "options": [
+    {
+     "text": "She kept asking, year after year",
+     "correct": true
+    },
+    {
+     "text": "She went to lots of parties",
+     "correct": false,
+     "feedback": "That is what her parents wanted. Florence wanted something different."
+    },
+    {
+     "text": "She lived in a big house with servants",
+     "correct": false,
+     "feedback": "That tells us about her family, not about her character."
+    }
+   ],
+   "explain": "“Florence did not give up… Year after year, she kept asking.” That is what determined means.",
+   "passage": "The Girl Who Would Not Give Up\n\nFlorence Nightingale grew up in a big house with servants, horses and beautiful gardens. Her parents expected her to go to parties, marry a rich man and never have a job.\n\nBut Florence wanted something different. She liked visiting poor families in the village when they were ill, and she was good at caring for them. When she was in her twenties, she told her family that she wanted to be a nurse.\n\nHer mother was horrified. Her sister cried. In those days hospitals were dirty places, and nurses had no proper training. It was not thought a suitable job for a lady.\n\nFlorence did not give up. Every morning she woke before dawn, while the house was still quiet, and read reports about hospitals by candlelight. She filled notebooks with facts and numbers.\n\nYear after year, she kept asking. At last, when she was 30, she visited a hospital and nursing school at Kaiserswerth in Germany. The next year she went back to train there. Now Florence felt she was doing the work she was born to do.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-young-5",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "How did Florence feel when she trained at Kaiserswerth?",
+   "options": [
+    {
+     "text": "Happy and sure of her work",
+     "correct": true
+    },
+    {
+     "text": "Homesick and wanting to leave",
+     "correct": false,
+     "feedback": "The story says she felt she was doing the work she was born to do."
+    },
+    {
+     "text": "Bored and ready to give up",
+     "correct": false,
+     "feedback": "She had waited years for this! Look at the last sentence."
+    }
+   ],
+   "explain": "“Now Florence felt she was doing the work she was born to do.”",
+   "passage": "The Girl Who Would Not Give Up\n\nFlorence Nightingale grew up in a big house with servants, horses and beautiful gardens. Her parents expected her to go to parties, marry a rich man and never have a job.\n\nBut Florence wanted something different. She liked visiting poor families in the village when they were ill, and she was good at caring for them. When she was in her twenties, she told her family that she wanted to be a nurse.\n\nHer mother was horrified. Her sister cried. In those days hospitals were dirty places, and nurses had no proper training. It was not thought a suitable job for a lady.\n\nFlorence did not give up. Every morning she woke before dawn, while the house was still quiet, and read reports about hospitals by candlelight. She filled notebooks with facts and numbers.\n\nYear after year, she kept asking. At last, when she was 30, she visited a hospital and nursing school at Kaiserswerth in Germany. The next year she went back to train there. Now Florence felt she was doing the work she was born to do.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-lamp-2",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "Miss Nightingale “did not shout, but everyone did what she said.” What does this tell you about her?",
+   "options": [
+    {
+     "text": "People respected her",
+     "correct": true
+    },
+    {
+     "text": "She had a sore throat",
+     "correct": false,
+     "feedback": "Nothing in the story says she was ill. Why would people listen to her?"
+    },
+    {
+     "text": "Nobody could hear her",
+     "correct": false,
+     "feedback": "They did hear her, because they did what she said."
+    }
+   ],
+   "explain": "She was quiet but firm, and people trusted her to be in charge.",
+   "passage": "The Lamp in the Night\n\nPrivate Tom Reed had never felt so ill. He lay on a thin mattress in the army hospital at Scutari, squashed between two other soldiers. The floor was filthy, and he could hear rats scurrying in the dark.\n\nThen the nurses came.\n\nThey arrived with buckets, soap and scrubbing brushes. In charge was a slim, quiet lady in a plain black dress. She did not shout, but everyone did what she said. Her name was Miss Nightingale.\n\nSoon the floor was scrubbed clean. Tom had a clean shirt for the first time in weeks. A nurse brought him warm soup and held the cup while he drank.\n\nAt night, when the doctors had gone to bed, a soft light moved slowly along the ward. It was Miss Nightingale, carrying a little Turkish lantern. She stopped at each bed. She tucked in a blanket here and spoke a kind word there.\n\nWhen her shadow passed over him, Tom smiled. He wrote to his mother: “She makes us feel that somebody cares.”\n\nTom grew stronger every day. By the spring, he was well enough to go home.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-lamp-3",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "Which detail shows the nurses made the soldiers more comfortable?",
+   "options": [
+    {
+     "text": "“a clean shirt for the first time in weeks”",
+     "correct": true
+    },
+    {
+     "text": "“he could hear rats scurrying in the dark”",
+     "correct": false,
+     "feedback": "That was before the nurses came. Look for something that got better."
+    },
+    {
+     "text": "“the doctors had gone to bed”",
+     "correct": false,
+     "feedback": "That tells us when she visited, not what made Tom comfortable."
+    }
+   ],
+   "explain": "Clean clothes, a scrubbed floor and warm soup all made Tom more comfortable.",
+   "passage": "The Lamp in the Night\n\nPrivate Tom Reed had never felt so ill. He lay on a thin mattress in the army hospital at Scutari, squashed between two other soldiers. The floor was filthy, and he could hear rats scurrying in the dark.\n\nThen the nurses came.\n\nThey arrived with buckets, soap and scrubbing brushes. In charge was a slim, quiet lady in a plain black dress. She did not shout, but everyone did what she said. Her name was Miss Nightingale.\n\nSoon the floor was scrubbed clean. Tom had a clean shirt for the first time in weeks. A nurse brought him warm soup and held the cup while he drank.\n\nAt night, when the doctors had gone to bed, a soft light moved slowly along the ward. It was Miss Nightingale, carrying a little Turkish lantern. She stopped at each bed. She tucked in a blanket here and spoke a kind word there.\n\nWhen her shadow passed over him, Tom smiled. He wrote to his mother: “She makes us feel that somebody cares.”\n\nTom grew stronger every day. By the spring, he was well enough to go home.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-lamp-4",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "Why do you think Tom smiled when her shadow passed over him?",
+   "options": [
+    {
+     "text": "He felt cared for and safe",
+     "correct": true
+    },
+    {
+     "text": "Her shadow made him feel cold",
+     "correct": false,
+     "feedback": "A shadow can’t make you cold! Think about how her visit made him feel."
+    },
+    {
+     "text": "He was dreaming about home",
+     "correct": false,
+     "feedback": "He was awake. Think about how her visit made him feel."
+    }
+   ],
+   "explain": "He wrote: “She makes us feel that somebody cares.”",
+   "passage": "The Lamp in the Night\n\nPrivate Tom Reed had never felt so ill. He lay on a thin mattress in the army hospital at Scutari, squashed between two other soldiers. The floor was filthy, and he could hear rats scurrying in the dark.\n\nThen the nurses came.\n\nThey arrived with buckets, soap and scrubbing brushes. In charge was a slim, quiet lady in a plain black dress. She did not shout, but everyone did what she said. Her name was Miss Nightingale.\n\nSoon the floor was scrubbed clean. Tom had a clean shirt for the first time in weeks. A nurse brought him warm soup and held the cup while he drank.\n\nAt night, when the doctors had gone to bed, a soft light moved slowly along the ward. It was Miss Nightingale, carrying a little Turkish lantern. She stopped at each bed. She tucked in a blanket here and spoke a kind word there.\n\nWhen her shadow passed over him, Tom smiled. He wrote to his mother: “She makes us feel that somebody cares.”\n\nTom grew stronger every day. By the spring, he was well enough to go home.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-lamp-5",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "Why do you think the soldiers loved Miss Nightingale?",
+   "options": [
+    {
+     "text": "She was kind and helped them get well",
+     "correct": true
+    },
+    {
+     "text": "She gave them all lots of presents",
+     "correct": false,
+     "feedback": "The story does not mention presents. Look at what she did for them."
+    },
+    {
+     "text": "She let them stay up late every night",
+     "correct": false,
+     "feedback": "The soldiers needed rest to get better."
+    }
+   ],
+   "explain": "She cleaned the ward, brought them food and clean clothes, and checked on them at night.",
+   "passage": "The Lamp in the Night\n\nPrivate Tom Reed had never felt so ill. He lay on a thin mattress in the army hospital at Scutari, squashed between two other soldiers. The floor was filthy, and he could hear rats scurrying in the dark.\n\nThen the nurses came.\n\nThey arrived with buckets, soap and scrubbing brushes. In charge was a slim, quiet lady in a plain black dress. She did not shout, but everyone did what she said. Her name was Miss Nightingale.\n\nSoon the floor was scrubbed clean. Tom had a clean shirt for the first time in weeks. A nurse brought him warm soup and held the cup while he drank.\n\nAt night, when the doctors had gone to bed, a soft light moved slowly along the ward. It was Miss Nightingale, carrying a little Turkish lantern. She stopped at each bed. She tucked in a blanket here and spoke a kind word there.\n\nWhen her shadow passed over him, Tom smiled. He wrote to his mother: “She makes us feel that somebody cares.”\n\nTom grew stronger every day. By the spring, he was well enough to go home.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-lamp-6",
+   "topic": "history.fn-stories",
+   "kind": "order",
+   "prompt": "Put the story in order.",
+   "items": [
+    "The nurses arrive with buckets",
+    "The floor is scrubbed clean",
+    "Miss Nightingale visits at night",
+    "Tom is well enough to go home"
+   ],
+   "labels": null,
+   "explain": "The nurses came, cleaned the ward, cared for the soldiers day and night, and Tom got better.",
+   "passage": "The Lamp in the Night\n\nPrivate Tom Reed had never felt so ill. He lay on a thin mattress in the army hospital at Scutari, squashed between two other soldiers. The floor was filthy, and he could hear rats scurrying in the dark.\n\nThen the nurses came.\n\nThey arrived with buckets, soap and scrubbing brushes. In charge was a slim, quiet lady in a plain black dress. She did not shout, but everyone did what she said. Her name was Miss Nightingale.\n\nSoon the floor was scrubbed clean. Tom had a clean shirt for the first time in weeks. A nurse brought him warm soup and held the cup while he drank.\n\nAt night, when the doctors had gone to bed, a soft light moved slowly along the ward. It was Miss Nightingale, carrying a little Turkish lantern. She stopped at each bed. She tucked in a blanket here and spoke a kind word there.\n\nWhen her shadow passed over him, Tom smiled. He wrote to his mother: “She makes us feel that somebody cares.”\n\nTom grew stronger every day. By the spring, he was well enough to go home.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-hotel-1",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "What was the British Hotel built from?",
+   "options": [
+    {
+     "text": "Old planks and sheets of iron",
+     "correct": true
+    },
+    {
+     "text": "Stone blocks and glass windows",
+     "correct": false,
+     "feedback": "Read the description again: planks and iron."
+    },
+    {
+     "text": "Bricks and a thatched roof",
+     "correct": false,
+     "feedback": "Read the description again: planks and iron."
+    }
+   ],
+   "explain": "“a building made of old planks and sheets of iron”. Mary used whatever she could find.",
+   "passage": "Mother Seacole’s Hotel\n\nCorporal Jack Lewis stamped his frozen feet. It was winter in the Crimea, and the army camp was cold and muddy.\n\n“Come to Mother Seacole’s,” said his friend. “She’ll warm you up.”\n\nOn a little hill stood a building made of old planks and sheets of iron. A painted sign said British Hotel. Inside, it was warm and smelled of hot stew and fresh bread. Soldiers sat at the tables, laughing.\n\nBehind the counter stood a smiling woman in a bright dress and bonnet. She had been born in Jamaica, and she had paid for her long journey to the Crimea herself.\n\n“You look poorly, young man,” she said, and handed Jack a steaming drink made from herbs. “Drink that up.”\n\nLater, Jack saw Mrs Seacole ride out towards the battlefield, her bags full of bandages, medicines and food. She did not seem afraid at all.\n\n“Why does she do it?” Jack asked.\n\nHis friend smiled. “Because she cares about every one of us. That’s why we call her Mother.”",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-hotel-2",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "Which words best describe the inside of the hotel?",
+   "options": [
+    {
+     "text": "Warm and welcoming",
+     "correct": true
+    },
+    {
+     "text": "Cold and gloomy",
+     "correct": false,
+     "feedback": "Outside was cold. Inside it was warm and smelled of hot stew."
+    },
+    {
+     "text": "Noisy and frightening",
+     "correct": false,
+     "feedback": "The soldiers were laughing. It was a happy place."
+    }
+   ],
+   "explain": "It was warm, it smelled of stew and bread, and soldiers sat laughing at the tables.",
+   "passage": "Mother Seacole’s Hotel\n\nCorporal Jack Lewis stamped his frozen feet. It was winter in the Crimea, and the army camp was cold and muddy.\n\n“Come to Mother Seacole’s,” said his friend. “She’ll warm you up.”\n\nOn a little hill stood a building made of old planks and sheets of iron. A painted sign said British Hotel. Inside, it was warm and smelled of hot stew and fresh bread. Soldiers sat at the tables, laughing.\n\nBehind the counter stood a smiling woman in a bright dress and bonnet. She had been born in Jamaica, and she had paid for her long journey to the Crimea herself.\n\n“You look poorly, young man,” she said, and handed Jack a steaming drink made from herbs. “Drink that up.”\n\nLater, Jack saw Mrs Seacole ride out towards the battlefield, her bags full of bandages, medicines and food. She did not seem afraid at all.\n\n“Why does she do it?” Jack asked.\n\nHis friend smiled. “Because she cares about every one of us. That’s why we call her Mother.”",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-hotel-3",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "How do you know Mary Seacole was brave?",
+   "options": [
+    {
+     "text": "She rode out towards the battlefield",
+     "correct": true
+    },
+    {
+     "text": "She wore a bright dress and bonnet",
+     "correct": false,
+     "feedback": "That tells us what she looked like, not that she was brave."
+    },
+    {
+     "text": "She cooked stew and baked fresh bread",
+     "correct": false,
+     "feedback": "That shows she was kind and a good cook. Look for something dangerous she did."
+    }
+   ],
+   "explain": "Riding towards a battlefield is dangerous, and “she did not seem afraid at all.”",
+   "passage": "Mother Seacole’s Hotel\n\nCorporal Jack Lewis stamped his frozen feet. It was winter in the Crimea, and the army camp was cold and muddy.\n\n“Come to Mother Seacole’s,” said his friend. “She’ll warm you up.”\n\nOn a little hill stood a building made of old planks and sheets of iron. A painted sign said British Hotel. Inside, it was warm and smelled of hot stew and fresh bread. Soldiers sat at the tables, laughing.\n\nBehind the counter stood a smiling woman in a bright dress and bonnet. She had been born in Jamaica, and she had paid for her long journey to the Crimea herself.\n\n“You look poorly, young man,” she said, and handed Jack a steaming drink made from herbs. “Drink that up.”\n\nLater, Jack saw Mrs Seacole ride out towards the battlefield, her bags full of bandages, medicines and food. She did not seem afraid at all.\n\n“Why does she do it?” Jack asked.\n\nHis friend smiled. “Because she cares about every one of us. That’s why we call her Mother.”",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-hotel-4",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "Why do the soldiers call her Mother?",
+   "options": [
+    {
+     "text": "She cares for them like a mother",
+     "correct": true
+    },
+    {
+     "text": "She is Jack’s real mother",
+     "correct": false,
+     "feedback": "Jack’s friend explains the name. Read the last line."
+    },
+    {
+     "text": "She told them she was their mum",
+     "correct": false,
+     "feedback": "Read the last line: why do they call her Mother?"
+    }
+   ],
+   "explain": "“Because she cares about every one of us.”",
+   "passage": "Mother Seacole’s Hotel\n\nCorporal Jack Lewis stamped his frozen feet. It was winter in the Crimea, and the army camp was cold and muddy.\n\n“Come to Mother Seacole’s,” said his friend. “She’ll warm you up.”\n\nOn a little hill stood a building made of old planks and sheets of iron. A painted sign said British Hotel. Inside, it was warm and smelled of hot stew and fresh bread. Soldiers sat at the tables, laughing.\n\nBehind the counter stood a smiling woman in a bright dress and bonnet. She had been born in Jamaica, and she had paid for her long journey to the Crimea herself.\n\n“You look poorly, young man,” she said, and handed Jack a steaming drink made from herbs. “Drink that up.”\n\nLater, Jack saw Mrs Seacole ride out towards the battlefield, her bags full of bandages, medicines and food. She did not seem afraid at all.\n\n“Why does she do it?” Jack asked.\n\nHis friend smiled. “Because she cares about every one of us. That’s why we call her Mother.”",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-hotel-5",
+   "topic": "history.fn-stories",
+   "kind": "mcq",
+   "prompt": "How do you know Mary really wanted to help the soldiers?",
+   "options": [
+    {
+     "text": "She paid for her long journey herself",
+     "correct": true
+    },
+    {
+     "text": "She lived in a muddy army camp",
+     "correct": false,
+     "feedback": "Her hotel was near the camp, but think about how she got to the Crimea."
+    },
+    {
+     "text": "She had a sign painted on the hotel",
+     "correct": false,
+     "feedback": "A sign just tells people where to go. What did it cost her to get there?"
+    }
+   ],
+   "explain": "Nobody paid for her to go. She spent her own money to get to the soldiers.",
+   "passage": "Mother Seacole’s Hotel\n\nCorporal Jack Lewis stamped his frozen feet. It was winter in the Crimea, and the army camp was cold and muddy.\n\n“Come to Mother Seacole’s,” said his friend. “She’ll warm you up.”\n\nOn a little hill stood a building made of old planks and sheets of iron. A painted sign said British Hotel. Inside, it was warm and smelled of hot stew and fresh bread. Soldiers sat at the tables, laughing.\n\nBehind the counter stood a smiling woman in a bright dress and bonnet. She had been born in Jamaica, and she had paid for her long journey to the Crimea herself.\n\n“You look poorly, young man,” she said, and handed Jack a steaming drink made from herbs. “Drink that up.”\n\nLater, Jack saw Mrs Seacole ride out towards the battlefield, her bags full of bandages, medicines and food. She did not seem afraid at all.\n\n“Why does she do it?” Jack asked.\n\nHis friend smiled. “Because she cares about every one of us. That’s why we call her Mother.”",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.commission",
+   "topic": "history.fn-numbers",
+   "kind": "fact",
+   "prompt": "In March 1855, the government sent experts to clean up the army hospitals. What were they called?",
+   "answer": "the Sanitary Commission",
+   "distractors": [
+    "the Royal Air Force",
+    "the Lifeboat Crew",
+    "the Spanish Armada"
+   ],
+   "explain": "“Sanitary” means to do with keeping clean and healthy. They flushed out the drains, let in fresh air and made the water supply clean.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.fell",
+   "topic": "history.fn-numbers",
+   "kind": "mcq",
+   "prompt": "What happened after the drains were mended and the water was made clean?",
+   "options": [
+    {
+     "text": "Far fewer soldiers died",
+     "correct": true
+    },
+    {
+     "text": "Even more soldiers fell ill",
+     "correct": false,
+     "feedback": "The opposite! Clean water and drains stopped illness spreading."
+    },
+    {
+     "text": "Nothing changed at all",
+     "correct": false,
+     "feedback": "A lot changed: far fewer soldiers died."
+    }
+   ],
+   "explain": "Within a few months, far fewer soldiers were dying in the hospital at Scutari.",
+   "learn": "What happened after the drains were mended and the water was made clean? **Far fewer soldiers died**\n\nWithin a few months, far fewer soldiers were dying in the hospital at Scutari."
+  },
+  {
+   "id": "history.fn.learned",
+   "topic": "history.fn-numbers",
+   "kind": "mcq",
+   "prompt": "Nursing helped, but deaths at Scutari fell most after the drains and water were fixed. What did Florence learn?",
+   "options": [
+    {
+     "text": "Clean hospitals save lives",
+     "correct": true
+    },
+    {
+     "text": "Nurses are not needed",
+     "correct": false,
+     "feedback": "Nurses were needed! But cleaning up the building mattered even more."
+    },
+    {
+     "text": "Doctors should work at night",
+     "correct": false,
+     "feedback": "Think about what changed: the drains and the water."
+    }
+   ],
+   "explain": "She spent the rest of her life making sure that hospitals, and homes, had fresh air, clean water and good drains.",
+   "learn": "Nursing helped, but deaths at Scutari fell most after the drains and water were fixed. What did Florence learn? **Clean hospitals save lives**\n\nShe spent the rest of her life making sure that hospitals, and homes, had fresh air, clean water and good drains.",
+   "visual": {
+    "kind": "flow",
+    "steps": [
+     "Drains flushed, water made clean",
+     "Fewer germs and less illness",
+     "Far fewer soldiers die"
+    ]
+   }
+  },
+  {
+   "id": "history.fn.why-count",
+   "topic": "history.fn-numbers",
+   "kind": "mcq",
+   "prompt": "Why did Florence collect numbers about the soldiers?",
+   "options": [
+    {
+     "text": "To prove what made them ill",
+     "correct": true
+    },
+    {
+     "text": "To win a prize for maths",
+     "correct": false,
+     "feedback": "She was good at maths, but she wanted to change things."
+    },
+    {
+     "text": "To count the hospital beds for fun",
+     "correct": false,
+     "feedback": "She counted to find out what was killing the soldiers."
+    }
+   ],
+   "explain": "Numbers are evidence. With them she could show the government what was really killing the soldiers, so that they would act.",
+   "learn": "Why did Florence collect numbers about the soldiers? **To prove what made them ill**\n\nNumbers are evidence. With them she could show the government what was really killing the soldiers, so that they would act."
+  },
+  {
+   "id": "history.fn.statistics",
+   "topic": "history.fn-numbers",
+   "kind": "fact",
+   "prompt": "Collecting and studying numbers to find out what is happening is called…",
+   "answer": "statistics",
+   "distractors": [
+    "spelling",
+    "geography",
+    "gymnastics"
+   ],
+   "explain": "Florence was a brilliant statistician. She worked with a doctor who loved numbers too, William Farr.",
+   "formats": [
+    "choice"
+   ],
+   "example": "Hospitals today still count things, such as infections, to check that patients are safe."
+  },
+  {
+   "id": "history.fn.rose",
+   "topic": "history.fn-numbers",
+   "kind": "fact",
+   "prompt": "Florence’s most famous diagram looks a bit like a flower. What is it often called?",
+   "answer": "a rose diagram",
+   "distractors": [
+    "a daisy chart",
+    "a tulip tree",
+    "a sunflower map"
+   ],
+   "explain": "It is also called a polar area diagram. Each wedge, like a petal, stands for one month of the war.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.wedge",
+   "topic": "history.fn-numbers",
+   "kind": "mcq",
+   "prompt": "In the rose diagram, what does each wedge stand for?",
+   "options": [
+    {
+     "text": "One month",
+     "correct": true
+    },
+    {
+     "text": "One soldier",
+     "correct": false,
+     "feedback": "There were far too many soldiers for that! Each wedge is a month."
+    },
+    {
+     "text": "One hospital",
+     "correct": false,
+     "feedback": "Each wedge is one month. There are 12 in each rose."
+    }
+   ],
+   "explain": "There are 12 wedges in each rose, one for each month of the year.",
+   "learn": "In the rose diagram, what does each wedge stand for? **One month**\n\nThere are 12 wedges in each rose, one for each month of the year."
+  },
+  {
+   "id": "history.fn.bigger",
+   "topic": "history.fn-numbers",
+   "kind": "mcq",
+   "prompt": "In the rose diagram, what does a bigger wedge mean?",
+   "options": [
+    {
+     "text": "More soldiers died that month",
+     "correct": true
+    },
+    {
+     "text": "That month was much longer",
+     "correct": false,
+     "feedback": "Every month gets the same angle. It is the size of the wedge that changes."
+    },
+    {
+     "text": "The weather was sunnier then",
+     "correct": false,
+     "feedback": "The diagram is about deaths, not the weather."
+    }
+   ],
+   "explain": "The bigger the wedge, the more deaths. You can spot the worst months straight away.",
+   "learn": "In the rose diagram, what does a bigger wedge mean? **More soldiers died that month**\n\nThe bigger the wedge, the more deaths. You can spot the worst months straight away.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "In the rose diagram",
+     "What it shows"
+    ],
+    "rows": [
+     [
+      "each **wedge**",
+      "one month of the war"
+     ],
+     [
+      "a **bigger** wedge",
+      "more soldiers died"
+     ],
+     [
+      "**blue**",
+      "illnesses that could be prevented"
+     ],
+     [
+      "**red**",
+      "wounds from battle"
+     ],
+     [
+      "**black**",
+      "other causes"
+     ]
+    ],
+    "caption": "Florence’s rose diagram (1858) had two roses: the war’s first year, and the year after the hospitals were cleaned up. The second was much smaller."
+   }
+  },
+  {
+   "id": "history.fn.blue",
+   "topic": "history.fn-numbers",
+   "kind": "mcq",
+   "prompt": "In the rose diagram, the blue wedges showed soldiers who died of what?",
+   "options": [
+    {
+     "text": "Illnesses that could be stopped",
+     "correct": true
+    },
+    {
+     "text": "Wounds from fighting in battle",
+     "correct": false,
+     "feedback": "Wounds were shown in red, and the red wedges were much smaller."
+    },
+    {
+     "text": "The cold in the winter months",
+     "correct": false,
+     "feedback": "The colours show what the soldiers died of. Blue was for illnesses."
+    }
+   ],
+   "explain": "Blue was for illnesses that cleaner hospitals could have prevented, red was for wounds, and black was for other causes. The blue was by far the biggest.",
+   "learn": "In the rose diagram, the blue wedges showed soldiers who died of what? **Illnesses that could be stopped**\n\nBlue was for illnesses that cleaner hospitals could have prevented, red was for wounds, and black was for other causes. The blue was by far the biggest.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "In the rose diagram",
+     "What it shows"
+    ],
+    "rows": [
+     [
+      "each **wedge**",
+      "one month of the war"
+     ],
+     [
+      "a **bigger** wedge",
+      "more soldiers died"
+     ],
+     [
+      "**blue**",
+      "illnesses that could be prevented"
+     ],
+     [
+      "**red**",
+      "wounds from battle"
+     ],
+     [
+      "**black**",
+      "other causes"
+     ]
+    ],
+    "caption": "Florence’s rose diagram (1858) had two roses: the war’s first year, and the year after the hospitals were cleaned up. The second was much smaller."
+   }
+  },
+  {
+   "id": "history.fn.picture",
+   "topic": "history.fn-numbers",
+   "kind": "mcq",
+   "prompt": "Why did Florence’s picture work better than a long list of numbers?",
+   "options": [
+    {
+     "text": "You can see the problem at a glance",
+     "correct": true
+    },
+    {
+     "text": "Pictures are always more truthful",
+     "correct": false,
+     "feedback": "A picture is only as true as its numbers. Hers were carefully collected."
+    },
+    {
+     "text": "Ministers were not allowed to read",
+     "correct": false,
+     "feedback": "They could read! But busy people understand a clear picture quickly."
+    }
+   ],
+   "explain": "Busy people could see at once that most deaths came from illnesses that could be stopped. It helped persuade them to clean up army hospitals.",
+   "learn": "Why did Florence’s picture work better than a long list of numbers? **You can see the problem at a glance**\n\nBusy people could see at once that most deaths came from illnesses that could be stopped. It helped persuade them to clean up army hospitals."
+  },
+  {
+   "id": "history.fn.tf-chart",
+   "topic": "history.fn-numbers",
+   "kind": "mcq",
+   "prompt": "True or false? Florence invented the very first chart.",
+   "options": [
+    {
+     "text": "True",
+     "correct": false,
+     "feedback": "People drew charts before her. Florence used them brilliantly to change people’s minds."
+    },
+    {
+     "text": "False",
+     "correct": true
+    }
+   ],
+   "explain": "Others had drawn charts like this before, but Florence made hers famous and used it to save lives.",
+   "keepOrder": true,
+   "learn": "True or false? Florence invented the very first chart. **False**\n\nOthers had drawn charts like this before, but Florence made hers famous and used it to save lives."
+  },
+  {
+   "id": "history.fn.rss",
+   "topic": "history.fn-numbers",
+   "kind": "fact",
+   "prompt": "In 1858 Florence was the first woman chosen to join the Statistical Society (now the Royal Statistical Society). What do its members study?",
+   "answer": "numbers and data",
+   "distractors": [
+    "stars and planets",
+    "birds and animals",
+    "rocks and fossils"
+   ],
+   "explain": "Statisticians collect and study numbers to find out what is really happening. Florence was one of the best of her time.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "1858: the year of her rose diagram, and the year she joined the Statistical Society."
+  },
+  {
+   "id": "history.fn.pie",
+   "topic": "history.fn-numbers",
+   "kind": "mcq",
+   "prompt": "This pie chart shows how British soldiers died in the Crimean War. What killed most of them?",
+   "options": [
+    {
+     "text": "Illness",
+     "correct": true
+    },
+    {
+     "text": "Fighting in battle",
+     "correct": false,
+     "feedback": "Look again: the illness slice is much bigger than the fighting slice."
+    },
+    {
+     "text": "Bad weather",
+     "correct": false,
+     "feedback": "The chart shows illness and fighting. Illness is the biggest slice."
+    }
+   ],
+   "explain": "About three out of every four soldiers who died were killed by illness, not by fighting. That is what Florence wanted everyone to see.",
+   "learn": "This pie chart shows how British soldiers died in the Crimean War. What killed most of them? **Illness**\n\nAbout three out of every four soldiers who died were killed by illness, not by fighting. That is what Florence wanted everyone to see.",
+   "visual": {
+    "kind": "maths",
+    "diagram": {
+     "type": "pie",
+     "title": "How British soldiers died in the war",
+     "sectors": [
+      {
+       "label": "illness",
+       "deg": 279
+      },
+      {
+       "label": "fighting",
+       "deg": 81
+      }
+     ]
+    },
+    "caption": "About 16,000 died of illness. About 5,000 were killed in battle or died of their wounds. So roughly 3 out of every 4 died of illness.",
+    "question": true
+   }
+  },
+  {
+   "id": "history.fn.home",
+   "topic": "history.fn-later",
+   "kind": "mcq",
+   "prompt": "When Florence came home from the war, what did she do?",
+   "options": [
+    {
+     "text": "Kept working to improve hospitals",
+     "correct": true
+    },
+    {
+     "text": "Retired and never worked again",
+     "correct": false,
+     "feedback": "She worked for over 40 more years!"
+    },
+    {
+     "text": "Became the Queen of England",
+     "correct": false,
+     "feedback": "Queen Victoria was the queen! Florence did meet her, though."
+    }
+   ],
+   "explain": "She came home quietly, using a false name to avoid the crowds. Then she got straight back to work.",
+   "learn": "When Florence came home from the war, what did she do? **Kept working to improve hospitals**\n\nShe came home quietly, using a false name to avoid the crowds. Then she got straight back to work."
+  },
+  {
+   "id": "history.fn.fund",
+   "topic": "history.fn-later",
+   "kind": "fact",
+   "prompt": "People in Britain gave money to thank Florence. What did she use it for?",
+   "answer": "a school to train nurses",
+   "distractors": [
+    "a big house for herself",
+    "a fleet of new ships",
+    "a statue of herself"
+   ],
+   "explain": "The money, called the Nightingale Fund, paid for the Nightingale Training School for nurses.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.thomas",
+   "topic": "history.fn-later",
+   "kind": "fact",
+   "prompt": "Florence’s nursing school opened at which London hospital?",
+   "answer": "St Thomas’ Hospital",
+   "distractors": [
+    "Great Ormond Street",
+    "the Tower of London",
+    "Buckingham Palace"
+   ],
+   "explain": "St Thomas’ is beside the River Thames, opposite the Houses of Parliament. Nurses are still trained in her name today, at King’s College London.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.school-year",
+   "topic": "history.fn-later",
+   "kind": "fact",
+   "prompt": "In which year did the Nightingale Training School for nurses open?",
+   "answer": "1860",
+   "distractors": [
+    "1066",
+    "1960",
+    "1820"
+   ],
+   "explain": "It opened on 9 July 1860. Its nurses went on to start nursing schools in other places, all over the world.",
+   "formats": [
+    "choice"
+   ],
+   "feedback": {
+    "1820": "That was the year Florence was born."
+   }
+  },
+  {
+   "id": "history.fn.notes",
+   "topic": "history.fn-later",
+   "kind": "fact",
+   "prompt": "In 1859 Florence wrote a famous book about caring for the sick. What was it called?",
+   "answer": "Notes on Nursing",
+   "distractors": [
+    "Nurses in Space",
+    "The Lamp Book",
+    "Hospital Jokes"
+   ],
+   "explain": "It was written for ordinary people caring for their families at home. It is about fresh air, light, warmth, clean water, good food and quiet.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.advice",
+   "topic": "history.fn-later",
+   "kind": "mcq",
+   "prompt": "Which piece of advice is in _Notes on Nursing_?",
+   "options": [
+    {
+     "text": "Open windows to let in fresh air",
+     "correct": true
+    },
+    {
+     "text": "Keep the curtains shut all day",
+     "correct": false,
+     "feedback": "Florence thought light was good for sick people."
+    },
+    {
+     "text": "Never wash a patient’s sheets",
+     "correct": false,
+     "feedback": "She thought cleanliness was vital!"
+    }
+   ],
+   "explain": "Florence believed that fresh air, light and cleanliness were vital for getting well.",
+   "learn": "Which piece of advice is in _Notes on Nursing_? **Open windows to let in fresh air**\n\nFlorence believed that fresh air, light and cleanliness were vital for getting well."
+  },
+  {
+   "id": "history.fn.letters",
+   "topic": "history.fn-later",
+   "kind": "mcq",
+   "prompt": "Florence was often ill for the rest of her life. How did she keep working?",
+   "options": [
+    {
+     "text": "She wrote letters from her bed",
+     "correct": true
+    },
+    {
+     "text": "She stopped working altogether",
+     "correct": false,
+     "feedback": "She never stopped! She worked from her bed."
+    },
+    {
+     "text": "She sent her pet owl with messages",
+     "correct": false,
+     "feedback": "Athena was a pet, not a messenger!"
+    }
+   ],
+   "explain": "She wrote thousands of letters and reports to ministers, doctors and nurses, many of them from her bed. Lots of them still survive.",
+   "learn": "Florence was often ill for the rest of her life. How did she keep working? **She wrote letters from her bed**\n\nShe wrote thousands of letters and reports to ministers, doctors and nurses, many of them from her bed. Lots of them still survive."
+  },
+  {
+   "id": "history.fn.merit",
+   "topic": "history.fn-later",
+   "kind": "fact",
+   "prompt": "In 1907 Florence became the first woman to be given a special honour by the King. What was it?",
+   "answer": "the Order of Merit",
+   "distractors": [
+    "the Victoria Cross",
+    "a gold medal for running",
+    "the Crown Jewels"
+   ],
+   "explain": "King Edward VII gave her the Order of Merit, for great service to the country. She was 87.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.died",
+   "topic": "history.fn-later",
+   "kind": "fact",
+   "prompt": "Florence Nightingale died in 1910. How old was she?",
+   "answer": "90",
+   "distractors": [
+    "34",
+    "60",
+    "100"
+   ],
+   "explain": "She was born in 1820 and died on 13 August 1910, so she was 90. She is buried near her family’s home at East Wellow in Hampshire.",
+   "formats": [
+    "choice"
+   ],
+   "hook": "1820 to 1910: count on 90 years.",
+   "feedback": {
+    "34": "She was 34 when she went to Scutari. She lived much longer."
+   }
+  },
+  {
+   "id": "history.fn.nurses-day",
+   "topic": "history.fn-later",
+   "kind": "mcq",
+   "prompt": "International Nurses Day is on 12 May every year. Why that date?",
+   "options": [
+    {
+     "text": "It is Florence’s birthday",
+     "correct": true
+    },
+    {
+     "text": "It is the day the war ended",
+     "correct": false,
+     "feedback": "The war ended in March 1856. 12 May is a birthday!"
+    },
+    {
+     "text": "It is the first day of spring",
+     "correct": false,
+     "feedback": "Spring starts in March. 12 May is a birthday!"
+    }
+   ],
+   "explain": "Nurses all over the world remember her and celebrate their work on her birthday.",
+   "learn": "International Nurses Day is on 12 May every year. Why that date? **It is Florence’s birthday**\n\nNurses all over the world remember her and celebrate their work on her birthday."
+  },
+  {
+   "id": "history.fn.banknote",
+   "topic": "history.fn-later",
+   "kind": "mcq",
+   "prompt": "How was Florence remembered on British money?",
+   "options": [
+    {
+     "text": "Her picture was on the £10 note",
+     "correct": true
+    },
+    {
+     "text": "She designed the very first coins",
+     "correct": false,
+     "feedback": "Coins are much older than that: thousands of years old."
+    },
+    {
+     "text": "Her lamp is on every penny",
+     "correct": false,
+     "feedback": "Not the penny: she was on the £10 note."
+    }
+   ],
+   "explain": "From 1975 to 1994, the Bank of England £10 note showed Florence and a picture of her at Scutari.",
+   "learn": "How was Florence remembered on British money? **Her picture was on the £10 note**\n\nFrom 1975 to 1994, the Bank of England £10 note showed Florence and a picture of her at Scutari."
+  },
+  {
+   "id": "history.fn.later-order",
+   "topic": "history.fn-later",
+   "kind": "order",
+   "prompt": "Put these in order, earliest first.",
+   "items": [
+    "Notes on Nursing is published",
+    "Her nursing school opens",
+    "She gets the Order of Merit",
+    "Florence dies, aged 90"
+   ],
+   "labels": null,
+   "explain": "The book in 1859, the school in 1860, the Order of Merit in 1907, and her death in 1910.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1850,
+    "to": 1930,
+    "set": "britain",
+    "events": [
+     [
+      1858,
+      "Her rose diagram"
+     ],
+     [
+      1859,
+      "Notes on Nursing"
+     ],
+     [
+      1860,
+      "Nursing school opens"
+     ],
+     [
+      1907,
+      "Order of Merit"
+     ],
+     [
+      1910,
+      "Florence dies"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "history.fn.tn-candles",
+   "topic": "history.fn-thennow",
+   "kind": "mcq",
+   "prompt": "Then, now or both? Wards are lit by candles and oil lamps at night.",
+   "options": [
+    {
+     "text": "In Florence’s time",
+     "correct": true
+    },
+    {
+     "text": "In hospitals today",
+     "correct": false,
+     "feedback": "There was no electric light in Florence’s time. Hospitals today have electric lights."
+    },
+    {
+     "text": "Both then and now",
+     "correct": false,
+     "feedback": "There was no electric light in Florence’s time. Hospitals today have electric lights."
+    }
+   ],
+   "explain": "Florence did her night rounds by the light of a lantern. Today the lights come on at the flick of a switch.",
+   "keepOrder": true,
+   "learn": "Then, now or both? Wards are lit by candles and oil lamps at night. **In Florence’s time**\n\nFlorence did her night rounds by the light of a lantern. Today the lights come on at the flick of a switch."
+  },
+  {
+   "id": "history.fn.tn-monitor",
+   "topic": "history.fn-thennow",
+   "kind": "mcq",
+   "prompt": "Then, now or both? Machines beep to check a patient’s heartbeat.",
+   "options": [
+    {
+     "text": "In Florence’s time",
+     "correct": false,
+     "feedback": "Machines like this are modern. In Florence’s time nurses had to watch and listen."
+    },
+    {
+     "text": "In hospitals today",
+     "correct": true
+    },
+    {
+     "text": "Both then and now",
+     "correct": false,
+     "feedback": "Machines like this are modern. In Florence’s time nurses had to watch and listen."
+    }
+   ],
+   "explain": "Today machines called monitors check heartbeats and breathing all the time.",
+   "keepOrder": true,
+   "learn": "Then, now or both? Machines beep to check a patient’s heartbeat. **In hospitals today**\n\nToday machines called monitors check heartbeats and breathing all the time."
+  },
+  {
+   "id": "history.fn.tn-clean",
+   "topic": "history.fn-thennow",
+   "kind": "mcq",
+   "prompt": "Then, now or both? Nurses keep the wards clean and airy.",
+   "options": [
+    {
+     "text": "In Florence’s time",
+     "correct": false,
+     "feedback": "Keeping wards clean was Florence’s big idea, and it still matters today."
+    },
+    {
+     "text": "In hospitals today",
+     "correct": false,
+     "feedback": "Keeping wards clean was Florence’s big idea, and it still matters today."
+    },
+    {
+     "text": "Both then and now",
+     "correct": true
+    }
+   ],
+   "explain": "Florence fought for clean, airy wards, and hospitals today still work hard to stay clean.",
+   "keepOrder": true,
+   "learn": "Then, now or both? Nurses keep the wards clean and airy. **Both then and now**\n\nFlorence fought for clean, airy wards, and hospitals today still work hard to stay clean."
+  },
+  {
+   "id": "history.fn.tn-antibiotics",
+   "topic": "history.fn-thennow",
+   "kind": "mcq",
+   "prompt": "Then, now or both? Medicines called antibiotics kill harmful germs.",
+   "options": [
+    {
+     "text": "In Florence’s time",
+     "correct": false,
+     "feedback": "Antibiotics were discovered long after Florence’s time, in the 1900s."
+    },
+    {
+     "text": "In hospitals today",
+     "correct": true
+    },
+    {
+     "text": "Both then and now",
+     "correct": false,
+     "feedback": "Antibiotics were discovered long after Florence’s time, in the 1900s."
+    }
+   ],
+   "explain": "The first antibiotic, penicillin, was discovered in 1928. In Florence’s time there were no medicines like this.",
+   "keepOrder": true,
+   "learn": "Then, now or both? Medicines called antibiotics kill harmful germs. **In hospitals today**\n\nThe first antibiotic, penicillin, was discovered in 1928. In Florence’s time there were no medicines like this."
+  },
+  {
+   "id": "history.fn.tn-men",
+   "topic": "history.fn-thennow",
+   "kind": "mcq",
+   "prompt": "Then, now or both? Lots of trained nurses are men.",
+   "options": [
+    {
+     "text": "In Florence’s time",
+     "correct": false,
+     "feedback": "In Florence’s time trained nurses were women. Today nurses can be men or women."
+    },
+    {
+     "text": "In hospitals today",
+     "correct": true
+    },
+    {
+     "text": "Both then and now",
+     "correct": false,
+     "feedback": "In Florence’s time trained nurses were women. Today nurses can be men or women."
+    }
+   ],
+   "explain": "Florence’s school trained women. Today both men and women are nurses.",
+   "keepOrder": true,
+   "learn": "Then, now or both? Lots of trained nurses are men. **In hospitals today**\n\nFlorence’s school trained women. Today both men and women are nurses."
+  },
+  {
+   "id": "history.fn.tn-carts",
+   "topic": "history.fn-thennow",
+   "kind": "mcq",
+   "prompt": "Then, now or both? Sick soldiers are carried to hospital in carts pulled by horses.",
+   "options": [
+    {
+     "text": "In Florence’s time",
+     "correct": true
+    },
+    {
+     "text": "In hospitals today",
+     "correct": false,
+     "feedback": "That was then. Today ambulances have engines and flashing lights."
+    },
+    {
+     "text": "Both then and now",
+     "correct": false,
+     "feedback": "That was then. Today ambulances have engines and flashing lights."
+    }
+   ],
+   "explain": "In the Crimea, soldiers were carried in carts, on stretchers or by ship. Today ambulances race to help.",
+   "keepOrder": true,
+   "learn": "Then, now or both? Sick soldiers are carried to hospital in carts pulled by horses. **In Florence’s time**\n\nIn the Crimea, soldiers were carried in carts, on stretchers or by ship. Today ambulances race to help."
+  },
+  {
+   "id": "history.fn.tn-night",
+   "topic": "history.fn-thennow",
+   "kind": "mcq",
+   "prompt": "Then, now or both? Nurses care for patients through the night.",
+   "options": [
+    {
+     "text": "In Florence’s time",
+     "correct": false,
+     "feedback": "Nurses worked at night in Florence’s time, and they still do today."
+    },
+    {
+     "text": "In hospitals today",
+     "correct": false,
+     "feedback": "Nurses worked at night in Florence’s time, and they still do today."
+    },
+    {
+     "text": "Both then and now",
+     "correct": true
+    }
+   ],
+   "explain": "Florence checked on her patients at night, and nurses still work night shifts today.",
+   "keepOrder": true,
+   "learn": "Then, now or both? Nurses care for patients through the night. **Both then and now**\n\nFlorence checked on her patients at night, and nurses still work night shifts today."
+  },
+  {
+   "id": "history.fn.germs",
+   "topic": "history.fn-thennow",
+   "kind": "mcq",
+   "prompt": "Florence thought illness spread through bad, smelly air. What do we know today?",
+   "options": [
+    {
+     "text": "Tiny germs spread many illnesses",
+     "correct": true
+    },
+    {
+     "text": "Smells are the only cause of illness",
+     "correct": false,
+     "feedback": "Bad smells can be a sign of dirt, but germs are what spread many illnesses."
+    },
+    {
+     "text": "Illness is caused by bad luck",
+     "correct": false,
+     "feedback": "Scientists have found the real causes, such as germs."
+    }
+   ],
+   "explain": "Scientists proved that germs cause many illnesses in the years after the war. Florence’s fresh air and cleaning still helped, because they got rid of germs too!",
+   "learn": "Florence thought illness spread through bad, smelly air. What do we know today? **Tiny germs spread many illnesses**\n\nScientists proved that germs cause many illnesses in the years after the war. Florence’s fresh air and cleaning still helped, because they got rid of germs too!",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "In Florence’s time",
+     "Today"
+    ],
+    "rows": [
+     [
+      "Light at night",
+      "candles and lanterns",
+      "electric lights"
+     ],
+     [
+      "Getting to hospital",
+      "carts, stretchers, ships",
+      "ambulances"
+     ],
+     [
+      "Fighting germs",
+      "scrubbing, fresh air",
+      "hand gel, **antibiotics**"
+     ],
+     [
+      "Checking patients",
+      "looking and listening",
+      "looking, listening, **machines**"
+     ],
+     [
+      "Trained nurses",
+      "women",
+      "women **and men**"
+     ]
+    ],
+    "tint": "rows"
+   }
+  },
+  {
+   "id": "history.fn.handgel",
+   "topic": "history.fn-thennow",
+   "kind": "mcq",
+   "prompt": "Why do nurses today clean their hands before and after seeing each patient?",
+   "options": [
+    {
+     "text": "To stop germs spreading",
+     "correct": true
+    },
+    {
+     "text": "To keep their hands warm",
+     "correct": false,
+     "feedback": "It is about germs, not warmth."
+    },
+    {
+     "text": "Because the gel smells nice",
+     "correct": false,
+     "feedback": "It is about stopping germs, not the smell."
+    }
+   ],
+   "explain": "Germs travel on hands. Clean hands are one of the best ways to stop illness spreading in a hospital.",
+   "example": "You do the same when you wash your hands before eating and after using the toilet.",
+   "learn": "Why do nurses today clean their hands before and after seeing each patient? **To stop germs spreading**\n\nGerms travel on hands. Clean hands are one of the best ways to stop illness spreading in a hospital."
+  },
+  {
+   "id": "history.fn.nhs",
+   "topic": "history.fn-thennow",
+   "kind": "fact",
+   "prompt": "In 1948 Britain started a health service that everyone could use without paying at the time. What is it called?",
+   "answer": "the NHS",
+   "distractors": [
+    "the RNLI",
+    "the BBC",
+    "the RAF"
+   ],
+   "explain": "The National Health Service. Its nurses learn skills that go back to Florence’s training school.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.know",
+   "topic": "history.fn-thennow",
+   "kind": "mcq",
+   "prompt": "How do we know what Florence’s hospital was like?",
+   "options": [
+    {
+     "text": "From letters, reports and pictures",
+     "correct": true
+    },
+    {
+     "text": "From her videos on the internet",
+     "correct": false,
+     "feedback": "There was no internet or video then!"
+    },
+    {
+     "text": "From people alive today who saw it",
+     "correct": false,
+     "feedback": "It was over 170 years ago. Nobody who saw it is still alive."
+    }
+   ],
+   "explain": "Florence, the nurses and the soldiers wrote letters. There are newspaper reports, drawings and even some of the first ever photographs taken in a war.",
+   "learn": "How do we know what Florence’s hospital was like? **From letters, reports and pictures**\n\nFlorence, the nurses and the soldiers wrote letters. There are newspaper reports, drawings and even some of the first ever photographs taken in a war."
+  },
+  {
+   "id": "history.fn.painting",
+   "topic": "history.fn-thennow",
+   "kind": "mcq",
+   "prompt": "A painting made years later shows Florence with a teapot-shaped lamp. Why should we be careful with it?",
+   "options": [
+    {
+     "text": "The artist may not have seen her",
+     "correct": true
+    },
+    {
+     "text": "Paintings are always made up",
+     "correct": false,
+     "feedback": "Some paintings are very accurate. But check them against other sources."
+    },
+    {
+     "text": "The colours have all faded",
+     "correct": false,
+     "feedback": "Faded or not, the question is whether the artist really saw her."
+    }
+   ],
+   "explain": "Her real lamp was a Turkish lantern. Historians check pictures against other sources, such as letters and objects kept in museums.",
+   "learn": "A painting made years later shows Florence with a teapot-shaped lamp. Why should we be careful with it? **The artist may not have seen her**\n\nHer real lamp was a Turkish lantern. Historians check pictures against other sources, such as letters and objects kept in museums."
+  },
+  {
+   "id": "history.fn.museum",
+   "topic": "history.fn-thennow",
+   "kind": "fact",
+   "prompt": "Which museum in London looks after a lantern Florence is thought to have used, and her owl Athena?",
+   "answer": "the Florence Nightingale Museum",
+   "distractors": [
+    "the Science Museum",
+    "the Natural History Museum",
+    "London Zoo"
+   ],
+   "explain": "It is at St Thomas’ Hospital, where her nursing school opened. Objects like these are clues to the past.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "history.fn.tn-order",
+   "topic": "history.fn-thennow",
+   "kind": "order",
+   "prompt": "Put these in order, earliest first.",
+   "items": [
+    "Florence arrives at Scutari",
+    "Her nursing school opens",
+    "Penicillin is discovered",
+    "The NHS begins"
+   ],
+   "labels": null,
+   "explain": "Scutari in 1854, the nursing school in 1860, penicillin in 1928 and the NHS in 1948.",
+   "visual": {
+    "kind": "timeline",
+    "from": 1840,
+    "to": 1960,
+    "set": "britain",
+    "events": [
+     [
+      1854,
+      "Scutari"
+     ],
+     [
+      1860,
+      "Nursing school"
+     ],
+     [
+      1928,
+      "Penicillin"
+     ],
+     [
+      1948,
+      "The NHS"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "history.fn.st-rose-1",
+   "topic": "history.fn-stories-2",
+   "kind": "mcq",
+   "prompt": "Why did Florence turn her numbers into a picture?",
+   "options": [
+    {
+     "text": "Busy people did not read long lists",
+     "correct": true
+    },
+    {
+     "text": "She wanted to win an art prize",
+     "correct": false,
+     "feedback": "The story does not mention prizes. Why weren’t people reading her numbers?"
+    },
+    {
+     "text": "She had forgotten how to write",
+     "correct": false,
+     "feedback": "She wrote thousands of letters! Look for what busy people did not do."
+    }
+   ],
+   "explain": "“Long lists of numbers were dull, and busy people did not read them.”",
+   "passage": "The Picture That Changed Minds\n\nFlorence came home from the war in 1856, but she could not stop thinking about the soldiers who had died. Most of them had not been killed in battle. They had died of illnesses that spread in dirty, crowded hospitals.\n\nFlorence was sure that clean hospitals could save thousands of lives. But many important men would not listen.\n\nSo Florence did what she was best at. She collected numbers. Month by month, she counted how many soldiers had died, and why. She worked with a clever doctor called William Farr, who loved numbers as much as she did.\n\nThen she had an idea. Long lists of numbers were dull, and busy people did not read them. What if she turned the numbers into a picture?\n\nShe drew a circle cut into twelve wedges, one for each month, like the petals of a flower. She coloured the deaths from illnesses that could have been prevented in blue. The blue wedges were huge. The red wedges, for deaths from wounds, were much smaller.\n\nAnyone could see the problem at a glance. Her picture helped persuade the government to make army hospitals cleaner and healthier.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-rose-2",
+   "topic": "history.fn-stories-2",
+   "kind": "mcq",
+   "prompt": "The blue wedges were huge. What did that show?",
+   "options": [
+    {
+     "text": "Most deaths could have been prevented",
+     "correct": true
+    },
+    {
+     "text": "Most soldiers died in battle",
+     "correct": false,
+     "feedback": "Battle wounds were the red wedges, and they were much smaller."
+    },
+    {
+     "text": "Florence liked the colour blue",
+     "correct": false,
+     "feedback": "The colours stand for causes of death. Blue was for illnesses."
+    }
+   ],
+   "explain": "Blue was for deaths from illnesses that could have been prevented, and the blue wedges were by far the biggest.",
+   "passage": "The Picture That Changed Minds\n\nFlorence came home from the war in 1856, but she could not stop thinking about the soldiers who had died. Most of them had not been killed in battle. They had died of illnesses that spread in dirty, crowded hospitals.\n\nFlorence was sure that clean hospitals could save thousands of lives. But many important men would not listen.\n\nSo Florence did what she was best at. She collected numbers. Month by month, she counted how many soldiers had died, and why. She worked with a clever doctor called William Farr, who loved numbers as much as she did.\n\nThen she had an idea. Long lists of numbers were dull, and busy people did not read them. What if she turned the numbers into a picture?\n\nShe drew a circle cut into twelve wedges, one for each month, like the petals of a flower. She coloured the deaths from illnesses that could have been prevented in blue. The blue wedges were huge. The red wedges, for deaths from wounds, were much smaller.\n\nAnyone could see the problem at a glance. Her picture helped persuade the government to make army hospitals cleaner and healthier.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-rose-3",
+   "topic": "history.fn-stories-2",
+   "kind": "mcq",
+   "prompt": "How do you know Florence did not give up when important men would not listen?",
+   "options": [
+    {
+     "text": "She collected numbers to prove it",
+     "correct": true
+    },
+    {
+     "text": "She went back to the war",
+     "correct": false,
+     "feedback": "She was at home in Britain. Look at what she did next."
+    },
+    {
+     "text": "She stopped talking about hospitals",
+     "correct": false,
+     "feedback": "The opposite! Look at what she did next."
+    }
+   ],
+   "explain": "“So Florence did what she was best at. She collected numbers.”",
+   "passage": "The Picture That Changed Minds\n\nFlorence came home from the war in 1856, but she could not stop thinking about the soldiers who had died. Most of them had not been killed in battle. They had died of illnesses that spread in dirty, crowded hospitals.\n\nFlorence was sure that clean hospitals could save thousands of lives. But many important men would not listen.\n\nSo Florence did what she was best at. She collected numbers. Month by month, she counted how many soldiers had died, and why. She worked with a clever doctor called William Farr, who loved numbers as much as she did.\n\nThen she had an idea. Long lists of numbers were dull, and busy people did not read them. What if she turned the numbers into a picture?\n\nShe drew a circle cut into twelve wedges, one for each month, like the petals of a flower. She coloured the deaths from illnesses that could have been prevented in blue. The blue wedges were huge. The red wedges, for deaths from wounds, were much smaller.\n\nAnyone could see the problem at a glance. Her picture helped persuade the government to make army hospitals cleaner and healthier.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-rose-4",
+   "topic": "history.fn-stories-2",
+   "kind": "mcq",
+   "prompt": "What does “at a glance” mean?",
+   "options": [
+    {
+     "text": "Straight away, with one quick look",
+     "correct": true
+    },
+    {
+     "text": "After reading for a very long time",
+     "correct": false,
+     "feedback": "The point of her picture was that it was quick to understand."
+    },
+    {
+     "text": "Only by using a magnifying glass",
+     "correct": false,
+     "feedback": "A glance is a quick look, with just your eyes."
+    }
+   ],
+   "explain": "A glance is a quick look. Her picture was easy to understand straight away.",
+   "passage": "The Picture That Changed Minds\n\nFlorence came home from the war in 1856, but she could not stop thinking about the soldiers who had died. Most of them had not been killed in battle. They had died of illnesses that spread in dirty, crowded hospitals.\n\nFlorence was sure that clean hospitals could save thousands of lives. But many important men would not listen.\n\nSo Florence did what she was best at. She collected numbers. Month by month, she counted how many soldiers had died, and why. She worked with a clever doctor called William Farr, who loved numbers as much as she did.\n\nThen she had an idea. Long lists of numbers were dull, and busy people did not read them. What if she turned the numbers into a picture?\n\nShe drew a circle cut into twelve wedges, one for each month, like the petals of a flower. She coloured the deaths from illnesses that could have been prevented in blue. The blue wedges were huge. The red wedges, for deaths from wounds, were much smaller.\n\nAnyone could see the problem at a glance. Her picture helped persuade the government to make army hospitals cleaner and healthier.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-rose-5",
+   "topic": "history.fn-stories-2",
+   "kind": "mcq",
+   "prompt": "What happened because of Florence’s picture?",
+   "options": [
+    {
+     "text": "Army hospitals were made cleaner",
+     "correct": true
+    },
+    {
+     "text": "The war started all over again",
+     "correct": false,
+     "feedback": "The war was over. Read the last sentence."
+    },
+    {
+     "text": "Everyone forgot about the soldiers",
+     "correct": false,
+     "feedback": "The opposite! Read the last sentence."
+    }
+   ],
+   "explain": "“Her picture helped persuade the government to make army hospitals cleaner and healthier.”",
+   "passage": "The Picture That Changed Minds\n\nFlorence came home from the war in 1856, but she could not stop thinking about the soldiers who had died. Most of them had not been killed in battle. They had died of illnesses that spread in dirty, crowded hospitals.\n\nFlorence was sure that clean hospitals could save thousands of lives. But many important men would not listen.\n\nSo Florence did what she was best at. She collected numbers. Month by month, she counted how many soldiers had died, and why. She worked with a clever doctor called William Farr, who loved numbers as much as she did.\n\nThen she had an idea. Long lists of numbers were dull, and busy people did not read them. What if she turned the numbers into a picture?\n\nShe drew a circle cut into twelve wedges, one for each month, like the petals of a flower. She coloured the deaths from illnesses that could have been prevented in blue. The blue wedges were huge. The red wedges, for deaths from wounds, were much smaller.\n\nAnyone could see the problem at a glance. Her picture helped persuade the government to make army hospitals cleaner and healthier.",
+   "passageSource": "A story written for this app, based on true events"
+  },
+  {
+   "id": "history.fn.st-museum-1",
+   "topic": "history.fn-stories-2",
+   "kind": "mcq",
+   "prompt": "How was the real lantern different from the lamp in Ellie’s storybook?",
+   "options": [
+    {
+     "text": "It was a plain folding lantern",
+     "correct": true
+    },
+    {
+     "text": "It was made of shiny, solid gold",
+     "correct": false,
+     "feedback": "It was “not shiny”. Read that part again."
+    },
+    {
+     "text": "It had an electric bulb",
+     "correct": false,
+     "feedback": "A candle had glowed inside it."
+    }
+   ],
+   "explain": "The storybook lamp was shiny, but the real one was a plain folding Turkish lantern with a candle.",
+   "passage": "Ellie’s Visit to the Museum\n\nEllie’s grandma had been a nurse for forty years, so for Ellie’s seventh birthday they went to the Florence Nightingale Museum in London.\n\nThe first thing Ellie saw was a lantern. It was not shiny like the lamp in her storybook. It was a plain folding Turkish lantern, and once a candle had glowed inside it.\n\n“Florence carried a lantern like this round the wards at night,” said Grandma.\n\nNext they saw a little owl in a glass case. “That’s Athena,” said Grandma. “Florence rescued her in Greece and carried her about in her pocket.”\n\nEllie giggled. Then she stopped beside some old letters with spidery handwriting. “Did Florence write these?”\n\n“Yes. She wrote thousands of letters. That’s one way we know so much about her.”\n\nOn the way out, they walked through the hospital. Outside a ward, a nurse in a blue uniform was rubbing gel on his hands before he went to see a patient.\n\n“Look, Grandma,” said Ellie. “He’s doing what Florence wanted. Keeping everything clean!”\n\nGrandma smiled. “Lots of things have changed since Florence’s time,” she said, “but caring for people hasn’t.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "history.fn.st-museum-2",
+   "topic": "history.fn-stories-2",
+   "kind": "mcq",
+   "prompt": "According to Grandma, how do we know so much about Florence?",
+   "options": [
+    {
+     "text": "From her many letters",
+     "correct": true
+    },
+    {
+     "text": "From her video diaries",
+     "correct": false,
+     "feedback": "There were no video cameras in Florence’s time."
+    },
+    {
+     "text": "From Grandma’s nursing days",
+     "correct": false,
+     "feedback": "Grandma was born long after Florence died. Look at what she says about the letters."
+    }
+   ],
+   "explain": "“She wrote thousands of letters. That’s one way we know so much about her.”",
+   "passage": "Ellie’s Visit to the Museum\n\nEllie’s grandma had been a nurse for forty years, so for Ellie’s seventh birthday they went to the Florence Nightingale Museum in London.\n\nThe first thing Ellie saw was a lantern. It was not shiny like the lamp in her storybook. It was a plain folding Turkish lantern, and once a candle had glowed inside it.\n\n“Florence carried a lantern like this round the wards at night,” said Grandma.\n\nNext they saw a little owl in a glass case. “That’s Athena,” said Grandma. “Florence rescued her in Greece and carried her about in her pocket.”\n\nEllie giggled. Then she stopped beside some old letters with spidery handwriting. “Did Florence write these?”\n\n“Yes. She wrote thousands of letters. That’s one way we know so much about her.”\n\nOn the way out, they walked through the hospital. Outside a ward, a nurse in a blue uniform was rubbing gel on his hands before he went to see a patient.\n\n“Look, Grandma,” said Ellie. “He’s doing what Florence wanted. Keeping everything clean!”\n\nGrandma smiled. “Lots of things have changed since Florence’s time,” she said, “but caring for people hasn’t.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "history.fn.st-museum-3",
+   "topic": "history.fn-stories-2",
+   "kind": "mcq",
+   "prompt": "Why did Ellie say the nurse was “doing what Florence wanted”?",
+   "options": [
+    {
+     "text": "He was keeping things clean",
+     "correct": true
+    },
+    {
+     "text": "He was carrying a lantern",
+     "correct": false,
+     "feedback": "He was rubbing gel on his hands. Why does that matter?"
+    },
+    {
+     "text": "He was wearing a black dress",
+     "correct": false,
+     "feedback": "He was wearing a blue uniform. Look at what he was doing."
+    }
+   ],
+   "explain": "Cleaning his hands before seeing a patient stops germs spreading, just as Florence wanted hospitals to be clean.",
+   "passage": "Ellie’s Visit to the Museum\n\nEllie’s grandma had been a nurse for forty years, so for Ellie’s seventh birthday they went to the Florence Nightingale Museum in London.\n\nThe first thing Ellie saw was a lantern. It was not shiny like the lamp in her storybook. It was a plain folding Turkish lantern, and once a candle had glowed inside it.\n\n“Florence carried a lantern like this round the wards at night,” said Grandma.\n\nNext they saw a little owl in a glass case. “That’s Athena,” said Grandma. “Florence rescued her in Greece and carried her about in her pocket.”\n\nEllie giggled. Then she stopped beside some old letters with spidery handwriting. “Did Florence write these?”\n\n“Yes. She wrote thousands of letters. That’s one way we know so much about her.”\n\nOn the way out, they walked through the hospital. Outside a ward, a nurse in a blue uniform was rubbing gel on his hands before he went to see a patient.\n\n“Look, Grandma,” said Ellie. “He’s doing what Florence wanted. Keeping everything clean!”\n\nGrandma smiled. “Lots of things have changed since Florence’s time,” she said, “but caring for people hasn’t.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "history.fn.st-museum-4",
+   "topic": "history.fn-stories-2",
+   "kind": "mcq",
+   "prompt": "Grandma says that “caring for people hasn’t” changed. What do you think she means?",
+   "options": [
+    {
+     "text": "Nurses are still kind to patients",
+     "correct": true
+    },
+    {
+     "text": "Hospitals still use candles today",
+     "correct": false,
+     "feedback": "They use electric lights now. What has stayed the same?"
+    },
+    {
+     "text": "Nurses still wear the same uniform",
+     "correct": false,
+     "feedback": "Uniforms have changed. What has stayed the same?"
+    }
+   ],
+   "explain": "Lots has changed, like lights, machines and medicines, but nurses still care for their patients, just as Florence did.",
+   "passage": "Ellie’s Visit to the Museum\n\nEllie’s grandma had been a nurse for forty years, so for Ellie’s seventh birthday they went to the Florence Nightingale Museum in London.\n\nThe first thing Ellie saw was a lantern. It was not shiny like the lamp in her storybook. It was a plain folding Turkish lantern, and once a candle had glowed inside it.\n\n“Florence carried a lantern like this round the wards at night,” said Grandma.\n\nNext they saw a little owl in a glass case. “That’s Athena,” said Grandma. “Florence rescued her in Greece and carried her about in her pocket.”\n\nEllie giggled. Then she stopped beside some old letters with spidery handwriting. “Did Florence write these?”\n\n“Yes. She wrote thousands of letters. That’s one way we know so much about her.”\n\nOn the way out, they walked through the hospital. Outside a ward, a nurse in a blue uniform was rubbing gel on his hands before he went to see a patient.\n\n“Look, Grandma,” said Ellie. “He’s doing what Florence wanted. Keeping everything clean!”\n\nGrandma smiled. “Lots of things have changed since Florence’s time,” she said, “but caring for people hasn’t.”",
+   "passageSource": "A story written for this app"
+  },
+  {
+   "id": "history.fn.st-museum-5",
+   "topic": "history.fn-stories-2",
+   "kind": "mcq",
+   "prompt": "Why do you think Ellie’s grandma wanted to visit this museum?",
+   "options": [
+    {
+     "text": "She had been a nurse herself",
+     "correct": true
+    },
+    {
+     "text": "She wanted to buy a pet owl",
+     "correct": false,
+     "feedback": "Athena is in a glass case, not for sale! Look at the first sentence."
+    },
+    {
+     "text": "She worked at the museum",
+     "correct": false,
+     "feedback": "Nothing says she worked there. Look at the first sentence."
+    }
+   ],
+   "explain": "“Ellie’s grandma had been a nurse for forty years”, so Florence’s story meant a lot to her.",
+   "passage": "Ellie’s Visit to the Museum\n\nEllie’s grandma had been a nurse for forty years, so for Ellie’s seventh birthday they went to the Florence Nightingale Museum in London.\n\nThe first thing Ellie saw was a lantern. It was not shiny like the lamp in her storybook. It was a plain folding Turkish lantern, and once a candle had glowed inside it.\n\n“Florence carried a lantern like this round the wards at night,” said Grandma.\n\nNext they saw a little owl in a glass case. “That’s Athena,” said Grandma. “Florence rescued her in Greece and carried her about in her pocket.”\n\nEllie giggled. Then she stopped beside some old letters with spidery handwriting. “Did Florence write these?”\n\n“Yes. She wrote thousands of letters. That’s one way we know so much about her.”\n\nOn the way out, they walked through the hospital. Outside a ward, a nurse in a blue uniform was rubbing gel on his hands before he went to see a patient.\n\n“Look, Grandma,” said Ellie. “He’s doing what Florence wanted. Keeping everything clean!”\n\nGrandma smiled. “Lots of things have changed since Florence’s time,” she said, “but caring for people hasn’t.”",
+   "passageSource": "A story written for this app"
+  }
+ ]
 }

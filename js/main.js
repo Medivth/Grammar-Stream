@@ -19,6 +19,7 @@ import { paperScreen } from './screens/paper.js';
 import { typingScreen } from './screens/typing.js';
 import { speedScreen } from './screens/speed.js';
 import { handwritingScreen } from './screens/handwriting.js';
+import { installLamps } from './ui/lamp.js';
 
 const root = document.getElementById('app');
 
@@ -131,6 +132,7 @@ async function boot() {
   }
 }
 
+installLamps(app); // a companion's lamp is a switch, on every screen
 // exposed for debugging and browser tests
 window.__app = app;
 boot();

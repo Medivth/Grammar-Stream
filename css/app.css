@@ -633,3 +633,43 @@ pre.code code { border: 0; padding: 0; background: none; font-size: 0.95rem; }
 .book-source { margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--line); }
 .shelf-more summary { cursor: pointer; font-weight: 700; padding: 10px 0; }
 .shelf-more[open] summary { margin-bottom: 8px; }
+
+/* --- the bonus topic: a card near the top of home, and its prize ------------------------- */
+.bonus-card { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr; gap: 6px 16px; align-items: center; margin-top: 16px; padding: 18px 20px; border-radius: 24px; color: #fff;
+  background: radial-gradient(120% 150% at 0% 0%, color-mix(in srgb, var(--bonus) 78%, #ffd166) 0%, color-mix(in srgb, var(--bonus) 86%, #000) 45%, color-mix(in srgb, var(--bonus) 55%, #1a1530) 100%);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--bonus) 35%, transparent); }
+.bonus-card::after { content: ''; position: absolute; left: -50px; top: -70px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); pointer-events: none; }
+.bonus-card > * { position: relative; z-index: 1; }
+@media (min-width: 640px) { .bonus-card { grid-template-columns: 170px 1fr; padding: 20px 24px; } }
+.bonus-art { justify-self: center; width: 130px; }
+.bonus-art .capy { width: 100%; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.25)); }
+@media (min-width: 640px) { .bonus-art { width: 170px; } }
+.bonus-txt .eyebrow { color: rgba(255, 255, 255, 0.85); display: flex; align-items: center; gap: 4px; }
+.bonus-txt .eyebrow svg { width: 16px; height: 16px; }
+.bonus-txt h2 { color: #fff; margin: 2px 0 4px; font-size: 1.55rem; }
+.bonus-txt p { margin: 0; color: rgba(255, 255, 255, 0.92); }
+.bonus-blurb { font-size: 0.95rem; }
+.bonus-progress { display: flex; align-items: center; gap: 10px; margin: 10px 0 6px; font-family: var(--display); font-weight: 700; font-size: 0.9rem; }
+.bonus-bar { flex: 1; max-width: 220px; height: 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.25); overflow: hidden; }
+.bonus-bar i { display: block; height: 100%; border-radius: inherit; background: #ffd166; }
+.bonus-prize { display: flex; gap: 8px; align-items: flex-start; font-weight: 600; }
+.bonus-prize svg { flex: 0 0 18px; width: 18px; height: 18px; margin-top: 2px; color: #ffd166; }
+.bonus-ready { font-size: 0.85rem; opacity: 0.85; margin-top: 4px !important; }
+.btn-bonus { margin-top: 12px; background: #fff; color: color-mix(in srgb, var(--bonus) 80%, #000); border-color: #fff; box-shadow: 0 4px 0 rgba(0, 0, 0, 0.22); font-family: var(--display); font-weight: 800; font-size: 1.05rem; min-height: 52px; padding: 12px 24px; }
+@media (max-width: 639px) { .btn-bonus { width: 100%; } }
+.bonus-card.complete .bonus-bar i { background: #fff; }
+
+.prize { display: grid; gap: 8px; justify-items: center; text-align: center; background: var(--warm-soft); border: 2px solid var(--warm); border-radius: 22px; padding: 16px 18px 20px; }
+.prize-pic { width: 220px; margin: 0 auto; }
+.prize-pic .capy { width: 100%; }
+.prize h2 { margin: 2px 0 4px; }
+.prize .eyebrow { color: var(--warn); }
+.prize-txt p { margin: 0 0 12px; }
+
+/* a companion's lamp is a switch (js/ui/lamp.js) */
+[data-lamp][role='button'], .lamp[role='button'], .companion-lamp[role='button'] { cursor: pointer; outline: none; -webkit-tap-highlight-color: transparent; }
+[data-lamp][role='button']:focus-visible, .lamp[role='button']:focus-visible, .companion-lamp[role='button']:focus-visible { filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 3px var(--accent)) drop-shadow(0 0 3px var(--accent)); }
+.lamp-on [data-lamp], .lamp-on .lamp, .lamp-on .companion-lamp { animation: lamp-on 0.5s ease-out; }
+.lamp-off [data-lamp], .lamp-off .lamp, .lamp-off .companion-lamp { animation: lamp-off 0.3s ease-out; }
+@keyframes lamp-on { 0% { filter: brightness(0.75); } 35% { filter: brightness(1.45) drop-shadow(0 0 6px #ffd166); } 100% { filter: none; } }
+@keyframes lamp-off { 0% { filter: brightness(1.25); } 100% { filter: none; } }
