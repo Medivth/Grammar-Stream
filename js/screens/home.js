@@ -191,7 +191,7 @@ function bonusCard(app, rest) {
   const go = () => app.go('#/play/bonus');
   return h('section', { class: `bonus-card${info.complete ? ' complete' : ''}`, style: { '--bonus': subj?.colour || 'var(--accent)' }, 'aria-label': `Bonus topic: ${bp.def.title}` },
     // a picture of the companion with the prize (just a preview: its lamp is not a switch here)
-    h('div', { class: 'bonus-art', 'data-no-lamp': '', 'aria-hidden': 'true' }, capybaraEl({ ...c, wear, accessory: bp.def.prize.at(-1), mood: 'happy', scene: undefined }, 'capy')),
+    h('div', { class: 'bonus-art', 'data-no-lamp': '', 'aria-hidden': 'true' }, capybaraEl({ ...c, wear, accessory: bp.def.prize.at(-1), mood: 'happy', scene: undefined, lit: true }, 'capy')),
     h('div', { class: 'bonus-txt' },
       h('div', { class: 'eyebrow' }, info.complete ? null : icon('star'), info.complete ? info.eyebrow : ` ${info.eyebrow}`),
       h('h2', {}, bp.def.title),

@@ -47,7 +47,7 @@ export const HERO_LOOKS = {
   side: { label: 'Side parting', skin: '#d9a47a', hair: '#231915', style: 'side' },
   buzz: { label: 'Buzz cut', skin: '#5c3a26', hair: '#17110e', style: 'buzz' },
   quiff: { label: 'Brown quiff', skin: '#c98d62', hair: '#3a2419', style: 'quiff' },
-  twists: { label: 'Short twists', skin: '#8d5838', hair: '#2a1a12', style: 'twists' },
+  twists: { label: 'Short coils', skin: '#8d5838', hair: '#2a1a12', style: 'twists' },
 };
 /** The looks for a person companion, and the one to fall back on. */
 export const looksOf = (species) => (species === 'hero' ? HERO_LOOKS : LOOKS);
@@ -691,7 +691,7 @@ function heroBack(kind) {
     case 'cloak': return '<path d="M84 80 Q68 112 64 148 Q100 154 136 148 Q132 112 116 80 Z" fill="#9e1f1f"/><path d="M73 112 Q69 130 70 146 M127 112 Q131 130 130 146" stroke="#7a1414" stroke-width="2.4" fill="none"/>';
     case 'backpack': return '<rect x="77" y="84" width="46" height="36" rx="10" fill="#2f74e8"/>';
     case 'wings': return `<g transform="translate(0 -14)">${lionBody('wings')}</g>`;
-    case 'fairywings': return `<g transform="translate(0 -16)">${lionBody('fairywings')}</g>`;
+    case 'fairywings': return `<g transform="translate(100 84) scale(.78) translate(-100 -106)">${lionBody('fairywings')}</g>`;
     case 'jetpack': return '<g><rect x="72" y="80" width="12" height="30" rx="5" fill="#c7ced6" stroke="#8d96a3" stroke-width="2"/><rect x="116" y="80" width="12" height="30" rx="5" fill="#c7ced6" stroke="#8d96a3" stroke-width="2"/><path d="M73 110 l5 14 l5 -14 Z M117 110 l5 14 l5 -14 Z" fill="#ff8a3d"/><path d="M75.5 110 l2.5 8 l2.5 -8 Z M119.5 110 l2.5 8 l2.5 -8 Z" fill="#ffd166"/></g>';
     default: return '';
   }
@@ -731,7 +731,7 @@ function heroineSVG(L, worn, layer, mood, title, boy = false) {
   const scaled = (slots) => layer(slots).map((a) => `<g transform="${slots[0] === 'face' ? HERO_FACE : HERO_HAT}">${accessory(a, {})}</g>`).join('');
   const shield = hand ? (hand === 'shield' ? `<g transform="translate(129 108) scale(.8) translate(-152 -104)">${accessory('shield', {})}</g>` : `<g transform="translate(129 108) scale(.8)">${SHIELDS[hand]}</g>`) : '';
   const legs = boy
-    ? `<path d="M94 120 V143 M106 120 V143" stroke="${skin}" stroke-width="7" stroke-linecap="round"/><path d="M94 138.5 V143 M106 138.5 V143" stroke="#f4f7ff" stroke-width="7.4"/>${TRAINERS}`
+    ? `<path d="M94 120 V143 M106 120 V143" stroke="${skin}" stroke-width="7" stroke-linecap="round"/><path d="M94 138.5 V143 M106 138.5 V143" stroke="#f4f7ff" stroke-width="7.4"/>${BOOTS[body] || body === 'detective' ? '' : TRAINERS}`
     : `<path d="M94 126 V145 M106 126 V145" stroke="${skin}" stroke-width="6.5" stroke-linecap="round"/>
   <ellipse cx="93" cy="146.6" rx="4.6" ry="2.4" fill="${skin}"/><ellipse cx="107" cy="146.6" rx="4.6" ry="2.4" fill="${skin}"/>
   <path d="M88 149 h10 M102 149 h10" stroke="#7a4a2a" stroke-width="2.2" stroke-linecap="round"/><path d="M90 146.5 L96 144 M104 144 L110 146.5 M94 142 v3 M106 142 v3" stroke="#7a4a2a" stroke-width="1.2" stroke-linecap="round"/>`;
@@ -889,17 +889,19 @@ function boyHair(L, part, top) {
       return '';
     case 'buzz':
       if (part === 'back') return `<ellipse cx="100" cy="45.5" rx="19.6" ry="18" fill="${c}"/>`;
-      if (part === 'front') return `<path d="M81.4 47.5 Q80 28 100 27.6 Q120 28 118.6 47.5 Q117 38.5 100 37.4 Q83 38.5 81.4 47.5 Z" fill="${c}"/><path d="M90 31 Q100 28.6 110 31" stroke="${hi}" stroke-width=".8" fill="none" stroke-dasharray="1 2"/>`;
+      if (part === 'front') return `<path d="M81.4 47.5 Q80 28 100 27.6 Q120 28 118.6 47.5 Q117 38.5 100 37.4 Q83 38.5 81.4 47.5 Z" fill="${c}"/>`;
       return '';
     case 'quiff':
       if (part === 'back') return back;
-      if (part === 'front') return `${top ? `<path d="M87 33 Q87 17 102 16.5 Q114 17 114.5 26 Q108 21.5 99.5 24 Q92 26.5 91 34 Z" fill="${c}"/><path d="M95 21 Q103 18.5 110 21" stroke="${hi}" stroke-width="1" fill="none"/>` : ''}<path d="M80.8 51 Q79 29 93 26.5 Q100 25.5 107 26.5 Q121 29 119.2 51 Q118 41 112 38 Q100 35.5 88 38 Q82 41 80.8 51 Z" fill="${c}"/>`;
+      if (part === 'front') return `${top ? `<path d="M85 36 Q82 21 97 18 Q111 15.5 117 25 Q113 22.5 108 23.5 Q114 27 113 34 Q101 27 85 36 Z" fill="${c}"/><path d="M92 22 Q101 18.5 109 21" stroke="${hi}" stroke-width="1.1" fill="none"/>` : ''}<path d="M80.8 51 Q79 29 93 26.5 Q100 25.5 107 26.5 Q121 29 119.2 51 Q118 41 112 38 Q100 35.5 88 38 Q82 41 80.8 51 Z" fill="${c}"/>`;
       return '';
     case 'twists': {
       if (part === 'back') return back;
       if (part !== 'front') return '';
-      const twists = top ? [84, 89, 94.5, 100, 105.5, 111, 116].map((x) => { const y = n1(37 - 9.5 * Math.sqrt(1 - ((x - 100) / 21) ** 2)); return `<rect x="${n1(x - 2.4)}" y="${n1(y - 6)}" width="4.8" height="10.5" rx="2.4"/>`; }).join('') : '';
-      return `<g fill="${c}"><path d="M81.2 48.5 Q79.6 27.6 100 27 Q120.4 27.6 118.8 48.5 Q117 38.5 100 37.2 Q83 38.5 81.2 48.5 Z"/>${twists}</g>${top ? `<path d="M88.4 24 v4 M99.4 21.6 v4 M110.4 24 v4" stroke="${hi}" stroke-width=".9"/>` : ''}`;
+      // little coils in two rows over a close crop
+      const coil = (a, r, rr) => { const t = (a * Math.PI) / 180; return `<circle cx="${n1(100 + Math.cos(t) * r * 1.05)}" cy="${n1(44 + Math.sin(t) * r)}" r="${rr}"/>`; };
+      const coils = top ? [...range(196, 344, 16).map((a) => coil(a, 18.5, 3.3)), ...range(212, 328, 19).map((a) => coil(a, 13.5, 3.1))].join('') : '';
+      return `<g fill="${c}"><path d="M81.2 48.5 Q79.6 27.6 100 27 Q120.4 27.6 118.8 48.5 Q117 38.5 100 37.2 Q83 38.5 81.2 48.5 Z"/>${coils}</g>${top ? range(212, 328, 38).map((a) => { const t = (a * Math.PI) / 180, x = n1(100 + Math.cos(t) * 14.2), y = n1(44 + Math.sin(t) * 13.5); return `<path d="M${n1(x - 1.4)} ${n1(y - 0.6)} q1.4 -1.4 2.8 0" stroke="${hi}" stroke-width=".8" fill="none"/>`; }).join('') : ''}`;
     }
     default:
       return '';
@@ -939,11 +941,11 @@ const TRAINERS = '<g><ellipse cx="92.4" cy="146.6" rx="5.9" ry="3.3" fill="#f4f7
 KEEP_TOP.add('tiara');
 Object.assign(HEADWEAR, {
   // an iron helmet with a nose guard: real Viking helmets had no horns
-  vikinghelmet: `<g><path d="M28 66 Q28 24 64 24 Q100 24 100 66 Z" fill="#8d96a3"/><path d="M40 36 Q50 29 62 28" stroke="#c7ced6" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M64 25 V62 M30 47 Q64 39 98 47" stroke="#6f7782" stroke-width="4" fill="none"/><path d="M26 60 Q64 51 102 60 L102 68 Q64 59 26 68 Z" fill="#6f7782"/><path d="M60 62 H68 V86 L64 91 L60 86 Z" fill="#6f7782" stroke="#5f6772" stroke-width="1"/>${[[36, 63], [50, 59.5], [78, 59.5], [92, 63], [64, 34]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.8" fill="#c7ced6"/>`).join('')}</g>`,
+  vikinghelmet: `<g><path d="M28 66 Q28 24 64 24 Q100 24 100 66 Z" fill="#8d96a3"/><path d="M40 36 Q50 29 62 28" stroke="#c7ced6" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M64 25 V62 M30 47 Q64 39 98 47" stroke="#6f7782" stroke-width="4" fill="none"/><path d="M26 60 Q64 51 102 60 L102 68 Q64 59 26 68 Z" fill="#6f7782"/><path d="M60 62 H68 V80 L64 84 L60 80 Z" fill="#6f7782" stroke="#5f6772" stroke-width="1"/>${[[36, 63], [50, 59.5], [78, 59.5], [92, 63], [64, 34]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="1.8" fill="#c7ced6"/>`).join('')}</g>`,
   // a samurai's kabuto: a lacquered bowl, laced neck guard, turn-backs and a crescent at the front
   kabuto: `<g><path d="M30 58 Q16 66 12 84 L24 86 Q25 72 34 64 Z M98 58 Q112 66 116 84 L104 86 Q103 72 94 64 Z" fill="#2b2a3a"/><path d="M16 74 L28 71 M13.5 80.5 L25 80 M112 74 L100 71 M114.5 80.5 L103 80" stroke="#c0392b" stroke-width="2"/><path d="M30 62 Q30 24 64 24 Q98 24 98 62 Z" fill="#2b2a3a"/>${[38, 47, 56, 72, 81, 90].map((x) => `<path d="M${x} 59 Q${n1((x + 64) / 2)} 32 64 26" stroke="#4a4960" stroke-width="1.4" fill="none"/>`).join('')}<path d="M27 58 Q64 50 101 58 L101 64 Q64 56 27 64 Z" fill="#d4a64a"/><path d="M28 59 L18 50 L22 66 Z M100 59 L110 50 L106 66 Z" fill="#c0392b" stroke="#d4a64a" stroke-width="1.2" stroke-linejoin="round"/><path d="M46 20 Q64 52 82 20 Q64 40 46 20 Z" fill="#e8c26a" stroke="#b8862a" stroke-width="1"/></g>`,
   // a straw bonnet that frames the face, tied with a ribbon under the chin
-  bonnet: `<g><path d="M18 90 Q12 22 64 18 Q116 22 110 90 L100 90 Q103 34 64 32 Q25 34 28 90 Z" fill="#e8d3a2" stroke="#c9ad6e" stroke-width="1.5"/><path d="M28 88 Q26 36 64 34 Q102 36 100 88" stroke="#f4b6c8" stroke-width="3" fill="none"/><path d="M21 70 Q19 40 40 27 M107 70 Q109 40 88 27" stroke="#c9ad6e" stroke-width="1.2" fill="none"/><path d="M23 88 Q29 112 58 121 M105 88 Q99 112 70 121" stroke="#e5737f" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(64 121)"><path d="M0 0 L-10 -6 L-10 6 Z M0 0 L10 -6 L10 6 Z" fill="#e5737f"/><path d="M-2 2 L-6 12 M2 2 L6 12" stroke="#e5737f" stroke-width="2.4" stroke-linecap="round"/><circle r="3" fill="#c94f5c"/></g>${flower5(97, 30, 4, '#f48fb1')}${flower5(106, 40, 3.2, '#fff')}</g>`,
+  bonnet: `<g><path d="M22 86 Q20 24 64 22 Q108 24 106 86 L97 86 Q98 38 64 36 Q30 38 31 86 Z" fill="#e8d3a2" stroke="#c9ad6e" stroke-width="1.5"/><path d="M31 84 Q30 39 64 37.5 Q98 39 97 84" stroke="#f4b6c8" stroke-width="2.6" fill="none"/><path d="M25 68 Q24 40 42 30 M103 68 Q104 40 86 30" stroke="#c9ad6e" stroke-width="1.2" fill="none"/><path d="M26 84 Q30 104 58 113 M102 84 Q98 104 70 113" stroke="#e5737f" stroke-width="3" fill="none" stroke-linecap="round"/><g transform="translate(64 113)"><path d="M0 0 L-10 -6 L-10 6 Z M0 0 L10 -6 L10 6 Z" fill="#e5737f"/><path d="M-2 2 L-6 12 M2 2 L6 12" stroke="#e5737f" stroke-width="2.4" stroke-linecap="round"/><circle r="3" fill="#c94f5c"/></g>${flower5(94, 30, 4, '#f48fb1')}${flower5(102, 40, 3.2, '#fff')}</g>`,
   // Sherlock Holmes's cap: peaks at the front and back, the ear flaps tied up on top
   deerstalker: `<g><path d="M30 58 L19 45 Q23 39 32 42 Z M98 58 L109 45 Q105 39 96 42 Z" fill="#8a6a45" stroke="#6b5034" stroke-width="1"/><path d="M30 62 Q29 26 64 25 Q99 26 98 62 Z" fill="#8a6a45"/><path d="M41 33 V60 M52 28 V60 M64 26 V60 M76 28 V60 M87 33 V60 M33 42 H95 M30 52 H98" stroke="#6b5034" stroke-width="1" opacity=".7"/><path d="M28 58 Q64 50 100 58 L100 63 Q64 55 28 63 Z" fill="#7a5c3b"/><path d="M40 61 Q64 55 88 61 Q86 71 64 73 Q42 71 40 61 Z" fill="#7a5c3b"/><path d="M24 43 Q40 26 61 24.5 M104 43 Q88 26 67 24.5" stroke="#4a3520" stroke-width="1.4" fill="none"/><circle cx="64" cy="24.5" r="3" fill="#4a3520"/></g>`,
   tiara: `<g><path d="M36 58 Q64 48 92 58" stroke="#c7ced6" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M42 55 L45 45 L51 51 L57 41 L64 32 L71 41 L77 51 L83 45 L86 55 Q64 48 42 55 Z" fill="#e6ebf2" stroke="#b9c1cb" stroke-width="1.5" stroke-linejoin="round"/><circle cx="64" cy="43" r="3.6" fill="#f06292"/><circle cx="51" cy="51" r="2.2" fill="#64b5f6"/><circle cx="77" cy="51" r="2.2" fill="#64b5f6"/><circle cx="45" cy="45" r="1.6" fill="#fff"/><circle cx="83" cy="45" r="1.6" fill="#fff"/><circle cx="64" cy="32" r="2" fill="#fff"/></g>`,
@@ -961,7 +963,7 @@ Object.assign(HOLD, {
 // inside; it hangs from its handle at (0, 0)
 function oilLamp(lit = LIT) {
   const paper = lit ? '#ffe08a' : '#efe6d2', pleat = lit ? '#eaa73c' : '#cdbf9f';
-  return `<g class="companion-lamp" data-lamp="oillamp" data-lit="${lit ? 1 : 0}">${lit ? '<circle cy="14" r="21" fill="#ffc84a" opacity=".18"/><circle cy="14" r="12.5" fill="#ffd36b" opacity=".3"/>' : ''}<path d="M-3.6 4.5 Q-3.6 -1.2 0 -1.2 Q3.6 -1.2 3.6 4.5" stroke="#8a6a40" stroke-width="1.6" fill="none"/><path d="M-4.6 4 H4.6 L6 7.5 H-6 Z" fill="#b8862a"/><rect x="-5.6" y="7" width="11.2" height="14" rx="2" fill="${paper}" stroke="${pleat}" stroke-width=".8"/>${[9.5, 12, 14.5, 17, 19.5].map((y) => `<path d="M-5.6 ${y} Q0 ${n1(y + 0.9)} 5.6 ${y}" stroke="${pleat}" stroke-width=".8" fill="none"/>`).join('')}${lit ? '<path d="M0 10.2 Q2.3 13.3 0 16 Q-2.3 13.3 0 10.2 Z" fill="#ff8a3d" opacity=".85"/><ellipse cy="14.2" rx="1" ry="1.6" fill="#fff6c9"/>' : '<rect x="-1.3" y="13" width="2.6" height="6" fill="#d8ccb2"/>'}<path d="M-6 21 H6 L4.8 24 H-4.8 Z" fill="#b8862a"/><rect x="-9" y="-3" width="18" height="29" fill="#fff" fill-opacity="0"/></g>`;
+  return `<g class="companion-lamp" data-lamp="oillamp" data-lit="${lit ? 1 : 0}">${lit ? '<circle cy="14" r="24" fill="#ffc84a" opacity=".16"/><circle cy="14" r="16" fill="#ffd36b" opacity=".24"/><circle cy="14" r="10" fill="#fff0a8" opacity=".35"/>' : ''}<path d="M-3.6 4.5 Q-3.6 -1.2 0 -1.2 Q3.6 -1.2 3.6 4.5" stroke="#8a6a40" stroke-width="1.6" fill="none"/><path d="M-4.6 4 H4.6 L6 7.5 H-6 Z" fill="#b8862a"/><rect x="-5.6" y="7" width="11.2" height="14" rx="2" fill="${paper}" stroke="${pleat}" stroke-width=".8"/>${[9.5, 12, 14.5, 17, 19.5].map((y) => `<path d="M-5.6 ${y} Q0 ${n1(y + 0.9)} 5.6 ${y}" stroke="${pleat}" stroke-width=".8" fill="none"/>`).join('')}${lit ? '<path d="M0 10.2 Q2.3 13.3 0 16 Q-2.3 13.3 0 10.2 Z" fill="#ff8a3d" opacity=".85"/><ellipse cy="14.2" rx="1" ry="1.6" fill="#fff6c9"/>' : '<rect x="-1.3" y="13" width="2.6" height="6" fill="#d8ccb2"/>'}<path d="M-6 21 H6 L4.8 24 H-4.8 Z" fill="#b8862a"/><rect x="-9" y="-3" width="18" height="29" fill="#fff" fill-opacity="0"/></g>`;
 }
 Object.defineProperty(HOLD, 'oillamp', { get: () => oilLamp(), enumerable: true });
 Object.assign(CAPY_HOLD, { laserblue: 'translate(114 138) rotate(-8)', lasergreen: 'translate(114 138) rotate(-8)', laserred: 'translate(114 138) rotate(-8)', laserpurple: 'translate(114 138) rotate(-8)', oillamp: 'translate(122 124)' });
@@ -1043,7 +1045,7 @@ Object.assign(SUITS, {
   tudorgown: {
     capy: () => `<g>${cloth('#8e1f2f', 132)}<path d="M110 98 L128 98 L138 138 Q119 142 100 138 Z" fill="#e0b13a"/>${forepartDots(119, 106)}<path d="${backLine(4)}" stroke="#f4ead0" stroke-width="2.6" fill="none" stroke-dasharray=".1 4.4" stroke-linecap="round"/>${hemLine(130, '#e0b13a', 2.4)}</g>`,
     lion: () => `<g><path d="M76 102 Q100 96 124 102 L134 145 Q100 150 66 145 Z" fill="#8e1f2f"/><path d="M100 104 L113 147 Q100 148.6 87 147 Z" fill="#e0b13a"/>${forepartDots(100, 112)}<path d="M77 104 Q100 109 123 104" stroke="#f4ead0" stroke-width="2.4" fill="none" stroke-dasharray=".1 3.6" stroke-linecap="round"/><path d="M66.5 143 Q100 148 133.5 143" stroke="#e0b13a" stroke-width="2" fill="none"/></g>`,
-    heroine: () => `${sleeves('#8e1f2f', true)}<path d="M72.5 99 Q69 106 70 111 L85 111 Q84 106 83.5 101 Z M127.5 99 Q131 106 130 111 L115 111 Q116 106 116.5 101 Z" fill="#e0b13a" stroke="#b8862a" stroke-width=".8"/><path d="M86.5 102 L113.5 102 L126 147 Q100 151 74 147 Z" fill="#8e1f2f"/><path d="M100 103 L111 148 Q100 149.6 89 148 Z" fill="#e0b13a"/>${forepartDots(100, 112)}<path d="${BODICE}" fill="#8e1f2f"/><path d="M91.5 80 H108.5 L108 86 H92 Z" fill="#f4ead0"/><path d="M91.2 80 V86.6 H108.8 V80" stroke="#fff" stroke-width="1.6" fill="none" stroke-dasharray=".1 2.6" stroke-linecap="round"/><path d="M100 104 V117" stroke="#b8862a" stroke-width="1"/><circle cx="100" cy="119" r="2.4" fill="#b8862a"/>`,
+    heroine: () => `${sleeves('#8e1f2f', true)}<path d="M74 100 Q71.5 106 72.5 110.5 L84 110.5 Q83.5 105.5 83 102 Z M126 100 Q128.5 106 127.5 110.5 L116 110.5 Q116.5 105.5 117 102 Z" fill="#e0b13a" stroke="#b8862a" stroke-width=".8"/><path d="M86.5 102 L113.5 102 L126 147 Q100 151 74 147 Z" fill="#8e1f2f"/><path d="M100 103 L111 148 Q100 149.6 89 148 Z" fill="#e0b13a"/>${forepartDots(100, 112)}<path d="${BODICE}" fill="#8e1f2f"/><path d="M91.5 80 H108.5 L108 86 H92 Z" fill="#f4ead0"/><path d="M91.2 80 V86.6 H108.8 V80" stroke="#fff" stroke-width="1.6" fill="none" stroke-dasharray=".1 2.6" stroke-linecap="round"/><path d="M100 104 V117" stroke="#b8862a" stroke-width="1"/><circle cx="100" cy="119" r="2.4" fill="#b8862a"/>`,
   },
   // the high-waisted white muslin of Jane Austen's day
   regency: {
@@ -1205,7 +1207,7 @@ function mountedSVG(id, species, opts, fit) {
 }
 
 /** A head-and-shoulders picture of one of a person's looks, for the picker. */
-export const lookThumb = (look, species = HERO_LOOKS[look] && !LOOKS[look] ? 'hero' : 'heroine') => capybaraSVG({ species, look, mood: 'happy', title: looksOf(species)[look]?.label }).replace('viewBox="0 0 200 160"', 'viewBox="68 4 64 64"');
+export const lookThumb = (look, species = HERO_LOOKS[look] && !LOOKS[look] ? 'hero' : 'heroine') => capybaraSVG({ species, look, mood: 'happy', title: looksOf(species)[look]?.label }).replace('viewBox="0 0 200 160"', species === 'hero' ? 'viewBox="66 2 68 68"' : 'viewBox="68 4 64 64"');
 
 export function capybaraEl(opts, className = 'capy') {
   const wrap = document.createElement('div');

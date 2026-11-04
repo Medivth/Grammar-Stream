@@ -611,7 +611,7 @@ function prizeCelebration(app) {
     h('div', { class: 'prize-txt' },
       h('div', { class: 'eyebrow' }, `Bonus topic: ${bp.def.title}`),
       h('h2', {}, 'You finished the bonus topic!'),
-      h('p', {}, `You won ${bp.def.prizeText}. ${plural ? 'They’re' : 'It’s'} in ${name}’s wardrobe now.${bp.def.prize.some((id) => ['lamp', 'oillamp'].includes(id)) ? ' Tap the lamp to switch it on and off.' : ''}`),
+      h('p', {}, `You won ${bp.def.prizeText}. ${plural ? 'They’re' : 'It’s'} in ${name}’s wardrobe now.${bp.def.prize.some((id) => ['lamp', 'oillamp'].includes(id)) ? (/switch/.test(bp.def.prizeText) ? ' Tap the lamp to try it.' : ' Tap the lamp to switch it on and off.') : ''}`),
       wearIt));
 }
 
