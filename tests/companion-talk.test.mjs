@@ -174,6 +174,7 @@ test('each companion has its moving parts, and stays well formed in every mood a
     } else if (species === 'capybara') {
       assert.equal(count(svg, 'cp-ear'), 1);
       assert.equal(count(svg, 'cp-paw'), 1);
+      assert.equal(count(svg, 'cp-head'), 1, 'and nods hello');
     } else {
       assert.equal(count(svg, 'cp-fig cp-sway'), 1, 'a person shifts her weight');
       assert.equal(count(svg, 'cp-head'), 2, 'the hair behind and the face nod together');

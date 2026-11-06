@@ -390,7 +390,7 @@ export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = '
   ${worn.includes('chariot') ? CAPY_CHARIOT : ''}
   ${draw(['front', 'hand', 'hold', 'beside'])}
   ${draw(['friend'])}
-  <ellipse cx="46" cy="52" rx="8" ry="7" fill="${f.dark}"/>
+  ${pivot('cp-head', 84, 116, `<ellipse cx="46" cy="52" rx="8" ry="7" fill="${f.dark}"/>
   ${pivot('cp-ear', 82, 58, `<ellipse cx="82" cy="52" rx="8" ry="7" fill="${f.dark}"/>`)}
   <rect x="24" y="50" width="80" height="70" rx="32" fill="${f.body}"/>
   <rect x="22" y="80" width="66" height="40" rx="20" fill="${f.light}"/>
@@ -400,7 +400,7 @@ export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = '
   <circle cx="68" cy="96" r="6" fill="#f2a0a0" opacity=".35"/>
   ${blinking(eyes(mood), mood)}
   ${draw(['face'])}
-  ${draw(['head'])}
+  ${draw(['head'])}`)}
   </g>
 </svg>`;
 }

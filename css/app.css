@@ -1016,15 +1016,16 @@ div.quest-row { box-shadow: none; }
 .alive .cp-tail { animation: cp-swish 5.3s ease-in-out infinite; }
 .alive .cp-ear { animation: cp-twitch 7.3s ease-in-out 1.5s infinite; }
 .alive .cp-arm { animation: cp-wave-arm 17s ease-in-out 5s infinite; }
-.alive .cp-paw { animation: cp-wave-paw 17s ease-in-out 5s infinite; }
+.alive .cp-paw { animation: cp-wave-paw 15s ease-in-out 5s infinite; } /* in step with the capybara's nod */
 .alive .cp-head { animation: cp-hello 15s ease-in-out 5s infinite; }
 @keyframes cp-breathe { 0%, 100% { transform: none; } 50% { transform: scale(1.012, 1.022); } }
 @keyframes cp-sway { 0%, 50%, 100% { transform: none; } 25% { transform: rotate(-1.3deg) scaleY(1.015); } 75% { transform: rotate(1.3deg) scaleY(1.015); } }
 @keyframes cp-blink { 0%, 93%, 98%, 100% { transform: none; } 95.5% { transform: scaleY(0.1); } }
 @keyframes cp-swish { 0%, 55%, 100% { transform: none; } 65% { transform: rotate(-10deg); } 76% { transform: rotate(5deg); } 87% { transform: rotate(-6deg); } }
 @keyframes cp-twitch { 0%, 86%, 97%, 100% { transform: none; } 89% { transform: rotate(-16deg); } 91.5% { transform: rotate(4deg); } 94% { transform: rotate(-10deg); } }
-@keyframes cp-wave-arm { 0%, 8%, 100% { transform: none; } 1.5%, 6.3% { transform: rotate(-70deg); } 2.7%, 5.1% { transform: rotate(-92deg); } 3.9% { transform: rotate(-66deg); } }
-@keyframes cp-wave-paw { 0%, 8%, 100% { transform: none; } 1.5%, 3.9%, 6.3% { transform: rotate(50deg); } 2.7%, 5.1% { transform: rotate(30deg); } }
+/* the lion's arm stretches as it lifts, so the paw clears his mane */
+@keyframes cp-wave-arm { 0%, 8%, 100% { transform: none; } 1.5%, 6.3% { transform: rotate(-82deg) scale(1.1, 1.4); } 2.7%, 5.1% { transform: rotate(-104deg) scale(1.1, 1.4); } 3.9% { transform: rotate(-78deg) scale(1.1, 1.4); } }
+@keyframes cp-wave-paw { 0%, 8%, 100% { transform: none; } 1.5%, 3.9%, 6.3% { transform: rotate(68deg); } 2.7%, 5.1% { transform: rotate(42deg); } }
 @keyframes cp-hello { 0%, 7%, 100% { transform: none; } 2% { transform: rotate(-7deg); } 4.5% { transform: rotate(5deg); } }
 
 /* tricks: always the next in order (js/ui/alive.js), on the companion's drawing, not its frame */
@@ -1038,8 +1039,8 @@ div.quest-row { box-shadow: none; }
 @keyframes cp-jump { 0%, 100% { transform: none; } 15% { transform: scale(1.06, 0.9); } 45% { transform: translateY(-22%) scale(0.96, 1.05); } 75% { transform: none; } 85% { transform: scale(1.05, 0.94); } }
 @keyframes cp-spin { 0% { transform: none; } 50% { transform: translateY(-8%) rotate(180deg); } 100% { transform: rotate(360deg); } }
 @keyframes cp-dance { 0%, 30%, 60%, 90%, 100% { transform: none; } 15% { transform: translateY(-5%) rotate(-8deg); } 45% { transform: translateY(-5%) rotate(8deg); } 75% { transform: translateY(-5%) rotate(-6deg); } }
-@keyframes cp-arm-trick { 0%, 100% { transform: none; } 18%, 78% { transform: rotate(-70deg); } 33%, 63% { transform: rotate(-92deg); } 48% { transform: rotate(-66deg); } }
-@keyframes cp-paw-trick { 0%, 100% { transform: none; } 18%, 48%, 78% { transform: rotate(50deg); } 33%, 63% { transform: rotate(30deg); } }
+@keyframes cp-arm-trick { 0%, 100% { transform: none; } 18%, 78% { transform: rotate(-82deg) scale(1.1, 1.4); } 33%, 63% { transform: rotate(-104deg) scale(1.1, 1.4); } 48% { transform: rotate(-78deg) scale(1.1, 1.4); } }
+@keyframes cp-paw-trick { 0%, 100% { transform: none; } 18%, 48%, 78% { transform: rotate(68deg); } 33%, 63% { transform: rotate(42deg); } }
 @keyframes cp-nod { 0%, 100% { transform: none; } 20% { transform: rotate(-9deg); } 45% { transform: rotate(7deg); } 70% { transform: rotate(-6deg); } }
 .trick-sparks { position: absolute; left: 50%; top: 28%; width: 0; height: 0; pointer-events: none; z-index: 2; line-height: 0; }
 .trick-sparks i { position: absolute; left: -8px; top: -8px; width: 16px; height: 16px; background: #ffd166; opacity: 0; clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); animation: cp-spark 0.8s ease-out forwards; }
