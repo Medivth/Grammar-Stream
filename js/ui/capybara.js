@@ -239,6 +239,12 @@ export function toggleWear(c, id) {
 
 const star = (cx, cy, r, fill) => `<path d="${Array.from({ length: 10 }, (_, i) => { const a = -Math.PI / 2 + (i * Math.PI) / 5, rr = i % 2 ? r * 0.45 : r; return `${i ? 'L' : 'M'}${(cx + Math.cos(a) * rr).toFixed(1)} ${(cy + Math.sin(a) * rr).toFixed(1)}`; }).join(' ')}Z" fill="${fill}"/>`;
 
+// Parts that move on their own (blinking, a tail, a waving arm: see "living companion" in css/app.css).
+// A CSS transform replaces an element's transform attribute and turns about the local origin, so a
+// moving part is drawn shifted to put its hinge (x, y) at the origin, inside a group that the CSS moves.
+const pivot = (cls, x, y, body) => `<g transform="translate(${x} ${y})"><g class="${cls}"><g transform="translate(${-x} ${-y})">${body}</g></g></g>`;
+const blinking = (eyes, mood) => (mood === 'happy' || mood === 'oops' ? eyes : `<g class="cp-eyes">${eyes}</g>`);
+
 function accessory(kind, f) {
   switch (kind) {
     case 'yuzu':
@@ -371,11 +377,12 @@ export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = '
   const draw = (slots) => layer(slots).filter((a) => a !== 'chariot').map((a) => accessory(a, f)).join('');
   return `<svg viewBox="0 0 200 160" role="img" aria-label="${title || 'Capybara'}" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="108" cy="${worn.includes('chariot') ? 156 : 150}" rx="78" ry="${worn.includes('chariot') ? 4 : 7}" fill="#000" opacity=".08"/>
+  <g class="cp-fig">
   ${draw(['back', 'ride'])}
   <rect x="62" y="122" width="16" height="26" rx="7" fill="${f.dark}"/>
   <rect x="146" y="122" width="16" height="26" rx="7" fill="${f.dark}"/>
   <ellipse cx="118" cy="102" rx="72" ry="42" fill="${f.body}"/>
-  <rect x="80" y="126" width="16" height="22" rx="7" fill="${f.body}"/>
+  ${pivot('cp-paw', 88, 129, `<rect x="80" y="126" width="16" height="22" rx="7" fill="${f.body}"/>`)}
   <rect x="164" y="122" width="15" height="24" rx="7" fill="${f.body}"/>
   <path d="M150 74 q22 6 30 26" stroke="${f.dark}" stroke-width="3" fill="none" opacity=".35" stroke-linecap="round"/>
   ${draw(['body'])}
@@ -384,16 +391,17 @@ export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = '
   ${draw(['front', 'hand', 'hold', 'beside'])}
   ${draw(['friend'])}
   <ellipse cx="46" cy="52" rx="8" ry="7" fill="${f.dark}"/>
-  <ellipse cx="82" cy="52" rx="8" ry="7" fill="${f.dark}"/>
+  ${pivot('cp-ear', 82, 58, `<ellipse cx="82" cy="52" rx="8" ry="7" fill="${f.dark}"/>`)}
   <rect x="24" y="50" width="80" height="70" rx="32" fill="${f.body}"/>
   <rect x="22" y="80" width="66" height="40" rx="20" fill="${f.light}"/>
   <ellipse cx="36" cy="92" rx="3.4" ry="2.4" fill="#3b2a20"/>
   <ellipse cx="50" cy="92" rx="3.4" ry="2.4" fill="#3b2a20"/>
   <path d="M38 104 q6 5 12 0" stroke="#3b2a20" stroke-width="2.4" fill="none" stroke-linecap="round"/>
   <circle cx="68" cy="96" r="6" fill="#f2a0a0" opacity=".35"/>
-  ${eyes(mood)}
+  ${blinking(eyes(mood), mood)}
   ${draw(['face'])}
   ${draw(['head'])}
+  </g>
 </svg>`;
 }
 
@@ -404,13 +412,16 @@ function lionSVG(f, worn, layer, mood, title) {
   const draw = (slots) => layer(slots).filter((a) => a !== 'chariot').map((a) => (['head', 'face'].includes(slotOf(a)) ? `<g transform="${HEAD}">${accessory(a, f)}</g>` : lionBody(a, f))).join('');
   const riding = worn.some((a) => slotOf(a) === 'ride');
   const held = layer(['hold']).map((a) => `<g transform="translate(66 127) scale(.95)">${HOLD[a]}</g><circle cx="67" cy="127" r="5.5" fill="${f.light}"/>`).join('');
+  // the paw waves (it is free unless a shield is on that arm)
+  const waving = (arm) => (layer(['hand']).length ? arm : pivot('cp-arm', 121, 104, arm));
   const mane = Array.from({ length: 14 }, (_, i) => { const t = (i / 14) * Math.PI * 2; return `<circle cx="${(100 + Math.cos(t) * 33).toFixed(1)}" cy="${(64 + Math.sin(t) * 31).toFixed(1)}" r="14"/>`; }).join('');
   return `<svg viewBox="0 0 200 160" role="img" aria-label="${title}" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="100" cy="${riding ? 158 : 151}" rx="${riding ? 52 : 40}" ry="5" fill="#000" opacity=".08"/>
+  <g class="cp-fig">
   ${draw(['back'])}
   ${draw(['ride'])}
-  <path d="M120 132 Q150 136 156 112 Q158 102 150 100" stroke="${f.body}" stroke-width="6" fill="none" stroke-linecap="round"/>
-  <ellipse cx="151" cy="99" rx="7" ry="8" fill="${f.mane}"/>
+  ${pivot('cp-tail', 120, 132, `<path d="M120 132 Q150 136 156 112 Q158 102 150 100" stroke="${f.body}" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="151" cy="99" rx="7" ry="8" fill="${f.mane}"/>`)}
   <rect x="83" y="126" width="14" height="20" rx="6" fill="${f.body}"/>
   <rect x="103" y="126" width="14" height="20" rx="6" fill="${f.body}"/>
   <ellipse cx="89" cy="145" rx="10" ry="4.5" fill="${f.light}"/>
@@ -420,23 +431,24 @@ function lionSVG(f, worn, layer, mood, title) {
   ${draw(['body'])}
   ${worn.includes('chariot') ? UPRIGHT_CHARIOT : ''}
   <path d="M79 104 Q66 116 70 128" stroke="${f.body}" stroke-width="10" fill="none" stroke-linecap="round"/>
-  <path d="M121 104 Q134 116 130 128" stroke="${f.body}" stroke-width="10" fill="none" stroke-linecap="round"/>
   <circle cx="70" cy="129" r="6" fill="${f.light}"/>
-  <circle cx="130" cy="129" r="6" fill="${f.light}"/>
+  ${waving(`<path d="M121 104 Q134 116 130 128" stroke="${f.body}" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <circle cx="130" cy="129" r="6" fill="${f.light}"/>`)}
   ${draw(['front', 'hand', 'beside'])}
   <g fill="${f.mane}">${mane}<circle cx="100" cy="64" r="36"/></g>
   ${held}
   <circle cx="76" cy="38" r="9" fill="${f.body}"/><circle cx="76" cy="38" r="4.5" fill="${f.light}"/>
-  <circle cx="124" cy="38" r="9" fill="${f.body}"/><circle cx="124" cy="38" r="4.5" fill="${f.light}"/>
+  ${pivot('cp-ear', 121, 44, `<circle cx="124" cy="38" r="9" fill="${f.body}"/><circle cx="124" cy="38" r="4.5" fill="${f.light}"/>`)}
   <circle cx="100" cy="66" r="29" fill="${f.body}"/>
   <ellipse cx="100" cy="78" rx="15" ry="10" fill="${f.light}"/>
   <path d="M94 71 h12 q-2 6 -6 7 q-4 -1 -6 -7z" fill="#6b3a2a"/>
   <path d="M100 78 v3 M100 81 q-4 5 -9 2 M100 81 q4 5 9 2" stroke="#6b3a2a" stroke-width="2" fill="none" stroke-linecap="round"/>
   <circle cx="80" cy="74" r="5" fill="#f2a0a0" opacity=".35"/><circle cx="120" cy="74" r="5" fill="#f2a0a0" opacity=".35"/>
-  <g transform="${HEAD}">${eyes(mood)}</g>
+  <g transform="${HEAD}">${blinking(eyes(mood), mood)}</g>
   ${draw(['face'])}
   ${draw(['head'])}
   ${draw(['friend'])}
+  </g>
 </svg>`;
 }
 
@@ -654,7 +666,7 @@ function heroFace(mood, L) {
     brows = 'M87.5 44 q4.5 -2.4 9 0 M103.5 44 q4.5 -2.4 9 0';
     mouth = `<path d="M96.2 61.2 q3.8 2.8 7.6 0" stroke="${lip}" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
   }
-  return `${eyes}<path d="${brows}" stroke="${brow}" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M100 53.5 q1.6 3 -.8 4.4" stroke="${shade(L.skin, 0.78)}" stroke-width="1.1" fill="none" stroke-linecap="round"/><ellipse cx="87.5" cy="58" rx="3.4" ry="2" fill="#f08a8a" opacity=".35"/><ellipse cx="112.5" cy="58" rx="3.4" ry="2" fill="#f08a8a" opacity=".35"/>${mouth}${extra}`;
+  return `${blinking(eyes, mood)}<path d="${brows}" stroke="${brow}" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M100 53.5 q1.6 3 -.8 4.4" stroke="${shade(L.skin, 0.78)}" stroke-width="1.1" fill="none" stroke-linecap="round"/><ellipse cx="87.5" cy="58" rx="3.4" ry="2" fill="#f08a8a" opacity=".35"/><ellipse cx="112.5" cy="58" rx="3.4" ry="2" fill="#f08a8a" opacity=".35"/>${mouth}${extra}`;
 }
 
 // her clothes: the body item, or a plain tunic when nothing is worn there
@@ -738,9 +750,10 @@ function heroineSVG(L, worn, layer, mood, title, boy = false) {
   const hairOf = boy ? boyHair : hair;
   return `<svg viewBox="0 0 200 160" role="img" aria-label="${title}" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="100" cy="${riding ? 158 : 151}" rx="${riding ? 52 : 30}" ry="${riding ? 5 : 4}" fill="#000" opacity=".08"/>
+  <g class="cp-fig cp-sway">
   ${back ? heroBack(back) : ''}
   ${ride ? heroRide(ride) : ''}
-  <g transform="${headT}">${hairOf(L, 'back', top)}</g>
+  ${pivot('cp-head', 100, 70, `<g transform="${headT}">${hairOf(L, 'back', top)}</g>`)}
   ${legs}
   <path d="M85 83 Q78 99 74.5 116" stroke="${skin}" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M115 83 Q122 99 125.5 116" stroke="${skin}" stroke-width="7" fill="none" stroke-linecap="round"/>
   <circle cx="74.5" cy="117.5" r="4.3" fill="${skin}"/><circle cx="125.5" cy="117.5" r="4.3" fill="${skin}"/>
@@ -749,7 +762,7 @@ function heroineSVG(L, worn, layer, mood, title, boy = false) {
   ${back && HERO_OVER[back] ? HERO_OVER[back] : ''}
   ${ride === 'chariot' ? UPRIGHT_CHARIOT : ''}
   ${layer(['front']).map(heroFront).join('')}
-  <g transform="${headT}">
+  ${pivot('cp-head', 100, 70, `<g transform="${headT}">
   <ellipse cx="${boy ? 81.2 : 81.6}" cy="52" rx="${boy ? 3.2 : 2.8}" ry="4.4" fill="${skinD}"/><ellipse cx="${boy ? 118.8 : 118.4}" cy="52" rx="${boy ? 3.2 : 2.8}" ry="4.4" fill="${skinD}"/>
   <path d="${boy ? BOY_FACE : FACE}" fill="${skin}"/>
   ${boy ? boyFace(mood, L) : heroFace(mood, L)}
@@ -757,11 +770,12 @@ function heroineSVG(L, worn, layer, mood, title, boy = false) {
   ${hairOf(L, 'over', top)}
   ${scaled(['face'])}
   ${scaled(['head'])}
-  </g>
+  </g>`)}
   ${hold ? `<g transform="translate(74.5 117.5)">${HOLD[hold]}</g><circle cx="74.5" cy="117.5" r="4.3" fill="${skin}"/><path d="M71 116 h6" stroke="${skinD}" stroke-width="1" stroke-linecap="round"/>` : ''}
   ${shield}
   ${beside === 'lamp' ? `<g transform="translate(158 150) scale(.8)">${deskLamp()}</g>` : ''}
   ${friend ? `<g transform="${FRIEND_AT.heroine}">${FRIENDS[friend]}</g>` : ''}
+  </g>
 </svg>`;
 }
 
@@ -931,7 +945,7 @@ function boyFace(mood, L) {
     mouth = `<path d="M95.6 60.8 q4.4 3.6 8.8 0" stroke="${lip}" stroke-width="1.7" fill="none" stroke-linecap="round"/>`;
   }
   const freckles = L.freckles ? [[85.5, 56.5], [88, 58.4], [86.4, 59.8], [114.5, 56.5], [112, 58.4], [113.6, 59.8]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r=".7" fill="${shade(L.skin, 0.72)}"/>`).join('') : '';
-  return `${eyes}<path d="${brows}" stroke="${brow}" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M100 53.5 q1.8 3 -.8 4.6" stroke="${shade(L.skin, 0.76)}" stroke-width="1.2" fill="none" stroke-linecap="round"/><ellipse cx="87" cy="58.5" rx="3.6" ry="2.1" fill="#f08a8a" opacity=".28"/><ellipse cx="113" cy="58.5" rx="3.6" ry="2.1" fill="#f08a8a" opacity=".28"/>${freckles}${mouth}${extra}`;
+  return `${blinking(eyes, mood)}<path d="${brows}" stroke="${brow}" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M100 53.5 q1.8 3 -.8 4.6" stroke="${shade(L.skin, 0.76)}" stroke-width="1.2" fill="none" stroke-linecap="round"/><ellipse cx="87" cy="58.5" rx="3.6" ry="2.1" fill="#f08a8a" opacity=".28"/><ellipse cx="113" cy="58.5" rx="3.6" ry="2.1" fill="#f08a8a" opacity=".28"/>${freckles}${mouth}${extra}`;
 }
 
 const TEE_AND_SHORTS = `<path d="M84.6 104 L115.4 104 L117 124.5 L102.5 124.5 L100 113 L97.5 124.5 L83 124.5 Z" fill="#2b3a67"/><path d="M100 104 V112" stroke="#1f2b4f" stroke-width="1"/>${sleeves('#e8743a')}<path d="M83 81 Q100 77 117 81 L115.6 107.5 Q100 109.5 84.4 107.5 Z" fill="#e8743a"/><path d="M93 80 Q100 85.5 107 80" stroke="#c75a26" stroke-width="1.8" fill="none"/>${star(100, 94, 5.4, '#ffd166')}<path d="M76.5 94.5 L84.4 96.4 M123.5 94.5 L115.6 96.4" stroke="#c75a26" stroke-width="1.4"/>`;
@@ -1195,13 +1209,16 @@ function mountedSVG(id, species, opts, fit) {
   if (friend) delete wear.friend;
   const worn = Object.values(wear);
   const [k, tx, ty] = M.seat[sp];
-  const rider = capybaraSVG({ ...opts, species: sp, wear }).replace(/^\s*<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '').replace(/<ellipse[^>]*fill="#000" opacity=".08"\/>/, '');
+  const rider = capybaraSVG({ ...opts, species: sp, wear }).replace(/^\s*<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '').replace(/<ellipse[^>]*fill="#000" opacity=".08"\/>/, '')
+    .replace(/class="cp-fig[^"]*"/, 'class="cp-rider"'); // sitting still on the ride (which breathes as one), but still blinking
   const svg = `<svg viewBox="0 0 200 160" role="img" aria-label="${opts.title || SPECIES[sp]}" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="${M.shadow[0]}" cy="${M.shadow[1] + 3}" rx="${M.shadow[2]}" ry="5" fill="#000" opacity=".08"/>
+  <g class="cp-fig">
   ${M.back(sp, f, worn)}
   <g transform="translate(${tx} ${ty})${k === 1 ? '' : ` scale(${k})`}">${rider}</g>
   ${M.front(sp, f, worn)}
   ${friend ? `<g transform="${M.friendAt}">${FRIENDS[friend]}</g>` : ''}
+  </g>
 </svg>`;
   return fit && isPerson(sp) && M.narrow ? svg.replace('viewBox="0 0 200 160"', 'viewBox="30 0 140 160"') : svg;
 }

@@ -33,6 +33,7 @@ export function emptyState(today) {
       tts: true,
       reduceMotion: false,
       readingRung: 1,
+      sounds: null, // answer sounds: null = the course's default (see soundsOn in js/core/juice.js)
     },
     cards: {}, // itemId -> FSRS card
     templates: {}, // "templateId@level" -> { difficulty, attempts }
@@ -52,6 +53,13 @@ export function emptyState(today) {
     typing: { lessons: {}, best: null }, // touch typing: lessons[id] = { wpm, acc }, best = { wpm, acc, day }
     speed: [], // speed reading: { day, passage, wpm, correct, total }
     handwriting: { lessons: {}, days: [] }, // joins: lessons[id] = { day, last, times }, days practised (older saves gain it on first use)
+    family: { reward: null, celebrated: [] }, // the family goal's shared reward (day won) and weeks celebrated (js/core/family.js)
+    notes: [], // from a grown-up: { id, day, at, text, sticker, from, shown, thanked }
+    quests: null, // today's quests: { day, list: [{ id, target? }], celebrated } (see js/core/quests.js)
+    chapters: [], // library chapters read: { day, book, ch }
+    challenges: [], // weekly challenge runs: { week, day, correct, answered, ms, finished, times }
+    collection: {}, // collectible cards: topicId -> day its card was earned (kept even if the topic slips; js/core/cards.js)
+    cardSets: {}, // card sets completed: setId -> day (their prizes stay won)
     plan: null, // the in-progress day plan
     lastBackup: null,
   };

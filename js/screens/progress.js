@@ -4,13 +4,18 @@ import { h, s, mount, toast } from '../ui/dom.js';
 import { icon } from '../ui/icons.js';
 import { capybaraEl, capybaraSVG, ACCESSORIES, WARDROBE_GROUPS, wardrobeGroup, slotOf, wornList, toggleWear } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
-import { sceneSVG, sceneStatus, companionEl } from '../ui/scenes.js';
+import { sceneSVG, sceneStatus, SCENE_BY_ID } from '../ui/scenes.js';
+import { hasFamilyReward, FAMILY_SCENE } from '../core/family.js';
 import { SUBJECTS, COURSE } from '../core/subjects.js';
 import { learnedCount, subjectStats, timelineStatus, placesStatus, milestones, unlockedAccessories, milestoneDefs, wardrobeAccessories, prizeOf, unlocksOf } from '../core/progress.js';
 import { daysPractisedThisMonth } from '../core/session.js';
+import { streakCalendarEl } from '../ui/quests.js';
+import { aliveCompanion } from '../ui/alive.js';
+import { albumTab, cardsLine } from '../ui/cards.js';
+import { rewardSet, cardRewardScenes, wonCardRewards } from '../core/cards.js';
 
-const TABS = [['overview', 'Stats'], ['timeline', 'Timeline'], ['places', 'Places'], ['badges', 'Badges']];
-const BADGE_ICON = { 'speed-racer': 'bolt', fifty: 'star', explorer: 'globe', scientist: 'flask', 'first-session': 'flag', 'first-mastered': 'star', hundred: 'bolt', 'all-rounder': 'target', globetrotter: 'globe', 'time-traveller': 'clock', 'lab-ready': 'flask', 'joined-up': 'link', sprinter: 'hourglass', paper: 'paper', typist: 'keyboard', 'speed-reader': 'eye', stretch: 'spark', wordsmith: 'pen', bookworm: 'book', calibrated: 'target', regular: 'check', 'five-hundred': 'trophy', 'book-talker': 'book', 'own-reader': 'eye', author: 'pen', 'alpha-omega': 'quill', 'word-hoard': 'text', clio: 'column', centurion: 'flag', charioteer: 'hourglass', speedway: 'trophy', 'space-ace': 'spark', 'dino-expert': 'flask', 'knight-realm': 'clock', 'super-writer': 'pen', 'latin-scholar': 'column', legionary: 'text', 'poet-laureate': 'quill', 'circus-maximus': 'hourglass', 'pony-club': 'check', 'sword-school': 'spark', lightning: 'bolt', 'space-trooper': 'check', 'viking-voyager': 'book', 'samurai-scribe': 'quill', 'dragon-rider': 'star', 'golden-champion': 'trophy', 'costume-historian': 'hourglass', 'great-detective': 'eye', 'chief-scientist': 'flask', 'grand-tour': 'globe', 'prima-ballerina': 'star', storyteller: 'pen' };
+const TABS = [['overview', 'Stats'], ['timeline', 'Timeline'], ['places', 'Places'], ['badges', 'Badges'], ['cards', 'Cards']];
+const BADGE_ICON = { 'speed-racer': 'bolt', fifty: 'star', explorer: 'globe', scientist: 'flask', 'first-session': 'flag', 'first-mastered': 'star', hundred: 'bolt', 'all-rounder': 'target', globetrotter: 'globe', 'time-traveller': 'clock', 'lab-ready': 'flask', 'joined-up': 'link', sprinter: 'hourglass', paper: 'paper', typist: 'keyboard', 'speed-reader': 'eye', stretch: 'spark', wordsmith: 'pen', bookworm: 'book', calibrated: 'target', regular: 'check', 'five-hundred': 'trophy', 'book-talker': 'book', 'own-reader': 'eye', author: 'pen', 'alpha-omega': 'quill', 'word-hoard': 'text', clio: 'column', centurion: 'flag', charioteer: 'hourglass', speedway: 'trophy', 'space-ace': 'spark', 'dino-expert': 'flask', 'knight-realm': 'clock', 'super-writer': 'pen', 'latin-scholar': 'column', legionary: 'text', 'poet-laureate': 'quill', 'circus-maximus': 'hourglass', 'pony-club': 'check', 'sword-school': 'spark', lightning: 'bolt', 'space-trooper': 'check', 'viking-voyager': 'book', 'samurai-scribe': 'quill', 'dragon-rider': 'star', 'golden-champion': 'trophy', 'costume-historian': 'hourglass', 'great-detective': 'eye', 'chief-scientist': 'flask', 'grand-tour': 'globe', 'prima-ballerina': 'star', storyteller: 'pen', 'on-a-roll': 'bolt', steady: 'flag' };
 // "the centurion armour", but "the Greek aspis" and "the Viking helmet"
 const lower = (label) => (/^(Greek|Roman|Viking|Samurai|Tudor|Regency|Victorian|Florence)\b/.test(label) ? label : label[0].toLowerCase() + label.slice(1));
 
@@ -23,6 +28,7 @@ export async function progressScreen(app, tab = 'overview') {
   if (tab === 'timeline') return timelineTab(app, body);
   if (tab === 'places') return placesTab(app, body);
   if (tab === 'badges') return badgesTab(app, body);
+  if (tab === 'cards') return albumTab(app, body);
   return overviewTab(app, body);
 }
 
@@ -36,6 +42,8 @@ function overviewTab(app, body) {
       h('div', { class: 'stat-tile' }, h('b', {}, String(learnedCount(state))), h('span', {}, 'things you know')),
       h('div', { class: 'stat-tile', style: { '--tile': 'var(--good)' } }, h('b', {}, String(topics.filter((t) => t.state === 'mastered').length)), h('span', {}, 'topics mastered')),
       h('div', { class: 'stat-tile', style: { '--tile': 'var(--warm)' } }, h('b', {}, String(daysPractisedThisMonth(state, today))), h('span', {}, 'days this month'))),
+    streakCalendarEl(state, today),
+    cardsLine(app),
     h('div', { class: 'section-title' }, h('h2', {}, 'Subjects')),
     h('div', { class: 'subj-grid' }, SUBJECTS.map((sub) => {
       const st = subjectStats(state, db, sub.id);
@@ -149,7 +157,7 @@ function badgesTab(app, body) {
     const open = unlocked.has(id);
     const on = id === 'none' ? worn.size === 0 : worn.has(id);
     return h('button', { type: 'button', class: open ? '' : 'locked', 'aria-pressed': String(on), 'aria-label': open ? `${on && id !== 'none' ? 'Take off' : 'Wear'} ${label}` : `${label}: locked`, onclick: () => {
-      if (!open) return toast(prizeOf(id) && !lockedBy[id] ? `Finish the bonus topic, ${prizeOf(id).title}, to win the ${lower(label)}.` : prizeOf(id) ? `Earn “${lockedBy[id].title}”, or finish the bonus topic, ${prizeOf(id).title}, to unlock the ${lower(label)}.` : `Earn “${lockedBy[id]?.title}” to unlock the ${lower(label)}.`);
+      if (!open) return toast(rewardSet(id) && !lockedBy[id] && !prizeOf(id) ? `Collect every card in the “${rewardSet(id).name}” set (Progress, Cards) to win the ${lower(label)}.` : prizeOf(id) && !lockedBy[id] ? `Finish the bonus topic, ${prizeOf(id).title}, to win the ${lower(label)}.` : prizeOf(id) ? `Earn “${lockedBy[id].title}”, or finish the bonus topic, ${prizeOf(id).title}, to unlock the ${lower(label)}.` : `Earn “${lockedBy[id]?.title}” to unlock the ${lower(label)}.`);
       state.profile.companion = toggleWear(c, id);
       app.save();
       const y = window.scrollY;
@@ -171,11 +179,11 @@ function badgesTab(app, body) {
     h('div', { class: 'section-title' }, h('h2', {}, 'Badges'), h('span', { class: 'muted small' }, `${ms.filter((m) => m.done).length} of ${ms.length} earned`)),
     h('div', { class: 'badge-grid' }, ms.map(badge)),
     h('div', { class: 'section-title' }, h('h2', {}, `${c.name || 'Your companion'}’s wardrobe`)),
-    h('div', { class: `wardrobe-preview${c.scene ? ' with-scene' : ''}` }, companionEl({ ...c, mood: 'happy' })),
+    h('div', { class: `wardrobe-preview${c.scene ? ' with-scene' : ''}` }, aliveCompanion({ ...c, mood: 'happy' })),
     h('div', { class: 'center' }, h('button', { type: 'button', class: 'btn-ghost', onclick: () => app.go('#/companion') }, 'Change companion')),
     scenePicker(app, body, ms.filter((m) => m.done).length),
     h('h3', { class: 'wardrobe-title' }, 'Things to wear'),
-    h('p', { class: 'muted center' }, `Tap to put something on, and tap again to take it off. You can wear one thing in each place at once: ${places.join(', ')}. Locked ones are earned with badges${COURSE.bonus ? ', and a special prize with the bonus topic' : ''}.`),
+    h('p', { class: 'muted center' }, `Tap to put something on, and tap again to take it off. You can wear one thing in each place at once: ${places.join(', ')}. Locked ones are earned with badges and full card sets${COURSE.bonus ? ', and a special prize with the bonus topic' : ''}.`),
     wardrobe);
 }
 
@@ -184,6 +192,7 @@ function scenePicker(app, body, earned) {
   const { state } = app;
   const c = state.profile?.companion || {};
   const list = sceneStatus(earned);
+  const wonScenes = new Set(wonCardRewards(state, app.db).scenes);
   const choose = (id) => {
     const next = { ...c };
     if (id && id !== c.scene) next.scene = id; else delete next.scene;
@@ -196,10 +205,10 @@ function scenePicker(app, body, earned) {
     const p = body.querySelector('.wardrobe-preview');
     if (p && p.getBoundingClientRect().top < 0) p.scrollIntoView({ block: 'start', behavior: 'smooth' });
   };
-  const tile = (id, label, inner, { open = true, on = false, hint = '', need = 0 } = {}) => h('button', {
+  const tile = (id, label, inner, { open = true, on = false, hint = '', need = 0, lockMsg = '' } = {}) => h('button', {
     type: 'button', class: `scene-tile${open ? '' : ' locked'}`, 'aria-pressed': String(on),
     'aria-label': open ? label : `${label}: locked. ${hint}`,
-    onclick: () => (open ? choose(on ? null : id) : toast(`Earn ${need} more badge${need === 1 ? '' : 's'} to open the ${label.toLowerCase()}.`)),
+    onclick: () => (open ? choose(on ? null : id) : toast(lockMsg || `Earn ${need} more badge${need === 1 ? '' : 's'} to open the ${label.toLowerCase()}.`)),
   }, h('div', { class: 'scene-thumb', html: inner }, open ? null : h('span', { class: 'scene-lock' }, icon('lock'))), h('span', { class: 'scene-name' }, label), open ? null : h('span', { class: 'scene-hint' }, hint));
   const opened = list.filter((x) => x.open).length;
   return h('div', { class: 'scenes' },
@@ -207,5 +216,9 @@ function scenePicker(app, body, earned) {
     h('p', { class: 'muted center' }, `Choose a place for ${c.name || 'your companion'} to stand. Tap it again to go back to plain. A new scene opens with every badge you earn.`),
     h('div', { class: 'scene-grid' },
       tile(null, 'No scene', capybaraSVG({ ...c, mood: 'happy' }), { on: !c.scene }),
-      list.map((x) => tile(x.id, x.name, sceneSVG(x.id), { open: x.open, on: c.scene === x.id, need: x.need, hint: `Earn ${x.need} more badge${x.need === 1 ? '' : 's'}` }))));
+      // the family goal's reward: shown once there are brothers or sisters to share it with
+      hasFamilyReward(state) || app.profiles().length > 1 ? tile(FAMILY_SCENE, SCENE_BY_ID[FAMILY_SCENE].name, sceneSVG(FAMILY_SCENE), { open: hasFamilyReward(state), on: c.scene === FAMILY_SCENE, hint: 'Reach a family goal together', lockMsg: 'Reach a family goal together to open the family picnic for everyone.' }) : null,
+      list.map((x) => tile(x.id, x.name, sceneSVG(x.id), { open: x.open, on: c.scene === x.id, need: x.need, hint: `Earn ${x.need} more badge${x.need === 1 ? '' : 's'}` })),
+      // full card sets win scenes this course has no other way to open (js/core/cards.js)
+      cardRewardScenes().filter((x) => SCENE_BY_ID[x.id]).map(({ id, set }) => tile(id, SCENE_BY_ID[id].name, sceneSVG(id), { open: wonScenes.has(id), on: c.scene === id, hint: `Collect the ${set.name} cards`, lockMsg: `Collect every card in the “${set.name}” set (Progress, Cards) to open the ${SCENE_BY_ID[id].name.toLowerCase()}.` }))));
 }

@@ -116,3 +116,12 @@ export function removeProfile(id) {
 }
 
 export const newProfileId = () => `p${Date.now().toString(36)}`;
+
+// --- the family goal: device-wide settings and recent weeks, shared by every child here ------
+const FAMILY = 'grammar-stream.family';
+export function loadFamily() {
+  try { return JSON.parse(ls()?.getItem(FAMILY) || 'null'); } catch { return null; }
+}
+export function saveFamily(f) {
+  try { ls()?.setItem(FAMILY, JSON.stringify(f)); return true; } catch (e) { console.error('family save failed', e); return false; }
+}

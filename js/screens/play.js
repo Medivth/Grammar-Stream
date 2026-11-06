@@ -21,6 +21,10 @@ import { parseNumber } from '../core/fraction.js';
 import { icon, SUBJECT_ICON } from '../ui/icons.js';
 import { ACCESSORIES, slotOf } from '../ui/capybara.js';
 import { SUBJECT_BY_ID, COURSE } from '../core/subjects.js';
+import { raceway, runBadge, starBurst, finishMoment, calmMotion } from '../ui/raceway.js';
+import { currentRun, isRunMilestone, progressFraction, trackTheme, soundsOn, tryLine } from '../core/juice.js';
+import * as sfx from '../platform/sfx.js';
+import { newCardsReveal, cardsBefore } from '../ui/cards.js';
 
 const GRADED = new Set(['review', 'quiz', 'diag', 'practice', 'faded', 'recall']);
 
@@ -39,6 +43,7 @@ export async function playScreen(app, arg) {
   }
   if (lang || bonus) {
     if (!state.extra.badgesBefore) state.extra.badgesBefore = milestones(state, db).filter((m) => m.done).map((m) => m.id);
+    if (!state.extra.cardsBefore && !state.extra.newCards) state.extra.cardsBefore = cardsBefore(state, db);
     app.save();
     return renderStep(app);
   }
@@ -49,6 +54,8 @@ export async function playScreen(app, arg) {
   startSession(state, today);
   // remember which badges were already earned, so the finished screen can celebrate new ones
   if (!state.plan.badgesBefore) state.plan.badgesBefore = milestones(state, db).filter((m) => m.done).map((m) => m.id);
+  // and which cards were collected, so it can turn over the new ones (js/ui/cards.js)
+  if (!state.plan.cardsBefore && !state.plan.newCards) state.plan.cardsBefore = cardsBefore(state, db);
   app.save();
   await renderStep(app);
 }
@@ -60,14 +67,40 @@ function linkBits(links) {
 
 function header(app, label, links = null) {
   const plan = activePlan(app.state);
-  const pct = Math.round((100 * plan.pos) / Math.max(1, plan.steps.length - 1));
   const step = plan.steps[plan.pos] || {};
   const subject = step.subject || app.db.items[step.id]?.subject || (step.topic && app.db.topics[step.topic]?.subject);
   const colour = SUBJECT_BY_ID[subject]?.colour;
+  const key = `${plan.day}:${plan.extra ? `${plan.subject}:${plan.bonus || ''}:${plan.started}` : 'day'}`;
+  const track = raceway({ theme: trackTheme(COURSE.id), p: progressFraction(plan), key, step: plan.pos + 1, of: plan.steps.length });
   return h('div', { class: 'q-head q-wrap', style: colour ? { '--bar': colour } : {} },
     h('button', { class: 'btn-icon', type: 'button', 'aria-label': 'Pause and go home', title: 'Pause', onclick: () => app.go('#/home') }, icon('pause')),
-    h('div', { class: 'progress', role: 'progressbar', 'aria-valuenow': pct, 'aria-valuemin': 0, 'aria-valuemax': 100 }, h('div', { style: { width: `${pct}%` } })),
-    label ? h('span', { class: 'chip', style: colour ? { background: `color-mix(in srgb, ${colour} 14%, var(--card))`, color: colour } : {} }, label, linkBits(links)) : null);
+    track,
+    h('span', { class: 'q-tags' },
+      label ? h('span', { class: 'chip', style: colour ? { background: `color-mix(in srgb, ${colour} 14%, var(--card))`, color: colour } : {} }, label, linkBits(links)) : null,
+      h('span', { class: 'run-slot' }, runBadge(currentRun(plan.results)))),
+    muteButton(app));
+}
+
+/** The sound switch in the play header: the same setting as on the grown-ups' screen. */
+function muteButton(app) {
+  const st = app.state.settings;
+  const b = h('button', { class: 'btn-icon sound-btn', type: 'button' });
+  const draw = () => {
+    const on = soundsOn(st, COURSE.id);
+    sfx.setSoundOn(on);
+    b.replaceChildren(icon(on ? 'speaker' : 'mute'));
+    b.setAttribute('aria-pressed', String(on));
+    b.setAttribute('aria-label', 'Sounds');
+    b.title = on ? 'Sounds on' : 'Sounds off';
+  };
+  b.onclick = () => {
+    st.sounds = !soundsOn(st, COURSE.id);
+    app.save();
+    draw();
+    if (st.sounds) sfx.chime();
+  };
+  draw();
+  return b;
 }
 
 async function next(app) {
@@ -356,6 +389,7 @@ async function questionStep(app, root, step) {
     const nb = h('button', { class: 'btn-primary btn-big', style: { marginTop: '16px' }, onclick: () => next(app) }, 'Next');
     feedback.append(nb);
     nb.focus();
+    react(app, root, view, feedback.firstChild, res, step);
   };
 
   const onKey = (e) => {
@@ -367,6 +401,36 @@ async function questionStep(app, root, step) {
 
   mount(root, header(app, label, label === subj.name ? db.topics[q.topicId]?.links : null), h('div', { class: 'q-wrap' }, fadedBox, view.el, conf, feedback));
   view.focus();
+}
+
+/**
+ * The companion's reaction once the feedback is already showing (nothing here delays the Next
+ * button): a cheer, stars from the answer and a chime when right; a gentle wobble, a calm tone
+ * and a kind word when not. Runs of right answers are counted in the header.
+ */
+function react(app, root, view, panel, res, step) {
+  const plan = activePlan(app.state);
+  const c = app.state.profile?.companion || {};
+  const ok = res.correct;
+  const diag = step.t === 'diag';
+  panel.prepend(capybaraEl({ ...c, mood: ok ? 'happy' : 'thinking' }, `capy fb-pet ${ok ? 'fb-hop' : 'fb-wobble'}`));
+  if (!ok) panel.querySelector('h3')?.after(h('p', { class: 'fb-try' }, diag ? 'Let’s find out together.' : tryLine(plan.results.length, COURSE.young)));
+  const run = currentRun(plan.results);
+  const milestone = ok && !diag && isRunMilestone(run);
+  // a miss just clears the badge: no "streak lost"
+  const slot = root.querySelector('.run-slot');
+  slot?.replaceChildren(...[runBadge(run, milestone)].filter(Boolean));
+  if (ok) {
+    const onScreen = (el) => { const r = el?.getBoundingClientRect(); return r && r.bottom > 0 && r.top < innerHeight; };
+    const from = [view.el.querySelector('.option.right'), view.input].find(onScreen) || panel.querySelector('h3');
+    starBurst(from);
+    if (milestone) {
+      // also in the panel, since on a phone the header may have scrolled away
+      panel.querySelector('h3')?.append(' ', runBadge(run, true));
+      sfx.fanfare();
+      starBurst(slot, { count: 8, spread: 40 });
+    } else sfx.chime();
+  } else if (!diag) sfx.softTone();
 }
 
 function praise(q, res, step, conf) {
@@ -458,6 +522,7 @@ function sentenceStep(app, root, step) {
     const r = checkSentence(task, text);
     if (r.correct) {
       out.replaceChildren(h('div', { class: 'feedback good pop' }, h('h3', {}, '✓ That works!'), h('p', {}, 'Your sentence does everything the challenge asked.')));
+      sfx.chime();
       return finish(true);
     }
     out.replaceChildren(h('div', { class: 'feedback warn pop' }, h('h3', {}, tries === 1 ? 'Nearly. Check these:' : 'Still a couple of things:'), h('ul', {}, r.failed.map((f) => h('li', {}, f)))));
@@ -621,6 +686,12 @@ function prizeCelebration(app) {
       wearIt));
 }
 
+/** The race is won: the car crosses the line, the rocket lands, the chariot takes the wreath. */
+function finishLine() {
+  setTimeout(sfx.flourish, calmMotion() ? 0 : 700);
+  return finishMoment(trackTheme(COURSE.id));
+}
+
 /** The end of an extra practice (a language, or the bonus topic): a short summary, then back home (today's session is untouched). */
 function extraDoneStep(app, root, plan) {
   const { state, db } = app;
@@ -638,10 +709,12 @@ function extraDoneStep(app, root, plan) {
     ? (bp.complete ? `You’ve finished ${bp.def.title}. Its reviews will come back in your daily sessions, so you keep it.` : `Nothing to do in ${bp.def.title} just now. Come back tomorrow, when some questions are ready to review.`)
     : `Nothing to review in ${subj?.name || 'this subject'} just now, and no new topic is ready yet. Come back tomorrow, or try today’s session.`;
   mount(root, h('div', { class: 'q-wrap stack center' },
+    plan.results.length ? finishLine() : null,
     prize || capybaraEl({ ...c, mood: 'happy' }, 'capy bob'),
     prize ? null : h('div', { class: 'eyebrow' }, plan.bonus ? `Bonus topic: ${bp.def.title}` : `${subj?.name || ''} practice`), prize ? null : h('h1', {}, plan.results.length || learned.length ? 'Well done!' : 'All caught up'),
     plan.results.length ? h('p', {}, `${right} of ${plan.results.length} right.${learned.length ? ` ${plan.bonus ? 'Today' : 'New'}: ${learned.join(', ')}.` : ''}`) : prize ? null : h('p', { class: 'muted' }, nothing),
     plan.bonus && !bp.complete && bp.total ? h('p', { class: 'muted' }, `${bp.done} of ${bp.total} parts finished. Finish them all to win ${bp.def.prizeText}.`) : null,
+    newCardsReveal(app, plan),
     newBadges(app, plan),
     h('div', { class: 'row', style: { justifyContent: 'center' } },
       h('button', { class: prize ? 'btn-ghost btn-big' : 'btn-primary btn-big', onclick: () => app.go('#/home') }, 'Back home'),
@@ -685,10 +758,12 @@ function doneStep(app, root) {
   }
   const tile = (n, label, colour) => h('div', { class: 'stat-tile', style: { '--tile': colour } }, h('b', {}, String(n)), h('span', {}, label));
   mount(root, h('div', { class: 'q-wrap stack' },
+    finishLine(),
     burst,
     h('div', { class: 'center' }, h('div', { class: 'eyebrow' }, 'Session complete'), h('h1', {}, 'Finished for today!')),
     h('div', { class: 'stat-strip', style: { margin: 0 } }, tile(right, 'answers right', 'var(--good)'), remembered ? tile(remembered, 'remembered from before', 'var(--accent)') : tile(res.length, 'questions answered', 'var(--accent)'), tile(days, `day${days === 1 ? '' : 's'} this month`, 'var(--warm)')),
     prizeCelebration(app),
+    newCardsReveal(app, plan),
     newBadges(app, plan),
     h('div', { class: 'card stack' },
       h('h3', {}, 'What you did'),

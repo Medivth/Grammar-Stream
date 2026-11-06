@@ -7,6 +7,7 @@ import { icon } from '../ui/icons.js';
 import { COURSE } from '../core/subjects.js';
 import { speak, stopSpeaking, ttsAvailable } from '../platform/tts.js';
 import { place, setPlace, openBook, finishLibraryBook, creditReading, readingClock, SESSION_CAP_MIN, LEVELS } from '../core/library.js';
+import { noteChapter, CHAPTER_SECONDS } from '../core/quests.js';
 
 const SIZES = [0.85, 0.95, 1, 1.1, 1.2, 1.35, 1.5, 1.7];
 const bookCache = new Map();
@@ -209,7 +210,7 @@ export async function bookScreen(app, id) {
     : h('div', { class: 'card book-finish center stack' },
       h('h3', {}, 'The end!'),
       h('p', { style: { margin: 0 } }, `Have you read all of ${book.title}?`),
-      h('button', { class: 'btn-primary btn-big', onclick: () => { flush(); finishLibraryBook(state, entry, app.today()); finishedNow = true; app.save(); back(); } }, 'Finished it!')));
+      h('button', { class: 'btn-primary btn-big', onclick: () => { flush(); chapterRead(); finishLibraryBook(state, entry, app.today()); finishedNow = true; app.save(); back(); } }, 'Finished it!')));
 
   // --- place: the paragraph at the top of the screen, plus how far through it
   const topOffset = () => (document.querySelector('.book-top')?.getBoundingClientRect().bottom || 0) + 12;
@@ -238,8 +239,13 @@ export async function bookScreen(app, id) {
       if (Date.now() - lastSave > 5000) { lastSave = Date.now(); app.save(); }
     }, 300);
   };
+  // for the daily quest "read a chapter": moving on from a chapter that was open a while
+  let chOpened = Date.now();
+  const chapterRead = () => { if (Date.now() - chOpened >= CHAPTER_SECONDS * 1000) noteChapter(state, id, ch, app.today()); };
   const go = (i, at) => {
     stopSpeaking();
+    if (i === ch + 1) chapterRead();
+    if (i !== ch) chOpened = Date.now();
     ch = Math.max(0, Math.min(book.chapters.length - 1, i));
     setPlace(state, id, ch, at);
     app.save();
