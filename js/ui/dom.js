@@ -79,7 +79,7 @@ export function spoken(text) {
 }
 
 export function mount(root, ...nodes) {
-  root.replaceChildren(...nodes);
+  root.replaceChildren(...nodes.filter((n) => n != null && n !== false)); // a card with nothing to show returns null
   pronounify(root);
   window.scrollTo(0, 0);
 }

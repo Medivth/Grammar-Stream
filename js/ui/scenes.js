@@ -18,6 +18,8 @@ const E = (cx, cy, rx, ry, fill, more = '') => `<ellipse cx="${n1(cx)}" cy="${n1
 const P = (d, fill, more = '') => `<path d="${d}" fill="${fill}"${more}/>`;
 const L = (d, stroke, w = 2, more = '') => `<path d="${d}" fill="none" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"${more}/>`;
 const G = (t, body) => `<g transform="${t}">${body}</g>`;
+// a part that moves gently while the scene is on show ("living scenes" in css/app.css; thumbnails stay still)
+const A = (cls, body) => `<g class="${cls}">${body}</g>`;
 const sky = (fill) => R(0, 0, W, H, fill);
 const floor = (fill, edge) => R(0, FLOOR, W, H - FLOOR, fill) + (edge ? R(0, FLOOR, W, 3, edge) : '');
 
@@ -37,11 +39,11 @@ function starfield(seed, n, x0, y0, w, h, keep = () => true, fill = '#fff') {
     out += C(x, y, size, fill, size > 1.4 ? '' : ' opacity=".8"');
     n--;
   }
-  return out;
+  return out && A('amb-stars', out);
 }
 const star5 = (cx, cy, r, fill) => P(Array.from({ length: 10 }, (_, i) => { const a = -Math.PI / 2 + (i * Math.PI) / 5, rr = i % 2 ? r * 0.45 : r; return `${i ? 'L' : 'M'}${n1(cx + Math.cos(a) * rr)} ${n1(cy + Math.sin(a) * rr)}`; }).join(' ') + 'Z', fill);
-const cloud = (x, y, s = 1, fill = '#fff') => G(`translate(${x} ${y}) scale(${s})`, E(0, 0, 16, 7, fill) + C(-6, -5, 7, fill) + C(5, -7, 9, fill));
-const fish = (x, y, s, col, flip = false) => G(`translate(${x} ${y}) scale(${flip ? -s : s} ${s})`, P('M-8 0 L-15 -6 L-15 6Z', col) + E(0, 0, 10, 6, col) + C(5, -1.5, 1.4, '#1c1a33'));
+const cloud = (x, y, s = 1, fill = '#fff') => A('amb-cloud', G(`translate(${x} ${y}) scale(${s})`, E(0, 0, 16, 7, fill) + C(-6, -5, 7, fill) + C(5, -7, 9, fill)));
+const fish = (x, y, s, col, flip = false) => A('amb-fish', G(`translate(${x} ${y}) scale(${flip ? -s : s} ${s})`, P('M-8 0 L-15 -6 L-15 6Z', col) + E(0, 0, 10, 6, col) + C(5, -1.5, 1.4, '#1c1a33')));
 const palm = (x, y, h, lean = 1) => L(`M${x} ${y} Q${x + 4 * lean} ${y - h / 2} ${x + 8 * lean} ${y - h}`, '#8a5a35', 5)
   + G(`translate(${x + 8 * lean} ${y - h})`, ['M0 0 Q-14 -8 -24 2', 'M0 0 Q14 -8 24 2', 'M0 0 Q-6 -14 -18 -14', 'M0 0 Q8 -14 20 -12', 'M0 0 Q-2 6 -12 14', 'M0 0 Q4 6 12 14'].map((d) => L(d, '#3f9a4a', 5)).join(''));
 const bolt = (cx, cy, r, n, fill) => Array.from({ length: n }, (_, i) => { const a = (i / n) * Math.PI * 2; return C(cx + Math.cos(a) * r, cy + Math.sin(a) * r, 1.6, fill); }).join('');
@@ -67,7 +69,7 @@ function space() {
     + R(10, 120, 28, 3, '#5fd6a0', 1.5)
     + R(206, 70, 32, 26, '#20254f', 4) + R(209, 73, 26, 20, '#0f1a3a', 2) + L('M211 85 l4 -6 l4 8 l4 -10 l4 8 l4 -4', '#5fd6a0', 1.6)
     + P('M198 132 L206 106 L240 106 L240 132Z', '#4a5291') + R(206, 104, 34, 4, '#6c76b8')
-    + C(214, 116, 3, '#ff5f6d') + C(223, 116, 3, '#ffd166') + C(232, 116, 3, '#5fd6a0') + R(210, 122, 24, 3, '#9fe8ff', 1.5)
+    + A('amb-blink', C(214, 116, 3, '#ff5f6d') + C(223, 116, 3, '#ffd166') + C(232, 116, 3, '#5fd6a0')) + R(210, 122, 24, 3, '#9fe8ff', 1.5)
     + floor('#59628f', '#7480b5')
     + [-60, -20, 20, 60, 100, 140, 180, 220, 260, 300].map((x) => L(`M${120 + (x - 120) * 0.55} ${FLOOR + 3} L${x} ${H}`, '#4b5380', 1.5)).join('')
     + L(`M0 150 H${W} M0 166 H${W}`, '#4b5380', 1.5);
@@ -92,7 +94,7 @@ function underwater() {
     + kelp(8, 64, '#2e9e5b') + kelp(234, 80, '#2e9e5b') + kelp(170, 48, '#3bb26a')
     + dome(60, 44) + dome(206, 25)
     + fish(196, 22, 1.1, '#ff8a3d', true) + fish(222, 38, 0.8, '#ffd166', true) + fish(30, 26, 0.9, '#ff6f91') + fish(150, 46, 0.6, '#ffd166')
-    + [[118, 40, 4], [124, 26, 3], [116, 14, 2.5], [126, 5, 2], [92, 36, 2.5], [96, 22, 2]].map(([x, y, s]) => C(x, y, s, 'none', ' stroke="#dff6ff" stroke-width="1.5"')).join('')
+    + A('amb-bubbles', [[118, 40, 4], [124, 26, 3], [116, 14, 2.5], [126, 5, 2], [92, 36, 2.5], [96, 22, 2]].map(([x, y, s]) => C(x, y, s, 'none', ' stroke="#dff6ff" stroke-width="1.5"')).join(''))
     + floor('#e8d39b', '#f2e2b4')
     + Array.from({ length: 7 }, (_, i) => L(`M${10 + i * 34 + r() * 8} ${146 + (i % 3) * 10} q6 -3 12 0`, '#d4bb7c', 2)).join('')
     + star5(24, 162, 9, '#ff8a3d') + C(24, 162, 2.5, '#ffb37a')
@@ -110,11 +112,11 @@ function racetrack() {
     // grandstand with a red roof and the crowd
     + R(0, 66, W, 46, '#7d8aa3') + P('M-4 66 L244 66 L236 56 L4 56Z', '#d62f3a') + fans
     // starting lights on a gantry
-    + R(80, 0, 4, 24, '#4a4f60') + R(156, 0, 4, 24, '#4a4f60') + R(88, 8, 64, 18, '#2b2a33', 5) + [100, 114, 128, 142].map((x) => C(x, 17, 5, '#ff4b4b')).join('')
+    + R(80, 0, 4, 24, '#4a4f60') + R(156, 0, 4, 24, '#4a4f60') + R(88, 8, 64, 18, '#2b2a33', 5) + A('amb-blink', [100, 114, 128, 142].map((x) => C(x, 17, 5, '#ff4b4b')).join(''))
     // the barrier: red and white blocks
     + Array.from({ length: 16 }, (_, i) => R(i * 15, 112, 15, 20, i % 2 ? '#ffffff' : '#d62f3a')).join('')
     // chequered flag
-    + R(14, 30, 4, 102, '#d9dde6', 2) + G('translate(18 32)', flagCell(0, 0, 8))
+    + R(14, 30, 4, 102, '#d9dde6', 2) + A('amb-flag', G('translate(18 32)', flagCell(0, 0, 8)))
     // the track, a kerb and the grid
     + floor('#5d6170') + Array.from({ length: 16 }, (_, i) => R(i * 15, FLOOR, 15, 6, i % 2 ? '#ffffff' : '#d62f3a')).join('')
     + L(`M0 172 H${W}`, '#ffffff', 3, ' stroke-dasharray="18 14"')
@@ -139,7 +141,7 @@ function city() {
     // the rooftop: a ledge, a water tank, a vent and an aerial with a red light
     + R(0, 124, W, 10, '#5f6582') + floor('#4b5068', '#6a7090')
     + L('M10 124 L14 96 M38 124 L34 96 M12 110 H36', '#3a3f58', 3) + R(6, 70, 36, 28, '#7a5a44', 4) + P('M4 72 L24 58 L44 72Z', '#5c4332') + L('M8 80 H40 M8 90 H40', '#5c4332', 1.5)
-    + L('M226 124 V64 M218 78 L226 70 L234 78 M220 90 L226 84 L232 90', '#8d96a3', 2.5) + C(226, 62, 3.2, '#ff4b4b')
+    + L('M226 124 V64 M218 78 L226 70 L234 78 M220 90 L226 84 L232 90', '#8d96a3', 2.5) + A('amb-blink', C(226, 62, 3.2, '#ff4b4b'))
     + R(196, 140, 28, 18, '#6a7090', 3) + L('M200 146 h20 M200 151 h20', '#4b5068', 2)
     + L('M0 150 H240', '#43485e', 1.5) + L('M30 166 H210', '#43485e', 1.5);
 }
@@ -148,7 +150,7 @@ function dino() {
   return sky('#ffe2a8') + R(0, 0, W, 26, '#ffd48a') + C(36, 26, 14, '#fff4c9')
     // the volcano, smoking, far away on the right
     + P('M168 104 L200 44 L216 44 L248 104Z', '#8b5e4a') + P('M200 44 L216 44 L212 52 L204 50Z', '#6d4637') + P('M207 46 q-3 14 2 24 q4 8 -1 18 l5 0 q4 -12 -1 -20 q-3 -10 0 -22z', '#ff7a2e')
-    + [[208, 36, 6], [215, 27, 7], [223, 18, 8]].map(([x, y, s]) => C(x, y, s, '#c9c2b8', ' opacity=".9"')).join('')
+    + A('amb-smoke', [[208, 36, 6], [215, 27, 7], [223, 18, 8]].map(([x, y, s]) => C(x, y, s, '#c9c2b8', ' opacity=".9"')).join(''))
     + P('M0 98 Q40 82 90 96 Q140 84 180 96 Q214 86 240 94 V132 H0Z', '#9ccc65')
     // a long-necked dinosaur on the far hill
     + G('translate(28 98)', L('M-14 0 Q-28 2 -36 10', '#4f8a3f', 5) + L('M12 -4 Q22 -12 24 -34', '#4f8a3f', 7) + E(28, -36, 7, 4, '#4f8a3f') + C(30, -37, 1.2, '#1c1a33')
@@ -168,7 +170,7 @@ function castle() {
   const merlons = (x0, x1, y, col) => { let o = ''; for (let x = x0; x < x1; x += 14) o += R(x, y, 8, 8, col); return o; };
   const banner = (x, col, mark) => R(x, 76, 18, 30, col) + P(`M${x} 106 L${x + 9} 100 L${x + 18} 106 V112 L${x + 9} 106 L${x} 112Z`, col) + mark;
   const tower = (x, flag) => R(x, 44, 44, 88, '#a9a193') + P(`M${x - 4} 46 L${x + 22} 16 L${x + 48} 46Z`, '#c0453a')
-    + L(`M${x + 22} 16 V3`, '#5c4332', 2) + P(`M${x + 22} 3 L${x + 36} 8 L${x + 22} 13Z`, flag)
+    + L(`M${x + 22} 16 V3`, '#5c4332', 2) + A('amb-flag', P(`M${x + 22} 3 L${x + 36} 8 L${x + 22} 13Z`, flag))
     + R(x + 16, 60, 12, 18, '#4a4540', 6) + L(`M${x + 6} 96 h10 M${x + 26} 112 h12 M${x + 8} 122 h14`, '#958d7f', 2);
   return sky('#a8dcf5') + cloud(120, 22, 1.2) + cloud(80, 40, 0.7)
     + R(0, 70, W, 62, '#b9b2a4') + merlons(40, 200, 62, '#b9b2a4')
@@ -205,15 +207,15 @@ function jungle() {
 
 function arctic() {
   return sky('#24356b') + starfield(13, 18, 0, 0, W, 50)
-    + P('M0 40 Q40 20 80 34 T160 26 T240 30 V44 Q200 36 160 42 T80 46 T0 54Z', '#5ef2b0', ' opacity=".35"')
-    + P('M0 22 Q50 6 100 18 T200 10 T240 14 V22 Q200 18 160 24 T80 28 T0 30Z', '#7de3ff', ' opacity=".25"')
+    + A('amb-aurora', P('M0 40 Q40 20 80 34 T160 26 T240 30 V44 Q200 36 160 42 T80 46 T0 54Z', '#5ef2b0', ' opacity=".35"')
+    + P('M0 22 Q50 6 100 18 T200 10 T240 14 V22 Q200 18 160 24 T80 28 T0 30Z', '#7de3ff', ' opacity=".25"'))
     + P('M0 104 L30 76 L52 92 L84 62 L120 96 L150 70 L184 98 L214 74 L240 92 V132 H0Z', '#c9dcef')
     + P('M84 62 L96 96 L120 96Z M150 70 L160 98 L184 98Z M30 76 L36 104 L52 92Z M214 74 L220 100 L240 92Z', '#a9c2de')
     // the research hut, lit up inside
     + R(2, 96, 58, 36, '#d84a3a') + P('M0 98 Q31 74 62 98Z', '#b93a2d') + R(10, 106, 14, 10, '#ffd166', 2) + R(36, 108, 14, 24, '#8e2c22', 2) + C(46, 120, 1.4, '#ffd166')
     // a radar dome and a weather mast
     + R(204, 106, 6, 26, '#8d96a3') + C(207, 98, 16, '#f1f6fb') + L('M193 94 Q207 88 221 94 M192 102 Q207 108 222 102', '#c9d6e4', 1.5)
-    + L('M232 132 V58 M226 62 H238', '#8d96a3', 2) + C(226, 62, 2.6, '#ff5f6d') + C(238, 62, 2.6, '#ff5f6d')
+    + L('M232 132 V58 M226 62 H238', '#8d96a3', 2) + A('amb-blink', C(226, 62, 2.6, '#ff5f6d') + C(238, 62, 2.6, '#ff5f6d'))
     + floor('#eef5fa', '#ffffff')
     + E(40, 136, 44, 6, '#ffffff') + E(210, 136, 40, 6, '#ffffff')
     + L(`M10 154 q30 -6 60 0 M170 164 q34 -6 64 0 M80 174 q40 -4 80 0`, '#d6e6f3', 2.5)
@@ -222,11 +224,11 @@ function arctic() {
 
 function volcano() {
   return sky('#8fd3f4') + C(208, 26, 13, '#fff2b0') + cloud(150, 22, 0.9)
-    + R(0, 92, W, 40, '#3fa7d6') + L('M120 104 q6 -3 12 0 M170 112 q6 -3 12 0 M200 98 q6 -3 12 0 M140 122 q6 -3 12 0', '#e0f4ff', 2)
+    + R(0, 92, W, 40, '#3fa7d6') + A('amb-waves', L('M120 104 q6 -3 12 0 M170 112 q6 -3 12 0 M200 98 q6 -3 12 0 M140 122 q6 -3 12 0', '#e0f4ff', 2))
     // the volcano island with lava and a big plume of smoke
     + P('M-20 112 L26 44 L48 44 L100 112Z', '#7a4f3c') + P('M26 44 L48 44 L44 52 L30 52Z', '#5c3a2c')
     + P('M34 46 q-6 16 0 30 q6 14 -4 34 l8 0 q8 -18 2 -32 q-4 -14 2 -32z', '#ff6a2a') + P('M42 48 q4 12 12 18 l3 -3 q-8 -6 -11 -15z', '#ffb03a')
-    + [[38, 34, 8], [47, 24, 9], [58, 15, 10]].map(([x, y, s]) => C(x, y, s, '#9c9aa6', ' opacity=".85"')).join('')
+    + A('amb-smoke', [[38, 34, 8], [47, 24, 9], [58, 15, 10]].map(([x, y, s]) => C(x, y, s, '#9c9aa6', ' opacity=".85"')).join(''))
     + P('M-10 112 Q50 98 110 112Z', '#4f9a4a')
     // a little island with a palm
     + E(222, 96, 26, 6, '#f2d98d') + palm(222, 94, 34, -1)
@@ -256,7 +258,7 @@ function temple() {
   const cols = [14, 26, 38, 50, 62].map((x) => R(x, 34, 6, 26, '#f7f2e4') + L(`M${x + 2} 36 V58 M${x + 4} 36 V58`, '#e2d8c0', 0.8)).join('');
   const olive = (x, y) => L(`M${x} ${y} q-2 -10 2 -18`, '#7a5a3c', 4) + C(x - 6, y - 22, 9, '#8fa86a') + C(x + 6, y - 24, 10, '#8fa86a') + C(x, y - 32, 9, '#9cb879') + [[-6, -20], [5, -27], [1, -34]].map(([dx, dy]) => C(x + dx, y + dy, 1.4, '#3d4a2c')).join('');
   return sky('#9fd6f5') + C(206, 26, 13, '#ffe38a') + cloud(140, 18, 0.8)
-    + R(0, 92, W, 20, '#4aa3d6') + L('M150 100 q5 -3 10 0 M190 104 q5 -3 10 0', '#e0f4ff', 1.5)
+    + R(0, 92, W, 20, '#4aa3d6') + A('amb-waves', L('M150 100 q5 -3 10 0 M190 104 q5 -3 10 0', '#e0f4ff', 1.5))
     + P('M0 64 Q50 60 90 72 Q140 92 170 112 L0 112Z', '#8cc265')
     // the temple on the hilltop
     + R(6, 60, 70, 4, '#e9e2d0') + R(2, 64, 78, 4, '#ddd4bd') + cols + R(8, 28, 66, 6, '#f7f2e4') + P('M8 28 L41 12 L74 28Z', '#f7f2e4') + P('M16 26 L41 15 L66 26Z', '#e5dcc6')
@@ -301,7 +303,7 @@ const pine = (x, y, h) => L(`M${x} ${y} q2 ${-h / 2} -2 ${-h}`, '#6b4e33', 3) + 
 // a run of fluted columns: x positions, top and bottom, width, colour, shade
 const columns = (xs, y0, y1, w, col, shade) => xs.map((x) => R(x, y0, w, y1 - y0, col) + L(`M${n1(x + w / 3)} ${y0 + 2} V${y1 - 1} M${n1(x + (2 * w) / 3)} ${y0 + 2} V${y1 - 1}`, shade, 0.7)
   + R(x - 1.5, y0 - 3, w + 3, 3, col) + R(x - 1, y1, w + 2, 2, shade)).join('');
-const steam = (pts, col = '#fff') => pts.map(([x, y, s]) => L(`M${x} ${y} q${-4 * s} ${-6 * s} 0 ${-12 * s} q${4 * s} ${-6 * s} 0 ${-12 * s}`, col, 2.5 * s, ' opacity=".55"')).join('');
+const steam = (pts, col = '#fff') => pts.map(([x, y, s]) => L(`M${x} ${y} q${-4 * s} ${-6 * s} 0 ${-12 * s} q${4 * s} ${-6 * s} 0 ${-12 * s}`, col, 2.5 * s, ' opacity=".55" class="amb-steam"')).join('');
 
 // The Colosseum from outside: the curving travertine wall with three arcaded storeys and the attic
 // on top, and on the left the broken outer ring, where you see the lower inner ring behind it.
@@ -454,7 +456,7 @@ function trireme() {
     + P('M12 92 L2 94 L2 97 L14 97Z', '#c58b3b') + L('M2 94.5 H10', '#8c5f25', 1) + L('M20 80 Q12 76 14 66', '#3a2a24', 4)
     + E(30, 87, 6, 3.4, '#ffffff') + C(31, 87, 2.2, '#1c1a33') + L('M24 84 q6 -3 12 0', '#b8432f', 1.2)
     + L('M222 96 l12 16 M228 90 l10 20', '#6b4e33', 2.5)
-    + L('M60 102 q4 -2 8 0 M110 104 q4 -2 8 0 M170 102 q4 -2 8 0 M20 110 q5 -3 10 0 M200 116 q5 -3 10 0 M40 122 q5 -3 10 0', '#d6efff', 1.6)
+    + A('amb-waves', L('M60 102 q4 -2 8 0 M110 104 q4 -2 8 0 M170 102 q4 -2 8 0 M20 110 q5 -3 10 0 M200 116 q5 -3 10 0 M40 122 q5 -3 10 0', '#d6efff', 1.6))
     // the stone quay
     + floor('#d6c6a2', '#e7d9b8') + L(`M0 148 H${W} M0 164 H${W} M30 132 V148 M90 132 V148 M150 132 V148 M210 132 V148 M10 148 V164 M60 148 V164 M120 148 V164 M180 148 V164 M230 148 V164 M40 164 V180 M100 164 V180 M160 164 V180 M220 164 V180`, '#bfae88', 1.5)
     // a bollard with its rope, and an amphora
@@ -561,7 +563,7 @@ function moon() {
     + P('M0 114 Q60 106 120 114 Q180 106 240 112 V132 H0Z', '#9897a6')
     + panel(2, 106) + panel(28, 98)
     // the base: a dish on a mast, an airlock and a dome with lit windows
-    + L('M176 116 V72', '#c3c7d3', 2) + E(176, 70, 10, 3.5, '#e8eaf0', ' transform="rotate(-25 176 70)"') + C(176, 64, 2, '#ff5f6d')
+    + L('M176 116 V72', '#c3c7d3', 2) + E(176, 70, 10, 3.5, '#e8eaf0', ' transform="rotate(-25 176 70)"') + A('amb-blink', C(176, 64, 2, '#ff5f6d'))
     + R(168, 112, 22, 16, '#d6d9e2', 4) + C(175, 120, 4, '#7a8090')
     + P('M184 128 A29 27 0 0 1 242 128Z', '#eceef3') + L('M188 116 Q213 108 238 116 M197 104 Q213 99 229 104 M213 101 V128', '#c3c7d3', 1.2)
     + R(193, 118, 8, 6, '#ffd166', 2) + R(225, 118, 8, 6, '#ffd166', 2) + R(182, 126, 60, 4, '#9aa0ae')
@@ -694,11 +696,11 @@ function joust() {
     o += P(`M${x + 20} 132 L${x + 28} 100 L${x + 36} 132Z`, '#5a3a2c') + shield(x + 28, 82, b, a);
     o += P(`M${x - 4} 78 L${x + 28} 38 L${x + 60} 78Z`, a) + L(`M${x + 28} 40 L${x + 14} 78 M${x + 28} 40 L${x + 42} 78`, b, 1.4);
     for (let i = 0; i < 8; i++) o += P(`M${x - 4 + i * 8} 78 a4 4 0 0 0 8 0z`, b);
-    return o + L(`M${x + 28} 38 V22`, '#5c4332', 2) + P(`M${x + 28} 22 L${x + 44} 26 L${x + 28} 31Z`, b);
+    return o + L(`M${x + 28} 38 V22`, '#5c4332', 2) + A('amb-flag', P(`M${x + 28} 22 L${x + 44} 26 L${x + 28} 31Z`, b));
   };
   const lance = (x0, y0, x1, y1, col) => L(`M${x0} ${y0} L${x1} ${y1}`, '#f3ead6', 4) + L(`M${x0} ${y0} L${x1} ${y1}`, col, 4, ' stroke-dasharray="6 6" stroke-linecap="butt"');
   return sky('#9fd8f7') + cloud(120, 30, 1) + cloud(196, 52, 0.6)
-    + L('M0 6 Q120 30 240 6', '#5c4332', 1.2) + flags
+    + A('amb-bunting', L('M0 6 Q120 30 240 6', '#5c4332', 1.2) + flags)
     + P('M0 86 Q60 70 120 82 Q180 70 240 84 V132 H0Z', '#8cc265')
     + G('translate(150 58)', R(0, 8, 30, 18, '#a9a193') + R(-4, 0, 9, 26, '#9a9284') + R(25, 0, 9, 26, '#9a9284') + P('M-5 0 L0.5 -8 L6 0Z M24 0 L29.5 -8 L35 0Z', '#c0453a') + R(12, 16, 6, 10, '#6d665c', 3))
     // the tilt: a painted barrier down the middle of the field
@@ -720,13 +722,13 @@ function pirate() {
   for (let i = 0; i < 5; i++) rig += `M${2 + i * 14} 108L35 30`;
   for (let y = 44; y < 108; y += 12) rig += `M${n1(2 + ((108 - y) * 33) / 78)} ${y}H${n1(58 - ((108 - y) * 23) / 78)}`;
   return sky('#9fd8f7') + cloud(196, 18, 0.8)
-    + R(0, 84, W, 26, '#2a86c0') + R(0, 84, W, 3, '#4aa3d6') + L('M80 96 q5 -3 10 0 M140 92 q5 -3 10 0 M160 102 q5 -3 10 0 M100 104 q5 -3 10 0', '#d6efff', 1.5)
+    + R(0, 84, W, 26, '#2a86c0') + R(0, 84, W, 3, '#4aa3d6') + A('amb-waves', L('M80 96 q5 -3 10 0 M140 92 q5 -3 10 0 M160 102 q5 -3 10 0 M100 104 q5 -3 10 0', '#d6efff', 1.5))
     + E(222, 86, 22, 4, '#f2d98d') + palm(222, 85, 22, -1)
     + L('M150 30 q4 -4 8 0 q4 -4 8 0 M170 46 q3 -3 6 0 q3 -3 6 0', '#4b5a6a', 1.3)
     // the mast, rigging, crow's nest and the flag
     + L(rig, '#4a3524', 1.3) + R(30, 0, 10, 112, '#7a4f2c') + R(22, 22, 26, 10, '#6b4226', 2) + L('M22 26 H48', '#4a3524', 1.2)
-    + P('M40 2 Q52 0 62 4 Q72 8 82 4 L82 26 Q72 30 62 26 Q52 22 40 24Z', '#1c1a24')
-    + C(61, 12, 4.5, '#f4f1e8') + R(58.5, 14, 5, 3, '#f4f1e8', 1) + C(59.3, 11.6, 1.2, '#1c1a24') + C(62.7, 11.6, 1.2, '#1c1a24') + L('M53 17 L69 23 M69 17 L53 23', '#f4f1e8', 2)
+    + A('amb-flag', P('M40 2 Q52 0 62 4 Q72 8 82 4 L82 26 Q72 30 62 26 Q52 22 40 24Z', '#1c1a24')
+    + C(61, 12, 4.5, '#f4f1e8') + R(58.5, 14, 5, 3, '#f4f1e8', 1) + C(59.3, 11.6, 1.2, '#1c1a24') + C(62.7, 11.6, 1.2, '#1c1a24') + L('M53 17 L69 23 M69 17 L53 23', '#f4f1e8', 2))
     // the rail and the side of the ship
     + R(0, 112, W, 20, '#7a4f2c') + R(0, 108, W, 5, '#a8743f') + L('M0 120 H240 M0 127 H240', '#5f3d22', 1)
     // the ship's wheel
@@ -753,11 +755,11 @@ function deepsea() {
     + R(8, 4, 224, 102, '#2b3640', 24) + R(16, 14, 208, 84, '#082445', 18)
     + P('M120 14 L50 98 H190Z', '#9fe8ff', ' opacity=".07"') + starfield(83, 26, 20, 18, 200, 76, () => true, '#7ff0ff')
     // the anglerfish and its lure
-    + L('M48 28 Q42 12 28 16', '#3b2f4a', 1.6) + C(27, 17, 7, '#c8ff7a', ' opacity=".3"') + C(27, 17, 2.8, '#eaff9a')
+    + L('M48 28 Q42 12 28 16', '#3b2f4a', 1.6) + A('amb-blink', C(27, 17, 7, '#c8ff7a', ' opacity=".3"') + C(27, 17, 2.8, '#eaff9a'))
     + P('M74 42 L90 32 L88 54Z', '#3b2f4a') + P('M30 44 Q32 26 54 26 Q74 28 76 44 Q72 60 52 60 Q34 60 30 44Z', '#4a3b5c')
     + P('M30 44 Q40 52 56 47 Q42 46 30 44Z', '#1c1430') + L('M33 45 l2 3 l2 -3 l2 3 l2 -3 l2 3 l2 -3 l2 3 l2 -3', '#f4f1e8', 1)
     + C(46, 36, 3.6, '#e8f3ff') + C(45, 36, 1.7, '#1c1a33') + P('M58 46 l8 4 l-8 3z', '#3b2f4a')
-    + jelly(194, 28, 1) + jelly(212, 66, 0.6)
+    + A('amb-jelly', jelly(194, 28, 1)) + A('amb-jelly', jelly(212, 66, 0.6))
     // the sea floor and tube worms
     + P('M26 98 Q34 86 50 90 Q70 84 90 92 Q130 86 160 92 Q186 84 214 98Z', '#173a5a')
     + L('M190 96 V82 M196 96 V78 M202 96 V84', '#f4f1e8', 3) + C(190, 81, 2.6, '#ff4b4b') + C(196, 77, 2.6, '#ff4b4b') + C(202, 83, 2.6, '#ff4b4b')
@@ -805,7 +807,7 @@ function pompeii() {
   return sky('#a8d8f2') + cloud(30, 22, 0.6)
     // Vesuvius, with the old rim of Monte Somma on its left and a wisp of smoke
     + P('M30 104 L74 48 L88 54 L104 38 L122 30 L138 32 L196 104Z', '#8f8ea6') + P('M122 30 L138 32 L196 104 L150 104Z', '#7e7d96')
-    + [[132, 22, 5], [140, 15, 6], [150, 9, 7]].map(([x, y, s]) => C(x, y, s, '#dcdce6', ' opacity=".85"')).join('')
+    + A('amb-smoke', [[132, 22, 5], [140, 15, 6], [150, 9, 7]].map(([x, y, s]) => C(x, y, s, '#dcdce6', ' opacity=".85"')).join(''))
     + P('M10 104 Q60 82 104 88 Q150 80 214 104Z', '#7f9a6a') + pine(100, 92, 10) + cypress(150, 96, 16)
     // a roofless house: plaster painted red below and yellow above, bricks where it has fallen
     + P('M0 132 V50 L10 46 L22 52 L34 44 L48 50 L62 46 V132Z', '#e7cf9a') + R(0, 94, 62, 38, '#a8392c') + R(0, 91, 62, 3, '#f3ead6')
@@ -967,9 +969,9 @@ function aurora() {
   for (let x = 4; x < W; x += 6) rays += `M${x} ${n1(30 + 14 * Math.sin(x / 26))}v${n1(26 + 10 * Math.cos(x / 19))}`;
   const fir = (x, y, h, col = '#0e2433') => P(`M${x} ${y - h} L${n1(x + h * 0.3)} ${y} H${n1(x - h * 0.3)}Z`, col);
   return sky('#0b1a33') + starfield(121, 34, 0, 0, W, 90)
-    + P('M0 62 Q30 30 70 40 T150 30 T240 22 V48 Q200 56 160 60 T80 70 T0 86Z', '#45f0a0', ' opacity=".35"') + L(rays, '#7dffc2', 2, ' opacity=".22"')
+    + A('amb-aurora', P('M0 62 Q30 30 70 40 T150 30 T240 22 V48 Q200 56 160 60 T80 70 T0 86Z', '#45f0a0', ' opacity=".35"') + L(rays, '#7dffc2', 2, ' opacity=".22"')
     + P('M0 40 Q40 18 90 26 T180 14 T240 8 V22 Q200 26 170 30 T90 40 T0 52Z', '#ff7ad9', ' opacity=".22"')
-    + P('M40 80 Q100 50 170 66 T240 54 V64 Q200 70 170 76 T100 70 T40 86Z', '#45f0a0', ' opacity=".3"')
+    + P('M40 80 Q100 50 170 66 T240 54 V64 Q200 70 170 76 T100 70 T40 86Z', '#45f0a0', ' opacity=".3"'))
     // mountains, the lake and the forest on the far shore
     + P('M0 104 L34 66 L58 86 L96 52 L136 94 L170 62 L206 90 L240 70 V104Z', '#2a3b5c')
     + P('M34 66 L42 76 L36 78 L30 72Z M96 52 L106 64 L98 66 L90 62Z M170 62 L178 72 L170 74 L164 70Z', '#dce8f5')
@@ -982,6 +984,91 @@ function aurora() {
     + floor('#e6eef8', '#ffffff') + E(30, 136, 40, 5, '#ffffff') + L('M10 156 q30 -6 60 0 M150 170 q34 -6 68 0 M80 176 q30 -4 60 0', '#c9d8ea', 2.5)
     // a wooden sledge
     + L('M176 160 H222 q8 0 8 -6', '#5a3a2c', 2.2) + R(180, 148, 40, 5, '#b8743a', 1) + L('M186 153 V160 M214 153 V160', '#5a3a2c', 2);
+}
+
+// The family picnic (the family goal's reward, js/core/family.js): a sunny meadow with kites for
+// everyone, an oak with a rope swing, and a big gingham blanket with the basket and lemonade.
+function picnic() {
+  const kite = (x, y, s, a, b, tail) => G(`translate(${x} ${y}) scale(${s})`, P('M0 -12 L9 0 L0 16 L-9 0Z', a) + P('M0 -12 L9 0 L0 0Z M0 0 L-9 0 L0 16Z', b)
+    + L('M0 -12 V16 M-9 0 H9', '#ffffff', 0.8, ' opacity=".7"') + L(`M0 16 q-4 6 0 10 q4 4 0 10`, tail, 1.2) + P('M-2 22 l2 -2 l2 2 l-2 2Z M-2 32 l2 -2 l2 2 l-2 2Z', tail));
+  const r = rng(77);
+  let flowers = '';
+  for (let i = 0; i < 26; i++) { const x = r() * W, y = 118 + r() * 14; if (x > 64 && x < 176) continue; flowers += C(x, y, 1.6, pick(r, ['#ffffff', '#ffd166', '#ff8fb1', '#c9a7ff'])); }
+  // the blanket: a perspective gingham, white with see-through blue bands both ways
+  const T = [30, 210], B = [6, 234], y0 = 140, y1 = 179, n = 10;
+  const xAt = (t, y) => { const k = (y - y0) / (y1 - y0); return T[0] + (T[1] - T[0]) * t + ((B[0] - T[0]) + ((B[1] - B[0]) - (T[1] - T[0])) * t) * k; };
+  let bands = '';
+  for (let i = 0; i < n; i += 1) { const a = i / n, b = (i + 0.5) / n; bands += P(`M${n1(xAt(a, y0))} ${y0} L${n1(xAt(b, y0))} ${y0} L${n1(xAt(b, y1))} ${y1} L${n1(xAt(a, y1))} ${y1}Z`, '#3d7fd6', ' opacity=".42"'); }
+  for (let j = 0; j < 5; j++) { const ya = y0 + (j * (y1 - y0)) / 5, yb = ya + (y1 - y0) / 10; bands += P(`M${n1(xAt(0, ya))} ${n1(ya)} L${n1(xAt(1, ya))} ${n1(ya)} L${n1(xAt(1, yb))} ${n1(yb)} L${n1(xAt(0, yb))} ${n1(yb)}Z`, '#3d7fd6', ' opacity=".42"'); }
+  return sky('#a9dcff') + C(120, 20, 13, '#ffe066') + C(120, 20, 18, '#ffe066', ' opacity=".25"') + cloud(70, 24, 0.7) + cloud(168, 16, 0.55)
+    // kites on long strings, one for each of the family
+    + L('M190 30 Q214 80 236 128 M218 58 Q228 96 238 130 M162 44 Q200 96 234 130', '#ffffff', 0.8, ' opacity=".8"')
+    + kite(190, 24, 1, '#e5373f', '#ffd166', '#e5373f') + kite(218, 50, 0.8, '#3d8be0', '#9fd3ff', '#3d8be0') + kite(162, 40, 0.7, '#4caf50', '#b6e88a', '#2f8a3e')
+    // the hills, a hedge, and the meadow
+    + P('M0 96 Q46 74 104 88 Q160 72 240 90 V132 H0Z', '#a6d987') + P('M0 102 Q60 92 120 100 Q180 90 240 100 V108 Q180 98 120 108 Q60 100 0 110Z', '#5f9e48')
+    + P('M0 112 Q70 102 130 112 Q190 104 240 110 V132 H0Z', '#8cce62') + flowers
+    // the oak and its rope swing
+    + P('M10 132 Q16 96 12 70 L24 70 Q22 100 28 132Z', '#7a4f30') + L('M18 78 Q34 66 58 64', '#7a4f30', 5)
+    + [[2, 40, 22], [26, 28, 22], [48, 44, 18], [8, 62, 16], [-6, 54, 14], [36, 58, 13]].map(([x, y, rr], i) => C(x, y, rr, ['#3f9a4a', '#4caf50', '#2f8a3e'][i % 3])).join('')
+    + C(20, 36, 2.4, '#e5373f') + C(40, 46, 2.4, '#e5373f') + C(6, 56, 2.4, '#e5373f')
+    + L('M44 66 V112 M56 64 V112', '#c8a26a', 1.4) + R(41, 111, 18, 4, '#a8743f', 1.5)
+    + floor('#8cce62', '#a3dc76')
+    + P(`M${T[0]} ${y0} L${T[1]} ${y0} L${B[1]} ${y1} L${B[0]} ${y1}Z`, '#ffffff') + bands
+    // sandwiches and strawberries on the left; the basket and the lemonade on the right
+    + E(26, 158, 15, 5, '#ffffff') + E(26, 157, 15, 5, '#e8eef8') + P('M16 157 L26 147 L28 157Z M24 157 L34 149 L37 157Z', '#f4d58d') + L('M16 157 L26 147 M24 157 L34 149', '#8fbf5a', 1.6)
+    + E(44, 170, 9, 4, '#d6dcea') + [[40, 167], [45, 166], [49, 168], [43, 170]].map(([x, y]) => C(x, y, 2.6, '#e5373f') + C(x, y - 2.2, 1, '#4caf50')).join('')
+    + R(186, 140, 32, 20, '#c8954e', 4) + L('M186 147 H218 M186 153 H218 M194 140 V160 M202 140 V160 M210 140 V160', '#a8743f', 1.2) + L('M190 140 Q202 124 214 140', '#8a5a35', 2.6)
+    + P('M186 142 L218 142 L216 137 L188 137Z', '#e5373f') + L('M190 139 H214', '#ffffff', 1, ' opacity=".7"')
+    + P('M222 148 L232 148 L234 168 L220 168Z', '#fff7c2', ' opacity=".95"') + R(220, 150, 14, 12, '#ffe066', 2, ' opacity=".8"') + L('M232 152 q6 2 0 10', '#d6dcea', 1.6)
+    + R(206, 166, 6, 8, '#ff8fb1', 1) + R(196, 168, 6, 8, '#9fd3ff', 1);
+}
+
+// Card-set prizes for Years 2 and 3 (js/core/cards.js): a fossil dig and Saturn from one of its moons.
+// A fossil dig in the badlands: cliffs striped with rock layers (an ammonite in one), the team's tent,
+// a bucket and brush, and a dinosaur skull and backbone half uncovered in the pegged-out dig square.
+function digsite() {
+  const ribs = [150, 160, 170, 180, 190].map((x, i) => L(`M${x} ${163 - i * 0.8} q3 7 1 12`, '#f6ead2', 2.4)).join('');
+  return sky('#ffd9a0') + C(118, 26, 13, '#fff3c4') + C(118, 26, 19, '#fff3c4', ' opacity=".35"') + cloud(52, 22, 0.6, '#fff7e8') + cloud(190, 16, 0.5, '#fff7e8')
+    // the cliffs, in bands of rock laid down over millions of years
+    + P('M0 62 L26 50 L56 58 L88 44 L120 54 L150 42 L182 52 L212 40 L240 48 V132 H0Z', '#c9774a')
+    + P('M0 78 L40 70 L90 76 L140 66 L190 74 L240 64 V84 L190 92 L140 84 L90 94 L40 88 L0 96Z', '#e3a56b')
+    + P('M0 104 L50 98 L110 104 L170 96 L240 100 V114 L170 110 L110 118 L50 112 L0 118Z', '#b5643c')
+    + L('M0 66 L26 56 L56 64 M150 48 L182 58 L212 46 L240 54', '#a85f37', 1.4)
+    + C(220, 82, 7, '#f2d3a6') + L('M220 82 m0 -4.5 a4.5 4.5 0 1 1 -4.5 4.5 a3 3 0 1 1 3 3', '#c28a5a', 1.3)
+    // the tent, its door open
+    + P('M2 132 L26 96 L50 132Z', '#2e9e5b') + P('M26 96 L33 132 L19 132Z', '#1d6e3e') + L('M26 96 V90', '#5a3a2c', 2) + P('M26 90 l9 3 l-9 3z', '#ffd166')
+    + floor('#e8c18b', '#f2d3a6') + L('M20 150 q10 -3 20 0 M84 176 q14 -3 28 0', '#d4a874', 2)
+    // a blue bucket and a brush
+    + P('M8 150 L28 150 L25 170 L11 170Z', '#2f74e8') + E(18, 150, 10, 2.6, '#5b95f0') + L('M9 150 Q18 139 27 150', '#3b3a4a', 1.2)
+    + L('M30 172 L42 160', '#8a5a35', 3) + R(40, 154, 7, 6, '#3b3a4a', 1, ' transform="rotate(-45 43.5 157)"')
+    // the dig square, pegged out with string
+    + P('M140 152 L230 150 L240 178 L132 180Z', '#d39a5e') + L('M140 152 L230 150 L240 178 M132 180 L140 152 M170 151 L168 179 M200 151 L204 179', '#ffffff', 0.9, ' opacity=".85"')
+    + [[140, 152], [230, 150], [240, 178]].map(([x, y]) => R(x - 1.5, y - 6, 3, 7, '#8a5a35')).join('')
+    // the skeleton: a backbone with ribs, and a big skull with teeth
+    + L('M146 164 Q178 156 206 160', '#f6ead2', 3.2) + ribs
+    + P('M204 152 q16 -9 30 -1 q4 6 -3 11 l-10 3 l-16 -2 q-6 -5 -1 -11Z', '#fbf3e4') + C(220, 155, 2.6, '#c8905a')
+    + L('M210 163 l1.5 3 l1.5 -3 l1.5 3 l1.5 -3 l1.5 3 l1.5 -3', '#fbf3e4', 1.2);
+}
+
+// Saturn rising over an icy moon: a huge ringed planet, stars, a crater-pocked blue-white ground,
+// ice spires, and a little rover with its flag.
+function rings() {
+  const crater = (x, y, rx) => E(x, y, rx, rx * 0.3, '#b7cde6') + E(x, y + rx * 0.05, rx * 0.75, rx * 0.2, '#8fb0d6');
+  return sky('#0a0d2b') + starfield(91, 46, 0, 0, W, 110, (x, y) => (x - 168) ** 2 + (y - 50) ** 2 > 40 ** 2)
+    // Saturn, tilted, with its rings in front and behind
+    + E(168, 50, 66, 13, 'none', ' stroke="#e9cf9a" stroke-width="5" opacity=".55" transform="rotate(-14 168 50)"')
+    + C(168, 50, 30, '#e3b877') + P('M140 40 Q168 34 196 40 L197 46 Q168 40 139 46Z', '#cf9a58', ' opacity=".8"') + P('M139 56 Q168 50 197 56 L195 62 Q168 56 141 62Z', '#f0d39f', ' opacity=".8"')
+    + C(158, 40, 6, '#fff3d6', ' opacity=".25"')
+    + L('M102 50 A66 13 0 0 0 234 50', '#f4dfb0', 5, ' transform="rotate(-14 168 50)"') + L('M110 50 A58 10 0 0 0 226 50', '#c9a56a', 1.2, ' transform="rotate(-14 168 50)" opacity=".7"')
+    + C(40, 28, 7, '#c9c2b8') + C(38, 26, 2, '#a59d92')
+    // icy hills and spires
+    + P('M0 104 L22 92 L46 100 L74 86 L104 98 L136 90 L170 100 L204 88 L240 96 V132 H0Z', '#7ea6d4')
+    + P('M8 104 L14 74 L20 104Z M206 98 L214 62 L222 98Z M226 98 L231 78 L236 98Z', '#d8ecff') + P('M14 74 L20 104 L16 104Z M214 62 L222 98 L217 98Z', '#a9c9ee')
+    + P('M0 114 Q60 106 120 114 Q180 106 240 112 V132 H0Z', '#a9c6e8')
+    + floor('#cfe2f6', '#e6f1fc') + crater(30, 152, 16) + crater(212, 170, 18) + crater(120, 176, 10)
+    // a little rover with its flag
+    + R(6, 120, 30, 9, '#e8eaf0', 3) + R(10, 113, 14, 8, '#9fe8ff', 2) + C(12, 131, 4, '#3b3a4a') + C(30, 131, 4, '#3b3a4a')
+    + L('M32 120 V104', '#c3c7d3', 1.4) + P('M32 104 h10 l-3 3 l3 3 h-10z', '#ff5f6d') + A('amb-blink', C(8, 118, 1.6, '#5fd6a0'));
 }
 
 // The full list, in the order the oldest course meets them; sceneOrder() reorders per course.
@@ -1025,7 +1112,14 @@ export const SCENES = [
   { id: 'lab', name: 'Science lab', draw: lab },
   { id: 'blossom', name: 'Cherry-blossom park', draw: blossom },
   { id: 'aurora', name: 'Northern Lights', draw: aurora },
+  // every course: the family goal's reward, opened outside the badge order (js/core/family.js)
+  { id: 'picnic', name: 'Family picnic', draw: picnic },
+  // card-set prizes (js/core/cards.js)
+  { id: 'digsite', name: 'Fossil dig', draw: digsite },
+  { id: 'rings', name: 'Saturn’s moon', draw: rings },
 ];
+/** Scenes opened by something other than badges, so they are in no course's badge order. */
+export const REWARD_SCENES = ['picnic', 'digsite', 'rings'];
 export const SCENE_BY_ID = Object.fromEntries(SCENES.map((s) => [s.id, s]));
 
 // Unlocking: the first FREE scenes are open from the start, then one more for every PER_SCENE
@@ -1084,7 +1178,7 @@ export function sceneSVG(id, companion = null, { bob = false } = {}) {
   // the companion's drawing, moved and scaled into place (a group, not a nested <svg>, which page CSS would resize)
   const pet = companion ? `<g transform="translate(${PET.x} ${PET.y}) scale(${PET.s})">${capybaraSVG(companion).replace(/^\s*<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '')}</g>` : '';
   const label = companion ? `${companion.title || companion.name || 'Your companion'} in the ${sc.name.toLowerCase()}` : sc.name;
-  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${label.replace(/"/g, '&quot;')}" xmlns="http://www.w3.org/2000/svg">${sc.draw()}${pet ? (bob ? `<g class="bob">${pet}</g>` : pet) : ''}</svg>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${label.replace(/"/g, '&quot;')}" xmlns="http://www.w3.org/2000/svg">${sc.draw()}${pet ? `<g class="pet${bob ? ' bob' : ''}">${pet}</g>` : ''}</svg>`;
 }
 
 /** The companion in its chosen scene (opts.scene), or on its own when there is none. */

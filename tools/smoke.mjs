@@ -164,7 +164,7 @@ try {
     await page.screenshot({ path: `${OUT}/${label}-12-reading.png`, fullPage: true });
     await page.click('[aria-label="Back"]');
     // a subject page
-    await page.click('.region >> nth=3');
+    await page.click('.jr-region:not(.closed) >> nth=0'); // a region of the journey map
     await page.waitForSelector('.journey li');
     await page.screenshot({ path: `${OUT}/${label}-07-subject.png`, fullPage: true });
     // Latin any time: after today's session is finished, a Latin practice plays through and leaves the day alone

@@ -14,6 +14,9 @@ import { readingThisWeek } from '../core/writing.js';
 import { sprintSeconds } from '../core/sprint.js';
 import { paperSpec } from '../gen/paper.js';
 import { handwritingSummary } from '../core/handwriting.js';
+import { familyParentCard, notesParentCard } from '../ui/family.js';
+import { soundsOn } from '../core/juice.js';
+import { setSoundOn } from '../platform/sfx.js';
 
 let unlockedUntil = 0;
 
@@ -113,6 +116,9 @@ function dashboard(app) {
         handwritingSummary(state.handwriting) ? h('p', { class: 'muted small' }, handwritingSummary(state.handwriting)) : null,
         bonusLine(state, db) ? h('p', { class: 'muted small' }, bonusLine(state, db)) : null),
 
+      notesParentCard(app, () => redrawKeepingScroll(app)),
+      familyParentCard(app, () => redrawKeepingScroll(app)),
+
       prompts.length ? h('div', { class: 'card' }, h('h2', {}, 'Things to talk about'), h('p', { class: 'muted' }, 'Interest helps more than checking. Try one of these at dinner or in the car:'), h('ul', {}, prompts.map((p) => h('li', {}, p)))) : null,
 
       h('div', { class: 'card' }, h('h2', {}, 'Is it working?'),
@@ -139,6 +145,12 @@ function dashboard(app) {
       h('div', { class: 'card stack' }, h('h2', {}, 'Start again'),
         h('p', { class: 'muted' }, `This deletes ${state.profile?.childName || 'this child'}’s progress on this device. Save a backup first.`),
         h('button', { class: 'btn-ghost', onclick: () => doReset(app) }, 'Delete this child’s progress…'))));
+}
+
+function redrawKeepingScroll(app) {
+  const y = window.scrollY;
+  dashboard(app);
+  window.scrollTo(0, y);
 }
 
 /** The child's course, and moving up to the next one when the current one is nearly used up. */
@@ -303,6 +315,7 @@ function settingsForm(app) {
   const mins = h('select', { id: 'set-mins' }, [8, 10, 12, 15, 20, 25, 30, 40].map((m) => h('option', { value: m, selected: m === st.settings.sessionMinutes }, `${m} minutes`)));
   const pin = h('input', { type: 'password', inputmode: 'numeric', maxlength: 4, placeholder: 'Leave blank to keep', id: 'set-pin' });
   const tts = h('input', { type: 'checkbox', id: 'set-tts', checked: st.settings.tts !== false, style: { width: '28px', height: '28px' } });
+  const sounds = h('input', { type: 'checkbox', id: 'set-sounds', checked: soundsOn(st.settings, COURSE.id), style: { width: '28px', height: '28px' } });
   const rung = h('select', { id: 'set-rung' }, (app.db.rungs || []).map((r, i) => h('option', { value: i + 1, selected: i + 1 === (st.settings.readingRung || 1) }, `${i + 1}. ${r} (e.g. ${app.db.ladder.find((b) => b.rung === i + 1)?.title})`)));
   return h('div', { class: 'card stack' }, h('h2', {}, 'Settings'),
     h('div', { class: 'field' }, h('label', { for: 'set-name' }, '{Her} first name'), name),
@@ -312,6 +325,7 @@ function settingsForm(app) {
       h('div', { class: 'field' }, h('label', { for: 'set-early' }, 'Earliest start'), early)),
     h('div', { class: 'field' }, h('label', { for: 'set-mins' }, 'Daily session length'), mins),
     h('div', { class: 'field row' }, tts, h('label', { for: 'set-tts', style: { margin: 0 } }, 'Read-aloud buttons')),
+    h('div', { class: 'field row' }, sounds, h('label', { for: 'set-sounds', style: { margin: 0 } }, 'Soft sounds when answering')),
     h('div', { class: 'field' }, h('label', { for: 'set-rung' }, 'Reading ladder: what {she} reads comfortably now'), rung),
     h('div', { class: 'field' }, h('label', { for: 'set-pin' }, 'New 4-digit PIN'), pin),
     h('button', { class: 'btn-primary', onclick: () => {
@@ -322,6 +336,8 @@ function settingsForm(app) {
       st.settings.earliest = early.value || st.settings.earliest;
       st.settings.sessionMinutes = +mins.value;
       st.settings.tts = tts.checked;
+      st.settings.sounds = sounds.checked;
+      setSoundOn(sounds.checked);
       st.settings.readingRung = +rung.value;
       if (pin.value) st.profile.parentPin = pin.value;
       app.save();

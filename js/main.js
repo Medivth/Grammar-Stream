@@ -19,7 +19,10 @@ import { paperScreen } from './screens/paper.js';
 import { typingScreen } from './screens/typing.js';
 import { speedScreen } from './screens/speed.js';
 import { handwritingScreen } from './screens/handwriting.js';
+import { challengeScreen } from './screens/weekly.js';
 import { installLamps } from './ui/lamp.js';
+import { setSoundOn } from './platform/sfx.js';
+import { soundsOn } from './core/juice.js';
 
 const root = document.getElementById('app');
 
@@ -75,6 +78,7 @@ const app = {
     el.dataset.font = st.font || 'default';
     if (st.theme) el.dataset.theme = st.theme; else delete el.dataset.theme;
     el.dataset.motion = st.reduceMotion ? 'reduce' : 'full';
+    setSoundOn(soundsOn(st, COURSE.id));
     el.style.setProperty('--scale', st.textScale || 1);
   },
 };
@@ -91,8 +95,8 @@ async function route() {
   switch (page) {
     case 'welcome': return welcomeScreen(app);
     case 'companion': return companionScreen(app);
-    case 'play': return playScreen(app, arg);
-    case 'subject': return subjectScreen(app, arg);
+    case 'play': return arg === 'challenge' ? challengeScreen(app) : playScreen(app, arg); // the weekly challenge is a race of its own
+    case 'subject': return subjectScreen(app, arg, hash.split('/')[3] ? decodeURIComponent(hash.split('/')[3]) : null); // #/subject/<id>/<topic> scrolls to a topic
     case 'parent': return parentScreen(app);
     case 'display': return displayScreen(app);
     case 'writing': return writingScreen(app);

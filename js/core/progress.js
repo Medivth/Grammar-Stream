@@ -4,6 +4,8 @@ import { topicStatus } from './mastery.js';
 import { SUBJECTS, COURSE, isStretch } from './subjects.js';
 import { monthKey } from './dates.js';
 import { calibration, bonusProgress } from './session.js';
+import { bestStreak } from './quests.js';
+import { wonCardRewards, cardRewardAccessories } from './cards.js';
 
 /** An item counts as known once it is in review and has been recalled at least once. */
 export const isKnown = (c) => !!c && c.state === 'review' && (c.assumed || c.s >= 2);
@@ -151,13 +153,20 @@ export const Y8_MILESTONES = [
   { id: 'charioteer', title: 'Charioteer', desc: 'Get 30 right in one sprint', goal: 30, measure: bestSprint, unlock: 'chariot' },
 ];
 
-export const milestoneDefs = () => {
+// The gentle streak (rest days cover a missed day): badges only, so no existing reward changes
+export const STREAK_MILESTONES = [
+  { id: 'on-a-roll', title: 'On a roll', desc: 'Keep a 7-day streak going', goal: 7, measure: (s) => bestStreak(s) },
+  { id: 'steady', title: 'Steady as a rock', desc: 'Keep a 30-day streak going (rest days help)', goal: 30, measure: (s) => bestStreak(s) },
+];
+
+const courseMilestones = () => {
   if (COURSE.id === 'y3') return Y3_MILESTONES;
   if (COURSE.young) return KS1_MILESTONES;
   const main = MILESTONES.filter((m) => m.id !== 'paper' || COURSE.tools.includes('paper'));
   if (COURSE.id === 'y8') return [...main, ...Y8_MILESTONES];
   return COURSE.id === 'y6' ? [...main, ...Y6_MILESTONES, ...Y6_DRESS_UP] : main;
 };
+export const milestoneDefs = () => [...courseMilestones(), ...STREAK_MILESTONES];
 /** Everything a badge unlocks: its main reward, then any others. */
 export const unlocksOf = (m) => (m.unlock ? [m.unlock, ...(m.also || [])] : []);
 
@@ -172,7 +181,7 @@ export const starterAccessories = () => COURSE.starter;
 
 export function unlockedAccessories(state, db) {
   const done = new Set(milestones(state, db).filter((m) => m.done).map((m) => m.id));
-  return new Set([...COURSE.starter, ...milestoneDefs().filter((m) => done.has(m.id)).flatMap(unlocksOf), ...bonusPrizes(state, db)]);
+  return new Set([...COURSE.starter, ...milestoneDefs().filter((m) => done.has(m.id)).flatMap(unlocksOf), ...bonusPrizes(state, db), ...wonCardRewards(state, db).acc]);
 }
 
 /** The bonus topic's prize, once won (every part finished): never taken away again. */
@@ -183,8 +192,8 @@ export function bonusPrizes(state, db) {
 /** The bonus topic whose prize this accessory is, if it is one (for the wardrobe's "how to unlock" hint). */
 export const prizeOf = (id) => (COURSE.bonus?.prize?.includes(id) ? COURSE.bonus : null);
 
-/** Every accessory this course can ever show: starters, milestone rewards and the bonus topic's prize. */
-export const wardrobeAccessories = () => new Set([...COURSE.starter, ...milestoneDefs().flatMap(unlocksOf), ...(COURSE.bonus?.prize || [])]);
+/** Every accessory this course can ever show: starters, milestone rewards, the bonus topic's prize and full card sets' prizes. */
+export const wardrobeAccessories = () => new Set([...COURSE.starter, ...milestoneDefs().flatMap(unlocksOf), ...(COURSE.bonus?.prize || []), ...cardRewardAccessories()]);
 
 /** A short plan summary for the home screen ("18 reviews · 1 new topic · writing"). */
 export function planSummary(plan) {

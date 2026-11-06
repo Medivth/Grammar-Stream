@@ -1,7 +1,7 @@
 // Scenes: every backdrop draws well-formed SVG, the companion stands in it, and scenes open with badges.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { SCENES, SCENE_BY_ID, sceneSVG, sceneStatus, sceneOrder, FREE } from '../js/ui/scenes.js';
+import { SCENES, SCENE_BY_ID, sceneSVG, sceneStatus, sceneOrder, FREE, REWARD_SCENES } from '../js/ui/scenes.js';
 import { COURSES, setCourse } from '../js/core/subjects.js';
 import { milestoneDefs } from '../js/core/progress.js';
 
@@ -10,6 +10,10 @@ const FIRST = ['space', 'underwater', 'racetrack', 'city', 'dino', 'castle', 'ju
 // added for the boy in Years 2 and 3, and for the girl in Year 6
 const BOY = ['moon', 'mars', 'pitlane', 'herohq', 'museum', 'joust', 'pirate', 'deepsea', 'pyramids'];
 const GIRL = ['pompeii', 'hadrian', 'observatory', 'glasshouse', 'studio', 'lab', 'blossom', 'aurora'];
+// opened by the family goal, not by badges
+const FAMILY = ['picnic'];
+// prizes for full card sets (js/core/cards.js), not badges
+const CARD_PRIZES = ['digsite', 'rings'];
 // which scenes each course has
 const WANT = {
   ks1: [...FIRST, ...BOY], y3: [...FIRST, ...BOY],
@@ -35,7 +39,7 @@ function svgErrors(svg) {
 test('every scene draws well-formed, compact SVG, alone and with either companion', () => {
   assert.ok(SCENES.length >= 10 && SCENES.length <= 40);
   assert.equal(new Set(SCENES.map((s) => s.id)).size, SCENES.length, 'ids are unique');
-  assert.deepEqual(SCENES.map((s) => s.id).sort(), [...new Set([...FIRST, ...CLASSICAL, ...BOY, ...GIRL])].sort(), 'every scene is listed here');
+  assert.deepEqual(SCENES.map((s) => s.id).sort(), [...new Set([...FIRST, ...CLASSICAL, ...BOY, ...GIRL, ...FAMILY, ...CARD_PRIZES])].sort(), 'every scene is listed here');
   assert.equal(new Set(SCENES.map((s) => s.name)).size, SCENES.length, 'names are unique');
   for (const sc of SCENES) {
     const plain = sceneSVG(sc.id);
@@ -78,9 +82,11 @@ test('three scenes are free (the space station among them), then at least one mo
     assert.ok(pace(all).every((s) => s.open && s.need === 0));
     assert.ok(!pace(all - 1).every((s) => s.open));
   }
-  // every scene is in some course
+  // every scene is in some course, apart from the rewards opened another way
+  assert.deepEqual(REWARD_SCENES, [...FAMILY, ...CARD_PRIZES]);
   const used = new Set(Object.keys(COURSES).flatMap((id) => { setCourse(id); return sceneOrder(); }));
-  assert.deepEqual(SCENES.filter((s) => !used.has(s.id)), []);
+  assert.deepEqual(SCENES.filter((s) => !used.has(s.id) && !REWARD_SCENES.includes(s.id)), []);
+  assert.ok(REWARD_SCENES.every((id) => !used.has(id)), 'a reward scene is not in a badge order too');
   setCourse('ks1');
   assert.deepEqual(sceneStatus(0).filter((s) => s.open).map((s) => s.id), ['space', 'racetrack', 'underwater']);
   assert.equal(sceneStatus(2).find((s) => s.id === 'jungle').need, 4); // kept from the first release

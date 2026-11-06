@@ -11,7 +11,7 @@ function pickVoice() {
 }
 
 export function ttsAvailable() {
-  return 'speechSynthesis' in window;
+  return typeof window !== 'undefined' && 'speechSynthesis' in window; // (not under node, where the tests import screens)
 }
 
 if (ttsAvailable()) {
