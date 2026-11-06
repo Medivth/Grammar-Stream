@@ -669,7 +669,7 @@ pre.code code { border: 0; padding: 0; background: none; font-size: 0.95rem; }
 
 /* ==== juice: themed progress track, run badge, answer reactions, finish line (js/ui/raceway.js) ==== */
 .q-head { gap: 10px; }
-.rw { position: relative; flex: 1; min-width: 96px; height: 30px; }
+.rw { position: relative; flex: 1; min-width: 96px; height: 30px; overflow-x: clip; } /* the sliding mover must not widen the page */
 .rw-road { position: absolute; inset: 7px 0; border-radius: 999px; background: var(--bg-2); overflow: hidden; }
 .rw-goal { position: absolute; right: 0; top: 0; width: 24px; height: 30px; }
 .rw-goal svg, .rw-vehicle svg { display: block; width: 100%; height: 100%; overflow: visible; }
@@ -1116,8 +1116,8 @@ button.gcard:active:not(:disabled) { transform: translateY(2px) scale(0.98); box
 
 /* the enlarged card: grows with its fact instead of clipping it */
 .gc-big { aspect-ratio: auto; border-radius: 14px; }
-.gc-big .gc-face { position: relative; inset: auto; margin: 0; min-height: 150cqi; padding: 5.5cqi; gap: 3cqi; border-radius: 10px; }
-.gc-big.gc-young .gc-face, .gc-big.gc-y6 .gc-face { margin: 3.6cqi; min-height: 142cqi; }
+.gcard.gc-big .gc-face { position: relative; inset: auto; margin: 0; min-height: 150cqi; padding: 5.5cqi; gap: 3cqi; border-radius: 10px; }
+.gcard.gc-big.gc-young .gc-face, .gcard.gc-big.gc-y6 .gc-face { margin: 3.6cqi; min-height: 142cqi; }
 .gc-big .gc-top { font-size: 4.8cqi; }
 .gc-big .gc-pic { flex: 0 0 auto; height: 62cqi; }
 .gc-big .gc-pic-visual { display: block; height: auto; max-height: 82cqi; padding: 2cqi; overflow: hidden; background: #fff !important; color: #1c1a33; }
@@ -1168,7 +1168,7 @@ button.gcard:active:not(:disabled) { transform: translateY(2px) scale(0.98); box
 /* still to collect: a grey silhouette with the title */
 .gcard.gc-locked { background: var(--bg-2); color: var(--muted); box-shadow: none; }
 .gcard.gc-locked::after { content: none; }
-.gcard.gc-locked .gc-face { inset: 0; margin: 0; background: none; box-shadow: none; border: 2px dashed var(--line); border-radius: 10px; }
+.gcard.gc-locked .gc-face, .gcard.gc-big.gc-locked .gc-face { inset: 0; margin: 0; background: none; box-shadow: none; border: 2px dashed var(--line); border-radius: 10px; }
 .gcard.gc-locked .gc-pic { background: color-mix(in srgb, var(--bg-2) 60%, var(--card)); border: 0; }
 .gcard.gc-locked .gc-em { color: color-mix(in srgb, var(--muted) 30%, var(--bg-2)); --em2: color-mix(in srgb, var(--muted) 30%, var(--bg-2)); --em3: color-mix(in srgb, var(--muted) 30%, var(--bg-2)); filter: none; }
 .gcard.gc-locked .gc-title, .gcard.gc-locked .gc-fact { color: var(--muted); text-shadow: none; font-family: var(--display); font-style: normal; }

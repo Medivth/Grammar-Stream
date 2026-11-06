@@ -750,12 +750,8 @@ function doneStep(app, root) {
 
   const right = res.filter((r) => r.correct).length;
   const capy = capybaraEl({ ...c, mood: 'happy' }, 'capy bob');
-  const burst = h('div', { class: 'celebrate', style: { width: '200px', margin: '0 auto' } }, capy);
-  const COLS = ['#ffd166', '#5143d9', '#d63d74', '#0f9a6e', '#2f74e8', '#ff8a3d'];
-  for (let i = 0; i < 16; i++) {
-    const a = (i / 16) * Math.PI * 2;
-    burst.append(h('span', { class: 'spark', style: { left: '50%', top: '45%', background: COLS[i % COLS.length], '--dx': `${Math.cos(a) * 110}px`, '--dy': `${Math.sin(a) * 80}px`, animationDelay: `${(i % 4) * 40}ms` } }));
-  }
+  // one celebration: the finish line has its own stars, so the companion just looks pleased
+  const burst = h('div', { style: { width: '200px', margin: '0 auto' } }, capy);
   const tile = (n, label, colour) => h('div', { class: 'stat-tile', style: { '--tile': colour } }, h('b', {}, String(n)), h('span', {}, label));
   mount(root, h('div', { class: 'q-wrap stack' },
     finishLine(),
