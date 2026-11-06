@@ -47,7 +47,11 @@ export function cardEl(db, topicId, { big = false, have = true, gold = false, ta
     const v = (Array.isArray(t.visual) ? t.visual : t.visual ? [t.visual] : []).find((x) => CARD_VISUALS.has(x.kind));
     if (v) {
       const drawn = renderVisual({ ...v, caption: undefined });
-      if (drawn) { pic.classList.add('gc-pic-visual'); pic.replaceChildren(drawn); }
+      if (drawn) {
+        pic.classList.add('gc-pic-visual');
+        pic.replaceChildren(drawn);
+        fitInside(pic);
+      }
     }
   }
   const label = have ? `${t.title}. ${sub.name} card${set ? `, ${set.name} set` : ''}.` : `${t.title}: not collected yet. Secure this topic to collect it.`;
@@ -64,16 +68,32 @@ export function cardEl(db, topicId, { big = false, have = true, gold = false, ta
       h('div', { class: 'gc-set' }, have || big ? set?.name || sub.name : 'Secure it to collect')));
 }
 
+/** Shrink a tall picture (a flow chart, a tree) to fit its window instead of cutting it off. */
+function fitInside(box) {
+  let tries = 0;
+  const fit = () => {
+    if (!box.isConnected) { if (tries++ < 20) requestAnimationFrame(fit); return; }
+    const inner = box.firstElementChild;
+    if (!inner) return;
+    inner.style.zoom = '';
+    const room = box.clientHeight - 8, need = inner.scrollHeight;
+    if (need > room && room > 0) inner.style.zoom = String(Math.max(0.45, room / need));
+    // a diagram loads its drawing a moment later
+    if (tries++ < 6) setTimeout(fit, 120);
+  };
+  requestAnimationFrame(fit);
+}
+
 /** The back of a card (seen before it flips). */
 function backEl(theme, colour) {
   return h('div', { class: `gc-back gc-${theme}`, style: { '--subj': colour }, 'aria-hidden': 'true', html: `<div class="gc-back-in">${emblemSVG(theme === 'y8' ? 'amphora' : theme === 'y6' ? 'leaf' : 'star')}</div>` });
 }
 
 /** A card that flips over from its back (the flip is skipped when motion is reduced). */
-export function flipCard(db, topicId, { delay = 0, sound = false, gold = false } = {}) {
+export function flipCard(db, topicId, { delay = 0, sound = false, gold = false, big = true } = {}) {
   const t = db.topics[topicId];
   const theme = cardTheme();
-  const front = cardEl(db, topicId, { big: true, gold });
+  const front = cardEl(db, topicId, { big, gold });
   const wrap = h('div', { class: 'gc-flip', style: { '--delay': `${delay}ms` } },
     h('div', { class: 'gc-inner' }, front, backEl(theme, SUBJECT_BY_ID[t.subject]?.colour)));
   if (sound) setTimeout(() => sfx.sparkle?.(), delay + 380);
@@ -152,7 +172,7 @@ export function albumTab(app, body) {
         const a = ss.reduce((x, s) => x + s.have, 0), b = ss.reduce((x, s) => x + s.total, 0);
         return h('button', { type: 'button', role: 'tab', class: 'album-chip', style: { '--subj': sub.colour }, 'aria-selected': String(sub.id === subjectId), onclick: () => draw(sub.id) }, sub.name, h('span', {}, `${a}/${b}`));
       })),
-      mine.map((s) => h('section', { class: `gc-set-box${s.won ? ' won' : ''}`, style: { '--subj': SUBJECT_BY_ID[s.subject]?.colour } },
+      ...mine.map((s) => h('section', { class: `gc-set-box${s.won ? ' won' : ''}`, style: { '--subj': SUBJECT_BY_ID[s.subject]?.colour } },
         h('div', { class: 'gc-set-head' },
           h('h3', {}, s.name),
           h('span', { class: 'gc-count' }, `${s.have} of ${s.total}`)),
@@ -207,7 +227,9 @@ export function newCardsReveal(app, plan) {
   return h('section', { class: 'gc-reveal', role: 'status' },
     h('div', { class: 'eyebrow' }, ids.length === 1 ? 'New card!' : `${ids.length} new cards!`),
     h('h2', {}, ids.length === 1 ? `You secured ${db.topics[ids[0]].title}` : 'You secured new topics'),
-    h('div', { class: 'gc-reveal-row' }, ids.slice(0, SHOW).map((id, i) => flipCard(db, id, { delay: 900 + i * 260, sound: i === 0, gold: wonSet.has(setOfTopic(db, id)?.id) }))),
+    // the first card large, so its fact can be read; any others smaller beside it
+    h('div', { class: 'gc-reveal-row' }, flipCard(db, ids[0], { delay: 900, sound: true, gold: wonSet.has(setOfTopic(db, ids[0])?.id) })),
+    ids.length > 1 ? h('div', { class: 'gc-reveal-more' }, ids.slice(1, SHOW).map((id, i) => flipCard(db, id, { delay: 1200 + i * 220, big: false, gold: wonSet.has(setOfTopic(db, id)?.id) }))) : null,
     more > 0 ? h('p', { class: 'muted' }, `And ${more} more in your album.`) : null,
     sets.map((s) => h('p', { class: 'gc-set-won' }, `Set complete: ${s.name}! You won ${theRewardName(s.reward)}.`)),
     h('button', { type: 'button', class: 'btn-ghost', onclick: () => app.go('#/progress/cards') }, 'See your album'));

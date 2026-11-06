@@ -228,6 +228,7 @@ function score(s, hook) {
   if (s.length < 24) n -= 2;
   if (s.length > 170) n -= 2;
   if (/\d/.test(s)) n += 1; // dates, numbers and amounts are good facts
+  if (s.length >= 45) n += 1; // a whole thought rather than a heading
   if (hook) n += 1;
   return n;
 }
