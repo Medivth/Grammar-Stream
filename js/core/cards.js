@@ -1,6 +1,7 @@
 // Collectible cards: every topic she secures earns its card, kept for good even if the topic
-// slips back later. Cards are grouped into sets (a subject, or a part of a big one); a full set
-// wins a fixed reward (an accessory or a scene this course has no other way to earn). Never random.
+// slips back later. Cards are grouped into sets (a subject, or a part of a big one). A full set's
+// cards turn gold, and many sets also win a fixed prize: an accessory or a scene this course has
+// no other way to earn. Never random.
 //
 // Stored: state.collection (topicId -> day collected) and state.cardSets (setId -> day completed).
 // Older saves have neither: both are treated as empty, and filled in from what is secure now.
@@ -13,9 +14,10 @@ export const isSecure = (t) => SECURE.has(t?.state);
 // ---------------------------------------------------------------- sets
 // Each subject's sets, in album order. `m` lists topic ids (without the "subject." prefix) as a
 // regular expression; a topic joins the first set it matches, and the subject's last set (no `m`)
-// takes everything left, so a new topic always lands somewhere. Rewards are fixed per set: an
-// accessory (`acc`) or a scene (`scene`) the course does not already give through badges.
-// Never change a set's id or reward once released: a won reward is kept by id.
+// takes everything left, so a new topic always lands somewhere. A set's prize is an accessory (`acc`)
+// or a scene (`scene`) the course does not already give, or null (gold cards only). Each course's
+// wardrobe and scenes stay its own (tests/companion.test.mjs), which is why Years 2/3 and Year 6
+// have fewer prizes than Year 8. Never change a set's id or prize once released: a won set is kept by id.
 const set = (id, subject, name, emblems, m, reward) => ({ id, subject, name, emblems, m, reward });
 
 const YOUNG = [ // Years 2 and 3 share these, so moving up keeps every card and set
@@ -186,16 +188,16 @@ export function syncCollection(state, db, today, course = COURSE) {
 
 // ---------------------------------------------------------------- rewards
 /** Accessories that card sets give in this course (for the wardrobe). */
-export const cardRewardAccessories = (course = COURSE) => setDefs(course).map((d) => d.reward.acc).filter(Boolean);
+export const cardRewardAccessories = (course = COURSE) => setDefs(course).map((d) => d.reward?.acc).filter(Boolean);
 /** Scenes that card sets give in this course (for the scene picker). */
-export const cardRewardScenes = (course = COURSE) => setDefs(course).filter((d) => d.reward.scene).map((d) => ({ id: d.reward.scene, set: d }));
+export const cardRewardScenes = (course = COURSE) => setDefs(course).filter((d) => d.reward?.scene).map((d) => ({ id: d.reward.scene, set: d }));
 /** The set whose reward this accessory or scene is, if any. */
-export const rewardSet = (id, course = COURSE) => setDefs(course).find((d) => d.reward.acc === id || d.reward.scene === id) || null;
+export const rewardSet = (id, course = COURSE) => setDefs(course).find((d) => d.reward && (d.reward.acc === id || d.reward.scene === id)) || null;
 
 /** Rewards won by full sets: { acc: [...], scenes: [...] }. */
 export function wonCardRewards(state, db, course = COURSE) {
   const won = setProgress(state, db, course).filter((s) => s.won);
-  return { acc: won.map((s) => s.reward.acc).filter(Boolean), scenes: won.map((s) => s.reward.scene).filter(Boolean) };
+  return { acc: won.map((s) => s.reward?.acc).filter(Boolean), scenes: won.map((s) => s.reward?.scene).filter(Boolean) };
 }
 
 // ---------------------------------------------------------------- facts

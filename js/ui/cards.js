@@ -17,10 +17,11 @@ import { cardSets, setProgress, collected, cardCount, cardFact, cardNumber, card
 const CARD_VISUALS = new Set(['diagram', 'maths', 'cycle', 'tree', 'sounds', 'blocks', 'flow']);
 const LOOK = { young: 'Trading card', y6: 'Specimen', y8: 'Pottery' };
 
-const rewardName = (r) => (r.acc ? ACCESSORIES[r.acc] || r.acc : `${SCENE_BY_ID[r.scene]?.name || r.scene} scene`);
+const rewardName = (r) => (!r ? 'Gold cards' : r.acc ? ACCESSORIES[r.acc] || r.acc : `${SCENE_BY_ID[r.scene]?.name || r.scene} scene`);
 const theRewardName = (r) => {
   const n = rewardName(r);
-  return /^(Greek|Roman|Viking|Tudor|Regency|Victorian|Hadrian|Mount|Mars|Pompeii)\b/.test(n) ? `the ${n}` : `the ${n[0].toLowerCase()}${n.slice(1)}`;
+  if (!r) return 'gold cards';
+  return /^(Greek|Roman|Viking|Tudor|Regency|Victorian|Saturn|Mount|Mars|Pompeii)\b/.test(n) ? `the ${n}` : `the ${n[0].toLowerCase()}${n.slice(1)}`;
 };
 
 /** Black-figure or red-figure (Year 8): alternate by set, so a page of the album has both. */
@@ -33,14 +34,14 @@ function figure(db, set) {
  * One card. opts.big draws the full card (fact and the topic's picture); otherwise a compact
  * album card. opts.have = false draws the silhouette of a card still to collect.
  */
-export function cardEl(db, topicId, { big = false, have = true, tag = 'div', onclick = null } = {}) {
+export function cardEl(db, topicId, { big = false, have = true, gold = false, tag = 'div', onclick = null } = {}) {
   const t = db.topics[topicId];
   const set = setOfTopic(db, topicId);
   const sub = SUBJECT_BY_ID[t.subject] || { name: t.subject, colour: '#5143d9' };
   const theme = cardTheme();
   const no = String(cardNumber(db, topicId)).padStart(3, '0');
   const em = emblemFor(topicId, set?.emblems);
-  const cls = ['gcard', `gc-${theme}`, theme === 'y8' ? figure(db, set) : '', big ? 'gc-big' : '', have ? '' : 'gc-locked'].filter(Boolean).join(' ');
+  const cls = ['gcard', `gc-${theme}`, theme === 'y8' ? figure(db, set) : '', big ? 'gc-big' : '', have ? '' : 'gc-locked', have && gold ? 'gc-gold' : ''].filter(Boolean).join(' ');
   const pic = h('div', { class: 'gc-pic', html: emblemSVG(em) });
   if (big && have) {
     const v = (Array.isArray(t.visual) ? t.visual : t.visual ? [t.visual] : []).find((x) => CARD_VISUALS.has(x.kind));
@@ -69,10 +70,10 @@ function backEl(theme, colour) {
 }
 
 /** A card that flips over from its back (the flip is skipped when motion is reduced). */
-export function flipCard(db, topicId, { delay = 0, sound = false } = {}) {
+export function flipCard(db, topicId, { delay = 0, sound = false, gold = false } = {}) {
   const t = db.topics[topicId];
   const theme = cardTheme();
-  const front = cardEl(db, topicId, { big: true });
+  const front = cardEl(db, topicId, { big: true, gold });
   const wrap = h('div', { class: 'gc-flip', style: { '--delay': `${delay}ms` } },
     h('div', { class: 'gc-inner' }, front, backEl(theme, SUBJECT_BY_ID[t.subject]?.colour)));
   if (sound) setTimeout(() => sfx.sparkle?.(), delay + 380);
@@ -81,14 +82,14 @@ export function flipCard(db, topicId, { delay = 0, sound = false } = {}) {
 
 // ---------------------------------------------------------------- the enlarged card
 let lastFocus = null;
-export function zoomCard(app, topicId, have) {
+export function zoomCard(app, topicId, have, gold = false) {
   closeZoom();
   lastFocus = document.activeElement;
   const { db } = app;
   const t = db.topics[topicId];
   const sub = SUBJECT_BY_ID[t.subject];
   const close = h('button', { type: 'button', class: 'gc-close', 'aria-label': 'Close' }, '×');
-  const card = have ? flipCard(db, topicId) : h('div', { class: 'gc-flip gc-noflip' }, cardEl(db, topicId, { big: true, have: false }));
+  const card = have ? flipCard(db, topicId, { gold }) : h('div', { class: 'gc-flip gc-noflip' }, cardEl(db, topicId, { big: true, have: false }));
   const go = have ? null : h('button', { type: 'button', class: 'btn-ghost gc-go', onclick: () => { closeZoom(); app.go(`#/subject/${t.subject}`); } }, `See ${sub?.name || 'the subject'} topics`);
   const box = h('div', { class: 'gc-zoom', role: 'dialog', 'aria-modal': 'true', 'aria-label': t.title, onclick: (e) => { if (e.target === box) closeZoom(); } },
     h('div', { class: 'gc-zoom-in' }, close, card, go));
@@ -114,14 +115,15 @@ addEventListener('hashchange', closeZoom);
 function rewardEl(app, s) {
   const c = app.state.profile?.companion || {};
   const r = s.reward;
-  const pic = r.acc
-    ? h('div', { class: 'gc-reward-pic' }, capybaraEl({ ...c, wear: undefined, accessory: r.acc, mood: s.won ? 'happy' : 'neutral' }))
-    : h('div', { class: 'gc-reward-pic gc-reward-scene', html: sceneSVG(r.scene) });
+  const pic = !r ? h('div', { class: 'gc-reward-pic gc-reward-gold', html: emblemSVG('star') })
+    : r.acc ? h('div', { class: 'gc-reward-pic' }, capybaraEl({ ...c, wear: undefined, accessory: r.acc, mood: s.won ? 'happy' : 'neutral' }))
+      : h('div', { class: 'gc-reward-pic gc-reward-scene', html: sceneSVG(r.scene) });
+  const where = !r ? 'Every card in the set turned gold.' : r.acc ? 'It’s in the wardrobe (Badges), and the cards turned gold.' : 'Choose it under Scenes (Badges). The cards turned gold too.';
   return h('div', { class: `gc-reward${s.won ? ' won' : ''}` }, pic,
     h('div', {},
-      h('div', { class: 'eyebrow' }, s.won ? 'Set complete: you won' : 'Complete the set to win'),
-      h('b', {}, rewardName(r)),
-      s.won ? h('div', { class: 'small muted' }, r.acc ? 'It’s in the wardrobe (Badges).' : 'Choose it under Scenes (Badges).') : null));
+      h('div', { class: 'eyebrow' }, s.won ? 'Set complete: you won' : r ? 'Complete the set to win' : 'Complete the set and'),
+      h('b', {}, r ? rewardName(r) : 'its cards turn gold'),
+      s.won ? h('div', { class: 'small muted' }, where) : r ? h('div', { class: 'small muted' }, 'and gold cards') : null));
 }
 
 export function albumTab(app, body) {
@@ -158,7 +160,7 @@ export function albumTab(app, body) {
         rewardEl(app, s),
         h('div', { class: 'gc-grid' }, s.topics.map((id) => {
           const got = have.has(id);
-          return cardEl(db, id, { have: got, tag: 'button', onclick: () => zoomCard(app, id, got) });
+          return cardEl(db, id, { have: got, gold: s.won, tag: 'button', onclick: () => zoomCard(app, id, got, s.won) });
         })))));
   };
   body.append(
@@ -198,12 +200,14 @@ export function newCardsReveal(app, plan) {
   }
   const ids = plan.newCards.filter((id) => db.topics[id]);
   if (!ids.length) return null;
-  const sets = setProgress(state, db).filter((s) => (plan.newSets || []).includes(s.id));
+  const progress = setProgress(state, db);
+  const sets = progress.filter((s) => (plan.newSets || []).includes(s.id));
+  const wonSet = new Set(progress.filter((s) => s.won).map((s) => s.id));
   const more = ids.length - SHOW;
   return h('section', { class: 'gc-reveal', role: 'status' },
     h('div', { class: 'eyebrow' }, ids.length === 1 ? 'New card!' : `${ids.length} new cards!`),
     h('h2', {}, ids.length === 1 ? `You secured ${db.topics[ids[0]].title}` : 'You secured new topics'),
-    h('div', { class: 'gc-reveal-row' }, ids.slice(0, SHOW).map((id, i) => flipCard(db, id, { delay: 900 + i * 260, sound: i === 0 }))),
+    h('div', { class: 'gc-reveal-row' }, ids.slice(0, SHOW).map((id, i) => flipCard(db, id, { delay: 900 + i * 260, sound: i === 0, gold: wonSet.has(setOfTopic(db, id)?.id) }))),
     more > 0 ? h('p', { class: 'muted' }, `And ${more} more in your album.`) : null,
     sets.map((s) => h('p', { class: 'gc-set-won' }, `Set complete: ${s.name}! You won ${theRewardName(s.reward)}.`)),
     h('button', { type: 'button', class: 'btn-ghost', onclick: () => app.go('#/progress/cards') }, 'See your album'));
