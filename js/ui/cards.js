@@ -64,7 +64,7 @@ export function cardEl(db, topicId, { big = false, have = true, gold = false, ta
       h('div', { class: 'gc-top' }, h('span', { class: 'gc-subj' }, sub.name), h('span', { class: 'gc-no' }, `No. ${no}`)),
       pic,
       h('div', { class: 'gc-title' }, t.title),
-      big ? (have ? rich('p', cardFact(t), { class: 'gc-fact' }) : h('p', { class: 'gc-fact gc-hint' }, 'Secure this topic to collect it.')) : null,
+      big ? (have ? rich('p', cardFact(t, db), { class: 'gc-fact' }) : h('p', { class: 'gc-fact gc-hint' }, 'Secure this topic to collect it.')) : null,
       h('div', { class: 'gc-set' }, have || big ? set?.name || sub.name : 'Secure it to collect')));
 }
 

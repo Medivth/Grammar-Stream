@@ -187,3 +187,14 @@ test('emblems are small, well-formed SVG, picked steadily per card', () => {
   assert.equal(emblemFor('science.dinosaurs', ['dino', 'fossil']), emblemFor('science.dinosaurs', ['dino', 'fossil']));
   assert.equal(emblemFor('x', []), 'star');
 });
+
+test('a spelling card whose topic text is only about the list shows three of its own words', () => {
+  setCourse('y6');
+  const db = dbFor('y6');
+  const t = db.topics['english.spell-1'];
+  const f = cardFact(t, db);
+  const own = new Set(Object.values(db.items).filter((i) => i.topic === t.id && i.word).map((i) => i.word));
+  const shown = f.replace(/^Words to know: /, '').replace(/\.$/, '').split(/, | and /);
+  assert.equal(shown.length, 3, f);
+  for (const w of shown) assert.ok(own.has(w), `${w} is one of the topic's words`);
+});

@@ -216,10 +216,13 @@ export function sentences(text) {
     .filter(Boolean);
 }
 
+// about where the topic's words come from, not about the words themselves
+const LISTY = /^(?:these (?:words|questions|are)\b|(?:more )?(?:tricky )?words (?:from|on)\b)|\b(?:official|year \d(?: and \d)?) list\b|\bfollow a pattern\b|\bgreater-depth challenge\b/i;
+
 function score(s, hook) {
   let n = 0;
   const bare = s.replace(/^[“"‘*_]+/, '');
-  if (META.test(bare)) n -= 4;
+  if (META.test(bare) || LISTY.test(bare)) n -= 4;
   else if (SOFT.test(bare)) n -= 1;
   if (/\buse the clues\b/i.test(s)) n -= 2;
   if (/\?\s*$/.test(s) || /\?$/.test(s.replace(/[”"’*_]+$/, ''))) n -= 3;
@@ -233,17 +236,26 @@ function score(s, hook) {
   return n;
 }
 
-/** One short, true fact for a topic's card, taken from its hook or the sentences of its intro. */
-export function cardFact(topic) {
+/** One short, true fact for a topic's card, taken from its hook or the sentences of its intro (or
+ * example). Given `db`, a topic whose text is only about the activity ("These words follow a pattern")
+ * shows three of its own words instead. */
+export function cardFact(topic, db = null) {
   if (!topic) return '';
   const cands = [];
   if (topic.hook) cands.push({ s: topic.hook.trim(), hook: true });
   for (const s of sentences(topic.intro)) cands.push({ s, hook: false });
+  // the real-world example is topic text too, and often the most vivid true fact
+  for (const s of sentences(topic.example)) cands.push({ s, hook: false });
   if (!cands.length) return '';
   let best = cands[0], bestN = -Infinity;
   for (const c of cands) {
     const n = score(c.s, c.hook);
     if (n > bestN) { best = c; bestN = n; }
+  }
+  const bare = best.s.replace(/^[“"‘*_]+/, '');
+  if (db && (bestN <= -3 || META.test(bare) || LISTY.test(bare))) {
+    const words = [...new Set(Object.values(db.items).filter((i) => i.topic === topic.id && i.word).map((i) => i.word))].slice(0, 3);
+    if (words.length === 3) return `Words to know: ${words[0]}, ${words[1]} and ${words[2]}.`;
   }
   return best.s;
 }

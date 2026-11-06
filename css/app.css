@@ -1120,7 +1120,8 @@ button.gcard:active:not(:disabled) { transform: translateY(2px) scale(0.98); box
 .gcard.gc-big.gc-young .gc-face, .gcard.gc-big.gc-y6 .gc-face { margin: 3.6cqi; min-height: 142cqi; }
 .gc-big .gc-top { font-size: 4.8cqi; }
 .gc-big .gc-pic { flex: 0 0 auto; height: 62cqi; }
-.gc-big .gc-pic-visual { display: block; height: auto; max-height: 82cqi; padding: 2cqi; overflow: hidden; background: #fff !important; color: #1c1a33; }
+/* the topic's own picture keeps the app's colours (light or dark), in a plain rounded window */
+.gcard.gc-big .gc-pic-visual { display: block; height: auto; max-height: 82cqi; margin: 0; padding: 2cqi; overflow: hidden; border-radius: 4cqi; border: 0; background: var(--card); color: var(--ink); }
 .gc-big .gc-pic-visual .visual { margin: 0; }
 .gc-big .gc-pic-visual svg { max-height: 78cqi; width: 100%; }
 .gc-big .gc-title { font-size: 8cqi; -webkit-line-clamp: 3; }
