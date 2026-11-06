@@ -38,7 +38,7 @@ function weeklyRow(app, rest) {
   const { state } = app;
   const st = challengeStatus(state, app.today());
   const t = st.theme;
-  const mini = raceway({ theme: trackTheme(COURSE.id), p: st.open ? 0.35 : 1, key: 'weekly-home' });
+  const mini = raceway({ theme: trackTheme(COURSE.id), p: st.open ? 0.35 : st.run.finished ? 1 : st.run.correct / CHALLENGE_GOAL, key: 'weekly-home' });
   ['role', 'aria-label', 'aria-valuemin', 'aria-valuemax', 'aria-valuenow', 'aria-valuetext'].forEach((a) => mini.removeAttribute(a));
   mini.setAttribute('aria-hidden', 'true');
   mini.classList.add('wk-mini');

@@ -99,9 +99,8 @@ export function companionSpot(app, opts, lines, className = 'capy bob') {
     bubble.classList.add('talk-new');
     if (aloud) say();
   };
-  bubble.append(
-    h('button', { type: 'button', class: 'talk-line', title: more ? 'Tap for the next thing to say' : null, onclick: () => show(i + 1) }, text, more),
-    aloud ? h('button', { type: 'button', class: 'talk-say', 'aria-label': 'Read it to me', onclick: say }, icon('speaker')) : null);
+  bubble.append(h('button', { type: 'button', class: 'talk-line', title: more ? 'Tap for the next thing to say' : null, onclick: () => show(i + 1) }, text, more));
+  if (aloud) bubble.append(h('button', { type: 'button', class: 'talk-say', 'aria-label': 'Read it to me', onclick: say }, icon('speaker')));
   // with motion turned down there are no tricks, so a tap on the companion moves the talk on instead
   pet.addEventListener('companion-trick', () => { if (reducedMotion()) show(i + 1); });
   return h('div', { class: 'companion-spot' }, bubble, pet);

@@ -908,8 +908,8 @@ div.quest-row { box-shadow: none; }
 .wk-chip svg { width: 14px; height: 14px; }
 .wk-lanes { display: grid; gap: 4px; padding: 10px 12px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow-sm); }
 .wk-intro .wk-lanes { width: 100%; max-width: 560px; margin: 4px auto; }
-.wk-lane { display: grid; grid-template-columns: 74px 1fr; align-items: center; gap: 8px; }
-.wk-who { font-family: var(--display); font-weight: 700; font-size: 0.8rem; color: var(--muted); text-align: right; line-height: 1.1; }
+.wk-lane { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 8px; }
+.wk-who { font-family: var(--display); font-weight: 700; font-size: 0.8rem; color: var(--muted); text-align: right; line-height: 1.1; white-space: nowrap; min-width: 4.6em; }
 .wk-you .wk-who { color: var(--accent); }
 .wk-track { height: 34px; }
 .wk-track .rw-mover { transition-duration: 0.45s; }
@@ -1031,14 +1031,15 @@ div.quest-row { box-shadow: none; }
 .alive.trick-jump:not(.in-scene) > svg, .alive.trick-jump .pet { animation: cp-jump 0.95s cubic-bezier(0.3, 0.7, 0.4, 1); }
 .alive.trick-spin:not(.in-scene) > svg, .alive.trick-spin .pet { transform-origin: 50% 55%; animation: cp-spin 0.95s ease-in-out; }
 .alive.trick-dance:not(.in-scene) > svg, .alive.trick-dance .pet { animation: cp-dance 0.95s ease-in-out; }
-/* the idle wave fills the first 8% of its cycle: run once over 12s, that is the same wave in about a second */
-.alive.trick-wave .cp-arm { animation: cp-wave-arm 12s ease-in-out 1; }
-.alive.trick-wave .cp-paw { animation: cp-wave-paw 12s ease-in-out 1; }
+.alive.trick-wave .cp-arm { animation: cp-arm-trick 0.95s ease-in-out; }
+.alive.trick-wave .cp-paw { animation: cp-paw-trick 0.95s ease-in-out; }
 .alive.trick-wave .cp-head { animation: cp-nod 0.95s ease-in-out; }
 .alive.trick-wave .cp-fig.cp-sway { animation: cp-dance 0.95s ease-in-out reverse; }
 @keyframes cp-jump { 0%, 100% { transform: none; } 15% { transform: scale(1.06, 0.9); } 45% { transform: translateY(-22%) scale(0.96, 1.05); } 75% { transform: none; } 85% { transform: scale(1.05, 0.94); } }
 @keyframes cp-spin { 0% { transform: none; } 50% { transform: translateY(-8%) rotate(180deg); } 100% { transform: rotate(360deg); } }
 @keyframes cp-dance { 0%, 30%, 60%, 90%, 100% { transform: none; } 15% { transform: translateY(-5%) rotate(-8deg); } 45% { transform: translateY(-5%) rotate(8deg); } 75% { transform: translateY(-5%) rotate(-6deg); } }
+@keyframes cp-arm-trick { 0%, 100% { transform: none; } 18%, 78% { transform: rotate(-70deg); } 33%, 63% { transform: rotate(-92deg); } 48% { transform: rotate(-66deg); } }
+@keyframes cp-paw-trick { 0%, 100% { transform: none; } 18%, 48%, 78% { transform: rotate(38deg); } 33%, 63% { transform: rotate(22deg); } }
 @keyframes cp-nod { 0%, 100% { transform: none; } 20% { transform: rotate(-9deg); } 45% { transform: rotate(7deg); } 70% { transform: rotate(-6deg); } }
 .trick-sparks { position: absolute; left: 50%; top: 28%; width: 0; height: 0; pointer-events: none; z-index: 2; line-height: 0; }
 .trick-sparks i { position: absolute; left: -8px; top: -8px; width: 16px; height: 16px; background: #ffd166; opacity: 0; clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); animation: cp-spark 0.8s ease-out forwards; }
@@ -1233,3 +1234,4 @@ button.gcard:active:not(:disabled) { transform: translateY(2px) scale(0.98); box
 .cards-line-em { flex: none; width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(135deg, #ffe27a, #ffb703); color: #fff; --em2: #fff3b0; --em3: #c98a00; }
 .cards-line-em .gc-em { height: 70%; }
 .cards-line-go { margin-left: auto; color: var(--accent); font-family: var(--display); font-weight: 700; }
+.wk-capy .capy { width: 170px; margin: 0 auto; }

@@ -1023,6 +1023,54 @@ function picnic() {
     + R(206, 166, 6, 8, '#ff8fb1', 1) + R(196, 168, 6, 8, '#9fd3ff', 1);
 }
 
+// Card-set prizes for Years 2 and 3 (js/core/cards.js): a fossil dig and Saturn from one of its moons.
+// A fossil dig in the badlands: cliffs striped with rock layers (an ammonite in one), the team's tent,
+// a bucket and brush, and a dinosaur skull and backbone half uncovered in the pegged-out dig square.
+function digsite() {
+  const ribs = [150, 160, 170, 180, 190].map((x, i) => L(`M${x} ${163 - i * 0.8} q3 7 1 12`, '#f6ead2', 2.4)).join('');
+  return sky('#ffd9a0') + C(118, 26, 13, '#fff3c4') + C(118, 26, 19, '#fff3c4', ' opacity=".35"') + cloud(52, 22, 0.6, '#fff7e8') + cloud(190, 16, 0.5, '#fff7e8')
+    // the cliffs, in bands of rock laid down over millions of years
+    + P('M0 62 L26 50 L56 58 L88 44 L120 54 L150 42 L182 52 L212 40 L240 48 V132 H0Z', '#c9774a')
+    + P('M0 78 L40 70 L90 76 L140 66 L190 74 L240 64 V84 L190 92 L140 84 L90 94 L40 88 L0 96Z', '#e3a56b')
+    + P('M0 104 L50 98 L110 104 L170 96 L240 100 V114 L170 110 L110 118 L50 112 L0 118Z', '#b5643c')
+    + L('M0 66 L26 56 L56 64 M150 48 L182 58 L212 46 L240 54', '#a85f37', 1.4)
+    + C(220, 82, 7, '#f2d3a6') + L('M220 82 m0 -4.5 a4.5 4.5 0 1 1 -4.5 4.5 a3 3 0 1 1 3 3', '#c28a5a', 1.3)
+    // the tent, its door open
+    + P('M2 132 L26 96 L50 132Z', '#2e9e5b') + P('M26 96 L33 132 L19 132Z', '#1d6e3e') + L('M26 96 V90', '#5a3a2c', 2) + P('M26 90 l9 3 l-9 3z', '#ffd166')
+    + floor('#e8c18b', '#f2d3a6') + L('M20 150 q10 -3 20 0 M84 176 q14 -3 28 0', '#d4a874', 2)
+    // a blue bucket and a brush
+    + P('M8 150 L28 150 L25 170 L11 170Z', '#2f74e8') + E(18, 150, 10, 2.6, '#5b95f0') + L('M9 150 Q18 139 27 150', '#3b3a4a', 1.2)
+    + L('M30 172 L42 160', '#8a5a35', 3) + R(40, 154, 7, 6, '#3b3a4a', 1, ' transform="rotate(-45 43.5 157)"')
+    // the dig square, pegged out with string
+    + P('M140 152 L230 150 L240 178 L132 180Z', '#d39a5e') + L('M140 152 L230 150 L240 178 M132 180 L140 152 M170 151 L168 179 M200 151 L204 179', '#ffffff', 0.9, ' opacity=".85"')
+    + [[140, 152], [230, 150], [240, 178]].map(([x, y]) => R(x - 1.5, y - 6, 3, 7, '#8a5a35')).join('')
+    // the skeleton: a backbone with ribs, and a big skull with teeth
+    + L('M146 164 Q178 156 206 160', '#f6ead2', 3.2) + ribs
+    + P('M204 152 q16 -9 30 -1 q4 6 -3 11 l-10 3 l-16 -2 q-6 -5 -1 -11Z', '#fbf3e4') + C(220, 155, 2.6, '#c8905a')
+    + L('M210 163 l1.5 3 l1.5 -3 l1.5 3 l1.5 -3 l1.5 3 l1.5 -3', '#fbf3e4', 1.2);
+}
+
+// Saturn rising over an icy moon: a huge ringed planet, stars, a crater-pocked blue-white ground,
+// ice spires, and a little rover with its flag.
+function rings() {
+  const crater = (x, y, rx) => E(x, y, rx, rx * 0.3, '#b7cde6') + E(x, y + rx * 0.05, rx * 0.75, rx * 0.2, '#8fb0d6');
+  return sky('#0a0d2b') + starfield(91, 46, 0, 0, W, 110, (x, y) => (x - 168) ** 2 + (y - 50) ** 2 > 40 ** 2)
+    // Saturn, tilted, with its rings in front and behind
+    + E(168, 50, 66, 13, 'none', ' stroke="#e9cf9a" stroke-width="5" opacity=".55" transform="rotate(-14 168 50)"')
+    + C(168, 50, 30, '#e3b877') + P('M140 40 Q168 34 196 40 L197 46 Q168 40 139 46Z', '#cf9a58', ' opacity=".8"') + P('M139 56 Q168 50 197 56 L195 62 Q168 56 141 62Z', '#f0d39f', ' opacity=".8"')
+    + C(158, 40, 6, '#fff3d6', ' opacity=".25"')
+    + L('M102 50 A66 13 0 0 0 234 50', '#f4dfb0', 5, ' transform="rotate(-14 168 50)"') + L('M110 50 A58 10 0 0 0 226 50', '#c9a56a', 1.2, ' transform="rotate(-14 168 50)" opacity=".7"')
+    + C(40, 28, 7, '#c9c2b8') + C(38, 26, 2, '#a59d92')
+    // icy hills and spires
+    + P('M0 104 L22 92 L46 100 L74 86 L104 98 L136 90 L170 100 L204 88 L240 96 V132 H0Z', '#7ea6d4')
+    + P('M8 104 L14 74 L20 104Z M206 98 L214 62 L222 98Z M226 98 L231 78 L236 98Z', '#d8ecff') + P('M14 74 L20 104 L16 104Z M214 62 L222 98 L217 98Z', '#a9c9ee')
+    + P('M0 114 Q60 106 120 114 Q180 106 240 112 V132 H0Z', '#a9c6e8')
+    + floor('#cfe2f6', '#e6f1fc') + crater(30, 152, 16) + crater(212, 170, 18) + crater(120, 176, 10)
+    // a little rover with its flag
+    + R(6, 120, 30, 9, '#e8eaf0', 3) + R(10, 113, 14, 8, '#9fe8ff', 2) + C(12, 131, 4, '#3b3a4a') + C(30, 131, 4, '#3b3a4a')
+    + L('M32 120 V104', '#c3c7d3', 1.4) + P('M32 104 h10 l-3 3 l3 3 h-10z', '#ff5f6d') + A('amb-blink', C(8, 118, 1.6, '#5fd6a0'));
+}
+
 // The full list, in the order the oldest course meets them; sceneOrder() reorders per course.
 export const SCENES = [
   { id: 'space', name: 'Space station', draw: space },
@@ -1066,9 +1114,12 @@ export const SCENES = [
   { id: 'aurora', name: 'Northern Lights', draw: aurora },
   // every course: the family goal's reward, opened outside the badge order (js/core/family.js)
   { id: 'picnic', name: 'Family picnic', draw: picnic },
+  // card-set prizes (js/core/cards.js)
+  { id: 'digsite', name: 'Fossil dig', draw: digsite },
+  { id: 'rings', name: 'Saturn’s moon', draw: rings },
 ];
 /** Scenes opened by something other than badges, so they are in no course's badge order. */
-export const REWARD_SCENES = ['picnic'];
+export const REWARD_SCENES = ['picnic', 'digsite', 'rings'];
 export const SCENE_BY_ID = Object.fromEntries(SCENES.map((s) => [s.id, s]));
 
 // Unlocking: the first FREE scenes are open from the start, then one more for every PER_SCENE

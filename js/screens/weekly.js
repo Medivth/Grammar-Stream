@@ -63,7 +63,7 @@ export function challengeScreen(app) {
   if (!st.open) return resultScreen(app, st.run, st.ghost, { already: true });
   if (rest) {
     mount(app.root, topbar(app, t.title), h('div', { class: 'q-wrap stack center' },
-      capybaraEl({ ...c, mood: 'thinking' }, 'capy bob'), h('h2', {}, 'Resting before bedtime'), h('p', {}, rest),
+      h('div', { class: 'wk-capy' }, capybaraEl({ ...c, mood: 'thinking' }, 'capy bob')), h('h2', {}, 'Resting before bedtime'), h('p', {}, rest),
       h('p', { class: 'muted' }, `${t.name[0].toUpperCase() + t.name.slice(1)} is open all week. Come back tomorrow!`),
       h('button', { class: 'btn-primary btn-big', onclick: () => app.go('#/home') }, 'Back home')));
     return;
@@ -207,7 +207,7 @@ function resultScreen(app, run, ghost, { already = false, justRaced = false } = 
   const mine = run.finished ? `${secs(run.ms)}s` : `${run.correct}/${CHALLENGE_GOAL}`;
   const theirs = ghost ? (ghost.finished ? `${secs(ghost.ms)}s` : `${ghost.correct}/${CHALLENGE_GOAL}`) : null;
   mount(app.root, topbar(app, t.title), h('div', { class: 'q-wrap stack wk-result' },
-    run.finished ? finishMoment(trackTheme(COURSE.id)) : h('div', { class: 'center' }, capybaraEl({ ...c, mood: 'happy' }, 'capy bob')),
+    run.finished ? finishMoment(trackTheme(COURSE.id)) : h('div', { class: 'center wk-capy' }, capybaraEl({ ...c, mood: 'happy' }, 'capy bob')),
     h('div', { class: 'center' },
       h('div', { class: 'eyebrow' }, already ? `This week’s ${t.title}` : `${t.title} result`),
       h('h1', {}, line.head),
