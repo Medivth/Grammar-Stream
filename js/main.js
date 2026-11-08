@@ -22,7 +22,9 @@ import { handwritingScreen } from './screens/handwriting.js';
 import { challengeScreen } from './screens/weekly.js';
 import { installLamps } from './ui/lamp.js';
 import { setSoundOn } from './platform/sfx.js';
+import { setReadAloud } from './platform/tts.js';
 import { soundsOn } from './core/juice.js';
+import { stopDressUpClock } from './ui/dressup.js';
 
 const root = document.getElementById('app');
 
@@ -79,12 +81,14 @@ const app = {
     if (st.theme) el.dataset.theme = st.theme; else delete el.dataset.theme;
     el.dataset.motion = st.reduceMotion ? 'reduce' : 'full';
     setSoundOn(soundsOn(st, COURSE.id));
+    setReadAloud(st.tts === true);
     el.style.setProperty('--scale', st.textScale || 1);
   },
 };
 
 async function route() {
   document.onkeydown = null;
+  stopDressUpClock();
   const hash = location.hash || '#/home';
   const p = app.state.profile;
   if (hash === '#/who') return whoScreen(app);

@@ -13,6 +13,8 @@ import { streakCalendarEl } from '../ui/quests.js';
 import { aliveCompanion } from '../ui/alive.js';
 import { albumTab, cardsLine } from '../ui/cards.js';
 import { rewardSet, cardRewardScenes, wonCardRewards } from '../core/cards.js';
+import { dressUpLeft } from '../core/dressup.js';
+import { startDressUpClock, dressUpNote, dressUpClosed } from '../ui/dressup.js';
 
 const TABS = [['overview', 'Stats'], ['timeline', 'Timeline'], ['places', 'Places'], ['badges', 'Badges'], ['cards', 'Cards']];
 const BADGE_ICON = { 'speed-racer': 'bolt', fifty: 'star', explorer: 'globe', scientist: 'flask', 'first-session': 'flag', 'first-mastered': 'star', hundred: 'bolt', 'all-rounder': 'target', globetrotter: 'globe', 'time-traveller': 'clock', 'lab-ready': 'flask', 'joined-up': 'link', sprinter: 'hourglass', paper: 'paper', typist: 'keyboard', 'speed-reader': 'eye', stretch: 'spark', wordsmith: 'pen', bookworm: 'book', calibrated: 'target', regular: 'check', 'five-hundred': 'trophy', 'book-talker': 'book', 'own-reader': 'eye', author: 'pen', 'alpha-omega': 'quill', 'word-hoard': 'text', clio: 'column', centurion: 'flag', charioteer: 'hourglass', speedway: 'trophy', 'space-ace': 'spark', 'dino-expert': 'flask', 'knight-realm': 'clock', 'super-writer': 'pen', 'latin-scholar': 'column', legionary: 'text', 'poet-laureate': 'quill', 'circus-maximus': 'hourglass', 'pony-club': 'check', 'sword-school': 'spark', lightning: 'bolt', 'space-trooper': 'check', 'viking-voyager': 'book', 'samurai-scribe': 'quill', 'dragon-rider': 'star', 'golden-champion': 'trophy', 'costume-historian': 'hourglass', 'great-detective': 'eye', 'chief-scientist': 'flask', 'grand-tour': 'globe', 'prima-ballerina': 'star', storyteller: 'pen', 'on-a-roll': 'bolt', steady: 'flag' };
@@ -27,7 +29,11 @@ export async function progressScreen(app, tab = 'overview') {
     body);
   if (tab === 'timeline') return timelineTab(app, body);
   if (tab === 'places') return placesTab(app, body);
-  if (tab === 'badges') return badgesTab(app, body);
+  if (tab === 'badges') {
+    // the wardrobe has a daily allowance; when it runs out mid-visit the tab closes it
+    if (dressUpLeft(app.state, app.today()) > 0) startDressUpClock(app, () => { const y = window.scrollY; badgesTab(app, body.replaceChildren() || body); window.scrollTo(0, y); });
+    return badgesTab(app, body);
+  }
   if (tab === 'cards') return albumTab(app, body);
   return overviewTab(app, body);
 }
@@ -175,10 +181,14 @@ function badgesTab(app, body) {
   const wardrobe = h('div', { class: 'wardrobe-groups' },
     shown.has('none') ? h('div', { class: 'wardrobe' }, item(['none', 'Take everything off'])) : null,
     groups.map(([name, list]) => h('section', { class: 'wardrobe-group' }, h('h4', {}, name), h('div', { class: 'wardrobe' }, list.map(item)))));
-  body.append(
+  const badges = [
     h('div', { class: 'section-title' }, h('h2', {}, 'Badges'), h('span', { class: 'muted small' }, `${ms.filter((m) => m.done).length} of ${ms.length} earned`)),
-    h('div', { class: 'badge-grid' }, ms.map(badge)),
+    h('div', { class: 'badge-grid' }, ms.map(badge))];
+  if (dressUpLeft(state, app.today()) <= 0) return body.append(dressUpClosed(app), ...badges);
+  body.append(
+    ...badges,
     h('div', { class: 'section-title' }, h('h2', {}, `${c.name || 'Your companion'}’s wardrobe`)),
+    dressUpNote(app),
     h('div', { class: `wardrobe-preview${c.scene ? ' with-scene' : ''}` }, aliveCompanion({ ...c, mood: 'happy' })),
     h('div', { class: 'center' }, h('button', { type: 'button', class: 'btn-ghost', onclick: () => app.go('#/companion') }, 'Change companion')),
     scenePicker(app, body, ms.filter((m) => m.done).length),

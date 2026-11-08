@@ -7,7 +7,7 @@ import { icon } from './icons.js';
 import { capybaraSVG, speciesOf, slotOf, wornList } from './capybara.js';
 import { sceneSVG, SCENE_BY_ID } from './scenes.js';
 import { stickerSVG, STICKERS, stickerLabel } from './stickers.js';
-import { speak } from '../platform/tts.js';
+import { speak, readAloudOn } from '../platform/tts.js';
 import { loadState, saveState, loadFamily, saveFamily } from '../platform/storage.js';
 import { COURSES } from '../core/subjects.js';
 import { weekStart, formatDay } from '../core/dates.js';
@@ -150,7 +150,7 @@ function popup(cls, build) {
   });
 }
 
-const sayBtn = (app, text) => (app.state.settings.tts !== false ? h('button', { class: 'say-btn', type: 'button', 'aria-label': 'Read it aloud', title: 'Read aloud', onclick: () => speak(spoken(text), { rate: 0.85 }) }, icon('speaker')) : null);
+const sayBtn = (app, text) => (readAloudOn() ? h('button', { class: 'say-btn', type: 'button', 'aria-label': 'Read it aloud', title: 'Read aloud', onclick: () => speak(spoken(text), { rate: 0.85 }) }, icon('speaker')) : null);
 
 function noteCard(app, note, close, { list = false } = {}) {
   const from = signedBy(note);

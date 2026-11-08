@@ -1254,3 +1254,9 @@ button.gcard:active:not(:disabled) { transform: translateY(2px) scale(0.98); box
 .gc-reward-gold .gc-em { height: 70%; }
 /* five Progress tabs (Cards is the fifth): on a phone they size to their words, so none is cut short */
 @media (max-width: 520px) { .tabs { gap: 2px; padding: 4px; } .tabs button { flex: 1 1 auto; padding: 8px 5px; font-size: 0.84rem; } }
+
+/* ---- dressing-up time (the Badges page's daily allowance, js/ui/dressup.js) ---- */
+.dressup-note { margin: -4px 0 8px; }
+.dressup-closed { margin: 8px 0 20px; }
+.dressup-closed h2 { margin-top: 0; }
+.dressup-closed .btn-primary { margin-top: 6px; }

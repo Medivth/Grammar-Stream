@@ -5,7 +5,7 @@
 import { h, mount, toast, escapeHTML } from '../ui/dom.js';
 import { icon } from '../ui/icons.js';
 import { COURSE } from '../core/subjects.js';
-import { speak, stopSpeaking, ttsAvailable } from '../platform/tts.js';
+import { speak, stopSpeaking, readAloudOn } from '../platform/tts.js';
 import { place, setPlace, openBook, finishLibraryBook, creditReading, readingClock, SESSION_CAP_MIN, LEVELS } from '../core/library.js';
 import { noteChapter, CHAPTER_SECONDS } from '../core/quests.js';
 
@@ -69,7 +69,7 @@ export async function bookScreen(app, id) {
   p.last = Date.now();
   app.save();
   const young = !!COURSE.young;
-  const canSay = young && st.tts !== false && ttsAvailable();
+  const canSay = young && readAloudOn();
   // who is reading: on-my-own books count as solo unless the child says they read together
   const solo = () => young && (p.who ? p.who === 'solo' : book.level === 'on-my-own');
 

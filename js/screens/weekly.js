@@ -155,7 +155,7 @@ function race(app) {
       btns.forEach((b, j) => { b.disabled = true; if (q.options[j].correct) b.classList.add('right'); else if (j === k) b.classList.add('wrong'); });
       after(ok, btns[k]);
     } }));
-    const say = COURSE.readAloud && state.settings.tts !== false ? sayButton(`${q.prompt}. ${q.options.map((o) => o.text).join('. ')}`, 'Read it to me') : null;
+    const say = COURSE.readAloud ? sayButton(`${q.prompt}. ${q.options.map((o) => o.text).join('. ')}`, 'Read it to me') : null;
     box.replaceChildren(say ? h('div', { class: 'q-prompt-row' }, say, rich('div', q.prompt, { class: 'q-prompt' })) : rich('div', q.prompt, { class: 'q-prompt' }),
       h('div', { class: 'options' }, btns));
     return true;

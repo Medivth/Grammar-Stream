@@ -19,6 +19,11 @@ if (ttsAvailable()) {
   window.speechSynthesis.onvoiceschanged = pickVoice;
 }
 
+// Read-aloud is off unless a grown-up turns it on in Settings; every read-aloud button asks here.
+let enabled = false;
+export function setReadAloud(on) { enabled = !!on; }
+export function readAloudOn() { return enabled && ttsAvailable(); }
+
 export function speak(text, { rate = 0.9 } = {}) {
   if (!ttsAvailable()) return;
   window.speechSynthesis.cancel();

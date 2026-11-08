@@ -84,7 +84,7 @@ export function aliveCompanion(opts, className = 'capy') {
 export function companionSpot(app, opts, lines, className = 'capy bob') {
   const pet = aliveCompanion(opts, className);
   if (!lines?.length) return h('div', { class: 'companion-spot' }, pet);
-  const aloud = !!COURSE.readAloud && app.state.settings?.tts !== false;
+  const aloud = !!COURSE.readAloud && app.state.settings?.tts === true;
   let i = 0;
   const text = h('span', { class: 'talk-text' }, lines[0].text);
   const more = lines.length > 1 ? h('span', { class: 'talk-more', 'aria-hidden': 'true' }, `1/${lines.length}`) : null;

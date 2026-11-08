@@ -5,7 +5,7 @@ import { renderQuestion, sayButton, diagram } from '../ui/qtypes.js';
 import { renderVisual } from '../ui/visuals.js';
 import { capybaraEl } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
-import { speak } from '../platform/tts.js';
+import { speak, readAloudOn } from '../platform/tts.js';
 import { planDay, planExtra, planBonus, bonusChoices, bonusProgress, activePlan, chooseTopic, topicChoices, questionFor, submit, startSession, finishSession, daysPractisedThisMonth, CONF } from '../core/session.js';
 import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement } from '../core/placement.js';
 import { checkSentence } from '../core/checkers.js';
@@ -296,7 +296,7 @@ async function introStep(app, root, step) {
     parts.push(h('div', { class: 'big-word' }, item.word));
     parts.push(h('p', { class: 'center muted' }, item.clue));
     parts.push(rich('p', item.explain, { class: 'learn center' }));
-    if (app.state.settings.tts !== false) parts.push(h('div', { class: 'center' }, h('button', { class: 'btn-ghost', onclick: () => speak(item.word) }, '🔊 Hear it')));
+    if (readAloudOn()) parts.push(h('div', { class: 'center' }, h('button', { class: 'btn-ghost', onclick: () => speak(item.word) }, '🔊 Hear it')));
     parts.push(h('p', { class: 'muted small center' }, 'Look at it, say it, then cover it in your head and picture the letters.'));
   } else if (item.kind === 'mapfact') {
     const map = await loadMap(item.map);
@@ -343,7 +343,7 @@ function workedStep(app, root, step) {
     list,
     after,
     hookCard(q),
-    COURSE.readAloud ? h('div', {}, h('button', { class: 'btn-ghost', type: 'button', onclick: () => speak(spoken(steps.slice(0, shown).at(-1) || '')) }, icon('speaker'), ' Read this step')) : null,
+    COURSE.readAloud && readAloudOn() ? h('div', {}, h('button', { class: 'btn-ghost', type: 'button', onclick: () => speak(spoken(steps.slice(0, shown).at(-1) || '')) }, icon('speaker'), ' Read this step')) : null,
     btn));
   btn.focus();
 }

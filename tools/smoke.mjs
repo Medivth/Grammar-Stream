@@ -236,7 +236,7 @@ try {
         if (opt) await opt.click();
         else if (typed) { const ans = await page.evaluate(() => { const a = window.__app; const st = a.state.plan.steps[a.state.plan.pos]; return a.db.items[st.id]?.answer || a.db.items[st.id]?.word || '7'; }); for (const i of await page.$$('.q-body input[type=text]:not([disabled])')) await i.fill(String(ans)); }
         else { const tap = await page.$('.map-box [data-id]'); if (tap) await tap.click({ force: true }); }
-        if (tag !== 'y8' && !seen2.has('say')) { seen2.add('say'); if (!(await page.$('.say-btn'))) throw new Error(`no read-aloud button on a ${tag} question`); }
+        if (tag !== 'y8' && !seen2.has('say')) { seen2.add('say'); if (await page.$('.say-btn')) throw new Error(`a read-aloud button on a ${tag} question, but read-aloud starts off`); }
         await page.click('.confidence button:has-text("Think so")');
         await page.waitForSelector('.feedback');
         await page.click('button:has-text("Next")');

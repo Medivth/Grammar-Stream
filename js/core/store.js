@@ -5,7 +5,7 @@
 import { hashString } from './rng.js';
 
 export const APP_ID = 'grammar-stream';
-export const SCHEMA_VERSION = 5;
+export const SCHEMA_VERSION = 6;
 
 /** MIGRATIONS[n] upgrades data from schema n to n + 1. */
 export const MIGRATIONS = {
@@ -17,6 +17,8 @@ export const MIGRATIONS = {
   3: (d) => ({ ...d, answers: d.answers || [] }),
   // v5: arithmetic papers, typing and speed-reading records
   4: (d) => ({ ...d, papers: d.papers || [], typing: d.typing || { lessons: {}, best: null }, speed: d.speed || [] }),
+  // v6: read-aloud is off unless a grown-up turns it on (it used to start on)
+  5: (d) => ({ ...d, settings: { ...d.settings, tts: false } }),
 };
 
 export function emptyState(today) {
@@ -30,7 +32,8 @@ export function emptyState(today) {
       earliest: '06:30',
       font: 'default',
       textScale: 1,
-      tts: true,
+      tts: false, // read-aloud buttons: a grown-up turns them on in Settings
+      dressUpMinutes: 15, // daily dressing-up time on the Badges page; 0 = no limit (js/core/dressup.js)
       reduceMotion: false,
       readingRung: 1,
       sounds: null, // answer sounds: null = the course's default (see soundsOn in js/core/juice.js)
@@ -60,6 +63,7 @@ export function emptyState(today) {
     challenges: [], // weekly challenge runs: { week, day, correct, answered, ms, finished, times }
     collection: {}, // collectible cards: topicId -> day its card was earned (kept even if the topic slips; js/core/cards.js)
     cardSets: {}, // card sets completed: setId -> day (their prizes stay won)
+    dressUp: null, // today's dressing-up time: { day, ms }
     plan: null, // the in-progress day plan
     lastBackup: null,
   };

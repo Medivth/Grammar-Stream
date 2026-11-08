@@ -4,13 +4,13 @@
 import { h, s, rich, richHTML, plain, spoken } from './dom.js';
 import { icon } from './icons.js';
 import { mapSVG, loadMap, featureNames } from './mapview.js';
-import { speak, ttsAvailable } from '../platform/tts.js';
+import { speak, readAloudOn } from '../platform/tts.js';
 import { mathsDiagram } from './diagrams.js';
 import { renderVisual } from './visuals.js';
 
 export async function renderQuestion(q, { onChange = () => {}, settings = {} } = {}) {
   const parts = [];
-  const readAloud = settings.readAloud && settings.tts !== false && ttsAvailable();
+  const readAloud = settings.readAloud && readAloudOn();
   if (q.passage) {
     parts.push(h('blockquote', { class: 'passage' }, readAloud ? sayButton(q.passage, 'Read the passage to me') : null, q.passage, q.passageSource ? h('cite', {}, q.passageSource) : null));
   }
@@ -19,7 +19,7 @@ export async function renderQuestion(q, { onChange = () => {}, settings = {} } =
     if (readAloud && !q.say) {
       const opts = q.kind === 'choice' && !q.options.every((o) => /^\d+$/.test(o.text)) ? q.options.map((o, i) => `${'ABCDE'[i]}: ${o.text}`).join('. ') : '';
       parts.push(h('div', { class: 'q-prompt-row' }, sayButton(`${q.prompt}${opts ? `. ${opts}` : ''}`, 'Read the question to me'), prompt));
-    } else if (q.say && settings.tts !== false && ttsAvailable()) {
+    } else if (q.say && readAloudOn()) {
       parts.push(h('div', { class: 'row', style: { justifyContent: 'space-between', alignItems: 'flex-start' } }, prompt,
         h('button', { class: 'btn-ghost', type: 'button', onclick: () => speak(`${q.say}. ${plain(q.prompt).replace('___', q.say)}`), 'aria-label': 'Hear the word' }, '🔊 Hear it')));
     } else parts.push(prompt);
@@ -90,7 +90,9 @@ function choiceView(q, onChange) {
   };
 }
 
+/** A read-aloud button, or null while read-aloud is off (Settings). */
 export function sayButton(text, label = 'Read it to me') {
+  if (!readAloudOn()) return null;
   return h('button', { class: 'say-btn', type: 'button', 'aria-label': label, title: label, onclick: (e) => { e.stopPropagation(); speak(spoken(text), { rate: 0.85 }); } }, icon('speaker'));
 }
 

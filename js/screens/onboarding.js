@@ -8,6 +8,8 @@ import { requestPersistence } from '../platform/storage.js';
 import { COURSES } from '../core/subjects.js';
 import { setPronoun } from '../core/pronoun.js';
 import { starterAccessories } from '../core/progress.js';
+import { dressUpLeft } from '../core/dressup.js';
+import { startDressUpClock, dressUpClosed } from '../ui/dressup.js';
 
 export function welcomeScreen(app) {
   const adding = app.profiles().length > 0 && !app.state.profile;
@@ -81,6 +83,11 @@ export function companionScreen(app) {
   const saved = app.state.profile?.companion || {};
   // changing an existing companion (from the Badges tab) keeps its name, outfit, scene and everything unlocked
   const editing = !!saved.name;
+  // changing companion shares the wardrobe's daily dressing-up time (the first choice never does)
+  if (editing && dressUpLeft(app.state, app.today()) <= 0) {
+    return mount(app.root, h('div', { class: 'topbar' }, h('button', { class: 'btn-icon', 'aria-label': 'Back', onclick: () => app.go('#/progress/badges') }, '←'), h('h1', {}, 'Change companion')), h('div', { class: 'narrow' }, dressUpClosed(app)));
+  }
+  if (editing) startDressUpClock(app, () => companionScreen(app));
   const c = { fur: 'caramel', look: 'braid', accessory: young ? 'racehelmet' : 'yuzu', name: '', ...saved };
   c.species = speciesOf(c, young);
   const kinds = speciesChoices(course);

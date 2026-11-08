@@ -17,6 +17,8 @@ import { handwritingSummary } from '../core/handwriting.js';
 import { familyParentCard, notesParentCard } from '../ui/family.js';
 import { soundsOn } from '../core/juice.js';
 import { setSoundOn } from '../platform/sfx.js';
+import { setReadAloud } from '../platform/tts.js';
+import { DRESSUP_CHOICES, dressUpMinutes } from '../core/dressup.js';
 
 let unlockedUntil = 0;
 
@@ -314,7 +316,8 @@ function settingsForm(app) {
   const early = h('input', { type: 'time', value: st.settings.earliest || '06:30', id: 'set-early' });
   const mins = h('select', { id: 'set-mins' }, [8, 10, 12, 15, 20, 25, 30, 40].map((m) => h('option', { value: m, selected: m === st.settings.sessionMinutes }, `${m} minutes`)));
   const pin = h('input', { type: 'password', inputmode: 'numeric', maxlength: 4, placeholder: 'Leave blank to keep', id: 'set-pin' });
-  const tts = h('input', { type: 'checkbox', id: 'set-tts', checked: st.settings.tts !== false, style: { width: '28px', height: '28px' } });
+  const tts = h('input', { type: 'checkbox', id: 'set-tts', checked: st.settings.tts === true, style: { width: '28px', height: '28px' } });
+  const dress = h('select', { id: 'set-dress' }, DRESSUP_CHOICES.map((m) => h('option', { value: m, selected: m === dressUpMinutes(st.settings) }, m ? `${m} minutes` : 'No limit')));
   const sounds = h('input', { type: 'checkbox', id: 'set-sounds', checked: soundsOn(st.settings, COURSE.id), style: { width: '28px', height: '28px' } });
   const rung = h('select', { id: 'set-rung' }, (app.db.rungs || []).map((r, i) => h('option', { value: i + 1, selected: i + 1 === (st.settings.readingRung || 1) }, `${i + 1}. ${r} (e.g. ${app.db.ladder.find((b) => b.rung === i + 1)?.title})`)));
   return h('div', { class: 'card stack' }, h('h2', {}, 'Settings'),
@@ -324,7 +327,8 @@ function settingsForm(app) {
       h('div', { class: 'field' }, h('label', { for: 'set-bed' }, 'Bedtime (app rests 1 hour before)'), bed),
       h('div', { class: 'field' }, h('label', { for: 'set-early' }, 'Earliest start'), early)),
     h('div', { class: 'field' }, h('label', { for: 'set-mins' }, 'Daily session length'), mins),
-    h('div', { class: 'field row' }, tts, h('label', { for: 'set-tts', style: { margin: 0 } }, 'Read-aloud buttons')),
+    h('div', { class: 'field' }, h('label', { for: 'set-dress' }, 'Dressing-up time each day (wardrobe, scenes and companion on the Badges page)'), dress),
+    h('div', { class: 'field row' }, tts, h('label', { for: 'set-tts', style: { margin: 0 } }, 'Read-aloud buttons (questions and words read out)')),
     h('div', { class: 'field row' }, sounds, h('label', { for: 'set-sounds', style: { margin: 0 } }, 'Soft sounds when answering')),
     h('div', { class: 'field' }, h('label', { for: 'set-rung' }, 'Reading ladder: what {she} reads comfortably now'), rung),
     h('div', { class: 'field' }, h('label', { for: 'set-pin' }, 'New 4-digit PIN'), pin),
@@ -336,6 +340,8 @@ function settingsForm(app) {
       st.settings.earliest = early.value || st.settings.earliest;
       st.settings.sessionMinutes = +mins.value;
       st.settings.tts = tts.checked;
+      setReadAloud(tts.checked);
+      st.settings.dressUpMinutes = +dress.value;
       st.settings.sounds = sounds.checked;
       setSoundOn(sounds.checked);
       st.settings.readingRung = +rung.value;
