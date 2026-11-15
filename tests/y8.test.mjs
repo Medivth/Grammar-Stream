@@ -27,7 +27,7 @@ const db = buildDB(index.decks.map(read));
 const maps = Object.fromEntries(Object.entries(index.maps).map(([k, p]) => [k, read(p)]));
 
 test('the Year 8 course: seven subjects, 30-minute sessions, typing and speed reading', () => {
-  assert.deepEqual(SUBJECTS.map((s) => s.id), ['english', 'maths', 'science', 'history', 'geography', 'computing', 'greek']);
+  assert.deepEqual(SUBJECTS.map((s) => s.id), ['english', 'maths', 'science', 'history', 'geography', 'french', 'greek']);
   assert.ok(!PLACEMENT_ORDER.includes('greek'), 'Greek starts from the beginning');
   assert.equal(COURSE.minutes, 30);
   assert.equal(sprintSeconds(), 90);
@@ -133,7 +133,7 @@ test('written answers: every subject that has them gets a turn, and only once sh
   assert.equal(writtenDue(fresh, db, 100), null, 'not before she has answered anything in the topic');
 });
 
-test('code in Computing questions is shown as code', () => {
+test('code in questions is shown as code', () => {
   const html = richHTML('Run this:\n```\nfor i in range(3):\n    print(i ** 2)\n```\nand `x = 3`');
   assert.match(html, /<pre class="code"><code>for i in range\(3\):\n {4}print\(i \*\* 2\)<\/code><\/pre>/);
   assert.match(html, /<code>x = 3<\/code>/);

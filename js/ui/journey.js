@@ -228,9 +228,10 @@ const THEMES = {
   'Hall of Clio': ['amphora', 'temple', 'laurel'],
   'Atlas Range': ['globe', 'peaks', 'compass'],
   'Daedalus Workshop': ['wings', 'labyrinth', 'gear'],
+  'Harbour of Massalia': ['boat', 'tower', 'laurel'],
   'Oracle of Delphi': ['tripod', 'tholos', 'laurel'],
 };
-const BY_SUBJECT = { maths: ['abacus', 'peaks', 'triangle'], english: ['books', 'temple', 'scroll'], reading: ['books', 'bookRocket', 'stars'], spelling: ['books', 'tower', 'bolt'], science: ['flask', 'planet', 'bubbles'], history: ['hourglass', 'castle', 'pennant'], geography: ['compass', 'boat', 'palm'], latin: ['arch', 'temple', 'column'], greek: ['tripod', 'tholos', 'laurel'], computing: ['wings', 'gear', 'gear'] };
+const BY_SUBJECT = { maths: ['abacus', 'peaks', 'triangle'], english: ['books', 'temple', 'scroll'], reading: ['books', 'bookRocket', 'stars'], spelling: ['books', 'tower', 'bolt'], science: ['flask', 'planet', 'bubbles'], history: ['hourglass', 'castle', 'pennant'], geography: ['compass', 'boat', 'palm'], latin: ['arch', 'temple', 'column'], greek: ['tripod', 'tholos', 'laurel'], computing: ['wings', 'gear', 'gear'], french: ['boat', 'tower', 'laurel'] };
 export const themeOf = (r) => THEMES[r.region] || BY_SUBJECT[r.subject] || ['tree', 'peaks', 'tree'];
 
 const place = (kind, x, y, sc, colour) => `<g transform="translate(${f(x)} ${f(y)}) scale(${sc})">${(DECO[kind] || DECO.tree)(colour)}</g>`;

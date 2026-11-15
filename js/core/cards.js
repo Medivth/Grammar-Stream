@@ -102,11 +102,12 @@ const Y8 = [
   set('8g-people', 'geography', 'People and cities', ['column', 'chart'], 'population|cities|development|global|urban-models|regeneration|farming|water-food|tourism|energy|resources-conflict|sustainability', { acc: 'chef' }),
   set('8g-places', 'geography', 'Places of the world', ['globe', 'compass'], 'russia|places|places-2|aegean|africa|nigeria|china|india|brazil|eu', { acc: 'scooter' }),
   set('8g-skills', 'geography', 'The geographer’s toolkit', ['compass', 'magnifier'], null, { acc: 'bowtie' }),
-  set('8c-python', 'computing', 'Python', ['code', 'chip'], 'python|selection|loops|lists|debugging|functions|dicts|strings|grids|robust|files|random|bughunt|recursion', { acc: 'astronaut' }),
-  set('8c-algorithms', 'computing', 'Algorithms', ['puzzle', 'code'], 'thinking|flowcharts|searching|sorting|trace|algotrace|efficiency|structures|paths', { acc: 'rocket' }),
-  set('8c-data', 'computing', 'Data and binary', ['chip', 'lock'], 'binary|binarymaths|twos|media|compression|encryption|huffman|databases|sql', { acc: 'cat' }),
-  set('8c-machine', 'computing', 'Inside the machine', ['chip', 'bulb'], 'logic|hardware|software|architecture|os|circuits', { acc: 'microscope' }),
-  set('8c-net', 'computing', 'Networks and society', ['globe', 'lock'], null, { acc: 'fox' }),
+  // French (it replaced Computing): the same five prizes, so nothing she could win is lost
+  set('8f-me', 'french', 'French: all about me', ['quill', 'star'], 'v-greetings|v-numbers|v-dates|v-time|v-family|v-describe|v-home|v-routine|v-health', { acc: 'astronaut' }),
+  set('8f-world', 'french', 'French: out and about', ['globe', 'compass'], 'v-school|v-freetime|v-food|v-cafe|v-town|v-weather|v-holidays|v-clothes|v-tech', { acc: 'rocket' }),
+  set('8f-verbs', 'french', 'French verbs and tenses', ['quill', 'hourglass'], 'g-er|g-ir-re|g-irregular|g-modals|g-reflexive|g-future|g-perfect-avoir|g-perfect-etre|g-imperfect', { acc: 'cat' }),
+  set('8f-grammar', 'french', 'French grammar toolkit', ['scroll', 'puzzle'], 'g-.*', { acc: 'microscope' }),
+  set('8f-reading', 'french', 'Reading French', ['book', 'magnifier'], null, { acc: 'fox' }),
   set('8gk-alphabet', 'greek', 'Alphabet and first words', ['amphora', 'scroll'], 'alphabet-.*|reading|words-[1-3]', { acc: 'wizardrobe' }),
   set('8gk-hoard1', 'greek', 'Word hoard I', ['owl', 'amphora'], 'words-(?:[4-9]|10)', { acc: 'palette' }),
   set('8gk-hoard2', 'greek', 'Word hoard II', ['owl', 'laurel'], 'words-1[1-7]|words-review-.*', { acc: 'tutu' }),
@@ -196,9 +197,14 @@ export const cardRewardScenes = (course = COURSE) => setDefs(course).filter((d) 
 export const rewardSet = (id, course = COURSE) => setDefs(course).find((d) => d.reward && (d.reward.acc === id || d.reward.scene === id)) || null;
 
 /** Rewards won by full sets: { acc: [...], scenes: [...] }. */
+// Sets of a subject the course no longer has (Year 8's Computing): what they won stays won.
+const RETIRED = { y8: { '8c-python': { acc: 'astronaut' }, '8c-algorithms': { acc: 'rocket' }, '8c-data': { acc: 'cat' }, '8c-machine': { acc: 'microscope' }, '8c-net': { acc: 'fox' } } };
+
 export function wonCardRewards(state, db, course = COURSE) {
   const won = setProgress(state, db, course).filter((s) => s.won);
-  return { acc: won.map((s) => s.reward?.acc).filter(Boolean), scenes: won.map((s) => s.reward?.scene).filter(Boolean) };
+  const old = Object.entries(RETIRED[course.id] || {}).filter(([id]) => state.cardSets?.[id] != null).map(([, r]) => r);
+  const rewards = [...won.map((s) => s.reward), ...old];
+  return { acc: [...new Set(rewards.map((r) => r?.acc).filter(Boolean))], scenes: [...new Set(rewards.map((r) => r?.scene).filter(Boolean))] };
 }
 
 // ---------------------------------------------------------------- facts

@@ -39,7 +39,7 @@ const P = {
   joins: 'M2 17c2.5 0 3.5-8 6-8s1 8 3.5 8 2-8 4.5-8 1 8 3.5 8 2.5-2 2.5-2M3 21h18',
 };
 
-export const SUBJECT_ICON = { english: 'quill', maths: 'calc', history: 'hourglass', geography: 'compass', science: 'flask', latin: 'column', greek: 'column', computing: 'code', reading: 'book', spelling: 'pen' };
+export const SUBJECT_ICON = { english: 'quill', maths: 'calc', history: 'hourglass', geography: 'compass', science: 'flask', latin: 'column', greek: 'column', computing: 'code', french: 'globe', reading: 'book', spelling: 'pen' };
 
 export function icon(name, cls = 'icon') {
   const ns = 'http://www.w3.org/2000/svg';

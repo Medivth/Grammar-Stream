@@ -125,16 +125,17 @@ export const COURSES = {
       { id: 'science', name: 'Science', region: 'Forge of Hephaestus', colour: '#9a48d6', retention: 0.9 },
       { id: 'history', name: 'History', region: 'Hall of Clio', colour: '#d97a12', retention: 0.9 },
       { id: 'geography', name: 'Geography', region: 'Atlas Range', colour: '#0f9a6e', retention: 0.9 },
-      { id: 'computing', name: 'Computing', region: 'Daedalus Workshop', colour: '#0e7490', retention: 0.9 },
+      // Massalia (Marseille) was founded by Greek settlers around 600 BC: France's oldest city, and a Greek one
+      { id: 'french', name: 'French', region: 'Harbour of Massalia', colour: '#0e7490', retention: 0.9 },
       { id: 'greek', name: 'Ancient Greek', region: 'Oracle of Delphi', colour: '#a16207', retention: 0.9 },
     ],
-    placement: ['maths', 'english', 'science', 'history', 'geography', 'computing'],
+    placement: ['maths', 'english', 'science', 'history', 'geography', 'french'],
     placementCap: 24,
     minutes: 30,
     sprint: 'y8', sprintSeconds: 90,
     paper: null,
     tools: ['typing', 'speed'],
-    extra: ['greek'], // practise any time, outside the daily session
+    extra: ['greek', 'french'], // practise any time, outside the daily session
     writing: true,
     readAloud: false,
     starter: ['none', 'glasses', 'scarf', 'bird', 'yuzu', 'flower', 'bow', 'laurel', 'corinthian', 'shield', 'owl', 'earmuffs',

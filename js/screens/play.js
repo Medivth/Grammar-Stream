@@ -310,6 +310,7 @@ async function introStep(app, root, step) {
       parts.push(mapSVG(map, { layer: item.layer || (item.map === 'europe' ? 'countries' : 'features'), highlight: item.feature, zoom: item.zoom }).el);
     }
     parts.push(COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(`${learnText(item)} ${item.explain && !item.learn ? item.explain : ''}`), rich('div', learnText(item), { class: 'learn' })) : rich('div', learnText(item), { class: 'learn' }));
+    if (item.hear && readAloudOn()) parts.push(h('div', {}, h('button', { class: 'btn-ghost', type: 'button', lang: 'fr', onclick: () => speak(item.hear, { lang: 'fr', rate: 0.85 }) }, '🔊 Écouter')));
     if (item.explain && !item.learn) parts.push(rich('p', item.explain, { class: 'muted' }));
   }
   const pic = renderVisual(item.visual);
