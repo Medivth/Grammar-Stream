@@ -280,3 +280,23 @@ test('generators: every choice option for a conjugation differs from the right a
     }
   }
 });
+
+test('generators: a missing reflexive pronoun is never accepted, and de follows a negative before an infinitive', () => {
+  for (const [name, level] of [['y8frgReflexive', 2], ['y8frgReflexive', 3], ['y8frgPerfectEtre', 3]]) {
+    const rng = makeRng(`refl-accept:${name}:${level}`);
+    for (let i = 0; i < 2000; i++) {
+      const q = G[name](level, rng);
+      if (q.kind !== 'typed') continue;
+      // “nous nous levons” → “nous levons”; “vous vous êtes lavés” → “vous êtes lavés”
+      const dropped = q.answer.replace(/^(nous|vous) (ne )?\1 /, '$1 $2');
+      if (dropped !== q.answer) assert.equal(check(q, dropped).correct, false, `${name}: ${dropped} accepted for ${q.answer}`);
+    }
+  }
+  for (const name of ['y8frgFuture', 'y8frgModal']) {
+    const rng = makeRng(`neg-de:${name}`);
+    for (let i = 0; i < 2000; i++) {
+      const q = G[name](3, rng);
+      if (/\b(ne|n’)\S* \S+ pas\b/.test(q.answer)) assert.ok(!/ pas \S+( \S+)? (un|une|du|de la|des) /.test(q.answer), `${name}: ${q.answer}`);
+    }
+  }
+});
