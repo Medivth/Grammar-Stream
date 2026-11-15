@@ -55,7 +55,7 @@ const topics = [
     talk: 'Ask “Quelle heure est-il ?” a few times today and let {him} answer in French; check the clock together. Then ask {him} to read three times from a TV guide or a train timetable, the 24-hour way.',
     hook: '**Past the half? Next hour, then moins.** 8:50 = neuf heures moins dix. heure is feminine: **une** heure, et demi**e**.',
     example: 'French television’s main evening news is called “le vingt heures”: it starts at 20:00.',
-    visual: { kind: 'table', head: ['', 'French'], rows: [['3:00', 'trois heures'], ['3:15', 'trois heures et quart'], ['3:30', 'trois heures et demie'], ['3:40', 'quatre heures moins vingt'], ['3:45', 'quatre heures moins le quart'], ['12:00', 'midi (or minuit)'], ['17:40', 'dix-sept heures quarante']], caption: 'Midday is midi and midnight is minuit. Midi et demi has no e, because midi is masculine.' },
+    visual: { kind: 'table', head: ['', 'French'], rows: [['3:00', 'trois heures'], ['3:15', 'trois heures et quart'], ['3:30', 'trois heures et demie'], ['3:40', 'quatre heures moins vingt'], ['3:45', 'quatre heures moins le quart'], ['12:00', 'midi (or minuit)'], ['17:40', 'dix-sept heures quarante']], caption: 'Midday is midi and midnight is minuit. Midi et demi traditionally has no e, because midi is masculine (midi et demie is also accepted).' },
   }),
   T('v-family', 'Family and pets', ['v-greetings'], {
     diagnostic: ['french.v.fa.frere', 'french.v.fa.chien'],

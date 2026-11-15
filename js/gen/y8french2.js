@@ -45,6 +45,9 @@ export function numberSpellings(n, { year = false } = {}) {
     out.push(`${frNumber(Math.floor(n / 100))} cent ${below100(r)}`); // dix-neuf cent quatre-vingt-dix-huit
     out.push(frNumber(n).replace(/^mille /, 'mil ')); // the old spelling for dates
   }
+  // A year can be read as an ordinal, and then cent and vingt stay invariable (mille neuf cent
+  // quatre-vingt): grammars accept both, so the s-less spelling is never marked wrong.
+  if (year && /(cents|vingts)$/.test(frNumber(n))) out.push(...out.map((w) => w.replace(/s$/, '')));
   return [...new Set(out.flatMap((w) => [w, reformed(w)]))];
 }
 
@@ -343,8 +346,10 @@ export const Y8_FRENCH2_GENERATORS = {
         const wrongs = [[h - 10, m], [h + 2, m], [h + 1, m], [h - 1, m], [h, (m + 20) % 60], [h, (60 - m) % 60]].filter(([a, b]) => a >= 0 && a <= 23 && !(a === h && b === m)).map(([a, b]) => d24(a, b));
         return choice(`${what[0]} **${said}**. What time is that?`, d24(h, m), rng.shuffle(wrongs), rng, { hear: `${what[0]} ${said}.`, explain: `${said} = ${d24(h, m)}. ${what[1]} ${d24(h, m)}.`, steps });
       }
-      const forms = [...clock24All(h, m), ...(h === 12 ? [m === 0 ? 'midi' : m === 15 ? 'midi et quart' : m === 30 ? 'midi et demi' : `midi ${frNumber(m)}`] : [])];
-      const spell = [...new Set([...forms, ...forms.map((x) => `à ${x}`), ...withIlEst(forms), ...forms.map((x) => x.replace('vingt et une', 'vingt-et-une'))])];
+      // midi et demi is the traditional spelling; midi et demie (after heure) is also accepted
+      const base = [...clock24All(h, m), ...(h === 12 ? (m === 0 ? ['midi'] : m === 15 ? ['midi et quart'] : m === 30 ? ['midi et demi', 'midi et demie'] : [`midi ${frNumber(m)}`]) : [])];
+      const forms = [...new Set([...base, ...base.map((x) => x.replace('vingt et une', 'vingt-et-une'))])];
+      const spell = [...new Set([...forms, ...forms.map((x) => `à ${x}`), ...withIlEst(forms)])];
       return typedFr(`${what[1]} **${d24(h, m)}**. Write the time in French, the 24-hour way.`, spell, { explain: `${d24(h, m)} = ${said}.`, steps: [steps[0], `The hour is ${h}${h === 21 ? ' (heure is feminine, so it ends in une, not un)' : ''}, then heures, then ${m ? `${m} minutes as a plain number` : 'nothing more: it is exactly on the hour'}.`, steps[2]] });
     }
     if (level === 3) {

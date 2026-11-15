@@ -181,7 +181,7 @@ const pronounFor = (s) => (s.p === 2 ? (s.g === 'f' ? 'elle' : 'il') : s.p === 5
 const englishPresent = (vb, p) => (vb.enP ? vb.enP[p] : p === 2 ? vb.en3 : vb.en);
 const who = (s) => (s.who || s.note ? ` (${s.who || s.note})` : '');
 const tableOf = (vb) => vb.pres.map((f, p) => subj(PRONOUNS[p], f)).join(', ');
-const enPlural = (w) => (w === 'fish' ? 'fish' : w === 'mouse' ? 'mice' : /[^aeiou]y$/.test(w) ? `${w.slice(0, -1)}ies` : /(s|sh|ch|x)$/.test(w) ? `${w}es` : `${w}s`);
+const enPlural = (w) => (w === 'fish' ? 'fish (more than one)' : w === 'mouse' ? 'mice' : /[^aeiou]y$/.test(w) ? `${w.slice(0, -1)}ies` : /(s|sh|ch|x)$/.test(w) ? `${w}es` : `${w}s`);
 const anA = (w) => (/^[aeiou]/.test(w) ? 'an' : 'a');
 
 /** A choice question: `correct` plus up to three distinct wrong answers (never the correct text). */
@@ -260,20 +260,21 @@ function presentQ(pool, level, rng) {
 }
 
 // ---------------------------------------------------------------------------------------------
-// infinitive phrases for modal verbs and the near future; reflexive ones take the subject’s pronoun
+// infinitive phrases for modal verbs and the near future; reflexive ones take the subject’s pronoun.
+// [French, English, French after a negative (un/une/du/de la/des → de), English after a negative]
 export const PHRASES = [
   ['jouer au foot', 'play football'],
-  ['regarder un film', 'watch a film'],
-  ['manger une pizza', 'eat a pizza'],
-  ['faire du vélo', 'go cycling'],
+  ['regarder un film', 'watch a film', 'regarder de film'],
+  ['manger une pizza', 'eat a pizza', 'manger de pizza'],
+  ['faire du vélo', 'go cycling', 'faire de vélo'],
   ['prendre le train', 'take the train'],
   ['visiter le musée', 'visit the museum'],
-  ['acheter un cadeau', 'buy a present'],
+  ['acheter un cadeau', 'buy a present', 'acheter de cadeau'],
   ['aller à la plage', 'go to the beach'],
   ['partir en vacances', 'go on holiday'],
-  ['voir des amis', 'see some friends'],
-  ['écouter de la musique', 'listen to music'],
-  ['lire un livre', 'read a book'],
+  ['voir des amis', 'see some friends', 'voir d’amis', 'see any friends'],
+  ['écouter de la musique', 'listen to music', 'écouter de musique'],
+  ['lire un livre', 'read a book', 'lire de livre'],
   ['nager dans la mer', 'swim in the sea'],
   ['rester à la maison', 'stay at home'],
   ['sortir ce soir', 'go out this evening'],
@@ -298,16 +299,19 @@ const BE = ['am', 'are', 'is', 'are', 'are', 'are'];
 
 function auxPlusInfinitive(aux, level, rng, { label, enFor, rule }) {
   const s = rng.pick(SUBJECTS);
-  const [fr, en] = rng.pick(level === 1 ? PHRASES.filter(([f]) => !isReflexivePhrase(f)) : PHRASES);
+  const [fr, enPos, frNeg, enNeg] = rng.pick(level === 1 ? PHRASES.filter(([f]) => !isReflexivePhrase(f)) : PHRASES);
   const form = aux.pres[s.p];
-  const inf = phraseFor(fr, s.p);
   const negative = level === 3 && rng.chance(0.35);
+  // after a negative, un, une, du, de la and des become de: je ne vais pas manger de pizza
+  const deChange = negative && !!frNeg;
+  const en = negative && enNeg ? enNeg : enPos;
+  const inf = phraseFor(deChange ? frNeg : fr, s.p);
   const answer = negative ? `${subj(s.fr, neg(form))} pas ${inf}` : `${subj(s.fr, form)} ${inf}`;
   const reflNote = isReflexivePhrase(fr) ? ` The reflexive pronoun matches the subject (${s.fr} → ${REFL[s.p]}), so ${fr} becomes ${inf}.` : '';
   const steps = [
     `${aux.inf} for ${s.fr}: ${subj(s.fr, form)} (${tableOf(aux)}).`,
     `${rule}${reflNote}`,
-    negative ? `For a negative, ne… pas goes round the ${aux.inf} part: ${answer}.` : `So: ${answer}.`,
+    negative ? `For a negative, ne… pas goes round the ${aux.inf} part${deChange ? ', and after a negative un, une, du, de la and des become de (d’ before a vowel)' : ''}: ${answer}.` : `So: ${answer}.`,
   ];
   const explain = `${answer}: ${label}.`;
   if (level === 1) {
@@ -350,9 +354,13 @@ export function perfectEtre(vb, s, negative) {
   if (!negative) return `${subj(s.fr, aux)} ${pp}`;
   return `${subj(s.fr, startsVowel(aux) ? `n’${aux}` : `ne ${aux}`)} pas ${pp}`;
 }
-const pastOf = (vb, s) => (vb.inf === 'naître' ? (s.p === 0 || (s.p === 2 && !s.pl) ? 'was born' : 'were born') : vb.past);
+const pastOf = (vb, s) => (vb.inf === 'naître' ? (s.p === 0 || (s.p === 2 && !s.pl) ? 'was born' : 'were born')
+  : vb.inf === 'être' ? (s.p === 0 || (s.p === 2 && !s.pl) ? 'was' : 'were') : vb.past);
 function perfectAccept(answer, s) {
-  const acc = [bareOf(answer, s)];
+  // the answer without its subject, but never when that reads as another sentence: for nous and
+  // vous a reflexive verb minus its subject (“nous sommes levés”) is the classic missing-pronoun mistake
+  const bare = bareOf(answer, s);
+  const acc = bare && !/^(nous|vous) /.test(bare) ? [bare] : [];
   if (!['je', 'tu', 'il', 'elle', 'nous', 'vous', 'ils', 'elles'].includes(s.fr)) acc.push(`${pronounFor(s)} ${answer.slice(s.fr.length + 1)}`);
   return acc;
 }
@@ -630,11 +638,13 @@ export const Y8_FRENCH_GENERATORS = {
       wrongs.push(...rng.shuffle(vb.pres.filter((f) => f !== form)).map((f) => `${s.fr} ${refl(p, f)}`));
       return choice(`Which is the present tense of **${vb.inf}** (to ${vb.en}) for **${s.fr}**?`, answer, wrongs, rng, { explain, steps });
     }
+    // the verb without its subject is accepted, except for nous and vous, where “nous levons” is the missing-pronoun mistake
+    const accept = p === 3 || p === 4 ? [] : [refl(p, form)];
     if (level === 3 && !vb.noEnglish && rng.chance(0.6)) {
       const en = `${s.en} ${englishPresent(vb, p)}`;
-      return typed(`How do you say **${en}**${who(s)} in French?`, answer, [refl(p, form)], { explain: `${en} = ${answer}.`, steps });
+      return typed(`How do you say **${en}**${who(s)} in French?`, answer, accept, { explain: `${en} = ${answer}.`, steps });
     }
-    return typed(`Write the present tense of **${vb.inf}** (to ${vb.en}) for **${s.fr}**.`, answer, [refl(p, form)], { explain, steps });
+    return typed(`Write the present tense of **${vb.inf}** (to ${vb.en}) for **${s.fr}**.`, answer, accept, { explain, steps });
   },
 
   // g-perfect-avoir: auxiliary avoir + past participle
@@ -651,7 +661,7 @@ export const Y8_FRENCH_GENERATORS = {
       ppStep(vb),
       negative ? `ne… pas goes round the avoir part only: ${answer}.` : `Avoir + past participle: ${answer}. With avoir there is no agreement with the subject.`,
     ];
-    const en = negative ? `${s.en} didn’t ${vb.en}` : `${s.en} ${vb.past}`;
+    const en = negative ? `${s.en} didn’t ${vb.en}` : `${s.en} ${pastOf(vb, s)}`;
     const explain = `${answer} = ${en}.`;
     if (level === 1) {
       const wrongs = [`${subj(s.fr, AVOIR[s.p])} ${vb.inf}`, ...rng.shuffle(AVOIR.filter((f) => f !== AVOIR[s.p])).map((f) => `${subj(s.fr, f)} ${vb.pp}`)];
@@ -837,10 +847,11 @@ export const Y8_FRENCH_GENERATORS = {
     if (level === 2) {
       const wrongs = [...new Set(a.forms)].filter((x) => x !== adj).map((x) => (a.before ? `${art} ${x} ${noun}` : `${art} ${noun} ${x}`));
       // the wrong position, except for adjectives that can follow the noun with another meaning (un homme grand, le vin nouveau)
-      if (!['grand', 'nouveau', 'vieux'].includes(k)) wrongs.unshift(a.before ? `${art} ${noun} ${adj}` : `${art} ${adj} ${noun}`);
+      // and long, which is right either side (une jupe longue, une longue jupe)
+      if (!['grand', 'nouveau', 'vieux', 'long'].includes(k)) wrongs.unshift(a.before ? `${art} ${noun} ${adj}` : `${art} ${adj} ${noun}`);
       return choice(`How do you say **${en}**?`, phrase, wrongs, rng, { explain: `${en} = ${phrase}.`, steps });
     }
-    return typed(`Write in French: **${en}**`, phrase, [], { explain: `${en} = ${phrase}.`, steps });
+    return typed(`Write in French: **${en}**`, phrase, k === 'long' ? [`${art} ${adj} ${noun}`] : [], { explain: `${en} = ${phrase}.`, steps });
   },
 
   // g-possessives: mon/ma/mes … leur/leurs

@@ -21,7 +21,7 @@ const topics = [
     intro: 'Every French noun is masculine or feminine, and the little word in front shows which: le or un for masculine, la or une for feminine, l’ before a vowel or a silent h, and les or des in the plural. So learn every new noun with its article, never on its own. Some endings are good clues: -tion is feminine, and -age and -ment are usually masculine.',
     teach: 'Explain why you should always learn a new noun with le or la in front, using two examples.',
     talk: 'Point at things in the kitchen and ask {her} for the French word with le or la in front. If {she} is not sure of the gender, check together in a dictionary.',
-    hook: 'Learn the article with the noun: **la** plage, **le** musée. **-tion** is feminine; **-age** is masculine, except **la plage**, **la page** and **l’image**.',
+    hook: 'Learn the article with the noun: **la** plage, **le** musée. **-tion** is feminine; **-age** is usually masculine, but watch out for **la plage**, **la page** and **l’image**.',
   }),
   T('g-er', 'The present tense: -er verbs', 'mixed', ['g-gender'], {
     diagnostic: ['french.g-er.d1', 'french.g-er.d2'],
@@ -47,7 +47,7 @@ const topics = [
   }),
   T('g-negatives', 'Negatives', 'mixed', ['g-er'], {
     diagnostic: ['french.g-negatives.d1', 'french.g-negatives.d2'],
-    intro: 'To make a sentence negative, wrap ne… pas round the verb: je joue → je ne joue pas. Ne becomes n’ before a vowel: je n’aime pas. Swap pas for jamais (never), plus (no longer, not any more) or rien (nothing). After a negative, un, une, du, de la and des all become de: je n’ai pas de chien.',
+    intro: 'To make a sentence negative, wrap ne… pas round the verb: je joue → je ne joue pas. Ne becomes n’ before a vowel: je n’aime pas. Swap pas for jamais (never), plus (no longer, not any more) or rien (nothing). After a negative, un, une, du, de la and des all become de: je n’ai pas de chien. (The one exception is être: ce n’est pas un chien.)',
     teach: 'Explain the ne… pas sandwich, and why it is je n’ai pas de frère.',
     talk: 'Ask {her} about three foods {she} does not like. {She} answers in French with ne… pas or ne… jamais, then points out the two halves of the negative.',
     hook: '**ne… pas is a sandwich**: ne and pas are the bread, the verb is the filling. After it, un, une, du and des shrink to **de**.',
@@ -382,7 +382,7 @@ push(
 
 // --- g-imperfect (stretch) ----------------------------------------------------------------------
 push(
-  fact('cetait', 'g-imperfect', 'What does **c’était** mean?', 'it was', ['it is', 'it will be', 'there was'], 'C’était = it was (c’est in the past): c’était génial.', hear('c’était')),
+  fact('cetait', 'g-imperfect', 'What does **c’était** mean?', 'it was', ['it is', 'it will be', 'there was'], 'C’était = it was (c’est in the past): c’était génial.', { accept: ['that was'], ...hear('c’était') }),
   fact('ilyavait', 'g-imperfect', 'What does **il y avait** mean?', 'there was', ['there is', 'he had', 'it was'], 'Il y avait = there was or there were (il y a in the past).', { accept: ['there were', 'there was or there were', 'there were or there was'], ...hear('il y avait') }),
   fact('genial', 'g-imperfect', 'How do you say **it was great**?', 'c’était génial', ['c’est génial', 'il était génial', 'c’étais génial'], 'C’était + adjective: c’était génial, c’était nul, c’était intéressant.', { lang: 'fr', accept: ['c’était super', 'c’était fantastique', 'c’était excellent'] }),
   fact('chaud', 'g-imperfect', 'How do you say **the weather was hot**?', 'il faisait chaud', ['il fait chaud', 'il faisais chaud', 'il était chaud'], 'Il faisait + weather word: il faisait chaud, il faisait beau, il faisait froid.', FR),
@@ -390,7 +390,7 @@ push(
   mcq('monde', 'g-imperfect', 'What does **Il y avait beaucoup de monde.** mean?', [['There were lots of people.', true], ['There was a big world.', false, 'Beaucoup de monde is an idiom: lots of people.'], ['There are lots of people.', false, 'Avait is the past: there were.']], 'Beaucoup de monde = lots of people, a crowd.', hear('Il y avait beaucoup de monde.')),
   mcq('faisait', 'g-imperfect', 'Which is the **imperfect** of **il fait** (as in il fait beau)?', [['il faisait', true], ['il a fait', false, 'Il a fait is the perfect tense.'], ['il va faire', false, 'Il va faire is the near future.']], 'Il fait → il faisait: il faisait beau = the weather was nice.'),
   mcq('petite', 'g-imperfect', 'What does **Quand j’étais petite, j’avais un chat.** mean?', [['When I was little, I had a cat.', true], ['When I am little, I have a cat.', false, 'Étais and avais are past forms.'], ['When I was little, I wanted a cat.', false, 'J’avais = I had.']], 'J’étais = I was, j’avais = I had: the imperfect for what things were like.', hear('Quand j’étais petite, j’avais un chat.')),
-  fact('magasins', 'g-imperfect', 'How do you say **there were lots of shops**?', 'il y avait beaucoup de magasins', ['il y a beaucoup de magasins', 'il y avait beaucoup des magasins', 'il avait beaucoup de magasins'], 'Il y avait + beaucoup de (never des after beaucoup).', FR),
+  fact('magasins', 'g-imperfect', 'How do you say **there were lots of shops**?', 'il y avait beaucoup de magasins', ['il y a beaucoup de magasins', 'il y avait beaucoup des magasins', 'il avait beaucoup de magasins'], 'Il y avait + beaucoup de: after a quantity word, just de (not des).', FR),
   mcq('chateau', 'g-imperfect', '**Hier, j’ai visité un château. ___ très intéressant.**', [['C’était', true], ['Il y avait', false, 'Il y avait means there was: it needs a noun after it.'], ['Il faisait', false, 'Il faisait is for the weather.']], 'C’était + adjective gives your opinion of it: c’était très intéressant.'),
 );
 
