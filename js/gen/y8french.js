@@ -811,7 +811,7 @@ export const Y8_FRENCH_GENERATORS = {
     const enNoun = pl ? enPlural(t.en) : t.en;
     // level 3: half the time, two adjectives (one before the noun, one after)
     const before = t.adjs.filter((x) => ADJ[x].before), after = t.adjs.filter((x) => !ADJ[x].before);
-    if (level === 3 && rng.chance(0.5)) {
+    if (level === 3 && before.length && after.length && rng.chance(0.5)) {
       const b = ADJ[rng.pick(before)], c = ADJ[rng.pick(after)];
       const bf = b.forms[slot(t.g, pl)], cf = c.forms[slot(t.g, pl)];
       const right = `${art} ${bf} ${noun} ${cf}`;

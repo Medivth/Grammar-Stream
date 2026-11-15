@@ -1570,9 +1570,9 @@
    "prompt": "How do you say **When is your birthday? (to a friend)** in French?",
    "answer": "C’est quand, ton anniversaire ?",
    "distractors": [
+    "Quelle est la date aujourd’hui ?",
     "Quel âge as-tu ?",
-    "Quelle heure est-il ?",
-    "Quel jour sommes-nous ?"
+    "C’est quand, ton cours de danse ?"
    ],
    "explain": "C’est quand, ton anniversaire ? Answer: Mon anniversaire, c’est le…",
    "lang": "fr",
@@ -2147,7 +2147,8 @@
    "accept": [
     "she’s got two cats",
     "she has 2 cats"
-   ]
+   ],
+   "strict": true
   },
   {
    "id": "french.v.fa.lapin",
@@ -2555,9 +2556,9 @@
    "prompt": "What does **l’histoire-géo** mean?",
    "answer": "history and geography",
    "distractors": [
-    "geology",
-    "PSHE",
-    "RE"
+    "the history of art",
+    "geology and physics",
+    "religious education"
    ],
    "explain": "In France, history and geography are one subject: l’histoire-géographie, or l’histoire-géo for short.",
    "hear": "l’histoire-géo",
@@ -2756,12 +2757,12 @@
      "correct": true
     },
     {
-     "text": "a university college",
+     "text": "a university, for students over 18",
      "correct": false,
      "feedback": "A false friend: university is l’université (or la fac)."
     },
     {
-     "text": "a sixth-form college",
+     "text": "a sixth-form college, ages 16 to 18",
      "correct": false,
      "feedback": "From 15 to 18, French pupils go to le lycée."
     }
@@ -3095,9 +3096,9 @@
    "prompt": "What does **le goûter** mean?",
    "answer": "the after-school snack",
    "distractors": [
-    "the starter",
-    "the dessert",
-    "the tasting"
+    "the first course of dinner",
+    "the pudding after lunch",
+    "a tasting session"
    ],
    "explain": "le goûter is the snack French children have after school, around 4 pm: perhaps bread and chocolate. (The verb goûter means to taste.)",
    "hear": "le goûter",
@@ -3384,14 +3385,14 @@
      "correct": true
     },
     {
-     "text": "Garçon !",
+     "text": "Garçon, venez ici !",
      "correct": false,
-     "feedback": "This is old-fashioned and sounds rude today."
+     "feedback": "Garçon is old-fashioned and sounds rude today."
     },
     {
-     "text": "Salut, toi !",
+     "text": "Salut, mon pote, ça va ?",
      "correct": false,
-     "feedback": "Far too familiar for a waiter."
+     "feedback": "Far too familiar for a waiter: mon pote means “mate”."
     }
    ],
    "explain": "S’il vous plaît, monsieur (or madame) ! is polite. Or try Excusez-moi !"
@@ -3768,7 +3769,7 @@
    "prompt": "How do you say **Where is the station?** in French?",
    "answer": "Où est la gare ?",
    "distractors": [
-    "Ou est la gare ?",
+    "Où sont la gare ?",
     "Où et la gare ?",
     "Où est le gare ?"
    ],
@@ -4930,7 +4931,8 @@
     "sales",
     "the sale",
     "sale"
-   ]
+   ],
+   "strict": true
   },
   {
    "id": "french.v.cl.uniforme",
@@ -5620,8 +5622,12 @@
    "accept": [
     "a TV channel",
     "channel",
-    "a chain"
-   ]
+    "the channel",
+    "TV channel",
+    "a chain",
+    "chain"
+   ],
+   "strict": true
   },
   {
    "id": "french.v.te.dessinanime",

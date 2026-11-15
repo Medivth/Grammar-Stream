@@ -98,15 +98,28 @@ const typedFr = (prompt, [answer, ...accept], extra) => ({ kind: 'typed', prompt
 const near = (rng, list, n, lo, hi) => rng.shuffle([...new Set(list.filter((x) => x !== n && x >= lo && x <= hi))]);
 const cap = (s) => s[0].toUpperCase() + s.slice(1);
 
-/** How a number breaks down, for the worked steps. */
+/** How a French number word breaks down (for reading French → figures). */
 function breakdown(n) {
   const r = n % 100;
-  if (n >= 1000) return `${frNumber(n)}: ${n >= 2000 ? `${UNITS[Math.floor(n / 1000)]} mille (${Math.floor(n / 1000) * 1000})` : 'mille (1000)'}${n % 1000 ? ` + ${frNumber(n % 1000)} (${n % 1000})` : ''}. mille never takes an s.`;
-  if (n >= 100) return `${frNumber(n)}: ${n >= 200 ? `${UNITS[Math.floor(n / 100)]} cent${r ? '' : 's'}` : 'cent'} (${n - r})${r ? ` + ${below100(r)} (${r})` : ''}.${n >= 200 ? ' cent takes an s only when it is multiplied and nothing follows: deux cents, but deux cent dix.' : ''}`;
-  if (n >= 80) return `${frNumber(n)}: quatre-vingt${n === 80 ? 's' : ''} (4 × 20 = 80)${n > 80 ? ` + ${UNITS[n - 80]} (${n - 80})` : ''} = ${n}.`;
-  if (n >= 70) return `${frNumber(n)}: soixante (60) + ${UNITS[n - 60]} (${n - 60}) = ${n}.`;
-  if (n >= 20) return n % 10 ? `${frNumber(n)}: ${TENS[Math.floor(n / 10)]} (${n - (n % 10)}) + ${UNITS[n % 10]} (${n % 10})${n % 10 === 1 ? ', joined with et' : ', joined with a hyphen'}.` : `${frNumber(n)} = ${n}.`;
-  return `${frNumber(n)} = ${n}${n >= 17 ? ` (dix + ${UNITS[n - 10]})` : ''}.`;
+  if (n >= 1000) return `${n >= 2000 ? `${UNITS[Math.floor(n / 1000)]} mille (${Math.floor(n / 1000)} × 1000)` : 'mille (1000)'}${n % 1000 ? ` + ${frNumber(n % 1000)} (${n % 1000})` : ''}.`;
+  if (n >= 100) return `${n >= 200 ? `${UNITS[Math.floor(n / 100)]} ${r ? 'cent' : 'cents'} (${Math.floor(n / 100)} × 100)` : 'cent (100)'}${r ? ` + ${below100(r)} (${r})` : ''}.`;
+  if (n >= 80) return `quatre-vingt${n === 80 ? 's' : ''} (4 × 20)${n > 80 ? ` + ${UNITS[n - 80]} (${n - 80})` : ''}.`;
+  if (n >= 70) return `soixante (60) + ${UNITS[n - 60]} (${n - 60}).`;
+  if (n >= 20) return n % 10 ? `${TENS[Math.floor(n / 10)]} (${n - (n % 10)}) + ${UNITS[n % 10]} (${n % 10}).` : `${TENS[n / 10]} is a tens word.`;
+  return n >= 17 ? `dix (10) + ${UNITS[n - 10]} (${n - 10}).` : 'This one is learned by heart.';
+}
+/** How to build a number in French, without saying the answer (for figures → French). */
+function hint(n) {
+  const r = n % 100, u = n % 10;
+  if (n >= 100) {
+    const parts = [n >= 1000 ? Math.floor(n / 1000) * 1000 : 0, Math.floor((n % 1000) / 100) * 100, r].filter(Boolean);
+    return `${n} = ${parts.join(' + ')}. ${n >= 1000 ? 'mille never takes an s. ' : ''}${n % 1000 >= 200 ? 'cent takes an s only when nothing follows it: deux cents, but deux cent dix.' : 'Say each part as you would on its own.'}`;
+  }
+  if (n >= 80) return n === 80 ? '80 = 4 × 20. With nothing after it, vingt takes an s.' : `${n} = 4 × 20 + ${n - 80}. No et and no s: the vingt is followed by another number.`;
+  if (n >= 70) return `${n} = 60 + ${n - 60}${n === 71 ? ', joined with et' : ''}.`;
+  if (n >= 20) return u ? `${n} = ${n - u} + ${u}${u === 1 ? ', joined with et' : ', joined with a hyphen'}.` : `${n} is a tens word.`;
+  if (n >= 17) return `${n} = 10 + ${n - 10}: dix, a hyphen, then the unit.`;
+  return n > 10 ? '11 to 16 are single words to learn by heart: onze, douze, treize, quatorze, quinze, seize.' : 'Up to ten: un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix.';
 }
 const NUM_STEPS_RULES = 'From 70, French counts in twenties: 70 = soixante-dix (60 + 10), 80 = quatre-vingts (4 × 20), 90 = quatre-vingt-dix (4 × 20 + 10).';
 
@@ -194,10 +207,11 @@ export const Y8_FRENCH2_GENERATORS = {
     const w = spell[0];
     const what = isYear ? `the year **${n}**` : `**${n}**`;
     const tens = near(rng, [n + 10, n - 10, n + 20, n - 20, n + 1, n - 1, ...(n < 100 ? [Number(String(n).split('').reverse().join(''))] : [])], n, level === 1 ? 0 : level === 2 ? 50 : 100, 9999);
-    const steps = [level === 2 ? NUM_STEPS_RULES : level === 3 ? 'Say the thousands, then the hundreds, then the last two digits, exactly as you would on their own.' : 'Up to 69, French works like English: the tens, then the units. 21, 31, 41, 51 and 61 use et: vingt et un.', breakdown(n), `So ${n} = ${w}.`];
+    const rule = level === 2 ? NUM_STEPS_RULES : level === 3 ? 'Say the thousands, then the hundreds, then the last two digits, exactly as you would on their own.' : 'Up to 69, French works like English: the tens, then the units. 21, 31, 41, 51 and 61 use et: vingt et un.';
+    const steps = [rule, hint(n), `So ${n} = ${w}.`];
     const t = level === 3 ? rng.pick([0, 0, 1, 1, 2]) : rng.int(0, 2);
     if (t === 0) {
-      return { kind: 'typed', prompt: `Write this number in figures: **${w}**`, numeric: { value: String(n), form: 'any' }, hear: w, placeholder: 'Type a number', explain: `${w} = ${n}.`, steps };
+      return { kind: 'typed', prompt: `Write this number in figures: **${w}**`, numeric: { value: String(n), form: 'any' }, hear: w, placeholder: 'Type a number', explain: `${w} = ${n}.`, steps: [rule, `Split it up: ${breakdown(n)}`, `${w} = ${n}.`] };
     }
     if (t === 1) {
       // figures → French, choose: learners’ favourite wrong spellings, then nearby numbers
@@ -209,7 +223,7 @@ export const Y8_FRENCH2_GENERATORS = {
 
   y8frPrices(level, rng) {
     const e = level === 1 ? rng.int(1, 20) : level === 2 ? rng.int(1, 99) : rng.int(1, 9);
-    const ct = level === 1 ? rng.pick([0, 10, 20, 50, 50, 80]) : rng.int(1, 19) * 5;
+    const ct = level === 1 ? rng.pick([0, 10, 20, 50, 50, 80]) : rng.int(2, 19) * 5; // never 1–9 cents, which people say in different ways
     const c = e * 100 + ct;
     if (level === 3 && rng.chance(0.6)) {
       // shopping: add up two things, or several of the same thing
@@ -222,16 +236,17 @@ export const Y8_FRENCH2_GENERATORS = {
       return choice(`${where}, ${one} coûte **${frPrice(unit)}**. J’en achète ${frNumber(k)}. Ça fait combien${NB}?`, fmtPrice(total), rng.shuffle(wrongs), rng, {
         hear: `${cap(one)} coûte ${frPrice(unit)}.`,
         explain: `${frPrice(unit)} = ${enPrice(unit)}, and ${k} × ${enPrice(unit)} = ${enPrice(total)}: ${fmtPrice(total)}, said ${frPrice(total)}. (J’en achète ${k} = I buy ${k} of them: ${k} ${many}.)`,
-        steps: [`${frPrice(unit)}: the euros first, then the cents, so ${enPrice(unit)}.`, `${k} × ${enPrice(unit)} = ${enPrice(total)}.`, `In France that is written ${fmtPrice(total)}, with a comma, and said ${frPrice(total)}.`],
+        steps: [`${frPrice(unit)}: the euros first, then the cents, so ${enPrice(unit)} each.`, `J’en achète ${frNumber(k)}: I buy ${k}, so work out ${k} × ${enPrice(unit)}.`, `${k} × ${enPrice(unit)} = ${enPrice(total)}, written ${fmtPrice(total)} in France and said ${frPrice(total)}.`],
       });
     }
     const said = frPrice(c);
-    const steps = [`Prices are said euros first, then the cents, without saying “centimes”: ${fmtPrice(c)} = ${said}.`, `${frNumber(e)} = ${e}${ct ? `, ${frNumber(ct)} = ${ct}` : ''}.`, `French writes a comma where English has a decimal point: ${fmtPrice(c)} = ${enPrice(c)}.`];
+    const rule = 'Prices are said euros first, then the cents, usually without the word “centimes”. French writes a comma where English has a decimal point.';
+    const steps = [rule, `${fmtPrice(c)} is ${e} ${e === 1 ? 'euro' : 'euros'}${ct ? ` and ${ct} cents` : ''}.`, `${fmtPrice(c)} (${enPrice(c)}) = ${said}.`];
     const t = rng.int(0, 2);
     if (t === 0) {
       const alt = [ct * 100 + (e % 100), e * 100 + (ct % 10) * 10 + Math.floor(ct / 10), e * 100 + Math.floor(ct / 10), (e + 10) * 100 + ct, Math.max(1, e - 10) * 100 + ct, e * 100 + (ct + 10) % 100, (e + 20) * 100 + ct];
       const wrongs = rng.shuffle(alt.filter((x) => x !== c && x >= 100 && x % 100 !== x).map(fmtPrice));
-      return choice(`Ça coûte **${said}**. Which price is that?`, fmtPrice(c), wrongs, rng, { hear: `Ça coûte ${said}.`, explain: `${said} = ${fmtPrice(c)} (${enPrice(c)}).`, steps });
+      return choice(`Ça coûte **${said}**. Which price is that?`, fmtPrice(c), wrongs, rng, { hear: `Ça coûte ${said}.`, explain: `${said} = ${fmtPrice(c)} (${enPrice(c)}).`, steps: [rule, `${frNumber(e)} = ${e}${ct ? `, ${frNumber(ct)} = ${ct}` : ''}.`, `${said} = ${fmtPrice(c)} (${enPrice(c)}).`] });
     }
     const spell = priceSpellings(c);
     if (t === 1) {
@@ -266,7 +281,7 @@ export const Y8_FRENCH2_GENERATORS = {
       const d = rng.chance(0.3) ? rng.pick([1, 8, 11, 21, 31].filter((x) => x <= LENGTH[m])) : rng.int(1, LENGTH[m]);
       const fr = frDate(d, m);
       const en = `${d} ${MONTHS_EN[m]}`;
-      const steps = ['A date is le + the number + the month: le quatorze juillet.', d === 1 ? 'The 1st is the one exception: le premier.' : d === 8 || d === 11 ? `No l’ before ${frNumber(d)}: le ${frNumber(d)}, never l’${frNumber(d)}.` : `The other days use the plain number, not “2nd” or “3rd”: le ${frNumber(d)} (${d}).`, `${en} = ${fr}.`];
+      const steps = ['A date is le + the number + the month: le quatorze juillet.', d === 1 ? 'The 1st is the one exception: it uses premier, not un.' : d === 8 || d === 11 ? 'There is no l’ before huit or onze.' : 'Every day except the 1st uses the plain number (deux, trois…), never “deuxième”.', `${en} = ${fr}.`];
       const t = rng.int(0, 2);
       if (t === 0) {
         const [answer, ...accept] = englishDateAccept(d, m);
@@ -311,7 +326,7 @@ export const Y8_FRENCH2_GENERATORS = {
     const wrongs = [`${frDate(d, m)} ${rng.pick(yWrong)}`, `${frDate(d, (m + 1) % 12)} ${yw}`, ...(d <= 9 ? [`${frDate(d + 10, m)} ${yw}`] : d >= 11 && d <= 19 && d !== 10 ? [`${frDate(d - 10, m)} ${yw}`] : [`${frDate(d === 31 ? 30 : d + 1, m)} ${yw}`]), ...wrongSpellings(y).slice(0, 1).map((x) => `${frDate(d, m)} ${x}`)];
     return choice(`How do you say **${d} ${MONTHS_EN[m]} ${y}** in French?`, right, wrongs, rng, {
       explain: `${d} ${MONTHS_EN[m]} ${y} = ${right}.`,
-      steps: [`The date: ${frDate(d, m)}.`, `The year is a whole number: ${y} = ${yw}.`, `Together: ${right}.`],
+      steps: ['Say the date first (le + number + month), then the year as one whole number.', `The year: ${y} = ${yw}.`, `Together: ${right}.`],
     });
   },
 
@@ -330,7 +345,7 @@ export const Y8_FRENCH2_GENERATORS = {
       }
       const forms = [...clock24All(h, m), ...(h === 12 ? [m === 0 ? 'midi' : m === 15 ? 'midi et quart' : m === 30 ? 'midi et demi' : `midi ${frNumber(m)}`] : [])];
       const spell = [...new Set([...forms, ...forms.map((x) => `à ${x}`), ...withIlEst(forms), ...forms.map((x) => x.replace('vingt et une', 'vingt-et-une'))])];
-      return typedFr(`${what[1]} **${d24(h, m)}**. Write the time in French, the 24-hour way.`, spell, { explain: `${d24(h, m)} = ${said}.`, steps });
+      return typedFr(`${what[1]} **${d24(h, m)}**. Write the time in French, the 24-hour way.`, spell, { explain: `${d24(h, m)} = ${said}.`, steps: [steps[0], `The hour is ${h}${h === 21 ? ' (heure is feminine, so it ends in une, not un)' : ''}, then heures, then ${m ? `${m} minutes as a plain number` : 'nothing more: it is exactly on the hour'}.`, steps[2]] });
     }
     if (level === 3) {
       // 12-hour with du matin / de l’après-midi / du soir → 24-hour figures
@@ -346,7 +361,7 @@ export const Y8_FRENCH2_GENERATORS = {
     const h = rng.int(1, 10);
     const m = level === 1 ? rng.pick([0, 15, 30, 45]) : rng.int(1, 11) * 5;
     const said = clock12(h, m);
-    const steps = [m === 0 ? 'Il est + the hour + heures (une heure for 1 o’clock).' : m <= 30 ? 'Up to half past, say the hour and add the minutes: et quart (quarter past), et demie (half past).' : 'After half past, take the next hour and subtract: moins dix (ten to), moins le quart (quarter to).', `${english12(h, m)}: ${said}.`, `Il est ${said}.`];
+    const steps = [m === 0 ? 'Il est + the hour + heures (une heure for 1 o’clock).' : m <= 30 ? 'Up to half past, say the hour and add the minutes: et quart (quarter past), et demie (half past).' : 'After half past, take the next hour and subtract: moins dix (ten to), moins le quart (quarter to).', `In English, ${digital(h, m)} is ${english12(h, m)}.`, `Il est ${said} (${digital(h, m)}).`];
     const all = clock12All(h, m);
     const t = rng.int(0, 2);
     if (t === 0) {

@@ -1,0 +1,4875 @@
+{
+ "subject": "french",
+ "deck": "y8-grammar",
+ "topics": [
+  {
+   "id": "french.g-gender",
+   "title": "Nouns, gender and articles",
+   "kind": "mixed",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "french.g-gender.d1",
+    "french.g-gender.d2"
+   ],
+   "intro": "Every French noun is masculine or feminine, and the little word in front shows which: le or un for masculine, la or une for feminine, l’ before a vowel or a silent h, and les or des in the plural. So learn every new noun with its article, never on its own. Some endings are good clues: -tion is feminine, and -age and -ment are usually masculine.",
+   "teach": "Explain why you should always learn a new noun with le or la in front, using two examples.",
+   "talk": "Point at things in the kitchen and ask {her} for the French word with le or la in front. If {she} is not sure of the gender, check together in a dictionary.",
+   "hook": "Learn the article with the noun: **la** plage, **le** musée. **-tion** is feminine; **-age** is masculine, except **la plage**, **la page** and **l’image**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "masculine",
+     "feminine",
+     "plural"
+    ],
+    "rows": [
+     [
+      "the",
+      "le (l’)",
+      "la (l’)",
+      "les"
+     ],
+     [
+      "a, some",
+      "un",
+      "une",
+      "des"
+     ]
+    ],
+    "caption": "L’ before a vowel or a silent h: l’ami, l’école, l’hôtel."
+   }
+  },
+  {
+   "id": "french.g-er",
+   "title": "The present tense: -er verbs",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-gender"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.g-er.d1",
+    "french.g-er.d2"
+   ],
+   "intro": "Most French verbs end in -er, and they all work the same way: take off -er to find the stem (jouer → jou-), then add the ending for the person: -e, -es, -e, -ons, -ez, -ent. Je joue, tu joues, il joue and ils jouent all sound the same; only nous and vous sound different. A few verbs change their spelling: nous mangeons, nous commençons, j’achète, je préfère, j’appelle.",
+   "teach": "Conjugate jouer aloud with all six pronouns, then explain why nous mangeons has an extra e.",
+   "talk": "Say a short English phrase such as “we play” or “they watch”. {She} says it in French and spells the ending. You do not need any French yourself: ask which ending {she} used and why.",
+   "hook": "**-e, -es, -e, -ons, -ez, -ent.** Je, tu, il and ils all sound the same; only **nous** and **vous** are heard.",
+   "example": "J’habite à Londres, je parle anglais et je joue au tennis: three -er verbs in one introduction.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "jouer (to play)",
+     "ending"
+    ],
+    "rows": [
+     [
+      "je",
+      "joue",
+      "-e"
+     ],
+     [
+      "tu",
+      "joues",
+      "-es"
+     ],
+     [
+      "il / elle",
+      "joue",
+      "-e"
+     ],
+     [
+      "nous",
+      "jouons",
+      "-ons"
+     ],
+     [
+      "vous",
+      "jouez",
+      "-ez"
+     ],
+     [
+      "ils / elles",
+      "jouent",
+      "-ent"
+     ]
+    ],
+    "caption": "Take off -er and add the ending. The -ent of ils jouent is silent."
+   }
+  },
+  {
+   "id": "french.g-ir-re",
+   "title": "The present tense: -ir and -re verbs",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-er"
+   ],
+   "batch": 5,
+   "intro": "Regular -ir verbs like finir add -is, -is, -it, -issons, -issez, -issent to the stem fin-. Regular -re verbs like vendre add -s, -s, nothing, -ons, -ez, -ent to the stem vend-, so il vend has no ending at all. Learn finir and vendre and you can use dozens of verbs: choisir, réussir, attendre, répondre, entendre, perdre.",
+   "teach": "Conjugate finir and vendre side by side and point out where they are different.",
+   "talk": "Ask {her} to teach you how to say “I finish” and “we finish” in French, and where the extra -iss- comes from.",
+   "hook": "-ir verbs **hiss** in the plural: fin**iss**ons, fin**iss**ez, fin**iss**ent. -re verbs keep it short: il **vend**, with nothing on the end.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "finir",
+     "vendre"
+    ],
+    "rows": [
+     [
+      "je",
+      "finis",
+      "vends"
+     ],
+     [
+      "tu",
+      "finis",
+      "vends"
+     ],
+     [
+      "il / elle",
+      "finit",
+      "vend"
+     ],
+     [
+      "nous",
+      "finissons",
+      "vendons"
+     ],
+     [
+      "vous",
+      "finissez",
+      "vendez"
+     ],
+     [
+      "ils / elles",
+      "finissent",
+      "vendent"
+     ]
+    ],
+    "caption": "Stems fin- and vend-. Il vend adds no ending at all."
+   }
+  },
+  {
+   "id": "french.g-irregular",
+   "title": "Key irregular verbs: être, avoir, aller, faire",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-er"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.g-irregular.d1",
+    "french.g-irregular.d2"
+   ],
+   "intro": "The four most useful verbs in French are irregular, so they are learned by heart: être (to be), avoir (to have), aller (to go) and faire (to do or to make). You will need avoir and être again for the perfect tense, and aller for the near future. French uses avoir for age and for feeling hungry or cold: j’ai douze ans, j’ai faim, j’ai froid.",
+   "teach": "Chant all four verbs, then make one sentence with each about your own life.",
+   "talk": "Ask {her} to say how old {she} is in French (J’ai douze ans) and to explain why French uses avoir there, not être.",
+   "hook": "**ils sont** (they are) hisses with an **s**; **ils ont** (they have) buzzes with a **z**: ils‿ont.",
+   "example": "J’ai douze ans means “I am twelve”, but word for word it is “I have twelve years”.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "être",
+     "avoir",
+     "aller",
+     "faire"
+    ],
+    "rows": [
+     [
+      "je (j’)",
+      "suis",
+      "ai",
+      "vais",
+      "fais"
+     ],
+     [
+      "tu",
+      "es",
+      "as",
+      "vas",
+      "fais"
+     ],
+     [
+      "il / elle",
+      "est",
+      "a",
+      "va",
+      "fait"
+     ],
+     [
+      "nous",
+      "sommes",
+      "avons",
+      "allons",
+      "faisons"
+     ],
+     [
+      "vous",
+      "êtes",
+      "avez",
+      "allez",
+      "faites"
+     ],
+     [
+      "ils / elles",
+      "sont",
+      "ont",
+      "vont",
+      "font"
+     ]
+    ],
+    "caption": "Learn them by heart: j’ai, not je ai."
+   }
+  },
+  {
+   "id": "french.g-negatives",
+   "title": "Negatives",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-er"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.g-negatives.d1",
+    "french.g-negatives.d2"
+   ],
+   "intro": "To make a sentence negative, wrap ne… pas round the verb: je joue → je ne joue pas. Ne becomes n’ before a vowel: je n’aime pas. Swap pas for jamais (never), plus (no longer, not any more) or rien (nothing). After a negative, un, une, du, de la and des all become de: je n’ai pas de chien.",
+   "teach": "Explain the ne… pas sandwich, and why it is je n’ai pas de frère.",
+   "talk": "Ask {her} about three foods {she} does not like. {She} answers in French with ne… pas or ne… jamais, then points out the two halves of the negative.",
+   "hook": "**ne… pas is a sandwich**: ne and pas are the bread, the verb is the filling. After it, un, une, du and des shrink to **de**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "negative"
+    ],
+    "rows": [
+     [
+      "not",
+      "Je ne joue **pas**."
+     ],
+     [
+      "never",
+      "Je ne mange **jamais** de viande."
+     ],
+     [
+      "no longer",
+      "Je n’habite **plus** ici."
+     ],
+     [
+      "nothing",
+      "Je ne fais **rien**."
+     ]
+    ],
+    "caption": "Ne before the verb, the negative word after it. Ne becomes n’ before a vowel."
+   }
+  },
+  {
+   "id": "french.g-adjectives",
+   "title": "Adjectives: agreement and position",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-gender"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.g-adjectives.d1",
+    "french.g-adjectives.d2"
+   ],
+   "intro": "Adjectives agree with the noun they describe: add -e for feminine and -s for plural (petit, petite, petits, petites). Some change more: blanc → blanche, heureux → heureuse, sportif → sportive, gentil → gentille, beau → belle. Most adjectives go after the noun (une voiture rouge), but a few short, common ones go before it (une petite voiture).",
+   "teach": "Describe someone in your family in French with three adjectives, and explain each ending.",
+   "talk": "Ask {her} to describe {her} best friend in French, then to tell you which adjective endings changed and why.",
+   "hook": "**BAGS** adjectives go before the noun: **B**eauty (beau, joli), **A**ge (jeune, vieux, nouveau), **G**oodness (bon, mauvais), **S**ize (petit, grand). Colours and most others go after.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "masc.",
+     "fem.",
+     "masc. pl.",
+     "fem. pl."
+    ],
+    "rows": [
+     [
+      "petit",
+      "petite",
+      "petits",
+      "petites"
+     ],
+     [
+      "blanc",
+      "blanche",
+      "blancs",
+      "blanches"
+     ],
+     [
+      "heureux",
+      "heureuse",
+      "heureux",
+      "heureuses"
+     ],
+     [
+      "sportif",
+      "sportive",
+      "sportifs",
+      "sportives"
+     ],
+     [
+      "beau",
+      "belle",
+      "beaux",
+      "belles"
+     ],
+     [
+      "rouge",
+      "rouge",
+      "rouges",
+      "rouges"
+     ]
+    ],
+    "caption": "Adjectives ending in -e add no extra e. Marron and orange never change."
+   }
+  },
+  {
+   "id": "french.g-possessives",
+   "title": "Possessive adjectives",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-gender"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.g-possessives.d1",
+    "french.g-possessives.d2"
+   ],
+   "intro": "My, your, his, her, our and their agree with the thing owned, not with the owner: mon frère, ma sœur, mes parents. So sa mère means “his mother” or “her mother”: the owner makes no difference. Before a feminine word that starts with a vowel, use mon, ton or son so it is easy to say: mon amie, son école.",
+   "teach": "Explain why sa mère can mean “his mother” or “her mother”.",
+   "talk": "Look at a family photo together and ask {her} to name people in French: mon père, ma tante, mes cousins…",
+   "hook": "**son, sa, ses** agree with the **thing owned**: Paul’s mother is **sa** mère, because mère is feminine.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "masc.",
+     "fem.",
+     "plural"
+    ],
+    "rows": [
+     [
+      "my",
+      "mon",
+      "ma",
+      "mes"
+     ],
+     [
+      "your (tu)",
+      "ton",
+      "ta",
+      "tes"
+     ],
+     [
+      "his, her",
+      "son",
+      "sa",
+      "ses"
+     ],
+     [
+      "our",
+      "notre",
+      "notre",
+      "nos"
+     ],
+     [
+      "your (vous)",
+      "votre",
+      "votre",
+      "vos"
+     ],
+     [
+      "their",
+      "leur",
+      "leur",
+      "leurs"
+     ]
+    ],
+    "caption": "Before a feminine noun starting with a vowel: mon amie, ton école, son histoire."
+   }
+  },
+  {
+   "id": "french.g-questions",
+   "title": "Asking questions",
+   "kind": "facts",
+   "prereqs": [
+    "french.g-irregular"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.g-questions.d1",
+    "french.g-questions.d2"
+   ],
+   "intro": "There are three ways to ask a yes/no question: raise your voice at the end (Tu aimes le sport ?), put est-ce que in front (Est-ce que tu aimes le sport ?), or swap the verb and the pronoun (Aimes-tu le sport ?). For other questions, start with a question word: où (where), quand (when), qui (who), pourquoi (why), comment (how), combien (how many, how much), qu’est-ce que (what).",
+   "teach": "Ask the same question in all three ways, and say which one you would use with a friend.",
+   "talk": "Play twenty questions: {she} thinks of a famous person, you ask yes/no questions in English, and {she} must say each of your questions in French before answering.",
+   "hook": "**Est-ce que** is a question-maker: put it in front of any sentence. **Pourquoi ?** Because… **parce que !**",
+   "example": "Qu’est-ce que tu fais le week-end ? (What do you do at the weekend?) comes up in almost every French speaking test.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "French",
+     "English"
+    ],
+    "rows": [
+     [
+      "où ?",
+      "where?"
+     ],
+     [
+      "quand ?",
+      "when?"
+     ],
+     [
+      "qui ?",
+      "who?"
+     ],
+     [
+      "pourquoi ?",
+      "why?"
+     ],
+     [
+      "comment ?",
+      "how?"
+     ],
+     [
+      "combien ?",
+      "how much? how many?"
+     ],
+     [
+      "qu’est-ce que… ?",
+      "what…?"
+     ],
+     [
+      "quel, quelle… ?",
+      "which…? what…?"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.g-partitive",
+   "title": "Some and any: du, de la, des, de",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-gender",
+    "french.g-negatives"
+   ],
+   "batch": 5,
+   "intro": "French needs a word for “some” even where English leaves it out: du pain (bread, some bread), de la confiture, de l’eau, des frites. After a negative they all become de: je ne mange pas de viande. But after verbs of liking (aimer, adorer, détester, préférer) use le, la, l’ or les, because you mean the food in general: j’aime le fromage.",
+   "teach": "Explain the difference between je mange du fromage and j’aime le fromage.",
+   "talk": "At a meal, ask {her} to say in French what is on the table (du pain, de l’eau, des pâtes…) and one thing {she} doesn’t eat (je ne mange pas de…).",
+   "hook": "**Some = du, de la, de l’, des.** Negative? They all shrink to **de**. Liking? Use **le, la, les**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "some",
+     "not any"
+    ],
+    "rows": [
+     [
+      "masculine",
+      "du pain",
+      "pas de pain"
+     ],
+     [
+      "feminine",
+      "de la viande",
+      "pas de viande"
+     ],
+     [
+      "before a vowel",
+      "de l’eau",
+      "pas d’eau"
+     ],
+     [
+      "plural",
+      "des frites",
+      "pas de frites"
+     ]
+    ],
+    "caption": "But after aimer, adorer, détester, préférer: j’aime le pain, la viande, l’eau, les frites."
+   }
+  },
+  {
+   "id": "french.g-prepositions",
+   "title": "To, at and in: à, au, en, aux",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-gender",
+    "french.g-irregular"
+   ],
+   "batch": 5,
+   "intro": "French uses one little word for “to” and “in”: à for towns (à Paris), en for feminine countries (en France, en Espagne), au for masculine ones (au Canada, au pays de Galles) and aux for plural ones (aux États-Unis). In town, à joins up with the article: à + le = au (au cinéma), à + les = aux (aux toilettes), but à la and à l’ stay as they are.",
+   "teach": "Explain why it is au cinéma but à la piscine, then name three countries that take en and two that take au.",
+   "talk": "Point to places on a map or a globe. For each one, {she} says in French “I am going to…”: Je vais en Italie, je vais au Portugal…",
+   "hook": "**à + le = au, à + les = aux**; à la and à l’ never change. Countries ending in **-e** are usually feminine (**en** France); le Mexique is the famous exception: **au** Mexique.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "to, in, at"
+    ],
+    "rows": [
+     [
+      "a town or city",
+      "à Paris"
+     ],
+     [
+      "a feminine country",
+      "en France"
+     ],
+     [
+      "a masculine country",
+      "au Canada"
+     ],
+     [
+      "a plural country",
+      "aux États-Unis"
+     ],
+     [
+      "le cinéma",
+      "au cinéma"
+     ],
+     [
+      "la piscine",
+      "à la piscine"
+     ],
+     [
+      "l’école",
+      "à l’école"
+     ],
+     [
+      "les toilettes",
+      "aux toilettes"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.g-modals",
+   "title": "Modal verbs: pouvoir, vouloir, devoir",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-irregular"
+   ],
+   "batch": 5,
+   "intro": "Pouvoir (can, to be able to), vouloir (to want) and devoir (must, to have to) are irregular, and the verb after them stays in the infinitive: je peux nager, je veux partir, je dois travailler. To ask for something politely, say je voudrais (I would like) rather than je veux (I want).",
+   "teach": "Make three sentences about your weekend: something you can do, something you want to do and something you have to do.",
+   "talk": "Ask {her} what {she} has to do this week (Je dois…) and what {she} would like to do (Je voudrais…), in French.",
+   "hook": "Modal + **infinitive**: **je peux jouer**, never je peux joue. The second verb always ends in -er, -ir or -re.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "pouvoir",
+     "vouloir",
+     "devoir"
+    ],
+    "rows": [
+     [
+      "je",
+      "peux",
+      "veux",
+      "dois"
+     ],
+     [
+      "tu",
+      "peux",
+      "veux",
+      "dois"
+     ],
+     [
+      "il / elle",
+      "peut",
+      "veut",
+      "doit"
+     ],
+     [
+      "nous",
+      "pouvons",
+      "voulons",
+      "devons"
+     ],
+     [
+      "vous",
+      "pouvez",
+      "voulez",
+      "devez"
+     ],
+     [
+      "ils / elles",
+      "peuvent",
+      "veulent",
+      "doivent"
+     ]
+    ],
+    "caption": "Then an infinitive: je peux nager, je veux partir, je dois travailler."
+   }
+  },
+  {
+   "id": "french.g-reflexive",
+   "title": "Reflexive verbs",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-er"
+   ],
+   "batch": 5,
+   "intro": "Reflexive verbs have an extra pronoun that matches the subject: je me lève (I get up; word for word, “I get myself up”), tu te lèves, il se lève, nous nous levons, vous vous levez, ils se lèvent. You need them for your daily routine. Me, te and se become m’, t’ and s’ before a vowel or a silent h: je m’habille, elle s’appelle.",
+   "teach": "Describe your morning routine using four reflexive verbs, and explain why it is je m’appelle but je me lève.",
+   "talk": "Ask {her} to talk you through {her} morning in French while acting it out: je me réveille, je me lève, je me douche…",
+   "hook": "**me, te, se, nous, vous, se**: the mirror pronoun always matches the person. **Je m’appelle** is word for word “I call myself”.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "se lever",
+     "s’habiller"
+    ],
+    "rows": [
+     [
+      "je",
+      "me lève",
+      "m’habille"
+     ],
+     [
+      "tu",
+      "te lèves",
+      "t’habilles"
+     ],
+     [
+      "il / elle",
+      "se lève",
+      "s’habille"
+     ],
+     [
+      "nous",
+      "nous levons",
+      "nous habillons"
+     ],
+     [
+      "vous",
+      "vous levez",
+      "vous habillez"
+     ],
+     [
+      "ils / elles",
+      "se lèvent",
+      "s’habillent"
+     ]
+    ],
+    "caption": "Me, te and se become m’, t’ and s’ before a vowel or a silent h."
+   }
+  },
+  {
+   "id": "french.g-future",
+   "title": "The near future: aller + infinitive",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-irregular"
+   ],
+   "batch": 5,
+   "intro": "To say what you are going to do, use the present tense of aller + an infinitive: je vais jouer (I am going to play), nous allons partir (we are going to leave). It works just like English “going to”. For a negative, ne… pas goes round aller: je ne vais pas travailler.",
+   "teach": "Say three things you are going to do next weekend, and one thing you are not going to do.",
+   "talk": "On a Friday, ask {her} to tell you in French three things {she} is going to do at the weekend (Je vais…).",
+   "hook": "**aller + infinitive = going to**: je **vais** jouer, I’m **going to** play.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "aller",
+     "+ infinitive"
+    ],
+    "rows": [
+     [
+      "je",
+      "vais",
+      "jouer"
+     ],
+     [
+      "tu",
+      "vas",
+      "manger"
+     ],
+     [
+      "il / elle",
+      "va",
+      "sortir"
+     ],
+     [
+      "nous",
+      "allons",
+      "partir"
+     ],
+     [
+      "vous",
+      "allez",
+      "voir"
+     ],
+     [
+      "ils / elles",
+      "vont",
+      "dormir"
+     ]
+    ],
+    "caption": "Reflexive verbs keep a pronoun that matches: je vais me coucher, nous allons nous coucher."
+   }
+  },
+  {
+   "id": "french.g-perfect-avoir",
+   "title": "The perfect tense with avoir",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-irregular",
+    "french.g-ir-re"
+   ],
+   "batch": 5,
+   "intro": "The perfect tense (le passé composé) says what happened: j’ai joué means “I played” or “I have played”. Use the present tense of avoir + a past participle. Regular past participles: -er → -é (joué), -ir → -i (fini), -re → -u (vendu). Many common verbs have irregular ones to learn: fait, pris, bu, vu, lu, écrit, eu, été.",
+   "teach": "Explain how to make the perfect tense of jouer, finir and vendre, then list five irregular past participles.",
+   "talk": "On Monday, ask {her} to tell you in French three things {she} did at the weekend (J’ai…), and which of the past participles were irregular.",
+   "hook": "**avoir + past participle**: -er → **é**, -ir → **i**, -re → **u**. J’ai joué, j’ai fini, j’ai vendu.",
+   "example": "Hier, j’ai regardé un film et j’ai mangé une pizza: “Yesterday I watched a film and ate a pizza.”",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "avoir",
+     "past participle"
+    ],
+    "rows": [
+     [
+      "je (j’)",
+      "ai",
+      "joué"
+     ],
+     [
+      "tu",
+      "as",
+      "fini"
+     ],
+     [
+      "il / elle",
+      "a",
+      "vendu"
+     ],
+     [
+      "nous",
+      "avons",
+      "fait"
+     ],
+     [
+      "vous",
+      "avez",
+      "pris"
+     ],
+     [
+      "ils / elles",
+      "ont",
+      "vu"
+     ]
+    ],
+    "caption": "Irregular: faire → fait, prendre → pris, boire → bu, voir → vu, lire → lu, écrire → écrit, avoir → eu, être → été."
+   }
+  },
+  {
+   "id": "french.g-perfect-etre",
+   "title": "The perfect tense with être",
+   "kind": "mixed",
+   "prereqs": [
+    "french.g-perfect-avoir",
+    "french.g-reflexive"
+   ],
+   "batch": 5,
+   "intro": "About sixteen verbs, mostly about coming and going (aller, venir, arriver, partir, entrer, sortir, monter, descendre, tomber, rester, naître, mourir…), use être instead of avoir: je suis allé. With être the past participle agrees with the subject like an adjective: elle est allée, ils sont allés, elles sont allées. Every reflexive verb uses être too: je me suis levé.",
+   "teach": "Explain DR MRS VANDERTRAMP, then say where you went last weekend twice: once as yourself and once as a group of girls.",
+   "talk": "Ask {her} to spell aloud “she went” and “they went” (a group of girls) in French, and to explain the extra letters: elle est allée, elles sont allées.",
+   "hook": "**DR MRS VANDERTRAMP**: Devenir, Revenir, Monter, Rester, Sortir, Venir, Aller, Naître, Descendre, Entrer, Rentrer, Tomber, Retourner, Arriver, Mourir, Partir. With être, the participle agrees: elle est allé**e**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "aller"
+    ],
+    "rows": [
+     [
+      "je",
+      "suis allé(e)"
+     ],
+     [
+      "tu",
+      "es allé(e)"
+     ],
+     [
+      "il",
+      "est allé"
+     ],
+     [
+      "elle",
+      "est allée"
+     ],
+     [
+      "nous",
+      "sommes allé(e)s"
+     ],
+     [
+      "vous",
+      "êtes allé(e)(s)"
+     ],
+     [
+      "ils",
+      "sont allés"
+     ],
+     [
+      "elles",
+      "sont allées"
+     ]
+    ],
+    "caption": "Add -e for a girl or a woman, -s for a group, -es for a group of girls."
+   }
+  },
+  {
+   "id": "french.g-imperfect",
+   "title": "The imperfect: c’était and il y avait",
+   "kind": "facts",
+   "prereqs": [
+    "french.g-perfect-avoir"
+   ],
+   "batch": 5,
+   "tier": "stretch",
+   "intro": "To describe the past (what something was like, rather than what happened), French uses the imperfect tense. Start with three phrases that turn up in every holiday story: c’était (it was), il y avait (there was, there were) and il faisait (the weather was). C’était génial ! Il y avait beaucoup de monde. Il faisait chaud.",
+   "teach": "Describe a past holiday in three sentences: one with c’était, one with il y avait and one with il faisait.",
+   "talk": "Ask {her} to describe a day out you had together, in French, using c’était and il y avait, and to tell you what each phrase means.",
+   "hook": "**Perfect = what happened** (j’ai visité le musée). **Imperfect = what it was like** (c’était intéressant, il y avait beaucoup de monde).",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "now",
+     "in the past",
+     "English"
+    ],
+    "rows": [
+     [
+      "c’est",
+      "c’était",
+      "it was"
+     ],
+     [
+      "il y a",
+      "il y avait",
+      "there was, there were"
+     ],
+     [
+      "il fait",
+      "il faisait",
+      "the weather was"
+     ],
+     [
+      "j’ai",
+      "j’avais",
+      "I had"
+     ],
+     [
+      "je suis",
+      "j’étais",
+      "I was"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.g-opinions",
+   "title": "Opinions, reasons and connectives",
+   "kind": "facts",
+   "prereqs": [
+    "french.g-er",
+    "french.g-adjectives"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.g-opinions.d1",
+    "french.g-opinions.d2"
+   ],
+   "intro": "Good answers in French give an opinion, a reason and a connective. Opinions: j’aime, j’adore, je n’aime pas, je déteste, je préfère, à mon avis (in my opinion), je pense que (I think that). Reasons: parce que or car (because) + c’est + an adjective, as in parce que c’est intéressant. Connectives such as et, mais, aussi, cependant (however) and par contre (on the other hand) join ideas together.",
+   "teach": "Give your opinion of three school subjects, each with a reason and a connective.",
+   "talk": "Name a food, a film or a school subject. {She} gives an opinion in French with a reason (J’adore les maths parce que c’est intéressant). Award a point for every connective.",
+   "hook": "**Opinion + parce que + c’est + adjective**: J’adore le dessin **parce que c’est** créatif.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "opinion",
+     "reason"
+    ],
+    "rows": [
+     [
+      "j’adore…",
+      "parce que c’est génial"
+     ],
+     [
+      "j’aime…",
+      "car c’est intéressant"
+     ],
+     [
+      "je n’aime pas…",
+      "parce que c’est ennuyeux"
+     ],
+     [
+      "je déteste…",
+      "parce que c’est nul"
+     ],
+     [
+      "à mon avis…",
+      "c’est trop difficile"
+     ]
+    ],
+    "caption": "Join ideas with et, mais, aussi, cependant (however) and par contre (on the other hand)."
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "french.g-gender.d1",
+   "topic": "french.g-gender",
+   "kind": "mcq",
+   "prompt": "Which is right for **the house**?",
+   "options": [
+    {
+     "text": "la maison",
+     "correct": true
+    },
+    {
+     "text": "le maison",
+     "correct": false,
+     "feedback": "Maison is feminine, so “the” is la."
+    },
+    {
+     "text": "les maison",
+     "correct": false,
+     "feedback": "Les is plural: les maisons."
+    }
+   ],
+   "explain": "Maison is feminine: la maison, une maison."
+  },
+  {
+   "id": "french.g-gender.d2",
+   "topic": "french.g-gender",
+   "kind": "mcq",
+   "prompt": "Which word for **the** goes with **école** (school)?",
+   "options": [
+    {
+     "text": "l’",
+     "correct": true
+    },
+    {
+     "text": "la",
+     "correct": false,
+     "feedback": "École is feminine, but it starts with a vowel, so la shortens to l’."
+    },
+    {
+     "text": "le",
+     "correct": false,
+     "feedback": "École is feminine, and it starts with a vowel: l’école."
+    }
+   ],
+   "explain": "Before a vowel or a silent h, le and la both become l’: l’école, l’ami, l’hôtel."
+  },
+  {
+   "id": "french.g-gender.car",
+   "topic": "french.g-gender",
+   "kind": "fact",
+   "prompt": "How do you say **a car** in French?",
+   "answer": "une voiture",
+   "distractors": [
+    "un voiture",
+    "la voiture",
+    "des voiture"
+   ],
+   "explain": "Voiture is feminine: une voiture, la voiture.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-gender.tion",
+   "topic": "french.g-gender",
+   "kind": "mcq",
+   "prompt": "Which ending is a good clue that a noun is **feminine**?",
+   "options": [
+    {
+     "text": "-tion, as in la natation",
+     "correct": true
+    },
+    {
+     "text": "-age, as in le fromage",
+     "correct": false,
+     "feedback": "-age is usually masculine (except la plage, la page, l’image)."
+    },
+    {
+     "text": "-ment, as in le moment",
+     "correct": false,
+     "feedback": "-ment is almost always masculine."
+    }
+   ],
+   "explain": "Nouns ending in -tion are feminine: la natation, la station, l’émission."
+  },
+  {
+   "id": "french.g-gender.musee",
+   "topic": "french.g-gender",
+   "kind": "mcq",
+   "prompt": "**Musée** (museum) ends in -ée, which looks feminine. Which is right?",
+   "options": [
+    {
+     "text": "le musée",
+     "correct": true
+    },
+    {
+     "text": "la musée",
+     "correct": false,
+     "feedback": "Musée is an exception: it is masculine."
+    },
+    {
+     "text": "les musée",
+     "correct": false,
+     "feedback": "Les is plural: les musées."
+    }
+   ],
+   "explain": "Le musée and le lycée are masculine, even though they end in -ée."
+  },
+  {
+   "id": "french.g-gender.plage",
+   "topic": "french.g-gender",
+   "kind": "mcq",
+   "prompt": "**Plage** (beach) ends in -age, which is usually masculine. Which is right?",
+   "options": [
+    {
+     "text": "la plage",
+     "correct": true
+    },
+    {
+     "text": "le plage",
+     "correct": false,
+     "feedback": "Plage is an exception: it is feminine."
+    },
+    {
+     "text": "un plage",
+     "correct": false,
+     "feedback": "Plage is feminine: une plage."
+    }
+   ],
+   "explain": "La plage, la page and l’image are feminine, even though most -age words are masculine."
+  },
+  {
+   "id": "french.g-gender.amis",
+   "topic": "french.g-gender",
+   "kind": "fact",
+   "prompt": "How do you say **the friends** (a group of boys)?",
+   "answer": "les amis",
+   "distractors": [
+    "les amies",
+    "l’amis",
+    "le amis"
+   ],
+   "explain": "In the plural, “the” is always les: les amis. A group of girls would be les amies.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-gender.gateaux",
+   "topic": "french.g-gender",
+   "kind": "mcq",
+   "prompt": "What is the plural of **le gâteau** (the cake)?",
+   "options": [
+    {
+     "text": "les gâteaux",
+     "correct": true
+    },
+    {
+     "text": "les gâteaus",
+     "correct": false,
+     "feedback": "Nouns ending in -eau add -x: gâteaux, oiseaux, bureaux."
+    },
+    {
+     "text": "le gâteaux",
+     "correct": false,
+     "feedback": "The article must be plural too: les."
+    }
+   ],
+   "explain": "Nouns ending in -eau add -x in the plural: les gâteaux."
+  },
+  {
+   "id": "french.g-gender.animaux",
+   "topic": "french.g-gender",
+   "kind": "mcq",
+   "prompt": "What is the plural of **un animal**?",
+   "options": [
+    {
+     "text": "des animaux",
+     "correct": true
+    },
+    {
+     "text": "des animals",
+     "correct": false,
+     "feedback": "Most nouns ending in -al change to -aux."
+    },
+    {
+     "text": "des animales",
+     "correct": false,
+     "feedback": "Most nouns ending in -al change to -aux."
+    }
+   ],
+   "explain": "Most -al nouns change to -aux: un animal, des animaux; un cheval, des chevaux; un journal, des journaux."
+  },
+  {
+   "id": "french.g-gender.hopital",
+   "topic": "french.g-gender",
+   "kind": "mcq",
+   "prompt": "Why is it **l’hôpital**, not le hôpital?",
+   "options": [
+    {
+     "text": "The h is silent, so le shortens to l’",
+     "correct": true
+    },
+    {
+     "text": "Hôpital is a feminine noun",
+     "correct": false,
+     "feedback": "It is masculine: un hôpital."
+    },
+    {
+     "text": "Hôpital is a plural noun",
+     "correct": false,
+     "feedback": "The plural is les hôpitaux."
+    }
+   ],
+   "explain": "Most French words starting with h have a silent h, so they behave as if they began with a vowel: l’hôpital, l’hôtel, l’histoire."
+  },
+  {
+   "id": "french.g-gender.pommes",
+   "topic": "french.g-gender",
+   "kind": "fact",
+   "prompt": "How do you say **some apples**?",
+   "answer": "des pommes",
+   "distractors": [
+    "de la pommes",
+    "les pommes",
+    "des pomme"
+   ],
+   "explain": "Plural “some” is des, whatever the gender: des pommes. The noun takes -s too.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-gender.fem",
+   "topic": "french.g-gender",
+   "kind": "mcq",
+   "prompt": "Which of these nouns is **feminine**?",
+   "options": [
+    {
+     "text": "souris (mouse)",
+     "correct": true
+    },
+    {
+     "text": "fromage (cheese)",
+     "correct": false,
+     "feedback": "Le fromage is masculine."
+    },
+    {
+     "text": "problème (problem)",
+     "correct": false,
+     "feedback": "Le problème is masculine, even though it ends in -e."
+    }
+   ],
+   "explain": "La souris is feminine. Le fromage and le problème are two that catch people out."
+  },
+  {
+   "id": "french.g-gender.tmpl",
+   "topic": "french.g-gender",
+   "kind": "template",
+   "gen": "y8frgArticle",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-er.d1",
+   "topic": "french.g-er",
+   "kind": "mcq",
+   "prompt": "**Nous ___ au foot.** (jouer: to play)",
+   "options": [
+    {
+     "text": "jouons",
+     "correct": true
+    },
+    {
+     "text": "jouez",
+     "correct": false,
+     "feedback": "-ez goes with vous."
+    },
+    {
+     "text": "jouent",
+     "correct": false,
+     "feedback": "-ent goes with ils and elles."
+    }
+   ],
+   "explain": "Nous jouons au foot: stem jou- + -ons."
+  },
+  {
+   "id": "french.g-er.d2",
+   "topic": "french.g-er",
+   "kind": "mcq",
+   "prompt": "Which means **they watch the TV** (a group of boys)?",
+   "options": [
+    {
+     "text": "Ils regardent la télé.",
+     "correct": true
+    },
+    {
+     "text": "Ils regarde la télé.",
+     "correct": false,
+     "feedback": "Ils needs the -ent ending."
+    },
+    {
+     "text": "Ils regardez la télé.",
+     "correct": false,
+     "feedback": "-ez goes with vous."
+    }
+   ],
+   "explain": "Ils regardent la télé: regard- + -ent (the -ent is silent)."
+  },
+  {
+   "id": "french.g-er.manger",
+   "topic": "french.g-er",
+   "kind": "fact",
+   "prompt": "How do you say **we eat**?",
+   "answer": "nous mangeons",
+   "distractors": [
+    "nous mangons",
+    "nous mangez",
+    "nous mangent"
+   ],
+   "explain": "Nous mangeons: -ger verbs keep an e before -ons so the g stays soft. Also nous nageons, nous voyageons.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-er.commencer",
+   "topic": "french.g-er",
+   "kind": "fact",
+   "prompt": "How do you say **we start**?",
+   "answer": "nous commençons",
+   "distractors": [
+    "nous commencez",
+    "nous commencent",
+    "nous commencer"
+   ],
+   "explain": "Nous commençons: the c takes a cedilla (ç) before o so it still sounds like s.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-er.acheter",
+   "topic": "french.g-er",
+   "kind": "fact",
+   "prompt": "How do you say **I buy**?",
+   "answer": "j’achète",
+   "distractors": [
+    "je achète",
+    "j’achètes",
+    "j’acheter"
+   ],
+   "explain": "J’achète: acheter takes a grave accent (è) in the je, tu, il and ils forms, and je becomes j’ before a vowel.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-er.parler",
+   "topic": "french.g-er",
+   "kind": "fact",
+   "prompt": "How do you say **you speak French** (talking to one friend)?",
+   "answer": "tu parles français",
+   "distractors": [
+    "tu parle français",
+    "tu parlez français",
+    "tu parlent français"
+   ],
+   "explain": "Tu parles: the tu ending is -es. Languages have no capital letter in French.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-er.sound",
+   "topic": "french.g-er",
+   "kind": "mcq",
+   "prompt": "Which of these sounds **different** from the other three?",
+   "options": [
+    {
+     "text": "jouons",
+     "correct": true
+    },
+    {
+     "text": "joue",
+     "correct": false,
+     "feedback": "Joue, joues and jouent all sound exactly the same."
+    },
+    {
+     "text": "jouent",
+     "correct": false,
+     "feedback": "The -ent of jouent is silent: it sounds like joue."
+    },
+    {
+     "text": "joues",
+     "correct": false,
+     "feedback": "The -s of joues is silent: it sounds like joue."
+    }
+   ],
+   "explain": "Je joue, tu joues, il joue and ils jouent sound the same; only nous jouons and vous jouez sound different."
+  },
+  {
+   "id": "french.g-er.habitent",
+   "topic": "french.g-er",
+   "kind": "mcq",
+   "prompt": "What does **elles habitent** mean?",
+   "options": [
+    {
+     "text": "they live (a group of girls)",
+     "correct": true
+    },
+    {
+     "text": "she lives",
+     "correct": false,
+     "feedback": "That is elle habite: elles with an s is plural."
+    },
+    {
+     "text": "they lived",
+     "correct": false,
+     "feedback": "Habitent is the present tense."
+    }
+   ],
+   "explain": "Elles habitent: habiter (to live) + -ent, for a group of girls.",
+   "hear": "elles habitent"
+  },
+  {
+   "id": "french.g-er.jaime",
+   "topic": "french.g-er",
+   "kind": "mcq",
+   "prompt": "Why is it **j’aime** and not je aime?",
+   "options": [
+    {
+     "text": "Je becomes j’ before a vowel or a silent h",
+     "correct": true
+    },
+    {
+     "text": "Because aimer is an irregular verb",
+     "correct": false,
+     "feedback": "Aimer is a regular -er verb."
+    },
+    {
+     "text": "Because j’ is the plural of je",
+     "correct": false,
+     "feedback": "J’ is just je with its e dropped."
+    }
+   ],
+   "explain": "Je drops its e before a vowel or a silent h: j’aime, j’habite, j’écoute."
+  },
+  {
+   "id": "french.g-er.preferer",
+   "topic": "french.g-er",
+   "kind": "fact",
+   "prompt": "How do you say **she prefers**?",
+   "answer": "elle préfère",
+   "distractors": [
+    "elle préférer",
+    "elle préfères",
+    "elle préférent"
+   ],
+   "explain": "Elle préfère: the second é becomes è in the je, tu, il and ils forms. Nous préférons keeps é.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-er.joue",
+   "topic": "french.g-er",
+   "kind": "mcq",
+   "prompt": "In French, **je joue** can mean…",
+   "options": [
+    {
+     "text": "I play, or I am playing",
+     "correct": true
+    },
+    {
+     "text": "only I play",
+     "correct": false,
+     "feedback": "French has just one present tense, so it covers both."
+    },
+    {
+     "text": "I played",
+     "correct": false,
+     "feedback": "That would be the perfect tense: j’ai joué."
+    }
+   ],
+   "explain": "French has one present tense where English has two: je joue = I play or I am playing."
+  },
+  {
+   "id": "french.g-er.order",
+   "topic": "french.g-er",
+   "kind": "order",
+   "prompt": "Put the words in order: **We are listening to music.**",
+   "items": [
+    "Nous",
+    "écoutons",
+    "de la",
+    "musique."
+   ],
+   "labels": null,
+   "explain": "Nous écoutons de la musique: subject, verb, then “some music”."
+  },
+  {
+   "id": "french.g-er.tmpl",
+   "topic": "french.g-er",
+   "kind": "template",
+   "gen": "y8frgEr",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-ir-re.finir",
+   "topic": "french.g-ir-re",
+   "kind": "fact",
+   "prompt": "How do you say **we finish**?",
+   "answer": "nous finissons",
+   "distractors": [
+    "nous finons",
+    "nous finissez",
+    "nous finissent"
+   ],
+   "explain": "Nous finissons: fin- + -issons. The plural forms of -ir verbs all have -iss-.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-ir-re.vendre",
+   "topic": "french.g-ir-re",
+   "kind": "fact",
+   "prompt": "How do you say **he sells**?",
+   "answer": "il vend",
+   "distractors": [
+    "il vendt",
+    "il vends",
+    "il vendre"
+   ],
+   "explain": "Il vend: regular -re verbs add nothing for il and elle.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-ir-re.attendre",
+   "topic": "french.g-ir-re",
+   "kind": "mcq",
+   "prompt": "**Ils ___ le bus.** (attendre: to wait for)",
+   "options": [
+    {
+     "text": "attendent",
+     "correct": true
+    },
+    {
+     "text": "attendont",
+     "correct": false,
+     "feedback": "The ils ending is -ent."
+    },
+    {
+     "text": "attendrent",
+     "correct": false,
+     "feedback": "Take off -re first: attend- + -ent."
+    }
+   ],
+   "explain": "Ils attendent le bus: attend- + -ent. Attendre means “to wait for”, so no word for “for” is needed."
+  },
+  {
+   "id": "french.g-ir-re.pattern",
+   "topic": "french.g-ir-re",
+   "kind": "mcq",
+   "prompt": "Which verb follows the same pattern as **finir**?",
+   "options": [
+    {
+     "text": "choisir: je choisis, nous choisissons",
+     "correct": true
+    },
+    {
+     "text": "sortir: je sors, nous sortons",
+     "correct": false,
+     "feedback": "Sortir is irregular: no -iss-."
+    },
+    {
+     "text": "venir: je viens, nous venons",
+     "correct": false,
+     "feedback": "Venir is irregular."
+    }
+   ],
+   "explain": "Choisir, remplir, réussir, grandir and obéir all follow finir."
+  },
+  {
+   "id": "french.g-ir-re.repondre",
+   "topic": "french.g-ir-re",
+   "kind": "fact",
+   "prompt": "What does **je réponds** mean?",
+   "answer": "I answer",
+   "distractors": [
+    "I answered",
+    "he answers",
+    "we answer"
+   ],
+   "explain": "Je réponds: répondre (to answer, to reply), with -s for je.",
+   "accept": [
+    "I reply",
+    "I respond",
+    "I am answering",
+    "I am replying",
+    "I’m answering",
+    "I’m replying",
+    "answer"
+   ],
+   "hear": "je réponds"
+  },
+  {
+   "id": "french.g-ir-re.perdre",
+   "topic": "french.g-ir-re",
+   "kind": "mcq",
+   "prompt": "**Tu ___ toujours tes clés !** (perdre: to lose)",
+   "options": [
+    {
+     "text": "perds",
+     "correct": true
+    },
+    {
+     "text": "perd",
+     "correct": false,
+     "feedback": "Perd is the il and elle form."
+    },
+    {
+     "text": "perdez",
+     "correct": false,
+     "feedback": "Perdez goes with vous."
+    }
+   ],
+   "explain": "Tu perds: perd- + -s."
+  },
+  {
+   "id": "french.g-ir-re.choisir",
+   "topic": "french.g-ir-re",
+   "kind": "fact",
+   "prompt": "How do you say **they choose** (a group of girls)?",
+   "answer": "elles choisissent",
+   "distractors": [
+    "elles choisent",
+    "elles choisissez",
+    "elles choisis"
+   ],
+   "explain": "Elles choisissent: chois- + -issent.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-ir-re.attendons",
+   "topic": "french.g-ir-re",
+   "kind": "mcq",
+   "prompt": "What does **nous attendons le train** mean?",
+   "options": [
+    {
+     "text": "We are waiting for the train.",
+     "correct": true
+    },
+    {
+     "text": "We can hear the train.",
+     "correct": false,
+     "feedback": "To hear is entendre: nous entendons."
+    },
+    {
+     "text": "We are taking the train.",
+     "correct": false,
+     "feedback": "To take is prendre: nous prenons."
+    }
+   ],
+   "explain": "Attendre = to wait for. A false friend: it does not mean “to attend”.",
+   "hear": "nous attendons le train"
+  },
+  {
+   "id": "french.g-ir-re.false",
+   "topic": "french.g-ir-re",
+   "kind": "mcq",
+   "prompt": "**Attendre** is a false friend. What does it mean?",
+   "options": [
+    {
+     "text": "to wait (for)",
+     "correct": true
+    },
+    {
+     "text": "to attend",
+     "correct": false,
+     "feedback": "To attend a school is fréquenter or aller à."
+    },
+    {
+     "text": "to listen",
+     "correct": false,
+     "feedback": "To listen is écouter."
+    }
+   ],
+   "explain": "Attendre = to wait for: j’attends le bus."
+  },
+  {
+   "id": "french.g-ir-re.entendre",
+   "topic": "french.g-ir-re",
+   "kind": "fact",
+   "prompt": "How do you say **you hear** (talking to a group)?",
+   "answer": "vous entendez",
+   "distractors": [
+    "vous entendons",
+    "vous entendent",
+    "vous entends"
+   ],
+   "explain": "Vous entendez: entend- + -ez.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-ir-re.grandir",
+   "topic": "french.g-ir-re",
+   "kind": "mcq",
+   "prompt": "Which is the **il** form of **grandir** (to grow up)?",
+   "options": [
+    {
+     "text": "il grandit",
+     "correct": true
+    },
+    {
+     "text": "il grandis",
+     "correct": false,
+     "feedback": "-is goes with je and tu."
+    },
+    {
+     "text": "il grandi",
+     "correct": false,
+     "feedback": "Grandi is the past participle (il a grandi)."
+    }
+   ],
+   "explain": "Il grandit: grand- + -it."
+  },
+  {
+   "id": "french.g-ir-re.tmpl",
+   "topic": "french.g-ir-re",
+   "kind": "template",
+   "gen": "y8frgIrRe",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-irregular.d1",
+   "topic": "french.g-irregular",
+   "kind": "mcq",
+   "prompt": "Which means **I am twelve**?",
+   "options": [
+    {
+     "text": "J’ai douze ans.",
+     "correct": true
+    },
+    {
+     "text": "Je suis douze ans.",
+     "correct": false,
+     "feedback": "French uses avoir for age: j’ai… ans."
+    },
+    {
+     "text": "Je suis douze.",
+     "correct": false,
+     "feedback": "French uses avoir for age: j’ai douze ans."
+    }
+   ],
+   "explain": "J’ai douze ans: word for word, “I have twelve years”."
+  },
+  {
+   "id": "french.g-irregular.d2",
+   "topic": "french.g-irregular",
+   "kind": "mcq",
+   "prompt": "**Nous ___ au cinéma.** (aller: to go)",
+   "options": [
+    {
+     "text": "allons",
+     "correct": true
+    },
+    {
+     "text": "allez",
+     "correct": false,
+     "feedback": "Allez goes with vous."
+    },
+    {
+     "text": "vont",
+     "correct": false,
+     "feedback": "Vont goes with ils and elles."
+    }
+   ],
+   "explain": "Aller: je vais, tu vas, il va, nous allons, vous allez, ils vont."
+  },
+  {
+   "id": "french.g-irregular.sont",
+   "topic": "french.g-irregular",
+   "kind": "fact",
+   "prompt": "How do you say **they are** (a group of boys)?",
+   "answer": "ils sont",
+   "distractors": [
+    "ils ont",
+    "ils sommes",
+    "ils est"
+   ],
+   "explain": "Ils sont = they are (être). Ils ont = they have (avoir).",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-irregular.faites",
+   "topic": "french.g-irregular",
+   "kind": "fact",
+   "prompt": "How do you say **you do** (talking to a group)?",
+   "answer": "vous faites",
+   "distractors": [
+    "vous faisez",
+    "vous fait",
+    "vous faisons"
+   ],
+   "explain": "Vous faites: one of only three vous forms that do not end in -ez (vous êtes, vous faites, vous dites).",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-irregular.avons",
+   "topic": "french.g-irregular",
+   "kind": "fact",
+   "prompt": "How do you say **we have**?",
+   "answer": "nous avons",
+   "distractors": [
+    "nous sommes",
+    "nous avez",
+    "nous ont"
+   ],
+   "explain": "Avoir: j’ai, tu as, il a, nous avons, vous avez, ils ont.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-irregular.vont",
+   "topic": "french.g-irregular",
+   "kind": "fact",
+   "prompt": "How do you say **they go** (a group of girls)?",
+   "answer": "elles vont",
+   "distractors": [
+    "elles allent",
+    "elles vas",
+    "elles font"
+   ],
+   "explain": "Elles vont: aller is irregular. Elles font means “they do”.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-irregular.faim",
+   "topic": "french.g-irregular",
+   "kind": "mcq",
+   "prompt": "Which means **I am hungry**?",
+   "options": [
+    {
+     "text": "J’ai faim.",
+     "correct": true
+    },
+    {
+     "text": "Je suis faim.",
+     "correct": false,
+     "feedback": "French uses avoir: j’ai faim, j’ai soif, j’ai froid."
+    },
+    {
+     "text": "Je fais faim.",
+     "correct": false,
+     "feedback": "French uses avoir: j’ai faim."
+    }
+   ],
+   "explain": "J’ai faim = I am hungry (“I have hunger”). Also j’ai soif (thirsty), j’ai chaud (hot), j’ai froid (cold)."
+  },
+  {
+   "id": "french.g-irregular.beau",
+   "topic": "french.g-irregular",
+   "kind": "mcq",
+   "prompt": "What does **il fait beau** mean?",
+   "options": [
+    {
+     "text": "The weather is nice.",
+     "correct": true
+    },
+    {
+     "text": "He is good-looking.",
+     "correct": false,
+     "feedback": "He is good-looking would be il est beau."
+    },
+    {
+     "text": "He makes nice things.",
+     "correct": false,
+     "feedback": "Il fait is used for the weather: il fait beau, il fait froid."
+    }
+   ],
+   "explain": "Il fait + adjective describes the weather: il fait beau, il fait chaud, il fait froid.",
+   "hear": "il fait beau"
+  },
+  {
+   "id": "french.g-irregular.velo",
+   "topic": "french.g-irregular",
+   "kind": "mcq",
+   "prompt": "What does **je fais du vélo** mean?",
+   "options": [
+    {
+     "text": "I go cycling.",
+     "correct": true
+    },
+    {
+     "text": "I am making a bike.",
+     "correct": false,
+     "feedback": "Faire du… is used for sports and activities."
+    },
+    {
+     "text": "I am fixing my bike.",
+     "correct": false,
+     "feedback": "Faire du vélo = to go cycling."
+    }
+   ],
+   "explain": "Faire du / de la + activity: je fais du vélo, je fais de la natation.",
+   "hear": "je fais du vélo"
+  },
+  {
+   "id": "french.g-irregular.es",
+   "topic": "french.g-irregular",
+   "kind": "fact",
+   "prompt": "How do you say **you are** (talking to one friend)?",
+   "answer": "tu es",
+   "distractors": [
+    "tu est",
+    "tu as",
+    "tu êtes"
+   ],
+   "explain": "Être: je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-irregular.espagne",
+   "topic": "french.g-irregular",
+   "kind": "mcq",
+   "prompt": "Which means **my parents are going to Spain**?",
+   "options": [
+    {
+     "text": "Mes parents vont en Espagne.",
+     "correct": true
+    },
+    {
+     "text": "Mes parents vas en Espagne.",
+     "correct": false,
+     "feedback": "Vas goes with tu; mes parents are “they”: vont."
+    },
+    {
+     "text": "Mes parents sont en Espagne.",
+     "correct": false,
+     "feedback": "Sont en Espagne means they are in Spain. “Are going” is vont."
+    }
+   ],
+   "explain": "Mes parents = they, so aller → vont."
+  },
+  {
+   "id": "french.g-irregular.froid",
+   "topic": "french.g-irregular",
+   "kind": "mcq",
+   "prompt": "What does **elle a froid** mean?",
+   "options": [
+    {
+     "text": "She is cold.",
+     "correct": true
+    },
+    {
+     "text": "She has a cold.",
+     "correct": false,
+     "feedback": "A cold (the illness) is un rhume."
+    },
+    {
+     "text": "She is cool.",
+     "correct": false,
+     "feedback": "Avoir froid is about feeling cold."
+    }
+   ],
+   "explain": "Avoir froid = to be cold (to feel cold).",
+   "hear": "elle a froid"
+  },
+  {
+   "id": "french.g-irregular.tmpl",
+   "topic": "french.g-irregular",
+   "kind": "template",
+   "gen": "y8frgIrregular",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-negatives.d1",
+   "topic": "french.g-negatives",
+   "kind": "mcq",
+   "prompt": "Which means **I don’t like maths**?",
+   "options": [
+    {
+     "text": "Je n’aime pas les maths.",
+     "correct": true
+    },
+    {
+     "text": "Je ne aime pas les maths.",
+     "correct": false,
+     "feedback": "Ne becomes n’ before a vowel."
+    },
+    {
+     "text": "Je n’aime les maths pas.",
+     "correct": false,
+     "feedback": "Pas comes straight after the verb."
+    }
+   ],
+   "explain": "Ne… pas goes round the verb, and ne becomes n’ before a vowel: je n’aime pas."
+  },
+  {
+   "id": "french.g-negatives.d2",
+   "topic": "french.g-negatives",
+   "kind": "mcq",
+   "prompt": "Which means **I don’t have a brother**?",
+   "options": [
+    {
+     "text": "Je n’ai pas de frère.",
+     "correct": true
+    },
+    {
+     "text": "Je n’ai pas un frère.",
+     "correct": false,
+     "feedback": "After a negative, un becomes de."
+    },
+    {
+     "text": "Je ne pas ai de frère.",
+     "correct": false,
+     "feedback": "Ne… pas goes round the verb: je n’ai pas."
+    }
+   ],
+   "explain": "After a negative, un, une, du, de la and des become de: je n’ai pas de frère."
+  },
+  {
+   "id": "french.g-negatives.jamais",
+   "topic": "french.g-negatives",
+   "kind": "fact",
+   "prompt": "What does **ne… jamais** mean?",
+   "answer": "never",
+   "distractors": [
+    "not any more",
+    "nothing",
+    "nobody"
+   ],
+   "explain": "Ne… jamais = never: je ne mange jamais de viande.",
+   "accept": [
+    "not ever"
+   ]
+  },
+  {
+   "id": "french.g-negatives.plus",
+   "topic": "french.g-negatives",
+   "kind": "fact",
+   "prompt": "What does **ne… plus** mean?",
+   "answer": "no longer",
+   "distractors": [
+    "never",
+    "nothing",
+    "not yet"
+   ],
+   "explain": "Ne… plus = no longer, not any more: je n’habite plus à Paris.",
+   "accept": [
+    "not any more",
+    "not anymore",
+    "any more",
+    "anymore",
+    "no more"
+   ]
+  },
+  {
+   "id": "french.g-negatives.rien",
+   "topic": "french.g-negatives",
+   "kind": "fact",
+   "prompt": "What does **ne… rien** mean?",
+   "answer": "nothing",
+   "distractors": [
+    "never",
+    "nobody",
+    "no longer"
+   ],
+   "explain": "Ne… rien = nothing, not anything: je ne fais rien.",
+   "accept": [
+    "not anything",
+    "anything"
+   ]
+  },
+  {
+   "id": "french.g-negatives.viande",
+   "topic": "french.g-negatives",
+   "kind": "fact",
+   "prompt": "How do you say **I never eat meat**?",
+   "answer": "je ne mange jamais de viande",
+   "distractors": [
+    "je ne mange pas de viande",
+    "je ne mange jamais de la viande",
+    "je ne jamais mange de viande"
+   ],
+   "explain": "Ne… jamais goes round the verb, and after a negative de la becomes de.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-negatives.rien2",
+   "topic": "french.g-negatives",
+   "kind": "mcq",
+   "prompt": "What does **Il ne fait rien.** mean?",
+   "options": [
+    {
+     "text": "He isn’t doing anything.",
+     "correct": true
+    },
+    {
+     "text": "He never does it.",
+     "correct": false,
+     "feedback": "Never is ne… jamais."
+    },
+    {
+     "text": "He doesn’t do it any more.",
+     "correct": false,
+     "feedback": "Not any more is ne… plus."
+    }
+   ],
+   "explain": "Ne… rien = nothing: il ne fait rien.",
+   "hear": "Il ne fait rien."
+  },
+  {
+   "id": "french.g-negatives.future",
+   "topic": "french.g-negatives",
+   "kind": "mcq",
+   "prompt": "Make **Je vais jouer.** negative.",
+   "options": [
+    {
+     "text": "Je ne vais pas jouer.",
+     "correct": true
+    },
+    {
+     "text": "Je ne vais jouer pas.",
+     "correct": false,
+     "feedback": "Pas comes straight after the conjugated verb, vais."
+    },
+    {
+     "text": "Je vais jouer pas.",
+     "correct": false,
+     "feedback": "Ne… pas goes round vais."
+    }
+   ],
+   "explain": "In the near future, ne… pas goes round aller: je ne vais pas jouer."
+  },
+  {
+   "id": "french.g-negatives.faim",
+   "topic": "french.g-negatives",
+   "kind": "mcq",
+   "prompt": "What does **Je n’ai plus faim.** mean?",
+   "options": [
+    {
+     "text": "I’m not hungry any more.",
+     "correct": true
+    },
+    {
+     "text": "I’m never hungry.",
+     "correct": false,
+     "feedback": "Never would be ne… jamais."
+    },
+    {
+     "text": "I’m not very hungry.",
+     "correct": false,
+     "feedback": "Ne… plus means no longer, not any more."
+    }
+   ],
+   "explain": "Ne… plus = not any more: je n’ai plus faim.",
+   "hear": "Je n’ai plus faim."
+  },
+  {
+   "id": "french.g-negatives.order",
+   "topic": "french.g-negatives",
+   "kind": "order",
+   "prompt": "Put the words in order: **She never goes to the cinema.**",
+   "items": [
+    "Elle",
+    "ne",
+    "va",
+    "jamais",
+    "au cinéma."
+   ],
+   "labels": null,
+   "explain": "Elle ne va jamais au cinéma: ne before the verb, jamais after it."
+  },
+  {
+   "id": "french.g-negatives.chien",
+   "topic": "french.g-negatives",
+   "kind": "fact",
+   "prompt": "How do you say **we don’t have a dog**?",
+   "answer": "nous n’avons pas de chien",
+   "distractors": [
+    "nous n’avons pas un chien",
+    "nous ne avons pas de chien",
+    "nous n’avons de chien pas"
+   ],
+   "explain": "Nous n’avons pas de chien: n’ before the vowel, and un becomes de after the negative.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-negatives.tmpl",
+   "topic": "french.g-negatives",
+   "kind": "template",
+   "gen": "y8frgNegative",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-adjectives.d1",
+   "topic": "french.g-adjectives",
+   "kind": "mcq",
+   "prompt": "Which means **my sister is small**?",
+   "options": [
+    {
+     "text": "Ma sœur est petite.",
+     "correct": true
+    },
+    {
+     "text": "Ma sœur est petit.",
+     "correct": false,
+     "feedback": "Sœur is feminine, so petit adds -e."
+    },
+    {
+     "text": "Ma sœur est petits.",
+     "correct": false,
+     "feedback": "One sister: singular, feminine: petite."
+    }
+   ],
+   "explain": "The adjective agrees with ma sœur (feminine singular): petite."
+  },
+  {
+   "id": "french.g-adjectives.d2",
+   "topic": "french.g-adjectives",
+   "kind": "mcq",
+   "prompt": "Which is right for **a red car**?",
+   "options": [
+    {
+     "text": "une voiture rouge",
+     "correct": true
+    },
+    {
+     "text": "une rouge voiture",
+     "correct": false,
+     "feedback": "Colours go after the noun."
+    },
+    {
+     "text": "une voiture rouges",
+     "correct": false,
+     "feedback": "One car: singular, rouge. It already ends in -e, so no extra e."
+    }
+   ],
+   "explain": "Colours go after the noun, and rouge already ends in -e, so the feminine is the same."
+  },
+  {
+   "id": "french.g-adjectives.blanche",
+   "topic": "french.g-adjectives",
+   "kind": "fact",
+   "prompt": "What is the feminine of **blanc** (white)?",
+   "answer": "blanche",
+   "distractors": [
+    "blance",
+    "blanque",
+    "blancs"
+   ],
+   "explain": "Blanc → blanche: une chemise blanche.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-adjectives.heureuse",
+   "topic": "french.g-adjectives",
+   "kind": "fact",
+   "prompt": "What is the feminine of **heureux** (happy)?",
+   "answer": "heureuse",
+   "distractors": [
+    "heureuxe",
+    "heureuxs",
+    "heureuses"
+   ],
+   "explain": "-eux → -euse: heureux, heureuse. Also sérieux → sérieuse, paresseux → paresseuse.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-adjectives.sportive",
+   "topic": "french.g-adjectives",
+   "kind": "fact",
+   "prompt": "What is the feminine of **sportif** (sporty)?",
+   "answer": "sportive",
+   "distractors": [
+    "sportife",
+    "sportiffe",
+    "sportifs"
+   ],
+   "explain": "-if → -ive: sportif, sportive. Also créatif → créative.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-adjectives.belle",
+   "topic": "french.g-adjectives",
+   "kind": "fact",
+   "prompt": "What is the feminine of **beau** (beautiful)?",
+   "answer": "belle",
+   "distractors": [
+    "beaue",
+    "bele",
+    "beaux"
+   ],
+   "explain": "Beau → belle (and the plurals beaux, belles): une belle maison.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-adjectives.petite",
+   "topic": "french.g-adjectives",
+   "kind": "mcq",
+   "prompt": "How do you say **a small house**?",
+   "options": [
+    {
+     "text": "une petite maison",
+     "correct": true
+    },
+    {
+     "text": "une maison petite",
+     "correct": false,
+     "feedback": "Petit is a BAGS adjective (size): it goes before the noun."
+    },
+    {
+     "text": "une petit maison",
+     "correct": false,
+     "feedback": "Maison is feminine: petite."
+    }
+   ],
+   "explain": "Petit is a size word, so it goes before the noun, and it agrees: une petite maison."
+  },
+  {
+   "id": "french.g-adjectives.marron",
+   "topic": "french.g-adjectives",
+   "kind": "mcq",
+   "prompt": "How do you say **brown eyes**?",
+   "options": [
+    {
+     "text": "des yeux marron",
+     "correct": true
+    },
+    {
+     "text": "des yeux marrons",
+     "correct": false,
+     "feedback": "Marron never changes, even in the plural."
+    },
+    {
+     "text": "des marron yeux",
+     "correct": false,
+     "feedback": "Colours go after the noun."
+    }
+   ],
+   "explain": "Marron (and orange) never change: des yeux marron, des chaussures orange."
+  },
+  {
+   "id": "french.g-adjectives.before",
+   "topic": "french.g-adjectives",
+   "kind": "mcq",
+   "prompt": "Which adjective normally goes **before** the noun?",
+   "options": [
+    {
+     "text": "grand (big, tall)",
+     "correct": true
+    },
+    {
+     "text": "rouge (red)",
+     "correct": false,
+     "feedback": "Colours go after the noun."
+    },
+    {
+     "text": "intelligent",
+     "correct": false,
+     "feedback": "Most adjectives, like intelligent, go after the noun."
+    }
+   ],
+   "explain": "BAGS: beauty, age, goodness, size. Grand is a size word: un grand jardin."
+  },
+  {
+   "id": "french.g-adjectives.grands",
+   "topic": "french.g-adjectives",
+   "kind": "fact",
+   "prompt": "How do you say **my brothers are tall**?",
+   "answer": "mes frères sont grands",
+   "distractors": [
+    "mes frères sont grandes",
+    "mes frères sont grand",
+    "mes frères est grands"
+   ],
+   "explain": "Mes frères is masculine plural, so grand adds -s: grands.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-adjectives.filles",
+   "topic": "french.g-adjectives",
+   "kind": "mcq",
+   "prompt": "**Les filles sont ___.** (intelligent)",
+   "options": [
+    {
+     "text": "intelligentes",
+     "correct": true
+    },
+    {
+     "text": "intelligents",
+     "correct": false,
+     "feedback": "Les filles are feminine: -es."
+    },
+    {
+     "text": "intelligente",
+     "correct": false,
+     "feedback": "Les filles are plural: -es."
+    }
+   ],
+   "explain": "Feminine plural: add -es. Les filles sont intelligentes."
+  },
+  {
+   "id": "french.g-adjectives.timide",
+   "topic": "french.g-adjectives",
+   "kind": "mcq",
+   "prompt": "Which adjective does **not** add an -e in the feminine?",
+   "options": [
+    {
+     "text": "timide (shy)",
+     "correct": true
+    },
+    {
+     "text": "petit (small)",
+     "correct": false,
+     "feedback": "Petit → petite."
+    },
+    {
+     "text": "bavard (chatty)",
+     "correct": false,
+     "feedback": "Bavard → bavarde."
+    }
+   ],
+   "explain": "Adjectives that already end in -e stay the same: timide, rouge, jaune, drôle."
+  },
+  {
+   "id": "french.g-adjectives.tmpl",
+   "topic": "french.g-adjectives",
+   "kind": "template",
+   "gen": "y8frgAdjective",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-possessives.d1",
+   "topic": "french.g-possessives",
+   "kind": "mcq",
+   "prompt": "How do you say **my mother**?",
+   "options": [
+    {
+     "text": "ma mère",
+     "correct": true
+    },
+    {
+     "text": "mon mère",
+     "correct": false,
+     "feedback": "Mère is feminine: ma."
+    },
+    {
+     "text": "mes mère",
+     "correct": false,
+     "feedback": "Mes is for plurals: mes parents."
+    }
+   ],
+   "explain": "Ma before a feminine noun: ma mère, ma sœur."
+  },
+  {
+   "id": "french.g-possessives.d2",
+   "topic": "french.g-possessives",
+   "kind": "mcq",
+   "prompt": "How do you say **my parents**?",
+   "options": [
+    {
+     "text": "mes parents",
+     "correct": true
+    },
+    {
+     "text": "mon parents",
+     "correct": false,
+     "feedback": "Parents is plural: mes."
+    },
+    {
+     "text": "ma parents",
+     "correct": false,
+     "feedback": "Parents is plural: mes."
+    }
+   ],
+   "explain": "Mes before any plural noun: mes parents, mes amis."
+  },
+  {
+   "id": "french.g-possessives.his",
+   "topic": "french.g-possessives",
+   "kind": "mcq",
+   "prompt": "How do you say **his sister**?",
+   "options": [
+    {
+     "text": "sa sœur",
+     "correct": true
+    },
+    {
+     "text": "son sœur",
+     "correct": false,
+     "feedback": "Sœur is feminine, so sa: it agrees with the sister, not with him."
+    },
+    {
+     "text": "ses sœur",
+     "correct": false,
+     "feedback": "Ses is for plurals: ses sœurs."
+    }
+   ],
+   "explain": "Son, sa and ses agree with the thing owned: sœur is feminine, so sa sœur, for his sister or her sister."
+  },
+  {
+   "id": "french.g-possessives.her",
+   "topic": "french.g-possessives",
+   "kind": "mcq",
+   "prompt": "How do you say **her brother**?",
+   "options": [
+    {
+     "text": "son frère",
+     "correct": true
+    },
+    {
+     "text": "sa frère",
+     "correct": false,
+     "feedback": "Frère is masculine, so son: it agrees with the brother, not with her."
+    },
+    {
+     "text": "ses frère",
+     "correct": false,
+     "feedback": "Ses is for plurals: ses frères."
+    }
+   ],
+   "explain": "Son frère = his brother or her brother: frère is masculine."
+  },
+  {
+   "id": "french.g-possessives.amie",
+   "topic": "french.g-possessives",
+   "kind": "mcq",
+   "prompt": "Why is it **mon amie** and not ma amie?",
+   "options": [
+    {
+     "text": "Amie starts with a vowel, so ma becomes mon",
+     "correct": true
+    },
+    {
+     "text": "Because amie is a masculine noun",
+     "correct": false,
+     "feedback": "Amie (a female friend) is feminine."
+    },
+    {
+     "text": "Because mon is used for all friends",
+     "correct": false,
+     "feedback": "Mon ami, mon amie, but mes amis."
+    }
+   ],
+   "explain": "Before a feminine noun starting with a vowel or a silent h, ma, ta and sa become mon, ton and son: mon amie, ton école, son histoire."
+  },
+  {
+   "id": "french.g-possessives.notre",
+   "topic": "french.g-possessives",
+   "kind": "fact",
+   "prompt": "How do you say **our house**?",
+   "answer": "notre maison",
+   "distractors": [
+    "nos maison",
+    "notres maison",
+    "notre maisons"
+   ],
+   "explain": "Notre for one thing (masculine or feminine), nos for more than one.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-possessives.leurs",
+   "topic": "french.g-possessives",
+   "kind": "fact",
+   "prompt": "How do you say **their parents**?",
+   "answer": "leurs parents",
+   "distractors": [
+    "leur parents",
+    "leurs parent",
+    "leures parents"
+   ],
+   "explain": "Leur for one thing, leurs for more than one: leurs parents.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-possessives.ton",
+   "topic": "french.g-possessives",
+   "kind": "fact",
+   "prompt": "How do you say **your dog** (talking to one friend)?",
+   "answer": "ton chien",
+   "distractors": [
+    "ta chien",
+    "tes chien",
+    "ton chiens"
+   ],
+   "explain": "Ton before a masculine noun: ton chien.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-possessives.vos",
+   "topic": "french.g-possessives",
+   "kind": "fact",
+   "prompt": "How do you say **your books** (talking to a group)?",
+   "answer": "vos livres",
+   "distractors": [
+    "votre livres",
+    "vos livre",
+    "votres livres"
+   ],
+   "explain": "Votre for one thing, vos for more than one: vos livres.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-possessives.chat",
+   "topic": "french.g-possessives",
+   "kind": "mcq",
+   "prompt": "**Léa aime son chat.** Why son, when Léa is a girl?",
+   "options": [
+    {
+     "text": "Son agrees with chat, which is masculine",
+     "correct": true
+    },
+    {
+     "text": "Son always means “her”",
+     "correct": false,
+     "feedback": "Son can mean his or her."
+    },
+    {
+     "text": "It is a mistake: it should be sa chat",
+     "correct": false,
+     "feedback": "Chat is masculine, so son is right."
+    }
+   ],
+   "explain": "The owner makes no difference: son chat is his cat or her cat."
+  },
+  {
+   "id": "french.g-possessives.leur",
+   "topic": "french.g-possessives",
+   "kind": "mcq",
+   "prompt": "Which means **their house**?",
+   "options": [
+    {
+     "text": "leur maison",
+     "correct": true
+    },
+    {
+     "text": "leurs maison",
+     "correct": false,
+     "feedback": "One house: leur."
+    },
+    {
+     "text": "sa maison",
+     "correct": false,
+     "feedback": "Sa maison is his or her house."
+    }
+   ],
+   "explain": "Leur maison: one house, so leur without -s."
+  },
+  {
+   "id": "french.g-possessives.tmpl",
+   "topic": "french.g-possessives",
+   "kind": "template",
+   "gen": "y8frgPossessive",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-questions.d1",
+   "topic": "french.g-questions",
+   "kind": "fact",
+   "prompt": "What does **où** mean?",
+   "answer": "where",
+   "distractors": [
+    "when",
+    "who",
+    "why"
+   ],
+   "explain": "Où = where: Où habites-tu ? Without the accent, ou means “or”.",
+   "hear": "où"
+  },
+  {
+   "id": "french.g-questions.d2",
+   "topic": "french.g-questions",
+   "kind": "fact",
+   "prompt": "What does **pourquoi** mean?",
+   "answer": "why",
+   "distractors": [
+    "when",
+    "how",
+    "because"
+   ],
+   "explain": "Pourquoi = why. The answer usually starts with parce que (because).",
+   "hear": "pourquoi"
+  },
+  {
+   "id": "french.g-questions.quand",
+   "topic": "french.g-questions",
+   "kind": "fact",
+   "prompt": "What does **quand** mean?",
+   "answer": "when",
+   "distractors": [
+    "where",
+    "how much",
+    "who"
+   ],
+   "explain": "Quand = when: Quand est ton anniversaire ?",
+   "hear": "quand"
+  },
+  {
+   "id": "french.g-questions.combien",
+   "topic": "french.g-questions",
+   "kind": "fact",
+   "prompt": "What does **combien** mean?",
+   "answer": "how much or how many",
+   "distractors": [
+    "how",
+    "when",
+    "which"
+   ],
+   "explain": "Combien = how much, how many: C’est combien ? Combien de frères as-tu ?",
+   "accept": [
+    "how much",
+    "how many",
+    "how many or how much"
+   ],
+   "hear": "combien"
+  },
+  {
+   "id": "french.g-questions.comment",
+   "topic": "french.g-questions",
+   "kind": "fact",
+   "prompt": "What does **comment** mean in a question?",
+   "answer": "how",
+   "distractors": [
+    "why",
+    "who",
+    "where"
+   ],
+   "explain": "Comment = how: Comment vas-tu ? Comment t’appelles-tu ? (What is your name, word for word “how do you call yourself?”)",
+   "accept": [
+    "what"
+   ],
+   "hear": "comment"
+  },
+  {
+   "id": "french.g-questions.qui",
+   "topic": "french.g-questions",
+   "kind": "fact",
+   "prompt": "What does **qui** mean?",
+   "answer": "who",
+   "distractors": [
+    "what",
+    "which",
+    "where"
+   ],
+   "explain": "Qui = who: Qui est-ce ?",
+   "hear": "qui"
+  },
+  {
+   "id": "french.g-questions.estceque",
+   "topic": "french.g-questions",
+   "kind": "mcq",
+   "prompt": "Which turns **Tu aimes le sport.** into a question with est-ce que?",
+   "options": [
+    {
+     "text": "Est-ce que tu aimes le sport ?",
+     "correct": true
+    },
+    {
+     "text": "Tu est-ce que aimes le sport ?",
+     "correct": false,
+     "feedback": "Est-ce que goes at the very front."
+    },
+    {
+     "text": "Est-ce tu aimes le sport ?",
+     "correct": false,
+     "feedback": "You need all three words: est-ce que."
+    }
+   ],
+   "explain": "Put est-ce que in front of the sentence; nothing else changes."
+  },
+  {
+   "id": "french.g-questions.invert",
+   "topic": "french.g-questions",
+   "kind": "mcq",
+   "prompt": "Which is the inversion question for **Tu parles anglais.**?",
+   "options": [
+    {
+     "text": "Parles-tu anglais ?",
+     "correct": true
+    },
+    {
+     "text": "Tu-parles anglais ?",
+     "correct": false,
+     "feedback": "Swap the verb and pronoun: parles-tu."
+    },
+    {
+     "text": "Parles tu-anglais ?",
+     "correct": false,
+     "feedback": "The hyphen joins the verb and the pronoun: parles-tu."
+    }
+   ],
+   "explain": "Inversion: swap the verb and the pronoun and join them with a hyphen: parles-tu ?"
+  },
+  {
+   "id": "french.g-questions.t",
+   "topic": "french.g-questions",
+   "kind": "mcq",
+   "prompt": "Make **Il joue au foot.** into an inversion question.",
+   "options": [
+    {
+     "text": "Joue-t-il au foot ?",
+     "correct": true
+    },
+    {
+     "text": "Joue-il au foot ?",
+     "correct": false,
+     "feedback": "When the verb ends in a vowel, add -t- before il or elle."
+    },
+    {
+     "text": "Il-joue au foot ?",
+     "correct": false,
+     "feedback": "Swap the verb and the pronoun: joue-t-il."
+    }
+   ],
+   "explain": "Between two vowels French adds -t- to make it easier to say: joue-t-il ? a-t-elle ?"
+  },
+  {
+   "id": "french.g-questions.weekend",
+   "topic": "french.g-questions",
+   "kind": "fact",
+   "prompt": "How do you say **What do you do at the weekend?** (to a friend)",
+   "answer": "Qu’est-ce que tu fais le week-end ?",
+   "distractors": [
+    "Qu’est-ce que tu fait le week-end ?",
+    "Est-ce que tu fais le week-end ?",
+    "Qu’est-ce tu fais le week-end ?"
+   ],
+   "explain": "Qu’est-ce que = what (as the object). Tu fais: faire for tu.",
+   "lang": "fr",
+   "accept": [
+    "Qu’est-ce que tu fais le weekend ?",
+    "Que fais-tu le week-end ?",
+    "Que fais-tu le weekend ?",
+    "Tu fais quoi le week-end ?",
+    "Tu fais quoi le weekend ?"
+   ]
+  },
+  {
+   "id": "french.g-questions.age",
+   "topic": "french.g-questions",
+   "kind": "mcq",
+   "prompt": "What does **Tu as quel âge ?** mean?",
+   "options": [
+    {
+     "text": "How old are you?",
+     "correct": true
+    },
+    {
+     "text": "What is your name?",
+     "correct": false,
+     "feedback": "That is Comment t’appelles-tu ?"
+    },
+    {
+     "text": "Where do you live?",
+     "correct": false,
+     "feedback": "That is Où habites-tu ?"
+    }
+   ],
+   "explain": "Tu as quel âge ? Word for word: “You have which age?” Answer: J’ai douze ans.",
+   "hear": "Tu as quel âge ?"
+  },
+  {
+   "id": "french.g-questions.habites",
+   "topic": "french.g-questions",
+   "kind": "fact",
+   "prompt": "How do you say **Where do you live?** (to a friend)",
+   "answer": "Où habites-tu ?",
+   "distractors": [
+    "Où tu habites-tu ?",
+    "Où est-ce tu habites ?",
+    "Quand habites-tu ?"
+   ],
+   "explain": "Où + inversion: Où habites-tu ? Or: Où est-ce que tu habites ? Or, chatting: Tu habites où ?",
+   "lang": "fr",
+   "accept": [
+    "Où est-ce que tu habites ?",
+    "Tu habites où ?",
+    "Où tu habites ?"
+   ]
+  },
+  {
+   "id": "french.g-partitive.eau",
+   "topic": "french.g-partitive",
+   "kind": "mcq",
+   "prompt": "**Je voudrais ___ eau, s’il vous plaît.**",
+   "options": [
+    {
+     "text": "de l’",
+     "correct": true
+    },
+    {
+     "text": "du",
+     "correct": false,
+     "feedback": "Eau starts with a vowel: de l’eau."
+    },
+    {
+     "text": "de la",
+     "correct": false,
+     "feedback": "Eau is feminine, but it starts with a vowel: de l’eau."
+    }
+   ],
+   "explain": "Before a vowel, du and de la become de l’: de l’eau."
+  },
+  {
+   "id": "french.g-partitive.viande",
+   "topic": "french.g-partitive",
+   "kind": "mcq",
+   "prompt": "Which means **I don’t eat meat**?",
+   "options": [
+    {
+     "text": "Je ne mange pas de viande.",
+     "correct": true
+    },
+    {
+     "text": "Je ne mange pas de la viande.",
+     "correct": false,
+     "feedback": "After a negative, de la becomes de."
+    },
+    {
+     "text": "Je ne mange pas du viande.",
+     "correct": false,
+     "feedback": "After a negative, “some” is just de."
+    }
+   ],
+   "explain": "After ne… pas, du, de la, de l’ and des all become de."
+  },
+  {
+   "id": "french.g-partitive.fromage",
+   "topic": "french.g-partitive",
+   "kind": "mcq",
+   "prompt": "Which means **I like cheese**?",
+   "options": [
+    {
+     "text": "J’aime le fromage.",
+     "correct": true
+    },
+    {
+     "text": "J’aime du fromage.",
+     "correct": false,
+     "feedback": "After aimer, use le, la, les: you mean cheese in general."
+    },
+    {
+     "text": "J’aime de fromage.",
+     "correct": false,
+     "feedback": "After aimer, use le: j’aime le fromage."
+    }
+   ],
+   "explain": "After verbs of liking and disliking, use le, la, l’ or les."
+  },
+  {
+   "id": "french.g-partitive.water",
+   "topic": "french.g-partitive",
+   "kind": "fact",
+   "prompt": "How do you say **some water**?",
+   "answer": "de l’eau",
+   "distractors": [
+    "du eau",
+    "de la eau",
+    "des eau"
+   ],
+   "explain": "Eau starts with a vowel: de l’eau.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-partitive.frites",
+   "topic": "french.g-partitive",
+   "kind": "fact",
+   "prompt": "How do you say **some chips** (frites)?",
+   "answer": "des frites",
+   "distractors": [
+    "du frites",
+    "de la frites",
+    "de frites"
+   ],
+   "explain": "Frites is plural, so “some” is des.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-partitive.kilo",
+   "topic": "french.g-partitive",
+   "kind": "mcq",
+   "prompt": "**Un kilo ___ pommes, s’il vous plaît.**",
+   "options": [
+    {
+     "text": "de",
+     "correct": true
+    },
+    {
+     "text": "des",
+     "correct": false,
+     "feedback": "After a quantity, just de: un kilo de pommes."
+    },
+    {
+     "text": "du",
+     "correct": false,
+     "feedback": "After a quantity, just de."
+    }
+   ],
+   "explain": "After a quantity (un kilo, beaucoup, un peu, une bouteille), use de: un kilo de pommes."
+  },
+  {
+   "id": "french.g-partitive.beaucoup",
+   "topic": "french.g-partitive",
+   "kind": "mcq",
+   "prompt": "**Elle a beaucoup ___ amis.**",
+   "options": [
+    {
+     "text": "d’",
+     "correct": true
+    },
+    {
+     "text": "des",
+     "correct": false,
+     "feedback": "After beaucoup, just de (d’ before a vowel)."
+    },
+    {
+     "text": "de",
+     "correct": false,
+     "feedback": "Amis starts with a vowel, so de becomes d’."
+    }
+   ],
+   "explain": "Beaucoup de, and d’ before a vowel: beaucoup d’amis."
+  },
+  {
+   "id": "french.g-partitive.pain",
+   "topic": "french.g-partitive",
+   "kind": "fact",
+   "prompt": "How do you say **I eat some bread**?",
+   "answer": "je mange du pain",
+   "distractors": [
+    "je mange de la pain",
+    "je mange des pain",
+    "je mange de pain"
+   ],
+   "explain": "Pain is masculine, so “some” is du: je mange du pain.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-partitive.gateau",
+   "topic": "french.g-partitive",
+   "kind": "mcq",
+   "prompt": "What does **Tu veux du gâteau ?** mean?",
+   "options": [
+    {
+     "text": "Do you want some cake?",
+     "correct": true
+    },
+    {
+     "text": "Do you want the cake?",
+     "correct": false,
+     "feedback": "The cake would be le gâteau."
+    },
+    {
+     "text": "Do you want two cakes?",
+     "correct": false,
+     "feedback": "Two cakes would be deux gâteaux."
+    }
+   ],
+   "explain": "Du gâteau = some cake.",
+   "hear": "Tu veux du gâteau ?"
+  },
+  {
+   "id": "french.g-partitive.argent",
+   "topic": "french.g-partitive",
+   "kind": "mcq",
+   "prompt": "**Je n’ai pas ___ argent.** (money)",
+   "options": [
+    {
+     "text": "d’",
+     "correct": true
+    },
+    {
+     "text": "de l’",
+     "correct": false,
+     "feedback": "After a negative, just de, or d’ before a vowel."
+    },
+    {
+     "text": "de",
+     "correct": false,
+     "feedback": "Argent starts with a vowel, so de becomes d’."
+    }
+   ],
+   "explain": "After a negative, de (d’ before a vowel): je n’ai pas d’argent."
+  },
+  {
+   "id": "french.g-partitive.cafe",
+   "topic": "french.g-partitive",
+   "kind": "fact",
+   "prompt": "How do you say **we don’t drink coffee**?",
+   "answer": "nous ne buvons pas de café",
+   "distractors": [
+    "nous ne buvons pas du café",
+    "nous ne boivons pas de café",
+    "nous ne buvez pas de café"
+   ],
+   "explain": "Boire: nous buvons. After the negative, du becomes de.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-partitive.tmpl",
+   "topic": "french.g-partitive",
+   "kind": "template",
+   "gen": "y8frgPartitive",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-prepositions.londres",
+   "topic": "french.g-prepositions",
+   "kind": "mcq",
+   "prompt": "**J’habite ___ Londres.**",
+   "options": [
+    {
+     "text": "à",
+     "correct": true
+    },
+    {
+     "text": "en",
+     "correct": false,
+     "feedback": "En is for feminine countries. Towns and cities take à."
+    },
+    {
+     "text": "au",
+     "correct": false,
+     "feedback": "Au is for masculine countries. Towns and cities take à."
+    }
+   ],
+   "explain": "Towns and cities: à. J’habite à Londres."
+  },
+  {
+   "id": "french.g-prepositions.portugal",
+   "topic": "french.g-prepositions",
+   "kind": "mcq",
+   "prompt": "**Nous allons ___ Portugal.**",
+   "options": [
+    {
+     "text": "au",
+     "correct": true
+    },
+    {
+     "text": "en",
+     "correct": false,
+     "feedback": "Le Portugal is masculine, so au."
+    },
+    {
+     "text": "à",
+     "correct": false,
+     "feedback": "Portugal is a country: au, en or aux."
+    }
+   ],
+   "explain": "Le Portugal is masculine: au Portugal."
+  },
+  {
+   "id": "french.g-prepositions.etatsunis",
+   "topic": "french.g-prepositions",
+   "kind": "mcq",
+   "prompt": "**Elle passe ses vacances ___ États-Unis.**",
+   "options": [
+    {
+     "text": "aux",
+     "correct": true
+    },
+    {
+     "text": "au",
+     "correct": false,
+     "feedback": "Les États-Unis is plural: aux."
+    },
+    {
+     "text": "en",
+     "correct": false,
+     "feedback": "Les États-Unis is plural: aux."
+    }
+   ],
+   "explain": "Plural countries take aux: aux États-Unis, aux Pays-Bas."
+  },
+  {
+   "id": "french.g-prepositions.piscine",
+   "topic": "french.g-prepositions",
+   "kind": "fact",
+   "prompt": "How do you say **to the swimming pool**?",
+   "answer": "à la piscine",
+   "distractors": [
+    "au piscine",
+    "à le piscine",
+    "en piscine"
+   ],
+   "explain": "La piscine is feminine, and à la never changes: à la piscine.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-prepositions.galles",
+   "topic": "french.g-prepositions",
+   "kind": "fact",
+   "prompt": "How do you say **in Wales**?",
+   "answer": "au pays de Galles",
+   "distractors": [
+    "en pays de Galles",
+    "à pays de Galles",
+    "aux pays de Galles"
+   ],
+   "explain": "Le pays de Galles is masculine: au pays de Galles. But en Angleterre, en Écosse, en Irlande.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-prepositions.mexique",
+   "topic": "french.g-prepositions",
+   "kind": "mcq",
+   "prompt": "Why is it **au Mexique** and not en Mexique?",
+   "options": [
+    {
+     "text": "Le Mexique is masculine, though it ends in -e",
+     "correct": true
+    },
+    {
+     "text": "Mexique is the name of a city",
+     "correct": false,
+     "feedback": "Mexique is the country; the capital is Mexico."
+    },
+    {
+     "text": "Countries outside Europe always take au",
+     "correct": false,
+     "feedback": "Not so: en Chine, en Inde, en Australie."
+    }
+   ],
+   "explain": "Most countries ending in -e are feminine, but le Mexique (and le Cambodge) are masculine."
+  },
+  {
+   "id": "french.g-prepositions.cinema",
+   "topic": "french.g-prepositions",
+   "kind": "fact",
+   "prompt": "How do you say **to the cinema**?",
+   "answer": "au cinéma",
+   "distractors": [
+    "à le cinéma",
+    "à la cinéma",
+    "en cinéma"
+   ],
+   "explain": "Le cinéma is masculine: à + le = au.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-prepositions.ecole",
+   "topic": "french.g-prepositions",
+   "kind": "mcq",
+   "prompt": "**Je vais ___ école en bus.**",
+   "options": [
+    {
+     "text": "à l’",
+     "correct": true
+    },
+    {
+     "text": "au",
+     "correct": false,
+     "feedback": "École starts with a vowel: à l’école."
+    },
+    {
+     "text": "à la",
+     "correct": false,
+     "feedback": "École starts with a vowel: à l’école."
+    }
+   ],
+   "explain": "Before a vowel or a silent h: à l’. Je vais à l’école."
+  },
+  {
+   "id": "french.g-prepositions.chez",
+   "topic": "french.g-prepositions",
+   "kind": "mcq",
+   "prompt": "What does **chez moi** mean?",
+   "options": [
+    {
+     "text": "at my house, at home",
+     "correct": true
+    },
+    {
+     "text": "near me",
+     "correct": false,
+     "feedback": "Near me would be près de moi."
+    },
+    {
+     "text": "with me",
+     "correct": false,
+     "feedback": "With me would be avec moi."
+    }
+   ],
+   "explain": "Chez = at the house of: chez moi, chez Marie, chez le dentiste."
+  },
+  {
+   "id": "french.g-prepositions.chezmarie",
+   "topic": "french.g-prepositions",
+   "kind": "fact",
+   "prompt": "How do you say **at Marie’s house**?",
+   "answer": "chez Marie",
+   "distractors": [
+    "à Marie",
+    "au Marie",
+    "en Marie"
+   ],
+   "explain": "Chez + person = at that person’s house: chez Marie.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-prepositions.ecosse",
+   "topic": "french.g-prepositions",
+   "kind": "mcq",
+   "prompt": "**Mon père est né ___ Écosse.**",
+   "options": [
+    {
+     "text": "en",
+     "correct": true
+    },
+    {
+     "text": "au",
+     "correct": false,
+     "feedback": "L’Écosse is feminine: en Écosse."
+    },
+    {
+     "text": "à",
+     "correct": false,
+     "feedback": "Écosse is a country: en Écosse."
+    }
+   ],
+   "explain": "L’Écosse is feminine: en Écosse."
+  },
+  {
+   "id": "french.g-prepositions.tmpl",
+   "topic": "french.g-prepositions",
+   "kind": "template",
+   "gen": "y8frgPlace",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-modals.nager",
+   "topic": "french.g-modals",
+   "kind": "mcq",
+   "prompt": "Which means **I can swim**?",
+   "options": [
+    {
+     "text": "Je peux nager.",
+     "correct": true
+    },
+    {
+     "text": "Je peux nage.",
+     "correct": false,
+     "feedback": "After pouvoir the second verb stays in the infinitive: nager."
+    },
+    {
+     "text": "Je peut nager.",
+     "correct": false,
+     "feedback": "Je peux, with -x."
+    }
+   ],
+   "explain": "Je peux + infinitive: je peux nager."
+  },
+  {
+   "id": "french.g-modals.veulent",
+   "topic": "french.g-modals",
+   "kind": "mcq",
+   "prompt": "**Ils ___ partir.** (vouloir: to want)",
+   "options": [
+    {
+     "text": "veulent",
+     "correct": true
+    },
+    {
+     "text": "voulent",
+     "correct": false,
+     "feedback": "The ils form changes its vowel: veulent."
+    },
+    {
+     "text": "veut",
+     "correct": false,
+     "feedback": "Veut is the il and elle form."
+    }
+   ],
+   "explain": "Vouloir: je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent."
+  },
+  {
+   "id": "french.g-modals.devons",
+   "topic": "french.g-modals",
+   "kind": "fact",
+   "prompt": "How do you say **we have to work**?",
+   "answer": "nous devons travailler",
+   "distractors": [
+    "nous devons travaillons",
+    "nous doivent travailler",
+    "nous devez travailler"
+   ],
+   "explain": "Nous devons + infinitive: nous devons travailler.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-modals.voudrais",
+   "topic": "french.g-modals",
+   "kind": "fact",
+   "prompt": "How do you say **I would like a hot chocolate**?",
+   "answer": "je voudrais un chocolat chaud",
+   "distractors": [
+    "je voudrais une chocolat chaud",
+    "je voudrais un chaud chocolat",
+    "je voudrais du chocolat chaud un"
+   ],
+   "explain": "Je voudrais = I would like: the polite way to ask. Chocolat is masculine, and chaud goes after it.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-modals.devoirs",
+   "topic": "french.g-modals",
+   "kind": "mcq",
+   "prompt": "What does **Tu dois faire tes devoirs.** mean?",
+   "options": [
+    {
+     "text": "You must do your homework.",
+     "correct": true
+    },
+    {
+     "text": "You want to do your homework.",
+     "correct": false,
+     "feedback": "Want is vouloir: tu veux."
+    },
+    {
+     "text": "You can do your homework.",
+     "correct": false,
+     "feedback": "Can is pouvoir: tu peux."
+    }
+   ],
+   "explain": "Devoir = must, to have to. (Les devoirs, in the plural, is homework.)",
+   "hear": "Tu dois faire tes devoirs."
+  },
+  {
+   "id": "french.g-modals.peux",
+   "topic": "french.g-modals",
+   "kind": "fact",
+   "prompt": "How do you say **you can** (talking to one friend)?",
+   "answer": "tu peux",
+   "distractors": [
+    "tu peut",
+    "tu pouvez",
+    "tu veux"
+   ],
+   "explain": "Pouvoir: je peux, tu peux, il peut.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-modals.veut",
+   "topic": "french.g-modals",
+   "kind": "fact",
+   "prompt": "How do you say **she wants**?",
+   "answer": "elle veut",
+   "distractors": [
+    "elle veux",
+    "elle voulez",
+    "elle peut"
+   ],
+   "explain": "Vouloir: je veux, tu veux, il/elle veut.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-modals.polite",
+   "topic": "french.g-modals",
+   "kind": "mcq",
+   "prompt": "Which is the polite way to ask for something in a shop?",
+   "options": [
+    {
+     "text": "Je voudrais un croissant, s’il vous plaît.",
+     "correct": true
+    },
+    {
+     "text": "Je veux un croissant, maintenant.",
+     "correct": false,
+     "feedback": "Je veux (I want) sounds rude in a shop."
+    },
+    {
+     "text": "Donne-moi un croissant tout de suite.",
+     "correct": false,
+     "feedback": "An order using tu to a shopkeeper is rude."
+    }
+   ],
+   "explain": "Je voudrais (I would like) + s’il vous plaît is the polite way to ask."
+  },
+  {
+   "id": "french.g-modals.ici",
+   "topic": "french.g-modals",
+   "kind": "mcq",
+   "prompt": "**On ne peut pas ___ ici.** (nager: to swim)",
+   "options": [
+    {
+     "text": "nager",
+     "correct": true
+    },
+    {
+     "text": "nage",
+     "correct": false,
+     "feedback": "After pouvoir the second verb stays in the infinitive."
+    },
+    {
+     "text": "nagé",
+     "correct": false,
+     "feedback": "Nagé is the past participle; you need the infinitive."
+    }
+   ],
+   "explain": "On ne peut pas nager ici: pouvoir + infinitive, with ne… pas round peut."
+  },
+  {
+   "id": "french.g-modals.doivent",
+   "topic": "french.g-modals",
+   "kind": "fact",
+   "prompt": "How do you say **they must** (a group of boys)?",
+   "answer": "ils doivent",
+   "distractors": [
+    "ils devent",
+    "ils doit",
+    "ils devons"
+   ],
+   "explain": "Devoir: je dois, tu dois, il doit, nous devons, vous devez, ils doivent.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-modals.sortir",
+   "topic": "french.g-modals",
+   "kind": "mcq",
+   "prompt": "What does **Je ne veux pas sortir.** mean?",
+   "options": [
+    {
+     "text": "I don’t want to go out.",
+     "correct": true
+    },
+    {
+     "text": "I can’t go out.",
+     "correct": false,
+     "feedback": "Can’t would be je ne peux pas."
+    },
+    {
+     "text": "I mustn’t go out.",
+     "correct": false,
+     "feedback": "Mustn’t would be je ne dois pas."
+    }
+   ],
+   "explain": "Je ne veux pas + infinitive = I don’t want to…",
+   "hear": "Je ne veux pas sortir."
+  },
+  {
+   "id": "french.g-modals.tmpl",
+   "topic": "french.g-modals",
+   "kind": "template",
+   "gen": "y8frgModal",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-reflexive.appelle",
+   "topic": "french.g-reflexive",
+   "kind": "mcq",
+   "prompt": "What does **je m’appelle** mean word for word?",
+   "options": [
+    {
+     "text": "I call myself",
+     "correct": true
+    },
+    {
+     "text": "I am calling you",
+     "correct": false,
+     "feedback": "M’ (me) means myself here."
+    },
+    {
+     "text": "my name",
+     "correct": false,
+     "feedback": "It is a whole sentence: I call myself, so my name is."
+    }
+   ],
+   "explain": "Je m’appelle Léa: word for word, “I call myself Léa”, so “my name is Léa”."
+  },
+  {
+   "id": "french.g-reflexive.couchons",
+   "topic": "french.g-reflexive",
+   "kind": "mcq",
+   "prompt": "**Nous ___ couchons à dix heures.**",
+   "options": [
+    {
+     "text": "nous",
+     "correct": true
+    },
+    {
+     "text": "se",
+     "correct": false,
+     "feedback": "The pronoun matches the subject: nous… nous."
+    },
+    {
+     "text": "vous",
+     "correct": false,
+     "feedback": "The pronoun matches the subject: nous… nous."
+    }
+   ],
+   "explain": "Nous nous couchons: subject nous, reflexive pronoun nous."
+  },
+  {
+   "id": "french.g-reflexive.leve",
+   "topic": "french.g-reflexive",
+   "kind": "fact",
+   "prompt": "How do you say **I get up**?",
+   "answer": "je me lève",
+   "distractors": [
+    "je me lèves",
+    "je se lève",
+    "je me lever"
+   ],
+   "explain": "Je me lève: me for je, and lever takes è in the je form.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-reflexive.habille",
+   "topic": "french.g-reflexive",
+   "kind": "fact",
+   "prompt": "How do you say **she gets dressed**?",
+   "answer": "elle s’habille",
+   "distractors": [
+    "elle se habille",
+    "elle s’habilles",
+    "elle s’habiller"
+   ],
+   "explain": "Elle s’habille: se becomes s’ before the silent h.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-reflexive.douchons",
+   "topic": "french.g-reflexive",
+   "kind": "fact",
+   "prompt": "How do you say **we have a shower**?",
+   "answer": "nous nous douchons",
+   "distractors": [
+    "nous se douchons",
+    "nous douchons",
+    "nous nous douchez"
+   ],
+   "explain": "Nous nous douchons: the pronoun matches nous.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-reflexive.amusent",
+   "topic": "french.g-reflexive",
+   "kind": "mcq",
+   "prompt": "What does **Ils s’amusent bien.** mean?",
+   "options": [
+    {
+     "text": "They are having a good time.",
+     "correct": true
+    },
+    {
+     "text": "They are making us laugh.",
+     "correct": false,
+     "feedback": "S’ means themselves: they amuse themselves."
+    },
+    {
+     "text": "They are bored.",
+     "correct": false,
+     "feedback": "Bored is s’ennuyer: ils s’ennuient."
+    }
+   ],
+   "explain": "S’amuser = to have fun, to have a good time.",
+   "hear": "Ils s’amusent bien."
+  },
+  {
+   "id": "french.g-reflexive.dents",
+   "topic": "french.g-reflexive",
+   "kind": "mcq",
+   "prompt": "What does **Je me brosse les dents.** mean?",
+   "options": [
+    {
+     "text": "I brush my teeth.",
+     "correct": true
+    },
+    {
+     "text": "I brush your teeth.",
+     "correct": false,
+     "feedback": "Me means myself, so it is my own teeth."
+    },
+    {
+     "text": "I break my teeth.",
+     "correct": false,
+     "feedback": "Brosser = to brush."
+    }
+   ],
+   "explain": "With reflexive verbs French says les dents (the teeth), not mes dents: the me already shows whose.",
+   "hear": "Je me brosse les dents."
+  },
+  {
+   "id": "french.g-reflexive.routine",
+   "topic": "french.g-reflexive",
+   "kind": "order",
+   "prompt": "Put Léa’s morning in order.",
+   "items": [
+    "Je me réveille.",
+    "Je me lève.",
+    "Je me douche.",
+    "Je m’habille."
+   ],
+   "labels": null,
+   "explain": "I wake up, I get up, I have a shower, I get dressed."
+  },
+  {
+   "id": "french.g-reflexive.couches",
+   "topic": "french.g-reflexive",
+   "kind": "mcq",
+   "prompt": "**Tu ___ à quelle heure ?** (se coucher: to go to bed)",
+   "options": [
+    {
+     "text": "te couches",
+     "correct": true
+    },
+    {
+     "text": "se couches",
+     "correct": false,
+     "feedback": "The pronoun for tu is te."
+    },
+    {
+     "text": "te couche",
+     "correct": false,
+     "feedback": "The tu ending is -es."
+    }
+   ],
+   "explain": "Tu te couches: te for tu, and -es for the tu ending."
+  },
+  {
+   "id": "french.g-reflexive.lea",
+   "topic": "french.g-reflexive",
+   "kind": "fact",
+   "prompt": "Using **s’appeler**, how do you say **my name is Léa**?",
+   "answer": "je m’appelle Léa",
+   "distractors": [
+    "je me appelle Léa",
+    "je m’appelles Léa",
+    "je m’apelle Léa"
+   ],
+   "explain": "Je m’appelle: me becomes m’ before a vowel, and appeler doubles its l in the je form.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-reflexive.promenez",
+   "topic": "french.g-reflexive",
+   "kind": "mcq",
+   "prompt": "**Vous ___ promenez dans le parc.**",
+   "options": [
+    {
+     "text": "vous",
+     "correct": true
+    },
+    {
+     "text": "nous",
+     "correct": false,
+     "feedback": "The pronoun matches the subject: vous… vous."
+    },
+    {
+     "text": "se",
+     "correct": false,
+     "feedback": "Se is for il, elle, ils and elles."
+    }
+   ],
+   "explain": "Vous vous promenez: subject vous, reflexive pronoun vous."
+  },
+  {
+   "id": "french.g-reflexive.tmpl",
+   "topic": "french.g-reflexive",
+   "kind": "template",
+   "gen": "y8frgReflexive",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-future.tennis",
+   "topic": "french.g-future",
+   "kind": "mcq",
+   "prompt": "Which means **I am going to play tennis**?",
+   "options": [
+    {
+     "text": "Je vais jouer au tennis.",
+     "correct": true
+    },
+    {
+     "text": "Je vais joue au tennis.",
+     "correct": false,
+     "feedback": "After aller the second verb stays in the infinitive: jouer."
+    },
+    {
+     "text": "Je va jouer au tennis.",
+     "correct": false,
+     "feedback": "Je vais, with -s."
+    }
+   ],
+   "explain": "Aller + infinitive: je vais jouer."
+  },
+  {
+   "id": "french.g-future.allons",
+   "topic": "french.g-future",
+   "kind": "mcq",
+   "prompt": "**Ce soir, nous ___ regarder un film.**",
+   "options": [
+    {
+     "text": "allons",
+     "correct": true
+    },
+    {
+     "text": "allez",
+     "correct": false,
+     "feedback": "Allez goes with vous."
+    },
+    {
+     "text": "vont",
+     "correct": false,
+     "feedback": "Vont goes with ils and elles."
+    }
+   ],
+   "explain": "Nous allons + infinitive: nous allons regarder un film."
+  },
+  {
+   "id": "french.g-future.partir",
+   "topic": "french.g-future",
+   "kind": "fact",
+   "prompt": "How do you say **they are going to leave** (a group of boys)?",
+   "answer": "ils vont partir",
+   "distractors": [
+    "ils vont partent",
+    "ils allent partir",
+    "ils sont partir"
+   ],
+   "explain": "Ils vont + infinitive: ils vont partir.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-future.neg",
+   "topic": "french.g-future",
+   "kind": "fact",
+   "prompt": "How do you say **I am not going to work**?",
+   "answer": "je ne vais pas travailler",
+   "distractors": [
+    "je ne vais travailler pas",
+    "je ne pas vais travailler",
+    "je ne va pas travailler"
+   ],
+   "explain": "Ne… pas goes round the aller part: je ne vais pas travailler.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-future.paris",
+   "topic": "french.g-future",
+   "kind": "mcq",
+   "prompt": "What does **Elle va visiter Paris.** mean?",
+   "options": [
+    {
+     "text": "She is going to visit Paris.",
+     "correct": true
+    },
+    {
+     "text": "She visits Paris.",
+     "correct": false,
+     "feedback": "Va + infinitive is the near future: going to."
+    },
+    {
+     "text": "She visited Paris.",
+     "correct": false,
+     "feedback": "That would be elle a visité Paris."
+    }
+   ],
+   "explain": "Va visiter = is going to visit.",
+   "hear": "Elle va visiter Paris."
+  },
+  {
+   "id": "french.g-future.lever",
+   "topic": "french.g-future",
+   "kind": "mcq",
+   "prompt": "**Demain, je vais ___ tôt.** (se lever: to get up)",
+   "options": [
+    {
+     "text": "me lever",
+     "correct": true
+    },
+    {
+     "text": "se lever",
+     "correct": false,
+     "feedback": "The pronoun matches je: me."
+    },
+    {
+     "text": "me lève",
+     "correct": false,
+     "feedback": "After aller the verb stays in the infinitive: lever."
+    }
+   ],
+   "explain": "Reflexive verbs keep a pronoun that matches the subject: je vais me lever."
+  },
+  {
+   "id": "french.g-future.manger",
+   "topic": "french.g-future",
+   "kind": "fact",
+   "prompt": "How do you say **we are going to eat**?",
+   "answer": "nous allons manger",
+   "distractors": [
+    "nous allons mangeons",
+    "nous allez manger",
+    "nous vont manger"
+   ],
+   "explain": "Nous allons + infinitive: nous allons manger.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-future.demain",
+   "topic": "french.g-future",
+   "kind": "mcq",
+   "prompt": "Which time phrase goes with the near future?",
+   "options": [
+    {
+     "text": "demain (tomorrow)",
+     "correct": true
+    },
+    {
+     "text": "hier (yesterday)",
+     "correct": false,
+     "feedback": "Hier is for the past."
+    },
+    {
+     "text": "l’année dernière (last year)",
+     "correct": false,
+     "feedback": "Dernier, dernière = last: the past."
+    }
+   ],
+   "explain": "Future time phrases: demain, ce soir, ce week-end, la semaine prochaine, l’année prochaine."
+  },
+  {
+   "id": "french.g-future.ceweekend",
+   "topic": "french.g-future",
+   "kind": "mcq",
+   "prompt": "What does **Qu’est-ce que tu vas faire ce week-end ?** mean?",
+   "options": [
+    {
+     "text": "What are you going to do this weekend?",
+     "correct": true
+    },
+    {
+     "text": "What did you do last weekend?",
+     "correct": false,
+     "feedback": "That would be qu’est-ce que tu as fait le week-end dernier ?"
+    },
+    {
+     "text": "What do you do at the weekend?",
+     "correct": false,
+     "feedback": "That would be qu’est-ce que tu fais le week-end ?"
+    }
+   ],
+   "explain": "Tu vas faire = you are going to do.",
+   "hear": "Qu’est-ce que tu vas faire ce week-end ?"
+  },
+  {
+   "id": "french.g-future.prochaine",
+   "topic": "french.g-future",
+   "kind": "fact",
+   "prompt": "What does **l’année prochaine** mean?",
+   "answer": "next year",
+   "distractors": [
+    "last year",
+    "this year",
+    "every year"
+   ],
+   "explain": "Prochain, prochaine = next: la semaine prochaine (next week), l’année prochaine (next year).",
+   "hear": "l’année prochaine"
+  },
+  {
+   "id": "french.g-future.tmpl",
+   "topic": "french.g-future",
+   "kind": "template",
+   "gen": "y8frgFuture",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-perfect-avoir.foot",
+   "topic": "french.g-perfect-avoir",
+   "kind": "mcq",
+   "prompt": "Which means **I played football**?",
+   "options": [
+    {
+     "text": "J’ai joué au foot.",
+     "correct": true
+    },
+    {
+     "text": "Je suis joué au foot.",
+     "correct": false,
+     "feedback": "Jouer takes avoir: j’ai joué."
+    },
+    {
+     "text": "J’ai jouer au foot.",
+     "correct": false,
+     "feedback": "After avoir you need the past participle, joué, not the infinitive."
+    }
+   ],
+   "explain": "Avoir + past participle: j’ai joué."
+  },
+  {
+   "id": "french.g-perfect-avoir.fait",
+   "topic": "french.g-perfect-avoir",
+   "kind": "fact",
+   "prompt": "What is the past participle of **faire**?",
+   "answer": "fait",
+   "distractors": [
+    "faisé",
+    "fairé",
+    "faité"
+   ],
+   "explain": "Faire → fait: j’ai fait mes devoirs.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-avoir.pris",
+   "topic": "french.g-perfect-avoir",
+   "kind": "fact",
+   "prompt": "What is the past participle of **prendre**?",
+   "answer": "pris",
+   "distractors": [
+    "prendu",
+    "prené",
+    "prendé"
+   ],
+   "explain": "Prendre → pris: j’ai pris le bus. Also comprendre → compris, apprendre → appris.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-avoir.bu",
+   "topic": "french.g-perfect-avoir",
+   "kind": "fact",
+   "prompt": "What is the past participle of **boire**?",
+   "answer": "bu",
+   "distractors": [
+    "buvé",
+    "boiré",
+    "buvu"
+   ],
+   "explain": "Boire → bu: j’ai bu un coca.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-avoir.vu",
+   "topic": "french.g-perfect-avoir",
+   "kind": "fact",
+   "prompt": "What is the past participle of **voir**?",
+   "answer": "vu",
+   "distractors": [
+    "voyé",
+    "voiré",
+    "vi"
+   ],
+   "explain": "Voir → vu: j’ai vu un film.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-avoir.ecrit",
+   "topic": "french.g-perfect-avoir",
+   "kind": "fact",
+   "prompt": "What is the past participle of **écrire**?",
+   "answer": "écrit",
+   "distractors": [
+    "écrivé",
+    "écriré",
+    "écrivu"
+   ],
+   "explain": "Écrire → écrit: j’ai écrit un e-mail.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-avoir.fini",
+   "topic": "french.g-perfect-avoir",
+   "kind": "mcq",
+   "prompt": "What does **Nous avons fini nos devoirs.** mean?",
+   "options": [
+    {
+     "text": "We finished our homework.",
+     "correct": true
+    },
+    {
+     "text": "We are finishing our homework.",
+     "correct": false,
+     "feedback": "Avons fini is the perfect tense: finished."
+    },
+    {
+     "text": "We are going to finish our homework.",
+     "correct": false,
+     "feedback": "That would be nous allons finir."
+    }
+   ],
+   "explain": "Avons + fini (the -ir past participle) = we finished, or we have finished.",
+   "hear": "Nous avons fini nos devoirs."
+  },
+  {
+   "id": "french.g-perfect-avoir.pizza",
+   "topic": "french.g-perfect-avoir",
+   "kind": "fact",
+   "prompt": "How do you say **she ate a pizza**?",
+   "answer": "elle a mangé une pizza",
+   "distractors": [
+    "elle a manger une pizza",
+    "elle est mangé une pizza",
+    "elle a mangée une pizza"
+   ],
+   "explain": "Avoir + past participle: elle a mangé. With avoir there is no agreement with the subject.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-avoir.hier",
+   "topic": "french.g-perfect-avoir",
+   "kind": "mcq",
+   "prompt": "Which time phrase goes with the perfect tense?",
+   "options": [
+    {
+     "text": "hier (yesterday)",
+     "correct": true
+    },
+    {
+     "text": "demain (tomorrow)",
+     "correct": false,
+     "feedback": "Demain is for the future."
+    },
+    {
+     "text": "la semaine prochaine (next week)",
+     "correct": false,
+     "feedback": "Prochaine = next: the future."
+    }
+   ],
+   "explain": "Past time phrases: hier, hier soir, le week-end dernier, la semaine dernière, l’année dernière."
+  },
+  {
+   "id": "french.g-perfect-avoir.film",
+   "topic": "french.g-perfect-avoir",
+   "kind": "fact",
+   "prompt": "How do you say **I didn’t see the film**?",
+   "answer": "je n’ai pas vu le film",
+   "distractors": [
+    "je n’ai vu pas le film",
+    "je ne ai pas vu le film",
+    "je n’ai pas voir le film"
+   ],
+   "explain": "Ne… pas goes round avoir: je n’ai pas vu.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-avoir.eu",
+   "topic": "french.g-perfect-avoir",
+   "kind": "mcq",
+   "prompt": "What does **Il a eu un accident.** mean?",
+   "options": [
+    {
+     "text": "He had an accident.",
+     "correct": true
+    },
+    {
+     "text": "He was an accident.",
+     "correct": false,
+     "feedback": "Eu is the past participle of avoir, not être."
+    },
+    {
+     "text": "He has an accident.",
+     "correct": false,
+     "feedback": "A eu is the perfect tense: had."
+    }
+   ],
+   "explain": "Avoir → eu: il a eu = he had.",
+   "hear": "Il a eu un accident."
+  },
+  {
+   "id": "french.g-perfect-avoir.lu",
+   "topic": "french.g-perfect-avoir",
+   "kind": "fact",
+   "prompt": "What is the past participle of **lire**?",
+   "answer": "lu",
+   "distractors": [
+    "lisé",
+    "liré",
+    "lisu"
+   ],
+   "explain": "Lire → lu: j’ai lu un livre.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-avoir.tmpl",
+   "topic": "french.g-perfect-avoir",
+   "kind": "template",
+   "gen": "y8frgPerfectAvoir",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-perfect-etre.aller",
+   "topic": "french.g-perfect-etre",
+   "kind": "mcq",
+   "prompt": "Which verb takes **être** in the perfect tense?",
+   "options": [
+    {
+     "text": "aller (to go)",
+     "correct": true
+    },
+    {
+     "text": "manger (to eat)",
+     "correct": false,
+     "feedback": "Manger takes avoir: j’ai mangé."
+    },
+    {
+     "text": "jouer (to play)",
+     "correct": false,
+     "feedback": "Jouer takes avoir: j’ai joué."
+    }
+   ],
+   "explain": "Aller is one of the DR MRS VANDERTRAMP verbs: je suis allé."
+  },
+  {
+   "id": "french.g-perfect-etre.lea",
+   "topic": "french.g-perfect-etre",
+   "kind": "mcq",
+   "prompt": "Léa says **I went to Paris**. Which is right?",
+   "options": [
+    {
+     "text": "Je suis allée à Paris.",
+     "correct": true
+    },
+    {
+     "text": "Je suis allé à Paris.",
+     "correct": false,
+     "feedback": "Léa is a girl, so allé adds -e."
+    },
+    {
+     "text": "J’ai allé à Paris.",
+     "correct": false,
+     "feedback": "Aller takes être."
+    }
+   ],
+   "explain": "Aller takes être, and the past participle agrees with Léa: allée."
+  },
+  {
+   "id": "french.g-perfect-etre.arrivees",
+   "topic": "french.g-perfect-etre",
+   "kind": "fact",
+   "prompt": "How do you say **they arrived** (a group of girls)?",
+   "answer": "elles sont arrivées",
+   "distractors": [
+    "elles sont arrivés",
+    "elles ont arrivé",
+    "elles sont arrivée"
+   ],
+   "explain": "Arriver takes être; elles is feminine plural, so add -es: arrivées.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-etre.tombe",
+   "topic": "french.g-perfect-etre",
+   "kind": "fact",
+   "prompt": "How do you say **he fell**?",
+   "answer": "il est tombé",
+   "distractors": [
+    "il a tombé",
+    "il est tombée",
+    "il est tomber"
+   ],
+   "explain": "Tomber takes être: il est tombé.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-etre.nee",
+   "topic": "french.g-perfect-etre",
+   "kind": "mcq",
+   "prompt": "What does **Elle est née en 2013.** mean?",
+   "options": [
+    {
+     "text": "She was born in 2013.",
+     "correct": true
+    },
+    {
+     "text": "She arrived in 2013.",
+     "correct": false,
+     "feedback": "Arrived would be elle est arrivée."
+    },
+    {
+     "text": "She died in 2013.",
+     "correct": false,
+     "feedback": "Died would be elle est morte."
+    }
+   ],
+   "explain": "Naître (to be born) → né: elle est née (with -e for a girl).",
+   "hear": "Elle est née en 2013."
+  },
+  {
+   "id": "french.g-perfect-etre.restes",
+   "topic": "french.g-perfect-etre",
+   "kind": "mcq",
+   "prompt": "**Nous ___ restés à la maison.**",
+   "options": [
+    {
+     "text": "sommes",
+     "correct": true
+    },
+    {
+     "text": "avons",
+     "correct": false,
+     "feedback": "Rester takes être."
+    },
+    {
+     "text": "sont",
+     "correct": false,
+     "feedback": "Sont goes with ils and elles."
+    }
+   ],
+   "explain": "Rester takes être: nous sommes restés."
+  },
+  {
+   "id": "french.g-perfect-etre.leve",
+   "topic": "french.g-perfect-etre",
+   "kind": "fact",
+   "prompt": "How do you say **he got up**?",
+   "answer": "il s’est levé",
+   "distractors": [
+    "il s’a levé",
+    "il se est levé",
+    "il s’est lever"
+   ],
+   "explain": "Reflexive verbs take être, with the pronoun in front: il s’est levé.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-etre.sortie",
+   "topic": "french.g-perfect-etre",
+   "kind": "fact",
+   "prompt": "How do you say **she went out**?",
+   "answer": "elle est sortie",
+   "distractors": [
+    "elle est sorti",
+    "elle a sortie",
+    "elle est sortée"
+   ],
+   "explain": "Sortir takes être, and its past participle sorti adds -e for elle: sortie.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-perfect-etre.venues",
+   "topic": "french.g-perfect-etre",
+   "kind": "mcq",
+   "prompt": "In **Mes cousines sont venues**, why does venu end in -es?",
+   "options": [
+    {
+     "text": "Mes cousines is feminine plural",
+     "correct": true
+    },
+    {
+     "text": "Venir always ends in -es",
+     "correct": false,
+     "feedback": "Il est venu, elle est venue: it depends on the subject."
+    },
+    {
+     "text": "Because the verb is sont",
+     "correct": false,
+     "feedback": "It agrees with the subject, mes cousines."
+    }
+   ],
+   "explain": "With être, the past participle agrees with the subject: feminine plural → -es."
+  },
+  {
+   "id": "french.g-perfect-etre.hugo",
+   "topic": "french.g-perfect-etre",
+   "kind": "mcq",
+   "prompt": "What does **Victor Hugo est mort en 1885.** mean?",
+   "options": [
+    {
+     "text": "Victor Hugo died in 1885.",
+     "correct": true
+    },
+    {
+     "text": "Victor Hugo was born in 1885.",
+     "correct": false,
+     "feedback": "Born would be est né."
+    },
+    {
+     "text": "Victor Hugo moved house in 1885.",
+     "correct": false,
+     "feedback": "Mort comes from mourir, to die."
+    }
+   ],
+   "explain": "Mourir (to die) → mort, with être. Victor Hugo wrote Les Misérables.",
+   "hear": "Victor Hugo est mort en 1885."
+  },
+  {
+   "id": "french.g-perfect-etre.tomlea",
+   "topic": "french.g-perfect-etre",
+   "kind": "mcq",
+   "prompt": "Tom and Léa **went to the beach**. Which is right?",
+   "options": [
+    {
+     "text": "Tom et Léa sont allés à la plage.",
+     "correct": true
+    },
+    {
+     "text": "Tom et Léa sont allées à la plage.",
+     "correct": false,
+     "feedback": "A mixed group counts as masculine: allés."
+    },
+    {
+     "text": "Tom et Léa ont allé à la plage.",
+     "correct": false,
+     "feedback": "Aller takes être."
+    }
+   ],
+   "explain": "A mixed group of boys and girls takes the masculine plural: allés."
+  },
+  {
+   "id": "french.g-perfect-etre.tmpl",
+   "topic": "french.g-perfect-etre",
+   "kind": "template",
+   "gen": "y8frgPerfectEtre",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.g-imperfect.cetait",
+   "topic": "french.g-imperfect",
+   "kind": "fact",
+   "prompt": "What does **c’était** mean?",
+   "answer": "it was",
+   "distractors": [
+    "it is",
+    "it will be",
+    "there was"
+   ],
+   "explain": "C’était = it was (c’est in the past): c’était génial.",
+   "hear": "c’était"
+  },
+  {
+   "id": "french.g-imperfect.ilyavait",
+   "topic": "french.g-imperfect",
+   "kind": "fact",
+   "prompt": "What does **il y avait** mean?",
+   "answer": "there was",
+   "distractors": [
+    "there is",
+    "he had",
+    "it was"
+   ],
+   "explain": "Il y avait = there was or there were (il y a in the past).",
+   "accept": [
+    "there were",
+    "there was or there were",
+    "there were or there was"
+   ],
+   "hear": "il y avait"
+  },
+  {
+   "id": "french.g-imperfect.genial",
+   "topic": "french.g-imperfect",
+   "kind": "fact",
+   "prompt": "How do you say **it was great**?",
+   "answer": "c’était génial",
+   "distractors": [
+    "c’est génial",
+    "il était génial",
+    "c’étais génial"
+   ],
+   "explain": "C’était + adjective: c’était génial, c’était nul, c’était intéressant.",
+   "lang": "fr",
+   "accept": [
+    "c’était super",
+    "c’était fantastique",
+    "c’était excellent"
+   ]
+  },
+  {
+   "id": "french.g-imperfect.chaud",
+   "topic": "french.g-imperfect",
+   "kind": "fact",
+   "prompt": "How do you say **the weather was hot**?",
+   "answer": "il faisait chaud",
+   "distractors": [
+    "il fait chaud",
+    "il faisais chaud",
+    "il était chaud"
+   ],
+   "explain": "Il faisait + weather word: il faisait chaud, il faisait beau, il faisait froid.",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-imperfect.which",
+   "topic": "french.g-imperfect",
+   "kind": "mcq",
+   "prompt": "Which tense describes **what something was like**?",
+   "options": [
+    {
+     "text": "the imperfect: c’était, il y avait",
+     "correct": true
+    },
+    {
+     "text": "the perfect: j’ai visité",
+     "correct": false,
+     "feedback": "The perfect says what happened."
+    },
+    {
+     "text": "the near future: je vais visiter",
+     "correct": false,
+     "feedback": "That is for what is going to happen."
+    }
+   ],
+   "explain": "Perfect = what happened. Imperfect = what it was like."
+  },
+  {
+   "id": "french.g-imperfect.monde",
+   "topic": "french.g-imperfect",
+   "kind": "mcq",
+   "prompt": "What does **Il y avait beaucoup de monde.** mean?",
+   "options": [
+    {
+     "text": "There were lots of people.",
+     "correct": true
+    },
+    {
+     "text": "There was a big world.",
+     "correct": false,
+     "feedback": "Beaucoup de monde is an idiom: lots of people."
+    },
+    {
+     "text": "There are lots of people.",
+     "correct": false,
+     "feedback": "Avait is the past: there were."
+    }
+   ],
+   "explain": "Beaucoup de monde = lots of people, a crowd.",
+   "hear": "Il y avait beaucoup de monde."
+  },
+  {
+   "id": "french.g-imperfect.faisait",
+   "topic": "french.g-imperfect",
+   "kind": "mcq",
+   "prompt": "Which is the **imperfect** of **il fait** (as in il fait beau)?",
+   "options": [
+    {
+     "text": "il faisait",
+     "correct": true
+    },
+    {
+     "text": "il a fait",
+     "correct": false,
+     "feedback": "Il a fait is the perfect tense."
+    },
+    {
+     "text": "il va faire",
+     "correct": false,
+     "feedback": "Il va faire is the near future."
+    }
+   ],
+   "explain": "Il fait → il faisait: il faisait beau = the weather was nice."
+  },
+  {
+   "id": "french.g-imperfect.petite",
+   "topic": "french.g-imperfect",
+   "kind": "mcq",
+   "prompt": "What does **Quand j’étais petite, j’avais un chat.** mean?",
+   "options": [
+    {
+     "text": "When I was little, I had a cat.",
+     "correct": true
+    },
+    {
+     "text": "When I am little, I have a cat.",
+     "correct": false,
+     "feedback": "Étais and avais are past forms."
+    },
+    {
+     "text": "When I was little, I wanted a cat.",
+     "correct": false,
+     "feedback": "J’avais = I had."
+    }
+   ],
+   "explain": "J’étais = I was, j’avais = I had: the imperfect for what things were like.",
+   "hear": "Quand j’étais petite, j’avais un chat."
+  },
+  {
+   "id": "french.g-imperfect.magasins",
+   "topic": "french.g-imperfect",
+   "kind": "fact",
+   "prompt": "How do you say **there were lots of shops**?",
+   "answer": "il y avait beaucoup de magasins",
+   "distractors": [
+    "il y a beaucoup de magasins",
+    "il y avait beaucoup des magasins",
+    "il avait beaucoup de magasins"
+   ],
+   "explain": "Il y avait + beaucoup de (never des after beaucoup).",
+   "lang": "fr"
+  },
+  {
+   "id": "french.g-imperfect.chateau",
+   "topic": "french.g-imperfect",
+   "kind": "mcq",
+   "prompt": "**Hier, j’ai visité un château. ___ très intéressant.**",
+   "options": [
+    {
+     "text": "C’était",
+     "correct": true
+    },
+    {
+     "text": "Il y avait",
+     "correct": false,
+     "feedback": "Il y avait means there was: it needs a noun after it."
+    },
+    {
+     "text": "Il faisait",
+     "correct": false,
+     "feedback": "Il faisait is for the weather."
+    }
+   ],
+   "explain": "C’était + adjective gives your opinion of it: c’était très intéressant."
+  },
+  {
+   "id": "french.g-opinions.d1",
+   "topic": "french.g-opinions",
+   "kind": "fact",
+   "prompt": "What does **parce que** mean?",
+   "answer": "because",
+   "distractors": [
+    "but",
+    "however",
+    "so"
+   ],
+   "explain": "Parce que = because. Car means the same.",
+   "hear": "parce que"
+  },
+  {
+   "id": "french.g-opinions.d2",
+   "topic": "french.g-opinions",
+   "kind": "fact",
+   "prompt": "What does **je déteste** mean?",
+   "answer": "I hate",
+   "distractors": [
+    "I like",
+    "I prefer",
+    "I don’t mind"
+   ],
+   "explain": "Je déteste = I hate. J’aime, j’adore, je préfère, je n’aime pas, je déteste.",
+   "accept": [
+    "I detest",
+    "I loathe"
+   ],
+   "hear": "je déteste"
+  },
+  {
+   "id": "french.g-opinions.cependant",
+   "topic": "french.g-opinions",
+   "kind": "fact",
+   "prompt": "What does **cependant** mean?",
+   "answer": "however",
+   "distractors": [
+    "because",
+    "also",
+    "therefore"
+   ],
+   "explain": "Cependant = however: a connective that adds a contrast.",
+   "accept": [
+    "but",
+    "nevertheless",
+    "yet"
+   ],
+   "hear": "cependant"
+  },
+  {
+   "id": "french.g-opinions.avis",
+   "topic": "french.g-opinions",
+   "kind": "fact",
+   "prompt": "What does **à mon avis** mean?",
+   "answer": "in my opinion",
+   "distractors": [
+    "on my way",
+    "in my life",
+    "at my house"
+   ],
+   "explain": "À mon avis = in my opinion: à mon avis, c’est trop difficile.",
+   "accept": [
+    "in my view"
+   ],
+   "hear": "à mon avis"
+  },
+  {
+   "id": "french.g-opinions.ennuyeux",
+   "topic": "french.g-opinions",
+   "kind": "fact",
+   "prompt": "What does **ennuyeux** mean?",
+   "answer": "boring",
+   "distractors": [
+    "interesting",
+    "easy",
+    "funny"
+   ],
+   "explain": "Ennuyeux = boring: c’est ennuyeux.",
+   "accept": [
+    "dull"
+   ],
+   "hear": "ennuyeux"
+  },
+  {
+   "id": "french.g-opinions.maths",
+   "topic": "french.g-opinions",
+   "kind": "mcq",
+   "prompt": "Which is the best answer to **Tu aimes les maths ?**",
+   "options": [
+    {
+     "text": "Oui, j’adore les maths car c’est utile.",
+     "correct": true
+    },
+    {
+     "text": "Oui, j’adore du maths parce que c’est utile.",
+     "correct": false,
+     "feedback": "After adorer, use les: j’adore les maths."
+    },
+    {
+     "text": "Oui, j’adore les maths parce que.",
+     "correct": false,
+     "feedback": "Parce que needs a reason after it: parce que c’est utile."
+    }
+   ],
+   "explain": "Opinion + reason: j’adore les maths car (or parce que) c’est utile."
+  },
+  {
+   "id": "french.g-opinions.pense",
+   "topic": "french.g-opinions",
+   "kind": "fact",
+   "prompt": "How do you say **I think that**?",
+   "answer": "je pense que",
+   "distractors": [
+    "je pense de",
+    "je pense qui",
+    "je pense à"
+   ],
+   "explain": "Je pense que = I think that: je pense que c’est important.",
+   "lang": "fr",
+   "accept": [
+    "je crois que"
+   ]
+  },
+  {
+   "id": "french.g-opinions.amusant",
+   "topic": "french.g-opinions",
+   "kind": "fact",
+   "prompt": "How do you say **because it is fun**?",
+   "answer": "parce que c’est amusant",
+   "distractors": [
+    "parce que il est amusant",
+    "parce c’est amusant",
+    "parce que c’est amuser"
+   ],
+   "explain": "Parce que + c’est + adjective. Car c’est amusant also works.",
+   "lang": "fr",
+   "accept": [
+    "car c’est amusant",
+    "parce que c’est marrant",
+    "car c’est marrant"
+   ]
+  },
+  {
+   "id": "french.g-opinions.contre",
+   "topic": "french.g-opinions",
+   "kind": "mcq",
+   "prompt": "Which connective means **on the other hand**?",
+   "options": [
+    {
+     "text": "par contre",
+     "correct": true
+    },
+    {
+     "text": "par exemple",
+     "correct": false,
+     "feedback": "Par exemple = for example."
+    },
+    {
+     "text": "parce que",
+     "correct": false,
+     "feedback": "Parce que = because."
+    }
+   ],
+   "explain": "Par contre = on the other hand: j’aime le sport, par contre je déteste le rugby."
+  },
+  {
+   "id": "french.g-opinions.prefere",
+   "topic": "french.g-opinions",
+   "kind": "mcq",
+   "prompt": "Which means **I prefer French** (the school subject)?",
+   "options": [
+    {
+     "text": "Je préfère le français.",
+     "correct": true
+    },
+    {
+     "text": "Je préfère français.",
+     "correct": false,
+     "feedback": "Use le after préférer: le français."
+    },
+    {
+     "text": "Je préfère du français.",
+     "correct": false,
+     "feedback": "After préférer, use le: you mean the subject in general."
+    }
+   ],
+   "explain": "Je préfère le français: after verbs of liking, use le, la, l’ or les."
+  },
+  {
+   "id": "french.g-opinions.nul",
+   "topic": "french.g-opinions",
+   "kind": "fact",
+   "prompt": "What does **c’est nul** mean?",
+   "answer": "it’s rubbish",
+   "distractors": [
+    "it’s brilliant",
+    "it’s easy",
+    "it’s strange"
+   ],
+   "explain": "C’est nul = it’s rubbish, it’s useless.",
+   "accept": [
+    "it is rubbish",
+    "its rubbish",
+    "rubbish",
+    "it’s useless",
+    "it is useless",
+    "it’s awful",
+    "it is awful",
+    "it’s terrible",
+    "it is terrible",
+    "it’s bad",
+    "it is bad",
+    "it’s pointless",
+    "it’s hopeless",
+    "it’s lame"
+   ],
+   "hear": "c’est nul"
+  }
+ ]
+}
