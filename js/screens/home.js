@@ -17,6 +17,7 @@ import { restTime } from './util.js';
 import { pieceDue, currentPiece, nextPrompt, filledPrompt, unseenFeedback, currentBooks, readingThisWeek } from '../core/writing.js';
 import { handwritingLine, emptyHandwriting } from '../core/handwriting.js';
 import { questsCard } from '../ui/quests.js';
+import { wordCard } from '../ui/word.js';
 import { familyNow, familyHomeCard, notesHomeStrip, homePopups } from '../ui/family.js';
 
 
@@ -79,11 +80,12 @@ export function bonusCardInfo(state, db, today) {
   if (!bp || !bp.total) return null;
   const st = bonusStatusLine(state, db, today);
   const ready = [st.due ? `${st.due} to review` : null, st.lesson ? (bp.started ? 'next lesson ready' : null) : null, st.practice ? 'a practice round ready' : null].filter(Boolean).join(' · ');
-  const progress = `${bp.done} of ${bp.total} part${bp.total === 1 ? '' : 's'} finished`;
+  const progress = `${bp.done} of ${bp.total} part${bp.total === 1 ? '' : 's'} finished${bp.now && !bp.prized ? ` · on part ${bp.now}` : ''}`;
   if (bp.prized) {
     return { bp, complete: true, eyebrow: 'Bonus topic complete ✓', progress, ready, prize: `You won ${bp.def.prizeText}!`, button: st.empty ? null : 'Review it' };
   }
-  return { bp, complete: false, eyebrow: 'Bonus topic', progress: bp.started ? progress : `${bp.total} parts`, ready, prize: `Finish it to win ${bp.def.prizeText}.`, button: !bp.started ? 'Start the bonus topic' : st.empty ? null : 'Carry on', waiting: st.empty ? 'More to do tomorrow, when some questions are ready to review.' : null };
+  const waiting = st.capped ? `Two bonus sessions done today: great work! ${bp.def.title} is back tomorrow.` : 'More to do tomorrow, when some questions are ready to review.';
+  return { bp, complete: false, eyebrow: 'Bonus topic', progress: bp.started ? progress : `${bp.total} parts`, ready, prize: `Finish it to win ${bp.def.prizeText}.`, button: !bp.started ? 'Start the bonus topic' : st.empty ? null : 'Carry on', waiting: st.empty ? waiting : null };
 }
 
 /** The bonus topic, near the top of the page: open any time (not in the rest before bedtime). */
@@ -97,7 +99,7 @@ function bonusCard(app, rest) {
   const subj = SUBJECT_BY_ID[bp.def.subject];
   const wear = { ...(c.wear || (c.accessory && c.accessory !== 'none' ? { [slotOf(c.accessory)]: c.accessory } : {})) };
   for (const id of bp.def.prize) wear[slotOf(id)] = id;
-  const pct = Math.round((100 * bp.done) / bp.total);
+  const pct = Math.round((100 * (info.complete ? bp.total : bp.credit)) / bp.total);
   const go = () => app.go('#/play/bonus');
   return h('section', { class: `bonus-card${info.complete ? ' complete' : ''}`, style: { '--bonus': subj?.colour || 'var(--accent)' }, 'aria-label': `Bonus topic: ${bp.def.title}` },
     // a picture of the companion with the prize (just a preview: its lamp is not a switch here)
@@ -175,6 +177,7 @@ export function homeScreen(app) {
       h('button', { class: 'btn-icon', 'aria-label': 'Grown-ups', title: 'Grown-ups', onclick: () => app.go('#/parent') }, icon('lock'))),
     todayCard(app),
     questsCard(app, rest),
+    wordCard(app),
     bonusCard(app, rest),
     notesHomeStrip(app),
     statStrip(app),

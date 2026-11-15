@@ -1260,3 +1260,20 @@ button.gcard:active:not(:disabled) { transform: translateY(2px) scale(0.98); box
 .dressup-closed { margin: 8px 0 20px; }
 .dressup-closed h2 { margin-top: 0; }
 .dressup-closed .btn-primary { margin-top: 6px; }
+
+/* the bonus topic's end for the day (js/screens/play.js) */
+.bonus-today { font-weight: 600; color: var(--accent); }
+
+/* ---- word of the day (js/ui/word.js) ---- */
+.word-card { margin: 14px 0; border-left: 5px solid var(--accent); }
+.word-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 2px 0 4px; }
+.word-w { margin: 0; font-size: 1.7rem; letter-spacing: .01em; }
+.word-cls { font-size: .78rem; }
+.word-head .say-btn { margin-left: auto; }
+.word-eg { margin: 4px 0 10px; font-size: 1.05rem; }
+.word-reveal { width: 100%; }
+.word-meaning p { margin: 6px 0; }
+.word-try { color: var(--accent); font-weight: 600; }
+.word-prev { margin: 10px 0 0; padding-top: 8px; border-top: 1px dashed var(--line, rgba(127,127,127,.3)); }
+.word-prev-btn { background: none; border: 0; box-shadow: none; min-height: 0; padding: 8px 4px; border-radius: 6px; color: var(--accent); font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }
+.word-prev-btn:active:not(:disabled) { box-shadow: none; }

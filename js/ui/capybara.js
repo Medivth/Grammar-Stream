@@ -1,6 +1,6 @@
 // The companion, drawn as SVG: a capybara, an upright cartoon lion, a young heroine (Years 6 and 8)
 // or a boy hero (Years 2 and 3). Never decays, never dies; just changes mood. Accessories sit in
-// slots (head, face, body, front, back, hold, hand, friend, beside, ride), one per slot, so a helmet,
+// slots (head, ears, face, body, front, back, hold, hand, friend, beside, ride), one per slot, so a helmet,
 // armour, a cloak, a sword and a shield can be worn together. Riders (a horse, a rocket, a dragon…)
 // carry the whole companion: see MOUNTS. The prize lamps (`lamp`, `oillamp`) light up unless
 // `lit: false`, and sit in a `.companion-lamp` group so a screen can catch a tap on them.
@@ -184,9 +184,11 @@ export const ACCESSORIES = {
   lamp: 'Desk lamp',
   firstaid: 'First-aid kit',
   oillamp: 'Florence’s lantern',
+  earmuffs: 'Ear muffs',
 };
 
 export const SLOT = {
+  earmuffs: 'ears', // over the ears, so they go on with any hat or helmet (even the space helmet)
   glasses: 'face', sunglasses: 'face', goggles: 'face', mask: 'face', starglasses: 'face',
   scarf: 'front', bowtie: 'front', medal: 'front', camera: 'front',
   chiton: 'body', himation: 'body', toga: 'body', stola: 'body', linothorax: 'body', lorica: 'body',
@@ -206,7 +208,7 @@ export const SLOT = {
 };
 export const slotOf = (id) => SLOT[id] || 'head';
 /** How the wardrobe groups its slots. */
-export const SLOT_GROUPS = [['Head', ['head']], ['Face', ['face']], ['Clothes', ['body', 'front']], ['Hands', ['hold', 'hand']], ['Back', ['back']], ['Friends', ['friend']], ['Beside you', ['beside']], ['Ride', ['ride']]];
+export const SLOT_GROUPS = [['Head', ['head', 'ears']], ['Face', ['face']], ['Clothes', ['body', 'front']], ['Hands', ['hold', 'hand']], ['Back', ['back']], ['Friends', ['friend']], ['Beside you', ['beside']], ['Ride', ['ride']]];
 // a big wardrobe is split a little further: prizes first, then armour and dressing-up apart from everyday clothes
 export const PRIZES = new Set(['lamp', 'firstaid', 'oillamp']);
 const ARMOUR = new Set(['armour', 'lorica', 'linothorax', 'troopersuit', 'mecharmour', 'dragonarmour', 'vikingarmour', 'samurai', 'goldarmour']);
@@ -263,6 +265,12 @@ function accessory(kind, f) {
       return `<g><rect x="38" y="68" width="24" height="15" rx="6" fill="#1c1a33"/><rect x="65" y="68" width="24" height="15" rx="6" fill="#1c1a33"/><path d="M62 74 h3" stroke="#1c1a33" stroke-width="3"/><path d="M42 72 l6 0" stroke="#fff" stroke-width="2" opacity=".6"/><path d="M69 72 l6 0" stroke="#fff" stroke-width="2" opacity=".6"/></g>`;
     case 'goggles':
       return `<g><path d="M26 60 Q64 52 102 60" stroke="#3b3a4a" stroke-width="4" fill="none"/><circle cx="48" cy="60" r="11" fill="#bfe6ff" stroke="#3b3a4a" stroke-width="3"/><circle cx="80" cy="60" r="11" fill="#bfe6ff" stroke="#3b3a4a" stroke-width="3"/><path d="M43 56 l5 -2" stroke="#fff" stroke-width="2"/><path d="M75 56 l5 -2" stroke="#fff" stroke-width="2"/></g>`;
+    case 'earmuffs': {
+      // fluffy cups on a band: snug on the head, or bigger, on the outside of the space helmet's bubble
+      const [l, r, y, top, w] = HELMET ? [13, 115, 84, -18, 13] : [21, 107, 82, 4, 11.5];
+      const cup = (x) => `<g><circle cx="${x}" cy="${y}" r="${w}" fill="#f6f2ea"/>${Array.from({ length: 8 }, (_, i) => { const a = (i / 8) * Math.PI * 2; return `<circle cx="${(x + Math.cos(a) * w * 0.85).toFixed(1)}" cy="${(y + Math.sin(a) * w * 0.85).toFixed(1)}" r="${(w * 0.36).toFixed(1)}" fill="#fffdf8"/>`; }).join('')}<circle cx="${x}" cy="${y}" r="${(w * 0.5).toFixed(1)}" fill="#e3dccf"/></g>`;
+      return `<g><path d="M${l} ${y - 6} Q64 ${top} ${r} ${y - 6}" stroke="#d62f3a" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M${l + 4} ${y - 9} Q64 ${top + 6} ${r - 4} ${y - 9}" stroke="#ff7a85" stroke-width="1.6" fill="none" opacity=".7"/>${cup(l)}${cup(r)}</g>`;
+    }
     case 'headphones':
       return `<g><path d="M28 80 Q30 30 64 30 Q98 30 100 80" stroke="#2b2a3a" stroke-width="6" fill="none" stroke-linecap="round"/><rect x="20" y="68" width="14" height="24" rx="6" fill="#5143d9"/><rect x="94" y="68" width="14" height="24" rx="6" fill="#5143d9"/></g>`;
     case 'beanie':
@@ -358,12 +366,14 @@ function eyes(mood) {
 
 // whether the prize lamps are on (set for the length of one capybaraSVG call)
 let LIT = true;
+let HELMET = false; // the space helmet is on: ear muffs go round the outside of its glass bubble
 
 /** Returns an SVG string for the companion (species from opts.species, default capybara). */
 export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = 'none', wear, mood = 'neutral', title, fit = false, lit = true } = {}) {
   species ||= COURSE.young ? 'lion' : 'capybara';
   LIT = lit !== false;
   const worn = wornList({ wear, accessory: acc });
+  HELMET = worn.includes('astronaut');
   const mount = worn.find((a) => MOUNTS[a]);
   if (mount) return mountedSVG(mount, species, { fur, look, mood, title, lit, wear: Object.fromEntries(worn.filter((a) => a !== mount).map((a) => [slotOf(a), a])) }, fit);
   const layer = (slots) => worn.filter((a) => slots.includes(slotOf(a)));
@@ -400,7 +410,8 @@ export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = '
   <circle cx="68" cy="96" r="6" fill="#f2a0a0" opacity=".35"/>
   ${blinking(eyes(mood), mood)}
   ${draw(['face'])}
-  ${draw(['head'])}`)}
+  ${draw(['head'])}
+  ${draw(['ears'])}`)}
   </g>
 </svg>`;
 }
@@ -409,7 +420,7 @@ export function capybaraSVG({ species, fur = 'caramel', look, accessory: acc = '
 // eyes are drawn in the capybara's head coordinates and shifted onto the lion's face.
 const HEAD = 'translate(37 -16)';
 function lionSVG(f, worn, layer, mood, title) {
-  const draw = (slots) => layer(slots).filter((a) => a !== 'chariot').map((a) => (['head', 'face'].includes(slotOf(a)) ? `<g transform="${HEAD}">${accessory(a, f)}</g>` : lionBody(a, f))).join('');
+  const draw = (slots) => layer(slots).filter((a) => a !== 'chariot').map((a) => (['head', 'face', 'ears'].includes(slotOf(a)) ? `<g transform="${HEAD}">${accessory(a, f)}</g>` : lionBody(a, f))).join('');
   const riding = worn.some((a) => slotOf(a) === 'ride');
   const held = layer(['hold']).map((a) => `<g transform="translate(66 127) scale(.95)">${HOLD[a]}</g><circle cx="67" cy="127" r="5.5" fill="${f.light}"/>`).join('');
   // the paw waves (it is free unless a shield is on that arm)
@@ -447,6 +458,7 @@ function lionSVG(f, worn, layer, mood, title) {
   <g transform="${HEAD}">${blinking(eyes(mood), mood)}</g>
   ${draw(['face'])}
   ${draw(['head'])}
+  ${draw(['ears'])}
   ${draw(['friend'])}
   </g>
 </svg>`;
@@ -770,6 +782,7 @@ function heroineSVG(L, worn, layer, mood, title, boy = false) {
   ${hairOf(L, 'over', top)}
   ${scaled(['face'])}
   ${scaled(['head'])}
+  ${scaled(['ears'])}
   </g>`)}
   ${hold ? `<g transform="translate(74.5 117.5)">${HOLD[hold]}</g><circle cx="74.5" cy="117.5" r="4.3" fill="${skin}"/><path d="M71 116 h6" stroke="${skinD}" stroke-width="1" stroke-linecap="round"/>` : ''}
   ${shield}

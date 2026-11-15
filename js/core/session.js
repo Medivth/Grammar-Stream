@@ -375,9 +375,22 @@ export function bonusChoices(state, db) {
 }
 
 /**
- * How far through the bonus topic: a part is finished when every lesson in it is done and it
- * is secure. The prize is won when every part is finished (the win is then remembered in
- * state.bonusWon, so it is never taken away again).
+ * Remember each bonus part the first time it is finished (every lesson done and secure), in
+ * state.bonusParts. A finished part stays finished: one wrong answer later must not take it off
+ * the count, or the child is sent round the same parts again and again with "Carry on".
+ */
+export function noteBonusParts(state, db, today) {
+  const def = COURSE.bonus;
+  if (!def) return;
+  for (const id of bonusTopics(db)) {
+    if (state.bonusParts?.[id] == null && SECURE.includes(state.topics[id]?.state) && topicLearned(state, db, id)) (state.bonusParts ||= {})[id] = today;
+  }
+}
+
+/**
+ * How far through the bonus topic: a part is finished once every lesson in it is done and it has
+ * been secure (remembered, see noteBonusParts). The prize is won when every part is finished (the
+ * win is then remembered in state.bonusWon, so it is never taken away again).
  */
 export function bonusProgress(state, db) {
   const def = COURSE.bonus;
@@ -385,10 +398,13 @@ export function bonusProgress(state, db) {
   const ids = bonusTopics(db);
   const learned = ids.filter((id) => topicLearned(state, db, id));
   const secure = ids.filter((id) => SECURE.includes(state.topics[id]?.state));
-  const done = learned.filter((id) => secure.includes(id));
+  const done = ids.filter((id) => state.bonusParts?.[id] != null || (learned.includes(id) && secure.includes(id)));
   const complete = ids.length > 0 && done.length === ids.length;
   const won = state.bonusWon?.[def.id] != null;
-  return { def, ids, total: ids.length, started: ids.filter((id) => state.topics[id]).length, learned: learned.length, secure: secure.length, done: done.length, complete, won, prized: won || complete };
+  // the bar moves every session: a quarter for starting a part, half once its lessons are all taught, all when finished
+  const credit = ids.reduce((n, id) => n + (done.includes(id) ? 1 : learned.includes(id) ? 0.5 : state.topics[id] ? 0.25 : 0), 0);
+  const now = ids.findIndex((id) => state.topics[id] && !done.includes(id)) + 1; // the part being worked on (1-based), or 0
+  return { def, ids, total: ids.length, credit, now, started: ids.filter((id) => state.topics[id]).length, learned: learned.length, secure: secure.length, done: done.length, complete, won, prized: won || complete };
 }
 
 /**
@@ -399,6 +415,8 @@ export function bonusProgress(state, db) {
  */
 export function planBonus(state, db, today) {
   const def = COURSE.bonus;
+  // a clear end to the day: two bonus sessions, then it is back tomorrow (its reviews still come in the daily session)
+  if (bonusRunsToday(state, today) >= BONUS_PER_DAY) return { day: today, extra: true, bonus: def.id, subject: def.subject, steps: [{ t: 'done' }], pos: 0, results: [], yesterday: [], reasks: 0, started: Date.now(), capped: true };
   const ids = new Set(bonusTopics(db));
   const daily = state.plan?.day === today && !state.plan.finished ? state.plan : null;
   const waiting = new Set((daily ? daily.steps.slice(daily.pos) : []).map((s) => s.id).filter(Boolean));
@@ -408,7 +426,7 @@ export function planBonus(state, db, today) {
   const options = bonusChoices(state, db);
   if (options.length) steps.push({ t: 'choose', subject: def.subject, bonus: true, options });
   else if (!due.length) {
-    const shaky = [...ids].filter((id) => state.topics[id] && !SECURE.includes(state.topics[id].state));
+    const shaky = [...ids].filter((id) => state.topics[id] && !SECURE.includes(state.topics[id].state) && state.bonusParts?.[id] == null); // finished parts come back in the daily reviews instead
     const pool = Object.entries(state.cards)
       .filter(([id, c]) => shaky.includes(db.items[id]?.topic) && db.items[id].kind !== 'written' && c.state !== 'new' && c.lastDay < today && !waiting.has(id))
       .map(([id, c]) => ({ id, subject: db.items[id].subject, topic: db.items[id].topic, r: fsrsFor(db.items[id].subject).retrievability(c.s, today - c.lastDay) }))
@@ -419,11 +437,19 @@ export function planBonus(state, db, today) {
   return { day: today, extra: true, bonus: def.id, subject: def.subject, steps, pos: 0, results: [], yesterday: [], reasks: 0, started: Date.now() };
 }
 
+/** Bonus sessions a day: enough to make good progress, few enough that it ends (a 6-year-old otherwise goes round and round). */
+export const BONUS_PER_DAY = 2;
+export const bonusRunsToday = (state, today) => (state.bonusRuns?.day === today ? state.bonusRuns.n : 0);
+/** Count a finished bonus session (one with answers) towards today's two. */
+export function countBonusRun(state, today) {
+  state.bonusRuns = { day: today, n: bonusRunsToday(state, today) + 1 };
+}
+
 /** What the bonus card can promise: reviews due now, whether a lesson is ready, and whether there is anything to do at all. */
 export function bonusStatusLine(state, db, today) {
   const plan = planBonus(state, db, today);
   const due = plan.steps.filter((s) => s.t === 'review' && !s.practice).length;
-  return { due, lesson: plan.steps.some((s) => s.t === 'choose'), practice: plan.steps.some((s) => s.practice), empty: plan.steps.length === 1 };
+  return { due, lesson: plan.steps.some((s) => s.t === 'choose'), practice: plan.steps.some((s) => s.practice), empty: plan.steps.length === 1, capped: !!plan.capped };
 }
 
 /** Expand the chosen topic into lesson steps inserted after the choose step. */
@@ -530,6 +556,7 @@ export function submit(state, db, step, q, response, { ms = null, conf = null, n
     for (const tid of item.credits || []) {
       if (state.topics[tid]) state.topics[tid] = recordTopicAttempt(state.topics[tid], res.correct, today, { mixed: true, coverage: coverage(state, db, tid) });
     }
+    if (db.topics[item.topic]?.bonus) noteBonusParts(state, db, today);
   }
 
   // ability rating for procedural templates

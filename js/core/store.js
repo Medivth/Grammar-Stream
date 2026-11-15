@@ -64,6 +64,9 @@ export function emptyState(today) {
     collection: {}, // collectible cards: topicId -> day its card was earned (kept even if the topic slips; js/core/cards.js)
     cardSets: {}, // card sets completed: setId -> day (their prizes stay won)
     dressUp: null, // today's dressing-up time: { day, ms }
+    wordDays: [], // days the word of the day was opened (js/ui/word.js)
+    bonusRuns: null, // bonus sessions finished today: { day, n } (two a day)
+    bonusParts: {}, // bonus topic parts finished: topicId -> day (they stay finished; js/core/session.js)
     plan: null, // the in-progress day plan
     lastBackup: null,
   };

@@ -174,7 +174,7 @@ function badgesTab(app, body) {
   // grouped by where it is worn (prizes, armour, dressing up and laser swords on their own), so a big wardrobe stays tidy
   const items = Object.entries(ACCESSORIES).filter(([id]) => shown.has(id) && id !== 'none');
   const groups = WARDROBE_GROUPS.map((name) => [name, items.filter(([id]) => wardrobeGroup(id) === name)]).filter(([, list]) => list.length);
-  const PLACE = { head: 'on your head', face: 'on your face', body: 'on your body', front: 'round your neck', back: 'on your back', hold: 'in one hand', hand: 'a shield or kit on the other arm', friend: 'a friend beside you', beside: 'a lamp beside you', ride: 'something to ride' };
+  const PLACE = { head: 'on your head', ears: 'over your ears (even over a helmet)', face: 'on your face', body: 'on your body', front: 'round your neck', back: 'on your back', hold: 'in one hand', hand: 'a shield or kit on the other arm', friend: 'a friend beside you', beside: 'a lamp beside you', ride: 'something to ride' };
   const inUse = new Set(items.map(([id]) => slotOf(id)));
   const places = Object.keys(PLACE).filter((k) => inUse.has(k)).map((k) => PLACE[k]);
   if (places.length > 1) places.push(`and ${places.pop()}`);

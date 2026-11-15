@@ -6,7 +6,7 @@ import { renderVisual } from '../ui/visuals.js';
 import { capybaraEl } from '../ui/capybara.js';
 import { mapSVG, loadMap } from '../ui/mapview.js';
 import { speak, readAloudOn } from '../platform/tts.js';
-import { planDay, planExtra, planBonus, bonusChoices, bonusProgress, activePlan, chooseTopic, topicChoices, questionFor, submit, startSession, finishSession, daysPractisedThisMonth, CONF } from '../core/session.js';
+import { planDay, planExtra, planBonus, bonusChoices, bonusProgress, noteBonusParts, countBonusRun, bonusRunsToday, BONUS_PER_DAY, activePlan, chooseTopic, topicChoices, questionFor, submit, startSession, finishSession, daysPractisedThisMonth, CONF } from '../core/session.js';
 import { startPlacement, nextProbe, probeQuestion, answerProbe, applyPlacement } from '../core/placement.js';
 import { checkSentence } from '../core/checkers.js';
 import { learnText, present } from '../core/present.js';
@@ -697,8 +697,13 @@ function extraDoneStep(app, root, plan) {
   const { state, db } = app;
   plan.finished = true;
   state.extraOn = false;
+  if (plan.bonus) {
+    noteBonusParts(state, db, app.today());
+    if (plan.results.length && !plan.counted) { countBonusRun(state, app.today()); plan.counted = true; }
+  }
   app.save();
   const subj = SUBJECT_BY_ID[plan.subject];
+  const restOfDay = plan.bonus && bonusRunsToday(state, app.today()) >= BONUS_PER_DAY; // the bonus is done for today
   const right = plan.results.filter((r) => r.correct).length;
   const learned = (plan.topics || []).map((t) => db.topics[t]?.title).filter(Boolean);
   const c = state.profile?.companion || {};
@@ -706,19 +711,20 @@ function extraDoneStep(app, root, plan) {
   const bp = plan.bonus ? bonusProgress(state, db) : null;
   const again = plan.bonus ? '#/play/bonus' : `#/play/${plan.subject}`;
   const nothing = plan.bonus
-    ? (bp.complete ? `You’ve finished ${bp.def.title}. Its reviews will come back in your daily sessions, so you keep it.` : `Nothing to do in ${bp.def.title} just now. Come back tomorrow, when some questions are ready to review.`)
+    ? (bp.complete ? `You’ve finished ${bp.def.title}. Its reviews will come back in your daily sessions, so you keep it.` : plan.capped ? `That’s two bonus sessions today. ${bp.def.title} is back tomorrow.` : `Nothing to do in ${bp.def.title} just now. Come back tomorrow, when some questions are ready to review.`)
     : `Nothing to review in ${subj?.name || 'this subject'} just now, and no new topic is ready yet. Come back tomorrow, or try today’s session.`;
   mount(root, h('div', { class: 'q-wrap stack center' },
     plan.results.length ? finishLine() : null,
     prize || capybaraEl({ ...c, mood: 'happy' }, 'capy bob'),
     prize ? null : h('div', { class: 'eyebrow' }, plan.bonus ? `Bonus topic: ${bp.def.title}` : `${subj?.name || ''} practice`), prize ? null : h('h1', {}, plan.results.length || learned.length ? 'Well done!' : 'All caught up'),
     plan.results.length ? h('p', {}, `${right} of ${plan.results.length} right.${learned.length ? ` ${plan.bonus ? 'Today' : 'New'}: ${learned.join(', ')}.` : ''}`) : prize ? null : h('p', { class: 'muted' }, nothing),
-    plan.bonus && !bp.complete && bp.total ? h('p', { class: 'muted' }, `${bp.done} of ${bp.total} parts finished. Finish them all to win ${bp.def.prizeText}.`) : null,
+    plan.bonus && !bp.complete && bp.total ? h('p', { class: 'muted' }, `${bp.done} of ${bp.total} parts finished${bp.now ? `, and you’re on part ${bp.now}` : ''}. Finish them all to win ${bp.def.prizeText}.`) : null,
+    restOfDay && plan.results.length && !prize ? h('p', { class: 'bonus-today' }, `That’s the bonus topic done for today. ${bp.def.title} will be waiting tomorrow.`) : null,
     newCardsReveal(app, plan),
     newBadges(app, plan),
     h('div', { class: 'row', style: { justifyContent: 'center' } },
       h('button', { class: prize ? 'btn-ghost btn-big' : 'btn-primary btn-big', onclick: () => app.go('#/home') }, 'Back home'),
-      plan.results.length && !prize ? h('button', { class: 'btn-ghost btn-big', onclick: () => { state.extra = null; app.go(again); } }, 'A bit more') : null)));
+      plan.results.length && !prize && !restOfDay ? h('button', { class: 'btn-ghost btn-big', onclick: () => { state.extra = null; app.go(again); } }, 'A bit more') : null)));
 }
 
 function doneStep(app, root) {

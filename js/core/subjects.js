@@ -3,7 +3,7 @@
 // that imported them see the active course. Subject order is the rotation order for new learning.
 
 // racing, space, superheroes, dinosaurs and knights for Years 2 and 3 (the trophy, the hero suit and the big rides are earned)
-const YOUNG_STARTER = ['racesuit', 'flag', 'gokart', 'spacesuit', 'saturn', 'alien', 'heroshield', 'dinohood', 'fossilhammer', 'babydino', 'armour', 'sword', 'crestshield'];
+const YOUNG_STARTER = ['earmuffs', 'racesuit', 'flag', 'gokart', 'spacesuit', 'saturn', 'alien', 'heroshield', 'dinohood', 'fossilhammer', 'babydino', 'armour', 'sword', 'crestshield'];
 
 // Years 2 and 3: a special history module chosen from the home page any time (its topics carry bonus: 'nightingale')
 const NIGHTINGALE = {
@@ -39,7 +39,7 @@ export const COURSES = {
     },
     writing: true,
     readAloud: false,
-    starter: ['none', 'yuzu', 'flower', 'bow', 'glasses', 'scarf', 'bird', 'chef', 'partyhat',
+    starter: ['none', 'yuzu', 'flower', 'bow', 'glasses', 'scarf', 'bird', 'chef', 'partyhat', 'earmuffs',
       // art, science, books, music, friends and wheels; then a Roman set (the helmet, armour, laurel, chariot and pony are earned)
       'beret', 'palette', 'paintbrush', 'flowercrown', 'sunhat', 'headband', 'camera', 'telescope', 'microscope', 'book', 'violin', 'cat', 'fox', 'rollerskates', 'bicycle',
       'toga', 'stola', 'scroll', 'scutum', 'gladius', 'olivebranch'],
@@ -118,7 +118,7 @@ export const COURSES = {
     extra: ['greek'], // practise any time, outside the daily session
     writing: true,
     readAloud: false,
-    starter: ['none', 'glasses', 'scarf', 'bird', 'yuzu', 'flower', 'bow', 'laurel', 'corinthian', 'shield', 'owl',
+    starter: ['none', 'glasses', 'scarf', 'bird', 'yuzu', 'flower', 'bow', 'laurel', 'corinthian', 'shield', 'owl', 'earmuffs',
       // Greek and Roman things to start with; the armour, the centurion's helmet, the cloak and the chariot are earned
       'olive', 'chiton', 'himation', 'toga', 'stola', 'aspis', 'scutum', 'dory', 'xiphos', 'gladius', 'lyre', 'scroll', 'olivebranch', 'torch'],
     companions: ['capybara', 'lion', 'heroine'], // she can keep her lion, or choose a young heroine

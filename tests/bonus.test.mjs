@@ -199,9 +199,9 @@ for (const course of ['y6', 'ks1', 'y3']) {
     assert.match(info.prize, /^You won /);
     assert.match(bonusLine(state, db), /4 of 4 parts finished.*Prize won/);
 
-    // once won, the prize stays even if a part slips back
+    // once won, the prize stays even if a part slips back (and a finished part stays finished)
     state.topics[ids[2]] = { ...state.topics[ids[2]], state: 'learning', ema: 0.4 };
-    assert.equal(bonusProgress(state, db).complete, false);
+    assert.equal(bonusProgress(state, db).complete, true);
     for (const id of prize) assert.ok(unlockedAccessories(state, db).has(id), `${id} kept`);
 
     // bonus reviews come back in the daily session too
@@ -227,6 +227,7 @@ for (const course of ['y6', 'ks1', 'y3']) {
     }
     assert.ok(ids.every((id) => topicLearned(state, db, id)), 'all taught');
     state.topics[ids[3]] = { ...state.topics[ids[3]], state: 'learning', ema: 0.55 };
+    if (state.bonusParts) delete state.bonusParts[ids[3]]; // a part never yet finished
     // the next day, with nothing due
     for (const c of Object.values(state.cards)) c.due = today + 5;
     const plan = planBonus(state, db, today);
@@ -280,4 +281,39 @@ test('tapping the lamp switches it off and on again, remembered on the companion
   assert.ok(wearsLamp({ accessory: 'oillamp' }));
   assert.ok(!wearsLamp({ wear: { hold: 'firstaid' } }));
   assert.ok(!wearsLamp({}));
+});
+
+test('a finished bonus part stays finished when a later answer is wrong (no going round in circles)', () => {
+  const db = dbWithFake('ks1');
+  const today = 20800;
+  const state = newState('ks1', today);
+  const [first] = bonusTopics(db);
+  // play bonus sessions, all right, until the first part is finished
+  for (let i = 0; i < 6 && !state.bonusParts?.[first]; i++) bonusSession(state, db, today);
+  assert.ok(state.bonusParts?.[first] != null, 'the first part is remembered as finished');
+  const before = bonusProgress(state, db).done;
+  // it slips back to learning after some wrong answers
+  state.topics[first] = { ...state.topics[first], state: 'learning', ema: 0.3 };
+  assert.equal(bonusProgress(state, db).done, before, 'the count does not go down');
+  // and it is not offered again as a practice round
+  const plan = planBonus(state, db, today + 1);
+  assert.ok(!plan.steps.some((s) => s.practice && db.items[s.id]?.topic === first));
+});
+
+test('two bonus sessions a day, then it says it is back tomorrow', async () => {
+  const { countBonusRun, bonusStatusLine, BONUS_PER_DAY } = await import('../js/core/session.js');
+  const db = dbWithFake('ks1');
+  const today = 20800;
+  const state = newState('ks1', today);
+  assert.equal(BONUS_PER_DAY, 2);
+  bonusSession(state, db, today); countBonusRun(state, today);
+  assert.ok(!bonusStatusLine(state, db, today).empty, 'a second session is open');
+  bonusSession(state, db, today); countBonusRun(state, today);
+  const st = bonusStatusLine(state, db, today);
+  assert.ok(st.empty && st.capped, 'no third session today');
+  assert.deepEqual(planBonus(state, db, today).steps, [{ t: 'done' }]);
+  const info = bonusCardInfo(state, db, today);
+  assert.equal(info.button, null);
+  assert.match(info.waiting, /back tomorrow/);
+  assert.ok(!bonusStatusLine(state, db, today + 1).capped, 'open again tomorrow');
 });
