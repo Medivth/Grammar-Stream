@@ -689,7 +689,9 @@ export const Y8_FRENCH_GENERATORS = {
     }
     const reflexive = level === 3 && rng.chance(0.4);
     const vb = rng.pick(reflexive ? REFLEXIVE.filter((x) => !x.noPerfect) : level === 1 ? ETRE_ONLY : ETRE_ALL);
-    const negative = level === 3 && vb.inf !== 'naître' && rng.chance(0.25);
+    // devenir needs a complement (“became a doctor”) and naître has no simple negative, so they are only drilled as forms
+    const formOnly = vb.inf === 'devenir' || vb.inf === 'naître';
+    const negative = level === 3 && !formOnly && rng.chance(0.25);
     const answer = perfectEtre(vb, s, negative);
     const pp = agree(vb.pp, s.g, s.pl);
     const aux = reflexive ? refl(s.p, ETRE[s.p]) : ETRE[s.p];
@@ -705,7 +707,7 @@ export const Y8_FRENCH_GENERATORS = {
       return choice(`Which is the perfect tense of **${vb.inf}** (to ${vb.en}) for **${s.fr}**${sw}?`, answer, [`${subj(s.fr, AVOIR[s.p])} ${vb.pp}`, ...rng.shuffle(forms).map((x) => `${subj(s.fr, aux)} ${x}`)], rng, { explain, steps });
     }
     const accept = perfectAccept(answer, s);
-    if (level === 3 && rng.chance(0.5)) return typed(`How do you say **${en}**${sw} in French? Use the perfect tense.`, answer, accept, { explain, steps });
+    if (level === 3 && !formOnly && rng.chance(0.5)) return typed(`How do you say **${en}**${sw} in French? Use the perfect tense.`, answer, accept, { explain, steps });
     return typed(`Write the perfect tense of **${vb.inf}** (to ${vb.en}) for **${s.fr}**${sw}${negative ? ', in the negative (ne… pas)' : ''}.`, answer, accept, { explain, steps });
   },
 
@@ -818,7 +820,7 @@ export const Y8_FRENCH_GENERATORS = {
       const en = pl ? `the ${b.en} ${c.en} ${enNoun}` : `${anA(b.en)} ${b.en} ${c.en} ${enNoun}`;
       const wrongs = [`${art} ${noun} ${bf} ${cf}`, `${art} ${bf} ${cf} ${noun}`, `${art} ${b.forms[0]} ${noun} ${c.forms[0]}`, `${art} ${cf} ${noun} ${bf}`];
       return choice(`How do you say **${en}**?`, right, wrongs, rng, {
-        explain: `${en} = ${right}: ${bf} is a BAGS adjective (before the noun), ${cf} is a colour or shape word (after it), and both agree with ${noun}.`,
+        explain: `${en} = ${right}: ${bf} is a BAGS adjective (before the noun), ${cf} goes after it (as colours and most adjectives do), and both agree with ${noun}.`,
         steps: [`${t.fr} is ${GENDER[t.g]}${pl ? ', and here it is plural' : ''}: both adjectives agree (${bf}, ${cf}).`, 'BAGS adjectives (beauty, age, goodness, size) go before the noun; colours and most others go after it.', `So: ${right}.`],
       });
     }
@@ -834,7 +836,8 @@ export const Y8_FRENCH_GENERATORS = {
     ];
     if (level === 2) {
       const wrongs = [...new Set(a.forms)].filter((x) => x !== adj).map((x) => (a.before ? `${art} ${x} ${noun}` : `${art} ${noun} ${x}`));
-      wrongs.unshift(a.before ? `${art} ${noun} ${adj}` : `${art} ${adj} ${noun}`);
+      // the wrong position, except for adjectives that can follow the noun with another meaning (un homme grand, le vin nouveau)
+      if (!['grand', 'nouveau', 'vieux'].includes(k)) wrongs.unshift(a.before ? `${art} ${noun} ${adj}` : `${art} ${adj} ${noun}`);
       return choice(`How do you say **${en}**?`, phrase, wrongs, rng, { explain: `${en} = ${phrase}.`, steps });
     }
     return typed(`Write in French: **${en}**`, phrase, [], { explain: `${en} = ${phrase}.`, steps });
@@ -897,7 +900,7 @@ export const Y8_FRENCH_GENERATORS = {
       `So: ${answer}`,
     ];
     const explain = `“${pos}” → ${answer}`;
-    if (level === 1) return choice(`Which is the negative (ne… pas) of **${pos}**`, answer, negativeWrongs(pos, pattern), rng, { explain, steps, hear: pos });
+    if (level === 1) return choice(`Make this negative with **ne… pas**: **${pos}**`, answer, negativeWrongs(pos, pattern), rng, { explain, steps, hear: pos });
     return typed(`Make this negative with **ne… ${w}** (${en}): **${pos}**`, answer, [], { explain, steps, hear: pos });
   },
 };

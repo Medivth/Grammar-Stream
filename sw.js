@@ -1,6 +1,6 @@
 // Service worker: precache everything so the app works fully offline after the first visit.
 // GENERATED from tools/sw-template.js by tools/gen-precache.mjs — do not edit sw.js by hand.
-const VERSION = '61f73c536e0f';
+const VERSION = 'db8a61418bf2';
 const FILES = [
  "./",
  "./index.html",
@@ -204,6 +204,9 @@ const FILES = [
  "./content/y8/english/y8-lang2.json",
  "./content/y8/english/y8-lit.json",
  "./content/y8/english/y8-lit2.json",
+ "./content/y8/french/y8-grammar.json",
+ "./content/y8/french/y8-reading.json",
+ "./content/y8/french/y8.json",
  "./content/y8/geography/y8-more.json",
  "./content/y8/geography/y8.json",
  "./content/y8/greek/y8-grammar.json",
