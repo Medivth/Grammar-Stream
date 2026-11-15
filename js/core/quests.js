@@ -127,7 +127,7 @@ export function questStatus(q, state, db, today, course = COURSE) {
       const n = answersOutside(state, db, today, (it) => db.topics[it.topic]?.bonus === id);
       const ex = state.extra;
       const finished = ex?.day === today && ex.finished && ex.bonus === id && ex.results.length > 0;
-      return { ...q, title: `Do a bonus lesson: ${course.bonus?.title || ''}`.trim(), go: '#/play/bonus', done: n >= EXTRA_ANSWERS || finished };
+      return { ...q, title: `${course.bonus?.label ? `Do a ${course.bonus.short.toLowerCase()} lesson` : 'Do a bonus lesson'}: ${course.bonus?.title || ''}`.trim(), go: '#/play/bonus', done: n >= EXTRA_ANSWERS || finished };
     }
     case 'sprint': {
       const best = Math.max(-1, ...(state.sprints || []).filter((s) => s.day === today).map((s) => s.correct));

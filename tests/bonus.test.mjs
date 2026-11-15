@@ -63,7 +63,7 @@ function bonusSession(state, db, today, right) {
 
 const newState = (course, today) => { const s = emptyState(today); s.course = course; s.profile = { childName: 'Sam', companion: { name: 'Leo' } }; return s; };
 
-test('Year 6 has an electricity bonus in science; Years 2 and 3 a Florence Nightingale bonus in history; Year 8 none', () => {
+test('Year 6 has an electricity bonus in science; Years 2 and 3 a Florence Nightingale bonus in history; Year 8 a school focus', () => {
   assert.deepEqual({ ...COURSES.y6.bonus, blurb: undefined, prizeText: undefined }, { id: 'electricity', subject: 'science', title: 'Electricity', blurb: undefined, prize: ['lamp', 'labcoat'], prizeText: undefined });
   for (const c of ['ks1', 'y3']) {
     const b = COURSES[c].bonus;
@@ -72,7 +72,7 @@ test('Year 6 has an electricity bonus in science; Years 2 and 3 a Florence Night
     assert.equal(b.title, 'Florence Nightingale');
     assert.deepEqual(b.prize, ['firstaid', 'oillamp', 'goldarmour']);
   }
-  assert.equal(COURSES.y8.bonus, undefined);
+  assert.equal(COURSES.y8.bonus.id, 'focus', 'Year 8: the areas from her school maths report');
   for (const c of ['y6', 'ks1', 'y3']) {
     const b = COURSES[c].bonus;
     assert.ok(b.blurb.length > 20 && b.blurb.length < 140, `${c} blurb is a short line`);
@@ -261,9 +261,8 @@ test('with nothing at all to do, the card says so rather than offering an empty 
 
 test('no bonus card for a course without one, or before its content exists', () => {
   setCourse('y8');
-  const db8 = buildDB(decksFor('index-y8.json'));
-  assert.equal(bonusProgress(newState('y8', 20800), db8), null);
-  assert.equal(bonusCardInfo(newState('y8', 20800), db8, 20800), null);
+  const db8 = buildDB(decksFor('index-y8.json').filter((d) => d.deck !== 'y8-focus'));
+  assert.equal(bonusCardInfo(newState('y8', 20800), db8, 20800), null, 'Year 8 without its school-focus deck');
   setCourse('y6');
   const empty = buildDB(decksFor('index.json').map((d) => (d.deck === 'bonus-electricity' ? { ...d, topics: [], items: [] } : d)));
   assert.equal(bonusCardInfo(newState('y6', 20800), empty, 20800), null);

@@ -134,7 +134,7 @@ const LINES = {
   bonusNew: {
     young: (b) => `Psst! The ${b.title} bonus topic is ready whenever you are.`,
     y6: (b) => `Fancy something extra? The ${b.title} bonus topic is ready.`,
-    y8: (b) => `A bonus topic awaits: ${b.title}.`,
+    y8: (b) => `Your school focus is ready: ${b.title}. Red ones first.`,
   },
   bonusGoing: {
     young: (b) => `${b.done} of ${b.total} parts of ${b.title} done. Your prize is waiting at the end!`,

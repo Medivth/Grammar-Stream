@@ -12,6 +12,25 @@ const NIGHTINGALE = {
   prize: ['firstaid', 'oillamp', 'goldarmour'], prizeText: 'Florence’s lantern, a first-aid kit and the golden champion armour',
 };
 
+// Year 8: the areas from her school maths report, as a front-page module (its topics carry bonus: 'focus').
+// rag: the report's colour for each part, shown on the card; the parts are taught red first.
+const SCHOOL_FOCUS = {
+  id: 'focus', subject: 'maths', title: 'Maths from your report',
+  label: 'School focus', short: 'Focus', the: 'your school focus',
+  blurb: 'The ten areas from your maths report, red ones first: practise them until they are secure.',
+  prize: ['goldlaurel'], prizeText: 'the golden laurel wreath, the prize of the Olympic champions',
+  rag: {
+    'maths.focus-pythag': 'red', 'maths.focus-reverse': 'red',
+    'maths.focus-linear': 'amber', 'maths.focus-gradient': 'amber', 'maths.focus-estimate': 'amber', 'maths.focus-symmetry': 'amber', 'maths.focus-equations': 'amber', 'maths.focus-calculator': 'amber',
+    'maths.focus-triangles': 'green', 'maths.focus-fractions': 'green',
+  },
+};
+
+/** How a course's bonus module is named on screen ("Bonus topic", or Year 8's "School focus"). */
+export function bonusWords(def) {
+  return { label: def?.label || 'Bonus topic', short: def?.short || 'Bonus', the: def?.the || 'the bonus topic' };
+}
+
 export const COURSES = {
   y6: {
     id: 'y6', title: 'Year 6 to grammar school', short: 'Year 6 → 7',
@@ -122,6 +141,7 @@ export const COURSES = {
       // Greek and Roman things to start with; the armour, the centurion's helmet, the cloak and the chariot are earned
       'olive', 'chiton', 'himation', 'toga', 'stola', 'aspis', 'scutum', 'dory', 'xiphos', 'gladius', 'lyre', 'scroll', 'olivebranch', 'torch'],
     companions: ['capybara', 'lion', 'heroine'], // she can keep her lion, or choose a young heroine
+    bonus: SCHOOL_FOCUS,
   },
 };
 

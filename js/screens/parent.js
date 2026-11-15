@@ -73,7 +73,7 @@ export function bonusLine(state, db) {
   const bp = bonusProgress(state, db);
   if (!bp?.total) return null;
   const day = state.bonusWon?.[bp.def.id];
-  const head = `Bonus topic, ${bp.def.title}: ${bp.done} of ${bp.total} parts finished (every lesson done and secure)`;
+  const head = `${bp.def.label || 'Bonus topic'}, ${bp.def.title}: ${bp.done} of ${bp.total} parts finished (every lesson done and secure)`;
   const more = bp.started > bp.done ? `, ${bp.started - bp.done} more under way` : '';
   const prize = bp.prized ? `Prize won${day != null ? ` on ${formatDay(day, { weekday: 'short', day: 'numeric', month: 'short' })}` : ''}: ${bp.def.prizeText}.` : `Finishing every part wins ${bp.def.prizeText}.`;
   return `${head}${more}. ${prize} {She} chooses it from the card on {her} home page, any time; its reviews also come back in the daily session.`;

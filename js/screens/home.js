@@ -7,7 +7,7 @@ import { companionSpot } from '../ui/alive.js';
 import { talkContext, companionLines } from '../ui/companion-talk.js';
 import { journeyMap, journeyStrip } from '../ui/journey.js';
 import { icon, SUBJECT_ICON } from '../ui/icons.js';
-import { SUBJECT_BY_ID, COURSE, isStretch } from '../core/subjects.js';
+import { SUBJECT_BY_ID, COURSE, isStretch, bonusWords } from '../core/subjects.js';
 import { paperSpec } from '../gen/paper.js';
 import { topicStatus, stretchReady } from '../core/mastery.js';
 import { daysPractisedThisMonth, planDay, extraStatus, bonusProgress, bonusStatusLine, bonusStatus } from '../core/session.js';
@@ -80,12 +80,13 @@ export function bonusCardInfo(state, db, today) {
   if (!bp || !bp.total) return null;
   const st = bonusStatusLine(state, db, today);
   const ready = [st.due ? `${st.due} to review` : null, st.lesson ? (bp.started ? 'next lesson ready' : null) : null, st.practice ? 'a practice round ready' : null].filter(Boolean).join(' · ');
+  const words = bonusWords(bp.def);
   const progress = `${bp.done} of ${bp.total} part${bp.total === 1 ? '' : 's'} finished${bp.now && !bp.prized ? ` · on part ${bp.now}` : ''}`;
   if (bp.prized) {
-    return { bp, complete: true, eyebrow: 'Bonus topic complete ✓', progress, ready, prize: `You won ${bp.def.prizeText}!`, button: st.empty ? null : 'Review it' };
+    return { bp, complete: true, eyebrow: `${words.label} complete ✓`, progress, ready, prize: `You won ${bp.def.prizeText}!`, button: st.empty ? null : 'Review it' };
   }
-  const waiting = st.capped ? `Two bonus sessions done today: great work! ${bp.def.title} is back tomorrow.` : 'More to do tomorrow, when some questions are ready to review.';
-  return { bp, complete: false, eyebrow: 'Bonus topic', progress: bp.started ? progress : `${bp.total} parts`, ready, prize: `Finish it to win ${bp.def.prizeText}.`, button: !bp.started ? 'Start the bonus topic' : st.empty ? null : 'Carry on', waiting: st.empty ? waiting : null };
+  const waiting = st.capped ? `Two ${words.short.toLowerCase()} sessions done today: great work! ${bp.def.title} is back tomorrow.` : 'More to do tomorrow, when some questions are ready to review.';
+  return { bp, complete: false, eyebrow: words.label, progress: bp.started ? progress : `${bp.total} parts`, ready, prize: `Finish it to win ${bp.def.prizeText}.`, button: !bp.started ? `Start ${words.the}` : st.empty ? null : 'Carry on', waiting: st.empty ? waiting : null };
 }
 
 /** The bonus topic, near the top of the page: open any time (not in the rest before bedtime). */
@@ -101,13 +102,14 @@ function bonusCard(app, rest) {
   for (const id of bp.def.prize) wear[slotOf(id)] = id;
   const pct = Math.round((100 * (info.complete ? bp.total : bp.credit)) / bp.total);
   const go = () => app.go('#/play/bonus');
-  return h('section', { class: `bonus-card${info.complete ? ' complete' : ''}`, style: { '--bonus': subj?.colour || 'var(--accent)' }, 'aria-label': `Bonus topic: ${bp.def.title}` },
+  return h('section', { class: `bonus-card${info.complete ? ' complete' : ''}`, style: { '--bonus': subj?.colour || 'var(--accent)' }, 'aria-label': `${bonusWords(bp.def).label}: ${bp.def.title}` },
     // a picture of the companion with the prize (just a preview: its lamp is not a switch here)
     h('div', { class: 'bonus-art', 'data-no-lamp': '', 'aria-hidden': 'true' }, capybaraEl({ ...c, wear, accessory: bp.def.prize.at(-1), mood: 'happy', scene: undefined, lit: true }, 'capy')),
     h('div', { class: 'bonus-txt' },
       h('div', { class: 'eyebrow' }, info.complete ? null : icon('star'), info.complete ? info.eyebrow : ` ${info.eyebrow}`),
       h('h2', {}, bp.def.title),
       info.complete ? null : h('p', { class: 'bonus-blurb' }, bp.def.blurb),
+      bp.def.rag ? ragList(state, db, bp) : null,
       h('div', { class: 'bonus-progress' },
         h('span', { class: 'bonus-bar', role: 'progressbar', 'aria-valuenow': pct, 'aria-valuemin': 0, 'aria-valuemax': 100, 'aria-label': info.progress }, h('i', { style: { width: `${pct}%` } })),
         h('span', {}, info.progress)),
@@ -115,6 +117,16 @@ function bonusCard(app, rest) {
       info.ready && info.button ? h('p', { class: 'bonus-ready' }, info.ready) : null,
       info.button ? h('button', { class: 'btn-bonus', type: 'button', onclick: go }, icon('play'), ` ${info.button}`)
         : h('p', { class: 'bonus-ready' }, info.complete ? 'All reviewed for now. Its questions come back in your daily sessions.' : info.waiting)));
+}
+
+/** A report's areas as coloured chips (red, amber, green), ticked once finished. */
+function ragList(state, db, bp) {
+  const done = new Set(bp.ids.filter((id) => state.bonusParts?.[id] != null));
+  const NAME = { red: 'Red', amber: 'Amber', green: 'Green' };
+  return h('ul', { class: 'rag-list', 'aria-label': 'Areas from the report' }, bp.ids.map((id) => {
+    const rag = bp.def.rag[id] || 'amber', fin = done.has(id);
+    return h('li', { class: `rag rag-${rag}${fin ? ' fin' : ''}`, title: `${NAME[rag]}${fin ? ': finished' : ''}` }, h('span', { class: 'rag-dot', 'aria-label': NAME[rag] }), db.topics[id]?.title || id, fin ? h('span', { class: 'rag-tick', 'aria-label': 'finished' }, ' ✓') : null);
+  }));
 }
 
 function statStrip(app) {

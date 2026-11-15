@@ -185,6 +185,7 @@ export const ACCESSORIES = {
   firstaid: 'First-aid kit',
   oillamp: 'Florence’s lantern',
   earmuffs: 'Ear muffs',
+  goldlaurel: 'Golden laurel wreath',
 };
 
 export const SLOT = {
@@ -210,7 +211,7 @@ export const slotOf = (id) => SLOT[id] || 'head';
 /** How the wardrobe groups its slots. */
 export const SLOT_GROUPS = [['Head', ['head', 'ears']], ['Face', ['face']], ['Clothes', ['body', 'front']], ['Hands', ['hold', 'hand']], ['Back', ['back']], ['Friends', ['friend']], ['Beside you', ['beside']], ['Ride', ['ride']]];
 // a big wardrobe is split a little further: prizes first, then armour and dressing-up apart from everyday clothes
-export const PRIZES = new Set(['lamp', 'firstaid', 'oillamp']);
+export const PRIZES = new Set(['lamp', 'firstaid', 'oillamp', 'goldlaurel']);
 const ARMOUR = new Set(['armour', 'lorica', 'linothorax', 'troopersuit', 'mecharmour', 'dragonarmour', 'vikingarmour', 'samurai', 'goldarmour']);
 const DRESSING_UP = new Set(['tudorgown', 'regency', 'victorian', 'ballgown', 'tutu', 'labcoat', 'detective', 'explorerkit', 'wizardrobe']);
 const LASERS = new Set(['laserblue', 'lasergreen', 'laserred', 'laserpurple']);
@@ -297,6 +298,9 @@ function accessory(kind, f) {
       return `<g><path d="M47 56 L64 22 L81 56 Z" fill="#ff8a3d"/><path d="M53 44 L75 44 M50 51 L78 51 M57 34 L71 34" stroke="#ffd166" stroke-width="3.5"/><circle cx="64" cy="22" r="5.5" fill="#d63d74"/></g>`;
     case 'astronaut':
       return `<g><circle cx="64" cy="82" r="50" fill="#bfe6ff" opacity=".28" stroke="#c7ced9" stroke-width="6"/><path d="M30 50 Q40 38 54 36" stroke="#fff" stroke-width="4" fill="none" opacity=".8" stroke-linecap="round"/><rect x="40" y="126" width="48" height="10" rx="5" fill="#e3e7ee" stroke="#c7ced9" stroke-width="2"/></g>`;
+    case 'goldlaurel':
+      // the champion's wreath: the laurel in gold leaf, with a glint
+      return `<g>${[200, 215, 230, 245, 260, 280, 295, 310, 325, 340].map((a) => { const t = (a * Math.PI) / 180, x = 64 + Math.cos(t) * 40, y = 70 + Math.sin(t) * 30; return `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="8.5" ry="4.3" transform="rotate(${a + 90} ${x.toFixed(1)} ${y.toFixed(1)})" fill="#e8b923" stroke="#a87b0c" stroke-width="1"/>`; }).join('')}<ellipse cx="40" cy="50" rx="3" ry="1.4" fill="#fff6c8" transform="rotate(-35 40 50)"/><ellipse cx="88" cy="50" rx="3" ry="1.4" fill="#fff6c8" transform="rotate(35 88 50)"/><circle cx="64" cy="41" r="4.2" fill="#d62f3a" stroke="#fff3" stroke-width="1"/></g>`;
     case 'laurel':
       return `<g fill="#5c9a3c">${[200, 215, 230, 245, 260, 280, 295, 310, 325, 340].map((a) => { const t = (a * Math.PI) / 180, x = 64 + Math.cos(t) * 40, y = 70 + Math.sin(t) * 30; return `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="8" ry="4" transform="rotate(${a + 90} ${x.toFixed(1)} ${y.toFixed(1)})"/>`; }).join('')}<circle cx="64" cy="41" r="3.5" fill="#ffd166"/></g>`;
     case 'corinthian':
@@ -609,7 +613,7 @@ const HEAD_T = 'translate(100 70.5) scale(.86) translate(-100 -72)';
 const shade = (hex, k) => `#${[1, 3, 5].map((i) => Math.max(0, Math.min(255, Math.round(parseInt(hex.slice(i, i + 2), 16) * k))).toString(16).padStart(2, '0')).join('')}`;
 const mix = (hex, to, k) => `#${[1, 3, 5].map((i) => { const a = parseInt(hex.slice(i, i + 2), 16), b = parseInt(to.slice(i, i + 2), 16); return Math.round(a + (b - a) * k).toString(16).padStart(2, '0'); }).join('')}`;
 // head things that leave a bun or puff on top of the head showing
-const KEEP_TOP = new Set(['laurel', 'olive', 'flower', 'bow', 'headphones', 'flowercrown', 'headband']);
+const KEEP_TOP = new Set(['laurel', 'goldlaurel', 'olive', 'flower', 'bow', 'headphones', 'flowercrown', 'headband']);
 
 const FACE = 'M81.5 49 Q81.5 30 100 30 Q118.5 30 118.5 49 Q118.5 63 109 69 Q100 74 91 69 Q81.5 63 81.5 49 Z';
 function hair(L, part, top) {

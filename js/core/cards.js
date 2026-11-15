@@ -85,6 +85,7 @@ const Y8 = [
   set('8m-geometry', 'maths', 'Geometry', ['compass', 'pyramid'], 'angles|area|volume|transformations|pythagoras|pythagoras-3d|trigonometry|similarity|sectors|polygon-algebra|vectors|constructions', { acc: 'violin' }),
   set('8m-stats', 'maths', 'Probability and statistics', ['chart', 'pie'], 'probability|statistics|sets|counting|tree-diagrams|spread', { acc: 'camera' }),
   set('8m-olympiad', 'maths', 'Olympiad problems', ['laurel', 'puzzle'], 'ps-.*', { acc: 'tiara' }),
+  set('8m-focus', 'maths', 'School focus', ['magnifier', 'star'], 'focus-.*', { acc: 'trophy' }), // the areas from her report
   set('8s-body', 'science', 'Cells and the body', ['cell', 'dna'], 'cells|organs|respiration|health|enzymes|circulation|nervous|immunity|diet', { acc: 'firstaid' }),
   set('8s-life', 'science', 'Life and genes', ['dna', 'leaf'], 'photosynthesis|ecosystems|inheritance|genetics|biodiversity|geneng|transport', { acc: 'sunhat' }),
   set('8s-chem', 'science', 'Chemistry', ['flask', 'atom'], 'particles|atoms|atomic|periodic|reactions|acids|formulae|extraction|rates|energychange|materials|electrolysis', { acc: 'labcoat' }),

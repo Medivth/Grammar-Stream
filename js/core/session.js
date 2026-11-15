@@ -431,7 +431,9 @@ export function planBonus(state, db, today) {
       .filter(([id, c]) => shaky.includes(db.items[id]?.topic) && db.items[id].kind !== 'written' && c.state !== 'new' && c.lastDay < today && !waiting.has(id))
       .map(([id, c]) => ({ id, subject: db.items[id].subject, topic: db.items[id].topic, r: fsrsFor(db.items[id].subject).retrievability(c.s, today - c.lastDay) }))
       .sort((a, b) => a.r - b.r);
-    interleave(pool.slice(0, 8), rng).forEach((r) => steps.push({ t: 'review', id: r.id, practice: true }));
+    // a generated skill is one card but endless questions: give each shaky one three fresh questions
+    const rounds = pool.flatMap((r) => (db.items[r.id].kind === 'template' ? [r, r, r] : [r])).slice(0, 10);
+    interleave(rounds, rng).forEach((r) => steps.push({ t: 'review', id: r.id, practice: true }));
   }
   steps.push({ t: 'done' });
   return { day: today, extra: true, bonus: def.id, subject: def.subject, steps, pos: 0, results: [], yesterday: [], reasks: 0, started: Date.now() };
@@ -476,7 +478,9 @@ export function chooseTopic(state, db, topicId, today) {
       steps.push({ t: 'worked', id: t0, level: db.items[t0].levels[0] });
       steps.push({ t: 'faded', id: t0, level: db.items[t0].levels[0] });
     }
-    for (let i = 0; i < b.practice; i++) steps.push({ t: 'practice', id: t0, level: firstTime && i === 0 ? db.items[t0].levels[0] : undefined });
+    // a bonus lesson on a skill is the whole sitting, so it practises more (one generator is one card: little else would come back)
+    const reps = plan.bonus && topic.kind === 'skill' ? Math.max(b.practice, 6) : b.practice;
+    for (let i = 0; i < reps; i++) steps.push({ t: 'practice', id: t0, level: firstTime && i === 0 ? db.items[t0].levels[0] : undefined });
   }
   if (fresh.length && (!tmpl.length || topic.kind !== 'skill')) {
     const bonus = rampBonus(state, today);

@@ -140,7 +140,7 @@ test('best streak for the badges, and the two streak badges are in every course'
 test('each course has its own rotation', () => {
   assert.deepEqual(questRotation(COURSES.ks1), ['read', 'talk', 'sprint', 'handwriting', 'chapter', 'bonus', 'writing']);
   assert.deepEqual(questRotation(COURSES.y6), ['read', 'extra', 'sprint', 'chapter', 'bonus', 'writing']);
-  assert.deepEqual(questRotation(COURSES.y8), ['read', 'extra', 'sprint', 'chapter', 'writing']);
+  assert.deepEqual(questRotation(COURSES.y8), ['read', 'extra', 'sprint', 'chapter', 'bonus', 'writing']);
 });
 
 test('three quests a day, the session first, deterministic, and turning over day by day', () => {

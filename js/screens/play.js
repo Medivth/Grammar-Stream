@@ -20,7 +20,7 @@ import { freshSprintQuestion, SPRINT_LEVELS } from '../gen/sprint.js';
 import { parseNumber } from '../core/fraction.js';
 import { icon, SUBJECT_ICON } from '../ui/icons.js';
 import { ACCESSORIES, slotOf } from '../ui/capybara.js';
-import { SUBJECT_BY_ID, COURSE } from '../core/subjects.js';
+import { SUBJECT_BY_ID, COURSE, bonusWords } from '../core/subjects.js';
 import { raceway, runBadge, starBurst, finishMoment, calmMotion } from '../ui/raceway.js';
 import { currentRun, isRunMilestone, progressFraction, trackTheme, soundsOn, tryLine } from '../core/juice.js';
 import * as sfx from '../platform/sfx.js';
@@ -251,15 +251,16 @@ function chooseStep(app, root, step) {
   const opts = step.bonus ? bonusChoices(state, db) : topicChoices(state, db, step.subject);
   if (!opts.length) return next(app);
   const subj = SUBJECT_BY_ID[step.subject];
-  mount(root, header(app, step.bonus ? 'Bonus' : 'Choose'), h('div', { class: 'q-wrap stack' },
+  const bw = bonusWords(COURSE.bonus);
+  mount(root, header(app, step.bonus ? bw.short : 'Choose'), h('div', { class: 'q-wrap stack' },
     h('h2', {}, step.bonus ? `${COURSE.bonus.title}: the next part` : `Something new in ${subj.name}`),
-    h('p', { class: 'muted' }, step.bonus && opts.length === 1 ? 'Here’s your next lesson in the bonus topic.' : 'Pick what you’d like to learn next.'),
+    h('p', { class: 'muted' }, step.bonus && opts.length === 1 ? `Here’s your next lesson in ${bw.the}.` : 'Pick what you’d like to learn next.'),
     opts.map((id) => {
       const t = db.topics[id];
       const started = !!state.topics[id];
       return h('button', { class: 'choice-card home-card', type: 'button', style: { '--tint': `color-mix(in srgb, ${subj.colour} 14%, var(--card))`, '--tint-ink': subj.colour }, onclick: async () => { chooseTopic(state, db, id, app.today()); await next(app); } },
         h('span', { class: 'ico' }, icon(SUBJECT_ICON[subj.id])),
-        h('span', { class: 'txt' }, h('div', { class: 'subj', style: { color: subj.colour } }, started ? `Continue · ${step.bonus ? 'Bonus' : subj.name}` : `New · ${step.bonus ? 'Bonus' : subj.name}`, linkBits(t.links)),
+        h('span', { class: 'txt' }, h('div', { class: 'subj', style: { color: subj.colour } }, started ? `Continue · ${step.bonus ? bw.short : subj.name}` : `New · ${step.bonus ? bw.short : subj.name}`, linkBits(t.links)),
           h('h3', { style: { margin: '2px 0 0' } }, t.title)));
     })));
 }
@@ -680,8 +681,8 @@ function prizeCelebration(app) {
   return h('div', { class: 'prize pop', role: 'status' },
     burst,
     h('div', { class: 'prize-txt' },
-      h('div', { class: 'eyebrow' }, `Bonus topic: ${bp.def.title}`),
-      h('h2', {}, 'You finished the bonus topic!'),
+      h('div', { class: 'eyebrow' }, `${bonusWords(bp.def).label}: ${bp.def.title}`),
+      h('h2', {}, `You finished ${bonusWords(bp.def).the}!`),
       h('p', {}, `You won ${bp.def.prizeText}. ${plural ? 'They’re' : 'It’s'} in ${name}’s wardrobe now.${bp.def.prize.some((id) => ['lamp', 'oillamp'].includes(id)) ? (/switch/.test(bp.def.prizeText) ? ' Tap the lamp to try it.' : ' Tap the lamp to switch it on and off.') : ''}`),
       wearIt));
 }
@@ -716,10 +717,10 @@ function extraDoneStep(app, root, plan) {
   mount(root, h('div', { class: 'q-wrap stack center' },
     plan.results.length ? finishLine() : null,
     prize || capybaraEl({ ...c, mood: 'happy' }, 'capy bob'),
-    prize ? null : h('div', { class: 'eyebrow' }, plan.bonus ? `Bonus topic: ${bp.def.title}` : `${subj?.name || ''} practice`), prize ? null : h('h1', {}, plan.results.length || learned.length ? 'Well done!' : 'All caught up'),
+    prize ? null : h('div', { class: 'eyebrow' }, plan.bonus ? `${bonusWords(bp.def).label}: ${bp.def.title}` : `${subj?.name || ''} practice`), prize ? null : h('h1', {}, plan.results.length || learned.length ? 'Well done!' : 'All caught up'),
     plan.results.length ? h('p', {}, `${right} of ${plan.results.length} right.${learned.length ? ` ${plan.bonus ? 'Today' : 'New'}: ${learned.join(', ')}.` : ''}`) : prize ? null : h('p', { class: 'muted' }, nothing),
     plan.bonus && !bp.complete && bp.total ? h('p', { class: 'muted' }, `${bp.done} of ${bp.total} parts finished${bp.now ? `, and you’re on part ${bp.now}` : ''}. Finish them all to win ${bp.def.prizeText}.`) : null,
-    restOfDay && plan.results.length && !prize ? h('p', { class: 'bonus-today' }, `That’s the bonus topic done for today. ${bp.def.title} will be waiting tomorrow.`) : null,
+    restOfDay && plan.results.length && !prize ? h('p', { class: 'bonus-today' }, `That’s ${bonusWords(bp.def).the} done for today. ${bp.def.title} will be waiting tomorrow.`) : null,
     newCardsReveal(app, plan),
     newBadges(app, plan),
     h('div', { class: 'row', style: { justifyContent: 'center' } },
