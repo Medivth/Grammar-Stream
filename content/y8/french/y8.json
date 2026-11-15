@@ -1,0 +1,5765 @@
+{
+ "subject": "french",
+ "deck": "y8",
+ "topics": [
+  {
+   "id": "french.v-greetings",
+   "title": "Greetings and introductions",
+   "kind": "facts",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "french.v.gr.age2",
+    "french.v.gr.cava"
+   ],
+   "intro": "French greetings change with the time of day and with the person. Use **tu** with a friend, a child or a pet, and **vous** with an adult you don’t know well (or with more than one person). To introduce yourself, give your name, age and home town: Je m’appelle…, j’ai… ans, j’habite à…",
+   "teach": "Teach your grown-up how to greet a French friend and a French teacher, and explain why the words are different.",
+   "talk": "Pretend you are meeting for the first time in a French café. Say “Bonjour !” and ask {him} to tell you {her} name, age and home town in French. Then ask {him} what each part meant.",
+   "hook": "**tu** for a friend, **vous** for a teacher. Age uses **avoir**: j’ai douze ans, “I have twelve years”.",
+   "example": "In a French shop, say “Bonjour, madame” or “Bonjour, monsieur” as you walk in: not greeting the shopkeeper seems rude.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "to a friend (tu)",
+     "to an adult (vous)"
+    ],
+    "rows": [
+     [
+      "What’s your name?",
+      "Comment tu t’appelles ?",
+      "Comment vous appelez-vous ?"
+     ],
+     [
+      "How are you?",
+      "Ça va ?",
+      "Comment allez-vous ?"
+     ],
+     [
+      "please",
+      "s’il te plaît",
+      "s’il vous plaît"
+     ],
+     [
+      "goodbye",
+      "Salut ! Au revoir !",
+      "Au revoir !"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.v-numbers",
+   "title": "Numbers and prices",
+   "kind": "mixed",
+   "prereqs": [],
+   "batch": 5,
+   "diagnostic": [
+    "french.v.nu.et",
+    "french.v.nu.80"
+   ],
+   "intro": "Up to 69, French numbers work like English. Then French counts in twenties: 70 is soixante-dix (60 + 10), 80 is quatre-vingts (4 × 20) and 90 is quatre-vingt-dix (4 × 20 + 10). Prices are said euros first, then the cents: 3,50 € is trois euros cinquante.",
+   "teach": "Explain how to build 97 in French, and why 80 has an s but 81 does not.",
+   "talk": "Read out prices from a receipt (pretend the £ are €) and ask {him} to say them in French. Then ask {him} to say a phone number in French, in pairs of digits, as French people do.",
+   "hook": "**70 = 60 + 10, 80 = 4 × 20, 90 = 4 × 20 + 10.** Only 21, 31, 41, 51, 61 and 71 take **et**.",
+   "example": "French phone numbers are read in pairs: 06 12 45 78 90 is “zéro six, douze, quarante-cinq, soixante-dix-huit, quatre-vingt-dix”.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "French",
+     "how it works"
+    ],
+    "rows": [
+     [
+      "70",
+      "soixante-dix",
+      "60 + 10"
+     ],
+     [
+      "71",
+      "soixante et onze",
+      "60 + 11"
+     ],
+     [
+      "75",
+      "soixante-quinze",
+      "60 + 15"
+     ],
+     [
+      "80",
+      "quatre-vingts",
+      "4 × 20"
+     ],
+     [
+      "81",
+      "quatre-vingt-un",
+      "4 × 20 + 1 (no et, no s)"
+     ],
+     [
+      "90",
+      "quatre-vingt-dix",
+      "4 × 20 + 10"
+     ],
+     [
+      "99",
+      "quatre-vingt-dix-neuf",
+      "4 × 20 + 19"
+     ]
+    ],
+    "caption": "Belgium and Switzerland say septante (70) and nonante (90), and parts of Switzerland say huitante (80)."
+   }
+  },
+  {
+   "id": "french.v-dates",
+   "title": "Days, months, dates and birthdays",
+   "kind": "mixed",
+   "prereqs": [
+    "french.v-numbers"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.v.da.first",
+    "french.v.da.mercredi"
+   ],
+   "intro": "Days and months have no capital letter in French. A date is **le** + number + month: le quatorze juillet. Only the 1st is different: le premier mai. To say “on Mondays” (every week), put le before the day: le lundi.",
+   "teach": "Say your birthday and three family birthdays in French, and explain why the 1st of the month is different.",
+   "talk": "Each morning this week, ask {him} “Quelle est la date aujourd’hui ?” and let {him} answer in French. Check against a calendar: you will hear the month.",
+   "hook": "**le + number + month**: le quatorze juillet. Only the 1st is **premier**. No capitals: lundi, mai.",
+   "example": "France’s national day is le quatorze juillet, linked with the storming of the Bastille prison in Paris in 1789.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "English",
+     "French"
+    ],
+    "rows": [
+     [
+      "on Monday (this Monday)",
+      "lundi"
+     ],
+     [
+      "on Mondays (every week)",
+      "le lundi"
+     ],
+     [
+      "1 May",
+      "le premier mai"
+     ],
+     [
+      "2 May",
+      "le deux mai"
+     ],
+     [
+      "8 May",
+      "le huit mai"
+     ],
+     [
+      "11 November",
+      "le onze novembre"
+     ]
+    ],
+    "caption": "No l’ before huit or onze. Days and months are masculine and have no capital letter."
+   }
+  },
+  {
+   "id": "french.v-time",
+   "title": "Telling the time",
+   "kind": "mixed",
+   "prereqs": [
+    "french.v-numbers"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.v.ti.une",
+    "french.v.ti.demie"
+   ],
+   "intro": "Quelle heure est-il ? Answer with Il est… heures. Up to half past, add the minutes: et quart, et demie, vingt. After half past, go to the next hour and take away: moins dix, moins le quart. Timetables use the 24-hour clock: dix-sept heures quarante.",
+   "teach": "Explain how to say 8:50 in French, and why it uses neuf (nine).",
+   "talk": "Ask “Quelle heure est-il ?” a few times today and let {him} answer in French; check the clock together. Then ask {him} to read three times from a TV guide or a train timetable, the 24-hour way.",
+   "hook": "**Past the half? Next hour, then moins.** 8:50 = neuf heures moins dix. heure is feminine: **une** heure, et demi**e**.",
+   "example": "French television’s main evening news is called “le vingt heures”: it starts at 20:00.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "French"
+    ],
+    "rows": [
+     [
+      "3:00",
+      "trois heures"
+     ],
+     [
+      "3:15",
+      "trois heures et quart"
+     ],
+     [
+      "3:30",
+      "trois heures et demie"
+     ],
+     [
+      "3:40",
+      "quatre heures moins vingt"
+     ],
+     [
+      "3:45",
+      "quatre heures moins le quart"
+     ],
+     [
+      "12:00",
+      "midi (or minuit)"
+     ],
+     [
+      "17:40",
+      "dix-sept heures quarante"
+     ]
+    ],
+    "caption": "Midday is midi and midnight is minuit. Midi et demi has no e, because midi is masculine."
+   }
+  },
+  {
+   "id": "french.v-family",
+   "title": "Family and pets",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-greetings"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.v.fa.frere",
+    "french.v.fa.chien"
+   ],
+   "intro": "The word for “my” matches the noun: mon père, ma mère, mes parents. Use il y a for “there is / there are”, avoir for what people have (j’ai un chien) and s’appeler for names: Mon frère s’appelle Tom.",
+   "teach": "Draw your family tree and label it in French with mon, ma and mes.",
+   "talk": "Look at family photos and ask “C’est qui ?” (who is it?). {She} answers in French, for example “C’est ma tante.” The table in this topic shows the words, so you can check.",
+   "hook": "**mon** père, **ma** mère, **mes** parents: “my” matches the person you are talking about, not you.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "masculine",
+     "feminine"
+    ],
+    "rows": [
+     [
+      "parent",
+      "le père",
+      "la mère"
+     ],
+     [
+      "child",
+      "le fils",
+      "la fille"
+     ],
+     [
+      "brother, sister",
+      "le frère",
+      "la sœur"
+     ],
+     [
+      "grandparent",
+      "le grand-père",
+      "la grand-mère"
+     ],
+     [
+      "uncle, aunt",
+      "l’oncle",
+      "la tante"
+     ],
+     [
+      "cousin",
+      "le cousin",
+      "la cousine"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.v-describe",
+   "title": "Describing people",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-family"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.v.de.agree",
+    "french.v.de.yeux"
+   ],
+   "intro": "Hair and eyes take avoir: J’ai les yeux verts et les cheveux longs. Personality takes être: Je suis sportive. Adjectives agree with the person: add -e for a girl or woman and -s for more than one. Colours come after the noun.",
+   "teach": "Describe yourself and a friend in French, then explain why some adjectives changed their spelling.",
+   "talk": "Play “Qui est-ce ?” (Who is it?): {she} describes someone in the family in French and you guess who it is. Ask {him} what each describing word meant.",
+   "hook": "**Hair and eyes: avoir** (j’ai les yeux bleus, “I have the eyes blue”). **Personality: être**, with agreement: il est grand, elle est grand**e**.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "he is…",
+     "she is…"
+    ],
+    "rows": [
+     [
+      "tall",
+      "grand",
+      "grande"
+     ],
+     [
+      "small",
+      "petit",
+      "petite"
+     ],
+     [
+      "sporty",
+      "sportif",
+      "sportive"
+     ],
+     [
+      "lazy",
+      "paresseux",
+      "paresseuse"
+     ],
+     [
+      "chatty",
+      "bavard",
+      "bavarde"
+     ],
+     [
+      "shy",
+      "timide",
+      "timide"
+     ],
+     [
+      "funny",
+      "drôle",
+      "drôle"
+     ]
+    ],
+    "caption": "Add -e for feminine unless the word already ends in -e. -if becomes -ive and -eux becomes -euse."
+   }
+  },
+  {
+   "id": "french.v-school",
+   "title": "School: subjects, opinions and the timetable",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-time"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.v.sc.anglais",
+    "french.v.sc.prefere"
+   ],
+   "intro": "School subjects take le, la, l’ or les: le français, la musique, l’histoire, les maths. Give an opinion with a reason: J’aime l’histoire parce que c’est intéressant. Lessons on the timetable take à: à huit heures.",
+   "teach": "Tell your grown-up tomorrow’s timetable in French, with an opinion and a reason for two subjects.",
+   "talk": "Ask {him} for {her} favourite and least favourite subjects in French, and why (“Pourquoi ?”). Listen for parce que, “because”.",
+   "hook": "**Opinion + subject + parce que + c’est + adjective**: J’adore le dessin parce que c’est créatif.",
+   "example": "At many French collèges there are no lessons on Wednesday afternoon, so pupils do sport, music or clubs instead.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "subject",
+     "French"
+    ],
+    "rows": [
+     [
+      "maths",
+      "les maths"
+     ],
+     [
+      "English",
+      "l’anglais"
+     ],
+     [
+      "French",
+      "le français"
+     ],
+     [
+      "history and geography",
+      "l’histoire-géo"
+     ],
+     [
+      "science",
+      "les sciences"
+     ],
+     [
+      "PE",
+      "l’EPS"
+     ],
+     [
+      "art",
+      "le dessin (les arts plastiques)"
+     ],
+     [
+      "music",
+      "la musique"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.v-freetime",
+   "title": "Free time and sport",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-school"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.v.ft.jouer",
+    "french.v.ft.velo"
+   ],
+   "intro": "Use jouer à for sports and games (je joue au foot), jouer de for instruments (je joue du piano) and faire de for other activities (je fais de la natation). Say how often: souvent, parfois, le week-end.",
+   "teach": "Explain the difference between je joue au tennis, je joue du violon and je fais du vélo.",
+   "talk": "Ask {him} what {she} does after school and at the weekend, in French. Then ask {him} to teach you one French sentence about your own hobby.",
+   "hook": "**Jouer À for balls, jouer DE for music, FAIRE DE for the rest.**",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "verb",
+     "examples"
+    ],
+    "rows": [
+     [
+      "jouer à + a sport or game",
+      "je joue au foot, à la pétanque"
+     ],
+     [
+      "jouer de + an instrument",
+      "je joue du piano, de la guitare"
+     ],
+     [
+      "faire de + an activity",
+      "je fais du vélo, de la natation, de l’équitation"
+     ]
+    ],
+    "caption": "à + le = au, de + le = du."
+   }
+  },
+  {
+   "id": "french.v-food",
+   "title": "Food, drink and meals",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-greetings"
+   ],
+   "batch": 5,
+   "intro": "Meals: le petit déjeuner, le déjeuner, le goûter (the after-school snack) and le dîner. For food in general use du, de la, de l’ or des (“some”): je mange du pain. After a negative, just de: je ne mange pas de viande.",
+   "teach": "Describe what you usually eat for each meal, in French.",
+   "talk": "At a meal, ask {him} to name everything on the table in French. Ask “C’est bon ?” (is it good?) and let {him} answer.",
+   "hook": "**du, de la, des = some**; **pas de** after a negative. A potato is une pomme de terre: an “apple of the earth”.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "some"
+    ],
+    "rows": [
+     [
+      "masculine",
+      "du pain"
+     ],
+     [
+      "feminine",
+      "de la confiture"
+     ],
+     [
+      "before a vowel",
+      "de l’eau"
+     ],
+     [
+      "plural",
+      "des fraises"
+     ],
+     [
+      "after a negative",
+      "pas de pain, pas de fraises"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.v-cafe",
+   "title": "At the café and the market",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-food",
+    "french.v-numbers"
+   ],
+   "batch": 5,
+   "intro": "Order politely with Je voudrais… (I would like) and s’il vous plaît. Ask for the bill with L’addition, s’il vous plaît. Quantities take de: un kilo de pommes, une bouteille d’eau.",
+   "teach": "Act out ordering a drink and a snack at a café, then asking for the bill.",
+   "talk": "Be the waiter: say “Bonjour ! Vous désirez ?” (What would you like?) and let {him} order in French. Then {she} asks for the bill.",
+   "hook": "**Je voudrais** = I would like. A quantity takes **de**: un kilo **de** tomates, never des.",
+   "example": "In France the service charge is included in the bill (service compris), so a tip is a small extra, not expected.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "English",
+     "French"
+    ],
+    "rows": [
+     [
+      "a kilo of",
+      "un kilo de"
+     ],
+     [
+      "500 grams of",
+      "cinq cents grammes de"
+     ],
+     [
+      "a bottle of",
+      "une bouteille de"
+     ],
+     [
+      "a slice of",
+      "une tranche de"
+     ],
+     [
+      "a packet of",
+      "un paquet de"
+     ],
+     [
+      "a tin of",
+      "une boîte de"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.v-town",
+   "title": "My town and directions",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-freetime"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.v.to.gauche",
+    "french.v.to.biblio"
+   ],
+   "intro": "Say what is in your town with il y a (there is) and il n’y a pas de (there isn’t a). Ask the way with Où est… ? and give directions: tournez à gauche, tournez à droite, allez tout droit.",
+   "teach": "Give your grown-up directions in French from your front door to the nearest shop.",
+   "talk": "Hide a small object and let {him} guide you to it in French: à gauche, à droite, tout droit, stop ! Then swap: the table in this topic has the words.",
+   "hook": "**à droite** = right, **tout droit** = straight on: one letter apart, so listen carefully!",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "French",
+     "English"
+    ],
+    "rows": [
+     [
+      "à gauche",
+      "left"
+     ],
+     [
+      "à droite",
+      "right"
+     ],
+     [
+      "tout droit",
+      "straight on"
+     ],
+     [
+      "à côté de",
+      "next to"
+     ],
+     [
+      "en face de",
+      "opposite"
+     ],
+     [
+      "au coin",
+      "at the corner"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.v-home",
+   "title": "Home and my bedroom",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-family"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.v.ho.chambre",
+    "french.v.ho.sous"
+   ],
+   "intro": "J’habite dans une maison or dans un appartement. Name the rooms (la cuisine, le salon, ma chambre) and say where things are: sur (on), sous (under), dans (in), à côté de (next to), devant (in front of), derrière (behind).",
+   "teach": "Describe your bedroom in French, saying where five things are.",
+   "talk": "Ask {him} to give you a tour of your home in French, naming each room. Then put an object somewhere and ask “Où est… ?” (where is…?).",
+   "hook": "**sur** = on (a surface), **sous** = under (un sous-marin = a submarine).",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "French",
+     "English"
+    ],
+    "rows": [
+     [
+      "sur",
+      "on"
+     ],
+     [
+      "sous",
+      "under"
+     ],
+     [
+      "dans",
+      "in"
+     ],
+     [
+      "devant",
+      "in front of"
+     ],
+     [
+      "derrière",
+      "behind"
+     ],
+     [
+      "à côté de",
+      "next to"
+     ],
+     [
+      "entre",
+      "between"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.v-weather",
+   "title": "Weather and seasons",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-dates"
+   ],
+   "batch": 5,
+   "diagnostic": [
+    "french.v.we.pleut",
+    "french.v.we.printemps"
+   ],
+   "intro": "Most weather uses il fait: il fait beau, il fait chaud, il fait froid. Rain and snow have their own verbs: il pleut, il neige. Wind and fog use il y a: il y a du vent. Seasons: en été, en automne, en hiver, but au printemps.",
+   "teach": "Give a French weather forecast for today and tomorrow, like a TV presenter.",
+   "talk": "Each morning, ask {him} “Quel temps fait-il ?” (what’s the weather like?) and let {him} answer in French by looking out of the window.",
+   "hook": "**Il fait** for most weather, **il pleut / il neige** on their own, **il y a du** for wind and fog. **Au printemps**, but en été, en automne, en hiver.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "French",
+     "English"
+    ],
+    "rows": [
+     [
+      "Il fait beau.",
+      "It’s nice weather."
+     ],
+     [
+      "Il fait mauvais.",
+      "It’s bad weather."
+     ],
+     [
+      "Il fait chaud / froid.",
+      "It’s hot / cold."
+     ],
+     [
+      "Il pleut.",
+      "It’s raining."
+     ],
+     [
+      "Il neige.",
+      "It’s snowing."
+     ],
+     [
+      "Il y a du vent.",
+      "It’s windy."
+     ],
+     [
+      "Il y a des nuages.",
+      "It’s cloudy."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.v-holidays",
+   "title": "Holidays and travel",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-weather",
+    "french.v-town"
+   ],
+   "batch": 5,
+   "intro": "Holidays bring the tenses together: je vais (I go), je suis allé(e) (I went), c’était super (it was great) and je vais aller (I am going to go). Transport: en for things you ride inside (en voiture, en train, en avion), à on foot or on a bike (à pied, à vélo).",
+   "teach": "Describe a past holiday in French: where you went, how you travelled, the weather and what you thought of it.",
+   "talk": "Look at holiday photos together and ask {him} to describe one in French. Prompt with: Où ? (where?) Avec qui ? (with whom?) Quel temps ? (what weather?) C’était comment ? (what was it like?)",
+   "hook": "**En inside, à on top**: en voiture, en train, en avion, but à vélo, à cheval, à pied.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "French",
+     "English"
+    ],
+    "rows": [
+     [
+      "en voiture",
+      "by car"
+     ],
+     [
+      "en train",
+      "by train"
+     ],
+     [
+      "en avion",
+      "by plane"
+     ],
+     [
+      "en car",
+      "by coach"
+     ],
+     [
+      "à vélo",
+      "by bike"
+     ],
+     [
+      "à pied",
+      "on foot"
+     ]
+    ],
+    "caption": "Careful: un car is a coach, not a car (une voiture)."
+   }
+  },
+  {
+   "id": "french.v-clothes",
+   "title": "Clothes, colours and shopping",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-describe",
+    "french.v-numbers"
+   ],
+   "batch": 5,
+   "intro": "Porter means to wear: je porte un jean et un pull. Colours are adjectives, so they come after the noun and agree with it: une robe verte, des chaussures noires. Marron and orange never change.",
+   "teach": "Describe what you are wearing today in French, with colours, and explain one agreement.",
+   "talk": "Point at clothes in a shop window or a wardrobe and ask {him} to name each one with its colour in French.",
+   "hook": "**Colours follow the noun and agree**: une robe vert**e**. **Marron** (a chestnut) and **orange** (the fruit) never change.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "",
+     "masculine",
+     "feminine"
+    ],
+    "rows": [
+     [
+      "black",
+      "noir",
+      "noire"
+     ],
+     [
+      "white",
+      "blanc",
+      "blanche"
+     ],
+     [
+      "green",
+      "vert",
+      "verte"
+     ],
+     [
+      "blue",
+      "bleu",
+      "bleue"
+     ],
+     [
+      "red",
+      "rouge",
+      "rouge"
+     ],
+     [
+      "brown",
+      "marron",
+      "marron"
+     ]
+    ],
+    "caption": "Add -s for the plural (des pulls noirs), except marron and orange."
+   }
+  },
+  {
+   "id": "french.v-routine",
+   "title": "My daily routine",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-time",
+    "french.v-home"
+   ],
+   "batch": 5,
+   "intro": "Daily routines use reflexive verbs, with an extra me (myself): je me réveille, je me lève, je m’habille. Put the day in order with d’abord (first), ensuite (then) and enfin (finally), and add the time: à sept heures.",
+   "teach": "Tell your grown-up your morning routine in French, with times and the words for first, then and finally.",
+   "talk": "Ask {him} to describe {her} morning in French while acting it out, and guess each action.",
+   "hook": "**me = myself**: je **me** lave, “I wash myself”. Before a vowel: je **m’**habille.",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "French",
+     "English"
+    ],
+    "rows": [
+     [
+      "je me réveille",
+      "I wake up"
+     ],
+     [
+      "je me lève",
+      "I get up"
+     ],
+     [
+      "je me douche",
+      "I have a shower"
+     ],
+     [
+      "je m’habille",
+      "I get dressed"
+     ],
+     [
+      "je me brosse les dents",
+      "I brush my teeth"
+     ],
+     [
+      "je me couche",
+      "I go to bed"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.v-health",
+   "title": "The body and health",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-routine"
+   ],
+   "batch": 5,
+   "intro": "To say what hurts, use avoir mal à + the body part: j’ai mal à la tête, j’ai mal au ventre (à + le), j’ai mal aux dents (à + les). Je suis malade means I am ill.",
+   "teach": "Play the doctor: say three things that hurt in French, then give some advice.",
+   "talk": "Play “Jacques a dit” (Simon says) with body parts: read a French word from this topic, and {she} touches the right part of the body.",
+   "hook": "**J’ai mal à + body part**: à la tête, **au** ventre (à + le), **aux** dents (à + les).",
+   "visual": {
+    "kind": "table",
+    "head": [
+     "French",
+     "English"
+    ],
+    "rows": [
+     [
+      "la tête",
+      "head"
+     ],
+     [
+      "le ventre",
+      "stomach"
+     ],
+     [
+      "la gorge",
+      "throat"
+     ],
+     [
+      "le bras",
+      "arm"
+     ],
+     [
+      "la main",
+      "hand"
+     ],
+     [
+      "la jambe",
+      "leg"
+     ],
+     [
+      "le pied",
+      "foot"
+     ],
+     [
+      "les dents",
+      "teeth"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "french.v-tech",
+   "title": "Media, technology and the internet",
+   "kind": "facts",
+   "prereqs": [
+    "french.v-freetime"
+   ],
+   "batch": 5,
+   "intro": "Say how you use technology: j’envoie des messages, je regarde des vidéos, je joue à des jeux vidéo. Give balanced opinions (c’est utile mais c’est dangereux) and stay safe online: il ne faut jamais partager ton mot de passe.",
+   "teach": "Give two advantages and two dangers of the internet, in French.",
+   "talk": "Ask {him} how {she} uses a phone, tablet or computer, in French, and what {she} thinks of social media (les réseaux sociaux).",
+   "hook": "**télécharger** = download (not charge!). **Une émission** is a TV or radio programme, not an emission."
+  }
+ ],
+ "items": [
+  {
+   "id": "french.v.gr.bonjour",
+   "topic": "french.v-greetings",
+   "kind": "fact",
+   "prompt": "What does **Bonjour !** mean?",
+   "answer": "hello",
+   "distractors": [
+    "goodbye",
+    "good evening",
+    "see you soon"
+   ],
+   "explain": "Bonjour is the everyday “hello”, from morning until early evening; it also means “good morning”.",
+   "hear": "Bonjour !",
+   "learn": "**Bonjour !** = hello",
+   "accept": [
+    "good morning",
+    "good afternoon",
+    "good day",
+    "hi"
+   ]
+  },
+  {
+   "id": "french.v.gr.bonsoir",
+   "topic": "french.v-greetings",
+   "kind": "fact",
+   "prompt": "What does **Bonsoir !** mean?",
+   "answer": "good evening",
+   "distractors": [
+    "good night",
+    "good morning",
+    "goodbye"
+   ],
+   "explain": "Bonsoir = good evening. Bonne nuit (good night) is only for going to bed.",
+   "hear": "Bonsoir !",
+   "learn": "**Bonsoir !** = good evening",
+   "accept": [
+    "evening"
+   ]
+  },
+  {
+   "id": "french.v.gr.salut",
+   "topic": "french.v-greetings",
+   "kind": "fact",
+   "prompt": "What does **Salut !** mean?",
+   "answer": "hi",
+   "distractors": [
+    "thank you",
+    "please",
+    "sorry"
+   ],
+   "explain": "Salut is the friendly “hi”, and also “bye”: use it with friends, not with teachers.",
+   "hear": "Salut !",
+   "learn": "**Salut !** = hi",
+   "accept": [
+    "hello",
+    "hiya",
+    "bye",
+    "hi or bye"
+   ]
+  },
+  {
+   "id": "french.v.gr.bientot",
+   "topic": "french.v-greetings",
+   "kind": "fact",
+   "prompt": "What does **À bientôt !** mean?",
+   "answer": "see you soon",
+   "distractors": [
+    "see you tomorrow",
+    "welcome back",
+    "goodbye for ever"
+   ],
+   "explain": "À bientôt = see you soon. À demain = see you tomorrow; à plus tard = see you later.",
+   "hear": "À bientôt !",
+   "learn": "**À bientôt !** = see you soon",
+   "accept": [
+    "see you later"
+   ]
+  },
+  {
+   "id": "french.v.gr.nom",
+   "topic": "french.v-greetings",
+   "kind": "fact",
+   "prompt": "How do you say **What’s your name? (to a friend)** in French?",
+   "answer": "Comment tu t’appelles ?",
+   "distractors": [
+    "Comment il s’appelle ?",
+    "Quel âge as-tu ?",
+    "Comment ça va ?"
+   ],
+   "explain": "Comment tu t’appelles ? (or Comment t’appelles-tu ?) asks a friend’s name. Answer: Je m’appelle…",
+   "lang": "fr",
+   "learn": "**Comment tu t’appelles ?** = What’s your name? (to a friend)",
+   "accept": [
+    "Comment t’appelles-tu ?",
+    "Tu t’appelles comment ?"
+   ]
+  },
+  {
+   "id": "french.v.gr.mappelle",
+   "topic": "french.v-greetings",
+   "kind": "fact",
+   "prompt": "What does **Je m’appelle Léa.** mean?",
+   "answer": "My name is Léa.",
+   "distractors": [
+    "I call Léa.",
+    "Her name is Léa.",
+    "I like Léa."
+   ],
+   "explain": "Je m’appelle means “I am called” (literally “I call myself”): my name is Léa.",
+   "hear": "Je m’appelle Léa.",
+   "learn": "**Je m’appelle Léa.** = My name is Léa.",
+   "accept": [
+    "I am called Léa",
+    "I’m called Léa",
+    "I am Léa",
+    "I’m Léa",
+    "my name’s Léa",
+    "my name is lea",
+    "I am called lea"
+   ]
+  },
+  {
+   "id": "french.v.gr.cava",
+   "topic": "french.v-greetings",
+   "kind": "fact",
+   "prompt": "What does **Ça va ?** mean?",
+   "answer": "How are you?",
+   "distractors": [
+    "Where are you going?",
+    "What is it?",
+    "Who is that?"
+   ],
+   "explain": "Ça va ? = how are you? / how’s it going? The answer can be the same words: Ça va (bien) !",
+   "hear": "Ça va ?",
+   "learn": "**Ça va ?** = How are you?",
+   "accept": [
+    "how’s it going",
+    "how are things",
+    "are you ok",
+    "are you okay",
+    "you ok",
+    "how are you doing"
+   ]
+  },
+  {
+   "id": "french.v.gr.reply",
+   "topic": "french.v-greetings",
+   "kind": "mcq",
+   "prompt": "Your friend asks “Ça va ?” and you feel great. What do you say?",
+   "options": [
+    {
+     "text": "Ça va très bien, merci !",
+     "correct": true
+    },
+    {
+     "text": "Comme ci, comme ça, merci.",
+     "correct": false,
+     "feedback": "That means “so-so”."
+    },
+    {
+     "text": "Pas très bien, et toi ?",
+     "correct": false,
+     "feedback": "That means “not very well”."
+    }
+   ],
+   "explain": "Ça va très bien, merci = I’m very well, thanks. Add “Et toi ?” to ask back."
+  },
+  {
+   "id": "french.v.gr.age",
+   "topic": "french.v-greetings",
+   "kind": "fact",
+   "prompt": "What does **J’ai douze ans.** mean?",
+   "answer": "I am twelve.",
+   "distractors": [
+    "I have twelve brothers.",
+    "I am twenty.",
+    "It is twelve o’clock."
+   ],
+   "explain": "French uses avoir (to have) for age: j’ai douze ans, “I have twelve years”.",
+   "hear": "J’ai douze ans.",
+   "learn": "**J’ai douze ans.** = I am twelve.",
+   "accept": [
+    "I’m twelve",
+    "I am 12",
+    "I’m 12",
+    "I am twelve years old",
+    "I’m twelve years old",
+    "I am 12 years old",
+    "I’m 12 years old"
+   ]
+  },
+  {
+   "id": "french.v.gr.age2",
+   "topic": "french.v-greetings",
+   "kind": "mcq",
+   "prompt": "How do you say “I am twelve”?",
+   "options": [
+    {
+     "text": "J’ai douze ans.",
+     "correct": true
+    },
+    {
+     "text": "Je suis douze ans.",
+     "correct": false,
+     "feedback": "Age uses avoir, not être: j’ai douze ans."
+    },
+    {
+     "text": "J’ai deux ans.",
+     "correct": false,
+     "feedback": "deux is two: you would be a toddler!"
+    },
+    {
+     "text": "Je suis douze.",
+     "correct": false,
+     "feedback": "Age uses avoir and ans: j’ai douze ans."
+    }
+   ],
+   "explain": "Age uses avoir: j’ai douze ans (I have twelve years). Ask: Tu as quel âge ? or Quel âge as-tu ?"
+  },
+  {
+   "id": "french.v.gr.habite",
+   "topic": "french.v-greetings",
+   "kind": "fact",
+   "prompt": "How do you say **I live in London.** in French?",
+   "answer": "J’habite à Londres.",
+   "distractors": [
+    "J’habite en Londres.",
+    "Je habite à Londres.",
+    "J’habite au Londres."
+   ],
+   "explain": "Towns and cities take à: j’habite à Londres. Je becomes j’ before a vowel or a silent h: j’habite.",
+   "lang": "fr",
+   "learn": "**J’habite à Londres.** = I live in London.",
+   "accept": [
+    "J’habite Londres.",
+    "Je vis à Londres."
+   ]
+  },
+  {
+   "id": "french.v.gr.stp",
+   "topic": "french.v-greetings",
+   "kind": "mcq",
+   "prompt": "How do you say “please” to a friend?",
+   "options": [
+    {
+     "text": "s’il te plaît",
+     "correct": true
+    },
+    {
+     "text": "s’il vous plaît",
+     "correct": false,
+     "feedback": "That is the polite form, for an adult or for more than one person."
+    },
+    {
+     "text": "merci beaucoup",
+     "correct": false,
+     "feedback": "merci beaucoup means thank you very much."
+    }
+   ],
+   "explain": "s’il te plaît to a friend (tu); s’il vous plaît to an adult or a group (vous)."
+  },
+  {
+   "id": "french.v.gr.tuvous",
+   "topic": "french.v-greetings",
+   "kind": "mcq",
+   "prompt": "Which word for “you” do you use with your teacher?",
+   "options": [
+    {
+     "text": "vous",
+     "correct": true
+    },
+    {
+     "text": "tu",
+     "correct": false,
+     "feedback": "tu is for one friend, a family member, a child or a pet."
+    },
+    {
+     "text": "toi",
+     "correct": false,
+     "feedback": "toi is the tu form after a preposition: avec toi, et toi ?"
+    }
+   ],
+   "explain": "vous for an adult you don’t know well, and for more than one person. tu for a friend, family, a child or a pet."
+  },
+  {
+   "id": "french.v.gr.enchante",
+   "topic": "french.v-greetings",
+   "kind": "fact",
+   "prompt": "What does **Enchanté !** mean?",
+   "answer": "Pleased to meet you!",
+   "distractors": [
+    "Have a nice day!",
+    "Welcome!",
+    "Good luck!"
+   ],
+   "explain": "Enchanté (enchantée if you are a girl) = pleased to meet you. Bonne journée = have a nice day; bienvenue = welcome.",
+   "hear": "Enchanté !",
+   "learn": "**Enchanté !** = Pleased to meet you!",
+   "accept": [
+    "nice to meet you",
+    "delighted",
+    "pleased to meet you",
+    "delighted to meet you"
+   ]
+  },
+  {
+   "id": "french.v.gr.order",
+   "topic": "french.v-greetings",
+   "kind": "order",
+   "prompt": "Put this conversation in order.",
+   "items": [
+    "Bonjour ! Comment tu t’appelles ?",
+    "Je m’appelle Hugo. Et toi ?",
+    "Moi, je m’appelle Inès. Tu as quel âge ?",
+    "J’ai douze ans. Au revoir !"
+   ],
+   "labels": null,
+   "explain": "A greeting and a question, the answer with a question back, another question, and an answer with goodbye."
+  },
+  {
+   "id": "french.v.nu.numbers.tmpl",
+   "topic": "french.v-numbers",
+   "kind": "template",
+   "gen": "y8frNumbers",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.v.nu.prices.tmpl",
+   "topic": "french.v-numbers",
+   "kind": "template",
+   "gen": "y8frPrices",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.v.nu.70",
+   "topic": "french.v-numbers",
+   "kind": "mcq",
+   "prompt": "In Belgium and Switzerland, 70 is “septante”. What do people say in France?",
+   "options": [
+    {
+     "text": "soixante-dix",
+     "correct": true
+    },
+    {
+     "text": "sept-dix",
+     "correct": false,
+     "feedback": "There is no such number: France says soixante-dix (60 + 10)."
+    },
+    {
+     "text": "soixante-sept",
+     "correct": false,
+     "feedback": "soixante-sept is 67."
+    }
+   ],
+   "explain": "France says soixante-dix (60 + 10). Septante is used in Belgium and Switzerland."
+  },
+  {
+   "id": "french.v.nu.80",
+   "topic": "french.v-numbers",
+   "kind": "fact",
+   "prompt": "What number is **quatre-vingts**?",
+   "answer": "80",
+   "distractors": [
+    "24",
+    "60",
+    "420"
+   ],
+   "explain": "quatre-vingts = four twenties = 80. The s goes when another number follows: quatre-vingt-un (81).",
+   "hear": "quatre-vingts",
+   "learn": "**quatre-vingts** = 80 (four twenties)"
+  },
+  {
+   "id": "french.v.nu.21",
+   "topic": "french.v-numbers",
+   "kind": "fact",
+   "prompt": "How do you say **21** in French?",
+   "answer": "vingt et un",
+   "distractors": [
+    "vingt-un",
+    "un et vingt",
+    "vingt-onze"
+   ],
+   "explain": "21 = vingt et un: 21, 31, 41, 51, 61 (and 71) join the one with et.",
+   "lang": "fr",
+   "learn": "**vingt et un** = 21",
+   "accept": [
+    "vingt-et-un"
+   ]
+  },
+  {
+   "id": "french.v.nu.et",
+   "topic": "french.v-numbers",
+   "kind": "mcq",
+   "prompt": "Which of these numbers does NOT use **et**?",
+   "options": [
+    {
+     "text": "81: quatre-vingt-un",
+     "correct": true
+    },
+    {
+     "text": "71: soixante et onze",
+     "correct": false,
+     "feedback": "71 does take et."
+    },
+    {
+     "text": "31: trente et un",
+     "correct": false,
+     "feedback": "31 does take et."
+    },
+    {
+     "text": "51: cinquante et un",
+     "correct": false,
+     "feedback": "51 does take et."
+    }
+   ],
+   "explain": "Only 21, 31, 41, 51, 61 and 71 take et. 81 and 91 do not: quatre-vingt-un, quatre-vingt-onze."
+  },
+  {
+   "id": "french.v.nu.200",
+   "topic": "french.v-numbers",
+   "kind": "mcq",
+   "prompt": "How do you write 200 in French?",
+   "options": [
+    {
+     "text": "deux cents",
+     "correct": true
+    },
+    {
+     "text": "deux cent",
+     "correct": false,
+     "feedback": "cent takes an s when it is multiplied and nothing follows: deux cents, but deux cent un."
+    },
+    {
+     "text": "deux centaines",
+     "correct": false,
+     "feedback": "une centaine means “about a hundred”."
+    }
+   ],
+   "explain": "deux cents (200), but deux cent dix (210): the s goes when another number follows."
+  },
+  {
+   "id": "french.v.nu.2026",
+   "topic": "french.v-numbers",
+   "kind": "mcq",
+   "prompt": "How do you say the year 2026?",
+   "options": [
+    {
+     "text": "deux mille vingt-six",
+     "correct": true
+    },
+    {
+     "text": "vingt vingt-six",
+     "correct": false,
+     "feedback": "English says “twenty twenty-six”, but French says “two thousand and twenty-six”."
+    },
+    {
+     "text": "deux milles vingt-six",
+     "correct": false,
+     "feedback": "mille never takes an s."
+    },
+    {
+     "text": "deux mille et vingt-six",
+     "correct": false,
+     "feedback": "There is no et in it."
+    }
+   ],
+   "explain": "deux mille vingt-six: two thousand + twenty-six. mille never changes."
+  },
+  {
+   "id": "french.v.nu.combien",
+   "topic": "french.v-numbers",
+   "kind": "fact",
+   "prompt": "What does **C’est combien ?** mean?",
+   "answer": "How much is it?",
+   "distractors": [
+    "How many are there?",
+    "What is it?",
+    "When is it?"
+   ],
+   "explain": "C’est combien ? (or Ça coûte combien ?) = how much is it?",
+   "hear": "C’est combien ?",
+   "learn": "**C’est combien ?** = How much is it?",
+   "accept": [
+    "how much does it cost",
+    "how much is that",
+    "how much",
+    "how much does that cost"
+   ]
+  },
+  {
+   "id": "french.v.nu.coute",
+   "topic": "french.v-numbers",
+   "kind": "fact",
+   "prompt": "What does **Ça coûte deux euros.** mean?",
+   "answer": "It costs two euros.",
+   "distractors": [
+    "It costs twelve euros.",
+    "It costs twenty euros.",
+    "It costs two cents."
+   ],
+   "explain": "coûter = to cost. deux = 2, douze = 12, vingt = 20.",
+   "hear": "Ça coûte deux euros.",
+   "learn": "**Ça coûte deux euros.** = It costs two euros.",
+   "accept": [
+    "that costs two euros",
+    "it costs 2 euros",
+    "it’s two euros",
+    "that’s two euros",
+    "it’s 2 euros",
+    "that costs 2 euros"
+   ]
+  },
+  {
+   "id": "french.v.nu.comma",
+   "topic": "french.v-numbers",
+   "kind": "mcq",
+   "prompt": "How is three euros fifty written in France?",
+   "options": [
+    {
+     "text": "3,50 €",
+     "correct": true
+    },
+    {
+     "text": "3.50 €",
+     "correct": false,
+     "feedback": "French uses a comma where English uses a decimal point."
+    },
+    {
+     "text": "350 €",
+     "correct": false,
+     "feedback": "That is three hundred and fifty euros!"
+    }
+   ],
+   "explain": "In France the decimal point is a comma, and the € usually comes after the number: 3,50 €."
+  },
+  {
+   "id": "french.v.nu.centime",
+   "topic": "french.v-numbers",
+   "kind": "fact",
+   "prompt": "What does **un centime** mean?",
+   "answer": "a cent",
+   "distractors": [
+    "a hundred euros",
+    "a coin",
+    "a banknote"
+   ],
+   "explain": "There are 100 centimes in a euro. A coin is une pièce and a banknote is un billet.",
+   "hear": "un centime",
+   "learn": "**un centime** = a cent",
+   "accept": [
+    "cent",
+    "one cent",
+    "1 cent",
+    "a euro cent",
+    "a centime"
+   ]
+  },
+  {
+   "id": "french.v.da.dates.tmpl",
+   "topic": "french.v-dates",
+   "kind": "template",
+   "gen": "y8frDates",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.v.da.caps",
+   "topic": "french.v-dates",
+   "kind": "mcq",
+   "prompt": "Which is written correctly in French?",
+   "options": [
+    {
+     "text": "le lundi 3 mars",
+     "correct": true
+    },
+    {
+     "text": "le Lundi 3 Mars",
+     "correct": false,
+     "feedback": "Days and months have no capital letters in French."
+    },
+    {
+     "text": "le lundi 3 Mars",
+     "correct": false,
+     "feedback": "Months have no capital letter either."
+    },
+    {
+     "text": "le Lundi 3 mars",
+     "correct": false,
+     "feedback": "Days have no capital letter."
+    }
+   ],
+   "explain": "No capital letters for days or months (except at the start of a sentence): le lundi 3 mars."
+  },
+  {
+   "id": "french.v.da.first",
+   "topic": "french.v-dates",
+   "kind": "mcq",
+   "prompt": "How do you say “the 1st of May”?",
+   "options": [
+    {
+     "text": "le premier mai",
+     "correct": true
+    },
+    {
+     "text": "le un mai",
+     "correct": false,
+     "feedback": "The 1st is the only date that uses a different word: premier."
+    },
+    {
+     "text": "la première mai",
+     "correct": false,
+     "feedback": "Dates are masculine: le premier."
+    }
+   ],
+   "explain": "The 1st is le premier; every other date uses the plain number: le deux mai, le trois mai."
+  },
+  {
+   "id": "french.v.da.anniv",
+   "topic": "french.v-dates",
+   "kind": "fact",
+   "prompt": "What does **Mon anniversaire, c’est le douze août.** mean?",
+   "answer": "My birthday is on 12 August.",
+   "distractors": [
+    "My birthday is on 2 August.",
+    "My birthday is on 12 April.",
+    "My birthday is on 20 August."
+   ],
+   "explain": "douze = 12 (deux = 2, vingt = 20), août = August (avril = April).",
+   "hear": "Mon anniversaire, c’est le douze août.",
+   "learn": "**Mon anniversaire, c’est le douze août.** = My birthday is on 12 August.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.da.quand",
+   "topic": "french.v-dates",
+   "kind": "fact",
+   "prompt": "How do you say **When is your birthday? (to a friend)** in French?",
+   "answer": "C’est quand, ton anniversaire ?",
+   "distractors": [
+    "Quel âge as-tu ?",
+    "Quelle heure est-il ?",
+    "Quel jour sommes-nous ?"
+   ],
+   "explain": "C’est quand, ton anniversaire ? Answer: Mon anniversaire, c’est le…",
+   "lang": "fr",
+   "learn": "**C’est quand, ton anniversaire ?** = When is your birthday? (to a friend)",
+   "accept": [
+    "C’est quand ton anniversaire ?",
+    "Quand est ton anniversaire ?",
+    "Ton anniversaire, c’est quand ?",
+    "Quelle est la date de ton anniversaire ?"
+   ]
+  },
+  {
+   "id": "french.v.da.mercredi",
+   "topic": "french.v-dates",
+   "kind": "fact",
+   "prompt": "What does **mercredi** mean?",
+   "answer": "Wednesday",
+   "distractors": [
+    "Monday",
+    "Tuesday",
+    "Thursday"
+   ],
+   "explain": "mercredi = Wednesday. Careful: mardi is Tuesday.",
+   "hear": "mercredi",
+   "learn": "**mercredi** = Wednesday",
+   "hook": "mardi (Mars), mercredi (Mercury), jeudi (Jupiter): the Roman gods hide in the days."
+  },
+  {
+   "id": "french.v.da.jeudi",
+   "topic": "french.v-dates",
+   "kind": "fact",
+   "prompt": "What does **jeudi** mean?",
+   "answer": "Thursday",
+   "distractors": [
+    "Tuesday",
+    "Wednesday",
+    "Friday"
+   ],
+   "explain": "jeudi = Thursday, Jupiter’s day. vendredi (Friday) is Venus’s day.",
+   "hear": "jeudi",
+   "learn": "**jeudi** = Thursday"
+  },
+  {
+   "id": "french.v.da.aout",
+   "topic": "french.v-dates",
+   "kind": "fact",
+   "prompt": "How do you say **August** in French?",
+   "answer": "août",
+   "distractors": [
+    "avril",
+    "auguste",
+    "octobre"
+   ],
+   "explain": "August = août, said “oot”. The circumflex replaces an old s.",
+   "lang": "fr",
+   "learn": "**août** = August",
+   "hook": "Many French circumflexes mark an s that has gone: août (from Latin augustus), forêt (forest), hôpital (hospital)."
+  },
+  {
+   "id": "french.v.da.juin",
+   "topic": "french.v-dates",
+   "kind": "fact",
+   "prompt": "How do you say **June** in French?",
+   "answer": "juin",
+   "distractors": [
+    "juillet",
+    "janvier",
+    "jeudi"
+   ],
+   "explain": "June = juin; July = juillet. Both start with ju-, so learn them as a pair.",
+   "lang": "fr",
+   "learn": "**juin** = June"
+  },
+  {
+   "id": "french.v.da.days",
+   "topic": "french.v-dates",
+   "kind": "order",
+   "prompt": "Put the days of the week in order, starting with Monday.",
+   "items": [
+    "lundi",
+    "mardi",
+    "mercredi",
+    "jeudi",
+    "vendredi",
+    "samedi",
+    "dimanche"
+   ],
+   "labels": null,
+   "explain": "The French week starts on Monday: lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche."
+  },
+  {
+   "id": "french.v.da.months",
+   "topic": "french.v-dates",
+   "kind": "order",
+   "prompt": "Put these months in order.",
+   "items": [
+    "juillet",
+    "août",
+    "septembre",
+    "octobre",
+    "novembre",
+    "décembre"
+   ],
+   "labels": null,
+   "explain": "juillet, août, septembre, octobre, novembre, décembre."
+  },
+  {
+   "id": "french.v.da.onze",
+   "topic": "french.v-dates",
+   "kind": "mcq",
+   "prompt": "Which is correct for “the 11th of November”?",
+   "options": [
+    {
+     "text": "le onze novembre",
+     "correct": true
+    },
+    {
+     "text": "l’onze novembre",
+     "correct": false,
+     "feedback": "There is no l’ before onze (or huit): le onze, le huit."
+    },
+    {
+     "text": "le onzième novembre",
+     "correct": false,
+     "feedback": "French dates use plain numbers, except the 1st (le premier)."
+    }
+   ],
+   "explain": "le onze novembre. No elision before onze or huit."
+  },
+  {
+   "id": "french.v.da.aujourdhui",
+   "topic": "french.v-dates",
+   "kind": "fact",
+   "prompt": "What does **Aujourd’hui, c’est mercredi.** mean?",
+   "answer": "Today is Wednesday.",
+   "distractors": [
+    "Tomorrow is Wednesday.",
+    "Yesterday was Wednesday.",
+    "Today is Monday."
+   ],
+   "explain": "aujourd’hui = today, demain = tomorrow, hier = yesterday.",
+   "hear": "Aujourd’hui, c’est mercredi.",
+   "learn": "**Aujourd’hui, c’est mercredi.** = Today is Wednesday.",
+   "accept": [
+    "today it is Wednesday",
+    "it’s Wednesday today",
+    "today it’s Wednesday",
+    "it is Wednesday today"
+   ]
+  },
+  {
+   "id": "french.v.da.lelundi",
+   "topic": "french.v-dates",
+   "kind": "mcq",
+   "prompt": "“Le lundi, j’ai maths.” What does **le lundi** mean here?",
+   "options": [
+    {
+     "text": "on Mondays (every week)",
+     "correct": true
+    },
+    {
+     "text": "on Monday (just this one)",
+     "correct": false,
+     "feedback": "For one particular day, French uses the day on its own: lundi, je vais au cinéma."
+    },
+    {
+     "text": "the Monday after next",
+     "correct": false,
+     "feedback": "le lundi means every Monday."
+    }
+   ],
+   "explain": "le + day = every week on that day: le samedi, je joue au foot (on Saturdays I play football)."
+  },
+  {
+   "id": "french.v.ti.time.tmpl",
+   "topic": "french.v-time",
+   "kind": "template",
+   "gen": "y8frTime",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "seed": [
+    -1,
+    0,
+    1
+   ]
+  },
+  {
+   "id": "french.v.ti.quelle",
+   "topic": "french.v-time",
+   "kind": "fact",
+   "prompt": "How do you say **What time is it?** in French?",
+   "answer": "Quelle heure est-il ?",
+   "distractors": [
+    "Quel temps fait-il ?",
+    "Quel âge as-tu ?",
+    "C’est quelle date ?"
+   ],
+   "explain": "Quelle heure est-il ? Answer: Il est… heures. (Quel temps fait-il ? asks about the weather!)",
+   "lang": "fr",
+   "learn": "**Quelle heure est-il ?** = What time is it?",
+   "accept": [
+    "Il est quelle heure ?",
+    "Quelle heure il est ?"
+   ]
+  },
+  {
+   "id": "french.v.ti.une",
+   "topic": "french.v-time",
+   "kind": "mcq",
+   "prompt": "Which is right for 1:00?",
+   "options": [
+    {
+     "text": "Il est une heure.",
+     "correct": true
+    },
+    {
+     "text": "Il est un heure.",
+     "correct": false,
+     "feedback": "heure is feminine, so it is une heure."
+    },
+    {
+     "text": "Il est une heures.",
+     "correct": false,
+     "feedback": "One hour, so no s on heure."
+    }
+   ],
+   "explain": "Il est une heure (1:00), il est deux heures (2:00)."
+  },
+  {
+   "id": "french.v.ti.midi",
+   "topic": "french.v-time",
+   "kind": "fact",
+   "prompt": "What does **midi** mean?",
+   "answer": "midday",
+   "distractors": [
+    "midnight",
+    "half past twelve",
+    "the afternoon"
+   ],
+   "explain": "midi = midday (12 noon); minuit = midnight.",
+   "hear": "midi",
+   "learn": "**midi** = midday",
+   "accept": [
+    "noon",
+    "12 noon",
+    "twelve noon",
+    "12 o’clock midday",
+    "twelve o’clock"
+   ]
+  },
+  {
+   "id": "french.v.ti.minuit",
+   "topic": "french.v-time",
+   "kind": "fact",
+   "prompt": "What does **minuit** mean?",
+   "answer": "midnight",
+   "distractors": [
+    "midday",
+    "half past eleven",
+    "the night"
+   ],
+   "explain": "minuit = midnight; la nuit = the night.",
+   "hear": "minuit",
+   "learn": "**minuit** = midnight",
+   "accept": [
+    "12 midnight",
+    "twelve midnight"
+   ]
+  },
+  {
+   "id": "french.v.ti.demie",
+   "topic": "french.v-time",
+   "kind": "mcq",
+   "prompt": "Il est deux heures et demie. What time is it?",
+   "options": [
+    {
+     "text": "2:30",
+     "correct": true
+    },
+    {
+     "text": "1:30",
+     "correct": false,
+     "feedback": "Half past two: French says the hour that has passed, then et demie."
+    },
+    {
+     "text": "2:15",
+     "correct": false,
+     "feedback": "et quart is quarter past; et demie is half past."
+    }
+   ],
+   "explain": "et demie = half past: 2:30.",
+   "hear": "Il est deux heures et demie."
+  },
+  {
+   "id": "french.v.ti.moins",
+   "topic": "french.v-time",
+   "kind": "mcq",
+   "prompt": "Il est six heures moins le quart. What time is it?",
+   "options": [
+    {
+     "text": "5:45",
+     "correct": true
+    },
+    {
+     "text": "6:15",
+     "correct": false,
+     "feedback": "That would be six heures et quart."
+    },
+    {
+     "text": "6:45",
+     "correct": false,
+     "feedback": "moins means minus: six o’clock minus a quarter = 5:45."
+    }
+   ],
+   "explain": "moins le quart = quarter to: six heures moins le quart = 5:45.",
+   "hear": "Il est six heures moins le quart."
+  },
+  {
+   "id": "french.v.ti.matin",
+   "topic": "french.v-time",
+   "kind": "fact",
+   "prompt": "What does **du matin** mean?",
+   "answer": "in the morning",
+   "distractors": [
+    "in the afternoon",
+    "in the evening",
+    "at night"
+   ],
+   "explain": "sept heures du matin = 7 am; trois heures de l’après-midi = 3 pm; huit heures du soir = 8 pm.",
+   "hear": "du matin",
+   "learn": "**du matin** = in the morning",
+   "accept": [
+    "am",
+    "a.m.",
+    "of the morning"
+   ]
+  },
+  {
+   "id": "french.v.ti.soir",
+   "topic": "french.v-time",
+   "kind": "fact",
+   "prompt": "What does **huit heures du soir** mean?",
+   "answer": "8 pm",
+   "distractors": [
+    "8 am",
+    "8:30 pm",
+    "9 pm"
+   ],
+   "explain": "du soir = in the evening: huit heures du soir = 8 pm (20:00).",
+   "hear": "huit heures du soir",
+   "learn": "**huit heures du soir** = 8 pm",
+   "accept": [
+    "8pm",
+    "8 p.m.",
+    "eight pm",
+    "eight o’clock in the evening",
+    "8 o’clock in the evening",
+    "20:00",
+    "eight in the evening",
+    "8 in the evening"
+   ]
+  },
+  {
+   "id": "french.v.ti.17",
+   "topic": "french.v-time",
+   "kind": "mcq",
+   "prompt": "Le train part à dix-sept heures. When does the train leave?",
+   "options": [
+    {
+     "text": "5 pm",
+     "correct": true
+    },
+    {
+     "text": "7 pm",
+     "correct": false,
+     "feedback": "dix-sept is 17, not sept: 17:00 is 5 pm."
+    },
+    {
+     "text": "5 am",
+     "correct": false,
+     "feedback": "The 24-hour clock: 17:00 is in the afternoon."
+    },
+    {
+     "text": "7 am",
+     "correct": false,
+     "feedback": "dix-sept is 17: 17:00 is 5 pm."
+    }
+   ],
+   "explain": "dix-sept heures = 17:00 = 5 pm. Take away 12 to change from the 24-hour clock.",
+   "hear": "Le train part à dix-sept heures."
+  },
+  {
+   "id": "french.v.ti.a",
+   "topic": "french.v-time",
+   "kind": "fact",
+   "prompt": "How do you say **at half past seven** in French?",
+   "answer": "à sept heures et demie",
+   "distractors": [
+    "à sept heures et demi",
+    "à six heures et demie",
+    "à sept heures et quart"
+   ],
+   "explain": "à = at. heure is feminine, so demie has an e: sept heures et demie.",
+   "lang": "fr",
+   "learn": "**à sept heures et demie** = at half past seven",
+   "accept": [
+    "à sept heures trente"
+   ]
+  },
+  {
+   "id": "french.v.ti.aquelle",
+   "topic": "french.v-time",
+   "kind": "mcq",
+   "prompt": "What does **À quelle heure ?** mean?",
+   "options": [
+    {
+     "text": "At what time?",
+     "correct": true
+    },
+    {
+     "text": "What time is it?",
+     "correct": false,
+     "feedback": "That is Quelle heure est-il ?"
+    },
+    {
+     "text": "For how many hours?",
+     "correct": false,
+     "feedback": "That would be Pendant combien d’heures ?"
+    }
+   ],
+   "explain": "À quelle heure ? = at what time? Answer with à: à huit heures.",
+   "hear": "À quelle heure ?"
+  },
+  {
+   "id": "french.v.fa.frere",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "What does **mon frère** mean?",
+   "answer": "my brother",
+   "distractors": [
+    "my father",
+    "my sister",
+    "my uncle"
+   ],
+   "explain": "mon frère = my brother; ma sœur = my sister.",
+   "hear": "mon frère",
+   "learn": "**mon frère** = my brother"
+  },
+  {
+   "id": "french.v.fa.soeur",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "What does **ma sœur** mean?",
+   "answer": "my sister",
+   "distractors": [
+    "my mother",
+    "my aunt",
+    "my daughter"
+   ],
+   "explain": "ma sœur = my sister. The œ is two letters joined (o + e).",
+   "hear": "ma sœur",
+   "learn": "**ma sœur** = my sister"
+  },
+  {
+   "id": "french.v.fa.parents",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "How do you say **my parents** in French?",
+   "answer": "mes parents",
+   "distractors": [
+    "mon parents",
+    "ma parents",
+    "mes parent"
+   ],
+   "explain": "mes is “my” for plurals, whatever the gender: mes parents, mes sœurs.",
+   "lang": "fr",
+   "learn": "**mes parents** = my parents"
+  },
+  {
+   "id": "french.v.fa.grandmere",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "What does **ma grand-mère** mean?",
+   "answer": "my grandmother",
+   "distractors": [
+    "my great-aunt",
+    "my godmother",
+    "my mother"
+   ],
+   "explain": "ma grand-mère = my grandmother; mon grand-père = my grandfather; mes grands-parents = my grandparents.",
+   "hear": "ma grand-mère",
+   "learn": "**ma grand-mère** = my grandmother",
+   "accept": [
+    "my grandma",
+    "my granny",
+    "my gran",
+    "my nan",
+    "my nana",
+    "my grandmum"
+   ]
+  },
+  {
+   "id": "french.v.fa.demi",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "What does **mon demi-frère** mean?",
+   "answer": "my half-brother",
+   "distractors": [
+    "my twin brother",
+    "my older brother",
+    "my brother-in-law"
+   ],
+   "explain": "un demi-frère is a half-brother or a stepbrother. A twin brother is un frère jumeau.",
+   "hear": "mon demi-frère",
+   "learn": "**mon demi-frère** = my half-brother",
+   "accept": [
+    "my stepbrother",
+    "my step-brother",
+    "my half brother"
+   ]
+  },
+  {
+   "id": "french.v.fa.unique",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "What does **Je suis fille unique.** mean?",
+   "answer": "I am an only child.",
+   "distractors": [
+    "I am a single girl.",
+    "I have one daughter.",
+    "I am the only girl here."
+   ],
+   "explain": "fille unique (for a girl) or fils unique (for a boy) = an only child.",
+   "hear": "Je suis fille unique.",
+   "learn": "**Je suis fille unique.** = I am an only child.",
+   "accept": [
+    "I’m an only child"
+   ]
+  },
+  {
+   "id": "french.v.fa.chien",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "How do you say **I have a dog.** in French?",
+   "answer": "J’ai un chien.",
+   "distractors": [
+    "J’ai une chien.",
+    "J’ai un chat.",
+    "Je suis un chien."
+   ],
+   "explain": "chien is masculine: un chien. A cat is un chat.",
+   "lang": "fr",
+   "learn": "**J’ai un chien.** = I have a dog."
+  },
+  {
+   "id": "french.v.fa.chats",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "What does **Elle a deux chats.** mean?",
+   "answer": "She has two cats.",
+   "distractors": [
+    "She has two horses.",
+    "He has two cats.",
+    "She has twelve cats."
+   ],
+   "explain": "elle = she, il = he; deux = two, douze = twelve; un chat (cat), un cheval (horse).",
+   "hear": "Elle a deux chats.",
+   "learn": "**Elle a deux chats.** = She has two cats.",
+   "accept": [
+    "she’s got two cats",
+    "she has 2 cats"
+   ]
+  },
+  {
+   "id": "french.v.fa.lapin",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "What does **un lapin** mean?",
+   "answer": "a rabbit",
+   "distractors": [
+    "a hamster",
+    "a guinea pig",
+    "a bird"
+   ],
+   "explain": "un lapin = a rabbit; un hamster; un cochon d’Inde (a guinea pig); un oiseau (a bird).",
+   "hear": "un lapin",
+   "learn": "**un lapin** = a rabbit",
+   "accept": [
+    "rabbit",
+    "a bunny"
+   ]
+  },
+  {
+   "id": "french.v.fa.poisson",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "How do you say **a goldfish** in French?",
+   "answer": "un poisson rouge",
+   "distractors": [
+    "un poisson d’or",
+    "une poisson rouge",
+    "un poison rouge"
+   ],
+   "explain": "A goldfish is a “red fish”: un poisson rouge. Careful: un poison (one s) is poison!",
+   "lang": "fr",
+   "learn": "**un poisson rouge** = a goldfish"
+  },
+  {
+   "id": "french.v.fa.ilya",
+   "topic": "french.v-family",
+   "kind": "mcq",
+   "prompt": "Dans ma famille, il y a quatre personnes. What does **il y a** mean?",
+   "options": [
+    {
+     "text": "there are",
+     "correct": true
+    },
+    {
+     "text": "he has",
+     "correct": false,
+     "feedback": "il y a is a set phrase meaning “there is” or “there are”."
+    },
+    {
+     "text": "I have",
+     "correct": false,
+     "feedback": "I have is j’ai."
+    }
+   ],
+   "explain": "il y a = there is / there are: Dans ma famille, il y a quatre personnes = there are four people in my family.",
+   "hear": "Dans ma famille, il y a quatre personnes."
+  },
+  {
+   "id": "french.v.fa.sappelle",
+   "topic": "french.v-family",
+   "kind": "mcq",
+   "prompt": "What does **Mon père s’appelle Marc** mean?",
+   "options": [
+    {
+     "text": "My father is called Marc.",
+     "correct": true
+    },
+    {
+     "text": "My father calls Marc.",
+     "correct": false,
+     "feedback": "s’appeler means to be called (to call oneself)."
+    },
+    {
+     "text": "My brother is called Marc.",
+     "correct": false,
+     "feedback": "mon père is my father; mon frère is my brother."
+    }
+   ],
+   "explain": "s’appeler = to be called: il s’appelle Marc = he is called Marc.",
+   "hear": "Mon père s’appelle Marc."
+  },
+  {
+   "id": "french.v.fa.oncle",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "What does **mon oncle** mean?",
+   "answer": "my uncle",
+   "distractors": [
+    "my grandfather",
+    "my cousin",
+    "my nephew"
+   ],
+   "explain": "mon oncle = my uncle; ma tante = my aunt.",
+   "hear": "mon oncle",
+   "learn": "**mon oncle** = my uncle"
+  },
+  {
+   "id": "french.v.fa.cousine",
+   "topic": "french.v-family",
+   "kind": "fact",
+   "prompt": "What does **ma cousine** mean?",
+   "answer": "my cousin",
+   "distractors": [
+    "my aunt",
+    "my niece",
+    "my sister"
+   ],
+   "explain": "ma cousine is a girl cousin; mon cousin is a boy cousin.",
+   "hear": "ma cousine",
+   "learn": "**ma cousine** = my cousin",
+   "accept": [
+    "my female cousin",
+    "my girl cousin",
+    "my cousin (a girl)"
+   ]
+  },
+  {
+   "id": "french.v.de.yeux",
+   "topic": "french.v-describe",
+   "kind": "fact",
+   "prompt": "What does **J’ai les yeux bleus.** mean?",
+   "answer": "I have blue eyes.",
+   "distractors": [
+    "I have blue hair.",
+    "He has blue eyes.",
+    "I have brown eyes."
+   ],
+   "explain": "les yeux = the eyes (one eye is un œil). Eyes and hair take avoir and les: j’ai les yeux bleus.",
+   "hear": "J’ai les yeux bleus.",
+   "learn": "**J’ai les yeux bleus.** = I have blue eyes.",
+   "accept": [
+    "I’ve got blue eyes",
+    "my eyes are blue"
+   ]
+  },
+  {
+   "id": "french.v.de.courts",
+   "topic": "french.v-describe",
+   "kind": "fact",
+   "prompt": "How do you say **I have short hair.** in French?",
+   "answer": "J’ai les cheveux courts.",
+   "distractors": [
+    "J’ai les cheveux court.",
+    "J’ai le cheveux courts.",
+    "J’ai les chevaux courts."
+   ],
+   "explain": "les cheveux (hair) is plural, so courts takes an s. Careful: les chevaux are horses!",
+   "lang": "fr",
+   "learn": "**J’ai les cheveux courts.** = I have short hair.",
+   "accept": [
+    "J’ai des cheveux courts."
+   ]
+  },
+  {
+   "id": "french.v.de.agree",
+   "topic": "french.v-describe",
+   "kind": "mcq",
+   "prompt": "Léa est… (tall)",
+   "options": [
+    {
+     "text": "grande",
+     "correct": true
+    },
+    {
+     "text": "grand",
+     "correct": false,
+     "feedback": "Léa is a girl, so add -e: grande."
+    },
+    {
+     "text": "grands",
+     "correct": false,
+     "feedback": "-s is for more than one person."
+    }
+   ],
+   "explain": "Adjectives agree with the person: il est grand, elle est grande, ils sont grands, elles sont grandes."
+  },
+  {
+   "id": "french.v.de.ils",
+   "topic": "french.v-describe",
+   "kind": "mcq",
+   "prompt": "Mes frères sont… (tall)",
+   "options": [
+    {
+     "text": "grands",
+     "correct": true
+    },
+    {
+     "text": "grand",
+     "correct": false,
+     "feedback": "More than one brother, so add -s: grands."
+    },
+    {
+     "text": "grandes",
+     "correct": false,
+     "feedback": "grandes is for girls or women (feminine plural)."
+    }
+   ],
+   "explain": "Two or more boys: grands. Two or more girls: grandes."
+  },
+  {
+   "id": "french.v.de.drole",
+   "topic": "french.v-describe",
+   "kind": "fact",
+   "prompt": "What does **drôle** mean?",
+   "answer": "funny",
+   "distractors": [
+    "sad",
+    "kind",
+    "lazy"
+   ],
+   "explain": "drôle = funny (it does not change for a girl: elle est drôle).",
+   "hear": "drôle",
+   "learn": "**drôle** = funny",
+   "accept": [
+    "amusing"
+   ]
+  },
+  {
+   "id": "french.v.de.sympa",
+   "topic": "french.v-describe",
+   "kind": "fact",
+   "prompt": "What does **sympa** mean?",
+   "answer": "nice",
+   "distractors": [
+    "sympathetic",
+    "shy",
+    "sporty"
+   ],
+   "explain": "sympa (short for sympathique) = nice, friendly. It is a false friend: it does not mean sympathetic.",
+   "hear": "sympa",
+   "learn": "**sympa** = nice",
+   "accept": [
+    "friendly",
+    "kind",
+    "likeable",
+    "nice and friendly"
+   ]
+  },
+  {
+   "id": "french.v.de.timide",
+   "topic": "french.v-describe",
+   "kind": "fact",
+   "prompt": "What does **timide** mean?",
+   "answer": "shy",
+   "distractors": [
+    "tidy",
+    "tired",
+    "lazy"
+   ],
+   "explain": "timide = shy (timid). It ends in -e already, so it is the same for a girl.",
+   "hear": "timide",
+   "learn": "**timide** = shy",
+   "accept": [
+    "timid"
+   ]
+  },
+  {
+   "id": "french.v.de.paresseux",
+   "topic": "french.v-describe",
+   "kind": "fact",
+   "prompt": "What does **paresseux** mean?",
+   "answer": "lazy",
+   "distractors": [
+    "chatty",
+    "hard-working",
+    "proud"
+   ],
+   "explain": "paresseux = lazy; for a girl: paresseuse. Hard-working is travailleur (travailleuse).",
+   "hear": "paresseux",
+   "learn": "**paresseux** = lazy"
+  },
+  {
+   "id": "french.v.de.bavarde",
+   "topic": "french.v-describe",
+   "kind": "fact",
+   "prompt": "How do you say **She is chatty.** in French?",
+   "answer": "Elle est bavarde.",
+   "distractors": [
+    "Elle est bavard.",
+    "Il est bavarde.",
+    "Elle a bavarde."
+   ],
+   "explain": "elle (she), so bavard takes -e: elle est bavarde.",
+   "lang": "fr",
+   "learn": "**Elle est bavarde.** = She is chatty."
+  },
+  {
+   "id": "french.v.de.ni",
+   "topic": "french.v-describe",
+   "kind": "mcq",
+   "prompt": "What does **Il n’est ni grand ni petit** mean?",
+   "options": [
+    {
+     "text": "He is neither tall nor short.",
+     "correct": true
+    },
+    {
+     "text": "He is not tall but short.",
+     "correct": false,
+     "feedback": "ni… ni… = neither… nor…"
+    },
+    {
+     "text": "He is not very tall.",
+     "correct": false,
+     "feedback": "ni… ni… = neither… nor…"
+    }
+   ],
+   "explain": "ne… ni… ni… = neither… nor…: il n’est ni grand ni petit.",
+   "hear": "Il n’est ni grand ni petit."
+  },
+  {
+   "id": "french.v.de.lunettes",
+   "topic": "french.v-describe",
+   "kind": "fact",
+   "prompt": "What does **Je porte des lunettes.** mean?",
+   "answer": "I wear glasses.",
+   "distractors": [
+    "I wear earrings.",
+    "I need glasses.",
+    "I have a beard."
+   ],
+   "explain": "porter = to wear; des lunettes = glasses (always plural).",
+   "hear": "Je porte des lunettes.",
+   "learn": "**Je porte des lunettes.** = I wear glasses.",
+   "accept": [
+    "I’ve got glasses",
+    "I have glasses",
+    "I am wearing glasses",
+    "I’m wearing glasses"
+   ]
+  },
+  {
+   "id": "french.v.de.petit",
+   "topic": "french.v-describe",
+   "kind": "mcq",
+   "prompt": "How do you say “a small dog”?",
+   "options": [
+    {
+     "text": "un petit chien",
+     "correct": true
+    },
+    {
+     "text": "un chien petit",
+     "correct": false,
+     "feedback": "petit is one of the short, common adjectives that go before the noun."
+    },
+    {
+     "text": "une petite chien",
+     "correct": false,
+     "feedback": "chien is masculine: un petit chien."
+    }
+   ],
+   "explain": "Most adjectives follow the noun, but beauty, age, goodness and size go before: un petit chien, une grande maison, un bon livre.",
+   "hook": "**BAGS** adjectives go before the noun: Beauty (beau, joli), Age (jeune, vieux), Goodness (bon, mauvais), Size (grand, petit)."
+  },
+  {
+   "id": "french.v.de.roux",
+   "topic": "french.v-describe",
+   "kind": "fact",
+   "prompt": "What does **Il a les cheveux roux.** mean?",
+   "answer": "He has red hair.",
+   "distractors": [
+    "He has pink hair.",
+    "He has brown hair.",
+    "He has blond hair."
+   ],
+   "explain": "roux = red or ginger, for hair (rouge is for other red things). Brown hair: les cheveux bruns or châtains.",
+   "hear": "Il a les cheveux roux.",
+   "learn": "**Il a les cheveux roux.** = He has red hair.",
+   "accept": [
+    "he has ginger hair",
+    "he’s got red hair",
+    "he’s got ginger hair",
+    "he is a redhead",
+    "he’s a redhead"
+   ]
+  },
+  {
+   "id": "french.v.sc.eps",
+   "topic": "french.v-school",
+   "kind": "fact",
+   "prompt": "What does **l’EPS** mean?",
+   "answer": "PE",
+   "distractors": [
+    "RE",
+    "science",
+    "music"
+   ],
+   "explain": "l’EPS (éducation physique et sportive) = PE.",
+   "hear": "l’EPS",
+   "learn": "**l’EPS** = PE",
+   "accept": [
+    "P.E.",
+    "physical education",
+    "sport",
+    "games"
+   ]
+  },
+  {
+   "id": "french.v.sc.histgeo",
+   "topic": "french.v-school",
+   "kind": "fact",
+   "prompt": "What does **l’histoire-géo** mean?",
+   "answer": "history and geography",
+   "distractors": [
+    "geology",
+    "PSHE",
+    "RE"
+   ],
+   "explain": "In France, history and geography are one subject: l’histoire-géographie, or l’histoire-géo for short.",
+   "hear": "l’histoire-géo",
+   "learn": "**l’histoire-géo** = history and geography",
+   "accept": [
+    "history-geography",
+    "history geography",
+    "humanities",
+    "history and geog"
+   ]
+  },
+  {
+   "id": "french.v.sc.anglais",
+   "topic": "french.v-school",
+   "kind": "fact",
+   "prompt": "How do you say **English (the school subject)** in French?",
+   "answer": "l’anglais",
+   "distractors": [
+    "l’anglaise",
+    "le anglais",
+    "l’Angleterre"
+   ],
+   "explain": "Languages are masculine and have no capital letter: l’anglais, le français, l’espagnol. l’Angleterre is England.",
+   "lang": "fr",
+   "learn": "**l’anglais** = English (the school subject)",
+   "accept": [
+    "anglais"
+   ]
+  },
+  {
+   "id": "french.v.sc.dessin",
+   "topic": "french.v-school",
+   "kind": "fact",
+   "prompt": "What does **le dessin** mean?",
+   "answer": "art",
+   "distractors": [
+    "design",
+    "drama",
+    "dance"
+   ],
+   "explain": "le dessin = art, drawing (at collège the subject is called les arts plastiques). A false friend: it is not design.",
+   "hear": "le dessin",
+   "learn": "**le dessin** = art",
+   "accept": [
+    "drawing",
+    "art (drawing)",
+    "art and design"
+   ]
+  },
+  {
+   "id": "french.v.sc.prefere",
+   "topic": "french.v-school",
+   "kind": "fact",
+   "prompt": "What does **Ma matière préférée, c’est la musique.** mean?",
+   "answer": "My favourite subject is music.",
+   "distractors": [
+    "My favourite teacher is a musician.",
+    "I prefer music to maths.",
+    "My worst subject is music."
+   ],
+   "explain": "une matière = a school subject; préféré(e) = favourite.",
+   "hear": "Ma matière préférée, c’est la musique.",
+   "learn": "**Ma matière préférée, c’est la musique.** = My favourite subject is music.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.sc.adore",
+   "topic": "french.v-school",
+   "kind": "fact",
+   "prompt": "How do you say **I love French.** in French?",
+   "answer": "J’adore le français.",
+   "distractors": [
+    "J’adore français.",
+    "Je adore le français.",
+    "J’adore la français."
+   ],
+   "explain": "Opinion verbs keep the article: j’adore le français, je déteste les maths. And je becomes j’ before a vowel.",
+   "lang": "fr",
+   "learn": "**J’adore le français.** = I love French."
+  },
+  {
+   "id": "french.v.sc.parceque",
+   "topic": "french.v-school",
+   "kind": "mcq",
+   "prompt": "What does **parce que c’est difficile** mean in “Je déteste la chimie parce que c’est difficile”?",
+   "options": [
+    {
+     "text": "because it is difficult",
+     "correct": true
+    },
+    {
+     "text": "so it is difficult",
+     "correct": false,
+     "feedback": "parce que = because; donc = so."
+    },
+    {
+     "text": "although it is hard",
+     "correct": false,
+     "feedback": "parce que = because."
+    }
+   ],
+   "explain": "parce que = because. Add c’est + an adjective for a quick reason.",
+   "hear": "Je déteste la chimie parce que c’est difficile."
+  },
+  {
+   "id": "french.v.sc.prof",
+   "topic": "french.v-school",
+   "kind": "fact",
+   "prompt": "What does **le prof** mean?",
+   "answer": "the teacher",
+   "distractors": [
+    "the pupil",
+    "the head teacher",
+    "the timetable"
+   ],
+   "explain": "le prof (short for le professeur) = the teacher; un(e) élève = a pupil.",
+   "hear": "le prof",
+   "learn": "**le prof** = the teacher",
+   "accept": [
+    "teacher",
+    "a teacher",
+    "the schoolteacher"
+   ]
+  },
+  {
+   "id": "french.v.sc.emploi",
+   "topic": "french.v-school",
+   "kind": "fact",
+   "prompt": "What does **l’emploi du temps** mean?",
+   "answer": "the timetable",
+   "distractors": [
+    "the use of time",
+    "the break",
+    "the homework"
+   ],
+   "explain": "l’emploi du temps = the timetable.",
+   "hear": "l’emploi du temps",
+   "learn": "**l’emploi du temps** = the timetable",
+   "accept": [
+    "timetable",
+    "the school timetable",
+    "the schedule",
+    "schedule"
+   ]
+  },
+  {
+   "id": "french.v.sc.recre",
+   "topic": "french.v-school",
+   "kind": "fact",
+   "prompt": "What does **la récré** mean?",
+   "answer": "break",
+   "distractors": [
+    "lunch",
+    "homework",
+    "the canteen"
+   ],
+   "explain": "la récré (short for la récréation) = break time.",
+   "hear": "la récré",
+   "learn": "**la récré** = break",
+   "accept": [
+    "break time",
+    "breaktime",
+    "the break",
+    "playtime",
+    "recess"
+   ]
+  },
+  {
+   "id": "french.v.sc.devoirs",
+   "topic": "french.v-school",
+   "kind": "fact",
+   "prompt": "What does **les devoirs** mean?",
+   "answer": "homework",
+   "distractors": [
+    "the exams",
+    "the lessons",
+    "the rules"
+   ],
+   "explain": "les devoirs = homework (it is plural in French).",
+   "hear": "les devoirs",
+   "learn": "**les devoirs** = homework",
+   "accept": [
+    "the homework"
+   ]
+  },
+  {
+   "id": "french.v.sc.college",
+   "topic": "french.v-school",
+   "kind": "mcq",
+   "prompt": "In France, what is **le collège**?",
+   "options": [
+    {
+     "text": "secondary school, ages 11 to 15",
+     "correct": true
+    },
+    {
+     "text": "a university college",
+     "correct": false,
+     "feedback": "A false friend: university is l’université (or la fac)."
+    },
+    {
+     "text": "a sixth-form college",
+     "correct": false,
+     "feedback": "From 15 to 18, French pupils go to le lycée."
+    }
+   ],
+   "explain": "le collège = secondary school (ages 11–15); le lycée = ages 15–18."
+  },
+  {
+   "id": "french.v.sc.commence",
+   "topic": "french.v-school",
+   "kind": "fact",
+   "prompt": "What does **Les cours commencent à huit heures.** mean?",
+   "answer": "Lessons start at eight o’clock.",
+   "distractors": [
+    "Lessons finish at eight o’clock.",
+    "Lessons start at half past eight.",
+    "The courses last eight hours."
+   ],
+   "explain": "les cours = lessons; commencer = to start, finir = to finish.",
+   "hear": "Les cours commencent à huit heures.",
+   "learn": "**Les cours commencent à huit heures.** = Lessons start at eight o’clock.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.ft.jouer",
+   "topic": "french.v-freetime",
+   "kind": "mcq",
+   "prompt": "Je joue… foot.",
+   "options": [
+    {
+     "text": "au",
+     "correct": true
+    },
+    {
+     "text": "du",
+     "correct": false,
+     "feedback": "jouer de is for instruments: je joue du piano."
+    },
+    {
+     "text": "à la",
+     "correct": false,
+     "feedback": "foot is masculine: à + le = au."
+    }
+   ],
+   "explain": "jouer à for sports and games: je joue au foot (à + le = au), je joue à la pétanque."
+  },
+  {
+   "id": "french.v.ft.piano",
+   "topic": "french.v-freetime",
+   "kind": "mcq",
+   "prompt": "Je joue… piano.",
+   "options": [
+    {
+     "text": "du",
+     "correct": true
+    },
+    {
+     "text": "au",
+     "correct": false,
+     "feedback": "For instruments use jouer de: de + le = du."
+    },
+    {
+     "text": "de la",
+     "correct": false,
+     "feedback": "piano is masculine: de + le = du."
+    }
+   ],
+   "explain": "jouer de for instruments: je joue du piano, de la guitare, de la batterie (drums)."
+  },
+  {
+   "id": "french.v.ft.natation",
+   "topic": "french.v-freetime",
+   "kind": "fact",
+   "prompt": "What does **Je fais de la natation.** mean?",
+   "answer": "I go swimming.",
+   "distractors": [
+    "I go to the pool.",
+    "I like swimming.",
+    "I teach swimming."
+   ],
+   "explain": "faire de + activity: je fais de la natation = I go swimming, I swim.",
+   "hear": "Je fais de la natation.",
+   "learn": "**Je fais de la natation.** = I go swimming.",
+   "accept": [
+    "I swim",
+    "I do swimming",
+    "I go swimming"
+   ]
+  },
+  {
+   "id": "french.v.ft.velo",
+   "topic": "french.v-freetime",
+   "kind": "fact",
+   "prompt": "How do you say **I go cycling.** in French?",
+   "answer": "Je fais du vélo.",
+   "distractors": [
+    "Je joue au vélo.",
+    "Je fais de vélo.",
+    "Je vais du vélo."
+   ],
+   "explain": "Activities that are not ball games take faire de: je fais du vélo (de + le = du).",
+   "lang": "fr",
+   "learn": "**Je fais du vélo.** = I go cycling.",
+   "accept": [
+    "Je fais du cyclisme."
+   ]
+  },
+  {
+   "id": "french.v.ft.lire",
+   "topic": "french.v-freetime",
+   "kind": "fact",
+   "prompt": "What does **J’aime lire.** mean?",
+   "answer": "I like reading.",
+   "distractors": [
+    "I like laughing.",
+    "I like writing.",
+    "I would like to read."
+   ],
+   "explain": "lire = to read (rire = to laugh, écrire = to write). After aimer the second verb stays in the infinitive.",
+   "hear": "J’aime lire.",
+   "learn": "**J’aime lire.** = I like reading.",
+   "accept": [
+    "I like to read",
+    "I enjoy reading",
+    "I love reading",
+    "I love to read"
+   ]
+  },
+  {
+   "id": "french.v.ft.libre",
+   "topic": "french.v-freetime",
+   "kind": "fact",
+   "prompt": "What does **Pendant mon temps libre, je regarde des séries.** mean?",
+   "answer": "In my free time, I watch series.",
+   "distractors": [
+    "In my free time, I look for series.",
+    "In good weather, I watch series.",
+    "In my free time, I watch films."
+   ],
+   "explain": "le temps libre = free time; regarder = to watch. (le temps can also mean the weather, but not here.)",
+   "hear": "Pendant mon temps libre, je regarde des séries.",
+   "learn": "**Pendant mon temps libre, je regarde des séries.** = In my free time, I watch series.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.ft.souvent",
+   "topic": "french.v-freetime",
+   "kind": "fact",
+   "prompt": "What does **souvent** mean?",
+   "answer": "often",
+   "distractors": [
+    "sometimes",
+    "never",
+    "always"
+   ],
+   "explain": "souvent = often; parfois = sometimes; toujours = always; ne… jamais = never.",
+   "hear": "souvent",
+   "learn": "**souvent** = often"
+  },
+  {
+   "id": "french.v.ft.temps",
+   "topic": "french.v-freetime",
+   "kind": "fact",
+   "prompt": "What does **de temps en temps** mean?",
+   "answer": "from time to time",
+   "distractors": [
+    "all the time",
+    "in time",
+    "never"
+   ],
+   "explain": "de temps en temps = from time to time, now and then.",
+   "hear": "de temps en temps",
+   "learn": "**de temps en temps** = from time to time",
+   "accept": [
+    "sometimes",
+    "now and then",
+    "now and again",
+    "occasionally",
+    "every now and then"
+   ]
+  },
+  {
+   "id": "french.v.ft.weekend",
+   "topic": "french.v-freetime",
+   "kind": "fact",
+   "prompt": "How do you say **at the weekend** in French?",
+   "answer": "le week-end",
+   "distractors": [
+    "au week-end",
+    "à la week-end",
+    "la week-end"
+   ],
+   "explain": "le week-end = at the weekend (no word for “at”). It is masculine.",
+   "lang": "fr",
+   "learn": "**le week-end** = at the weekend",
+   "accept": [
+    "le weekend",
+    "pendant le week-end",
+    "pendant le weekend"
+   ]
+  },
+  {
+   "id": "french.v.ft.danser",
+   "topic": "french.v-freetime",
+   "kind": "mcq",
+   "prompt": "Which means “I don’t like dancing”?",
+   "options": [
+    {
+     "text": "Je n’aime pas danser.",
+     "correct": true
+    },
+    {
+     "text": "Je ne aime pas danser.",
+     "correct": false,
+     "feedback": "ne becomes n’ before a vowel: je n’aime pas."
+    },
+    {
+     "text": "Je n’aime danser pas.",
+     "correct": false,
+     "feedback": "ne… pas goes round the verb aime."
+    }
+   ],
+   "explain": "ne… pas goes round the verb: je n’aime pas danser."
+  },
+  {
+   "id": "french.v.ft.equipe",
+   "topic": "french.v-freetime",
+   "kind": "fact",
+   "prompt": "What does **Je suis membre d’une équipe de basket.** mean?",
+   "answer": "I am in a basketball team.",
+   "distractors": [
+    "I watch a basketball team.",
+    "I am a basketball coach.",
+    "I play basketball for fun."
+   ],
+   "explain": "être membre de = to be a member of; une équipe = a team.",
+   "hear": "Je suis membre d’une équipe de basket.",
+   "learn": "**Je suis membre d’une équipe de basket.** = I am in a basketball team.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.ft.ennuyeux",
+   "topic": "french.v-freetime",
+   "kind": "fact",
+   "prompt": "What does **C’est ennuyeux.** mean?",
+   "answer": "It’s boring.",
+   "distractors": [
+    "It’s relaxing.",
+    "It’s fun.",
+    "It’s easy."
+   ],
+   "explain": "ennuyeux = boring. Its opposite: amusant (fun) or passionnant (exciting).",
+   "hear": "C’est ennuyeux.",
+   "learn": "**C’est ennuyeux.** = It’s boring.",
+   "accept": [
+    "it is boring",
+    "that’s boring",
+    "that is boring"
+   ]
+  },
+  {
+   "id": "french.v.ft.genial",
+   "topic": "french.v-freetime",
+   "kind": "fact",
+   "prompt": "What does **C’est génial !** mean?",
+   "answer": "It’s great!",
+   "distractors": [
+    "It’s gentle!",
+    "It’s terrible!",
+    "It’s general!"
+   ],
+   "explain": "génial = great, brilliant. nul = rubbish.",
+   "hear": "C’est génial !",
+   "learn": "**C’est génial !** = It’s great!",
+   "accept": [
+    "it is great",
+    "it’s brilliant",
+    "it’s amazing",
+    "it’s fantastic",
+    "it’s awesome",
+    "that’s great",
+    "that’s brilliant",
+    "it’s cool"
+   ]
+  },
+  {
+   "id": "french.v.fo.petitdej",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "What does **le petit déjeuner** mean?",
+   "answer": "breakfast",
+   "distractors": [
+    "lunch",
+    "dinner",
+    "a snack"
+   ],
+   "explain": "le petit déjeuner (breakfast), le déjeuner (lunch), le goûter (after-school snack), le dîner (dinner).",
+   "hear": "le petit déjeuner",
+   "learn": "**le petit déjeuner** = breakfast",
+   "accept": [
+    "the breakfast"
+   ]
+  },
+  {
+   "id": "french.v.fo.dejeuner",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "What does **le déjeuner** mean?",
+   "answer": "lunch",
+   "distractors": [
+    "breakfast",
+    "dinner",
+    "a snack"
+   ],
+   "explain": "le déjeuner = lunch. Add petit and it becomes breakfast: le petit déjeuner.",
+   "hear": "le déjeuner",
+   "learn": "**le déjeuner** = lunch",
+   "accept": [
+    "the lunch"
+   ]
+  },
+  {
+   "id": "french.v.fo.gouter",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "What does **le goûter** mean?",
+   "answer": "the after-school snack",
+   "distractors": [
+    "the starter",
+    "the dessert",
+    "the tasting"
+   ],
+   "explain": "le goûter is the snack French children have after school, around 4 pm: perhaps bread and chocolate. (The verb goûter means to taste.)",
+   "hear": "le goûter",
+   "learn": "**le goûter** = the after-school snack",
+   "accept": [
+    "afternoon snack",
+    "snack",
+    "after-school snack",
+    "after school snack",
+    "the snack",
+    "the afternoon snack",
+    "tea (a snack)"
+   ]
+  },
+  {
+   "id": "french.v.fo.eau",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "How do you say **I drink water.** in French?",
+   "answer": "Je bois de l’eau.",
+   "distractors": [
+    "Je bois du eau.",
+    "Je bois de la eau.",
+    "Je boit de l’eau."
+   ],
+   "explain": "Before a vowel, du and de la both become de l’: de l’eau. And it is je bois (il boit).",
+   "lang": "fr",
+   "learn": "**Je bois de l’eau.** = I drink water."
+  },
+  {
+   "id": "french.v.fo.pdt",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "What does **une pomme de terre** mean?",
+   "answer": "a potato",
+   "distractors": [
+    "an apple",
+    "a pear",
+    "a tomato"
+   ],
+   "explain": "une pomme de terre = a potato, literally “an apple of the earth”. une pomme = an apple.",
+   "hear": "une pomme de terre",
+   "learn": "**une pomme de terre** = a potato",
+   "accept": [
+    "potato"
+   ]
+  },
+  {
+   "id": "french.v.fo.poulet",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "What does **le poulet** mean?",
+   "answer": "chicken",
+   "distractors": [
+    "pork",
+    "fish",
+    "beef"
+   ],
+   "explain": "le poulet = chicken; le porc = pork; le poisson = fish; le bœuf = beef.",
+   "hear": "le poulet",
+   "learn": "**le poulet** = chicken",
+   "accept": [
+    "the chicken"
+   ]
+  },
+  {
+   "id": "french.v.fo.frites",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "How do you say **chips (French fries)** in French?",
+   "answer": "des frites",
+   "distractors": [
+    "des chips",
+    "des pommes",
+    "des fruits"
+   ],
+   "explain": "des frites = chips. Careful: des chips in French are crisps!",
+   "lang": "fr",
+   "learn": "**des frites** = chips (French fries)",
+   "accept": [
+    "les frites",
+    "frites"
+   ]
+  },
+  {
+   "id": "french.v.fo.vege",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "What does **Je suis végétarienne.** mean?",
+   "answer": "I am vegetarian.",
+   "distractors": [
+    "I am vegan.",
+    "I eat vegetables.",
+    "I am hungry."
+   ],
+   "explain": "végétarien (for a boy), végétarienne (for a girl). Vegan is végane or végan.",
+   "hear": "Je suis végétarienne.",
+   "learn": "**Je suis végétarienne.** = I am vegetarian.",
+   "accept": [
+    "I’m vegetarian",
+    "I am a vegetarian",
+    "I’m a vegetarian"
+   ]
+  },
+  {
+   "id": "french.v.fo.faim",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "What does **J’ai faim.** mean?",
+   "answer": "I am hungry.",
+   "distractors": [
+    "I am thirsty.",
+    "I am tired.",
+    "I have finished."
+   ],
+   "explain": "French uses avoir: j’ai faim (I am hungry), j’ai soif (I am thirsty).",
+   "hear": "J’ai faim.",
+   "learn": "**J’ai faim.** = I am hungry.",
+   "accept": [
+    "I’m hungry"
+   ]
+  },
+  {
+   "id": "french.v.fo.pain",
+   "topic": "french.v-food",
+   "kind": "mcq",
+   "prompt": "How do you say “I eat bread”?",
+   "options": [
+    {
+     "text": "Je mange du pain.",
+     "correct": true
+    },
+    {
+     "text": "Je mange de pain.",
+     "correct": false,
+     "feedback": "de alone is for after a negative: je ne mange pas de pain."
+    },
+    {
+     "text": "Je mange pain.",
+     "correct": false,
+     "feedback": "French needs a word for “some” here: du pain."
+    }
+   ],
+   "explain": "Food in general takes du, de la or des (“some”): je mange du pain."
+  },
+  {
+   "id": "french.v.fo.legumes",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "What does **les légumes** mean?",
+   "answer": "vegetables",
+   "distractors": [
+    "pulses",
+    "fruit",
+    "salad"
+   ],
+   "explain": "les légumes = vegetables (a false friend for the English “legumes”); les fruits = fruit.",
+   "hear": "les légumes",
+   "learn": "**les légumes** = vegetables",
+   "accept": [
+    "the vegetables",
+    "veg",
+    "veggies"
+   ]
+  },
+  {
+   "id": "french.v.fo.appetit",
+   "topic": "french.v-food",
+   "kind": "mcq",
+   "prompt": "What do French people say to each other before a meal?",
+   "options": [
+    {
+     "text": "Bon appétit !",
+     "correct": true
+    },
+    {
+     "text": "Bonne chance !",
+     "correct": false,
+     "feedback": "Bonne chance means good luck."
+    },
+    {
+     "text": "Bonne nuit !",
+     "correct": false,
+     "feedback": "Bonne nuit means good night."
+    }
+   ],
+   "explain": "Bon appétit ! = enjoy your meal."
+  },
+  {
+   "id": "french.v.fo.fromage",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "What does **le fromage** mean?",
+   "answer": "cheese",
+   "distractors": [
+    "butter",
+    "ham",
+    "milk"
+   ],
+   "explain": "le fromage = cheese; le beurre = butter; le jambon = ham; le lait = milk.",
+   "hear": "le fromage",
+   "learn": "**le fromage** = cheese",
+   "accept": [
+    "the cheese"
+   ]
+  },
+  {
+   "id": "french.v.fo.viande",
+   "topic": "french.v-food",
+   "kind": "fact",
+   "prompt": "How do you say **I don’t eat meat.** in French?",
+   "answer": "Je ne mange pas de viande.",
+   "distractors": [
+    "Je ne mange pas de la viande.",
+    "Je ne mange pas du viande.",
+    "Je ne mange de viande pas."
+   ],
+   "explain": "After a negative, du, de la and des all become de: je ne mange pas de viande.",
+   "lang": "fr",
+   "learn": "**Je ne mange pas de viande.** = I don’t eat meat."
+  },
+  {
+   "id": "french.v.ca.chocolat",
+   "topic": "french.v-cafe",
+   "kind": "fact",
+   "prompt": "How do you say **I would like a hot chocolate.** in French?",
+   "answer": "Je voudrais un chocolat chaud.",
+   "distractors": [
+    "Je voudrais une chocolat chaud.",
+    "Je voudrais un chaud chocolat.",
+    "Je voudrais un chocolat froid."
+   ],
+   "explain": "Je voudrais = I would like. Un chocolat chaud: chaud comes after the noun.",
+   "lang": "fr",
+   "learn": "**Je voudrais un chocolat chaud.** = I would like a hot chocolate."
+  },
+  {
+   "id": "french.v.ca.addition",
+   "topic": "french.v-cafe",
+   "kind": "fact",
+   "prompt": "What does **Voici l’addition.** mean?",
+   "answer": "Here is the bill.",
+   "distractors": [
+    "Here is the menu.",
+    "Here is the change.",
+    "Here is the addition."
+   ],
+   "explain": "l’addition = the bill (in a café or restaurant).",
+   "hear": "Voici l’addition.",
+   "learn": "**Voici l’addition.** = Here is the bill.",
+   "accept": [
+    "here’s the bill",
+    "here is the check",
+    "here’s the check"
+   ]
+  },
+  {
+   "id": "french.v.ca.carte",
+   "topic": "french.v-cafe",
+   "kind": "fact",
+   "prompt": "At a café, the waiter brings you **la carte**. What is it?",
+   "answer": "the menu",
+   "distractors": [
+    "the bill",
+    "the cutlery",
+    "the change"
+   ],
+   "explain": "la carte = the menu. (In a restaurant, un menu is a fixed-price set meal.)",
+   "hear": "la carte",
+   "learn": "At a café, **la carte** = the menu",
+   "accept": [
+    "menu",
+    "a menu"
+   ]
+  },
+  {
+   "id": "french.v.ca.waiter",
+   "topic": "french.v-cafe",
+   "kind": "mcq",
+   "prompt": "How do you call the waiter politely?",
+   "options": [
+    {
+     "text": "S’il vous plaît, monsieur !",
+     "correct": true
+    },
+    {
+     "text": "Garçon !",
+     "correct": false,
+     "feedback": "This is old-fashioned and sounds rude today."
+    },
+    {
+     "text": "Salut, toi !",
+     "correct": false,
+     "feedback": "Far too familiar for a waiter."
+    }
+   ],
+   "explain": "S’il vous plaît, monsieur (or madame) ! is polite. Or try Excusez-moi !"
+  },
+  {
+   "id": "french.v.ca.prendre",
+   "topic": "french.v-cafe",
+   "kind": "fact",
+   "prompt": "What does **Je vais prendre une crêpe.** mean?",
+   "answer": "I’ll have a pancake.",
+   "distractors": [
+    "I’ll make a pancake.",
+    "I’ll pay for a pancake.",
+    "I’ve had a pancake."
+   ],
+   "explain": "prendre = to take, but when ordering food it means “to have”. Je vais prendre… = I’ll have…",
+   "hear": "Je vais prendre une crêpe.",
+   "learn": "**Je vais prendre une crêpe.** = I’ll have a pancake.",
+   "accept": [
+    "I’m going to have a crêpe",
+    "I will have a crêpe",
+    "I’ll have a crêpe",
+    "I am going to have a crêpe",
+    "I will have a pancake",
+    "I’m going to have a pancake"
+   ]
+  },
+  {
+   "id": "french.v.ca.fromage",
+   "topic": "french.v-cafe",
+   "kind": "fact",
+   "prompt": "How do you say **500 grams of cheese** in French?",
+   "answer": "cinq cents grammes de fromage",
+   "distractors": [
+    "cinq cent grammes de fromage",
+    "cinq cents grammes du fromage",
+    "cinq cents grammes des fromages"
+   ],
+   "explain": "Quantities take de: cinq cents grammes de fromage. (A market seller may also say une livre de fromage: a livre is half a kilo.)",
+   "lang": "fr",
+   "learn": "**cinq cents grammes de fromage** = 500 grams of cheese",
+   "accept": [
+    "500 grammes de fromage",
+    "une livre de fromage",
+    "500 g de fromage"
+   ]
+  },
+  {
+   "id": "french.v.ca.tranche",
+   "topic": "french.v-cafe",
+   "kind": "fact",
+   "prompt": "What does **une tranche de jambon** mean?",
+   "answer": "a slice of ham",
+   "distractors": [
+    "a piece of cheese",
+    "a slice of bread",
+    "a tin of ham"
+   ],
+   "explain": "une tranche = a slice; le jambon = ham.",
+   "hear": "une tranche de jambon",
+   "learn": "**une tranche de jambon** = a slice of ham",
+   "accept": [
+    "slice of ham"
+   ]
+  },
+  {
+   "id": "french.v.ca.bouteille",
+   "topic": "french.v-cafe",
+   "kind": "fact",
+   "prompt": "What does **une bouteille d’eau** mean?",
+   "answer": "a bottle of water",
+   "distractors": [
+    "a glass of water",
+    "a jug of water",
+    "a can of lemonade"
+   ],
+   "explain": "une bouteille = a bottle; un verre = a glass; une carafe = a jug.",
+   "hear": "une bouteille d’eau",
+   "learn": "**une bouteille d’eau** = a bottle of water",
+   "accept": [
+    "bottle of water"
+   ]
+  },
+  {
+   "id": "french.v.ca.kilo",
+   "topic": "french.v-cafe",
+   "kind": "mcq",
+   "prompt": "Quantities always take **de**. How do you say “a kilo of apples”?",
+   "options": [
+    {
+     "text": "un kilo de pommes",
+     "correct": true
+    },
+    {
+     "text": "un kilo des pommes",
+     "correct": false,
+     "feedback": "After a quantity, just de: un kilo de pommes."
+    },
+    {
+     "text": "un kilo du pommes",
+     "correct": false,
+     "feedback": "After a quantity, just de."
+    }
+   ],
+   "explain": "un kilo de pommes, un paquet de chips, une boîte de thon: always de (d’ before a vowel)."
+  },
+  {
+   "id": "french.v.ca.tout",
+   "topic": "french.v-cafe",
+   "kind": "fact",
+   "prompt": "What does **C’est tout ?** mean?",
+   "answer": "Is that everything?",
+   "distractors": [
+    "Is it all right?",
+    "Is that for you?",
+    "Is that expensive?"
+   ],
+   "explain": "C’est tout ? = is that everything? Answer: Oui, c’est tout, merci.",
+   "hear": "C’est tout ?",
+   "learn": "**C’est tout ?** = Is that everything?",
+   "accept": [
+    "is that all",
+    "is that it",
+    "anything else"
+   ]
+  },
+  {
+   "id": "french.v.ca.fait",
+   "topic": "french.v-cafe",
+   "kind": "fact",
+   "prompt": "What does **Ça fait combien ?** mean?",
+   "answer": "How much does that come to?",
+   "distractors": [
+    "What does that do?",
+    "How long does it take?",
+    "Is that enough?"
+   ],
+   "explain": "Ça fait combien ? = how much is that altogether? Answer: Ça fait dix euros.",
+   "hear": "Ça fait combien ?",
+   "learn": "**Ça fait combien ?** = How much does that come to?",
+   "accept": [
+    "how much is that",
+    "how much is it",
+    "how much does it come to",
+    "how much altogether",
+    "how much is that altogether"
+   ]
+  },
+  {
+   "id": "french.v.ca.bill",
+   "topic": "french.v-cafe",
+   "kind": "mcq",
+   "prompt": "How do you ask the waiter for the bill?",
+   "options": [
+    {
+     "text": "L’addition, s’il vous plaît.",
+     "correct": true
+    },
+    {
+     "text": "L’addition, s’il te plaît.",
+     "correct": false,
+     "feedback": "Use vous to a waiter: s’il vous plaît."
+    },
+    {
+     "text": "La carte, s’il vous plaît.",
+     "correct": false,
+     "feedback": "la carte is the menu."
+    }
+   ],
+   "explain": "L’addition, s’il vous plaît. Use vous with a waiter."
+  },
+  {
+   "id": "french.v.ca.peches",
+   "topic": "french.v-cafe",
+   "kind": "fact",
+   "prompt": "What does **Au marché, j’achète des pêches.** mean?",
+   "answer": "At the market, I buy peaches.",
+   "distractors": [
+    "At the market, I buy fish.",
+    "At the market, I sell peaches.",
+    "At the market, I eat peaches."
+   ],
+   "explain": "une pêche = a peach (le poisson = fish); acheter = to buy, vendre = to sell.",
+   "hear": "Au marché, j’achète des pêches.",
+   "learn": "**Au marché, j’achète des pêches.** = At the market, I buy peaches.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.ca.monnaie",
+   "topic": "french.v-cafe",
+   "kind": "fact",
+   "prompt": "What does **la monnaie** mean?",
+   "answer": "change",
+   "distractors": [
+    "the bill",
+    "the purse",
+    "the receipt"
+   ],
+   "explain": "la monnaie = change (coins given back). Voici votre monnaie = here is your change.",
+   "hear": "la monnaie",
+   "learn": "**la monnaie** = change",
+   "accept": [
+    "small change",
+    "coins",
+    "loose change",
+    "the change"
+   ]
+  },
+  {
+   "id": "french.v.to.chateau",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "What does **Dans ma ville, il y a un château.** mean?",
+   "answer": "In my town, there is a castle.",
+   "distractors": [
+    "In my town, there was a castle.",
+    "In my town, there is a hat.",
+    "In my village, there is a castle."
+   ],
+   "explain": "il y a = there is; un château = a castle (un chapeau = a hat); une ville = a town.",
+   "hear": "Dans ma ville, il y a un château.",
+   "learn": "**Dans ma ville, il y a un château.** = In my town, there is a castle.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.to.piscine",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "How do you say **the swimming pool** in French?",
+   "answer": "la piscine",
+   "distractors": [
+    "le piscine",
+    "la natation",
+    "la plage"
+   ],
+   "explain": "la piscine = the swimming pool; la natation = swimming; la plage = the beach.",
+   "lang": "fr",
+   "learn": "**la piscine** = the swimming pool"
+  },
+  {
+   "id": "french.v.to.gare",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "What does **la gare** mean?",
+   "answer": "the railway station",
+   "distractors": [
+    "the garage",
+    "the car park",
+    "the bus stop"
+   ],
+   "explain": "la gare = the railway station (la gare routière = the bus station).",
+   "hear": "la gare",
+   "learn": "**la gare** = the railway station",
+   "accept": [
+    "the station",
+    "the train station",
+    "railway station",
+    "station",
+    "train station"
+   ]
+  },
+  {
+   "id": "french.v.to.biblio",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "What does **la bibliothèque** mean?",
+   "answer": "the library",
+   "distractors": [
+    "the bookshop",
+    "the bakery",
+    "the museum"
+   ],
+   "explain": "la bibliothèque = the library. Careful: la librairie is a bookshop!",
+   "hear": "la bibliothèque",
+   "learn": "**la bibliothèque** = the library",
+   "accept": [
+    "library",
+    "a library"
+   ]
+  },
+  {
+   "id": "french.v.to.librairie",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "What does **la librairie** mean?",
+   "answer": "the bookshop",
+   "distractors": [
+    "the library",
+    "the newsagent",
+    "the stationer’s"
+   ],
+   "explain": "la librairie = the bookshop: a false friend. A library is la bibliothèque.",
+   "hear": "la librairie",
+   "learn": "**la librairie** = the bookshop",
+   "accept": [
+    "bookshop",
+    "bookstore",
+    "the bookstore",
+    "a bookshop"
+   ]
+  },
+  {
+   "id": "french.v.to.gauche",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "What does **Tournez à gauche.** mean?",
+   "answer": "Turn left.",
+   "distractors": [
+    "Turn right.",
+    "Go straight on.",
+    "Cross the road."
+   ],
+   "explain": "à gauche = left; à droite = right; tout droit = straight on.",
+   "hear": "Tournez à gauche.",
+   "learn": "**Tournez à gauche.** = Turn left.",
+   "accept": [
+    "turn to the left",
+    "turn left"
+   ]
+  },
+  {
+   "id": "french.v.to.droit",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "What does **Allez tout droit.** mean?",
+   "answer": "Go straight on.",
+   "distractors": [
+    "Turn right.",
+    "Go all the way back.",
+    "Go to the right."
+   ],
+   "explain": "tout droit = straight on. Don’t mix it up with à droite (right).",
+   "hear": "Allez tout droit.",
+   "learn": "**Allez tout droit.** = Go straight on.",
+   "accept": [
+    "go straight ahead",
+    "straight on",
+    "carry on straight",
+    "keep going straight on",
+    "go straight"
+   ]
+  },
+  {
+   "id": "french.v.to.droite",
+   "topic": "french.v-town",
+   "kind": "mcq",
+   "prompt": "Which means “on the right”?",
+   "options": [
+    {
+     "text": "à droite",
+     "correct": true
+    },
+    {
+     "text": "tout droit",
+     "correct": false,
+     "feedback": "tout droit means straight on."
+    },
+    {
+     "text": "à gauche",
+     "correct": false,
+     "feedback": "à gauche means on the left."
+    }
+   ],
+   "explain": "à droite = on the right; à gauche = on the left; tout droit = straight on."
+  },
+  {
+   "id": "french.v.to.ou",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "How do you say **Where is the station?** in French?",
+   "answer": "Où est la gare ?",
+   "distractors": [
+    "Ou est la gare ?",
+    "Où et la gare ?",
+    "Où est le gare ?"
+   ],
+   "explain": "où (with an accent) = where; ou (no accent) = or. la gare is feminine.",
+   "lang": "fr",
+   "learn": "**Où est la gare ?** = Where is the station?",
+   "accept": [
+    "Où se trouve la gare ?",
+    "La gare, c’est où ?",
+    "C’est où, la gare ?",
+    "C’est où la gare ?"
+   ]
+  },
+  {
+   "id": "french.v.to.pres",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "What does **C’est près d’ici.** mean?",
+   "answer": "It’s near here.",
+   "distractors": [
+    "It’s far from here.",
+    "It’s ready.",
+    "It’s opposite here."
+   ],
+   "explain": "près d’ici = near here; loin d’ici = far from here.",
+   "hear": "C’est près d’ici.",
+   "learn": "**C’est près d’ici.** = It’s near here.",
+   "accept": [
+    "it’s close to here",
+    "it’s nearby",
+    "it is near here",
+    "it’s close by",
+    "it is nearby",
+    "it is close to here"
+   ]
+  },
+  {
+   "id": "french.v.to.deuxieme",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "What does **Prenez la deuxième rue à droite.** mean?",
+   "answer": "Take the second street on the right.",
+   "distractors": [
+    "Take the second street on the left.",
+    "Take the first street on the right.",
+    "Cross the second street on the right."
+   ],
+   "explain": "prenez = take; la deuxième rue = the second street; à droite = on the right.",
+   "hear": "Prenez la deuxième rue à droite.",
+   "learn": "**Prenez la deuxième rue à droite.** = Take the second street on the right.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.to.centre",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "What does **le centre-ville** mean?",
+   "answer": "the town centre",
+   "distractors": [
+    "the shopping centre",
+    "the village",
+    "the suburbs"
+   ],
+   "explain": "le centre-ville = the town centre; un centre commercial = a shopping centre.",
+   "hear": "le centre-ville",
+   "learn": "**le centre-ville** = the town centre",
+   "accept": [
+    "town centre",
+    "city centre",
+    "the city centre",
+    "downtown"
+   ]
+  },
+  {
+   "id": "french.v.to.cinema",
+   "topic": "french.v-town",
+   "kind": "mcq",
+   "prompt": "Je vais… cinéma.",
+   "options": [
+    {
+     "text": "au",
+     "correct": true
+    },
+    {
+     "text": "à le",
+     "correct": false,
+     "feedback": "à + le always becomes au."
+    },
+    {
+     "text": "à la",
+     "correct": false,
+     "feedback": "cinéma is masculine: au cinéma."
+    }
+   ],
+   "explain": "à + le = au: je vais au cinéma. But à la piscine, à l’école, aux magasins."
+  },
+  {
+   "id": "french.v.to.village",
+   "topic": "french.v-town",
+   "kind": "fact",
+   "prompt": "What does **J’habite dans un petit village à la campagne.** mean?",
+   "answer": "I live in a small village in the countryside.",
+   "distractors": [
+    "I live in a small town by the sea.",
+    "I live in a big village in the mountains.",
+    "I lived in a small village in the country."
+   ],
+   "explain": "à la campagne = in the countryside; au bord de la mer = by the sea; à la montagne = in the mountains.",
+   "hear": "J’habite dans un petit village à la campagne.",
+   "learn": "**J’habite dans un petit village à la campagne.** = I live in a small village in the countryside.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.ho.maison",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "What does **J’habite dans une maison.** mean?",
+   "answer": "I live in a house.",
+   "distractors": [
+    "I live in a flat.",
+    "I live in a castle.",
+    "I am at home."
+   ],
+   "explain": "une maison = a house; un appartement = a flat; à la maison = at home.",
+   "hear": "J’habite dans une maison.",
+   "learn": "**J’habite dans une maison.** = I live in a house.",
+   "accept": [
+    "I live in a house"
+   ]
+  },
+  {
+   "id": "french.v.ho.appart",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "How do you say **a flat** in French?",
+   "answer": "un appartement",
+   "distractors": [
+    "une appartement",
+    "un apartement",
+    "un appartment"
+   ],
+   "explain": "un appartement: double p, like English “apartment” with an extra p and an extra e.",
+   "lang": "fr",
+   "learn": "**un appartement** = a flat"
+  },
+  {
+   "id": "french.v.ho.chambre",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "What does **ma chambre** mean?",
+   "answer": "my bedroom",
+   "distractors": [
+    "my kitchen",
+    "my living room",
+    "my bathroom"
+   ],
+   "explain": "ma chambre = my bedroom (une chambre is a bedroom, not any room).",
+   "hear": "ma chambre",
+   "learn": "**ma chambre** = my bedroom",
+   "accept": [
+    "my room"
+   ]
+  },
+  {
+   "id": "french.v.ho.cuisine",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "What does **la cuisine** mean?",
+   "answer": "the kitchen",
+   "distractors": [
+    "the cousin",
+    "the dining room",
+    "the cellar"
+   ],
+   "explain": "la cuisine = the kitchen (and also cooking). The cousin is le cousin or la cousine.",
+   "hear": "la cuisine",
+   "learn": "**la cuisine** = the kitchen",
+   "accept": [
+    "kitchen",
+    "cooking",
+    "the cooking"
+   ]
+  },
+  {
+   "id": "french.v.ho.salon",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "What does **le salon** mean?",
+   "answer": "the living room",
+   "distractors": [
+    "the hall",
+    "the bedroom",
+    "the garden"
+   ],
+   "explain": "le salon = the living room, the lounge.",
+   "hear": "le salon",
+   "learn": "**le salon** = the living room",
+   "accept": [
+    "the lounge",
+    "the sitting room",
+    "living room",
+    "lounge",
+    "sitting room"
+   ]
+  },
+  {
+   "id": "french.v.ho.sdb",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "What does **la salle de bains** mean?",
+   "answer": "the bathroom",
+   "distractors": [
+    "the dining room",
+    "the toilet",
+    "the classroom"
+   ],
+   "explain": "la salle de bains = the bathroom; la salle à manger = the dining room; les toilettes = the toilet.",
+   "hear": "la salle de bains",
+   "learn": "**la salle de bains** = the bathroom",
+   "accept": [
+    "bathroom"
+   ]
+  },
+  {
+   "id": "french.v.ho.jardin",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "How do you say **the garden** in French?",
+   "answer": "le jardin",
+   "distractors": [
+    "la jardin",
+    "le jardain",
+    "le garden"
+   ],
+   "explain": "le jardin = the garden (masculine).",
+   "lang": "fr",
+   "learn": "**le jardin** = the garden"
+  },
+  {
+   "id": "french.v.ho.sous",
+   "topic": "french.v-home",
+   "kind": "mcq",
+   "prompt": "Mon chat est **sous** le lit. Where is the cat?",
+   "options": [
+    {
+     "text": "under the bed",
+     "correct": true
+    },
+    {
+     "text": "on the bed",
+     "correct": false,
+     "feedback": "On is sur."
+    },
+    {
+     "text": "next to the bed",
+     "correct": false,
+     "feedback": "Next to is à côté du lit."
+    }
+   ],
+   "explain": "sous = under; sur = on.",
+   "hear": "Mon chat est sous le lit."
+  },
+  {
+   "id": "french.v.ho.etagere",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "What does **Mes livres sont sur l’étagère.** mean?",
+   "answer": "My books are on the shelf.",
+   "distractors": [
+    "My books are under the shelf.",
+    "My books are on the desk.",
+    "My books are next to the shelf."
+   ],
+   "explain": "sur = on; une étagère = a shelf; un bureau = a desk.",
+   "hear": "Mes livres sont sur l’étagère.",
+   "learn": "**Mes livres sont sur l’étagère.** = My books are on the shelf.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.ho.armoire",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "What does **une armoire** mean?",
+   "answer": "a wardrobe",
+   "distractors": [
+    "armour",
+    "an armchair",
+    "a drawer"
+   ],
+   "explain": "une armoire = a wardrobe or a tall cupboard. An armchair is un fauteuil.",
+   "hear": "une armoire",
+   "learn": "**une armoire** = a wardrobe",
+   "accept": [
+    "wardrobe",
+    "a cupboard",
+    "a closet"
+   ]
+  },
+  {
+   "id": "french.v.ho.etage",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "What does **au premier étage** mean?",
+   "answer": "on the first floor",
+   "distractors": [
+    "on the ground floor",
+    "on the top floor",
+    "on the second floor"
+   ],
+   "explain": "au premier étage = on the first floor (one floor up, as in Britain); au rez-de-chaussée = on the ground floor.",
+   "hear": "au premier étage",
+   "learn": "**au premier étage** = on the first floor",
+   "accept": [
+    "first floor",
+    "the first floor"
+   ]
+  },
+  {
+   "id": "french.v.ho.partage",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "How do you say **I share my bedroom with my sister.** in French?",
+   "answer": "Je partage ma chambre avec ma sœur.",
+   "distractors": [
+    "Je partage mon chambre avec ma sœur.",
+    "Je partage ma chambre avec mon sœur.",
+    "Je partage ma chambre et ma sœur."
+   ],
+   "explain": "chambre and sœur are both feminine, so ma chambre, ma sœur. avec = with.",
+   "lang": "fr",
+   "learn": "**Je partage ma chambre avec ma sœur.** = I share my bedroom with my sister."
+  },
+  {
+   "id": "french.v.ho.rangee",
+   "topic": "french.v-home",
+   "kind": "fact",
+   "prompt": "What does **Ma chambre est bien rangée.** mean?",
+   "answer": "My bedroom is tidy.",
+   "distractors": [
+    "My bedroom is very messy.",
+    "My bedroom is quite small.",
+    "My bedroom is in a row."
+   ],
+   "explain": "rangé(e) = tidy; en désordre = messy.",
+   "hear": "Ma chambre est bien rangée.",
+   "learn": "**Ma chambre est bien rangée.** = My bedroom is tidy.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.we.beau",
+   "topic": "french.v-weather",
+   "kind": "fact",
+   "prompt": "What does **Il fait beau.** mean?",
+   "answer": "The weather is nice.",
+   "distractors": [
+    "He is handsome.",
+    "It’s hot.",
+    "It’s bad weather."
+   ],
+   "explain": "il fait beau = the weather is nice (il est beau would be “he is handsome”!).",
+   "hear": "Il fait beau.",
+   "learn": "**Il fait beau.** = The weather is nice.",
+   "accept": [
+    "it’s nice weather",
+    "it is nice weather",
+    "it’s fine",
+    "it’s a nice day",
+    "the weather is good",
+    "the weather’s nice",
+    "it’s nice",
+    "it is fine",
+    "it’s good weather"
+   ]
+  },
+  {
+   "id": "french.v.we.pleut",
+   "topic": "french.v-weather",
+   "kind": "fact",
+   "prompt": "What does **Il pleut.** mean?",
+   "answer": "It’s raining.",
+   "distractors": [
+    "It’s snowing.",
+    "It’s crying.",
+    "It’s cloudy."
+   ],
+   "explain": "il pleut = it’s raining (from pleuvoir). Careful: il pleure = he is crying.",
+   "hear": "Il pleut.",
+   "learn": "**Il pleut.** = It’s raining.",
+   "accept": [
+    "it rains",
+    "it is raining"
+   ]
+  },
+  {
+   "id": "french.v.we.neige",
+   "topic": "french.v-weather",
+   "kind": "fact",
+   "prompt": "What does **Il neige.** mean?",
+   "answer": "It’s snowing.",
+   "distractors": [
+    "It’s freezing.",
+    "It’s raining.",
+    "It’s foggy."
+   ],
+   "explain": "il neige = it’s snowing; la neige = snow; il gèle = it’s freezing.",
+   "hear": "Il neige.",
+   "learn": "**Il neige.** = It’s snowing.",
+   "accept": [
+    "it snows",
+    "it is snowing"
+   ]
+  },
+  {
+   "id": "french.v.we.chaud",
+   "topic": "french.v-weather",
+   "kind": "fact",
+   "prompt": "How do you say **It’s hot. (the weather)** in French?",
+   "answer": "Il fait chaud.",
+   "distractors": [
+    "Il est chaud.",
+    "Il fait froid.",
+    "J’ai chaud."
+   ],
+   "explain": "Weather takes il fait: il fait chaud. J’ai chaud means “I feel hot”.",
+   "lang": "fr",
+   "learn": "**Il fait chaud.** = It’s hot. (the weather)"
+  },
+  {
+   "id": "french.v.we.vent",
+   "topic": "french.v-weather",
+   "kind": "fact",
+   "prompt": "What does **Il y a du vent.** mean?",
+   "answer": "It’s windy.",
+   "distractors": [
+    "It’s sunny.",
+    "There is a storm.",
+    "It’s foggy."
+   ],
+   "explain": "il y a du vent = it’s windy (literally “there is some wind”).",
+   "hear": "Il y a du vent.",
+   "learn": "**Il y a du vent.** = It’s windy.",
+   "accept": [
+    "it is windy",
+    "there is wind",
+    "there’s wind",
+    "there is some wind"
+   ]
+  },
+  {
+   "id": "french.v.we.brouillard",
+   "topic": "french.v-weather",
+   "kind": "fact",
+   "prompt": "What does **Il y a du brouillard.** mean?",
+   "answer": "It’s foggy.",
+   "distractors": [
+    "It’s cloudy.",
+    "There’s a storm.",
+    "It’s drizzling."
+   ],
+   "explain": "le brouillard = fog: il y a du brouillard = it’s foggy.",
+   "hear": "Il y a du brouillard.",
+   "learn": "**Il y a du brouillard.** = It’s foggy.",
+   "accept": [
+    "it is foggy",
+    "there is fog",
+    "there’s fog",
+    "it’s misty",
+    "there is some fog"
+   ]
+  },
+  {
+   "id": "french.v.we.orage",
+   "topic": "french.v-weather",
+   "kind": "fact",
+   "prompt": "What does **un orage** mean?",
+   "answer": "a storm",
+   "distractors": [
+    "an orange",
+    "a rainbow",
+    "a shower"
+   ],
+   "explain": "un orage = a (thunder)storm; un arc-en-ciel = a rainbow; une averse = a shower.",
+   "hear": "un orage",
+   "learn": "**un orage** = a storm",
+   "accept": [
+    "a thunderstorm",
+    "storm",
+    "thunderstorm"
+   ]
+  },
+  {
+   "id": "french.v.we.printemps",
+   "topic": "french.v-weather",
+   "kind": "mcq",
+   "prompt": "How do you say “in spring”?",
+   "options": [
+    {
+     "text": "au printemps",
+     "correct": true
+    },
+    {
+     "text": "en printemps",
+     "correct": false,
+     "feedback": "Spring is the odd one out: au printemps, but en été, en automne, en hiver."
+    },
+    {
+     "text": "à printemps",
+     "correct": false,
+     "feedback": "printemps is masculine and starts with a consonant: au printemps."
+    }
+   ],
+   "explain": "au printemps; en été, en automne, en hiver."
+  },
+  {
+   "id": "french.v.we.hiver",
+   "topic": "french.v-weather",
+   "kind": "fact",
+   "prompt": "How do you say **in winter** in French?",
+   "answer": "en hiver",
+   "distractors": [
+    "au hiver",
+    "dans hiver",
+    "en l’hiver"
+   ],
+   "explain": "en hiver, en été, en automne, but au printemps.",
+   "lang": "fr",
+   "learn": "**en hiver** = in winter",
+   "accept": [
+    "l’hiver"
+   ]
+  },
+  {
+   "id": "french.v.we.automne",
+   "topic": "french.v-weather",
+   "kind": "fact",
+   "prompt": "What does **l’automne** mean?",
+   "answer": "autumn",
+   "distractors": [
+    "summer",
+    "winter",
+    "spring"
+   ],
+   "explain": "l’été (summer), l’automne (autumn), l’hiver (winter), le printemps (spring).",
+   "hear": "l’automne",
+   "learn": "**l’automne** = autumn",
+   "accept": [
+    "fall",
+    "the autumn"
+   ]
+  },
+  {
+   "id": "french.v.we.meteo",
+   "topic": "french.v-weather",
+   "kind": "fact",
+   "prompt": "What does **la météo** mean?",
+   "answer": "the weather forecast",
+   "distractors": [
+    "the meteor",
+    "the temperature",
+    "the climate"
+   ],
+   "explain": "la météo = the weather forecast (on TV, or the weather in general).",
+   "hear": "la météo",
+   "learn": "**la météo** = the weather forecast",
+   "accept": [
+    "the weather",
+    "weather forecast",
+    "the forecast",
+    "weather"
+   ]
+  },
+  {
+   "id": "french.v.we.temps",
+   "topic": "french.v-weather",
+   "kind": "mcq",
+   "prompt": "What does **Quel temps fait-il ?** mean?",
+   "options": [
+    {
+     "text": "What’s the weather like?",
+     "correct": true
+    },
+    {
+     "text": "What time is it?",
+     "correct": false,
+     "feedback": "That is Quelle heure est-il ?"
+    },
+    {
+     "text": "How long does it take?",
+     "correct": false,
+     "feedback": "That would be Ça prend combien de temps ?"
+    }
+   ],
+   "explain": "Quel temps fait-il ? = what’s the weather like? (le temps = the weather, or time.)",
+   "hear": "Quel temps fait-il ?"
+  },
+  {
+   "id": "french.v.we.degres",
+   "topic": "french.v-weather",
+   "kind": "fact",
+   "prompt": "What does **Il fait vingt degrés.** mean?",
+   "answer": "It’s twenty degrees.",
+   "distractors": [
+    "It’s two degrees.",
+    "It’s minus twenty.",
+    "It’s twelve degrees."
+   ],
+   "explain": "vingt = 20; deux = 2; douze = 12. Temperatures use il fait too.",
+   "hear": "Il fait vingt degrés.",
+   "learn": "**Il fait vingt degrés.** = It’s twenty degrees.",
+   "accept": [
+    "it is 20 degrees",
+    "it’s 20 degrees",
+    "it is twenty degrees",
+    "it’s 20°"
+   ]
+  },
+  {
+   "id": "french.v.hol.vacances",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "What does **les vacances** mean?",
+   "answer": "the holidays",
+   "distractors": [
+    "the vacancies",
+    "the journey",
+    "the luggage"
+   ],
+   "explain": "les vacances = the holidays (always plural). Les grandes vacances are the summer holidays.",
+   "hear": "les vacances",
+   "learn": "**les vacances** = the holidays",
+   "accept": [
+    "holidays",
+    "holiday",
+    "the holiday",
+    "vacation",
+    "the vacation"
+   ]
+  },
+  {
+   "id": "french.v.hol.train",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "How do you say **by train** in French?",
+   "answer": "en train",
+   "distractors": [
+    "à train",
+    "au train",
+    "dans train"
+   ],
+   "explain": "You ride inside a train, so en train (like en voiture, en avion).",
+   "lang": "fr",
+   "learn": "**en train** = by train",
+   "accept": [
+    "par le train"
+   ]
+  },
+  {
+   "id": "french.v.hol.pied",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "How do you say **on foot** in French?",
+   "answer": "à pied",
+   "distractors": [
+    "en pied",
+    "au pied",
+    "par pied"
+   ],
+   "explain": "à pied = on foot; à vélo = by bike.",
+   "lang": "fr",
+   "learn": "**à pied** = on foot"
+  },
+  {
+   "id": "french.v.hol.allee",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "What does **L’année dernière, je suis allée en Espagne.** mean?",
+   "answer": "Last year, I went to Spain.",
+   "distractors": [
+    "Next year, I am going to Spain.",
+    "Last year, I went to Switzerland.",
+    "Last week, I went to Spain."
+   ],
+   "explain": "l’année dernière = last year; je suis allée = I went (allée with an e because the speaker is a girl); l’Espagne = Spain, la Suisse = Switzerland.",
+   "hear": "L’année dernière, je suis allée en Espagne.",
+   "learn": "**L’année dernière, je suis allée en Espagne.** = Last year, I went to Spain.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.hol.italie",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "What does **L’été prochain, je vais aller en Italie.** mean?",
+   "answer": "Next summer, I am going to go to Italy.",
+   "distractors": [
+    "Last summer, I went to Italy.",
+    "Every summer, I go to Italy.",
+    "Next summer, I am going to go to Spain."
+   ],
+   "explain": "prochain = next; je vais aller = I am going to go (the near future).",
+   "hear": "L’été prochain, je vais aller en Italie.",
+   "learn": "**L’été prochain, je vais aller en Italie.** = Next summer, I am going to go to Italy.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.hol.portugal",
+   "topic": "french.v-holidays",
+   "kind": "mcq",
+   "prompt": "How do you say “I am going to Portugal”?",
+   "options": [
+    {
+     "text": "Je vais au Portugal.",
+     "correct": true
+    },
+    {
+     "text": "Je vais en Portugal.",
+     "correct": false,
+     "feedback": "Masculine countries take au: au Portugal, au Canada."
+    },
+    {
+     "text": "Je vais à Portugal.",
+     "correct": false,
+     "feedback": "à on its own is for towns: à Lisbonne."
+    }
+   ],
+   "explain": "Feminine countries (most end in -e) take en: en France. Masculine ones take au: au Portugal. Towns take à: à Paris."
+  },
+  {
+   "id": "french.v.hol.camping",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "What does **Nous avons fait du camping.** mean?",
+   "answer": "We went camping.",
+   "distractors": [
+    "We made a campsite.",
+    "We stayed in a hotel.",
+    "We went to the countryside."
+   ],
+   "explain": "faire du camping = to go camping; nous avons fait = we did (the perfect tense).",
+   "hear": "Nous avons fait du camping.",
+   "learn": "**Nous avons fait du camping.** = We went camping.",
+   "accept": [
+    "we camped",
+    "we did camping",
+    "we went camping"
+   ]
+  },
+  {
+   "id": "french.v.hol.plage",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "What does **à la plage** mean?",
+   "answer": "at the beach",
+   "distractors": [
+    "at the pool",
+    "in the mountains",
+    "at the market"
+   ],
+   "explain": "à la plage = at (or to) the beach; à la montagne = in (or to) the mountains.",
+   "hear": "à la plage",
+   "learn": "**à la plage** = at the beach",
+   "accept": [
+    "to the beach",
+    "at the seaside",
+    "on the beach",
+    "to the seaside"
+   ]
+  },
+  {
+   "id": "french.v.hol.montagne",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "What does **à la montagne** mean?",
+   "answer": "in the mountains",
+   "distractors": [
+    "at the seaside",
+    "in the countryside",
+    "in the forest"
+   ],
+   "explain": "à la montagne = in (or to) the mountains, even though montagne is singular.",
+   "hear": "à la montagne",
+   "learn": "**à la montagne** = in the mountains",
+   "accept": [
+    "to the mountains",
+    "in the mountain",
+    "to the mountain",
+    "at the mountains"
+   ]
+  },
+  {
+   "id": "french.v.hol.valise",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "What does **une valise** mean?",
+   "answer": "a suitcase",
+   "distractors": [
+    "a valley",
+    "a wallet",
+    "a passport"
+   ],
+   "explain": "une valise = a suitcase; faire sa valise = to pack.",
+   "hear": "une valise",
+   "learn": "**une valise** = a suitcase",
+   "accept": [
+    "suitcase",
+    "a case"
+   ]
+  },
+  {
+   "id": "french.v.hol.billet",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "What does **un billet aller-retour** mean?",
+   "answer": "a return ticket",
+   "distractors": [
+    "a single ticket",
+    "a day ticket",
+    "a ticket office"
+   ],
+   "explain": "un aller-retour (there and back) = a return ticket; un aller simple = a single.",
+   "hear": "un billet aller-retour",
+   "learn": "**un billet aller-retour** = a return ticket",
+   "accept": [
+    "return ticket",
+    "a round-trip ticket"
+   ]
+  },
+  {
+   "id": "french.v.hol.cetait",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "What does **C’était super !** mean?",
+   "answer": "It was great!",
+   "distractors": [
+    "It is great!",
+    "It will be great!",
+    "It wasn’t great!"
+   ],
+   "explain": "c’était = it was (c’est = it is; ce sera = it will be).",
+   "hear": "C’était super !",
+   "learn": "**C’était super !** = It was great!",
+   "accept": [
+    "it was brilliant",
+    "it was amazing",
+    "it was fantastic",
+    "it was awesome",
+    "it was super",
+    "that was great"
+   ]
+  },
+  {
+   "id": "french.v.hol.soleil",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "What does **J’ai pris un coup de soleil.** mean?",
+   "answer": "I got sunburnt.",
+   "distractors": [
+    "I saw the sunset.",
+    "I sunbathed.",
+    "I took a sunny photo."
+   ],
+   "explain": "un coup de soleil = sunburn (literally “a hit of sun”).",
+   "hear": "J’ai pris un coup de soleil.",
+   "learn": "**J’ai pris un coup de soleil.** = I got sunburnt.",
+   "accept": [
+    "I got sunburned",
+    "I got a sunburn",
+    "I got sunburn"
+   ]
+  },
+  {
+   "id": "french.v.hol.passeport",
+   "topic": "french.v-holidays",
+   "kind": "fact",
+   "prompt": "How do you say **my passport** in French?",
+   "answer": "mon passeport",
+   "distractors": [
+    "mon passport",
+    "ma passeport",
+    "mon passe-port"
+   ],
+   "explain": "le passeport: spelled with an e in the middle (passe + port).",
+   "lang": "fr",
+   "learn": "**mon passeport** = my passport"
+  },
+  {
+   "id": "french.v.cl.jean",
+   "topic": "french.v-clothes",
+   "kind": "fact",
+   "prompt": "What does **Je porte un jean.** mean?",
+   "answer": "I’m wearing jeans.",
+   "distractors": [
+    "I’m wearing a jacket.",
+    "I’m wearing a skirt.",
+    "I’m wearing trainers."
+   ],
+   "explain": "un jean = jeans (one pair, singular in French); porter = to wear.",
+   "hear": "Je porte un jean.",
+   "learn": "**Je porte un jean.** = I’m wearing jeans.",
+   "accept": [
+    "I wear jeans",
+    "I am wearing jeans",
+    "I’m wearing a pair of jeans",
+    "I wear a pair of jeans"
+   ]
+  },
+  {
+   "id": "french.v.cl.robe",
+   "topic": "french.v-clothes",
+   "kind": "fact",
+   "prompt": "How do you say **a dress** in French?",
+   "answer": "une robe",
+   "distractors": [
+    "un robe",
+    "une rob",
+    "une jupe"
+   ],
+   "explain": "une robe = a dress; une jupe = a skirt.",
+   "lang": "fr",
+   "learn": "**une robe** = a dress"
+  },
+  {
+   "id": "french.v.cl.jupe",
+   "topic": "french.v-clothes",
+   "kind": "fact",
+   "prompt": "What does **une jupe** mean?",
+   "answer": "a skirt",
+   "distractors": [
+    "a jumper",
+    "a jacket",
+    "a dress"
+   ],
+   "explain": "une jupe = a skirt; un pull = a jumper; une veste = a jacket.",
+   "hear": "une jupe",
+   "learn": "**une jupe** = a skirt",
+   "accept": [
+    "skirt"
+   ]
+  },
+  {
+   "id": "french.v.cl.pull",
+   "topic": "french.v-clothes",
+   "kind": "fact",
+   "prompt": "What does **un pull** mean?",
+   "answer": "a jumper",
+   "distractors": [
+    "a coat",
+    "a shirt",
+    "a scarf"
+   ],
+   "explain": "un pull = a jumper; un manteau = a coat; une chemise = a shirt; une écharpe = a scarf.",
+   "hear": "un pull",
+   "learn": "**un pull** = a jumper",
+   "accept": [
+    "a sweater",
+    "jumper",
+    "sweater",
+    "a pullover",
+    "pullover"
+   ]
+  },
+  {
+   "id": "french.v.cl.chaussures",
+   "topic": "french.v-clothes",
+   "kind": "fact",
+   "prompt": "What does **des chaussures** mean?",
+   "answer": "shoes",
+   "distractors": [
+    "socks",
+    "boots",
+    "trousers"
+   ],
+   "explain": "des chaussures = shoes; des chaussettes = socks; des bottes = boots; un pantalon = trousers.",
+   "hear": "des chaussures",
+   "learn": "**des chaussures** = shoes",
+   "accept": [
+    "some shoes"
+   ]
+  },
+  {
+   "id": "french.v.cl.rouge",
+   "topic": "french.v-clothes",
+   "kind": "mcq",
+   "prompt": "How do you say “a red skirt”?",
+   "options": [
+    {
+     "text": "une jupe rouge",
+     "correct": true
+    },
+    {
+     "text": "une rouge jupe",
+     "correct": false,
+     "feedback": "Colours go after the noun."
+    },
+    {
+     "text": "un jupe rouge",
+     "correct": false,
+     "feedback": "jupe is feminine: une jupe."
+    }
+   ],
+   "explain": "Colours come after the noun: une jupe rouge."
+  },
+  {
+   "id": "french.v.cl.verte",
+   "topic": "french.v-clothes",
+   "kind": "mcq",
+   "prompt": "How do you say “a green dress”?",
+   "options": [
+    {
+     "text": "une robe verte",
+     "correct": true
+    },
+    {
+     "text": "une robe vert",
+     "correct": false,
+     "feedback": "robe is feminine, so vert becomes verte."
+    },
+    {
+     "text": "une verte robe",
+     "correct": false,
+     "feedback": "Colours go after the noun."
+    }
+   ],
+   "explain": "robe is feminine, so the colour agrees: une robe verte."
+  },
+  {
+   "id": "french.v.cl.marron",
+   "topic": "french.v-clothes",
+   "kind": "mcq",
+   "prompt": "How do you say “brown shoes”?",
+   "options": [
+    {
+     "text": "des chaussures marron",
+     "correct": true
+    },
+    {
+     "text": "des chaussures marrons",
+     "correct": false,
+     "feedback": "marron (like orange) never changes: it is the name of a chestnut."
+    },
+    {
+     "text": "des marron chaussures",
+     "correct": false,
+     "feedback": "Colours go after the noun."
+    }
+   ],
+   "explain": "marron and orange are named after things (a chestnut, an orange), so they never change: des chaussures marron."
+  },
+  {
+   "id": "french.v.cl.blanche",
+   "topic": "french.v-clothes",
+   "kind": "mcq",
+   "prompt": "How do you say “a white shirt”?",
+   "options": [
+    {
+     "text": "une chemise blanche",
+     "correct": true
+    },
+    {
+     "text": "une chemise blanc",
+     "correct": false,
+     "feedback": "chemise is feminine, so blanc becomes blanche."
+    },
+    {
+     "text": "une chemise blance",
+     "correct": false,
+     "feedback": "The feminine of blanc is blanche."
+    }
+   ],
+   "explain": "blanc → blanche (feminine). Learn it with its partner: une chemise blanche, un pull blanc."
+  },
+  {
+   "id": "french.v.cl.essayer",
+   "topic": "french.v-clothes",
+   "kind": "fact",
+   "prompt": "What does **Je peux l’essayer ?** mean?",
+   "answer": "Can I try it on?",
+   "distractors": [
+    "Can I pay for it?",
+    "Can I exchange it?",
+    "Can I have a bag?"
+   ],
+   "explain": "essayer = to try (on); payer = to pay; échanger = to exchange.",
+   "hear": "Je peux l’essayer ?",
+   "learn": "**Je peux l’essayer ?** = Can I try it on?",
+   "accept": [
+    "may I try it on",
+    "could I try it on",
+    "can I try it"
+   ]
+  },
+  {
+   "id": "french.v.cl.taille",
+   "topic": "french.v-clothes",
+   "kind": "fact",
+   "prompt": "What does **Quelle taille ?** mean?",
+   "answer": "What size?",
+   "distractors": [
+    "What colour?",
+    "How much?",
+    "Which shop?"
+   ],
+   "explain": "la taille = the size (for clothes); la pointure = shoe size; la couleur = the colour.",
+   "hear": "Quelle taille ?",
+   "learn": "**Quelle taille ?** = What size?",
+   "accept": [
+    "which size",
+    "what size is it",
+    "what size do you take"
+   ]
+  },
+  {
+   "id": "french.v.cl.cher",
+   "topic": "french.v-clothes",
+   "kind": "fact",
+   "prompt": "What does **C’est trop cher.** mean?",
+   "answer": "It’s too expensive.",
+   "distractors": [
+    "It’s too cheap.",
+    "It’s too big.",
+    "It’s very nice."
+   ],
+   "explain": "cher = expensive; trop = too; pas cher = cheap.",
+   "hear": "C’est trop cher.",
+   "learn": "**C’est trop cher.** = It’s too expensive.",
+   "accept": [
+    "it is too expensive",
+    "that’s too expensive",
+    "that is too expensive",
+    "it’s too dear"
+   ]
+  },
+  {
+   "id": "french.v.cl.soldes",
+   "topic": "french.v-clothes",
+   "kind": "fact",
+   "prompt": "What does **les soldes** mean?",
+   "answer": "the sales",
+   "distractors": [
+    "the soldiers",
+    "the soles",
+    "the receipts"
+   ],
+   "explain": "les soldes = the sales (in shops). Un soldat is a soldier.",
+   "hear": "les soldes",
+   "learn": "**les soldes** = the sales",
+   "accept": [
+    "sales",
+    "the sale",
+    "sale"
+   ]
+  },
+  {
+   "id": "french.v.cl.uniforme",
+   "topic": "french.v-clothes",
+   "kind": "mcq",
+   "prompt": "In most French state secondary schools, pupils…",
+   "options": [
+    {
+     "text": "wear their own clothes",
+     "correct": true
+    },
+    {
+     "text": "wear a blazer and tie",
+     "correct": false,
+     "feedback": "School uniform is rare in France."
+    },
+    {
+     "text": "wear sports kit all day",
+     "correct": false,
+     "feedback": "They wear their own clothes and change for PE."
+    }
+   ],
+   "explain": "Most French schools have no uniform: pupils wear their own clothes."
+  },
+  {
+   "id": "french.v.ro.reveille",
+   "topic": "french.v-routine",
+   "kind": "fact",
+   "prompt": "What does **Je me réveille à sept heures.** mean?",
+   "answer": "I wake up at seven o’clock.",
+   "distractors": [
+    "I get up at seven o’clock.",
+    "I go to bed at seven o’clock.",
+    "I wake up at six o’clock."
+   ],
+   "explain": "se réveiller = to wake up; se lever = to get up; se coucher = to go to bed.",
+   "hear": "Je me réveille à sept heures.",
+   "learn": "**Je me réveille à sept heures.** = I wake up at seven o’clock.",
+   "accept": [
+    "I wake up at seven",
+    "I wake up at 7",
+    "I wake up at 7 o’clock",
+    "I wake at seven",
+    "I wake at 7"
+   ]
+  },
+  {
+   "id": "french.v.ro.leve",
+   "topic": "french.v-routine",
+   "kind": "fact",
+   "prompt": "How do you say **I get up.** in French?",
+   "answer": "Je me lève.",
+   "distractors": [
+    "Je lève.",
+    "Je me lèves.",
+    "Me je lève."
+   ],
+   "explain": "se lever is reflexive: je me lève (I get myself up). The -s ending is for tu: tu te lèves.",
+   "lang": "fr",
+   "learn": "**Je me lève.** = I get up."
+  },
+  {
+   "id": "french.v.ro.douche",
+   "topic": "french.v-routine",
+   "kind": "fact",
+   "prompt": "What does **Je me douche.** mean?",
+   "answer": "I have a shower.",
+   "distractors": [
+    "I have a bath.",
+    "I get dressed.",
+    "I brush my teeth."
+   ],
+   "explain": "se doucher = to have a shower; prendre un bain = to have a bath.",
+   "hear": "Je me douche.",
+   "learn": "**Je me douche.** = I have a shower.",
+   "accept": [
+    "I shower",
+    "I take a shower",
+    "I have a shower",
+    "I get showered"
+   ]
+  },
+  {
+   "id": "french.v.ro.habille",
+   "topic": "french.v-routine",
+   "kind": "fact",
+   "prompt": "What does **Je m’habille.** mean?",
+   "answer": "I get dressed.",
+   "distractors": [
+    "I live.",
+    "I get undressed.",
+    "I wash."
+   ],
+   "explain": "s’habiller = to get dressed (j’habite = I live). Me becomes m’ before a vowel.",
+   "hear": "Je m’habille.",
+   "learn": "**Je m’habille.** = I get dressed.",
+   "accept": [
+    "I dress",
+    "I dress myself",
+    "I get myself dressed"
+   ]
+  },
+  {
+   "id": "french.v.ro.dents",
+   "topic": "french.v-routine",
+   "kind": "fact",
+   "prompt": "How do you say **I brush my teeth.** in French?",
+   "answer": "Je me brosse les dents.",
+   "distractors": [
+    "Je me brosse les cheveux.",
+    "Je me brosse la dent.",
+    "Je me brosse les dent."
+   ],
+   "explain": "With parts of the body, French uses les, not mes: je me brosse les dents (I brush the teeth for myself).",
+   "lang": "fr",
+   "learn": "**Je me brosse les dents.** = I brush my teeth."
+  },
+  {
+   "id": "french.v.ro.couche",
+   "topic": "french.v-routine",
+   "kind": "fact",
+   "prompt": "What does **Je me couche à dix heures.** mean?",
+   "answer": "I go to bed at ten o’clock.",
+   "distractors": [
+    "I get up at ten o’clock.",
+    "I go to sleep at two o’clock.",
+    "I lie down for ten hours."
+   ],
+   "explain": "se coucher = to go to bed; dix = 10; deux = 2.",
+   "hear": "Je me couche à dix heures.",
+   "learn": "**Je me couche à dix heures.** = I go to bed at ten o’clock.",
+   "accept": [
+    "I go to bed at ten",
+    "I go to bed at 10",
+    "I go to bed at 10 o’clock"
+   ]
+  },
+  {
+   "id": "french.v.ro.dabord",
+   "topic": "french.v-routine",
+   "kind": "fact",
+   "prompt": "What does **d’abord** mean?",
+   "answer": "first",
+   "distractors": [
+    "then",
+    "finally",
+    "afterwards"
+   ],
+   "explain": "d’abord (first), ensuite (then, next), après (after), enfin (finally).",
+   "hear": "d’abord",
+   "learn": "**d’abord** = first",
+   "accept": [
+    "first of all",
+    "firstly",
+    "at first"
+   ]
+  },
+  {
+   "id": "french.v.ro.ensuite",
+   "topic": "french.v-routine",
+   "kind": "fact",
+   "prompt": "What does **ensuite** mean?",
+   "answer": "then",
+   "distractors": [
+    "first",
+    "finally",
+    "suddenly"
+   ],
+   "explain": "ensuite = then, next. Soudain = suddenly.",
+   "hear": "ensuite",
+   "learn": "**ensuite** = then",
+   "accept": [
+    "next",
+    "afterwards",
+    "after that"
+   ]
+  },
+  {
+   "id": "french.v.ro.enfin",
+   "topic": "french.v-routine",
+   "kind": "fact",
+   "prompt": "What does **enfin** mean?",
+   "answer": "finally",
+   "distractors": [
+    "first",
+    "then",
+    "in fact"
+   ],
+   "explain": "enfin = finally, at last. En fait = in fact.",
+   "hear": "enfin",
+   "learn": "**enfin** = finally",
+   "accept": [
+    "at last",
+    "lastly",
+    "in the end"
+   ]
+  },
+  {
+   "id": "french.v.ro.petitdej",
+   "topic": "french.v-routine",
+   "kind": "mcq",
+   "prompt": "What does **Je prends le petit déjeuner** mean?",
+   "options": [
+    {
+     "text": "I have breakfast.",
+     "correct": true
+    },
+    {
+     "text": "I make breakfast.",
+     "correct": false,
+     "feedback": "To make is préparer: je prépare le petit déjeuner."
+    },
+    {
+     "text": "I skip breakfast.",
+     "correct": false,
+     "feedback": "prendre here means to have (a meal)."
+    }
+   ],
+   "explain": "prendre (to take) is used for meals and drinks: je prends le petit déjeuner = I have breakfast.",
+   "hear": "Je prends le petit déjeuner."
+  },
+  {
+   "id": "french.v.ro.order",
+   "topic": "french.v-routine",
+   "kind": "order",
+   "prompt": "Put the morning in order.",
+   "items": [
+    "Je me réveille.",
+    "Je me lève.",
+    "Je m’habille.",
+    "Je quitte la maison.",
+    "J’arrive au collège."
+   ],
+   "labels": null,
+   "explain": "Wake up, get up, get dressed, leave the house, arrive at school."
+  },
+  {
+   "id": "french.v.ro.bus",
+   "topic": "french.v-routine",
+   "kind": "fact",
+   "prompt": "What does **Je vais au collège en bus.** mean?",
+   "answer": "I go to school by bus.",
+   "distractors": [
+    "I go to college by bus.",
+    "I walk to school.",
+    "I go to school by car."
+   ],
+   "explain": "le collège = secondary school (a false friend); en bus = by bus; à pied = on foot; en voiture = by car.",
+   "hear": "Je vais au collège en bus.",
+   "learn": "**Je vais au collège en bus.** = I go to school by bus.",
+   "accept": [
+    "I go to school on the bus",
+    "I get the bus to school",
+    "I take the bus to school",
+    "I go to secondary school by bus"
+   ]
+  },
+  {
+   "id": "french.v.ro.soir",
+   "topic": "french.v-routine",
+   "kind": "fact",
+   "prompt": "What does **le soir** mean?",
+   "answer": "in the evening",
+   "distractors": [
+    "in the morning",
+    "at night",
+    "in the afternoon"
+   ],
+   "explain": "le matin (in the morning), l’après-midi (in the afternoon), le soir (in the evening), la nuit (at night).",
+   "hear": "le soir",
+   "learn": "**le soir** = in the evening",
+   "accept": [
+    "the evening",
+    "evening",
+    "in the evenings"
+   ]
+  },
+  {
+   "id": "french.v.he.tete",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "What does **J’ai mal à la tête.** mean?",
+   "answer": "I have a headache.",
+   "distractors": [
+    "I have a sore throat.",
+    "I hit my head.",
+    "I have a stomach ache."
+   ],
+   "explain": "avoir mal à + body part = to have a pain in…: j’ai mal à la tête = my head hurts.",
+   "hear": "J’ai mal à la tête.",
+   "learn": "**J’ai mal à la tête.** = I have a headache.",
+   "accept": [
+    "I’ve got a headache",
+    "my head hurts",
+    "I have a head ache"
+   ]
+  },
+  {
+   "id": "french.v.he.ventre",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "How do you say **I have a stomach ache.** in French?",
+   "answer": "J’ai mal au ventre.",
+   "distractors": [
+    "J’ai mal à le ventre.",
+    "Je suis mal au ventre.",
+    "J’ai mal aux ventre."
+   ],
+   "explain": "le ventre is masculine, so à + le = au: j’ai mal au ventre.",
+   "lang": "fr",
+   "learn": "**J’ai mal au ventre.** = I have a stomach ache.",
+   "accept": [
+    "J’ai mal à l’estomac."
+   ]
+  },
+  {
+   "id": "french.v.he.dents",
+   "topic": "french.v-health",
+   "kind": "mcq",
+   "prompt": "What does **J’ai mal aux dents** mean?",
+   "options": [
+    {
+     "text": "I have toothache.",
+     "correct": true
+    },
+    {
+     "text": "I have a sore throat.",
+     "correct": false,
+     "feedback": "That is j’ai mal à la gorge."
+    },
+    {
+     "text": "My feet hurt.",
+     "correct": false,
+     "feedback": "That is j’ai mal aux pieds."
+    }
+   ],
+   "explain": "les dents (plural), so à + les = aux: j’ai mal aux dents.",
+   "hear": "J’ai mal aux dents."
+  },
+  {
+   "id": "french.v.he.gorge",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "What does **la gorge** mean?",
+   "answer": "the throat",
+   "distractors": [
+    "the neck",
+    "the chest",
+    "the jaw"
+   ],
+   "explain": "la gorge = the throat: j’ai mal à la gorge = I have a sore throat. The neck is le cou.",
+   "hear": "la gorge",
+   "learn": "**la gorge** = the throat",
+   "accept": [
+    "throat"
+   ]
+  },
+  {
+   "id": "french.v.he.bras",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "What does **le bras** mean?",
+   "answer": "the arm",
+   "distractors": [
+    "the leg",
+    "the hand",
+    "the shoulder"
+   ],
+   "explain": "le bras = the arm; la main = the hand; l’épaule = the shoulder.",
+   "hear": "le bras",
+   "learn": "**le bras** = the arm",
+   "accept": [
+    "arm"
+   ]
+  },
+  {
+   "id": "french.v.he.jambe",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "What does **la jambe** mean?",
+   "answer": "the leg",
+   "distractors": [
+    "the ham",
+    "the knee",
+    "the foot"
+   ],
+   "explain": "la jambe = the leg (le jambon = ham); le genou = the knee.",
+   "hear": "la jambe",
+   "learn": "**la jambe** = the leg",
+   "accept": [
+    "leg"
+   ]
+  },
+  {
+   "id": "french.v.he.pied",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "What does **le pied** mean?",
+   "answer": "the foot",
+   "distractors": [
+    "the knee",
+    "the hand",
+    "the toe"
+   ],
+   "explain": "le pied = the foot; à pied = on foot; un doigt de pied = a toe.",
+   "hear": "le pied",
+   "learn": "**le pied** = the foot",
+   "accept": [
+    "foot"
+   ]
+  },
+  {
+   "id": "french.v.he.malade",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "What does **Je suis malade.** mean?",
+   "answer": "I am ill.",
+   "distractors": [
+    "I am sad.",
+    "I am tired.",
+    "I am bad."
+   ],
+   "explain": "malade = ill; triste = sad; fatigué(e) = tired.",
+   "hear": "Je suis malade.",
+   "learn": "**Je suis malade.** = I am ill.",
+   "accept": [
+    "I’m ill",
+    "I am sick",
+    "I’m sick",
+    "I’m unwell",
+    "I am unwell"
+   ]
+  },
+  {
+   "id": "french.v.he.fievre",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "What does **J’ai de la fièvre.** mean?",
+   "answer": "I have a temperature.",
+   "distractors": [
+    "I have the flu.",
+    "I have a cold.",
+    "I have a cough."
+   ],
+   "explain": "la fièvre = a fever, a temperature; la grippe = flu; un rhume = a cold; la toux = a cough.",
+   "hear": "J’ai de la fièvre.",
+   "learn": "**J’ai de la fièvre.** = I have a temperature.",
+   "accept": [
+    "I’ve got a temperature",
+    "I have a fever",
+    "I’ve got a fever",
+    "I have a high temperature"
+   ]
+  },
+  {
+   "id": "french.v.he.rhume",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "What does **un rhume** mean?",
+   "answer": "a cold",
+   "distractors": [
+    "a cough",
+    "flu",
+    "a rash"
+   ],
+   "explain": "un rhume = a cold: j’ai un rhume, I have a cold.",
+   "hear": "un rhume",
+   "learn": "**un rhume** = a cold",
+   "accept": [
+    "cold",
+    "the common cold"
+   ]
+  },
+  {
+   "id": "french.v.he.pharmacie",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "What does **Allez à la pharmacie.** mean?",
+   "answer": "Go to the chemist’s.",
+   "distractors": [
+    "Go to the farm.",
+    "Go to the doctor’s.",
+    "Go to hospital."
+   ],
+   "explain": "la pharmacie = the chemist’s (look for the green cross); le médecin = the doctor; l’hôpital = hospital.",
+   "hear": "Allez à la pharmacie.",
+   "learn": "**Allez à la pharmacie.** = Go to the chemist’s.",
+   "accept": [
+    "go to the pharmacy",
+    "go to the chemist",
+    "go to the chemists"
+   ]
+  },
+  {
+   "id": "french.v.he.sante",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "What does **Pour être en bonne santé, je mange beaucoup de fruits.** mean?",
+   "answer": "To be healthy, I eat lots of fruit.",
+   "distractors": [
+    "To be healthy, I eat lots of sweets.",
+    "To be healthy, I eat fruit sometimes.",
+    "To be healthy, I do lots of sport."
+   ],
+   "explain": "en bonne santé = healthy; beaucoup de = lots of.",
+   "hear": "Pour être en bonne santé, je mange beaucoup de fruits.",
+   "learn": "**Pour être en bonne santé, je mange beaucoup de fruits.** = To be healthy, I eat lots of fruit.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.he.genou",
+   "topic": "french.v-health",
+   "kind": "mcq",
+   "prompt": "How do you say “my knee hurts”?",
+   "options": [
+    {
+     "text": "J’ai mal au genou.",
+     "correct": true
+    },
+    {
+     "text": "J’ai mal à le genou.",
+     "correct": false,
+     "feedback": "à + le always becomes au."
+    },
+    {
+     "text": "J’ai mal à genou.",
+     "correct": false,
+     "feedback": "You need the article: au genou (à + le)."
+    }
+   ],
+   "explain": "le genou is masculine: j’ai mal au genou."
+  },
+  {
+   "id": "french.v.he.coeur",
+   "topic": "french.v-health",
+   "kind": "fact",
+   "prompt": "What does **le cœur** mean?",
+   "answer": "the heart",
+   "distractors": [
+    "the choir",
+    "the chest",
+    "the lungs"
+   ],
+   "explain": "le cœur = the heart (le chœur, with an h, is a choir); les poumons = the lungs.",
+   "hear": "le cœur",
+   "learn": "**le cœur** = the heart",
+   "accept": [
+    "heart"
+   ]
+  },
+  {
+   "id": "french.v.te.portable",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **mon portable** mean?",
+   "answer": "my mobile phone",
+   "distractors": [
+    "my tablet",
+    "my charger",
+    "my headphones"
+   ],
+   "explain": "mon portable = my mobile (short for mon téléphone portable). Un ordinateur portable is a laptop.",
+   "hear": "mon portable",
+   "learn": "**mon portable** = my mobile phone",
+   "accept": [
+    "my mobile",
+    "my phone",
+    "my cell phone",
+    "my laptop",
+    "my mobile phone"
+   ]
+  },
+  {
+   "id": "french.v.te.ordi",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **l’ordinateur** mean?",
+   "answer": "the computer",
+   "distractors": [
+    "the printer",
+    "the keyboard",
+    "the order"
+   ],
+   "explain": "l’ordinateur (l’ordi for short) = the computer; l’imprimante = the printer; le clavier = the keyboard.",
+   "hear": "l’ordinateur",
+   "learn": "**l’ordinateur** = the computer",
+   "accept": [
+    "computer",
+    "the PC"
+   ]
+  },
+  {
+   "id": "french.v.te.messages",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **J’envoie des messages à mes amis.** mean?",
+   "answer": "I send messages to my friends.",
+   "distractors": [
+    "I get messages from my friends.",
+    "I sent messages to my friends.",
+    "I send emails to my parents."
+   ],
+   "explain": "envoyer = to send (j’envoie); recevoir = to receive.",
+   "hear": "J’envoie des messages à mes amis.",
+   "learn": "**J’envoie des messages à mes amis.** = I send messages to my friends.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.te.reseaux",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **les réseaux sociaux** mean?",
+   "answer": "social media",
+   "distractors": [
+    "social workers",
+    "the news",
+    "the internet"
+   ],
+   "explain": "les réseaux sociaux = social networks, social media.",
+   "hear": "les réseaux sociaux",
+   "learn": "**les réseaux sociaux** = social media",
+   "accept": [
+    "social networks",
+    "social networking",
+    "social media sites"
+   ]
+  },
+  {
+   "id": "french.v.te.telecharger",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **télécharger** mean?",
+   "answer": "to download",
+   "distractors": [
+    "to charge",
+    "to upload",
+    "to telephone"
+   ],
+   "explain": "télécharger = to download. To charge a phone is recharger.",
+   "hear": "télécharger",
+   "learn": "**télécharger** = to download",
+   "accept": [
+    "download"
+   ]
+  },
+  {
+   "id": "french.v.te.emission",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **une émission** mean?",
+   "answer": "a programme",
+   "distractors": [
+    "an emission",
+    "an advert",
+    "a channel"
+   ],
+   "explain": "une émission = a programme (on TV or radio); une publicité (une pub) = an advert; une chaîne = a channel.",
+   "hear": "une émission",
+   "learn": "**une émission** = a programme",
+   "accept": [
+    "a TV programme",
+    "a show",
+    "a TV show",
+    "a program",
+    "a broadcast",
+    "a radio programme"
+   ]
+  },
+  {
+   "id": "french.v.te.chaine",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **une chaîne** mean?",
+   "answer": "a channel",
+   "distractors": [
+    "a chair",
+    "a screen",
+    "a series"
+   ],
+   "explain": "une chaîne = a TV channel (and also a chain). Une chaise = a chair.",
+   "hear": "une chaîne",
+   "learn": "**une chaîne** = a channel",
+   "accept": [
+    "a TV channel",
+    "channel",
+    "a chain"
+   ]
+  },
+  {
+   "id": "french.v.te.dessinanime",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **un dessin animé** mean?",
+   "answer": "a cartoon",
+   "distractors": [
+    "a drawing class",
+    "an animal drawing",
+    "a comic"
+   ],
+   "explain": "un dessin animé = a cartoon (an animated drawing); une BD (bande dessinée) = a comic.",
+   "hear": "un dessin animé",
+   "learn": "**un dessin animé** = a cartoon",
+   "accept": [
+    "cartoon",
+    "an animated film",
+    "an animation",
+    "an animated cartoon"
+   ]
+  },
+  {
+   "id": "french.v.te.jeux",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **les jeux vidéo** mean?",
+   "answer": "video games",
+   "distractors": [
+    "video clips",
+    "the games console",
+    "videos"
+   ],
+   "explain": "les jeux vidéo = video games (vidéo does not change in the plural); la console = the games console.",
+   "hear": "les jeux vidéo",
+   "learn": "**les jeux vidéo** = video games",
+   "accept": [
+    "the video games",
+    "computer games"
+   ]
+  },
+  {
+   "id": "french.v.te.motdepasse",
+   "topic": "french.v-tech",
+   "kind": "mcq",
+   "prompt": "What does **Il ne faut jamais partager ton mot de passe** mean?",
+   "options": [
+    {
+     "text": "You must never share your password.",
+     "correct": true
+    },
+    {
+     "text": "You must always share your password.",
+     "correct": false,
+     "feedback": "ne… jamais = never."
+    },
+    {
+     "text": "You must never change your password.",
+     "correct": false,
+     "feedback": "partager = to share; changer = to change."
+    }
+   ],
+   "explain": "il ne faut jamais = you must never; partager = to share; le mot de passe = the password.",
+   "hear": "Il ne faut jamais partager ton mot de passe."
+  },
+  {
+   "id": "french.v.te.mdp",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **le mot de passe** mean?",
+   "answer": "the password",
+   "distractors": [
+    "the passport",
+    "the message",
+    "the username"
+   ],
+   "explain": "le mot de passe = the password (literally “the word for passing”); le passeport = the passport.",
+   "hear": "le mot de passe",
+   "learn": "**le mot de passe** = the password",
+   "accept": [
+    "password"
+   ]
+  },
+  {
+   "id": "french.v.te.ecran",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **l’écran** mean?",
+   "answer": "the screen",
+   "distractors": [
+    "the keyboard",
+    "the mouse",
+    "the charger"
+   ],
+   "explain": "l’écran = the screen; le clavier = the keyboard; la souris = the mouse; le chargeur = the charger.",
+   "hear": "l’écran",
+   "learn": "**l’écran** = the screen",
+   "accept": [
+    "screen"
+   ]
+  },
+  {
+   "id": "french.v.te.avis",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **À mon avis, Internet est utile mais dangereux.** mean?",
+   "answer": "In my opinion, the internet is useful but dangerous.",
+   "distractors": [
+    "In my opinion, the internet is useless but safe.",
+    "In my opinion, the internet is useful and safe.",
+    "In my opinion, the internet is boring but useful."
+   ],
+   "explain": "à mon avis = in my opinion; utile = useful (inutile = useless); mais = but.",
+   "hear": "À mon avis, Internet est utile mais dangereux.",
+   "learn": "**À mon avis, Internet est utile mais dangereux.** = In my opinion, the internet is useful but dangerous.",
+   "formats": [
+    "choice"
+   ]
+  },
+  {
+   "id": "french.v.te.videos",
+   "topic": "french.v-tech",
+   "kind": "fact",
+   "prompt": "What does **Je regarde des vidéos en ligne.** mean?",
+   "answer": "I watch videos online.",
+   "distractors": [
+    "I make videos online.",
+    "I post videos online.",
+    "I watch films at the cinema."
+   ],
+   "explain": "en ligne = online; regarder = to watch; faire = to make; publier = to post.",
+   "hear": "Je regarde des vidéos en ligne.",
+   "learn": "**Je regarde des vidéos en ligne.** = I watch videos online.",
+   "accept": [
+    "I watch online videos",
+    "I watch videos on the internet",
+    "I watch videos on line"
+   ]
+  }
+ ]
+}

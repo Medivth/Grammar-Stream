@@ -18,7 +18,7 @@ function formatFor(stability, allowed, rank, cuts = [3, 12]) {
 export function cueFor(answer) {
   return answer
     .split(' ')
-    .map((w) => w[0] + w.slice(1).replace(/[A-Za-z]/g, '_'))
+    .map((w) => w[0] + w.slice(1).replace(/\p{L}/gu, '_')) // accented letters too (é, ç…)
     .join('   ');
 }
 

@@ -10,7 +10,8 @@ import { renderVisual } from './visuals.js';
 
 export async function renderQuestion(q, { onChange = () => {}, settings = {} } = {}) {
   const parts = [];
-  const readAloud = settings.readAloud && readAloudOn();
+  // French has its own button (Écouter, a French voice): never read it out in the English one
+  const readAloud = settings.readAloud && readAloudOn() && q.lang !== 'fr' && !q.hear;
   if (q.passage) {
     parts.push(h('blockquote', { class: 'passage' }, readAloud ? sayButton(q.passage, 'Read the passage to me') : null, q.passage, q.passageSource ? h('cite', {}, q.passageSource) : null));
   }
