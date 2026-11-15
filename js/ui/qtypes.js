@@ -10,7 +10,8 @@ import { renderVisual } from './visuals.js';
 
 export async function renderQuestion(q, { onChange = () => {}, settings = {} } = {}) {
   const parts = [];
-  const readAloud = settings.readAloud && readAloudOn();
+  // French has its own button (Écouter, a French voice): never read it out in the English one
+  const readAloud = settings.readAloud && readAloudOn() && q.lang !== 'fr' && !q.hear;
   if (q.passage) {
     parts.push(h('blockquote', { class: 'passage' }, readAloud ? sayButton(q.passage, 'Read the passage to me') : null, q.passage, q.passageSource ? h('cite', {}, q.passageSource) : null));
   }
@@ -24,6 +25,8 @@ export async function renderQuestion(q, { onChange = () => {}, settings = {} } =
         h('button', { class: 'btn-ghost', type: 'button', onclick: () => speak(`${q.say}. ${plain(q.prompt).replace('___', q.say)}`), 'aria-label': 'Hear the word' }, '🔊 Hear it')));
     } else parts.push(prompt);
   }
+  // French to hear (pronunciation is half of learning a word), with the read-aloud setting
+  if (q.hear && readAloudOn()) parts.push(h('div', {}, h('button', { class: 'btn-ghost', type: 'button', lang: 'fr', onclick: () => speak(q.hear, { lang: 'fr', rate: 0.85 }), 'aria-label': 'Hear it in French' }, '🔊 Écouter')));
   if (q.clue) parts.push(h('p', { class: 'q-clue' }, `Clue: ${q.clue}`));
 
   let mapView = null;

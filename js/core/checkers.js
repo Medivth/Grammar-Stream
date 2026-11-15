@@ -60,6 +60,13 @@ function checkTyped(q, response) {
   }
   const answers = [q.answer, ...(q.accept || [])].filter((a) => a !== '').map(normalise);
   if (answers.includes(r)) return { correct: true, score: 1 };
+  // French: the right word with an accent missing or wrong still counts, with a note (a tablet
+  // keyboard makes accents fiddly), but a wrong ending never does: -e and -es are different words
+  if (q.lang === 'fr') {
+    const bare = (x) => x.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/œ/g, 'oe').replace(/æ/g, 'ae').replace(/' /g, "'");
+    if (answers.some((a) => bare(a) === bare(r))) return { correct: true, score: 1, near: true, message: `Watch the accents: “${q.answer}”.` };
+    return { correct: false, score: 0 };
+  }
   // "5" and "five" are the same answer (never for spelling items, where the word is the point)
   if (!q.strict) {
     const asNumber = (x) => (/^\d+$/.test(x) ? Number(x) : wordsToNumber(x));
@@ -145,7 +152,7 @@ function checkNumberLine(q, response) {
 
 function checkCloze(q, response) {
   if (!Array.isArray(response)) response = [];
-  const results = q.blanks.map((b, i) => checkTyped({ ...b, strict: b.strict ?? q.strict }, response[i]));
+  const results = q.blanks.map((b, i) => checkTyped({ ...b, strict: b.strict ?? q.strict, lang: b.lang ?? q.lang }, response[i]));
   const right = results.filter((r) => r.correct).length;
   return { correct: right === q.blanks.length, score: right / q.blanks.length, perBlank: results.map((r) => r.correct) };
 }

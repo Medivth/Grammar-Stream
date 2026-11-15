@@ -11,14 +11,14 @@ import { correctResponse } from '../js/core/checkers.js';
 const read = (p) => JSON.parse(readFileSync(new URL(`../content/${p}`, import.meta.url)));
 const dbFor = (idx) => buildDB(read(idx).decks.map(read));
 
-test('the Year 6 and Year 8 courses offer Latin and Greek as extra practice; the younger ones do not', () => {
+test('Year 6 offers Latin and Year 8 Greek and French as extra practice; the younger ones do not', () => {
   assert.deepEqual(COURSES.y6.extra, ['latin']);
-  assert.deepEqual(COURSES.y8.extra, ['greek']);
+  assert.deepEqual(COURSES.y8.extra, ['greek', 'french']);
   assert.ok(!COURSES.ks1.extra && !COURSES.y3.extra);
   for (const id of ['ks1', 'y3']) for (const t of ['typing', 'speed']) assert.ok(COURSES[id].tools.includes(t), `${id} has ${t}`);
 });
 
-for (const [course, idx, lang] of [['y8', 'index-y8.json', 'greek'], ['y6', 'index.json', 'latin']]) {
+for (const [course, idx, lang] of [['y8', 'index-y8.json', 'greek'], ['y8', 'index-y8.json', 'french'], ['y6', 'index.json', 'latin']]) {
   test(`${lang} practice on day one, before today's session, leaves the session untouched`, () => {
     setCourse(course);
     assert.equal(COURSE.id, course);

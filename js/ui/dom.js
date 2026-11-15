@@ -50,7 +50,7 @@ export function richHTML(text) {
   return src
     .replace(/\{\{([^/{}]+)\/([^/{}]+)\}\}/g, '<span class="frac"><span>$1</span><span>$2</span></span>')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/(^|\s)_(.+?)_(?=\s|$|[.,!?])/g, '$1<em>$2</em>')
+    .replace(/(^|\s)_([^_\s][^_]*?)_(?=\s|$|[.,!?])/g, '$1<em>$2</em>') // italics, but a ___ gap stays a gap
     .replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>')
     .replace(/\n\n/g, '</p><p>')
     .replace(/\n/g, '<br>')

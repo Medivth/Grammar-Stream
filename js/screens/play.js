@@ -282,7 +282,8 @@ function introTopicStep(app, root, step) {
 function diagSummaryStep(app, root, step) {
   mount(root, header(app), h('div', { class: 'q-wrap stack' },
     h('h2', {}, 'Thanks!'),
-    h('p', { class: 'learn' }, 'Those answers show what you think right now. Lots of people believe some of the wrong ideas, even adults. Now let’s learn the science properly.'),
+    // science diagnostics probe misconceptions; elsewhere (French) they just check what is known already
+    h('p', { class: 'learn' }, app.db.topics[step.topic]?.subject === 'science' ? 'Those answers show what you think right now. Lots of people believe some of the wrong ideas, even adults. Now let’s learn the science properly.' : 'Those answers show what you know already. Now let’s learn it properly.'),
     renderVisual(app.db.topics[step.topic]?.visual),
     hookCard({ hook: app.db.topics[step.topic]?.hook }),
     h('button', { class: 'btn-primary btn-big', onclick: () => next(app), autofocus: true }, 'Carry on')));
@@ -310,6 +311,7 @@ async function introStep(app, root, step) {
       parts.push(mapSVG(map, { layer: item.layer || (item.map === 'europe' ? 'countries' : 'features'), highlight: item.feature, zoom: item.zoom }).el);
     }
     parts.push(COURSE.readAloud ? h('div', { class: 'q-prompt-row' }, sayButton(`${learnText(item)} ${item.explain && !item.learn ? item.explain : ''}`), rich('div', learnText(item), { class: 'learn' })) : rich('div', learnText(item), { class: 'learn' }));
+    if (item.hear && readAloudOn()) parts.push(h('div', {}, h('button', { class: 'btn-ghost', type: 'button', lang: 'fr', onclick: () => speak(item.hear, { lang: 'fr', rate: 0.85 }) }, '🔊 Écouter')));
     if (item.explain && !item.learn) parts.push(rich('p', item.explain, { class: 'muted' }));
   }
   const pic = renderVisual(item.visual);
@@ -455,7 +457,7 @@ function feedbackPanel(q, res, step, conf) {
       res.message && !res.near && q.weighted ? rich('p', res.message) : null,
       (step.t === 'diag' || step.t === 'quiz' || conf === CONF.guess || q.weighted) && q.explain ? rich('p', q.explain, { class: 'muted' }) : null);
   }
-  const parts = [h('h3', {}, step.t === 'diag' ? 'Interesting! Here’s the science' : 'Not quite')];
+  const parts = [h('h3', {}, step.t === 'diag' ? (q.subject === 'science' ? 'Interesting! Here’s the science' : 'Interesting! Here’s the answer') : 'Not quite')];
   if (res.score > 0 && res.score < 1 && !q.weighted && q.kind !== 'choice') parts.push(h('p', {}, 'Part of that was right.'));
   if (res.message) parts.push(rich('p', res.message));
   parts.push(h('p', {}, 'The answer: ', h('span', { class: 'answer', html: richHTML(answerText) })));
